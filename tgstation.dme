@@ -57,6 +57,8 @@
 
 // BEGIN_INCLUDE
 #include "_maps\tgstation2.dm"
+#include "Bug_code\bike.dm"
+#include "Bug_code\ven.dm"
 #include "code\_compile_options.dm"
 #include "code\hub.dm"
 #include "code\world.dm"
