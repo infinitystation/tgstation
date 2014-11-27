@@ -19,7 +19,7 @@ FEEDBACK_DATABASE feedback
 ## if left out defaults to erro_ for legacy reasons, if you want no table prefix, give a blank prefix rather then comment out
 ## Note, this does not change the table names in the database, you will have to do that yourself.
 ##IE:
-##	FEEDBACK_TABLEPREFIX erro_
+FEEDBACK_TABLEPREFIX erro_
 ##	FEEDBACK_TABLEPREFIX 
 ##	FEEDBACK_TABLEPREFIX SS13_
 ##
@@ -27,7 +27,7 @@ FEEDBACK_DATABASE feedback
 FEEDBACK_TABLEPREFIX 
 
 ## Username/Login used to access the database.
-FEEDBACK_LOGIN username
+FEEDBACK_LOGIN infinity
 
 ## Password used to access the database.
 FEEDBACK_PASSWORD password
