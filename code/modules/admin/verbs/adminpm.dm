@@ -53,6 +53,7 @@
 	//get message text, limit it's length.and clean/escape html
 	if(!msg)
 		msg = input(src,"Message:", "Private message to [key_name(C, 0, 0)]") as text|null
+		msg = sanitize(copytext(msg,1,MAX_MESSAGE_LEN))
 
 		if(!msg)	return
 		if(!C)
@@ -66,6 +67,7 @@
 	//clean the message if it's not sent by a high-rank admin
 	if(!check_rights(R_SERVER|R_DEBUG,0))
 		msg = sanitize(copytext(msg,1,MAX_MESSAGE_LEN))
+		msg = html_decode(msg)
 		if(!msg)	return
 
 	if(C.holder)
