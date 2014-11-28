@@ -127,6 +127,7 @@ BLIND     // can't see anything
 
 	permeability_coefficient = 0.50
 	slowdown = SHOES_SLOWDOWN
+	var/footstep = 1	//used for squeeks whilst walking(tc)
 
 /obj/item/proc/negates_gravity()
 	return 0
