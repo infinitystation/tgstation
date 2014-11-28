@@ -16,11 +16,11 @@
 	switch(act)//Hello, how would you like to order? Alphabetically!
 		if ("aflap")
 			if (!src.restrained())
-				message = "<B>[src]</B> flaps its wings ANGRILY!"
+				message = "<B>[src]</B> ј√–≈——»¬Ќќ хлопает крыльями!"
 				m_type = 2
 
 		if ("blush")
-			message = "<B>[src]</B> blushes."
+			message = "<B>[src]</B> краснеет."
 			m_type = 1
 
 		if ("bow")
@@ -34,47 +34,53 @@
 				if (!M)
 					param = null
 				if (param)
-					message = "<B>[src]</B> bows to [param]."
+					message = "<B>[src]</B> поклонился [param]."
 				else
-					message = "<B>[src]</B> bows."
+					message = "<B>[src]</B> поклонился."
 			m_type = 1
 
 		if ("burp")
-			message = "<B>[src]</B> burps."
+			message = "<B>[src]</B> отрыгнул."
+			playsound(loc, 'sound/emotions/burp.ogg', 25, 1, 1)
 			m_type = 2
 
 		if ("choke")
-			message = "<B>[src]</B> chokes!"
+			message = "<B>[src]</B> подавился!"
+			playsound(loc, 'sound/emotions/choke.ogg', 25, 1, 1)
 			m_type = 2
 
 		if ("chuckle")
-			message = "<B>[src]</B> chuckles."
+			message = "<B>[src]</B> ”смехается."
+			playsound(loc, 'sound/emotions/giggle.ogg', 25, 1, 1)
 			m_type = 2
 
 		if ("collapse")
 			Paralyse(2)
-			message = "<B>[src]</B> collapses!"
+			message = "<B>[src]</B> рухнул!"
 			m_type = 2
 
 		if ("cough")
-			message = "<B>[src]</B> coughs!"
+			message = "<B>[src]</B> кашляет!"
+			playsound(loc, 'sound/emotions/cough.ogg', 25, 1, 1)
 			m_type = 2
 
 		if ("dance")
 			if (!src.restrained())
-				message = "<B>[src]</B> dances around happily."
+				message = "<B>[src]</B> танцует."
 				m_type = 1
 
 		if ("deathgasp")
-			message = "<B>[src]</B> seizes up and falls limp, its eyes dead and lifeless..."
+			message = "<B>[src]</B> замирает, конечности расслабляются, глаза становятся мЄртвыми и безжизненными..."
+			playsound(loc, 'sound/effects/deathgasp.ogg', 25, 1, 1)
 			m_type = 1
 
 		if ("drool")
-			message = "<B>[src]</B> drools."
+			message = "<B>[src]</B> несЄт чепуху."
+			playsound(loc, 'sound/emotions/drool.ogg', 25, 1, 1)
 			m_type = 1
 
 		if ("faint")
-			message = "<B>[src]</B> faints."
+			message = "<B>[src]</B> теряет сознание."
 			if(src.sleeping)
 				return //Can't faint while asleep
 			src.sleeping += 10 //Short-short nap
@@ -82,19 +88,21 @@
 
 		if ("flap")
 			if (!src.restrained())
-				message = "<B>[src]</B> flaps its wings."
+				message = "<B>[src]</B> хлопает крыльями."
 				m_type = 2
 
 		if ("frown")
-			message = "<B>[src]</B> frowns."
+			message = "<B>[src]</B> хмурится."
 			m_type = 1
 
 		if ("gasp")
-			message = "<B>[src]</B> gasps!"
+			message = "<B>[src]</B> «адыхается!"
+			playsound(loc, 'sound/effects/gasp.ogg', 50, 1, 1)
 			m_type = 2
 
 		if ("giggle")
-			message = "<B>[src]</B> giggles."
+			message = "<B>[src]</B> хихикает."
+			playsound(loc, 'sound/emotions/giggle.ogg', 25, 1, 1)
 			m_type = 2
 
 		if ("glare")
@@ -107,20 +115,22 @@
 			if (!M)
 				param = null
 			if (param)
-				message = "<B>[src]</B> glares at [param]."
+				message = "<B>[src]</B> свирепо смотрит на [param]."
 			else
-				message = "<B>[src]</B> glares."
+				message = "<B>[src]</B> свирепо смотрит."
 
 		if ("grin")
-			message = "<B>[src]</B> grins."
+			message = "<B>[src]</B> усмехается, показывая зубы."
+			playsound(loc, 'sound/emotions/grin.ogg', 25, 1, 1)
 			m_type = 1
 
 		if ("jump")
-			message = "<B>[src]</B> jumps!"
+			message = "<B>[src]</B> прыгает!"
 			m_type = 1
 
 		if ("laugh")
-			message = "<B>[src]</B> laughs."
+			message = "<B>[src]</B> смеЄтся."
+			playsound(loc, 'sound/emotions/laugh.ogg', 25, 1, 1)
 			m_type = 2
 
 		if ("look")
@@ -133,9 +143,9 @@
 			if (!M)
 				param = null
 			if (param)
-				message = "<B>[src]</B> looks at [param]."
+				message = "<B>[src]</B> смотрит на [param]."
 			else
-				message = "<B>[src]</B> looks."
+				message = "<B>[src]</B> смотрит."
 			m_type = 1
 
 		if ("me")
@@ -153,7 +163,7 @@
 				message = "<B>[src]</B> [message]"
 
 		if ("nod")
-			message = "<B>[src]</B> nods."
+			message = "<B>[src]</B> кивнул."
 			m_type = 1
 
 		if ("point")
@@ -165,41 +175,72 @@
 							M = A
 							break
 				if (!M)
-					message = "<B>[src]</B> points."
+					message = "<B>[src]</B> указывает."
 				else
 					pointed(M)
 			m_type = 1
 
 		if ("scream")
-			message = "<B>[src]</B> screams!"
+			message = "<B>[src]</B> душераздирающе кричит!"
+			playsound(loc, 'sound/emotions/scream.ogg', 20, 1, 1)
 			m_type = 2
 
 		if ("shake")
-			message = "<B>[src]</B> shakes its head."
+			message = "<B>[src]</B> трясЄт головой."
+			m_type = 1
+
+		if ("shit")
+			//we need to shit? no
+			if(need_to_shit < 70)
+				src << "Ќечем испражнятся"
+				return
+				
+			//we need to shit?
+			if((need_to_shit > 70) && (need_to_shit < need_to_shit_max))
+				for(var/obj/structure/toilet/T in view(0, src))	//checking toilets
+					if(T.shit || T.w_items)
+						Shit(src)
+						return
+					else
+						need_to_shit = 0
+						need_to_shit_again = 140
+						T.open = 1
+						T.shit++
+						T.update_icon()
+						src << "¬ы справили нужду, не забудьте смыть за собой, кликнув по унитазу"
+						return
+				src << "Ћучше найти ближайший туалет"
+				return
+
+			message = "<B>[src]</B> [pick("испражняется.", "высрал кучу говна.", "наложил кучу.", "накакал на пол.", "дрестанул говном на пол.")]"
+			Shit(src)
 			m_type = 1
 
 		if ("sigh")
-			message = "<B>[src]</B> sighs."
+			message = "<B>[src]</B> вздыхает."
+			playsound(loc, 'sound/emotions/sigh.ogg', 20, 1, 1)
 			m_type = 2
 
 		if ("sit")
-			message = "<B>[src]</B> sits down."
+			message = "<B>[src]</B> садится."
 			m_type = 1
 
 		if ("smile")
-			message = "<B>[src]</B> smiles."
+			message = "<B>[src]</B> улыбается."
 			m_type = 1
 
 		if ("sneeze")
-			message = "<B>[src]</B> sneezes."
+			message = "<B>[src]</B> чихает."
+			playsound(loc, 'sound/emotions/sneeze.ogg', 20, 1, 1)
 			m_type = 2
 
 		if ("sniff")
-			message = "<B>[src]</B> sniffs."
+			message = "<B>[src]</B> сопит."
 			m_type = 2
 
 		if ("snore")
-			message = "<B>[src]</B> snores."
+			message = "<B>[src]</B> храпит."
+			playsound(loc, 'sound/effects/snore.ogg', 25, 1, 1)
 			m_type = 2
 
 		if ("stare")
@@ -212,40 +253,52 @@
 			if (!M)
 				param = null
 			if (param)
-				message = "<B>[src]</B> stares at [param]."
+				message = "<B>[src]</B> пялится на [param]."
 			else
-				message = "<B>[src]</B> stares."
+				message = "<B>[src]</B> пялится."
 
 		if ("sulk")
-			message = "<B>[src]</B> sulks down sadly."
+			message = "<B>[src]</B> обиженно дуется."
 			m_type = 1
 
 		if ("sway")
-			message = "<B>[src]</B> sways around dizzily."
+			message = "<B>[src]</B> раскачивается до головокружения."
 			m_type = 1
 
 		if ("tremble")
-			message = "<B>[src]</B> trembles in fear!"
+			message = "<B>[src]</B> трепещет в страхе!"
 			m_type = 1
 
 		if ("twitch")
-			message = "<B>[src]</B> twitches violently."
+			message = "<B>[src]</B> сильно дЄргается."
 			m_type = 1
 
 		if ("twitch_s")
-			message = "<B>[src]</B> twitches."
+			message = "<B>[src]</B> дЄргается."
+			m_type = 1
+
+		if ("vomit")
+			message = "<B>[src]</B> блюЄт на пол!"
+			var/mob/living/M = src
+			if (M.nutrition < 70)
+				src << "Ќечем блевать"
+			M.nutrition = 0
+			M.adjustToxLoss(-10)
+			var/turf/T = get_turf(M)
+			T.add_vomit_floor(M)
+			playsound(M, 'sound/effects/splat.ogg', 50, 1)
 			m_type = 1
 
 		if ("wave")
-			message = "<B>[src]</B> waves."
+			message = "<B>[src]</B> машет."
 			m_type = 1
 
 		if ("whimper")
-			message = "<B>[src]</B> whimpers."
+			message = "<B>[src]</B> хныкает."
 			m_type = 2
 
 		if ("yawn")
-			message = "<B>[src]</B> yawns."
+			message = "<B>[src]</B> зевает."
 			m_type = 2
 
 		if ("help")
@@ -275,3 +328,14 @@
 			visible_message(message)
 		else if (m_type & 2)
 			src.loc.audible_message(message)
+
+/mob/living/proc/Shit(var/mob/living/M)
+	if(M.stat != DEAD)
+		M.need_to_shit = 0
+		M.need_to_shit_again = 140
+		var/turf/pos = get_turf(M)
+		pos.add_shit_floor(M)
+		playsound(pos, 'sound/emotions/shit.ogg', 50, 1)
+	else
+		src << "¬ы мертвы и не способны больше испражняться."
+		return 0

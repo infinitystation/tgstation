@@ -8,6 +8,7 @@
 	var/open = 0			//if the lid is up
 	var/cistern = 0			//if the cistern bit is open
 	var/w_items = 0			//the combined w_class of all the items in the cistern
+	var/shit = 0			//we have shit inside?
 	var/mob/living/swirlie = null	//the mob being given a swirlie
 
 
@@ -37,6 +38,10 @@
 			return
 
 	open = !open
+	if(!open)	//wash off if closed!
+		shit = 0		 
+		contents = null		//need to fix, but i don't know how
+		user << "Вы смыли содержимое унитаза"
 	update_icon()
 
 
