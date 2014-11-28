@@ -333,6 +333,10 @@ var/list/blood_splatter_icons = list()
 			this.viruses += newDisease
 			newDisease.holder = this*/
 
+/atom/proc/add_shit_floor(mob/living/carbon/M as mob)
+	if( istype(src, /turf/simulated) )
+		new /obj/effect/decal/cleanable/shit(src)
+
 // Only adds blood on the floor -- Skie
 /atom/proc/add_blood_floor(mob/living/carbon/M as mob)
 	if(istype(src, /turf/simulated))

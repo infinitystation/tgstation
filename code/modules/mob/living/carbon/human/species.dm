@@ -395,9 +395,29 @@
 			H.update_inv_w_uniform(0)
 			H.update_inv_wear_suit()
 
-	// nutrition decrease
+	//need to shit? yes! yes! yes!
+	if(H.need_to_shit >= H.need_to_shit_max)
+		H.Shit(H)
+		H << "Вы справили нужду"
+
+	//really need to shit? not now, but i'm need to shit!
+	else if((H.need_to_shit > H.need_to_shit_again) && (H.need_to_shit > (H.need_to_shit_max-30)))
+		H << "Вам ОЧЕНЬ СИЛЬНО хочетсЯ в туалет"
+		H.need_to_shit_again += 9
+
+	//need to shit? not now, but...
+	else if(H.need_to_shit > H.need_to_shit_again)
+		if(H.need_to_shit_again > (H.need_to_shit_max-30))
+			H.need_to_shit_again = H.need_to_shit_max-30
+			H << "Вам сильнее хочетсЯ в туалет"
+		else	//not now...
+			H.need_to_shit_again += 70
+			H << "Вам хочетсЯ в туалет"
+
+	// nutrition decrease & shit increase
 	if (H.nutrition > 0 && H.stat != 2)
 		H.nutrition = max (0, H.nutrition - HUNGER_FACTOR)
+		H.need_to_shit = min (H.need_to_shit_max, H.need_to_shit + HUNGER_FACTOR)
 
 	if (H.nutrition > 450)
 		if(H.overeatduration < 600) //capped so people don't take forever to unfat

@@ -214,6 +214,7 @@ text("<A href='?src=\ref[src];power=1'>[on ? "On" : "Off"]</A>"))
 	target_types += /obj/effect/decal/cleanable/pie_smudge
 	target_types += /obj/effect/decal/cleanable/flour
 	target_types += /obj/effect/decal/cleanable/ash
+	target_types += /obj/effect/decal/cleanable/shit
 	target_types += /obj/effect/decal/cleanable/greenglow
 	target_types += /obj/effect/decal/cleanable/dirt
 
