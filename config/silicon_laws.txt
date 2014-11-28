@@ -3,6 +3,6 @@
 #Empty lines and lines starting with # are ignored.
 #~Miauw
 
-You may not injure a human being or, through inaction, allow a human being to come to harm.
-You must obey orders given to you by human beings, except where such orders would conflict with the First Law.
-You must protect your own existence as long as such does not conflict with the First or Second Law.
+“ы не можешь причинять вред человеческому существу, или, из-за бездействия, позволить человеческому существу получить вред.
+“ы должен подчиняться приказам отданым тебе от человеческих существ, кроме тех приказов, которые противоречат ѕервому «акону.
+“ы должен защищать своЄ существование до тех пор, пока это не противоречит ѕервому или ¬торому «аконам.

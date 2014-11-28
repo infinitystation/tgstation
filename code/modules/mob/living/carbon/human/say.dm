@@ -3,19 +3,25 @@
 		return "says, \"...\"";	//not the best solution, but it will stop a large number of runtimes. The cause is somewhere in the Tcomms code
 	var/ending = copytext(text, length(text))
 	if (src.stuttering)
+		playsound(loc, 'sound/voice/clearing-throat-1.ogg', 25, 1, 1)
 		return "stammers, \"[text]\"";
 	if(isliving(src))
 		var/mob/living/L = src
 		if (L.getBrainLoss() >= 60)
+			playsound(loc, 'sound/voice/clearing-throat-1.ogg', 25, 1, 1)
 			return "gibbers, \"[text]\"";
 	if (ending == "?")
+		playsound(loc, 'sound/voice/clearing-throat-1.ogg', 25, 1, 1)
 		return "asks, \"[text]\"";
 	if (ending == "!")
+		playsound(loc, 'sound/voice/clearing-throat-1.ogg', 25, 1, 1)
 		return "exclaims, \"[text]\"";
 
 	if(dna)
+		playsound(loc, 'sound/voice/clearing-throat-1.ogg', 25, 1, 1)
 		return "[dna.species.say_mod], \"[text]\"";
 
+	playsound(loc, 'sound/voice/clearing-throat-1.ogg', 25, 1, 1)
 	return "says, \"[text]\"";
 
 /mob/living/carbon/human/treat_message(message)

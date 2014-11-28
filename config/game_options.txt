@@ -25,7 +25,7 @@ REVIVAL_BRAIN_LIFE -1
 
 ### OOC DURING ROUND ###
 #Comment this out if you want OOC to be automatically disabled during the round, it will be enabled during the lobby and after the round end results.
-OOC_DURING_ROUND
+#OOC_DURING_ROUND
 
 ### MOB MOVEMENT ###
 
@@ -51,19 +51,19 @@ ANIMAL_DELAY 0
 
 ### NAMES ###
 ## If uncommented this adds a random surname to a player's name if they only specify one name.
-#HUMANS_NEED_SURNAMES
+HUMANS_NEED_SURNAMES
 
 ## If uncommented, this forces all players to use random names !and appearances!.
 #FORCE_RANDOM_NAMES
 
 
 ### ALERT LEVELS ###
-ALERT_GREEN All threats to the station have passed. Security may not have weapons visible, privacy laws are once again fully enforced.
-ALERT_BLUE_UPTO The station has received reliable information about possible hostile activity on the station. Security staff may have weapons visible, random searches are permitted.
-ALERT_BLUE_DOWNTO The immediate threat has passed. Security may no longer have weapons drawn at all times, but may continue to have them visible. Random searches are still allowed.
-ALERT_RED_UPTO There is an immediate serious threat to the station. Security may have weapons unholstered at all times. Random searches are allowed and advised.
-ALERT_RED_DOWNTO The self-destruct mechanism has been deactivated, there is still however an immediate serious threat to the station. Security may have weapons unholstered at all times, random searches are allowed and advised.
-ALERT_DELTA The station's self-destruct mechanism has been engaged. All crew are instructed to obey all instructions given by heads of staff. Any violations of these orders can be punished by death. This is not a drill.
+ALERT_GREEN ”гроз для станции больше нет. —лужба Ѕезопасности больше не может носить оружие на виду, законы приватности вступают в полную силу. —лучайные обыски Ќ≈ разрешены.
+ALERT_BLUE_UPTO —танция получила достоверную информацию о возможной вражеской деятельности на борту. —лужба Ѕезопасности может носить оружие на виду, случайные обыски разрешены. ¬ случае отсутствия подтверждения угрозы рекомендуется √лавам,  апитану или »» опустить уровень тревоги до зелЄного.
+ALERT_BLUE_DOWNTO ¬незапная угроза прошла. —лужюа Ѕезопасности теперь не может носить оружие в постоянной боевой готовности, но всЄ ещЄ могут носить его на виду. —лучайные обыски всЄ ещЄ разрешены.
+ALERT_RED_UPTO ¬незапная серьЄзная угроза станции. —отрудники —лужбы Ѕезопасности могут носить оружие на виду и в боевой готовности, случайные обыски разрешены и рекомендованы.
+ALERT_RED_DOWNTO ћеханизм самоуничтожения был деактивирован, хотя всЄ ещЄ остаЄтся серьЄзная угроза для станции. —отрудники —лужбы Ѕезопасности могут носить оружие на виду и в боевой готовности, случайные обыски разрешены и рекомендованы.
+ALERT_DELTA Ѕыл запущен механизм самоуничтожения станции. ¬сему экипажу следует подчиняться всем инструкциям и приказам, которые будут отдавать √лавы. Ћюбые нарушения этих инструкций или приказов могут быть наказаны смертью. Ёто не учебная тревога.
 
 
 ### EXPLOSIONS ###
@@ -127,7 +127,7 @@ TRAITOR_OBJECTIVES_AMOUNT 2
 
 ## Uncomment to prohibit jobs that start with loyalty
 ## implants from being most antagonists.
-#PROTECT_ROLES_FROM_ANTAGONIST
+PROTECT_ROLES_FROM_ANTAGONIST
 
 ## Uncomment to prohibit assistants from becoming most antagonists.
 #PROTECT_ASSISTANT_FROM_ANTAGONIST
