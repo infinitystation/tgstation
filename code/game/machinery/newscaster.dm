@@ -5,6 +5,7 @@
 /datum/feed_comment
 	var/author = ""
 	var/body = ""
+	var/body_u = ""//unicode for comment
 	var/time_stamp = ""
 
 /datum/feed_message
@@ -21,7 +22,9 @@
 	var/caption = ""
 
 /datum/feed_channel
-	var/channel_name=""
+	var/channel_name=""		//unicode is original (prevent for 'ÿ' letter bug in non-html content)
+	var/channel_name_c=""	//windows, we need it in chat
+	var/channel_name_o=""	//original name
 	var/list/datum/feed_message/messages = list()
 	//var/message_count = 0
 	var/locked=0
@@ -40,7 +43,9 @@
 	src.locked = 0
 
 /datum/feed_channel/proc/clear()
-	src.channel_name = ""
+	src.channel_name = ""	//unicode is original (prevent for 'ÿ' letter bug in non-html content)
+	src.channel_name_c=""	//windows, we need it in chat
+	src.channel_name_o=""	//original name
 	src.messages = list()
 	src.locked = 0
 	src.author = ""
@@ -57,7 +62,9 @@
 
 /datum/feed_network/proc/CreateFeedChannel(var/channel_name, var/author, var/locked, var/adminChannel = 0)
 	var/datum/feed_channel/newChannel = new /datum/feed_channel
-	newChannel.channel_name = channel_name
+	newChannel.channel_name = copytext(sanitize_u(channel_name), 1, MAX_MESSAGE_LEN)
+	newChannel.channel_name_c = copytext(sanitize(channel_name), 1, MAX_MESSAGE_LEN)
+	newChannel.channel_name_o = channel_name
 	newChannel.author = author
 	newChannel.locked = locked
 	newChannel.is_admin_channel = adminChannel
@@ -65,8 +72,10 @@
 
 /datum/feed_network/proc/SubmitArticle(var/msg, var/author, var/channel_name, var/obj/item/weapon/photo/photo, var/adminMessage = 0, var/allow_comments = 1)
 	var/datum/feed_message/newMsg = new /datum/feed_message
+	var/channel_name_o = ""
 	newMsg.author = author
-	newMsg.body = msg
+	newMsg.body = copytext(sanitize_u(msg), 1, MAX_MESSAGE_LEN)
+	newMsg.body = html_decode(newMsg.body)
 	newMsg.time_stamp = "[worldtime2text()]"
 	newMsg.is_admin_message = adminMessage
 	newMsg.locked = !allow_comments
@@ -76,9 +85,11 @@
 	for(var/datum/feed_channel/FC in network_channels)
 		if(FC.channel_name == channel_name)
 			FC.messages += newMsg                  //Adding message to the network's appropriate feed_channel
+			channel_name_o = FC.channel_name_o
 			break
 	for(var/obj/machinery/newscaster/NEWSCASTER in allCasters)
-		NEWSCASTER.newsAlert(channel_name)
+		var/channel_name_a = copytext(sanitize(channel_name_o), 1, MAX_MESSAGE_LEN)
+		NEWSCASTER.newsAlert(channel_name_a)
 
 
 var/datum/feed_network/news_network = new /datum/feed_network     //The global news-network, which is coincidentally a global list.
@@ -159,6 +170,7 @@ var/list/obj/machinery/newscaster/allCasters = list() //Global list that will co
 	var/msg = "";                //Feed message
 	var/obj/item/weapon/photo/photo = null
 	var/channel_name = ""; //the feed channel which will be receiving the feed, or being created
+	var/channel_name_o = "";//we need save original name to windows chat
 	var/c_locked=0;        //Will our new channel be locked to public submissions?
 	var/hitstaken = 0      //Death at 3 hits from an item with force>=15
 	var/datum/feed_channel/viewing_channel = null
@@ -296,6 +308,7 @@ var/list/obj/machinery/newscaster/allCasters = list() //Global list that will co
 			if(2)
 				dat+="Creating new Feed Channel..."
 				dat+="<HR><B><A href='?src=\ref[src];set_channel_name=1'>Channel Name</A>:</B> [src.channel_name]<BR>"
+				src.channel_name_o = src.channel_name
 				dat+="<B>Channel Author:</B> <FONT COLOR='green'>[src.scanned_user]</FONT><BR>"
 				dat+="<B><A href='?src=\ref[src];set_channel_lock=1'>Will Accept Public Feeds</A>:</B> [(src.c_locked) ? ("NO") : ("YES")]<BR><BR>"
 				dat+="<BR><A href='?src=\ref[src];submit_new_channel=1'>Submit</A><BR><BR><A href='?src=\ref[src];setScreen=[0]'>Cancel</A><BR>"
@@ -304,6 +317,8 @@ var/list/obj/machinery/newscaster/allCasters = list() //Global list that will co
 				dat+="<HR><B><A href='?src=\ref[src];set_channel_receiving=1'>Receiving Channel</A>:</B> [src.channel_name]<BR>" //MARK
 				dat+="<B>Message Author:</B> <FONT COLOR='green'>[src.scanned_user]</FONT><BR>"
 				dat+="<B><A href='?src=\ref[src];set_new_message=1'>Message Body</A>:</B> [src.msg] <BR>"
+				src.msg = copytext(sanitize_u(src.msg), 1, MAX_MESSAGE_LEN)
+				src.msg = html_decode(src.msg)
 				dat+="<B><A href='?src=\ref[src];set_attachment=1'>Attach Photo</A>:</B>  [(src.photo ? "Photo Attached" : "No Photo")]</BR>"
 				dat+="<B><A href='?src=\ref[src];set_comment=1'>Comments [allow_comments ? "Enabled" : "Disabled"]</A></B><BR>"
 				dat+="<BR><A href='?src=\ref[src];submit_new_message=1'>Submit</A><BR><BR><A href='?src=\ref[src];setScreen=[0]'>Cancel</A><BR>"

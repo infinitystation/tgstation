@@ -13,6 +13,7 @@
 	var/status = 0
 	var/obj/item/weapon/stock_parts/cell/high/bcell = null
 	var/hitcost = 1000
+	var/mob/foundmob
 
 /obj/item/weapon/melee/baton/suicide_act(mob/user)
 	user.visible_message("<span class='suicide'>[user] is putting the live [name] in \his mouth! It looks like \he's trying to commit suicide.</span>")
@@ -154,6 +155,17 @@
 		H.forcesay(hit_appends)
 
 	add_logs(user, L, "stunned")
+
+/obj/item/weapon/melee/baton/throw_impact(atom/hit_atom)
+	. = ..()
+	for(var/mob/M in player_list) if(M.key == src.fingerprintslast)
+		foundmob = M
+		break
+	if(istype(hit_atom, /mob/living))
+		var/mob/living/carbon/human/H = hit_atom
+		if(status)
+			baton_stun(H, foundmob)
+
 
 /obj/item/weapon/melee/baton/emp_act(severity)
 	if(bcell)
