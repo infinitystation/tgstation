@@ -16,6 +16,14 @@
 	icon_state = "ash"
 	anchored = 1
 
+/obj/effect/decal/cleanable/shit
+	name = "shit"
+	desc = "Who did this?! Smells like shit. Someone should clean that up."
+	gender = PLURAL
+	icon = 'icons/obj/redu.dmi'
+	icon_state = "Shit"
+	anchored = 1
+
 /obj/effect/decal/cleanable/greenglow
 	name = "green glow"
 

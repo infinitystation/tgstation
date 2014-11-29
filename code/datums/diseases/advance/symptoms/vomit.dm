@@ -35,7 +35,7 @@ Bonus
 		var/mob/living/M = A.affected_mob
 		switch(A.stage)
 			if(1, 2, 3, 4)
-				M << "<span class='notice'>[pick("You feel nauseous.", "You feel like you're going to throw up!")]</span>"
+				M << "<span class='notice'>[pick("Тебе тошнит.", "Ты чувствуешь, что сейчас тебЯ вырвет!")]</span>"
 			else
 				Vomit(M)
 
@@ -43,8 +43,8 @@ Bonus
 
 /datum/symptom/vomit/proc/Vomit(var/mob/living/M)
 
-	M.visible_message("<span class='danger'>[M] vomits on the floor!</span>", \
-					"<span class='userdanger'>You throw up on the floor!</span>")
+	M.visible_message("<span class='danger'>[M] блюёт на пол!</span>", \
+					"<span class='userdanger'>ТебЯ вырвало на пол!</span>")
 
 	M.nutrition -= 20
 	M.adjustToxLoss(-3)
@@ -86,7 +86,7 @@ Bonus
 
 	M.Stun(1)
 	M.visible_message("<span class='danger'>[M] vomits on the floor!</span>", \
-						"<span class='userdanger'>You throw up on the floor!</span>")
+						"<span class='userdanger'>ТебЯ вырвало на пол!</span>")
 
 	// They lose blood and health.
 	var/brute_dam = M.getBruteLoss()
