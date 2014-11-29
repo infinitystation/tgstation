@@ -6,6 +6,7 @@
 
 // BEGIN_FILE_DIR
 #define FILE_DIR .
+#define FILE_DIR "Bug_code"
 #define FILE_DIR "html"
 #define FILE_DIR "icons"
 #define FILE_DIR "icons/ass"
@@ -59,7 +60,7 @@
 // BEGIN_INCLUDE
 #include "_maps\tgstation2.dm"
 #include "Bug_code\bike.dm"
-#include "Bug_code\craft_bike.dm"
+#include "Bug_code\upload.cs.dm"
 #include "Bug_code\ven.dm"
 #include "code\_compile_options.dm"
 #include "code\hub.dm"
