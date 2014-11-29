@@ -61,13 +61,13 @@
 				buckled_mob.pixel_x = -4
 				buckled_mob.pixel_y = 7
 
-/obj/structure/stool/bed/chair/vechicle/segway/attackby(obj/item/W, mob/user)
+/obj/structure/stool/bed/chair/vehicle/segway/attackby(obj/item/W, mob/user)
 	if(istype(W, /obj/item/weapon/reagent_containers/food))
 		user.visible_message("\blue [user] puts the [W.name] in the [src].", "\blue You put the [W.name] in the [src].")
 		reagents.add_reagent("fuel", 75)
 		del(W)
 
-/obj/structure/stool/bed/chair/vechicle/segway/examine(mob/user)
+/obj/structure/stool/bed/chair/vehicle/segway/examine(mob/user)
 	if(reagents.total_volume <= 0) //no fuel
 		if(user)
 			user << "\red \the [src] has no fuel!"
