@@ -435,14 +435,14 @@ var/list/slot_equipment_priority = list( \
 	if (stat != 2)
 		usr << "\blue <B>You must be dead to use this!</B>"
 		return
-
+	// sandbox and allow respawn
 	if (ticker.mode.name == "sandbox" || allow_respawn > 0)
 		if ((world.time - src.timeofdeath) < 100)
 			usr << "Потерпите немного длЯ респавна!"
 			return
 		log_game("[usr.name]/[usr.key] used abandon mob.")
 
-		usr << "\blue <B>Please roleplay correctly!</B>"
+		usr << "<span class='boldnotice'>Please roleplay correctly!</span>"
 
 		if(!client)
 			log_game("[usr.key] AM failed due to disconnect.")
@@ -465,6 +465,7 @@ var/list/slot_equipment_priority = list( \
 		M.allow_respawn = 0
 		return
 
+	//respawn
 	if (!( abandon_allowed ))
 		usr << "Респавн отключен =("
 		return
@@ -477,7 +478,7 @@ var/list/slot_equipment_priority = list( \
 
 	log_game("[usr.name]/[usr.key] used abandon mob.")
 
-	usr << "\blue <B>Please roleplay correctly!</B>"
+	usr << "<span class='boldnotice'>Please roleplay correctly!</span>"
 
 	if(!client)
 		log_game("[usr.key] AM failed due to disconnect.")
