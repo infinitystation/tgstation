@@ -401,18 +401,16 @@
 		H << "Вы справили нужду"
 
 	//really need to shit? not now, but i'm need to shit!
-	else if((H.need_to_shit > H.need_to_shit_again) && (H.need_to_shit > (H.need_to_shit_max-30)))
+	else if((H.need_to_shit > H.need_to_shit_again) && (H.need_to_shit >= (H.need_to_shit_max-40)))
 		H << "Вам ОЧЕНЬ СИЛЬНО хочетсЯ в туалет"
-		H.need_to_shit_again += 9
+		H.need_to_shit_again += 8
 
 	//need to shit? not now, but...
-	else if(H.need_to_shit > H.need_to_shit_again)
-		if(H.need_to_shit_again > (H.need_to_shit_max-30))
-			H.need_to_shit_again = H.need_to_shit_max-30
-			H << "Вам сильнее хочетсЯ в туалет"
-		else	//not now...
-			H.need_to_shit_again += 70
-			H << "Вам хочетсЯ в туалет"
+	else if((H.need_to_shit > H.need_to_shit_again) && (H.need_to_shit < (H.need_to_shit_max-40)))
+		H.need_to_shit_again += 70
+		if(H.need_to_shit_again >= (H.need_to_shit_max-40))
+			H.need_to_shit_again = (H.need_to_shit_max-40)
+		H << "Вам хочетсЯ в туалет"
 
 	// nutrition decrease & shit increase
 	if (H.nutrition > 0 && H.stat != 2)

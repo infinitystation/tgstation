@@ -9,3 +9,4 @@
 ###############################################################################################
 violentfire = Host
 xsarethx = Game Master
+bear1ake = Game Master
