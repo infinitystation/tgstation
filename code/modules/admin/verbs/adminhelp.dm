@@ -75,6 +75,7 @@
 						msg += "<b><font color='black'>[original_word] (<A HREF='?_src_=holder;adminmoreinfo=\ref[found]'>?</A>)</font></b> "
 						continue
 		msg += "[original_word] "
+
 		msg = html_encode(msg)
 		msg = html_decode(msg)
 
