@@ -21,7 +21,6 @@
 	//clean the input msg
 	if(!msg)	return
 	msg = sanitize(copytext(msg,1,MAX_MESSAGE_LEN))
-	msg = html_decode(msg)
 	if(!msg)	return
 	var/original_msg = msg
 
@@ -76,6 +75,9 @@
 						msg += "<b><font color='black'>[original_word] (<A HREF='?_src_=holder;adminmoreinfo=\ref[found]'>?</A>)</font></b> "
 						continue
 		msg += "[original_word] "
+
+		msg = html_encode(msg)
+		msg = html_decode(msg)
 
 	if(!mob)	return						//this doesn't happen
 
