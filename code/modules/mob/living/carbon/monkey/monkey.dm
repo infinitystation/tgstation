@@ -26,6 +26,13 @@
 
 	..()
 
+/mob/living/carbon/monkey/prepare_data_huds()
+	//Prepare our med HUD...
+	..()
+	//...and display it.
+	for(var/datum/atom_hud/data/medical/hud in huds)
+		hud.add_to_hud(src)
+
 /mob/living/carbon/monkey/movement_delay()
 	var/tally = 0
 	if(reagents)
@@ -215,7 +222,7 @@
 /mob/living/carbon/monkey/var/co2overloadtime = null
 /mob/living/carbon/monkey/var/temperature_resistance = T0C+75
 
-/mob/living/carbon/monkey/ex_act(severity)
+/mob/living/carbon/monkey/ex_act(severity, specialty)
 	..()
 	switch(severity)
 		if(1.0)

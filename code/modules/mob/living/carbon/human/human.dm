@@ -33,24 +33,19 @@
 
 	..()
 
-/mob/living/carbon/human/prepare_huds()
+/mob/living/carbon/human/prepare_data_huds()
+	//Update med hud images...
 	..()
-	prepare_data_huds()
-
-/mob/living/carbon/human/proc/prepare_data_huds()
-	//Update all our data hud images...
-	med_hud_set_health()
-	med_hud_set_status()
+	//...sec hud images...
 	sec_hud_set_ID()
 	sec_hud_set_implants()
 	sec_hud_set_security_status()
-	//...and display them
+	//...and display them.
 	add_to_all_data_huds()
 
 /mob/living/carbon/human/Destroy()
 	for(var/atom/movable/organelle in organs)
 		qdel(organelle)
-	remove_from_all_data_huds()
 	return ..()
 
 /mob/living/carbon/human/Bump(atom/movable/AM as mob|obj, yes)
@@ -157,7 +152,7 @@
 			stat("Energy Charge", round(wear_suit:cell:charge/100))
 
 
-/mob/living/carbon/human/ex_act(severity)
+/mob/living/carbon/human/ex_act(severity, specialty)
 	..()
 
 	var/shielded = 0
