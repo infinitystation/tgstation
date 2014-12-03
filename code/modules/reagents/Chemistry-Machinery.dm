@@ -17,8 +17,6 @@
 	var/beaker = null
 	var/recharged = 0
 	var/recharge_delay = 15  //Time it game ticks between recharges
-	var/ui_name = "Chem Dispenser 5000"	//for bar
-	//var/id_scan = 1 //for bar wires update
 	var/list/dispensable_reagents = list("hydrogen","lithium","carbon","nitrogen","oxygen","fluorine",
 	"sodium","aluminium","silicon","phosphorus","sulfur","chlorine","potassium","iron",
 	"copper","mercury","radium","water","ethanol","sugar","sacid")
@@ -127,10 +125,6 @@
 			amount = 100
 
 	if(href_list["dispense"])
-		/* if((!allowed(usr)) && !emagged && id_scan)	//For SECURE MACHINES YEAH
-			usr << "<span class='warning'>Access denied.</span>"	//Unless emagged of course
-			return 1 */ //wires update
-
 		if (dispensable_reagents.Find(href_list["dispense"]) && beaker != null)
 			var/obj/item/weapon/reagent_containers/glass/B = src.beaker
 			var/datum/reagents/R = B.reagents
@@ -245,7 +239,7 @@
 	desc = "Ўтука, которая раздает бухло."
 	icon = 'icons/obj/BarDispenser.dmi'
 	icon_state = "bardispenser"
-	ui_name = "Bartender's Dispenser 100500"
+
 	energy = 5
 	max_energy = 5
 	amount = 5
@@ -394,7 +388,6 @@
 		return 1
 	else
 		return 0 */
-
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -976,7 +969,7 @@ obj/machinery/computer/pandemic/proc/replicator_cooldown(var/waittime)
 		idle_power_usage = 5
 		active_power_usage = 100
 		pass_flags = PASSTABLE
-		var/inuse = 0
+		var/operating = 0
 		var/obj/item/weapon/reagent_containers/beaker = null
 		var/limit = 10
 		var/list/blend_items = list (
@@ -992,9 +985,9 @@ obj/machinery/computer/pandemic/proc/replicator_cooldown(var/waittime)
 				/obj/item/stack/sheet/mineral/bananium = list("banana" = 20),
 				/obj/item/stack/sheet/mineral/silver = list("silver" = 20),
 				/obj/item/stack/sheet/mineral/gold = list("gold" = 20),
+				/obj/item/weapon/grown/nettle/basic = list("sacid" = 0),
 				/obj/item/weapon/grown/nettle/death = list("pacid" = 0),
-				/obj/item/weapon/grown/nettle = list("sacid" = 0),
-				/obj/item/weapon/grown/novaflower = list("capsaicin" = 0),
+				/obj/item/weapon/grown/novaflower = list("capsaicin" = 0, "condensedcapsaicin" = 0),
 
 				//Crayons (for overriding colours)
 				/obj/item/toy/crayon/red = list("redcrayonpowder" = 10),
@@ -1135,7 +1128,7 @@ obj/machinery/computer/pandemic/proc/replicator_cooldown(var/waittime)
 		var/beaker_contents = ""
 		var/dat = ""
 
-		if(!inuse)
+		if(!operating)
 				for (var/obj/item/O in holdingitems)
 						processing_chamber += "\A [O.name]<BR>"
 
@@ -1180,6 +1173,9 @@ obj/machinery/computer/pandemic/proc/replicator_cooldown(var/waittime)
 	if(..())
 		return
 	usr.set_machine(src)
+	if(operating)
+		updateUsrDialog()
+		return
 	switch(href_list["action"])
 		if ("grind")
 			grind()
@@ -1262,9 +1258,10 @@ obj/machinery/computer/pandemic/proc/replicator_cooldown(var/waittime)
 		if (!beaker || (beaker && beaker.reagents.total_volume >= beaker.reagents.maximum_volume))
 				return
 		playsound(src.loc, 'sound/machines/juicer.ogg', 20, 1)
-		inuse = 1
+		operating = 1
+		updateUsrDialog()
 		spawn(50)
-				inuse = 0
+				operating = 0
 				updateUsrDialog()
 
 		//Snacks
@@ -1296,9 +1293,10 @@ obj/machinery/computer/pandemic/proc/replicator_cooldown(var/waittime)
 		if (!beaker || (beaker && beaker.reagents.total_volume >= beaker.reagents.maximum_volume))
 				return
 		playsound(src.loc, 'sound/machines/blender.ogg', 50, 1)
-		inuse = 1
+		operating = 1
+		updateUsrDialog()
 		spawn(60)
-				inuse = 0
+				operating = 0
 				updateUsrDialog()
 
 		//Snacks and Plants
