@@ -66,15 +66,6 @@ ALERT_RED_DOWNTO ћеханизм самоуничтожения был деактивирован, хотя всЄ ещЄ остаЄт
 ALERT_DELTA Ѕыл запущен механизм самоуничтожения станции. ¬сему экипажу следует подчиняться всем инструкциям и приказам, которые будут отдавать √лавы. Ћюбые нарушения этих инструкций или приказов могут быть наказаны смертью. Ёто не учебная тревога.
 
 
-### EXPLOSIONS ###
-
-## Unhash this to use recursive explosions, keep it hashed to use normal style explosions.
-## Recursive explosions react to walls, airlocks and blast doors, making them look a lot cooler
-## than the boring old circular explosions. They require more CPU and are (as of March 2013) experimental.
-## The default map is generally designed for the old style explosions in terms of security.
-
-#USE_RECURSIVE_EXPLOSIONS
-
 
 ### GAME MODES ###
 
