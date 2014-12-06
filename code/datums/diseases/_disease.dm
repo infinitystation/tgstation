@@ -56,7 +56,7 @@ var/list/diseases = typesof(/datum/disease) - /datum/disease
 	var/atom/movable/holder = null
 	var/list/cures = list() //list of cures if the disease has the CURABLE flag, these are reagent ids
 	var/infectivity = 65
-	var/cure_chance = 0
+	var/cure_chance = 8
 	var/carrier = 0 //If our host is only a carrier
 	var/permeability_mod = 1
 	var/severity =	NONTHREAT
@@ -196,6 +196,4 @@ var/list/diseases = typesof(/datum/disease) - /datum/disease
 //don't use this proc directly. this should only ever be called by cure()
 /datum/disease/proc/remove_virus()
 	affected_mob.viruses -= src		//remove the datum from the list
-	if(istype(affected_mob, /mob/living/carbon/human))
-		var/mob/living/carbon/human/H = affected_mob
-		H.med_hud_set_status()
+	affected_mob.med_hud_set_status()

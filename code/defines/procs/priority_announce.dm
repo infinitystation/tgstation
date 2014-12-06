@@ -4,6 +4,8 @@
 
 	var/announcement
 
+	text = sanitize(copytext(text,1,MAX_MESSAGE_LEN))
+
 	if(type == "Priority")
 		announcement += "<h1 class='alert'>Priority Announcement</h1>"
 
@@ -20,7 +22,7 @@
 		else
 			news_network.SubmitArticle(title + "<br><br>" + text, "Central Command", "Station Announcements", null)
 
-	announcement += "<br><span class='alert'>[html_encode(text)]</span><br>"
+	announcement += "<br><span class='alert'>[text]</span><br>"
 	announcement += "<br>"
 
 	for(var/mob/M in player_list)
@@ -40,7 +42,7 @@
 /proc/minor_announce(var/message, var/title = "Attention:", var/alert)
 	if(!message)
 		return
-
+	message = sanitize(copytext(message,1,MAX_MESSAGE_LEN))
 	for(var/mob/M in player_list)
 		if(!istype(M,/mob/new_player) && !M.ear_deaf)
 			M << "<b><font size = 3><font color = red>[title]</font color><BR>[message]</font size></b><BR>"

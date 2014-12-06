@@ -145,7 +145,7 @@
 				if(1)
 					emote("twitch")
 				if(2 to 3)
-					say("[prob(50) ? ";" : ""][pick("SHIT", "PISS", "FUCK", "CUNT", "COCKSUCKER", "MOTHERFUCKER", "TITS")]")
+					say("[prob(50) ? ";" : ""][pick("говно", "писька", "бля", "сука", "хуесос", "мамуебал", "сиськи")]")
 			var/x_offset = pixel_x + rand(-2,2) //Should probably be moved into the twitch emote at some point.
 			var/y_offset = pixel_y + rand(-1,1)
 			animate(src, pixel_x = pixel_x + x_offset, pixel_y = pixel_y + y_offset, time = 1)
@@ -157,9 +157,9 @@
 		if (prob(3))
 			switch(pick(1,2,3))
 				if(1)
-					say(pick("IM A PONY NEEEEEEIIIIIIIIIGH", "without oxigen blob don't evoluate?", "CAPTAINS A COMDOM", "[pick("", "that faggot traitor")] [pick("joerge", "george", "gorge", "gdoruge")] [pick("mellens", "melons", "mwrlins")] is grifing me HAL;P!!!", "can u give me [pick("telikesis","halk","eppilapse")]?", "THe saiyans screwed", "Bi is THE BEST OF BOTH WORLDS>", "I WANNA PET TEH monkeyS", "stop grifing me!!!!", "SOTP IT#"))
+					say(pick("я пони!! юхууу!! Ќяяяяяя!!", "а что если  апитана накормить плазмой?", " апитан гандон", "[pick("", "этот придурок предатель!")] [pick("джиорж", "гирогий", "гоша", "джоржма")] [pick("абузы", "арбужи", "армузы")] напал на меня памагитиии!!!", "вы можете дать мне [pick("телекинез","способность ’алка","эппилапсию")]?", "я не болен", "самые вкусные бутерброды из ботанистов>", "я хочу погладить тех обезь€нок", "прекрати нападать на меня!!!", "прекрати это!"))
 				if(2)
-					say(pick("FUS RO DAH","fucking 4rries!", "stat me", ">my face", "roll it easy!", "waaaaaagh!!!", "red wonz go fasta", "FOR TEH EMPRAH", "lol2cat", "dem dwarfs man, dem dwarfs", "SPESS MAHREENS", "hwee did eet fhor khayosss", "lifelike texture ;_;", "luv can bloooom", "PACKETS!!!"))
+					say(pick("шындыр-мындыр лапупындыр","гребаные вишенки!", "возьми мен€", "моЄ лицо", "давай потихоньку!", "вааааа!!!", "красные вагончики быстрее", "за императора", "смешной котик", "к чЄрту гномиков, чувак, к черту их", "морские котикиииии", "тмор тваби€ это хмур бур пур", "жизнь как текстура плачущего человечка", "любовь может убить", "ѕј ≈“» »»»!!"))
 				if(3)
 					emote("drool")
 

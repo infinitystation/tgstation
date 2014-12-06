@@ -34,8 +34,6 @@
 	* mob/RangedAttack(atom,params) - used only ranged, only used for tk and laser eyes but could be changed
 */
 /mob/proc/ClickOn( var/atom/A, var/params )
-	if(!A)				//yep folks, apparently such things can happen
-		return
 	if(world.time <= next_click)
 		return
 	next_click = world.time + 1
@@ -289,8 +287,7 @@
 	LE.current = T
 	LE.yo = U.y - T.y
 	LE.xo = U.x - T.x
-	spawn( 1 )
-		LE.process()
+	LE.fire()
 
 /mob/living/carbon/human/LaserEyes()
 	if(nutrition>0)

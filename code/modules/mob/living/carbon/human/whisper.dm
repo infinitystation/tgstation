@@ -11,6 +11,7 @@
 
 
 	message = trim(strip_html_properly(message))
+	message = copytext(sanitize(message), 1, MAX_MESSAGE_LEN)
 	if(!can_speak(message))
 		return
 

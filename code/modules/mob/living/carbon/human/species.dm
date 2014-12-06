@@ -256,7 +256,7 @@
 				return 0
 			if(!H.w_uniform && !nojumpsuit)
 				if(!disable_warning)
-					H << "<span class='danger'>You need a jumpsuit before you can attach this [I.name].</span>"
+					H << "<span class='danger'>¬ам нужен костюм прежде чем вы сможете присоединить этот [I.name].</span>"
 				return 0
 			if( !(I.slot_flags & SLOT_BELT) )
 				return
@@ -290,7 +290,7 @@
 				return 0
 			if(!H.w_uniform && !nojumpsuit)
 				if(!disable_warning)
-					H << "<span class='danger'>You need a jumpsuit before you can attach this [I.name].</span>"
+					H << "<span class='danger'>¬ам нужен костюм прежде чем вы сможете присоединить этот [I.name].</span>"
 				return 0
 			if( !(I.slot_flags & SLOT_ID) )
 				return 0
@@ -302,7 +302,7 @@
 				return 0
 			if(!H.w_uniform && !nojumpsuit)
 				if(!disable_warning)
-					H << "<span class='danger'>You need a jumpsuit before you can attach this [I.name].</span>"
+					H << "<span class='danger'>¬ам нужен костюм прежде чем вы сможете присоединить этот [I.name].</span>"
 				return 0
 			if(I.slot_flags & SLOT_DENYPOCKET)
 				return
@@ -315,7 +315,7 @@
 				return 0
 			if(!H.w_uniform && !nojumpsuit)
 				if(!disable_warning)
-					H << "<span class='danger'>You need a jumpsuit before you can attach this [I.name].</span>"
+					H << "<span class='danger'>¬ам нужен костюм прежде чем вы сможете присоединить этот [I.name].</span>"
 				return 0
 			if(I.slot_flags & SLOT_DENYPOCKET)
 				return 0
@@ -329,15 +329,15 @@
 				return 0
 			if(!H.wear_suit)
 				if(!disable_warning)
-					H << "<span class='danger'>You need a suit before you can attach this [I.name].</span>"
+					H << "<span class='danger'>¬ам нужен костюм прежде чем вы сможете присоединить этот [I.name].</span>"
 				return 0
 			if(!H.wear_suit.allowed)
 				if(!disable_warning)
-					H << "You somehow have a suit with no defined allowed items for suit storage, stop that."
+					H << "” вас каким-то образом костюм без определенных возможностей положить в него предметы, прекратите это."
 				return 0
 			if(I.w_class > 4)
 				if(!disable_warning)
-					H << "The [I.name] is too big to attach."  //should be src?
+					H << "[I.name] слишком большого размера, чтобы это получилось присоединить."  //should be src?
 				return 0
 			if( istype(I, /obj/item/device/pda) || istype(I, /obj/item/weapon/pen) || is_type_in_list(I, H.wear_suit.allowed) )
 				return 1
@@ -384,13 +384,13 @@
 	//The fucking FAT mutation is the dumbest shit ever. It makes the code so difficult to work with
 	if(FAT in H.mutations)
 		if(H.overeatduration < 100)
-			H << "<span class='notice'>You feel fit again!</span>"
+			H << "<span class='notice'>¬ы опять чувствуете себ€ в норме!</span>"
 			H.mutations -= FAT
 			H.update_inv_w_uniform(0)
 			H.update_inv_wear_suit()
 	else
 		if(H.overeatduration > 500)
-			H << "<span class='danger'>You suddenly feel blubbery!</span>"
+			H << "<span class='danger'>¬ы внезапно почувствовали, что вы переели и стали толстеть!</span>"
 			H.mutations |= FAT
 			H.update_inv_w_uniform(0)
 			H.update_inv_wear_suit()
@@ -401,18 +401,16 @@
 		H << "¬ы справили нужду"
 
 	//really need to shit? not now, but i'm need to shit!
-	else if((H.need_to_shit > H.need_to_shit_again) && (H.need_to_shit > (H.need_to_shit_max-30)))
+	else if((H.need_to_shit > H.need_to_shit_again) && (H.need_to_shit >= (H.need_to_shit_max-40)))
 		H << "¬ам ќ„≈Ќ№ —»Ћ№Ќќ хочется в туалет"
-		H.need_to_shit_again += 9
+		H.need_to_shit_again += 8
 
 	//need to shit? not now, but...
-	else if(H.need_to_shit > H.need_to_shit_again)
-		if(H.need_to_shit_again > (H.need_to_shit_max-30))
-			H.need_to_shit_again = H.need_to_shit_max-30
-			H << "¬ам сильнее хочется в туалет"
-		else	//not now...
-			H.need_to_shit_again += 70
-			H << "¬ам хочется в туалет"
+	else if((H.need_to_shit > H.need_to_shit_again) && (H.need_to_shit < (H.need_to_shit_max-40)))
+		H.need_to_shit_again += 70
+		if(H.need_to_shit_again >= (H.need_to_shit_max-40))
+			H.need_to_shit_again = (H.need_to_shit_max-40)
+		H << "¬ам хочется в туалет"
 
 	// nutrition decrease & shit increase
 	if (H.nutrition > 0 && H.stat != 2)
@@ -579,7 +577,7 @@
 	if ((HULK in H.mutations) && H.health <= 25)
 		H.mutations.Remove(HULK)
 		H.update_mutations()		//update our mutation overlays
-		H << "<span class='danger'>You suddenly feel very weak.</span>"
+		H << "<span class='danger'>¬незапно вы почувствовали себя очень слабым.</span>"
 		H.Weaken(3)
 		H.emote("collapse")
 
@@ -587,7 +585,7 @@
 		if (H.radiation > 100)
 			H.radiation = 100
 			H.Weaken(10)
-			H << "<span class='danger'>You feel weak.</span>"
+			H << "<span class='danger'>¬ы чувствуете слабость.</span>"
 			H.emote("collapse")
 
 		if (H.radiation < 0)
@@ -607,11 +605,11 @@
 					if(prob(5))
 						H.radiation -= 5
 						H.Weaken(3)
-						H << "<span class='danger'>You feel weak.</span>"
+						H << "<span class='danger'>¬ы чувствуете слабость.</span>"
 						H.emote("collapse")
 					if(prob(15))
 						if(!( H.hair_style == "Shaved") || !(H.hair_style == "Bald") || HAIR in specflags)
-							H << "<span class='danger'>Your hair starts to fall out in clumps...<span>"
+							H << "<span class='danger'>¬аши волосы начинают выпадать клочьями...<span>"
 							spawn(50)
 								H.facial_hair_style = "Shaved"
 								H.hair_style = "Bald"
@@ -622,7 +620,7 @@
 					H.radiation -= 3
 					H.adjustToxLoss(3)
 					if(prob(1))
-						H << "<span class='danger'>You mutate!</span>"
+						H << "<span class='danger'>¬ы мутировали!</span>"
 						randmutb(H)
 						domutcheck(H,null)
 						H.emote("gasp")
@@ -704,10 +702,10 @@
 
 			if(H.cpr_time < world.time + 30)
 				add_logs(H, M, "CPRed")
-				M.visible_message("<span class='notice'>[M] is trying to perform CPR on [H]!</span>", \
-								"<span class='notice'>You try to perform CPR on [H]. Hold still!</span>")
+				M.visible_message("<span class='notice'>[M] пытается сделать искусственное дыхание [H]!</span>", \
+								"<span class='notice'>¬ы пытаетесь сделать искусственное дыхание [H]. ќставайтесь на месте!</span>")
 				if(!do_mob(M, H))
-					M << "<span class='warning'>You fail to perform CPR on [H]!</span>"
+					M << "<span class='warning'>¬ этот раз у вас не получилось сделать искусственное дыхание [H]!</span>"
 					return 0
 				if((H.health >= -99 && H.health <= 0))
 					H.cpr_time = world.time
@@ -715,7 +713,7 @@
 					H.adjustOxyLoss(-suff)
 					H.updatehealth()
 					M.visible_message("[M] performs CPR on [H]!")
-					H << "<span class='unconscious'>You feel a breath of fresh air enter your lungs. It feels good.</span>"
+					H << "<span class='unconscious'>¬ы чувствуете как свежий воздух зашЄл к вам в лЄгкие. Ёто приятно.</span>"
 
 		if("grab")
 			H.grabbedby(M)
@@ -740,7 +738,7 @@
 				else
 					playsound(H.loc, 'sound/weapons/punchmiss.ogg', 25, 1, -1)
 
-				H.visible_message("<span class='warning'>[M] has attempted to [atk_verb] [H]!</span>")
+				H.visible_message("<span class='warning'>[M] попытался [atk_verb] [H]!</span>")
 				return 0
 
 
@@ -779,8 +777,8 @@
 			if(randn <= 25)
 				H.apply_effect(2, WEAKEN, H.run_armor_check(affecting, "melee"))
 				playsound(H, 'sound/weapons/thudswoosh.ogg', 50, 1, -1)
-				H.visible_message("<span class='danger'>[M] has pushed [H]!</span>",
-								"<span class='userdanger'>[M] has pushed [H]!</span>")
+				H.visible_message("<span class='danger'>[M] ударил [H]!</span>",
+								"<span class='userdanger'>[M] ударил [H]!</span>")
 				H.forcesay(hit_appends)
 				return
 
@@ -789,7 +787,7 @@
 			if(randn <= 60)
 				//BubbleWrap: Disarming breaks a pull
 				if(H.pulling)
-					H.visible_message("<span class='warning'>[M] has broken [H]'s grip on [H.pulling]!</span>")
+					H.visible_message("<span class='warning'>[M] разорвал захват [H] на [H.pulling]!</span>")
 					talked = 1
 					H.stop_pulling()
 
@@ -797,14 +795,14 @@
 				if(istype(H.l_hand, /obj/item/weapon/grab))
 					var/obj/item/weapon/grab/lgrab = H.l_hand
 					if(lgrab.affecting)
-						H.visible_message("<span class='warning'>[M] has broken [H]'s grip on [lgrab.affecting]!</span>")
+						H.visible_message("<span class='warning'>[M] разорвал захват [H] на [lgrab.affecting]!</span>")
 						talked = 1
 					spawn(1)
 						qdel(lgrab)
 				if(istype(H.r_hand, /obj/item/weapon/grab))
 					var/obj/item/weapon/grab/rgrab = H.r_hand
 					if(rgrab.affecting)
-						H.visible_message("<span class='warning'>[M] has broken [H]'s grip on [rgrab.affecting]!</span>")
+						H.visible_message("<span class='warning'>[M] разорвал захват [H] на [rgrab.affecting]!</span>")
 						talked = 1
 					spawn(1)
 						qdel(rgrab)
@@ -812,15 +810,15 @@
 
 				if(!talked)	//BubbleWrap
 					if(H.drop_item())
-						H.visible_message("<span class='danger'>[M] has disarmed [H]!</span>", \
-										"<span class='userdanger'>[M] has disarmed [H]!</span>")
+						H.visible_message("<span class='danger'>[M] разоружил [H]!</span>", \
+										"<span class='userdanger'>[M] разоружил [H]!</span>")
 				playsound(H, 'sound/weapons/thudswoosh.ogg', 50, 1, -1)
 				return
 
 
 			playsound(H, 'sound/weapons/punchmiss.ogg', 25, 1, -1)
-			H.visible_message("<span class='danger'>[M] attempted to disarm [H]!</span>", \
-							"<span class='userdanger'>[M] attemped to disarm [H]!</span>")
+			H.visible_message("<span class='danger'>[M] попытался разоружить [H]!</span>", \
+							"<span class='userdanger'>[M] попытался разоружить [H]!</span>")
 	return
 
 /datum/species/proc/spec_attacked_by(var/obj/item/I, var/mob/living/user, var/def_zone, var/obj/item/organ/limb/affecting, var/hit_area, var/intent, var/obj/item/organ/limb/target_limb, target_area, var/mob/living/carbon/human/H)
@@ -839,7 +837,7 @@
 	else
 		return 0
 
-	var/armor = H.run_armor_check(affecting, "melee", "<span class='warning'>Your armor has protected your [hit_area].</span>", "<span class='warning'>Your armor has softened a hit to your [hit_area].</span>")
+	var/armor = H.run_armor_check(affecting, "melee", "<span class='warning'>¬аша броня защитила вашу [hit_area].</span>", "<span class='warning'>¬аша броня смягчила удар по вашей [hit_area].</span>")
 	if(armor >= 100)	return 0
 	var/Iforce = I.force //to avoid runtimes on the forcesay checks at the bottom. Some items might delete themselves if you drop them. (stunning yourself, ninja swords)
 
@@ -872,8 +870,8 @@
 		switch(hit_area)
 			if("head")	//Harder to score a stun but if you do it lasts a bit longer
 				if(H.stat == CONSCIOUS && prob(I.force) && armor < 50)
-					H.visible_message("<span class='danger'>[H] has been knocked unconscious!</span>", \
-									"<span class='userdanger'>[H] has been knocked unconscious!</span>")
+					H.visible_message("<span class='danger'>[H] был вырублен без сознания!</span>", \
+									"<span class='userdanger'>[H] был вырублен без сознания!</span>")
 					H.apply_effect(20, PARALYZE, armor)
 					if(H != user && I.damtype == BRUTE)
 						ticker.mode.remove_revolutionary(H.mind)
@@ -892,8 +890,8 @@
 
 			if("chest")	//Easier to score a stun but lasts less time
 				if(H.stat == CONSCIOUS && I.force && prob(I.force + 10))
-					H.visible_message("<span class='danger'>[H] has been knocked down!</span>", \
-									"<span class='userdanger'>[H] has been knocked down!</span>")
+					H.visible_message("<span class='danger'>[H] был сбит на землю!</span>", \
+									"<span class='userdanger'>[H] был сбит на землю!</span>")
 					H.apply_effect(5, WEAKEN, armor)
 
 				if(bloody)

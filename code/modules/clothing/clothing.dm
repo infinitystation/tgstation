@@ -18,6 +18,7 @@
 	desc = "Protects your hearing from loud noises, and quiet ones as well."
 	icon_state = "earmuffs"
 	item_state = "earmuffs"
+	flags = EARBANGPROTECT
 	strip_delay = 15
 	put_on_delay = 25
 
@@ -285,8 +286,8 @@ atom/proc/generate_female_clothing(index,t_color,icon)
 			M << "Your suit will now report your vital lifesigns."
 		if(3)
 			M << "Your suit will now report your vital lifesigns as well as your coordinate position."
-	if(istype(M,/mob/living/carbon/human))
-		var/mob/living/carbon/human/H = M
+	if(istype(loc,/mob/living/carbon/human))
+		var/mob/living/carbon/human/H = loc
 		if(H.w_uniform == src)
 			H.update_suit_sensors()
 	..()

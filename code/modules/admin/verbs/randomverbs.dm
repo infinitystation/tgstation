@@ -27,6 +27,7 @@
 		return
 
 	var/msg = input("Message:", text("Subtle PM to [M.key]")) as text
+	msg = sanitize(copytext(msg,1,MAX_MESSAGE_LEN))
 
 	if (!msg)
 		return

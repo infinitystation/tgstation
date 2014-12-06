@@ -432,11 +432,49 @@ var/list/slot_equipment_priority = list( \
 	set name = "Respawn"
 	set category = "OOC"
 
+	if (stat != 2)
+		usr << "\blue <B>You must be dead to use this!</B>"
+		return
+	// sandbox and allow respawn
+	if (ticker.mode.name == "sandbox" || allow_respawn > 0)
+		if ((world.time - src.timeofdeath) < 100)
+			usr << "ѕотерпите немного для респавна!"
+			return
+		log_game("[usr.name]/[usr.key] used abandon mob.")
+
+		usr << "<span class='boldnotice'>Please roleplay correctly!</span>"
+
+		if(!client)
+			log_game("[usr.key] AM failed due to disconnect.")
+			return
+
+		client.screen.Cut()
+
+		if(!client)
+			log_game("[usr.key] AM failed due to disconnect.")
+			return
+
+		var/mob/new_player/M = new /mob/new_player()
+		if(!client)
+			log_game("[usr.key] AM failed due to disconnect.")
+			qdel(M)
+			return
+
+		M.key = key
+//		M.Login()	//wat
+		M.allow_respawn = 0
+		return
+
+	//respawn
 	if (!( abandon_allowed ))
+		usr << "–еспавн отключен =("
 		return
-	if ((stat != 2 || !( ticker )))
-		usr << "<span class='boldnotice'>You must be dead to use this!</span>"
+
+	if ((world.time - src.timeofdeath) < 6000)
+		usr << "ѕотерпите немного для респавна!"
 		return
+	else
+		usr << "¬ы можете сейчас респавнится!"
 
 	log_game("[usr.name]/[usr.key] used abandon mob.")
 
@@ -445,7 +483,9 @@ var/list/slot_equipment_priority = list( \
 	if(!client)
 		log_game("[usr.key] AM failed due to disconnect.")
 		return
+
 	client.screen.Cut()
+
 	if(!client)
 		log_game("[usr.key] AM failed due to disconnect.")
 		return
@@ -458,6 +498,7 @@ var/list/slot_equipment_priority = list( \
 
 	M.key = key
 //	M.Login()	//wat
+	M.allow_respawn = 0
 	return
 
 /client/verb/changes()
@@ -885,7 +926,7 @@ var/list/slot_equipment_priority = list( \
 
 /mob/proc/get_ghost(even_if_they_cant_reenter = 0)
 	if(mind)
-		for(var/mob/dead/observer/G in player_list)
+		for(var/mob/dead/observer/G in dead_mob_list)
 			if(G.mind == mind)
 				if(G.can_reenter_corpse || even_if_they_cant_reenter)
 					return G

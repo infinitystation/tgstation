@@ -9,4 +9,8 @@
 ###############################################################################################
 violentfire = Host
 xsarethx = Game Master
+<<<<<<< HEAD
 5568432256bug = Game Master
+=======
+bear1ake = Game Master
+>>>>>>> master

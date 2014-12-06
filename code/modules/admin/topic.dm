@@ -1145,6 +1145,18 @@
 		message_admins("<span class='danger'>Admin [key_name_admin(usr)] healed / revived [key_name_admin(L)]!</span>")
 		log_admin("[key_name(usr)] healed / Revived [key_name(L)]")
 
+	else if(href_list["allow_respawn"])
+		if(!check_rights(R_ADMIN))	return
+
+		var/mob/H = locate(href_list["allow_respawn"])
+		if(!istype(H))
+			usr << "Может быть использовано только для мобов"
+			return
+
+		H.allow_respawn = 1
+		message_admins("<span class='danger'>Admin [key_name_admin(usr)] разрешил(а) респавн [key_name_admin(H)]!</span>")
+		log_admin("[key_name(usr)] разрешил(а) респавн [key_name(H)]")
+
 	else if(href_list["makeai"])
 		if(!check_rights(R_SPAWN))	return
 
@@ -1421,6 +1433,8 @@
 		var/input = input(src.owner, "Please enter a message to reply to [key_name(H)] via their headset.","Outgoing message from Centcom", "")
 		if(!input)	return
 
+		input = sanitize(copytext(input,1,MAX_MESSAGE_LEN))	//fix
+
 		src.owner << "You sent [input] to [H] via a secure channel."
 		log_admin("[src.owner] replied to [key_name(H)]'s Centcom message with the message [input].")
 		message_admins("[src.owner] replied to [key_name(H)]'s Centcom message with: \"[input]\"")
@@ -1437,6 +1451,8 @@
 
 		var/input = input(src.owner, "Please enter a message to reply to [key_name(H)] via their headset.","Outgoing message from The Syndicate", "")
 		if(!input)	return
+
+		input = sanitize(copytext(input,1,MAX_MESSAGE_LEN)) //fix
 
 		src.owner << "You sent [input] to [H] via a secure channel."
 		log_admin("[src.owner] replied to [key_name(H)]'s Syndicate message with the message [input].")
