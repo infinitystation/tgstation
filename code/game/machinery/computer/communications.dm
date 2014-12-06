@@ -199,22 +199,21 @@ var/const/CALL_SHUTTLE_REASON_LENGTH = 12
 
 		// OMG CENTCOM LETTERHEAD
 		if("MessageCentcomm")
-			if(src.authenticated==2)
-				if(CM.cooldown)
-					usr << "Arrays recycling.  Please stand by."
-					return
-				var/input = stripped_input(usr, "Please choose a message to transmit to Centcom via quantum entanglement.  Please be aware that this process is very expensive, and abuse will lead to... termination.  Transmission does not guarantee a response.", "To abort, send an empty message.", "")
-				if(!input || !(usr in view(1,src)))
-					return
-				Centcomm_announce(input, usr)
-				usr << "Message transmitted."
-				log_say("[key_name(usr)] has made a Centcom announcement: [input]")
-				CM.cooldown = 55
+			if(CM.cooldown)
+				usr << "Arrays recycling.  Please stand by."
+				return
+			var/input = stripped_input(usr, "Please choose a message to transmit to Centcom via quantum entanglement.  Please be aware that this process is very expensive, and abuse will lead to... termination.  Transmission does not guarantee a response.", "To abort, send an empty message.", "")
+			if(!input || !(usr in view(1,src)))
+				return
+			Centcomm_announce(input, usr)
+			usr << "Message transmitted."
+			log_say("[key_name(usr)] has made a Centcom announcement: [input]")
+			CM.cooldown = 55
 
 
 		// OMG SYNDICATE ...LETTERHEAD
 		if("MessageSyndicate")
-			if((src.authenticated==2) && (src.emagged))
+			if(src.emagged)
 				if(CM.cooldown)
 					usr << "Arrays recycling.  Please stand by."
 					return

@@ -362,6 +362,10 @@ macro "macro"
 		command = ".screenshot"
 		is-disabled = false
 	elem 
+		name = "F3"
+		command = "say"
+		is-disabled = false
+	elem 
 		name = "F4"
 		command = "me"
 		is-disabled = false
