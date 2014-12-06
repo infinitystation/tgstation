@@ -11,6 +11,7 @@
 	var/fuel = 0
 	var/activated = 0
 
+
 /obj/structure/stool/bed/chair/vehicle/segway/process()
 	if(activated)
 		icon_state = "segway"

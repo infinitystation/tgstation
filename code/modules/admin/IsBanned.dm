@@ -54,7 +54,11 @@ world/IsBanned(key,address,computer_id)
 		if(.)
 			log_access("Failed Login: [key] [computer_id] [address] - Banned [.["reason"]]")
 			message_admins("<span class='adminnotice'>Failed Login: [key] id:[computer_id] ip:[address] - Banned [.["reason"]]</span>")
+//			var/mob/living/player// игрок
+//			player = player.mind
+//			player.banned = 1
 			return .
+
 
 		return ..()	//default pager ban stuff
 
