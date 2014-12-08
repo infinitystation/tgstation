@@ -51,7 +51,7 @@
 	recharge()
 	dispensable_reagents = sortList(dispensable_reagents)
 
-/obj/machinery/chem_dispenser/ex_act(severity, specialty)
+/obj/machinery/chem_dispenser/ex_act(severity, target)
 	if(severity < 3)
 		..()
 
@@ -410,7 +410,7 @@
 	create_reagents(100)
 	overlays += "waitlight"
 
-/obj/machinery/chem_master/ex_act(severity, specialty)
+/obj/machinery/chem_master/ex_act(severity, target)
 	if(severity < 3)
 		..()
 
