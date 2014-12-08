@@ -127,11 +127,11 @@
 /mob/living/carbon/human/proc/handle_disabilities()
 	if (disabilities & EPILEPSY)
 		if ((prob(1) && paralysis < 1))
-			src << "<span class='danger'>You have a seizure!</span>"
+			src << "<span class='danger'>У вас начался приступ!</span>"
 			for(var/mob/O in viewers(src, null))
 				if(O == src)
 					continue
-				O.show_message(text("<span class='userdanger'>[src] starts having a seizure!</span>"), 1)
+				O.show_message(text("<span class='userdanger'>[src] начал битьсЯ в припадке!</span>"), 1)
 			Paralyse(10)
 			Jitter(1000)
 	if (disabilities & COUGHING)
@@ -681,8 +681,8 @@
 			if(lastpuke >= 25) // about 25 second delay I guess
 				Stun(5)
 
-				visible_message("<span class='danger'>[src] throws up!</span>", \
-						"<span class='userdanger'>[src] throws up!</span>")
+				visible_message("<span class='danger'>[src] вырвал на пол!</span>", \
+						"<span class='userdanger'>[src] вырвал на пол!</span>")
 				playsound(loc, 'sound/effects/splat.ogg', 50, 1)
 
 				var/turf/location = loc
