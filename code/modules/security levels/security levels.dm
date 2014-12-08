@@ -21,25 +21,25 @@
 	if(level >= SEC_LEVEL_GREEN && level <= SEC_LEVEL_DELTA && level != security_level)
 		switch(level)
 			if(SEC_LEVEL_GREEN)
-				minor_announce(config.alert_desc_green, "Attention! Security level lowered to green:")
+				minor_announce(config.alert_desc_green, "Внимание! Уровень опасности понижен до зелёного:")
 				security_level = SEC_LEVEL_GREEN
 				for(var/obj/machinery/firealarm/FA in world)
 					if(FA.z == 1)
 						FA.update_icon()
 			if(SEC_LEVEL_BLUE)
 				if(security_level < SEC_LEVEL_BLUE)
-					minor_announce(config.alert_desc_blue_upto, "Attention! Security level elevated to blue:",1)
+					minor_announce(config.alert_desc_blue_upto, "Внимание! Уровень опасности повышен до синего:",1)
 				else
-					minor_announce(config.alert_desc_blue_downto, "Attention! Security level lowered to blue:")
+					minor_announce(config.alert_desc_blue_downto, "Внимание! Уровень опасности понижен до синего:")
 				security_level = SEC_LEVEL_BLUE
 				for(var/obj/machinery/firealarm/FA in world)
 					if(FA.z == 1)
 						FA.update_icon()
 			if(SEC_LEVEL_RED)
 				if(security_level < SEC_LEVEL_RED)
-					minor_announce(config.alert_desc_red_upto, "Attention! Code red!",1)
+					minor_announce(config.alert_desc_red_upto, "Внимание! Красный код!",1)
 				else
-					minor_announce(config.alert_desc_red_downto, "Attention! Code red!")
+					minor_announce(config.alert_desc_red_downto, "Внимание! Красный код!")
 				security_level = SEC_LEVEL_RED
 
 				/*	- At the time of commit, setting status displays didn't work properly
@@ -51,7 +51,7 @@
 					if(FA.z == 1)
 						FA.update_icon()
 			if(SEC_LEVEL_DELTA)
-				minor_announce(config.alert_desc_delta, "Attention! Delta security level reached!",1)
+				minor_announce(config.alert_desc_delta, "Внимание! Достигнут уровень опасности Дельта!",1)
 				security_level = SEC_LEVEL_DELTA
 				for(var/obj/machinery/firealarm/FA in world)
 					if(FA.z == 1)
