@@ -6,6 +6,9 @@
 
 // BEGIN_FILE_DIR
 #define FILE_DIR .
+#define FILE_DIR "_maps"
+#define FILE_DIR "_maps/map_files"
+#define FILE_DIR "_maps/map_files/Asteroidstation"
 #define FILE_DIR "Bug_code"
 #define FILE_DIR "Bug_code/Vert_code_In_Progress"
 #define FILE_DIR "html"
