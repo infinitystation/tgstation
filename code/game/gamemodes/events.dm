@@ -32,7 +32,7 @@
 		eventNumbersToPickFrom += 3
 	switch(pick(eventNumbersToPickFrom))
 		if(1)
-			priority_announce("Meteors have been detected on collision course with the station.", "Meteor Alert", 'sound/AI/meteors.ogg')
+			priority_announce("ѕрямо по курсу станции были обнаружены метеоры! ”гроза столкновения.", "ћетеоритная “ревога", 'sound/AI/meteors.ogg')
 			spawn(100)
 				meteor_wave()
 				spawn_meteors()
@@ -71,7 +71,7 @@
 */
 
 /proc/power_failure()
-	priority_announce("Abnormal activity detected in [station_name()]'s powernet. As a precautionary measure, the station's power will be shut off for an indeterminate duration.", "Critical Power Failure", 'sound/AI/poweroff.ogg')
+	priority_announce("ќбнаружена аномальная активность в энергосети станции [station_name()]. ¬ качестве превентивной меры энергопитание станции будет отключено на неопределЄнный период.", " ритическое падение энергии", 'sound/AI/poweroff.ogg')
 	for(var/obj/machinery/power/smes/S in world)
 		if(istype(get_area(S), /area/turret_protected) || S.z != 1)
 			continue
@@ -118,7 +118,7 @@
 
 /proc/power_restore()
 
-	priority_announce("Power has been restored to [station_name()]. We apologize for the inconvenience.", "Power Systems Nominal", 'sound/AI/poweron.ogg')
+	priority_announce("Ёнергопитание было восстановлено на станции [station_name()]. ѕриносим наши извинения за неудобства.", "Ёнергосеть в норме", 'sound/AI/poweron.ogg')
 	for(var/obj/machinery/power/apc/C in world)
 		if(C.cell && C.z == 1)
 			C.cell.charge = C.cell.maxcharge
@@ -139,7 +139,7 @@
 
 /proc/power_restore_quick()
 
-	priority_announce("All SMESs on [station_name()] have been recharged. We apologize for the inconvenience.", "Power Systems Nominal", 'sound/AI/poweron.ogg')
+	priority_announce("¬се —ћ≈—ы на станции [station_name()] были перезаряжены. ѕриносим наши извинения за неудобства.", "Ёнергосеть в норме", 'sound/AI/poweron.ogg')
 	for(var/obj/machinery/power/smes/S in world)
 		if(S.z != 1)
 			continue
