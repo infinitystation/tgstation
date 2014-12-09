@@ -371,7 +371,7 @@ macro "macro"
 		is-disabled = false
 	elem 
 		name = "F5"
-		command = "Aghost"
+		command = "asay"
 		is-disabled = false
 	elem 
 		name = "F6"
@@ -379,7 +379,7 @@ macro "macro"
 		is-disabled = false
 	elem 
 		name = "F7"
-		command = "Admin-PM"
+		command = "aghost"
 		is-disabled = false
 	elem 
 		name = "F8"
