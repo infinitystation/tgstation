@@ -247,7 +247,7 @@ var/list/sec_departments = list("engineering", "supply", "medical", "science")
 					continue
 				else
 					break
-		H << "<b>Вы были назначены на дежурство в [department]!</b>"
+		H << "<b>You have been assigned to [department]!</b>"
 		return
 
 /obj/item/device/radio/headset/headset_sec/department/New()
