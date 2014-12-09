@@ -9,4 +9,6 @@
 ###############################################################################################
 violentfire = Host
 xsarethx = Game Master
+5568432256bug = Game Master
+vert1881 = Game Master
 bear1ake = Game Master

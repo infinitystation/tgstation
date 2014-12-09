@@ -6,6 +6,11 @@
 
 // BEGIN_FILE_DIR
 #define FILE_DIR .
+#define FILE_DIR "_maps"
+#define FILE_DIR "_maps/map_files"
+#define FILE_DIR "_maps/map_files/Asteroidstation"
+#define FILE_DIR "Bug_code"
+#define FILE_DIR "Bug_code/Vert_code_In_Progress"
 #define FILE_DIR "html"
 #define FILE_DIR "icons"
 #define FILE_DIR "icons/ass"
@@ -867,6 +872,7 @@
 #include "code\modules\clothing\shoes\colour.dm"
 #include "code\modules\clothing\shoes\magboots.dm"
 #include "code\modules\clothing\shoes\miscellaneous.dm"
+#include "code\modules\clothing\spacesuits\delploy_adv.dm"
 #include "code\modules\clothing\spacesuits\hardsuit.dm"
 #include "code\modules\clothing\spacesuits\miscellaneous.dm"
 #include "code\modules\clothing\spacesuits\ninja.dm"
