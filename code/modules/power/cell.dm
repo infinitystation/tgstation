@@ -91,8 +91,8 @@
  * */
 	if (charge==0)
 		return
-	var/devastation_range = -1 //round(charge/11000)
-	var/heavy_impact_range = round(sqrt(charge)/60)
+	var/devastation_range = round(charge/6300) - 2
+	var/heavy_impact_range = round(sqrt(charge)/60) - 1
 	var/light_impact_range = round(sqrt(charge)/30)
 	var/flash_range = light_impact_range
 	if (light_impact_range==0)
@@ -118,25 +118,17 @@
 		reliability -= 10 / severity
 	..()
 
-/obj/item/weapon/stock_parts/cell/ex_act(severity)
+/obj/item/weapon/stock_parts/cell/ex_act(severity, target)
+	..()
+	if(!gc_destroyed)
+		switch(severity)
+			if(2)
+				if(prob(50))
+					corrupt()
+			if(3)
+				if(prob(25))
+					corrupt()
 
-	switch(severity)
-		if(1.0)
-			qdel(src)
-			return
-		if(2.0)
-			if (prob(50))
-				qdel(src)
-				return
-			if (prob(50))
-				corrupt()
-		if(3.0)
-			if (prob(25))
-				qdel(src)
-				return
-			if (prob(25))
-				corrupt()
-	return
 
 /obj/item/weapon/stock_parts/cell/blob_act()
 	ex_act(1)

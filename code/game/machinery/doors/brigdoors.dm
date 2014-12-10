@@ -152,22 +152,22 @@
 	user.set_machine(src)
 	var/dat = "<HTML><BODY><TT>"
 	dat += "<HR>Timer System:</hr>"
-	dat += "<b>Door [src.id] controls</b><br/>"
+	dat += "<b>Настройки Ячейки: [src.id]</b><br/>"
 	if (timing)
-		dat += "<a href='?src=\ref[src];timing=0'>Stop Timer and open door</a><br/>"
+		dat += "<a href='?src=\ref[src];timing=0'>Остановить таймер и открыть дверь</a><br/>"
 	else
-		dat += "<a href='?src=\ref[src];timing=1'>Activate Timer and close door</a><br/>"
+		dat += "<a href='?src=\ref[src];timing=1'>Запустить таймер и закрыть дверь</a><br/>"
 
 	dat += "Time Left: [(minute ? text("[minute]:") : null)][second] <br/>"
-	dat += "<a href='?src=\ref[src];tp=-60'>-</a> <a href='?src=\ref[src];tp=-1'>-</a> <a href='?src=\ref[src];tp=1'>+</a> <A href='?src=\ref[src];tp=60'>+</a><br/>"
+	dat += "<a href='?src=\ref[src];tp=-600'>-</a> <a href='?src=\ref[src];tp=-60'>-</a> <a href='?src=\ref[src];tp=-1'>-</a> <a href='?src=\ref[src];tp=1'>+</a> <A href='?src=\ref[src];tp=60'>+</a> <a href='?src=\ref[src];tp=+600'>+</a><br/>"
 
 	for(var/obj/machinery/flasher/F in targets)
 		if(F.last_flash && (F.last_flash + 150) > world.time)
-			dat += "<br/><A href='?src=\ref[src];fc=1'>Flash Charging</A>"
+			dat += "<br/><A href='?src=\ref[src];fc=1'>Вспышка зарЯжаетсЯ</A>"
 		else
-			dat += "<br/><A href='?src=\ref[src];fc=1'>Activate Flash</A>"
+			dat += "<br/><A href='?src=\ref[src];fc=1'>Активировать вспышку</A>"
 
-	dat += "<br/><br/><a href='?src=\ref[user];mach_close=computer'>Close</a>"
+	dat += "<br/><br/><a href='?src=\ref[user];mach_close=computer'>Закрыть</a>"
 	dat += "</TT></BODY></HTML>"
 	user << browse(dat, "window=computer;size=400x500")
 	onclose(user, "computer")
@@ -189,14 +189,14 @@
 	usr.set_machine(src)
 	if(href_list["timing"]) //switch between timing and not timing
 		var/timeleft = timeleft()
-		timeleft = min(max(round(timeleft), 0), 600)
+		timeleft = min(max(round(timeleft), 0), 3600)
 		timing = text2num(href_list["timing"])
 		timeset(timeleft)
 	else if(href_list["tp"]) //adjust timer
 		var/timeleft = timeleft()
 		var/tp = text2num(href_list["tp"])
 		timeleft += tp
-		timeleft = min(max(round(timeleft), 0), 600)
+		timeleft = min(max(round(timeleft), 0), 3600)
 		timeset(timeleft)
 		//src.timing = 1
 		//src.closedoor()

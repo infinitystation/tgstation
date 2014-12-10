@@ -37,7 +37,6 @@
 
 	ChangeTurf(/turf/simulated/floor/plating)
 
-
 /turf/simulated/wall/proc/break_wall()
 		builtin_sheet.amount = 2
 		builtin_sheet.loc = src
@@ -48,8 +47,10 @@
 		builtin_sheet.loc = src
 		new /obj/item/stack/sheet/metal(src)
 
-
-/turf/simulated/wall/ex_act(severity)
+/turf/simulated/wall/ex_act(severity, target)
+	if(target == src)
+		dismantle_wall(1,1)
+		return
 	switch(severity)
 		if(1.0)
 			//SN src = null
@@ -63,7 +64,9 @@
 		if(3.0)
 			if (prob(hardness))
 				dismantle_wall(0,1)
-		else
+			else
+	if(!density)
+		..()
 	return
 
 /turf/simulated/wall/blob_act()
@@ -74,7 +77,7 @@
 	if(M.damtype == "brute")
 		playsound(src, 'sound/weapons/punch4.ogg', 50, 1)
 		M.occupant_message("<span class='danger'>You hit [src].</span>")
-		visible_message("<span class='danger'>[src] has been hit by [M.name].</span>")
+		visible_message("<span class='danger'>[M.name] has hit [src]!</span>")
 		if(prob(5) && M.force > 20)
 			dismantle_wall(1)
 			M.occupant_message("<span class='warning'>You smash through the wall.</span>")

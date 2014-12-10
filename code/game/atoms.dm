@@ -232,8 +232,12 @@ its easier to just keep the beam vertical.
 /atom/proc/relaymove()
 	return
 
-/atom/proc/ex_act()
-	return
+/atom/proc/contents_explosion(severity, target)
+	for(var/atom/A in contents)
+		A.ex_act(severity, target)
+
+/atom/proc/ex_act(severity, target)
+	contents_explosion(severity, target)
 
 /atom/proc/blob_act()
 	return
@@ -332,6 +336,10 @@ var/list/blood_splatter_icons = list()
 			var/datum/disease/newDisease = D.Copy(1)
 			this.viruses += newDisease
 			newDisease.holder = this*/
+
+/atom/proc/add_shit_floor(mob/living/carbon/M as mob)
+	if( istype(src, /turf/simulated) )
+		new /obj/effect/decal/cleanable/shit(src)
 
 // Only adds blood on the floor -- Skie
 /atom/proc/add_blood_floor(mob/living/carbon/M as mob)

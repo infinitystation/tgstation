@@ -8,6 +8,8 @@
 
 	var/stat = 0 //Whether a mob is alive or dead. TODO: Move this to living - Nodrak
 
+	var/allow_respawn = 0 //need to respawn
+
 	var/obj/screen/flash = null
 	var/obj/screen/blind = null
 	var/obj/screen/hands = null
@@ -78,6 +80,9 @@
 	var/dizziness = 0//Carbon
 	var/jitteriness = 0//Carbon
 	var/nutrition = 400//Carbon
+	var/need_to_shit = 0//Carbon
+	var/need_to_shit_again = 140//Carbon
+	var/need_to_shit_max = 400//Carbon
 
 	var/overeatduration = 0		// How long this guy is overeating //Carbon
 	var/paralysis = 0

@@ -18,6 +18,7 @@
 	desc = "Protects your hearing from loud noises, and quiet ones as well."
 	icon_state = "earmuffs"
 	item_state = "earmuffs"
+	flags = EARBANGPROTECT
 	strip_delay = 15
 	put_on_delay = 25
 
@@ -127,6 +128,7 @@ BLIND     // can't see anything
 
 	permeability_coefficient = 0.50
 	slowdown = SHOES_SLOWDOWN
+	var/footstep = 1	//used for squeeks whilst walking(tc)
 
 /obj/item/proc/negates_gravity()
 	return 0
@@ -140,6 +142,7 @@ BLIND     // can't see anything
 	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0)
 	slot_flags = SLOT_OCLOTHING
 	var/blood_overlay_type = "suit"
+	var/togglename = null
 
 //Spacesuit
 //Note: Everything in modules/clothing/spacesuits should have the entire suit grouped together.
@@ -284,8 +287,8 @@ atom/proc/generate_female_clothing(index,t_color,icon)
 			M << "Your suit will now report your vital lifesigns."
 		if(3)
 			M << "Your suit will now report your vital lifesigns as well as your coordinate position."
-	if(istype(M,/mob/living/carbon/human))
-		var/mob/living/carbon/human/H = M
+	if(istype(loc,/mob/living/carbon/human))
+		var/mob/living/carbon/human/H = loc
 		if(H.w_uniform == src)
 			H.update_suit_sensors()
 	..()

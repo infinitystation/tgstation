@@ -33,6 +33,7 @@ var/global/floorIsLava = 0
 		body += " <B>Hasn't Entered Game</B> "
 	else
 		body += " \[<A href='?_src_=holder;revive=\ref[M]'>Heal</A>\] "
+		body += " \[<A href='?_src_=holder;allow_respawn=\ref[M]'>Allow Respawn</A>\] "
 
 	body += "<br><br>\[ "
 	body += "<a href='?_src_=vars;Vars=\ref[M]'>VV</a> - "

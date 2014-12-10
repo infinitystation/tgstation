@@ -88,6 +88,9 @@
 
 /obj/machinery/door/firedoor/close()
 	..()
+	if(locate(/mob/living) in get_turf(src))
+		open()
+		return
 	latetoggle()
 	return
 
@@ -137,6 +140,3 @@
 	glass = 0
 
 
-//used in the AStar algorithm to determinate if the turf the door is on is passable
-/obj/machinery/door/firedoor/CanAStarPass()
-	return !density

@@ -51,18 +51,12 @@
 	recharge()
 	dispensable_reagents = sortList(dispensable_reagents)
 
-/obj/machinery/chem_dispenser/ex_act(severity)
-	switch(severity)
-		if(1.0)
-			qdel(src)
-			return
-		if(2.0)
-			if (prob(50))
-				qdel(src)
-				return
+/obj/machinery/chem_dispenser/ex_act(severity, target)
+	if(severity < 3)
+		..()
 
 /obj/machinery/chem_dispenser/blob_act()
-	if (prob(50))
+	if(prob(50))
 		qdel(src)
 
  /**
@@ -238,6 +232,162 @@
 			default_deconstruction_crowbar(I)
 			return 1
 
+////////////////////////////////////BARTENDER/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/obj/machinery/chem_dispenser/bartender
+	name = "portable bar dispenser"
+	desc = "Ўтука, которая раздает бухло."
+	icon = 'icons/obj/BarDispenser.dmi'
+	icon_state = "bardispenser"
+
+	energy = 5
+	max_energy = 5
+	amount = 5
+	recharge_delay = 20
+	req_access_txt = "25"
+	dispensable_reagents = list("gin", "whiskey", "tequilla", "vodka", "vermouth", "rum",
+								"wine", "cognac", "kahlua", "beer", "ale", "cream", "orangejuice",
+								"tomatojuice", "limejuice", "tonic", "cola", "water", "sodawater", "ice", "coffee")
+	var/list/default_reagents = list("gin", "whiskey", "tequilla", "vodka", "vermouth", "rum",
+								"wine", "cognac", "kahlua", "beer", "ale", "cream", "orangejuice",
+								"tomatojuice", "limejuice", "tonic", "cola", "water", "sodawater", "ice", "coffee")
+	var/list/special_reagents = list(list("tea", "hot_coco", "space_up", "lemon_lime", "dry_ramen"),
+									 list("gargleblaster","b52","longislandicedtea","bahama_mama","demonsblood","antifreeze",
+									 	  "bloodymary","martini","whiterussian","blackrussian","whiskeycola","screwdrivercocktail"),
+									 list("toxinsspecial","beepskysmash","doctorsdelight","syndicatebomb","neurotoxin","manhattan_proj", "singulo", "thirteenloko"))
+	var/list/hidden_mode_reagents = list("mutetoxin")
+	var/seconds_electrified = 0
+	var/seconds_unpowered = 0
+	var/chem_mode_flag = 0
+	var/hidden_mode_flag = 0
+	//var/datum/wires/bardispenser/wires = null //wires update
+
+/obj/machinery/chem_dispenser/bartender/New()
+	..()
+
+	//wires = new(src) //wires update
+	var/obj/item/weapon/circuitboard/chem_dispenser/H = new /obj/item/weapon/circuitboard/chem_dispenser(null)
+	H.build_path = /obj/machinery/chem_dispenser/bartender
+	H.name = "circuit board (Portable Bar Dispenser)"
+	H.req_components = list(
+						"/obj/item/weapon/stock_parts/matter_bin" = 4,
+						"/obj/item/weapon/stock_parts/capacitor" = 2,
+						"/obj/item/weapon/stock_parts/manipulator" = 1,
+						"/obj/item/weapon/stock_parts/console_screen" = 1,
+						"/obj/item/weapon/stock_parts/cell" = 2,
+						"/obj/item/weapon/reagent_containers/food/drinks/bottle/whiskey" = 1,
+						"/obj/item/weapon/reagent_containers/food/drinks/bottle/vodka" = 2,
+						"/obj/item/weapon/reagent_containers/food/drinks/bottle/tequilla" = 1,
+						"/obj/item/weapon/vending_refill/boozeomat" = 1,
+						"/obj/item/weapon/vending_refill/cola" = 1)
+	component_parts = list()
+	component_parts += H
+	component_parts += new /obj/item/weapon/stock_parts/matter_bin(null)
+	component_parts += new /obj/item/weapon/stock_parts/matter_bin(null)
+	component_parts += new /obj/item/weapon/stock_parts/matter_bin(null)
+	component_parts += new /obj/item/weapon/stock_parts/matter_bin(null)
+	component_parts += new /obj/item/weapon/stock_parts/manipulator(null)
+	component_parts += new /obj/item/weapon/stock_parts/capacitor(null)
+	component_parts += new /obj/item/weapon/stock_parts/capacitor(null)
+	component_parts += new /obj/item/weapon/stock_parts/console_screen(null)
+	component_parts += new /obj/item/weapon/stock_parts/cell/high(null)
+	component_parts += new /obj/item/weapon/stock_parts/cell/high(null)
+	component_parts += new /obj/item/weapon/reagent_containers/food/drinks/bottle/whiskey(null)
+	component_parts += new /obj/item/weapon/reagent_containers/food/drinks/bottle/vodka(null)
+	component_parts += new /obj/item/weapon/reagent_containers/food/drinks/bottle/vodka(null)
+	component_parts += new /obj/item/weapon/reagent_containers/food/drinks/bottle/tequilla(null)
+	component_parts += new /obj/item/weapon/vending_refill/boozeomat
+	component_parts += new /obj/item/weapon/vending_refill/cola
+	RefreshParts()
+
+/obj/machinery/chem_dispenser/bartender/RefreshParts()
+	var/time = 0
+	var/temp_energy = 0
+	var/i
+	for(var/obj/item/weapon/stock_parts/matter_bin/M in component_parts)
+		temp_energy += M.rating
+	max_energy = temp_energy * 5  //max energy = (bin1.rating + bin2.rating - 1) * 5, 5 on lowest 25 on highest
+	for(var/obj/item/weapon/stock_parts/capacitor/C in component_parts)
+		time += C.rating
+	for(var/obj/item/weapon/stock_parts/cell/P in component_parts)
+		time += round(P.maxcharge, 10000) / 10000
+	recharge_delay /= time/3         //delay between recharges, double the usual time on lowest 50% less than usual on highest
+	for(var/obj/item/weapon/stock_parts/manipulator/M in component_parts)
+		for(i=1, i<=M.rating, i++)
+			dispensable_reagents = sortList(dispensable_reagents | special_reagents[i])
+
+//wires update
+/* /obj/machinery/chem_dispenser/bartender/attack_hand(mob/user)
+	if(seconds_electrified != 0)
+		if(shock(user, 100))
+			return
+	if(panel_open)
+		wires.Interact(user)
+	..() */
+
+/* wires update
+/obj/machinery/chem_dispenser/bartender/process()
+	..()
+
+	if(seconds_electrified > 0)
+		seconds_electrified--
+
+	if(seconds_unpowered > 0)
+		seconds_unpowered--
+		if(stat == 0)
+			stat = NOPOWER | POWEROFF
+	else if(seconds_unpowered == 0)
+		stat = 0
+		*/
+
+/obj/machinery/chem_dispenser/bartender/attackby(var/obj/item/I, var/mob/user)
+	..()
+
+
+	if(default_deconstruction_screwdriver(user, "bardispenser-o", "bardispenser", I))
+		return
+
+	if(exchange_parts(user, I))
+		return
+
+	/* else if(istype(I, /obj/item/device/multitool)||istype(I, /obj/item/weapon/wirecutters))
+		if(panel_open)
+			attack_hand(user)
+		return */ // wires update
+
+	if(panel_open)
+		if(istype(I, /obj/item/weapon/crowbar))
+			if(beaker)
+				var/obj/item/weapon/reagent_containers/glass/B = beaker
+				B.loc = loc
+				beaker = null
+			default_deconstruction_crowbar(I)
+			return 1
+
+	if(src.beaker)
+		user << "A [src.beaker] is already loaded into the machine."
+		return
+
+	if(istype(I,/obj/item/weapon/reagent_containers/food/drinks/))
+		src.beaker =  I
+		user.drop_item()
+		I.loc = src
+		user << "You add the [I] to the machine!"
+		nanomanager.update_uis(src) // update all UIs attached to src
+
+/* wires update
+/obj/machinery/chem_dispenser/bartender/proc/shock(mob/user, prb)
+	if(stat & (BROKEN|NOPOWER))		// unpowered, no shock
+		return 0
+	if(!prob(prb))
+		return 0
+	var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread
+	s.set_up(5, 1, src)
+	s.start()
+	if(electrocute_mob(user, get_area(src), src, 0.7))
+		return 1
+	else
+		return 0 */
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -260,15 +410,9 @@
 	create_reagents(100)
 	overlays += "waitlight"
 
-/obj/machinery/chem_master/ex_act(severity)
-	switch(severity)
-		if(1.0)
-			qdel(src)
-			return
-		if(2.0)
-			if (prob(50))
-				qdel(src)
-				return
+/obj/machinery/chem_master/ex_act(severity, target)
+	if(severity < 3)
+		..()
 
 /obj/machinery/chem_master/blob_act()
 	if (prob(50))
@@ -825,7 +969,7 @@ obj/machinery/computer/pandemic/proc/replicator_cooldown(var/waittime)
 		idle_power_usage = 5
 		active_power_usage = 100
 		pass_flags = PASSTABLE
-		var/inuse = 0
+		var/operating = 0
 		var/obj/item/weapon/reagent_containers/beaker = null
 		var/limit = 10
 		var/list/blend_items = list (
@@ -841,9 +985,9 @@ obj/machinery/computer/pandemic/proc/replicator_cooldown(var/waittime)
 				/obj/item/stack/sheet/mineral/bananium = list("banana" = 20),
 				/obj/item/stack/sheet/mineral/silver = list("silver" = 20),
 				/obj/item/stack/sheet/mineral/gold = list("gold" = 20),
-				/obj/item/weapon/grown/nettle = list("sacid" = 0),
+				/obj/item/weapon/grown/nettle/basic = list("sacid" = 0),
 				/obj/item/weapon/grown/nettle/death = list("pacid" = 0),
-				/obj/item/weapon/grown/novaflower = list("capsaicin" = 0),
+				/obj/item/weapon/grown/novaflower = list("capsaicin" = 0, "condensedcapsaicin" = 0),
 
 				//Crayons (for overriding colours)
 				/obj/item/toy/crayon/red = list("redcrayonpowder" = 10),
@@ -984,7 +1128,7 @@ obj/machinery/computer/pandemic/proc/replicator_cooldown(var/waittime)
 		var/beaker_contents = ""
 		var/dat = ""
 
-		if(!inuse)
+		if(!operating)
 				for (var/obj/item/O in holdingitems)
 						processing_chamber += "\A [O.name]<BR>"
 
@@ -1029,6 +1173,9 @@ obj/machinery/computer/pandemic/proc/replicator_cooldown(var/waittime)
 	if(..())
 		return
 	usr.set_machine(src)
+	if(operating)
+		updateUsrDialog()
+		return
 	switch(href_list["action"])
 		if ("grind")
 			grind()
@@ -1111,9 +1258,10 @@ obj/machinery/computer/pandemic/proc/replicator_cooldown(var/waittime)
 		if (!beaker || (beaker && beaker.reagents.total_volume >= beaker.reagents.maximum_volume))
 				return
 		playsound(src.loc, 'sound/machines/juicer.ogg', 20, 1)
-		inuse = 1
+		operating = 1
+		updateUsrDialog()
 		spawn(50)
-				inuse = 0
+				operating = 0
 				updateUsrDialog()
 
 		//Snacks
@@ -1145,9 +1293,10 @@ obj/machinery/computer/pandemic/proc/replicator_cooldown(var/waittime)
 		if (!beaker || (beaker && beaker.reagents.total_volume >= beaker.reagents.maximum_volume))
 				return
 		playsound(src.loc, 'sound/machines/blender.ogg', 50, 1)
-		inuse = 1
+		operating = 1
+		updateUsrDialog()
 		spawn(60)
-				inuse = 0
+				operating = 0
 				updateUsrDialog()
 
 		//Snacks and Plants
