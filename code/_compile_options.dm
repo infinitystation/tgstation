@@ -64,4 +64,5 @@ var/list/del_counter = list()
 #define USE_DYNAMIC_ATMOS		//Enables the dynamic atmos system
 */
 
-#define USE_BYGEX
+//host on Ubuntu, we can't use bygex library (c) Suworow
+//#define USE_BYGEX
