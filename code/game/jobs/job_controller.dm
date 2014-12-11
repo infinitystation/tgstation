@@ -322,21 +322,21 @@ var/global/datum/controller/occupations/job_master
 			H = new_mob
 		job.apply_fingerprints(H)
 
-	H << "<b>You are the [rank].</b>"
-	H << "<b>As the [rank] you answer directly to [job.supervisors]. Special circumstances may change this.</b>"
-	H << "<b>To speak on your departments radio, use the :h button. To see others, look closely at your headset.</b>"
+	H << "<b>¬ы [rank].</b>"
+	H << "<b> ак [rank] вы подчиняетесь непосредственно [job.supervisors]. ќсобые обстоятельства могут поменять это.</b>"
+	H << "<b>„тобы говорить в радио-канал вашего отдела, используйте комбинацию :h  „тобы посмотреть остальные комбинации, посмотрите поближе на ваши наушники.</b>"
 	if(job.req_admin_notify)
-		H << "<b>You are playing a job that is important for Game Progression. If you have to disconnect, please notify the admins via adminhelp.</b>"
+		H << "<b>¬ы играете по профессии, которая очень важна для игрового процесса всей станции. ≈сли вам понадобится выйти из игры, пожалуйста, уведомьте админов об этом через Adminhelp.</b>"
 
 	H.update_hud() 	// Tmp fix for Github issue 1006. TODO: make all procs in update_icons.dm do client.screen |= equipment no matter what.
 	return 1
 
 
 /datum/controller/occupations/proc/setup_officer_positions()
-	var/officer_positions = 5 //Number of open security officer positions at round start
+	var/officer_positions = 15 //Number of open security officer positions at round start
 
 	if(config.security_scaling_coeff > 0)
-		officer_positions = min(12, max(5, round(unassigned.len/config.security_scaling_coeff))) //Scale between 5 and 12 officers
+		officer_positions = min(20, max(15, round(unassigned.len/config.security_scaling_coeff))) //Scale between 15 and 20 officers
 		var/datum/job/J = job_master.GetJob("Security Officer")
 		if(J  || J.spawn_positions > 0)
 			Debug("Setting open security officer positions to [officer_positions]")
