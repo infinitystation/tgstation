@@ -21,29 +21,42 @@
 Space ninja autif. for e.g
 */
 /obj/item/clothing/head/helmet/space/space_adv
-	name = "Space working hardsuit helmet"
-	desc = "A special helmet designed for work in a hazardous, low-pressure environment. Has radiation shielding."
+	name = "Space working hardsuit helmet (Wrench to unscrew)"
+	desc = "Специальный шлем длЯ работы вне атмосферы, имеет защитный слой от радиации. Вы можете открутить его с помощью гаечного ключа"
 	icon_state = "rig0_rd"
-	item_state = "rig0_rd"
-	armor = list(melee = 10, bullet = 5, laser = 10, energy = 5, bomb = 10, bio = 100, rad = 75)
+	item_state = "ce_helm"
+	armor = list(melee = 10, bullet = 5, laser = 10, energy = 5, bomb = 10, bio = 100, rad = 85)
 	unacidable = 1
 //	canremove = 1
 
 
 
+
 /obj/item/clothing/suit/space/space_adv
 	name = "Space working hardsuit"
-	desc = "A special suit that protects against hazardous, low pressure environments. Has radiation shielding."
+	desc = "Специальный костюм длЯ работы вне атмосферы, имеет защитный слой от радиации и выдвигаемый шлем. Вы можете отключить его от шлема с помошью откручивания специальных креплений на выдвинутом шлеме"
 	icon_state = "rdrig"
-	item_state = "rdrig"
+	item_state = "ce_hardsuit"
 	slowdown = 1
-	armor = list(melee = 10, bullet = 5, laser = 10, energy = 5, bomb = 10, bio = 100, rad = 75)
+	armor = list(melee = 10, bullet = 5, laser = 10, energy = 5, bomb = 10, bio = 100, rad = 85)
 	allowed = list(/obj/item/device/flashlight,/obj/item/weapon/tank,/obj/item/weapon/storage/bag/ore,/obj/item/device/t_scanner,/obj/item/weapon/pickaxe, /obj/item/weapon/rcd)
 //	canremove = 1
 	unacidable = 1
 	var/depl = 0
 	var/mob/living/carbon/affecting = null //The wearer
 	var/act = 0
+	action_button_name = "Toggle Helmet"
+
+/obj/item/clothing/suit/space/space_adv/attack_self(mob/user)
+	if(act)
+		return
+	if(!depl)
+		depl_act(usr)
+		return
+	if(depl)
+		retr()
+		return
+
 
 
 //Space ninja autif. for e.g
@@ -168,9 +181,10 @@ Space ninja autif. for e.g
 			if(n_hood)
 				user.visible_message("\red [user] begins to unwrench [M]'s suit.", "\red You begin to unwrench the suit of [M].")
 				sleep 2
-				M.unEquip(n_hood)
+//				M.unEquip(n_hood)
 				n_body.flags &= ~NODROP
 				n_hood.flags &= ~NODROP
+				user.visible_message("\red [user] unwrench [M]'s suit.", "\red You unwrench the suit of [M].")
 			else
 				return ..()
 	else
@@ -185,18 +199,18 @@ Space ninja autif. for e.g
 
 ///Military // Cargo color suits
 /obj/item/clothing/head/helmet/space/space_adv/military
-	name = "Military space hardsuit helmet"
-	desc = "A special helmet designed for military forces"
+	name = "Military space hardsuit helmet (Wrench to unscrew)"
+	desc = "Специальный шлем разработанный длЯ армии. Вы можете открутить его с помощью гаечного ключа"
 	icon_state = "rig0_military"
-	item_state = "rig0_military"
+	item_state = "rig_helm"
 	armor = list(melee = 60, bullet = 70, laser = 60, energy = 50, bomb = 75, bio = 100, rad = 80)
 	/obj/item/clothing/glasses/hud/security/process_hud
 
 /obj/item/clothing/suit/space/space_adv/military
 	name = "Military space hardsuit"
-	desc = "A special suit designed for military forces, armored with portable plastel armor layer"
+	desc = "Специальный костюм разработанный длЯ армии. Имеет укрепленные слои защиты и выдвигаемый шлем. Вы можете отключить его от шлема с помошью откручивания специальных креплений на выдвинутом шлеме"
 	icon_state = "militaryrig"
-	item_state = "militaryrig"
+	item_state = "rig_suit"
 	armor = list(melee = 60, bullet = 80, laser = 60, energy = 50, bomb = 75, bio = 100, rad = 80)
 	allowed = list(/obj/item/weapon/gun,/obj/item/device/flashlight,/obj/item/weapon/tank,/obj/item/weapon/melee/baton)
 
@@ -207,16 +221,16 @@ Space ninja autif. for e.g
 //SWAT //Red suits
 /obj/item/clothing/head/helmet/space/space_adv/swat
 	name = "Swat space hardsuit helmet"
-	desc = "A special helmet designed for SWAT, armored with close combat kewlar layers"
+	desc = "Специальный шлем разработанный длЯ оряда SWAT. Вы можете открутить его с помощью гаечного ключа"
 	icon_state = "rig0_swat"
-	item_state = "secswatrig"
+	item_state = "sec_helm"
 	armor = list(melee = 90, bullet = 60, laser = 60, energy = 20, bomb = 45, bio = 100, rad = 80)
 	var/hud_type = DATA_HUD_SECURITY_ADVANCED // HUD
 /obj/item/clothing/suit/space/space_adv/swat
 	name = "SWAT space hardsuit"
-	desc = "A special suit designed for SWAT, armored with close combat kewlar layers"
+	desc = "Специальный костюм длЯ отряда SWAT. имеет плотный слой боевого Келвара и выдвигаемый шлем. Вы можете отключить его от шлема с помошью откручивания специальных креплений на выдвинутом шлеме"
 	icon_state = "swatrig"
-	item_state = "swatrig"
+	item_state = "sec_hardsuit"
 	armor = list(melee = 80, bullet = 50, laser = 50, energy = 20, bomb = 45, bio = 100, rad = 80)
 	allowed = list(/obj/item/weapon/gun,/obj/item/device/flashlight,/obj/item/weapon/tank,/obj/item/weapon/melee/baton)
 
@@ -241,8 +255,8 @@ Space ninja autif. for e.g
 	//RIG NORM (to older versions of rig's)
 
 /obj/item/clothing/head/helmet/space/space_adv/rig
-	name = "engineering hardsuit helmet"
-	desc = "A special helmet designed for work in a hazardous, low-pressure environment. Has radiation shielding."
+	name = "engineering hardsuit helmet (Wrench to unscrew)"
+	desc = "Специальный шлем для работы вне атмосферы, имеет защитный слой от радиации. Вы можете открутить его с помощью гаечного ключа"
 	icon_state = "hardsuit0-engineering"
 	item_state = "eng_helm"
 	armor = list(melee = 10, bullet = 5, laser = 10, energy = 5, bomb = 10, bio = 100, rad = 75)
@@ -280,7 +294,7 @@ Space ninja autif. for e.g
 
 /obj/item/clothing/suit/space/space_adv/rig
 	name = "engineering hardsuit"
-	desc = "A special suit that protects against hazardous, low pressure environments. Has radiation shielding."
+	desc = "Специальный костюм для работы вне атмосферы, имеет защитный слой от радиации и выдвигаемый шлем. Вы можете отключить его от шлема с помошью откручивания специальных креплений на выдвинутом шлеме"
 	icon_state = "hardsuit-engineering"
 	item_state = "eng_hardsuit"
 	slowdown = 2
