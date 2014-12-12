@@ -4,6 +4,9 @@
 	lastKnownIP	= client.address
 	computer_id	= client.computer_id
 	log_access("Login: [key_name(src)] from [lastKnownIP ? lastKnownIP : "localhost"]-[computer_id] || BYOND v[client.byond_version]")
+
+	message_admins("<span class='adminnotice'><b><font color=red>==== К серверу присоединился игрок: </font>Byond login: [client.key_name]. Серверу знаком [client.player_age] дней. IP: [client.address]</span>")
+
 	if(config.log_access)
 		for(var/mob/M in player_list)
 			if(M == src)	continue
