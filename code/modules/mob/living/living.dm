@@ -378,7 +378,7 @@
 	SetStunned(0)
 	SetWeakened(0)
 	radiation = 0
-	nutrition = 400
+	nutrition = NUTRITION_LEVEL_FED + 50
 	bodytemperature = 310
 	sdisabilities = 0
 	disabilities = 0
@@ -540,6 +540,7 @@
 	if(C.handcuffed)
 		C.handcuffed = null
 		C.update_inv_handcuffed(0)
+		return
 	else
 		C.legcuffed = null
 		C.update_inv_legcuffed(0)
@@ -571,18 +572,19 @@
 		C.visible_message("<span class='warning'>[C] пытается убрать [I]!</span>")
 		C << "<span class='notice'>¬ы пытаетесь убрать [I]. (Ёто займЄт около [displaytime] минут и вам нужно стоять не двигаться.)</span>"
 		spawn(0)
-			if(do_after(C, breakouttime))
+			if(do_after(C, breakouttime, 10))
 				if(!I || C.buckled)
 					return
 				C.visible_message("<span class='danger'>[C] убрал [I]!</span>")
 				C << "<span class='notice'>¬ы успешно убрали [I].</span>"
 
 				if(C.handcuffed)
-					C.handcuffed.loc = usr.loc
+					C.handcuffed.loc = C.loc
 					C.handcuffed = null
 					C.update_inv_handcuffed(0)
+					return
 				if(C.legcuffed)
-					C.legcuffed.loc = usr.loc
+					C.legcuffed.loc = C.loc
 					C.legcuffed = null
 					C.update_inv_legcuffed(0)
 			else
