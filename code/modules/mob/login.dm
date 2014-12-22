@@ -8,7 +8,7 @@
 	if(client.player_age<7 && !admin_datums[ckey])
 		message_admins("<span class='adminnotice'><b><font color=red>К серверу присоединилсЯ игрок. </font>Byond login: [client.ckey]. В первые был на сервере [client.player_age] дней назад. IP: [client.address]</span>")
 
-	if(client.player_age=="NULL")
+	if(!client.player_age)
 		message_admins("<span class='adminnotice'><b><font color=red>К серверу присоединилсЯ игрок. </font>Byond login: [client.ckey]. ВНИМАНИЕ - ПЕРВОЕ В ЖИЗНИ ПРИСОЕДИНЕНИЕ ЭТОГО ИГРОКА К СЕРВЕРУ. IP: [client.address]</span>")
 
 	if(config.log_access)

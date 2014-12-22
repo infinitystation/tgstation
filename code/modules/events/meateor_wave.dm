@@ -5,7 +5,7 @@
 	max_occurrences = 1
 
 /datum/round_event/meteor_wave/meaty/announce()
-	priority_announce("Meaty ores have been detected on collision course with the station.", "Oh Crap, Get The Mop.",'sound/AI/meteors.ogg')
+	priority_announce("ћясные куски обнаружены прямо по курсу станции.", "ќх чЄрт, ’ватай ¬едро.",'sound/AI/meteors.ogg')
 
 /datum/round_event/meteor_wave/meaty/tick()
 	if(IsMultiple(activeFor, 3))

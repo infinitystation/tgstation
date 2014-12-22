@@ -22,7 +22,7 @@
 
 /datum/round_event/alien_infestation/announce()
 	if(successSpawn)
-		priority_announce("Unidentified lifesigns detected coming aboard [station_name()]. Secure any exterior access, including ducting and ventilation.", "Lifesign Alert", 'sound/AI/aliens.ogg')
+		priority_announce("Ќеидентифицированные признаки жизни замечены прибывшими на станцию [station_name()]. ѕроверьте все внешние доступы на станцию, включая воздуховоды и вентиляции", "Lifesign Alert", 'sound/AI/aliens.ogg')
 
 
 /datum/round_event/alien_infestation/start()

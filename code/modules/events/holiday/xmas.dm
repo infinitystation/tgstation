@@ -35,7 +35,7 @@
 		Monitor.icon_state = "entertainment_xmas"
 
 /datum/round_event/presents/announce()
-	priority_announce("Ho Ho Ho, Merry Xmas!", "Unknown Transmission")
+	priority_announce("’о ’о ’о, всех с –ождеством!", "Ќеизвестная “рансляция")
 
 
 /obj/item/weapon/toy/xmas_cracker
