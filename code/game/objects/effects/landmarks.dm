@@ -33,6 +33,10 @@
 			latejoin += loc
 			qdel(src)
 			return
+		if("ban_prison")
+			ban_prison += loc
+			qdel(src)
+			return
 		if("prisonwarp")
 			prisonwarp += loc
 			qdel(src)

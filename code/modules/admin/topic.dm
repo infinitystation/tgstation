@@ -860,7 +860,7 @@
 				switch(alert(usr,"IP ban?",,"Yes","No","Cancel"))
 					if("Cancel")	return
 					if("Yes")
-						AddBan(M.ckey, M.computer_id, reason, usr.ckey, 0, 0, M.lastKnownIP)
+						AddBan(M.ckey, M.computer_id, reason, usr.ckey, 0, 0,  M.lastKnownIP)
 					if("No")
 						AddBan(M.ckey, M.computer_id, reason, usr.ckey, 0, 0)
 				M << "<span class='userdanger'><BIG>You have been banned by [usr.client.ckey].\nReason: [reason]</BIG></span>"
