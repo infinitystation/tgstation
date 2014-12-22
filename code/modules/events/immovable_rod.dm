@@ -16,7 +16,7 @@ In my current plan for it, 'solid' will be defined as anything with density == 1
 	announceWhen = 5
 
 /datum/round_event/immovable_rod/announce()
-	priority_announce("What the fuck was that?!", "General Alert")
+	priority_announce("Какого чёрта?! Что это было?!", "ГлавнаЯ Тревога")
 
 /datum/round_event/immovable_rod/start()
 	var/startside = pick(cardinal)

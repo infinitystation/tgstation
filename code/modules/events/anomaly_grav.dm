@@ -11,7 +11,7 @@
 
 
 /datum/round_event/anomaly/anomaly_grav/announce()
-	priority_announce("Gravitational anomaly detected on long range scanners. Expected location: [impact_area.name].", "Anomaly Alert")
+	priority_announce("—канеры дальнего радиуса действия обнаружили гравитационную аномалию. ѕредположительное место воздействия: [impact_area.name].", "“ревога! јномалия!")
 
 /datum/round_event/anomaly/anomaly_grav/start()
 	var/turf/T = pick(get_area_turfs(impact_area))

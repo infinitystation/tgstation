@@ -34,6 +34,7 @@
 	*/
 	var/obj/screen/zone_sel/zone_sel = null
 	var/obj/screen/leap_icon = null
+	var/obj/screen/healthdoll = null
 
 	var/damageoverlaytemp = 0
 	var/computer_id = null
@@ -79,10 +80,11 @@
 	var/drowsyness = 0//Carbon
 	var/dizziness = 0//Carbon
 	var/jitteriness = 0//Carbon
-	var/nutrition = 400//Carbon
 	var/need_to_shit = 0//Carbon
 	var/need_to_shit_again = 140//Carbon
 	var/need_to_shit_max = 400//Carbon
+	var/nutrition = NUTRITION_LEVEL_FED + 50//Carbon
+	var/satiety = 0//Carbon
 
 	var/overeatduration = 0		// How long this guy is overeating //Carbon
 	var/paralysis = 0

@@ -16,6 +16,6 @@
 	var/datum/round_event_control/event_control = pick(events_list)
 	if(event_control)
 		var/datum/round_event/Event = new event_control.typepath()
-		message_admins("False Alarm: [Event]")
+		message_admins("Ќенастоящая тревога: [Event]")
 		Event.kill() 		//do not process this event - no starts, no ticks, no ends
 		Event.announce() 	//just announce it like it's happening

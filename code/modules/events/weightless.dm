@@ -13,7 +13,7 @@
 	endWhen = rand(40,80)
 
 /datum/round_event/weightless/announce()
-	command_alert("Warning: Failsafes for the station's artificial gravity arrays have been triggered. Please be aware that if this problem recurs it may result in formation of gravitational anomalies. Nanotrasen wishes to remind you that the unauthorised formation of anomalies within Nanotrasen facilities is strictly prohibited by health and safety regulation [rand(99,9999)][pick("a","b","c")]:subclause[rand(1,20)][pick("a","b","c")].")
+	command_alert("¬нимание: нарушение в работе системы искусственной гравитации. ѕожалуйста, имейте ввиду, если эта проблема повторится, это может привести к формированию гравитационных аномалий.  орпорация желает напомнить вам, что неафторизованное формирование аномалий на территории структур  орпорации строго запрещено –егламентом «доровь€ и Ѕезопасности [rand(99,9999)][pick("a","b","c")]:subclause[rand(1,20)][pick("a","b","c")].")
 
 /datum/round_event/weightless/start()
 	for(var/area/A in world)
@@ -27,6 +27,6 @@
 		A.gravitychange(1)
 
 	if(announceWhen >= 0)
-		command_alert("Artificial gravity arrays are now functioning within normal parameters. Please report any irregularities to your respective head of staff.")
+		command_alert("»скусственная гравитация теперь функционирует с нормальными параметрами. ѕожалуйста, докладывайте вашему руководителю или √лаве ѕерсонала о любых отклонениях от нормальной работы.")
 
 

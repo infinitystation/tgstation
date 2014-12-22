@@ -179,6 +179,8 @@ var/datum/controller/event/events
 		if(1)	//Jan
 			switch(DD)
 				if(1)							holiday = "New Year"
+				if(6)							holiday = "Xmas"
+				if(7)							holiday = "Xmas"
 
 		if(2)	//Feb
 			switch(DD)

@@ -11,17 +11,17 @@
 	var/list/obj/machinery/vending/vendingMachines = list()
 	var/list/obj/machinery/vending/infectedMachines = list()
 	var/obj/machinery/vending/originMachine
-	var/list/rampant_speeches = list("Try our aggressive new marketing strategies!", \
-									 "You should buy products to feed your lifestyle obession!", \
-									 "Consume!", \
-									 "Your money can buy happiness!", \
-									 "Engage direct marketing!", \
-									 "Advertising is legalized lying! But don't let that put you off our great deals!", \
-									 "You don't want to buy anything? Yeah, well I didn't want to buy your mom either.")
+	var/list/rampant_speeches = list("ѕопробуйте наши новые маркетинговые стратегии!", \
+									 "¬ы должны купить продукты, чтобы подкармливать вашу одержимость образом жизни!", \
+									 "ѕотребляй!", \
+									 "¬аши деньги могут купить счастье!", \
+									 "¬ключите прямой маркетинг!", \
+									 "–еклама это легализованная ложь! Ќо не позвольте этому остановить вас от покупки наших предложений!", \
+									 "¬ы ничего не хотите покупать? ƒа, ну что ж, я так же не хотел покупать вашу маму.")
 
 
 /datum/round_event/brand_intelligence/announce()
-	priority_announce("Rampant brand intelligence has been detected aboard [station_name()], please stand-by. The origin is believed to be \a [originMachine.name].", "Machine Learning Alert")
+	priority_announce("јгрессивный маркетинг был обнаружен на станции [station_name()], пожалуйста, оставайтесь на связи. ѕредпологается, что происхождение связано с [originMachine.name].", "“ревога обучаемых торговых јвтоматов")
 
 
 /datum/round_event/brand_intelligence/start()

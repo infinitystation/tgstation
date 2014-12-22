@@ -422,12 +422,41 @@
 		H.nutrition = max (0, H.nutrition - HUNGER_FACTOR)
 		H.need_to_shit = min (H.need_to_shit_max, H.need_to_shit + HUNGER_FACTOR)
 
-	if (H.nutrition > 450)
+	// nutrition decrease and satiety
+	if (H.nutrition > 0 && H.stat != 2)
+		var/hunger_rate = HUNGER_FACTOR
+		if(H.satiety > 0)
+			H.satiety--
+		if(H.satiety < 0)
+			H.satiety++
+			if(prob(round(-H.satiety/40)))
+				H.Jitter(5)
+			hunger_rate = 5 * HUNGER_FACTOR
+		H.nutrition = max (0, H.nutrition - hunger_rate)
+
+
+	if (H.nutrition > NUTRITION_LEVEL_FULL)
 		if(H.overeatduration < 600) //capped so people don't take forever to unfat
 			H.overeatduration++
 	else
 		if(H.overeatduration > 1)
 			H.overeatduration -= 2 //doubled the unfat rate
+
+	//metabolism change
+	if(H.nutrition > NUTRITION_LEVEL_FAT)
+		H.metabolism_efficiency = 1
+	else if(H.nutrition > NUTRITION_LEVEL_FED && H.satiety > 80)
+		if(H.metabolism_efficiency != 1.25)
+			H << "<span class='notice'>¬ы чувствуете себя энергичным.</span>"
+			H.metabolism_efficiency = 1.25
+	else if(H.nutrition < NUTRITION_LEVEL_STARVING + 50)
+		if(H.metabolism_efficiency != 0.8)
+			H << "<span class='notice'>¬ы чувствуете себя вялым.</span>"
+		H.metabolism_efficiency = 0.8
+	else
+		if(H.metabolism_efficiency == 1.25)
+			H << "<span class='notice'>¬ы больше не чувствуете себя энергичным.</span>"
+		H.metabolism_efficiency = 1
 
 	if (H.drowsyness)
 		H.drowsyness--
@@ -529,13 +558,43 @@
 						if(0 to 20)				H.healths.icon_state = "health5"
 						else					H.healths.icon_state = "health6"
 
+	if(H.healthdoll)
+		H.healthdoll.overlays.Cut()
+		if(H.stat == DEAD)
+			H.healthdoll.icon_state = "healthdoll_DEAD"
+		else
+			H.healthdoll.icon_state = "healthdoll_OVERLAY"
+			for(var/obj/item/organ/limb/L in H.organs)
+				var/damage = L.burn_dam + L.brute_dam
+				var/comparison = (L.max_damage/5)
+				var/icon_num = 0
+				if(damage)
+					icon_num = 1
+				if(damage > (comparison))
+					icon_num = 2
+				if(damage > (comparison*2))
+					icon_num = 3
+				if(damage > (comparison*3))
+					icon_num = 4
+				if(damage > (comparison*4))
+					icon_num = 5
+				if(icon_num)
+					H.healthdoll.overlays += image('icons/mob/screen_gen.dmi',"[L.name][icon_num]")
+
 	if(H.nutrition_icon)
 		switch(H.nutrition)
-			if(450 to INFINITY)				H.nutrition_icon.icon_state = "nutrition0"
-			if(350 to 450)					H.nutrition_icon.icon_state = "nutrition1"
-			if(250 to 350)					H.nutrition_icon.icon_state = "nutrition2"
-			if(150 to 250)					H.nutrition_icon.icon_state = "nutrition3"
-			else							H.nutrition_icon.icon_state = "nutrition4"
+			if(NUTRITION_LEVEL_FULL to INFINITY)
+				H.nutrition_icon.icon_state = "nutritionFAT"
+			if(NUTRITION_LEVEL_WELL_FED to NUTRITION_LEVEL_FULL)
+				H.nutrition_icon.icon_state = "nutrition0"
+			if(NUTRITION_LEVEL_FED to NUTRITION_LEVEL_WELL_FED)
+				H.nutrition_icon.icon_state = "nutrition1"
+			if(NUTRITION_LEVEL_HUNGRY to NUTRITION_LEVEL_FED)
+				H.nutrition_icon.icon_state = "nutrition2"
+			if(NUTRITION_LEVEL_STARVING to NUTRITION_LEVEL_HUNGRY)
+				H.nutrition_icon.icon_state = "nutrition3"
+			else
+				H.nutrition_icon.icon_state = "nutrition4"
 
 	if(H.pressure)
 		H.pressure.icon_state = "pressure[H.pressure_alert]"
@@ -582,7 +641,7 @@
 	if ((HULK in H.mutations) && H.health <= 25)
 		H.mutations.Remove(HULK)
 		H.update_mutations()		//update our mutation overlays
-		H << "<span class='danger'>¬незапно вы почувствовали себя очень слабым.</span>"
+		H << "<span class='danger'>¬незапно вы почувствовали себя ослабленным.</span>"
 		H.Weaken(3)
 		H.emote("collapse")
 
@@ -614,7 +673,7 @@
 						H.emote("collapse")
 					if(prob(15))
 						if(!( H.hair_style == "Shaved") || !(H.hair_style == "Bald") || HAIR in specflags)
-							H << "<span class='danger'>¬аши волосы начинают выпадать клочьями...<span>"
+							H << "<span class='danger'>¬аши волосы стали выпадать клочьями...<span>"
 							spawn(50)
 								H.facial_hair_style = "Shaved"
 								H.hair_style = "Bald"
@@ -625,7 +684,7 @@
 					H.radiation -= 3
 					H.adjustToxLoss(3)
 					if(prob(1))
-						H << "<span class='danger'>¬ы мутировали!</span>"
+						H << "<span class='danger'>¬ы мутируете!</span>"
 						randmutb(H)
 						domutcheck(H,null)
 						H.emote("gasp")
@@ -646,7 +705,7 @@
 		if(J.allow_thrust(0.01, H))
 			hasjetpack = 1
 	var/grav = has_gravity(H)
-	
+
 	if(!grav && !hasjetpack)
 		mspeed += 1 //Slower space without jetpack
 
@@ -681,7 +740,7 @@
 /datum/species/proc/spec_attack_hand(var/mob/living/carbon/human/M, var/mob/living/carbon/human/H)
 	if((M != H) && H.check_shields(0, M.name))
 		add_logs(M, H, "attempted to touch")
-		H.visible_message("<span class='warning'>[M] attempted to touch [H]!</span>")
+		H.visible_message("<span class='warning'>[M] попытался коснуться [H]!</span>")
 		return 0
 
 	switch(M.a_intent)
@@ -694,18 +753,18 @@
 
 			//CPR
 			if((M.head && (M.head.flags & HEADCOVERSMOUTH)) || (M.wear_mask && (M.wear_mask.flags & MASKCOVERSMOUTH)))
-				M << "<span class='notice'>Remove your mask!</span>"
+				M << "<span class='notice'>—нимите вашу маску!</span>"
 				return 0
 			if((H.head && (H.head.flags & HEADCOVERSMOUTH)) || (H.wear_mask && (H.wear_mask.flags & MASKCOVERSMOUTH)))
-				M << "<span class='notice'>Remove their mask!</span>"
+				M << "<span class='notice'>—нимите его маску!</span>"
 				return 0
 
 			if(H.cpr_time < world.time + 30)
 				add_logs(H, M, "CPRed")
-				M.visible_message("<span class='notice'>[M] пытается сделать искусственное дыхание [H]!</span>", \
-								"<span class='notice'>¬ы пытаетесь сделать искусственное дыхание [H]. ќставайтесь на месте!</span>")
+				M.visible_message("<span class='notice'>[M] is trying to perform CPR on [H]!</span>", \
+								"<span class='notice'>¬ы пытаетесь сделать искусственное дыхание [H]. Hold still!</span>")
 				if(!do_mob(M, H))
-					M << "<span class='warning'>¬ этот раз у вас не получилось сделать искусственное дыхание [H]!</span>"
+					M << "<span class='warning'>” вас не получилось сделать искусственное дыхание [H]!</span>"
 					return 0
 				if((H.health >= -99 && H.health <= 0))
 					H.cpr_time = world.time
@@ -713,7 +772,7 @@
 					H.adjustOxyLoss(-suff)
 					H.updatehealth()
 					M.visible_message("[M] performs CPR on [H]!")
-					H << "<span class='unconscious'>¬ы чувствуете как свежий воздух зашЄл к вам в лЄгкие. Ёто приятно.</span>"
+					H << "<span class='unconscious'>¬ы чувствуете как свежий воздух входит в ваши лЄгкие. Ёто приятно.</span>"
 
 		if("grab")
 			H.grabbedby(M)
@@ -759,8 +818,8 @@
 
 			H.apply_damage(damage, BRUTE, affecting, armor_block)
 			if((H.stat != DEAD) && damage >= 9)
-				H.visible_message("<span class='danger'>[M] has weakened [H]!</span>", \
-								"<span class='userdanger'>[M] has weakened [H]!</span>")
+				H.visible_message("<span class='danger'>[M] ослабил [H]!</span>", \
+								"<span class='userdanger'>[M] ослабил [H]!</span>")
 				H.apply_effect(4, WEAKEN, armor_block)
 				H.forcesay(hit_appends)
 			else if(H.lying)
@@ -837,7 +896,7 @@
 	else
 		return 0
 
-	var/armor = H.run_armor_check(affecting, "melee", "<span class='warning'>¬аша броня защитила вашу [hit_area].</span>", "<span class='warning'>¬аша броня смягчила удар по вашей [hit_area].</span>")
+	var/armor = H.run_armor_check(affecting, "melee", "<span class='warning'>¬аша броня защитила вашу [hit_area].</span>", "<span class='warning'>¬аша броня смягчила попадание по вашей [hit_area].</span>")
 	if(armor >= 100)	return 0
 	var/Iforce = I.force //to avoid runtimes on the forcesay checks at the bottom. Some items might delete themselves if you drop them. (stunning yourself, ninja swords)
 
@@ -890,8 +949,8 @@
 
 			if("chest")	//Easier to score a stun but lasts less time
 				if(H.stat == CONSCIOUS && I.force && prob(I.force + 10))
-					H.visible_message("<span class='danger'>[H] был сбит на землю!</span>", \
-									"<span class='userdanger'>[H] был сбит на землю!</span>")
+					H.visible_message("<span class='danger'>[H] был свален на землю!</span>", \
+									"<span class='userdanger'>[H] был свален на землю!</span>")
 					H.apply_effect(5, WEAKEN, armor)
 
 				if(bloody)
@@ -967,9 +1026,9 @@
 	// called when hit by a projectile
 	switch(proj_type)
 		if(/obj/item/projectile/energy/floramut) // overwritten by plants/pods
-			H.show_message("<span class='notice'>The radiation beam dissipates harmlessly through your body.</span>")
+			H.show_message("<span class='notice'>–адиационный пучок безвредно рассеивается через ваше тело.</span>")
 		if(/obj/item/projectile/energy/florayield)
-			H.show_message("<span class='notice'>The radiation beam dissipates harmlessly through your body.</span>")
+			H.show_message("<span class='notice'>–адиационный пучок безвредно рассеивается через ваше тело.</span>")
 	return
 
 /////////////
@@ -1152,10 +1211,10 @@
 	if( (abs(310.15 - breath.temperature) > 50) && !(COLD_RESISTANCE in H.mutations) && !(COLDRES in specflags)) // Hot air hurts :(
 		if(breath.temperature < 260.15)
 			if(prob(20))
-				H << "<span class='danger'>You feel your face freezing and an icicle forming in your lungs!</span>"
+				H << "<span class='danger'>¬ы чувствуете как ваше лицо замерзает, а лЄгкие начинают покрываться льдом!</span>"
 		else if(breath.temperature > 360.15 && !(HEATRES in specflags))
 			if(prob(20))
-				H << "<span class='danger'>You feel your face burning and a searing heat in your lungs!</span>"
+				H << "<span class='danger'>¬ы чувствуете, как ваше лицо обжигается и в лЄгкие заходит жгучая жара!</span>"
 
 		if(!(COLDRES in specflags)) // COLD DAMAGE
 			switch(breath.temperature)

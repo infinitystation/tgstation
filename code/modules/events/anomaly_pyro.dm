@@ -11,7 +11,7 @@
 
 
 /datum/round_event/anomaly/anomaly_pyro/announce()
-	priority_announce("Pyroclastic anomaly detected on long range scanners. Expected location: [impact_area.name].", "Anomaly Alert")
+	priority_announce("—канеры дальнего радиуса действия обнаружили пирокластическую аномалию. ќжидаемое место воздействия: [impact_area.name].", "“ревога! јномалия!")
 
 /datum/round_event/anomaly/anomaly_pyro/start()
 	var/turf/T = pick(get_area_turfs(impact_area))

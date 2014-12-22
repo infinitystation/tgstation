@@ -285,7 +285,7 @@ datum/objective/escape/escape_with_identity/find_target()
 datum/objective/escape/escape_with_identity/update_explanation_text()
 	if(target && target.current)
 		target_real_name = target.current.real_name
-		explanation_text = "Ёвакуироваться на спасательном шаттле или поде с личностью [target_real_name], [target.assigned_role]."
+		explanation_text = "Ёвакуироваться на спасательном шаттле или поде превратившись в личность [target_real_name], [target.assigned_role] на себе иметь его одетую ID карту доступа."
 	else
 		explanation_text = "ѕридумать задание самому себе. «јѕ–≈ў≈Ќќ придумывать задания типа - убить всех."
 
