@@ -52,6 +52,7 @@ world/IsBanned(key,address,computer_id)
 		//Ban Checking
 		. = CheckBan( ckey(key), computer_id, address )
 		if(.)
+
 			log_access("Failed Login: [key] [computer_id] [address] - Banned [.["reason"]]")
 			message_admins("<span class='adminnotice'>Failed Login: [key] id:[computer_id] ip:[address] - Banned [.["reason"]]</span>")
 			return .
