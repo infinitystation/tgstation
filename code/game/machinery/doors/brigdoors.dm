@@ -192,6 +192,10 @@
 		timeleft = min(max(round(timeleft), 0), 3600)
 		timing = text2num(href_list["timing"])
 		timeset(timeleft)
+		var/second = round(timeleft() % 60)
+		var/minute = round((timeleft() - second) / 60)
+		message_admins("В тюрьму посажен преступник. Срок: [(minute ? text("[minute]:") : null)][second]. Выставлен игроком [key_name(usr, usr.client)](<A HREF='?_src_=holder;adminmoreinfo=\ref[usr]'>?</A>) Координаты: ([x],[y],[z] - <A HREF='?_src_=holder;adminplayerobservecoodjump=1;X=[x];Y=[y];Z=[z]'>JMP</a>)",0,1)
+		log_game("В тюрьму посажен преступник. Срок: [(minute ? text("[minute]:") : null)][second]. Выставлен игроком [key_name(usr, usr.client)](<A HREF='?_src_=holder;adminmoreinfo=\ref[usr]'>?</A>) Координаты: ([x],[y],[z] - <A HREF='?_src_=holder;adminplayerobservecoodjump=1;X=[x];Y=[y];Z=[z]'>JMP</a>)")
 	else if(href_list["tp"]) //adjust timer
 		var/timeleft = timeleft()
 		var/tp = text2num(href_list["tp"])

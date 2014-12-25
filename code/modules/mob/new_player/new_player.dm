@@ -291,6 +291,17 @@
 		ticker.mode.make_antag_chance(character)
 	qdel(src)
 
+/mob/new_player/proc/Spawn_Prisoner()
+	var/mob/living/carbon/human/character = create_character()	//creates the human and transfers vars and mind
+	character.equip_to_slot_or_del(new /obj/item/clothing/shoes/sneakers/black(character), slot_shoes)
+	character.equip_to_slot_or_del(new /obj/item/clothing/under/color/random(character), slot_w_uniform)
+	character.loc = pick(ban_prison)
+	character.lastarea = get_area(loc)
+
+	joined_player_list += character.ckey
+
+	qdel(src)
+
 /mob/new_player/proc/AnnounceArrival(var/mob/living/carbon/human/character, var/rank)
 	if (ticker.current_state == GAME_STATE_PLAYING)
 		var/ailist[] = list()
