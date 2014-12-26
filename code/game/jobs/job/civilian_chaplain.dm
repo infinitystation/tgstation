@@ -10,7 +10,7 @@ Chaplain
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the head of personnel"
+	supervisors = "Главе Персонала"
 	selection_color = "#dddddd"
 
 	default_pda = /obj/item/device/pda/chaplain

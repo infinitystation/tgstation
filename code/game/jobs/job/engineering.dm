@@ -9,7 +9,7 @@ Chief Engineer
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the captain"
+	supervisors = "Капитану"
 	selection_color = "#ffeeaa"
 	req_admin_notify = 1
 	minimal_player_age = 7
@@ -53,7 +53,7 @@ Station Engineer
 	faction = "Station"
 	total_positions = 10
 	spawn_positions = 5
-	supervisors = "the chief engineer"
+	supervisors = "Главному Инженеру"
 	selection_color = "#fff5cc"
 
 	default_pda = /obj/item/device/pda/engineering
@@ -86,7 +86,7 @@ Atmospheric Technician
 	faction = "Station"
 	total_positions = 10
 	spawn_positions = 2
-	supervisors = "the chief engineer"
+	supervisors = "Главному Инженеру"
 	selection_color = "#fff5cc"
 
 	default_pda = /obj/item/device/pda/atmos

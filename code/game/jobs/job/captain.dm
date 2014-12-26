@@ -9,7 +9,7 @@ Captain
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "Nanotrasen officials and Space law"
+	supervisors = "ѕредставителям ÷ентрального  омандования и  осмо-закону"
 	selection_color = "#ccccff"
 	req_admin_notify = 1
 	minimal_player_age = 14
