@@ -15,7 +15,7 @@ Head of Security
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the captain"
+	supervisors = "Капитану"
 	selection_color = "#ffdddd"
 	req_admin_notify = 1
 	minimal_player_age = 14
@@ -66,7 +66,7 @@ Warden
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the head of security"
+	supervisors = "Главе Службы Безопасности"
 	selection_color = "#ffeeee"
 	minimal_player_age = 7
 
@@ -114,7 +114,7 @@ Detective
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the head of security"
+	supervisors = "Главе Службы Безопасности"
 	selection_color = "#ffeeee"
 	minimal_player_age = 7
 
@@ -159,7 +159,7 @@ Security Officer
 	faction = "Station"
 	total_positions = 10 //Handled in /datum/controller/occupations/proc/setup_officer_positions()
 	spawn_positions = 5 //Handled in /datum/controller/occupations/proc/setup_officer_positions()
-	supervisors = "the head of security, and the head of your assigned department (if applicable)"
+	supervisors = "Главе Службы Безопасности и Главе отдела в который вы назначены дежурным согласно вашей нарукавной повЯзке"
 	selection_color = "#ffeeee"
 	minimal_player_age = 7
 	var/list/dep_access = null
