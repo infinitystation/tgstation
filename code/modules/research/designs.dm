@@ -74,7 +74,6 @@ datum/design/proc/CalcReliability(var/list/temp_techs)
 	src.pixel_x = rand(-5.0, 5)
 	src.pixel_y = rand(-5.0, 5)
 
-
 ///////////////////////////////////
 /////Non-Board Computer Stuff//////
 ///////////////////////////////////
@@ -395,7 +394,3 @@ datum/design/proc/CalcReliability(var/list/temp_techs)
 	materials = list("$metal" = 9000, "$silver" = 2000, "$gold" = 2000, "$plasma" = 2000)
 	build_path = /obj/item/clothing/suit/space/space_adv/military
 	category = list("Equipement")
-
-
-
-

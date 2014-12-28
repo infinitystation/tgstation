@@ -214,7 +214,7 @@
 			M.brainmob.mind.transfer_to(O)
 
 			if(O.mind && O.mind.special_role)
-				O.mind.store_memory("As a cyborg, any objectives listed here are null and void, and will be marked as failed. They are simply here for memory purposes.")
+				O.mind.store_memory("“.к. вы  иборг, любые задания перечисленные здесь - отменены и не существуют, и будут помечены как проваленные. ќни перечислены здесь просто как часть вашей памяти о прошлом, но считаются недействительными.")
 
 			O.job = "Cyborg"
 
