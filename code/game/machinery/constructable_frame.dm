@@ -389,26 +389,26 @@ to destroy them and players will be able to make replacements.
 			name = "circuit board (Portable Bar Dispenser)"
 			user << "<span class='notice'>You set the board to bartendering.</span>"
 			req_components = list(
-							"/obj/item/weapon/stock_parts/matter_bin" = 4,
-							"/obj/item/weapon/stock_parts/capacitor" = 2,
-							"/obj/item/weapon/stock_parts/manipulator" = 1,
-							"/obj/item/weapon/stock_parts/console_screen" = 1,
-							"/obj/item/weapon/stock_parts/cell" = 2,
-							"/obj/item/weapon/reagent_containers/food/drinks/bottle/whiskey" = 1,
-							"/obj/item/weapon/reagent_containers/food/drinks/bottle/vodka" = 2,
-							"/obj/item/weapon/reagent_containers/food/drinks/bottle/tequilla" = 1,
-							"/obj/item/weapon/vending_refill/boozeomat" = 1,
-							"/obj/item/weapon/vending_refill/cola" = 1)
+							/obj/item/weapon/stock_parts/matter_bin = 4,
+							/obj/item/weapon/stock_parts/capacitor = 2,
+							/obj/item/weapon/stock_parts/manipulator = 1,
+							/obj/item/weapon/stock_parts/console_screen = 1,
+							/obj/item/weapon/stock_parts/cell = 2,
+							/obj/item/weapon/reagent_containers/food/drinks/bottle/whiskey = 1,
+							/obj/item/weapon/reagent_containers/food/drinks/bottle/vodka = 2,
+							/obj/item/weapon/reagent_containers/food/drinks/bottle/tequilla = 1,
+							/obj/item/weapon/vending_refill/boozeomat = 1,
+							/obj/item/weapon/vending_refill/cola = 1)
 		else
 			build_path =/obj/machinery/chem_dispenser/constructable
 			name = "circuit board (Portable Chem Dispenser)"
 			user << "<span class='notice'>You set the board to chemistry.</span>"
 			req_components = list(
-							"/obj/item/weapon/stock_parts/matter_bin" = 2,
-							"/obj/item/weapon/stock_parts/capacitor" = 1,
-							"/obj/item/weapon/stock_parts/manipulator" = 1,
-							"/obj/item/weapon/stock_parts/console_screen" = 1,
-							"/obj/item/weapon/stock_parts/cell" = 1)
+							/obj/item/weapon/stock_parts/matter_bin = 2,
+							/obj/item/weapon/stock_parts/capacitor = 1,
+							/obj/item/weapon/stock_parts/manipulator = 1,
+							/obj/item/weapon/stock_parts/console_screen = 1,
+							/obj/item/weapon/stock_parts/cell = 1)
 
 
 /obj/item/weapon/circuitboard/destructive_analyzer

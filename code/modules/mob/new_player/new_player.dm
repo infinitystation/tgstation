@@ -33,7 +33,6 @@
 	else
 		output += "<a href='byond://?src=\ref[src];manifest=1'>View the Crew Manifest</A><br><br>"
 		output += "<p><a href='byond://?src=\ref[src];late_join=1'>Join Game!</A></p>"
-		output += "<a href='byond://?src=\ref[src];manifest=1'>Crew Manifest</A><br><br>"
 
 	output += "<p><a href='byond://?src=\ref[src];observe=1'>Observe</A></p>"
 
@@ -106,14 +105,6 @@
 			ready = !ready
 		else
 			ready = 0
-
-	if(href_list["manifest"])
-		var/dat = "<B>Crew Manifest.</B><HR>"
-		dat += "<table cellspacing=5><tr><th>Name</th><th>Position</th></tr>"
-		for(var/datum/data/record/t in data_core.general)
-			dat += "<tr><td>[t.fields["name"]]</td><td>[t.fields["rank"]]</td></tr>"
-		dat += "</table>"
-		usr << browse(dat, "window=manifest;size=440x410")
 
 	if(href_list["refresh"])
 		src << browse(null, "window=playersetup") //closes the player setup window

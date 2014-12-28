@@ -14,8 +14,9 @@ var/const/supply_science	= 5
 var/const/supply_organic	= 6
 var/const/supply_materials 	= 7
 var/const/supply_misc		= 8
+var/const/supply_spacesuits	= 9
 
-var/list/all_supply_groups = list(supply_emergency,supply_security,supply_engineer,supply_medical,supply_science,supply_organic,supply_materials,supply_misc)
+var/list/all_supply_groups = list(supply_emergency,supply_security,supply_engineer,supply_medical,supply_science,supply_organic,supply_materials,supply_misc,supply_spacesuits)
 
 /proc/get_supply_group_name(var/cat)
 	switch(cat)
@@ -35,6 +36,8 @@ var/list/all_supply_groups = list(supply_emergency,supply_security,supply_engine
 			return "Raw Materials"
 		if(8)
 			return "Miscellaneous"
+		if(9)
+			return "Space Suits"
 
 
 /datum/supply_packs
@@ -497,83 +500,6 @@ var/list/all_supply_groups = list(supply_emergency,supply_security,supply_engine
 					/obj/structure/particle_accelerator/end_cap)
 	cost = 25
 	containername = "particle accelerator crate"
-
-/datum/supply_packs/engineering/engine/spacesuit
-	name = "EVA Space Suit Crate"
-	contains = list(/obj/item/clothing/suit/space,
-					/obj/item/clothing/head/helmet/space,
-					/obj/item/clothing/mask/breath,
-					/obj/item/weapon/tank/oxygen,)
-	cost = 20
-	containertype = /obj/structure/closet/crate/secure
-	containername = "EVA space suit crate"
-	access = access_eva
-
-/datum/supply_packs/engineering/engine/spacesuit/engine
-	name = "Engineering Space Suit Crate"
-	contains = list(/obj/item/clothing/suit/space/hardsuit,
-					/obj/item/clothing/head/helmet/space/hardsuit,
-					/obj/item/clothing/mask/breath,
-					/obj/item/weapon/tank/oxygen,)
-	cost = 20
-	containertype = /obj/structure/closet/crate/secure
-	containername = "engineering space suit crate"
-	access = access_engine_equip
-
-/datum/supply_packs/engineering/engine/spacesuit/atmos
-	name = "Atmospheric Technician's Space Suit Crate"
-	contains = list(/obj/item/clothing/suit/space/hardsuit/atmos,
-					/obj/item/clothing/head/helmet/space/hardsuit/atmos,
-					/obj/item/clothing/mask/breath,
-					/obj/item/weapon/tank/oxygen,)
-	cost = 20
-	containertype = /obj/structure/closet/crate/secure
-	containername = "atmos space suit crate"
-	access = access_atmospherics
-
-/datum/supply_packs/engineering/engine/spacesuit/mining
-	name = "Miner's Space Suit Crate"
-	contains = list(/obj/item/clothing/suit/space/hardsuit/mining,
-					/obj/item/clothing/head/helmet/space/hardsuit/mining,
-					/obj/item/clothing/mask/breath,
-					/obj/item/weapon/tank/oxygen,)
-	cost = 20
-	containertype = /obj/structure/closet/crate/secure
-	containername = "mining space suit crate"
-	access = access_mining
-
-/datum/supply_packs/engineering/engine/spacesuit/medical
-	name = "Medical Space Suit Crate"
-	contains = list(/obj/item/clothing/suit/space/hardsuit/medical,
-					/obj/item/clothing/head/helmet/space/hardsuit/medical,
-					/obj/item/clothing/mask/breath,
-					/obj/item/weapon/tank/oxygen,)
-	cost = 20
-	containertype = /obj/structure/closet/crate/secure
-	containername = "medical space suit crate"
-	access = access_medical
-
-/datum/supply_packs/engineering/engine/spacesuit/security
-	name = "Security Space Suit Crate"
-	contains = list(/obj/item/clothing/suit/space/hardsuit/security,
-					/obj/item/clothing/head/helmet/space/hardsuit/security,
-					/obj/item/clothing/mask/breath,
-					/obj/item/weapon/tank/oxygen,)
-	cost = 20
-	containertype = /obj/structure/closet/crate/secure
-	containername = "security space suit crate"
-	access = access_security
-
-/datum/supply_packs/engineering/engine/spacesuit/syndie
-	name = "Syndicate Space Suit Crate"
-	contains = list(/obj/item/clothing/suit/space/hardsuit/syndi,
-					/obj/item/clothing/head/helmet/space/hardsuit/syndi,
-					/obj/item/clothing/mask/breath,
-					/obj/item/weapon/tank/oxygen,)
-	cost = 100
-	containertype = /obj/structure/closet/crate
-	containername = "syndicate space suit crate"
-	hidden = 1
 
 //////////////////////////////////////////////////////////////////////////////
 //////////////////////////// Medical /////////////////////////////////////////
@@ -1246,3 +1172,89 @@ var/list/all_supply_groups = list(supply_emergency,supply_security,supply_engine
 					/obj/item/weapon/lipstick/random)
 	cost = 30 //Lots of very expensive items. You gotta pay up to look good!
 	containername = "formal-wear crate"
+
+
+//////////////////////////////////////////////////////////////////////////////
+//////////////////////////// Security ////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////
+
+/datum/supply_packs/spacesuits
+	name = "HEADER"
+	group = supply_spacesuits
+
+/datum/supply_packs/spacesuits/eva
+	name = "EVA Space Suit Crate"
+	contains = list(/obj/item/clothing/suit/space,
+					/obj/item/clothing/head/helmet/space,
+					/obj/item/clothing/mask/breath,
+					/obj/item/weapon/tank/oxygen)
+	cost = 20
+	containertype = /obj/structure/closet/crate/secure
+	containername = "EVA space suit crate"
+	access = access_eva
+
+/datum/supply_packs/spacesuits/engine
+	name = "Engineering Space Suit Crate"
+	contains = list(/obj/item/clothing/suit/space/hardsuit,
+					/obj/item/clothing/head/helmet/space/hardsuit,
+					/obj/item/clothing/mask/breath,
+					/obj/item/weapon/tank/oxygen)
+	cost = 20
+	containertype = /obj/structure/closet/crate/secure
+	containername = "engineering space suit crate"
+	access = access_engine_equip
+
+/datum/supply_packs/spacesuits/atmos
+	name = "Atmostech Space Suit Crate"
+	contains = list(/obj/item/clothing/suit/space/hardsuit/atmos,
+					/obj/item/clothing/head/helmet/space/hardsuit/atmos,
+					/obj/item/clothing/mask/breath,
+					/obj/item/weapon/tank/oxygen)
+	cost = 20
+	containertype = /obj/structure/closet/crate/secure
+	containername = "atmos space suit crate"
+	access = access_atmospherics
+
+/datum/supply_packs/spacesuits/mining
+	name = "Mining Space Suit Crate"
+	contains = list(/obj/item/clothing/suit/space/hardsuit/mining,
+					/obj/item/clothing/head/helmet/space/hardsuit/mining,
+					/obj/item/clothing/mask/breath,
+					/obj/item/weapon/tank/oxygen)
+	cost = 20
+	containertype = /obj/structure/closet/crate/secure
+	containername = "mining space suit crate"
+	access = access_mining
+
+/datum/supply_packs/spacesuits/medical
+	name = "Medical Space Suit Crate"
+	contains = list(/obj/item/clothing/suit/space/hardsuit/medical,
+					/obj/item/clothing/head/helmet/space/hardsuit/medical,
+					/obj/item/clothing/mask/breath,
+					/obj/item/weapon/tank/oxygen)
+	cost = 20
+	containertype = /obj/structure/closet/crate/secure
+	containername = "medical space suit crate"
+	access = access_medical
+
+/datum/supply_packs/spacesuits/security
+	name = "Security Space Suit Crate"
+	contains = list(/obj/item/clothing/suit/space/hardsuit/security,
+					/obj/item/clothing/head/helmet/space/hardsuit/security,
+					/obj/item/clothing/mask/breath,
+					/obj/item/weapon/tank/oxygen)
+	cost = 20
+	containertype = /obj/structure/closet/crate/secure
+	containername = "security space suit crate"
+	access = access_security
+
+/datum/supply_packs/spacesuits/syndie
+	name = "Syndicate Space Suit Crate"
+	contains = list(/obj/item/clothing/suit/space/hardsuit/syndi,
+					/obj/item/clothing/head/helmet/space/hardsuit/syndi,
+					/obj/item/clothing/mask/breath,
+					/obj/item/weapon/tank/oxygen)
+	cost = 100
+	containertype = /obj/structure/closet/crate
+	containername = "syndicate space suit crate"
+	hidden = 1
