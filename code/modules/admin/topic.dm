@@ -1154,6 +1154,7 @@
 			return
 
 		H.allow_respawn = 1
+		H << "Вы получили разрешение на респавн"
 		message_admins("<span class='danger'>Admin [key_name_admin(usr)] разрешил(а) респавн [key_name_admin(H)]!</span>")
 		log_admin("[key_name(usr)] разрешил(а) респавн [key_name(H)]")
 
