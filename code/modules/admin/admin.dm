@@ -41,9 +41,17 @@ var/global/floorIsLava = 0
 	body += "<a href='?priv_msg=[M.ckey]'>PM</a> - "
 	body += "<a href='?_src_=holder;subtlemessage=\ref[M]'>SM</a> - "
 	body += "<a href='?_src_=holder;adminplayerobservejump=\ref[M]'>JMP</a>\] </b><br>"
+	body += "<b>Client Information:</b><br>"
+	if(M.client)
+		body += "<b>ckey</b> = [M.client.ckey]<br>"
+		body += "<b>Client Age</b> = [M.client.player_age] days<br>"
+		body += "<b>Last Message</b> = [M.client.last_message]<br>"
+		body += "<b>Client Gender</b> = [M.client.gender]<br>"
+		body += "<b>IP</b> = [M.client.address]<br>"
+		body += "<b>CID</b> = [M.client.computer_id]<br>"
+		body += "<b>Mob type</b> = [M.type]<br>"
 
-	body += "<b>Mob type</b> = [M.type]<br><br>"
-
+	body += "<b>BAN: </b> "
 	body += "<A href='?_src_=holder;boot2=\ref[M]'>Kick</A> | "
 	body += "<A href='?_src_=holder;newban=\ref[M]'>Ban</A> | "
 	body += "<A href='?_src_=holder;jobban2=\ref[M]'>Jobban</A> | "
@@ -151,7 +159,7 @@ var/global/floorIsLava = 0
 	body += "<br>"
 	body += "</body></html>"
 
-	usr << browse(body, "window=adminplayeropts-\ref[M];size=550x515")
+	usr << browse(body, "window=adminplayeropts-\ref[M];size=600x600")
 	feedback_add_details("admin_verb","SPP") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 

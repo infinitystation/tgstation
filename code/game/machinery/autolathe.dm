@@ -4,10 +4,10 @@
 	icon_state = "autolathe"
 	density = 1
 
-	var/m_amount = 0.0
+	var/m_amount = 150000.0
 	var/max_m_amount = 150000.0
 
-	var/g_amount = 0.0
+	var/g_amount = 75000.0
 	var/max_g_amount = 75000.0
 
 	var/operating = 0.0

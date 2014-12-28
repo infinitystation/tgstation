@@ -98,6 +98,22 @@
 	build_path = /obj/item/clothing/head/welding
 	category = list("initial","Tools")
 
+/datum/design/welding_helmet
+	name = "Welding helmet"
+	id = "welding_helmet"
+	build_type = AUTOLATHE
+	materials = list("$metal" = 1750, "$glass" = 400)
+	build_path = /obj/item/clothing/head/welding
+	category = list("initial","Tools")
+
+/datum/design/spray
+	name = "Spray Bottle"
+	id = "spray"
+	build_type = AUTOLATHE
+	materials = list("$glass" = 200)
+	build_path = /obj/item/weapon/reagent_containers/spray
+	category = list("initial","Tools")
+
 /datum/design/console_screen
 	name = "Console screen"
 	id = "console_screen"
@@ -401,6 +417,14 @@
 	build_type = AUTOLATHE
 	materials = list("$metal" = 30000)
 	build_path = /obj/item/weapon/rcd
+	category = list("hacked", "Construction")
+
+/datum/design/rpd
+	name = "Rapid pipe dispenser (RPD)"
+	id = "rpd"
+	build_type = AUTOLATHE
+	materials = list("$metal" = 75000, "$glass" = 37500)
+	build_path = /obj/item/weapon/pipe_dispenser
 	category = list("hacked", "Construction")
 
 /datum/design/electropack
