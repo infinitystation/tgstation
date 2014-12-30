@@ -13,7 +13,7 @@
   ____) | |  / ____ \ |____| |____      ____) | |__| |_| |_   | |  ____) |     / ____ \| |__| | \  /
  |_____/|_| /_/    \_\_____|______|    |_____/ \____/|_____|  |_| |_____/     /_/    \_\_____/   \/
                                                                                                      READY, complited for TG
-
+icons\mob\space_adv
 
 
 
@@ -23,6 +23,7 @@ Space ninja autif. for e.g
 /obj/item/clothing/head/helmet/space/space_adv
 	name = "Space working hardsuit helmet (Wrench to unscrew)"
 	desc = "—пециальный шлем для работы вне атмосферы, имеет защитный слой от радиации. ¬ы можете открутить его с помощью гаечного ключа"
+	icon = 'icons/obj/space_adv.dmi'
 	icon_state = "rig0_rd"
 	item_state = "ce_helm"
 	armor = list(melee = 10, bullet = 5, laser = 10, energy = 5, bomb = 10, bio = 100, rad = 85)
@@ -35,6 +36,7 @@ Space ninja autif. for e.g
 /obj/item/clothing/suit/space/space_adv
 	name = "Space working hardsuit"
 	desc = "—пециальный костюм для работы вне атмосферы, имеет защитный слой от радиации и выдвигаемый шлем. ¬ы можете отключить его от шлема с помошью откручивани€ специальных креплений на выдвинутом шлеме"
+	icon = 'icons/obj/space_adv.dmi'
 	icon_state = "rdrig"
 	item_state = "ce_hardsuit"
 	slowdown = 1
