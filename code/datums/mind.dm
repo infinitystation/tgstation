@@ -55,6 +55,8 @@
 	var/antag_hud_icon_state = null //this mind's ANTAG_HUD should have this icon_state
 	var/datum/atom_hud/antag/antag_hud = null //this mind's antag HUD
 
+	var/rev_cooldown = 0 //need to cooldown rev-convert
+
 /datum/mind/New(var/key)
 	src.key = key
 

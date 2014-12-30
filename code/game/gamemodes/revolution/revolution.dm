@@ -85,6 +85,7 @@
 		//	equip_traitor(rev_mind.current, 1) //changing how revs get assigned their uplink so they can get PDA uplinks. --NEO
 		//	Removing revolutionary uplinks.	-Pete
 			equip_revolutionary(rev_mind.current)
+			rev_mind.current.verbs += /mob/living/carbon/human/verb/RevConvert
 			update_rev_icons_added(rev_mind)
 
 	for(var/datum/mind/rev_mind in head_revolutionaries)
@@ -135,8 +136,8 @@
 			mob << "Your training has allowed you to overcome your clownish nature, allowing you to wield weapons without harming yourself."
 			mob.mutations.Remove(CLUMSY)
 
-
-	var/obj/item/device/flash/T = new(mob)
+	// NO MORE FLASHES FOR REVS (c) bear1ake
+	/* var/obj/item/device/flash/T = new(mob)
 
 	var/list/slots = list (
 		"backpack" = slot_in_backpack,
@@ -149,9 +150,9 @@
 	if (!where)
 		mob << "The Syndicate were unfortunately unable to get you a flash."
 	else
-		mob << "The flash in your [where] will help you to persuade the crew to join your cause."
-		mob.update_icons()
-		return 1
+		mob << "The flash in your [where] will help you to persuade the crew to join your cause." */
+	mob.update_icons()
+	return 1
 
 /////////////////////////////////
 //Gives head revs their targets//
@@ -187,6 +188,7 @@
 		revolutionaries -= stalin
 		head_revolutionaries += stalin
 		log_game("[stalin.key] (ckey) has been promoted to a head rev")
+		stalin.current.verbs += /mob/living/carbon/human/verb/RevConvert
 		equip_revolutionary(stalin.current)
 		forge_revolutionary_objectives(stalin)
 		greet_revolutionary(stalin)
@@ -233,6 +235,40 @@
 	rev_mind.special_role = "Revolutionary"
 	update_rev_icons_added(rev_mind)
 	return 1
+
+/mob/living/carbon/human/verb/RevConvert()
+	set name = "Rev-Convert"
+	set category = "IC"
+	var/list/Possible = list()
+	for (var/mob/living/carbon/human/P in view(src.loc))
+		if(!stat && P.client && P.mind && !P.mind.special_role)
+			Possible += P
+	if(!Possible.len)
+		src << "\red There doesn't appear to be anyone available for you to convert here."
+		return
+	var/mob/living/carbon/human/M = input("Select a person to convert", "Viva la revolution!", null) as mob in Possible
+	if(((src.mind in ticker.mode.head_revolutionaries) || (src.mind in ticker.mode.revolutionaries)))
+		if((M.mind in ticker.mode.head_revolutionaries) || (M.mind in ticker.mode.revolutionaries))
+			src << "\red <b>[M] is already be a revolutionary!</b>"
+		else if(isloyal(M))
+			src << "\red <b>[M] is implanted with a loyalty implant - Remove it first!</b>"
+		else
+			if(world.time < M.mind.rev_cooldown)
+				src << "\red Wait five seconds before reconversion attempt."
+				return
+			src << "\red Attempting to convert [M]..."
+			log_admin("[src]([src.ckey]) attempted to convert [M].")
+			message_admins("\red [src]([src.ckey]) attempted to convert [M].")
+			var/choice = alert(M,"Asked by [src]: Do you want to join the revolution?","Align Thyself with the Revolution!","No!","Yes!")
+			if(choice == "Yes!")
+				ticker.mode.add_revolutionary(M.mind)
+				M << "\blue You join the revolution!"
+				src << "\blue <b>[M] joins the revolution!</b>"
+			else if(choice == "No!")
+				M << "\red You reject this traitorous cause!"
+				src << "\red <b>[M] does not support the revolution!</b>"
+			M.mind.rev_cooldown = world.time+50
+
 //////////////////////////////////////////////////////////////////////////////
 //Deals with players being converted from the revolution (Not a rev anymore)//  // Modified to handle borged MMIs.  Accepts another var if the target is being borged at the time  -- Polymorph.
 //////////////////////////////////////////////////////////////////////////////
@@ -395,3 +431,4 @@
 		text += "<br>"
 
 		world << text
+
