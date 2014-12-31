@@ -63,3 +63,19 @@
 	track_delay = world.time + 10 // 1 second
 	return
 
+//Multimeter
+/obj/item/device/multitool/multimeter
+	name = "multimeter"
+	desc = "»спользуется для измерения потребления электроэнергии оборудования и прозвонки проводов. –екомендуется докторами"
+	origin_tech = "magnets=3;engineering=3"
+	var/mode = 1 // Mode
+
+//mode
+/obj/item/device/multitool/multimeter/attack_self(mob/living/user as mob)
+	if (mode)
+		mode = 0 // Measuring
+		user << "<span class='notice'>¬ключен режим измерения</span>"
+	else
+		mode = 1 // Checking
+		user << "<span class='notice'>¬ключен режим прозвонки</span>"
+

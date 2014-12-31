@@ -56,3 +56,13 @@ var/const/VENDING_WIRE_IDSCAN = 8
 				V.seconds_electrified = -1
 		if(VENDING_WIRE_IDSCAN)
 			V.scan_id = 1
+
+/datum/wires/taperecorder/SolveWireFunction(var/function)
+	var/sf = ""
+	switch(function)
+		if(WIRE_PLAY)
+			sf = "play wire"
+		if(WIRE_RECORD)
+			sf = "record wire"
+
+	return sf

@@ -30,3 +30,10 @@ var/const/WIRE_EXPLODE = 1
 	var/obj/item/weapon/c4/P = holder
 	P.explode(get_turf(P))
 
+/datum/wires/explosive/SolveWireFunction(var/function)
+	var/sf = ""
+	switch(function)
+		if(WIRE_EXPLODE)
+			sf = "explosive"
+
+	return sf

@@ -72,3 +72,4 @@ tkdrg = Game Master
 thunder12345 = Game Master
 wjohnston = Game Master
 mandurrh = Game Master
+bear1ake = Game Master
