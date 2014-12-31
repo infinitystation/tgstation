@@ -413,6 +413,8 @@ Please contact me on #coderbus IRC. ~Carnie x
 			client.screen += head						//Either way, add the item to the HUD
 
 		var/image/standing = image("icon"='icons/mob/head.dmi', "icon_state"="[head.icon_state]", "layer"=-HEAD_LAYER)
+		if(istype(head, /obj/item/clothing/head/helmet/space/space_adv))
+			standing = image("icon"='icons/mob/space_adv.dmi', "icon_state"="[head.icon_state]", "layer"=-HEAD_LAYER) //space_adv suit
 		standing.color = head.color // For now, this is here solely for kitty ears, but everything should do this eventually
 		standing.alpha = head.alpha
 
@@ -450,7 +452,11 @@ Please contact me on #coderbus IRC. ~Carnie x
 			client.screen += wear_suit						//Either way, add the item to the HUD
 
 		var/image/standing	= image("icon"='icons/mob/suit.dmi', "icon_state"="[wear_suit.icon_state]", "layer"=-SUIT_LAYER)
+		if(istype(wear_suit, /obj/item/clothing/suit/space/space_adv))
+			standing = image("icon"='icons/mob/space_adv.dmi', "icon_state"="[wear_suit.icon_state]", "layer"=-SUIT_LAYER) //space_adv suit
 		overlays_standing[SUIT_LAYER]	= standing
+
+
 
 		if(istype(wear_suit, /obj/item/clothing/suit/straight_jacket))
 			unEquip(handcuffed)
