@@ -9,6 +9,8 @@ var/list/same_wires = list()
 // 12 colours, if you're adding more than 12 wires then add more colours here
 var/list/wireColours = list("red", "blue", "green", "black", "orange", "brown", "gold", "gray", "cyan", "navy", "purple", "pink")
 
+var/global/all_solved_wires = list() //Solved wire associative list, eg; all_solved_wires[/obj/machinery/door/airlock] used form NTStation13
+
 /datum/wires
 
 	var/random = 0 // Will the wires be different for every single instance.
@@ -64,6 +66,8 @@ var/list/wireColours = list("red", "blue", "green", "black", "orange", "brown", 
 		src.wires[colour] = index
 		//wires = shuffle(wires)
 
+	all_solved_wires[holder_type] = SolveWires()
+
 
 /datum/wires/proc/Interact(var/mob/living/user)
 
@@ -96,14 +100,20 @@ var/list/wireColours = list("red", "blue", "green", "black", "orange", "brown", 
 		html += " <A href='?src=\ref[src];action=1;pulse=[colour]'>Pulse</A>"
 		html += " <A href='?src=\ref[src];action=1;attach=[colour]'>[IsAttached(colour) ? "Detach" : "Attach"] Signaller</A></td></tr>"
 	html += "</table>"
+	html += "<br /><A href='?src=\ref[src];action=1;check=1'>Check Wiring</A>"
 	html += "</div>"
 
 	return html
 
 /datum/wires/Topic(href, href_list)
 	..()
-	if(in_range(holder, usr) && isliving(usr))
 
+
+	var/list/unsolved_wires = src.wires.Copy()
+	var/colour_function
+	var/solved_colour_function
+
+	if(in_range(holder, usr) && isliving(usr))
 		var/mob/living/L = usr
 		if(CanUse(L) && href_list["action"])
 			var/obj/item/I = L.get_active_hand()
@@ -116,7 +126,19 @@ var/list/wireColours = list("red", "blue", "green", "black", "orange", "brown", 
 					L << "<span class='error'>You need wirecutters!</span>"
 
 			else if(href_list["pulse"])
-				if(istype(I, /obj/item/device/multitool))
+				if(istype(I, /obj/item/device/multitool/multimeter))
+					var/obj/item/device/multitool/multimeter/O = L.get_active_hand()
+					if(O.mode == 0)
+						L << "<span class='notice'>Закорачиваем контакты провода</span>"
+						if(do_after(L, 50))
+							var/colour = href_list["pulse"]
+							PulseColour(colour)
+							L << "<span class='notice'>Провод закорочен (пропульсован)</span>"
+						else
+							return 0
+					else
+						L << "<span class='notice'>Переведите мультиметр в режим измерениЯ</span>"
+				else if(istype(I, /obj/item/device/multitool))
 					var/colour = href_list["pulse"]
 					PulseColour(colour)
 				else
@@ -138,8 +160,32 @@ var/list/wireColours = list("red", "blue", "green", "black", "orange", "brown", 
 					else
 						L << "<span class='error'>You need a remote signaller!</span>"
 
+			//multimeter stuff
+			else if(href_list["check"])
+				if(istype(I, /obj/item/device/multitool/multimeter))
+					var/obj/item/device/multitool/multimeter/O = L.get_active_hand()
+					if(O.mode == 1)
+						L << "<span class='notice'>Перебираем провода...</span>"
+						var/name_by_type = name_by_type()
+						L << "[name_by_type] wires:"
+						for(var/colour in src.wires)
+							if(unsolved_wires[colour]) //unsolved_wires[red]
+								if(do_after(L, 10))
+									if(!IsColourCut(colour))
+										colour_function = unsolved_wires[colour] //unsolved_wires[red] = 1 so colour_index = 1
+										solved_colour_function = SolveWireFunction(colour_function) //unsolved_wires[red] = 1, 1 = AIRLOCK_WIRE_IDSCAN
+										L << "the [colour] wire connected to [solved_colour_function]" //the red wire is the ID wire
+										playsound(O.loc, 'sound/machines/ping.ogg', 30, 1)
+									else
+										L << "the [colour] wire not connected"
+								else
+									return 0
 
-
+							//L << "<span class='notice'>[all_solved_wires[holder_type]]</span>"
+					else
+						L << "<span class='error'>Переключите мультиметр в режим прозвонки</span>"
+				else
+					L << "<span class='error'>Вам нужен мультиметр</span>"
 
 		// Update Window
 			Interact(usr)
@@ -291,3 +337,57 @@ var/const/POWER = 8
 /datum/wires/proc/Shuffle()
 	wires_status = 0
 	GenerateWires()
+
+// Wire solve functions
+
+/datum/wires/proc/name_by_type()
+	var/name_by_type
+	if(istype(src, /datum/wires/airlock))
+		name_by_type = "Airlock"
+	if(istype(src, /datum/wires/apc))
+		name_by_type = "APC"
+	if(istype(src, /datum/wires/robot))
+		name_by_type = "Cyborg"
+	if(istype(src, /datum/wires/autolathe))
+		name_by_type = "Autolathe"
+	if(istype(src, /datum/wires/alarm))
+		name_by_type = "Air Alarm"
+	if(istype(src, /datum/wires/camera))
+		name_by_type = "Camera"
+	if(istype(src, /datum/wires/explosive))
+		name_by_type = "C4 Bomb"
+	if(istype(src, /datum/wires/mulebot))
+		name_by_type = "Mulebot"
+	if(istype(src, /datum/wires/particle_acc))
+		name_by_type = "Particle Accelerator"
+	if(istype(src, /datum/wires/radio))
+		name_by_type = "Radio"
+	if(istype(src, /datum/wires/syndicatebomb))
+		name_by_type = "Syndicate Bomb"
+	if(istype(src, /datum/wires/taperecorder))
+		name_by_type = "Tape Recorder"
+	if(istype(src, /datum/wires/vending))
+		name_by_type = "Vending Machine"
+	return name_by_type
+
+/datum/wires/proc/SolveWireFunction(var/WireFunction)
+	return WireFunction //Default returns the original number, so it still "works"
+
+/datum/wires/proc/SolveWires()
+	var/list/unsolved_wires = src.wires.Copy()
+	var/colour_function
+	var/solved_colour_function
+
+	var/name_by_type = name_by_type()
+
+	var/solved_txt = "[name_by_type] wires:<br>"
+
+	for(var/colour in src.wires)
+		if(unsolved_wires[colour]) //unsolved_wires[red]
+			colour_function = unsolved_wires[colour] //unsolved_wires[red] = 1 so colour_index = 1
+			solved_colour_function = SolveWireFunction(colour_function) //unsolved_wires[red] = 1, 1 = AIRLOCK_WIRE_IDSCAN
+			solved_txt += "the [colour] wire connected to [solved_colour_function]<br>" //the red wire is the ID wire
+
+	solved_txt += "<br>"
+
+	return solved_txt

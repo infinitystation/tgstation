@@ -41,6 +41,7 @@ datum/design						//Datum for object designs, used in construction
 	var/build_path = ""					//The file path of the object that gets created
 	var/locked = 0						//If true it will spawn inside a lockbox with currently sec access
 	var/list/category = null 			//Primarily used for Mech Fabricators, but can be used for anything
+	var/access = null
 
 
 //A proc to calculate the reliability of a design based on tech levels and innate modifiers.
@@ -352,8 +353,9 @@ datum/design/proc/CalcReliability(var/list/temp_techs)
 	category = list("Equipement")
 
 /////////////////////////////////////////
-////////////Space Suits Designs//////////////
+////////////Space Suits Designs//////////
 /////////////////////////////////////////
+//////Space Suits coded by Vert1881//////
 
 /datum/design/adv_hardsuit
 	name = "Space working hardsuit"

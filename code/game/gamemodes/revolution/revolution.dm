@@ -85,7 +85,7 @@
 		//	equip_traitor(rev_mind.current, 1) //changing how revs get assigned their uplink so they can get PDA uplinks. --NEO
 		//	Removing revolutionary uplinks.	-Pete
 			equip_revolutionary(rev_mind.current)
-			rev_mind.current.verbs += /mob/living/carbon/human/verb/RevConvert
+			rev_mind.current.verbs += /mob/living/carbon/human/proc/RevConvert
 			update_rev_icons_added(rev_mind)
 
 	for(var/datum/mind/rev_mind in head_revolutionaries)
@@ -188,8 +188,8 @@
 		revolutionaries -= stalin
 		head_revolutionaries += stalin
 		log_game("[stalin.key] (ckey) has been promoted to a head rev")
-		stalin.current.verbs += /mob/living/carbon/human/verb/RevConvert
 		equip_revolutionary(stalin.current)
+		stalin.current.verbs += /mob/living/carbon/human/proc/RevConvert
 		forge_revolutionary_objectives(stalin)
 		greet_revolutionary(stalin)
 		++max_headrevs
@@ -236,7 +236,7 @@
 	update_rev_icons_added(rev_mind)
 	return 1
 
-/mob/living/carbon/human/verb/RevConvert()
+/mob/living/carbon/human/proc/RevConvert()
 	set name = "Rev-Convert"
 	set category = "IC"
 	var/list/Possible = list()

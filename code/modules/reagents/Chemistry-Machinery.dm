@@ -17,6 +17,7 @@
 	var/beaker = null
 	var/recharged = 0
 	var/recharge_delay = 15  //Time it game ticks between recharges
+	var/id_scan = 0
 	var/list/dispensable_reagents = list("hydrogen","lithium","carbon","nitrogen","oxygen","fluorine",
 	"sodium","aluminium","silicon","phosphorus","sulfur","chlorine","potassium","iron",
 	"copper","mercury","radium","water","ethanol","sugar","sacid")
@@ -125,6 +126,10 @@
 			amount = 100
 
 	if(href_list["dispense"])
+		if((!allowed(usr)) && !emagged && id_scan)	//For SECURE MACHINES YEAH
+			usr << "<span class='warning'>Access denied.</span>"	//Unless emagged of course
+			return 1
+
 		if (dispensable_reagents.Find(href_list["dispense"]) && beaker != null)
 			var/obj/item/weapon/reagent_containers/glass/B = src.beaker
 			var/datum/reagents/R = B.reagents
@@ -260,12 +265,12 @@
 	var/seconds_unpowered = 0
 	var/chem_mode_flag = 0
 	var/hidden_mode_flag = 0
-	//var/datum/wires/bardispenser/wires = null //wires update
+	var/datum/wires/bardispenser/wires = null //wires update
 
 /obj/machinery/chem_dispenser/bartender/New()
 	..()
 
-	//wires = new(src) //wires update
+	wires = new(src) //wires update
 	var/obj/item/weapon/circuitboard/chem_dispenser/H = new /obj/item/weapon/circuitboard/chem_dispenser(null)
 	H.build_path = /obj/machinery/chem_dispenser/bartender
 	H.name = "circuit board (Portable Bar Dispenser)"
@@ -317,32 +322,23 @@
 			dispensable_reagents = sortList(dispensable_reagents | special_reagents[i])
 
 //wires update
-/* /obj/machinery/chem_dispenser/bartender/attack_hand(mob/user)
+/obj/machinery/chem_dispenser/bartender/attack_hand(mob/user)
 	if(seconds_electrified != 0)
 		if(shock(user, 100))
 			return
 	if(panel_open)
 		wires.Interact(user)
-	..() */
+	..()
 
-/* wires update
+//wires update
 /obj/machinery/chem_dispenser/bartender/process()
 	..()
 
 	if(seconds_electrified > 0)
 		seconds_electrified--
 
-	if(seconds_unpowered > 0)
-		seconds_unpowered--
-		if(stat == 0)
-			stat = NOPOWER | POWEROFF
-	else if(seconds_unpowered == 0)
-		stat = 0
-		*/
-
 /obj/machinery/chem_dispenser/bartender/attackby(var/obj/item/I, var/mob/user)
 	..()
-
 
 	if(default_deconstruction_screwdriver(user, "bardispenser-o", "bardispenser", I))
 		return
@@ -350,10 +346,10 @@
 	if(exchange_parts(user, I))
 		return
 
-	/* else if(istype(I, /obj/item/device/multitool)||istype(I, /obj/item/weapon/wirecutters))
+	else if(istype(I, /obj/item/device/multitool)||istype(I, /obj/item/weapon/wirecutters))
 		if(panel_open)
 			attack_hand(user)
-		return */ // wires update
+		return  // wires update
 
 	if(panel_open)
 		if(istype(I, /obj/item/weapon/crowbar))
@@ -375,7 +371,7 @@
 		user << "You add the [I] to the machine!"
 		nanomanager.update_uis(src) // update all UIs attached to src
 
-/* wires update
+//wires update
 /obj/machinery/chem_dispenser/bartender/proc/shock(mob/user, prb)
 	if(stat & (BROKEN|NOPOWER))		// unpowered, no shock
 		return 0
@@ -387,7 +383,7 @@
 	if(electrocute_mob(user, get_area(src), src, 0.7))
 		return 1
 	else
-		return 0 */
+		return 0
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
