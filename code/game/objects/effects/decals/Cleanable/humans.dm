@@ -19,8 +19,9 @@
 /obj/effect/decal/cleanable/blood/Crossed(atom/A)
 	if (prob(20))
 		if (istype(A,/mob/living/carbon))
-			var/mob/living/carbon/M = A
-			M.slip(4, 2, null, (NO_SLIP_WHEN_WALKING|STEP))
+			if (!istype(src,/obj/effect/decal/cleanable/blood/old))
+				var/mob/living/carbon/M = A
+				M.slip(1, 1, null, (NO_SLIP_WHEN_WALKING|STEP))
 
 /obj/effect/decal/cleanable/blood/New()
 	..()

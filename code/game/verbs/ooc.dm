@@ -111,7 +111,7 @@ var/global/normal_ooc_colour = "#002eb8"
 		src << "<div class=\"motd\">[join_motd]</div>"
 	else
 		src << "<span class='notice'>The Message of the Day has not been set.</span>"
-
+// use code or config to resolve sareth's problem?
 /client/proc/self_notes()
 	set name = "View Admin Notes"
 	set category = "OOC"

@@ -1,7 +1,7 @@
 /datum/round_event_control/meteor_wave
 	name = "Meteor Wave"
 	typepath = /datum/round_event/meteor_wave
-	weight = 5
+	weight = 0
 	max_occurrences = 3
 
 /datum/round_event/meteor_wave
