@@ -1,7 +1,7 @@
 /datum/round_event_control/blob
 	name = "Blob"
 	typepath = /datum/round_event/blob
-	weight = 5
+	weight = 0
 	max_occurrences = 1
 
 	earliest_start = 48000 // 1 hour 20 minutes
