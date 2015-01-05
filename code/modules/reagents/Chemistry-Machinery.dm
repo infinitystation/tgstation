@@ -29,7 +29,7 @@
 	energy = min(energy + addenergy, max_energy)
 	if(energy != oldenergy)
 		use_power(1500) // This thing uses up alot of power (this is still low as shit for creating reagents from thin air)
-		nanomanager.update_uis(src) // update all UIs attached to src
+		SSnano.update_uis(src) // update all UIs attached to src
 
 /obj/machinery/chem_dispenser/power_change()
 	if(powered())
@@ -37,7 +37,7 @@
 	else
 		spawn(rand(0, 15))
 			stat |= NOPOWER
-	nanomanager.update_uis(src) // update all UIs attached to src
+	SSnano.update_uis(src) // update all UIs attached to src
 
 /obj/machinery/chem_dispenser/process()
 
@@ -104,7 +104,7 @@
 	data["chemicals"] = chemicals
 
 	// update the ui if it exists, returns null if no ui is passed/found
-	ui = nanomanager.try_update_ui(user, src, ui_key, ui, data)
+	ui = SSnano.try_update_ui(user, src, ui_key, ui, data)
 	if (!ui)
 		// the ui does not exist, so we'll create a new() one
         // for a list of parameters and their descriptions see the code docs in \code\modules\nano\nanoui.dm
@@ -163,7 +163,7 @@
 	user.drop_item()
 	B.loc = src
 	user << "You add the beaker to the machine!"
-	nanomanager.update_uis(src) // update all UIs attached to src
+	SSnano.update_uis(src) // update all UIs attached to src
 	overlays += "disp_beaker"
 
 /obj/machinery/chem_dispenser/attack_ai(mob/user as mob)
@@ -371,7 +371,6 @@
 		user.drop_item()
 		I.loc = src
 		user << "You add the [I] to the machine!"
-		nanomanager.update_uis(src) // update all UIs attached to src
 
 //wires update
 /obj/machinery/chem_dispenser/bartender/proc/shock(mob/user, prb)
@@ -820,7 +819,7 @@ obj/machinery/computer/pandemic/proc/replicator_cooldown(var/waittime)
 		if(archive_diseases[id])
 			var/datum/disease/advance/A = archive_diseases[id]
 			A.AssignName(new_name)
-			for(var/datum/disease/advance/AD in active_diseases)
+			for(var/datum/disease/advance/AD in SSdisease.processing)
 				AD.Refresh()
 		src.updateUsrDialog()
 
