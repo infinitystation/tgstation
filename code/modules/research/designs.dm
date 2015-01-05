@@ -361,18 +361,21 @@ datum/design/proc/CalcReliability(var/list/temp_techs)
 	name = "Space working hardsuit"
 	desc = "Специальный костюм длЯ работы вне атмосферы, имеет защитный слой от радиации и выдвигаемый шлем. Вы можете отключить его от шлема с помошью откручивания специальных креплений на выдвинутом шлеме"
 	id = "adv_hardsuit"
-	req_tech = list("materials" = 4, "magnets" = 4, "engineering" = 5)
+	req_tech = list("materials" = 7, "magnets" = 6, "engineering" = 6)
 	build_type = PROTOLATHE
-	materials = list("$metal" = 9000, "$silver" = 2000, "$gold" = 2000)
+	materials = list("$metal" = 9000, "$silver" = 3000, "$gold" = 3000)
 	build_path = /obj/item/clothing/suit/space/space_adv
 	category = list("Equipement")
+	locked = 1
+	access = list(access_eva)
 
 /datum/design/adv_hardsuit/combat
 	name = "Military space hardsuit"
 	desc = "Специальный костюм разработанный длЯ армии. Имеет укрепленные слои защиты и выдвигаемый шлем. Вы можете отключить его от шлема с помошью откручивания специальных креплений на выдвинутом шлеме"
 	id = "adv_hardsuit_combat"
-	req_tech = list("materials" = 4, "magnets" = 4, "engineering" = 5, "combat" = 4)
+	req_tech = list("materials" = 7, "magnets" = 6, "engineering" = 6, "combat" = 6)
 	build_type = PROTOLATHE
-	materials = list("$metal" = 9000, "$silver" = 2000, "$gold" = 2000, "$plasma" = 2000)
+	materials = list("$metal" = 9000, "$silver" = 3000, "$gold" = 3000, "$plasma" = 3000)
 	build_path = /obj/item/clothing/suit/space/space_adv/military
 	category = list("Equipement")
+	locked = 1
