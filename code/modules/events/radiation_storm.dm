@@ -8,7 +8,7 @@
 
 
 /datum/round_event/radiation_storm/setup()
-	startWhen = rand(10, 20)
+	startWhen = rand(30, 40)
 	endWhen = startWhen + 5
 	announceWhen	= 1
 
