@@ -1,7 +1,7 @@
 /datum/round_event_control/brand_intelligence
 	name = "Brand Intelligence"
 	typepath = /datum/round_event/brand_intelligence
-	weight = 5
+	weight = 0
 	max_occurrences = 1
 
 /datum/round_event/brand_intelligence
@@ -51,15 +51,10 @@
 
 	if(!vendingMachines.len)	//if every machine is infected
 		for(var/obj/machinery/vending/upriser in infectedMachines)
-			if(prob(70))
-				var/mob/living/simple_animal/hostile/mimic/copy/M = new(upriser.loc, upriser, null, 1) // it will delete upriser on creation and override any machine checks
-				M.faction = list("profit")
-				M.speak = rampant_speeches.Copy()
-				M.speak_chance = 15
-			else
-				explosion(upriser.loc, -1, 1, 2, 4, 0)
-				qdel(upriser)
-
+			var/mob/living/simple_animal/hostile/mimic/copy/M = new(upriser.loc, upriser, null, 1) // it will delete upriser on creation and override any machine checks
+			M.faction = list("profit")
+			M.speak = rampant_speeches.Copy()
+			M.speak_chance = 15
 		kill()
 		return
 
