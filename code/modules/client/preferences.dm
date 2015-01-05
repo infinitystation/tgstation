@@ -37,7 +37,6 @@ datum/preferences
 	var/ooccolor = "#002eb8"
 	var/be_special = 0					//Special role selection
 	var/UI_style = "Midnight"
-	var/custom_pointer = 0
 	var/toggles = TOGGLES_DEFAULT
 	var/ghost_form = "ghost"
 
@@ -50,6 +49,7 @@ datum/preferences
 	var/blood_type = "A+"				//blood type (not-chooseable)
 	var/underwear = "Nude"				//underwear type
 	var/undershirt = "Nude"				//undershirt type
+	var/socks = "Nude"					//socks type
 	var/backbag = 2						//backpack type
 	var/hair_style = "Bald"				//Hair type
 	var/hair_color = "000"				//Hair color
@@ -179,6 +179,7 @@ datum/preferences
 				dat += "<b>Skin Tone:</b><BR><a href='?_src_=prefs;preference=s_tone;task=input'>[skin_tone]</a><BR>"
 				dat += "<b>Underwear:</b><BR><a href ='?_src_=prefs;preference=underwear;task=input'>[underwear]</a><BR>"
 				dat += "<b>Undershirt:</b><BR><a href ='?_src_=prefs;preference=undershirt;task=input'>[undershirt]</a><BR>"
+				dat += "<b>Socks:</b><BR><a href ='?_src_=prefs;preference=socks;task=input'>[socks]</a><BR>"
 				dat += "<b>Backpack:</b><BR><a href ='?_src_=prefs;preference=bag;task=input'>[backbaglist[backbag]]</a><BR>"
 
 
@@ -219,7 +220,6 @@ datum/preferences
 				dat += "<table><tr><td width='340px' height='300px' valign='top'>"
 				dat += "<h2>General Settings</h2>"
 				dat += "<b>UI Style:</b> <a href='?_src_=prefs;preference=ui'>[UI_style]</a><br>"
-				dat += "<b>Use Custom Pointers:</b> <a href='?_src_=prefs;preference=pointer'>[custom_pointer ? "Yes" : "No"]</a><br>"
 				dat += "<b>Play admin midis:</b> <a href='?_src_=prefs;preference=hear_midis'>[(toggles & SOUND_MIDI) ? "Yes" : "No"]</a><br>"
 				dat += "<b>Play lobby music:</b> <a href='?_src_=prefs;preference=lobby_music'>[(toggles & SOUND_LOBBY) ? "Yes" : "No"]</a><br>"
 				dat += "<b>Ghost ears:</b> <a href='?_src_=prefs;preference=ghost_ears'>[(toggles & CHAT_GHOSTEARS) ? "Nearest Creatures" : "All Speech"]</a><br>"
@@ -274,7 +274,7 @@ datum/preferences
 		dat += "</center>"
 
 		//user << browse(dat, "window=preferences;size=560x560")
-		var/datum/browser/popup = new(user, "preferences", "<div align='center'>Character Setup</div>", 580, 620)
+		var/datum/browser/popup = new(user, "preferences", "<div align='center'>Character Setup</div>", 640, 680)
 		popup.set_content(dat)
 		popup.open(0)
 
@@ -567,6 +567,8 @@ datum/preferences
 						underwear = random_underwear(gender)
 					if("undershirt")
 						undershirt = random_undershirt(gender)
+					if("socks")
+						socks = random_socks(gender)
 					if("eyes")
 						eye_color = random_eye_color()
 					if("s_tone")
@@ -671,6 +673,15 @@ datum/preferences
 						if(new_undershirt)
 							undershirt = new_undershirt
 
+					if("socks")
+						var/new_socks
+						if(gender == MALE)
+							new_socks = input(user, "Choose your character's socks:", "Character Preference") as null|anything in socks_m
+						else
+							new_socks = input(user, "Choose your character's socks:", "Character Preference") as null|anything in socks_f
+						if(new_socks)
+							socks = new_socks
+
 					if("eyes")
 						var/new_eyes = input(user, "Choose your character's eye colour:", "Character Preference") as color|null
 						if(new_eyes)
@@ -726,6 +737,7 @@ datum/preferences
 							gender = MALE
 						underwear = random_underwear(gender)
 						undershirt = random_undershirt(gender)
+						socks = random_socks(gender)
 						facial_hair_style = random_facial_hair_style(gender)
 						hair_style = random_hair_style(gender)
 
@@ -740,9 +752,6 @@ datum/preferences
 								UI_style = "Retro"
 							else
 								UI_style = "Midnight"
-
-					if("pointer")
-						custom_pointer = !custom_pointer
 
 					if("be_special")
 						var/num = text2num(href_list["num"])
@@ -837,6 +846,7 @@ datum/preferences
 		character.facial_hair_style = facial_hair_style
 		character.underwear = underwear
 		character.undershirt = undershirt
+		character.socks = socks
 
 		if(backbag > 3 || backbag < 1)
 			backbag = 1 //Same as above

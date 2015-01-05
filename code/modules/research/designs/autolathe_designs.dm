@@ -231,7 +231,7 @@
 	id = "retractor"
 	build_type = AUTOLATHE
 	materials = list("$metal" = 6000, "$glass" = 3000)
-	build_path = /obj/item/weapon/
+	build_path = /obj/item/weapon/retractor
 	category = list("initial", "Medical")
 
 /datum/design/cautery

@@ -134,7 +134,7 @@
 	if (mob.mind)
 		if (mob.mind.assigned_role == "Clown")
 			mob << "Your training has allowed you to overcome your clownish nature, allowing you to wield weapons without harming yourself."
-			mob.mutations.Remove(CLUMSY)
+			mob.dna.remove_mutation(CLOWNMUT)
 
 	// NO MORE FLASHES FOR REVS (c) bear1ake
 	/* var/obj/item/device/flash/T = new(mob)
