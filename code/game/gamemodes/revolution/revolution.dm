@@ -91,8 +91,7 @@
 	for(var/datum/mind/rev_mind in head_revolutionaries)
 		greet_revolutionary(rev_mind)
 	modePlayer += head_revolutionaries
-	if(emergency_shuttle)
-		emergency_shuttle.always_fake_recall = 1
+	SSshuttle.emergencyAlwaysFakeRecall = 1
 	..()
 
 
@@ -134,7 +133,7 @@
 	if (mob.mind)
 		if (mob.mind.assigned_role == "Clown")
 			mob << "Your training has allowed you to overcome your clownish nature, allowing you to wield weapons without harming yourself."
-			mob.mutations.Remove(CLUMSY)
+			mob.dna.remove_mutation(CLOWNMUT)
 
 	// NO MORE FLASHES FOR REVS (c) bear1ake
 	/* var/obj/item/device/flash/T = new(mob)
@@ -210,8 +209,7 @@
 /datum/game_mode/revolution/check_finished()
 	if(config.continuous_round_rev)
 		if(finished != 0)
-			if(emergency_shuttle)
-				emergency_shuttle.always_fake_recall = 0
+			SSshuttle.emergencyAlwaysFakeRecall = 0
 		return ..()
 	if(finished != 0)
 		return 1

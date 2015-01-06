@@ -44,7 +44,6 @@
 	var/obj/machinery/machine = null
 	var/other_mobs = null
 	var/memory = ""
-	var/sdisabilities = 0	//Carbon
 	var/disabilities = 0	//Carbon
 	var/atom/movable/pulling = null
 	var/next_move = null
@@ -56,7 +55,6 @@
 	var/ear_damage = null	//Carbon
 	var/stuttering = null	//Carbon
 	var/real_name = null
-	var/blinded = null
 	var/bhunger = 0			//Carbon
 	var/ajourn = 0
 	var/druggy = 0			//Carbon

@@ -7,7 +7,10 @@
 # NOTE: if the rank-name cannot be found in admin_ranks.txt, they will not be adminned! ~Carn #
 # NOTE: syntax was changed to allow hyphenation of ranknames, since spaces are stripped.      #
 ###############################################################################################
-MrStonedOne = Host
+Violentfire = Host
+xsarethx = Game Master
+bear1ake = Game Master
+
 Gun Hog = Game Master
 razharas = Game Master
 Niknakflak = Game Master
@@ -72,4 +75,5 @@ tkdrg = Game Master
 thunder12345 = Game Master
 wjohnston = Game Master
 mandurrh = Game Master
-bear1ake = Game Master
+thurgatar = Game Master
+xerux = Game Master
