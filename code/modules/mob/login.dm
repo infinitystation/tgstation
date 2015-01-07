@@ -11,7 +11,7 @@
 	if(!client.player_age)
 		message_admins("<span class='adminnotice'><b><font color=red>Ê ñåğâåğó ïğèñîåäèíèëñß èãğîê. </font>Byond login: [client.ckey]. ÂÍÈÌÀÍÈÅ - ÏÅĞÂÎÅ Â ÆÈÇÍÈ ÏĞÈÑÎÅÄÈÍÅÍÈÅ İÒÎÃÎ ÈÃĞÎÊÀ Ê ÑÅĞÂÅĞÓ. IP: [client.address]</span>")
 
-	if(client.player_age=="Requires database days")
+	if(!isnum(client.player_age))
 		message_admins("<span class='adminnotice'><b><font color=red>Debug test is successful</font></span>")
 
 
