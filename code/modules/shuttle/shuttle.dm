@@ -190,6 +190,7 @@
 	//this is to check if this shuttle can physically dock at dock S
 	proc/canDock(obj/docking_port/stationary/S)
 		if(!istype(S))
+			ERROR("[type](\"[name]\") cannot dock at [S], no type\")")
 			return 1
 		if(istype(S, /obj/docking_port/stationary/transit))
 			return 0
@@ -209,8 +210,9 @@
 
 	//call the shuttle to destination S
 	proc/request(obj/docking_port/stationary/S)
-		if(canDock(S))
-			ERROR("[type](\"[name]\") cannot dock at [S]\")")
+		var/can_dock = canDock(S)
+		if(can_dock)
+			ERROR("[type](\"[name]\") cannot dock at [S]. reason: [can_dock]\")")
 			return 1	//we can't dock at S
 
 		switch(mode)
