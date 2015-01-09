@@ -425,7 +425,7 @@
 	// nutrition decrease & shit increase
 	if (H.nutrition > 0 && H.stat != 2)
 		H.nutrition = max (0, H.nutrition - HUNGER_FACTOR)
-		H.need_to_shit = min (H.need_to_shit_max, H.need_to_shit + HUNGER_FACTOR)
+		H.need_to_shit = min (H.need_to_shit_max, H.need_to_shit + ( HUNGER_FACTOR * 3))
 
 	// nutrition decrease and satiety
 	if (H.nutrition > 0 && H.stat != 2)

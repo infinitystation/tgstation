@@ -41,8 +41,9 @@
 
 	open = !open
 	if(!open)	//wash off if closed!
-		shit = 0		 
-		contents = null		//need to fix, but i don't know how
+		shit = 0
+		w_items = 0
+		qdel(contents)		//need to fix, but i don't know how
 		user << "Вы смыли содержимое унитаза"
 	update_icon()
 
