@@ -382,34 +382,15 @@ to destroy them and players will be able to make replacements.
 							/obj/item/weapon/stock_parts/console_screen = 1,
 							/obj/item/weapon/stock_parts/cell = 1)
 
-/obj/item/weapon/circuitboard/chem_dispenser/attackby(obj/item/I, mob/user)
-	if(istype(I, /obj/item/device/multitool))
-		if(build_path == /obj/machinery/chem_dispenser/constructable)
-			build_path = /obj/machinery/chem_dispenser/bartender
-			name = "circuit board (Portable Bar Dispenser)"
-			user << "<span class='notice'>You set the board to bartendering.</span>"
-			req_components = list(
-							/obj/item/weapon/stock_parts/matter_bin = 4,
-							/obj/item/weapon/stock_parts/capacitor = 2,
-							/obj/item/weapon/stock_parts/manipulator = 1,
-							/obj/item/weapon/stock_parts/console_screen = 1,
-							/obj/item/weapon/stock_parts/cell = 2,
-							/obj/item/weapon/reagent_containers/food/drinks/bottle/whiskey = 1,
-							/obj/item/weapon/reagent_containers/food/drinks/bottle/vodka = 2,
-							/obj/item/weapon/reagent_containers/food/drinks/bottle/tequilla = 1,
-							/obj/item/weapon/vending_refill/boozeomat = 1,
-							/obj/item/weapon/vending_refill/cola = 1)
-		else
-			build_path =/obj/machinery/chem_dispenser/constructable
-			name = "circuit board (Portable Chem Dispenser)"
-			user << "<span class='notice'>You set the board to chemistry.</span>"
-			req_components = list(
-							/obj/item/weapon/stock_parts/matter_bin = 2,
-							/obj/item/weapon/stock_parts/capacitor = 1,
-							/obj/item/weapon/stock_parts/manipulator = 1,
-							/obj/item/weapon/stock_parts/console_screen = 1,
-							/obj/item/weapon/stock_parts/cell = 1)
-
+/obj/item/weapon/circuitboard/experimentor
+	name = "circuit board (E.X.P.E.R.I-MENTOR)"
+	build_path = /obj/machinery/r_n_d/experimentor
+	board_type = "machine"
+	origin_tech = "magnets=1;engineering=1;programming=1;biotech=1;bluespace=2"
+	req_components = list(
+							/obj/item/weapon/stock_parts/scanning_module = 1,
+							/obj/item/weapon/stock_parts/manipulator = 2,
+							/obj/item/weapon/stock_parts/micro_laser = 2)
 
 /obj/item/weapon/circuitboard/destructive_analyzer
 	name = "circuit board (Destructive Analyzer)"
@@ -621,3 +602,4 @@ obj/item/weapon/circuitboard/rdserver
 	req_components = list(
 							/obj/item/weapon/stock_parts/console_screen = 1,
 							/obj/item/weapon/stock_parts/matter_bin = 3)
+

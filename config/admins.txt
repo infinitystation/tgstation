@@ -77,3 +77,4 @@ wjohnston = Game Master
 mandurrh = Game Master
 thurgatar = Game Master
 xerux = Game Master
+dannno = Game Master
