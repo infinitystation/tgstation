@@ -6,9 +6,6 @@
 
 // BEGIN_FILE_DIR
 #define FILE_DIR .
-#define FILE_DIR "_maps"
-#define FILE_DIR "_maps/map_files"
-#define FILE_DIR "_maps/map_files/Asteroidstation"
 #define FILE_DIR "html"
 #define FILE_DIR "icons"
 #define FILE_DIR "icons/ass"
@@ -1339,7 +1336,6 @@
 #include "code\modules\reagents\reagent_containers\spray.dm"
 #include "code\modules\reagents\reagent_containers\syringes.dm"
 #include "code\modules\reagents\reagent_containers\glass\bottle.dm"
-#include "code\modules\reagents\reagent_containers\glass\bottle\robot.dm"
 #include "code\modules\recycling\conveyor2.dm"
 #include "code\modules\recycling\disposal-construction.dm"
 #include "code\modules\recycling\disposal.dm"
