@@ -359,7 +359,7 @@ datum/design/proc/CalcReliability(var/list/temp_techs)
 
 /datum/design/adv_hardsuit
 	name = "Space working hardsuit"
-	desc = "—пециальный костюм для работы вне атмосферы, имеет защитный слой от радиации и выдвигаемый шлем. ¬ы можете отключить его от шлема с помошью откручивани€ специальных креплений на выдвинутом шлеме"
+	desc = "—пециальный костюм для работы вне атмосферы, имеет защитный слой от радиации и выдвигаемый шлем. ¬ы можете отключить его от шлема с помошью откручивания специальных креплений на выдвинутом шлеме"
 	id = "adv_hardsuit"
 	req_tech = list("materials" = 7, "magnets" = 6, "engineering" = 6)
 	build_type = PROTOLATHE
@@ -371,7 +371,7 @@ datum/design/proc/CalcReliability(var/list/temp_techs)
 
 /datum/design/adv_hardsuit/combat
 	name = "Military space hardsuit"
-	desc = "—пециальный костюм разработанный для армии. »меет укрепленные слои защиты и выдвигаемый шлем. ¬ы можете отключить его от шлема с помошью откручивани€ специальных креплений на выдвинутом шлеме"
+	desc = "—пециальный костюм разработанный для армии. »меет укрепленные слои защиты и выдвигаемый шлем. ¬ы можете отключить его от шлема с помошью откручивания специальных креплений на выдвинутом шлеме"
 	id = "adv_hardsuit_combat"
 	req_tech = list("materials" = 7, "magnets" = 6, "engineering" = 6, "combat" = 6)
 	build_type = PROTOLATHE

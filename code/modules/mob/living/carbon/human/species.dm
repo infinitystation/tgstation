@@ -394,7 +394,7 @@
 	//The fucking FAT mutation is the dumbest shit ever. It makes the code so difficult to work with
 	if(H.disabilities & FAT)
 		if(H.overeatduration < 100)
-			H << "<span class='notice'>¬ы опять чувствуете себ€ в норме!</span>"
+			H << "<span class='notice'>¬ы опять чувствуете себя в норме!</span>"
 			H.disabilities &= ~FAT
 			H.update_inv_w_uniform(0)
 			H.update_inv_wear_suit()
