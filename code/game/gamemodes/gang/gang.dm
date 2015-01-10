@@ -23,7 +23,7 @@
 ///////////////////////////
 /datum/game_mode/gang/announce()
 	world << "<B>Текущий игровой режим - Война Гангстеров!</B>"
-	world << "<B>ЖестокаЯ война офисных работников возникла на станции!<BR>Гангстеры -  Захватите станцию посредством уничтожениЯ боссов другой банды гангстеров! Нанимайте гангстеров, убеждаЯ их вступить в вашу банду и, при их согласии, слепите их флэш-устройствами, чтобы обратить в свою банду! <BR>Служба Безопасности - Обеспечьте защиту всего экипажа! Идентифицируйте и остановите Боссов гангстерских группировок! <BR> Обязательно прочтите WIKI статью по данному режиму игры: http://ru.infinity.wikia.com/wiki/GangWar </B>"
+	world << "<B>ЖестокаЯ война офисных работников возникла на станции!<BR>Гангстеры -  Захватите станцию посредством уничтожениЯ боссов другой банды гангстеров! Нанимайте гангстеров, убеждаЯ их вступить в вашу банду и, при их согласии, слепите их флэш-устройствами, чтобы обратить в свою банду! <BR>Служба Безопасности - Обеспечьте защиту всего экипажа! Идентифицируйте и остановите Боссов гангстерских группировок! <BR> ОбЯзательно прочтите WIKI статью по данному режиму игры: http://ru.infinity.wikia.com/wiki/GangWar </B>"
 
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -102,7 +102,7 @@
 /datum/game_mode/proc/greet_gang(var/datum/mind/boss_mind, var/you_are=1)
 	var/obj_count = 1
 	if (you_are)
-		boss_mind.current << "<FONT size=3 color=red><B>Вы [(boss_mind in A_bosses) ? gang_name("A") : gang_name("B")] Босс Гангстерской группировки! <BR> Обязательно прочтите WIKI статью по данному режиму игры: http://ru.infinity.wikia.com/wiki/GangWar </B></FONT>"
+		boss_mind.current << "<FONT size=3 color=red><B>Вы [(boss_mind in A_bosses) ? gang_name("A") : gang_name("B")] Босс Гангстерской группировки! <BR> ОбЯзательно прочтите WIKI статью по данному режиму игры: http://ru.infinity.wikia.com/wiki/GangWar </B></FONT>"
 	for(var/datum/objective/objective in boss_mind.objectives)
 		boss_mind.current << "<B>Objective #[obj_count]</B>: [objective.explanation_text]"
 		obj_count++
@@ -189,7 +189,7 @@
 	else
 		B_gangsters += gangster_mind
 	gangster_mind.current << "<FONT size=3 color=red><B>Теперь вы член гангстерской банды [gang=="A" ? gang_name("A") : gang_name("B")] Гангстер!</B></FONT>"
-	gangster_mind.current << "<font color='red'>Помогите вашему Боссу взять контроль над станцией, одержав победу над противоположной бандой. Вы можете узнать вашего Босса по коричневой иконке с буквой \"B\", но <B>только они знают, кто другие члены вашей банды!</B> Work with your boss to avoid attacking your own gang.</font>"
+	gangster_mind.current << "<font color='red'>Помогите вашему Боссу взЯть контроль над станцией, одержав победу над противоположной бандой. Вы можете узнать вашего Босса по коричневой иконке с буквой \"B\", но <B>только они знают, кто другие члены вашей банды!</B> Work with your boss to avoid attacking your own gang.</font>"
 	gangster_mind.current.attack_log += "\[[time_stamp()]\] <font color='red'>Has been converted to the [gang=="A" ? "[gang_name("A")] Gang (A)" : "[gang_name("B")] Gang (B)"]!</font>"
 	gangster_mind.special_role = "[gang=="A" ? "[gang_name("A")] Gang (A)" : "[gang_name("B")] Gang (B)"]"
 	update_gang_icons_added(gangster_mind,gang)

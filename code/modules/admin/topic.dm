@@ -1154,7 +1154,7 @@
 
 		var/mob/H = locate(href_list["allow_respawn"])
 		if(!istype(H))
-			usr << "ћожет быть использовано только дл€ мобов"
+			usr << "ћожет быть использовано только для мобов"
 			return
 
 		H.allow_respawn = 1

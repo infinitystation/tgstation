@@ -35,7 +35,7 @@ Space ninja autif. for e.g
 
 /obj/item/clothing/suit/space/space_adv
 	name = "Space working hardsuit"
-	desc = "Специальный костюм длЯ работы вне атмосферы, имеет защитный слой от радиации и выдвигаемый шлем. Вы можете отключить его от шлема с помошью откручивания специальных креплений на выдвинутом шлеме"
+	desc = "Специальный костюм длЯ работы вне атмосферы, имеет защитный слой от радиации и выдвигаемый шлем. Вы можете отключить его от шлема с помошью откручиваниЯ специальных креплений на выдвинутом шлеме"
 	icon = 'icons/obj/space_adv.dmi'
 	icon_state = "rdrig"
 	item_state = "ce_hardsuit"
@@ -71,7 +71,7 @@ Space ninja autif. for e.g
 	depl_act(usr)
 
 
-/obj/item/clothing/suit/space/space_adv/proc/depl_act(mob/living/carbon/U, X = 0) //Тг не любит когда объединяют проки
+/obj/item/clothing/suit/space/space_adv/proc/depl_act(mob/living/carbon/U, X = 0) //Тг не любит когда объединЯют проки
 	if(act)
 		return
 	if(istype(usr:wear_suit, /obj/item/clothing/suit/space/space_adv))
@@ -210,7 +210,7 @@ Space ninja autif. for e.g
 
 /obj/item/clothing/suit/space/space_adv/military
 	name = "Military space hardsuit"
-	desc = "Специальный костюм разработанный длЯ армии. Имеет укрепленные слои защиты и выдвигаемый шлем. Вы можете отключить его от шлема с помошью откручивания специальных креплений на выдвинутом шлеме"
+	desc = "Специальный костюм разработанный длЯ армии. Имеет укрепленные слои защиты и выдвигаемый шлем. Вы можете отключить его от шлема с помошью откручиваниЯ специальных креплений на выдвинутом шлеме"
 	icon_state = "militaryrig"
 	item_state = "rig_suit"
 	armor = list(melee = 60, bullet = 80, laser = 60, energy = 50, bomb = 75, bio = 100, rad = 80)
@@ -223,14 +223,14 @@ Space ninja autif. for e.g
 //SWAT //Red suits
 /obj/item/clothing/head/helmet/space/space_adv/swat
 	name = "Swat space hardsuit helmet"
-	desc = "Специальный шлем разработанный длЯ оряда SWAT. Вы можете открутить его с помощью гаечного ключа"
+	desc = "Специальный шлем разработанный длЯ орЯда SWAT. Вы можете открутить его с помощью гаечного ключа"
 	icon_state = "rig0_swat"
 	item_state = "sec_helm"
 	armor = list(melee = 90, bullet = 60, laser = 60, energy = 20, bomb = 45, bio = 100, rad = 80)
 	var/hud_type = DATA_HUD_SECURITY_ADVANCED // HUD
 /obj/item/clothing/suit/space/space_adv/swat
 	name = "SWAT space hardsuit"
-	desc = "Специальный костюм длЯ отряда SWAT. имеет плотный слой боевого Келвара и выдвигаемый шлем. Вы можете отключить его от шлема с помошью откручивания специальных креплений на выдвинутом шлеме"
+	desc = "Специальный костюм длЯ отрЯда SWAT. имеет плотный слой боевого Келвара и выдвигаемый шлем. Вы можете отключить его от шлема с помошью откручиваниЯ специальных креплений на выдвинутом шлеме"
 	icon_state = "swatrig"
 	item_state = "sec_hardsuit"
 	armor = list(melee = 80, bullet = 50, laser = 50, energy = 20, bomb = 45, bio = 100, rad = 80)
@@ -258,7 +258,7 @@ Space ninja autif. for e.g
 
 /obj/item/clothing/head/helmet/space/space_adv/rig
 	name = "engineering hardsuit helmet (Wrench to unscrew)"
-	desc = "Специальный шлем для работы вне атмосферы, имеет защитный слой от радиации. Вы можете открутить его с помощью гаечного ключа"
+	desc = "Специальный шлем длЯ работы вне атмосферы, имеет защитный слой от радиации. Вы можете открутить его с помощью гаечного ключа"
 	icon_state = "hardsuit0-engineering"
 	item_state = "eng_helm"
 	armor = list(melee = 10, bullet = 5, laser = 10, energy = 5, bomb = 10, bio = 100, rad = 75)
@@ -296,7 +296,7 @@ Space ninja autif. for e.g
 
 /obj/item/clothing/suit/space/space_adv/rig
 	name = "engineering hardsuit"
-	desc = "Специальный костюм для работы вне атмосферы, имеет защитный слой от радиации и выдвигаемый шлем. Вы можете отключить его от шлема с помошью откручивания специальных креплений на выдвинутом шлеме"
+	desc = "Специальный костюм длЯ работы вне атмосферы, имеет защитный слой от радиации и выдвигаемый шлем. Вы можете отключить его от шлема с помошью откручиваниЯ специальных креплений на выдвинутом шлеме"
 	icon_state = "hardsuit-engineering"
 	item_state = "eng_hardsuit"
 	slowdown = 2
