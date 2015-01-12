@@ -784,3 +784,20 @@ Traitors and the like can also be revived with the previous role mostly intact.
 	log_admin("[key_name(usr)] blanked all telecomms scripts.")
 	message_admins("[key_name_admin(usr)] blanked all telecomms scripts.")
 	feedback_add_details("admin_verb","RAT") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
+
+/client/proc/cmd_admin_allow_respawn(mob/living/M as mob in mob_list)
+	set category = "Admin"
+	set name = "Allow Respawn"
+	if(!holder)
+		src << "Only administrators may use this command."
+		return
+	if(!istype(M))
+		usr << "Может быть использовано только длЯ мобов"
+		return
+
+	M.allow_respawn = 1
+	M << "Вы получили разрешение на респавн"
+	message_admins("<span class='danger'>Admin [key_name_admin(usr)] разрешил(а) респавн [key_name_admin(M)]!</span>")
+	log_admin("[key_name(usr)] разрешил(а) респавн [key_name(M)]")
+
+	feedback_add_details("admin_verb","A_RESP") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!

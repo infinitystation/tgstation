@@ -43,12 +43,19 @@ var/global/floorIsLava = 0
 	body += "<a href='?_src_=holder;adminplayerobservejump=\ref[M]'>JMP</a>\] </b><br>"
 	body += "<b>Client Information:</b><br>"
 	if(M.client)
+		body += "<b>Client Online</b><br/>"
 		body += "<b>ckey</b> = [M.client.ckey]<br>"
 		body += "<b>Client Age</b> = [M.client.player_age] days<br>"
 		body += "<b>Last Message</b> = [M.client.last_message]<br>"
 		body += "<b>Client Gender</b> = [M.client.gender]<br>"
 		body += "<b>IP</b> = [M.client.address]<br>"
 		body += "<b>CID</b> = [M.client.computer_id]<br>"
+		body += "<b>Mob type</b> = [M.type]<br>"
+	else
+		body += "<b>Client Offline</b><br/>"
+		body += "<b>ckey</b> = [M.ckey]<br>"
+		body += "<b>IP</b> = [M.lastKnownIP]<br>"
+		body += "<b>CID</b> = [M.computer_id]<br>"
 		body += "<b>Mob type</b> = [M.type]<br>"
 
 	body += "<b>BAN: </b> "
