@@ -8,8 +8,15 @@
 # NOTE: syntax was changed to allow hyphenation of ranknames, since spaces are stripped.      #
 ###############################################################################################
 Violentfire = Host
-xsarethx = Game Master
-bear1ake = Game Master
+xsarethx - GameMaster
+median4 - GameMaster
+maxikot - GameMaster
+archibald125 - GameMaster
+nikovar - GameMaster
+agnizab - GameMaster
+bear1ake - GameMaster
+wipe - GameMaster
+terror4000rus - GameMaster
 
 Gun Hog = Game Master
 razharas = Game Master
