@@ -120,7 +120,7 @@ WIKIURL http://ru.infinity.wikia.com/wiki
 RULESURL http://infinity.smforum.ru/index.php?topic=79.0
 
 ##Github address
-# GITHUBURL https://www.github.com/tgstation/-tg-station
+GITHUBURL https://www.github.com/tgstation/-tg-station
 
 ## Ban appeals URL - usually for a forum or wherever people should go to contact your admins.
 BANAPPEALS http://infinity.smforum.ru/
@@ -155,4 +155,4 @@ AUTOMUTE_ON
 #COMMS_KEY default_pwd
 
 ## Uncomment this to let players see their own notes (they can still be set by admins only)
-SEE_OWN_NOTES
+#SEE_OWN_NOTES
