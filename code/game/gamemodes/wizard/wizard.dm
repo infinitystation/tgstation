@@ -4,6 +4,7 @@
 /datum/game_mode/wizard
 	name = "wizard"
 	config_tag = "wizard"
+	minimal_player_age = 30
 	antag_flag = BE_WIZARD
 	required_players = 10
 	required_enemies = 1

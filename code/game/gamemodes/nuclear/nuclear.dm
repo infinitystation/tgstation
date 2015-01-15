@@ -9,13 +9,16 @@
 	required_enemies = 5
 	recommended_enemies = 5
 	pre_setup_before_jobs = 1
+
 	antag_flag = BE_OPERATIVE
+	minimal_player_age = 40
 
 	var/const/agents_possible = 5 //If we ever need more syndicate agents.
 
 	var/nukes_left = 1 // Call 3714-PRAY right now and order more nukes! Limited offer!
 	var/nuke_off_station = 0 //Used for tracking if the syndies actually haul the nuke to the station
 	var/syndies_didnt_escape = 0 //Used for tracking if the syndies got the shuttle off of the z-level
+
 
 /datum/game_mode/nuclear/announce()
 	world << "<B>The current game mode is - Nuclear Emergency!</B>"
