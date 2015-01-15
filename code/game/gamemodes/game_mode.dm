@@ -33,6 +33,8 @@
 	var/const/waittime_l = 600
 	var/const/waittime_h = 1800 // started at 1800
 
+	var/minimal_player_age = 10
+
 
 /datum/game_mode/proc/announce() //to be calles when round starts
 	world << "<B>Notice</B>: [src] did not define announce()"
@@ -170,7 +172,10 @@
 		if(player.client && player.ready)
 			if(player.client.prefs.be_special & role)
 				if(!jobban_isbanned(player, "Syndicate") && !jobban_isbanned(player, roletext)) //Nodrak/Carn: Antag Job-bans
-					candidates += player.mind				// Get a list of all the people who want to be the antagonist for this round
+					if (player.client.player_age >= minimal_player_age)
+						candidates += player.mind				// Get a list of all the people who want to be the antagonist for this round
+					else
+						player << "<span class='notice'>Вы не набрали нужного стажа игры на нашем сервере, чтобы играть антагонистом</span>"
 
 	if(restricted_jobs)
 		for(var/datum/mind/player in candidates)

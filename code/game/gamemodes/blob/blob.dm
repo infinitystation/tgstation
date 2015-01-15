@@ -10,6 +10,7 @@ var/list/blob_nodes = list()
 	name = "blob"
 	config_tag = "blob"
 	antag_flag = BE_BLOB
+	minimal_player_age = 30
 
 	required_players = 10
 	required_enemies = 1

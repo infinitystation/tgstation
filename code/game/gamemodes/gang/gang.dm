@@ -11,6 +11,7 @@
 	name = "gang war"
 	config_tag = "gang"
 	antag_flag = BE_GANG
+	minimal_player_age = 10
 	restricted_jobs = list("Security Officer", "Warden", "Detective", "AI", "Cyborg","Captain", "Head of Personnel", "Head of Security", "Chief Engineer", "Research Director", "Chief Medical Officer")
 	required_players = 10
 	required_enemies = 2
