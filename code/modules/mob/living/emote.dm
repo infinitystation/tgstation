@@ -194,7 +194,7 @@
 			if(need_to_shit < 70)
 				src << "Ќечем испражнятся"
 				return
-				
+
 			//we need to shit?
 			if((need_to_shit > 70) && (need_to_shit < need_to_shit_max))
 				for(var/obj/structure/toilet/T in view(0, src))	//checking toilets
@@ -328,7 +328,7 @@
 		if (m_type & 1)
 			visible_message(message)
 		else if (m_type & 2)
-			src.loc.audible_message(message)
+			audible_message(message)
 
 /mob/living/proc/Shit(var/mob/living/M)
 	if(M.stat != DEAD)
@@ -340,3 +340,4 @@
 	else
 		src << "¬ы мертвы и не способны больше испражняться."
 		return 0
+
