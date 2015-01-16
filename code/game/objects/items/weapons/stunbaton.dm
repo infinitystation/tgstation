@@ -174,6 +174,16 @@
 			bcell.reliability -= 10 / severity
 	..()
 
+/obj/item/weapon/melee/baton/throw_impact(atom/hit_atom)
+	. = ..()
+	for(var/mob/M in player_list) if(M.key == src.fingerprintslast)
+		foundmob = M
+		break
+	if(istype(hit_atom, /mob/living))
+		var/mob/living/carbon/human/H = hit_atom
+		if(status)
+			baton_stun(H, foundmob)
+
 //Makeshift stun baton. Replacement for stun gloves.
 /obj/item/weapon/melee/baton/cattleprod
 	name = "stunprod"
