@@ -29,3 +29,5 @@ http://ru.infinity.wikia.com/wiki/Space_Law
 
 ƒля более удобного общения на сервере, мы используем голосовой чат - TeamSpeak версии 3. ќбщение голосом гораздо удобнее чем текстом.
 http://infinity.smforum.ru/index.php?topic=799.0
+
+јдрес нашего TeamSpeak сервера: 88.198.175.74 (порт можно не указывать)
