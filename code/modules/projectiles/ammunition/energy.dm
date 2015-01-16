@@ -18,7 +18,7 @@
 	select_name = "kill"
 
 /obj/item/ammo_casing/energy/laser/practice
-	projectile_type = /obj/item/projectile/practice
+	projectile_type = /obj/item/projectile/beam/practice
 	select_name = "practice"
 
 /obj/item/ammo_casing/energy/laser/scatter
@@ -37,6 +37,24 @@
 	e_cost = 200
 	select_name = "DESTROY"
 	fire_sound = 'sound/weapons/pulse.ogg'
+
+/obj/item/ammo_casing/energy/laser/pulse/carbine
+	e_cost = 1000
+
+/obj/item/ammo_casing/energy/laser/carbine
+	e_cost = 1000
+
+/obj/item/ammo_casing/energy/electrode/carbine
+	e_cost = 1000
+
+/obj/item/ammo_casing/energy/laser/pulse/pistol
+	e_cost = 2000
+
+/obj/item/ammo_casing/energy/laser/pistol
+	e_cost = 1000
+
+/obj/item/ammo_casing/energy/electrode/pistol
+	e_cost = 1000
 
 /obj/item/ammo_casing/energy/laser/bluetag
 	projectile_type = /obj/item/projectile/lasertag/bluetag

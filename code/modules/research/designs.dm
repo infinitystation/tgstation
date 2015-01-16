@@ -39,8 +39,8 @@ datum/design						//Datum for object designs, used in construction
 	var/list/materials = list()			//List of materials. Format: "id" = amount.
 	var/construction_time				//Amount of time required for building the object
 	var/build_path = ""					//The file path of the object that gets created
-	var/locked = 0						//If true it will spawn inside a lockbox with currently sec access
 	var/list/category = null 			//Primarily used for Mech Fabricators, but can be used for anything
+	var/locked = 0
 	var/access = null
 
 
@@ -379,3 +379,15 @@ datum/design/proc/CalcReliability(var/list/temp_techs)
 	build_path = /obj/item/clothing/suit/space/space_adv/military
 	category = list("Equipement")
 	locked = 1
+
+/datum/design/adv_rcd
+	name = "Advanced RCD"
+	desc = "Advacned RCD. Can build reinforced walls"
+	id = "adv_rcd"
+	req_tech = list("materials" = 7, "engineering" = 6, "bluespace" = 4, "plasmatech" = 4)
+	build_type = PROTOLATHE
+	materials = list("$metal" = 20000, "$silver" = 2500, "$gold" = 2500, "$plasma" = 2500, "$glass" = 2500)
+	build_path = /obj/item/weapon/rcd/advanced
+	category = list("Equipement")
+	locked = 1
+	access = list(access_ce)

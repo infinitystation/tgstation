@@ -427,6 +427,14 @@
 	build_path = /obj/item/weapon/pipe_dispenser
 	category = list("hacked", "Construction")
 
+/datum/design/adv_rcd_ammo
+	name = "Advanced compressed matter cardridge"
+	id = "adv_rcd_ammo"
+	build_type = AUTOLATHE
+	materials = list("$metal" = 80000, "$glass" = 40000)
+	build_path = /obj/item/weapon/rcd_ammo/advanced
+	category = list("hacked", "Construction")
+
 /datum/design/electropack
 	name = "Electropack"
 	id = "electropack"
