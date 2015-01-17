@@ -17,6 +17,7 @@
 				user.drop_item()
 				G.pin = src
 				loc = G
+				user << "<span class ='notice'>You install firing pin into [G]</span>"
 			else
 				user << "<span class ='notice'>This firearm already has a firing pin installed.</span>"
 
