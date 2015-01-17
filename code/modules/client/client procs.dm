@@ -251,6 +251,7 @@ var/next_external_rsc = 0
 		'nano/css/shared.css',
 		'nano/css/icons.css',
 		'nano/templates/chem_dispenser.tmpl',
+		'nano/templates/chem_heater.tmpl',
 		'nano/templates/smes.tmpl',
 		'nano/templates/apc.tmpl',
 		'nano/templates/cryo.tmpl',
