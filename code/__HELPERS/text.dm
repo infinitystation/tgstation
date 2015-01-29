@@ -38,7 +38,7 @@
 
 //Removes a few problematic characters
 // it was = /proc/sanitize_simple(var/t,var/list/repl_chars = list("\n"="#","\t"="#","ï¿½"="ï¿½"))
-/proc/sanitize_simple(var/t,var/list/repl_chars = list("\n"=" ","\t"="","Ñ"="____255_"))
+/proc/sanitize_simple(var/t,var/list/repl_chars = list("\n"=" ","\t"="","ÿ"="____255_"))
 	for(var/char in repl_chars)
 		var/index = findtext(t, char)
 		while(index)
@@ -432,6 +432,6 @@ var/list/binary = list("0","1")
 	t = replacetext(t, "\[/small\]", "</font>")
 	t = replacetext(t, "\[list\]", "<ul>")
 	t = replacetext(t, "\[/list\]", "</ul>")
-	t = replacetext(t, "Ñ", "&#1103;")
+	t = replacetext(t, "ÿ", "&#1103;")
 
 	return t
