@@ -211,6 +211,13 @@ var/datum/subsystem/job/SSjob
 	//Scale number of open security officer slots to population
 	setup_officer_positions()
 
+	//Jobs will have fewer access permissions if the number of players exceeds the threshold defined in game_options.txt
+	if(config.minimal_access_threshold)
+		if(config.minimal_access_threshold > unassigned.len)
+			config.jobs_have_minimal_access = 0
+		else
+			config.jobs_have_minimal_access = 1
+
 	//Shuffle players and jobs
 	unassigned = shuffle(unassigned)
 
@@ -338,6 +345,8 @@ var/datum/subsystem/job/SSjob
 
 	if(job.req_admin_notify)
 		H << "<b>¬ы играете по профессии, которая очень важна для игрового процесса всей станции. ≈сли вам понадобится выйти из игры, пожалуйста, уведомьте админов об этом через Adminhelp.</b>"
+	if(config.minimal_access_threshold)
+		H << "<FONT color='blue'><B>As this station was initially staffed with a [config.jobs_have_minimal_access ? "full crew, only your job's necessities" : "skeleton crew, additional access may"] have been added to your ID card.</B></font>"
 
 	H.update_hud() 	// Tmp fix for Github issue 1006. TODO: make all procs in update_icons.dm do client.screen |= equipment no matter what.
 	return 1

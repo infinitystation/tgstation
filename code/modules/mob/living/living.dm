@@ -74,7 +74,7 @@ Sorry Giacom. Please don't be mad :(
 
 	//okay, so we didn't switch. but should we push?
 	//not if he's not CANPUSH of course
-	if(!(M.status_flags & CANPUSH) )
+	if(!(M.status_flags & CANPUSH))
 		return 1
 	//anti-riot equipment is also anti-push
 	if(M.r_hand && istype(M.r_hand, /obj/item/weapon/shield/riot))
@@ -588,6 +588,8 @@ Sorry Giacom. Please don't be mad :(
 				if(C.handcuffed)
 					C.handcuffed.loc = C.loc
 					C.handcuffed = null
+					if(C.buckled && C.buckled.buckle_requires_restraints)
+						C.buckled.unbuckle_mob()
 					C.update_inv_handcuffed(0)
 					return
 				if(C.legcuffed)
@@ -646,13 +648,13 @@ Sorry Giacom. Please don't be mad :(
 							return
 						C.visible_message("<span class='danger'>[C] смог отстегнуться!</span>", \
 											"<span class='notice'>¬ы успешно отстегнулись.</span>")
-						C.buckled.manual_unbuckle(C)
+						C.buckled.user_unbuckle_mob(C,C)
 					else
 						C << "<span class='warning'>” вас не получилось отстегнуться!</span>"
 			else
-				L.buckled.manual_unbuckle(L)
+				L.buckled.user_unbuckle_mob(L,L)
 		else
-			L.buckled.manual_unbuckle(L)
+			L.buckled.user_unbuckle_mob(L,L)
 
 	//Breaking out of a container (Locker, sleeper, cryo...)
 	else if(loc && istype(loc, /obj) && !isturf(loc))
@@ -665,7 +667,7 @@ Sorry Giacom. Please don't be mad :(
 		var/mob/living/carbon/CM = L
 		if(CM.on_fire && CM.canmove)
 			CM.fire_stacks -= 5
-			CM.Weaken(3)
+			CM.Weaken(3,1)
 			CM.spin(32,2)
 			CM.visible_message("<span class='danger'>[CM] катается по полу, пытаясь потушить себя!</span>", \
 				"<span class='notice'>¬ы упали не пол и пытаетесь потушить себя!</span>")
