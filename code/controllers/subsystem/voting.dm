@@ -79,16 +79,21 @@ var/datum/subsystem/vote/SSvote
 	var/list/winners = get_result()
 	var/text
 	if(winners.len > 0)
-		if(question)	text += "<b>[question]</b>"
+		if(question)
+			question = copytext(sanitize_u2a(question), 1, MAX_MESSAGE_LEN)
+			text += "<b>[question]</b>"
+			question = copytext(sanitize_a2u(question), 1, MAX_MESSAGE_LEN)
 		else			text += "<b>[capitalize(mode)] Vote</b>"
 		for(var/i=1,i<=choices.len,i++)
 			var/votes = choices[choices[i]]
 			if(!votes)	votes = 0
+			choices[i] = copytext(sanitize_u2a(choices[i]), 1, MAX_MESSAGE_LEN)
 			text += "\n<b>[choices[i]]:</b> [votes]"
 		if(mode != "custom")
 			if(winners.len > 1)
 				text = "\n<b>Vote Tied Between:</b>"
 				for(var/option in winners)
+					option = copytext(sanitize_u2a(option), 1, MAX_MESSAGE_LEN)
 					text += "\n\t[option]"
 			. = pick(winners)
 			text += "\n<b>Vote Result: [.]</b>"
@@ -115,6 +120,14 @@ var/datum/subsystem/vote/SSvote
 						restart = 1
 					else
 						master_mode = .
+			if("ooc")
+				if(. == "Включить OOC")
+					ooc_allowed = 1
+					world << "<B>The OOC channel has been globally enabled!</B>"
+				if(. == "Отключить OOC")
+					ooc_allowed = 0
+					world << "<B>The OOC channel has been globally disabled!</B>"
+
 
 	if(restart)
 		world << "World restarting due to vote..."
@@ -148,11 +161,14 @@ var/datum/subsystem/vote/SSvote
 		switch(vote_type)
 			if("restart")	choices.Add("Restart Round","Continue Playing")
 			if("gamemode")	choices.Add(config.votable_modes)
+			if("ooc")	choices.Add("Включить OOC", "Отключить OOC")
 			if("custom")
 				question = stripped_input(usr,"What is the vote for?")
+				question = copytext(sanitize_u(question), 1, MAX_MESSAGE_LEN)
 				if(!question)	return 0
 				for(var/i=1,i<=10,i++)
 					var/option = capitalize(stripped_input(usr,"Please enter an option or hit cancel to finish"))
+					option = copytext(sanitize_u(option), 1, MAX_MESSAGE_LEN)
 					if(!option || mode || !usr.client)	break
 					choices.Add(option)
 			else			return 0
@@ -161,7 +177,9 @@ var/datum/subsystem/vote/SSvote
 		started_time = world.time
 		var/text = "[capitalize(mode)] vote started by [initiator]."
 		if(mode == "custom")
+			question = copytext(sanitize_u2a(question), 1, MAX_MESSAGE_LEN)
 			text += "\n[question]"
+			question = copytext(sanitize_a2u(question), 1, MAX_MESSAGE_LEN)
 		log_vote(text)
 		world << "\n<font color='purple'><b>[text]</b>\nType <b>vote</b> or click <a href='?src=\ref[src]'>here</a> to place your votes.\nYou have [config.vote_period/10] seconds to vote.</font>"
 		time_remaining = round(config.vote_period/10)
@@ -208,9 +226,12 @@ var/datum/subsystem/vote/SSvote
 			. += "\t(<a href='?src=\ref[src];vote=toggle_gamemode'>[config.allow_vote_mode?"Allowed":"Disallowed"]</a>)"
 
 		. += "</li>"
+		//ooc
+		. += "<li><a href='?src=\ref[src];vote=ooc'>Toggle OOC</a></li>"
 		//custom
 		if(trialmin)
 			. += "<li><a href='?src=\ref[src];vote=custom'>Custom</a></li>"
+
 		. += "</ul><hr>"
 	. += "<a href='?src=\ref[src];vote=close' style='position:absolute;right:50px'>Close</a>"
 	return .
@@ -238,6 +259,9 @@ var/datum/subsystem/vote/SSvote
 		if("gamemode")
 			if(config.allow_vote_mode || usr.client.holder)
 				initiate_vote("gamemode",usr.key)
+		if("ooc")
+			if(usr.client.holder)
+				initiate_vote("ooc",usr.key)
 		if("custom")
 			if(usr.client.holder)
 				initiate_vote("custom",usr.key)
