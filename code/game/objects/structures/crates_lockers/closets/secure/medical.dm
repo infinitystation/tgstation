@@ -27,6 +27,7 @@
 	new /obj/item/weapon/reagent_containers/glass/bottle/charcoal(src)
 	new /obj/item/weapon/reagent_containers/glass/bottle/charcoal(src)
 	new /obj/item/weapon/reagent_containers/glass/bottle/charcoal(src)
+	new /obj/item/weapon/reagent_containers/glass/bottle/charcoal(src)
 	new /obj/item/weapon/storage/box/rxglasses(src)
 	return
 
@@ -97,7 +98,7 @@
 
 /obj/structure/closet/secure_closet/CMO/New()
 	..()
-	new /obj/item/clothing/suit/toggle/wintercoat/medical(src)
+	new /obj/item/clothing/suit/hooded/wintercoat/medical(src)
 	if(prob(50))
 		new /obj/item/weapon/storage/backpack/medic(src)
 	else

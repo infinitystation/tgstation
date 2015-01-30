@@ -337,14 +337,11 @@ var/datum/subsystem/job/SSjob
 			H = new_mob
 		job.apply_fingerprints(H)
 
-	H << "<b>¬ы [rank].</b>"
-	H << "<b> ак [rank] вы подчиняетесь непосредственно [job.supervisors]. ќсобые обстоятельства могут поменять это.</b>"
-	H << "<b>„тобы говорить в радио-канал вашего отдела, используйте комбинацию :h  „тобы посмотреть остальные комбинации, посмотрите поближе на ваши наушники.</b>"
-	H << "<b>ѕеред игрой за профессию [rank] обязательно ознакомьтесь с Wiki-руководством по этой профессии.</b>"
-	H << "<b>http://gg.gg/Infinity_Wiki_All</b>"
-
+	H << "<b>You are the [rank].</b>"
+	H << "<b>As the [rank] you answer directly to [job.supervisors]. Special circumstances may change this.</b>"
+	H << "<b>To speak on your departments radio, use the :h button. To see others, look closely at your headset.</b>"
 	if(job.req_admin_notify)
-		H << "<b>¬ы играете по профессии, которая очень важна для игрового процесса всей станции. ≈сли вам понадобится выйти из игры, пожалуйста, уведомьте админов об этом через Adminhelp.</b>"
+		H << "<b>You are playing a job that is important for Game Progression. If you have to disconnect, please notify the admins via adminhelp.</b>"
 	if(config.minimal_access_threshold)
 		H << "<FONT color='blue'><B>As this station was initially staffed with a [config.jobs_have_minimal_access ? "full crew, only your job's necessities" : "skeleton crew, additional access may"] have been added to your ID card.</B></font>"
 
@@ -356,13 +353,13 @@ var/datum/subsystem/job/SSjob
 	var/officer_positions = 5 //Number of open security officer positions at round start
 
 	if(config.security_scaling_coeff > 0)
-		officer_positions = min(20, max(10, round(unassigned.len/config.security_scaling_coeff))) //Scale between 10 and 20 officers
+		officer_positions = min(12, max(5, round(unassigned.len/config.security_scaling_coeff))) //Scale between 5 and 12 officers
 		var/datum/job/J = SSjob.GetJob("Security Officer")
 		if(J  || J.spawn_positions > 0)
 			Debug("Setting open security officer positions to [officer_positions]")
 			J.total_positions = officer_positions
 			J.spawn_positions = officer_positions
-	for(var/i=officer_positions-10, i>0, i--) //Spawn some extra eqipment lockers if we have more than 10 officers
+	for(var/i=officer_positions-5, i>0, i--) //Spawn some extra eqipment lockers if we have more than 5 officers
 		if(secequipment.len)
 			var/spawnloc = secequipment[1]
 			new /obj/structure/closet/secure_closet/security(spawnloc)
@@ -434,4 +431,3 @@ var/datum/subsystem/job/SSjob
 
 		tmp_str += "HIGH=[level1]|MEDIUM=[level2]|LOW=[level3]|NEVER=[level4]|BANNED=[level5]|YOUNG=[level6]|-"
 		feedback_add_details("job_preferences",tmp_str)
-
