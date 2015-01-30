@@ -975,8 +975,8 @@ var/list/all_supply_groups = list(supply_emergency,supply_security,supply_engine
 					/obj/item/weapon/reagent_containers/food/drinks/bottle/holywater,
 					/obj/item/weapon/storage/book/bible/booze,
 					/obj/item/weapon/storage/book/bible/booze,
-					/obj/item/clothing/suit/toggle/chaplain_hoodie,
-					/obj/item/clothing/suit/toggle/chaplain_hoodie)
+					/obj/item/clothing/suit/hooded/chaplain_hoodie,
+					/obj/item/clothing/suit/hooded/chaplain_hoodie)
 	cost = 40	// it costs so much because the Space Church is ran by Space Jews
 	containername = "religious supplies crate"
 
@@ -1199,7 +1199,6 @@ var/list/all_supply_groups = list(supply_emergency,supply_security,supply_engine
 /datum/supply_packs/spacesuits/eva
 	name = "EVA Space Suit Crate"
 	contains = list(/obj/item/clothing/suit/space,
-					/obj/item/clothing/head/helmet/space,
 					/obj/item/clothing/mask/breath,
 					/obj/item/weapon/tank/oxygen)
 	cost = 20
@@ -1210,7 +1209,6 @@ var/list/all_supply_groups = list(supply_emergency,supply_security,supply_engine
 /datum/supply_packs/spacesuits/engine
 	name = "Engineering Space Suit Crate"
 	contains = list(/obj/item/clothing/suit/space/hardsuit,
-					/obj/item/clothing/head/helmet/space/hardsuit,
 					/obj/item/clothing/mask/breath,
 					/obj/item/weapon/tank/oxygen)
 	cost = 20
@@ -1221,7 +1219,6 @@ var/list/all_supply_groups = list(supply_emergency,supply_security,supply_engine
 /datum/supply_packs/spacesuits/atmos
 	name = "Atmostech Space Suit Crate"
 	contains = list(/obj/item/clothing/suit/space/hardsuit/atmos,
-					/obj/item/clothing/head/helmet/space/hardsuit/atmos,
 					/obj/item/clothing/mask/breath,
 					/obj/item/weapon/tank/oxygen)
 	cost = 20
@@ -1232,7 +1229,6 @@ var/list/all_supply_groups = list(supply_emergency,supply_security,supply_engine
 /datum/supply_packs/spacesuits/mining
 	name = "Mining Space Suit Crate"
 	contains = list(/obj/item/clothing/suit/space/hardsuit/mining,
-					/obj/item/clothing/head/helmet/space/hardsuit/mining,
 					/obj/item/clothing/mask/breath,
 					/obj/item/weapon/tank/oxygen)
 	cost = 20
@@ -1243,7 +1239,6 @@ var/list/all_supply_groups = list(supply_emergency,supply_security,supply_engine
 /datum/supply_packs/spacesuits/medical
 	name = "Medical Space Suit Crate"
 	contains = list(/obj/item/clothing/suit/space/hardsuit/medical,
-					/obj/item/clothing/head/helmet/space/hardsuit/medical,
 					/obj/item/clothing/mask/breath,
 					/obj/item/weapon/tank/oxygen)
 	cost = 20
@@ -1254,7 +1249,6 @@ var/list/all_supply_groups = list(supply_emergency,supply_security,supply_engine
 /datum/supply_packs/spacesuits/security
 	name = "Security Space Suit Crate"
 	contains = list(/obj/item/clothing/suit/space/hardsuit/security,
-					/obj/item/clothing/head/helmet/space/hardsuit/security,
 					/obj/item/clothing/mask/breath,
 					/obj/item/weapon/tank/oxygen)
 	cost = 20
