@@ -777,6 +777,7 @@ var/global/list/obj/item/device/pda/PDAs = list()
 /obj/item/device/pda/proc/create_message(var/mob/living/U = usr, var/obj/item/device/pda/P)
 
 	var/t = msg_input(U)
+	t = copytext(sanitize(t), 1, MAX_MESSAGE_LEN)
 
 	if (!t)
 		return
@@ -814,8 +815,9 @@ var/global/list/obj/item/device/pda/PDAs = list()
 			return
 		useMS.send_pda_message("[P.owner]","[owner]","[t]")
 
-		tnote += "<i><b>&rarr; To [P.owner]:</b></i><br>[t]<br>"
-		P.tnote += "<i><b>&larr; From <a href='byond://?src=\ref[P];choice=Message;target=\ref[src]'>[owner]</a> ([ownjob]):</b></i><br>[t]<br>"
+		var/t_u = copytext(sanitize_a2u(t), 1, MAX_MESSAGE_LEN)
+		tnote += "<i><b>&rarr; To [P.owner]:</b></i><br>[t_u]<br>"
+		P.tnote += "<i><b>&larr; From <a href='byond://?src=\ref[P];choice=Message;target=\ref[src]'>[owner]</a> ([ownjob]):</b></i><br>[t_u]<br>"
 
 		if (!P.silent)
 			playsound(P.loc, 'sound/machines/twobeep.ogg', 50, 1)

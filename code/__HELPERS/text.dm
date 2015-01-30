@@ -65,6 +65,21 @@
 		index = findtext(t, "____255_")
 	return t
 
+/proc/sanitize_a2u(var/t,var/list/repl_chars = null)//ansi to unicode
+	var/index = findtext(t, "&#255;")
+	while(index)
+		t = copytext(t, 1, index) + "&#1103;" + copytext(t, index+6)
+		index = findtext(t, "&#255;")
+	return t
+
+/proc/sanitize_u2a(var/t,var/list/repl_chars = null)//unicode to ansi
+	t = html_decode(t)
+	var/index = findtext(t, "&#1103;")
+	while(index)
+		t = copytext(t, 1, index) + "&#255;" + copytext(t, index+7)
+		index = findtext(t, "&#1103;")
+	return t
+
 //Runs sanitize and strip_html_simple
 //I believe strip_html_simple() is required to run first to prevent '<' from displaying as '&lt;' after sanitize() calls byond's html_encode()
 /proc/strip_html(var/t,var/limit=MAX_MESSAGE_LEN)
