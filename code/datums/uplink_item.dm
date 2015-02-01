@@ -142,7 +142,6 @@ var/list/uplink_items = list()
 	The bow generates bolts using an internal power source but must be manually charged between shots."
 	item = /obj/item/weapon/gun/energy/kinetic_accelerator/crossbow
 	cost = 10
-	excludefrom = list(/datum/game_mode/nuclear)
 	surplus = 50
 
 /datum/uplink_item/dangerous/flamethrower
@@ -298,7 +297,6 @@ var/list/uplink_items = list()
 	The pen holds one dose of the mixture, and cannot be refilled."
 	item = /obj/item/weapon/pen/sleepy
 	cost = 4
-	excludefrom = list(/datum/game_mode/nuclear)
 
 /datum/uplink_item/stealthy_weapons/soap
 	name = "Syndicate Soap"
@@ -583,7 +581,6 @@ var/list/uplink_items = list()
 	You can also play card games with them or leave them on your victims."
 	item = /obj/item/toy/cards/deck/syndicate
 	cost = 1
-	excludefrom = list(/datum/game_mode/nuclear)
 	surplus = 40
 
 /datum/uplink_item/badass/syndiecash

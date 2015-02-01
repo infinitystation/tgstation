@@ -68,7 +68,7 @@ h1.alert, h2.alert		{color: #000000;}
 .interface				{color: #330033;}
 
 .sans					{font-family: "Comic Sans MS", cursive, sans-serif;}
-.robot					{font-family: "Courier New", cursive, sans-serif;}
+.robot					{font-family: "Consolas", cursive, sans-serif; font-size: 3}
 
 BIG IMG.icon 			{width: 32px; height: 32px;}
 

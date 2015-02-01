@@ -773,6 +773,20 @@ var/list/all_supply_groups = list(supply_emergency,supply_security,supply_engine
 	containertype = /obj/structure/closet/critter/pug
 	containername = "pug crate"
 
+/datum/supply_packs/organic/fox
+	name = "Fox Crate"
+	cost = 55 //Foxes are cool.
+	containertype = /obj/structure/closet/critter/fox
+	containername = "fox crate"
+
+/datum/supply_packs/organic/butterfly
+	name = "Butterflies Crate"
+	cost = 50
+	containertype = /obj/structure/closet/critter/butterfly
+	containername = "butterflies crate"
+	contraband = 1
+
+////// hippy gear
 /datum/supply_packs/organic/hydroponics // -- Skie
 	name = "Hydroponics Supply Crate"
 	contains = list(/obj/item/weapon/reagent_containers/spray/plantbgone,
