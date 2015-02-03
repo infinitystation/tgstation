@@ -80,11 +80,11 @@ var/list/all_supply_groups = list(supply_emergency,supply_security,supply_engine
 					/obj/machinery/bot/floorbot,
 					/obj/machinery/bot/medbot,
 					/obj/machinery/bot/medbot,
-					/obj/item/weapon/tank/air,
-					/obj/item/weapon/tank/air,
-					/obj/item/weapon/tank/air,
-					/obj/item/weapon/tank/air,
-					/obj/item/weapon/tank/air,
+					/obj/item/weapon/tank/internals/air,
+					/obj/item/weapon/tank/internals/air,
+					/obj/item/weapon/tank/internals/air,
+					/obj/item/weapon/tank/internals/air,
+					/obj/item/weapon/tank/internals/air,
 					/obj/item/clothing/mask/gas,
 					/obj/item/clothing/mask/gas,
 					/obj/item/clothing/mask/gas,
@@ -100,9 +100,9 @@ var/list/all_supply_groups = list(supply_emergency,supply_security,supply_engine
 	contains = list(/obj/item/clothing/mask/gas,
 					/obj/item/clothing/mask/gas,
 					/obj/item/clothing/mask/gas,
-					/obj/item/weapon/tank/air,
-					/obj/item/weapon/tank/air,
-					/obj/item/weapon/tank/air)
+					/obj/item/weapon/tank/internals/air,
+					/obj/item/weapon/tank/internals/air,
+					/obj/item/weapon/tank/internals/air)
 	cost = 10
 	containername = "internals crate"
 
@@ -114,8 +114,8 @@ var/list/all_supply_groups = list(supply_emergency,supply_security,supply_engine
 					/obj/item/clothing/mask/gas,
 					/obj/item/device/flashlight,
 					/obj/item/device/flashlight,
-					/obj/item/weapon/tank/oxygen/red,
-					/obj/item/weapon/tank/oxygen/red,
+					/obj/item/weapon/tank/internals/oxygen/red,
+					/obj/item/weapon/tank/internals/oxygen/red,
 					/obj/item/weapon/extinguisher,
 					/obj/item/weapon/extinguisher,
 					/obj/item/clothing/head/hardhat/red,
@@ -309,9 +309,9 @@ var/list/all_supply_groups = list(supply_emergency,supply_security,supply_engine
 /datum/supply_packs/security/armory/eweapons
 	name = "Incendiary Weapons Crate"
 	contains = list(/obj/item/weapon/flamethrower/full,
-					/obj/item/weapon/tank/plasma,
-					/obj/item/weapon/tank/plasma,
-					/obj/item/weapon/tank/plasma,
+					/obj/item/weapon/tank/internals/plasma,
+					/obj/item/weapon/tank/internals/plasma,
+					/obj/item/weapon/tank/internals/plasma,
 					/obj/item/weapon/grenade/chem_grenade/incendiary,
 					/obj/item/weapon/grenade/chem_grenade/incendiary,
 					/obj/item/weapon/grenade/chem_grenade/incendiary)
@@ -642,9 +642,9 @@ var/list/all_supply_groups = list(supply_emergency,supply_security,supply_engine
 
 /datum/supply_packs/science/plasma
 	name = "Plasma Assembly Crate"
-	contains = list(/obj/item/weapon/tank/plasma,
-					/obj/item/weapon/tank/plasma,
-					/obj/item/weapon/tank/plasma,
+	contains = list(/obj/item/weapon/tank/internals/plasma,
+					/obj/item/weapon/tank/internals/plasma,
+					/obj/item/weapon/tank/internals/plasma,
 					/obj/item/device/assembly/igniter,
 					/obj/item/device/assembly/igniter,
 					/obj/item/device/assembly/igniter,
@@ -1214,7 +1214,7 @@ var/list/all_supply_groups = list(supply_emergency,supply_security,supply_engine
 	name = "EVA Space Suit Crate"
 	contains = list(/obj/item/clothing/suit/space,
 					/obj/item/clothing/mask/breath,
-					/obj/item/weapon/tank/oxygen)
+					/obj/item/weapon/tank/internals/oxygen)
 	cost = 20
 	containertype = /obj/structure/closet/crate/secure
 	containername = "EVA space suit crate"
@@ -1224,7 +1224,7 @@ var/list/all_supply_groups = list(supply_emergency,supply_security,supply_engine
 	name = "Engineering Space Suit Crate"
 	contains = list(/obj/item/clothing/suit/space/hardsuit,
 					/obj/item/clothing/mask/breath,
-					/obj/item/weapon/tank/oxygen)
+					/obj/item/weapon/tank/internals/oxygen)
 	cost = 20
 	containertype = /obj/structure/closet/crate/secure
 	containername = "engineering space suit crate"
@@ -1234,7 +1234,7 @@ var/list/all_supply_groups = list(supply_emergency,supply_security,supply_engine
 	name = "Atmostech Space Suit Crate"
 	contains = list(/obj/item/clothing/suit/space/hardsuit/atmos,
 					/obj/item/clothing/mask/breath,
-					/obj/item/weapon/tank/oxygen)
+					/obj/item/weapon/tank/internals/oxygen)
 	cost = 20
 	containertype = /obj/structure/closet/crate/secure
 	containername = "atmos space suit crate"
@@ -1244,7 +1244,7 @@ var/list/all_supply_groups = list(supply_emergency,supply_security,supply_engine
 	name = "Mining Space Suit Crate"
 	contains = list(/obj/item/clothing/suit/space/hardsuit/mining,
 					/obj/item/clothing/mask/breath,
-					/obj/item/weapon/tank/oxygen)
+					/obj/item/weapon/tank/internals/oxygen)
 	cost = 20
 	containertype = /obj/structure/closet/crate/secure
 	containername = "mining space suit crate"
@@ -1254,7 +1254,7 @@ var/list/all_supply_groups = list(supply_emergency,supply_security,supply_engine
 	name = "Medical Space Suit Crate"
 	contains = list(/obj/item/clothing/suit/space/hardsuit/medical,
 					/obj/item/clothing/mask/breath,
-					/obj/item/weapon/tank/oxygen)
+					/obj/item/weapon/tank/internals/oxygen)
 	cost = 20
 	containertype = /obj/structure/closet/crate/secure
 	containername = "medical space suit crate"
@@ -1264,7 +1264,7 @@ var/list/all_supply_groups = list(supply_emergency,supply_security,supply_engine
 	name = "Security Space Suit Crate"
 	contains = list(/obj/item/clothing/suit/space/hardsuit/security,
 					/obj/item/clothing/mask/breath,
-					/obj/item/weapon/tank/oxygen)
+					/obj/item/weapon/tank/internals/oxygen)
 	cost = 20
 	containertype = /obj/structure/closet/crate/secure
 	containername = "security space suit crate"
@@ -1275,7 +1275,7 @@ var/list/all_supply_groups = list(supply_emergency,supply_security,supply_engine
 	contains = list(/obj/item/clothing/suit/space/hardsuit/syndi,
 					/obj/item/clothing/head/helmet/space/hardsuit/syndi,
 					/obj/item/clothing/mask/breath,
-					/obj/item/weapon/tank/oxygen)
+					/obj/item/weapon/tank/internals/oxygen)
 	cost = 100
 	containertype = /obj/structure/closet/crate
 	containername = "syndicate space suit crate"
