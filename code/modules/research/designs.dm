@@ -391,3 +391,13 @@ datum/design/proc/CalcReliability(var/list/temp_techs)
 	category = list("Equipement")
 	locked = 1
 	access = list(access_ce)
+
+/datum/design/multimeter
+	name = "Multimeter"
+	desc = "»спользуется для измерения потребления электроэнергии оборудования и прозвонки проводов. –екомендуется докторами"
+	id = "multimeter"
+	req_tech = list("materials" = 4, "engineering" = 4)
+	build_type = PROTOLATHE
+	materials = list("$metal" = 1000, "$glass" = 1000, "$silver" = 500)
+	build_path = /obj/item/device/multitool/multimeter
+	category = list("Equipement")
