@@ -33,6 +33,7 @@
 	new /obj/item/clothing/mask/gas(src)
 	new /obj/item/device/multitool(src)
 	new /obj/item/device/flash/handheld(src)
+	new /obj/item/device/multitool/multimeter(src)
 	return
 
 /obj/structure/closet/secure_closet/engineering_electrical
