@@ -166,6 +166,43 @@ datum/reagent/medicine/spaceacillin
 	color = "#C8A5DC" // rgb: 200, 165, 220
 	metabolization_rate = 0.5 * REAGENTS_METABOLISM
 
+datum/reagent/medicine/bicaridine
+	name = "Bicaridine"
+	id = "bicaridine"
+	description = "Bicaridine is an analgesic medication and can be used to treat blunt trauma."
+	color = "#C8A5DC" // rgb: 200, 165, 220
+
+datum/reagent/medicine/bicaridine/on_mob_life(var/mob/living/M as mob)
+	if(M.stat != DEAD)
+		M.heal_organ_damage(1*REM,0)
+	..()
+	return
+
+/datum/chemical_reaction/bicaridine
+	name = "Bicaridine"
+	id = "bicaridine"
+	result = "bicaridine"
+	required_reagents = list("epinephrine" = 1, "carbon" = 1)
+	result_amount = 2
+
+datum/reagent/medicine/kelotane
+	name = "Kelotane"
+	id = "kelotane"
+	description = "Kelotane is a drug used to treat burns."
+	color = "#C8A5DC" // rgb: 200, 165, 220
+
+datum/reagent/medicine/kelotane/on_mob_life(var/mob/living/M as mob)
+	if(M.stat != DEAD)
+		M.heal_organ_damage(0,1*REM)
+	..()
+	return
+
+/datum/chemical_reaction/kelotane
+	name = "Kelotane"
+	id = "kelotane"
+	result = "kelotane"
+	required_reagents = list("silicon" = 1, "carbon" = 1)
+	result_amount = 2
 
 // Undefine the alias for REAGENTS_EFFECT_MULTIPLER
 #undef REM
