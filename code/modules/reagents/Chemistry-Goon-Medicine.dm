@@ -59,13 +59,13 @@ datum/reagent/styptic_powder/on_mob_life(var/mob/living/M as mob)
 datum/reagent/salglu_solution
 	name = "Saline-Glucose Solution"
 	id = "salglu_solution"
-	description = "33% chance per cycle of healing 3 point each of BRUTE and BURN damage."
+	description = "70% chance per cycle of healing 3 point each of BRUTE and BURN damage."
 	reagent_state = LIQUID
 	color = "#C8A5DC" // rgb: 200, 165, 220
 
 datum/reagent/salglu_solution/on_mob_life(var/mob/living/M as mob)
 	if(!M) M = holder.my_atom
-	if(prob(50))
+	if(prob(70))
 		M.adjustBruteLoss(-3*REM)
 		M.adjustFireLoss(-3*REM)
 	..()
@@ -158,6 +158,13 @@ datum/reagent/omnizine/on_mob_life(var/mob/living/M as mob)
 	M.adjustFireLoss(-1*REM)
 	..()
 	return
+
+/datum/chemical_reaction/omnizine
+	name = "Omnizine"
+	id = "omnizine"
+	result = "omnizine"
+	required_reagents = list("styptic_powder" = 1, "silver_sulfadiazine" = 1, "salglu_solution" = 1, "epinephrine" = 1)
+	result_amount = 4
 
 datum/reagent/omnizine/overdose_process(var/mob/living/M as mob)
 	M.adjustToxLoss(3*REM)
@@ -561,7 +568,7 @@ datum/reagent/epinephrine
 
 datum/reagent/epinephrine/on_mob_life(var/mob/living/M as mob)
 	if(!M) M = holder.my_atom
-	if(M.health < -10 && M.health > -65)
+	if(M.health < 0 && M.health > -80)
 		M.adjustToxLoss(-1*REM)
 		M.adjustBruteLoss(-1*REM)
 		M.adjustFireLoss(-1*REM)
