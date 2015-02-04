@@ -116,12 +116,13 @@ RCD
 		return
 
 	if(istype(W, /obj/item/weapon/rcd_ammo))
-		if((matter + 20) > max_matter)
+		var/obj/item/weapon/rcd_ammo/R = W
+		if((matter + R.ammoamt) > max_matter)
 			user << "<span class='notice'>The RCD cant hold any more matter-units.</span>"
 			return
 		user.drop_item()
 		qdel(W)
-		matter += 20
+		matter += R.ammoamt
 		playsound(src.loc, 'sound/machines/click.ogg', 50, 1)
 		user << "<span class='notice'>The RCD now holds [matter]/[max_matter] matter-units.</span>"
 		desc = "A RCD. It currently holds [matter]/[max_matter] matter-units."
@@ -180,7 +181,7 @@ RCD
 				if(checkResource((3/ratio), user))
 					user << "Building Wall ..."
 					playsound(src.loc, 'sound/machines/click.ogg', 50, 1)
-					if((ratio > 1) || do_after(user, 20))
+					if((ratio > 2) || do_after(user, 20))
 						if(!useResource((3/ratio), user)) return 0
 						activate()
 						A:ChangeTurf(/turf/simulated/wall)
@@ -245,7 +246,7 @@ RCD
 				if(checkResource((1/ratio), user))
 					user << "Deconstructing Floor..."
 					playsound(src.loc, 'sound/machines/click.ogg', 50, 1)
-					if((ratio > 1) || do_after(user, 50))
+					if((ratio > 2) || do_after(user, 50))
 						if(!useResource((1/ratio), user)) return 0
 						activate()
 						A:ChangeTurf(/turf/space)
@@ -292,6 +293,16 @@ RCD
 	desc = "A device used to rapidly build walls/floor."
 	canRwall = 1
 
+/obj/item/weapon/rcd/loaded
+	matter = 100
+
+/obj/item/weapon/rcd/combat
+	name = "combat RCD"
+	max_matter = 500
+	matter = 500
+	canRwall = 1
+	ratio = 2
+
 /obj/item/weapon/rcd_ammo
 	name = "compressed matter cartridge"
 	desc = "Highly compressed matter for the RCD."
@@ -304,6 +315,7 @@ RCD
 	origin_tech = "materials=2"
 	m_amt = 16000
 	g_amt = 8000
+	var/ammoamt = 20
 
 /obj/item/weapon/rcd/advanced
 	name = "advanced rapid-construction-device (RCD)"
@@ -324,12 +336,11 @@ RCD
 /obj/item/weapon/rcd_ammo/advanced
 	name = "advanced compressed matter cartridge"
 	desc = "Ultra-Highly compressed matter for the RCD."
-	icon = 'icons/obj/ammo.dmi'
-	icon_state = "rcd"
-	item_state = "rcdammo"
-	opacity = 0
-	density = 0
-	anchored = 0.0
 	origin_tech = "materials=4"
 	m_amt = 80000
 	g_amt = 40000
+	ammoamt = 100
+
+/obj/item/weapon/rcd_ammo/large
+	ammoamt = 100
+
