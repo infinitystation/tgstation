@@ -28,8 +28,10 @@
 <A href='?src=\ref[src];make=16;dir=1'>Volume Pump</A><BR>
 <A href='?src=\ref[src];make=10;dir=1'>Scrubber</A><BR>
 <A href='?src=\ref[src];makemeter=1'>Meter</A><BR>
+<A href='?src=\ref[src];makesensor=1'>Sensor</A><BR>
 <A href='?src=\ref[src];make=13;dir=1'>Gas Filter</A><BR>
 <A href='?src=\ref[src];make=14;dir=1'>Gas Mixer</A><BR>
+<A href='?src=\ref[src];make=20;dir=1'>Gas Filter</A><BR>
 <b>Heat exchange:</b><BR>
 <A href='?src=\ref[src];make=2;dir=1'>Pipe</A><BR>
 <A href='?src=\ref[src];make=3;dir=5'>Bent Pipe</A><BR>
@@ -69,11 +71,17 @@
 			wait = 1
 			spawn(15)
 				wait = 0
+	if(href_list["makesensor"])
+		if(!wait)
+			new /obj/item/pipe_gsensor(/*usr.loc*/ src.loc)
+			wait = 1
+			spawn(15)
+				wait = 0
 	return
 
 /obj/machinery/pipedispenser/attackby(var/obj/item/W as obj, var/mob/user as mob)
 	add_fingerprint(user)
-	if (istype(W, /obj/item/pipe) || istype(W, /obj/item/pipe_meter))
+	if (istype(W, /obj/item/pipe) || istype(W, /obj/item/pipe_meter) || istype(W, /obj/item/pipe_gsensor))
 		usr << "<span class='notice'>You put [W] back into [src].</span>"
 		user.drop_item()
 		qdel(W)

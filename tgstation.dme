@@ -508,6 +508,7 @@
 #include "code\game\machinery\embedded_controller\embedded_controller_base.dm"
 #include "code\game\machinery\embedded_controller\simple_vent_controller.dm"
 #include "code\game\machinery\pipe\construction.dm"
+#include "code\game\machinery\pipe\gsensor_constr.dm"
 #include "code\game\machinery\pipe\pipe_dispenser.dm"
 #include "code\game\machinery\telecomms\broadcaster.dm"
 #include "code\game\machinery\telecomms\logbrowser.dm"

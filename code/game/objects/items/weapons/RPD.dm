@@ -16,6 +16,7 @@ RPD
 #define ATMOS_MODE 0
 #define METER_MODE 1
 #define DISPOSALS_MODE 2
+#define SENSOR_MODE 3
 
 /datum/pipe_info
 	var/id=-1
@@ -41,8 +42,18 @@ RPD
 /datum/pipe_info/meter/New()
 	return
 
+/datum/pipe_info/sensor
+	icon = 'icons/obj/stationobjs.dmi'
+	icon_state = "gsensor0"
+
+/datum/pipe_info/sensor/New()
+	return
+
 /datum/pipe_info/meter/Render(var/dispenser,var/label)
 	return "<li><a href='?src=\ref[dispenser];makemeter=1;type=[dirtype]'>[label]</a></li>" //hardcoding is no
+
+/datum/pipe_info/sensor/Render(var/dispenser,var/label)
+	return "<li><a href='?src=\ref[dispenser];makesensor=1;type=[dirtype]'>[label]</a></li>" //hardcoding is no
 
 var/global/list/disposalpipeID2State=list(
 	"pipe-s",
@@ -91,6 +102,7 @@ var/global/list/RPD_recipes=list(
 		"Volume Pump"    = new /datum/pipe_info(PIPE_VOLUME_PUMP,		1, PIPE_UNARY),
 		"Scrubber"       = new /datum/pipe_info(PIPE_SCRUBBER,			1, PIPE_UNARY),
 		"Meter"          = new /datum/pipe_info/meter(),
+		"Sensor"         = new /datum/pipe_info/sensor(),
 		"Gas Filter"     = new /datum/pipe_info(PIPE_GAS_FILTER,		1, PIPE_TRIN_M),
 		"Gas Mixer"      = new /datum/pipe_info(PIPE_GAS_MIXER,			1, PIPE_TRIN_M),
 //		"Injector"       = new /datum/pipe_info(PIPE_INJECTOR,     		1, PIPE_UNARY),
@@ -450,6 +462,14 @@ var/global/list/RPD_recipes=list(
 		playsound(get_turf(src), 'sound/effects/pop.ogg', 50, 0)
 		show_menu(usr)
 
+	if(href_list["makesensor"])
+		p_class = SENSOR_MODE
+		p_conntype=-1
+		p_dir=1
+		src.spark_system.start()
+		playsound(get_turf(src), 'sound/effects/pop.ogg', 50, 0)
+		show_menu(usr)
+
 	if(href_list["dmake"])
 		p_type = text2num(href_list["dmake"])
 		p_conntype = text2num(href_list["type"])
@@ -488,7 +508,7 @@ var/global/list/RPD_recipes=list(
 			return 1
 		if(EATING_MODE) // Eating pipes
 			// Must click on an actual pipe or meter.
-			if(istype(A,/obj/item/pipe) || istype(A,/obj/item/pipe_meter) || istype(A,/obj/structure/disposalconstruct))
+			if(istype(A,/obj/item/pipe) || istype(A,/obj/item/pipe_meter) || istype(A,/obj/item/pipe_gsensor) || istype(A,/obj/structure/disposalconstruct))
 				user << "<span class='notice'>Destroying Pipe...</span>"
 				playsound(get_turf(src), 'sound/machines/click.ogg', 50, 1)
 				if(do_after(user, 5))
@@ -523,6 +543,18 @@ var/global/list/RPD_recipes=list(
 			if(do_after(user, 20))
 				activate()
 				new /obj/item/pipe_meter(A)
+				return 1
+			return 0
+
+		if(SENSOR_MODE)
+			if(!(istype(A, /turf)))
+				user << "<span class='warning'>The [src]'s error light flickers.</span>"
+				return 0
+			user << "<span class='notice'>Building Sensor...</span>"
+			playsound(get_turf(src), 'sound/machines/click.ogg', 50, 1)
+			if(do_after(user, 20))
+				activate()
+				new /obj/item/pipe_gsensor(A)
 				return 1
 			return 0
 
