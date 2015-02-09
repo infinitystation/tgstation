@@ -38,12 +38,12 @@
 
 //Removes a few problematic characters
 // it was = /proc/sanitize_simple(var/t,var/list/repl_chars = list("\n"="#","\t"="#","ï¿½"="ï¿½"))
-/proc/sanitize_simple(var/t,var/list/repl_chars = list("\n"=" ","\t"="","ÿ"="____255_"))
+/proc/sanitize_simple(var/t,var/list/repl_chars = list("\n"="#","\t"="#","ÿ"="____255_"))
 	for(var/char in repl_chars)
 		var/index = findtext(t, char)
 		while(index)
 			t = copytext(t, 1, index) + repl_chars[char] + copytext(t, index+1)
-			index = findtext(t, char)
+			index = findtext(t, char, index+1)
 	return t
 
 //Runs byond's sanitization proc along-side sanitize_simple
@@ -54,7 +54,7 @@
 	var/index = findtext(t, "____255_")
 	while(index)
 		t = copytext(t, 1, index) + "&#255;" + copytext(t, index+8)
-		index = findtext(t, "____255_")
+		index = findtext(t, "____255_", index+1)
 	return t
 
 /proc/sanitize_u(var/t,var/list/repl_chars = null)//unicode
@@ -62,14 +62,14 @@
 	var/index = findtext(t, "____255_")
 	while(index)
 		t = copytext(t, 1, index) + "&#1103;" + copytext(t, index+8)
-		index = findtext(t, "____255_")
+		index = findtext(t, "____255_", index+1)
 	return t
 
 /proc/sanitize_a2u(var/t,var/list/repl_chars = null)//ansi to unicode
 	var/index = findtext(t, "&#255;")
 	while(index)
 		t = copytext(t, 1, index) + "&#1103;" + copytext(t, index+6)
-		index = findtext(t, "&#255;")
+		index = findtext(t, "&#255;", index+1)
 	return t
 
 /proc/sanitize_u2a(var/t,var/list/repl_chars = null)//unicode to ansi
@@ -77,7 +77,7 @@
 	var/index = findtext(t, "&#1103;")
 	while(index)
 		t = copytext(t, 1, index) + "&#255;" + copytext(t, index+7)
-		index = findtext(t, "&#1103;")
+		index = findtext(t, "&#1103;", index)
 	return t
 
 //Runs sanitize and strip_html_simple
@@ -177,32 +177,63 @@
 
 	return t_out
 
-//this proc strips html properly, but it's not lazy like the other procs.
-//this means that it doesn't just remove < and > and call it a day. seriously, who the fuck thought that would be useful.
+//this proc strips html properly, this means that it removes everything between < and >, and between "http" and "://"
 //also limit the size of the input, if specified to
 /proc/strip_html_properly(var/input,var/max_length=MAX_MESSAGE_LEN)
 	if(!input)
 		return
-	var/opentag = 1 //These store the position of < and > respectively.
-	var/closetag = 1
-	while(1)
-		opentag = findtext(input, "<")
-		closetag = findtext(input, ">")
-		if(closetag && opentag)
-			if(closetag < opentag)
-				input = copytext(input, (closetag + 1))
-			else
-				input = copytext(input, 1, opentag) + copytext(input, (closetag + 1))
-		else if(closetag || opentag)
-			if(opentag)
-				input = copytext(input, 1, opentag)
-			else
-				input = copytext(input, (closetag + 1))
-		else
-			break
+
 	if(max_length)
 		input = copytext(input,1,max_length)
-	return input
+
+	var/sanitized_output
+	var/next_html_tag = findtext(input, "<")
+	var/next_http = findtext(input, "http", 1, next_html_tag)
+
+	//the opening and closing of the expression to skip, e.g '<' and '>'
+	var/opening = non_zero_min(next_html_tag, next_http)
+	var/closing
+
+	sanitized_output = copytext(input, 1, opening)
+
+	while(next_html_tag || next_http)
+
+		//we treat < ... >
+		if(opening == next_html_tag)
+			closing = findtext(input, ">", opening + 1)
+			if(closing)
+				next_html_tag = findtext(input, "<", closing)
+				next_http = findtext(input, "http", closing, next_html_tag)
+			else //no matching ">"
+				next_html_tag = 0
+
+		//we treat "http(s)://"
+		else
+			closing = findtext(input, "://", opening + 1)
+			if(closing)
+				closing += 2 //skip these extra //
+				next_http = findtext(input, "http", closing)
+				next_html_tag = findtext(input, "<", closing, next_http)
+			else //no matching "://"
+				next_http = 0
+
+		//check if we've something to skip
+		if(closing)
+			opening = non_zero_min(next_html_tag, next_http)
+			sanitized_output += copytext(input, closing + 1, opening)
+
+	sanitized_output += copytext(input, opening) //don't forget the remaining text
+
+	return sanitized_output
+
+//strip_html_properly helper proc that returns the smallest non null of two numbers
+//or 0 if they're both null (needed because of findtext returning 0 when a value is not present)
+/proc/non_zero_min(var/a, var/b)
+	if(!a)
+		return b
+	if(!b)
+		return a
+	return (a < b ? a : b)
 
 /*
  * Text searches
