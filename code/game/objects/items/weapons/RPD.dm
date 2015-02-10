@@ -138,6 +138,7 @@ var/global/list/RPD_recipes=list(
 	density = 0
 	anchored = 0.0
 	flags = CONDUCT
+	slot_flags = SLOT_BELT
 	force = 10.0
 	throwforce = 10.0
 	throw_speed = 1
