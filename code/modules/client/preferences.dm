@@ -87,6 +87,7 @@ datum/preferences
 	var/metadata = ""
 
 	var/unlock_content = 0
+	var/flavor_text
 
 /datum/preferences/New(client/C)
 	blood_type = random_blood_type()
@@ -156,7 +157,12 @@ datum/preferences
 
 				dat += "<b>Gender:</b> <a href='?_src_=prefs;preference=gender'>[gender == MALE ? "Male" : "Female"]</a><BR>"
 				dat += "<b>Age:</b> <a href='?_src_=prefs;preference=age;task=input'>[age]</a>"
+				dat += "<BR><a href='?_src_=prefs;preference=flavor_text'><b>Flavor Text:</b></a><BR>"
 
+				if(lentext(copytext(sanitize_u(flavor_text), 1, MAX_MESSAGE_LEN)) <= 160)
+					dat += "<BR>[copytext(sanitize_u(flavor_text), 1, MAX_MESSAGE_LEN)]"
+				else
+					dat += "[copytext(sanitize_u(flavor_text), 1, 160)]... <a href='?_src_=prefs;preference=flavor_text_more'>More...</a>"
 
 				dat += "</td><td valign='center'>"
 
@@ -803,6 +809,16 @@ datum/preferences
 						if (href_list["tab"])
 							current_tab = text2num(href_list["tab"])
 
+					if("flavor_text")
+						flavor_text = stripped_multiline_input(usr, "Введите описание персонажа", "Set Flavor Text", copytext(sanitize_u(flavor_text), 1, MAX_MESSAGE_LEN))
+
+					if("flavor_text_more")
+						var/dat = sanitize_u(flavor_text)
+						var/datum/browser/flavor_more = new(usr, "flavor", "[real_name]", 500, 200)
+						flavor_more.set_content(dat)
+						flavor_more.open(1)
+
+
 		ShowChoices(user)
 		return 1
 
@@ -851,6 +867,8 @@ datum/preferences
 		if(backbag > 3 || backbag < 1)
 			backbag = 1 //Same as above
 		character.backbag = backbag
+
+		character.flavor_text = sanitize(flavor_text)
 
 		/*
 		//Debugging report to track down a bug, which randomly assigned the plural gender to people.
