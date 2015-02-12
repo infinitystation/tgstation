@@ -5,6 +5,8 @@
 	if (src.stuttering)
 		playsound(loc, 'sound/voice/clearing-throat-1.ogg', 25, 1, 1)
 		return "stammers, \"[text]\"";
+	if(src.slurring)
+		return "slurs, \"[text]\"";
 	if(isliving(src))
 		var/mob/living/L = src
 		if (L.getBrainLoss() >= 60)
