@@ -341,3 +341,10 @@
 		src << "¬ы мертвы и не способны больше испражняться."
 		return 0
 
+/mob/living/carbon/human/verb/set_flavor()
+	set name = "Set Flavour Text"
+	set desc = "Sets an extended description of your character's features."
+	set category = "IC"
+
+	update_flavor_text()
+

@@ -698,6 +698,16 @@ var/list/slot_equipment_priority = list( \
 		else
 			usr << browse(null,"window=mob\ref[src]")
 
+	if(href_list["flavor_more"])
+		var/mob/A = locate(href_list["flavor_more"])
+		var/dat = sanitize_a2u(A.flavor_text)
+		var/datum/browser/flavor_more = new(usr, "flavor", "[name]", 500, 200)
+		flavor_more.set_content(dat)
+		flavor_more.open(1)
+
+	if(href_list["flavor_change"])
+		update_flavor_text()
+
 // The src mob is trying to strip an item from someone
 // Defined in living.dm
 /mob/proc/stripPanelUnequip(obj/item/what, mob/who)
@@ -995,3 +1005,27 @@ var/list/slot_equipment_priority = list( \
 
 /mob/proc/setEarDamage()
 	return
+
+/mob/verb/update_flavor_text()
+	set src in usr
+	if(usr != src)
+		usr << "No."
+	var/msg = input(usr,"Set the flavor text in your 'examine' verb. Can also be used for OOC notes about your character.","Flavor Text",html_decode(flavor_text)) as message|null
+
+	if(msg != null)
+		msg = copytext(sanitize(msg), 1, MAX_MESSAGE_LEN)
+		flavor_text = msg
+
+/mob/proc/warn_flavor_changed()
+	if(flavor_text && flavor_text != "") // don't spam people that don't use it!
+		src << "<h2 class='alert'>OOC Warning:</h2>"
+		src << "<span class='alert'>Your flavor text is likely out of date! <a href=?src=\ref[usr];flavor_change=1>Change</a></span>"
+
+/mob/proc/print_flavor_text()
+	if (flavor_text && flavor_text != "")
+		var/msg = replacetext(flavor_text, "\n", " ")
+		if(lentext(msg) <= 40)
+			return "<span class='notice'>[msg]</span>"
+		else
+			return "<span class='notice'>[copytext(msg, 1, 37)]... <a href=?src=\ref[usr];flavor_more=\ref[src]>More...</a></span>"
+

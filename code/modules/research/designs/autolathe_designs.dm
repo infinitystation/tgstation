@@ -402,6 +402,22 @@
 	build_path = /obj/item/device/assembly/prox_sensor
 	category = list("initial", "Misc")
 
+/datum/design/polariod_camera
+	name = "Polariod Camera"
+	id = "polariod_camera"
+	build_type = AUTOLATHE
+	materials = list("$metal" = 2000)
+	build_path = /obj/item/device/camera
+	category = list("initial", "Misc")
+
+/datum/design/camera_film
+	name = "Polariod Camera Film"
+	id = "camera_film"
+	build_type = AUTOLATHE
+	materials = list("$metal" = 200, "$glass" = 200)
+	build_path = /obj/item/device/camera_film
+	category = list("initial", "Misc")
+
 //hacked autolathe recipes
 /datum/design/flamethrower
 	name = "Flamethrower"

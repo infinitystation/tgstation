@@ -132,7 +132,7 @@
 	if(!suppressed)
 		playsound(src.loc, 'sound/weapons/kenetic_reload.ogg', 60, 1)
 	else
-		playsound(user, 'sound/weapons/kenetic_reload.ogg', 60, 1)
+		user << "<span class='warning'>You silently charge [src].<span>"
 	recent_reload = 1
 	update_icon()
 	return
@@ -157,6 +157,7 @@
 	origin_tech = "combat=2;magnets=2;syndicate=3" //can be further researched for more syndie tech
 	suppressed = 0
 	ammo_type = list(/obj/item/ammo_casing/energy/bolt/large)
+	pin = null
 
 /obj/item/weapon/gun/energy/disabler
 	name = "disabler"

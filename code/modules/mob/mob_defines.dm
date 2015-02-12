@@ -54,6 +54,7 @@
 	var/ear_deaf = 0		//Carbon
 	var/ear_damage = 0		//Carbon
 	var/stuttering = null	//Carbon
+	var/slurring = 0		//Carbon
 	var/real_name = null
 	var/bhunger = 0			//Carbon
 	var/ajourn = 0
@@ -166,3 +167,5 @@
 
 	var/turf/listed_turf = null	//the current turf being examined in the stat panel
 	var/last_movement = 0 // Last world.time the mob actually moved of its own accord.
+
+	var/flavor_text = ""
