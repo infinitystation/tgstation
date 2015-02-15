@@ -61,4 +61,4 @@
 /obj/item/weapon/vending_refill/clothing
 	machine_name = "ClothesMate"
 	icon_state = "refill_clothes"
-	charges = 40// of 120
+	charges = 40// of 124
