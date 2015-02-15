@@ -100,20 +100,23 @@
 
 	default_reagents = sortList(dispensable_reagents)
 
-/obj/machinery/chem_dispenser/bartender/Topic(href, href_list)
-	if(href_list["dispense"])
-		if((!allowed(usr)) && !emagged && id_scan)	//For SECURE MACHINES YEAH
-			usr << "<span class='warning'>Access denied.</span>"	//Unless emagged of course
-			return 1
-	..()
-
 //wires update
 /obj/machinery/chem_dispenser/bartender/attack_hand(mob/user)
+	if(stat & BROKEN)
+		return
+
 	if(seconds_electrified != 0)
 		if(shock(user, 100))
 			return
+
 	if(panel_open)
 		wires.Interact(user)
+
+	if((!allowed(usr)) && !emagged && id_scan)	//For SECURE MACHINES YEAH
+		usr << "<span class='warning'>Access denied.</span>"	//Unless emagged of course
+		return
+
+	ui_interact(user)
 	..()
 
 //wires update
