@@ -408,20 +408,23 @@
 
 	//need to shit? yes! yes! yes!
 	if(H.need_to_shit >= H.need_to_shit_max)
-		H.Shit(H)
-		H << "Вы справили нужду"
+		H.emote("shit")
+		H << "<span class='notice'>Вы справили нужду</span>"
+
+	//really need to shit? not now, but i'm need to SHIT!!
+	else if((H.need_to_shit_max - H.need_to_shit)<20)
+		if(prob(10))
+			H << "<span class='danger'><b>Вам ОЧЕНЬ хочетс&#255; в туалет!</b></span>"
 
 	//really need to shit? not now, but i'm need to shit!
-	else if((H.need_to_shit > H.need_to_shit_again) && (H.need_to_shit >= (H.need_to_shit_max-40)))
-		H << "Вам ОЧЕНЬ СИЛЬНО хочетсЯ в туалет"
-		H.need_to_shit_again += 8
+	else if((H.need_to_shit_max - H.need_to_shit)<20)
+		if(prob(6))
+			H << "<span class='danger'>Вам очень хочетс&#255; в туалет!</span>"
 
 	//need to shit? not now, but...
-	else if((H.need_to_shit > H.need_to_shit_again) && (H.need_to_shit < (H.need_to_shit_max-40)))
-		H.need_to_shit_again += 70
-		if(H.need_to_shit_again >= (H.need_to_shit_max-40))
-			H.need_to_shit_again = (H.need_to_shit_max-40)
-		H << "Вам хочетсЯ в туалет"
+	else if((H.need_to_shit_max - H.need_to_shit)<80)
+		if(prob(3))
+			H << "<span class='notice'>Вам хочетс&#255; в туалет</span>"
 
 	// nutrition decrease & shit increase
 	if (H.nutrition > 0 && H.stat != 2)
