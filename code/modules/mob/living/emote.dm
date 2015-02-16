@@ -34,33 +34,49 @@
 				if (!M)
 					param = null
 				if (param)
-					message = "<B>[src]</B> поклонился [param]."
+					if(gender == FEMALE)
+						message = "<B>[src]</B> поклонилась [param]."
+					else
+						message = "<B>[src]</B> поклонилс&#255; [param]."
+
 				else
-					message = "<B>[src]</B> поклонился."
+					if(gender == FEMALE)
+						message = "<B>[src]</B> поклонилась."
+					else
+						message = "<B>[src]</B> поклонилс&#255;."
 			m_type = 1
 
 		if ("burp")
-			message = "<B>[src]</B> отрыгнул."
+			if(gender == FEMALE)
+				message = "<B>[src]</B> отрыгнула."
+			else
+				message = "<B>[src]</B> отрыгнул."
 			playsound(loc, 'sound/emotions/burp.ogg', 25, 1, 1)
 			m_type = 2
 
 		if ("choke")
-			message = "<B>[src]</B> подавился!"
+			if(gender == FEMALE)
+				message = "<B>[src]</B> подавилась!"
+			else
+				message = "<B>[src]</B> подавилс&#255;!"
 			playsound(loc, 'sound/emotions/choke.ogg', 25, 1, 1)
 			m_type = 2
 
 		if ("chuckle")
-			message = "<B>[src]</B> ”смехается."
+			message = "<B>[src]</B> ”смехаетс&#255;."
 			playsound(loc, 'sound/emotions/giggle.ogg', 25, 1, 1)
 			m_type = 2
 
 		if ("collapse")
 			Paralyse(2)
-			message = "<B>[src]</B> рухнул!"
+			if(gender == FEMALE)
+				message = "<B>[src]</B> рухнула!"
+			else
+				message = "<B>[src]</B> рухнул!"
 			m_type = 2
 
 		if ("cough")
-			message = "<B>[src]</B> кашляет!"
+			message = "<B>[src]</B> кашл&#255;ет!"
 			playsound(loc, 'sound/emotions/cough.ogg', 25, 1, 1)
 			m_type = 2
 
@@ -70,7 +86,7 @@
 				m_type = 1
 
 		if ("deathgasp")
-			message = "<B>[src]</B> замирает, конечности расслабляются, глаза становятся мЄртвыми и безжизненными..."
+			message = "<B>[src]</B> замирает, конечности расслабл&#255;ютс&#255;, глаза станов&#255;тс&#255; мЄртвыми и безжизненными..."
 			playsound(loc, 'sound/effects/deathgasp.ogg', 25, 1, 1)
 			m_type = 1
 
@@ -80,7 +96,7 @@
 			m_type = 1
 
 		if ("faint")
-			message = "<B>[src]</B> теряет сознание."
+			message = "<B>[src]</B> тер&#255;ет сознание."
 			if(src.sleeping)
 				return //Can't faint while asleep
 			src.sleeping += 10 //Short-short nap
@@ -88,15 +104,15 @@
 
 		if ("flap")
 			if (!src.restrained())
-				message = "<B>[src]</B> хлопает крыльями."
+				message = "<B>[src]</B> хлопает крыль&#255;ми."
 				m_type = 2
 
 		if ("frown")
-			message = "<B>[src]</B> хмурится."
+			message = "<B>[src]</B> хмуритс&#255;."
 			m_type = 1
 
 		if ("gasp")
-			message = "<B>[src]</B> «адыхается!"
+			message = "<B>[src]</B> «адыхаетс&#255;!"
 			playsound(loc, 'sound/effects/gasp.ogg', 50, 1, 1)
 			m_type = 2
 
@@ -120,7 +136,7 @@
 				message = "<B>[src]</B> свирепо смотрит."
 
 		if ("grin")
-			message = "<B>[src]</B> усмехается, показывая зубы."
+			message = "<B>[src]</B> усмехаетс&#255;, показыва&#255; зубы."
 			playsound(loc, 'sound/emotions/grin.ogg', 25, 1, 1)
 			m_type = 1
 
@@ -129,7 +145,7 @@
 			m_type = 1
 
 		if ("laugh")
-			message = "<B>[src]</B> смеЄтся."
+			message = "<B>[src]</B> смеЄтс&#255;."
 			playsound(loc, 'sound/emotions/laugh.ogg', 25, 1, 1)
 			m_type = 2
 
@@ -163,7 +179,10 @@
 				message = "<B>[src]</B> [message]"
 
 		if ("nod")
-			message = "<B>[src]</B> кивнул."
+			if(gender == FEMALE)
+				message = "<B>[src]</B> кивнула."
+			else
+				message = "<B>[src]</B> кивнул."
 			m_type = 1
 
 		if ("point")
@@ -186,13 +205,13 @@
 			m_type = 2
 
 		if ("shake")
-			message = "<B>[src]</B> трясЄт головой."
+			message = "<B>[src]</B> тр&#255;сЄт головой."
 			m_type = 1
 
 		if ("shit")
 			//we need to shit? no
 			if(need_to_shit < 70)
-				src << "Ќечем испражнятся"
+				src << "Ќечем испражн&#255;тс&#255;"
 				return
 
 			//we need to shit?
@@ -203,7 +222,6 @@
 						return
 					else
 						need_to_shit = 0
-						need_to_shit_again = 140
 						T.open = 1
 						T.shit++
 						T.update_icon()
@@ -211,8 +229,10 @@
 						return
 				src << "Ћучше найти ближайший туалет"
 				return
-
-			message = "<B>[src]</B> [pick("испражняется.", "высрал кучу говна.", "наложил кучу.", "накакал на пол.", "дрестанул говном на пол.")]"
+			if(gender == FEMALE)
+				message = "<B>[src]</B> [pick("испражн&#255;етс&#255;.", "высрала кучу говна.", "наложила кучу.", "накакала на пол.", "дрестанула говном на пол.")]"
+			else
+				message = "<B>[src]</B> [pick("испражн&#255;етс&#255;.", "высрал кучу говна.", "наложил кучу.", "накакал на пол.", "дрестанул говном на пол.")]"
 			Shit(src)
 			m_type = 1
 
@@ -222,11 +242,11 @@
 			m_type = 2
 
 		if ("sit")
-			message = "<B>[src]</B> садится."
+			message = "<B>[src]</B> садитс&#255;."
 			m_type = 1
 
 		if ("smile")
-			message = "<B>[src]</B> улыбается."
+			message = "<B>[src]</B> улыбаетс&#255;."
 			m_type = 1
 
 		if ("sneeze")
@@ -253,16 +273,16 @@
 			if (!M)
 				param = null
 			if (param)
-				message = "<B>[src]</B> пялится на [param]."
+				message = "<B>[src]</B> п&#255;литс&#255; на [param]."
 			else
-				message = "<B>[src]</B> пялится."
+				message = "<B>[src]</B> п&#255;литс&#255;."
 
 		if ("sulk")
-			message = "<B>[src]</B> обиженно дуется."
+			message = "<B>[src]</B> обиженно дуетс&#255;."
 			m_type = 1
 
 		if ("sway")
-			message = "<B>[src]</B> раскачивается до головокружения."
+			message = "<B>[src]</B> раскачиваетс&#255; до головокружени&#255;."
 			m_type = 1
 
 		if ("tremble")
@@ -270,11 +290,11 @@
 			m_type = 1
 
 		if ("twitch")
-			message = "<B>[src]</B> сильно дЄргается."
+			message = "<B>[src]</B> сильно дЄргаетс&#255;."
 			m_type = 1
 
 		if ("twitch_s")
-			message = "<B>[src]</B> дЄргается."
+			message = "<B>[src]</B> дЄргаетс&#255;."
 			m_type = 1
 
 		if ("vomit")
@@ -333,12 +353,12 @@
 /mob/living/proc/Shit(var/mob/living/M)
 	if(M.stat != DEAD)
 		M.need_to_shit = 0
-		M.need_to_shit_again = 140
+		M.AdjustStunned(3)
 		var/turf/pos = get_turf(M)
 		pos.add_shit_floor(M)
 		playsound(pos, 'sound/emotions/shit.ogg', 50, 1)
 	else
-		src << "¬ы мертвы и не способны больше испражняться."
+		src << "¬ы мертвы и не способны больше испражн&#255;тьс&#255;."
 		return 0
 
 /mob/living/carbon/human/verb/set_flavor()
