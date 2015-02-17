@@ -22,6 +22,8 @@
 	modifystate = 0
 	ammo_type = list(/obj/item/ammo_casing/energy/electrode, /obj/item/ammo_casing/energy/laser)
 	can_flashlight = 0
+	cell_removing = 0
+	cell_type = /obj/item/weapon/stock_parts/cell/ammo/high
 	pin = null
 
 /obj/item/weapon/gun/energy/gun/nuclear/New()
@@ -41,7 +43,7 @@
 	if(!power_supply) return 0
 	if((power_supply.charge / power_supply.maxcharge) != 1)
 		if(!failcheck())	return 0
-		power_supply.give(100)
+		power_supply.give(250)
 		update_icon()
 	return 1
 
@@ -58,13 +60,13 @@
 			M.apply_effect(rand(3,120), IRRADIATE)
 		lightfail = 1
 	else
-		for (var/mob/living/M in range(rand(1,4),src)) //Big failure, TIME FOR RADIATION BITCHES
+		for (var/mob/living/M in range(rand(1,7),src)) //Big failure, TIME FOR RADIATION BITCHES
 			if (src in M.contents)
-				M << "<span class='danger'>Your gun's reactor overloads!</span>"
+				M << "<span class='danger'><b>Your gun's reactor overloads!</b></span>"
 			M << "<span class='danger'>You feel a wave of heat wash over you.</span>"
-			M.apply_effect(300, IRRADIATE)
-		crit_fail = 1 //break the gun so it stops recharging
-		SSobj.processing.Remove(src)
+			M.apply_effect(3000, IRRADIATE)
+		//crit_fail = 1 //break the gun so it stops recharging
+		//SSobj.processing.Remove(src)
 		update_icon()
 	return 0
 

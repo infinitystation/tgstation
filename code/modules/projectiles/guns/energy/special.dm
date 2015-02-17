@@ -32,6 +32,7 @@
 	modifystate = 1
 	var/charge_tick = 0
 	var/mode = 0 //0 = mutate, 1 = yield boost
+	cell_removing = 0
 
 /obj/item/weapon/gun/energy/floragun/New()
 	..()
@@ -64,7 +65,7 @@
 	item_state = "c20r"
 	w_class = 4
 	ammo_type = list(/obj/item/ammo_casing/energy/meteor)
-	cell_type = "/obj/item/weapon/stock_parts/cell/potato"
+	cell_type = /obj/item/weapon/stock_parts/cell/ammo
 	clumsy_check = 0 //Admin spawn only, might as well let clowns use it.
 	var/charge_tick = 0
 	var/recharge_time = 5 //Time it takes for shots to recharge (in ticks)
@@ -112,7 +113,8 @@
 	icon_state = "kineticgun"
 	item_state = "kineticgun"
 	ammo_type = list(/obj/item/ammo_casing/energy/kinetic)
-	cell_type = "/obj/item/weapon/stock_parts/cell/emproof"
+	cell_type = /obj/item/weapon/stock_parts/cell/emproof
+	cell_removing = 0
 	var/overheat = 0
 	var/recent_reload = 1
 	var/range_add = 0
@@ -206,6 +208,7 @@
 	desc = "An integrated disabler that draws from a cyborg's power cell. This weapon contains a limiter to prevent the cyborg's power cell from overheating."
 	var/charge_tick = 0
 	var/recharge_time = 2.5
+	cell_removing = 0
 
 /obj/item/weapon/gun/energy/disabler/cyborg/New()
 	..()
@@ -240,6 +243,7 @@
 	icon_state = "wormhole_projector"
 	var/obj/effect/portal/blue
 	var/obj/effect/portal/orange
+	cell_removing = 0
 
 /obj/item/weapon/gun/energy/wormhole_projector/update_icon()
 	icon_state = "[initial(icon_state)][select]"
@@ -288,6 +292,7 @@
 	ammo_type = list(/obj/item/ammo_casing/energy/c3dbullet)
 	var/charge_tick = 0
 	var/recharge_time = 5
+	cell_removing = 0
 
 /obj/item/weapon/gun/energy/printer/update_icon()
 	return
