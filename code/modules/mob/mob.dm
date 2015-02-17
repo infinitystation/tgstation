@@ -700,7 +700,7 @@ var/list/slot_equipment_priority = list( \
 	if(href_list["flavor_more"])
 		var/mob/A = locate(href_list["flavor_more"])
 		var/dat = sanitize_a2u(A.flavor_text)
-		var/datum/browser/flavor_more = new(usr, "flavor", "[name]", 500, 200)
+		var/datum/browser/flavor_more = new(usr, "flavor", "[A.name]", 500, 200)
 		flavor_more.set_content(dat)
 		flavor_more.open(1)
 
