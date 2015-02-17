@@ -20,7 +20,7 @@
 	if(!T)
 		src << "Nowhere to jump to!"
 		return
-	usr.loc = T
+	admin_forcemove(usr, T)
 	log_admin("[key_name(usr)] jumped to [A]")
 	message_admins("[key_name_admin(usr)] jumped to [A]")
 	feedback_add_details("admin_verb","JA") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
@@ -151,17 +151,11 @@
 /proc/admin_forcemove(var/mob/mover, var/atom/newloc)
 	var/startdensity = mover.density
 	var/startflags = mover.pass_flags
-	var/startincorporeal = 0
-	if(istype(mover, /mob/living))
-		var/mob/living/L = mover
-		startincorporeal = L.incorporeal_move
-		L.incorporeal_move = 1
+	var/startdestinationdensity = newloc.density
 	mover.density = 0
 	mover.pass_flags = ALL
 	newloc.density = 0
 	. = mover.Move(newloc)
 	mover.density = startdensity
 	mover.pass_flags = startflags
-	if(istype(mover, /mob/living))
-		var/mob/living/L = mover
-		L.incorporeal_move = startincorporeal
+	newloc.density = startdestinationdensity

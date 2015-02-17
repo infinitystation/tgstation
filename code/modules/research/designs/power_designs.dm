@@ -90,3 +90,23 @@ datum/design/mrspacman
 	materials = list("$glass" = 1000, "sacid" = 20)
 	build_path = /obj/item/weapon/circuitboard/pacman/mrs
 	category = list("Engineering Machinery")
+
+/datum/design/ammo_cell
+	name = "High-Capacity Ammo Power Cell"
+	desc = "A high-capacity rechargable electrochemical power cell for energy weaponry."
+	id = "ammo_cell"
+	req_tech = list("powerstorage" = 4, "combat" = 3, "materials" = 3)
+	build_type = PROTOLATHE
+	materials = list("$metal" = 400, "$glass" = 300)
+	build_path = /obj/item/weapon/stock_parts/cell/ammo/high
+	category = list("Ammo")
+
+/datum/design/ammo_scell
+	name = "Super Ammo Power Cell"
+	desc = "A super rechargable electrochemical power cell for energy weaponry."
+	id = "ammo_scell"
+	req_tech = list("powerstorage" = 6, "combat" = 4, "materials" = 4)
+	build_type = PROTOLATHE
+	materials = list("$metal" = 400, "$glass" = 150, "$gold" = 150, "$silver" = 150)
+	build_path = /obj/item/weapon/stock_parts/cell/ammo/high
+	category = list("Ammo")
