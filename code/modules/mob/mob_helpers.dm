@@ -212,13 +212,18 @@ proc/slur(n)
 	while(counter>=1)
 		newletter=copytext(phrase,(leng-counter)+1,(leng-counter)+2)
 		if(rand(1,3)==3)
-			if(lowertext(newletter)=="o")	newletter="u"
+			if(lowertext(newletter)=="î")	newletter="u"
 			if(lowertext(newletter)=="s")	newletter="ch"
 			if(lowertext(newletter)=="a")	newletter="ah"
 			if(lowertext(newletter)=="u")	newletter="oo"
 			if(lowertext(newletter)=="c")	newletter="k"
+			if(lowertext(newletter)=="î")	newletter="à"
+			if(lowertext(newletter)=="ñ")	newletter="ø"
+			if(lowertext(newletter)=="à")	newletter="ààà"
+			if(lowertext(newletter)=="þ")	newletter="ó"
+			if(lowertext(newletter)=="á")	newletter="ï"
 		if(rand(1,20)==20)
-			if(newletter==" ")	newletter="...huuuhhh..."
+			if(newletter==" ")	newletter="...ýýý..."
 			if(newletter==".")	newletter=" *BURP*."
 		switch(rand(1,20))
 			if(1)	newletter+="'"
@@ -236,7 +241,7 @@ proc/slur(n)
 	p = 1//1 is the start of any word
 	while(p <= n)//while P, which starts at 1 is less or equal to N which is the length.
 		var/n_letter = copytext(te, p, p + 1)//copies text from a certain distance. In this case, only one letter at a time.
-		if (prob(80) && (ckey(n_letter) in list("b","c","d","f","g","h","j","k","l","m","n","p","q","r","s","t","v","w","x","y","z")))
+		if (prob(80) && (ckey(n_letter) in list("b","c","d","f","g","h","j","k","l","m","n","p","q","r","s","t","v","w","x","y","z","á","â","ã","ä","æ","ç","é","ê","ë","ì","í","ï","ð","ñ","ò","ô","÷","ö","ø","ù")))
 			if (prob(10))
 				n_letter = text("[n_letter]-[n_letter]-[n_letter]-[n_letter]")//replaces the current letter with this instead.
 			else
