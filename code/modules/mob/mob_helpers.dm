@@ -225,6 +225,7 @@ proc/slur(n)
 			if(10)	newletter+="[newletter]"
 			if(20)	newletter+="[newletter][newletter]"
 		newphrase+="[newletter]";counter-=1
+	newphrase = copytext(sanitize(newphrase), 1, MAX_MESSAGE_LEN)
 	return newphrase
 
 /proc/stutter(n)
