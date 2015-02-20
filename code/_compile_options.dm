@@ -33,7 +33,7 @@
 #define POCKET_STRIP_DELAY			40	//time taken (in deciseconds) to search somebody's pockets
 #define DOOR_CRUSH_DAMAGE	10	//the amount of damage that airlocks deal when they crush you
 
-#define	HUNGER_FACTOR		0.02	//factor at which mob nutrition decreases
+#define	HUNGER_FACTOR		0.035	//factor at which mob nutrition decreases
 #define	REAGENTS_METABOLISM 0.2	//How many units of reagent are consumed per tick, by default.
 #define REAGENTS_EFFECT_MULTIPLIER (REAGENTS_METABOLISM / 0.2)	// By defining the effect multiplier this way, it'll exactly adjust all effects according to how they originally were with the 0.4 metabolism
 
