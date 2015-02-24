@@ -186,6 +186,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 			var/turf/T = get_turf(src)
 			T.visible_message(flavor_text)
 		SSobj.processing |= src
+		playsound(loc, 'light-cigarette.ogg', 25, 1, 1)
 
 		//can't think of any other way to update the overlays :<
 		if(ismob(loc))
