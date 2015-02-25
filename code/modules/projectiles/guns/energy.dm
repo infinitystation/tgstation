@@ -30,6 +30,7 @@
 		ammo_type[i] = shot
 	shot = ammo_type[select]
 	fire_sound = shot.fire_sound
+	fire_delay = shot.delay
 	update_icon()
 	return
 
@@ -37,6 +38,7 @@
 /obj/item/weapon/gun/energy/afterattack(atom/target as mob|obj|turf, mob/living/user as mob|obj, params)
 	newshot() //prepare a new shot
 	..()
+
 /obj/item/weapon/gun/energy/can_shoot()
 	var/obj/item/ammo_casing/energy/shot = ammo_type[select]
 	return power_supply.charge >= shot.e_cost
@@ -63,6 +65,7 @@
 		select = 1
 	var/obj/item/ammo_casing/energy/shot = ammo_type[select]
 	fire_sound = shot.fire_sound
+	fire_delay = shot.delay
 	if (shot.select_name)
 		user << "<span class='danger'>[src] is now set to [shot.select_name].</span>"
 	update_icon()

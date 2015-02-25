@@ -126,7 +126,7 @@
 	if(seconds_electrified > 0)
 		seconds_electrified--
 
-/obj/machinery/chem_dispenser/bartender/attackby(var/obj/item/I, var/mob/user)
+/obj/machinery/chem_dispenser/bartender/attackby(var/obj/item/I, var/mob/user as mob, params)
 	..()
 
 	if(default_deconstruction_screwdriver(user, "bardispenser-o", "bardispenser", I))
