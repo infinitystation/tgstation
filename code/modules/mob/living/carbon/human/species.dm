@@ -794,6 +794,8 @@
 				atk_verb = M.dna.species.attack_verb
 
 			var/damage = rand(0, 9)
+			if(M.gender == FEMALE)
+				damage = rand(0, 6)
 			damage += punchmod
 
 			if(!damage)
@@ -819,7 +821,7 @@
 							"<span class='userdanger'>[M] has [atk_verb]ed [H]!</span>")
 
 			H.apply_damage(damage, BRUTE, affecting, armor_block)
-			if((H.stat != DEAD) && damage >= 9)
+			if((H.stat != DEAD) && damage >= 9) // womans can't weaken human!
 				H.visible_message("<span class='danger'>[M] ослабил [H]!</span>", \
 								"<span class='userdanger'>[M] ослабил [H]!</span>")
 				H.apply_effect(4, WEAKEN, armor_block)
