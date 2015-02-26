@@ -3,7 +3,7 @@
 	icon = 'icons/mob/blob.dmi'
 	icon_state = "blank_blob"
 	health = 200
-	fire_resist = 2
+	fire_resist = 1
 	var/mob/camera/blob/overmind = null // the blob core's overmind
 	var/overmind_get_delay = 0 // we don't want to constantly try to find an overmind, do it every 30 seconds
 	var/resource_delay = 0
