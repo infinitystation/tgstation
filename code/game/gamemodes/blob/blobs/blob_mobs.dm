@@ -11,8 +11,8 @@
 	icon_state = "blobpod"
 	icon_living = "blobpod"
 	pass_flags = PASSBLOB
-	health = 40
-	maxHealth = 40
+	health = 20
+	maxHealth = 20
 	melee_damage_lower = 2
 	melee_damage_upper = 4
 	attacktext = "hits"
@@ -113,10 +113,10 @@
 	icon = 'icons/mob/blob.dmi'
 	icon_state = "blobbernaut"
 	icon_living = "blobbernaut"
-	icon_dead = "blobbernaut_death"
+	icon_dead = "blobbernaut_dead"
 	pass_flags = PASSBLOB
-	health = 240
-	maxHealth = 240
+	health = 100
+	maxHealth = 100
 	melee_damage_lower = 10
 	melee_damage_upper = 10
 	attacktext = "hits"
@@ -147,3 +147,7 @@
 
 /mob/living/simple_animal/hostile/blobbernaut/blob_act()
 	return
+
+/mob/living/simple_animal/hostile/blobbernaut/Die()
+	..()
+	flick("blobbernaut_death", src)
