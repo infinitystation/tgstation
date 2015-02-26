@@ -3,7 +3,7 @@
 	desc = "It's a g-g-g-g-ghooooost!" //jinkies!
 	icon = 'icons/mob/mob.dmi'
 	icon_state = "ghost"
-	layer = 4
+	layer = MOB_LAYER + 1
 	stat = DEAD
 	density = 0
 	canmove = 0
@@ -315,6 +315,6 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	if(href_list["flavor_more"])
 		var/mob/A = locate(href_list["flavor_more"])
 		var/dat = sanitize_a2u(A.flavor_text)
-		var/datum/browser/flavor_more = new(usr, "flavor", "[name]", 500, 200)
+		var/datum/browser/flavor_more = new(usr, "flavor", "[A.name]", 500, 200)
 		flavor_more.set_content(dat)
 		flavor_more.open(1)

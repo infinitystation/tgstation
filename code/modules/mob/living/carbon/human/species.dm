@@ -1,8 +1,11 @@
 // This code handles different species in the game.
 
-#define SPECIES_LAYER			23
-#define BODY_LAYER				22
-#define HAIR_LAYER				8
+#define SPECIES_LAYER			26
+#define BODY_BEHIND_LAYER		25
+#define BODY_LAYER				24
+#define BODY_ADJ_LAYER			23
+#define HAIR_LAYER				9
+#define BODY_FRONT_LAYER		2
 
 #define TINT_IMPAIR 2
 #define TINT_BLIND 3
@@ -43,6 +46,8 @@
 	var/nojumpsuit = 0	// this is sorta... weird. it basically lets you equip stuff that usually needs jumpsuits without one, like belts and pockets and ids
 
 	var/say_mod = "says"	// affects the speech message
+
+	var/list/mutant_bodyparts = list() 	// Parts of the body that are diferent enough from the standard human model that they cause clipping with some equipment
 
 	var/speedmod = 0	// this affects the race's speed. positive numbers make it move slower, negative numbers make it move faster
 	var/armor = 0		// overall defense for the race... or less defense, if it's negative.
@@ -87,19 +92,24 @@
 
 	var/g = (H.gender == FEMALE) ? "f" : "m"
 
+	if(!config.mutant_colors)
+		H.dna.mutant_color = default_color
+
 	if(MUTCOLORS in specflags)
 		var/image/spec_base
+		var/icon_state_string = "[id]_"
 		if(sexes)
-			spec_base = image("icon" = 'icons/mob/human.dmi', "icon_state" = "[id]_[g]_s", "layer" = -SPECIES_LAYER)
+			icon_state_string += "[g]_s"
 		else
-			spec_base = image("icon" = 'icons/mob/human.dmi', "icon_state" = "[id]_s", "layer" = -SPECIES_LAYER)
-		if(!config.mutant_colors)
-			H.dna.mutant_color = default_color
+			icon_state_string += "_s"
+
+		spec_base = image("icon" = 'icons/mob/human.dmi', "icon_state" = icon_state_string, "layer" = -SPECIES_LAYER)
+
 		spec_base.color = "#[H.dna.mutant_color]"
 		standing = spec_base
 
 	if(standing)
-		H.overlays_standing[SPECIES_LAYER]	= standing
+		H.overlays_standing[SPECIES_LAYER]	+= standing
 
 	H.apply_overlay(SPECIES_LAYER)
 
@@ -172,6 +182,8 @@
 
 	var/list/standing	= list()
 
+	handle_mutant_bodyparts(H)
+
 	// lipstick
 	if(H.lip_style && LIPS in specflags)
 		standing	+= image("icon"='icons/mob/human_face.dmi', "icon_state"="lips_[H.lip_style]_s", "layer" = -BODY_LAYER)
@@ -207,6 +219,53 @@
 	H.apply_overlay(BODY_LAYER)
 
 	return
+
+/datum/species/proc/handle_mutant_bodyparts(var/mob/living/carbon/human/H)
+	var/list/bodyparts_to_add = mutant_bodyparts.Copy()
+	var/list/relevent_layers = list(BODY_BEHIND_LAYER, BODY_ADJ_LAYER, BODY_FRONT_LAYER)
+	var/list/standing	= list()
+
+	H.remove_overlay(BODY_BEHIND_LAYER)
+	H.remove_overlay(BODY_ADJ_LAYER)
+	H.remove_overlay(BODY_FRONT_LAYER)
+
+	if(!mutant_bodyparts)
+		return
+
+	if("tail" in mutant_bodyparts)
+		if(H.wear_suit && (H.wear_suit.flags_inv & HIDEJUMPSUIT))
+			bodyparts_to_add -= "tail"
+
+	if("snout" in mutant_bodyparts) //Take a closer look at that snout!
+		if(H.wear_mask && (H.wear_mask.flags_inv & HIDEFACE))
+			bodyparts_to_add -= "snout"
+
+	if(!bodyparts_to_add)
+		return
+
+	var/icon_state_string = "[id]_"
+	var/g = (H.gender == FEMALE) ? "f" : "m"
+	var/image/I
+
+	if(sexes)
+		icon_state_string += "[g]_s"
+	else
+		icon_state_string += "_s"
+
+	if(!config.mutant_colors)
+		H.dna.mutant_color = default_color
+
+	for(var/layer in relevent_layers)
+		for(var/bodypart in bodyparts_to_add)
+			I = image("icon" = 'icons/mob/mutant_bodyparts.dmi', "icon_state" = "[icon_state_string]_[bodypart]_[layer]", "layer" =- layer)
+			I.color = "#[H.dna.mutant_color]"
+			standing += I
+		H.overlays_standing[layer] = standing.Copy()
+		standing = list()
+
+	H.apply_overlay(BODY_BEHIND_LAYER)
+	H.apply_overlay(BODY_ADJ_LAYER)
+	H.apply_overlay(BODY_FRONT_LAYER)
 
 /datum/species/proc/spec_life(var/mob/living/carbon/human/H)
 	return
@@ -408,20 +467,23 @@
 
 	//need to shit? yes! yes! yes!
 	if(H.need_to_shit >= H.need_to_shit_max)
-		H.Shit(H)
-		H << "Вы справили нужду"
+		H.emote("shit")
+		H << "<span class='notice'>Вы справили нужду</span>"
+
+	//really need to shit? not now, but i'm need to SHIT!!
+	else if((H.need_to_shit_max - H.need_to_shit)<20)
+		if(prob(10))
+			H << "<span class='danger'><b>Вам ОЧЕНЬ хочетс&#255; в туалет!</b></span>"
 
 	//really need to shit? not now, but i'm need to shit!
-	else if((H.need_to_shit > H.need_to_shit_again) && (H.need_to_shit >= (H.need_to_shit_max-40)))
-		H << "Вам ОЧЕНЬ СИЛЬНО хочетсЯ в туалет"
-		H.need_to_shit_again += 8
+	else if((H.need_to_shit_max - H.need_to_shit)<20)
+		if(prob(6))
+			H << "<span class='danger'>Вам очень хочетс&#255; в туалет!</span>"
 
 	//need to shit? not now, but...
-	else if((H.need_to_shit > H.need_to_shit_again) && (H.need_to_shit < (H.need_to_shit_max-40)))
-		H.need_to_shit_again += 70
-		if(H.need_to_shit_again >= (H.need_to_shit_max-40))
-			H.need_to_shit_again = (H.need_to_shit_max-40)
-		H << "Вам хочетсЯ в туалет"
+	else if((H.need_to_shit_max - H.need_to_shit)<80)
+		if(prob(3))
+			H << "<span class='notice'>Вам хочетс&#255; в туалет</span>"
 
 	// nutrition decrease & shit increase
 	if (H.nutrition > 0 && H.stat != 2)
@@ -690,8 +752,6 @@
 
 /datum/species/proc/movement_delay(var/mob/living/carbon/human/H)
 	var/mspeed = 0
-	if(H.status_flags & GOTTAGOFAST)
-		mspeed -= 1
 
 	var/hasjetpack = 0
 	if(istype(H.back, /obj/item/weapon/tank/jetpack))
@@ -724,6 +784,16 @@
 		mspeed += (283.222 - H.bodytemperature) / 10 * (grav+0.5)
 
 	mspeed += speedmod
+
+	if(H.status_flags & IGNORESLOWDOWN)
+		mspeed = 0
+
+	if(H.status_flags & GOTTAGOFAST)
+		mspeed -= 1
+
+	if(H.status_flags & GOTTAGOREALLYFAST)
+		mspeed -= 2
+
 
 	return mspeed
 
@@ -783,6 +853,8 @@
 				atk_verb = M.dna.species.attack_verb
 
 			var/damage = rand(0, 9)
+			if(M.gender == FEMALE)
+				damage = rand(0, 6)
 			damage += punchmod
 
 			if(!damage)
@@ -808,7 +880,7 @@
 							"<span class='userdanger'>[M] has [atk_verb]ed [H]!</span>")
 
 			H.apply_damage(damage, BRUTE, affecting, armor_block)
-			if((H.stat != DEAD) && damage >= 9)
+			if((H.stat != DEAD) && damage >= 9) // womans can't weaken human!
 				H.visible_message("<span class='danger'>[M] ослабил [H]!</span>", \
 								"<span class='userdanger'>[M] ослабил [H]!</span>")
 				H.apply_effect(4, WEAKEN, armor_block)
@@ -1350,8 +1422,11 @@
 		H.update_fire()
 
 #undef SPECIES_LAYER
+#undef BODY_BEHIND_LAYER
 #undef BODY_LAYER
+#undef BODY_ADJ_LAYER
 #undef HAIR_LAYER
+#undef BODY_FRONT_LAYER
 
 #undef HUMAN_MAX_OXYLOSS
 #undef HUMAN_CRIT_MAX_OXYLOSS

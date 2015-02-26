@@ -9,8 +9,8 @@
 	anchored = 1
 	var/health = 30
 	var/health_timestamp = 0
-	var/brute_resist = 4
-	var/fire_resist = 1
+	var/brute_resist = 2
+	var/fire_resist = 0
 	var/can_change_color = 1
 
 
@@ -155,7 +155,7 @@
 	L.blob_act()
 
 
-/obj/effect/blob/attackby(var/obj/item/weapon/W, var/mob/living/user)
+/obj/effect/blob/attackby(var/obj/item/weapon/W, var/mob/living/user, params)
 	user.changeNext_move(CLICK_CD_MELEE)
 	user.do_attack_animation(src)
 	playsound(src.loc, 'sound/effects/attackblob.ogg', 50, 1)

@@ -19,7 +19,7 @@
 	switch(act)//Even carbon organisms want it alphabetically ordered..
 		if ("aflap")
 			if (!src.restrained())
-				message = "<B>[src]</B> flaps \his wings ANGRILY!"
+				message = "<B>[src]</B> ј√–≈——»¬Ќќ хлопает крыльями!"
 				m_type = 2
 
 		if ("airguitar")
@@ -50,9 +50,16 @@
 				if (!M)
 					param = null
 				if (param)
-					message = "<B>[src]</B> поклонился [param]."
+					if(gender == FEMALE)
+						message = "<B>[src]</B> поклонилась [param]."
+					else
+						message = "<B>[src]</B> поклонилс&#255; [param]."
+
 				else
-					message = "<B>[src]</B> поклонился."
+					if(gender == FEMALE)
+						message = "<B>[src]</B> поклонилась."
+					else
+						message = "<B>[src]</B> поклонилс&#255;."
 			m_type = 1
 
 		if ("burp")
@@ -91,7 +98,7 @@
 
 		if ("flap")
 			if (!src.restrained())
-				message = "<B>[src]</B> хлопает крыльями."
+				message = "<B>[src]</B> хлопает крыль&#255;ми."
 				m_type = 2
 
 		if ("gasp")
@@ -126,7 +133,7 @@
 				m_type = 2
 
 		if ("shake")
-			message = "<B>[src]</B> трясЄт головой."
+			message = "<B>[src]</B> тр&#255;сЄт головой."
 			m_type = 1
 
 		if ("sneeze")
@@ -144,7 +151,7 @@
 				m_type = 2
 
 		if ("sniff")
-			message = "<B>[src]</B> принюхивается."
+			message = "<B>[src]</B> принюхиваетс&#255;."
 			m_type = 2
 
 		if ("snore")

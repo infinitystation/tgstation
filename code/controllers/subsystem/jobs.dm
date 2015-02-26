@@ -4,9 +4,10 @@ var/datum/subsystem/job/SSjob
 	name = "Jobs"
 	priority = 5
 
-	var/list/occupations = list()	//List of all jobs
-	var/list/unassigned = list()	//Players who need jobs
-	var/list/job_debug = list()		//Debug info
+	var/list/occupations = list()		//List of all jobs
+	var/list/unassigned = list()		//Players who need jobs
+	var/list/job_debug = list()			//Debug info
+	var/initial_players_to_assign = 0 	//used for checking against population caps
 
 /datum/subsystem/job/New()
 	NEW_SS_GLOBAL(SSjob)
@@ -205,6 +206,8 @@ var/datum/subsystem/job/SSjob
 		if(player.ready && player.mind && !player.mind.assigned_role)
 			unassigned += player
 
+	initial_players_to_assign = unassigned.len
+
 	Debug("DO, Len: [unassigned.len]")
 	if(unassigned.len == 0)	return 0
 
@@ -260,6 +263,8 @@ var/datum/subsystem/job/SSjob
 
 		// Loop through all unassigned players
 		for(var/mob/new_player/player in unassigned)
+			if(PopcapReached())
+				RejectPlayer(player)
 
 			// Loop through all jobs
 			for(var/datum/job/job in shuffledoccupations) // SHUFFLE ME BABY
@@ -292,11 +297,15 @@ var/datum/subsystem/job/SSjob
 	// Hand out random jobs to the people who didn't get any in the last check
 	// Also makes sure that they got their preference correct
 	for(var/mob/new_player/player in unassigned)
-		if(jobban_isbanned(player, "Assistant"))
+		if(PopcapReached())
+			RejectPlayer(player)
+		else if(jobban_isbanned(player, "Assistant"))
 			GiveRandomJob(player) //you get to roll for random before everyone else just to be sure you don't get assistant. you're so speshul
 
 	for(var/mob/new_player/player in unassigned)
-		if(player.client.prefs.userandomjob)
+		if(PopcapReached())
+			RejectPlayer(player)
+		else if(player.client.prefs.userandomjob)
 			GiveRandomJob(player)
 
 	Debug("DO, Standard Check end")
@@ -305,6 +314,8 @@ var/datum/subsystem/job/SSjob
 
 	// For those who wanted to be assistant if their preferences were filled, here you go.
 	for(var/mob/new_player/player in unassigned)
+		if(PopcapReached())
+			RejectPlayer(player)
 		Debug("AC2 Assistant located, Player: [player]")
 		AssignRole(player, "Assistant")
 	return 1
@@ -337,13 +348,13 @@ var/datum/subsystem/job/SSjob
 			H = new_mob
 		job.apply_fingerprints(H)
 
-	H << "<b>You are the [rank].</b>"
-	H << "<b>As the [rank] you answer directly to [job.supervisors]. Special circumstances may change this.</b>"
-	H << "<b>To speak on your departments radio, use the :h button. To see others, look closely at your headset.</b>"
+	H << "<b>Ваша професси&#255; - [rank].</b>"
+	H << "<b>Как [rank] вы подчин&#255;етесь [job.supervisors]. Некоторые ситуации могут это изменить</b>"
+	H << "<b>Чтобы использовать рабочий канал радиосв&#255;зи, используйте префикс :h. Чтобы посмотреть другие каналы, посмотрите на вашу гарнитуру.</b>"
 	if(job.req_admin_notify)
-		H << "<b>You are playing a job that is important for Game Progression. If you have to disconnect, please notify the admins via adminhelp.</b>"
+		H << "<b>Вы играете за профессию, котора&#255; очень важна дл&#255; общего хода игры. Если вы обнаружили, что не можете выполн&#255;ть эту работу из-за обсто&#255;тельств, происход&#255;щих в вашей реальной жизни, просто дайте знать об этом администрации (Adminhelp) ДО того, как вы уйдёте, пожалуйста.</b>"
 	if(config.minimal_access_threshold)
-		H << "<FONT color='blue'><B>As this station was initially staffed with a [config.jobs_have_minimal_access ? "full crew, only your job's necessities" : "skeleton crew, additional access may"] have been added to your ID card.</B></font>"
+		H << "<FONT color='blue'><B>Изначально, станци&#255; укомплектована [config.jobs_have_minimal_access ? "полным экипажем. На вашей ID-карте есть минимально-необходимый" : "неполным экипажем. На вашей ID-карте добавлен расширенный"] доступ по станции дл&#255; вашей профессии</B></font>"
 
 	H.update_hud() 	// Tmp fix for Github issue 1006. TODO: make all procs in update_icons.dm do client.screen |= equipment no matter what.
 	return 1
@@ -431,3 +442,16 @@ var/datum/subsystem/job/SSjob
 
 		tmp_str += "HIGH=[level1]|MEDIUM=[level2]|LOW=[level3]|NEVER=[level4]|BANNED=[level5]|YOUNG=[level6]|-"
 		feedback_add_details("job_preferences",tmp_str)
+
+/datum/subsystem/job/proc/PopcapReached()
+	if(config.hard_popcap || config.extreme_popcap)
+		var/relevent_cap = max(config.hard_popcap, config.extreme_popcap)
+		if((initial_players_to_assign - unassigned.len) >= relevent_cap)
+			return 1
+	return 0
+
+/datum/subsystem/job/proc/RejectPlayer(var/mob/new_player/player)
+	Debug("Popcap overflow Check observer located, Player: [player]")
+	player << "<b>You have failed to qualify for any job you desired.</b>"
+	unassigned -= player
+	player.ready = 0

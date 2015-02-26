@@ -45,20 +45,6 @@
 	..()
 	charge = 0
 
-/obj/item/weapon/stock_parts/cell/pulse //40 pulse shots
-	name = "pulse rifle power cell"
-	maxcharge = 8000
-	rating = 3
-	chargerate = 1500
-
-/obj/item/weapon/stock_parts/cell/pulse/carbine //25 pulse shots
-	name = "pulse carbine power cell"
-	maxcharge = 5000
-
-/obj/item/weapon/stock_parts/cell/pulse/pistol //10 pulse shots
-	name = "pulse pistol power cell"
-	maxcharge = 2000
-
 /obj/item/weapon/stock_parts/cell/high
 	name = "high-capacity power cell"
 	origin_tech = "powerstorage=2"

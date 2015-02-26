@@ -4,15 +4,26 @@
 	icon_state = "ionrifle"
 	item_state = null	//so the human update icon uses the icon_state instead.
 	origin_tech = "combat=2;magnets=4"
+	can_flashlight = 1
 	w_class = 5
 	flags =  CONDUCT
 	slot_flags = SLOT_BACK
 	ammo_type = list(/obj/item/ammo_casing/energy/ion)
-	pin = null
 
 
 /obj/item/weapon/gun/energy/ionrifle/emp_act(severity)
 	return
+
+/obj/item/weapon/gun/energy/ionrifle/carbine
+	name = "ion carbine"
+	desc = "The MK.II Prototype Ion Projector is a lightweight carbine version of the larger ion rifle, built to be ergonomic and efficient."
+	icon_state = "ioncarbine"
+	item_state = "ioncarbine"
+	origin_tech = "combat=4;magnets=4;materials=4"
+	w_class = 3
+	slot_flags = SLOT_BELT
+	pin = null
+	cell_type = null
 
 /obj/item/weapon/gun/energy/decloner
 	name = "biological demolecularisor"
@@ -32,6 +43,7 @@
 	modifystate = 1
 	var/charge_tick = 0
 	var/mode = 0 //0 = mutate, 1 = yield boost
+	cell_removing = 0
 
 /obj/item/weapon/gun/energy/floragun/New()
 	..()
@@ -64,7 +76,7 @@
 	item_state = "c20r"
 	w_class = 4
 	ammo_type = list(/obj/item/ammo_casing/energy/meteor)
-	cell_type = "/obj/item/weapon/stock_parts/cell/potato"
+	cell_type = /obj/item/weapon/stock_parts/cell/ammo
 	clumsy_check = 0 //Admin spawn only, might as well let clowns use it.
 	var/charge_tick = 0
 	var/recharge_time = 5 //Time it takes for shots to recharge (in ticks)
@@ -112,7 +124,8 @@
 	icon_state = "kineticgun"
 	item_state = "kineticgun"
 	ammo_type = list(/obj/item/ammo_casing/energy/kinetic)
-	cell_type = "/obj/item/weapon/stock_parts/cell/emproof"
+	cell_type = /obj/item/weapon/stock_parts/cell/emproof
+	cell_removing = 0
 	var/overheat = 0
 	var/recent_reload = 1
 	var/range_add = 0
@@ -127,7 +140,7 @@
 		charge.range += range_add
 
 
-/obj/item/weapon/gun/energy/kinetic_accelerator/attackby(obj/item/weapon/W as obj, mob/user as mob)
+/obj/item/weapon/gun/energy/kinetic_accelerator/attackby(obj/item/weapon/W as obj, mob/user as mob, params)
 	if(istype(W, /obj/item/weapon/screwdriver) && upgrades["screwdriver"] < 3)
 		upgrades["screwdriver"]++
 		overheat_time -= 1
@@ -147,8 +160,8 @@
 			upgrades["plasma"]++
 			range_add++
 			user << "<span class='info'>You upgrade [src]'s accelerating chamber with plasma.</span>"
-			if(prob(5 * (range_add + 1) * (range_add + 1)) && power_supply)
-				power_supply.rigged = 1 // This is dangerous!
+			// if(prob(5 * (range_add + 1) * (range_add + 1)) && power_supply)
+			//	power_supply.rigged = 1 // This is dangerous!
 			S.use(1)
 
 /obj/item/weapon/gun/energy/kinetic_accelerator/shoot_live_shot()
@@ -206,6 +219,7 @@
 	desc = "An integrated disabler that draws from a cyborg's power cell. This weapon contains a limiter to prevent the cyborg's power cell from overheating."
 	var/charge_tick = 0
 	var/recharge_time = 2.5
+	cell_removing = 0
 
 /obj/item/weapon/gun/energy/disabler/cyborg/New()
 	..()
@@ -240,6 +254,7 @@
 	icon_state = "wormhole_projector"
 	var/obj/effect/portal/blue
 	var/obj/effect/portal/orange
+	cell_removing = 0
 
 /obj/item/weapon/gun/energy/wormhole_projector/update_icon()
 	icon_state = "[initial(icon_state)][select]"
@@ -288,6 +303,7 @@
 	ammo_type = list(/obj/item/ammo_casing/energy/c3dbullet)
 	var/charge_tick = 0
 	var/recharge_time = 5
+	cell_removing = 0
 
 /obj/item/weapon/gun/energy/printer/update_icon()
 	return

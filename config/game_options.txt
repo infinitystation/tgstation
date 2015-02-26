@@ -91,7 +91,7 @@ PROBABILITY BLOB 2
 PROBABILITY RAGINMAGES 2
 PROBABILITY MONKEY 1
 PROBABILITY METEOR 0
-PROBABILITY EXTENDED 0
+PROBABILITY EXTENDED 3
 
 ## You probably want to keep sandbox off by default for secret and random.
 PROBABILITY SANDBOX 0
@@ -215,5 +215,10 @@ SILICON_MAX_LAW_AMOUNT 12
 JOIN_WITH_MUTANT_RACE
 
 ## Uncomment to allow certain species to have custom colors
-
 MUTANT_COLORS
+
+## Assistant slot cap. Set to -1 for unlimited.
+ASSISTANT_CAP -1
+
+## Starlight for exterior walls and breaches. Uncomment for starlight!
+STARLIGHT

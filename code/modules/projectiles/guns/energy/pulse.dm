@@ -8,7 +8,8 @@
 	flags =  CONDUCT
 	slot_flags = SLOT_BACK
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/pulse, /obj/item/ammo_casing/energy/electrode, /obj/item/ammo_casing/energy/laser)
-	cell_type = "/obj/item/weapon/stock_parts/cell/pulse"
+	cell_type = /obj/item/weapon/stock_parts/cell/ammo/pulse
+	cell_removing = 0
 
 /obj/item/weapon/gun/energy/pulse/attack_self(mob/living/user as mob)
 	select_fire(user)
@@ -26,7 +27,7 @@
 	slot_flags = SLOT_BELT
 	icon_state = "pulse_carbine"
 	item_state = "pulse"
-	cell_type = "/obj/item/weapon/stock_parts/cell/pulse/carbine"
+	cell_type = /obj/item/weapon/stock_parts/cell/ammo/pulse/carbine
 	can_flashlight = 1
 
 /obj/item/weapon/gun/energy/pulse/carbine/loyalpin
@@ -39,7 +40,7 @@
 	slot_flags = SLOT_BELT
 	icon_state = "pulse_pistol"
 	item_state = "gun"
-	cell_type = "/obj/item/weapon/stock_parts/cell/pulse/pistol"
+	cell_type = /obj/item/weapon/stock_parts/cell/ammo/pulse/pistol
 
 /obj/item/weapon/gun/energy/pulse/pistol/loyalpin
 	pin = /obj/item/device/firing_pin/implant/loyalty
@@ -47,7 +48,7 @@
 /obj/item/weapon/gun/energy/pulse/destroyer
 	name = "pulse destroyer"
 	desc = "A heavy-duty energy rifle built for pure destruction."
-	cell_type = "/obj/item/weapon/stock_parts/cell/infinite"
+	cell_type = /obj/item/weapon/stock_parts/cell/ammo/infinite
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/pulse)
 
 /obj/item/weapon/gun/energy/pulse/destroyer/attack_self(mob/living/user as mob)
@@ -58,4 +59,4 @@
 	desc = "A compact pulse core in a classic handgun frame for Nanotrasen officers. It's not the size of the gun, it's the size of the hole it puts through people."
 	icon_state = "m1911-p"
 	item_state = "gun"
-	cell_type = "/obj/item/weapon/stock_parts/cell/infinite"
+	cell_type = /obj/item/weapon/stock_parts/cell/ammo/infinite

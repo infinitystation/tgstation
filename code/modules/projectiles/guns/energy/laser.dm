@@ -28,6 +28,7 @@ obj/item/weapon/gun/energy/laser/retro
 	force = 10
 	origin_tech = null
 	var/charge_tick = 0
+	cell_removing = 0
 
 /obj/item/weapon/gun/energy/laser/captain/New()
 	..()
@@ -50,6 +51,7 @@ obj/item/weapon/gun/energy/laser/retro
 
 /obj/item/weapon/gun/energy/laser/cyborg
 	desc = "An energy-based laser gun that draws power from the cyborg's internal energy cell directly. So this is what freedom looks like?"
+	cell_removing = 0
 
 /obj/item/weapon/gun/energy/laser/cyborg/newshot()
 	if(isrobot(src.loc))
@@ -86,6 +88,7 @@ obj/item/weapon/gun/energy/laser/retro
 	origin_tech = "combat=4;materials=3;powerstorage=3"
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/heavy)
 	pin = null
+	cell_type = null
 
 /obj/item/weapon/gun/energy/xray
 	name = "xray laser gun"
@@ -95,6 +98,7 @@ obj/item/weapon/gun/energy/laser/retro
 	origin_tech = "combat=5;materials=3;magnets=2;syndicate=2"
 	ammo_type = list(/obj/item/ammo_casing/energy/xray)
 	pin = null
+	cell_type = null
 
 ////////Laser Tag////////////////////
 
@@ -106,6 +110,7 @@ obj/item/weapon/gun/energy/laser/retro
 	origin_tech = "combat=1;magnets=2"
 	clumsy_check = 0
 	var/charge_tick = 0
+	cell_removing = 0
 	pin = /obj/item/device/firing_pin/tag/blue
 
 /obj/item/weapon/gun/energy/laser/bluetag/New()
@@ -136,6 +141,7 @@ obj/item/weapon/gun/energy/laser/retro
 	origin_tech = "combat=1;magnets=2"
 	clumsy_check = 0
 	var/charge_tick = 0
+	cell_removing = 0
 	pin = /obj/item/device/firing_pin/tag/red
 
 /obj/item/weapon/gun/energy/laser/redtag/New()

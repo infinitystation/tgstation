@@ -30,7 +30,10 @@
 
 		if ("choke")
 			if (miming)
-				message = "<B>[src]</B> отчаянно схватился за горло и давится!"
+				if(gender == FEMALE)
+					message = "<B>[src]</B> отча&#255;нно схватилась за горло и давитс&#255;!"
+				else
+					message = "<B>[src]</B> отча&#255;нно схватилc&#255; за горло и давитс&#255;!"
 			else
 				..(act)
 
@@ -47,15 +50,18 @@
 
 		if ("collapse")
 			Paralyse(2)
-			message = "<B>[src]</B> рухнул!"
+			if(gender == FEMALE)
+				message = "<B>[src]</B> рухнула!"
+			else
+				message = "<B>[src]</B> рухнул!"
 			m_type = 2
 
 		if ("cough")
 			if (miming)
-				message = "<B>[src]</B> делает вид, что кашляет!"
+				message = "<B>[src]</B> делает вид, что кашл&#255;ет!"
 			else
 				if (!muzzled)
-					message = "<B>[src]</B> кашляет!"
+					message = "<B>[src]</B> кашл&#255;ет!"
 					m_type = 2
 				else
 					message = "<B>[src]</B> издаЄт громкий звук."
@@ -69,7 +75,7 @@
 					message = "<B>[src]</B> плачет."
 					m_type = 2
 				else
-					message = "<B>[src]</B> издаЄт слабый звук. ’мурится."
+					message = "<B>[src]</B> издаЄт слабый звук. ’муритс&#255;."
 					m_type = 2
 
 		if ("custom")
@@ -110,7 +116,7 @@
 				if (M)
 					message = "<B>[src]</B> даЄт приветственный кулак [M]."
 				else
-					message = "<B>[src]</B> к сожалению, поблизости нет никого, чтобы поприветствовать друг друга касанием кулаков, поприветствовал сам себя. —тыдобище."
+					message = "<B>[src]</B> к сожалению, поблизости нет никого, чтобы поприветствовать друг друга касанием кулаков, поприветствовал сам себ&#255;. —тыдобище."
 
 		if ("eyebrow")
 			message = "<B>[src]</B> приподнял бровь."
@@ -118,12 +124,12 @@
 
 		if ("flap")
 			if (!src.restrained())
-				message = "<B>[src]</B> хлопает крыльями."
+				message = "<B>[src]</B> хлопает крыль&#255;ми."
 				m_type = 2
 
 		if ("gasp")
 			if (miming)
-				message = "<B>[src]</B> выглядит, как буд-то задыхается!"
+				message = "<B>[src]</B> выгл&#255;дит, как буд-то задыхаетс&#255;!"
 			else
 				..(act)
 
@@ -166,7 +172,7 @@
 					if (M.canmove && !M.r_hand && !M.restrained())
 						message = "<B>[src]</B> пожимает руку [M]."
 					else
-						message = "<B>[src]</B> протягивает руку для рукопожатия [M]."
+						message = "<B>[src]</B> прот&#255;гивает руку дл&#255; рукопожати&#255; [M]."
 
 		if ("hug")
 			m_type = 1
@@ -182,7 +188,7 @@
 				if (M)
 					message = "<B>[src]</B> обнимает [M]."
 				else
-					message = "<B>[src]</B> обнимает сам себя."
+					message = "<B>[src]</B> обнимает сам себ&#255;."
 
 		if ("me")
 			if(silent)
@@ -211,7 +217,7 @@
 
 		if ("moan")
 			if(miming)
-				message = "<B>[src]</B> выглядит, как буд-то стонет!"
+				message = "<B>[src]</B> выгл&#255;дит, как буд-то стонет!"
 			else
 				message = "<B>[src]</B> стонет!"
 				m_type = 2
@@ -221,7 +227,10 @@
 			m_type = 2
 
 		if ("pale")
-			message = "<B>[src]</B> на секунду побледнел."
+			if(gender == FEMALE)
+				message = "<B>[src]</B> на секунду побледнела."
+			else
+				message = "<B>[src]</B> на секунду побледнел."
 			m_type = 1
 
 		if ("raise")
@@ -250,32 +259,6 @@
 				message = "<B>[src]</B> делает вид, что душераздирающе кричит!"
 			else
 				..(act)
-
-		if ("shit")
-			if(need_to_shit < 70)
-				src << "Ќечем испражнятся"
-				return
-
-			if((need_to_shit > 70) && (need_to_shit < need_to_shit_max))
-				for(var/obj/structure/toilet/T in view(0, src))
-					if(T.shit || T.w_items)
-						src << "” вас проблемы..."
-						Shit(src)
-						return
-					else
-						need_to_shit = 0
-						need_to_shit_again = 140
-						T.open = 1
-						T.shit++
-						T.update_icon()
-						src << "¬ы справили нужду, не забудьте смыть за собой, кликнув по унитазу"
-						return
-				src << "Ћучше найти ближайший туалет"
-				return
-
-			message = "<B>[src]</B> [pick("испражняется.", "высрал кучу говна.", "наложил кучу.", "накакал на пол.", "дрестанул говном на пол.")]"
-			Shit(src)
-			m_type = 1
 
 		if ("shiver")
 			message = "<B>[src]</B> дрожит."
@@ -330,7 +313,7 @@
 
 		if ("whimper")
 			if (miming)
-				message = "<B>[src]</B> выглядит обиженным."
+				message = "<B>[src]</B> выгл&#255;дит обиженным."
 			else
 				..(act)
 
