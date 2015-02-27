@@ -18,13 +18,19 @@
 			else
 				playsound(loc, 'sound/voice/clearing-throat-1.ogg', 25, 1, 1)
 			return "gibbers, \"[text]\"";
-	if (ending == "?")
+	if(ending == "?")
 		if(gender == FEMALE)
 			playsound(loc, 'sound/voice/clearing-throat-f.ogg', 15, 1, 1)
 		else
 			playsound(loc, 'sound/voice/clearing-throat-1.ogg', 25, 1, 1)
 		return "asks, \"[text]\"";
-	if (ending == "!")
+	if(copytext(text, length(text) - 1) == "!!")
+		if(gender == FEMALE)
+			playsound(loc, 'sound/voice/clearing-throat-f.ogg', 15, 1, 1)
+		else
+			playsound(loc, 'sound/voice/clearing-throat-1.ogg', 25, 1, 1)
+		return "yells, \"<span class = 'yell'>[text]</span>\"";
+	if(ending == "!")
 		if(gender == FEMALE)
 			playsound(loc, 'sound/voice/clearing-throat-f.ogg', 15, 1, 1)
 		else
