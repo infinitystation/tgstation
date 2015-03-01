@@ -173,9 +173,9 @@ var/global/all_solved_wires = list() //Solved wire associative list, eg; all_sol
 						for(var/colour in src.wires)
 							if(unsolved_wires[colour]) //unsolved_wires[red]
 								if(do_after(L, 10))
-									if(!IsColourCut(colour))
-										colour_function = unsolved_wires[colour] //unsolved_wires[red] = 1 so colour_index = 1
-										solved_colour_function = SolveWireFunction(colour_function) //unsolved_wires[red] = 1, 1 = AIRLOCK_WIRE_IDSCAN
+									colour_function = unsolved_wires[colour] //unsolved_wires[red] = 1 so colour_index = 1
+									solved_colour_function = SolveWireFunction(colour_function) //unsolved_wires[red] = 1, 1 = AIRLOCK_WIRE_IDSCAN
+									if(!IsColourCut(colour) && solved_colour_function)
 										L << "the [colour] wire connected to [solved_colour_function]" //the red wire is the ID wire
 										playsound(O.loc, 'sound/machines/ping.ogg', 30, 1)
 									else
