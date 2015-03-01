@@ -49,9 +49,6 @@
 #define FILE_DIR "sound/voice/complionator"
 #define FILE_DIR "sound/vox_fem"
 #define FILE_DIR "sound/weapons"
-#define FILE_DIR "tools"
-#define FILE_DIR "tools/AddToChangelog"
-#define FILE_DIR "tools/AddToChangelog/AddToChangelog"
 // END_FILE_DIR
 
 // BEGIN_PREFERENCES
@@ -846,6 +843,7 @@
 #include "code\modules\admin\verbs\modifyvariables.dm"
 #include "code\modules\admin\verbs\one_click_antag.dm"
 #include "code\modules\admin\verbs\onlyone.dm"
+#include "code\modules\admin\verbs\panicbunker.dm"
 #include "code\modules\admin\verbs\playsound.dm"
 #include "code\modules\admin\verbs\possess.dm"
 #include "code\modules\admin\verbs\pray.dm"
@@ -1439,6 +1437,7 @@
 #include "code\modules\surgery\limb augmentation.dm"
 #include "code\modules\surgery\lipoplasty.dm"
 #include "code\modules\surgery\plastic_surgery.dm"
+#include "code\modules\surgery\remove_embedded_object.dm"
 #include "code\modules\surgery\surgery.dm"
 #include "code\modules\surgery\surgery_step.dm"
 #include "code\modules\surgery\tools.dm"

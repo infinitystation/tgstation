@@ -207,6 +207,19 @@
 	ammo_type = list(/obj/item/ammo_casing/energy/bolt/large)
 	pin = null
 
+/obj/item/weapon/gun/energy/kinetic_accelerator/crossbow/large/attackby(obj/item/weapon/W as obj, mob/user as mob, params)
+	..()
+	if(istype(W, /obj/item/weapon/wirecutters))
+		if(pin)
+			if(user.l_hand != src && user.r_hand != src)
+				user << "<span class='notice'>You'll need [src] in your hands to do that.</span>"
+				return
+			user << "<span class ='notice'>Вы вынимаете ударник с [src]...</span>"
+			if(do_after(user, 20))
+				pin.loc = get_turf(src.loc)
+				pin = null
+				user << "<span class ='notice'>Вы вытащили ударник с [src]!</span>"
+
 /obj/item/weapon/gun/energy/disabler
 	name = "disabler"
 	desc = "A self-defense weapon that exhausts organic targets, weakening them until they collapse."
