@@ -992,8 +992,12 @@
 		switch(hit_area)
 			if("head")	//Harder to score a stun but if you do it lasts a bit longer
 				if(H.stat == CONSCIOUS && prob(I.force) && armor < 50)
-					H.visible_message("<span class='danger'>[H] был вырублен без сознаниЯ!</span>", \
-									"<span class='userdanger'>[H] был вырублен без сознаниЯ!</span>")
+					if(H.gender == FEMALE)
+						H.visible_message("<span class='danger'>[H] была вырублена без сознани&#255;!</span>", \
+										"<span class='userdanger'>[H] была вырублена без сознани&#255;!</span>")
+					else
+						H.visible_message("<span class='danger'>[H] была вырублен без сознани&#255;!</span>", \
+										"<span class='userdanger'>[H] была вырублен без сознани&#255;!</span>")
 					H.apply_effect(20, PARALYZE, armor)
 					if(H != user && I.damtype == BRUTE)
 						ticker.mode.remove_revolutionary(H.mind)
@@ -1012,8 +1016,12 @@
 
 			if("chest")	//Easier to score a stun but lasts less time
 				if(H.stat == CONSCIOUS && I.force && prob(I.force + 10))
-					H.visible_message("<span class='danger'>[H] был свален на землю!</span>", \
-									"<span class='userdanger'>[H] был свален на землю!</span>")
+					if(H.gender == FEMALE)
+						H.visible_message("<span class='danger'>[H] была свалена на землю!</span>", \
+										"<span class='userdanger'>[H] была свалена на землю!</span>")
+					else
+						H.visible_message("<span class='danger'>[H] был свален на землю!</span>", \
+										"<span class='userdanger'>[H] был свален на землю!</span>")
 					H.apply_effect(5, WEAKEN, armor)
 
 				if(bloody)
