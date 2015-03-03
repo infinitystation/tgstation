@@ -4,12 +4,12 @@
 /datum/game_mode/wizard
 	name = "wizard"
 	config_tag = "wizard"
-	minimal_player_age = 30
 	antag_flag = BE_WIZARD
 	required_players = 10
 	required_enemies = 1
 	recommended_enemies = 1
 	pre_setup_before_jobs = 1
+	enemy_minimum_age = 14
 	var/use_huds = 0
 	var/finished = 0
 
