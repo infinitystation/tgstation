@@ -814,10 +814,12 @@ var/global/list/obj/item/device/pda/PDAs = list()
 			U << "ERROR: Cannot reach recepient."
 			return
 		useMS.send_pda_message("[P.owner]","[owner]","[t]")
-
 		var/t_u = copytext(sanitize_a2u(t), 1, MAX_MESSAGE_LEN)
 		tnote += "<i><b>&rarr; To [P.owner]:</b></i><br>[t_u]<br>"
 		P.tnote += "<i><b>&larr; From <a href='byond://?src=\ref[P];choice=Message;target=\ref[src]'>[owner]</a> ([ownjob]):</b></i><br>[t_u]<br>"
+		for(var/mob/M in player_list)
+			if(isobserver(M) && M.client && (M.client.prefs.toggles & CHAT_GHOSTPDA))
+				M.show_message("<span class='game say'>PDA Message - <span class='name'>[owner]</span> -> <span class='name'>[P.owner]</span>: <span class='message'>[t]</span></span>")
 
 		if (!P.silent)
 			playsound(P.loc, 'sound/machines/twobeep.ogg', 50, 1)
