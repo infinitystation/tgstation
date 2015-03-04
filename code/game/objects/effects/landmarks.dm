@@ -88,6 +88,7 @@
 	..()
 	tag = "start*[name]"
 	invisibility = 101
+	start_landmarks_list += src
 
 	return 1
 
