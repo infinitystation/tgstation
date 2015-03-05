@@ -10,7 +10,6 @@
 	name = "traitor"
 	config_tag = "traitor"
 	antag_flag = BE_TRAITOR
-	minimal_player_age = 20
 	restricted_jobs = list("Cyborg")//They are part of the AI if he is traitor so are they, they use to get double chances
 	protected_jobs = list("Security Officer", "Warden", "Detective", "Head of Security", "Captain")//AI", Currently out of the list as malf does not work for shit
 	required_players = 0
@@ -81,8 +80,9 @@
 	if(traitors.len <= (traitorcap - 2) || prob(100 / (config.traitor_scaling_coeff * 2)))
 		if(character.client.prefs.be_special & BE_TRAITOR)
 			if(!jobban_isbanned(character.client, "traitor") && !jobban_isbanned(character.client, "Syndicate"))
-				if(!(character.job in ticker.mode.restricted_jobs))
-					add_latejoin_traitor(character.mind)
+				if(age_check(character.client))
+					if(!(character.job in ticker.mode.restricted_jobs))
+						add_latejoin_traitor(character.mind)
 	..()
 
 /datum/game_mode/traitor/proc/add_latejoin_traitor(var/datum/mind/character)
