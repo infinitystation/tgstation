@@ -20,9 +20,6 @@
 	var/image/C = new('icons/mob/blob.dmi', "blob_node_overlay")
 	src.overlays += C
 
-/obj/effect/blob/node/fire_act(datum/gas_mixture/air, exposed_temperature, exposed_volume)
-	return
-
 /obj/effect/blob/node/Destroy()
 	blob_nodes -= src
 	SSobj.processing.Remove(src)

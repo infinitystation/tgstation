@@ -10,7 +10,7 @@
 	var/health = 30
 	var/health_timestamp = 0
 	var/brute_resist = 2
-	var/fire_resist = 0
+	var/fire_resist = 0.3
 
 
 /obj/effect/blob/New(loc)
@@ -42,7 +42,7 @@
 
 /obj/effect/blob/fire_act(datum/gas_mixture/air, exposed_temperature, exposed_volume)
 	..()
-	var/damage = Clamp(0.01 * exposed_temperature / fire_resist, 0, 4 - fire_resist)
+	var/damage = Clamp(0.3 * exposed_temperature / fire_resist, 0, 10)
 	if(damage)
 		health -= damage
 		update_icon()
