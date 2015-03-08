@@ -15,7 +15,7 @@ z7 = empty space
 
 #if !defined(MAP_FILE)
 
-        #include "map_files\MetaStation\MetaStation.v40D Fix.dmm"
+        #include "map_files\MetaStation\MetaStation.v40D - Fix 2.dmm"
         #include "map_files\MetaStation\z2.dmm"
         #include "map_files\MetaStation\z3.dmm"
         #include "map_files\generic\z4.dmm"
