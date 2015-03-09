@@ -38,9 +38,6 @@
 	SSobj.processing.Remove(src)
 	..()
 
-/obj/effect/blob/core/fire_act(datum/gas_mixture/air, exposed_temperature, exposed_volume)
-	return
-
 /obj/effect/blob/core/update_icon()
 	if(health <= 0)
 		qdel(src)
@@ -66,7 +63,7 @@
 	for(var/i = 1; i < 8; i += i)
 		Pulse(0, i, overmind.blob_reagent_datum.color)
 	for(var/b_dir in alldirs)
-		if(!prob(5))
+		if(!prob(15))
 			continue
 		var/obj/effect/blob/normal/B = locate() in get_step(src, b_dir)
 		if(B)
