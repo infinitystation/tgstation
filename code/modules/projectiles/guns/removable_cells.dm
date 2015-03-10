@@ -1,21 +1,20 @@
-//чистый код, можно даже не вставлять.
-/obj/item/weapon/gun/energy/verb/eject_battery(mob/living/user as mob)
+/obj/item/weapon/gun/energy/verb/eject_battery()
 	if (cell_removing)
 		set name = "Eject Battery"
 		set category = "Object"
 
 		if(power_supply)
-			user << "<span class='notice'>You pull the [power_supply] out of \the [src]!</span>"
+			usr << "<span class='notice'>You pull the [power_supply] out of \the [src]!</span>"
 			power_supply.loc = get_turf(src.loc)
 			power_supply.update_icon()
-			user.put_in_hands(power_supply)
+			usr.put_in_hands(power_supply)
 			power_supply = null
 			update_icon()
 			return
 		else
-			user << "<span class='notice'>It has no cell!</span>"
+			usr << "<span class='notice'>It has no cell!</span>"
 	else
-		user << "<span class='notice'>You cant remove cell from that gun</span>"
+		usr << "<span class='notice'>You cant remove cell from that gun</span>"
 	return
 
 /obj/item/weapon/gun/energy/attackby(var/obj/item/A as obj, mob/user as mob)
