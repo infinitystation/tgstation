@@ -174,7 +174,7 @@ datum/reagent/medicine/bicaridine
 	color = "#C8A5DC" // rgb: 200, 165, 220
 
 datum/reagent/medicine/bicaridine/on_mob_life(var/mob/living/M as mob)
-	if(M.stat != DEAD)
+	if(M.stat != DEAD && M.health < 50)
 		M.heal_organ_damage(1*REM,0)
 	..()
 	return
@@ -193,7 +193,7 @@ datum/reagent/medicine/kelotane
 	color = "#C8A5DC" // rgb: 200, 165, 220
 
 datum/reagent/medicine/kelotane/on_mob_life(var/mob/living/M as mob)
-	if(M.stat != DEAD)
+	if(M.stat != DEAD && M.health < 50)
 		M.heal_organ_damage(0,1*REM)
 	..()
 	return
