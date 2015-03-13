@@ -170,7 +170,7 @@ datum/reagent/omnizine/on_mob_life(var/mob/living/M as mob)
 	name = "Omnizine"
 	id = "omnizine"
 	result = "omnizine"
-	required_reagents = list("styptic_powder" = 1, "silver_sulfadiazine" = 1, "salglu_solution" = 1, "epinephrine" = 1)
+	required_reagents = list("styptic_powder" = 1, "silver_sulfadiazine" = 1, "charcoal" = 1, "epinephrine" = 1)
 	result_amount = 4
 
 datum/reagent/omnizine/overdose_process(var/mob/living/M as mob)
