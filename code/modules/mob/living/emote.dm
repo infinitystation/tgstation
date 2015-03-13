@@ -217,7 +217,7 @@
 			//we need to shit?
 			if((need_to_shit > 70) && (need_to_shit < need_to_shit_max))
 				for(var/obj/structure/toilet/T in view(0, src))	//checking toilets
-					if(T.shit || T.w_items)
+					if(T.shit>0 || T.w_items>0)
 						Shit(src)
 						return
 					else
@@ -225,7 +225,7 @@
 						T.open = 1
 						T.shit++
 						T.update_icon()
-						src << "Вы справили нужду, не забудьте смыть за собой, кликнув по унитазу"
+						src << "Вы справили нужду, не забудьте смыть за собой. Object -> Wash Off."
 						return
 				src << "Лучше найти ближайший туалет"
 				return
