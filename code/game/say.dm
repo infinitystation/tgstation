@@ -62,13 +62,13 @@ var/list/freqtospan = list(
 		return "says, \"...\""	//not the best solution, but it will stop a large number of runtimes. The cause is somewhere in the Tcomms code
 	var/ending = copytext(text, length(text))
 	if(ending == "?")
-		return "asks, \"[text]\""
+		return "спрашивает, \"[text]\""
 	if(copytext(text, length(text) - 1) == "!!")
-		return "yells, \"<span class = 'yell'>[text]</span>\""
+		return "орет, \"<span class = 'yell'>[text]</span>\""
 	if(ending == "!")
-		return "exclaims, \"[text]\""
+		return "восклицает, \"[text]\""
 
-	return "says, \"[text]\""
+	return "говорит, \"[text]\""
 
 /atom/movable/proc/lang_treat(atom/movable/speaker, message_langs, raw_message)
 	if(languages & message_langs)
