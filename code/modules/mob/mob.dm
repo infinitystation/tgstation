@@ -1016,8 +1016,11 @@ var/list/slot_equipment_priority = list( \
 
 /mob/proc/warn_flavor_changed()
 	if(flavor_text && flavor_text != "") // don't spam people that don't use it!
-		src << "<h2 class='alert'>OOC Warning:</h2>"
-		src << "<span class='alert'>Your flavor text is likely out of date! <a href=?src=\ref[usr];flavor_change=1>Change</a></span>"
+		src << "<h2 class='alert'>OOC Предупреждение!:</h2>"
+		src << "<span class='alert'>Ваше описание персонажа устарело <a href=?src=\ref[usr];flavor_change=1>Помен&#255;ть.</a></span>"
+		return
+	else
+		return
 
 /mob/proc/print_flavor_text()
 	if (flavor_text && flavor_text != "")

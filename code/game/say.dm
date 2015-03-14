@@ -59,7 +59,7 @@ var/list/freqtospan = list(
 
 /atom/movable/proc/say_quote(var/text)
 	if(!text)
-		return "says, \"...\""	//not the best solution, but it will stop a large number of runtimes. The cause is somewhere in the Tcomms code
+		return "говорит, \"...\""	//not the best solution, but it will stop a large number of runtimes. The cause is somewhere in the Tcomms code
 	var/ending = copytext(text, length(text))
 	if(ending == "?")
 		return "спрашивает, \"[text]\""

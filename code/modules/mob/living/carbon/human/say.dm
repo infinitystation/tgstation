@@ -1,6 +1,6 @@
 /mob/living/carbon/human/say_quote(text)
 	if(!text)
-		return "says, \"...\"";	//not the best solution, but it will stop a large number of runtimes. The cause is somewhere in the Tcomms code
+		return "говорит, \"...\"";	//not the best solution, but it will stop a large number of runtimes. The cause is somewhere in the Tcomms code
 	var/ending = copytext(text, length(text))
 	if (src.stuttering)
 		if(gender == FEMALE)

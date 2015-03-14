@@ -236,7 +236,7 @@
 		var/emote = pick(speak_emote)
 		if(emote)
 			return "[emote], \"[text]\""
-	return "says, \"[text]\"";
+	return "говорит, \"[text]\"";
 
 /mob/living/simple_animal/emote(var/act, var/m_type=1, var/message = null)
 	if(stat)

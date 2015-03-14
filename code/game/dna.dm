@@ -279,6 +279,9 @@
 
 		H.update_body()
 		H.update_hair()
+
+		H.warn_flavor_changed()
+		H.flavor_text = ""
 	return 1
 
 /proc/domutcheck(mob/living/carbon/M)
