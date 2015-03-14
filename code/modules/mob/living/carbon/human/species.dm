@@ -634,14 +634,6 @@
 		else
 			H.throw_alert("nutrition","starving")
 
-	if(H.pullin)
-		if(H.pulling)								H.pullin.icon_state = "pull"
-		else									H.pullin.icon_state = "pull0"
-//			if(rest)	//Not used with new UI
-//				if(resting || lying || sleeping)		rest.icon_state = "rest1"
-//				else									rest.icon_state = "rest0"
-
-
 	return 1
 
 /datum/species/proc/handle_mutations_and_radiation(var/mob/living/carbon/human/H)
@@ -785,6 +777,8 @@
 			if(M.gender == FEMALE)
 				damage = rand(0, 6)
 			damage += punchmod
+			if(M.dna)
+				damage += M.dna.species.punchmod
 
 			if(!damage)
 				if(M.dna)
@@ -926,8 +920,8 @@
 							H.visible_message("<span class='danger'>[H] была вырублена без сознани&#255;!</span>", \
 										"<span class='userdanger'>[H] была вырублена без сознани&#255;!</span>")
 						else
-							H.visible_message("<span class='danger'>[H] была вырублен без сознани&#255;!</span>", \
-										"<span class='userdanger'>[H] была вырублен без сознани&#255;!</span>")
+							H.visible_message("<span class='danger'>[H] был вырублен без сознани&#255;!</span>", \
+										"<span class='userdanger'>[H] был вырублен без сознани&#255;!</span>")
 						H.apply_effect(20, PARALYZE, armor)
 					if(prob(I.force + ((100 - H.health)/2)) && H != user && I.damtype == BRUTE)
 						ticker.mode.remove_revolutionary(H.mind)
