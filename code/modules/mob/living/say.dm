@@ -304,7 +304,7 @@ var/list/department_radio_keys = list(
 
 /mob/living/say_quote()
 	if (stuttering)
-		return "stammers, \"[text]\""
+		return "бормочет, \"[text]\""
 	if (getBrainLoss() >= 60)
-		return "gibbers, \"[text]\""
+		return "тараторит, \"[text]\""
 	return ..()

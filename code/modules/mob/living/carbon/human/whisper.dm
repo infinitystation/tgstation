@@ -27,7 +27,7 @@
 
 	var/alt_name = get_alt_name()
 
-	var/whispers = "whispers"
+	var/whispers = "шепчет"
 	var/critical = InCritical()
 
 	// We are unconscious but not in critical, so don't allow them to whisper.
@@ -41,7 +41,7 @@
 		var/message_len = length(message)
 		message = copytext(message, 1, health_diff) + "[message_len > health_diff ? "-.." : "..."]"
 		message = Ellipsis(message, 10, 1)
-		whispers = "whispers in their final breath"
+		whispers = "шепчет на последнем дыхании"
 
 	message = treat_message(message)
 

@@ -5,11 +5,11 @@
 	var/ending = copytext(text, length(text))
 
 	if (ending == "?")
-		return "telepathically asks, \"[text]\"";
+		return "телепатически спрашивает, \"[text]\"";
 	else if (ending == "!")
-		return "telepathically cries, \"[text]\"";
+		return "телепатически кричит, \"[text]\"";
 
-	return "telepathically chirps, \"[text]\"";
+	return "телепатически щебечет, \"[text]\"";
 
 /mob/living/carbon/slime/Hear(message, atom/movable/speaker, message_langs, raw_message, radio_freq)
 	if(speaker != src && !radio_freq)

@@ -45,7 +45,7 @@
 	var/list/no_equip = list()	// slots the race can't equip stuff to
 	var/nojumpsuit = 0	// this is sorta... weird. it basically lets you equip stuff that usually needs jumpsuits without one, like belts and pockets and ids
 
-	var/say_mod = "says"	// affects the speech message
+	var/say_mod = "говорит"	// affects the speech message
 
 	var/list/mutant_bodyparts = list() 	// Parts of the body that are diferent enough from the standard human model that they cause clipping with some equipment
 
@@ -725,7 +725,10 @@
 /datum/species/proc/spec_attack_hand(var/mob/living/carbon/human/M, var/mob/living/carbon/human/H)
 	if((M != H) && H.check_shields(0, M.name))
 		add_logs(M, H, "attempted to touch")
-		H.visible_message("<span class='warning'>[M] попыталсЯ коснутьсЯ [H]!</span>")
+		if(M.gender == FEMALE)
+			H.visible_message("<span class='warning'>[M] попыталась коснутьс&#255; [H]!</span>")
+		else
+			H.visible_message("<span class='warning'>[M] попыталс&#255; коснутьс&#255; [H]!</span>")
 		return 0
 
 	switch(M.a_intent)
@@ -822,8 +825,12 @@
 			if(randn <= 25)
 				H.apply_effect(2, WEAKEN, H.run_armor_check(affecting, "melee"))
 				playsound(H, 'sound/weapons/thudswoosh.ogg', 50, 1, -1)
-				H.visible_message("<span class='danger'>[M] ударил [H]!</span>",
-								"<span class='userdanger'>[M] ударил [H]!</span>")
+				if(M.gender == FEMALE)
+					H.visible_message("<span class='danger'>[M] повалила [H]!</span>",
+									"<span class='userdanger'>[M] повалила [H]!</span>")
+				else
+					H.visible_message("<span class='danger'>[M] повалил [H]!</span>",
+									"<span class='userdanger'>[M] повалил [H]!</span>")
 				H.forcesay(hit_appends)
 				return
 

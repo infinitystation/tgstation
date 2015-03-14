@@ -80,9 +80,9 @@
 	if(revdata.revision)
 		feedback_set_details("revision","[revdata.revision]")
 	feedback_set_details("server_ip","[world.internet_address]:[world.port]")
-	if(report)
+	/* if(report)
 		spawn (rand(waittime_l, waittime_h))
-			send_intercept(0)
+			send_intercept(0) */
 	start_state = new /datum/station_state()
 	start_state.count()
 	return 1
