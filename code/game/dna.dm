@@ -298,7 +298,7 @@
 
 //////////////////////////////////////////////////////////// Monkey Block
 	if(M)
-		M.regenerate_icons()
+		M.update_icon = 1	//queue a full icon update at next life() call
 	return 1
 /////////////////////////// DNA MISC-PROCS
 

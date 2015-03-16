@@ -224,6 +224,9 @@
 		remaining_uses--
 		return 1
 
+/obj/item/weapon/shield/changeling/IsReflect()
+	return 0
+
 
 /***************************************\
 |*********SPACE SUIT + HELMET***********|

@@ -52,7 +52,7 @@
 	name = "Not a sandwich"
 	reqs = list(
 		/obj/item/weapon/reagent_containers/food/snacks/breadslice/plain = 2,
-		/obj/item/clothing/mask/fakemoustache = 1
+		/obj/item/clothing/mask/fakemoustache
 	)
 	result = /obj/item/weapon/reagent_containers/food/snacks/notasandwich
 

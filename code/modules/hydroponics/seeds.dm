@@ -721,11 +721,11 @@
 
 /obj/item/seeds/steelmycelium
 	name = "pack of steel-cap mycelium"
-	desc = "This mycelium grows into steel logs."
+	desc = "This mycelium grows into metal rods."
 	icon_state = "mycelium-steelcap"
 	species = "steelcap"
 	plantname = "Steel Caps"
-	product = /obj/item/weapon/grown/log/steel
+	product = /obj/item/stack/rods
 	lifespan = 80
 	endurance = 50
 	maturation = 15

@@ -7,6 +7,7 @@
 	gender = NEUTER
 	pass_flags = PASSTABLE
 	languages = MONKEY
+	update_icon = 0		///no need to call regenerate_icon
 	ventcrawler = 1
 
 /mob/living/carbon/monkey/New()
@@ -261,4 +262,5 @@
 			src << "<span class='warning'>Your mask protects you from the acid.</span>"
 		return
 
-	take_organ_damage(min(6*toxpwr, acid_volume * toxpwr))
+	if(!unacidable)
+		take_organ_damage(min(6*toxpwr, acid_volume * toxpwr))

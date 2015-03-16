@@ -5,6 +5,7 @@
 	icon_state = "delivery"
 	item_state = "flashbang"
 	origin_tech = "materials=3;magnets=4"
+	var/banglet = 0
 	var/spawner_type = null // must be an object path
 	var/deliveryamt = 1 // amount of type to deliver
 
@@ -15,7 +16,8 @@
 		var/turf/T = get_turf(src)
 		playsound(T, 'sound/effects/phasein.ogg', 100, 1)
 		for(var/mob/living/carbon/human/M in viewers(T, null))
-			M.flash_eyes()
+			if(M:eyecheck() <= 0)
+				flick("e_flash", M.flash) // flash dose faggots
 
 		for(var/i=1, i<=deliveryamt, i++)
 			var/atom/movable/x = new spawner_type
