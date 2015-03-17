@@ -58,4 +58,7 @@
 	if(delete_old_mob)
 		spawn(1)
 			qdel(src)
+
+	M.regenerate_icons()
+
 	return M

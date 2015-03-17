@@ -282,6 +282,8 @@
 
 		H.warn_flavor_changed()
 		H.flavor_text = ""
+
+		H.regenerate_icons()
 	return 1
 
 /proc/domutcheck(mob/living/carbon/M)
@@ -298,7 +300,7 @@
 
 //////////////////////////////////////////////////////////// Monkey Block
 	if(M)
-		M.update_icon = 1	//queue a full icon update at next life() call
+		M.regenerate_icons()
 	return 1
 /////////////////////////// DNA MISC-PROCS
 

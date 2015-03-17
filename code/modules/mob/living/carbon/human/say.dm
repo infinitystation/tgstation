@@ -1,15 +1,15 @@
 /mob/living/carbon/human/say_quote(text)
 	if(!text)
-		return "говорит, \"...\"";	//not the best solution, but it will stop a large number of runtimes. The cause is somewhere in the Tcomms code
+		return "говорит, \"...\""	//not the best solution, but it will stop a large number of runtimes. The cause is somewhere in the Tcomms code
 	var/ending = copytext(text, length(text))
 	if (src.stuttering)
 		if(gender == FEMALE)
 			playsound(loc, 'sound/voice/clearing-throat-f.ogg', 15, 1, 1)
 		else
 			playsound(loc, 'sound/voice/clearing-throat-1.ogg', 25, 1, 1)
-		return "бормочет, \"[text]\"";
+		return "бормочет, \"[text]\""
 	if(src.slurring)
-		return "невн&#255;тно говорит, \"[text]\"";
+		return "невн&#255;тно говорит, \"[text]\""
 	if(isliving(src))
 		var/mob/living/L = src
 		if (L.getBrainLoss() >= 60)
@@ -17,32 +17,34 @@
 				playsound(loc, 'sound/voice/clearing-throat-f.ogg', 15, 1, 1)
 			else
 				playsound(loc, 'sound/voice/clearing-throat-1.ogg', 25, 1, 1)
-			return "тараторит, \"[text]\"";
+			return "тараторит, \"[text]\""
 	if(ending == "?")
 		if(gender == FEMALE)
 			playsound(loc, 'sound/voice/clearing-throat-f.ogg', 15, 1, 1)
 		else
 			playsound(loc, 'sound/voice/clearing-throat-1.ogg', 25, 1, 1)
-		return "спрашивает, \"[text]\"";
+		return "спрашивает, \"[text]\""
+
 	if(copytext(text, length(text) - 1) == "!!")
 		if(gender == FEMALE)
 			playsound(loc, 'sound/voice/clearing-throat-f.ogg', 15, 1, 1)
 		else
 			playsound(loc, 'sound/voice/clearing-throat-1.ogg', 25, 1, 1)
-		return "орёт, \"<span class = 'yell'>[text]</span>\"";
+		return "орёт, \"<span class = 'yell'>[text]</span>\""
+
 	if(ending == "!")
 		if(gender == FEMALE)
 			playsound(loc, 'sound/voice/clearing-throat-f.ogg', 15, 1, 1)
 		else
 			playsound(loc, 'sound/voice/clearing-throat-1.ogg', 25, 1, 1)
-		return "восклицает, \"[text]\"";
+		return "восклицает, \"[text]\""
 
 	if(dna)
 		if(gender == FEMALE)
 			playsound(loc, 'sound/voice/clearing-throat-f.ogg', 15, 1, 1)
 		else
 			playsound(loc, 'sound/voice/clearing-throat-1.ogg', 25, 1, 1)
-		return "[dna.species.say_mod], \"[text]\"";
+		return "[dna.species.say_mod], \"[text]\""
 
 	if(gender == FEMALE)
 		playsound(loc, 'sound/voice/clearing-throat-f.ogg', 15, 1, 1)
