@@ -157,6 +157,10 @@
 	update_icon()
 	return
 
+/obj/item/weapon/flamethrower/CheckParts()
+	weldtool = locate(/obj/item/weapon/weldingtool) in contents
+	igniter = locate(/obj/item/device/assembly/igniter) in contents
+	update_icon()
 
 //Called from turf.dm turf/dblclick
 /obj/item/weapon/flamethrower/proc/flame_turf(turflist)
