@@ -19,7 +19,7 @@
 	switch(act)//Even carbon organisms want it alphabetically ordered..
 		if ("aflap")
 			if (!src.restrained())
-				message = "<B>[src]</B> ј√–≈——»¬Ќќ хлопает крыльями!"
+				message = "<B>[src]</B> ј√–≈——»¬Ќќ хлопает крыль&#255;ми!"
 				m_type = 2
 
 		if ("airguitar")
@@ -28,15 +28,15 @@
 				m_type = 1
 
 		if ("blink")
-			message = "<B>[src]</B> blinks."
+			message = "<B>[src]</B> моргает."
 			m_type = 1
 
 		if ("blink_r")
-			message = "<B>[src]</B> blinks rapidly."
+			message = "<B>[src]</B> быстро моргает."
 			m_type = 1
 
 		if ("blush")
-			message = "<B>[src]</B> blushes."
+			message = "<B>[src]</B> краснеет."
 			m_type = 1
 
 		if ("bow")
@@ -93,7 +93,7 @@
 				m_type = 2
 
 		if ("deathgasp")
-			message = "<B>[src]</B> замирает, конечности расслабляются, глаза становятся мЄртвыми и безжизненными..."
+			message = "<B>[src]</B> замирает, конечности расслабл&#255;ютс&#255;, глаза станов&#255;тс&#255; мЄртвыми и безжизненными..."
 			m_type = 1
 
 		if ("flap")
