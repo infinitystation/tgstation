@@ -784,7 +784,7 @@ Sorry Giacom. Please don't be mad :(
 
 //called when the mob receives a bright flash
 /mob/living/proc/flash_eyes(intensity = 1, override_blindness_check = 0)
-	if(check_eye_prot() < intensity && (override_blindness_check || !(disabilities & BLIND)))
+	if((check_eye_prot() < intensity) && (override_blindness_check || !(disabilities & BLIND)))
 		flick("e_flash", flash)
 	return 1
 

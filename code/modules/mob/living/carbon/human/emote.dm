@@ -25,7 +25,7 @@
 	switch(act) //Please keep this alphabetically ordered when adding or changing emotes.
 		if ("aflap") //Any emote on human that uses miming must be left in, oh well.
 			if (!src.restrained())
-				message = "<B>[src]</B> ј√–≈——»¬Ќќ хлопает крыльями!"
+				message = "<B>[src]</B> ј√–≈——»¬Ќќ хлопает крыль&#255;ми!"
 				m_type = 2
 
 		if ("choke")
@@ -122,7 +122,7 @@
 					message = "<B>[src]</B> к сожалению, поблизости нет никого, чтобы поприветствовать друг друга касанием кулаков, поприветствовал сам себ&#255;. —тыдобище."
 
 		if ("eyebrow")
-			message = "<B>[src]</B> приподнял бровь."
+			message = "<B>[src]</B> приподн&#255;л бровь."
 			m_type = 1
 
 		if ("flap")
