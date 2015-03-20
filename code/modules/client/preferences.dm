@@ -815,7 +815,7 @@ datum/preferences
 
 					if("ghost_whispers")
 						chat_toggles ^= CHAT_GHOSTWHISPER
-					
+
 					if("ghost_radio")
 						chat_toggles ^= CHAT_GHOSTRADIO
 

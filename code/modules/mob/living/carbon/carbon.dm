@@ -153,8 +153,8 @@
 		playsound(loc, 'sound/weapons/thudswoosh.ogg', 50, 1, -1)
 
 /mob/living/carbon/flash_eyes(intensity = 1, override_blindness_check = 0)
-	var/damage = intensity - check_eye_prot()
-	if(..()) // we've been flashed
+	var/damage = intensity - src.check_eye_prot()
+	if(..() && (src.check_eye_prot()<2)) // we've been flashed
 		switch(damage)
 			if(1)
 				src << "<span class='warning'>Your eyes sting a little.</span>"
