@@ -93,8 +93,8 @@
 		hidden_records = list()
 		coin_records = list()
 		build_inventory(products, start_empty = 1)
-		build_inventory(contraband, 1, start_empty = 1)
-		build_inventory(premium, 0, 1, start_empty = 1)
+		build_inventory(contraband, 1, start_empty = 0)
+		build_inventory(premium, 0, 1, start_empty = 0)
 		for(var/obj/item/weapon/vending_refill/VR in component_parts)
 			refill_inventory(VR, product_records)
 
