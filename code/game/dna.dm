@@ -114,6 +114,12 @@
 			message = M.say_mod(message)
 		return message
 
+/datum/dna/proc/mutations_get_spans()
+	var/list/spans = list()
+	for(var/datum/mutation/human/M in mutations)
+		spans |= M.get_spans()
+	return spans
+
 /proc/hardset_dna(mob/living/carbon/owner, ui, se, real_name, blood_type, datum/species/mrace, mcolor)
 	if(!istype(owner, /mob/living/carbon/monkey) && !istype(owner, /mob/living/carbon/human))
 		return
@@ -279,6 +285,11 @@
 
 		H.update_body()
 		H.update_hair()
+
+		H.warn_flavor_changed()
+		H.flavor_text = ""
+
+		H.regenerate_icons()
 	return 1
 
 /proc/domutcheck(mob/living/carbon/M)
@@ -295,7 +306,7 @@
 
 //////////////////////////////////////////////////////////// Monkey Block
 	if(M)
-		M.update_icon = 1	//queue a full icon update at next life() call
+		M.regenerate_icons()
 	return 1
 /////////////////////////// DNA MISC-PROCS
 

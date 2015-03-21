@@ -27,7 +27,7 @@
 
 	var/alt_name = get_alt_name()
 
-	var/whispers = "whispers"
+	var/whispers = "шепчет"
 	var/critical = InCritical()
 
 	// We are unconscious but not in critical, so don't allow them to whisper.
@@ -41,7 +41,7 @@
 		var/message_len = length(message)
 		message = copytext(message, 1, health_diff) + "[message_len > health_diff ? "-.." : "..."]"
 		message = Ellipsis(message, 10, 1)
-		whispers = "whispers in their final breath"
+		whispers = "шепчет на последнем дыхании"
 
 	message = treat_message(message)
 
@@ -64,15 +64,16 @@
 	for(var/mob/M in watching)
 		M.show_message(rendered, 2)
 
-	rendered = "<span class='game say'><span class='name'>[GetVoice()]</span>[alt_name] [whispers], <span class='message'>\"<i>[message]</i>\"</span></span>"
+	var/spans = list(SPAN_ITALICS)
+	rendered = "<span class='game say'><span class='name'>[GetVoice()]</span>[alt_name] [whispers], <span class='message'>\"[attach_spans(message, spans)]\"</span></span>"
 
 	for(var/mob/M in listening)
-		M.Hear(rendered, src, languages, message)
+		M.Hear(rendered, src, languages, message, , spans)
 
 	message = stars(message)
-	rendered = "<span class='game say'><span class='name'>[GetVoice()]</span>[alt_name] [whispers], <span class='message'>\"<i>[message]</i>\"</span></span>"
+	rendered = "<span class='game say'><span class='name'>[GetVoice()]</span>[alt_name] [whispers], <span class='message'>\"[attach_spans(message, spans)]\"</span></span>"
 	for(var/mob/M in eavesdropping)
-		M.Hear(rendered, src, languages, message)
+		M.Hear(rendered, src, languages, message, , spans)
 
 	if(critical) //Dying words.
 		succumb(1)

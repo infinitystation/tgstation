@@ -392,6 +392,8 @@ var/list/slot_equipment_priority = list( \
 
 		src.pulling = AM
 		AM.pulledby = src
+		if(pullin)
+			pullin.update_icon(src)
 		if(ismob(AM))
 			var/mob/M = AM
 			if(!iscarbon(src))
@@ -407,6 +409,8 @@ var/list/slot_equipment_priority = list( \
 	if(pulling)
 		pulling.pulledby = null
 		pulling = null
+		if(pullin)
+			pullin.update_icon(src)
 
 /mob/verb/mode()
 	set name = "Activate Held Object"
@@ -839,9 +843,6 @@ var/list/slot_equipment_priority = list( \
 	density = !lying
 	update_transform()
 	lying_prev = lying
-	if(update_icon) //forces a full overlay update
-		update_icon = 0
-		regenerate_icons()
 	return canmove
 
 
@@ -1012,8 +1013,11 @@ var/list/slot_equipment_priority = list( \
 
 /mob/proc/warn_flavor_changed()
 	if(flavor_text && flavor_text != "") // don't spam people that don't use it!
-		src << "<h2 class='alert'>OOC Warning:</h2>"
-		src << "<span class='alert'>Your flavor text is likely out of date! <a href=?src=\ref[usr];flavor_change=1>Change</a></span>"
+		src << "<h2 class='alert'>OOC Предупреждение!:</h2>"
+		src << "<span class='alert'>Ваше описание персонажа устарело <a href=?src=\ref[usr];flavor_change=1>Помен&#255;ть.</a></span>"
+		return
+	else
+		return
 
 /mob/proc/print_flavor_text()
 	if (flavor_text && flavor_text != "")

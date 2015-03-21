@@ -473,6 +473,11 @@
 	name = "Long Side Part"
 	icon_state = "hair_longsidepart"
 
+/datum/sprite_accessory/hair/hair_encoder
+	name = "Encoder"
+	icon = 'icons/mob/hair_encoder.dmi'
+	icon_state = "hair_encoder"
+
 /////////////////////////////
 // Facial Hair Definitions //
 /////////////////////////////
