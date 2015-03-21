@@ -170,11 +170,11 @@ datum/reagent/medicine/spaceacillin
 datum/reagent/medicine/bicaridine
 	name = "Bicaridine"
 	id = "bicaridine"
-	description = "Bicaridine is an analgesic medication and can be used to treat blunt trauma."
+	description = "Bicaridine is an analgesic medication and can be used to treat blunt some trauma."
 	color = "#C8A5DC" // rgb: 200, 165, 220
 
 datum/reagent/medicine/bicaridine/on_mob_life(var/mob/living/M as mob)
-	if(M.stat != DEAD)
+	if(M.stat != DEAD && M.getBruteLoss() > 50)
 		M.heal_organ_damage(1*REM,0)
 	..()
 	return
@@ -189,11 +189,11 @@ datum/reagent/medicine/bicaridine/on_mob_life(var/mob/living/M as mob)
 datum/reagent/medicine/kelotane
 	name = "Kelotane"
 	id = "kelotane"
-	description = "Kelotane is a drug used to treat burns."
+	description = "Kelotane is a drug used to treat some burns."
 	color = "#C8A5DC" // rgb: 200, 165, 220
 
 datum/reagent/medicine/kelotane/on_mob_life(var/mob/living/M as mob)
-	if(M.stat != DEAD)
+	if(M.stat != DEAD && M.getFireLoss() > 50)
 		M.heal_organ_damage(0,1*REM)
 	..()
 	return

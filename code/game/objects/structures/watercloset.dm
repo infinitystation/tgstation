@@ -11,6 +11,15 @@
 	var/shit = 0			//we have shit inside?
 	var/mob/living/swirlie = null	//the mob being given a swirlie
 
+/obj/structure/toilet/verb/wash_off()
+	set name = "Wash Off"
+	set category = "Object"
+	set src in oview(1)
+	src.shit = 0
+	src.w_items = 0
+	qdel(src.contents)
+	usr << "Вы смыли содержимое унитаза"
+	return
 
 /obj/structure/toilet/New()
 	open = round(rand(0, 1))
@@ -40,11 +49,6 @@
 			return
 
 	open = !open
-	if(!open)	//wash off if closed!
-		shit = 0
-		w_items = 0
-		qdel(contents)		//need to fix, but i don't know how
-		user << "Вы смыли содержимое унитаза"
 	update_icon()
 
 
@@ -385,11 +389,6 @@
 	if(busy)
 		user << "<span class='notice'>Someone's already washing here.</span>"
 		return
-
-	if(istype(O, /obj/item/trash))
-		user.drop_item()
-		user << "<span class='notice'>You wash up [O].</span>"	//sims!!!
-		qdel(O)
 
 	if(istype(O, /obj/item/weapon/reagent_containers))
 		var/obj/item/weapon/reagent_containers/RG = O
