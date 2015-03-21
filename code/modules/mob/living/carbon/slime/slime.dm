@@ -3,7 +3,6 @@
 	icon = 'icons/mob/slimes.dmi'
 	icon_state = "grey baby slime"
 	pass_flags = PASSTABLE
-	say_message = "hums"
 	ventcrawler = 2
 	var/is_adult = 0
 	var/docile = 0
@@ -20,6 +19,10 @@
 
 	see_in_dark = 8
 	update_slimes = 0
+
+	verb_say = "телепатически щебечет"
+	verb_ask = "телепатически спрашивает"
+	verb_yell = "телепатически кричит"
 
 	// canstun and canweaken don't affect slimes because they ignore stun and weakened variables
 	// for the sake of cleanliness, though, here they are.
@@ -90,7 +93,7 @@
 		if(reagents.has_reagent("morphine")) // morphine slows slimes down
 			tally *= 2
 
-		if(reagents.has_reagent("frostoil")) // Frostoil also makes them move VEEERRYYYYY slow
+		if(reagents.has_reagent("frostoil")) // frostoil also makes them move VEEERRYYYYY slow
 			tally *= 5
 
 	if(health <= 0) // if damaged, the slime moves twice as slow
@@ -682,6 +685,7 @@
 		C = pick(consenting_candidates)
 		M.key = C.key
 		M.languages |= HUMAN
+		M.faction -= "neutral"
 		M << "<span class='warning'>All at once it makes sense, you know what you are and who you are! Self awareness is yours!</span>"
 		M << "You are grateful to be self aware and owe [user] a great debt. Serve [user], and assist them in completing their goals at any cost."
 		user << "<span class='warning'>[M] is suddenly attentive and aware. It worked!</span>"

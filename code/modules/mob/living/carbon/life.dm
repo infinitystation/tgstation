@@ -28,6 +28,9 @@
 		//Random events (vomiting etc)
 		handle_random_events()
 
+		//Heart Attacks, etc.
+		handle_heart()
+
 		. = 1
 
 	//Handle temperature/pressure differences between body and environment
@@ -281,6 +284,9 @@
 	return
 
 /mob/living/carbon/proc/handle_blood()
+	return
+
+/mob/living/carbon/proc/handle_heart()
 	return
 
 /mob/living/carbon/proc/handle_random_events()
@@ -553,10 +559,14 @@
 		see_in_dark = 8
 		see_invisible = SEE_INVISIBLE_LEVEL_TWO
 	else
-		sight &= ~SEE_TURFS
-		sight &= ~SEE_MOBS
-		sight &= ~SEE_OBJS
-		see_in_dark = 2
+		if(!(SEE_TURFS in permanent_sight_flags))
+			sight &= ~SEE_TURFS
+		if(!(SEE_MOBS in permanent_sight_flags))
+			sight &= ~SEE_MOBS
+		if(!(SEE_OBJS in permanent_sight_flags))
+			sight &= ~SEE_OBJS
+
+		see_in_dark = (sight == SEE_TURFS|SEE_MOBS|SEE_OBJS) ? 8 : 2  //Xray flag combo
 		see_invisible = SEE_INVISIBLE_LIVING
 		if(see_override)
 			see_invisible = see_override

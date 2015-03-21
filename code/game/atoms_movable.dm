@@ -7,6 +7,9 @@
 	var/throw_range = 7
 	var/mob/pulledby = null
 	var/languages = 0 //For say() and Hear()
+	var/verb_say = "говорит"
+	var/verb_ask = "спрашивает"
+	var/verb_yell = "кричит"
 	var/inertia_dir = 0
 	var/pass_flags = 0
 	glide_size = 8
