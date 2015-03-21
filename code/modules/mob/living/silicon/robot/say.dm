@@ -6,7 +6,7 @@
 	else if(copytext(text, length(text) - 1) == "!!")
 		return "восклицает, \"<span class = 'robot'><span class = 'yell'>[text]</span></span>\"";
 	else if(ending == "!")
-		return "объ&#255;вляет, \"<span class = 'robot'>[text]</span>\"";
+		return "объ&#255;вл&#255;ет, \"<span class = 'robot'>[text]</span>\"";
 
 	return "констатирует, \"<span class = 'robot'>[text]</span>\"";
 
