@@ -45,7 +45,7 @@
 	var/list/no_equip = list()	// slots the race can't equip stuff to
 	var/nojumpsuit = 0	// this is sorta... weird. it basically lets you equip stuff that usually needs jumpsuits without one, like belts and pockets and ids
 
-	var/say_mod = "says"	// affects the speech message
+	var/say_mod = "говорит"	// affects the speech message
 
 	var/list/mutant_bodyparts = list() 	// Parts of the body that are diferent enough from the standard human model that they cause clipping with some equipment
 
@@ -536,10 +536,16 @@
 		H.see_in_dark = 8
 		if(!H.druggy)		H.see_invisible = SEE_INVISIBLE_LEVEL_TWO
 	else
-		H.sight &= ~(SEE_TURFS|SEE_MOBS|SEE_OBJS)
+		if(!(SEE_TURFS in H.permanent_sight_flags))
+			H.sight &= ~SEE_TURFS
+		if(!(SEE_MOBS in H.permanent_sight_flags))
+			H.sight &= ~SEE_MOBS
+		if(!(SEE_OBJS in H.permanent_sight_flags))
+			H.sight &= ~SEE_OBJS
+
+		H.see_in_dark = (H.sight == SEE_TURFS|SEE_MOBS|SEE_OBJS) ? 8 : darksight
 		var/see_temp = H.see_invisible
 		H.see_invisible = invis_sight
-		H.see_in_dark = darksight
 
 		if(H.seer)
 			H.see_invisible = SEE_INVISIBLE_OBSERVER
@@ -634,14 +640,6 @@
 		else
 			H.throw_alert("nutrition","starving")
 
-	if(H.pullin)
-		if(H.pulling)								H.pullin.icon_state = "pull"
-		else									H.pullin.icon_state = "pull0"
-//			if(rest)	//Not used with new UI
-//				if(resting || lying || sleeping)		rest.icon_state = "rest1"
-//				else									rest.icon_state = "rest0"
-
-
 	return 1
 
 /datum/species/proc/handle_mutations_and_radiation(var/mob/living/carbon/human/H)
@@ -733,7 +731,10 @@
 /datum/species/proc/spec_attack_hand(var/mob/living/carbon/human/M, var/mob/living/carbon/human/H)
 	if((M != H) && H.check_shields(0, M.name))
 		add_logs(M, H, "attempted to touch")
-		H.visible_message("<span class='warning'>[M] попыталсЯ коснутьсЯ [H]!</span>")
+		if(M.gender == FEMALE)
+			H.visible_message("<span class='warning'>[M] попыталась коснутьс&#255; [H]!</span>")
+		else
+			H.visible_message("<span class='warning'>[M] попыталс&#255; коснутьс&#255; [H]!</span>")
 		return 0
 
 	switch(M.a_intent)
@@ -785,6 +786,8 @@
 			if(M.gender == FEMALE)
 				damage = rand(0, 6)
 			damage += punchmod
+			if(M.dna)
+				damage += M.dna.species.punchmod
 
 			if(!damage)
 				if(M.dna)
@@ -828,8 +831,12 @@
 			if(randn <= 25)
 				H.apply_effect(2, WEAKEN, H.run_armor_check(affecting, "melee"))
 				playsound(H, 'sound/weapons/thudswoosh.ogg', 50, 1, -1)
-				H.visible_message("<span class='danger'>[M] ударил [H]!</span>",
-								"<span class='userdanger'>[M] ударил [H]!</span>")
+				if(M.gender == FEMALE)
+					H.visible_message("<span class='danger'>[M] повалила [H]!</span>",
+									"<span class='userdanger'>[M] повалила [H]!</span>")
+				else
+					H.visible_message("<span class='danger'>[M] повалил [H]!</span>",
+									"<span class='userdanger'>[M] повалил [H]!</span>")
 				H.forcesay(hit_appends)
 				return
 
@@ -926,8 +933,8 @@
 							H.visible_message("<span class='danger'>[H] была вырублена без сознани&#255;!</span>", \
 										"<span class='userdanger'>[H] была вырублена без сознани&#255;!</span>")
 						else
-							H.visible_message("<span class='danger'>[H] была вырублен без сознани&#255;!</span>", \
-										"<span class='userdanger'>[H] была вырублен без сознани&#255;!</span>")
+							H.visible_message("<span class='danger'>[H] был вырублен без сознани&#255;!</span>", \
+										"<span class='userdanger'>[H] был вырублен без сознани&#255;!</span>")
 						H.apply_effect(20, PARALYZE, armor)
 					if(prob(I.force + ((100 - H.health)/2)) && H != user && I.damtype == BRUTE)
 						ticker.mode.remove_revolutionary(H.mind)
@@ -1042,10 +1049,8 @@
 
 	var/datum/gas_mixture/environment = H.loc.return_air()
 	var/datum/gas_mixture/breath
-	// HACK NEED CHANGING LATER
 	if(H.health <= config.health_threshold_crit)
 		H.losebreath++
-
 	if(H.losebreath>0) //Suffocating so do not take a breath
 		H.losebreath--
 		if (prob(10)) //Gasp per 10 ticks? Sounds about right.
