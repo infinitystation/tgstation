@@ -13,7 +13,6 @@
 	var/icon_off = "secureoff"
 	var/code1[5]
 	var/code2[5]
-	var/validate = 0
 	wall_mounted = 0 //never solid (You can always pass over it)
 	health = 200
 
@@ -169,6 +168,7 @@
 	if(!ishuman(usr))	return
 	var/mob/living/carbon/human/user = usr
 	var/obj/item/device/multitool/multimeter/W = user.get_active_hand()
+	var/validate = 0
 	user.set_machine(src)
 
 	if(href_list["check"])
@@ -187,20 +187,25 @@
 						usr << "<span class='notice'>Ключ не подходит</span>"
 						playsound(W.loc, 'sound/machines/twobeep.ogg', 30, 1)
 		if(validate>4)
-			locked = 0
-			icon_state = icon_closed
+			togglelock(user)
 			visible_message("<span class='warning'>[user] has hacked [src]!</span>")
 
 	if(href_list["inc"])
-		var/inc = text2num(href_list["inc"])
-		code2[inc]++
-		if(code2[inc] > 9)
-			code2[inc] = 0
-		interact(user)
+		if(W.mode != 1)
+			usr << "<span class='notice'>Переключите мультиметр</span>"
+		else
+			var/inc = text2num(href_list["inc"])
+			code2[inc]++
+			if(code2[inc] > 9)
+				code2[inc] = 0
+			interact(user)
 
 	if(href_list["dec"])
-		var/inc = text2num(href_list["dec"])
-		code2[inc]--
-		if(code2[inc]<0)
-			code2[inc] = 9
-		interact(user)
+		if(W.mode != 1)
+			usr << "<span class='notice'>Переключите мультиметр</span>"
+		else
+			var/inc = text2num(href_list["dec"])
+			code2[inc]--
+			if(code2[inc]<0)
+				code2[inc] = 9
+			interact(user)
