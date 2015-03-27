@@ -42,7 +42,7 @@
 
 /obj/effect/blob/fire_act(datum/gas_mixture/air, exposed_temperature, exposed_volume)
 	..()
-	var/damage = Clamp(0.3 * exposed_temperature / fire_resist, 0, 10)
+	var/damage = Clamp(exposed_temperature / fire_resist, 0, 100)
 	if(damage)
 		health -= damage
 		update_icon()

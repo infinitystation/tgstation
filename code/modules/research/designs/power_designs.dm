@@ -108,5 +108,5 @@ datum/design/mrspacman
 	req_tech = list("powerstorage" = 6, "combat" = 4, "materials" = 4)
 	build_type = PROTOLATHE
 	materials = list("$metal" = 400, "$glass" = 150, "$gold" = 150, "$silver" = 150)
-	build_path = /obj/item/weapon/stock_parts/cell/ammo/high
+	build_path = /obj/item/weapon/stock_parts/cell/ammo/super
 	category = list("Ammo")
