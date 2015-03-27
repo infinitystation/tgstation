@@ -265,6 +265,7 @@ datum/objective/escape/check_completion()
 datum/objective/escape/escape_with_identity
 	dangerrating = 10
 	var/target_real_name // Has to be stored because the target's real_name can change over the course of the round
+	var/target_missing_id
 
 datum/objective/escape/escape_with_identity/find_target()
 	target = ..()
@@ -273,7 +274,15 @@ datum/objective/escape/escape_with_identity/find_target()
 datum/objective/escape/escape_with_identity/update_explanation_text()
 	if(target && target.current)
 		target_real_name = target.current.real_name
-		explanation_text = "Ёвакуироваться на спасательном шаттле или поде превратившись в личность [target_real_name], [target.assigned_role] на себе иметь его одетую ID карту доступа."
+		explanation_text = "Ёвакуироваться на спасательном шаттле или поде превратившись в личность [target_real_name], [target.assigned_role]"
+		var/mob/living/carbon/human/H
+		if(ishuman(target.current))
+			H = target.current
+		if(H && H.get_id_name() != target_real_name)
+			target_missing_id = 1
+		else
+			explanation_text += " на себе иметь его одетую ID карту доступа."
+		explanation_text += "." //Proper punctuation is important!
 	else
 		explanation_text = "ѕридумать задание самому себе. «јѕ–≈ў≈Ќќ придумывать задания типа - убить всех."
 
@@ -285,7 +294,7 @@ datum/objective/escape/escape_with_identity/check_completion()
 	var/mob/living/carbon/human/H = owner.current
 	if(..())
 		if(H.dna.real_name == target_real_name)
-			if(H.get_id_name()== target_real_name)
+			if(H.get_id_name()== target_real_name || target_missing_id)
 				return 1
 	return 0
 

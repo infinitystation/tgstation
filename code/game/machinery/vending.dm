@@ -16,7 +16,7 @@
 	density = 1
 	verb_say = "гудит"
 	verb_ask = "гудит"
-	verb_yell = "гудит"
+	verb_exclaim = "гудит"
 	var/active = 1		//No sales pitches if off!
 	var/vend_ready = 1	//Are we ready to vend?? Is it time??
 	var/vend_delay = 10	//How long does it take to vend?

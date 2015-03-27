@@ -9,7 +9,7 @@
 	attachable = 1
 	verb_say = "гудит"
 	verb_ask = "гудит"
-	verb_yell = "гудит"
+	verb_exclaim = "гудит"
 	var/listening = 0
 	var/recorded = "" //the activation message
 

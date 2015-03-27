@@ -164,7 +164,7 @@ var/global/list/datum/cachedbook/cachedbooks // List of our cached book datums
 	screenstate = 0 // 0 - Main Menu, 1 - Inventory, 2 - Checked Out, 3 - Check Out a Book
 	verb_say = "гудит"
 	verb_ask = "гудит"
-	verb_yell = "гудит"
+	verb_exclaim = "гудит"
 	var/buffer_book
 	var/buffer_mob
 	var/upload_category = "Fiction"
