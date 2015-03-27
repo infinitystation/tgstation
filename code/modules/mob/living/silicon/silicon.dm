@@ -5,7 +5,8 @@
 	has_unlimited_silicon_privilege = 1
 	verb_say = "констатирует"
 	verb_ask = "запрашивает"
-	verb_yell = "объ&#255;вл&#255;ет"
+	verb_exclaim = "объ&#255;вл&#255;ет"
+	verb_yell = "резко гудит"
 	var/syndicate = 0
 	var/datum/ai_laws/laws = null//Now... THEY ALL CAN ALL HAVE LAWS
 	var/list/alarms_to_show = list()

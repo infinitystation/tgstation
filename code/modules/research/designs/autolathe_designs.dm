@@ -418,6 +418,14 @@
 	build_path = /obj/item/device/camera_film
 	category = list("initial", "Misc")
 
+/datum/design/foam_dart
+	name = "Box of Foam Darts"
+	id = "foam_dart"
+	build_type = AUTOLATHE
+	materials = list("$metal" = 500)
+	build_path = /obj/item/ammo_box/foambox
+	category = list("initial", "Misc")
+
 //hacked autolathe recipes
 /datum/design/flamethrower
 	name = "Flamethrower"
