@@ -187,8 +187,13 @@
 						usr << "<span class='notice'>Ключ не подходит</span>"
 						playsound(W.loc, 'sound/machines/twobeep.ogg', 30, 1)
 		if(validate>4)
-			togglelock(user)
+			src.locked = !src.locked
+			add_fingerprint(user)
 			visible_message("<span class='warning'>[user] has hacked [src]!</span>")
+			if(src.locked)
+				src.icon_state = src.icon_locked
+			else
+				src.icon_state = src.icon_closed
 
 	if(href_list["inc"])
 		if(W.mode != 1)
