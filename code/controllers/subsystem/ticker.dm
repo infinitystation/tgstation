@@ -47,8 +47,8 @@ var/datum/subsystem/ticker/ticker
 	NEW_SS_GLOBAL(ticker)
 
 	login_music = pickweight(list('sound/ambience/title2.ogg' = 49, 'sound/ambience/title1.ogg' = 49, 'sound/ambience/clown.ogg' = 2)) // choose title music!
-	if(SSevent.holidays && SSevent.holidays[APRIL_FOOLS])
-		login_music = 'sound/ambience/clown.ogg'
+	/* if(SSevent.holidays && SSevent.holidays[APRIL_FOOLS])
+		login_music = 'sound/ambience/clown.ogg' */ // we don't want listen one login music
 
 /datum/subsystem/ticker/Initialize()
 	if(!syndicate_code_phrase)		syndicate_code_phrase	= generate_code_phrase()

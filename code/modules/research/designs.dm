@@ -410,6 +410,7 @@ datum/design/proc/CalcReliability(var/list/temp_techs)
 	build_path = /obj/item/clothing/suit/space/space_adv/military
 	category = list("Equipement")
 	locked = 1
+	access = list(access_armory)
 
 /datum/design/adv_rcd
 	name = "Advanced RCD"

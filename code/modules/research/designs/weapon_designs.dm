@@ -31,6 +31,8 @@
 	materials = list("$metal" = 4000, "$glass" = 1000)
 	build_path = /obj/item/weapon/gun/energy/stunrevolver
 	category = list("Weapons")
+	locked = 1
+	access = list(access_armory)
 
 /datum/design/nuclear_gun
 	name = "Advanced Energy Gun"
@@ -42,6 +44,8 @@
 	reliability = 76
 	build_path = /obj/item/weapon/gun/energy/gun/nuclear
 	category = list("Weapons")
+	locked = 1
+	access = list(access_armory)
 
 /datum/design/tele_shield
 	name = "Telescopic Riot Shield"
@@ -52,6 +56,8 @@
 	materials = list("$metal" = 4000, "$glass" = 5000, "$silver" = 300)
 	build_path = /obj/item/weapon/shield/riot/tele
 	category = list("Weapons")
+	locked = 1
+	access = list(access_armory)
 
 /datum/design/lasercannon
 	name = "Laser Cannon"
@@ -62,6 +68,8 @@
 	materials = list("$metal" = 10000, "$glass" = 2000, "$diamond" = 2000)
 	build_path = /obj/item/weapon/gun/energy/lasercannon
 	category = list("Weapons")
+	locked = 1
+	access = list(access_armory)
 
 /datum/design/decloner
 	name = "Decloner"
@@ -72,6 +80,8 @@
 	materials = list("$gold" = 5000,"$uranium" = 10000, "mutagen" = 40)
 	build_path = /obj/item/weapon/gun/energy/decloner
 	category = list("Weapons")
+	locked = 1
+	access = list(access_armory)
 
 /datum/design/rapidsyringe
 	name = "Rapid Syringe Gun"
@@ -82,6 +92,8 @@
 	materials = list("$metal" = 5000, "$glass" = 1000)
 	build_path = /obj/item/weapon/gun/syringe/rapidsyringe
 	category = list("Weapons")
+	locked = 1
+	access = list(access_medical)
 
 /datum/design/largecrossbow
 	name = "Energy Crossbow"
@@ -93,6 +105,8 @@
 	build_path = /obj/item/weapon/gun/energy/kinetic_accelerator/crossbow/large
 	category = list("Weapons")
 	reliability = 76
+	locked = 1
+	access = list(access_armory)
 
 /datum/design/temp_gun
 	name = "Temperature Gun"
@@ -103,6 +117,8 @@
 	materials = list("$metal" = 5000, "$glass" = 500, "$silver" = 3000)
 	build_path = /obj/item/weapon/gun/energy/temperature
 	category = list("Weapons")
+	locked = 1
+	access = list(access_armory)
 
 /datum/design/flora_gun
 	name = "Floral Somatoray"
@@ -113,6 +129,8 @@
 	materials = list("$metal" = 2000, "$glass" = 500, "radium" = 20)
 	build_path = /obj/item/weapon/gun/energy/floragun
 	category = list("Weapons")
+	locked = 1
+	access = list(access_hydroponics)
 
 /datum/design/large_grenade
 	name = "Large Grenade"
@@ -134,6 +152,8 @@
 	materials = list("$metal" = 8000, "$silver" = 2000, "$diamond" = 1000)
 	build_path = /obj/item/weapon/gun/projectile/automatic/proto
 	category = list("Weapons")
+	locked = 1
+	access = list(access_armory)
 
 /datum/design/xray
 	name = "Xray Laser Gun"
@@ -144,6 +164,8 @@
 	materials = list("$gold" = 5000,"$uranium" = 10000, "$metal" = 4000)
 	build_path = /obj/item/weapon/gun/energy/xray
 	category = list("Weapons")
+	locked = 1
+	access = list(access_armory)
 
 /datum/design/ioncarbine
 	name = "Ion Carbine"
@@ -154,6 +176,8 @@
 	materials = list("$silver" = 4000, "$metal" = 6000, "$uranium" = 1000)
 	build_path = /obj/item/weapon/gun/energy/ionrifle/carbine
 	category = list("Weapons")
+	locked = 1
+	access = list(access_armory)
 
 /datum/design/wormhole_projector
 	name = "Bluespace Wormhole Projector"
@@ -164,6 +188,8 @@
 	materials = list("$silver" = 1000, "$metal" = 5000, "$diamond" = 3000)
 	build_path = /obj/item/weapon/gun/energy/wormhole_projector
 	category = list("Weapons")
+	locked = 1
+	access = list(access_armory)
 
 /datum/design/reciever
 	name = "Modular Reciever"
@@ -184,6 +210,8 @@
 	materials = list("$metal" = 2000)
 	build_path = /obj/item/ammo_box/magazine/smgm9mm
 	category = list("Ammo")
+	locked = 1
+	access = list(access_armory)
 
 /datum/design/stunshell
 	name = "Stun Shell"
