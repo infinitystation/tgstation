@@ -44,6 +44,7 @@
 	var/charge_tick = 0
 	var/mode = 0 //0 = mutate, 1 = yield boost
 	cell_removing = 0
+	can_pull_pin = 0
 
 /obj/item/weapon/gun/energy/floragun/New()
 	..()
@@ -133,6 +134,7 @@
 	var/overheat_time = 20
 	upgrades = list("diamond" = 0, "screwdriver" = 0, "plasma" = 0)
 	unique_rename = 1
+	can_pull_pin = 0
 
 /obj/item/weapon/gun/energy/kinetic_accelerator/newshot()
 	..()
@@ -199,6 +201,7 @@
 	suppressed = 1
 	ammo_type = list(/obj/item/ammo_casing/energy/bolt)
 	unique_rename = 0
+	can_pull_pin = 1
 
 /obj/item/weapon/gun/energy/kinetic_accelerator/crossbow/large
 	name = "energy crossbow"

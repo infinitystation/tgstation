@@ -48,6 +48,7 @@
 	var/can_flashlight = 0
 
 	var/list/upgrades = list()
+	var/can_pull_pin = 1
 
 /obj/item/weapon/gun/New()
 	..()
@@ -259,7 +260,7 @@
 				verbs -= /obj/item/weapon/gun/proc/toggle_gunlight
 
 	if(istype(A, /obj/item/weapon/wirecutters))
-		if(pin)
+		if(pin && can_pull_pin)
 			if(user.l_hand != src && user.r_hand != src)
 				user << "<span class='notice'>You'll need [src] in your hands to do that.</span>"
 				return
@@ -268,6 +269,8 @@
 				pin.loc = get_turf(src.loc)
 				pin = null
 				user << "<span class ='notice'>Вы вытащили ударник с [src]!</span>"
+		else
+			user << "<span class ='notice'>Вы не можете вытащить ударник с [src]!</span>"
 
 	if(unique_rename)
 		if(istype(A, /obj/item/weapon/pen))
