@@ -15,6 +15,7 @@
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/practice)
 	clumsy_check = 0
 	needs_permit = 0
+	can_pull_pin = 0
 
 obj/item/weapon/gun/energy/laser/retro
 	name ="retro laser"
