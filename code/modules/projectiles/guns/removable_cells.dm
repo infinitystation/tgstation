@@ -93,18 +93,18 @@
 	use()
 		return 1
 
-/obj/item/weapon/stock_parts/cell/ammo/pulse //45 pulse shots
+/obj/item/weapon/stock_parts/cell/ammo/pulse //80 pulse shots
 	name = "pulse rifle power cell"
 	icon_state = "ammo_scell"
-	maxcharge = 9000
+	maxcharge = 16000
 	rating = 3
-	chargerate = 1500
+	chargerate = 2000
 	origin_tech = null
 
-/obj/item/weapon/stock_parts/cell/ammo/pulse/carbine //30 pulse shots
+/obj/item/weapon/stock_parts/cell/ammo/pulse/carbine //40 pulse shots
 	name = "pulse carbine power cell"
-	maxcharge = 6000
+	maxcharge = 9000
 
-/obj/item/weapon/stock_parts/cell/ammo/pulse/pistol //15 pulse shots
+/obj/item/weapon/stock_parts/cell/ammo/pulse/pistol //20 pulse shots
 	name = "pulse pistol power cell"
-	maxcharge = 3000
+	maxcharge = 4000

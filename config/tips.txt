@@ -1,79 +1,78 @@
-You can drag yourself to a chair or a bed to buckle yourself to it.
-You can drag yourself onto a photocopier to copy your ass.
-Space transitions change every round, but are consistent within a round.
-People can be ejected from the cloner before they are done by cutting power to the clone pod.
-If you've been feeding some slimes for at least two generations, you can order them around, and even have them follow you if they like you enough.
-Almost all slime cores have two or more different effects.
-With the right slime cores, you can get up to nine uses of a single slime's effects.
-Touching a supermatter shard is akin to hugging a singularity.
-To catch thrown items, toggle throw mode on and make sure you have an open hand.
-Updating sec records regularly helps avoid confusion in the brig!
-You can drag the icon of an equipped headset or PDA onto your screen to interact with them.
-The mime's invisible wall will block electrodes and other projectiles, but beams pass straight through it like windows.
-The Librarian system is much more robust than most people think! Mess around with it, see if you can log who takes out the books for radio-reading.
-Use a pair of handcuffs on a pair of orange shoes (standard prisoner issue) to chain them together.
-Revolutionaries brainwashed by Rev leaders can have their opinions swayed back to nanotrasen loyalty by enough heavy objects to the head.
-Husked corpses that have been drained of their genomes by a changeling also lack blood in their veins, unlike burned or space frozen corpses.
-The stethoscope's utility extends beyond lung and heart checkups. They can also be used to crack certain safes.
-Chloral Hydrate can be counteracted by having coffee in your system!
-The AI system integrity restorer in both the RD's office and on the bridge can revive a dead AI loaded onto an intellicard.
-If an anomaly appears, scan it with an analyzer and then ping the frequency it gives you with a remote signaling device. 
-Various creatures can crawl through air vents by holding alt while left clicking them.
-Nuclear operatives can be extremely powerful, but only if they work together. Communication is key!
-A rogue AI can be an extremely powerful tool for traitors, but be wary of the laws you use to slave it to you, as it may try to find loopholes to get back at you.
-You can drag yourself onto tables to climb on them. This takes a moment and requires two free hands.
-You can drag other players onto yourself to open the strip menu, letting you remove their equipment or force them to equip something.
-Aliens are by far the most powerful close-quarters combat menace. Fight them at a distance to gain the upper hand!
-Aliens take double damage from all burn sources, such as lasers and fires. Flamethrowers are extremely effective against them.
-As an alien, your most powerful weapon is the facehugger. It can instantly win any fight, but can be completely blocked by certain headgear. Strip downed victims before applying one.
-Monkeys can still wear some human items, such as masks and backpacks, but they cannot bring anything with them when vent crawling.
-Nuclear operatives are very effective in a blitzkrieg tactic: attacking almost as soon as the round starts and well before the crew is prepared.
-You can use a fire extinguisher as a ghetto jetpack by spraying in the opposite direction of where you want to go. This also works with any gun.
-Coffee can keep you very warm. Drink a lot before running around through exposed space.
-Both cargo and the HoP can make you fill out a form for their services.
-You can destroy a blob by shooting emitters at its core.
-You can electrify a grille by having an exposed wire node underneath it.
-If you press the tab key, you can toggle hotkey mode, which allows you to move using WASD and perform other actions using hotkeys.
-You can hack MULE bots to let you ride them.
-You can hack most vending machines to obtain contraband items.
-You can use a multitool on the Cargo Ordering Console circuitboards to get contraband crates.
-The cryptographic sequencer (emag) has an enormous amount of functions beyond breaking open locks and hacking cyborgs, experiment!
-Touching anything without black, insulated, or brown gloves will leave fingerprints, which can be analyzed by detectives to find the suspect. Be careful of what you leave prints on!
-Blobs are extremely powerful and are impossible to defeat alone. Communicate with the crew and rally them against the threat!
-You can fight blob pieces diagonally, as they can only expand onto adjacent tiles in cardinal directions.
-Security huds and secglass huds can tell you if someone is implanted with a loyalty implant. Use this to your advantage in a revolution.
-Loyalty implants can only prevent someone from being turned into a cultist: unlike revolutionaries, it will not de-cult them if they have already been converted.
-Don't neglect upgrading your machines with the machine parts produced by research! These can seriously improve the efficiency of your equipment.
-Cyborgs are impervious to fires and temperature, and can walk in a blazing inferno without worry. Don't shy away from setting the whole station on fire as a malfunctioning or rogue AI!
-The heads of staff, especially the Head of Security and the Captain, are usually extremely difficult to kill. If one of them is your target as a traitor, plan carefully.
-The Steal DNA sting from changelings counts for your genome absorb objective, but does not let you change your powers.
-Chemists are among the most powerful people on the station. They can survive almost anything thanks to all the chemicals in them that have basically replaced their blood.
-The station is capable of being entirely powered by the solar arrays, and is a much safer form of power over the singularity engine.
-The singularity engine is extremely dangerous if containment fails. Check back on it very frequently and call the shuttle immediately when, not if, it breaks free.
-Firesuits and winter coats offer mild protection from the cold, allowing you to spend longer periods of time near breaches and space than if wearing nothing at all.
-Vendors provide a very poor source of food riddled with sugar. This can affect your metabolism quite severely and it comes with many negative effects. Eat from the kitchen to stay healthy and even profit from a happy gut!
-Emergency internals tanks can be used from your hands, your pockets, your belt, or your suit storage slot (assuming you're wearing a valid exosuit).
-When walking through halls, stay on the Help intent to pass through people rather than bumping into them.
-Trying to do surgery but you keep cutting your patient? Remember to be on the help intent and to target the right limb!
-Glass shards can be welded to make glass, and metal rods can be welded to make metal. Ores can be welded, too, but this takes a lot of fuel.
-Many monsters won't attack you if you're unconscious. If you see a space bear, go to sleep, quick!
-Many monsters won't attack you if you're unconscious, but a medibot will still heal you. Keep one around when you're mining and never worry about dying again.
-Two people are critical and need your help, but you don't have time for two trips? Pull one and use the grab intent to grab the other. This will make you slower, but you will be able to take them both.
-When using the grab intent, grab someone by clicking on them then upgrade your grab by clicking on your hand slot. Holding them by the hands lets you throw them or table them.
-Can't seem to get a patient into the cryo tube or sleepers? Just drag their sprite to it to put them in it instantly. No more needing to shuffle around pulling them into it awkwardly.
-EMP blasts have a chance to make machines explode!
-Targeting your opponent's mouth in a fistfight will give you a greater chance of knocking them unconscious.
-As a security officer, examining a crew member with a secHUD allows you to set their status to arrest. You can even give a reason for the arrest warrant, as well.
-Clowns are extremely clumsy and will often misfire weapons.
-Hulks can't fire weapons because of their meaty fingers.
-The mime's crayon is edible.
-Shooting lasers at a computer console will destroy it.
-Using ethanol on a piece of paper will remove any writing on it.
-Using an emag on the gibber will allow you to throw people into it!
-Using the comms console with captain level access will allow you to broadcast announcements in BIG, RED LETTERS!
-You can repair cracked windows with a welding tool on help intent.
-Alt-click on an adjacent tile to see its contents in the top right pane.
-While observing or as a ghost, double click on people, bots, or the singularity to follow them.
-Ghosts can click on active teleporters, portals, wormholes, or the gateway to jump to its destination!
-Ghosts can double-click their corpse, or the object containing their corpse (such as the cloning scanner), to re-enter it.
-Ghosts can see inside storage items that have been left on the ground.
+Для того, что бы Вас не прижало к полу во время перегрузок при старте или остановке шаттла, перетащите себя на стул или кресло.
+Перетащите иконку вашего персонажа на ксерокопировальную машину для того, чтобы сделать копию вашей пятой точки.
+Перемещения в космосе каждый раунд разные, но остаются одними в течении раунда.
+Люди могут быть извлечены из капсулы клонирования до завершения процесса путем отключения электропитания аппарата клонирования.
+Если вы вскармливали слизней как минимум два поколения, они не будут вас трогать и даже могут следовать за вами.
+Почти все ядра слаймов имеют как минимум две вариации эффектов.
+Некоторые ядра слизней позволяют использовать их эффект до девяти раз.
+Прикосновение к осколку суперматерии сравнимо с обнимашками с сингулярностью.
+Для того, чтобы поймать предмет, включите режим броска, активировав пустую руку.
+Делайте заметки в личных делах персонала, это поможет избежать недоразумений среди Службы Безопасности.
+Вы можете перетащить иконку экипированного наушника или ПДА на вашего персонажа для того, чтобы взаимодействовать с ними не беря их в руку.
+Фальшивая стена мима блокирует электроды и снаряды, но пропускает через себя лазерные лучи.
+Библиотечная система гораздо более надежная, чем думает большинство людей! Вы можете узнать, кто взял книгу для зачитывания по радио.
+Используйте наручники на паре оранжевых тюремных ботинок для того, чтобы сделать кандалы.
+Персоналу, которому промыли мозги главы революции, можно вернуть лояльность, ударив достаточно тяжелым предметом по голове.
+В иссушенных генокрадом телах, нет геномов и крови.
+Стетоскоп, устройство для прослушивания дыхания и сердца, может быть использован и для взлома сейфов.
+Хлоралгидрату можно противостоять, выпив кофе!
+Целостность ИИ может быть восстановлена в консолях восстановления, они есть на мостике и в кабинете РД.
+Появилась аномалия? Просканируйте ее анализатором и пошлите импульс на частоту, которую вам сообщил анализатор.
+Некоторые существа могут передвигаться по станции, используя Alt+Клик по вентеляции.
+Ядерные оперативники могут быть невероятно сильными, если они работают вместе. Общение - ключ к победе!
+Взломанный ИИ может быть невероятно полезным для предателей, но опасайтесь законов, который ИИ может обернуть против вас!
+Вы можете перелезть через стол, перетащив иконку вашего персонажа на него. Для этого потребуется немного времени и как минимум две свободные руки.
+Перетащите другого персонажа на себя, это позволит вам открыть меню экипировки: используя его, вы сможете снимать или одевать вещи с персонажа.
+Чужие - самые опасные существа ближнего боя, держитесь от них подальше, чтобы выжить!
+Чужие получаю удвоенный урон от источников высоких температур, таких как лазеры и огнеметы.
+Лицехват - самое опасное оружие Чужих: он поможет выиграть почти любую схватку мгновенно. От лицехвата могут спасти некоторые виды шлемов и масок.
+Мартышки могут носить некоторые предметы для людей, но они не могут передвигаться по вентеляции, когда на них что-то надето.
+Для ядерных оперативников очень эеффективна тактика молниеносной атаки, атакуйте сразу, как начнется раунд, пока персонал еще не готов.
+Вы можете использовать огнетушитель или любую пушку для того, чтобы сменить направление во время полета в космосе.
+Кофе позволяет долго удерживать температуру тела на одном уровне, перед полетом в космос можно выпить побольше!
+Карго и ХоП могут попросить вас заполнить форму для оказания вам некоторых услуг.
+Вы можете уничтожить блоба, стреляя из эмиттеров по его ядру.
+Вы можете наэлектризовать решетки, проведя под ними провод.
+Нажав клавищу TAB вы включите режим горячих клавиш, который позволить перемещаться, используя WASD.
+Вы можете взломать MULE-бота для того, чтобы прокатиться на нем.
+Вы можете взломать почти любой автомат для продажи, чтобы получить доступ к некоторым секретным предметам.
+Вы можете взломать консоль заказов Карго для получения доступа к контробанде.
+Криптографический секвенсор (емаг) имеет огромное количество функций, помимо взлома замков и киборгов. Эксперементируйте! 
+Прикосновение к объектам без перчаток оставляет на них отпечатки пальцев, которые может просканировать детектив.
+Блоб невероятно силен, его невозможно победить в одиночку. Поддерживайте связь с экипажем и сполтите их в борьбе против блоба.
+Вы можете разрушать блоба по диагонали так, как он может расширятся только на прилегающие плитки в четырех направлениях: верх, низ, право, лево.
+Очки Службы Безопасности позволяют увидеть, у кого есть имплант лояльности, используйте это в интересах революции.
+Имплант лояльности может только предотвратить вступление в культ, человек не будет из него исключен.
+Не пренебрегайте обновлениями вашего оборудования изготовленными деталями, это может повысить эффективность работы!
+Киборги защищены от огня и температуры и могут находится прямо посреди пылающего ада. Не стесняйтесь поджигать всю станцию за сбойного ИИ.
+Глав персонала трудно убить, особенно Главу Службы Безопасности и Капитана. Если один из них ваша цель, то лучше спланировать все заранее.
+Жало генокрада позволяет собрать вам ДНК без жертв, но не позволяет сменить способности.
+Станция может питаться только от солнечных батарей, это гораздо безопасней, чем сингулярность.
+Сингулярность опасна, если ее невозможно сдерживать, чаще проверяйте ее и немедленно вызывайте шаттл в случае ее побега.
+Защитные костюмы и зимняя форма позволяют проводить больше времени около пробоин и космоса, по сравнению с обычной одеждой.
+Еда из автоматов вопсполняет очень мало здоровья и содержит в себе очень много сахара, это может серьезно повлиять на ваш метаболизм и вызвать серьезные последствия.
+Аварийные кислородные баллоны могут быть использованы в ваших руках, карманах, поясах или слотах костюма (при условии, что вы одели подходящий риг).
+Когда вы двигаетесь по коридору, смените режим взаймодействия на режим ПОМОЩЬ, это позволит вам обходить людей, а не толкаться.
+Пытаетесь провести операцию, но режете пациента вместо этого? Убедитесь в том, что у вас включен режим взаимодействия ПОМОЩЬ и на кукле выбрана верная часть тела.
+Стеклянные осколки могут быть переплавлены горелкой в стекло, металические прутья в металл. Руды тоже могут быть переплавлены горелкой, но на это потребуется много топлива.
+Множество монстров не атакуют тех, кто потерял сознание. Если вы увидели Bear1ake, то быстрее ложитесь спать!
+Большинство мобов не атакуют тех, кто потерял сознание, но медбот все также продолжает вас лечить!
+Два человка в критическом состоянии и у вас нет времени две поездки? Возьмите одного pull'ом, а второго grab'ом.
+В режиме захвата вы можете схватить человека, кликнув по нему. Потом вы можете усилить захват, кликнув на иконку захвата в вашей руке.
+Не можете засунуть пациента в слипер или криокапсулу? Просто перетащите его спрайт на криокапсулу или слипер для того, что бы положить пациента в них мгновенно. Больше нет необходимости таскать их кругами.
+Электромагнитный импульс с некоторым шансом может взорвать оборудование!
+Удары в рот во время кулачной драки повышают ваши шансы вырубить противника.
+HUD Службы Безопасности позволяет давать статус арреста прямо на месте, всего лишь посмотрев на персонажа. Также вы можете указать причину.
+Клоуны невероятно неуклюжие, и будут часто промахиваться при стрельбе.
+Поскольку у халка толстые пальцы, он не может использовать оружие.
+Мелки мима можно съесть.
+Стрельба по консоли из лазера уничтожит ее.
+Использовав этанол на бумаге вы сотрете весь текст на ней, а еще бумагу можно жечь.
+Использовав емаг на измельчителе, вы сможете закидывать туда людей.
+Каптан может писать БОЛЬШИМИ, КРАСНЫМИ буквами, используя консоль комуникации.
+Вы можете ремонтировать поврежденные стекла, кликнув по ним в режиме взаимодействия ПОМОЩЬ.
+Alt+клик по тайлу отобразит в верху правой части игры то, что находится на тайле.
+Во время наблюдения, призраки могут сделить за мобами, ботами и сингулярностью, дважды кликнув по ним.
+Призраки могут перемещаться через порталы и телепортеры, кликнув по ним.
+Призраки могут вернуться в тело, дважды кликнув по тому предмету, внутри которого находится их тело.
+Призраки могут заглядывать в сумки и коробки, которые лежат на земле.

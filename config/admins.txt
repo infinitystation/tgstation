@@ -7,7 +7,7 @@
 # NOTE: if the rank-name cannot be found in admin_ranks.txt, they will not be adminned! ~Carn #
 # NOTE: syntax was changed to allow hyphenation of ranknames, since spaces are stripped.      #
 ###############################################################################################
-Violentfire = Host
+violentfire = Host
 xsarethx = Game Master
 median4 = Game Master
 maxikot = Game Master
@@ -16,8 +16,8 @@ nikovar = Game Master
 bear1ake = Game Master
 wipe = Game Master
 terror4000rus = Game Master
-maxi2000 = Game Master
 hellpony = Game Master
+samorey = Game Master
 
 Gun Hog = Game Master
 razharas = Game Master
@@ -90,3 +90,4 @@ allura = Game Master
 lo6a4evskiy = Game Master
 vekter = Game Master
 Ahammer18 = Game Master
+ACCount12 = Game Master

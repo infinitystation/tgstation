@@ -693,13 +693,12 @@ Sorry Giacom. Please don't be mad :(
 					if(do_after(usr, 600))
 						if(!C.buckled)
 							return
-						C.visible_message("<span class='danger'>[C] смог отстегнуться!</span>", \
-											"<span class='notice'>¬ы успешно отстегнулись.</span>")
 						C.buckled.user_unbuckle_mob(C,C)
 					else
-						C << "<span class='warning'>” вас не получилось отстегнуться!</span>"
+						if(C && C.buckled)
+							C << "<span class='warning'>” вас не получилось отстегнуться!</span>"
 			else
-				L.buckled.user_unbuckle_mob(L,L)
+				C.buckled.user_unbuckle_mob(C,C)
 		else
 			L.buckled.user_unbuckle_mob(L,L)
 
