@@ -157,8 +157,17 @@
 /mob/living/carbon/flash_eyes(intensity = 1, override_blindness_check = 0)
 	var/damage = intensity - check_eye_prot()
 	if(..()) // we've been flashed
+		if(damage < 0)  // full protect
+			return 0
+
+		if(damage == 0) // just enough protection
+			if(prob(20))
+				src << "<span class='notice'>Something bright flashes in the corner of your vision!</span>"
+				return 0
+
 		if(weakeyes)
 			Stun(2)
+
 		switch(damage)
 			if(1)
 				src << "<span class='warning'>Your eyes sting a little.</span>"
@@ -187,10 +196,6 @@
 			else
 				src << "<span class='warning'>Your eyes are really starting to hurt. This can't be good for you!</span>"
 		return 1
-
-	else if(damage == 0) // just enough protection
-		if(prob(20))
-			src << "<span class='notice'>Something bright flashes in the corner of your vision!</span>"
 
 /mob/living/carbon/proc/eyecheck()
 	var/obj/item/cybernetic_implant/eyes/EFP = locate() in src
