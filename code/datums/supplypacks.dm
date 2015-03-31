@@ -1284,7 +1284,7 @@ var/list/all_supply_groups = list(supply_emergency,supply_security,supply_engine
 
 /datum/supply_packs/spacesuits/engine
 	name = "Engineering Space Suit Crate"
-	contains = list(/obj/item/clothing/suit/space/hardsuit,
+	contains = list(/obj/item/clothing/suit/space/hardsuit/engine,
 					/obj/item/clothing/mask/breath,
 					/obj/item/weapon/tank/internals/oxygen)
 	cost = 20
@@ -1294,7 +1294,7 @@ var/list/all_supply_groups = list(supply_emergency,supply_security,supply_engine
 
 /datum/supply_packs/spacesuits/atmos
 	name = "Atmostech Space Suit Crate"
-	contains = list(/obj/item/clothing/suit/space/hardsuit/atmos,
+	contains = list(/obj/item/clothing/suit/space/hardsuit/engine/atmos,
 					/obj/item/clothing/mask/breath,
 					/obj/item/weapon/tank/internals/oxygen)
 	cost = 20
@@ -1335,7 +1335,6 @@ var/list/all_supply_groups = list(supply_emergency,supply_security,supply_engine
 /datum/supply_packs/spacesuits/syndie
 	name = "Syndicate Space Suit Crate"
 	contains = list(/obj/item/clothing/suit/space/hardsuit/syndi,
-					/obj/item/clothing/head/helmet/space/hardsuit/syndi,
 					/obj/item/clothing/mask/breath,
 					/obj/item/weapon/tank/internals/oxygen)
 	cost = 100

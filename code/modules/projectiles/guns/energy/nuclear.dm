@@ -31,6 +31,7 @@
 	cell_removing = 0
 	cell_type = /obj/item/weapon/stock_parts/cell/ammo/high
 	pin = null
+	can_charge = 0
 
 /obj/item/weapon/gun/energy/gun/nuclear/New()
 	..()

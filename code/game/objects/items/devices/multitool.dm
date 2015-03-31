@@ -71,6 +71,7 @@
 	icon_state = "multimeter"
 	origin_tech = "magnets=3;engineering=3"
 	var/mode = 1 // Mode
+	siemens_coefficient = 0
 
 //mode
 /obj/item/device/multitool/multimeter/attack_self(mob/living/user as mob)
