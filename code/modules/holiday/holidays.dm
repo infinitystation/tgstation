@@ -91,9 +91,9 @@
 
 /datum/holiday/april_fools
 	name = APRIL_FOOLS
-	begin_day = 1
+	begin_day = 0
 	begin_month = APRIL
-	end_day = 8 //7 days extra so everyone can enjoy the festivities
+	end_day = 0 //7 days extra so everyone can enjoy the festivities
 
 /datum/holiday/fourtwenty
 	name = "Four-Twenty"
