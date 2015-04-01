@@ -136,8 +136,7 @@
 			mob << "Your training has allowed you to overcome your clownish nature, allowing you to wield weapons without harming yourself."
 			mob.dna.remove_mutation(CLOWNMUT)
 
-	// NO MORE FLASHES FOR REVS (c) bear1ake
-	/* var/obj/item/device/flash/T = new(mob)
+	var/obj/item/toy/crayon/spraycan/R = new(mob)
 
 	var/list/slots = list (
 		"backpack" = slot_in_backpack,
@@ -146,11 +145,12 @@
 		"left hand" = slot_l_hand,
 		"right hand" = slot_r_hand,
 	)
-	var/where = mob.equip_in_one_of_slots(T, slots)
-	if (!where)
-		mob << "The Syndicate were unfortunately unable to get you a flash."
+	var/spray = mob.equip_in_one_of_slots(R,slots)
+	if (!spray)
+		mob << "The Syndicate were unfortunately unable to get you some spraypaint."
 	else
-		mob << "The flash in your [where] will help you to persuade the crew to join your cause." */
+		mob << "The Spraypaint in your [spray] will help you spread your message of unrest and revolution."
+		mob.update_icons()
 	mob.update_icons()
 	return 1
 
