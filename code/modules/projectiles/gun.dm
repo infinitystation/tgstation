@@ -157,7 +157,7 @@
 		if(pin.pin_auth(user) || pin.emagged)
 			return 1
 		else
-			user << "<span class='warning'>INVALID USER.</span>"
+			pin.auth_fail(user)
 			return 0
 	else
 		user << "<span class='notice'>\The [src]'s trigger is locked. This weapon doesn't have a firing pin installed!</span>"
@@ -265,10 +265,12 @@
 				user << "<span class='notice'>You'll need [src] in your hands to do that.</span>"
 				return
 			user << "<span class ='notice'>Вы вынимаете ударник с [src]...</span>"
-			if(do_after(user, 20))
+			visible_message("<span class='warning'>[user] вытаскивает ударник с [src]!</span>")
+			if(do_after(user, 30))
 				pin.loc = get_turf(src.loc)
 				pin = null
 				user << "<span class ='notice'>Вы вытащили ударник с [src]!</span>"
+
 		else
 			user << "<span class ='notice'>Вы не можете вытащить ударник с [src]!</span>"
 
