@@ -197,7 +197,7 @@ macro "borghotkeymode"
 		is-disabled = false
 	elem 
 		name = "F6"
-		command = "Player-Panel-New"
+		command = "Player-Panel"
 		is-disabled = false
 	elem 
 		name = "F7"
@@ -375,7 +375,7 @@ macro "macro"
 		is-disabled = false
 	elem 
 		name = "F6"
-		command = "Player-Panel-New"
+		command = "Player-Panel"
 		is-disabled = false
 	elem 
 		name = "F7"
@@ -527,7 +527,7 @@ macro "hotkeymode"
 		name = "CTRL+G"
 		command = "a-intent right"
 		is-disabled = false
- 	elem 
+	elem 
 		name = "M"
 		command = "me"
 		is-disabled = false
@@ -617,7 +617,7 @@ macro "hotkeymode"
 		is-disabled = false
 	elem 
 		name = "F6"
-		command = "Player-Panel-New"
+		command = "Player-Panel"
 		is-disabled = false
 	elem 
 		name = "F7"
@@ -771,7 +771,7 @@ macro "borgmacro"
 		is-disabled = false
 	elem 
 		name = "F6"
-		command = "Player-Panel-New"
+		command = "Player-Panel"
 		is-disabled = false
 	elem 
 		name = "F7"
