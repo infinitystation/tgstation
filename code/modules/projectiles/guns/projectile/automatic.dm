@@ -87,6 +87,7 @@
 	fire_delay = 2
 	burst_size = 2
 	pin = /obj/item/device/firing_pin/implant/pindicate
+	can_pull_pin = 0
 
 /obj/item/weapon/gun/projectile/automatic/c20r/New()
 	..()
@@ -120,6 +121,7 @@
 	burst_size = 5
 	fire_delay = 3
 	pin = /obj/item/device/firing_pin/implant/pindicate
+	can_pull_pin = 0
 
 /obj/item/weapon/gun/projectile/automatic/l6_saw/attack_self(mob/user as mob)
 	cover_open = !cover_open

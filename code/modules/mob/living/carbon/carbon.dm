@@ -188,10 +188,13 @@
 					disabilities |= BLIND
 			else
 				src << "<span class='warning'>Your eyes are really starting to hurt. This can't be good for you!</span>"
+			return 1
 		else if(damage == 0) // just enough protection
 			if(prob(20))
 				src << "<span class='notice'>Something bright flashes in the corner of your vision!</span>"
-		return 1
+				return 0
+		else if(damage < 0) // full protection
+			return 0
 
 /mob/living/carbon/proc/eyecheck()
 	var/obj/item/cybernetic_implant/eyes/EFP = locate() in src

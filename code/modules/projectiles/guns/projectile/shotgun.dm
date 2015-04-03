@@ -205,6 +205,7 @@
 	sawn_desc = "I'm just here for the gasoline."
 	unique_rename = 0
 	unique_reskin = 0
+	can_pull_pin = 0
 
 /obj/item/weapon/gun/projectile/revolver/doublebarrel/improvised/attackby(var/obj/item/A as obj, mob/user as mob, params)
 	..()
@@ -283,6 +284,7 @@
 	fire_delay = 0
 	pin = /obj/item/device/firing_pin/implant/pindicate
 	action_button_name = null
+	can_pull_pin = 0
 
 /obj/item/weapon/gun/projectile/automatic/shotgun/bulldog/New()
 	..()
