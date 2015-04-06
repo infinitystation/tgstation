@@ -537,8 +537,8 @@ var/global/floorIsLava = 0
 	if(message)
 		if(!check_rights(R_SERVER,0))
 			message = adminscrub(message,500)
-		world << "<span class='adminnotice'><b>[usr.client.holder.fakekey ? "Administrator" : usr.key] Announces:</b></span>\n \t [message]"
-		log_admin("Announce: [key_name(usr)] : [message]")
+		world << "<span class='adminnotice'><b>[usr.client.holder.fakekey ? "Administrator" : usr.key] Announces:</b></span>\n \t [sanitize(message)]"
+		log_admin("Announce: [key_name(usr)] : [sanitize(message)]")
 	feedback_add_details("admin_verb","A") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /datum/admins/proc/set_admin_notice()
@@ -556,6 +556,7 @@ var/global/floorIsLava = 0
 		message_admins("[key_name(usr)] removed the admin notice.")
 		log_admin("[key_name(usr)] removed the admin notice:\n[admin_notice]")
 	else
+		new_admin_notice = sanitize(new_admin_notice)
 		message_admins("[key_name(usr)] set the admin notice.")
 		log_admin("[key_name(usr)] set the admin notice:\n[new_admin_notice]")
 		world << "<span class ='adminnotice'><b>Admin Notice:</b>\n \t [new_admin_notice]</span>"

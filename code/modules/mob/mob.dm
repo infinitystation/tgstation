@@ -1005,7 +1005,7 @@ var/list/slot_equipment_priority = list( \
 	set src in usr
 	if(usr != src)
 		usr << "No."
-	var/msg = input(usr,"Set the flavor text in your 'examine' verb. Can also be used for OOC notes about your character.","Flavor Text",html_decode(flavor_text)) as message|null
+	var/msg = input(usr,"Set the flavor text in your 'examine' verb. Can also be used for OOC notes about your character.","Flavor Text",flavor_text) as message|null
 
 	if(msg != null)
 		msg = copytext(sanitize(msg), 1, MAX_MESSAGE_LEN)

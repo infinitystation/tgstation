@@ -63,7 +63,7 @@ var/engwords = list("travel", "blood", "join", "hell", "destroy", "technology", 
 	usr.say("[input]")
 	for(var/mob/M in mob_list)
 		if((M.mind && (M.mind in ticker.mode.cult)) || (M in dead_mob_list))
-			M << "<span class='boldannounce'>[input]</span>"
+			M << "<span class='boldannounce'>[sanitize(input)]</span>"
 	return
 
 
