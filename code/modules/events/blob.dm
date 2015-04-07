@@ -2,7 +2,7 @@
 	name = "Blob"
 	typepath = /datum/round_event/blob
 	weight = 0
-	max_occurrences = 1
+	max_occurrences = 0
 
 	earliest_start = 48000 // 1 hour 20 minutes
 

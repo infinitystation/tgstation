@@ -2,7 +2,7 @@
 	name = "Brand Intelligence"
 	typepath = /datum/round_event/brand_intelligence
 	weight = 0
-	max_occurrences = 1
+	max_occurrences = 0
 
 /datum/round_event/brand_intelligence
 	announceWhen	= 21
