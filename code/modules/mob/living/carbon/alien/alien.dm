@@ -12,6 +12,7 @@
 	ventcrawler = 2
 	languages = ALIEN
 	verb_say = "шипит"
+	lying_pixel_offset = 0
 	var/nightvision = 1
 	var/storedPlasma = 250
 	var/max_plasma = 500

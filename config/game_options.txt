@@ -21,7 +21,7 @@ REVIVAL_BRAIN_LIFE -1
 ### RENAMING ###
 
 #Uncomment to allow cyborgs to rename themselves at roundstart.  Has no effect on roboticists renaming cyborgs the normal way.
-#RENAME_CYBORG
+RENAME_CYBORG
 
 ### OOC DURING ROUND ###
 #Comment this out if you want OOC to be automatically disabled during the round, it will be enabled during the lobby and after the round end results.
@@ -42,7 +42,7 @@ EMOJIS
 
 ## These modify the run/walk speed of all mobs before the mob-specific modifiers are applied. 
 RUN_DELAY 1
-WALK_DELAY 4
+WALK_DELAY 3
 
 ## The variables below affect the movement of specific mob types.
 HUMAN_DELAY 0
@@ -117,7 +117,7 @@ CHANGELING_SCALING_COEFF 6
 ## Variables calculate how number of open security officer positions will scale to population.
 ## Used as (Officers = Population / Coeff)
 ## Set to 0 to disable scaling and use default numbers instead.
-SECURITY_SCALING_COEFF 8
+SECURITY_SCALING_COEFF 6
 
 # The number of objectives traitors get.
 # Not including escaping/hijacking.
@@ -176,7 +176,7 @@ MINIMAL_ACCESS_THRESHOLD 20
 #ASSISTANTS_HAVE_MAINT_ACCESS
 
 ## Uncoment to give security maint access. Note that if you comment JOBS_HAVE_MINIMAL_ACCESS security already gets maint from that.
-#SECURITY_HAS_MAINT_ACCESS
+SECURITY_HAS_MAINT_ACCESS
 
 ## Uncomment to give everyone maint access.
 #EVERYONE_HAS_MAINT_ACCESS
