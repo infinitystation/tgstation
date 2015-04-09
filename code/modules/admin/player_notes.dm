@@ -54,19 +54,24 @@ datum/admins/proc/notes_gethtml(var/ckey)
 //originally had seperate entries such as var/by to record who left the note and when
 //but the current bansystem is a heap of dung.
 /proc/notes_add(var/ckey, var/note, var/lognote = 0)
+	var/note_u
 	if(!ckey)
 		ckey = ckey(input(usr,"Who would you like to add notes for?","Enter a ckey",null) as text|null)
 		if(!ckey)	return
 
 	if(!note)
-		note = html_encode(input(usr,"Enter your note:","Enter some text",null) as message|null)
+		note = input(usr,"Enter your note:","Enter some text",null) as message|null
+		note_u = sanitize_u(note)
+		note = sanitize(note)
 		if(!note)	return
+
+
 
 	var/savefile/notesfile = new(NOTESFILE)
 	if(!notesfile)	return
 	notesfile.cd = "/[ckey]"
 	notesfile.eof = 1		//move to the end of the buffer
-	notesfile << "[time2text(world.realtime,"DD-MMM-YYYY")] | [note][(usr && usr.ckey)?" ~[usr.ckey]":""]"
+	notesfile << "[time2text(world.realtime,"DD-MMM-YYYY")] | [note_u][(usr && usr.ckey)?" ~[usr.ckey]":""]"
 
 	if(lognote)//don't need an admin log for the notes applied automatically during bans.
 		message_admins("[key_name(usr)] added note '[note]' to [ckey]")
