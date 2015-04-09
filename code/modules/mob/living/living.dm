@@ -161,7 +161,7 @@ Sorry Giacom. Please don't be mad :(
 		return 0
 	if(!..())
 		return 0
-	usr.visible_message("<b>[src]</b> points to [A]")
+	visible_message("<b>[src]</b> points to [A]")
 	return 1
 
 /mob/living/verb/succumb(var/whispered as null)
@@ -471,11 +471,11 @@ Sorry Giacom. Please don't be mad :(
 
 	if(config.allow_Metadata)
 		if(client)
-			usr << "[src]'s Metainfo:<br>[client.prefs.metadata]"
+			src << "[src]'s Metainfo:<br>[client.prefs.metadata]"
 		else
-			usr << "[src] does not have any stored infomation!"
+			src << "[src] does not have any stored infomation!"
 	else
-		usr << "OOC Metadata is not supported by this server!"
+		src << "OOC Metadata is not supported by this server!"
 
 	return
 
@@ -490,12 +490,12 @@ Sorry Giacom. Please don't be mad :(
 		stop_pulling()
 
 
-	var/t7 = 1
+	var/cuff_dragged = 0
 	if (restrained())
 		for(var/mob/living/M in range(src, 1))
-			if ((M.pulling == src && M.stat == 0 && !( M.restrained() )))
-				t7 = null
-	if (t7 && pulling && (get_dist(src, pulling) <= 1 || pulling.loc == loc))
+			if (M.pulling == src && !M.incapacitated())
+				cuff_dragged = 1
+	if (!cuff_dragged && pulling && !throwing && (get_dist(src, pulling) <= 1 || pulling.loc == loc))
 		var/turf/T = loc
 		. = ..()
 
@@ -551,9 +551,8 @@ Sorry Giacom. Please don't be mad :(
 	if ((s_active && !( s_active in contents ) ))
 		s_active.close(src)
 
-	if(update_slimes)
-		for(var/mob/living/simple_animal/slime/M in view(1,src))
-			M.UpdateFeed(src)
+	for(var/mob/living/simple_animal/slime/M in oview(1,src))
+		M.UpdateFeed(src)
 
 /mob/living/proc/makeTrail(var/turf/T, var/mob/living/M)
 	if(ishuman(M))
@@ -587,172 +586,62 @@ Sorry Giacom. Please don't be mad :(
 /mob/living/proc/getTrail() //silicon and simple_animals don't get blood trails
     return null
 
-/mob/living/proc/cuff_break(obj/item/weapon/restraints/I, mob/living/carbon/C)
-
-	if(C.dna.check_mutation(HULK))
-		C.say(pick(";”––––√√√!", ";џџџџџџџџџџџ!", ";√џџџј––√!", "Ќџџ–ў!", ";јјј–√√!" ))
-
-	C.visible_message("<span class='danger'>[C] сломал [I]!</span>")
-	C << "<span class='notice'>¬ы успешно сломали [I].</span>"
-	qdel(I)
-
-	if(C.handcuffed)
-		C.handcuffed = null
-		C.update_inv_handcuffed(0)
-		return
-	else
-		C.legcuffed = null
-		C.update_inv_legcuffed(0)
-
-
-/mob/living/proc/cuff_resist(obj/item/weapon/restraints/I, mob/living/carbon/C)
-	var/breakouttime = 600
-	var/displaytime = 1
-	if(istype(I, /obj/item/weapon/restraints/handcuffs))
-		var/obj/item/weapon/restraints/handcuffs/HC = C.handcuffed
-		breakouttime = HC.breakouttime
-	else if(istype(I, /obj/item/weapon/restraints/legcuffs))
-		var/obj/item/weapon/restraints/legcuffs/LC = C.legcuffed
-		breakouttime = LC.breakouttime
-	displaytime = breakouttime / 600
-
-	if(isalienadult(C) || C.dna.check_mutation(HULK))
-		C.visible_message("<span class='warning'>[C] пытается сломать [I]!</span>")
-		C << "<span class='notice'>¬ы пытаетесь сломать [I]. (Ёто займЄт около 5 секунд и вам нужно стоять не двигаться.)</span>"
-		spawn(0)
-			if(do_after(C, 50))
-				if(!I || C.buckled)
-					return
-				cuff_break(I, C)
-			else
-				C << "<span class='warning'>” вас не получилось сломать [I]!</span>"
-	else
-
-		C.visible_message("<span class='warning'>[C] пытается убрать [I]!</span>")
-		C << "<span class='notice'>¬ы пытаетесь убрать [I]. (Ёто займЄт около [displaytime] минут и вам нужно стоять не двигаться.)</span>"
-		spawn(0)
-			if(do_after(C, breakouttime, 10))
-				if(!I || C.buckled)
-					return
-				C.visible_message("<span class='danger'>[C] убрал [I]!</span>")
-				C << "<span class='notice'>¬ы успешно убрали [I].</span>"
-
-				if(C.handcuffed)
-					C.handcuffed.loc = C.loc
-					C.handcuffed = null
-					if(C.buckled && C.buckled.buckle_requires_restraints)
-						C.buckled.unbuckle_mob()
-					C.update_inv_handcuffed(0)
-					return
-				if(C.legcuffed)
-					C.legcuffed.loc = C.loc
-					C.legcuffed = null
-					C.update_inv_legcuffed(0)
-			else
-				C << "<span class='warning'>” вас не получилось убрать [I]!</span>"
-
 /mob/living/verb/resist()
 	set name = "Resist"
 	set category = "IC"
 
-	if(!isliving(usr) || usr.next_move > world.time)
+	if(!isliving(src) || next_move > world.time)
 		return
-	usr.changeNext_move(CLICK_CD_RESIST)
-
-	var/mob/living/L = usr
+	changeNext_move(CLICK_CD_RESIST)
 
 	//resisting grabs (as if it helps anyone...)
-	if(!L.stat && L.canmove && !L.restrained())
+	if(!stat && canmove && !restrained())
 		var/resisting = 0
-		for(var/obj/O in L.requests)
+		for(var/obj/O in requests)
 			qdel(O)
 			resisting++
-		for(var/obj/item/weapon/grab/G in usr.grabbed_by)
+		for(var/obj/item/weapon/grab/G in grabbed_by)
 			resisting++
 			if(G.state == GRAB_PASSIVE)
 				qdel(G)
 			else
 				if(G.state == GRAB_AGGRESSIVE)
 					if(prob(25))
-						L.visible_message("<span class='warning'>[L] освободился от захвата [G.assailant]!</span>")
+						visible_message("<span class='warning'>[src] освобождаетс&#255; от захвата [G.assailant]!</span>")
 						qdel(G)
 				else
 					if(G.state == GRAB_NECK)
 						if(prob(5))
-							L.visible_message("<span class='warning'>[L] освободился от болевого захвата шеи [G.assailant]!</span>")
+							visible_message("<span class='warning'>[src] has broken free of [G.assailant]'s headlock!</span>")
 							qdel(G)
 		if(resisting)
-			L.visible_message("<span class='warning'>[L] сопротивляется!</span>")
+			visible_message("<span class='warning'>[src] resists!</span>")
 			return
 
 	//unbuckling yourself
-	if(L.buckled && L.last_special <= world.time)
-		if(iscarbon(L))
-			var/mob/living/carbon/C = L
-			if(C.handcuffed)
-				C.changeNext_move(CLICK_CD_BREAKOUT)
-				C.last_special = world.time + CLICK_CD_BREAKOUT
-				C.visible_message("<span class='warning'>[C] пытается отстегнуться!</span>", \
-							"<span class='notice'>¬ы пытаетесь отстегнуться. (Ёто займЄт около одной минуты и вам нужно стоять не двигаться.)</span>")
-				spawn(0)
-					if(do_after(usr, 600))
-						if(!C.buckled)
-							return
-						C.buckled.user_unbuckle_mob(C,C)
-					else
-						if(C && C.buckled)
-							C << "<span class='warning'>” вас не получилось отстегнуться!</span>"
-			else
-				C.buckled.user_unbuckle_mob(C,C)
-		else
-			L.buckled.user_unbuckle_mob(L,L)
+	if(buckled && last_special <= world.time)
+		resist_buckle()
 
 	//Breaking out of a container (Locker, sleeper, cryo...)
 	else if(loc && istype(loc, /obj) && !isturf(loc))
-		if(L.stat == CONSCIOUS && !L.stunned && !L.weakened && !L.paralysis)
+		if(stat == CONSCIOUS && !stunned && !weakened && !paralysis)
 			var/obj/C = loc
-			C.container_resist(L)
+			C.container_resist(src)
 
-	//Stop drop and roll & Handcuffs
-	else if(iscarbon(L))
-		var/mob/living/carbon/CM = L
-		if(CM.on_fire && CM.canmove)
-			CM.fire_stacks -= 5
-			CM.Weaken(3,1)
-			CM.spin(32,2)
-			CM.visible_message("<span class='danger'>[CM] катается по полу, пытаясь потушить себя!</span>", \
-				"<span class='notice'>¬ы упали не пол и пытаетесь потушить себя!</span>")
-			sleep(30)
-			if(fire_stacks <= 0)
-				CM.visible_message("<span class='danger'>[CM] успешно потушил себя!</span>", \
-					"<span class='notice'>¬ы потушили себя.</span>")
-				ExtinguishMob()
-			return
-		if(CM.canmove && (CM.last_special <= world.time))
-			if(CM.handcuffed || CM.legcuffed)
-				CM.changeNext_move(CLICK_CD_BREAKOUT)
-				CM.last_special = world.time + CLICK_CD_BREAKOUT
-				if(CM.handcuffed)
-					cuff_resist(CM.handcuffed, CM)
-				else
-					cuff_resist(CM.legcuffed, CM)
+	else if(canmove)
+		if(on_fire)
+			resist_fire() //stop, drop, and roll
+		else if(last_special <= world.time)
+			resist_restraints() //trying to remove cuffs.
 
-/mob/living/carbon/proc/spin(spintime, speed)
-	spawn()
-		var/D = dir
-		while(spintime >= speed)
-			sleep(speed)
-			switch(D)
-				if(NORTH)
-					D = EAST
-				if(SOUTH)
-					D = WEST
-				if(EAST)
-					D = SOUTH
-				if(WEST)
-					D = NORTH
-			dir = D
-			spintime -= speed
+
+/mob/living/proc/resist_buckle()
+	buckled.user_unbuckle_mob(src,src)
+
+/mob/living/proc/resist_fire()
+	return
+
+/mob/living/proc/resist_restraints()
 	return
 
 /mob/living/proc/get_visible_name()
