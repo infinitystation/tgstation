@@ -170,7 +170,7 @@
 	ventcrawler = 2
 	var/amount_grown = 0
 	pass_flags = PASSTABLE | PASSGRILLE
-	mob_size = 0
+	mob_size = MOB_SIZE_TINY
 
 /mob/living/simple_animal/chick/New()
 	..()
