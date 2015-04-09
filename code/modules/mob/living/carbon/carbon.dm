@@ -454,7 +454,7 @@ var/const/GALOSHES_DONT_HELP = 8
 	if(!cuff_break)
 		visible_message("<span class='warning'>[src] attempts to remove [I]!</span>")
 		src << "<span class='notice'>You attempt to remove [I]. (This will take around [displaytime] minutes and you need to stand still.)</span>"
-		if(do_after(usr, breakouttime, 10, 0))
+		if(do_after(src, breakouttime, 10, 0))
 			if(I.loc != src || buckled)
 				return
 			visible_message("<span class='danger'>[src] manages to remove [I]!</span>")
