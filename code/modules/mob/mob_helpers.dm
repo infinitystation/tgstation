@@ -120,6 +120,11 @@ proc/isovermind(A)
 		return 1
 	return 0
 
+proc/isblobzombie(A)
+	if(istype(A, /mob/living/simple_animal/hostile/blob/blobspore))
+		return 1
+	return 0
+
 proc/isdrone(A)
 	if(istype(A, /mob/living/simple_animal/drone))
 		return 1

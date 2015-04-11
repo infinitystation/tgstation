@@ -5,16 +5,6 @@
 	computer_id	= client.computer_id
 	log_access("Login: [key_name(src)] from [lastKnownIP ? lastKnownIP : "localhost"]-[computer_id] || BYOND v[client.byond_version]")
 
-	if((client.player_age<7 || client.player_age=="Requires database") && !admin_datums[ckey] )
-		message_admins("<span class='adminnotice'><b><font color=red>К серверу присоединилсЯ игрок. </font>Byond login: [client.ckey]. В первые был на сервере [client.player_age] дней назад. IP: [client.address]</span>")
-
-	if(!client.player_age)
-		message_admins("<span class='adminnotice'><b><font color=red>К серверу присоединилсЯ игрок. </font>Byond login: [client.ckey]. ВНИМАНИЕ - ИГРОК ПЕРВЫЙ ДЕНЬ НА СЕРВЕРЕ. IP: [client.address]</span>")
-
-	if(!isnum(client.player_age))
-		message_admins("<span class='adminnotice'><b><font color=red>Debug test is successful</font></span>")
-
-
 	if(config.log_access)
 		for(var/mob/M in player_list)
 			if(M == src)	continue
