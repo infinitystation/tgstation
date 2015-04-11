@@ -132,6 +132,7 @@
 	var/overheat_time = 16
 	var/recent_reload = 1
 	var/range_add
+	upgrades = list("diamond" = 0, "screwdriver" = 0, "plasma" = 0)
 	unique_rename = 1
 	can_pull_pin = 0
 

@@ -206,7 +206,8 @@ obj/item/projectile/kinetic/New()
 	icon_state = "plasmacutter"
 	damage_type = BRUTE
 	damage = 5
-	range = 1
+	range = 2
+	var/power = 6
 
 obj/item/projectile/plasma/New()
 	var/turf/proj_turf = get_turf(src)
@@ -217,18 +218,22 @@ obj/item/projectile/plasma/New()
 	if(pressure < 30)
 		name = "full strength plasma blast"
 		damage *= 3
-		range += 3
+		range *= 3
 	..()
 
 /obj/item/projectile/plasma/on_hit(var/atom/target)
-	if(istype(target, /turf/simulated/mineral))
-		var/turf/simulated/mineral/M = target
-		M.gets_drilled(firer)
+	if(istype(target, /turf/simulated/mineral) && power > 0)
+		while(target && target.density && range > 0 && power > 0)
+			var/turf/simulated/mineral/M = target
+			M.gets_drilled(firer)
+			power -= 1
+	if(range > 0 && power > 0)
+		return -1
 	return ..()
 
 /obj/item/projectile/plasma/adv
-	range = 2
+	range = 3
 
 /obj/item/projectile/plasma/adv/mech
 	damage = 10
-	range = 3
+	range = 4
