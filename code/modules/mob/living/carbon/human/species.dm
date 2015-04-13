@@ -681,7 +681,7 @@
 			if(istype(H.back, /obj/item/weapon/tank/jetpack))
 				J = H.back
 			if(istype(H.wear_suit,/obj/item/clothing/suit/space/hardsuit)) //copypasta but faster implementation currently
-				var/obj/item/clothing/suit/space/hardsuit/engine/C = H.wear_suit
+				var/obj/item/clothing/suit/space/hardsuit/C = H.wear_suit
 				P = C.jetpack
 			if(J)
 				if(J.allow_thrust(0.01, H))
@@ -728,6 +728,8 @@
 //////////////////
 
 /datum/species/proc/spec_attack_hand(var/mob/living/carbon/human/M, var/mob/living/carbon/human/H)
+	if(!istype(M)) //sanity check for drones.
+		return
 	if((M != H) && H.check_shields(0, M.name))
 		add_logs(M, H, "attempted to touch")
 		if(M.gender == FEMALE)
@@ -743,29 +745,8 @@
 				if(H != M)
 					add_logs(M, H, "shaked")
 				return 1
-
-			//CPR
-			if((M.head && (M.head.flags & HEADCOVERSMOUTH)) || (M.wear_mask && (M.wear_mask.flags & MASKCOVERSMOUTH)))
-				M << "<span class='notice'>Снимите вашу маску!</span>"
-				return 0
-			if((H.head && (H.head.flags & HEADCOVERSMOUTH)) || (H.wear_mask && (H.wear_mask.flags & MASKCOVERSMOUTH)))
-				M << "<span class='notice'>Снимите его маску!</span>"
-				return 0
-
-			if(H.cpr_time < world.time + 30)
-				add_logs(M, H, "CPRed")
-				M.visible_message("<span class='notice'>[M] is trying to perform CPR on [H]!</span>", \
-								"<span class='notice'>Вы пытаетесь сделать искусственное дыхание [H]. Hold still!</span>")
-				if(!do_mob(M, H))
-					M << "<span class='warning'>У вас не получилось сделать искусственное дыхание [H]!</span>"
-					return 0
-				if((H.health >= -99 && H.health <= 0))
-					H.cpr_time = world.time
-					var/suff = min(H.getOxyLoss(), 7)
-					H.adjustOxyLoss(-suff)
-					H.updatehealth()
-					M.visible_message("[M] performs CPR on [H]!")
-					H << "<span class='unconscious'>Вы чувствуете как свежий воздух входит в ваши лёгкие. Это приЯтно.</span>"
+			else
+				M.do_cpr(H)
 
 		if("grab")
 			H.grabbedby(M)
