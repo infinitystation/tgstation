@@ -738,6 +738,8 @@
 			H.visible_message("<span class='warning'>[M] попыталс&#255; коснутьс&#255; [H]!</span>")
 		return 0
 
+	var/datum/martial_art/attacker_style = M.martial_art
+
 	switch(M.a_intent)
 		if("help")
 			if(H.health >= 0)
@@ -749,114 +751,115 @@
 				M.do_cpr(H)
 
 		if("grab")
-			H.grabbedby(M)
-			return 1
+			if(attacker_style && attacker_style.grab_act(M,H))
+				return 1
+			else
+				H.grabbedby(M)
+				return 1
 
 		if("harm")
-			add_logs(M, H, "punched")
-			M.do_attack_animation(H)
-
-			var/atk_verb = "punch"
-			if(H.lying)
-				atk_verb = "kick"
-			else if(M.dna)
-				atk_verb = M.dna.species.attack_verb
-
-			var/damage = rand(0, 9)
-			if(M.gender == FEMALE)
-				damage = rand(0, 6)
-			damage += punchmod
-			if(M.dna)
-				damage += M.dna.species.punchmod
-
-			if(!damage)
-				if(M.dna)
-					playsound(H.loc, M.dna.species.miss_sound, 25, 1, -1)
-				else
-					playsound(H.loc, 'sound/weapons/punchmiss.ogg', 25, 1, -1)
-
-				H.visible_message("<span class='warning'>[M] попыталсЯ [atk_verb] [H]!</span>")
-				return 0
-
-
-			var/obj/item/organ/limb/affecting = H.get_organ(ran_zone(M.zone_sel.selecting))
-			var/armor_block = H.run_armor_check(affecting, "melee")
-
-			if(M.dna)
-				playsound(H.loc, M.dna.species.attack_sound, 25, 1, -1)
+			if(attacker_style && attacker_style.harm_act(M,H))
+				return 1
 			else
-				playsound(H.loc, 'sound/weapons/punch1.ogg', 25, 1, -1)
+				add_logs(M, H, "punched")
+				M.do_attack_animation(H)
+
+				var/atk_verb = "punch"
+				if(H.lying)
+					atk_verb = "kick"
+				else if(M.dna)
+					atk_verb = M.dna.species.attack_verb
+
+				var/damage = rand(0, 9)
+				if(M.dna)
+					damage += M.dna.species.punchmod
+
+				if(!damage)
+					if(M.dna)
+						playsound(H.loc, M.dna.species.miss_sound, 25, 1, -1)
+					else
+						playsound(H.loc, 'sound/weapons/punchmiss.ogg', 25, 1, -1)
+
+					H.visible_message("<span class='warning'>[M] has attempted to [atk_verb] [H]!</span>")
+					return 0
 
 
-			H.visible_message("<span class='danger'>[M] has [atk_verb]ed [H]!</span>", \
-							"<span class='userdanger'>[M] has [atk_verb]ed [H]!</span>")
+				var/obj/item/organ/limb/affecting = H.get_organ(ran_zone(M.zone_sel.selecting))
+				var/armor_block = H.run_armor_check(affecting, "melee")
 
-			H.apply_damage(damage, BRUTE, affecting, armor_block)
-			if((H.stat != DEAD) && damage >= 9) // womans can't weaken human!
-				H.visible_message("<span class='danger'>[M] ослабил [H]!</span>", \
-								"<span class='userdanger'>[M] ослабил [H]!</span>")
-				H.apply_effect(4, WEAKEN, armor_block)
-				H.forcesay(hit_appends)
-			else if(H.lying)
-				H.forcesay(hit_appends)
-
-		if("disarm")
-			M.do_attack_animation(H)
-			add_logs(M, H, "disarmed")
-
-			if(H.w_uniform)
-				H.w_uniform.add_fingerprint(M)
-			var/obj/item/organ/limb/affecting = H.get_organ(ran_zone(M.zone_sel.selecting))
-			var/randn = rand(1, 100)
-			if(randn <= 25)
-				H.apply_effect(2, WEAKEN, H.run_armor_check(affecting, "melee"))
-				playsound(H, 'sound/weapons/thudswoosh.ogg', 50, 1, -1)
-				if(M.gender == FEMALE)
-					H.visible_message("<span class='danger'>[M] повалила [H]!</span>",
-									"<span class='userdanger'>[M] повалила [H]!</span>")
+				if(M.dna)
+					playsound(H.loc, M.dna.species.attack_sound, 25, 1, -1)
 				else
-					H.visible_message("<span class='danger'>[M] повалил [H]!</span>",
-									"<span class='userdanger'>[M] повалил [H]!</span>")
-				H.forcesay(hit_appends)
-				return
+					playsound(H.loc, 'sound/weapons/punch1.ogg', 25, 1, -1)
 
-			var/talked = 0	// BubbleWrap
 
-			if(randn <= 60)
-				//BubbleWrap: Disarming breaks a pull
-				if(H.pulling)
-					H.visible_message("<span class='warning'>[M] разорвал захват [H] на [H.pulling]!</span>")
-					talked = 1
-					H.stop_pulling()
+				H.visible_message("<span class='danger'>[M] has [atk_verb]ed [H]!</span>", \
+								"<span class='userdanger'>[M] has [atk_verb]ed [H]!</span>")
 
-				//BubbleWrap: Disarming also breaks a grab - this will also stop someone being choked, won't it?
-				if(istype(H.l_hand, /obj/item/weapon/grab))
-					var/obj/item/weapon/grab/lgrab = H.l_hand
-					if(lgrab.affecting)
-						H.visible_message("<span class='warning'>[M] разорвал захват [H] на [lgrab.affecting]!</span>")
+				H.apply_damage(damage, BRUTE, affecting, armor_block)
+				if((H.stat != DEAD) && damage >= 9)
+					H.visible_message("<span class='danger'>[M] has weakened [H]!</span>", \
+									"<span class='userdanger'>[M] has weakened [H]!</span>")
+					H.apply_effect(4, WEAKEN, armor_block)
+					H.forcesay(hit_appends)
+				else if(H.lying)
+					H.forcesay(hit_appends)
+		if("disarm")
+			if(attacker_style && attacker_style.disarm_act(M,H))
+				return 1
+			else
+				M.do_attack_animation(H)
+				add_logs(M, H, "disarmed")
+
+				if(H.w_uniform)
+					H.w_uniform.add_fingerprint(M)
+				var/obj/item/organ/limb/affecting = H.get_organ(ran_zone(M.zone_sel.selecting))
+				var/randn = rand(1, 100)
+				if(randn <= 25)
+					H.apply_effect(2, WEAKEN, H.run_armor_check(affecting, "melee"))
+					playsound(H, 'sound/weapons/thudswoosh.ogg', 50, 1, -1)
+					H.visible_message("<span class='danger'>[M] has pushed [H]!</span>",
+									"<span class='userdanger'>[M] has pushed [H]!</span>")
+					H.forcesay(hit_appends)
+					return
+
+				var/talked = 0	// BubbleWrap
+
+				if(randn <= 60)
+					//BubbleWrap: Disarming breaks a pull
+					if(H.pulling)
+						H.visible_message("<span class='warning'>[M] has broken [H]'s grip on [H.pulling]!</span>")
 						talked = 1
-					spawn(1)
-						qdel(lgrab)
-				if(istype(H.r_hand, /obj/item/weapon/grab))
-					var/obj/item/weapon/grab/rgrab = H.r_hand
-					if(rgrab.affecting)
-						H.visible_message("<span class='warning'>[M] разорвал захват [H] на [rgrab.affecting]!</span>")
-						talked = 1
-					spawn(1)
-						qdel(rgrab)
-				//End BubbleWrap
+						H.stop_pulling()
 
-				if(!talked)	//BubbleWrap
-					if(H.drop_item())
-						H.visible_message("<span class='danger'>[M] разоружил [H]!</span>", \
-										"<span class='userdanger'>[M] разоружил [H]!</span>")
-				playsound(H, 'sound/weapons/thudswoosh.ogg', 50, 1, -1)
-				return
+					//BubbleWrap: Disarming also breaks a grab - this will also stop someone being choked, won't it?
+					if(istype(H.l_hand, /obj/item/weapon/grab))
+						var/obj/item/weapon/grab/lgrab = H.l_hand
+						if(lgrab.affecting)
+							H.visible_message("<span class='warning'>[M] has broken [H]'s grip on [lgrab.affecting]!</span>")
+							talked = 1
+						spawn(1)
+							qdel(lgrab)
+					if(istype(H.r_hand, /obj/item/weapon/grab))
+						var/obj/item/weapon/grab/rgrab = H.r_hand
+						if(rgrab.affecting)
+							H.visible_message("<span class='warning'>[M] has broken [H]'s grip on [rgrab.affecting]!</span>")
+							talked = 1
+						spawn(1)
+							qdel(rgrab)
+					//End BubbleWrap
+
+					if(!talked)	//BubbleWrap
+						if(H.drop_item())
+							H.visible_message("<span class='danger'>[M] has disarmed [H]!</span>", \
+											"<span class='userdanger'>[M] has disarmed [H]!</span>")
+					playsound(H, 'sound/weapons/thudswoosh.ogg', 50, 1, -1)
+					return
 
 
-			playsound(H, 'sound/weapons/punchmiss.ogg', 25, 1, -1)
-			H.visible_message("<span class='danger'>[M] попыталсЯ разоружить [H]!</span>", \
-							"<span class='userdanger'>[M] попыталсЯ разоружить [H]!</span>")
+				playsound(H, 'sound/weapons/punchmiss.ogg', 25, 1, -1)
+				H.visible_message("<span class='danger'>[M] attempted to disarm [H]!</span>", \
+								"<span class='userdanger'>[M] attemped to disarm [H]!</span>")
 	return
 
 /datum/species/proc/spec_attacked_by(var/obj/item/I, var/mob/living/user, var/def_zone, var/obj/item/organ/limb/affecting, var/hit_area, var/intent, var/obj/item/organ/limb/target_limb, target_area, var/mob/living/carbon/human/H)
