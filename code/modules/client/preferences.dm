@@ -16,7 +16,9 @@ var/global/list/special_roles = list( //keep synced with the defines BE_* in set
 	"blob" = /datum/game_mode/blob,					//9
 	"ninja",										//10
 	"monkey" = /datum/game_mode/monkey,				//11
-	"gangster" = /datum/game_mode/gang				//12
+	"gangster" = /datum/game_mode/gang,				//12
+	"shadowling" = /datum/game_mode/shadowling,		//13
+	"abductor" = /datum/game_mode/abduction			//14
 )
 
 
@@ -728,13 +730,10 @@ datum/preferences
 						if(result)
 							var/newtype = roundstart_species[result]
 							pref_species = new newtype()
-							if(!config.mutant_colors || mutant_color == "#000")
+							if(mutant_color == "#000")
 								mutant_color = pref_species.default_color
 
 					if("mutant_color")
-						if(!config.mutant_colors)
-							user << "<span class='danger'>Alien colors are disabled.</span>"
-							return
 						var/new_mutantcolor = input(user, "Choose your character's alien skin color:", "Character Preference") as color|null
 						if(new_mutantcolor)
 							var/temp_hsv = RGBtoHSV(new_mutantcolor)
@@ -905,13 +904,8 @@ datum/preferences
 			backbag = 1 //Same as above
 		character.backbag = backbag
 
+
 		character.flavor_text = sanitize(flavor_text)
 
-		/*
-		//Debugging report to track down a bug, which randomly assigned the plural gender to people.
-		if(character.gender in list(PLURAL, NEUTER))
-			if(isliving(src)) //Ghosts get neuter by default
-				message_admins("[character] ([character.ckey]) has spawned with their gender as plural or neuter. Please notify coders.")
-				character.gender = MALE
-		*/
-
+		character.update_body()
+		character.update_hair()

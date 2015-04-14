@@ -42,7 +42,7 @@
 
 /obj/effect/blob/fire_act(datum/gas_mixture/air, exposed_temperature, exposed_volume)
 	..()
-	var/damage = Clamp(exposed_temperature / fire_resist, 0, 100)
+	var/damage = Clamp(exposed_temperature / fire_resist, 0, 80)
 	take_damage(damage, BURN)
 
 /obj/effect/blob/proc/Life()
@@ -136,6 +136,8 @@
 /obj/effect/blob/bullet_act(var/obj/item/projectile/Proj)
 	..()
 	take_damage(Proj.damage, Proj.damage_type)
+	if(istype(Proj,/obj/item/projectile/beam/emitter))
+		Destroy(src)
 	return 0
 
 /obj/effect/blob/Crossed(var/mob/living/L)

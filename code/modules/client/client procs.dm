@@ -154,14 +154,15 @@ var/next_external_rsc = 0
 			return 0
 
 		if (config.notify_new_player_age >= 0)
-			message_admins("New user: [key_name_admin(src)] is connecting here for the first time.")
+			message_admins("<span class='adminnotice'><b><font color=red>К серверу присоединилсЯ игрок. </font>Byond login: [key_name(src)]. ВНИМАНИЕ - ПЕРВЫЙ РАЗ В ЖИЗНИ НА СЕРВЕРЕ. IP: [address]</span>")
 			if (config.irc_first_connection_alert)
 				send2irc_adminless_only("New-user", "[key_name(src)] is connecting for the first time!")
 
 		player_age = 0 // set it from -1 to 0 so the job selection code doesn't have a panic attack
 
 	else if (isnum(player_age) && player_age < config.notify_new_player_age)
-		message_admins("New user: [key_name_admin(src)] just connected with an age of [player_age] day[(player_age==1?"":"s")]")
+		message_admins("<span class='adminnotice'><b><font color=red>К серверу присоединилсЯ игрок. </font>Byond login: [key_name(src)]. В первые был на сервере [player_age] дней назад. IP: [address]</span>")
+
 
 
 	if (!ticker || ticker.current_state == GAME_STATE_PREGAME)
