@@ -89,33 +89,13 @@
 	H.loc = src
 	loc.visible_message("<span class='warning'> The corpse of [H.name] suddenly rises!</span>")
 
-	var/list/mob/dead/observer/candidates = list()
-	var/mob/dead/observer/theghost = null
-	var/time_passed = world.time
-
-	for(var/mob/dead/observer/G in player_list)
-		spawn(0)
-			switch(alert(G, "Хотите стать блоб-зомби? Учтите, вас не смогут клонировать","Ответьте за 30 секунд!","Yes","No"))
-				if("Yes")
-					if((world.time-time_passed)>300)//If more than 30 game seconds passed.
-						return
-					candidates += G
-				if("No")
-					return
-				else
-					return
-	sleep(300)
-
-	if(candidates.len)
-		shuffle(candidates)
-		for(var/mob/i in candidates)
-			if(!i || !i.client) continue //Dont bother removing them from the list since we only grab one wizard
-
-			theghost = i
-			break
-
-	if(theghost)
-		src.ckey = theghost.ckey
+/mob/living/simple_animal/hostile/blob/blobspore/attack_ghost(mob/user)
+	if(is_zombie)
+		var/be_zombie = alert("Вы хотите стать блоб-зомби? (Внимание, вас не смогут клонировать!)",,"Да","Нет")
+		if(be_zombie == "Нет" || gc_destroyed)
+			return
+		if(be_zombie == "Да")
+			key = user.key
 
 
 /mob/living/simple_animal/hostile/blob/blobspore/death(gibbed)
