@@ -120,6 +120,11 @@ proc/isovermind(A)
 		return 1
 	return 0
 
+proc/isblobzombie(A)
+	if(istype(A, /mob/living/simple_animal/hostile/blob/blobspore))
+		return 1
+	return 0
+
 proc/isdrone(A)
 	if(istype(A, /mob/living/simple_animal/drone))
 		return 1
@@ -447,6 +452,9 @@ proc/is_special_character(mob/M) // returns 1 for special characters and 2 for h
 					return 2
 			if("monkey")
 				if(M.viruses && (locate(/datum/disease/transformation/jungle_fever) in M.viruses))
+					return 2
+			if("abductor")
+				if(M.mind in ticker.mode.abductors)
 					return 2
 		return 1
 	return 0

@@ -891,9 +891,6 @@ var/list/slot_equipment_priority = list( \
 /mob/proc/activate_hand(var/selhand)
 	return
 
-/mob/proc/SpeciesCanConsume()
-	return 0
-
 /mob/proc/Jitter(amount)
 	jitteriness = max(jitteriness,amount,0)
 
@@ -1027,3 +1024,15 @@ var/list/slot_equipment_priority = list( \
 		else
 			return "<span class='notice'>[copytext(msg, 1, 37)]... <a href=?src=\ref[usr];flavor_more=\ref[src]>More...</a></span>"
 
+/mob/proc/AddSpell(var/obj/effect/proc_holder/spell/spell)
+	mob_spell_list += spell
+	if(!spell.action)
+		spell.action = new/datum/action/spell_action
+		spell.action.target = spell
+		spell.action.name = spell.name
+		spell.action.button_icon = spell.action_icon
+		spell.action.button_icon_state = spell.action_icon_state
+		spell.action.background_icon_state = spell.action_background_icon_state
+	if(isliving(src))
+		spell.action.Grant(src)
+	return

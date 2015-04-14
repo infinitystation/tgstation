@@ -495,14 +495,19 @@ datum/reagent/oculine/on_mob_life(var/mob/living/M as mob)
 	if(!M) M = holder.my_atom
 	cycle_amount++
 	if(M.eye_blind > 0 && cycle_amount > 20)
-		if(prob(30))
-			M.eye_blind = 0
-		else if(prob(80))
-			M.eye_blind = 0
-			M.eye_blurry = 1
-		if(M.eye_blurry > 0)
-			if(prob(80))
+		if(prob(50))
+			M.eye_blind--
+			if(M.eye_blind<0)
+				M.eye_blind = 0
+			M.eye_stat--
+			if(M.eye_stat<0)
+				M.eye_stat = 0
+			M.eye_blurry--
+			if(M.eye_blurry<0)
 				M.eye_blurry = 0
+		if(prob(50) && cycle_amount > 50)
+			M.disabilities &= ~NEARSIGHT
+			M.disabilities &= ~BLIND
 	..()
 	return
 
@@ -690,7 +695,8 @@ proc/chemical_mob_spawn(var/datum/reagents/holder, var/amount_to_spawn, var/reac
 			/mob/living/simple_animal/hostile/asteroid/hivelordbrood,
 			/mob/living/simple_animal/hostile/carp/holocarp,
 			/mob/living/simple_animal/hostile/mining_drone,
-			/mob/living/simple_animal/hostile/poison
+			/mob/living/simple_animal/hostile/poison,
+			/mob/living/simple_animal/hostile/blob
 			)//exclusion list for things you don't want the reaction to create.
 		var/list/critters = typesof(/mob/living/simple_animal/hostile) - blocked // list of possible hostile mobs
 		var/atom/A = holder.my_atom

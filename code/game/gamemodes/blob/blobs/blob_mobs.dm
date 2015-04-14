@@ -35,13 +35,14 @@
 	melee_damage_upper = 4
 	attacktext = "hits"
 	attack_sound = 'sound/weapons/genhit1.ogg'
+	speak_emote = list("pulses")
 	var/obj/effect/blob/factory/factory = null
 	var/list/human_overlays = list()
 	var/is_zombie = 0
 
 /mob/living/simple_animal/hostile/blob/blobspore/fire_act(datum/gas_mixture/air, exposed_temperature, exposed_volume)
 	..()
-	adjustBruteLoss(Clamp(0.01 * exposed_temperature, 1, 5))
+	adjustBruteLoss(Clamp(exposed_temperature, 1, 10))
 
 
 /mob/living/simple_animal/hostile/blob/blobspore/CanPass(atom/movable/mover, turf/target, height=0)
@@ -72,11 +73,13 @@
 			maxHealth += A.armor["melee"] //That zombie's got armor, I want armor!
 	maxHealth += 40
 	health = maxHealth
-	name = "blob zombie"
+	name = "blob zombie ([rand(100,999)])"
+	real_name = name
 	desc = "A shambling corpse animated by the blob."
 	melee_damage_lower = 10
 	melee_damage_upper = 15
 	icon = H.icon
+	speak_emote = list("groans")
 	icon_state = "zombie_s"
 	H.hair_style = null
 	H.update_hair()
@@ -85,6 +88,15 @@
 		adjustcolors(overmind.blob_reagent_datum.color)
 	H.loc = src
 	loc.visible_message("<span class='warning'> The corpse of [H.name] suddenly rises!</span>")
+
+/mob/living/simple_animal/hostile/blob/blobspore/attack_ghost(mob/user)
+	if(is_zombie)
+		var/be_zombie = alert("Вы хотите стать блоб-зомби? (Внимание, вас не смогут клонировать!)",,"Да","Нет")
+		if(be_zombie == "Нет" || gc_destroyed)
+			return
+		if(be_zombie == "Да")
+			key = user.key
+
 
 /mob/living/simple_animal/hostile/blob/blobspore/death(gibbed)
 	..(1)
@@ -108,6 +120,7 @@
 	ghostize()
 	qdel(src)
 
+
 /mob/living/simple_animal/hostile/blob/blobspore/Destroy()
 	if(factory)
 		factory.spores -= src
@@ -127,6 +140,37 @@
 		color = initial(color)//looks better.
 		overlays += I
 
+/mob/living/simple_animal/hostile/blob/blobspore/say(var/message)
+	if (!message)
+		return
+
+	if (src.client)
+		if(client.prefs.muted & MUTE_IC)
+			src << "You cannot send IC messages (muted)."
+			return
+		if (src.client.handle_spam_prevention(message,MUTE_IC))
+			return
+
+	if (stat)
+		return
+
+	blob_talk(message)
+
+/mob/living/simple_animal/hostile/blob/blobspore/proc/blob_talk(message)
+	log_say("[key_name(src)] : [message]")
+
+	message = trim(copytext(sanitize(message), 1, MAX_MESSAGE_LEN))
+
+	if (!message)
+		return
+
+	var/message_a = say_quote(message)
+	var/rendered = "<font color=\"#EE4000\"><i><span class='game say'>Blob Telepathy, <span class='name'>[name]</span> <span class='message'>[message_a]</span></span></i></font>"
+
+	for (var/mob/M in mob_list)
+		if(isovermind(M) || isobserver(M) || isblobzombie(M))
+			M.show_message(rendered, 2)
+
 
 /////////////////
 // BLOBBERNAUT //
@@ -138,24 +182,18 @@
 	icon_state = "blobbernaut"
 	icon_living = "blobbernaut"
 	icon_dead = "blobbernaut_dead"
-	health = 100
-	maxHealth = 100
-	melee_damage_lower = 10
-	melee_damage_upper = 10
+	health = 240
+	maxHealth = 240
+	melee_damage_lower = 20
+	melee_damage_upper = 20
 	attacktext = "hits"
 	attack_sound = 'sound/effects/blobattack.ogg'
+	speak_emote = list("gurgles")
 	minbodytemp = 0
 	maxbodytemp = 360
 	force_threshold = 10
 	environment_smash = 3
 	mob_size = MOB_SIZE_LARGE
-
-
-/mob/living/simple_animal/hostile/blob/blobbernaut/AttackingTarget()
-	..()
-	if(isliving(target))
-		if(overmind)
-			overmind.blob_reagent_datum.reaction_mob(target, TOUCH)
 
 
 /mob/living/simple_animal/hostile/blob/blobbernaut/blob_act()
@@ -165,4 +203,3 @@
 /mob/living/simple_animal/hostile/blob/blobbernaut/death(gibbed)
 	..(gibbed)
 	flick("blobbernaut_death", src)
-

@@ -89,6 +89,9 @@
 	pin = /obj/item/device/firing_pin/implant/pindicate
 	can_pull_pin = 0
 
+/obj/item/weapon/gun/projectile/automatic/c20r/unrestricted
+	pin = /obj/item/device/firing_pin
+
 /obj/item/weapon/gun/projectile/automatic/c20r/New()
 	..()
 	update_icon()
@@ -176,6 +179,9 @@
 	burst_size = 3
 	fire_delay = 2
 	pin = /obj/item/device/firing_pin/implant/pindicate
+
+/obj/item/weapon/gun/projectile/automatic/m90/unrestricted
+	pin = /obj/item/device/firing_pin
 
 /obj/item/weapon/gun/projectile/automatic/m90/New()
 	..()
