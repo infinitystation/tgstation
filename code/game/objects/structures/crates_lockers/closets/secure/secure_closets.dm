@@ -2,9 +2,7 @@
 	name = "secure locker"
 	desc = "It's an immobile card-locked storage unit."
 	locked = 1
-	var/icon_locked = "secure1"
-	var/icon_broken = "securebroken"
-	var/icon_off = "secureoff"
+	icon_state = "secure"
 	var/code1[5]
 	var/code2[5]
 	wall_mounted = 0 //never solid (You can always pass over it)
@@ -15,7 +13,6 @@
 	for(var/i=1; i<=5; i++)
 		code1[i] = rand(0,9)
 		code2[i] = rand(0,9)
-	icon_state = "secure"
 	health = 200
 
 /obj/structure/closet/secure_closet/update_icon()//Putting the welded stuff in updateicon() so it's easy to overwrite for special cases (Fridges, cabinets, and whatnot)
