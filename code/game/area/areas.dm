@@ -318,6 +318,7 @@
 		if(ENVIRON)
 			master.used_environ += amount
 
+var/list/mob/living/forced_ambiance_list = new
 
 /area/Entered(A)
 	if(!istype(A,/mob/living))	return
@@ -330,13 +331,28 @@
 	var/area/newarea = get_area(L.loc)
 
 	L.lastarea = newarea
+	play_ambience(L)
 
+/area/proc/play_ambience(var/mob/living/L)
 	// Ambience goes down here -- make sure to list each area seperately for ease of adding things in later, thanks! Note: areas adjacent to each other should have the same sounds to prevent cutoff when possible.- LastyScratch
-	if(!L.client.ambience_playing && L.client.prefs.toggles & SOUND_SHIP_AMBIENCE)
+	if(L.client && !L.client.ambience_playing && L.client.prefs.toggles & SOUND_SHIP_AMBIENCE)
 		L.client.ambience_playing = 1
 		L << sound('sound/ambience/shipambience.ogg', repeat = 1, wait = 0, volume = 35, channel = 2)
 
-	if(!(L && L.client && (L.client.prefs.toggles & SOUND_AMBIENCE)))	return //General ambience check is below the ship ambience so one can play without the other
+	if(!(L.client && (L.client.prefs.toggles & SOUND_AMBIENCE)))	return //General ambience check is below the ship ambience so one can play without the other
+
+	// If we previously were in an area with force-played ambiance, stop it.
+	if(L in forced_ambiance_list)
+		L << sound(null, channel = 1)
+		forced_ambiance_list -= L
+
+	if(!L.client.ambience_playing)
+		L.client.ambience_playing = 1
+		L << sound('sound/ambience/shipambience.ogg', repeat = 1, wait = 0, volume = 35, channel = 2)
+
+	if(forced_ambience)
+		forced_ambiance_list += L
+		L << forced_ambience
 
 	if(prob(35))
 		var/sound = pick(ambientsounds)

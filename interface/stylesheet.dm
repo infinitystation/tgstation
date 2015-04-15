@@ -77,6 +77,10 @@ h1.alert, h2.alert		{color: #000000;}
 .sans					{font-family: "Comic Sans MS", cursive, sans-serif;}
 .robot					{font-family: "Consolas", cursive, sans-serif; font-size: 3}
 
+.big					{font-size: 3;}
+.greentext				{color: #00FF00;	font-size: 3;}
+.redtext				{color: #FF0000;	font-size: 3;}
+
 BIG IMG.icon 			{width: 32px; height: 32px;}
 
 </style>"}
