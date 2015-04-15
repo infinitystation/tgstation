@@ -51,7 +51,7 @@
 	doortype = /obj/structure/door_assembly/door_assembly_com
 
 /obj/machinery/door/airlock/security
-	icon = 'icons/obj/doors/Doorsec.dmi'
+	icon = 'icons/blue_brig/airlocks/doorsec.dmi'
 	doortype = /obj/structure/door_assembly/door_assembly_sec
 
 /obj/machinery/door/airlock/engineering
@@ -132,7 +132,7 @@
 
 /obj/machinery/door/airlock/glass_security
 	name = "maintenance hatch"
-	icon = 'icons/obj/doors/Doorsecglass.dmi'
+	icon = 'icons/blue_brig/airlocks/doorsecglass.dmi'
 	opacity = 0
 	doortype = /obj/structure/door_assembly/door_assembly_sec/glass
 	glass = 1
@@ -1124,7 +1124,7 @@ About the new airlock wires panel:
 				doortype = /obj/structure/door_assembly/door_assembly_atmo/glass
 				heat_proof = 0
 			if("Security")
-				icon = 'icons/obj/doors/Doorsecglass.dmi'
+				icon = 'icons/blue_brig/airlocks/doorsecglass.dmi'
 				doortype = /obj/structure/door_assembly/door_assembly_sec/glass
 				heat_proof = 0
 			if("Command")
@@ -1162,7 +1162,7 @@ About the new airlock wires panel:
 				doortype = /obj/structure/door_assembly/door_assembly_atmo
 				heat_proof = 0
 			if("Security")
-				icon = 'icons/obj/doors/Doorsec.dmi'
+				icon = 'icons/blue_brig/airlocks/doorsec.dmi'
 				doortype = /obj/structure/door_assembly/door_assembly_sec
 				heat_proof = 0
 			if("Command")

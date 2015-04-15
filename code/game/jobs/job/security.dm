@@ -36,11 +36,11 @@ Head of Security
 			            access_heads, access_hos, access_RC_announce, access_keycard_auth, access_gateway)
 
 /datum/job/hos/equip_items(var/mob/living/carbon/human/H)
-	H.equip_to_slot_or_del(new /obj/item/clothing/under/rank/head_of_security(H), slot_w_uniform)
+	H.equip_to_slot_or_del(new /obj/item/clothing/under/rank/head_of_security/navyblue(H), slot_w_uniform)
 	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/jackboots(H), slot_shoes)
 	H.equip_to_slot_or_del(new /obj/item/clothing/suit/armor/hos/trenchcoat(H), slot_wear_suit)
 	H.equip_to_slot_or_del(new /obj/item/clothing/gloves/color/black/hos(H), slot_gloves)
-	H.equip_to_slot_or_del(new /obj/item/clothing/head/HoS/beret(H), slot_head)
+	H.equip_to_slot_or_del(new /obj/item/clothing/head/HoS(H), slot_head)
 	H.equip_to_slot_or_del(new /obj/item/clothing/glasses/hud/security/sunglasses(H), slot_glasses)
 	H.equip_to_slot_or_del(new /obj/item/weapon/gun/energy/gun(H), slot_s_store)
 
@@ -79,9 +79,9 @@ Warden
 	minimal_access = list(access_security, access_sec_doors, access_brig, access_armory, access_court, access_weapons) //See /datum/job/warden/get_access()
 
 /datum/job/warden/equip_items(var/mob/living/carbon/human/H)
-	H.equip_to_slot_or_del(new /obj/item/clothing/under/rank/warden(H), slot_w_uniform)
+	H.equip_to_slot_or_del(new /obj/item/clothing/under/rank/warden/navyblue(H), slot_w_uniform)
 	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/jackboots(H), slot_shoes)
-	H.equip_to_slot_or_del(new /obj/item/clothing/suit/armor/vest/warden(H), slot_wear_suit)
+	H.equip_to_slot_or_del(new /obj/item/clothing/suit/armor/vest/warden/alt(H), slot_wear_suit)
 	H.equip_to_slot_or_del(new /obj/item/clothing/head/warden(H), slot_head)
 	H.equip_to_slot_or_del(new /obj/item/clothing/gloves/color/black(H), slot_gloves)
 	H.equip_to_slot_or_del(new /obj/item/clothing/glasses/hud/security/sunglasses(H), slot_glasses)
@@ -181,7 +181,7 @@ Security Officer
 
 	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/jackboots(H), slot_shoes)
 	H.equip_to_slot_or_del(new /obj/item/clothing/suit/armor/vest(H), slot_wear_suit)
-	H.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/sec(H), slot_head)
+	H.equip_to_slot_or_del(new /obj/item/clothing/head/beret/sec/navyofficer(H), slot_head)
 	H.equip_to_slot_or_del(new /obj/item/clothing/gloves/color/black(H), slot_gloves)
 	H.equip_to_slot_or_del(new /obj/item/weapon/gun/energy/gun/advtaser(H), slot_s_store)
 	H.equip_to_slot_or_del(new /obj/item/device/flash/handheld(H), slot_l_store)
@@ -210,12 +210,12 @@ var/list/sec_departments = list("engineering", "supply", "medical", "science")
 
 /datum/job/officer/proc/assign_sec_to_department(var/mob/living/carbon/human/H)
 	if(!sec_departments.len)
-		H.equip_to_slot_or_del(new /obj/item/clothing/under/rank/security(H), slot_w_uniform)
+		H.equip_to_slot_or_del(new /obj/item/clothing/under/rank/security/navyblue(H), slot_w_uniform)
 	else
 		var/department = pick(sec_departments)
 		sec_departments -= department
 		var/destination = null
-		var/obj/item/clothing/under/U = new /obj/item/clothing/under/rank/security(H)
+		var/obj/item/clothing/under/U = new /obj/item/clothing/under/rank/security/navyblue(H)
 		switch(department)
 			if("supply")
 				default_headset = /obj/item/device/radio/headset/headset_sec/alt/department/supply

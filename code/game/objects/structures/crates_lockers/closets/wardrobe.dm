@@ -16,7 +16,7 @@
 
 /obj/structure/closet/wardrobe/red
 	name = "security wardrobe"
-	icon_door = "red"
+	icon_door = "red_door"
 
 /obj/structure/closet/wardrobe/red/New()
 	..()

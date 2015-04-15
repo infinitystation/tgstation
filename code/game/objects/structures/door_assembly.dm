@@ -45,6 +45,7 @@ obj/structure/door_assembly/New()
 
 /obj/structure/door_assembly/door_assembly_sec
 	name = "security airlock assembly"
+	icon = 'icons/blue_brig/airlocks/door_assmb.dmi'
 	icon_state = "door_as_sec1"
 	glass_base_icon_state = "door_as_gsec"
 	typetext = "security"
@@ -56,6 +57,7 @@ obj/structure/door_assembly/New()
 	state = 1
 
 /obj/structure/door_assembly/door_assembly_sec/glass
+	icon = 'icons/blue_brig/airlocks/door_assmb.dmi'
 	mineral = "glass"
 	icon_state = "door_as_gsec1"
 
