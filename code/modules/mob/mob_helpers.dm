@@ -501,7 +501,14 @@ proc/is_special_character(mob/M) // returns 1 for special characters and 2 for h
 
 /proc/mobs_in_area(var/area/A)
 	var/list/mobs = new
-	for(var/mob/living/M in mob_list)
+	for(var/mob/M in mob_list)
+		if(get_area(M) == A)
+			mobs += M
+	return mobs
+
+/proc/living_mobs_in_area(var/area/A)
+	var/list/mobs = new
+	for(var/mob/M in mob_list)
 		if(get_area(M) == A)
 			mobs += M
 	return mobs
