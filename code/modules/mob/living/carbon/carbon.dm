@@ -462,6 +462,7 @@ var/const/GALOSHES_DONT_HELP = 8
 
 			if(handcuffed)
 				handcuffed.loc = loc
+				handcuffed.dropped(src)
 				handcuffed = null
 				if(buckled && buckled.buckle_requires_restraints)
 					buckled.unbuckle_mob()
