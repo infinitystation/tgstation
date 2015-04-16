@@ -37,9 +37,9 @@ datum/track/New(var/title_name, var/audio)
 		new/datum/track("Taio Cruz feat. Flo-Rida Ц Hangover", 'sound/playlist/taio cruz - hangover.ogg'),
 		new/datum/track("The Wanted - Chasing The Sun", 'sound/playlist/The-Wanted-Chasing-The-Sun.ogg'),
 		new/datum/track("Timecop 1983 - Tonight", 'sound/playlist/timecop1983-tonight.ogg'),
-		new/datum/track("Trust Me I'm an Engineer", 'sound/playlist/Trust me i m an engineer.ogg'),
-		new/datum/track("«емл&#1013;не - “рава у дома", 'sound/playlist/zemlyane - trava u doma.ogg'),
-		new/datum/track("«емл&#1013;не - ¬злетна€ полоса", 'sound/playlist/zemlyane - vzletnaya polosa.ogg'),
+		new/datum/track("Trust Me I m an Engineer", 'sound/playlist/Trust me i m an engineer.ogg'),
+		new/datum/track("«емляне - “рава у дома", 'sound/playlist/zemlyane - trava u doma.ogg'),
+		new/datum/track("«емляне - ¬злетна€ полоса", 'sound/playlist/zemlyane - vzletnaya polosa.ogg'),
 	)
 
 /obj/machinery/media/jukebox/New()
