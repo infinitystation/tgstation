@@ -37,7 +37,7 @@
 		if(welded)
 			overlays += "welded"
 	else
-		if(icon_door)
+		if(icon_door && icon_state != "generic")
 			overlays += "[icon_door]_open"
 		else
 			overlays += "[icon_state]_open"
