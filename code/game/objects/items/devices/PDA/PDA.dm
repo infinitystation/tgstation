@@ -66,17 +66,17 @@ var/global/list/obj/item/device/pda/PDAs = list()
 
 /obj/item/device/pda/security
 	default_cartridge = /obj/item/weapon/cartridge/security
-	icon = 'icons/blue_brig/pda/PDAsec.dmi'
+	icon = 'icons/blue_brig/obj/PDA.dmi'
 	icon_state = "pda-security"
 
 /obj/item/device/pda/detective
 	default_cartridge = /obj/item/weapon/cartridge/detective
-	icon = 'icons/blue_brig/pda/PDAsec.dmi'
+	icon = 'icons/blue_brig/obj/PDA.dmi'
 	icon_state = "pda-detective"
 
 /obj/item/device/pda/warden
 	default_cartridge = /obj/item/weapon/cartridge/security
-	icon = 'icons/blue_brig/pda/PDAsec.dmi'
+	icon = 'icons/blue_brig/obj/PDA.dmi'
 	icon_state = "pda-warden"
 
 /obj/item/device/pda/janitor
@@ -111,7 +111,7 @@ var/global/list/obj/item/device/pda/PDAs = list()
 
 /obj/item/device/pda/heads/hos
 	default_cartridge = /obj/item/weapon/cartridge/hos
-	icon = 'icons/blue_brig/pda/PDAsec.dmi'
+	icon = 'icons/blue_brig/obj/PDA.dmi'
 	icon_state = "pda-hos"
 
 /obj/item/device/pda/heads/ce

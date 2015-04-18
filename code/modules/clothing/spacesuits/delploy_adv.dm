@@ -26,6 +26,7 @@ Space ninja autif. for e.g
 	icon = 'icons/obj/space_adv.dmi'
 	icon_state = "rig0_rd"
 	item_state = "ce_helm"
+	worn_icon = 'icons/mob/space_adv.dmi'
 	armor = list(melee = 10, bullet = 5, laser = 10, energy = 5, bomb = 10, bio = 100, rad = 85)
 	unacidable = 1
 //	canremove = 1

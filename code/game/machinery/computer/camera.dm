@@ -1,7 +1,7 @@
 /obj/machinery/computer/security
 	name = "security camera console"
 	desc = "Used to access the various cameras on the station."
-	icon = 'icons/blue_brig/consoles/seccomp.dmi'
+	icon = 'icons/blue_brig/obj/seccomp.dmi'
 	icon_state = "cameras"
 	circuit = /obj/item/weapon/circuitboard/security
 	var/obj/machinery/camera/current = null

@@ -315,6 +315,7 @@
 /obj/item/clothing/head/helmet/space/hardsuit/security
 	name = "security hardsuit helmet"
 	desc = "A special helmet designed for work in a hazardous, low pressure environment. Has an additional layer of armor."
+	worn_icon = 'icons/blue_brig/mob/head.dmi'
 	icon_state = "hardsuit0-sec"
 	item_state = "sec_helm"
 	item_color = "sec"
@@ -323,6 +324,10 @@
 
 /obj/item/clothing/suit/space/hardsuit/security
 	icon_state = "hardsuit-sec"
+	worn_icon = 'icons/blue_brig/mob/suit.dmi'
+	icon = 'icons/blue_brig/obj/clothing/suits.dmi'
+	lefthand_file = 'icons/blue_brig/mob/clothing-lefthand.dmi'
+	righthand_file = 'icons/blue_brig/mob/clothing-righthand.dmi'
 	name = "security hardsuit"
 	desc = "A special suit that protects against hazardous, low pressure environments. Has an additional layer of armor."
 	item_state = "sec_hardsuit"
@@ -333,6 +338,7 @@
 /obj/item/clothing/head/helmet/space/hardsuit/security/hos
 	name = "head of security's hardsuit helmet"
 	desc = "a special bulky helmet designed for work in a hazardous, low pressure environment. Has an additional layer of armor."
+	worn_icon = 'icons/blue_brig/mob/head.dmi'
 	icon_state = "hardsuit0-hos"
 	item_color = "hos"
 	armor = list(melee = 45, bullet = 25, laser = 30,energy = 10, bomb = 25, bio = 100, rad = 50)
@@ -340,6 +346,8 @@
 
 /obj/item/clothing/suit/space/hardsuit/security/hos
 	icon_state = "hardsuit-hos"
+	worn_icon = 'icons/blue_brig/mob/suit.dmi'
+	icon = 'icons/blue_brig/obj/clothing/suits.dmi'
 	name = "head of security's hardsuit"
 	desc = "A special bulky suit that protects against hazardous, low pressure environments. Has an additional layer of armor."
 	armor = list(melee = 45, bullet = 25, laser = 30, energy = 10, bomb = 25, bio = 100, rad = 50)
