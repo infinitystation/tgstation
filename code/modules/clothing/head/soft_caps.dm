@@ -99,7 +99,11 @@
 
 /obj/item/clothing/head/soft/sec
 	name = "security cap"
-	desc = "It's a robust baseball hat in tasteful red colour."
+	desc = "It's a robust baseball hat in tasteful blue colour."
+	icon = 'icons/blue_brig/obj/clothing/hats.dmi'
+	worn_icon = 'icons/blue_brig/mob/head.dmi'
+	lefthand_file = 'icons/blue_brig/mob/clothing-lefthand.dmi'
+	righthand_file = 'icons/blue_brig/mob/clothing-righthand.dmi'
 	icon_state = "secsoft"
 	item_color = "sec"
 	armor = list(melee = 30, bullet = 25, laser = 25, energy = 10, bomb = 0, bio = 0, rad = 0)

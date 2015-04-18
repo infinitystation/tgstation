@@ -784,6 +784,8 @@ var/list/slot_equipment_priority = list( \
 		else
 			statpanel(listed_turf.name, null, listed_turf)
 			for(var/atom/A in listed_turf)
+				if(!A.mouse_opacity)
+					continue
 				if(A.invisibility > see_invisible)
 					continue
 				statpanel(listed_turf.name, null, A)
@@ -841,6 +843,12 @@ var/list/slot_equipment_priority = list( \
 			fall(ko)
 	canmove = !(ko || resting || stunned || buckled)
 	density = !lying
+	if(lying)
+		if(layer == initial(layer)) //to avoid special cases like hiding larvas.
+			layer = MOB_LAYER - 0.2 //so mob lying always appear behind standing mobs
+	else
+		if(layer == MOB_LAYER - 0.2)
+			layer = initial(layer)
 	update_transform()
 	lying_prev = lying
 	return canmove

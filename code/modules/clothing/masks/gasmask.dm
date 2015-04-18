@@ -56,7 +56,10 @@
 	name = "\improper SWAT mask"
 	desc = "A close-fitting tactical mask with an especially aggressive Compli-o-nator 3000."
 	action_button_name = "HALT!"
+	icon = 'icons/blue_brig/obj/clothing/masks.dmi'
+	worn_icon = 'icons/blue_brig/mob/mask.dmi'
 	icon_state = "swat"
+	item_state = "swat"
 	aggressiveness = 3
 	ignore_maskadjust = 1
 

@@ -227,6 +227,7 @@
 /obj/effect/proc_holder/spell/targeted/shadowling_hivemind/cast(list/targets)
 	for(var/mob/living/user in targets)
 		var/text = stripped_input(user, "What do you want to say to fellow thralls and shadowlings?.", "Hive Chat", "")
+		text = sanitize(text)
 		if(!text)
 			return
 		for(var/mob/M in mob_list)

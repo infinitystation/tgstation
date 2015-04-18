@@ -527,6 +527,11 @@
 		if(!(SEE_OBJS & H.permanent_sight_flags))
 			H.sight &= ~SEE_OBJS
 
+		if(H.remote_view)
+			H.sight |= SEE_TURFS
+			H.sight |= SEE_MOBS
+			H.sight |= SEE_OBJS
+
 		H.see_in_dark = (H.sight == SEE_TURFS|SEE_MOBS|SEE_OBJS) ? 8 : darksight
 		var/see_temp = H.see_invisible
 		H.see_invisible = invis_sight
@@ -810,10 +815,10 @@
 				var/obj/item/organ/limb/affecting = H.get_organ(ran_zone(M.zone_sel.selecting))
 				var/randn = rand(1, 100)
 				if(randn <= 25)
-					H.apply_effect(2, WEAKEN, H.run_armor_check(affecting, "melee"))
 					playsound(H, 'sound/weapons/thudswoosh.ogg', 50, 1, -1)
 					H.visible_message("<span class='danger'>[M] has pushed [H]!</span>",
 									"<span class='userdanger'>[M] has pushed [H]!</span>")
+					H.apply_effect(2, WEAKEN, H.run_armor_check(affecting, "melee", "Your armor prevents your fall!", "Your armor softens your fall!"))
 					H.forcesay(hit_appends)
 					return
 

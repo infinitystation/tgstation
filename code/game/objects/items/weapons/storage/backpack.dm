@@ -112,6 +112,8 @@
 /obj/item/weapon/storage/backpack/security
 	name = "security backpack"
 	desc = "It's a very robust backpack."
+	worn_icon = 'icons/blue_brig/mob/back.dmi'
+	icon = 'icons/blue_brig/obj/storage.dmi'
 	icon_state = "securitypack"
 	item_state = "securitypack"
 
@@ -221,6 +223,8 @@
 /obj/item/weapon/storage/backpack/satchel_sec
 	name = "security satchel"
 	desc = "A robust satchel for security related needs."
+	worn_icon = 'icons/blue_brig/mob/back.dmi'
+	icon = 'icons/blue_brig/obj/storage.dmi'
 	icon_state = "satchel-sec"
 	item_state = "securitypack"
 
@@ -293,6 +297,10 @@
 /obj/item/weapon/storage/backpack/dufflebag/sec
 	name = "security dufflebag"
 	desc = "A large dufflebag for holding extra security supplies and ammunition."
+	worn_icon = 'icons/blue_brig/mob/back.dmi'
+	icon = 'icons/blue_brig/obj/storage.dmi'
+	lefthand_file = 'icons/blue_brig/mob/items-lefthand.dmi'
+	righthand_file = 'icons/blue_brig/mob/items-righthand.dmi'
 	icon_state = "duffle-sec"
 	item_state = "duffle-sec"
 

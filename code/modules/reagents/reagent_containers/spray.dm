@@ -123,7 +123,7 @@
 /obj/item/weapon/reagent_containers/spray/pepper
 	name = "pepperspray"
 	desc = "Manufactured by UhangInc, used to blind and down an opponent quickly."
-	icon = 'icons/blue_brig/pepper_spray/secspray.dmi'
+	icon = 'icons/blue_brig/obj/secspray.dmi'
 	icon_state = "pepperspray"
 	item_state = "pepperspray"
 	volume = 40
