@@ -24,9 +24,22 @@ datum/track/New(var/title_name, var/audio)
 
 	var/datum/track/current_track
 	var/list/datum/track/tracks = list(
-		new/datum/track("Title 1", 'sound/ambience/title1.ogg'),
-		new/datum/track("Title 2", 'sound/ambience/title2.ogg'),
-		new/datum/track("Clown", 'sound/ambience/clown.ogg'),
+		new/datum/track("Avicii - You Make Me", 'sound/playlist/avicii - you make me.ogg'),
+		new/datum/track("Beastie Boys - Intergalactic", 'sound/playlist/beastie_boys - intergalactic.ogg'),
+		new/datum/track("Boots Randolph - Yakety Sax", 'sound/playlist/boots_randolph - yakety sax.ogg'),
+		new/datum/track("Chris Harfield - Space Oddity", 'sound/playlist/Chris Hadfield - Space Oddity.ogg'),
+		new/datum/track("El Huervo - Daisuke", 'sound/playlist/el huervo - daisuke.ogg'),
+		new/datum/track("Blazer Force - Electronic Santa Claus", 'sound/playlist/Electronic Santa Claus.ogg'),
+		new/datum/track("Evanescence - My Immortal", 'sound/playlist/Evanescence - My Immortal.ogg'),
+		new/datum/track("Gotye - Somebody That I Used To Know Miami 1984 Remix", 'sound/playlist/Gotye - somebody that i used to know.ogg'),
+		new/datum/track("Orbital - The Box", 'sound/playlist/orbital - the box.ogg'),
+		new/datum/track("Space Station 13 - Clown", 'sound/playlist/Space Station 13 - Clown.ogg'),
+		new/datum/track("Taio Cruz feat. Flo-Rida Ц Hangover", 'sound/playlist/taio cruz - hangover.ogg'),
+		new/datum/track("The Wanted - Chasing The Sun", 'sound/playlist/The-Wanted-Chasing-The-Sun.ogg'),
+		new/datum/track("Timecop 1983 - Tonight", 'sound/playlist/timecop1983-tonight.ogg'),
+		new/datum/track("Trust Me I m an Engineer", 'sound/playlist/Trust me i m an engineer.ogg'),
+		new/datum/track("«емляне - “рава у дома", 'sound/playlist/zemlyane - trava u doma.ogg'),
+		new/datum/track("«емляне - ¬злетна€ полоса", 'sound/playlist/zemlyane - vzletnaya polosa.ogg'),
 	)
 
 /obj/machinery/media/jukebox/New()

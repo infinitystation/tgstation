@@ -48,6 +48,7 @@
 
 /obj/structure/closet/secure_closet/hos
 	name = "\proper head of security's locker"
+	icon = 'icons/blue_brig/obj/closetsec.dmi'
 	req_access = list(access_hos)
 	icon_state = "hos"
 
@@ -75,6 +76,7 @@
 
 /obj/structure/closet/secure_closet/warden
 	name = "\proper warden's locker"
+	icon = 'icons/blue_brig/obj/closetsec.dmi'
 	req_access = list(access_armory)
 	icon_state = "warden"
 
@@ -98,6 +100,7 @@
 
 /obj/structure/closet/secure_closet/security
 	name = "security officer's locker"
+	icon = 'icons/blue_brig/obj/closetsec.dmi'
 	req_access = list(access_security)
 	icon_state = "sec"
 
@@ -113,6 +116,8 @@
 	new /obj/item/weapon/grenade/flashbang(src)
 	new /obj/item/weapon/storage/belt/security/full(src)
 	new /obj/item/clothing/glasses/hud/security/sunglasses(src)
+	new /obj/item/clothing/head/helmet/sec(src)
+	new /obj/item/clothing/head/helmet/sec(src)
 
 /obj/structure/closet/secure_closet/security/sec
 

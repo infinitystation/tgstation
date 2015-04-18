@@ -1,0 +1,3 @@
+Заменять спрайты, не файлы:
+mob/robot
+mob/robot_transformation

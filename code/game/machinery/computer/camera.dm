@@ -1,6 +1,7 @@
 /obj/machinery/computer/security
 	name = "security camera console"
 	desc = "Used to access the various cameras on the station."
+	icon = 'icons/blue_brig/obj/seccomp.dmi'
 	icon_state = "cameras"
 	circuit = /obj/item/weapon/circuitboard/security
 	var/obj/machinery/camera/current = null
@@ -111,12 +112,14 @@
 
 /obj/machinery/computer/security/wooden_tv
 	name = "security camera monitor"
+	icon = 'icons/obj/computer.dmi'
 	desc = "An old TV hooked into the stations camera network."
 	icon_state = "security_det"
 
 
 /obj/machinery/computer/security/mining
 	name = "outpost camera console"
+	icon = 'icons/obj/computer.dmi'
 	desc = "Used to access the various cameras on the outpost."
 	icon_state = "miningcameras"
 	network = list("MINE")

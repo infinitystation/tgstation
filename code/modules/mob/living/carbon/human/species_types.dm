@@ -70,10 +70,9 @@
 	switch(proj_type)
 		if(/obj/item/projectile/energy/floramut)
 			if(prob(15))
-				H.apply_effect((rand(30,80)),IRRADIATE)
+				H.irradiate(rand(30,80))
 				H.Weaken(5)
-				for (var/mob/V in viewers(H))
-					V.show_message("<span class='danger'>[H] writhes in pain as \his vacuoles boil.</span>", 3, "<span class='danger'>You hear the crunching of leaves.</span>", 2)
+				H.visible_message("<span class='danger'>[H] writhes in pain as \his vacuoles boil.</span>", "<span class='userdanger'>[H] writhes in pain as \his vacuoles boil.</span>", "<span class='danger'>You hear the crunching of leaves.</span>")
 				if(prob(80))
 					randmutb(H)
 					domutcheck(H,null)
@@ -342,4 +341,6 @@
 			if(target_spec.team == team)
 				H << "<i><font color=#800080><b>[user.name]:</b> [message]</font></i>"
 				//return - technically you can add more aliens to a team
+	for(var/mob/M in dead_mob_list)
+		M << "<i><font color=#800080><b>[user.name]:</b> [message]</font></i>"
 	return ""

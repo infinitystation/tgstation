@@ -83,6 +83,8 @@
 /obj/item/weapon/storage/belt/security
 	name = "security belt"
 	desc = "Can hold security gear like handcuffs and flashes."
+	worn_icon = 'icons/blue_brig/mob/belt.dmi'
+	icon = 'icons/blue_brig/obj/clothing/belts.dmi'
 	icon_state = "securitybelt"
 	item_state = "security"//Could likely use a better one.
 	storage_slots = 5
