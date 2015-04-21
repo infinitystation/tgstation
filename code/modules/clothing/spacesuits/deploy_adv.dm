@@ -1,55 +1,42 @@
 
-/*Code by vert1881/Lilorien Vert
-          __  __      ___                   ___ __  _____
-|   ||   /  \|__)  | |__  |\ |         \  /|__ |__)   |
-|___||___\__/|   \ | |___ | \|   ___    \/ |___|  \   |
-
-
-
-   _____ _____        _____ ______       _____ _    _ _____ _______ _____               _______      __
-  / ____|  __ \ /\   / ____|  ____|     / ____| |  | |_   _|__   __/ ____|        /\   |  __ \ \    / /
- | (___ | |__) /  \ | |    | |__       | (___ | |  | | | |    | | | (___         /  \  | |  | \ \  / /
-  \___ \|  ___/ /\ \| |    |  __|       \___ \| |  | | | |    | |  \___ \       / /\ \ | |  | |\ \/ /
-  ____) | |  / ____ \ |____| |____      ____) | |__| |_| |_   | |  ____) |     / ____ \| |__| | \  /
- |_____/|_| /_/    \_\_____|______|    |_____/ \____/|_____|  |_| |_____/     /_/    \_\_____/   \/
-                                                                                                     READY, complited for TG
-icons\mob\space_adv
-
-
-
-
-Space ninja autif. for e.g
+/*
+*	Code by vert1881/Lilorien Vert
+*	Refactored to standart /tg/
+*	Vert's unused code is commented
 */
-/obj/item/clothing/head/helmet/space/space_adv
+/obj/item/clothing/head/helmet/space/hardsuit/space_adv
 	name = "Space working hardsuit helmet (Wrench to unscrew)"
 	desc = "—пециальный шлем для работы вне атмосферы, имеет защитный слой от радиации. ¬ы можете открутить его с помощью гаечного ключа"
 	icon = 'icons/obj/space_adv.dmi'
+	worn_icon = 'icons/mob/space_adv.dmi'
 	icon_state = "rig0_rd"
 	item_state = "ce_helm"
 	worn_icon = 'icons/mob/space_adv.dmi'
-	armor = list(melee = 10, bullet = 5, laser = 10, energy = 5, bomb = 10, bio = 100, rad = 85)
+	armor = list(melee = 10, bullet = 5, laser = 10, energy = 5, bomb = 10, bio = 100, rad = 90)
 	unacidable = 1
-//	canremove = 1
 
-
-
-
-/obj/item/clothing/suit/space/space_adv
+/obj/item/clothing/suit/space/hardsuit/space_adv
 	name = "Space working hardsuit"
 	desc = "—пециальный костюм для работы вне атмосферы, имеет защитный слой от радиации и выдвигаемый шлем. ¬ы можете отключить его от шлема с помошью откручивания специальных креплений на выдвинутом шлеме"
 	icon = 'icons/obj/space_adv.dmi'
 	icon_state = "rdrig"
 	item_state = "ce_hardsuit"
+	worn_icon = 'icons/mob/space_adv.dmi'
 	slowdown = 1
-	armor = list(melee = 10, bullet = 5, laser = 10, energy = 5, bomb = 10, bio = 100, rad = 85)
+	armor = list(melee = 10, bullet = 5, laser = 10, energy = 5, bomb = 10, bio = 100, rad = 90)
 	allowed = list(/obj/item/device/flashlight,/obj/item/weapon/tank,/obj/item/weapon/storage/bag/ore,/obj/item/device/t_scanner,/obj/item/weapon/pickaxe, /obj/item/weapon/rcd)
-//	canremove = 1
+	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/space_adv
 	unacidable = 1
-	var/depl = 0
-	var/mob/living/carbon/affecting = null //The wearer
-	var/act = 0
-	action_button_name = "Toggle Helmet"
 
+/obj/item/clothing/suit/space/hardsuit/space_adv/New()
+	jetpack = new /obj/item/weapon/tank/jetpack/suit(src)
+	..()
+
+	//var/depl = 0
+	//var/mob/living/carbon/affecting = null //The wearer
+	//var/act = 0
+	//action_button_name = "Toggle Helmet"
+/*
 /obj/item/clothing/suit/space/space_adv/attack_self(mob/user)
 	if(act)
 		return
@@ -193,69 +180,7 @@ Space ninja autif. for e.g
 	else
 		return ..()
 
-
-
-
-
-
-	                 //____OTHER SUITS_____//
-
-///Military // Cargo color suits
-/obj/item/clothing/head/helmet/space/space_adv/military
-	name = "Military space hardsuit helmet (Wrench to unscrew)"
-	desc = "—пециальный шлем разработанный для армии. ¬ы можете открутить его с помощью гаечного ключа"
-	icon_state = "rig0_military"
-	item_state = "rig_helm"
-	armor = list(melee = 60, bullet = 70, laser = 60, energy = 50, bomb = 75, bio = 100, rad = 80)
-	/obj/item/clothing/glasses/hud/security/process_hud
-
-/obj/item/clothing/suit/space/space_adv/military
-	name = "Military space hardsuit"
-	desc = "—пециальный костюм разработанный для армии. »меет укрепленные слои защиты и выдвигаемый шлем. ¬ы можете отключить его от шлема с помошью откручивания специальных креплений на выдвинутом шлеме"
-	icon_state = "militaryrig"
-	item_state = "rig_suit"
-	armor = list(melee = 60, bullet = 80, laser = 60, energy = 50, bomb = 75, bio = 100, rad = 80)
-	allowed = list(/obj/item/weapon/gun,/obj/item/device/flashlight,/obj/item/weapon/tank,/obj/item/weapon/melee/baton)
-
-
-
-
-
-//SWAT //Red suits
-/obj/item/clothing/head/helmet/space/space_adv/swat
-	name = "Swat space hardsuit helmet"
-	desc = "—пециальный шлем разработанный для оряда SWAT. ¬ы можете открутить его с помощью гаечного ключа"
-	icon_state = "rig0_swat"
-	item_state = "sec_helm"
-	armor = list(melee = 90, bullet = 60, laser = 60, energy = 20, bomb = 45, bio = 100, rad = 80)
-	var/hud_type = DATA_HUD_SECURITY_ADVANCED // HUD
-/obj/item/clothing/suit/space/space_adv/swat
-	name = "SWAT space hardsuit"
-	desc = "—пециальный костюм для отряда SWAT. имеет плотный слой боевого  елвара и выдвигаемый шлем. ¬ы можете отключить его от шлема с помошью откручивания специальных креплений на выдвинутом шлеме"
-	icon_state = "swatrig"
-	item_state = "sec_hardsuit"
-	armor = list(melee = 80, bullet = 50, laser = 50, energy = 20, bomb = 45, bio = 100, rad = 80)
-	allowed = list(/obj/item/weapon/gun,/obj/item/device/flashlight,/obj/item/weapon/tank,/obj/item/weapon/melee/baton)
-
-// HUD
-/obj/item/clothing/head/helmet/space/space_adv/swat/equipped(mob/living/carbon/human/user, slot)
-	if(slot == slot_head)
-		var/datum/atom_hud/H = huds[hud_type]
-		H.add_hud_to(user)
-
-/obj/item/clothing/head/helmet/space/space_adv/swat/dropped(mob/living/carbon/human/user)
-	var/datum/atom_hud/H = huds[hud_type]
-	H.remove_hud_from(user)
-
-
-//END HUD
-
-
-
-
-
-
-	//RIG NORM (to older versions of rig's)
+//RIG NORM (to older versions of rig's)
 
 /obj/item/clothing/head/helmet/space/space_adv/rig
 	name = "engineering hardsuit helmet (Wrench to unscrew)"
@@ -302,5 +227,53 @@ Space ninja autif. for e.g
 	item_state = "eng_hardsuit"
 	slowdown = 2
 	armor = list(melee = 10, bullet = 5, laser = 10, energy = 5, bomb = 10, bio = 100, rad = 75)
-	allowed = list(/obj/item/device/flashlight,/obj/item/weapon/tank,/obj/item/device/t_scanner, /obj/item/weapon/rcd)
+	allowed = list(/obj/item/device/flashlight,/obj/item/weapon/tank,/obj/item/device/t_scanner, /obj/item/weapon/rcd)	*/
+
+	                 //____OTHER SUITS_____//	*/
+
+///Military // Cargo color suits
+/obj/item/clothing/head/helmet/space/hardsuit/space_adv/military
+	name = "Military space hardsuit helmet (Wrench to unscrew)"
+	desc = "—пециальный шлем разработанный для армии. ¬ы можете открутить его с помощью гаечного ключа"
+	icon_state = "rig0_military"
+	item_state = "rig_helm"
+	armor = list(melee = 60, bullet = 70, laser = 60, energy = 50, bomb = 75, bio = 100, rad = 80)
+
+/obj/item/clothing/suit/space/hardsuit/space_adv/military
+	name = "Military space hardsuit"
+	desc = "—пециальный костюм разработанный для армии. »меет укрепленные слои защиты и выдвигаемый шлем. ¬ы можете отключить его от шлема с помошью откручивания специальных креплений на выдвинутом шлеме"
+	icon_state = "militaryrig"
+	item_state = "rig_suit"
+	armor = list(melee = 60, bullet = 80, laser = 60, energy = 50, bomb = 75, bio = 100, rad = 80)
+	allowed = list(/obj/item/weapon/gun,/obj/item/device/flashlight,/obj/item/weapon/tank,/obj/item/weapon/melee/baton)
+	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/space_adv/military
+
+//SWAT //Red suits
+/obj/item/clothing/head/helmet/space/hardsuit/space_adv/swat
+	name = "Swat space hardsuit helmet"
+	desc = "—пециальный шлем разработанный для оряда SWAT. ¬ы можете открутить его с помощью гаечного ключа"
+	icon_state = "rig0_swat"
+	item_state = "sec_helm"
+	armor = list(melee = 90, bullet = 60, laser = 60, energy = 20, bomb = 45, bio = 100, rad = 80)
+	var/hud_type = DATA_HUD_SECURITY_ADVANCED // HUD
+
+/obj/item/clothing/suit/space/hardsuit/space_adv/swat
+	name = "SWAT space hardsuit"
+	desc = "—пециальный костюм для отряда SWAT. имеет плотный слой боевого  елвара и выдвигаемый шлем. ¬ы можете отключить его от шлема с помошью откручивания специальных креплений на выдвинутом шлеме"
+	icon_state = "swatrig"
+	item_state = "sec_hardsuit"
+	armor = list(melee = 80, bullet = 50, laser = 50, energy = 20, bomb = 45, bio = 100, rad = 80)
+	allowed = list(/obj/item/weapon/gun,/obj/item/device/flashlight,/obj/item/weapon/tank,/obj/item/weapon/melee/baton)
+	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/space_adv/swat
+
+// HUD
+/obj/item/clothing/head/helmet/space/hardsuit/space_adv/swat/equipped(mob/living/carbon/human/user, slot)
+	if(slot == slot_head)
+		var/datum/atom_hud/H = huds[hud_type]
+		H.add_hud_to(user)
+
+/obj/item/clothing/head/helmet/space/hardsuit/space_adv/swat/dropped(mob/living/carbon/human/user)
+	var/datum/atom_hud/H = huds[hud_type]
+	H.remove_hud_from(user)
+//END HUD
 

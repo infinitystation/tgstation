@@ -260,22 +260,25 @@ Please contact me on #coderbus IRC. ~Carnie x
 		if(!t_color)		t_color = icon_state
 
 		var/image/standing
+
+		var/iconfile2use //Which icon file to use to generate the overlay and any female alterations.
+
 		if(U.alternate_worn_icon)
-			standing = image("icon"=U.alternate_worn_icon, "icon_state"="[t_color]_s", "layer"=-UNIFORM_LAYER)
+			iconfile2use = U.alternate_worn_icon
 		if(!U.alternate_worn_icon && U.worn_icon)
-			standing = image("icon"=U.worn_icon, "icon_state"="[t_color]_s", "layer"=-UNIFORM_LAYER)
-		if(!standing)
-			standing = image("icon"='icons/mob/uniform.dmi', "icon_state"="[t_color]_s", "layer"=-UNIFORM_LAYER)
+			iconfile2use = U.worn_icon
+		if(!iconfile2use)
+			iconfile2use = 'icons/mob/uniform.dmi'
+
+		standing = image("icon"=iconfile2use, "icon_state"="[t_color]_s", "layer"=-UNIFORM_LAYER)
 
 		overlays_standing[UNIFORM_LAYER]	= standing
 
 		if(dna && dna.species.sexes)
 			var/G = (gender == FEMALE) ? "f" : "m"
 			if(G == "f" && U.fitted != NO_FEMALE_UNIFORM)
-				if(U.worn_icon)
-					standing = wear_female_version(t_color, icon=U.worn_icon, UNIFORM_LAYER, U.fitted, alt_icon=U.worn_icon)
-				if(!U.worn_icon)
-					standing = wear_female_version(t_color, 'icons/mob/uniform.dmi', UNIFORM_LAYER, U.fitted)
+				standing = wear_female_version(t_color, iconfile2use, UNIFORM_LAYER, U.fitted)
+
 				overlays_standing[UNIFORM_LAYER]	= standing
 
 		if(w_uniform.blood_DNA)
@@ -643,11 +646,11 @@ Please contact me on #coderbus IRC. ~Carnie x
 
 	apply_overlay(L_HAND_LAYER)
 
-/mob/living/carbon/human/proc/wear_female_version(t_color, icon, layer, type, alt_icon)
+/mob/living/carbon/human/proc/wear_female_version(t_color, icon, layer, type)
 	var/index = "[t_color]_s"
 	var/icon/female_clothing_icon = female_clothing_icons[index]
 	if(!female_clothing_icon) 	//Create standing/laying icons if they don't exist
-		generate_female_clothing(index,t_color,icon,type,alt_icon=alt_icon)
+		generate_female_clothing(index,t_color,icon,type)
 	var/standing	= image("icon"=female_clothing_icons["[t_color]_s"], "layer"=-layer)
 	return(standing)
 
