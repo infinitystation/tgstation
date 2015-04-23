@@ -76,6 +76,8 @@
 /obj/item/clothing/head/beret/sec
 	name = "security beret"
 	desc = "A robust beret with the security insignia emblazoned on it. Uses reinforced fabric to offer sufficent protection."
+	worn_icon = 'icons/blue_brig/mob/head.dmi'
+	icon = 'icons/blue_brig/obj/clothing/hats.dmi'
 	icon_state = "beret_badge"
 	armor = list(melee = 30, bullet = 25, laser = 25, energy = 10, bomb = 0, bio = 0, rad = 0)
 	strip_delay = 60
@@ -83,6 +85,7 @@
 /obj/item/clothing/head/beret/sec/navyhos
 	name = "head of security's beret"
 	desc = "A special beret with the Head of Security's insignia emblazoned on it. A symbol of excellence, a badge of courage, a mark of distinction."
+	armor = list(melee = 60, bullet = 5, laser = 25, energy = 10, bomb = 25, bio = 0, rad = 0)
 	icon_state = "hosberet"
 
 /obj/item/clothing/head/beret/sec/navywarden

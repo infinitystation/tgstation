@@ -16,6 +16,7 @@
 
 /obj/structure/closet/wardrobe/red
 	name = "security wardrobe"
+	icon = 'icons/blue_brig/obj/closetsec.dmi'
 	icon_door = "red"
 
 /obj/structure/closet/wardrobe/red/New()
@@ -27,15 +28,18 @@
 	new /obj/item/weapon/storage/backpack/dufflebag/sec(src)
 	new /obj/item/clothing/under/rank/security/navyblue(src)
 	new /obj/item/clothing/under/rank/security/navyblue(src)
-	new /obj/item/clothing/under/rank/security/navyblue(src)
+	new /obj/item/clothing/under/rank/security/blue(src)
+	new /obj/item/clothing/under/rank/security/blue(src)
 	new /obj/item/clothing/under/rank/security(src)
 	new /obj/item/clothing/shoes/jackboots(src)
 	new /obj/item/clothing/shoes/jackboots(src)
 	new /obj/item/clothing/shoes/jackboots(src)
-	new /obj/item/clothing/head/beret/sec/navyofficer(src)
+	new /obj/item/clothing/shoes/jackboots(src)
 	new /obj/item/clothing/head/beret/sec/navyofficer(src)
 	new /obj/item/clothing/head/beret/sec/navyofficer(src)
 	new /obj/item/clothing/head/beret/sec(src)
+	new /obj/item/clothing/head/beret/sec(src)
+	new /obj/item/clothing/head/soft/sec(src)
 	new /obj/item/clothing/head/soft/sec(src)
 	new /obj/item/clothing/head/soft/sec(src)
 	new /obj/item/clothing/head/soft/sec(src)

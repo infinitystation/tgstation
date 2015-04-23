@@ -72,6 +72,7 @@
 /obj/item/clothing/under/rank/security/navyblue
 	name = "security officer's formal uniform"
 	desc = "The latest in fashionable security outfits."
+	worn_icon = null
 	icon_state = "officerblueclothes"
 	item_state = "officerblueclothes"
 	item_color = "officerblueclothes"
@@ -79,6 +80,7 @@
 /obj/item/clothing/under/rank/head_of_security/navyblue
 	desc = "The insignia on this uniform tells you that this uniform belongs to the Head of Security."
 	name = "head of security's formal uniform"
+	worn_icon = null
 	icon_state = "hosblueclothes"
 	item_state = "hosblueclothes"
 	item_color = "hosblueclothes"
@@ -86,6 +88,21 @@
 /obj/item/clothing/under/rank/warden/navyblue
 	desc = "The insignia on this uniform tells you that this uniform belongs to the Warden."
 	name = "warden's formal uniform"
+	worn_icon = null
 	icon_state = "wardenblueclothes"
 	item_state = "wardenblueclothes"
 	item_color = "wardenblueclothes"
+
+//alt
+/obj/item/clothing/under/rank/security/blue
+	name = "security jumpsuit"
+	desc = "A tactical security jumpsuit for officers complete with nanotrasen belt buckle."
+	icon_state = "security"
+	item_state = "r_suit"
+	item_color = "security"
+	icon = 'icons/blue_brig/obj/clothing/uniform.dmi'
+	worn_icon = 'icons/blue_brig/mob/uniform.dmi'
+	lefthand_file = 'icons/blue_brig/mob/clothing-lefthand.dmi'
+	righthand_file = 'icons/blue_brig/mob/clothing-righthand.dmi'
+	armor = list(melee = 10, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0)
+	strip_delay = 50

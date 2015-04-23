@@ -26,12 +26,12 @@ Head of Security
 	default_backpack = /obj/item/weapon/storage/backpack/security
 	default_satchel = /obj/item/weapon/storage/backpack/satchel_sec
 
-	access = list(access_security, access_sec_doors, access_brig, access_armory, access_court, access_weapons,
+	access = list(access_security, access_sec_doors, access_brig, access_armory, access_court, access_weapons, access_eva,
 			            access_forensics_lockers, access_morgue, access_maint_tunnels, access_all_personal_lockers,
 			            access_research, access_engine, access_mining, access_medical, access_construction, access_mailsorting,
 			            access_heads, access_hos, access_RC_announce, access_keycard_auth, access_gateway)
 	minimal_access = list(access_security, access_sec_doors, access_brig, access_armory, access_court, access_weapons,
-			            access_forensics_lockers, access_morgue, access_maint_tunnels, access_all_personal_lockers,
+			            access_forensics_lockers, access_morgue, access_maint_tunnels, access_all_personal_lockers, access_eva,
 			            access_research, access_engine, access_mining, access_medical, access_construction, access_mailsorting,
 			            access_heads, access_hos, access_RC_announce, access_keycard_auth, access_gateway)
 
@@ -181,7 +181,7 @@ Security Officer
 
 	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/jackboots(H), slot_shoes)
 	H.equip_to_slot_or_del(new /obj/item/clothing/suit/armor/vest(H), slot_wear_suit)
-	H.equip_to_slot_or_del(new /obj/item/clothing/head/beret/sec/navyofficer(H), slot_head)
+	H.equip_to_slot_or_del(new /obj/item/clothing/head/beret/sec(H), slot_head)
 	H.equip_to_slot_or_del(new /obj/item/clothing/gloves/color/black(H), slot_gloves)
 	H.equip_to_slot_or_del(new /obj/item/weapon/gun/energy/gun/advtaser(H), slot_s_store)
 	H.equip_to_slot_or_del(new /obj/item/device/flash/handheld(H), slot_l_store)
@@ -206,33 +206,33 @@ Security Officer
 	dep_access = null;
 	return L
 
-var/list/sec_departments = list("engineering", "supply", "medical", "science")
+var/list/sec_departments = list("инженерном отделе", "грузовом отделе", "медицинском отделе", "научно-исследовательском отделе")
 
 /datum/job/officer/proc/assign_sec_to_department(var/mob/living/carbon/human/H)
 	if(!sec_departments.len)
-		H.equip_to_slot_or_del(new /obj/item/clothing/under/rank/security/navyblue(H), slot_w_uniform)
+		H.equip_to_slot_or_del(new /obj/item/clothing/under/rank/security/blue(H), slot_w_uniform)
 	else
 		var/department = pick(sec_departments)
 		sec_departments -= department
 		var/destination = null
-		var/obj/item/clothing/under/U = new /obj/item/clothing/under/rank/security/navyblue(H)
+		var/obj/item/clothing/under/U = new /obj/item/clothing/under/rank/security/blue(H)
 		switch(department)
-			if("supply")
+			if("грузовом отделе")
 				default_headset = /obj/item/device/radio/headset/headset_sec/alt/department/supply
 				dep_access = list(access_mailsorting, access_mining)
 				destination = /area/security/checkpoint/supply
 				U.attachTie(new /obj/item/clothing/tie/armband/cargo())
-			if("engineering")
+			if("инженерном отделе")
 				default_headset = /obj/item/device/radio/headset/headset_sec/alt/department/engi
 				dep_access = list(access_construction, access_engine)
 				destination = /area/security/checkpoint/engineering
 				U.attachTie(new /obj/item/clothing/tie/armband/engine())
-			if("medical")
+			if("медицинском отделе")
 				default_headset = /obj/item/device/radio/headset/headset_sec/alt/department/med
 				dep_access = list(access_medical)
 				destination = /area/security/checkpoint/medical
 				U.attachTie(new /obj/item/clothing/tie/armband/medblue())
-			if("science")
+			if("научно-исследовательском отделе")
 				default_headset = /obj/item/device/radio/headset/headset_sec/alt/department/sci
 				dep_access = list(access_research)
 				destination = /area/security/checkpoint/science
