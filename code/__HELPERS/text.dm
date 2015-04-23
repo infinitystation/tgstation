@@ -497,3 +497,10 @@ var/list/binary = list("0","1")
 		t = copytext(t, 1, index) + "&#255;" + copytext(t, index+1)
 		index = findtext(t, "ÿ", index+1)
 	return t
+
+/proc/sanitize_u0(t)
+	var/index = findtext(t, "ÿ")
+	while(index)
+		t = copytext(t, 1, index) + "&#1103;" + copytext(t, index+1)
+		index = findtext(t, "ÿ", index+1)
+	return t

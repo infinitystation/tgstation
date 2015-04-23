@@ -30,6 +30,8 @@
 	..()
 
 /obj/item/clothing/head/helmet/sec
+	worn_icon = 'icons/blue_brig/mob/head.dmi'
+	icon = 'icons/blue_brig/obj/clothing/hats.dmi'
 	spawnWithHelmetCam = 1
 	canAttachCam = 1
 	can_flashlight = 1
@@ -37,6 +39,8 @@
 /obj/item/clothing/head/helmet/alt
 	name = "bulletproof helmet"
 	desc = "A bulletproof combat helmet that excels in protecting the wearer against traditional projectile weaponry and explosives to a minor extent."
+	worn_icon = 'icons/blue_brig/mob/head.dmi'
+	icon = 'icons/blue_brig/obj/clothing/hats.dmi'
 	icon_state = "helmetalt"
 	item_state = "helmetalt"
 	armor = list(melee = 25, bullet = 80, laser = 10, energy = 10, bomb = 40, bio = 0, rad = 0)
@@ -44,8 +48,10 @@
 /obj/item/clothing/head/helmet/riot
 	name = "riot helmet"
 	desc = "It's a helmet specifically designed to protect against close range attacks."
+	worn_icon = 'icons/blue_brig/mob/head.dmi'
+	icon = 'icons/blue_brig/obj/clothing/hats.dmi'
 	icon_state = "riot"
-	item_state = "helmet"
+	item_state = "riot"
 	toggle_message = "You pull the visor down on"
 	alt_toggle_message = "You push the visor up on"
 	can_toggle = 1
@@ -102,6 +108,8 @@
 /obj/item/clothing/head/helmet/swat
 	name = "\improper SWAT helmet"
 	desc = "An extremely robust, space-worthy helmet with the Nanotrasen logo emblazoned on the top."
+	worn_icon = 'icons/blue_brig/mob/head.dmi'
+	icon = 'icons/blue_brig/obj/clothing/hats.dmi'
 	icon_state = "swat"
 	item_state = "swat"
 	armor = list(melee = 80, bullet = 60, laser = 50,energy = 25, bomb = 50, bio = 10, rad = 0)
