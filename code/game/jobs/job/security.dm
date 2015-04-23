@@ -206,7 +206,7 @@ Security Officer
 	dep_access = null;
 	return L
 
-var/list/sec_departments = list("engineering", "supply", "medical", "science")
+var/list/sec_departments = list("инженерном отделе", "грузовом отделе", "медицинском отделе", "научно-исследовательском отделе")
 
 /datum/job/officer/proc/assign_sec_to_department(var/mob/living/carbon/human/H)
 	if(!sec_departments.len)
@@ -215,24 +215,24 @@ var/list/sec_departments = list("engineering", "supply", "medical", "science")
 		var/department = pick(sec_departments)
 		sec_departments -= department
 		var/destination = null
-		var/obj/item/clothing/under/U = new /obj/item/clothing/under/rank/security/navyblue(H)
+		var/obj/item/clothing/under/U = new /obj/item/clothing/under/rank/security/blue(H)
 		switch(department)
-			if("supply")
+			if("грузовом отделе")
 				default_headset = /obj/item/device/radio/headset/headset_sec/alt/department/supply
 				dep_access = list(access_mailsorting, access_mining)
 				destination = /area/security/checkpoint/supply
 				U.attachTie(new /obj/item/clothing/tie/armband/cargo())
-			if("engineering")
+			if("инженерном отделе")
 				default_headset = /obj/item/device/radio/headset/headset_sec/alt/department/engi
 				dep_access = list(access_construction, access_engine)
 				destination = /area/security/checkpoint/engineering
 				U.attachTie(new /obj/item/clothing/tie/armband/engine())
-			if("medical")
+			if("медицинском отделе")
 				default_headset = /obj/item/device/radio/headset/headset_sec/alt/department/med
 				dep_access = list(access_medical)
 				destination = /area/security/checkpoint/medical
 				U.attachTie(new /obj/item/clothing/tie/armband/medblue())
-			if("science")
+			if("научно-исследовательском отделе")
 				default_headset = /obj/item/device/radio/headset/headset_sec/alt/department/sci
 				dep_access = list(access_research)
 				destination = /area/security/checkpoint/science
