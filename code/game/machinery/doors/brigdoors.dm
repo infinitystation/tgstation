@@ -194,8 +194,14 @@
 		timeset(timeleft)
 		var/second = round(timeleft() % 60)
 		var/minute = round((timeleft() - second) / 60)
+		var/prisoners = ""
+		for(var/mob/living/carbon/human/H in orange(src, 3))
+			if(H.x<src.x)
+				prisoners += "[H.ckey]/[H.real_name] "
 		message_admins("В тюрьму посажен преступник. Срок: [(minute ? text("[minute]:") : null)][second]. Выставлен игроком [key_name(usr, usr.client)](<A HREF='?_src_=holder;adminmoreinfo=\ref[usr]'>?</A>) Координаты: ([x],[y],[z] - <A HREF='?_src_=holder;adminplayerobservecoodjump=1;X=[x];Y=[y];Z=[z]'>JMP</a>)",0,1)
-		log_game("В тюрьму посажен преступник. Срок: [(minute ? text("[minute]:") : null)][second]. Выставлен игроком [key_name(usr, usr.client)]. Координаты: ([x],[y],[z])")
+		message_admins("Игроки в камере: [prisoners]")
+		log_game("В тюрьму посажен преступник. Срок: [(minute ? text("[minute]:") : null)][second]. Выставлен игроком [usr.ckey]/[usr.real_name]. Координаты: ([x],[y],[z])")
+		log_game("Игроки в камере: [prisoners]")
 	else if(href_list["tp"]) //adjust timer
 		var/timeleft = timeleft()
 		var/tp = text2num(href_list["tp"])
