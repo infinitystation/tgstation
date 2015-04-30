@@ -12,13 +12,15 @@ xsarethx = Game Master
 median4 = Game Master
 maxikot = Game Master
 archibald125 = Game Master
-nikovar = Game Master
+maks750rus = Game Master
 bear1ake = Game Master
 wipe = Game Master
 terror4000rus = Game Master
 hellpony = Game Master
 samorey = Game Master
 
+MrStonedOne = Host
+microscopics = Game Master
 Gun Hog = Game Master
 razharas = Game Master
 Niknakflak = Game Master

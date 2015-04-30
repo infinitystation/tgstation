@@ -680,7 +680,7 @@ Sorry Giacom. Please don't be mad :(
 /mob/living/proc/flash_eyes(intensity = 1, override_blindness_check = 0)
 	if((check_eye_prot() < intensity) && (override_blindness_check || !(disabilities & BLIND)))
 		flick("e_flash", flash)
-	return 1
+		return 1
 
 //this returns the mob's protection against eye damage (number between -1 and 2)
 /mob/living/proc/check_eye_prot()
@@ -694,7 +694,7 @@ Sorry Giacom. Please don't be mad :(
 // Override if a certain type of mob should be behave differently when stripping items (can't, for example)
 /mob/living/stripPanelUnequip(obj/item/what, mob/who, where)
 	if(what.flags & NODROP)
-		src << "<span class='notice'>¬ы не можете извлечь [what.name], похоже застряло!</span>"
+		src << "<span class='notice'>¬ы не можете извлечь \the [what.name], похоже застряло!</span>"
 		return
 	who.visible_message("<span class='danger'>[src] пытается убрать [who]'s [what.name].</span>", \
 					"<span class='userdanger'>[src] пытается убрать [who]'s [what.name].</span>")
@@ -709,7 +709,7 @@ Sorry Giacom. Please don't be mad :(
 /mob/living/stripPanelEquip(obj/item/what, mob/who, where)
 	what = src.get_active_hand()
 	if(what && (what.flags & NODROP))
-		src << "<span class='notice'>¬ы не можете одеть [what.name] на [who], это застряло в вашей руке!</span>"
+		src << "<span class='notice'>¬ы не можете одеть \the [what.name] на [who], это застряло в вашей руке!</span>"
 		return
 	if(what && what.mob_can_equip(who, where, 1))
 		visible_message("<span class='notice'>[src] пытается одеть [what] на [who].</span>")
