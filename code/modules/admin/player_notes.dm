@@ -61,12 +61,10 @@ datum/admins/proc/notes_gethtml(var/ckey)
 
 	if(!note)
 		note = input(usr,"Enter your note:","Enter some text",null) as message|null
-		note_u = sanitize_u(note)
-		note = sanitize(note)
 		if(!note)	return
 
-
-
+	note_u = sanitize_u(note)
+	note = sanitize(note)
 	var/savefile/notesfile = new(NOTESFILE)
 	if(!notesfile)	return
 	notesfile.cd = "/[ckey]"
