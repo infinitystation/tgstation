@@ -75,15 +75,14 @@
 
 /datum/game_mode/traitor/make_antag_chance(var/mob/living/carbon/human/character) //Assigns traitor to latejoiners
 	var/traitorcap = min(round(joined_player_list.len / (config.traitor_scaling_coeff * 2)) + 2 + num_modifier, round(joined_player_list.len/config.traitor_scaling_coeff) + num_modifier )
-	if(traitors.len >= traitorcap) //Upper cap for number of latejoin antagonists
+	if(ticker.mode.traitors.len >= traitorcap) //Upper cap for number of latejoin antagonists
 		return
-	if(traitors.len <= (traitorcap - 2) || prob(100 / (config.traitor_scaling_coeff * 2)))
+	if(ticker.mode.traitors.len <= (traitorcap - 2) || prob(100 / (config.traitor_scaling_coeff * 2)))
 		if(character.client.prefs.be_special & BE_TRAITOR)
 			if(!jobban_isbanned(character.client, "traitor") && !jobban_isbanned(character.client, "Syndicate"))
 				if(age_check(character.client))
-					if(!(character.job in ticker.mode.restricted_jobs))
+					if(!(character.job in restricted_jobs))
 						add_latejoin_traitor(character.mind)
-	..()
 
 /datum/game_mode/traitor/proc/add_latejoin_traitor(var/datum/mind/character)
 	character.make_Traitor()

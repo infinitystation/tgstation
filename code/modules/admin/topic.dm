@@ -16,35 +16,35 @@
 					message_admins("[key_name_admin(usr)] created traitors.")
 					log_admin("[key_name(usr)] created traitors.")
 				else
-					message_admins("[key_name_admin(usr)] tried to create traitors. Unfortunatly there were no candidates available.")
+					message_admins("[key_name_admin(usr)] tried to create traitors. Unfortunately, there were no candidates available.")
 					log_admin("[key_name(usr)] failed to create traitors.")
 			if("2")
 				if(src.makeChanglings())
 					message_admins("[key_name(usr)] created changelings.")
 					log_admin("[key_name(usr)] created changelings.")
 				else
-					message_admins("[key_name_admin(usr)] tried to create changelings. Unfortunatly there were no candidates available.")
+					message_admins("[key_name_admin(usr)] tried to create changelings. Unfortunately, there were no candidates available.")
 					log_admin("[key_name(usr)] failed to create changelings.")
 			if("3")
 				if(!src.makeRevs())
 					message_admins("[key_name(usr)] started a revolution.")
 					log_admin("[key_name(usr)] started a revolution.")
 				else
-					message_admins("[key_name_admin(usr)] tried to start a revolution. Unfortunatly there were no candidates available.")
+					message_admins("[key_name_admin(usr)] tried to start a revolution. Unfortunately, there were no candidates available.")
 					log_admin("[key_name(usr)] failed to start a revolution.")
 			if("4")
 				if(src.makeCult())
 					message_admins("[key_name(usr)] started a cult.")
 					log_admin("[key_name(usr)] started a cult.")
 				else
-					message_admins("[key_name_admin(usr)] tried to start a cult. Unfortunatly there were no candidates available.")
+					message_admins("[key_name_admin(usr)] tried to start a cult. Unfortunately, there were no candidates available.")
 					log_admin("[key_name(usr)] failed to start a cult.")
 			if("5")
 				if(src.makeMalfAImode())
 					message_admins("[key_name(usr)] caused an AI to malfunction.")
 					log_admin("[key_name(usr)] caused an AI to malfunction.")
 				else
-					message_admins("[key_name_admin(usr)] tried to cause an AI to malfunction. Unfortunatly there were no candidates available.")
+					message_admins("[key_name_admin(usr)] tried to cause an AI to malfunction. Unfortunately, there were no candidates available.")
 					log_admin("[key_name(usr)] failed to cause an AI to malfunction.")
 			if("6")
 				message_admins("[key_name(usr)] is creating a wizard...")
@@ -52,7 +52,7 @@
 					message_admins("[key_name(usr)] created a wizard.")
 					log_admin("[key_name(usr)] created a wizard.")
 				else
-					message_admins("[key_name_admin(usr)] tried to create a wizard. Unfortunatly there were no candidates available.")
+					message_admins("[key_name_admin(usr)] tried to create a wizard. Unfortunately, there were no candidates available.")
 					log_admin("[key_name(usr)] failed to create a wizard.")
 			if("7")
 				message_admins("[key_name(usr)] is creating a nuke team...")
@@ -60,7 +60,7 @@
 					message_admins("[key_name(usr)] created a nuke team.")
 					log_admin("[key_name(usr)] created a nuke team.")
 				else
-					message_admins("[key_name_admin(usr)] tried to create a nuke team. Unfortunatly there were not enough candidates available.")
+					message_admins("[key_name_admin(usr)] tried to create a nuke team. Unfortunately, there were not enough candidates available.")
 					log_admin("[key_name(usr)] failed to create a nuke team.")
 			if("8")
 				message_admins("[key_name(usr)] spawned a ninja.")
@@ -76,7 +76,7 @@
 					message_admins("[key_name(usr)] created a death squad.")
 					log_admin("[key_name(usr)] created a death squad.")
 				else
-					message_admins("[key_name_admin(usr)] tried to create a death squad. Unfortunatly there were not enough candidates available.")
+					message_admins("[key_name_admin(usr)] tried to create a death squad. Unfortunately, there were not enough candidates available.")
 					log_admin("[key_name(usr)] failed to create a death squad.")
 			if("11")
 				var/strength = input("Set Blob Strength (1=Weak, 2=Strong, 3=Full)","Set Strength",1) as num
@@ -88,16 +88,16 @@
 					message_admins("[key_name(usr)] started a gang war.")
 					log_admin("[key_name(usr)] started a gang war.")
 				else
-					message_admins("[key_name(usr)] tried to start a gang war. Unfortunatly there were not enough candidates available.")
+					message_admins("[key_name(usr)] tried to start a gang war. Unfortunately, there were not enough candidates available.")
 					log_admin("[key_name(usr)] failed to start a gang war.")
 			if("13")
-				message_admins("[key_name(usr)] is creating an emergency response team...")
+				message_admins("[key_name(usr)] is creating a Centcom response team...")
 				if(src.makeEmergencyresponseteam())
-					message_admins("[key_name(usr)] created an emergency response team.")
-					log_admin("[key_name(usr)] created an emergency response team.")
+					message_admins("[key_name(usr)] created a Centcom response team.")
+					log_admin("[key_name(usr)] created a Centcom response team.")
 				else
-					message_admins("[key_name_admin(usr)] tried to create an emergency response team. Unfortunatly there were not enough candidates available.")
-					log_admin("[key_name(usr)] failed to create an emergency response team.")
+					message_admins("[key_name_admin(usr)] tried to create a Centcom response team. Unfortunately, there were not enough candidates available.")
+					log_admin("[key_name(usr)] failed to create a Centcom response team.")
 			if("14")
 				message_admins("[key_name(usr)] is creating an abductor team...")
 				if(src.makeAbductorTeam())
@@ -106,6 +106,13 @@
 				else
 					message_admins("[key_name_admin(usr)] tried to create an abductor team. Unfortunatly there were not enough candidates available.")
 					log_admin("[key_name(usr)] failed to create an abductor team.")
+			if("15")
+				if(src.makeRevenant())
+					message_admins("[key_name(usr)] created a revenant.")
+					log_admin("[key_name(usr)] created a revenant.")
+				else
+					message_admins("[key_name_admin(usr)] tried to create a revenant. Unfortunately, there were no candidates available.")
+					log_admin("[key_name(usr)] failed to create a revenant.")
 
 	else if(href_list["forceevent"])
 		if(!check_rights(R_FUN))	return
@@ -642,11 +649,38 @@
 				jobs += "</tr><tr align='center'>"
 				counter = 0
 
-		//pAI isn't technically a job, but it goes in here.
+		jobs += "</tr></table>"
+
+		//Ghost Roles (light light gray)
+		jobs += "<table cellpadding='1' cellspacing='0' width='100%'>"
+		jobs += "<tr bgcolor='eeeeee'><th colspan='4'><a href='?src=\ref[src];jobban3=ghostroles;jobban4=\ref[M]'>Ghost Roles</a></th></tr><tr align='center'>"
+
+		//pAI
 		if(jobban_isbanned(M, "pAI"))
-			jobs += "<td width='20%'><a href='?src=\ref[src];jobban3=pAI;jobban4=\ref[M]'><font color=red>pAI</font></a></td>"
+			jobs += "<td width='20%'><a href='?src=\ref[src];jobban3=pAI;jobban4=\ref[M]'><font color=red>[replacetext("pAI", " ", "&nbsp")]</font></a></td>"
 		else
-			jobs += "<td width='20%'><a href='?src=\ref[src];jobban3=pAI;jobban4=\ref[M]'>pAI</a></td>"
+			jobs += "<td width='20%'><a href='?src=\ref[src];jobban3=pAI;jobban4=\ref[M]'>[replacetext("pAI", " ", "&nbsp")]</a></td>"
+
+
+		//Drones
+		if(jobban_isbanned(M, "drone"))
+			jobs += "<td width='20%'><a href='?src=\ref[src];jobban3=drone;jobban4=\ref[M]'><font color=red>[replacetext("Drone", " ", "&nbsp")]</font></a></td>"
+		else
+			jobs += "<td width='20%'><a href='?src=\ref[src];jobban3=drone;jobban4=\ref[M]'>[replacetext("Drone", " ", "&nbsp")]</a></td>"
+
+
+		//Positronic Brains
+		if(jobban_isbanned(M, "posibrain"))
+			jobs += "<td width='20%'><a href='?src=\ref[src];jobban3=posibrain;jobban4=\ref[M]'><font color=red>[replacetext("Posibrain", " ", "&nbsp")]</font></a></td>"
+		else
+			jobs += "<td width='20%'><a href='?src=\ref[src];jobban3=posibrain;jobban4=\ref[M]'>[replacetext("Posibrain", " ", "&nbsp")]</a></td>"
+
+
+		//Deathsquad
+		if(jobban_isbanned(M, "deathsquad"))
+			jobs += "<td width='20%'><a href='?src=\ref[src];jobban3=deathsquad;jobban4=\ref[M]'><font color=red>[replacetext("Deathsquad", " ", "&nbsp")]</font></a></td>"
+		else
+			jobs += "<td width='20%'><a href='?src=\ref[src];jobban3=deathsquad;jobban4=\ref[M]'>[replacetext("Deathsquad", " ", "&nbsp")]</a></td>"
 
 		jobs += "</tr></table>"
 
@@ -704,12 +738,6 @@
 			jobs += "<td width='20%'><a href='?src=\ref[src];jobban3=abductor;jobban4=\ref[M]'><font color=red>[replacetext("Abductor", " ", "&nbsp")]</font></a></td>"
 		else
 			jobs += "<td width='20%'><a href='?src=\ref[src];jobban3=abductor;jobban4=\ref[M]'>[replacetext("Abductor", " ", "&nbsp")]</a></td>"
-
-		//Deathsquad
-		if(jobban_isbanned(M, "deathsquad") || isbanned_dept)
-			jobs += "<td width='20%'><a href='?src=\ref[src];jobban3=deathsquad;jobban4=\ref[M]'><font color=red>[replacetext("Deathsquad", " ", "&nbsp")]</font></a></td>"
-		else
-			jobs += "<td width='20%'><a href='?src=\ref[src];jobban3=deathsquad;jobban4=\ref[M]'>[replacetext("Deathsquad", " ", "&nbsp")]</a></td>"
 
 /*		//Malfunctioning AI	//Removed Malf-bans because they're a pain to impliment
 		if(jobban_isbanned(M, "malf AI") || isbanned_dept)
@@ -800,6 +828,8 @@
 					var/datum/job/temp = SSjob.GetJob(jobPos)
 					if(!temp) continue
 					joblist += temp.title
+			if("ghostroles")
+				joblist += list("pAI", "posibrain", "drone", "deathsquad")
 			else
 				joblist += href_list["jobban3"]
 
@@ -835,7 +865,7 @@
 							msg = job
 						else
 							msg += ", [job]"
-					notes_add(M.ckey, "Banned  from [msg] - [reason]")
+					notes_add(M.ckey, "Banned  from [msg] - [reason]. Time: [mins]")
 					message_admins("<span class='adminnotice'>[key_name_admin(usr)] banned [key_name_admin(M)] from [msg] for [mins] minutes</span>")
 					M << "<span class='boldannounce'><BIG>You have been jobbanned by [usr.client.ckey] from: [msg].</BIG></span>"
 					M << "<span class='boldannounce'>The reason is: [reason]</span>"
@@ -964,6 +994,7 @@
 				else
 					M << "<span class='danger'>No ban appeals URL has been set.</span>"
 				log_admin("[usr.client.ckey] has banned [M.ckey].\nReason: [reason]\nThis will be removed in [mins] minutes.")
+				notes_add(M.ckey, "Временно забанен, причина: [reason]. Время: [mins]", 0)
 				message_admins("<span class='adminnotice'>[usr.client.ckey] has banned [M.ckey].\nReason: [reason]\nThis will be removed in [mins] minutes.</span>")
 
 				del(M.client)
@@ -989,6 +1020,7 @@
 				message_admins("<span class='adminnotice'>[usr.client.ckey] has banned [M.ckey].\nReason: [reason]\nThis is a permanent ban.</span>")
 				feedback_inc("ban_perma",1)
 				DB_ban_record(BANTYPE_PERMA, M, -1, reason)
+				notes_add(M.ckey, "Навсегда забанен, причина: [reason].", 0)
 
 				del(M.client)
 				//qdel(M)
@@ -1815,7 +1847,7 @@
 					message_admins("\blue [key_name_admin(usr)] turned all humans into [result]")
 					var/newtype = species_list[result]
 					for(var/mob/living/carbon/human/H in mob_list)
-						H.dna.species = new newtype()
+						hardset_dna(H, null, null, null, null, newtype)
 						H.regenerate_icons()
 			if("corgi")
 				feedback_inc("admin_secrets_fun_used",1)

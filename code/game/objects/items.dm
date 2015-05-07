@@ -191,10 +191,10 @@
 /obj/item/attack_alien(mob/user as mob)
 	var/mob/living/carbon/alien/A = user
 
-	if(!A.has_fine_manipulation || w_class >= 4)
+	if(!A.has_fine_manipulation)
 		if(src in A.contents) // To stop Aliens having items stuck in their pockets
 			A.unEquip(src)
-		user << "Your claws aren't capable of such fine manipulation."
+		user << "<span class='warning'>Your claws aren't capable of such fine manipulation!</span>"
 		return
 	attack_paw(A)
 
@@ -236,7 +236,7 @@
 					else if(success)
 						user << "<span class='notice'>You put some things [S.preposition] [S].</span>"
 					else
-						user << "<span class='notice'>You fail to pick anything up with [S].</span>"
+						user << "<span class='warning'>You fail to pick anything up with [S]!</span>"
 
 			else if(S.can_be_inserted(src))
 				S.handle_item_insertion(src)
@@ -303,7 +303,7 @@
 			usr << "\red You already have something in your hand."
 		*/
 	else
-		usr << "<span class='notice'>This mob type can't use this verb.</span>"
+		usr << "<span class='warning'>This mob type can't use this verb!</span>"
 
 //This proc is executed when someone clicks the on-screen UI button. To make the UI button show, set the 'action_button_name'.
 //The default action is attack_self().
@@ -319,26 +319,30 @@
 
 /obj/item/proc/eyestab(mob/living/carbon/M as mob, mob/living/carbon/user as mob)
 
-	var/mob/living/carbon/human/H = M
-	if(istype(H) && ( \
-			(H.head && H.head.flags & HEADCOVERSEYES) || \
+	var/is_human_victim = 0
+	if(ishuman(M))
+		is_human_victim = 1
+		var/mob/living/carbon/human/H = M
+		if((H.head && H.head.flags & HEADCOVERSEYES) || \
 			(H.wear_mask && H.wear_mask.flags & MASKCOVERSEYES) || \
-			(H.glasses && H.glasses.flags & GLASSESCOVERSEYES) \
-		))
-		// you can't stab someone in the eyes wearing a mask!
-		user << "<span class='danger'>You're going to need to remove that mask/helmet/glasses first.</span>"
-		return
+			(H.glasses && H.glasses.flags & GLASSESCOVERSEYES))
+			// you can't stab someone in the eyes wearing a mask!
+			user << "<span class='danger'>You're going to need to remove that mask/helmet/glasses first!</span>"
+			return
 
-	var/mob/living/carbon/monkey/Mo = M
-	if(istype(Mo) && ( \
-			(Mo.wear_mask && Mo.wear_mask.flags & MASKCOVERSEYES) \
-		))
-		// you can't stab someone in the eyes wearing a mask!
-		user << "<span class='danger'>You're going to need to remove that mask/helmet/glasses first.</span>"
-		return
+	if(ismonkey(M))
+		var/mob/living/carbon/monkey/Mo = M
+		if(Mo.wear_mask && Mo.wear_mask.flags & MASKCOVERSEYES)
+			// you can't stab someone in the eyes wearing a mask!
+			user << "<span class='danger'>You're going to need to remove that mask/helmet/glasses first!</span>"
+			return
 
 	if(isalien(M))//Aliens don't have eyes./N     slimes also don't have eyes!
-		user << "<span class='danger'>You cannot locate any eyes on this creature!</span>"
+		user << "<span class='warning'>You cannot locate any eyes on this creature!</span>"
+		return
+
+	if(isbrain(M))
+		user << "<span class='danger'>You cannot locate any organic eyes on this brain!</span>"
 		return
 
 	add_logs(user, M, "attacked", object="[src.name]", addition="(INTENT: [uppertext(user.a_intent)])")
@@ -353,7 +357,7 @@
 			"<span class='danger'>[user] has stabbed themself in the eyes with [src]!</span>", \
 			"<span class='userdanger'>You stab yourself in the eyes with [src]!</span>" \
 		)
-	if(istype(M, /mob/living/carbon/human))
+	if(is_human_victim)
 		var/mob/living/carbon/human/U = M
 		var/obj/item/organ/limb/affecting = U.get_organ("head")
 		if(affecting.take_damage(7))
@@ -361,6 +365,7 @@
 
 	else
 		M.take_organ_damage(7)
+
 	M.eye_blurry += rand(3,4)
 	M.eye_stat += rand(2,4)
 	if (M.eye_stat >= 10)
@@ -404,6 +409,9 @@
 
 /obj/item/acid_act(var/acidpwr, var/toxpwr, var/acid_volume)
 	. = 1
+	if(unacidable)
+		return
+
 	for(var/V in armor)
 		if(armor[V] > 0)
 			.-- //it survives the acid...

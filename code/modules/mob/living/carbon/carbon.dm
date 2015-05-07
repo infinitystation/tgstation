@@ -38,9 +38,9 @@
 /mob/living/carbon/relaymove(var/mob/user, direction)
 	if(user in src.stomach_contents)
 		if(prob(40))
-			audible_message("<span class='danger'>You hear something rumbling inside [src]'s stomach...</span>", \
-						 "<span class='danger'>You hear something rumbling.</span>", 4,\
-						  "<span class='danger'>Something is rumbling inside your stomach!</span>")
+			audible_message("<span class='warning'>You hear something rumbling inside [src]'s stomach...</span>", \
+						 "<span class='warning'>You hear something rumbling.</span>", 4,\
+						  "<span class='userdanger'>Something is rumbling inside your stomach!</span>")
 			var/obj/item/I = user.get_active_hand()
 			if(I && I.force)
 				var/d = rand(round(I.force / 4), I.force)
@@ -84,7 +84,7 @@
 	src.visible_message(
 		"<span class='danger'>[src] was shocked by \the [source]!</span>", \
 		"<span class='userdanger'>You feel a powerful shock coursing through your body!</span>", \
-		"<span class='danger'>You hear a heavy electrical crack.</span>" \
+		"<span class='italics'>You hear a heavy electrical crack.</span>" \
 	)
 	if(prob(25) && heart_attack)
 		heart_attack = 0
@@ -157,27 +157,25 @@
 /mob/living/carbon/flash_eyes(intensity = 1, override_blindness_check = 0)
 	var/damage = intensity - check_eye_prot()
 	if(..()) // we've been flashed
-		if(damage>0)
-			if(weakeyes)
-				Stun(2)
+		if(weakeyes)
+			Stun(2)
+		switch(damage)
+			if(1)
+				src << "<span class='warning'>Your eyes sting a little.</span>"
+				if(prob(40))
+					eye_stat += 1
 
-			switch(damage)
-				if(1)
-					src << "<span class='warning'>Your eyes sting a little.</span>"
-					if(prob(40))
-						eye_stat += 1
+			if(2)
+				src << "<span class='warning'>Your eyes burn.</span>"
+				eye_stat += rand(2, 4)
 
-				if(2)
-					src << "<span class='warning'>Your eyes burn.</span>"
-					eye_stat += rand(2, 4)
+			else
+				src << "<span class='warning'>Your eyes itch and burn severely!</span>"
+				eye_stat += rand(12, 16)
 
-				else
-					src << "Your eyes itch and burn severely!</span>"
-					eye_stat += rand(12, 16)
-
-			if(eye_stat > 10)
-				eye_blind += damage
-				eye_blurry += damage * rand(3, 6)
+		if(eye_stat > 10)
+			eye_blind += damage
+			eye_blurry += damage * rand(3, 6)
 
 			if(eye_stat > 20)
 				if (prob(eye_stat - 20))
@@ -188,13 +186,11 @@
 					disabilities |= BLIND
 			else
 				src << "<span class='warning'>Your eyes are really starting to hurt. This can't be good for you!</span>"
-			return 1
-		else if(damage == 0) // just enough protection
-			if(prob(20))
-				src << "<span class='notice'>Something bright flashes in the corner of your vision!</span>"
-				return 0
-		else if(damage < 0) // full protection
-			return 0
+		return 1
+
+	else if(damage == 0) // just enough protection
+		if(prob(20))
+			src << "<span class='notice'>Something bright flashes in the corner of your vision!</span>"
 
 /mob/living/carbon/proc/eyecheck()
 	var/obj/item/cybernetic_implant/eyes/EFP = locate() in src
@@ -410,7 +406,7 @@ var/const/GALOSHES_DONT_HELP = 8
 		changeNext_move(CLICK_CD_BREAKOUT)
 		last_special = world.time + CLICK_CD_BREAKOUT
 		visible_message("<span class='warning'>[src] attempts to unbuckle themself!</span>", \
-					"<span class='notice'>You attempt to unbuckle yourself. (This will take around one minute and you need to stay still.)</span>")
+					"<span class='notice'>You attempt to unbuckle yourself... (This will take around one minute and you need to stay still.)</span>")
 		if(do_after(src, 600, needhand = 0))
 			if(!buckled)
 				return
@@ -453,7 +449,7 @@ var/const/GALOSHES_DONT_HELP = 8
 	var/displaytime = breakouttime / 600
 	if(!cuff_break)
 		visible_message("<span class='warning'>[src] attempts to remove [I]!</span>")
-		src << "<span class='notice'>You attempt to remove [I]. (This will take around [displaytime] minutes and you need to stand still.)</span>"
+		src << "<span class='notice'>You attempt to remove [I]... (This will take around [displaytime] minutes and you need to stand still.)</span>"
 		if(do_after(src, breakouttime, 10, 0))
 			if(I.loc != src || buckled)
 				return
@@ -478,7 +474,7 @@ var/const/GALOSHES_DONT_HELP = 8
 	else
 		breakouttime = 50
 		visible_message("<span class='warning'>[src] is trying to break [I]!</span>")
-		src << "<span class='notice'>You attempt to break [I]. (This will take around 5 seconds and you need to stand still.)</span>"
+		src << "<span class='notice'>You attempt to break [I]... (This will take around 5 seconds and you need to stand still.)</span>"
 		if(do_after(src, breakouttime, needhand = 0))
 			if(!I.loc || buckled)
 				return

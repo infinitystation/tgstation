@@ -305,13 +305,13 @@
 	usr << browse(dat, "window=players;size=600x480")
 
 /datum/admins/proc/check_antagonists()
-	var/list/supported_continuous_modes = list("revolution", "gang", "wizard", "malfunction", "blob")
-	var/list/supported_midround_antag_modes = list("wizard", "malfunction", "blob")
 	if (ticker && ticker.current_state >= GAME_STATE_PLAYING)
 		var/dat = "<html><head><title>Round Status</title></head><body><h1><B>Round Status</B></h1>"
-		dat += "Current Game Mode: <B>[ticker.mode.name]</B><BR>"
 		if(ticker.mode.replacementmode)
+			dat += "Former Game Mode: <B>[ticker.mode.name]</B><BR>"
 			dat += "Replacement Game Mode: <B>[ticker.mode.replacementmode.name]</B><BR>"
+		else
+			dat += "Current Game Mode: <B>[ticker.mode.name]</B><BR>"
 		dat += "Round Duration: <B>[round(world.time / 36000)]:[add_zero("[world.time / 600 % 60]", 2)]:[world.time / 100 % 6][world.time / 100 % 10]</B><BR>"
 		dat += "<B>Emergency shuttle</B><BR>"
 		if(SSshuttle.emergency.mode < SHUTTLE_CALL)
@@ -324,11 +324,8 @@
 			else
 				dat += "ETA: <a href='?_src_=holder;edit_shuttle_time=1'>[(timeleft / 60) % 60]:[add_zero(num2text(timeleft % 60), 2)]</a><BR>"
 		dat += "<B>Continuous Round Status</B><BR>"
-		if(!ticker.mode.config_tag in supported_continuous_modes)
-			dat += "Continue if antagonists die"
-		else
-			dat += "<a href='?_src_=holder;toggle_continuous=1'>[config.continuous[ticker.mode.config_tag] ? "Continue if antagonists die" : "End on antagonist death"]</a>"
-		if(config.continuous[ticker.mode.config_tag] && ticker.mode.config_tag in supported_midround_antag_modes)
+		dat += "<a href='?_src_=holder;toggle_continuous=1'>[config.continuous[ticker.mode.config_tag] ? "Continue if antagonists die" : "End on antagonist death"]</a>"
+		if(config.continuous[ticker.mode.config_tag])
 			dat += ", <a href='?_src_=holder;toggle_midround_antag=1'>[config.midround_antag[ticker.mode.config_tag] ? "creating replacement antagonists" : "not creating new antagonists"]</a><BR>"
 		else
 			dat += "<BR>"
@@ -386,7 +383,7 @@
 			dat += "</table>"
 
 		if(ticker.mode.A_bosses.len || ticker.mode.A_gang.len)
-			dat += "<br><table cellspacing=5><tr><td><B>[gang_name("A")] Gang: [round((ticker.mode.A_territory.len/start_state.num_territories)*100, 0.1)]% Station Control</B></td><td></td></tr>"
+			dat += "<br><table cellspacing=5><tr><td><B>[gang_name("A")] Gang: [(ticker.mode.gang_points ? "[ticker.mode.gang_points.A] Influence, " : "")][round((ticker.mode.A_territory.len/start_state.num_territories)*100, 1)]% Control</B></td><td></td></tr>"
 			for(var/datum/mind/N in ticker.mode.A_bosses)
 				var/mob/M = N.current
 				if(!M)
@@ -402,7 +399,7 @@
 			dat += "</table>"
 
 		if(ticker.mode.B_bosses.len || ticker.mode.B_gang.len)
-			dat += "<br><table cellspacing=5><tr><td><B>[gang_name("B")] Gang: [round((ticker.mode.B_territory.len/start_state.num_territories)*100, 0.1)]% Station Control</B></td><td></td></tr>"
+			dat += "<br><table cellspacing=5><tr><td><B>[gang_name("B")] Gang: [(ticker.mode.gang_points ? "[ticker.mode.gang_points.B] Influence, " : "")][round((ticker.mode.B_territory.len/start_state.num_territories)*100, 1)]% Control</B></td><td></td></tr>"
 			for(var/datum/mind/N in ticker.mode.B_bosses)
 				var/mob/M = N.current
 				if(!M)

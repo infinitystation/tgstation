@@ -23,16 +23,16 @@ Sorry Giacom. Please don't be mad :(
 
 
 /mob/living/Destroy()
-	. = ..()
+	..()
 
 	for(var/mob/living/simple_animal/drone/D in player_list)
 		for(var/image/I in staticOverlays)
 			D.staticOverlays.Remove(I)
 			D.client.images.Remove(I)
-			del(I)
+			qdel(I)
 	staticOverlays.len = 0
 
-	del(src)
+	return QDEL_HINT_HARDDEL_NOW
 
 
 /mob/living/proc/generateStaticOverlay()
@@ -77,7 +77,7 @@ Sorry Giacom. Please don't be mad :(
 		return 1
 
 	//BubbleWrap: Should stop you pushing a restrained person out of the way
-	if(istype(M, /mob/living/carbon/human))
+	if(istype(M, /mob/living))
 		for(var/mob/MM in range(M, 1))
 			if( ((MM.pulling == M && ( M.restrained() && !( MM.restrained() ) && MM.stat == CONSCIOUS)) || locate(/obj/item/weapon/grab, M.grabbed_by.len)) )
 				if ( !(world.time % 5) )
@@ -245,6 +245,7 @@ Sorry Giacom. Please don't be mad :(
 /mob/living/proc/adjustBruteLoss(var/amount)
 	if(status_flags & GODMODE)	return 0
 	bruteloss = min(max(bruteloss + amount, 0),(maxHealth*2))
+	handle_regular_status_updates() //we update our health right away.
 
 /mob/living/proc/getOxyLoss()
 	return oxyloss
@@ -252,10 +253,12 @@ Sorry Giacom. Please don't be mad :(
 /mob/living/proc/adjustOxyLoss(var/amount)
 	if(status_flags & GODMODE)	return 0
 	oxyloss = min(max(oxyloss + amount, 0),(maxHealth*2))
+	handle_regular_status_updates()
 
 /mob/living/proc/setOxyLoss(var/amount)
 	if(status_flags & GODMODE)	return 0
 	oxyloss = amount
+	handle_regular_status_updates()
 
 /mob/living/proc/getToxLoss()
 	return toxloss
@@ -263,10 +266,12 @@ Sorry Giacom. Please don't be mad :(
 /mob/living/proc/adjustToxLoss(var/amount)
 	if(status_flags & GODMODE)	return 0
 	toxloss = min(max(toxloss + amount, 0),(maxHealth*2))
+	handle_regular_status_updates()
 
 /mob/living/proc/setToxLoss(var/amount)
 	if(status_flags & GODMODE)	return 0
 	toxloss = amount
+	handle_regular_status_updates()
 
 /mob/living/proc/getFireLoss()
 	return fireloss
@@ -274,6 +279,7 @@ Sorry Giacom. Please don't be mad :(
 /mob/living/proc/adjustFireLoss(var/amount)
 	if(status_flags & GODMODE)	return 0
 	fireloss = min(max(fireloss + amount, 0),(maxHealth*2))
+	handle_regular_status_updates() //we update our health right away.
 
 /mob/living/proc/getCloneLoss()
 	return cloneloss
@@ -281,10 +287,12 @@ Sorry Giacom. Please don't be mad :(
 /mob/living/proc/adjustCloneLoss(var/amount)
 	if(status_flags & GODMODE)	return 0
 	cloneloss = min(max(cloneloss + amount, 0),(maxHealth*2))
+	handle_regular_status_updates()
 
 /mob/living/proc/setCloneLoss(var/amount)
 	if(status_flags & GODMODE)	return 0
 	cloneloss = amount
+	handle_regular_status_updates()
 
 /mob/living/proc/getBrainLoss()
 	return brainloss
@@ -292,10 +300,12 @@ Sorry Giacom. Please don't be mad :(
 /mob/living/proc/adjustBrainLoss(var/amount)
 	if(status_flags & GODMODE)	return 0
 	brainloss = min(max(brainloss + amount, 0),(maxHealth*2))
+	handle_regular_status_updates()
 
 /mob/living/proc/setBrainLoss(var/amount)
 	if(status_flags & GODMODE)	return 0
 	brainloss = amount
+	handle_regular_status_updates() //we update our health right away.
 
 /mob/living/proc/getStaminaLoss()
 	return staminaloss
@@ -303,10 +313,12 @@ Sorry Giacom. Please don't be mad :(
 /mob/living/proc/adjustStaminaLoss(var/amount)
 	if(status_flags & GODMODE)	return 0
 	staminaloss = min(max(staminaloss + amount, 0),(maxHealth*2))
+	handle_regular_status_updates() //we update our health right away.
 
 /mob/living/proc/setStaminaLoss(var/amount)
 	if(status_flags & GODMODE)	return 0
 	staminaloss = amount
+	handle_regular_status_updates() //we update our health right away.
 
 /mob/living/proc/getMaxHealth()
 	return maxHealth
@@ -445,6 +457,7 @@ Sorry Giacom. Please don't be mad :(
 		if(C.reagents)
 			for(var/datum/reagent/R in C.reagents.reagent_list)
 				C.reagents.clear_reagents()
+			C.reagents.addiction_list = list()
 	for(var/datum/disease/D in viruses)
 		D.cure(0)
 	if(stat == DEAD)
@@ -680,7 +693,7 @@ Sorry Giacom. Please don't be mad :(
 /mob/living/proc/flash_eyes(intensity = 1, override_blindness_check = 0)
 	if((check_eye_prot() < intensity) && (override_blindness_check || !(disabilities & BLIND)))
 		flick("e_flash", flash)
-	return 1
+		return 1
 
 //this returns the mob's protection against eye damage (number between -1 and 2)
 /mob/living/proc/check_eye_prot()
@@ -694,7 +707,7 @@ Sorry Giacom. Please don't be mad :(
 // Override if a certain type of mob should be behave differently when stripping items (can't, for example)
 /mob/living/stripPanelUnequip(obj/item/what, mob/who, where)
 	if(what.flags & NODROP)
-		src << "<span class='notice'>¬ы не можете извлечь [what.name], похоже застряло!</span>"
+		src << "<span class='notice'>¬ы не можете извлечь \the [what.name], похоже застряло!</span>"
 		return
 	who.visible_message("<span class='danger'>[src] пытается убрать [who]'s [what.name].</span>", \
 					"<span class='userdanger'>[src] пытается убрать [who]'s [what.name].</span>")
@@ -709,7 +722,7 @@ Sorry Giacom. Please don't be mad :(
 /mob/living/stripPanelEquip(obj/item/what, mob/who, where)
 	what = src.get_active_hand()
 	if(what && (what.flags & NODROP))
-		src << "<span class='notice'>¬ы не можете одеть [what.name] на [who], это застряло в вашей руке!</span>"
+		src << "<span class='notice'>¬ы не можете одеть \the [what.name] на [who], это застряло в вашей руке!</span>"
 		return
 	if(what && what.mob_can_equip(who, where, 1))
 		visible_message("<span class='notice'>[src] пытается одеть [what] на [who].</span>")

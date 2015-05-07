@@ -34,7 +34,7 @@ var/datum/subsystem/nano/SSnano
 
 
 /datum/subsystem/nano/stat_entry()
-	stat(name, "[round(cost,0.001)]ds (CPU:[round(cpu,1)]%) [processing_uis.len]")
+	..("P:[processing_uis.len]")
 
 
 /datum/subsystem/nano/fire()

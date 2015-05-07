@@ -63,17 +63,7 @@ var/list/ai_list = list()
 	var/apc_override = 0 //hack for letting the AI use its APC even when visionless
 
 /mob/living/silicon/ai/New(loc, var/datum/ai_laws/L, var/obj/item/device/mmi/B, var/safety = 0)
-	var/list/possibleNames = ai_names
-
-	var/pickedName = null
-	while(!pickedName)
-		pickedName = pick(ai_names)
-		for (var/mob/living/silicon/ai/A in mob_list)
-			if (A.real_name == pickedName && possibleNames.len > 1) //fixing the theoretically possible infinite loop
-				possibleNames -= pickedName
-				pickedName = null
-
-	real_name = pickedName
+	rename_self("ai", 1)
 	name = real_name
 	anchored = 1
 	canmove = 0
@@ -228,9 +218,14 @@ var/list/ai_list = list()
 			var/area/borg_area
 			for(var/mob/living/silicon/robot/R in connected_robots)
 				borg_area = get_area(R)
+				var/robot_status = "Nominal"
+				if(R.stat || !R.client)
+					robot_status = "OFFLINE"
+				else if(!R.cell || R.cell.charge <= 0)
+					robot_status = "DEPOWERED"
 				//Name, Health, Battery, Module, Area, and Status! Everything an AI wants to know about its borgies!
 				stat(null, text("[R.name] | S.Integrity: [R.health]% | Cell: [R.cell ? "[R.cell.charge]/[R.cell.maxcharge]" : "Empty"] | \
- Module: [R.designation] | Loc: [borg_area.name] | Status: [R.stat || !R.client ? "OFFLINE" : "Normal"]"))
+ 				Module: [R.designation] | Loc: [borg_area.name] | Status: [robot_status]"))
 		else
 			stat(null, text("Systems nonfunctional"))
 
