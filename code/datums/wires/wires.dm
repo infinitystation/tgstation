@@ -123,7 +123,7 @@ var/global/all_solved_wires = list() //Solved wire associative list, eg; all_sol
 					var/colour = href_list["cut"]
 					CutWireColour(colour)
 				else
-					L << "<span class='error'>You need wirecutters!</span>"
+					L << "<span class='warning'>You need wirecutters!</span>"
 
 			else if(href_list["pulse"])
 				if(istype(I, /obj/item/device/multitool/multimeter))
@@ -142,7 +142,7 @@ var/global/all_solved_wires = list() //Solved wire associative list, eg; all_sol
 					var/colour = href_list["pulse"]
 					PulseColour(colour)
 				else
-					L << "<span class='error'>You need a multitool!</span>"
+					L << "<span class='warning'>You need a multitool!</span>"
 
 			else if(href_list["attach"])
 				var/colour = href_list["attach"]
@@ -160,7 +160,7 @@ var/global/all_solved_wires = list() //Solved wire associative list, eg; all_sol
 							L.drop_item()
 							Attach(colour, A)
 						else
-							L << "<span class='error'>You need a attachable assembly!</span>"
+							L << "<span class='warning'>You need a attachable assembly!</span>"
 
 			//multimeter stuff
 			else if(href_list["check"])

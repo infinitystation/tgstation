@@ -310,7 +310,7 @@
 				return 0
 			if(!H.w_uniform && !nojumpsuit)
 				if(!disable_warning)
-					H << "<span class='danger'>¬ам нужен костюм прежде чем вы сможете присоединить этот [I.name].</span>"
+					H << "<span class='warning'>¬ам нужен костюм прежде чем вы сможете присоединить этот [I.name].</span>"
 				return 0
 			if( !(I.slot_flags & SLOT_BELT) )
 				return
@@ -344,7 +344,7 @@
 				return 0
 			if(!H.w_uniform && !nojumpsuit)
 				if(!disable_warning)
-					H << "<span class='danger'>¬ам нужен костюм прежде чем вы сможете присоединить этот [I.name].</span>"
+					H << "<span class='warning'>¬ам нужен костюм прежде чем вы сможете присоединить этот [I.name].</span>"
 				return 0
 			if( !(I.slot_flags & SLOT_ID) )
 				return 0
@@ -356,7 +356,7 @@
 				return 0
 			if(!H.w_uniform && !nojumpsuit)
 				if(!disable_warning)
-					H << "<span class='danger'>¬ам нужен костюм прежде чем вы сможете присоединить этот [I.name].</span>"
+					H << "<span class='warning'>¬ам нужен костюм прежде чем вы сможете присоединить этот [I.name].</span>"
 				return 0
 			if(I.slot_flags & SLOT_DENYPOCKET)
 				return
@@ -369,7 +369,7 @@
 				return 0
 			if(!H.w_uniform && !nojumpsuit)
 				if(!disable_warning)
-					H << "<span class='danger'>¬ам нужен костюм прежде чем вы сможете присоединить этот [I.name].</span>"
+					H << "<span class='warning'>¬ам нужен костюм прежде чем вы сможете присоединить этот [I.name].</span>"
 				return 0
 			if(I.slot_flags & SLOT_DENYPOCKET)
 				return 0
@@ -383,7 +383,7 @@
 				return 0
 			if(!H.wear_suit)
 				if(!disable_warning)
-					H << "<span class='danger'>¬ам нужен костюм прежде чем вы сможете присоединить этот [I.name].</span>"
+					H << "<span class='warning'>¬ам нужен костюм прежде чем вы сможете присоединить этот [I.name].</span>"
 				return 0
 			if(!H.wear_suit.allowed)
 				if(!disable_warning)
@@ -877,7 +877,7 @@
 	else
 		return 0
 
-	var/armor = H.run_armor_check(affecting, "melee", "<span class='warning'>¬аша броня защитила вашу [hit_area].</span>", "<span class='warning'>¬аша броня смягчила попадание по вашей [hit_area].</span>")
+	var/armor = H.run_armor_check(affecting, "melee", "<span class='notice'>¬аша броня защитила вашу [hit_area].</span>", "<span class='warning'>¬аша броня смягчила попадание по вашей [hit_area].</span>")
 	if(armor >= 100)	return 0
 	var/Iforce = I.force //to avoid runtimes on the forcesay checks at the bottom. Some items might delete themselves if you drop them. (stunning yourself, ninja swords)
 

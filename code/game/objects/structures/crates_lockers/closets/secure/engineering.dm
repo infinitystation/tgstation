@@ -94,7 +94,7 @@
 	name = "\proper atmospheric technician's locker"
 	req_access = list(access_atmospherics)
 	icon_state = "atmos"
-	icon_door = "atmos_door"
+	icon_door = "atmos_secure"
 
 /obj/structure/closet/secure_closet/atmospherics/New()
 	..()

@@ -30,7 +30,7 @@
 	if(swirlie)
 		user.changeNext_move(CLICK_CD_MELEE)
 		playsound(src.loc, "swing_hit", 25, 1)
-		swirlie.visible_message("<span class='danger'>[user] slams the toilet seat onto [swirlie]'s head!</span>", "<span class='userdanger'>[user] slams the toilet seat onto [swirlie]'s head!</span>", "You hear reverberating porcelain.")
+		swirlie.visible_message("<span class='danger'>[user] slams the toilet seat onto [swirlie]'s head!</span>", "<span class='userdanger'>[user] slams the toilet seat onto [swirlie]'s head!</span>", "<span class='italics'>You hear reverberating porcelain.</span>")
 		swirlie.adjustBruteLoss(5)
 		return
 
@@ -58,10 +58,10 @@
 
 /obj/structure/toilet/attackby(obj/item/I, mob/living/user, params)
 	if(istype(I, /obj/item/weapon/crowbar))
-		user << "<span class='notice'>You start to [cistern ? "replace the lid on the cistern" : "lift the lid off the cistern"].</span>"
+		user << "<span class='notice'>You start to [cistern ? "replace the lid on the cistern" : "lift the lid off the cistern"]...</span>"
 		playsound(loc, 'sound/effects/stonedoor_openclose.ogg', 50, 1)
 		if(do_after(user, 30))
-			user.visible_message("<span class='notice'>[user] [cistern ? "replaces the lid on the cistern" : "lifts the lid off the cistern"]!</span>", "<span class='notice'>You [cistern ? "replace the lid on the cistern" : "lift the lid off the cistern"]!</span>", "You hear grinding porcelain.")
+			user.visible_message("[user] [cistern ? "replaces the lid on the cistern" : "lifts the lid off the cistern"]!", "<span class='notice'>You [cistern ? "replace the lid on the cistern" : "lift the lid off the cistern"]!</span>", "<span class='italics'>You hear grinding porcelain.</span>")
 			cistern = !cistern
 			update_icon()
 			return
@@ -75,14 +75,14 @@
 			var/mob/living/GM = G.affecting
 			if(G.state >= GRAB_AGGRESSIVE)
 				if(GM.loc != get_turf(src))
-					user << "<span class='notice'>[GM] needs to be on [src].</span>"
+					user << "<span class='warning'>[GM] needs to be on [src]!</span>"
 					return
 				if(!swirlie)
 					if(open)
-						GM.visible_message("<span class='danger'>[user] starts to give [GM] a swirlie!</span>", "<span class='userdanger'>[user] starts to give [GM] a swirlie!</span>")
+						GM.visible_message("<span class='danger'>[user] starts to give [GM] a swirlie!</span>", "<span class='userdanger'>[user] starts to give [GM] a swirlie...</span>")
 						swirlie = GM
 						if(do_after(user, 30, 5, 0))
-							GM.visible_message("<span class='danger'>[user] gives [GM] a swirlie!</span>", "<span class='userdanger'>[user] gives [GM] a swirlie!</span>", "You hear a toilet flushing.")
+							GM.visible_message("<span class='danger'>[user] gives [GM] a swirlie!</span>", "<span class='userdanger'>[user] gives [GM] a swirlie!</span>", "<span class='italics'>You hear a toilet flushing.</span>")
 							if(iscarbon(GM))
 								var/mob/living/carbon/C = GM
 								if(!C.internal)
@@ -95,17 +95,17 @@
 						GM.visible_message("<span class='danger'>[user] slams [GM.name] into [src]!</span>", "<span class='userdanger'>[user] slams [GM.name] into [src]!</span>")
 						GM.adjustBruteLoss(5)
 			else
-				user << "<span class='notice'>You need a tighter grip.</span>"
+				user << "<span class='warning'>You need a tighter grip!</span>"
 
 	if(cistern)
 		if(I.w_class > 3)
-			user << "<span class='notice'>[I] does not fit.</span>"
+			user << "<span class='warning'>[I] does not fit!</span>"
 			return
 		if(w_items + I.w_class > 5)
-			user << "<span class='notice'>The cistern is full.</span>"
+			user << "<span class='warning'>The cistern is full!</span>"
 			return
 		if(!user.drop_item())
-			user << "<span class='notice'>\The [I] is stuck to your hand, you cannot put it in the cistern!</span>"
+			user << "<span class='warning'>\The [I] is stuck to your hand, you cannot put it in the cistern!</span>"
 			return
 		I.loc = src
 		w_items += I.w_class
@@ -137,7 +137,7 @@
 				user.visible_message("<span class='danger'>[user] slams [GM] into [src]!</span>", "<span class='notice'>You slam [GM] into [src]!</span>")
 				GM.adjustBruteLoss(8)
 			else
-				user << "<span class='notice'>You need a tighter grip.</span>"
+				user << "<span class='warning'>You need a tighter grip!</span>"
 
 
 /obj/machinery/shower
@@ -181,7 +181,7 @@
 	if(I.type == /obj/item/device/analyzer)
 		user << "<span class='notice'>The water temperature seems to be [watertemp].</span>"
 	if(istype(I, /obj/item/weapon/wrench))
-		user << "<span class='notice'>You begin to adjust the temperature valve with \the [I].</span>"
+		user << "<span class='notice'>You begin to adjust the temperature valve with \the [I]...</span>"
 		if(do_after(user, 50))
 			switch(watertemp)
 				if("normal")
@@ -246,7 +246,7 @@
 		var/mob/living/L = O
 		L.ExtinguishMob()
 		L.fire_stacks = -20 //Douse ourselves with water to avoid fire more easily
-		L << "<span class='warning'>You've been drenched in water!</span>"
+		L << "<span class='warning'>You're drenched in water!</span>"
 		if(iscarbon(O))
 			var/mob/living/carbon/M = O
 			if(M.r_hand)
@@ -373,7 +373,7 @@
 		user << "<span class='notice'>Someone's already washing here.</span>"
 		return
 
-	user << "<span class='notice'>You start washing your hands.</span>"
+	user << "<span class='notice'>You start washing your hands...</span>"
 
 	busy = 1
 	sleep(40)
@@ -382,12 +382,12 @@
 	if(!Adjacent(user)) return		//Person has moved away from the sink
 
 	user.clean_blood()
-	user.visible_message("<span class='notice'>[user] washes their hands in [src].</span>")
+	user.visible_message("[user] washes their hands in [src].", "<span class='notice'>You wash your hands in [src].</span>")
 
 
 /obj/structure/sink/attackby(obj/item/O, mob/user, params)
 	if(busy)
-		user << "<span class='notice'>Someone's already washing here.</span>"
+		user << "<span class='warning'>Someone's already washing here!</span>"
 		return
 
 	if(istype(O, /obj/item/weapon/reagent_containers))
@@ -420,7 +420,7 @@
 	var/obj/item/I = O
 	if(!I || !istype(I,/obj/item)) return
 
-	usr << "<span class='notice'>You start washing [I].</span>"
+	usr << "<span class='notice'>You start washing [I]...</span>"
 
 	busy = 1
 	sleep(40)
@@ -432,7 +432,7 @@
 
 	O.clean_blood()
 	user.visible_message( \
-		"<span class='notice'>[user] washes [I] using [src].</span>", \
+		"[user] washes [I] using [src].", \
 		"<span class='notice'>You wash [I] using [src].</span>")
 
 

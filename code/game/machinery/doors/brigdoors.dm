@@ -196,7 +196,7 @@
 		var/minute = round((timeleft() - second) / 60)
 		var/prisoners = ""
 		for(var/mob/living/carbon/human/H in orange(src, 3))
-			if(H.x<src.x)
+			if(H.x<src.x && H.y<src.y)
 				prisoners += "[H.ckey]/[H.real_name] "
 		message_admins("В тюрьму посажен преступник. Срок: [(minute ? text("[minute]:") : null)][second]. Выставлен игроком [key_name(usr, usr.client)](<A HREF='?_src_=holder;adminmoreinfo=\ref[usr]'>?</A>) Координаты: ([x],[y],[z] - <A HREF='?_src_=holder;adminplayerobservecoodjump=1;X=[x];Y=[y];Z=[z]'>JMP</a>)",0,1)
 		message_admins("Игроки в камере: [prisoners]")
