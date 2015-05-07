@@ -46,7 +46,7 @@ obj/machinery/air_sensor/update_icon()
 			transfer_fingerprints_to(stored)
 			qdel(src)
 
-obj/machinery/air_sensor/process()
+obj/machinery/air_sensor/process_atmos()
 	if(on)
 		var/datum/signal/signal = new
 		signal.transmission_method = 1 //radio signal
@@ -90,7 +90,7 @@ obj/machinery/air_sensor/initialize()
 
 obj/machinery/air_sensor/New()
 	..()
-
+	SSair.atmos_machinery += src
 	if(radio_controller)
 		set_frequency(frequency)
 

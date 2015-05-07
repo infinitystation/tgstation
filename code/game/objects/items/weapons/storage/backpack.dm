@@ -114,6 +114,8 @@
 	desc = "It's a very robust backpack."
 	worn_icon = 'icons/blue_brig/mob/back.dmi'
 	icon = 'icons/blue_brig/obj/storage.dmi'
+	lefthand_file = 'icons/blue_brig/mob/items-lefthand.dmi'
+	righthand_file = 'icons/blue_brig/mob/items-righthand.dmi'
 	icon_state = "securitypack"
 	item_state = "securitypack"
 
@@ -225,6 +227,8 @@
 	desc = "A robust satchel for security related needs."
 	worn_icon = 'icons/blue_brig/mob/back.dmi'
 	icon = 'icons/blue_brig/obj/storage.dmi'
+	lefthand_file = 'icons/blue_brig/mob/items-lefthand.dmi'
+	righthand_file = 'icons/blue_brig/mob/items-righthand.dmi'
 	icon_state = "satchel-sec"
 	item_state = "securitypack"
 

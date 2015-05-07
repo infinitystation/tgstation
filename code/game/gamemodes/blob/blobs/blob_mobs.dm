@@ -124,6 +124,7 @@
 /mob/living/simple_animal/hostile/blob/blobspore/Destroy()
 	if(factory)
 		factory.spores -= src
+	factory = null
 	if(contents)
 		for(var/mob/M in contents)
 			M.loc = src.loc
