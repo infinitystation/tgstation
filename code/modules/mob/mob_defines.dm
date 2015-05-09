@@ -8,8 +8,6 @@
 
 	var/stat = 0 //Whether a mob is alive or dead. TODO: Move this to living - Nodrak
 
-	var/allow_respawn = 0 //need to respawn
-
 	var/obj/screen/flash = null
 	var/obj/screen/blind = null
 	var/obj/screen/hands = null
@@ -72,8 +70,6 @@
 	var/drowsyness = 0//Carbon
 	var/dizziness = 0//Carbon
 	var/jitteriness = 0//Carbon
-	var/need_to_shit = 0//Carbon
-	var/need_to_shit_max = 400//Carbon
 	var/nutrition = NUTRITION_LEVEL_FED + 50//Carbon
 	var/satiety = 0//Carbon
 
@@ -138,6 +134,12 @@
 
 	mouse_drag_pointer = MOUSE_ACTIVE_POINTER
 
+	//Infinity vars
+	var/allow_respawn = 0
+	var/need_to_shit = 0
+	var/need_to_shit_max = NUTRITION_LEVEL_FED + 50
+	var/flavor_text = ""
+
 	var/status_flags = CANSTUN|CANWEAKEN|CANPARALYSE|CANPUSH	//bitflags defining which status effects can be inflicted (replaces canweaken, canstun, etc)
 
 	var/area/lastarea = null
@@ -154,9 +156,7 @@
 
 	var/turf/listed_turf = null	//the current turf being examined in the stat panel
 
-	var/flavor_text = ""
-
 	var/list/permanent_huds = list()
-
 	var/permanent_sight_flags = 0
 
+	var/resize = 1 //Badminnery resize
