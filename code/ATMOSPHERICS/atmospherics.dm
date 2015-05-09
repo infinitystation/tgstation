@@ -127,6 +127,7 @@ Pipelines + Other Objects -> Pipe network
 		var/turf/T = loc
 		stored.loc = T
 		transfer_fingerprints_to(stored)
+		stored = null
 
 	qdel(src)
 
