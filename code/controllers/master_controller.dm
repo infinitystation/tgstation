@@ -33,8 +33,8 @@ calculate the longest number of ticks the MC can wait between each cycle without
 	var/GCD
 	for(var/datum/subsystem/SS in subsystems)
 		if(SS.wait)
-			//GCD = Gcd(round(SS.wait*10), GCD)
-			GCD = Gcd(SS.wait, GCD)
+			GCD = Gcd(round(SS.wait*10), GCD)
+			//GCD = Gcd(SS.wait, GCD)
 	GCD = round(GCD)
 	if(GCD < world.tick_lag*10)
 		GCD = world.tick_lag*10
