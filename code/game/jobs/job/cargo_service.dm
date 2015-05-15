@@ -97,57 +97,6 @@ Bartender
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the head of personnel"
-	selection_color = "#bbe291"
-
-	default_pda = /obj/item/device/pda/bar
-	default_headset = /obj/item/device/radio/headset/headset_srv
-
-	access = list(access_hydroponics, access_bar, access_kitchen, access_morgue, access_weapons)
-	minimal_access = list(access_bar)
-
-/datum/job/bartender/equip_backpack(var/mob/living/carbon/human/H)
-	switch(H.backbag)
-		if(1) //No backpack or satchel
-
-			var/obj/item/weapon/storage/box/box = new default_storagebox(H)
-			new /obj/item/ammo_casing/shotgun/beanbag(box)
-			new /obj/item/ammo_casing/shotgun/beanbag(box)
-			new /obj/item/ammo_casing/shotgun/beanbag(box)
-			new /obj/item/ammo_casing/shotgun/beanbag(box)
-			H.equip_to_slot_or_del(box, slot_r_hand)
-
-		if(2) // Backpack
-			var/obj/item/weapon/storage/backpack/BPK = new default_backpack(H)
-			new default_storagebox(BPK)
-			H.equip_to_slot_or_del(BPK, slot_back,1)
-		if(3) //Satchel
-			var/obj/item/weapon/storage/backpack/BPK = new default_satchel(H)
-			new default_storagebox(BPK)
-			H.equip_to_slot_or_del(BPK, slot_back,1)
-
-/datum/job/bartender/equip_items(var/mob/living/carbon/human/H)
-	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/sneakers/black(H), slot_shoes)
-	H.equip_to_slot_or_del(new /obj/item/clothing/suit/armor/vest(H), slot_wear_suit)
-	H.equip_to_slot_or_del(new /obj/item/clothing/under/rank/bartender(H), slot_w_uniform)
-
-	if(H.backbag != 1)
-		H.equip_to_slot_or_del(new /obj/item/ammo_casing/shotgun/beanbag(H), slot_in_backpack)
-		H.equip_to_slot_or_del(new /obj/item/ammo_casing/shotgun/beanbag(H), slot_in_backpack)
-		H.equip_to_slot_or_del(new /obj/item/ammo_casing/shotgun/beanbag(H), slot_in_backpack)
-		H.equip_to_slot_or_del(new /obj/item/ammo_casing/shotgun/beanbag(H), slot_in_backpack)
-
-/*
-Bartender
-*/
-/datum/job/bartender
-	title = "Bartender"
-	flag = BARTENDER
-	department_head = list("Head of Personnel")
-	department_flag = CIVILIAN
-	faction = "Station"
-	total_positions = 1
-	spawn_positions = 1
 	supervisors = "Главе Персонала"
 	selection_color = "#dddddd"
 
@@ -179,7 +128,6 @@ Bartender
 
 /datum/job/bartender/equip_items(var/mob/living/carbon/human/H)
 	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/sneakers/black(H), slot_shoes)
-	H.equip_to_slot_or_del(new /obj/item/clothing/suit/armor/vest(H), slot_wear_suit)
 	H.equip_to_slot_or_del(new /obj/item/clothing/under/rank/bartender(H), slot_w_uniform)
 
 	if(H.backbag != 1)

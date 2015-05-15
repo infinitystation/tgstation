@@ -43,6 +43,10 @@
 	new /obj/item/clothing/head/soft/sec(src)
 	new /obj/item/clothing/head/soft/sec(src)
 	new /obj/item/clothing/head/soft/sec(src)
+	new /obj/item/clothing/suit/armor/vest(src)
+	new /obj/item/clothing/suit/armor/vest(src)
+	new /obj/item/clothing/suit/armor/vest(src)
+	new /obj/item/clothing/suit/armor/vest(src)
 	new /obj/item/clothing/mask/bandana/blue(src)
 	new /obj/item/clothing/mask/bandana/blue(src)
 	return
