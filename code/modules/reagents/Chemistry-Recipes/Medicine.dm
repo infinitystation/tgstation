@@ -200,5 +200,16 @@
 	required_reagents = list("styptic_powder" = 1, "silver_sulfadiazine" = 1, "charcoal" = 1, "epinephrine" = 1)
 	result_amount = 4
 
+/datum/chemical_reaction/kelotane
+	name = "Kelotane"
+	id = "kelotane"
+	result = "kelotane"
+	required_reagents = list("silicon" = 1, "carbon" = 1)
+	result_amount = 2
 
-
+/datum/chemical_reaction/bicaridine
+	name = "Bicaridine"
+	id = "bicaridine"
+	result = "bicaridine"
+	required_reagents = list("epinephrine" = 1, "carbon" = 1)
+	result_amount = 2
