@@ -5,19 +5,21 @@
 *	Vert's unused code is commented
 */
 /obj/item/clothing/head/helmet/space/hardsuit/space_adv
-	name = "Space working hardsuit helmet (Wrench to unscrew)"
-	desc = "—пециальный шлем для работы вне атмосферы, имеет защитный слой от радиации. ¬ы можете открутить его с помощью гаечного ключа"
+	name = "Space working hardsuit helmet"
+	desc = "—пециальный шлем для работы вне атмосферы, имеет защитный слой от радиации."
 	icon = 'icons/obj/space_adv.dmi'
 	worn_icon = 'icons/mob/space_adv.dmi'
-	icon_state = "rig0_rd"
+	icon_state = "rig0-rd"
 	item_state = "ce_helm"
-	worn_icon = 'icons/mob/space_adv.dmi'
+	basestate = "rig"
+	item_color = "rd"
 	armor = list(melee = 10, bullet = 5, laser = 10, energy = 5, bomb = 10, bio = 100, rad = 90)
+	slowdown = 1
 	unacidable = 1
 
 /obj/item/clothing/suit/space/hardsuit/space_adv
 	name = "Space working hardsuit"
-	desc = "—пециальный костюм для работы вне атмосферы, имеет защитный слой от радиации и выдвигаемый шлем. ¬ы можете отключить его от шлема с помошью откручивания специальных креплений на выдвинутом шлеме"
+	desc = "—пециальный костюм для работы вне атмосферы, имеет защитный слой от радиации и выдвигаемый шлем."
 	icon = 'icons/obj/space_adv.dmi'
 	icon_state = "rdrig"
 	item_state = "ce_hardsuit"
@@ -235,8 +237,9 @@
 /obj/item/clothing/head/helmet/space/hardsuit/space_adv/military
 	name = "Military space hardsuit helmet (Wrench to unscrew)"
 	desc = "—пециальный шлем разработанный для армии. ¬ы можете открутить его с помощью гаечного ключа"
-	icon_state = "rig0_military"
+	icon_state = "rig0-military"
 	item_state = "rig_helm"
+	item_color = "military"
 	armor = list(melee = 60, bullet = 70, laser = 60, energy = 50, bomb = 75, bio = 100, rad = 80)
 
 /obj/item/clothing/suit/space/hardsuit/space_adv/military
@@ -252,8 +255,9 @@
 /obj/item/clothing/head/helmet/space/hardsuit/space_adv/swat
 	name = "Swat space hardsuit helmet"
 	desc = "—пециальный шлем разработанный для оряда SWAT. ¬ы можете открутить его с помощью гаечного ключа"
-	icon_state = "rig0_swat"
+	icon_state = "rig0-swat"
 	item_state = "sec_helm"
+	item_color = "swat"
 	armor = list(melee = 90, bullet = 60, laser = 60, energy = 20, bomb = 45, bio = 100, rad = 80)
 	var/hud_type = DATA_HUD_SECURITY_ADVANCED // HUD
 

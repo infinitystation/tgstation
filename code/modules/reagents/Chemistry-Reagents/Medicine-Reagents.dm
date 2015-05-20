@@ -155,17 +155,10 @@ datum/reagent/medicine/bicaridine
 	color = "#C8A5DC" // rgb: 200, 165, 220
 
 datum/reagent/medicine/bicaridine/on_mob_life(var/mob/living/M as mob)
-	if(M.stat != DEAD && M.getBruteLoss() > 50)
+	if(M.stat != DEAD && M.getBruteLoss() < 50)
 		M.heal_organ_damage(1*REM,0)
 	..()
 	return
-
-/datum/chemical_reaction/bicaridine
-	name = "Bicaridine"
-	id = "bicaridine"
-	result = "bicaridine"
-	required_reagents = list("epinephrine" = 1, "carbon" = 1)
-	result_amount = 2
 
 datum/reagent/medicine/kelotane
 	name = "Kelotane"
@@ -174,18 +167,10 @@ datum/reagent/medicine/kelotane
 	color = "#C8A5DC" // rgb: 200, 165, 220
 
 datum/reagent/medicine/kelotane/on_mob_life(var/mob/living/M as mob)
-	if(M.stat != DEAD && M.getFireLoss() > 50)
+	if(M.stat != DEAD && M.getFireLoss() < 50)
 		M.heal_organ_damage(0,1*REM)
 	..()
 	return
-
-/datum/chemical_reaction/kelotane
-	name = "Kelotane"
-	id = "kelotane"
-	result = "kelotane"
-	required_reagents = list("silicon" = 1, "carbon" = 1)
-	result_amount = 2
-
 
 
 //------------------------------------------------------------------------------------------------------

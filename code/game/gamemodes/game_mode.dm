@@ -27,7 +27,6 @@
 	var/required_players = 0
 	var/required_enemies = 0
 	var/recommended_enemies = 0
-	var/pre_setup_before_jobs = 0
 	var/antag_flag = null //preferences flag such as BE_WIZARD that need to be turned on for players to be antag
 	var/datum/mind/sacrifice_target = null
 	var/mob/living/living_antag_player = null
@@ -176,7 +175,7 @@
 		return 1
 	if(!round_converted && (!config.continuous[config_tag] || (config.continuous[config_tag] && config.midround_antag[config_tag]))) //Non-continuous or continous with replacement antags
 		if(!continuous_sanity_checked) //make sure we have antags to be checking in the first place
-			for(var/mob/living/Player in mob_list)
+			for(var/mob/Player in mob_list)
 				if(Player.mind)
 					if(Player.mind.special_role)
 						continuous_sanity_checked = 1
@@ -191,7 +190,7 @@
 		if(living_antag_player && living_antag_player.mind && living_antag_player.stat != DEAD && !isnewplayer(living_antag_player) &&!isbrain(living_antag_player))
 			return 0 //A resource saver: once we find someone who has to die for all antags to be dead, we can just keep checking them, cycling over everyone only when we lose our mark.
 
-		for(var/mob/living/Player in living_mob_list)
+		for(var/mob/Player in living_mob_list)
 			if(Player.mind && Player.stat != DEAD && !isnewplayer(Player) &&!isbrain(Player))
 				if(Player.mind.special_role) //Someone's still antaging!
 					living_antag_player = Player

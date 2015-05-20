@@ -39,6 +39,7 @@
 
 	var/assigned_role
 	var/special_role
+	var/list/restricted_roles = list()
 
 	var/datum/job/assigned_job
 
@@ -922,6 +923,10 @@
 						usr << "<span class='danger'>Spawning tome failed!</span>"
 					else
 						H << "A tome, a message from your new master, appears in your [where]."
+						if(where == "backpack")
+							var/obj/item/weapon/storage/B = H.back
+							B.orient2hud(H)
+							B.show_to(H)
 
 			if("amulet")
 				if (!ticker.mode.equip_cultist(current))
@@ -1386,7 +1391,11 @@
 
 
 /datum/mind/proc/make_Gang(var/gang)
-	special_role = "[(gang=="A") ? "[gang_name("A")] Gang (A)" : "[gang_name("B")] Gang (B)"] Boss"
+	special_role = "[gang_name(gang)] Gang ([gang]) Boss"
+	if(gang=="A")
+		ticker.mode.A_bosses += src
+	else if(gang=="B")
+		ticker.mode.B_bosses += src
 	ticker.mode.update_gang_icons_added(src, gang)
 	ticker.mode.forge_gang_objectives(src, gang)
 	ticker.mode.greet_gang(src)
