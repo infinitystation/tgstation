@@ -215,44 +215,53 @@ var/list/sec_departments = list("инженерном отделе", "грузовом отделе", "медицин
 		var/department = pick(sec_departments)
 		sec_departments -= department
 		var/destination = null
+		var/obj/effect/landmark/start/depsec/spawn_point = null
 		var/obj/item/clothing/under/U = new /obj/item/clothing/under/rank/security/blue(H)
 		switch(department)
 			if("грузовом отделе")
 				default_headset = /obj/item/device/radio/headset/headset_sec/alt/department/supply
 				dep_access = list(access_mailsorting, access_mining)
 				destination = /area/security/checkpoint/supply
+				spawn_point = locate(/obj/effect/landmark/start/depsec/supply) in department_security_spawns
 				U.attachTie(new /obj/item/clothing/tie/armband/cargo())
 			if("инженерном отделе")
 				default_headset = /obj/item/device/radio/headset/headset_sec/alt/department/engi
 				dep_access = list(access_construction, access_engine)
 				destination = /area/security/checkpoint/engineering
+				spawn_point = locate(/obj/effect/landmark/start/depsec/engineering) in department_security_spawns
 				U.attachTie(new /obj/item/clothing/tie/armband/engine())
 			if("медицинском отделе")
 				default_headset = /obj/item/device/radio/headset/headset_sec/alt/department/med
 				dep_access = list(access_medical)
 				destination = /area/security/checkpoint/medical
+				spawn_point = locate(/obj/effect/landmark/start/depsec/medical) in department_security_spawns
 				U.attachTie(new /obj/item/clothing/tie/armband/medblue())
 			if("научно-исследовательском отделе")
 				default_headset = /obj/item/device/radio/headset/headset_sec/alt/department/sci
 				dep_access = list(access_research)
 				destination = /area/security/checkpoint/science
+				spawn_point = locate(/obj/effect/landmark/start/depsec/science) in department_security_spawns
 				U.attachTie(new /obj/item/clothing/tie/armband/science())
+
 		H.equip_to_slot_or_del(U, slot_w_uniform)
 		var/teleport = 0
 		if(!config.sec_start_brig)
-			if(destination)
-				if(!ticker || ticker.current_state <= GAME_STATE_SETTING_UP)
-					teleport = 1
+			if(destination || spawn_point)
+				teleport = 1
 		if(teleport)
 			var/turf/T
-			var/safety = 0
-			while(safety < 25)
-				T = safepick(get_area_turfs(destination))
-				if(T && !H.Move(T))
-					safety += 1
-					continue
-				else
-					break
+			if(spawn_point)
+				T = get_turf(spawn_point)
+				H.Move(T)
+			else
+				var/safety = 0
+				while(safety < 25)
+					T = safepick(get_area_turfs(destination))
+					if(T && !H.Move(T))
+						safety += 1
+						continue
+					else
+						break
 		H << "<b>Вы были назначены на дежурство в [department]!</b>"
 		return
 
