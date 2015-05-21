@@ -5,11 +5,15 @@
 	if(src.slurring)
 		input = attach_spans(input, spans)
 		return "невн&#255;тно говорит, \"[input]\""
-	if(gender == FEMALE)
-		playsound(loc, 'sound/voice/clearing-throat-f.ogg', 15, 1, 1)
-	else
-		playsound(loc, 'sound/voice/clearing-throat-1.ogg', 25, 1, 1)
 	return ..()
+
+/mob/living/carbon/human/say(message, bubble_type,)
+	. = ..(message)
+	if(.)
+		if(gender == FEMALE)
+			playsound(loc, 'sound/voice/clearing-throat-f.ogg', 15, 1, 1)
+		else
+			playsound(loc, 'sound/voice/clearing-throat-1.ogg', 25, 1, 1)
 
 /mob/living/carbon/human/treat_message(message)
 	if(dna)
