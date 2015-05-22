@@ -85,3 +85,8 @@
 #define NUTRITION_LEVEL_FED 350
 #define NUTRITION_LEVEL_HUNGRY 250
 #define NUTRITION_LEVEL_STARVING 150
+
+//shit levels for humans. No idea where else to put it
+#define SHIT_LEVEL_MAX 500
+#define SHIT_LEVEL_DANGER 480
+#define SHIT_LEVEL_WARNING 400

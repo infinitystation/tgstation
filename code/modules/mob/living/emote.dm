@@ -220,13 +220,13 @@
 				return
 
 			//we need to shit?
-			if((need_to_shit > 70) && (need_to_shit < need_to_shit_max))
+			if((need_to_shit > 100) && (need_to_shit < SHIT_LEVEL_MAX))
 				for(var/obj/structure/toilet/T in view(0, src))	//checking toilets
 					if(T.shit>0 || T.w_items>0)
 						Shit(src)
 						return
 					else
-						need_to_shit = 0
+						need_to_shit = rand(0, 300)
 						T.open = 1
 						T.shit++
 						T.update_icon()
@@ -357,7 +357,7 @@
 
 /mob/living/proc/Shit(var/mob/living/M)
 	if(M.stat != DEAD)
-		M.need_to_shit = 0
+		M.need_to_shit = rand(0, 300)
 		M.AdjustStunned(3)
 		var/turf/pos = get_turf(M)
 		pos.add_shit_floor(M)
