@@ -17,8 +17,7 @@ var/next_mob_id = 0
 /mob/New()
 	tag = "mob_[next_mob_id++]"
 	mob_list += src
-	need_to_shit_max += rand(-150,150) // to shit
-	need_to_shit = 0
+	need_to_shit = rand(0,300)
 	if(stat == DEAD)
 		dead_mob_list += src
 	else

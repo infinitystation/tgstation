@@ -137,7 +137,6 @@
 	//Infinity vars
 	var/allow_respawn = 0
 	var/need_to_shit = 0
-	var/need_to_shit_max = NUTRITION_LEVEL_FED + 50
 	var/flavor_text = ""
 
 	var/status_flags = CANSTUN|CANWEAKEN|CANPARALYSE|CANPUSH	//bitflags defining which status effects can be inflicted (replaces canweaken, canstun, etc)

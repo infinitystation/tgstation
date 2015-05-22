@@ -116,6 +116,18 @@ The box in your backpack has an oxygen tank and gas mask in it."
 The box in your backpack has an oxygen tank and gas mask in it."
 //End gas alerts
 
+//shit alerts
+/obj/screen/alert/shit
+	name = "Toilet"
+	icon = 'icons/mob/alert_infinity.dmi'
+	desc = "Вам нужно в туалет. Рекомендуетс&#255; пр&#255;мо сейчас пойти в туалет. \
+Чтобы справить нужду, встаньте над унитазом и нажмите кнопку \"Какать\" во вкладке \"Emotions\""
+
+/obj/screen/alert/shit_now
+	name = "Toilet!"
+	icon = 'icons/mob/alert_infinity.dmi'
+	desc = "ВАМ СРОЧНО НУЖНО В ТУАЛЕТ!!! Иначе последстви&#255; будут очень непри&#255;тные. \
+Чтобы справить нужду, встаньте над унитазом и нажмите кнопку \"Какать\" во вкладке \"Emotions\""
 
 /obj/screen/alert/fat
 	name = "Fat"
