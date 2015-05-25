@@ -75,6 +75,7 @@
 					add_fingerprint(user)
 					visible_message("<span class='warning'>[user] has hacked [src]!</span>")
 					update_icon()
+					validating = 0
 
 	if(href_list["inc"])
 		if(W.mode != 1)
