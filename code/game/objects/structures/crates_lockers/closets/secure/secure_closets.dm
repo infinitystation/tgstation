@@ -27,6 +27,8 @@
 				return
 			else
 				src.interact(usr)
+		else
+			..(W, user)
 	else
 		..(W, user)
 
