@@ -169,7 +169,7 @@ datum/preferences
 				if(lentext(copytext(sanitize_u(flavor_text), 1, MAX_MESSAGE_LEN)) <= 160)
 					dat += "<BR>[copytext(sanitize_u(flavor_text), 1, MAX_MESSAGE_LEN)]"
 				else
-					dat += "[copytext(sanitize_u(flavor_text), 1, 160)]... <a href='?_src_=prefs;preference=flavor_text_more'>More...</a>"
+					dat += "[copytext(sanitize_u(flavor_text), 1, 160)]... <a href='?_src_=prefs;preference=flavor_text_more'>More...</a><BR>"
 
 				dat += "<b>Special Names:</b><BR>"
 				dat += "<a href ='?_src_=prefs;preference=clown_name;task=input'><b>Clown:</b> [custom_names["clown"]]</a> "
