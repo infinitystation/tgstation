@@ -200,7 +200,7 @@
 	A.ShiftClick(src)
 	return
 /atom/proc/ShiftClick(var/mob/user)
-	if(user.client && user.client.eye == user)
+	if(user.client && user.client.eye == user || user.client.eye == user.loc)
 		user.examinate(src)
 	return
 
@@ -288,7 +288,6 @@
 	if(nutrition>0)
 		..()
 		nutrition = max(nutrition - rand(1,5),0)
-		handle_regular_hud_updates()
 	else
 		src << "<span class='danger'>You're out of energy!  You need food!</span>"
 

@@ -478,7 +478,7 @@ Sorry Giacom. Please don't be mad :(
 	return
 
 
-/mob/living/proc/Examine_OOC()
+/mob/living/verb/Examine_OOC()
 	set name = "Examine Meta-Info (OOC)"
 	set category = "OOC"
 	set src in view()
