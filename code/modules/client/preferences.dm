@@ -35,7 +35,7 @@ datum/preferences
 
 	//game-preferences
 	var/lastchangelog = ""				//Saved changlog filesize to detect if there was a change
-	var/ooccolor = "#002eb8"
+	var/ooccolor = null
 	var/be_special = 0					//Special role selection
 	var/UI_style = "Midnight"
 	var/toggles = TOGGLES_DEFAULT
@@ -95,7 +95,6 @@ datum/preferences
 
 /datum/preferences/New(client/C)
 	blood_type = random_blood_type()
-	ooccolor = normal_ooc_colour
 	custom_names["ai"] = pick(ai_names)
 	custom_names["cyborg"] = pick(ai_names)
 	custom_names["clown"] = pick(clown_names)
@@ -170,7 +169,7 @@ datum/preferences
 				if(lentext(copytext(sanitize_u(flavor_text), 1, MAX_MESSAGE_LEN)) <= 160)
 					dat += "<BR>[copytext(sanitize_u(flavor_text), 1, MAX_MESSAGE_LEN)]"
 				else
-					dat += "[copytext(sanitize_u(flavor_text), 1, 160)]... <a href='?_src_=prefs;preference=flavor_text_more'>More...</a>"
+					dat += "[copytext(sanitize_u(flavor_text), 1, 160)]... <a href='?_src_=prefs;preference=flavor_text_more'>More...</a><BR>"
 
 				dat += "<b>Special Names:</b><BR>"
 				dat += "<a href ='?_src_=prefs;preference=clown_name;task=input'><b>Clown:</b> [custom_names["clown"]]</a> "
@@ -280,7 +279,7 @@ datum/preferences
 						dat += "<a href='?_src_=prefs;preference=hear_adminhelps'>[(toggles & SOUND_ADMINHELP)?"On":"Off"]</a><br>"
 
 					if(unlock_content || check_rights_for(user.client, R_ADMIN))
-						dat += "<b>OOC:</b> <span style='border: 1px solid #161616; background-color: [ooccolor];'>&nbsp;&nbsp;&nbsp;</span> <a href='?_src_=prefs;preference=ooccolor;task=input'>Change</a><br>"
+						dat += "<b>OOC:</b> <span style='border: 1px solid #161616; background-color: [ooccolor ? ooccolor : normal_ooc_colour];'>&nbsp;&nbsp;&nbsp;</span> <a href='?_src_=prefs;preference=ooccolor;task=input'>Change</a><br>"
 
 					if(unlock_content)
 						dat += "<b>BYOND Membership Publicity:</b> <a href='?_src_=prefs;preference=publicity'>[(toggles & MEMBER_PUBLIC) ? "Public" : "Hidden"]</a><br>"
@@ -862,7 +861,7 @@ datum/preferences
 						if(toggles & SOUND_LOBBY)
 							user << sound(ticker.login_music, repeat = 0, wait = 0, volume = 85, channel = 1)
 						else
-							user << sound(null, repeat = 0, wait = 0, volume = 85, channel = 1)
+							user.stopLobbySound()
 
 					if("ghost_ears")
 						chat_toggles ^= CHAT_GHOSTEARS

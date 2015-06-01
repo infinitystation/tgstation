@@ -265,7 +265,7 @@ var/datum/subsystem/job/SSjob
 
 	// Loop through all levels from high to low
 	var/list/shuffledoccupations = shuffle(occupations)
-	for(var/level = 1 to 3)
+	for(var/level = 3 to 1)
 		//Check the head jobs first each level
 		CheckHeadPositions(level)
 

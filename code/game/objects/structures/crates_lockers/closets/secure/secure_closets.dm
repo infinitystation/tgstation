@@ -27,6 +27,8 @@
 				return
 			else
 				src.interact(usr)
+		else
+			..(W, user)
 	else
 		..(W, user)
 
@@ -70,11 +72,13 @@
 						else
 							usr << "<span class='notice'>Ключ не подходит</span>"
 							playsound(W.loc, 'sound/machines/twobeep.ogg', 30, 1)
+				validating = 0
 				if(validate>4)
 					src.locked = !src.locked
 					add_fingerprint(user)
 					visible_message("<span class='warning'>[user] has hacked [src]!</span>")
 					update_icon()
+
 
 	if(href_list["inc"])
 		if(W.mode != 1)

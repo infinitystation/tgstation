@@ -27,12 +27,15 @@
 	set name = "Rules"
 	set desc = "Show Server Rules."
 	set hidden = 1
-	if(config.rulesurl)
+	/* if(config.rulesurl)
 		if(alert("This will open the rules in your browser. Are you sure?",,"Yes","No")=="No")
 			return
 		src << link(config.rulesurl)
 	else
-		src << "<span class='danger'>The rules URL is not set in the server configuration.</span>"
+		src << "<span class='danger'>The rules URL is not set in the server configuration.</span>" */
+	var/output = file2text("config/rules.txt")
+	output = sanitize_u0(output)
+	src << browse(output,"window=serverrulest;size=800x600")
 	return
 
 /client/verb/github()

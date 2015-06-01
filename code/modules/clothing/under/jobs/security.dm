@@ -100,6 +100,7 @@
 	icon_state = "security"
 	item_state = "r_suit"
 	item_color = "security"
+	can_adjust = 0
 	icon = 'icons/blue_brig/obj/clothing/uniform.dmi'
 	worn_icon = 'icons/blue_brig/mob/uniform.dmi'
 	lefthand_file = 'icons/blue_brig/mob/clothing-lefthand.dmi'

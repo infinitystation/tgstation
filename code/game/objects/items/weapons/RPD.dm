@@ -118,10 +118,6 @@ var/global/list/RPD_recipes=list(
 		"Junction"       = new /datum/pipe_info(PIPE_JUNCTION,			1, PIPE_UNARY),
 		"Heat Exchanger" = new /datum/pipe_info(PIPE_HEAT_EXCHANGE,		1, PIPE_UNARY),
 	),
-	"Insulated Pipes" = list(
-		"Pipe"           = new /datum/pipe_info(PIPE_INSULATED_STRAIGHT,1, PIPE_BINARY),
-		"Bent Pipe"      = new /datum/pipe_info(PIPE_INSULATED_BENT,	5, PIPE_BENT),
-	),
 	"Disposal Pipes" = list(
 		"Pipe"          = new /datum/pipe_info/disposal(DISP_PIPE_STRAIGHT,	PIPE_BINARY),
 		"Bent Pipe"     = new /datum/pipe_info/disposal(DISP_PIPE_BENT,		PIPE_TRINARY),

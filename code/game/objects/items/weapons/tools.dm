@@ -166,7 +166,7 @@
 /obj/item/weapon/weldingtool/New()
 	..()
 	create_reagents(max_fuel)
-	reagents.add_reagent("fuel", max_fuel)
+	reagents.add_reagent("welding_fuel", max_fuel)
 	update_icon()
 	return
 
@@ -274,7 +274,7 @@
 
 //Returns the amount of fuel in the welder
 /obj/item/weapon/weldingtool/proc/get_fuel()
-	return reagents.get_reagent_amount("fuel")
+	return reagents.get_reagent_amount("welding_fuel")
 
 
 //Removes fuel from the welding tool. If a mob is passed, it will try to flash the mob's eyes. This should probably be renamed to use()
@@ -282,7 +282,7 @@
 	if(!welding || !check_fuel())
 		return 0
 	if(get_fuel() >= amount)
-		reagents.remove_reagent("fuel", amount)
+		reagents.remove_reagent("welding_fuel", amount)
 		check_fuel()
 		if(M)
 			M.flash_eyes(2)
@@ -356,8 +356,9 @@
 		var/obj/item/stack/rods/R = I
 		if (R.use(1))
 			var/obj/item/weapon/flamethrower/F = new /obj/item/weapon/flamethrower(user.loc)
-			user.unEquip(src)
-			loc = F
+			if(!remove_item_from_storage(F))
+				user.unEquip(src)
+				loc = F
 			F.weldtool = src
 			add_fingerprint(user)
 			user << "<span class='notice'>You add a rod to a welder, starting to build a flamethrower.</span>"
@@ -383,6 +384,7 @@
 	name = "emergency welding tool"
 	icon_state = "miniwelder"
 	max_fuel = 10
+	w_class = 1
 	m_amt = 30
 	g_amt = 10
 	change_icons = 0
@@ -396,7 +398,6 @@
 	icon_state = "upindwelder"
 	item_state = "upindwelder"
 	max_fuel = 80
-	w_class = 3.0
 	m_amt = 70
 	g_amt = 120
 	origin_tech = "engineering=3"
@@ -406,7 +407,6 @@
 	icon_state = "exwelder"
 	item_state = "exwelder"
 	max_fuel = 40
-	w_class = 3.0
 	m_amt = 70
 	g_amt = 120
 	origin_tech = "engineering=4;plasmatech=3"
@@ -418,7 +418,7 @@
 /obj/item/weapon/weldingtool/experimental/proc/fuel_gen()
 	if(!last_gen)
 		last_gen = 1
-		reagents.add_reagent("fuel",1)
+		reagents.add_reagent("welding_fuel",1)
 		spawn(10)
 			last_gen = 0
 

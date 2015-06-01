@@ -38,6 +38,7 @@
 	var/list/no_equip = list()	// slots the race can't equip stuff to
 	var/nojumpsuit = 0	// this is sorta... weird. it basically lets you equip stuff that usually needs jumpsuits without one, like belts and pockets and ids
 
+	var/dangerous_existence = 0 //A flag for transformation spells that tells them "hey if you turn a person into one of these without preperation, they'll probably die!"
 	var/say_mod = "говорит"	// affects the speech message
 
 	var/list/mutant_bodyparts = list() 	// Parts of the body that are diferent enough from the standard human model that they cause clipping with some equipment
@@ -467,30 +468,15 @@
 			H.update_inv_wear_suit()
 
 	//need to shit? yes! yes! yes!
-	if(H.need_to_shit >= H.need_to_shit_max)
+	if(H.need_to_shit >= SHIT_LEVEL_MAX)
 		H.emote("shit")
 		H << "<span class='notice'>Вы справили нужду</span>"
-
-	//really need to shit? not now, but i'm need to SHIT!!
-	else if((H.need_to_shit_max - H.need_to_shit)<20)
-		if(prob(10))
-			H << "<span class='danger'><b>Вам ОЧЕНЬ хочетс&#255; в туалет!</b></span>"
-
-	//really need to shit? not now, but i'm need to shit!
-	else if((H.need_to_shit_max - H.need_to_shit)<20)
-		if(prob(6))
-			H << "<span class='danger'>Вам очень хочетс&#255; в туалет!</span>"
-
-	//need to shit? not now, but...
-	else if((H.need_to_shit_max - H.need_to_shit)<80)
-		if(prob(3))
-			H << "<span class='notice'>Вам хочетс&#255; в туалет</span>"
 
 	// nutrition decrease & shit increase
 	if (H.nutrition > 0 && H.stat != 2)
 		H.nutrition = max (0, H.nutrition - HUNGER_FACTOR)
 		if(H.client)
-			H.need_to_shit = min (H.need_to_shit_max, H.need_to_shit + ( HUNGER_FACTOR * 3))
+			H.need_to_shit = min(SHIT_LEVEL_MAX, H.need_to_shit + HUNGER_FACTOR)
 
 	// nutrition decrease and satiety
 	if (H.nutrition > 0 && H.stat != 2)
@@ -646,6 +632,14 @@
 			H.throw_alert("nutrition","hungry")
 		else
 			H.throw_alert("nutrition","starving")
+
+	switch(H.need_to_shit)
+		if(SHIT_LEVEL_DANGER to SHIT_LEVEL_MAX)
+			H.throw_alert("toilet", "shit_now")
+		if(SHIT_LEVEL_WARNING to SHIT_LEVEL_DANGER)
+			H.throw_alert("toilet", "shit")
+		else
+			H.clear_alert("toilet")
 
 	return 1
 
@@ -883,7 +877,7 @@
 	// Allows you to put in item-specific reactions based on species
 	if(user != src)
 		user.do_attack_animation(H)
-	if((user != H) && H.check_shields(I.force, "the [I.name]"))
+	if((user != H) && H.check_shields(I.force, "the [I.name]", I))
 		return 0
 
 	if(I.attack_verb && I.attack_verb.len)
