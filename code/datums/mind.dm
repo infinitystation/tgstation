@@ -159,6 +159,7 @@
 	if(src in ticker.mode.head_revolutionaries)
 		ticker.mode.head_revolutionaries -= src
 		ticker.mode.update_rev_icons_removed(src)
+	current.verbs -= /mob/living/carbon/human/proc/RevConvert
 	special_role = null
 	remove_objectives()
 	remove_antag_equip()
@@ -758,7 +759,7 @@
 			if("clear")
 				remove_rev()
 				current << "<span class='userdanger'>You have been brainwashed! You are no longer a revolutionary!</span>"
-				current.verbs -= /mob/living/carbon/human/proc/RevConvert
+
 				message_admins("[key_name_admin(usr)] has de-rev'ed [current].")
 				log_admin("[key_name(usr)] has de-rev'ed [current].")
 			if("rev")
