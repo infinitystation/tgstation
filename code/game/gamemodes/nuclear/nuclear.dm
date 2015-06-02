@@ -184,6 +184,13 @@
 	E.imp_in = synd_mob
 	E.implanted = 1
 	E.implanted(synd_mob)
+
+	//THEY ARE ANTYLOYAL
+	var/obj/item/weapon/implant/antiloyalty/AL = new/obj/item/weapon/implant/antiloyalty(synd_mob)
+	AL.imp_in = synd_mob
+	AL.implanted = 1
+	AL.implanted(synd_mob)
+
 	synd_mob.faction |= "syndicate"
 	synd_mob.update_icons()
 	return 1

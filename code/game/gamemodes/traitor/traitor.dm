@@ -281,11 +281,17 @@
 			traitor_mob << "Your training has allowed you to overcome your clownish nature, allowing you to wield weapons without harming yourself."
 			traitor_mob.dna.remove_mutation(CLOWNMUT)
 
+	var/obj/item/weapon/implant/antiloyalty/AL = new/obj/item/weapon/implant/antiloyalty(traitor_mob)
+	AL.imp_in = traitor_mob
+	AL.implanted = 1
+	AL.implanted(traitor_mob)
+
 	// find a radio! toolbox(es), backpack, belt, headset
 	var/loc = ""
 	var/obj/item/R = locate(/obj/item/device/pda) in traitor_mob.contents //Hide the uplink in a PDA if available, otherwise radio
 	if(!R)
 		R = locate(/obj/item/device/radio) in traitor_mob.contents
+
 
 	if (!R)
 		traitor_mob << "Unfortunately, the Syndicate wasn't able to get you a radio."

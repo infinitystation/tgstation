@@ -119,6 +119,12 @@
 	var/obj/item/device/gangtool/gangtool = new(mob)
 	var/obj/item/toy/crayon/spraycan/gang/SC = new(mob)
 
+	//THEY ARE ANTYLOYAL
+	var/obj/item/weapon/implant/antiloyalty/AL = new/obj/item/weapon/implant/antiloyalty(mob)
+	AL.imp_in = mob
+	AL.implanted = 1
+	AL.implanted(mob)
+
 	var/list/slots = list (
 		"backpack" = slot_in_backpack,
 		"left pocket" = slot_l_store,

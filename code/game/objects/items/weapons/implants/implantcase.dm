@@ -109,3 +109,14 @@
 /obj/item/weapon/implantcase/weapons_auth/New()
 	imp = new /obj/item/weapon/implant/weapons_auth(src)
 	..()
+
+/obj/item/weapon/implantcase/antiloyalty
+	name = "glass case- 'Anti-NTLoyalty'"
+	desc = "A case containing a \"FUCK THE NT\" implant."
+	icon = 'icons/obj/items.dmi'
+	icon_state = "implantcase-r"
+
+/obj/item/weapon/implantcase/antiloyalty/New()
+	imp = new /obj/item/weapon/implant/antiloyalty(src)
+	..()
+

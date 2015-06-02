@@ -174,14 +174,14 @@
 
 /obj/item/weapon/implant/loyalty/implanted(mob/target)
 	..()
-	if((target.mind in (ticker.mode.head_revolutionaries | ticker.mode.A_bosses | ticker.mode.B_bosses)) || is_shadow_or_thrall(target))
+	if((target.mind in (ticker.mode.changelings | ticker.mode.abductors)) || is_shadow_or_thrall(target))
 		target.visible_message("<span class='warning'>[target] seems to resist the implant!</span>", "<span class='warning'>You feel the corporate tendrils of Nanotrasen try to invade your mind!</span>")
 		return 0
-	if(target.mind in (ticker.mode.A_gang | ticker.mode.B_gang))
-		ticker.mode.remove_gangster(target.mind, exclude_bosses=0)
-		return 0
-	if(target.mind in ticker.mode.revolutionaries)
-		ticker.mode.remove_revolutionary(target.mind)
+	for(var/obj/item/weapon/implant/antiloyalty/A in target.contents)
+		if(A)
+			target.visible_message("<span class='warning'>[target] seems to resist the implant!</span>", "<span class='warning'>You feel the corporate tendrils of Nanotrasen try to invade your mind!</span>")
+			return 0
+	target.mind.remove_all_antag_light()
 	target << "<span class='notice'>You feel a surge of loyalty towards Nanotrasen.</span>"
 	return 1
 
@@ -230,3 +230,30 @@
 	if (src.uses < 1)	return 0
 	src.uses--
 	empulse(imp_in, 3, 5)
+
+/obj/item/weapon/implant/antiloyalty
+	name = "anti-loyalty implant"
+	desc = "Makes you mind more free from NT."
+	activated = 0
+
+/obj/item/weapon/implant/antiloyalty/get_data()
+	var/dat = {"<b>Implant Specifications:</b><BR>
+				<b>Name:</b> Anti-NTLoyalty <BR>
+				<b>Life:</b> over 9000 days.<BR>
+				<b>Important Notes:</b> FUCK THE NT!<BR>
+				<HR>
+				<b>Implant Details:</b><BR>
+				<b>Function:</b> Contains a small pod of nanobots that manipulate the host's mental functions.<BR>
+				<b>Special Features:</b> Will prevent and cure most forms of NANOTRASEN brainwashing.<BR>
+				<b>Integrity:</b> Implant will last so long as the nanobots are inside the bloodstream."}
+	return dat
+
+
+/obj/item/weapon/implant/antiloyalty/implanted(mob/target)
+	..()
+	for(var/obj/item/weapon/implant/loyalty/A in target.contents)
+		if(A)
+			target.visible_message("<span class='warning'>[target] seems to resist the implant!</span>", "<span class='warning'>Вы ненадолго чувствуете свободу от НТ и очень сильную боль в голове!</span>")
+			return 0
+	target << "<span class='notice'>You feel a surge of freedom from NT.</span>"
+	return 1
