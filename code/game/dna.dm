@@ -959,7 +959,7 @@
 
 //value in range 1 to values. values must be greater than 0
 //all arguments assumed to be positive integers
-proc/construct_block(value, values, blocksize=DNA_BLOCK_SIZE)
+/proc/construct_block(value, values, blocksize=DNA_BLOCK_SIZE)
 	var/width = round((16**blocksize)/values)
 	if(value < 1)
 		value = 1
@@ -967,7 +967,7 @@ proc/construct_block(value, values, blocksize=DNA_BLOCK_SIZE)
 	return num2hex(value, blocksize)
 
 //value is hex
-proc/deconstruct_block(value, values, blocksize=DNA_BLOCK_SIZE)
+/proc/deconstruct_block(value, values, blocksize=DNA_BLOCK_SIZE)
 	var/width = round((16**blocksize)/values)
 	value = round(hex2num(value) / width) + 1
 	if(value > values)

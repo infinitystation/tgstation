@@ -209,7 +209,7 @@ obj/item/projectile/kinetic/New()
 	range = 2
 	var/power = 6
 
-obj/item/projectile/plasma/New()
+/obj/item/projectile/plasma/New()
 	var/turf/proj_turf = get_turf(src)
 	if(!istype(proj_turf, /turf))
 		return
