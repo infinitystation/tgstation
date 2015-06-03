@@ -176,21 +176,23 @@ RCD
 	switch(mode)
 		if(1)
 			if(istype(A, /turf/space))
+				var/turf/space/S = A
 				if(useResource((1/ratio), user))
 					user << "<span class='notice'>You start building floor...</span>"
 					activate()
-					A:ChangeTurf(/turf/simulated/floor/plating)
+					S.ChangeTurf(/turf/simulated/floor/plating)
 					return 1
 				return 0
 
 			if(istype(A, /turf/simulated/floor))
+				var/turf/simulated/floor/F = A
 				if(checkResource((3/ratio), user))
 					user << "<span class='notice'>You start building wall...</span>"
 					playsound(src.loc, 'sound/machines/click.ogg', 50, 1)
 					if((ratio > 2) || do_after(user, 20))
 						if(!useResource((3/ratio), user)) return 0
 						activate()
-						A:ChangeTurf(/turf/simulated/wall)
+						F.ChangeTurf(/turf/simulated/wall)
 						return 1
 				return 0
 
@@ -236,7 +238,8 @@ RCD
 
 		if(3)
 			if(istype(A, /turf/simulated/wall))
-				if(istype(A, /turf/simulated/wall/r_wall) && !canRwall)
+				var/turf/simulated/wall/W
+				if(istype(W, /turf/simulated/wall/r_wall) && !canRwall)
 					return 0
 				if(checkResource((5/ratio), user))
 					user << "<span class='notice'>You start deconstructing wall...</span>"
@@ -244,18 +247,22 @@ RCD
 					if(do_after(user, round(40/ratio)))
 						if(!useResource((5/ratio), user)) return 0
 						activate()
-						A:ChangeTurf(/turf/simulated/floor/plating)
+						W.ChangeTurf(/turf/simulated/floor/plating)
 						return 1
 				return 0
 
 			if(istype(A, /turf/simulated/floor))
-				if(checkResource((1/ratio), user))
+				var/turf/simulated/floor/F = A
+				if(istype(F, F.baseturf))
+					user << "<span class='notice'>You can't dig any deeper!</span>"
+					return 0
+				else if(checkResource((1/ratio), user))
 					user << "<span class='notice'>You start deconstructing floor...</span>"
 					playsound(src.loc, 'sound/machines/click.ogg', 50, 1)
 					if((ratio > 2) || do_after(user, 50))
 						if(!useResource((1/ratio), user)) return 0
 						activate()
-						A:ChangeTurf(/turf/space)
+						F.ChangeTurf(F.baseturf)
 						return 1
 				return 0
 
