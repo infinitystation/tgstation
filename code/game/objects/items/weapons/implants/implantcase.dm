@@ -115,6 +115,7 @@
 	desc = "A case containing a \"FUCK THE NT\" implant."
 	icon = 'icons/obj/items.dmi'
 	icon_state = "implantcase-r"
+	origin_tech = "syndicate=2"
 
 /obj/item/weapon/implantcase/antiloyalty/New()
 	imp = new /obj/item/weapon/implant/antiloyalty(src)
