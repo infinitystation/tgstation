@@ -185,3 +185,19 @@
 	new /obj/item/weapon/reagent_containers/glass/bottle/curare(src)
 	new /obj/item/weapon/reagent_containers/glass/bottle/amanitin(src)
 	return
+
+/obj/item/weapon/storage/box/syndie_kit/imp_fuck_the_nt
+	name = "boxed FUCK THE NT implants (with injector)"
+
+/obj/item/weapon/storage/box/syndie_kit/imp_fuck_the_nt/New()
+	..()
+	var/obj/item/weapon/implanter/O = new(src)
+	O.imp = new /obj/item/weapon/implant/antiloyalty(O)
+	O.update_icon()
+	new /obj/item/weapon/implantcase/antiloyalty(src)
+	new /obj/item/weapon/implantcase/antiloyalty(src)
+	new /obj/item/weapon/implantcase/antiloyalty(src)
+	new /obj/item/weapon/implantcase/antiloyalty(src)
+	new /obj/item/weapon/implantcase/antiloyalty(src)
+	new /obj/item/weapon/implantcase/antiloyalty(src)
+	return

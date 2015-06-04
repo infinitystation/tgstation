@@ -261,6 +261,9 @@
 /turf/indestructible
 	name = "wall"
 	icon = 'icons/turf/walls.dmi'
+	opacity = 1
+	density = 1
+	blocks_air = 1
 
 /turf/indestructible/splashscreen
 	name = "Space Station 13"

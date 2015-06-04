@@ -177,8 +177,8 @@
 	if((target.mind in (ticker.mode.changelings | ticker.mode.abductors)) || is_shadow_or_thrall(target))
 		target.visible_message("<span class='warning'>[target] seems to resist the implant!</span>", "<span class='warning'>You feel the corporate tendrils of Nanotrasen try to invade your mind!</span>")
 		return 0
-	for(var/obj/item/weapon/implant/antiloyalty/A in target.contents)
-		if(A)
+	for(var/obj/item/weapon/implant/antiloyalty/AL in target.contents)
+		if((AL.imp_in == target) && AL.implanted)
 			target.visible_message("<span class='warning'>[target] seems to resist the implant!</span>", "<span class='warning'>You feel the corporate tendrils of Nanotrasen try to invade your mind!</span>")
 			return 0
 	target.mind.remove_all_antag_light()
@@ -252,8 +252,9 @@
 /obj/item/weapon/implant/antiloyalty/implanted(mob/target)
 	..()
 	for(var/obj/item/weapon/implant/loyalty/A in target.contents)
-		if(A)
+		if((A.imp_in == target) && A.implanted)
 			target.visible_message("<span class='warning'>[target] seems to resist the implant!</span>", "<span class='warning'>Вы ненадолго чувствуете свободу от НТ и очень сильную боль в голове!</span>")
 			return 0
+	target.mind.readd_antag_light()
 	target << "<span class='notice'>You feel a surge of freedom from NT.</span>"
 	return 1

@@ -39,6 +39,8 @@
 
 	var/assigned_role
 	var/special_role
+	var/special_role_old
+	var/safe_unrolled
 	var/list/restricted_roles = list()
 
 	var/datum/job/assigned_job
@@ -213,6 +215,8 @@
 	output += memory
 
 	if(objectives.len)
+		if(safe_unrolled)
+			output += "¬аши цели недействительны. ѕока есть эта надпись, их выполнение будет считаться нарушением правил сервера.<br>"
 		output += "<B>Objectives:</B>"
 		var/obj_count = 1
 		for(var/datum/objective/objective in objectives)
