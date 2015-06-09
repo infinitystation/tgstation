@@ -107,13 +107,11 @@ var/global/all_solved_wires = list() //Solved wire associative list, eg; all_sol
 
 /datum/wires/Topic(href, href_list)
 	..()
-
-
 	var/list/unsolved_wires = src.wires.Copy()
 	var/colour_function
 	var/solved_colour_function
 
-	if(in_range(holder, usr) && isliving(usr))
+	if(usr.Adjacent(holder) && isliving(usr))
 		var/mob/living/L = usr
 		if(CanUse(L) && href_list["action"])
 			var/obj/item/I = L.get_active_hand()

@@ -13,6 +13,8 @@
 	name = "formal closet"
 	desc = "It's a storage unit for formal clothing."
 	icon_door = "black"
+	icon_state = "generic"
+	icon_door_override = 0
 
 /obj/structure/closet/gmcloset/New()
 	..()
