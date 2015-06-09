@@ -77,9 +77,6 @@
 
 // BEGIN_INCLUDE
 #include "_maps\metastation.dm"
-#include "_maps\map_files\MetaStation\MetaStation.v41A.II FIX 4.dmm"
-#include "_maps\map_files\MetaStation\z2.dmm"
-#include "_maps\map_files\MetaStation\z8 - копия - копия.dmm"
 #include "code\_compile_options.dm"
 #include "code\hub.dm"
 #include "code\world.dm"
