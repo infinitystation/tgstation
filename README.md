@@ -25,8 +25,7 @@ https://bitbucket.org/infinity_team/infinity-tg.git
 1. Откройте файл tgstation.dme с помощью Dream Maker.
 2. Нажмите Build -> Compile или нажмите Ctrl + K.
 3. Дождитесь сообщения:
-
-```
+...
 saving tgstation.dmb (DEBUG mode)
 tgstation.dmb - 0 errors, 0 warnings
 
