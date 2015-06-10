@@ -6,7 +6,7 @@
 **Код**: https://bitbucket.org/infinity_team/infinity-tg  
 **Сайт разработчика:** http://infinity.smforum.ru/index.php  
 **IRC (На английском)**: irc://irc.rizon.net/coderbus  
-**Карта:** MetaStation v41A.II FIX 6.dmm, z2t.dmm
+**Карта:** MetaStation v41A.II_FIX6.dmm, z2t.dmm
 
 ##ЗАГРУЗКА
 
@@ -29,6 +29,7 @@ https://bitbucket.org/infinity_team/infinity-tg.git
 ...  
 saving tgstation.dmb (DEBUG mode)  
 tgstation.dmb - 0 errors, 0 warnings
+4. Если будут проблемы, пишите на форум.
 
 ##ЗАПУСК
 0. Убедитесь, что у вас есть BYOND. Скачать можно здесь: http://www.byond.com/.  
@@ -40,3 +41,7 @@ tgstation.dmb - 0 errors, 0 warnings
 ##ХОСТИНГ В ОС LINUX
 В билде используется BYGEX для некоторых текстовых операции. К сожалению, билд имеет только библиотеку для ОС Windows. Если вы можете, то можете скачать BYGEX для Linux здесь https://code.google.com/p/byond-regex/ и скомпилировать его.  
 Также можно отредактировать файл code/_compile_options.dm, и закомментировать строку: #define USE_BYGEX в начале строки таким образом: //#define USE_BYGEX и перекомпилировать билд снова.
+
+##СОДЕЙСТВИЕ РАЗРАБОТКЕ БИЛДА.
+Читать здесь:  
+http://infinity.smforum.ru/index.php?topic=2630
