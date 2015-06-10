@@ -120,7 +120,7 @@ WIKIURL http://ru.infinity.wikia.com/wiki
 RULESURL http://infinity.smforum.ru/index.php?topic=79.0
 
 ##Github address
-GITHUBURL https://www.github.com/tgstation/-tg-station
+GITHUBURL https://bitbucket.org/infinity_team/infinity-tg
 
 ## Ban appeals URL - usually for a forum or wherever people should go to contact your admins.
 BANAPPEALS http://infinity.smforum.ru/
