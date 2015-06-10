@@ -1953,9 +1953,9 @@ window "rpane"
 		right-click = false
 		saved-params = "is-checked"
 		on-size = ""
-		text = "Github"
+		text = "Code Repo"
 		image = ""
-		command = "github"
+		command = "Code"
 		is-flat = false
 		stretch = false
 		is-checked = false
