@@ -29,6 +29,7 @@ https://bitbucket.org/infinity_team/infinity-tg.git
 ...  
 saving tgstation.dmb (DEBUG mode)  
 tgstation.dmb - 0 errors, 0 warnings
+4. Если будут проблемы, пишите на форум.
 
 ##ЗАПУСК
 0. Убедитесь, что у вас есть BYOND. Скачать можно здесь: http://www.byond.com/.  
