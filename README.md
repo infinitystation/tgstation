@@ -1,32 +1,32 @@
 ##Модифированный /tg/station v1.0.1
 Используется сервером Infinity.
 
-**Сайт оригинального разработчика:** http://www.tgstation13.org
-**Оригинальный код:** https://github.com/tgstation/-tg-station
-**Код**: https://bitbucket.org/infinity_team/infinity-tg
-**Сайт разработчика:** http://infinity.smforum.ru/index.php
+**Сайт оригинального разработчика:** http://www.tgstation13.org  
+**Оригинальный код:** https://github.com/tgstation/-tg-station  
+**Код**: https://bitbucket.org/infinity_team/infinity-tg  
+**Сайт разработчика:** http://infinity.smforum.ru/index.php  
 **IRC (На английском)**: irc://irc.rizon.net/coderbus
 
 ##ЗАГРУЗКА
 
 Есть несколько способов скачать билд проекта.
 
-Вариант 1:
+Вариант 1:  
 Скачать здесь в *.zip файле: https://bitbucket.org/infinity_team/infinity-tg/downloads
 
-Вариант 2:
-1. Установить SourceTree (рекомендуем) или любой другой GIT-клиент. 
-https://www.sourcetreeapp.com/download/
-2. Зайти в SourceTree и клонировать репозиторий по ссылке: 
+Вариант 2:  
+1. Установить SourceTree (рекомендуем) или любой другой GIT-клиент.  
+https://www.sourcetreeapp.com/download/  
+2. Зайти в SourceTree и клонировать репозиторий по ссылке:  
 https://bitbucket.org/infinity_team/infinity-tg.git
 
 ##УСТАНОВКА
 0. Убедитесь, что у вас есть BYOND. Скачать можно здесь: http://www.byond.com/.  
 1. Откройте файл tgstation.dme с помощью Dream Maker.
 2. Нажмите Build -> Compile или нажмите Ctrl + K.
-3. Дождитесь сообщения:
-...
-saving tgstation.dmb (DEBUG mode)
+3. Дождитесь сообщения:  
+...  
+saving tgstation.dmb (DEBUG mode)  
 tgstation.dmb - 0 errors, 0 warnings
 
 ##ЗАПУСК
@@ -37,5 +37,5 @@ tgstation.dmb - 0 errors, 0 warnings
 4. Как только появится строка "Initializations Complete" нажмите кнопку входа, которая обозначена стрелкой.
 
 ##ХОСТИНГ В ОС LINUX
-В билде используется BYGEX для некоторых текстовых операции. К сожалению, билд имеет только библиотеку для ОС Windows. Если вы можете, то можете скачать BYGEX для Linux здесь https://code.google.com/p/byond-regex/ и скомпилировать его.
+В билде используется BYGEX для некоторых текстовых операции. К сожалению, билд имеет только библиотеку для ОС Windows. Если вы можете, то можете скачать BYGEX для Linux здесь https://code.google.com/p/byond-regex/ и скомпилировать его.  
 Также можно отредактировать файл code/_compile_options.dm, и закомментировать строку: #define USE_BYGEX в начале строки таким образом: //#define USE_BYGEX и перекомпилировать билд снова.
