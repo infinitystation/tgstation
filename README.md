@@ -1,5 +1,5 @@
 ##Модифированный /tg/station v1.0.1
-
+Используется сервером Infinity.
 
 **Сайт оригинального разработчика:** http://www.tgstation13.org
 **Оригинальный код:** https://github.com/tgstation/-tg-station
