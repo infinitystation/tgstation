@@ -6,7 +6,7 @@
 **Код**: https://bitbucket.org/infinity_team/infinity-tg  
 **Сайт разработчика:** http://infinity.smforum.ru/index.php  
 **IRC (На английском)**: irc://irc.rizon.net/coderbus  
-**Карта:** MetaStation v41A.II FIX 6
+**Карта:** MetaStation v41A.II FIX 6.dmm, z2t.dmm
 
 ##ЗАГРУЗКА
 
