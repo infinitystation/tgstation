@@ -118,7 +118,8 @@
 				loc.assume_air(removed)
 				air_update_turf()
 
-				parent.update = 1
+				if(parent)
+					parent.update = 1
 
 	else //external -> internal
 		var/pressure_delta = 10000
