@@ -41,7 +41,7 @@
 	if (usr.stat || usr.restrained()) return
 	if(src.reload < 180) return
 	if ((usr.contents.Find(src) || (in_range(src, usr) && istype(src.loc, /turf))) || (istype(usr, /mob/living/silicon)))
-		if(!stealth)
+		if(!src.stealth)
 			priority_announce("Bluespace artillery fire detected. Brace for impact.")
 		message_admins("[key_name_admin(usr)] has launched an artillery strike.")
 		var/list/L = list()
@@ -67,7 +67,7 @@
 /obj/machinery/artillerycontrol/syndie //MAIN POWER OF SYNDIE BATTLESHIP
 	stealth = 1
 
-/obj/machinery/artillerycontrol/attack_hand(mob/user as mob)
+/obj/machinery/artillerycontrol/syndie/attack_hand(mob/user as mob)
 	user.set_machine(src)
 	var/dat = "<B>Bluespace Artillery Control:</B><BR>"
 	dat += "Locked on<BR>"
