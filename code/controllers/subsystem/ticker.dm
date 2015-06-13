@@ -417,5 +417,6 @@ var/datum/subsystem/ticker/ticker
 /datum/subsystem/ticker/proc/send_random_tip()
 	var/list/randomtips = file2list("config/tips.txt")
 	if(randomtips.len)
-		world << "<font color='purple'><b>Совет раунда: </b>[strip_html_properly(sanitize(pick(randomtips)))]</font>"
+		world << "<font color='purple'><b>Совет раунда: </b>[sanitize(pick(randomtips))]</font>"
+
 
