@@ -1,6 +1,7 @@
 
 /obj/machinery/artillerycontrol
 	var/reload = 180
+	var/stealth = 0
 	name = "bluespace artillery control"
 	icon_state = "control_boxp1"
 	icon = 'icons/obj/machines/particle_accelerator.dmi'
@@ -40,7 +41,8 @@
 	if (usr.stat || usr.restrained()) return
 	if(src.reload < 180) return
 	if ((usr.contents.Find(src) || (in_range(src, usr) && istype(src.loc, /turf))) || (istype(usr, /mob/living/silicon)))
-		priority_announce("Bluespace artillery fire detected. Brace for impact.")
+		if(!stealth)
+			priority_announce("Bluespace artillery fire detected. Brace for impact.")
 		message_admins("[key_name_admin(usr)] has launched an artillery strike.")
 		var/list/L = list()
 		for(var/turf/T in get_area_turfs(thearea.type))
@@ -61,3 +63,6 @@
 		L+=T
 	var/loc = pick(L)
 	explosion(loc,2,5,11)*/
+
+/obj/machinery/artillerycontrol/syndie //MAIN POWER OF SYNDIE BATTLESHIP
+	stealth = 1
