@@ -9,8 +9,7 @@
 	if(stat == DEAD)
 		return
 
-
-	message = trim(strip_html_properly(message))
+	message = trim(message)
 	message = copytext(sanitize(message), 1, MAX_MESSAGE_LEN)
 	if(!can_speak(message))
 		return
@@ -22,8 +21,6 @@
 		if (src.client.prefs.muted & MUTE_IC)
 			src << "<span class='danger'>You cannot whisper (muted).</span>"
 			return
-
-	log_whisper("[src.name]/[src.key] : [message]")
 
 	var/alt_name = get_alt_name()
 

@@ -187,7 +187,7 @@
 		return 0
 
 /proc/stars(n, pr)
-	n = strip_html_properly(n)
+	n = html_encode(n)
 	if (pr == null)
 		pr = 25
 	if (pr <= 0)

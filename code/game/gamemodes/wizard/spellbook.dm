@@ -182,6 +182,11 @@
 	log_name = "IS"
 	category = "Utility Spells"
 
+/datum/spellbook_entry/lichdom
+	name = "Bind Soul"
+	spell_type = /obj/effect/proc_holder/spell/targeted/lichdom
+	log_name = "LD"
+
 /datum/spellbook_entry/lightningbolt
 	name = "Lightning Bolt"
 	spell_type = /obj/effect/proc_holder/spell/targeted/lightning
@@ -360,7 +365,8 @@
 	var/times = 0
 
 /datum/spellbook_entry/summon/events/IsAvailible()
-	return (ticker.mode.name != "ragin' mages" && !config.no_summon_events)
+	if(ticker.mode)
+		return (ticker.mode.name != "ragin' mages" && !config.no_summon_events)
 
 /datum/spellbook_entry/summon/events/Buy(var/mob/living/carbon/human/user,var/obj/item/weapon/spellbook/book)
 	feedback_add_details("wizard_spell_learned",log_name)
@@ -399,6 +405,8 @@
 	var/entry_types = typesof(/datum/spellbook_entry) - /datum/spellbook_entry - /datum/spellbook_entry/item - /datum/spellbook_entry/summon
 	for(var/T in entry_types)
 		var/datum/spellbook_entry/E = new T
+		if(!config)
+			sleep(100)
 		if(E.IsAvailible())
 			entries |= E
 			categories |= E.category
@@ -477,7 +485,7 @@
 
 	dat += "<li><a><b>Uses remaining : [uses]</b></a></li>"
 	dat += "</ul>"
-	
+
 	var/datum/spellbook_entry/E
 	for(var/i=1,i<=entries.len,i++)
 		var/spell_info = ""
