@@ -318,6 +318,27 @@ var/const/CALL_SHUTTLE_REASON_LENGTH = 12
 			log_game("[key_name(usr)] disabled emergency maintenance access.")
 			message_admins("[key_name_admin(usr)] disabled emergency maintenance access.")
 			src.aistate = STATE_DEFAULT
+		if("AI-MessageCentcomm")
+			//if(src.authenticated==2)
+			if(CM.cooldownLeft())
+				usr << "Arrays recycling.  Please stand by."
+				return
+			var/input = stripped_input(usr, "Please choose a message to transmit to Centcom via quantum entanglement.  Please be aware that this process is very expensive, and abuse will lead to... termination.  Transmission does not guarantee a response.", "Send a message to Centcomm.", "")
+			Centcomm_announce(input, usr)
+			usr << "Message transmitted."
+			log_say("[key_name(usr)] has made a Centcom announcement: [input]")
+			CM.lastTimeUsed = world.time
+		// OMG SYNDICATE ...LETTERHEAD
+		if("AI-MessageSyndicate")
+			if(/*(src.authenticated==2) && */(src.emagged))
+				if(CM.cooldownLeft())
+					usr << "Arrays recycling.  Please stand by."
+					return
+				var/input = stripped_input(usr, "Please choose a message to transmit to \[ABNORMAL ROUTING COORDINATES\] via quantum entanglement.  Please be aware that this process is very expensive, and abuse will lead to... termination. Transmission does not guarantee a response.", "Send a message to /??????/.", "")
+				Syndicate_announce(input, usr)
+				usr << "Message transmitted."
+				log_say("[key_name(usr)] has made a Syndicate announcement: [input]")
+				CM.lastTimeUsed = world.time
 
 	src.updateUsrDialog()
 
@@ -511,6 +532,11 @@ var/const/CALL_SHUTTLE_REASON_LENGTH = 12
 				dat += "<BR>\[ <A HREF='?src=\ref[src];operation=ai-callshuttle'>Call Emergency Shuttle</A> \]"
 			dat += "<BR>\[ <A HREF='?src=\ref[src];operation=ai-status'>Set Status Display</A> \]"
 			dat += "<BR><BR><B>Special Functions</B>"
+			if(src.emagged == 0)
+				dat += "<BR>\[ <A HREF='?src=\ref[src];operation=AI-MessageCentcomm'>Send Message to Centcom</A> \]"
+			else
+				dat += "<BR>\[ <A HREF='?src=\ref[src];operation=AI-MessageSyndicate'>Send Message to \[UNKNOWN\]</A> \]"
+				dat += "<BR>\[ <A HREF='?src=\ref[src];operation=RestoreBackup'>Restore Backup Routing Data</A> \]"
 			dat += "<BR>\[ <A HREF='?src=\ref[src];operation=ai-announce'>Make an Announcement</A> \]"
 			dat += "<BR>\[ <A HREF='?src=\ref[src];operation=ai-changeseclevel'>Change Alert Level</A> \]"
 			dat += "<BR>\[ <A HREF='?src=\ref[src];operation=ai-emergencyaccess'>Emergency Maintenance Access</A> \]"

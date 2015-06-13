@@ -352,8 +352,6 @@ var/const/POWER = 8
 		name_by_type = "Autolathe"
 	if(istype(src, /datum/wires/alarm))
 		name_by_type = "Air Alarm"
-	if(istype(src, /datum/wires/camera))
-		name_by_type = "Camera"
 	if(istype(src, /datum/wires/explosive))
 		name_by_type = "C4 Bomb"
 	if(istype(src, /datum/wires/mulebot))
