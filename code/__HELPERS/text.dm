@@ -49,7 +49,7 @@
 //Runs byond's sanitization proc along-side sanitize_simple
 /proc/sanitize(var/t,var/list/repl_chars = null)//ansi
 
-	t = html_encode(sanitize_simple(t, repl_chars))
+	t = html_encode(trim(sanitize_simple(t, repl_chars)))
 
 	var/index = findtext(t, "____255_")
 	while(index)
