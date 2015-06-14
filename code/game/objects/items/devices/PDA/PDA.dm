@@ -767,7 +767,7 @@ var/global/list/obj/item/device/pda/PDAs = list()
 		id = null
 
 /obj/item/device/pda/proc/msg_input(var/mob/living/U = usr)
-	var/t = stripped_input(U, "Please enter message", name, null, MAX_MESSAGE_LEN)
+	var/t = input(U, "Please enter message", name, null, MAX_MESSAGE_LEN)
 	if (!t || toff)
 		return
 	if (!in_range(src, U) && loc != U)
