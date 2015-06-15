@@ -48,36 +48,24 @@
 
 //Runs byond's sanitization proc along-side sanitize_simple
 /proc/sanitize(var/t,var/list/repl_chars = null)//ansi
-
 	t = html_encode(trim(sanitize_simple(t, repl_chars)))
-
-	var/index = findtext(t, "____255_")
-	while(index)
-		t = copytext(t, 1, index) + "&#255;" + copytext(t, index+8)
-		index = findtext(t, "____255_", index+1)
+	t = replacetext(t, "____255_", "&#255;")
 	return t
 
-/proc/sanitize_u(var/t,var/list/repl_chars = null)//unicode
+//unicode sanitization
+/proc/sanitize_u(var/t,var/list/repl_chars = null)
 	t = html_encode(sanitize_simple(t,repl_chars))
-	var/index = findtext(t, "____255_")
-	while(index)
-		t = copytext(t, 1, index) + "&#1103;" + copytext(t, index+8)
-		index = findtext(t, "____255_", index+1)
+	t = replacetext(t, "____255_", "&#1103;")
 	return t
 
-/proc/sanitize_a2u(var/t,var/list/repl_chars = null)//ansi to unicode
-	var/index = findtext(t, "&#255;")
-	while(index)
-		t = copytext(t, 1, index) + "&#1103;" + copytext(t, index+6)
-		index = findtext(t, "&#255;", index+1)
+//convertion ansi to unicode
+/proc/sanitize_a2u(var/t)//ansi to unicode
+	t = replacetext(t, "&#255;", "&#1103;")
 	return t
 
-/proc/sanitize_u2a(var/t,var/list/repl_chars = null)//unicode to ansi
-	t = html_decode(t)
-	var/index = findtext(t, "&#1103;")
-	while(index)
-		t = copytext(t, 1, index) + "&#255;" + copytext(t, index+7)
-		index = findtext(t, "&#1103;", index)
+//convertion unicode to andi
+/proc/sanitize_u2a(var/t)//unicode to ansi
+	t = replacetext(t, "&#1103;", "&#255;")
 	return t
 
 //Runs sanitize and strip_html_simple
@@ -106,12 +94,18 @@
 // Used to get a properly sanitized input, of max_length
 /proc/stripped_input(var/mob/user, var/message = "", var/title = "", var/default = "", var/max_length=MAX_MESSAGE_LEN)
 	var/name = input(user, message, title, default) as text|null
-	return html_encode(trim(name, max_length)) //trim is "inside" because html_encode can expand single symbols into multiple symbols (such as turning < into &lt;)
+	name = replacetext(name, "ÿ", "___255_")
+	name = html_encode(trim(name, max_length)) //trim is "inside" because html_encode can expand single symbols into multiple symbols (such as turning < into &lt;)
+	name = replacetext(name, "___255_", "ÿ")
+	return name
 
 // Used to get a properly sanitized multiline input, of max_length
 /proc/stripped_multiline_input(var/mob/user, var/message = "", var/title = "", var/default = "", var/max_length=MAX_MESSAGE_LEN)
 	var/name = input(user, message, title, default) as message|null
-	return html_encode(trim(name, max_length))
+	name = replacetext(name, "ÿ", "___255_")
+	name = html_encode(trim(name, max_length)) //trim is "inside" because html_encode can expand single symbols into multiple symbols (such as turning < into &lt;)
+	name = replacetext(name, "___255_", "ÿ")
+	return name
 
 //Filters out undesirable characters from names
 /proc/reject_bad_name(var/t_in, var/allow_numbers=0, var/max_length=MAX_NAME_LEN)
@@ -442,16 +436,11 @@ var/list/binary = list("0","1")
 
 	return t
 
+//clean sanitize
 /proc/sanitize_a0(t)
-	var/index = findtext(t, "ÿ")
-	while(index)
-		t = copytext(t, 1, index) + "&#255;" + copytext(t, index+1)
-		index = findtext(t, "ÿ", index+1)
-	return t
+	t = replacetext(t, "ÿ", "&#255;")
 
+//clean sanitize
 /proc/sanitize_u0(t)
-	var/index = findtext(t, "ÿ")
-	while(index)
-		t = copytext(t, 1, index) + "&#1103;" + copytext(t, index+1)
-		index = findtext(t, "ÿ", index+1)
-	return t
+	t = replacetext(t, "ÿ", "&#1103;")
+
