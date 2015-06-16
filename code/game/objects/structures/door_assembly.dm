@@ -438,7 +438,7 @@
 
 			if(mineral && mineral != "glass")
 				mineral = null //I know this is stupid, but until we change glass to a boolean it's how this code works.
-			user << "<span class='notice'> You change the paintjob on the airlock assembly.</span>"
+			user << "<span class='notice'>You change the paintjob on the airlock assembly.</span>"
 
 	else if(istype(W, /obj/item/weapon/weldingtool) && !anchored )
 		var/obj/item/weapon/weldingtool/WT = W
@@ -450,7 +450,7 @@
 			if(do_after(user, 40))
 				if( !WT.isOn() )
 					return
-				user << "<span class='notice'> You disassemble the airlock assembly.</span>"
+				user << "<span class='notice'>You disassemble the airlock assembly.</span>"
 				new /obj/item/stack/sheet/metal(get_turf(src), 4)
 				if (mineral)
 					if (mineral == "glass")
@@ -482,7 +482,7 @@
 			if(do_after(user, 40))
 				if( src.anchored )
 					return
-				user << "<span class='notice'> You secure the airlock assembly.</span>"
+				user << "<span class='notice'>You secure the airlock assembly.</span>"
 				src.name = "secured airlock assembly"
 				src.anchored = 1
 		else
@@ -496,7 +496,7 @@
 		if(do_after(user, 40))
 			if( !src.anchored )
 				return
-			user << "<span class='notice'> You unsecure the airlock assembly.</span>"
+			user << "<span class='notice'>You unsecure the airlock assembly.</span>"
 			src.name = "airlock assembly"
 			src.anchored = 0
 
@@ -522,7 +522,7 @@
 		if(do_after(user, 40))
 			if( src.state != 1 )
 				return
-			user << "<span class='notice'> You cut the wires from the airlock assembly.</span>"
+			user << "<span class='notice'>You cut the wires from the airlock assembly.</span>"
 			new/obj/item/stack/cable_coil(get_turf(user), 1)
 			src.state = 0
 			src.name = "secured airlock assembly"
@@ -537,7 +537,7 @@
 
 			user.drop_item()
 			W.loc = src
-			user << "<span class='notice'> You install the airlock electronics.</span>"
+			user << "<span class='notice'>You install the airlock electronics.</span>"
 			src.state = 2
 			src.name = "near finished airlock assembly"
 			src.electronics = W
@@ -551,7 +551,7 @@
 		if(do_after(user, 40))
 			if( src.state != 2 )
 				return
-			user << "<span class='notice'> You remove the airlock electronics.</span>"
+			user << "<span class='notice'>You remove the airlock electronics.</span>"
 			src.state = 1
 			src.name = "wired airlock assembly"
 			var/obj/item/weapon/airlock_electronics/ae
@@ -616,7 +616,7 @@
 
 		if(do_after(user, 40))
 			if(src.loc && state == 2)
-				user << "<span class='notice'> You finish the airlock.</span>"
+				user << "<span class='notice'>You finish the airlock.</span>"
 				var/obj/machinery/door/airlock/door
 				if(mineral == "glass")
 					door = new src.glass_type( src.loc )

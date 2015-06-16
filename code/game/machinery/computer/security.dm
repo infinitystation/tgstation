@@ -4,7 +4,8 @@
 	name = "security records console"
 	desc = "Used to view and edit personnel's security records"
 	icon = 'icons/blue_brig/obj/seccomp.dmi'
-	icon_state = "security"
+	icon_screen = "security"
+	icon_keyboard = "security_key"
 	req_one_access = list(access_security, access_forensics_lockers)
 	circuit = /obj/item/weapon/circuitboard/secure_data
 	var/obj/item/weapon/card/id/scan = null
@@ -744,7 +745,3 @@ What a mess.*/
 					if(!record2 || record2 == active2)
 						return 1
 	return 0
-
-/obj/machinery/computer/secure_data/detective_computer
-	icon = 'icons/obj/computer.dmi'
-	icon_state = "messyfiles"
