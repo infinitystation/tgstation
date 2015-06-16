@@ -187,7 +187,13 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	S["socks"]				>> socks
 	S["backbag"]			>> backbag
 	S["flavor_text"] 		>> flavor_text
-	S["features"]			>> features
+	S["feature_mcolor"]					>> features["mcolor"]
+	S["feature_lizard_tail"]			>> features["tail"]
+	S["feature_lizard_snout"]			>> features["snout"]
+	S["feature_lizard_horns"]			>> features["horns"]
+	S["feature_lizard_frills"]			>> features["frills"]
+	S["feature_lizard_spines"]			>> features["spines"]
+	S["feature_lizard_body_markings"]	>> features["body_markings"]
 	S["clown_name"]			>> custom_names["clown"]
 	S["mime_name"]			>> custom_names["mime"]
 	S["ai_name"]			>> custom_names["ai"]
@@ -215,7 +221,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	metadata		= sanitize_text(metadata, initial(metadata))
 	real_name		= reject_bad_name(real_name)
 	if(!features["mcolor"] || features["mcolor"] == "#000")
-		features["mcolor"] = "#FFF"
+		features["mcolor"] = pick("FFFFFF","7F7F7F", "7FFF7F", "7F7FFF", "FF7F7F", "7FFFFF", "FF7FFF", "FFFF7F")
 	if(!real_name)	real_name = random_name(gender)
 	be_random_name	= sanitize_integer(be_random_name, 0, 1, initial(be_random_name))
 	be_random_body	= sanitize_integer(be_random_body, 0, 1, initial(be_random_body))
@@ -286,7 +292,13 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	S["socks"]				<< socks
 	S["backbag"]			<< backbag
 	S["species"]			<< pref_species.name
-	S["features"]			<< features
+	S["feature_mcolor"]					<< features["mcolor"]
+	S["feature_lizard_tail"]			<< features["tail"]
+	S["feature_lizard_snout"]			<< features["snout"]
+	S["feature_lizard_horns"]			<< features["horns"]
+	S["feature_lizard_frills"]			<< features["frills"]
+	S["feature_lizard_spines"]			<< features["spines"]
+	S["feature_lizard_body_markings"]	<< features["body_markings"]
 	S["clown_name"]			<< custom_names["clown"]
 	S["mime_name"]			<< custom_names["mime"]
 	S["ai_name"]			<< custom_names["ai"]
