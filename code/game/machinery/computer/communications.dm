@@ -6,7 +6,8 @@ var/const/CALL_SHUTTLE_REASON_LENGTH = 12
 /obj/machinery/computer/communications
 	name = "communications console"
 	desc = "This can be used for various important functions. Still under developement."
-	icon_state = "comm"
+	icon_screen = "comm"
+	icon_keyboard = "tech_key"
 	req_access = list(access_heads)
 	circuit = /obj/item/weapon/circuitboard/communications
 	var/authenticated = 0
@@ -49,7 +50,7 @@ var/const/CALL_SHUTTLE_REASON_LENGTH = 12
 /obj/machinery/computer/communications/Topic(href, href_list)
 	if(..())
 		return
-	if (src.z > ZLEVEL_STATION)
+	if (src.z > ZLEVEL_CENTCOM) //Can only use on centcom and SS13
 		usr << "<span class='boldannounce'>Unable to establish a connection</span>: \black You're too far away from the station!"
 		return
 	usr.set_machine(src)
@@ -202,7 +203,7 @@ var/const/CALL_SHUTTLE_REASON_LENGTH = 12
 			if(CM.cooldownLeft())
 				usr << "Arrays recycling.  Please stand by."
 				return
-			var/input = stripped_input(usr, "Please choose a message to transmit to Centcom via quantum entanglement.  Please be aware that this process is very expensive, and abuse will lead to... termination.  Transmission does not guarantee a response.", "Send a message to Centcomm.", "")
+			var/input = input(usr, "Please choose a message to transmit to Centcom via quantum entanglement.  Please be aware that this process is very expensive, and abuse will lead to... termination.  Transmission does not guarantee a response.", "Send a message to Centcomm.", "")
 			if(!input || !(usr in view(1,src)))
 				return
 			Centcomm_announce(input, usr)
@@ -217,7 +218,7 @@ var/const/CALL_SHUTTLE_REASON_LENGTH = 12
 				if(CM.cooldownLeft())
 					usr << "Arrays recycling.  Please stand by."
 					return
-				var/input = stripped_input(usr, "Please choose a message to transmit to \[ABNORMAL ROUTING COORDINATES\] via quantum entanglement.  Please be aware that this process is very expensive, and abuse will lead to... termination. Transmission does not guarantee a response.", "Send a message to /??????/.", "")
+				var/input = input(usr, "Please choose a message to transmit to \[ABNORMAL ROUTING COORDINATES\] via quantum entanglement.  Please be aware that this process is very expensive, and abuse will lead to... termination. Transmission does not guarantee a response.", "Send a message to /??????/.", "")
 				if(!input || !(usr in view(1,src)))
 					return
 				Syndicate_announce(input, usr)
@@ -235,7 +236,7 @@ var/const/CALL_SHUTTLE_REASON_LENGTH = 12
 				if(CM.cooldownLeft())
 					usr << "Arrays recycling. Please stand by."
 					return
-				var/input = stripped_input(usr, "Please enter the reason for requesting the nuclear self-destruct codes. Misuse of the nuclear request system will not be tolerated under any circumstances.  Transmission does not guarantee a response.", "Self Destruct Code Request.","")
+				var/input = input(usr, "Please enter the reason for requesting the nuclear self-destruct codes. Misuse of the nuclear request system will not be tolerated under any circumstances.  Transmission does not guarantee a response.", "Self Destruct Code Request.","")
 				if(!input || !(usr in view(1,src)))
 					return
 				Nuke_request(input, usr)
@@ -323,7 +324,7 @@ var/const/CALL_SHUTTLE_REASON_LENGTH = 12
 			if(CM.cooldownLeft())
 				usr << "Arrays recycling.  Please stand by."
 				return
-			var/input = stripped_input(usr, "Please choose a message to transmit to Centcom via quantum entanglement.  Please be aware that this process is very expensive, and abuse will lead to... termination.  Transmission does not guarantee a response.", "Send a message to Centcomm.", "")
+			var/input = input(usr, "Please choose a message to transmit to Centcom via quantum entanglement.  Please be aware that this process is very expensive, and abuse will lead to... termination.  Transmission does not guarantee a response.", "Send a message to Centcomm.", "")
 			Centcomm_announce(input, usr)
 			usr << "Message transmitted."
 			log_say("[key_name(usr)] has made a Centcom announcement: [input]")
@@ -334,7 +335,7 @@ var/const/CALL_SHUTTLE_REASON_LENGTH = 12
 				if(CM.cooldownLeft())
 					usr << "Arrays recycling.  Please stand by."
 					return
-				var/input = stripped_input(usr, "Please choose a message to transmit to \[ABNORMAL ROUTING COORDINATES\] via quantum entanglement.  Please be aware that this process is very expensive, and abuse will lead to... termination. Transmission does not guarantee a response.", "Send a message to /??????/.", "")
+				var/input = input(usr, "Please choose a message to transmit to \[ABNORMAL ROUTING COORDINATES\] via quantum entanglement.  Please be aware that this process is very expensive, and abuse will lead to... termination. Transmission does not guarantee a response.", "Send a message to /??????/.", "")
 				Syndicate_announce(input, usr)
 				usr << "Message transmitted."
 				log_say("[key_name(usr)] has made a Syndicate announcement: [input]")
@@ -595,7 +596,7 @@ var/const/CALL_SHUTTLE_REASON_LENGTH = 12
 	return dat
 
 /obj/machinery/computer/communications/proc/make_announcement(var/mob/living/user, var/is_silicon)
-	var/input = stripped_input(user, "Please choose a message to announce to the station crew.", "What?")
+	var/input = input(user, "Please choose a message to announce to the station crew.", "What?")
 	if(!input || !user.canUseTopic(src))
 		return
 	if(is_silicon)

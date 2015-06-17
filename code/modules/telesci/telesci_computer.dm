@@ -1,7 +1,9 @@
 /obj/machinery/computer/telescience
 	name = "\improper Telepad Control Console"
 	desc = "Used to teleport objects to and from the telescience telepad."
-	icon_state = "teleport"
+	icon_state = "computer"
+	icon_keyboard = "teleport_key"
+	icon_screen = "teleport"
 	circuit = /obj/item/weapon/circuitboard/telesci_console
 	var/sending = 1
 	var/obj/machinery/telepad/telepad = null
@@ -74,7 +76,7 @@
 		if(M.buffer && istype(M.buffer, /obj/machinery/telepad))
 			telepad = M.buffer
 			M.buffer = null
-			user << "<span class = 'caution'>You upload the data from the [W.name]'s buffer.</span>"
+			user << "<span class='caution'>You upload the data from the [W.name]'s buffer.</span>"
 	else
 		..()
 

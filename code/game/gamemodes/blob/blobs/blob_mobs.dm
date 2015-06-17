@@ -84,10 +84,9 @@
 	H.hair_style = null
 	H.update_hair()
 	human_overlays = H.overlays
-	if(overmind && overmind.blob_reagent_datum)
-		adjustcolors(overmind.blob_reagent_datum.color)
+	update_icons()
 	H.loc = src
-	loc.visible_message("<span class='warning'> The corpse of [H.name] suddenly rises!</span>")
+	loc.visible_message("<span class='warning'>The corpse of [H.name] suddenly rises!</span>")
 
 /mob/living/simple_animal/hostile/blob/blobspore/attack_ghost(mob/user)
 	if(is_zombie && !ckey)
@@ -131,8 +130,18 @@
 	..()
 
 
+/mob/living/simple_animal/hostile/blob/blobspore/update_icons()
+	..()
+
+	if(overmind && overmind.blob_reagent_datum)
+		adjustcolors(overmind.blob_reagent_datum.color)
+	else
+		adjustcolors(color) //to ensure zombie/other overlays update
+
+
 /mob/living/simple_animal/hostile/blob/blobspore/adjustcolors(var/a_color)
 	color = a_color
+
 	if(is_zombie)
 		overlays.Cut()
 		overlays = human_overlays
