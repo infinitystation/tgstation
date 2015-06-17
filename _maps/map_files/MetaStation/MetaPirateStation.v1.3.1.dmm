@@ -466,7 +466,7 @@
 "aiX" = (/obj/machinery/bot/cleanbot{name = "Mopfficer Sweepsky"; on = 0},/turf/simulated/floor/plating{tag = "icon-platingdmg1"; icon_state = "platingdmg1"},/area/maintenance/fore)
 "aiY" = (/obj/item/weapon/storage/box/lights/mixed,/obj/item/device/flashlight{pixel_x = 1; pixel_y = 5},/obj/machinery/light/small{dir = 4},/turf/simulated/floor/plating,/area/maintenance/fore)
 "aiZ" = (/obj/structure/disposalpipe/segment,/obj/structure/cable/yellow{d1 = 1; d2 = 2; icon_state = "1-2"},/turf/simulated/floor/plating,/area/maintenance/fore)
-"aja" = (/obj/machinery/power/apc{cell_type = 10000; dir = 8; name = "Bridge APC"; pixel_x = -27; pixel_y = 0},/obj/structure/cable/yellow{d1 = 4; d2 = 8; icon_state = "4-8"},/turf/simulated/floor/wood,/area/bridge)
+"aja" = (/obj/machinery/power/apc{cell_type = 10000; dir = 8; name = "Bridge APC"; pixel_x = -27; pixel_y = 0},/obj/structure/cable/yellow{d2 = 4; icon_state = "0-4"},/turf/simulated/floor/wood,/area/bridge)
 "ajb" = (/obj/structure/cable/yellow{d1 = 2; d2 = 8; icon_state = "2-8"},/obj/structure/cable/yellow{d1 = 1; d2 = 2; icon_state = "1-2"},/obj/structure/disposalpipe/segment{dir = 4; icon_state = "pipe-c"},/obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden{dir = 8; initialize_directions = 11},/turf/simulated/floor/wood,/area/bridge)
 "ajc" = (/obj/structure/disposalpipe/segment{dir = 4},/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{dir = 4},/turf/simulated/floor/wood,/area/bridge)
 "ajd" = (/obj/machinery/hologram/holopad,/obj/structure/disposalpipe/segment{dir = 4},/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{dir = 4},/turf/simulated/floor/wood,/area/bridge)
