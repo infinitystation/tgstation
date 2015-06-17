@@ -90,7 +90,7 @@
 	else
 		if(holder)	//sender is an admin but recipient is not. Do BIG RED TEXT
 			C << "<font color='red' size='4'><b>-- Administrator private message --</b></font>"
-			C << "<font color='red'[src.holder.rank] PM from-<b>[key_name(src, C, 0)]</b>: [msg]</font>"
+			C << "<font color='red'>[src.holder.rank] PM from-<b>[key_name(src, C, 0)]</b>: [msg]</font>"
 			C << "<font color='red'><i>Click on the administrator's name to reply.</i></font>"
 			src << "<font color='blue'>Admin PM to-<b>[key_name(C, src, 1)](<A HREF='?_src_=holder;adminplayerobservejump=\ref[C.mob]'>JMP</A>)</b>: [msg]</font>"
 
