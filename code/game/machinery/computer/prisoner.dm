@@ -2,7 +2,8 @@
 	name = "prisoner management console"
 	desc = "Used to manage tracking implants placed inside criminals."
 	icon = 'icons/blue_brig/obj/seccomp.dmi'
-	icon_state = "explosive"
+	icon_screen = "explosive"
+	icon_keyboard = "security_key"
 	req_access = list(access_brig)
 	circuit = "/obj/item/weapon/circuitboard/prisoner"
 	var/id = 0.0

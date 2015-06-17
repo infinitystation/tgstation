@@ -76,12 +76,12 @@
 
 	if(C.holder)
 		if(holder)	//both are admins
-			C << "<font color='red'>Admin PM from-<b>[key_name(src, C, 1)]</b>: [msg]</font>"
-			src << "<font color='blue'>Admin PM to-<b>[key_name(C, src, 1)]</b>: [msg]</font>"
+			C << "<font color='red'>Admin PM from-<b>[key_name(src, C, 1)](<A HREF='?_src_=holder;adminplayerobservejump=\ref[src.mob]'>JMP</A>)</b>: [msg]</font>"
+			src << "<font color='blue'>Admin PM to-<b>[key_name(C, src, 1)](<A HREF='?_src_=holder;adminplayerobservejump=\ref[C.mob]'>JMP</A>)</b>: [msg]</font>"
 
 		else		//recipient is an admin but sender is not
-			C << "<font color='red'>Reply PM from-<b>[key_name(src, C, 1)]</b>: [msg]</font>"
-			src << "<font color='blue'>PM to-<b>Admins</b>: [msg]</font>"
+			C << "<font color='red'>Reply PM from-<b>[key_name(src, C, 1)](<A HREF='?_src_=holder;adminplayerobservejump=\ref[src.mob]'>JMP</A>)</b>: [msg]</font>"
+			src << "<font color='blue'>PM to-<b>[key_name(C, src, 0)]</b>: [msg]</font>"
 
 		//play the recieving admin the adminhelp sound (if they have them enabled)
 		if(C.prefs.toggles & SOUND_ADMINHELP)
@@ -90,9 +90,9 @@
 	else
 		if(holder)	//sender is an admin but recipient is not. Do BIG RED TEXT
 			C << "<font color='red' size='4'><b>-- Administrator private message --</b></font>"
-			C << "<font color='red'>Admin PM from-<b>[key_name(src, C, 0)]</b>: [msg]</font>"
+			C << "<font color='red'>[src.holder.rank] PM from-<b>[key_name(src, C, 0)]</b>: [msg]</font>"
 			C << "<font color='red'><i>Click on the administrator's name to reply.</i></font>"
-			src << "<font color='blue'>Admin PM to-<b>[key_name(C, src, 1)]</b>: [msg]</font>"
+			src << "<font color='blue'>Admin PM to-<b>[key_name(C, src, 1)](<A HREF='?_src_=holder;adminplayerobservejump=\ref[C.mob]'>JMP</A>)</b>: [msg]</font>"
 
 			//always play non-admin recipients the adminhelp sound
 			C << 'sound/effects/adminhelp.ogg'
@@ -119,4 +119,4 @@
 	//we don't use message_admins here because the sender/receiver might get it too
 	for(var/client/X in admins)
 		if(X.key!=key && X.key!=C.key)	//check client/X is an admin and isn't the sender or recipient
-			X << "<B><font color='blue'>PM: [key_name(src, X, 0)]-&gt;[key_name(C, X, 0)]:</B> \blue [msg]</font>" //inform X
+			X << "<B><font color='blue'>PM: [key_name(src, X, 1)](<A HREF='?_src_=holder;adminplayerobservejump=\ref[src.mob]'>JMP</A>)-&gt;[key_name(C, X, 1)](<A HREF='?_src_=holder;adminplayerobservejump=\ref[C.mob]'>JMP</A>):</B> \blue [msg]</font>" //inform X
