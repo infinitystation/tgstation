@@ -783,7 +783,7 @@ var/global/list/obj/item/device/pda/PDAs = list()
 /obj/item/device/pda/proc/create_message(var/mob/living/U = usr, var/obj/item/device/pda/P)
 
 	var/t = msg_input(U)
-	t = copytext(sanitize(t), 1, MAX_MESSAGE_LEN)
+	t = copytext(sanitize_a0(t), 1, MAX_MESSAGE_LEN)
 
 	if (!t)
 		return
