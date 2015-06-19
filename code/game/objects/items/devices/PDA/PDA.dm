@@ -770,6 +770,7 @@ var/global/list/obj/item/device/pda/PDAs = list()
 
 /obj/item/device/pda/proc/msg_input(var/mob/living/U = usr)
 	var/t = stripped_input(U, "Please enter message", name, null, MAX_MESSAGE_LEN)
+	t = sanitize_a0(t)
 	if (!t || toff)
 		return
 	if (!in_range(src, U) && loc != U)
@@ -783,7 +784,6 @@ var/global/list/obj/item/device/pda/PDAs = list()
 /obj/item/device/pda/proc/create_message(var/mob/living/U = usr, var/obj/item/device/pda/P)
 
 	var/t = msg_input(U)
-	t = copytext(sanitize_a0(t), 1, MAX_MESSAGE_LEN)
 
 	if (!t)
 		return
