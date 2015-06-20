@@ -944,7 +944,8 @@ IF YOU MODIFY THE PRODUCTS LIST OF A MACHINE, MAKE SURE TO UPDATE ITS RESUPPLY C
 	vend_delay = 15
 	vend_reply = "Thank you for using the ClothesMate!"
 	products = list(/obj/item/clothing/head/that=2,/obj/item/clothing/head/fedora=3,/obj/item/clothing/glasses/monocle=2,
-	/obj/item/clothing/suit/jacket=2,/obj/item/clothing/under/suit_jacket/navy=2,/obj/item/clothing/under/suit_jacket/really_black=2,
+	/obj/item/clothing/suit/jacket=3,/obj/item/clothing/under/suit_jacket/navy=2,/obj/item/clothing/under/suit_jacket/really_black=2,/obj/item/clothing/under/suit_jacket/burgundy=2,
+	/obj/item/clothing/under/suit_jacket/charcoal=2, /obj/item/clothing/under/suit_jacket/white=2,/obj/item/clothing/under/kilt=2,/obj/item/clothing/under/overalls=1,
 	/obj/item/clothing/under/kilt=1, /obj/item/clothing/under/overalls=2, /obj/item/clothing/under/sl_suit=2,
 	/obj/item/clothing/under/pants/jeans=4,/obj/item/clothing/under/pants/classicjeans=2,/obj/item/clothing/under/pants/camo=2,
 	/obj/item/clothing/under/pants/blackjeans=2,/obj/item/clothing/under/pants/khaki=2,/obj/item/clothing/under/pants/white=2,
@@ -964,6 +965,6 @@ IF YOU MODIFY THE PRODUCTS LIST OF A MACHINE, MAKE SURE TO UPDATE ITS RESUPPLY C
 	/obj/item/clothing/shoes/sneakers/black=2,/obj/item/clothing/shoes/sandal=1,/obj/item/weapon/storage/belt/fannypack=1,
 	/obj/item/weapon/storage/belt/fannypack/blue=1,/obj/item/weapon/storage/belt/fannypack/red=1,/obj/item/clothing/gloves/fingerless=4)
 	contraband = list(/obj/item/clothing/under/syndicate/tacticool=1,/obj/item/clothing/mask/balaclava=1,/obj/item/clothing/head/ushanka=1,/obj/item/clothing/under/soviet=1,/obj/item/weapon/storage/belt/fannypack/black=1)
-	premium = list(/obj/item/clothing/under/suit_jacket/checkered=1,/obj/item/clothing/head/mailman=1,/obj/item/clothing/under/rank/mailman=1,/obj/item/clothing/suit/jacket/leather=1,/obj/item/clothing/under/pants/mustangjeans=1)
+	premium = list(/obj/item/clothing/under/suit_jacket/checkered=1,/obj/item/clothing/head/mailman=1,/obj/item/clothing/under/rank/mailman=1,/obj/item/clothing/suit/jacket/leather=1,/obj/item/clothing/suit/jacket/leather/overcoat=1,/obj/item/clothing/under/pants/mustangjeans=1)
 	refill_canister = /obj/item/weapon/vending_refill/clothing
 
