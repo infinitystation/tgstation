@@ -16,6 +16,10 @@
 	icon_state = "ash"
 	anchored = 1
 
+/obj/effect/decal/cleanable/ash/New()
+	..()
+	reagents.add_reagent("ash", 30)
+
 /obj/effect/decal/cleanable/shit
 	name = "shit"
 	desc = "Who did this?! Smells like shit. Someone should clean that up."
@@ -23,6 +27,7 @@
 	icon = 'icons/obj/redu.dmi'
 	icon_state = "Shit"
 	anchored = 1
+
 
 /obj/effect/decal/cleanable/greenglow
 	name = "green glow"
@@ -110,6 +115,7 @@
 /obj/effect/decal/cleanable/vomit/Destroy()
 	for(var/datum/disease/D in viruses)
 		D.cure(0)
+	viruses = null
 	..()
 
 /obj/effect/decal/cleanable/tomato_smudge
@@ -138,3 +144,11 @@
 	layer = 2
 	icon = 'icons/effects/tomatodecal.dmi'
 	random_icon_states = list("smashed_pie")
+
+/obj/effect/decal/cleanable/chem_pile
+	name = "chemical pile"
+	desc = "A pile of chemicals. You can't quite tell what's inside it."
+	gender = PLURAL
+	icon = 'icons/obj/objects.dmi'
+	icon_state = "ash"
+	anchored = 1

@@ -2,7 +2,7 @@
 	name = "Anomaly: Bluespace"
 	typepath = /datum/round_event/anomaly/anomaly_bluespace
 	max_occurrences = 1
-	weight = 5
+	weight = 10
 
 /datum/round_event/anomaly/anomaly_bluespace
 	startWhen = 3
@@ -11,7 +11,7 @@
 
 
 /datum/round_event/anomaly/anomaly_bluespace/announce()
-	priority_announce("Unstable bluespace anomaly detected on long range scanners. Expected location: [impact_area.name].", "Anomaly Alert")
+	priority_announce("—канеры дальней дистанции обнаружили нестабильную BlueSpace аномалию. ѕредположительное место: [impact_area.name].", "“ревога! јномалия!")
 
 
 /datum/round_event/anomaly/anomaly_bluespace/start()
@@ -40,12 +40,11 @@
 				var/turf/TO = get_turf(chosen)			 // the turf of origin we're travelling TO
 
 				playsound(TO, 'sound/effects/phasein.ogg', 100, 1)
-				priority_announce("Massive bluespace translocation detected.", "Anomaly Alert")
+				priority_announce("ќбнаружено массивное bluespace перемещение материи.", "“ревога! јномалия!")
 
 				var/list/flashers = list()
 				for(var/mob/living/carbon/human/M in viewers(TO, null))
-					if(M:eyecheck() <= 0)
-						flick("e_flash", M.flash) // flash dose faggots
+					if(M.flash_eyes())
 						flashers += M
 
 				var/y_distance = TO.y - FROM.y
@@ -55,8 +54,8 @@
 					if(A.anchored) continue
 
 					var/turf/newloc = locate(A.x + x_distance, A.y + y_distance, TO.z) // calculate the new place
-					if(!A.Move(newloc)) // if the atom, for some reason, can't move, FORCE them to move! :) We try Move() first to invoke any movement-related checks the atom needs to perform after moving
-						A.loc = locate(A.x + x_distance, A.y + y_distance, TO.z)
+					if(!A.Move(newloc) && newloc) // if the atom, for some reason, can't move, FORCE them to move! :) We try Move() first to invoke any movement-related checks the atom needs to perform after moving
+						A.loc = newloc
 
 					spawn()
 						if(ismob(A) && !(A in flashers)) // don't flash if we're already doing an effect

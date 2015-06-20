@@ -36,8 +36,6 @@
 
 	if(dna)
 		dna.species.spec_death(gibbed,src)
-	med_hud_set_health()
-	med_hud_set_status()
 
 	tod = worldtime2text()		//weasellos time of death patch
 	if(mind)	mind.store_memory("Time of death: [tod]", 0)
@@ -50,12 +48,12 @@
 /mob/living/carbon/human/proc/makeSkeleton()
 	if(!check_dna_integrity(src))	return
 	status_flags |= DISFIGURED
-	dna.species = new /datum/species/skeleton(src)
+	hardset_dna(src, null, null, null, null, /datum/species/skeleton)
 	return 1
 
 /mob/living/carbon/proc/ChangeToHusk()
-	if(HUSK in mutations)	return
-	mutations.Add(HUSK)
+	if(disabilities & HUSK)	return
+	disabilities |= HUSK
 	status_flags |= DISFIGURED	//makes them unknown without fucking up other stuff like admintools
 	return 1
 

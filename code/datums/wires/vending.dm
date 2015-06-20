@@ -56,3 +56,17 @@ var/const/VENDING_WIRE_IDSCAN = 8
 				V.seconds_electrified = -1
 		if(VENDING_WIRE_IDSCAN)
 			V.scan_id = 1
+
+/datum/wires/vending/SolveWireFunction(var/function)
+	var/sf = ""
+	switch(function)
+		if(VENDING_WIRE_THROW )
+			sf = "Port A"
+		if(VENDING_WIRE_CONTRABAND)
+			sf = "Port B"
+		if(VENDING_WIRE_ELECTRIFY)
+			sf = "Port C"
+		if(VENDING_WIRE_IDSCAN)
+			sf = "Port D"
+
+	return sf

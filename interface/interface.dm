@@ -27,20 +27,23 @@
 	set name = "Rules"
 	set desc = "Show Server Rules."
 	set hidden = 1
-	if(config.rulesurl)
+	/* if(config.rulesurl)
 		if(alert("This will open the rules in your browser. Are you sure?",,"Yes","No")=="No")
 			return
 		src << link(config.rulesurl)
 	else
-		src << "<span class='danger'>The rules URL is not set in the server configuration.</span>"
+		src << "<span class='danger'>The rules URL is not set in the server configuration.</span>" */
+	var/output = file2text("config/rules.txt")
+	output = sanitize_u0(output)
+	src << browse(output,"window=serverrulest;size=800x600")
 	return
 
 /client/verb/github()
-	set name = "Github"
-	set desc = "Visit Github"
+	set name = "Code"
+	set desc = "Visit bitbicket"
 	set hidden = 1
 	if(config.githuburl)
-		if(alert("This will open the Github repository in your browser. Are you sure?",,"Yes","No")=="No")
+		if(alert("This will open the bitbucket repository in your browser. Are you sure?",,"Yes","No")=="No")
 			return
 		src << link(config.githuburl)
 	else
@@ -66,7 +69,7 @@
 	var/adminhotkeys = {"<font color='purple'>
 Admin:
 \tF5 = Aghost (admin-ghost)
-\tF6 = player-panel-new
+\tF6 = player-panel
 \tF7 = admin-pm
 \tF8 = Invisimin
 </font>"}
@@ -88,7 +91,9 @@ Hotkey-Mode: (hotkey-mode must be on)
 \tq = drop
 \te = equip
 \tr = throw
+\tm = me
 \tt = say
+\to = OOC
 \tx = swap-hand
 \tz = activate held object (or y)
 \tf = cycle-intents-left

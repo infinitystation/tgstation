@@ -1,5 +1,3 @@
-var/global/list/datum/pipeline/pipe_networks = list()
-
 /datum/pipeline
 	var/datum/gas_mixture/air
 	var/list/datum/gas_mixture/other_airs = list()
@@ -9,13 +7,11 @@ var/global/list/datum/pipeline/pipe_networks = list()
 
 	var/update = 1
 
-	var/alert_pressure = 0
-
 /datum/pipeline/New()
-	pipe_networks += src
+	SSair.networks += src
 
 /datum/pipeline/Destroy()
-	pipe_networks -= src
+	SSair.networks -= src
 	if(air && air.volume)
 		temporarily_store_air()
 	for(var/obj/machinery/atmospherics/pipe/P in members)
@@ -24,32 +20,20 @@ var/global/list/datum/pipeline/pipe_networks = list()
 		A.nullifyPipenet(src)
 	..()
 
-/datum/pipeline/proc/process()//This use to be called called from the pipe networks
+/datum/pipeline/process()
 	if(update)
 		update = 0
 		reconcile_air()
-	return
-	/*
-	//Check to see if pressure is within acceptable limits
-	var/pressure = air.return_pressure()
-	if(pressure > alert_pressure)
-		for(var/obj/machinery/atmospherics/pipe/member in members)
-			if(!member.check_pressure(pressure))
-				break //Only delete 1 pipe per process
-	//Allow for reactions
-	//air.react() //Should be handled by pipe_network now
-	*/
 
+	return
 
 var/pipenetwarnings = 10
 
 /datum/pipeline/proc/build_pipeline(obj/machinery/atmospherics/base)
-	base.setPipenet(src)
 	var/volume = 0
 	if(istype(base, /obj/machinery/atmospherics/pipe))
 		var/obj/machinery/atmospherics/pipe/E = base
 		volume = E.volume
-		alert_pressure = E.alert_pressure
 		members += E
 		if(E.air_temporary)
 			air = E.air_temporary
@@ -72,7 +56,7 @@ var/pipenetwarnings = 10
 
 							if(item.parent)
 								if(pipenetwarnings > 0)
-									error("[item.type] added to a pipenet while still having one. ([item.x], [item.y], [item.z])")
+									error("[item.type] added to a pipenet while still having one. (pipes leading to the same spot stacking in one turf) Nearby: ([item.x], [item.y], [item.z])")
 									pipenetwarnings -= 1
 									if(pipenetwarnings == 0)
 										error("further messages about pipenets will be supressed")
@@ -81,8 +65,6 @@ var/pipenetwarnings = 10
 
 							volume += item.volume
 							item.parent = src
-
-							alert_pressure = min(alert_pressure, item.alert_pressure)
 
 							if(item.air_temporary)
 								air.merge(item.air_temporary)
@@ -362,7 +344,7 @@ var/pipenetwarnings = 10
 					corresponding.moles = trace_gas.moles*gas.volume/air_transient.volume
 	return 1
 
-proc/equalize_gases(datum/gas_mixture/list/gases)
+/proc/equalize_gases(datum/gas_mixture/list/gases)
 	//Perfectly equalize all gases members instantly
 
 	//Calculate totals from individual components

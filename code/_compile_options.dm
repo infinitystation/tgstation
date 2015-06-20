@@ -13,6 +13,8 @@
 #define BACKGROUND_ENABLED 0    // The default value for all uses of set background. Set background can cause gradual lag and is recommended you only turn this on if necessary.
 								// 1 will enable set background. 0 will disable set background.
 
+#define INACTIVITY_KICK	6000	//10 minutes in ticks (approx.)
+
 //ADMIN STUFF
 #define ROUNDSTART_LOGOUT_REPORT_TIME	6000 //Amount of time (in deciseconds) after the rounds starts, that the player disconnect report is issued.
 
@@ -29,11 +31,11 @@
 #define AGE_MAX				85	//oldest a character can be
 #define SHOES_SLOWDOWN		0	//How much shoes slow you down by default. Negative values speed you up
 #define POCKET_STRIP_DELAY			40	//time taken (in deciseconds) to search somebody's pockets
-#define DOOR_CRUSH_DAMAGE	10	//the amount of damage that airlocks deal when they crush you
+#define DOOR_CRUSH_DAMAGE	15	//the amount of damage that airlocks deal when they crush you
 
-#define	HUNGER_FACTOR		0.1	//factor at which mob nutrition decreases
-#define	REAGENTS_METABOLISM 0.4	//How many units of reagent are consumed per tick, by default.
-#define REAGENTS_EFFECT_MULTIPLIER (REAGENTS_METABOLISM / 0.4)	// By defining the effect multiplier this way, it'll exactly adjust all effects according to how they originally were with the 0.4 metabolism
+#define	HUNGER_FACTOR		0.04	//factor at which mob nutrition decreases
+#define	REAGENTS_METABOLISM 0.2		//How many units of reagent are consumed per tick, by default.
+#define REAGENTS_EFFECT_MULTIPLIER (REAGENTS_METABOLISM / 0.2)	// By defining the effect multiplier this way, it'll exactly adjust all effects according to how they originally were with the 0.4 metabolism
 
 #define MAX_STACK_AMOUNT_METAL	50
 #define MAX_STACK_AMOUNT_GLASS	50
@@ -64,4 +66,5 @@ var/list/del_counter = list()
 #define USE_DYNAMIC_ATMOS		//Enables the dynamic atmos system
 */
 
-#define USE_BYGEX
+//host on Ubuntu, we can't use bygex library (c) Suworow
+//#define USE_BYGEX

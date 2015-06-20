@@ -25,12 +25,15 @@
 	switch(act) //Please keep this alphabetically ordered when adding or changing emotes.
 		if ("aflap") //Any emote on human that uses miming must be left in, oh well.
 			if (!src.restrained())
-				message = "<B>[src]</B> ј√–≈——»¬Ќќ хлопает крыльями!"
+				message = "<B>[src]</B> ј√–≈——»¬Ќќ хлопает крыль&#255;ми!"
 				m_type = 2
 
 		if ("choke")
 			if (miming)
-				message = "<B>[src]</B> отчаянно схватился за горло и давится!"
+				if(gender == FEMALE)
+					message = "<B>[src]</B> отча&#255;нно схватилась за горло и давитс&#255;!"
+				else
+					message = "<B>[src]</B> отча&#255;нно схватилc&#255; за горло и давитс&#255;!"
 			else
 				..(act)
 
@@ -47,15 +50,18 @@
 
 		if ("collapse")
 			Paralyse(2)
-			message = "<B>[src]</B> рухнул!"
+			if(gender == FEMALE)
+				message = "<B>[src]</B> рухнула!"
+			else
+				message = "<B>[src]</B> рухнул!"
 			m_type = 2
 
 		if ("cough")
 			if (miming)
-				message = "<B>[src]</B> делает вид, что кашляет!"
+				message = "<B>[src]</B> делает вид, что кашл&#255;ет!"
 			else
 				if (!muzzled)
-					message = "<B>[src]</B> кашляет!"
+					message = "<B>[src]</B> кашл&#255;ет!"
 					m_type = 2
 				else
 					message = "<B>[src]</B> издаЄт громкий звук."
@@ -69,7 +75,7 @@
 					message = "<B>[src]</B> плачет."
 					m_type = 2
 				else
-					message = "<B>[src]</B> издаЄт слабый звук. ’мурится."
+					message = "<B>[src]</B> издаЄт слабый звук. ’муритс&#255;."
 					m_type = 2
 
 		if ("custom")
@@ -80,6 +86,9 @@
 				src << "<span class='danger'>Invalid emote.</span>"
 				return
 			else if(copytext(input,1,9) == "exclaims")
+				src << "<span class='danger'>Invalid emote.</span>"
+				return
+			else if(copytext(input,1,6) == "yells")
 				src << "<span class='danger'>Invalid emote.</span>"
 				return
 			else if(copytext(input,1,5) == "asks")
@@ -110,20 +119,20 @@
 				if (M)
 					message = "<B>[src]</B> даЄт приветственный кулак [M]."
 				else
-					message = "<B>[src]</B> к сожалению, поблизости нет никого, чтобы поприветствовать друг друга касанием кулаков, поприветствовал сам себя. —тыдобище."
+					message = "<B>[src]</B> к сожалению, поблизости нет никого, чтобы поприветствовать друг друга касанием кулаков, поприветствовал сам себ&#255;. —тыдобище."
 
 		if ("eyebrow")
-			message = "<B>[src]</B> приподн€л бровь."
+			message = "<B>[src]</B> приподн&#255;л бровь."
 			m_type = 1
 
 		if ("flap")
 			if (!src.restrained())
-				message = "<B>[src]</B> хлопает крыльями."
+				message = "<B>[src]</B> хлопает крыль&#255;ми."
 				m_type = 2
 
 		if ("gasp")
 			if (miming)
-				message = "<B>[src]</B> выгл€дит, как буд-то задыхаетс€!"
+				message = "<B>[src]</B> выгл&#255;дит, как буд-то задыхаетс&#255;!"
 			else
 				..(act)
 
@@ -166,7 +175,7 @@
 					if (M.canmove && !M.r_hand && !M.restrained())
 						message = "<B>[src]</B> пожимает руку [M]."
 					else
-						message = "<B>[src]</B> прот€гивает руку дл€ рукопожати€ [M]."
+						message = "<B>[src]</B> прот&#255;гивает руку дл&#255; рукопожати&#255; [M]."
 
 		if ("hug")
 			m_type = 1
@@ -182,20 +191,7 @@
 				if (M)
 					message = "<B>[src]</B> обнимает [M]."
 				else
-					message = "<B>[src]</B> обнимает сам себ€."
-
-		if ("johnny")
-			var/M
-			if (param)
-				M = param
-			if (!M)
-				param = null
-			else
-				if(miming)
-					message = "<B>[src]</B> затягивается сигаретой и выдыхает на \"[M]\" весь дым."
-				else
-					message = "<B>[src]</B> says, \"[M], пожалуйста. ” него семь€.\" [src.name] затягивается сигаретой и выдыхает дым в форме его имени."
-					m_type = 2
+					message = "<B>[src]</B> обнимает сам себ&#255;."
 
 		if ("me")
 			if(silent)
@@ -216,6 +212,9 @@
 			else if(copytext(message,1,9) == "exclaims")
 				src << "<span class='danger'>Invalid emote.</span>"
 				return
+			else if(copytext(message,1,6) == "yells")
+				src << "<span class='danger'>Invalid emote.</span>"
+				return
 			else if(copytext(message,1,5) == "asks")
 				src << "<span class='danger'>Invalid emote.</span>"
 				return
@@ -224,7 +223,7 @@
 
 		if ("moan")
 			if(miming)
-				message = "<B>[src]</B> выгл€дит, как буд-то стонет!"
+				message = "<B>[src]</B> выгл&#255;дит, как буд-то стонет!"
 			else
 				message = "<B>[src]</B> стонет!"
 				m_type = 2
@@ -234,7 +233,10 @@
 			m_type = 2
 
 		if ("pale")
-			message = "<B>[src]</B> на секунду побледнел."
+			if(gender == FEMALE)
+				message = "<B>[src]</B> на секунду побледнела."
+			else
+				message = "<B>[src]</B> на секунду побледнел."
 			m_type = 1
 
 		if ("raise")
@@ -263,32 +265,6 @@
 				message = "<B>[src]</B> делает вид, что душераздирающе кричит!"
 			else
 				..(act)
-
-		if ("shit")
-			if(need_to_shit < 70)
-				src << "Ќечем испражнятся"
-				return
-
-			if((need_to_shit > 70) && (need_to_shit < need_to_shit_max))
-				for(var/obj/structure/toilet/T in view(0, src))
-					if(T.shit || T.w_items)
-						src << "” вас проблемы..."
-						Shit(src)
-						return
-					else
-						need_to_shit = 0
-						need_to_shit_again = 140
-						T.open = 1
-						T.shit++
-						T.update_icon()
-						src << "¬ы справили нужду, не забудьте смыть за собой, кликнув по унитазу"
-						return
-				src << "Ћучше найти ближайший туалет"
-				return
-
-			message = "<B>[src]</B> [pick("испражняется.", "высрал кучу говна.", "наложил кучу.", "накакал на пол.", "дрестанул говном на пол.")]"
-			Shit(src)
-			m_type = 1
 
 		if ("shiver")
 			message = "<B>[src]</B> дрожит."
@@ -343,7 +319,7 @@
 
 		if ("whimper")
 			if (miming)
-				message = "<B>[src]</B> выглядит обиженным."
+				message = "<B>[src]</B> выгл&#255;дит обиженным."
 			else
 				..(act)
 
@@ -352,8 +328,18 @@
 				message = "<B>[src]</B> зевает."
 				m_type = 2
 
+		if("wag")
+			if(dna && dna.species && ("tail" in dna.species.mutant_bodyparts))
+				message = "<B>[src]</B> wags \his tail."
+				startTailWag()
+
+		if("stopwag")
+			if(dna && dna.species && ("waggingtail" in dna.species.mutant_bodyparts))
+				message = "<B>[src]</B> stops wagging \his tail."
+				endTailWag()
+
 		if ("help") //This can stay at the bottom.
-			src << "Help for human emotes. You can use these emotes with say \"*emote\":\n\naflap, airguitar, blink, blink_r, blush, bow-(none)/mob, burp, choke, chuckle, clap, collapse, cough, cry, custom, dance, dap, deathgasp, drool, eyebrow, faint, flap, frown, gasp, giggle, glare-(none)/mob, grin, groan, grumble, handshake, hug-(none)/mob, johnny, jump, laugh, look-(none)/mob, me, moan, mumble, nod, pale, point-(atom), raise, salute, scream, shake, shiver, shrug, sigh, signal-#1-10, sit, smile, sneeze, sniff, snore, stare-(none)/mob, sulk, sway, tremble, twitch, twitch_s, wave, whimper, wink, yawn"
+			src << "Help for human emotes. You can use these emotes with say \"*emote\":\n\naflap, airguitar, blink, blink_r, blush, bow-(none)/mob, burp, choke, chuckle, clap, collapse, cough, cry, custom, dance, dap, deathgasp, drool, eyebrow, faint, flap, frown, gasp, giggle, glare-(none)/mob, grin, groan, grumble, handshake, hug-(none)/mob, jump, laugh, look-(none)/mob, me, moan, mumble, nod, pale, point-(atom), raise, salute, scream, shake, shiver, shrug, sigh, signal-#1-10, sit, smile, sneeze, sniff, snore, stare-(none)/mob, sulk, sway, stopwag, tremble, twitch, twitch_s, wave, whimper, wink, wag, yawn"
 
 		else
 			..(act)
@@ -372,12 +358,36 @@
 		for(var/mob/M in dead_mob_list)
 			if(!M.client || istype(M, /mob/new_player))
 				continue //skip monkeys, leavers and new players
-			if(M.stat == DEAD && (M.client.prefs.toggles & CHAT_GHOSTSIGHT) && !(M in viewers(src,null)))
+			if(M.stat == DEAD && M.client && (M.client.prefs.chat_toggles & CHAT_GHOSTSIGHT) && !(M in viewers(src,null)))
 				M.show_message(message)
 
 
 		if (m_type & 1)
 			visible_message(message)
 		else if (m_type & 2)
-			src.loc.audible_message(message)
+			audible_message(message)
 
+
+
+//Don't know where else to put this, it's basically an emote
+/mob/living/carbon/human/proc/startTailWag()
+	if(!dna || !dna.species)
+		return
+	if("tail" in dna.species.mutant_bodyparts)
+		dna.species.mutant_bodyparts -= "tail"
+		dna.species.mutant_bodyparts -= "spines"
+		dna.species.mutant_bodyparts |= "waggingtail"
+		dna.species.mutant_bodyparts |= "waggingspines"
+	update_body()
+
+
+/mob/living/carbon/human/proc/endTailWag()
+	if(!dna || !dna.species)
+		return
+	if("waggingtail" in dna.species.mutant_bodyparts)
+		dna.species.mutant_bodyparts -= "waggingtail"
+		dna.species.mutant_bodyparts -= "waggingspines"
+		dna.species.mutant_bodyparts |= "tail"
+		dna.species.mutant_bodyparts |= "spines"
+
+	update_body()

@@ -5,7 +5,7 @@
 	action_button_is_hands_free = 1
 	var/activated = 1 //1 for implant types that can be activated, 0 for ones that are "always on" like loyalty implants
 	var/implanted = null
-	var/mob/imp_in = null
+	var/mob/living/imp_in = null
 	item_color = "b"
 	var/allow_reagents = 0
 
@@ -64,7 +64,19 @@
 				Implant Specifics:<BR>"}
 	return dat
 
+/obj/item/weapon/implant/weapons_auth
+	name = "firearms authentication implant"
+	desc = "Lets you shoot your guns"
+	icon_state = "auth"
+	activated = 0
 
+/obj/item/weapon/implant/weapons_auth/get_data()
+	var/dat = {"<b>Implant Specifications:</b><BR>
+				<b>Name:</b> Firearms Authentication Implant<BR>
+				<b>Life:</b> 4 hours after death of host<BR>
+				<b>Implant Details:</b> <BR>
+				<b>Function:</b> Allows operation of implant-locked weaponry, preventing equipment from falling into enemy hands."}
+	return dat
 
 /obj/item/weapon/implant/explosive
 	name = "explosive implant"
@@ -91,7 +103,7 @@
 	if(!cause || !imp_in)	return 0
 	if(cause == "action_button" && alert(imp_in, "Are you sure you want to activate your explosive implant? This will cause you to explode and gib!", "Explosive Implant Confirmation", "Yes", "No") != "Yes")
 		return 0
-	explosion(src, -1, 0, 2, 3, 0)	//This might be a bit much, dono will have to see.
+	explosion(src,0,1,5,7,10, flame_range = 5)
 	if(imp_in)
 		imp_in.gib()
 
@@ -130,10 +142,15 @@
 /obj/item/weapon/implant/chem/activate(var/cause)
 	if(!cause || !imp_in)	return 0
 	var/mob/living/carbon/R = imp_in
-	reagents.trans_to(R, cause)
-	R << "You hear a faint *beep*."
+	var/injectamount = null
+	if (cause == "action_button")
+		injectamount = reagents.total_volume
+	else
+		injectamount = cause
+	reagents.trans_to(R, injectamount)
+	R << "<span class='italics'>You hear a faint beep.</span>"
 	if(!reagents.total_volume)
-		R << "You hear a faint click from your chest."
+		R << "<span class='italics'>You hear a faint click from your chest.</span>"
 		qdel(src)
 
 
@@ -157,11 +174,14 @@
 
 /obj/item/weapon/implant/loyalty/implanted(mob/target)
 	..()
-	if(target.mind in ticker.mode.head_revolutionaries)
+	if((target.mind in (ticker.mode.changelings | ticker.mode.abductors)) || is_shadow_or_thrall(target))
 		target.visible_message("<span class='warning'>[target] seems to resist the implant!</span>", "<span class='warning'>You feel the corporate tendrils of Nanotrasen try to invade your mind!</span>")
 		return 0
-	if(target.mind in ticker.mode.revolutionaries)
-		ticker.mode.remove_revolutionary(target.mind)
+	for(var/obj/item/weapon/implant/antiloyalty/AL in target.contents)
+		if((AL.imp_in == target) && AL.implanted)
+			target.visible_message("<span class='warning'>[target] seems to resist the implant!</span>", "<span class='warning'>You feel the corporate tendrils of Nanotrasen try to invade your mind!</span>")
+			return 0
+	target.mind.remove_all_antag_light()
 	target << "<span class='notice'>You feel a surge of loyalty towards Nanotrasen.</span>"
 	return 1
 
@@ -190,12 +210,13 @@
 	imp_in.SetStunned(0)
 	imp_in.SetWeakened(0)
 	imp_in.SetParalysis(0)
+	imp_in.adjustStaminaLoss(-75)
 	imp_in.lying = 0
 	imp_in.update_canmove()
 
 	imp_in.reagents.add_reagent("synaptizine", 10)
-	imp_in.reagents.add_reagent("tricordrazine", 10)
-	imp_in.reagents.add_reagent("hyperzine", 10)
+	imp_in.reagents.add_reagent("omnizine", 10)
+	imp_in.reagents.add_reagent("stimulants", 10)
 
 
 /obj/item/weapon/implant/emp
@@ -209,3 +230,31 @@
 	if (src.uses < 1)	return 0
 	src.uses--
 	empulse(imp_in, 3, 5)
+
+/obj/item/weapon/implant/antiloyalty
+	name = "anti-loyalty implant"
+	desc = "Makes you mind more free from NT."
+	activated = 0
+
+/obj/item/weapon/implant/antiloyalty/get_data()
+	var/dat = {"<b>Implant Specifications:</b><BR>
+				<b>Name:</b> Anti-NTLoyalty <BR>
+				<b>Life:</b> over 9000 days.<BR>
+				<b>Important Notes:</b> FUCK THE NT!<BR>
+				<HR>
+				<b>Implant Details:</b><BR>
+				<b>Function:</b> Contains a small pod of nanobots that manipulate the host's mental functions.<BR>
+				<b>Special Features:</b> Will prevent and cure most forms of NANOTRASEN brainwashing.<BR>
+				<b>Integrity:</b> Implant will last so long as the nanobots are inside the bloodstream."}
+	return dat
+
+
+/obj/item/weapon/implant/antiloyalty/implanted(mob/target)
+	..()
+	for(var/obj/item/weapon/implant/loyalty/A in target.contents)
+		if((A.imp_in == target) && A.implanted)
+			target.visible_message("<span class='warning'>[target] seems to resist the implant!</span>", "<span class='warning'>Вы ненадолго чувствуете свободу от НТ и очень сильную боль в голове!</span>")
+			return 0
+	target.mind.readd_antag_light()
+	target << "<span class='notice'>You feel a surge of freedom from NT.</span>"
+	return 1

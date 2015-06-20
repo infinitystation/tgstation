@@ -34,8 +34,6 @@
 	* mob/RangedAttack(atom,params) - used only ranged, only used for tk and laser eyes but could be changed
 */
 /mob/proc/ClickOn( var/atom/A, var/params )
-	if(!A)				//yep folks, apparently such things can happen
-		return
 	if(world.time <= next_click)
 		return
 	next_click = world.time + 1
@@ -115,7 +113,7 @@
 		if(A.Adjacent(src)) // see adjacent.dm
 			if(W)
 				// Return 1 in attackby() to prevent afterattack() effects (when safely moving items for example)
-				var/resolved = A.attackby(W,src)
+				var/resolved = A.attackby(W,src,params)
 				if(!resolved && A && W)
 					W.afterattack(A,src,1,params) // 1: clicking something Adjacent
 			else
@@ -128,8 +126,6 @@
 				W.afterattack(A,src,0,params) // 0: not Adjacent
 			else
 				RangedAttack(A, params)
-
-	return
 
 /mob/proc/changeNext_move(num)
 	next_move = world.time + num
@@ -163,12 +159,6 @@
 	animals lunging, etc.
 */
 /mob/proc/RangedAttack(var/atom/A, var/params)
-	if(!mutations.len) return
-	if((LASER in mutations) && a_intent == "harm")
-		LaserEyes(A) // moved into a proc below
-	else
-		if(TK in mutations)
-			A.attack_tk(src)
 /*
 	Restrained ClickOn
 
@@ -192,6 +182,9 @@
 	else
 		swap_hand()
 
+/mob/living/simple_animal/drone/MiddleClickOn(var/atom/A)
+	swap_hand()
+
 // In case of use break glass
 /*
 /atom/proc/MiddleClick(var/mob/M as mob)
@@ -207,7 +200,7 @@
 	A.ShiftClick(src)
 	return
 /atom/proc/ShiftClick(var/mob/user)
-	if(user.client && user.client.eye == user)
+	if(user.client && user.client.eye == user || user.client.eye == user.loc)
 		user.examinate(src)
 	return
 
@@ -289,14 +282,12 @@
 	LE.current = T
 	LE.yo = U.y - T.y
 	LE.xo = U.x - T.x
-	spawn( 1 )
-		LE.process()
+	LE.fire()
 
 /mob/living/carbon/human/LaserEyes()
 	if(nutrition>0)
 		..()
 		nutrition = max(nutrition - rand(1,5),0)
-		handle_regular_hud_updates()
 	else
 		src << "<span class='danger'>You're out of energy!  You need food!</span>"
 

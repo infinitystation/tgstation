@@ -28,12 +28,13 @@ AI MODULES
 		user << "<span class='warning'>ERROR: No laws found on board.</span>"
 		return
 
+	//Handle the lawcap
 	if(reciever.laws)
 		var/tot_laws = 0
-		tot_laws += reciever.laws.inherent.len
-		tot_laws += reciever.laws.supplied.len
-		tot_laws += reciever.laws.ion.len
-		tot_laws += laws.len
+		for(var/lawlist in list(reciever.laws.inherent,reciever.laws.supplied,reciever.laws.ion,laws))
+			for(var/mylaw in lawlist)
+				if(mylaw != "")
+					tot_laws++
 		if(tot_laws > config.silicon_max_law_amount && !bypass_law_amt_check)//allows certain boards to avoid this check, eg: reset
 			user << "<span class='caution'>Not enough memory allocated to [reciever]'s law processor to handle this amount of laws."
 			message_admins("[key_name_admin(user)] tried to upload laws to [key_name_admin(reciever)] that would exceed the law cap.")
@@ -42,12 +43,14 @@ AI MODULES
 	var/law2log = src.transmitInstructions(reciever, user) //Freeforms return something extra we need to log
 	user << "Upload complete. [reciever]'s laws have been modified."
 	reciever.show_laws()
+	reciever.law_change_counter++
 	if(isAI(reciever))
 		var/mob/living/silicon/ai/A = reciever
 		for(var/mob/living/silicon/robot/R in A.connected_robots)
 			if(R.lawupdate)
 				R << "From now on, these are your laws:"
 				R.show_laws()
+				R.law_change_counter++
 
 	var/time = time2text(world.realtime,"hh:mm:ss")
 	lawchanges.Add("[time] <B>:</B> [user.name]([user.key]) used [src.name] on [reciever.name]([reciever.key]).[law2log ? " The law specified [law2log]" : ""]")
@@ -56,7 +59,7 @@ AI MODULES
 
 //The proc that actually changes the silicon's laws.
 /obj/item/weapon/aiModule/proc/transmitInstructions(var/mob/living/silicon/target, var/mob/sender)
-	target << "[sender] has uploaded a change to the laws you must follow using a [name]. From now on, these are your laws: "
+	target << "<span class='userdanger'>[sender] has uploaded a change to the laws you must follow using a [name]. From now on, these are your laws: </span>"
 
 
 /******************** Modules ********************/
@@ -236,11 +239,13 @@ AI MODULES
 /obj/item/weapon/aiModule/reset/purge/transmitInstructions(var/mob/living/silicon/ai/target, var/mob/sender)
 	..()
 	target.clear_inherent_laws()
+	target.clear_zeroth_law(0)
 
 /******************* Full Core Boards *******************/
 
 /obj/item/weapon/aiModule/core/full/transmitInstructions(var/mob/living/silicon/ai/target, var/mob/sender) //These boards replace inherent laws.
 	target.clear_inherent_laws()
+	target.clear_zeroth_law(0)
 	..()
 
 /******************** Asimov ********************/

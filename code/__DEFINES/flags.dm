@@ -25,6 +25,9 @@
 #define MASKCOVERSMOUTH		2048		// on other items, these are just for mask/head
 #define HEADCOVERSMOUTH		2048
 
+#define HEADBANGPROTECT		4096
+#define EARBANGPROTECT		1024
+
 #define NOSLIP		1024 		//prevents from slipping on wet floors, in space etc (NOTE: flag shared with THICKMATERIAL for external suits and helmet)
 
 #define OPENCONTAINER	4096	// is an open container for chemistry purposes
@@ -53,18 +56,20 @@
 
 //flags for species
 
-#define MUTCOLORS	1
-#define HAIR		2
-#define FACEHAIR	4
-#define EYECOLOR	8
-#define LIPS		16
-#define COLDRES		32
-#define HEATRES		64
-#define RADIMMUNE	128
-#define NOBREATH	256
-#define NOGUNS		512
-#define NOBLOOD		1024
-#define NOFIRE		2048
+#define MUTCOLORS		1
+#define HAIR			2
+#define FACEHAIR		4
+#define EYECOLOR		8
+#define LIPS			16
+#define COLDRES			32
+#define HEATRES			64
+#define RADIMMUNE		128
+#define NOBREATH		256
+#define NOGUNS			512
+#define NOBLOOD			1024
+#define NOFIRE			2048
+#define VIRUSIMMUNE		4096
+#define PIERCEIMMUNE	8192
 
 /*
 	These defines are used specifically with the atom/movable/languages bitmask.

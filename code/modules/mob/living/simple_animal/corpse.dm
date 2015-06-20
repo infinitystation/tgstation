@@ -92,7 +92,7 @@
 	corpsegloves = /obj/item/clothing/gloves/combat
 	corpseradio = /obj/item/device/radio/headset
 	corpsemask = /obj/item/clothing/mask/gas
-	corpsehelmet = /obj/item/clothing/head/helmet/swat/syndicate
+	corpsehelmet = /obj/item/clothing/head/helmet/swat
 	corpseback = /obj/item/weapon/storage/backpack
 	corpseid = 1
 	corpseidjob = "Operative"
@@ -110,7 +110,7 @@
 	corpsemask = /obj/item/clothing/mask/gas/syndicate
 	corpsehelmet = /obj/item/clothing/head/helmet/space/hardsuit/syndi
 	corpseback = /obj/item/weapon/tank/jetpack/oxygen
-	corpsepocket1 = /obj/item/weapon/tank/emergency_oxygen
+	corpsepocket1 = /obj/item/weapon/tank/internals/emergency_oxygen
 	corpseid = 1
 	corpseidjob = "Operative"
 	corpseidaccess = "Syndicate"

@@ -1,6 +1,5 @@
 /obj
 	languages = HUMAN
-	//var/datum/module/mod		//not used
 	var/crit_fail = 0
 	var/unacidable = 0 //universal "unacidabliness" var, here so you can use it in any obj.
 	animate_movement = 2
@@ -10,13 +9,9 @@
 	var/damtype = "brute"
 	var/force = 0
 
-/obj/proc/process()
-	processing_objects.Remove(src)
-	return 0
-
 /obj/Destroy()
 	if(!istype(src, /obj/machinery))
-		processing_objects.Remove(src) // TODO: Have a processing bitflag to reduce on unnecessary loops through the processing lists
+		SSobj.processing.Remove(src) // TODO: Have a processing bitflag to reduce on unnecessary loops through the processing lists
 	..()
 
 /obj/assume_air(datum/gas_mixture/giver)
@@ -73,7 +68,7 @@
 			var/mob/living/carbon/human/H = usr
 			if(!(usr in nearby))
 				if(usr.client && usr.machine==src)
-					if(TK in H.mutations)
+					if(H.dna.check_mutation(TK))
 						is_in_use = 1
 						src.attack_hand(usr)
 		in_use = is_in_use
@@ -123,6 +118,15 @@
 /obj/proc/hide(h)
 	return
 
+/obj/ex_act(severity, target)
+	if(severity == 1 || target == src)
+		qdel(src)
+	else if(severity == 2)
+		if(prob(50))
+			qdel(src)
+	if(!gc_destroyed)
+		..()
+
 //If a mob logouts/logins in side of an object you can use this proc
 /obj/proc/on_log()
 	..()
@@ -145,3 +149,6 @@
 
 /obj/proc/Deconstruct()
 	qdel(src)
+
+/obj/get_spans()
+	return ..() | SPAN_ROBOT

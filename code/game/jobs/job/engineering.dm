@@ -9,7 +9,7 @@ Chief Engineer
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the captain"
+	supervisors = "Капитану"
 	selection_color = "#ffeeaa"
 	req_admin_notify = 1
 	minimal_player_age = 7
@@ -36,11 +36,11 @@ Chief Engineer
 	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/sneakers/brown(H), slot_shoes)
 	H.equip_to_slot_or_del(new /obj/item/clothing/head/hardhat/white(H), slot_head)
 	H.equip_to_slot_or_del(new /obj/item/weapon/storage/belt/utility/full(H), slot_belt)
-	H.equip_to_slot_or_del(new /obj/item/clothing/gloves/black(H), slot_gloves)
+	H.equip_to_slot_or_del(new /obj/item/clothing/gloves/color/black/ce(H), slot_gloves)
 
 	//Equip telebaton
 	if(H.backbag == 2 || H.backbag == 3)
-		H.equip_to_slot_or_del(new /obj/item/weapon/melee/telebaton(H), slot_in_backpack)
+		H.equip_to_slot_or_del(new /obj/item/weapon/melee/classic_baton/telescopic(H), slot_in_backpack)
 
 /*
 Station Engineer
@@ -51,9 +51,9 @@ Station Engineer
 	department_head = list("Chief Engineer")
 	department_flag = ENGSEC
 	faction = "Station"
-	total_positions = 5
+	total_positions = 10
 	spawn_positions = 5
-	supervisors = "the chief engineer"
+	supervisors = "Главному Инженеру"
 	selection_color = "#fff5cc"
 
 	default_pda = /obj/item/device/pda/engineering
@@ -63,14 +63,14 @@ Station Engineer
 	default_satchel = /obj/item/weapon/storage/backpack/satchel_eng
 	default_storagebox = /obj/item/weapon/storage/box/engineer
 
-	access = list(access_eva, access_engine, access_engine_equip, access_tech_storage, access_maint_tunnels,
+	access = list(access_engine, access_engine_equip, access_tech_storage, access_maint_tunnels,
 									access_external_airlocks, access_construction, access_atmospherics, access_tcomsat)
 	minimal_access = list(access_engine, access_engine_equip, access_tech_storage, access_maint_tunnels,
 									access_external_airlocks, access_construction, access_tcomsat)
 
 /datum/job/engineer/equip_items(var/mob/living/carbon/human/H)
 	H.equip_to_slot_or_del(new /obj/item/clothing/under/rank/engineer(H), slot_w_uniform)
-	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/sneakers/orange(H), slot_shoes)
+	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/workboots(H), slot_shoes)
 	H.equip_to_slot_or_del(new /obj/item/weapon/storage/belt/utility/full(H), slot_belt)
 	H.equip_to_slot_or_del(new /obj/item/clothing/head/hardhat(H), slot_head)
 	H.equip_to_slot_or_del(new /obj/item/device/t_scanner(H), slot_r_store)
@@ -84,9 +84,9 @@ Atmospheric Technician
 	department_head = list("Chief Engineer")
 	department_flag = ENGSEC
 	faction = "Station"
-	total_positions = 3
+	total_positions = 10
 	spawn_positions = 2
-	supervisors = "the chief engineer"
+	supervisors = "Главному Инженеру"
 	selection_color = "#fff5cc"
 
 	default_pda = /obj/item/device/pda/atmos
@@ -94,7 +94,7 @@ Atmospheric Technician
 	default_headset = /obj/item/device/radio/headset/headset_eng
 	default_storagebox = /obj/item/weapon/storage/box/engineer
 
-	access = list(access_eva, access_engine, access_engine_equip, access_tech_storage, access_maint_tunnels,
+	access = list(access_engine, access_engine_equip, access_tech_storage, access_maint_tunnels,
 									access_external_airlocks, access_construction, access_atmospherics)
 	minimal_access = list(access_atmospherics, access_maint_tunnels, access_emergency_storage, access_construction)
 

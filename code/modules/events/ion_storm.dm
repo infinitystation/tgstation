@@ -22,7 +22,7 @@
 
 /datum/round_event/ion_storm/announce()
 	if(announceEvent == ION_ANNOUNCE || (announceEvent == ION_RANDOM && prob(ionAnnounceChance)))
-		priority_announce("Ion storm detected near the station. Please check all AI-controlled equipment for errors.", "Anomaly Alert", 'sound/AI/ionstorm.ogg')
+		priority_announce("нАМЮПСФЕМ ХНММШИ ЬРНПЛ Б ПЮИНМЕ ЯРЮМЖХХ. оНФЮКСИЯРЮ, ОПНБЕПЭРЕ БЯ╦ НАНПСДНБЮМХЕ, Й ЙНРНПНЛС ЕЯРЭ ДНЯРСО С хх, МЮ ОПЕДЛЕР НЬХАНЙ.", "рПЕБНЦЮ! юМНЛЮКХъ!", 'sound/AI/ionstorm.ogg')
 
 
 /datum/round_event/ion_storm/start()
@@ -33,7 +33,7 @@
 			if(message)
 				M.add_ion_law(message)
 				M << "<br>"
-				M << "<span class='danger'>[message] ...LAWS UPDATED</span>"
+				M << "<span class='danger'>[message] ...гюйнмш намнбкемш</span>"
 				M << "<br>"
 
 	if(botEmagChance)
@@ -104,11 +104,11 @@
 		if(4 to 6) //You can't call the shuttle because X is on the station
 			switch(rand(1,3)) //What is X?
 				if(1) //X is a threat
-					message = "THE SHUTTLE CANNOT BE CALLED BECAUSE OF [ionnumberbase] [ionnumbermodhalf][ionadjectiveshalf][ionthreats] ON THE STATION"
+					message = "ьюррк ме лнфер ашрэ бшгбюм хг-гю [ionnumberbase] [ionnumbermodhalf][ionadjectiveshalf][ionthreats] ON THE STATION"
 				if(2) //X is a crewmember/job
-					message = "THE SHUTTLE CANNOT BE CALLED BECAUSE OF [ionnumberbase] [ionnumbermodhalf][ionadjectiveshalf][ioncrew1] ON THE STATION"
+					message = "ьюррк ме лнфер ашрэ бшгбюм хг-гю [ionnumberbase] [ionnumbermodhalf][ionadjectiveshalf][ioncrew1] ON THE STATION"
 				if(3) //X is an object
-					message = "THE SHUTTLE CANNOT BE CALLED BECAUSE OF [ionnumberbase] [ionnumbermodhalf][ionadjectiveshalf][ionobjects] ON THE STATION"
+					message = "ьюррк ме лнфер ашрэ бшгбюм хг-гю [ionnumberbase] [ionnumbermodhalf][ionadjectiveshalf][ionobjects] ON THE STATION"
 		if(7 to 8) //A crewmember is now X
 			switch(rand(1,2)) //Who is X?
 				if(1) //A specific crewmember
@@ -127,19 +127,19 @@
 		if(9) //X is harmful to humans
 			switch(rand(1,7)) //What is X?
 				if(1) //X is a threat
-					message = "[ionadjectiveshalf][ionthreats] ARE HARMFUL TO HUMANS"
+					message = "[ionadjectiveshalf][ionthreats] бпедмн дкъ кчдеи"
 				if(2) //X is a job
-					message = "[ionadjectiveshalf][ioncrew1] ARE HARMFUL TO HUMANS"
+					message = "[ionadjectiveshalf][ioncrew1] бпедмн дкъ кчдеи"
 				if(3) //X is an object
-					message = "[ionadjectiveshalf][ionobjects] ARE HARMFUL TO HUMANS"
+					message = "[ionadjectiveshalf][ionobjects] бпедмн дкъ кчдеи"
 				if(4) //X is an action
-					message = "THOSE WHO [ionmust] ARE HARMFUL TO HUMANS"
+					message = "THOSE WHO [ionmust] бпедмн дкъ кчдеи"
 				if(5) //X is an abstract
-					message = "[ionabstract] IS HARMFUL TO HUMANS"
+					message = "[ionabstract] бпедмн дкъ кчдеи"
 				if(6) //X is being a job
-					message = "BEING [ionadjectiveshalf][ioncrew1] IS HARMFUL TO HUMANS"
+					message = "BEING [ionadjectiveshalf][ioncrew1] бпедмн дкъ кчдеи"
 				if(7) //X is doing a thing
-					message = "[ionthings] IS HARMFUL TO HUMANS"
+					message = "[ionthings] бпедмн дкъ кчдеи"
 		if(10 to 11) //(Not) Having X is harmful
 
 			switch(rand(1,2)) //Is having or not having harmful?
@@ -229,25 +229,25 @@
 				if(1) //X is the entire crew
 					switch(rand(1,4)) //What is it allergic to?
 						if(1) //It is allergic to objects
-							message = "THE CREW IS [ionallergysev] ALLERGIC TO [ionadjectiveshalf][ionobjects]"
+							message = "с вкемнб щйхоюфю [ionallergysev] юккепцхъ мю [ionadjectiveshalf][ionobjects]"
 						if(2) //It is allergic to abstracts
-							message = "THE CREW IS [ionallergysev] ALLERGIC TO [ionabstract]"
+							message = "с вкемнб щйхоюфю [ionallergysev] юккепцхъ мю [ionabstract]"
 						if(3) //It is allergic to jobs
-							message = "THE CREW IS [ionallergysev] ALLERGIC TO [ionadjectiveshalf][ioncrew1]"
+							message = "с вкемнб щйхоюфю [ionallergysev] юккепцхъ мю [ionadjectiveshalf][ioncrew1]"
 						if(4) //It is allergic to allergies
-							message = "THE CREW IS [ionallergysev] ALLERGIC TO [ionallergy]"
+							message = "с вкемнб щйхоюфю [ionallergysev] юккепцхъ мю [ionallergy]"
 
 				if(2) //X is a specific job
 					switch(rand(1,4))
 						if(1) //It is allergic to objects
-							message = "THE [ioncrew1] ARE [ionallergysev] ALLERGIC TO [ionadjectiveshalf][ionobjects]"
+							message = "THE [ioncrew1] ARE [ionallergysev] юккепцхъ мю [ionadjectiveshalf][ionobjects]"
 
 						if(2) //It is allergic to abstracts
-							message = "THE [ioncrew1] ARE [ionallergysev] ALLERGIC TO [ionabstract]"
+							message = "THE [ioncrew1] ARE [ionallergysev] юккепцхъ мю [ionabstract]"
 						if(3) //It is allergic to jobs
-							message = "THE [ioncrew1] ARE [ionallergysev] ALLERGIC TO [ionadjectiveshalf][ioncrew1]"
+							message = "THE [ioncrew1] ARE [ionallergysev] юккепцхъ мю [ionadjectiveshalf][ioncrew1]"
 						if(4) //It is allergic to allergies
-							message = "THE [ioncrew1] ARE [ionallergysev] ALLERGIC TO [ionallergy]"
+							message = "THE [ioncrew1] ARE [ionallergysev] юккепцхъ мю [ionallergy]"
 
 		if(18 to 20) //X is Y of Z
 			switch(rand(1,4)) //What is X?
@@ -345,74 +345,74 @@
 				if(2) //Change rank
 					switch(rand(1,2)) //Change to what rank?
 						if(1) //Change to highest rank
-							message = "THE [ioncrew1] ARE NOW THE HIGHEST RANKING CREWMEMBERS"
+							message = "[ioncrew1] реоепэ вкемш щйхоюфю мюхбшяьецн пюмцю"
 						if(2) //Change to lowest rank
-							message = "THE [ioncrew1] ARE NOW THE LOWEST RANKING CREWMEMBERS"
+							message = "THE [ioncrew1] реоепэ вкемш щйхоюфю мхгьецн пюмцю"
 
 		if(32 to 33) //The crew must X
 			switch(rand(1,2)) //The entire crew?
 				if(1) //The entire crew must X
 					switch(rand(1,2)) //What is X?
 						if(1) //X is go to Y
-							message = "THE CREW MUST GO TO [ionarea]"
+							message = "вкемш щйхоюфю днкфмш хдрх б [ionarea]"
 						if(2) //X is perform Y
-							message = "THE CREW MUST [ionmust]"
+							message = "вкемш щйхоюфю днкфмш [ionmust]"
 
 				if(2) //A specific crewmember must X
 					switch(rand(1,2)) //What is X?
 						if(1) //X is go to Y
-							message = "THE [ioncrew1] MUST GO TO [ionarea]"
+							message = "[ioncrew1] днкфем хдрх б [ionarea]"
 						if(2) //X is perform Y
-							message = "THE [ioncrew1] MUST [ionmust]"
+							message = "[ioncrew1] днкфем [ionmust]"
 
 		if(34) //X is non/the only human
 			switch(rand(1,2)) //Only or non?
 				if(1) //Only human
 					switch(rand(1,7)) //Who is it?
 						if(1) //A specific job
-							message = "ONLY THE [ioncrew1] ARE HUMAN"
+							message = "рнкэйн [ioncrew1] ъбкъеряъ векнбейнл"
 						if(2) //Two specific jobs
-							message = "ONLY THE [ioncrew1] AND [ioncrew2] ARE HUMAN"
+							message = "рнкэйн [ioncrew1] х [ioncrew2] ъбкъчряъ кчдэлх"
 						if(3) //Threats
-							message = "ONLY [ionadjectiveshalf][ionthreats] ARE HUMAN"
+							message = "рнкэйн [ionadjectiveshalf][ionthreats] ъбкъчряъ кчдэлх"
 						if(4) // Objects
-							message = "ONLY [ionadjectiveshalf][ionobjects] ARE HUMAN"
+							message = "рнкэйн [ionadjectiveshalf][ionobjects] ъбкъчряъ кчдэлх"
 						if(5) // Species
-							message = "ONLY [ionspecies] ARE HUMAN"
+							message = "рнкэйн [ionspecies] ъбкъчряъ кчдэлх"
 						if(6) //Adjective crewmembers
-							message = "ONLY [ionadjectives] PEOPLE ARE HUMAN"
+							message = "рнкэйн [ionadjectives] кчдх ъбкъчряъ векнбевеяйхлх ясыеярбюлх"
 
 						if(7) //Only people who X
 							switch(rand(1,3)) //What is X?
 								if(1) //X is perform an action
-									message = "ONLY THOSE WHO [ionmust] ARE HUMAN"
+									message = "рнкэйн ре йрн [ionmust] ъбкъчряъ кчдэлх"
 								if(2) //X is own certain objects
-									message = "ONLY THOSE WHO HAVE [ionadjectiveshalf][ionobjects] ARE HUMAN"
+									message = "рнкэйн ре с йнцн еярэ [ionadjectiveshalf][ionobjects] ъбкъчряъ кчдэлх"
 								if(3) //X is eat certain food
-									message = "ONLY THOSE WHO EAT [ionadjectiveshalf][ionfood] ARE HUMAN"
+									message = "рнкэйн ре йрн еярэ [ionadjectiveshalf][ionfood] ъбкъчряъ кчдэлх"
 
 				if(2) //Non human
 					switch(rand(1,7)) //Who is it?
 						if(1) //A specific job
-							message = "[ioncrew1] ARE NON-HUMAN"
+							message = "[ioncrew1] ме ъбкъеряъ векнбейнл"
 						if(2) //Two specific jobs
-							message = "[ioncrew1] AND [ioncrew2] ARE NON-HUMAN"
+							message = "[ioncrew1] х [ioncrew2] ме ъбкъчряъ векнбейнл"
 						if(3) //Threats
-							message = "[ionadjectiveshalf][ionthreats] ARE NON-HUMAN"
+							message = "[ionadjectiveshalf][ionthreats] ме ъбкъеряъ векнбейнл"
 						if(4) // Objects
-							message = "[ionadjectiveshalf][ionobjects] ARE NON-HUMAN"
+							message = "[ionadjectiveshalf][ionobjects] ме ъбкъеряъ векнбейнл"
 						if(5) // Species
-							message = "[ionspecies] ARE NON-HUMAN"
+							message = "[ionspecies] ме ъбкъеряъ векнбейнл"
 						if(6) //Adjective crewmembers
-							message = "[ionadjectives] PEOPLE ARE NON-HUMAN"
+							message = "[ionadjectives] кчдх ме ъбкъеряъ векнбевеяйхл ясыеярбнл"
 						if(7) //Only people who X
 							switch(rand(1,3)) //What is X?
 								if(1) //X is perform an action
-									message = "THOSE WHO [ionmust] ARE NON-HUMAN"
+									message = "ре йрн [ionmust] ме ъбкъчряъ векнбейнл"
 								if(2) //X is own certain objects
-									message = "THOSE WHO HAVE [ionadjectiveshalf][ionobjects] ARE NON-HUMAN"
+									message = "ре с йнцн еярэ [ionadjectiveshalf][ionobjects] ме ъбкъчряъ векнбейнл"
 								if(3) //X is eat certain food
-									message = "THOSE WHO EAT [ionadjectiveshalf][ionfood] ARE NON-HUMAN"
+									message = "ре йрн еяр [ionadjectiveshalf][ionfood] ме ъбкъчряъ векнбейнл"
 
 		if(35 to 36) //You must protect or harm X
 			switch(rand(1,2)) //Protect or harm?

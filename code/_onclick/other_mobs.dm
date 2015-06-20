@@ -13,7 +13,15 @@
 	if(proximity && istype(G) && G.Touch(A,1))
 		return
 
+	var/override = 0
+
+	for(var/datum/mutation/human/HM in dna.mutations)
+		override += HM.on_attack_hand(src, A)
+
+	if(override)	return
+
 	A.attack_hand(src)
+
 /atom/proc/attack_hand(mob/user as mob)
 	return
 
@@ -26,27 +34,32 @@
 	return 0
 
 /mob/living/carbon/human/RangedAttack(var/atom/A)
-	if(!gloves && !mutations.len) return
-	var/obj/item/clothing/gloves/G = gloves
-	if((LASER in mutations) && a_intent == "harm")
-		LaserEyes(A) // moved into a proc below
+	if(gloves)
+		var/obj/item/clothing/gloves/G = gloves
+		if(istype(G) && G.Touch(A,0)) // for magic gloves
+			return
 
-	else if(istype(G) && G.Touch(A,0)) // for magic gloves
-		return
+	for(var/datum/mutation/human/HM in dna.mutations)
+		HM.on_ranged_attack(src, A)
 
-	else if(TK in mutations)
-		A.attack_tk(src)
+	var/turf/T = A
+	if(istype(T) && get_dist(src,T) <= 1)
+		src.Move_Pulled(T)
 
 /*
 	Animals & All Unspecified
 */
 /mob/living/UnarmedAttack(var/atom/A)
 	A.attack_animal(src)
+
+/mob/living/simple_animal/hostile/UnarmedAttack(var/atom/A)
+	target = A
+	AttackingTarget()
+
 /atom/proc/attack_animal(mob/user as mob)
 	return
 /mob/living/RestrainedClickOn(var/atom/A)
 	return
-
 
 /*
 	Monkeys
@@ -108,11 +121,11 @@
 	Slimes
 	Nothing happening here
 */
-/mob/living/carbon/slime/UnarmedAttack(var/atom/A)
+/mob/living/simple_animal/slime/UnarmedAttack(var/atom/A)
 	A.attack_slime(src)
 /atom/proc/attack_slime(mob/user as mob)
 	return
-/mob/living/carbon/slime/RestrainedClickOn(var/atom/A)
+/mob/living/simple_animal/slime/RestrainedClickOn(var/atom/A)
 	return
 
 /*

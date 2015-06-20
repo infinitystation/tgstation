@@ -2,7 +2,7 @@
 	name = "Anomaly: Energetic Flux"
 	typepath = /datum/round_event/anomaly
 	max_occurrences = 0 //This one probably shouldn't occur! It'd work, but it wouldn't be very fun.
-	weight = 15
+	weight = 20
 
 /datum/round_event/anomaly
 	var/area/impact_area
@@ -23,7 +23,7 @@
 		setup(safety_loop)
 
 /datum/round_event/anomaly/announce()
-	priority_announce("Localized energetic flux wave detected on long range scanners. Expected location of impact: [impact_area.name].", "Anomaly Alert")
+	priority_announce("—канеры большого радиуса действия обнаружили волны гипер-энергетического потока. ћесто ожидаемого воздействия: [impact_area.name].", "“ревога! јномалия!")
 
 /datum/round_event/anomaly/start()
 	var/turf/T = pick(get_area_turfs(impact_area))

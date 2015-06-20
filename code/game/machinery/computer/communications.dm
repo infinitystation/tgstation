@@ -6,7 +6,8 @@ var/const/CALL_SHUTTLE_REASON_LENGTH = 12
 /obj/machinery/computer/communications
 	name = "communications console"
 	desc = "This can be used for various important functions. Still under developement."
-	icon_state = "comm"
+	icon_screen = "comm"
+	icon_keyboard = "tech_key"
 	req_access = list(access_heads)
 	circuit = /obj/item/weapon/circuitboard/communications
 	var/authenticated = 0
@@ -19,7 +20,6 @@ var/const/CALL_SHUTTLE_REASON_LENGTH = 12
 	var/aistate = STATE_DEFAULT
 	var/message_cooldown = 0
 	var/ai_message_cooldown = 0
-	var/centcom_message_cooldown = 0
 	var/tmp_alertlevel = 0
 	var/const/STATE_DEFAULT = 1
 	var/const/STATE_CALLSHUTTLE = 2
@@ -50,13 +50,14 @@ var/const/CALL_SHUTTLE_REASON_LENGTH = 12
 /obj/machinery/computer/communications/Topic(href, href_list)
 	if(..())
 		return
-	if (src.z > 1)
-		usr << "<span class='userdanger'>Unable to establish a connection</span>: \black You're too far away from the station!"
+	if (src.z > ZLEVEL_CENTCOM) //Can only use on centcom and SS13
+		usr << "<span class='boldannounce'>Unable to establish a connection</span>: \black You're too far away from the station!"
 		return
 	usr.set_machine(src)
 
 	if(!href_list["operation"])
 		return
+	var/obj/item/weapon/circuitboard/communications/CM = circuit
 	switch(href_list["operation"])
 		// main interface
 		if("main")
@@ -86,32 +87,32 @@ var/const/CALL_SHUTTLE_REASON_LENGTH = 12
 				var/obj/item/device/pda/pda = I
 				I = pda.id
 			if (I && istype(I))
-				if(access_captain in I.access)
-					var/old_level = security_level
-					if(!tmp_alertlevel) tmp_alertlevel = SEC_LEVEL_GREEN
-					if(tmp_alertlevel < SEC_LEVEL_GREEN) tmp_alertlevel = SEC_LEVEL_GREEN
-					if(tmp_alertlevel > SEC_LEVEL_BLUE) tmp_alertlevel = SEC_LEVEL_BLUE //Cannot engage delta with this
-					set_security_level(tmp_alertlevel)
-					if(security_level != old_level)
-						//Only notify the admins if an actual change happened
-						log_game("[key_name(usr)] has changed the security level to [get_security_level()].")
-						message_admins("[key_name_admin(usr)] has changed the security level to [get_security_level()].")
-						switch(security_level)
-							if(SEC_LEVEL_GREEN)
-								feedback_inc("alert_comms_green",1)
-							if(SEC_LEVEL_BLUE)
-								feedback_inc("alert_comms_blue",1)
-					tmp_alertlevel = 0
-				else:
-					usr << "You are not authorized to do this."
-					tmp_alertlevel = 0
+				var/old_level = security_level
+				if(!tmp_alertlevel) tmp_alertlevel = SEC_LEVEL_GREEN
+				if(tmp_alertlevel < SEC_LEVEL_GREEN) tmp_alertlevel = SEC_LEVEL_GREEN
+				if(tmp_alertlevel > SEC_LEVEL_RED) tmp_alertlevel = SEC_LEVEL_RED //Cannot engage delta with this
+				set_security_level(tmp_alertlevel)
+				if(security_level != old_level)
+					//Only notify the admins if an actual change happened
+					log_game("[key_name(usr)] has changed the security level to [get_security_level()].")
+					message_admins("[key_name_admin(usr)] has changed the security level to [get_security_level()].")
+					switch(security_level)
+						if(SEC_LEVEL_GREEN)
+							feedback_inc("alert_comms_green",1)
+						if(SEC_LEVEL_BLUE)
+							feedback_inc("alert_comms_blue",1)
+						if(SEC_LEVEL_RED)
+							feedback_inc("alert_comms_red",1)
+				tmp_alertlevel = 0
 				state = STATE_DEFAULT
 			else
-				usr << "You need to swipe your ID."
+				usr << "<span class='warning'>You need to swipe your ID!</span>"
 
 		if("announce")
 			if(src.authenticated==2 && !message_cooldown)
 				make_announcement(usr)
+			else if (src.authenticated==2 && message_cooldown)
+				usr << "Intercomms recharging. Please stand by."
 
 		if("callshuttle")
 			src.state = STATE_DEFAULT
@@ -119,8 +120,8 @@ var/const/CALL_SHUTTLE_REASON_LENGTH = 12
 				src.state = STATE_CALLSHUTTLE
 		if("callshuttle2")
 			if(src.authenticated)
-				call_shuttle_proc(usr, href_list["call"])
-				if(emergency_shuttle.online)
+				SSshuttle.requestEvac(usr, href_list["call"])
+				if(SSshuttle.emergency.timer)
 					post_status("shuttle")
 			src.state = STATE_DEFAULT
 		if("cancelshuttle")
@@ -129,7 +130,7 @@ var/const/CALL_SHUTTLE_REASON_LENGTH = 12
 				src.state = STATE_CANCELSHUTTLE
 		if("cancelshuttle2")
 			if(src.authenticated)
-				cancel_call_proc(usr)
+				SSshuttle.cancelEvac(usr)
 			src.state = STATE_DEFAULT
 		if("messagelist")
 			src.currmsg = 0
@@ -198,42 +199,52 @@ var/const/CALL_SHUTTLE_REASON_LENGTH = 12
 
 		// OMG CENTCOM LETTERHEAD
 		if("MessageCentcomm")
-			if(src.authenticated==2)
-				if(centcom_message_cooldown)
-					usr << "Arrays recycling.  Please stand by."
-					return
-				var/input = stripped_input(usr, "Please choose a message to transmit to Centcom via quantum entanglement.  Please be aware that this process is very expensive, and abuse will lead to... termination.  Transmission does not guarantee a response.", "To abort, send an empty message.", "")
-				if(!input || !(usr in view(1,src)))
-					return
-				Centcomm_announce(input, usr)
-				usr << "Message transmitted."
-				log_say("[key_name(usr)] has made a Centcom announcement: [input]")
-				centcom_message_cooldown = 1
-				spawn(600)//One minute cooldown
-					centcom_message_cooldown = 0
+			//if(src.authenticated==2)
+			if(CM.cooldownLeft())
+				usr << "Arrays recycling.  Please stand by."
+				return
+			var/input = input(usr, "Please choose a message to transmit to Centcom via quantum entanglement.  Please be aware that this process is very expensive, and abuse will lead to... termination.  Transmission does not guarantee a response.", "Send a message to Centcomm.", "")
+			if(!input || !(usr in view(1,src)))
+				return
+			Centcomm_announce(input, usr)
+			usr << "Message transmitted."
+			log_say("[key_name(usr)] has made a Centcom announcement: [input]")
+			CM.lastTimeUsed = world.time
 
 
 		// OMG SYNDICATE ...LETTERHEAD
 		if("MessageSyndicate")
-			if((src.authenticated==2) && (src.emagged))
-				if(centcom_message_cooldown)
+			if(/*(src.authenticated==2) && */(src.emagged))
+				if(CM.cooldownLeft())
 					usr << "Arrays recycling.  Please stand by."
 					return
-				var/input = stripped_input(usr, "Please choose a message to transmit to \[ABNORMAL ROUTING COORDINATES\] via quantum entanglement.  Please be aware that this process is very expensive, and abuse will lead to... termination. Transmission does not guarantee a response.", "To abort, send an empty message.", "")
+				var/input = input(usr, "Please choose a message to transmit to \[ABNORMAL ROUTING COORDINATES\] via quantum entanglement.  Please be aware that this process is very expensive, and abuse will lead to... termination. Transmission does not guarantee a response.", "Send a message to /??????/.", "")
 				if(!input || !(usr in view(1,src)))
 					return
 				Syndicate_announce(input, usr)
 				usr << "Message transmitted."
 				log_say("[key_name(usr)] has made a Syndicate announcement: [input]")
-				centcom_message_cooldown = 1
-				spawn(600)//One minute cooldown
-					centcom_message_cooldown = 0
+				CM.lastTimeUsed = world.time
 
 		if("RestoreBackup")
 			usr << "Backup routing data restored!"
 			src.emagged = 0
 			src.updateDialog()
 
+		if("nukerequest") //When there's no other way
+			if(src.authenticated==2)
+				if(CM.cooldownLeft())
+					usr << "Arrays recycling. Please stand by."
+					return
+				var/input = input(usr, "Please enter the reason for requesting the nuclear self-destruct codes. Misuse of the nuclear request system will not be tolerated under any circumstances.  Transmission does not guarantee a response.", "Self Destruct Code Request.","")
+				if(!input || !(usr in view(1,src)))
+					return
+				Nuke_request(input, usr)
+				usr << "Request sent."
+				log_say("[key_name(usr)] has requested the nuclear codes from Centcomm")
+				priority_announce("The codes for the on-station nuclear self-destruct have been requested by [usr]. Confirmation or denial of this request will be sent shortly.", "Nuclear Self Destruct Codes Requested",'sound/AI/commandreport.ogg')
+
+				CM.lastTimeUsed = world.time
 
 
 		// AI interface
@@ -243,7 +254,7 @@ var/const/CALL_SHUTTLE_REASON_LENGTH = 12
 		if("ai-callshuttle")
 			src.aistate = STATE_CALLSHUTTLE
 		if("ai-callshuttle2")
-			call_shuttle_proc(usr, href_list["call"])
+			SSshuttle.requestEvac(usr, href_list["call"])
 			src.aistate = STATE_DEFAULT
 		if("ai-messagelist")
 			src.aicurrmsg = 0
@@ -278,7 +289,7 @@ var/const/CALL_SHUTTLE_REASON_LENGTH = 12
 			var/old_level = security_level
 			if(!tmp_alertlevel) tmp_alertlevel = SEC_LEVEL_GREEN
 			if(tmp_alertlevel < SEC_LEVEL_GREEN) tmp_alertlevel = SEC_LEVEL_GREEN
-			if(tmp_alertlevel > SEC_LEVEL_BLUE) tmp_alertlevel = SEC_LEVEL_BLUE //Cannot engage delta with this
+			if(tmp_alertlevel > SEC_LEVEL_RED) tmp_alertlevel = SEC_LEVEL_RED //Cannot engage delta with this
 			set_security_level(tmp_alertlevel)
 			if(security_level != old_level)
 				//Only notify the admins if an actual change happened
@@ -289,6 +300,8 @@ var/const/CALL_SHUTTLE_REASON_LENGTH = 12
 						feedback_inc("alert_comms_green",1)
 					if(SEC_LEVEL_BLUE)
 						feedback_inc("alert_comms_blue",1)
+					if(SEC_LEVEL_RED)
+						feedback_inc("alert_comms_red",1)
 			tmp_alertlevel = 0
 			src.aistate = STATE_DEFAULT
 		if("ai-changeseclevel")
@@ -306,32 +319,55 @@ var/const/CALL_SHUTTLE_REASON_LENGTH = 12
 			log_game("[key_name(usr)] disabled emergency maintenance access.")
 			message_admins("[key_name_admin(usr)] disabled emergency maintenance access.")
 			src.aistate = STATE_DEFAULT
+		if("AI-MessageCentcomm")
+			//if(src.authenticated==2)
+			if(CM.cooldownLeft())
+				usr << "Arrays recycling.  Please stand by."
+				return
+			var/input = input(usr, "Please choose a message to transmit to Centcom via quantum entanglement.  Please be aware that this process is very expensive, and abuse will lead to... termination.  Transmission does not guarantee a response.", "Send a message to Centcomm.", "")
+			Centcomm_announce(input, usr)
+			usr << "Message transmitted."
+			log_say("[key_name(usr)] has made a Centcom announcement: [input]")
+			CM.lastTimeUsed = world.time
+		// OMG SYNDICATE ...LETTERHEAD
+		if("AI-MessageSyndicate")
+			if(/*(src.authenticated==2) && */(src.emagged))
+				if(CM.cooldownLeft())
+					usr << "Arrays recycling.  Please stand by."
+					return
+				var/input = input(usr, "Please choose a message to transmit to \[ABNORMAL ROUTING COORDINATES\] via quantum entanglement.  Please be aware that this process is very expensive, and abuse will lead to... termination. Transmission does not guarantee a response.", "Send a message to /??????/.", "")
+				Syndicate_announce(input, usr)
+				usr << "Message transmitted."
+				log_say("[key_name(usr)] has made a Syndicate announcement: [input]")
+				CM.lastTimeUsed = world.time
 
 	src.updateUsrDialog()
 
-/obj/machinery/computer/communications/attackby(var/obj/I as obj, var/mob/user as mob)
-	if((istype(I,/obj/item/weapon/card/emag/)) && (!src.emagged))
-		src.emagged = 1
-		if(authenticated == 1)
-			authenticated = 2
-		user << "You scramble the communication routing circuits!"
-	else if(istype(I, /obj/item/weapon/card/id))
+/obj/machinery/computer/communications/attackby(var/obj/I as obj, var/mob/user as mob, params)
+	if(istype(I, /obj/item/weapon/card/id))
 		attack_hand(user)
 	else
 		..()
 	return
 
+/obj/machinery/computer/communications/emag_act(mob/user as mob)
+	if(!emagged)
+		src.emagged = 1
+		if(authenticated == 1)
+			authenticated = 2
+		user << "<span class='notice'>You scramble the communication routing circuits.</span>"
+
 /obj/machinery/computer/communications/attack_hand(var/mob/user as mob)
 	if(..())
 		return
 	if (src.z > 6)
-		user << "<span class='userdanger'>Unable to establish a connection</span>: \black You're too far away from the station!"
+		user << "<span class='boldannounce'>Unable to establish a connection</span>: \black You're too far away from the station!"
 		return
 
 	user.set_machine(src)
 	var/dat = ""
-	if (emergency_shuttle.online && emergency_shuttle.location==0)
-		var/timeleft = emergency_shuttle.timeleft()
+	if(SSshuttle.emergency.mode == SHUTTLE_CALL)
+		var/timeleft = SSshuttle.emergency.timeLeft()
 		dat += "<B>Emergency shuttle</B>\n<BR>\nETA: [timeleft / 60 % 60]:[add_zero(num2text(timeleft % 60), 2)]"
 
 
@@ -352,33 +388,33 @@ var/const/CALL_SHUTTLE_REASON_LENGTH = 12
 	switch(src.state)
 		if(STATE_DEFAULT)
 			if (src.authenticated)
-				if(emergency_shuttle.recall_count > 1)
-					if(emergency_shuttle.last_call_loc)
-						dat += "<BR>Most recent shuttle call/recall traced to: <b>[format_text(emergency_shuttle.last_call_loc.name)]</b>"
-					else
-						dat += "<BR>Unable to trace most recent shuttle call/recall signal."
+				if(SSshuttle.emergencyLastCallLoc)
+					dat += "<BR>Most recent shuttle call/recall traced to: <b>[format_text(SSshuttle.emergencyLastCallLoc.name)]</b>"
+				else
+					dat += "<BR>Unable to trace most recent shuttle call/recall signal."
 				dat += "<BR>Logged in as: [auth_id]"
 				dat += "<BR>"
 				dat += "<BR>\[ <A HREF='?src=\ref[src];operation=logout'>Log Out</A> \]<BR>"
 				dat += "<BR><B>General Functions</B>"
 				dat += "<BR>\[ <A HREF='?src=\ref[src];operation=messagelist'>Message List</A> \]"
-				if(emergency_shuttle.location==0)
-					if (emergency_shuttle.online)
-						dat += "<BR>\[ <A HREF='?src=\ref[src];operation=cancelshuttle'>Cancel Shuttle Call</A> \]"
-					else
+				switch(SSshuttle.emergency.mode)
+					if(SHUTTLE_IDLE, SHUTTLE_RECALL)
 						dat += "<BR>\[ <A HREF='?src=\ref[src];operation=callshuttle'>Call Emergency Shuttle</A> \]"
+					else
+						dat += "<BR>\[ <A HREF='?src=\ref[src];operation=cancelshuttle'>Cancel Shuttle Call</A> \]"
 
 				dat += "<BR>\[ <A HREF='?src=\ref[src];operation=status'>Set Status Display</A> \]"
+				dat += "<BR>\[ <A HREF='?src=\ref[src];operation=changeseclevel'>Change Alert Level</A> \]"
 				if(src.emagged == 0)
 					dat += "<BR>\[ <A HREF='?src=\ref[src];operation=MessageCentcomm'>Send Message to Centcom</A> \]"
 				else
 					dat += "<BR>\[ <A HREF='?src=\ref[src];operation=MessageSyndicate'>Send Message to \[UNKNOWN\]</A> \]"
 					dat += "<BR>\[ <A HREF='?src=\ref[src];operation=RestoreBackup'>Restore Backup Routing Data</A> \]"
-				if (src.authenticated==2)
+				if (src.authenticated == 2)
 					dat += "<BR><BR><B>Captain Functions</B>"
 					dat += "<BR>\[ <A HREF='?src=\ref[src];operation=announce'>Make a Captain's Announcement</A> \]"
-					dat += "<BR>\[ <A HREF='?src=\ref[src];operation=changeseclevel'>Change Alert Level</A> \]"
 					dat += "<BR>\[ <A HREF='?src=\ref[src];operation=emergencyaccess'>Emergency Maintenance Access</A> \]"
+					dat += "<BR>\[ <A HREF='?src=\ref[src];operation=nukerequest'>Request Nuclear Authentication Codes</A> \]"
 			else
 				dat += "<BR>\[ <A HREF='?src=\ref[src];operation=login'>Log In</A> \]"
 		if(STATE_CALLSHUTTLE)
@@ -421,6 +457,7 @@ var/const/CALL_SHUTTLE_REASON_LENGTH = 12
 			if(security_level == SEC_LEVEL_DELTA)
 				dat += "<font color='red'><b>The self-destruct mechanism is active. Find a way to deactivate the mechanism to lower the alert level or evacuate.</b></font>"
 			else
+				dat += "<A HREF='?src=\ref[src];operation=securitylevel;newalertlevel=[SEC_LEVEL_RED]'>Red</A><BR>"
 				dat += "<A HREF='?src=\ref[src];operation=securitylevel;newalertlevel=[SEC_LEVEL_BLUE]'>Blue</A><BR>"
 				dat += "<A HREF='?src=\ref[src];operation=securitylevel;newalertlevel=[SEC_LEVEL_GREEN]'>Green</A>"
 		if(STATE_CONFIRM_LEVEL)
@@ -482,21 +519,25 @@ var/const/CALL_SHUTTLE_REASON_LENGTH = 12
 	var/dat = ""
 	switch(src.aistate)
 		if(STATE_DEFAULT)
-			if(emergency_shuttle.recall_count > 1)
-				if(emergency_shuttle.last_call_loc)
-					dat += "<BR>Latest emergency signal trace attempt successful.<BR>Last signal origin: <b>[format_text(emergency_shuttle.last_call_loc.name)]</b>.<BR>"
-				else
-					dat += "<BR>Latest emergency signal trace attempt failed.<BR>"
+			if(SSshuttle.emergencyLastCallLoc)
+				dat += "<BR>Latest emergency signal trace attempt successful.<BR>Last signal origin: <b>[format_text(SSshuttle.emergencyLastCallLoc.name)]</b>.<BR>"
+			else
+				dat += "<BR>Latest emergency signal trace attempt failed.<BR>"
 			if(authenticated)
 				dat += "Current login: [auth_id]"
 			else
 				dat += "Current login: None"
 			dat += "<BR><BR><B>General Functions</B>"
 			dat += "<BR>\[ <A HREF='?src=\ref[src];operation=ai-messagelist'>Message List</A> \]"
-			if(emergency_shuttle.location==0 && !emergency_shuttle.online)
+			if(SSshuttle.emergency.mode <= SHUTTLE_IDLE)
 				dat += "<BR>\[ <A HREF='?src=\ref[src];operation=ai-callshuttle'>Call Emergency Shuttle</A> \]"
 			dat += "<BR>\[ <A HREF='?src=\ref[src];operation=ai-status'>Set Status Display</A> \]"
 			dat += "<BR><BR><B>Special Functions</B>"
+			if(src.emagged == 0)
+				dat += "<BR>\[ <A HREF='?src=\ref[src];operation=AI-MessageCentcomm'>Send Message to Centcom</A> \]"
+			else
+				dat += "<BR>\[ <A HREF='?src=\ref[src];operation=AI-MessageSyndicate'>Send Message to \[UNKNOWN\]</A> \]"
+				dat += "<BR>\[ <A HREF='?src=\ref[src];operation=RestoreBackup'>Restore Backup Routing Data</A> \]"
 			dat += "<BR>\[ <A HREF='?src=\ref[src];operation=ai-announce'>Make an Announcement</A> \]"
 			dat += "<BR>\[ <A HREF='?src=\ref[src];operation=ai-changeseclevel'>Change Alert Level</A> \]"
 			dat += "<BR>\[ <A HREF='?src=\ref[src];operation=ai-emergencyaccess'>Emergency Maintenance Access</A> \]"
@@ -539,6 +580,7 @@ var/const/CALL_SHUTTLE_REASON_LENGTH = 12
 			if(security_level == SEC_LEVEL_DELTA)
 				dat += "<font color='red'><b>The self-destruct mechanism is active. Find a way to deactivate the mechanism to lower the alert level or evacuate.</b></font>"
 			else
+				dat += "<A HREF='?src=\ref[src];operation=ai-securitylevel;newalertlevel=[SEC_LEVEL_RED]'>Red</A><BR>"
 				dat += "<A HREF='?src=\ref[src];operation=ai-securitylevel;newalertlevel=[SEC_LEVEL_BLUE]'>Blue</A><BR>"
 				dat += "<A HREF='?src=\ref[src];operation=ai-securitylevel;newalertlevel=[SEC_LEVEL_GREEN]'>Green</A>"
 
@@ -554,7 +596,7 @@ var/const/CALL_SHUTTLE_REASON_LENGTH = 12
 	return dat
 
 /obj/machinery/computer/communications/proc/make_announcement(var/mob/living/user, var/is_silicon)
-	var/input = stripped_input(user, "Please choose a message to announce to the station crew.", "What?")
+	var/input = input(user, "Please choose a message to announce to the station crew.", "What?")
 	if(!input || !user.canUseTopic(src))
 		return
 	if(is_silicon)
@@ -570,60 +612,7 @@ var/const/CALL_SHUTTLE_REASON_LENGTH = 12
 	log_say("[key_name(user)] has made a priority announcement: [input]")
 	message_admins("[key_name_admin(user)] has made a priority announcement.")
 
-/proc/call_shuttle_proc(var/mob/user, var/call_reason)
-	if ((!( ticker ) || emergency_shuttle.location))
-		return
-	if(world.time - round_start_time < config.shuttle_refuel_delay)
-		user << "The emergency shuttle is refueling. Please wait another [abs(round(((world.time - round_start_time) - config.shuttle_refuel_delay)/600))] minutes before trying again."
-		return
 
-	if(emergency_shuttle.direction == -1)
-		user << "The emergency shuttle may not be called while returning to Centcom."
-		return
-
-	if(emergency_shuttle.online)
-		user << "The emergency shuttle is already on its way."
-		return
-
-	call_reason = strip_html_properly(trim(call_reason))
-
-	if(length(call_reason) < CALL_SHUTTLE_REASON_LENGTH)
-		user << "You must provide a reason."
-		return
-
-	var/area/signal_origin = get_area(user)
-	var/emergency_reason = "\nNature of emergency:\n\n[call_reason]"
-	if (seclevel2num(get_security_level()) == SEC_LEVEL_RED) // There is a serious threat we gotta move no time to give them five minutes.
-		emergency_shuttle.incall(0.6, signal_origin, emergency_reason, 1)
-	else
-		emergency_shuttle.incall(1, signal_origin, emergency_reason, 0)
-
-	log_game("[key_name(user)] has called the shuttle.")
-	message_admins("[key_name_admin(user)] has called the shuttle.")
-
-	return
-
-
-/proc/cancel_call_proc(var/mob/user)
-	if ((!( ticker ) || emergency_shuttle.location || emergency_shuttle.direction == 0))
-		return
-	if(ticker.mode.name == "meteor")
-		return
-
-	if ((seclevel2num(get_security_level()) == SEC_LEVEL_RED))
-		if (emergency_shuttle.timeleft() < SHUTTLEARRIVETIME / 4)
-			return
-	else if (emergency_shuttle.timeleft() < SHUTTLEARRIVETIME / 2)
-		return
-
-
-	if(emergency_shuttle.direction != -1 && emergency_shuttle.online) //check that shuttle isn't already heading to centcom
-		var/area/signal_origin = get_area(user)
-		emergency_shuttle.recall(signal_origin)
-		log_game("[key_name(user)] has recalled the shuttle.")
-		message_admins("[key_name_admin(user)] has recalled the shuttle.")
-		return 1
-	return
 
 /obj/machinery/computer/communications/proc/post_status(var/command, var/data1, var/data2)
 
@@ -648,6 +637,6 @@ var/const/CALL_SHUTTLE_REASON_LENGTH = 12
 
 /obj/machinery/computer/communications/Destroy()
 	shuttle_caller_list -= src
-	emergency_shuttle.autoshuttlecall()
+	SSshuttle.autoEvac()
 	..()
 

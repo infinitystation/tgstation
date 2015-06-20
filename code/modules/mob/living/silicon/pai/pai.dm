@@ -3,8 +3,7 @@
 	icon = 'icons/obj/status_display.dmi' //invisibility!
 	mouse_opacity = 0
 	density = 0
-	mob_size = 0
-	invisibility = 101
+	mob_size = MOB_SIZE_TINY
 
 	var/network = "SS13"
 	var/obj/machinery/camera/current = null
@@ -16,6 +15,7 @@
 
 	var/speakStatement = "states"
 	var/speakExclamation = "declares"
+	var/speakDoubleExclamation = "alarms"
 	var/speakQuery = "queries"
 
 	var/obj/item/weapon/pai_cable/cable		// The cable we produce and use when door or camera jacking
@@ -51,7 +51,7 @@
 /mob/living/silicon/pai/New(var/obj/item/device/paicard)
 	make_laws()
 	canmove = 0
-	src.loc = get_turf(paicard)
+	src.loc = paicard
 	card = paicard
 	sradio = new(src)
 	if(card)
@@ -66,7 +66,6 @@
 		pda.owner = text("[]", src)
 		pda.name = pda.owner + " (" + pda.ownjob + ")"
 
-		follow_pai()
 	..()
 
 /mob/living/silicon/pai/make_laws()
@@ -80,12 +79,7 @@
 
 /mob/living/silicon/pai/Stat()
 	..()
-	statpanel("Status")
-	if (src.client.statpanel == "Status")
-		if(emergency_shuttle.online && emergency_shuttle.location < 2)
-			var/timeleft = emergency_shuttle.timeleft()
-			if (timeleft)
-				stat(null, "ETA-[(timeleft / 60) % 60]:[add_zero(num2text(timeleft % 60), 2)]")
+	if(statpanel("Status"))
 		if(src.silence_time)
 			var/timeleft = round((silence_time - world.timeofday)/10 ,1)
 			stat(null, "Communications system reboot in -[(timeleft / 60) % 60]:[add_zero(num2text(timeleft % 60), 2)]")
@@ -114,7 +108,7 @@
 		// 33% chance of no additional effect
 
 	if(prob(20))
-		visible_message("<span class='danger'>A shower of sparks spray from [src]'s inner workings.</span>", 3, "<span class='danger'>You hear and smell the ozone hiss of electrical sparks being expelled violently.</span>", 2)
+		visible_message("<span class='warning'>A shower of sparks spray from [src]'s inner workings.</span>", 3, "<span class='italics'>You hear and smell the ozone hiss of electrical sparks being expelled violently.</span>", 2)
 		return src.death(0)
 
 	silence_time = world.timeofday + 120 * 10		// Silence for 2 minutes
@@ -136,7 +130,7 @@
 		if(3)
 			src << "<span class='notice'>You feel an electric surge run through your circuitry and become acutely aware at how lucky you are that you can still feel at all.</span>"
 
-/mob/living/silicon/pai/ex_act(severity)
+/mob/living/silicon/pai/ex_act(severity, target)
 	..()
 
 	switch(severity)
@@ -169,9 +163,9 @@
 
 	// ok, we're alive, camera is good and in our network...
 
-	src.set_machine(src)
-	src:current = C
-	src.reset_view(C)
+	set_machine(src)
+	current = C
+	reset_view(C)
 	return 1
 
 
@@ -184,6 +178,13 @@
 
 /mob/living/silicon/pai/UnarmedAttack(var/atom/A)//Stops runtimes due to attack_animal being the default
 	return
+
+/mob/living/silicon/pai/on_forcemove(var/atom/newloc)
+	if(card)
+		card.loc = newloc
+	else //something went very wrong.
+		CRASH("pAI without card")
+	loc = card
 
 //Addition by Mord_Sith to define AI's network change ability
 /*

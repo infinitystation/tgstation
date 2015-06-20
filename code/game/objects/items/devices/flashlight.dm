@@ -38,22 +38,22 @@
 
 /obj/item/device/flashlight/attack_self(mob/user)
 	if(!isturf(user.loc))
-		user << "You cannot turn the light on while in this [user.loc]." //To prevent some lighting anomalities.
+		user << "<span class='warning'>You cannot turn the light on while in this [user.loc]!</span>" //To prevent some lighting anomalities.
 		return 0
 	on = !on
 	update_brightness(user)
 	return 1
 
 
-/obj/item/device/flashlight/attack(mob/living/M as mob, mob/living/user as mob)
+/obj/item/device/flashlight/attack(mob/living/carbon/human/M as mob, mob/living/carbon/human/user as mob)
 	add_fingerprint(user)
 	if(on && user.zone_sel.selecting == "eyes")
 
-		if(((CLUMSY in user.mutations) || user.getBrainLoss() >= 60) && prob(50))	//too dumb to use flashlight properly
+		if((user.disabilities & CLUMSY || user.getBrainLoss() >= 60) && prob(50))	//too dumb to use flashlight properly
 			return ..()	//just hit them in the head
 
 		if(!user.IsAdvancedToolUser())
-			user << "<span class='notice'>You don't have the dexterity to do this!</span>"
+			user << "<span class='warning'>You don't have the dexterity to do this!</span>"
 			return
 
 		var/mob/living/carbon/human/H = M	//mob has protective eyewear
@@ -62,25 +62,26 @@
 			return
 
 		if(M == user)	//they're using it on themselves
-			if(!M.blinded)
+			if(!M.eye_blind)
 				flick("flash", M.flash)
-				M.visible_message("<span class='notice'>[M] directs [src] to \his eyes.</span>", \
+				M.visible_message("[M] directs [src] to \his eyes.", \
 									 "<span class='notice'>You wave the light in front of your eyes! Trippy!</span>")
 			else
-				M.visible_message("<span class='notice'>[M] directs [src] to \his eyes.</span>", \
+				M.visible_message("[M] directs [src] to \his eyes.", \
 									 "<span class='notice'>You wave the light in front of your eyes.</span>")
 			return
 
-		user.visible_message("<span class='notice'>[user] directs [src] to [M]'s eyes.</span>", \
-							 "<span class='notice'>You direct [src] to [M]'s eyes.</span>")
+		user.visible_message("<span class='warning'>[user] directs [src] to [M]'s eyes.</span>", \
+							 "<span class='danger'>You direct [src] to [M]'s eyes.</span>")
+		M << "<span class='danger'>[user] directs [src] to your eyes.</span>"
 
 		if(istype(M, /mob/living/carbon/human) || istype(M, /mob/living/carbon/monkey))	//robots and aliens are unaffected
-			if(M.stat == DEAD || M.sdisabilities & BLIND)	//mob is dead or fully blind
-				user << "<span class='notice'>[M] pupils does not react to the light!</span>"
-			else if(XRAY in M.mutations)	//mob has X-RAY vision
-				user << "<span class='notice'>[M] pupils give an eerie glow!</span>"
+			if(M.stat == DEAD || M.disabilities & BLIND)	//mob is dead or fully blind
+				user << "<span class='warning'>[M] pupils don't react to the light!</span>"
+			else if(M.dna.check_mutation(XRAY))	//mob has X-RAY vision
+				user << "<span class='danger'>[M] pupils give an eerie glow!</span>"
 			else	//they're okay!
-				if(!M.blinded)
+				if(!M.eye_blind)
 					flick("flash", M.flash)	//flash the affected mob
 					user << "<span class='notice'>[M]'s pupils narrow.</span>"
 	else
@@ -101,12 +102,45 @@
 
 /obj/item/device/flashlight/pen
 	name = "penlight"
-	desc = "A pen-sized light, used by medical staff."
+	desc = "A pen-sized light, used by medical staff. It can also be used to create a hologram to alert people of incoming medical assistance."
 	icon_state = "penlight"
 	item_state = ""
 	flags = CONDUCT
 	brightness_on = 2
+	var/holo_cooldown = 0
 
+/obj/item/device/flashlight/pen/afterattack(atom/target, mob/user, proximity_flag)
+	if(!proximity_flag)
+		if(holo_cooldown)
+			user << "<span class='warning'>[src] is not ready yet!</span>"
+			return
+		var/T = get_turf(target)
+		if(locate(/mob/living) in T)
+			CreateHolo(T, user)
+			return
+	..()
+
+/obj/item/device/flashlight/pen/proc/CreateHolo(var/tturf,var/creator)
+	var/obj/effect/medical_holosign/M = new /obj/effect/medical_holosign(tturf)
+	M.visible_message("<span class='danger'>[creator] created a medical hologram!</span>")
+	holo_cooldown = 1
+	spawn(100)
+		holo_cooldown = 0
+	return
+
+/obj/effect/medical_holosign
+	name = "medical holosign"
+	desc = "A small holographic barrier that indicates a medic is coming to treat a patient."
+	icon = 'icons/effects/effects.dmi'
+	icon_state = "medi_holo"
+	layer = 4.1
+	mouse_opacity = 0
+
+/obj/effect/medical_holosign/New()
+	playsound(loc, 'sound/machines/ping.ogg', 50, 0)
+	spawn(30)
+		qdel(src)
+	return
 
 /obj/item/device/flashlight/seclite
 	name = "seclite"
@@ -136,7 +170,7 @@
 	desc = "A classic green-shaded desk lamp."
 	icon_state = "lampgreen"
 	item_state = "lampgreen"
-	brightness_on = 5
+
 
 
 /obj/item/device/flashlight/lamp/verb/toggle_light()
@@ -146,6 +180,13 @@
 
 	if(!usr.stat)
 		attack_self(usr)
+
+//Bananalamp
+obj/item/device/flashlight/lamp/bananalamp
+	name = "banana lamp"
+	desc = "Only a clown would think to make a ghetto banana-shaped lamp. Even has a goofy pullstring."
+	icon_state = "bananalamp"
+	item_state = "bananalamp"
 
 // FLARES
 
@@ -174,7 +215,7 @@
 		turn_off()
 		if(!fuel)
 			icon_state = "[initial(icon_state)]-empty"
-		processing_objects -= src
+		SSobj.processing -= src
 
 /obj/item/device/flashlight/flare/proc/turn_off()
 	on = 0
@@ -197,7 +238,7 @@
 
 	// Usual checks
 	if(!fuel)
-		user << "<span class='notice'>It's out of fuel.</span>"
+		user << "<span class='warning'>It's out of fuel!</span>"
 		return
 	if(on)
 		return
@@ -205,10 +246,10 @@
 	. = ..()
 	// All good, turn it on.
 	if(.)
-		user.visible_message("<span class='notice'>[user] lights the [src].</span>", "<span class='notice'>You light the [src]!</span>")
+		user.visible_message("<span class='notice'>[user] lights \the [src].</span>", "<span class='notice'>You light \the [src]!</span>")
 		force = on_damage
 		damtype = "fire"
-		processing_objects += src
+		SSobj.processing += src
 
 /obj/item/device/flashlight/flare/torch
 	name = "torch"
@@ -218,6 +259,12 @@
 	icon_state = "torch"
 	item_state = "torch"
 	on_damage = 10
+
+/obj/item/device/flashlight/lantern
+	name = "lantern"
+	icon_state = "lantern"
+	desc = "A mining lantern."
+	brightness_on = 6			// luminosity when on
 
 
 /obj/item/device/flashlight/slime
@@ -243,10 +290,10 @@
 
 /obj/item/device/flashlight/emp/New()
 		..()
-		processing_objects.Add(src)
+		SSobj.processing |= src
 
 /obj/item/device/flashlight/emp/Destroy()
-		processing_objects.Remove(src)
+		SSobj.processing.Remove(src)
 		..()
 
 /obj/item/device/flashlight/emp/process()

@@ -4,37 +4,52 @@
 	return
 
 // No comment
-/atom/proc/attackby(obj/item/W, mob/user)
+/atom/proc/attackby(obj/item/W, mob/user, params)
 	return
-/atom/movable/attackby(obj/item/W, mob/living/user)
+
+/atom/movable/attackby(obj/item/W, mob/living/user, params)
 	user.do_attack_animation(src)
 	if(W && !(W.flags&NOBLUDGEON))
-		visible_message("<span class='danger'>[src] has been hit by [user] with [W].</span>")
+		visible_message("<span class='danger'>[user] has hit [src] with [W]!</span>")
 
-/mob/living/attackby(obj/item/I, mob/user)
+/mob/living/attackby(obj/item/I, mob/user, params)
 	user.changeNext_move(CLICK_CD_MELEE)
 	I.attack(src, user)
 
 /mob/living/proc/attacked_by(var/obj/item/I, var/mob/living/user, var/def_zone)
-	apply_damage(I.force, I.damtype)
+	apply_damage(I.force, I.damtype, def_zone)
 	if(I.damtype == "brute")
 		if(prob(33) && I.force)
 			var/turf/location = src.loc
 			if(istype(location, /turf/simulated))
 				location.add_blood_floor(src)
 
-	var/showname = "."
-	if(user)
-		showname = " by [user]!"
-		user.do_attack_animation(src)
-	if(!(user in viewers(src, null)))
-		showname = "."
+	var/message_verb = ""
 	if(I.attack_verb && I.attack_verb.len)
-		src.visible_message("<span class='danger'>[src] has been [pick(I.attack_verb)] with [I][showname]</span>",
-		"<span class='userdanger'>[src] has been [pick(I.attack_verb)] with [I][showname]</span>")
+		message_verb = "[pick(I.attack_verb)]"
 	else if(I.force)
-		src.visible_message("<span class='danger'>[src] has been attacked with [I][showname]</span>",
-		"<span class='userdanger'>[src] has been attacked with [I][showname]</span>")
+		message_verb = "attacked"
+
+	var/attack_message = "[src] has been [message_verb] with [I]."
+	if(user)
+		user.do_attack_animation(src)
+		if(user in viewers(src, null))
+			attack_message = "[user] has [message_verb] [src] with [I]!"
+	if(message_verb)
+		visible_message("<span class='danger'>[attack_message]</span>",
+		"<span class='userdanger'>[attack_message]</span>")
+
+/mob/living/simple_animal/attacked_by(var/obj/item/I, var/mob/living/user)
+	if(!I.force)
+		user.visible_message("<span class='warning'>[user] gently taps [src] with [I].</span>",\
+						"<span class='warning'>This weapon is ineffective, it does no damage!</span>")
+	else if(I.force >= force_threshold && I.damtype != STAMINA)
+		..()
+	else
+		visible_message("<span class='warning'>[I] bounces harmlessly off of [src].</span>",\
+					"<span class='warning'>[I] bounces harmlessly off of [src]!</span>")
+
+
 
 // Proximity_flag is 1 if this afterattack was called on something adjacent, in your square, or on your person.
 // Click parameters is the params string from byond Click() code, see that documentation.
@@ -42,7 +57,7 @@
 	return
 
 
-obj/item/proc/get_clamped_volume()
+/obj/item/proc/get_clamped_volume()
 	if(src.force && src.w_class)
 		return Clamp((src.force + src.w_class) * 4, 30, 100)// Add the item's force to its weight class and multiply by 4, then clamp the value between 30 and 100
 	else if(!src.force && src.w_class)

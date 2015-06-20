@@ -25,6 +25,19 @@ Note: Must be placed west/left of and R&D console to function.
 	var/adamantine_amount = 0.0
 	var/efficiency_coeff
 
+	var/list/categories = list(
+								"Power Designs",
+								"Medical Designs",
+								"Bluespace Designs",
+								"Stock Parts",
+								"Equipment",
+								"Mining Designs",
+								"Electronics",
+								"Weapons",
+								"Ammo",
+								"Firing Pins",
+								)
+
 	reagents = new()
 
 
@@ -74,14 +87,14 @@ Note: Must be placed west/left of and R&D console to function.
 			A = uranium_amount
 		if("$diamond")
 			A = diamond_amount
-		if("$clown")
+		if("$bananium")
 			A = clown_amount
 		else
 			A = reagents.get_reagent_amount(M)
 	A = A / max(1, (being_built.materials[M]/efficiency_coeff))
 	return A
 
-/obj/machinery/r_n_d/protolathe/attackby(var/obj/item/O as obj, var/mob/user as mob)
+/obj/machinery/r_n_d/protolathe/attackby(var/obj/item/O as obj, var/mob/user as mob, params)
 	if (shocked)
 		shock(user,50)
 	if (default_deconstruction_screwdriver(user, "protolathe_t", "protolathe", O))
@@ -127,15 +140,15 @@ Note: Must be placed west/left of and R&D console to function.
 			default_deconstruction_crowbar(O)
 			return 1
 		else
-			user << "<span class='warning'>You can't load the [src.name] while it's opened.</span>"
+			user << "<span class='warning'>You can't load the [src.name] while it's opened!</span>"
 			return 1
 	if (disabled)
 		return
 	if (!linked_console)
-		user << "<span class='warning'> The [src.name] must be linked to an R&D console first!</span>"
+		user << "<span class='warning'>The [src.name] must be linked to an R&D console first!</span>"
 		return 1
 	if (busy)
-		user << "<span class='warning'>The [src.name] is busy. Please wait for completion of previous operation.</span>"
+		user << "<span class='warning'>The [src.name] is busy! Please wait for completion of previous operation.</span>"
 		return 1
 	if (O.is_open_container())
 		return
@@ -147,7 +160,7 @@ Note: Must be placed west/left of and R&D console to function.
 	if(istype(O,/obj/item/stack/sheet))
 		var/obj/item/stack/sheet/S = O
 		if (TotalMaterials() + S.perunit > max_material_storage)
-			user << "<span class='warning'>The [src.name]'s material bin is full. Please remove material before adding more.</span>"
+			user << "<span class='warning'>The [src.name]'s material bin is full! Please remove material before adding more.</span>"
 			return 1
 
 	var/obj/item/stack/sheet/stack = O

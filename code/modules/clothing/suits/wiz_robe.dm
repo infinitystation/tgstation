@@ -19,6 +19,11 @@
 	desc = "Strange-looking yellow hat-wear that most certainly belongs to a powerful magic user."
 	icon_state = "yellowwizard"
 
+/obj/item/clothing/head/wizard/black
+	name = "black wizard hat"
+	desc = "Strange-looking black hat-wear that most certainly belongs to a real skeleton. Spooky."
+	icon_state = "blackwizard"
+
 /obj/item/clothing/head/wizard/fake
 	name = "wizard hat"
 	desc = "It has WIZZARD written across it in sequins. Comes with a cool beard."
@@ -38,6 +43,11 @@
 	icon_state = "magus"
 	item_state = "magus"
 
+/obj/item/clothing/head/wizard/santa
+	name = "Santa's hat"
+	desc = "Ho ho ho. Merrry X-mas!"
+	icon_state = "santahat"
+	flags = BLOCKHAIR
 
 /obj/item/clothing/suit/wizrobe
 	name = "wizard robe"
@@ -67,6 +77,12 @@
 	icon_state = "yellowwizard"
 	item_state = "yellowwizrobe"
 
+/obj/item/clothing/suit/wizrobe/black
+	name = "black wizard robe"
+	desc = "An unnerving black gem-lined robe that reeks of death and decay."
+	icon_state = "blackwizard"
+	item_state = "blackwizrobe"
+
 /obj/item/clothing/suit/wizrobe/marisa
 	name = "witch robe"
 	desc = "Magic is all about the spell power, ZE!"
@@ -85,6 +101,12 @@
 	icon_state = "magusred"
 	item_state = "magusred"
 
+
+/obj/item/clothing/suit/wizrobe/santa
+	name = "Santa's suit"
+	desc = "Festive!"
+	icon_state = "santa"
+	item_state = "santa"
 
 /obj/item/clothing/suit/wizrobe/fake
 	name = "wizard robe"

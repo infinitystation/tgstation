@@ -2,7 +2,7 @@
 	name = "Anomaly: Pyroclastic"
 	typepath = /datum/round_event/anomaly/anomaly_pyro
 	max_occurrences = 5
-	weight = 20
+	weight = 25
 
 /datum/round_event/anomaly/anomaly_pyro
 	startWhen = 10
@@ -11,7 +11,7 @@
 
 
 /datum/round_event/anomaly/anomaly_pyro/announce()
-	priority_announce("Pyroclastic anomaly detected on long range scanners. Expected location: [impact_area.name].", "Anomaly Alert")
+	priority_announce("—канеры дальнего радиуса действия обнаружили пирокластическую аномалию. ќжидаемое место воздействия: [impact_area.name].", "“ревога! јномалия!")
 
 /datum/round_event/anomaly/anomaly_pyro/start()
 	var/turf/T = pick(get_area_turfs(impact_area))
@@ -30,7 +30,7 @@
 	if(newAnomaly.loc)
 		explosion(get_turf(newAnomaly), -1,0,3, flame_range = 4)
 
-		var/mob/living/carbon/slime/S = new/mob/living/carbon/slime(get_turf(newAnomaly))
+		var/mob/living/simple_animal/slime/S = new/mob/living/simple_animal/slime(get_turf(newAnomaly))
 		S.colour = pick("red", "orange")
 
 		qdel(newAnomaly)

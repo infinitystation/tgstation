@@ -38,10 +38,9 @@
 	DD.holder = src
 	if(DD.disease_flags & CAN_CARRY && prob(5))
 		DD.carrier = 1
+	DD.strain_data = D.strain_data.Copy()
+	DD.affected_mob.med_hud_set_status()
 
-/mob/living/carbon/human/AddDisease(var/datum/disease/D)
-	..()
-	med_hud_set_status()
 
 /mob/living/carbon/ContractDisease(var/datum/disease/D)
 	if(!CanContractDisease(D))
@@ -67,6 +66,9 @@
 		feet_ch = 100
 
 	if(prob(15/D.permeability_mod))
+		return
+
+	if(satiety>0 && prob(satiety/10)) // positive satiety makes it harder to contract the disease.
 		return
 
 	var/target_zone = pick(head_ch;1,body_ch;2,hands_ch;3,feet_ch;4)
@@ -126,3 +128,9 @@
 	if(!CanContractDisease(D))
 		return 0
 	AddDisease(D)
+
+
+/mob/living/carbon/human/CanContractDisease(var/datum/disease/D)
+	if(dna && VIRUSIMMUNE in dna.species.specflags)
+		return 0
+	return ..()

@@ -25,8 +25,7 @@
 
 	if(reagents && BB.reagents)
 		reagents.trans_to(BB, reagents.total_volume) //For chemical darts/bullets
-		reagents.delete()
-	return
+		qdel(reagents)
 
 /obj/item/ammo_casing/proc/throw_proj(var/turf/targloc, mob/living/user as mob|obj, params)
 	var/turf/curloc = user.loc
@@ -34,7 +33,7 @@
 		return 0
 	if(targloc == curloc)			//Fire the projectile
 		user.bullet_act(BB)
-		qdel(BB)
+		del(BB)
 		return 1
 	BB.loc = get_turf(user)
 	BB.starting = get_turf(user)
@@ -50,7 +49,7 @@
 			BB.p_y = text2num(mouse_control["icon-y"])
 
 	if(BB)
-		BB.process()
+		BB.fire()
 	BB = null
 	return 1
 

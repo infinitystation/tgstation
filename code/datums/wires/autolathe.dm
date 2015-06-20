@@ -27,7 +27,8 @@ var/const/AUTOLATHE_DISABLE_WIRE = 4
 	var/obj/machinery/autolathe/A = holder
 	switch(index)
 		if(AUTOLATHE_HACK_WIRE)
-			A.hacked = !mended
+			if(!A.hacked)
+				A.adjust_hacked(1)
 		if(AUTOLATHE_SHOCK_WIRE)
 			A.shocked = !mended
 		if(AUTOLATHE_DISABLE_WIRE)
@@ -39,10 +40,10 @@ var/const/AUTOLATHE_DISABLE_WIRE = 4
 	var/obj/machinery/autolathe/A = holder
 	switch(index)
 		if(AUTOLATHE_HACK_WIRE)
-			A.hacked = !A.hacked
+			A.adjust_hacked(!A.hacked)
 			spawn(50)
 				if(A && !IsIndexCut(index))
-					A.hacked = 0
+					A.adjust_hacked(0)
 					Interact(usr)
 		if(AUTOLATHE_SHOCK_WIRE)
 			A.shocked = !A.shocked
@@ -56,3 +57,15 @@ var/const/AUTOLATHE_DISABLE_WIRE = 4
 				if(A && !IsIndexCut(index))
 					A.disabled = 0
 					Interact(usr)
+
+/datum/wires/autolathe/SolveWireFunction(var/function)
+	var/sf = ""
+	switch(function)
+		if(AUTOLATHE_HACK_WIRE)
+			sf = "Port A"
+		if(AUTOLATHE_SHOCK_WIRE)
+			sf = "Port B"
+		if(AUTOLATHE_DISABLE_WIRE)
+			sf = "Port C"
+
+	return sf

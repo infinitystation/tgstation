@@ -13,8 +13,8 @@
 	var/det_time = 50
 	var/display_timer = 1
 
-/obj/item/weapon/grenade/proc/clown_check(var/mob/living/user)
-	if((CLUMSY in user.mutations) && prob(50))
+/obj/item/weapon/grenade/proc/clown_check(var/mob/living/carbon/human/user)
+	if(user.disabilities & CLUMSY && prob(50))
 		user << "<span class='warning'>Huh? How does this thing work?</span>"
 		active = 1
 		icon_state = initial(icon_state) + "_active"
@@ -58,12 +58,13 @@
 	if(!active)
 		if(clown_check(user))
 			user << "<span class='warning'>You prime the [name]! [det_time/10] seconds!</span>"
+			playsound(user.loc, 'sound/weapons/armbomb.ogg', 60, 1)
 			active = 1
 			icon_state = initial(icon_state) + "_active"
 			add_fingerprint(user)
 			var/turf/bombturf = get_turf(src)
 			var/area/A = get_area(bombturf)
-			message_admins("[key_name(usr)]<A HREF='?_src_=holder;adminmoreinfo=\ref[usr]'>?</A> has primed a [name] for detonation at <A HREF='?_src_=holder;adminplayerobservecoodjump=1;X=[bombturf.x];Y=[bombturf.y];Z=[bombturf.z]'>[A.name] (JMP)</a>.")
+			message_admins("[key_name_admin(usr)]<A HREF='?_src_=holder;adminmoreinfo=\ref[usr]'>?</A> (<A HREF='?_src_=holder;adminplayerobservefollow=\ref[usr]'>FLW</A>) has primed a [name] for detonation at <A HREF='?_src_=holder;adminplayerobservecoodjump=1;X=[bombturf.x];Y=[bombturf.y];Z=[bombturf.z]'>[A.name] (JMP)</a>.")
 			log_game("[key_name(usr)] has primed a [name] for detonation at [A.name] ([bombturf.x],[bombturf.y],[bombturf.z]).")
 			if(iscarbon(user))
 				var/mob/living/carbon/C = user
@@ -80,7 +81,7 @@
 		M.unEquip(src)
 
 
-/obj/item/weapon/grenade/attackby(obj/item/weapon/W as obj, mob/user as mob)
+/obj/item/weapon/grenade/attackby(obj/item/weapon/W as obj, mob/user as mob, params)
 	if(istype(W, /obj/item/weapon/screwdriver))
 		switch(det_time)
 			if ("1")

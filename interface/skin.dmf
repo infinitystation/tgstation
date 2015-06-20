@@ -197,7 +197,7 @@ macro "borghotkeymode"
 		is-disabled = false
 	elem 
 		name = "F6"
-		command = "Player-Panel-New"
+		command = "Player-Panel"
 		is-disabled = false
 	elem 
 		name = "F7"
@@ -362,20 +362,24 @@ macro "macro"
 		command = ".screenshot"
 		is-disabled = false
 	elem 
+		name = "F3"
+		command = "say"
+		is-disabled = false
+	elem 
 		name = "F4"
 		command = "me"
 		is-disabled = false
 	elem 
 		name = "F5"
-		command = "Aghost"
+		command = "asay"
 		is-disabled = false
 	elem 
 		name = "F6"
-		command = "Player-Panel-New"
+		command = "Player-Panel"
 		is-disabled = false
 	elem 
 		name = "F7"
-		command = "Admin-PM"
+		command = "aghost"
 		is-disabled = false
 	elem 
 		name = "F8"
@@ -524,6 +528,14 @@ macro "hotkeymode"
 		command = "a-intent right"
 		is-disabled = false
 	elem 
+		name = "M"
+		command = "me"
+		is-disabled = false
+	elem 
+		name = "O"
+		command = "ooc"
+		is-disabled = false
+	elem 
 		name = "Q"
 		command = ".northwest"
 		is-disabled = false
@@ -605,7 +617,7 @@ macro "hotkeymode"
 		is-disabled = false
 	elem 
 		name = "F6"
-		command = "Player-Panel-New"
+		command = "Player-Panel"
 		is-disabled = false
 	elem 
 		name = "F7"
@@ -759,7 +771,7 @@ macro "borgmacro"
 		is-disabled = false
 	elem 
 		name = "F6"
-		command = "Player-Panel-New"
+		command = "Player-Panel"
 		is-disabled = false
 	elem 
 		name = "F7"
@@ -1941,9 +1953,9 @@ window "rpane"
 		right-click = false
 		saved-params = "is-checked"
 		on-size = ""
-		text = "Github"
+		text = "Code Repo"
 		image = ""
-		command = "github"
+		command = "Code"
 		is-flat = false
 		stretch = false
 		is-checked = false

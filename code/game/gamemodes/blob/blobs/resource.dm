@@ -3,7 +3,7 @@
 	icon = 'icons/mob/blob.dmi'
 	icon_state = "blob_resource"
 	health = 30
-	fire_resist = 2
+	fire_resist = 1
 	var/mob/camera/blob/overmind = null
 	var/resource_delay = 0
 

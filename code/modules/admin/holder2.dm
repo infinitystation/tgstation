@@ -8,10 +8,11 @@ var/list/admin_datums = list()
 
 	var/datum/marked_datum
 
-	var/admincaster_screen = 0	//See newscaster.dm under machinery for a full description
-	var/datum/feed_message/admincaster_feed_message = new /datum/feed_message   //These two will act as holders.
-	var/datum/feed_channel/admincaster_feed_channel = new /datum/feed_channel
-	var/admincaster_signature	//What you'll sign the newsfeeds as
+	var/admincaster_screen = 0	//TODO: remove all these 5 variables, they are completly unacceptable
+	var/datum/newscaster/feed_message/admincaster_feed_message = new /datum/newscaster/feed_message
+	var/datum/newscaster/wanted_message/admincaster_wanted_message = new /datum/newscaster/wanted_message
+	var/datum/newscaster/feed_channel/admincaster_feed_channel = new /datum/newscaster/feed_channel
+	var/admincaster_signature
 
 /datum/admins/New(datum/admin_rank/R, ckey)
 	if(!ckey)
@@ -31,6 +32,7 @@ var/list/admin_datums = list()
 		owner = C
 		owner.holder = src
 		owner.add_admin_verbs()	//TODO
+		owner.verbs -= /client/proc/readmin
 		admins |= C
 
 /datum/admins/proc/disassociate()
@@ -45,6 +47,8 @@ var/list/admin_datums = list()
 		return 1 //they have no rights
 	if(rank.rights == 65535)
 		return 1 //we have all the rights
+	if(src == other)
+		return 1 //you always have more rights than yourself
 	if(rank.rights != other.rank.rights)
 		if( (rank.rights & other.rank.rights) == other.rank.rights )
 			return 1 //we have all the rights they have and more

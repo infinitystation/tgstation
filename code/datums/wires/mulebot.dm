@@ -63,3 +63,27 @@ var/const/WIRE_BEACON_RX = 256	// beacon ping recv
 
 /datum/wires/mulebot/proc/BeaconRX()
 	return !(wires_status & WIRE_BEACON_RX)
+
+/datum/wires/mulebot/SolveWireFunction(var/function)
+	var/sf = ""
+	switch(function)
+		if(WIRE_POWER1)
+			sf = "Port A"
+		if(WIRE_POWER2)
+			sf = "Port B"
+		if(WIRE_AVOIDANCE)
+			sf = "Port C"
+		if(WIRE_LOADCHECK)
+			sf = "Port D"
+		if(WIRE_MOTOR1)
+			sf = "Port E"
+		if(WIRE_MOTOR2)
+			sf = "Port F"
+		if(WIRE_REMOTE_RX)
+			sf = "Port G"
+		if(WIRE_REMOTE_TX)
+			sf = "Port H"
+		if(WIRE_BEACON_RX)
+			sf = "Port I"
+
+	return sf

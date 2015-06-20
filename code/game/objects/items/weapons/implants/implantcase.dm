@@ -16,15 +16,14 @@
 		icon_state = "implantcase-0"
 
 
-/obj/item/weapon/implantcase/attackby(obj/item/weapon/W, mob/user)
+/obj/item/weapon/implantcase/attackby(obj/item/weapon/W, mob/user, params)
 	..()
 	if(istype(W, /obj/item/weapon/pen))
-		var/t = input(user, "What would you like the label to be?", name, null) as text
+		var/t = stripped_input(user, "What would you like the label to be?", name, null)
 		if(user.get_active_hand() != W)
 			return
 		if(!in_range(src, user) && loc != user)
 			return
-		t = copytext(sanitize(t), 1, MAX_MESSAGE_LEN)
 		if(t)
 			name = "glass case- '[t]'"
 		else
@@ -100,3 +99,25 @@
 /obj/item/weapon/implantcase/loyalty/New()
 	imp = new /obj/item/weapon/implant/loyalty(src)
 	..()
+
+/obj/item/weapon/implantcase/weapons_auth
+	name = "glass case- 'Firearms Authentication'"
+	desc = "A case containing a firearms authentication implant."
+	icon = 'icons/obj/items.dmi'
+	icon_state = "implantcase-r"
+
+/obj/item/weapon/implantcase/weapons_auth/New()
+	imp = new /obj/item/weapon/implant/weapons_auth(src)
+	..()
+
+/obj/item/weapon/implantcase/antiloyalty
+	name = "glass case- 'Anti-NTLoyalty'"
+	desc = "A case containing a \"FUCK THE NT\" implant."
+	icon = 'icons/obj/items.dmi'
+	icon_state = "implantcase-r"
+	origin_tech = "syndicate=2"
+
+/obj/item/weapon/implantcase/antiloyalty/New()
+	imp = new /obj/item/weapon/implant/antiloyalty(src)
+	..()
+

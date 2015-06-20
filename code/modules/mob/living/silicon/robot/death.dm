@@ -19,7 +19,8 @@
 	..(animate, "dust-r")
 
 /mob/living/silicon/robot/death(gibbed)
-	if(stat == DEAD)	return
+	if(stat == DEAD)
+		return
 	if(!gibbed)
 		emote("deathgasp")
 	stat = DEAD
@@ -29,12 +30,12 @@
 
 	uneq_all() // particularly to ensure sight modes are cleared
 
-	if(blind)	blind.layer = 0
+	if(blind)
+		blind.layer = 0
 	sight |= SEE_TURFS|SEE_MOBS|SEE_OBJS
 	see_in_dark = 8
 	see_invisible = SEE_INVISIBLE_LEVEL_TWO
-	updateicon()
-	update_fire()
+	update_icons()
 	tod = worldtime2text() //weasellos time of death patch
 	if(mind)	mind.store_memory("Time of death: [tod]", 0)
 

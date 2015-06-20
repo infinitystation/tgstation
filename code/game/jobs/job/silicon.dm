@@ -9,7 +9,7 @@ AI
 	total_positions = 0
 	spawn_positions = 1
 	selection_color = "#ccffcc"
-	supervisors = "your laws"
+	supervisors = "Вашим Законам"
 	req_admin_notify = 1
 	minimal_player_age = 30
 
@@ -31,7 +31,7 @@ Cyborg
 	faction = "Station"
 	total_positions = 0
 	spawn_positions = 1
-	supervisors = "your laws and the AI"	//Nodrak
+	supervisors = "Вашим Законам и самому ИИ"	//Nodrak
 	selection_color = "#ddffdd"
 	minimal_player_age = 21
 

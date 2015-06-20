@@ -8,12 +8,12 @@
 
 
 /datum/round_event/radiation_storm/setup()
-	startWhen = rand(10, 20)
+	startWhen = rand(30, 40)
 	endWhen = startWhen + 5
 	announceWhen	= 1
 
 /datum/round_event/radiation_storm/announce()
-	priority_announce("High levels of radiation detected near the station. Maintenance is best shielded from radiation.", "Anomaly Alert", 'sound/AI/radiation.ogg')
+	priority_announce("–ядом со станцией обнаружен высокий уровень радиации. Ћучшим укрытием от радиации являются технические тоннели.", "“ревога! јномалия!", 'sound/AI/radiation.ogg')
 	//sound not longer matches the text, but an audible warning is probably good
 
 
@@ -36,9 +36,10 @@
 
 		if(istype(C, /mob/living/carbon/human))
 			var/mob/living/carbon/human/H = C
-			H.apply_effect((rand(15, 75)), IRRADIATE, 0)
 			if(prob(5))
-				H.apply_effect((rand(90, 150)), IRRADIATE, 0)
+				H.irradiate(rand(100, 160))
+			else
+				H.irradiate(rand(15, 75))
 			if(prob(25))
 				if(prob(75))
 					randmutb(H)
@@ -49,7 +50,7 @@
 
 		else if(istype(C, /mob/living/carbon/monkey))
 			var/mob/living/carbon/monkey/M = C
-			M.apply_effect((rand(15, 75)), IRRADIATE, 0)
+			M.irradiate(rand(15, 75))
 
 
 /datum/round_event/radiation_storm/end()

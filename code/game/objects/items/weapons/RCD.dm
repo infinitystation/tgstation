@@ -6,26 +6,29 @@ RCD
 */
 /obj/item/weapon/rcd
 	name = "rapid-construction-device (RCD)"
-	desc = "A device used to rapidly build walls/floor."
+	desc = "A device used to rapidly build and deconstruct walls and floors."
 	icon = 'icons/obj/items.dmi'
 	icon_state = "rcd"
 	opacity = 0
 	density = 0
 	anchored = 0.0
 	flags = CONDUCT
+	slot_flags = SLOT_BELT
 	force = 10.0
 	throwforce = 10.0
 	throw_speed = 3
 	throw_range = 5
 	w_class = 3.0
-	m_amt = 30000
+	m_amt = 100000
 	origin_tech = "engineering=4;materials=2"
 	var/datum/effect/effect/system/spark_spread/spark_system
 	var/matter = 0
+	var/max_matter = 100
 	var/working = 0
 	var/mode = 1
 	var/canRwall = 0
 	var/disabled = 0
+	var/ratio = 1
 	var/airlock_type = /obj/machinery/door/airlock
 	var/advanced_airlock_setting = 1 //Set to 1 if you want more paintjobs available
 
@@ -92,26 +95,46 @@ RCD
 
 
 /obj/item/weapon/rcd/New()
-	desc = "A RCD. It currently holds [matter]/30 matter-units."
+	desc = "A RCD. It currently holds [matter]/[max_matter] matter-units."
 	src.spark_system = new /datum/effect/effect/system/spark_spread
 	spark_system.set_up(5, 0, src)
 	spark_system.attach(src)
 	return
 
 
-/obj/item/weapon/rcd/attackby(obj/item/weapon/W, mob/user)
+/obj/item/weapon/rcd/Destroy()
+	qdel(spark_system)
+	spark_system = null
+	return ..()
+
+/obj/item/weapon/rcd/attackby(obj/item/weapon/W, mob/user, params)
 	..()
-	if(istype(W, /obj/item/weapon/rcd_ammo))
-		if((matter + 10) > 30)
+	if(istype(W, /obj/item/weapon/rcd_ammo/advanced))
+		if((matter + 100) > max_matter)
 			user << "<span class='notice'>The RCD cant hold any more matter-units.</span>"
 			return
 		user.drop_item()
 		qdel(W)
-		matter += 10
+		matter += 100
 		playsound(src.loc, 'sound/machines/click.ogg', 50, 1)
-		user << "<span class='notice'>The RCD now holds [matter]/30 matter-units.</span>"
-		desc = "A RCD. It currently holds [matter]/30 matter-units."
+		user << "<span class='notice'>The RCD now holds [matter]/[max_matter] matter-units.</span>"
+		desc = "A RCD. It currently holds [matter]/[max_matter] matter-units."
 		return
+
+	if(istype(W, /obj/item/weapon/rcd_ammo))
+		var/obj/item/weapon/rcd_ammo/R = W
+		if((matter + R.ammoamt) > max_matter)
+			user << "<span class='warning'>The RCD can't hold any more matter-units!</span>"
+			return
+		if(!user.unEquip(W))
+			return
+		qdel(W)
+		matter += R.ammoamt
+		playsound(src.loc, 'sound/machines/click.ogg', 50, 1)
+		user << "<span class='notice'>The RCD now holds [matter]/[max_matter] matter-units.</span>"
+		desc = "A RCD. It currently holds [matter]/[max_matter] matter-units."
+		return
+
 
 
 /obj/item/weapon/rcd/attack_self(mob/user)
@@ -120,19 +143,19 @@ RCD
 	switch(mode)
 		if(1)
 			mode = 2
-			user << "<span class='notice'>Changed mode to 'Airlock'</span>"
+			user << "<span class='notice'>You change RCD's mode to 'Airlock'.</span>"
 			if(prob(20))
 				src.spark_system.start()
 			return
 		if(2)
 			mode = 3
-			user << "<span class='notice'>Changed mode to 'Deconstruct'</span>"
+			user << "<span class='notice'>You change RCD's mode to 'Deconstruct'.</span>"
 			if(prob(20))
 				src.spark_system.start()
 			return
 		if(3)
 			mode = 1
-			user << "<span class='notice'>Changed mode to 'Floor & Walls'</span>"
+			user << "<span class='notice'>You change RCD's mode to 'Floor & Walls'.</span>"
 			if(prob(20))
 				src.spark_system.start()
 			return
@@ -144,7 +167,8 @@ RCD
 /obj/item/weapon/rcd/afterattack(atom/A, mob/user, proximity)
 	if(!proximity) return 0
 	if(disabled && !isrobot(user))
-		return 0
+		if(ratio<3)
+			return 0
 	if(istype(A,/area/shuttle)||istype(A,/turf/space/transit))
 		return 0
 	if(!(istype(A, /turf) || istype(A, /obj/machinery/door/airlock)))
@@ -153,69 +177,102 @@ RCD
 	switch(mode)
 		if(1)
 			if(istype(A, /turf/space))
-				if(useResource(1, user))
-					user << "Building Floor..."
+				var/turf/space/S = A
+				if(useResource((1/ratio), user))
+					user << "<span class='notice'>You start building floor...</span>"
 					activate()
-					A:ChangeTurf(/turf/simulated/floor/plating)
+					S.ChangeTurf(/turf/simulated/floor/plating)
 					return 1
 				return 0
 
 			if(istype(A, /turf/simulated/floor))
-				if(checkResource(3, user))
-					user << "Building Wall ..."
+				var/turf/simulated/floor/F = A
+				if(checkResource((3/ratio), user))
+					user << "<span class='notice'>You start building wall...</span>"
 					playsound(src.loc, 'sound/machines/click.ogg', 50, 1)
-					if(do_after(user, 20))
-						if(!useResource(3, user)) return 0
+					if((ratio > 2) || do_after(user, 20))
+						if(!useResource((3/ratio), user)) return 0
 						activate()
-						A:ChangeTurf(/turf/simulated/wall)
+						F.ChangeTurf(/turf/simulated/wall)
+						return 1
+				return 0
+
+			// RCD buff for borgs
+			if(istype(A, /turf/simulated/wall) && canRwall)
+				if(checkResource((2/ratio), user))
+					user << "Reinforcing Wall ..."
+					playsound(src.loc, 'sound/machines/click.ogg', 50, 1)
+					if(do_after(user, round(20/ratio)))
+						if(!useResource((2/ratio), user)) return 0
+						activate()
+						A:ChangeTurf(/turf/simulated/wall/r_wall)
 						return 1
 				return 0
 
 		if(2)
 			if(istype(A, /turf/simulated/floor))
-				if(checkResource(10, user))
-					user << "Building Airlock..."
-					playsound(src.loc, 'sound/machines/click.ogg', 50, 1)
-					if(do_after(user, 50))
-						if(!useResource(10, user)) return 0
-						activate()
-						var/obj/machinery/door/airlock/T = new airlock_type( A )
-						T.autoclose = 1
-						return 1
-					return 0
+				if(checkResource((10/ratio), user))
+					var/door_check = 1
+					for(var/obj/machinery/door/D in A)
+						if(!D.sub_door)
+							door_check = 0
+							break
+
+					if(door_check)
+						user << "<span class='notice'>You start building airlock...</span>"
+						playsound(src.loc, 'sound/machines/click.ogg', 50, 1)
+						if(do_after(user, round(50/ratio)))
+							if(!useResource((10/ratio), user)) return 0
+							activate()
+							var/obj/machinery/door/airlock/T = new airlock_type( A )
+							if(!T.checkForMultipleDoors())
+								qdel(T)
+								useResource((-10/ratio), user)
+								return 0
+							T.autoclose = 1
+							return 1
+						return 0
+					else
+						user << "<span class='warning'>There is another door here!</span>"
+						return 0
 				return 0
 
 		if(3)
 			if(istype(A, /turf/simulated/wall))
-				if(istype(A, /turf/simulated/wall/r_wall) && !canRwall)
+				var/turf/simulated/wall/W = A
+				if(istype(W, /turf/simulated/wall/r_wall) && !canRwall)
 					return 0
-				if(checkResource(5, user))
-					user << "Deconstructing Wall..."
+				if(checkResource((5/ratio), user))
+					user << "<span class='notice'>You start deconstructing wall...</span>"
 					playsound(src.loc, 'sound/machines/click.ogg', 50, 1)
-					if(do_after(user, 40))
-						if(!useResource(5, user)) return 0
+					if(do_after(user, round(40/ratio)))
+						if(!useResource((5/ratio), user)) return 0
 						activate()
-						A:ChangeTurf(/turf/simulated/floor/plating)
+						W.ChangeTurf(/turf/simulated/floor/plating)
 						return 1
 				return 0
 
 			if(istype(A, /turf/simulated/floor))
-				if(checkResource(5, user))
-					user << "Deconstructing Floor..."
+				var/turf/simulated/floor/F = A
+				if(istype(F, F.baseturf))
+					user << "<span class='notice'>You can't dig any deeper!</span>"
+					return 0
+				else if(checkResource((1/ratio), user))
+					user << "<span class='notice'>You start deconstructing floor...</span>"
 					playsound(src.loc, 'sound/machines/click.ogg', 50, 1)
-					if(do_after(user, 50))
-						if(!useResource(5, user)) return 0
+					if((ratio > 2) || do_after(user, 50))
+						if(!useResource((1/ratio), user)) return 0
 						activate()
-						A:ChangeTurf(/turf/space)
+						F.ChangeTurf(F.baseturf)
 						return 1
 				return 0
 
 			if(istype(A, /obj/machinery/door/airlock))
-				if(checkResource(10, user))
-					user << "Deconstructing Airlock..."
+				if(checkResource((20/ratio), user))
+					user << "<span class='notice'>You start deconstructing airlock...</span>"
 					playsound(src.loc, 'sound/machines/click.ogg', 50, 1)
-					if(do_after(user, 50))
-						if(!useResource(10, user)) return 0
+					if(do_after(user, round(50/ratio)))
+						if(!useResource((20/ratio), user)) return 0
 						activate()
 						qdel(A)
 						return 1
@@ -229,7 +286,7 @@ RCD
 	if(matter < amount)
 		return 0
 	matter -= amount
-	desc = "A RCD. It currently holds [matter]/30 matter-units."
+	desc = "A RCD. It currently holds [matter]/[max_matter] matter-units."
 	return 1
 
 /obj/item/weapon/rcd/proc/checkResource(var/amount, var/mob/user)
@@ -250,6 +307,16 @@ RCD
 	desc = "A device used to rapidly build walls/floor."
 	canRwall = 1
 
+/obj/item/weapon/rcd/loaded
+	matter = 100
+
+/obj/item/weapon/rcd/combat
+	name = "combat RCD"
+	max_matter = 500
+	matter = 500
+	canRwall = 1
+	ratio = 2
+
 /obj/item/weapon/rcd_ammo
 	name = "compressed matter cartridge"
 	desc = "Highly compressed matter for the RCD."
@@ -262,3 +329,32 @@ RCD
 	origin_tech = "materials=2"
 	m_amt = 16000
 	g_amt = 8000
+	var/ammoamt = 20
+
+/obj/item/weapon/rcd/advanced
+	name = "advanced rapid-construction-device (RCD)"
+	desc = "An advanced device used to rapidly build and deconstruct walls and floors."
+	flags = CONDUCT
+	force = 12.0
+	throwforce = 10.0
+	throw_speed = 3
+	throw_range = 5
+	w_class = 3.0
+	m_amt = 100000
+	origin_tech = "engineering=6;materials=7;bluespace=4;plasmatech=4"
+	matter = 0
+	max_matter = 500
+	canRwall = 1
+	ratio = 3
+
+/obj/item/weapon/rcd_ammo/advanced
+	name = "advanced compressed matter cartridge"
+	desc = "Ultra-Highly compressed matter for the RCD."
+	origin_tech = "materials=4"
+	m_amt = 80000
+	g_amt = 40000
+	ammoamt = 100
+
+/obj/item/weapon/rcd_ammo/large
+	ammoamt = 100
+

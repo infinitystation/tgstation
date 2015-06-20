@@ -8,17 +8,17 @@ STATIONNAME Infinity
 LOBBY_COUNTDOWN 120
 
 ## Add a # infront of this if you want to use the SQL based admin system, the legacy system uses admins.txt. You need to set up your database to use the SQL based system.
-ADMIN_LEGACY_SYSTEM
+#ADMIN_LEGACY_SYSTEM
 
 ## Add a # infront of this if you want to use the SQL based banning system. The legacy systems use the files in the data folder. You need to set up your database to use the SQL based system.
-BAN_LEGACY_SYSTEM
+#BAN_LEGACY_SYSTEM
 
 ## Unhash this entry to have certain jobs require your account to be at least a certain number of days old to select. You can configure the exact age requirement for different jobs by editing
 ## the minimal_player_age variable in the files in folder /code/game/jobs/job/.. for the job you want to edit. Set minimal_player_age to 0 to disable age requirement for that job.
 ## REQUIRES the database set up to work. Keep it hashed if you don't have a database set up.
 ## NOTE: If you have just set-up the database keep this DISABLED, as player age is determined from the first time they connect to the server with the database up. If you just set it up, it means
 ## you have noone older than 0 days, since noone has been logged yet. Only turn this on once you have had the database up for 30 days.
-#USE_AGE_RESTRICTION_FOR_JOBS
+USE_AGE_RESTRICTION_FOR_JOBS
 
 ## log OOC channel
 LOG_OOC
@@ -120,7 +120,7 @@ WIKIURL http://ru.infinity.wikia.com/wiki
 RULESURL http://infinity.smforum.ru/index.php?topic=79.0
 
 ##Github address
-# GITHUBURL https://www.github.com/tgstation/-tg-station
+GITHUBURL https://bitbucket.org/infinity_team/infinity-tg
 
 ## Ban appeals URL - usually for a forum or wherever people should go to contact your admins.
 BANAPPEALS http://infinity.smforum.ru/
@@ -143,13 +143,51 @@ ALLOW_HOLIDAYS
 #USEIRCBOT
 
 ##Defines the ticklag for the world.  0.9 is the normal one, 0.5 is smoother.
-TICKLAG 0.9
+TICKLAG 0.6
 
 ## Defines if Tick Compensation is used.  It results in a minor slowdown of movement of all mobs, but attempts to result in a level movement speed across all ticks.  Recommended if tickrate is lowered.
-TICKCOMP 0
+TICKCOMP 1
 
 ## Comment this out to disable automuting
 AUTOMUTE_ON
 
 ## Communication key for receiving data through world/Topic(), you don't want to give this out
 #COMMS_KEY default_pwd
+
+## Uncomment this to let players see their own notes (they can still be set by admins only)
+#SEE_OWN_NOTES
+
+##Note: all population caps can be used with each other if desired.
+
+## Uncomment for 'soft' population caps, players will be warned while joining if the living crew exceeds the listed number.
+#SOFT_POPCAP 100
+
+## Message for soft cap
+SOFT_POPCAP_MESSAGE Be warned that the server is currently serving a high number of users, consider using alternative game servers.
+
+## Uncomment for 'hard' population caps, players will not be allowed to spawn if the living crew exceeds the listed number, though they may still observe or wait for the living crew to decrease in size.
+#HARD_POPCAP 150
+
+## Message for hard cap
+HARD_POPCAP_MESSAGE The server is currently serving a high number of users, You cannot currently join. You may wait for the number of living crew to decline, observe, or find alternative servers.
+
+## Uncomment for 'extreme' population caps, players will not be allowed to join the server if living crew exceeds the listed number.
+#EXTREME_POPCAP 200
+
+## Message for extreme cap
+EXTREME_POPCAP_MESSAGE The server is currently serving a high number of users, find alternative servers.
+
+## Notify admins when a new player connects for the first x days a player's been around. (0 for first connection only, -1 for never)
+##	Requres database
+NOTIFY_NEW_PLAYER_AGE 0 
+
+## Notify the irc channel when a new player makes their first connection
+##	Requres database
+IRC_FIRST_CONNECTION_ALERT
+
+## Deny all new connections by ckeys we haven't seen before (exempts admins and only denies the connection if the database is enabled and connected)
+##	Requires database
+#PANIC_BUNKER
+
+## Uncomment to have the changelog file automatically open when a user connects and hasn't seen the latest changelog
+#AGGRESSIVE_CHANGELOG

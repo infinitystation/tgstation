@@ -28,25 +28,26 @@
 
 /obj/item/device/multitool/ai_detect/New()
 	..()
-	processing_objects += src
-
+	SSobj.processing += src
 
 /obj/item/device/multitool/ai_detect/Destroy()
-	processing_objects -= src
+	SSobj.processing -= src
 	..()
 
 /obj/item/device/multitool/ai_detect/process()
-
 	if(track_delay > world.time)
 		return
 
 	var/found_eye = 0
 	var/turf/our_turf = get_turf(src)
 
-	if(cameranet.chunkGenerated(our_turf.x, our_turf.y, our_turf.z))
+	for(var/mob/living/silicon/ai/AI in ai_list)
+		if(AI.cameraFollow == src)
+			found_eye = 1
+			break
 
+	if(!found_eye && cameranet.chunkGenerated(our_turf.x, our_turf.y, our_turf.z))
 		var/datum/camerachunk/chunk = cameranet.getCameraChunk(our_turf.x, our_turf.y, our_turf.z)
-
 		if(chunk)
 			if(chunk.seenby.len)
 				for(var/mob/camera/aiEye/A in chunk.seenby)
@@ -63,3 +64,22 @@
 	track_delay = world.time + 10 // 1 second
 	return
 
+
+//Multimeter
+/obj/item/device/multitool/multimeter
+	name = "multimeter"
+	desc = "»спользуется для измерения потребления электроэнергии оборудования и прозвонки проводов. –екомендуется докторами"
+	icon = 'icons/obj/multimeter.dmi'
+	icon_state = "multimeter"
+	origin_tech = "magnets=3;engineering=3"
+	var/mode = 1 // Mode
+	siemens_coefficient = 0
+
+//mode
+/obj/item/device/multitool/multimeter/attack_self(mob/living/user as mob)
+	if (mode)
+		mode = 0 // Measuring
+		user << "<span class='notice'>¬ключен режим измерения</span>"
+	else
+		mode = 1 // Checking
+		user << "<span class='notice'>¬ключен режим прозвонки</span>"

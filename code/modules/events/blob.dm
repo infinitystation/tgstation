@@ -1,8 +1,8 @@
 /datum/round_event_control/blob
 	name = "Blob"
 	typepath = /datum/round_event/blob
-	weight = 5
-	max_occurrences = 1
+	weight = 0
+	max_occurrences = 0
 
 	earliest_start = 48000 // 1 hour 20 minutes
 
@@ -18,7 +18,7 @@
 		new_rate = strength
 
 /datum/round_event/blob/announce()
-	priority_announce("Confirmed outbreak of level 5 biohazard aboard [station_name()]. All personnel must contain the outbreak.", "Biohazard Alert", 'sound/AI/outbreak5.ogg')
+	priority_announce("Ќа станции [station_name()] подтверждена биологическая угроза 5-го уровня. ¬сему персоналу необходимо сдержать угрозу.", "“ревога! Ѕиологическая угроза!", 'sound/AI/outbreak5.ogg')
 
 
 /datum/round_event/blob/start()

@@ -16,7 +16,7 @@ In my current plan for it, 'solid' will be defined as anything with density == 1
 	announceWhen = 5
 
 /datum/round_event/immovable_rod/announce()
-	priority_announce("What the fuck was that?!", "General Alert")
+	priority_announce("Какого чёрта?! Что это было?!", "ГлавнаЯ Тревога")
 
 /datum/round_event/immovable_rod/start()
 	var/startside = pick(cardinal)
@@ -50,12 +50,6 @@ In my current plan for it, 'solid' will be defined as anything with density == 1
 /obj/effect/immovablerod/Bump(atom/clong)
 	playsound(src, 'sound/effects/bang.ogg', 50, 1)
 	audible_message("CLANG")
-
-	if(istype(clong, /turf/unsimulated) || istype(clong, /turf/simulated/shuttle)) //Unstoppable force meets immovable object
-		explosion(src.loc, 4, 5, 6, 7, 0)
-		if(src)
-			qdel(src)
-		return
 
 	if(clong && prob(25))
 		x = clong.x

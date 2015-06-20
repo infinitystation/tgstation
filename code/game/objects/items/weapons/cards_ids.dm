@@ -62,6 +62,15 @@
 	icon_state = "emag"
 	item_state = "card-id"
 	origin_tech = "magnets=2;syndicate=2"
+	flags = NOBLUDGEON
+
+/obj/item/weapon/card/emag/attack()
+	return
+
+/obj/item/weapon/card/emag/afterattack(atom/target, mob/user, proximity)
+	var/atom/A = target
+	if(!proximity) return
+	A.emag_act(user)
 
 /obj/item/weapon/card/id
 	name = "identification card"
@@ -181,6 +190,28 @@ update_label("John Doe", "Clowny")
 	New()
 		access = get_all_centcom_access()
 		..()
+/obj/item/weapon/card/id/ert
+	name = "\improper Centcom ID"
+	desc = "A ERT ID card"
+	icon_state = "centcom"
+	registered_name = "Emergency Response Team Commander"
+	assignment = "Emergency Response Team Commander"
+	New() access = get_all_accesses()+get_ert_access("commander")-access_change_ids
+
+/obj/item/weapon/card/id/ert/Security
+	registered_name = "Security Response Officer"
+	assignment = "Security Response Officer"
+	New() access = get_all_accesses()+get_ert_access("sec")-access_change_ids
+
+/obj/item/weapon/card/id/ert/Engineer
+	registered_name = "Engineer Response Officer"
+	assignment = "Engineer Response Officer"
+	New() access = get_all_accesses()+get_ert_access("eng")-access_change_ids
+
+/obj/item/weapon/card/id/ert/Medical
+	registered_name = "Medical Response Officer"
+	assignment = "Medical Response Officer"
+	New() access = get_all_accesses()+get_ert_access("med")-access_change_ids
 
 /obj/item/weapon/card/id/prisoner
 	name = "prisoner ID card"
@@ -193,7 +224,7 @@ update_label("John Doe", "Clowny")
 	var/points = 0
 
 /obj/item/weapon/card/id/prisoner/attack_self(mob/user as mob)
-	usr << "You have accumulated [points] out of the [goal] points you need for freedom."
+	usr << "<span class='notice'>You have accumulated [points] out of the [goal] points you need for freedom.</span>"
 
 /obj/item/weapon/card/id/prisoner/one
 	name = "Prisoner #13-001"

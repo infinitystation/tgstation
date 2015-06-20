@@ -17,9 +17,7 @@ var/next_mob_id = 0
 /mob/New()
 	tag = "mob_[next_mob_id++]"
 	mob_list += src
-	need_to_shit_max += rand(-150,150) // to shit
-	need_to_shit = 0
-	need_to_shit_again = 140
+	need_to_shit = rand(0,300)
 	if(stat == DEAD)
 		dead_mob_list += src
 	else
@@ -46,7 +44,7 @@ var/next_mob_id = 0
 	t+= "<span class='notice'>Plasma : [environment.toxins] \n</span>"
 	t+= "<span class='notice'>Carbon Dioxide: [environment.carbon_dioxide] \n</span>"
 	for(var/datum/gas/trace_gas in environment.trace_gases)
-		usr << "<span class='notice'>[trace_gas.type]: [trace_gas.moles] \n</span>"
+		t+= "<span class='notice'>[trace_gas.type]: [trace_gas.moles] \n</span>"
 
 	usr.show_message(t, 1)
 
@@ -57,19 +55,19 @@ var/next_mob_id = 0
 	msg = copytext(msg, 1, MAX_MESSAGE_LEN)
 
 	if (type)
-		if(type & 1 && (sdisabilities & BLIND || blinded || paralysis) )//Vision related
+		if(type & 1 && (disabilities & BLIND || paralysis) )//Vision related
 			if (!( alt ))
 				return
 			else
 				msg = alt
 				type = alt_type
-		if (type & 2 && (sdisabilities & DEAF || ear_deaf))//Hearing related
+		if (type & 2 && ear_deaf)//Hearing related
 			if (!( alt ))
 				return
 			else
 				msg = alt
 				type = alt_type
-				if ((type & 1 && sdisabilities & BLIND))
+				if ((type & 1 && disabilities & BLIND))
 					return
 	// Added voice muffling for Issue 41.
 	if(stat == UNCONSCIOUS || sleeping > 0)
@@ -78,28 +76,78 @@ var/next_mob_id = 0
 		src << msg
 	return
 
-// Show a message to all mobs in sight of this one
+// Show a message to all mobs who sees the src mob and the src mob itself
 // This would be for visible actions by the src mob
 // message is the message output to anyone who can see e.g. "[src] does something!"
-// self_message (optional) is what the src mob sees  e.g. "You do something!"
+// self_message (optional) is what the src mob sees e.g. "You do something!"
 // blind_message (optional) is what blind people will hear e.g. "You hear something!"
 
 /mob/visible_message(var/message, var/self_message, var/blind_message)
-	for(var/mob/M in viewers(src))
+	var/list/mob_viewers = list()
+	var/list/possible_viewers = list()
+	mob_viewers |= src
+	mob_viewers |= viewers(src)
+	var/heard = get_hear(7, src)
+	for(var/atom/movable/A in heard)
+		possible_viewers |= recursive_hear_check(A)
+	for(var/mob/B in possible_viewers)
+		if(B in mob_viewers)
+			continue
+		if(isturf(B.loc))
+			continue
+		var/turf/T = get_turf(B)
+		if(src in view(T))
+			mob_viewers |= B
+
+	for(var/mob/M in mob_viewers)
 		if(M.see_invisible < invisibility)
 			continue //can't view the invisible
 		var/msg = message
 		if(self_message && M==src)
 			msg = self_message
-		M.show_message( msg, 1, blind_message, 2)
+		M.show_message(msg, 1)
 
-// Show a message to all mobs in sight of this atom
+	if(blind_message)
+		var/list/mob_hearers = list()
+		for(var/mob/C in get_hearers_in_view(7, src))
+			if(C in mob_viewers)
+				continue
+			mob_hearers |= C
+		for(var/mob/MOB in mob_hearers)
+			MOB.show_message(blind_message, 2)
+
+// Show a message to all mobs who sees this atom
 // Use for objects performing visible actions
 // message is output to anyone who can see, e.g. "The [src] does something!"
 // blind_message (optional) is what blind people will hear e.g. "You hear something!"
+
 /atom/proc/visible_message(var/message, var/blind_message)
-	for(var/mob/M in viewers(src))
-		M.show_message( message, 1, blind_message, 2)
+	var/list/mob_viewers = list()
+	var/list/possible_viewers = list()
+	mob_viewers |= viewers(src)
+	var/heard = get_hear(7, src)
+	for(var/atom/movable/A in heard)
+		possible_viewers |= recursive_hear_check(A)
+	for(var/mob/B in possible_viewers)
+		if(B in mob_viewers)
+			continue
+		if(isturf(B.loc))
+			continue
+		var/turf/T = get_turf(B)
+		if(src in view(T))
+			mob_viewers |= B
+
+	for(var/mob/M in mob_viewers)
+		M.show_message(message, 1)
+
+	if(blind_message)
+		var/list/mob_hearers = list()
+		for(var/mob/C in get_hearers_in_view(7, src))
+			if(C in mob_viewers)
+				continue
+			mob_hearers |= C
+		for(var/mob/MOB in mob_hearers)
+			MOB.show_message(blind_message, 2)
 
 // Show a message to all mobs in earshot of this one
 // This would be for audible actions by the src mob
@@ -182,6 +230,9 @@ var/next_mob_id = 0
 /mob/proc/restrained()
 	return
 
+/mob/proc/incapacitated()
+	return
+
 //This proc is called whenever someone clicks an inventory ui slot.
 /mob/proc/attack_ui(slot)
 	var/obj/item/W = get_active_hand()
@@ -216,7 +267,7 @@ var/next_mob_id = 0
 			qdel(W)
 		else
 			if(!disable_warning)
-				src << "<span class='danger'>You are unable to equip that.</span>" //Only print if qdel_on_fail is false
+				src << "<span class='warning'>You are unable to equip that!</span>" //Only print if qdel_on_fail is false
 		return 0
 	equip_to_slot(W, slot, redraw_mob) //This proc should not ever fail.
 	return 1
@@ -292,7 +343,6 @@ var/list/slot_equipment_priority = list( \
 	set name = "Examine"
 	set category = "IC"
 
-//	if( (sdisabilities & BLIND || blinded || stat) && !istype(src,/mob/dead/observer) )
 	if(is_blind(src))
 		src << "<span class='notice'>Something is there but you can't see it.</span>"
 		return
@@ -341,6 +391,8 @@ var/list/slot_equipment_priority = list( \
 
 		src.pulling = AM
 		AM.pulledby = src
+		if(pullin)
+			pullin.update_icon(src)
 		if(ismob(AM))
 			var/mob/M = AM
 			if(!iscarbon(src))
@@ -356,6 +408,8 @@ var/list/slot_equipment_priority = list( \
 	if(pulling)
 		pulling.pulledby = null
 		pulling = null
+		if(pullin)
+			pullin.update_icon(src)
 
 /mob/verb/mode()
 	set name = "Activate Held Object"
@@ -420,13 +474,6 @@ var/list/slot_equipment_priority = list( \
 
 	if (popup)
 		memory()
-
-/*
-/mob/verb/help()
-	set name = "Help"
-	src << browse('html/help.html', "window=help")
-	return
-*/
 
 /mob/verb/abandon_mob()
 	set name = "Respawn"
@@ -505,8 +552,6 @@ var/list/slot_equipment_priority = list( \
 	set name = "Changelog"
 	set category = "OOC"
 	getFiles(
-		'html/postcardsmall.jpg',
-		'html/somerights20.png',
 		'html/88x31.png',
 		'html/bug-minus.png',
 		'html/cross-circle.png',
@@ -529,7 +574,7 @@ var/list/slot_equipment_priority = list( \
 	if(prefs.lastchangelog != changelog_hash)
 		prefs.lastchangelog = changelog_hash
 		prefs.save_preferences()
-		winset(src, "rpane.changelog", "background-color=none;font-style=;")
+		winset(src, "rpane.changelogb", "background-color=none;font-style=;")
 
 /mob/verb/observe()
 	set name = "Observe"
@@ -562,7 +607,7 @@ var/list/slot_equipment_priority = list( \
 				namecounts[name] = 1
 			creatures[name] = O
 
-		if(istype(O, /obj/machinery/singularity))
+		if(istype(O, /obj/singularity))
 			var/name = "Singularity"
 			if (names.Find(name))
 				namecounts[name]++
@@ -619,9 +664,6 @@ var/list/slot_equipment_priority = list( \
 	set category = "OOC"
 	reset_view(null)
 	unset_machine()
-	if(istype(src, /mob/living))
-		if(src:cameraFollow)
-			src:cameraFollow = null
 
 /mob/Topic(href, href_list)
 	if(href_list["mach_close"])
@@ -648,6 +690,16 @@ var/list/slot_equipment_priority = list( \
 			show_inv(usr)
 		else
 			usr << browse(null,"window=mob\ref[src]")
+
+	if(href_list["flavor_more"])
+		var/mob/A = locate(href_list["flavor_more"])
+		var/dat = sanitize_a2u(A.flavor_text)
+		var/datum/browser/flavor_more = new(usr, "flavor", "[A.name]", 500, 200)
+		flavor_more.set_content(dat)
+		flavor_more.open(1)
+
+	if(href_list["flavor_change"])
+		update_flavor_text()
 
 // The src mob is trying to strip an item from someone
 // Defined in living.dm
@@ -689,30 +741,39 @@ var/list/slot_equipment_priority = list( \
 /mob/Stat()
 	..()
 
-	if(client && client.holder)
+	if(statpanel("Status"))
+		stat(null, "Server Time: [time2text(world.realtime, "YYYY-MM-DD hh:mm")]")
+		var/ETA
+		switch(SSshuttle.emergency.mode)
+			if(SHUTTLE_RECALL)
+				ETA = "RCL"
+			if(SHUTTLE_CALL)
+				ETA = "ETA"
+			if(SHUTTLE_DOCKED)
+				ETA = "ETD"
+			if(SHUTTLE_ESCAPE)
+				ETA = "ESC"
+			if(SHUTTLE_STRANDED)
+				ETA = "ERR"
+		if(ETA)
+			var/timeleft = SSshuttle.emergency.timeLeft()
+			stat(null, "[ETA]-[(timeleft / 60) % 60]:[add_zero(num2text(timeleft % 60), 2)]")
 
-		if(statpanel("Status"))	//not looking at that panel
-			stat(null,"Location:\t([x], [y], [z])")
-			stat(null,"CPU:\t[world.cpu]")
-			stat(null,"Instances:\t[world.contents.len]")
+
+	if(client && client.holder)
+		if(statpanel("MC"))
+			stat("Location:","([x], [y], [z])")
+			stat("CPU:","[world.cpu]")
+			stat("Instances:","[world.contents.len]")
 
 			if(master_controller)
-				stat(null,"MasterController-[last_tick_duration] ([master_controller.processing?"On":"Off"]-[controller_iteration])")
-				stat(null,"Air-[master_controller.air_cost]\t#[global_activeturfs]")
-				stat(null,"Turfs-[master_controller.air_turfs]\tGroups-[master_controller.air_groups]")
-				stat(null,"SC-[master_controller.air_superconductivity]\tHP-[master_controller.air_highpressure]\tH-[master_controller.air_hotspots]")
-				stat(null,"Sun-[master_controller.sun_cost]")
-				stat(null,"Mob-[master_controller.mobs_cost]\t#[mob_list.len]")
-				stat(null,"Dis-[master_controller.diseases_cost]\t#[active_diseases.len]")
-				stat(null,"Mch-[master_controller.machines_cost]\t#[machines.len]")
-				stat(null,"Bots-[master_controller.aibots_cost]\t#[aibots.len]")
-				stat(null,"Obj-[master_controller.objects_cost]\t#[processing_objects.len]")
-				stat(null,"Net-[master_controller.networks_cost]\tPnet-[master_controller.powernets_cost]")
-				stat(null,"NanoUI-[master_controller.nano_cost]\t#[nanomanager.processing_uis.len]")
-				stat(null,"GC-[master_controller.gc_cost]\t#[garbage.destroyed.len]-#dels[garbage.dels]")
-				stat(null,"Tick-[master_controller.ticker_cost]\tALL-[master_controller.total_cost]")
+				stat("MasterController:","[round(master_controller.cost,0.001)]ds (Interval:[master_controller.processing_interval] | Iteration:[master_controller.iteration])")
+				stat("Subsystem cost per second:","[round(master_controller.SSCostPerSecond,0.001)]ds")
+				for(var/datum/subsystem/SS in master_controller.subsystems)
+					if(SS.can_fire)
+						SS.stat_entry()
 			else
-				stat(null,"MasterController-ERROR")
+				stat("MasterController:","ERROR")
 
 	if(listed_turf && client)
 		if(!TurfAdjacent(listed_turf))
@@ -720,6 +781,8 @@ var/list/slot_equipment_priority = list( \
 		else
 			statpanel(listed_turf.name, null, listed_turf)
 			for(var/atom/A in listed_turf)
+				if(!A.mouse_opacity)
+					continue
 				if(A.invisibility > see_invisible)
 					continue
 				statpanel(listed_turf.name, null, A)
@@ -758,11 +821,12 @@ var/list/slot_equipment_priority = list( \
 	if(restrained())					return 0
 	return 1
 
+
 //Updates canmove, lying and icons. Could perhaps do with a rename but I can't think of anything to describe it.
-//Robots and brains have their own version so don't worry about them
+//Robots, animals and brains have their own version so don't worry about them
 /mob/proc/update_canmove()
 	var/ko = weakened || paralysis || stat || (status_flags & FAKEDEATH)
-	var/bed = !(buckled && istype(buckled, /obj/structure/stool/bed/chair))
+	var/buckle_lying = !(buckled && !buckled.buckle_lying)
 	if(ko || resting || stunned)
 		drop_r_hand()
 		drop_l_hand()
@@ -770,18 +834,22 @@ var/list/slot_equipment_priority = list( \
 		lying = 0
 		canmove = 1
 	if(buckled)
-		lying = 90 * bed
+		lying = 90*buckle_lying
 	else
 		if((ko || resting) && !lying)
 			fall(ko)
 	canmove = !(ko || resting || stunned || buckled)
 	density = !lying
+	if(lying)
+		if(layer == initial(layer)) //to avoid special cases like hiding larvas.
+			layer = MOB_LAYER - 0.2 //so mob lying always appear behind standing mobs
+	else
+		if(layer == MOB_LAYER - 0.2)
+			layer = initial(layer)
 	update_transform()
 	lying_prev = lying
-	if(update_icon) //forces a full overlay update
-		update_icon = 0
-		regenerate_icons()
 	return canmove
+
 
 /mob/proc/fall(var/forced)
 	drop_l_hand()
@@ -828,9 +896,6 @@ var/list/slot_equipment_priority = list( \
 /mob/proc/activate_hand(var/selhand)
 	return
 
-/mob/proc/SpeciesCanConsume()
-	return 0
-
 /mob/proc/Jitter(amount)
 	jitteriness = max(jitteriness,amount,0)
 
@@ -855,8 +920,8 @@ var/list/slot_equipment_priority = list( \
 		update_canmove()
 	return
 
-/mob/proc/Weaken(amount)
-	if(status_flags & CANWEAKEN)
+/mob/proc/Weaken(amount, var/ignore_canweaken = 0)
+	if(status_flags & CANWEAKEN || ignore_canweaken)
 		weakened = max(max(weakened,amount),0)
 		update_canmove()	//updates lying, canmove and icons
 	return
@@ -926,8 +991,53 @@ var/list/slot_equipment_priority = list( \
 
 /mob/proc/get_ghost(even_if_they_cant_reenter = 0)
 	if(mind)
-		for(var/mob/dead/observer/G in player_list)
+		for(var/mob/dead/observer/G in dead_mob_list)
 			if(G.mind == mind)
 				if(G.can_reenter_corpse || even_if_they_cant_reenter)
 					return G
 				break
+
+/mob/proc/adjustEarDamage()
+	return
+
+/mob/proc/setEarDamage()
+	return
+
+/mob/verb/update_flavor_text()
+	set src in usr
+	if(usr != src)
+		usr << "No."
+	var/msg = input(usr,"Set the flavor text in your 'examine' verb. Can also be used for OOC notes about your character.","Flavor Text",flavor_text) as message|null
+
+	if(msg != null)
+		msg = copytext(sanitize(msg), 1, MAX_MESSAGE_LEN)
+		flavor_text = msg
+
+/mob/proc/warn_flavor_changed()
+	if(flavor_text && flavor_text != "") // don't spam people that don't use it!
+		src << "<h2 class='alert'>OOC Предупреждение!:</h2>"
+		src << "<span class='alert'>Ваше описание персонажа устарело <a href=?src=\ref[usr];flavor_change=1>Помен&#255;ть.</a></span>"
+		return
+	else
+		return
+
+/mob/proc/print_flavor_text()
+	if (flavor_text && flavor_text != "")
+		var/msg = replacetext(flavor_text, "\n", " ")
+		if(lentext(msg) <= 40)
+			return "<span class='notice'>[msg]</span>"
+		else
+			return "<span class='notice'>[copytext(msg, 1, 37)]... <a href=?src=\ref[usr];flavor_more=\ref[src]>More...</a></span>"
+
+/mob/proc/AddSpell(var/obj/effect/proc_holder/spell/spell)
+	mob_spell_list += spell
+	if(!spell.action)
+		spell.action = new/datum/action/spell_action
+		spell.action.target = spell
+		spell.action.name = spell.name
+		spell.action.button_icon = spell.action_icon
+		spell.action.button_icon_state = spell.action_icon_state
+		spell.action.background_icon_state = spell.action_background_icon_state
+	if(isliving(src))
+		spell.action.Grant(src)
+	return

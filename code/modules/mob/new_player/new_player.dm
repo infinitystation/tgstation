@@ -3,8 +3,6 @@
 /mob/new_player
 	var/ready = 0
 	var/spawning = 0//Referenced when you want to delete the new_player later on in the code.
-	var/totalPlayers = 0		 //Player counts for the Lobby tab
-	var/totalPlayersReady = 0
 
 	flags = NONE
 
@@ -25,12 +23,14 @@
 	var/output = "<center><p><a href='byond://?src=\ref[src];show_preferences=1'>Setup Character</A></p>"
 
 	if(!ticker || ticker.current_state <= GAME_STATE_PREGAME)
-		if(!ready)	output += "<p><a href='byond://?src=\ref[src];ready=1'>Declare Ready</A></p>"
-		else	output += "<p><b>You are ready</b> <a href='byond://?src=\ref[src];ready=0'>Cancel</A></p>"
+		if(ready)
+			output += "<p>\[ <b>Ready</b> | <a href='byond://?src=\ref[src];ready=0'>Not Ready</a> \]</p>"
+		else
+			output += "<p>\[ <a href='byond://?src=\ref[src];ready=1'>Ready</a> | <b>Not Ready</b> \]</p>"
 
 	else
+		output += "<p><a href='byond://?src=\ref[src];manifest=1'>View the Crew Manifest</A></p>"
 		output += "<p><a href='byond://?src=\ref[src];late_join=1'>Join Game!</A></p>"
-		output += "<a href='byond://?src=\ref[src];manifest=1'>Crew Manifest</A><br><br>"
 
 	output += "<p><a href='byond://?src=\ref[src];observe=1'>Observe</A></p>"
 
@@ -56,7 +56,7 @@
 	output += "</center>"
 
 	//src << browse(output,"window=playersetup;size=210x240;can_close=0")
-	var/datum/browser/popup = new(src, "playersetup", "<div align='center'>New Player Options</div>", 210, 240)
+	var/datum/browser/popup = new(src, "playersetup", "<div align='center'>New Player Options</div>", 220, 265)
 	popup.set_window_options("can_close=0")
 	popup.set_content(output)
 	popup.open(0)
@@ -65,28 +65,16 @@
 /mob/new_player/Stat()
 	..()
 
-	statpanel("Lobby")
-	if(client.statpanel == "Lobby" && ticker)
-		if(ticker.hide_mode)
-			stat("Game Mode:", "Secret")
-		else
-			stat("Game Mode:", "[master_mode]")
-
-		if((ticker.current_state == GAME_STATE_PREGAME) && going)
-			stat("Time To Start:", ticker.pregame_timeleft)
-		if((ticker.current_state == GAME_STATE_PREGAME) && !going)
-			stat("Time To Start:", "DELAYED")
+	if(statpanel("Lobby"))
+		stat("Game Mode:", (ticker.hide_mode) ? "Secret" : "[master_mode]")
 
 		if(ticker.current_state == GAME_STATE_PREGAME)
-			stat("Players:", "[totalPlayers]")
-			if(src.client in admins)
-				stat("Players Ready:", "[totalPlayersReady]")
-			totalPlayers = 0
-			totalPlayersReady = 0
-			for(var/mob/new_player/player in player_list)
-				stat("[player.key]", (player.ready && src.client in admins)?("(Playing)"):(null))
-				totalPlayers++
-				if(player.ready)totalPlayersReady++
+			stat("Time To Start:", (ticker.timeLeft >= 0) ? "[round(ticker.timeLeft / 10)]s" : "DELAYED")
+
+			stat("Players:", "[ticker.totalPlayers]")
+			if(client.holder)
+				stat("Players Ready:", "[ticker.totalPlayersReady]")
+
 
 /mob/new_player/Topic(href, href_list[])
 	if(src != usr)
@@ -99,15 +87,10 @@
 		return 1
 
 	if(href_list["ready"])
-		ready = text2num(href_list["ready"])
-
-	if(href_list["manifest"])
-		var/dat = "<B>Crew Manifest.</B><HR>"
-		dat += "<table cellspacing=5><tr><th>Name</th><th>Position</th></tr>"
-		for(var/datum/data/record/t in data_core.general)
-			dat += "<tr><td>[t.fields["name"]]</td><td>[t.fields["rank"]]</td></tr>"
-		dat += "</table>"
-		usr << browse(dat, "window=manifest;size=440x410")
+		if(!ticker || ticker.current_state <= GAME_STATE_PREGAME) // Make sure we don't ready up after the round has started
+			ready = text2num(href_list["ready"])
+		else
+			ready = 0
 
 	if(href_list["refresh"])
 		src << browse(null, "window=playersetup") //closes the player setup window
@@ -120,7 +103,6 @@
 			var/mob/dead/observer/observer = new()
 
 			spawning = 1
-			src << sound(null, repeat = 0, wait = 0, volume = 85, channel = 1) // MAD JAMS cant last forever yo
 
 			observer.started_as_observer = 1
 			close_spawn_windows()
@@ -134,6 +116,7 @@
 			observer.real_name = client.prefs.real_name
 			observer.name = observer.real_name
 			observer.key = key
+			observer.stopLobbySound()
 			qdel(mind)
 
 			qdel(src)
@@ -143,7 +126,18 @@
 		if(!ticker || ticker.current_state != GAME_STATE_PLAYING)
 			usr << "<span class='danger'>The round is either not ready, or has already finished...</span>"
 			return
+		var/relevant_cap
+		if(config.hard_popcap && config.extreme_popcap)
+			relevant_cap = min(config.hard_popcap, config.extreme_popcap)
+		else
+			relevant_cap = max(config.hard_popcap, config.extreme_popcap)
+		if(relevant_cap && living_player_count() >= relevant_cap && !(ckey(key) in admin_datums))
+			usr << "<span class='danger'>[config.hard_popcap_message]</span>"
+			return
 		LateChoices()
+
+	if(href_list["manifest"])
+		ViewManifest()
 
 	if(href_list["SelectedJob"])
 
@@ -252,11 +246,18 @@
 						vote_on_poll(pollid, optionid, 1)
 
 /mob/new_player/proc/IsJobAvailable(rank)
-	var/datum/job/job = job_master.GetJob(rank)
+	var/datum/job/job = SSjob.GetJob(rank)
 	if(!job)
 		return 0
 	if((job.current_positions >= job.total_positions) && job.total_positions != -1)
-		return 0
+		if(job.title == "Assistant")
+			if(isnum(client.player_age) && client.player_age <= 14) //Newbies can always be assistants
+				return 1
+			for(var/datum/job/J in SSjob.occupations)
+				if(J && J.current_positions < J.total_positions && J.title != job.title)
+					return 0
+		else
+			return 0
 	if(jobban_isbanned(src,rank))
 		return 0
 	if(!job.player_old_enough(src.client))
@@ -271,11 +272,25 @@
 		src << alert("[rank] is not available. Please try another.")
 		return 0
 
-	job_master.AssignRole(src, rank, 1)
+	SSjob.AssignRole(src, rank, 1)
 
 	var/mob/living/carbon/human/character = create_character()	//creates the human and transfers vars and mind
-	job_master.EquipRank(character, rank, 1)					//equips the human
-	character.loc = pick(latejoin)
+	SSjob.EquipRank(character, rank, 1)					//equips the human
+
+	var/D = pick(latejoin)
+	if(!D)
+		for(var/turf/T in get_area_turfs(/area/shuttle/arrival))
+			if(!T.density)
+				var/clear = 1
+				for(var/obj/O in T)
+					if(O.density)
+						clear = 0
+						break
+				if(clear)
+					D = T
+					continue
+
+	character.loc = D
 	character.lastarea = get_area(loc)
 
 	if(character.mind.assigned_role != "Cyborg")
@@ -287,8 +302,24 @@
 
 	joined_player_list += character.ckey
 
-	if(config.allow_latejoin_antagonists && emergency_shuttle.timeleft() > 300) //Don't make them antags if the station is evacuating
-		ticker.mode.make_antag_chance(character)
+	if(config.allow_latejoin_antagonists)
+		switch(SSshuttle.emergency.mode)
+			if(SHUTTLE_RECALL, SHUTTLE_IDLE)
+				ticker.mode.make_antag_chance(character)
+			if(SHUTTLE_CALL)
+				if(SSshuttle.emergency.timeLeft(1) > initial(SSshuttle.emergencyCallTime)*0.5)
+					ticker.mode.make_antag_chance(character)
+	qdel(src)
+
+/mob/new_player/proc/Spawn_Prisoner()
+	var/mob/living/carbon/human/character = create_character()	//creates the human and transfers vars and mind
+	character.equip_to_slot_or_del(new /obj/item/clothing/shoes/sneakers/black(character), slot_shoes)
+	character.equip_to_slot_or_del(new /obj/item/clothing/under/color/random(character), slot_w_uniform)
+	character.loc = pick(ban_prison)
+	character.lastarea = get_area(loc)
+
+	joined_player_list += character.ckey
+
 	qdel(src)
 
 /mob/new_player/proc/AnnounceArrival(var/mob/living/carbon/human/character, var/rank)
@@ -299,8 +330,8 @@
 		if (ailist.len)
 			var/mob/living/silicon/ai/announcer = pick(ailist)
 			if(character.mind)
-				if((character.mind.assigned_role != "Cyborg") && (character.mind.special_role != "MODE"))
-					announcer.say("[character.real_name] has signed up as [rank].")
+				if((character.mind.assigned_role != "Cyborg") && (character.mind.assigned_role != character.mind.special_role))
+					announcer.say("[announcer.radiomod] [character.real_name] has signed up as [rank].")
 
 /mob/new_player/proc/LateChoices()
 	var/mills = world.time // 1/10 of a second, not real milliseconds but whatever
@@ -310,21 +341,22 @@
 
 	var/dat = "<div class='notice'>Round Duration: [round(hours)]h [round(mins)]m</div>"
 
-	if(emergency_shuttle) //In case Nanotrasen decides reposess Centcom's shuttles.
-		if(emergency_shuttle.direction == 2) //Shuttle is going to centcom, not recalled
+	switch(SSshuttle.emergency.mode)
+		if(SHUTTLE_ESCAPE)
 			dat += "<div class='notice red'>The station has been evacuated.</div><br>"
-		if(emergency_shuttle.direction == 1 && emergency_shuttle.timeleft() < 300) //Shuttle is past the point of no recall
-			dat += "<div class='notice red'>The station is currently undergoing evacuation procedures.</div><br>"
+		if(SHUTTLE_CALL)
+			if(SSshuttle.emergency.timeLeft() < 0.5 * initial(SSshuttle.emergencyCallTime)) //Shuttle is past the point of no recall
+				dat += "<div class='notice red'>The station is currently undergoing evacuation procedures.</div><br>"
 
 	var/available_job_count = 0
-	for(var/datum/job/job in job_master.occupations)
+	for(var/datum/job/job in SSjob.occupations)
 		if(job && IsJobAvailable(job.title))
 			available_job_count++;
 
 	dat += "<div class='clearBoth'>Choose from the following open positions:</div><br>"
 	dat += "<div class='jobs'><div class='jobsColumn'>"
 	var/job_count = 0
-	for(var/datum/job/job in job_master.occupations)
+	for(var/datum/job/job in SSjob.occupations)
 		if(job && IsJobAvailable(job.title))
 			job_count++;
 			if (job_count > round(available_job_count / 2))
@@ -333,6 +365,11 @@
 			if (job.title in command_positions)
 				position_class = "commandPosition"
 			dat += "<a class='[position_class]' href='byond://?src=\ref[src];SelectedJob=[job.title]'>[job.title] ([job.current_positions])</a><br>"
+	if(!job_count) //if there's nowhere to go, assistant opens up.
+		for(var/datum/job/job in SSjob.occupations)
+			if(job.title != "Assistant") continue
+			dat += "<a class='otherPosition' href='byond://?src=\ref[src];SelectedJob=[job.title]'>[job.title] ([job.current_positions])</a><br>"
+			break
 	dat += "</div></div>"
 
 	// Removing the old window method but leaving it here for reference
@@ -359,8 +396,6 @@
 		client.prefs.real_name = random_name(gender)
 	client.prefs.copy_to(new_character)
 
-	src << sound(null, repeat = 0, wait = 0, volume = 85, channel = 1) // MAD JAMS cant last forever yo
-
 	if(mind)
 		mind.active = 0					//we wish to transfer the key manually
 		mind.transfer_to(new_character)					//won't transfer key since the mind is not active
@@ -370,9 +405,18 @@
 	ready_dna(new_character, client.prefs.blood_type)
 
 	new_character.key = key		//Manually transfer the key to log them in
+	new_character.stopLobbySound()
+
+	new_character.regenerate_icons()
 
 	return new_character
 
+/mob/new_player/proc/ViewManifest()
+	var/dat = "<html><body>"
+	dat += "<h4>Crew Manifest</h4>"
+	dat += data_core.get_manifest(OOC = 1)
+
+	src << browse(dat, "window=manifest;size=387x420;can_close=1")
 
 /mob/new_player/Move()
 	return 0

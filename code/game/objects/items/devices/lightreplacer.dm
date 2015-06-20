@@ -70,36 +70,37 @@
 	..()
 	user << "It has [uses] light\s remaining."
 
-/obj/item/device/lightreplacer/attackby(obj/item/W, mob/user)
-	if(istype(W,  /obj/item/weapon/card/emag) && emagged == 0)
-		Emag()
-		return
+/obj/item/device/lightreplacer/attackby(obj/item/W, mob/user, params)
 
 	if(istype(W, /obj/item/stack/sheet/glass))
 		var/obj/item/stack/sheet/glass/G = W
 		if(uses >= max_uses)
-			user << "span class='warning'>[src.name] is full."
+			user << "<span class='warning'>[src.name] is full.</span>"
 			return
 		else if(G.use(decrement))
 			AddUses(increment)
 			user << "<span class='notice'>You insert a piece of glass into the [src.name]. You have [uses] lights remaining.</span>"
 			return
 		else
-			user << "<span class='warning'>You need one sheet of glass to replace lights.</span>"
+			user << "<span class='warning'>You need one sheet of glass to replace lights!</span>"
 
 	if(istype(W, /obj/item/weapon/light))
 		var/obj/item/weapon/light/L = W
 		if(L.status == 0) // LIGHT OKAY
 			if(uses < max_uses)
+				if(!user.unEquip(W))
+					return
 				AddUses(1)
-				user << "You insert the [L.name] into the [src.name]. You have [uses] lights remaining."
-				user.drop_item()
+				user << "<span class='notice'>You insert the [L.name] into the [src.name]. You have [uses] lights remaining.</span>"
 				qdel(L)
 				return
 		else
-			user << "You need a working light."
+			user << "<span class='warning'>You need a working light!</span>"
 			return
 
+/obj/item/device/lightreplacer/emag_act()
+	if(!emagged)
+		Emag()
 
 /obj/item/device/lightreplacer/attack_self(mob/user)
 	/* // This would probably be a bit OP. If you want it though, uncomment the code.
@@ -137,7 +138,7 @@
 	if(target.status != LIGHT_OK)
 		if(CanUse(U))
 			if(!Use(U)) return
-			U << "<span class='notice'>You replace the [target.fitting] with the [src].</span>"
+			U << "<span class='notice'>You replace the [target.fitting] with \the [src].</span>"
 
 			if(target.status != LIGHT_EMPTY)
 
@@ -170,7 +171,7 @@
 			U << failmsg
 			return
 	else
-		U << "There is a working [target.fitting] already inserted."
+		U << "<span class='warning'>There is a working [target.fitting] already inserted!</span>"
 		return
 
 /obj/item/device/lightreplacer/proc/Emag()

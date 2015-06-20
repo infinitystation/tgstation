@@ -142,7 +142,7 @@
 		emote("nod")
 
 /mob/living/verb/shake()
-	set name = "“р€сти головой"
+	set name = "“рясти головой"
 	set category = "Emotions"
 	if (emoteCooldownCheck() == 1)
 		emote("shake")

@@ -21,7 +21,7 @@
 /obj/item/weapon/shield/riot/IsShield()
 	return 1
 
-/obj/item/weapon/shield/riot/attackby(obj/item/weapon/W as obj, mob/user as mob)
+/obj/item/weapon/shield/riot/attackby(obj/item/weapon/W as obj, mob/user as mob, params)
 	if(istype(W, /obj/item/weapon/melee/baton))
 		if(cooldown < world.time - 25)
 			user.visible_message("<span class='warning'>[user] bashes [src] with [W]!</span>")
@@ -56,8 +56,8 @@
 /obj/item/weapon/shield/energy/IsReflect()
 	return (active)
 
-/obj/item/weapon/shield/energy/attack_self(mob/living/user)
-	if((CLUMSY in user.mutations) && prob(50))
+/obj/item/weapon/shield/energy/attack_self(mob/living/carbon/human/user)
+	if(user.disabilities & CLUMSY && prob(50))
 		user << "<span class='warning'>You beat yourself in the head with [src].</span>"
 		user.take_organ_damage(5)
 	active = !active
@@ -70,7 +70,6 @@
 		w_class = 4
 		playsound(user, 'sound/weapons/saberon.ogg', 35, 1)
 		user << "<span class='notice'>[src] is now active.</span>"
-		reflect_chance = 40
 	else
 		force = 3
 		throwforce = 3
@@ -78,7 +77,6 @@
 		w_class = 1
 		playsound(user, 'sound/weapons/saberoff.ogg', 35, 1)
 		user << "<span class='notice'>[src] can now be concealed.</span>"
-		reflect_chance = 0
 	add_fingerprint(user)
 
 /obj/item/weapon/shield/riot/tele
@@ -108,7 +106,7 @@
 		throw_speed = 2
 		w_class = 4
 		slot_flags = SLOT_BACK
-		user << "<span class='notice'>You extend the [src].</span>"
+		user << "<span class='notice'>You extend \the [src].</span>"
 	else
 		force = 3
 		throwforce = 3

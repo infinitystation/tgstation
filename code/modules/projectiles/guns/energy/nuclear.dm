@@ -1,17 +1,23 @@
 /obj/item/weapon/gun/energy/gun
 	name = "energy gun"
-	desc = "A basic hybrid energy gun with two settings: Stun and kill."
+	desc = "A basic hybrid energy gun with two settings: Disable and kill."
 	icon_state = "energy"
 	item_state = null	//so the human update icon uses the icon_state instead.
-	ammo_type = list(/obj/item/ammo_casing/energy/electrode, /obj/item/ammo_casing/energy/laser)
+	ammo_type = list(/obj/item/ammo_casing/energy/disabler, /obj/item/ammo_casing/energy/laser)
 	origin_tech = "combat=3;magnets=2"
 	modifystate = 2
-
+	can_flashlight = 1
 
 /obj/item/weapon/gun/energy/gun/attack_self(mob/living/user as mob)
 	select_fire(user)
 	update_icon()
 
+/obj/item/weapon/gun/energy/gun/hos
+	desc = "This is a expensive, modern recreation of a antique laser gun. This gun has several unique firemodes, but lacks the ability to recharge over time."
+	icon_state = "hoslaser"
+	item_state = null
+	force = 10
+	ammo_type = list(/obj/item/ammo_casing/energy/electrode/hos, /obj/item/ammo_casing/energy/laser/hos, /obj/item/ammo_casing/energy/disabler)
 
 /obj/item/weapon/gun/energy/gun/nuclear
 	name = "advanced energy gun"
@@ -21,14 +27,19 @@
 	var/lightfail = 0
 	var/charge_tick = 0
 	modifystate = 0
+	can_flashlight = 0
+	cell_removing = 0
+	cell_type = /obj/item/weapon/stock_parts/cell/ammo/high
+	pin = null
+	can_charge = 0
 
 /obj/item/weapon/gun/energy/gun/nuclear/New()
 	..()
-	processing_objects.Add(src)
+	SSobj.processing |= src
 
 
 /obj/item/weapon/gun/energy/gun/nuclear/Destroy()
-	processing_objects.Remove(src)
+	SSobj.processing.Remove(src)
 	..()
 
 
@@ -39,7 +50,7 @@
 	if(!power_supply) return 0
 	if((power_supply.charge / power_supply.maxcharge) != 1)
 		if(!failcheck())	return 0
-		power_supply.give(100)
+		power_supply.give(250)
 		update_icon()
 	return 1
 
@@ -53,16 +64,16 @@
 				M << "<span class='danger'>Your gun feels pleasantly warm for a moment.</span>"
 			else
 				M << "<span class='danger'>You feel a warm sensation.</span>"
-			M.apply_effect(rand(3,120), IRRADIATE)
+			M.irradiate(rand(3,120))
 		lightfail = 1
 	else
-		for (var/mob/living/M in range(rand(1,4),src)) //Big failure, TIME FOR RADIATION BITCHES
+		for (var/mob/living/M in range(rand(1,7),src)) //Big failure, TIME FOR RADIATION BITCHES
 			if (src in M.contents)
-				M << "<span class='danger'>Your gun's reactor overloads!</span>"
+				M << "<span class='danger'><b>Your gun's reactor overloads!</b></span>"
 			M << "<span class='danger'>You feel a wave of heat wash over you.</span>"
-			M.apply_effect(300, IRRADIATE)
-		crit_fail = 1 //break the gun so it stops recharging
-		processing_objects.Remove(src)
+			M.irradiate(3000)
+		//crit_fail = 1 //break the gun so it stops recharging
+		//SSobj.processing.Remove(src)
 		update_icon()
 	return 0
 
@@ -105,3 +116,17 @@
 	update_charge()
 	update_reactor()
 	update_mode()
+
+/obj/item/weapon/gun/energy/gun/turret
+	name = "hybrid turret gun"
+	desc = "A heavy hybrid energy cannon with two settings: Stun and kill."
+	icon_state = "turretlaser"
+	slot_flags = null
+	w_class = 5
+	ammo_type = list(/obj/item/ammo_casing/energy/electrode, /obj/item/ammo_casing/energy/laser)
+	heavy_weapon = 1
+	can_flashlight = 0
+	trigger_guard = 0
+
+/obj/item/weapon/gun/energy/gun/turret/update_icon()
+	icon_state = initial(icon_state)

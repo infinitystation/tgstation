@@ -11,7 +11,7 @@ var/const/AALARM_WIRE_AALARM = 16
 
 /datum/wires/alarm/CanUse(var/mob/living/L)
 	var/obj/machinery/alarm/A = holder
-	if(A.panel_open)
+	if(A.panel_open && A.buildstage == 2)
 		return 1
 	return 0
 
@@ -91,3 +91,19 @@ var/const/AALARM_WIRE_AALARM = 16
 			if (A.alarm_area.atmosalert(0,holder))
 				A.post_alert(0)
 			A.update_icon()
+
+/datum/wires/alarm/SolveWireFunction(var/function)
+	var/sf = ""
+	switch(function)
+		if(AALARM_WIRE_IDSCAN)
+			sf = "Port A"
+		if(AALARM_WIRE_POWER)
+			sf = "Port B"
+		if(AALARM_WIRE_SYPHON)
+			sf = "Port C"
+		if(AALARM_WIRE_AI_CONTROL)
+			sf = "Port D"
+		if(AALARM_WIRE_AALARM)
+			sf = "Port E"
+
+	return sf

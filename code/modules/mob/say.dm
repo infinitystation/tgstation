@@ -37,7 +37,7 @@
 	else
 		name = real_name
 	if(name != real_name)
-		alt_name = " (died as [real_name])"
+		alt_name = " (умер как [real_name])"
 
 	message = src.say_quote(message)
 	var/rendered = "<span class='game deadsay'><span class='prefix'>DEAD:</span> <span class='name'>[name]</span>[alt_name] <span class='message'>[message]</span></span>"
@@ -45,7 +45,7 @@
 	for(var/mob/M in player_list)
 		if(istype(M, /mob/new_player))
 			continue
-		if(M.client && M.client.holder && (M.client.prefs.toggles & CHAT_DEAD)) //admins can toggle deadchat on and off. This is a proc in admin.dm and is only give to Administrators and above
+		if(M.client && M.client.holder && (M.client.prefs.chat_toggles & CHAT_DEAD)) //admins can toggle deadchat on and off. This is a proc in admin.dm and is only give to Administrators and above
 			M << rendered	//Admins can hear deadchat, if they choose to, no matter if they're blind/deaf or not.
 		else if(M.stat == DEAD)
 			//M.show_message(rendered, 2) //Takes into account blindness and such. //preserved so you can look at it and cry at the stupidity of oldcoders. whoever coded this should be punched into the sun

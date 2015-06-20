@@ -25,6 +25,9 @@ var/const/tk_maxrange = 15
 /atom/proc/attack_self_tk(mob/user)
 	return
 
+/obj/item/attack_self_tk(mob/user)
+	attack_self(user)
+
 /obj/attack_tk(mob/user)
 	if(user.stat) return
 	if(anchored)
@@ -38,14 +41,11 @@ var/const/tk_maxrange = 15
 	return
 
 /obj/item/attack_tk(mob/user)
-	if(user.stat || !isturf(loc)) return
-	if((TK in user.mutations) && !user.get_active_hand()) // both should already be true to get here
-		var/obj/item/tk_grab/O = new(src)
-		user.put_in_active_hand(O)
-		O.host = user
-		O.focus_object(src)
-	else
-		WARNING("Strange attack_tk(): TK([TK in user.mutations]) empty hand([!user.get_active_hand()])")
+	if(user.stat) return
+	var/obj/item/tk_grab/O = new(src)
+	user.put_in_active_hand(O)
+	O.host = user
+	O.focus_object(src)
 	return
 
 
@@ -95,13 +95,13 @@ var/const/tk_maxrange = 15
 	if(focus)
 		focus.attack_self_tk(user)
 
-/obj/item/tk_grab/afterattack(atom/target, mob/living/user, proximity)//TODO: go over this
+/obj/item/tk_grab/afterattack(atom/target, mob/living/carbon/user, proximity, params)//TODO: go over this
 	if(!target || !user)	return
 	if(last_throw+3 > world.time)	return
 	if(!host || host != user)
 		qdel(src)
 		return
-	if(!(TK in host.mutations))
+	if(!(user.dna.check_mutation(TK)))
 		qdel(src)
 		return
 	if(isobj(target) && !isturf(target.loc))
@@ -121,7 +121,7 @@ var/const/tk_maxrange = 15
 
 	if(!istype(target, /turf) && istype(focus,/obj/item) && target.Adjacent(focus))
 		var/obj/item/I = focus
-		var/resolved = target.attackby(I, user, user:get_organ_target())
+		var/resolved = target.attackby(I, user, params)
 		if(!resolved && target && I)
 			I.afterattack(target,user,1) // for splashing with beakers
 
@@ -168,8 +168,7 @@ var/const/tk_maxrange = 15
 	O.icon_state = "nothing"
 	flick("empdisable",O)
 	spawn(5)
-		O.delete()
-	return
+		qdel(O)
 
 
 /obj/item/tk_grab/update_icon()
@@ -177,6 +176,10 @@ var/const/tk_maxrange = 15
 	if(focus && focus.icon && focus.icon_state)
 		overlays += icon(focus.icon,focus.icon_state)
 	return
+
+/obj/item/tk_grab/suicide_act(mob/user)
+	user.visible_message("<span class='suicide'>[user] is using \his telekinesis to choke \himself! It looks like \he's trying to commit suicide.</span>")
+	return (OXYLOSS)
 
 /*Not quite done likely needs to use something thats not get_step_to
 /obj/item/tk_grab/proc/check_path()

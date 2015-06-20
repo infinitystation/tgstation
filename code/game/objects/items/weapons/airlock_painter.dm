@@ -57,13 +57,14 @@
 	user << "<span class='notice'>Its ink levels look [ink_level].</span>"
 
 
-/obj/item/weapon/airlock_painter/attackby(obj/item/weapon/W, mob/user)
+/obj/item/weapon/airlock_painter/attackby(obj/item/weapon/W, mob/user, params)
 	..()
 	if(istype(W, /obj/item/device/toner))
 		if(ink)
 			user << "<span class='notice'>\the [name] already contains \a [ink].</span>"
 			return
-		user.drop_item()
+		if(!user.unEquip(W))
+			return
 		W.loc = src
 		user << "<span class='notice'>You install \the [W] into \the [name].</span>"
 		ink = W

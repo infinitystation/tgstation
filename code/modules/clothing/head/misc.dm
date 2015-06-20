@@ -6,7 +6,7 @@
 	desc = "It's good to be emperor."
 	item_state = "that"
 	flags_inv = 0
-	armor = list(melee = 50, bullet = 15, laser = 50, energy = 10, bomb = 25, bio = 0, rad = 0)
+	armor = list(melee = 30, bullet = 15, laser = 30, energy = 10, bomb = 25, bio = 0, rad = 0)
 	strip_delay = 80
 
 /obj/item/clothing/head/powdered_wig
@@ -61,13 +61,6 @@
 	desc = "It's an amish looking armored top hat."
 	icon_state = "tophat"
 	item_state = "that"
-	flags_inv = 0
-
-/obj/item/clothing/head/greenbandana
-	name = "green bandana"
-	desc = "It's a green bandana with some fine nanotech lining."
-	icon_state = "greenbandana"
-	item_state = "greenbandana"
 	flags_inv = 0
 
 /obj/item/clothing/head/cardborg
@@ -151,6 +144,14 @@
 	flags = BLOCKHAIR
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE
 
+/obj/item/clothing/head/griffin
+	name = "griffon head"
+	desc = "Why not 'eagle head'? Who knows."
+	icon_state = "griffinhat"
+	item_state = "griffinhat"
+	flags = BLOCKHAIR
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE
+
 /obj/item/clothing/head/bearpelt
 	name = "bear pelt hat"
 	desc = "Fuzzy."
@@ -170,6 +171,16 @@
 	icon_state = "fedora"
 	item_state = "fedora"
 	desc = "A really cool hat if you're a mobster. A really lame hat if you're not."
+
+/obj/item/clothing/head/fedora/suicide_act(mob/user)
+	if(user.gender == FEMALE)
+		return 0
+	var/mob/living/carbon/human/H = user
+	user.visible_message("<span class='suicide'>[user] is donning [src]! It looks like they're trying to be nice to girls.</span>")
+	user.say("M'lady.")
+	sleep(10)
+	H.facial_hair_style = "Neckbeard"
+	return(BRUTELOSS)
 
 /obj/item/clothing/head/sombrero
 	name = "sombrero"
@@ -202,3 +213,16 @@
 	throw_range = 5
 	w_class = 2.0
 	attack_verb = list("warned", "cautioned", "smashed")
+
+/obj/item/clothing/head/santa
+	name = "santa hat"
+	desc = "On the first day of christmas my employer gave to me!"
+	icon_state = "santahatnorm"
+	item_state = "that"
+	cold_protection = HEAD
+	min_cold_protection_temperature = FIRE_HELM_MIN_TEMP_PROTECT
+
+/obj/item/clothing/head/jester
+	name = "jester hat"
+	desc = "A hat with bells, to add some merryness to the suit."
+	icon_state = "jester_hat"

@@ -1,36 +1,23 @@
-/mob/living/carbon/human/say_quote(text)
-	if(!text)
-		return "says, \"...\"";	//not the best solution, but it will stop a large number of runtimes. The cause is somewhere in the Tcomms code
-	var/ending = copytext(text, length(text))
-	if (src.stuttering)
-		playsound(loc, 'sound/voice/clearing-throat-1.ogg', 25, 1, 1)
-		return "stammers, \"[text]\"";
-	if(isliving(src))
-		var/mob/living/L = src
-		if (L.getBrainLoss() >= 60)
+/mob/living/carbon/human/say_quote(input, spans)
+	if(!input)
+		return "говорит, \"...\""	//not the best solution, but it will stop a large number of runtimes. The cause is somewhere in the Tcomms code
+	verb_say = dna.species.say_mod
+	if(src.slurring)
+		input = attach_spans(input, spans)
+		return "невн&#255;тно говорит, \"[input]\""
+	return ..()
+
+/mob/living/carbon/human/say(message, bubble_type,)
+	. = ..(message)
+	if(.)
+		if(gender == FEMALE)
+			playsound(loc, 'sound/voice/clearing-throat-f.ogg', 15, 1, 1)
+		else
 			playsound(loc, 'sound/voice/clearing-throat-1.ogg', 25, 1, 1)
-			return "gibbers, \"[text]\"";
-	if (ending == "?")
-		playsound(loc, 'sound/voice/clearing-throat-1.ogg', 25, 1, 1)
-		return "asks, \"[text]\"";
-	if (ending == "!")
-		playsound(loc, 'sound/voice/clearing-throat-1.ogg', 25, 1, 1)
-		return "exclaims, \"[text]\"";
-
-	if(dna)
-		playsound(loc, 'sound/voice/clearing-throat-1.ogg', 25, 1, 1)
-		return "[dna.species.say_mod], \"[text]\"";
-
-	playsound(loc, 'sound/voice/clearing-throat-1.ogg', 25, 1, 1)
-	return "says, \"[text]\"";
 
 /mob/living/carbon/human/treat_message(message)
 	if(dna)
 		message = dna.species.handle_speech(message,src)
-
-	if ((HULK in mutations) && health >= 25 && length(message))
-		message = "[uppertext(replacetext(message, ".", "!"))]!!" //because I don't know how to code properly in getting vars from other files -Bro
-
 	if(viruses.len)
 		for(var/datum/disease/pierrot_throat/D in viruses)
 			var/list/temp_message = text2list(message, " ") //List each word in the message
@@ -44,10 +31,13 @@
 					temp_message[H] = "HONK"
 					pick_list -= H //Make sure that you dont HONK the same word twice
 				message = list2text(temp_message, " ")
-
 	message = ..(message)
-
+	if(dna)
+		message = dna.mutations_say_mods(message)
 	return message
+
+/mob/living/carbon/human/get_spans()
+	return ..() | dna.mutations_get_spans()
 
 /mob/living/carbon/human/GetVoice()
 	if(istype(wear_mask, /obj/item/clothing/mask/gas/voice))
@@ -89,7 +79,7 @@
 		if(!istype(dongle)) return 0
 		if(dongle.translate_binary) return 1
 
-/mob/living/carbon/human/radio(message, message_mode)
+/mob/living/carbon/human/radio(message, message_mode, list/spans)
 	. = ..()
 	if(. != 0)
 		return .
@@ -97,29 +87,29 @@
 	switch(message_mode)
 		if(MODE_HEADSET)
 			if (ears)
-				ears.talk_into(src, message)
+				ears.talk_into(src, message, , spans)
 			return ITALICS | REDUCE_RANGE
 
 		if(MODE_SECURE_HEADSET)
 			if (ears)
-				ears.talk_into(src, message, 1)
+				ears.talk_into(src, message, 1, spans)
 			return ITALICS | REDUCE_RANGE
 
 		if(MODE_DEPARTMENT)
 			if (ears)
-				ears.talk_into(src, message, message_mode)
+				ears.talk_into(src, message, message_mode, spans)
 			return ITALICS | REDUCE_RANGE
-	
+
 	if(message_mode in radiochannels)
 		if(ears)
-			ears.talk_into(src, message, message_mode)
+			ears.talk_into(src, message, message_mode, spans)
 			return ITALICS | REDUCE_RANGE
 
 	return 0
 
 /mob/living/carbon/human/get_alt_name()
 	if(name != GetVoice())
-		return " (as [get_id_name("Unknown")])"
+		return " (как [get_id_name("Unknown")])"
 
 /mob/living/carbon/human/proc/forcesay(list/append) //this proc is at the bottom of the file because quote fuckery makes notepad++ cri
 	if(stat == CONSCIOUS)

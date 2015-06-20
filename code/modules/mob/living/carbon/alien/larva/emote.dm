@@ -76,9 +76,9 @@
 			if (!src.restrained())
 				message = text("<span class='name'>[src]</span> signs[].", (text2num(param) ? text(" the number []", text2num(param)) : null))
 				m_type = 1
-//		if ("sit")
-//			message = "<span class='name'>[src]</span> sits down." //Larvan can't sit down, /N
-//			m_type = 1
+		if ("snore")
+			message = "<B>[src]</B> snores."
+			m_type = 2
 		if ("sulk")
 			message = "<span class='name'>[src]</span> sulks down sadly."
 			m_type = 1
@@ -100,12 +100,12 @@
 			src << "Help for larva emotes. You can use these emotes with say \"*emote\":\n\nburp, choke, collapse, dance, drool, gasp, gnarl, hiss, jump, moan, nod, roll, scratch,\nscretch, shake, shiver, sign-#, sulk, sway, tail, twitch, whimper"
 
 		else
-			src << "<span class='info'> Unusable emote '[act]'. Say *help for a list.</span>"
+			src << "<span class='info'>Unusable emote '[act]'. Say *help for a list.</span>"
 
 	if ((message && src.stat == 0))
 		log_emote("[name]/[key] : [message]")
 		if (m_type & 1)
 			visible_message(message)
 		else
-			src.loc.audible_message(message)
+			audible_message(message)
 	return

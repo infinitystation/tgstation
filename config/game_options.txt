@@ -21,11 +21,15 @@ REVIVAL_BRAIN_LIFE -1
 ### RENAMING ###
 
 #Uncomment to allow cyborgs to rename themselves at roundstart.  Has no effect on roboticists renaming cyborgs the normal way.
-#RENAME_CYBORG
+RENAME_CYBORG
 
 ### OOC DURING ROUND ###
 #Comment this out if you want OOC to be automatically disabled during the round, it will be enabled during the lobby and after the round end results.
 #OOC_DURING_ROUND
+
+### EMOJI ###
+#Comment this out if you want to disable emojis
+EMOJIS
 
 ### MOB MOVEMENT ###
 
@@ -38,7 +42,7 @@ REVIVAL_BRAIN_LIFE -1
 
 ## These modify the run/walk speed of all mobs before the mob-specific modifiers are applied. 
 RUN_DELAY 1
-WALK_DELAY 4
+WALK_DELAY 3
 
 ## The variables below affect the movement of specific mob types.
 HUMAN_DELAY 0
@@ -58,22 +62,13 @@ HUMANS_NEED_SURNAMES
 
 
 ### ALERT LEVELS ###
-ALERT_GREEN Угроз длЯ станции больше нет. Служба Безопасности больше не может носить оружие на виду, законы приватности вступают в полную силу. Случайные обыски НЕ разрешены.
-ALERT_BLUE_UPTO СтанциЯ получила достоверную информацию о возможной вражеской деЯтельности на борту. Служба Безопасности может носить оружие на виду, случайные обыски разрешены. В случае отсутствиЯ подтверждениЯ угрозы рекомендуетсЯ Главам, Капитану или ИИ опустить уровень тревоги до зелёного.
-ALERT_BLUE_DOWNTO ВнезапнаЯ угроза прошла. Служюа Безопасности теперь не может носить оружие в постоЯнной боевой готовности, но всё ещё могут носить его на виду. Случайные обыски всё ещё разрешены.
+ALERT_GREEN Угроз длЯ станции больше нет. Служба Безопасности больше не может носить оружие на виду, законы приватности вступают в полную силу. Случайные обыски запрещены.
+ALERT_BLUE_UPTO СтанциЯ получила достоверную информацию о возможной вражеской деЯтельности на борту. Служба Безопасности может носить оружие на виду, случайные обыски разрешены. В случае отсутствиЯ подтверждениЯ угрозы, Главам, Капитану или ИИ рекомендуетсЯ опустить уровень тревоги до зелёного.
+ALERT_BLUE_DOWNTO ВнезапнаЯ угроза прошла. Служба Безопасности теперь не может носить оружие в постоЯнной боевой готовности, но всё ещё могут носить его на виду. Случайные обыски всё ещё разрешены.
 ALERT_RED_UPTO ВнезапнаЯ серьёзнаЯ угроза станции. Сотрудники Службы Безопасности могут носить оружие на виду и в боевой готовности, случайные обыски разрешены и рекомендованы.
 ALERT_RED_DOWNTO Механизм самоуничтожениЯ был деактивирован, хотЯ всё ещё остаётсЯ серьёзнаЯ угроза длЯ станции. Сотрудники Службы Безопасности могут носить оружие на виду и в боевой готовности, случайные обыски разрешены и рекомендованы.
 ALERT_DELTA Был запущен механизм самоуничтожениЯ станции. Всему экипажу следует подчинЯтьсЯ всем инструкциЯм и приказам, которые будут отдавать Главы. Любые нарушениЯ этих инструкций или приказов могут быть наказаны смертью. Это не учебнаЯ тревога.
 
-
-### EXPLOSIONS ###
-
-## Unhash this to use recursive explosions, keep it hashed to use normal style explosions.
-## Recursive explosions react to walls, airlocks and blast doors, making them look a lot cooler
-## than the boring old circular explosions. They require more CPU and are (as of March 2013) experimental.
-## The default map is generally designed for the old style explosions in terms of security.
-
-#USE_RECURSIVE_EXPLOSIONS
 
 
 ### GAME MODES ###
@@ -83,29 +78,66 @@ ALERT_DELTA Был запущен механизм самоуничтожениЯ станции. Всему экипажу следует 
 ## Set to 0 to disable that mode.
 
 PROBABILITY TRAITOR 5
-PROBABILITY TRAITORCHAN 4
+PROBABILITY TRAITORCHAN 3
 PROBABILITY DOUBLE_AGENTS 3
 PROBABILITY NUCLEAR 2
-PROBABILITY REVOLUTION 2
-PROBABILITY GANG 0
+PROBABILITY REVOLUTION 3
+PROBABILITY SHADOWLING 2
+PROBABILITY GANG 2
 PROBABILITY CULT 2
 PROBABILITY CHANGELING 2
-PROBABILITY WIZARD 4
+PROBABILITY WIZARD 3
 PROBABILITY MALFUNCTION 1
 PROBABILITY BLOB 2
-PROBABILITY MONKEY 1
+PROBABILITY RAGINMAGES 0
+PROBABILITY MONKEY 0
 PROBABILITY METEOR 0
-PROBABILITY EXTENDED 0
+PROBABILITY EXTENDED 4
 
 ## You probably want to keep sandbox off by default for secret and random.
 PROBABILITY SANDBOX 0
 
-## Uncomment to make rounds which end instantly (Rev, Wizard, Malf) continue until
-## the shuttle is called or the station is nuked.
-## Malf and Rev will let the shuttle be called when the antags/protags are dead.
-#CONTINUOUS_ROUND_REV
-#CONTINUOUS_ROUND_WIZ
-#CONTINUOUS_ROUND_MALF
+## Toggles for continuous modes.
+## Modes that aren't continuous will end the instant all antagonists are dead.
+
+CONTINUOUS TRAITOR
+CONTINUOUS TRAITORCHAN
+CONTINUOUS DOUBLE_AGENTS
+#CONTINUOUS NUCLEAR
+#CONTINUOUS REVOLUTION
+#CONTINUOUS SHADOWLING
+#CONTINUOUS GANG
+CONTINUOUS CULT
+CONTINUOUS CHANGELING
+CONTINUOUS WIZARD
+CONTINUOUS MALFUNCTION
+CONTINUOUS BLOB
+#CONTINUOUS RAGINMAGES
+#CONTINUOUS MONKEY
+
+##Note: do not toggle continuous off for these modes, as they have no antagonists and would thus end immediately!
+
+CONTINUOUS METEOR
+CONTINUOUS EXTENDED
+
+
+## Toggles for allowing midround antagonists (aka mulligan antagonists).
+## In modes that are continuous, if all antagonists should die then a new set of antagonists will be created.
+
+MIDROUND_ANTAG TRAITOR
+MIDROUND_ANTAG TRAITORCHAN
+MIDROUND_ANTAG DOUBLE_AGENTS
+#MIDROUND_ANTAG  NUCLEAR
+#MIDROUND_ANTAG  REVOLUTION
+#MIDROUND_ANTAG  SHADOWLING
+#MIDROUND_ANTAG  GANG
+MIDROUND_ANTAG CULT
+MIDROUND_ANTAG CHANGELING
+MIDROUND_ANTAG WIZARD
+MIDROUND_ANTAG MALFUNCTION
+MIDROUND_ANTAG BLOB
+#MIDROUND_ANTAG  RAGINMAGES
+#MIDROUND_ANTAG  MONKEY
 
 ## The amount of time it takes for the emergency shuttle to be called, from round start.
 SHUTTLE_REFUEL_DELAY 12000
@@ -119,7 +151,7 @@ CHANGELING_SCALING_COEFF 6
 ## Variables calculate how number of open security officer positions will scale to population.
 ## Used as (Officers = Population / Coeff)
 ## Set to 0 to disable scaling and use default numbers instead.
-SECURITY_SCALING_COEFF 8
+SECURITY_SCALING_COEFF 6
 
 # The number of objectives traitors get.
 # Not including escaping/hijacking.
@@ -133,7 +165,7 @@ PROTECT_ROLES_FROM_ANTAGONIST
 #PROTECT_ASSISTANT_FROM_ANTAGONIST
 
 ## If non-human species are barred from joining as a head of staff
-#ENFORCE_HUMAN_AUTHORITY
+ENFORCE_HUMAN_AUTHORITY
 
 ## If late-joining players have a chance to become a traitor/changeling
 ALLOW_LATEJOIN_ANTAGONISTS
@@ -162,17 +194,23 @@ GATEWAY_DELAY 18000
 
 
 ### ACCESS ###
+
+## If the number of players ready at round starts exceeds this threshold, JOBS_HAVE_MINIMAL_ACCESS will automatically be enabled. Otherwise, it will be disabled.
+## This is useful for accomodating both low and high population rounds on the same server.
+## Comment out or set to 0 to disable this automatic toggle.
+MINIMAL_ACCESS_THRESHOLD 20
+
 ## Comment this out if you wish to use the setup where jobs have more access.
 ## This is intended for servers with low populations - where there are not enough
 ## players to fill all roles, so players need to do more than just one job.
-## Also for servers where they don't want people to hide in their own departments.
+## This option is ignored if MINIMAL_ACCESS_THRESHOLD is used.
 #JOBS_HAVE_MINIMAL_ACCESS
 
 ## Uncomment to give assistants maint access.
 #ASSISTANTS_HAVE_MAINT_ACCESS
 
 ## Uncoment to give security maint access. Note that if you comment JOBS_HAVE_MINIMAL_ACCESS security already gets maint from that.
-#SECURITY_HAS_MAINT_ACCESS
+SECURITY_HAS_MAINT_ACCESS
 
 ## Uncomment to give everyone maint access.
 #EVERYONE_HAS_MAINT_ACCESS
@@ -183,7 +221,7 @@ SEC_START_BRIG
 
 ### GHOST INTERACTION ###
 ## Uncomment to let ghosts spin chairs. You may be wondering why this is a config option. Don't ask.
-#GHOST_INTERACTION
+GHOST_INTERACTION
 
 ### NON-VOCAL SILICONS ###
 ## Uncomment to stop the AI, or cyborgs, from having vocal communication.
@@ -195,7 +233,7 @@ SEC_START_BRIG
 ## If you find that your players are abusing the sandbox panel, this option may slow them down
 ## without preventing people from using it properly.
 ## Only functions in sandbox game mode.
-#SANDBOX_AUTOCLOSE
+SANDBOX_AUTOCLOSE
 
 ### ROUNDSTART SILICON LAWS ###
 ## This controls what the AI's laws are at the start of the round.
@@ -210,8 +248,48 @@ DEFAULT_LAWS 1
 SILICON_MAX_LAW_AMOUNT 12
 
 ## Uncoment to give players the choice of their species before they join the game
-#JOIN_WITH_MUTANT_RACE
+JOIN_WITH_MUTANT_RACE
 
-## Uncomment to allow certain species to have custom colors
+## Assistant slot cap. Set to -1 for unlimited.
+ASSISTANT_CAP -1
 
-#MUTANT_COLORS
+## Starlight for exterior walls and breaches. Uncomment for starlight!
+STARLIGHT
+
+## Uncomment to bring back old grey suit assistants instead of the now default rainbow colored assistants.
+#GREY_ASSISTANTS
+
+### Midround Antag (aka Mulligan antag) config options ###
+
+## A time, in minutes, after which the midround antag system stops attempting to run and continuous rounds end immediately upon completion.
+MIDROUND_ANTAG_TIME_CHECK 60
+
+## A ratio of living to total crew members, the lower this is, the more people will have to die in order for midround antag to be skipped
+MIDROUND_ANTAG_LIFE_CHECK 0.7
+
+###Limit Spell Choices##
+## Uncomment to disallow wizards from using certain spells that may be too chaotic/fun for your playerbase
+
+#NO_SUMMON_GUNS
+#NO_SUMMON_MAGIC
+#NO_SUMMON_EVENTS
+
+//Comment for "normal" explosions, which ignore obstacles
+//Uncomment for explosions that react to doors and walls
+REACTIONARY_EXPLOSIONS
+
+### Configure the bomb cap
+## This caps all explosions to the specified range. Used for both balance reasons and to prevent overloading the server and lagging the game out.
+## This is given as the 3rd number(light damage) in the standard (1,2,3) explosion notation. The other numbers are derived by dividing by 2 and 4.
+## eg: If you give the number 20. The bomb cap will be 5,10,20.
+## Can be any number between 4 and 128, some examples are provided below.
+
+## Default (3,7,14)
+BOMBCAP 14
+## One 'step' up (4,8,16) (recommended if you enable REACTIONARY_EXPLOSIONS above)
+#BOMBCAP 16
+## LagHell (7,14,28)
+#BOMBCAP 28
+
+
+

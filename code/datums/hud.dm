@@ -11,28 +11,9 @@ var/datum/atom_hud/huds = list( \
 	ANTAG_HUD_OPS = new/datum/atom_hud/antag(), \
 	ANTAG_HUD_GANG_A = new/datum/atom_hud/antag(), \
 	ANTAG_HUD_GANG_B = new/datum/atom_hud/antag(), \
+	ANTAG_HUD_WIZ = new/datum/atom_hud/antag(), \
+	ANTAG_HUD_SHADOW = new/datum/atom_hud/antag(), \
 	)
-
-/mob/proc/refresh_huds(var/mob/inherited_from = null)
-	var/mob/seek_for = (inherited_from) ? inherited_from : src
-	var/image/oldantagicon = seek_for.hud_list[ANTAG_HUD]
-	var/image/newantagicon = hud_list[ANTAG_HUD]
-	if(oldantagicon && oldantagicon.icon_state)
-		newantagicon.icon_state = oldantagicon.icon_state
-	if(istype(inherited_from, /mob/dead/observer))
-		var/mob/dead/observer/G = inherited_from
-		for(var/datum/atom_hud/hud in G.oldhuds)
-			readd_hud(hud)
-	else
-		for(var/datum/atom_hud/hud in huds)
-			if(seek_for in hud.hudusers)
-				readd_hud(hud)
-
-/mob/proc/readd_hud(var/datum/atom_hud/hud)
-	hud.add_hud_to(src)
-
-/mob/dead/observer/readd_hud(var/datum/atom_hud/hud)
-	oldhuds |= hud
 
 /datum/atom_hud
 	var/list/atom/hudatoms = list() //list of all atoms which display this hud
@@ -40,6 +21,8 @@ var/datum/atom_hud/huds = list( \
 	var/list/hud_icons = list() //these will be the indexes for the atom's hud_list
 
 /datum/atom_hud/proc/remove_hud_from(var/mob/M)
+	if(src in M.permanent_huds)
+		return
 	for(var/atom/A in hudatoms)
 		remove_from_single_hud(M, A)
 	hudusers -= M
@@ -70,3 +53,9 @@ var/datum/atom_hud/huds = list( \
 		return
 	for(var/i in hud_icons)
 		M.client.images |= A.hud_list[i]
+
+//MOB PROCS
+/mob/proc/reload_huds()
+	for(var/datum/atom_hud/hud in huds)
+		if(src in hud.hudusers)
+			hud.add_hud_to(src)

@@ -32,6 +32,12 @@ LINEN BINS
 	add_fingerprint(user)
 	return
 
+/obj/item/weapon/bedsheet/attackby(obj/item/I, mob/user, params)
+	if(istype(I, /obj/item/weapon/wirecutters) || istype(I, /obj/item/weapon/shard))
+		new /obj/item/stack/medical/gauze/improvised(src.loc)
+		qdel(src)
+		user << "<span class='notice'>You tear [src] up.</span>"
+	..()
 
 /obj/item/weapon/bedsheet/blue
 	icon_state = "sheetblue"
@@ -48,6 +54,12 @@ LINEN BINS
 /obj/item/weapon/bedsheet/purple
 	icon_state = "sheetpurple"
 	item_color = "purple"
+
+/obj/item/weapon/bedsheet/patriot
+	name = "patriotic bedsheet"
+	desc = "You've never felt more free than when sleeping on this."
+	icon_state = "sheetUSA"
+	item_color = "sheetUSA"
 
 /obj/item/weapon/bedsheet/rainbow
 	name = "rainbow bedsheet"
@@ -180,9 +192,10 @@ LINEN BINS
 		else		icon_state = "linenbin-full"
 
 
-/obj/structure/bedsheetbin/attackby(obj/item/I as obj, mob/user as mob)
+/obj/structure/bedsheetbin/attackby(obj/item/I as obj, mob/user as mob, params)
 	if(istype(I, /obj/item/weapon/bedsheet))
-		user.drop_item()
+		if(!user.drop_item())
+			return
 		I.loc = src
 		sheets.Add(I)
 		amount++
@@ -190,7 +203,7 @@ LINEN BINS
 		update_icon()
 	else if(amount && !hidden && I.w_class < 4)	//make sure there's sheets to hide it among, make sure nothing else is hidden in there.
 		if(!user.drop_item())
-			user << "<span class='notice'>\The [I] is stuck to your hand, you cannot hide it among the sheets!</span>"
+			user << "<span class='warning'>\The [I] is stuck to your hand, you cannot hide it among the sheets!</span>"
 			return
 		I.loc = src
 		hidden = I
@@ -203,6 +216,8 @@ LINEN BINS
 
 
 /obj/structure/bedsheetbin/attack_hand(mob/user as mob)
+	if(user.lying)
+		return
 	if(amount >= 1)
 		amount--
 

@@ -1,0 +1,7 @@
+diff a/code/controllers/subsystem/jobs.dm b/code/controllers/subsystem/jobs.dm	(rejected hunks)
+@@ -346,4 +346,5 @@
+ 	if(job.req_admin_notify)
++<<<<<<< HEAD
+ 		H << "<b>�� ������� �� ���������, ������� ����� ����� ��� �������� �������� ���� �������. ���� ��� ����������� ����� �� ����, ����������, ��������� ������� �� ���� ����� Adminhelp.</b>"
+ =======
+ 		H << "<b>You are playing a job that is important for Game Progression. If you have to disconnect, please notify the admins via adminhelp.</b>"

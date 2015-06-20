@@ -4,6 +4,7 @@
 	lastKnownIP	= client.address
 	computer_id	= client.computer_id
 	log_access("Login: [key_name(src)] from [lastKnownIP ? lastKnownIP : "localhost"]-[computer_id] || BYOND v[client.byond_version]")
+
 	if(config.log_access)
 		for(var/mob/M in player_list)
 			if(M == src)	continue
@@ -48,6 +49,11 @@
 	if(isobj(loc))
 		var/obj/Loc=loc
 		Loc.on_log()
+
+	//readd this mob's HUDs (antag, med, etc)
+	reload_huds()
+	if(ckey in deadmins)
+		verbs += /client/proc/readmin
 
 // Calling update_interface() in /mob/Login() causes the Cyborg to immediately be ghosted; because of winget().
 // Calling it in the overriden Login, such as /mob/living/Login() doesn't cause this.

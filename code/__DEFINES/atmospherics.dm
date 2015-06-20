@@ -102,11 +102,12 @@
 #define SHOES_MIN_TEMP_PROTECT				2.0		//For gloves
 #define SHOES_MAX_TEMP_PROTECT				1500	//For gloves
 
-
-#define PRESSURE_DAMAGE_COEFFICIENT			4		//The amount of pressure damage someone takes is equal to (pressure / HAZARD_HIGH_PRESSURE)*PRESSURE_DAMAGE_COEFFICIENT, with the maximum of MAX_PRESSURE_DAMAGE
+#define PRESSURE_DAMAGE_COEFFICIENT			6		//The amount of pressure damage someone takes is equal to (pressure / HAZARD_HIGH_PRESSURE)*PRESSURE_DAMAGE_COEFFICIENT, with the maximum of MAX_PRESSURE_DAMAGE
 #define MAX_HIGH_PRESSURE_DAMAGE			4		//This used to be 20... I got this much random rage for some retarded decision by polymorph?! Polymorph now lies in a pool of blood with a katana jammed in his spleen. ~Errorage --PS: The katana did less than 20 damage to him :(
-#define LOW_PRESSURE_DAMAGE					2		//The amounb of damage someone takes when in a low pressure area (The pressure threshold is so low that it doesn't make sense to do any calculations, so it just applies this flat value).
+#define LOW_PRESSURE_DAMAGE					4		//The amounb of damage someone takes when in a low pressure area (The pressure threshold is so low that it doesn't make sense to do any calculations, so it just applies this flat value).
 
-#define PRESSURE_SUIT_REDUCTION_COEFFICIENT 0.8		//This is how much (percentual) a suit with the flag STOPSPRESSUREDMAGE reduces pressure.
-#define PRESSURE_HEAD_REDUCTION_COEFFICIENT 0.4		//This is how much (percentual) a helmet/hat with the flag STOPSPRESSUREDMAGE reduces pressure.
+#define COLD_SLOWDOWN_FACTOR				20		//Humans are slowed by the difference between bodytemp and BODYTEMP_COLD_DAMAGE_LIMIT divided by this
 
+// Atmos pipe limits
+#define MAX_OUTPUT_PRESSURE					4500 // (kPa) What pressure pumps and powered equipment max out at.
+#define MAX_TRANSFER_RATE					200 // (L/s) Maximum speed powered equipment can work at.

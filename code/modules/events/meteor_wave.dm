@@ -1,8 +1,8 @@
 /datum/round_event_control/meteor_wave
 	name = "Meteor Wave"
 	typepath = /datum/round_event/meteor_wave
-	weight = 5
-	max_occurrences = 3
+	weight = 0
+	max_occurrences = 0
 
 /datum/round_event/meteor_wave
 	startWhen		= 6
@@ -25,7 +25,7 @@
 			wave_type = meteors_catastrophic
 
 /datum/round_event/meteor_wave/announce()
-	priority_announce("Meteors have been detected on collision course with the station.", "Meteor Alert", 'sound/AI/meteors.ogg')
+	priority_announce("ѕрямо по курсу станции обнаружены метеоры. ѕриготовьтесь к столкновению.", "“ревога! ћетеоры!", 'sound/AI/meteors.ogg')
 
 
 /datum/round_event/meteor_wave/tick()

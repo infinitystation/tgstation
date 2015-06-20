@@ -4,13 +4,35 @@
 
 #define NOTESFILE "data/player_notes.sav"	//where the player notes are saved
 
-datum/admins/proc/notes_show(var/ckey)
+/proc/see_own_notes()
+	if(!config.see_own_notes)
+		return
+	var/ckey = usr.client.ckey
+	if(!ckey)
+		usr << "<span class='warning'>Error: No ckey found.</span>"
+		return
+	var/savefile/notesfile = new(NOTESFILE)
+	if(!notesfile)
+		usr << "<span class='warning'>Error: Cannot access [NOTESFILE]</span>"
+		return
+	notesfile.cd = "/[ckey]"
+	var/dat = "<b>Notes for [ckey]:</b><br>"
+	while(!notesfile.eof)
+		var/note
+		notesfile >> note
+		dat += note + "<br>"
+	var/datum/browser/popup = new(usr, "player_notes", "Player Notes", 700, 400)
+	popup.set_content(dat)
+	popup.open()
+
+
+/datum/admins/proc/notes_show(var/ckey)
 	usr << browse("<head><title>Player Notes</title></head><body>[notes_gethtml(ckey)]</body>","window=player_notes;size=700x400")
 
 
-datum/admins/proc/notes_gethtml(var/ckey)
+/datum/admins/proc/notes_gethtml(var/ckey)
 	var/savefile/notesfile = new(NOTESFILE)
-	if(!notesfile)	return "<font color='red'>Error: Cannot access [NOTESFILE]</font>"
+	if(!notesfile)	return "<span class='warning'>Error: Cannot access [NOTESFILE]</span>"
 	if(ckey)
 		. = "<b>Notes for <a href='?_src_=holder;notes=show'>[ckey]</a>:</b> <a href='?_src_=holder;notes=add;ckey=[ckey]'>\[+\]</a><br>"
 		notesfile.cd = "/[ckey]"
@@ -32,19 +54,22 @@ datum/admins/proc/notes_gethtml(var/ckey)
 //originally had seperate entries such as var/by to record who left the note and when
 //but the current bansystem is a heap of dung.
 /proc/notes_add(var/ckey, var/note, var/lognote = 0)
+	var/note_u
 	if(!ckey)
 		ckey = ckey(input(usr,"Who would you like to add notes for?","Enter a ckey",null) as text|null)
 		if(!ckey)	return
 
 	if(!note)
-		note = html_encode(input(usr,"Enter your note:","Enter some text",null) as message|null)
+		note = input(usr,"Enter your note:","Enter some text",null) as message|null
 		if(!note)	return
 
+	note_u = sanitize_u(note)
+	note = sanitize(note)
 	var/savefile/notesfile = new(NOTESFILE)
 	if(!notesfile)	return
 	notesfile.cd = "/[ckey]"
 	notesfile.eof = 1		//move to the end of the buffer
-	notesfile << "[time2text(world.realtime,"DD-MMM-YYYY")] | [note][(usr && usr.ckey)?" ~[usr.ckey]":""]"
+	notesfile << "[time2text(world.realtime,"DD-MMM-YYYY")] | [note_u][(usr && usr.ckey)?" ~[usr.ckey]":""]"
 
 	if(lognote)//don't need an admin log for the notes applied automatically during bans.
 		message_admins("[key_name(usr)] added note '[note]' to [ckey]")

@@ -45,11 +45,12 @@
 		playsound(get_turf(src), 'sound/effects/pop.ogg', 100, 1, -6)
 		qdel(active_dummy)
 		active_dummy = null
-		usr << "<span class='notice'>You deactivate the [src].</span>"
+		usr << "<span class='notice'>You deactivate \the [src].</span>"
 		var/obj/effect/overlay/T = new/obj/effect/overlay(get_turf(src))
 		T.icon = 'icons/effects/effects.dmi'
 		flick("emppulse",T)
-		spawn(8) T.delete()
+		spawn(8)
+			qdel(T)
 	else
 		playsound(get_turf(src), 'sound/effects/pop.ogg', 100, 1, -6)
 		var/obj/O = new saved_item(src)
@@ -57,11 +58,12 @@
 		var/obj/effect/dummy/chameleon/C = new/obj/effect/dummy/chameleon(usr.loc)
 		C.activate(O, usr, saved_icon, saved_icon_state, saved_overlays, saved_underlays, src)
 		qdel(O)
-		usr << "<span class='notice'>You activate the [src].</span>"
+		usr << "<span class='notice'>You activate \the [src].</span>"
 		var/obj/effect/overlay/T = new/obj/effect/overlay(get_turf(src))
 		T.icon = 'icons/effects/effects.dmi'
 		flick("emppulse",T)
-		spawn(8) T.delete()
+		spawn(8)
+			qdel(T)
 
 /obj/item/device/chameleon/proc/disrupt(var/delete_dummy = 1)
 	if(active_dummy)
@@ -113,7 +115,7 @@
 		M << "<span class='danger'>Your chameleon-projector deactivates.</span>"
 	master.disrupt()
 
-/obj/effect/dummy/chameleon/ex_act()
+/obj/effect/dummy/chameleon/ex_act() //ok now THATS some serious protection against explosions right here
 	for(var/mob/M in src)
 		M << "<span class='danger'>Your chameleon-projector deactivates.</span>"
 	master.disrupt()
@@ -125,7 +127,8 @@
 	master.disrupt()
 
 /obj/effect/dummy/chameleon/relaymove(var/mob/user, direction)
-	if(istype(loc, /turf/space)) return //No magical space movement!
+	if(istype(loc, /turf/space) || !direction)
+		return //No magical space movement!
 
 	if(can_move)
 		can_move = 0

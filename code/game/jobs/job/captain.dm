@@ -9,7 +9,7 @@ Captain
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "Nanotrasen officials and Space law"
+	supervisors = "ПредставителЯм Центрального КомандованиЯ и Космо-закону"
 	selection_color = "#ccccff"
 	req_admin_notify = 1
 	minimal_player_age = 14
@@ -37,7 +37,7 @@ Captain
 		H.equip_to_slot_or_del(new /obj/item/weapon/storage/box/silver_ids(H), slot_l_hand)
 	else
 		H.equip_to_slot_or_del(new /obj/item/weapon/storage/box/silver_ids(H.back), slot_in_backpack)
-		H.equip_to_slot_or_del(new /obj/item/weapon/melee/telebaton(H), slot_in_backpack)
+		H.equip_to_slot_or_del(new /obj/item/weapon/melee/classic_baton/telescopic(H), slot_in_backpack)
 
 	//Implant him
 	var/obj/item/weapon/implant/loyalty/L = new/obj/item/weapon/implant/loyalty(H)
@@ -45,7 +45,7 @@ Captain
 	L.implanted = 1
 	H.sec_hud_set_implants()
 
-	minor_announce("Captain [H.real_name] on deck!")
+	minor_announce("Капитан [H.real_name] на борту станции!")
 
 /datum/job/captain/get_access()
 	return get_all_accesses()
@@ -61,7 +61,7 @@ Head of Personnel
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the captain"
+	supervisors = "Капитану"
 	selection_color = "#ddddff"
 	req_admin_notify = 1
 	minimal_player_age = 10
@@ -70,7 +70,7 @@ Head of Personnel
 	default_pda = /obj/item/device/pda/heads/hop
 	default_headset = /obj/item/device/radio/headset/heads/hop
 
-	access = list(access_security, access_sec_doors, access_brig, access_court, access_forensics_lockers, access_weapons,
+	access = list(access_security, access_sec_doors, access_court, access_weapons,
 			            access_medical, access_engine, access_change_ids, access_ai_upload, access_eva, access_heads,
 			            access_all_personal_lockers, access_maint_tunnels, access_bar, access_janitor, access_construction, access_morgue,
 			            access_crematorium, access_kitchen, access_cargo, access_cargo_bot, access_mailsorting, access_qm, access_hydroponics, access_lawyer,
@@ -94,4 +94,4 @@ Head of Personnel
 		H.equip_to_slot_or_del(new /obj/item/weapon/storage/box/ids(H), slot_l_hand)
 	else
 		H.equip_to_slot_or_del(new /obj/item/weapon/storage/box/ids(H.back), slot_in_backpack)
-		H.equip_to_slot_or_del(new /obj/item/weapon/melee/telebaton(H), slot_in_backpack)
+		H.equip_to_slot_or_del(new /obj/item/weapon/melee/classic_baton/telescopic(H), slot_in_backpack)

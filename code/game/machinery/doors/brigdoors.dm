@@ -42,15 +42,15 @@
 	pixel_y = ((src.dir & 3)? (src.dir ==1 ? 24 : -32) : (0))
 
 	spawn(20)
-		for(var/obj/machinery/door/window/brigdoor/M in world)
+		for(var/obj/machinery/door/window/brigdoor/M in range(20, src))
 			if (M.id == src.id)
 				targets += M
 
-		for(var/obj/machinery/flasher/F in world)
+		for(var/obj/machinery/flasher/F in range(20, src))
 			if(F.id == src.id)
 				targets += F
 
-		for(var/obj/structure/closet/secure_closet/brig/C in world)
+		for(var/obj/structure/closet/secure_closet/brig/C in range(20, src))
 			if(C.id == src.id)
 				targets += C
 
@@ -101,7 +101,7 @@
 		if(C.broken)	continue
 		if(C.opened && !C.close())	continue
 		C.locked = 1
-		C.icon_state = C.icon_locked
+		C.update_icon()
 	return 1
 
 
@@ -117,7 +117,7 @@
 		if(C.broken)	continue
 		if(C.opened)	continue
 		C.locked = 0
-		C.icon_state = C.icon_closed
+		C.update_icon()
 
 	return 1
 
@@ -192,6 +192,16 @@
 		timeleft = min(max(round(timeleft), 0), 3600)
 		timing = text2num(href_list["timing"])
 		timeset(timeleft)
+		var/second = round(timeleft() % 60)
+		var/minute = round((timeleft() - second) / 60)
+		var/prisoners = ""
+		for(var/mob/living/carbon/human/H in orange(src, 3))
+			if(H.x<src.x && H.y<src.y)
+				prisoners += "[H.ckey]/[H.real_name] "
+		message_admins("В тюрьму посажен преступник. Срок: [(minute ? text("[minute]:") : null)][second]. Выставлен игроком [key_name(usr, usr.client)](<A HREF='?_src_=holder;adminmoreinfo=\ref[usr]'>?</A>) Координаты: ([x],[y],[z] - <A HREF='?_src_=holder;adminplayerobservecoodjump=1;X=[x];Y=[y];Z=[z]'>JMP</a>)",0,1)
+		message_admins("Игроки в камере: [prisoners]")
+		log_game("В тюрьму посажен преступник. Срок: [(minute ? text("[minute]:") : null)][second]. Выставлен игроком [usr.ckey]/[usr.real_name]. Координаты: ([x],[y],[z])")
+		log_game("Игроки в камере: [prisoners]")
 	else if(href_list["tp"]) //adjust timer
 		var/timeleft = timeleft()
 		var/tp = text2num(href_list["tp"])
@@ -250,48 +260,6 @@
 	var/new_text = {"<div style="font-size:[FONT_SIZE];color:[FONT_COLOR];font:'[FONT_STYLE]';text-align:center;" valign="top">[line1]<br>[line2]</div>"}
 	if(maptext != new_text)
 		maptext = new_text
-
-
-/obj/machinery/door_timer/cell_1
-	name = "Cell 1"
-	id = "Cell 1"
-	dir = 2
-	pixel_y = -32
-
-
-/obj/machinery/door_timer/cell_2
-	name = "Cell 2"
-	id = "Cell 2"
-	dir = 2
-	pixel_y = -32
-
-
-/obj/machinery/door_timer/cell_3
-	name = "Cell 3"
-	id = "Cell 3"
-	dir = 2
-	pixel_y = -32
-
-
-/obj/machinery/door_timer/cell_4
-	name = "Cell 4"
-	id = "Cell 4"
-	dir = 2
-	pixel_y = -32
-
-
-/obj/machinery/door_timer/cell_5
-	name = "Cell 5"
-	id = "Cell 5"
-	dir = 2
-	pixel_y = -32
-
-
-/obj/machinery/door_timer/cell_6
-	name = "Cell 6"
-	id = "Cell 6"
-	dir = 4
-	pixel_x = 32
 
 #undef FONT_SIZE
 #undef FONT_COLOR

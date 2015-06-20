@@ -7,6 +7,7 @@
 	flags = HEADCOVERSEYES|HEADCOVERSMOUTH|BLOCKHAIR|THICKMATERIAL
 	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 100, rad = 20)
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES
+	unacidable = 1
 
 /obj/item/clothing/suit/bio_suit
 	name = "bio suit"
@@ -19,11 +20,12 @@
 	flags = THICKMATERIAL
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
 	slowdown = 1.0
-	allowed = list(/obj/item/weapon/tank/emergency_oxygen,/obj/item/weapon/pen,/obj/item/device/flashlight/pen)
+	allowed = list(/obj/item/weapon/tank/internals/emergency_oxygen,/obj/item/weapon/pen,/obj/item/device/flashlight/pen)
 	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 100, rad = 20)
 	flags_inv = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT
 	strip_delay = 70
 	put_on_delay = 70
+	unacidable = 1
 
 //Standard biosuit, orange stripe
 /obj/item/clothing/head/bio_hood/general

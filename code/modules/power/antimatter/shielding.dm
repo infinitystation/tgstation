@@ -1,5 +1,5 @@
 //like orange but only checks north/south/east/west for one step
-proc/cardinalrange(var/center)
+/proc/cardinalrange(var/center)
 	var/list/things = list()
 	for(var/direction in cardinal)
 		var/turf/T = get_step(center, direction)
@@ -100,14 +100,8 @@ proc/cardinalrange(var/center)
 	return
 
 
-/obj/machinery/am_shielding/ex_act(severity)
-	switch(severity)
-		if(1.0)
-			stability -= 80
-		if(2.0)
-			stability -= 40
-		if(3.0)
-			stability -= 20
+/obj/machinery/am_shielding/ex_act(severity, target)
+	stability -= (80 - (severity * 20))
 	check_stability()
 	return
 
@@ -131,7 +125,7 @@ proc/cardinalrange(var/center)
 	else if(processing) shutdown_core()
 
 
-/obj/machinery/am_shielding/attackby(obj/item/W, mob/user)
+/obj/machinery/am_shielding/attackby(obj/item/W, mob/user, params)
 	if(!istype(W) || !user) return
 	if(W.force > 10)
 		stability -= W.force/2
@@ -161,7 +155,8 @@ proc/cardinalrange(var/center)
 
 /obj/machinery/am_shielding/proc/setup_core()
 	processing = 1
-	machines.Add(src)
+	machines |= src
+	SSmachine.processing |= src
 	if(!control_unit)	return
 	control_unit.linked_cores.Add(src)
 	control_unit.reported_core_efficiency += efficiency
@@ -208,7 +203,7 @@ proc/cardinalrange(var/center)
 	throw_range = 2
 	m_amt = 100
 
-/obj/item/device/am_shielding_container/attackby(var/obj/item/I, var/mob/user)
+/obj/item/device/am_shielding_container/attackby(var/obj/item/I, var/mob/user, params)
 	if(istype(I, /obj/item/device/multitool) && istype(src.loc,/turf))
 		new/obj/machinery/am_shielding(src.loc)
 		qdel(src)

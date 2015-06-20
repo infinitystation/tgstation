@@ -137,11 +137,11 @@ var/const/AIRLOCK_WIRE_LIGHT = 2048
 			//raises them if they are down (only if power's on)
 			if(!A.locked)
 				A.locked = 1
-				A.audible_message("You hear a click from the bottom of the door.", null,  1)
+				A.audible_message("<span class='italics'>You hear a click from the bottom of the door.</span>", null,  1)
 			else
 				if(A.hasPower()) //only can raise bolts if power's on
 					A.locked = 0
-					A.audible_message("You hear a click from the bottom of the door.", null, 1)
+					A.audible_message("<span class='italics'>You hear a click from the bottom of the door.</span>", null, 1)
 			A.update_icon()
 
 		if(AIRLOCK_WIRE_BACKUP_POWER1 || AIRLOCK_WIRE_BACKUP_POWER2)
@@ -193,3 +193,33 @@ var/const/AIRLOCK_WIRE_LIGHT = 2048
 		if(AIRLOCK_WIRE_LIGHT)
 			A.lights = !A.lights
 			A.update_icon()
+
+/datum/wires/airlock/SolveWireFunction(var/function)
+	var/sf = ""
+	switch(function)
+		if(AIRLOCK_WIRE_IDSCAN)
+			sf = "Port A"
+		if(AIRLOCK_WIRE_MAIN_POWER1)
+			sf = "Port B"
+		if(AIRLOCK_WIRE_MAIN_POWER2)
+			sf = "Port C"
+		if(AIRLOCK_WIRE_DOOR_BOLTS)
+			sf = "Port D"
+		if(AIRLOCK_WIRE_BACKUP_POWER1)
+			sf = "Port E"
+		if(AIRLOCK_WIRE_BACKUP_POWER2)
+			sf = "Port F"
+		if(AIRLOCK_WIRE_OPEN_DOOR)
+			sf = "Port G"
+		if(AIRLOCK_WIRE_AI_CONTROL)
+			sf = "Port H"
+		if(AIRLOCK_WIRE_ELECTRIFY)
+			sf = "Port I"
+		if(AIRLOCK_WIRE_SAFETY)
+			sf = "Port J"
+		if(AIRLOCK_WIRE_SPEED)
+			sf = "Port K"
+		if(AIRLOCK_WIRE_LIGHT)
+			sf = "Port L"
+
+	return sf

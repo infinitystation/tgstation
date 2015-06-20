@@ -18,7 +18,7 @@
 	item_state = "latexballon"
 	user.update_inv_r_hand()
 	user.update_inv_l_hand()
-	user << "<span class='notice'> You blow up [src] with [tank].</span>"
+	user << "<span class='notice'>You blow up [src] with [tank].</span>"
 	air_contents = tank.remove_air_volume(3)
 
 /obj/item/latexballon/proc/burst()
@@ -33,7 +33,7 @@
 		user.update_inv_l_hand()
 	loc.assume_air(air_contents)
 
-/obj/item/latexballon/ex_act(severity)
+/obj/item/latexballon/ex_act(severity, target)
 	burst()
 	switch(severity)
 		if (1)
@@ -50,10 +50,10 @@
 		burst()
 	return
 
-/obj/item/latexballon/attackby(obj/item/W as obj, mob/user as mob)
+/obj/item/latexballon/attackby(obj/item/W as obj, mob/user as mob, params)
 	if(istype(W, /obj/item/weapon/tank))
 		var/obj/item/weapon/tank/T = W
 		blow(T, user)
 		return
-	if (is_sharp(W) || is_hot(W))
+	if (is_sharp(W) || is_hot(W) || is_pointed(W))
 		burst()

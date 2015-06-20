@@ -1,16 +1,18 @@
 /mob/living/silicon/ai/Life()
-	if (src.stat == 2)
+	if (src.stat == DEAD)
 		return
 	else //I'm not removing that shitton of tabs, unneeded as they are. -- Urist
 		//Being dead doesn't mean your temperature never changes
 		var/turf/T = get_turf(src)
 
-		if (src.stat!=0)
+		if (src.stat!= CONSCIOUS)
 			src.cameraFollow = null
 			src.reset_view(null)
 			src.unset_machine()
 
 		src.updatehealth()
+
+		update_gravity(mob_has_gravity())
 
 		if (src.malfhack)
 			if (src.malfhack.aidisabled)
@@ -37,7 +39,7 @@
 
 		//stage = 1
 		//if (istype(src, /mob/living/silicon/ai)) // Are we not sure what we are?
-		var/blind = 0
+		var/blindness = 0
 		//stage = 2
 		var/area/loc = null
 		if (istype(T, /turf))
@@ -47,9 +49,9 @@
 				//stage = 4
 				if (!loc.master.power_equip && !istype(src.loc,/obj/item))
 					//stage = 5
-					blind = 1
+					blindness = 1
 
-		if (!blind)
+		if (!blindness)
 			//stage = 4.5
 			if (src.blind.layer != 0)
 				src.blind.layer = 0
@@ -156,7 +158,9 @@
 									src << "Receiving control information from APC."
 									sleep(2)
 									//bring up APC dialog
+									apc_override = 1
 									theAPC.attack_ai(src)
+									apc_override = 0
 									src:aiRestorePowerRoutine = 3
 									src << "Here are your current laws:"
 									src.show_laws()

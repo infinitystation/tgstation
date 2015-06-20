@@ -25,6 +25,9 @@
 /obj/machinery/atmospherics/pipe/manifold/New()
 	color = pipe_color
 
+	..()
+
+/obj/machinery/atmospherics/pipe/manifold/SetInitDirections()
 	switch(dir)
 		if(NORTH)
 			initialize_directions = EAST|SOUTH|WEST
@@ -34,9 +37,8 @@
 			initialize_directions = SOUTH|WEST|NORTH
 		if(WEST)
 			initialize_directions = NORTH|EAST|SOUTH
-	..()
 
-/obj/machinery/atmospherics/pipe/manifold/initialize()
+/obj/machinery/atmospherics/pipe/manifold/atmosinit()
 	for(var/D in cardinal)
 		if(D == dir)
 			continue
@@ -52,6 +54,7 @@
 	var/turf/T = src.loc			// hide if turf is not intact
 	hide(T.intact)
 	update_icon()
+	..()
 
 /obj/machinery/atmospherics/pipe/manifold/Destroy()
 	if(node1)
@@ -112,6 +115,15 @@
 
 /obj/machinery/atmospherics/pipe/manifold/pipeline_expansion()
 	return list(node1, node2, node3)
+
+/obj/machinery/atmospherics/pipe/manifold/update_node_icon()
+	..()
+	if(node1)
+		node1.update_icon()
+	if(node2)
+		node2.update_icon()
+	if(node3)
+		node3.update_icon()
 
 
 //Colored pipes, use these for mapping

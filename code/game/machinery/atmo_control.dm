@@ -2,7 +2,7 @@
 // AIR SENSOR (found in gaz tanks)
 /////////////////////////////////////////////////////////////
 
-obj/machinery/air_sensor
+/obj/machinery/air_sensor
 	icon = 'icons/obj/stationobjs.dmi'
 	icon_state = "gsensor1"
 	name = "gas sensor"
@@ -14,7 +14,7 @@ obj/machinery/air_sensor
 	var/frequency = 1439
 
 	var/on = 1
-	var/output = 3
+	var/output = 63
 	//Flags:
 	// 1 for pressure
 	// 2 for temperature
@@ -26,10 +26,27 @@ obj/machinery/air_sensor
 
 	var/datum/radio_frequency/radio_connection
 
-obj/machinery/air_sensor/update_icon()
-		icon_state = "gsensor[on]"
+	var/obj/item/pipe_gsensor/stored
 
-obj/machinery/air_sensor/process()
+/obj/machinery/air_sensor/attackby(var/obj/item/weapon/W as obj, var/mob/user as mob)
+	if(istype(W, /obj/item/weapon/wrench))
+		var/turf/T = src.loc
+		playsound(src.loc, 'sound/items/Ratchet.ogg', 50, 1)
+		user << "<span class='notice'>You begin to unfasten \the [src]...</span>"
+		if (do_after(user, 40) && !gc_destroyed)
+			user.visible_message( \
+			"[user] unfastens \the [src].", \
+			"<span class='notice'>You have unfastened \the [src].</span>", \
+			"You hear ratchet.")
+			investigate_log("was <span class='warning'>REMOVED</span> by [key_name(usr)]", "atmos")
+			stored.loc = T
+			transfer_fingerprints_to(stored)
+			qdel(src)
+
+/obj/machinery/air_sensor/process_atmos()
+	icon_state = "gsensor[on]"
+
+/obj/machinery/air_sensor/process_atmos()
 	if(on)
 		var/datum/signal/signal = new
 		signal.transmission_method = 1 //radio signal
@@ -63,21 +80,24 @@ obj/machinery/air_sensor/process()
 		radio_connection.post_signal(src, signal, filter = RADIO_ATMOSIA)
 
 
-obj/machinery/air_sensor/proc/set_frequency(new_frequency)
+/obj/machinery/air_sensor/proc/set_frequency(new_frequency)
 	radio_controller.remove_object(src, frequency)
 	frequency = new_frequency
 	radio_connection = radio_controller.add_object(src, frequency, RADIO_ATMOSIA)
 
-obj/machinery/air_sensor/initialize()
+/obj/machinery/air_sensor/initialize()
 	set_frequency(frequency)
 
-obj/machinery/air_sensor/New()
+/obj/machinery/air_sensor/New()
 	..()
-
+	SSair.atmos_machinery += src
 	if(radio_controller)
 		set_frequency(frequency)
 
-obj/machinery/air_sensor/Destroy()
+	stored = new(src, /obj/item/pipe_gsensor)
+
+/obj/machinery/air_sensor/Destroy()
+	SSair.atmos_machinery -= src
 	if(radio_controller)
 		radio_controller.remove_object(src,frequency)
 	..()
@@ -86,12 +106,11 @@ obj/machinery/air_sensor/Destroy()
 // GENERAL AIR CONTROL (a.k.a atmos computer)
 /////////////////////////////////////////////////////////////
 
-obj/machinery/computer/general_air_control
-	icon = 'icons/obj/computer.dmi'
-	icon_state = "tank"
+/obj/machinery/computer/general_air_control
+	icon_screen = "tank"
+	icon_keyboard = "atmos_key"
 
 	circuit = /obj/item/weapon/circuitboard/air_management
-	name = "computer"
 
 	var/frequency = 1439
 	var/list/sensors = list()
@@ -99,29 +118,29 @@ obj/machinery/computer/general_air_control
 	var/list/sensor_information = list()
 	var/datum/radio_frequency/radio_connection
 
-obj/machinery/computer/general_air_control/New()
+/obj/machinery/computer/general_air_control/New()
 	..()
 
 	if(radio_controller)
 		set_frequency(frequency)
 
-obj/machinery/computer/general_air_control/attack_hand(mob/user)
+/obj/machinery/computer/general_air_control/attack_hand(mob/user)
 	if(..(user))
 		return
 	interact(user) //UpdateDialog() is calling /interact each tick, not attack_hand()
 
 
-obj/machinery/computer/general_air_control/interact(mob/user)
+/obj/machinery/computer/general_air_control/interact(mob/user)
 	var/datum/browser/popup = new(user, "computer", name, 480, 490) //update the content every tick
 	popup.set_content(return_text())
 	popup.set_title_image(user.browse_rsc_icon(src.icon, src.icon_state))
 	popup.open()
 
-obj/machinery/computer/general_air_control/process()
+/obj/machinery/computer/general_air_control/process()
 	if(..())	//if the computer is not broken or unpowered
 		src.updateDialog()
 
-obj/machinery/computer/general_air_control/receive_signal(datum/signal/signal)
+/obj/machinery/computer/general_air_control/receive_signal(datum/signal/signal)
 	if(!signal || signal.encryption) return
 
 	var/id_tag = signal.data["tag"]
@@ -129,7 +148,7 @@ obj/machinery/computer/general_air_control/receive_signal(datum/signal/signal)
 
 	sensor_information[id_tag] = signal.data
 
-obj/machinery/computer/general_air_control/proc/return_text()
+/obj/machinery/computer/general_air_control/proc/return_text()
 	var/sensor_data
 	var/count = 0
 	if(sensors.len)
@@ -177,20 +196,20 @@ obj/machinery/computer/general_air_control/proc/return_text()
 
 	return output
 
-obj/machinery/computer/general_air_control/Destroy()
+/obj/machinery/computer/general_air_control/Destroy()
 	if(radio_controller)
 		radio_controller.remove_object(src, frequency)
 	..()
 
-obj/machinery/computer/general_air_control/proc/set_frequency(new_frequency)
+/obj/machinery/computer/general_air_control/proc/set_frequency(new_frequency)
 	radio_controller.remove_object(src, frequency)
 	frequency = new_frequency
 	radio_connection = radio_controller.add_object(src, frequency, RADIO_ATMOSIA)
 
-obj/machinery/computer/general_air_control/initialize()
+/obj/machinery/computer/general_air_control/initialize()
 	set_frequency(frequency)
 
-obj/machinery/computer/general_air_control/Topic(href, href_list)
+/obj/machinery/computer/general_air_control/Topic(href, href_list)
 	if(..())
 		return
 
@@ -209,10 +228,7 @@ obj/machinery/computer/general_air_control/Topic(href, href_list)
 // LARGE TANK CONTROL
 /////////////////////////////////////////////////////////////
 
-obj/machinery/computer/general_air_control/large_tank_control
-	icon = 'icons/obj/computer.dmi'
-	icon_state = "tank"
-
+/obj/machinery/computer/general_air_control/large_tank_control
 	var/input_tag
 	var/output_tag
 	frequency = 1441
@@ -222,8 +238,10 @@ obj/machinery/computer/general_air_control/large_tank_control
 	var/list/output_info
 
 	var/pressure_setting = ONE_ATMOSPHERE * 45
+	var/pressure_setting_in = ONE_ATMOSPHERE * 45
+	var/pressure_setting_out = ONE_ATMOSPHERE * 45
 
-obj/machinery/computer/general_air_control/large_tank_control/proc/reconnect(mob/user)    //This hacky madness is the evidence of the fact that a lot of machines were never meant to be constructable, im so sorry you had to see this
+/obj/machinery/computer/general_air_control/large_tank_control/proc/reconnect(mob/user)    //This hacky madness is the evidence of the fact that a lot of machines were never meant to be constructable, im so sorry you had to see this
 	var/list/IO = list()
 	var/datum/radio_frequency/air_freq = radio_controller.return_frequency(1443)
 	var/datum/radio_frequency/gas_freq = radio_controller.return_frequency(1441)
@@ -263,21 +281,57 @@ obj/machinery/computer/general_air_control/large_tank_control/proc/reconnect(mob
 	for(var/obj/machinery/atmospherics/unary/vent_pump/U in devices)
 		U.broadcast_status()
 
-obj/machinery/computer/general_air_control/large_tank_control/return_text()
+/obj/machinery/computer/general_air_control/large_tank_control/proc/m_reconnect(mob/user)    //This hacky madness is the evidence of the fact that a lot of machines were never meant to be constructable, im so sorry you had to see this
+	var/man_freq = stripped_input(usr, "Частота? От 1439 до 1441")
+	man_freq = text2num(man_freq)
+	var/man_sensor = stripped_input(usr, "ID-тэг сенсора?")
+	var/man_input = stripped_input(usr, "ID-тэг ввода?")
+	var/man_output = stripped_input(usr, "ID-тэг вывода?")
+	var/man_name = stripped_input(usr, "ИмЯ?")
+	name = "[man_name] Supply Control"
+	var/datum/radio_frequency/gas_freq = radio_controller.return_frequency(man_freq)
+	var/list/devices = gas_freq.devices["_default"]
+	devices |= gas_freq.devices["_default"]
+	devices |= gas_freq.devices["2"]
+	devices |= gas_freq.devices["2"]
+	devices |= gas_freq.devices["4"]
+	devices |= gas_freq.devices["4"]
+
+	if(src)
+		src.input_tag = man_input
+		src.output_tag = man_output
+		sensors = list("[man_sensor]" = "Tank")
+
+	set_frequency(man_freq)
+
+	for(var/obj/machinery/atmospherics/unary/outlet_injector/U in devices)
+		U.broadcast_status()
+
+	for(var/obj/machinery/atmospherics/unary/vent_pump/U in devices)
+		U.broadcast_status()
+
+/obj/machinery/computer/general_air_control/large_tank_control/return_text()
 	var/output = "<A href='?src=\ref[src];reconnect=1'>Reconnect</A><BR>"
+	output += "<A href='?src=\ref[src];m_reconnect=1'>Manual Reconnect</A><BR>"
 	if(sensors.len) //if recieving signals from nearby sensors...
 		output += ..() //... get the data.
 	else
 		output += "No sensors connected."
 
 	output += "<h1>Tank Control System</h1>"
-	if(input_info)
+
+	if(input_info && (input_info["device"] == "AO"))
 		var/power = (input_info["power"])
 		var/volume_rate = input_info["volume_rate"]
-		output += {"<B>Input</B>: [power?("Injecting"):("On Hold")] <A href='?src=\ref[src];in_refresh_status=1'>Refresh</A><BR>
-Rate: [volume_rate] L/sec<BR>"}
+		output += {"<B>Input</B>: [power?("Injecting"):("On Hold")] <A href='?src=\ref[src];in_refresh_status=1'>Refresh</A><BR>Rate: [volume_rate] L/sec<BR>"}
 		output += "<B>Command:</B> <A href='?src=\ref[src];in_toggle_injector=1'>Toggle Power</A><BR>"
 
+	else if(input_info && (input_info["device"] == "AVP"))
+		var/power = (input_info["power"])
+		var/input_pressure = input_info["external"]
+		output += {"<B>Input</B>: [power?("Open"):("On Hold")] <A href='?src=\ref[src];in_refresh_status=1'>Refresh</A><BR><B>Max Input Pressure:</B> [input_pressure] kPa<BR>"}
+		output += "<B>Command:</B> <A href='?src=\ref[src];in_toggle_power=1'>Toggle Power</A> <A href='?src=\ref[src];in_set_pressure=1'>Set Pressure</A><BR>"
+		output += "<B>Max Input Pressure Set:</B> <A href='?src=\ref[src];adj_pressure_in=-1000'>-</A> <A href='?src=\ref[src];adj_pressure_in=-100'>-</A> <A href='?src=\ref[src];adj_pressure_in=-10'>-</A> <A href='?src=\ref[src];adj_pressure_in=-1'>-</A> [pressure_setting_in] kPa <A href='?src=\ref[src];adj_pressure_in=1'>+</A> <A href='?src=\ref[src];adj_pressure_in=10'>+</A> <A href='?src=\ref[src];adj_pressure_in=100'>+</A> <A href='?src=\ref[src];adj_pressure_in=1000'>+</A><BR>"
 	else
 		output += "<FONT color='red'>ERROR: Can not find input port</FONT><BR>"
 
@@ -286,17 +340,16 @@ Rate: [volume_rate] L/sec<BR>"}
 	if(output_info)
 		var/power = (output_info["power"])
 		var/output_pressure = output_info["internal"]
-		output += {"<B>Output</B>: [power?("Open"):("On Hold")] <A href='?src=\ref[src];out_refresh_status=1'>Refresh</A><BR>
-<B>Max Output Pressure:</B> [output_pressure] kPa<BR>"}
+		output += {"<B>Output</B>: [power?("Open"):("On Hold")] <A href='?src=\ref[src];out_refresh_status=1'>Refresh</A><BR><B>Max Output Pressure:</B> [output_pressure] kPa<BR>"}
 		output += "<B>Command:</B> <A href='?src=\ref[src];out_toggle_power=1'>Toggle Power</A> <A href='?src=\ref[src];out_set_pressure=1'>Set Pressure</A><BR>"
-		output += "<B>Max Output Pressure Set:</B> <A href='?src=\ref[src];adj_pressure=-1000'>-</A> <A href='?src=\ref[src];adj_pressure=-100'>-</A> <A href='?src=\ref[src];adj_pressure=-10'>-</A> <A href='?src=\ref[src];adj_pressure=-1'>-</A> [pressure_setting] kPa <A href='?src=\ref[src];adj_pressure=1'>+</A> <A href='?src=\ref[src];adj_pressure=10'>+</A> <A href='?src=\ref[src];adj_pressure=100'>+</A> <A href='?src=\ref[src];adj_pressure=1000'>+</A><BR>"
+		output += "<B>Max Output Pressure Set:</B> <A href='?src=\ref[src];adj_pressure_out=-1000'>-</A> <A href='?src=\ref[src];adj_pressure_out=-100'>-</A> <A href='?src=\ref[src];adj_pressure_out=-10'>-</A> <A href='?src=\ref[src];adj_pressure_out=-1'>-</A> [pressure_setting_out] kPa <A href='?src=\ref[src];adj_pressure_out=1'>+</A> <A href='?src=\ref[src];adj_pressure_out=10'>+</A> <A href='?src=\ref[src];adj_pressure_out=100'>+</A> <A href='?src=\ref[src];adj_pressure_out=1000'>+</A><BR>"
 
 	else
 		output += "<FONT color='red'>ERROR: Can not find output port</FONT><BR>"
 
 	return output
 
-obj/machinery/computer/general_air_control/large_tank_control/receive_signal(datum/signal/signal)
+/obj/machinery/computer/general_air_control/large_tank_control/receive_signal(datum/signal/signal)
 	if(!signal || signal.encryption) return
 
 	var/id_tag = signal.data["tag"]
@@ -308,41 +361,60 @@ obj/machinery/computer/general_air_control/large_tank_control/receive_signal(dat
 	else
 		..(signal)
 
-obj/machinery/computer/general_air_control/large_tank_control/Topic(href, href_list)
+/obj/machinery/computer/general_air_control/large_tank_control/Topic(href, href_list)
 	if(..())
 		return
 
-	if(href_list["adj_pressure"])
-		var/change = text2num(href_list["adj_pressure"])
-		pressure_setting = Clamp(pressure_setting + change, 0, 50*ONE_ATMOSPHERE)
+	if(href_list["adj_pressure_in"])
+		var/change = text2num(href_list["adj_pressure_in"])
+		pressure_setting_in = Clamp(pressure_setting_in + change, 0, 50*ONE_ATMOSPHERE)
+		return
+
+	if(href_list["adj_pressure_out"])
+		var/change = text2num(href_list["adj_pressure_out"])
+		pressure_setting_out = Clamp(pressure_setting_out + change, 0, 50*ONE_ATMOSPHERE)
 		return
 
 	if(!radio_connection)
 		return 0
+
 	var/datum/signal/signal = new
 	signal.transmission_method = 1 //radio signal
 	signal.source = src
+
 	if(href_list["reconnect"])
 		reconnect(usr)
-	if(href_list["in_refresh_status"])
-		input_info = null
-		signal.data = list ("tag" = input_tag, "status")
+
+	if(href_list["m_reconnect"])
+		m_reconnect(usr)
 
 	if(href_list["in_toggle_injector"])
 		input_info = null
 		signal.data = list ("tag" = input_tag, "power_toggle")
 
+	if(href_list["in_refresh_status"])
+		input_info = null
+		signal.data = list ("tag" = input_tag, "status")
+
 	if(href_list["out_refresh_status"])
 		output_info = null
 		signal.data = list ("tag" = output_tag, "status")
+
+	if(href_list["in_toggle_power"])
+		input_info = null
+		signal.data = list ("tag" = input_tag, "power_toggle")
 
 	if(href_list["out_toggle_power"])
 		output_info = null
 		signal.data = list ("tag" = output_tag, "power_toggle")
 
+	if(href_list["in_set_pressure"])
+		input_info = null
+		signal.data = list ("tag" = input_tag, "set_external_pressure" = "[pressure_setting_in]")
+
 	if(href_list["out_set_pressure"])
 		output_info = null
-		signal.data = list ("tag" = output_tag, "set_internal_pressure" = "[pressure_setting]")
+		signal.data = list ("tag" = output_tag, "set_internal_pressure" = "[pressure_setting_out]")
 
 	signal.data["sigtype"]="command"
 	radio_connection.post_signal(src, signal, filter = RADIO_ATMOSIA)
@@ -352,9 +424,8 @@ obj/machinery/computer/general_air_control/large_tank_control/Topic(href, href_l
 // FUEL INJECTION
 /////////////////////////////////////////////////////////////
 
-obj/machinery/computer/general_air_control/fuel_injection
-	icon = 'icons/obj/computer.dmi'
-	icon_state = "atmos"
+/obj/machinery/computer/general_air_control/fuel_injection
+	icon_screen = "atmos"
 
 	var/device_tag
 	var/list/device_info
@@ -364,7 +435,7 @@ obj/machinery/computer/general_air_control/fuel_injection
 	var/cutoff_temperature = 2000
 	var/on_temperature = 1200
 
-obj/machinery/computer/general_air_control/fuel_injection/process()
+/obj/machinery/computer/general_air_control/fuel_injection/process()
 	if(automation)
 		if(!radio_connection)
 			return 0
@@ -393,7 +464,7 @@ obj/machinery/computer/general_air_control/fuel_injection/process()
 
 	..()
 
-obj/machinery/computer/general_air_control/fuel_injection/return_text()
+/obj/machinery/computer/general_air_control/fuel_injection/return_text()
 	var/output = ..()
 
 	output += "<B>Fuel Injection System</B><BR>"
@@ -415,7 +486,7 @@ Rate: [volume_rate] L/sec<BR>"}
 
 	return output
 
-obj/machinery/computer/general_air_control/fuel_injection/receive_signal(datum/signal/signal)
+/obj/machinery/computer/general_air_control/fuel_injection/receive_signal(datum/signal/signal)
 	if(!signal || signal.encryption) return
 
 	var/id_tag = signal.data["tag"]
@@ -425,7 +496,7 @@ obj/machinery/computer/general_air_control/fuel_injection/receive_signal(datum/s
 	else
 		..(signal)
 
-obj/machinery/computer/general_air_control/fuel_injection/Topic(href, href_list)
+/obj/machinery/computer/general_air_control/fuel_injection/Topic(href, href_list)
 	if(..())
 		return
 

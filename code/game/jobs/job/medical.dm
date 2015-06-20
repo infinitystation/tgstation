@@ -9,7 +9,7 @@ Chief Medical Officer
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the captain"
+	supervisors = "Капитану"
 	selection_color = "#ffddf0"
 	req_admin_notify = 1
 	minimal_player_age = 7
@@ -21,22 +21,22 @@ Chief Medical Officer
 	default_satchel = /obj/item/weapon/storage/backpack/satchel_med
 
 	access = list(access_medical, access_morgue, access_genetics, access_heads, access_mineral_storeroom,
-			access_chemistry, access_virology, access_cmo, access_surgery, access_RC_announce,
+			access_chemistry, access_virology, access_cmo, access_surgery, access_RC_announce, access_eva,
 			access_keycard_auth, access_sec_doors)
 	minimal_access = list(access_medical, access_morgue, access_genetics, access_heads, access_mineral_storeroom,
-			access_chemistry, access_virology, access_cmo, access_surgery, access_RC_announce,
+			access_chemistry, access_virology, access_cmo, access_surgery, access_RC_announce, access_eva,
 			access_keycard_auth, access_sec_doors)
 
 /datum/job/cmo/equip_items(var/mob/living/carbon/human/H)
 	H.equip_to_slot_or_del(new /obj/item/clothing/under/rank/chief_medical_officer(H), slot_w_uniform)
 	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/sneakers/brown(H), slot_shoes)
-	H.equip_to_slot_or_del(new /obj/item/clothing/suit/labcoat/cmo(H), slot_wear_suit)
+	H.equip_to_slot_or_del(new /obj/item/clothing/suit/toggle/labcoat/cmo(H), slot_wear_suit)
 	H.equip_to_slot_or_del(new /obj/item/weapon/storage/firstaid/regular(H), slot_l_hand)
 	H.equip_to_slot_or_del(new /obj/item/device/flashlight/pen(H), slot_s_store)
 
 	//Equip telebaton
 	if(H.backbag == 2 || H.backbag == 3)
-		H.equip_to_slot_or_del(new /obj/item/weapon/melee/telebaton(H), slot_in_backpack)
+		H.equip_to_slot_or_del(new /obj/item/weapon/melee/classic_baton/telescopic(H), slot_in_backpack)
 
 /*
 Medical Doctor
@@ -47,9 +47,9 @@ Medical Doctor
 	department_head = list("Chief Medical Officer")
 	department_flag = MEDSCI
 	faction = "Station"
-	total_positions = 5
+	total_positions = 10
 	spawn_positions = 3
-	supervisors = "the chief medical officer"
+	supervisors = "Главному Врачу CMO"
 	selection_color = "#ffeef0"
 
 	default_pda = /obj/item/device/pda/medical
@@ -57,13 +57,13 @@ Medical Doctor
 	default_backpack = /obj/item/weapon/storage/backpack/medic
 	default_satchel = /obj/item/weapon/storage/backpack/satchel_med
 
-	access = list(access_medical, access_morgue, access_surgery, access_chemistry, access_virology, access_genetics)
+	access = list(access_medical, access_morgue, access_surgery, access_chemistry, access_virology, access_genetics, access_mineral_storeroom)
 	minimal_access = list(access_medical, access_morgue, access_surgery)
 
 /datum/job/doctor/equip_items(var/mob/living/carbon/human/H)
 	H.equip_to_slot_or_del(new /obj/item/clothing/under/rank/medical(H), slot_w_uniform)
 	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/sneakers/white(H), slot_shoes)
-	H.equip_to_slot_or_del(new /obj/item/clothing/suit/labcoat(H), slot_wear_suit)
+	H.equip_to_slot_or_del(new /obj/item/clothing/suit/toggle/labcoat(H), slot_wear_suit)
 	H.equip_to_slot_or_del(new /obj/item/weapon/storage/firstaid/regular(H), slot_l_hand)
 	H.equip_to_slot_or_del(new /obj/item/device/flashlight/pen(H), slot_s_store)
 
@@ -78,7 +78,7 @@ Chemist
 	faction = "Station"
 	total_positions = 2
 	spawn_positions = 2
-	supervisors = "the chief medical officer"
+	supervisors = "Главному Врачу CMO"
 	selection_color = "#ffeef0"
 
 	default_pda = /obj/item/device/pda/chemist
@@ -90,7 +90,7 @@ Chemist
 /datum/job/chemist/equip_items(var/mob/living/carbon/human/H)
 	H.equip_to_slot_or_del(new /obj/item/clothing/under/rank/chemist(H), slot_w_uniform)
 	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/sneakers/white(H), slot_shoes)
-	H.equip_to_slot_or_del(new /obj/item/clothing/suit/labcoat/chemist(H), slot_wear_suit)
+	H.equip_to_slot_or_del(new /obj/item/clothing/suit/toggle/labcoat/chemist(H), slot_wear_suit)
 
 /*
 Geneticist
@@ -103,19 +103,19 @@ Geneticist
 	faction = "Station"
 	total_positions = 2
 	spawn_positions = 2
-	supervisors = "the chief medical officer and research director"
+	supervisors = "Главному Врачу CMO и Директору Разработок и Исследований RD"
 	selection_color = "#ffeef0"
 
 	default_pda = /obj/item/device/pda/geneticist
 	default_headset = /obj/item/device/radio/headset/headset_medsci
 
-	access = list(access_medical, access_morgue, access_surgery, access_chemistry, access_virology, access_genetics, access_research)
+	access = list(access_medical, access_morgue, access_chemistry, access_virology, access_genetics, access_research, access_xenobiology, access_robotics, access_mineral_storeroom, access_tech_storage)
 	minimal_access = list(access_medical, access_morgue, access_genetics, access_research)
 
 /datum/job/geneticist/equip_items(var/mob/living/carbon/human/H)
 	H.equip_to_slot_or_del(new /obj/item/clothing/under/rank/geneticist(H), slot_w_uniform)
 	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/sneakers/white(H), slot_shoes)
-	H.equip_to_slot_or_del(new /obj/item/clothing/suit/labcoat/genetics(H), slot_wear_suit)
+	H.equip_to_slot_or_del(new /obj/item/clothing/suit/toggle/labcoat/genetics(H), slot_wear_suit)
 	H.equip_to_slot_or_del(new /obj/item/device/flashlight/pen(H), slot_s_store)
 
 /*
@@ -129,7 +129,7 @@ Virologist
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the chief medical officer"
+	supervisors = "Главному Врачу CMO"
 	selection_color = "#ffeef0"
 
 	default_pda = /obj/item/device/pda/viro
@@ -144,6 +144,6 @@ Virologist
 	H.equip_to_slot_or_del(new /obj/item/clothing/under/rank/virologist(H), slot_w_uniform)
 	H.equip_to_slot_or_del(new /obj/item/clothing/mask/surgical(H), slot_wear_mask)
 	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/sneakers/white(H), slot_shoes)
-	H.equip_to_slot_or_del(new /obj/item/clothing/suit/labcoat/virologist(H), slot_wear_suit)
+	H.equip_to_slot_or_del(new /obj/item/clothing/suit/toggle/labcoat/virologist(H), slot_wear_suit)
 	H.equip_to_slot_or_del(new /obj/item/device/flashlight/pen(H), slot_s_store)
 

@@ -18,6 +18,7 @@
 	required_players = 10
 	required_enemies = 1
 	recommended_enemies = 3
+	enemy_minimum_age = 14
 
 	var/finished = 0
 	var/check_counter = 0
@@ -43,25 +44,15 @@
 	if(config.protect_assistant_from_antagonist)
 		restricted_jobs += "Assistant"
 
-	var/head_check = 0
-	for(var/mob/new_player/player in player_list)
-		if(player.mind.assigned_role in command_positions)
-			head_check = 1
-			break
-
-	for(var/datum/mind/player in antag_candidates)
-		for(var/job in restricted_jobs)//Removing heads and such from the list
-			if(player.assigned_role == job)
-				antag_candidates -= player
-
 	for (var/i=1 to max_headrevs)
 		if (antag_candidates.len==0)
 			break
 		var/datum/mind/lenin = pick(antag_candidates)
 		antag_candidates -= lenin
 		head_revolutionaries += lenin
+		lenin.restricted_roles = restricted_jobs
 
-	if((head_revolutionaries.len < required_enemies)||(!head_check))
+	if(head_revolutionaries.len < required_enemies)
 		return 0
 
 	return 1
@@ -85,13 +76,13 @@
 		//	equip_traitor(rev_mind.current, 1) //changing how revs get assigned their uplink so they can get PDA uplinks. --NEO
 		//	Removing revolutionary uplinks.	-Pete
 			equip_revolutionary(rev_mind.current)
+			rev_mind.current.verbs += /mob/living/carbon/human/proc/RevConvert
 			update_rev_icons_added(rev_mind)
 
 	for(var/datum/mind/rev_mind in head_revolutionaries)
 		greet_revolutionary(rev_mind)
 	modePlayer += head_revolutionaries
-	if(emergency_shuttle)
-		emergency_shuttle.always_fake_recall = 1
+	SSshuttle.emergencyNoEscape = 1
 	..()
 
 
@@ -117,7 +108,7 @@
 /datum/game_mode/proc/greet_revolutionary(var/datum/mind/rev_mind, var/you_are=1)
 	var/obj_count = 1
 	if (you_are)
-		rev_mind.current << "<span class='userdanger'><FONT size = 3>You are a member of the revolutionaries' leadership!</FONT></span>"
+		rev_mind.current << "<span class='userdanger'>You are a member of the revolutionaries' leadership!</span>"
 	for(var/datum/objective/objective in rev_mind.objectives)
 		rev_mind.current << "<B>Objective #[obj_count]</B>: [objective.explanation_text]"
 		rev_mind.special_role = "Head Revolutionary"
@@ -133,10 +124,9 @@
 	if (mob.mind)
 		if (mob.mind.assigned_role == "Clown")
 			mob << "Your training has allowed you to overcome your clownish nature, allowing you to wield weapons without harming yourself."
-			mob.mutations.Remove(CLUMSY)
+			mob.dna.remove_mutation(CLOWNMUT)
 
-
-	var/obj/item/device/flash/T = new(mob)
+	var/obj/item/toy/crayon/spraycan/R = new(mob)
 
 	var/list/slots = list (
 		"backpack" = slot_in_backpack,
@@ -145,13 +135,15 @@
 		"left hand" = slot_l_hand,
 		"right hand" = slot_r_hand,
 	)
-	var/where = mob.equip_in_one_of_slots(T, slots)
-	if (!where)
-		mob << "The Syndicate were unfortunately unable to get you a flash."
-	else
-		mob << "The flash in your [where] will help you to persuade the crew to join your cause."
-		mob.update_icons()
-		return 1
+	mob.equip_in_one_of_slots(R,slots)
+
+	//THEY ARE ANTYLOYAL
+	var/obj/item/weapon/implant/antiloyalty/AL = new/obj/item/weapon/implant/antiloyalty(mob)
+	AL.imp_in = mob
+	AL.implanted = 1
+	AL.implanted(mob)
+
+	mob.update_icons()
 
 /////////////////////////////////
 //Gives head revs their targets//
@@ -175,7 +167,7 @@
 			for(var/datum/mind/rev_mind in head_revolutionaries)
 				mark_for_death(rev_mind, head_mind)
 
-	if(max_headrevs < initial(max_headrevs) && max_headrevs < heads.len)
+	if(head_revolutionaries.len < max_headrevs && head_revolutionaries.len < heads.len)
 		latejoin_headrev()
 
 ///////////////////////////////
@@ -183,14 +175,20 @@
 ///////////////////////////////
 /datum/game_mode/revolution/proc/latejoin_headrev()
 	if(revolutionaries) //Head Revs are not in this list
-		var/datum/mind/stalin = pick(revolutionaries)
-		revolutionaries -= stalin
-		head_revolutionaries += stalin
-		log_game("[stalin.key] (ckey) has been promoted to a head rev")
-		equip_revolutionary(stalin.current)
-		forge_revolutionary_objectives(stalin)
-		greet_revolutionary(stalin)
-		++max_headrevs
+		var/list/promotable_revs = list()
+		for(var/datum/mind/khrushchev in revolutionaries)
+			if(khrushchev.current && khrushchev.current.client && khrushchev.current.stat != DEAD)
+				if(khrushchev.current.client.prefs.be_special & BE_REV)
+					promotable_revs += khrushchev
+		if(promotable_revs)
+			var/datum/mind/stalin = pick(promotable_revs)
+			revolutionaries -= stalin
+			head_revolutionaries += stalin
+			log_game("[stalin.key] (ckey) has been promoted to a head rev")
+			stalin.current.verbs += /mob/living/carbon/human/proc/RevConvert
+			equip_revolutionary(stalin.current)
+			forge_revolutionary_objectives(stalin)
+			greet_revolutionary(stalin)
 
 //////////////////////////////////////
 //Checks if the revs have won or not//
@@ -206,15 +204,18 @@
 //Checks if the round is over//
 ///////////////////////////////
 /datum/game_mode/revolution/check_finished()
-	if(config.continuous_round_rev)
+	if(config.continuous["revolution"])
 		if(finished != 0)
-			if(emergency_shuttle)
-				emergency_shuttle.always_fake_recall = 0
+			SSshuttle.emergencyNoEscape = 0
+			if(SSshuttle.emergency.mode == SHUTTLE_STRANDED)
+				SSshuttle.emergency.mode = SHUTTLE_DOCKED
+				SSshuttle.emergency.timer = world.time
+				priority_announce("Hostile enviroment resolved. You have 3 minutes to board the Emergency Shuttle.", null, 'sound/AI/shuttledock.ogg', "Priority")
 		return ..()
 	if(finished != 0)
 		return 1
 	else
-		return 0
+		return ..()
 
 ///////////////////////////////////////////////////
 //Deals with converting players to the revolution//
@@ -228,11 +229,50 @@
 	if((rev_mind in revolutionaries) || (rev_mind in head_revolutionaries))
 		return 0
 	revolutionaries += rev_mind
+	if(iscarbon(rev_mind.current))
+		var/mob/living/carbon/carbon_mob = rev_mind.current
+		carbon_mob.silent = max(carbon_mob.silent, 5)
+		carbon_mob.flash_eyes(1, 1)
+	rev_mind.current.Stun(5)
 	rev_mind.current << "<span class='danger'><FONT size = 3> You are now a revolutionary! Help your cause. Do not harm your fellow freedom fighters. You can identify your comrades by the red \"R\" icons, and your leaders by the blue \"R\" icons. Help them kill the heads to win the revolution!</FONT></span>"
 	rev_mind.current.attack_log += "\[[time_stamp()]\] <font color='red'>Has been converted to the revolution!</font>"
 	rev_mind.special_role = "Revolutionary"
 	update_rev_icons_added(rev_mind)
 	return 1
+
+/mob/living/carbon/human/proc/RevConvert()
+	set name = "Rev-Convert"
+	set category = "IC"
+	var/list/Possible = list()
+	for (var/mob/living/carbon/human/P in view(src.loc))
+		if(!stat && P.client && P.mind && !P.mind.special_role)
+			Possible += P
+	if(!Possible.len)
+		src << "\red There doesn't appear to be anyone available for you to convert here."
+		return
+	var/mob/living/carbon/human/M = input("Select a person to convert", "Viva la revolution!", null) as mob in Possible
+	if(((src.mind in ticker.mode.head_revolutionaries) || (src.mind in ticker.mode.revolutionaries)))
+		if((M.mind in ticker.mode.head_revolutionaries) || (M.mind in ticker.mode.revolutionaries))
+			src << "\red <b>[M] is already be a revolutionary!</b>"
+		else if(isloyal(M))
+			src << "\red <b>[M] is implanted with a loyalty implant - Remove it first!</b>"
+		else
+			if(world.time < M.mind.rev_cooldown)
+				src << "\red Wait five seconds before reconversion attempt."
+				return
+			src << "\red Attempting to convert [M]..."
+			log_admin("[src]([src.ckey]) attempted to convert [M].")
+			message_admins("\red [src]([src.ckey]) attempted to convert [M].")
+			var/choice = alert(M,"Asked by [src]: Do you want to join the revolution?","Align Thyself with the Revolution!","No!","Yes!")
+			if(choice == "Yes!")
+				ticker.mode.add_revolutionary(M.mind)
+				M << "\blue You join the revolution!"
+				src << "\blue <b>[M] joins the revolution!</b>"
+			else if(choice == "No!")
+				M << "\red You reject this traitorous cause!"
+				src << "\red <b>[M] does not support the revolution!</b>"
+			M.mind.rev_cooldown = world.time+50
+
 //////////////////////////////////////////////////////////////////////////////
 //Deals with players being converted from the revolution (Not a rev anymore)//  // Modified to handle borged MMIs.  Accepts another var if the target is being borged at the time  -- Polymorph.
 //////////////////////////////////////////////////////////////////////////////
@@ -244,9 +284,10 @@
 
 		if(beingborged)
 			rev_mind.current << "<span class='danger'><FONT size = 3>The frame's firmware detects and deletes your neural reprogramming!  You remember nothing but the name of the one who flashed you.</FONT></span>"
-			message_admins("[key_name_admin(rev_mind.current)] <A HREF='?_src_=holder;adminmoreinfo=\ref[rev_mind.current]'>?</A> has been borged while being a member of the revolution.")
+			message_admins("[key_name_admin(rev_mind.current)] <A HREF='?_src_=holder;adminmoreinfo=\ref[rev_mind.current]'>?</A> (<A HREF='?_src_=holder;adminplayerobservefollow=\ref[rev_mind.current]'>FLW</A>) has been borged while being a member of the revolution.")
 
 		else
+			rev_mind.current.Paralyse(5)
 			rev_mind.current << "<span class='danger'><FONT size = 3>You have been brainwashed! You are no longer a revolutionary! Your memory is hazy from the time you were a rebel...the only thing you remember is the name of the one who brainwashed you...</FONT></span>"
 
 		update_rev_icons_removed(rev_mind)
@@ -290,7 +331,7 @@
 /datum/game_mode/revolution/proc/check_heads_victory()
 	for(var/datum/mind/rev_mind in head_revolutionaries)
 		var/turf/T = get_turf(rev_mind.current)
-		if((rev_mind) && (rev_mind.current) && (rev_mind.current.stat != 2) && rev_mind.current.client && T && (T.z == 1))
+		if((rev_mind) && (rev_mind.current) && (rev_mind.current.stat != 2) && rev_mind.current.client && T && (T.z == ZLEVEL_STATION))
 			if(ishuman(rev_mind.current))
 				return 0
 	return 1
@@ -331,7 +372,7 @@
 			if(headrev.current)
 				if(headrev.current.stat == DEAD)
 					text += "died"
-				else if(headrev.current.z != 1)
+				else if(headrev.current.z > ZLEVEL_STATION)
 					text += "fled the station"
 				else
 					text += "survived the revolution"
@@ -355,7 +396,7 @@
 			if(rev.current)
 				if(rev.current.stat == DEAD || isbrain(rev.current))
 					text += "died"
-				else if(rev.current.z != 1)
+				else if(rev.current.z > ZLEVEL_STATION)
 					text += "fled the station"
 				else
 					text += "survived the revolution"
@@ -381,7 +422,7 @@
 			if(head.current)
 				if(head.current.stat == DEAD || isbrain(head.current))
 					text += "died"
-				else if(head.current.z != 1)
+				else if(head.current.z > ZLEVEL_STATION)
 					text += "fled the station"
 				else
 					text += "survived the revolution"
@@ -395,3 +436,4 @@
 		text += "<br>"
 
 		world << text
+
