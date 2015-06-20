@@ -76,7 +76,7 @@
 // END_PREFERENCES
 
 // BEGIN_INCLUDE
-#include "_maps\metastation.dm"
+#include "_maps\terrorstation.dm"
 #include "code\_compile_options.dm"
 #include "code\hub.dm"
 #include "code\world.dm"
