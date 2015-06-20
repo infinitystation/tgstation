@@ -53,7 +53,7 @@
 	desc = "Oh god, this shouldn't be here"
 	ammo_type = /obj/item/ammo_casing/shotgun/buckshot
 	caliber = "shotgun"
-	max_ammo = 8
+	max_ammo = 6
 	multiload = 0
 
 /obj/item/ammo_box/magazine/internal/cylinder/dualshot
@@ -241,6 +241,11 @@ obj/item/ammo_box/magazine/tommygunm45
 	name = "shotgun magazine (12g dragon's breath)"
 	icon_state = "m12gf"
 	ammo_type = /obj/item/ammo_casing/shotgun/incendiary/dragonsbreath
+
+/obj/item/ammo_box/magazine/m12g/bioterror
+	name = "shotgun magazine (12g bioterror)"
+	icon_state = "m12gt"
+	ammo_type = /obj/item/ammo_casing/shotgun/dart/bioterror
 
 /obj/item/ammo_box/magazine/toy
 	name = "foam force META magazine"
