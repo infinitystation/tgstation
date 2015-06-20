@@ -27,6 +27,6 @@ z7 = empty space
 
 #elif !defined(MAP_OVERRIDE)
 
-	#warn a map has already been included, ignoring MetaStation.
+	#warn a map has already been included, ignoring Terror's MetaStation.
 
 #endif
