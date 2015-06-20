@@ -439,8 +439,10 @@ var/list/binary = list("0","1")
 //clean sanitize
 /proc/sanitize_a0(t)
 	t = replacetext(t, "ÿ", "&#255;")
+	return t
 
 //clean sanitize
 /proc/sanitize_u0(t)
 	t = replacetext(t, "ÿ", "&#1103;")
+	return t
 
