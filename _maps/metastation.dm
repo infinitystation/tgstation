@@ -23,7 +23,7 @@ z7 = empty space
         #include "map_files\generic\z6.dmm"
         #include "map_files\generic\z7.dmm"
         #define MAP_FILE "MetaStation.v41A.II.dmm"
-        #define MAP_NAME "/tg/'s MetaStation"
+        #define MAP_NAME "TG MetaStation"
 
 #elif !defined(MAP_OVERRIDE)
 
