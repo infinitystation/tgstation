@@ -235,6 +235,14 @@
 	name = "leather jacket"
 	desc = "Pompadour not included."
 	icon_state = "leatherjacket"
+	item_state = "hostrench"
+
+/obj/item/clothing/suit/jacket/leather/overcoat
+	name = "leather overcoat"
+	desc = "That's a damn fine coat."
+	icon_state = "leathercoat"
+	body_parts_covered = CHEST|GROIN|ARMS|LEGS
+	cold_protection = CHEST|GROIN|ARMS|LEGS
 
 /obj/item/clothing/suit/xenos
 	name = "xenos suit"
@@ -271,7 +279,7 @@
 /obj/item/clothing/suit/hooded/wintercoat/captain
 	name = "captain's winter coat"
 	icon_state = "coatcaptain"
-	armor = list(melee = 50, bullet = 30, laser = 50, energy = 10, bomb = 25, bio = 0, rad = 0)
+	armor = list(melee = 25, bullet = 30, laser = 30, energy = 10, bomb = 25, bio = 0, rad = 0)
 	allowed = list(/obj/item/weapon/gun/energy,/obj/item/weapon/reagent_containers/spray/pepper,/obj/item/weapon/gun/projectile,/obj/item/ammo_box,/obj/item/ammo_casing,/obj/item/weapon/melee/baton,/obj/item/weapon/restraints/handcuffs,/obj/item/device/flashlight/seclite,/obj/item/weapon/melee/classic_baton/telescopic)
 
 /obj/item/clothing/suit/hooded/wintercoat/security
@@ -279,7 +287,7 @@
 	icon_state = "coatsecurity"
 	worn_icon = 'icons/blue_brig/mob/suit.dmi'
 	icon = 'icons/blue_brig/obj/clothing/suits.dmi'
-	armor = list(melee = 50, bullet = 15, laser = 50, energy = 10, bomb = 25, bio = 0, rad = 0)
+	armor = list(melee = 25, bullet = 15, laser = 30, energy = 10, bomb = 25, bio = 0, rad = 0)
 	allowed = list(/obj/item/weapon/gun/energy,/obj/item/weapon/reagent_containers/spray/pepper,/obj/item/weapon/gun/projectile,/obj/item/ammo_box,/obj/item/ammo_casing,/obj/item/weapon/melee/baton,/obj/item/weapon/restraints/handcuffs,/obj/item/device/flashlight/seclite,/obj/item/weapon/melee/classic_baton/telescopic)
 
 /obj/item/clothing/suit/hooded/wintercoat/medical

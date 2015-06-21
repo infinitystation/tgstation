@@ -302,7 +302,7 @@
 
 /obj/machinery/bot/floorbot/proc/nag() //Annoy everyone on the channel to refill us!
 	if(!nagged)
-		speak("Requesting refill at <b>[get_area(src)]</b>!", radio_frequency)
+		speak("Requesting refill at [get_area(src)]!", radio_frequency)
 		nagged = 1
 
 /obj/machinery/bot/floorbot/proc/is_hull_breach(var/turf/t) //Ignore space tiles not considered part of a structure, also ignores shuttle docking areas.
@@ -388,7 +388,7 @@ obj/machinery/bot/floorbot/process_scan(var/scan_target)
 /obj/machinery/bot/floorbot/proc/eattile(var/obj/item/stack/tile/plasteel/T)
 	if(!istype(T, /obj/item/stack/tile/plasteel))
 		return
-	visible_message("<span class='notice'> [src] begins to collect tiles.</span>")
+	visible_message("<span class='notice'>[src] begins to collect tiles.</span>")
 	mode = BOT_REPAIRING
 	spawn(20)
 		if(isnull(T))
@@ -409,7 +409,7 @@ obj/machinery/bot/floorbot/process_scan(var/scan_target)
 /obj/machinery/bot/floorbot/proc/maketile(var/obj/item/stack/sheet/metal/M)
 	if(!istype(M, /obj/item/stack/sheet/metal))
 		return
-	visible_message("<span class='notice'> [src] begins to create tiles.</span>")
+	visible_message("<span class='notice'>[src] begins to create tiles.</span>")
 	mode = BOT_REPAIRING
 	spawn(20)
 		if(isnull(M))

@@ -72,7 +72,7 @@
 	#else
 	map_name = "Unknown"
 	#endif
-
+	update_status()
 
 	return
 
@@ -214,6 +214,8 @@
 	s += ")"
 
 	var/list/features = list()
+
+	features += "Map - [MAP_NAME]"
 
 	if(ticker)
 		if(master_mode)

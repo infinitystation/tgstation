@@ -491,6 +491,14 @@
 	A.fire()
 	return
 
+/obj/machinery/gun_turret/laser //specially for TERROR'S SYNDIE BATTLESHIP
+	name = "laser cannon turret"
+	desc = "Syndicate laser defense turret. It really packs a bunch."
+	scan_range = 15 //YOU SHALL NOT PASS!
+	health = 150 //Because it lacks a cover, and is mostly to keep people from touching the syndie shuttle.
+	projectile_type = /obj/item/projectile/beam/heavylaser
+	fire_sound = 'sound/weapons/lasercannonfire.ogg'
+
 
 ////////////////////////
 //Turret Control Panel//

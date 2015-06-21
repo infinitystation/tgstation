@@ -17,7 +17,7 @@ var/global/list/rockTurfEdgeCache
 	density = 1
 	blocks_air = 1
 	temperature = TCMB
-	var/obj/mineralType = null
+	var/mineralType = null
 	var/mineralAmt = 3
 	var/spread = 0 //will the seam spread?
 	var/spreadChance = 0 //the percentual chance of an ore spreading to the neighbouring tiles
@@ -256,19 +256,16 @@ var/global/list/rockTurfEdgeCache
 		var/turf/bombturf = get_turf(src)
 		var/area/A = get_area(bombturf)
 
-		if(user)
-			activated_ckey = "[user.ckey]"
-			activated_name = "[user.name]"
 		var/notify_admins = 0
 		if(z != 5)
 			notify_admins = 1
 			if(!triggered_by_explosion)
-				message_admins("[src.activated_ckey]/([src.activated_name])<A HREF='?_src_=holder;adminmoreinfo=\ref[usr]'>?</A> has triggered a gibtonite deposit reaction at <A HREF='?_src_=holder;adminplayerobservecoodjump=1;X=[bombturf.x];Y=[bombturf.y];Z=[bombturf.z]'>[A.name] (JMP)</a>.")
+				message_admins("[key_name_admin(user)]<A HREF='?_src_=holder;adminmoreinfo=\ref[user]'>?</A> (<A HREF='?_src_=holder;adminplayerobservefollow=\ref[user]'>FLW</A>) has triggered a gibtonite deposit reaction at <A HREF='?_src_=holder;adminplayerobservecoodjump=1;X=[bombturf.x];Y=[bombturf.y];Z=[bombturf.z]'>[A.name] (JMP)</a>.")
 			else
 				message_admins("An explosion has triggered a gibtonite deposit reaction at <A HREF='?_src_=holder;adminplayerobservecoodjump=1;X=[bombturf.x];Y=[bombturf.y];Z=[bombturf.z]'>[A.name] (JMP)</a>.")
 
 		if(!triggered_by_explosion)
-			log_game("[src.activated_ckey] ([src.activated_name]) has triggered a gibtonite deposit reaction at [A.name] ([A.x], [A.y], [A.z]).")
+			log_game("[key_name(user)] has triggered a gibtonite deposit reaction at [A.name] ([A.x], [A.y], [A.z]).")
 		else
 			log_game("An explosion has triggered a gibtonite deposit reaction at [A.name]([bombturf.x],[bombturf.y],[bombturf.z])")
 
@@ -449,7 +446,7 @@ var/global/list/rockTurfEdgeCache
 		var/i
 		for (i=0;i<mineralAmt;i++)
 			new mineralType(src)
-		feedback_add_details("ore_mined","[mineralType.name]|[mineralAmt]")
+		feedback_add_details("ore_mined","[mineralType]|[mineralAmt]")
 	var/turf/simulated/floor/plating/asteroid/airless/N = ChangeTurf(/turf/simulated/floor/plating/asteroid/airless)
 	playsound(src, 'sound/effects/break_stone.ogg', 50, 1) //beautiful destruction
 	N.fullUpdateMineralOverlays()

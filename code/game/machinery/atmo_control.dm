@@ -97,6 +97,7 @@
 	stored = new(src, /obj/item/pipe_gsensor)
 
 /obj/machinery/air_sensor/Destroy()
+	SSair.atmos_machinery -= src
 	if(radio_controller)
 		radio_controller.remove_object(src,frequency)
 	..()
@@ -106,11 +107,10 @@
 /////////////////////////////////////////////////////////////
 
 /obj/machinery/computer/general_air_control
-	icon = 'icons/obj/computer.dmi'
-	icon_state = "tank"
+	icon_screen = "tank"
+	icon_keyboard = "atmos_key"
 
 	circuit = /obj/item/weapon/circuitboard/air_management
-	name = "computer"
 
 	var/frequency = 1439
 	var/list/sensors = list()
@@ -229,9 +229,6 @@
 /////////////////////////////////////////////////////////////
 
 /obj/machinery/computer/general_air_control/large_tank_control
-	icon = 'icons/obj/computer.dmi'
-	icon_state = "tank"
-
 	var/input_tag
 	var/output_tag
 	frequency = 1441
@@ -428,8 +425,7 @@
 /////////////////////////////////////////////////////////////
 
 /obj/machinery/computer/general_air_control/fuel_injection
-	icon = 'icons/obj/computer.dmi'
-	icon_state = "atmos"
+	icon_screen = "atmos"
 
 	var/device_tag
 	var/list/device_info

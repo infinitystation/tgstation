@@ -235,7 +235,7 @@ var/record_id_num = 1001
 		M.fields["alg_d"]		= "No allergies have been detected in this patient."
 		M.fields["cdi"]			= "None"
 		M.fields["cdi_d"]		= "No diseases have been diagnosed at the moment."
-		M.fields["notes"]		= "No notes."
+		M.fields["notes"]		= H.med_imp_notes
 		medical += M
 
 		//Security Record
@@ -245,7 +245,7 @@ var/record_id_num = 1001
 		S.fields["criminal"]	= "None"
 		S.fields["mi_crim"]		= list()
 		S.fields["ma_crim"]		= list()
-		S.fields["notes"]		= "No notes."
+		S.fields["notes"]		= H.sec_imp_notes
 		security += S
 
 		//Locked Record
@@ -260,7 +260,7 @@ var/record_id_num = 1001
 		L.fields["enzymes"]		= H.dna.struc_enzymes
 		L.fields["identity"]	= H.dna.uni_identity
 		L.fields["species"]		= H.dna.species.type
-		L.fields["mcolor"]		= H.dna.mutant_color
+		L.fields["features"]	= H.dna.features
 		L.fields["image"]		= image
 		locked += L
 	return
@@ -272,7 +272,7 @@ var/record_id_num = 1001
 		photo = icon("icon" = 'icons/mob/human.dmi', "icon_state" = "[H.skin_tone]_[g]_s")
 	else
 		photo = icon("icon" = 'icons/mob/human.dmi', "icon_state" = "[H.dna.species.id]_[g]_s")
-		photo.Blend("#[H.dna.mutant_color]", ICON_MULTIPLY)
+		photo.Blend("#[H.dna.features["mcolor"]]", ICON_MULTIPLY)
 
 	var/icon/eyes_s
 	if(EYECOLOR in H.dna.species.specflags)

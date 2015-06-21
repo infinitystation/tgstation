@@ -155,7 +155,8 @@ var/global/all_solved_wires = list() //Solved wire associative list, eg; all_sol
 					if(istype(I, /obj/item/device/assembly))
 						var/obj/item/device/assembly/A = I;
 						if(A.attachable)
-							L.drop_item()
+							if(!L.drop_item())
+								return
 							Attach(colour, A)
 						else
 							L << "<span class='warning'>You need a attachable assembly!</span>"
@@ -352,8 +353,6 @@ var/const/POWER = 8
 		name_by_type = "Autolathe"
 	if(istype(src, /datum/wires/alarm))
 		name_by_type = "Air Alarm"
-	if(istype(src, /datum/wires/camera))
-		name_by_type = "Camera"
 	if(istype(src, /datum/wires/explosive))
 		name_by_type = "C4 Bomb"
 	if(istype(src, /datum/wires/mulebot))

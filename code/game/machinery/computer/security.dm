@@ -4,7 +4,8 @@
 	name = "security records console"
 	desc = "Used to view and edit personnel's security records"
 	icon = 'icons/blue_brig/obj/seccomp.dmi'
-	icon_state = "security"
+	icon_screen = "security"
+	icon_keyboard = "security_key"
 	req_one_access = list(access_security, access_forensics_lockers)
 	circuit = /obj/item/weapon/circuitboard/secure_data
 	var/obj/item/weapon/card/id/scan = null
@@ -24,9 +25,10 @@
 	var/order = 1 // -1 = Descending - 1 = Ascending
 
 
-/obj/machinery/computer/secure_data/attackby(obj/item/O as obj, user as mob, params)
+/obj/machinery/computer/secure_data/attackby(obj/item/O as obj, mob/user as mob, params)
 	if(istype(O, /obj/item/weapon/card/id) && !scan)
-		usr.drop_item()
+		if(!user.drop_item())
+			return
 		O.loc = src
 		scan = O
 		user << "<span class='notice'>You insert [O].</span>"
@@ -299,7 +301,8 @@ What a mess.*/
 				else
 					var/obj/item/I = usr.get_active_hand()
 					if(istype(I, /obj/item/weapon/card/id))
-						usr.drop_item()
+						if(!usr.drop_item())
+							return
 						I.loc = src
 						scan = I
 
@@ -425,6 +428,7 @@ What a mess.*/
 					return
 				var/a2 = active2
 				var/t1 = stripped_multiline_input("Add Comment:", "Secure. records", null, null)
+				t1 = sanitize_u0(t1)
 				if(!canUseSecurityRecordsConsole(usr, t1, null, a2))
 					return
 				var/counter = 1
@@ -519,7 +523,7 @@ What a mess.*/
 				switch(href_list["field"])
 					if("name")
 						if(istype(active1, /datum/data/record) || istype(active2, /datum/data/record))
-							var/t1 = stripped_input(usr, "Please input name:", "Secure. records", active1.fields["name"], null)
+							var/t1 = copytext(sanitize(input("Please input name:", "Secure. records", active1.fields["name"], null)  as text),1,MAX_MESSAGE_LEN)
 							if(!canUseSecurityRecordsConsole(usr, t1, a1))
 								return
 							if(istype(active1, /datum/data/record))
@@ -583,6 +587,8 @@ What a mess.*/
 						if(istype(active1, /datum/data/record))
 							var/t1 = stripped_input(usr, "Please input minor crime names:", "Secure. records", "", null)
 							var/t2 = stripped_multiline_input(usr, "Please input minor crime details:", "Secure. records", "", null)
+							t1 = sanitize_u0(t1)
+							t2 = sanitize_u0(t2)
 							if(!canUseSecurityRecordsConsole(usr, t1, null, a2))
 								return
 							var/crime = data_core.createCrimeEntry(t1, t2, authenticated, worldtime2text())
@@ -597,6 +603,8 @@ What a mess.*/
 						if(istype(active1, /datum/data/record))
 							var/t1 = stripped_input(usr, "Please input major crime names:", "Secure. records", "", null)
 							var/t2 = stripped_multiline_input(usr, "Please input major crime details:", "Secure. records", "", null)
+							t1 = sanitize_u0(t1)
+							t2 = sanitize_u0(t2)
 							if(!canUseSecurityRecordsConsole(usr, t1, null, a2))
 								return
 							var/crime = data_core.createCrimeEntry(t1, t2, authenticated, worldtime2text())
@@ -610,6 +618,7 @@ What a mess.*/
 					if("notes")
 						if(istype(active2, /datum/data/record))
 							var/t1 = stripped_input(usr, "Please summarize notes:", "Secure. records", active2.fields["notes"], null)
+							t1 = sanitize_u0(t1)
 							if(!canUseSecurityRecordsConsole(usr, t1, null, a2))
 								return
 							active2.fields["notes"] = t1
@@ -744,7 +753,3 @@ What a mess.*/
 					if(!record2 || record2 == active2)
 						return 1
 	return 0
-
-/obj/machinery/computer/secure_data/detective_computer
-	icon = 'icons/obj/computer.dmi'
-	icon_state = "messyfiles"
