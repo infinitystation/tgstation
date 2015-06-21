@@ -72,7 +72,7 @@
 	#else
 	map_name = "Unknown"
 	#endif
-
+	update_status()
 
 	return
 
