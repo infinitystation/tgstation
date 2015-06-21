@@ -428,6 +428,7 @@ What a mess.*/
 					return
 				var/a2 = active2
 				var/t1 = stripped_multiline_input("Add Comment:", "Secure. records", null, null)
+				t1 = sanitize_u0(t1)
 				if(!canUseSecurityRecordsConsole(usr, t1, null, a2))
 					return
 				var/counter = 1
@@ -586,6 +587,8 @@ What a mess.*/
 						if(istype(active1, /datum/data/record))
 							var/t1 = stripped_input(usr, "Please input minor crime names:", "Secure. records", "", null)
 							var/t2 = stripped_multiline_input(usr, "Please input minor crime details:", "Secure. records", "", null)
+							t1 = sanitize_u0(t1)
+							t2 = sanitize_u0(t2)
 							if(!canUseSecurityRecordsConsole(usr, t1, null, a2))
 								return
 							var/crime = data_core.createCrimeEntry(t1, t2, authenticated, worldtime2text())
@@ -600,6 +603,8 @@ What a mess.*/
 						if(istype(active1, /datum/data/record))
 							var/t1 = stripped_input(usr, "Please input major crime names:", "Secure. records", "", null)
 							var/t2 = stripped_multiline_input(usr, "Please input major crime details:", "Secure. records", "", null)
+							t1 = sanitize_u0(t1)
+							t2 = sanitize_u0(t2)
 							if(!canUseSecurityRecordsConsole(usr, t1, null, a2))
 								return
 							var/crime = data_core.createCrimeEntry(t1, t2, authenticated, worldtime2text())
@@ -613,6 +618,7 @@ What a mess.*/
 					if("notes")
 						if(istype(active2, /datum/data/record))
 							var/t1 = stripped_input(usr, "Please summarize notes:", "Secure. records", active2.fields["notes"], null)
+							t1 = sanitize_u0(t1)
 							if(!canUseSecurityRecordsConsole(usr, t1, null, a2))
 								return
 							active2.fields["notes"] = t1

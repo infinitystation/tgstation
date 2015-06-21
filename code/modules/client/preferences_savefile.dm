@@ -186,7 +186,6 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	S["undershirt"]			>> undershirt
 	S["socks"]				>> socks
 	S["backbag"]			>> backbag
-	S["flavor_text"] 		>> flavor_text
 	S["feature_mcolor"]					>> features["mcolor"]
 	S["feature_lizard_tail"]			>> features["tail"]
 	S["feature_lizard_snout"]			>> features["snout"]
@@ -200,6 +199,10 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	S["cyborg_name"]		>> custom_names["cyborg"]
 	S["religion_name"]		>> custom_names["religion"]
 	S["deity_name"]			>> custom_names["deity"]
+
+	S["flavor_text"] 		>> flavor_text
+	S["sec_imp_notes"]		>> sec_imp_notes
+	S["med_imp_notes"]		>> med_imp_notes
 
 	//Jobs
 	S["userandomjob"]		>> userandomjob
@@ -293,7 +296,6 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	S["backbag"]			<< backbag
 	S["species"]			<< pref_species.name
 	S["backbag"]			<< backbag
-	S["flavor_text"] 		<< flavor_text
 	S["feature_mcolor"]					<< features["mcolor"]
 	S["feature_lizard_tail"]			<< features["tail"]
 	S["feature_lizard_snout"]			<< features["snout"]
@@ -307,6 +309,10 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	S["cyborg_name"]		<< custom_names["cyborg"]
 	S["religion_name"]		<< custom_names["religion"]
 	S["deity_name"]			<< custom_names["deity"]
+
+	S["flavor_text"] 		<< flavor_text
+	S["sec_imp_notes"]		<< sec_imp_notes
+	S["med_imp_notes"]		<< med_imp_notes
 
 	//Jobs
 	S["userandomjob"]		<< userandomjob
