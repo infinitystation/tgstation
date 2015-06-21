@@ -1107,7 +1107,7 @@ var/global/list/special_roles = list( //keep synced with the defines BE_* in set
 			dat += "[copytext(med_imp_notes, 1, 160)]... <a href='?_src_=prefs;preference=med_notes_more'>More...</a><BR>"
 
 		user << browse(null, "window=char_notes")
-		var/datum/browser/popup = new(user, "mob_notes", "<div align='center'>Character Notes</div>", 400, 600)
+		var/datum/browser/popup = new(user, "mob_notes", "<div align='center'>[real_name] Notes</div>", 400, 600)
 		popup.set_content(dat)
 		popup.open(0)
 		return
