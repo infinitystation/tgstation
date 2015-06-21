@@ -168,7 +168,7 @@ var/global/list/special_roles = list( //keep synced with the defines BE_* in set
 				dat += "<BR><a href='?_src_=prefs;preference=flavor_text'><b>Flavor Text:</b></a><BR>"
 
 				if(lentext(copytext(sanitize_u(flavor_text), 1, MAX_MESSAGE_LEN)) <= 160)
-					dat += "<BR>[copytext(sanitize_u(flavor_text), 1, MAX_MESSAGE_LEN)]"
+					dat += "[copytext(sanitize_u(flavor_text), 1, MAX_MESSAGE_LEN)]<BR>"
 				else
 					dat += "[copytext(sanitize_u(flavor_text), 1, 160)]... <a href='?_src_=prefs;preference=flavor_text_more'>More...</a><BR>"
 
