@@ -88,11 +88,15 @@ var/global/list/special_roles = list( //keep synced with the defines BE_* in set
 	// 0 = character settings, 1 = game preferences
 	var/current_tab = 0
 
-		// OOC Metadata:
+	// OOC Metadata:
 	var/metadata = ""
 
 	var/unlock_content = 0
+
+	//Important Notes
 	var/flavor_text = ""
+	var/sec_imp_notes = ""
+	var/med_imp_notes = ""
 
 /datum/preferences/New(client/C)
 	blood_type = random_blood_type()
@@ -164,13 +168,8 @@ var/global/list/special_roles = list( //keep synced with the defines BE_* in set
 				dat += "<a href='?_src_=prefs;preference=name;task=input'>[real_name]</a><BR>"
 
 				dat += "<b>Gender:</b> <a href='?_src_=prefs;preference=gender'>[gender == MALE ? "Male" : "Female"]</a><BR>"
-				dat += "<b>Age:</b> <a href='?_src_=prefs;preference=age;task=input'>[age]</a>"
-				dat += "<BR><a href='?_src_=prefs;preference=flavor_text'><b>Flavor Text:</b></a><BR>"
-
-				if(lentext(copytext(sanitize_u(flavor_text), 1, MAX_MESSAGE_LEN)) <= 160)
-					dat += "<BR>[copytext(sanitize_u(flavor_text), 1, MAX_MESSAGE_LEN)]"
-				else
-					dat += "[copytext(sanitize_u(flavor_text), 1, 160)]... <a href='?_src_=prefs;preference=flavor_text_more'>More...</a><BR>"
+				dat += "<b>Age:</b> <a href='?_src_=prefs;preference=age;task=input'>[age]</a><BR>"
+				dat += "<a href='?_src_=prefs;preference=set_char_notes'><b>Character Notes</b></a><BR>"
 
 				dat += "<b>Special Names:</b><BR>"
 				dat += "<a href ='?_src_=prefs;preference=clown_name;task=input'><b>Clown:</b> [custom_names["clown"]]</a> "
@@ -992,14 +991,40 @@ var/global/list/special_roles = list( //keep synced with the defines BE_* in set
 						if (href_list["tab"])
 							current_tab = text2num(href_list["tab"])
 
+					if("set_char_notes")
+						set_char_notes(user)
+
 					if("flavor_text")
 						flavor_text = stripped_multiline_input(usr, "¬ведите описание персонажа", "Set Flavor Text", copytext(sanitize_u(flavor_text), 1, MAX_MESSAGE_LEN))
+						set_char_notes(user)
+
+					if("sec_notes")
+						sec_imp_notes = stripped_multiline_input(usr, "¬ведите важные заметки персонажа для —Ѕ", "Set Security Notes", copytext(sec_imp_notes, 1, MAX_MESSAGE_LEN))
+						sec_imp_notes = sanitize_u(sec_imp_notes)
+						set_char_notes(user)
+
+					if("med_notes")
+						med_imp_notes = stripped_multiline_input(usr, "¬ведите важные заметки персонажа для медиков", "Set Medical Notes", copytext(med_imp_notes, 1, MAX_MESSAGE_LEN))
+						med_imp_notes = sanitize_u(med_imp_notes)
+						set_char_notes(user)
 
 					if("flavor_text_more")
 						var/dat = sanitize_u(flavor_text)
 						var/datum/browser/flavor_more = new(usr, "flavor", "[real_name]", 500, 200)
 						flavor_more.set_content(dat)
 						flavor_more.open(1)
+
+					if("sec_notes_more")
+						var/dat = sec_imp_notes
+						var/datum/browser/sec_more = new(usr, "sec_notes_more", "[real_name]", 500, 200)
+						sec_more.set_content(dat)
+						sec_more.open(1)
+
+					if("med_notes_more")
+						var/dat = med_imp_notes
+						var/datum/browser/med_more = new(usr, "med_notes_more", "[real_name]", 500, 200)
+						med_more.set_content(dat)
+						med_more.open(1)
 
 
 		ShowChoices(user)
@@ -1054,6 +1079,35 @@ var/global/list/special_roles = list( //keep synced with the defines BE_* in set
 
 
 		character.flavor_text = sanitize(flavor_text)
+		character.sec_imp_notes = sec_imp_notes
+		character.med_imp_notes = med_imp_notes
 
 		character.update_body()
 		character.update_hair()
+
+
+	proc/set_char_notes(user)
+		var/dat = ""
+		dat += "<BR><a href='?_src_=prefs;preference=flavor_text'><b>Flavor Text:</b></a><BR>"
+		if(lentext(copytext(sanitize_u(flavor_text), 1, MAX_MESSAGE_LEN)) <= 160)
+			dat += "[copytext(sanitize_u(flavor_text), 1, MAX_MESSAGE_LEN)]<BR>"
+		else
+			dat += "[copytext(sanitize_u(flavor_text), 1, 160)]... <a href='?_src_=prefs;preference=flavor_text_more'>More...</a><BR>"
+
+		dat += "<BR><a href='?_src_=prefs;preference=sec_notes'><b>Security Important Notes:</b></a><BR>"
+		if(lentext(copytext(sec_imp_notes, 1, MAX_MESSAGE_LEN)) <= 160)
+			dat += "[copytext(sec_imp_notes, 1, MAX_MESSAGE_LEN)]<BR>"
+		else
+			dat += "[copytext(sec_imp_notes, 1, 160)]... <a href='?_src_=prefs;preference=sec_notes_more'>More...</a><BR>"
+
+		dat += "<BR><a href='?_src_=prefs;preference=med_notes'><b>Medical Important Notes:</b></a><BR>"
+		if(lentext(copytext(med_imp_notes, 1, MAX_MESSAGE_LEN)) <= 160)
+			dat += "[copytext(med_imp_notes, 1, MAX_MESSAGE_LEN)]<BR>"
+		else
+			dat += "[copytext(med_imp_notes, 1, 160)]... <a href='?_src_=prefs;preference=med_notes_more'>More...</a><BR>"
+
+		user << browse(null, "window=char_notes")
+		var/datum/browser/popup = new(user, "mob_notes", "<div align='center'>[real_name] Notes</div>", 400, 600)
+		popup.set_content(dat)
+		popup.open(0)
+		return

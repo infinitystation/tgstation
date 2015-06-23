@@ -266,7 +266,7 @@ Auto Patrol[]"},
 
 					if(declare_arrests)
 						var/area/location = get_area(src)
-						speak("[arrest_type ? "Detaining" : "Arresting"] level [threatlevel] scumbag <b>[target]</b> in [location].", radio_frequency)
+						speak("[arrest_type ? "Detaining" : "Arresting"] level [threatlevel] scumbag [target] in [location].", radio_frequency)
 					target.visible_message("<span class='danger'>[src] has stunned [target]!</span>",\
 											"<span class='userdanger'>[src] has stunned you!</span>")
 
