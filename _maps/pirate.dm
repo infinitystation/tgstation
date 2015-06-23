@@ -15,14 +15,14 @@ z7 = empty space
 
 #if !defined(MAP_FILE)
 
-        #include "map_files\MetaStation\MetaPirateStation.v1.3.1.dmm"
+        #include "map_files\MetaStation\MetaPirateStation.v1.4.dmm"
         #include "map_files\MetaStation\z2t.dmm"
         #include "map_files\MetaStation\z3.dmm"
         #include "map_files\MetaStation\z4.dmm"
         #include "map_files\MetaStation\z5.dmm"
         #include "map_files\generic\z6.dmm"
         #include "map_files\generic\z7.dmm"
-        #define MAP_FILE "MetaPirateStation.v1.3.1.dmm"
+        #define MAP_FILE "MetaPirateStation.v1.4.dmm"
         #define MAP_NAME "PIRATE-MAP-YARR"
 
 #elif !defined(MAP_OVERRIDE)

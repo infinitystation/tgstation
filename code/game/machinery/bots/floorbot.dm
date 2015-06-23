@@ -302,7 +302,7 @@
 
 /obj/machinery/bot/floorbot/proc/nag() //Annoy everyone on the channel to refill us!
 	if(!nagged)
-		speak("Requesting refill at <b>[get_area(src)]</b>!", radio_frequency)
+		speak("Requesting refill at [get_area(src)]!", radio_frequency)
 		nagged = 1
 
 /obj/machinery/bot/floorbot/proc/is_hull_breach(var/turf/t) //Ignore space tiles not considered part of a structure, also ignores shuttle docking areas.

@@ -707,7 +707,7 @@ obj/machinery/bot/mulebot/bot_reset()
 
 		if(load)		// if loaded, unload at target
 			if(report_delivery)
-				speak("Destination <b>[destination]</b> reached. Unloading [load].",radio_frequency)
+				speak("Destination [destination] reached. Unloading [load].",radio_frequency)
 			unload(loaddir)
 		else
 			// not loaded
@@ -723,7 +723,7 @@ obj/machinery/bot/mulebot/bot_reset()
 				if(AM)
 					load(AM)
 					if(report_delivery)
-						speak("Now loading [load] at <b>[get_area(src)]</b>.", radio_frequency)
+						speak("Now loading [load] at [get_area(src)].", radio_frequency)
 		// whatever happened, check to see if we return home
 
 		if(auto_return && destination != home_destination)
