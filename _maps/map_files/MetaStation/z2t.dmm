@@ -286,7 +286,7 @@
 "fz" = (/obj/machinery/conveyor{dir = 4; id = "QMLoad"; movedir = 4},/obj/machinery/door/poddoor{id = "QMLoaddoor"; name = "supply dock loading door"},/turf/simulated/floor/plating,/area/shuttle/supply)
 "fA" = (/turf/indestructible/fakeglass{icon_state = "fakewindows"; dir = 1},/area/centcom/supply)
 "fB" = (/turf/simulated/floor/plasteel,/area/centcom/control)
-"fC" = (/obj/structure/rack,/obj/item/weapon/gun/projectile/shotgun/combat,/obj/item/weapon/gun/projectile/shotgun/combat,/turf/simulated/floor/plasteel{icon_state = "vault"; dir = 8},/area/centcom/control)
+"fC" = (/obj/structure/rack,/obj/item/weapon/gun/projectile/shotgun/automatic/combat,/obj/item/weapon/gun/projectile/shotgun/automatic/combat,/turf/simulated/floor/plasteel{icon_state = "vault"; dir = 8},/area/centcom/control)
 "fD" = (/obj/structure/rack,/obj/item/weapon/gun/projectile/automatic/pistol/m1911,/obj/item/weapon/gun/projectile/automatic/pistol/m1911,/turf/simulated/floor/plasteel{icon_state = "vault"; dir = 8},/area/centcom/control)
 "fE" = (/obj/structure/rack,/obj/item/weapon/gun/projectile/automatic/ar,/obj/item/weapon/gun/projectile/automatic/ar,/turf/simulated/floor/plasteel{icon_state = "vault"; dir = 8},/area/centcom/control)
 "fF" = (/turf/simulated/floor/plasteel{icon_state = "vault"; dir = 4},/area/centcom/control)

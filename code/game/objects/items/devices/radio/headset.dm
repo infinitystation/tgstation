@@ -255,12 +255,14 @@
 			return
 
 		if(!keyslot)
-			user.drop_item()
+			if(!user.unEquip(W))
+				return
 			W.loc = src
 			keyslot = W
 
 		else
-			user.drop_item()
+			if(!user.unEquip(W))
+				return
 			W.loc = src
 			keyslot2 = W
 

@@ -215,6 +215,8 @@
 
 	var/list/features = list()
 
+	features += "Map - [MAP_NAME]"
+
 	if(ticker)
 		if(master_mode)
 			features += master_mode
