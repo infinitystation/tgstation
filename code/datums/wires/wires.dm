@@ -128,7 +128,7 @@ var/global/all_solved_wires = list() //Solved wire associative list, eg; all_sol
 					var/obj/item/device/multitool/multimeter/O = L.get_active_hand()
 					if(O.mode == 0)
 						L << "<span class='notice'>Закорачиваем контакты провода</span>"
-						if(do_after(L, 50))
+						if(do_after(L, 50, target = holder))
 							var/colour = href_list["pulse"]
 							PulseColour(colour)
 							L << "<span class='notice'>Провод закорочен (пропульсован)</span>"
@@ -171,7 +171,7 @@ var/global/all_solved_wires = list() //Solved wire associative list, eg; all_sol
 						L << "[name_by_type] wires:"
 						for(var/colour in src.wires)
 							if(unsolved_wires[colour]) //unsolved_wires[red]
-								if(do_after(L, 10))
+								if(do_after(L, 10, target = holder))
 									colour_function = unsolved_wires[colour] //unsolved_wires[red] = 1 so colour_index = 1
 									solved_colour_function = SolveWireFunction(colour_function) //unsolved_wires[red] = 1, 1 = AIRLOCK_WIRE_IDSCAN
 									if(!IsColourCut(colour) && solved_colour_function)

@@ -190,7 +190,7 @@ RCD
 				if(checkResource((3/ratio), user))
 					user << "<span class='notice'>You start building wall...</span>"
 					playsound(src.loc, 'sound/machines/click.ogg', 50, 1)
-					if((ratio > 2) || do_after(user, 20))
+					if((ratio > 2) || do_after(user, 20, target = A))
 						if(!useResource((3/ratio), user)) return 0
 						activate()
 						F.ChangeTurf(/turf/simulated/wall)
@@ -221,7 +221,7 @@ RCD
 					if(door_check)
 						user << "<span class='notice'>You start building airlock...</span>"
 						playsound(src.loc, 'sound/machines/click.ogg', 50, 1)
-						if(do_after(user, round(50/ratio)))
+						if(do_after(user, round(50/ratio), target = A))
 							if(!useResource((10/ratio), user)) return 0
 							activate()
 							var/obj/machinery/door/airlock/T = new airlock_type( A )
@@ -245,7 +245,7 @@ RCD
 				if(checkResource((5/ratio), user))
 					user << "<span class='notice'>You start deconstructing wall...</span>"
 					playsound(src.loc, 'sound/machines/click.ogg', 50, 1)
-					if(do_after(user, round(40/ratio)))
+					if(do_after(user, round(40/ratio), target = A))
 						if(!useResource((5/ratio), user)) return 0
 						activate()
 						W.ChangeTurf(/turf/simulated/floor/plating)
@@ -260,7 +260,7 @@ RCD
 				else if(checkResource((1/ratio), user))
 					user << "<span class='notice'>You start deconstructing floor...</span>"
 					playsound(src.loc, 'sound/machines/click.ogg', 50, 1)
-					if((ratio > 2) || do_after(user, 50))
+					if((ratio > 2) || do_after(user, 50, target = A))
 						if(!useResource((1/ratio), user)) return 0
 						activate()
 						F.ChangeTurf(F.baseturf)
@@ -271,7 +271,7 @@ RCD
 				if(checkResource((20/ratio), user))
 					user << "<span class='notice'>You start deconstructing airlock...</span>"
 					playsound(src.loc, 'sound/machines/click.ogg', 50, 1)
-					if(do_after(user, round(50/ratio)))
+					if(do_after(user, round(50/ratio), target = A))
 						if(!useResource((20/ratio), user)) return 0
 						activate()
 						qdel(A)
