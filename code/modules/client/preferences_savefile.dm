@@ -99,7 +99,6 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	S["ooccolor"]			>> ooccolor
 	S["lastchangelog"]		>> lastchangelog
 	S["UI_style"]			>> UI_style
-	S["be_special"]			>> be_special
 	S["default_slot"]		>> default_slot
 	S["chat_toggles"] 		>> chat_toggles
 	S["toggles"]			>> toggles
@@ -132,7 +131,6 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	S["ooccolor"]			<< ooccolor
 	S["lastchangelog"]		<< lastchangelog
 	S["UI_style"]			<< UI_style
-	S["be_special"]			<< be_special
 	S["default_slot"]		<< default_slot
 	S["chat_toggles"] 		<< chat_toggles
 	S["toggles"]			<< toggles
@@ -200,6 +198,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	S["religion_name"]		>> custom_names["religion"]
 	S["deity_name"]			>> custom_names["deity"]
 
+	//notes
 	S["flavor_text"] 		>> flavor_text
 	S["sec_imp_notes"]		>> sec_imp_notes
 	S["med_imp_notes"]		>> med_imp_notes
@@ -215,6 +214,9 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	S["job_engsec_high"]	>> job_engsec_high
 	S["job_engsec_med"]		>> job_engsec_med
 	S["job_engsec_low"]		>> job_engsec_low
+
+	//game
+	S["be_special"]			>> be_special
 
 	//try to fix any outdated data if necessary
 	if(needs_update >= 0)
@@ -310,6 +312,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	S["religion_name"]		<< custom_names["religion"]
 	S["deity_name"]			<< custom_names["deity"]
 
+	//notes
 	S["flavor_text"] 		<< flavor_text
 	S["sec_imp_notes"]		<< sec_imp_notes
 	S["med_imp_notes"]		<< med_imp_notes
@@ -325,6 +328,9 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	S["job_engsec_high"]	<< job_engsec_high
 	S["job_engsec_med"]		<< job_engsec_med
 	S["job_engsec_low"]		<< job_engsec_low
+
+	//game
+	S["be_special"]			<< be_special
 
 	return 1
 
