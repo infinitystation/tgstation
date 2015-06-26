@@ -1,3 +1,14 @@
+/client/var/adminhelptimerid = 0
+
+/client/proc/giveadminhelpverb()
+	src.verbs |= /client/verb/adminhelp
+	adminhelptimerid = 0
+
+//This is a list of words which are ignored by the parser when comparing message contents for names. MUST BE IN LOWER CASE!
+var/list/adminhelp_ignored_words = list("unknown","the","a","an","of","monkey","alien","as")
+
+
+
 /client/verb/adminhelp(msg as text)
 	set category = "Admin"
 	set name = "Adminhelp"
@@ -13,16 +24,15 @@
 	if(src.handle_spam_prevention(msg,MUTE_ADMINHELP))
 		return
 
-	//remove out adminhelp verb temporarily to prevent spamming of admins.
-	src.verbs -= /client/verb/adminhelp
-	spawn(1200)
-		src.verbs += /client/verb/adminhelp	// 2 minute cool-down for adminhelps
-
 	//clean the input msg
 	if(!msg)	return
 	msg = sanitize(copytext(msg,1,MAX_MESSAGE_LEN))
 	if(!msg)	return
 	var/original_msg = msg
+
+	//remove out adminhelp verb temporarily to prevent spamming of admins.
+	src.verbs -= /client/verb/adminhelp
+	adminhelptimerid = addtimer(src,"giveadminhelpverb",1200) //2 minute cooldown of admin helps
 
 	//explode the input msg into a list
 	var/list/msglist = text2list(msg, " ")
@@ -59,7 +69,8 @@
 	for(var/original_word in msglist)
 		var/word = ckey(original_word)
 		if(word)
-			if((word == "ai") || word == "»»")
+
+			if(word == "ai")
 				ai_found = 1
 			else
 				var/mob/found = ckeys[word]
@@ -72,17 +83,15 @@
 						mobs_found += found
 						if(!ai_found && isAI(found))
 							ai_found = 1
-						msg += "<b><font color='black'>[original_word] (<A HREF='?_src_=holder;adminmoreinfo=\ref[found]'>?</A>) (<A HREF='?_src_=holder;adminplayerobservefollow=\ref[found]'>FLW</A>)</font></b>"
+						msg += "<b><font color='black'>[original_word] (<A HREF='?_src_=holder;adminmoreinfo=\ref[found]'>?</A>) (<A HREF='?_src_=holder;adminplayerobservefollow=\ref[found]'>FLW</A>)</font></b> "
 						continue
 		msg += "[original_word] "
-
-		msg = html_encode(msg)
-		msg = html_decode(msg)
 
 	if(!mob)	return						//this doesn't happen
 
 	var/ref_mob = "\ref[mob]"
-	msg = "<span class='adminnotice'><b><font color=red>HELP: </font>[key_name_admin(src)] (<A HREF='?_src_=holder;adminmoreinfo=[ref_mob]'>?</A>) (<A HREF='?_src_=holder;adminplayeropts=[ref_mob]'>PP</A>) (<A HREF='?_src_=vars;Vars=[ref_mob]'>VV</A>) (<A HREF='?_src_=holder;subtlemessage=[ref_mob]'>SM</A>) (<A HREF='?_src_=holder;adminplayerobservefollow=[ref_mob]'>FLW</A>) (<A HREF='?_src_=holder;traitor=[ref_mob]'>TP</A>) [ai_found ? " (<A HREF='?_src_=holder;adminchecklaws=[ref_mob]'>CL</A>)" : ""]:</b> [msg]</span>"
+	var/ref_client = "\ref[src]"
+	msg = "<span class='adminnotice'><b><font color=red>HELP: </font>[key_name_admin(src)] (<A HREF='?_src_=holder;adminmoreinfo=[ref_mob]'>?</A>) (<A HREF='?_src_=holder;adminplayeropts=[ref_mob]'>PP</A>) (<A HREF='?_src_=vars;Vars=[ref_mob]'>VV</A>) (<A HREF='?_src_=holder;subtlemessage=[ref_mob]'>SM</A>) (<A HREF='?_src_=holder;adminplayerobservefollow=[ref_mob]'>FLW</A>) (<A HREF='?_src_=holder;traitor=[ref_mob]'>TP</A>)[ai_found ? " (<A HREF='?_src_=holder;adminchecklaws=[ref_mob]'>CL</A>)" : ""] (<A HREF='?_src_=holder;rejectadminhelp=[ref_client]'>REJT</A>):</b> [msg]</span>"
 
 	//send this msg to all admins
 

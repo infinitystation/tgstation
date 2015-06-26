@@ -343,6 +343,7 @@ var/global/list/special_roles = list( //keep synced with the defines BE_* in set
 				dat += "</td><td width='300px' height='300px' valign='top'>"
 
 				dat += "<h2>Antagonist Settings</h2>"
+				dat += "<b>For [real_name]</b><br/>"
 
 				if(jobban_isbanned(user, "Syndicate"))
 					dat += "<font color=red><b>You are banned from antagonist roles.</b></font>"
