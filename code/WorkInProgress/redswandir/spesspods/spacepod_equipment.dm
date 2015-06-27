@@ -11,7 +11,7 @@
 		my_atom = SP
 
 /obj/item/mecha_parts/spod_equipment
-	name = "mecha equipment"
+	name = "pod equipment"
 	icon = 'icons/mecha/spod_equipment.dmi'
 	icon_state = "sp_equip"
 	force = 5
@@ -494,25 +494,6 @@
 	log_message("Deactivated")
 
 /obj/item/mecha_parts/spod_equipment/engine/basic/proc/dyndomove(direction)
-	//if(!chassis.can_move)
-		//return 0
-	//if(!Process_Spacemove(direction))
-		//return 0
-	//if(!has_charge(step_energy_drain))
-	//	return 0
-	//var/move_result = 0
-	//if(chassis.hasInternalDamage(MECHA_INT_CONTROL_LOST))
-	//	move_result = chassis.mechsteprand()
-	//else if(src.dir!=direction)
-	//	move_result = chassis.mechturn(direction)
-	//else
-	//	move_result = chassis.mechstep(direction)
-	//if(move_result)
-		//chassis.can_move = 0
-		//if(do_after(chassis.step_in))
-			//chassis.can_move = 1
-		//return 1
-	//return 0
 	return 1
 
 /obj/item/mecha_parts/spod_equipment/engine/basic/action_checks()
