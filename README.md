@@ -1,4 +1,4 @@
-##Модифированный /tg/station v1.0.1
+﻿##Модифированный /tg/station v1.0.1
 Используется сервером Infinity.
 
 **Сайт оригинального разработчика:** http://www.tgstation13.org  
@@ -6,7 +6,7 @@
 **Код**: https://bitbucket.org/infinity_team/infinity-tg  
 **Сайт разработчика:** http://infinity.smforum.ru/index.php  
 **IRC (На английском)**: irc://irc.rizon.net/coderbus  
-**Карта:** MetaStation v41A.II_FIX6.dmm, z2t.dmm
+**Карта:** MetaStation v41A.II_FIX7.dmm, z2t.dmm
 
 ##ЗАГРУЗКА
 

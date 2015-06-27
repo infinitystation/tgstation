@@ -40,6 +40,7 @@
 	// jesus christ why
 	if(copytext(message, 1, 2) != "*")
 		message = replacetext(message, "s", "sss")
+		message = replacetext(message, "с", "ссс")
 
 	return message
 
