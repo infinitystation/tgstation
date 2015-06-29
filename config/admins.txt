@@ -14,12 +14,14 @@ maxikot = Game Master
 archibald125 = Game Master
 maks750rus = Game Master
 bear1ake = Game Master
-wipe = Game Master
 terror4000rus = Game Master
 hellpony = Game Master
 samorey = Game Master
+farwa87 = Game Master
+snash08 = Game Master
 
-MrStonedOne = Host
+Optimumtact = Host
+MrStonedOne = Game Master
 microscopics = Game Master
 Gun Hog = Game Master
 KorPhaeron = Game Master

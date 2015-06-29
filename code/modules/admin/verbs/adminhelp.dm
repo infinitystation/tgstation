@@ -103,7 +103,7 @@
 
 
 	//show it to the person adminhelping too
-	src << "<span class='adminnotice'>PM to-<b>Admins</b>: [original_msg]</span>"
+	src << "<span class='adminnotice'>ЛС Админам</b>: [original_msg]</span>"
 
 	//send it to irc if nobody is on and tell us how many were on
 	var/admin_number_present = send2irc_adminless_only(ckey,original_msg)

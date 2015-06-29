@@ -96,12 +96,12 @@
 
 	if(C.holder)
 		if(holder)	//both are admins
-			C << "<font color='red'>Admin PM from-<b>[key_name(src, C, 1)](<A HREF='?_src_=holder;adminplayerobservefollow=\ref[src.mob]'>FLW</A>)</b>: [keywordparsedmsg]</font>"
-			src << "<font color='blue'>Admin PM to-<b>[key_name(C, src, 1)](<A HREF='?_src_=holder;adminplayerobservefollow=\ref[C.mob]'>FLW</A>)</b>: [keywordparsedmsg]</font>"
+			C << "<font color='red'>ЛС от Админа <b>[key_name(src, C, 1)](<A HREF='?_src_=holder;adminplayerobservefollow=\ref[src.mob]'>FLW</A>)</b>: [keywordparsedmsg]</font>"
+			src << "<font color='blue'>ЛС Админу <b>[key_name(C, src, 1)](<A HREF='?_src_=holder;adminplayerobservefollow=\ref[C.mob]'>FLW</A>)</b>: [keywordparsedmsg]</font>"
 
 		else		//recipient is an admin but sender is not
-			C << "<font color='red'>Reply PM from-<b>[key_name(src, C, 1)](<A HREF='?_src_=holder;adminplayerobservefollow=\ref[src.mob]'>FLW</A>)</b>: [keywordparsedmsg]</font>"
-			src << "<font color='blue'>PM to-<b>Admins</b>: [msg]</font>"
+			C << "<font color='red'>Ответное ЛС от <b>[key_name(src, C, 1)](<A HREF='?_src_=holder;adminplayerobservefollow=\ref[src.mob]'>FLW</A>)</b>: [keywordparsedmsg]</font>"
+			src << "<font color='blue'>ЛС <b>Админам</b>: [msg]</font>"
 
 		//play the recieving admin the adminhelp sound (if they have them enabled)
 		if(C.prefs.toggles & SOUND_ADMINHELP)
@@ -109,10 +109,11 @@
 
 	else
 		if(holder)	//sender is an admin but recipient is not. Do BIG RED TEXT
-			C << "<font color='red' size='4'><b>-- Administrator private message --</b></font>"
-			C << "<font color='red'>Admin-PM from-<b>[key_name(src, C, 0)]</b>: [msg]</font>"
-			C << "<font color='red'><i>Click on the administrator's name to reply.</i></font>"
-			src << "<font color='blue'>Admin PM to-<b>[key_name(C, src, 1)](<A HREF='?_src_=holder;adminplayerobservefollow=\ref[C.mob]'>FLW</A>)</b>: [msg]</font>"
+			C << "<font color='red' size='4'><b>-- Личное сообщение от администратора --</b></font>"
+			C << "<font color='red'><i>Игнорирование ЛС от администраторов карается баном</i></font>"
+			C << "<font color='red'>ЛС от Админа <b>[key_name(src, C, 0)]</b>: [msg]</font>"
+			C << "<font color='red'><i>Нажмите на никнейм администратора, чтобы ответить ему.</i></font>"
+			src << "<font color='blue'>ЛС Игроку <b>[key_name(C, src, 1)](<A HREF='?_src_=holder;adminplayerobservefollow=\ref[C.mob]'>FLW</A>)</b>: [msg]</font>"
 
 			//always play non-admin recipients the adminhelp sound
 			C << 'sound/effects/adminhelp.ogg'
@@ -122,7 +123,7 @@
 				spawn()	//so we don't hold the caller proc up
 					var/sender = src
 					var/sendername = key
-					var/reply = input(C, msg,"Admin PM from-[sendername]", "") as text|null		//show message and await a reply
+					var/reply = input(C, msg,"ЛС от Админа [sendername]", "") as text|null		//show message and await a reply
 					if(C && reply)
 						if(sender)
 							C.cmd_admin_pm(sender,reply)										//sender is still about, let's reply to them
@@ -131,7 +132,7 @@
 					return
 
 		else		//neither are admins
-			src << "<font color='red'>Error: Admin-PM: Non-admin to non-admin PM communication is forbidden.</font>"
+			src << "<font color='red'>Ошибка: ЛС админа от игрока к игроку</font>"
 			return
 
 	log_admin("PM: [key_name(src)]->[key_name(C)]: [msg]")
