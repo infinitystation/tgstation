@@ -110,7 +110,7 @@
 	else
 		if(holder)	//sender is an admin but recipient is not. Do BIG RED TEXT
 			C << "<font color='red' size='4'><b>-- Личное сообщение от администратора --</b></font>"
-			C << "<font color='red'><i>Игнорирование ЛС от администраторов карается баном</i></font>"
+			C << "<font color='red'><i>Игнорирование ЛС от администраторов караетс&#255; баном</i></font>"
 			C << "<font color='red'>ЛС от Админа <b>[key_name(src, C, 0)]</b>: [msg]</font>"
 			C << "<font color='red'><i>Нажмите на никнейм администратора, чтобы ответить ему.</i></font>"
 			src << "<font color='blue'>ЛС Игроку <b>[key_name(C, src, 1)](<A HREF='?_src_=holder;adminplayerobservefollow=\ref[C.mob]'>FLW</A>)</b>: [msg]</font>"
