@@ -35,24 +35,74 @@
 /obj/structure/closet/gimmick/tacticool
 	name = "tacticool gear closet"
 	desc = "It's a storage unit for Tacticool gear."
+	anchored = 1
 
 /obj/structure/closet/gimmick/tacticool/New()
 	..()
-	new /obj/item/clothing/glasses/eyepatch(src)
+	new /obj/item/clothing/glasses/sunglasses(src)
 	new /obj/item/clothing/glasses/sunglasses(src)
 	new /obj/item/clothing/gloves/combat(src)
 	new /obj/item/clothing/gloves/combat(src)
-	new /obj/item/clothing/head/helmet/swat(src)
-	new /obj/item/clothing/head/helmet/swat(src)
+	new /obj/item/clothing/head/helmet/tact(src)
+	new /obj/item/clothing/head/helmet/tact(src)
 	new /obj/item/clothing/mask/gas/sechailer/swat(src)
 	new /obj/item/clothing/mask/gas/sechailer/swat(src)
 	new /obj/item/clothing/shoes/combat/swat(src)
 	new /obj/item/clothing/shoes/combat/swat(src)
-	new /obj/item/clothing/suit/space/hardsuit/deathsquad(src)
-	new /obj/item/clothing/suit/space/hardsuit/deathsquad(src)
+	new /obj/item/clothing/suit/armor/tacticool(src)
+	new /obj/item/clothing/suit/armor/tacticool(src)
 	new /obj/item/clothing/under/syndicate/tacticool(src)
 	new /obj/item/clothing/under/syndicate/tacticool(src)
+	new /obj/item/weapon/gun/projectile/automatic/ar(src)
+	new /obj/item/weapon/gun/projectile/automatic/ar(src)
+	new /obj/item/ammo_box/magazine/m556(src)
+	new /obj/item/ammo_box/magazine/m556(src)
+	new /obj/item/device/flashlight/seclite(src)
+	new /obj/item/device/flashlight/seclite(src)
+	new /obj/item/device/radio(src)
+	new /obj/item/device/radio(src)
 
+/obj/structure/closet/gimmick/event/diablo/survivor
+	name = "Survivors gear closet"
+	desc = "It's a storage unit for survivors. Good luck."
+	anchored = 1
+
+/obj/structure/closet/gimmick/event/diablo/survivor/New()
+	..()
+	new /obj/item/clothing/suit/space/hardsuit/engine(src)
+	new /obj/item/clothing/suit/space/hardsuit/medical(src)
+	new /obj/item/clothing/suit/space/hardsuit/engine/atmos(src)
+	new /obj/item/weapon/tank/internals/oxygen(src)
+	new /obj/item/clothing/mask/gas(src)
+	new /obj/item/weapon/gun/energy/gun/nuclear(src)
+	new /obj/item/weapon/pickaxe/drill(src)
+	new /obj/item/weapon/storage/toolbox/mechanical(src)
+	new /obj/item/clothing/under/rank/chaplain(src)
+	new /obj/item/clothing/shoes/sneakers/syndigaloshes(src)
+	new /obj/item/weapon/gun/energy/gun/nuclear(src)
+	new /obj/item/weapon/gun/energy/gun/nuclear(src)
+	new /obj/item/weapon/pickaxe/drill(src)
+	new /obj/item/weapon/pickaxe/drill(src)
+	new /obj/item/clothing/mask/gas(src)
+	new /obj/item/clothing/mask/gas(src)
+	new /obj/item/weapon/tank/internals/oxygen(src)
+	new /obj/item/weapon/tank/internals/oxygen(src)
+
+/obj/structure/closet/gimmick/event/diablo/diavol
+	name = "Diablo gear closet"
+	desc = "It's a storage unit for dark lord. Let's kill them all!."
+	anchored = 1
+
+/obj/structure/closet/gimmick/event/diablo/diavol/New()
+	..()
+	new /obj/item/weapon/gun/energy/kinetic_accelerator/crossbow(src)
+	new /obj/item/weapon/reagent_containers/hypospray/combat/nanites(src)
+	new /obj/item/clothing/mask/gas/voice(src)
+
+/obj/structure/closet/thunderdome
+	name = "\improper Thunderdome closet"
+	desc = "Everything you need!"
+	anchored = 1
 
 /obj/structure/closet/thunderdome
 	name = "\improper Thunderdome closet"

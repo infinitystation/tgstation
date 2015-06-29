@@ -122,6 +122,16 @@
 	max_heat_protection_temperature = SPACE_HELM_MAX_TEMP_PROTECT
 	strip_delay = 80
 
+/obj/item/clothing/head/helmet/tact
+	name = "\improper Tacticool helmet"
+	desc = "Шлем для тактических подразделений...Без опазновательных знаков."
+	worn_icon = 'icons/blue_brig/mob/head.dmi'
+	icon = 'icons/blue_brig/obj/clothing/hats.dmi'
+	icon_state = "swat"
+	item_state = "swat"
+	armor = list(melee = 45, bullet = 50, laser = 25,energy = 20, bomb = 35, bio = 0, rad = 0)
+	strip_delay = 80
+
 /obj/item/clothing/head/helmet/thunderdome
 	name = "\improper Thunderdome helmet"
 	desc = "<i>'Let the battle commence!'</i>"
