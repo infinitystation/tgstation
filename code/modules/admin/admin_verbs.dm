@@ -61,7 +61,8 @@ var/list/admin_verbs_admin = list(
 	/client/proc/cmd_admin_world_narrate,	/*sends text to all players with no padding*/
 	/client/proc/cmd_admin_create_centcom_report,
 	/client/proc/check_words,			/*displays cult-words*/
-	/client/proc/reset_all_tcs			/*resets all telecomms scripts*/
+	/client/proc/reset_all_tcs,			/*resets all telecomms scripts*/
+	/client/proc/aooc
 	)
 var/list/admin_verbs_ban = list(
 	/client/proc/unban_panel,
