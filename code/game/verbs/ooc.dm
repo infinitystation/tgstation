@@ -77,6 +77,81 @@ var/global/normal_ooc_colour = "#002eb8"
 	set category = "Fun"
 	normal_ooc_colour = sanitize_ooccolor(newColor)
 
+/client/verb/looc(msg as text)
+	set name = "LOOC" //Gave this shit a shorter name so you only have to time out "ooc" rather than "ooc message" to use it --NeoFite
+	set desc = "Local OOC, seen only by those in view."
+	set category = "OOC"
+
+	if(!mob)	return
+	if(IsGuestKey(key))
+		src << "Guests may not use OOC."
+		return
+
+	msg = trim(sanitize(copytext(msg, 1, MAX_MESSAGE_LEN)))
+	if(!msg)	return
+
+	if(!(prefs.toggles & CHAT_LOOC))
+		src << "\red You have LOOC muted."
+		return
+
+	if(!(holder && R_ADMIN))
+		if(!ooc_allowed)
+			src << "\red LOOC is globally muted"
+			return
+		if(!dooc_allowed && (mob.stat == DEAD))
+			usr << "\red LOOC for dead mobs has been turned off."
+			return
+		if(prefs.muted & MUTE_OOC)
+			src << "\red You cannot use LOOC (muted)."
+			return
+		if(handle_spam_prevention(msg,MUTE_OOC))
+			return
+		if(findtext(msg, "byond://"))
+			src << "<B>Advertising other servers is not allowed.</B>"
+			log_admin("[key_name(src)] has attempted to advertise in LOOC: [msg]")
+			message_admins("[key_name_admin(src)] has attempted to advertise in LOOC: [msg]")
+			return
+
+	log_ooc("(LOCAL) [mob.name]/[key] : [msg]")
+	var/list/heard = get_mobs_in_view(7, src.mob)
+	var/mob/S = src.mob
+
+	var/display_name = S.key
+	if(S.stat != DEAD)
+		display_name = S.name
+
+	// Handle non-admins
+	for(var/mob/M in heard)
+		if(!M.client)
+			continue
+		var/client/C = M.client
+		if(C in admins)
+			if(R_ADMIN)
+				continue //they are handled after that
+
+		if(C.prefs.toggles & CHAT_LOOC)
+			if(holder)
+				if(holder.fakekey)
+					if(C.holder)
+						display_name = "[holder.fakekey]/([src.key])"
+					else
+						display_name = holder.fakekey
+			C << "<font color='#6699CC'><span class='ooc'><span class='prefix'>LOOC:</span> <EM>[display_name]:</EM> <span class='message'>[msg]</span></span></font>"
+
+	// Now handle admins
+	display_name = S.key
+	if(S.stat != DEAD)
+		display_name = "[S.name]/([S.key])"
+
+	for(var/client/C in admins)
+		if(R_ADMIN)
+			if(C.prefs.toggles & CHAT_LOOC)
+				var/prefix = "(R)LOOC"
+				if (C.mob in heard)
+					prefix = "LOOC"
+				C << "<font color='#6699CC'><span class='ooc'><span class='prefix'>[prefix]:</span> <EM>[display_name]:</EM> <span class='message'>[msg]</span></span></font>"
+
+
 /client/proc/reset_ooc()
 	set name = "Reset Player OOC Color"
 	set desc = "Returns player OOC Color to default"
