@@ -48,6 +48,7 @@
 		return
 	message_admins("[key_name_admin(src)] has started replying to [key_name(C, 0, 0)]'s admin help.")
 	var/msg = input(src,"Message:", "Private message to [key_name(C, 0, 0)]") as text|null
+	msg = sanitize(copytext(msg,1,MAX_MESSAGE_LEN))
 	if (!msg)
 		message_admins("[key_name_admin(src)] has cancelled their reply to [key_name(C, 0, 0)]'s admin help.")
 		return
@@ -86,11 +87,9 @@
 	if (src.handle_spam_prevention(msg,MUTE_ADMINHELP))
 		return
 
-	//clean the message if it's not sent by a high-rank admin
-	if(!check_rights(R_SERVER|R_DEBUG,0))
-		msg = sanitize(copytext(msg,1,MAX_MESSAGE_LEN))
-		msg = html_decode(msg)
-		if(!msg)	return
+	msg = sanitize(copytext(msg,1,MAX_MESSAGE_LEN))
+	msg = html_decode(msg)
+	if(!msg)	return
 
 	msg = emoji_parse(msg)
 	var/keywordparsedmsg = keywords_lookup(msg)
