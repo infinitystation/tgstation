@@ -9,17 +9,25 @@
 	var/cistern = 0			//if the cistern bit is open
 	var/w_items = 0			//the combined w_class of all the items in the cistern
 	var/shit = 0			//we have shit inside?
+	var/washing = 0
 	var/mob/living/swirlie = null	//the mob being given a swirlie
 
 /obj/structure/toilet/verb/wash_off()
 	set name = "Wash Off"
 	set category = "Object"
 	set src in oview(1)
-	src.shit = 0
-	src.w_items = 0
-	qdel(src.contents)
-	usr << "Вы смыли содержимое унитаза"
-	return
+	if(!src.washing)
+		src.washing = 1
+		src.shit = 0
+		usr << "Вы смыли содержимое унитаза"
+		playsound(loc, 'sound/effects/zvuk_unitaza.ogg', 50, 1)
+		sleep(40)
+		src.washing = 0
+		return
+	else
+		usr << "Унитаз не готов дл&#255; этого"
+		return
+
 
 /obj/structure/toilet/New()
 	open = round(rand(0, 1))
