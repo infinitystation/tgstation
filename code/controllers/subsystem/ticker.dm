@@ -100,6 +100,7 @@ var/datum/subsystem/ticker/ticker
 			if(!mode.explosion_in_progress && mode.check_finished() || force_ending)
 				current_state = GAME_STATE_FINISHED
 				auto_toggle_ooc(1) // Turn it on
+				auto_toggle_looc(1) // Turn it on
 				declare_completion()
 				spawn(50)
 					if(mode.station_was_nuked)
@@ -162,6 +163,7 @@ var/datum/subsystem/ticker/ticker
 
 	current_state = GAME_STATE_PLAYING
 	auto_toggle_ooc(0) // Turn it off
+	auto_toggle_looc(0) // Turn it off
 	round_start_time = world.time
 
 	start_landmarks_list = shuffle(start_landmarks_list) //Shuffle the order of spawn points so they dont always predictably spawn bottom-up and right-to-left

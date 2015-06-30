@@ -65,9 +65,20 @@
 	else
 		world << "<B>The OOC channel has been globally disabled!</B>"
 
+/proc/toggle_looc()
+	looc_allowed = !( looc_allowed )
+	if (looc_allowed)
+		world << "<B>The LOOC channel has been globally enabled!</B>"
+	else
+		world << "<B>The LOOC channel has been globally disabled!</B>"
+
 /proc/auto_toggle_ooc(var/on)
 	if(!config.ooc_during_round && ooc_allowed != on)
 		toggle_ooc()
+
+/proc/auto_toggle_looc(var/on)
+	if(looc_allowed != on)
+		toggle_looc()
 
 var/global/normal_ooc_colour = "#002eb8"
 
@@ -91,11 +102,11 @@ var/global/normal_ooc_colour = "#002eb8"
 	if(!msg)	return
 
 	if(!(prefs.toggles & CHAT_LOOC))
-		src << "<span class='notice'>You have LOOC muted.</span>"
+		src << "<span class='notice'>You have LOOC muted. Toggle it on Preferenes -> Show/Hide LOOC</span>"
 		return
 
 	if(!(holder && R_ADMIN))
-		if(!ooc_allowed)
+		if(!looc_allowed)
 			src << "<span class='notice'>LOOC is globally muted.</span>"
 			return
 		if(!dooc_allowed && (mob.stat == DEAD))
@@ -203,7 +214,7 @@ var/global/normal_ooc_colour = "#002eb8"
 		src << "<div class=\"motd\">[join_motd]</div>"
 	else
 		src << "<span class='notice'>The Message of the Day has not been set.</span>"
-// use code or config to resolve sareth's problem?
+
 /client/proc/self_notes()
 	set name = "View Admin Notes"
 	set category = "OOC"
