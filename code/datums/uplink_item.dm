@@ -656,7 +656,7 @@ var/list/uplink_items = list()
 
 /datum/uplink_item/implants/freedom
 	name = "FUCK THE NT Implants"
-	desc = "Break up you and your friends from NT usurpation!"
+	desc = "break up you and your friends from NT usurpation!"
 	item = /obj/item/weapon/storage/box/syndie_kit/imp_fuck_the_nt
 	cost = 5
 
