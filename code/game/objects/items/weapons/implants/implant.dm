@@ -249,6 +249,9 @@
 	target << "<span class='notice'>You feel a surge of loyalty towards Nanotrasen.</span>"
 	return 1
 
+/obj/item/weapon/implant/loyalty/Destroy()
+	loc << "<span class='notice'><b>You feel a sense of liberation as Nanotrasen's grip on your mind fades away.</b></span>"
+	..()
 
 /obj/item/weapon/implant/adrenalin
 	name = "adrenal implant"
