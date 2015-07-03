@@ -19,7 +19,7 @@ RCD
 	throw_speed = 3
 	throw_range = 5
 	w_class = 3.0
-	m_amt = 100000
+	materials = list(MAT_METAL=100000)
 	origin_tech = "engineering=4;materials=2"
 	var/datum/effect/effect/system/spark_spread/spark_system
 	var/matter = 0
@@ -327,23 +327,18 @@ RCD
 	density = 0
 	anchored = 0.0
 	origin_tech = "materials=2"
-	m_amt = 16000
-	g_amt = 8000
+	materials = list(MAT_METAL=16000, MAT_GLASS=8000)
 	var/ammoamt = 20
 
 /obj/item/weapon/rcd/advanced
 	name = "advanced rapid-construction-device (RCD)"
 	desc = "An advanced device used to rapidly build and deconstruct walls and floors."
-	flags = CONDUCT
-	force = 12.0
-	throwforce = 10.0
-	throw_speed = 3
-	throw_range = 5
-	w_class = 3.0
-	m_amt = 100000
+	force = 12
+	throwforce = 12
 	origin_tech = "engineering=6;materials=7;bluespace=4;plasmatech=4"
 	matter = 0
 	max_matter = 500
+	materials = list(MAT_METAL=20000, MAT_GLASS=2500, MAT_SILVER=2500, MAT_GOLD=2500, MAT_PLASMA=2500)
 	canRwall = 1
 	ratio = 3
 
@@ -351,10 +346,9 @@ RCD
 	name = "advanced compressed matter cartridge"
 	desc = "Ultra-Highly compressed matter for the RCD."
 	origin_tech = "materials=4"
-	m_amt = 80000
-	g_amt = 40000
+	materials = list(MAT_METAL=80000, MAT_GLASS=40000)
 	ammoamt = 100
 
 /obj/item/weapon/rcd_ammo/large
-	ammoamt = 100
-
+	ammoamt = 50
+	materials = list(MAT_METAL=40000, MAT_GLASS=20000)
