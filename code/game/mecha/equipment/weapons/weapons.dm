@@ -8,9 +8,9 @@
 	var/deviation = 0
 	var/shot_delay = 0
 
-/obj/item/mecha_parts/mecha_equipment/weapon/can_attach(var/obj/mecha/combat/M as obj)
+/obj/item/mecha_parts/mecha_equipment/weapon/can_attach(var/obj/mecha/M as obj)
 	if(..())
-		if(istype(M))
+		if(istype(M, /obj/mecha/combat) || istype(M, /obj/mecha/spacepod/combat))
 			return 1
 	return 0
 
@@ -113,7 +113,7 @@
 	fire_sound = 'sound/weapons/Laser.ogg'
 
 /obj/item/mecha_parts/mecha_equipment/weapon/energy/plasma/can_attach(obj/mecha/M as obj)
-	if(istype(M, /obj/mecha/working))
+	if(istype(M, /obj/mecha/working) || istype(M, /obj/mecha/spacepod/mining))
 		if(M.equipment.len < M.max_equip)
 			return 1
 	return 0

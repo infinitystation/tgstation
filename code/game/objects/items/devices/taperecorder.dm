@@ -56,6 +56,9 @@
 		mytape = null
 		update_icon()
 
+/obj/item/device/taperecorder/fire_act()
+	mytape.ruin() //Fires destroy the tape
+	return()
 
 /obj/item/device/taperecorder/attack_hand(mob/user)
 	if(loc == user)
@@ -101,7 +104,7 @@
 /obj/item/device/taperecorder/Hear(message, atom/movable/speaker, message_langs, raw_message, radio_freq, spans)
 	if(mytape && recording)
 		mytape.timestamp += mytape.used_capacity
-		mytape.storedinfo += "\[[time2text(mytape.used_capacity * 10,"mm:ss")]\] [html_encode(message)]"
+		mytape.storedinfo += "\[[time2text(mytape.used_capacity * 10,"mm:ss")]\] [sanitize_a2u(trim(message))]"
 
 /obj/item/device/taperecorder/verb/record()
 	set name = "Start Recording"
@@ -264,6 +267,8 @@
 	var/list/timestamp = list()
 	var/ruined = 0
 
+/obj/item/device/tape/fire_act()
+	ruin()
 
 /obj/item/device/tape/attack_self(mob/user)
 	if(!ruined)

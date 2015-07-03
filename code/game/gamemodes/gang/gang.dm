@@ -11,6 +11,8 @@
 	var/datum/gang_points/gang_points
 	var/A_style
 	var/B_style
+	var/A_fighting_style
+	var/B_fighting_style
 	var/list/A_territory = list()
 	var/list/B_territory = list()
 	var/list/A_territory_new = list()
@@ -23,7 +25,7 @@
 	config_tag = "gang"
 	antag_flag = BE_GANG
 	restricted_jobs = list("Security Officer", "Warden", "Detective", "AI", "Cyborg","Captain", "Head of Personnel", "Head of Security", "Chief Engineer", "Research Director", "Chief Medical Officer")
-	required_players = 10
+	required_players = 20
 	required_enemies = 2
 	recommended_enemies = 2
 	enemy_minimum_age = 14
@@ -52,7 +54,11 @@
 	if(config.protect_assistant_from_antagonist)
 		restricted_jobs += "Assistant"
 
-	if(antag_candidates.len >= 2)
+	//Spawn more bosses depending on server population
+	assign_bosses(1)
+	if(num_players() >= 30) //30
+		assign_bosses()
+	if(num_players() >= 40) //40
 		assign_bosses()
 
 	if(!A_bosses.len || !B_bosses.len)
@@ -77,6 +83,7 @@
 
 	modePlayer += A_bosses
 	modePlayer += B_bosses
+	assign_gang_fighting_style()
 	..()
 
 /datum/game_mode/gang/process(seconds)
@@ -88,20 +95,23 @@
 
 		check_win()
 
-/datum/game_mode/gang/proc/assign_bosses()
+/datum/game_mode/gang/proc/assign_bosses(var/leader)
+	if(antag_candidates.len < 2) //Not enough bosses
+		return
+
 	var/datum/mind/boss = pick(antag_candidates)
 	A_bosses += boss
 	antag_candidates -= boss
-	boss.special_role = "[gang_name("A")] Gang (A) Boss"
+	boss.special_role = "[gang_name("A")] Gang (A) [leader ? "Boss" : "Lieutenant"]"
 	boss.restricted_roles = restricted_jobs
-	log_game("[boss.key] has been selected as the boss for the [gang_name("A")] Gang (A)")
+	log_game("[boss.key] has been selected as a [leader ? "Boss" : "Lieutenant"] for the [gang_name("A")] Gang (A)")
 
 	boss = pick(antag_candidates)
 	B_bosses += boss
 	antag_candidates -= boss
-	boss.special_role = "[gang_name("B")] Gang (B) Boss"
+	boss.special_role = "[gang_name("B")] Gang (B) [leader ? "Boss" : "Lieutenant"]"
 	boss.restricted_roles = restricted_jobs
-	log_game("[boss.key] has been selected as the boss for the [gang_name("B")] Gang (B)")
+	log_game("[boss.key] has been selected as a [leader ? "Boss" : "Lieutenant"] for the [gang_name("B")] Gang (B)")
 
 /datum/game_mode/proc/forge_gang_objectives(var/datum/mind/boss_mind)
 	if(istype(ticker.mode, /datum/game_mode/gang))
@@ -110,20 +120,32 @@
 		rival_obj.explanation_text = "Preform a hostile takeover of the station with a Dominator."
 		boss_mind.objectives += rival_obj
 
+/datum/game_mode/proc/assign_gang_fighting_style()
+	var/aName = gang_name("A")
+	if(aName == "Sleeping Carp")
+		A_fighting_style = "martial"
+	else
+		A_fighting_style = "normal"
+	var/bName = gang_name("B")
+	if(bName == "Sleeping Carp")
+		B_fighting_style = "martial"
+	else
+		B_fighting_style = "normal"
 
 /datum/game_mode/proc/greet_gang(var/datum/mind/boss_mind, var/you_are=1)
 	var/obj_count = 1
+	var/isboss = (boss_mind==A_bosses[1] || boss_mind==B_bosses[1])
 	if (you_are)
-		boss_mind.current << "<FONT size=3 color=red><B>¬ы [(boss_mind in A_bosses) ? gang_name("A") : gang_name("B")] Ѕосс √ангстерской группировки! <BR> ќбязательно прочтите WIKI статью по данному режиму игры: http://ru.infinity.wikia.com/wiki/GangWar </B></FONT>"
+		boss_mind.current << "<FONT size=3 color=red><B>You are [isboss ? "the Boss of" : "a Lieutenant in"] the [(boss_mind in A_bosses) ? gang_name("A") : gang_name("B")] Gang!</B></FONT>"
 	for(var/datum/objective/objective in boss_mind.objectives)
 		boss_mind.current << "<B>Objective #[obj_count]</B>: [objective.explanation_text]"
 		obj_count++
 
 /datum/game_mode/gang/proc/domination(var/gang,var/modifier=1,var/obj/dominator)
 	if(gang=="A")
-		A_timer = max(180,900 - ((round((A_territory.len/start_state.num_territories)*200, 1) - 60) * 15)) * modifier
+		A_timer = max(300,900 - ((round((A_territory.len/start_state.num_territories)*200, 1) - 60) * 15)) * modifier
 	if(gang=="B")
-		B_timer = max(180,900 - ((round((B_territory.len/start_state.num_territories)*200, 1) - 60) * 15)) * modifier
+		B_timer = max(300,900 - ((round((B_territory.len/start_state.num_territories)*200, 1) - 60) * 15)) * modifier
 	if(gang && dominator)
 		var/area/domloc = get_area(dominator.loc)
 		priority_announce("Network breach detected in [initial(domloc.name)]. The [gang_name(gang)] Gang is attempting to seize control of the station!","Network Alert")
@@ -137,20 +159,21 @@
 	if(!istype(mob))
 		return
 
+	var/isboss
 	if (mob.mind)
+		isboss = (mob.mind==A_bosses[1] || mob.mind==B_bosses[1])
 		if (mob.mind.assigned_role == "Clown")
 			mob << "Your training has allowed you to overcome your clownish nature, allowing you to wield weapons without harming yourself."
 			mob.dna.remove_mutation(CLOWNMUT)
 
+	var/obj/item/device/gangtool/gangtool
+	if(isboss)
+		gangtool = new(mob)
+	else
+		var/obj/item/device/gangtool/lt/lt_tool = new(mob)
+		gangtool = lt_tool
 	var/obj/item/weapon/pen/gang/T = new(mob)
-	var/obj/item/device/gangtool/gangtool = new(mob)
 	var/obj/item/toy/crayon/spraycan/gang/SC = new(mob)
-
-	//THEY ARE ANTYLOYAL
-	var/obj/item/weapon/implant/antiloyalty/AL = new/obj/item/weapon/implant/antiloyalty(mob)
-	AL.imp_in = mob
-	AL.implanted = 1
-	AL.implanted(mob)
 
 	var/list/slots = list (
 		"backpack" = slot_in_backpack,
@@ -168,8 +191,7 @@
 		. += 1
 	else
 		gangtool.register_device(mob)
-		mob << "The <b>Gangtool</b> in your [where] will allow you to purchase items, send messages to your gangsters and recall the emergency shuttle from anywhere on the station."
-		mob << "You can also promote your gang members to <b>lieutenant</b> by having them use an unregistered gangtool. Unlike regular gangsters, Lieutenants cannot be deconverted and are able to use recruitment pens and gangtools."
+		mob << "The <b>Gangtool</b> in your [where] will allow you to purchase weapons and equipment, send messages to your gang, and recall the emergency shuttle from anywhere on the station."
 
 	var/where2 = mob.equip_in_one_of_slots(T, slots)
 	if (!where2)
@@ -190,7 +212,7 @@
 
 
 //Used by recallers when purchasing a gang outfit. First time a gang outfit is purchased the buyer decides a gang style which is stored so gang outfits are uniform
-/datum/game_mode/proc/gang_outfit(mob/user,var/obj/item/device/gangtool/gangtool,var/gang)
+/datum/game_mode/proc/gang_outfit(mob/living/carbon/user,var/obj/item/device/gangtool/gangtool,var/gang)
 	if(!user || !gangtool || !gang)
 		return 0
 	if(!gangtool.can_use(user))
@@ -200,12 +222,18 @@
 	var/style
 	if(gang == "A")
 		if(!A_style)
-			A_style = input("Pick an outfit style.", "Pick Style") as null|anything in gang_style_list
+			if(gangtool.outfits >=3)	//Gives the gang boss a few minutes to pick a style first before someone else gets to
+				A_style = input("Pick an outfit style.", "Pick Style") as null|anything in gang_style_list
+			else
+				user << "<span class='warning'>Your gang boss hasn't picked a style yet!</span>"
 		style = A_style
 
 	if(gang == "B")
 		if(!B_style)
-			B_style = input("Pick an outfit style.", "Pick Style") as null|anything in gang_style_list
+			if(gangtool.outfits >=3)	//Gives the gang boss a few minutes to pick a style first before someone else gets to
+				B_style = input("Pick an outfit style.", "Pick Style") as null|anything in gang_style_list
+			else
+				user << "<span class='warning'>Your gang boss hasn't picked a style yet!</span>"
 		style = B_style
 
 	if(!style)
@@ -244,6 +272,7 @@
 			outfit.armor = list(melee = 20, bullet = 30, laser = 10, energy = 10, bomb = 20, bio = 0, rad = 0)
 			outfit.desc += " Tailored for the [gang_name(gang)] Gang to offer the wearer moderate protection against ballistics and physical trauma."
 			outfit.gang = gang
+			user.put_in_any_hand_if_possible(outfit)
 			return 1
 
 	return 0
@@ -283,9 +312,9 @@
 //Deals with converting players to a gang//
 ///////////////////////////////////////////
 /datum/game_mode/proc/add_gangster(datum/mind/gangster_mind, var/gang, var/check = 1)
-	if(check && isloyal(gangster_mind.current)) //Check to see if the potential gangster is implanted
-		return 0
 	if(gangster_mind in (A_bosses | A_gang | B_bosses | B_gang))
+		return 0
+	if(check && isloyal(gangster_mind.current)) //Check to see if the potential gangster is implanted
 		return 1
 	if(gang == "A")
 		A_gang += gangster_mind
@@ -297,11 +326,11 @@
 			carbon_mob.silent = max(carbon_mob.silent, 5)
 			carbon_mob.flash_eyes(1, 1)
 		gangster_mind.current.Stun(5)
-	gangster_mind.current << "<FONT size=3 color=red><B>You are now a member of the [gang=="A" ? gang_name("A") : gang_name("B")] Gang!</B></FONT>"
+	gangster_mind.current << "<FONT size=3 color=red><B>You are now a member of the [gang_name(gang)] Gang!</B></FONT>"
 	gangster_mind.current << "<font color='red'>Help your bosses take over the station by claiming territory with <b>special spraycans</b> only they can provide. Simply spray on any unclaimed area of the station.</font>"
 	gangster_mind.current << "<font color='red'>You can identify your bosses by their <b>red \[G\] icon</b>.</font>"
-	gangster_mind.current.attack_log += "\[[time_stamp()]\] <font color='red'>Has been converted to the [gang=="A" ? "[gang_name("A")] Gang (A)" : "[gang_name("B")] Gang (B)"]!</font>"
-	gangster_mind.special_role = "[gang=="A" ? "[gang_name("A")] Gang (A)" : "[gang_name("B")] Gang (B)"]"
+	gangster_mind.current.attack_log += "\[[time_stamp()]\] <font color='red'>Has been converted to the [gang_name(gang)] Gang ([gang])!</font>"
+	gangster_mind.special_role = "[gang_name(gang)] Gang ([gang])"
 	update_gang_icons_added(gangster_mind,gang)
 	return 2
 ////////////////////////////////////////////////////////////////////
@@ -332,13 +361,13 @@
 
 	gangster_mind.special_role = null
 	if(silent < 2)
-		gangster_mind.current.attack_log += "\[[time_stamp()]\] <font color='red'>Has reformed and defected from the [gang=="A" ? "[gang_name("A")] Gang (A)" : "[gang_name("B")] Gang (B)"]!</font>"
+		gangster_mind.current.attack_log += "\[[time_stamp()]\] <font color='red'>Has reformed and defected from the [gang_name(gang)] Gang ([gang])!</font>"
 
 		if(beingborged)
 			if(!silent)
 				gangster_mind.current.visible_message("The frame beeps contentedly from the MMI before initalizing it.")
 			gangster_mind.current << "<FONT size=3 color=red><B>The frame's firmware detects and deletes your criminal behavior! You are no longer a gangster!</B></FONT>"
-			message_admins("[key_name_admin(gangster_mind.current)] <A HREF='?_src_=holder;adminmoreinfo=\ref[gangster_mind.current]'>?</A> (<A HREF='?_src_=holder;adminplayerobservefollow=\ref[gangster_mind.current]'>FLW</A>) has been borged while being a member of the [gang=="A" ? "[gang_name("A")] Gang (A)" : "[gang_name("B")] Gang (B)"] Gang. They are no longer a gangster.")
+			message_admins("[key_name_admin(gangster_mind.current)] <A HREF='?_src_=holder;adminmoreinfo=\ref[gangster_mind.current]'>?</A> (<A HREF='?_src_=holder;adminplayerobservefollow=\ref[gangster_mind.current]'>FLW</A>) has been borged while being a member of the [gang_name(gang)] Gang ([gang]). They are no longer a gangster.")
 		else
 			if(!silent)
 				gangster_mind.current.Paralyse(5)
@@ -389,7 +418,7 @@
 	if(!finished)
 		world << "<FONT size=3 color=red><B>The station was [station_was_nuked ? "destroyed!" : "evacuated before either gang could claim it!"]</B></FONT>"
 	else
-		world << "<FONT size=3 color=red><B>The [finished=="A" ? gang_name("A") : gang_name("B")] Gang successfully preformed a hostile takeover of the station!!</B></FONT>"
+		world << "<FONT size=3 color=red><B>The [get_gang_bosses(finished)] Gang successfully performed a hostile takeover of the station!!</B></FONT>"
 	..()
 	return 1
 
@@ -445,8 +474,8 @@
 //////////////////////////////////////////////////////////
 
 /datum/gang_points
-	var/A = 20
-	var/B = 20
+	var/A = 15
+	var/B = 15
 	var/next_point_interval = 1800
 	var/next_point_time
 
@@ -514,7 +543,7 @@
 	ticker.mode.message_gangtools(ticker.mode.A_tools,"*---------*<br><b>[gang_name("A")] Gang Status Report:</b>")
 	var/A_message = ""
 	if(gangmode && isnum(gangmode.A_timer))
-		var/new_time = max(180,gangmode.A_timer - ((ticker.mode.A_territory.len + A_uniformed) * 2))
+		var/new_time = max(300,gangmode.A_timer - ((ticker.mode.A_territory.len + A_uniformed) * 2))
 		if(new_time < gangmode.A_timer)
 			A_message += "Takeover shortened by [gangmode.A_timer - new_time] seconds for defending [ticker.mode.A_territory.len] territories and [A_uniformed] uniformed gangsters.<BR>"
 			gangmode.A_timer = new_time
@@ -530,7 +559,7 @@
 	ticker.mode.message_gangtools(ticker.mode.B_tools,"<b>[gang_name("B")] Gang Status Report:</b>")
 	var/B_message = ""
 	if(gangmode && isnum(gangmode.B_timer))
-		var/new_time = max(180,gangmode.B_timer - ((ticker.mode.B_territory.len + B_uniformed) * 2))
+		var/new_time = max(300,gangmode.B_timer - ((ticker.mode.B_territory.len + B_uniformed) * 2))
 		if(new_time < gangmode.B_timer)
 			A_message += "Takeover shortened by [gangmode.B_timer - new_time] seconds for defending [ticker.mode.B_territory.len] territories and [B_uniformed] uniformed gangsters.<BR>"
 			gangmode.B_timer = new_time
@@ -584,7 +613,7 @@
 
 	//Increase outfit stock
 	for(var/obj/item/device/gangtool/tool in (ticker.mode.A_tools | ticker.mode.B_tools))
-		tool.outfits = min(tool.outfits+2,10)
+		tool.outfits = min(tool.outfits+2,5)
 
 	//Restart the counter
 	start()

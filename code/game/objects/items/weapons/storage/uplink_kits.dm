@@ -198,6 +198,7 @@
 
 /obj/item/weapon/storage/box/syndie_kit/imp_fuck_the_nt
 	name = "boxed FUCK THE NT implants (with injector)"
+	desc = "break up you and your friends from NT usurpation!"
 
 /obj/item/weapon/storage/box/syndie_kit/imp_fuck_the_nt/New()
 	..()
@@ -211,3 +212,13 @@
 	new /obj/item/weapon/implantcase/antiloyalty(src)
 	new /obj/item/weapon/implantcase/antiloyalty(src)
 	return
+
+/obj/item/weapon/storage/box/syndie_kit/nuke
+	name = "box"
+
+/obj/item/weapon/storage/box/syndie_kit/nuke/New()
+	..()
+	new /obj/item/weapon/screwdriver/nuke(src)
+	new /obj/item/nuke_core_container(src)
+	new /obj/item/weapon/paper/nuke_instructions(src)
+	new /obj/item/weapon/paper/nuke_plans(src)

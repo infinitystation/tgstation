@@ -8,6 +8,14 @@
 	icon = 'icons/obj/objects.dmi'
 	icon_state = "shards"
 
+/obj/effect/decal/cleanable/shit
+	name = "shit"
+	desc = "Who did this?! Smells like shit. Someone should clean that up."
+	gender = PLURAL
+	icon = 'icons/obj/redu.dmi'
+	icon_state = "Shit"
+	anchored = 1
+
 /obj/effect/decal/cleanable/ash
 	name = "ashes"
 	desc = "Ashes to ashes, dust to dust, and into space."
@@ -19,14 +27,8 @@
 /obj/effect/decal/cleanable/ash/New()
 	..()
 	reagents.add_reagent("ash", 30)
-
-/obj/effect/decal/cleanable/shit
-	name = "shit"
-	desc = "Who did this?! Smells like shit. Someone should clean that up."
-	gender = PLURAL
-	icon = 'icons/obj/redu.dmi'
-	icon_state = "Shit"
-	anchored = 1
+	pixel_x = rand(-5, 5)
+	pixel_y = rand(-5, 5)
 
 
 /obj/effect/decal/cleanable/greenglow
@@ -80,6 +82,10 @@
 	layer = 3
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "cobweb1"
+	burntime = 1
+
+/obj/effect/decal/cleanable/cobweb/fire_act()
+	qdel(src)
 
 /obj/effect/decal/cleanable/molten_item
 	name = "gooey grey mass"
@@ -152,3 +158,18 @@
 	icon = 'icons/obj/objects.dmi'
 	icon_state = "ash"
 	anchored = 1
+
+/obj/effect/decal/cleanable/shreds
+	name = "shreds"
+	desc = "The shredded remains of what appears to be clothing."
+	icon = 'icons/effects/effects.dmi'
+	icon_state = "shreds"
+	gender = PLURAL
+	density = 0
+	anchored = 1
+	layer = 2
+
+/obj/effect/decal/cleanable/shreds/New()
+	pixel_x = rand(-5, 5)
+	pixel_y = rand(-5, 5)
+	..()

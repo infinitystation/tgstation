@@ -1110,7 +1110,7 @@
 			usr << "This mob has no ckey"
 			return
 		var/sql_ckey = sanitizeSQL(M.ckey)
-		var/DBQuery/query = dbcon.NewQuery("SELECT ckey FROM [format_table_name("watch")] WHERE (ckey = '[sql_ckey]')")
+		var/DBQuery/query = dbcon.NewQuery("SELECT ckey FROM watch WHERE (ckey = '[sql_ckey]')")
 		query.Execute()
 		if(query.NextRow())
 			switch(alert(usr, "[sql_ckey] is already on the watchlist, do you want to:", "Ckey already flagged", "Remove", "Edit reason", "Cancel"))

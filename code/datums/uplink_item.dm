@@ -501,6 +501,12 @@ var/list/uplink_items = list()
 	item = /obj/item/weapon/storage/toolbox/syndicate
 	cost = 1
 
+/datum/uplink_item/device_tools/surgerybag
+	name = "Syndicate Surgery Dufflebag"
+	desc = "The Syndicate surgery dufflebag is a toolkit containing all surgery tools, surgical drapes, a Syndicate brand MMI, a straitjacket, and a muzzle."
+	item = /obj/item/weapon/storage/backpack/dufflebag/syndiesurgery
+	cost = 5
+
 /datum/uplink_item/device_tools/medkit
 	name = "Syndicate Combat Medic Kit"
 	desc = "The syndicate medkit is a suspicious black and red. Included is a combat stimulant injector for rapid healing, a medical hud for quick identification of injured comrades, \
@@ -650,7 +656,7 @@ var/list/uplink_items = list()
 
 /datum/uplink_item/implants/freedom
 	name = "FUCK THE NT Implants"
-	desc = "Break up you and your friends from NT usurpation!"
+	desc = "break up you and your friends from NT usurpation!"
 	item = /obj/item/weapon/storage/box/syndie_kit/imp_fuck_the_nt
 	cost = 5
 
@@ -670,9 +676,11 @@ var/list/uplink_items = list()
 
 /datum/uplink_item/implants/microbomb
 	name = "Microbomb Implant"
-	desc = "An implant injected into the body, and later activated either manually or automatically upon death. The more implants inside of you, the higher the explosive power."
+	desc = "An implant injected into the body, and later activated either manually or automatically upon death. The more implants inside of you, the higher the explosive power. \
+	Will permanently destroy your body, however."
 	item = /obj/item/weapon/storage/box/syndie_kit/imp_microbomb
-	cost = 1
+	cost = 2
+	gamemodes = list(/datum/game_mode/nuclear)
 
 
 //CYBERNETIC IMPLANTS
@@ -764,6 +772,7 @@ var/list/uplink_items = list()
 	desc = "An implant injected into the body, and later activated either manually or automatically upon death. Maximum explosion power."
 	item = /obj/item/weapon/storage/box/syndie_kit/imp_macrobomb
 	cost = 20
+	gamemodes = list(/datum/game_mode/nuclear)
 
 /datum/uplink_item/badass/random
 	name = "Random Item"

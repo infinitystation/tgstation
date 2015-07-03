@@ -15,14 +15,14 @@ z7 = empty space
 
 #if !defined(MAP_FILE)
 
-        #include "map_files\MetaStation\MetaStation.v41A.II_FIX7.dmm"
+        #include "map_files\MetaStation\MetaStation.v41A.II_FIX8.dmm"
         #include "map_files\MetaStation\z2t.dmm"
         #include "map_files\MetaStation\z3.dmm"
         #include "map_files\MetaStation\z4.dmm"
         #include "map_files\MetaStation\z5.dmm"
         #include "map_files\generic\z6.dmm"
         #include "map_files\generic\z7.dmm"
-        #define MAP_FILE "MetaStation.v41A.II_FIX7.dmm"
+        #define MAP_FILE "MetaStation.v41A.II_FIX8.dmm"
         #define MAP_NAME "Terror's MetaStation"
 
 #elif !defined(MAP_OVERRIDE)
