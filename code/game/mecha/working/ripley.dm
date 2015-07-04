@@ -10,8 +10,6 @@
 	damage_absorption = list("brute"=0.6,"fire"=1,"bullet"=0.8,"laser"=0.9,"energy"=1,"bomb"=0.6)
 	max_equip = 6
 	wreckage = /obj/structure/mecha_wreckage/ripley
-	var/list/cargo = new
-	var/cargo_capacity = 15
 
 /*
 /obj/mecha/working/ripley/New()

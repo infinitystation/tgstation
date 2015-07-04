@@ -7,14 +7,14 @@ For the materials datum, it assumes you need reagents unless specified otherwise
 you use one of the material IDs below. These are NOT ids in the usual sense (they aren't defined in the object or part of a datum),
 they are simply references used as part of a "has materials?" type proc. They all start with a $ to denote that they aren't reagents.
 The currently supporting non-reagent materials. All material amounts are set as the define MINERAL_MATERIAL_AMOUNT, which defaults to 2000
-- $metal (/obj/item/stack/metal).
-- $glass (/obj/item/stack/glass).
-- $plasma (/obj/item/stack/plasma).
-- $silver (/obj/item/stack/silver).
-- $gold (/obj/item/stack/gold).
-- $uranium (/obj/item/stack/uranium).
-- $diamond (/obj/item/stack/diamond).
-- $bananium (/obj/item/stack/bananium).
+- MAT_METAL (/obj/item/stack/metal).
+- MAT_GLASS (/obj/item/stack/glass).
+- MAT_PLASMA (/obj/item/stack/plasma).
+- MAT_SILVER (/obj/item/stack/silver).
+- MAT_GOLD (/obj/item/stack/gold).
+- MAT_URANIUM (/obj/item/stack/uranium).
+- MAT_DIAMOND (/obj/item/stack/diamond).
+- MAT_BANANIUM (/obj/item/stack/bananium).
 (Insert new ones here)
 
 Don't add new keyword/IDs if they are made from an existing one (such as rods which are made from metal). Only add raw materials.
@@ -67,8 +67,7 @@ other types of metals and chemistry for reagents).
 	icon_state = "datadisk2"
 	item_state = "card-id"
 	w_class = 1.0
-	m_amt = 30
-	g_amt = 10
+	materials = list(MAT_METAL=30, MAT_GLASS=10)
 	var/datum/design/blueprint
 
 /obj/item/weapon/disk/design_disk/New()
@@ -85,7 +84,7 @@ other types of metals and chemistry for reagents).
 	id = "intellicard"
 	req_tech = list("programming" = 4, "materials" = 4)
 	build_type = PROTOLATHE
-	materials = list("$glass" = 1000, "$gold" = 200)
+	materials = list(MAT_GLASS = 1000, MAT_GOLD = 200)
 	build_path = /obj/item/device/aicard
 	category = list("Electronics")
 
@@ -95,7 +94,7 @@ other types of metals and chemistry for reagents).
 	id = "paicard"
 	req_tech = list("programming" = 2)
 	build_type = PROTOLATHE
-	materials = list("$glass" = 500, "$metal" = 500)
+	materials = list(MAT_GLASS = 500, MAT_METAL = 500)
 	build_path = /obj/item/device/paicard
 	category = list("Electronics")
 
@@ -109,7 +108,7 @@ other types of metals and chemistry for reagents).
 	id = "design_disk"
 	req_tech = list("programming" = 1)
 	build_type = PROTOLATHE | AUTOLATHE
-	materials = list("$metal" = 30, "$glass" = 10)
+	materials = list(MAT_METAL = 30, MAT_GLASS = 10)
 	build_path = /obj/item/weapon/disk/design_disk
 	category = list("Electronics")
 
@@ -119,7 +118,7 @@ other types of metals and chemistry for reagents).
 	id = "tech_disk"
 	req_tech = list("programming" = 1)
 	build_type = PROTOLATHE | AUTOLATHE
-	materials = list("$metal" = 30, "$glass" = 10)
+	materials = list(MAT_METAL = 30, MAT_GLASS = 10)
 	build_path = /obj/item/weapon/disk/tech_disk
 	category = list("Electronics")
 
@@ -134,7 +133,7 @@ other types of metals and chemistry for reagents).
 	id = "drill"
 	req_tech = list("materials" = 2, "powerstorage" = 3, "engineering" = 2)
 	build_type = PROTOLATHE
-	materials = list("$metal" = 6000, "$glass" = 1000) //expensive, but no need for miners.
+	materials = list(MAT_METAL = 6000, MAT_GLASS = 1000) //expensive, but no need for miners.
 	build_path = /obj/item/weapon/pickaxe/drill
 	category = list("Mining Designs")
 
@@ -144,7 +143,7 @@ other types of metals and chemistry for reagents).
 	id = "drill_diamond"
 	req_tech = list("materials" = 6, "powerstorage" = 4, "engineering" = 4)
 	build_type = PROTOLATHE
-	materials = list("$metal" = 6000, "$glass" = 1000, "$diamond" = 3750) //Yes, a whole diamond is needed.
+	materials = list(MAT_METAL = 6000, MAT_GLASS = 1000, MAT_DIAMOND = 3750) //Yes, a whole diamond is needed.
 	reliability = 79
 	build_path = /obj/item/weapon/pickaxe/drill/diamonddrill
 	category = list("Mining Designs")
@@ -155,7 +154,7 @@ other types of metals and chemistry for reagents).
 	id = "plasmacutter"
 	req_tech = list("materials" = 2, "plasmatech" = 2, "engineering" = 2, "combat" = 1, "magnets" = 2)
 	build_type = PROTOLATHE
-	materials = list("$metal" = 1500, "$glass" = 500, "$plasma" = 400)
+	materials = list(MAT_METAL = 1500, MAT_GLASS = 500, MAT_PLASMA = 400)
 	reliability = 79
 	build_path = /obj/item/weapon/gun/energy/plasmacutter
 	category = list("Mining Designs")
@@ -166,7 +165,7 @@ other types of metals and chemistry for reagents).
 	id = "plasmacutter_adv"
 	req_tech = list("materials" = 4, "plasmatech" = 3, "engineering" = 3, "combat" = 3, "magnets" = 3)
 	build_type = PROTOLATHE
-	materials = list("$metal" = 3000, "$glass" = 1000, "$plasma" = 2000, "$gold" = 500)
+	materials = list(MAT_METAL = 3000, MAT_GLASS = 1000, MAT_PLASMA = 2000, MAT_GOLD = 500)
 	reliability = 79
 	build_path = /obj/item/weapon/gun/energy/plasmacutter/adv
 	category = list("Mining Designs")
@@ -177,7 +176,7 @@ other types of metals and chemistry for reagents).
 	id = "jackhammer"
 	req_tech = list("materials" = 6, "powerstorage" = 6, "engineering" = 5, "magnets" = 6)
 	build_type = PROTOLATHE
-	materials = list("$metal" = 8000, "$glass" = 1500, "$silver" = 2000, "$diamond" = 6000)
+	materials = list(MAT_METAL = 8000, MAT_GLASS = 1500, MAT_SILVER = 2000, MAT_DIAMOND = 6000)
 	build_path = /obj/item/weapon/pickaxe/drill/jackhammer
 	category = list("Mining Designs")
 
@@ -191,7 +190,7 @@ other types of metals and chemistry for reagents).
 	id = "beacon"
 	req_tech = list("bluespace" = 1)
 	build_type = PROTOLATHE
-	materials = list("$metal" = 20, "$glass" = 10)
+	materials = list(MAT_METAL = 20, MAT_GLASS = 10)
 	build_path = /obj/item/device/radio/beacon
 	category = list("Bluespace Designs")
 
@@ -201,7 +200,7 @@ other types of metals and chemistry for reagents).
 	id = "bag_holding"
 	req_tech = list("bluespace" = 4, "materials" = 6)
 	build_type = PROTOLATHE
-	materials = list("$gold" = 3000, "$diamond" = 1500, "$uranium" = 250)
+	materials = list(MAT_GOLD = 3000, MAT_DIAMOND = 1500, MAT_URANIUM = 250)
 	reliability = 80
 	build_path = /obj/item/weapon/storage/backpack/holding
 	category = list("Bluespace Designs")
@@ -212,7 +211,7 @@ other types of metals and chemistry for reagents).
 	id = "bluespace_crystal"
 	req_tech = list("bluespace" = 4, "materials" = 6)
 	build_type = PROTOLATHE
-	materials = list("$diamond" = 1500, "$plasma" = 1500)
+	materials = list(MAT_DIAMOND = 1500, MAT_PLASMA = 1500)
 	reliability = 100
 	build_path = /obj/item/bluespace_crystal/artificial
 	category = list("Bluespace Designs")
@@ -223,7 +222,7 @@ other types of metals and chemistry for reagents).
 	id = "telesci_gps"
 	req_tech = list("materials" = 2, "magnets" = 3, "bluespace" = 3)
 	build_type = PROTOLATHE
-	materials = list("$metal" = 500, "$glass" = 1000)
+	materials = list(MAT_METAL = 500, MAT_GLASS = 1000)
 	build_path = /obj/item/device/gps
 	category = list("Bluespace Designs")
 
@@ -233,7 +232,7 @@ other types of metals and chemistry for reagents).
 	id = "minerbag_holding"
 	req_tech = list("bluespace" = 3, "materials" = 4)
 	build_type = PROTOLATHE
-	materials = list("$gold" = 250, "$uranium" = 500) //quite cheap, for more convenience
+	materials = list(MAT_GOLD = 250, MAT_URANIUM = 500) //quite cheap, for more convenience
 	reliability = 100
 	build_path = /obj/item/weapon/storage/bag/ore/holding
 	category = list("Bluespace Designs")
@@ -248,7 +247,7 @@ other types of metals and chemistry for reagents).
 	id = "health_hud"
 	req_tech = list("biotech" = 2, "magnets" = 3)
 	build_type = PROTOLATHE
-	materials = list("$metal" = 50, "$glass" = 50)
+	materials = list(MAT_METAL = 50, MAT_GLASS = 50)
 	build_path = /obj/item/clothing/glasses/hud/health
 	category = list("Equipment")
 
@@ -258,7 +257,7 @@ other types of metals and chemistry for reagents).
 	id = "health_hud_night"
 	req_tech = list("biotech" = 4, "magnets" = 5)
 	build_type = PROTOLATHE
-	materials = list("$metal" = 200, "$glass" = 200, "$uranium" = 1000, "$silver" = 250)
+	materials = list(MAT_METAL = 200, MAT_GLASS = 200, MAT_URANIUM = 1000, MAT_SILVER = 250)
 	build_path = /obj/item/clothing/glasses/hud/health/night
 	category = list("Equipment")
 
@@ -268,7 +267,7 @@ other types of metals and chemistry for reagents).
 	id = "security_hud"
 	req_tech = list("magnets" = 3, "combat" = 2)
 	build_type = PROTOLATHE
-	materials = list("$metal" = 50, "$glass" = 50)
+	materials = list(MAT_METAL = 50, MAT_GLASS = 50)
 	build_path = /obj/item/clothing/glasses/hud/security
 	category = list("Equipment")
 
@@ -278,7 +277,7 @@ other types of metals and chemistry for reagents).
 	id = "security_hud_night"
 	req_tech = list("magnets" = 5, "combat" = 4)
 	build_type = PROTOLATHE
-	materials = list("$metal" = 200, "$glass" = 200, "$uranium" = 1000, "$gold" = 350)
+	materials = list(MAT_METAL = 200, MAT_GLASS = 200, MAT_URANIUM = 1000, MAT_GOLD = 350)
 	build_path = /obj/item/clothing/glasses/hud/security/night
 	category = list("Equipment")
 
@@ -292,7 +291,7 @@ other types of metals and chemistry for reagents).
 			id = "protolathe_test"
 			build_type = PROTOLATHE
 			req_tech = list("materials" = 1)
-			materials = list("$gold" = 3000, "iron" = 15, "copper" = 10, "$silver" = 2500)
+			materials = list(MAT_GOLD = 3000, "iron" = 15, "copper" = 10, MAT_SILVER = 2500)
 			build_path = /obj/item/weapon/banhammer"
 			category = list("Weapons") */
 
@@ -306,7 +305,7 @@ other types of metals and chemistry for reagents).
 	id = "weldingmask"
 	req_tech = list("materials" = 2, "engineering" = 2)
 	build_type = PROTOLATHE
-	materials = list("$metal" = 4000, "$glass" = 1000)
+	materials = list(MAT_METAL = 4000, MAT_GLASS = 1000)
 	build_path = /obj/item/clothing/mask/gas/welding
 	category = list("Equipment")
 
@@ -316,7 +315,7 @@ other types of metals and chemistry for reagents).
 	id = "air_horn"
 	req_tech = list("materials" = 2, "engineering" = 2)
 	build_type = PROTOLATHE
-	materials = list("$metal" = 4000, "$bananium" = 1000)
+	materials = list(MAT_METAL = 4000, MAT_BANANIUM = 1000)
 	build_path = /obj/item/weapon/bikehorn/airhorn
 	category = list("Equipment")
 
@@ -326,7 +325,7 @@ other types of metals and chemistry for reagents).
 	id = "mesons"
 	req_tech = list("materials" = 3, "magnets" = 2, "engineering" = 2)
 	build_type = PROTOLATHE
-	materials = list("$metal" = 200, "$glass" = 300)
+	materials = list(MAT_METAL = 200, MAT_GLASS = 300)
 	build_path = /obj/item/clothing/glasses/meson
 	category = list("Equipment")
 
@@ -336,7 +335,7 @@ other types of metals and chemistry for reagents).
 	id = "engine_goggles"
 	req_tech = list("materials" = 4, "magnets" = 3, "engineering" = 4)
 	build_type = PROTOLATHE
-	materials = list("$metal" = 200, "$glass" = 300, "$plasma" = 100)
+	materials = list(MAT_METAL = 200, MAT_GLASS = 300, MAT_PLASMA = 100)
 	build_path = /obj/item/clothing/glasses/meson/engine
 	category = list("Equipment")
 
@@ -346,7 +345,7 @@ other types of metals and chemistry for reagents).
 	id = "nvgmesons"
 	req_tech = list("materials" = 5, "magnets" = 5, "engineering" = 4)
 	build_type = PROTOLATHE
-	materials = list("$metal" = 300, "$glass" = 400, "$plasma" = 250, "$uranium" = 1000)
+	materials = list(MAT_METAL = 300, MAT_GLASS = 400, MAT_PLASMA = 250, MAT_URANIUM = 1000)
 	build_path = /obj/item/clothing/glasses/meson/night
 	category = list("Equipment")
 
@@ -356,7 +355,7 @@ other types of metals and chemistry for reagents).
 	id = "night_visision_goggles"
 	req_tech = list("magnets" = 4)
 	build_type = PROTOLATHE
-	materials = list("$metal" = 100, "$glass" = 100, "$uranium" = 1000)
+	materials = list(MAT_METAL = 100, MAT_GLASS = 100, MAT_URANIUM = 1000)
 	build_path = /obj/item/clothing/glasses/night
 	category = list("Equipment")
 
@@ -366,7 +365,7 @@ other types of metals and chemistry for reagents).
 	id = "magboots"
 	req_tech = list("materials" = 4, "magnets" = 4, "engineering" = 5)
 	build_type = PROTOLATHE
-	materials = list("$metal" = 4500, "$silver" = 1500, "$gold" = 2500)
+	materials = list(MAT_METAL = 4500, MAT_SILVER = 1500, MAT_GOLD = 2500)
 	build_path = /obj/item/clothing/shoes/magboots
 	category = list("Equipment")
 
@@ -380,7 +379,7 @@ other types of metals and chemistry for reagents).
 	id = "buffer"
 	req_tech = list("materials" = 5, "engineering" = 3)
 	build_type = PROTOLATHE
-	materials = list("$metal" = 3000, "$glass" = 200)
+	materials = list(MAT_METAL = 3000, MAT_GLASS = 200)
 	build_path = /obj/item/janiupgrade
 	category = list("Equipment")
 
@@ -390,7 +389,7 @@ other types of metals and chemistry for reagents).
 	id = "holosign"
 	req_tech = list("magnets" = 3, "powerstorage" = 2)
 	build_type = PROTOLATHE
-	materials = list("$metal" = 2000, "$glass" = 1000)
+	materials = list(MAT_METAL = 2000, MAT_GLASS = 1000)
 	build_path = /obj/item/weapon/holosign_creator
 	category = list("Equipment")
 
@@ -454,6 +453,6 @@ other types of metals and chemistry for reagents).
 	id = "exwelder"
 	req_tech = list("materials" = 4, "engineering" = 4, "bluespace" = 3, "plasmatech" = 3)
 	build_type = PROTOLATHE
-	materials = list("$metal" = 1000, "$glass" = 500, "$plasma" = 1500, "$uranium" = 200)
+	materials = list(MAT_METAL = 1000, MAT_GLASS = 500, MAT_PLASMA = 1500, MAT_URANIUM = 200)
 	build_path = /obj/item/weapon/weldingtool/experimental
 	category = list("Equipment")

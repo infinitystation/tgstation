@@ -30,6 +30,16 @@
 
 	return 0 //not in range and not telekinetic
 
+/proc/hear(var/range, var/atom/source)
+
+	var/lum = source.luminosity
+	source.luminosity = 6
+
+	var/list/heard = view(range, source)
+	source.luminosity = lum
+
+	return heard
+
 // Like view but bypasses luminosity check
 
 /proc/get_hear(var/range, var/atom/source)
@@ -186,6 +196,30 @@
 
 	return found_mobs
 
+/proc/get_mobs_in_view(var/R, var/atom/source)
+	// Returns a list of mobs in range of R from source. Used in radio and say code.
+
+	var/turf/T = get_turf(source)
+	var/list/hear = list()
+
+	if(!T)
+		return hear
+
+	var/list/range = hear(R, T)
+
+	for(var/atom/A in range)
+		if(ismob(A))
+			var/mob/M = A
+			if(M.client)
+				hear += M
+			//world.log << "Start = [M] - [get_turf(M)] - ([M.x], [M.y], [M.z])"
+		else if(istype(A, /obj/item/device/radio))
+			hear += A
+
+		if(isobj(A) || ismob(A))
+			hear |= recursive_mob_check(A, hear, 3, 1, 0, 1)
+
+	return hear
 
 /proc/get_hearers_in_view(var/R, var/atom/source)
 	// Returns a list of hearers in view(R) from source (ignoring luminosity). Used in saycode.

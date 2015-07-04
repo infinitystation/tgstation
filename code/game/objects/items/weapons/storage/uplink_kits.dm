@@ -112,12 +112,22 @@
 	return
 */
 
-/obj/item/weapon/storage/box/syndie_kit/imp_explosive
-	name = "Explosive Implant (with injector)"
+/obj/item/weapon/storage/box/syndie_kit/imp_microbomb
+	name = "Microbomb Implant (with injector)"
 
-/obj/item/weapon/storage/box/syndie_kit/imp_explosive/New()
+/obj/item/weapon/storage/box/syndie_kit/imp_microbomb/New()
 	var/obj/item/weapon/implanter/O = new(src)
 	O.imp = new /obj/item/weapon/implant/explosive(O)
+	O.update_icon()
+	..()
+	return
+
+/obj/item/weapon/storage/box/syndie_kit/imp_macrobomb
+	name = "Macrobomb Implant (with injector)"
+
+/obj/item/weapon/storage/box/syndie_kit/imp_macrobomb/New()
+	var/obj/item/weapon/implanter/O = new(src)
+	O.imp = new /obj/item/weapon/implant/explosive/macro(O)
 	O.update_icon()
 	..()
 	return
@@ -188,6 +198,7 @@
 
 /obj/item/weapon/storage/box/syndie_kit/imp_fuck_the_nt
 	name = "boxed FUCK THE NT implants (with injector)"
+	desc = "break up you and your friends from NT usurpation!"
 
 /obj/item/weapon/storage/box/syndie_kit/imp_fuck_the_nt/New()
 	..()
@@ -201,3 +212,13 @@
 	new /obj/item/weapon/implantcase/antiloyalty(src)
 	new /obj/item/weapon/implantcase/antiloyalty(src)
 	return
+
+/obj/item/weapon/storage/box/syndie_kit/nuke
+	name = "box"
+
+/obj/item/weapon/storage/box/syndie_kit/nuke/New()
+	..()
+	new /obj/item/weapon/screwdriver/nuke(src)
+	new /obj/item/nuke_core_container(src)
+	new /obj/item/weapon/paper/nuke_instructions(src)
+	new /obj/item/weapon/paper/nuke_plans(src)

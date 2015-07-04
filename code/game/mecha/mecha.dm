@@ -74,6 +74,9 @@
 	var/melee_cooldown = 10
 	var/melee_can_hit = 1
 
+	var/list/cargo = new
+	var/cargo_capacity = 15
+
 
 /obj/mecha/New()
 	..()
@@ -1658,8 +1661,10 @@ var/year_integer = text2num(year) // = 2013???
 
 /obj/mecha/proc/dynusepower(amount)
 	if(get_charge())
-		cell.use(amount)
-		return 1
+		if(cell.use(amount))
+			return 1
+		else
+			cell.charge = 0
 	return 0
 
 /obj/mecha/proc/give_power(amount)
