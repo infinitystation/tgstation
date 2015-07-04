@@ -102,7 +102,7 @@ var/datum/subsystem/ticker/ticker
 				current_state = GAME_STATE_FINISHED
 				auto_toggle_ooc(1) // Turn it on
 				auto_toggle_looc(1) // Turn it on
-				declare_completion()
+				declare_completion(force_ending)
 				spawn(50)
 					if(mode.station_was_nuked)
 						world.Reboot("Station destroyed by Nuclear Device.", "end_proper", "nuke")
@@ -164,7 +164,6 @@ var/datum/subsystem/ticker/ticker
 
 	current_state = GAME_STATE_PLAYING
 	auto_toggle_ooc(0) // Turn it off
-	auto_toggle_looc(0) // Turn it off
 	round_start_time = world.time
 
 	start_landmarks_list = shuffle(start_landmarks_list) //Shuffle the order of spawn points so they dont always predictably spawn bottom-up and right-to-left
@@ -208,6 +207,7 @@ var/datum/subsystem/ticker/ticker
 		hi.closeAll()
 
 	auto_toggle_ooc(1) // Turn it on
+	auto_toggle_looc(1) // Turn it on
 	//initialise our cinematic screen object
 	cinematic = new /obj/screen{icon='icons/effects/station_explosion.dmi';icon_state="station_intact";layer=20;mouse_opacity=0;screen_loc="1,0";}(src)
 
@@ -409,7 +409,7 @@ var/datum/subsystem/ticker/ticker
 	//calls auto_declare_completion_* for all modes
 	for(var/handler in typesof(/datum/game_mode/proc))
 		if (findtext("[handler]","auto_declare_completion_"))
-			call(mode, handler)()
+			call(mode, handler)(force_ending)
 
 	//Print a list of antagonists to the server log
 	var/list/total_antagonists = list()
