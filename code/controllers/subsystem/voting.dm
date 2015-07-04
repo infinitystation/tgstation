@@ -127,6 +127,13 @@ var/datum/subsystem/vote/SSvote
 				if(. == "Отключить OOC")
 					ooc_allowed = 0
 					world << "<B>The OOC channel has been globally disabled!</B>"
+			if("looc")
+				if(. == "Включить LOOC")
+					looc_allowed = 1
+					world << "<B>The LOOC channel has been globally enabled!</B>"
+				if(. == "Отключить LOOC")
+					looc_allowed = 0
+					world << "<B>The LOOC channel has been globally disabled!</B>"
 
 	if(restart)
 		world.Reboot("Restart vote successful.", "end_error", "restart vote")
@@ -156,6 +163,7 @@ var/datum/subsystem/vote/SSvote
 			if("restart")	choices.Add("Restart Round","Continue Playing")
 			if("gamemode")	choices.Add(config.votable_modes)
 			if("ooc")	choices.Add("Включить OOC", "Отключить OOC")
+			if("looc")	choices.Add("Включить LOOC", "Отключить LOOC")
 			if("custom")
 				question = stripped_input(usr,"What is the vote for?")
 				question = copytext(sanitize_u(question), 1, MAX_MESSAGE_LEN)
@@ -222,6 +230,8 @@ var/datum/subsystem/vote/SSvote
 		. += "</li>"
 		//ooc
 		. += "<li><a href='?src=\ref[src];vote=ooc'>Toggle OOC</a></li>"
+		//looc
+		. += "<li><a href='?src=\ref[src];vote=looc'>Toggle LOOC</a></li>"
 		//custom
 		if(trialmin)
 			. += "<li><a href='?src=\ref[src];vote=custom'>Custom</a></li>"
@@ -255,6 +265,8 @@ var/datum/subsystem/vote/SSvote
 				initiate_vote("gamemode",usr.key)
 		if("ooc")
 			initiate_vote("ooc",usr.key)
+		if("looc")
+			initiate_vote("looc",usr.key)
 		if("custom")
 			if(usr.client.holder)
 				initiate_vote("custom",usr.key)

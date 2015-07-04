@@ -169,6 +169,10 @@
 /obj/machinery/alarm/attack_hand(mob/user)
 	if (..())
 		return
+
+	if (buildstage != 2)
+		return
+
 	user.set_machine(src)
 
 	if ( (get_dist(src, user) > 1 ))
@@ -385,6 +389,10 @@
 /obj/machinery/alarm/Topic(href, href_list)
 	if(..())
 		return
+
+	if (buildstage != 2)
+		return
+
 	usr.set_machine(src)
 
 	if (locked && !usr.has_unlimited_silicon_privilege)
@@ -690,7 +698,7 @@
 				user.visible_message("[user.name] removes the electronics from [src.name].",\
 									"<span class='notice'>You start prying out the circuit...</span>")
 				playsound(src.loc, 'sound/items/Crowbar.ogg', 50, 1)
-				if (do_after(user, 20))
+				if (do_after(user, 20, target = src))
 					if (buildstage == 1)
 						user <<"<span class='notice'>You remove the air alarm electronics.</span>"
 						new /obj/item/weapon/airalarm_electronics( src.loc )
@@ -706,7 +714,7 @@
 					return
 				user.visible_message("[user.name] wires the air alarm.", \
 									"<span class='notice'>You start wiring the air alarm...</span>")
-				if (do_after(user, 20))
+				if (do_after(user, 20, target = src))
 					if (cable.get_amount() >= 5 && buildstage == 1)
 						cable.use(5)
 						user << "<span class='notice'>You wire the air alarm.</span>"
@@ -765,8 +773,7 @@ Just a object used in constructing air alarms
 	icon_state = "airalarm_electronics"
 	desc = "Looks like a circuit. Probably is."
 	w_class = 2.0
-	m_amt = 50
-	g_amt = 50
+	materials = list(MAT_METAL=50, MAT_GLASS=50)
 
 
 /*
@@ -949,7 +956,7 @@ FIRE ALARM
 					playsound(src.loc, 'sound/items/Crowbar.ogg', 50, 1)
 					user.visible_message("[user.name] removes the electronics from [src.name].", \
 										"<span class='notice'>You start prying out the circuit...</span>")
-					if(do_after(user, 20))
+					if(do_after(user, 20, target = src))
 						if(buildstage == 1)
 							if(stat & BROKEN)
 								user << "<span class='notice'>You remove the destroyed circuit.</span>"
@@ -1125,8 +1132,7 @@ Just a object used in constructing fire alarms
 	icon_state = "door_electronics"
 	desc = "A circuit. It has a label on it, it says \"Can handle heat levels up to 40 degrees celsius!\""
 	w_class = 2.0
-	m_amt = 50
-	g_amt = 50
+	materials = list(MAT_METAL=50, MAT_GLASS=50)
 
 
 /*
@@ -1184,6 +1190,9 @@ Code shamelessly copied from apc_frame
 
 /obj/machinery/firealarm/partyalarm/attack_hand(mob/user as mob)
 	if(user.stat || stat & (NOPOWER|BROKEN))
+		return
+
+	if (buildstage != 2)
 		return
 
 	user.set_machine(src)

@@ -64,7 +64,7 @@
 				validating = 1
 				usr << "<span class='notice'>ѕроверяем замок</span>"
 				for(var/i=1; i<=5; i++)
-					if(do_after(user, 10))
+					if(do_after(user, 10, target = src))
 						if(code2[i]==code1[i])
 							validate++
 							usr << "<span class='notice'> люч подходит</span>"
