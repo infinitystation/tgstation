@@ -61,7 +61,7 @@
 				m_type = 1
 
 		if ("tail")
-			message = "<span class='name'>[src]</span> waves its tail."
+			message = "<span class='name'>[src]</span> машет своим хвостом."
 			m_type = 1
 
 		if ("help") //This is an exception
