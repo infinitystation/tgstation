@@ -390,6 +390,8 @@
 		return
 
 /obj/structure/closet/emag_act(mob/user as mob)
+	if(opened)
+		return
 	if(secure && !broken)
 		broken = 1
 		locked = 0
