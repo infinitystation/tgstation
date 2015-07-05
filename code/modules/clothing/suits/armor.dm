@@ -108,7 +108,6 @@
 	worn_icon = 'icons/mob/uac/suit.dmi'
 	icon = 'icons/obj/clothing/uac/suit.dmi'
 	icon_state = "armor"
-	item_state = "armor_c"
 	armor = list(melee = 45, bullet = 50, laser = 35, energy = 20, bomb = 35, bio = 0, rad = 0)
 
 /obj/item/clothing/suit/armor/laserproof

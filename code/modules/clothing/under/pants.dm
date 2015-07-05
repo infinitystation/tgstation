@@ -82,4 +82,3 @@
 	worn_icon = 'icons/mob/uac/pants.dmi'
 	icon = 'icons/obj/clothing/uac/pants.dmi'
 	icon_state = "trousers"
-	item_state = "trousers"
