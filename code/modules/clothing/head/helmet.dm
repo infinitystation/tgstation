@@ -111,13 +111,26 @@
 
 /obj/item/clothing/head/helmet/tact
 	name = "\improper Tacticool helmet"
-	desc = "Ўлем дл€ тактических подразделений...Ѕез опазновательных знаков."
+	desc = "Ўлем дл&#255; тактических подразделений...Ѕез опозновательных знаков."
 	worn_icon = 'icons/blue_brig/mob/head.dmi'
 	icon = 'icons/blue_brig/obj/clothing/hats.dmi'
 	icon_state = "swat"
 	item_state = "swat"
 	armor = list(melee = 45, bullet = 50, laser = 25,energy = 20, bomb = 35, bio = 0, rad = 0)
 	strip_delay = 80
+
+/obj/item/clothing/head/helmet/TrooperHelmet
+	name = "\improper Trooper Helmet"
+	desc = "Ўлем с маленькими вырезами дл&#255; глаз, в этих чертовых вырезах можно разгл&#255;деть смерть..."
+	worn_icon = 'icons/mob/uac/hats.dmi'
+	icon = 'icons/obj/clothing/uac/hats.dmi'
+	icon_state = "helmet"
+	item_state = "helmet_c"
+	flags = HEADBANGPROTECT
+	armor = list(melee = 40, bullet = 35, laser = 45,energy = 25, bomb = 40, bio = 5, rad = 0)
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE
+	strip_delay = 80
+	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 
 /obj/item/clothing/head/helmet/thunderdome
 	name = "\improper Thunderdome helmet"

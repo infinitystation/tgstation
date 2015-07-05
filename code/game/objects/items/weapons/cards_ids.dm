@@ -253,3 +253,10 @@ update_label("John Doe", "Clowny")
 /obj/item/weapon/card/id/prisoner/seven
 	name = "Prisoner #13-007"
 	registered_name = "Prisoner #13-007"
+
+/obj/item/weapon/card/id/uac
+	name = "identification card"
+	desc = "A card used to provide ID and determine access"
+	icon_state = "id"
+	item_state = "card-id"
+	assignment = "Paratrooper"
