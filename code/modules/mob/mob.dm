@@ -497,6 +497,8 @@ var/list/slot_equipment_priority = list( \
 
 		client.screen.Cut()
 
+		client.screen += client.void
+
 		if(!client)
 			log_game("[usr.key] AM failed due to disconnect.")
 			return
@@ -532,6 +534,8 @@ var/list/slot_equipment_priority = list( \
 		return
 
 	client.screen.Cut()
+
+	client.screen += client.void
 
 	if(!client)
 		log_game("[usr.key] AM failed due to disconnect.")
