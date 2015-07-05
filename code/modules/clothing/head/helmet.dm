@@ -125,7 +125,7 @@
 	worn_icon = 'icons/mob/uac/hats.dmi'
 	icon = 'icons/obj/clothing/uac/hats.dmi'
 	icon_state = "helmet"
-	flags = HEADBANGPROTECT
+	flags = HEADBANGPROTECT | BLOCKHAIR
 	armor = list(melee = 40, bullet = 35, laser = 45,energy = 25, bomb = 40, bio = 5, rad = 0)
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE
 	strip_delay = 80
