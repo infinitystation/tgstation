@@ -7,6 +7,7 @@
 	max_heat_protection_temperature = ARMOR_MAX_TEMP_PROTECT
 	strip_delay = 60
 	put_on_delay = 40
+	burn_state = -1 //Won't burn in fires
 
 /obj/item/clothing/suit/armor/vest
 	name = "armor"
@@ -15,6 +16,14 @@
 	item_state = "armor"
 	blood_overlay_type = "armor"
 	armor = list(melee = 25, bullet = 15, laser = 25, energy = 10, bomb = 25, bio = 0, rad = 0)
+
+/obj/item/clothing/suit/armor/tacticool
+	name = "Tactical Armor"
+	desc = "Ѕрон€ дл€ отр€дов специального назначени€, с виду как нова€... —топ, где опознавательные знаки?"
+	icon_state = "bulletproof"
+	item_state = "armor"
+	blood_overlay_type = "armor"
+	armor = list(melee = 45, bullet = 50, laser = 35, energy = 20, bomb = 35, bio = 0, rad = 0)
 
 /obj/item/clothing/suit/armor/hos
 	name = "armored greatcoat"
@@ -45,6 +54,7 @@
 	cold_protection = CHEST|GROIN|ARMS|HANDS
 	heat_protection = CHEST|GROIN|ARMS|HANDS
 	strip_delay = 70
+	burn_state = 0 //Burnable
 
 /obj/item/clothing/suit/armor/vest/warden/alt
 	name = "warden's armored jacket"
@@ -92,6 +102,15 @@
 	strip_delay = 70
 	put_on_delay = 50
 
+/obj/item/clothing/suit/armor/UACtrooperArmor
+	name = "Trooper Armor"
+	desc = "— виду тяжела€ брон€ с двумя поручнями по краям... —топ, она стальна€?"
+	worn_icon = 'icons/mob/uac/suit.dmi'
+	icon = 'icons/obj/clothing/uac/suit.dmi'
+	icon_state = "armor"
+	item_state = "armor_c"
+	armor = list(melee = 45, bullet = 50, laser = 35, energy = 20, bomb = 35, bio = 0, rad = 0)
+
 /obj/item/clothing/suit/armor/laserproof
 	name = "ablative armor vest"
 	desc = "A vest that excels in protecting the wearer against energy projectiles, as well as occasionally reflecting them."
@@ -112,7 +131,7 @@
 	desc = "An armored vest with a detective's badge on it."
 	icon_state = "detective-armor"
 	allowed = list(/obj/item/weapon/tank/internals/emergency_oxygen,/obj/item/weapon/reagent_containers/spray/pepper,/obj/item/device/flashlight,/obj/item/weapon/gun/energy,/obj/item/weapon/gun/projectile,/obj/item/ammo_box,/obj/item/ammo_casing,/obj/item/weapon/melee/baton,/obj/item/weapon/restraints/handcuffs,/obj/item/weapon/storage/fancy/cigarettes,/obj/item/weapon/lighter,/obj/item/device/detective_scanner,/obj/item/device/taperecorder)
-
+	burn_state = 0 //Burnable
 
 
 //Reactive armor

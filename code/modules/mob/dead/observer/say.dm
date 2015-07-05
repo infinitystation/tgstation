@@ -20,5 +20,7 @@
 	if(radio_freq)
 		var/atom/movable/virtualspeaker/V = speaker
 		speaker = V.source
-	src << "<a href=?src=\ref[src];follow=\ref[speaker]>(F)</a> [message]"
+	if(client.prefs.toggles & CHAT_GHOSTEARS && speaker in view(src))
+		message = "<b>(N)</b> [message]"
+	src << "<a href=?src=\ref[src];follow=\ref[speaker]>(F)</a>[message]"
 

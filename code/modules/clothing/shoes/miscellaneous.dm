@@ -15,6 +15,7 @@
 	permeability_coefficient = 0.05
 	flags = NOSLIP
 	origin_tech = "syndicate=3"
+	burn_state = -1 //Won't burn in fires
 
 /obj/item/clothing/shoes/sneakers/mime
 	name = "mime shoes"
@@ -28,6 +29,7 @@
 	item_state = "jackboots"
 	armor = list(melee = 25, bullet = 25, laser = 25, energy = 25, bomb = 50, bio = 10, rad = 0)
 	strip_delay = 70
+	burn_state = -1 //Won't burn in fires
 
 /obj/item/clothing/shoes/combat/swat //overpowered boots for death squads
 	name = "\improper SWAT boots"
@@ -35,6 +37,17 @@
 	permeability_coefficient = 0.01
 	flags = NOSLIP
 	armor = list(melee = 40, bullet = 30, laser = 25, energy = 25, bomb = 50, bio = 30, rad = 30)
+
+/obj/item/clothing/shoes/combat/UACtrooperBoots
+	name = "\improper Troopers boots"
+	desc = "High speed, no drag combat boots."
+	worn_icon = 'icons/mob/uac/shoes.dmi'
+	icon = 'icons/obj/clothing/uac/shoes.dmi'
+	icon_state = "boots"
+	item_state = "boots_c"
+	permeability_coefficient = 0.01
+	flags = NOSLIP
+	armor = list(melee = 40, bullet = 35, laser = 45,energy = 25, bomb = 40, bio = 5, rad = 0)
 
 /obj/item/clothing/shoes/sandal
 	desc = "A pair of rather plain, wooden sandals."
@@ -58,6 +71,7 @@
 	slowdown = SHOES_SLOWDOWN+1
 	strip_delay = 50
 	put_on_delay = 50
+	burn_state = -1 //Won't burn in fires
 
 /obj/item/clothing/shoes/clown_shoes
 	desc = "The prankster's standard-issue clowning shoes. Damn, they're huge!"
@@ -82,6 +96,7 @@
 	item_color = "hosred"
 	strip_delay = 50
 	put_on_delay = 50
+	burn_state = -1 //Won't burn in fires
 
 /obj/item/clothing/shoes/winterboots
 	name = "winter boots"

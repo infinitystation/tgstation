@@ -9,17 +9,25 @@
 	var/cistern = 0			//if the cistern bit is open
 	var/w_items = 0			//the combined w_class of all the items in the cistern
 	var/shit = 0			//we have shit inside?
+	var/washing = 0
 	var/mob/living/swirlie = null	//the mob being given a swirlie
 
 /obj/structure/toilet/verb/wash_off()
 	set name = "Wash Off"
 	set category = "Object"
 	set src in oview(1)
-	src.shit = 0
-	src.w_items = 0
-	qdel(src.contents)
-	usr << "Вы смыли содержимое унитаза"
-	return
+	if(!src.washing)
+		src.washing = 1
+		src.shit = 0
+		usr << "Вы смыли содержимое унитаза"
+		playsound(loc, 'sound/effects/zvuk_unitaza.ogg', 50, 1)
+		sleep(40)
+		src.washing = 0
+		return
+	else
+		usr << "Унитаз не готов дл&#255; этого"
+		return
+
 
 /obj/structure/toilet/New()
 	open = round(rand(0, 1))
@@ -60,7 +68,7 @@
 	if(istype(I, /obj/item/weapon/crowbar))
 		user << "<span class='notice'>You start to [cistern ? "replace the lid on the cistern" : "lift the lid off the cistern"]...</span>"
 		playsound(loc, 'sound/effects/stonedoor_openclose.ogg', 50, 1)
-		if(do_after(user, 30))
+		if(do_after(user, 30, target = src))
 			user.visible_message("[user] [cistern ? "replaces the lid on the cistern" : "lifts the lid off the cistern"]!", "<span class='notice'>You [cistern ? "replace the lid on the cistern" : "lift the lid off the cistern"]!</span>", "<span class='italics'>You hear grinding porcelain.</span>")
 			cistern = !cistern
 			update_icon()
@@ -81,7 +89,7 @@
 					if(open)
 						GM.visible_message("<span class='danger'>[user] starts to give [GM] a swirlie!</span>", "<span class='userdanger'>[user] starts to give [GM] a swirlie...</span>")
 						swirlie = GM
-						if(do_after(user, 30, 5, 0))
+						if(do_after(user, 30, 5, 0, target = src))
 							GM.visible_message("<span class='danger'>[user] gives [GM] a swirlie!</span>", "<span class='userdanger'>[user] gives [GM] a swirlie!</span>", "<span class='italics'>You hear a toilet flushing.</span>")
 							if(iscarbon(GM))
 								var/mob/living/carbon/C = GM
@@ -182,7 +190,7 @@
 		user << "<span class='notice'>The water temperature seems to be [watertemp].</span>"
 	if(istype(I, /obj/item/weapon/wrench))
 		user << "<span class='notice'>You begin to adjust the temperature valve with \the [I]...</span>"
-		if(do_after(user, 50))
+		if(do_after(user, 50, target = src))
 			switch(watertemp)
 				if("normal")
 					watertemp = "freezing"
@@ -239,6 +247,7 @@
 //Yes, showers are super powerful as far as washing goes.
 /obj/machinery/shower/proc/wash(atom/movable/O)
 	if(!on) return
+
 	if(ismob(O))
 		mobpresent += 1
 		check_heat(O)
@@ -294,9 +303,13 @@
 				if(H.shoes && washshoes)
 					if(H.shoes.clean_blood())
 						H.update_inv_shoes(0)
-				if(H.wear_mask && washmask)
-					if(H.wear_mask.clean_blood())
-						H.update_inv_wear_mask(0)
+				if(H.wear_mask)
+					if(washmask)
+						if(H.wear_mask.clean_blood())
+							H.update_inv_wear_mask(0)
+				else
+					H.lip_style = null
+					H.update_body()
 				if(H.glasses && washglasses)
 					if(H.glasses.clean_blood())
 						H.update_inv_glasses(0)
@@ -313,13 +326,19 @@
 		else
 			O.clean_blood()
 
+	else
+		O.clean_blood()
+
+		if(istype(O,/obj/item))
+			var/obj/item/Item = O
+			Item.extinguish()
+
 	if(isturf(loc))
 		var/turf/tile = loc
 		loc.clean_blood()
 		for(var/obj/effect/E in tile)
 			if(is_cleanable(E))
 				qdel(E)
-
 
 /obj/machinery/shower/process()
 	if(!on || !mobpresent) return

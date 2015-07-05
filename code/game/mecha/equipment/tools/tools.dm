@@ -5,11 +5,11 @@
 	equip_cooldown = 15
 	energy_drain = 10
 	var/dam_force = 20
-	var/obj/mecha/working/ripley/cargo_holder
+	var/obj/mecha/cargo_holder
 
-/obj/item/mecha_parts/mecha_equipment/tool/hydraulic_clamp/can_attach(obj/mecha/working/ripley/M as obj)
+/obj/item/mecha_parts/mecha_equipment/tool/hydraulic_clamp/can_attach(obj/mecha/M as obj)
 	if(..())
-		if(istype(M))
+		if(istype(M, /obj/mecha/working/ripley) || istype(M, /obj/mecha/spacepod/mining))
 			return 1
 	return 0
 
@@ -144,7 +144,7 @@
 
 /obj/item/mecha_parts/mecha_equipment/tool/drill/can_attach(obj/mecha/M as obj)
 	if(..())
-		if(istype(M, /obj/mecha/working) || istype(M, /obj/mecha/combat))
+		if(istype(M, /obj/mecha/working) || istype(M, /obj/mecha/combat) || istype(M, /obj/mecha/spacepod))
 			return 1
 	return 0
 
@@ -174,7 +174,7 @@
 
 /obj/item/mecha_parts/mecha_equipment/tool/drill/diamonddrill/can_attach(obj/mecha/M as obj)
 	if(..())
-		if(istype(M, /obj/mecha/working) || istype(M, /obj/mecha/combat))
+		if(istype(M, /obj/mecha/working) || istype(M, /obj/mecha/combat) || istype(M, /obj/mecha/spacepod))
 			return 1
 	return 0
 
