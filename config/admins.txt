@@ -83,6 +83,7 @@ cookingboy3 = Game Master
 limeliz = Game Master
 steelpoint = Game Master
 phil235 = Game Master
+CorruptComputer = Game Master
 xxnoob = Game Master
 tkdrg = Game Master
 thunder12345 = Game Master
