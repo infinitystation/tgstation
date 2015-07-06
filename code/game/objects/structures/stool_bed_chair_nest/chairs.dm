@@ -105,18 +105,6 @@
 	burntime = 30
 	var/image/armrest = null
 
-/obj/structure/stool/bed/chair/shuttle_black
-	name = "shuttle chair"
-	desc = "It looks comfy."
-	icon = 'icons/obj/chairs2.dmi'
-	icon_state = "shblack"
-
-/obj/structure/stool/bed/chair/shuttle_blue
-	name = "shuttle chair"
-	desc = "It looks comfy."
-	icon = 'icons/obj/chairs2.dmi'
-	icon_state = "shblue"
-
 /obj/structure/stool/bed/chair/comfy/New()
 	armrest = image("icons/obj/objects.dmi", "comfychair_armrest")
 	armrest.layer = MOB_LAYER + 0.1
@@ -129,6 +117,43 @@
 	else
 		overlays -= armrest
 
+/obj/structure/stool/bed/chair/shuttle_black
+	name = "shuttle chair"
+	desc = "It looks comfy."
+	icon = 'icons/obj/chairs2.dmi'
+	icon_state = "shblack"
+	var/image/armrest = null
+
+/obj/structure/stool/bed/chair/shuttle_black/New()
+	armrest = image("icons/obj/chairs2.dmi", "shblack_arm")
+	armrest.layer = MOB_LAYER + 0.1
+
+	return ..()
+
+/obj/structure/stool/bed/chair/shuttle_black/post_buckle_mob(mob/living/M)
+	if(buckled_mob)
+		overlays += armrest
+	else
+		overlays -= armrest
+
+/obj/structure/stool/bed/chair/shuttle_blue
+	name = "shuttle chair"
+	desc = "It looks comfy."
+	icon = 'icons/obj/chairs2.dmi'
+	icon_state = "shblue"
+	var/image/armrest = null
+
+/obj/structure/stool/bed/chair/shuttle_blue/New()
+	armrest = image("icons/obj/chairs2.dmi", "shblue_arm")
+	armrest.layer = MOB_LAYER + 0.1
+
+	return ..()
+
+/obj/structure/stool/bed/chair/shuttle_blue/post_buckle_mob(mob/living/M)
+	if(buckled_mob)
+		overlays += armrest
+	else
+		overlays -= armrest
 
 /obj/structure/stool/bed/chair/comfy/brown
 	color = rgb(255,113,0)
