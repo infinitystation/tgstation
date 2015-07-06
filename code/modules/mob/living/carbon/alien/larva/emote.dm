@@ -86,7 +86,7 @@
 			message = "<span class='name'>[src]</span> sways around dizzily."
 			m_type = 1
 		if ("tail")
-			message = "<span class='name'>[src]</span> waves its tail."
+			message = "<span class='name'>[src]</span> машет своим хвостом."
 			m_type = 1
 		if ("twitch")
 			message = "<span class='name'>[src]</span> twitches violently."

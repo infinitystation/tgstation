@@ -330,12 +330,12 @@
 
 		if("wag")
 			if(dna && dna.species && (("tail_lizard" in dna.species.mutant_bodyparts) || ("tail_human" in dna.species.mutant_bodyparts)))
-				message = "<B>[src]</B> wags \his tail."
+				message = "<B>[src]</B> машет своим хвостом."
 				startTailWag()
 
 		if("stopwag")
 			if(dna && dna.species && (("waggingtail_lizard" in dna.species.mutant_bodyparts) || ("waggingtail_human" in dna.species.mutant_bodyparts)))
-				message = "<B>[src]</B> stops wagging \his tail."
+				message = "<B>[src]</B> перестает махать своим хвостом."
 				endTailWag()
 
 		if ("help") //This can stay at the bottom.
