@@ -44,7 +44,6 @@
 	worn_icon = 'icons/mob/uac/shoes.dmi'
 	icon = 'icons/obj/clothing/uac/shoes.dmi'
 	icon_state = "boots"
-	item_state = "boots_c"
 	permeability_coefficient = 0.01
 	flags = NOSLIP
 	armor = list(melee = 40, bullet = 35, laser = 45,energy = 25, bomb = 40, bio = 5, rad = 0)
