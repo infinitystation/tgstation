@@ -213,7 +213,14 @@ obj/item/ammo_box/magazine/tommygunm45
 	..()
 	icon_state = "a762-[round(ammo_count(),10)]"
 
-
+/obj/item/ammo_box/magazine/a646
+	name = "box magazine (6.46mm)"
+	icon_state = "mg88"
+	icon = 'icons/obj/uac_ammo.dmi'
+	origin_tech = "combat=2"
+	ammo_type = /obj/item/ammo_casing/a646
+	caliber = "a646"
+	max_ammo = 50
 
 /obj/item/ammo_box/magazine/m12g
 	name = "shotgun magazine (12g slugs)"

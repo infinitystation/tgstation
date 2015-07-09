@@ -253,7 +253,7 @@
 
 /obj/item/weapon/gun/projectile/automatic/ar
 	name = "ARG"
-	desc = "A robust assault rile used by Nanotrasen fighting forces."
+	desc = "A robust assault rifle used by Nanotrasen fighting forces."
 	icon_state = "arg"
 	item_state = "arg"
 	slot_flags = 0
@@ -262,4 +262,20 @@
 	fire_sound = 'sound/weapons/Gunshot_smg.ogg'
 	can_suppress = 0
 	burst_size = 3
+	fire_delay = 1
+
+/obj/item/weapon/gun/projectile/automatic/mg88
+	name = "MG88 'Enforcer'"
+	desc = "A robust assault rifle used by United Aerospace Corporation."
+	icon_state = "mg88"
+	item_state = "mg88"
+	icon = 'icons/obj/guns/uac_gun.dmi'
+	lefthand_file = 'icons/mob/uac/uac_lefthand.dmi'
+	righthand_file = 'icons/mob/uac/uac_righthand.dmi'
+	origin_tech = "combat=5;materials=3"
+	mag_type = /obj/item/ammo_box/magazine/a646
+	fire_sound = 'sound/weapons/Gunshot_smg.ogg'
+	slot_flags = 0
+	can_suppress = 0
+	burst_size = 4
 	fire_delay = 1

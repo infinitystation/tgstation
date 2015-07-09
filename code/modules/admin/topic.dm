@@ -1117,7 +1117,7 @@
 				if("Cancel")
 					return
 				if("Remove")
-					var/DBQuery/query_watchdel = dbcon.NewQuery("DELETE FROM [format_table_name("watch")] WHERE ckey = '[sql_ckey]'")
+					var/DBQuery/query_watchdel = dbcon.NewQuery("DELETE FROM watch WHERE ckey = '[sql_ckey]'")
 					if(!query_watchdel.Execute())
 						var/err = query_watchdel.ErrorMsg()
 						log_game("SQL ERROR during removing watch entry. Error : \[[err]\]\n")
@@ -1125,7 +1125,7 @@
 					log_admin("[key_name(usr)] has removed [key_name_admin(M)] from the watchlist")
 					message_admins("[key_name_admin(usr)] has removed [key_name_admin(M)] from the watchlist", 1)
 				if("Edit reason")
-					var/DBQuery/query_reason = dbcon.NewQuery("SELECT ckey, reason FROM [format_table_name("watch")] WHERE (ckey = '[sql_ckey]')")
+					var/DBQuery/query_reason = dbcon.NewQuery("SELECT ckey, reason FROM watch WHERE (ckey = '[sql_ckey]')")
 					query_reason.Execute()
 					if(query_reason.NextRow())
 						var/watch_reason = query_reason.item[3]
@@ -1133,7 +1133,7 @@
 						new_reason = sanitizeSQL(new_reason)
 						if(!new_reason)
 							return
-						var/DBQuery/update_query = dbcon.NewQuery("UPDATE [format_table_name("watch")] SET reason = '[new_reason]' WHERE (ckey = '[sql_ckey]')")
+						var/DBQuery/update_query = dbcon.NewQuery("UPDATE watch SET reason = '[new_reason]' WHERE (ckey = '[sql_ckey]')")
 						if(!update_query.Execute())
 							var/err = update_query.ErrorMsg()
 							log_game("SQL ERROR during edit watch entry reason. Error : \[[err]\]\n")
@@ -1145,7 +1145,7 @@
 			if(!reason)
 				return
 			reason = sanitizeSQL(reason)
-			var/DBQuery/query_watchadd = dbcon.NewQuery("INSERT INTO [format_table_name("watch")] (ckey, reason) VALUES ('[sql_ckey]', '[reason]')")
+			var/DBQuery/query_watchadd = dbcon.NewQuery("INSERT INTO watch (ckey, reason) VALUES ('[sql_ckey]', '[reason]')")
 			if(!query_watchadd.Execute())
 				var/err = query_watchadd.ErrorMsg()
 				log_game("SQL ERROR during adding new watch entry. Error : \[[err]\]\n")
