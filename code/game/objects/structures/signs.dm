@@ -149,3 +149,13 @@
 	name = "escape arm"
 	desc = "A direction sign, pointing out which way the escape shuttle dock is."
 	icon_state = "direction_evac"
+
+/obj/structure/sign/uac
+	name = "\improper UAC emblem"
+	desc = "A blue planet between three strange symbols..."
+	icon_state = "uac"
+
+/obj/structure/sign/terran
+	name = "\improper Terran emblem"
+	desc = "LOYALTY UNTIL DEATH!"
+	icon_state = "terran"
