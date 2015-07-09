@@ -24,6 +24,7 @@
 		<a href='?src=\ref[src];makeAntag=13'>Make Centcom Response Team (Requires Ghosts)</a><br>
 		<a href='?src=\ref[src];makeAntag=14'>Make Abductor Team (Requires Ghosts)</a><br>
 		<a href='?src=\ref[src];makeAntag=15'>Make Revenant (Requires Ghost)</a><br>
+		<a href='?src=\ref[src];makeAntag=19'>Make Battleship Team (Requires Ghost)</a><br>
 		"}
 
 	var/datum/browser/popup = new(usr, "oneclickantag", "Quick-Create Antagonist", 400, 400)
@@ -399,7 +400,7 @@
 	if(candidates.len >= 2)
 		for(var/needs_assigned=2,needs_assigned>0,needs_assigned--)
 			H = pick(candidates)
-			if(gang_colors_pool)
+			if(gang_colors_pool.len)
 				var/datum/gang/newgang = new()
 				ticker.mode.gangs += newgang
 				H.mind.make_Gang(newgang)
@@ -422,7 +423,7 @@
 		var/mob/living/carbon/human/newmob = new (pick(emergencyresponseteamspawn))
 		chosen_candidate.client.prefs.copy_to(newmob)
 		ready_dna(newmob)
-		newmob.real_name = random_name(newmob.gender)
+		newmob.real_name = newmob.dna.species.random_name(newmob.gender,1)
 		newmob.key = chosen_candidate.key
 		newmob.mind.assigned_role = "Centcom Official"
 		equip_centcomofficial(newmob)
@@ -492,27 +493,28 @@
 			var/list/lastname = last_names
 			chosen_candidate.client.prefs.copy_to(ERTOperative)
 			ready_dna(ERTOperative)
+			var/ertname = pick(lastname)
 			switch(numagents)
 				if(1)
-					ERTOperative.real_name = "Commander [pick(lastname)]"
+					ERTOperative.real_name = "Commander [ertname]"
 					equip_emergencyresponsesquad(ERTOperative, "commander",redalert)
 				if(2)
-					ERTOperative.real_name = "Security Officer [pick(lastname)]"
+					ERTOperative.real_name = "Security Officer [ertname]"
 					equip_emergencyresponsesquad(ERTOperative, "sec",redalert)
 				if(3)
-					ERTOperative.real_name = "Medical Officer [pick(lastname)]"
+					ERTOperative.real_name = "Medical Officer [ertname]"
 					equip_emergencyresponsesquad(ERTOperative, "med",redalert)
 				if(4)
-					ERTOperative.real_name = "Engineer [pick(lastname)]"
+					ERTOperative.real_name = "Engineer [ertname]"
 					equip_emergencyresponsesquad(ERTOperative, "eng",redalert)
 				if(5)
-					ERTOperative.real_name = "Security Officer [pick(lastname)]"
+					ERTOperative.real_name = "Security Officer [ertname]"
 					equip_emergencyresponsesquad(ERTOperative, "sec",redalert)
 				if(6)
-					ERTOperative.real_name = "Medical Officer [pick(lastname)]"
+					ERTOperative.real_name = "Medical Officer [ertname]"
 					equip_emergencyresponsesquad(ERTOperative, "med",redalert)
 				if(7)
-					ERTOperative.real_name = "Engineer [pick(lastname)]"
+					ERTOperative.real_name = "Engineer [ertname]"
 					equip_emergencyresponsesquad(ERTOperative, "eng",redalert)
 			ERTOperative.key = chosen_candidate.key
 			ERTOperative.mind.assigned_role = "ERT"
@@ -590,9 +592,9 @@
 		temp.abductors |= list(agent_mind,scientist_mind)
 		temp.make_abductor_team(number,preset_scientist=scientist_mind,preset_agent=agent_mind)
 		temp.post_setup_team(number)
-		
+
 		ticker.mode.abductor_teams++
-		
+
 		if(ticker.mode.config_tag != "abduction")
 			ticker.mode.abductors |= temp.abductors
 
@@ -694,3 +696,41 @@
 	new_character.key = G_found.key
 
 	return new_character
+
+/datum/admins/proc/makeBattleshipTeam()
+
+	var/datum/game_mode/nuclear/temp = new
+	var/list/mob/dead/observer/candidates = getCandidates("Ну что, головорез...Пришло времЯ обновить кровь на твоем скафандре.", "Оперативник", temp)
+	var/list/mob/dead/observer/chosen = list()
+	var/mob/dead/observer/theghost = null
+
+	if(candidates.len)
+		var/numagents = 5
+		var/agentcount = 0
+
+		for(var/i = 0, i<numagents,i++)
+			shuffle(candidates) //More shuffles means more randoms
+			for(var/mob/j in candidates)
+				if(!j || !j.client)
+					candidates.Remove(j)
+					continue
+
+				theghost = j
+				candidates.Remove(theghost)
+				chosen += theghost
+				agentcount++
+				break
+		//Making sure we have atleast 3 Nuke agents, because less than that is kinda bad
+		if(agentcount < 3)
+			return 0
+
+		//Let's find the spawn locations
+		var/list/turf/synd_spawn = list()
+		for(var/obj/effect/landmark/A in landmarks_list)
+			if(A.name == "Death-Spawn")
+				synd_spawn += get_turf(A)
+				continue
+
+		return 1
+	else
+		return 0
