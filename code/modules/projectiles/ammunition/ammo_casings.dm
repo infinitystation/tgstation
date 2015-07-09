@@ -183,6 +183,9 @@
 	caliber = "a556"
 	projectile_type = /obj/item/projectile/bullet/heavybullet
 
+/obj/item/ammo_casing/caseless
+	desc = "A caseless bullet casing."
+
 /obj/item/ammo_casing/a646
 	desc = "A 6.46mm bullet casing."
 	icon_state = "s-casing"

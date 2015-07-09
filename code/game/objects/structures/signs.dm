@@ -153,9 +153,11 @@
 /obj/structure/sign/uac
 	name = "\improper UAC emblem"
 	desc = "A blue planet between three strange symbols..."
+	icon = 'icons/obj/infinity_decals.dmi'
 	icon_state = "uac"
 
 /obj/structure/sign/terran
 	name = "\improper Terran emblem"
 	desc = "LOYALTY UNTIL DEATH!"
+	icon = 'icons/obj/infinity_decals.dmi'
 	icon_state = "terran"
