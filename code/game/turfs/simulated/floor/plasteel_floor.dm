@@ -84,6 +84,8 @@
 /turf/simulated/floor/plasteel/darkwarning/corner
 	icon_state = "warndarkcorners"
 
+/turf/simulated/floor/plasteel/darkvault
+	icon_state = "vault"
 
 /turf/simulated/floor/plasteel/yellowsiding
 	icon_state = "yellowsiding"

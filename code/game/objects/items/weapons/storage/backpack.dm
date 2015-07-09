@@ -314,9 +314,22 @@
 	item_state = "duffle-syndiemed"
 	slowdown = 0
 
+/obj/item/weapon/storage/backpack/dufflebag/syndiemed/loaded
+	name = "medical dufflebag"
+	desc = "A large dufflebag, holding extra tactical medical supplies."
+
+/obj/item/weapon/storage/backpack/dufflebag/syndiemed/loaded/New()
+	..()
+	new /obj/item/weapon/storage/firstaid/brute(src)
+	new /obj/item/weapon/storage/firstaid/toxin(src)
+	new /obj/item/weapon/storage/firstaid/fire(src)
+	new /obj/item/weapon/storage/firstaid/regular(src)
+	new /obj/item/weapon/storage/firstaid/regular(src)
+	new /obj/item/weapon/reagent_containers/hypospray/combat/nanites(src)
+
 /obj/item/weapon/storage/backpack/dufflebag/syndieammo
 	name = "ammunition dufflebag"
-	desc = "A large dufflebag for holding extra weapons ammunition and supplies."
+	desc = "A large dufflebag holding extra weapons ammunition and supplies."
 	icon_state = "duffle-syndieammo"
 	item_state = "duffle-syndieammo"
 	slowdown = 0

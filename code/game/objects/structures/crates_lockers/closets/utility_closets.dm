@@ -168,10 +168,10 @@
 /*
  * Ammunition
  */
-/obj/structure/closet/ammunitionlocker
+/obj/structure/closet/ammunitionlocker/beang
 	name = "ammunition locker"
 
-/obj/structure/closet/ammunitionlocker/New()
+/obj/structure/closet/ammunitionlocker/beang/New()
 	..()
 	new /obj/item/ammo_casing/shotgun/beanbag(src)
 	new /obj/item/ammo_casing/shotgun/beanbag(src)
