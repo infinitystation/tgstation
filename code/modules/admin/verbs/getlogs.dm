@@ -77,6 +77,7 @@
 
 	message_admins("[key_name_admin(src)] accessed file: [path]")
 	usr << ftp(file(path))
+	src << "Attempting to send file, this may take a fair few minutes if the file is very large."
 	return
 
 
