@@ -287,7 +287,7 @@
 			lastpuke ++
 			if(lastpuke >= 25) // about 25 second delay I guess
 				Stun(5)
-				if(gender =- FEMALE)
+				if(gender == FEMALE)
 					visible_message("<span class='danger'>[src] вырвала на пол!</span>", \
 						"<span class='userdanger'>[src] вырвала на пол!</span>")
 				else
