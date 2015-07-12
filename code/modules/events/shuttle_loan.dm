@@ -15,7 +15,7 @@
 	endWhen = 500
 	var/dispatch_type = 4
 	var/bonus_points = 100
-	var/thanks_msg = "В благодарность начислены кое-какие Карго-баллы (шаттл вернётсЯ через 5 минут)."
+	var/thanks_msg = "В благодарность начислены кое-какие Карго-баллы (шаттл вернётся через 5 минут)."
 	var/dispatched = 0
 	announceWhen	= 1
 
@@ -26,17 +26,17 @@
 	SSshuttle.shuttle_loan = src
 	switch(dispatch_type)
 		if(HIJACK_SYNDIE)
-			priority_announce("Грузовой отдел: Синдикат пытаетсЯ проникнуть на станцию. Если вы позволите им взломать ваш шаттл, вы добавите нам головной боли.","Контрразведка Центрального КомандованиЯ")
+			priority_announce("Грузовой отдел: Синдикат пытается проникнуть на станцию. Если вы позволите им взломать ваш шаттл, вы добавите нам головной боли.","Контрразведка Центрального Командования")
 		if(RUSKY_PARTY)
 			priority_announce("Грузовой отдел: Группа злых русских хочет устроить вечеринку, могли бы вы послать им ваш Карго Шаттл и сделать так, чтобы они исчезли?","ЦК Программа Помощи Русским")
 		if(SPIDER_GIFT)
 			priority_announce("Грузовой отдел: Клан Паука послал нам загадочный подарок, можем ли мы переслать его вам, чтобы узнать, что там внутри?","Дипломатический Корпус ЦК")
 		if(DEPARTMENT_RESUPPLY)
-			priority_announce("Грузовой отдел: КажетсЯ, мы заказали двойную норму пакетов снабжениЯ департаментов в этом месЯце. Мы можем отправить их вам?","Департамент СнабжениЯ ЦК")
-			thanks_msg = "Шаттл вернётсЯ через 5 минут."
+			priority_announce("Грузовой отдел: Кажется, мы заказали двойную норму пакетов снабжения департаментов в этом месяце. Мы можем отправить их вам?","Департамент Снабжения ЦК")
+			thanks_msg = "Шаттл вернётся через 5 минут."
 			bonus_points = 0
 		if(ANTIDOTE_NEEDED)
-			priority_announce("Грузовой отдел: Ваша станци&#255; была выбрана дл&#255; эпидемиологического эксперимента. Пришлите нам ваш грузовой шаттл, чтобы прин&#255;ть ваши образцы для исследовани&#255;.", "Отдел Исследовательских Инициатив ЦК")
+			priority_announce("Грузовой отдел: Ваша станция была выбрана для эпидемиологического эксперимента. Пришлите нам ваш грузовой шаттл, чтобы принять ваши образцы для исследования.", "Отдел Исследовательских Инициатив ЦК")
 
 /datum/round_event/shuttle_loan/proc/loan_shuttle()
 	priority_announce(thanks_msg, "Грузовой шаттл реквизирован ЦК.")
@@ -56,15 +56,15 @@
 
 	switch(dispatch_type)
 		if(HIJACK_SYNDIE)
-			SSshuttle.centcom_message += "<font color=blue>ПриближаетсЯ команда угонщиков Синдиката.</font>"
+			SSshuttle.centcom_message += "<font color=blue>Приближается команда угонщиков Синдиката.</font>"
 		if(RUSKY_PARTY)
-			SSshuttle.centcom_message += "<font color=blue>ПриближаютсЯ празднующие русские.</font>"
+			SSshuttle.centcom_message += "<font color=blue>Приближаются празднующие русские.</font>"
 		if(SPIDER_GIFT)
-			SSshuttle.centcom_message += "<font color=blue>ПриближаетсЯ подарок Клана Паука.</font>"
+			SSshuttle.centcom_message += "<font color=blue>Приближается подарок Клана Паука.</font>"
 		if(DEPARTMENT_RESUPPLY)
-			SSshuttle.centcom_message += "<font color=blue>ПриближаетсЯ снабжение Департамента.</font>"
+			SSshuttle.centcom_message += "<font color=blue>Приближается снабжение Департамента.</font>"
 		if(ANTIDOTE_NEEDED)
-			SSshuttle.centcom_message += "<font color=blue>ПриближаютсЯ образцы вирусов</font>"
+			SSshuttle.centcom_message += "<font color=blue>Приближаются образцы вирусов</font>"
 
 /datum/round_event/shuttle_loan/tick()
 	if(dispatched)

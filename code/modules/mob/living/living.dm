@@ -708,7 +708,7 @@ Sorry Giacom. Please don't be mad :(
 					"<span class='userdanger'>[src] пытается убрать [who]'s [what.name].</span>")
 	what.add_fingerprint(src)
 	if(do_mob(src, who, what.strip_delay))
-		if(what && Adjacent(who))
+		if(what && what == who.get_item_by_slot(where) && Adjacent(who))
 			who.unEquip(what)
 			add_logs(src, who, "stripped", addition="of [what]")
 
@@ -719,11 +719,14 @@ Sorry Giacom. Please don't be mad :(
 	if(what && (what.flags & NODROP))
 		src << "<span class='notice'>¬ы не можете одеть \the [what.name] на [who], это застряло в вашей руке!</span>"
 		return
-	if(what && what.mob_can_equip(who, where, 1))
-		visible_message("<span class='notice'>[src] пытается одеть [what] на [who].</span>")
+	if(what)
+		if(!what.mob_can_equip(who, where, 1))
+			src << "<span class='warning'>[what.name] не может поместитс&#255; это место!</span>"
+			return
+		visible_message("<span class='notice'>[src] пытаетс&#255; одеть [what] на [who].</span>")
 		if(do_mob(src, who, what.put_on_delay))
 			if(what && Adjacent(who))
-				src.unEquip(what)
+				unEquip(what)
 				who.equip_to_slot_if_possible(what, where, 0, 1)
 				add_logs(src, who, "equipped", what)
 

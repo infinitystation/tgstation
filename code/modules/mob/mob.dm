@@ -1011,10 +1011,13 @@ var/list/slot_equipment_priority = list( \
 	set src in usr
 	if(usr != src)
 		usr << "No."
-	var/msg = input(usr,"Set the flavor text in your 'examine' verb. Can also be used for OOC notes about your character.","Flavor Text",flavor_text) as message|null
+	var/temp = flavor_text
+	temp = replacetext(temp, "&#255;", "ß")
+	temp = html_decode(temp)
+	var/msg = stripped_multiline_input(usr,"Set the flavor text in your 'examine' verb. Can also be used for OOC notes about your character.","Flavor Text",temp) as message|null
 
-	if(msg != null)
-		msg = copytext(sanitize(msg), 1, MAX_MESSAGE_LEN)
+	if(msg)
+		msg = copytext(sanitize_a0(msg), 1, MAX_MESSAGE_LEN)
 		flavor_text = msg
 
 /mob/proc/warn_flavor_changed()
