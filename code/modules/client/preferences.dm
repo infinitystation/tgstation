@@ -703,7 +703,7 @@ var/global/list/special_roles = list( //keep synced with the defines BE_* in set
 					if("s_tone")
 						skin_tone = random_skin_tone()
 					if("bag")
-						backbag = rand(1,3)
+						backbag = rand(1,2)
 					if("all")
 						random_character()
 
@@ -1113,8 +1113,6 @@ var/global/list/special_roles = list( //keep synced with the defines BE_* in set
 
 		character.features = features
 
-		if(backbag > 3 || backbag < 1)
-			backbag = 1 //Same as above
 		character.backbag = backbag
 
 
