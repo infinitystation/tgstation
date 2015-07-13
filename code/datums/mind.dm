@@ -840,7 +840,7 @@
 				log_admin("[key_name(usr)] has de-gang'ed [current].")
 
 			if("equip")
-				switch(ticker.mode.equip_gang(current))
+				switch(ticker.mode.equip_gang(current,gang_datum))
 					if(1)
 						usr << "<span class='warning'>Unable to equip territory spraycan!</span>"
 					if(2)
@@ -1401,7 +1401,7 @@
 	G.add_gang_hud(src)
 	ticker.mode.forge_gang_objectives(src)
 	ticker.mode.greet_gang(src)
-	ticker.mode.equip_gang(current)
+	ticker.mode.equip_gang(current,G)
 
 /datum/mind/proc/make_Abductor()
 	var/role = alert("Abductor Role ?","Role","Agent","Scientist")
