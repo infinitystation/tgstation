@@ -75,7 +75,7 @@ Shaft Miner
 	H.equip_to_slot_or_del(new /obj/item/clothing/under/rank/miner(H), slot_w_uniform)
 	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/sneakers/black(H), slot_shoes)
 
-	if(H.backbag == 1)
+	if(H.backbag == 0)
 		H.equip_to_slot_or_del(new /obj/item/weapon/crowbar(H), slot_belt)
 		H.equip_to_slot_or_del(new /obj/item/weapon/storage/bag/ore(H), slot_l_store)
 		H.equip_to_slot_or_del(new /obj/item/weapon/mining_voucher(H), slot_l_hand)
@@ -108,7 +108,7 @@ Bartender
 
 /datum/job/bartender/equip_backpack(var/mob/living/carbon/human/H)
 	switch(H.backbag)
-		if(1) //No backpack or satchel
+		if(0) //No backpack or satchel
 
 			var/obj/item/weapon/storage/box/box = new default_storagebox(H)
 			new /obj/item/ammo_casing/shotgun/beanbag(box)
@@ -117,11 +117,11 @@ Bartender
 			new /obj/item/ammo_casing/shotgun/beanbag(box)
 			H.equip_to_slot_or_del(box, slot_r_hand)
 
-		if(2) // Backpack
+		if(1) // Backpack
 			var/obj/item/weapon/storage/backpack/BPK = new default_backpack(H)
 			new default_storagebox(BPK)
 			H.equip_to_slot_or_del(BPK, slot_back,1)
-		if(3) //Satchel
+		if(2) //Satchel
 			var/obj/item/weapon/storage/backpack/BPK = new default_satchel(H)
 			new default_storagebox(BPK)
 			H.equip_to_slot_or_del(BPK, slot_back,1)
@@ -130,7 +130,7 @@ Bartender
 	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/sneakers/black(H), slot_shoes)
 	H.equip_to_slot_or_del(new /obj/item/clothing/under/rank/bartender(H), slot_w_uniform)
 
-	if(H.backbag != 1)
+	if(H.backbag != 0)
 		H.equip_to_slot_or_del(new /obj/item/ammo_casing/shotgun/beanbag(H), slot_in_backpack)
 		H.equip_to_slot_or_del(new /obj/item/ammo_casing/shotgun/beanbag(H), slot_in_backpack)
 		H.equip_to_slot_or_del(new /obj/item/ammo_casing/shotgun/beanbag(H), slot_in_backpack)
