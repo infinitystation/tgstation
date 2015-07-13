@@ -703,7 +703,7 @@ var/global/list/special_roles = list( //keep synced with the defines BE_* in set
 					if("s_tone")
 						skin_tone = random_skin_tone()
 					if("bag")
-						backbag = rand(1,3)
+						backbag = rand(1,2)
 					if("all")
 						random_character()
 
@@ -1040,16 +1040,16 @@ var/global/list/special_roles = list( //keep synced with the defines BE_* in set
 
 					if("sec_notes")
 						sec_imp_notes = stripped_multiline_input(usr, "¬ведите важные заметки персонажа для —Ѕ", "Set Security Notes", copytext(sec_imp_notes, 1, MAX_MESSAGE_LEN))
-						sec_imp_notes = sanitize_u(sec_imp_notes)
+						sec_imp_notes = sanitize_u0(sec_imp_notes)
 						set_char_notes(user)
 
 					if("med_notes")
 						med_imp_notes = stripped_multiline_input(usr, "¬ведите важные заметки персонажа для медиков", "Set Medical Notes", copytext(med_imp_notes, 1, MAX_MESSAGE_LEN))
-						med_imp_notes = sanitize_u(med_imp_notes)
+						med_imp_notes = sanitize_u0(med_imp_notes)
 						set_char_notes(user)
 
 					if("flavor_text_more")
-						var/dat = sanitize_u(flavor_text)
+						var/dat = sanitize_u0(flavor_text)
 						var/datum/browser/flavor_more = new(usr, "flavor", "[real_name]", 500, 200)
 						flavor_more.set_content(dat)
 						flavor_more.open(1)
@@ -1113,12 +1113,10 @@ var/global/list/special_roles = list( //keep synced with the defines BE_* in set
 
 		character.features = features
 
-		if(backbag > 3 || backbag < 1)
-			backbag = 1 //Same as above
 		character.backbag = backbag
 
 
-		character.flavor_text = sanitize(flavor_text)
+		character.flavor_text = sanitize_a0(flavor_text)
 		character.sec_imp_notes = sec_imp_notes
 		character.med_imp_notes = med_imp_notes
 
@@ -1129,8 +1127,8 @@ var/global/list/special_roles = list( //keep synced with the defines BE_* in set
 	proc/set_char_notes(user)
 		var/dat = ""
 		dat += "<BR><a href='?_src_=prefs;preference=flavor_text'><b>Flavor Text:</b></a><BR>"
-		if(lentext(copytext(sanitize_u(flavor_text), 1, MAX_MESSAGE_LEN)) <= 160)
-			dat += "[copytext(sanitize_u(flavor_text), 1, MAX_MESSAGE_LEN)]<BR>"
+		if(lentext(copytext(sanitize_u0(flavor_text), 1, MAX_MESSAGE_LEN)) <= 160)
+			dat += "[copytext(sanitize_u0(flavor_text), 1, MAX_MESSAGE_LEN)]<BR>"
 		else
 			dat += "[copytext(sanitize_u(flavor_text), 1, 160)]... <a href='?_src_=prefs;preference=flavor_text_more'>More...</a><BR>"
 

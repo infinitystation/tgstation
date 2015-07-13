@@ -33,7 +33,7 @@ Captain
 	H.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses(H), slot_glasses)
 
 	//Equip ID box & telebaton
-	if(H.backbag == 1)
+	if(H.backbag == 0)
 		H.equip_to_slot_or_del(new /obj/item/weapon/storage/box/silver_ids(H), slot_l_hand)
 	else
 		H.equip_to_slot_or_del(new /obj/item/weapon/storage/box/silver_ids(H.back), slot_in_backpack)
@@ -90,7 +90,7 @@ Head of Personnel
 	H.equip_to_slot_or_del(new /obj/item/clothing/head/hopcap(H), slot_head)
 
 	//Equip ID box & telebaton
-	if(H.backbag == 1)
+	if(H.backbag ==0)
 		H.equip_to_slot_or_del(new /obj/item/weapon/storage/box/ids(H), slot_l_hand)
 	else
 		H.equip_to_slot_or_del(new /obj/item/weapon/storage/box/ids(H.back), slot_in_backpack)

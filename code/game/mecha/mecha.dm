@@ -74,9 +74,6 @@
 	var/melee_cooldown = 10
 	var/melee_can_hit = 1
 
-	var/list/cargo = new
-	var/cargo_capacity = 15
-
 
 /obj/mecha/New()
 	..()
@@ -328,7 +325,7 @@
 		return
 	visible_message("<span class='danger'>[M.name] has hit [src].</span>")
 	take_damage(M.force, damtype)
-	add_logs(M.occupant, src, "attacked", object=M, addition="(INTENT: [uppertext(M.occupant.a_intent)]) (DAMTYPE: [uppertext(M.damtype)])")
+	add_logs(M.occupant, src, "attacked", M, "(INTENT: [uppertext(M.occupant.a_intent)]) (DAMTYPE: [uppertext(M.damtype)])")
 	return
 
 /obj/mecha/proc/range_action(atom/target)
@@ -549,12 +546,12 @@
 			src.take_damage(damage)
 			src.check_for_internal_damage(list(MECHA_INT_TEMP_CONTROL,MECHA_INT_TANK_BREACH,MECHA_INT_CONTROL_LOST))
 			visible_message("<span class='danger'>[user] [user.attacktext] [src]!</span>")
-			add_logs(user, src, "attacked", admin=0)
+			add_logs(user, src, "attacked")
 		else
 			src.log_append_to_last("Armor saved.")
 			playsound(src.loc, 'sound/weapons/slash.ogg', 50, 1, -1)
 			visible_message("<span class='notice'>The [user] rebounds off [src.name]'s armor!</span>")
-			add_logs(user, src, "attacked", admin=0)
+			add_logs(user, src, "attacked")
 	return
 
 /obj/mecha/attack_tk()
@@ -1661,10 +1658,8 @@ var/year_integer = text2num(year) // = 2013???
 
 /obj/mecha/proc/dynusepower(amount)
 	if(get_charge())
-		if(cell.use(amount))
-			return 1
-		else
-			cell.charge = 0
+		cell.use(amount)
+		return 1
 	return 0
 
 /obj/mecha/proc/give_power(amount)
