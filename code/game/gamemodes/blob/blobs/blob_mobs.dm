@@ -36,6 +36,8 @@
 	attacktext = "hits"
 	attack_sound = 'sound/weapons/genhit1.ogg'
 	speak_emote = list("pulses")
+	see_in_dark = 8
+	see_invisible = SEE_INVISIBLE_MINIMUM
 	var/obj/effect/blob/factory/factory = null
 	var/list/human_overlays = list()
 	var/is_zombie = 0

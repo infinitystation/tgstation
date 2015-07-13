@@ -22,7 +22,6 @@
 	new /obj/item/clothing/mask/gas(src)
 	new /obj/item/device/multitool(src)
 	new /obj/item/device/flash/handheld(src)
-	new /obj/item/device/multitool/multimeter(src)
 	new /obj/item/clothing/glasses/meson/engine(src)
 
 /obj/structure/closet/secure_closet/engineering_electrical
@@ -44,8 +43,6 @@
 	new /obj/item/device/multitool(src)
 	new /obj/item/device/multitool(src)
 	new /obj/item/device/multitool(src)
-	new /obj/item/device/multitool/multimeter(src)
-	new /obj/item/device/multitool/multimeter(src)
 
 /obj/structure/closet/secure_closet/engineering_welding
 	name = "welding supplies locker"
@@ -81,7 +78,6 @@
 	name = "\proper atmospheric technician's locker"
 	req_access = list(access_atmospherics)
 	icon_state = "atmos"
-	icon_door = "atmos"
 
 /obj/structure/closet/secure_closet/atmospherics/New()
 	..()
@@ -93,3 +89,4 @@
 	new /obj/item/tapeproj/engineering(src)
 	new /obj/item/weapon/watertank/atmos(src)
 	new /obj/item/clothing/suit/fire/atmos(src)
+	new /obj/item/clothing/glasses/meson/engine/tray(src)

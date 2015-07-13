@@ -152,8 +152,9 @@
 						return A
 				else
 					var/turf/T = locate(source.x + x_offset, source.y + y_offset, source.z)
-					if(T.type == a_type)
-						return T
+					if(T)
+						if(T.type == a_type)
+							return T
 			return null
 		var/turf/T = locate(source.x + x_offset, source.y + y_offset, source.z)
 		return T.type == source.type ? T : null

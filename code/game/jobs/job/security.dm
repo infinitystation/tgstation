@@ -43,7 +43,7 @@ Head of Security
 	H.equip_to_slot_or_del(new /obj/item/clothing/head/HoS(H), slot_head)
 	H.equip_to_slot_or_del(new /obj/item/clothing/glasses/hud/security/sunglasses(H), slot_glasses)
 
-	if(H.backbag == 1)
+	if(H.backbag == 0)
 		H.equip_to_slot_or_del(new /obj/item/weapon/restraints/handcuffs(H), slot_l_store)
 	else
 		H.equip_to_slot_or_del(new /obj/item/weapon/restraints/handcuffs(H), slot_in_backpack)
@@ -87,7 +87,7 @@ Warden
 	H.equip_to_slot_or_del(new /obj/item/clothing/glasses/hud/security/sunglasses(H), slot_glasses)
 	H.equip_to_slot_or_del(new /obj/item/device/flash/handheld(H), slot_l_store)
 
-	if(H.backbag == 1)
+	if(H.backbag == 0)
 		H.equip_to_slot_or_del(new /obj/item/weapon/restraints/handcuffs(H), slot_l_hand)
 	else
 		H.equip_to_slot_or_del(new /obj/item/weapon/restraints/handcuffs(H), slot_in_backpack)
@@ -138,7 +138,7 @@ Detective
 	cig.light("")
 	H.equip_to_slot_or_del(cig, slot_wear_mask)
 
-	if(H.backbag == 1)//Why cant some of these things spawn in his office?
+	if(H.backbag == 0)//Why cant some of these things spawn in his office?
 		H.equip_to_slot_or_del(new /obj/item/weapon/storage/box/evidence(H), slot_l_hand)
 		H.equip_to_slot_or_del(new /obj/item/device/detective_scanner(H), slot_r_store)
 	else
@@ -183,7 +183,7 @@ Security Officer
 	H.equip_to_slot_or_del(new /obj/item/clothing/gloves/color/black(H), slot_gloves)
 	H.equip_to_slot_or_del(new /obj/item/device/flash/handheld(H), slot_l_store)
 
-	if(H.backbag == 1)
+	if(H.backbag == 0)
 		H.equip_to_slot_or_del(new /obj/item/weapon/restraints/handcuffs(H), slot_r_store)
 		H.equip_to_slot_or_del(new /obj/item/weapon/melee/baton/loaded(H), slot_l_hand)
 	else
