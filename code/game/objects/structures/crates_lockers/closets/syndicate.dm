@@ -3,6 +3,41 @@
 	desc = "Why is this here?"
 	icon_state = "syndicate"
 
+/obj/structure/closet/syndicate/terrorist
+	desc = "Why is this here?"
+
+/obj/structure/closet/syndicate/CounterTerrorists
+	desc = "Why is this here???"
+
+/obj/structure/closet/syndicate/CounterTerrorists/New()
+	..()
+	new /obj/item/weapon/gun/projectile/automatic/ar(src)
+	new /obj/item/weapon/gun/projectile/automatic/ar(src)
+	new /obj/item/weapon/gun/projectile/automatic/ar(src)
+	new /obj/item/weapon/gun/projectile/automatic/ar(src)
+	new /obj/item/weapon/gun/projectile/automatic/ar(src)
+	new /obj/item/ammo_box/magazine/m556(src)
+	new /obj/item/ammo_box/magazine/m556(src)
+	new /obj/item/ammo_box/magazine/m556(src)
+	new /obj/item/ammo_box/magazine/m556(src)
+	new /obj/item/ammo_box/magazine/m556(src)
+	new /obj/item/weapon/storage/box/teargas(src)
+
+
+/obj/structure/closet/syndicate/terrorist/New()
+	..()
+	new /obj/item/weapon/gun/projectile/automatic/m90(src)
+	new /obj/item/weapon/gun/projectile/automatic/m90(src)
+	new /obj/item/weapon/gun/projectile/automatic/m90(src)
+	new /obj/item/weapon/gun/projectile/automatic/m90(src)
+	new /obj/item/weapon/gun/projectile/automatic/m90(src)
+	new /obj/item/ammo_box/magazine/m556(src)
+	new /obj/item/ammo_box/magazine/m556(src)
+	new /obj/item/ammo_box/magazine/m556(src)
+	new /obj/item/ammo_box/magazine/m556(src)
+	new /obj/item/ammo_box/magazine/m556(src)
+	new /obj/item/weapon/storage/box/teargas(src)
+	return
 /obj/structure/closet/syndicate/personal
 	desc = "It's a personal storage unit for operative gear."
 

@@ -153,6 +153,20 @@
 	corpseidjob = "Operative"
 	corpseidaccess = "Syndicate"
 
+/obj/effect/landmark/corpse/uactrooper
+	name = "UAC trooper"
+	corpseuniform = /obj/item/clothing/under/pants/camo
+	corpsesuit = /obj/item/clothing/suit/armor/UACtrooperArmor
+	corpseshoes = /obj/item/clothing/shoes/combat/UACtrooperBoots
+	corpsegloves = /obj/item/clothing/gloves/combat
+	corpseradio = /obj/item/device/radio/headset
+	corpsemask = /obj/item/clothing/mask/gas/syndicate
+	corpsehelmet = /obj/item/clothing/head/helmet/TrooperHelmet
+	corpseid = 1
+	corpseidjob = "Bravo Squad"
+	corpseidaccess = "Syndicate"
+
+
 
 
 ///////////Civilians//////////////////////

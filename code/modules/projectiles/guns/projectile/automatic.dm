@@ -275,6 +275,7 @@
 	origin_tech = "combat=5;materials=3"
 	mag_type = /obj/item/ammo_box/magazine/a646
 	fire_sound = 'sound/weapons/Gunshot_smg.ogg'
+	pin = /obj/item/device/firing_pin
 	slot_flags = 0
 	can_suppress = 0
 	burst_size = 4
