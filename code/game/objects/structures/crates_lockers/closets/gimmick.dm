@@ -225,44 +225,28 @@
 	new /obj/item/ammo_box/magazine/m556(src)
 	new /obj/item/ammo_box/magazine/m556(src)
 	new /obj/item/ammo_box/magazine/m556(src)
-	new /obj/item/clothing/suit/armor/vest(src)
-	new /obj/item/clothing/suit/armor/vest(src)
-	new /obj/item/clothing/suit/armor/vest(src)
-	new /obj/item/clothing/suit/armor/vest(src)
-	new /obj/item/clothing/suit/armor/vest(src)
-	new /obj/item/clothing/shoes/combat/swat(src)
-	new /obj/item/clothing/shoes/combat/swat(src)
-	new /obj/item/clothing/shoes/combat/swat(src)
-	new /obj/item/clothing/shoes/combat/swat(src)
-	new /obj/item/clothing/shoes/combat/swat(src)
-	new /obj/item/clothing/under/syndicate(src)
-	new /obj/item/clothing/under/syndicate(src)
-	new /obj/item/clothing/under/syndicate(src)
-	new /obj/item/clothing/under/syndicate(src)
-	new /obj/item/clothing/under/syndicate(src)
-	new /obj/item/clothing/head/helmet/swat(src)
-	new /obj/item/clothing/head/helmet/swat(src)
-	new /obj/item/clothing/head/helmet/swat(src)
-	new /obj/item/clothing/head/helmet/swat(src)
-	new /obj/item/clothing/head/helmet/swat(src)
-	new /obj/item/device/radio/headset(src)
-	new /obj/item/device/radio/headset(src)
-	new /obj/item/device/radio/headset(src)
-	new /obj/item/device/radio/headset(src)
-	new /obj/item/device/radio/headset(src)
-
-/obj/structure/closet/gimmick/zombie
-	name = "For Light life"
-	desc = "Good luck."
-	icon_state = "syndicate"
-
-/obj/structure/closet/gimmick/zombie/New()
-	..()
-	new /obj/item/weapon/gun/energy/laser(src)
-	new /obj/item/clothing/under/syndicate/tacticool(src)
-	new /obj/item/clothing/suit/armor/vest(src)
-	new /obj/item/clothing/shoes/combat/swat(src)
-	new /obj/item/clothing/head/helmet/swat(src)
-	new /obj/item/device/radio/headset(src)
-	new /obj/item/weapon/card/id/syndicate(src)
-	new /obj/item/device/flashlight(src)
+	new /obj/item/clothing/suit/armor/vest
+	new /obj/item/clothing/suit/armor/vest
+	new /obj/item/clothing/suit/armor/vest
+	new /obj/item/clothing/suit/armor/vest
+	new /obj/item/clothing/suit/armor/vest
+	new /obj/item/clothing/shoes/combat/swat
+	new /obj/item/clothing/shoes/combat/swat
+	new /obj/item/clothing/shoes/combat/swat
+	new /obj/item/clothing/shoes/combat/swat
+	new /obj/item/clothing/shoes/combat/swat
+	new /obj/item/clothing/under/syndicate
+	new /obj/item/clothing/under/syndicate
+	new /obj/item/clothing/under/syndicate
+	new /obj/item/clothing/under/syndicate
+	new /obj/item/clothing/under/syndicate
+	new /obj/item/clothing/head/helmet/swat
+	new /obj/item/clothing/head/helmet/swat
+	new /obj/item/clothing/head/helmet/swat
+	new /obj/item/clothing/head/helmet/swat
+	new /obj/item/clothing/head/helmet/swat
+	new /obj/item/device/radio/headset
+	new /obj/item/device/radio/headset
+	new /obj/item/device/radio/headset
+	new /obj/item/device/radio/headset
+	new /obj/item/device/radio/headset
