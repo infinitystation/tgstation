@@ -14,11 +14,11 @@
  */
 
 // Run all strings to be used in an SQL query through this proc first to properly escape out injection attempts.
-/proc/sanitizeSQL(var/t as text)
+/proc/sanitizeSQL(t as text)
 	var/sqltext = dbcon.Quote(t);
 	return copytext(sqltext, 2, lentext(sqltext));//Quote() adds quotes around input, we already do that
 
-/proc/format_table_name(var/table as text)
+/proc/format_table_name(table as text)
 	return sqlfdbktableprefix + table
 
 /*
@@ -26,7 +26,7 @@
  */
 
 //Simply removes < and > and limits the length of the message
-/proc/strip_html_simple(var/t,var/limit=MAX_MESSAGE_LEN)
+/proc/strip_html_simple(t,limit=MAX_MESSAGE_LEN)
 	var/list/strip_chars = list("<",">")
 	t = copytext(t,1,limit)
 	for(var/char in strip_chars)
@@ -38,7 +38,7 @@
 
 //Removes a few problematic characters
 // it was = /proc/sanitize_simple(var/t,var/list/repl_chars = list("\n"="#","\t"="#","ï¿½"="ï¿½"))
-/proc/sanitize_simple(var/t,var/list/repl_chars = list("ÿ"="____255_"))
+/proc/sanitize_simple(t,list/repl_chars = list("ÿ"="____255_"))
 	for(var/char in repl_chars)
 		var/index = findtext(t, char)
 		while(index)
@@ -47,40 +47,40 @@
 	return t
 
 //Runs byond's sanitization proc along-side sanitize_simple
-/proc/sanitize(var/t,var/list/repl_chars = null)//ansi
+/proc/sanitize(t,list/repl_chars = null)//ansi
 	t = html_encode(trim(sanitize_simple(t, repl_chars)))
 	t = replacetext(t, "____255_", "&#255;")
 	return t
 
 //unicode sanitization
-/proc/sanitize_u(var/t,var/list/repl_chars = null)
+/proc/sanitize_u(t,list/repl_chars = null)
 	t = html_encode(sanitize_simple(t,repl_chars))
 	t = replacetext(t, "____255_", "&#1103;")
 	return t
 
 //convertion ansi to unicode
-/proc/sanitize_a2u(var/t)//ansi to unicode
+/proc/sanitize_a2u(t)//ansi to unicode
 	t = replacetext(t, "&#255;", "&#1103;")
 	return t
 
 //convertion unicode to andi
-/proc/sanitize_u2a(var/t)//unicode to ansi
+/proc/sanitize_u2a(t)//unicode to ansi
 	t = replacetext(t, "&#1103;", "&#255;")
 	return t
 
 //Runs sanitize and strip_html_simple
 //I believe strip_html_simple() is required to run first to prevent '<' from displaying as '&lt;' after sanitize() calls byond's html_encode()
-/proc/strip_html(var/t,var/limit=MAX_MESSAGE_LEN)
+/proc/strip_html(t,limit=MAX_MESSAGE_LEN)
 	return copytext((sanitize(strip_html_simple(t))),1,limit)
 
 //Runs byond's sanitization proc along-side strip_html_simple
 //I believe strip_html_simple() is required to run first to prevent '<' from displaying as '&lt;' that html_encode() would cause
-/proc/adminscrub(var/t,var/limit=MAX_MESSAGE_LEN)
+/proc/adminscrub(t,limit=MAX_MESSAGE_LEN)
 	return copytext((html_encode(strip_html_simple(t))),1,limit)
 
 
 //Returns null if there is any bad text in the string
-/proc/reject_bad_text(var/text, var/max_length=512)
+/proc/reject_bad_text(text, max_length=512)
 	if(length(text) > max_length)	return			//message too long
 	var/non_whitespace = 0
 	for(var/i=1, i<=length(text), i++)
@@ -92,7 +92,7 @@
 	if(non_whitespace)		return text		//only accepts the text if it has some non-spaces
 
 // Used to get a properly sanitized input, of max_length
-/proc/stripped_input(var/mob/user, var/message = "", var/title = "", var/default = "", var/max_length=MAX_MESSAGE_LEN)
+/proc/stripped_input(mob/user, message = "", title = "", default = "", max_length=MAX_MESSAGE_LEN)
 	var/name = input(user, message, title, default) as text|null
 	name = replacetext(name, "ÿ", "___255_")
 	name = html_encode(trim(name, max_length)) //trim is "inside" because html_encode can expand single symbols into multiple symbols (such as turning < into &lt;)
@@ -100,7 +100,7 @@
 	return name
 
 // Used to get a properly sanitized multiline input, of max_length
-/proc/stripped_multiline_input(var/mob/user, var/message = "", var/title = "", var/default = "", var/max_length=MAX_MESSAGE_LEN)
+/proc/stripped_multiline_input(mob/user, message = "", title = "", default = "", max_length=MAX_MESSAGE_LEN)
 	var/name = input(user, message, title, default) as message|null
 	name = replacetext(name, "ÿ", "___255_")
 	name = html_encode(trim(name, max_length)) //trim is "inside" because html_encode can expand single symbols into multiple symbols (such as turning < into &lt;)
@@ -108,7 +108,7 @@
 	return name
 
 //Filters out undesirable characters from names
-/proc/reject_bad_name(var/t_in, var/allow_numbers=0, var/max_length=MAX_NAME_LEN)
+/proc/reject_bad_name(t_in, allow_numbers=0, max_length=MAX_NAME_LEN)
 	if(!t_in || length(t_in) > max_length)
 		return //Rejects the input if it is null or if it is longer then the max length allowed
 
@@ -173,7 +173,7 @@
 
 //html_encode helper proc that returns the smallest non null of two numbers
 //or 0 if they're both null (needed because of findtext returning 0 when a value is not present)
-/proc/non_zero_min(var/a, var/b)
+/proc/non_zero_min(a, b)
 	if(!a)
 		return b
 	if(!b)
@@ -263,7 +263,7 @@
 	return trim_left(trim_right(text))
 
 //Returns a string with the first element of the string capitalized.
-/proc/capitalize(var/t as text)
+/proc/capitalize(t as text)
 	return uppertext(copytext(t, 1, 2)) + copytext(t, 2)
 
 //Centers text by adding spaces to either side of the string.
@@ -291,7 +291,7 @@
 	return copytext(message, 1, length + 1)
 
 
-/proc/stringmerge(var/text,var/compare,replace = "*")
+/proc/stringmerge(text,compare,replace = "*")
 //This proc fills in all spaces with the "replace" var (* by default) with whatever
 //is in the other string at the same spot (assuming it is not a replace char).
 //This is used for fingerprints
@@ -312,7 +312,7 @@
 				return 0
 	return newtext
 
-/proc/stringpercent(var/text,character = "*")
+/proc/stringpercent(text,character = "*")
 //This proc returns the number of chars of the string that is the character
 //This is used for detective work to determine fingerprint completion.
 	if(!text || !character)
@@ -324,7 +324,7 @@
 			count++
 	return count
 
-/proc/reverse_text(var/text = "")
+/proc/reverse_text(text = "")
 	var/new_text = ""
 	for(var/i = length(text); i > 0; i--)
 		new_text += copytext(text, i, i+1)

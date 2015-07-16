@@ -1,4 +1,4 @@
-/proc/keywords_lookup(var/msg)
+/proc/keywords_lookup(msg)
 	//explode the input msg into a list
 	var/list/msglist = text2list(msg, " ")
 
@@ -41,9 +41,7 @@
 				if(!found)
 					found = surnames[word]
 					if(!found)
-						found = surnames[word]
-						if(!found)
-							found = forenames[word]
+						found = forenames[word]
 				if(found)
 					if(!(found in mobs_found))
 						mobs_found += found
@@ -84,7 +82,7 @@
 
 	//remove our adminhelp verb temporarily to prevent spamming of admins.
 	src.verbs -= /client/verb/adminhelp
-	adminhelptimerid = addtimer(src,"giveadminhelpverb",300) //0.3 minute cooldown of admin helps
+	adminhelptimerid = addtimer(src,"giveadminhelpverb",1200) //2 minute cooldown of admin helps
 
 	msg = keywords_lookup(msg)
 
@@ -103,7 +101,7 @@
 
 
 	//show it to the person adminhelping too
-	src << "<span class='adminnotice'>ЛС Админам</b>: [original_msg]</span>"
+	src << "<span class='adminnotice'>PM to-<b>Admins</b>: [original_msg]</span>"
 
 	//send it to irc if nobody is on and tell us how many were on
 	var/admin_number_present = send2irc_adminless_only(ckey,original_msg)

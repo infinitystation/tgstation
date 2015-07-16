@@ -201,7 +201,7 @@
 	caliber = "a646"
 	projectile_type = /obj/item/projectile/bullet/midbullet2
 
-/obj/item/ammo_casing/caseless/fire(atom/target as mob|obj|turf, mob/living/user as mob|obj, params, var/distro, var/quiet)
+/obj/item/ammo_casing/caseless/fire(atom/target as mob|obj|turf, mob/living/user as mob|obj, params, distro, quiet)
 	if (..())
 		loc = null
 		return 1
@@ -249,7 +249,7 @@
 		icon_state = "foamdart_empty"
 		desc = "Its nerf or nothing! ... Although, this one doesn't look too safe."
 
-/obj/item/ammo_casing/caseless/foam_dart/attackby(var/obj/item/A as obj, mob/user as mob, params)
+/obj/item/ammo_casing/caseless/foam_dart/attackby(obj/item/A, mob/user, params)
 	..()
 	if (istype(A, /obj/item/weapon/screwdriver) && !modified)
 		modified = 1

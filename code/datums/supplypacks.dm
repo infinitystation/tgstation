@@ -18,7 +18,7 @@ var/const/supply_spacesuits	= 9
 
 var/list/all_supply_groups = list(supply_emergency,supply_security,supply_engineer,supply_medical,supply_science,supply_organic,supply_materials,supply_misc,supply_spacesuits)
 
-/proc/get_supply_group_name(var/cat)
+/proc/get_supply_group_name(cat)
 	switch(cat)
 		if(1)
 			return "Emergency"
