@@ -177,7 +177,7 @@ obj/item/projectile/kinetic/New()
 /obj/item/ammo_casing/energy/wormhole/New(var/obj/item/weapon/gun/energy/wormhole_projector/wh)
 	gun = wh
 
-/obj/item/projectile/beam/wormhole/on_hit(var/atom/target)
+/obj/item/projectile/beam/wormhole/on_hit(atom/target)
 	if(ismob(target))
 		return ..()
 	if(!gun)
@@ -221,7 +221,7 @@ obj/item/projectile/kinetic/New()
 		range *= 3
 	..()
 
-/obj/item/projectile/plasma/on_hit(var/atom/target)
+/obj/item/projectile/plasma/on_hit(atom/target)
 	if(istype(target, /turf/simulated/mineral) && power > 0)
 		while(target && target.density && range > 0 && power > 0)
 			var/turf/simulated/mineral/M = target
@@ -229,7 +229,6 @@ obj/item/projectile/kinetic/New()
 			power -= 1
 	if(range > 0 && power > 0)
 		return -1
-	return ..()
 
 /obj/item/projectile/plasma/adv
 	range = 3
