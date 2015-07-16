@@ -78,13 +78,13 @@ ALLOW_METADATA
 VOTE_DELAY 6000
 
 ## time period (deciseconds) which voting session will last (default 1 minute)
-VOTE_PERIOD 600
+VOTE_PERIOD 1800
 
 ## prevents dead players from voting or starting votes
-# NO_DEAD_VOTE
+#NO_DEAD_VOTE
 
 ## players' votes default to "No vote" (otherwise,  default to "No change")
-# DEFAULT_NO_VOTE
+#DEFAULT_NO_VOTE
 
 ## disable abandon mob
 NORESPAWN
