@@ -91,7 +91,7 @@
 	loc.visible_message("<span class='warning'>The corpse of [H.name] suddenly rises!</span>")
 
 /mob/living/simple_animal/hostile/blob/blobspore/attack_ghost(mob/user)
-	if(is_zombie && !ckey)
+	if(is_zombie && !key && !client)
 		var/be_zombie = alert("Вы хотите стать блоб-зомби? (Внимание, вас не смогут клонировать!)",,"Да","Нет")
 		if(be_zombie == "Нет" || gc_destroyed)
 			return
