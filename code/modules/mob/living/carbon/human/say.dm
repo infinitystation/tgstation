@@ -7,7 +7,7 @@
 		return "невн&#255;тно говорит, \"[input]\""
 	return ..()
 
-/mob/living/carbon/human/say(message, bubble_type,)
+/mob/living/carbon/human/say(message, bubble_type)
 	. = ..(message)
 	if(.)
 		if(gender == FEMALE)
@@ -61,7 +61,7 @@
 		return !mind.miming
 	return 1
 
-/mob/living/carbon/human/proc/SetSpecialVoice(var/new_voice)
+/mob/living/carbon/human/proc/SetSpecialVoice(new_voice)
 	if(new_voice)
 		special_voice = new_voice
 	return
@@ -109,7 +109,7 @@
 
 /mob/living/carbon/human/get_alt_name()
 	if(name != GetVoice())
-		return " (как [get_id_name("Unknown")])"
+		return " (as [get_id_name("Unknown")])"
 
 /mob/living/carbon/human/proc/forcesay(list/append) //this proc is at the bottom of the file because quote fuckery makes notepad++ cri
 	if(stat == CONSCIOUS)

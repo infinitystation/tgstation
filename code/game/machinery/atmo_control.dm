@@ -247,10 +247,10 @@
 	var/datum/radio_frequency/gas_freq = radio_controller.return_frequency(1441)
 	var/list/devices = air_freq.devices["_default"]
 	devices |= gas_freq.devices["_default"]
-	for(var/obj/machinery/atmospherics/unary/vent_pump/U in devices)
+	for(var/obj/machinery/atmospherics/components/unary/vent_pump/U in devices)
 		var/list/text = text2list(U.id_tag, "_")
 		IO |= text[1]
-	for(var/obj/machinery/atmospherics/unary/outlet_injector/U in devices)
+	for(var/obj/machinery/atmospherics/components/unary/outlet_injector/U in devices)
 		var/list/text = text2list(U.id, "_")
 		IO |= text[1]
 	if(!IO.len)
@@ -275,10 +275,10 @@
 
 	set_frequency(frequency)
 
-	for(var/obj/machinery/atmospherics/unary/outlet_injector/U in devices)
+	for(var/obj/machinery/atmospherics/components/unary/outlet_injector/U in devices)
 		U.broadcast_status()
 
-	for(var/obj/machinery/atmospherics/unary/vent_pump/U in devices)
+	for(var/obj/machinery/atmospherics/components/unary/vent_pump/U in devices)
 		U.broadcast_status()
 
 /obj/machinery/computer/general_air_control/large_tank_control/proc/m_reconnect(mob/user)    //This hacky madness is the evidence of the fact that a lot of machines were never meant to be constructable, im so sorry you had to see this
@@ -304,10 +304,10 @@
 
 	set_frequency(man_freq)
 
-	for(var/obj/machinery/atmospherics/unary/outlet_injector/U in devices)
+	for(var/obj/machinery/atmospherics/components/unary/outlet_injector/U in devices)
 		U.broadcast_status()
 
-	for(var/obj/machinery/atmospherics/unary/vent_pump/U in devices)
+	for(var/obj/machinery/atmospherics/components/unary/vent_pump/U in devices)
 		U.broadcast_status()
 
 /obj/machinery/computer/general_air_control/large_tank_control/return_text()

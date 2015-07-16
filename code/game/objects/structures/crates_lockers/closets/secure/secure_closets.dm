@@ -20,7 +20,7 @@
 	health = 200
 	secure = 1
 
-/obj/structure/closet/secure_closet/attackby(obj/item/weapon/W as obj, mob/user as mob, params)
+/obj/structure/closet/secure_closet/attackby(obj/item/weapon/W, mob/user, params)
 	if(istype(W, /obj/item/device/multitool/multimeter))
 		if(!opened)
 			var/obj/item/device/multitool/multimeter/O = W

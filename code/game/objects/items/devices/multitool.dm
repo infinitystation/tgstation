@@ -75,7 +75,7 @@
 	siemens_coefficient = 0
 
 //mode
-/obj/item/device/multitool/multimeter/attack_self(mob/living/user as mob)
+/obj/item/device/multitool/multimeter/attack_self(mob/living/user)
 	if (mode)
 		mode = 0 // Measuring
 		user << "<span class='notice'>¬ключен режим измерения</span>"

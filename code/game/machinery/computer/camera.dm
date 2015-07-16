@@ -10,7 +10,7 @@
 	var/list/network = list("SS13")
 	var/mapping = 0//For the overview file, interesting bit of code.
 
-/obj/machinery/computer/security/check_eye(var/mob/user as mob)
+/obj/machinery/computer/security/check_eye(mob/user)
 	if ((get_dist(user, src) > 1 || user.eye_blind || !( current ) || !( current.status )) && (!istype(user, /mob/living/silicon)))
 		return null
 	var/list/viewing = viewers(src)
@@ -20,7 +20,7 @@
 	return 1
 
 
-/obj/machinery/computer/security/attack_hand(var/mob/user as mob)
+/obj/machinery/computer/security/attack_hand(mob/user)
 	if(!stat)
 
 		if (!network)
