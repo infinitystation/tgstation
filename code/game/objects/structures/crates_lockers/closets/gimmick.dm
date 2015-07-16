@@ -16,6 +16,22 @@
 	desc = "It's a storage unit for things that have no right being here."
 	icon_state = "syndicate"
 
+/obj/structure/closet/gimmick/zombie
+	name = "For light live"
+	desc = "Good luck."
+
+/obj/structure/closet/gimmick/zombie/New()
+	..()
+	new /obj/item/clothing/under/syndicate/tacticool(src)
+	new /obj/item/clothing/suit/armor/vest(src)
+	new /obj/item/clothing/gloves/combat(src)
+	new /obj/item/device/flashlight(src)
+	new /obj/item/device/radio(src)
+	new /obj/item/weapon/gun/energy/laser(src)
+	new /obj/item/clothing/head/helmet/swat(src)
+	new /obj/item/clothing/shoes/combat/swat(src)
+
+
 /obj/structure/closet/gimmick/russian
 	name = "russian surplus closet"
 	desc = "It's a storage unit for Russian standard-issue surplus."
@@ -32,7 +48,6 @@
 	new /obj/item/clothing/under/soviet(src)
 	new /obj/item/clothing/under/soviet(src)
 	new /obj/item/clothing/under/soviet(src)
-
 
 /obj/structure/closet/gimmick/tacticool
 	name = "tacticool gear closet"
