@@ -38,6 +38,7 @@ On top of that, now people can add component-speciic procs/vars if they want!
 		var/datum/gas_mixture/A = new
 		A.volume = 200
 		airs["a[I]"] = A
+	build_network()
 /*
 Iconnery
 */

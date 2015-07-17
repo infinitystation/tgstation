@@ -242,8 +242,9 @@
 		if(default_deconstruction_screwdriver(user, "cell-o", "cell-off", I))
 			return
 
-	if(default_change_direction_wrench(user, I))
-		return
+	if(panel_open)
+		if(default_change_direction_wrench(user, I))
+			return
 
 	if(exchange_parts(user, I))
 		return
