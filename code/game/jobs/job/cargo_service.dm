@@ -9,8 +9,8 @@ Quartermaster
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "Главе Персонала"
-	selection_color = "#dddddd"
+	supervisors = "the head of personnel"
+	selection_color = "#d7b088"
 
 	default_pda = /obj/item/device/pda/quartermaster
 	default_headset = /obj/item/device/radio/headset/headset_cargo
@@ -33,10 +33,10 @@ Cargo Technician
 	department_head = list("Head of Personnel")
 	department_flag = CIVILIAN
 	faction = "Station"
-	total_positions = 10
+	total_positions = 3
 	spawn_positions = 2
-	supervisors = "Квартирмейстеру и Главе Персонала"
-	selection_color = "#dddddd"
+	supervisors = "the quartermaster and the head of personnel"
+	selection_color = "#dcba97"
 
 	default_pda = /obj/item/device/pda/cargo
 	default_headset = /obj/item/device/radio/headset/headset_cargo
@@ -57,10 +57,10 @@ Shaft Miner
 	department_head = list("Head of Personnel")
 	department_flag = CIVILIAN
 	faction = "Station"
-	total_positions = 10
+	total_positions = 3
 	spawn_positions = 3
-	supervisors = "Квартирмейстеру и Главе Персоналаthe quartermaster and the head of personnel"
-	selection_color = "#dddddd"
+	supervisors = "the quartermaster and the head of personnel"
+	selection_color = "#dcba97"
 
 	default_pda = /obj/item/device/pda/shaftminer
 	default_headset = /obj/item/device/radio/headset/headset_cargo
@@ -75,16 +75,10 @@ Shaft Miner
 	H.equip_to_slot_or_del(new /obj/item/clothing/under/rank/miner(H), slot_w_uniform)
 	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/sneakers/black(H), slot_shoes)
 
-	if(H.backbag == 0)
-		H.equip_to_slot_or_del(new /obj/item/weapon/crowbar(H), slot_belt)
-		H.equip_to_slot_or_del(new /obj/item/weapon/storage/bag/ore(H), slot_l_store)
-		H.equip_to_slot_or_del(new /obj/item/weapon/mining_voucher(H), slot_l_hand)
-		H.equip_to_slot_or_del(new /obj/item/weapon/reagent_containers/pill/patch/styptic(H), slot_r_store)
-	else
-		H.equip_to_slot_or_del(new /obj/item/weapon/crowbar(H), slot_in_backpack)
-		H.equip_to_slot_or_del(new /obj/item/weapon/storage/bag/ore(H), slot_in_backpack)
-		H.equip_to_slot_or_del(new /obj/item/weapon/mining_voucher(H), slot_in_backpack)
-		H.equip_to_slot_or_del(new /obj/item/weapon/reagent_containers/pill/patch/styptic(H), slot_l_store)
+	H.equip_to_slot_or_del(new /obj/item/weapon/crowbar(H), slot_in_backpack)
+	H.equip_to_slot_or_del(new /obj/item/weapon/storage/bag/ore(H), slot_in_backpack)
+	H.equip_to_slot_or_del(new /obj/item/weapon/mining_voucher(H), slot_in_backpack)
+	H.equip_to_slot_or_del(new /obj/item/weapon/reagent_containers/pill/patch/styptic(H), slot_l_store)
 
 /*
 Bartender
@@ -97,8 +91,8 @@ Bartender
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "Главе Персонала"
-	selection_color = "#dddddd"
+	supervisors = "the head of personnel"
+	selection_color = "#bbe291"
 
 	default_pda = /obj/item/device/pda/bar
 	default_headset = /obj/item/device/radio/headset/headset_srv
@@ -106,35 +100,15 @@ Bartender
 	access = list(access_hydroponics, access_bar, access_kitchen, access_morgue, access_weapons)
 	minimal_access = list(access_bar)
 
-/datum/job/bartender/equip_backpack(mob/living/carbon/human/H)
-	switch(H.backbag)
-		if(0) //No backpack or satchel
-
-			var/obj/item/weapon/storage/box/box = new default_storagebox(H)
-			new /obj/item/ammo_casing/shotgun/beanbag(box)
-			new /obj/item/ammo_casing/shotgun/beanbag(box)
-			new /obj/item/ammo_casing/shotgun/beanbag(box)
-			new /obj/item/ammo_casing/shotgun/beanbag(box)
-			H.equip_to_slot_or_del(box, slot_r_hand)
-
-		if(1) // Backpack
-			var/obj/item/weapon/storage/backpack/BPK = new default_backpack(H)
-			new default_storagebox(BPK)
-			H.equip_to_slot_or_del(BPK, slot_back,1)
-		if(2) //Satchel
-			var/obj/item/weapon/storage/backpack/BPK = new default_satchel(H)
-			new default_storagebox(BPK)
-			H.equip_to_slot_or_del(BPK, slot_back,1)
-
 /datum/job/bartender/equip_items(mob/living/carbon/human/H)
 	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/sneakers/black(H), slot_shoes)
+	H.equip_to_slot_or_del(new /obj/item/clothing/suit/armor/vest(H), slot_wear_suit)
 	H.equip_to_slot_or_del(new /obj/item/clothing/under/rank/bartender(H), slot_w_uniform)
 
-	if(H.backbag != 0)
-		H.equip_to_slot_or_del(new /obj/item/ammo_casing/shotgun/beanbag(H), slot_in_backpack)
-		H.equip_to_slot_or_del(new /obj/item/ammo_casing/shotgun/beanbag(H), slot_in_backpack)
-		H.equip_to_slot_or_del(new /obj/item/ammo_casing/shotgun/beanbag(H), slot_in_backpack)
-		H.equip_to_slot_or_del(new /obj/item/ammo_casing/shotgun/beanbag(H), slot_in_backpack)
+	H.equip_to_slot_or_del(new /obj/item/ammo_casing/shotgun/beanbag(H), slot_in_backpack)
+	H.equip_to_slot_or_del(new /obj/item/ammo_casing/shotgun/beanbag(H), slot_in_backpack)
+	H.equip_to_slot_or_del(new /obj/item/ammo_casing/shotgun/beanbag(H), slot_in_backpack)
+	H.equip_to_slot_or_del(new /obj/item/ammo_casing/shotgun/beanbag(H), slot_in_backpack)
 
 /*
 Cook
@@ -147,8 +121,8 @@ Cook
 	faction = "Station"
 	total_positions = 2
 	spawn_positions = 1
-	supervisors = "Главе Персонала"
-	selection_color = "#dddddd"
+	supervisors = "the head of personnel"
+	selection_color = "#bbe291"
 	var/global/cooks = 0 //Counts cooks amount
 
 	default_pda = /obj/item/device/pda/cook
@@ -179,10 +153,10 @@ Botanist
 	department_head = list("Head of Personnel")
 	department_flag = CIVILIAN
 	faction = "Station"
-	total_positions = 10
+	total_positions = 3
 	spawn_positions = 2
-	supervisors = "Главе Персонала"
-	selection_color = "#dddddd"
+	supervisors = "the head of personnel"
+	selection_color = "#bbe291"
 
 	default_pda = /obj/item/device/pda/botanist
 	default_headset = /obj/item/device/radio/headset/headset_srv
@@ -206,10 +180,10 @@ Janitor
 	department_head = list("Head of Personnel")
 	department_flag = CIVILIAN
 	faction = "Station"
-	total_positions = 10
+	total_positions = 2
 	spawn_positions = 1
-	supervisors = "Главе Персонала"
-	selection_color = "#dddddd"
+	supervisors = "the head of personnel"
+	selection_color = "#bbe291"
 	var/global/janitors = 0
 
 	default_pda = /obj/item/device/pda/janitor

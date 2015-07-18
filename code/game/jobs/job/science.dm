@@ -9,7 +9,7 @@ Research Director
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "Капитану"
+	supervisors = "the captain"
 	selection_color = "#ffddff"
 	req_admin_notify = 1
 	minimal_player_age = 7
@@ -19,12 +19,12 @@ Research Director
 	default_headset = /obj/item/device/radio/headset/heads/rd
 
 	access = list(access_rd, access_heads, access_tox, access_genetics, access_morgue,
-			            access_tox_storage, access_teleporter, access_sec_doors, access_eva,
+			            access_tox_storage, access_teleporter, access_sec_doors,
 			            access_research, access_robotics, access_xenobiology, access_ai_upload,
 			            access_RC_announce, access_keycard_auth, access_gateway, access_mineral_storeroom,
 			            access_tech_storage, access_minisat)
 	minimal_access = list(access_rd, access_heads, access_tox, access_genetics, access_morgue,
-			            access_tox_storage, access_teleporter, access_sec_doors, access_eva,
+			            access_tox_storage, access_teleporter, access_sec_doors,
 			            access_research, access_robotics, access_xenobiology, access_ai_upload,
 			            access_RC_announce, access_keycard_auth, access_gateway, access_mineral_storeroom,
 			            access_tech_storage, access_minisat)
@@ -35,10 +35,7 @@ Research Director
 	H.equip_to_slot_or_del(new /obj/item/clothing/suit/toggle/labcoat(H), slot_wear_suit)
 	H.equip_to_slot_or_del(new /obj/item/weapon/clipboard(H), slot_l_hand)
 	H.equip_to_slot_or_del(new /obj/item/device/laser_pointer(H), slot_l_store)
-
-	//Equip telebaton
-	if(H.backbag == 1 || H.backbag == 2)
-		H.equip_to_slot_or_del(new /obj/item/weapon/melee/classic_baton/telescopic(H), slot_in_backpack)
+	H.equip_to_slot_or_del(new /obj/item/weapon/melee/classic_baton/telescopic(H), slot_in_backpack)
 
 /*
 Scientist
@@ -49,9 +46,9 @@ Scientist
 	department_head = list("Research Director")
 	department_flag = MEDSCI
 	faction = "Station"
-	total_positions = 10
+	total_positions = 5
 	spawn_positions = 3
-	supervisors = "Директору Исследований и Разработок RD"
+	supervisors = "the research director"
 	selection_color = "#ffeeff"
 
 	default_pda = /obj/item/device/pda/toxins
@@ -76,7 +73,7 @@ Roboticist
 	faction = "Station"
 	total_positions = 2
 	spawn_positions = 2
-	supervisors = "Директору Исследований и Разработок RD"
+	supervisors = "research director"
 	selection_color = "#ffeeff"
 
 	default_pda = /obj/item/device/pda/roboticist

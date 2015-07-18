@@ -20,7 +20,7 @@ On top of that, now people can add component-speciic procs/vars if they want!
 #define NODE3	"n3"
 
 /obj/machinery/atmospherics/components/
-	var/welded = 0 //Used on pumps and scrubbers
+	var/welded //Used on pumps and scrubbers
 	var/showpipe = 0
 
 	var/device_type = 0//used for initialization stuff
@@ -38,7 +38,6 @@ On top of that, now people can add component-speciic procs/vars if they want!
 		var/datum/gas_mixture/A = new
 		A.volume = 200
 		airs["a[I]"] = A
-	build_network()
 /*
 Iconnery
 */
@@ -200,7 +199,7 @@ Helpers
 */
 
 /obj/machinery/atmospherics/components/proc/update_parents()
-	for(var/I = 1; I <= device_type; I++)
-		var/datum/pipeline/parent = parents["p[I]"]
-		if(parent)
+	for(var/P in parents)
+		var/datum/pipeline/parent = parents["[P]"]
+		if (parent && istype(parent))
 			parent.update = 1
