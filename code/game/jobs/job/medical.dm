@@ -9,7 +9,7 @@ Chief Medical Officer
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "Капитану"
+	supervisors = "the captain"
 	selection_color = "#ffddf0"
 	req_admin_notify = 1
 	minimal_player_age = 7
@@ -21,10 +21,10 @@ Chief Medical Officer
 	default_satchel = /obj/item/weapon/storage/backpack/satchel_med
 
 	access = list(access_medical, access_morgue, access_genetics, access_heads, access_mineral_storeroom,
-			access_chemistry, access_virology, access_cmo, access_surgery, access_RC_announce, access_eva,
+			access_chemistry, access_virology, access_cmo, access_surgery, access_RC_announce,
 			access_keycard_auth, access_sec_doors)
 	minimal_access = list(access_medical, access_morgue, access_genetics, access_heads, access_mineral_storeroom,
-			access_chemistry, access_virology, access_cmo, access_surgery, access_RC_announce, access_eva,
+			access_chemistry, access_virology, access_cmo, access_surgery, access_RC_announce,
 			access_keycard_auth, access_sec_doors)
 
 /datum/job/cmo/equip_items(mob/living/carbon/human/H)
@@ -33,10 +33,7 @@ Chief Medical Officer
 	H.equip_to_slot_or_del(new /obj/item/clothing/suit/toggle/labcoat/cmo(H), slot_wear_suit)
 	H.equip_to_slot_or_del(new /obj/item/weapon/storage/firstaid/regular(H), slot_l_hand)
 	H.equip_to_slot_or_del(new /obj/item/device/flashlight/pen(H), slot_s_store)
-
-	//Equip telebaton
-	if(H.backbag == 1 || H.backbag == 2)
-		H.equip_to_slot_or_del(new /obj/item/weapon/melee/classic_baton/telescopic(H), slot_in_backpack)
+	H.equip_to_slot_or_del(new /obj/item/weapon/melee/classic_baton/telescopic(H), slot_in_backpack)
 
 /*
 Medical Doctor
@@ -47,9 +44,9 @@ Medical Doctor
 	department_head = list("Chief Medical Officer")
 	department_flag = MEDSCI
 	faction = "Station"
-	total_positions = 10
+	total_positions = 5
 	spawn_positions = 3
-	supervisors = "Главному Врачу CMO"
+	supervisors = "the chief medical officer"
 	selection_color = "#ffeef0"
 
 	default_pda = /obj/item/device/pda/medical
@@ -78,7 +75,7 @@ Chemist
 	faction = "Station"
 	total_positions = 2
 	spawn_positions = 2
-	supervisors = "Главному Врачу CMO"
+	supervisors = "the chief medical officer"
 	selection_color = "#ffeef0"
 
 	default_pda = /obj/item/device/pda/chemist
@@ -103,7 +100,7 @@ Geneticist
 	faction = "Station"
 	total_positions = 2
 	spawn_positions = 2
-	supervisors = "Главному Врачу CMO и Директору Разработок и Исследований RD"
+	supervisors = "the chief medical officer and research director"
 	selection_color = "#ffeef0"
 
 	default_pda = /obj/item/device/pda/geneticist
@@ -129,7 +126,7 @@ Virologist
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "Главному Врачу CMO"
+	supervisors = "the chief medical officer"
 	selection_color = "#ffeef0"
 
 	default_pda = /obj/item/device/pda/viro

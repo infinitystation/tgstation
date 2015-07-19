@@ -9,7 +9,7 @@ Chief Engineer
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "Капитану"
+	supervisors = "the captain"
 	selection_color = "#ffeeaa"
 	req_admin_notify = 1
 	minimal_player_age = 7
@@ -39,8 +39,7 @@ Chief Engineer
 	H.equip_to_slot_or_del(new /obj/item/clothing/gloves/color/black/ce(H), slot_gloves)
 
 	//Equip telebaton
-	if(H.backbag == 1 || H.backbag == 2)
-		H.equip_to_slot_or_del(new /obj/item/weapon/melee/classic_baton/telescopic(H), slot_in_backpack)
+	H.equip_to_slot_or_del(new /obj/item/weapon/melee/classic_baton/telescopic(H), slot_in_backpack)
 
 /*
 Station Engineer
@@ -51,9 +50,9 @@ Station Engineer
 	department_head = list("Chief Engineer")
 	department_flag = ENGSEC
 	faction = "Station"
-	total_positions = 10
+	total_positions = 5
 	spawn_positions = 5
-	supervisors = "Главному Инженеру"
+	supervisors = "the chief engineer"
 	selection_color = "#fff5cc"
 
 	default_pda = /obj/item/device/pda/engineering
@@ -84,9 +83,9 @@ Atmospheric Technician
 	department_head = list("Chief Engineer")
 	department_flag = ENGSEC
 	faction = "Station"
-	total_positions = 10
+	total_positions = 3
 	spawn_positions = 2
-	supervisors = "Главному Инженеру"
+	supervisors = "the chief engineer"
 	selection_color = "#fff5cc"
 
 	default_pda = /obj/item/device/pda/atmos
