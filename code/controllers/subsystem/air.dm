@@ -178,8 +178,7 @@ var/datum/subsystem/air/SSair
 	for(var/turf/simulated/T in turfs_to_init)
 		T.CalculateAdjacentTurfs()
 		if(!T.blocks_air)
-			if(T.air.check_tile_graphic())
-				T.update_visuals(T.air)
+			T.update_visuals()
 			for(var/direction in cardinal)
 				if(!(T.atmos_adjacent_turfs & direction))
 					continue
@@ -195,7 +194,12 @@ var/datum/subsystem/air/SSair
 						T.excited = 1
 						active_turfs |= T
 	if(active_turfs.len)
-		warning("There are [active_turfs.len] active turfs at roundstart, this is a mapping error caused by a difference of the air between the adjacent turfs.")
+		warning("There are [active_turfs.len] active turfs at roundstart, this is a mapping error caused by a difference of the air between the adjacent turfs. You can see its coordinates at /data/AT_list.txt or using \"Mapping -> Show roundstart AT list\" verb")
+		var/F = file("data/AT_list.txt")
+		fdel(F)
+		for(var/turf/simulated/T in active_turfs)
+			active_turfs_startlist += text("[T.x], [T.y], [T.z]\n")
+		text2file(list2text(active_turfs_startlist), "data/AT_list.txt")
 
 /datum/subsystem/air/proc/setup_atmos_machinery(z_level)
 	for (var/obj/machinery/atmospherics/AM in atmos_machinery)

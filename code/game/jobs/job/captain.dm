@@ -9,7 +9,7 @@ Captain
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "ПредставителЯм Центрального КомандованиЯ и Космо-закону"
+	supervisors = "Nanotrasen officials and Space law"
 	selection_color = "#ccccff"
 	req_admin_notify = 1
 	minimal_player_age = 14
@@ -33,11 +33,8 @@ Captain
 	H.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses(H), slot_glasses)
 
 	//Equip ID box & telebaton
-	if(H.backbag == 0)
-		H.equip_to_slot_or_del(new /obj/item/weapon/storage/box/silver_ids(H), slot_l_hand)
-	else
-		H.equip_to_slot_or_del(new /obj/item/weapon/storage/box/silver_ids(H.back), slot_in_backpack)
-		H.equip_to_slot_or_del(new /obj/item/weapon/melee/classic_baton/telescopic(H), slot_in_backpack)
+	H.equip_to_slot_or_del(new /obj/item/weapon/storage/box/silver_ids(H.back), slot_in_backpack)
+	H.equip_to_slot_or_del(new /obj/item/weapon/melee/classic_baton/telescopic(H), slot_in_backpack)
 
 	//Implant him
 	var/obj/item/weapon/implant/loyalty/L = new/obj/item/weapon/implant/loyalty(H)
@@ -45,7 +42,7 @@ Captain
 	L.implanted = 1
 	H.sec_hud_set_implants()
 
-	minor_announce("Капитан [H.real_name] на борту станции!")
+	minor_announce("Captain [H.real_name] on deck!")
 
 /datum/job/captain/get_access()
 	return get_all_accesses()
@@ -61,7 +58,7 @@ Head of Personnel
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "Капитану"
+	supervisors = "the captain"
 	selection_color = "#ddddff"
 	req_admin_notify = 1
 	minimal_player_age = 10
@@ -90,8 +87,5 @@ Head of Personnel
 	H.equip_to_slot_or_del(new /obj/item/clothing/head/hopcap(H), slot_head)
 
 	//Equip ID box & telebaton
-	if(H.backbag ==0)
-		H.equip_to_slot_or_del(new /obj/item/weapon/storage/box/ids(H), slot_l_hand)
-	else
-		H.equip_to_slot_or_del(new /obj/item/weapon/storage/box/ids(H.back), slot_in_backpack)
-		H.equip_to_slot_or_del(new /obj/item/weapon/melee/classic_baton/telescopic(H), slot_in_backpack)
+	H.equip_to_slot_or_del(new /obj/item/weapon/storage/box/ids(H.back), slot_in_backpack)
+	H.equip_to_slot_or_del(new /obj/item/weapon/melee/classic_baton/telescopic(H), slot_in_backpack)

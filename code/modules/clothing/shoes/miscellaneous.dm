@@ -1,4 +1,5 @@
 /obj/item/clothing/shoes/proc/step_action() //this was made to rewrite clown shoes squeaking
+	playsound(src, 'sound/effects/step.ogg', 5, 1)
 
 /obj/item/clothing/shoes/suicide_act(mob/user)
 	user.visible_message("<span class='suicide'>[user] is bashing their own head in with [src]! Ain't that a kick in the head?</span>")
@@ -36,7 +37,7 @@
 	desc = "High speed, no drag combat boots."
 	permeability_coefficient = 0.01
 	flags = NOSLIP
-	armor = list(melee = 40, bullet = 30, laser = 25, energy = 25, bomb = 50, bio = 30, rad = 30)
+	armor = list(melee = 80, bullet = 80, laser = 50, energy = 50, bomb = 100, bio = 100, rad = 100)
 
 /obj/item/clothing/shoes/combat/UACtrooperBoots
 	name = "\improper Troopers boots"
