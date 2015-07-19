@@ -200,7 +200,7 @@
 
 /obj/structure/closet/gimmick/uac/New()
 	..()
-	new /obj/item/clothing/under/pants/UACcamo(src)
+	new /obj/item/clothing/under/UACcamo(src)
 	new /obj/item/clothing/shoes/combat/UACtrooperBoots(src)
 
 /obj/structure/closet/gimmick/uac/trooper

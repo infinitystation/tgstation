@@ -6,8 +6,8 @@
 **Код**: https://bitbucket.org/infinity_team/infinity-tg  
 **Сайт разработчика:** http://infinity.smforum.ru/index.php  
 **IRC (На английском)**: irc://irc.rizon.net/coderbus  
-**Папка карт:** _maps/map_files/TerrorStation - Основная карта
-**Используемая карта:** TG MetaStation (_maps/map_files/MetaStation)
+**Основная карта:** Terror's MetaStation (_maps/map_files/TerrorStation)
+**Используемая карта:** Terror's MetaStation
 
 ##ЗАГРУЗКА
 

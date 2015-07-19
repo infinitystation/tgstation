@@ -75,10 +75,3 @@
 	desc = "A pair of woodland camouflage pants. Probably not the best choice for a space station."
 	icon_state = "camopants"
 	item_color = "camopants"
-
-/obj/item/clothing/under/pants/UACcamo
-	name = "trooper uniform"
-	desc = "A UAC Trooper uniform. Probably not the best choice for a space station."
-	worn_icon = 'icons/mob/uac/uniform.dmi'
-	icon = 'icons/obj/clothing/uac/uniform.dmi'
-	icon_state = "uac_uniform"
