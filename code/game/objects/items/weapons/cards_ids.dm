@@ -255,8 +255,10 @@ update_label("John Doe", "Clowny")
 	registered_name = "Prisoner #13-007"
 
 /obj/item/weapon/card/id/uac
-	name = "Paratrooper"
+	name = "UAC ID"
 	desc = "A card used to provide ID and determine access"
 	icon_state = "id"
 	item_state = "card-id"
 	assignment = "UAC Paratrooper"
+	registered_name = "Paratrooper"
+	access = list(access_syndicate)

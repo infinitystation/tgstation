@@ -274,8 +274,15 @@
 	righthand_file = 'icons/mob/uac/uac_righthand.dmi'
 	origin_tech = "combat=5;materials=3"
 	mag_type = /obj/item/ammo_box/magazine/a646
+	pin = /obj/item/device/firing_pin
 	fire_sound = 'sound/weapons/Gunshot_smg.ogg'
 	slot_flags = 0
 	can_suppress = 0
 	burst_size = 4
 	fire_delay = 1
+
+/obj/item/weapon/gun/projectile/automatic/mg88/sc_mg88/New()
+	..()
+	for(var/ammo in magazine.stored_ammo)
+		if(prob(95))
+			magazine.stored_ammo -= ammo
