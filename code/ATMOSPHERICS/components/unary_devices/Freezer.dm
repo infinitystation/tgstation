@@ -191,7 +191,7 @@
 	return src.attack_hand(user)
 
 /obj/machinery/atmospherics/components/unary/heat_reservoir/heater/attack_hand(mob/user)
-	return src.interact(user)
+	return interact(user)
 
 /obj/machinery/atmospherics/components/unary/heat_reservoir/heater/interact(mob/user)
 	var/datum/gas_mixture/air_contents = airs[AIR1]
