@@ -153,7 +153,33 @@
 	corpseidjob = "Operative"
 	corpseidaccess = "Syndicate"
 
+/obj/effect/landmark/corpse/trooper/bravo
+	name = "UAC Trooper"
+	corpseuniform = /obj/item/clothing/under/pants/camo
+	corpsesuit = /obj/item/clothing/suit/armor/UACtrooperArmor
+	corpseshoes = /obj/item/clothing/shoes/combat/UACtrooperBoots
+	corpsegloves = /obj/item/clothing/gloves/combat
+	corpseradio = /obj/item/device/radio/headset
+	corpsemask = /obj/item/clothing/mask/gas
+	corpsehelmet = /obj/item/clothing/head/helmet/TrooperHelmet
+	corpsepocket1 = /obj/item/ammo_box/magazine/a646
+	corpseid = 1
+	corpseidjob = "Bravo Squad"
+	corpseidaccess = "Syndicate"
 
+/obj/effect/landmark/corpse/trooper/alpha
+	name = "UAC Trooper"
+	corpseuniform = /obj/item/clothing/under/pants/camo
+	corpsesuit = /obj/item/clothing/suit/armor/UACtrooperArmor
+	corpseshoes = /obj/item/clothing/shoes/combat/UACtrooperBoots
+	corpsegloves = /obj/item/clothing/gloves/combat
+	corpseradio = /obj/item/device/radio/headset
+	corpsemask = /obj/item/clothing/mask/gas
+	corpsehelmet = /obj/item/clothing/head/helmet/TrooperHelmet
+	corpsepocket1 = /obj/item/ammo_box/magazine/a646
+	corpseid = 1
+	corpseidjob = "Alpha Squad"
+	corpseidaccess = "Syndicate"
 
 ///////////Civilians//////////////////////
 
