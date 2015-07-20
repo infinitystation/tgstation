@@ -87,7 +87,7 @@
 	can_toggle = 1
 	toggle_cooldown = 20
 	active_sound = 'sound/items/WEEOO1.ogg'
-	
+
 /obj/item/clothing/head/helmet/justice/escape
 	name = "alarm helmet"
 	desc = "WEEEEOOO. WEEEEEOOO. STOP THAT MONKEY. WEEEOOOO."
@@ -98,16 +98,15 @@
 
 /obj/item/clothing/head/helmet/swat
 	name = "\improper SWAT helmet"
-	desc = "An extremely robust, space-worthy helmet with the Nanotrasen logo emblazoned on the top."
-	worn_icon = 'icons/blue_brig/mob/head.dmi'
-	icon = 'icons/blue_brig/obj/clothing/hats.dmi'
-	icon_state = "swat"
-	item_state = "swat"
+	desc = "An extremely robust, space-worthy helmet in a nefarious red and black stripe pattern."
+	icon_state = "swatsyndie"
+	item_state = "swatsyndie"
 	armor = list(melee = 40, bullet = 30, laser = 25,energy = 25, bomb = 50, bio = 10, rad = 0)
 	cold_protection = HEAD
 	min_cold_protection_temperature = SPACE_HELM_MIN_TEMP_PROTECT
 	heat_protection = HEAD
 	max_heat_protection_temperature = SPACE_HELM_MAX_TEMP_PROTECT
+	flags = STOPSPRESSUREDMAGE
 	strip_delay = 80
 
 /obj/item/clothing/head/helmet/tact
@@ -131,6 +130,14 @@
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE
 	strip_delay = 80
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
+
+/obj/item/clothing/head/helmet/swat/nanotrasen
+	name = "\improper SWAT helmet"
+	desc = "An extremely robust, space-worthy helmet with the Nanotrasen logo emblazoned on the top."
+	worn_icon = 'icons/blue_brig/mob/head.dmi'
+	icon = 'icons/blue_brig/obj/clothing/hats.dmi'
+	icon_state = "swat"
+	item_state = "swat"
 
 /obj/item/clothing/head/helmet/thunderdome
 	name = "\improper Thunderdome helmet"

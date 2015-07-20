@@ -22,7 +22,7 @@ z7 = empty space
         #include "map_files\TerrorStation\z5.dmm"
         #include "map_files\generic\z6.dmm"
         #include "map_files\generic\z7.dmm"
-        #define MAP_FILE "MetaStation.v41A.II_FIX8.dmm"
+        #define MAP_FILE "MetaStation.v41D_FIX1.dmm"
         #define MAP_NAME "Terror's MetaStation"
 
 #elif !defined(MAP_OVERRIDE)
