@@ -81,7 +81,7 @@ var/global/list/frozen_mob_list = list()
 
 //////////////////////////Freeze Mech
 
-/client/proc/freezemecha(var/obj/mecha/O as obj in mechas_list)
+/client/proc/freezemecha(obj/mecha/O)
 	set category = "Special Verbs"
 	set name = "Freeze Mech"
 	if(!holder)
@@ -96,22 +96,24 @@ var/global/list/frozen_mob_list = list()
 			if (usr.client)
 				if(usr.client.holder)
 					var/adminomaly = new/obj/effect/overlay/adminoverlay
-					if(M.can_move == 1)
-						M.can_move = 0
+					if(!M.frozen)
+						M.frozen = 1
+						M.cell.charge = 0
+						M.cell.maxcharge = 0
 						M.overlays += adminomaly
 						if(M.occupant)
-							M.removeVerb(/obj/mecha/verb/eject)
 							M.occupant << "<b><font color= red>You have been frozen by <a href='?priv_msg=\ref[usr.client]'>[key]</a></b></font>"
 							message_admins("\blue [key_name_admin(usr)] froze [key_name(M.occupant)] in a [M.name]")
 							log_admin("[key_name(usr)] froze [key_name(M.occupant)] in a [M.name]")
 						else
 							message_admins("\blue [key_name_admin(usr)] froze an empty [M.name]")
 							log_admin("[key_name(usr)] froze an empty [M.name]")
-					else if(M.can_move == 0)
-						M.can_move = 1
+					else if(M.frozen)
+						M.frozen = 0
+						M.cell.charge = initial(M.cell.charge)
+						M.cell.maxcharge = initial(M.cell.maxcharge)
 						M.overlays -= adminomaly
 						if(M.occupant)
-							M.addVerb(/obj/mecha/verb/eject)
 							M.occupant << "<b><font color= red>You have been unfrozen by <a href='?priv_msg=\ref[usr.client]'>[key]</a></b></font>"
 							message_admins("\blue [key_name_admin(usr)] unfroze [key_name(M.occupant)] in a [M.name]")
 							log_admin("[key_name(usr)] unfroze [M.occupant.name]/[M.occupant.ckey] in a [M.name]")

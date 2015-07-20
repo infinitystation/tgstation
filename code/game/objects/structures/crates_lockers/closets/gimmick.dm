@@ -30,6 +30,9 @@
 	new /obj/item/weapon/gun/energy/laser(src)
 	new /obj/item/clothing/head/helmet/swat(src)
 	new /obj/item/clothing/shoes/combat/swat(src)
+	new /obj/item/stack/medical/ointment(src)
+	new /obj/item/weapon/reagent_containers/pill/lowcharcoal(src)
+	new /obj/item/weapon/card/id/syndicate(src)
 
 
 /obj/structure/closet/gimmick/russian
@@ -197,7 +200,7 @@
 
 /obj/structure/closet/gimmick/uac/New()
 	..()
-	new /obj/item/clothing/under/pants/UACcamo(src)
+	new /obj/item/clothing/under/UACcamo(src)
 	new /obj/item/clothing/shoes/combat/UACtrooperBoots(src)
 
 /obj/structure/closet/gimmick/uac/trooper
