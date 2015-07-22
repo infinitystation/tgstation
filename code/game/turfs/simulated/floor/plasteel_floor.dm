@@ -13,7 +13,13 @@
 
 /turf/simulated/floor/plasteel/black
 	icon_state = "dark"
-
+	icon = 'icons/turf/infinity.dmi'
+/turf/simulated/floor/plasteel/black/side
+	icon_state = "black"
+/turf/simulated/floor/plasteel/black/corner
+	icon_state = "blackcorner"
+/turf/simulated/floor/plasteel/black/caution
+	icon_state = "caution"
 
 /turf/simulated/floor/plasteel/green
 	icon_state = "greenfull"
@@ -60,6 +66,7 @@
 /turf/simulated/floor/plasteel/neutral/corner
 	icon_state = "neutralcorner"
 
+/turf/simulated/floor/plasteel/
 
 /turf/simulated/floor/plasteel/warning
 	icon_state = "warning"
