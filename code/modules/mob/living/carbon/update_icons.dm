@@ -114,7 +114,7 @@
 		var/image/standing
 		if(wear_mask.alternate_worn_icon)
 			standing = image("icon"=wear_mask.alternate_worn_icon, "icon_state"="[wear_mask.icon_state]", "layer"=-FACEMASK_LAYER)
-		if(wear_mask.worn_icon && !standing)
+		if(wear_mask.worn_icon && !wear_mask.alternate_worn_icon)
 			standing = image("icon"=wear_mask.worn_icon, "icon_state"="[wear_mask.icon_state]", "layer"=-FACEMASK_LAYER)
 		if(!standing)
 			standing = image("icon"='icons/mob/mask.dmi', "icon_state"="[wear_mask.icon_state]", "layer"=-FACEMASK_LAYER)
@@ -131,12 +131,13 @@
 		var/image/standing
 		if(back.alternate_worn_icon)
 			standing = image("icon"=back.alternate_worn_icon, "icon_state"="[back.icon_state]", "layer"=-BACK_LAYER)
-		if(back.worn_icon && !standing)
+		if(back.worn_icon && !back.alternate_worn_icon)
 			standing = image("icon"=back.worn_icon, "icon_state"="[back.icon_state]", "layer"=-BACK_LAYER)
 		if(!standing)
 			standing = image("icon"='icons/mob/back.dmi', "icon_state"="[back.icon_state]", "layer"=-BACK_LAYER)
 
 		overlays_standing[BACK_LAYER] = standing
+		apply_overlay(BACK_LAYER)
 		return back
 
 /mob/living/carbon/update_inv_head()
@@ -145,7 +146,7 @@
 		var/image/standing
 		if(head.alternate_worn_icon)
 			standing = image("icon"=head.alternate_worn_icon, "icon_state"="[head.icon_state]", "layer"=-HEAD_LAYER)
-		if(head.worn_icon && !standing)
+		if(head.worn_icon && !head.alternate_worn_icon)
 			standing = image("icon"=head.worn_icon, "icon_state"="[head.icon_state]", "layer"=-HEAD_LAYER)
 		if(!standing)
 			standing = image("icon"='icons/mob/head.dmi', "icon_state"="[head.icon_state]", "layer"=-HEAD_LAYER)

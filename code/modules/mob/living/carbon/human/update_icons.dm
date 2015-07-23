@@ -290,7 +290,7 @@ Please contact me on #coderbus IRC. ~Carnie x
 		var/image/standing
 		if(gloves.alternate_worn_icon)
 			standing = image("icon"=gloves.alternate_worn_icon, "icon_state"="[t_state]", "layer"=-GLOVES_LAYER)
-		if(!gloves.alternate_worn_icon && !standing)
+		if(gloves.worn_icon && !gloves.alternate_worn_icon)
 			standing = image("icon"=gloves.worn_icon, "icon_state"="[t_state]", "layer"=-GLOVES_LAYER)
 		if(!standing)
 			standing = image("icon"='icons/mob/hands.dmi', "icon_state"="[t_state]", "layer"=-GLOVES_LAYER)
@@ -320,7 +320,7 @@ Please contact me on #coderbus IRC. ~Carnie x
 		var/image/standing
 		if(glasses.alternate_worn_icon)
 			standing = image("icon"=glasses.alternate_worn_icon, "icon_state"="[glasses.icon_state]","layer"=-GLASSES_LAYER)
-		if(!glasses.alternate_worn_icon && !standing)
+		if(glasses.worn_icon && wear_mask.alternate_worn_icon)
 			standing = image("icon"=glasses.worn_icon, "icon_state"="[glasses.icon_state]","layer"=-GLASSES_LAYER)
 		if(!standing)
 			standing = image("icon"='icons/mob/eyes.dmi', "icon_state"="[glasses.icon_state]", "layer"=-GLASSES_LAYER)
@@ -342,7 +342,7 @@ Please contact me on #coderbus IRC. ~Carnie x
 		var/image/standing
 		if(ears.alternate_worn_icon)
 			standing = image("icon"=ears.worn_icon, "icon_state"="[ears.icon_state]", "layer"=-EARS_LAYER)
-		if(ears.alternate_worn_icon && !standing)
+		if(ears.worn_icon && !ears.alternate_worn_icon)
 			standing = image("icon"=ears.alternate_worn_icon, "icon_state"="[ears.icon_state]", "layer"=-EARS_LAYER)
 		if(!standing)
 			standing = image("icon"='icons/mob/ears.dmi', "icon_state"="[ears.icon_state]", "layer"=-EARS_LAYER)
@@ -364,7 +364,7 @@ Please contact me on #coderbus IRC. ~Carnie x
 		var/image/standing
 		if(shoes.alternate_worn_icon)
 			standing = image("icon"=shoes.alternate_worn_icon, "icon_state"="[shoes.icon_state]","layer"=-SHOES_LAYER)
-		if(shoes.worn_icon && !standing)
+		if(shoes.worn_icon && !shoes.alternate_worn_icon)
 			standing = image("icon"=shoes.worn_icon, "icon_state"="[shoes.icon_state]","layer"=-SHOES_LAYER)
 		if(!standing)
 			standing = image("icon"='icons/mob/feet.dmi', "icon_state"="[shoes.icon_state]", "layer"=-SHOES_LAYER)
@@ -416,7 +416,7 @@ Please contact me on #coderbus IRC. ~Carnie x
 		var/image/standing
 		if(belt.alternate_worn_icon)
 			standing = image("icon"=belt.alternate_worn_icon, "icon_state"="[t_state]", "layer"=-BELT_LAYER)
-		if(belt.worn_icon && !standing)
+		if(belt.worn_icon && !belt.alternate_worn_icon)
 			standing = image("icon"=belt.worn_icon, "icon_state"="[t_state]", "layer"=-BELT_LAYER)
 		if(!standing)
 			standing = image("icon"='icons/mob/belt.dmi', "icon_state"="[t_state]", "layer"=-BELT_LAYER)
@@ -439,7 +439,7 @@ Please contact me on #coderbus IRC. ~Carnie x
 		var/image/standing
 		if(wear_suit.alternate_worn_icon)
 			standing = image("icon"=wear_suit.alternate_worn_icon, "icon_state"="[wear_suit.icon_state]", "layer"=-SUIT_LAYER)
-		if(wear_suit.worn_icon && !standing)
+		if(wear_suit.worn_icon && !wear_suit.alternate_worn_icon)
 			standing = image("icon"=wear_suit.worn_icon, "icon_state"="[wear_suit.icon_state]", "layer"=-SUIT_LAYER)
 		if(!standing)
 			standing = image("icon"='icons/mob/suit.dmi', "icon_state"="[wear_suit.icon_state]", "layer"=-SUIT_LAYER)
