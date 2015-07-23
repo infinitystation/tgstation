@@ -52,13 +52,14 @@ Sorry Giacom. Please don't be mad :(
 
 //Generic Bump(). Override MobBump() and ObjBump() instead of this.
 /mob/living/Bump(atom/A, yes)
+	if(..()) //we are thrown onto something
+		return
 	if (buckled || !yes || now_pushing)
 		return
 	if(ismob(A))
 		var/mob/M = A
 		if(MobBump(M))
 			return
-	..()
 	if(isobj(A))
 		var/obj/O = A
 		if(ObjBump(O))
@@ -67,6 +68,10 @@ Sorry Giacom. Please don't be mad :(
 		var/atom/movable/AM = A
 		if(PushAM(AM))
 			return
+
+/mob/living/Bumped(atom/movable/AM)
+	..()
+	last_bumped = world.time
 
 //Called when we bump onto a mob
 /mob/living/proc/MobBump(mob/M)
@@ -332,12 +337,12 @@ Sorry Giacom. Please don't be mad :(
 	set name = "Sleep"
 	set category = "IC"
 
-	if(usr.sleeping)
-		usr << "<span class='notice'>Вы уже спите.</span>"
+	if(sleeping)
+		src << "<span class='notice'>You are already sleeping.</span>"
 		return
 	else
-		if(alert(src, "Вы уверены, что хотите немного поспать?", "Спать", "Да", "Нет") == "Да")
-			usr.sleeping = 20 //Short nap
+		if(alert(src, "You sure you want to sleep for a while?", "Sleep", "Yes", "No") == "Yes")
+			sleeping = 20 //Short nap
 	update_canmove()
 
 /mob/proc/get_contents()
@@ -347,7 +352,7 @@ Sorry Giacom. Please don't be mad :(
 	set category = "IC"
 
 	resting = !resting
-	src << "<span class='notice'>Теперь вы [resting ? "отдыхаете" : "встаёте"].</span>"
+	src << "<span class='notice'>You are now [resting ? "resting" : "getting up"].</span>"
 	update_canmove()
 
 //Recursive function to find everything a mob is holding.
@@ -376,7 +381,7 @@ Sorry Giacom. Please don't be mad :(
 	return 0
 
 
-/mob/living/proc/electrocute_act(shock_damage, obj/source, siemens_coeff = 1.0)
+/mob/living/proc/electrocute_act(shock_damage, obj/source, siemens_coeff = 1.0, safety = 0)
 	  return 0 //only carbon liveforms have this proc
 
 /mob/living/emp_act(severity)
@@ -480,18 +485,18 @@ Sorry Giacom. Please don't be mad :(
 	return
 
 
-/mob/verb/Examine_OOC()
+/mob/living/proc/Examine_OOC()
 	set name = "Examine Meta-Info (OOC)"
 	set category = "OOC"
 	set src in view()
 
 	if(config.allow_Metadata)
 		if(client)
-			usr << "[src]'s Metainfo:<br>[client.prefs.metadata]"
+			src << "[src]'s Metainfo:<br>[client.prefs.metadata]"
 		else
-			usr << "[src] does not have any stored infomation!"
+			src << "[src] does not have any stored infomation!"
 	else
-		usr << "OOC Metadata is not supported by this server!"
+		src << "OOC Metadata is not supported by this server!"
 
 	return
 
@@ -623,7 +628,7 @@ Sorry Giacom. Please don't be mad :(
 			else
 				if(G.state == GRAB_AGGRESSIVE)
 					if(prob(25))
-						visible_message("<span class='warning'>[src] освобождаетс&#255; от захвата [G.assailant]!</span>")
+						visible_message("<span class='warning'>[src] has broken free of [G.assailant]'s grip!</span>")
 						qdel(G)
 				else
 					if(G.state == GRAB_NECK)
@@ -687,8 +692,8 @@ Sorry Giacom. Please don't be mad :(
 		floating = 0
 
 //called when the mob receives a bright flash
-/mob/living/proc/flash_eyes(intensity = 1, override_blindness_check = 0)
-	if((check_eye_prot() < intensity) && (override_blindness_check || !(disabilities & BLIND)))
+/mob/living/proc/flash_eyes(intensity = 1, override_blindness_check = 0, affect_silicon = 0)
+	if(check_eye_prot() < intensity && (override_blindness_check || !(disabilities & BLIND)))
 		flick("e_flash", flash)
 		return 1
 
@@ -704,10 +709,10 @@ Sorry Giacom. Please don't be mad :(
 // Override if a certain type of mob should be behave differently when stripping items (can't, for example)
 /mob/living/stripPanelUnequip(obj/item/what, mob/who, where)
 	if(what.flags & NODROP)
-		src << "<span class='notice'>Вы не можете извлечь \the [what.name], похоже застрЯло!</span>"
+		src << "<span class='warning'>You can't remove \the [what.name], it appears to be stuck!</span>"
 		return
-	who.visible_message("<span class='danger'>[src] пытаетсЯ убрать [who]'s [what.name].</span>", \
-					"<span class='userdanger'>[src] пытаетсЯ убрать [who]'s [what.name].</span>")
+	who.visible_message("<span class='danger'>[src] tries to remove [who]'s [what.name].</span>", \
+					"<span class='userdanger'>[src] tries to remove [who]'s [what.name].</span>")
 	what.add_fingerprint(src)
 	if(do_mob(src, who, what.strip_delay))
 		if(what && what == who.get_item_by_slot(where) && Adjacent(who))
@@ -719,13 +724,13 @@ Sorry Giacom. Please don't be mad :(
 /mob/living/stripPanelEquip(obj/item/what, mob/who, where)
 	what = src.get_active_hand()
 	if(what && (what.flags & NODROP))
-		src << "<span class='notice'>Вы не можете одеть \the [what.name] на [who], это застрЯло в вашей руке!</span>"
+		src << "<span class='warning'>You can't put \the [what.name] on [who], it's stuck to your hand!</span>"
 		return
 	if(what)
 		if(!what.mob_can_equip(who, where, 1))
-			src << "<span class='warning'>[what.name] не может поместитс&#255; это место!</span>"
+			src << "<span class='warning'>\The [what.name] doesn't fit in that place!</span>"
 			return
-		visible_message("<span class='notice'>[src] пытаетс&#255; одеть [what] на [who].</span>")
+		visible_message("<span class='notice'>[src] tries to put [what] on [who].</span>")
 		if(do_mob(src, who, what.put_on_delay))
 			if(what && Adjacent(who))
 				unEquip(what)
