@@ -123,9 +123,9 @@
 
 		if(wear_mask.blood_DNA && (wear_mask.body_parts_covered & HEAD))
 			standing.overlays += image("icon"='icons/effects/blood.dmi', "icon_state"="maskblood")
-		apply_overlay(FACEMASK_LAYER)
+		return wear_mask
 
-/mob/living/carbon/human/update_inv_back()
+/mob/living/carbon/update_inv_back()
 	remove_overlay(BACK_LAYER)
 	if(back)
 		var/image/standing
@@ -137,10 +137,9 @@
 			standing = image("icon"='icons/mob/back.dmi', "icon_state"="[back.icon_state]", "layer"=-BACK_LAYER)
 
 		overlays_standing[BACK_LAYER] = standing
-		apply_overlay(BACK_LAYER)
+		return back
 
-
-/mob/living/carbon/human/update_inv_head()
+/mob/living/carbon/update_inv_head()
 	remove_overlay(HEAD_LAYER)
 	if(head)
 		var/image/standing
@@ -157,7 +156,7 @@
 
 		if(head.blood_DNA)
 			standing.overlays	+= image("icon"='icons/effects/blood.dmi', "icon_state"="helmetblood")
-		apply_overlay(HEAD_LAYER)
+		return head
 
 /mob/living/carbon/update_inv_handcuffed()
 	remove_overlay(HANDCUFF_LAYER)
@@ -177,5 +176,3 @@
 			var/obj/screen/inventory/L = hud_used.l_hand_hud_object
 			R.overlays = null
 			L.overlays = null
-
-

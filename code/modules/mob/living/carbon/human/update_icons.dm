@@ -508,9 +508,6 @@ Please contact me on #coderbus IRC. ~Carnie x
 	if(..())
 		if(hud_used)
 			hud_used.hidden_inventory_update() 	//Updates the screenloc of the items on the 'other' inventory bar
-			hud_used.persistant_inventory_update()
-			hud_used.mymob.update_action_buttons()
-			hud_used.reorganize_alerts()
 
 
 /mob/living/carbon/human/proc/wear_female_version(t_color, icon, layer, type)
