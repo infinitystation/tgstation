@@ -122,3 +122,9 @@ obj/machinery/recharger/wallcharger
 	name = "wall recharger"
 	icon = 'icons/obj/stationobjs.dmi'
 	icon_state = "wrecharger0"
+
+/obj/machinery/recharger/allcharger/update_icon()	//we have an update_icon() in addition to the stuff in process to make it feel a tiny bit snappier.
+	if(charging)
+		icon_state = "wrecharger1"
+	else
+		icon_state = "wrecharger0"
