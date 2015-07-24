@@ -31,3 +31,4 @@ temblrex = Game Master
 thehero13 = Game Master
 firsttea = Game Master
 pinochetche = Game Master
+surman = Game Master

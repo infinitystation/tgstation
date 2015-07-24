@@ -50,6 +50,11 @@
 	var/list/upgrades = list()
 	var/can_pull_pin = 1
 
+	var/ammo_x_offset = 0 //used for positioning ammo count overlay on sprite
+	var/ammo_y_offset = 0
+	var/flight_x_offset = 0
+	var/flight_y_offset = 0
+
 /obj/item/weapon/gun/New()
 	..()
 	if(pin)
@@ -225,9 +230,9 @@
 			semicd = 0
 
 	if(user.hand)
-		user.update_inv_l_hand(0)
+		user.update_inv_l_hand()
 	else
-		user.update_inv_r_hand(0)
+		user.update_inv_r_hand()
 	feedback_add_details("gun_fired","[src.name]")
 
 /obj/item/weapon/gun/attack(mob/M as mob, mob/user)

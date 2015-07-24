@@ -275,6 +275,9 @@
 	action_button_name = null
 	can_pull_pin = 0
 
+/obj/item/weapon/gun/projectile/automatic/shotgun/bulldog/unrestricted
+	pin = /obj/item/device/firing_pin
+
 /obj/item/weapon/gun/projectile/automatic/shotgun/bulldog/New()
 	..()
 	update_icon()

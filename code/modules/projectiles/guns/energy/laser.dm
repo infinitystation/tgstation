@@ -7,6 +7,7 @@
 	materials = list(MAT_METAL=2000)
 	origin_tech = "combat=3;magnets=2"
 	ammo_type = list(/obj/item/ammo_casing/energy/lasergun)
+	ammo_x_offset = 1
 
 
 /obj/item/weapon/gun/energy/laser/practice
@@ -21,6 +22,7 @@
 	name ="retro laser"
 	icon_state = "retro"
 	desc = "An older model of the basic lasergun, no longer used by Nanotrasen's private security or military forces. Nevertheless, it is still quite deadly and easy to maintain, making it a favorite amongst pirates and other outlaws."
+	ammo_x_offset = 3
 
 
 /obj/item/weapon/gun/energy/laser/captain
@@ -31,6 +33,7 @@
 	origin_tech = null
 	var/charge_tick = 0
 	cell_removing = 0
+	ammo_x_offset = 3
 
 /obj/item/weapon/gun/energy/laser/captain/New()
 	..()
@@ -91,6 +94,7 @@
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/heavy)
 	pin = null
 	cell_type = null
+	ammo_x_offset = 3
 
 /obj/item/weapon/gun/energy/xray
 	name = "xray laser gun"
@@ -101,6 +105,7 @@
 	ammo_type = list(/obj/item/ammo_casing/energy/xray)
 	pin = null
 	cell_type = null
+	ammo_x_offset = 3
 
 ////////Laser Tag////////////////////
 
@@ -115,6 +120,7 @@
 	var/charge_tick = 0
 	cell_removing = 0
 	pin = /obj/item/device/firing_pin/tag/blue
+	ammo_x_offset = 2
 
 /obj/item/weapon/gun/energy/laser/bluetag/New()
 	..()
@@ -147,6 +153,7 @@
 	var/charge_tick = 0
 	cell_removing = 0
 	pin = /obj/item/device/firing_pin/tag/red
+	ammo_x_offset = 2
 
 /obj/item/weapon/gun/energy/laser/redtag/New()
 	..()

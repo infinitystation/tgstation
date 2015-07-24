@@ -579,13 +579,13 @@
 		if(H.overeatduration < 100)
 			H << "<span class='notice'>¬ы опять чувствуете себя в норме!</span>"
 			H.disabilities &= ~FAT
-			H.update_inv_w_uniform(0)
+			H.update_inv_w_uniform()
 			H.update_inv_wear_suit()
 	else
 		if(H.overeatduration > 500)
 			H << "<span class='danger'>¬ы внезапно почувствовали, что вы переели и стали толстеть!</span>"
 			H.disabilities |= FAT
-			H.update_inv_w_uniform(0)
+			H.update_inv_w_uniform()
 			H.update_inv_wear_suit()
 
 	//need to shit? yes! yes! yes!
@@ -600,7 +600,7 @@
 			H.need_to_shit = min(SHIT_LEVEL_MAX, H.need_to_shit + HUNGER_FACTOR)
 
 	// nutrition decrease and satiety
-	if (H.nutrition > 0 && H.stat != 2)
+	if (H.nutrition > 0 && H.stat != DEAD)
 		var/hunger_rate = HUNGER_FACTOR
 		if(H.satiety > 0)
 			H.satiety--
@@ -1039,10 +1039,10 @@
 				if(get_dist(H, H) <= 1)	//people with TK won't get smeared with blood
 					if(H.wear_suit)
 						H.wear_suit.add_blood(H)
-						H.update_inv_wear_suit(0)	//updates mob overlays to show the new blood (no refresh)
+						H.update_inv_wear_suit()	//updates mob overlays to show the new blood (no refresh)
 					else if(H.w_uniform)
 						H.w_uniform.add_blood(H)
-						H.update_inv_w_uniform(0)	//updates mob overlays to show the new blood (no refresh)
+						H.update_inv_w_uniform()	//updates mob overlays to show the new blood (no refresh)
 					if (H.gloves)
 						var/obj/item/clothing/gloves/G = H.gloves
 						G.add_blood(H)
@@ -1069,13 +1069,13 @@
 				if(bloody)	//Apply blood
 					if(H.wear_mask)
 						H.wear_mask.add_blood(H)
-						H.update_inv_wear_mask(0)
+						H.update_inv_wear_mask()
 					if(H.head)
 						H.head.add_blood(H)
-						H.update_inv_head(0)
+						H.update_inv_head()
 					if(H.glasses && prob(33))
 						H.glasses.add_blood(H)
-						H.update_inv_glasses(0)
+						H.update_inv_glasses()
 
 			if("chest")	//Easier to score a stun but lasts less time
 				if(H.stat == CONSCIOUS && I.force && prob(I.force + 10))
@@ -1090,10 +1090,10 @@
 				if(bloody)
 					if(H.wear_suit)
 						H.wear_suit.add_blood(H)
-						H.update_inv_wear_suit(0)
+						H.update_inv_wear_suit()
 					if(H.w_uniform)
 						H.w_uniform.add_blood(H)
-						H.update_inv_w_uniform(0)
+						H.update_inv_w_uniform()
 
 		if(Iforce > 10 || Iforce >= 5 && prob(33))
 			H.forcesay(hit_appends)	//forcesay checks stat already.

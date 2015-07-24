@@ -100,6 +100,14 @@ macro "borghotkeymode"
 		command = ".west"
 		is-disabled = false
 	elem 
+		name = "C"
+		command = "resist"
+		is-disabled = false
+	elem 
+		name = "CTRL+C"
+		command = "resist"
+		is-disabled = false
+	elem 
 		name = "D+REP"
 		command = ".east"
 		is-disabled = false
@@ -296,6 +304,10 @@ macro "macro"
 	elem 
 		name = "CTRL+A+REP"
 		command = ".west"
+		is-disabled = false
+	elem 
+		name = "CTRL+C"
+		command = "resist"
 		is-disabled = false
 	elem 
 		name = "CTRL+D+REP"
@@ -496,6 +508,14 @@ macro "hotkeymode"
 		command = ".west"
 		is-disabled = false
 	elem 
+		name = "C"
+		command = "resist"
+		is-disabled = false
+	elem 
+		name = "CTRL+C"
+		command = "resist"
+		is-disabled = false
+	elem 
 		name = "D+REP"
 		command = ".east"
 		is-disabled = false
@@ -650,6 +670,10 @@ macro "borgmacro"
 		command = ".southeast"
 		is-disabled = false
 	elem 
+		name = "SOUTHWEST"
+		command = "resist"
+		is-disabled = false
+	elem 
 		name = "NORTHWEST"
 		command = "unequip-module"
 		is-disabled = false
@@ -712,6 +736,10 @@ macro "borgmacro"
 	elem 
 		name = "CTRL+A+REP"
 		command = ".west"
+		is-disabled = false
+	elem 
+		name = "CTRL+C"
+		command = "resist"
 		is-disabled = false
 	elem 
 		name = "CTRL+D+REP"

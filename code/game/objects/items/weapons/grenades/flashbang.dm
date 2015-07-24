@@ -22,7 +22,7 @@
 	M.show_message("<span class='warning'>BANG</span>", 2)
 	playsound(loc, 'sound/effects/bang.ogg', 25, 1)
 
-//Checking for protections
+//Checking for protection
 	var/ear_safety = M.check_ear_prot()
 	var/distance = max(1,get_dist(src,T))
 
@@ -34,9 +34,7 @@
 		M.Stun(15)
 		M.eye_stat += 8
 
-	if(M.flash_eyes())
-		flick("e_flash", M.flash)
-		M.eye_stat += rand(1, 3)
+	if(M.flash_eyes(affect_silicon = 1))
 		M.Stun(max(10/distance, 3))
 		M.Weaken(max(10/distance, 3))
 
