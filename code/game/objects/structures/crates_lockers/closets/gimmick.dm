@@ -200,8 +200,8 @@
 
 /obj/structure/closet/gimmick/uac/New()
 	..()
-	new /obj/item/clothing/under/UACcamo(src)
-	new /obj/item/clothing/shoes/combat/UACtrooperBoots(src)
+	new /obj/item/clothing/under/pants/camo(src)
+	new /obj/item/clothing/shoes/combat/swat(src)
 
 /obj/structure/closet/gimmick/uac/trooper
 	name = "UAC Paratrooper equipment"
@@ -243,28 +243,28 @@
 	new /obj/item/ammo_box/magazine/m556(src)
 	new /obj/item/ammo_box/magazine/m556(src)
 	new /obj/item/ammo_box/magazine/m556(src)
-	new /obj/item/clothing/suit/armor/vest
-	new /obj/item/clothing/suit/armor/vest
-	new /obj/item/clothing/suit/armor/vest
-	new /obj/item/clothing/suit/armor/vest
-	new /obj/item/clothing/suit/armor/vest
-	new /obj/item/clothing/shoes/combat/swat
-	new /obj/item/clothing/shoes/combat/swat
-	new /obj/item/clothing/shoes/combat/swat
-	new /obj/item/clothing/shoes/combat/swat
-	new /obj/item/clothing/shoes/combat/swat
-	new /obj/item/clothing/under/syndicate
-	new /obj/item/clothing/under/syndicate
-	new /obj/item/clothing/under/syndicate
-	new /obj/item/clothing/under/syndicate
-	new /obj/item/clothing/under/syndicate
-	new /obj/item/clothing/head/helmet/swat
-	new /obj/item/clothing/head/helmet/swat
-	new /obj/item/clothing/head/helmet/swat
-	new /obj/item/clothing/head/helmet/swat
-	new /obj/item/clothing/head/helmet/swat
-	new /obj/item/device/radio/headset
-	new /obj/item/device/radio/headset
-	new /obj/item/device/radio/headset
-	new /obj/item/device/radio/headset
-	new /obj/item/device/radio/headset
+	new /obj/item/clothing/suit/armor/vest(src)
+	new /obj/item/clothing/suit/armor/vest(src)
+	new /obj/item/clothing/suit/armor/vest(src)
+	new /obj/item/clothing/suit/armor/vest(src)
+	new /obj/item/clothing/suit/armor/vest(src)
+	new /obj/item/clothing/shoes/combat/swat(src)
+	new /obj/item/clothing/shoes/combat/swat(src)
+	new /obj/item/clothing/shoes/combat/swat(src)
+	new /obj/item/clothing/shoes/combat/swat(src)
+	new /obj/item/clothing/shoes/combat/swat(src)
+	new /obj/item/clothing/under/syndicate(src)
+	new /obj/item/clothing/under/syndicate(src)
+	new /obj/item/clothing/under/syndicate(src)
+	new /obj/item/clothing/under/syndicate(src)
+	new /obj/item/clothing/under/syndicate(src)
+	new /obj/item/clothing/head/helmet/swat(src)
+	new /obj/item/clothing/head/helmet/swat(src)
+	new /obj/item/clothing/head/helmet/swat(src)
+	new /obj/item/clothing/head/helmet/swat(src)
+	new /obj/item/clothing/head/helmet/swat(src)
+	new /obj/item/device/radio/headset(src)
+	new /obj/item/device/radio/headset(src)
+	new /obj/item/device/radio/headset(src)
+	new /obj/item/device/radio/headset(src)
+	new /obj/item/device/radio/headset(src)

@@ -193,6 +193,7 @@ var/datum/subsystem/air/SSair
 					if(!T.air.check_turf_total(enemy_tile))
 						T.excited = 1
 						active_turfs |= T
+						break
 	if(active_turfs.len)
 		warning("There are [active_turfs.len] active turfs at roundstart, this is a mapping error caused by a difference of the air between the adjacent turfs. You can see its coordinates at /data/AT_list.txt or using \"Mapping -> Show roundstart AT list\" verb")
 		var/F = file("data/AT_list.txt")
