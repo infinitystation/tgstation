@@ -22,7 +22,7 @@
 
 /obj/structure/closet/gimmick/zombie/New()
 	..()
-	new /obj/item/clothing/under/syndicate/tacticool(src)
+	new /obj/item/clothing/under/color/black(src)
 	new /obj/item/clothing/suit/armor/vest(src)
 	new /obj/item/clothing/gloves/combat(src)
 	new /obj/item/device/flashlight(src)
