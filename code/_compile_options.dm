@@ -68,3 +68,7 @@ var/list/del_counter = list()
 
 //host on Ubuntu, we can't use bygex library (c) Suworow
 //#define USE_BYGEX
+
+#if DM_VERSION < 508 //Update this whenever you need to take advantage of more recent byond features
+#error Your version of BYOND is too out-of-date to compile this project. Go to byond.com/download and update.
+#endif
