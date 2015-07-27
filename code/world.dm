@@ -209,7 +209,7 @@
 	s += " ("
 	s += "<a href=\"http://infinity.smforum.ru/index.php\">" //Change this to wherever you want the hub to link to.
 //	s += "[game_version]"
-	s += "Infinity Forum"  //Replace this with something else. Or ever better, delete it and uncomment the game version.
+	s += "Forum"  //Replace this with something else. Or ever better, delete it and uncomment the game version.
 	s += "</a>"
 	s += ")"
 
@@ -240,8 +240,8 @@
 	if (config && config.allow_vote_mode)
 		features += "vote"
 
-	if (config && config.allow_ai)
-		features += "AI allowed"
+	/* if (config && config.allow_ai)
+		features += "AI allowed" */
 
 	var/n = 0
 	for (var/mob/M in player_list)
