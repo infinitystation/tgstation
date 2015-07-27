@@ -614,14 +614,19 @@ var/global/floorIsLava = 0
 	set category = "Server"
 	set name = "Toggle Event Status"
 	set desc = "Toggles mode/event status on hub"
-	event_on_air = !event_on_air
-	if(event_on_air)
+	if(!event_on_air)
 		event_url = input(usr, "Напиши ССЫЛКУ на Ивент", "Нужна ссылка") as null|text
+		if(event_url)
+			event_on_air = !event_on_air
+		else
+			usr << usr << "<span class='info'>Ссылка об&#255;зательна дл&#255; изменени&#255; статуса сервера (ивент) на \"Ивент\"</span>"
+			return
 	else
 		event_url = ""
+		event_on_air = !event_on_air
 	world.update_status()
-	message_admins("[key_name_admin(usr)] изменил(а) статус сервера (Ивент) на [event_on_air ? "Ивент" : "Режим"]. [event_url ? "Ссылка на ивент: [event_url]" : ""]")
-	log_admin("[key_name(usr)] изменил(а) статус сервера (Ивент) на [event_on_air ? "Ивент" : "Режим"]. [event_url ? "Ссылка на ивент: [event_url]" : ""]")
+	message_admins("[key_name_admin(usr)] изменил(а) статус сервера (ивент) на [event_on_air ? "\"Ивент\"" : "\"Режим\""]. [event_url ? "Ссылка на ивент: [event_url]" : ""]")
+	log_admin("[key_name(usr)] изменил(а) статус сервера (Ивент) на [event_on_air ? "\"Ивент\"" : "\"Режим\""]. [event_url ? "Ссылка на ивент: [event_url]" : ""]")
 	feedback_add_details("admin_verb","SEVS") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /datum/admins/proc/view_event_status()
@@ -631,7 +636,7 @@ var/global/floorIsLava = 0
 	if(event_on_air)
 		usr << "<span class='info'>На сервере [ticker ? "идет" : "готовитс&#255;"] ивент. Подробности читайте здесь: [event_url] или в Admin -> Admin-Notice. Также спросите коллег через asay</span>"
 	else
-		usr << "На сервере обычный раунд с режимом [ticker.mode]"
+		usr << "Ивента нет, но, возможно, он будет. Спросите коллег"
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////ADMIN HELPER PROCS
