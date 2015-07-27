@@ -218,10 +218,15 @@
 	features += "Map - [MAP_NAME]"
 
 	if(ticker)
-		if(master_mode)
-			features += master_mode
+		if(event_on_air)
+			features += "<b>Event</b>"
+		else if(master_mode)
+			features += "Mode: [master_mode]"
 	else
-		features += "<b>STARTING</b>"
+		if(event_on_air)
+			features += "<b>STARTING EVENT</b>"
+		else
+			features += "<b>STARTING</b>"
 
 	if (!enter_allowed)
 		features += "closed"

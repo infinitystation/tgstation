@@ -183,6 +183,9 @@ var/next_external_rsc = 0
 		else
 			winset(src, "rpane.changelogb", "background-color=#eaeaea;font-style=bold")
 
+	if(event_on_air)
+		src << "<span class='info'>Ќа сервере [ticker ? "идет" : "готовитс&#255;"] ивент. ѕодробности читайте в Admin -> Admin-Notice или спросите через Adminhelp (F1)</span>"
+
 	//////////////
 	//DISCONNECT//
 	//////////////

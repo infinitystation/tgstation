@@ -610,6 +610,15 @@ var/global/floorIsLava = 0
 		alert("[M.name] is not prisoned.")
 	feedback_add_details("admin_verb","UP") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
+/datum/admins/proc/set_event_status()
+	set category = "Server"
+	set name = "Toggle Event Status"
+	set desc = "Toggles mode/event status on hub"
+	event_on_air = !event_on_air
+	message_admins("[key_name(usr)] изменил(а) статус сервера (Ивент) на [event_on_air ? "Ивент" : "Режим"]")
+	log_admin("[key_name(usr)] изменил(а) статус сервера (Ивент) на [event_on_air ? "Ивент" : "Режим"]")
+	feedback_add_details("admin_verb","SEVS") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
+
 ////////////////////////////////////////////////////////////////////////////////////////////////ADMIN HELPER PROCS
 
 /*

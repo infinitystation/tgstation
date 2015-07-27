@@ -20,7 +20,8 @@ var/list/admin_verbs_default = list(
 	/client/proc/cmd_admin_pm_panel,		/*admin-pm list*/
 	/client/proc/stop_sounds,
 	/client/proc/freeze,
-	/client/proc/freezemecha
+	/client/proc/freezemecha,
+	/datum/admins/proc/set_event_status
 	)
 var/list/admin_verbs_admin = list(
 	/client/proc/player_panel_new,		/*shows an interface for all players, with links to various panels*/
