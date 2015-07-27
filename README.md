@@ -7,7 +7,8 @@
 **Сайт разработчика:** http://infinity.smforum.ru/index.php  
 **IRC (На английском)**: irc://irc.rizon.net/coderbus  
 **Основная карта:** Terror's MetaStation (_maps/map_files/TerrorStation)  
-**Используемая карта:** Terror's MetaStation
+**Используемая карта:** Terror's MetaStation  
+**Минимальная версия BYOND для компиляции:** 508
 
 ##ЗАГРУЗКА
 
