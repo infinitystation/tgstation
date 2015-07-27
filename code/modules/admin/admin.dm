@@ -615,10 +615,24 @@ var/global/floorIsLava = 0
 	set name = "Toggle Event Status"
 	set desc = "Toggles mode/event status on hub"
 	event_on_air = !event_on_air
-	update_status()
-	message_admins("[key_name(usr)] изменил(а) статус сервера (Ивент) на [event_on_air ? "Ивент" : "Режим"]")
-	log_admin("[key_name(usr)] изменил(а) статус сервера (Ивент) на [event_on_air ? "Ивент" : "Режим"]")
+	if(event_on_air)
+		event_url = input(usr, "Напиши ССЫЛКУ на Ивент", "Нужна ссылка") as null|text
+	else
+		event_url = ""
+	world.update_status()
+	message_admins("[key_name_admin(usr)] изменил(а) статус сервера (Ивент) на [event_on_air ? "Ивент" : "Режим"]. [event_url ? "Ссылка на ивент: [event_url]" : ""]")
+	log_admin("[key_name(usr)] изменил(а) статус сервера (Ивент) на [event_on_air ? "Ивент" : "Режим"]. [event_url ? "Ссылка на ивент: [event_url]" : ""]")
 	feedback_add_details("admin_verb","SEVS") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
+
+/datum/admins/proc/view_event_status()
+	set category = "Server"
+	set name = "View Event Status"
+	set desc = "View event status"
+	if(event_on_air)
+		usr << "<span class='info'>На сервере [ticker ? "идет" : "готовитс&#255;"] ивент. Подробности читайте здесь: [event_url] или в Admin -> Admin-Notice. Также спросите коллег через asay</span>"
+	else
+		usr << "На сервере обычный раунд с режимом [ticker.mode]"
+
 
 ////////////////////////////////////////////////////////////////////////////////////////////////ADMIN HELPER PROCS
 

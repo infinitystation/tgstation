@@ -214,17 +214,21 @@
 	s += ")"
 
 	var/list/features = list()
+	var/event_info = ""
+
+	if(event_on_air)
+		event_info = "Event (<a href=\"[event_url]\">Info</a>)"
 
 	features += "Map - [MAP_NAME]"
 
 	if(ticker)
 		if(event_on_air)
-			features += "<b>Event</b>"
+			features += "<b>[event_info]</b>"
 		else if(master_mode)
 			features += "Mode: [master_mode]"
 	else
 		if(event_on_air)
-			features += "<b>STARTING EVENT</b>"
+			features += "<b>STARTING [event_info]</b>"
 		else
 			features += "<b>STARTING</b>"
 

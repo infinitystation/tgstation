@@ -16,6 +16,7 @@ var/shuttle_frozen = 0
 var/shuttle_left = 0
 var/tinted_weldhelh = 1
 var/event_on_air = 0
+var/event_url = 0
 
 // Debug is used exactly once (in living.dm) but is commented out in a lot of places.  It is not set anywhere and only checked.
 // Debug2 is used in conjunction with a lot of admin verbs and therefore is actually legit.
