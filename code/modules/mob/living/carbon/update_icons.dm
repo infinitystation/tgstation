@@ -122,7 +122,6 @@
 			standing = image("icon"='icons/mob/back.dmi', "icon_state"="[back.icon_state]", "layer"=-BACK_LAYER)
 
 		overlays_standing[BACK_LAYER] = standing
-		apply_overlay(BACK_LAYER)
 		return back
 
 /mob/living/carbon/update_inv_head()

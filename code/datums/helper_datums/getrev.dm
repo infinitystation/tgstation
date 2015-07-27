@@ -30,7 +30,7 @@ var/global/datum/getrev/revdata = new()
 
 	if(revdata.revision)
 		src << "<b>Server revision compiled on:</b> [revdata.date]"
-		src << "<a href='[config.githuburl]/commit/[revdata.revision]'>[revdata.revision]</a>"
+		src << "<a href='[config.githuburl]/commits/[revdata.revision]'>[revdata.revision]</a>"
 	else
 		src << "Revision unknown"
 	src << "<b>Current Infomational Settings:</b>"

@@ -161,8 +161,9 @@
 
 	var/has_reagents
 	for(var/obj/item/I in beakers)
-		if(I.reagents.total_volume)
-			has_reagents = 1
+		if(I.reagents)
+			if(I.reagents.total_volume)
+				has_reagents = 1
 
 	if(!has_reagents)
 		playsound(loc, 'sound/items/Screwdriver2.ogg', 50, 1)
