@@ -94,6 +94,12 @@
 /turf/simulated/floor/plasteel/darkvault
 	icon_state = "vault"
 
+/turf/simulated/floor/plasteel/blackvault
+	icon_state = "vault"
+	icon = 'icons/turf/infinity.dmi'
+/turf/simulated/floor/plasteel/blackvault/corner
+	icon_state = "vaultcorner"
+
 /turf/simulated/floor/plasteel/yellowsiding
 	icon_state = "yellowsiding"
 /turf/simulated/floor/plasteel/yellowsiding/corner
