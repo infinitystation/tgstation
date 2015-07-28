@@ -97,17 +97,18 @@
 				return
 	if(user.s_active)
 		user.s_active.hide_from(user)
-	user.client.screen -= boxes
-	user.client.screen -= closer
-	user.client.screen -= contents
-	user.client.screen += boxes
-	user.client.screen += closer
-	user.client.screen += contents
+	if(user.client)
+		user.client.screen -= boxes
+		user.client.screen -= closer
+		user.client.screen -= contents
+		user.client.screen += boxes
+		user.client.screen += closer
+		user.client.screen += contents
 	user.s_active = src
 	is_seeing |= user
 
 
-/obj/item/weapon/storage/throw_at(atom/target, range, speed)
+/obj/item/weapon/storage/throw_at(atom/target, range, speed, mob/thrower, spin=1)
 	close_all()
 	return ..()
 
@@ -469,3 +470,6 @@
 		if(verbs.Find(/obj/item/weapon/storage/verb/quick_empty))
 			quick_empty()
 
+/obj/item/weapon/storage/handle_atom_del(atom/A)
+	if(A in contents)
+		remove_from_storage(A,null)

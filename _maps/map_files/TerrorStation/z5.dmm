@@ -715,7 +715,7 @@
 "nM" = (/obj/structure/alien/weeds,/obj/structure/stool/bed/nest,/turf/simulated/floor/plasteel/airless,/area/mine/abandoned)
 "nN" = (/obj/structure/alien/weeds,/obj/structure/stool/bed/nest,/obj/effect/decal/remains/human,/turf/simulated/floor/plasteel/airless,/area/mine/abandoned)
 "nO" = (/obj/structure/alien/weeds,/obj/structure/stool/bed/nest,/turf/simulated/floor/plasteel/airless{icon_state = "damaged4"},/area/mine/abandoned)
-"nP" = (/obj/docking_port/stationary{dir = 8; dwidth = 3; height = 6; id = "mining_away"; name = "asteroid mine"; width = 8},/turf/space,/area/space)
+"nP" = (/obj/docking_port/stationary{dir = 8; dwidth = 3; height = 7; id = "mining_away"; name = "asteroid mine"; width = 9},/turf/space,/area/space)
 
 (1,1,1) = {"
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
