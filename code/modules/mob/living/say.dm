@@ -228,7 +228,7 @@ var/list/crit_allowed_modes = list(MODE_WHISPER,MODE_CHANGELING,MODE_ALIEN)
 	if(stuttering)
 		message = stutter(message)
 
-	if(slurring)
+	if(slurring >= 30)
 		message = slur(message)
 
 	message = capitalize(message)

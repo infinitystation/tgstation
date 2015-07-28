@@ -99,7 +99,7 @@ var/global/normal_ooc_colour = "#002eb8"
 	msg = trim(sanitize(copytext(msg, 1, MAX_MESSAGE_LEN)))
 	if(!msg)	return
 
-	if(!(prefs.toggles & CHAT_LOOC))
+	if(!(prefs.chat_toggles & CHAT_LOOC))
 		src << "<span class='notice'>You have LOOC muted. Toggle it on Preferenes -> Show/Hide LOOC</span>"
 		return
 
@@ -138,7 +138,7 @@ var/global/normal_ooc_colour = "#002eb8"
 			if(R_ADMIN)
 				continue //they are handled after that
 
-		if(C.prefs.toggles & CHAT_LOOC)
+		if(C.prefs.chat_toggles & CHAT_LOOC)
 			if(holder)
 				if(holder.fakekey)
 					if(C.holder)
@@ -154,7 +154,7 @@ var/global/normal_ooc_colour = "#002eb8"
 
 	for(var/client/C in admins)
 		if(R_ADMIN)
-			if(C.prefs.toggles & CHAT_LOOC)
+			if(C.prefs.chat_toggles & CHAT_LOOC)
 				var/prefix = "(R)LOOC"
 				if (C.mob in heard)
 					prefix = "LOOC"

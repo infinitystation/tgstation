@@ -20,7 +20,9 @@ var/list/admin_verbs_default = list(
 	/client/proc/cmd_admin_pm_panel,		/*admin-pm list*/
 	/client/proc/stop_sounds,
 	/client/proc/freeze,
-	/client/proc/freezemecha
+	/client/proc/freezemecha,
+	/datum/admins/proc/set_event_status,
+	/datum/admins/proc/view_event_status
 	)
 var/list/admin_verbs_admin = list(
 	/client/proc/player_panel_new,		/*shows an interface for all players, with links to various panels*/
@@ -589,8 +591,8 @@ var/list/admin_verbs_hideable = list(
 			var/error_extra = ""
 			if(!config.admin_legacy_system)
 				error_extra = " Check mysql DB connection."
-			error("Error while re-adminning [src], admin rank ([rank]) does not exist.[error_extra]")
 			src << "Error while re-adminning, admin rank ([rank]) does not exist.[error_extra]"
+			WARNING("Error while re-adminning [src], admin rank ([rank]) does not exist.[error_extra]")
 			return
 		D = new(rank_names[rank],ckey)
 		var/client/C = directory[ckey]

@@ -159,7 +159,7 @@
 	set name = "Show/Hide LOOC"
 	set category = "Preferences"
 	set desc = "Toggles seeing Local OutOfCharacter chat"
-	prefs.toggles ^= CHAT_LOOC
+	prefs.chat_toggles ^= CHAT_LOOC
 	prefs.save_preferences(src)
 	src << "You will [(prefs.toggles & CHAT_LOOC) ? "now" : "no longer"] see messages on the LOOC channel."
 	feedback_add_details("admin_verb","TLOOC") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
