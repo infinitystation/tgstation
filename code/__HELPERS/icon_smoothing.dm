@@ -147,22 +147,23 @@
 		x_offset -= range
 
 	var/turf/target_turf = locate(source.x + x_offset, source.y + y_offset, source.z)
-	if(source.canSmoothWith)
-		var/atom/A
-		for(var/a_type in source.canSmoothWith)
-			if(ispath(a_type, /turf))
-				if(a_type == target_turf.type)
-					return target_turf
-			else
-				A = locate(a_type) in target_turf
-				if(A && A.type == a_type)
-					return A
-		return null
-	else
-		if(isturf(source))
-			return source.type == target_turf.type ? target_turf : null
-		var/atom/A = locate(source.type) in target_turf
-		return A && A.type == source.type ? A : null
+	if(target_turf)
+		if(source.canSmoothWith)
+			var/atom/A
+			for(var/a_type in source.canSmoothWith)
+				if(ispath(a_type, /turf))
+					if(a_type == target_turf.type)
+						return target_turf
+				else
+					A = locate(a_type) in target_turf
+					if(A && A.type == a_type)
+						return A
+			return null
+		else
+			if(isturf(source))
+				return source.type == target_turf.type ? target_turf : null
+			var/atom/A = locate(source.type) in target_turf
+			return A && A.type == source.type ? A : null
 
 /proc/clear_overlays(atom/A)
 	A.overlays -= A.top_left_corner

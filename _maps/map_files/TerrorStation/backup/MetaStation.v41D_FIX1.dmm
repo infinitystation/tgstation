@@ -3865,7 +3865,7 @@
 "bwq" = (/obj/structure/cable/yellow{d1 = 1; d2 = 2; icon_state = "1-2"},/obj/machinery/navbeacon{codes_txt = "patrol;next_patrol=7-Command-Starboard"; location = "6-Port-Central"},/obj/structure/disposalpipe/segment,/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{dir = 4},/turf/simulated/floor/plasteel,/area/hallway/primary/central)
 "bwr" = (/obj/machinery/light{dir = 1},/obj/item/weapon/storage/secure/briefcase,/obj/structure/table/wood,/obj/machinery/computer/security/telescreen{desc = "Used for watching Prison Wing holding areas."; name = "Prison Monitor"; network = list("Prison"); pixel_x = 0; pixel_y = 30},/turf/simulated/floor/wood,/area/crew_quarters/heads)
 "bws" = (/obj/machinery/atmospherics/components/unary/vent_scrubber{dir = 2; on = 1; scrub_N2O = 1; scrub_Toxins = 1},/obj/structure/cable/yellow{d1 = 1; d2 = 2; icon_state = "1-2"},/turf/simulated/floor/carpet,/area/crew_quarters/heads)
-"bwt" = (/mob/living/simple_animal/pet/dog/corgi/Ian,/turf/simulated/floor/carpet,/area/crew_quarters/heads)
+"bwt" = (/mob/living/simple_animal/pet/corgi/Ian,/turf/simulated/floor/carpet,/area/crew_quarters/heads)
 "bwu" = (/obj/structure/cable/yellow{d2 = 2; icon_state = "0-2"},/obj/machinery/power/apc{dir = 1; name = "Head of Personnel APC"; pixel_y = 24},/obj/machinery/light{dir = 1},/turf/simulated/floor/carpet,/area/crew_quarters/heads)
 "bwv" = (/turf/simulated/floor/carpet,/area/crew_quarters/heads)
 "bww" = (/obj/machinery/atmospherics/components/unary/vent_pump{dir = 2; on = 1},/turf/simulated/floor/carpet,/area/crew_quarters/heads)

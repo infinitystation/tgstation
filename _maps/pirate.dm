@@ -15,11 +15,11 @@ z7 = empty space
 
 #if !defined(MAP_FILE)
 
-        #include "map_files\MetaStation\MetaPirateStation.v1.4.dmm"
-        #include "map_files\MetaStation\z2t.dmm"
-        #include "map_files\MetaStation\z3.dmm"
-        #include "map_files\MetaStation\z4.dmm"
-        #include "map_files\MetaStation\z5.dmm"
+        #include "map_files\TerrorStation\MetaPirateStation.v1.4.dmm"
+        #include "map_files\TerrorStation\z2t.dmm"
+        #include "map_files\TerrorStation\z3.dmm"
+        #include "map_files\TerrorStation\z4.dmm"
+        #include "map_files\TerrorStation\z5.dmm"
         #include "map_files\generic\z6.dmm"
         #include "map_files\generic\z7.dmm"
         #define MAP_FILE "MetaPirateStation.v1.4.dmm"
