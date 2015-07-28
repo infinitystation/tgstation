@@ -76,7 +76,7 @@
 			return
 	else //otherwise just toggle it
 		looc_allowed = !looc_allowed
-	world << "<B>The LOOC channel has been globally [ooc_allowed ? "enabled" : "disabled"].</B>"
+	world << "<B>The LOOC channel has been globally [looc_allowed ? "enabled" : "disabled"].</B>"
 
 var/global/normal_ooc_colour = "#002eb8"
 
