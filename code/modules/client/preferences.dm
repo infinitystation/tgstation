@@ -1088,14 +1088,6 @@ var/global/list/special_roles = list( //keep synced with the defines BE_* in set
 		character.real_name = real_name
 		character.name = character.real_name
 
-		if(character.dna)
-			character.dna.real_name = character.real_name
-			if(pref_species != /datum/species/human && config.mutant_races)
-				hardset_dna(character, null, null, null, null, pref_species.type, features)
-			else
-				hardset_dna(character, null, null, null, null, /datum/species/human, features)
-			character.update_mutcolor()
-
 		character.gender = gender
 		character.age = age
 		character.blood_type = blood_type
@@ -1115,14 +1107,22 @@ var/global/list/special_roles = list( //keep synced with the defines BE_* in set
 
 		character.backbag = backbag
 
+		if(character.dna)
+			var/datum/species/chosen_species
+
+			character.dna.real_name = character.real_name
+			if(pref_species != /datum/species/human && config.mutant_races)
+				chosen_species = pref_species.type
+			else
+				chosen_species = /datum/species/human
+			hardset_dna(character, null, null, null, null, chosen_species, features)
+		else
+			character.update_body()
+			character.update_hair()
 
 		character.flavor_text = sanitize_a0(flavor_text)
 		character.sec_imp_notes = sec_imp_notes
 		character.med_imp_notes = med_imp_notes
-
-		character.update_body()
-		character.update_hair()
-
 
 	proc/set_char_notes(user)
 		var/dat = ""

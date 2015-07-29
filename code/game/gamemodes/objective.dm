@@ -186,7 +186,7 @@
 
 
 /datum/objective/hijack
-	explanation_text = "Взломать шаттл экстренной эвакуации и улететь на нём одному."
+	explanation_text = "Hijack the shuttle to ensure no loyalist Nanotrasen crew escape alive and out of custody."
 	dangerrating = 25
 	martyr_compatible = 0 //Technically you won't get both anyway.
 
@@ -214,7 +214,7 @@
 	return 1
 
 /datum/objective/hijackclone
-	explanation_text = "Hijack the emergency shuttle by ensuring only you (or your copies) escape."
+	explanation_text = "Угнать шаттл экстренной эвакуации и улететь на нём одному (или вашему клону)."
 	dangerrating = 25
 	martyr_compatible = 0
 
