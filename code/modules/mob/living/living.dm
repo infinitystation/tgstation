@@ -697,6 +697,8 @@ Sorry Giacom. Please don't be mad :(
 	if(check_eye_prot() < intensity && (override_blindness_check || !(disabilities & BLIND)))
 		flick("e_flash", flash)
 		return 1
+	else
+		return 0
 
 //this returns the mob's protection against eye damage (number between -1 and 2)
 /mob/living/proc/check_eye_prot()
