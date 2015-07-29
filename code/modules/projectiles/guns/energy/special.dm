@@ -55,6 +55,7 @@
 	var/charge_tick = 0
 	cell_removing = 0
 	can_pull_pin = 0
+	ammo_x_offset = 1
 
 /obj/item/weapon/gun/energy/floragun/New()
 	..()
