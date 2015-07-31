@@ -207,7 +207,7 @@
 
 	s += "<b>[station_name()]</b>";
 	s += " ("
-	s += "<a href=\"http://infinity.smforum.ru/index.php\">" //Change this to wherever you want the hub to link to.
+	s += "<a href=\"http://infinity.smforum.ru\">" //Change this to wherever you want the hub to link to.
 //	s += "[game_version]"
 	s += "Forum"  //Replace this with something else. Or ever better, delete it and uncomment the game version.
 	s += "</a>"
@@ -219,13 +219,11 @@
 	if(event_on_air)
 		event_info = "Event (<a href=\"[event_url]\">Info</a>)"
 
-	features += "Map - [MAP_NAME]"
-
 	if(ticker)
 		if(event_on_air)
 			features += "<b>[event_info]</b>"
 		else if(master_mode)
-			features += "Mode: [master_mode]"
+			features += "[master_mode]"
 	else
 		if(event_on_air)
 			features += "<b>STARTING [event_info]</b>"
