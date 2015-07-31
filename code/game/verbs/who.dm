@@ -1,4 +1,3 @@
-
 /client/verb/who()
 	set name = "Who"
 	set category = "OOC"

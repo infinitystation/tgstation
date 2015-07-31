@@ -100,11 +100,11 @@ macro "borghotkeymode"
 		command = ".west"
 		is-disabled = false
 	elem 
-		name = "C"
+		name = "B"
 		command = "resist"
 		is-disabled = false
 	elem 
-		name = "CTRL+C"
+		name = "CTRL+B"
 		command = "resist"
 		is-disabled = false
 	elem 
@@ -306,7 +306,7 @@ macro "macro"
 		command = ".west"
 		is-disabled = false
 	elem 
-		name = "CTRL+C"
+		name = "CTRL+B"
 		command = "resist"
 		is-disabled = false
 	elem 
@@ -508,11 +508,11 @@ macro "hotkeymode"
 		command = ".west"
 		is-disabled = false
 	elem 
-		name = "C"
+		name = "B"
 		command = "resist"
 		is-disabled = false
 	elem 
-		name = "CTRL+C"
+		name = "CTRL+B"
 		command = "resist"
 		is-disabled = false
 	elem 
@@ -670,10 +670,6 @@ macro "borgmacro"
 		command = ".southeast"
 		is-disabled = false
 	elem 
-		name = "SOUTHWEST"
-		command = "resist"
-		is-disabled = false
-	elem 
 		name = "NORTHWEST"
 		command = "unequip-module"
 		is-disabled = false
@@ -738,7 +734,7 @@ macro "borgmacro"
 		command = ".west"
 		is-disabled = false
 	elem 
-		name = "CTRL+C"
+		name = "CTRL+B"
 		command = "resist"
 		is-disabled = false
 	elem 
@@ -1241,6 +1237,8 @@ window "chemdispenser"
 		keep-aspect = false
 		align = center
 		text-wrap = false
+		allow-html = false
+		letterbox = true
 	elem "eject"
 		type = BUTTON
 		pos = 264,4
@@ -1407,6 +1405,8 @@ window "chemdispenser"
 		keep-aspect = false
 		align = center
 		text-wrap = false
+		allow-html = false
+		letterbox = true
 	elem "child1"
 		type = CHILD
 		pos = 0,40
@@ -1528,6 +1528,8 @@ window "chemdispenser_reagents"
 		keep-aspect = false
 		align = center
 		text-wrap = false
+		allow-html = false
+		letterbox = true
 
 window "mainwindow"
 	elem "mainwindow"
