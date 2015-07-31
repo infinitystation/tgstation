@@ -10,15 +10,15 @@
 	var/mob/living/account_holder			//holder reference for checking lost
 	var/list/cards							//accessible cards
 
-/datum/economy_account/load_starting_from_DB()
+/datum/economy_account/proc/load_starting_from_DB()
 	if(!establish_db_connection())
 		world.log << "WARNING! [name] bank account not synced from DB!"
 		return
 
-	var/DBQuery/query_sync("SELECT amount FROM economy WHERE (name = '[name]') and (ckey = '[ckey]') and (station = '[station]')")
+	var/DBQuery/query_sync = dbcon.NewQuery("SELECT amount FROM economy WHERE (name = '[name]') and (ckey = '[ckey]') and (station = '[station]')")
 
 	while(query_sync.NextRow())
-		amount = query.item[1]
+		amount = query_sync.item[1]
 
 /datum/economy_account/department
 	name = "Departnemt"
@@ -31,23 +31,23 @@
 	name = "Station"
 	amount = 175000
 
-/datum/economy_account/station/cargo
+/datum/economy_account/department/cargo
 	name = "Cargo"
 
-/datum/economy_account/station/civil
+/datum/economy_account/department/civil
 	name = "Civilian"
 
-/datum/economy_account/station/engineering
+/datum/economy_account/department/engineering
 	name = "Engineering"
 
-/datum/economy_account/station/medical
+/datum/economy_account/department/medical
 	name = "Medical"
 
-/datum/economy_account/station/research
+/datum/economy_account/department/research
 	name = "Research"
 
-/datum/economy_account/station/security
+/datum/economy_account/department/security
 	name = "Security"
 
-/datum/economy_account/station/service
+/datum/economy_account/department/service
 	name = "Service"
