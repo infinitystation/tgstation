@@ -4,7 +4,7 @@
 	var/list/log							//log for atms
 	var/pin_code							//pin code
 	var/account_name						//account name ingame
-	var/station	= "no"							//station flag
+	var/station	= "no"						//station flag
 	var/name								//name for db
 	var/salary								//salary
 	var/mob/living/account_holder			//holder reference for checking lost
@@ -15,10 +15,20 @@
 		world.log << "WARNING! [name] bank account not synced from DB!"
 		return
 
-	var/DBQuery/query_sync = dbcon.NewQuery("SELECT amount FROM economy WHERE (name = '[name]') and (ckey = '[ckey]') and (station = '[station]')")
+	var/query_text
+	if(ckey)
+		query_text = "SELECT amount FROM economy WHERE (name = '[name]') AND (ckey = '[ckey]') AND (station = '[station]')"
+	else
+		query_text = "SELECT amount FROM economy WHERE (name = '[name]') AND (ckey is NULL) AND (station = '[station]')"
+	var/DBQuery/query_sync = dbcon.NewQuery("[query_text]")
+
+	query_sync.Execute()
+
+	world << "ACCOUNT [name] WAS LOADING FROM DB"
 
 	while(query_sync.NextRow())
 		amount = query_sync.item[1]
+		world << "ACCOUNT [name] WAS LOADED FROM DB"
 
 /datum/economy_account/department
 	name = "Departnemt"

@@ -1,12 +1,13 @@
 var/datum/economy_system/economy_system = new()
 
 /datum/economy_system
-	var/list/datum/economy_account/personal_accounts
-	var/list/datum/economy_account/department/station_accounts
+	var/list/personal_accounts = list()
+	var/list/station_accounts = list()
+	var/datum/economy_account/department/infinity_station
 	var/list/logs
 
 /datum/economy_system/New()
-	station_accounts = list(new /datum/economy_account/department/station(), \
+	var/temp_accounts = list(new /datum/economy_account/department/station(), \
 	new /datum/economy_account/department/cargo(), \
 	new /datum/economy_account/department/civil(), \
 	new /datum/economy_account/department/engineering(), \
@@ -15,6 +16,12 @@ var/datum/economy_system/economy_system = new()
 	new /datum/economy_account/department/security(), \
 	new /datum/economy_account/department/service())
 
+	for(var/datum/economy_account/department/Saccount in temp_accounts)
+		station_accounts |= Saccount
+		if(Saccount.name == "Station")
+			infinity_station = Saccount
+
+/datum/economy_system/proc/start()
 	for(var/datum/economy_account/department/Saccount in station_accounts)
 		Saccount.load_starting_from_DB()
 
@@ -30,18 +37,23 @@ var/datum/economy_system/economy_system = new()
 		diary << "WARNING! Economy system not synced to DB!"
 		return 0
 
+	world << "ECONOMY IS SAVING NOW"
+
 	for(var/datum/economy_account/department/Saccount in station_accounts)
 		var/DBQuery/query_SA_check = dbcon.NewQuery("SELECT * FROM economy WHERE (name = '[Saccount.name]') and (station = '[Saccount.station]')")
-		if(query_SA_check.Execute())
+		if(query_SA_check.Execute() && query_SA_check.NextRow())
 			var/DBQuery/query_SA_update = dbcon.NewQuery("UPDATE economy SET amount = [Saccount.amount] WHERE (name = '[Saccount.name]') and (station = '[Saccount.station]')")
 			query_SA_update.Execute()
+			world << "STATION ACCOUNT UPDATED"
 		else
 			var/DBQuery/query_SA_insert = dbcon.NewQuery("INSERT INTO economy(name, ckey, amount, station) VALUES ('[Saccount.name]', null, [Saccount.amount], '[Saccount.station]')") //NEW DEPARTMENT!
 			query_SA_insert.Execute()
+			world << "STATION ACCOUNT CREATED"
+		world << "STATION ACCOUNT WAS SAVED"
 
 	for(var/datum/economy_account/Paccount in personal_accounts)
 		var/DBQuery/query_PA_check = dbcon.NewQuery("SELECT * FROM economy WHERE (name = '[Paccount.name]') and (ckey = '[Paccount.ckey]') and (station = '[Paccount.station]')")
-		if(query_PA_check.Execute())
+		if(query_PA_check.Execute() && query_PA_check.NextRow())
 			var/DBQuery/query_PA_update = dbcon.NewQuery("UPDATE economy SET amount = [Paccount.amount] WHERE (name = '[Paccount.name]') and (ckey = '[Paccount.ckey]') and (station = '[Paccount.station]')")
 			query_PA_update.Execute()
 		else
@@ -49,3 +61,16 @@ var/datum/economy_system/economy_system = new()
 			query_PA_insert.Execute()
 
 	return 1
+
+/mob/verb/test_economy()
+	set category = "Debug"
+	set name = "Test economy"
+	economy_system.infinity_station.amount -= 1000
+	world << "STATION MONEY IS USED! AMOUNT IS [economy_system.infinity_station.amount]"
+	return
+
+/mob/verb/test_economy_2()
+	set category = "Debug"
+	set name = "Test economy 2"
+	world << "STATION MONEY AMOUNT IS [economy_system.infinity_station.amount]"
+	return

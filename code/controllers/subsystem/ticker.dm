@@ -106,6 +106,7 @@ var/datum/subsystem/ticker/ticker
 				current_state = GAME_STATE_FINISHED
 				toggle_ooc(1) // Turn it on
 				toggle_looc(1) // Turn it on
+				economy_system.save_system_to_DB()
 				declare_completion(force_ending)
 				spawn(50)
 					if(mode.station_was_nuked)
@@ -178,6 +179,8 @@ var/datum/subsystem/ticker/ticker
 	data_core.manifest()
 
 	master_controller.roundHasStarted()
+
+	economy_system.start()
 
 
 	world << "<FONT color='blue'><B>Welcome to [station_name()], enjoy your stay!</B></FONT>"
