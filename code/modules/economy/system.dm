@@ -17,9 +17,7 @@ var/datum/economy_system/economy_system = new()
 	new /datum/economy_account/department/service())
 
 	for(var/datum/economy_account/department/Saccount in temp_accounts)
-		station_accounts |= Saccount
-		if(Saccount.name == "Station")
-			infinity_station = Saccount
+		station_accounts[Saccount.name] |= Saccount
 
 /datum/economy_system/proc/start()
 	for(var/datum/economy_account/department/Saccount in station_accounts)
@@ -44,12 +42,9 @@ var/datum/economy_system/economy_system = new()
 		if(query_SA_check.Execute() && query_SA_check.NextRow())
 			var/DBQuery/query_SA_update = dbcon.NewQuery("UPDATE economy SET amount = [Saccount.amount] WHERE (name = '[Saccount.name]') and (station = '[Saccount.station]')")
 			query_SA_update.Execute()
-			world << "STATION ACCOUNT UPDATED"
 		else
 			var/DBQuery/query_SA_insert = dbcon.NewQuery("INSERT INTO economy(name, ckey, amount, station) VALUES ('[Saccount.name]', null, [Saccount.amount], '[Saccount.station]')") //NEW DEPARTMENT!
 			query_SA_insert.Execute()
-			world << "STATION ACCOUNT CREATED"
-		world << "STATION ACCOUNT WAS SAVED"
 
 	for(var/datum/economy_account/Paccount in personal_accounts)
 		var/DBQuery/query_PA_check = dbcon.NewQuery("SELECT * FROM economy WHERE (name = '[Paccount.name]') and (ckey = '[Paccount.ckey]') and (station = '[Paccount.station]')")
@@ -64,13 +59,30 @@ var/datum/economy_system/economy_system = new()
 
 /mob/verb/test_economy()
 	set category = "Debug"
-	set name = "Test economy"
-	economy_system.infinity_station.amount -= 1000
-	world << "STATION MONEY IS USED! AMOUNT IS [economy_system.infinity_station.amount]"
+	set name = "Test economy A"
+	var/datum/economy_account/asd = economy_system.station_accounts["Station"]
+	asd.amount -= 1000
+	world << "STATION MONEY IS USED! AMOUNT IS [asd.amount]"
 	return
 
 /mob/verb/test_economy_2()
 	set category = "Debug"
-	set name = "Test economy 2"
-	world << "STATION MONEY AMOUNT IS [economy_system.infinity_station.amount]"
+	set name = "Test economy B"
+	var/datum/economy_account/asd = economy_system.station_accounts["Station"]
+	world << "STATION MONEY IS USED! AMOUNT IS [asd.amount]"
+	return
+
+/mob/verb/test_economy_3()
+	set category = "Debug"
+	set name = "Test economy C"
+	var/datum/economy_account/asd = economy_system.station_accounts["Civilian"]
+	asd.amount -= 1000
+	world << "CIVILIAN MONEY IS USED! AMOUNT IS [asd.amount]"
+	return
+
+/mob/verb/test_economy_4()
+	set category = "Debug"
+	set name = "Test economy D"
+	var/datum/economy_account/asd = economy_system.station_accounts["Civilian"]
+	world << "CIVILIAN MONEY IS USED! AMOUNT IS [asd.amount]"
 	return

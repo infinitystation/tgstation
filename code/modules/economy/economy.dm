@@ -24,11 +24,8 @@
 
 	query_sync.Execute()
 
-	world << "ACCOUNT [name] WAS LOADING FROM DB"
-
 	while(query_sync.NextRow())
 		amount = query_sync.item[1]
-		world << "ACCOUNT [name] WAS LOADED FROM DB"
 
 /datum/economy_account/department
 	name = "Departnemt"
