@@ -3,11 +3,10 @@ var/datum/economy_system/economy_system = new()
 /datum/economy_system
 	var/list/personal_accounts = list()
 	var/list/station_accounts = list()
-	var/datum/economy_account/department/infinity_station
 	var/list/logs
 
 /datum/economy_system/New()
-	var/temp_accounts = list(new /datum/economy_account/department/station(), \
+	var/list/depts = list(new /datum/economy_account/department/station(), \
 	new /datum/economy_account/department/cargo(), \
 	new /datum/economy_account/department/civil(), \
 	new /datum/economy_account/department/engineering(), \
@@ -16,8 +15,8 @@ var/datum/economy_system/economy_system = new()
 	new /datum/economy_account/department/security(), \
 	new /datum/economy_account/department/service())
 
-	for(var/datum/economy_account/department/Saccount in temp_accounts)
-		station_accounts[Saccount.name] |= Saccount
+	for(var/datum/economy_account/department/Saccount in depts)
+		station_accounts |= Saccount
 
 /datum/economy_system/proc/start()
 	for(var/datum/economy_account/department/Saccount in station_accounts)
@@ -56,33 +55,3 @@ var/datum/economy_system/economy_system = new()
 			query_PA_insert.Execute()
 
 	return 1
-
-/mob/verb/test_economy()
-	set category = "Debug"
-	set name = "Test economy A"
-	var/datum/economy_account/asd = economy_system.station_accounts["Station"]
-	asd.amount -= 1000
-	world << "STATION MONEY IS USED! AMOUNT IS [asd.amount]"
-	return
-
-/mob/verb/test_economy_2()
-	set category = "Debug"
-	set name = "Test economy B"
-	var/datum/economy_account/asd = economy_system.station_accounts["Station"]
-	world << "STATION MONEY IS USED! AMOUNT IS [asd.amount]"
-	return
-
-/mob/verb/test_economy_3()
-	set category = "Debug"
-	set name = "Test economy C"
-	var/datum/economy_account/asd = economy_system.station_accounts["Civilian"]
-	asd.amount -= 1000
-	world << "CIVILIAN MONEY IS USED! AMOUNT IS [asd.amount]"
-	return
-
-/mob/verb/test_economy_4()
-	set category = "Debug"
-	set name = "Test economy D"
-	var/datum/economy_account/asd = economy_system.station_accounts["Civilian"]
-	world << "CIVILIAN MONEY IS USED! AMOUNT IS [asd.amount]"
-	return

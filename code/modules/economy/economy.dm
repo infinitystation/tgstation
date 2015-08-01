@@ -12,10 +12,10 @@
 
 /datum/economy_account/proc/load_starting_from_DB()
 	if(!establish_db_connection())
-		world.log << "WARNING! [name] bank account not synced from DB!"
+		world << "WARNING! [name] bank account not synced from DB!"
 		return
 
-	var/query_text
+	var/query_text = ""
 	if(ckey)
 		query_text = "SELECT amount FROM economy WHERE (name = '[name]') AND (ckey = '[ckey]') AND (station = '[station]')"
 	else
@@ -24,8 +24,11 @@
 
 	query_sync.Execute()
 
+	world << "ACCOUNT [name] IS LOADING"
+
 	while(query_sync.NextRow())
 		amount = query_sync.item[1]
+		world << "ACCOUNT [name] IS LOADED"
 
 /datum/economy_account/department
 	name = "Departnemt"
