@@ -27,7 +27,9 @@
 	world << "ACCOUNT [name] IS LOADING"
 
 	while(query_sync.NextRow())
-		amount = query_sync.item[1]
+		amount = text2num(query_sync.item[1])
+		if(!isnum(amount))
+			amount = text2num(amount)
 		world << "ACCOUNT [name] IS LOADED"
 
 /datum/economy_account/department

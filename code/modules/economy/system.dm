@@ -3,9 +3,9 @@ var/datum/economy_system/economy_system = new()
 /datum/economy_system
 	var/list/personal_accounts = list()
 	var/list/station_accounts = list()
-	var/list/logs
+	var/list/logs = list()
 
-/datum/economy_system/New()
+/datum/economy_system/proc/start()
 	var/list/depts = list(new /datum/economy_account/department/station(), \
 	new /datum/economy_account/department/cargo(), \
 	new /datum/economy_account/department/civil(), \
@@ -16,11 +16,8 @@ var/datum/economy_system/economy_system = new()
 	new /datum/economy_account/department/service())
 
 	for(var/datum/economy_account/department/Saccount in depts)
-		station_accounts |= Saccount
-
-/datum/economy_system/proc/start()
-	for(var/datum/economy_account/department/Saccount in station_accounts)
 		Saccount.load_starting_from_DB()
+		station_accounts[Saccount.name] = Saccount
 
 /datum/economy_system/proc/give_global_salary()
 	for(var/datum/economy_account/Paccount in personal_accounts)
@@ -34,9 +31,9 @@ var/datum/economy_system/economy_system = new()
 		diary << "WARNING! Economy system not synced to DB!"
 		return 0
 
-	world << "ECONOMY IS SAVING NOW"
-
-	for(var/datum/economy_account/department/Saccount in station_accounts)
+	for(var/S in station_accounts)
+		var/datum/economy_account/department/Saccount = station_accounts[S]
+		world << "ACCOUNT [Saccount] SAVING TO DB"
 		var/DBQuery/query_SA_check = dbcon.NewQuery("SELECT * FROM economy WHERE (name = '[Saccount.name]') and (station = '[Saccount.station]')")
 		if(query_SA_check.Execute() && query_SA_check.NextRow())
 			var/DBQuery/query_SA_update = dbcon.NewQuery("UPDATE economy SET amount = [Saccount.amount] WHERE (name = '[Saccount.name]') and (station = '[Saccount.station]')")
