@@ -6,8 +6,6 @@
 		param = copytext(act, t1 + 1, length(act) + 1)
 		act = copytext(act, 1, t1)
 
-	if(findtext(act,"s",-1) && !findtext(act,"_",-2))//Removes ending s's unless they are prefixed with a '_'
-		act = copytext(act,1,length(act))
 
 	var/muzzled = is_muzzled()
 	//var/m_type = 1
@@ -28,7 +26,7 @@
 				message = "<B>[src]</B> ј√–≈——»¬Ќќ хлопает крыль&#255;ми!"
 				m_type = 2
 
-		if ("choke")
+		if ("choke","chokes")
 			if (miming)
 				if(gender == FEMALE)
 					message = "<B>[src]</B> отча&#255;нно схватилась за горло и давитс&#255;!"
@@ -37,18 +35,18 @@
 			else
 				..(act)
 
-		if ("chuckle")
+		if ("chuckle","chuckles")
 			if(miming)
 				message = "<B>[src]</B> делает вид, что хихикает."
 			else
 				..(act)
 
-		if ("clap")
+		if ("clap","claps")
 			if (!src.restrained())
 				message = "<B>[src]</B> хлопает."
 				m_type = 2
 
-		if ("collapse")
+		if ("collapse","collapses")
 			Paralyse(2)
 			if(gender == FEMALE)
 				message = "<B>[src]</B> рухнула!"
@@ -56,7 +54,7 @@
 				message = "<B>[src]</B> рухнул!"
 			m_type = 2
 
-		if ("cough")
+		if ("cough","coughs")
 			if (miming)
 				message = "<B>[src]</B> делает вид, что кашл&#255;ет!"
 			else
@@ -67,7 +65,7 @@
 					message = "<B>[src]</B> издаЄт громкий звук."
 					m_type = 2
 
-		if ("cry")
+		if ("cry","crys","cries") //I feel bad if people put s at the end of cry. -Sum99
 			if (miming)
 				message = "<B>[src]</B> плачет."
 			else
@@ -107,7 +105,7 @@
 					return
 				message = "<B>[src]</B> [input]"
 
-		if ("dap")
+		if ("dap","daps")
 			m_type = 1
 			if (!src.restrained())
 				var/M = null
@@ -125,24 +123,24 @@
 			message = "<B>[src]</B> приподн&#255;л бровь."
 			m_type = 1
 
-		if ("flap")
+		if ("flap","flaps")
 			if (!src.restrained())
 				message = "<B>[src]</B> хлопает крыль&#255;ми."
 				m_type = 2
 
-		if ("gasp")
+		if ("gasp","gasps")
 			if (miming)
 				message = "<B>[src]</B> выгл&#255;дит, как буд-то задыхаетс&#255;!"
 			else
 				..(act)
 
-		if ("giggle")
+		if ("giggle","giggles")
 			if (miming)
 				message = "<B>[src]</B> беззвучно хихикает!"
 			else
 				..(act)
 
-		if ("groan")
+		if ("groan","groans")
 			if (miming)
 				message = "<B>[src]</B> делает вид, что стонет!"
 			else
@@ -153,7 +151,7 @@
 					message = "<B>[src]</B> издаЄт громкий шум."
 					m_type = 2
 
-		if ("grumble")
+		if ("grumble","grumbles")
 			if (!muzzled)
 				message = "<B>[src]</B> ворчит!"
 			else
@@ -177,7 +175,7 @@
 					else
 						message = "<B>[src]</B> прот&#255;гивает руку дл&#255; рукопожати&#255; [M]."
 
-		if ("hug")
+		if ("hug","hugs")
 			m_type = 1
 			if (!src.restrained())
 				var/M = null
@@ -221,14 +219,14 @@
 			else
 				message = "<B>[src]</B> [message]"
 
-		if ("moan")
+		if ("moan","moans")
 			if(miming)
 				message = "<B>[src]</B> выгл&#255;дит, как буд-то стонет!"
 			else
 				message = "<B>[src]</B> стонет!"
 				m_type = 2
 
-		if ("mumble")
+		if ("mumble","mumbles")
 			message = "<B>[src]</B> бормочет!"
 			m_type = 2
 
@@ -244,7 +242,7 @@
 				message = "<B>[src]</B> поднимает руку."
 			m_type = 1
 
-		if ("salute")
+		if ("salute","salutes")
 			if (!src.buckled)
 				var/M = null
 				if (param)
@@ -260,27 +258,27 @@
 					message = "<B>[src]</b> приветствует жестом."
 			m_type = 1
 
-		if ("scream")
+		if ("scream","screams")
 			if (miming)
 				message = "<B>[src]</B> делает вид, что душераздирающе кричит!"
 			else
 				..(act)
 
-		if ("shiver")
+		if ("shiver","shivers")
 			message = "<B>[src]</B> дрожит."
 			m_type = 1
 
-		if ("shrug")
+		if ("shrug","shrugs")
 			message = "<B>[src]</B> пожимает плечами."
 			m_type = 1
 
-		if ("sigh")
+		if ("sigh","sighs")
 			if(miming)
 				message = "<B>[src]</B> вздыхает."
 			else
 				..(act)
 
-		if ("signal")
+		if ("signal","signals")
 			if (!src.restrained())
 				var/t1 = round(text2num(param))
 				if (isnum(t1))
@@ -290,17 +288,17 @@
 						message = "<B>[src]</B> поднимает [t1] пальцев."
 			m_type = 1
 
-		if ("sneeze")
+		if ("sneeze","sneezes")
 			if (miming)
 				message = "<B>[src]</B> чихает."
 			else
 				..(act)
 
-		if ("sniff")
+		if ("sniff","sniffs")
 			message = "<B>[src]</B> нюхает."
 			m_type = 2
 
-		if ("snore")
+		if ("snore","snores")
 			if (miming)
 				message = "<B>[src]</B> громко спит."
 			else
@@ -317,18 +315,18 @@
 			Stun(10)
 			m_type = 1
 
-		if ("whimper")
+		if ("whimper","whimpers")
 			if (miming)
 				message = "<B>[src]</B> выгл&#255;дит обиженным."
 			else
 				..(act)
 
-		if ("yawn")
+		if ("yawn","yawns")
 			if (!muzzled)
 				message = "<B>[src]</B> зевает."
 				m_type = 2
 
-		if("wag")
+		if("wag","wags")
 			if(dna && dna.species && (("tail_lizard" in dna.species.mutant_bodyparts) || ("tail_human" in dna.species.mutant_bodyparts)))
 				message = "<B>[src]</B> wags \his tail."
 				startTailWag()

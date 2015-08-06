@@ -10,9 +10,6 @@
 		param = copytext(act, t1 + 1, length(act) + 1)
 		act = copytext(act, 1, t1)
 
-	if(findtext(act,"s",-1) && !findtext(act,"_",-2))//Removes ending s's unless they are prefixed with a '_'
-		act = copytext(act,1,length(act))
-
 	var/muzzled = is_muzzled()
 	//var/m_type = 1
 
@@ -27,7 +24,7 @@
 				message = "<B>[src]</B> делает вид, что играет в воздухе на воображаемой гитаре."
 				m_type = 1
 
-		if ("blink")
+		if ("blink","blinks")
 			message = "<B>[src]</B> моргает."
 			m_type = 1
 
@@ -35,11 +32,11 @@
 			message = "<B>[src]</B> быстро моргает."
 			m_type = 1
 
-		if ("blush")
+		if ("blush","blushes")
 			message = "<B>[src]</B> краснеет."
 			m_type = 1
 
-		if ("bow")
+		if ("bow","bows")
 			if (!src.buckled)
 				var/M = null
 				if (param)
@@ -62,117 +59,117 @@
 						message = "<B>[src]</B> поклонилс&#255;."
 			m_type = 1
 
-		if ("burp")
+		if ("burp","burps")
 			if (!muzzled)
 				..(act)
 
-		if ("choke")
+		if ("choke","chokes")
 			if (!muzzled)
 				..(act)
 			else
 				message = "<B>[src]</B> издаёт сильный шум."
 				m_type = 2
 
-		if ("chuckle")
+		if ("chuckle","chuckles")
 			if (!muzzled)
 				..(act)
 			else
 				message = "<B>[src]</B> издаёт шум."
 				m_type = 2
 
-		if ("clap")
+		if ("clap","claps")
 			if (!src.restrained())
 				message = "<B>[src]</B> хлопает."
 				m_type = 2
 
-		if ("cough")
+		if ("cough","coughs")
 			if (!muzzled)
 				..(act)
 			else
 				message = "<B>[src]</B> издаёт громкий шум."
 				m_type = 2
 
-		if ("deathgasp")
+		if ("deathgasp","deathgasps")
 			message = "<B>[src]</B> замирает, конечности расслабл&#255;ютс&#255;, глаза станов&#255;тс&#255; мёртвыми и безжизненными..."
 			m_type = 1
 
-		if ("flap")
+		if ("flap","flaps")
 			if (!src.restrained())
 				message = "<B>[src]</B> хлопает крыль&#255;ми."
 				m_type = 2
 
-		if ("gasp")
+		if ("gasp","gasps")
 			if (!muzzled)
 				..(act)
 			else
 				message = "<B>[src]</B> издаёт слабый шум."
 				m_type = 2
 
-		if ("giggle")
+		if ("giggle","giggles")
 			if (!muzzled)
 				..(act)
 			else
 				message = "<B>[src]</B> издаёт шум."
 				m_type = 2
 
-		if ("laugh")
+		if ("laugh","laughs")
 			if (!muzzled)
 				..(act)
 			else
 				message = "<B>[src]</B> издаёт шум."
 
-		if ("nod")
+		if ("nod","nods")
 			message = "<B>[src]</B> кивает."
 			m_type = 1
 
-		if ("scream")
+		if ("scream","screams")
 			if (!muzzled)
 				..(act)
 			else
 				message = "<B>[src]</B> издаёт очень громкий шум."
 				m_type = 2
 
-		if ("shake")
+		if ("shake","shakes")
 			message = "<B>[src]</B> тр&#255;сёт головой."
 			m_type = 1
 
-		if ("sneeze")
+		if ("sneeze","sneezes")
 			if (!muzzled)
 				..(act)
 			else
 				message = "<B>[src]</B> издаёт странный звук."
 				m_type = 2
 
-		if ("sigh")
+		if ("sigh","sighs")
 			if (!muzzled)
 				..(act)
 			else
 				message = "<B>[src]</B> вздыхает."
 				m_type = 2
 
-		if ("sniff")
+		if ("sniff","sniffs")
 			message = "<B>[src]</B> принюхиваетс&#255;."
 			m_type = 2
 
-		if ("snore")
+		if ("snore","snores")
 			if (!muzzled)
 				..(act)
 			else
 				message = "<B>[src]</B> издаёт шум."
 				m_type = 2
 
-		if ("whimper")
+		if ("whimper","whimpers")
 			if (!muzzled)
 				..(act)
 			else
 				message = "<B>[src]</B> издаёт слабый звук."
 				m_type = 2
 
-		if ("wink")
+		if ("wink","winks")
 			message = "<B>[src]</B> подмигивает."
 			m_type = 1
 
-		if ("yawn")
+		if ("yawn","yawns")
 			if (!muzzled)
 				..(act)
 
