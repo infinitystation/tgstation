@@ -117,9 +117,9 @@ var/savefile/Banlist
 		if (temp)
 			Banlist["minutes"] << bantimestamp
 		if(!temp)
-			notes_add(M.ckey, "Временно забанен, причина: [reason]. Время: [mins]")
+			notes_add(ckey, "Временно забанен, причина: [reason]. Время: [minutes]")
 		else
-			notes_add(M.ckey, "Навсегда перманентно, причина: [reason].")
+			notes_add(ckey, "Навсегда перманентно, причина: [reason].")
 	return 1
 
 /proc/RemoveBan(foldername)
