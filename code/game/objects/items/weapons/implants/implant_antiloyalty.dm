@@ -40,7 +40,7 @@
 	name = "implanter (anti-loyalty)"
 
 /obj/item/weapon/implanter/antiloyalty/New()
-	imp = new /obj/item/weapon/implantcase/antiloyalty(src)
+	imp = new /obj/item/weapon/implant/antiloyalty(src)
 	..()
 	update_icon()
 
