@@ -282,9 +282,7 @@
 			traitor_mob.dna.remove_mutation(CLOWNMUT)
 
 	var/obj/item/weapon/implant/antiloyalty/AL = new/obj/item/weapon/implant/antiloyalty(traitor_mob)
-	AL.imp_in = traitor_mob
-	AL.implanted = 1
-	AL.implanted(traitor_mob)
+	AL.implant(traitor_mob)
 
 	// find a radio! toolbox(es), backpack, belt, headset
 	var/loc = ""

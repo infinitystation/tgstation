@@ -8,13 +8,10 @@
 
 	var/param = null
 
-	if (findtext(act, "-", 1, null))
+	if (findtext(act, "-", 1, null)) //Removes dashes for npcs "EMOTE-PLAYERNAME" or something like that, I ain't no AI coder. It's not for players. -Sum99
 		var/t1 = findtext(act, "-", 1, null)
 		param = copytext(act, t1 + 1, length(act) + 1)
 		act = copytext(act, 1, t1)
-
-	if(findtext(act,"s",-1) && !findtext(act,"_",-2))//Removes ending s's unless they are prefixed with a '_'
-		act = copytext(act,1,length(act))
 
 	switch(act)//Hello, how would you like to order? Alphabetically!
 		if ("aflap")
@@ -22,11 +19,11 @@
 				message = "<B>[src]</B> АГРЕССИВНО хлопает крыль&#255;ми!"
 				m_type = 2
 
-		if ("blush")
+		if ("blush","blushes")
 			message = "<B>[src]</B> краснеет."
 			m_type = 1
 
-		if ("bow")
+		if ("bow","bows")
 			if (!src.buckled)
 				var/M = null
 				if (param)
@@ -49,7 +46,7 @@
 						message = "<B>[src]</B> поклонилс&#255;."
 			m_type = 1
 
-		if ("burp")
+		if ("burp","burps")
 			if(gender == FEMALE)
 				message = "<B>[src]</B> отрыгнула."
 			else
@@ -57,7 +54,7 @@
 			playsound(loc, 'sound/emotions/burp.ogg', 25, 1, 1)
 			m_type = 2
 
-		if ("choke")
+		if ("choke","chokes")
 			if(gender == FEMALE)
 				message = "<B>[src]</B> подавилась!"
 			else
@@ -65,12 +62,12 @@
 			playsound(loc, 'sound/emotions/choke.ogg', 25, 1, 1)
 			m_type = 2
 
-		if ("chuckle")
+		if ("chuckle","chuckles")
 			message = "<B>[src]</B> Усмехаетс&#255;."
 			playsound(loc, 'sound/emotions/giggle.ogg', 25, 1, 1)
 			m_type = 2
 
-		if ("collapse")
+		if ("collapse","collapses")
 			Paralyse(2)
 			if(gender == FEMALE)
 				message = "<B>[src]</B> рухнула!"
@@ -78,58 +75,58 @@
 				message = "<B>[src]</B> рухнул!"
 			m_type = 2
 
-		if ("cough")
+		if ("cough","coughs")
 			message = "<B>[src]</B> кашл&#255;ет!"
 			playsound(loc, 'sound/emotions/cough.ogg', 25, 1, 1)
 			m_type = 2
 
-		if ("dance")
+		if ("dance","dances")
 			if (!src.restrained())
 				message = "<B>[src]</B> танцует."
 				m_type = 1
 
-		if ("deathgasp")
+		if ("deathgasp","deathgasps")
 			message = "<B>[src]</B> замирает, конечности расслабл&#255;ютс&#255;, глаза станов&#255;тс&#255; мёртвыми и безжизненными..."
 			playsound(loc, 'sound/effects/deathgasp.ogg', 25, 1, 1)
 			m_type = 1
 
-		if ("drool")
+		if ("drool","drools")
 			message = "<B>[src]</B> несёт чепуху."
 			playsound(loc, 'sound/emotions/drool.ogg', 25, 1, 1)
 			m_type = 1
 
-		if ("faint")
+		if ("faint","faints")
 			message = "<B>[src]</B> тер&#255;ет сознание."
 			if(src.sleeping)
 				return //Can't faint while asleep
 			src.sleeping += 10 //Short-short nap
 			m_type = 1
 
-		if ("flap")
+		if ("flap","flaps")
 			if (!src.restrained())
 				message = "<B>[src]</B> хлопает крыль&#255;ми."
 				m_type = 2
 
-		if ("flip")
+		if ("flip","flips")
 			if (!src.restrained() || !src.resting || !src.sleeping)
 				src.SpinAnimation(7,1)
 				m_type = 2
 
-		if ("frown")
+		if ("frown","frowns")
 			message = "<B>[src]</B> хмуритс&#255;."
 			m_type = 1
 
-		if ("gasp")
+		if ("gasp","gasps")
 			message = "<B>[src]</B> Задыхаетс&#255;!"
 			playsound(loc, 'sound/effects/gasp.ogg', 50, 1, 1)
 			m_type = 2
 
-		if ("giggle")
+		if ("giggle","giggles")
 			message = "<B>[src]</B> хихикает."
 			playsound(loc, 'sound/emotions/giggle.ogg', 25, 1, 1)
 			m_type = 2
 
-		if ("glare")
+		if ("glare","glares")
 			var/M = null
 			if (param)
 				for (var/mob/A in view(1, src))
@@ -143,21 +140,21 @@
 			else
 				message = "<B>[src]</B> свирепо смотрит."
 
-		if ("grin")
+		if ("grin","grins")
 			message = "<B>[src]</B> усмехаетс&#255;, показыва&#255; зубы."
 			playsound(loc, 'sound/emotions/grin.ogg', 25, 1, 1)
 			m_type = 1
 
-		if ("jump")
+		if ("jump","jumps")
 			message = "<B>[src]</B> прыгает!"
 			m_type = 1
 
-		if ("laugh")
+		if ("laugh","laughs")
 			message = "<B>[src]</B> смеётс&#255;."
 			playsound(loc, 'sound/emotions/laugh.ogg', 25, 1, 1)
 			m_type = 2
 
-		if ("look")
+		if ("look","looks")
 			var/M = null
 			if (param)
 				for (var/mob/A in view(1, src))
@@ -184,14 +181,14 @@
 			else
 				message = "<B>[src]</B> [message]"
 
-		if ("nod")
+		if ("nod","nods")
 			if(gender == FEMALE)
 				message = "<B>[src]</B> кивнула."
 			else
 				message = "<B>[src]</B> кивнул."
 			m_type = 1
 
-		if ("point")
+		if ("point","points")
 			if (!src.restrained())
 				var/atom/M = null
 				if (param)
@@ -205,16 +202,16 @@
 					pointed(M)
 			m_type = 1
 
-		if ("scream")
+		if ("scream","screams")
 			message = "<B>[src]</B> душераздирающе кричит!"
 			playsound(loc, 'sound/emotions/scream.ogg', 20, 1, 1)
 			m_type = 2
 
-		if ("shake")
+		if ("shake","shakes")
 			message = "<B>[src]</B> тр&#255;сёт головой."
 			m_type = 1
 
-		if ("shit")
+		if ("shit", "shits")
 			//we need to shit? no
 			if(need_to_shit < 70)
 				src << "Нечем испражн&#255;тс&#255;"
@@ -242,34 +239,34 @@
 			Shit(src)
 			m_type = 1
 
-		if ("sigh")
+		if ("sigh","sighs")
 			message = "<B>[src]</B> вздыхает."
 			playsound(loc, 'sound/emotions/sigh.ogg', 20, 1, 1)
 			m_type = 2
 
-		if ("sit")
+		if ("sit","sits")
 			message = "<B>[src]</B> садитс&#255;."
 			m_type = 1
 
-		if ("smile")
+		if ("smile","smiles")
 			message = "<B>[src]</B> улыбаетс&#255;."
 			m_type = 1
 
-		if ("sneeze")
+		if ("sneeze","sneezes")
 			message = "<B>[src]</B> чихает."
 			playsound(loc, 'sound/emotions/sneeze.ogg', 20, 1, 1)
 			m_type = 2
 
-		if ("sniff")
+		if ("sniff","sniffs")
 			message = "<B>[src]</B> сопит."
 			m_type = 2
 
-		if ("snore")
+		if ("snore","snores")
 			message = "<B>[src]</B> храпит."
 			playsound(loc, 'sound/effects/snore.ogg', 25, 1, 1)
 			m_type = 2
 
-		if ("stare")
+		if ("stare","stares")
 			var/M = null
 			if (param)
 				for (var/mob/A in view(1, src))
@@ -283,19 +280,19 @@
 			else
 				message = "<B>[src]</B> п&#255;литс&#255;."
 
-		if ("sulk")
+		if ("sulk","sulks")
 			message = "<B>[src]</B> обиженно дуетс&#255;."
 			m_type = 1
 
-		if ("sway")
+		if ("sway","sways")
 			message = "<B>[src]</B> раскачиваетс&#255; до головокружени&#255;."
 			m_type = 1
 
-		if ("tremble")
+		if ("tremble","trembles")
 			message = "<B>[src]</B> трепещет в страхе!"
 			m_type = 1
 
-		if ("twitch")
+		if ("twitch","twitches")
 			message = "<B>[src]</B> сильно дёргаетс&#255;."
 			m_type = 1
 
@@ -315,15 +312,15 @@
 			playsound(M, 'sound/effects/splat.ogg', 50, 1)
 			m_type = 1
 
-		if ("wave")
+		if ("wave","waves")
 			message = "<B>[src]</B> машет."
 			m_type = 1
 
-		if ("whimper")
+		if ("whimper","whimpers")
 			message = "<B>[src]</B> хныкает."
 			m_type = 2
 
-		if ("yawn")
+		if ("yawn","yawns")
 			message = "<B>[src]</B> зевает."
 			m_type = 2
 
@@ -373,4 +370,3 @@
 	set category = "IC"
 
 	update_flavor_text()
-
