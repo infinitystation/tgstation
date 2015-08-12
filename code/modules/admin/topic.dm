@@ -1047,7 +1047,7 @@
 					return
 				AddBan(M.ckey, M.computer_id, reason, usr.ckey, 1, mins)
 				ban_unban_log_save("[usr.client.ckey] has banned [M.ckey]. - Reason: [reason] - This will be removed in [mins] minutes.")
-				world << "<span class='adminnotice'>BAN: Администратор [usr.client.ckey] забанил(а) [M.ckey], Причина: [reason], Срок - [mins] минут.</span>"
+				world << "<span class='adminnotice'><b>BAN: Администратор [usr.client.ckey] забанил(а) [M.ckey]. Причина: [reason]. Срок - [mins] минут.</b></span>"
 				M << "<span class='boldannounce'><BIG>You have been banned by [usr.client.ckey].\nReason: [reason]</BIG></span>"
 				M << "<span class='danger'>This is a temporary ban, it will be removed in [mins] minutes.</span>"
 				feedback_inc("ban_tmp",1)
@@ -1079,7 +1079,7 @@
 				else
 					M << "<span class='danger'>No ban appeals URL has been set.</span>"
 				ban_unban_log_save("[usr.client.ckey] has permabanned [M.ckey]. - Reason: [reason] - This is a permanent ban.")
-				world << "<span class='adminnotice'>BAN: Администратор [usr.client.ckey] перманентно забанил(а) [M.ckey], Причина: [reason].</span>"
+				world << "<span class='adminnotice'><b>BAN: Администратор [usr.client.ckey] перманентно забанил(а) [M.ckey]. Причина: [reason].</b></span>"
 				log_admin("[usr.client.ckey] has banned [M.ckey].\nReason: [reason]\nThis is a permanent ban.")
 				message_admins("<span class='adminnotice'>[usr.client.ckey] has banned [M.ckey].\nReason: [reason]\nThis is a permanent ban.</span>")
 				feedback_inc("ban_perma",1)
