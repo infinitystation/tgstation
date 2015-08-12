@@ -30,8 +30,8 @@ https://bitbucket.org/infinity_team/infinity-tg.git
 3. Дождитесь сообщения:  
 ...  
 saving tgstation.dmb (DEBUG mode)  
-tgstation.dmb - 0 errors, 0 warnings
-4. Если будут проблемы, пишите на форум.
+tgstation.dmb - 0 errors, 0 warnings  
+Если будут проблемы, пишите на форум.
 
 ##ЗАПУСК
 0. Убедитесь, что у вас есть BYOND. Скачать можно здесь: http://www.byond.com/.  
@@ -41,7 +41,7 @@ tgstation.dmb - 0 errors, 0 warnings
 4. Как только появится строка "Initializations Complete" нажмите кнопку входа, которая обозначена стрелкой.
 
 ##ХОСТИНГ В ОС LINUX
-В билде используется BYGEX для некоторых текстовых операции. К сожалению, билд имеет только библиотеку для ОС Windows. Если вы можете, то можете скачать BYGEX для Linux здесь https://code.google.com/p/byond-regex/ и скомпилировать его.  
+В билде используется BYGEX для некоторых текстовых операции. К сожалению, билд имеет только библиотеку для ОС Windows. Если вы можете, то можете скачать BYGEX для Linux здесь https://github.com/optimumtact/byond-regex и скомпилировать его.  
 Также можно отредактировать файл code/_compile_options.dm, и закомментировать строку: #define USE_BYGEX в начале строки таким образом: //#define USE_BYGEX и перекомпилировать билд снова.
 
 ##СОДЕЙСТВИЕ РАЗРАБОТКЕ БИЛДА.
