@@ -30,8 +30,8 @@ https://bitbucket.org/infinity_team/infinity-tg.git
 3. Дождитесь сообщения:  
 ...  
 saving tgstation.dmb (DEBUG mode)  
-tgstation.dmb - 0 errors, 0 warnings
-4. Если будут проблемы, пишите на форум.
+tgstation.dmb - 0 errors, 0 warnings  
+Если будут проблемы, пишите на форум.
 
 ##ЗАПУСК
 0. Убедитесь, что у вас есть BYOND. Скачать можно здесь: http://www.byond.com/.  
@@ -41,9 +41,14 @@ tgstation.dmb - 0 errors, 0 warnings
 4. Как только появится строка "Initializations Complete" нажмите кнопку входа, которая обозначена стрелкой.
 
 ##ХОСТИНГ В ОС LINUX
-В билде используется BYGEX для некоторых текстовых операции. К сожалению, билд имеет только библиотеку для ОС Windows. Если вы можете, то можете скачать BYGEX для Linux здесь https://code.google.com/p/byond-regex/ и скомпилировать его.  
+В билде используется BYGEX для некоторых текстовых операции. К сожалению, билд имеет только библиотеку для ОС Windows. Если вы можете, то можете скачать BYGEX для Linux здесь https://github.com/optimumtact/byond-regex и скомпилировать его.  
 Также можно отредактировать файл code/_compile_options.dm, и закомментировать строку: #define USE_BYGEX в начале строки таким образом: //#define USE_BYGEX и перекомпилировать билд снова.
 
 ##СОДЕЙСТВИЕ РАЗРАБОТКЕ БИЛДА.
 Читать здесь:  
 http://infinity.smforum.ru/index.php?topic=2630
+
+##ЛИЦЕНЗИЯ
+Весь исходный код после коммита 333c566b88108de218d882840e61928a9b759d8f, на 1-го января 2015-го года в 03:38 по Московскому времени (https://bitbucket.org/infinity_team/infinity-tg/commits/333c566b88108de218d882840e61928a9b759d8f) лицензируется на условиях лицензионного соглашения GNU AGPL v3 (http://www.gnu.org/licenses/agpl-3.0.html).  
+Весь исходный код до коммита 333c566b88108de218d882840e61928a9b759d8f на 1 января 2015-го года в 03:38 по Московскому времени (https://github.com/tgstation/-tg-station/commit/333c566b88108de218d882840e61928a9b759d8f) лицензируется на условиях лицензионного соглашения GNU GPL v3 (https://www.gnu.org/licenses/gpl-3.0.html),  
+в том числе и инструменты, если в их файле readme не указано другое. Подробнее в файлах LICENSE-AGPLv3.txt или LICENSE-GPLv3.txt. Все содержимое, включая иконки и звуки, лицензируется на условиях лицензионного соглашения Creative Commons 3.0 BY-SA (https://creativecommons.ru/sites/creativecommons.ru/files/docs/attribution_3.0_ss_by-sa_rus.pdf).

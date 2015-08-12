@@ -363,8 +363,6 @@ var/const/POWER = 8
 		name_by_type = "Radio"
 	if(istype(src, /datum/wires/syndicatebomb))
 		name_by_type = "Syndicate Bomb"
-	if(istype(src, /datum/wires/taperecorder))
-		name_by_type = "Tape Recorder"
 	if(istype(src, /datum/wires/vending))
 		name_by_type = "Vending Machine"
 	return name_by_type
