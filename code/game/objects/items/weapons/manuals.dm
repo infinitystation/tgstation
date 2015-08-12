@@ -911,14 +911,14 @@
 	icon_state ="bookEngineering"
 	author = "Engineering Encyclopedia"
 	title = "Station Repairs and Construction"
-	page_link = "Guide_to_construction"
+	page_link = "Руководство_по_Конструированию"
 
 /obj/item/weapon/book/manual/wiki/engineering_guide
-	name = "Engineering Textbook"
+	name = "Power Engineering Guide"
 	icon_state ="bookEngineering2"
 	author = "Engineering Encyclopedia"
-	title = "Engineering Textbook"
-	page_link = "Guide_to_engineering"
+	title = "Power Engineering Guide"
+	page_link = "Руководство_по_Энергетике"
 
 /obj/item/weapon/book/manual/wiki/security_space_law
 	name = "Space Law"
@@ -926,25 +926,25 @@
 	icon_state = "bookSpaceLaw"
 	author = "Nanotrasen"
 	title = "Space Law"
-	page_link = "Space_Law"
+	page_link = "Космо-Закон"
 
 /obj/item/weapon/book/manual/wiki/infections
 	name = "Infections - Making your own pandemic!"
 	icon_state = "bookInfections"
 	author = "Infections Encyclopedia"
 	title = "Infections - Making your own pandemic!"
-	page_link = "Infections"
+	page_link = "Руководство_по_Вирусологии"
 
 /obj/item/weapon/book/manual/wiki/telescience
 	name = "Teleportation Science - Bluespace for dummies!"
 	icon_state = "book7"
 	author = "University of Bluespace"
 	title = "Teleportation Science - Bluespace for dummies!"
-	page_link = "Guide_to_telescience"
+	page_link = "Руководство_по_Телесайнсуe"
 
 /obj/item/weapon/book/manual/wiki/engineering_hacking
 	name = "Hacking"
 	icon_state ="bookHacking"
 	author = "Engineering Encyclopedia"
 	title = "Hacking"
-	page_link = "Hacking"
+	page_link = "Руководство_по_Взлому"
