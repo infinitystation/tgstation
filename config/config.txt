@@ -114,7 +114,7 @@ GUEST_BAN
 FORUMURL http://infinity.smforum.ru/
 
 ## Wiki address
-WIKIURL http://ru.infinity.wikia.com/wiki
+WIKIURL http://infinity-wiki.ru/index.php
 
 ##Rules address
 RULESURL http://infinity.smforum.ru/index.php?topic=79.0

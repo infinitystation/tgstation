@@ -536,7 +536,7 @@
 			text += "<center><b>Code Phrases:</b> <font color='red'>[syndicate_code_phrase]</font></center>"
 			text += "<center><b>Code Responses:</b> <font color='red'>[syndicate_code_response]</font></center><br><br>"
 			text += "<center>Accomplish your objectives at all costs!</center>"
-			text += "<center><i><b>Wiki Page:</b></i> <a href='[config.wikiurl]/Traitor'>Click Here</a></center>"
+			text += "<center><i><b>Wiki Page:</b></i> <a href='[config.wikiurl]/Руководство_по_игре_за_Предателя'>Click Here</a></center>"
 
 
 		if("double agent")
@@ -553,7 +553,7 @@
 			text += "<center><b>Code Phrases:</b> <font color='red'>[syndicate_code_phrase]</font></center>"
 			text += "<center><b>Code Responses:</b> <font color='red'>[syndicate_code_response]</font></center><br><br>"
 			text += "<center>Eliminate your quarry and avoid death at all costs!</center>"
-			text += "<center><i><b>Wiki Page:</b></i> <a href='[config.wikiurl]/Traitor'>Click Here</a></center>"
+			text += "<center><i><b>Wiki Page:</b></i> <a href='[config.wikiurl]/Руководство_по_игре_за_Предателя'>Click Here</a></center>"
 
 
 		if("changeling")
@@ -567,7 +567,7 @@
 			to absorb the genetic code of any human into our own form. We can then shapeshift into the human, taking on their exact appearance. In addition, we may evolve additional abilities by using our \
 			Evolution Menu to bend our body to our will. Finally, we may say \".g (message)\" to silently communicate with all other changelings.</center><br><br>"
 			text += "<center>Accomplish our objectives at all costs!</center>"
-			text += "<center><i><b>Wiki Page:</b></i> <a href='[config.wikiurl]/Changeling'>Click Here</a></center>"
+			text += "<center><i><b>Wiki Page:</b></i> <a href='[config.wikiurl]/Руководство_по_игре_за_Генокрада'>Click Here</a></center>"
 
 
 		if("nuclear operative")
@@ -583,7 +583,7 @@
 			not detonate without a very specific device: the nuclear authentication disk, held by the captain (if there is one). Your job is to acquire this disk through any means necessary and destroy the \
 			station using the infiltrator's nuke. Cooperate with your teammates and form a plan. Remember: failure is not an option.</center><br><br>"
 			text += "<center>Move out and get that disk!</center>"
-			text += "<center><i><b>Wiki Page:</b></i> <a href='https://tgstation13.org/wiki/Nuclear_Operative'>Click Here</a></center>"
+			text += "<center><i><b>Wiki Page:</b></i> <a href='[config.wikiurl]/Руководство_по_игре_за_Ядерного_Оперативника'>Click Here</a></center>"
 
 
 		if("wizard")
@@ -598,7 +598,7 @@
 			of magical wizard robes, such as the ones you are wearing now. <i>You should always bring a spare set of robes!</i> Furthermore, the crew are trained to report wizard sightings, so trying to be \
 			stealthy or friendly is almost impossible. Finally, your spells can backfire against you! Don't fireball someone near you, or you might be caught in the blast!</center><br><br>"
 			text += "<center>Make the Federation proud and get your objectives done!</center>"
-			text += "<center><i><b>Wiki Page:</b></i> <a href='[config.wikiurl]/Wizard'>Click Here</a></center>"
+			text += "<center><i><b>Wiki Page:</b></i> <a href='[config.wikiurl]/Руководство_по_игре_за_Мага'>Click Here</a></center>"
 
 
 		if("head revolutionary")
@@ -613,7 +613,7 @@
 			do not die - if all head revolutionaries die, the heads of staff succeed! The opposite is also true - to win the revolution, all heads of staff must be either killed or sent off the station. \
 			Security will do everything in their power to stop you - don't let them get in the way of your goals!</center><br><br>"
 			text += "<center>Destroy the heads of staff! Viva la Revolucion!</center>"
-			text += "<center><i><b>Wiki Page:</b></i> <a href='[config.wikiurl]/Revolution'>Click Here</a></center>"
+			text += "<center><i><b>Wiki Page:</b></i> <a href='[config.wikiurl]/Руководство_по_игре_за_Революционера'>Click Here</a></center>"
 
 
 		if("blob")
@@ -640,7 +640,7 @@
 			will allow you to perform a small amount of rituals imbued onto the paper. A tome is necessary for any cultist, as it allows them to scribe runes, which function as gateways into Nar-Sie's \
 			domain and have various effects. To gain research words, you may either sacrifice lesser beings (non-cultist humans, monkeys...) or perform trial-and-error exercises.</center><br><br>"
 			text += "<center>Obey the Geometer's will! Complete the cult's objectives!</center>"
-			text += "<center><i><b>Wiki Page:</b></i> <a href='[config.wikiurl]/Cult'>Click Here</a></center>"
+			text += "<center><i><b>Wiki Page:</b></i> <a href='[config.wikiurl]/Руководство_по_игре_за_Культиста'>Click Here</a></center>"
 
 
 		if("shadowling")
@@ -671,7 +671,7 @@
 			Finally, the pen contains a hidden device that will convert anyone stabbed with it to your gang's cause. Members of a rival gang and people who are loyalty implanted will not be affected. \
 			Remember: there is another gang that seeks nothing but your destruction. Make sure to take over the station before they can!</center><br><br>"
 			text += "<center>Take over the station before your rival gang can!</center>"
-			text += "<center><i><b>Wiki Page:</b></i> <a href='[config.wikiurl]/Gang'>Click Here</a></center>"
+			text += "<center><i><b>Wiki Page:</b></i> <a href='[config.wikiurl]/Руководство_по_игре_за_Бандита'>Click Here</a></center>"
 
 
 		if("abductor scientist")
@@ -687,7 +687,7 @@
 			side of your Mothership. There is another alien with you - this is an agent, and they will be performing the brute-force work of your Mothership. You also have an emergency implant that will \
 			instantly return you to your Mothership at any time (with a small cooldown).</center><br><br>"
 			text += "<center>Cooperate with your agent and experiment on humans!</center>"
-			text += "<center><i><b>Wiki Page:</b></i> <a href='[config.wikiurl]/Abductor'>Click Here</a></center>"
+			text += "<center><i><b>Wiki Page:</b></i> <a href='[config.wikiurl]/Руководство_по_игре_за_Абдактора'>Click Here</a></center>"
 
 
 		if("abductor agent")
@@ -703,7 +703,7 @@
 			largely useless. You also have a tool that will silence nearby communications equipment. There is another alien with you - this is a scientist, and they will be performing the more intricate \
 			tasks of your Mothership.</center><br><br>"
 			text += "<center>Cooperate with your scientist and experiment on humans!</center>"
-			text += "<center><i><b>Wiki Page:</b></i> <a href='[config.wikiurl]/Abductor'>Click Here</a></center>"
+			text += "<center><i><b>Wiki Page:</b></i> <a href='[config.wikiurl]/Руководство_по_игре_за_Абдактора'>Click Here</a></center>"
 
 
 	var/datum/browser/popup = new(M.current, "greeting", "", 800, 600)
