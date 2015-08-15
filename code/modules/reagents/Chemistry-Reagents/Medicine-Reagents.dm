@@ -186,7 +186,7 @@ datum/reagent/medicine/kelotane/on_mob_life(var/mob/living/M as mob)
 	color = "#C8A5DC"
 
 /datum/reagent/medicine/silver_sulfadiazine/reaction_mob(mob/living/M, method=TOUCH, volume, show_message = 1)
-	if(iscarbon(M))
+	if(iscarbon(M) && M.stat != DEAD)
 		if(method == TOUCH)
 			M.adjustFireLoss(-volume)
 			if(show_message)
@@ -212,7 +212,7 @@ datum/reagent/medicine/kelotane/on_mob_life(var/mob/living/M as mob)
 	color = "#C8A5DC"
 
 /datum/reagent/medicine/styptic_powder/reaction_mob(mob/living/M, method=TOUCH, volume, show_message = 1)
-	if(iscarbon(M))
+	if(iscarbon(M) && M.stat != DEAD)
 		if(method == TOUCH)
 			M.adjustBruteLoss(-volume)
 			if(show_message)
@@ -290,7 +290,7 @@ datum/reagent/medicine/kelotane/on_mob_life(var/mob/living/M as mob)
 	color = "#C8A5DC"
 
 /datum/reagent/medicine/synthflesh/reaction_mob(mob/living/M, method=TOUCH, volume,show_message = 1)
-	if(iscarbon(M))
+	if(iscarbon(M) && M.stat != DEAD)
 		if(method == TOUCH)
 			M.adjustBruteLoss(-1.5*volume)
 			M.adjustFireLoss(-1.5*volume)
