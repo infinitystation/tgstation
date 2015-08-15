@@ -23,7 +23,7 @@
 			if(SEC_LEVEL_GREEN)
 				minor_announce(config.alert_desc_green, "Внимание! Уровень опасности понижен до зелёного:")
 				security_level = SEC_LEVEL_GREEN
-				for(var/obj/machinery/firealarm/FA in world)
+				for(var/obj/machinery/firealarm/FA in machines)
 					if(FA.z == ZLEVEL_STATION)
 						FA.update_icon()
 			if(SEC_LEVEL_BLUE)
@@ -32,7 +32,7 @@
 				else
 					minor_announce(config.alert_desc_blue_downto, "Внимание! Уровень опасности понижен до синего:")
 				security_level = SEC_LEVEL_BLUE
-				for(var/obj/machinery/firealarm/FA in world)
+				for(var/obj/machinery/firealarm/FA in machines)
 					if(FA.z == ZLEVEL_STATION)
 						FA.update_icon()
 			if(SEC_LEVEL_RED)
@@ -47,15 +47,19 @@
 				if(CC)
 					CC.post_status("alert", "redalert")*/
 
-				for(var/obj/machinery/firealarm/FA in world)
+				for(var/obj/machinery/firealarm/FA in machines)
 					if(FA.z == ZLEVEL_STATION)
 						FA.update_icon()
+				for(var/obj/machinery/computer/shuttle/pod/pod in machines)
+					pod.admin_controlled = 0
 			if(SEC_LEVEL_DELTA)
 				minor_announce(config.alert_desc_delta, "Внимание! Достигнут уровень опасности Дельта!",1)
 				security_level = SEC_LEVEL_DELTA
-				for(var/obj/machinery/firealarm/FA in world)
+				for(var/obj/machinery/firealarm/FA in machines)
 					if(FA.z == ZLEVEL_STATION)
 						FA.update_icon()
+				for(var/obj/machinery/computer/shuttle/pod/pod in machines)
+					pod.admin_controlled = 0
 	else
 		return
 

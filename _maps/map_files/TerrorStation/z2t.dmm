@@ -18370,7 +18370,7 @@
 /obj/item/weapon/defibrillator/compact/combat/loaded,
 /obj/item/clothing/shoes/combat,
 /obj/item/clothing/glasses/hud/health/night,
-/obj/item/weapon/storage/backpack/dufflebag/syndiemed/loaded,
+/obj/item/weapon/storage/backpack/dufflebag/syndie/ammo/loaded,
 /turf/simulated/floor/plasteel{
 	icon_state = "vault";
 	 dir = 8
@@ -21182,7 +21182,7 @@
 /obj/item/weapon/switchblade,
 /obj/item/clothing/shoes/combat,
 /obj/item/clothing/glasses/hud/health/night,
-/obj/item/weapon/storage/backpack/dufflebag/syndiemed/loaded,
+/obj/item/weapon/storage/backpack/dufflebag/syndie/ammo/loaded,
 /turf/simulated/floor/plasteel{
 	icon_state = "vault";
 	 dir = 8
@@ -22898,11 +22898,11 @@
 /area/centcom/ferry)
 "aUB" = (
 /obj/structure/rack,
-/obj/item/weapon/storage/backpack/dufflebag/syndiesurgery{
+/obj/item/weapon/storage/backpack/dufflebag/syndie/surgery{
 	icon_state = "duffle-med";
 	 name = "Surgery dufflebag"
 	},
-/obj/item/weapon/storage/backpack/dufflebag/syndiesurgery{
+/obj/item/weapon/storage/backpack/dufflebag/syndie/surgery{
 	icon_state = "duffle-med";
 	 name = "Surgery dufflebag"
 	},
@@ -31156,7 +31156,7 @@
 /obj/item/weapon/card/id/uac{
 	name = "Tau 4"
 	},
-/obj/item/weapon/storage/backpack/dufflebag/syndiemed/loaded,
+/obj/item/weapon/storage/backpack/dufflebag/syndie/ammo/loaded,
 /turf/simulated/floor/plasteel/blackvault{
 	dir = 10
 	},
@@ -31198,7 +31198,7 @@
 /obj/item/weapon/card/id/uac{
 	name = "Charlie 4"
 	},
-/obj/item/weapon/storage/backpack/dufflebag/syndiemed/loaded,
+/obj/item/weapon/storage/backpack/dufflebag/syndie/ammo/loaded,
 /turf/simulated/floor/plasteel/blackvault{
 	dir = 6
 	},
