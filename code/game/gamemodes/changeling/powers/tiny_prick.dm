@@ -65,7 +65,7 @@
 	chemical_cost = 40
 	dna_cost = 3
 	genetic_damage = 100
-	var/datum/dna/selected_dna = null
+	var/datum/changelingprofile/selected_dna = null
 
 /obj/effect/proc_holder/changeling/sting/transformation/Click()
 	var/mob/user = usr
@@ -87,8 +87,8 @@
 	return 1
 
 /obj/effect/proc_holder/changeling/sting/transformation/sting_action(mob/user, mob/target)
-	add_logs(user, target, "stung", "transformation sting", " new identity is [selected_dna.real_name]")
-	var/datum/dna/NewDNA = selected_dna
+	add_logs(user, target, "stung", "transformation sting", " new identity is [selected_dna.dna.real_name]")
+	var/datum/dna/NewDNA = selected_dna.dna
 	if(ismonkey(target))
 		user << "<span class='notice'>Our genes cry out as we sting [target.name]!</span>"
 
@@ -100,7 +100,6 @@
 	target.visible_message("<span class='danger'>[target] begins to violenty convulse!</span>","<span class='userdanger'>You feel a tiny prick and a begin to uncontrollably convulse!</span>")
 	spawn(10)
 		hardset_dna(target, NewDNA.uni_identity, NewDNA.struc_enzymes, NewDNA.real_name, NewDNA.blood_type, NewDNA.species.type, NewDNA.features)
-		updateappearance(target)
 	feedback_add_details("changeling_powers","TS")
 	return 1
 
