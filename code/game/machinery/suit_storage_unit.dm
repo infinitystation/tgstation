@@ -46,6 +46,7 @@
 /obj/machinery/suit_storage_unit/engine
 	SUIT_TYPE = /obj/item/clothing/suit/space/hardsuit/engine
 	MASK_TYPE = /obj/item/clothing/mask/breath
+	STORAGE_TYPE= /obj/item/clothing/shoes/magboots
 
 /obj/machinery/suit_storage_unit/ce
 	SUIT_TYPE = /obj/item/clothing/suit/space/hardsuit/engine/elite
