@@ -27,17 +27,45 @@ RCD
 	var/max_matter = 160
 	var/working = 0
 	var/mode = 1
-	var/canRwall = 0
+	var/canRturf = 0
 	var/disabled = 0
-	var/ratio = 1
 	var/airlock_type = /obj/machinery/door/airlock
 	var/advanced_airlock_setting = 1 //Set to 1 if you want more paintjobs available
 	var/sheetmultiplier	= 4			 //Controls the amount of matter added for each glass/metal sheet, triple for plasteel
+	var/plasteelmultiplier = 3 //Plasteel is worth 3 times more than glass or metal
 
 	var/list/conf_access = null
 	var/use_one_access = 0 //If the airlock should require ALL or only ONE of the listed accesses.
 	var/last_configurator = null
 	var/locked = 1
+
+	/* Construction costs */
+
+	var/wallcost = 16
+	var/floorcost = 2
+	var/grillecost = 4
+	var/windowcost = 8
+	var/airlockcost = 16
+	var/deconwallcost = 26
+	var/deconfloorcost = 33
+	var/decongrillecost = 4
+	var/deconwindowcost = 8
+	var/deconairlockcost = 32
+
+	/* Build delays (deciseconds) */
+
+	var/walldelay = 20
+	var/floordelay = null //space wind's a bitch
+	var/grilledelay = 40
+	var/windowdelay = 40
+	var/airlockdelay = 50
+	var/deconwalldelay = 40
+	var/deconfloordelay = 50
+	var/decongrilledelay = null //as rapid as wirecutters
+	var/deconwindowdelay = 50
+	var/deconairlockdelay = 50
+
+	var/malfproof = 0
 
 /obj/item/weapon/rcd/verb/change_airlock_access()
 	set name = "Change Airlock Access"
@@ -201,7 +229,7 @@ RCD
 
 
 /obj/item/weapon/rcd/New()
-	desc = "A RCD. It currently holds [matter]/[max_matter] matter-units."
+	desc = "An RCD. It currently holds [matter]/[max_matter] matter-units."
 	src.spark_system = new /datum/effect/effect/system/spark_spread
 	spark_system.set_up(5, 0, src)
 	spark_system.attach(src)
@@ -232,7 +260,7 @@ RCD
 	else if(istype(W, /obj/item/stack/sheet/metal) || istype(W, /obj/item/stack/sheet/glass))
 		loaded = loadwithsheets(W, sheetmultiplier, user)
 	else if(istype(W, /obj/item/stack/sheet/plasteel))
-		loaded = loadwithsheets(W, 3*sheetmultiplier, user) //Plasteel is worth 3 times more than glass or metal
+		loaded = loadwithsheets(W, plasteelmultiplier*sheetmultiplier, user) //Plasteel is worth 3 times more than glass or metal
 	if(loaded)
 		user << "<span class='notice'>The RCD now holds [matter]/[max_matter] matter-units.</span>"
 		desc = "A RCD. It currently holds [matter]/[max_matter] matter-units."
@@ -287,7 +315,7 @@ RCD
 /obj/item/weapon/rcd/afterattack(atom/A, mob/user, proximity)
 	if(!proximity) return 0
 	if(disabled && !isrobot(user))
-		if(ratio<3)
+		if(!malfproof)
 			return 0
 	if(istype(A,/area/shuttle)||istype(A,/turf/space/transit))
 		return 0
@@ -298,7 +326,7 @@ RCD
 		if(1)
 			if(istype(A, /turf/space))
 				var/turf/space/S = A
-				if(useResource((1/ratio), user))
+				if(useResource(floorcost, user))
 					user << "<span class='notice'>You start building floor...</span>"
 					activate()
 					S.ChangeTurf(/turf/simulated/floor/plating)
@@ -307,31 +335,32 @@ RCD
 
 			if(istype(A, /turf/simulated/floor))
 				var/turf/simulated/floor/F = A
-				if(checkResource((3/ratio), user))
+				if(checkResource(wallcost, user))
 					user << "<span class='notice'>You start building wall...</span>"
 					playsound(src.loc, 'sound/machines/click.ogg', 50, 1)
-					if((ratio > 2) || do_after(user, 20, target = A))
-						if(!useResource((3/ratio), user)) return 0
+					if(do_after(user, walldelay, target = A))
+						if(!useResource(wallcost, user)) return 0
 						activate()
 						F.ChangeTurf(/turf/simulated/wall)
 						return 1
 				return 0
 
-			// RCD buff for borgs
-			if(istype(A, /turf/simulated/wall) && canRwall)
-				if(checkResource((2/ratio), user))
-					user << "Reinforcing Wall ..."
+			// RCD buff for borgs and other
+			if(istype(A, /turf/simulated/wall) && canRturf)
+				var/turf/simulated/wall/W = A
+				if(checkResource(wallcost, user))
+					user << "<span class='notice'>You start renforcing wall...</span>"
 					playsound(src.loc, 'sound/machines/click.ogg', 50, 1)
-					if(do_after(user, round(20/ratio)))
-						if(!useResource((2/ratio), user)) return 0
+					if(do_after(user, walldelay, target = A))
+						if(!useResource(wallcost, user)) return 0
 						activate()
-						A:ChangeTurf(/turf/simulated/wall/r_wall)
+						W.ChangeTurf(/turf/simulated/wall/r_wall)
 						return 1
 				return 0
 
 		if(2)
 			if(istype(A, /turf/simulated/floor))
-				if(checkResource((10/ratio), user))
+				if(checkResource(airlockcost, user))
 					var/door_check = 1
 					for(var/obj/machinery/door/D in A)
 						if(!D.sub_door)
@@ -341,8 +370,8 @@ RCD
 					if(door_check)
 						user << "<span class='notice'>You start building airlock...</span>"
 						playsound(src.loc, 'sound/machines/click.ogg', 50, 1)
-						if(do_after(user, round(50/ratio), target = A))
-							if(!useResource((10/ratio), user)) return 0
+						if(do_after(user, airlockdelay, target = A))
+							if(!useResource(airlockcost, user)) return 0
 							activate()
 							var/obj/machinery/door/airlock/T = new airlock_type( A )
 
@@ -361,7 +390,7 @@ RCD
 
 							if(!T.checkForMultipleDoors())
 								qdel(T)
-								useResource((-10/ratio), user)
+								useResource(-airlockcost, user)
 								return 0
 							T.autoclose = 1
 							return 1
@@ -374,13 +403,13 @@ RCD
 		if(3)
 			if(istype(A, /turf/simulated/wall))
 				var/turf/simulated/wall/W = A
-				if(istype(W, /turf/simulated/wall/r_wall) && !canRwall)
+				if(istype(W, /turf/simulated/wall/r_wall) && !canRturf)
 					return 0
-				if(checkResource((5/ratio), user))
+				if(checkResource(deconwallcost, user))
 					user << "<span class='notice'>You start deconstructing wall...</span>"
 					playsound(src.loc, 'sound/machines/click.ogg', 50, 1)
-					if(do_after(user, round(40/ratio), target = A))
-						if(!useResource((5/ratio), user)) return 0
+					if(do_after(user, deconwalldelay, target = A))
+						if(!useResource(deconwallcost, user)) return 0
 						activate()
 						W.ChangeTurf(/turf/simulated/floor/plating)
 						return 1
@@ -388,63 +417,64 @@ RCD
 
 			if(istype(A, /turf/simulated/floor))
 				var/turf/simulated/floor/F = A
+				if(istype(F, /turf/simulated/floor/engine) && !canRturf)
+					return 0
 				if(istype(F, F.baseturf))
 					user << "<span class='notice'>You can't dig any deeper!</span>"
 					return 0
-				else if(checkResource((1/ratio), user))
+				else if(checkResource(deconfloorcost, user))
 					user << "<span class='notice'>You start deconstructing floor...</span>"
 					playsound(src.loc, 'sound/machines/click.ogg', 50, 1)
-					if((ratio > 2) || do_after(user, 50, target = A))
-						if(!useResource((1/ratio), user)) return 0
+					if(do_after(user, deconfloordelay, target = A))
+						if(!useResource(deconfloorcost, user)) return 0
 						activate()
 						F.ChangeTurf(F.baseturf)
 						return 1
 				return 0
 
 			if(istype(A, /obj/machinery/door/airlock))
-				if(checkResource((20/ratio), user))
+				if(checkResource(deconairlockcost, user))
 					user << "<span class='notice'>You start deconstructing airlock...</span>"
 					playsound(src.loc, 'sound/machines/click.ogg', 50, 1)
-					if(do_after(user, round(50/ratio), target = A))
-						if(!useResource((20/ratio), user)) return 0
+					if(do_after(user, deconairlockdelay, target = A))
+						if(!useResource(deconairlockcost, user)) return 0
 						activate()
 						qdel(A)
 						return 1
 				return	0
 
 			if(istype(A, /obj/structure/window))
-				if(checkResource(5/ratio, user))
+				if(checkResource(deconwindowcost, user))
 					user << "<span class='notice'>You start deconstructing the window...</span>"
 					playsound(src.loc, 'sound/machines/click.ogg', 50, 1)
-					if(do_after(user, 50/ratio, target = A))
-						if(!useResource(5/ratio, user)) return 0
+					if(do_after(user, deconwindowdelay, target = A))
+						if(!useResource(deconwindowcost, user)) return 0
 						activate()
 						qdel(A)
 						return 1
 				return	0
 
 			if(istype(A, /obj/structure/grille))
-				if(checkResource(5/ratio, user))
-					user << "<span class='notice'>You start deconstructing the grille...</span>"
-					playsound(src.loc, 'sound/machines/click.ogg', 50, 1)
-					if(do_after(user, 50/ratio, target = A))
-						if(!useResource(5/ratio, user)) return 0
+				var/obj/structure/grille/G = A
+				if(!G.shock(user, 90)) //if it's shocked, try to shock them
+					if(useResource(decongrillecost, user))
+						user << "<span class='notice'>You start deconstructing the grille...</span>"
 						activate()
+						playsound(src.loc, 'sound/machines/click.ogg', 50, 1)
 						qdel(A)
 						return 1
-				return	0
-			return 0
+					return 0
 
 		if (4)
 			if(istype(A, /turf/simulated/floor))
-				if(checkResource(5/ratio, user))
+				if(checkResource(grillecost, user))
 					for(var/obj/structure/grille/GRILLE in A)
 						user << "<span class='warning'>There is already a grille there!</span>"
 						return 0
 					user << "<span class='notice'>You start building a grille...</span>"
 					playsound(src.loc, 'sound/machines/click.ogg', 50, 1)
-					if(do_after(user, 40/ratio, target = A))
-						if(!useResource(5/ratio, user)) return 0
+					if(do_after(user, grilledelay, target = A))
+						if(!useResource(grillecost, user)) return 0
 						activate()
 						var/obj/structure/grille/G = new/obj/structure/grille(A)
 						G.anchored = 1
@@ -452,15 +482,29 @@ RCD
 					return 0
 				return 0
 			if(istype(A, /obj/structure/grille))
-				if(checkResource(5/ratio, user))
+				if(checkResource(windowcost, user))
 					user << "<span class='notice'>You start building a window...</span>"
 					playsound(src.loc, 'sound/machines/click.ogg', 50, 1)
-					if(do_after(user, 40/ratio, target = A))
+					if(do_after(user, windowdelay, target = A))
 						if(locate(/obj/structure/window) in A.loc) return 0
-						if(!useResource(5/ratio, user)) return 0
+						if(!useResource(windowcost, user)) return 0
 						activate()
 						var/obj/structure/window/WD = new/obj/structure/window/fulltile(A.loc)
 						WD.anchored = 1
+						return 1
+					return 0
+				return 0
+			if(istype(A, /obj/structure/window) && canRturf)
+				var/obj/structure/window/W = A
+				if(checkResource(windowcost, user))
+					user << "<span class='notice'>You start reiforcing a window...</span>"
+					playsound(src.loc, 'sound/machines/click.ogg', 50, 1)
+					if(do_after(user, windowdelay, target = A))
+						if(!useResource(windowcost, user)) return 0
+						activate()
+						var/obj/structure/window/WD = new/obj/structure/window/reinforced/fulltile(A.loc)
+						WD.anchored = 1
+						qdel(W)
 						return 1
 					return 0
 				return 0
@@ -473,7 +517,7 @@ RCD
 	if(matter < amount)
 		return 0
 	matter -= amount
-	desc = "A RCD. It currently holds [matter]/[max_matter] matter-units."
+	desc = "An RCD. It currently holds [matter]/[max_matter] matter-units."
 	return 1
 
 /obj/item/weapon/rcd/proc/checkResource(amount, mob/user)
@@ -490,8 +534,8 @@ RCD
 
 /obj/item/weapon/rcd/borg/New()
 	..()
-	desc = "A device used to rapidly build walls/floor."
-	canRwall = 1
+	desc = "A device used to rapidly build walls and floors."
+	canRturf = 1
 
 /obj/item/weapon/rcd/loaded
 	matter = 160
@@ -500,8 +544,8 @@ RCD
 	name = "combat RCD"
 	max_matter = 500
 	matter = 500
-	canRwall = 1
-	ratio = 2
+	canRturf = 1
+	malfproof = 1
 
 /obj/item/weapon/rcd_ammo
 	name = "compressed matter cartridge"
@@ -513,8 +557,8 @@ RCD
 	density = 0
 	anchored = 0.0
 	origin_tech = "materials=2"
-	materials = list(MAT_METAL=16000, MAT_GLASS=8000)
-	var/ammoamt = 20
+	materials = list(MAT_METAL=3000, MAT_GLASS=2000)
+	var/ammoamt = 40
 
 /obj/item/weapon/rcd/advanced
 	name = "advanced rapid-construction-device (RCD)"
@@ -525,16 +569,38 @@ RCD
 	matter = 0
 	max_matter = 500
 	materials = list(MAT_METAL=20000, MAT_GLASS=2500, MAT_SILVER=2500, MAT_GOLD=2500, MAT_PLASMA=2500)
-	canRwall = 1
-	ratio = 3
+	canRturf = 1
+
+	wallcost = 4
+	floorcost = 1
+	grillecost = 1
+	windowcost = 2
+	airlockcost = 4
+	deconwallcost = 3
+	deconfloorcost = 1
+	decongrillecost = 1
+	deconwindowcost = 2
+	deconairlockcost = 4
+
+	walldelay = 5
+	grilledelay = 10
+	windowdelay = 10
+	airlockdelay = 15
+	deconwalldelay = 10
+	deconfloordelay = 15
+	deconwindowdelay = 15
+	deconairlockdelay = 15
+
+	malfproof = 1
+
 
 /obj/item/weapon/rcd_ammo/advanced
 	name = "advanced compressed matter cartridge"
 	desc = "Ultra-Highly compressed matter for the RCD."
 	origin_tech = "materials=4"
-	materials = list(MAT_METAL=80000, MAT_GLASS=40000)
-	ammoamt = 100
+	materials = list(MAT_METAL=18750, MAT_GLASS=12500)
+	ammoamt = 250
 
 /obj/item/weapon/rcd_ammo/large
-	ammoamt = 80
-	materials = list(MAT_METAL=40000, MAT_GLASS=20000)
+	name = "large compressed matter cartridge"
+	ammoamt = 160

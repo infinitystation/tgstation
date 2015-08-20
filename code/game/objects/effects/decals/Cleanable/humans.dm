@@ -22,7 +22,7 @@
 		if (istype(A,/mob/living/carbon))
 			if (!istype(src,/obj/effect/decal/cleanable/blood/old) && !istype(src,/obj/effect/decal/cleanable/blood/drip))
 				var/mob/living/carbon/M = A
-				M.slip(1, 1, null, (NO_SLIP_WHEN_WALKING|STEP))
+				M.slip(1, 1, null, NO_SLIP_WHEN_WALKING)
 
 /obj/effect/decal/cleanable/blood/New()
 	..()

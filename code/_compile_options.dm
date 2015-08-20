@@ -64,5 +64,5 @@ var/list/del_counter = list()
 #error Your version of BYOND is too out-of-date to compile this project. Go to byond.com/download and update.
 #endif
 
-//host on Ubuntu, we can't use bygex library (c) Suworow
-//#define USE_BYGEX
+//we need bygex, i'll compile it ~bear1ake
+#define USE_BYGEX

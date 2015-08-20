@@ -21,7 +21,7 @@
 	if(..())
 		if((target.mind in (ticker.mode.changelings | ticker.mode.abductors)) || is_shadow_or_thrall(target))
 			target.visible_message("<span class='warning'>[target] seems to resist the implant!</span>", "<span class='warning'>You feel the corporate tendrils of Nanotrasen try to invade your mind!</span>")
-			imp_in = null
+			removed(target, 1)
 			qdel(src)
 			return -1
 		if(isntloyal(target))
@@ -36,9 +36,9 @@
 		return 1
 	return 0
 
-/obj/item/weapon/implant/loyalty/removed(mob/target)
+/obj/item/weapon/implant/loyalty/removed(mob/target, var/silent = 0)
 	if(..())
-		if(target.stat != DEAD)
+		if(target.stat != DEAD && !silent)
 			target << "<span class='boldnotice'>You feel a sense of liberation as Nanotrasen's grip on your mind fades away.</span>"
 		return 1
 	return 0
