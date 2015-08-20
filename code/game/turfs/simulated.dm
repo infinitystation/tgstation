@@ -44,26 +44,13 @@
 	..()
 	if (istype(A,/mob/living/carbon))
 		var/mob/living/carbon/M = A
-		if(M.lying)	return
-		if(istype(M, /mob/living/carbon/human))
-			var/mob/living/carbon/human/H = M
-			if(istype(H.shoes, /obj/item/clothing/shoes))
-				var/obj/item/clothing/shoes/O = H.shoes
-				if(H.m_intent == "run")
-					if(O.footstep >= 2)
-						O.footstep = 0
-						playsound(src, "sound/effects/footstep.ogg", 50, 1)
-					else
-						O.footstep++
-				else
-					playsound(src, "sound/effects/footstep.ogg", 20, 1)
-		switch (src.wet)
+		switch(wet)
 			if(1) //wet floor
-				if(!M.slip(4, 2, null, (NO_SLIP_WHEN_WALKING|STEP)))
+				if(!M.slip(4, 2, null, NO_SLIP_WHEN_WALKING))
 					M.inertia_dir = 0
 				return
 			if(2) //lube
-				M.slip(0, 7, null, (STEP|SLIDE|GALOSHES_DONT_HELP))
+				M.slip(0, 7, null, (SLIDE|GALOSHES_DONT_HELP))
 
 /turf/simulated/ChangeTurf(var/path)
 	. = ..()

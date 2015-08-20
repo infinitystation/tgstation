@@ -60,7 +60,7 @@ var/const/VENDING_WIRE_IDSCAN = 8
 /datum/wires/vending/SolveWireFunction(var/function)
 	var/sf = ""
 	switch(function)
-		if(VENDING_WIRE_THROW )
+		if(VENDING_WIRE_THROW)
 			sf = "Port A"
 		if(VENDING_WIRE_CONTRABAND)
 			sf = "Port B"

@@ -406,9 +406,7 @@ var/list/slot2type = list("head" = /obj/item/clothing/head/changeling, "wear_mas
 	var/datum/dna/chosen_dna = chosen_prof.dna
 	user.real_name = chosen_prof.name
 	user.dna = chosen_dna
-	hardset_dna(user, null, null, null, null, chosen_dna.species.type, chosen_dna.features)
-	domutcheck(user)
-	updateappearance(user)
+	hardset_dna(user, chosen_dna.uni_identity, chosen_dna.struc_enzymes, chosen_dna.real_name, chosen_dna.blood_type, chosen_dna.species.type, chosen_dna.features)
 
 	//vars hackery. not pretty, but better than the alternative.
 	for(var/slot in slots)
