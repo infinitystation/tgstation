@@ -251,6 +251,11 @@ var/const/POWER = 8
 	else
 		CRASH("[colour] is not a key in wires.")
 
+/datum/wires/proc/GetColour(index)
+	for(var/colour in wires)
+		if(wires[colour] == index)
+			return colour
+
 //
 // Is Index/Colour Cut procs
 //
@@ -365,6 +370,10 @@ var/const/POWER = 8
 		name_by_type = "Syndicate Bomb"
 	if(istype(src, /datum/wires/vending))
 		name_by_type = "Vending Machine"
+	if(istype(src, /datum/wires/r_n_d))
+		name_by_type = "R'n'D Machine"
+	if(istype(src, /datum/wires/pizza_bomb))
+		name_by_type = "Pizza Bomb"
 	return name_by_type
 
 /datum/wires/proc/SolveWireFunction(var/WireFunction)

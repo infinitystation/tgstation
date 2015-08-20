@@ -1,19 +1,21 @@
-
 #define MAX_WARNS 3
 #define AUTOBANTIME 10
 
 /client/proc/warn(warned_ckey)
-	if(!check_rights(R_ADMIN))	return
-
-	if(!warned_ckey || !istext(warned_ckey))	return
+	if(!check_rights(R_ADMIN))
+		return
+	if(!warned_ckey || !istext(warned_ckey))
+		return
 	if(warned_ckey in admin_datums)
 		usr << "<font color='red'>Error: warn(): You can't warn admins.</font>"
 		return
 
 	var/datum/preferences/D
 	var/client/C = directory[warned_ckey]
-	if(C)	D = C.prefs
-	else	D = preferences_datums[warned_ckey]
+	if(C)
+		D = C.prefs
+	else
+		D = preferences_datums[warned_ckey]
 
 	if(!D)
 		src << "<font color='red'>Error: warn(): No such ckey found.</font>"
@@ -31,7 +33,7 @@
 		feedback_inc("ban_warn",1)
 	else
 		if(C)
-			C << "<font color='red'><BIG><B>ТЕБЕ БАН ПРОПИСАТЬ СУКЕ, ДА?</B></BIG><br>Further warnings will result in an autoban.</font>"
+			C << "<font color='red'><BIG>Вам выдано предупреждение</BIG><br>Дальшейние предупреждени&#255; могут привести к автобану</font>"
 			message_admins("[key_name_admin(src)] has warned [key_name_admin(C)]. They have [MAX_WARNS-D.warns] strikes remaining.")
 		else
 			message_admins("[key_name_admin(src)] has warned [warned_ckey] (DC). They have [MAX_WARNS-D.warns] strikes remaining.")
