@@ -21,6 +21,7 @@
 		notetext = input(usr,"Write your Note","Add Note") as message
 		if(!notetext)
 			return
+	notetext = sanitize_u0(notetext)
 	notetext = sanitizeSQL(notetext)
 	if(!timestamp)
 		timestamp = SQLtime()
@@ -39,6 +40,7 @@
 		log_game("SQL ERROR adding new note to table. Error : \[[err]\]\n")
 		return
 	if(logged)
+		notetext = sanitize_u2a(notetext)
 		log_admin("[key_name(usr)] has added a note to [target_ckey]: [notetext]")
 		message_admins("[key_name_admin(usr)] has added a note to [target_ckey]:<br>[notetext]")
 		show_note(target_ckey)
@@ -67,6 +69,7 @@
 		var/err = query_del_note.ErrorMsg()
 		log_game("SQL ERROR removing note from table. Error : \[[err]\]\n")
 		return
+	notetext = sanitize_u2a(notetext)
 	log_admin("[key_name(usr)] has removed a note made by [adminckey] from [ckey]: [notetext]")
 	message_admins("[key_name_admin(usr)] has removed a note made by [adminckey] from [ckey]:<br>[notetext]")
 	show_note(ckey)
