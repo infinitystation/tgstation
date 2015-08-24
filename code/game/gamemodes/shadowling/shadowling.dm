@@ -68,8 +68,8 @@ Made by Xhuis
 	name = "shadowling"
 	config_tag = "shadowling"
 	antag_flag = BE_SHADOWLING
-	required_players = 30
-	required_enemies = 2
+	required_players = 20
+	required_enemies = 1
 	recommended_enemies = 2
 	restricted_jobs = list("AI", "Cyborg")
 	protected_jobs = list("Security Officer", "Warden", "Detective", "Head of Security", "Captain")
@@ -232,7 +232,7 @@ Made by Xhuis
 	id = "shadowling"
 	say_mod = "chitters"
 	specflags = list(NOBREATH,NOBLOOD,RADIMMUNE,NOGUNS) //Can't use guns due to muzzle flash
-	burnmod = 1.5 //1.5x burn damage, 2x is excessive 
+	burnmod = 1.5 //1.5x burn damage, 2x is excessive
 	heatmod = 1.5
 
 /datum/species/shadow/ling/spec_life(mob/living/carbon/human/H)

@@ -48,6 +48,7 @@
 
 		if ("collapse","collapses")
 			Paralyse(2)
+			adjustStaminaLoss(100) // Hampers abuse against simple mobs, but still leaves it a viable option.
 			if(gender == FEMALE)
 				message = "<B>[src]</B> рухнула!"
 			else

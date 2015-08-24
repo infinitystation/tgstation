@@ -120,6 +120,7 @@
 				client.prefs.real_name = random_unique_name(gender)
 			if(client.prefs.be_random_body)
 				client.prefs.random_character(gender)
+			observer.allow_respawn = 1
 			observer.real_name = client.prefs.real_name
 			observer.name = observer.real_name
 			observer.key = key
