@@ -22,7 +22,8 @@ z7 = empty space
         #include "map_files\TerrorStation\z5.dmm"
         #include "map_files\generic\z6.dmm"
         #include "map_files\generic\z7.dmm"
-        #include "map_files\TerrorStation\z8.dmm"
+        //#include "map_files\TerrorStation\z8.dmm"  //Polar station
+        #include "map_files\TerrorStation\z8train.dmm" //Train
         #define MAP_FILE "MetaStation.v41F_FIX1.dmm"
         #define MAP_NAME "TerrorStation"
 
