@@ -65,4 +65,4 @@ var/list/del_counter = list()
 #endif
 
 //we need bygex, i'll compile it ~bear1ake
-#define USE_BYGEX
+//#define USE_BYGEX

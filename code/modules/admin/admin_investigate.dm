@@ -45,4 +45,5 @@
 				src << "<font color='red'>Error: admin_investigate: Href Logging is not on.</font>"
 				return
 		if("notes")
-			show_note()
+			//show_note()
+			holder.notes_show()
