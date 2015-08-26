@@ -41,6 +41,7 @@
 	var/obj/effect/blob/factory/factory = null
 	var/list/human_overlays = list()
 	var/is_zombie = 0
+	gold_core_spawnable = 1
 
 /mob/living/simple_animal/hostile/blob/blobspore/fire_act(datum/gas_mixture/air, exposed_temperature, exposed_volume)
 	..()
@@ -206,7 +207,7 @@
 	force_threshold = 10
 	environment_smash = 3
 	mob_size = MOB_SIZE_LARGE
-
+	gold_core_spawnable = 1
 
 /mob/living/simple_animal/hostile/blob/blobbernaut/blob_act()
 	return
