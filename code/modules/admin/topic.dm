@@ -512,8 +512,7 @@
 				feedback_inc("ban_appearance",1)
 				DB_ban_record(BANTYPE_APPEARANCE, M, -1, reason)
 				appearance_fullban(M, "[reason]; By [usr.ckey] on [time2text(world.realtime)]")
-				//add_note(M.ckey, "Appearance banned - [reason]", null, usr, 0)
-				notes_add(M.ckey, "Appearance banned - [reason]")
+				add_note(M.ckey, "Appearance banned - [reason]", null, usr, 0)
 				message_admins("<span class='adminnotice'>[key_name_admin(usr)] appearance banned [key_name_admin(M)]</span>")
 				M << "<span class='boldannounce'><BIG>You have been appearance banned by [usr.client.ckey].</BIG></span>"
 				M << "<span class='boldannounce'>The reason is: [reason]</span>"
@@ -929,8 +928,7 @@
 							msg = job
 						else
 							msg += ", [job]"
-					//add_note(M.ckey, "Забанен от игры за [msg]. Причина: [reason]. Время: [mins]", null, usr, 0)
-					notes_add(M.ckey, "Забанен от игры за [msg]. Причина: [reason]. Время: [mins]")
+					add_note(M.ckey, "Забанен от игры за [msg]. Причина: [reason]. Время: [mins]", null, usr, 0)
 					message_admins("<span class='adminnotice'>[key_name_admin(usr)] banned [key_name_admin(M)] from [msg] for [mins] minutes</span>")
 					M << "<span class='boldannounce'><BIG>You have been jobbanned by [usr.client.ckey] from: [msg].</BIG></span>"
 					M << "<span class='boldannounce'>The reason is: [reason]</span>"
@@ -950,8 +948,7 @@
 							jobban_fullban(M, job, "[reason]; By [usr.ckey] on [time2text(world.realtime)]")
 							if(!msg)	msg = job
 							else		msg += ", [job]"
-						//add_note(M.ckey, "Перманентно забанен от игры за [msg]. Причина: [reason]", null, usr, 0)
-						notes_add(M.ckey, "Перманентно забанен от игры за [msg]. Причина: [reason]")
+						add_note(M.ckey, "Перманентно забанен от игры за [msg]. Причина: [reason]", null, usr, 0)
 						message_admins("<span class='adminnotice'>[key_name_admin(usr)] banned [key_name_admin(M)] from [msg]</span>")
 						M << "<span class='boldannounce'><BIG>You have been jobbanned by [usr.client.ckey] from: [msg].</BIG></span>"
 						M << "<span class='boldannounce'>The reason is: [reason]</span>"
@@ -1004,7 +1001,7 @@
 			del(M.client)
 
 	//Player Notes
-	/* else if(href_list["addnote"])
+	else if(href_list["addnote"])
 		var/target_ckey = href_list["addnote"]
 		add_note(target_ckey)
 
@@ -1045,19 +1042,7 @@
 			return
 		if(query_noteedits.NextRow())
 			var/edit_log = query_noteedits.item[1]
-			usr << browse(edit_log,"window=noteedits") */
-	//Player Notes
-	else if(href_list["notes"])
-		var/ckey = href_list["ckey"]
-		switch(href_list["notes"])
-			if("show")
-				notes_show(ckey)
-			if("add")
-				notes_add(ckey,href_list["text"], 1)
-				notes_show(ckey)
-			if("remove")
-				notes_remove(ckey,text2num(href_list["from"]),text2num(href_list["to"]))
-				notes_show(ckey)
+			usr << browse(edit_log,"window=noteedits")
 
 	else if(href_list["removejobban"])
 		if(!check_rights(R_BAN))	return
