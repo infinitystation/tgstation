@@ -196,4 +196,4 @@ IRC_FIRST_CONNECTION_ALERT
 #LOG_RUNTIMES
 
 ##Comment this out if you've used the mass conversion sql proc for notes or want to stop converting notes
-AUTOCONVERT_NOTES
+#AUTOCONVERT_NOTES
