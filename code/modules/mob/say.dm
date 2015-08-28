@@ -39,7 +39,10 @@
 	if(name != real_name)
 		alt_name = " (умер как [real_name])"
 
-	message = src.say_quote(message)
+	var/spans = list()
+	spans += get_spans()
+
+	message = src.say_quote(message, spans)
 	var/rendered = "<span class='game deadsay'><span class='prefix'>DEAD:</span> <span class='name'>[name]</span>[alt_name] <span class='message'>[message]</span></span>"
 
 	for(var/mob/M in player_list)
