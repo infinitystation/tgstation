@@ -407,6 +407,7 @@
 
 /mob/living/simple_animal/hostile/swarmer/proc/ContactSwarmers()
 	var/message = input(src, "Announce to other swarmers", "Swarmer contact")
+	message = sanitize_a0(message)
 	if(message)
 		for(var/mob/M in mob_list)
 			if(isswarmer(M) || (M in dead_mob_list))
