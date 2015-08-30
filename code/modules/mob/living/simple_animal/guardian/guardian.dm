@@ -126,6 +126,9 @@
 	set category = "Guardian"
 	set desc = "Communicate telepathically with your guardian."
 	var/input = stripped_input(src, "Please enter a message to tell your guardian.", "Message", "")
+	input = sanitize_a0(input)
+	if(!input)
+		return
 
 	for(var/mob/M in mob_list)
 		if(istype (M, /mob/living/simple_animal/hostile/guardian))
