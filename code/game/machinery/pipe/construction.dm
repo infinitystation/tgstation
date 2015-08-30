@@ -192,12 +192,7 @@ var/global/list/pipeID2State = list(
 	return rotate()
 
 /obj/item/pipe/attackby(obj/item/weapon/W, mob/user, params)
-	if (!istype(W, /obj/item/weapon/wrench))
-		return ..()
-	if (!isturf(src.loc))
-		return 1
-
-	if (istype(W, /obj/item/device/multitool) && pipe_type in list(PIPE_UVENT))
+	if (istype(W, /obj/item/device/multitool) && pipe_type == PIPE_UVENT)
 		if(setted)
 			setted = 0
 			user << "<span class='danger'>You cancelled settings</span>"
@@ -205,6 +200,12 @@ var/global/list/pipeID2State = list(
 		else
 			interact(user)
 			return ..()
+
+	if (!istype(W, /obj/item/weapon/wrench))
+		return ..()
+
+	if (!isturf(src.loc))
+		return 1
 
 	fixdir()
 	if(pipe_type in list(PIPE_GAS_MIXER, PIPE_GAS_FILTER))
