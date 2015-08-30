@@ -46,9 +46,10 @@
 		var/mob/living/carbon/M = A
 		switch(wet)
 			if(1) //wet floor
-				if(!M.slip(4, 2, null, NO_SLIP_WHEN_WALKING))
-					M.inertia_dir = 0
-				return
+				if(prob(33))
+					if(!M.slip(4, 2, null, NO_SLIP_WHEN_WALKING))
+						M.inertia_dir = 0
+					return
 			if(2) //lube
 				M.slip(0, 7, null, (SLIDE|GALOSHES_DONT_HELP))
 
