@@ -270,11 +270,12 @@
 
 /obj/item/weapon/grown/bananapeel/Crossed(AM as mob|obj)
 	if (istype(AM, /mob/living/carbon))
-		var/mob/living/carbon/M = AM
-		var/stun = Clamp(potency / 10, 1, 10)
-		var/weaken = Clamp(potency / 20, 0.5, 5)
-		M.slip(stun, weaken, src)
-		return 1
+		if(prob(round(potency/25)))
+			var/mob/living/carbon/M = AM
+			var/stun = Clamp(potency / 10, 1, 10)
+			var/weaken = Clamp(potency / 20, 0.5, 5)
+			M.slip(stun, weaken, src)
+			return 1
 
 /obj/item/weapon/grown/bananapeel/specialpeel     //used by /obj/item/clothing/shoes/clown_shoes/banana_shoes
 	name = "synthesized banana peel"
