@@ -4,17 +4,26 @@
 	weight = 15
 	max_occurrences = 3
 
+/datum/round_event/spacevine
+	announceWhen = 1
+	var/area/impact_area
+
 /datum/round_event/spacevine/start()
 	var/list/turfs = list() //list of all the empty floor turfs in the hallway areas
 
 	for(var/area/hallway/A in world)
-		for(var/turf/simulated/F in A)
-			if(!F.density && !F.contents.len)
+		for(var/turf/simulated/floor/F in A)
+			if(F.contents.len <= 1)
 				turfs += F
 
 	if(turfs.len) //Pick a turf to spawn at if we can
 		var/turf/simulated/T = pick(turfs)
-		spawn(0)	new/obj/effect/spacevine_controller(T) //spawn a controller at turf
+		impact_area = get_area(T)
+		spawn(0)
+			new/obj/effect/spacevine_controller(T) //spawn a controller at turf
+
+/datum/round_event/spacevine/announce()
+	priority_announce("Зафиксирован рост космических лиан в [impact_area.name]")
 
 
 /datum/spacevine_mutation
