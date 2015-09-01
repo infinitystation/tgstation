@@ -28,7 +28,6 @@ RCD
 	var/working = 0
 	var/mode = 1
 	var/canRturf = 0
-	var/disabled = 0
 	var/airlock_type = /obj/machinery/door/airlock
 	var/advanced_airlock_setting = 1 //Set to 1 if you want more paintjobs available
 	var/sheetmultiplier	= 4			 //Controls the amount of matter added for each glass/metal sheet, triple for plasteel
@@ -64,8 +63,6 @@ RCD
 	var/decongrilledelay = null //as rapid as wirecutters
 	var/deconwindowdelay = 50
 	var/deconairlockdelay = 50
-
-	var/malfproof = 0
 
 /obj/item/weapon/rcd/verb/change_airlock_access()
 	set name = "Change Airlock Access"
@@ -233,12 +230,14 @@ RCD
 	src.spark_system = new /datum/effect/effect/system/spark_spread
 	spark_system.set_up(5, 0, src)
 	spark_system.attach(src)
+	rcd_list += src
 	return
 
 
 /obj/item/weapon/rcd/Destroy()
 	qdel(spark_system)
 	spark_system = null
+	rcd_list -= src
 	return ..()
 
 /obj/item/weapon/rcd/attackby(obj/item/weapon/W, mob/user, params)
@@ -314,9 +313,6 @@ RCD
 
 /obj/item/weapon/rcd/afterattack(atom/A, mob/user, proximity)
 	if(!proximity) return 0
-	if(disabled && !isrobot(user))
-		if(!malfproof)
-			return 0
 	if(istype(A,/area/shuttle)||istype(A,/turf/space/transit))
 		return 0
 	if(!(istype(A, /turf) || istype(A, /obj/machinery/door/airlock) || istype(A, /obj/structure/grille) || istype(A, /obj/structure/window)))
@@ -545,7 +541,6 @@ RCD
 	max_matter = 500
 	matter = 500
 	canRturf = 1
-	malfproof = 1
 
 /obj/item/weapon/rcd_ammo
 	name = "compressed matter cartridge"
@@ -590,8 +585,6 @@ RCD
 	deconfloordelay = 15
 	deconwindowdelay = 15
 	deconairlockdelay = 15
-
-	malfproof = 1
 
 
 /obj/item/weapon/rcd_ammo/advanced
