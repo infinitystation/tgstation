@@ -95,7 +95,7 @@
 /proc/stripped_input(mob/user, message = "", title = "", default = "", max_length=MAX_MESSAGE_LEN)
 	var/name = input(user, message, title, default) as text|null
 	name = replacetext(name, "ÿ", "___255_")
-	name = html_encode(trim(name, max_length)) //trim is "inside" because html_encode can expand single symbols into multiple symbols (such as turning < into &lt;)
+	name = trim(html_encode(name), max_length) //trim is "outside" because html_encode can expand single symbols into multiple symbols (such as turning < into &lt;)
 	name = replacetext(name, "___255_", "ÿ")
 	return name
 
@@ -447,4 +447,3 @@ var/list/binary = list("0","1")
 /proc/sanitize_u0(t)
 	t = replacetext(t, "ÿ", "&#1103;")
 	return t
-

@@ -127,6 +127,7 @@
 			mob.dna.remove_mutation(CLOWNMUT)
 
 	var/obj/item/toy/crayon/spraycan/R = new(mob)
+	var/obj/item/clothing/glasses/hud/security/chameleon/C = new(mob)
 
 	var/list/slots = list (
 		"backpack" = slot_in_backpack,
@@ -135,6 +136,8 @@
 		"left hand" = slot_l_hand,
 		"right hand" = slot_r_hand,
 	)
+	var/where2 = mob.equip_in_one_of_slots(C, slots)
+
 	mob.equip_in_one_of_slots(R,slots)
 
 	//THEY ARE ANTYLOYAL
@@ -142,6 +145,12 @@
 	AL.implant(mob)
 
 	mob.update_icons()
+
+	if (!where2)
+		mob << "The Syndicate were unfortunately unable to get you a chameleon security HUD."
+	else
+		mob << "The chameleon security HUD in your [where2] will help you keep track of who is loyalty-implanted, and unable to be recruited."
+
 
 /////////////////////////////////
 //Gives head revs their targets//
