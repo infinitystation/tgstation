@@ -2,6 +2,7 @@
 	name = "blob core"
 	icon = 'icons/mob/blob.dmi'
 	icon_state = "blank_blob"
+	desc = "A huge, pulsating yellow mass."
 	health = 200
 	fire_resist = 1
 	var/overmind_get_delay = 0 // we don't want to constantly try to find an overmind, do it every 30 seconds
@@ -39,7 +40,7 @@
 		overmind.blob_core = null
 	overmind = null
 	SSobj.processing.Remove(src)
-	..()
+	return ..()
 
 /obj/effect/blob/core/update_icon()
 	if(health <= 0)

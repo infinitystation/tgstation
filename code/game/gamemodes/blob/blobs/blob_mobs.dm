@@ -26,7 +26,7 @@
 
 /mob/living/simple_animal/hostile/blob/blobspore
 	name = "blob"
-	desc = "Some blob thing."
+	desc = "A floating, fragile spore."
 	icon_state = "blobpod"
 	icon_living = "blobpod"
 	health = 20
@@ -130,7 +130,7 @@
 	if(contents)
 		for(var/mob/M in contents)
 			M.loc = src.loc
-	..()
+	return ..()
 
 
 /mob/living/simple_animal/hostile/blob/blobspore/update_icons()
@@ -177,10 +177,7 @@
 	if (!message)
 		return
 
-	var/spans = list()
-	spans += get_spans()
-
-	var/message_a = say_quote(message, spans)
+	var/message_a = say_quote(message, get_spans())
 	var/rendered = "<font color=\"#EE4000\"><i><span class='game say'>Blob Telepathy, <span class='name'>[name]</span> <span class='message'>[message_a]</span></span></i></font>"
 
 	for (var/mob/M in mob_list)
@@ -194,7 +191,7 @@
 
 /mob/living/simple_animal/hostile/blob/blobbernaut
 	name = "blobbernaut"
-	desc = "Some HUGE blob thing."
+	desc = "A hulking, mobile chunk of blobmass."
 	icon_state = "blobbernaut"
 	icon_living = "blobbernaut"
 	icon_dead = "blobbernaut_dead"

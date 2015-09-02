@@ -48,6 +48,10 @@ var/global/all_solved_wires = list() //Solved wire associative list, eg; all_sol
 			var/list/wires = same_wires[holder_type]
 			src.wires = wires // Reference the wires list.
 
+/datum/wires/Destroy()
+	holder = null
+	return ..()
+
 /datum/wires/proc/GenerateWires()
 	var/list/colours_to_pick = wireColours.Copy() // Get a copy, not a reference.
 	var/list/indexes_to_pick = list()
