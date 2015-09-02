@@ -41,7 +41,7 @@
 
 /obj/structure/door_assembly/door_assembly_sec
 	name = "security airlock assembly"
-	icon = 'icons/obj/doors/airlocks/station/security.dmi'
+	icon = 'icons/blue_brig/airlocks/security.dmi'
 	typetext = "security"
 	icontext = "sec"
 	glass_type = /obj/machinery/door/airlock/glass_security
@@ -50,7 +50,7 @@
 	state = 1
 
 /obj/structure/door_assembly/door_assembly_sec/glass
-	icon = 'icons/blue_brig/airlocks/door_assmb.dmi'
+	icon = 'icons/blue_brig/airlocks/security.dmi'
 	mineral = "glass"
 	material = "glass"
 

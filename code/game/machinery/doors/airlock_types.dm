@@ -6,7 +6,7 @@
 	doortype = /obj/structure/door_assembly/door_assembly_com
 
 /obj/machinery/door/airlock/security
-	icon = 'icons/obj/doors/airlocks/station/security.dmi'
+	icon = 'icons/blue_brig/airlocks/security.dmi'
 	doortype = /obj/structure/door_assembly/door_assembly_sec
 
 /obj/machinery/door/airlock/engineering
@@ -67,7 +67,7 @@
 	glass = 1
 
 /obj/machinery/door/airlock/glass_security
-	icon = 'icons/obj/doors/airlocks/station/security.dmi'
+	icon = 'icons/blue_brig/airlocks/security.dmi'
 	opacity = 0
 	doortype = /obj/structure/door_assembly/door_assembly_sec/glass
 	glass = 1

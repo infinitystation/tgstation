@@ -791,7 +791,7 @@ var/global/list/obj/item/device/pda/PDAs = list()
 	if (last_text && world.time < last_text + 5)
 		return
 
-	if (isnull(P) || P.toff || !istype(P))
+	if (!istype(P) || P.toff || qdeleted(P))
 		return
 
 	last_text = world.time
@@ -1067,7 +1067,7 @@ var/global/list/obj/item/device/pda/PDAs = list()
 
 /obj/item/device/pda/Destroy()
 	PDAs -= src
-	..()
+	return ..()
 
 /obj/item/device/pda/clown/Crossed(AM as mob|obj) //Clown PDA is slippery.
 	if (istype(AM, /mob/living/carbon))

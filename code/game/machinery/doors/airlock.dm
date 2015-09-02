@@ -1065,7 +1065,7 @@ About the new airlock wires panel:
 			overlays_file = 'icons/obj/doors/airlocks/station/overlays.dmi'
 			doortype = /obj/structure/door_assembly/door_assembly_atmo
 		if("Security")
-			icon = 'icons/obj/doors/airlocks/station/security.dmi'
+			icon = 'icons/blue_brig/airlocks/security.dmi'
 			overlays_file = 'icons/obj/doors/airlocks/station/overlays.dmi'
 			doortype = /obj/structure/door_assembly/door_assembly_sec
 		if("Command")

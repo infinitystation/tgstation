@@ -115,6 +115,7 @@
 	set desc = "Communicate telepathically with your summoner."
 	var/input = stripped_input(src, "Please enter a message to tell your summoner.", "Guardian", "")
 	input = sanitize_a0(input)
+	if(!input) return
 
 	for(var/mob/M in mob_list)
 		if(M == src.summoner || (M in dead_mob_list))
@@ -127,8 +128,7 @@
 	set desc = "Communicate telepathically with your guardian."
 	var/input = stripped_input(src, "Please enter a message to tell your guardian.", "Message", "")
 	input = sanitize_a0(input)
-	if(!input)
-		return
+	if(!input) return
 
 	for(var/mob/M in mob_list)
 		if(istype (M, /mob/living/simple_animal/hostile/guardian))
