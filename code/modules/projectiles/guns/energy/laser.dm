@@ -42,7 +42,7 @@
 
 /obj/item/weapon/gun/energy/laser/captain/Destroy()
 	SSobj.processing.Remove(src)
-	..()
+	return ..()
 
 
 /obj/item/weapon/gun/energy/laser/captain/process()
@@ -128,7 +128,7 @@
 
 /obj/item/weapon/gun/energy/laser/bluetag/Destroy()
 	SSobj.processing.Remove(src)
-	..()
+	return ..()
 
 /obj/item/weapon/gun/energy/laser/bluetag/process()
 	charge_tick++
@@ -161,7 +161,7 @@
 
 /obj/item/weapon/gun/energy/laser/redtag/Destroy()
 	SSobj.processing.Remove(src)
-	..()
+	return ..()
 
 /obj/item/weapon/gun/energy/laser/redtag/process()
 	charge_tick++
