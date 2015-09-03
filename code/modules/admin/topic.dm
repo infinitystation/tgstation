@@ -231,6 +231,17 @@
 					usr << "Not enough parameters (Requires ckey, reason and duration)"
 					return
 				banjob = null
+			if(BANTYPE_SOFT_PERMA)
+				if(!banckey || !banreason)
+					usr << "Not enough parameters (Requires ckey and reason)"
+					return
+				banduration = null
+				banjob = null
+			if(BANTYPE_SOFT_TEMP)
+				if(!banckey || !banreason || !banduration)
+					usr << "Not enough parameters (Requires ckey, reason and duration)"
+					return
+				banjob = null
 
 		var/mob/playermob
 
@@ -1075,19 +1086,19 @@
 				if(!reason)
 					return
 				AddBan(M.ckey, M.computer_id, reason, usr.ckey, 1, mins)
-				ban_unban_log_save("[usr.client.ckey] has banned [M.ckey]. - Reason: [reason] - This will be removed in [mins] minutes.")
-				world << "<span class='adminnotice'><b>BAN: Администратор [usr.client.ckey] забанил(а) [M.ckey]. Причина: [reason]. Срок - [mins] минут.</b></span>"
-				M << "<span class='boldannounce'><BIG>You have been banned by [usr.client.ckey].\nReason: [reason]</BIG></span>"
-				M << "<span class='danger'>This is a temporary ban, it will be removed in [mins] minutes.</span>"
+				ban_unban_log_save("[usr.client.ckey] has HARD banned [M.ckey]. - Reason: [reason] - This will be removed in [mins] minutes.")
+				world << "<span class='adminnotice'><b>BAN: Администратор [usr.client.ckey] ЖЕСТКО забанил(а) [M.ckey]. Причина: [reason]. Срок - [mins] минут.</b></span>"
+				M << "<span class='boldannounce'><BIG>Вы были ЖЕСТКО забанены администратором [usr.client.ckey].\nПричина: [reason]</BIG></span>"
+				M << "<span class='danger'>Это временный бан, он истечет через [mins] минут.</span>"
 				feedback_inc("ban_tmp",1)
 				DB_ban_record(BANTYPE_TEMP, M, mins, reason)
 				feedback_inc("ban_tmp_mins",mins)
 				if(config.banappeals)
-					M << "<span class='danger'>To try to resolve this matter head to [config.banappeals]</span>"
+					M << "<span class='danger'>Чтобы оспорить решение администратора, перейдите сюда: [config.banappeals]</span>"
 				else
 					M << "<span class='danger'>No ban appeals URL has been set.</span>"
-				log_admin("[usr.client.ckey] has banned [M.ckey].\nReason: [reason]\nThis will be removed in [mins] minutes.")
-				message_admins("<span class='adminnotice'>[usr.client.ckey] has banned [M.ckey].\nReason: [reason]\nThis will be removed in [mins] minutes.</span>")
+				log_admin("[usr.client.ckey] has HARD banned [M.ckey].\nReason: [reason]\nThis will be removed in [mins] minutes.")
+				message_admins("<span class='adminnotice'>[usr.client.ckey] has HARD banned [M.ckey].\nReason: [reason]\nThis will be removed in [mins] minutes.</span>")
 
 				del(M.client)
 				//qdel(M)	// See no reason why to delete mob. Important stuff can be lost. And ban can be lifted before round ends.
@@ -1101,21 +1112,77 @@
 						AddBan(M.ckey, M.computer_id, reason, usr.ckey, 0, 0,  M.lastKnownIP)
 					if("No")
 						AddBan(M.ckey, M.computer_id, reason, usr.ckey, 0, 0)
-				M << "<span class='boldannounce'><BIG>You have been banned by [usr.client.ckey].\nReason: [reason]</BIG></span>"
-				M << "<span class='danger'>This is a permanent ban.</span>"
+				M << "<span class='boldannounce'><BIG>Вы были ЖЕСТКО забанены администратором [usr.client.ckey].\nПричина: [reason]</BIG></span>"
+				M << "<span class='danger'>Это перманентный бан.</span>"
 				if(config.banappeals)
-					M << "<span class='danger'>To try to resolve this matter head to [config.banappeals]</span>"
+					M << "<span class='danger'>Чтобы оспорить решение администратора, перейдите сюда: [config.banappeals]</span>"
 				else
 					M << "<span class='danger'>No ban appeals URL has been set.</span>"
-				ban_unban_log_save("[usr.client.ckey] has permabanned [M.ckey]. - Reason: [reason] - This is a permanent ban.")
-				world << "<span class='adminnotice'><b>BAN: Администратор [usr.client.ckey] перманентно забанил(а) [M.ckey]. Причина: [reason].</b></span>"
-				log_admin("[usr.client.ckey] has banned [M.ckey].\nReason: [reason]\nThis is a permanent ban.")
-				message_admins("<span class='adminnotice'>[usr.client.ckey] has banned [M.ckey].\nReason: [reason]\nThis is a permanent ban.</span>")
+				ban_unban_log_save("[usr.client.ckey] has HARD permabanned [M.ckey]. - Reason: [reason] - This is a permanent ban.")
+				world << "<span class='adminnotice'><b>BAN: Администратор [usr.client.ckey] ЖЕСТКО и перманентно забанил(а) [M.ckey]. Причина: [reason].</b></span>"
+				log_admin("[usr.client.ckey] has HARD banned [M.ckey].\nReason: [reason]\nThis is a permanent ban.")
+				message_admins("<span class='adminnotice'>[usr.client.ckey] has HARD banned [M.ckey].\nReason: [reason]\nThis is a permanent ban.</span>")
 				feedback_inc("ban_perma",1)
 				DB_ban_record(BANTYPE_PERMA, M, -1, reason)
 
 				del(M.client)
 				//qdel(M)
+			if("Cancel")
+				return
+
+	else if(href_list["softban"])
+		if(!check_rights(R_BAN))	return
+
+		var/mob/M = locate(href_list["softban"])
+		if(!ismob(M)) return
+
+		switch(alert("Temporary Ban?",,"Yes","No", "Cancel"))
+			if("Yes")
+				var/mins = input(usr,"How long (in minutes)?","Ban time",1440) as num|null
+				if(!mins)
+					return
+				var/reason = input(usr,"Please State Reason","Reason") as message
+				if(!reason)
+					return
+				ban_unban_log_save("[usr.client.ckey] has banned [M.ckey]. - Reason: [reason] - This will be removed in [mins] minutes.")
+				world << "<span class='adminnotice'><b>BAN: Администратор [usr.client.ckey] временно отправил(а) [M.ckey] в бан-тюрьму. Причина: [reason]. Срок - [mins] минут.</b></span>"
+				M << "<span class='boldannounce'><BIG>Администратор [usr.client.ckey] заблокировал вашу игру на сервере.\nПричина: [reason]</BIG></span>"
+				M << "<span class='danger'>Это временна&#255; блокировка, она истечет через [mins] минут.</span>"
+				M << "<span class='notice'>У вас есть доступ к игре на сервере в качестве заключенного.</span>"
+				feedback_inc("ban_stf_tmp",1)
+				DB_ban_record(BANTYPE_SOFT_TEMP, M, mins, reason)
+				feedback_inc("ban_sft_tmp_mins",mins)
+				if(config.banappeals)
+					M << "<span class='danger'>Чтобы оспорить решение администратора, перейдите сюда: [config.banappeals]</span>"
+				else
+					M << "<span class='danger'>No ban appeals URL has been set.</span>"
+				log_admin("[usr.client.ckey] has soft banned [M.ckey].\nReason: [reason]\nThis will be removed in [mins] minutes.")
+				message_admins("<span class='adminnotice'>[usr.client.ckey] has soft banned [M.ckey].\nReason: [reason]\nThis will be removed in [mins] minutes.</span>")
+				add_note(M.ckey, "Временно отправлен(а), в бан-тюрьму, причина: [reason]. Время: [mins]", null, usr.client.ckey, 0)
+				del(M.client)
+				M.ckey = null
+				//qdel(M)	// See no reason why to delete mob. Important stuff can be lost. And ban can be lifted before round ends.
+			if("No")
+				var/reason = input(usr,"Please State Reason","Reason") as message
+				if(!reason)
+					return
+				M << "<span class='boldannounce'><BIG>Администратор [usr.client.ckey] заблокировал вашу игру на сервере.\nПричина: [reason]</BIG></span>"
+				M << "<span class='danger'>Это перманентна&#255; блокировка.</span>"
+				M << "<span class='notice'>У вас есть доступ к игре на сервере в качестве заключенного.</span>"
+				if(config.banappeals)
+					M << "<span class='danger'>Чтобы оспорить решение администратора, перейдите сюда: [config.banappeals]</span>"
+				else
+					M << "<span class='danger'>No ban appeals URL has been set.</span>"
+				ban_unban_log_save("[usr.client.ckey] has soft permabanned [M.ckey]. - Reason: [reason] - This is a permanent ban.")
+				world << "<span class='adminnotice'><b>BAN: Администратор [usr.client.ckey] перманентно отправил(а) [M.ckey] в бан-тюрьму. Причина: [reason].</b></span>"
+				log_admin("[usr.client.ckey] has soft banned [M.ckey].\nReason: [reason]\nThis is a permanent ban.")
+				message_admins("<span class='adminnotice'>[usr.client.ckey] has soft banned [M.ckey].\nReason: [reason]\nThis is a permanent ban.</span>")
+				feedback_inc("ban_soft_perma",1)
+				DB_ban_record(BANTYPE_SOFT_PERMA, M, -1, reason)
+				add_note(M.ckey, "Перманентно отправлен(а) в бан-тюрьму, причина: [reason].", null, usr.client.ckey, 0)
+				del(M.client)
+				//qdel(M)
+				M.ckey = null
 			if("Cancel")
 				return
 

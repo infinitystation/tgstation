@@ -394,6 +394,7 @@
 	var/mob/dead/observer/ghost
 	for(var/mob/dead/observer/O in src.loc)
 		if(!O.client)	continue
+		if(O.client.banprisoned) continue
 		if(O.mind && O.mind.current && O.mind.current.stat != DEAD)	continue
 		ghost = O
 		break
@@ -406,6 +407,7 @@
 	var/mob/dead/observer/ghost
 	for(var/mob/dead/observer/O in src.loc)
 		if(!O.client)	continue
+		if(O.client.banprisoned) continue
 		if(O.mind && O.mind.current && O.mind.current.stat != DEAD)	continue
 		ghost = O
 		break

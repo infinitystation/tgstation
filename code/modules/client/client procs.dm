@@ -127,6 +127,11 @@ var/next_external_rsc = 0
 	prefs.last_ip = address				//these are gonna be used for banning
 	prefs.last_id = computer_id			//these are gonna be used for banning
 
+	if(IsBanPrisoned(key))
+		src.banprisoned = 1
+		prefs.muted |= MUTE_OOC | MUTE_PRAY | MUTE_ADMINHELP | MUTE_DEADCHAT
+		prefs.be_special = 0
+
 	. = ..()	//calls mob.Login()
 
 	if( (world.address == address || !address) && !host )

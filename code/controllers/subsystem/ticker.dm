@@ -106,6 +106,7 @@ var/datum/subsystem/ticker/ticker
 				current_state = GAME_STATE_FINISHED
 				toggle_ooc(1) // Turn it on
 				toggle_looc(1) // Turn it on
+				//economy_system.save_system_to_DB()
 				declare_completion(force_ending)
 				spawn(50)
 					if(mode.station_was_nuked)
@@ -179,6 +180,7 @@ var/datum/subsystem/ticker/ticker
 
 	master_controller.roundHasStarted()
 
+	//economy_system.start()
 
 	world << "<FONT color='blue'><B>Welcome to [station_name()], enjoy your stay!</B></FONT>"
 	world << sound('sound/AI/welcome.ogg')
@@ -319,7 +321,10 @@ var/datum/subsystem/ticker/ticker
 				player.create_character()
 				qdel(player)
 		else
-			player.new_player_panel()
+			if(player.client.banprisoned)
+				player.new_player_panel_prisoner()
+			else
+				player.new_player_panel()
 
 
 /datum/subsystem/ticker/proc/collect_minds()

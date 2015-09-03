@@ -264,3 +264,6 @@
 
 /obj/effect/landmark/latejoin
 	name = "JoinLate"
+
+/obj/effect/landmark/ban_prison
+	name = "ban_prison"

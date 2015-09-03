@@ -38,6 +38,8 @@
 
 
 /obj/singularity/narsie/large/attack_ghost(mob/dead/observer/user as mob)
+	if(user.client.banprisoned)
+		return
 	if(!(src in view()))
 		user << "Your soul is too far away."
 		return
