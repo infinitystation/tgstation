@@ -16,6 +16,8 @@
 			attack_ghost(ghost)
 
 /obj/item/unactivated_swarmer/attack_ghost(mob/user)
+	if(user.client.banprisoned)
+		return
 	var/be_swarmer = alert("Become a swarmer? (Warning, You can no longer be cloned!)",,"Yes","No")
 	if(be_swarmer == "No")
 		return

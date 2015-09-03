@@ -43,6 +43,8 @@ var/global/posibrain_notif_cooldown = 0
 
 
 /obj/item/device/mmi/posibrain/attack_ghost(mob/user)
+	if(user.client.banprisoned)
+		return
 	activate(user)
 
 //Two ways to activate a positronic brain. A clickable link in the ghost notif, or simply clicking the object itself.

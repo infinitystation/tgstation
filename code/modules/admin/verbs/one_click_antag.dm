@@ -655,6 +655,8 @@
 	for(var/mob/dead/observer/G in player_list)
 		if(!G.key || !G.client)
 			continue
+		if(G.client.banprisoned)
+			continue
 		if (gametypeCheck)
 			if(!gametypeCheck.age_check(G.client))
 				continue

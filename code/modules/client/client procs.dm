@@ -127,6 +127,11 @@ var/next_external_rsc = 0
 	prefs.last_ip = address				//these are gonna be used for banning
 	prefs.last_id = computer_id			//these are gonna be used for banning
 
+	if(IsBanPrisoned(key))
+		src.banprisoned = 1
+		prefs.muted |= MUTE_OOC | MUTE_PRAY | MUTE_ADMINHELP | MUTE_DEADCHAT
+		prefs.be_special = 0
+
 	. = ..()	//calls mob.Login()
 
 	if( (world.address == address || !address) && !host )
@@ -183,9 +188,6 @@ var/next_external_rsc = 0
 			src.changes()
 		else
 			winset(src, "rpane.changelogb", "background-color=#eaeaea;font-style=bold")
-
-	if(IsBanPrisoned(key))
-		banprisoned = 1
 
 	if(event_on_air)
 		src << "<span class='info'>На сервере [ticker ? "идет" : "готовитс&#255;"] ивент. Подробности читайте здесь: [event_url] или в Admin -> Admin-Notice. Также можете спросить администрацию через Adminhelp (F1)</span>"

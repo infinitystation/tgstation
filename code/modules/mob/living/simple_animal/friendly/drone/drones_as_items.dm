@@ -16,6 +16,8 @@
 	var/drone_type = /mob/living/simple_animal/drone //Type of drone that will be spawned
 
 /obj/item/drone_shell/attack_ghost(mob/user)
+	if(user.client.banprisoned)
+		return
 	if(jobban_isbanned(user,"drone"))
 		return
 
