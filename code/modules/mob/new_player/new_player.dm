@@ -22,17 +22,25 @@
 
 	var/output = "<center><p><a href='byond://?src=\ref[src];show_preferences=1'>Setup Character</A></p>"
 
-	if(!ticker || ticker.current_state <= GAME_STATE_PREGAME)
-		if(ready)
-			output += "<p>\[ <b>Ready</b> | <a href='byond://?src=\ref[src];ready=0'>Not Ready</a> \]</p>"
+
+	if(client.banprisoned)
+		if(!ticker || ticker.current_state <= GAME_STATE_PREGAME)
+			output += "<br>ÄÎÁĞÎ ÏÎÆÀËÎÂÀÒÜ"
+			output += "<br>ÇİÊ Â ÇÀÊÎÍÅ"
 		else
-			output += "<p>\[ <a href='byond://?src=\ref[src];ready=1'>Ready</a> | <b>Not Ready</b> \]</p>"
-
+			output += "<p><a href='byond://?src=\ref[src];spawn_prisoner=1'>Join as Prisoner</A></p>"
 	else
-		output += "<p><a href='byond://?src=\ref[src];manifest=1'>View the Crew Manifest</A></p>"
-		output += "<p><a href='byond://?src=\ref[src];late_join=1'>Join Game!</A></p>"
+		if(!ticker || ticker.current_state <= GAME_STATE_PREGAME)
+			if(ready)
+				output += "<p>\[ <b>Ready</b> | <a href='byond://?src=\ref[src];ready=0'>Not Ready</a> \]</p>"
+			else
+				output += "<p>\[ <a href='byond://?src=\ref[src];ready=1'>Ready</a> | <b>Not Ready</b> \]</p>"
 
-	output += "<p><a href='byond://?src=\ref[src];observe=1'>Observe</A></p>"
+		else
+			output += "<p><a href='byond://?src=\ref[src];manifest=1'>View the Crew Manifest</A></p>"
+			output += "<p><a href='byond://?src=\ref[src];late_join=1'>Join Game!</A></p>"
+
+		output += "<p><a href='byond://?src=\ref[src];observe=1'>Observe</A></p>"
 
 	if(!IsGuestKey(src.key))
 		establish_db_connection()
@@ -102,6 +110,10 @@
 	if(href_list["refresh"])
 		src << browse(null, "window=playersetup") //closes the player setup window
 		new_player_panel()
+
+	if(href_list["spawn_prisoner"])
+		Spawn_Prisoner()
+		return 1
 
 	if(href_list["observe"])
 
