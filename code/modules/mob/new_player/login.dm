@@ -32,7 +32,11 @@
 	if(watch_locations.len>0)
 		loc = pick(watch_locations)
 */
-	new_player_panel()
+	if(client.banprisoned)
+		new_player_panel_prisoner()
+	else
+		new_player_panel()
+
 	if(ckey in deadmins)
 		verbs += /client/proc/readmin
 	spawn(40)
