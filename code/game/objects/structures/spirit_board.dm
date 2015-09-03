@@ -21,6 +21,8 @@
 
 
 /obj/structure/spirit_board/attack_ghost(mob/dead/observer/user)
+	if(user.client.banprisoned)
+		return
 	spirit_board_pick_letter(user)
 
 
