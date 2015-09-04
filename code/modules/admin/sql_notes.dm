@@ -96,6 +96,7 @@
 		var/new_note = input("Input new note", "New Note", "[old_note]") as message
 		if(!new_note)
 			return
+		new_note = sanitize_u0(new_note)
 		new_note = sanitizeSQL(new_note)
 		var/edit_text = "Edited by [sql_ckey] on [SQLtime()] from<br>[old_note]<br>to<br>[new_note]<hr>"
 		edit_text = sanitizeSQL(edit_text)
