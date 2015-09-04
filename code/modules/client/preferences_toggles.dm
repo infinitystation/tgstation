@@ -107,6 +107,9 @@
 	set name = "Toggle Midround Antagonist"
 	set category = "Preferences"
 	set desc = "Toggles whether or not you will be considered for antagonist status given during a round."
+	if(src.banprisoned)
+		src.mob << "Вы заключенный бан-тюрьмы. Вам это не нужно"
+		return
 	prefs.toggles ^= MIDROUND_ANTAG
 	prefs.save_preferences()
 	src << "You will [(prefs.toggles & MIDROUND_ANTAG) ? "now" : "no longer"] be considered for midround antagonist positions."
@@ -211,6 +214,9 @@
 	set name = "Toggle SpecialRole Candidacy"
 	set category = "Preferences"
 	set desc = "Toggles which special roles you would like to be a candidate for, during events."
+	if(src.banprisoned)
+		src.mob << "Вы заключенный бан-тюрьмы. Вам это не нужно"
+		return
 	var/role_flag = be_special_flags[role]
 	if(!role_flag)	return
 	prefs.be_special ^= role_flag
