@@ -330,12 +330,16 @@
 
 	joined_player_list += character.ckey
 
+	character.client.prefs.be_special = 0
+	character.client.prefs.toggles &= ~(MIDROUND_ANTAG)
+	character.client.prefs.save_preferences()
 	character << character.client.banprisoned_reason
 	text = {"Здравствуйте, вы являеетесь заключенным в тюрьме строгого режима.
 Вы попали сюда по причине, которая была описана выше при входе в игру.
 Старайтесь не нарушать правила сервера в этот раз, иначе бан станет жестким, и у вас вообще не будет доступа в игру на сервере.
 	"}
 	character << sanitize_a0(text)
+	message_admins("<span class='notice'>[key_name_admin(character.key)] в игре как заключенный.</span>")
 
 	qdel(src)
 

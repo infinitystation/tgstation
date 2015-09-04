@@ -67,7 +67,7 @@
 
 //Wrapper procs that handle sanity and user feedback
 /obj/proc/user_buckle_mob(mob/living/M, mob/user)
-	if(!(user.canUseTopic()))
+	if(!(user.canUseTopic(src, 1)))
 		return
 
 	add_fingerprint(user)
