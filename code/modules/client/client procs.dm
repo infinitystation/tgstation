@@ -129,7 +129,7 @@ var/next_external_rsc = 0
 
 	if(IsBanPrisoned(key))
 		src.banprisoned = 1
-		prefs.muted |= MUTE_OOC | MUTE_PRAY | MUTE_ADMINHELP | MUTE_DEADCHAT
+		prefs.muted |= MUTE_OOC | MUTE_PRAY | MUTE_DEADCHAT
 		prefs.be_special = 0
 
 	. = ..()	//calls mob.Login()
