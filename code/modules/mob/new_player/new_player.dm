@@ -137,7 +137,7 @@
 				client.prefs.real_name = random_unique_name(gender)
 			if(client.prefs.be_random_body)
 				client.prefs.random_character(gender)
-			observer.allow_respawn = 1
+			observer.client.allow_respawn = 1
 			observer.real_name = client.prefs.real_name
 			observer.name = observer.real_name
 			observer.key = key
@@ -320,7 +320,7 @@
 	qdel(src)
 
 /mob/new_player/proc/Spawn_Prisoner()
-	var/mob/living/carbon/human/character = create_character()	//creates the human and transfers vars and mind
+	var/mob/living/carbon/human/character = create_character(1)	//creates the human and transfers vars and mind
 	character.equip_to_slot_or_del(new /obj/item/clothing/shoes/sneakers/black(character), slot_shoes)
 	character.equip_to_slot_or_del(new /obj/item/weapon/restraints/legcuffs, slot_legcuffed)
 	character.equip_to_slot_or_del(new /obj/item/clothing/under/color/random(character), slot_w_uniform)
@@ -333,6 +333,7 @@
 	character.client.prefs.be_special = 0
 	character.client.prefs.toggles &= ~(MIDROUND_ANTAG)
 	character.client.prefs.save_preferences()
+	character.client.prefs.chat_toggles = TOGGLES_PRISONER_CHAT
 	character << character.client.banprisoned_reason
 	text = {"Здравствуйте, вы являетесь заключенным в тюрьме строгого режима.
 Вы попали сюда по причине, которая была описана выше при входе в игру.
@@ -399,7 +400,7 @@
 	popup.open(0) // 0 is passed to open so that it doesn't use the onclose() proc
 
 
-/mob/new_player/proc/create_character()
+/mob/new_player/proc/create_character(random_override = 0)
 	spawning = 1
 	close_spawn_windows()
 
@@ -408,7 +409,7 @@
 
 	create_dna(new_character)
 
-	if(config.force_random_names || appearance_isbanned(src))
+	if(config.force_random_names || appearance_isbanned(src) || random_override)
 		client.prefs.random_character()
 		client.prefs.real_name = client.prefs.pref_species.random_name(gender,1)
 	client.prefs.copy_to(new_character)

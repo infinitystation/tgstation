@@ -1536,14 +1536,7 @@
 		if(!check_rights(R_ADMIN))	return
 
 		var/mob/H = locate(href_list["allow_respawn"])
-		if(!istype(H))
-			usr << "Может быть использовано только длЯ мобов"
-			return
-
-		H.allow_respawn = 1
-		H << "Вы получили разрешение на респавн"
-		message_admins("<span class='danger'>Admin [key_name_admin(usr)] разрешил(а) респавн [key_name_admin(H)]!</span>")
-		log_admin("[key_name(usr)] разрешил(а) респавн [key_name(H)]")
+		usr.client.cmd_admin_allow_respawn(H)
 
 	else if(href_list["makeai"])
 		if(!check_rights(R_SPAWN))	return

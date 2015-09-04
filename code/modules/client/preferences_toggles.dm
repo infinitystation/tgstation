@@ -3,6 +3,9 @@
 	set name = "Show/Hide GhostEars"
 	set category = "Preferences"
 	set desc = ".Toggle Between seeing all mob speech, and only speech of nearby mobs"
+	if(src.banprisoned)
+		src.mob << "Вы заключенный бан-тюрьмы. Вам это не нужно"
+		return
 	prefs.chat_toggles ^= CHAT_GHOSTEARS
 	src << "As a ghost, you will now [(prefs.chat_toggles & CHAT_GHOSTEARS) ? "see all speech in the world" : "only see speech from nearby mobs"]."
 	prefs.save_preferences()
@@ -12,6 +15,9 @@
 	set name = "Show/Hide GhostSight"
 	set category = "Preferences"
 	set desc = ".Toggle Between seeing all mob emotes, and only emotes of nearby mobs"
+	if(src.banprisoned)
+		src.mob << "Вы заключенный бан-тюрьмы. Вам это не нужно"
+		return
 	prefs.chat_toggles ^= CHAT_GHOSTSIGHT
 	src << "As a ghost, you will now [(prefs.chat_toggles & CHAT_GHOSTSIGHT) ? "see all emotes in the world" : "only see emotes from nearby mobs"]."
 	prefs.save_preferences()
@@ -21,6 +27,9 @@
 	set name = "Show/Hide GhostWhispers"
 	set category = "Preferences"
 	set desc = ".Toggle between hearing all whispers, and only whispers of nearby mobs"
+	if(src.banprisoned)
+		src.mob << "Вы заключенный бан-тюрьмы. Вам это не нужно"
+		return
 	prefs.chat_toggles ^= CHAT_GHOSTWHISPER
 	src << "As a ghost, you will now [(prefs.chat_toggles & CHAT_GHOSTWHISPER) ? "see all whispers in the world" : "only see whispers from nearby mobs"]."
 	prefs.save_preferences()
@@ -30,6 +39,9 @@
 	set name = "Show/Hide GhostRadio"
 	set category = "Preferences"
 	set desc = ".Enable or disable hearing radio chatter as a ghost"
+	if(src.banprisoned)
+		src.mob << "Вы заключенный бан-тюрьмы. Вам это не нужно"
+		return
 	prefs.chat_toggles ^= CHAT_GHOSTRADIO
 	src << "As a ghost, you will now [(prefs.chat_toggles & CHAT_GHOSTRADIO) ? "see radio chatter" : "not see radio chatter"]."
 	prefs.save_preferences()
@@ -39,6 +51,9 @@
 	set name = "Show/Hide GhostPDA"
 	set category = "Preferences"
 	set desc = ".Toggle Between seeing all mob pda messages, and only pda messages of nearby mobs"
+	if(src.banprisoned)
+		src.mob << "Вы заключенный бан-тюрьмы. Вам это не нужно"
+		return
 	prefs.chat_toggles ^= CHAT_GHOSTPDA
 	src << "As a ghost, you will now [(prefs.chat_toggles & CHAT_GHOSTPDA) ? "see all pda messages in the world" : "only see pda messages from nearby mobs"]."
 	prefs.save_preferences()
@@ -68,6 +83,9 @@
 	set name = "Show/Hide Deadchat"
 	set category = "Preferences"
 	set desc ="Toggles seeing deadchat"
+	if(src.banprisoned)
+		src.mob << "Вы заключенный бан-тюрьмы. Вам это не нужно"
+		return
 	prefs.chat_toggles ^= CHAT_DEAD
 	prefs.save_preferences()
 	src << "You will [(prefs.chat_toggles & CHAT_DEAD) ? "now" : "no longer"] see deadchat."
@@ -77,6 +95,9 @@
 	set name = "Show/Hide Prayers"
 	set category = "Preferences"
 	set desc = "Toggles seeing prayers"
+	if(src.banprisoned)
+		src.mob << "Вы заключенный бан-тюрьмы. Вам это не нужно"
+		return
 	prefs.chat_toggles ^= CHAT_PRAYER
 	prefs.save_preferences()
 	src << "You will [(prefs.chat_toggles & CHAT_PRAYER) ? "now" : "no longer"] see prayerchat."
@@ -86,6 +107,9 @@
 	set name = "Hear/Silence Prayer Sounds"
 	set category = "Preferences"
 	set desc = "Toggles hearing pray sounds."
+	if(src.banprisoned)
+		src.mob << "Вы заключенный бан-тюрьмы. Вам это не нужно"
+		return
 	prefs.toggles ^= SOUND_PRAYERS
 	prefs.save_preferences()
 	if(prefs.toggles & SOUND_PRAYERS)
@@ -257,3 +281,16 @@ var/list/ghost_forms = list("ghost","ghostking","ghostian2","skeleghost","ghost_
 	src << "[(prefs.toggles & INTENT_STYLE) ? "Clicking directly on intents selects them." : "Clicking on intents rotates selection clockwise."]"
 	prefs.save_preferences()
 	feedback_add_details("admin_verb","ITENTS") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
+
+/client/verb/default_toggles()
+	set name = "Set default toggles"
+	set category = "Preferences"
+	set desc = "Set default toggles"
+	if(src.banprisoned)
+		src.mob << "Вы заключенный бан-тюрьмы. Вам это не нужно"
+		return
+	prefs.chat_toggles = TOGGLES_DEFAULT_CHAT
+	prefs.toggles = TOGGLES_DEFAULT
+	prefs.save_preferences()
+	src << "Вы настроили свои настройки на стандартные"
+	feedback_add_details("admin_verb","TP") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
