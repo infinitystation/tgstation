@@ -75,3 +75,6 @@
 
 /obj/item/device/radio/intercom/rejects_blood()
 	return 1
+
+/obj/item/device/radio/intercom/prison
+	prison_radio = 1
