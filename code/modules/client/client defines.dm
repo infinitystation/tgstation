@@ -10,7 +10,6 @@
 
 	var/banprisoned = 0				//banprisoned flag
 	var/banprisoned_reason = ""		//reason
-	var/death_count	= 0				//death count for them
 
 		/////////
 		//OTHER//

@@ -489,7 +489,6 @@ var/list/slot_equipment_priority = list( \
 
 	//ban prisoners can respawn right now!
 	if(client.banprisoned)
-		client.death_count++
 		client.allow_respawn = 1
 
 	//respawn allowed?

@@ -320,7 +320,7 @@
 	qdel(src)
 
 /mob/new_player/proc/Spawn_Prisoner()
-	var/mob/living/carbon/human/character = create_character(1)	//creates the human and transfers vars and mind
+	var/mob/living/carbon/human/character = create_character()	//creates the human and transfers vars and mind
 	character.equip_to_slot_or_del(new /obj/item/clothing/shoes/sneakers/black(character), slot_shoes)
 	character.equip_to_slot_or_del(new /obj/item/weapon/restraints/legcuffs, slot_legcuffed)
 	character.equip_to_slot_or_del(new /obj/item/clothing/under/color/random(character), slot_w_uniform)
