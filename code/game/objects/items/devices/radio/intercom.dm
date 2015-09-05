@@ -78,3 +78,4 @@
 
 /obj/item/device/radio/intercom/prison
 	prison_radio = 1
+	freqlock = 1
