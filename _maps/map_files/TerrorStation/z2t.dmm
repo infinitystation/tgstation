@@ -3098,7 +3098,7 @@
 "bhD" = (/turf/simulated/floor/plating,/area/space)
 "bhE" = (/turf/simulated/wall/shuttle{icon_state = "wall3"},/area/space)
 "bhF" = (/turf/space,/turf/simulated/wall/shuttle{dir = 1; icon_state = "diagonalWall3"},/area/space)
-"bhG" = (/obj/structure/table,/obj/item/device/flash/handheld,/obj/item/weapon/storage/box/handcuffs,/obj/machinery/recharger,/turf/simulated/floor/plasteel/shuttle{icon_state = "shuttlefloor4"},/area/centcom/evac)
+"bhG" = (/obj/structure/table,/obj/item/device/assembly/flash/handheld,/obj/item/weapon/storage/box/handcuffs,/obj/machinery/recharger,/turf/simulated/floor/plasteel/shuttle{icon_state = "shuttlefloor4"},/area/centcom/evac)
 "bhH" = (/turf/simulated/floor/plasteel/shuttle/red/syndicate,/area/centcom/evac)
 "bhI" = (/obj/machinery/door/window/northright{base_state = "right"; dir = 4; icon_state = "right"; name = "Security Desk"; req_access_txt = "103"},/turf/simulated/floor/plasteel/shuttle/red/syndicate,/area/centcom/evac)
 "bhJ" = (/obj/structure/table,/obj/structure/bedsheetbin,/obj/structure/window/reinforced{dir = 8},/turf/simulated/floor/plasteel/shuttle,/area/centcom/evac)
