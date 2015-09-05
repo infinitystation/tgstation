@@ -127,7 +127,7 @@ var/next_external_rsc = 0
 	prefs.last_ip = address				//these are gonna be used for banning
 	prefs.last_id = computer_id			//these are gonna be used for banning
 
-	if(IsBanPrisoned(key))
+	if(IsBanPrisoned(src.key, src.address, src.computer_id))
 		src.banprisoned = 1
 		prefs.muted |= MUTE_OOC | MUTE_PRAY | MUTE_DEADCHAT
 		prefs.be_special = 0

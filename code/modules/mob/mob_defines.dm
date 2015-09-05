@@ -134,7 +134,6 @@
 	mouse_drag_pointer = MOUSE_ACTIVE_POINTER
 
 	//Infinity vars
-	var/allow_respawn = 0
 	var/need_to_shit = 0
 	var/flavor_text = ""
 	var/sec_imp_notes = ""

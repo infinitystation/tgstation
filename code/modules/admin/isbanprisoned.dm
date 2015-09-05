@@ -1,30 +1,45 @@
-/client/proc/IsBanPrisoned(key)
+/client/proc/IsBanPrisoned(key, address, computer_id)
 	if (!key)
 		return 0
 
 	if(ckey(key))
 		if(!config.ban_legacy_system)
+			var/ipquery
+			var/cidquery
+			if(address)
+				ipquery = " OR ip = '[address]' "
+
+			if(computer_id)
+				cidquery = " OR computerid = '[computer_id]' "
+
 			var/ckeytext = ckey(key)
-			var/reason
-			var/p_ckey
 
 			if(!establish_db_connection())
 				world.log << "Ban database connection failure. Player [ckeytext] not checked (ban prison)"
 				diary << "Ban database connection failure. Player [ckeytext] not checked (ban prison)"
 				return
 
-			var/DBQuery/query = dbcon.NewQuery("SELECT ckey, reason FROM [format_table_name("ban")] WHERE (ckey = '[ckeytext]') AND (bantype = 'SOFT_PERMABAN'  OR (bantype = 'SOFT_TEMPBAN' AND expiration_time > Now())) AND isnull(unbanned)")
+			var/DBQuery/query = dbcon.NewQuery("SELECT ckey, ip, computerid, a_ckey, reason, expiration_time, duration, bantime FROM [format_table_name("ban")] WHERE (ckey = '[ckeytext]' [ipquery] [cidquery]) AND (bantype = 'SOFT_PERMABAN'  OR (bantype = 'SOFT_TEMPBAN' AND expiration_time > Now())) AND isnull(unbanned)")
 
 			query.Execute()
 
 			while(query.NextRow())
-				p_ckey = query.item[1]
-				reason = query.item[2]
-				if(p_ckey == ckeytext)
-					src.banprisoned_reason = "Вы были забанены бан-тюрьмой по причине: [reason]"
-					return 1
-				else
-					return 0
+				var/pckey = query.item[1]
+				//var/pip = query.item[2]
+				//var/pcid = query.item[3]
+				var/ackey = query.item[4]
+				var/reason = query.item[5]
+				var/expiration = query.item[6]
+				var/duration = query.item[7]
+				var/bantime = query.item[8]
+				var/expires
+
+				if(text2num(duration) > 0)
+					expires = "Это бан на [duration] минут, и он сниметс&#255; в [expiration] по серверному времени (МСК-1)."
+
+				src.banprisoned_reason = "Вы, или кто-то другой, кто использовал(а) ваш компьютер или соединение ([pckey]) были забанены бан-тюрьмой по причине: [reason]. Этот бан выдал(а) администратор [ackey], в [bantime]. [expires]\n"
+				return 1
+			return 0
 	else
 		return 0
 
