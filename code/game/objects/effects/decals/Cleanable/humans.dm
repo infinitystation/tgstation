@@ -19,12 +19,13 @@
 	viruses = null
 	return ..()
 
-/obj/effect/decal/cleanable/blood/Crossed(atom/A)
-	if (prob(20))
-		if (istype(A,/mob/living/carbon))
-			if (!istype(src,/obj/effect/decal/cleanable/blood/old) && !istype(src,/obj/effect/decal/cleanable/blood/drip))
-				var/mob/living/carbon/M = A
+/obj/effect/decal/cleanable/blood/Crossed(atom/movable/O)
+	if(prob(10))
+		if(iscarbon(O))
+			if(!istype(src,/obj/effect/decal/cleanable/blood/old) && !istype(src,/obj/effect/decal/cleanable/blood/drip))
+				var/mob/living/carbon/M = O
 				M.slip(1, 1, null, NO_SLIP_WHEN_WALKING)
+	return ..()
 
 /obj/effect/decal/cleanable/blood/New()
 	..()
