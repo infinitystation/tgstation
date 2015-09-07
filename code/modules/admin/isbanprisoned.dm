@@ -62,3 +62,20 @@
 	popup.set_content(output)
 	popup.open(0)
 	return
+
+/client/verb/request_unmute_adminhelp()
+	set name = "ќтправить просьбу на размут в ј’"
+	set category = "Admin"
+	adminmutetimerid = addtimer(src,"giverequestadminhelpverb",3000) //5 minute cooldown of request admin helps
+	src.verbs -= /client/verb/request_unmute_adminhelp
+	message_admins("[key_name(src, 1)] просит снять мут. „тобы снять мут, нажмите <A href='?_src_=holder;unmuteadminhelprequest=[src.mob.ckey];'>сюда</a>")
+	for(var/client/X in admins)
+		if(X.prefs.toggles & SOUND_ADMINHELP)
+			X << 'sound/effects/adminhelp.ogg'
+	src << "¬ы отправили просьбу о размуте админам"
+
+/client/var/adminmutetimerid = 0
+
+/client/proc/giverequestadminhelpverb()
+	src.verbs |= /client/verb/request_unmute_adminhelp
+	adminmutetimerid = 0
