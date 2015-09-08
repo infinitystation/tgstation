@@ -1144,13 +1144,20 @@
 				var/reason = input(usr,"Please State Reason","Reason") as message
 				if(!reason)
 					return
+				var/ip = alert(usr,"IP ban?",,"Yes","No","Cancel")
+				if(ip=="Cancel")
+					return
 				ban_unban_log_save("[usr.client.ckey] has banned [M.ckey]. - Reason: [reason] - This will be removed in [mins] minutes.")
 				world << "<span class='adminnotice'><b>BAN: Администратор [usr.client.ckey] временно отправил(а) [M.ckey] в бан-тюрьму. Причина: [reason]. Срок - [mins] минут.</b></span>"
 				M << "<span class='boldannounce'><BIG>Администратор [usr.client.ckey] заблокировал вашу игру на сервере.\nПричина: [reason]</BIG></span>"
 				M << "<span class='danger'>Это временна&#255; блокировка, она истечет через [mins] минут.</span>"
 				M << "<span class='notice'>У вас есть доступ к игре на сервере в качестве заключенного.</span>"
 				feedback_inc("ban_stf_tmp",1)
-				DB_ban_record(BANTYPE_SOFT_TEMP, M, mins, reason)
+				switch(ip)
+					if("Yes")
+						DB_ban_record(BANTYPE_SOFT_TEMP, M, mins, reason, banip = M.lastKnownIP, bancid = M.computer_id)
+					if("No")
+						DB_ban_record(BANTYPE_SOFT_TEMP, M, mins, reason, bancid = M.computer_id)
 				feedback_inc("ban_sft_tmp_mins",mins)
 				if(config.banappeals)
 					M << "<span class='danger'>Чтобы оспорить решение администратора, перейдите сюда: [config.banappeals]</span>"
@@ -1166,6 +1173,9 @@
 				var/reason = input(usr,"Please State Reason","Reason") as message
 				if(!reason)
 					return
+				var/ip = alert(usr,"IP ban?",,"Yes","No","Cancel")
+				if(ip=="Cancel")
+					return
 				M << "<span class='boldannounce'><BIG>Администратор [usr.client.ckey] заблокировал вашу игру на сервере.\nПричина: [reason]</BIG></span>"
 				M << "<span class='danger'>Это перманентна&#255; блокировка.</span>"
 				M << "<span class='notice'>У вас есть доступ к игре на сервере в качестве заключенного.</span>"
@@ -1178,7 +1188,11 @@
 				log_admin("[usr.client.ckey] has soft banned [M.ckey].\nReason: [reason]\nThis is a permanent ban.")
 				message_admins("<span class='adminnotice'>[usr.client.ckey] has soft banned [M.ckey].\nReason: [reason]\nThis is a permanent ban.</span>")
 				feedback_inc("ban_soft_perma",1)
-				DB_ban_record(BANTYPE_SOFT_PERMA, M, -1, reason)
+				switch(ip)
+					if("Yes")
+						DB_ban_record(BANTYPE_SOFT_PERMA, M, reason, banip = M.lastKnownIP, bancid = M.computer_id)
+					if("No")
+						DB_ban_record(BANTYPE_SOFT_PERMA, M, reason, bancid = M.computer_id)
 				add_note(M.ckey, "Перманентно отправлен(а) в бан-тюрьму, причина: [reason].", null, usr.client.ckey, 0)
 				del(M.client)
 				//qdel(M)
@@ -1244,6 +1258,9 @@
 	else if(href_list["mute"])
 		if(!check_rights(R_ADMIN))	return
 		cmd_admin_mute(href_list["mute"], text2num(href_list["mute_type"]))
+
+	else if(href_list["unmuteadminhelprequest"])
+		cmd_admin_mute(href_list["unmuteadminhelprequest"], text2num(MUTE_ADMINHELP))
 
 	else if(href_list["c_mode"])
 		if(!check_rights(R_ADMIN))	return
@@ -1522,14 +1539,7 @@
 		if(!check_rights(R_ADMIN))	return
 
 		var/mob/H = locate(href_list["allow_respawn"])
-		if(!istype(H))
-			usr << "Может быть использовано только длЯ мобов"
-			return
-
-		H.allow_respawn = 1
-		H << "Вы получили разрешение на респавн"
-		message_admins("<span class='danger'>Admin [key_name_admin(usr)] разрешил(а) респавн [key_name_admin(H)]!</span>")
-		log_admin("[key_name(usr)] разрешил(а) респавн [key_name(H)]")
+		usr.client.cmd_admin_allow_respawn(H)
 
 	else if(href_list["makeai"])
 		if(!check_rights(R_SPAWN))	return

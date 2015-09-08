@@ -79,6 +79,10 @@ Works together with spawning an observer, noted above.
 */
 
 /mob/proc/ghostize(can_reenter_corpse = 1)
+	if(client)
+		if(client.banprisoned)
+			src << "¬ам не нужно выходить в госты"
+			return
 	if(key)
 		if(!cmptext(copytext(key,1,2),"@")) //aghost
 			var/mob/dead/observer/ghost = new(src)	//Transfer safety to observer spawning proc.

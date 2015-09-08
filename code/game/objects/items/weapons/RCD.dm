@@ -64,6 +64,10 @@ RCD
 	var/deconwindowdelay = 50
 	var/deconairlockdelay = 50
 
+/obj/item/weapon/rcd/suicide_act(mob/user)
+	user.visible_message("<span class='suicide'>[user] sets the RCD to 'Wall' and points it down his throat! It looks like \he's trying to commit suicide..</span>")
+	return (BRUTELOSS)
+
 /obj/item/weapon/rcd/verb/change_airlock_access()
 	set name = "Change Airlock Access"
 	set category = "Object"
@@ -537,7 +541,7 @@ RCD
 	matter = 160
 
 /obj/item/weapon/rcd/combat
-	name = "combat RCD"
+	name = "industrial RCD"
 	max_matter = 500
 	matter = 500
 	canRturf = 1
@@ -548,10 +552,7 @@ RCD
 	icon = 'icons/obj/ammo.dmi'
 	icon_state = "rcd"
 	item_state = "rcdammo"
-	opacity = 0
-	density = 0
-	anchored = 0.0
-	origin_tech = "materials=2"
+	origin_tech = "materials=3"
 	materials = list(MAT_METAL=3000, MAT_GLASS=2000)
 	var/ammoamt = 40
 
@@ -595,5 +596,6 @@ RCD
 	ammoamt = 250
 
 /obj/item/weapon/rcd_ammo/large
-	name = "large compressed matter cartridge"
+	origin_tech = "materials=4"
+	materials = list(MAT_METAL=12000, MAT_GLASS=8000)
 	ammoamt = 160
