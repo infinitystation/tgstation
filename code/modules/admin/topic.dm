@@ -1259,6 +1259,9 @@
 		if(!check_rights(R_ADMIN))	return
 		cmd_admin_mute(href_list["mute"], text2num(href_list["mute_type"]))
 
+	else if(href_list["unmuteadminhelprequest"])
+		cmd_admin_mute(href_list["unmuteadminhelprequest"], text2num(MUTE_ADMINHELP))
+
 	else if(href_list["c_mode"])
 		if(!check_rights(R_ADMIN))	return
 

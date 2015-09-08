@@ -129,7 +129,7 @@ var/next_external_rsc = 0
 
 	if(IsBanPrisoned(src.key, src.address, src.computer_id))
 		src.banprisoned = 1
-		prefs.muted |= MUTE_OOC | MUTE_PRAY | MUTE_DEADCHAT
+		prefs.muted |= MUTE_OOC | MUTE_PRAY | MUTE_DEADCHAT | MUTE_ADMINHELP
 		prefs.be_special = 0
 
 	. = ..()	//calls mob.Login()
@@ -199,6 +199,7 @@ var/next_external_rsc = 0
 	//////////////
 /client/Del()
 	if(holder)
+		adminGreet(1)
 		holder.owner = null
 		admins -= src
 	directory -= ckey
