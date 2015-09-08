@@ -57,7 +57,7 @@
 		if(BANTYPE_SOFT_PERMA)
 			bantype_str = "SOFT_PERMABAN"
 			duration = -1
-			announceinirc = 1
+			bantype_pass = 1
 			blockselfban = 1
 		if(BANTYPE_SOFT_TEMP)
 			bantype_str = "SOFT_TEMPBAN"

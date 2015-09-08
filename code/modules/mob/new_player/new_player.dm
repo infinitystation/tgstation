@@ -137,7 +137,7 @@
 				client.prefs.real_name = random_unique_name(gender)
 			if(client.prefs.be_random_body)
 				client.prefs.random_character(gender)
-			observer.allow_respawn = 1
+			client.allow_respawn = 1
 			observer.real_name = client.prefs.real_name
 			observer.name = observer.real_name
 			observer.key = key
@@ -333,10 +333,10 @@
 	character.client.prefs.be_special = 0
 	character.client.prefs.toggles &= ~(MIDROUND_ANTAG)
 	character.client.prefs.save_preferences()
+	character.client.prefs.chat_toggles = TOGGLES_PRISONER_CHAT
 	character << character.client.banprisoned_reason
-	text = {"Здравствуйте, вы являеетесь заключенным в тюрьме строгого режима.
+	text = {"Здравствуйте, вы являетесь заключенным в тюрьме строгого режима.
 Вы попали сюда по причине, которая была описана выше при входе в игру.
-Старайтесь не нарушать правила сервера в этот раз, иначе бан станет жестким, и у вас вообще не будет доступа в игру на сервере.
 	"}
 	character << sanitize_a0(text)
 	message_admins("<span class='notice'>[key_name_admin(character.key)] в игре как заключенный.</span>")
@@ -363,7 +363,7 @@
 		if(SHUTTLE_ESCAPE)
 			dat += "<div class='notice red'>The station has been evacuated.</div><br>"
 		if(SHUTTLE_CALL)
-			if(SSshuttle.emergency.timeLeft() < 0.5 * initial(SSshuttle.emergencyCallTime)) //Shuttle is past the point of no recall
+			if(!SSshuttle.canRecall())
 				dat += "<div class='notice red'>The station is currently undergoing evacuation procedures.</div><br>"
 
 	var/available_job_count = 0
@@ -400,7 +400,7 @@
 	popup.open(0) // 0 is passed to open so that it doesn't use the onclose() proc
 
 
-/mob/new_player/proc/create_character()
+/mob/new_player/proc/create_character(random_override = 0)
 	spawning = 1
 	close_spawn_windows()
 
@@ -409,7 +409,7 @@
 
 	create_dna(new_character)
 
-	if(config.force_random_names || appearance_isbanned(src))
+	if(config.force_random_names || appearance_isbanned(src) || random_override)
 		client.prefs.random_character()
 		client.prefs.real_name = client.prefs.pref_species.random_name(gender,1)
 	client.prefs.copy_to(new_character)
