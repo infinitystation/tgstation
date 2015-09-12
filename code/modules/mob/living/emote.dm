@@ -224,7 +224,7 @@
 						Shit(src)
 						return
 					else
-						need_to_shit = rand(0, 300)
+						need_to_shit -= rand(0, 200)
 						T.open = 1
 						T.shit++
 						T.update_icon()
