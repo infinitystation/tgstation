@@ -158,6 +158,13 @@
 	max_combined_w_class = 21
 	attack_verb = list("bashed", "battered", "bludgeoned", "thrashed", "whacked")
 
+/obj/item/weapon/storage/secure/briefcase/bio
+	name = "secure biocase"
+	icon = 'icons/obj/biocase.dmi'
+	lefthand_file = 'icons/mob/inhands/biocase_left.dmi'
+	righthand_file = 'icons/mob/inhands/biocase_right.dmi'
+	desc = "A large briefcase with a digital locking system. Use this case for storage bio-hazard items "
+
 /obj/item/weapon/storage/secure/briefcase/New()
 	new /obj/item/weapon/paper(src)
 	new /obj/item/weapon/pen(src)

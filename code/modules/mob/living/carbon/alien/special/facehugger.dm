@@ -33,9 +33,10 @@ var/const/MAX_ACTIVE_TIME = 400
 	return
 
 /obj/item/clothing/mask/facehugger/attack_hand(mob/user)
-	if((stat == CONSCIOUS && !sterile) && !isalien(user) && CanHug(user, src))
-		if(Attach(user))
-			return
+	if((stat == CONSCIOUS && !sterile) && !isalien(user))
+		if(CanHug(user, src))
+			if(Attach(user))
+				return
 	..()
 
 /obj/item/clothing/mask/facehugger/attack(mob/living/M, mob/user)
@@ -217,10 +218,6 @@ var/const/MAX_ACTIVE_TIME = 400
 	visible_message("<span class='danger'>[src] curls up into a ball!</span>")
 
 /proc/CanHug(mob/living/M, atom/movable/source=null)//used for facehuggers
-	if(source)
-		if(source.loc)
-			if(istype(source.loc, /obj/item/weapon/storage/secure/briefcase))
-				return 0
 	if(M.stat == DEAD)
 		return 0
 	if(M.getorgan(/obj/item/organ/internal/alien/hivenode))
