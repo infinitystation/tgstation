@@ -42,6 +42,7 @@ other types of metals and chemistry for reagents).
 	var/list/category = null 			//Primarily used for Mech Fabricators, but can be used for anything
 	var/locked = 0
 	var/access = null
+	var/reagents
 
 
 //A proc to calculate the reliability of a design based on tech levels and innate modifiers.
