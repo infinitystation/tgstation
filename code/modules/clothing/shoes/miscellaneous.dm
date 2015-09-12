@@ -1,5 +1,5 @@
 /obj/item/clothing/shoes/proc/step_action() //this was made to rewrite clown shoes squeaking
-	playsound(src, 'sound/effects/step.ogg', 5, 1)
+	playsound(src, 'sound/effects/step.ogg', 25, 1)
 
 /obj/item/clothing/shoes/suicide_act(mob/user)
 	user.visible_message("<span class='suicide'>[user] is bashing their own head in with [src]! Ain't that a kick in the head?</span>")
