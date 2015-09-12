@@ -63,6 +63,17 @@
 	popup.open(0)
 	return
 
+/mob/new_player/proc/Spawn_Prisoner()
+	var/mob/living/carbon/human/character = create_character()	//creates the human and transfers vars and mind
+
+	character.loc = pick(ban_prison)
+	character.lastarea = get_area(loc)
+	joined_player_list += character.ckey
+
+	setup_and_greet_prisoner(character)
+	character.equipOutfit(/datum/outfit/prisoner)
+	qdel(src)
+
 /client/verb/request_unmute_adminhelp()
 	set name = "Отправить просьбу на размут в АХ"
 	set category = "Admin"
@@ -79,3 +90,21 @@
 /client/proc/giverequestadminhelpverb()
 	src.verbs |= /client/verb/request_unmute_adminhelp
 	adminmutetimerid = 0
+
+/datum/outfit/prisoner
+	name = "Standard Gear"
+
+	uniform = /obj/item/clothing/under/rank/prisoner
+	shoes = /obj/item/clothing/shoes/sneakers/orange/legcuffs
+
+/mob/new_player/proc/setup_and_greet_prisoner(mob/living/carbon/human/character)
+	character.client.prefs.be_special = 0
+	character.client.prefs.toggles &= ~(MIDROUND_ANTAG)
+	character.client.prefs.save_preferences()
+	character.client.prefs.chat_toggles = TOGGLES_PRISONER_CHAT
+	character << character.client.banprisoned_reason
+	text = {"Здравствуйте, вы являетесь заключенным в тюрьме строгого режима.
+Вы попали сюда по причине, которая была описана выше при входе в игру.
+	"}
+	character << sanitize_a0(text)
+	message_admins("<span class='notice'>[key_name_admin(character.key)] в игре как заключенный.</span>")
