@@ -218,6 +218,8 @@ var/const/MAX_ACTIVE_TIME = 400
 	visible_message("<span class='danger'>[src] curls up into a ball!</span>")
 
 /proc/CanHug(mob/living/M, atom/movable/source=null)//used for facehuggers
+	if(!M)
+		return 0
 	if(M.stat == DEAD)
 		return 0
 	if(M.getorgan(/obj/item/organ/internal/alien/hivenode))
