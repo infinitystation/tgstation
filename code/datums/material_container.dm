@@ -61,7 +61,10 @@
 
 /datum/material_container/proc/insert_stack(obj/item/stack/S, amt = 0)
 	if(amt <= 0)
-		return 0
+		if(S.amount > 0)
+			amt = S.amount
+		else
+			return 0
 	if(amt > S.amount)
 		amt = S.amount
 
