@@ -78,6 +78,11 @@
 	body_parts_covered = CHEST|GROIN
 	armor = list(melee = 30, bullet = 15, laser = 30, energy = 10, bomb = 10, bio = 0, rad = 0)
 
+/obj/item/clothing/suit/armor/vest/capcarapace/alt
+	name = "captain's parade jacket"
+	desc = "For when an armoured vest isn't fashionable enough."
+	icon_state = "capformal"
+	item_state = "capspacesuit"
 
 /obj/item/clothing/suit/armor/riot
 	name = "riot suit"
