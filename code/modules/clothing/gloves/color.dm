@@ -42,7 +42,10 @@
 
 /obj/item/clothing/gloves/color/black/ce
 	item_color = "chief"			//Exists for washing machines. Is not different from black gloves in any way.
+	desc = "These gloves are fire-resistant and insulated."
+	name = "black insulated gloves"
 	siemens_coefficient = 0
+	permeability_coefficient = 0.05
 
 /obj/item/clothing/gloves/color/black/attackby(obj/item/weapon/W as obj, mob/user as mob, params)
 	if(istype(W, /obj/item/weapon/wirecutters))

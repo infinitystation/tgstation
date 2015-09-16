@@ -1,36 +1,33 @@
 /obj/structure/door_assembly
-	icon = 'icons/obj/doors/door_assembly.dmi'
-
 	name = "airlock assembly"
-	icon_state = "door_as_0"
+	icon = 'icons/obj/doors/airlocks/station/public.dmi'
+	icon_state = "construction"
+	var/overlays_file = 'icons/obj/doors/airlocks/station/overlays.dmi'
 	anchored = 0
 	density = 1
 	var/state = 0
 	var/mineral = null
 	var/typetext = ""
 	var/icontext = ""
-	var/base_icon_state = "door_as_"
-	var/glass_base_icon_state = "door_as_g"
-	var/obj/item/weapon/airlock_electronics/electronics = null
+	var/obj/item/weapon/electronics/airlock/electronics = null
 	var/airlock_type = /obj/machinery/door/airlock //the type path of the airlock once completed
 	var/glass_type = /obj/machinery/door/airlock/glass
 	var/created_name = null
 	var/heat_proof_finished = 0 //whether to heat-proof the finished airlock
+	var/material = null //icon state logic
 
 /obj/structure/door_assembly/New()
-	base_icon_state = copytext(icon_state,1,lentext(icon_state))
+	update_icon()
 
 /obj/structure/door_assembly/door_assembly_0
 	name = "airlock assembly"
-	icon_state = "door_as_1"
 	airlock_type = /obj/machinery/door/airlock
 	anchored = 1
 	state = 1
 
 /obj/structure/door_assembly/door_assembly_com
 	name = "command airlock assembly"
-	icon_state = "door_as_com1"
-	glass_base_icon_state = "door_as_gcom"
+	icon = 'icons/obj/doors/airlocks/station/command.dmi'
 	typetext = "command"
 	icontext = "com"
 	glass_type = /obj/machinery/door/airlock/glass_command
@@ -40,13 +37,11 @@
 
 /obj/structure/door_assembly/door_assembly_com/glass
 	mineral = "glass"
-	icon_state = "door_as_gcom1"
+	material = "glass"
 
 /obj/structure/door_assembly/door_assembly_sec
 	name = "security airlock assembly"
-	icon = 'icons/blue_brig/airlocks/door_assmb.dmi'
-	icon_state = "door_as_sec1"
-	glass_base_icon_state = "door_as_gsec"
+	icon = 'icons/blue_brig/airlocks/security.dmi'
 	typetext = "security"
 	icontext = "sec"
 	glass_type = /obj/machinery/door/airlock/glass_security
@@ -55,14 +50,13 @@
 	state = 1
 
 /obj/structure/door_assembly/door_assembly_sec/glass
-	icon = 'icons/blue_brig/airlocks/door_assmb.dmi'
+	icon = 'icons/blue_brig/airlocks/security.dmi'
 	mineral = "glass"
-	icon_state = "door_as_gsec1"
+	material = "glass"
 
 /obj/structure/door_assembly/door_assembly_eng
 	name = "engineering airlock assembly"
-	icon_state = "door_as_eng1"
-	glass_base_icon_state = "door_as_geng"
+	icon = 'icons/obj/doors/airlocks/station/engineering.dmi'
 	typetext = "engineering"
 	icontext = "eng"
 	glass_type = /obj/machinery/door/airlock/glass_engineering
@@ -72,12 +66,11 @@
 
 /obj/structure/door_assembly/door_assembly_eng/glass
 	mineral = "glass"
-	icon_state = "door_as_geng1"
+	material = "glass"
 
 /obj/structure/door_assembly/door_assembly_min
 	name = "mining airlock assembly"
-	icon_state = "door_as_min1"
-	glass_base_icon_state = "door_as_gmin"
+	icon = 'icons/obj/doors/airlocks/station/mining.dmi'
 	typetext = "mining"
 	icontext = "min"
 	glass_type = /obj/machinery/door/airlock/glass_mining
@@ -87,12 +80,11 @@
 
 /obj/structure/door_assembly/door_assembly_min/glass
 	mineral = "glass"
-	icon_state = "door_as_gmin1"
+	material = "glass"
 
 /obj/structure/door_assembly/door_assembly_atmo
 	name = "atmospherics airlock assembly"
-	icon_state = "door_as_atmo1"
-	glass_base_icon_state = "door_as_gatmo"
+	icon = 'icons/obj/doors/airlocks/station/atmos.dmi'
 	typetext = "atmos"
 	icontext = "atmo"
 	glass_type = /obj/machinery/door/airlock/glass_atmos
@@ -102,12 +94,11 @@
 
 /obj/structure/door_assembly/door_assembly_atmo/glass
 	mineral = "glass"
-	icon_state = "door_as_gatmo1"
+	material = "glass"
 
 /obj/structure/door_assembly/door_assembly_research
 	name = "research airlock assembly"
-	icon_state = "door_as_res1"
-	glass_base_icon_state = "door_as_gres"
+	icon = 'icons/obj/doors/airlocks/station/research.dmi'
 	typetext = "research"
 	icontext = "res"
 	glass_type = /obj/machinery/door/airlock/glass_research
@@ -117,12 +108,11 @@
 
 /obj/structure/door_assembly/door_assembly_research/glass
 	mineral = "glass"
-	icon_state = "door_as_gres1"
+	material = "glass"
 
 /obj/structure/door_assembly/door_assembly_science
 	name = "science airlock assembly"
-	icon_state = "door_as_sci1"
-	glass_base_icon_state = "door_as_gsci"
+	icon = 'icons/obj/doors/airlocks/station/science.dmi'
 	typetext = "science"
 	icontext = "sci"
 	glass_type = /obj/machinery/door/airlock/glass_science
@@ -132,12 +122,11 @@
 
 /obj/structure/door_assembly/door_assembly_science/glass
 	mineral = "glass"
-	icon_state = "door_as_gsci1"
+	material = "glass"
 
 /obj/structure/door_assembly/door_assembly_med
 	name = "medical airlock assembly"
-	icon_state = "door_as_med1"
-	glass_base_icon_state = "door_as_gmed"
+	icon = 'icons/obj/doors/airlocks/station/medical.dmi'
 	typetext = "medical"
 	icontext = "med"
 	glass_type = /obj/machinery/door/airlock/glass_medical
@@ -147,11 +136,11 @@
 
 /obj/structure/door_assembly/door_assembly_med/glass
 	mineral = "glass"
-	icon_state = "door_as_gmed1"
+	material = "glass"
 
 /obj/structure/door_assembly/door_assembly_mai
 	name = "maintenance airlock assembly"
-	icon_state = "door_as_mai1"
+	icon = 'icons/obj/doors/airlocks/station/maintenance.dmi'
 	typetext = "maintenance"
 	icontext = "mai"
 	airlock_type = /obj/machinery/door/airlock/maintenance
@@ -160,7 +149,8 @@
 
 /obj/structure/door_assembly/door_assembly_ext
 	name = "external airlock assembly"
-	icon_state = "door_as_ext1"
+	icon = 'icons/obj/doors/airlocks/external/external.dmi'
+	overlays_file = 'icons/obj/doors/airlocks/external/overlays.dmi'
 	typetext = "external"
 	icontext = "ext"
 	airlock_type = /obj/machinery/door/airlock/external
@@ -169,7 +159,7 @@
 
 /obj/structure/door_assembly/door_assembly_fre
 	name = "freezer airlock assembly"
-	icon_state = "door_as_fre1"
+	icon = 'icons/obj/doors/airlocks/station/freezer.dmi'
 	typetext = "freezer"
 	icontext = "fre"
 	airlock_type = /obj/machinery/door/airlock/freezer
@@ -178,7 +168,8 @@
 
 /obj/structure/door_assembly/door_assembly_hatch
 	name = "airtight hatch assembly"
-	icon_state = "door_as_hatch1"
+	icon = 'icons/obj/doors/airlocks/hatch/centcom.dmi'
+	overlays_file = 'icons/obj/doors/airlocks/hatch/overlays.dmi'
 	typetext = "hatch"
 	icontext = "hatch"
 	airlock_type = /obj/machinery/door/airlock/hatch
@@ -187,7 +178,8 @@
 
 /obj/structure/door_assembly/door_assembly_mhatch
 	name = "maintenance hatch assembly"
-	icon_state = "door_as_mhatch1"
+	icon = 'icons/obj/doors/airlocks/hatch/maintenance.dmi'
+	overlays_file = 'icons/obj/doors/airlocks/hatch/overlays.dmi'
 	typetext = "maintenance_hatch"
 	icontext = "mhatch"
 	airlock_type = /obj/machinery/door/airlock/maintenance_hatch
@@ -196,15 +188,17 @@
 
 /obj/structure/door_assembly/door_assembly_glass
 	name = "glass airlock assembly"
-	icon_state = "door_as_g1"
+	icon = 'icons/obj/doors/airlocks/station2/glass.dmi'
+	overlays_file = 'icons/obj/doors/airlocks/station2/overlays.dmi'
 	airlock_type = /obj/machinery/door/airlock/glass
 	anchored = 1
 	state = 1
 	mineral = "glass"
+	material = "glass"
 
 /obj/structure/door_assembly/door_assembly_gold
 	name = "gold airlock assembly"
-	icon_state = "door_as_gold1"
+	icon = 'icons/obj/doors/airlocks/station/gold.dmi'
 	airlock_type = /obj/machinery/door/airlock/gold
 	anchored = 1
 	state = 1
@@ -212,7 +206,7 @@
 
 /obj/structure/door_assembly/door_assembly_silver
 	name = "silver airlock assembly"
-	icon_state = "door_as_silver1"
+	icon = 'icons/obj/doors/airlocks/station/silver.dmi'
 	airlock_type = /obj/machinery/door/airlock/silver
 	anchored = 1
 	state = 1
@@ -220,7 +214,7 @@
 
 /obj/structure/door_assembly/door_assembly_diamond
 	name = "diamond airlock assembly"
-	icon_state = "door_as_diamond1"
+	icon = 'icons/obj/doors/airlocks/station/diamond.dmi'
 	airlock_type = /obj/machinery/door/airlock/diamond
 	anchored = 1
 	state = 1
@@ -228,7 +222,7 @@
 
 /obj/structure/door_assembly/door_assembly_uranium
 	name = "uranium airlock assembly"
-	icon_state = "door_as_uranium1"
+	icon = 'icons/obj/doors/airlocks/station/uranium.dmi'
 	airlock_type = /obj/machinery/door/airlock/uranium
 	anchored = 1
 	state = 1
@@ -236,7 +230,7 @@
 
 /obj/structure/door_assembly/door_assembly_plasma
 	name = "plasma airlock assembly"
-	icon_state = "door_as_plasma1"
+	icon = 'icons/obj/doors/airlocks/station/plasma.dmi'
 	airlock_type = /obj/machinery/door/airlock/plasma
 	anchored = 1
 	state = 1
@@ -245,7 +239,7 @@
 /obj/structure/door_assembly/door_assembly_clown
 	name = "bananium airlock assembly"
 	desc = "Honk"
-	icon_state = "door_as_clown1"
+	icon = 'icons/obj/doors/airlocks/station/bananium.dmi'
 	airlock_type = /obj/machinery/door/airlock/clown
 	anchored = 1
 	state = 1
@@ -253,7 +247,7 @@
 
 /obj/structure/door_assembly/door_assembly_sandstone
 	name = "sandstone airlock assembly"
-	icon_state = "door_as_sandstone1"
+	icon = 'icons/obj/doors/airlocks/station/sandstone.dmi'
 	airlock_type = /obj/machinery/door/airlock/sandstone
 	anchored = 1
 	state = 1
@@ -261,7 +255,8 @@
 
 /obj/structure/door_assembly/door_assembly_highsecurity // Borrowing this until WJohnston makes sprites for the assembly
 	name = "high security airlock assembly"
-	icon_state = "door_as_highsec1"
+	icon = 'icons/obj/doors/airlocks/highsec/highsec.dmi'
+	overlays_file = 'icons/obj/doors/airlocks/highsec/overlays.dmi'
 	typetext = "highsecurity"
 	icontext = "highsec"
 	airlock_type = /obj/machinery/door/airlock/highsecurity
@@ -270,7 +265,8 @@
 
 /obj/structure/door_assembly/door_assembly_vault
 	name = "vault door assembly"
-	icon_state = "door_as_vault1"
+	icon = 'icons/obj/doors/airlocks/vault/vault.dmi'
+	overlays_file = 'icons/obj/doors/airlocks/vault/overlays.dmi'
 	typetext = "vault"
 	icontext = "vault"
 	airlock_type = /obj/machinery/door/airlock/vault
@@ -279,7 +275,8 @@
 
 /obj/structure/door_assembly/door_assembly_shuttle
 	name = "shuttle airlock assembly"
-	icon_state = "door_as_shuttle1"
+	icon = 'icons/obj/doors/airlocks/shuttle/shuttle.dmi'
+	overlays_file = 'icons/obj/doors/airlocks/shuttle/overlays.dmi'
 	typetext = "shuttle"
 	icontext = "shuttle"
 	airlock_type = /obj/machinery/door/airlock/shuttle
@@ -288,7 +285,7 @@
 
 /obj/structure/door_assembly/door_assembly_wood
 	name = "wooden airlock assembly"
-	icon_state = "door_as_wood1"
+	icon = 'icons/obj/doors/airlocks/station/wood.dmi'
 	airlock_type = /obj/machinery/door/airlock/wood
 	anchored = 1
 	state = 1
@@ -296,8 +293,7 @@
 
 /obj/structure/door_assembly/door_assembly_viro
 	name = "virology airlock assembly"
-	icon_state = "door_as_viro1"
-	glass_base_icon_state = "door_as_gviro"
+	icon = 'icons/obj/doors/airlocks/station/virology.dmi'
 	typetext = "virology"
 	icontext = "viro"
 	glass_type = /obj/machinery/door/airlock/glass_virology
@@ -307,11 +303,12 @@
 
 /obj/structure/door_assembly/door_assembly_viro/glass
 	mineral = "glass"
-	icon_state = "door_as_gviro1"
+	material = "glass"
 
 /obj/structure/door_assembly/door_assembly_centcom
-	icon_state = "door_as_ele1"
 	typetext = "centcom"
+	icon = 'icons/obj/doors/airlocks/centcom/centcom.dmi'
+	overlays_file = 'icons/obj/doors/airlocks/centcom/overlays.dmi'
 	icontext = "ele"
 	airlock_type = /obj/machinery/door/airlock/centcom
 	anchored = 1
@@ -340,10 +337,10 @@
 			var/optionlist
 			if(mineral && mineral == "glass")
 				//These airlocks have a glass version.
-				optionlist = list("Default", "Engineering", "Atmospherics", "Security", "Command", "Medical", "Research", "Mining")
+				optionlist = list("Public", "Public2", "Engineering", "Atmospherics", "Security", "Command", "Medical", "Research", "Science", "Mining")
 			else
 				//These airlocks have a regular version.
-				optionlist = list("Default", "Engineering", "Atmospherics", "Security", "Command", "Medical", "Research", "Mining", "Maintenance", "External", "High Security")
+				optionlist = list("Public", "Engineering", "Atmospherics", "Security", "Command", "Medical", "Research", "Science", "Mining", "Maintenance", "External", "High Security")
 
 
 			icontype = input(user, "Please select a paintjob for this airlock.") in optionlist
@@ -352,70 +349,106 @@
 			var/has_solid = 0
 			var/has_glass = 0
 			switch(icontype)
-				//For Default the standard options suffice.
+				if("Public")
+					icon = 'icons/obj/doors/airlocks/station/public.dmi'
+					overlays_file = 'icons/obj/doors/airlocks/station/overlays.dmi'
+					typetext = ""
+					icontext = ""
+					has_solid = 1
+					has_glass = 1
+				if("Public2")
+					icon = 'icons/obj/doors/airlocks/station2/glass.dmi'
+					overlays_file = 'icons/obj/doors/airlocks/station2/overlays.dmi'
+					typetext = ""
+					icontext = ""
+					has_solid = 1
+					has_glass = 1
 				if("Engineering")
+					icon = 'icons/obj/doors/airlocks/station/engineering.dmi'
+					overlays_file = 'icons/obj/doors/airlocks/station/overlays.dmi'
 					typetext = "engineering"
 					icontext = "eng"
 					has_solid = 1
 					has_glass = 1
 				if("Atmospherics")
+					icon = 'icons/obj/doors/airlocks/station/atmos.dmi'
+					overlays_file = 'icons/obj/doors/airlocks/station/overlays.dmi'
 					typetext = "atmos"
 					icontext = "atmo"
 					has_solid = 1
 					has_glass = 1
 				if("Security")
+					icon = 'icons/obj/doors/airlocks/station/security.dmi'
+					overlays_file = 'icons/obj/doors/airlocks/station/overlays.dmi'
 					typetext = "security"
 					icontext = "sec"
 					has_solid = 1
 					has_glass = 1
 				if("Command")
+					icon = 'icons/obj/doors/airlocks/station/command.dmi'
+					overlays_file = 'icons/obj/doors/airlocks/station/overlays.dmi'
 					typetext = "command"
 					icontext = "com"
 					has_solid = 1
 					has_glass = 1
 				if("Medical")
+					icon = 'icons/obj/doors/airlocks/station/medical.dmi'
+					overlays_file = 'icons/obj/doors/airlocks/station/overlays.dmi'
 					typetext = "medical"
 					icontext = "med"
 					has_solid = 1
 					has_glass = 1
 				if("Research")
+					icon = 'icons/obj/doors/airlocks/station/research.dmi'
+					overlays_file = 'icons/obj/doors/airlocks/station/overlays.dmi'
+					typetext = "research"
+					icontext = "res"
+					has_solid = 1
+					has_glass = 1
+				if("Science")
+					icon = 'icons/obj/doors/airlocks/station/science.dmi'
+					overlays_file = 'icons/obj/doors/airlocks/station/overlays.dmi'
 					typetext = "research"
 					icontext = "res"
 					has_solid = 1
 					has_glass = 1
 				if("Mining")
+					icon = 'icons/obj/doors/airlocks/station/mining.dmi'
+					overlays_file = 'icons/obj/doors/airlocks/station/overlays.dmi'
 					typetext = "mining"
 					icontext = "min"
 					has_solid = 1
 					has_glass = 1
 				if("Maintenance")
+					icon = 'icons/obj/doors/airlocks/station/maintenance.dmi'
+					overlays_file = 'icons/obj/doors/airlocks/station/overlays.dmi'
 					typetext = "maintenance"
 					icontext = "mai"
 					has_solid = 1
 					has_glass = 0
 				if("External")
+					icon = 'icons/obj/doors/airlocks/external/external.dmi'
+					overlays_file = 'icons/obj/doors/airlocks/external/overlays.dmi'
 					typetext = "external"
 					icontext = "ext"
 					has_solid = 1
 					has_glass = 0
 				if("High Security")
+					icon = 'icons/obj/doors/airlocks/highsec/highsec.dmi'
+					overlays_file = 'icons/obj/doors/airlocks/highsec/overlays.dmi'
 					typetext = "highsecurity"
 					icontext = "highsec"
 					has_solid = 1
 					has_glass = 0
 			if(has_solid)
 				airlock_type = text2path("/obj/machinery/door/airlock/[typetext]")
-				base_icon_state = "door_as_[icontext]"
 			else
 				airlock_type = /obj/machinery/door/airlock
-				base_icon_state = "door_as_"
 
 			if(has_glass)
 				glass_type = text2path("/obj/machinery/door/airlock/glass_[typetext]")
-				glass_base_icon_state = "door_as_g[icontext]"
 			else
 				glass_type = /obj/machinery/door/airlock/glass
-				glass_base_icon_state = "door_as_g"
 
 			if(mineral && mineral != "glass")
 				mineral = null //I know this is stupid, but until we change glass to a boolean it's how this code works.
@@ -508,7 +541,7 @@
 			src.state = 0
 			src.name = "secured airlock assembly"
 
-	else if(istype(W, /obj/item/weapon/airlock_electronics) && state == 1 )
+	else if(istype(W, /obj/item/weapon/electronics/airlock) && state == 1 )
 		playsound(src.loc, 'sound/items/Screwdriver.ogg', 100, 1)
 		user.visible_message("[user] installs the electronics into the airlock assembly.", \
 							"<span class='notice'>You start to install electronics into the airlock assembly...</span>")
@@ -536,9 +569,9 @@
 			user << "<span class='notice'>You remove the airlock electronics.</span>"
 			src.state = 1
 			src.name = "wired airlock assembly"
-			var/obj/item/weapon/airlock_electronics/ae
+			var/obj/item/weapon/electronics/airlock/ae
 			if (!electronics)
-				ae = new/obj/item/weapon/airlock_electronics( src.loc )
+				ae = new/obj/item/weapon/electronics/airlock( src.loc )
 			else
 				ae = electronics
 				electronics = null
@@ -562,6 +595,7 @@
 							name = "near finished window airlock assembly"
 						G.use(1)
 						mineral = "glass"
+						material = "glass"
 						//This list contains the airlock paintjobs that have a glass version:
 						if(icontext in list("eng", "atmo", "sec", "com", "med", "res", "min"))
 							src.airlock_type = text2path("/obj/machinery/door/airlock/[typetext]")
@@ -572,8 +606,6 @@
 							glass_type = /obj/machinery/door/airlock/glass
 							typetext = ""
 							icontext = ""
-						base_icon_state = "door_as_[icontext]"
-						glass_base_icon_state = "door_as_g[icontext]"
 				else if(istype(G, /obj/item/stack/sheet/mineral))
 					var/M = G.sheettype
 					if(G.get_amount() >= 2)
@@ -587,8 +619,6 @@
 							mineral = "[M]"
 							name = "near finished [M] airlock assembly"
 							airlock_type = text2path ("/obj/machinery/door/airlock/[M]")
-							base_icon_state = "door_as_[M]"
-							glass_base_icon_state = "door_as_g"
 							glass_type = /obj/machinery/door/airlock/glass
 
 	else if(istype(W, /obj/item/weapon/screwdriver) && state == 2 )
@@ -617,10 +647,12 @@
 				qdel(src)
 	else
 		..()
-	if(mineral == "glass")
-		icon_state = "[glass_base_icon_state][state]"
+	update_icon()
+
+/obj/structure/door_assembly/update_icon()
+	overlays.Cut()
+	if(!material)
+		overlays += get_airlock_overlay("fill_construction", icon)
 	else
-		icon_state = "[base_icon_state][state]"
-	//This updates the icon_state. They are named as "door_as1_eng" where the 1 in that example
-	//represents what state it's in. So the most generic algorithm for the correct updating of
-	//this is simply to change the number.
+		overlays += get_airlock_overlay("[material]_construction", overlays_file)
+	overlays += get_airlock_overlay("panel_c[state+1]", overlays_file)

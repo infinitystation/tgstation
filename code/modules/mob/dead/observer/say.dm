@@ -4,7 +4,7 @@
 	if (!message)
 		return
 
-	log_say("Ghost/[src.key] : [message]")
+	log_say("Ghost - [src.name]/[src.key] : [message]")
 
 	if (src.client)
 		if(src.client.prefs.muted & MUTE_DEADCHAT)
@@ -24,4 +24,3 @@
 		if(client.prefs.toggles & CHAT_GHOSTEARS && speaker in view(src))
 			message = "<b>(N)</b> [message]"
 	src << "<a href=?src=\ref[src];follow=\ref[speaker]>(F)</a>[message]"
-

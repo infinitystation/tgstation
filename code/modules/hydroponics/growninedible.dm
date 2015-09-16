@@ -49,7 +49,7 @@
 	icon_state = "logs"
 	force = 5
 	throwforce = 5
-	w_class = 3.0
+	w_class = 3
 	throw_speed = 2
 	throw_range = 3
 	plant_type = 2
@@ -110,7 +110,7 @@
 	force = 0
 	slot_flags = SLOT_HEAD
 	throwforce = 0
-	w_class = 1.0
+	w_class = 1
 	throw_speed = 1
 	throw_range = 3
 
@@ -128,7 +128,7 @@
 	force = 0
 	slot_flags = SLOT_HEAD
 	throwforce = 0
-	w_class = 1.0
+	w_class = 1
 	throw_speed = 1
 	throw_range = 3
 	plant_type = 0
@@ -172,7 +172,7 @@
 	force = 15
 	hitsound = 'sound/weapons/bladeslice.ogg'
 	throwforce = 5
-	w_class = 1.0
+	w_class = 1
 	throw_speed = 1
 	throw_range = 3
 	plant_type = 1
@@ -258,7 +258,7 @@
 	icon = 'icons/obj/items.dmi'
 	icon_state = "banana_peel"
 	item_state = "banana_peel"
-	w_class = 1.0
+	w_class = 1
 	throwforce = 0
 	throw_speed = 3
 	throw_range = 7
@@ -270,11 +270,12 @@
 
 /obj/item/weapon/grown/bananapeel/Crossed(AM as mob|obj)
 	if (istype(AM, /mob/living/carbon))
-		var/mob/living/carbon/M = AM
-		var/stun = Clamp(potency / 10, 1, 10)
-		var/weaken = Clamp(potency / 20, 0.5, 5)
-		M.slip(stun, weaken, src)
-		return 1
+		if(prob(round(potency/25)))
+			var/mob/living/carbon/M = AM
+			var/stun = Clamp(potency / 10, 1, 10)
+			var/weaken = Clamp(potency / 20, 0.5, 5)
+			M.slip(stun, weaken, src)
+			return 1
 
 /obj/item/weapon/grown/bananapeel/specialpeel     //used by /obj/item/clothing/shoes/clown_shoes/banana_shoes
 	name = "synthesized banana peel"
@@ -295,7 +296,7 @@
 	desc = "A reminder of meals gone by."
 	icon_state = "corncob"
 	item_state = "corncob"
-	w_class = 1.0
+	w_class = 1
 	throwforce = 0
 	throw_speed = 3
 	throw_range = 7
@@ -314,7 +315,7 @@
 	desc = "A cob with snap pops"
 	icon_state = "snapcorn"
 	item_state = "corncob"
-	w_class = 1.0
+	w_class = 1
 	throwforce = 0
 	throw_speed = 3
 	throw_range = 7

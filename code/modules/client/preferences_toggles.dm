@@ -3,6 +3,9 @@
 	set name = "Show/Hide GhostEars"
 	set category = "Preferences"
 	set desc = ".Toggle Between seeing all mob speech, and only speech of nearby mobs"
+	if(src.banprisoned)
+		src.mob << "Вы заключенный бан-тюрьмы. Вам это не нужно"
+		return
 	prefs.chat_toggles ^= CHAT_GHOSTEARS
 	src << "As a ghost, you will now [(prefs.chat_toggles & CHAT_GHOSTEARS) ? "see all speech in the world" : "only see speech from nearby mobs"]."
 	prefs.save_preferences()
@@ -12,6 +15,9 @@
 	set name = "Show/Hide GhostSight"
 	set category = "Preferences"
 	set desc = ".Toggle Between seeing all mob emotes, and only emotes of nearby mobs"
+	if(src.banprisoned)
+		src.mob << "Вы заключенный бан-тюрьмы. Вам это не нужно"
+		return
 	prefs.chat_toggles ^= CHAT_GHOSTSIGHT
 	src << "As a ghost, you will now [(prefs.chat_toggles & CHAT_GHOSTSIGHT) ? "see all emotes in the world" : "only see emotes from nearby mobs"]."
 	prefs.save_preferences()
@@ -21,6 +27,9 @@
 	set name = "Show/Hide GhostWhispers"
 	set category = "Preferences"
 	set desc = ".Toggle between hearing all whispers, and only whispers of nearby mobs"
+	if(src.banprisoned)
+		src.mob << "Вы заключенный бан-тюрьмы. Вам это не нужно"
+		return
 	prefs.chat_toggles ^= CHAT_GHOSTWHISPER
 	src << "As a ghost, you will now [(prefs.chat_toggles & CHAT_GHOSTWHISPER) ? "see all whispers in the world" : "only see whispers from nearby mobs"]."
 	prefs.save_preferences()
@@ -30,6 +39,9 @@
 	set name = "Show/Hide GhostRadio"
 	set category = "Preferences"
 	set desc = ".Enable or disable hearing radio chatter as a ghost"
+	if(src.banprisoned)
+		src.mob << "Вы заключенный бан-тюрьмы. Вам это не нужно"
+		return
 	prefs.chat_toggles ^= CHAT_GHOSTRADIO
 	src << "As a ghost, you will now [(prefs.chat_toggles & CHAT_GHOSTRADIO) ? "see radio chatter" : "not see radio chatter"]."
 	prefs.save_preferences()
@@ -39,6 +51,9 @@
 	set name = "Show/Hide GhostPDA"
 	set category = "Preferences"
 	set desc = ".Toggle Between seeing all mob pda messages, and only pda messages of nearby mobs"
+	if(src.banprisoned)
+		src.mob << "Вы заключенный бан-тюрьмы. Вам это не нужно"
+		return
 	prefs.chat_toggles ^= CHAT_GHOSTPDA
 	src << "As a ghost, you will now [(prefs.chat_toggles & CHAT_GHOSTPDA) ? "see all pda messages in the world" : "only see pda messages from nearby mobs"]."
 	prefs.save_preferences()
@@ -64,10 +79,23 @@
 	usr << "You will [(prefs.toggles & SOUND_ADMINHELP) ? "now" : "no longer"] hear a sound when adminhelps arrive."
 	feedback_add_details("admin_verb","AHS") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
+/client/proc/toggleannouncelogin()
+	set name = "Do/Don't Announce Login"
+	set category = "Preferences"
+	set desc = "Toggle if you want an announcement to admins when you login during a round"
+	if(!holder)	return
+	prefs.toggles ^= ANNOUNCE_LOGIN
+	prefs.save_preferences()
+	usr << "You will [(prefs.toggles & ANNOUNCE_LOGIN) ? "now" : "no longer"] have an announcement to other admins when you login."
+	feedback_add_details("admin_verb","TAL") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
+
 /client/proc/deadchat()
 	set name = "Show/Hide Deadchat"
 	set category = "Preferences"
 	set desc ="Toggles seeing deadchat"
+	if(src.banprisoned)
+		src.mob << "Вы заключенный бан-тюрьмы. Вам это не нужно"
+		return
 	prefs.chat_toggles ^= CHAT_DEAD
 	prefs.save_preferences()
 	src << "You will [(prefs.chat_toggles & CHAT_DEAD) ? "now" : "no longer"] see deadchat."
@@ -77,6 +105,9 @@
 	set name = "Show/Hide Prayers"
 	set category = "Preferences"
 	set desc = "Toggles seeing prayers"
+	if(src.banprisoned)
+		src.mob << "Вы заключенный бан-тюрьмы. Вам это не нужно"
+		return
 	prefs.chat_toggles ^= CHAT_PRAYER
 	prefs.save_preferences()
 	src << "You will [(prefs.chat_toggles & CHAT_PRAYER) ? "now" : "no longer"] see prayerchat."
@@ -86,6 +117,9 @@
 	set name = "Hear/Silence Prayer Sounds"
 	set category = "Preferences"
 	set desc = "Toggles hearing pray sounds."
+	if(src.banprisoned)
+		src.mob << "Вы заключенный бан-тюрьмы. Вам это не нужно"
+		return
 	prefs.toggles ^= SOUND_PRAYERS
 	prefs.save_preferences()
 	if(prefs.toggles & SOUND_PRAYERS)
@@ -107,6 +141,9 @@
 	set name = "Toggle Midround Antagonist"
 	set category = "Preferences"
 	set desc = "Toggles whether or not you will be considered for antagonist status given during a round."
+	if(src.banprisoned)
+		src.mob << "Вы заключенный бан-тюрьмы. Вам это не нужно"
+		return
 	prefs.toggles ^= MIDROUND_ANTAG
 	prefs.save_preferences()
 	src << "You will [(prefs.toggles & MIDROUND_ANTAG) ? "now" : "no longer"] be considered for midround antagonist positions."
@@ -211,6 +248,9 @@
 	set name = "Toggle SpecialRole Candidacy"
 	set category = "Preferences"
 	set desc = "Toggles which special roles you would like to be a candidate for, during events."
+	if(src.banprisoned)
+		src.mob << "Вы заключенный бан-тюрьмы. Вам это не нужно"
+		return
 	var/role_flag = be_special_flags[role]
 	if(!role_flag)	return
 	prefs.be_special ^= role_flag
@@ -251,3 +291,16 @@ var/list/ghost_forms = list("ghost","ghostking","ghostian2","skeleghost","ghost_
 	src << "[(prefs.toggles & INTENT_STYLE) ? "Clicking directly on intents selects them." : "Clicking on intents rotates selection clockwise."]"
 	prefs.save_preferences()
 	feedback_add_details("admin_verb","ITENTS") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
+
+/client/verb/default_toggles()
+	set name = "Set default toggles"
+	set category = "Preferences"
+	set desc = "Set default toggles"
+	if(src.banprisoned)
+		src.mob << "Вы заключенный бан-тюрьмы. Вам это не нужно"
+		return
+	prefs.chat_toggles = TOGGLES_DEFAULT_CHAT
+	prefs.toggles = TOGGLES_DEFAULT
+	prefs.save_preferences()
+	src << "Вы настроили свои настройки на стандартные"
+	feedback_add_details("admin_verb","TP") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!

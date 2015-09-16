@@ -8,9 +8,13 @@
 	var/last_message	= "" //Contains the last message sent by this client - used to protect against copy-paste spamming.
 	var/last_message_count = 0 //contins a number of how many times a message identical to last_message was sent.
 
+	var/banprisoned = 0				//banprisoned flag
+	var/banprisoned_reason = ""		//reason
+
 		/////////
 		//OTHER//
 		/////////
+	var/allow_respawn	= 0
 	var/datum/preferences/prefs = null
 	var/move_delay		= 1
 	var/moving			= null
@@ -27,7 +31,7 @@
 		//SECURITY//
 		////////////
 	// comment out the line below when debugging locally to enable the options & messages menu
-	control_freak = 1
+	control_freak = CONTROL_FREAK_SKIN
 
 		////////////////////////////////////
 		//things that require the database//

@@ -3,13 +3,14 @@
 		usr << "<span class='danger'>Failed to establish database connection.</span>"
 		return
 	if(!target_ckey)
-		var/new_ckey = ckey(input(usr,"Who would you like to add a note for?","Enter a ckey",null) as text|null)
+		var/new_ckey = ckey(input(usr,"Who would you like to add a note for?","Enter a ckey",null) as text)
 		if(!new_ckey)
 			return
+		new_ckey = sanitizeSQL(new_ckey)
 		var/DBQuery/query_find_ckey = dbcon.NewQuery("SELECT ckey FROM [format_table_name("player")] WHERE ckey = '[new_ckey]'")
 		if(!query_find_ckey.Execute())
 			var/err = query_find_ckey.ErrorMsg()
-			log_game("SQL ERROR obtaining ckey from notes table. Error : \[[err]\]\n")
+			log_game("SQL ERROR obtaining ckey from player table. Error : \[[err]\]\n")
 			return
 		if(!query_find_ckey.NextRow())
 			usr << "<span class='redtext'>[new_ckey] has not been seen before, you can only add notes to known players.</span>"
@@ -95,6 +96,7 @@
 		var/new_note = input("Input new note", "New Note", "[old_note]") as message
 		if(!new_note)
 			return
+		new_note = sanitize_u0(new_note)
 		new_note = sanitizeSQL(new_note)
 		var/edit_text = "Edited by [sql_ckey] on [SQLtime()] from<br>[old_note]<br>to<br>[new_note]<hr>"
 		edit_text = sanitizeSQL(edit_text)
@@ -150,7 +152,8 @@
 		var/search
 		output += "<center><a href='?_src_=holder;addnoteempty=1'>\[Add Note\]</a></center>"
 		output += ruler
-		index = sanitizeSQL(index)
+		if(!isnum(index))
+			index = sanitizeSQL(index)
 		switch(index)
 			if(1)
 				search = "^."

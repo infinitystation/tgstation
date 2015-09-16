@@ -22,17 +22,27 @@
 
 	var/output = "<center><p><a href='byond://?src=\ref[src];show_preferences=1'>Setup Character</A></p>"
 
-	if(!ticker || ticker.current_state <= GAME_STATE_PREGAME)
-		if(ready)
-			output += "<p>\[ <b>Ready</b> | <a href='byond://?src=\ref[src];ready=0'>Not Ready</a> \]</p>"
+
+	if(client.banprisoned)
+		if(!ticker || ticker.current_state <= GAME_STATE_PREGAME)
+			output += "<p>ÄÎÁĞÎ ÏÎÆÀËÎÂÀÒÜ</p>"
+			output += "<p>ÇİÊ Â ÇÀÊÎÍÅ</p>"
 		else
-			output += "<p>\[ <a href='byond://?src=\ref[src];ready=1'>Ready</a> | <b>Not Ready</b> \]</p>"
-
+			output += "<p>ÄÎÁĞÎ ÏÎÆÀËÎÂÀÒÜ</p>"
+			output += "<p>ÇİÊ Â ÇÀÊÎÍÅ</p>"
+			output += "<p><a href='byond://?src=\ref[src];spawn_prisoner=1'>Join as Prisoner</A></p>"
 	else
-		output += "<p><a href='byond://?src=\ref[src];manifest=1'>View the Crew Manifest</A></p>"
-		output += "<p><a href='byond://?src=\ref[src];late_join=1'>Join Game!</A></p>"
+		if(!ticker || ticker.current_state <= GAME_STATE_PREGAME)
+			if(ready)
+				output += "<p>\[ <b>Ready</b> | <a href='byond://?src=\ref[src];ready=0'>Not Ready</a> \]</p>"
+			else
+				output += "<p>\[ <a href='byond://?src=\ref[src];ready=1'>Ready</a> | <b>Not Ready</b> \]</p>"
 
-	output += "<p><a href='byond://?src=\ref[src];observe=1'>Observe</A></p>"
+		else
+			output += "<p><a href='byond://?src=\ref[src];manifest=1'>View the Crew Manifest</A></p>"
+			output += "<p><a href='byond://?src=\ref[src];late_join=1'>Join Game!</A></p>"
+
+		output += "<p><a href='byond://?src=\ref[src];observe=1'>Observe</A></p>"
 
 	if(!IsGuestKey(src.key))
 		establish_db_connection()
@@ -101,7 +111,14 @@
 
 	if(href_list["refresh"])
 		src << browse(null, "window=playersetup") //closes the player setup window
-		new_player_panel()
+		if(client.banprisoned)
+			new_player_panel_prisoner()
+		else
+			new_player_panel()
+
+	if(href_list["spawn_prisoner"])
+		Spawn_Prisoner()
+		return 1
 
 	if(href_list["observe"])
 
@@ -120,7 +137,7 @@
 				client.prefs.real_name = random_unique_name(gender)
 			if(client.prefs.be_random_body)
 				client.prefs.random_character(gender)
-			observer.allow_respawn = 1
+			client.allow_respawn = 1
 			observer.real_name = client.prefs.real_name
 			observer.name = observer.real_name
 			observer.key = key
@@ -174,7 +191,10 @@
 		if(client)
 			client.prefs.process_link(src, href_list)
 	else if(!href_list["late_join"])
-		new_player_panel()
+		if(client.banprisoned)
+			new_player_panel_prisoner()
+		else
+			new_player_panel()
 
 	if(href_list["showpoll"])
 		handle_player_polling()
@@ -299,17 +319,6 @@
 					ticker.mode.make_antag_chance(character)
 	qdel(src)
 
-/mob/new_player/proc/Spawn_Prisoner()
-	var/mob/living/carbon/human/character = create_character()	//creates the human and transfers vars and mind
-	character.equip_to_slot_or_del(new /obj/item/clothing/shoes/sneakers/black(character), slot_shoes)
-	character.equip_to_slot_or_del(new /obj/item/clothing/under/color/random(character), slot_w_uniform)
-	character.loc = pick(ban_prison)
-	character.lastarea = get_area(loc)
-
-	joined_player_list += character.ckey
-
-	qdel(src)
-
 /mob/new_player/proc/AnnounceArrival(var/mob/living/carbon/human/character, var/rank)
 	if (ticker.current_state == GAME_STATE_PLAYING)
 		if(announcement_systems.len)
@@ -330,7 +339,7 @@
 		if(SHUTTLE_ESCAPE)
 			dat += "<div class='notice red'>The station has been evacuated.</div><br>"
 		if(SHUTTLE_CALL)
-			if(SSshuttle.emergency.timeLeft() < 0.5 * initial(SSshuttle.emergencyCallTime)) //Shuttle is past the point of no recall
+			if(!SSshuttle.canRecall())
 				dat += "<div class='notice red'>The station is currently undergoing evacuation procedures.</div><br>"
 
 	var/available_job_count = 0
@@ -367,7 +376,7 @@
 	popup.open(0) // 0 is passed to open so that it doesn't use the onclose() proc
 
 
-/mob/new_player/proc/create_character()
+/mob/new_player/proc/create_character(random_override = 0)
 	spawning = 1
 	close_spawn_windows()
 
@@ -376,7 +385,7 @@
 
 	create_dna(new_character)
 
-	if(config.force_random_names || appearance_isbanned(src))
+	if(config.force_random_names || appearance_isbanned(src) || random_override)
 		client.prefs.random_character()
 		client.prefs.real_name = client.prefs.pref_species.random_name(gender,1)
 	client.prefs.copy_to(new_character)

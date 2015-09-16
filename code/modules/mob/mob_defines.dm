@@ -106,9 +106,6 @@
 
 	var/radiation = 0//Carbon
 
-	var/list/mutations = list() //Carbon -- Doohl
-	//see: setup.dm for list of mutations
-
 	var/voice_name = "unidentifiable voice"
 
 	var/list/faction = list("neutral") //A list of factions that this mob is currently in, for hostile mob targetting, amongst other things
@@ -134,7 +131,6 @@
 	mouse_drag_pointer = MOUSE_ACTIVE_POINTER
 
 	//Infinity vars
-	var/allow_respawn = 0
 	var/need_to_shit = 0
 	var/flavor_text = ""
 	var/sec_imp_notes = ""
@@ -145,6 +141,9 @@
 	var/area/lastarea = null
 
 	var/digitalcamo = 0 // Can they be tracked by the AI?
+	var/digitalinvis = 0 //Are they ivisible to the AI?
+	var/image/digitaldisguise = null  //what does the AI see instead of them?
+
 	var/weakeyes = 0 //Are they vulnerable to flashes?
 
 	var/has_unlimited_silicon_privilege = 0 // Can they interact with station electronics

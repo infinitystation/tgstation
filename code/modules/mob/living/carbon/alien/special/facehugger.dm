@@ -19,6 +19,7 @@ var/const/MAX_ACTIVE_TIME = 400
 	throw_range = 5
 	tint = 3
 	flags_cover = MASKCOVERSEYES | MASKCOVERSMOUTH
+	layer = MOB_LAYER
 
 	var/stat = CONSCIOUS //UNCONSCIOUS is the idle state in this case
 
@@ -34,8 +35,9 @@ var/const/MAX_ACTIVE_TIME = 400
 
 /obj/item/clothing/mask/facehugger/attack_hand(mob/user)
 	if((stat == CONSCIOUS && !sterile) && !isalien(user))
-		if(Attach(user))
-			return
+		if(CanHug(user, src))
+			if(Attach(user))
+				return
 	..()
 
 /obj/item/clothing/mask/facehugger/attack(mob/living/M, mob/user)
@@ -83,7 +85,7 @@ var/const/MAX_ACTIVE_TIME = 400
 	return 0
 
 /obj/item/clothing/mask/facehugger/HasProximity(atom/movable/AM as mob|obj)
-	if(CanHug(AM))
+	if(CanHug(AM, src))
 		return Attach(AM)
 	return 0
 
@@ -187,7 +189,6 @@ var/const/MAX_ACTIVE_TIME = 400
 	else
 		target.visible_message("<span class='danger'>[src] violates [target]'s face!</span>", \
 								"<span class='userdanger'>[src] violates [target]'s face!</span>")
-	return
 
 /obj/item/clothing/mask/facehugger/proc/GoActive()
 	if(stat == DEAD || stat == CONSCIOUS)
@@ -196,19 +197,9 @@ var/const/MAX_ACTIVE_TIME = 400
 	stat = CONSCIOUS
 	icon_state = "[initial(icon_state)]"
 
-/*		for(var/mob/living/carbon/alien/alien in world)
-		var/image/activeIndicator = image('icons/mob/alien.dmi', loc = src, icon_state = "facehugger_active")
-		activeIndicator.override = 1
-		if(alien && alien.client)
-			alien.client.images += activeIndicator	*/
-
-	return
-
 /obj/item/clothing/mask/facehugger/proc/GoIdle()
 	if(stat == DEAD || stat == UNCONSCIOUS)
 		return
-
-/*		RemoveActiveIndicators()	*/
 
 	stat = UNCONSCIOUS
 	icon_state = "[initial(icon_state)]_inactive"
@@ -221,17 +212,14 @@ var/const/MAX_ACTIVE_TIME = 400
 	if(stat == DEAD)
 		return
 
-/*		RemoveActiveIndicators()	*/
-
 	icon_state = "[initial(icon_state)]_dead"
+	item_state = "facehugger_inactive"
 	stat = DEAD
 
 	visible_message("<span class='danger'>[src] curls up into a ball!</span>")
 
-	return
-
-/proc/CanHug(mob/living/M)
-	if(!istype(M))
+/proc/CanHug(mob/living/M, atom/movable/source=null)//used for facehuggers
+	if(!M)
 		return 0
 	if(M.stat == DEAD)
 		return 0

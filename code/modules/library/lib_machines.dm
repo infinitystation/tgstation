@@ -175,6 +175,7 @@ var/global/list/datum/cachedbook/cachedbooks // List of our cached book datums
 	var/obj/machinery/libraryscanner/scanner // Book scanner that will be used when uploading books to the Archive
 	var/libcomp_menu
 	var/bibledelay = 0 // LOL NO SPAM (1 minute delay) -- Doohl
+	var/read_only = 0
 
 /obj/machinery/computer/libraryconsole/bookmanagement/proc/build_library_menu()
 	if(libcomp_menu)
@@ -202,7 +203,8 @@ var/global/list/datum/cachedbook/cachedbooks // List of our cached book datums
 			dat += "<A href='?src=\ref[src];switchscreen=2'>2. View Checked Out Inventory</A><BR>"
 			dat += "<A href='?src=\ref[src];switchscreen=3'>3. Check out a Book</A><BR>"
 			dat += "<A href='?src=\ref[src];switchscreen=4'>4. Connect to External Archive</A><BR>"
-			dat += "<A href='?src=\ref[src];switchscreen=5'>5. Upload New Title to Archive</A><BR>"
+			if(read_only)
+				dat += "<A href='?src=\ref[src];switchscreen=5'>5. Upload New Title to Archive</A><BR>"
 			dat += "<A href='?src=\ref[src];switchscreen=6'>6. Print a Bible</A><BR>"
 			if(src.emagged)
 				dat += "<A href='?src=\ref[src];switchscreen=7'>7. Access the Forbidden Lore Vault</A><BR>"
@@ -322,7 +324,10 @@ var/global/list/datum/cachedbook/cachedbooks // List of our cached book datums
 			if("4")
 				screenstate = 4
 			if("5")
-				screenstate = 5
+				if(!read_only)
+					screenstate = 5
+				else
+					say("Uploading not avaliable. Read only")
 			if("6")
 				if(!bibledelay)
 
@@ -378,6 +383,8 @@ var/global/list/datum/cachedbook/cachedbooks // List of our cached book datums
 		if(newcategory)
 			upload_category = newcategory
 	if(href_list["upload"])
+		if(read_only)
+			return
 		if(scanner)
 			if(scanner.cache)
 				var/choice = input("Are you certain you wish to upload this title to the Archive?") in list("Confirm", "Abort")
@@ -488,6 +495,10 @@ var/global/list/datum/cachedbook/cachedbooks // List of our cached book datums
 	src.add_fingerprint(usr)
 	src.updateUsrDialog()
 	return
+
+/obj/machinery/computer/libraryconsole/bookmanagement/prison
+	name = "book inventory reading console"
+	read_only = 1
 
 
 /*

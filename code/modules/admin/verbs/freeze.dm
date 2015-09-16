@@ -56,17 +56,6 @@ var/global/list/frozen_mob_list = list()
 		frozen_mob_list -= src
 
 
-/mob/living/carbon/slime/admin_Freeze(admin)
-	..(admin)
-	adjustToxLoss(1010101010) //arbitrary large value
-
-/mob/living/carbon/slime/admin_unFreeze(admin)
-	..(admin)
-	adjustToxLoss(-1010101010)
-	stat = 0
-	revive()
-
-
 /mob/living/simple_animal/var/admin_prev_health = null
 
 /mob/living/simple_animal/admin_Freeze(admin)

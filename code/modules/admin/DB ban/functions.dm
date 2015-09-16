@@ -54,6 +54,15 @@
 			announceinirc = 1
 			blockselfban = 1
 			kickbannedckey = 1
+		if(BANTYPE_SOFT_PERMA)
+			bantype_str = "SOFT_PERMABAN"
+			duration = -1
+			bantype_pass = 1
+			blockselfban = 1
+		if(BANTYPE_SOFT_TEMP)
+			bantype_str = "SOFT_TEMPBAN"
+			bantype_pass = 1
+			blockselfban = 1
 	if( !bantype_pass ) return
 	if( !istext(reason) ) return
 	if( !isnum(duration) ) return
@@ -166,6 +175,12 @@
 				bantype_pass = 1
 			if(BANTYPE_ADMIN_TEMP)
 				bantype_str = "ADMIN_TEMPBAN"
+				bantype_pass = 1
+			if(BANTYPE_SOFT_PERMA)
+				bantype_str = "SOFT_PERMABAN"
+				bantype_pass = 1
+			if(BANTYPE_SOFT_TEMP)
+				bantype_str = "SOFT_TEMPBAN"
 				bantype_pass = 1
 			if(BANTYPE_ANY_FULLBAN)
 				bantype_str = "ANY"
@@ -347,13 +362,15 @@
 	output += "<table width='100%'><tr>"
 	output += "<td><b>Ban type:</b><select name='dbbanaddtype'>"
 	output += "<option value=''>--</option>"
-	output += "<option value='[BANTYPE_PERMA]'>PERMABAN</option>"
-	output += "<option value='[BANTYPE_TEMP]'>TEMPBAN</option>"
+	output += "<option value='[BANTYPE_PERMA]'>HARD PERMABAN</option>"
+	output += "<option value='[BANTYPE_TEMP]'>HARD TEMPBAN</option>"
 	output += "<option value='[BANTYPE_JOB_PERMA]'>JOB PERMABAN</option>"
 	output += "<option value='[BANTYPE_JOB_TEMP]'>JOB TEMPBAN</option>"
 	output += "<option value='[BANTYPE_APPEARANCE]'>IDENTITY BAN</option>"
 	output += "<option value='[BANTYPE_ADMIN_PERMA]'>ADMIN PERMABAN</option>"
 	output += "<option value='[BANTYPE_ADMIN_TEMP]'>ADMIN TEMPBAN</option>"
+	output += "<option value='[BANTYPE_SOFT_PERMA]'>SOFT PERMABAN</option>"
+	output += "<option value='[BANTYPE_SOFT_TEMP]'>SOFT TEMPBAN</option>"
 	output += "</select></td>"
 	output += "<td><b>Ckey:</b> <input type='text' name='dbbanaddckey'></td></tr>"
 	output += "<tr><td><b>IP:</b> <input type='text' name='dbbanaddip'></td>"
@@ -436,9 +453,9 @@
 			var/typedesc =""
 			switch(bantype)
 				if("PERMABAN")
-					typedesc = "<font color='red'><b>PERMABAN</b></font>"
+					typedesc = "<font color='red'><b>HARD PERMABAN</b></font>"
 				if("TEMPBAN")
-					typedesc = "<b>TEMPBAN</b><br><font size='2'>([duration] minutes [(unbanned) ? "" : "(<a href=\"byond://?src=\ref[src];dbbanedit=duration;dbbanid=[banid]\">Edit</a>))"]<br>Expires [expiration]</font>"
+					typedesc = "<b>HARD TEMPBAN</b><br><font size='2'>([duration] minutes [(unbanned) ? "" : "(<a href=\"byond://?src=\ref[src];dbbanedit=duration;dbbanid=[banid]\">Edit</a>))"]<br>Expires [expiration]</font>"
 				if("JOB_PERMABAN")
 					typedesc = "<b>JOBBAN</b><br><font size='2'>([job])"
 				if("JOB_TEMPBAN")
@@ -449,6 +466,10 @@
 					typedesc = "<b>ADMIN PERMABAN</b>"
 				if("ADMIN_TEMPBAN")
 					typedesc = "<b>ADMIN TEMPBAN</b><br><font size='2'>([duration] minutes [(unbanned) ? "" : "(<a href=\"byond://?src=\ref[src];dbbanedit=duration;dbbanid=[banid]\">Edit</a>))"]<br>Expires [expiration]</font>"
+				if("SOFT_PERMABAN")
+					typedesc = "<font color='red'><b>SOFT PERMABAN</b></font>"
+				if("SOFT_TEMPBAN")
+					typedesc = "<b>SOFT TEMPBAN</b><br><font size='2'>([duration] minutes [(unbanned) ? "" : "(<a href=\"byond://?src=\ref[src];dbbanedit=duration;dbbanid=[banid]\">Edit</a>))"]<br>Expires [expiration]</font>"
 
 			output += "<tr bgcolor='[dcolor]'>"
 			output += "<td align='center'>[typedesc]</td>"

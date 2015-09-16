@@ -26,7 +26,7 @@
 
 /mob/living/simple_animal/hostile/blob/blobspore
 	name = "blob"
-	desc = "Some blob thing."
+	desc = "A floating, fragile spore."
 	icon_state = "blobpod"
 	icon_living = "blobpod"
 	health = 20
@@ -41,6 +41,7 @@
 	var/obj/effect/blob/factory/factory = null
 	var/list/human_overlays = list()
 	var/is_zombie = 0
+	gold_core_spawnable = 1
 
 /mob/living/simple_animal/hostile/blob/blobspore/fire_act(datum/gas_mixture/air, exposed_temperature, exposed_volume)
 	..()
@@ -92,6 +93,8 @@
 
 /mob/living/simple_animal/hostile/blob/blobspore/attack_ghost(mob/user)
 	if(is_zombie && !key && !client)
+		if(user.client.banprisoned)
+			return
 		var/be_zombie = alert("Вы хотите стать блоб-зомби? (Внимание, вас не смогут клонировать!)",,"Да","Нет")
 		if(be_zombie == "Нет" || gc_destroyed)
 			return
@@ -129,7 +132,7 @@
 	if(contents)
 		for(var/mob/M in contents)
 			M.loc = src.loc
-	..()
+	return ..()
 
 
 /mob/living/simple_animal/hostile/blob/blobspore/update_icons()
@@ -176,7 +179,7 @@
 	if (!message)
 		return
 
-	var/message_a = say_quote(message)
+	var/message_a = say_quote(message, get_spans())
 	var/rendered = "<font color=\"#EE4000\"><i><span class='game say'>Blob Telepathy, <span class='name'>[name]</span> <span class='message'>[message_a]</span></span></i></font>"
 
 	for (var/mob/M in mob_list)
@@ -190,7 +193,7 @@
 
 /mob/living/simple_animal/hostile/blob/blobbernaut
 	name = "blobbernaut"
-	desc = "Some HUGE blob thing."
+	desc = "A hulking, mobile chunk of blobmass."
 	icon_state = "blobbernaut"
 	icon_living = "blobbernaut"
 	icon_dead = "blobbernaut_dead"
@@ -206,7 +209,7 @@
 	force_threshold = 10
 	environment_smash = 3
 	mob_size = MOB_SIZE_LARGE
-
+	gold_core_spawnable = 1
 
 /mob/living/simple_animal/hostile/blob/blobbernaut/blob_act()
 	return

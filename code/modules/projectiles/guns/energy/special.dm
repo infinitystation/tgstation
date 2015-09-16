@@ -64,7 +64,7 @@
 
 /obj/item/weapon/gun/energy/floragun/Destroy()
 	SSobj.processing.Remove(src)
-	..()
+	return ..()
 
 
 /obj/item/weapon/gun/energy/floragun/process()
@@ -100,7 +100,7 @@
 
 /obj/item/weapon/gun/energy/meteorgun/Destroy()
 	SSobj.processing.Remove(src)
-	..()
+	return ..()
 
 /obj/item/weapon/gun/energy/meteorgun/process()
 	charge_tick++
@@ -125,7 +125,7 @@
 
 
 /obj/item/weapon/gun/energy/mindflayer
-	name = "mind flayer"
+	name = "\improper Mind Flayer"
 	desc = "A prototype weapon recovered from the ruins of Research-Station Epsilon."
 	icon_state = "xray"
 	ammo_type = list(/obj/item/ammo_casing/energy/mindflayer)
@@ -357,7 +357,7 @@
 
 /obj/item/weapon/gun/energy/printer/Destroy()
 	SSobj.processing.Remove(src)
-	..()
+	return ..()
 
 /obj/item/weapon/gun/energy/printer/process()
 	charge_tick++

@@ -181,6 +181,8 @@ var/datum/subsystem/pai/SSpai
 
 /datum/subsystem/pai/proc/requestRecruits()
 	for(var/mob/dead/observer/O in player_list)
+		if(O.client.banprisoned)
+			continue
 		if(jobban_isbanned(O, "pAI"))
 			continue
 		if(asked.Find(O.key))

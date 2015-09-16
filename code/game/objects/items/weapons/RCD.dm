@@ -11,14 +11,14 @@ RCD
 	icon_state = "rcd"
 	opacity = 0
 	density = 0
-	anchored = 0.0
+	anchored = 0
 	flags = CONDUCT
 	slot_flags = SLOT_BELT
-	force = 10.0
-	throwforce = 10.0
+	force = 10
+	throwforce = 10
 	throw_speed = 3
 	throw_range = 5
-	w_class = 3.0
+	w_class = 3
 	materials = list(MAT_METAL=100000)
 	origin_tech = "engineering=4;materials=2"
 	req_access_txt = "11"
@@ -28,7 +28,6 @@ RCD
 	var/working = 0
 	var/mode = 1
 	var/canRturf = 0
-	var/disabled = 0
 	var/airlock_type = /obj/machinery/door/airlock
 	var/advanced_airlock_setting = 1 //Set to 1 if you want more paintjobs available
 	var/sheetmultiplier	= 4			 //Controls the amount of matter added for each glass/metal sheet, triple for plasteel
@@ -65,7 +64,9 @@ RCD
 	var/deconwindowdelay = 50
 	var/deconairlockdelay = 50
 
-	var/malfproof = 0
+/obj/item/weapon/rcd/suicide_act(mob/user)
+	user.visible_message("<span class='suicide'>[user] sets the RCD to 'Wall' and points it down \his throat! It looks like \he's trying to commit suicide..</span>")
+	return (BRUTELOSS)
 
 /obj/item/weapon/rcd/verb/change_airlock_access()
 	set name = "Change Airlock Access"
@@ -233,12 +234,14 @@ RCD
 	src.spark_system = new /datum/effect/effect/system/spark_spread
 	spark_system.set_up(5, 0, src)
 	spark_system.attach(src)
+	rcd_list += src
 	return
 
 
 /obj/item/weapon/rcd/Destroy()
 	qdel(spark_system)
 	spark_system = null
+	rcd_list -= src
 	return ..()
 
 /obj/item/weapon/rcd/attackby(obj/item/weapon/W, mob/user, params)
@@ -314,9 +317,6 @@ RCD
 
 /obj/item/weapon/rcd/afterattack(atom/A, mob/user, proximity)
 	if(!proximity) return 0
-	if(disabled && !isrobot(user))
-		if(!malfproof)
-			return 0
 	if(istype(A,/area/shuttle)||istype(A,/turf/space/transit))
 		return 0
 	if(!(istype(A, /turf) || istype(A, /obj/machinery/door/airlock) || istype(A, /obj/structure/grille) || istype(A, /obj/structure/window)))
@@ -375,7 +375,7 @@ RCD
 							activate()
 							var/obj/machinery/door/airlock/T = new airlock_type( A )
 
-							T.electronics = new/obj/item/weapon/airlock_electronics( src.loc )
+							T.electronics = new/obj/item/weapon/electronics/airlock( src.loc )
 
 							if(conf_access)
 								T.electronics.conf_access = conf_access.Copy()
@@ -541,11 +541,10 @@ RCD
 	matter = 160
 
 /obj/item/weapon/rcd/combat
-	name = "combat RCD"
+	name = "industrial RCD"
 	max_matter = 500
 	matter = 500
 	canRturf = 1
-	malfproof = 1
 
 /obj/item/weapon/rcd_ammo
 	name = "compressed matter cartridge"
@@ -553,10 +552,7 @@ RCD
 	icon = 'icons/obj/ammo.dmi'
 	icon_state = "rcd"
 	item_state = "rcdammo"
-	opacity = 0
-	density = 0
-	anchored = 0.0
-	origin_tech = "materials=2"
+	origin_tech = "materials=3"
 	materials = list(MAT_METAL=3000, MAT_GLASS=2000)
 	var/ammoamt = 40
 
@@ -591,8 +587,6 @@ RCD
 	deconwindowdelay = 15
 	deconairlockdelay = 15
 
-	malfproof = 1
-
 
 /obj/item/weapon/rcd_ammo/advanced
 	name = "advanced compressed matter cartridge"
@@ -602,5 +596,6 @@ RCD
 	ammoamt = 250
 
 /obj/item/weapon/rcd_ammo/large
-	name = "large compressed matter cartridge"
+	origin_tech = "materials=4"
+	materials = list(MAT_METAL=12000, MAT_GLASS=8000)
 	ammoamt = 160

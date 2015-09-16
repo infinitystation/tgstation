@@ -195,12 +195,35 @@ datum/reagent/medicine/kelotane/on_mob_life(var/mob/living/M as mob)
 		if(method == INGEST)
 			M.adjustToxLoss(0.5*reac_volume)
 			if(show_message)
-				M << "<span class='notice'>You probably shouldn't have eaten that. Maybe you should of splashed it on, or applied a patch?</span>"
+				M << "<span class='notice'>You probably shouldn't have eaten that. Maybe you should have splashed it on, or applied a patch?</span>"
 	..()
 
 /datum/reagent/medicine/silver_sulfadiazine/on_mob_life(mob/living/M)
 	M.adjustFireLoss(-2*REM)
 	..()
+
+/datum/reagent/medicine/oxandrolone
+	name = "Oxandrolone"
+	id = "oxandrolone"
+	description = "Stimulates healing of severe burns. If you have more than 50 burn damage, it heals 2 units; otherwise, 0.5. If overdosed it will exacerbate existing burns, causing burn and brute damage."
+	reagent_state = LIQUID
+	color = "#f7ffa5"
+	metabolization_rate = 0.5 * REAGENTS_METABOLISM
+	overdose_threshold = 25
+
+/datum/reagent/medicine/oxandrolone/on_mob_life(mob/living/M)
+	if(M.getFireLoss() > 50)
+		M.adjustFireLoss(-2*REM)
+	else
+		M.adjustFireLoss(-0.5*REM)
+	..()
+	return
+
+/datum/reagent/medicine/oxandrolone/overdose_process(mob/living/M)
+	M.adjustFireLoss(2.5*REM) // it's going to be healing either 2 or 0.5
+	M.adjustBruteLoss(0.5*REM)
+	..()
+	return
 
 /datum/reagent/medicine/styptic_powder
 	name = "Styptic Powder"
@@ -681,7 +704,7 @@ datum/reagent/medicine/kelotane/on_mob_life(var/mob/living/M as mob)
 			M.visible_message("<span class='warning'>[M]'s body convulses a bit, and then falls still once more.</span>")
 			return
 		M.visible_message("<span class='warning'>[M]'s body convulses a bit.</span>")
-		if(!M.suiciding && !(NOCLONE in M.mutations))
+		if(!M.suiciding && !(M.disabilities & NOCLONE))
 			if(!M)
 				return
 			if(M.notify_ghost_cloning())

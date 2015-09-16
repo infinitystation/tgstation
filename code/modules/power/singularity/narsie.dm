@@ -25,7 +25,7 @@
 /obj/singularity/narsie/large/New()
 	..()
 	world << "<font size='15' color='red'><b>NAR-SIE HAS RISEN</b></font>"
-	world << pick(sound('sound/hallucinations/im_here1.ogg'), sound('sound/hallucinations/im_here2.ogg'))
+	world << 'sound/effects/narsie.ogg'
 
 	var/area/A = get_area(src)
 	if(A)
@@ -38,6 +38,8 @@
 
 
 /obj/singularity/narsie/large/attack_ghost(mob/dead/observer/user as mob)
+	if(user.client.banprisoned)
+		return
 	if(!(src in view()))
 		user << "Your soul is too far away."
 		return
@@ -65,7 +67,7 @@
 /obj/singularity/narsie/proc/godsmack(atom/A)
 	if(istype(A,/obj/))
 		var/obj/O = A
-		O.ex_act(1.0)
+		O.ex_act(1)
 		if(O) qdel(O)
 
 	else if(isturf(A))
@@ -77,7 +79,7 @@
 	for(var/mob/living/carbon/M in oviewers(8, src))
 		if(M.stat == CONSCIOUS)
 			if(!iscultist(M))
-				M << "<span class='warning'>You feel your sanity crumble away in an instant as you gaze upon [src.name]...</span>"
+				M << "<span class='warning'>You feel conscious thought crumble away in an instant as you gaze upon [src.name]...</span>"
 				M.apply_effect(3, STUN)
 
 

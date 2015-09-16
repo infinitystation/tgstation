@@ -231,6 +231,17 @@
 					usr << "Not enough parameters (Requires ckey, reason and duration)"
 					return
 				banjob = null
+			if(BANTYPE_SOFT_PERMA)
+				if(!banckey || !banreason)
+					usr << "Not enough parameters (Requires ckey and reason)"
+					return
+				banduration = null
+				banjob = null
+			if(BANTYPE_SOFT_TEMP)
+				if(!banckey || !banreason || !banduration)
+					usr << "Not enough parameters (Requires ckey, reason and duration)"
+					return
+				banjob = null
 
 		var/mob/playermob
 
@@ -450,15 +461,14 @@
 					mins = minutes - CMinutes
 				mins = input(usr,"How long (in minutes)? (Default: 1440)","Ban time",mins ? mins : 1440) as num|null
 				if(!mins)	return
-				mins = min(525599,mins)
 				minutes = CMinutes + mins
 				duration = GetExp(minutes)
-				reason = input(usr,"Reason?","reason",reason2) as text|null
+				reason = input(usr,"Please State Reason","Reason",reason2) as message
 				if(!reason)	return
 			if("No")
 				temp = 0
 				duration = "Perma"
-				reason = input(usr,"Reason?","reason",reason2) as text|null
+				reason = input(usr,"Please State Reason","Reason",reason2) as message
 				if(!reason)	return
 
 		log_admin("[key_name(usr)] edited [banned_key]'s ban. Reason: [reason] Duration: [duration]")
@@ -504,7 +514,7 @@
 
 		else switch(alert("Appearance ban [M.ckey]?",,"Yes","No", "Cancel"))
 			if("Yes")
-				var/reason = input(usr,"Reason?","reason","Metafriender") as text|null
+				var/reason = input(usr,"Please State Reason","Reason") as message
 				if(!reason)
 					return
 				ban_unban_log_save("[key_name(usr)] appearance banned [key_name(M)]. reason: [reason]")
@@ -512,7 +522,7 @@
 				feedback_inc("ban_appearance",1)
 				DB_ban_record(BANTYPE_APPEARANCE, M, -1, reason)
 				appearance_fullban(M, "[reason]; By [usr.ckey] on [time2text(world.realtime)]")
-				add_note(M.ckey, "Appearance banned - [reason]", null, usr, 0)
+				add_note(M.ckey, "Appearance banned - [reason]", null, usr.ckey, 0)
 				message_admins("<span class='adminnotice'>[key_name_admin(usr)] appearance banned [key_name_admin(M)]</span>")
 				M << "<span class='boldannounce'><BIG>You have been appearance banned by [usr.client.ckey].</BIG></span>"
 				M << "<span class='boldannounce'>The reason is: [reason]</span>"
@@ -912,7 +922,7 @@
 					var/mins = input(usr,"How long (in minutes)?","Ban time",1440) as num|null
 					if(!mins)
 						return
-					var/reason = input(usr,"Reason?","Please State Reason","") as text|null
+					var/reason = input(usr,"Please State Reason","Reason") as message
 					if(!reason)
 						return
 
@@ -928,7 +938,7 @@
 							msg = job
 						else
 							msg += ", [job]"
-					add_note(M.ckey, "Забанен от игры за [msg]. Причина: [reason]. Время: [mins]", null, usr, 0)
+					add_note(M.ckey, "Забанен от игры за [msg]. Причина: [reason]. Время: [mins]", null, usr.ckey, 0)
 					message_admins("<span class='adminnotice'>[key_name_admin(usr)] banned [key_name_admin(M)] from [msg] for [mins] minutes</span>")
 					M << "<span class='boldannounce'><BIG>You have been jobbanned by [usr.client.ckey] from: [msg].</BIG></span>"
 					M << "<span class='boldannounce'>The reason is: [reason]</span>"
@@ -936,7 +946,7 @@
 					href_list["jobban2"] = 1 // lets it fall through and refresh
 					return 1
 				if("No")
-					var/reason = input(usr,"Reason?","Please State Reason","") as text|null
+					var/reason = input(usr,"Please State Reason","Reason") as message
 					if(reason)
 						var/msg
 						for(var/job in notbannedlist)
@@ -948,7 +958,7 @@
 							jobban_fullban(M, job, "[reason]; By [usr.ckey] on [time2text(world.realtime)]")
 							if(!msg)	msg = job
 							else		msg += ", [job]"
-						add_note(M.ckey, "Перманентно забанен от игры за [msg]. Причина: [reason]", null, usr, 0)
+						add_note(M.ckey, "Перманентно забанен от игры за [msg]. Причина: [reason]", null, usr.ckey, 0)
 						message_admins("<span class='adminnotice'>[key_name_admin(usr)] banned [key_name_admin(M)] from [msg]</span>")
 						M << "<span class='boldannounce'><BIG>You have been jobbanned by [usr.client.ckey] from: [msg].</BIG></span>"
 						M << "<span class='boldannounce'>The reason is: [reason]</span>"
@@ -1072,29 +1082,28 @@
 				var/mins = input(usr,"How long (in minutes)?","Ban time",1440) as num|null
 				if(!mins)
 					return
-				if(mins >= 525600) mins = 525599
-				var/reason = input(usr,"Reason?","reason","Griefer") as text|null
+				var/reason = input(usr,"Please State Reason","Reason") as message
 				if(!reason)
 					return
 				AddBan(M.ckey, M.computer_id, reason, usr.ckey, 1, mins)
-				ban_unban_log_save("[usr.client.ckey] has banned [M.ckey]. - Reason: [reason] - This will be removed in [mins] minutes.")
-				world << "<span class='adminnotice'><b>BAN: Администратор [usr.client.ckey] забанил(а) [M.ckey]. Причина: [reason]. Срок - [mins] минут.</b></span>"
-				M << "<span class='boldannounce'><BIG>You have been banned by [usr.client.ckey].\nReason: [reason]</BIG></span>"
-				M << "<span class='danger'>This is a temporary ban, it will be removed in [mins] minutes.</span>"
+				ban_unban_log_save("[usr.client.ckey] has HARD banned [M.ckey]. - Reason: [reason] - This will be removed in [mins] minutes.")
+				world << "<span class='adminnotice'><b>BAN: Администратор [usr.client.ckey] ЖЕСТКО забанил(а) [M.ckey]. Причина: [reason]. Срок - [mins] минут.</b></span>"
+				M << "<span class='boldannounce'><BIG>Вы были ЖЕСТКО забанены администратором [usr.client.ckey].\nПричина: [reason]</BIG></span>"
+				M << "<span class='danger'>Это временный бан, он истечет через [mins] минут.</span>"
 				feedback_inc("ban_tmp",1)
 				DB_ban_record(BANTYPE_TEMP, M, mins, reason)
 				feedback_inc("ban_tmp_mins",mins)
 				if(config.banappeals)
-					M << "<span class='danger'>To try to resolve this matter head to [config.banappeals]</span>"
+					M << "<span class='danger'>Чтобы оспорить решение администратора, перейдите сюда: [config.banappeals]</span>"
 				else
 					M << "<span class='danger'>No ban appeals URL has been set.</span>"
-				log_admin("[usr.client.ckey] has banned [M.ckey].\nReason: [reason]\nThis will be removed in [mins] minutes.")
-				message_admins("<span class='adminnotice'>[usr.client.ckey] has banned [M.ckey].\nReason: [reason]\nThis will be removed in [mins] minutes.</span>")
+				log_admin("[usr.client.ckey] has HARD banned [M.ckey].\nReason: [reason]\nThis will be removed in [mins] minutes.")
+				message_admins("<span class='adminnotice'>[usr.client.ckey] has HARD banned [M.ckey].\nReason: [reason]\nThis will be removed in [mins] minutes.</span>")
 
 				del(M.client)
 				//qdel(M)	// See no reason why to delete mob. Important stuff can be lost. And ban can be lifted before round ends.
 			if("No")
-				var/reason = input(usr,"Reason?","reason","Griefer") as text|null
+				var/reason = input(usr,"Please State Reason","Reason") as message
 				if(!reason)
 					return
 				switch(alert(usr,"IP ban?",,"Yes","No","Cancel"))
@@ -1103,21 +1112,91 @@
 						AddBan(M.ckey, M.computer_id, reason, usr.ckey, 0, 0,  M.lastKnownIP)
 					if("No")
 						AddBan(M.ckey, M.computer_id, reason, usr.ckey, 0, 0)
-				M << "<span class='boldannounce'><BIG>You have been banned by [usr.client.ckey].\nReason: [reason]</BIG></span>"
-				M << "<span class='danger'>This is a permanent ban.</span>"
+				M << "<span class='boldannounce'><BIG>Вы были ЖЕСТКО забанены администратором [usr.client.ckey].\nПричина: [reason]</BIG></span>"
+				M << "<span class='danger'>Это перманентный бан.</span>"
 				if(config.banappeals)
-					M << "<span class='danger'>To try to resolve this matter head to [config.banappeals]</span>"
+					M << "<span class='danger'>Чтобы оспорить решение администратора, перейдите сюда: [config.banappeals]</span>"
 				else
 					M << "<span class='danger'>No ban appeals URL has been set.</span>"
-				ban_unban_log_save("[usr.client.ckey] has permabanned [M.ckey]. - Reason: [reason] - This is a permanent ban.")
-				world << "<span class='adminnotice'><b>BAN: Администратор [usr.client.ckey] перманентно забанил(а) [M.ckey]. Причина: [reason].</b></span>"
-				log_admin("[usr.client.ckey] has banned [M.ckey].\nReason: [reason]\nThis is a permanent ban.")
-				message_admins("<span class='adminnotice'>[usr.client.ckey] has banned [M.ckey].\nReason: [reason]\nThis is a permanent ban.</span>")
+				ban_unban_log_save("[usr.client.ckey] has HARD permabanned [M.ckey]. - Reason: [reason] - This is a permanent ban.")
+				world << "<span class='adminnotice'><b>BAN: Администратор [usr.client.ckey] ЖЕСТКО и перманентно забанил(а) [M.ckey]. Причина: [reason].</b></span>"
+				log_admin("[usr.client.ckey] has HARD banned [M.ckey].\nReason: [reason]\nThis is a permanent ban.")
+				message_admins("<span class='adminnotice'>[usr.client.ckey] has HARD banned [M.ckey].\nReason: [reason]\nThis is a permanent ban.</span>")
 				feedback_inc("ban_perma",1)
 				DB_ban_record(BANTYPE_PERMA, M, -1, reason)
 
 				del(M.client)
 				//qdel(M)
+			if("Cancel")
+				return
+
+	else if(href_list["softban"])
+		if(!check_rights(R_BAN))	return
+
+		var/mob/M = locate(href_list["softban"])
+		if(!ismob(M)) return
+
+		switch(alert("Temporary Ban?",,"Yes","No", "Cancel"))
+			if("Yes")
+				var/mins = input(usr,"How long (in minutes)?","Ban time",1440) as num|null
+				if(!mins)
+					return
+				var/reason = input(usr,"Please State Reason","Reason") as message
+				if(!reason)
+					return
+				var/ip = alert(usr,"IP ban?",,"Yes","No","Cancel")
+				if(ip=="Cancel")
+					return
+				ban_unban_log_save("[usr.client.ckey] has banned [M.ckey]. - Reason: [reason] - This will be removed in [mins] minutes.")
+				world << "<span class='adminnotice'><b>BAN: Администратор [usr.client.ckey] временно отправил(а) [M.ckey] в бан-тюрьму. Причина: [reason]. Срок - [mins] минут.</b></span>"
+				M << "<span class='boldannounce'><BIG>Администратор [usr.client.ckey] заблокировал вашу игру на сервере.\nПричина: [reason]</BIG></span>"
+				M << "<span class='danger'>Это временна&#255; блокировка, она истечет через [mins] минут.</span>"
+				M << "<span class='notice'>У вас есть доступ к игре на сервере в качестве заключенного.</span>"
+				feedback_inc("ban_stf_tmp",1)
+				switch(ip)
+					if("Yes")
+						DB_ban_record(BANTYPE_SOFT_TEMP, M, mins, reason, banip = M.lastKnownIP, bancid = M.computer_id)
+					if("No")
+						DB_ban_record(BANTYPE_SOFT_TEMP, M, mins, reason, bancid = M.computer_id)
+				feedback_inc("ban_sft_tmp_mins",mins)
+				if(config.banappeals)
+					M << "<span class='danger'>Чтобы оспорить решение администратора, перейдите сюда: [config.banappeals]</span>"
+				else
+					M << "<span class='danger'>No ban appeals URL has been set.</span>"
+				log_admin("[usr.client.ckey] has soft banned [M.ckey].\nReason: [reason]\nThis will be removed in [mins] minutes.")
+				message_admins("<span class='adminnotice'>[usr.client.ckey] has soft banned [M.ckey].\nReason: [reason]\nThis will be removed in [mins] minutes.</span>")
+				add_note(M.ckey, "Временно отправлен(а), в бан-тюрьму, причина: [reason]. Время: [mins]", null, usr.client.ckey, 0)
+				del(M.client)
+				M.ckey = null
+				//qdel(M)	// See no reason why to delete mob. Important stuff can be lost. And ban can be lifted before round ends.
+			if("No")
+				var/reason = input(usr,"Please State Reason","Reason") as message
+				if(!reason)
+					return
+				var/ip = alert(usr,"IP ban?",,"Yes","No","Cancel")
+				if(ip=="Cancel")
+					return
+				M << "<span class='boldannounce'><BIG>Администратор [usr.client.ckey] заблокировал вашу игру на сервере.\nПричина: [reason]</BIG></span>"
+				M << "<span class='danger'>Это перманентна&#255; блокировка.</span>"
+				M << "<span class='notice'>У вас есть доступ к игре на сервере в качестве заключенного.</span>"
+				if(config.banappeals)
+					M << "<span class='danger'>Чтобы оспорить решение администратора, перейдите сюда: [config.banappeals]</span>"
+				else
+					M << "<span class='danger'>No ban appeals URL has been set.</span>"
+				ban_unban_log_save("[usr.client.ckey] has soft permabanned [M.ckey]. - Reason: [reason] - This is a permanent ban.")
+				world << "<span class='adminnotice'><b>BAN: Администратор [usr.client.ckey] перманентно отправил(а) [M.ckey] в бан-тюрьму. Причина: [reason].</b></span>"
+				log_admin("[usr.client.ckey] has soft banned [M.ckey].\nReason: [reason]\nThis is a permanent ban.")
+				message_admins("<span class='adminnotice'>[usr.client.ckey] has soft banned [M.ckey].\nReason: [reason]\nThis is a permanent ban.</span>")
+				feedback_inc("ban_soft_perma",1)
+				switch(ip)
+					if("Yes")
+						DB_ban_record(BANTYPE_SOFT_PERMA, M, reason = reason, banip = M.lastKnownIP, bancid = M.computer_id)
+					if("No")
+						DB_ban_record(BANTYPE_SOFT_PERMA, M, reason = reason, bancid = M.computer_id)
+				add_note(M.ckey, "Перманентно отправлен(а) в бан-тюрьму, причина: [reason].", null, usr.client.ckey, 0)
+				del(M.client)
+				//qdel(M)
+				M.ckey = null
 			if("Cancel")
 				return
 
@@ -1135,65 +1214,53 @@
 				unjobbanpanel()
 
 	//Watchlist
-	else if(href_list["watchlist"])
-		if(!check_rights(R_ADMIN))	return
-		var/mob/M = locate(href_list["watchlist"])
-		if(!dbcon.IsConnected())
-			usr << "<span class='danger'>Failed to establish database connection.</span>"
+	else if(href_list["watchadd"])
+		var/target_ckey = locate(href_list["watchadd"])
+		usr.client.watchlist_add(target_ckey)
+
+	else if(href_list["watchremove"])
+		var/target_ckey = href_list["watchremove"]
+		usr.client.watchlist_remove(target_ckey)
+
+	else if(href_list["watchedit"])
+		var/target_ckey = href_list["watchedit"]
+		usr.client.watchlist_edit(target_ckey)
+
+	else if(href_list["watchaddbrowse"])
+		usr.client.watchlist_add(null, 1)
+
+	else if(href_list["watchremovebrowse"])
+		var/target_ckey = href_list["watchremovebrowse"]
+		usr.client.watchlist_remove(target_ckey, 1)
+
+	else if(href_list["watcheditbrowse"])
+		var/target_ckey = href_list["watcheditbrowse"]
+		usr.client.watchlist_edit(target_ckey, 1)
+
+	else if(href_list["watchsearch"])
+		var/target_ckey = href_list["watchsearch"]
+		usr.client.watchlist_show(target_ckey)
+
+	else if(href_list["watchshow"])
+		usr.client.watchlist_show()
+
+	else if(href_list["watcheditlog"])
+		var/target_ckey = sanitizeSQL("[href_list["watcheditlog"]]")
+		var/DBQuery/query_watchedits = dbcon.NewQuery("SELECT edits FROM [format_table_name("watch")] WHERE ckey = '[target_ckey]'")
+		if(!query_watchedits.Execute())
+			var/err = query_watchedits.ErrorMsg()
+			log_game("SQL ERROR obtaining edits from watch table. Error : \[[err]\]\n")
 			return
-		if(!ismob(M))
-			usr << "This can only be used on instances of type /mob"
-			return
-		if(!M.ckey)
-			usr << "This mob has no ckey"
-			return
-		var/sql_ckey = sanitizeSQL(M.ckey)
-		var/DBQuery/query = dbcon.NewQuery("SELECT ckey FROM watch WHERE (ckey = '[sql_ckey]')")
-		query.Execute()
-		if(query.NextRow())
-			switch(alert(usr, "[sql_ckey] is already on the watchlist, do you want to:", "Ckey already flagged", "Remove", "Edit reason", "Cancel"))
-				if("Cancel")
-					return
-				if("Remove")
-					var/DBQuery/query_watchdel = dbcon.NewQuery("DELETE FROM watch WHERE ckey = '[sql_ckey]'")
-					if(!query_watchdel.Execute())
-						var/err = query_watchdel.ErrorMsg()
-						log_game("SQL ERROR during removing watch entry. Error : \[[err]\]\n")
-						return
-					log_admin("[key_name(usr)] has removed [key_name_admin(M)] from the watchlist")
-					message_admins("[key_name_admin(usr)] has removed [key_name_admin(M)] from the watchlist", 1)
-				if("Edit reason")
-					var/DBQuery/query_reason = dbcon.NewQuery("SELECT ckey, reason FROM watch WHERE (ckey = '[sql_ckey]')")
-					query_reason.Execute()
-					if(query_reason.NextRow())
-						var/watch_reason = query_reason.item[3]
-						var/new_reason = input("Insert new reason", "New Reason", "[watch_reason]", null) as null|text
-						new_reason = sanitizeSQL(new_reason)
-						if(!new_reason)
-							return
-						var/DBQuery/update_query = dbcon.NewQuery("UPDATE watch SET reason = '[new_reason]' WHERE (ckey = '[sql_ckey]')")
-						if(!update_query.Execute())
-							var/err = update_query.ErrorMsg()
-							log_game("SQL ERROR during edit watch entry reason. Error : \[[err]\]\n")
-							return
-						log_admin("[key_name(usr)] has edited [sql_ckey]'s reason from [watch_reason] to [new_reason]",1)
-						message_admins("[key_name_admin(usr)] has edited [sql_ckey]'s reason from [watch_reason] to [new_reason]",1)
-		else
-			var/reason = input(usr,"Reason?","reason","Metagaming") as text|null
-			if(!reason)
-				return
-			reason = sanitizeSQL(reason)
-			var/DBQuery/query_watchadd = dbcon.NewQuery("INSERT INTO watch (ckey, reason) VALUES ('[sql_ckey]', '[reason]')")
-			if(!query_watchadd.Execute())
-				var/err = query_watchadd.ErrorMsg()
-				log_game("SQL ERROR during adding new watch entry. Error : \[[err]\]\n")
-				return
-			log_admin("[key_name(usr)] has added [key_name_admin(M)] to the watchlist - Reason: [reason]")
-			message_admins("[key_name_admin(usr)] has added [key_name_admin(M)] to the watchlist - Reason: [reason]", 1)
+		if(query_watchedits.NextRow())
+			var/edit_log = query_watchedits.item[1]
+			usr << browse(edit_log,"window=watchedits")
 
 	else if(href_list["mute"])
 		if(!check_rights(R_ADMIN))	return
 		cmd_admin_mute(href_list["mute"], text2num(href_list["mute_type"]))
+
+	else if(href_list["unmuteadminhelprequest"])
+		cmd_admin_mute(href_list["unmuteadminhelprequest"], text2num(MUTE_ADMINHELP))
 
 	else if(href_list["c_mode"])
 		if(!check_rights(R_ADMIN))	return
@@ -1472,14 +1539,7 @@
 		if(!check_rights(R_ADMIN))	return
 
 		var/mob/H = locate(href_list["allow_respawn"])
-		if(!istype(H))
-			usr << "Может быть использовано только длЯ мобов"
-			return
-
-		H.allow_respawn = 1
-		H << "Вы получили разрешение на респавн"
-		message_admins("<span class='danger'>Admin [key_name_admin(usr)] разрешил(а) респавн [key_name_admin(H)]!</span>")
-		log_admin("[key_name(usr)] разрешил(а) респавн [key_name(H)]")
+		usr.client.cmd_admin_allow_respawn(H)
 
 	else if(href_list["makeai"])
 		if(!check_rights(R_SPAWN))	return
@@ -2153,3 +2213,30 @@
 			log_admin("[key_name(usr)] has kicked [afkonly ? "all AFK" : "all"] clients from the lobby. [length(listkicked)] clients kicked: [strkicked ? strkicked : "--"]")
 		else
 			usr << "You may only use this when the game is running"
+
+	else if(href_list["create_outfit"])
+		if(!check_rights(R_ADMIN))
+			return
+
+		var/datum/outfit/O = new /datum/outfit
+		//swap this for js dropdowns sometime
+		O.name = href_list["outfit_name"]
+		O.uniform = text2path(href_list["outfit_uniform"])
+		O.shoes = text2path(href_list["outfit_shoes"])
+		O.gloves = text2path(href_list["outfit_gloves"])
+		O.suit = text2path(href_list["outfit_suit"])
+		O.head = text2path(href_list["outfit_head"])
+		O.back = text2path(href_list["outfit_back"])
+		O.mask = text2path(href_list["outfit_mask"])
+		O.glasses = text2path(href_list["outfit_glasses"])
+		O.r_hand = text2path(href_list["outfit_r_hand"])
+		O.l_hand = text2path(href_list["outfit_l_hand"])
+		O.suit_store = text2path(href_list["outfit_s_store"])
+		O.l_pocket = text2path(href_list["outfit_l_pocket"])
+		O.r_pocket = text2path(href_list["outfit_r_pocket"])
+		O.id = text2path(href_list["outfit_id"])
+		O.belt = text2path(href_list["outfit_belt"])
+		O.ears = text2path(href_list["outfit_ears"])
+
+		custom_outfits.Add(O)
+		message_admins("[key_name(usr)] created \"[O.name]\" outfit!")

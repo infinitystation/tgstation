@@ -8,7 +8,7 @@
 	for(var/infection in viruses)
 		qdel(infection)
 	ghostize()
-	..()
+	return ..()
 
 /mob/proc/sac_act(obj/effect/rune/R, mob/victim)
 	return
@@ -479,77 +479,47 @@ var/list/slot_equipment_priority = list( \
 	set name = "Respawn"
 	set category = "OOC"
 
+	if(!client)
+		log_game("[usr.key] AM failed due to disconnect.")
+		return
+
 	if (stat != 2)
 		usr << "\blue <B>You must be dead to use this!</B>"
 		return
-	// sandbox and allow respawn
-	if (ticker.mode.name == "sandbox" || allow_respawn > 0)
-		if ((world.time - src.timeofdeath) < 100)
-			usr << "Потерпите немного длЯ респавна!"
-			return
-		log_game("[usr.name]/[usr.key] used abandon mob.")
 
-		usr << "<span class='boldnotice'>Please roleplay correctly!</span>"
+	//ban prisoners can respawn right now!
+	if(client.banprisoned)
+		client.allow_respawn = 1
 
-		if(!client)
-			log_game("[usr.key] AM failed due to disconnect.")
-			return
-
-		client.screen.Cut()
-
-		client.screen += client.void
-
-		if(!client)
-			log_game("[usr.key] AM failed due to disconnect.")
-			return
-
-		var/mob/new_player/M = new /mob/new_player()
-		if(!client)
-			log_game("[usr.key] AM failed due to disconnect.")
-			qdel(M)
-			return
-
-		M.key = key
-//		M.Login()	//wat
-		M.allow_respawn = 0
-		return
-
-	//respawn
-	if (!( abandon_allowed ))
+	//respawn allowed?
+	if (!(abandon_allowed) && !(client.allow_respawn))
 		usr << "Респавн отключен =("
 		return
 
-	if ((world.time - src.timeofdeath) < 6000)
+	//sandbox?
+	if (ticker.mode.name == "sandbox")
+		client.allow_respawn = 1
+
+	if (((world.time - src.timeofdeath) < 6000) && !client.allow_respawn)
 		usr << "Потерпите немного длЯ респавна!"
 		return
 	else
+		client.allow_respawn = 1
 		usr << "Вы можете сейчас респавнитсЯ!"
 
 	log_game("[usr.name]/[usr.key] used abandon mob.")
 
-	usr << "<span class='boldnotice'>Please roleplay correctly!</span>"
-
-	if(!client)
-		log_game("[usr.key] AM failed due to disconnect.")
-		return
-
-	client.screen.Cut()
-
-	client.screen += client.void
-
-	if(!client)
-		log_game("[usr.key] AM failed due to disconnect.")
-		return
+	if(client)
+		client.screen.Cut()
+		client.screen += client.void
 
 	var/mob/new_player/M = new /mob/new_player()
-	if(!client)
-		log_game("[usr.key] AM failed due to disconnect.")
-		qdel(M)
-		return
 
 	M.key = key
-//	M.Login()	//wat
-	M.allow_respawn = 0
+
+	if(M.client)
+		M.client.allow_respawn = 0
+
 	return
 
 /client/verb/changes()
@@ -587,6 +557,9 @@ var/list/slot_equipment_priority = list( \
 
 	if(check_rights_for(client,R_ADMIN))
 		is_admin = 1
+	if(src.client.banprisoned)
+		usr << "Вам это не нужно"
+
 	else if(stat != DEAD || istype(src, /mob/new_player))
 		usr << "<span class='notice'>You must be observing to use this!</span>"
 		return

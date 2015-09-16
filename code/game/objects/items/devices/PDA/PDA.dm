@@ -10,7 +10,7 @@ var/global/list/obj/item/device/pda/PDAs = list()
 	icon = 'icons/obj/pda.dmi'
 	icon_state = "pda"
 	item_state = "electronic"
-	w_class = 1.0
+	w_class = 1
 	slot_flags = SLOT_ID | SLOT_BELT
 
 	//Main variables
@@ -704,12 +704,8 @@ var/global/list/obj/item/device/pda/PDAs = list()
 							else
 								difficulty += 2
 
-							if(prob(difficulty * 12) || (P.hidden_uplink))
+							if(prob(difficulty * 15) || (P.hidden_uplink))
 								U.show_message("<span class='danger'>An error flashes on your [src].</span>", 1)
-							else if (prob(difficulty * 3))
-								U.show_message("<span class='danger'>Energy feeds back into your [src]!</span>", 1)
-								U << browse(null, "window=pda")
-								explode()
 							else
 								U.show_message("<span class='notice'>Success!</span>", 1)
 								P.explode()
@@ -791,7 +787,7 @@ var/global/list/obj/item/device/pda/PDAs = list()
 	if (last_text && world.time < last_text + 5)
 		return
 
-	if (isnull(P) || P.toff || !istype(P))
+	if (!istype(P) || P.toff || qdeleted(P))
 		return
 
 	last_text = world.time
@@ -1067,7 +1063,7 @@ var/global/list/obj/item/device/pda/PDAs = list()
 
 /obj/item/device/pda/Destroy()
 	PDAs -= src
-	..()
+	return ..()
 
 /obj/item/device/pda/clown/Crossed(AM as mob|obj) //Clown PDA is slippery.
 	if (istype(AM, /mob/living/carbon))
@@ -1087,8 +1083,7 @@ var/global/list/obj/item/device/pda/PDAs = list()
 	var/list/namecounts = list()
 
 	if(user.stat == 2)
-		user << "You can't send PDA messages because you are dead!"
-		return
+		return //won't work if dead
 
 	if(src.aiPDA.toff)
 		user << "Turn on your receiver in order to send messages."
@@ -1129,8 +1124,7 @@ var/global/list/obj/item/device/pda/PDAs = list()
 	set category = "AI Commands"
 	set name = "PDA - Toggle Sender/Receiver"
 	if(usr.stat == 2)
-		usr << "You can't do that because you are dead!"
-		return
+		return //won't work if dead
 	if(!isnull(aiPDA))
 		aiPDA.toff = !aiPDA.toff
 		usr << "<span class='notice'>PDA sender/receiver toggled [(aiPDA.toff ? "Off" : "On")]!</span>"
@@ -1141,8 +1135,7 @@ var/global/list/obj/item/device/pda/PDAs = list()
 	set category = "AI Commands"
 	set name = "PDA - Toggle Ringer"
 	if(usr.stat == 2)
-		usr << "You can't do that because you are dead!"
-		return
+		return //won't work if dead
 	if(!isnull(aiPDA))
 		//0
 		aiPDA.silent = !aiPDA.silent
@@ -1154,8 +1147,7 @@ var/global/list/obj/item/device/pda/PDAs = list()
 	set category = "AI Commands"
 	set name = "PDA - Chatrooms"
 	if(usr.stat == 2)
-		usr << "You can't do that because you are dead!"
-		return
+		return //won't work if dead
 	if(!isnull(aiPDA))
 		aiPDA.mode = 5
 		aiPDA.attack_self(src)
@@ -1164,8 +1156,7 @@ var/global/list/obj/item/device/pda/PDAs = list()
 
 /mob/living/silicon/ai/proc/cmd_show_message_log(mob/user)
 	if(user.stat == 2)
-		user << "You can't do that because you are dead!"
-		return
+		return //won't work if dead
 	if(!isnull(aiPDA))
 		var/HTML = "<html><head><title>AI PDA Message Log</title></head><body>[aiPDA.tnote]</body></html>"
 		user << browse(HTML, "window=log;size=400x444;border=1;can_resize=1;can_close=1;can_minimize=0")

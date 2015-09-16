@@ -4,17 +4,26 @@
 	weight = 15
 	max_occurrences = 3
 
+/datum/round_event/spacevine
+	announceWhen = 1
+	var/area/impact_area
+
 /datum/round_event/spacevine/start()
 	var/list/turfs = list() //list of all the empty floor turfs in the hallway areas
 
 	for(var/area/hallway/A in world)
-		for(var/turf/simulated/F in A)
-			if(!F.density && !F.contents.len)
+		for(var/turf/simulated/floor/F in A)
+			if(F.contents.len <= 1)
 				turfs += F
 
 	if(turfs.len) //Pick a turf to spawn at if we can
 		var/turf/simulated/T = pick(turfs)
-		spawn(0)	new/obj/effect/spacevine_controller(T) //spawn a controller at turf
+		impact_area = get_area(T)
+		spawn(0)
+			new/obj/effect/spacevine_controller(T) //spawn a controller at turf
+
+/datum/round_event/spacevine/announce()
+	priority_announce("Зафиксирован рост космических лиан в [impact_area.name]")
 
 
 /datum/spacevine_mutation
@@ -66,7 +75,6 @@
 	color = "#aa77aa"
 	icon_state = "vinefloor"
 	broken_states = list()
-	ignoredirt = 1
 
 
 //All of this shit is useless for vines
@@ -324,7 +332,7 @@
 	SetOpacity(0)
 	if(buckled_mob)
 		unbuckle_mob()
-	..()
+	return ..()
 
 /obj/effect/spacevine/proc/on_chem_effect(datum/reagent/R)
 	var/override = 0
@@ -424,7 +432,7 @@
 
 /obj/effect/spacevine_controller/Destroy()
 	SSobj.processing.Remove(src)
-	..()
+	return ..()
 
 /obj/effect/spacevine_controller/proc/spawn_spacevine_piece(turf/location, obj/effect/spacevine/parent, list/muts)
 	var/obj/effect/spacevine/SV = new(location)
@@ -555,14 +563,14 @@
 
 /obj/effect/spacevine/ex_act(severity, target)
 	switch(severity)
-		if(1.0)
+		if(1)
 			qdel(src)
 			return
-		if(2.0)
+		if(2)
 			if (prob(90))
 				qdel(src)
 				return
-		if(3.0)
+		if(3)
 			if (prob(50))
 				qdel(src)
 				return
