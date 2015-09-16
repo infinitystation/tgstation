@@ -19,6 +19,7 @@ var/const/MAX_ACTIVE_TIME = 400
 	throw_range = 5
 	tint = 3
 	flags_cover = MASKCOVERSEYES | MASKCOVERSMOUTH
+	layer = MOB_LAYER
 
 	var/stat = CONSCIOUS //UNCONSCIOUS is the idle state in this case
 
@@ -34,8 +35,9 @@ var/const/MAX_ACTIVE_TIME = 400
 
 /obj/item/clothing/mask/facehugger/attack_hand(mob/user)
 	if((stat == CONSCIOUS && !sterile) && !isalien(user))
-		if(Attach(user))
-			return
+		if(CanHug(user, src))
+			if(Attach(user))
+				return
 	..()
 
 /obj/item/clothing/mask/facehugger/attack(mob/living/M, mob/user)
@@ -83,7 +85,7 @@ var/const/MAX_ACTIVE_TIME = 400
 	return 0
 
 /obj/item/clothing/mask/facehugger/HasProximity(atom/movable/AM as mob|obj)
-	if(CanHug(AM))
+	if(CanHug(AM, src))
 		return Attach(AM)
 	return 0
 
@@ -216,8 +218,8 @@ var/const/MAX_ACTIVE_TIME = 400
 
 	visible_message("<span class='danger'>[src] curls up into a ball!</span>")
 
-/proc/CanHug(mob/living/M)
-	if(!istype(M))
+/proc/CanHug(mob/living/M, atom/movable/source=null)//used for facehuggers
+	if(!M)
 		return 0
 	if(M.stat == DEAD)
 		return 0
