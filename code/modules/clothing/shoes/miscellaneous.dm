@@ -1,5 +1,5 @@
 /obj/item/clothing/shoes/proc/step_action() //this was made to rewrite clown shoes squeaking
-	playsound(src, 'sound/effects/step.ogg', 5, 1)
+	playsound(src, 'sound/effects/step.ogg', 25, 1)
 
 /obj/item/clothing/shoes/suicide_act(mob/user)
 	user.visible_message("<span class='suicide'>[user] is bashing their own head in with [src]! Ain't that a kick in the head?</span>")
@@ -127,7 +127,7 @@
 	put_on_delay = 40
 
 /obj/item/clothing/shoes/cult
-	name = "cultist boots"
+	name = "nar-sian invoker boots"
 	desc = "A pair of boots worn by the followers of Nar-Sie."
 	icon_state = "cult"
 	item_state = "cult"
@@ -136,6 +136,10 @@
 	min_cold_protection_temperature = SHOES_MIN_TEMP_PROTECT
 	heat_protection = FEET
 	max_heat_protection_temperature = SHOES_MAX_TEMP_PROTECT
+
+/obj/item/clothing/shoes/cult/alt
+	name = "cultist boots"
+	icon_state = "cultalt"
 
 /obj/item/clothing/shoes/cyborg
 	name = "cyborg boots"
