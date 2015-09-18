@@ -240,4 +240,3 @@
 	new /obj/item/weapon/screwdriver/nuke(src)
 	new /obj/item/nuke_core_container(src)
 	new /obj/item/weapon/paper/nuke_instructions(src)
-	new /obj/item/weapon/paper/nuke_plans(src)
