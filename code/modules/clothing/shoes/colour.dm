@@ -109,3 +109,8 @@
 			user << "<span class='warning'>You need help taking these off!</span>"
 			return
 	..()
+
+/obj/item/clothing/shoes/sneakers/orange/legcuffs
+	chained = 1
+	slowdown = 15
+	icon_state = "orange1"

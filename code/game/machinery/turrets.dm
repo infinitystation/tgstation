@@ -499,6 +499,13 @@
 	projectile_type = /obj/item/projectile/beam/heavylaser
 	fire_sound = 'sound/weapons/lasercannonfire.ogg'
 
+/obj/machinery/gun_turret/laser/nofaction //specially for TERROR'S SYNDIE BATTLESHIP
+	name = "laser cannon turret"
+	desc = "Prison security system. BEVARE!"
+	scan_range = 20 //YOU SHALL NOT PASS!
+	health = 400
+	faction = null
+
 
 ////////////////////////
 //Turret Control Panel//

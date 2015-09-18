@@ -319,30 +319,6 @@
 					ticker.mode.make_antag_chance(character)
 	qdel(src)
 
-/mob/new_player/proc/Spawn_Prisoner()
-	var/mob/living/carbon/human/character = create_character()	//creates the human and transfers vars and mind
-	character.equip_to_slot_or_del(new /obj/item/clothing/shoes/sneakers/black(character), slot_shoes)
-	character.equip_to_slot_or_del(new /obj/item/weapon/restraints/legcuffs, slot_legcuffed)
-	character.equip_to_slot_or_del(new /obj/item/clothing/under/color/random(character), slot_w_uniform)
-
-	character.loc = pick(ban_prison)
-	character.lastarea = get_area(loc)
-
-	joined_player_list += character.ckey
-
-	character.client.prefs.be_special = 0
-	character.client.prefs.toggles &= ~(MIDROUND_ANTAG)
-	character.client.prefs.save_preferences()
-	character.client.prefs.chat_toggles = TOGGLES_PRISONER_CHAT
-	character << character.client.banprisoned_reason
-	text = {"Здравствуйте, вы являетесь заключенным в тюрьме строгого режима.
-Вы попали сюда по причине, которая была описана выше при входе в игру.
-	"}
-	character << sanitize_a0(text)
-	message_admins("<span class='notice'>[key_name_admin(character.key)] в игре как заключенный.</span>")
-
-	qdel(src)
-
 /mob/new_player/proc/AnnounceArrival(var/mob/living/carbon/human/character, var/rank)
 	if (ticker.current_state == GAME_STATE_PLAYING)
 		if(announcement_systems.len)
