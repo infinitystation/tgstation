@@ -11,7 +11,3 @@ Mining Asteroid;5;linked
 Empty Area;6;linked
 
 Empty Area;7;linked
-
-Monorail;8;unlinked
-
-Ban Prison;9;linked
