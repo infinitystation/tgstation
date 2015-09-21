@@ -174,9 +174,12 @@ Turf and target are seperate in case you want to teleport some distance from a t
 	if (findtext(key, "Guest-", 1, 7) != 1) //was findtextEx
 		return 0
 
-	var/i, ch, len = length(key)
+	var/i = 7, ch, len = length(key)
 
-	for (i = 7, i <= len, ++i)
+	if(copytext(key, 7, 8) == "W") //webclient
+		i++
+
+	for (, i <= len, ++i)
 		ch = text2ascii(key, i)
 		if (ch < 48 || ch > 57)
 			return 0
@@ -1420,7 +1423,7 @@ B --><-- A
 //but then you can never stop it and that's just silly.
 /atom/movable/var/atom/orbiting = null
 //we raise this each time orbit is called to prevent mutiple calls in a short time frame from breaking things
-/atom/movable/var/orbitid = 0 
+/atom/movable/var/orbitid = 0
 
 /atom/movable/proc/orbit(atom/A, radius = 10, clockwise = 1, angle_increment = 15, lockinorbit = 0)
 	if(!istype(A))
