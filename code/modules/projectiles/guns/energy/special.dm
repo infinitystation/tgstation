@@ -147,6 +147,7 @@
 	upgrades = list("diamond" = 0, "screwdriver" = 0, "plasma" = 0)
 	unique_rename = 1
 	can_pull_pin = 0
+	origin_tech = "combat=2;powerstorage=1"
 
 /obj/item/weapon/gun/energy/kinetic_accelerator/newshot()
 	..()
@@ -178,8 +179,7 @@
 			//	power_supply.rigged = 1 // This is dangerous!
 			S.use(1)
 
-	..()
-
+	return ..()
 
 /obj/item/weapon/gun/energy/kinetic_accelerator/shoot_live_shot()
 	overheat = 1
