@@ -5,7 +5,7 @@
 	max_occurrences = 3
 
 /datum/round_event/spacevine
-	announceWhen = 1
+	announceWhen = 10
 	var/area/impact_area
 
 /datum/round_event/spacevine/start()
