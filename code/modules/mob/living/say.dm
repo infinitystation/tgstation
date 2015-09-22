@@ -75,7 +75,7 @@ var/list/department_radio_keys = list(
 	  ":Ù" = "AI Private",	"#Ù" = "AI Private",	".Ù" = "AI Private",
 	  ":Ï" = "changeling",	"#Ï" = "changeling",	".Ï" = "changeling",
 	  ":Í" = "Centcom",		"#Í" = "Centcom",		".Í" = "Centcom",
-	  ":Ì" = "Service",		"#Ì" = "Service",		".Ì" = "Service",
+	  ":Ì" = "Service",		"#Ì" = "Service",		".Ì" = "Service"
 )
 
 var/list/crit_allowed_modes = list(MODE_WHISPER,MODE_CHANGELING,MODE_ALIEN)
