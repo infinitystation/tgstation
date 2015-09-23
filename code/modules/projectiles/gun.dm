@@ -23,6 +23,7 @@
 	var/fire_sound = "gunshot"
 	var/suppressed = 0					//whether or not a message is displayed when fired
 	var/can_suppress = 0
+	var/can_unsuppress = 1
 	var/recoil = 0						//boom boom shake the room
 	var/clumsy_check = 1
 	var/obj/item/ammo_casing/chambered = null
@@ -157,7 +158,7 @@
 		return 0
 
 	if(trigger_guard)
-		if(istype(user) && user.dna)
+		if(user.has_dna())
 			if(user.dna.check_mutation(HULK))
 				user << "<span class='warning'>Your meaty finger is much too large for the trigger guard!</span>"
 				return 0
