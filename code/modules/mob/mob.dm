@@ -491,6 +491,12 @@ var/list/slot_equipment_priority = list( \
 	if(client.banprisoned)
 		client.allow_respawn = 1
 
+	//and observer starters too!
+	if(isobserver(client.mob))
+		var/mob/dead/observer/O = client.mob
+		if(O.started_as_observer)
+			client.allow_respawn = 1
+
 	//respawn allowed?
 	if (!(abandon_allowed) && !(client.allow_respawn))
 		usr << "Респавн отключен =("
@@ -500,6 +506,7 @@ var/list/slot_equipment_priority = list( \
 	if (ticker.mode.name == "sandbox")
 		client.allow_respawn = 1
 
+	//waiting
 	if (((world.time - src.timeofdeath) < 6000) && !client.allow_respawn)
 		usr << "Потерпите немного длЯ респавна!"
 		return
