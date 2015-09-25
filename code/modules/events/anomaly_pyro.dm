@@ -1,13 +1,13 @@
 /datum/round_event_control/anomaly/anomaly_pyro
 	name = "Anomaly: Pyroclastic"
 	typepath = /datum/round_event/anomaly/anomaly_pyro
-	max_occurrences = 5
-	weight = 25
+	max_occurrences = 3
+	weight = 15
 
 /datum/round_event/anomaly/anomaly_pyro
 	startWhen = 10
 	announceWhen = 3
-	endWhen = 85
+	endWhen = 120
 
 
 /datum/round_event/anomaly/anomaly_pyro/announce()

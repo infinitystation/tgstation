@@ -137,7 +137,6 @@
 				client.prefs.real_name = random_unique_name(gender)
 			if(client.prefs.be_random_body)
 				client.prefs.random_character(gender)
-			client.allow_respawn = 1
 			observer.real_name = client.prefs.real_name
 			observer.name = observer.real_name
 			observer.key = key
@@ -376,27 +375,23 @@
 	popup.open(0) // 0 is passed to open so that it doesn't use the onclose() proc
 
 
-/mob/new_player/proc/create_character(random_override = 0)
+/mob/new_player/proc/create_character()
 	spawning = 1
 	close_spawn_windows()
 
 	var/mob/living/carbon/human/new_character = new(loc)
 	new_character.lastarea = get_area(loc)
 
-	create_dna(new_character)
-
-	if(config.force_random_names || appearance_isbanned(src) || random_override)
+	if(config.force_random_names || appearance_isbanned(src))
 		client.prefs.random_character()
 		client.prefs.real_name = client.prefs.pref_species.random_name(gender,1)
 	client.prefs.copy_to(new_character)
-
+	new_character.dna.update_dna_identity()
 	if(mind)
 		mind.active = 0					//we wish to transfer the key manually
 		mind.transfer_to(new_character)					//won't transfer key since the mind is not active
 
 	new_character.name = real_name
-
-	ready_dna(new_character, client.prefs.blood_type)
 
 	new_character.key = key		//Manually transfer the key to log them in
 	new_character.stopLobbySound()
