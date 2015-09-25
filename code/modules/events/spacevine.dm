@@ -5,7 +5,7 @@
 	max_occurrences = 3
 
 /datum/round_event/spacevine
-	announceWhen = 1
+	announceWhen = 10
 	var/area/impact_area
 
 /datum/round_event/spacevine/start()
@@ -371,7 +371,7 @@
 				qdel(B)
 		qdel(src)
 
-	else if(is_sharp(W))
+	else if(W.is_sharp())
 		qdel(src)
 
 	else if(istype(W, /obj/item/weapon/weldingtool))

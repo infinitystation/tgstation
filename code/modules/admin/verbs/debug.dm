@@ -624,7 +624,7 @@ var/global/list/g_fancy_list_of_types = null
 		alert("Invalid mob")
 		return
 	//log_admin("[key_name(src)] has alienized [M.key].")
-	
+
 
 	var/list/outfits = list("Naked","Custom","As Job...")
 	var/list/paths = typesof(/datum/outfit) - /datum/outfit - typesof(/datum/outfit/job)
@@ -768,3 +768,17 @@ var/global/list/g_fancy_list_of_types = null
 		dat += "[path]<BR>"
 
 	usr << browse(dat, "window=dellog")
+
+/client/proc/update_server()
+	set category = "Server"
+	set name = "Update Server"
+	if (!usr.client.holder)
+		return
+	var/confirm = alert("End the round and update server?", "End Round", "Yes", "Cancel")
+	if(confirm == "Cancel")
+		return
+	if(confirm == "Yes")
+		ticker.force_ending = 1
+		world << "<b>яепбеп намнбкъеряъ вепег 10 яейсмд! яепбеп ме асдер пюанрюрэ меяйнкэйн лхмср</b>"
+		sleep(100)
+		shell("sh update.sh")

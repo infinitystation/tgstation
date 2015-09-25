@@ -52,8 +52,30 @@ var/list/department_radio_keys = list(
 	  ":è" = "binary",		"#è" = "binary",		".è" = "binary",
 	  ":ô" = "alientalk",	"#ô" = "alientalk",		".ô" = "alientalk",
 	  ":å" = "Syndicate",	"#å" = "Syndicate",		".å" = "Syndicate",
-	  ":é" = "Supply",		"#é" = "Supply",		".é" = "Supply",
-	  ":ï" = "changeling",	"#ï" = "changeling",	".ï" = "changeling"
+	  ":ã" = "Supply",		"#ã" = "Supply",		".ã" = "Supply",
+	  ":ù" = "AI Private",	"#ù" = "AI Private",	".ù" = "AI Private",
+	  ":ï" = "changeling",	"#ï" = "changeling",	".ï" = "changeling",
+	  ":í" = "Centcom",		"#í" = "Centcom",		".í" = "Centcom",
+	  ":ì" = "Service",		"#ì" = "Service",		".ì" = "Service",
+
+	  ":Ê" = "right hand",	"#Ê" = "right hand",	".Ê" = "right hand",
+	  ":Ä" = "left hand",	"#Ä" = "left hand",		".Ä" = "left hand",
+	  ":Ø" = "intercom",	"#Ø" = "intercom",		".Ø" = "intercom",
+	  ":Ð" = "department",	"#Ð" = "department",	".Ð" = "department",
+	  ":Ñ" = "Command",		"#Ñ" = "Command",		".Ñ" = "Command",
+	  ":Ò" = "Science",		"#Ò" = "Science",		".Ò" = "Science",
+	  ":Ñ" = "Medical",		"#Ñ" = "Medical",		".Ñ" = "Medical",
+	  ":Ó" = "Engineering",	"#Ó" = "Engineering",	".Ó" = "Engineering",
+	  ":Û" = "Security",	"#Û" = "Security",		".Û" = "Security",
+	  ":Ö" = "whisper",		"#Ö" = "whisper",		".Ö" = "whisper",
+	  ":È" = "binary",		"#È" = "binary",		".È" = "binary",
+	  ":Ô" = "alientalk",	"#Ô" = "alientalk",		".Ô" = "alientalk",
+	  ":Å" = "Syndicate",	"#Å" = "Syndicate",		".Å" = "Syndicate",
+	  ":Ã" = "Supply",		"#Ã" = "Supply",		".Ã" = "Supply",
+	  ":Ù" = "AI Private",	"#Ù" = "AI Private",	".Ù" = "AI Private",
+	  ":Ï" = "changeling",	"#Ï" = "changeling",	".Ï" = "changeling",
+	  ":Í" = "Centcom",		"#Í" = "Centcom",		".Í" = "Centcom",
+	  ":Ì" = "Service",		"#Ì" = "Service",		".Ì" = "Service"
 )
 
 var/list/crit_allowed_modes = list(MODE_WHISPER,MODE_CHANGELING,MODE_ALIEN)
