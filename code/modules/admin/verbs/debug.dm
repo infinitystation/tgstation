@@ -779,6 +779,6 @@ var/global/list/g_fancy_list_of_types = null
 		return
 	if(confirm == "Yes")
 		ticker.force_ending = 1
-		world << "<b>яепбеп намнбкъеряъ! яепбеп ме асдер пюанрюрэ меяйнкэйн лхмср</b>"
+		world << "<b>яепбеп намнбкъеряъ вепег 10 яейсмд! яепбеп ме асдер пюанрюрэ меяйнкэйн лхмср</b>"
 		sleep(100)
 		shell("sh update.sh")
