@@ -1,13 +1,13 @@
 /datum/round_event_control/anomaly/anomaly_flux
 	name = "Anomaly: Hyper-Energetic Flux"
 	typepath = /datum/round_event/anomaly/anomaly_flux
-	max_occurrences = 5
-	weight = 25
+	max_occurrences = 2
+	weight = 15
 
 /datum/round_event/anomaly/anomaly_flux
 	startWhen = 3
 	announceWhen = 20
-	endWhen = 80
+	endWhen = 150
 
 
 /datum/round_event/anomaly/anomaly_flux/announce()

@@ -138,13 +138,6 @@
 				else
 					message_admins("[key_name_admin(usr)] tried to create a shadowling. Unfortunately, there were no candidates available.")
 					log_admin("[key_name(usr)] failed to create a shadowling.")
-			if("19")
-				if(src.makeBattleshipTeam())
-					message_admins("[key_name(usr)] created a Battleship Team.")
-					log_admin("[key_name(usr)] created a Battleship Team.")
-				else
-					message_admins("[key_name_admin(usr)] tried to create a created a Battleship Team. Unfortunately, there were no candidates available.")
-					log_admin("[key_name(usr)] failed to create a created a Battleship Team.")
 
 	else if(href_list["forceevent"])
 		if(!check_rights(R_FUN))	return
@@ -1626,7 +1619,6 @@
 		var/client/C = usr.client
 		if(!isobserver(usr))	C.admin_ghost()
 		var/mob/dead/observer/A = C.mob
-		sleep(2)
 		A.ManualFollow(M)
 		log_admin("[key_name(usr)] followed [key_name(M)]")
 		message_admins("[key_name_admin(usr)] followed [key_name_admin(M)]")

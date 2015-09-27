@@ -328,7 +328,7 @@
 				m_type = 2
 
 		if("wag","wags")
-			if(dna && dna.species && (("tail_lizard" in dna.species.mutant_bodyparts) || ("tail_human" in dna.species.mutant_bodyparts)))
+			if(dna && dna.species && (("tail_lizard" in dna.species.mutant_bodyparts) || (dna.features["tail_human"] != "None")))
 				message = "<B>[src]</B> wags \his tail."
 				startTailWag()
 			else

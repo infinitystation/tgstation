@@ -5,16 +5,20 @@
 	max_occurrences = 3
 
 /datum/round_event/spacevine
-	announceWhen = 1
+	announceWhen = 10
 	var/area/impact_area
 
 /datum/round_event/spacevine/start()
 	var/list/turfs = list() //list of all the empty floor turfs in the hallway areas
 
+	var/obj/effect/spacevine/SV = new()
+
 	for(var/area/hallway/A in world)
-		for(var/turf/simulated/floor/F in A)
-			if(F.contents.len <= 1)
+		for(var/turf/simulated/F in A)
+			if(F.Enter(SV))
 				turfs += F
+
+	qdel(SV)
 
 	if(turfs.len) //Pick a turf to spawn at if we can
 		var/turf/simulated/T = pick(turfs)
@@ -371,7 +375,7 @@
 				qdel(B)
 		qdel(src)
 
-	else if(is_sharp(W))
+	else if(W.is_sharp())
 		qdel(src)
 
 	else if(istype(W, /obj/item/weapon/weldingtool))
