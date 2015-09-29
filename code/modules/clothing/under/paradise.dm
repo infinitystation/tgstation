@@ -6,8 +6,8 @@
 	item_color = "dress_orange"
 	icon = 'icons/obj/clothing/paradise.dmi'
 	worn_icon = 'icons/mob/paradise_clothes.dmi'
-	body_parts_covered = LEGS
 	fitted = FEMALE_UNIFORM_TOP
+	body_parts_covered = CHEST|GROIN|LEGS|FEET
 
 /obj/item/clothing/under/dress_cap
 	name = "captain's dress uniform"
