@@ -392,17 +392,17 @@
 				if("animal_delay")
 					config.animal_delay				= text2num(value)
 				if("alert_red_upto")
-					config.alert_desc_red_upto		= sanitize_a0(value)
+					config.alert_desc_red_upto		= value
 				if("alert_red_downto")
-					config.alert_desc_red_downto	= sanitize_a0(value)
+					config.alert_desc_red_downto	= value
 				if("alert_blue_downto")
-					config.alert_desc_blue_downto	= sanitize_a0(value)
+					config.alert_desc_blue_downto	= value
 				if("alert_blue_upto")
-					config.alert_desc_blue_upto		= sanitize_a0(value)
+					config.alert_desc_blue_upto		= value
 				if("alert_green")
-					config.alert_desc_green			= sanitize_a0(value)
+					config.alert_desc_green			= value
 				if("alert_delta")
-					config.alert_desc_delta			= sanitize_a0(value)
+					config.alert_desc_delta			= value
 				if("assistants_have_maint_access")
 					config.jobs_have_maint_access	|= ASSISTANTS_HAVE_MAINT_ACCESS
 				if("security_has_maint_access")
