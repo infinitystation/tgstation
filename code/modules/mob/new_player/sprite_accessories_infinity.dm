@@ -35,3 +35,10 @@
 	name = "Purple Swimsuit"
 	icon_state = "swim_purp"
 	gender = FEMALE
+
+/datum/sprite_accessory/hair
+	icon = 'icons/mob/more_hairs.dmi'
+
+/datum/sprite_accessory/hair/dads
+	name = "Dads"
+	icon_state = "dads"

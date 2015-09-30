@@ -1,14 +1,3 @@
-/obj/item/clothing/under/dress_orange
-	name = "orange dress"
-	desc = "A fancy orange gown for those who like to show leg."
-	icon_state = "dress_orange"
-	item_state = "y_suit"
-	item_color = "dress_orange"
-	icon = 'icons/obj/clothing/paradise.dmi'
-	worn_icon = 'icons/mob/paradise_clothes.dmi'
-	fitted = FEMALE_UNIFORM_TOP
-	body_parts_covered = CHEST|GROIN|LEGS|FEET
-
 /obj/item/clothing/under/dress_cap
 	name = "captain's dress uniform"
 	desc = "Feminine fashion for the style concious captain."
@@ -18,6 +7,7 @@
 	worn_icon = 'icons/mob/paradise_clothes.dmi'
 	icon = 'icons/obj/clothing/paradise.dmi'
 	fitted = FEMALE_UNIFORM_TOP
+	can_adjust = 0
 
 /obj/item/clothing/under/dress_hop
 	name = "head of personnel dress uniform"
@@ -28,6 +18,7 @@
 	worn_icon = 'icons/mob/paradise_clothes.dmi'
 	icon = 'icons/obj/clothing/paradise.dmi'
 	fitted = FEMALE_UNIFORM_TOP
+	can_adjust = 0
 
 /obj/item/clothing/under/dress_rd
 	name = "research director's dress uniform"
@@ -38,26 +29,7 @@
 	icon = 'icons/obj/clothing/paradise.dmi'
 	worn_icon = 'icons/mob/paradise_clothes.dmi'
 	fitted = FEMALE_UNIFORM_TOP
-
-/obj/item/clothing/under/dress_saloon
-	name = "saloon girl dress"
-	desc = "A old western inspired gown for the girl who likes to drink."
-	icon_state = "dress_saloon"
-	item_state = "r_suit"
-	item_color = "dress_saloon"
-	worn_icon = 'icons/mob/paradise_clothes.dmi'
-	icon = 'icons/obj/clothing/paradise.dmi'
-	fitted = FEMALE_UNIFORM_TOP
-
-/obj/item/clothing/under/bride_white
-	name = "silky wedding dress"
-	desc = "A white wedding gown made from the finest silk."
-	icon_state = "bride_white"
-	item_state = "w_suit"
-	item_color = "bride_white"
-	icon = 'icons/obj/clothing/paradise.dmi'
-	worn_icon = 'icons/mob/paradise_clothes.dmi'
-	fitted = FEMALE_UNIFORM_TOP
+	can_adjust = 0
 
 /obj/item/clothing/under/mai_yang
 	name = "white cheongsam"
@@ -68,6 +40,7 @@
 	icon = 'icons/obj/clothing/paradise.dmi'
 	worn_icon = 'icons/mob/paradise_clothes.dmi'
 	fitted = FEMALE_UNIFORM_TOP
+	can_adjust = 0
 
 /obj/item/clothing/under/dress_pink
 	name = "pink dress"
@@ -78,6 +51,7 @@
 	icon = 'icons/obj/clothing/paradise.dmi'
 	worn_icon = 'icons/mob/paradise_clothes.dmi'
 	fitted = FEMALE_UNIFORM_TOP
+	can_adjust = 0
 
 /obj/item/clothing/under/dress_green
 	name = "green dress"
@@ -88,6 +62,7 @@
 	icon = 'icons/obj/clothing/paradise.dmi'
 	worn_icon = 'icons/mob/paradise_clothes.dmi'
 	fitted = FEMALE_UNIFORM_TOP
+	can_adjust = 0
 
 /obj/item/clothing/under/sundress_white
 	name = "white sundress"
@@ -98,6 +73,7 @@
 	icon = 'icons/obj/clothing/paradise.dmi'
 	worn_icon = 'icons/mob/paradise_clothes.dmi'
 	fitted = FEMALE_UNIFORM_TOP
+	can_adjust = 0
 
 /obj/item/clothing/under/dress_fire
 	name = "flame dress"
@@ -108,6 +84,7 @@
 	icon = 'icons/obj/clothing/paradise.dmi'
 	worn_icon = 'icons/mob/paradise_clothes.dmi'
 	fitted = FEMALE_UNIFORM_TOP
+	can_adjust = 0
 
 /obj/item/clothing/under/dress_yellow
 	name = "yellow dress"
@@ -118,6 +95,7 @@
 	icon = 'icons/obj/clothing/paradise.dmi'
 	worn_icon = 'icons/mob/paradise_clothes.dmi'
 	fitted = FEMALE_UNIFORM_TOP
+	can_adjust = 0
 
 /obj/item/clothing/under/warden_corporate
 	name = "warden corporate uniform"
@@ -127,6 +105,7 @@
 	item_color = "warden_corporate"
 	icon = 'icons/obj/clothing/paradise.dmi'
 	worn_icon = 'icons/mob/paradise_clothes.dmi'
+	can_adjust = 0
 
 /obj/item/clothing/under/sec_corporate
 	name = "corporate security uniform"
@@ -136,6 +115,7 @@
 	item_color = "sec_corporate"
 	icon = 'icons/obj/clothing/paradise.dmi'
 	worn_icon = 'icons/mob/paradise_clothes.dmi'
+	can_adjust = 0
 
 /obj/item/clothing/under/hos_corporate
 	name = "corporate head of security's uniform"
@@ -145,6 +125,7 @@
 	item_color = "hos_corporate"
 	icon = 'icons/obj/clothing/paradise.dmi'
 	worn_icon = 'icons/mob/paradise_clothes.dmi'
+	can_adjust = 0
 
 /obj/item/clothing/under/hos_formal_female
 	name = "head of security's formal uniform"
@@ -154,12 +135,26 @@
 	item_color = "hos_formal_female"
 	icon = 'icons/obj/clothing/paradise.dmi'
 	worn_icon = 'icons/mob/paradise_clothes.dmi'
+	can_adjust = 0
 
-/obj/item/clothing/under/jacket
-	name = "jacket"
-	desc = "Do you like robusting other people?"
-	icon_state = "jacket"
-	item_state = "lb_suit"
-	item_color = "jacket"
-	icon = 'icons/obj/clothing/paradise.dmi'
+/obj/item/clothing/under/dress_saloon
+	name = "saloon girl dress"
+	desc = "A old western inspired gown for the girl who likes to drink."
+	icon_state = "dress_saloon"
+	item_state = "r_suit"
+	item_color = "dress_saloon"
 	worn_icon = 'icons/mob/paradise_clothes.dmi'
+	icon = 'icons/obj/clothing/paradise.dmi'
+	fitted = FEMALE_UNIFORM_TOP
+	can_adjust = 0
+
+/obj/item/clothing/under/ce_female_shorts
+	name = "chief engineer's female shorts"
+	desc = "A light and stylish CE shorts!"
+	icon_state = "ce_female_shorts"
+	item_state = "y_suit"
+	item_color = "ce_female_shorts"
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	fitted = FEMALE_UNIFORM_TOP
+	can_adjust = 0
