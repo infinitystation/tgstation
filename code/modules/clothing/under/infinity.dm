@@ -156,5 +156,4 @@
 	item_color = "ce_female_shorts"
 	icon = 'icons/obj/clothing/infinity_work.dmi'
 	worn_icon = 'icons/mob/infinity_work.dmi'
-	fitted = FEMALE_UNIFORM_TOP
 	can_adjust = 0
