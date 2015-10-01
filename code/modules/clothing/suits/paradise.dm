@@ -1,4 +1,4 @@
-/obj/item/clothing/suit/jacket
+/obj/item/clothing/suit/toggle/jacket
 	name = "jacket"
 	desc = "Do you like robusting other people?"
 	icon_state = "jacket"
@@ -6,6 +6,7 @@
 	item_color = "jacket"
 	icon = 'icons/obj/clothing/paradise.dmi'
 	worn_icon = 'icons/mob/paradise_clothes.dmi'
+	togglename = "buttons"
 
 /obj/item/clothing/suit/dress_orange
 	name = "orange dress"

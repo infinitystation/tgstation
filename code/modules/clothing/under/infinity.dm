@@ -157,4 +157,18 @@
 	icon = 'icons/obj/clothing/infinity_work.dmi'
 	worn_icon = 'icons/mob/infinity_work.dmi'
 	fitted = FEMALE_UNIFORM_TOP
+	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 10)
+	burn_state = -1
+
+/obj/item/clothing/under/cmo_dress
+	name = "chief medical officer's female dress"
+	desc = "Feminine fashion for the style concious CMO."
+	icon_state = "cmo_dress"
+	item_state = "w_suit"
+	item_color = "cmo_dress"
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	fitted = FEMALE_UNIFORM_TOP
 	can_adjust = 0
+	permeability_coefficient = 0.50
+	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 10, rad = 0)
