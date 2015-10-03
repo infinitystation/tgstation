@@ -32,6 +32,7 @@
 	var/recharge_time = 10
 	can_flashlight = 0
 	cell_removing = 0
+	can_charge = 0
 
 /obj/item/weapon/gun/energy/gun/advtaser/cyborg/New()
 	..()
