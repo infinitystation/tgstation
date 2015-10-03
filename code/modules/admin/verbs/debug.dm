@@ -796,7 +796,8 @@ var/global/list/g_fancy_list_of_types = null
 	if(confirm == "Yes")
 		message_admins("[key_name_admin(usr)] инициировал(а) обновление сервера в конце текущего раунда.")
 		log_game("[key_name_admin(usr)] инициировал(а) обновление сервера в конце текущего раунда.")
-		world << "<span class='adminooc'>Администратор [usr] инициировал(а) обновление сервера в конце текущего раунда.</span>"
+		world << "<span class='adminooc'>Администратор [usr.key] инициировал(а) обновление сервера в конце текущего раунда.</span>"
+		ticker.updater_ckey = usr.key
 		ticker.update_waiting = 1
 
 /proc/force_update_server()
