@@ -784,3 +784,24 @@ var/global/list/g_fancy_list_of_types = null
 		world << "<b>СЕРВЕР ОБНОВЛЯЕТСЯ ЧЕРЕЗ 10 СЕКУНД! СЕРВЕР НЕ БУДЕТ РАБОТАТЬ НЕСКОЛЬКО МИНУТ!</b><br>Обновление инициировано администратором [usr.key]."
 		sleep(100)
 		shell("sh update.sh")
+
+/client/proc/update_server_round_end()
+	set category = "Server"
+	set name = "Update Server at Round End"
+	if (!usr.client.holder)
+		return
+	var/confirm = alert("Инициировать обновление в конце раунда?", "End Round", "Yes", "Cancel")
+	if(confirm == "Cancel")
+		return
+	if(confirm == "Yes")
+		message_admins("[key_name_admin(usr)] инициировал(а) обновление сервера в конце текущего раунда.")
+		log_game("[key_name_admin(usr)] инициировал(а) обновление сервера в конце текущего раунда.")
+		world << "<span class='adminooc'>Администратор [usr] инициировал(а) обновление сервера в конце текущего раунда.</span>"
+		ticker.update_waiting = 1
+
+/proc/force_update_server()
+	if(ticker.current_state != GAME_STATE_FINISHED)
+		return 0
+	world << "<b>СЕРВЕР ОБНОВЛЯЕТСЯ ЧЕРЕЗ 10 СЕКУНД! СЕРВЕР НЕ БУДЕТ РАБОТАТЬ НЕСКОЛЬКО МИНУТ!</b><br>Обновление в конце раунда инициировано администратором [ticker.updater_ckey]."
+	sleep(100)
+	shell("sh update.sh")
