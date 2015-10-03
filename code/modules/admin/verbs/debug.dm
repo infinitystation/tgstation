@@ -778,7 +778,9 @@ var/global/list/g_fancy_list_of_types = null
 	if(confirm == "Cancel")
 		return
 	if(confirm == "Yes")
+		message_admins("[key_name_admin(usr)] запустил(а) обновление сервера.")
+		log_game("[key_name_admin(usr)] запустил(а) обновление сервера.")
 		ticker.force_ending = 1
-		world << "<b>СЕРВЕР ОБНОВЛЯЕТСЯ ЧЕРЕЗ 10 СЕКУНД! СЕРВЕР НЕ БУДЕТ РАБОТАТЬ НЕСКОЛЬКО МИНУТ</b>"
+		world << "<b>СЕРВЕР ОБНОВЛЯЕТСЯ ЧЕРЕЗ 10 СЕКУНД! СЕРВЕР НЕ БУДЕТ РАБОТАТЬ НЕСКОЛЬКО МИНУТ!</b><br>Обновление инициировано администратором [usr.key]."
 		sleep(100)
 		shell("sh update.sh")
