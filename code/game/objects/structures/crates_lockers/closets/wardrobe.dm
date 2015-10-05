@@ -73,6 +73,8 @@
 	new /obj/item/clothing/shoes/sneakers/black(src)
 	new /obj/item/clothing/mask/bandana/green(src)
 	new /obj/item/clothing/mask/bandana/green(src)
+	new /obj/item/clothing/under/dress_green(src)
+	new /obj/item/clothing/under/dress_green(src)
 	return
 
 
@@ -108,6 +110,8 @@
 	new /obj/item/clothing/shoes/sneakers/orange(src)
 	new /obj/item/clothing/mask/bandana/gold(src)
 	new /obj/item/clothing/mask/bandana/gold(src)
+	new /obj/item/clothing/under/dress_yellow(src)
+	new /obj/item/clothing/under/dress_yellow(src)
 	return
 
 
@@ -127,6 +131,8 @@
 	new /obj/item/clothing/head/soft/mime(src)
 	new /obj/item/clothing/head/soft/mime(src)
 	new /obj/item/clothing/head/soft/mime(src)
+	new /obj/item/clothing/under/sundress_white(src)
+	new /obj/item/clothing/under/sundress_white(src)
 	return
 
 /obj/structure/closet/wardrobe/pjs
@@ -213,7 +219,18 @@
 	new /obj/item/clothing/shoes/sneakers/black(src)
 	new /obj/item/clothing/shoes/sneakers/brown(src)
 	new /obj/item/clothing/shoes/sneakers/white(src)
-	if(prob(30))
-		new /obj/item/clothing/suit/hooded/wintercoat(src)
-		new /obj/item/clothing/shoes/winterboots(src)
+	new /obj/item/clothing/suit/jacket(src)
+	new /obj/item/clothing/suit/jacket(src)
+	new /obj/item/clothing/under/dress_fire(src)
+	new /obj/item/clothing/under/dress_fire(src)
+	new /obj/item/clothing/under/dress_pink(src)
+	new /obj/item/clothing/under/dress_pink(src)
+	new /obj/item/clothing/under/mai_yang(src)
+	new /obj/item/clothing/under/mai_yang(src)
+	new /obj/item/clothing/under/dress_saloon(src)
+	new /obj/item/clothing/under/dress_saloon(src)
+	new /obj/item/clothing/suit/dress_orange(src)
+	new /obj/item/clothing/suit/dress_orange(src)
+	new /obj/item/clothing/suit/hooded/wintercoat(src)
+	new /obj/item/clothing/shoes/winterboots(src)
 	return

@@ -92,10 +92,12 @@
 		switch(fail_tick)
 			if(0 to 200)
 				fail_tick += (2*(100-reliability))
-				M.irradiate(40)
+				M.rad_act(40)
 				M << "<span class='userdanger'>Your [name] feels warmer.</span>"
 			if(201 to INFINITY)
-				M.irradiate(200)
+				SSobj.processing.Remove(src)
+				M.rad_act(200)
+				crit_fail = 1
 				M << "<span class='userdanger'>Your [name]'s reactor overloads!</span>"
 
 /obj/item/weapon/gun/energy/gun/nuclear/emp_act(severity)

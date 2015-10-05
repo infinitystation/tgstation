@@ -225,6 +225,8 @@ var/const/MAX_ACTIVE_TIME = 400
 		return 0
 	if(M.getorgan(/obj/item/organ/internal/alien/hivenode))
 		return 0
+	if(istype(M.loc, /obj/mecha))
+		return 0
 
 	if(iscorgi(M) || ismonkey(M))
 		return 1
