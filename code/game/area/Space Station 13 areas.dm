@@ -278,6 +278,9 @@ var/list/teleportlocs = list()
 /area/prison
 	name = "\improper Prison Station"
 	icon_state = "brig"
+	luminosity = 1
+	lighting_use_dynamic = 0
+	has_gravity = 1
 
 /area/prison/arrival_airlock
 	name = "\improper Prison Station Airlock"
