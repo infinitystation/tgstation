@@ -1,5 +1,5 @@
 /obj/item/clothing/shoes/antiquated_shoes
-	name = "antiquated_shoes"
+	name = "antiquated shoes"
 	desc = "Really old, out of fashion shoes"
 	icon_state = "antiquated_shoes"
 	item_state = "antiquated_shoes"
