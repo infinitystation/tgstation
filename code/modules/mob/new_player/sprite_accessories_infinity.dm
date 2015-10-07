@@ -44,3 +44,8 @@
 	name = "Dads"
 	icon_state = "dads"
 	icon = 'icons/mob/more_hairs.dmi'
+
+/datum/sprite_accessory/socks/blue_thigh_s
+	name = "Thigh-high Blue"
+	icon_state = "blue_thigh_s"
+	icon = 'icons/mob/infinity_inriss.dmi'
