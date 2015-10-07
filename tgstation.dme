@@ -176,6 +176,7 @@
 #include "code\datums\spell.dm"
 #include "code\datums\supplypacks.dm"
 #include "code\datums\uplink_item.dm"
+#include "code\datums\votablemap.dm"
 #include "code\datums\diseases\_disease.dm"
 #include "code\datums\diseases\_MobProcs.dm"
 #include "code\datums\diseases\anxiety.dm"
