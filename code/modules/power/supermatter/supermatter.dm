@@ -251,6 +251,12 @@
 /obj/machinery/power/supermatter_shard/attackby(obj/item/W, mob/living/user, params)
 	if(!istype(W) || (W.flags & ABSTRACT) || !istype(user))
 		return
+	if(istype(W, /obj/item/weapon/wrench))
+		playsound(src, 'sound/items/Ratchet.ogg', 50, 1)
+		user << "<span class='notice'>You start to [anchored ? "un" : ""]secure [src]...</span>"
+		if(do_after(user, 50, target = src))
+			anchored = !anchored
+			return
 	if(user.drop_item(W))
 		Consume(W)
 		user.visible_message("<span class='danger'>As [user] touches \the [src] with \a [W], silence fills the room...</span>",\

@@ -48,6 +48,8 @@ var/datum/subsystem/ticker/ticker
 
 	var/obj/screen/cinematic = null			//used for station explosion cinematic
 
+	var/maprotatechecked = 0
+
 
 /datum/subsystem/ticker/New()
 	NEW_SS_GLOBAL(ticker)
@@ -102,6 +104,7 @@ var/datum/subsystem/ticker/ticker
 		if(GAME_STATE_PLAYING)
 			mode.process(wait * 0.1)
 			check_queue()
+			check_maprotate()
 
 			if(!mode.explosion_in_progress && mode.check_finished() || force_ending)
 				current_state = GAME_STATE_FINISHED
@@ -441,6 +444,14 @@ var/datum/subsystem/ticker/ticker
 	for(var/i in total_antagonists)
 		log_game("[i]s[total_antagonists[i]].")
 
+	//Adds the del() log to world.log in a format condensable by the runtime condenser found in tools
+	if(SSgarbage.didntgc.len)
+		var/dellog = ""
+		for(var/path in SSgarbage.didntgc)
+			dellog += "Path : [path] \n"
+			dellog += "Failures : [SSgarbage.didntgc[path]] \n"
+		world.log << dellog
+
 	return 1
 
 /datum/subsystem/ticker/proc/send_random_tip()
@@ -470,3 +481,18 @@ var/datum/subsystem/ticker/ticker
 			next_in_line << "<span class='danger'>No response recieved. You have been removed from the line.</span>"
 			queued_players -= next_in_line
 			queue_delay = 0
+
+/datum/subsystem/ticker/proc/check_maprotate()
+	if (!config.maprotation || !SERVERTOOLS)
+		return
+	if (SSshuttle.emergency.mode != SHUTTLE_ESCAPE || SSshuttle.canRecall())
+		return
+	if (maprotatechecked)
+		return
+
+	maprotatechecked = 1
+
+	//map rotate chance defaults to 75% of the length of the round (in minutes)
+	if (!prob((world.time/600)*config.maprotatechancedelta))
+		return
+	maprotate()
