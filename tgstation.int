@@ -1,0 +1,9 @@
+// BEGIN_INTERNALS
+/*
+DIR: code code\datums code\datums\diseases code\datums\diseases\advance code\datums\diseases\advance\symptoms code\game code\game\gamemodes code\game\gamemodes\cult code\game\verbs code\modules code\modules\admin code\modules\mob code\modules\mob\living code\modules\mob\living\carbon 
+AUTO_FILE_DIR: OFF
+MAP_ICON_TYPE: 0
+WINDOW: code\modules\admin\topic.dm;code\modules\mob\living\carbon\carbon.dm;code\game\verbs\emotions.dm
+FILE: code\modules\mob\living\carbon\carbon.dm
+*/
+// END_INTERNALS

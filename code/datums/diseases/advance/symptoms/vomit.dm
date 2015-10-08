@@ -35,15 +35,16 @@ Bonus
 		var/mob/living/M = A.affected_mob
 		switch(A.stage)
 			if(1, 2, 3, 4)
-				M << "<span class='notice'>[pick("Тебе тошнит.", "Ты чувствуешь, что сейчас тебЯ вырвет!")]</span>"
+				M << "<span class='warning'>[pick("Тебе тошнит.", "Ты чувствуешь, что сейчас тебЯ вырвет!")]</span>"
 			else
 				Vomit(M)
 
 	return
 
-/datum/symptom/vomit/proc/Vomit(mob/living/M)
+/datum/symptom/vomit/proc/Vomit(mob/living/carbon/M)
+	M.vomit(20)
 
-	M.visible_message("<span class='danger'>[M] блюёт на пол!</span>", \
+	M.visible_message("<span class='warning'>[M] блюёт на пол!</span>", \
 					"<span class='userdanger'>ТебЯ вырвало на пол!</span>")
 
 	M.nutrition -= 20
@@ -82,17 +83,5 @@ Bonus
 	level = 4
 	severity = 5
 
-/datum/symptom/vomit/blood/Vomit(mob/living/M)
-
-	M.Stun(1)
-	M.visible_message("<span class='danger'>[M] vomits on the floor!</span>", \
-						"<span class='userdanger'>ТебЯ вырвало на пол!</span>")
-
-	// They lose blood and health.
-	var/brute_dam = M.getBruteLoss()
-	if(brute_dam < 50)
-		M.adjustBruteLoss(3)
-
-	var/turf/pos = get_turf(M)
-	pos.add_blood_floor(M)
-	playsound(pos, 'sound/effects/splat.ogg', 50, 1)
+/datum/symptom/vomit/blood/Vomit(mob/living/carbon/M)
+	M.vomit(0, 1)
