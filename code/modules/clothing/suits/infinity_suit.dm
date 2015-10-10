@@ -8,7 +8,7 @@
 	worn_icon = 'icons/mob/infinity_work.dmi'
 
 /obj/item/clothing/suit/hooded/black_hoody
-	name = "black_hoody"
+	name = "black hoody"
 	desc = "Warm black hoody."
 	icon_state = "black_hoody"
 	item_state = "bl_suit"
