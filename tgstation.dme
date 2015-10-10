@@ -929,6 +929,7 @@
 #include "code\modules\clothing\glasses\hud.dm"
 #include "code\modules\clothing\gloves\boxing.dm"
 #include "code\modules\clothing\gloves\color.dm"
+#include "code\modules\clothing\gloves\infinity_gloves.dm"
 #include "code\modules\clothing\gloves\miscellaneous.dm"
 #include "code\modules\clothing\head\collectable.dm"
 #include "code\modules\clothing\head\hardhat.dm"
