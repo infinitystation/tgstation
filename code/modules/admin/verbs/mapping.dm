@@ -162,7 +162,6 @@ var/intercom_range_display_status = 0
 	src.verbs += /client/proc/cmd_show_at_list
 	src.verbs += /client/proc/manipulate_organs
 	src.verbs += /client/proc/update_server
-	src.verbs += /client/proc/update_server_round_end
 	//src.verbs += /client/proc/cmd_admin_rejuvenate
 
 	feedback_add_details("admin_verb","mDV") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
