@@ -256,6 +256,7 @@
 		user << "<span class='notice'>You start to [anchored ? "un" : ""]secure [src]...</span>"
 		if(do_after(user, 50, target = src))
 			anchored = !anchored
+			user << "<span class='notice'>You [anchored ? "un" : ""]secured [src]...</span>"
 			return
 	if(user.drop_item(W))
 		Consume(W)

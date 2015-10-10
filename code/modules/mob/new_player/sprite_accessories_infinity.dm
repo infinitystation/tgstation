@@ -40,6 +40,24 @@
 	icon = 'icons/mob/paradise_clothes.dmi'
 	gender = FEMALE
 
+/datum/sprite_accessory/underwear/bluestrippedunderwear
+	name = "Blue Stripped Underwear"
+	icon_state = "bluestrippedunderwear"
+	icon = 'icons/mob/infinity_work.dmi'
+	gender = FEMALE
+
+/datum/sprite_accessory/underwear/redstrippedunderwear
+	name = "Red Stripped Underwear"
+	icon_state = "redstrippedunderwear"
+	icon = 'icons/mob/infinity_work.dmi'
+	gender = FEMALE
+
+/datum/sprite_accessory/underwear/blackstrippedunderwear
+	name = "Black Stripped Underwear"
+	icon_state = "blackstrippedunderwear"
+	icon = 'icons/mob/infinity_work.dmi'
+	gender = FEMALE
+
 /datum/sprite_accessory/hair/dads
 	name = "Dads"
 	icon_state = "dads"

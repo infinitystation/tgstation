@@ -187,6 +187,7 @@
 		user.visible_message("[user] opens a book titled \"[title]\" and begins reading intently.")
 		onclose(user, "book")
 		message_admins("[key_name_admin(user)]<A HREF='?_src_=holder;adminmoreinfo=\ref[user]'>?</A> (<A HREF='?_src_=holder;adminplayerobservefollow=\ref[user]'>FLW</A>) прочитал(а) книгу [name]/[title].")
+		log_game("[key_name_admin(user)] прочитал(а) книгу [name]/[title].")
 	else
 		user << "<span class='notice'>This book is completely blank!</span>"
 

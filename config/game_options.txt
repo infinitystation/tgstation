@@ -76,6 +76,7 @@ ALERT_DELTA Внимание! Механизм самоуничтожения станции запущен! Весь экипаж долж
 ## Probablities for game modes chosen in 'secret' and 'random' modes.
 ## Default probablity is 1, increase to make that mode more likely to be picked.
 ## Set to 0 to disable that mode.
+
 PROBABILITY EXTENDED 4
 PROBABILITY TRAITOR 4
 PROBABILITY DOUBLE_AGENTS 3
@@ -200,7 +201,7 @@ GATEWAY_DELAY 18000
 ## If the number of players ready at round starts exceeds this threshold, JOBS_HAVE_MINIMAL_ACCESS will automatically be enabled. Otherwise, it will be disabled.
 ## This is useful for accomodating both low and high population rounds on the same server.
 ## Comment out or set to 0 to disable this automatic toggle.
-MINIMAL_ACCESS_THRESHOLD 20
+MINIMAL_ACCESS_THRESHOLD 12
 
 ## Comment this out if you wish to use the setup where jobs have more access.
 ## This is intended for servers with low populations - where there are not enough
@@ -279,8 +280,8 @@ MIDROUND_ANTAG_LIFE_CHECK 0.7
 #NO_SUMMON_MAGIC
 #NO_SUMMON_EVENTS
 
-//Comment for "normal" explosions, which ignore obstacles
-//Uncomment for explosions that react to doors and walls
+##Comment for "normal" explosions, which ignore obstacles
+##Uncomment for explosions that react to doors and walls
 REACTIONARY_EXPLOSIONS
 
 ### Configure the bomb cap
@@ -292,6 +293,6 @@ REACTIONARY_EXPLOSIONS
 ## Default (3,7,14)
 #BOMBCAP 14
 ## One 'step' up (4,8,16) (recommended if you enable REACTIONARY_EXPLOSIONS above)
-BOMBCAP 16
+BOMBCAP 18
 ## LagHell (7,14,28)
 #BOMBCAP 28

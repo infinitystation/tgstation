@@ -171,3 +171,36 @@
 	can_adjust = 0
 	permeability_coefficient = 0.50
 	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 10, rad = 0)
+
+/obj/item/clothing/under/schoolgirlblack
+	name = "black schoolgirl uniform"
+	desc = "It's just like one of my Japanese animes!"
+	icon_state = "schoolgirlblack"
+	item_state = "bl_suit"
+	item_color = "schoolgirlblack"
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	can_adjust = 0
+	fitted = FEMALE_UNIFORM_TOP
+
+/obj/item/clothing/under/wfleetcommander
+	name = "white fleet commander uniform"
+	desc = "A good and fashion suit for the commander"
+	icon_state = "wfleetcommander"
+	item_state = "w_suit"
+	item_color = "wfleetcommander"
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	can_adjust = 0
+
+/obj/item/clothing/under/antiquated_skirt
+	name = "antiquated skirt"
+	desc = "A some old skirt"
+	icon_state = "antiquated_skirt"
+	item_state = "bl_suit"
+	item_color = "antiquated_skirt"
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	can_adjust = 0
+	fitted = FEMALE_UNIFORM_TOP
+	body_parts_covered = GROIN|LEGS|FEET
