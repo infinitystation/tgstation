@@ -7,5 +7,3 @@
 	icon = 'icons/obj/clothing/infinity_work.dmi'
 	worn_icon = 'icons/mob/infinity_work.dmi'
 	burn_state = -1
-	siemens_coefficient = 0
-	permeability_coefficient = 0.05
