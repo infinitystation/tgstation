@@ -63,7 +63,10 @@
 	icon_state = "dads"
 	icon = 'icons/mob/more_hairs.dmi'
 
-/datum/sprite_accessory/socks/blue_thigh_s
+/datum/sprite_accessory/socks/blue_thigh
 	name = "Thigh-high Blue"
 	icon_state = "blue_thigh"
 	icon = 'icons/mob/infinity_inriss.dmi'
+	gender = FEMALE
+
+
