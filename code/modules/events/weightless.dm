@@ -15,7 +15,7 @@
 	priority_announce("Внимание: нарушение в работе системы искусственной гравитации.")
 
 /datum/round_event/weightless/start()
-	for(var/obj/machinery/gravity_generator/main/station/S in world)
+	for(var/obj/machinery/gravity_generator/main/station/S in machines)
 		if(S.z==1)
 			explosion(S.loc, 0, 0, 2, 2)
 			S.set_broken()
