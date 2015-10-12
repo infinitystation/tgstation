@@ -14,3 +14,6 @@ Empty Area;7;linked
 
 #UNCOMMENT THE LINE BELOW IF AND ONLY IF YOU ARE USING AWAY MISSIONS! FAILURE TO DO SO WILL CAUSE RUNTIMES!
 #Away Mission;8;unlinked 
+Monorail;8;unlinked 
+
+Prison;9;unlinked
