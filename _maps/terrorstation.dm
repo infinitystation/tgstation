@@ -29,6 +29,8 @@ z7 = empty space
         #define MAP_FILE "MetaStation.v41GS.dmm"
         #define MAP_NAME "TerrorStation"
 
+        #define MAP_TRANSITION_CONFIG	list(MAIN_STATION = CROSSLINKED, CENTCOMM = SELFLOOPING, ABANDONED_SATELLITE = CROSSLINKED, DERELICT = CROSSLINKED, MINING = CROSSLINKED, EMPTY_AREA_1 = CROSSLINKED, EMPTY_AREA_2 = CROSSLINKED, ASTEROID = SELFLOOPING, BANPRISON = SELFLOOPING)
+
 #elif !defined(MAP_OVERRIDE)
 
 	#warn a map has already been included, ignoring Terror's MetaStation.

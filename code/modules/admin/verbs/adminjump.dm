@@ -149,8 +149,14 @@
 		message_admins("[key_name_admin(usr)] teleported [key_name_admin(M)] to [A]")
 
 /proc/admin_forcemove(mob/mover, atom/newloc)
+	if(mover.buckled)
+		mover.buckled.unbuckle_mob()
+	if(mover.buckled_mob)
+		mover.unbuckle_mob(force=1)
 	mover.loc = newloc
 	mover.on_forcemove(newloc)
 
 /mob/proc/on_forcemove(atom/newloc)
 	return
+
+
