@@ -70,13 +70,23 @@
 
 /proc/toggle_looc(toggle = null)
 	if(toggle != null)
-		if(toggle != ooc_allowed)
-			ooc_allowed = toggle
+		if(toggle != looc_allowed)
+			looc_allowed = toggle
 		else
 			return
 	else //otherwise just toggle it
 		looc_allowed = !looc_allowed
 	world << "<B>The LOOC channel has been globally [looc_allowed ? "enabled" : "disabled"].</B>"
+
+/proc/toggle_dchat(toggle = null)
+	if(toggle != null) //if we're specifically en/disabling ooc
+		if(toggle != dchat_allowed)
+			dchat_allowed = toggle
+		else
+			return
+	else //otherwise just toggle it
+		dchat_allowed = !ooc_allowed
+	world << "<B>The Dead Chat channel has been globally [dchat_allowed ? "enabled" : "disabled"].</B>"
 
 var/global/normal_ooc_colour = "#002eb8"
 
