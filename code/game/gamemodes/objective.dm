@@ -381,6 +381,12 @@
 	explanation_text = "–азрушить станцию с помощью ядерного устройства."
 	martyr_compatible = 1
 
+/datum/objective/nuclear/check_completion()
+	if(ticker && ticker.mode && ticker.mode.station_was_nuked)
+		return 1
+	return 0
+
+
 var/global/list/possible_items = list()
 /datum/objective/steal
 	var/datum/objective_item/targetinfo = null //Save the chosen item datum so we can access it later.
