@@ -528,6 +528,7 @@ var/list/admin_verbs_hideable = list(
 	var/message = input(usr, "What do you want the message to be?", "Make Sound") as text | null
 	if(!message)
 		return
+	message = sanitize_a0(message)
 	var/templanguages = O.languages
 	O.languages |= ALL
 	O.say(message)
