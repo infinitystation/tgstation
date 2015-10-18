@@ -25,6 +25,14 @@
 	usr.emote("me",1,message)
 
 /mob/proc/say_dead(var/message)
+	if(!message)
+		return
+
+	if (src.client)
+		if(src.client.prefs.muted & MUTE_DEADCHAT)
+			src << "<span class='danger'>You cannot talk in deadchat (muted).</span>"
+			return
+
 	var/name = src.real_name
 	var/alt_name = ""
 
@@ -45,9 +53,9 @@
 	for(var/mob/M in player_list)
 		if(istype(M, /mob/new_player))
 			continue
-		if(M.client && M.client.holder && (M.client.prefs.chat_toggles & CHAT_DEAD)) //admins can toggle deadchat on and off. This is a proc in admin.dm and is only give to Administrators and above
+		if(M.client && M.client.holder && (M.client.prefs.chat_toggles & CHAT_DEAD) && dchat_allowed) //admins can toggle deadchat on and off. This is a proc in admin.dm and is only give to Administrators and above
 			M << rendered	//Admins can hear deadchat, if they choose to, no matter if they're blind/deaf or not.
-		else if(M.stat == DEAD)
+		else if(M.stat == DEAD && dchat_allowed)
 			//M.show_message(rendered, 2) //Takes into account blindness and such. //preserved so you can look at it and cry at the stupidity of oldcoders. whoever coded this should be punched into the sun
 			M << rendered
 

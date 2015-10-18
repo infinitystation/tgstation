@@ -511,6 +511,15 @@ var/global/floorIsLava = 0
 	message_admins("[key_name_admin(usr)] toggled LOOC.")
 	feedback_add_details("admin_verb","TLOC") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
+/datum/admins/proc/toggledchat()
+	set category = "Server"
+	set desc="Toggle dis bitch"
+	set name="Toggle DCHAT"
+	toggle_dchat()
+	log_admin("[key_name(usr)] toggled DCHAT.")
+	message_admins("[key_name_admin(usr)] toggled DCHAT.")
+	feedback_add_details("admin_verb","TODC") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
+
 /datum/admins/proc/toggleoocdead()
 	set category = "Server"
 	set desc="Toggle dis bitch"
