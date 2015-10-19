@@ -8,7 +8,7 @@
 	worn_icon = 'icons/mob/infinity_work.dmi'
 
 /obj/item/clothing/suit/hooded/black_hoody
-	name = "black_hoody"
+	name = "black hoody"
 	desc = "Warm black hoody."
 	icon_state = "black_hoody"
 	item_state = "bl_suit"
@@ -17,3 +17,12 @@
 	worn_icon = 'icons/mob/infinity_work.dmi'
 	hooded = 1
 	action_button_name = "Toggle Hood"
+
+/obj/item/clothing/suit/brand/blue_jacket
+	name = "brand jacket"
+	desc = "Brand jacket, maked by outerspace designer."
+	icon_state = "brand_jacket"
+	item_state = "b_suit"
+	item_color = "brand_jacket"
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'
