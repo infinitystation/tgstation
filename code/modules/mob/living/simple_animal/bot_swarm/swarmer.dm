@@ -341,6 +341,7 @@
 
 /obj/effect/swarmer/disintegration
 	icon_state = "disintegrate"
+	anchored = 1
 
 /obj/effect/swarmer/disintegration/New()
 	playsound(src.loc, "sparks", 100, 1)
@@ -356,6 +357,7 @@
 
 /obj/effect/swarmer/integrate
 	icon_state = "integrate"
+	anchored = 1
 
 /obj/effect/swarmer/integrate/New()
 	spawn(5)
