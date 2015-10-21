@@ -26,3 +26,12 @@
 	item_color = "brand_jacket"
 	icon = 'icons/obj/clothing/infinity_work.dmi'
 	worn_icon = 'icons/mob/infinity_work.dmi'
+
+/obj/item/clothing/suit/brand/orange_jacket
+	name = "brand orange jacket"
+	desc = "Brand jacket, maked by outerspace designer."
+	icon_state = "brand_orange_jacket"
+	item_state = "o_suit"
+	item_color = "brand_orange_jacket"
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'
