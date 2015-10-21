@@ -35,6 +35,7 @@ var/list/admin_verbs_admin = list(
 	/client/proc/check_ai_laws,			/*shows AI and borg laws*/
 	/datum/admins/proc/toggleooc,		/*toggles ooc on/off for everyone*/
 	/datum/admins/proc/togglelooc,		/*toggles looc on/off for everyone*/
+	/datum/admins/proc/toggledchat, 		/*toggles dchat on/off for everyone*/
 	/datum/admins/proc/toggleoocdead,	/*toggles ooc on/off for everyone who is dead*/
 	/datum/admins/proc/toggleenter,		/*toggles whether people can join the current game*/
 	/datum/admins/proc/toggleguests,	/*toggles whether guests can join the current game*/
@@ -527,6 +528,7 @@ var/list/admin_verbs_hideable = list(
 	var/message = input(usr, "What do you want the message to be?", "Make Sound") as text | null
 	if(!message)
 		return
+	message = sanitize_a0(message)
 	var/templanguages = O.languages
 	O.languages |= ALL
 	O.say(message)

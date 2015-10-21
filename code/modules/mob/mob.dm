@@ -487,10 +487,6 @@ var/list/slot_equipment_priority = list( \
 		usr << "\blue <B>You must be dead to use this!</B>"
 		return
 
-	//ban prisoners can respawn right now!
-	if(client.banprisoned)
-		client.allow_respawn = 1
-
 	//and observer starters too!
 	if(isobserver(client.mob))
 		var/mob/dead/observer/O = client.mob

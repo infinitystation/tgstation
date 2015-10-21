@@ -69,4 +69,38 @@
 	icon = 'icons/mob/infinity_inriss.dmi'
 	gender = FEMALE
 
+/datum/sprite_accessory/underwear/bikiniredblack
+	name = "Red-Black Bikini"
+	icon_state = "bikini_red_black"
+	icon = 'icons/mob/infinity_work.dmi'
+	gender = FEMALE
 
+/datum/sprite_accessory/underwear/bikiniblueblack
+	name = "Blue-Black Bikini"
+	icon_state = "bikini_blue_black"
+	icon = 'icons/mob/infinity_work.dmi'
+	gender = FEMALE
+
+/datum/sprite_accessory/underwear/bikiniyellowblack
+	name = "Yellow-Black Bikini"
+	icon_state = "bikini_yellow_black"
+	icon = 'icons/mob/infinity_work.dmi'
+	gender = FEMALE
+
+/datum/sprite_accessory/underwear/bikinigreenblack
+	name = "Green-Black Bikini"
+	icon_state = "bikini_green_black"
+	icon = 'icons/mob/infinity_work.dmi'
+	gender = FEMALE
+
+/datum/sprite_accessory/underwear/bikiniredwhite
+	name = "Red-White Bikini"
+	icon_state = "bikini_red_white"
+	icon = 'icons/mob/infinity_work.dmi'
+	gender = FEMALE
+
+/datum/sprite_accessory/underwear/bikininain
+	name = "Nain Bikini"
+	icon_state = "bikini_nain"
+	icon = 'icons/mob/infinity_work.dmi'
+	gender = FEMALE
