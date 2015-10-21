@@ -1,4 +1,4 @@
-/obj/item/clothing/gloves/color/latex/blacklong //пнанрхярс хкх свемнлс, он опняэае хцпнйю.
+/obj/item/clothing/gloves/color/latex/blacklong
 	name = "black latex gloves"
 	desc = "Long black gloves. It have sticker with this word's (Dr.Steel)"
 	icon_state = "blacklongloves"
