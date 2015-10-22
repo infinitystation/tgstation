@@ -72,7 +72,7 @@
 
 /proc/power_failure()
 	priority_announce("ќбнаружена аномальная активность в энергосети станции [station_name()]. ¬ качестве превентивной меры энергопитание станции будет отключено на неопределЄнный период.", " ритическое падение энергии", 'sound/AI/poweroff.ogg')
-	for(var/obj/machinery/power/smes/S in world)
+	for(var/obj/machinery/power/smes/S in machines)
 		if(istype(get_area(S), /area/turret_protected) || S.z != ZLEVEL_STATION)
 			continue
 		S.charge = 0
@@ -103,7 +103,7 @@
 		A.power_environ = 0
 		A.power_change()
 
-	for(var/obj/machinery/power/apc/C in world)
+	for(var/obj/machinery/power/apc/C in apcs_list)
 		if(C.cell && C.z == ZLEVEL_STATION)
 			var/area/A = get_area(C)
 
@@ -119,10 +119,10 @@
 /proc/power_restore()
 
 	priority_announce("Ёнергопитание было восстановлено на станции [station_name()]. ѕриносим наши извинения за неудобства.", "Ёнергосеть в норме", 'sound/AI/poweron.ogg')
-	for(var/obj/machinery/power/apc/C in world)
+	for(var/obj/machinery/power/apc/C in machines)
 		if(C.cell && C.z == ZLEVEL_STATION)
 			C.cell.charge = C.cell.maxcharge
-	for(var/obj/machinery/power/smes/S in world)
+	for(var/obj/machinery/power/smes/S in machines)
 		if(S.z != ZLEVEL_STATION)
 			continue
 		S.charge = S.capacity
@@ -140,7 +140,7 @@
 /proc/power_restore_quick()
 
 	priority_announce("¬се —ћ≈—ы на станции [station_name()] были перезаряжены. ѕриносим наши извинения за неудобства.", "Ёнергосеть в норме", 'sound/AI/poweron.ogg')
-	for(var/obj/machinery/power/smes/S in world)
+	for(var/obj/machinery/power/smes/S in machines)
 		if(S.z != ZLEVEL_STATION)
 			continue
 		S.charge = S.capacity

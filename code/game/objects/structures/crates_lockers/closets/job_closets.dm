@@ -208,9 +208,6 @@
 	new /obj/item/clothing/shoes/sneakers/black(src)
 	new /obj/item/clothing/shoes/sneakers/black(src)
 	new /obj/item/clothing/shoes/sneakers/black(src)
-	new /obj/item/clothing/head/hardhat/atmos(src)
-	new /obj/item/clothing/head/hardhat/atmos(src)
-	new /obj/item/clothing/head/hardhat/atmos(src)
 	return
 
 /obj/structure/closet/wardrobe/engineering_yellow
@@ -285,6 +282,8 @@
 	new /obj/item/clothing/gloves/fingerless(src)
 	new /obj/item/clothing/head/soft/black(src)
 	new /obj/item/clothing/head/soft/black(src)
+	new /obj/item/clothing/gloves/color/latex/blacklong(src)
+	new /obj/item/clothing/gloves/color/latex/blacklong(src)
 	if(prob(40))
 		new /obj/item/clothing/mask/bandana/skull(src)
 	if(prob(40))

@@ -203,7 +203,7 @@ var/global/list/datum/cachedbook/cachedbooks // List of our cached book datums
 			dat += "<A href='?src=\ref[src];switchscreen=2'>2. View Checked Out Inventory</A><BR>"
 			dat += "<A href='?src=\ref[src];switchscreen=3'>3. Check out a Book</A><BR>"
 			dat += "<A href='?src=\ref[src];switchscreen=4'>4. Connect to External Archive</A><BR>"
-			if(read_only)
+			if(!read_only)
 				dat += "<A href='?src=\ref[src];switchscreen=5'>5. Upload New Title to Archive</A><BR>"
 			dat += "<A href='?src=\ref[src];switchscreen=6'>6. Print a Bible</A><BR>"
 			if(src.emagged)
