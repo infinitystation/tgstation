@@ -11,6 +11,6 @@
 		#define AWAY_MISSION "Away Mission"
 		#define MONORAIL "Monorail"
 		#define ASTEROID "Asteroid"
-		#deinfe BANPRISON "Ban Prison"
+		#define BANPRISON "Ban Prison"
 		#define COLONY "Colony"
 		#define AWAY_MISSION_LIST list(AWAY_MISSION = UNAFFECTED)
