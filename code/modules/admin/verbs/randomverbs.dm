@@ -102,7 +102,7 @@
 	if (!msg)
 		return
 	msg = sanitize_a0(msg)
-	for(var/mob/living/M in view(range,A))
+	for(var/mob/M in view(range,A))
 		M << msg
 
 	log_admin("LocalNarrate: [key_name(usr)] at ([get_area(A)]): [msg]")
