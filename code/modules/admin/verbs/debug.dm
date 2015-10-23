@@ -781,9 +781,8 @@ var/global/list/g_fancy_list_of_types = null
 		message_admins("[key_name_admin(usr)] запустил(а) обновление сервера.")
 		log_game("[key_name_admin(usr)] запустил(а) обновление сервера.")
 		ticker.force_ending = 1
-		world << "<b>СЕРВЕР ОБНОВЛЯЕТСЯ ЧЕРЕЗ 10 СЕКУНД! СЕРВЕР НЕ БУДЕТ РАБОТАТЬ НЕСКОЛЬКО МИНУТ!</b><br>Обновление инициировано администратором [usr.key]."
-		sleep(100)
-		shell("sh update.sh")
+		sleep(20)
+		force_update_server()
 
 /client/proc/update_server_round_end()
 	set category = "Server"
