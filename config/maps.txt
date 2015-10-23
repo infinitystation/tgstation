@@ -32,6 +32,15 @@ endmap
 
 map DiscStation
 	friendlyname Disc Station
-	default
+	#voteweight 0
+endmap
+
+map dreamstation
+	friendlyname Dream Station
+	#voteweight 0
+endmap
+
+map birdstation
+	friendlyname Bird Station
 	#voteweight 0
 endmap
