@@ -218,19 +218,17 @@ var/global/list/map_transition_config = MAP_TRANSITION_CONFIG
 	s += ")"
 
 	var/list/features = list()
-	var/event_info = ""
 
-	if(event_on_air)
-		event_info = "Event (<a href=\"[event_url]\">Info</a>)"
+	features += "Map - [MAP_NAME]"
 
 	if(ticker)
 		if(event_on_air)
-			features += "<b>[event_info]</b>"
+			features += "<b>EVENT</b>"
 		else if(master_mode)
 			features += "[master_mode]"
 	else
 		if(event_on_air)
-			features += "<b>STARTING [event_info]</b>"
+			features += "<b>STARTING EVENT</b>"
 		else
 			features += "<b>STARTING</b>"
 
