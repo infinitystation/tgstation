@@ -5,5 +5,5 @@
 		return
 
 	log_game("Changing map to [VM.name]([VM.friendlyname])")
-	shell("map_rotate.sh [VM.name].dm")
+	shell("sh map_rotate.sh [VM.name].dm")
 	return 0
