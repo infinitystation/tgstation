@@ -15,32 +15,17 @@ endmap
 
 map tgstation2
 	friendlyname Box Station
-	default
 	#voteweight 1.5
 endmap
 
 map metastation
 	friendlyname Meta Station
-	minplayers 25
+	#minplayers 25
 	#voteweight 0.5
 endmap
 
-#map ministation
-	friendlyname Mini Station
-	maxplayers 30
-	voteweight 0
-endmap
-
-map birdstation
-	friendlyname Bird Boat Station
-	maxplayers 35
-endmap
-
-map dreamstation
-	friendlyname Dream Station
-endmap
-
-map DiscStation
-	friendlyname Disc Station
-	voteweight 0
+map TerrorStation
+	friendlyname Terror's MetaStation
+	default
+	#voteweight 0
 endmap

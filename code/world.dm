@@ -191,7 +191,7 @@ var/global/list/map_transition_config = MAP_TRANSITION_CONFIG
 	join_motd = sanitize_a0(join_motd)
 
 /world/proc/load_configuration()
-	protected_config = new /datum/protected_configuration() 
+	protected_config = new /datum/protected_configuration()
 	config = new /datum/configuration()
 	config.load("config/config.txt")
 	config.load("config/game_options.txt","game_options")
@@ -354,7 +354,7 @@ var/failed_db_connections = 0
 		return
 	var/datum/votablemap/VM = config.maplist[pickedmap]
 	message_admins("Randomly rotating map to [VM.name]([VM.friendlyname])")
-	. = changemap(VM)
+	. = changemap_alt(VM)
 	if (. == 0)
 		world << "<span class='boldannounce'>Map rotation has chosen [VM.friendlyname] for next round!</span>"
 
