@@ -456,7 +456,7 @@ generate/load female uniform sprites matching all previously decided variables
 	var/file2use
 	if(!isinhands && alternate_worn_icon)
 		file2use = alternate_worn_icon
-	if(!file2use)
+	if(!isinhands && !file2use)
 		file2use = worn_icon
 	if(!file2use)
 		file2use = default_icon_file
