@@ -29,3 +29,9 @@ map TerrorStation
 	default
 	#voteweight 0
 endmap
+
+map DiscStation
+	friendlyname Disc Station
+	default
+	#voteweight 0
+endmap
