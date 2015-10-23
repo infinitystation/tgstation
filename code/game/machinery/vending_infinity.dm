@@ -9,4 +9,4 @@
 	/obj/item/clothing/under/sundress_white=3,/obj/item/clothing/under/dress_fire=3,/obj/item/clothing/under/dress_yellow=2,/obj/item/clothing/under/dress_saloon=1,
 	/obj/item/clothing/under/schoolgirlblack=1,/obj/item/clothing/suit/brand/blue_jacket=2,/obj/item/clothing/suit/hooded/black_hoody=2,
 	/obj/item/clothing/suit/toggle/jacket=2,/obj/item/clothing/suit/dress_orange=1,/obj/item/clothing/suit/bride_white=1,
-	/obj/item/clothing/suit/brand/orange_jacket=2)
+	/obj/item/clothing/suit/brand/orange_jacket=2,/obj/item/clothing/under/red_cheongasm=2,/obj/item/clothing/shoes/ballets/red_gold=2)

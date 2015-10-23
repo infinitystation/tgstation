@@ -211,3 +211,14 @@
 	can_adjust = 0
 	fitted = FEMALE_UNIFORM_TOP
 	body_parts_covered = GROIN|LEGS|FEET
+
+/obj/item/clothing/under/red_cheongasm
+	name = "red cheongasm"
+	desc = "It is a red velvet cheongsam dress."
+	icon_state = "red_cheongasm"
+	item_state = "r_suit"
+	item_color = "red_cheongasm"
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	can_adjust = 0
+	fitted = FEMALE_UNIFORM_TOP
