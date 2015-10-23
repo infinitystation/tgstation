@@ -58,5 +58,5 @@
 
 
 //#ifndef SERVERTOOLS
-#define SERVERTOOLS
+#define SERVERTOOLS 1
 //#endif
