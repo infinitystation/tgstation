@@ -44,3 +44,8 @@ map birdstation
 	friendlyname Bird Station
 	#voteweight 0
 endmap
+
+map asteroidstation
+	friendlyname Asteroid Station
+	#voteweight 0
+endmap

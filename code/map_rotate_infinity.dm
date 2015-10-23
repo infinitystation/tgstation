@@ -13,6 +13,7 @@
 		if (0)
 			log_game("Changed to map [VM.friendlyname]")
 			nextmap = VM
+
 		//1x: file errors
 		if (1)
 			message_admins("Compile failed")
