@@ -433,6 +433,8 @@ var/global/floorIsLava = 0
 	set desc="Restarts the world immediately"
 	if (!usr.client.holder)
 		return
+	if (ticker.not_restarting)
+		usr << "Сервер зан&#255;т, чтобы перезагрузитс&#255;"
 	var/confirm = alert("Restart the game world?", "Restart", "Yes", "Cancel")
 	if(confirm == "Cancel")
 		return
@@ -448,6 +450,8 @@ var/global/floorIsLava = 0
 
 	if (!usr.client.holder)
 		return
+	if(ticker.not_restarting)
+		usr << "Сервер зан&#255;т, чтобы перезагрузитс&#255;"
 	var/confirm = alert("End the round and  restart the game world?", "End Round", "Yes", "Cancel")
 	if(confirm == "Cancel")
 		return
@@ -510,6 +514,15 @@ var/global/floorIsLava = 0
 	log_admin("[key_name(usr)] toggled LOOC.")
 	message_admins("[key_name_admin(usr)] toggled LOOC.")
 	feedback_add_details("admin_verb","TLOC") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
+
+/datum/admins/proc/toggledchat()
+	set category = "Server"
+	set desc="Toggle dis bitch"
+	set name="Toggle DCHAT"
+	toggle_dchat()
+	log_admin("[key_name(usr)] toggled DCHAT.")
+	message_admins("[key_name_admin(usr)] toggled DCHAT.")
+	feedback_add_details("admin_verb","TODC") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /datum/admins/proc/toggleoocdead()
 	set category = "Server"

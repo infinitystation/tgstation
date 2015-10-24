@@ -5,6 +5,8 @@
 	view = "15x15"
 	cache_lifespan = 7
 
+var/global/list/map_transition_config = MAP_TRANSITION_CONFIG
+
 /world/New()
 	map_ready = 1
 
@@ -189,6 +191,7 @@
 	join_motd = sanitize_a0(join_motd)
 
 /world/proc/load_configuration()
+	protected_config = new /datum/protected_configuration()
 	config = new /datum/configuration()
 	config.load("config/config.txt")
 	config.load("config/game_options.txt","game_options")
@@ -215,19 +218,17 @@
 	s += ")"
 
 	var/list/features = list()
-	var/event_info = ""
 
-	if(event_on_air)
-		event_info = "Event (<a href=\"[event_url]\">Info</a>)"
+	features += "Map - [MAP_NAME]"
 
 	if(ticker)
 		if(event_on_air)
-			features += "<b>[event_info]</b>"
+			features += "<b>EVENT</b>"
 		else if(master_mode)
 			features += "[master_mode]"
 	else
 		if(event_on_air)
-			features += "<b>STARTING [event_info]</b>"
+			features += "<b>STARTING EVENT</b>"
 		else
 			features += "<b>STARTING</b>"
 
@@ -351,7 +352,7 @@ var/failed_db_connections = 0
 		return
 	var/datum/votablemap/VM = config.maplist[pickedmap]
 	message_admins("Randomly rotating map to [VM.name]([VM.friendlyname])")
-	. = changemap(VM)
+	. = changemap_alt(VM)
 	if (. == 0)
 		world << "<span class='boldannounce'>Map rotation has chosen [VM.friendlyname] for next round!</span>"
 
