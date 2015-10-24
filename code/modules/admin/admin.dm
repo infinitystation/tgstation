@@ -433,6 +433,8 @@ var/global/floorIsLava = 0
 	set desc="Restarts the world immediately"
 	if (!usr.client.holder)
 		return
+	if (ticker.not_restarting)
+		usr << "Сервер зан&#255;т, чтобы перезагрузитс&#255;"
 	var/confirm = alert("Restart the game world?", "Restart", "Yes", "Cancel")
 	if(confirm == "Cancel")
 		return
@@ -448,6 +450,8 @@ var/global/floorIsLava = 0
 
 	if (!usr.client.holder)
 		return
+	if(ticker.not_restarting)
+		usr << "Сервер зан&#255;т, чтобы перезагрузитс&#255;"
 	var/confirm = alert("End the round and  restart the game world?", "End Round", "Yes", "Cancel")
 	if(confirm == "Cancel")
 		return

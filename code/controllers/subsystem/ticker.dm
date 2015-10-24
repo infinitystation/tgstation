@@ -12,6 +12,7 @@ var/datum/subsystem/ticker/ticker
 	var/force_ending = 0					//Round was ended by admin intervention
 	var/update_waiting = 0					//we need update at round ending
 	var/updater_ckey = ""					//who updating server?
+	var/not_restarting = 0 					//when not restarting?
 
 	var/hide_mode = 0
 	var/datum/game_mode/mode = null

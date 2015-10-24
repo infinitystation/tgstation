@@ -82,7 +82,7 @@
 "abD" = (/turf/simulated/floor/holofloor{dir = 10; icon_state = "green"},/area/holodeck/source_basketball)
 "abE" = (/obj/structure/holohoop{dir = 1},/turf/simulated/floor/holofloor{dir = 2; icon_state = "green"},/area/holodeck/source_basketball)
 "abF" = (/turf/simulated/floor/holofloor{dir = 6; icon_state = "green"},/area/holodeck/source_basketball)
-"abG" = (/obj/effect/effect/water,/turf/simulated/floor/plating/beach/water,/area/holodeck/source_beach)
+"abG" = (/obj/effect/particle_effect/water,/turf/simulated/floor/plating/beach/water,/area/holodeck/source_beach)
 "abH" = (/obj/structure/table/holotable,/turf/simulated/floor/holofloor{dir = 10; icon_state = "green"},/area/holodeck/source_thunderdomecourt)
 "abI" = (/obj/structure/table/holotable,/obj/item/clothing/head/helmet/thunderdome,/obj/item/clothing/suit/armor/tdome/green,/obj/item/clothing/under/color/green,/obj/item/weapon/holo/esword/green,/turf/simulated/floor/holofloor{dir = 2; icon_state = "green"},/area/holodeck/source_thunderdomecourt)
 "abJ" = (/obj/structure/table/holotable,/obj/machinery/readybutton,/turf/simulated/floor/holofloor{dir = 6; icon_state = "green"},/area/holodeck/source_thunderdomecourt)
