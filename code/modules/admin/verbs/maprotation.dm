@@ -40,5 +40,5 @@
 	var/datum/votablemap/VM = maprotatechoices[chosenmap]
 	message_admins("[key_name_admin(usr)] is changing the map to [VM.name]([VM.friendlyname])")
 	log_admin("[key_name(usr)] is changing the map to [VM.name]([VM.friendlyname])")
-	if (changemap(VM) == 0)
+	if (changemap_alt(VM) == 0)
 		message_admins("[key_name_admin(usr)] has changed the map to [VM.name]([VM.friendlyname])")

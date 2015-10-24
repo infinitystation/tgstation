@@ -12,6 +12,7 @@ var/datum/subsystem/ticker/ticker
 	var/force_ending = 0					//Round was ended by admin intervention
 	var/update_waiting = 0					//we need update at round ending
 	var/updater_ckey = ""					//who updating server?
+	var/not_restarting = 0 					//when not restarting?
 
 	var/hide_mode = 0
 	var/datum/game_mode/mode = null
@@ -499,4 +500,5 @@ var/datum/subsystem/ticker/ticker
 	//map rotate chance defaults to 75% of the length of the round (in minutes)
 	if (!prob((world.time/600)*config.maprotatechancedelta))
 		return
-	maprotate()
+	spawn(-1) //compiling a map can lock up the mc for 30 to 60 seconds if we don't spawn
+		maprotate()

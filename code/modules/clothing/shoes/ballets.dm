@@ -25,3 +25,8 @@
     name = "yellow ballets"
     desc = "Light and comfortable yellow shoes!"
     icon_state = "yballets"
+
+/obj/item/clothing/shoes/ballets/red_gold
+	name = "red ballets"
+	desc = "Light and comfortable red shoes! Special series!"
+	icon_state = "rgballets"

@@ -30,6 +30,7 @@
 	worn_icon = 'icons/mob/paradise_clothes.dmi'
 	fitted = FEMALE_UNIFORM_TOP
 	can_adjust = 0
+	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 10, bio = 10, rad = 0)
 
 /obj/item/clothing/under/mai_yang
 	name = "white cheongsam"
@@ -106,6 +107,8 @@
 	icon = 'icons/obj/clothing/paradise.dmi'
 	worn_icon = 'icons/mob/paradise_clothes.dmi'
 	can_adjust = 0
+	armor = list(melee = 10, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0)
+	alt_covers_chest = 1
 
 /obj/item/clothing/under/sec_corporate
 	name = "corporate security uniform"
@@ -116,6 +119,8 @@
 	icon = 'icons/obj/clothing/paradise.dmi'
 	worn_icon = 'icons/mob/paradise_clothes.dmi'
 	can_adjust = 0
+	armor = list(melee = 10, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0)
+	alt_covers_chest = 1
 
 /obj/item/clothing/under/hos_corporate
 	name = "corporate head of security's uniform"
@@ -126,6 +131,8 @@
 	icon = 'icons/obj/clothing/paradise.dmi'
 	worn_icon = 'icons/mob/paradise_clothes.dmi'
 	can_adjust = 0
+	armor = list(melee = 10, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0)
+	alt_covers_chest = 1
 
 /obj/item/clothing/under/hos_formal_female
 	name = "head of security's formal uniform"
@@ -204,3 +211,14 @@
 	can_adjust = 0
 	fitted = FEMALE_UNIFORM_TOP
 	body_parts_covered = GROIN|LEGS|FEET
+
+/obj/item/clothing/under/red_cheongasm
+	name = "red cheongasm"
+	desc = "It is a red velvet cheongsam dress."
+	icon_state = "red_cheongasm"
+	item_state = "r_suit"
+	item_color = "red_cheongasm"
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	can_adjust = 0
+	fitted = FEMALE_UNIFORM_TOP
