@@ -9,4 +9,8 @@
 		#define EMPTY_AREA_1 "Empty Area 1"
 		#define EMPTY_AREA_2 "Empty Area 2"
 		#define AWAY_MISSION "Away Mission"
+		#define MONORAIL "Monorail"
+		#define ASTEROID "Asteroid"
+		#define BANPRISON "Ban Prison"
+		#define COLONY "Colony"
 		#define AWAY_MISSION_LIST list(AWAY_MISSION = UNAFFECTED)
