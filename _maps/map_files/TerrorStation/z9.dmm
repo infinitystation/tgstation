@@ -165,7 +165,7 @@
 "di" = (/obj/machinery/door/airlock{id_tag = "AuxShower"; name = "Woman shower"},/turf/simulated/floor/plasteel{icon_state = "freezerfloor"},/area/prison/cell_block/A)
 "dj" = (/obj/machinery/door/airlock{id_tag = "AuxShower"; name = "Woman shower"},/obj/machinery/atmospherics/pipe/simple/supply/hidden,/turf/simulated/floor/plasteel{icon_state = "freezerfloor"},/area/prison/cell_block/A)
 "dk" = (/obj/machinery/portable_atmospherics/scrubber/huge/stationary,/turf/simulated/floor/plating,/area/prison/cell_block/A)
-"dl" = (/obj/structure/sign/bluecross_2{pixel_y = 32},/turf/simulated/floor/plasteel/darkyellow/side{dir = 9},/area/prison/cell_block/A)
+"dl" = (/obj/structure/sign/bluecross_2{pixel_y = 32},/obj/item/device/radio/intercom/prison{dir = 1; icon = 'icons/obj/starcraft.dmi'; icon_state = "Megafon"; name = "Criuser intercome"},/turf/simulated/floor/plasteel/darkyellow/side{dir = 9},/area/prison/cell_block/A)
 "dm" = (/turf/simulated/floor/plasteel/darkyellow/side{dir = 1},/area/prison/cell_block/A)
 "dn" = (/obj/machinery/atmospherics/pipe/simple/supply/hidden,/turf/simulated/floor/plasteel/darkyellow/corner{dir = 1},/area/prison/cell_block/A)
 "do" = (/turf/simulated/floor/plasteel/darkyellow/corner{dir = 4},/area/prison/cell_block/A)
