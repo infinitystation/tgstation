@@ -99,6 +99,8 @@ var/global/list/special_roles = list( //keep synced with the defines BE_* in set
 	var/sec_imp_notes = ""
 	var/med_imp_notes = ""
 
+	var/list/ignoring = list()
+
 /datum/preferences/New(client/C)
 	blood_type = random_blood_type()
 	custom_names["ai"] = pick(ai_names)

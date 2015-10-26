@@ -199,7 +199,7 @@ But you can call procs that are of type /mob/living/carbon/human/proc/ for that 
 	set category = "Fun"
 	set name = "Make Robot"
 
-	if(!ticker)
+	if(!ticker || !ticker.mode)
 		alert("Wait until the game starts")
 		return
 	if(istype(M, /mob/living/carbon/human))
@@ -215,7 +215,7 @@ But you can call procs that are of type /mob/living/carbon/human/proc/ for that 
 	set category = "Fun"
 	set name = "Make Blob"
 
-	if(!ticker)
+	if(!ticker || !ticker.mode)
 		alert("Wait until the game starts")
 		return
 	if(istype(M, /mob/living/carbon/human))
@@ -232,7 +232,7 @@ But you can call procs that are of type /mob/living/carbon/human/proc/ for that 
 	set category = "Fun"
 	set name = "Make Simple Animal"
 
-	if(!ticker)
+	if(!ticker || !ticker.mode)
 		alert("Wait until the game starts")
 		return
 
@@ -280,7 +280,7 @@ But you can call procs that are of type /mob/living/carbon/human/proc/ for that 
 	set category = "Fun"
 	set name = "Make Alien"
 
-	if(!ticker)
+	if(!ticker || !ticker.mode)
 		alert("Wait until the game starts")
 		return
 	if(ishuman(M))
@@ -297,7 +297,7 @@ But you can call procs that are of type /mob/living/carbon/human/proc/ for that 
 	set category = "Fun"
 	set name = "Make slime"
 
-	if(!ticker)
+	if(!ticker || !ticker.mode)
 		alert("Wait until the game starts")
 		return
 	if(ishuman(M))
@@ -474,7 +474,7 @@ var/global/list/g_fancy_list_of_types = null
 	set category = "Admin"
 	set name = "Grant Full Access"
 
-	if (!ticker)
+	if(!ticker || !ticker.mode)
 		alert("Wait until the game starts")
 		return
 	if (istype(M, /mob/living/carbon/human))
@@ -769,39 +769,10 @@ var/global/list/g_fancy_list_of_types = null
 
 	usr << browse(dat, "window=dellog")
 
-/client/proc/update_server()
-	set category = "Server"
-	set name = "Update Server"
-	if (!usr.client.holder)
-		return
-	var/confirm = alert("End the round and update server?", "End Round", "Yes", "Cancel")
-	if(confirm == "Cancel")
-		return
-	if(confirm == "Yes")
-		message_admins("[key_name_admin(usr)] запустил(а) обновление сервера.")
-		log_game("[key_name_admin(usr)] запустил(а) обновление сервера.")
-		ticker.force_ending = 1
-		sleep(20)
-		force_update_server()
+/client/proc/debug_huds(i as num)
+	set category = "Debug"
+	set name = "Debug HUDs"
+	set desc = "Debug the data or antag HUDs"
 
-/client/proc/update_server_round_end()
-	set category = "Server"
-	set name = "Update Server at Round End"
-	if (!usr.client.holder)
-		return
-	var/confirm = alert("Инициировать обновление в конце раунда?", "End Round", "Yes", "Cancel")
-	if(confirm == "Cancel")
-		return
-	if(confirm == "Yes")
-		message_admins("[key_name_admin(usr)] инициировал(а) обновление сервера в конце текущего раунда.")
-		log_game("[key_name_admin(usr)] инициировал(а) обновление сервера в конце текущего раунда.")
-		world << "<span class='adminooc'>Администратор [usr.key] инициировал(а) обновление сервера в конце текущего раунда.</span>"
-		ticker.updater_ckey = usr.key
-		ticker.update_waiting = 1
-
-/proc/force_update_server()
-	if(ticker.current_state != GAME_STATE_FINISHED)
-		return 0
-	world << "<b>СЕРВЕР ОБНОВЛЯЕТСЯ ЧЕРЕЗ 10 СЕКУНД! СЕРВЕР НЕ БУДЕТ РАБОТАТЬ НЕСКОЛЬКО МИНУТ!</b><br>Обновление в конце раунда инициировано администратором [ticker.updater_ckey]."
-	sleep(100)
-	shell("sh update.sh")
+	if(!holder)	return
+	debug_variables(huds[i])
