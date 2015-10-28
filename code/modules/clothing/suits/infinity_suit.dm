@@ -17,6 +17,14 @@
 	worn_icon = 'icons/mob/infinity_work.dmi'
 	hooded = 1
 	action_button_name = "Toggle Hood"
+	hoodtype = /obj/item/clothing/head/blackhoody
+
+/obj/item/clothing/head/blackhoody
+	icon_state = "blackhoody"
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	flags = NODROP
+	body_parts_covered = HEAD
 
 /obj/item/clothing/suit/brand/blue_jacket
 	name = "brand jacket"
