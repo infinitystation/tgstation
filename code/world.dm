@@ -142,7 +142,7 @@ var/global/list/map_transition_config = MAP_TRANSITION_CONFIG
 	if(time)
 		delay = time
 	else
-		delay = ticker.restart_timeout
+		delay = config.round_end_countdown * 10
 	if(ticker.delay_end)
 		world << "<span class='boldannounce'>An admin has delayed the round end.</span>"
 		return
