@@ -795,9 +795,9 @@
 
 	switch(H.need_to_shit)
 		if(SHIT_LEVEL_DANGER to SHIT_LEVEL_MAX)
-			H.throw_alert("toilet", /obj/screen/alert/shit)
-		if(SHIT_LEVEL_WARNING to SHIT_LEVEL_DANGER)
 			H.throw_alert("toilet", /obj/screen/alert/shit_now)
+		if(SHIT_LEVEL_WARNING to SHIT_LEVEL_DANGER)
+			H.throw_alert("toilet", /obj/screen/alert/shit)
 		else
 			H.clear_alert("toilet")
 

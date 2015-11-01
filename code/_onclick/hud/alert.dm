@@ -132,14 +132,14 @@ The box in your backpack has an oxygen tank and gas mask in it."
 	name = "Toilet"
 	icon = 'icons/mob/alert_infinity.dmi'
 	icon_state = "shit"
-	desc = "Вам нужно в туалет. Рекомендуетс&#255; пр&#255;мо сейчас пойти в туалет. \
+	desc = "Вам нужно в туалет. Рекомендуетс&#1103; пр&#1103;мо сейчас пойти в туалет. \
 Чтобы справить нужду, встаньте над унитазом и нажмите кнопку \"Какать\" во вкладке \"Emotions\""
 
 /obj/screen/alert/shit_now
 	name = "Toilet!"
 	icon = 'icons/mob/alert_infinity.dmi'
 	icon_state = "shit_now"
-	desc = "ВАМ СРОЧНО НУЖНО В ТУАЛЕТ!!! Иначе последстви&#255; будут очень непри&#255;тные. \
+	desc = "ВАМ СРОЧНО НУЖНО В ТУАЛЕТ!!! Иначе последстви&#1103; будут очень непри&#1103;тные. \
 Чтобы справить нужду, встаньте над унитазом и нажмите кнопку \"Какать\" во вкладке \"Emotions\""
 
 /obj/screen/alert/fat
