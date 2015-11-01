@@ -67,7 +67,6 @@
 	var/mob/living/carbon/human/character = create_character()	//creates the human and transfers vars and mind
 
 	character.loc = pick(ban_prison)
-	character.lastarea = get_area(loc)
 	joined_player_list += character.ckey
 
 	setup_and_greet_prisoner(character)
