@@ -132,14 +132,14 @@ The box in your backpack has an oxygen tank and gas mask in it."
 	name = "Toilet"
 	icon = 'icons/mob/alert_infinity.dmi'
 	icon_state = "shit"
-	desc = "Вам нужно в туалет. Рекомендуетс&#255; пр&#255;мо сейчас пойти в туалет. \
+	desc = "Вам нужно в туалет. Рекомендуетс&#1103; пр&#1103;мо сейчас пойти в туалет. \
 Чтобы справить нужду, встаньте над унитазом и нажмите кнопку \"Какать\" во вкладке \"Emotions\""
 
 /obj/screen/alert/shit_now
 	name = "Toilet!"
 	icon = 'icons/mob/alert_infinity.dmi'
 	icon_state = "shit_now"
-	desc = "ВАМ СРОЧНО НУЖНО В ТУАЛЕТ!!! Иначе последстви&#255; будут очень непри&#255;тные. \
+	desc = "ВАМ СРОЧНО НУЖНО В ТУАЛЕТ!!! Иначе последстви&#1103; будут очень непри&#1103;тные. \
 Чтобы справить нужду, встаньте над унитазом и нажмите кнопку \"Какать\" во вкладке \"Emotions\""
 
 /obj/screen/alert/fat
@@ -198,6 +198,11 @@ or something covering your eyes."
 	desc = "Something got lodged into your flesh and is causing major bleeding. It might fall out with time, but surgery is the safest way. \
 If you're feeling frisky, click yourself in help intent to pull the object out."
 	icon_state = "embeddedobject"
+
+/obj/screen/alert/embeddedobject/Click()
+	if(isliving(usr))
+		var/mob/living/carbon/human/M = usr
+		return M.help_shake_act(M)
 
 /obj/screen/alert/asleep
 	name = "Asleep"
@@ -316,10 +321,23 @@ so as to remain in compliance with the most up-to-date laws."
 	name = "Buckled"
 	desc = "You've been buckled to something and can't move. Click the alert to unbuckle unless you're handcuffed."
 
-/obj/screen/alert/handcuffed // Not used right now.
+/obj/screen/alert/handcuffed
 	name = "Handcuffed"
 	desc = "You're handcuffed and can't act. If anyone drags you, you won't be able to move. Click the alert to free yourself."
 
+/obj/screen/alert/handcuffed/Click()
+	if(isliving(usr))
+		var/mob/living/L = usr
+		return L.resist()
+
+/obj/screen/alert/legcuffed
+	name = "Legcuffed"
+	desc = "You're legcuffed, which slows you down considerably. Click the alert to free yourself."
+
+/obj/screen/alert/legcuffed/Click()
+	if(isliving(usr))
+		var/mob/living/L = usr
+		return L.resist()
 // PRIVATE = only edit, use, or override these if you're editing the system as a whole
 
 // Re-render all alerts - also called in /datum/hud/show_hud() because it's needed there
