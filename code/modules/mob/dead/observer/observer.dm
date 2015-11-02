@@ -100,6 +100,10 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	set name = "Ghost"
 	set desc = "Relinquish your life and enter the land of the dead."
 
+	if(client)
+		if(client.banprisoned)
+			return
+
 	//rp fix
 	if(stat == DEAD)				// dead
 		ghostize(1)
@@ -155,6 +159,9 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	set category = "Ghost"
 	set name = "Re-enter Corpse"
 	if(!client)	return
+	if(client)
+		if(client.banprisoned)
+			return
 	if(!(mind && mind.current))
 		src << "<span class='warning'>You have no body.</span>"
 		return
@@ -186,6 +193,9 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	set category = "Ghost"
 	set name = "Teleport"
 	set desc= "Teleport to a location"
+	if(client)
+		if(client.banprisoned)
+			return
 	if(!istype(usr, /mob/dead/observer))
 		usr << "Not when you're not dead!"
 		return
@@ -211,6 +221,10 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	set name = "Orbit" // "Haunt"
 	set desc = "Follow and orbit a mob."
 
+	if(client)
+		if(client.banprisoned)
+			return
+
 	var/list/mobs = getmobs()
 	var/input = input("Please, select a mob!", "Haunt", null, null) as null|anything in mobs
 	var/mob/target = mobs[input]
@@ -218,6 +232,9 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 
 // This is the ghost's follow verb with an argument
 /mob/dead/observer/proc/ManualFollow(atom/movable/target)
+	if(client)
+		if(client.banprisoned)
+			return
 	if (!istype(target))
 		return
 
@@ -244,6 +261,10 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	set name = "Jump to Mob"
 	set desc = "Teleport to a mob"
 
+	if(client)
+		if(client.banprisoned)
+			return
+
 	if(istype(usr, /mob/dead/observer)) //Make sure they're an observer!
 
 
@@ -269,7 +290,9 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	set category = "Ghost"
 	set name = "Boo!"
 	set desc= "Scare your crew members because of boredom!"
-
+	if(client)
+		if(client.banprisoned)
+			return
 	if(bootime > world.time) return
 	var/obj/machinery/light/L = locate(/obj/machinery/light) in view(1, src)
 	if(L)
@@ -330,7 +353,9 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	set category = "Ghost"
 	set name = "Possess!"
 	set desc= "Take over the body of a mindless creature!"
-
+	if(client)
+		if(client.banprisoned)
+			return
 	var/list/possessible = list()
 	for(var/mob/living/L in living_mob_list)
 		if(!(L in player_list) && !L.mind)
