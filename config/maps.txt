@@ -14,18 +14,18 @@ Format:
 endmap
 
 map tgstation2
-	friendlyname Box Station
+	friendlyname Box (TG Station 2)
 	#voteweight 1.5
 endmap
 
 map metastation
-	friendlyname Meta Station
+	friendlyname TG Meta Station
 	#minplayers 25
 	#voteweight 0.5
 endmap
 
 map TerrorStation
-	friendlyname Terror's MetaStation
+	friendlyname Terror's Meta Station
 	default
 	#voteweight 0
 endmap
@@ -41,11 +41,16 @@ map dreamstation
 endmap
 
 map birdstation
-	friendlyname Bird Station
+	friendlyname Birdboat Station
 	#voteweight 0
 endmap
 
 map asteroidstation
 	friendlyname Asteroid Station
+	#voteweight 0
+endmap
+
+map ministation
+	friendlyname Mini Station
 	#voteweight 0
 endmap
