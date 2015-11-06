@@ -17,7 +17,7 @@ Names of z-level do not matter, but order does greatly, for instances such as ch
 
 
         #define MAP_FILE "DiscStation.dmm"
-        #define MAP_NAME "DiscStation"
+        #define MAP_NAME "Disc Station"
 
         #define MAP_TRANSITION_CONFIG	list(MAIN_STATION = CROSSLINKED, CENTCOMM = SELFLOOPING, ABANDONED_SATELLITE = CROSSLINKED, DERELICT = CROSSLINKED, MINING = CROSSLINKED, EMPTY_AREA_1 = CROSSLINKED, EMPTY_AREA_2 = CROSSLINKED, BANPRISON = SELFLOOPING)
 

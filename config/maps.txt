@@ -13,21 +13,19 @@ Format:
 	voteweight [number] (How much to count each player vote as, defaults to 1, setting to 0.5 counts each vote as half a vote, 2 as double, etc, Setting to 0 disables the map but allows players to still pick it)
 endmap
 
+map asteroidstation
+	friendlyname Asteroid Station
+	#voteweight 0
+endmap
+
+map birdstation
+	friendlyname Birdboat Station
+	#voteweight 0
+endmap
+
 map tgstation2
 	friendlyname Box (TG Station 2)
 	#voteweight 1.5
-endmap
-
-map metastation
-	friendlyname TG Meta Station
-	#minplayers 25
-	#voteweight 0.5
-endmap
-
-map TerrorStation
-	friendlyname Terror's Meta Station
-	default
-	#voteweight 0
 endmap
 
 map DiscStation
@@ -40,17 +38,20 @@ map dreamstation
 	#voteweight 0
 endmap
 
-map birdstation
-	friendlyname Birdboat Station
-	#voteweight 0
-endmap
-
-map asteroidstation
-	friendlyname Asteroid Station
-	#voteweight 0
-endmap
-
 map ministation
 	friendlyname Mini Station
 	#voteweight 0
 endmap
+
+map TerrorStation
+	friendlyname Terror's Meta Station
+	default
+	#voteweight 0
+endmap
+
+map metastation
+	friendlyname TG Meta Station
+	#minplayers 25
+	#voteweight 0.5
+endmap
+

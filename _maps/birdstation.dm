@@ -18,7 +18,7 @@ A small map intended for lowpop(40 players and less).
         #include "map_files\TerrorStation\z9.dmm" //prison
 
         #define MAP_FILE "BirdStation.dmm"
-        #define MAP_NAME "BirdboatStation"
+        #define MAP_NAME "Birdboat Station"
 
         #define MAP_TRANSITION_CONFIG	list(MAIN_STATION = CROSSLINKED, CENTCOMM = SELFLOOPING, ABANDONED_SATELLITE = CROSSLINKED, DERELICT = CROSSLINKED, MINING = CROSSLINKED, EMPTY_AREA_1 = CROSSLINKED, EMPTY_AREA_2 = CROSSLINKED, BANPRISON = SELFLOOPING)
 
