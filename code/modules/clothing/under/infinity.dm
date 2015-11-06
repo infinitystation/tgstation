@@ -262,3 +262,11 @@
 	worn_icon = 'icons/mob/infinity_work.dmi'
 	icon = 'icons/obj/clothing/infinity_work.dmi'
 	can_adjust = 0
+
+/obj/item/clothing/under/latex_pants
+	name = "latex pants"
+	desc = "Tight latex pants."
+	icon_state = "latex_pants"
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	can_adjust = 0

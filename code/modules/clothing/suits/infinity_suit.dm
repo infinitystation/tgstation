@@ -43,3 +43,29 @@
 	item_color = "brand_orange_jacket"
 	icon = 'icons/obj/clothing/infinity_work.dmi'
 	worn_icon = 'icons/mob/infinity_work.dmi'
+
+/obj/item/clothing/suit/toggle/fiery_jacket
+	name = "fiery jacket"
+	desc = "A cool jacket, with fire logo on the back."
+	icon_state = "fiery_jacket"
+	item_state = "bl_suit"
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	togglename = "zipper"
+
+/obj/item/clothing/suit/toggle/white_fiery_jacket
+	name = "white fiery jacket"
+	desc = "A cool white jacket, with blue fire logo on the back."
+	icon_state = "white_fiery_jacket"
+	item_state = "w_suit"
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	togglename = "zipper"
+
+/obj/item/clothing/suit/leon_jacket
+	name = "leon jacket"
+	desc = "Light, leather jacket."
+	icon_state = "leon_jacket"
+	item_state = "bl_suit"
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'
