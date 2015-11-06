@@ -50,6 +50,9 @@
 	hitsound = "swing_hit" //it starts deactivated
 	throw_speed = 3
 	throw_range = 5
+	sharpness = IS_SHARP
+	embed_chance = 75
+	embedded_impact_pain_multiplier = 10
 	flags = NOSHIELD
 	origin_tech = "magnets=3;syndicate=4"
 	var/hacked = 0
@@ -72,6 +75,7 @@
 		force = force_on
 		throwforce = throwforce_on
 		hitsound = 'sound/weapons/blade1.ogg'
+		throw_speed = 4
 		if(attack_verb_on.len)
 			attack_verb = attack_verb_on
 		if(!item_color)
@@ -85,6 +89,7 @@
 		force = initial(force)
 		throwforce = initial(throwforce)
 		hitsound = initial(hitsound)
+		throw_speed = initial(throw_speed)
 		if(attack_verb_on.len)
 			attack_verb = list()
 		icon_state = initial(icon_state)
@@ -112,7 +117,7 @@
 
 /obj/item/weapon/melee/energy/sword/cyborg/saw //Used by medical Syndicate cyborgs
 	name = "energy saw"
-	desc = "For heavy duty cutting. It has a carbon-fiber blade and an energy capacitor that can be toggled to make it more powerful."
+	desc = "For heavy duty cutting. It has a carbon-fiber blade in addition to a toggleable hard-light edge to dramatically increase sharpness."
 	icon_state = "esaw"
 	force_on = 30
 	force = 18 //About as much as a spear
@@ -121,13 +126,14 @@
 	icon = 'icons/obj/surgery.dmi'
 	icon_state = "esaw_0"
 	icon_state_on = "esaw_1"
-	hitcost = 75 //Costs more because it's not intended to be a murderbone weapon
+	hitcost = 75 //Costs more than a standard cyborg esword
 	item_color = null
 	w_class = 3
 	sharpness = IS_SHARP
 
 /obj/item/weapon/melee/energy/sword/cyborg/saw/New()
 	..()
+	icon_state = "esaw_0"
 	item_color = null
 
 /obj/item/weapon/melee/energy/sword/cyborg/saw/IsShield()
@@ -204,11 +210,11 @@
 	throw_range = 1
 	w_class = 4//So you can't hide it in your pocket or some such.
 	flags = NOSHIELD
-	var/datum/effect/effect/system/spark_spread/spark_system
+	var/datum/effect_system/spark_spread/spark_system
 
 //Most of the other special functions are handled in their own files. aka special snowflake code so kewl
 /obj/item/weapon/melee/energy/blade/New()
-	spark_system = new /datum/effect/effect/system/spark_spread()
+	spark_system = new /datum/effect_system/spark_spread()
 	spark_system.set_up(5, 0, src)
 	spark_system.attach(src)
 

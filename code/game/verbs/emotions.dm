@@ -9,7 +9,7 @@
 		src << "ћежду эмоциями должно пройти более 20 секунд"
 		return 0
 
-/mob/living/verb/vomit()
+/mob/living/verb/vomit_verb()
 	set name = "Ѕлевать"
 	set category = "Emotions"
 	if (emoteCooldownCheck() == 1)

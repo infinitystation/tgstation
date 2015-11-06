@@ -27,6 +27,7 @@ obj/effect/dummy/slaughter/relaymove(mob/user, direction)
 	return
 
 /obj/effect/dummy/slaughter/Destroy()
+	..()
 	return QDEL_HINT_PUTINPOOL
 
 
@@ -94,7 +95,7 @@ obj/effect/dummy/slaughter/relaymove(mob/user, direction)
 	name = "blood crawl"
 	desc = "You are unable to hold anything while in this form."
 	icon = 'icons/effects/blood.dmi'
-	flags = NODROP
+	flags = NODROP|ABSTRACT
 
 /mob/living/proc/phasein(obj/effect/decal/cleanable/B)
 	if(src.notransform)
@@ -112,7 +113,7 @@ obj/effect/dummy/slaughter/relaymove(mob/user, direction)
 	if(iscarbon(src))
 		var/mob/living/carbon/C = src
 		for(var/obj/item/weapon/bloodcrawl/BC in C)
-			C.flags = null
+			BC.flags = null
 			C.unEquip(BC)
 			qdel(BC)
 	var/oldcolor = src.color

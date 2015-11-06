@@ -55,3 +55,8 @@
 
 //we need bygex, i'll compile it ~bear1ake
 #define USE_BYGEX
+
+
+//#ifndef SERVERTOOLS
+#define SERVERTOOLS 1
+//#endif

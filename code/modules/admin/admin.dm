@@ -84,6 +84,11 @@ var/global/floorIsLava = 0
 		body += "<A href='?_src_=holder;mute=[M.ckey];mute_type=[MUTE_DEADCHAT]'><font color='[(muted & MUTE_DEADCHAT)?"red":"blue"]'>DEADCHAT</font></a>\]"
 		body += "(<A href='?_src_=holder;mute=[M.ckey];mute_type=[MUTE_ALL]'><font color='[(muted & MUTE_ALL)?"red":"blue"]'>toggle all</font></a>)"
 
+	if(jobban_isbanned(M, "OOC"))
+		body+= "<A href='?_src_=holder;jobban3=OOC;jobban4=\ref[M]'><font color=red>OOCBAN</font></A> | "
+	else
+		body+= "<A href='?_src_=holder;jobban3=OOC;jobban4=\ref[M]'>OOCBAN</A> | "
+
 	body += "<br><br>"
 	body += "<A href='?_src_=holder;jumpto=\ref[M]'><b>Jump to</b></A> | "
 	body += "<A href='?_src_=holder;getmob=\ref[M]'>Get</A> | "
@@ -139,8 +144,9 @@ var/global/floorIsLava = 0
 			body += "<A href='?_src_=holder;simplemake=observer;mob=\ref[M]'>Observer</A> | "
 			body += "\[ Alien: <A href='?_src_=holder;simplemake=drone;mob=\ref[M]'>Drone</A>, "
 			body += "<A href='?_src_=holder;simplemake=hunter;mob=\ref[M]'>Hunter</A>, "
-			body += "<A href='?_src_=holder;simplemake=queen;mob=\ref[M]'>Queen</A>, "
 			body += "<A href='?_src_=holder;simplemake=sentinel;mob=\ref[M]'>Sentinel</A>, "
+			body += "<A href='?_src_=holder;simplemake=praetorian;mob=\ref[M]'>Praetorian</A>, "
+			body += "<A href='?_src_=holder;simplemake=queen;mob=\ref[M]'>Queen</A>, "
 			body += "<A href='?_src_=holder;simplemake=larva;mob=\ref[M]'>Larva</A> \] "
 			body += "<A href='?_src_=holder;simplemake=human;mob=\ref[M]'>Human</A> "
 			body += "\[ slime: <A href='?_src_=holder;simplemake=slime;mob=\ref[M]'>Baby</A>, "
@@ -432,6 +438,8 @@ var/global/floorIsLava = 0
 	set desc="Restarts the world immediately"
 	if (!usr.client.holder)
 		return
+	if (ticker.not_restarting)
+		usr << "Сервер зан&#255;т, чтобы перезагрузитс&#255;"
 	var/confirm = alert("Restart the game world?", "Restart", "Yes", "Cancel")
 	if(confirm == "Cancel")
 		return
@@ -447,6 +455,8 @@ var/global/floorIsLava = 0
 
 	if (!usr.client.holder)
 		return
+	if(ticker.not_restarting)
+		usr << "Сервер зан&#255;т, чтобы перезагрузитс&#255;"
 	var/confirm = alert("End the round and  restart the game world?", "End Round", "Yes", "Cancel")
 	if(confirm == "Cancel")
 		return
@@ -510,6 +520,15 @@ var/global/floorIsLava = 0
 	message_admins("[key_name_admin(usr)] toggled LOOC.")
 	feedback_add_details("admin_verb","TLOC") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
+/datum/admins/proc/toggledchat()
+	set category = "Server"
+	set desc="Toggle dis bitch"
+	set name="Toggle DCHAT"
+	toggle_dchat()
+	log_admin("[key_name(usr)] toggled DCHAT.")
+	message_admins("[key_name_admin(usr)] toggled DCHAT.")
+	feedback_add_details("admin_verb","TODC") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
+
 /datum/admins/proc/toggleoocdead()
 	set category = "Server"
 	set desc="Toggle dis bitch"
@@ -544,7 +563,7 @@ var/global/floorIsLava = 0
 		usr << "<font color='red'>Error: Start Now: Game is in startup, please wait until it has finished.</font>"
 	else
 		usr << "<font color='red'>Error: Start Now: Game has already started.</font>"
-		
+
 	return 0
 
 /datum/admins/proc/toggleenter()

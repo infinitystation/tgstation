@@ -249,7 +249,7 @@
 		var/datum/sprite_accessory/undershirt/U2 = undershirt_list[H.undershirt]
 		if(U2)
 			if(H.dna.species.sexes && H.gender == FEMALE)
-				standing	+=	H.wear_female_version(U2.icon_state, U2.icon, BODY_LAYER)
+				standing	+=	wear_female_version("[U2.icon_state]_s", U2.icon, BODY_LAYER)
 			else
 				standing	+= image("icon"=U2.icon, "icon_state"="[U2.icon_state]_s", "layer"=-BODY_LAYER)
 
@@ -309,7 +309,7 @@
 			bodyparts_to_add -= "waggingspines"
 
 	if("snout" in mutant_bodyparts) //Take a closer look at that snout!
-		if(H.wear_mask && (H.wear_mask.flags_inv & HIDEFACE))
+		if((H.wear_mask && (H.wear_mask.flags_inv & HIDEFACE)) || (H.head && (H.head.flags_inv & HIDEFACE)))
 			bodyparts_to_add -= "snout"
 
 	if("frills" in mutant_bodyparts)
@@ -589,6 +589,10 @@
 /datum/species/proc/handle_speech(message, mob/living/carbon/human/H)
 	return message
 
+//return a list of spans or an empty list
+/datum/species/proc/get_spans()
+	return list()
+
 ////////
 	//LIFE//
 	////////
@@ -690,7 +694,10 @@
 				var/obj/item/clothing/glasses/G = H.glasses
 				H.sight |= G.vision_flags
 				H.see_in_dark = G.darkness_view
-				H.see_invisible = min(G.invis_view, H.see_invisible)
+				if(G.invis_override)
+					H.see_invisible = G.invis_override
+				else
+					H.see_invisible = min(G.invis_view, H.see_invisible)
 		if(H.druggy)	//Override for druggy
 			H.see_invisible = see_temp
 
@@ -707,7 +714,7 @@
 
 		if(H.blind)
 			if(H.eye_blind)
-				H.throw_alert("blind")
+				H.throw_alert("blind", /obj/screen/alert/blind)
 				H.blind.layer = 18
 			else
 				H.clear_alert("blind")
@@ -721,7 +728,7 @@
 		if(H.eye_blurry)			H.client.screen += global_hud.blurry
 		if(H.druggy)
 			H.client.screen += global_hud.druggy
-			H.throw_alert("high")
+			H.throw_alert("high", /obj/screen/alert/high)
 		else
 			H.clear_alert("high")
 
@@ -778,19 +785,19 @@
 
 	switch(H.nutrition)
 		if(NUTRITION_LEVEL_FULL to INFINITY)
-			H.throw_alert("nutrition","fat")
+			H.throw_alert("nutrition", /obj/screen/alert/fat)
 		if(NUTRITION_LEVEL_HUNGRY to NUTRITION_LEVEL_FULL)
 			H.clear_alert("nutrition")
 		if(NUTRITION_LEVEL_STARVING to NUTRITION_LEVEL_HUNGRY)
-			H.throw_alert("nutrition","hungry")
+			H.throw_alert("nutrition", /obj/screen/alert/hungry)
 		else
-			H.throw_alert("nutrition","starving")
+			H.throw_alert("nutrition", /obj/screen/alert/starving)
 
 	switch(H.need_to_shit)
 		if(SHIT_LEVEL_DANGER to SHIT_LEVEL_MAX)
-			H.throw_alert("toilet", "shit_now")
+			H.throw_alert("toilet", /obj/screen/alert/shit_now)
 		if(SHIT_LEVEL_WARNING to SHIT_LEVEL_DANGER)
-			H.throw_alert("toilet", "shit")
+			H.throw_alert("toilet", /obj/screen/alert/shit)
 		else
 			H.clear_alert("toilet")
 
@@ -834,7 +841,7 @@
 ////////////////
 
 /datum/species/proc/movement_delay(mob/living/carbon/human/H)
-	var/mspeed = 0
+	. = 0
 
 	if(!(H.status_flags & IGNORESLOWDOWN))
 
@@ -856,39 +863,37 @@
 				if(P.allow_thrust(0.01, H))
 					hasjetpack = 1
 
-			mspeed = -1 - hasjetpack
+			. = -1 - hasjetpack
 
 		if(grav || !hasjetpack)
 			var/health_deficiency = (100 - H.health + H.staminaloss)
 			if(health_deficiency >= 40)
-				mspeed += (health_deficiency / 25)
+				. += (health_deficiency / 25)
 
 			var/hungry = (500 - H.nutrition) / 5	//So overeat would be 100 and default level would be 80
 			if(hungry >= 70)
-				mspeed += hungry / 50
+				. += hungry / 50
 
 			if(H.wear_suit)
-				mspeed += H.wear_suit.slowdown
+				. += H.wear_suit.slowdown
 			if(H.shoes)
-				mspeed += H.shoes.slowdown
+				. += H.shoes.slowdown
 			if(H.back)
-				mspeed += H.back.slowdown
+				. += H.back.slowdown
 
 			if((H.disabilities & FAT))
-				mspeed += 1.5
+				. += 1.5
 			if(H.bodytemperature < BODYTEMP_COLD_DAMAGE_LIMIT)
-				mspeed += (BODYTEMP_COLD_DAMAGE_LIMIT - H.bodytemperature) / COLD_SLOWDOWN_FACTOR
+				. += (BODYTEMP_COLD_DAMAGE_LIMIT - H.bodytemperature) / COLD_SLOWDOWN_FACTOR
 
-			mspeed += speedmod
+			. += speedmod
 
 		if(grav)
 			if(H.status_flags & GOTTAGOFAST)
-				mspeed -= 1
+				. -= 1
 
 			if(H.status_flags & GOTTAGOREALLYFAST)
-				mspeed -= 2
-
-	return mspeed
+				. -= 2
 
 //////////////////
 // ATTACK PROCS //
@@ -1021,7 +1026,7 @@
 	// Allows you to put in item-specific reactions based on species
 	if(user != H)
 		user.do_attack_animation(H)
-	if(H.check_shields(I.force, "the [I.name]", I))
+	if(H.check_shields(I.force, "the [I.name]", I, 0, I.armour_penetration))
 		return 0
 
 	if(I.attack_verb && I.attack_verb.len)
@@ -1175,7 +1180,7 @@
 			H.adjustOxyLoss(HUMAN_CRIT_MAX_OXYLOSS)
 			H.failed_last_breath = 1
 
-		H.throw_alert("oxy")
+		H.throw_alert("oxy", /obj/screen/alert/oxy)
 
 		return 0
 
@@ -1190,22 +1195,24 @@
 	//-- OXY --//
 
 	//Too much oxygen! //Yes, some species may not like it.
-	if(safe_oxygen_max && O2_pp > safe_oxygen_max && !(NOBREATH in specflags))
-		var/ratio = (breath.oxygen/safe_oxygen_max) * 10
-		H.adjustOxyLoss(Clamp(ratio,oxy_breath_dam_min,oxy_breath_dam_max))
-		H.throw_alert("too_much_oxy")
-	else
-		H.clear_alert("too_much_oxy")
+	if(safe_oxygen_max)
+		if(O2_pp > safe_oxygen_max && !(NOBREATH in specflags))
+			var/ratio = (breath.oxygen/safe_oxygen_max) * 10
+			H.adjustOxyLoss(Clamp(ratio,oxy_breath_dam_min,oxy_breath_dam_max))
+			H.throw_alert("too_much_oxy", /obj/screen/alert/too_much_oxy)
+		else
+			H.clear_alert("too_much_oxy")
 
 	//Too little oxygen!
-	if(safe_oxygen_min && O2_pp < safe_oxygen_min)
-		gas_breathed = handle_too_little_breath(H,O2_pp,safe_oxygen_min,breath.oxygen)
-		H.throw_alert("oxy")
-	else
-		H.failed_last_breath = 0
-		H.adjustOxyLoss(-5)
-		gas_breathed = breath.oxygen/6
-		H.clear_alert("oxy")
+	if(safe_oxygen_min)
+		if(O2_pp < safe_oxygen_min)
+			gas_breathed = handle_too_little_breath(H,O2_pp,safe_oxygen_min,breath.oxygen)
+			H.throw_alert("oxy", /obj/screen/alert/oxy)
+		else
+			H.failed_last_breath = 0
+			H.adjustOxyLoss(-5)
+			gas_breathed = breath.oxygen/6
+			H.clear_alert("oxy")
 
 	//Exhale
 	breath.oxygen -= gas_breathed
@@ -1216,31 +1223,33 @@
 	//-- CO2 --//
 
 	//CO2 does not affect failed_last_breath. So if there was enough oxygen in the air but too much co2, this will hurt you, but only once per 4 ticks, instead of once per tick.
-	if(safe_co2_max && CO2_pp > safe_co2_max && !(NOBREATH in specflags))
-		if(!H.co2overloadtime) // If it's the first breath with too much CO2 in it, lets start a counter, then have them pass out after 12s or so.
-			H.co2overloadtime = world.time
-		else if(world.time - H.co2overloadtime > 120)
-			H.Paralyse(3)
-			H.adjustOxyLoss(3) // Lets hurt em a little, let them know we mean business
-			if(world.time - H.co2overloadtime > 300) // They've been in here 30s now, lets start to kill them for their own good!
-				H.adjustOxyLoss(8)
-			H.throw_alert("too_much_co2")
-		if(prob(20)) // Lets give them some chance to know somethings not right though I guess.
-			spawn(0) H.emote("cough")
+	if(safe_co2_max)
+		if(CO2_pp > safe_co2_max && !(NOBREATH in specflags))
+			if(!H.co2overloadtime) // If it's the first breath with too much CO2 in it, lets start a counter, then have them pass out after 12s or so.
+				H.co2overloadtime = world.time
+			else if(world.time - H.co2overloadtime > 120)
+				H.Paralyse(3)
+				H.adjustOxyLoss(3) // Lets hurt em a little, let them know we mean business
+				if(world.time - H.co2overloadtime > 300) // They've been in here 30s now, lets start to kill them for their own good!
+					H.adjustOxyLoss(8)
+				H.throw_alert("too_much_co2", /obj/screen/alert/too_much_co2)
+			if(prob(20)) // Lets give them some chance to know somethings not right though I guess.
+				spawn(0) H.emote("cough")
 
-	else
-		H.co2overloadtime = 0
-		H.clear_alert("too_much_co2")
+		else
+			H.co2overloadtime = 0
+			H.clear_alert("too_much_co2")
 
 	//Too little CO2!
-	if(safe_co2_min && CO2_pp < safe_co2_min)
-		gas_breathed = handle_too_little_breath(H,CO2_pp, safe_co2_min,breath.carbon_dioxide)
-		H.throw_alert("not_enough_co2")
-	else
-		H.failed_last_breath = 0
-		H.adjustOxyLoss(-5)
-		gas_breathed = breath.carbon_dioxide/6
-		H.clear_alert("not_enough_co2")
+	if(safe_co2_min)
+		if(CO2_pp < safe_co2_min)
+			gas_breathed = handle_too_little_breath(H,CO2_pp, safe_co2_min,breath.carbon_dioxide)
+			H.throw_alert("not_enough_co2", /obj/screen/alert/not_enough_co2)
+		else
+			H.failed_last_breath = 0
+			H.adjustOxyLoss(-5)
+			gas_breathed = breath.carbon_dioxide/6
+			H.clear_alert("not_enough_co2")
 
 	//Exhale
 	breath.carbon_dioxide -= gas_breathed
@@ -1251,24 +1260,26 @@
 	//-- TOX --//
 
 	//Too much toxins!
-	if(safe_toxins_max && Toxins_pp > safe_toxins_max && !(NOBREATH in specflags))
-		var/ratio = (breath.toxins/safe_toxins_max) * 10
-		if(H.reagents)
-			H.reagents.add_reagent("plasma", Clamp(ratio, tox_breath_dam_min, tox_breath_dam_max))
-		H.throw_alert("tox_in_air")
-	else
-		H.clear_alert("tox_in_air")
+	if(safe_toxins_max)
+		if(Toxins_pp > safe_toxins_max && !(NOBREATH in specflags))
+			var/ratio = (breath.toxins/safe_toxins_max) * 10
+			if(H.reagents)
+				H.reagents.add_reagent("plasma", Clamp(ratio, tox_breath_dam_min, tox_breath_dam_max))
+			H.throw_alert("tox_in_air", /obj/screen/alert/tox_in_air)
+		else
+			H.clear_alert("tox_in_air")
 
 
 	//Too little toxins!
-	if(safe_toxins_min && Toxins_pp < safe_toxins_min && !(NOBREATH in specflags))
-		gas_breathed = handle_too_little_breath(H,Toxins_pp, safe_toxins_min, breath.toxins)
-		H.throw_alert("not_enough_tox")
-	else
-		H.failed_last_breath = 0
-		H.adjustOxyLoss(-5)
-		gas_breathed = breath.toxins/6
-		H.clear_alert("not_enough_tox")
+	if(safe_toxins_min)
+		if(Toxins_pp < safe_toxins_min && !(NOBREATH in specflags))
+			gas_breathed = handle_too_little_breath(H,Toxins_pp, safe_toxins_min, breath.toxins)
+			H.throw_alert("not_enough_tox", /obj/screen/alert/not_enough_tox)
+		else
+			H.failed_last_breath = 0
+			H.adjustOxyLoss(-5)
+			gas_breathed = breath.toxins/6
+			H.clear_alert("not_enough_tox")
 
 	//Exhale
 	breath.toxins -= gas_breathed
@@ -1363,13 +1374,13 @@
 		//Body temperature is too hot.
 		switch(H.bodytemperature)
 			if(360 to 400)
-				H.throw_alert("temp","hot",1)
+				H.throw_alert("temp", /obj/screen/alert/hot, 1)
 				H.apply_damage(HEAT_DAMAGE_LEVEL_1*heatmod, BURN)
 			if(400 to 460)
-				H.throw_alert("temp","hot",2)
+				H.throw_alert("temp", /obj/screen/alert/hot, 2)
 				H.apply_damage(HEAT_DAMAGE_LEVEL_2*heatmod, BURN)
 			if(460 to INFINITY)
-				H.throw_alert("temp","hot",3)
+				H.throw_alert("temp", /obj/screen/alert/hot, 3)
 				if(H.on_fire)
 					H.apply_damage(HEAT_DAMAGE_LEVEL_3*heatmod, BURN)
 				else
@@ -1379,13 +1390,13 @@
 		if(!istype(H.loc, /obj/machinery/atmospherics/components/unary/cryo_cell))
 			switch(H.bodytemperature)
 				if(200 to 260)
-					H.throw_alert("temp","cold",1)
+					H.throw_alert("temp", /obj/screen/alert/cold, 1)
 					H.apply_damage(COLD_DAMAGE_LEVEL_1*coldmod, BURN)
 				if(120 to 200)
-					H.throw_alert("temp","cold",2)
+					H.throw_alert("temp", /obj/screen/alert/cold, 2)
 					H.apply_damage(COLD_DAMAGE_LEVEL_2*coldmod, BURN)
 				if(-INFINITY to 120)
-					H.throw_alert("temp","cold",3)
+					H.throw_alert("temp", /obj/screen/alert/cold, 3)
 					H.apply_damage(COLD_DAMAGE_LEVEL_3*coldmod, BURN)
 		else
 			H.clear_alert("temp")
@@ -1402,21 +1413,21 @@
 		if(HAZARD_HIGH_PRESSURE to INFINITY)
 			if(!(HEATRES in specflags))
 				H.adjustBruteLoss( min( ( (adjusted_pressure / HAZARD_HIGH_PRESSURE) -1 )*PRESSURE_DAMAGE_COEFFICIENT , MAX_HIGH_PRESSURE_DAMAGE) )
-				H.throw_alert("pressure","highpressure",2)
+				H.throw_alert("pressure", /obj/screen/alert/highpressure, 2)
 			else
 				H.clear_alert("pressure")
 		if(WARNING_HIGH_PRESSURE to HAZARD_HIGH_PRESSURE)
-			H.throw_alert("pressure","highpressure",1)
+			H.throw_alert("pressure", /obj/screen/alert/highpressure, 1)
 		if(WARNING_LOW_PRESSURE to WARNING_HIGH_PRESSURE)
 			H.clear_alert("pressure")
 		if(HAZARD_LOW_PRESSURE to WARNING_LOW_PRESSURE)
-			H.throw_alert("pressure","lowpressure",1)
+			H.throw_alert("pressure", /obj/screen/alert/lowpressure, 1)
 		else
 			if(H.dna.check_mutation(COLDRES) || (COLDRES in specflags))
 				H.clear_alert("pressure")
 			else
 				H.adjustBruteLoss( LOW_PRESSURE_DAMAGE )
-				H.throw_alert("pressure","lowpressure",2)
+				H.throw_alert("pressure", /obj/screen/alert/lowpressure, 2)
 
 //////////
 // FIRE //

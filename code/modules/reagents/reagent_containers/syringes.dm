@@ -8,7 +8,7 @@
 	item_state = "syringe_0"
 	icon_state = "0"
 	amount_per_transfer_from_this = 5
-	possible_transfer_amounts = null	//list(5, 10, 15)
+	possible_transfer_amounts = list()
 	volume = 15
 	var/mode = SYRINGE_DRAW
 	var/busy = 0		// needed for delayed drawing of blood
@@ -122,8 +122,6 @@
 		if(SYRINGE_INJECT)
 			if(!reagents.total_volume)
 				user << "<span class='notice'>[src] is empty.</span>"
-				return
-			if(istype(target, /obj/item/weapon/implantcase/chem))
 				return
 
 			if(!target.is_open_container() && !ismob(target) && !istype(target, /obj/item/weapon/reagent_containers/food) && !istype(target, /obj/item/slime_extract) && !istype(target, /obj/item/clothing/mask/cigarette) && !istype(target, /obj/item/weapon/storage/fancy/cigarettes))

@@ -119,7 +119,7 @@
 					var/mob/living/carbon/human/H = mob
 					H.hallucination += max(50, min(300, DETONATION_HALLUCINATION * sqrt(1 / (get_dist(mob, src) + 1)) ) )
 				var/rads = DETONATION_RADS * sqrt( 1 / (get_dist(mob, src) + 1) )
-				mob.irradiate(rads)
+				mob.rad_act(rads)
 
 			explode()
 
@@ -181,7 +181,7 @@
 
 	for(var/mob/living/l in range(src, round((power / 100) ** 0.25)))
 		var/rads = (power / 10) * sqrt( 1 / max(get_dist(l, src),1) )
-		l.irradiate(rads)
+		l.rad_act(rads)
 
 	power -= (power/500)**3
 
@@ -251,6 +251,13 @@
 /obj/machinery/power/supermatter_shard/attackby(obj/item/W, mob/living/user, params)
 	if(!istype(W) || (W.flags & ABSTRACT) || !istype(user))
 		return
+	if(istype(W, /obj/item/weapon/wrench))
+		playsound(src, 'sound/items/Ratchet.ogg', 50, 1)
+		user << "<span class='notice'>You start to [anchored ? "un" : ""]secure [src]...</span>"
+		if(do_after(user, 50, target = src))
+			anchored = !anchored
+			user << "<span class='notice'>You [anchored ? "un" : ""]secured [src]...</span>"
+			return
 	if(user.drop_item(W))
 		Consume(W)
 		user.visible_message("<span class='danger'>As [user] touches \the [src] with \a [W], silence fills the room...</span>",\
@@ -259,7 +266,7 @@
 
 		playsound(get_turf(src), 'sound/effects/supermatter.ogg', 50, 1)
 
-		user.irradiate(150)
+		radiation_pulse(get_turf(src), 1, 1, 150, 1)
 
 
 /obj/machinery/power/supermatter_shard/Bumped(atom/AM as mob|obj)
@@ -292,9 +299,8 @@
 	power += 200
 
 	//Some poor sod got eaten, go ahead and irradiate people nearby.
+	radiation_pulse(get_turf(src), 4, 10, 500, 1)
 	for(var/mob/living/L in range(10))
-		var/rads = 500 * sqrt( 1 / (get_dist(L, src) + 1) )
-		L.irradiate(rads)
 		investigate_log("has irradiated [L] after consuming [AM].", "supermatter")
 		if(L in view())
 			L.show_message("<span class='danger'>As \the [src] slowly stops resonating, you find your skin covered in new radiation burns.</span>", 1,\

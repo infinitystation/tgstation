@@ -1,3 +1,4 @@
+
 /client
 		////////////////
 		//ADMIN THINGS//
@@ -46,4 +47,9 @@
 
 	// Used by html_interface module.
 	var/hi_last_pos
+
+
+	//datum that controls the displaying and hiding of tooltips
+	var/datum/tooltip/tooltips
+
 

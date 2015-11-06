@@ -8,27 +8,22 @@
 # NOTE: syntax was changed to allow hyphenation of ranknames, since spaces are stripped.      #
 ###############################################################################################
 violentfire = Host
-xsarethx = Game Master
 median4 = Game Master
-archibald125 = Game Master
-nikovar = Game Master
 bear1ake = Game Master
 terror4000rus = Game Master
-maks750rus = Game Master
 samorey = Game Master
 hellpony = Game Master
 semendrozd = Game Master
 fireflashie = Game Master
-johnthebastard = Game Master
-farwa87 = Game Master
 xxxrockxxx = Game Master
-vertonx = Game Master
-snash08 = Game Master
 sladkoeshka = Game Master
-ambrobene = Game Master
 proxor99 = Game Master
 temblrex = Game Master
 thehero13 = Game Master
 firsttea = Game Master
-pinochetche = Game Master
 surman = Game Master
+iuferev2012 = Game Master
+alexmorgan = Game Master
+inriss = Game Master
+brostyle = Game Master
+wolforbykot = Game Master
