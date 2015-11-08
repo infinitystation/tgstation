@@ -25,6 +25,7 @@
 	name = "tail_tajaran"
 	icon = 'icons/mob/infinity_mutant_bodyparts.dmi'
 	color_src = 0
+	hasinner = 1
 
 /datum/sprite_accessory/tajaran/ears/default
 	name = "Default"
