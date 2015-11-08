@@ -81,6 +81,9 @@
 	var/tox_breath_dam_min = MIN_PLASMA_DAMAGE
 	var/tox_breath_dam_max = MAX_PLASMA_DAMAGE
 
+	//icon for some reasons
+	var/alt_icon = null
+
 	///////////
 	// PROCS //
 	///////////
@@ -141,7 +144,10 @@
 			else
 				icon_state_string += "_s"
 
-		spec_base = image("icon" = 'icons/mob/human.dmi', "icon_state" = icon_state_string, "layer" = -SPECIES_LAYER)
+		if(alt_icon)
+			spec_base = image("icon" = alt_icon, "icon_state" = icon_state_string, "layer" = -SPECIES_LAYER)
+		else
+			spec_base = image("icon" = 'icons/mob/human.dmi', "icon_state" = icon_state_string, "layer" = -SPECIES_LAYER)
 
 		if(!forced_colour && !use_skintones)
 			spec_base.color = "#[H.dna.features["mcolor"]]"
@@ -214,6 +220,14 @@
 
 			standing	+= img_hair_s
 
+	else if(H.dna.features["tajaran_hair"] && THAIR in specflags)
+		S = hair_styles_tajaran[H.dna.features["tajaran_hair"]]
+		if(S)
+			var/image/img_hair_s
+			img_hair_s = image("icon" = S.icon, "icon_state" = "[S.icon_state]_s", "layer" = -HAIR_LAYER)
+			img_hair_s.color = "#" + H.hair_color
+			standing	+= img_hair_s
+
 	if(standing.len)
 		H.overlays_standing[HAIR_LAYER]	= standing
 
@@ -281,6 +295,10 @@
 		if(H.wear_suit && (H.wear_suit.flags_inv & HIDEJUMPSUIT))
 			bodyparts_to_add -= "tail_lizard"
 
+	if("tail_tajaran" in mutant_bodyparts)
+		if(H.wear_suit && (H.wear_suit.flags_inv & HIDEJUMPSUIT))
+			bodyparts_to_add -= "tail_tajaran"
+
 	if("waggingtail_lizard" in mutant_bodyparts)
 		if(H.wear_suit && (H.wear_suit.flags_inv & HIDEJUMPSUIT))
 			bodyparts_to_add -= "waggingtail_lizard"
@@ -290,7 +308,6 @@
 	if("tail_human" in mutant_bodyparts)
 		if(H.wear_suit && (H.wear_suit.flags_inv & HIDEJUMPSUIT))
 			bodyparts_to_add -= "tail_human"
-
 
 	if("waggingtail_human" in mutant_bodyparts)
 		if(H.wear_suit && (H.wear_suit.flags_inv & HIDEJUMPSUIT))
@@ -324,6 +341,10 @@
 		if(!H.dna.features["ears"] || H.dna.features["ears"] == "None" || H.head && (H.head.flags & BLOCKHAIR) || (H.wear_mask && (H.wear_mask.flags & BLOCKHAIR)))
 			bodyparts_to_add -= "ears"
 
+	if("ears_tajaran" in mutant_bodyparts)
+		if((H.head && (H.head.flags & BLOCKHAIR)) || (H.wear_mask && (H.wear_mask.flags & BLOCKHAIR)))
+			bodyparts_to_add -= "ears_tajaran"
+
 	if(!bodyparts_to_add)
 		return
 
@@ -343,6 +364,8 @@
 					S = tails_list_human[H.dna.features["tail_human"]]
 				if("waggingtail_human")
 					S.= animated_tails_list_human[H.dna.features["tail_human"]]
+				if("tail_tajaran")
+					S = tails_list_tajaran[H.dna.features["tail_tajaran"]]
 				if("spines")
 					S = spines_list[H.dna.features["spines"]]
 				if("waggingspines")
@@ -355,6 +378,8 @@
 					S = horns_list[H.dna.features["horns"]]
 				if("ears")
 					S = ears_list[H.dna.features["ears"]]
+				if("ears_tajaran")
+					S = ears_list_tajaran[H.dna.features["ears_tajaran"]]
 				if("body_markings")
 					S = body_markings_list[H.dna.features["body_markings"]]
 
@@ -362,8 +387,10 @@
 				continue
 
 			//A little rename so we don't have to use tail_lizard or tail_human when naming the sprites.
-			if(bodypart == "tail_lizard" || bodypart == "tail_human")
+			if(bodypart == "tail_lizard" || bodypart == "tail_human" || bodypart == "tail_tajaran")
 				bodypart = "tail"
+			if(bodypart == "ears_tajaran")
+				bodypart = "ears"
 			else if(bodypart == "waggingtail_lizard" || bodypart == "waggingtail_human")
 				bodypart = "waggingtail"
 
@@ -375,7 +402,10 @@
 			else
 				icon_string = "[id]_m_[bodypart]_[S.icon_state]_[layer]"
 
-			I = image("icon" = 'icons/mob/mutant_bodyparts.dmi', "icon_state" = icon_string, "layer" =- layer)
+			if(S.icon)
+				I = image("icon" = S.icon, "icon_state" = icon_string, "layer" =- layer)
+			else
+				I = image("icon" = 'icons/mob/mutant_bodyparts.dmi', "icon_state" = icon_string, "layer" =- layer)
 
 			if(!(H.disabilities & HUSK))
 				if(!forced_colour)
@@ -401,7 +431,10 @@
 				else
 					icon_string = "[id]_m_[bodypart]inner_[S.icon_state]_[layer]"
 
-				I = image("icon" = 'icons/mob/mutant_bodyparts.dmi', "icon_state" = icon_string, "layer" =- layer)
+				if(S.icon)
+					I = image("icon" = S.icon, "icon_state" = icon_string, "layer" =- layer)
+				else
+					I = image("icon" = 'icons/mob/mutant_bodyparts.dmi', "icon_state" = icon_string, "layer" =- layer)
 
 				standing += I
 

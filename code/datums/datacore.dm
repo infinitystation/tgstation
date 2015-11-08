@@ -270,6 +270,9 @@ var/record_id_num = 1001
 	var/g = (H.gender == FEMALE) ? "f" : "m"
 	if(!config.mutant_races || H.dna.species.use_skintones)
 		photo = icon("icon" = 'icons/mob/human.dmi', "icon_state" = "[H.skin_tone]_[g]_s")
+	else if(H.dna.species.alt_icon)
+		photo = icon("icon" = H.dna.species.alt_icon, "icon_state" = "[H.dna.species.id]_[g]_s")
+		photo.Blend("#[H.dna.features["mcolor"]]", ICON_MULTIPLY)
 	else
 		photo = icon("icon" = 'icons/mob/human.dmi', "icon_state" = "[H.dna.species.id]_[g]_s")
 		photo.Blend("#[H.dna.features["mcolor"]]", ICON_MULTIPLY)
