@@ -69,6 +69,12 @@
 	icon = 'icons/mob/infinity_inriss.dmi'
 	gender = FEMALE
 
+/datum/sprite_accessory/socks/black_thigh
+	name = "Thigh-high Black"
+	icon_state = "black_thigh"
+	icon = 'icons/mob/infinity_inriss.dmi'
+	gender = FEMALE
+
 /datum/sprite_accessory/underwear/bikiniredblack
 	name = "Red-Black Bikini"
 	icon_state = "bikini_red_black"

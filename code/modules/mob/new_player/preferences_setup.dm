@@ -45,6 +45,8 @@
 
 	if(pref_species.id == "human" || !config.mutant_races)
 		preview_icon = new /icon('icons/mob/human.dmi', "[skin_tone]_[g]_s")
+	else if(pref_species.alt_icon)
+		preview_icon = new /icon(pref_species.alt_icon, "[pref_species.id]_[g]_s")
 	else
 		preview_icon = new /icon('icons/mob/human.dmi', "[pref_species.id]_[g]_s")
 		preview_icon.Blend("#[features["mcolor"]]", ICON_MULTIPLY)
@@ -54,6 +56,12 @@
 	if(EYECOLOR in pref_species.specflags)
 		eyes_s = new/icon("icon" = 'icons/mob/human_face.dmi', "icon_state" = "[pref_species.eyes]_s")
 		eyes_s.Blend("#[eye_color]", ICON_MULTIPLY)
+
+	S = hair_styles_tajaran[features["tajaran_hair"]]
+	if(S && (THAIR in pref_species.specflags))
+		var/icon/hair_s = new/icon("icon" = S.icon, "icon_state" = "[S.icon_state]_s")
+		hair_s.Blend("#[hair_color]", ICON_MULTIPLY)
+		eyes_s.Blend(hair_s, ICON_OVERLAY)
 
 	S = hair_styles_list[hair_style]
 	if(S && (HAIR in pref_species.specflags))
@@ -82,6 +90,8 @@
 					S = tails_list_lizard[features["tail_lizard"]]
 				if("tail_human")
 					S = tails_list_human[features["tail_human"]]
+				if("tail_tajaran")
+					S = tails_list_tajaran[features["tail_tajaran"]]
 				if("spines")
 					S = spines_list[features["spines"]]
 				if("snout")
@@ -99,7 +109,7 @@
 				continue
 
 			//A little rename so we don't have to use tail_lizard or tail_human when naming the sprites.
-			if(bodypart == "tail_lizard" || bodypart == "tail_human")
+			if(bodypart == "tail_lizard" || bodypart == "tail_human" || bodypart == "tail_tajaran")
 				bodypart = "tail"
 
 			if(S.hasinner)
@@ -111,7 +121,12 @@
 				icon_string = "[pref_species.id]_[g]_[bodypart]_[S.icon_state]_[layer]"
 			else
 				icon_string = "[pref_species.id]_m_[bodypart]_[S.icon_state]_[layer]"
-			var/icon/part = new/icon("icon" = 'icons/mob/mutant_bodyparts.dmi', "icon_state" = icon_string)
+
+			var/icon/part
+			if(S.icon)
+				part = new/icon("icon" = S.icon, "icon_state" = icon_string)
+			else
+				part = new/icon("icon" = 'icons/mob/mutant_bodyparts.dmi', "icon_state" = icon_string)
 
 			switch(S.color_src)
 				if(MUTCOLORS)

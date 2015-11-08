@@ -55,6 +55,10 @@ Please contact me on #coderbus IRC. ~Carnie x
 /mob/living/carbon/human/proc/update_base_icon_state()
 	base_icon_state = dna.species.update_base_icon_state(src)
 	icon_state = "[base_icon_state]_s"
+	if(dna.species.alt_icon)
+		icon = dna.species.alt_icon
+	else
+		icon = 'icons/mob/human.dmi'
 
 
 //DAMAGE OVERLAYS
