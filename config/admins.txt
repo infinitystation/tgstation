@@ -27,3 +27,6 @@ alexmorgan = Game Master
 inriss = Game Master
 brostyle = Game Master
 wolforbykot = Game Master
+dvd406metaua = Game Master
+nikovar = Game Master
+xsarethx = Game Master
