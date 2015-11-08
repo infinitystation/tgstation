@@ -135,7 +135,7 @@
 			switch(S.color_src)
 				if(MUTCOLORS)
 					part.Blend("#[features["mcolor"]]", ICON_MULTIPLY)
-				if(HAIR)
+				if(HAIR|THAIR)
 					if(hair_color == "mutcolor")
 						part.Blend("#[features["mcolor"]]", ICON_MULTIPLY)
 					else
