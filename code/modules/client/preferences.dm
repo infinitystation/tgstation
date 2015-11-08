@@ -62,7 +62,7 @@ var/global/list/special_roles = list( //keep synced with the defines BE_* in set
 	var/skin_tone = "caucasian1"		//Skin color
 	var/eye_color = "000"				//Eye color
 	var/datum/species/pref_species = new /datum/species/human()	//Mutant race
-	var/list/features = list("mcolor" = "FFF", "tail_lizard" = "Smooth", "tail_human" = "None", "snout" = "Round", "horns" = "None", "ears" = "None", "frills" = "None", "spines" = "None", "body_markings" = "None")
+	var/list/features = list("mcolor" = "FFF", "tail_lizard" = "Smooth", "tail_human" = "None", "snout" = "Round", "horns" = "None", "ears" = "None", "frills" = "None", "spines" = "None", "body_markings" = "None", "tajaran_hair" = "Straight", "tail_tajaran" = "Default", "ears_tajaran" = "Default")
 
 	var/list/custom_names = list("clown", "mime", "ai", "cyborg", "religion", "deity")
 
@@ -215,6 +215,16 @@ var/global/list/special_roles = list( //keep synced with the defines BE_* in set
 
 				dat += "</td>"
 
+			if(THAIR in pref_species.specflags)
+
+				dat += "<td valign='top' width='21%'>"
+
+				dat += "<h3>Tajaran Hair Style</h3>"
+
+				dat += "<a href='?_src_=prefs;preference=thair_style;task=input'>[features["tajaran_hair"]]</a><BR>"
+				dat += "<a href='?_src_=prefs;preference=previous_thair_style;task=input'>&lt;</a> <a href='?_src_=prefs;preference=next_thair_style;task=input'>&gt;</a><BR>"
+				dat += "<span style='border:1px solid #161616; background-color: #[hair_color];'>&nbsp;&nbsp;&nbsp;</span> <a href='?_src_=prefs;preference=hair;task=input'>Change</a><BR>"
+
 			if(HAIR in pref_species.specflags)
 
 				dat += "<td valign='top' width='21%'>"
@@ -309,6 +319,24 @@ var/global/list/special_roles = list( //keep synced with the defines BE_* in set
 					dat += "<h3>Body Markings</h3>"
 
 					dat += "<a href='?_src_=prefs;preference=body_markings;task=input'>[features["body_markings"]]</a><BR>"
+
+					dat += "</td>"
+
+				if("tail_tajaran" in pref_species.mutant_bodyparts)
+					dat += "<td valign='top' width='7%'>"
+
+					dat += "<h3>Tail</h3>"
+
+					dat += "<a href='?_src_=prefs;preference=tail_tajaran;task=input'>[features["tail_tajaran"]]</a><BR>"
+
+					dat += "</td>"
+
+				if("ears_tajaran" in pref_species.mutant_bodyparts)
+					dat += "<td valign='top' width='7%'>"
+
+					dat += "<h3>Ears</h3>"
+
+					dat += "<a href='?_src_=prefs;preference=ears_tajaran;task=input'>[features["ears_tajaran"]]</a><BR>"
 
 					dat += "</td>"
 
@@ -782,6 +810,7 @@ var/global/list/special_roles = list( //keep synced with the defines BE_* in set
 					if(new_hair_style)
 						hair_style = new_hair_style
 
+
 				if("next_hair_style")
 					if (gender == MALE)
 						hair_style = next_list_item(hair_style, hair_styles_male_list)
@@ -793,6 +822,21 @@ var/global/list/special_roles = list( //keep synced with the defines BE_* in set
 						hair_style = previous_list_item(hair_style, hair_styles_male_list)
 					else
 						hair_style = previous_list_item(hair_style, hair_styles_female_list)
+
+				if("thair_style")
+					var/new_thair_style
+					if(istype(pref_species, /datum/species/tajaran))
+						new_thair_style = input(user, "Choose your character's hair style:", "Character Preference")  as null|anything in hair_styles_tajaran
+					if(new_thair_style)
+						features["tajaran_hair"] = new_thair_style
+
+				if("next_thair_style")
+					if (istype(pref_species, /datum/species/tajaran))
+						features["tajaran_hair"] = next_list_item(features["tajaran_hair"], hair_styles_tajaran)
+
+				if("previous_thair_style")
+					if (istype(pref_species, /datum/species/tajaran))
+						features["tajaran_hair"] = previous_list_item(features["tajaran_hair"], hair_styles_tajaran)
 
 				if("facial")
 					var/new_facial = input(user, "Choose your character's facial-hair colour:", "Character Preference") as null|color
@@ -886,6 +930,12 @@ var/global/list/special_roles = list( //keep synced with the defines BE_* in set
 					if(new_tail)
 						features["tail_human"] = new_tail
 
+				if("tail_tajaran")
+					var/new_tail
+					new_tail = input(user, "Choose your character's tail:", "Character Preference") as null|anything in tails_list_tajaran
+					if(new_tail)
+						features["tail_tajaran"] = new_tail
+
 				if("snout")
 					var/new_snout
 					new_snout = input(user, "Choose your character's snout:", "Character Preference") as null|anything in snouts_list
@@ -903,6 +953,12 @@ var/global/list/special_roles = list( //keep synced with the defines BE_* in set
 					new_ears = input(user, "Choose your character's ears:", "Character Preference") as null|anything in ears_list
 					if(new_ears)
 						features["ears"] = new_ears
+
+				if("ears_tajaran")
+					var/new_ears
+					new_ears = input(user, "Choose your character's ears:", "Character Preference") as null|anything in ears_list_tajaran
+					if(new_ears)
+						features["ears_tajaran"] = new_ears
 
 				if("frills")
 					var/new_frills

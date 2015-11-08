@@ -1,6 +1,7 @@
 //Preferences stuff
 	//Hairstyles
 var/global/list/hair_styles_list = list()			//stores /datum/sprite_accessory/hair indexed by name
+var/global/list/hair_styles_tajaran = list()		//tajaran hairs
 var/global/list/hair_styles_male_list = list()		//stores only hair names
 var/global/list/hair_styles_female_list = list()	//stores only hair names
 var/global/list/facial_hair_styles_list = list()	//stores /datum/sprite_accessory/facial_hair indexed by name
@@ -22,11 +23,13 @@ var/global/list/socks_f = list()	 //stores only socks name
 var/global/list/body_markings_list = list()
 var/global/list/tails_list_lizard = list()
 var/global/list/tails_list_human = list()
+var/global/list/tails_list_tajaran = list()
 var/global/list/animated_tails_list_lizard = list()
 var/global/list/animated_tails_list_human = list()
 var/global/list/snouts_list = list()
 var/global/list/horns_list = list()
 var/global/list/ears_list = list()
+var/global/list/ears_list_tajaran = list()
 var/global/list/frills_list = list()
 var/global/list/spines_list = list()
 var/global/list/animated_spines_list = list()
