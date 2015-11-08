@@ -102,6 +102,8 @@
 					S = horns_list[features["horns"]]
 				if("ears")
 					S = ears_list[features["ears"]]
+				if("ears_tajaran")
+					S = tails_list_tajaran[features["ears_tajaran"]]
 				if("body_markings")
 					S = body_markings_list[features["body_markings"]]
 
@@ -111,6 +113,8 @@
 			//A little rename so we don't have to use tail_lizard or tail_human when naming the sprites.
 			if(bodypart == "tail_lizard" || bodypart == "tail_human" || bodypart == "tail_tajaran")
 				bodypart = "tail"
+			if(bodypart == "ears_tajaran")
+				bodypart = "ears"
 
 			if(S.hasinner)
 				preview_icon.Blend(new/icon("icon" = 'icons/mob/mutant_bodyparts.dmi', "icon_state" = "[pref_species.id]_m_[bodypart]inner_[S.icon_state]_[layer]"), ICON_OVERLAY)

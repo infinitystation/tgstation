@@ -309,7 +309,6 @@
 		if(H.wear_suit && (H.wear_suit.flags_inv & HIDEJUMPSUIT))
 			bodyparts_to_add -= "tail_human"
 
-
 	if("waggingtail_human" in mutant_bodyparts)
 		if(H.wear_suit && (H.wear_suit.flags_inv & HIDEJUMPSUIT))
 			bodyparts_to_add -= "waggingtail_human"
@@ -341,6 +340,10 @@
 	if("ears" in mutant_bodyparts)
 		if(!H.dna.features["ears"] || H.dna.features["ears"] == "None" || H.head && (H.head.flags & BLOCKHAIR) || (H.wear_mask && (H.wear_mask.flags & BLOCKHAIR)))
 			bodyparts_to_add -= "ears"
+
+	if("ears_tajaran" in mutant_bodyparts)
+		if((H.head && (H.head.flags & BLOCKHAIR)) || (H.wear_mask && (H.wear_mask.flags & BLOCKHAIR)))
+			bodyparts_to_add -= "ears_tajaran"
 
 	if(!bodyparts_to_add)
 		return
@@ -375,6 +378,8 @@
 					S = horns_list[H.dna.features["horns"]]
 				if("ears")
 					S = ears_list[H.dna.features["ears"]]
+				if("ears_tajaran")
+					S = ears_list_tajaran[H.dna.features["ears_tajaran"]]
 				if("body_markings")
 					S = body_markings_list[H.dna.features["body_markings"]]
 
@@ -384,6 +389,8 @@
 			//A little rename so we don't have to use tail_lizard or tail_human when naming the sprites.
 			if(bodypart == "tail_lizard" || bodypart == "tail_human" || bodypart == "tail_tajaran")
 				bodypart = "tail"
+			if(bodypart == "ears_tajaran")
+				bodypart = "ears"
 			else if(bodypart == "waggingtail_lizard" || bodypart == "waggingtail_human")
 				bodypart = "waggingtail"
 

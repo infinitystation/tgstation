@@ -323,7 +323,7 @@ datum/species/human/spec_death(gibbed, mob/living/carbon/human/H)
 	if(body.stat == UNCONSCIOUS)
 		owner << "<span class='warning'>You sense this body has passed out for some reason. Best to stay away.</span>"
 		return
-		
+
 	owner.mind.transfer_to(body)
 
 /*
@@ -525,7 +525,7 @@ var/global/image/plasmaman_on_fire = image("icon"='icons/mob/OnFire.dmi', "icon_
 	roundstart = 1
 	specflags = list(EYECOLOR,THAIR,LIPS)
 	mutant_bodyparts = list("tail_tajaran", "ears_tajaran", "tajaran_hair")
-	default_features = list("mcolor" = "CDC5BF","tail_tajaran" = "Default", "tajaran_hair" = "Straight")
+	default_features = list("mcolor" = "CDC5BF", "ears_tajaran" = "Default", "tail_tajaran" = "Default", "tajaran_hair" = "Straight")
 	attack_verb = "slash"
 	attack_sound = 'sound/weapons/slash.ogg'
 	miss_sound = 'sound/weapons/slashmiss.ogg'

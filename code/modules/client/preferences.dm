@@ -62,7 +62,7 @@ var/global/list/special_roles = list( //keep synced with the defines BE_* in set
 	var/skin_tone = "caucasian1"		//Skin color
 	var/eye_color = "000"				//Eye color
 	var/datum/species/pref_species = new /datum/species/human()	//Mutant race
-	var/list/features = list("mcolor" = "FFF", "tail_lizard" = "Smooth", "tail_human" = "None", "snout" = "Round", "horns" = "None", "ears" = "None", "frills" = "None", "spines" = "None", "body_markings" = "None", "tajaran_hair" = "Straight", "tail_tajaran" = "Default")
+	var/list/features = list("mcolor" = "FFF", "tail_lizard" = "Smooth", "tail_human" = "None", "snout" = "Round", "horns" = "None", "ears" = "None", "frills" = "None", "spines" = "None", "body_markings" = "None", "tajaran_hair" = "Straight", "tail_tajaran" = "Default", "ears_tajaran" = "Default")
 
 	var/list/custom_names = list("clown", "mime", "ai", "cyborg", "religion", "deity")
 
@@ -328,6 +328,15 @@ var/global/list/special_roles = list( //keep synced with the defines BE_* in set
 					dat += "<h3>Tail</h3>"
 
 					dat += "<a href='?_src_=prefs;preference=tail_tajaran;task=input'>[features["tail_tajaran"]]</a><BR>"
+
+					dat += "</td>"
+
+				if("ears_tajaran" in pref_species.mutant_bodyparts)
+					dat += "<td valign='top' width='7%'>"
+
+					dat += "<h3>Ears</h3>"
+
+					dat += "<a href='?_src_=prefs;preference=ears_tajaran;task=input'>[features["ears_tajaran"]]</a><BR>"
 
 					dat += "</td>"
 
@@ -944,6 +953,12 @@ var/global/list/special_roles = list( //keep synced with the defines BE_* in set
 					new_ears = input(user, "Choose your character's ears:", "Character Preference") as null|anything in ears_list
 					if(new_ears)
 						features["ears"] = new_ears
+
+				if("ears_tajaran")
+					var/new_ears
+					new_ears = input(user, "Choose your character's ears:", "Character Preference") as null|anything in ears_list_tajaran
+					if(new_ears)
+						features["ears_tajaran"] = new_ears
 
 				if("frills")
 					var/new_frills

@@ -19,3 +19,12 @@
 	name = "Default"
 	icon_state = "default"
 
+//ears
+/datum/sprite_accessory/ears/tajaran
+	name = "tail_tajaran"
+	icon = 'icons/mob/infinity_mutant_bodyparts.dmi'
+
+/datum/sprite_accessory/ears/tajaran/default
+	name = "Default"
+	icon_state = "default"
+
