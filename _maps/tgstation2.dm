@@ -25,7 +25,7 @@ z7 = empty space
         #include "map_files\TerrorStation\z9.dmm" //prison
 
         #define MAP_FILE "tgstation.2.1.3.dmm"
-        #define MAP_NAME "Box Station"
+        #define MAP_NAME "Box (TG Station 2)"
 
         #define MAP_TRANSITION_CONFIG	list(MAIN_STATION = CROSSLINKED, CENTCOMM = SELFLOOPING, ABANDONED_SATELLITE = CROSSLINKED, DERELICT = CROSSLINKED, MINING = CROSSLINKED, EMPTY_AREA_1 = CROSSLINKED, EMPTY_AREA_2 = CROSSLINKED, BANPRISON = SELFLOOPING)
 

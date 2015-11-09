@@ -2,7 +2,7 @@
 #define SAVEFILE_VERSION_MIN	8
 
 //This is the current version, anything below this will attempt to update (if it's not obsolete)
-#define SAVEFILE_VERSION_MAX	11
+#define SAVEFILE_VERSION_MAX	12
 /*
 SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Carn
 	This proc checks if the current directory of the savefile S needs updating
@@ -36,6 +36,8 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	if(current_version < 11)
 		chat_toggles = TOGGLES_DEFAULT_CHAT
 		toggles = TOGGLES_DEFAULT
+	if(current_version < 12)
+		ignoring = list()
 
 
 //should this proc get fairly long (say 3 versions long),
@@ -105,6 +107,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	S["toggles"]			>> toggles
 	S["ghost_form"]			>> ghost_form
 	S["preferred_map"]		>> preferred_map
+	S["ignoring"]			>> ignoring
 
 	//try to fix any outdated data if necessary
 	if(needs_update >= 0)
@@ -138,6 +141,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	S["toggles"]			<< toggles
 	S["ghost_form"]			<< ghost_form
 	S["preferred_map"]		<< preferred_map
+	S["ignoring"]			<< ignoring
 
 	return 1
 
@@ -194,6 +198,8 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	S["feature_lizard_frills"]			>> features["frills"]
 	S["feature_lizard_spines"]			>> features["spines"]
 	S["feature_lizard_body_markings"]	>> features["body_markings"]
+	S["feature_tajaran_tail"]			>> features["tail_tajaran"]
+	S["feature_tajaran_ears"]			>> features["ears_tajaran"]
 	if(!config.mutant_humans)
 		features["tail_human"] = "none"
 		features["ears"] = "none"
@@ -262,9 +268,11 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	features["mcolor"]	= sanitize_hexcolor(features["mcolor"], 3, 0)
 	features["tail_lizard"]	= sanitize_inlist(features["tail_lizard"], tails_list_lizard)
 	features["tail_human"] 	= sanitize_inlist(features["tail_human"], tails_list_human, "None")
+	features["tail_tajaran"]	= sanitize_inlist(features["tail_tajaran"], tails_list_lizard, "Default")
 	features["snout"]	= sanitize_inlist(features["snout"], snouts_list)
 	features["horns"] 	= sanitize_inlist(features["horns"], horns_list)
 	features["ears"]	= sanitize_inlist(features["ears"], ears_list, "None")
+	features["ears_tajaran"]	= sanitize_inlist(features["ears_tajaran"], ears_list_tajaran, "Default")
 	features["frills"] 	= sanitize_inlist(features["frills"], frills_list)
 	features["spines"] 	= sanitize_inlist(features["spines"], spines_list)
 	features["body_markings"] 	= sanitize_inlist(features["body_markings"], body_markings_list)
@@ -312,9 +320,11 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	S["feature_mcolor"]					<< features["mcolor"]
 	S["feature_lizard_tail"]			<< features["tail_lizard"]
 	S["feature_human_tail"]				<< features["tail_human"]
+	S["feature_human_tajaran"]			<< features["tail_tajaran"]
 	S["feature_lizard_snout"]			<< features["snout"]
 	S["feature_lizard_horns"]			<< features["horns"]
 	S["feature_human_ears"]				<< features["ears"]
+	S["feature_tajaran_ears"]			<< features["ears_tajaran"]
 	S["feature_lizard_frills"]			<< features["frills"]
 	S["feature_lizard_spines"]			<< features["spines"]
 	S["feature_lizard_body_markings"]	<< features["body_markings"]

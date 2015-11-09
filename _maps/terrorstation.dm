@@ -27,7 +27,7 @@ z7 = empty space
      	#include "map_files\TerrorStation\asteroid.dmm"
         #include "map_files\TerrorStation\z9.dmm" //prison
         #define MAP_FILE "MetaStation.v41GS.dmm"
-        #define MAP_NAME "TerrorStation"
+        #define MAP_NAME "Terror's Meta Station"
 
         #define MAP_TRANSITION_CONFIG	list(MAIN_STATION = CROSSLINKED, CENTCOMM = SELFLOOPING, ABANDONED_SATELLITE = CROSSLINKED, DERELICT = CROSSLINKED, MINING = CROSSLINKED, EMPTY_AREA_1 = CROSSLINKED, EMPTY_AREA_2 = CROSSLINKED, ASTEROID = SELFLOOPING, BANPRISON = SELFLOOPING)
 

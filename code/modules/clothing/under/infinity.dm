@@ -222,3 +222,51 @@
 	icon = 'icons/obj/clothing/infinity_work.dmi'
 	can_adjust = 0
 	fitted = FEMALE_UNIFORM_TOP
+
+/obj/item/clothing/under/kos_shorts
+	name = "kos shorts"
+	desc = "Small leather shorts!"
+	icon_state = "kos_shorts"
+	item_state = ""
+	item_color = "kos_shorts"
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	can_adjust = 0
+
+/obj/item/clothing/under/kos_bshorts
+	name = "black kos shorts"
+	desc = "Small black leather shorts!"
+	icon_state = "kos_bshorts"
+	item_state = ""
+	item_color = "kos_bshorts"
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	can_adjust = 0
+
+/obj/item/clothing/under/kos_bshorts2
+	name = "black kos shorts"
+	desc = "Small black leather shorts!"
+	icon_state = "kos_bshorts2"
+	item_state = ""
+	item_color = "kos_bshorts2"
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	can_adjust = 0
+
+/obj/item/clothing/under/womentshirt
+	name = "women's T-shirt"
+	desc = "Tiny, breathable white T-shirt!"
+	icon_state = "women_t_shirt"
+	item_state = "w_suit"
+	item_color = "women_t_shirt"
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	can_adjust = 0
+
+/obj/item/clothing/under/latex_pants
+	name = "latex pants"
+	desc = "Tight latex pants."
+	icon_state = "latex_pants"
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	can_adjust = 0

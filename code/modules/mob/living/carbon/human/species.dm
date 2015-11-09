@@ -309,7 +309,6 @@
 		if(H.wear_suit && (H.wear_suit.flags_inv & HIDEJUMPSUIT))
 			bodyparts_to_add -= "tail_human"
 
-
 	if("waggingtail_human" in mutant_bodyparts)
 		if(H.wear_suit && (H.wear_suit.flags_inv & HIDEJUMPSUIT))
 			bodyparts_to_add -= "waggingtail_human"
@@ -341,6 +340,10 @@
 	if("ears" in mutant_bodyparts)
 		if(!H.dna.features["ears"] || H.dna.features["ears"] == "None" || H.head && (H.head.flags & BLOCKHAIR) || (H.wear_mask && (H.wear_mask.flags & BLOCKHAIR)))
 			bodyparts_to_add -= "ears"
+
+	if("ears_tajaran" in mutant_bodyparts)
+		if((H.head && (H.head.flags & BLOCKHAIR)) || (H.wear_mask && (H.wear_mask.flags & BLOCKHAIR)))
+			bodyparts_to_add -= "ears_tajaran"
 
 	if(!bodyparts_to_add)
 		return
@@ -375,6 +378,8 @@
 					S = horns_list[H.dna.features["horns"]]
 				if("ears")
 					S = ears_list[H.dna.features["ears"]]
+				if("ears_tajaran")
+					S = ears_list_tajaran[H.dna.features["ears_tajaran"]]
 				if("body_markings")
 					S = body_markings_list[H.dna.features["body_markings"]]
 
@@ -384,6 +389,8 @@
 			//A little rename so we don't have to use tail_lizard or tail_human when naming the sprites.
 			if(bodypart == "tail_lizard" || bodypart == "tail_human" || bodypart == "tail_tajaran")
 				bodypart = "tail"
+			if(bodypart == "ears_tajaran")
+				bodypart = "ears"
 			else if(bodypart == "waggingtail_lizard" || bodypart == "waggingtail_human")
 				bodypart = "waggingtail"
 
@@ -720,7 +727,10 @@
 				var/obj/item/clothing/glasses/G = H.glasses
 				H.sight |= G.vision_flags
 				H.see_in_dark = G.darkness_view
-				H.see_invisible = min(G.invis_view, H.see_invisible)
+				if(G.invis_override)
+					H.see_invisible = G.invis_override
+				else
+					H.see_invisible = min(G.invis_view, H.see_invisible)
 		if(H.druggy)	//Override for druggy
 			H.see_invisible = see_temp
 
@@ -818,9 +828,9 @@
 
 	switch(H.need_to_shit)
 		if(SHIT_LEVEL_DANGER to SHIT_LEVEL_MAX)
-			H.throw_alert("toilet", /obj/screen/alert/shit)
-		if(SHIT_LEVEL_WARNING to SHIT_LEVEL_DANGER)
 			H.throw_alert("toilet", /obj/screen/alert/shit_now)
+		if(SHIT_LEVEL_WARNING to SHIT_LEVEL_DANGER)
+			H.throw_alert("toilet", /obj/screen/alert/shit)
 		else
 			H.clear_alert("toilet")
 
@@ -864,7 +874,7 @@
 ////////////////
 
 /datum/species/proc/movement_delay(mob/living/carbon/human/H)
-	var/mspeed = 0
+	. = 0
 
 	if(!(H.status_flags & IGNORESLOWDOWN))
 
@@ -886,39 +896,37 @@
 				if(P.allow_thrust(0.01, H))
 					hasjetpack = 1
 
-			mspeed = -1 - hasjetpack
+			. = -1 - hasjetpack
 
 		if(grav || !hasjetpack)
 			var/health_deficiency = (100 - H.health + H.staminaloss)
 			if(health_deficiency >= 40)
-				mspeed += (health_deficiency / 25)
+				. += (health_deficiency / 25)
 
 			var/hungry = (500 - H.nutrition) / 5	//So overeat would be 100 and default level would be 80
 			if(hungry >= 70)
-				mspeed += hungry / 50
+				. += hungry / 50
 
 			if(H.wear_suit)
-				mspeed += H.wear_suit.slowdown
+				. += H.wear_suit.slowdown
 			if(H.shoes)
-				mspeed += H.shoes.slowdown
+				. += H.shoes.slowdown
 			if(H.back)
-				mspeed += H.back.slowdown
+				. += H.back.slowdown
 
 			if((H.disabilities & FAT))
-				mspeed += 1.5
+				. += 1.5
 			if(H.bodytemperature < BODYTEMP_COLD_DAMAGE_LIMIT)
-				mspeed += (BODYTEMP_COLD_DAMAGE_LIMIT - H.bodytemperature) / COLD_SLOWDOWN_FACTOR
+				. += (BODYTEMP_COLD_DAMAGE_LIMIT - H.bodytemperature) / COLD_SLOWDOWN_FACTOR
 
-			mspeed += speedmod
+			. += speedmod
 
 		if(grav)
 			if(H.status_flags & GOTTAGOFAST)
-				mspeed -= 1
+				. -= 1
 
 			if(H.status_flags & GOTTAGOREALLYFAST)
-				mspeed -= 2
-
-	return mspeed
+				. -= 2
 
 //////////////////
 // ATTACK PROCS //

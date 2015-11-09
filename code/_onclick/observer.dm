@@ -11,6 +11,9 @@
 		src << "<span class='notice'>You will no longer examine things you click on.</span>"
 
 /mob/dead/observer/DblClickOn(var/atom/A, var/params)
+	if(client)
+		if(client.banprisoned)
+			return
 	if(client.buildmode)
 		build_click(src, client.buildmode, params, A)
 		return

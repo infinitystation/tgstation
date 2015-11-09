@@ -10,10 +10,9 @@
 	pin = /obj/item/device/firing_pin
 	mag_type = /obj/item/ammo_box/magazine/spine
 	fire_sound = 'sound/weapons/Gunshot4.ogg'
-	flags = NODROP
 	slot_flags = 0
 	can_suppress = 0
-	burst_size = 6
+	burst_size = 4
 	fire_delay = 1
 
 /obj/item/ammo_casing/gause_spine
