@@ -97,10 +97,10 @@
 	shoes = /obj/item/clothing/shoes/sneakers/orange/legcuffs
 
 /mob/new_player/proc/setup_and_greet_prisoner(mob/living/carbon/human/character)
-	character.client.prefs.be_special = 0
+	character.client.prefs.be_special = list()
 	character.client.prefs.toggles &= ~(MIDROUND_ANTAG)
-	character.client.prefs.save_preferences()
 	character.client.prefs.chat_toggles = TOGGLES_PRISONER_CHAT
+	character.client.prefs.save_preferences()
 	character << character.client.banprisoned_reason
 	text = {"Здравствуйте, вы являетесь заключенным в тюрьме строгого режима.
 Вы попали сюда по причине, которая была описана выше при входе в игру.

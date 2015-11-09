@@ -1073,6 +1073,8 @@ var/list/preferences_datums = list()
 
 				if("be_special")
 					var/be_special_type = href_list["be_special_type"]
+					if(!islist(be_special))
+						be_special = list()
 					if(be_special_type in be_special)
 						be_special -= be_special_type
 					else
