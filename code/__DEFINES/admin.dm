@@ -19,6 +19,7 @@
 #define BANTYPE_ADMIN_TEMP	8
 #define BANTYPE_SOFT_PERMA	9
 #define BANTYPE_SOFT_TEMP	10
+#define BANTYPE_ANY_JOB		11 //used to remove jobbans
 
 //Please don't edit these values without speaking to Errorage first	~Carn
 //Admin Permissions

@@ -3,7 +3,7 @@
 	special_role_old = special_role
 	special_role = null
 	if(remove_traitor_light() || remove_nukeop_light() || remove_wizard_light() || remove_rev_light() || remove_gang_light())
-		current << "<span class='userdanger'>Вы более не спецроль! Ваша спецроль вернетс&#255;, когда вам снова вколют имплант противодействи&#255; ло&#255;льности</span>"
+		current << "<span class='userdanger'>Вы более не спецроль! Не спрашивайте администрацию, это IC ситуаци&#255;</span>"
 		return 1
 	else
 		return 0
