@@ -46,6 +46,8 @@ var/global/list/frozen_mob_list = list()
 		message_admins("\blue [key_name_admin(admin)] unfroze [key_name(src)]")
 		log_admin("[key_name(admin)] unfroze [key_name(src)]")
 
+	var/obj/effect/overlay/adminoverlay/AO = new
+	src.overlays -= AO
 	update_icons()
 
 	anchored = 0
