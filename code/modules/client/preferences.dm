@@ -399,8 +399,8 @@ var/list/preferences_datums = list()
 
 			dat += "</td><td width='300px' height='300px' valign='top'>"
 
-			dat += "<b>For [real_name]</b><br/>"
 			dat += "<h2>Special Role Settings</h2>"
+			dat += "<b>For [real_name]</b><br/>"
 
 			if(jobban_isbanned(user, "Syndicate"))
 				dat += "<font color=red><b>You are banned from antagonist roles.</b></font>"
