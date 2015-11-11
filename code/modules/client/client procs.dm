@@ -142,7 +142,7 @@ var/next_external_rsc = 0
 	if(IsBanPrisoned(src.key, src.address, src.computer_id))
 		src.banprisoned = 1
 		prefs.muted |= MUTE_OOC | MUTE_PRAY | MUTE_DEADCHAT | MUTE_ADMINHELP
-		prefs.be_special = 0
+		prefs.be_special = list()
 
 	. = ..()	//calls mob.Login()
 
@@ -359,7 +359,6 @@ var/next_external_rsc = 0
 		'icons/pda_icons/pda_blank.png',
 		'icons/pda_icons/pda_boom.png',
 		'icons/pda_icons/pda_bucket.png',
-		'icons/pda_icons/pda_chatroom.png',
 		'icons/pda_icons/pda_medbot.png',
 		'icons/pda_icons/pda_floorbot.png',
 		'icons/pda_icons/pda_cleanbot.png',

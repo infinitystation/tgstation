@@ -29,7 +29,7 @@
 			qdel(src)
 			return -1
 		target.mind.remove_all_antag_light()
-		if(target.mind in ticker.mode.cult)
+		if((target.mind in ticker.mode.cult) || (target.mind in ticker.mode.blue_deity_prophets|ticker.mode.red_deity_prophets))
 			target << "<span class='warning'>You feel the corporate tendrils of Nanotrasen try to invade your mind!</span>"
 		else
 			target << "<span class='notice'>You feel a surge of loyalty towards Nanotrasen.</span>"

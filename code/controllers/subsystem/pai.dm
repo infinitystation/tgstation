@@ -183,7 +183,7 @@ var/datum/subsystem/pai/SSpai
 	for(var/mob/dead/observer/O in player_list)
 		if(O.client.banprisoned)
 			continue
-		if(jobban_isbanned(O, "pAI"))
+		if(jobban_isbanned(O, ROLE_PAI))
 			continue
 		if(asked.Find(O.key))
 			if(world.time < asked[O.key] + askDelay)
@@ -195,7 +195,7 @@ var/datum/subsystem/pai/SSpai
 			for(var/datum/paiCandidate/c in SSpai.candidates)
 				if(c.key == O.key)
 					hasSubmitted = 1
-			if(!hasSubmitted && (O.client.prefs.be_special & BE_PAI))
+			if(!hasSubmitted && (ROLE_PAI in O.client.prefs.be_special))
 				question(O.client)
 
 /datum/subsystem/pai/proc/question(client/C)

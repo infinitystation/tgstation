@@ -421,6 +421,11 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		flavor_more.set_content(dat)
 		flavor_more.open(1)
 
+//We don't want to update the current var
+//But we will still carry a mind.
+/mob/dead/observer/mind_initialize()
+	return
+
 /mob/dead/observer/verb/toggle_ghosthud()
 	set name = "Toggle Ghost HUD"
 	set desc = "Toggles your ghost's on-screen HUD"

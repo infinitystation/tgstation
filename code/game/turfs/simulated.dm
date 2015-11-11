@@ -17,7 +17,7 @@
 	if(wet >= wet_setting)
 		return
 	wet = wet_setting
-	if(wet_setting == TURF_WET_WATER)
+	if(wet_setting != TURF_DRY)
 		if(wet_overlay)
 			overlays -= wet_overlay
 			wet_overlay = null
@@ -47,7 +47,7 @@
 		switch(wet)
 			if(TURF_WET_WATER)
 				if(prob(33))
-					if(!M.slip(4, 2, null, NO_SLIP_WHEN_WALKING))
+					if(!M.slip(2, 1, null, NO_SLIP_WHEN_WALKING))
 						M.inertia_dir = 0
 				return
 			if(TURF_WET_LUBE)

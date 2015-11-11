@@ -116,10 +116,18 @@
 			if(bodypart == "ears_tajaran")
 				bodypart = "ears"
 
-			if(S.hasinner)
-				preview_icon.Blend(new/icon("icon" = 'icons/mob/mutant_bodyparts.dmi', "icon_state" = "[pref_species.id]_m_[bodypart]inner_[S.icon_state]_[layer]"), ICON_OVERLAY)
-
 			var/icon_string
+
+			if(S.hasinner)
+				if(S.gender_specific)
+					icon_string = "[pref_species.id]_[g]_[bodypart]inner_[S.icon_state]_[layer]"
+				else
+					icon_string = "[pref_species.id]_m_[bodypart]inner_[S.icon_state]_[layer]"
+
+				if(S.icon)
+					preview_icon.Blend(new/icon("icon" = S.icon, "icon_state" = icon_string), ICON_OVERLAY)
+				else
+					preview_icon.Blend(new/icon("icon" = 'icons/mob/mutant_bodyparts.dmi', "icon_state" = icon_string), ICON_OVERLAY)
 
 			if(S.gender_specific)
 				icon_string = "[pref_species.id]_[g]_[bodypart]_[S.icon_state]_[layer]"
@@ -135,7 +143,7 @@
 			switch(S.color_src)
 				if(MUTCOLORS)
 					part.Blend("#[features["mcolor"]]", ICON_MULTIPLY)
-				if(HAIR)
+				if(HAIR|THAIR)
 					if(hair_color == "mutcolor")
 						part.Blend("#[features["mcolor"]]", ICON_MULTIPLY)
 					else

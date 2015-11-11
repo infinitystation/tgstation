@@ -231,6 +231,18 @@
 	time = 200
 	category = CAT_WEAPON
 
+//Inriss
+/datum/table_recipe/honkspear
+	name = "Honk Spear"
+	result = /obj/item/weapon/honkspear
+	reqs = list (/obj/item/weapon/bikehorn = 1,
+	            /obj/item/stack/rods = 2)
+	tools = list(/obj/item/weapon/screwdriver)
+	time = 30
+	category = CAT_WEAPON
+//Inriss
+
+
 /datum/table_recipe/chainsaw
 	name = "Chainsaw"
 	result = /obj/item/weapon/twohanded/required/chainsaw

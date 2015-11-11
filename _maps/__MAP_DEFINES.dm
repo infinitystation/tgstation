@@ -13,4 +13,4 @@
 		#define ASTEROID "Asteroid"
 		#define BANPRISON "Ban Prison"
 		#define COLONY "Colony"
-		#define AWAY_MISSION_LIST list(AWAY_MISSION = UNAFFECTED)
+		#define AWAY_MISSION_LIST list(AWAY_MISSION = SELFLOOPING)
