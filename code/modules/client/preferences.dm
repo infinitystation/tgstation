@@ -204,16 +204,6 @@ var/list/preferences_datums = list()
 
 				dat += "</td>"
 
-			if(THAIR in pref_species.specflags)
-
-				dat += "<td valign='top' width='21%'>"
-
-				dat += "<h3>Tajaran Hair Style</h3>"
-
-				dat += "<a href='?_src_=prefs;preference=thair_style;task=input'>[features["tajaran_hair"]]</a><BR>"
-				dat += "<a href='?_src_=prefs;preference=previous_thair_style;task=input'>&lt;</a> <a href='?_src_=prefs;preference=next_thair_style;task=input'>&gt;</a><BR>"
-				dat += "<span style='border:1px solid #161616; background-color: #[hair_color];'>&nbsp;&nbsp;&nbsp;</span> <a href='?_src_=prefs;preference=hair;task=input'>Change</a><BR>"
-
 			if(HAIR in pref_species.specflags)
 
 				dat += "<td valign='top' width='21%'>"
@@ -328,6 +318,17 @@ var/list/preferences_datums = list()
 					dat += "<a href='?_src_=prefs;preference=ears_tajaran;task=input'>[features["ears_tajaran"]]</a><BR>"
 
 					dat += "</td>"
+
+				if("tajaran_hair" in pref_species.mutant_bodyparts)
+
+					dat += "<td valign='top' width='21%'>"
+
+					dat += "<h3>Tajaran Hair Style</h3>"
+
+					dat += "<a href='?_src_=prefs;preference=thair_style;task=input'>[features["tajaran_hair"]]</a><BR>"
+					dat += "<a href='?_src_=prefs;preference=previous_thair_style;task=input'>&lt;</a> <a href='?_src_=prefs;preference=next_thair_style;task=input'>&gt;</a><BR>"
+					dat += "<span style='border:1px solid #161616; background-color: #[hair_color];'>&nbsp;&nbsp;&nbsp;</span> <a href='?_src_=prefs;preference=hair;task=input'>Change</a><BR>"
+
 
 			if(config.mutant_humans)
 

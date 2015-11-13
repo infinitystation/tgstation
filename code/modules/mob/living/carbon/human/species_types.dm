@@ -263,7 +263,7 @@ datum/species/human/spec_death(gibbed, mob/living/carbon/human/H)
 /datum/action/innate/split_body
 	name = "Split Body"
 	check_flags = AB_CHECK_ALIVE
-	button_icon_state = "split"
+	button_icon_state = "slimesplit"
 	background_icon_state = "bg_alien"
 
 /datum/action/innate/split_body/CheckRemoval()
@@ -381,6 +381,7 @@ datum/species/human/spec_death(gibbed, mob/living/carbon/human/H)
 	name = "Spooky Scary Skeleton"
 	id = "skeleton"
 	say_mod = "гремит"
+	need_nutrition = 0
 	sexes = 0
 	meat = /obj/item/weapon/reagent_containers/food/snacks/meat/slab/human/mutant/skeleton
 	specflags = list(NOBREATH,HEATRES,COLDRES,NOBLOOD,RADIMMUNE,VIRUSIMMUNE,PIERCEIMMUNE)
@@ -463,16 +464,18 @@ datum/species/human/spec_death(gibbed, mob/living/carbon/human/H)
 var/global/image/plasmaman_on_fire = image("icon"='icons/mob/OnFire.dmi', "icon_state"="plasmaman")
 
 /datum/species/plasmaman
-	name = "Plasbone"
+	name = "Plasmaman"
 	id = "plasmaman"
 	say_mod = "rattles"
 	sexes = 0
-	meat = /obj/item/weapon/reagent_containers/food/snacks/meat/slab/human/mutant/skeleton
-	specflags = list(NOBLOOD,RADIMMUNE)
+	meat = /obj/item/stack/sheet/mineral/plasma
+	specflags = list(NOBLOOD,RADIMMUNE,NOTRANSSTING)
 	safe_oxygen_min = 0 //We don't breath this
 	safe_toxins_min = 16 //We breath THIS!
 	safe_toxins_max = 0
 	dangerous_existence = 1 //So so much
+	need_nutrition = 0 //Hard to eat through a helmet
+	roundstart = 1
 	var/skin = 0
 
 /datum/species/plasmaman/skin
@@ -488,7 +491,7 @@ var/global/image/plasmaman_on_fire = image("icon"='icons/mob/OnFire.dmi', "icon_
 /datum/species/plasmaman/spec_life(mob/living/carbon/human/H)
 	var/datum/gas_mixture/environment = H.loc.return_air()
 
-	if(!istype(H.wear_suit, /obj/item/clothing/suit/space/eva/plasmaman) || !istype(H.head, /obj/item/clothing/head/helmet/space/hardsuit/plasmaman))
+	if(!istype(H.w_uniform, /obj/item/clothing/under/plasmaman) || !istype(H.head, /obj/item/clothing/head/helmet/plasmaman))
 		if(environment)
 			var/total_moles = environment.total_moles()
 			if(total_moles)
@@ -499,42 +502,19 @@ var/global/image/plasmaman_on_fire = image("icon"='icons/mob/OnFire.dmi', "icon_
 					H.IgniteMob()
 	else
 		if(H.fire_stacks)
-			var/obj/item/clothing/suit/space/eva/plasmaman/P = H.wear_suit
+			var/obj/item/clothing/under/plasmaman/P = H.w_uniform
 			if(istype(P))
 				P.Extinguish(H)
 	H.update_fire()
 
-//Heal from plasma
-/datum/species/plasmaman/handle_chemicals(datum/reagent/chem, mob/living/carbon/human/H)
-	if(chem.id == "plasma")
-		H.adjustBruteLoss(-5)
-		H.adjustFireLoss(-5)
-		H.reagents.remove_reagent(chem.id, REAGENTS_METABOLISM)
-		return 1
+/datum/species/plasmaman/before_equip_job(datum/job/J, mob/living/carbon/human/H)
+	var/datum/outfit/plasmaman/O = new /datum/outfit/plasmaman
+	H.equipOutfit(O)
+	return 0
 
-//////////////
-//*Tajaran*//
-/////////////
-
-/datum/species/tajaran
-	// Tajaran are a humanoid race possesing cat-like features.
-	name = "Tajaran"
-	id = "tajaran"
-	say_mod = "мурлычит"
-	default_color = "00FF00"
-	roundstart = 1
-	specflags = list(EYECOLOR,THAIR,LIPS)
-	mutant_bodyparts = list("tail_tajaran", "ears_tajaran", "tajaran_hair")
-	default_features = list("mcolor" = "CDC5BF", "ears_tajaran" = "Default", "tail_tajaran" = "Default", "tajaran_hair" = "Straight")
-	attack_verb = "slash"
-	attack_sound = 'sound/weapons/slash.ogg'
-	miss_sound = 'sound/weapons/slashmiss.ogg'
-	meat = /obj/item/weapon/reagent_containers/food/snacks/meat/slab/human/mutant/lizard
-	alt_icon = 'icons/mob/infinity_human.dmi'
-
-/datum/species/tajaran/qualifies_for_rank(rank, list/features)
-	if(rank in command_positions)
+/datum/species/plasmaman/qualifies_for_rank(rank, list/features)
+	if(rank == "Clown" || rank == "Mime")//No funny bussiness
 		return 0
-	if(rank in security_positions)
+	if(rank == "Bartender")
 		return 0
 	return 1
