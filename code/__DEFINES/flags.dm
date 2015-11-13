@@ -66,8 +66,8 @@
 #define VIRUSIMMUNE		4096
 #define PIERCEIMMUNE	8192
 
-#define MUTCOLORS_PARTSONLY 	16384	//Used if we want the mutant colour to be only used by mutant bodyparts. Don't combine this with MUTCOLORS, or it will be useless.
-#define THAIR 			32768
+#define NOTRANSSTING	16384
+#define MUTCOLORS_PARTSONLY 	32768	//Used if we want the mutant colour to be only used by mutant bodyparts. Don't combine this with MUTCOLORS, or it will be useless.
 
 
 /*

@@ -58,7 +58,7 @@
 		eyes_s.Blend("#[eye_color]", ICON_MULTIPLY)
 
 	S = hair_styles_tajaran[features["tajaran_hair"]]
-	if(S && (THAIR in pref_species.specflags))
+	if(S && (pref_species.id == "tajaran"))
 		var/icon/hair_s = new/icon("icon" = S.icon, "icon_state" = "[S.icon_state]_s")
 		hair_s.Blend("#[hair_color]", ICON_MULTIPLY)
 		eyes_s.Blend(hair_s, ICON_OVERLAY)
@@ -143,7 +143,7 @@
 			switch(S.color_src)
 				if(MUTCOLORS)
 					part.Blend("#[features["mcolor"]]", ICON_MULTIPLY)
-				if(HAIR|THAIR)
+				if(HAIR)
 					if(hair_color == "mutcolor")
 						part.Blend("#[features["mcolor"]]", ICON_MULTIPLY)
 					else
