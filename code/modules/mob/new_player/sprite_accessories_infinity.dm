@@ -110,3 +110,8 @@
 	icon_state = "bikini_nain"
 	icon = 'icons/mob/infinity_work.dmi'
 	gender = FEMALE
+
+/datum/sprite_accessory/hair/pigtailis
+	name = "Pigtailis"
+	icon_state = "pigtailis"
+	icon = 'icons/mob/more_hairs.dmi'
