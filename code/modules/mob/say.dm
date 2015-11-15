@@ -33,7 +33,7 @@
 			src << "<span class='danger'>You cannot talk in deadchat (muted).</span>"
 			return
 
-	var/name = src.real_name
+	var/name = real_name
 	var/alt_name = ""
 
 	if(say_disabled)	//This is here to try to identify lag problems

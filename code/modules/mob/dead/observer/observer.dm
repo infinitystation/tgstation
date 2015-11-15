@@ -225,7 +225,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		if(client.banprisoned)
 			return
 
-	var/list/mobs = getmobs()
+	var/list/mobs = getpois()
 	var/input = input("Please, select a mob!", "Haunt", null, null) as null|anything in mobs
 	var/mob/target = mobs[input]
 	ManualFollow(target)
@@ -271,7 +271,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		var/list/dest = list() //List of possible destinations (mobs)
 		var/target = null	   //Chosen target.
 
-		dest += getmobs() //Fill list, prompt user with list
+		dest += getpois(mobs_only=1) //Fill list, prompt user with list
 		target = input("Please, select a player!", "Jump to Mob", null, null) as null|anything in dest
 
 		if (!target)//Make sure we actually have a target
