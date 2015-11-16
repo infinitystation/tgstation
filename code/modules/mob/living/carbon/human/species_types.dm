@@ -515,6 +515,4 @@ var/global/image/plasmaman_on_fire = image("icon"='icons/mob/OnFire.dmi', "icon_
 /datum/species/plasmaman/qualifies_for_rank(rank, list/features)
 	if(rank == "Clown" || rank == "Mime")//No funny bussiness
 		return 0
-	if(rank == "Bartender")
-		return 0
 	return 1

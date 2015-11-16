@@ -43,11 +43,11 @@ map ministation
 	#voteweight 0
 endmap
 
-map TerrorStation
-	friendlyname Terror's Meta Station
-	default
+#map TerrorStation
+	#friendlyname Terror's Meta Station (DISABLED)
+	#default
 	#voteweight 0
-endmap
+#endmap
 
 map metastation
 	friendlyname TG Meta Station
