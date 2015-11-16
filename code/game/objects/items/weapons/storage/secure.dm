@@ -160,9 +160,11 @@
 
 /obj/item/weapon/storage/secure/briefcase/bio
 	name = "secure biocase"
-	icon = 'icons/obj/biocase.dmi'
-	lefthand_file = 'icons/mob/inhands/biocase_left.dmi'
-	righthand_file = 'icons/mob/inhands/biocase_right.dmi'
+	icon = 'icons/obj/infinity_object.dmi'
+	icon_state = "biocase"
+	item_state = "bio-case"
+	lefthand_file = 'icons/mob/inhands/infinity_obj_left.dmi'
+	righthand_file = 'icons/mob/inhands/infinity_obj_right.dmi'
 	desc = "A large briefcase with a digital locking system. Use this case for storage bio-hazard items "
 
 /obj/item/weapon/storage/secure/briefcase/New()

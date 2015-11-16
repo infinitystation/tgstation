@@ -560,6 +560,11 @@ RCD
 /obj/item/weapon/rcd/advanced
 	name = "advanced rapid-construction-device (RCD)"
 	desc = "An advanced device used to rapidly build and deconstruct walls and floors."
+	icon = 'icons/obj/infinity_object.dmi'
+	icon_state = "rcdw"
+	item_state = "rcdw"
+	lefthand_file = 'icons/mob/inhands/infinity_obj_left.dmi'
+	righthand_file = 'icons/mob/inhands/infinity_obj_right.dmi'
 	force = 12
 	throwforce = 12
 	origin_tech = "engineering=6;materials=7;bluespace=4;plasmatech=4"
