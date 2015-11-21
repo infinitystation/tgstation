@@ -1073,6 +1073,8 @@ var/list/preferences_datums = list()
 					toggles ^= ANNOUNCE_LOGIN
 
 				if("be_special")
+					if(user.client.banprisoned)
+						return
 					var/be_special_type = href_list["be_special_type"]
 					if(!islist(be_special))
 						be_special = list()
@@ -1098,24 +1100,36 @@ var/list/preferences_datums = list()
 						user.stopLobbySound()
 
 				if("ghost_ears")
+					if(user.client.banprisoned)
+						return
 					chat_toggles ^= CHAT_GHOSTEARS
 
 				if("ghost_sight")
+					if(user.client.banprisoned)
+						return
 					chat_toggles ^= CHAT_GHOSTSIGHT
 
 				if("ghost_whispers")
+					if(user.client.banprisoned)
+						return
 					chat_toggles ^= CHAT_GHOSTWHISPER
 
 				if("ghost_radio")
+					if(user.client.banprisoned)
+						return
 					chat_toggles ^= CHAT_GHOSTRADIO
 
 				if("ghost_pda")
+					if(user.client.banprisoned)
+						return
 					chat_toggles ^= CHAT_GHOSTPDA
 
 				if("pull_requests")
 					chat_toggles ^= CHAT_PULLR
 
 				if("allow_midround_antag")
+					if(user.client.banprisoned)
+						return
 					toggles ^= MIDROUND_ANTAG
 
 				if("save")

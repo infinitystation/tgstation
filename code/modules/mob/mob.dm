@@ -551,7 +551,7 @@ var/list/slot_equipment_priority = list( \
 	if(check_rights_for(client,R_ADMIN))
 		is_admin = 1
 	if(src.client.banprisoned)
-		usr << "Вам это не нужно"
+		return
 
 	else if(stat != DEAD || istype(src, /mob/new_player))
 		usr << "<span class='notice'>You must be observing to use this!</span>"
