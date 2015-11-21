@@ -124,6 +124,11 @@
 	name = "engraved floor"
 	icon_state = "cult"
 
+/turf/simulated/floor/engine/cult/airless
+	oxygen = 0
+	nitrogen = 0
+	temperature = TCMB
+
 /turf/simulated/floor/engine/cult/New()
 	PoolOrNew(/obj/effect/overlay/temp/cult/floor, src)
 	..()
