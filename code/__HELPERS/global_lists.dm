@@ -31,16 +31,14 @@
 	init_sprite_accessory_subtypes(/datum/sprite_accessory/tajaran/ears, ears_list_tajaran)
 
 	//Species
-	for(var/spath in typesof(/datum/species))
-		if(spath == /datum/species)
-			continue
+	for(var/spath in subtypesof(/datum/species))
 		var/datum/species/S = new spath()
 		if(S.roundstart)
-			roundstart_species[S.name] = S.type
+			roundstart_species[S.id] = S.type
 		species_list[S.id] = S.type
 
 	//Surgeries
-	for(var/path in (typesof(/datum/surgery) - /datum/surgery))
+	for(var/path in (subtypesof(/datum/surgery)))
 		surgeries_list += new path()
 
 	init_subtypes(/datum/table_recipe, table_recipes)
@@ -61,8 +59,7 @@
 //if no list/L is provided, one is created.
 /proc/init_subtypes(prototype, list/L)
 	if(!istype(L))	L = list()
-	for(var/path in typesof(prototype))
-		if(path == prototype)	continue
+	for(var/path in subtypesof(prototype))
 		L += new path()
 	return L
 
@@ -71,8 +68,6 @@
 /proc/init_paths(prototype, list/L)
 	if(!istype(L))
 		L = list()
-		for(var/path in typesof(prototype))
-			if(path == prototype)
-				continue
+		for(var/path in subtypesof(prototype))
 			L+= path
 		return L

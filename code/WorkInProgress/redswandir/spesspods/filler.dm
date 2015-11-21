@@ -13,12 +13,3 @@
 	. = ..()
 	bound_width = 64
 	bound_height = 64
-
-/obj/structure/fakefloors/snow
-	name = "\improper snow"
-	icon = 'icons/turf/snow.dmi'
-	icon_state = "snow"
-	opacity = 0
-	anchored = 1
-	unacidable = 1
-	mouse_opacity = 0 //hopefully so people can't examine it and be like OH there are many of these on one tile
