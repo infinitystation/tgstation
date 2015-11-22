@@ -52,6 +52,11 @@
 /proc/force_update_server()
 	if(ticker.current_state != GAME_STATE_FINISHED)
 		return 0
-	world << "<b>СЕРВЕР ОБНОВЛЯЕТСЯ ЧЕРЕЗ 10 СЕКУНД! СЕРВЕР НЕ БУДЕТ РАБОТАТЬ НЕСКОЛЬКО МИНУТ!</b><br>Обновление в конце раунда инициировано администратором [ticker.updater_ckey]."
+	world << "<span class='adminooc'><FONT size=5>ВНИМАНИЕ! СЕРВЕР ОБНОВЛЯЕТСЯ ЧЕРЕЗ 10 СЕКУНД! СЕРВЕР НЕ БУДЕТ РАБОТАТЬ НЕСКОЛЬКО МИНУТ!</FONT><br>Обновление в конце раунда инициировано администратором [ticker.updater_ckey]</span>."
+	var/sound/update_sound = sound('sound/effects/alarm.ogg', repeat = 0, wait = 0, channel = 0, vol = 100)
+	update_sound.priority = 250
+	update_sound.status = SOUND_UPDATE|SOUND_STREAM
+	for(var/mob/M in player_list)
+		M << update_sound
 	sleep(100)
 	shell("sh update.sh")
