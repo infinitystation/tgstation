@@ -1704,6 +1704,12 @@
 	if(mind)
 		mind.active = 1		//indicates that the mind is currently synced with a client
 
+/mob/new_player/sync_mind()
+	return
+
+/mob/dead/observer/sync_mind()
+	return
+
 //Initialisation procs
 /mob/proc/mind_initialize()
 	if(mind)
