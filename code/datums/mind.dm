@@ -1701,8 +1701,7 @@
 
 /mob/proc/sync_mind()
 	mind_initialize()	//updates the mind (or creates and initializes one if one doesn't exist)
-	if(mind)
-		mind.active = 1		//indicates that the mind is currently synced with a client
+	mind.active = 1		//indicates that the mind is currently synced with a client
 
 /mob/new_player/sync_mind()
 	return
