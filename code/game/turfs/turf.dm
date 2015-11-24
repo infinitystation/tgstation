@@ -277,6 +277,9 @@
 /turf/proc/can_have_cabling()
 	return 1
 
+/turf/proc/update_icon()
+	return
+
 /turf/proc/can_lay_cable()
 	return can_have_cabling() & !intact
 
