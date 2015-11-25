@@ -400,8 +400,6 @@
 
 
 /mob/new_player/proc/create_character()
-	if(src.client.banprisoned)
-		return
 	spawning = 1
 	close_spawn_windows()
 
