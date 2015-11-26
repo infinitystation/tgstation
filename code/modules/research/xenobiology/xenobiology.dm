@@ -529,7 +529,7 @@
 
 
 /obj/effect/timestop/wizard
-	duration = 90
+	duration = 100
 
 
 /obj/item/stack/tile/bluespace
