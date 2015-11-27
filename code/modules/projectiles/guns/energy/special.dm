@@ -149,6 +149,7 @@
 	can_pull_pin = 0
 	origin_tech = "combat=2;powerstorage=1"
 
+
 /obj/item/weapon/gun/energy/kinetic_accelerator/newshot()
 	..()
 	if(chambered && chambered.BB)
@@ -159,7 +160,7 @@
 /obj/item/weapon/gun/energy/kinetic_accelerator/attackby(obj/item/weapon/W as obj, mob/user as mob, params)
 	if(istype(W, /obj/item/weapon/screwdriver) && upgrades["screwdriver"] < 3)
 		upgrades["screwdriver"]++
-		overheat_time -= 1
+		overheat_time = max(0, overheat_time-1)
 		user << "<span class='info'>You tweak [src]'s thermal exchanger.</span>"
 
 	else if(istype(W, /obj/item/stack))
@@ -167,19 +168,36 @@
 
 		if(istype(S, /obj/item/stack/sheet/mineral/diamond) && upgrades["diamond"] < 3)
 			upgrades["diamond"]++
-			overheat_time -= 3
+			overheat_time = max(0, overheat_time-3)
 			user << "<span class='info'>You upgrade [src]'s thermal exchanger with diamonds.</span>"
 			S.use(1)
 
-		if(istype(S, /obj/item/stack/sheet/mineral/plasma) && upgrades["plasma"] < 2)
+		if(istype(S, /obj/item/stack/sheet/mineral/plasma) && upgrades["plasma"] < 3)
 			upgrades["plasma"]++
 			range_add++
 			user << "<span class='info'>You upgrade [src]'s accelerating chamber with plasma.</span>"
-			// if(prob(5 * (range_add + 1) * (range_add + 1)) && power_supply)
-			//	power_supply.rigged = 1 // This is dangerous!
 			S.use(1)
 
 	return ..()
+
+
+/obj/item/weapon/gun/energy/kinetic_accelerator/super
+	name = "super-kinetic accelerator"
+	desc = "An upgraded, superior version of the proto-kinetic accelerator."
+	icon_state = "kineticgun_u"
+	item_state = "kineticgun_u"
+	ammo_type = list(/obj/item/ammo_casing/energy/kinetic/super)
+	overheat_time = 14
+	origin_tech = "combat=3;powerstorage=2"
+
+/obj/item/weapon/gun/energy/kinetic_accelerator/hyper
+	name = "hyper-kinetic accelerator"
+	desc = "An upgraded, even more superior version of the proto-kinetic accelerator."
+	icon_state = "kineticgun_h"
+	item_state = "kineticgun_h"
+	ammo_type = list(/obj/item/ammo_casing/energy/kinetic/hyper)
+	overheat_time = 12
+	origin_tech = "combat=4;powerstorage=3"
 
 /obj/item/weapon/gun/energy/kinetic_accelerator/shoot_live_shot()
 	overheat = 1
@@ -247,6 +265,14 @@
 				pin.loc = get_turf(src.loc)
 				pin = null
 				user << "<span class ='notice'>Вы вытащили ударник с [src]!</span>"
+
+
+/obj/item/weapon/gun/energy/kinetic_accelerator/suicide_act(mob/user)
+	if(!suppressed)
+		playsound(src.loc, 'sound/weapons/kenetic_reload.ogg', 60, 1)
+	user.visible_message("<span class='suicide'>[user] cocks the [src.name] and pretends to blow \his brains out! It looks like \he's trying to commit suicide!</b></span>")
+	shoot_live_shot()
+	return (OXYLOSS)
 
 /obj/item/weapon/gun/energy/plasmacutter
 	name = "plasma cutter"
