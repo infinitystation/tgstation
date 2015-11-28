@@ -377,7 +377,7 @@ Turf and target are seperate in case you want to teleport some distance from a t
 	var/list/names = list()
 	var/list/pois = list()
 	var/list/namecounts = list()
-	
+
 	for(var/mob/M in mobs)
 		var/name = M.name
 		if (name in names)
@@ -725,6 +725,7 @@ Turf and target are seperate in case you want to teleport some distance from a t
 		progbar = image("icon" = 'icons/effects/doafter_icon.dmi', "loc" = target, "icon_state" = "prog_bar_0")
 		progbar.icon_state = "prog_bar_[round(((current_number / goal_number) * 100), 10)]"
 		progbar.pixel_y = 32
+		progbar.appearance_flags = APPEARANCE_UI_IGNORE_ALPHA
 		return progbar
 
 /proc/cancel_progress_bar(mob/user, image/progbar)

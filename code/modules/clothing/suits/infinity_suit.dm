@@ -20,6 +20,7 @@
 	hoodtype = /obj/item/clothing/head/blackhoody
 
 /obj/item/clothing/head/blackhoody
+	name = "black hood"
 	icon_state = "blackhoody"
 	worn_icon = 'icons/mob/infinity_work.dmi'
 	icon = 'icons/obj/clothing/infinity_work.dmi'

@@ -212,7 +212,7 @@
 				return 1
 	return 0
 
-/turf/simulated/wall/r_wall/proc/update_icon()
+/turf/simulated/wall/r_wall/update_icon()
 	if(d_state)
 		icon_state = "r_wall-[d_state]"
 		smooth = SMOOTH_FALSE

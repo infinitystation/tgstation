@@ -81,7 +81,7 @@ var/list/icons_to_ignore_at_floor_init = list("damaged1","damaged2","damaged3","
 /turf/simulated/floor/blob_act()
 	return
 
-/turf/simulated/floor/proc/update_icon()
+/turf/simulated/floor/update_icon()
 	if(lava)
 		return 0
 	if(air)

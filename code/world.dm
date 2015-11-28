@@ -222,15 +222,18 @@ var/global/list/map_transition_config = MAP_TRANSITION_CONFIG
 	features += "Map - [MAP_NAME]"
 
 	if(ticker)
-		if(event_on_air)
-			features += "<b>EVENT</b>"
-		else if(master_mode)
-			features += "[master_mode]"
-	else
-		if(event_on_air)
-			features += "<b>STARTING EVENT</b>"
+		if(ticker.current_state >= 3)
+			if(event_on_air)
+				features += "<b>EVENT</b>"
+			else if(master_mode)
+				features += "[master_mode]"
 		else
-			features += "<b>STARTING</b>"
+			if(event_on_air)
+				features += "<b>STARTING EVENT</b>"
+			else
+				features += "<b>STARTING [master_mode]</b>"
+	else
+		features += "<b>SERVER STARTING</b>"
 
 	if (!enter_allowed)
 		features += "closed"
