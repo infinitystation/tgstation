@@ -1347,3 +1347,11 @@ B --><-- A
 		c_dist++
 
 	return L
+
+/atom/proc/contains(var/atom/location)
+        if(!location)
+                return 0
+        for(location, location && location != src, location=location.loc); //semicolon is for the empty statement
+        if(location == src)
+                return 1
+        return 0

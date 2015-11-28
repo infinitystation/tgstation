@@ -293,6 +293,18 @@ var/list/bloody_footprints_cache = list()
 #define subtypesof(typepath) ( typesof(typepath) - typepath )
 
 
+//Bot types
+#define SEC_BOT				1	// Secutritrons (Beepsky) and ED-209s
+#define MULE_BOT			2	// MULEbots
+#define FLOOR_BOT			4	// Floorbots
+#define CLEAN_BOT			8	// Cleanbots
+#define MED_BOT				16	// Medibots
+
+//Sentience types
+#define SENTIENCE_ORGANIC 1
+#define SENTIENCE_ARTIFICIAL 2
+#define SENTIENCE_OTHER 3
+
 
 /////////////////////////////////////
 // atom.appearence_flags shortcuts //

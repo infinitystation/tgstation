@@ -64,6 +64,8 @@
 
 #define isblobzombie(A) (istype(A, /mob/living/simple_animal/hostile/blob/blobspore))
 
+#define isbot(A) (istype(A, /mob/living/simple_animal/bot))
+
 // ASSEMBLY HELPERS
 
 #define isassembly(O) (istype(O, /obj/item/device/assembly))
