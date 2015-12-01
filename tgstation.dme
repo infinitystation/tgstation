@@ -852,6 +852,7 @@
 #include "code\modules\admin\create_poll.dm"
 #include "code\modules\admin\create_turf.dm"
 #include "code\modules\admin\holder2.dm"
+#include "code\modules\admin\infinity_admin.dm"
 #include "code\modules\admin\IsBanned.dm"
 #include "code\modules\admin\isbanprisoned.dm"
 #include "code\modules\admin\NewBan.dm"

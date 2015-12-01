@@ -206,7 +206,7 @@ var/global/list/map_transition_config = MAP_TRANSITION_CONFIG
 	if (config && config.server_name)
 		s += "<b>[config.server_name]</b> &#8212; "
 
-	s += "<b>[station_name()]</b>";
+	s += "<b>[config.station_name]</b>";
 	s += " ("
 	s += "<a href=\"http://infinity.smforum.ru\">" //Change this to wherever you want the hub to link to.
 //	s += "[game_version]"
