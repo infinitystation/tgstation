@@ -14,7 +14,8 @@
 	name = "oxygen tank"
 	desc = "A tank of oxygen."
 	icon_state = "oxygen"
-	distribute_pressure = ONE_ATMOSPHERE*O2STANDARD
+	distribute_pressure = 16
+	force = 8
 
 
 /obj/item/weapon/tank/internals/oxygen/New()
