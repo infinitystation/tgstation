@@ -1,4 +1,4 @@
-/datum/admins/proc/reset_vote()
+/datum/admins/verb/reset_vote()
 	set category = "Admin"
 	set name = "Reset Vote"
 	set desc = "Resets Vote"
