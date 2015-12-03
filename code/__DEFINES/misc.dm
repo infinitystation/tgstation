@@ -124,7 +124,7 @@
 #define MANIFEST_ERROR_COUNT	2
 #define MANIFEST_ERROR_ITEM		4
 
-#define TRANSITIONEDGE			2 //Distance from edge to move to another z-level
+#define TRANSITIONEDGE			3 //Distance from edge to move to another z-level
 
 
 
@@ -162,6 +162,9 @@
 #define MOB_SIZE_SMALL 1
 #define MOB_SIZE_HUMAN 2
 #define MOB_SIZE_LARGE 3
+
+//Slime evolution threshold. Controls how fast slimes can split/grow
+#define SLIME_EVOLUTION_THRESHOLD 10
 
 //singularity defines
 #define STAGE_ONE 1
@@ -285,3 +288,44 @@ var/list/bloody_footprints_cache = list()
 #define DYNAMIC_LIGHTING_ENABLED 1 //dynamic lighting enabled
 #define DYNAMIC_LIGHTING_IFSTARLIGHT 2 //dynamic lighting enabled only if starlight is.
 #define IS_DYNAMIC_LIGHTING(A) ( A.lighting_use_dynamic == DYNAMIC_LIGHTING_IFSTARLIGHT ? config.starlight : A.lighting_use_dynamic )
+
+//subtypesof(), typesof() without the parent path
+#define subtypesof(typepath) ( typesof(typepath) - typepath )
+
+
+//Bot types
+#define SEC_BOT				1	// Secutritrons (Beepsky) and ED-209s
+#define MULE_BOT			2	// MULEbots
+#define FLOOR_BOT			4	// Floorbots
+#define CLEAN_BOT			8	// Cleanbots
+#define MED_BOT				16	// Medibots
+
+//Sentience types
+#define SENTIENCE_ORGANIC 1
+#define SENTIENCE_ARTIFICIAL 2
+#define SENTIENCE_OTHER 3
+
+
+/////////////////////////////////////
+// atom.appearence_flags shortcuts //
+/////////////////////////////////////
+
+//Disabling certain features
+#define APPEARANCE_IGNORE_TRANSFORM			RESET_TRANSFORM
+#define APPEARANCE_IGNORE_COLOUR			RESET_COLOR
+#define	APPEARANCE_IGNORE_CLIENT_COLOUR		NO_CLIENT_COLOR
+#define APPEARANCE_IGNORE_COLOURING			RESET_COLOR|NO_CLIENT_COLOR
+#define APPEARANCE_IGNORE_ALPHA				RESET_ALPHA
+#define APPEARANCE_NORMAL_GLIDE				~LONG_GLIDE
+
+//Enabling certain features
+#define APPEARANCE_CONSIDER_TRANSFORM		~RESET_TRANSFORM
+#define APPEARANCE_CONSIDER_COLOUR			~RESET_COLOUR
+#define APPEARANCE_CONSIDER_CLIENT_COLOUR	~NO_CLIENT_COLOR
+#define APPEARANCE_CONSIDER_COLOURING		~RESET_COLOR|~NO_CLIENT_COLOR
+#define APPEARANCE_CONSIDER_ALPHA			~RESET_ALPHA
+#define APPEARANCE_LONG_GLIDE				LONG_GLIDE
+
+//Consider these images/atoms as part of the UI/HUD
+#define APPEARANCE_UI_IGNORE_ALPHA			RESET_COLOR|RESET_TRANSFORM|NO_CLIENT_COLOR|RESET_ALPHA
+#define APPEARANCE_UI						RESET_COLOR|RESET_TRANSFORM|NO_CLIENT_COLOR

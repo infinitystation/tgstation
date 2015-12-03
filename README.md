@@ -1,5 +1,5 @@
 ﻿##Модифированный /tg/station v1.0.1
-Используется сервером Infinity.
+Используется сервером Infinity byond://88.198.175.74:4738.
 
 **Сайт оригинального разработчика:** http://www.tgstation13.org  
 **Оригинальный код:** https://github.com/tgstation/-tg-station  
@@ -8,7 +8,7 @@
 **IRC (На английском)**: irc://irc.rizon.net/coderbus  
 **Основная карта:** TerrorStation (_maps/map_files/TerrorStation)  
 **Используемая карта:** TerrorStation  
-**Минимальная версия BYOND для компиляции:** 508
+**Минимальная версия BYOND для компиляции:** 509
 
 ##ЗАГРУЗКА
 

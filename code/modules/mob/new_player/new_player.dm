@@ -105,6 +105,8 @@
 		return 1
 
 	if(href_list["ready"])
+		if(client.banprisoned)
+			return
 		if(!ticker || ticker.current_state <= GAME_STATE_PREGAME) // Make sure we don't ready up after the round has started
 			ready = text2num(href_list["ready"])
 		else
@@ -118,10 +120,13 @@
 			new_player_panel()
 
 	if(href_list["spawn_prisoner"])
-		Spawn_Prisoner()
+		if(client.banprisoned)
+			Spawn_Prisoner()
 		return 1
 
 	if(href_list["observe"])
+		if(client.banprisoned)
+			return
 
 		if(alert(src,"Are you sure you wish to observe? You will not be able to play this round!","Player Setup","Yes","No") == "Yes")
 			if(!client)	return 1
@@ -151,6 +156,8 @@
 			return 1
 
 	if(href_list["late_join"])
+		if(client.banprisoned)
+			return
 		if(!ticker || ticker.current_state != GAME_STATE_PLAYING)
 			usr << "<span class='danger'>The round is either not ready, or has already finished...</span>"
 			return
@@ -174,9 +181,13 @@
 		LateChoices()
 
 	if(href_list["manifest"])
+		if(client.banprisoned)
+			return
 		ViewManifest()
 
 	if(href_list["SelectedJob"])
+		if(client.banprisoned)
+			return
 
 		if(!enter_allowed)
 			usr << "<span class='notice'>There is an administrative lock on entering the game!</span>"
@@ -194,16 +205,22 @@
 		if(client)
 			client.prefs.process_link(src, href_list)
 	else if(!href_list["late_join"])
-		if(client.banprisoned)
-			new_player_panel_prisoner()
-		else
-			new_player_panel()
+		if(client)
+			if(client.banprisoned)
+				new_player_panel_prisoner()
+			else
+				new_player_panel()
+		return
 
 	if(href_list["showpoll"])
+		if(client.banprisoned)
+			return
 		handle_player_polling()
 		return
 
 	if(href_list["pollid"])
+		if(client.banprisoned)
+			return
 		var/pollid = href_list["pollid"]
 		if(istext(pollid))
 			pollid = text2num(pollid)
@@ -212,6 +229,8 @@
 		return
 
 	if(href_list["votepollid"] && href_list["votetype"])
+		if(client.banprisoned)
+			return
 		var/pollid = text2num(href_list["votepollid"])
 		var/votetype = href_list["votetype"]
 		switch(votetype)
@@ -275,6 +294,8 @@
 
 
 /mob/new_player/proc/AttemptLateSpawn(rank)
+	if(client.banprisoned)
+		return
 	if(!IsJobAvailable(rank))
 		src << alert("[rank] is not available. Please try another.")
 		return 0
@@ -330,6 +351,8 @@
 					announcer.announce("ARRIVAL", character.real_name, rank, list()) //make the list empty to make it announce it in common
 
 /mob/new_player/proc/LateChoices()
+	if(client.banprisoned)
+		return
 	var/mills = world.time // 1/10 of a second, not real milliseconds but whatever
 	//var/secs = ((mills % 36000) % 600) / 10 //Not really needed, but I'll leave it here for refrence.. or something
 	var/mins = (mills % 36000) / 600
@@ -403,6 +426,8 @@
 	return new_character
 
 /mob/new_player/proc/ViewManifest()
+	if(client.banprisoned)
+		return
 	var/dat = "<html><body>"
 	dat += "<h4>Crew Manifest</h4>"
 	dat += data_core.get_manifest(OOC = 1)

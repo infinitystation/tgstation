@@ -30,3 +30,5 @@ wolforbykot = Game Master
 dvd406metaua = Game Master
 nikovar = Game Master
 xsarethx = Game Master
+farwa87 = Game Master
+vertonx = Game Master

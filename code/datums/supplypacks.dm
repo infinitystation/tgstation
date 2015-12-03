@@ -76,10 +76,10 @@ var/list/all_supply_groups = list(supply_emergency,supply_security,supply_engine
 
 /datum/supply_packs/emergency/evac
 	name = "Emergency equipment"
-	contains = list(/obj/machinery/bot/floorbot,
-					/obj/machinery/bot/floorbot,
-					/obj/machinery/bot/medbot,
-					/obj/machinery/bot/medbot,
+	contains = list(/mob/living/simple_animal/bot/floorbot,
+					/mob/living/simple_animal/bot/floorbot,
+					/mob/living/simple_animal/bot/medbot,
+					/mob/living/simple_animal/bot/medbot,
 					/obj/item/weapon/tank/internals/air,
 					/obj/item/weapon/tank/internals/air,
 					/obj/item/weapon/tank/internals/air,
@@ -1018,7 +1018,7 @@ var/list/all_supply_groups = list(supply_emergency,supply_security,supply_engine
 
 /datum/supply_packs/misc/mule
 	name = "MULEbot Crate"
-	contains = list(/obj/machinery/bot/mulebot)
+	contains = list(/mob/living/simple_animal/bot/mulebot)
 	cost = 20
 	containertype = /obj/structure/largecrate/mule
 	containername = "\improper MULEbot Crate"
@@ -1094,6 +1094,8 @@ var/list/all_supply_groups = list(supply_emergency,supply_security,supply_engine
 					/obj/item/hand_labeler_refill,
 					/obj/item/hand_labeler_refill,
 					/obj/item/weapon/paper_bin,
+					/obj/item/weapon/pen/fourcolor,
+					/obj/item/weapon/pen/fourcolor,
 					/obj/item/weapon/pen,
 					/obj/item/weapon/pen/blue,
 					/obj/item/weapon/pen/red,
@@ -1168,6 +1170,16 @@ var/list/all_supply_groups = list(supply_emergency,supply_security,supply_engine
 	cost = 20
 	containername = "high-traction floor tiles"
 
+/datum/supply_packs/misc/plasmaman
+	name = "Plasma-man Supply Kit"
+	contains = list(/obj/item/clothing/under/plasmaman,
+					/obj/item/clothing/under/plasmaman,
+					/obj/item/weapon/tank/internals/plasmaman/belt/full,
+					/obj/item/weapon/tank/internals/plasmaman/belt/full,
+					/obj/item/clothing/head/helmet/space/plasmaman,
+					/obj/item/clothing/head/helmet/space/plasmaman)
+	cost = 20
+	containername = "plasma-man supply kit"
 
 ///////////// Costumes
 

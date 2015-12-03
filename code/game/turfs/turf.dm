@@ -277,6 +277,9 @@
 /turf/proc/can_have_cabling()
 	return 1
 
+/turf/proc/update_icon()
+	return
+
 /turf/proc/can_lay_cable()
 	return can_have_cabling() & !intact
 
@@ -325,3 +328,8 @@
 	icon = 'icons/obj/doors/airlocks/centcom/centcom.dmi'
 	icon_state = "fake_door"
 
+/turf/indestructible/rock
+	name = "dense rock"
+	desc = "An extremely densely-packed rock, most mining tools or explosives would never get through this."
+	icon = 'icons/turf/mining.dmi'
+	icon_state = "rock"

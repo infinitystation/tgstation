@@ -2,24 +2,6 @@
 
 var/list/preferences_datums = list()
 
-var/global/list/special_roles = list( //keep synced with the defines BE_* in setup.dm
-//some autodetection here.
-	"traitor" = /datum/game_mode/traitor,			//0
-	"operative" = /datum/game_mode/nuclear,			//1
-	"changeling" = /datum/game_mode/changeling,		//2
-	"wizard" = /datum/game_mode/wizard,				//3
-	"malf AI" = /datum/game_mode/malfunction,		//4
-	"revolutionary" = /datum/game_mode/revolution,	//5
-	"alien",										//6
-	"pAI/posibrain",								//7
-	"cultist" = /datum/game_mode/cult,				//8
-	"blob" = /datum/game_mode/blob,					//9
-	"ninja",										//10
-	"monkey" = /datum/game_mode/monkey,				//11
-	"gangster" = /datum/game_mode/gang,				//12
-	"shadowling" = /datum/game_mode/shadowling,		//13
-	"abductor" = /datum/game_mode/abduction			//14
-)
 
 
 /datum/preferences
@@ -36,7 +18,14 @@ var/global/list/special_roles = list( //keep synced with the defines BE_* in set
 	//game-preferences
 	var/lastchangelog = ""				//Saved changlog filesize to detect if there was a change
 	var/ooccolor = null
-	var/be_special = 0					//Special role selection
+
+	//Antag preferences
+	var/list/be_special = list()		//Special role selection
+	var/tmp/old_be_special = 0			//Bitflag version of be_special, used to update old savefiles and nothing more
+										//If it's 0, that's good, if it's anything but 0, the owner of this prefs file's antag choices were,
+										//autocorrected this round, not that you'd need to check that.
+
+
 	var/UI_style = "Midnight"
 	var/toggles = TOGGLES_DEFAULT
 	var/chat_toggles = TOGGLES_DEFAULT_CHAT
@@ -67,8 +56,7 @@ var/global/list/special_roles = list( //keep synced with the defines BE_* in set
 	var/list/custom_names = list("clown", "mime", "ai", "cyborg", "religion", "deity")
 
 		//Mob preview
-	var/icon/preview_icon_front = null
-	var/icon/preview_icon_side = null
+	var/icon/preview_icon = null
 
 		//Jobs, uses bitflags
 	var/job_civilian_high = 0
@@ -128,8 +116,7 @@ var/global/list/special_roles = list( //keep synced with the defines BE_* in set
 /datum/preferences/proc/ShowChoices(mob/user)
 	if(!user || !user.client)	return
 	update_preview_icon()
-	user << browse_rsc(preview_icon_front, "previewicon.png")
-	user << browse_rsc(preview_icon_side, "previewicon2.png")
+	user << browse_rsc(preview_icon, "previewicon.png")
 	var/dat = "<center>"
 
 	dat += "<a href='?_src_=prefs;preference=tab;tab=0' [current_tab == 0 ? "class='linkOn'" : ""]>Character Settings</a> "
@@ -184,7 +171,7 @@ var/global/list/special_roles = list( //keep synced with the defines BE_* in set
 
 			dat += "<td valign='center'>"
 
-			dat += "<div class='statusDisplay'><center><img src=previewicon.png height=64 width=64><img src=previewicon2.png height=64 width=64></center></div>"
+			dat += "<div class='statusDisplay'><center><img src=previewicon.png width=[preview_icon.Width()] height=[preview_icon.Height()]></center></div>"
 
 			dat += "</td></tr></table>"
 
@@ -214,16 +201,6 @@ var/global/list/special_roles = list( //keep synced with the defines BE_* in set
 				dat += "<a href='?_src_=prefs;preference=s_tone;task=input'>[skin_tone]</a><BR>"
 
 				dat += "</td>"
-
-			if(THAIR in pref_species.specflags)
-
-				dat += "<td valign='top' width='21%'>"
-
-				dat += "<h3>Tajaran Hair Style</h3>"
-
-				dat += "<a href='?_src_=prefs;preference=thair_style;task=input'>[features["tajaran_hair"]]</a><BR>"
-				dat += "<a href='?_src_=prefs;preference=previous_thair_style;task=input'>&lt;</a> <a href='?_src_=prefs;preference=next_thair_style;task=input'>&gt;</a><BR>"
-				dat += "<span style='border:1px solid #161616; background-color: #[hair_color];'>&nbsp;&nbsp;&nbsp;</span> <a href='?_src_=prefs;preference=hair;task=input'>Change</a><BR>"
 
 			if(HAIR in pref_species.specflags)
 
@@ -340,6 +317,17 @@ var/global/list/special_roles = list( //keep synced with the defines BE_* in set
 
 					dat += "</td>"
 
+				if("tajaran_hair" in pref_species.mutant_bodyparts)
+
+					dat += "<td valign='top' width='21%'>"
+
+					dat += "<h3>Tajaran Hair Style</h3>"
+
+					dat += "<a href='?_src_=prefs;preference=thair_style;task=input'>[features["tajaran_hair"]]</a><BR>"
+					dat += "<a href='?_src_=prefs;preference=previous_thair_style;task=input'>&lt;</a> <a href='?_src_=prefs;preference=next_thair_style;task=input'>&gt;</a><BR>"
+					dat += "<span style='border:1px solid #161616; background-color: #[hair_color];'>&nbsp;&nbsp;&nbsp;</span> <a href='?_src_=prefs;preference=hair;task=input'>Change</a><BR>"
+
+
 			if(config.mutant_humans)
 
 				if("tail_human" in pref_species.mutant_bodyparts)
@@ -410,16 +398,17 @@ var/global/list/special_roles = list( //keep synced with the defines BE_* in set
 
 			dat += "</td><td width='300px' height='300px' valign='top'>"
 
-			dat += "<h2>Antagonist Settings</h2>"
+			dat += "<h2>Special Role Settings</h2>"
 			dat += "<b>For [real_name]</b><br/>"
 
 			if(jobban_isbanned(user, "Syndicate"))
 				dat += "<font color=red><b>You are banned from antagonist roles.</b></font>"
-				src.be_special = 0
-			var/n = 0
+				src.be_special = list()
+
+
 			for (var/i in special_roles)
 				if(jobban_isbanned(user, i))
-					dat += "<b>Be [i]:</b> <a href='?_src_=prefs;jobbancheck=[i]'>BANNED</a><br>"
+					dat += "<b>Be [capitalize(i)]:</b> <a href='?_src_=prefs;jobbancheck=[i]'>BANNED</a><br>"
 				else
 					var/days_remaining = null
 					if(config.use_age_restriction_for_jobs && ispath(special_roles[i])) //If it's a game mode antag, check if the player meets the minimum age
@@ -428,10 +417,10 @@ var/global/list/special_roles = list( //keep synced with the defines BE_* in set
 						days_remaining = temp_mode.get_remaining_days(user.client)
 
 					if(days_remaining)
-						dat += "<b>Be [i]:</b> <font color=red> \[IN [days_remaining] DAYS]</font><br>"
+						dat += "<b>Be [capitalize(i)]:</b> <font color=red> \[IN [days_remaining] DAYS]</font><br>"
 					else
-						dat += "<b>Be [i]:</b> <a href='?_src_=prefs;preference=be_special;num=[n]'>[src.be_special&(1<<n) ? "Yes" : "No"]</a><br>"
-				n++
+						dat += "<b>Be [capitalize(i)]:</b> <a href='?_src_=prefs;preference=be_special;be_special_type=[i]'>[(i in be_special) ? "Yes" : "No"]</a><br>"
+
 			dat += "</td></tr></table>"
 
 	dat += "<hr><center>"
@@ -1067,11 +1056,6 @@ var/global/list/special_roles = list( //keep synced with the defines BE_* in set
 					facial_hair_style = random_facial_hair_style(gender)
 					hair_style = random_hair_style(gender)
 
-				if("hear_adminhelps")
-					toggles ^= SOUND_ADMINHELP
-				if("announce_login")
-					toggles ^= ANNOUNCE_LOGIN
-
 				if("ui")
 					switch(UI_style)
 						if("Midnight")
@@ -1081,9 +1065,21 @@ var/global/list/special_roles = list( //keep synced with the defines BE_* in set
 						else
 							UI_style = "Midnight"
 
+				if("hear_adminhelps")
+					toggles ^= SOUND_ADMINHELP
+				if("announce_login")
+					toggles ^= ANNOUNCE_LOGIN
+
 				if("be_special")
-					var/num = text2num(href_list["num"])
-					be_special ^= (1<<num)
+					if(user.client.banprisoned)
+						return
+					var/be_special_type = href_list["be_special_type"]
+					if(!islist(be_special))
+						be_special = list()
+					if(be_special_type in be_special)
+						be_special -= be_special_type
+					else
+						be_special += be_special_type
 
 				if("name")
 					be_random_name = !be_random_name
@@ -1102,24 +1098,36 @@ var/global/list/special_roles = list( //keep synced with the defines BE_* in set
 						user.stopLobbySound()
 
 				if("ghost_ears")
+					if(user.client.banprisoned)
+						return
 					chat_toggles ^= CHAT_GHOSTEARS
 
 				if("ghost_sight")
+					if(user.client.banprisoned)
+						return
 					chat_toggles ^= CHAT_GHOSTSIGHT
 
 				if("ghost_whispers")
+					if(user.client.banprisoned)
+						return
 					chat_toggles ^= CHAT_GHOSTWHISPER
 
 				if("ghost_radio")
+					if(user.client.banprisoned)
+						return
 					chat_toggles ^= CHAT_GHOSTRADIO
 
 				if("ghost_pda")
+					if(user.client.banprisoned)
+						return
 					chat_toggles ^= CHAT_GHOSTPDA
 
 				if("pull_requests")
 					chat_toggles ^= CHAT_PULLR
 
 				if("allow_midround_antag")
+					if(user.client.banprisoned)
+						return
 					toggles ^= MIDROUND_ANTAG
 
 				if("save")

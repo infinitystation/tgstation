@@ -35,7 +35,7 @@
 				var/expires
 
 				if(text2num(duration) > 0)
-					expires = "Это бан на [duration] минут, и он сниметс&#255; в [expiration] по серверному времени (МСК-1)."
+					expires = "Это бан на [duration] минут, и он сниметс&#255; в [expiration] по серверному времени (МСК-2)."
 
 				src.banprisoned_reason = "Вы, или кто-то другой, кто использовал(а) ваш компьютер или соединение ([pckey]) были забанены бан-тюрьмой по причине: [reason]. Этот бан выдал(а) администратор [ackey], в [bantime]. [expires]\n"
 				return 1
@@ -76,7 +76,7 @@
 /client/verb/request_unmute_adminhelp()
 	set name = "Отправить просьбу на размут в АХ"
 	set category = "Admin"
-	adminmutetimerid = addtimer(src,"giverequestadminhelpverb",3000) //5 minute cooldown of request admin helps
+	adminmutetimerid = addtimer(src, "giverequestadminhelpverb", 3000, FALSE) //5 minute cooldown of request admin helps
 	src.verbs -= /client/verb/request_unmute_adminhelp
 	message_admins("[key_name(src, 1)] просит снЯть мут. Чтобы снЯть мут, нажмите <A href='?_src_=holder;unmuteadminhelprequest=[src.mob.ckey];'>сюда</a>")
 	for(var/client/X in admins)
@@ -97,10 +97,10 @@
 	shoes = /obj/item/clothing/shoes/sneakers/orange/legcuffs
 
 /mob/new_player/proc/setup_and_greet_prisoner(mob/living/carbon/human/character)
-	character.client.prefs.be_special = 0
+	character.client.prefs.be_special = list()
 	character.client.prefs.toggles &= ~(MIDROUND_ANTAG)
-	character.client.prefs.save_preferences()
 	character.client.prefs.chat_toggles = TOGGLES_PRISONER_CHAT
+	character.client.prefs.save_preferences()
 	character << character.client.banprisoned_reason
 	text = {"Здравствуйте, вы являетесь заключенным в тюрьме строгого режима.
 Вы попали сюда по причине, которая была описана выше при входе в игру.

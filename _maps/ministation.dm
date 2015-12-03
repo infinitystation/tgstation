@@ -57,8 +57,8 @@ Changes to the uplinks were made to discourage murderboning, the rest is the sam
         #include "map_files\generic\z7.dmm"
         #include "map_files\TerrorStation\z9.dmm" //prison
 
-        #define MAP_FILE "MiniStation.dmm"
-        #define MAP_NAME "MiniStation"
+        #define MAP_FILE "Mini Station.dmm"
+        #define MAP_NAME "Mini Station"
 
         #define MAP_TRANSITION_CONFIG	list(MAIN_STATION = CROSSLINKED, CENTCOMM = SELFLOOPING, ABANDONED_SATELLITE = CROSSLINKED, DERELICT = CROSSLINKED, MINING = CROSSLINKED, EMPTY_AREA_1 = CROSSLINKED, EMPTY_AREA_2 = CROSSLINKED, BANPRISON = SELFLOOPING)
 

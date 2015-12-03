@@ -34,12 +34,9 @@ var/global/list/map_transition_config = MAP_TRANSITION_CONFIG
 	load_mode()
 	load_motd()
 	load_admins()
-	LoadBansjob()
 	if(config.usewhitelist)
 		load_whitelist()
-	jobban_loadbanfile()
 	appearance_loadbanfile()
-	jobban_updatelegacybans()
 	LoadBans()
 	investigate_reset()
 
@@ -209,7 +206,7 @@ var/global/list/map_transition_config = MAP_TRANSITION_CONFIG
 	if (config && config.server_name)
 		s += "<b>[config.server_name]</b> &#8212; "
 
-	s += "<b>[station_name()]</b>";
+	s += "<b>[config.station_name]</b>";
 	s += " ("
 	s += "<a href=\"http://infinity.smforum.ru\">" //Change this to wherever you want the hub to link to.
 //	s += "[game_version]"
@@ -222,15 +219,18 @@ var/global/list/map_transition_config = MAP_TRANSITION_CONFIG
 	features += "Map - [MAP_NAME]"
 
 	if(ticker)
-		if(event_on_air)
-			features += "<b>EVENT</b>"
-		else if(master_mode)
-			features += "[master_mode]"
-	else
-		if(event_on_air)
-			features += "<b>STARTING EVENT</b>"
+		if(ticker.current_state >= 3)
+			if(event_on_air)
+				features += "<b>EVENT</b>"
+			else if(master_mode)
+				features += "[master_mode]"
 		else
-			features += "<b>STARTING</b>"
+			if(event_on_air)
+				features += "<b>STARTING EVENT</b>"
+			else
+				features += "<b>STARTING [master_mode]</b>"
+	else
+		features += "<b>SERVER STARTING</b>"
 
 	if (!enter_allowed)
 		features += "closed"

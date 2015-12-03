@@ -24,7 +24,7 @@ var/datum/subsystem/job/SSjob
 
 /datum/subsystem/job/proc/SetupOccupations(faction = "Station")
 	occupations = list()
-	var/list/all_jobs = typesof(/datum/job)
+	var/list/all_jobs = subtypesof(/datum/job)
 	if(!all_jobs.len)
 		world << "<span class='boldannounce'>Error setting up jobs, no job datums found</span>"
 		return 0
@@ -81,7 +81,7 @@ var/datum/subsystem/job/SSjob
 		if(!job.player_old_enough(player.client))
 			Debug("FOC player not old enough, Player: [player]")
 			continue
-		if(flag && (!player.client.prefs.be_special & flag))
+		if(flag && (!(flag in player.client.prefs.be_special)))
 			Debug("FOC flag failed, Player: [player], Flag: [flag], ")
 			continue
 		if(player.mind && job.title in player.mind.restricted_roles)
@@ -342,10 +342,10 @@ var/datum/subsystem/job/SSjob
 	if(!joined_late)
 		var/obj/S = null
 		for(var/obj/effect/landmark/start/sloc in start_landmarks_list)
-			if(sloc.name != rank)	
+			if(sloc.name != rank)
 				S = sloc //so we can revert to spawning them on top of eachother if something goes wrong
 				continue
-			if(locate(/mob/living) in sloc.loc)	
+			if(locate(/mob/living) in sloc.loc)
 				continue
 			S = sloc
 			break

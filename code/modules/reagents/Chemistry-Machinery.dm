@@ -18,7 +18,6 @@
 	var/recharged = 0
 	var/recharge_delay = 5  //Time it game ticks between recharges
 	var/image/icon_beaker = null //cached overlay
-	var/uiname = "Chem Dispenser 5000"
 	var/list/dispensable_reagents = list("hydrogen","lithium","carbon","nitrogen","oxygen","fluorine",
 	"sodium","aluminium","silicon","phosphorus","sulfur","chlorine","potassium","iron",
 	"copper","mercury","radium","water","ethanol","sugar","sacid","welding_fuel","silver","iodine","bromine","stable_plasma")
@@ -30,7 +29,6 @@
 	energy = min(energy + addenergy, max_energy)
 	if(energy != oldenergy)
 		use_power(1500) // This thing uses up alot of power (this is still low as shit for creating reagents from thin air)
-		SSnano.update_uis(src) // update all UIs attached to src
 
 /obj/machinery/chem_dispenser/power_change()
 	if(powered())
@@ -38,7 +36,6 @@
 	else
 		spawn(rand(0, 15))
 			stat |= NOPOWER
-	SSnano.update_uis(src) // update all UIs attached to src
 
 /obj/machinery/chem_dispenser/process()
 
@@ -61,21 +58,16 @@
 	if(prob(50))
 		qdel(src)
 
- /**
-  * The ui_interact proc is used to open and update Nano UIs
-  * If ui_interact is not used then the UI will not update correctly
-  * ui_interact is currently defined for /atom/movable
-  *
-  * @param user /mob The mob who is interacting with this ui
-  * @param ui_key string A string key to use for this ui. Allows for multiple unique uis on one obj/mob (defaut value "main")
-  *
-  * @return nothing
-  */
-/obj/machinery/chem_dispenser/ui_interact(mob/user, ui_key = "main", datum/nanoui/ui = null)
-	if(stat & (BROKEN)) return
-	if(user.incapacitated()) return
+/obj/machinery/chem_dispenser/interact(mob/user)
+	if(stat & BROKEN)
+		return
+	ui_interact(user)
 
-	ui = SSnano.push_open_or_new_ui(user, src, ui_key, ui, "chem_dispenser.tmpl", "[uiname]", 490, 710, 0)
+/obj/machinery/chem_dispenser/ui_interact(mob/user, ui_key = "main", datum/nanoui/ui = null, force_open = 0)
+	ui = SSnano.try_update_ui(user, src, ui_key, ui, force_open = force_open)
+	if (!ui)
+		ui = new(user, src, ui_key, "chem_dispenser.tmpl", name, 500, 650)
+		ui.open()
 
 /obj/machinery/chem_dispenser/get_ui_data()
 	var/data = list()
@@ -108,8 +100,8 @@
 	return data
 
 /obj/machinery/chem_dispenser/Topic(href, href_list)
-	if(stat & (BROKEN))
-		return 0 // don't update UIs attached to this object
+	if(..())
+		return
 
 	if(href_list["amount"])
 		amount = round(text2num(href_list["amount"]), 5) // round to nearest 5
@@ -135,7 +127,6 @@
 			overlays.Cut()
 
 	add_fingerprint(usr)
-	return 1 // update UIs attached to this object
 
 /obj/machinery/chem_dispenser/attackby(obj/item/weapon/reagent_containers/glass/B, mob/user, params)
 	if(isrobot(user))
@@ -153,24 +144,15 @@
 	src.beaker =  B
 	B.loc = src
 	user << "<span class='notice'>You add the beaker to the machine.</span>"
-	SSnano.update_uis(src) // update all UIs attached to src
 
 	if(!icon_beaker)
 		icon_beaker = image('icons/obj/chemical.dmi', src, "disp_beaker") //randomize beaker overlay position.
 	icon_beaker.pixel_x = rand(-10,5)
 	overlays += icon_beaker
 
-/obj/machinery/chem_dispenser/attack_ai(mob/user)
-	return src.attack_hand(user)
-
-/obj/machinery/chem_dispenser/attack_paw(mob/user)
-	return src.attack_hand(user)
-
 /obj/machinery/chem_dispenser/attack_hand(mob/user)
-	if(stat & BROKEN)
-		return
-
-	ui_interact(user)
+	if (!user) return
+	interact(user)
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -1416,7 +1398,6 @@
 	..()
 	if(stat & NOPOWER)
 		return
-	var/state_change = 0
 	if(on)
 		if(beaker)
 			if(beaker.reagents.chem_temp > desired_temp)
@@ -1426,10 +1407,6 @@
 			beaker.reagents.chem_temp = round(beaker.reagents.chem_temp) //stops stuff like 456.12312312302
 
 			beaker.reagents.handle_reactions()
-			state_change = 1
-
-	if(state_change)
-		SSnano.update_uis(src)
 
 /obj/machinery/chem_heater/proc/eject_beaker()
 	if(beaker)
@@ -1437,7 +1414,6 @@
 		beaker.reagents.handle_reactions()
 		beaker = null
 		icon_state = "mixer0b"
-		SSnano.update_uis(src)
 
 /obj/machinery/chem_heater/power_change()
 	if(powered())
@@ -1445,7 +1421,6 @@
 	else
 		spawn(rand(0, 15))
 			stat |= NOPOWER
-	SSnano.update_uis(src)
 
 /obj/machinery/chem_heater/attackby(obj/item/I, mob/user, params)
 	if(isrobot(user))
@@ -1461,7 +1436,6 @@
 			I.loc = src
 			user << "<span class='notice'>You add the beaker to the machine.</span>"
 			icon_state = "mixer1b"
-			SSnano.update_uis(src)
 
 	if(default_deconstruction_screwdriver(user, "mixer0b", "mixer0b", I))
 		return
@@ -1476,15 +1450,16 @@
 			return 1
 
 /obj/machinery/chem_heater/attack_hand(mob/user)
-	ui_interact(user)
+	if (!user)
+		return
+	interact(user)
 
 /obj/machinery/chem_heater/Topic(href, href_list)
 	if(..())
-		return 0
+		return
 
 	if(href_list["toggle_on"])
 		on = !on
-		. = 1
 
 	if(href_list["adjust_temperature"])
 		var/val = href_list["adjust_temperature"]
@@ -1493,17 +1468,23 @@
 		else if(val == "input")
 			desired_temp = Clamp(input("Please input the target temperature", name) as num, 0, 1000)
 		else
-			return 0
-		. = 1
+			return
 
 	if(href_list["eject_beaker"])
 		eject_beaker()
-		. = 0 //updated in eject_beaker() already
 
-/obj/machinery/chem_heater/ui_interact(mob/user, ui_key = "main", datum/nanoui/ui = null)
-	if(user.stat || user.restrained()) return
+	add_fingerprint(usr)
 
-	ui = SSnano.push_open_or_new_ui(user, src, ui_key, ui, "chem_heater.tmpl", "ChemHeater", 350, 270, 0)
+/obj/machinery/chem_heater/interact(mob/user)
+	if(stat & BROKEN)
+		return
+	ui_interact(user)
+
+/obj/machinery/chem_heater/ui_interact(mob/user, ui_key = "main", datum/nanoui/ui = null, force_open = 0)
+	ui = SSnano.try_update_ui(user, src, ui_key, ui, force_open = force_open)
+	if (!ui)
+		ui = new(user, src, ui_key, "chem_heater.tmpl", name, 350, 400)
+		ui.open()
 
 /obj/machinery/chem_heater/get_ui_data()
 	var/data = list()
@@ -1534,7 +1515,6 @@
 	max_energy = 100
 	amount = 30
 	recharge_delay = 5
-	uiname = "Soda Dispenser"
 	dispensable_reagents = list("water","ice","coffee","cream","tea","icetea","cola","spacemountainwind","dr_gibb","space_up","tonic","sodawater","lemon_lime","sugar","orangejuice","limejuice","tomatojuice")
 
 /obj/machinery/chem_dispenser/drinks/attackby(obj/item/O, mob/user)
@@ -1564,6 +1544,4 @@
 	anchored = 1
 	icon = 'icons/obj/chemical.dmi'
 	icon_state = "booze_dispenser"
-	uiname = "Booze Dispenser"
 	dispensable_reagents = list("lemon_lime","sugar","orangejuice","limejuice","sodawater","tonic","beer","kahlua","whiskey","wine","vodka","gin","rum","tequila","vermouth","cognac","ale")
-

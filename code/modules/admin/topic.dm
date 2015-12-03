@@ -494,10 +494,6 @@
 
 		var/banreason = appearance_isbanned(M)
 		if(banreason)
-	/*		if(!config.ban_legacy_system)
-				usr << "Unfortunately, database based unbanning cannot be done through this panel"
-				DB_ban_panel(M.ckey)
-				return	*/
 			switch(alert("Reason: '[banreason]' Remove appearance ban?","Please Confirm","Yes","No"))
 				if("Yes")
 					ban_unban_log_save("[key_name(usr)] removed [key_name(M)]'s appearance ban")
@@ -906,9 +902,6 @@
 		if(notbannedlist.len) //at least 1 unbanned job exists in joblist so we have stuff to ban.
 			switch(alert("Temporary Ban?",,"Yes","No", "Cancel"))
 				if("Yes")
-					if(config.ban_legacy_system)
-						usr << "<span class='danger'>Your server is using the legacy banning system, which does not support temporary job bans. Consider upgrading. Aborting ban.</span>"
-						return
 					var/mins = input(usr,"How long (in minutes)?","Ban time",1440) as num|null
 					if(!mins)
 						return
@@ -923,7 +916,6 @@
 						feedback_inc("ban_job_tmp",1)
 						DB_ban_record(BANTYPE_JOB_TEMP, M, mins, reason, job)
 						feedback_add_details("ban_job_tmp","- [job]")
-						jobban_fullban(M, job, "[reason]; By [usr.ckey] on [time2text(world.realtime)]") //Legacy banning does not support temporary jobbans.
 						if(!msg)
 							msg = job
 						else
@@ -945,7 +937,6 @@
 							feedback_inc("ban_job",1)
 							DB_ban_record(BANTYPE_JOB_PERMA, M, -1, reason, job)
 							feedback_add_details("ban_job","- [job]")
-							jobban_fullban(M, job, "[reason]; By [usr.ckey] on [time2text(world.realtime)]")
 							if(!msg)	msg = job
 							else		msg += ", [job]"
 						add_note(M.ckey, "Перманентно забанен от игры за [msg]. Причина: [reason]", null, usr.ckey, 0)
@@ -961,10 +952,6 @@
 		//Unbanning joblist
 		//all jobs in joblist are banned already OR we didn't give a reason (implying they shouldn't be banned)
 		if(joblist.len) //at least 1 banned job exists in joblist so we have stuff to unban.
-			if(!config.ban_legacy_system)
-				usr << "Unfortunately, database based unbanning cannot be done through this panel"
-				DB_ban_panel(M.ckey)
-				return
 			var/msg
 			for(var/job in joblist)
 				var/reason = jobban_isbanned(M, job)
@@ -973,10 +960,9 @@
 					if("Yes")
 						ban_unban_log_save("[key_name(usr)] unjobbanned [key_name(M)] from [job]")
 						log_admin("[key_name(usr)] unbanned [key_name(M)] from [job]")
-						DB_ban_unban(M.ckey, BANTYPE_JOB_PERMA, job)
+						DB_ban_unban(M.ckey, BANTYPE_ANY_JOB, job)
 						feedback_inc("ban_job_unban",1)
 						feedback_add_details("ban_job_unban","- [job]")
-						jobban_unban(M, job)
 						if(!msg)	msg = job
 						else		msg += ", [job]"
 					else
@@ -1043,21 +1029,6 @@
 		if(query_noteedits.NextRow())
 			var/edit_log = query_noteedits.item[1]
 			usr << browse(edit_log,"window=noteedits")
-
-	else if(href_list["removejobban"])
-		if(!check_rights(R_BAN))	return
-
-		var/t = href_list["removejobban"]
-		if(t)
-			if((alert("Do you want to unjobban [t]?","Unjobban confirmation", "Yes", "No") == "Yes") && t) //No more misclicks! Unless you do it twice.
-				log_admin("[key_name(usr)] removed [t]")
-				message_admins("<span class='adminnotice'>[key_name_admin(usr)] removed [t]</span>")
-				jobban_remove(t)
-				href_list["ban"] = 1 // lets it fall through and refresh
-				var/t_split = text2list(t, " - ")
-				var/key = t_split[1]
-				var/job = t_split[2]
-				DB_ban_unban(ckey(key), BANTYPE_JOB_PERMA, job)
 
 	else if(href_list["newban"])
 		if(!check_rights(R_BAN))	return
@@ -1190,18 +1161,6 @@
 			if("Cancel")
 				return
 
-	else if(href_list["unjobbanf"])
-		if(!check_rights(R_BAN))	return
-
-		var/banfolder = href_list["unjobbanf"]
-		Banlist.cd = "/base/[banfolder]"
-		var/key = Banlist["key"]
-		if(alert(usr, "Are you sure you want to unban [key]?", "Confirmation", "Yes", "No") == "Yes")
-			if (RemoveBanjob(banfolder))
-				unjobbanpanel()
-			else
-				alert(usr,"This ban has already been lifted / does not exist.","Error","Ok")
-				unjobbanpanel()
 
 	//Watchlist
 	else if(href_list["watchadd"])
