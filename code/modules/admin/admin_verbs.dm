@@ -24,7 +24,8 @@ var/list/admin_verbs_default = list(
 	/client/proc/freezemecha,
 	/datum/admins/proc/set_event_status,
 	/datum/admins/proc/view_event_status,
-	/client/proc/cmd_admin_allow_respawn
+	/client/proc/cmd_admin_allow_respawn,
+	/datum/admins/verb/reset_vote
 	)
 var/list/admin_verbs_admin = list(
 	/client/proc/player_panel_new,		/*shows an interface for all players, with links to various panels*/
