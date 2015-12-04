@@ -70,3 +70,11 @@
 	item_state = "bl_suit"
 	icon = 'icons/obj/clothing/infinity_work.dmi'
 	worn_icon = 'icons/mob/infinity_work.dmi'
+
+/obj/item/clothing/suit/kimono
+	name = "kimono"
+	desc = "Some soft and comfortable kimono. Jack approved this!"
+	icon_state = "kimono"
+	item_state = "w_suit"
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'

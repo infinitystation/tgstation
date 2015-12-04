@@ -11,4 +11,5 @@
 	/obj/item/clothing/suit/toggle/jacket=2,/obj/item/clothing/suit/dress_orange=1,/obj/item/clothing/suit/bride_white=1,
 	/obj/item/clothing/suit/brand/orange_jacket=2,/obj/item/clothing/under/red_cheongasm=2,/obj/item/clothing/shoes/ballets/red_gold=2,
 	/obj/item/clothing/suit/toggle/fiery_jacket=2,/obj/item/clothing/suit/toggle/white_fiery_jacket=2,/obj/item/clothing/suit/leon_jacket=1,/obj/item/clothing/under/latex_pants=1,
-	/obj/item/clothing/head/bowknot=1,/obj/item/clothing/under/kos_shorts=2,/obj/item/clothing/under/kos_bshorts=2,/obj/item/clothing/under/kos_bshorts2=2,/obj/item/clothing/under/womentshirt=1)
+	/obj/item/clothing/head/bowknot=1,/obj/item/clothing/under/kos_shorts=2,/obj/item/clothing/under/kos_bshorts=2,/obj/item/clothing/under/kos_bshorts2=2,/obj/item/clothing/under/womentshirt=1,
+	/obj/item/clothing/suit/jacket/leather/overcoat=2)
