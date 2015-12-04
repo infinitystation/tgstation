@@ -176,26 +176,7 @@
 	..()
 	icon_state = "alienpod[rand(1,9)]"
 
-/turf/simulated/floor/plating/basalt
-	name = "basalt floor"
-	icon_state = "basalt1"
-
-/turf/simulated/floor/plating/basalt/New()
-	..()
-	icon_state = "basalt[rand(0,12)]"
-
-/turf/simulated/floor/plating/basalt/Destroy()
-	return QDEL_HINT_LETMELIVE
-
-/turf/simulated/floor/plating/basalt/ex_act()
-	return ..()
-
-
-
-
-
 ///LAVA
-
 
 /turf/simulated/floor/plating/lava
 	name = "lava"
@@ -259,7 +240,7 @@
 	smooth = SMOOTH_TRUE
 	icon = 'icons/turf/floors/lava.dmi'
 	icon_state = "smooth"
-	canSmoothWith = list(/turf/simulated/wall)
+	canSmoothWith = list(/turf/simulated/wall, /turf/simulated/mineral, /turf/simulated/floor/plating/lava/smooth)
 
 /turf/simulated/floor/plating/lava/smooth/airless
 	oxygen = 0
