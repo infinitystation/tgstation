@@ -200,7 +200,7 @@ var/global/all_solved_wires = list() //Solved wire associative list, eg; all_sol
 									solved_colour_function = SolveWireFunction(colour_function) //unsolved_wires[red] = 1, 1 = AIRLOCK_WIRE_IDSCAN
 									if(!IsColourCut(colour) && solved_colour_function)
 										L << "the [colour] wire connected to [solved_colour_function]" //the red wire is the ID wire
-										playsound(O.loc, 'sound/machines/ping.ogg', 30, 1)
+										playsound(O.loc, 'sound/machines/mbeep.ogg', 50, 1)
 									else
 										L << "the [colour] wire not connected"
 								else

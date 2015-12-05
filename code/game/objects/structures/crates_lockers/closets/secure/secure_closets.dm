@@ -73,10 +73,9 @@
 						if(code2[i]==code1[i])
 							validate++
 							usr << "<span class='notice'>Ключ подходит</span>"
-							playsound(W.loc, 'sound/machines/ping.ogg', 30, 1)
+							playsound(W.loc, 'sound/machines/mbeep.ogg', 50, 1)
 						else
 							usr << "<span class='notice'>Ключ не подходит</span>"
-							playsound(W.loc, 'sound/machines/twobeep.ogg', 30, 1)
 				validating = 0
 				if(validate==codelen)
 					src.locked = !src.locked
