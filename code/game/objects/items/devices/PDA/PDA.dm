@@ -105,7 +105,6 @@ var/global/list/obj/item/device/pda/PDAs = list()
 
 /obj/item/device/pda/heads/hos
 	default_cartridge = /obj/item/weapon/cartridge/hos
-	icon = 'icons/blue_brig/obj/PDA.dmi'
 	icon_state = "pda-hos"
 
 /obj/item/device/pda/heads/ce
