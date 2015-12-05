@@ -5,7 +5,7 @@ SERVERNAME Infinity - RU
 STATIONNAME Infinity
 
 # Lobby time: This is the amount of time between rounds that players have to setup their characters and be ready.
-LOBBY_COUNTDOWN 120
+LOBBY_COUNTDOWN 150
 
 # Round End Time: This is the amount of time after the round ends that players have to murder death kill each other.
 ROUND_END_COUNTDOWN 90
@@ -224,7 +224,7 @@ MAPROTATION
 ##This is the chance of map rotation factored to the round length.
 ##A value of 1 would mean the map rotation chance is the round length in minutes (hour long round == 60% rotation chance)
 ##A value of 0.5 would mean the map rotation chance is half of the round length in minutes (hour long round == 30% rotation chance)
-#MAPROTATIONCHANCEDELTA 0.75
+MAPROTATIONCHANCEDELTA 0.1
 
 ##AUTOADMIN
 ##Uncomment to automatically give that admin rank to all players

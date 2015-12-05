@@ -42,7 +42,7 @@ EMOJIS
 
 ## These modify the run/walk speed of all mobs before the mob-specific modifiers are applied. 
 RUN_DELAY 1.75
-WALK_DELAY 2.5
+WALK_DELAY 3
 
 ## The variables below affect the movement of specific mob types.
 HUMAN_DELAY 0
@@ -148,8 +148,8 @@ SHUTTLE_REFUEL_DELAY 12000
 ## Variables calculate how number of antagonists will scale to population.
 ## Used as (Antagonists = Population / Coeff)
 ## Set to 0 to disable scaling and use default numbers instead.
-TRAITOR_SCALING_COEFF 8
-CHANGELING_SCALING_COEFF 8
+TRAITOR_SCALING_COEFF 7
+CHANGELING_SCALING_COEFF 7
 
 ## Variables calculate how number of open security officer positions will scale to population.
 ## Used as (Officers = Population / Coeff)
