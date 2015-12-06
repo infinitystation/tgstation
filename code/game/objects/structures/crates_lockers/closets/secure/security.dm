@@ -21,6 +21,7 @@
 	new /obj/item/weapon/cartridge/captain(src)
 	new /obj/item/clothing/shoes/sneakers/brown(src)
 	new /obj/item/weapon/storage/box/silver_ids(src)
+	new /obj/item/device/megaphone/command(src)
 	new /obj/item/device/radio/headset/heads/captain/alt(src)
 	new /obj/item/device/radio/headset/heads/captain(src)
 	new /obj/item/clothing/glasses/sunglasses/gar/supergar(src)
