@@ -211,9 +211,9 @@
 				prisoners += "[key_name_admin(H)] "
 				prisoners_alt += "[H.ckey]/[H.real_name] "
 
-		message_admins("[releasing ? "В тюрьму посажен преступник." : "Из тюрьмы досрочно освобожден(ы) преступник(и)"] Срок: [(minute ? text("[minute]:") : null)][second]. [releasing ? "Освобожден(ы)" : "Выставлен"] игроком [key_name(usr, usr.client)](<A HREF='?_src_=holder;adminmoreinfo=\ref[usr]'>?</A>) Координаты: ([x],[y],[z] - <A HREF='?_src_=holder;adminplayerobservecoodjump=1;X=[x];Y=[y];Z=[z]'>JMP</a>)",0,1)
+		message_admins("[releasing ? "В тюрьму посажен преступник." : "Из тюрьмы досрочно освобожден(ы) преступник(и)"] Срок: [(minute ? text("[minute]:") : null)][second]. [releasing ? "Выставлен" : "Освобожден(ы)"] игроком [key_name(usr, usr.client)](<A HREF='?_src_=holder;adminmoreinfo=\ref[usr]'>?</A>) Координаты: ([x],[y],[z] - <A HREF='?_src_=holder;adminplayerobservecoodjump=1;X=[x];Y=[y];Z=[z]'>JMP</a>)",0,1)
 		message_admins("Игроки вокруг камеры: [prisoners]")
-		log_game("[releasing ? "В тюрьму посажен преступник." : "Из тюрьмы досрочно освобожден(ы) преступник(и)"] Срок: [(minute ? text("[minute]:") : null)][second]. [releasing ? "Освобожден(ы)" : "Выставлен"] игроком [usr.ckey]/[usr.real_name]. Координаты: ([x],[y],[z])")
+		log_game("[releasing ? "В тюрьму посажен преступник." : "Из тюрьмы досрочно освобожден(ы) преступник(и)"] Срок: [(minute ? text("[minute]:") : null)][second]. [releasing ? "Выставлен" : "Освобожден(ы)"] игроком [usr.ckey]/[usr.real_name]. Координаты: ([x],[y],[z])")
 		log_game("Игроки вокруг камеры: [prisoners_alt]")
 	else if(href_list["tp"]) //adjust timer
 		var/timeleft = timeleft()
