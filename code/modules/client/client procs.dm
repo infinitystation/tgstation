@@ -190,8 +190,7 @@ var/next_external_rsc = 0
 		player_age = 0 // set it from -1 to 0 so the job selection code doesn't have a panic attack
 
 	else if (isnum(player_age) && player_age < config.notify_new_player_age)
-		message_admins("<span class='adminnotice'><b><font color=red>К серверу присоединилсЯ игрок. </font>Byond login: [key_name(src)]. В первые был на сервере [player_age] дней назад. IP: [address]</span>")
-
+		message_admins("<span class='adminnotice'><b><font color=red>К серверу присоединилсЯ игрок. </font>Byond login: [key_name_admin(src)]. В первые был на сервере [player_age] дней назад. IP: [address]</span>")
 	sync_client_with_db()
 
 	send_resources()
@@ -342,4 +341,4 @@ var/next_external_rsc = 0
 		)
 	spawn (10)
 		//Precache the client with all other assets slowly, so as to not block other browse() calls
-		getFilesSlow(src, asset_cache, register_asset = FALSE)
+		getFilesSlow(src, SSasset.cache, register_asset = FALSE)
