@@ -267,7 +267,7 @@ What a mess.*/
 		active1 = null
 	if(!( data_core.security.Find(active2) ))
 		active2 = null
-	if((usr.contents.Find(src) || (in_range(src, usr) && istype(loc, /turf))) || (istype(usr, /mob/living/silicon)))
+	if((usr.contents.Find(src) || (in_range(src, usr) && istype(loc, /turf))) || (istype(usr, /mob/living/silicon)) || IsAdminGhost(usr))
 		usr.set_machine(src)
 		switch(href_list["choice"])
 // SORTING!
@@ -319,6 +319,12 @@ What a mess.*/
 					active2 = null
 					authenticated = borg.name
 					rank = "AI"
+					screen = 1
+				else if(IsAdminGhost(usr))
+					active1 = null
+					active2 = null
+					authenticated = usr.client.holder.admin_signature
+					rank = "Central Command"
 					screen = 1
 				else if(istype(scan, /obj/item/weapon/card/id))
 					active1 = null
@@ -633,7 +639,7 @@ What a mess.*/
 							temp += "<li><a href='?src=\ref[src];choice=Change Criminal Status;criminal2=released'>Discharged</a></li>"
 							temp += "</ul>"
 					if("rank")
-						var/list/L = list( "Head of Personnel", "Captain", "AI" )
+						var/list/L = list( "Head of Personnel", "Captain", "AI", "Central Command" )
 						//This was so silly before the change. Now it actually works without beating your head against the keyboard. /N
 						if((istype(active1, /datum/data/record) && L.Find(rank)))
 							temp = "<h5>Rank:</h5>"

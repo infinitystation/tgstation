@@ -10,11 +10,15 @@
 	point_return = 2
 
 
-/obj/effect/blob/shield/update_icon()
-	if(health <= 0)
-		qdel(src)
-		return
-	return
+/obj/effect/blob/shield/New()
+	..()
+	air_update_turf(1)
+
+/obj/effect/blob/shield/Destroy()
+	var/turf/T = get_turf(src)
+	spawn(1)
+		T.air_update_turf(1)
+	..()
 
 /obj/effect/blob/shield/CanPass(atom/movable/mover, turf/target, height=0)
 	if(istype(mover) && mover.checkpass(PASSBLOB))	return 1

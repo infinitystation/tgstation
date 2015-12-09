@@ -396,3 +396,9 @@ It's fairly easy to fix if dealing with single letters but not so much with comp
 		if(get_area(M) == A)
 			mobs += M
 	return mobs
+
+/proc/IsAdminGhost(var/mob/user)
+	if(check_rights(R_ADMIN, 0) && istype(user, /mob/dead/observer))
+		return 1
+	else
+		return 0
