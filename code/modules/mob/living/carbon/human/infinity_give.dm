@@ -2,8 +2,6 @@
 	set category = "IC"
 	set name = "Give"
 
-
-
 	var/obj/item/I = usr.get_active_hand()
 	if(!I)
 		I = usr.get_inactive_hand()
