@@ -9,9 +9,8 @@
 		usr << "<span class='warning'>You don't have anything in your hands to give to \the [target].</span>"
 		return
 
-	if(alert(target,"[usr] wants to give you \a [I]. Will you accept it?",,"No","Yes") == "No")
-		target.visible_message("<span class='notice'>\The [usr] tried to hand \the [I] to \the [target], \
-		but \the [target] didn't want it.</span>")
+	if(alert(target,"[usr] wants to give you \a [I]. Will you accept it?",,"Yes","No") == "No")
+		visible_message("<span class='notice'>\The [usr] tried to hand \the [I] to \the [target], but \the [target] didn't want it.</span>")
 		return
 
 	if(!I) return
@@ -33,4 +32,4 @@
 
 	if(usr.unEquip(I))
 		target.put_in_hands(I) // If this fails it will just end up on the floor, but that's fitting for things like dionaea.
-		target.visible_message("<span class='notice'>\The [usr] handed \the [I] to \the [target].</span>")
+		visible_message("<span class='notice'>\The [usr] handed \the [I] to \the [target].</span>")
