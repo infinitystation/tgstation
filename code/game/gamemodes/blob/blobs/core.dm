@@ -44,12 +44,10 @@
 	SSobj.processing.Remove(src)
 	return ..()
 
-/obj/effect/blob/core/update_icon()
+/obj/effect/blob/core/check_health()
 	..()
-	// update_icon is called when health changes so... call update_health in the overmind
-	if(overmind)
+	if(overmind) //we should have an overmind, but...
 		overmind.update_health()
-	return
 
 /obj/effect/blob/core/RegenHealth()
 	return // Don't regen, we handle it in Life()
@@ -110,4 +108,3 @@
 				B.verbs -= /mob/camera/blob/verb/split_consciousness
 		return 1
 	return 0
-
