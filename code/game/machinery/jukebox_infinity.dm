@@ -55,7 +55,7 @@ datum/track/New(var/title_name, var/audio)
 	)
 
 
-/obj/machinery/media/jukebox/Del()
+/obj/machinery/media/jukebox/Destroy()
 	StopPlaying()
 	..()
 

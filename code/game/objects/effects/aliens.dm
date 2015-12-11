@@ -410,8 +410,10 @@
 
 /obj/structure/alien/egg/HasProximity(atom/movable/AM)
 	if(status == GROWN)
-		if(!CanHug(AM))
-			return
+		if(istype(AM, /mob/living))
+			var/mob/living/L = AM
+			if(!CanHug(L))
+				return
 
 		var/mob/living/carbon/C = AM
 		if(C.stat == CONSCIOUS && C.getorgan(/obj/item/organ/internal/body_egg/alien_embryo))
