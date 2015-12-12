@@ -155,7 +155,7 @@
 	icon_state = "bulb1"
 	base_state = "bulb"
 	fitting = "bulb"
-	brightness = 4
+	brightness = 5
 	desc = "A small lighting fixture."
 	light_type = /obj/item/weapon/light/bulb
 
@@ -185,7 +185,7 @@
 				if(prob(2))
 					broken(1)
 			if("bulb")
-				brightness = 4
+				brightness = 5
 				if(prob(5))
 					broken(1)
 		spawn(1)
@@ -579,7 +579,7 @@
 	base_state = "lbulb"
 	item_state = "contvapour"
 	materials = list(MAT_GLASS=100)
-	brightness = 4
+	brightness = 5
 
 /obj/item/weapon/light/throw_impact(atom/hit_atom)
 	..()
