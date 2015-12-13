@@ -249,3 +249,15 @@
 	desc = "LOYALTY UNTIL DEATH!"
 	icon = 'icons/obj/infinity_decals.dmi'
 	icon_state = "terran"
+
+/obj/structure/sign/skull
+	name = "\improper skull emblem"
+	desc = "Nobody det out alive."
+	icon = 'icons/obj/infinity_decals.dmi'
+	icon_state = "new_logo"
+
+/obj/structure/sign/spiderclan
+	name = "\improper spider clan emblem"
+	desc = "Black widow spider between red polygon."
+	icon = 'icons/obj/infinity_decals.dmi'
+	icon_state = "spider_clan"
