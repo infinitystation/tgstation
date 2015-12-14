@@ -252,12 +252,12 @@
 
 /obj/structure/sign/skull
 	name = "\improper skull emblem"
-	desc = "Nobody det out alive."
+	desc = "Nobody get out alive."
 	icon = 'icons/obj/infinity_decals.dmi'
 	icon_state = "new_logo"
 
 /obj/structure/sign/spiderclan
 	name = "\improper spider clan emblem"
-	desc = "Black widow spider between red polygon."
+	desc = "Black widow between red polygon."
 	icon = 'icons/obj/infinity_decals.dmi'
 	icon_state = "spider_clan"
