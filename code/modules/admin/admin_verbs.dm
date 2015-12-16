@@ -25,7 +25,6 @@ var/list/admin_verbs_default = list(
 	/datum/admins/proc/set_event_status,
 	/datum/admins/proc/view_event_status,
 	/client/proc/cmd_admin_allow_respawn,
-	/client/proc/warn,
 	/datum/admins/verb/reset_vote
 	)
 var/list/admin_verbs_admin = list(

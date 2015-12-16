@@ -1,5 +1,5 @@
 #define MAX_WARNS 3
-#define AUTOBANTIME 10
+#define AUTOBANTIME 20
 
 /client/proc/warn(warned_ckey)
 	if(!check_rights(R_ADMIN))

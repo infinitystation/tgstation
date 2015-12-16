@@ -1490,6 +1490,12 @@
 		var/mob/H = locate(href_list["allow_respawn"])
 		usr.client.cmd_admin_allow_respawn(H)
 
+	else if(href_list["warnplayer"])
+		if(!check_rights(R_ADMIN))	return
+
+		var/warn_ckey = locate(href_list["warnplayer"])
+		usr.client.warn(warn_ckey)
+
 	else if(href_list["makeai"])
 		if(!check_rights(R_SPAWN))	return
 

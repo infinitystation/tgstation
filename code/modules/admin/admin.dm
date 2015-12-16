@@ -75,6 +75,7 @@ var/global/floorIsLava = 0
 		body+= "<A href='?_src_=holder;jobban3=emote;jobban4=\ref[M]'>Emoteban</A> | "
 
 	body += "<A href='?_src_=holder;shownoteckey=[M.ckey]'>Notes</A> | "
+	body += "<A href='?_src_=holder;warnplayer=[M.ckey]'>Warn</A> | "
 	if(M.client)
 		if(M.client.check_watchlist(M.client.ckey))
 			body += "<A href='?_src_=holder;watchremove=[M.ckey]'>Remove from Watchlist</A> | "
