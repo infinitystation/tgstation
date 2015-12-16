@@ -116,7 +116,7 @@
 	armor = list(melee = 45, bullet = 50, laser = 35, energy = 20, bomb = 35, bio = 0, rad = 0)
 
 /obj/item/clothing/suit/armor/laserproof
-	name = "ablative armor vest"
+	name = "reflector vest"
 	desc = "A vest that excels in protecting the wearer against energy projectiles, as well as occasionally reflecting them."
 	icon_state = "armor_reflec"
 	item_state = "armor_reflec"
@@ -188,13 +188,13 @@
 				continue
 			turfs += T
 		if(!turfs.len)
-			turfs += pick(/turf in orange(6, src))
-			var/turf/picked = pick(turfs)
-			if(!isturf(picked))
-				return
-			if(H.buckled)
-				H.buckled.unbuckle_mob()
-			H.forceMove(picked)
+			turfs += pick(/turf in orange(6, H))
+		var/turf/picked = pick(turfs)
+		if(!isturf(picked))
+			return
+		if(H.buckled)
+			H.buckled.unbuckle_mob()
+		H.forceMove(picked)
 		return 1
 	return 0
 

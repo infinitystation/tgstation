@@ -165,6 +165,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	S["ooccolor"]			>> ooccolor
 	S["lastchangelog"]		>> lastchangelog
 	S["UI_style"]			>> UI_style
+	S["nanoui_fancy"]		>> nanoui_fancy
 
 	S["default_slot"]		>> default_slot
 	S["chat_toggles"] 		>> chat_toggles
@@ -182,6 +183,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	ooccolor		= sanitize_ooccolor(sanitize_hexcolor(ooccolor, 6, 1, initial(ooccolor)))
 	lastchangelog	= sanitize_text(lastchangelog, initial(lastchangelog))
 	UI_style		= sanitize_inlist(UI_style, list("Midnight", "Plasmafire", "Retro"), initial(UI_style))
+	nanoui_fancy	= sanitize_integer(nanoui_fancy, 0, 1, initial(nanoui_fancy))
 	default_slot	= sanitize_integer(default_slot, 1, max_save_slots, initial(default_slot))
 	toggles			= sanitize_integer(toggles, 0, 65535, initial(toggles))
 	ghost_form		= sanitize_inlist(ghost_form, ghost_forms, initial(ghost_form))
@@ -200,6 +202,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	S["ooccolor"]			<< ooccolor
 	S["lastchangelog"]		<< lastchangelog
 	S["UI_style"]			<< UI_style
+	S["nanoui_fancy"]		<< nanoui_fancy
 	S["default_slot"]		<< default_slot
 	S["chat_toggles"] 		<< chat_toggles
 	S["toggles"]			<< toggles
