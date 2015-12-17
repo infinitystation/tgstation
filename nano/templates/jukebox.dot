@@ -1,31 +1,19 @@
-<!-- 
-Title: Jukebox UI
-Used In File(s): \code\game\machinery\jukebox.dm
- -->
+<article class="display">
+    <header><h2>Now Playing: {{=data.current_track}}</h2></header>
+    <section>
+        <span class="label">Playback:</span>
+        <div class="content">
+            {{=helper.link('Play', 'play', 'play', null, data.playing ? 'disabled' : null)}}
+            {{=helper.link('Stop', 'stop', 'stop', null, data.playing ? null : 'disabled')}}
+        </div>
+    </section>
 
-
-<H3><span class="white">Current track:</span> <span class="average">{{=data.current_track}}</span></H3>
-
-<div>
-    
-	{{=helper.link('Play' , 'play', {'play' : 1}, data.playing == 1 ? 'disabled' : null, null)}}
-    
-	{{=helper.link('Stop' , 'stop', {'stop' : 1}, data.playing == 0 ? 'disabled' : null, null)}}
-
-</div>
-
-	
-<H3><span class="white">Available tracks:</span></H3>
-<div class="itemContent">
-    
-	{{~ data.tracks}}
-        
-		<div class="item">
-            
-		{{=helper.link( value.track, 'gear', {'change_track' : 1, 'title' : value.track}, value.track == data.current_track ? 'disabled' : null, null)}}    
-        
-		</div>
-    
-	{{~}}
-
-</div>
+    <section>
+        <span class="label">Available Tracks:</span>
+        <div class="content">
+            {{~ data.tracks:track:i}}
+                    {{=helper.link(track.track, 'gear', 'change', {'track': track.track}, track.track == data.current_track ? 'disabled' : null)}}<br />
+            {{~}}
+        </div>
+    </section>
+</article>

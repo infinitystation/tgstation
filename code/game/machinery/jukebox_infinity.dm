@@ -81,31 +81,26 @@ datum/track/New(var/title_name, var/audio)
 	if(playing)
 		overlays += "[state_base]-running"
 
-/obj/machinery/media/jukebox/Topic(href, href_list)
-	if(..() || !(Adjacent(usr) || istype(usr, /mob/living/silicon)))
+/obj/machinery/media/jukebox/ui_act(action, params)
+	if(..())
 		return
 
-	if(!anchored)
-		usr << "<span class='warning'>You must secure \the [src] first.</span>"
-		return
+	switch(action)
+		if("change_track")
+			for(var/datum/track/T in tracks)
+				if(T.title == params["title"])
+					current_track = T
+					StartPlaying()
+					break
 
-	if(stat & (NOPOWER|BROKEN))
-		usr << "\The [src] doesn't appear to function."
-		return
+		if("stop")
+			StopPlaying()
 
-	if(href_list["change_track"])
-		for(var/datum/track/T in tracks)
-			if(T.title == href_list["title"])
-				current_track = T
+		if("play")
+			if(current_track == null)
+				usr << "No track selected."
+			else
 				StartPlaying()
-				break
-	if(href_list["stop"])
-		StopPlaying()
-	if(href_list["play"])
-		if(current_track == null)
-			usr << "No track selected."
-		else
-			StartPlaying()
 
 	return 1
 
@@ -116,29 +111,25 @@ datum/track/New(var/title_name, var/audio)
 
 	ui_interact(user)
 
-/obj/machinery/media/jukebox/ui_interact(mob/user, ui_key = "jukebox", var/datum/nanoui/ui = null)
-	var/title = "RetroBox - Space Style"
-	var/data[0]
+/obj/machinery/media/jukebox/get_ui_data(mob/user)
+	var/data = list()
 
-	if(!(stat & (NOPOWER|BROKEN)))
-		data["current_track"] = current_track != null ? current_track.title : ""
-		data["playing"] = playing
+	data["current_track"] = current_track != null ? current_track.title : ""
+	data["playing"] = playing
 
-		var/list/nano_tracks = new
-		for(var/datum/track/T in tracks)
-			nano_tracks[++nano_tracks.len] = list("track" = T.title)
+	var/list/nano_tracks = new
+	for(var/datum/track/T in tracks)
+		nano_tracks[++nano_tracks.len] = list("track" = T.title)
 
-		data["tracks"] = nano_tracks
+	data["tracks"] = nano_tracks
 
-	// update the ui if it exists, returns null if no ui is passed/found
-	ui = SSnano.try_update_ui(user, src, ui_key, ui, data)
+	return data
+
+/obj/machinery/media/jukebox/ui_interact(mob/user, ui_key = "main", datum/nanoui/ui = null, force_open = 0)
+	//var/title = "RetroBox - Space Style"
+	ui = SSnano.try_update_ui(user, src, ui_key, ui, force_open = force_open)
 	if (!ui)
-		// the ui does not exist, so we'll create a new() one
-        // for a list of parameters and their descriptions see the code docs in \code\modules\nano\nanoui.dm
-		ui = new(user, src, ui_key, "jukebox.tmpl", title, 450, 600)
-		// when the ui is first opened this is the data it will use
-		ui.set_initial_data(data)
-		// open the new ui window
+		ui = new(user, src, ui_key, name, title, 480, 660)
 		ui.open()
 
 /obj/machinery/media/jukebox/attack_ai(mob/user as mob)
