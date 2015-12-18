@@ -81,62 +81,61 @@ datum/track/New(var/title_name, var/audio)
 	if(playing)
 		overlays += "[state_base]-running"
 
-/obj/machinery/media/jukebox/ui_act(action, params)
-	if(..())
-		return
-
-	switch(action)
-		if("change_track")
-			for(var/datum/track/T in tracks)
-				if(T.title == params["title"])
-					current_track = T
-					StartPlaying()
-					break
-
-		if("stop")
-			StopPlaying()
-
-		if("play")
-			if(current_track == null)
-				usr << "No track selected."
-			else
-				StartPlaying()
-
-	return 1
-
-/obj/machinery/media/jukebox/interact(mob/user)
+/obj/machinery/media/jukebox/attack_hand(var/mob/user as mob)
 	if(stat & (NOPOWER|BROKEN))
 		usr << "\The [src] doesn't appear to function."
 		return
 
-	ui_interact(user)
+	var/title = "RetroBox - Space Style"
+	var/dat = ""
 
-/obj/machinery/media/jukebox/get_ui_data(mob/user)
-	var/data = list()
+	dat += "<b>Playing - [current_track ? current_track.title : "Nothing"]<b>"
+	dat += "<br/><a href='?src=\ref[src];play=1'>Play</a> <a href='?src=\ref[src];stop=1'>Stop</a><br/>"
 
-	data["current_track"] = current_track != null ? current_track.title : ""
-	data["playing"] = playing
-
-	var/list/nano_tracks = new
 	for(var/datum/track/T in tracks)
-		nano_tracks[++nano_tracks.len] = list("track" = T.title)
+		dat += "<br/><a href='?src=\ref[src];change_track=[T.title]'>[T.title]</a>"
 
-	data["tracks"] = nano_tracks
+	user.set_machine(src)
+	var/datum/browser/popup = new(user, "jukebox", title, 470, 500)
+	popup.set_content(dat)
+	popup.set_title_image(user.browse_rsc_icon(src.icon, src.icon_state))
+	popup.open(1)
+	return
 
-	return data
+	return 0
 
-/obj/machinery/media/jukebox/ui_interact(mob/user, ui_key = "main", datum/nanoui/ui = null, force_open = 0)
-	//var/title = "RetroBox - Space Style"
-	ui = SSnano.try_update_ui(user, src, ui_key, ui, force_open = force_open)
-	if (!ui)
-		ui = new(user, src, ui_key, name, name, 480, 660)
-		ui.open()
+/obj/machinery/media/jukebox/Topic(href, href_list)
+	if(..())
+		return
+
+	if(!anchored)
+		usr << "<span class='warning'>You must secure \the [src] first.</span>"
+		return
+
+	if(stat & (NOPOWER|BROKEN))
+		usr << "\The [src] doesn't appear to function."
+		return
+
+	if(href_list["stop"])
+		StopPlaying()
+
+	if(href_list["play"])
+		if(current_track == null)
+			usr << "No track selected."
+		else
+			StartPlaying()
+
+	if(href_list["change_track"])
+		for(var/datum/track/T in tracks)
+			if(T.title == href_list["change_track"])
+				current_track = T
+				StartPlaying()
+
+	src.updateUsrDialog()
+	return 1
 
 /obj/machinery/media/jukebox/attack_ai(mob/user as mob)
 	return src.attack_hand(user)
-
-/obj/machinery/media/jukebox/attack_hand(var/mob/user as mob)
-	interact(user)
 
 /obj/machinery/media/jukebox/attackby(obj/item/W as obj, mob/user as mob)
 	src.add_fingerprint(user)

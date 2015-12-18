@@ -1,33 +1,24 @@
-/obj/machinery/media/jukebox/Topic(href, href_list)
-	if(..() || !(Adjacent(usr) || istype(usr, /mob/living/silicon)))
+/obj/machinery/media/jukebox/ui_act(action, params)
+	if(..())
 		return
 
-	if(!anchored)
-		usr << "<span class='warning'>You must secure \the [src] first.</span>"
-		return
+	switch(action)
+		if("change_track")
+			for(var/datum/track/T in tracks)
+				if(T.title == params["title"])
+					current_track = T
+					StartPlaying()
+					break
 
-	if(stat & (NOPOWER|BROKEN))
-		usr << "\The [src] doesn't appear to function."
-		return
+		if("stop")
+			StopPlaying()
 
-	if(href_list["change_track"])
-		for(var/datum/track/T in tracks)
-			if(T.title == href_list["title"])
-				current_track = T
+		if("play")
+			if(current_track == null)
+				usr << "No track selected."
+			else
 				StartPlaying()
-				interact(usr)
-				break
 
-	if(href_list["stop"])
-		StopPlaying()
-
-	if(href_list["play"])
-		if(current_track == null)
-			usr << "No track selected."
-		else
-			StartPlaying()
-
-	interact(usr)
 	return 1
 
 /obj/machinery/media/jukebox/interact(mob/user)
@@ -35,16 +26,25 @@
 		usr << "\The [src] doesn't appear to function."
 		return
 
-	var/title = "RetroBox - Space Style"
-	var/dat = ""
+	ui_interact(user)
 
-	dat += "<b>Playing - [current_track.title]<b>"
-	dat += "<br/><a href='?src=\ref[src];play'>Play</a> <a href='?src=\ref[src];stop'>Stop</a><br/>"
+/obj/machinery/media/jukebox/get_ui_data(mob/user)
+	var/data = list()
 
+	data["current_track"] = current_track != null ? current_track.title : ""
+	data["playing"] = playing
+
+	var/list/nano_tracks = new
 	for(var/datum/track/T in tracks)
-		dat += "<br/><a href='?src=\ref[src];change_track=[T.title]'>[T.title]</a>"
+		nano_tracks[++nano_tracks.len] = list("track" = T.title)
 
-	user.set_machine(src)
-	var/datum/browser/popup = new(user, "jukebox", "[title]")
-	popup.set_content(dat)
-	popup.open(1)
+	data["tracks"] = nano_tracks
+
+	return data
+
+/obj/machinery/media/jukebox/ui_interact(mob/user, ui_key = "main", datum/nanoui/ui = null, force_open = 0)
+	//var/title = "RetroBox - Space Style"
+	ui = SSnano.try_update_ui(user, src, ui_key, ui, force_open = force_open)
+	if (!ui)
+		ui = new(user, src, ui_key, name, name, 480, 660)
+		ui.open()

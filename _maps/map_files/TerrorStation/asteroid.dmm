@@ -198,7 +198,7 @@
 "dP" = (/obj/structure/girder{density = 0; icon_state = "melted"; name = "melted girder"},/turf/simulated/floor/plating/airless,/area/space)
 "dQ" = (/obj/structure/grille{density = 0; icon_state = "brokengrille"},/turf/simulated/floor/plating/airless{tag = "icon-platingdmg3"; icon_state = "platingdmg3"},/area/space)
 "dR" = (/obj/item/ammo_casing/a646/no,/turf/simulated/floor/plasteel,/area/space)
-"dS" = (/obj/structure/barricade/security{anchored = 1; locked = 1; name = "Deployable barrier"; req_access = list(151)},/turf/simulated/floor/plating/asteroid/airless,/area/space)
+"dS" = (/obj/structure/barricade/security{anchored = 1; name = "Deployable barrier"; req_access = list(151)},/turf/simulated/floor/plating/asteroid/airless,/area/space)
 "dT" = (/obj/item/ammo_casing/a646/no,/obj/effect/decal/cleanable/blood/old,/turf/simulated/floor/plating/asteroid/airless,/area/space)
 "dU" = (/obj/item/ammo_casing/a646/no,/obj/item/ammo_casing/a646/no,/obj/item/ammo_casing/a646/no,/turf/simulated/floor/plating/asteroid/airless,/area/space)
 "dV" = (/obj/item/ammo_casing/a646/no,/obj/effect/decal/cleanable/blood/old,/obj/item/ammo_casing/a646/no,/turf/simulated/floor/plating/asteroid/airless,/area/space)
