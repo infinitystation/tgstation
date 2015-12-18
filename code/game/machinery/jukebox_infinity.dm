@@ -129,7 +129,7 @@ datum/track/New(var/title_name, var/audio)
 	//var/title = "RetroBox - Space Style"
 	ui = SSnano.try_update_ui(user, src, ui_key, ui, force_open = force_open)
 	if (!ui)
-		ui = new(user, src, ui_key, name, title, 480, 660)
+		ui = new(user, src, ui_key, name, name, 480, 660)
 		ui.open()
 
 /obj/machinery/media/jukebox/attack_ai(mob/user as mob)
