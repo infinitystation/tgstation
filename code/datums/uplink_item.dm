@@ -155,7 +155,7 @@ var/list/uplink_items = list()
 	name = "L6 Squad Automatic Weapon"
 	desc = "A fully-loaded Aussec Armoury belt-fed machine gun. This deadly weapon has a massive 50-round magazine of devastating 7.62x51mm ammunition."
 	item = /obj/item/weapon/gun/projectile/automatic/l6_saw
-	cost = 40
+	cost = 23
 	gamemodes = list(/datum/game_mode/nuclear)
 	surplus = 0
 
@@ -245,19 +245,27 @@ var/list/uplink_items = list()
 	gamemodes = list(/datum/game_mode/nuclear)
 	surplus = 0
 
-/datum/uplink_item/dangerous/syndieborg
+/datum/uplink_item/dangerous/reinforcement/syndieborg
 	name = "Syndicate Cyborg"
 	desc = "A cyborg designed and programmed for systematic extermination of non-Syndicate personnel."
-	item = /obj/item/weapon/antag_spawner/borg_tele
+	item = /obj/item/weapon/antag_spawner/nuke_ops/borg_tele
 	cost = 50
 	gamemodes = list(/datum/game_mode/nuclear)
 	surplus = 0
 
-//for refunding the syndieborg teleporter
-/datum/uplink_item/dangerous/syndieborg/spawn_item()
-	var/obj/item/weapon/antag_spawner/borg_tele/T = ..()
+/datum/uplink_item/dangerous/reinforcement
+	name = "Reinforcements"
+	desc = "Call in an additional team member. They won't come with any gear, so you'll have to save some telecrystals to arm them as well."
+	item = /obj/item/weapon/antag_spawner/nuke_ops
+	cost = 25
+	gamemodes = list(/datum/game_mode/nuclear)
+	surplus = 0
+	
+/datum/uplink_item/dangerous/reinforcement/spawn_item()
+	var/obj/item/weapon/antag_spawner/nuke_ops/T = ..()
 	if(istype(T))
 		T.TC_cost = cost
+
 
 /datum/uplink_item/dangerous/guardian
 	name = "Holoparasites"
@@ -360,9 +368,29 @@ var/list/uplink_items = list()
 	name = "Box Magazine - 7.62x51mm"
 	desc = "A 50-round magazine of 7.62x51mm ammunition for use in the L6 SAW machinegun. By the time you need to use this, you'll already be on a pile of corpses."
 	item = /obj/item/ammo_box/magazine/m762
-	cost = 12
+	cost = 6
 	gamemodes = list(/datum/game_mode/nuclear)
 	surplus = 0
+
+/datum/uplink_item/ammo/machinegun/bleeding
+	name = "Box Magazine - Bleeding 7.62x51mm"
+	desc = "A 50-round magazine of 7.62x51mm ammunition for use in the L6 SAW machinegun equipped with special properties to induce internal bleeding on targets."
+	item = /obj/item/ammo_box/magazine/m762/bleeding
+
+/datum/uplink_item/ammo/machinegun/hollow
+	name = "Box Magazine - Hollow 7.62x51mm"
+	desc = "A 50-round magazine of 7.62x51mm ammunition for use in the L6 SAW machinegun equipped with hollow-tips to help with the unarmored masses of crew."
+	item = /obj/item/ammo_box/magazine/m762/hollow
+
+/datum/uplink_item/ammo/machinegun/ap
+	name = "Box Magazine - Armor Penetrating 7.62x51mm"
+	desc = "A 50-round magazine of 7.62x51mm ammunition for use in the L6 SAW machinegun equipped with special properties to puncture even the most durable armor."
+	item = /obj/item/ammo_box/magazine/m762/ap
+
+/datum/uplink_item/ammo/machinegun/incen
+	name = "Box Magazine - Incendiary 7.62x51mm"
+	desc = "A 50-round magazine of 7.62x51mm ammunition for use in the L6 SAW machinegun, tipped with a special flammable mixture that'll ignite anyone struck by the bullet. Some men just want to watch the world burn."
+	item = /obj/item/ammo_box/magazine/m762/incen
 
 /datum/uplink_item/ammo/toydarts //This used to only be for nuke ops, but had the cost lowered and made available to traitors because >a box of foam darts is more expensive than four carbine magazines
 	name = "Box of Riot Darts"
@@ -389,7 +417,11 @@ var/list/uplink_items = list()
 	desc = "A 5-round magazine of haemorrhage ammo designed for use in the syndicate sniper rifle, causes heavy bleeding in the target."
 	item = /obj/item/ammo_box/magazine/sniper_rounds/haemorrhage
 
-
+/datum/uplink_item/ammo/sniper/penetrator
+	name = "Sniper Magazine - Penetrator Rounds"
+	desc = "A 5-round magazine of penetrator ammo designed for use in the syndicate sniper rifle. Can pierce walls and multiple enemies."
+	item = /obj/item/ammo_box/magazine/sniper_rounds/penetrator
+	cost = 5
 
 // STEALTHY WEAPONS
 
@@ -726,11 +758,11 @@ var/list/uplink_items = list()
 	cost = 3
 	gamemodes = list(/datum/game_mode/nuclear)
 
-/datum/uplink_item/device_tools/teleporter
-	name = "Teleporter Circuit Board"
-	desc = "A printed circuit board that completes the teleporter onboard the mothership. It is advised you calibrate the teleporter before entering it, as malfunctions can occur."
-	item = /obj/item/weapon/circuitboard/teleporter
-	cost = 40
+/datum/uplink_item/device_tools/assault_pod
+	name = "Assault Pod Targetting Device"
+	desc = "Use to select the landing zone of your assault pod."
+	item = /obj/item/device/assault_pod
+	cost = 30
 	gamemodes = list(/datum/game_mode/nuclear)
 	surplus = 0
 
