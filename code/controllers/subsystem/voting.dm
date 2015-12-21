@@ -177,7 +177,7 @@ var/datum/subsystem/vote/SSvote
 				question = stripped_input(usr,"What is the vote for?")
 				question = copytext(sanitize_u0(question), 1, MAX_MESSAGE_LEN)
 				if(!question)	return 0
-				for(var/i=1,i<=10,i++)
+				for(var/i=1,i<=100,i++)
 					var/option = capitalize(stripped_input(usr,"Please enter an option or hit cancel to finish"))
 					option = copytext(sanitize_u0(option), 1, MAX_MESSAGE_LEN)
 					if(!option || mode || !usr.client)	break
