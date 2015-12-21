@@ -114,3 +114,39 @@
 #undef LUMR
 #undef LUMG
 #undef LUMB
+
+//Dumps the matrix data in format a-f
+/matrix/proc/tolist()
+	. = list()
+	. += a
+	. += b
+	. += c
+	. += d
+	. += e
+	. += f
+
+//Dumps the matrix data in a matrix-grid format
+/*
+  a d 0
+  b e 0
+  c f 1
+*/
+/matrix/proc/togrid()
+	. = list()
+	. += a
+	. += d
+	. += 0
+	. += b
+	. += e
+	. += 0
+	. += c
+	. += f
+	. += 1
+
+//The X pixel offset of this matrix
+/matrix/proc/get_x_shift()
+	. = c
+
+//The Y pixel offset of this matrix
+/matrix/proc/get_y_shift()
+	. = f

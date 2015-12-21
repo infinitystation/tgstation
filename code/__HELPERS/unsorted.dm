@@ -878,63 +878,49 @@ Turf and target are seperate in case you want to teleport some distance from a t
 	return A
 
 
-//Gets the turf this atom's *ICON* appears to inhabit
-//Uses half the width/height respectively to work out
-//A minimum pixel amt this icon needs to be pixel'd by
-//to be considered to be in another turf
+/*
 
-//division = world.icon_size - icon-width/2; DX = pixel_x/division
-//division = world.icon_size - icon-height/2; DY = pixel_y/division
+ Gets the turf this atom's *ICON* appears to inhabit
+ It takes into account:
+ * Pixel_x/y
+ * Matrix x/y
 
-//Eg: Humans
-//32 - 16; 16/16 = 1, DX = 1
-//32 - 16; 15/16 = 0.9375 = 0 when round()'d, DX = 0
+ NOTE: if your atom has non-standard bounds then this proc
+ will handle it, but:
+ * if the bounds are even, then there are an even amount of "middle" turfs, the one to the EAST, NORTH, or BOTH is picked
+ (this may seem bad, but you're atleast as close to the center of the atom as possible, better than byond's default loc being all the way off)
+ * if the bounds are odd, the true middle turf of the atom is returned
 
-//NOTE: if your atom has non-standard bounds then this proc
-//will handle it, but it'll be a bit slower.
+*/
 
 /proc/get_turf_pixel(atom/movable/AM)
-	if(istype(AM))
-		var/rough_x = 0
-		var/rough_y = 0
-		var/final_x = 0
-		var/final_y = 0
-		var/final_z = 0
+	if(!istype(AM))
+		return
 
-		//Assume standards
-		var/i_width = world.icon_size
-		var/i_height = world.icon_size
+	//Find AM's matrix so we can use it's X/Y pixel shifts
+	var/matrix/M = matrix(AM.transform)
 
-		//Handle snowflake objects only if necessary
-		if(AM.bound_height != world.icon_size || AM.bound_width != world.icon_size)
-			var/icon/AMicon = icon(AM.icon, AM.icon_state)
-			i_width = AMicon.Width()
-			i_height = AMicon.Height()
-			qdel(AMicon)
+	var/pixel_x_offset = AM.pixel_x + M.get_x_shift()
+	var/pixel_y_offset = AM.pixel_y + M.get_y_shift()
 
-		//Find a value to divide pixel_ by
-		var/n_width = (world.icon_size - (i_width/2))
-		var/n_height = (world.icon_size - (i_height/2))
+	//Irregular objects
+	if(AM.bound_height != world.icon_size || AM.bound_width != world.icon_size)
+		var/icon/AMicon = icon(AM.icon, AM.icon_state)
+		pixel_x_offset += ((AMicon.Width()/world.icon_size)-1)*(world.icon_size*0.5)
+		pixel_y_offset += ((AMicon.Height()/world.icon_size)-1)*(world.icon_size*0.5)
+		qdel(AMicon)
 
-		//DY and DX
-		if(n_width)
-			rough_x = round(AM.pixel_x/n_width)
-		if(n_height)
-			rough_y = round(AM.pixel_y/n_height)
+	//DY and DX
+	var/rough_x = round(round(pixel_x_offset,world.icon_size)/world.icon_size)
+	var/rough_y = round(round(pixel_y_offset,world.icon_size)/world.icon_size)
 
-		//Find coordinates
-		if(!isturf(AM.loc))
-			var/turf/T = get_turf(AM)
-			final_x = T.x + rough_x
-			final_y = T.y + rough_y
-			final_z = T.z
-		else
-			final_x = AM.x + rough_x
-			final_y = AM.y + rough_y
-			final_z = AM.z
+	//Find coordinates
+	var/turf/T = get_turf(AM) //use AM's turfs, as it's coords are the same as AM's AND AM's coords are lost if it is inside another atom
+	var/final_x = T.x + rough_x
+	var/final_y = T.y + rough_y
 
-		if(final_x || final_y)
-			return locate(final_x, final_y, final_z)
+	if(final_x || final_y)
+		return locate(final_x, final_y, T.z)
 
 //Finds the distance between two atoms, in pixels
 //centered = 0 counts from turf edge to edge
@@ -1211,7 +1197,6 @@ B --><-- A
 
 	if(orbiting)
 		stop_orbit()
-		sleep(2.6+world.tick_lag) //the 2 second delay at the end of the existing orbit() call, plus some lag slack.
 
 	orbiting = A
 	var/matrix/initial_transform = matrix(transform)
@@ -1231,15 +1216,19 @@ B --><-- A
 	transform = shift
 
 	SpinAnimation(rotation_speed, -1, clockwise, rotation_segments)
-	while(orbiting && orbiting.loc)
-		var/targetloc = get_turf(orbiting)
+	
+	//we stack the orbits up client side, so we can assign this back to normal server side without it breaking the orbit
+	transform = initial_transform
+	while(orbiting && orbiting == A && A.loc)
+		var/targetloc = get_turf(A)
 		if(!lockinorbit && loc != lastloc && loc != targetloc)
 			break
 		loc = targetloc
 		lastloc = loc
 		sleep(0.6)
-
-	animate(src,transform = initial_transform, time = 2) //2 second delay
+	
+	if (orbiting == A)
+		orbiting = null
 	SpinAnimation(0,0)
 
 
