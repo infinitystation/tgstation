@@ -705,7 +705,6 @@ Turf and target are seperate in case you want to teleport some distance from a t
 		progbar = image("icon" = 'icons/effects/doafter_icon.dmi', "loc" = target, "icon_state" = "prog_bar_0")
 		progbar.icon_state = "prog_bar_[round(((current_number / goal_number) * 100), 10)]"
 		progbar.pixel_y = 32
-		progbar.appearance_flags = APPEARANCE_UI_IGNORE_ALPHA
 		return progbar
 
 /proc/cancel_progress_bar(mob/user, image/progbar)
@@ -1216,7 +1215,7 @@ B --><-- A
 	transform = shift
 
 	SpinAnimation(rotation_speed, -1, clockwise, rotation_segments)
-	
+
 	//we stack the orbits up client side, so we can assign this back to normal server side without it breaking the orbit
 	transform = initial_transform
 	while(orbiting && orbiting == A && A.loc)
@@ -1226,7 +1225,7 @@ B --><-- A
 		loc = targetloc
 		lastloc = loc
 		sleep(0.6)
-	
+
 	if (orbiting == A)
 		orbiting = null
 	SpinAnimation(0,0)

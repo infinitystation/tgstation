@@ -11,7 +11,6 @@
 	icon = 'icons/mob/screen_gen.dmi'
 	layer = 20
 	unacidable = 1
-	appearance_flags = APPEARANCE_UI
 	var/obj/master = null	//A reference to the object in the slot. Grabs or items, generally.
 
 /obj/screen/Destroy()

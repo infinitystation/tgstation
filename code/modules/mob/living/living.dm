@@ -809,7 +809,6 @@ Sorry Giacom. Please don't be mad :(
 		I = image(r_hand.icon, A, r_hand.icon_state, A.layer + 1)
 	else // Attacked with a fist?
 		return
-	I.appearance_flags = APPEARANCE_UI_IGNORE_ALPHA
 
 	// Who can see the attack?
 	var/list/viewing = list()
