@@ -78,7 +78,6 @@
 	var/stunned = 0
 	var/weakened = 0
 	var/losebreath = 0//Carbon
-	var/shakecamera = 0
 	var/a_intent = "help"//Living
 	var/m_intent = "run"//Living
 	var/lastKnownIP = null
@@ -128,7 +127,7 @@
 
 	mouse_drag_pointer = MOUSE_ACTIVE_POINTER
 
-	//Infinity vars
+		//Infinity vars
 	var/need_to_shit = 0
 	var/flavor_text = ""
 	var/sec_imp_notes = ""

@@ -199,6 +199,8 @@
 		user << "<span class='warning'>\The [src]'s trigger is locked. This weapon doesn't have a firing pin installed!</span>"
 	return 0
 
+obj/item/weapon/gun/proc/newshot()
+	return
 
 /obj/item/weapon/gun/proc/process_fire(atom/target as mob|obj|turf, mob/living/user as mob|obj, message = 1, params, zone_override)
 	add_fingerprint(user)

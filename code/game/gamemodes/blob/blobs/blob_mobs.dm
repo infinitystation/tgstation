@@ -25,7 +25,7 @@
 ////////////////
 
 /mob/living/simple_animal/hostile/blob/blobspore
-	name = "blob"
+	name = "blob spore"
 	desc = "A floating, fragile spore."
 	icon_state = "blobpod"
 	icon_living = "blobpod"
@@ -80,8 +80,8 @@
 	name = "blob zombie ([rand(100,999)])"
 	real_name = name
 	desc = "A shambling corpse animated by the blob."
-	melee_damage_lower = 10
-	melee_damage_upper = 15
+	melee_damage_lower += 8
+	melee_damage_upper += 11
 	icon = H.icon
 	speak_emote = list("groans")
 	icon_state = "zombie_s"
@@ -176,6 +176,12 @@
 		if(isovermind(M) || isobserver(M) || isblobzombie(M))
 			M.show_message(rendered, 2)
 
+/mob/living/simple_animal/hostile/blob/blobspore/weak
+	name = "fragile blob spore"
+	health = 20
+	maxHealth = 20
+	melee_damage_lower = 1
+	melee_damage_upper = 2
 
 /////////////////
 // BLOBBERNAUT //
