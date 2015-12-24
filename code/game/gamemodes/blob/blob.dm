@@ -13,7 +13,7 @@ var/list/blobs_legit = list() //used for win-score calculations, contains only b
 	enemy_minimum_age = 30
 	antag_flag = ROLE_BLOB
 
-	required_players = 10
+	required_players = 20
 	required_enemies = 1
 	recommended_enemies = 1
 
@@ -23,7 +23,7 @@ var/list/blobs_legit = list() //used for win-score calculations, contains only b
 	var/burst = 0
 
 	var/cores_to_spawn = 1
-	var/players_per_core = 30
+	var/players_per_core = 15
 	var/blob_point_rate = 3
 
 	var/blobwincount = 800
