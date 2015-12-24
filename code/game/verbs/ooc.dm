@@ -28,7 +28,7 @@
 		if(prefs.muted & MUTE_OOC)
 			src << "<span class='danger'>You cannot use OOC (muted).</span>"
 			return
-		if(jobban_isbanned(src, "OOC"))
+		if(jobban_isbanned(mob, "OOC"))
 			src << "<span class='danger'>You have been banned from OOC.</span>"
 			return
 		if(handle_spam_prevention(msg,MUTE_OOC))
@@ -46,7 +46,7 @@
 	if((copytext(msg, 1, 2) in list(".",";",":","#")) || (findtext(lowertext(copytext(msg, 1, 5)), "say")))
 		if(alert("Your message \"[raw_msg]\" looks like it was meant for in game communication, say it in OOC?", "Meant for OOC?", "No", "Yes") != "Yes")
 			return
-			
+
 	log_ooc("[mob.name]/[key] : [raw_msg]")
 
 	var/keyname = key
