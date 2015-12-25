@@ -37,6 +37,7 @@
 		if(istype(AM, mag_type))
 			if(magazine)
 				user << "<span class='notice'>You perform a tactical reload on \the [src], replacing the magazine.</span>"
+				user.say(pick("ﬂ œ≈–≈«¿–ﬂ∆¿ﬁ—‹!!!", "Õ¿ œ≈–≈«¿–ﬂƒ ≈!!!", "Ã≈Õﬂﬁ Ã¿√¿«»Õ!!!", "œ–» –Œ…“≈ Ã≈Õﬂ! œ≈–≈«¿–ﬂ∆¿ﬁ—‹!!!", "œ≈–≈«¿–ﬂ∆¿ﬁ—‹!!!"))
 				magazine.loc = get_turf(src.loc)
 				magazine.update_icon()
 				magazine = null
