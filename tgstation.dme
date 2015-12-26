@@ -979,6 +979,7 @@
 #include "code\modules\clothing\masks\breath.dm"
 #include "code\modules\clothing\masks\gasmask.dm"
 #include "code\modules\clothing\masks\hailer.dm"
+#include "code\modules\clothing\masks\infinity_mask.dm"
 #include "code\modules\clothing\masks\miscellaneous.dm"
 #include "code\modules\clothing\outfits\ert.dm"
 #include "code\modules\clothing\outfits\infinity.dm"
