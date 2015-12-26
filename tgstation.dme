@@ -692,6 +692,7 @@
 #include "code\game\objects\items\weapons\gift_wrappaper.dm"
 #include "code\game\objects\items\weapons\handcuffs.dm"
 #include "code\game\objects\items\weapons\infinity_inriss.dm"
+#include "code\game\objects\items\weapons\infinity_weapons.dm"
 #include "code\game\objects\items\weapons\infinity_weapons_inriss.dm"
 #include "code\game\objects\items\weapons\janisigns.dm"
 #include "code\game\objects\items\weapons\kitchen.dm"

@@ -1,4 +1,4 @@
-/obj/item/weapon/melee/fan
+/obj/item/weapon/fan
 	name = "black fox fan"
 	desc = "So fancy."
 	icon = 'icons/obj/infinity_object.dmi'
@@ -8,7 +8,7 @@
 	force = 0
 	var/on = 0
 
-/obj/item/weapon/melee/fan/attack_self(mob/user)
+/obj/item/weapon/fan/attack_self(mob/user)
 	on = !on
 	if(on)
 		user << "<span class ='notice'>You revealed the fan.</span>"
@@ -18,7 +18,6 @@
 		lefthand_file = 'icons/mob/inhands/infinity_obj_left.dmi'
 		righthand_file = 'icons/mob/inhands/infinity_obj_right.dmi'
 		w_class = 4
-		force = 0
 	else
 		user << "<span class ='notice'>You close the fan.</span>"
 		icon_state = "dei_foxfan_closed"
@@ -27,3 +26,9 @@
 		item_state = null
 
 	add_fingerprint(user)
+
+/obj/item/weapon/fan/attack(mob/living/carbon/C, mob/living/carbon/human/user)
+	if(on)
+		user << "<span class ='notice'>You wave the [src.name] on [C].</span>"
+	else
+		return
