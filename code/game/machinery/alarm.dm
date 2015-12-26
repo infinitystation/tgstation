@@ -313,7 +313,7 @@
 					continue
 				data["vents"] += list(list(
 						"id_tag"	= id_tag,
-						"long_name" = sanitize(long_name),
+						"long_name" = sanitize_o(long_name),
 						"power"		= info["power"],
 						"checks"	= info["checks"],
 						"excheck"	= info["checks"]&1,
@@ -331,7 +331,7 @@
 					continue
 				data["scrubbers"] += list(list(
 						"id_tag"		= id_tag,
-						"long_name" 	= sanitize(long_name),
+						"long_name" 	= sanitize_o(long_name),
 						"power"			= info["power"],
 						"scrubbing"		= info["scrubbing"],
 						"widenet"		= info["widenet"],
