@@ -36,8 +36,7 @@
 			index = findtext(t, char)
 	return t
 
-//Removes a few problematic characters
-// it was = /proc/sanitize_simple(var/t,var/list/repl_chars = list("\n"="#","\t"="#","ï¿½"="ï¿½"))
+//Removes a ÿ (cp1251)
 /proc/sanitize_simple(t,list/repl_chars = list("ÿ"="____255_"))
 	for(var/char in repl_chars)
 		var/index = findtext(t, char)
@@ -47,25 +46,9 @@
 	return t
 
 //Runs byond's sanitization proc along-side sanitize_simple
-/proc/sanitize(t,list/repl_chars = null)//ansi
+/proc/sanitize(t,list/repl_chars = null)
 	t = html_encode(trim(sanitize_simple(t, repl_chars)))
-	t = replacetext(t, "____255_", "&#255;")
-	return t
-
-//unicode sanitization
-/proc/sanitize_u(t,list/repl_chars = null)
-	t = html_encode(sanitize_simple(t,repl_chars))
-	t = replacetext(t, "____255_", "&#1103;")
-	return t
-
-//convertion ansi to unicode
-/proc/sanitize_a2u(t)//ansi to unicode
-	t = replacetext(t, "&#255;", "&#1103;")
-	return t
-
-//convertion unicode to andi
-/proc/sanitize_u2a(t)//unicode to ansi
-	t = replacetext(t, "&#1103;", "&#255;")
+	t = replacetext(t, "____255_", "&#255;")//cp1251
 	return t
 
 //Runs sanitize and strip_html_simple
@@ -438,12 +421,41 @@ var/list/binary = list("0","1")
 
 	return t
 
-//clean sanitize
+//latin sanitization for some reasons
+/proc/sanitize_o(t,list/repl_chars = null)
+	t = html_encode(trim(sanitize_simple_o(t, repl_chars)))
+	return t
+
+/proc/sanitize_simple_o(t,list/repl_chars = list("\n"="#","\t"="#"))
+	for(var/char in repl_chars)
+		var/index = findtext(t, char)
+		while(index)
+			t = copytext(t, 1, index) + repl_chars[char] + copytext(t, index+1)
+			index = findtext(t, char, index+1)
+	return t
+
+//unicode sanitization
+/proc/sanitize_u(t,list/repl_chars = null)
+	t = html_encode(sanitize_simple(t,repl_chars))
+	t = replacetext(t, "____255_", "&#1103;")
+	return t
+
+//convertion cp1251 to unicode
+/proc/sanitize_a2u(t)
+	t = replacetext(t, "&#255;", "&#1103;")
+	return t
+
+//convertion unicode to cp1251
+/proc/sanitize_u2a(t)
+	t = replacetext(t, "&#1103;", "&#255;")
+	return t
+
+//clean sanitize cp1251
 /proc/sanitize_a0(t)
 	t = replacetext(t, "ÿ", "&#255;")
 	return t
 
-//clean sanitize
+//clean sanitize unicode
 /proc/sanitize_u0(t)
 	t = replacetext(t, "ÿ", "&#1103;")
 	return t
