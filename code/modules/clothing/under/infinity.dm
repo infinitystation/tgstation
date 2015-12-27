@@ -285,3 +285,4 @@
 	worn_icon = 'icons/mob/infinity_work.dmi'
 	icon = 'icons/obj/clothing/infinity_work.dmi'
 	icon_state = "shorts_denim"
+	can_adjust = 0
