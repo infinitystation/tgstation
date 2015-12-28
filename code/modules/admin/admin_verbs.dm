@@ -70,7 +70,7 @@ var/list/admin_verbs_admin = list(
 	/client/proc/cmd_admin_create_centcom_report,
 	/client/proc/aooc,
 	/client/proc/reset_all_tcs,			/*resets all telecomms scripts*/
-	/client/proc/toggle_antag_hud 	/*toggle display of the admin antag hud*/
+	/client/proc/toggle_antag_hud, 	/*toggle display of the admin antag hud*/
 	/client/proc/toggle_AI_interact /*toggle admin ability to interact with machines as an AI*/
 	)
 var/list/admin_verbs_ban = list(
