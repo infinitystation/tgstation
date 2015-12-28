@@ -120,20 +120,6 @@ var/datum/subsystem/vote/SSvote
 						restart = 1
 					else
 						master_mode = .
-			if("ooc")
-				if(. == "Включить OOC")
-					ooc_allowed = 1
-					world << "<B>The OOC channel has been globally enabled!</B>"
-				if(. == "Отключить OOC")
-					ooc_allowed = 0
-					world << "<B>The OOC channel has been globally disabled!</B>"
-			if("looc")
-				if(. == "Включить LOOC")
-					looc_allowed = 1
-					world << "<B>The LOOC channel has been globally enabled!</B>"
-				if(. == "Отключить LOOC")
-					looc_allowed = 0
-					world << "<B>The LOOC channel has been globally disabled!</B>"
 
 	if(restart)
 		var/active_admins = 0
@@ -171,8 +157,6 @@ var/datum/subsystem/vote/SSvote
 		switch(vote_type)
 			if("restart")	choices.Add("Restart Round","Continue Playing")
 			if("gamemode")	choices.Add(config.votable_modes)
-			if("ooc")	choices.Add("Включить OOC", "Отключить OOC")
-			if("looc")	choices.Add("Включить LOOC", "Отключить LOOC")
 			if("custom")
 				question = stripped_input(usr,"What is the vote for?")
 				question = copytext(sanitize_u0(question), 1, MAX_MESSAGE_LEN)
@@ -237,14 +221,9 @@ var/datum/subsystem/vote/SSvote
 			. += "\t(<a href='?src=\ref[src];vote=toggle_gamemode'>[config.allow_vote_mode?"Allowed":"Disallowed"]</a>)"
 
 		. += "</li>"
-		//ooc
-		. += "<li><a href='?src=\ref[src];vote=ooc'>Toggle OOC</a></li>"
-		//looc
-		. += "<li><a href='?src=\ref[src];vote=looc'>Toggle LOOC</a></li>"
 		//custom
 		if(trialmin)
 			. += "<li><a href='?src=\ref[src];vote=custom'>Custom</a></li>"
-
 		. += "</ul><hr>"
 	. += "<a href='?src=\ref[src];vote=close' style='position:absolute;right:50px'>Close</a>"
 	return .
