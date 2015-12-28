@@ -286,3 +286,11 @@
 	icon = 'icons/obj/clothing/infinity_work.dmi'
 	icon_state = "shorts_denim"
 	can_adjust = 0
+
+/obj/item/clothing/under/dark_shorts_denim
+	name = "dark denim shorts"
+	desc = "Jeans tight shorts."
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	icon_state = "dark_shorts_denim"
+	can_adjust = 0

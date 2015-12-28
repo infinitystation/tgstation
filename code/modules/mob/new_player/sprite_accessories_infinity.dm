@@ -117,6 +117,18 @@
 	icon = 'icons/mob/infinity_work.dmi'
 	gender = FEMALE
 
+/datum/sprite_accessory/underwear/whitebikini
+	name = "White Bikini"
+	icon_state = "bikini_white"
+	icon = 'icons/mob/infinity_work.dmi'
+	gender = FEMALE
+
+/datum/sprite_accessory/underwear/whiteswimsuit
+	name = "White Swimsuit"
+	icon_state = "white_swimsuit"
+	icon = 'icons/mob/infinity_work.dmi'
+	gender = FEMALE
+
 /datum/sprite_accessory/underwear/poslo //я понятия не имею, как это иначе назвать
 	name = "Poslo"
 	icon_state = "poslo"
