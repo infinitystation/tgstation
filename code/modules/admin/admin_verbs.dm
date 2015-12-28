@@ -70,7 +70,8 @@ var/list/admin_verbs_admin = list(
 	/client/proc/cmd_admin_create_centcom_report,
 	/client/proc/aooc,
 	/client/proc/reset_all_tcs,			/*resets all telecomms scripts*/
-	/client/proc/toggle_antag_hud 	/*toggle display of the admin antag hud*/
+	/client/proc/toggle_antag_hud, 	/*toggle display of the admin antag hud*/
+	/client/proc/toggle_AI_interact /*toggle admin ability to interact with machines as an AI*/
 	)
 var/list/admin_verbs_ban = list(
 	/client/proc/unban_panel,
@@ -651,3 +652,12 @@ var/list/admin_verbs_hideable = list(
 
 							testing("Spawned test mob with name \"[mob.name]\" at [tile.x],[tile.y],[tile.z]")
 			while (!area && --j > 0)
+
+/client/proc/toggle_AI_interact()
+ 	set name = "Toggle Admin AI Interact"
+ 	set category = "Admin"
+ 	set desc = "Allows you to interact with most machines as an AI would as a ghost"
+
+ 	AI_Interact = !AI_Interact
+ 	log_admin("[key_name(usr)] has [AI_Interact ? "activated" : "deactivated"] Admin AI Interact")
+ 	message_admins("[key_name_admin(usr)] has [AI_Interact ? "activated" : "deactivated"] their AI interaction")
