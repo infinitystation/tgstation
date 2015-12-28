@@ -119,7 +119,7 @@
 	mag_type = /obj/item/ammo_box/magazine/wt550m9
 	fire_delay = 2
 	can_suppress = 0
-	burst_size = 0
+	burst_size = 2
 	action_button_name = null
 
 /obj/item/weapon/gun/projectile/automatic/wt550/update_icon()
