@@ -288,13 +288,28 @@ var/list/all_supply_groups = list(supply_emergency,supply_security,supply_engine
 	cost = 15
 	containername = "tactical armor crate"
 
+/datum/supply_packs/security/armory/swat
+	name = "SWAT gear crate"
+	contains = list(/obj/item/clothing/head/helmet/swat/nanotrasen,
+					/obj/item/clothing/head/helmet/swat/nanotrasen,
+					/obj/item/clothing/suit/space/swat,
+					/obj/item/clothing/suit/space/swat,
+					/obj/item/weapon/kitchen/knife/combat,
+					/obj/item/weapon/kitchen/knife/combat,
+					/obj/item/clothing/mask/gas/sechailer/swat,
+					/obj/item/clothing/mask/gas/sechailer/swat,
+					/obj/item/weapon/storage/belt/military/assault,
+					/obj/item/weapon/storage/belt/military/assault)
+	cost = 60
+	containername = "assault armor crate"
+
 /datum/supply_packs/security/armory/laserarmor
-	name = "Ablative Armor Crate"
+	name = "Reflector Vest Crate"
 	contains = list(/obj/item/clothing/suit/armor/laserproof,
 					/obj/item/clothing/suit/armor/laserproof)		// Only two vests to keep costs down for balance
 	cost = 20
 	containertype = /obj/structure/closet/crate/secure/plasma
-	containername = "ablative armor crate"
+	containername = "reflector vest crate"
 
 /////// Weapons: Specialist
 
@@ -375,10 +390,10 @@ var/list/all_supply_groups = list(supply_emergency,supply_security,supply_engine
 
 /datum/supply_packs/security/securitybarriers
 	name = "Security Barriers Crate"
-	contains = list(/obj/machinery/deployable/barrier,
-					/obj/machinery/deployable/barrier,
-					/obj/machinery/deployable/barrier,
-					/obj/machinery/deployable/barrier)
+	contains = list(/obj/item/weapon/grenade/barrier,
+					/obj/item/weapon/grenade/barrier,
+					/obj/item/weapon/grenade/barrier,
+					/obj/item/weapon/grenade/barrier)
 	cost = 20
 	containername = "security barriers crate"
 

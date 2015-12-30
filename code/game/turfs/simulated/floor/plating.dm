@@ -176,26 +176,7 @@
 	..()
 	icon_state = "alienpod[rand(1,9)]"
 
-/turf/simulated/floor/plating/basalt
-	name = "basalt floor"
-	icon_state = "basalt1"
-
-/turf/simulated/floor/plating/basalt/New()
-	..()
-	icon_state = "basalt[rand(0,12)]"
-
-/turf/simulated/floor/plating/basalt/Destroy()
-	return QDEL_HINT_LETMELIVE
-
-/turf/simulated/floor/plating/basalt/ex_act()
-	return ..()
-
-
-
-
-
 ///LAVA
-
 
 /turf/simulated/floor/plating/lava
 	name = "lava"
@@ -232,14 +213,15 @@
 			if(istype(O, /obj/effect/decal/cleanable/ash)) //So we don't get stuck burning the same ash pile forever
 				qdel(O)
 				return
-			if(O.burn_state == -1)
-				O.burn_state = 0 //Even fireproof things burn up in lava
+			if(O.burn_state == FIRE_PROOF)
+				O.burn_state = FLAMMABLE //Even fireproof things burn up in lava
 			O.fire_act()
 		else if (istype(AM, /mob/living))
 			var/mob/living/L = AM
 			L.adjustFireLoss(20)
-			L.adjust_fire_stacks(20)
-			L.IgniteMob()
+			if(L) //mobs turning into object corpses could get deleted here.
+				L.adjust_fire_stacks(20)
+				L.IgniteMob()
 
 /turf/simulated/floor/plating/lava/attackby(obj/item/C, mob/user, params) //Lava isn't a good foundation to build on
 	return
@@ -259,7 +241,7 @@
 	smooth = SMOOTH_TRUE
 	icon = 'icons/turf/floors/lava.dmi'
 	icon_state = "smooth"
-	canSmoothWith = list(/turf/simulated/wall)
+	canSmoothWith = list(/turf/simulated/wall, /turf/simulated/mineral, /turf/simulated/floor/plating/lava/smooth)
 
 /turf/simulated/floor/plating/lava/smooth/airless
 	oxygen = 0

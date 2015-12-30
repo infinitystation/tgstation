@@ -70,3 +70,25 @@
 	item_state = "bl_suit"
 	icon = 'icons/obj/clothing/infinity_work.dmi'
 	worn_icon = 'icons/mob/infinity_work.dmi'
+
+/obj/item/clothing/suit/kimono
+	name = "kimono"
+	desc = "Some soft and comfortable kimono. Jack approved this!"
+	icon_state = "kimono"
+	item_state = "w_suit"
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'
+
+/obj/item/clothing/suit/kimono/black
+	name = "black kimono"
+	desc = "Some soft and comfortable kimono."
+	icon_state = "black_kimono"
+	item_state = "bl_suit"
+
+/obj/item/clothing/suit/longjacket
+	name = "long jacket"
+	desc = "Ordinary jacket. Just a little bit longer."
+	icon_state = "longjacket"
+	item_state = "bl_suit"
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'

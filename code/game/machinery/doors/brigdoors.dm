@@ -70,6 +70,17 @@
 			src.timer_end() // open doors, reset timer, clear status screen
 			timing = 0
 			timeset(0)
+
+			var/prisoners = ""
+			var/prisoners_alt = ""
+			for(var/obj/machinery/door/window/brigdoor/door in targets)
+				for(var/mob/living/carbon/human/H in orange(2, door))
+					prisoners += "[key_name_admin(H)] "
+					prisoners_alt += "[H.ckey]/[H.real_name] "
+			message_admins("У преступник(ов) закончилсЯ срок заключениЯ.")
+			message_admins("Игроки вокруг камеры: [prisoners]")
+			log_game("У преступник(ов) закончилсЯ срок заключениЯ.")
+			log_game("Игроки вокруг камеры: [prisoners_alt]")
 		src.updateUsrDialog()
 		src.update_icon()
 	else
@@ -191,14 +202,19 @@
 		timeset(timeleft)
 		var/second = round(timeleft() % 60)
 		var/minute = round((timeleft() - second) / 60)
+
 		var/prisoners = ""
-		for(var/mob/living/carbon/human/H in orange(src, 3))
-			if(H.x<src.x && H.y<src.y)
-				prisoners += "[H.ckey]/[H.real_name] "
-		message_admins("В тюрьму посажен преступник. Срок: [(minute ? text("[minute]:") : null)][second]. Выставлен игроком [key_name(usr, usr.client)](<A HREF='?_src_=holder;adminmoreinfo=\ref[usr]'>?</A>) Координаты: ([x],[y],[z] - <A HREF='?_src_=holder;adminplayerobservecoodjump=1;X=[x];Y=[y];Z=[z]'>JMP</a>)",0,1)
-		message_admins("Игроки в камере: [prisoners]")
-		log_game("В тюрьму посажен преступник. Срок: [(minute ? text("[minute]:") : null)][second]. Выставлен игроком [usr.ckey]/[usr.real_name]. Координаты: ([x],[y],[z])")
-		log_game("Игроки в камере: [prisoners]")
+		var/prisoners_alt = ""
+		var/releasing = text2num(href_list["timing"])
+		for(var/obj/machinery/door/window/brigdoor/door in targets)
+			for(var/mob/living/carbon/human/H in orange(2, door))
+				prisoners += "[key_name_admin(H)] "
+				prisoners_alt += "[H.ckey]/[H.real_name] "
+
+		message_admins("[releasing ? "В тюрьму посажен преступник." : "Из тюрьмы досрочно освобожден(ы) преступник(и)"] Срок: [(minute ? text("[minute]:") : null)][second]. [releasing ? "Выставлен" : "Освобожден(ы)"] игроком [key_name(usr, usr.client)](<A HREF='?_src_=holder;adminmoreinfo=\ref[usr]'>?</A>) Координаты: ([x],[y],[z] - <A HREF='?_src_=holder;adminplayerobservecoodjump=1;X=[x];Y=[y];Z=[z]'>JMP</a>)",0,1)
+		message_admins("Игроки вокруг камеры: [prisoners]")
+		log_game("[releasing ? "В тюрьму посажен преступник." : "Из тюрьмы досрочно освобожден(ы) преступник(и)"] Срок: [(minute ? text("[minute]:") : null)][second]. [releasing ? "Выставлен" : "Освобожден(ы)"] игроком [usr.ckey]/[usr.real_name]. Координаты: ([x],[y],[z])")
+		log_game("Игроки вокруг камеры: [prisoners_alt]")
 	else if(href_list["tp"]) //adjust timer
 		var/timeleft = timeleft()
 		var/tp = text2num(href_list["tp"])

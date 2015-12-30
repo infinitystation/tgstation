@@ -278,3 +278,19 @@
 	icon = 'icons/obj/clothing/uac/uniform.dmi'
 	icon_state = "uac_uniform"
 	armor = list(melee = 10, bullet = 10, laser = 10, energy = 10, bomb = 10, bio = 10, rad = 10)
+
+/obj/item/clothing/under/shorts_denim
+	name = "denim shorts"
+	desc = "Jeans tight shorts."
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	icon_state = "shorts_denim"
+	can_adjust = 0
+
+/obj/item/clothing/under/dark_shorts_denim
+	name = "dark denim shorts"
+	desc = "Jeans tight shorts."
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	icon_state = "dark_shorts_denim"
+	can_adjust = 0

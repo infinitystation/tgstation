@@ -222,6 +222,8 @@ var/const/MAX_ACTIVE_TIME = 400
 /proc/CanHug(mob/living/M)//used for facehuggers
 	if(!M)
 		return 0
+	if(!istype(M))
+		return 0
 	if(M.stat == DEAD)
 		return 0
 	if(M.getorgan(/obj/item/organ/internal/alien/hivenode))

@@ -279,22 +279,15 @@ var/global/list/multiverse = list()
 		user << "<span class='warning'><B>[src] is recharging! Keep in mind it shares a cooldown with the swords wielded by your copies.</span>"
 
 
-/obj/item/weapon/multisword/proc/spawn_copy(var/client/C, var/turf/T)
+/obj/item/weapon/multisword/proc/spawn_copy(var/client/C, var/turf/T, mob/living/user)
 	var/mob/living/carbon/human/M = new/mob/living/carbon/human(T)
-	C.prefs.copy_to(M, icon_updates=0)
+	user.client.prefs.copy_to(M, icon_updates=0)
 	M.key = C.key
 	M.mind.name = usr.real_name
 	M << "<B>You are an alternate version of [usr.real_name] from another universe! Help them accomplish their goals at all costs.</B>"
 	M.real_name = usr.real_name
 	M.name = usr.real_name
 	M.faction = list("[usr.real_name]")
-	if(prob(50))
-		var/list/all_species = list()
-		for(var/speciestype in subtypesof(/datum/species))
-			var/datum/species/S = new speciestype()
-			if(!S.dangerous_existence)
-				all_species += speciestype
-		M.set_species(pick(all_species), icon_update=0)
 	M.update_body()
 	M.update_hair()
 	M.update_mutcolor()
@@ -495,7 +488,7 @@ var/global/list/multiverse = list()
 	var/cooldown_time = 30 //3s
 	var/cooldown = 0
 	burntime = 0
-	burn_state = 0
+	burn_state = FLAMMABLE
 
 /obj/item/voodoo/attackby(obj/item/I, mob/user, params)
 	if(target && cooldown < world.time)

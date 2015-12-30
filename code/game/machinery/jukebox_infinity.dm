@@ -1,11 +1,11 @@
 //This file was auto-corrected by findeclaration.exe on 25.5.2012 20:42:32
 datum/track
 	var/title
-	var/sound
+	var/path
 
 datum/track/New(var/title_name, var/audio)
 	title = title_name
-	sound = audio
+	path = audio
 
 /obj/machinery/media/jukebox/
 	name = "space jukebox"
@@ -22,38 +22,40 @@ datum/track/New(var/title_name, var/audio)
 	var/playing = 0
 
 	var/datum/track/current_track
-	var/list/datum/track/tracks = list(
-		new/datum/track("AC/DC - High Way To Hell", 'sound/playlist/acdc - high way to hell.ogg'),
-		new/datum/track("Benjamin Briggs - Spoiled", 'sound/playlist/Benjamin Briggs - Spoiled.ogg'),
-		new/datum/track("Dean Martin - Let It Snow", 'sound/playlist/Dean Martin - Let It Snow.ogg'),
-		new/datum/track("Eminem - Love The Way You Lie (Violin Cover by Eric Stanley)", 'sound/playlist/Eminem - Love the way you lie (violin cover by Eric Stanley).ogg'),
-		new/datum/track("Gorillaz - Feel Good Inc", 'sound/playlist/Gorillaz - Feel Good Inc.ogg'),
-		new/datum/track("IAMTHEKIDYOUKNOWWHATIMEAN - Run (Hotline Miami 2 Wrong Number OST)", 'sound/playlist/IAMTHEKIDYOUKNOWWHATIMEAN - Run (Hotline Miami 2 Wrong Number OST).ogg'),
-		new/datum/track("Imagine Dragons - Radioactive", 'sound/playlist/Imagine Dragons - Radioactive.ogg'),
-		new/datum/track("James Arthur - Impossible", 'sound/playlist/James Arthur - Impossible.ogg'),
-		new/datum/track("Johnny Cash - House Of The Rising Sun", 'sound/playlist/Johnny Cash - House Of The Rising Sun.ogg'),
-		new/datum/track("Kid Cudi - Day n Nite", 'sound/playlist/Kid cudi - day n nite.ogg'),
-		new/datum/track("Linkin Park - Numb", 'sound/playlist/Linkin Park - Numb.ogg'),
-		new/datum/track("M.O.O.N. - Hydrogen", 'sound/playlist/M.O.O.N. - Hydrogen.ogg'),
-		new/datum/track("Nickelback - When We Stand Together", 'sound/playlist/Nickelback - When We Stand Together.ogg'),
-		new/datum/track("Nirvana - Smells Like A Teen Spirit", 'sound/playlist/Nirvana - Smells like a teen spirit.ogg'),
-		new/datum/track("Nitro Fun - New Game", 'sound/playlist/Nitro Fun - New Game.ogg'),
-		new/datum/track("NWA - Fuck The Police", 'sound/playlist/NWA - Fuck The Police.ogg'),
-		new/datum/track("Paul Stanley - Live To Win", 'sound/playlist/Paul Stanley - Live To Win.ogg'),
-		new/datum/track("Serbian Soldiers - REMOVE KEBAB (SERBIA STRONG)", 'sound/playlist/Serbian Soldiers - REMOVE KEBAB.ogg'),
-		new/datum/track("Skrillex ft. Damian Marley - Make It Bun Dem", 'sound/playlist/Skrillex ft. Damian Marley - Make It Bun Dem.ogg'),
-		new/datum/track("Baystation12 - Intro", 'sound/playlist/Space Station 13 - Baystation 12.ogg'),
-		new/datum/track("Clown Anthem", 'sound/playlist/Space Station 13 - Clown.ogg'),
-		new/datum/track("Star Wars - Cantina Band", 'sound/playlist/Star Wars - Cantina Band.ogg'),
-		new/datum/track("Grigoriy Leps - Ryumka Vodki", 'sound/playlist/Grigoriy Leps - Ryumka Vodki.ogg'),
-		new/datum/track("Smyslovye Galucinacii - Vechno Molodoy", 'sound/playlist/Smyslovye Galucinacii - Vechno Molodoy.ogg'),
-	)
+	var/list/datum/track/tracks = list()
 
 /obj/machinery/media/jukebox/New()
 	..()
 	update_icon()
+	tracks = list(
+		new/datum/track("AC/DC - High Way To Hell", "sound/playlist/acdc - high way to hell.ogg"),
+		new/datum/track("Benjamin Briggs - Spoiled", "sound/playlist/Benjamin Briggs - Spoiled.ogg"),
+		new/datum/track("Dean Martin - Let It Snow", "sound/playlist/Dean Martin - Let It Snow.ogg"),
+		new/datum/track("Eminem - Love The Way You Lie (Violin Cover by Eric Stanley)", "sound/playlist/Eminem - Love the way you lie (violin cover by Eric Stanley).ogg"),
+		new/datum/track("Gorillaz - Feel Good Inc", "sound/playlist/Gorillaz - Feel Good Inc.ogg"),
+		new/datum/track("IAMTHEKIDYOUKNOWWHATIMEAN - Run (Hotline Miami 2 Wrong Number OST)", "sound/playlist/IAMTHEKIDYOUKNOWWHATIMEAN - Run (Hotline Miami 2 Wrong Number OST).ogg"),
+		new/datum/track("Imagine Dragons - Radioactive", "sound/playlist/Imagine Dragons - Radioactive.ogg"),
+		new/datum/track("James Arthur - Impossible", "sound/playlist/James Arthur - Impossible.ogg"),
+		new/datum/track("Johnny Cash - House Of The Rising Sun", "sound/playlist/Johnny Cash - House Of The Rising Sun.ogg"),
+		new/datum/track("Kid Cudi - Day n Nite", "sound/playlist/Kid cudi - day n nite.ogg"),
+		new/datum/track("Linkin Park - Numb", "sound/playlist/Linkin Park - Numb.ogg"),
+		new/datum/track("M.O.O.N. - Hydrogen", "sound/playlist/M.O.O.N. - Hydrogen.ogg"),
+		new/datum/track("Nickelback - When We Stand Together", "sound/playlist/Nickelback - When We Stand Together.ogg"),
+		new/datum/track("Nirvana - Smells Like A Teen Spirit", "sound/playlist/Nirvana - Smells like a teen spirit.ogg"),
+		new/datum/track("Nitro Fun - New Game", "sound/playlist/Nitro Fun - New Game.ogg"),
+		new/datum/track("NWA - Fuck The Police", "sound/playlist/NWA - Fuck The Police.ogg"),
+		new/datum/track("Paul Stanley - Live To Win", "sound/playlist/Paul Stanley - Live To Win.ogg"),
+		new/datum/track("Serbian Soldiers - REMOVE KEBAB (SERBIA STRONG)", "sound/playlist/Serbian Soldiers - REMOVE KEBAB.ogg"),
+		new/datum/track("Skrillex ft. Damian Marley - Make It Bun Dem", "sound/playlist/Skrillex ft. Damian Marley - Make It Bun Dem.ogg"),
+		new/datum/track("Baystation12 - Intro", "sound/playlist/Space Station 13 - Baystation 12.ogg"),
+		new/datum/track("Clown Anthem", "sound/playlist/Space Station 13 - Clown.ogg"),
+		new/datum/track("Star Wars - Cantina Band", "sound/playlist/Star Wars - Cantina Band.ogg"),
+		new/datum/track("Grigoriy Leps - Ryumka Vodki", "sound/playlist/Grigoriy Leps - Ryumka Vodki.ogg"),
+		new/datum/track("Smyslovye Galucinacii - Vechno Molodoy", "sound/playlist/Smyslovye Galucinacii - Vechno Molodoy.ogg"),
+	)
 
-/obj/machinery/media/jukebox/Del()
+
+/obj/machinery/media/jukebox/Destroy()
 	StopPlaying()
 	..()
 
@@ -79,8 +81,31 @@ datum/track/New(var/title_name, var/audio)
 	if(playing)
 		overlays += "[state_base]-running"
 
+/obj/machinery/media/jukebox/attack_hand(var/mob/user as mob)
+	if(stat & (NOPOWER|BROKEN))
+		usr << "\The [src] doesn't appear to function."
+		return
+
+	var/title = "RetroBox - Space Style"
+	var/dat = ""
+
+	dat += "<b>Playing - [current_track ? current_track.title : "Nothing"]<b>"
+	dat += "<br/><a href='?src=\ref[src];play=1'>Play</a> <a href='?src=\ref[src];stop=1'>Stop</a><br/>"
+
+	for(var/datum/track/T in tracks)
+		dat += "<br/><a href='?src=\ref[src];change_track=[T.title]'>[T.title]</a>"
+
+	user.set_machine(src)
+	var/datum/browser/popup = new(user, "jukebox", title, 470, 500)
+	popup.set_content(dat)
+	popup.set_title_image(user.browse_rsc_icon(src.icon, src.icon_state))
+	popup.open(1)
+	return
+
+	return 0
+
 /obj/machinery/media/jukebox/Topic(href, href_list)
-	if(..() || !(Adjacent(usr) || istype(usr, /mob/living/silicon)))
+	if(..())
 		return
 
 	if(!anchored)
@@ -91,59 +116,26 @@ datum/track/New(var/title_name, var/audio)
 		usr << "\The [src] doesn't appear to function."
 		return
 
-	if(href_list["change_track"])
-		for(var/datum/track/T in tracks)
-			if(T.title == href_list["title"])
-				current_track = T
-				StartPlaying()
-				break
-	else if(href_list["stop"])
+	if(href_list["stop"])
 		StopPlaying()
-	else if(href_list["play"])
+
+	if(href_list["play"])
 		if(current_track == null)
 			usr << "No track selected."
 		else
 			StartPlaying()
 
-	return 1
-
-/obj/machinery/media/jukebox/interact(mob/user)
-	if(stat & (NOPOWER|BROKEN))
-		usr << "\The [src] doesn't appear to function."
-		return
-
-	ui_interact(user)
-
-/obj/machinery/media/jukebox/ui_interact(mob/user, ui_key = "jukebox", var/datum/nanoui/ui = null)
-	var/title = "RetroBox - Space Style"
-	var/data[0]
-
-	if(!(stat & (NOPOWER|BROKEN)))
-		data["current_track"] = current_track != null ? current_track.title : ""
-		data["playing"] = playing
-
-		var/list/nano_tracks = new
+	if(href_list["change_track"])
 		for(var/datum/track/T in tracks)
-			nano_tracks[++nano_tracks.len] = list("track" = T.title)
+			if(T.title == href_list["change_track"])
+				current_track = T
+				StartPlaying()
 
-		data["tracks"] = nano_tracks
-
-	// update the ui if it exists, returns null if no ui is passed/found
-	ui = SSnano.try_update_ui(user, src, ui_key, ui, data)
-	if (!ui)
-		// the ui does not exist, so we'll create a new() one
-        // for a list of parameters and their descriptions see the code docs in \code\modules\nano\nanoui.dm
-		ui = new(user, src, ui_key, "jukebox.tmpl", title, 450, 600)
-		// when the ui is first opened this is the data it will use
-		ui.set_initial_data(data)
-		// open the new ui window
-		ui.open()
+	src.updateUsrDialog()
+	return 1
 
 /obj/machinery/media/jukebox/attack_ai(mob/user as mob)
 	return src.attack_hand(user)
-
-/obj/machinery/media/jukebox/attack_hand(var/mob/user as mob)
-	interact(user)
 
 /obj/machinery/media/jukebox/attackby(obj/item/W as obj, mob/user as mob)
 	src.add_fingerprint(user)
@@ -178,7 +170,7 @@ datum/track/New(var/title_name, var/audio)
 		return
 
 	var/area/A = get_area(src)
-	A.forced_ambience = sound(current_track.sound, channel = 1, repeat = 1, volume = 40)
+	A.forced_ambience = sound(current_track.path, channel = 1, repeat = 1, volume = 50)
 
 	for(var/mob/living/M in mobs_in_area(A))
 		if(M.mind)

@@ -41,7 +41,6 @@ var/list/ai_list = list()
 
 	//MALFUNCTION
 	var/datum/module_picker/malf_picker
-	var/processing_time = 100
 	var/list/datum/AI_Module/current_modules = list()
 	var/fire_res_on_core = 0
 	var/can_dominate_mechs = 0
@@ -66,6 +65,8 @@ var/list/ai_list = list()
 	var/turf/waypoint //Holds the turf of the currently selected waypoint.
 	var/waypoint_mode = 0 //Waypoint mode is for selecting a turf via clicking.
 	var/apc_override = 0 //hack for letting the AI use its APC even when visionless
+	var/nuking = FALSE
+	var/obj/machinery/doomsday_device/doomsday_device
 
 	var/mob/camera/aiEye/eyeobj = new()
 	var/sprint = 10
@@ -132,9 +133,8 @@ var/list/ai_list = list()
 			src << "Use say :b to speak to your cyborgs through binary."
 			src << "For department channels, use the following say commands:"
 			src << ":o - AI Private, :c - Command, :s - Security, :e - Engineering, :u - Supply, :v - Service, :m - Medical, :n - Science."
-			if (!(ticker && ticker.mode && (mind in ticker.mode.malf_ai)))
-				show_laws()
-				src << "<b>These laws may be changed by other players, or by you being the traitor.</b>"
+			show_laws()
+			src << "<b>These laws may be changed by other players, or by you being the traitor.</b>"
 
 			job = "AI"
 	ai_list += src
@@ -233,12 +233,6 @@ var/list/ai_list = list()
 /mob/living/silicon/ai/Stat()
 	..()
 	if(statpanel("Status"))
-		if(ticker.mode.name == "AI malfunction")
-			var/datum/game_mode/malfunction/malf = ticker.mode
-			for (var/datum/mind/malfai in malf.malf_ai)
-				if ((mind == malfai) && (malf.apcs > 0))
-					stat(null, "Time until station control secured: [max(malf.AI_win_timeleft/malf.apcs, 0)] seconds")
-
 		if(!stat)
 			stat(null, text("System integrity: [(health+100)/2]%"))
 			stat(null, "Station Time: [worldtime2text()]")
@@ -517,15 +511,16 @@ var/list/ai_list = list()
 	var/ai_Zlevel = ai_current_turf.z
 	var/d
 	var/area/bot_area
-	d += "<A HREF=?src=\ref[src];botrefresh=\ref[Bot]>Query network status</A><br>"
+	d += "<A HREF=?src=\ref[src];botrefresh=1>Query network status</A><br>"
 	d += "<table width='100%'><tr><td width='40%'><h3>Name</h3></td><td width='30%'><h3>Status</h3></td><td width='30%'><h3>Location</h3></td><td width='10%'><h3>Control</h3></td></tr>"
 
 	for (Bot in living_mob_list)
 		if(Bot.z == ai_Zlevel && !Bot.remote_disabled) //Only non-emagged bots on the same Z-level are detected!
 			bot_area = get_area(Bot)
-			d += "<tr><td width='30%'>[Bot.hacked ? "<span class='bad'>(!)</span>" : ""] [Bot.name] ([Bot.model])</td>"
+			var/bot_mode = Bot.get_mode()
+			d += "<tr><td width='30%'>[Bot.hacked ? "<span class='bad'>(!)</span>" : ""] [Bot.name]</A> ([Bot.model])</td>"
 			//If the bot is on, it will display the bot's current mode status. If the bot is not mode, it will just report "Idle". "Inactive if it is not on at all.
-			d += "<td width='30%'>[Bot.on ? "[Bot.mode ? "<span class='average'>[ Bot.get_mode() ]</span>": "<span class='good'>Idle</span>"]" : "<span class='bad'>Inactive</span>"]</td>"
+			d += "<td width='30%'>[bot_mode]</td>"
 			d += "<td width='30%'>[bot_area.name]</td>"
 			d += "<td width='10%'><A HREF=?src=\ref[src];interface=\ref[Bot]>Interface</A></td>"
 			d += "<td width='10%'><A HREF=?src=\ref[src];callbot=\ref[Bot]>Call</A></td>"
@@ -817,9 +812,6 @@ var/list/ai_list = list()
 	if(interaction == AI_TRANS_TO_CARD)//The only possible interaction. Upload AI mob to a card.
 		if(!mind)
 			user << "<span class='warning'>No intelligence patterns detected.</span>"    //No more magical carding of empty cores, AI RETURN TO BODY!!!11
-			return
-		if (mind.special_role == "malfunction") //AI MALF!!
-			user << "<span class='boldannounce'>ERROR</span>: Remote transfer interface disabled."//Do ho ho ho~
 			return
 		new /obj/structure/AIcore/deactivated(loc)//Spawns a deactivated terminal at AI location.
 		aiRestorePowerRoutine = 0//So the AI initially has power.

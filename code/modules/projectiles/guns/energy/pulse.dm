@@ -11,9 +11,6 @@
 	cell_type = /obj/item/weapon/stock_parts/cell/ammo/pulse
 	cell_removing = 0
 
-/obj/item/weapon/gun/energy/pulse/attack_self(mob/living/user)
-	select_fire(user)
-
 /obj/item/weapon/gun/energy/pulse/emp_act(severity)
 	return
 

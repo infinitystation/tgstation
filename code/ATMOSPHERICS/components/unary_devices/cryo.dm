@@ -8,7 +8,7 @@
 
 	var/on = 0
 	var/temperature_archived
-	var/obj/item/weapon/reagent_containers/beaker = null
+	var/obj/item/weapon/reagent_containers/glass/beaker = null
 	var/next_trans = 0
 	var/current_heat_capacity = 50
 	state_open = 0
@@ -43,7 +43,7 @@
 	T.contents += contents
 
 	if(beaker)
-		beaker.loc = get_step(loc, SOUTH) //Beaker is carefully fed from the wreckage of the cryotube
+		beaker.loc = get_step(loc, SOUTH) // Beaker is carefully ejected from the wreckage of the cryotube.
 	beaker = null
 	return ..()
 
@@ -59,15 +59,16 @@
 
 /obj/machinery/atmospherics/components/unary/cryo_cell/process()
 	..()
-	if(occupant && occupant.health >= 100 && autoEject)
+	if(occupant && occupant.health >= 100)
 		on = 0
-		open_machine()
 		playsound(src.loc, 'sound/machines/ding.ogg', 50, 1)
+		if(autoEject)
+			open_machine()
+
 	if(!NODE1 || !is_operational())
 		return
-
 	if(AIR1)
-		if (occupant)
+		if(on && occupant)
 			process_occupant()
 		expel_gas()
 
@@ -82,7 +83,7 @@
 	return
 
 /obj/machinery/atmospherics/components/unary/cryo_cell/container_resist()
-	usr << "<span class='notice'>Release sequence activated. This will take a few seconds.</span>"
+	usr << "<span class='notice'>You struggle inside the cryotube, kicking the release with your foot.</span>"
 	sleep(150)
 	if(!src || !usr || (!occupant && !contents.Find(usr))) // Make sure they didn't disappear.
 		return
@@ -112,7 +113,7 @@
 /obj/machinery/atmospherics/components/unary/cryo_cell/ui_interact(mob/user, ui_key = "main", datum/nanoui/ui = null, force_open = 0)
 	ui = SSnano.try_update_ui(user, src, ui_key, ui, force_open = force_open)
 	if (!ui)
-		ui = new(user, src, ui_key, "cryo.tmpl", name, 520, 560, state = notcontained_state)
+		ui = new(user, src, ui_key, "cryo", name, 410, 550, state = notcontained_state)
 		ui.open()
 
 /obj/machinery/atmospherics/components/unary/cryo_cell/get_ui_data()
@@ -159,40 +160,34 @@
 
 	data["isBeakerLoaded"] = beaker ? 1 : 0
 	var beakerContents[0]
-	if(beaker && beaker:reagents && beaker:reagents.reagent_list.len)
-		for(var/datum/reagent/R in beaker:reagents.reagent_list)
+	if(beaker && beaker.reagents && beaker.reagents.reagent_list.len)
+		for(var/datum/reagent/R in beaker.reagents.reagent_list)
 			beakerContents.Add(list(list("name" = R.name, "volume" = R.volume))) // list in a list because Byond merges the first list...
 	data["beakerContents"] = beakerContents
 	return data
 
-/obj/machinery/atmospherics/components/unary/cryo_cell/Topic(href, href_list)
+/obj/machinery/atmospherics/components/unary/cryo_cell/ui_act(action, params)
 	if(..())
 		return
 
-	if(href_list["switchOn"])
-		if(!state_open)
-			on = 1
-
-	if(href_list["switchOff"])
-		on = 0
-
-	if(href_list["autoEject"])
-		autoEject = !autoEject
-
-	if(href_list["openCell"])
-		open_machine()
-
-	if(href_list["closeCell"])
-		close_machine()
-
-	if(href_list["ejectBeaker"])
-		if(beaker)
-			var/obj/item/weapon/reagent_containers/glass/B = beaker
-			B.loc = get_step(loc, SOUTH)
-			beaker = null
-
-	add_fingerprint(usr)
+	switch(action)
+		if("open")
+			open_machine()
+		if("close")
+			close_machine()
+		if("autoeject")
+			autoEject = !autoEject
+		if("on")
+			if(!state_open)
+				on = 1
+		if("off")
+			on = 0
+		if("ejectbeaker")
+			if(beaker)
+				beaker.loc = get_step(loc, SOUTH)
+				beaker = null
 	update_icon()
+	return 1
 
 /obj/machinery/atmospherics/components/unary/cryo_cell/attackby(obj/item/I, mob/user, params)
 	if(istype(I, /obj/item/weapon/reagent_containers/glass))
@@ -261,6 +256,8 @@
 
 /obj/machinery/atmospherics/components/unary/cryo_cell/proc/process_occupant()
 	var/datum/gas_mixture/air_contents = AIR1
+	if(!on)
+		return
 	if(air_contents.total_moles() < 10)
 		return
 	if(occupant)

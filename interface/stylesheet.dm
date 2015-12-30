@@ -91,6 +91,7 @@ h1.alert, h2.alert		{color: #000000;}
 .papyrus				{font-family: "Papyrus", cursive, sans-serif;}
 .robot					{font-family: "Consolas", cursive, sans-serif; font-size: 3}
 
+.commmand_headset       {font-weight: bold; font-size: 3;}
 .big					{font-size: 3;}
 .reallybig				{font-size: 4;}
 .greentext				{color: #00FF00;	font-size: 3;}

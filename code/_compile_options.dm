@@ -20,7 +20,7 @@
 #define SPAM_TRIGGER_AUTOMUTE	10	//Number of identical messages required before the spam-prevention will automute you
 
 //Don't set this very much higher then 1024 unless you like inviting people in to dos your server with message spam
-#define MAX_MESSAGE_LEN			1024
+#define MAX_MESSAGE_LEN			3072
 #define MAX_NAME_LEN			26
 #define MAX_BROADCAST_LEN		512
 
@@ -48,7 +48,7 @@
 #warn compiling in TESTING mode. testing() debug messages will be visible.
 #endif
 
-#define MIN_COMPILER_VERSION 509
+#define MIN_COMPILER_VERSION 508
 #if DM_VERSION < MIN_COMPILER_VERSION //Update this whenever you need to take advantage of more recent byond features
 #error Your version of BYOND is too out-of-date to compile this project. Go to byond.com/download and update.
 #endif

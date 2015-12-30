@@ -73,7 +73,7 @@
 	icon = 'icons/obj/decals.dmi'
 	icon_state = "backing"
 	w_class = 3
-	burn_state = 0 //Burnable, made of wood
+	burn_state = FLAMMABLE
 
 /obj/item/sign_backing/afterattack(atom/target, mob/user, proximity)
 	if(!isturf(target))
@@ -249,3 +249,15 @@
 	desc = "LOYALTY UNTIL DEATH!"
 	icon = 'icons/obj/infinity_decals.dmi'
 	icon_state = "terran"
+
+/obj/structure/sign/skull
+	name = "\improper skull emblem"
+	desc = "Nobody get out alive."
+	icon = 'icons/obj/infinity_decals.dmi'
+	icon_state = "new_logo"
+
+/obj/structure/sign/spiderclan
+	name = "\improper spider clan emblem"
+	desc = "Black widow between red polygon."
+	icon = 'icons/obj/infinity_decals.dmi'
+	icon_state = "spider_clan"

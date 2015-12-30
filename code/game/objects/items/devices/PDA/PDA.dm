@@ -19,6 +19,7 @@ var/global/list/obj/item/device/pda/PDAs = list()
 	var/default_cartridge = 0 // Access level defined by cartridge
 	var/obj/item/weapon/cartridge/cartridge = null //current cartridge
 	var/mode = 0 //Controls what menu the PDA will display. 0 is hub; the rest are either built in or based on cartridge.
+	var/icon_alert = "pda-r" //Icon to be overlayed for message alerts. Taken from the pda icon file.
 
 	//Secondary variables
 	var/scanmode = 0 //1 is medical scanner, 2 is forensics, 3 is reagent scanner.
@@ -104,7 +105,6 @@ var/global/list/obj/item/device/pda/PDAs = list()
 
 /obj/item/device/pda/heads/hos
 	default_cartridge = /obj/item/weapon/cartridge/hos
-	icon = 'icons/blue_brig/obj/PDA.dmi'
 	icon_state = "pda-hos"
 
 /obj/item/device/pda/heads/ce
@@ -161,6 +161,7 @@ var/global/list/obj/item/device/pda/PDAs = list()
 
 /obj/item/device/pda/librarian
 	icon_state = "pda-library"
+	icon_alert = "pda-r-library"
 	default_cartridge = /obj/item/weapon/cartridge/librarian
 	desc = "A portable microcomputer by Thinktronic Systems, LTD. This is model is a WGW-11 series e-reader."
 	note = "Congratulations, your station has chosen the Thinktronic 5290 WGW-11 Series E-reader and Personal Data Assistant!"
@@ -739,7 +740,7 @@ var/global/list/obj/item/device/pda/PDAs = list()
 				show_to_sender(msg)
 			P.show_recieved_message(msg,src)
 			if(!multiple)
-				show_to_ghosts(msg)
+				show_to_ghosts(user,msg)
 				log_pda("[user] (PDA: [src.name]) sent \"[message]\" to [P.name]")
 		else
 			if(!multiple)
@@ -749,7 +750,7 @@ var/global/list/obj/item/device/pda/PDAs = list()
 
 	if(multiple)
 		show_to_sender(last_sucessful_msg,1)
-		show_to_ghosts(last_sucessful_msg,1)
+		show_to_ghosts(user,last_sucessful_msg,1)
 		log_pda("[user] (PDA: [src.name]) sent \"[message]\" to Everyone")
 
 /obj/item/device/pda/proc/show_to_sender(datum/data_pda_msg/msg,multiple = 0)
@@ -769,16 +770,16 @@ var/global/list/obj/item/device/pda/PDAs = list()
 	else
 		L = get(src, /mob/living/silicon)
 
-	if(L)
+	if(L && L.stat != UNCONSCIOUS)
 		L << "\icon[src] <b>Message from [source.owner] ([source.ownjob]), </b>\"[msg.message]\"[msg.get_photo_ref()] (<a href='byond://?src=\ref[src];choice=Message;skiprefresh=1;target=\ref[source]'>Reply</a>)"
 
 	overlays.Cut()
-	overlays += image('icons/obj/pda.dmi', "pda-r")
+	overlays += image(icon, icon_alert)
 
-/obj/item/device/pda/proc/show_to_ghosts(datum/data_pda_msg/msg,multiple = 0)
+/obj/item/device/pda/proc/show_to_ghosts(mob/living/user, datum/data_pda_msg/msg,multiple = 0)
 	for(var/mob/M in player_list)
 		if(isobserver(M) && M.client && (M.client.prefs.chat_toggles & CHAT_GHOSTPDA))
-			M.show_message("<span class='game say'>PDA Message - <span class='name'>[msg.sender]</span> -> <span class='name'>[multiple ? "Everyone" : msg.recipient]</span>: <span class='message'>[msg.message][msg.get_photo_ref()]</span></span>")
+			M.show_message("<a href=?src=\ref[M];follow=\ref[user]>(F)</a>[msg.sender]<span class='game say'>PDA Message - </span> -> <span class='name'>[multiple ? "Everyone" : msg.recipient]</span>: <span class='message'>[msg.message][msg.get_photo_ref()]</span></span>")
 
 /obj/item/device/pda/proc/can_send(obj/item/device/pda/P)
 	if(!P || qdeleted(P) || P.toff)

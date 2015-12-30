@@ -11,10 +11,6 @@
 	flight_x_offset = 15
 	flight_y_offset = 10
 
-/obj/item/weapon/gun/energy/gun/attack_self(mob/living/user)
-	select_fire(user)
-	update_icon()
-
 /obj/item/weapon/gun/energy/gun/hos
 	name = "\improper X-01 MultiPhase Energy Gun"
 	desc = "This is a expensive, modern recreation of a antique laser gun. This gun has several unique firemodes, but lacks the ability to recharge over time."
@@ -50,36 +46,21 @@
 	desc = "An energy gun with an experimental miniaturized nuclear reactor that automatically charges the internal power cell."
 	icon_state = "nucgun"
 	item_state = "nucgun"
-	origin_tech = "combat=3;materials=5;powerstorage=3"
+	origin_tech = "combat=4;materials=5;powerstorage=3"
 	var/fail_tick = 0
-	var/charge_tick = 0
 	cell_removing = 0
 	cell_type = /obj/item/weapon/stock_parts/cell/ammo/high
-	var/charge_delay = 5
+	charge_delay = 1
 	pin = null
 	can_charge = 0
 	ammo_x_offset = 1
 	ammo_type = list(/obj/item/ammo_casing/energy/electrode, /obj/item/ammo_casing/energy/laser, /obj/item/ammo_casing/energy/disabler)
-
-/obj/item/weapon/gun/energy/gun/nuclear/New()
-	..()
-	SSobj.processing |= src
-
-/obj/item/weapon/gun/energy/gun/nuclear/Destroy()
-	SSobj.processing.Remove(src)
-	return ..()
+	selfcharge = 1
 
 /obj/item/weapon/gun/energy/gun/nuclear/process()
 	if(fail_tick > 0)
 		fail_tick--
-	charge_tick++
-	if(charge_tick < charge_delay)
-		return
-	charge_tick = 0
-	if(!power_supply)
-		return
-	power_supply.give(250)
-	update_icon()
+	..()
 
 /obj/item/weapon/gun/energy/gun/nuclear/shoot_live_shot()
 	failcheck()

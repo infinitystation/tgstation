@@ -164,7 +164,6 @@ Sorry Giacom. Please don't be mad :(
 		stop_pulling()
 	else if(AM.Adjacent(src))
 		src.start_pulling(AM)
-	return
 
 //same as above
 /mob/living/pointed(atom/A as mob|obj|turf in view())
@@ -387,7 +386,7 @@ Sorry Giacom. Please don't be mad :(
 	return 0
 
 
-/mob/living/proc/electrocute_act(shock_damage, obj/source, siemens_coeff = 1, safety = 0)
+/mob/living/proc/electrocute_act(shock_damage, obj/source, siemens_coeff = 1, safety = 0, tesla_shock = 0)
 	  return 0 //only carbon liveforms have this proc
 
 /mob/living/emp_act(severity)
@@ -769,7 +768,7 @@ Sorry Giacom. Please don't be mad :(
 
 /mob/living/narsie_act()
 	if(client)
-		makeNewConstruct(/mob/living/simple_animal/construct/harvester, src, null, 0)
+		makeNewConstruct(/mob/living/simple_animal/hostile/construct/harvester, src, null, 0)
 	spawn_dust()
 	gib()
 	return
@@ -810,7 +809,6 @@ Sorry Giacom. Please don't be mad :(
 		I = image(r_hand.icon, A, r_hand.icon_state, A.layer + 1)
 	else // Attacked with a fist?
 		return
-	I.appearance_flags = APPEARANCE_UI_IGNORE_ALPHA
 
 	// Who can see the attack?
 	var/list/viewing = list()

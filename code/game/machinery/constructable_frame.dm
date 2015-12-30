@@ -383,6 +383,16 @@ to destroy them and players will be able to make replacements.
 			name = "circuit board (Freezer)"
 			user << "<span class='notice'>You set the board to cooling.</span>"
 
+/obj/item/weapon/circuitboard/space_heater
+	name = "circuit board (Space Heater)"
+	build_path = /obj/machinery/space_heater
+	board_type = "machine"
+	origin_tech = "programming=2;engineering=2"
+	req_components = list(
+							/obj/item/weapon/stock_parts/micro_laser = 1,
+							/obj/item/weapon/stock_parts/capacitor = 1,
+							/obj/item/stack/cable_coil = 3)
+
 /obj/item/weapon/circuitboard/biogenerator
 	name = "circuit board (Biogenerator)"
 	build_path = /obj/machinery/biogenerator
@@ -423,6 +433,22 @@ to destroy them and players will be able to make replacements.
 	req_components = list(
 							/obj/item/weapon/stock_parts/matter_bin = 1,
 							/obj/item/weapon/stock_parts/manipulator = 1)
+
+/obj/item/weapon/circuitboard/tesla_coil
+	name = "circuit board (Tesla Coil)"
+	build_path = /obj/machinery/power/tesla_coil
+	board_type = "machine"
+	origin_tech = "programming=1"
+	req_components = list(
+							/obj/item/weapon/stock_parts/capacitor = 1)
+
+/obj/item/weapon/circuitboard/grounding_rod
+	name = "circuit board (Grounding Rod)"
+	build_path = /obj/machinery/power/grounding_rod
+	board_type = "machine"
+	origin_tech = "programming=1"
+	req_components = list(
+							/obj/item/weapon/stock_parts/capacitor = 1)
 
 /obj/item/weapon/circuitboard/processor
 	name = "circuit board (Food processor)"

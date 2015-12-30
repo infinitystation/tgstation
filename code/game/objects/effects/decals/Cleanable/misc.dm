@@ -30,13 +30,6 @@
 	pixel_x = rand(-5, 5)
 	pixel_y = rand(-5, 5)
 
-
-/obj/effect/decal/cleanable/greenglow
-	name = "green glow"
-
-/obj/effect/decal/cleanable/greenglow/ex_act()
-	return
-
 /obj/effect/decal/cleanable/dirt
 	name = "dirt"
 	desc = "Someone should clean that up."
@@ -68,6 +61,9 @@
 	luminosity = 1
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "greenglow"
+
+/obj/effect/decal/cleanable/greenglow/ex_act()
+	return
 
 /obj/effect/decal/cleanable/cobweb
 	name = "cobweb"

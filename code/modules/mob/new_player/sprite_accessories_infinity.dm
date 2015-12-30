@@ -105,9 +105,33 @@
 	icon = 'icons/mob/infinity_work.dmi'
 	gender = FEMALE
 
+/datum/sprite_accessory/underwear/bikiniblack
+	name = "Black Bikini"
+	icon_state = "bikini_black"
+	icon = 'icons/mob/infinity_work.dmi'
+	gender = FEMALE
+
 /datum/sprite_accessory/underwear/bikininain
 	name = "Nain Bikini"
 	icon_state = "bikini_nain"
+	icon = 'icons/mob/infinity_work.dmi'
+	gender = FEMALE
+
+/datum/sprite_accessory/underwear/whitebikini
+	name = "White Bikini"
+	icon_state = "bikini_white"
+	icon = 'icons/mob/infinity_work.dmi'
+	gender = FEMALE
+
+/datum/sprite_accessory/underwear/whiteswimsuit
+	name = "White Swimsuit"
+	icon_state = "white_swimsuit"
+	icon = 'icons/mob/infinity_work.dmi'
+	gender = FEMALE
+
+/datum/sprite_accessory/underwear/poslo //я понятия не имею, как это иначе назвать
+	name = "Poslo"
+	icon_state = "poslo"
 	icon = 'icons/mob/infinity_work.dmi'
 	gender = FEMALE
 
@@ -115,3 +139,9 @@
 	name = "Pigtailis"
 	icon_state = "pigtailis"
 	icon = 'icons/mob/more_hairs.dmi'
+
+/datum/sprite_accessory/socks/stockings_sus
+	name = "Stockings with suspenders"
+	icon_state = "stockings_suspenders"
+	icon = 'icons/mob/infinity_work.dmi'
+	gender = FEMALE

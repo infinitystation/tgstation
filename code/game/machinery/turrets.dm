@@ -17,7 +17,7 @@
 	var/fire_sound = 'sound/weapons/Gunshot.ogg'
 	var/atom/base = null //where do to range calculations, firing projectiles, etc. from. allows for turrets inside of things to work
 	icon = 'icons/obj/turrets.dmi'
-	icon_state = "syndieturret0"
+	icon_state = "syndieOff"
 
 /obj/machinery/gun_turret/New()
 	..()
@@ -164,9 +164,15 @@
 	projectile_type = /obj/item/projectile/beam/heavylaser
 	fire_sound = 'sound/weapons/lasercannonfire.ogg'
 
-/obj/machinery/gun_turret/laser/nofaction //specially for TERROR'S SYNDIE BATTLESHIP
+/obj/machinery/gun_turret/laser/nofaction //specially for TERROR'S JAIL
 	name = "laser cannon turret"
 	desc = "Prison security system. BEVARE!"
 	scan_range = 20 //YOU SHALL NOT PASS!
 	health = 400
 	faction = null
+
+/obj/machinery/gun_turret/laser/neutral
+	name = "laser cannon turret"
+	desc = "Protecting Our People"
+	faction = null
+	health = 200
