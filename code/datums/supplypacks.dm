@@ -288,6 +288,21 @@ var/list/all_supply_groups = list(supply_emergency,supply_security,supply_engine
 	cost = 15
 	containername = "tactical armor crate"
 
+/datum/supply_packs/security/armory/swat
+	name = "SWAT gear crate"
+	contains = list(/obj/item/clothing/head/helmet/swat/nanotrasen,
+					/obj/item/clothing/head/helmet/swat/nanotrasen,
+					/obj/item/clothing/suit/space/swat,
+					/obj/item/clothing/suit/space/swat,
+					/obj/item/weapon/kitchen/knife/combat,
+					/obj/item/weapon/kitchen/knife/combat,
+					/obj/item/clothing/mask/gas/sechailer/swat,
+					/obj/item/clothing/mask/gas/sechailer/swat,
+					/obj/item/weapon/storage/belt/military/assault,
+					/obj/item/weapon/storage/belt/military/assault)
+	cost = 60
+	containername = "assault armor crate"
+
 /datum/supply_packs/security/armory/laserarmor
 	name = "Reflector Vest Crate"
 	contains = list(/obj/item/clothing/suit/armor/laserproof,
