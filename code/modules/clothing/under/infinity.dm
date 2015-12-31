@@ -294,3 +294,35 @@
 	icon = 'icons/obj/clothing/infinity_work.dmi'
 	icon_state = "dark_shorts_denim"
 	can_adjust = 0
+
+/obj/item/clothing/under/snow_maiden
+	name = "snow maiden suit"
+	desc = "Velvet, red uniform, special for New Year holidays!"
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	icon_state = "snow_maiden"
+	can_adjust = 0
+
+/obj/item/clothing/under/snow_maiden/blue
+	name = "blue snow maiden suit"
+	desc = "Velvet, blue uniform, special for New Year holidays!"
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	icon_state = "blue_snow_maiden"
+	can_adjust = 0
+
+/obj/item/clothing/under/candy_dress
+	name = "candy dress"
+	desc = "Look like a real candy!"
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	icon_state = "candy_dress"
+	can_adjust = 0
+
+/obj/item/clothing/under/bunny_suit
+	name = "bunny suit"
+	desc = "Sexy bunny costume, like in regular casino."
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	icon_state = "bunny_suit"
+	can_adjust = 0
