@@ -174,5 +174,4 @@
 /obj/machinery/gun_turret/laser/neutral
 	name = "laser cannon turret"
 	desc = "Protecting Our People"
-	faction = null
 	health = 200
