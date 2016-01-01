@@ -24,3 +24,12 @@
 	flags_inv = HIDEEARS|HIDEEYES|HEADCOVERSMOUTH
 	flags_cover = HEADCOVERSEYES
 	burn_state = -1
+
+/obj/item/clothing/head/blue_ny_hat
+	name = "blue New Year hat"
+	desc = "Ho ho ho!"
+	icon_state = "blue_ny_hat"
+	item_state = "helmet"
+	item_color = "blue_ny_hat"
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon = 'icons/obj/clothing/infinity_work.dmi'
