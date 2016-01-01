@@ -198,15 +198,6 @@
 /turf/simulated/floor/plasteel/warning/corner
 	icon_state = "warningcorner"
 
-/turf/simulated/floor/plasteel/warning/airless
-	oxygen = 0
-	nitrogen = 0
-	temperature = TCMB
-
-/turf/simulated/floor/plasteel/warning/corner/airless
-	oxygen = 0
-	nitrogen = 0
-	temperature = TCMB
 
 /turf/simulated/floor/plasteel/warnplate
 	icon_state = "warnplate"

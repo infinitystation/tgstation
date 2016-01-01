@@ -175,10 +175,3 @@
 	name = "laser cannon turret"
 	desc = "Protecting Our People"
 	health = 200
-	faction = "neutral"
-
-/obj/machinery/gun_turret/laser/neutral/poor
-	name = "laser gun turret"
-	desc = "Protecting Our People"
-	health = 100
-	faction = "neutral"
