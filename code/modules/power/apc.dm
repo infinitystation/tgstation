@@ -134,6 +134,8 @@
 		spawn(5)
 			src.update()
 
+	name = replacetextEx(name, "\improper", "")
+
 /obj/machinery/power/apc/Destroy()
 	apcs_list -= src
 

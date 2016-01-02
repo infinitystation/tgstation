@@ -153,6 +153,7 @@
 	target_types += /obj/effect/decal/cleanable/shit
 	target_types += /obj/effect/decal/cleanable/greenglow
 	target_types += /obj/effect/decal/cleanable/dirt
+	target_types += /obj/effect/decal/cleanable/deadcockroach
 
 	if(blood)
 		target_types += /obj/effect/decal/cleanable/xenoblood/
