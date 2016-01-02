@@ -361,6 +361,7 @@
 
 
 /datum/objective/escape_obj/escape
+	explanation_text = "Ёвакуироваться из станции на шаттле или поде живым."
 	dangerrating = 5
 
 /datum/objective/escape_obj/escape/check_completion()
