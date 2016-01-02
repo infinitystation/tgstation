@@ -482,8 +482,8 @@ var/list/teleportlocs = list()
 	name = "Escape Shuttle Hallway"
 	icon_state = "escape"
 
-/area/hallway/secondary/construction
-	name = "Construction Area"
+/area/hallway/secondary/garden
+	name = "Garden"
 	icon_state = "construction"
 
 /area/hallway/secondary/entry
@@ -502,9 +502,20 @@ var/list/teleportlocs = list()
 	icon_state = "meeting"
 	music = null
 
+/area/bridge/command_hallway
+    name = "Command Hallway"
+    icon_state = "bridge"
+
+/area/bridge/bridge_dorms
+	name = "Bridge dorms"
+	icon_state = "bridge"
+
 /area/crew_quarters/captain
 	name = "Captain's Office"
 	icon_state = "captain"
+
+/area/crew_quarters/captain_quarters
+	name = "Captain's Quarters"
 
 /area/crew_quarters/courtroom
 	name = "Courtroom"
@@ -569,8 +580,8 @@ var/list/teleportlocs = list()
 	name = "Locker Room"
 	icon_state = "locker"
 
-/area/crew_quarters/locker/locker_toilet
-	name = "Locker Toilets"
+/area/crew_quarters/locker/restrooms
+	name = "Restrooms"
 	icon_state = "toilet"
 
 /area/crew_quarters/fitness
@@ -731,25 +742,31 @@ var/list/teleportlocs = list()
 
 //MedBay
 
-/area/medical/medbay
-	name = "Medbay"
+/area/medical/medbay_central
+	name = "Medbay Central"
 	icon_state = "medbay"
 	music = 'sound/ambience/signal.ogg'
 
 //Medbay is a large area, these additional areas help level out APC load.
-/area/medical/medbay2
-	name = "Medbay"
+/area/medical/medbay_storage
+	name = "Medbay Storage"
 	icon_state = "medbay2"
 	music = 'sound/ambience/signal.ogg'
 
-/area/medical/medbay3
-	name = "Medbay"
+/area/medical/medbay_aft
+	name = "Medbay Aft"
 	icon_state = "medbay3"
 	music = 'sound/ambience/signal.ogg'
 
 /area/medical/patients_rooms
 	name = "Patient's Rooms"
 	icon_state = "patients"
+
+/area/medical/patients_rooms/rooms_a
+	name = "Patient's Rooms A"
+
+/area/medical/patients_rooms/rooms_b
+	name = "Patient's Rooms B"
 
 /area/medical/cmo
 	name = "Chief Medical Officer's office"
@@ -760,7 +777,7 @@ var/list/teleportlocs = list()
 	icon_state = "medresearch"
 
 /area/medical/research
-	name = "Medical Research"
+	name = "Research Division"
 	icon_state = "medresearch"
 
 /area/medical/virology
@@ -891,8 +908,8 @@ var/list/teleportlocs = list()
 	name = "Security Post - Science"
 	icon_state = "checkpoint1"
 
-/area/security/vacantoffice
-	name = "Vacant Office"
+/area/security/barracks
+	name = "Barracks"
 	icon_state = "security"
 
 /area/quartermaster
@@ -912,7 +929,7 @@ var/list/teleportlocs = list()
 	icon_state = "quartoffice"
 
 /area/quartermaster/storage
-	name = "Cargo Bay"
+	name = "Cargo Storage"
 	icon_state = "quartstorage"
 
 /area/quartermaster/qm
