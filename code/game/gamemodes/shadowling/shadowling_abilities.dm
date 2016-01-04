@@ -271,9 +271,13 @@
 	text = sanitize_a0(text)
 	if(!text)
 		return
+	var/my_message = "<span class='shadowling'><b>\[Shadowling\]</b><i> [user.real_name]</i>: [text]</span>"
 	for(var/mob/M in mob_list)
 		if(is_shadow_or_thrall(M) || (M in dead_mob_list))
-			M << "<span class='shadowling'><b>\[Shadowling\]</b><i> [user.real_name]</i>: [text]</span>"
+			M << my_message
+		if(M in dead_mob_list)
+			M << "<a href='?src=\ref[M];follow=\ref[user]'>(F)</a>[my_message]"
+
 
 
 /obj/effect/proc_holder/spell/self/shadowling_regenarmor //Resets a shadowling's species to normal, removes genetic defects, and re-equips their armor

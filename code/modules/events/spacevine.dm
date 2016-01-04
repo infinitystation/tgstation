@@ -23,8 +23,7 @@
 	if(turfs.len) //Pick a turf to spawn at if we can
 		var/turf/simulated/T = pick(turfs)
 		impact_area = get_area(T)
-		spawn(0)
-			new/obj/effect/spacevine_controller(T) //spawn a controller at turf
+		new/obj/effect/spacevine_controller(T) //spawn a controller at turf
 
 /datum/round_event/spacevine/announce()
 	priority_announce("Зафиксирован рост космических лиан в [impact_area.name]")
