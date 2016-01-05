@@ -94,7 +94,9 @@
 
 	for(var/mob/M in mob_list)
 		if(isovermind(M) || isobserver(M) || isblobzombie(M) || istype(M, /mob/living/simple_animal/hostile/blob))
-			M.show_message(rendered, 2)
+			M << rendered
+		if(isobserver(M))
+			M << "<a href='?src=\ref[M];follow=\ref[src]'>(F)</a>[rendered]"
 
 /mob/camera/blob/emote(act,m_type=1,message = null)
 	return
