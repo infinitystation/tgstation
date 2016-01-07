@@ -543,9 +543,9 @@ datum/design/diagnostic_hud_night
 	name = "Strange black jumpsuit"
 	desc = "It's a plain jumpsuit. It has a small dial on the wrist."
 	id = "chameleon"
-	req_tech = list("materials" = 6, "syndicate" = 2, "engineering" = 4)
+	req_tech = list("materials" = 6, "syndicate" = 3, "engineering" = 4)
 	build_type = PROTOLATHE
-	materials = list("$metal" = 1000, "$silver" = 1000, "$gold" = 1000)
+	materials = list(MAT_METAL = 4000, MAT_SILVER = 1000)
 	build_path = /obj/item/clothing/under/chameleon
 	category = list("Equipment")
 	locked = 1
