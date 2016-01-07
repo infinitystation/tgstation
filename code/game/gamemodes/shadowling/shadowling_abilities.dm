@@ -271,9 +271,13 @@
 	text = sanitize_a0(text)
 	if(!text)
 		return
+	var/my_message = "<span class='shadowling'><b>\[Shadowling\]</b><i> [user.real_name]</i>: [text]</span>"
 	for(var/mob/M in mob_list)
-		if(is_shadow_or_thrall(M) || (M in dead_mob_list))
-			M << "<span class='shadowling'><b>\[Shadowling\]</b><i> [user.real_name]</i>: [text]</span>"
+		if(is_shadow_or_thrall(M))
+			M << my_message
+		if(M in dead_mob_list)
+			M << "<a href='?src=\ref[M];follow=\ref[user]'>(F)</a> [my_message]"
+
 
 
 /obj/effect/proc_holder/spell/self/shadowling_regenarmor //Resets a shadowling's species to normal, removes genetic defects, and re-equips their armor
@@ -747,9 +751,12 @@ datum/reagent/shadowling_blindness_smoke //Reagent used for above spell
 	var/text = stripped_input(user, "What do you want to say your masters and fellow thralls?.", "Lesser Commune", "")
 	if(!text)
 		return
+	text = "<span class='shadowling'><b>\[Thrall\]</b><i> [user.real_name]</i>: [text]</span>"
 	for(var/mob/M in mob_list)
-		if(is_shadow_or_thrall(M) || (M in dead_mob_list))
-			M << "<span class='shadowling'><b>\[Thrall\]</b><i> [user.real_name]</i>: [text]</span>"
+		if(is_shadow_or_thrall(M))
+			M << text
+		if(isobserver(M))
+			M << "<a href='?src=\ref[M];follow=\ref[user]'>(F)</a> [text]"
 	log_say("[user.real_name]/[user.key] : [text]")
 
 
@@ -888,8 +895,10 @@ datum/reagent/shadowling_blindness_smoke //Reagent used for above spell
 	var/text = stripped_input(user, "What do you want to say to fellow thralls and shadowlings?.", "Hive Chat", "")
 	if(!text)
 		return
-	text = "<font size=4>[text]</font>"
+	text = "<font size=4><span class='shadowling'><b>\[Ascendant\]<i> [user.real_name]</i>: [text]</b></span></font>"
 	for(var/mob/M in mob_list)
-		if(is_shadow_or_thrall(M) || (M in dead_mob_list))
-			M << "<span class='shadowling'><b>\[Ascendant\]<i> [user.real_name]</i>: [text]</b></span>" //Bigger text for ascendants.
+		if(is_shadow_or_thrall(M))
+			M << text
+		if(isobserver(M))
+			M << "<a href='?src=\ref[M];follow=\ref[user]'>(F)</a> [text]"
 	log_say("[user.real_name]/[user.key] : [text]")

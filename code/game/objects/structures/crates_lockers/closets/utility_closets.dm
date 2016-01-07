@@ -174,25 +174,13 @@
 
 /obj/structure/closet/ammunitionlocker/beang/New()
 	..()
-	new /obj/item/ammo_casing/shotgun/beanbag(src)
-	new /obj/item/ammo_casing/shotgun/beanbag(src)
-	new /obj/item/ammo_casing/shotgun/beanbag(src)
-	new /obj/item/ammo_casing/shotgun/beanbag(src)
-	new /obj/item/ammo_casing/shotgun/beanbag(src)
-	new /obj/item/ammo_casing/shotgun/beanbag(src)
-	new /obj/item/ammo_casing/shotgun/beanbag(src)
-	new /obj/item/ammo_casing/shotgun/beanbag(src)
+	for(var/i in 1 to 8)
+		new /obj/item/ammo_casing/shotgun/beanbag(src)
 
 /obj/structure/closet/ammunitionlocker/lethal
 	name = "Lethal ammunition locker"
 
 /obj/structure/closet/ammunitionlocker/lethal/New()
 	..()
-	new /obj/item/ammo_casing/shotgun/buckshot(src)
-	new /obj/item/ammo_casing/shotgun/buckshot(src)
-	new /obj/item/ammo_casing/shotgun/buckshot(src)
-	new /obj/item/ammo_casing/shotgun/buckshot(src)
-	new /obj/item/ammo_casing/shotgun/buckshot(src)
-	new /obj/item/ammo_casing/shotgun/buckshot(src)
-	new /obj/item/ammo_casing/shotgun/buckshot(src)
-	new /obj/item/ammo_casing/shotgun/buckshot(src)
+	for(var/i in 1 to 8)
+		new /obj/item/ammo_casing/shotgun/buckshot(src)
