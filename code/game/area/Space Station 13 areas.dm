@@ -482,6 +482,10 @@ var/list/teleportlocs = list()
 	name = "Escape Shuttle Hallway"
 	icon_state = "escape"
 
+/area/hallway/secondary/construction
+	name = "Construction Area"
+	icon_state = "construction"
+
 /area/hallway/secondary/garden
 	name = "Garden"
 	icon_state = "construction"
@@ -579,6 +583,10 @@ var/list/teleportlocs = list()
 /area/crew_quarters/locker
 	name = "Locker Room"
 	icon_state = "locker"
+
+/area/crew_quarters/locker/locker_toilet
+	name = "Locker Toilets"
+	icon_state = "toilet"
 
 /area/crew_quarters/locker/restrooms
 	name = "Restrooms"
@@ -742,16 +750,32 @@ var/list/teleportlocs = list()
 
 //MedBay
 
+/area/medical/medbay
+	name = "Medbay"
+	icon_state = "medbay"
+	music = 'sound/ambience/signal.ogg'
+
 /area/medical/medbay_central
 	name = "Medbay Central"
 	icon_state = "medbay"
 	music = 'sound/ambience/signal.ogg'
 
 //Medbay is a large area, these additional areas help level out APC load.
+/area/medical/medbay2
+	name = "Medbay Storage"
+	icon_state = "medbay2"
+	music = 'sound/ambience/signal.ogg'
+
 /area/medical/medbay_storage
 	name = "Medbay Storage"
 	icon_state = "medbay2"
 	music = 'sound/ambience/signal.ogg'
+
+/area/medical/medbay3
+	name = "Medbay Aft"
+	icon_state = "medbay3"
+	music = 'sound/ambience/signal.ogg'
+
 
 /area/medical/medbay_aft
 	name = "Medbay Aft"
@@ -907,6 +931,10 @@ var/list/teleportlocs = list()
 /area/security/checkpoint/science
 	name = "Security Post - Science"
 	icon_state = "checkpoint1"
+
+/area/security/vacantoffice
+	name = "Vacant Office"
+	icon_state = "security"
 
 /area/security/barracks
 	name = "Barracks"

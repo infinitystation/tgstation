@@ -67,7 +67,7 @@
 /datum/mind/proc/transfer_to(mob/new_character)
 	if(current)	// remove ourself from our old body's mind variable
 		current.mind = null
-		SSnano.on_transfer(current, new_character)
+		SStgui.on_transfer(current, new_character)
 
 	if(key)
 		if(new_character.key != key)					//if we're transfering into a body with a key associated which is not ours
@@ -1586,4 +1586,3 @@
 	..()
 	mind.assigned_role = "[initial(name)]"
 	mind.special_role = "Cultist"
-
