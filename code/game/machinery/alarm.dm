@@ -117,6 +117,18 @@
 		"temperature"    = new/datum/tlv(200,210,273.15,283.15), // K
 	)
 
+/obj/machinery/alarm/plasma
+	//req_access = list(access_rd) //no, let departaments to work together
+	TLV = list(
+	"oxygen"         = new/datum/tlv(-1,-1,-1,-1), // Partial pressure, kpa
+		"nitrogen"       = new/datum/tlv(-1,-1,5,10), // Partial pressure, kpa
+		"carbon dioxide" = new/datum/tlv(-1,-1,5,10), // Partial pressure, kpa
+		"plasma"         = new/datum/tlv(16,19,135,140), // Partial pressure, kpa
+		"other"          = new/datum/tlv(-1,-1,0.5,1), // Partial pressure, kpa
+		"pressure"       = new/datum/tlv(ONE_ATMOSPHERE*0.80,ONE_ATMOSPHERE*0.90,ONE_ATMOSPHERE*1.10,ONE_ATMOSPHERE*1.20), // kPa
+		"temperature"    = new/datum/tlv(T0C,T0C+10,T0C+40,T0C+66), // K
+	)
+
 //all air alarms in area are connected via magic
 /area
 	var/obj/machinery/alarm/master_air_alarm
