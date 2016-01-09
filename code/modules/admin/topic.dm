@@ -1122,7 +1122,6 @@
 				message_admins("<span class='adminnotice'>[usr.client.ckey] has soft banned [M.ckey].\nReason: [reason]\nThis will be removed in [mins] minutes.</span>")
 				add_note(M.ckey, "Временно отправлен(а), в бан-тюрьму, причина: [reason]. Время: [mins]", null, usr.client.ckey, 0)
 				del(M.client)
-				M.ckey = null
 				//qdel(M)	// See no reason why to delete mob. Important stuff can be lost. And ban can be lifted before round ends.
 			if("No")
 				var/reason = input(usr,"Please State Reason","Reason") as message
@@ -1145,13 +1144,12 @@
 				feedback_inc("ban_soft_perma",1)
 				switch(ip)
 					if("Yes")
-						DB_ban_record(BANTYPE_SOFT_PERMA, M, reason = reason, banip = M.lastKnownIP, bancid = M.computer_id)
+						DB_ban_record(BANTYPE_SOFT_PERMA, M, -1, reason, banip = M.lastKnownIP, bancid = M.computer_id)
 					if("No")
-						DB_ban_record(BANTYPE_SOFT_PERMA, M, reason = reason, bancid = M.computer_id)
+						DB_ban_record(BANTYPE_SOFT_PERMA, M, -1, reason, bancid = M.computer_id)
 				add_note(M.ckey, "Перманентно отправлен(а) в бан-тюрьму, причина: [reason].", null, usr.client.ckey, 0)
 				del(M.client)
 				//qdel(M)
-				M.ckey = null
 			if("Cancel")
 				return
 
