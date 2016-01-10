@@ -1,8 +1,8 @@
 /datum/round_event_control/abductor
 	name = "Abductors"
 	typepath = /datum/round_event/abductor
-	weight = 5
-	max_occurrences = 1
+	weight = 0
+	max_occurrences = 0
 
 	earliest_start = 18000 // 30 min
 
