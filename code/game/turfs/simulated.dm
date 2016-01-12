@@ -46,10 +46,8 @@
 		var/mob/living/carbon/M = A
 		switch(wet)
 			if(TURF_WET_WATER)
-
-				if(prob(33))
-					if(!M.slip(4, 2, null, NO_SLIP_WHEN_WALKING))
-						M.inertia_dir = 0
+				if(!M.slip(3, 1, null, NO_SLIP_WHEN_WALKING))
+					M.inertia_dir = 0
 				return
 			if(TURF_WET_LUBE)
 				M.slip(0, 7, null, (SLIDE|GALOSHES_DONT_HELP))
@@ -62,3 +60,16 @@
 /turf/simulated/ChangeTurf(var/path)
 	. = ..()
 	smooth_icon_neighbors(src)
+
+/turf/simulated/proc/is_shielded()
+
+/turf/simulated/contents_explosion(severity, target)
+	var/affecting_level
+	if(severity == 1)
+		affecting_level = 1
+	else
+		affecting_level = is_shielded() ? 2 : (intact ? 2 : 1)
+	for(var/V in contents)
+		var/atom/A = V
+		if(A.level >= affecting_level)
+			A.ex_act(severity, target)
