@@ -33,3 +33,11 @@
 	item_color = "blue_ny_hat"
 	worn_icon = 'icons/mob/infinity_work.dmi'
 	icon = 'icons/obj/clothing/infinity_work.dmi'
+
+/obj/item/clothing/head/bobafett_head
+	name = "boba fett helmet"
+	desc = "...In a Galaxy far far away."
+	icon_state = "bobafett_head"
+	item_state = "helmet"
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon = 'icons/obj/clothing/infinity_work.dmi'

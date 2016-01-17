@@ -302,6 +302,7 @@
 	icon = 'icons/obj/clothing/infinity_work.dmi'
 	icon_state = "snow_maiden"
 	can_adjust = 0
+	fitted = FEMALE_UNIFORM_TOP
 
 /obj/item/clothing/under/snow_maiden/blue
 	name = "blue snow maiden suit"
@@ -310,6 +311,7 @@
 	icon = 'icons/obj/clothing/infinity_work.dmi'
 	icon_state = "blue_snow_maiden"
 	can_adjust = 0
+	fitted = FEMALE_UNIFORM_TOP
 
 /obj/item/clothing/under/candy_dress
 	name = "candy dress"
@@ -318,6 +320,7 @@
 	icon = 'icons/obj/clothing/infinity_work.dmi'
 	icon_state = "candy_dress"
 	can_adjust = 0
+	fitted = FEMALE_UNIFORM_TOP
 
 /obj/item/clothing/under/bunny_suit
 	name = "bunny suit"
