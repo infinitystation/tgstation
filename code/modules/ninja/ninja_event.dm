@@ -109,7 +109,7 @@ Contents:
 					O.target = M
 					O.explanation_text = "Protect \the [M.current.real_name], the [M.assigned_role], from harm."
 					Mind.objectives += O
-			if(4)	//debrain/capture
+			/* if(4)	//debrain/capture
 				if(!possible_targets.len)	continue
 				var/selected = rand(1,possible_targets.len)
 				var/datum/mind/M = possible_targets[selected]
@@ -126,7 +126,7 @@ Contents:
 					var/datum/objective/capture/O = new /datum/objective/capture()
 					O.owner = Mind
 					O.gen_amount_goal()
-					Mind.objectives += O
+					Mind.objectives += O */
 			else
 				break
 
