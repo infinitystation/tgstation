@@ -14,7 +14,7 @@
 	priority_announce("—канеры дальнего радиуса действия обнаружили пирокластическую аномалию. ќжидаемое место воздействия: [impact_area.name].", "“ревога! јномалия!")
 
 /datum/round_event/anomaly/anomaly_pyro/start()
-	var/turf/T = pick(get_area_turfs(impact_area))
+	var/turf/T = safepick(get_area_turfs(impact_area))
 	if(T)
 		newAnomaly = new /obj/effect/anomaly/pyro(T)
 
