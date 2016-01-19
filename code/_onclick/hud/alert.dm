@@ -30,7 +30,7 @@
 		else if(alert.type != type)
 			clear_alert(category)
 			return .()
-		else if(!severity || severity == alert.severity) 
+		else if(!severity || severity == alert.severity)
 			if(alert.timeout)
 				clear_alert(category)
 				return .()
@@ -190,8 +190,13 @@ or something covering your eyes."
 
 /obj/screen/alert/drunk //Not implemented
 	name = "Drunk"
-	desc = "All that alcohol you've been drinking is impairing your speech, motor skills, and mental cognition. Make sure to act like it."
+	desc = "¬ы находитесь в состоянии алкогольного опьянения. »з-за этого, у вас может быть нарушена речь и моторика. ѕостарайтесь отрезветь."
 	icon_state = "drunk"
+
+/obj/screen/alert/drunk2
+	name = "Drunk"
+	desc = "¬џ Ќјѕ»Ћ»—№  ј  —¬»Ќ№я! ќ“–≈«¬≈…“≈ ѕќ ј Ќ≈ —ƒќ’Ћ»!"
+	icon_state = "drunk2"
 
 /obj/screen/alert/embeddedobject
 	name = "Embedded Object"

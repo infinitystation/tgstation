@@ -382,7 +382,13 @@
 		stuttering = max(stuttering-1, 0)
 
 	if(slurring)
+		if(slurring>1000)
+			throw_alert("drunk", /obj/screen/alert/drunk2)
+		else
+			throw_alert("drunk", /obj/screen/alert/drunk)
 		slurring = max(slurring-1,0)
+	else
+		clear_alert("drunk")
 
 	if(silent)
 		silent = max(silent-1, 0)
