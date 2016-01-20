@@ -27,17 +27,17 @@
 			WARNING("[src] threw alert [category] with new_master [new_master] while already having that alert with master [alert.master]")
 			clear_alert(category)
 			return .()
-		else if(alert.type == type && (!severity || severity == alert.severity))
+		else if(alert.type != type)
+			clear_alert(category)
+			return .()
+		else if(!severity || severity == alert.severity)
 			if(alert.timeout)
 				clear_alert(category)
 				return .()
-			else
-//				src << "threw alert not in need of update [category] [type] [severity]"
+			else //no need to update
 				return 0
-//		src << "updating alert [category] [type] [severity]"
 	else
 		alert = PoolOrNew(type)
-//		src << "throwing new alert [category] [type] [severity]"
 
 	if(new_master)
 		var/old_layer = new_master.layer
@@ -190,8 +190,13 @@ or something covering your eyes."
 
 /obj/screen/alert/drunk //Not implemented
 	name = "Drunk"
-	desc = "All that alcohol you've been drinking is impairing your speech, motor skills, and mental cognition. Make sure to act like it."
+	desc = "Âû íàõîäèòåñü â ñîñòîßíèè àëêîãîëüíîãî îïüßíåíèß. Èç-çà ýòîãî, ó âàñ ìîæåò áûòü íàðóøåíà ðå÷ü è ìîòîðèêà. Ïîñòàðàéòåñü îòðåçâåòü."
 	icon_state = "drunk"
+
+/obj/screen/alert/drunk2
+	name = "Drunk"
+	desc = "ÂÛ ÍÀÏÈËÈÑÜ ÊÀÊ ÑÂÈÍÜß! ÎÒÐÅÇÂÅÉÒÅ ÏÎÊÀ ÍÅ ÑÄÎÕËÈ!"
+	icon_state = "drunk2"
 
 /obj/screen/alert/embeddedobject
 	name = "Embedded Object"

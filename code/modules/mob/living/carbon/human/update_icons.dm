@@ -351,7 +351,6 @@ Please contact me on #coderbus IRC. ~Carnie x
 
 
 		if(istype(wear_suit, /obj/item/clothing/suit/straight_jacket))
-			unEquip(handcuffed)
 			drop_l_hand()
 			drop_r_hand()
 

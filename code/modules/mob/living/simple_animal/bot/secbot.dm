@@ -153,9 +153,8 @@ Auto Patrol: []"},
 	if(!istype(W, /obj/item/weapon/screwdriver) && (W.force) && (!target) && (W.damtype != STAMINA) ) // Added check for welding tool to fix #2432. Welding tool behavior is handled in superclass.
 		retaliate(user)
 
-/mob/living/simple_animal/bot/secbot/Emag(mob/user)
+/mob/living/simple_animal/bot/secbot/emag_act(mob/user)
 	..()
-
 	if(emagged == 2)
 		if(user)
 			user << "<span class='danger'>You short out [src]'s target assessment circuits.</span>"
@@ -183,6 +182,16 @@ Auto Patrol: []"},
 			cuff(A)
 	else
 		..()
+
+
+/mob/living/simple_animal/bot/secbot/hitby(atom/movable/AM, skipcatch = 0, hitpush = 1, blocked = 0)
+	if(istype(AM, /obj/item))
+		var/obj/item/I = AM
+		if(I.throwforce < src.health && I.thrownby && (istype(I.thrownby, /mob/living/carbon/human)))
+			var/mob/living/carbon/human/H = I.thrownby
+			retaliate(H)
+	..()
+
 
 /mob/living/simple_animal/bot/secbot/proc/cuff(mob/living/carbon/C)
 	mode = BOT_ARREST
