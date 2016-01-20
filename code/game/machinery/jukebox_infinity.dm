@@ -1,11 +1,11 @@
 //This file was auto-corrected by findeclaration.exe on 25.5.2012 20:42:32
 datum/track
 	var/title
-	var/path
+	var/sound
 
 datum/track/New(var/title_name, var/audio)
 	title = title_name
-	path = audio
+	sound = audio
 
 /obj/machinery/media/jukebox/
 	name = "space jukebox"
@@ -22,38 +22,35 @@ datum/track/New(var/title_name, var/audio)
 	var/playing = 0
 
 	var/datum/track/current_track
-	var/list/datum/track/tracks = list()
+	var/list/datum/track/tracks = list(
+		new/datum/track("Bioshock Infinite OST - After You ve Gone (Ruth Etting)", 'sound/playlist/Bioshock Infinite OST - After You ve Gone (Ruth Etting).ogg'),
+		new/datum/track("Bob Crosby - Dear Hearts And Gentle People", 'sound/playlist/Bob Crosby - Dear Hearts And Gentle People.ogg'),
+		new/datum/track("Bobby Darin - Beyond The Sea", 'sound/playlist/Bobby Darin - Beyond The Sea.ogg'),
+		new/datum/track("Chubby Checker - Let s Twist Again", 'sound/playlist/Chubby Checker - Let s Twist Again.ogg'),
+		new/datum/track("Chuck Berry - Johnny B. Goode", 'sound/playlist/Chuck Berry - Johnny B. Goode.ogg'),
+		new/datum/track("Dan Martinez - Lead Me Home (featuring Eddie Wakes)", 'sound/playlist/Dan Martinez - Lead Me Home (featuring Eddie Wakes).ogg'),
+		new/datum/track("Electro Light feat. Sidekicks - Hold On To Me", 'sound/playlist/Electro Light feat. Sidekicks - Hold On To Me.ogg'),
+		new/datum/track("Elvis Presley - I can t help falling in love with You", 'sound/playlist/Elvis Presley - I can t help falling in love with You.ogg'),
+		new/datum/track("Elvis Presley - Rock n roll", 'sound/playlist/Elvis Presley - Rock n roll.ogg'),
+		new/datum/track("Elvis Presley - Tutti Frutti", 'sound/playlist/Elvis Presley - Tutti Frutti.ogg'),
+		new/datum/track("Frank Sinatra - Blue Moon", 'sound/playlist/Frank Sinatra - Blue Moon.ogg'),
+		new/datum/track("Frank Sinatra - I ve Got You Under My Skin", 'sound/playlist/Frank Sinatra - I ve Got You Under My Skin.ogg'),
+		new/datum/track("Jim Yosef - Arrow", 'sound/playlist/Jim Yosef - Arrow.ogg'),
+		new/datum/track("Johnie Cash - The Man Comes Around", 'sound/playlist/Johnie Cash - The Man Comes Around.ogg'),
+		new/datum/track("Johnny Cash - Hurt", 'sound/playlist/Johnny Cash - Hurt.ogg'),
+		new/datum/track("Johny Cash - God s Gonna Cut You Down", 'sound/playlist/Johny Cash - God s Gonna Cut You Down.ogg'),
+		new/datum/track("Lynda Carter - Good Neighbor", 'sound/playlist/Lynda Carter - Good Neighbor.ogg'),
+		new/datum/track("Mafia 2 OST - After The Lights Go Down Low", 'sound/playlist/Mafia 2 OST - After The Lights Go Down Low.ogg'),
+		new/datum/track("Marty Robbins - Big Iron", 'sound/playlist/Marty Robbins - Big Iron.ogg'),
+		new/datum/track("Tennessee Ernie Ford - 16 tonns", 'sound/playlist/Tennessee Ernie Ford - 16 tonns.ogg'),
+		new/datum/track("The Five Stars - Atom Bomb Baby", 'sound/playlist/The Five Stars - Atom Bomb Baby.ogg'),
+		new/datum/track("The Ink Spots - I Don t Want To Set The World On Fire", 'sound/playlist/The Ink Spots - I Don t Want To Set The World On Fire.ogg'),
+		new/datum/track("Victor Tsoy - Kukushka", 'sound/playlist/Victor Tsoy - Kukushka.ogg')
+	)
 
 /obj/machinery/media/jukebox/New()
 	..()
 	update_icon()
-	tracks = list(
-		new/datum/track("AC/DC - High Way To Hell", "sound/playlist/acdc - high way to hell.ogg"),
-		new/datum/track("Benjamin Briggs - Spoiled", "sound/playlist/Benjamin Briggs - Spoiled.ogg"),
-		new/datum/track("Dean Martin - Let It Snow", "sound/playlist/Dean Martin - Let It Snow.ogg"),
-		new/datum/track("Eminem - Love The Way You Lie (Violin Cover by Eric Stanley)", "sound/playlist/Eminem - Love the way you lie (violin cover by Eric Stanley).ogg"),
-		new/datum/track("Gorillaz - Feel Good Inc", "sound/playlist/Gorillaz - Feel Good Inc.ogg"),
-		new/datum/track("IAMTHEKIDYOUKNOWWHATIMEAN - Run (Hotline Miami 2 Wrong Number OST)", "sound/playlist/IAMTHEKIDYOUKNOWWHATIMEAN - Run (Hotline Miami 2 Wrong Number OST).ogg"),
-		new/datum/track("Imagine Dragons - Radioactive", "sound/playlist/Imagine Dragons - Radioactive.ogg"),
-		new/datum/track("James Arthur - Impossible", "sound/playlist/James Arthur - Impossible.ogg"),
-		new/datum/track("Johnny Cash - House Of The Rising Sun", "sound/playlist/Johnny Cash - House Of The Rising Sun.ogg"),
-		new/datum/track("Kid Cudi - Day n Nite", "sound/playlist/Kid cudi - day n nite.ogg"),
-		new/datum/track("Linkin Park - Numb", "sound/playlist/Linkin Park - Numb.ogg"),
-		new/datum/track("M.O.O.N. - Hydrogen", "sound/playlist/M.O.O.N. - Hydrogen.ogg"),
-		new/datum/track("Nickelback - When We Stand Together", "sound/playlist/Nickelback - When We Stand Together.ogg"),
-		new/datum/track("Nirvana - Smells Like A Teen Spirit", "sound/playlist/Nirvana - Smells like a teen spirit.ogg"),
-		new/datum/track("Nitro Fun - New Game", "sound/playlist/Nitro Fun - New Game.ogg"),
-		new/datum/track("NWA - Fuck The Police", "sound/playlist/NWA - Fuck The Police.ogg"),
-		new/datum/track("Paul Stanley - Live To Win", "sound/playlist/Paul Stanley - Live To Win.ogg"),
-		new/datum/track("Serbian Soldiers - REMOVE KEBAB (SERBIA STRONG)", "sound/playlist/Serbian Soldiers - REMOVE KEBAB.ogg"),
-		new/datum/track("Skrillex ft. Damian Marley - Make It Bun Dem", "sound/playlist/Skrillex ft. Damian Marley - Make It Bun Dem.ogg"),
-		new/datum/track("Baystation12 - Intro", "sound/playlist/Space Station 13 - Baystation 12.ogg"),
-		new/datum/track("Clown Anthem", "sound/playlist/Space Station 13 - Clown.ogg"),
-		new/datum/track("Star Wars - Cantina Band", "sound/playlist/Star Wars - Cantina Band.ogg"),
-		new/datum/track("Grigoriy Leps - Ryumka Vodki", "sound/playlist/Grigoriy Leps - Ryumka Vodki.ogg"),
-		new/datum/track("Smyslovye Galucinacii - Vechno Molodoy", "sound/playlist/Smyslovye Galucinacii - Vechno Molodoy.ogg"),
-	)
-
 
 /obj/machinery/media/jukebox/Destroy()
 	StopPlaying()
@@ -154,11 +151,12 @@ datum/track/New(var/title_name, var/audio)
 
 /obj/machinery/media/jukebox/proc/StopPlaying()
 	var/area/A = get_area(src)
+	A.forced_ambience = null
+
 	// Always kill the current sound
 	for(var/mob/living/M in mobs_in_area(A))
 		M << sound(null, channel = 1)
 
-	A.forced_ambience = null
 	playing = 0
 	use_power = 1
 	update_icon()
@@ -170,7 +168,7 @@ datum/track/New(var/title_name, var/audio)
 		return
 
 	var/area/A = get_area(src)
-	A.forced_ambience = sound(current_track.path, channel = 1, repeat = 1, volume = 50)
+	A.forced_ambience = sound(current_track.sound, channel = 1)
 
 	for(var/mob/living/M in mobs_in_area(A))
 		if(M.mind)
