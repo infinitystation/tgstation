@@ -341,15 +341,11 @@ var/list/sting_paths
 	if(!ishuman(user))
 		user << "<span class='danger'>We can't remove our evolutions in this form!</span>"
 		return
-	if(canrespec)
+	if(ishuman(user))
 		user << "<span class='notice'>We have removed our evolutions from this form, and are now ready to readapt.</span>"
 		user.remove_changeling_powers(1)
-		canrespec = 0
 		user.make_changeling()
 		return 1
-	else
-		user << "<span class='danger'>You lack the power to readapt your evolutions!</span>"
-		return 0
 
 /mob/proc/make_changeling()
 	if(!mind)
