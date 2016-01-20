@@ -309,6 +309,39 @@
 	slowdown = 1
 	max_combined_w_class = 30
 
+/obj/item/weapon/storage/backpack/dufflebag/captain
+	name = "captain's dufflebag"
+	desc = "A large dufflebag for holding extra captainly goods."
+	icon_state = "duffle-captain"
+	item_state = "duffle-captain"
+	burn_state = FIRE_PROOF
+
+/obj/item/weapon/storage/backpack/dufflebag/med
+	name = "medical dufflebag"
+	desc = "A large dufflebag for holding extra medical supplies."
+	icon_state = "duffle-med"
+	item_state = "duffle-med"
+
+/obj/item/weapon/storage/backpack/dufflebag/sec
+	name = "security dufflebag"
+	desc = "A large dufflebag for holding extra security supplies and ammunition."
+	icon_state = "duffle-sec"
+	item_state = "duffle-sec"
+
+/obj/item/weapon/storage/backpack/dufflebag/engineering
+	name = "industrial dufflebag"
+	desc = "A large dufflebag for holding extra tools and supplies."
+	icon_state = "duffle-eng"
+	item_state = "duffle-eng"
+	burn_state = FIRE_PROOF
+
+/obj/item/weapon/storage/backpack/dufflebag/clown
+	name = "clown's dufflebag"
+	desc = "A large dufflebag for holding lots of funny gags!"
+	icon_state = "duffle-clown"
+	item_state = "duffle-clown"
+
+
 /obj/item/weapon/storage/backpack/dufflebag/syndie
 	name = "suspicious looking dufflebag"
 	desc = "A large dufflebag for holding extra tactical supplies."
@@ -364,18 +397,24 @@
 	new /obj/item/device/mmi/syndie(src)
 	return
 
-/obj/item/weapon/storage/backpack/dufflebag/captain
-	name = "captain's dufflebag"
-	desc = "A large dufflebag for holding extra captainly goods."
-	icon_state = "duffle-captain"
-	item_state = "duffle-captain"
-	burn_state = FIRE_PROOF
+/obj/item/weapon/storage/backpack/dufflebag/syndie/ammo
+	name = "ammunition dufflebag"
+	desc = "A large dufflebag for holding extra weapons ammunition and supplies."
+	icon_state = "duffle-syndieammo"
+	item_state = "duffle-syndieammo"
 
-/obj/item/weapon/storage/backpack/dufflebag/med
-	name = "medical dufflebag"
-	desc = "A large dufflebag for holding extra medical supplies."
-	icon_state = "duffle-med"
-	item_state = "duffle-med"
+/obj/item/weapon/storage/backpack/dufflebag/syndie/ammo/shotgun
+	desc = "A large dufflebag, packed to the brim with Bulldog shotgun ammo."
+
+/obj/item/weapon/storage/backpack/dufflebag/syndie/ammo/shotgun/New()
+	..()
+	contents = list()
+	for(var/i in 1 to 6)
+		new /obj/item/ammo_box/magazine/m12g(src)
+	new /obj/item/ammo_box/magazine/m12g/buckshot(src)
+	new /obj/item/ammo_box/magazine/m12g/stun(src)
+	new /obj/item/ammo_box/magazine/m12g/dragon(src)
+	return
 
 /obj/item/weapon/storage/backpack/dufflebag/sec
 	name = "security dufflebag"
@@ -399,6 +438,12 @@
 	desc = "A large dufflebag for holding lots of funny gags!"
 	icon_state = "duffle-clown"
 	item_state = "duffle-clown"
+
+/obj/item/weapon/storage/backpack/dufflebag/clown
+	name = "clown's dufflebag"
+	desc = "A large dufflebag for holding lots of funny gags!"
+	icon_state = "duffle-clown"
+	item_state = "duffle-clown"
 /obj/item/weapon/storage/backpack/dufflebag/syndie/ammo/smg
 	desc = "A large dufflebag, packed to the brim with C20r magazines."
 
@@ -411,15 +456,15 @@
 
 
 /obj/item/weapon/storage/backpack/dufflebag/syndie/ammo/fireteam
-	desc = "A large dufflebag, packed to the brim with C20r, M90gl, and sniper ammunition."
+	desc = "A large dufflebag, packed to the brim with .45, 5.56, and .50 ammo."
 
 /obj/item/weapon/storage/backpack/dufflebag/syndie/ammo/fireteam/New()
 	..()
 	contents = list()
 	for(var/i in 1 to 4)
 		new /obj/item/ammo_box/magazine/smgm45(src)
-	new /obj/item/ammo_box/magazine/m556(src)
-	new /obj/item/ammo_box/magazine/m556(src)
+	for(var/i in 1 to 3)
+		new /obj/item/ammo_box/magazine/m556(src)
 	new /obj/item/ammo_box/a40mm(src)
 	new /obj/item/ammo_box/magazine/sniper_rounds(src)
 	return
