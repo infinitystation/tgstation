@@ -6,8 +6,7 @@
 	name = "Rapid Part Exchange Device"
 	desc = "Special mechanical module made to store, sort, and apply standard machine parts."
 	id = "rped"
-	req_tech = list("engineering" = 3,
-					"materials" = 3)
+	req_tech = list("engineering" = 3, "materials" = 3)
 	build_type = PROTOLATHE
 	materials = list(MAT_METAL = 10000, MAT_GLASS = 5000) //hardcore
 	build_path = /obj/item/weapon/storage/part_replacer
