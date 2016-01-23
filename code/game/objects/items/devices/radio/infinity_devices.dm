@@ -1,6 +1,6 @@
 /obj/item/device/radio/headset/headphone
 	name = "headphones"
-	desc = "A some stylish headwear"
+	desc = "Brand headwear, with a high sound quality."
 	icon_state = "headphones"
 	icon = 'icons/obj/clothing/infinity_work.dmi'
 	worn_icon = 'icons/mob/infinity_work.dmi'
