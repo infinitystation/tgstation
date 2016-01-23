@@ -325,6 +325,7 @@
 /datum/excited_group/proc/dismantle()
 	for(var/turf/simulated/T in turf_list)
 		T.excited = 0
+		T.maptext = null
 		T.recently_active = 0
 		T.excited_group = null
 		SSair.active_turfs -= T
