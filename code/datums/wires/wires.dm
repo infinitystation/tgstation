@@ -170,6 +170,7 @@ var/list/wire_color_directory = list()
 	var/list/cut_wires = list() // List of wires that have been cut.
 	var/list/colors = list() // Dictionary of colors to wire.
 	var/list/assemblies = list() // List of attached assemblies.
+	var/list/ports = list() //List of ports
 	var/randomize = 0 // If every instance of these wires should be random.
 
 /datum/wires/New(atom/holder)
@@ -187,6 +188,7 @@ var/list/wire_color_directory = list()
 			wire_color_directory[holder_type] = colors
 		else
 			colors = shuffle(wire_color_directory[holder_type])
+	setup_ports()
 
 /datum/wires/Destroy()
 	holder = null
@@ -205,6 +207,15 @@ var/list/wire_color_directory = list()
 
 	for(var/wire in shuffle(wires))
 		colors[pick_n_take(possible_colors)] = wire
+
+/datum/wires/proc/setup_ports()
+	var/port = 65 //It's A in ASCII
+	for(var/type in wires)
+		if(copytext(type, 1, 4) == "dud")
+			if(isnum(text2num(copytext(type, 4, 5))))
+				ports[type] = "Incorrect"
+				continue
+		ports[type] = "Port [ascii2text(port++)]"
 
 /datum/wires/proc/repair()
 	cut_wires = list()
@@ -256,6 +267,9 @@ var/list/wire_color_directory = list()
 
 /datum/wires/proc/pulse_color(color)
 	pulse(get_wire(color))
+
+/datum/wires/proc/check_wire(color)
+	return ports[get_wire(color)]
 
 /datum/wires/proc/pulse_assembly(obj/item/device/assembly/S)
 	for(var/color in assemblies)
@@ -339,7 +353,25 @@ var/list/wire_color_directory = list()
 			else
 				L << "<span class='warning'>You need wirecutters!</span>"
 		if("pulse")
-			if(istype(I, /obj/item/device/multitool) || IsAdminGhost(usr))
+			if(istype(I, /obj/item/device/multitool/multimeter))
+				if(do_after(L, 10, target = holder))
+					var/obj/item/device/multitool/multimeter/M = I
+					if(M.mode)
+						if(check_wire(target_wire)!="Incorrect" && !is_color_cut(target_wire))
+							playsound(L.loc, 'sound/machines/mbeep.ogg', 50, 1)
+							L << "<span class='notice'>Провод соединен к [check_wire(target_wire)].</span>"
+							. = TRUE
+							return
+						else
+							L << "<span class='notice'>Провод не соединен к чему либо.</span>"
+							return
+					else
+						pulse_color(target_wire)
+						. = TRUE
+						return
+				else
+					return
+			else if(istype(I, /obj/item/device/multitool) || IsAdminGhost(usr))
 				pulse_color(target_wire)
 				. = TRUE
 			else
