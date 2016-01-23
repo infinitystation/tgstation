@@ -1673,6 +1673,4 @@
 #include "interface\interface.dm"
 #include "interface\stylesheet.dm"
 #include "interface\skin.dmf"
-#include "Seamstress\Seamstress_items.dm"
-#include "Seamstress\sewing-machine.dm"
 // END_INCLUDE
