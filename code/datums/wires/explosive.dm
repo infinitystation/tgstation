@@ -30,13 +30,7 @@ var/const/WIRE_EXPLODE = 1
 	var/obj/item/weapon/c4/P = holder
 	P.explode()
 
-/datum/wires/explosive/SolveWireFunction(var/function)
-	var/sf = ""
-	switch(function)
-		if(WIRE_EXPLODE)
-			sf = "explosive"
 
-	return sf
 
 /datum/wires/explosive/gibtonite
 	holder_type = /obj/item/weapon/twohanded/required/gibtonite

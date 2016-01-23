@@ -44,3 +44,11 @@ var/const/PIZZA_WIRE_DISARM = 1		// No boom
 	var/obj/item/device/pizza_bomb/P = holder
 	. += text("<br>The red light is [P.primed ? "on" : "off"].<br>")
 	. += text("The green light is [P.disarmed ? "on": "off"].<br>")
+
+/datum/wires/pizza_bomb/SolveWireFunction(var/function)
+	var/sf = ""
+	switch(function)
+		if(PIZZA_WIRE_DISARM)
+			sf = "Bomb"
+
+	return sf

@@ -49,3 +49,14 @@ var/const/RD_WIRE_DISABLE = 4   // Disables the machine
 	. += text("The green light is [R.shocked ? "off" : "on"].<br>")
 	. += text("The blue light is [R.hacked ? "off" : "on"].<br>")
 
+/datum/wires/r_n_d/SolveWireFunction(var/function)
+	var/sf = ""
+	switch(function)
+		if(RD_WIRE_HACK)
+			sf = "Port A"
+		if(RD_WIRE_SHOCK)
+			sf = "Port B"
+		if(RD_WIRE_DISABLE)
+			sf = "Port C"
+
+	return sf
