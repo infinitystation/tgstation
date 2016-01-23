@@ -138,13 +138,11 @@ var/global/active_turfs_debugging = 0
 
 	active_turfs_debugging = !active_turfs_debugging
 
-	if(!active_turfs_debugging)
-		for(var/turf/simulated/T in SSair.active_turfs)
-			T.maptext = ""
-
 	if(active_turfs_debugging)
 		message_admins("[src.ckey] включил(а) отображение активных блоков в реальном времени.")
 	else
+		for(var/turf/simulated/T in SSair.active_turfs)
+			T.maptext = ""
 		message_admins("[src.ckey] выключил(а) отображение активных блоков в реальном времени.")
 
 	feedback_add_details("admin_verb","DATF") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
