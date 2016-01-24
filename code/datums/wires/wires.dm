@@ -322,7 +322,7 @@ var/list/wire_color_directory = list()
 							datum/tgui/master_ui = null, datum/ui_state/state = wire_state)
 	ui = SStgui.try_update_ui(user, src, ui_key, ui, force_open)
 	if (!ui)
-		ui = new(user, src, ui_key, "wires", "[holder.name] wires", 350, 150 + wires.len * 30, master_ui, state)
+		ui = new(user, src, ui_key, "wires", "[sanitize_o(holder.name)] wires", 350, 150 + wires.len * 30, master_ui, state)
 		ui.open()
 
 /datum/wires/get_ui_data(mob/user)
