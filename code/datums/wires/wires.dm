@@ -348,6 +348,7 @@ var/list/wire_color_directory = list()
 	switch(action)
 		if("cut")
 			if(istype(I, /obj/item/weapon/wirecutters) || IsAdminGhost(usr))
+				playsound(holder, 'sound/items/Wirecutter.ogg', 20, 1)
 				cut_color(target_wire)
 				. = TRUE
 			else
@@ -358,7 +359,7 @@ var/list/wire_color_directory = list()
 					var/obj/item/device/multitool/multimeter/M = I
 					if(M.mode)
 						if(check_wire(target_wire)!="Incorrect" && !is_color_cut(target_wire))
-							playsound(L.loc, 'sound/machines/mbeep.ogg', 50, 1)
+							playsound(L.loc, 'sound/machines/mbeep.ogg', 20, 1)
 							L << "<span class='notice'>Провод соединен к [check_wire(target_wire)].</span>"
 							. = TRUE
 							return
@@ -372,6 +373,7 @@ var/list/wire_color_directory = list()
 				else
 					return
 			else if(istype(I, /obj/item/device/multitool) || IsAdminGhost(usr))
+				playsound(holder, 'sound/weapons/empty.ogg', 20, 1)
 				pulse_color(target_wire)
 				. = TRUE
 			else
