@@ -956,3 +956,151 @@
 	author = "Engineering Encyclopedia"
 	title = "Hacking"
 	page_link = "Руководство_по_Взлому"
+
+//Inriss
+/obj/item/weapon/book/manual/wiki/Assitant
+	name = "AssistantBook"
+	icon_state ="bookAssistant"
+	author = "Assitant Encyclopedia"
+	title = "Assistant"
+	page_link = "Ассистент"
+
+/obj/item/weapon/book/manual/wiki/Captain
+	name = "Captain Book"
+	icon_state ="bookCaptain"
+	author = "Captain Encyclopedia"
+	title = "Captain"
+	page_link = "Капитан"
+
+/obj/item/weapon/book/manual/wiki/HoP
+	name = "Head of Personnel"
+	icon_state ="bookHop"
+	author = "HoP Encyclopedia"
+	title = "Head of Personnel"
+	page_link = "Глава_Персонала"
+
+/obj/item/weapon/book/manual/wiki/Quartermaster
+	name = "Quartermaster"
+	icon_state ="bookQuartermaster"
+	author = "Quartermaster Encyclopedia"
+	title = "Quartermaster"
+	page_link = "Завхоз"
+
+/obj/item/weapon/book/manual/wiki/CargoTechinician
+	name = "Cargo Techinician"
+	icon_state ="bookCargoTechinician"
+	author = "Cargo Techinician Encyclopedia"
+	title = "Cargo Techinician"
+	page_link = "Грузчик"
+
+/obj/item/weapon/book/manual/wiki/ShaftMiner
+	name = "Shaft Miner"
+	icon_state ="bookShaftMiner"
+	author = "Shaft Miner Encyclopedia"
+	title = "Shaft Miner"
+	page_link = "Шахтёр"
+
+/obj/item/weapon/book/manual/wiki/Bartender
+	name = "Bartender"
+	icon_state ="bookBartender"
+	author = "Bartender Encyclopedia"
+	title = "Bartender"
+	page_link = "Бармен"
+
+/obj/item/weapon/book/manual/wiki/Chef
+	name = "Chef"
+	icon_state ="bookChef"
+	author = "Chef Encyclopedia"
+	title = "Chef"
+	page_link = "Повар"
+
+/obj/item/weapon/book/manual/wiki/Botanist
+	name = "Botanist"
+	icon_state ="bookBotanist"
+	author = "Botanist Encyclopedia"
+	title = "Botanist"
+	page_link = "Ботаник"
+
+/obj/item/weapon/book/manual/wiki/Janitor
+	name = "Janitor"
+	icon_state ="bookJanitor"
+	author = "Janitor Encyclopedia"
+	title = "Janitor"
+	page_link = "Уборщик"
+
+/obj/item/weapon/book/manual/wiki/Clown
+	name = "Clown"
+	icon_state ="bookClown"
+	author = "Clown Encyclopedia"
+	title = "Clown"
+	page_link = "Клоун"
+
+/obj/item/weapon/book/manual/wiki/Mime
+	name = "Mime"
+	icon_state ="bookMime"
+	author = "Mime Encyclopedia"
+	title = "Mime"
+	page_link = "Мим"
+
+/obj/item/weapon/book/manual/wiki/Librarian
+	name = "Librarian"
+	icon_state ="bookLibrarian"
+	author = "Librarian Encyclopedia"
+	title = "Librarian"
+	page_link = "Библиотекарь"
+
+/obj/item/weapon/book/manual/wiki/Chaplain
+	name = "Chaplain"
+	icon_state ="bookChaplain"
+	author = "Chaplain Encyclopedia"
+	title = "Chaplain"
+	page_link = "Каппелан"
+
+/obj/item/weapon/book/manual/wiki/ChiefEngineer
+	name = "Chief Engineer"
+	icon_state ="bookChiefEngineer"
+	author = "Chief Engineer Encyclopedia"
+	title = "Chief Engineer"
+	page_link = "Главный_Инженер"
+
+/obj/item/weapon/book/manual/wiki/StationEngineer
+	name = "Station Engineer"
+	icon_state ="bookStationEngineer"
+	author = "Station Engineer Encyclopedia"
+	title = "Station Engineer"
+	page_link = "Инженер"
+
+/obj/item/weapon/book/manual/wiki/AtmosphericTechnician
+	name = "Atmospheric Technician"
+	icon_state ="bookAtmosphericTechnician"
+	author = "Atmospheric Technician Encyclopedia"
+	title = "Atmospheric Technician"
+	page_link = "Атмосферный_Техник"
+
+/obj/item/weapon/book/manual/wiki/ChiefMedicalOfficer
+	name = "Chief Medical Officer"
+	icon_state ="bookChiefMedicalOfficer"
+	author = "Chief Medical Officer Encyclopedia"
+	title = "ChiefMedicalOfficer"
+	page_link = "Главврач"
+
+/obj/item/weapon/book/manual/wiki/MedicalDoctor
+	name = "Medical Doctor"
+	icon_state ="bookMedicalDoctor"
+	author = "Medical Doctor Encyclopedia"
+	title = "Medical Doctor"
+	page_link = "Доктор"
+
+/obj/item/weapon/book/manual/wiki/Chemist
+	name = "Chemist"
+	icon_state ="bookChemist"
+	author = "Chemist Encyclopedia"
+	title = "Chemist"
+	page_link = "Химик"
+
+/obj/item/weapon/book/manual/wiki/Geneticst
+	name = "Geneticst"
+	icon_state ="bookGeneticst"
+	author = "Geneticst Encyclopedia"
+	title = "Geneticst"
+	page_link = "Генетик"
