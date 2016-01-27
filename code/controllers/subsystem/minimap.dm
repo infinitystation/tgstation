@@ -13,6 +13,7 @@ var/datum/subsystem/minimap/SSminimap
 	NEW_SS_GLOBAL(SSminimap)
 
 /datum/subsystem/minimap/Initialize(timeofday, zlevel)
+	return
 	if(zlevel)
 		return ..()
 
@@ -42,7 +43,7 @@ var/datum/subsystem/minimap/SSminimap
 	var/icon/minimap = new /icon('icons/minimap.dmi')
 	// Scale it up to our target size.
 	minimap.Scale(MINIMAP_SIZE, MINIMAP_SIZE)
-	var/list/obj_icons = list() 
+	var/list/obj_icons = list()
 	// Loop over turfs and generate icons.
 	for(var/T in block(locate(x1, y1, z), locate(x2, y2, z)))
 		var/turf/tile = T
