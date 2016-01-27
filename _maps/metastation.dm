@@ -23,6 +23,8 @@ z7 = empty space
         #include "map_files\generic\z6.dmm"
         #include "map_files\generic\z7.dmm"
         #include "map_files\TerrorStation\z9.dmm" //prison
+
+		#define MAP_PATH "map_files/MetaStation"
         #define MAP_FILE "MetaStation.v41I.dmm"
         #define MAP_NAME "TG Meta Station"
 

@@ -17,6 +17,7 @@ A small map intended for lowpop(40 players and less).
         #include "map_files\generic\z7.dmm"
         #include "map_files\TerrorStation\z9.dmm" //prison
 
+		#define MAP_PATH "map_files/BirdStation"
         #define MAP_FILE "BirdStation.dmm"
         #define MAP_NAME "Birdboat Station"
 
@@ -25,7 +26,6 @@ A small map intended for lowpop(40 players and less).
 		#if !defined(MAP_OVERRIDE_FILES)
 				#define MAP_OVERRIDE_FILES
 				#include "map_files\BirdStation\telecomms.dm"
-				#include "map_files\BirdStation\teg.dm"
 				#include "map_files\BirdStation\misc.dm"
 				#include "map_files\BirdStation\job\job_changes.dm"
 		        #include "map_files\BirdStation\job\removed_jobs.dm"

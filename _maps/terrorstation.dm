@@ -26,6 +26,8 @@ z7 = empty space
         //#include "map_files\TerrorStation\z8train.dmm" //Train
         //#include "map_files\monorail_ivent\monorail.dmm" //Monorail Maks750rus
         #include "map_files\TerrorStation\z9.dmm" //prison
+
+        #define MAP_PATH "map_files/TerrorStation"
         #define MAP_FILE "MetaStation.v41GS.dmm"
         #define MAP_NAME "Terror's Meta Station"
 

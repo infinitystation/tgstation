@@ -15,6 +15,7 @@ Names of z-level do not matter, but order does greatly, for instances such as ch
         #include "map_files\generic\z7.dmm"
         #include "map_files\TerrorStation\z9.dmm" //prison
 
+		#define MAP_PATH "map_files/AsteroidStation"
         #define MAP_FILE "AsteroidStation.dmm"
         #define MAP_NAME "Asteroid Station"
 
