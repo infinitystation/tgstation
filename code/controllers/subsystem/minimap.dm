@@ -4,8 +4,8 @@ var/datum/subsystem/minimap/SSminimap
 	name = "Minimap"
 	priority = -2
 
-	var/const/MINIMAP_SIZE = 2048
-	var/const/TILE_SIZE = 8
+	var/const/MINIMAP_SIZE = 1024
+	var/const/TILE_SIZE = 4
 
 	var/list/z_levels = list(ZLEVEL_STATION)
 
@@ -13,7 +13,6 @@ var/datum/subsystem/minimap/SSminimap
 	NEW_SS_GLOBAL(SSminimap)
 
 /datum/subsystem/minimap/Initialize(timeofday, zlevel)
-	return
 	if(zlevel)
 		return ..()
 
