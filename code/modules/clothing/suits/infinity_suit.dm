@@ -112,3 +112,42 @@
 	flags = NODROP
 	body_parts_covered = HEAD
 
+/obj/item/clothing/suit/latex_top
+	name = "latex top"
+	desc = "Tight and skinny top."
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	icon_state = "latex_top"
+	item_state = "bl_suit"
+
+/obj/item/clothing/suit/handless_latex_top
+	name = "handless latex top"
+	desc = "Tight and skinny top."
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	icon_state = "handless_latex_top"
+	item_state = "bl_suit"
+
+/obj/item/clothing/suit/kimono/blue
+	name = "blue kimono"
+	desc = "Elegant blue kimono."
+	icon_state = "blue_kimono"
+	item_state = "b_suit"
+
+/obj/item/clothing/suit/brand/brand_rjacket
+	name = "brand red jacket"
+	desc = "A some red, brand jacket from anyooh designer."
+	icon_state = "brand_rjacket"
+	item_state = "w_suit"
+	item_color = "brand_rjacket"
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'
+
+/obj/item/clothing/suit/brand/reg_jacket
+	name = "white leather jacket"
+	desc = "Light leather jacket, from anyooh designer."
+	icon_state = "reg_jacket"
+	item_state = "lb_suit"
+	item_color = "reg_jacket"
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'
