@@ -7,6 +7,7 @@
 	verb_ask = "запрашивает"
 	verb_exclaim = "объ&#255;вл&#255;ет"
 	verb_yell = "резко гудит"
+	bubble_icon = "machine"
 	var/syndicate = 0
 	var/datum/ai_laws/laws = null//Now... THEY ALL CAN ALL HAVE LAWS
 	var/list/alarms_to_show = list()

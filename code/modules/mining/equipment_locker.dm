@@ -749,7 +749,7 @@
 /mob/living/simple_animal/hostile/mining_drone/adjustHealth()
 	if(search_objects)
 		SetOffenseBehavior()
-	..()
+	. = ..()
 
 /**********************Lazarus Injector**********************/
 

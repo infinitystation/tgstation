@@ -92,3 +92,23 @@
 	item_state = "bl_suit"
 	icon = 'icons/obj/clothing/infinity_work.dmi'
 	worn_icon = 'icons/mob/infinity_work.dmi'
+
+/obj/item/clothing/suit/hooded/blue_fiery
+	name = "blue jacket"
+	desc = "A cool blue jacket."
+	icon_state = "blue_fiery"
+	item_state = "bl_suit"
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	hooded = 1
+	action_button_name = "Toggle Hood"
+	hoodtype = /obj/item/clothing/head/whitehoody
+
+/obj/item/clothing/head/whitehoody
+	name = "white hood"
+	icon_state = "whitehoody"
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	flags = NODROP
+	body_parts_covered = HEAD
+

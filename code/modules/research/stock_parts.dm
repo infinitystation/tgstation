@@ -3,6 +3,7 @@
 	name = "rapid part exchange device"
 	desc = "Special mechanical module made to store, sort, and apply standard machine parts."
 	icon_state = "RPED"
+	origin_tech = "materials=2;engeneering=2"
 	item_state = "RPED"
 	w_class = 5
 	can_hold = list(/obj/item/weapon/stock_parts)
@@ -33,6 +34,7 @@
 	name = "bluespace rapid part exchange device"
 	desc = "A version of the RPED that allows for replacement of parts and scanning from a distance, along with higher capacity for parts."
 	icon_state = "BS_RPED"
+	origin_tech = "engineering=2;materials=2;programming=2;bluespace=3"
 	w_class = 3
 	storage_slots = 400
 	max_w_class = 3

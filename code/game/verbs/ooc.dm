@@ -97,7 +97,7 @@
 		dchat_allowed = !dchat_allowed
 	world << "<B>The Dead Chat channel has been globally [dchat_allowed ? "enabled" : "disabled"].</B>"
 
-var/global/normal_ooc_colour = "#002eb8"
+var/global/normal_ooc_colour = OOC_COLOR
 
 /client/proc/set_ooc(newColor as color)
 	set name = "Set Player OOC Color"
@@ -184,7 +184,7 @@ var/global/normal_ooc_colour = "#002eb8"
 	set name = "Reset Player OOC Color"
 	set desc = "Returns player OOC Color to default"
 	set category = "Fun"
-	normal_ooc_colour = initial(normal_ooc_colour)
+	normal_ooc_colour = OOC_COLOR
 
 /client/verb/colorooc()
 	set name = "Set Your OOC Color"

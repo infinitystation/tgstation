@@ -14,6 +14,6 @@
 	priority_announce("—канеры дальнего радиуса действия обнаружили гравитационную аномалию. ѕредположительное место воздействия: [impact_area.name].", "“ревога! јномалия!")
 
 /datum/round_event/anomaly/anomaly_grav/start()
-	var/turf/T = pick(get_area_turfs(impact_area))
+	var/turf/T = safepick(get_area_turfs(impact_area))
 	if(T)
 		newAnomaly = new /obj/effect/anomaly/grav(T)

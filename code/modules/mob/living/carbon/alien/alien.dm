@@ -12,6 +12,7 @@
 	ventcrawler = 2
 	languages = ALIEN
 	verb_say = "шипит"
+	bubble_icon = "alien"
 	type_of_meat = /obj/item/weapon/reagent_containers/food/snacks/meat/slab/xeno
 	var/nightvision = 1
 

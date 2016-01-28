@@ -33,3 +33,17 @@
 	item_color = "blue_ny_hat"
 	worn_icon = 'icons/mob/infinity_work.dmi'
 	icon = 'icons/obj/clothing/infinity_work.dmi'
+
+/obj/item/clothing/head/helmet/space/bobafett_head
+	name = "boba fett helmet"
+	desc = "...In a Galaxy far far away."
+	icon_state = "bobafett_head"
+	item_state = "helmet"
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	flags = STOPSPRESSUREDMAGE|BLOCKHAIR|THICKMATERIAL
+	max_heat_protection_temperature = SPACE_HELM_MAX_TEMP_PROTECT
+	cold_protection = HEAD
+	min_cold_protection_temperature = SPACE_HELM_MIN_TEMP_PROTECT
+	heat_protection = HEAD
+	armor = list(melee = 25, bullet = 25, laser = 30,energy = 25, bomb = 10, bio = 15, rad = 15)
