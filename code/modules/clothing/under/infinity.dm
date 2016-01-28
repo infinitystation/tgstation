@@ -329,3 +329,27 @@
 	icon = 'icons/obj/clothing/infinity_work.dmi'
 	icon_state = "bunny_suit"
 	can_adjust = 0
+
+/obj/item/clothing/under/pinkskirt
+	name = "pink skirt"
+	desc = "A pink, casual skirt."
+	icon_state = "pinkskirt"
+	item_color = "pinkskirt"
+	item_state = "p_suit"
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	body_parts_covered = CHEST|GROIN|ARMS
+	fitted = FEMALE_UNIFORM_TOP
+	can_adjust = 0
+
+/obj/item/clothing/under/greyskirt
+	name = "grey skirt"
+	desc = "A grey, casual skirt."
+	icon_state = "greyskirt"
+	item_color = "greyskirt"
+	item_state = "bl_suit"
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	body_parts_covered = CHEST|GROIN|ARMS
+	fitted = FEMALE_UNIFORM_TOP
+	can_adjust = 0

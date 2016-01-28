@@ -13,7 +13,7 @@
 	var/efficiency = 1
 	var/sleep_factor = 750
 	var/paralyze_factor = 1000
-	var/heat_capacity = 100000
+	var/heat_capacity = 50000
 	var/conduction_coefficient = 0.01
 
 	var/obj/item/weapon/reagent_containers/glass/beaker = null
@@ -68,6 +68,10 @@
 	..()
 	if(!on)
 		return
+	if(!is_operational())
+		on = FALSE
+		update_icon()
+		return
 	var/datum/gas_mixture/air1 = AIR1
 	if(occupant)
 		if(occupant.health >= 100) // Don't bother with fully healed people.
@@ -89,7 +93,7 @@
 				beaker.reagents.trans_to(occupant, 1, 10 * efficiency) // Transfer reagents, multiplied because cryo magic.
 				beaker.reagents.reaction(occupant, VAPOR)
 				air1.gases["o2"][MOLES] -= 2 / efficiency // Lets use gas for this.
-			if(++reagent_transfer == 10 * efficiency) // Throttle reagent transfer (higher efficiency will transfer the same amount but consume less from the beaker).
+			if(++reagent_transfer >= 10 * efficiency) // Throttle reagent transfer (higher efficiency will transfer the same amount but consume less from the beaker).
 				reagent_transfer = 0
 	return 1
 
@@ -123,8 +127,8 @@
 	..()
 	update_icon()
 
-/obj/machinery/atmospherics/components/unary/cryo_cell/relaymove(mob/user) // Prevent ventcrawl in this machine.
-	return
+/obj/machinery/atmospherics/components/unary/cryo_cell/relaymove(mob/user)
+	container_resist()
 
 /obj/machinery/atmospherics/components/unary/cryo_cell/open_machine()
 	if(!state_open && !panel_open)
@@ -175,7 +179,7 @@
 		I.loc = src
 		user.visible_message("[user] places [I] in [src].", \
 							"<span class='notice'>You place [I] in [src].</span>")
-	if(!(on || occupant || state_open))
+	if(!on && !occupant && !state_open)
 		if(default_deconstruction_screwdriver(user, "cell-o", "cell-off", I))
 			return
 		if(exchange_parts(user, I))

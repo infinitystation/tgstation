@@ -1,13 +1,9 @@
-#define MAX_FLAG 65535
-
 var/list/wire_colors = list( // http://www.crockford.com/wrrrld/color.html
-	"#dedbef",
 	"aliceblue",
 	"antiquewhite",
 	"aqua",
 	"aquamarine",
 	"beige",
-	"black",
 	"blanchedalmond",
 	"blue",
 	"blueviolet",
@@ -21,24 +17,6 @@ var/list/wire_colors = list( // http://www.crockford.com/wrrrld/color.html
 	"cornsilk",
 	"crimson",
 	"cyan",
-	"darkblue",
-	"darkcyan",
-	"darkgoldenrod",
-	"darkgray",
-	"darkgrey",
-	"darkgreen",
-	"darkkhaki",
-	"darkmagenta",
-	"darkolivegreen",
-	"darkorange",
-	"darkorchid",
-	"darkred",
-	"darksalmon",
-	"darkseagreen",
-	"darkslateblue",
-	"darkslategray",
-	"darkturquoise",
-	"darkviolet",
 	"deeppink",
 	"deepskyblue",
 	"dimgray",
@@ -52,13 +30,11 @@ var/list/wire_colors = list( // http://www.crockford.com/wrrrld/color.html
 	"gold",
 	"goldenrod",
 	"gray",
-	"grey",
 	"green",
 	"greenyellow",
 	"honeydew",
 	"hotpink",
 	"indianred",
-	"indigo",
 	"ivory",
 	"khaki",
 	"lavender",
@@ -70,14 +46,12 @@ var/list/wire_colors = list( // http://www.crockford.com/wrrrld/color.html
 	"lightcyan",
 	"lightgoldenrodyellow",
 	"lightgray",
-	"lightgrey",
 	"lightgreen",
 	"lightpink",
 	"lightsalmon",
 	"lightseagreen",
 	"lightskyblue",
 	"lightslategray",
-	"lightslategrey",
 	"lightsteelblue",
 	"lightyellow",
 	"lime",
@@ -94,12 +68,10 @@ var/list/wire_colors = list( // http://www.crockford.com/wrrrld/color.html
 	"mediumspringgreen",
 	"mediumturquoise",
 	"mediumvioletred",
-	"midnightblue",
 	"mintcream",
 	"mistyrose",
 	"moccasin",
 	"navajowhite",
-	"navy",
 	"oldlace",
 	"olive",
 	"olivedrab",
@@ -130,7 +102,6 @@ var/list/wire_colors = list( // http://www.crockford.com/wrrrld/color.html
 	"skyblue",
 	"slateblue",
 	"slategray",
-	"slategrey",
 	"snow",
 	"springgreen",
 	"steelblue",
@@ -187,7 +158,7 @@ var/list/wire_color_directory = list()
 			randomize()
 			wire_color_directory[holder_type] = colors
 		else
-			colors = shuffle(wire_color_directory[holder_type])
+			colors = wire_color_directory[holder_type]
 	setup_ports()
 
 /datum/wires/Destroy()
@@ -217,8 +188,12 @@ var/list/wire_color_directory = list()
 				continue
 		ports[type] = "Port [ascii2text(port++)]"
 
+/datum/wires/proc/shuffle_wires()
+	colors.Cut()
+	randomize()
+
 /datum/wires/proc/repair()
-	cut_wires = list()
+	cut_wires.Cut()
 
 /datum/wires/proc/get_wire(color)
 	return colors[color]
@@ -318,11 +293,16 @@ var/list/wire_color_directory = list()
 /datum/wires/ui_host()
 	return holder
 
+/datum/wires/ui_status(mob/user)
+	if(interactable(user))
+		return ..()
+	return UI_CLOSE
+
 /datum/wires/ui_interact(mob/user, ui_key = "wires", datum/tgui/ui = null, force_open = 0, \
-							datum/tgui/master_ui = null, datum/ui_state/state = wire_state)
+							datum/tgui/master_ui = null, datum/ui_state/state = physical_state)
 	ui = SStgui.try_update_ui(user, src, ui_key, ui, force_open)
 	if (!ui)
-		ui = new(user, src, ui_key, "wires", "[holder.name] wires", 350, 150 + wires.len * 30, master_ui, state)
+		ui = new(user, src, ui_key, "wires", "[replacetext(holder.name, "\improper", "")] wires", 350, 150 + wires.len * 30, master_ui, state)
 		ui.open()
 
 /datum/wires/get_ui_data(mob/user)
@@ -348,6 +328,7 @@ var/list/wire_color_directory = list()
 	switch(action)
 		if("cut")
 			if(istype(I, /obj/item/weapon/wirecutters) || IsAdminGhost(usr))
+				playsound(holder, 'sound/items/Wirecutter.ogg', 20, 1)
 				cut_color(target_wire)
 				. = TRUE
 			else
@@ -358,7 +339,7 @@ var/list/wire_color_directory = list()
 					var/obj/item/device/multitool/multimeter/M = I
 					if(M.mode)
 						if(check_wire(target_wire)!="Incorrect" && !is_color_cut(target_wire))
-							playsound(L.loc, 'sound/machines/mbeep.ogg', 50, 1)
+							playsound(L.loc, 'sound/machines/mbeep.ogg', 20, 1)
 							L << "<span class='notice'>Провод соединен к [check_wire(target_wire)].</span>"
 							. = TRUE
 							return
@@ -372,6 +353,7 @@ var/list/wire_color_directory = list()
 				else
 					return
 			else if(istype(I, /obj/item/device/multitool) || IsAdminGhost(usr))
+				playsound(holder, 'sound/weapons/empty.ogg', 20, 1)
 				pulse_color(target_wire)
 				. = TRUE
 			else

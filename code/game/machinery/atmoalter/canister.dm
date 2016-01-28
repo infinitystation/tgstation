@@ -21,27 +21,27 @@
 	var/update_flag = 0
 	var/gas_type = ""
 	var/static/list/label2types = list(
-		"caution" = /obj/machinery/portable_atmospherics/canister,
-		"n2o" = /obj/machinery/portable_atmospherics/canister/nitrous_oxide,
 		"n2" = /obj/machinery/portable_atmospherics/canister/nitrogen,
 		"o2" = /obj/machinery/portable_atmospherics/canister/oxygen,
-		"plasma" = /obj/machinery/portable_atmospherics/canister/toxins,
 		"co2" = /obj/machinery/portable_atmospherics/canister/carbon_dioxide,
-		"air" = /obj/machinery/portable_atmospherics/canister/air
+		"plasma" = /obj/machinery/portable_atmospherics/canister/toxins,
+		"n2o" = /obj/machinery/portable_atmospherics/canister/nitrous_oxide,
+		"air" = /obj/machinery/portable_atmospherics/canister/air,
+		"caution" = /obj/machinery/portable_atmospherics/canister,
 	)
 
-/obj/machinery/portable_atmospherics/canister/oxygen
-	name = "o2 canister"
-	desc = "Oxygen. Necessary for human life."
-	icon_state = "blue"
-	canister_color = "blue"
-	gas_type = "o2"
 /obj/machinery/portable_atmospherics/canister/nitrogen
 	name = "n2 canister"
 	desc = "Nitrogen gas. Reportedly useful for something."
 	icon_state = "red"
 	canister_color = "red"
 	gas_type = "n2"
+/obj/machinery/portable_atmospherics/canister/oxygen
+	name = "o2 canister"
+	desc = "Oxygen. Necessary for human life."
+	icon_state = "blue"
+	canister_color = "blue"
+	gas_type = "o2"
 /obj/machinery/portable_atmospherics/canister/carbon_dioxide
 	name = "co2 canister"
 	desc = "Carbon dioxide. What the fuck is carbon dioxide?"
@@ -296,8 +296,8 @@ update_flag
 		return
 	switch(action)
 		if("relabel")
-			var/label = params["label"]
-			if(label)
+			var/label = input("New canister label:", name) as null|anything in label2types
+			if(label && !..())
 				var/newtype = label2types[label]
 				if(newtype)
 					var/obj/machinery/portable_atmospherics/canister/replacement = new newtype(loc)
@@ -305,26 +305,27 @@ update_flag
 					replacement.update_icon()
 					replacement.interact(usr)
 					qdel(src)
-			else
-				label = input("New canister label:", name) as null|anything in label2types
-				.(action, list("label" = label))
 		if("pressure")
 			var/pressure = params["pressure"]
 			if(pressure == "reset")
-				release_pressure = CAN_DEFAULT_RELEASE_PRESSURE
+				pressure = CAN_DEFAULT_RELEASE_PRESSURE
 				. = TRUE
 			else if(pressure == "min")
-				release_pressure = CAN_MIN_RELEASE_PRESSURE
+				pressure = CAN_MIN_RELEASE_PRESSURE
 				. = TRUE
 			else if(pressure == "max")
-				release_pressure = CAN_MAX_RELEASE_PRESSURE
+				pressure = CAN_MAX_RELEASE_PRESSURE
 				. = TRUE
 			else if(pressure == "input")
 				pressure = input("New release pressure ([CAN_MIN_RELEASE_PRESSURE]-[CAN_MAX_RELEASE_PRESSURE] kPa):", name, release_pressure) as num|null
-				. = .(action, list("pressure" = pressure))
+				if(pressure && !..())
+					. = TRUE
 			else if(text2num(pressure) != null)
-				release_pressure = Clamp(round(text2num(pressure)), CAN_MIN_RELEASE_PRESSURE, CAN_MAX_RELEASE_PRESSURE)
+				pressure = text2num(pressure)
 				. = TRUE
+			if(.)
+				release_pressure = Clamp(round(pressure), CAN_MIN_RELEASE_PRESSURE, CAN_MAX_RELEASE_PRESSURE)
+				investigate_log("was set to [release_pressure] kPa by [key_name(usr)]", "atmos")
 		if("valve")
 			var/logmsg
 			valve_open = !valve_open
