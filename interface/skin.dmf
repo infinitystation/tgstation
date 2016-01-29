@@ -111,8 +111,14 @@ macro "default"
 		name = "SHIFT+F2+REP"
 		command = ".screenshot"
 	elem
+		name = "F3"
+		command = "Say"
+	elem
+		name = "F4"
+		command = "Me"
+	elem
 		name = "F5"
-		command = "Aghost"
+		command = "Asay"
 	elem
 		name = "CTRL+O"
 		command = "ooc"
@@ -824,7 +830,7 @@ window "infowindow"
 	  pos = 400,0
 	  size = 100x20
 	  is-flat = true
-	  text = "Github"
+	  text = "Code"
 	  command = "github"
   elem "report-issue"
 	  type = BUTTON
