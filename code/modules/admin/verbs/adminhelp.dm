@@ -8,7 +8,8 @@
 	var/list/ckeys = list()
 	for(var/mob/M in mob_list)
 		var/list/indexing = list(M.real_name, M.name)
-		if(M.mind)	indexing += M.mind.name
+		if(M.mind)
+			indexing += M.mind.name
 
 		for(var/string in indexing)
 			var/list/L = text2list(string, " ")
@@ -75,7 +76,8 @@
 		return
 
 	//clean the input msg
-	if(!msg)	return
+	if(!msg)
+		return
 	msg = sanitize(copytext(msg,1,MAX_MESSAGE_LEN))
 	if(!msg)	return
 	var/original_msg = msg
@@ -86,7 +88,8 @@
 
 	msg = keywords_lookup(msg)
 
-	if(!mob)	return						//this doesn't happen
+	if(!mob)
+		return						//this doesn't happen
 
 	var/ref_mob = "\ref[mob]"
 	var/ref_client = "\ref[src]"

@@ -323,10 +323,12 @@
 var/list/mob/living/forced_ambiance_list = new
 
 /area/Entered(A)
-	if(!istype(A,/mob/living))	return
+	if(!istype(A,/mob/living))
+		return
 
 	var/mob/living/L = A
-	if(!L.ckey)	return
+	if(!L.ckey)
+		return
 
 	play_ambience(L)
 
@@ -336,7 +338,8 @@ var/list/mob/living/forced_ambiance_list = new
 		L.client.ambience_playing = 1
 		L << sound('sound/ambience/shipambience.ogg', repeat = 1, wait = 0, volume = 35, channel = 2)
 
-	if(!(L.client && (L.client.prefs.toggles & SOUND_AMBIENCE)))	return //General ambience check is below the ship ambience so one can play without the other
+	if(!(L.client && (L.client.prefs.toggles & SOUND_AMBIENCE)))
+		return //General ambience check is below the ship ambience so one can play without the other
 
 	// If we previously were in an area with force-played ambiance, stop it.
 	if(L in forced_ambiance_list)

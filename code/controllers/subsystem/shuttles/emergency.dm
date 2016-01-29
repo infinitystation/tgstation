@@ -74,7 +74,8 @@
 /*
 /obj/docking_port/mobile/emergency/findTransitDock()
 	. = SSshuttle.getDock("emergency_transit")
-	if(.)	return .
+	if(.)
+		return .
 	return ..()
 */
 
