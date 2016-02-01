@@ -199,7 +199,7 @@
 	..()
 	for(var/i in 1 to 5)
 		new /obj/item/weapon/reagent_containers/syringe/lethal/choral(src)
-	
+
 /obj/structure/closet/secure_closet/brig
 	name = "brig locker"
 	req_access = list(access_brig)
@@ -239,7 +239,7 @@
 		new /obj/item/clothing/head/helmet/riot(src)
 	for(var/i in 1 to 3)
 		new /obj/item/weapon/shield/riot(src)
-	
+
 /obj/structure/closet/secure_closet/armory2
 	name = "armory ballistics locker"
 	req_access = list(access_armory)
@@ -252,7 +252,7 @@
 		new /obj/item/weapon/storage/box/rubbershot(src)
 	for(var/i in 1 to 3)
 		new /obj/item/weapon/gun/projectile/shotgun/riot(src)
-	
+
 /obj/structure/closet/secure_closet/armory3
 	name = "armory energy gun locker"
 	req_access = list(access_armory)
@@ -266,7 +266,7 @@
 		new /obj/item/weapon/gun/energy/gun(src)
 	for(var/i in 1 to 3)
 		new /obj/item/weapon/gun/energy/laser(src)
-	
+
 /obj/structure/closet/secure_closet/tac
 	name = "armory tac locker"
 	req_access = list(access_armory)

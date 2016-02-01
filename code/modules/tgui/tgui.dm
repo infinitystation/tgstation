@@ -249,6 +249,7 @@
 	// Strip #255/improper.
 	json = regex_replaceall(json, "\improper", "")
 	json = regex_replaceall(json, "\proper", "")
+	json = regex_replaceall(json, "ÿ", "")
 	return json
 
  /**
