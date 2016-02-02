@@ -99,7 +99,10 @@
 	if(!msg)
 		return
 
-	msg = emoji_parse(msg)
+	var/rawmsg = msg
+	if(holder)
+		msg = emoji_parse(msg)
+
 	var/keywordparsedmsg = keywords_lookup(msg)
 
 	if(C.holder)
@@ -143,7 +146,7 @@
 			src << "<font color='red'>Ошибка: ЛС админа от игрока к игроку</font>"
 			return
 
-	log_admin("PM: [key_name(src)]->[key_name(C)]: [msg]")
+	log_admin("PM: [key_name(src)]->[key_name(C)]: [rawmsg]")
 
 	//we don't use message_admins here because the sender/receiver might get it too
 	for(var/client/X in admins)
