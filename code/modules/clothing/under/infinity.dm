@@ -377,8 +377,17 @@
 	can_adjust = 0
 
 /obj/item/clothing/under/rank/det/red
-	name = "red suit"
+	name = "detective red suit"
 	desc = "Someone who wears this means business."
+	icon_state = "detective"
+	item_color = "detective"
+	item_state = "r_suit"
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+
+/obj/item/clothing/under/redsuit
+	name = "red suit"
+	desc = "Regular red suit."
 	icon_state = "detective"
 	item_color = "detective"
 	item_state = "r_suit"

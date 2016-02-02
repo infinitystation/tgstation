@@ -63,3 +63,27 @@
 	item_state = ""
 	worn_icon = 'icons/mob/infinity_work.dmi'
 	icon = 'icons/obj/clothing/infinity_work.dmi'
+
+/obj/item/clothing/head/beret/sec/corporate
+	name = "corporate beret"
+	desc = "A robust beret with the security insignia emblazoned on it. Uses reinforced fabric to offer sufficent protection."
+	icon_state = "sec_corporate"
+	item_state = ""
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+
+/obj/item/clothing/head/HoS/beret/corporate
+	name = "head of security corporate beret"
+	desc = "A robust beret with the security insignia emblazoned on it. Uses reinforced fabric to offer sufficent protection."
+	icon_state = "hos_corporate"
+	item_state = ""
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+
+/obj/item/clothing/head/warden/corporate
+	name = "warden corporate beret"
+	desc = "A robust beret with the security insignia emblazoned on it. Uses reinforced fabric to offer sufficent protection."
+	icon_state = "warden_corporate"
+	item_state = ""
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon = 'icons/obj/clothing/infinity_work.dmi'
