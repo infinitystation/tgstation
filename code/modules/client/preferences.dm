@@ -42,6 +42,9 @@ var/list/preferences_datums = list()
 	//character preferences
 	var/real_name						//our character's name
 	var/be_random_name = 0				//whether we'll have a random name every round
+	var/be_blinded = 0
+	var/be_nearsight = 0
+	var/be_deaf = 0
 	var/be_random_body = 0				//whether we'll have a random body every round
 	var/gender = MALE					//gender of character (well duh)
 	var/age = 30						//age of character
@@ -166,7 +169,12 @@ var/list/preferences_datums = list()
 
 			dat += "<b>Gender:</b> <a href='?_src_=prefs;preference=gender'>[gender == MALE ? "Male" : "Female"]</a><BR>"
 			dat += "<b>Age:</b> <a href='?_src_=prefs;preference=age;task=input'>[age]</a><BR>"
+
 			dat += "<a href='?_src_=prefs;preference=set_char_notes'><b>Character Notes</b></a><BR>"
+			dat += "<b>Disabilities:</b> <BR>"
+			dat += "<a href='?_src_=prefs;preference=blind'>Blind: [be_blinded ? "Yes" : "No"]</a><BR>"
+			dat += "<a href='?_src_=prefs;preference=nearsight'>:Nearsight: [be_nearsight ? "Yes" : "No"]</a><BR>"
+			dat += "<a href='?_src_=prefs;preference=deaf'>:Deaf: [be_deaf ? "Yes" : "No"]</a><BR>"
 
 			dat += "<b>Special Names:</b><BR>"
 			dat += "<a href ='?_src_=prefs;preference=clown_name;task=input'><b>Clown:</b> [custom_names["clown"]]</a> "
@@ -1108,6 +1116,15 @@ var/list/preferences_datums = list()
 
 				if("name")
 					be_random_name = !be_random_name
+
+				if("blind")
+					be_blinded = !be_blinded
+
+				if("nearsight")
+					be_nearsight = !be_nearsight
+
+				if("deaf")
+					be_deaf = !be_deaf
 
 				if("all")
 					be_random_body = !be_random_body
