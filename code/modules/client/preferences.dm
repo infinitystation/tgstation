@@ -42,9 +42,6 @@ var/list/preferences_datums = list()
 	//character preferences
 	var/real_name						//our character's name
 	var/be_random_name = 0				//whether we'll have a random name every round
-	var/be_blinded = 0
-	var/be_nearsight = 0
-	var/be_deaf = 0
 	var/be_random_body = 0				//whether we'll have a random body every round
 	var/gender = MALE					//gender of character (well duh)
 	var/age = 30						//age of character
@@ -95,6 +92,11 @@ var/list/preferences_datums = list()
 	var/flavor_text = ""
 	var/sec_imp_notes = ""
 	var/med_imp_notes = ""
+
+	//Недостатки. Могут быть дополнены или переделаны. Спасибо ~Derven'у
+	var/be_blinded = 0
+	var/be_nearsight = 0
+	var/be_deaf = 0
 
 	var/list/ignoring = list()
 

@@ -303,6 +303,10 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	S["undershirt"]			>> undershirt
 	S["socks"]				>> socks
 	S["backbag"]			>> backbag
+	S["be_blinded"]			>> be_blinded
+	S["be_nearsight"]		>> be_nearsight
+	S["be_deaf"]			>> be_deaf
+
 	S["feature_mcolor"]					>> features["mcolor"]
 	S["feature_lizard_tail"]			>> features["tail_lizard"]
 	S["feature_lizard_snout"]			>> features["snout"]
@@ -452,6 +456,9 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	S["cyborg_name"]		<< custom_names["cyborg"]
 	S["religion_name"]		<< custom_names["religion"]
 	S["deity_name"]			<< custom_names["deity"]
+	S["be_blinded"]			<< be_blinded
+	S["be_nearsight"]		<< be_nearsight
+	S["be_deaf"]			<< be_deaf
 
 	//notes
 	S["flavor_text"] 		<< flavor_text

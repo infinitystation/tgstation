@@ -434,8 +434,6 @@
 	if(client.prefs.be_deaf == 1)
 		new_character.disabilities |= DEAF
 
-
-
 	new_character.key = key		//Manually transfer the key to log them in
 	new_character.stopLobbySound()
 
