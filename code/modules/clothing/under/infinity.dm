@@ -338,7 +338,7 @@
 	item_state = "p_suit"
 	worn_icon = 'icons/mob/infinity_work.dmi'
 	icon = 'icons/obj/clothing/infinity_work.dmi'
-	body_parts_covered = CHEST|GROIN|ARMS
+	body_parts_covered = GROIN
 	fitted = FEMALE_UNIFORM_TOP
 	can_adjust = 0
 
@@ -350,6 +350,37 @@
 	item_state = "bl_suit"
 	worn_icon = 'icons/mob/infinity_work.dmi'
 	icon = 'icons/obj/clothing/infinity_work.dmi'
-	body_parts_covered = CHEST|GROIN|ARMS
+	body_parts_covered = GROIN
 	fitted = FEMALE_UNIFORM_TOP
 	can_adjust = 0
+
+/obj/item/clothing/under/doubleskirt
+	name = "double skirt"
+	desc = "A double skirt.."
+	icon_state = "doubleskirt"
+	item_color = "doubleskirt"
+	item_state = "bl_suit"
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	body_parts_covered = GROIN
+	fitted = FEMALE_UNIFORM_TOP
+	can_adjust = 0
+
+/obj/item/clothing/under/rank/vice2
+	name = "black vice jumpsuit"
+	desc = "It's the standard issue pretty-boy outfit, as seen on Holo-Vision."
+	icon_state = "vice2"
+	item_color = "vice2"
+	item_state = "bl_suit"
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	can_adjust = 0
+
+/obj/item/clothing/under/rank/det/red
+	name = "red suit"
+	desc = "Someone who wears this means business."
+	icon_state = "detective"
+	item_color = "detective"
+	item_state = "r_suit"
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon = 'icons/obj/clothing/infinity_work.dmi'
