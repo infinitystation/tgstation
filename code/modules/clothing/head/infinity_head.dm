@@ -47,3 +47,43 @@
 	min_cold_protection_temperature = SPACE_HELM_MIN_TEMP_PROTECT
 	heat_protection = HEAD
 	armor = list(melee = 25, bullet = 25, laser = 30,energy = 25, bomb = 10, bio = 15, rad = 15)
+
+/obj/item/clothing/head/captoe
+	name = "cap toe hat"
+	desc = "Soft and worn hat."
+	icon_state = "cap_toe"
+	item_state = ""
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+
+/obj/item/clothing/head/captoe/black
+	name = "black cap toe hat"
+	desc = "Soft and worn hat."
+	icon_state = "bcap_toe"
+	item_state = ""
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+
+/obj/item/clothing/head/beret/sec/corporate
+	name = "corporate beret"
+	desc = "A robust beret with the security insignia emblazoned on it. Uses reinforced fabric to offer sufficent protection."
+	icon_state = "sec_corporate"
+	item_state = ""
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+
+/obj/item/clothing/head/HoS/beret/corporate
+	name = "head of security corporate beret"
+	desc = "A robust beret with the security insignia emblazoned on it. Uses reinforced fabric to offer sufficent protection."
+	icon_state = "hos_corporate"
+	item_state = ""
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+
+/obj/item/clothing/head/warden/corporate
+	name = "warden corporate beret"
+	desc = "A robust beret with the security insignia emblazoned on it. Uses reinforced fabric to offer sufficent protection."
+	icon_state = "warden_corporate"
+	item_state = ""
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon = 'icons/obj/clothing/infinity_work.dmi'

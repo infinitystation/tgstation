@@ -96,7 +96,8 @@
 	if(src != usr)
 		return 0
 
-	if(!client)	return 0
+	if(!client)
+		return 0
 
 	//Determines Relevent Population Cap
 	var/relevant_cap
@@ -134,7 +135,8 @@
 			return
 
 		if(alert(src,"Are you sure you wish to observe? You will not be able to play this round!","Player Setup","Yes","No") == "Yes")
-			if(!client)	return 1
+			if(!client)
+				return 1
 			var/mob/dead/observer/observer = new()
 
 			spawning = 1
@@ -422,6 +424,15 @@
 		mind.transfer_to(new_character)					//won't transfer key since the mind is not active
 
 	new_character.name = real_name
+
+	if(client.prefs.be_blinded == 1)
+		new_character.disabilities |= BLIND
+
+	if(client.prefs.be_nearsight == 1)
+		new_character.disabilities |= NEARSIGHT
+
+	if(client.prefs.be_deaf == 1)
+		new_character.disabilities |= DEAF
 
 	new_character.key = key		//Manually transfer the key to log them in
 	new_character.stopLobbySound()

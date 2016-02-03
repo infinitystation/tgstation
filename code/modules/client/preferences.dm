@@ -93,6 +93,11 @@ var/list/preferences_datums = list()
 	var/sec_imp_notes = ""
 	var/med_imp_notes = ""
 
+	//Недостатки. Могут быть дополнены или переделаны. Спасибо ~Derven'у
+	var/be_blinded = 0
+	var/be_nearsight = 0
+	var/be_deaf = 0
+
 	var/list/ignoring = list()
 
 /datum/preferences/New(client/C)
@@ -120,7 +125,8 @@ var/list/preferences_datums = list()
 	return
 
 /datum/preferences/proc/ShowChoices(mob/user)
-	if(!user || !user.client)	return
+	if(!user || !user.client)
+		return
 	update_preview_icon()
 	user << browse_rsc(preview_icon, "previewicon.png")
 	var/dat = "<center>"
@@ -145,7 +151,8 @@ var/list/preferences_datums = list()
 					for(var/i=1, i<=max_save_slots, i++)
 						S.cd = "/character[i]"
 						S["real_name"] >> name
-						if(!name)	name = "Character[i]"
+						if(!name)
+							name = "Character[i]"
 						//if(i!=1) dat += " | "
 						dat += "<a style='white-space:nowrap;' href='?_src_=prefs;preference=changeslot;num=[i];' [i == default_slot ? "class='linkOn'" : ""]>[name]</a> "
 					dat += "</center>"
@@ -164,7 +171,12 @@ var/list/preferences_datums = list()
 
 			dat += "<b>Gender:</b> <a href='?_src_=prefs;preference=gender'>[gender == MALE ? "Male" : "Female"]</a><BR>"
 			dat += "<b>Age:</b> <a href='?_src_=prefs;preference=age;task=input'>[age]</a><BR>"
+
 			dat += "<a href='?_src_=prefs;preference=set_char_notes'><b>Character Notes</b></a><BR>"
+			dat += "<b>Disabilities:</b> <BR>"
+			dat += "<a href='?_src_=prefs;preference=blind'>Blind: [be_blinded ? "Yes" : "No"]</a><BR>"
+			dat += "<a href='?_src_=prefs;preference=nearsight'>:Nearsight: [be_nearsight ? "Yes" : "No"]</a><BR>"
+			dat += "<a href='?_src_=prefs;preference=deaf'>:Deaf: [be_deaf ? "Yes" : "No"]</a><BR>"
 
 			dat += "<b>Special Names:</b><BR>"
 			dat += "<a href ='?_src_=prefs;preference=clown_name;task=input'><b>Clown:</b> [custom_names["clown"]]</a> "
@@ -447,7 +459,8 @@ var/list/preferences_datums = list()
 	popup.open(0)
 
 /datum/preferences/proc/SetChoices(mob/user, limit = 17, list/splitJobs = list("Chief Engineer"), widthPerColumn = 295, height = 620)
-	if(!SSjob)	return
+	if(!SSjob)
+		return
 
 	//limit - The amount of jobs allowed per column. Defaults to 17 to make it look nice.
 	//splitJobs - Allows you split the table by job. You can make different tables for each department by including their heads. Defaults to CE to make it look nice.
@@ -668,7 +681,8 @@ var/list/preferences_datums = list()
 
 
 /datum/preferences/proc/GetJobDepartment(datum/job/job, level)
-	if(!job || !level)	return 0
+	if(!job || !level)
+		return 0
 	switch(job.department_flag)
 		if(CIVILIAN)
 			switch(level)
@@ -1104,6 +1118,15 @@ var/list/preferences_datums = list()
 
 				if("name")
 					be_random_name = !be_random_name
+
+				if("blind")
+					be_blinded = !be_blinded
+
+				if("nearsight")
+					be_nearsight = !be_nearsight
+
+				if("deaf")
+					be_deaf = !be_deaf
 
 				if("all")
 					be_random_body = !be_random_body

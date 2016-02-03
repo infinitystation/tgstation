@@ -17,6 +17,7 @@
 	flags = NOSLIP
 	origin_tech = "syndicate=3"
 	burn_state = FIRE_PROOF
+	can_hold_items = 1
 
 /obj/item/clothing/shoes/sneakers/mime
 	name = "mime shoes"
@@ -31,6 +32,7 @@
 	armor = list(melee = 25, bullet = 25, laser = 25, energy = 25, bomb = 50, bio = 10, rad = 0)
 	strip_delay = 70
 	burn_state = FIRE_PROOF
+	can_hold_items = 1
 
 /obj/item/clothing/shoes/combat/swat //overpowered boots for death squads
 	name = "\improper SWAT boots"
@@ -90,6 +92,8 @@
 	item_state = "clown_shoes"
 	slowdown = SHOES_SLOWDOWN+1
 	item_color = "clown"
+	can_hold_items = 1
+	valid_held_items = list(/obj/item/weapon/bikehorn)
 
 /obj/item/clothing/shoes/clown_shoes/step_action()
 	if(footstep > 1)
@@ -107,6 +111,7 @@
 	strip_delay = 50
 	put_on_delay = 50
 	burn_state = FIRE_PROOF
+	can_hold_items = 1
 
 /obj/item/clothing/shoes/winterboots
 	name = "winter boots"
@@ -117,6 +122,7 @@
 	min_cold_protection_temperature = SHOES_MIN_TEMP_PROTECT
 	heat_protection = FEET|LEGS
 	max_heat_protection_temperature = SHOES_MAX_TEMP_PROTECT
+	can_hold_items = 1
 
 /obj/item/clothing/shoes/workboots
 	name = "work boots"
@@ -125,6 +131,7 @@
 	item_state = "jackboots"
 	strip_delay = 40
 	put_on_delay = 40
+	can_hold_items = 1
 
 /obj/item/clothing/shoes/cult
 	name = "nar-sian invoker boots"
@@ -165,3 +172,4 @@
 	desc = "A pair of costume boots fashioned after bird talons."
 	icon_state = "griffinboots"
 	item_state = "griffinboots"
+	can_hold_items = 1
