@@ -1,0 +1,16 @@
+"a" = (/turf/simulated/wall/shuttle{tag = "icon-swall_f6"; icon_state = "swall_f6"},/area/wreck/main)
+"b" = (/obj/effect/spawner/structure/window/reinforced,/turf/simulated/floor/plating,/area/wreck/main)
+"c" = (/turf/simulated/wall/shuttle{tag = "icon-swall_f10"; icon_state = "swall_f10"},/area/wreck/main)
+"d" = (/turf/simulated/wall/shuttle{tag = "icon-swall3"; icon_state = "swall3"},/area/wreck/main)
+"e" = (/obj/structure/bed/chair/shuttle_black{dir = 1},/obj/effect/landmark/corpse/engineer,/turf/simulated/floor/plasteel/shuttle,/area/wreck/main)
+"f" = (/obj/structure/bed/chair/shuttle_black{dir = 1},/obj/item/weapon/pickaxe/drill,/obj/effect/gibspawner/human,/turf/simulated/floor/plasteel/shuttle,/area/wreck/main)
+"g" = (/turf/space,/obj/structure/shuttle/engine/propulsion,/turf/simulated/wall/shuttle{tag = "icon-swall_f5"; icon_state = "swall_f5"},/area/wreck/main)
+"h" = (/obj/machinery/door/unpowered/shuttle,/turf/simulated/floor/plasteel/shuttle,/area/wreck/main)
+"i" = (/obj/structure/shuttle/engine/propulsion,/turf/simulated/wall/shuttle{tag = "icon-swall_f9"; icon_state = "swall_f9"},/area/wreck/main)
+
+(1,1,1) = {"
+abc
+ded
+dfd
+ghi
+"}

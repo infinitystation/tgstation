@@ -12,12 +12,11 @@
 	var/atom/cur_target = null
 	var/scan_range = 9 //You will never see them coming
 	var/health = 200 //Because it lacks a cover, and is mostly to keep people from touching the syndie shuttle.
-	var/base_icon_state = "syndieturret"
+	var/base_icon_state = "syndie"
 	var/projectile_type = /obj/item/projectile/bullet
 	var/fire_sound = 'sound/weapons/Gunshot.ogg'
 	var/atom/base = null //where do to range calculations, firing projectiles, etc. from. allows for turrets inside of things to work
 	icon = 'icons/obj/turrets.dmi'
-	icon_state = "syndieOff"
 
 /obj/machinery/gun_turret/New()
 	..()

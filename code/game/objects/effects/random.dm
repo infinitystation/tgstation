@@ -38,6 +38,17 @@
 					/obj/item/weapon/wrench,\
 					/obj/item/device/flashlight)
 
+/obj/random/weaponcrafting
+	name = "Random weapon part"
+	desc = "This is a random weapon part"
+	icon = 'icons/obj/improvised.dmi'
+	icon_state = "riflestock"
+	spawn_nothing_percentage = 25
+	item_to_spawn()
+		return pick(prob(1);/obj/item/weaponcrafting/reciever,\
+					prob(2);/obj/item/weaponcrafting/stock,\
+					prob(3);/obj/item/stack/packageWrap)
+
 
 /obj/random/technology_scanner
 	name = "Random Scanner"
@@ -46,7 +57,6 @@
 	icon_state = "atmos"
 	item_to_spawn()
 		return pick(prob(5);/obj/item/device/t_scanner,\
-					prob(2);/obj/item/device/radio/intercom,\
 					prob(5);/obj/item/device/analyzer)
 
 /obj/random/bomb_supply
