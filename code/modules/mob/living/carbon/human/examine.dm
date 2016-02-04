@@ -48,7 +48,7 @@
 	//head
 	if(head)
 		if(head.blood_DNA)
-			msg += "<span class='warning'>[t_He] носит \icon[head] [head.gender==PLURAL?"some":"a"] окровавленую [head.name] на [t_his] голове!</span>\n"
+			msg += "<span class='warning'>[t_He] носит \icon[head] [head.gender==PLURAL?"some":"a"] окровавленую [head.name] на голове!</span>\n"
 		else
 			msg += "[t_He] носит \icon[head] \a [head]\n"
 
@@ -135,7 +135,7 @@
 
 	//ears
 	if(ears && !(slot_ears in obscured))
-		msg += "[t_He] носит в ухе  \icon[ears] \ [ears] \n"
+		msg += "[t_He] носит на ухе  \icon[ears] \ [ears] \n"
 
 	//ID
 	if(wear_id)
