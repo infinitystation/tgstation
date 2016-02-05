@@ -20,7 +20,7 @@
 "at" = (/obj/structure/bed{tag = "icon-wooden_chair"; icon_state = "wooden_chair"},/obj/effect/decal/remains/human,/obj/item/weapon/reagent_containers/pill/cyanide,/turf/simulated/floor/wood,/area/spacecontent/a15)
 "au" = (/obj/structure/table/wood,/obj/item/weapon/reagent_containers/food/snacks/beans,/obj/item/weapon/reagent_containers/food/snacks/badrecipe,/turf/simulated/floor/wood,/area/spacecontent/a15)
 "av" = (/obj/structure/table/wood,/obj/item/weapon/reagent_containers/food/snacks/burger,/obj/item/weapon/reagent_containers/food/snacks/candy_corn,/obj/item/weapon/reagent_containers/food/snacks/candy,/obj/item/weapon/reagent_containers/food/snacks/beans,/turf/simulated/floor/wood,/area/spacecontent/a15)
-"aw" = (/obj/structure/table/wood,/obj/item/weapon/reagent_containers/food/snacks/burger,/obj/item/weapon/reagent_containers/food/snacks/candy,/turf/simulated/floor/wood,/area/spacecontent/a15)
+"aw" = (/obj/structure/table/wood,/obj/item/weapon/reagent_containers/food/snacks/burger,/obj/item/weapon/reagent_containers/food/snacks/candy,/obj/item/device/pizza_bomb,/turf/simulated/floor/wood,/area/spacecontent/a15)
 "ax" = (/obj/structure/flora/ausbushes,/turf/simulated/floor/grass,/area/spacecontent/a15)
 "ay" = (/obj/structure/bed{tag = "icon-wooden_chair"; icon_state = "wooden_chair"},/obj/effect/decal/remains/human,/turf/simulated/floor/wood,/area/spacecontent/a15)
 "az" = (/obj/item/weapon/reagent_containers/pill/cyanide,/turf/simulated/floor/wood,/area/spacecontent/a15)

@@ -191,7 +191,7 @@
 	corpsegloves = /obj/item/clothing/gloves/combat
 	corpseradio = /obj/item/device/radio/headset
 	corpsemask = /obj/item/clothing/mask/gas
-	corpsehelmet = /obj/item/clothing/head/helmet/TrooperHelmet
+	corpsehelmet = /obj/item/clothing/head/helmet/trooper
 	corpsepocket1 = /obj/item/ammo_box/magazine/a646
 	corpseid = 1
 	corpseidjob = "Bravo Squad"
@@ -205,7 +205,7 @@
 	corpsegloves = /obj/item/clothing/gloves/combat
 	corpseradio = /obj/item/device/radio/headset
 	corpsemask = /obj/item/clothing/mask/gas
-	corpsehelmet = /obj/item/clothing/head/helmet/TrooperHelmet
+	corpsehelmet = /obj/item/clothing/head/helmet/trooper
 	corpsepocket1 = /obj/item/ammo_box/magazine/a646
 	corpseid = 1
 	corpseidjob = "Alpha Squad"
