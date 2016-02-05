@@ -8,7 +8,7 @@
 **IRC (На английском)**: irc://irc.rizon.net/coderbus  
 **Основная карта:** TerrorStation (_maps/map_files/TerrorStation)  
 **Используемая карта:** TerrorStation  
-**Минимальная версия BYOND для компиляции:** 508
+**Минимальная версия BYOND для компиляции:** 510
 
 ##ЗАГРУЗКА
 
@@ -59,4 +59,3 @@ http://infinity.smforum.ru/index.php?topic=2630
 Подробнее в файлах tgui/LICENSE.md.  
 
 Все содержимое, включая иконки и звуки, лицензируется на условиях лицензионного соглашения Creative Commons 3.0 BY-SA (https://creativecommons.ru/sites/creativecommons.ru/files/docs/attribution_3.0_ss_by-sa_rus.pdf).
-
