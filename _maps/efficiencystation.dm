@@ -24,6 +24,7 @@ z7 = empty space
         #include "map_files\generic\z5.dmm"
         #include "map_files\generic\z6.dmm"
         #include "map_files\generic\z7.dmm"
+        #include "map_files\TerrorStation\z9.dmm" //prison
 
 		#define MAP_PATH "map_files/EfficiencyStation"
         #define MAP_FILE "EfficiencyStation.dmm"
