@@ -40,10 +40,6 @@ tgstation.dmb - 0 errors, 0 warnings
 3. Напишите порт и нажмите кнопку [GO].
 4. Как только появится строка "Initializations Complete" нажмите кнопку входа, которая обозначена стрелкой.
 
-##ХОСТИНГ В ОС LINUX
-В билде используется BYGEX для некоторых текстовых операции. К сожалению, билд имеет только библиотеку для ОС Windows.  
-Вы можете скачать BYGEX для Linux здесь https://github.com/optimumtact/byond-regex и скомпилировать его.  
-
 ##СОДЕЙСТВИЕ РАЗРАБОТКЕ БИЛДА.
 Читать здесь:  
 http://infinity.smforum.ru/index.php?topic=2630
