@@ -265,41 +265,20 @@ var/global/list/pipeID2State = list(
 
 	qdel(src)
 
-// pipe-device interaction
-/obj/item/pipe/interact(mob/user)
-	src.add_fingerprint(user)
-	setted = 1
-	var/dat = {"
-<A href='?src=\ref[src];set-dir=0'>Mode:</A> [work_direction ? "Vent" : "Syphon"]<BR>
-<A href='?src=\ref[src];set-tag=0'>ID-Tag:</A> [id_tag]<BR>
-<A href='?src=\ref[src];set-freq=0'>Frequency:</A> [freq]<BR>
-"}
-	user.set_machine(src)
-	var/datum/browser/popup = new(user, "settings", "Vent Setting")
-	popup.set_content(dat)
-	popup.open(1)
-
-
-/obj/item/pipe/Topic(href, href_list)
-	if(!ishuman(usr))	return
-	var/mob/living/carbon/human/user = usr
-	user.set_machine(src)
-
-	if(href_list["set-dir"])
-		if(work_direction == 1)
-			work_direction = 0
-		else if (work_direction == 0)
-			work_direction = 1
-		interact(user)
-
-	if(href_list["set-tag"])
-		id_tag = stripped_input(usr, "ID-тэг?")
-		interact(user)
-
-	if(href_list["set-freq"])
-		freq = stripped_input(usr, "Частота? От 1439 до 1441")
-		freq = text2num(freq)
-		interact(user)
+/obj/item/pipe/suicide_act(mob/user)
+	if (pipe_type in list(PIPE_PUMP, PIPE_PASSIVE_GATE, PIPE_VOLUME_PUMP))
+		user.visible_message("<span class='suicide'>[user] shoved the [src] in \his mouth and turned it on!  It looks like \he's trying to commit suicide.</span>")
+		if(istype(user, /mob/living/carbon))
+			var/mob/living/carbon/C = user
+			for(var/i=1 to 20)
+				C.vomit(0,1,0,4,0)
+				sleep(5)
+			if(istype(user, /mob/living/carbon/human))
+				var/mob/living/carbon/human/H = C
+				H.vessel.remove_reagent("blood",560)
+		return(OXYLOSS|BRUTELOSS)
+	else
+		return ..()
 
 /obj/item/pipe_meter
 	name = "meter"
