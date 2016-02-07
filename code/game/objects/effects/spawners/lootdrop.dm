@@ -130,3 +130,29 @@
 				/obj/structure/closet/crate/secure/loot = 20,
 				"" = 80
 				)
+
+/obj/effect/spawner/lootdrop/trash
+	name = "Random Trash"
+	desc = "This is a random tool"
+	icon = 'icons/obj/items.dmi'
+	icon_state = "latexballon_bursted"
+	loot = list(
+				/obj/item/bodybag = 1,
+				/obj/item/clothing/glasses/sunglasses = 1,
+				/obj/item/weapon/shard = 5,
+				/obj/item/trash/can = 10,
+				/obj/item/trash/deadmouse = 3,
+				/obj/item/trash/pistachios = 4,
+				/obj/item/trash/raisins = 8,
+				/obj/item/trash/semki = 2,
+				/obj/item/trash/sosjerky = 14,
+				/obj/item/trash/candy = 25,
+				/obj/item/weapon/storage/fancy/cigarettes = 2,
+				/obj/item/stack/rods = 4,
+				/obj/item/stack/sheet/cardboard =7,
+				/obj/item/stack/packageWrap = 4,
+				/obj/item/weapon/c_tube = 3,
+				/obj/item/weapon/coin = 12,
+				/obj/item/weapon/paper = 29,
+				"" = 8
+				)

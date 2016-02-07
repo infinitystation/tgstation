@@ -24,6 +24,14 @@
 	cell_type = /obj/item/weapon/stock_parts/cell/ammo/high
 	burn_state = FIRE_PROOF
 
+/obj/item/weapon/gun/energy/laser/guard/sc_laser
+
+/obj/item/weapon/gun/projectile/automatic/c20r/sc_laser/New()
+	..()
+	for(var/ammo in magazine.stored_ammo)
+		if(prob(70)) //95% chance
+			magazine.stored_ammo -= ammo
+
 /obj/item/clothing/suit/armor/guard
 	name = "Trooper Armor"
 	desc = "— виду тяжела€ брон€ с двумя поручнями по краям... —топ, она стальна€?"
@@ -54,3 +62,15 @@
 	can_adjust = 0
 	armor = list(melee = 10, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0)
 	alt_covers_chest = 1
+
+/obj/structure/barricade/guard
+	name = "guard barrier"
+	desc = "ѕортативный баррьер империума, используетс€ силами »√ или —ѕќ дл€ замедлени€ продвижени€ войск противника - идеально простреливаетс€."
+	icon = 'icons/obj/objects.dmi'
+	icon_state = "barrier0"
+	density = 1
+	anchored = 1
+	health = 9000
+	maxhealth = 9000
+	proj_pass_rate = 90
+	unacidable = 1

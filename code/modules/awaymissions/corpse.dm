@@ -211,6 +211,34 @@
 	corpseidjob = "Alpha Squad"
 	corpseidaccess = "Syndicate"
 
+/obj/effect/landmark/corpse/guard
+	name = "Guard Soldier"
+	corpseuniform = /obj/item/clothing/under/syndicate/tacticool
+	corpsesuit = /obj/item/clothing/suit/armor/UACtrooperArmor
+	corpseshoes = /obj/item/clothing/shoes/jackboots
+	corpseradio = /obj/item/device/radio/headset
+	corpsehelmet = /obj/item/clothing/head/helmet/guard
+
+/obj/effect/landmark/corpse/guard/mask
+	name = "Guard Soldier"
+	corpseuniform = /obj/item/clothing/under/syndicate/tacticool
+	corpsesuit = /obj/item/clothing/suit/armor/UACtrooperArmor
+	corpseshoes = /obj/item/clothing/shoes/jackboots
+	corpseradio = /obj/item/device/radio/headset
+	corpsemask = /obj/item/clothing/mask/gas/sechailer/swat
+	corpsehelmet = /obj/item/clothing/head/helmet/guard
+
+/obj/effect/landmark/corpse/guard/PDF
+	name = "PDF Soldier"
+	corpseuniform = /obj/item/clothing/under/sec_corporate
+	corpsesuit = /obj/item/clothing/suit/armor/vest
+	corpseshoes = /obj/item/clothing/shoes/jackboots
+	corpseradio = /obj/item/device/radio/headset
+	corpsehelmet = /obj/item/clothing/head/helmet/riot
+	corpseid = 1
+	corpseidjob = "PDF private"
+	corpseidaccess = "Syndicate"
+
 ///////////Civilians//////////////////////
 
 /obj/effect/landmark/corpse/cook
@@ -224,6 +252,14 @@
 	corpseid = 1
 	corpseidjob = "Cook"
 	corpseidaccess = "Cook"
+
+/obj/effect/landmark/corpse/civilian
+	name = "Civilan"
+	corpseuniform = /obj/item/clothing/under/color/random
+	corpseshoes = /obj/item/clothing/shoes/sneakers/black
+	corpseid = 1
+	corpseidjob = "Civilan"
+	corpseidaccess = "assistant"
 
 
 /obj/effect/landmark/corpse/doctor
