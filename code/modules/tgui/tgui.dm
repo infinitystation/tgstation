@@ -60,7 +60,9 @@
 	set_interface(interface)
 
 	if(title)
-		src.title = sanitize(title)
+		src.title = replacetext(title, "\improper", "")
+		src.title = replacetext(src.title, "\proper", "")
+		src.title = sanitize(src.title)
 	if(width)
 		src.width = width
 	if(height)
