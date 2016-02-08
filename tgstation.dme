@@ -17,7 +17,6 @@
 #include "_maps\efficiencystation.dm"
 #include "_maps\tgstation2.dm"
 #include "_maps\map_files\EfficiencyStation\EfficiencyStation.dmm"
-#include "_maps\map_files\generic\z5.dmm"
 #include "_maps\map_files\TerrorStation\MetaPirateStation.v1.4.dmm"
 #include "code\_compile_options.dm"
 #include "code\hub.dm"
