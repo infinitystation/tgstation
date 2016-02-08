@@ -49,12 +49,16 @@ map TerrorStation
 	#voteweight 0
 endmap
 
+map voidefs
+	friendlyname Void Efficiency Station
+endmap
+
 map metastation
 	friendlyname TG Meta Station
 	#minplayers 25
 	#voteweight 0.5
 endmap
 
-map efficiencystation
+#map efficiencystation
 	friendlyname Efficiency Station
-endmap
+#endmap
