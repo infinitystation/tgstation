@@ -53,6 +53,10 @@ map voidefs
 	friendlyname Void Efficiency Station
 endmap
 
+map guard
+	friendlyname Guard
+endmap
+
 map metastation
 	friendlyname TG Meta Station
 	#minplayers 25
@@ -60,5 +64,5 @@ map metastation
 endmap
 
 #map efficiencystation
-	friendlyname Efficiency Station
+	#friendlyname Efficiency Station
 #endmap
