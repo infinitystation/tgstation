@@ -151,3 +151,12 @@
 	item_color = "reg_jacket"
 	icon = 'icons/obj/clothing/infinity_work.dmi'
 	worn_icon = 'icons/mob/infinity_work.dmi'
+
+/obj/item/clothing/suit/wedding_dress
+	name = "wedding dress"
+	desc = "Oh holy! Such a nice white dress!"
+	icon_state = "wedding_dress"
+	item_color = "wedding_dress"
+	item_state = "w_suit"
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon = 'icons/obj/clothing/infinity_work.dmi'

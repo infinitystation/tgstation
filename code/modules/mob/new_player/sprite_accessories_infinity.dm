@@ -145,3 +145,13 @@
 	icon_state = "stockings_suspenders"
 	icon = 'icons/mob/infinity_work.dmi'
 	gender = FEMALE
+
+/datum/sprite_accessory/hair/shortcover
+	name = "Shortcover"
+	icon_state = "shortcover"
+	icon = 'icons/mob/more_hairs.dmi'
+
+/datum/sprite_accessory/hair/longcover
+	name = "Longcover"
+	icon_state = "longcover"
+	icon = 'icons/mob/more_hairs.dmi'

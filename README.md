@@ -8,7 +8,7 @@
 **IRC (На английском)**: irc://irc.rizon.net/coderbus  
 **Основная карта:** TerrorStation (_maps/map_files/TerrorStation)  
 **Используемая карта:** TerrorStation  
-**Минимальная версия BYOND для компиляции:** 508
+**Минимальная версия BYOND для компиляции:** 510
 
 ##ЗАГРУЗКА
 
@@ -40,10 +40,6 @@ tgstation.dmb - 0 errors, 0 warnings
 3. Напишите порт и нажмите кнопку [GO].
 4. Как только появится строка "Initializations Complete" нажмите кнопку входа, которая обозначена стрелкой.
 
-##ХОСТИНГ В ОС LINUX
-В билде используется BYGEX для некоторых текстовых операции. К сожалению, билд имеет только библиотеку для ОС Windows.  
-Вы можете скачать BYGEX для Linux здесь https://github.com/optimumtact/byond-regex и скомпилировать его.  
-
 ##СОДЕЙСТВИЕ РАЗРАБОТКЕ БИЛДА.
 Читать здесь:  
 http://infinity.smforum.ru/index.php?topic=2630
@@ -59,4 +55,3 @@ http://infinity.smforum.ru/index.php?topic=2630
 Подробнее в файлах tgui/LICENSE.md.  
 
 Все содержимое, включая иконки и звуки, лицензируется на условиях лицензионного соглашения Creative Commons 3.0 BY-SA (https://creativecommons.ru/sites/creativecommons.ru/files/docs/attribution_3.0_ss_by-sa_rus.pdf).
-
