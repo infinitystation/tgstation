@@ -155,3 +155,15 @@
 	name = "Longcover"
 	icon_state = "longcover"
 	icon = 'icons/mob/more_hairs.dmi'
+
+/datum/sprite_accessory/undershirt/blouse
+	name = "Blouse"
+	icon = 'icons/mob/infinity_work.dmi'
+	icon_state = "blouse"
+	gender = FEMALE
+
+/datum/sprite_accessory/undershirt/cutblouse
+	name = "Cut Blouse"
+	icon = 'icons/mob/infinity_work.dmi'
+	icon_state = "cutblouse"
+	gender = FEMALE
