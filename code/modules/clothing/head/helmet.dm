@@ -117,7 +117,7 @@
 	armor = list(melee = 45, bullet = 50, laser = 25,energy = 20, bomb = 35, bio = 0, rad = 0)
 	strip_delay = 80
 
-/obj/item/clothing/head/helmet/TrooperHelmet
+/obj/item/clothing/head/helmet/trooper
 	name = "\improper Trooper Helmet"
 	desc = "Шлем с маленькими вырезами дл&#255; глаз, в этих чертовых вырезах можно разгл&#255;деть смерть..."
 	worn_icon = 'icons/mob/uac/hats.dmi'

@@ -87,3 +87,11 @@
 	item_state = ""
 	worn_icon = 'icons/mob/infinity_work.dmi'
 	icon = 'icons/obj/clothing/infinity_work.dmi'
+
+/obj/item/clothing/head/veil
+	name = "veil"
+	desc = "Light and clear headdress. Speccialy for wedding."
+	icon_state = "veil"
+	item_state = ""
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon = 'icons/obj/clothing/infinity_work.dmi'

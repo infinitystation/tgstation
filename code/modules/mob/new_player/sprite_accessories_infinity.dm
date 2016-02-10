@@ -145,3 +145,25 @@
 	icon_state = "stockings_suspenders"
 	icon = 'icons/mob/infinity_work.dmi'
 	gender = FEMALE
+
+/datum/sprite_accessory/hair/shortcover
+	name = "Shortcover"
+	icon_state = "shortcover"
+	icon = 'icons/mob/more_hairs.dmi'
+
+/datum/sprite_accessory/hair/longcover
+	name = "Longcover"
+	icon_state = "longcover"
+	icon = 'icons/mob/more_hairs.dmi'
+
+/datum/sprite_accessory/undershirt/blouse
+	name = "Blouse"
+	icon = 'icons/mob/infinity_work.dmi'
+	icon_state = "blouse"
+	gender = FEMALE
+
+/datum/sprite_accessory/undershirt/cutblouse
+	name = "Cut Blouse"
+	icon = 'icons/mob/infinity_work.dmi'
+	icon_state = "cutblouse"
+	gender = FEMALE

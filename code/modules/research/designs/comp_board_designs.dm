@@ -241,24 +241,24 @@
 	build_path = /obj/item/weapon/circuitboard/rdconsole
 	category = list("Computer Boards")
 
-/datum/design/ordercomp
-	name = "Computer Design (Supply ordering console)"
-	desc = "Allows for the construction of circuit boards used to build a Supply ordering console."
-	id = "ordercomp"
-	req_tech = list("programming" = 2)
-	build_type = IMPRINTER
-	materials = list(MAT_GLASS = 1000, "sacid" = 20)
-	build_path = /obj/item/weapon/circuitboard/ordercomp
-	category = list("Computer Boards")
-
-/datum/design/supplycomp
-	name = "Computer Design (Supply shuttle console)"
-	desc = "Allows for the construction of circuit boards used to build a Supply shuttle console."
-	id = "supplycomp"
+/datum/design/cargo
+	name = "Computer Design (Supply Console)"
+	desc = "Allows for the construction of circuit boards used to build a Supply Console."
+	id = "cargo"
 	req_tech = list("programming" = 3)
 	build_type = IMPRINTER
 	materials = list(MAT_GLASS = 1000, "sacid" = 20)
-	build_path = /obj/item/weapon/circuitboard/supplycomp
+	build_path = /obj/item/weapon/circuitboard/cargo
+	category = list("Computer Boards")
+
+/datum/design/cargorequest
+	name = "Computer Design (Supply Request Console)"
+	desc = "Allows for the construction of circuit boards used to build a Supply Request Console."
+	id = "cargorequest"
+	req_tech = list("programming" = 2)
+	build_type = IMPRINTER
+	materials = list(MAT_GLASS = 1000, "sacid" = 20)
+	build_path = /obj/item/weapon/circuitboard/cargo/request
 	category = list("Computer Boards")
 
 /datum/design/mining
@@ -299,16 +299,6 @@
 	build_type = IMPRINTER
 	materials = list(MAT_GLASS = 1000, "sacid" = 20)
 	build_path = /obj/item/weapon/circuitboard/message_monitor
-	category = list("Computer Boards")
-
-/datum/design/comm_traffic
-	name = "Computer Design (Telecommunications Traffic Control Console)"
-	desc = "Allows for the construction of circuit boards used to build a telecommunications traffic control console."
-	id = "comm_traffic"
-	req_tech = list("programming" = 3)
-	build_type = IMPRINTER
-	materials = list(MAT_GLASS = 1000, "sacid" = 20)
-	build_path = /obj/item/weapon/circuitboard/comm_traffic
 	category = list("Computer Boards")
 
 /datum/design/aifixer

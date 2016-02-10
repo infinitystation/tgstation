@@ -4,30 +4,41 @@
 	var/skipface = (wear_mask && (wear_mask.flags_inv & HIDEFACE)) || (head && (head.flags_inv & HIDEFACE))
 
 	// crappy hacks because you can't do \his[src] etc. I'm sorry this proc is so unreadable, blame the text macros :<
-	var/t_He = "It" //capitalised for use at the start of each line.
-	var/t_his = "its"
-	var/t_him = "it"
-	var/t_has = "has"
-	var/t_is = "is"
+	var/t_He = "Оно" //capitalised for use at the start of each line.
+	var/t_his = "их"
+	var/t_him = "им"
+	var/t_has = "имеет"
+
+	var/e_1 = ""
+	var/e_2 = ""
+	var/e_3 = ""
+	var/e_4 = ""
 
 	var/msg = "<span class='info'>*---------*\nЭто "
 
 	if( (slot_w_uniform in obscured) && skipface ) //big suits/masks/helmets make it hard to tell their gender
-		t_He = "Он"
-		t_his = "Её"
-		t_him = "Их"
-		t_has = "Иметь"
-		t_is = "это"
+		t_He = "Это"
+		t_his = "их"
+		t_him = "ним"
+		t_has = "имеет"
 	else
 		switch(gender)
 			if(MALE)
 				t_He = "Он"
 				t_his = "его"
-				t_him = "его"
+				t_him = "ему"
+				e_1 = ""
+				e_2 = "ый"
+				e_3 = "ий"
+				e_4 = "ым"
 			if(FEMALE)
 				t_He = "Она"
 				t_his = "её"
-				t_him = "её"
+				t_him = "ей"
+				e_1 = "а"
+				e_2 = "а&#255"
+				e_3 = "а&#255"
+				e_4 = "ой"
 
 	msg += "<EM>[src.name]</EM>!\n"
 
@@ -38,7 +49,7 @@
 		if(istype(w_uniform,/obj/item/clothing/under))
 			var/obj/item/clothing/under/U = w_uniform
 			if(U.hastie)
-				tie_msg += " with \icon[U.hastie] \a [U.hastie]"
+				tie_msg += " с \icon[U.hastie] [U.hastie]"
 
 		if(w_uniform.blood_DNA)
 			msg += "<span class='warning'>[t_He] носит \icon[w_uniform] [w_uniform.gender==PLURAL?"some":"a"] окровавленую [w_uniform.name][tie_msg]!</span>\n"
@@ -50,49 +61,49 @@
 		if(head.blood_DNA)
 			msg += "<span class='warning'>[t_He] носит \icon[head] [head.gender==PLURAL?"some":"a"] окровавленую [head.name] на голове!</span>\n"
 		else
-			msg += "[t_He] носит \icon[head] \a [head]\n"
+			msg += "[t_He] носит \icon[head] [head]\n"
 
 	//suit/armor
 	if(wear_suit)
 		if(wear_suit.blood_DNA)
 			msg += "<span class='warning'>[t_He] носит \icon[wear_suit] [wear_suit.gender==PLURAL?"some":"a"] окрававленное [wear_suit.name]!</span>\n"
 		else
-			msg += "[t_He] носит \icon[wear_suit] \a [wear_suit].\n"
+			msg += "[t_He] носит \icon[wear_suit] [wear_suit].\n"
 
 		//suit/armor storage
 		if(s_store)
 			if(s_store.blood_DNA)
 				msg += "<span class='warning'>[t_He] носит \icon[s_store] [s_store.gender==PLURAL?"some":"a"] окровавленый [s_store.name] на [wear_suit.name]!</span>\n"
 			else
-				msg += "[t_He] носит \icon[s_store] \a [s_store] на [wear_suit.name].\n"
+				msg += "[t_He] носит \icon[s_store] [s_store] на [wear_suit.name].\n"
 
 	//back
 	if(back)
 		if(back.blood_DNA)
 			msg += "<span class='warning'>[t_He] носит \icon[back] [back.gender==PLURAL?"some":"a"] окровавленый [back] на спине.</span>\n"
 		else
-			msg += "[t_He] носит \icon[back] \ [back] на спине.\n"
+			msg += "[t_He] носит \icon[back] [back] на спине.\n"
 
 	//left hand
 	if(l_hand && !(l_hand.flags&ABSTRACT))
 		if(l_hand.blood_DNA)
 			msg += "<span class='warning'>[t_He] держит \icon[l_hand] [l_hand.gender==PLURAL?"some":"a"] окровавленый [l_hand.name] в левой руке!</span>\n"
 		else
-			msg += "[t_He] держит \icon[l_hand] \ [l_hand] в левой руке.\n"
+			msg += "[t_He] держит \icon[l_hand] [l_hand] в левой руке.\n"
 
 	//правой руке
 	if(r_hand && !(r_hand.flags&ABSTRACT))
 		if(r_hand.blood_DNA)
 			msg += "<span class='warning'>[t_He] держит \icon[r_hand] [r_hand.gender==PLURAL?"some":"a"] окровавленый [r_hand.name] в правой руке!</span>\n"
 		else
-			msg += "[t_He] держит \icon[r_hand] \a [r_hand] в правой руке.\n"
+			msg += "[t_He] держит \icon[r_hand] [r_hand] в правой руке.\n"
 
 	//gloves
 	if(gloves && !(slot_gloves in obscured))
 		if(gloves.blood_DNA)
 			msg += "<span class='warning'>[t_He] носит\icon[gloves] [gloves.gender==PLURAL?"some":"a"] окровавленые [gloves.name]</span>\n"
 		else
-			msg += "[t_He] носит \icon[gloves] \ [gloves] \n"
+			msg += "[t_He] носит \icon[gloves] [gloves] \n"
 	else if(blood_DNA)
 		msg += "<span class='warning'>[t_him] руки в крови </span>\n"
 
@@ -101,7 +112,7 @@
 	//handcuffed?
 	if(handcuffed)
 		if(istype(handcuffed, /obj/item/weapon/restraints/handcuffs/cable))
-			msg += "<span class='warning'>[t_He] \icon[handcuffed] связан с помощью кабеля</span>\n"
+			msg += "<span class='warning'>[t_He] \icon[handcuffed] св&#255;зан с помощью кабел&#255;</span>\n"
 		else
 			msg += "<span class='warning'>[t_He] \icon[handcuffed] в наручниках!</span>\n"
 
@@ -124,18 +135,18 @@
 		if(wear_mask.blood_DNA)
 			msg += "<span class='warning'>[t_He] носит\icon[wear_mask] [wear_mask.gender==PLURAL?"some":"a"] окровавленую [wear_mask.name] </span>\n"
 		else
-			msg += "[t_He] носит\icon[wear_mask] \ [wear_mask]\n"
+			msg += "[t_He] носит\icon[wear_mask] [wear_mask]\n"
 
 	//eyes
 	if(glasses && !(slot_glasses in obscured))
 		if(glasses.blood_DNA)
 			msg += "<span class='warning'>[t_He] носит\icon[glasses] [glasses.gender==PLURAL?"some":"a"] окровавленые [glasses]</span>\n"
 		else
-			msg += "[t_He] носит \icon[glasses] \ [glasses]\n"
+			msg += "[t_He] носит \icon[glasses] [glasses]\n"
 
 	//ears
 	if(ears && !(slot_ears in obscured))
-		msg += "[t_He] носит на ухе  \icon[ears] \ [ears] \n"
+		msg += "[t_He] носит на ухе  \icon[ears] [ears] \n"
 
 	//ID
 	if(wear_id)
@@ -155,27 +166,27 @@
 
 	switch(jitteriness)
 		if(300 to INFINITY)
-			msg += "<span class='warning'><B>[t_He] [t_is] convulsing violently!</B></span>\n"
+			msg += "<span class='warning'><B>[t_He] очень сильно дрожит!</B></span>\n"
 		if(200 to 300)
-			msg += "<span class='warning'>[t_He] [t_is] extremely jittery.</span>\n"
+			msg += "<span class='warning'>[t_He] сильно дрожит.</span>\n"
 		if(100 to 200)
-			msg += "<span class='warning'>[t_He] [t_is] twitching ever so slightly.</span>\n"
+			msg += "<span class='warning'>[t_He] чуть-чуть подёргивает.</span>\n"
 
 
 
 	if(gender_ambiguous) //someone fucked up a gender reassignment surgery
 		if (gender == MALE)
-			msg += "[t_He] has a strange feminine quality to [t_him].\n"
+			msg += "[t_He] женственен по отношению к н[t_him].\n"
 		else
-			msg += "[t_He] has a strange masculine quality to [t_him].\n"
+			msg += "[t_He] мужественна по отношению к н[t_him].\n"
 
 	var/appears_dead = 0
 	if(stat == DEAD || (status_flags & FAKEDEATH))
 		appears_dead = 1
 		if(getorgan(/obj/item/organ/internal/brain))//Only perform these checks if there is no brain
 			if(suiciding)
-				msg += "<span class='warning'>[t_He] appears to have commited suicide... there is no hope of recovery.</span>\n"
-			msg += "<span class='deadsay'>[t_He] [t_is] limp and unresponsive; there are no signs of life"
+				msg += "<span class='warning'>[t_He], кажетс&#255;, совершила самоубийство. Спасение бесполезно.</span>\n"
+			msg += "<span class='deadsay'>[t_He] поникш[e_3] и бессознательн[e_2]; [t_He] не имеет признаков жизни"
 			if(!key)
 				var/foundghost = 0
 				if(mind)
@@ -186,10 +197,10 @@
 								foundghost = 0
 							break
 				if(!foundghost)
-					msg += " and [t_his] soul has departed"
+					msg += " и [t_his] её душа отбыла"
 			msg += "...</span>\n"
 		else//Brain is gone, doesn't matter if they are AFK or present
-			msg += "<span class='deadsay'>It appears that [t_his] brain is missing...</span>\n"
+			msg += "<span class='deadsay'>Кажетс&#255, [t_his] мозг пропал...</span>\n"
 
 	var/temp = getBruteLoss() //no need to calculate each of these twice
 
@@ -197,93 +208,93 @@
 
 	if(temp)
 		if(temp < 30)
-			msg += "[t_He] [t_has] minor bruising.\n"
+			msg += "[t_He] [t_has] незначительные повреждени&#255;.\n"
 		else
-			msg += "<B>[t_He] [t_has] severe bruising!</B>\n"
+			msg += "<B>[t_He] [t_has] сильные повреждени&#255;!</B>\n"
 
 	temp = getFireLoss()
 	if(temp)
 		if(temp < 30)
-			msg += "[t_He] [t_has] minor burns.\n"
+			msg += "[t_He] [t_has] незначительные ожоги.\n"
 		else
-			msg += "<B>[t_He] [t_has] severe burns!</B>\n"
+			msg += "<B>[t_He] [t_has] сильные ожоги!</B>\n"
 
 	temp = getCloneLoss()
 	if(temp)
 		if(temp < 30)
-			msg += "[t_He] [t_has] minor cellular damage.\n"
+			msg += "[t_He] [t_has] незначительные клеточные повреждени&#255;.\n"
 		else
-			msg += "<B>[t_He] [t_has] severe cellular damage.</B>\n"
+			msg += "<B>[t_He] [t_has] сильные клеточные повреждени&#255;.</B>\n"
 
 
 	for(var/obj/item/organ/limb/L in organs)
 		for(var/obj/item/I in L.embedded_objects)
-			msg += "<B>[t_He] [t_has] \a \icon[I] [I] embedded in [t_his] [L.getDisplayName()]!</B>\n"
+			msg += "<B>[t_He] [t_has] \icon[I] [I], застр&#255;вшую в [t_his] [L.getDisplayName()]!</B>\n"
 
 
 	if(fire_stacks > 0)
-		msg += "[t_He] [t_is] covered in something flammable.\n"
+		msg += "[t_He] в чем-то огнеопасном.\n"
 	if(fire_stacks < 0)
-		msg += "[t_He] looks a little soaked.\n"
+		msg += "[t_He] выгл&#255;дит немного смоченн[e_4].\n"
 
 
 	if(nutrition < NUTRITION_LEVEL_STARVING - 50)
-		msg += "[t_He] [t_is] severely malnourished.\n"
+		msg += "[t_He] сильно недоедает!\n"
 	else if(nutrition >= NUTRITION_LEVEL_FAT)
 		if(user.nutrition < NUTRITION_LEVEL_STARVING - 50)
-			msg += "[t_He] [t_is] plump and delicious looking - Like a fat little piggy. A tasty piggy.\n"
+			msg += "[t_He] пухл[e_2] и вкусно выгл&#255;ит - Как толста&#255; маленька&#255; свинка, вкусна&#255; свинка.\n"
 		else
-			msg += "[t_He] [t_is] quite chubby.\n"
+			msg += "[t_He] немного полноват[e_1].\n"
 
 	if(pale)
-		msg += "[t_He] [t_has] pale skin.\n"
+		msg += "[t_He] бледноват[e_1].\n"
 
 	if(bleedsuppress)
-		msg += "[t_He] [t_is] bandaged with something.\n"
+		msg += "[t_He] перев&#255;зан[e_1] чем-то.\n"
 	if(blood_max)
 		if(reagents.has_reagent("heparin"))
-			msg += "<b>[t_He] [t_is] bleeding uncontrollably!</b>\n"
+			msg += "<b>[t_He] обильно кровоточит!</b>\n"
 		else
-			msg += "<B>[t_He] [t_is] bleeding!</B>\n"
+			msg += "<B>[t_He] кровоточит!</B>\n"
 
 	if(reagents.has_reagent("teslium"))
-		msg += "[t_He] is emitting a gentle blue glow!\n"
+		msg += "[t_He] испускает нежное голубое свечение!\n"
 
 	msg += "</span>"
 
 	if(!appears_dead)
 		if(stat == UNCONSCIOUS)
-			msg += "[t_He] [t_is]n't responding to anything around [t_him] and seems to be asleep.\n"
+			msg += "[t_He] не реагирует на все, что окружает [t_his] и, видимо, уснул[e_1].\n"
 		else if(getBrainLoss() >= 60)
-			msg += "[t_He] [t_has] a stupid expression on [t_his] face.\n"
+			msg += "[t_He] [t_has] глупое выражение на [t_his] лице.\n"
 
 		if(getorgan(/obj/item/organ/internal/brain))
 			if(istype(src,/mob/living/carbon/human/interactive))
-				msg += "<span class='deadsay'>[t_He] [t_is] appears to be some sort of sick automaton, [t_his] eyes are glazed over and [t_his] mouth is slightly agape.</span>\n"
+				msg += "<span class='deadsay'>[t_He], видимо, болеет автоматизмом, [t_his] глаза потускнели и [t_his] рот слегка разинут.</span>\n"
 			else if(!key)
-				msg += "<span class='deadsay'>[t_He] [t_is] totally catatonic. The stresses of life in deep-space must have been too much for [t_him]. Any recovery is unlikely.</span>\n"
+				msg += "<span class='deadsay'>[t_He] страдает кататонией. Стрессы жизни в глубоком космосе доканали [t_him]. Спасение вр&#255;д ли поможет.</span>\n"
 			else if(!client)
-				msg += "[t_He] [t_has] a vacant, braindead stare...\n"
+				msg += "[t_He] в апатии...\n"
 
 		if(digitalcamo)
-			msg += "[t_He] [t_is] moving [t_his] body in an unnatural and blatantly inhuman manner.\n"
+			msg += "[t_He] двигает [t_him] телом грубым и неестественным образом.\n"
 
 	if(!skipface && is_thrall(src) && in_range(user,src))
-		msg += "Their features seem unnaturally tight and drawn.\n"
+		msg += "[t_him] особенности, кажетс&#255;, неестественно и жестко искажены.\n"
 
 	switch(age)
 		if(15 to 19)
-			msg += "Выгл&#255;дит на 15-19 лет. \n"
+			msg += "[t_He] выгл&#255;дит на 15-19 лет. \n"
 		if(20 to 29)
-			msg += "Выгл&#255;дит на 20-29 лет. \n"
+			msg += "[t_He] выгл&#255;дит на 20-29 лет. \n"
 		if(30 to 40)
-			msg += "Выгл&#255;дит на 30-40 лет. \n"
+			msg += "[t_He] выгл&#255;дит на 30-40 лет. \n"
 		if(41 to 50)
-			msg += "Выгл&#255;дит на 41-50 лет. \n"
+			msg += "[t_He] выгл&#255;дит на 41-50 лет. \n"
 		if(51 to 65)
-			msg += "Выгл&#255;дит на 51-65 лет. \n"
+			msg += "[t_He] выгл&#255;дит на 51-65 лет. \n"
 		if(66 to 80)
-			msg += "Выгл&#255;дит на 66-80 лет. \n"
+			msg += "[t_He] выгл&#255;дит на 66-80 лет. \n"
 		if(81 to INFINITY)
 			msg += "Это пожилой человек, возраст которого вы не можете определить. \n"
 

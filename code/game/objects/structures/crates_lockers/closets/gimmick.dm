@@ -182,7 +182,7 @@
 		new /obj/item/weapon/storage/box/flashbangs(src)
 	for(var/i in 1 to 3)
 		new /obj/item/clothing/head/helmet/thunderdome(src)
-	
+
 /obj/structure/closet/thunderdome/tdgreen
 	name = "green-team Thunderdome closet"
 	icon_door = "green"
@@ -201,7 +201,7 @@
 		new /obj/item/weapon/storage/box/flashbangs(src)
 	for(var/i in 1 to 3)
 		new /obj/item/clothing/head/helmet/thunderdome(src)
-	
+
 /obj/structure/closet/malf/suits
 	desc = "It's a storage unit for operational gear."
 	icon_state = "syndicate"
@@ -234,7 +234,7 @@
 /obj/structure/closet/gimmick/uac/trooper/New()
 	..()
 	new /obj/item/clothing/glasses/sunglasses(src)
-	new /obj/item/clothing/head/helmet/TrooperHelmet(src)
+	new /obj/item/clothing/head/helmet/trooper(src)
 	new /obj/item/clothing/mask/gas/sechailer/swat(src)
 	new /obj/item/clothing/suit/armor/UACtrooperArmor(src)
 	new /obj/item/weapon/gun/projectile/automatic/mg88(src)

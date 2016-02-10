@@ -24,7 +24,6 @@ var/datum/subsystem/air/SSair
 	var/list/networks = list()
 	var/list/obj/machinery/atmos_machinery = list()
 
-
 	//Special functions lists
 	var/list/turf/simulated/active_super_conductivity = list()
 	var/list/turf/simulated/high_pressure_delta = list()
@@ -205,7 +204,7 @@ var/datum/subsystem/air/SSair
 		fdel(F)
 		for(var/turf/simulated/T in active_turfs)
 			active_turfs_startlist += text("[T.x], [T.y], [T.z]\n")
-		text2file(list2text(active_turfs_startlist), "data/AT_list.txt")
+		text2file(jointext(active_turfs_startlist, null), "data/AT_list.txt")
 
 /datum/subsystem/air/proc/setup_atmos_machinery(z_level)
 	for (var/obj/machinery/atmospherics/AM in atmos_machinery)
