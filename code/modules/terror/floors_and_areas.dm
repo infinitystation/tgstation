@@ -74,7 +74,7 @@
 /turf/simulated/floor/plasteel/terror/city/stairs/bottom
 	icon_state = "rampbottom"
 /turf/simulated/floor/plasteel/terror/city/stairs/top
-	icon_state = "rampbottom"
+	icon_state = "ramptop"
 
 /turf/simulated/floor/plasteel/terror/city/freezer
 	icon_state = "freezerfloor"
@@ -83,3 +83,22 @@
 	icon_state = "wood"
 	floor_tile = /obj/item/stack/tile/wood
 	broken_states = list("wood-broken", "wood-broken2", "wood-broken3", "wood-broken4", "wood-broken5", "wood-broken6", "wood-broken7")
+
+/turf/simulated/floor/plasteel/terror/city/whitegreen
+	icon_state = "whitegreenfull"
+/turf/simulated/floor/plasteel/terror/city/whitegreen/side
+	icon_state = "whitegreen"
+/turf/simulated/floor/plasteel/terror/city/whitegreen/corner
+	icon_state = "whitegreencorner"
+
+/turf/simulated/floor/plasteel/terror/city/white
+	icon_state = "white"
+/turf/simulated/floor/plasteel/terror/city/white/side
+	icon_state = "whitehall"
+/turf/simulated/floor/plasteel/terror/city/white/corner
+	icon_state = "whitecorner"
+
+/turf/simulated/floor/plasteel/terror/city/whitebot
+	icon_state = "whitebot"
+/turf/simulated/floor/plasteel/terror/city/whitebot/delivery
+	icon_state = "whitedelivery"
