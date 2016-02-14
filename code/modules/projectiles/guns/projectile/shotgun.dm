@@ -157,6 +157,7 @@
 
 /obj/item/ammo_box/magazine/internal/boltaction/enchanted
 	max_ammo =1
+	ammo_type = /obj/item/ammo_casing/a762/enchanted
 
 
 
@@ -310,7 +311,7 @@
 	item_state = "bulldog"
 	w_class = 3
 	origin_tech = "combat=5;materials=4;syndicate=6"
-	mag_type = /obj/item/ammo_box/magazine/m12g/stun
+	mag_type = /obj/item/ammo_box/magazine/m12g
 	fire_sound = 'sound/weapons/Gunshot.ogg'
 	can_suppress = 0
 	burst_size = 1

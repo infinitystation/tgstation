@@ -233,7 +233,6 @@ var/regex/lizard_hiCC = new("C+", "g")
 	id = "slime"
 	default_color = "00FFFF"
 	darksight = 3
-	invis_sight = SEE_INVISIBLE_LEVEL_ONE
 	specflags = list(MUTCOLORS,EYECOLOR,HAIR,FACEHAIR,NOBLOOD,VIRUSIMMUNE)
 	say_mod = "says"
 	eyes = "eyes"
@@ -445,7 +444,6 @@ var/regex/lizard_hiCC = new("C+", "g")
 	darksight = 3
 	say_mod = "gibbers"
 	sexes = 0
-	invis_sight = SEE_INVISIBLE_LEVEL_ONE
 	specflags = list(NOBLOOD,NOBREATH,VIRUSIMMUNE)
 	var/scientist = 0 // vars to not pollute spieces list with castes
 	var/agent = 0
@@ -628,7 +626,7 @@ var/global/list/synth_flesh_disguises = list()
 
 
 /datum/species/synth/proc/handle_disguise(mob/living/carbon/human/H)
-	if(H)
+	if(H && fake_species) // Obviously we only are disguise when we're... disguised.
 		H.updatehealth()
 		var/add_overlay = FALSE
 		if(H.health < disguise_fail_health)
