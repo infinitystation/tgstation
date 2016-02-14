@@ -20,10 +20,10 @@
 	maxHealth = INFINITY
 	layer = 5
 	healable = 0
+	sight = SEE_SELF
 	see_invisible = SEE_INVISIBLE_MINIMUM
 	see_in_dark = 8
 	languages = ALL
-	force_threshold = 5
 	response_help   = "passes through"
 	response_disarm = "swings through"
 	response_harm   = "punches through"
@@ -32,6 +32,7 @@
 	atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0)
 	minbodytemp = 0
 	maxbodytemp = INFINITY
+	harm_intent_damage = 0
 	friendly = "touches"
 	status_flags = 0
 	wander = 0
@@ -319,7 +320,7 @@
 /mob/living/simple_animal/revenant/attackby(obj/item/W, mob/living/user, params)
 	if(istype(W, /obj/item/weapon/nullrod))
 		visible_message("<span class='warning'>[src] violently flinches!</span>", \
-						"<span class='revendanger'>As the null rod passes through you, you feel your essence draining away!</span>")
+						"<span class='revendanger'>As \the [W] passes through you, you feel your essence draining away!</span>")
 		adjustBruteLoss(25) //hella effective
 		inhibited = 1
 		spawn(30)

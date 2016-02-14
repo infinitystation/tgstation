@@ -393,3 +393,14 @@
 	item_state = "r_suit"
 	worn_icon = 'icons/mob/infinity_work.dmi'
 	icon = 'icons/obj/clothing/infinity_work.dmi'
+
+/obj/item/clothing/under/black_skirt
+	name = "black skirt"
+	desc = "Black tight skirt."
+	icon_state = "tight_skirt"
+	item_color = "tight_skirt"
+	item_state = "bl_suit"
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	fitted = FEMALE_UNIFORM_TOP
+	can_adjust = 0

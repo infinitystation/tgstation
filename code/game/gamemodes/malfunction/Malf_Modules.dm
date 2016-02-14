@@ -485,7 +485,7 @@
 			var/initial_range = initial(C.view_range) //To prevent calling the proc twice
 			if(camera.uses > 0)
 				if(!C.status)
-					C.deactivate(src, 0) //Reactivates the camera based on status. Badly named proc.
+					C.toggle_cam(src, 0) //Reactivates the camera based on status. Badly named proc.
 					fixedcams++
 					camera.uses--
 				if(C.view_range != initial_range)
@@ -522,6 +522,7 @@
 
 	var/upgradedcams = 0
 	see_override = SEE_INVISIBLE_MINIMUM //Night-vision, without which X-ray would be very limited in power.
+	update_sight()
 
 	for(var/obj/machinery/camera/C in cameranet.cameras)
 		if(C.assembly)

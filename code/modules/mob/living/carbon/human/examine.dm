@@ -9,18 +9,22 @@
 	var/t_him = "им"
 	var/t_has = "имеет"
 
-	var/e_1 = ""
-	var/e_2 = ""
-	var/e_3 = ""
-	var/e_4 = ""
+	var/e_1 = "о"
+	var/e_2 = "ое"
+	var/e_3 = "ее"
+	var/e_4 = "ым"
 
 	var/msg = "<span class='info'>*---------*\nЭто "
 
 	if( (slot_w_uniform in obscured) && skipface ) //big suits/masks/helmets make it hard to tell their gender
-		t_He = "Это"
+		t_He = "Оно"
 		t_his = "их"
 		t_him = "ним"
 		t_has = "имеет"
+		e_1 = "о"
+		e_2 = "ое"
+		e_3 = "ее"
+		e_4 = "ым"
 	else
 		switch(gender)
 			if(MALE)
@@ -282,21 +286,22 @@
 	if(!skipface && is_thrall(src) && in_range(user,src))
 		msg += "[t_him] особенности, кажетс&#255;, неестественно и жестко искажены.\n"
 
-	switch(age)
-		if(15 to 19)
-			msg += "[t_He] выгл&#255;дит на 15-19 лет. \n"
-		if(20 to 29)
-			msg += "[t_He] выгл&#255;дит на 20-29 лет. \n"
-		if(30 to 40)
-			msg += "[t_He] выгл&#255;дит на 30-40 лет. \n"
-		if(41 to 50)
-			msg += "[t_He] выгл&#255;дит на 41-50 лет. \n"
-		if(51 to 65)
-			msg += "[t_He] выгл&#255;дит на 51-65 лет. \n"
-		if(66 to 80)
-			msg += "[t_He] выгл&#255;дит на 66-80 лет. \n"
-		if(81 to INFINITY)
-			msg += "Это пожилой человек, возраст которого вы не можете определить. \n"
+	if(!skipface)
+		switch(age)
+			if(15 to 19)
+				msg += "[t_He] выгл&#255;дит на 15-19 лет. \n"
+			if(20 to 29)
+				msg += "[t_He] выгл&#255;дит на 20-29 лет. \n"
+			if(30 to 40)
+				msg += "[t_He] выгл&#255;дит на 30-40 лет. \n"
+			if(41 to 50)
+				msg += "[t_He] выгл&#255;дит на 41-50 лет. \n"
+			if(51 to 65)
+				msg += "[t_He] выгл&#255;дит на 51-65 лет. \n"
+			if(66 to 80)
+				msg += "[t_He] выгл&#255;дит на 66-80 лет. \n"
+			if(81 to INFINITY)
+				msg += "Это пожилой человек, возраст которого вы не можете определить. \n"
 
 	if(istype(user, /mob/living/carbon/human))
 		var/mob/living/carbon/human/H = user

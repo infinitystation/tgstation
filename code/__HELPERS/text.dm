@@ -466,3 +466,8 @@ var/list/binary = list("0","1")
 /proc/sanitize_u0(t)
 	t = replacetext(t, "ÿ", "&#1103;")
 	return t
+
+/proc/char_split(t)
+	. = list()
+	for(var/x in 1 to length(t))
+		. += copytext(t,x,x+1)
