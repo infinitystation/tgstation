@@ -43,6 +43,7 @@ other types of metals and chemistry for reagents).
 	var/locked = 0
 	var/access = null
 	var/list/reagents = list()			//List of reagents. Format: "id" = amount.
+	var/maxstack = 1
 
 
 //A proc to calculate the reliability of a design based on tech levels and innate modifiers.
