@@ -11,7 +11,7 @@
 	a_intent = "harm"
 	maxHealth = 100
 	health = 100
-	speed = 1
+	speed = 3
 	harm_intent_damage = 8
 	melee_damage_lower = 20
 	melee_damage_upper = 20
