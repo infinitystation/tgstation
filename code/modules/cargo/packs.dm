@@ -529,7 +529,6 @@
 	crate_type = /obj/structure/closet/crate/secure
 	dangerous = TRUE
 
->>>>>>> 5bd1b0dff53a34b0f82bf2402ab39e06311ed424:code/modules/cargo/packs.dm
 //////////////////////////////////////////////////////////////////////////////
 //////////////////////////// Medical /////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////
@@ -866,7 +865,6 @@
 /datum/supply_pack/organic/hydroponics
 	name = "Hydroponics Crate"
 	cost = 15
->>>>>>> 5bd1b0dff53a34b0f82bf2402ab39e06311ed424:code/modules/cargo/packs.dm
 	contains = list(/obj/item/weapon/reagent_containers/spray/plantbgone,
 					/obj/item/weapon/reagent_containers/spray/plantbgone,
 					/obj/item/weapon/reagent_containers/glass/bottle/ammonia,
