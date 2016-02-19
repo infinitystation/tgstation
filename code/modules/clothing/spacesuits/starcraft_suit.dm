@@ -20,7 +20,7 @@
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/space_adv/starcraft
 	slowdown = 2
 	w_class = 4
-	flags_inv = BLOCKHAIR
+	flags_inv = HIDEHAIR
 	max_heat_protection_temperature = FIRE_IMMUNITY_HELM_MAX_TEMP_PROTECT
 
 /obj/item/clothing/head/helmet/space/hardsuit/space_adv/starcraft/red
@@ -44,4 +44,4 @@
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/space_adv/starcraft/red
 	slowdown = 2
 	w_class = 4
-	flags_inv = BLOCKHAIR
+	flags_inv = HIDEHAIR

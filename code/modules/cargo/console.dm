@@ -123,6 +123,7 @@
 			var/reason = ""
 			if(requestonly)
 				reason = input("Reason:", name, "") as text|null
+				reason = reject_bad_text(reason)
 				if(isnull(reason) || ..())
 					return
 

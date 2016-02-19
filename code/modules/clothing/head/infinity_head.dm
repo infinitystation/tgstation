@@ -19,9 +19,9 @@
 	min_cold_protection_temperature = SPACE_HELM_MIN_TEMP_PROTECT
 	heat_protection = HEAD
 	max_heat_protection_temperature = SPACE_HELM_MAX_TEMP_PROTECT
-	flags = STOPSPRESSUREDMAGE|BLOCKHAIR
+	flags = STOPSPRESSUREDMAGE
 	strip_delay = 80
-	flags_inv = HIDEEARS|HIDEEYES|HEADCOVERSMOUTH
+	flags_inv = HIDEEARS|HIDEEYES|HEADCOVERSMOUTH|HIDEHAIR
 	flags_cover = HEADCOVERSEYES
 	burn_state = -1
 
@@ -41,7 +41,8 @@
 	item_state = "helmet"
 	worn_icon = 'icons/mob/infinity_work.dmi'
 	icon = 'icons/obj/clothing/infinity_work.dmi'
-	flags = STOPSPRESSUREDMAGE|BLOCKHAIR|THICKMATERIAL
+	flags_inv = HIDEHAIR
+	flags = STOPSPRESSUREDMAGE|THICKMATERIAL
 	max_heat_protection_temperature = SPACE_HELM_MAX_TEMP_PROTECT
 	cold_protection = HEAD
 	min_cold_protection_temperature = SPACE_HELM_MIN_TEMP_PROTECT

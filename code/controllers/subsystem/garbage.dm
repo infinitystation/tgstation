@@ -22,7 +22,7 @@ var/datum/subsystem/garbage_collector/SSgarbage
 	var/list/queue = list() 	// list of refID's of things that should be garbage collected
 								// refID's are associated with the time at which they time out and need to be manually del()
 								// we do this so we aren't constantly locating them and preventing them from being gc'd
-	
+
 	var/list/tobequeued = list()	//We store the references of things to be added to the queue seperately so we can spread out GC overhead over a few ticks
 
 	var/list/didntgc = list()	// list of all types that have failed to GC associated with the number of times that's happened.
@@ -56,7 +56,7 @@ var/datum/subsystem/garbage_collector/SSgarbage
 	var/time_to_stop = world.timeofday + max_run_time
 	HandleToBeQueued(time_to_stop)
 	HandleQueue(time_to_stop)
-	
+
 //If you see this proc high on the profile, what you are really seeing is the garbage collection/soft delete overhead in byond.
 //Don't attempt to optimize, not worth the effort.
 /datum/subsystem/garbage_collector/proc/HandleToBeQueued(time_to_stop)
@@ -69,7 +69,7 @@ var/datum/subsystem/garbage_collector/SSgarbage
 	delslasttick = 0
 	gcedlasttick = 0
 	var/time_to_kill = world.time - collection_timeout // Anything qdel() but not GC'd BEFORE this time needs to be manually del()
-	
+
 	while(queue.len && world.timeofday < time_to_stop)
 		var/refID = queue[1]
 		if (!refID)
@@ -103,15 +103,15 @@ var/datum/subsystem/garbage_collector/SSgarbage
 
 /datum/subsystem/garbage_collector/proc/Queue(datum/A)
 	if (!istype(A) || !isnull(A.gc_destroyed))
-		return 
+		return
 	var/gctime = world.time
 	var/refid = "\ref[A]"
-	
+
 	A.gc_destroyed = gctime
-	
+
 	if (queue[refid])
 		queue -= "\ref[A]" // Removing any previous references that were GC'd so that the current object will be at the end of the list.
-	
+
 	queue[refid] = gctime
 
 /datum/subsystem/garbage_collector/proc/HardQueue(datum/A)
@@ -127,9 +127,6 @@ var/datum/subsystem/garbage_collector/SSgarbage
 /proc/qdel(datum/D)
 	if(!D)
 		return
-#ifdef TESTING
-	SSgarbage.qdel_list += "[A.type]"
-#endif
 	if(!istype(D))
 		del(D)
 	else if(isnull(D.gc_destroyed))
@@ -151,9 +148,6 @@ var/datum/subsystem/garbage_collector/SSgarbage
 				PlaceInPool(D, 0)
 			if (QDEL_HINT_FINDREFERENCE)//qdel will, if TESTING is enabled, display all references to this object, then queue the object for deletion.
 				SSgarbage.QueueForQueuing(D)
-				#ifdef TESTING
-				A.find_references()
-				#endif
 			else
 				if(!("[D.type]" in SSgarbage.noqdelhint))
 					SSgarbage.noqdelhint += "[D.type]"
