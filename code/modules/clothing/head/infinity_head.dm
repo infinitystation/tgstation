@@ -96,3 +96,11 @@
 	item_state = ""
 	worn_icon = 'icons/mob/infinity_work.dmi'
 	icon = 'icons/obj/clothing/infinity_work.dmi'
+
+/obj/item/clothing/head/lify_hat
+	name = "lify hat"
+	desc = "Especially for cosplay."
+	icon_state = "lify_hat"
+	item_state = ""
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon = 'icons/obj/clothing/infinity_work.dmi'
