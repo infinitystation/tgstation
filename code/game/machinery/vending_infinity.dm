@@ -15,6 +15,7 @@
 		/obj/item/clothing/suit/jacket/leather/overcoat=2, /obj/item/clothing/suit/longjacket=2, /obj/item/clothing/under/shorts_denim=2, /obj/item/clothing/suit/brand/reg_jacket=2,
 		/obj/item/clothing/suit/brand/brand_rjacket=1, /obj/item/clothing/suit/latex_top=2, /obj/item/clothing/suit/handless_latex_top=2, /obj/item/clothing/under/greyskirt=3, /obj/item/clothing/under/pinkskirt=3,
 		/obj/item/clothing/under/rank/vice2=2, /obj/item/clothing/under/doubleskirt=2, /obj/item/clothing/head/captoe=2, /obj/item/clothing/head/captoe/black=2, /obj/item/clothing/under/redsuit=3,
-		/obj/item/clothing/shoes/brand1=3, /obj/item/clothing/shoes/brand2=3, /obj/item/clothing/under/black_skirt=3, /obj/item/clothing/shoes/black_open_shoes=2, /obj/item/clothing/shoes/shoes_rim=2)
+		/obj/item/clothing/shoes/brand1=3, /obj/item/clothing/shoes/brand2=5, /obj/item/clothing/under/black_skirt=3, /obj/item/clothing/shoes/black_open_shoes=2, /obj/item/clothing/shoes/shoes_rim=5,
+		/obj/item/clothing/under/jeanschain=3, /obj/item/clothing/under/black_dress=2)
 	premium = list(/obj/item/clothing/under/snow_maiden=1, /obj/item/clothing/under/snow_maiden/blue=1, /obj/item/clothing/under/candy_dress=2, /obj/item/clothing/under/bunny_suit=2,
-		/obj/item/clothing/suit/kimono/black=1, /obj/item/clothing/suit/kimono=1, /obj/item/clothing/suit/kimono/blue=1)
+		/obj/item/clothing/suit/kimono/black=1, /obj/item/clothing/suit/kimono=1, /obj/item/clothing/suit/kimono/blue=1, /obj/item/clothing/head/lify_hat=1, /obj/item/clothing/under/lify=1)
