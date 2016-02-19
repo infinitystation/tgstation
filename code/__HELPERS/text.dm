@@ -63,7 +63,7 @@
 
 
 //Returns null if there is any bad text in the string
-/proc/reject_bad_text(text, max_length=512, original=0)
+/proc/reject_bad_text(text, max_length=512)
 	if(length(text) > max_length)
 		return			//message too long
 	var/non_whitespace = 0
@@ -71,11 +71,6 @@
 		switch(text2ascii(text,i))
 			if(62,60,92,47)
 				return			//rejects the text if it contains these bad characters: <, >, \ or /
-			if(127 to 255)
-				if(original)
-					return
-				else
-					non_whitespace = 1
 			if(0 to 31)
 				return			//more weird stuff
 			if(32)
