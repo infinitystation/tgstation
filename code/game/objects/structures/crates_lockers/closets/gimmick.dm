@@ -58,22 +58,22 @@
 
 
 /obj/structure/closet/gimmick/zombie
-	name = "For light live"
-	desc = "Good luck."
+	name = "For light life"
+	desc = "Good luck, soldier."
 
 /obj/structure/closet/gimmick/zombie/New()
 	..()
-	new /obj/item/clothing/under/color/black(src)
-	new /obj/item/clothing/suit/armor/vest(src)
-	new /obj/item/clothing/gloves/combat(src)
-	new /obj/item/device/flashlight(src)
-	new /obj/item/device/radio(src)
-	new /obj/item/weapon/gun/energy/laser(src)
-	new /obj/item/clothing/head/helmet/swat(src)
-	new /obj/item/clothing/shoes/combat/swat(src)
-	new /obj/item/stack/medical/ointment(src)
-	new /obj/item/weapon/reagent_containers/pill/lowcharcoal(src)
 	new /obj/item/weapon/card/id/syndicate(src)
+	new/obj/item/device/flashlight/pen(src)
+	new /obj/item/weapon/gun/energy/laser(src)
+	new /obj/item/stack/medical/ointment(src)
+	new /obj/item/clothing/suit/armor/vest(src)
+	new /obj/item/device/radio/headset/syndicate(src)
+	new /obj/item/clothing/gloves/combat(src)
+	new/obj/item/weapon/storage/belt/military/assault(src)
+	new /obj/item/clothing/head/helmet/alt(src)
+	new /obj/item/clothing/shoes/combat/swat(src)
+	new /obj/item/clothing/under/color/black(src)
 
 
 /obj/structure/closet/gimmick/russian
