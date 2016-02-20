@@ -1,8 +1,42 @@
 ///Areas///
 
+/area/mercenaries
+	name = "Mercenariess area"
+	icon_state = "red"
+	requires_power = 0
+	has_gravity = 1
+
+/area/mercenaries/shuttle
+	name = "Mercenariess shuttle"
+
+/area/mercenaries/base
+	name = "Mercenariess base"
+
+/area/mercenaries/base
+	name = "Mercenariess base"
+
+/area/mercenaries/base/hypersleep_room
+	name = "Hypersleep room"
+
+/area/mercenaries/base/coridor_1
+	name = "Mercenariess area"
+
+/area/mercenaries/base/coridor_2
+	name = "Mercenariess area"
+
+/area/mercenaries/base/coridor_3
+	name = "Mercenariess area"
+
+/area/mercenaries/base/coridor_4
+	name = "Mercenariess area"
+
+
+
+/area/mercenaries/base
 
 
 ///Flors///
+
 /turf/simulated/floor/plasteel/terror
 	icon = 'icons/turf/terror.dmi'
 
