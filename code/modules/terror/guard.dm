@@ -48,7 +48,8 @@
 	desc = "Standard Security gear. Protects the head from impacts."
 //	icon = //'онярюбэ лемъ мю леярн!'
 //	icon_state = //"онярюбэ лемъ мю леярн!"
-	flags = HEADBANGPROTECT | BLOCKHAIR
+	flags = HEADBANGPROTECT
+	flags_inv = HIDEHAIR
 	armor = list(melee = 25, bullet = 15, laser = 25,energy = 10, bomb = 25, bio = 0, rad = 0)
 	strip_delay = 30
 	burn_state = FIRE_PROOF

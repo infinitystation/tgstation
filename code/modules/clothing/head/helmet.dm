@@ -5,7 +5,7 @@
 	flags = HEADBANGPROTECT
 	item_state = "helmet"
 	armor = list(melee = 30, bullet = 25, laser = 25,energy = 10, bomb = 25, bio = 0, rad = 0)
-	flags_inv = HIDEEARS|HIDEEYES
+	flags_inv = HIDEEARS
 	cold_protection = HEAD
 	min_cold_protection_temperature = HELMET_MIN_TEMP_PROTECT
 	heat_protection = HEAD
@@ -47,10 +47,10 @@
 	can_toggle = 1
 	flags = HEADBANGPROTECT
 	armor = list(melee = 41, bullet = 15, laser = 5,energy = 5, bomb = 5, bio = 2, rad = 0)
-	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE
+	flags_inv = HIDEMASK|HIDEEARS|HIDEFACE
 	strip_delay = 80
 	action_button_name = "Toggle Helmet Visor"
-	visor_flags_inv = HIDEMASK|HIDEEYES|HIDEFACE
+	visor_flags_inv = HIDEMASK|HIDEFACE
 	toggle_cooldown = 0
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 
@@ -123,9 +123,9 @@
 	worn_icon = 'icons/mob/uac/hats.dmi'
 	icon = 'icons/obj/clothing/uac/hats.dmi'
 	icon_state = "helmet"
-	flags = HEADBANGPROTECT | BLOCKHAIR
+	flags = HEADBANGPROTECT
 	armor = list(melee = 40, bullet = 35, laser = 45,energy = 25, bomb = 40, bio = 5, rad = 0)
-	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR
 	strip_delay = 80
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 
@@ -140,6 +140,7 @@
 /obj/item/clothing/head/helmet/thunderdome
 	name = "\improper Thunderdome helmet"
 	desc = "<i>'Let the battle commence!'</i>"
+	flags_inv = HIDEEARS|HIDEHAIR
 	icon_state = "thunderdome"
 	item_state = "thunderdome"
 	armor = list(melee = 40, bullet = 30, laser = 25,energy = 10, bomb = 25, bio = 10, rad = 0)
@@ -152,6 +153,7 @@
 /obj/item/clothing/head/helmet/roman
 	name = "roman helmet"
 	desc = "An ancient helmet made of bronze and leather."
+	flags_inv = HIDEEARS|HIDEHAIR
 	flags_cover = HEADCOVERSEYES
 	armor = list(melee = 25, bullet = 0, laser = 25, energy = 10, bomb = 10, bio = 0, rad = 0)
 	icon_state = "roman"
@@ -168,9 +170,8 @@
 	name = "gladiator helmet"
 	desc = "Ave, Imperator, morituri te salutant."
 	icon_state = "gladiator"
-	flags = BLOCKHAIR
 	item_state = "gladiator"
-	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEHAIR
 	flags_cover = HEADCOVERSEYES
 
 /obj/item/clothing/head/helmet/redtaghelm
@@ -181,7 +182,6 @@
 	item_state = "redtaghelm"
 	armor = list(melee = 15, bullet = 10, laser = 20,energy = 10, bomb = 20, bio = 0, rad = 0)
 	// Offer about the same protection as a hardhat.
-	flags_inv = HIDEEARS|HIDEEYES
 
 /obj/item/clothing/head/helmet/bluetaghelm
 	name = "blue laser tag helmet"
@@ -191,7 +191,6 @@
 	item_state = "bluetaghelm"
 	armor = list(melee = 15, bullet = 10, laser = 20,energy = 10, bomb = 20, bio = 0, rad = 0)
 	// Offer about the same protection as a hardhat.
-	flags_inv = HIDEEARS|HIDEEYES
 
 /obj/item/clothing/head/helmet/knight
 	name = "medieval helmet"
@@ -199,8 +198,8 @@
 	icon_state = "knight_green"
 	item_state = "knight_green"
 	armor = list(melee = 41, bullet = 15, laser = 5,energy = 5, bomb = 5, bio = 2, rad = 0)
-	flags = BLOCKHAIR
-	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE
+	flags = null
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 	strip_delay = 80
 

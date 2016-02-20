@@ -543,7 +543,7 @@
 	if(current_cycle >= 12 && current_cycle < 24)
 		M.drowsyness += 1
 	else if(current_cycle >= 24)
-		M.AdjustSleeping(1)
+		M.Sleeping(2)
 	..()
 
 /datum/reagent/medicine/morphine/overdose_process(mob/living/M)
@@ -711,13 +711,10 @@
 				spawn (100) //so the ghost has time to re-enter
 					return
 			else
-				M.adjustOxyLoss(-20)
-				M.adjustToxLoss(-20)
-				if(M.health > config.health_threshold_dead && M.getorgan(/obj/item/organ/internal/brain))
-					M.stat = UNCONSCIOUS
-					M.blind_eyes(1)
-					dead_mob_list -= M
-					living_mob_list |= list(M)
+				M.adjustOxyLoss(-20, 0)
+				M.adjustToxLoss(-20, 0)
+				M.updatehealth()
+				if(M.revive())
 					M.emote("gasp")
 					add_logs(M, M, "revived", src)
 	..()

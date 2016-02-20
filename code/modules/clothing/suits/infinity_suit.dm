@@ -24,8 +24,9 @@
 	icon_state = "blackhoody"
 	worn_icon = 'icons/mob/infinity_work.dmi'
 	icon = 'icons/obj/clothing/infinity_work.dmi'
-	flags = NODROP
 	body_parts_covered = HEAD
+	flags = NODROP
+	flags_inv = HIDEHAIR|HIDEEARS
 
 /obj/item/clothing/suit/brand/blue_jacket
 	name = "brand jacket"
@@ -157,6 +158,15 @@
 	desc = "Oh holy! Such a nice white dress!"
 	icon_state = "wedding_dress"
 	item_color = "wedding_dress"
+	item_state = "w_suit"
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+
+/obj/item/clothing/suit/sc_labcoat
+	name = "science labcoat"
+	desc = "When you wear it, you feel like a real crazy scientist!"
+	icon_state = "sc_labcoat"
+	item_color = "sc_labcoat"
 	item_state = "w_suit"
 	worn_icon = 'icons/mob/infinity_work.dmi'
 	icon = 'icons/obj/clothing/infinity_work.dmi'

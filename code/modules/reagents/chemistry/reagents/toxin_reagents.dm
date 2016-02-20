@@ -279,9 +279,9 @@
 			M.confused += 2
 			M.drowsyness += 2
 		if(10 to 50)
-			M.AdjustSleeping(1)
+			M.Sleeping(2)
 		if(51 to INFINITY)
-			M.AdjustSleeping(1)
+			M.Sleeping(2)
 			M.adjustToxLoss((current_cycle - 50)*REM)
 	..()
 	return
@@ -296,9 +296,9 @@
 /datum/reagent/toxin/beer2/on_mob_life(mob/living/M)
 	switch(current_cycle)
 		if(1 to 50)
-			M.AdjustSleeping(1)
+			M.Sleeping(2)
 		if(51 to INFINITY)
-			M.AdjustSleeping(1)
+			M.Sleeping(2)
 			M.adjustToxLoss((current_cycle - 50)*REM)
 	..()
 
@@ -435,7 +435,7 @@
 		M.adjustBrainLoss(1*REM)
 		M.adjustToxLoss(1*REM)
 	if(current_cycle >= 18)
-		M.AdjustSleeping(1)
+		M.Sleeping(2)
 	..()
 
 /datum/reagent/toxin/cyanide
@@ -552,7 +552,7 @@
 
 /datum/reagent/toxin/sodium_thiopental/on_mob_life(mob/living/M)
 	if(current_cycle >= 10)
-		M.AdjustSleeping(1)
+		M.Sleeping(2)
 	M.adjustStaminaLoss(10*REM)
 	..()
 
@@ -567,7 +567,7 @@
 
 /datum/reagent/toxin/sulfonal/on_mob_life(mob/living/M)
 	if(current_cycle >= 22)
-		M.AdjustSleeping(1)
+		M.Sleeping(2)
 	..()
 
 /datum/reagent/toxin/amanitin

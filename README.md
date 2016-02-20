@@ -8,7 +8,6 @@
 **IRC (На английском)**: irc://irc.rizon.net/coderbus  
 **Основная карта:** TerrorStation (_maps/map_files/TerrorStation)  
 **Используемая карта:** TerrorStation  
-**Минимальная версия BYOND для компиляции:** 510
 
 ##ЗАГРУЗКА
 
