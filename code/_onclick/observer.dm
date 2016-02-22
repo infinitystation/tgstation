@@ -3,7 +3,7 @@
 		if(client.banprisoned)
 			return
 	if(client.click_intercept)
-		if(call(client.click_intercept,"ClickOn")(src,params,A))
+		if(call(client.click_intercept,"InterceptClickOn")(src,params,A))
 			return
 
 	if(can_reenter_corpse && mind && mind.current)
@@ -22,7 +22,7 @@
 /mob/dead/observer/ClickOn(var/atom/A, var/params)
 	
 	if(client.click_intercept)
-		if(call(client.click_intercept,"ClickOn")(src,params,A))
+		if(call(client.click_intercept,"InterceptClickOn")(src,params,A))
 			return
 
 	var/list/modifiers = params2list(params)
