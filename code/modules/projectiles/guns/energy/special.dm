@@ -94,9 +94,7 @@
 	cell_type = /obj/item/weapon/stock_parts/cell/emproof
 	cell_removing = 0
 	needs_permit = 0 // Aparently these are safe to carry? I'm sure Golliaths would disagree.
-	var/overheat = 0
 	var/overheat_time = 16
-	var/recent_reload = 1
 	var/range_add
 	upgrades = list("diamond" = 0, "screwdriver" = 0, "plasma" = 0)
 	unique_rename = 1
@@ -152,26 +150,20 @@
 	origin_tech = "combat=4;powerstorage=3"
 
 /obj/item/weapon/gun/energy/kinetic_accelerator/shoot_live_shot()
-	overheat = 1
-	spawn(overheat_time)
-		overheat = 0
-		recent_reload = 0
 	..()
+	spawn(overheat_time)
+		reload()
 
 /obj/item/weapon/gun/energy/kinetic_accelerator/emp_act(severity)
 	return
 
-/obj/item/weapon/gun/energy/kinetic_accelerator/attack_self(mob/living/user)
-	if(overheat || recent_reload)
-		return
+/obj/item/weapon/gun/energy/kinetic_accelerator/proc/reload()
 	power_supply.give(500)
 	if(!suppressed)
 		playsound(src.loc, 'sound/weapons/kenetic_reload.ogg', 60, 1)
 	else
-		user << "<span class='warning'>You silently charge [src].<span>"
-	recent_reload = 1
+		loc << "<span class='warning'>[src] silently charges up.<span>"
 	update_icon()
-	return
 
 /obj/item/weapon/gun/energy/kinetic_accelerator/update_icon()
 	var/obj/item/ammo_casing/energy/shot = ammo_type[select]
@@ -362,5 +354,5 @@
 	item_state = "instagibblue"
 	ammo_type = list(/obj/item/ammo_casing/energy/instakill/blue)
 
-/obj/item/weapon/gun/energy/laser/instagib/emp_act() //implying you could stop the instagib
+/obj/item/weapon/gun/energy/laser/instakill/emp_act() //implying you could stop the instagib
 	return

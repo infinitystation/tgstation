@@ -103,6 +103,8 @@
 
 
 	var/frozen = 0 //admin-tool
+	var/occupant_sight_flags = 0 //sight flags to give to the occupant (e.g. mech mining scanner gives meson-like vision)
+
 	hud_possible = list (DIAG_STAT_HUD, DIAG_BATT_HUD, DIAG_MECH_HUD)
 
 
@@ -137,7 +139,7 @@
 		if(isAI(M))
 			M.gib() //AIs are loaded into the mech computer itself. When the mech dies, so does the AI. Forever.
 		else
-			M.Move(loc)
+			M.forceMove(loc)
 
 	if(prob(30))
 		explosion(get_turf(loc), 0, 0, 1, 3)
@@ -168,7 +170,7 @@
 			qdel(cell)
 		if(internal_tank)
 			qdel(internal_tank)
-	SSobj.processing.Remove(src)
+	SSobj.processing -= src
 	poi_list.Remove(src)
 	equipment.Cut()
 	cell = null
@@ -814,10 +816,8 @@
 
 /obj/mecha/proc/moved_inside(mob/living/carbon/human/H)
 	if(H && H.client && H in range(1))
-		H.reset_view(src)
-		H.stop_pulling()
-		H.forceMove(src)
 		occupant = H
+		H.forceMove(src)
 		add_fingerprint(H)
 		GrantActions(H, human_occupant=1)
 		forceMove(loc)
@@ -868,9 +868,9 @@
 			user << "<span class='warning'>\the [mmi_as_oc] is stuck to your hand, you cannot put it in \the [src]!</span>"
 			return
 		var/mob/brainmob = mmi_as_oc.brainmob
-		brainmob.reset_view(src)
 		occupant = brainmob
 		brainmob.loc = src //should allow relaymove
+		brainmob.reset_perspective(src)
 		brainmob.canmove = 1
 		mmi_as_oc.loc = src
 		mmi_as_oc.mecha = src
@@ -916,14 +916,13 @@
 	occupant = null //we need it null when forceMove calls Exited().
 	if(mob_container.forceMove(newloc))//ejecting mob container
 		log_message("[mob_container] moved out.")
-		L.reset_view()
 		L << browse(null, "window=exosuit")
-
 
 		if(istype(mob_container, /obj/item/device/mmi))
 			var/obj/item/device/mmi/mmi = mob_container
 			if(mmi.brainmob)
 				L.loc = mmi
+				L.reset_perspective()
 			mmi.mecha = null
 			mmi.update_icon()
 			L.canmove = 0
@@ -1003,6 +1002,10 @@ var/year_integer = text2num(year) // = 2013???
 /obj/mecha/allow_drop()
 	return 0
 
+/obj/mecha/update_remote_sight(mob/living/user)
+	if(occupant_sight_flags)
+		if(user == occupant)
+			user.sight |= occupant_sight_flags
 
 //////////////////////////////////////// Action Buttons ///////////////////////////////////////////////
 

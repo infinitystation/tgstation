@@ -17,6 +17,7 @@
 	var/fire_sound = 'sound/weapons/Gunshot.ogg'
 	var/atom/base = null //where do to range calculations, firing projectiles, etc. from. allows for turrets inside of things to work
 	icon = 'icons/obj/turrets.dmi'
+	var/active_state = "Bullet"
 
 /obj/machinery/gun_turret/New()
 	..()
@@ -160,7 +161,7 @@
 	desc = "Syndicate laser defense turret. It really packs a bunch."
 	scan_range = 15 //YOU SHALL NOT PASS!
 	health = 150 //Because it lacks a cover, and is mostly to keep people from touching the syndie shuttle.
-	projectile_type = /obj/item/projectile/beam/heavylaser
+	projectile_type = /obj/item/projectile/beam/laser/heavylaser
 	fire_sound = 'sound/weapons/lasercannonfire.ogg'
 
 /obj/machinery/gun_turret/laser/nofaction //specially for TERROR'S JAIL

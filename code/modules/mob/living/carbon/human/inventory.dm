@@ -70,6 +70,13 @@
 			update_inv_ears()
 		if(slot_glasses)
 			glasses = I
+			var/obj/item/clothing/glasses/G = I
+			if(G.tint)
+				update_tint()
+			if(G.vision_correction)
+				clear_fullscreen("nearsighted")
+			if(G.vision_flags || G.darkness_view || G.invis_override || G.invis_view)
+				update_sight()
 			update_inv_glasses()
 		if(slot_gloves)
 			gloves = I
@@ -127,6 +134,14 @@
 		update_inv_gloves()
 	else if(I == glasses)
 		glasses = null
+		var/obj/item/clothing/glasses/G = I
+		if(G.tint)
+			update_tint()
+		if(G.vision_correction)
+			if(disabilities & NEARSIGHT)
+				overlay_fullscreen("nearsighted", /obj/screen/fullscreen/impaired, 1)
+		if(G.vision_flags || G.darkness_view || G.invis_override || G.invis_view)
+			update_sight()
 		update_inv_glasses()
 	else if(I == ears)
 		ears = null
@@ -151,18 +166,19 @@
 		s_store = null
 		update_inv_s_store()
 
-/mob/living/carbon/human/wear_mask_update(obj/item/I, unequip = 1)
-	if(I.flags & BLOCKHAIR)
+/mob/living/carbon/human/wear_mask_update(obj/item/clothing/C, toggle_off = 1)
+	if((C.flags_inv & (HIDEHAIR|HIDEFACIALHAIR)) || (initial(C.flags_inv) & (HIDEHAIR|HIDEFACIALHAIR)))
 		update_hair()
-	if(unequip && internal)
-		if(internals)
-			internals.icon_state = "internal0"
+	if(toggle_off && internal)
+		update_internals_hud_icon(0)
 		internal = null
+	if(C.flags_inv & HIDEEYES)
+		update_inv_glasses()
 	sec_hud_set_security_status()
 	..()
 
 /mob/living/carbon/human/head_update(obj/item/I, forced)
-	if(I.flags & BLOCKHAIR || forced)
+	if((I.flags_inv & (HIDEHAIR|HIDEFACIALHAIR)) || forced)
 		update_hair()
 	if(I.flags_inv & HIDEEYES || forced)
 		update_inv_glasses()

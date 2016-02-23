@@ -2,7 +2,7 @@
 #define SAVEFILE_VERSION_MIN	8
 
 //This is the current version, anything below this will attempt to update (if it's not obsolete)
-#define SAVEFILE_VERSION_MAX	12
+#define SAVEFILE_VERSION_MAX	13
 /*
 SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Carn
 	This proc checks if the current directory of the savefile S needs updating
@@ -166,9 +166,17 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 					underwear = "Tankini"
 				if(13)
 					underwear = "Nude"
-		if(!(pref_species in species_list))
-			pref_species = new /datum/species/human()
-	return
+
+	if(pref_species && !(pref_species.id in roundstart_species))
+		pref_species = new /datum/species/human()
+
+	if(current_version < 13 || !istext(backbag))
+		switch(backbag)
+			if(2)
+				backbag = DSATCHEL
+			else
+				backbag = DBACKPACK
+
 
 /datum/preferences/proc/load_path(ckey,filename="preferences.sav")
 	if(!ckey)
@@ -296,6 +304,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	S["body_is_always_random"] >> be_random_body
 	S["gender"]				>> gender
 	S["age"]				>> age
+	S["visual_age"]			>> visual_age
 	S["hair_color"]			>> hair_color
 	S["facial_hair_color"]	>> facial_hair_color
 	S["eye_color"]			>> eye_color
@@ -384,11 +393,12 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 		undershirt		= sanitize_inlist(undershirt, undershirt_f)
 	socks			= sanitize_inlist(socks, socks_list)
 	age				= sanitize_integer(age, AGE_MIN, AGE_MAX, initial(age))
+	visual_age		= sanitize_integer(visual_age, AGE_MIN, AGE_MAX, initial(age))
 	hair_color			= sanitize_hexcolor(hair_color, 3, 0)
 	facial_hair_color			= sanitize_hexcolor(facial_hair_color, 3, 0)
 	eye_color		= sanitize_hexcolor(eye_color, 3, 0)
 	skin_tone		= sanitize_inlist(skin_tone, skin_tones)
-	backbag			= sanitize_integer(backbag, 1, backbaglist.len, initial(backbag))
+	backbag			= sanitize_inlist(backbag, backbaglist, initial(backbag))
 	features["mcolor"]	= sanitize_hexcolor(features["mcolor"], 3, 0)
 	features["tail_lizard"]	= sanitize_inlist(features["tail_lizard"], tails_list_lizard)
 	features["tail_human"] 	= sanitize_inlist(features["tail_human"], tails_list_human, "None")
@@ -431,6 +441,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	S["body_is_always_random"] << be_random_body
 	S["gender"]				<< gender
 	S["age"]				<< age
+	S["visual_age"]			<< visual_age
 	S["hair_color"]			<< hair_color
 	S["facial_hair_color"]	<< facial_hair_color
 	S["eye_color"]			<< eye_color

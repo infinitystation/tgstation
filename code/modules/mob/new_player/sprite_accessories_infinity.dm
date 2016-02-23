@@ -162,8 +162,37 @@
 	icon_state = "blouse"
 	gender = FEMALE
 
+/datum/sprite_accessory/undershirt/rblouse
+	name = "Red Blouse"
+	icon = 'icons/mob/infinity_work.dmi'
+	icon_state = "rblouse"
+	gender = FEMALE
+
+/datum/sprite_accessory/undershirt/gblouse
+	name = "Green Blouse"
+	icon = 'icons/mob/infinity_work.dmi'
+	icon_state = "gblouse"
+	gender = FEMALE
+
+/datum/sprite_accessory/undershirt/yblouse
+	name = "Yellow Blouse"
+	icon = 'icons/mob/infinity_work.dmi'
+	icon_state = "yblouse"
+	gender = FEMALE
+
 /datum/sprite_accessory/undershirt/cutblouse
 	name = "Cut Blouse"
 	icon = 'icons/mob/infinity_work.dmi'
 	icon_state = "cutblouse"
+	gender = FEMALE
+
+/datum/sprite_accessory/hair/pais
+	name = "Pais"
+	icon_state = "hairpais"
+	icon = 'icons/mob/more_hairs.dmi'
+
+/datum/sprite_accessory/underwear/red_underwear
+	name = "Red Underwear"
+	icon_state = "red_underwear"
+	icon = 'icons/mob/infinity_work.dmi'
 	gender = FEMALE

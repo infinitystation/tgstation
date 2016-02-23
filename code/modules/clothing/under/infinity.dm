@@ -213,7 +213,7 @@
 	body_parts_covered = GROIN|LEGS|FEET
 
 /obj/item/clothing/under/red_cheongasm
-	name = "red cheongasm"
+	name = "red cheongsam"
 	desc = "It is a red velvet cheongsam dress."
 	icon_state = "red_cheongasm"
 	item_state = "r_suit"
@@ -393,3 +393,45 @@
 	item_state = "r_suit"
 	worn_icon = 'icons/mob/infinity_work.dmi'
 	icon = 'icons/obj/clothing/infinity_work.dmi'
+
+/obj/item/clothing/under/black_skirt
+	name = "black skirt"
+	desc = "Black tight skirt."
+	icon_state = "tight_skirt"
+	item_color = "tight_skirt"
+	item_state = "bl_suit"
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	fitted = FEMALE_UNIFORM_TOP
+	can_adjust = 0
+
+/obj/item/clothing/under/black_dress
+	name = "black dress"
+	desc = "Just another anyooh work. Black night dress, with a green line."
+	icon_state = "black_dress"
+	item_color = "black_dress"
+	item_state = "bl_suit"
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	fitted = FEMALE_UNIFORM_TOP
+	can_adjust = 0
+
+/obj/item/clothing/under/lify
+	name = "lify suit"
+	desc = "Especially for cosplay."
+	icon_state = "lify"
+	item_color = "lify"
+	item_state = "r_suit"
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	can_adjust = 0
+
+/obj/item/clothing/under/jeanschain
+	name = "jeans with chain"
+	desc = "Black jeans, with a chain."
+	icon_state = "chain_jeans"
+	item_color = "chain_jeans"
+	item_state = "bl_suit"
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	can_adjust = 0

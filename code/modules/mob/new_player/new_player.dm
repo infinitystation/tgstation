@@ -9,7 +9,7 @@
 	invisibility = 101
 
 	density = 0
-	stat = 2
+	stat = DEAD
 	canmove = 0
 
 	anchored = 1	//  don't get pushed around
@@ -231,7 +231,7 @@
 		var/pollid = href_list["pollid"]
 		if(istext(pollid))
 			pollid = text2num(pollid)
-		if(isnum(pollid))
+		if(isnum(pollid) && IsInteger(pollid))
 			src.poll_player(pollid)
 		return
 
@@ -262,7 +262,7 @@
 							rating = null
 						else
 							rating = text2num(href_list["o[optionid]"])
-							if(!isnum(rating))
+							if(!isnum(rating) || !IsInteger(rating))
 								return
 
 						vote_on_numval_poll(pollid, optionid, rating)
@@ -424,15 +424,6 @@
 		mind.transfer_to(new_character)					//won't transfer key since the mind is not active
 
 	new_character.name = real_name
-
-	if(client.prefs.be_blinded == 1)
-		new_character.disabilities |= BLIND
-
-	if(client.prefs.be_nearsight == 1)
-		new_character.disabilities |= NEARSIGHT
-
-	if(client.prefs.be_deaf == 1)
-		new_character.disabilities |= DEAF
 
 	new_character.key = key		//Manually transfer the key to log them in
 	new_character.stopLobbySound()

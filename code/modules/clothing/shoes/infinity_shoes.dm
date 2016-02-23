@@ -19,3 +19,17 @@
 	icon_state = "brand_shoes2"
 	icon = 'icons/obj/clothing/infinity_work.dmi'
 	worn_icon = 'icons/mob/infinity_work.dmi'
+
+/obj/item/clothing/shoes/shoes_rim
+	name = "shoes with a rim"
+	desc = "Stylish black shoes. Anyooh production."
+	icon_state = "shoes_rim"
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'
+
+/obj/item/clothing/shoes/black_open_shoes
+	name = "open shoes"
+	desc = "Stylish black shoes. Anyooh production."
+	icon_state = "black_open_shoes"
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'

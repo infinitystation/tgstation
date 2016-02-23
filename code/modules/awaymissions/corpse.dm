@@ -45,6 +45,9 @@
 	..()
 	invisibility = 0
 
+/obj/effect/landmark/corpse/proc/special(mob/new_spawn)
+	return
+
 /obj/effect/landmark/corpse/proc/createCorpse(death, ckey) //Creates a mob and checks for gear in each slot before attempting to equip it.
 	var/mob/living/carbon/human/M = new /mob/living/carbon/human (src.loc)
 	if(mobname != "default")
@@ -114,6 +117,7 @@
 	if(ckey)
 		M.ckey = ckey
 		M << "[flavour_text]"
+		special(M)
 	qdel(src)
 
 /obj/effect/landmark/corpse/AICorpse/createCorpse() //Creates a corrupted AI
@@ -211,6 +215,34 @@
 	corpseidjob = "Alpha Squad"
 	corpseidaccess = "Syndicate"
 
+/obj/effect/landmark/corpse/guard
+	name = "Guard Soldier"
+	corpseuniform = /obj/item/clothing/under/syndicate/tacticool
+	corpsesuit = /obj/item/clothing/suit/armor/UACtrooperArmor
+	corpseshoes = /obj/item/clothing/shoes/jackboots
+	corpseradio = /obj/item/device/radio/headset
+	corpsehelmet = /obj/item/clothing/head/helmet/guard
+
+/obj/effect/landmark/corpse/guard/mask
+	name = "Guard Soldier"
+	corpseuniform = /obj/item/clothing/under/syndicate/tacticool
+	corpsesuit = /obj/item/clothing/suit/armor/UACtrooperArmor
+	corpseshoes = /obj/item/clothing/shoes/jackboots
+	corpseradio = /obj/item/device/radio/headset
+	corpsemask = /obj/item/clothing/mask/gas/sechailer/swat
+	corpsehelmet = /obj/item/clothing/head/helmet/guard
+
+/obj/effect/landmark/corpse/guard/PDF
+	name = "PDF Soldier"
+	corpseuniform = /obj/item/clothing/under/sec_corporate
+	corpsesuit = /obj/item/clothing/suit/armor/vest
+	corpseshoes = /obj/item/clothing/shoes/jackboots
+	corpseradio = /obj/item/device/radio/headset
+	corpsehelmet = /obj/item/clothing/head/helmet/riot
+	corpseid = 1
+	corpseidjob = "PDF private"
+	corpseidaccess = "Syndicate"
+
 ///////////Civilians//////////////////////
 
 /obj/effect/landmark/corpse/cook
@@ -224,6 +256,14 @@
 	corpseid = 1
 	corpseidjob = "Cook"
 	corpseidaccess = "Cook"
+
+/obj/effect/landmark/corpse/civilian
+	name = "Civilan"
+	corpseuniform = /obj/item/clothing/under/color/random
+	corpseshoes = /obj/item/clothing/shoes/sneakers/black
+	corpseid = 1
+	corpseidjob = "Civilan"
+	corpseidaccess = "assistant"
 
 
 /obj/effect/landmark/corpse/doctor
@@ -301,6 +341,26 @@
 	corpsemask = /obj/item/clothing/mask/breath
 
 
+/obj/effect/landmark/corpse/bartender
+	mobname = "Space Bartender"
+	corpseuniform = /obj/item/clothing/under/rank/bartender
+	corpseback = /obj/item/weapon/storage/backpack
+	corpseshoes = /obj/item/clothing/shoes/sneakers/black
+	corpsesuit = /obj/item/clothing/suit/armor
+	corpseglasses = /obj/item/clothing/glasses/sunglasses/reagent
+	corpseid = 1
+	corpseidjob = "Bartender"
+	corpseidaccess = "Bartender"
+
+
+/obj/effect/landmark/corpse/bartender/alive
+	death = FALSE
+	roundstart = FALSE
+	mobname = "Space Bartender"
+	name = "sleeper"
+	icon = 'icons/obj/Cryogenic2.dmi'
+	icon_state = "sleeper"
+	flavour_text = "You are a space bartender!"
 
 /////////////////Officers+Nanotrasen Security//////////////////////
 
@@ -343,7 +403,6 @@
 	corpseid = 1
 	corpseidjob = "Private Security Force"
 	corpseidaccess = "Security Officer"
-
 
 /obj/effect/landmark/corpse/commander/alive
 	death = FALSE
@@ -398,3 +457,21 @@
 	mob_species = /datum/species/abductor
 	corpseuniform = /obj/item/clothing/under/color/grey
 	corpseshoes = /obj/item/clothing/shoes/combat
+
+///Prisoner
+
+/obj/effect/landmark/corpse/prisoner_transport
+	name = "prisoner sleeper"
+	icon = 'icons/obj/Cryogenic2.dmi'
+	icon_state = "sleeper"
+	corpseuniform = /obj/item/clothing/under/rank/prisoner
+	corpsemask = /obj/item/clothing/mask/breath
+	corpseshoes = /obj/item/clothing/shoes/sneakers/orange
+	corpsepocket1 = /obj/item/weapon/tank/internals/emergency_oxygen
+	roundstart = FALSE
+	death = FALSE
+	flavour_text = {"You were a prisoner, sentenced to hard labour in one of Nanotrasen's harsh gulags, but judging by the explosive crash you just survived, fate may have other plans for. First thing is first though: Find a way to survive this mess."}
+
+/obj/effect/landmark/corpse/prisoner_transport/special(mob/living/new_spawn)
+	var/crime = pick("distribution of contraband" , "unauthorized erotic action on duty", "syndicate collaboration", "worship of prohbited life forms", "possession of profane texts", "murder", "arson", "insulting your manager", "grand theft", "conspiracy", "attempting to unionize", "vandalism", "gross incompetence")
+	new_spawn << "You were convincted of: [crime]."

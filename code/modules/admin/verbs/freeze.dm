@@ -12,8 +12,10 @@ var/global/list/frozen_mob_list = list()
 	if(!holder)
 		src << "<font color='red'>Error: Freeze: Only administrators may use this command.</font>"
 		return
-	if(!istype(M))	return
-	if(!check_rights(R_ADMIN))	return
+	if(!istype(M))
+		return
+	if(!check_rights(R_ADMIN))
+		return
 	if(M in frozen_mob_list)
 		M.admin_unFreeze(src)
 	else
@@ -36,7 +38,7 @@ var/global/list/frozen_mob_list = list()
 	anchored = 1
 	frozen = 1
 	admin_prev_sleeping = sleeping
-	sleeping += 20000
+	SetSleeping(sleeping+20000)
 	if(!(src in frozen_mob_list))
 		frozen_mob_list += src
 
@@ -52,7 +54,7 @@ var/global/list/frozen_mob_list = list()
 
 	anchored = 0
 	frozen = 0
-	sleeping = admin_prev_sleeping
+	SetSleeping(admin_prev_sleeping)
 	admin_prev_sleeping = null
 	if(src in frozen_mob_list)
 		frozen_mob_list -= src

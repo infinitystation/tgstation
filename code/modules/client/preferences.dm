@@ -46,11 +46,12 @@ var/list/preferences_datums = list()
 	var/be_random_body = 0				//whether we'll have a random body every round
 	var/gender = MALE					//gender of character (well duh)
 	var/age = 30						//age of character
+	var/visual_age = 30					//visual age of character
 	var/blood_type = "A+"				//blood type (not-chooseable)
 	var/underwear = "Nude"				//underwear type
 	var/undershirt = "Nude"				//undershirt type
 	var/socks = "Nude"					//socks type
-	var/backbag = 1						//backpack type
+	var/backbag = DBACKPACK				//backpack type
 	var/hair_style = "Bald"				//Hair type
 	var/hair_color = "000"				//Hair color
 	var/facial_hair_style = "Shaved"	//Face hair type
@@ -172,6 +173,7 @@ var/list/preferences_datums = list()
 
 			dat += "<b>Gender:</b> <a href='?_src_=prefs;preference=gender'>[gender == MALE ? "Male" : "Female"]</a><BR>"
 			dat += "<b>Age:</b> <a href='?_src_=prefs;preference=age;task=input'>[age]</a><BR>"
+			dat += "<b>Visual Age:</b> <a href='?_src_=prefs;preference=visual_age;task=input'>[visual_age]</a><BR>"
 
 			dat += "<a href='?_src_=prefs;preference=set_char_notes'><b>Character Notes</b></a><BR>"
 			dat += "<b>Disabilities:</b> <BR>"
@@ -209,7 +211,7 @@ var/list/preferences_datums = list()
 			dat += "<b>Underwear:</b><BR><a href ='?_src_=prefs;preference=underwear;task=input'>[underwear]</a><BR>"
 			dat += "<b>Undershirt:</b><BR><a href ='?_src_=prefs;preference=undershirt;task=input'>[undershirt]</a><BR>"
 			dat += "<b>Socks:</b><BR><a href ='?_src_=prefs;preference=socks;task=input'>[socks]</a><BR>"
-			dat += "<b>Backpack:</b><BR><a href ='?_src_=prefs;preference=bag;task=input'>[backbaglist[backbag]]</a><BR></td>"
+			dat += "<b>Backpack:</b><BR><a href ='?_src_=prefs;preference=bag;task=input'>[backbag]</a><BR></td>"
 
 			if(pref_species.use_skintones)
 
@@ -762,6 +764,8 @@ var/list/preferences_datums = list()
 					real_name = pref_species.random_name(gender,1)
 				if("age")
 					age = rand(AGE_MIN, AGE_MAX)
+				if("visual_age")
+					age = max(AGE_MIN, min(age + rand(-5, 5), AGE_MAX))
 				if("hair")
 					hair_color = random_short_color()
 				if("hair_style")
@@ -781,7 +785,7 @@ var/list/preferences_datums = list()
 				if("s_tone")
 					skin_tone = random_skin_tone()
 				if("bag")
-					backbag = rand(1,2)
+					backbag = pick(backbaglist)
 				if("all")
 					random_character()
 
@@ -809,6 +813,12 @@ var/list/preferences_datums = list()
 					var/new_age = input(user, "Choose your character's age:\n([AGE_MIN]-[AGE_MAX])", "Character Preference") as num|null
 					if(new_age)
 						age = max(min( round(text2num(new_age)), AGE_MAX),AGE_MIN)
+
+				if("visual_age")
+					var/new_age = input(user, "Choose your character's visual age:\n([AGE_MIN]-[AGE_MAX])", "Character Preference") as num|null
+					new_age = round(text2num(new_age))
+					if(new_age)
+						visual_age = max(min(min(max(new_age, age+8), age-8), AGE_MAX),AGE_MIN)
 
 				if("metadata")
 					var/new_metadata = input(user, "Enter any information you'd like others to see, such as Roleplay-preferences:", "Game Preference" , metadata)  as message|null
@@ -1008,7 +1018,7 @@ var/list/preferences_datums = list()
 				if("bag")
 					var/new_backbag = input(user, "Choose your character's style of bag:", "Character Preference")  as null|anything in backbaglist
 					if(new_backbag)
-						backbag = backbaglist.Find(new_backbag)
+						backbag = new_backbag
 
 				if("clown_name")
 					var/new_clown_name = reject_bad_name( input(user, "Choose your character's clown name:", "Character Preference")  as text|null )
@@ -1255,6 +1265,7 @@ var/list/preferences_datums = list()
 
 	character.gender = gender
 	character.age = age
+	character.visual_age = visual_age
 
 	character.eye_color = eye_color
 	character.hair_color = hair_color
@@ -1268,6 +1279,14 @@ var/list/preferences_datums = list()
 	character.socks = socks
 
 	character.backbag = backbag
+
+	if(be_blinded == 1)
+		character.disabilities |= BLIND
+	if(be_nearsight == 1)
+		character.disabilities |= NEARSIGHT
+	if(be_deaf == 1)
+		character.disabilities |= DEAF
+	character.handle_disabilities()
 
 	character.flavor_text = sanitize_a0(flavor_text)
 	character.sec_imp_notes = sec_imp_notes
