@@ -816,9 +816,9 @@ var/list/preferences_datums = list()
 
 				if("visual_age")
 					var/new_age = input(user, "Choose your character's visual age:\n([AGE_MIN]-[AGE_MAX])", "Character Preference") as num|null
-					new_age = round(text2num(new_age))
+					new_age = max(min( round(text2num(new_age)), age+8), age-8)
 					if(new_age)
-						visual_age = max(min(min(max(new_age, age+8), age-8), AGE_MAX),AGE_MIN)
+						visual_age = max(min(new_age, AGE_MAX),AGE_MIN)
 
 				if("metadata")
 					var/new_metadata = input(user, "Enter any information you'd like others to see, such as Roleplay-preferences:", "Game Preference" , metadata)  as message|null

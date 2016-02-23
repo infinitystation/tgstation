@@ -78,14 +78,14 @@ datum/species/human/spec_death(gibbed, mob/living/carbon/human/H)
 
 var/regex/lizard_hiss = new("s+", "g")
 var/regex/lizard_hiSS = new("S+", "g")
-var/regex/lizard_hicc = new("c+", "g")
-var/regex/lizard_hiCC = new("C+", "g")
+var/regex/lizard_hicc = new("ñ+", "g")
+var/regex/lizard_hiCC = new("Ñ+", "g")
 /datum/species/lizard/handle_speech(message)
 	if(copytext(message, 1, 2) != "*")
 		message = lizard_hiss.Replace(message, "sss")
 		message = lizard_hiSS.Replace(message, "SSS")
-		message = lizard_hicc.Replace(message, "ccc")
-		message = lizard_hiCC.Replace(message, "CCC")
+		message = lizard_hicc.Replace(message, "ñññ")
+		message = lizard_hiCC.Replace(message, "ÑÑÑ")
 	return message
 
 //I wag in death
