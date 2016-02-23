@@ -1,9 +1,52 @@
 ///Areas///
 
+/area/security/shower
+	name = "Shower"
+	icon_state = "red"
+
+/area/CP
+	name = "Control Post"
+	has_gravity = 1
+	valid_territory = 0
+	icon_state = "green"
+
+
+/area/CP/library
+	name = "Library"
+	icon_state = "library"
+
+
+/area/CP/arrival
+	name = "Arrival area"
+
+/area/CP/cafeteria
+	name = "Cafeteria"
+	icon_state = "dark"
+
+/area/CP/CP1
+	name = "Control Point One"
+	icon_state = "yellow"
+
+/area/CP/CP2
+	name = "Control Point Two"
+	icon_state = "yellow"
+
+/area/CP/shuttle
+	name = "CP Shuttle"
+	requires_power = 0
+	icon_state = "shuttle"
+
+/area/CP/shuttle/pod
+	name = "Remote Controlled pod one"
+
+/area/CP/shuttle/pod/two
+	name = "Remote Controlled pod two"
+
+
 /area/mercenaries
 	name = "Mercenariess area"
 	icon_state = "red"
-	requires_power = 0
+	requires_power = 1
 	has_gravity = 1
 
 /area/mercenaries/shuttle
@@ -12,8 +55,8 @@
 /area/mercenaries/base
 	name = "Mercenariess base"
 
-/area/mercenaries/base
-	name = "Mercenariess base"
+/area/mercenaries/base/storage
+	name = "Storage"
 
 /area/mercenaries/base/hypersleep_room
 	name = "Hypersleep room"
@@ -21,8 +64,8 @@
 /area/mercenaries/base/coridor_1
 	name = "Mercenariess area"
 
-/area/mercenaries/base/coridor_2
-	name = "Mercenariess area"
+/area/mercenaries/base/meeting_room
+	name = "Meeting room"
 
 /area/mercenaries/base/coridor_3
 	name = "Mercenariess area"

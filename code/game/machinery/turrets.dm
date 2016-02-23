@@ -17,6 +17,7 @@
 	var/fire_sound = 'sound/weapons/Gunshot.ogg'
 	var/atom/base = null //where do to range calculations, firing projectiles, etc. from. allows for turrets inside of things to work
 	icon = 'icons/obj/turrets.dmi'
+	var/active_state = "Bullet"
 
 /obj/machinery/gun_turret/New()
 	..()
