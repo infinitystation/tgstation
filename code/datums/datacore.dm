@@ -254,6 +254,7 @@ var/record_id_num = 1001
 		L.fields["name"]		= H.real_name
 		L.fields["rank"] 		= H.mind.assigned_role
 		L.fields["age"]			= H.age
+		L.fields["visual_age"]	= H.visual_age
 		L.fields["sex"]			= H.gender
 		L.fields["blood_type"]	= H.dna.blood_type
 		L.fields["b_dna"]		= H.dna.unique_enzymes

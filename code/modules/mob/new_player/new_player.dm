@@ -425,15 +425,6 @@
 
 	new_character.name = real_name
 
-	if(client.prefs.be_blinded == 1)
-		new_character.disabilities |= BLIND
-
-	if(client.prefs.be_nearsight == 1)
-		new_character.disabilities |= NEARSIGHT
-
-	if(client.prefs.be_deaf == 1)
-		new_character.disabilities |= DEAF
-
 	new_character.key = key		//Manually transfer the key to log them in
 	new_character.stopLobbySound()
 

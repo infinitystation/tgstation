@@ -124,7 +124,7 @@
 	return examine(user)
 
 //Start growing a human clone in the pod!
-/obj/machinery/clonepod/proc/growclone(ckey, clonename, ui, se, mindref, datum/species/mrace, list/features, factions)
+/obj/machinery/clonepod/proc/growclone(ckey, clonename, ui, se, mindref, datum/species/mrace, list/features, factions, age, visual_age)
 	if(panel_open)
 		return 0
 	if(mess || attempting)
@@ -189,6 +189,9 @@
 		H.set_cloned_appearance()
 
 		H.suiciding = 0
+
+		H.age = age
+		H.visual_age = visual_age
 	src.attempting = 0
 	return 1
 

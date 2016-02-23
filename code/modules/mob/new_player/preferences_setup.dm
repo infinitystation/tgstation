@@ -19,6 +19,7 @@
 	backbag = 1
 	features = random_features()
 	age = rand(AGE_MIN,AGE_MAX)
+	visual_age = age
 
 /datum/preferences/proc/update_preview_icon()
 	// Silicons only need a very basic preview since there is no customization for them.

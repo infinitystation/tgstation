@@ -286,22 +286,12 @@
 	if(!skipface && is_thrall(src) && in_range(user,src))
 		msg += "[t_him] особенности, кажетс&#255;, неестественно и жестко искажены.\n"
 
-	if(!skipface)
-		switch(age)
-			if(15 to 19)
-				msg += "[t_He] выгл&#255;дит на 15-19 лет. \n"
-			if(20 to 29)
-				msg += "[t_He] выгл&#255;дит на 20-29 лет. \n"
-			if(30 to 40)
-				msg += "[t_He] выгл&#255;дит на 30-40 лет. \n"
-			if(41 to 50)
-				msg += "[t_He] выгл&#255;дит на 41-50 лет. \n"
-			if(51 to 65)
-				msg += "[t_He] выгл&#255;дит на 51-65 лет. \n"
-			if(66 to 80)
-				msg += "[t_He] выгл&#255;дит на 66-80 лет. \n"
-			if(81 to INFINITY)
-				msg += "Это пожилой человек, возраст которого вы не можете определить. \n"
+	temp = getFireLoss() + getBruteLoss()
+	if(!skipface && temp<80 && !(disabilities & HUSK) && !is_thrall(src))
+		if(visual_age < AGE_MAX-10)
+			msg += "[t_He] выгл&#255;дит на [visual_age-2]-[visual_age+2] лет.\n"
+		else
+			msg += "Вы не можете определить [t_his] возраст.\n"
 
 	if(istype(user, /mob/living/carbon/human))
 		var/mob/living/carbon/human/H = user
