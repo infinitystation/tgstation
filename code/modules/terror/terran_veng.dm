@@ -41,3 +41,20 @@
 /obj/item/weapon/circuitboard/remote_controlled_pod/two
 	name = "circuit board (Remote Controlled Pod Two)"
 	build_path = /obj/machinery/computer/shuttle/remote_controlled_pod/two
+
+/obj/item/device/shadowcloak/ops
+	name = "stealth ops cloaker belt"
+	icon_state = "assaultbelt"
+	item_state = "assault"
+	slot_flags = SLOT_BELT
+	attack_verb = list("whipped", "lashed", "disciplined")
+
+/obj/item/weapon/melee/chainofcommand/whip
+	name = "whip"
+	desc = "Mrrr..."
+	icon_state = "chain"
+	origin_tech = "combat=1"
+	needs_permit = 0
+	force = 0
+	hitsound = "sound/weapons/punch2.ogg"
+	attack_verb = list("lashed", "disciplined")
