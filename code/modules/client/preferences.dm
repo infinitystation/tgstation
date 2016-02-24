@@ -813,6 +813,7 @@ var/list/preferences_datums = list()
 					var/new_age = input(user, "Choose your character's age:\n([AGE_MIN]-[AGE_MAX])", "Character Preference") as num|null
 					if(new_age)
 						age = max(min( round(text2num(new_age)), AGE_MAX),AGE_MIN)
+						visual_age = age
 
 				if("visual_age")
 					var/new_age = input(user, "Choose your character's visual age:\n([AGE_MIN]-[AGE_MAX])", "Character Preference") as num|null
