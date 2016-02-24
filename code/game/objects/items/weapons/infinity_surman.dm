@@ -33,3 +33,18 @@
 	lefthand_file = 'icons/mob/inhands/infinity_obj_left.dmi'
 	righthand_file = 'icons/mob/inhands/infinity_obj_right.dmi'
 	attack_verb = list("punched", "hit")
+
+//Спрайты Нумари
+
+/obj/item/weapon/blue_devil
+	name = "blue devil"
+	desc = "Blue fire katana."
+	icon = 'icons/obj/infinity_object.dmi'
+	icon_state = "blue_devil"
+	item_state = "blue_devil"
+	force = 60
+	throwforce = 55
+	embedded_impact_pain_multiplier = 4
+	w_class = 2
+	lefthand_file = 'icons/mob/inhands/infinity_obj_left.dmi'
+	righthand_file = 'icons/mob/inhands/infinity_obj_right.dmi'
