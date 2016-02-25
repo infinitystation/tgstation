@@ -48,3 +48,14 @@
 	w_class = 2
 	lefthand_file = 'icons/mob/inhands/infinity_obj_left.dmi'
 	righthand_file = 'icons/mob/inhands/infinity_obj_right.dmi'
+
+/obj/item/weapon/storage/sheath/blue_devil
+	name = "sheath"
+	desc = "Sheath, what can hold all power of blue devil katana."
+	icon = 'icons/obj/infinity_object.dmi'
+	icon_state = "devil-closed"
+	slot_flags = SLOT_BELT | SLOT_BACK
+	attack_verb = "lashed"
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	can_hold = list(/obj/item/weapon/blue_devil)
+	storage_slots = 1
