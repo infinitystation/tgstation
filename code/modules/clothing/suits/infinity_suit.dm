@@ -16,7 +16,7 @@
 	icon = 'icons/obj/clothing/infinity_work.dmi'
 	worn_icon = 'icons/mob/infinity_work.dmi'
 	hooded = 1
-	action_button_name = "Toggle Hood"
+	togglename = "Toggle Hood"
 	hoodtype = /obj/item/clothing/head/blackhoody
 
 /obj/item/clothing/head/blackhoody
@@ -102,7 +102,7 @@
 	icon = 'icons/obj/clothing/infinity_work.dmi'
 	worn_icon = 'icons/mob/infinity_work.dmi'
 	hooded = 1
-	action_button_name = "Toggle Hood"
+	togglename = "Toggle Hood"
 	hoodtype = /obj/item/clothing/head/whitehoody
 
 /obj/item/clothing/head/whitehoody

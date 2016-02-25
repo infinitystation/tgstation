@@ -117,7 +117,7 @@ var/next_mob_id = 0
 		if(!M.client)
 			continue
 		var/msg = message
-		if(M.see_invisible<invisibility || T != loc)//if src is inside something or invisible to us,
+		if(M.see_invisible<invisibility || (T != loc && T != src))//if src is invisible to us or is inside something (and isn't a turf),
 			if(blind_message) // then people see blind message if there is one, otherwise nothing.
 				msg = blind_message
 			else
@@ -739,6 +739,7 @@ var/next_mob_id = 0
 		if(layer == MOB_LAYER - 0.2)
 			layer = initial(layer)
 	update_transform()
+	update_action_buttons_icon()
 	lying_prev = lying
 	return canmove
 
@@ -918,6 +919,10 @@ var/next_mob_id = 0
 /mob/proc/setEarDamage()
 	return
 
+/mob/proc/AddSpell(obj/effect/proc_holder/spell/S)
+	mob_spell_list += S
+	S.action.Grant(src)
+
 /mob/verb/update_flavor_text()
 	set src in usr
 	if(usr != src)
@@ -946,19 +951,6 @@ var/next_mob_id = 0
 			return "<span class='notice'>[msg]</span>"
 		else
 			return "<span class='notice'>[copytext(msg, 1, 37)]... <a href=?src=\ref[usr];flavor_more=\ref[src]>More...</a></span>"
-
-/mob/proc/AddSpell(obj/effect/proc_holder/spell/spell)
-	mob_spell_list += spell
-	if(!spell.action)
-		spell.action = new/datum/action/spell_action
-		spell.action.target = spell
-		spell.action.name = spell.name
-		spell.action.button_icon = spell.action_icon
-		spell.action.button_icon_state = spell.action_icon_state
-		spell.action.background_icon_state = spell.action_background_icon_state
-	if(isliving(src))
-		spell.action.Grant(src)
-	return
 
 //override to avoid rotating pixel_xy on mobs
 /mob/shuttleRotate(rotation)

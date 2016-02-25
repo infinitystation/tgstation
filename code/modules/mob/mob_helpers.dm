@@ -132,7 +132,7 @@
 		newphrase+="[newletter]";counter-=1
 	newphrase = copytext(sanitize(newphrase), 1, MAX_MESSAGE_LEN)
 	return newphrase
-
+	
 /proc/stutter(n)
 	var/te = html_decode(n)
 	var/t = ""//placed before the message. Not really sure what it's for.

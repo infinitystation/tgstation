@@ -133,7 +133,7 @@
 	new /obj/item/weapon/pickaxe/drill(src)
 	new /obj/item/weapon/storage/toolbox/mechanical(src)
 	new /obj/item/clothing/under/rank/chaplain(src)
-	new /obj/item/clothing/shoes/sneakers/syndigaloshes(src)
+	new /obj/item/clothing/shoes/chameleon(src)
 	new /obj/item/weapon/gun/energy/gun/nuclear(src)
 	new /obj/item/weapon/gun/energy/gun/nuclear(src)
 	new /obj/item/weapon/pickaxe/drill(src)
@@ -152,7 +152,7 @@
 	..()
 	new /obj/item/weapon/gun/energy/kinetic_accelerator/crossbow(src)
 	new /obj/item/weapon/reagent_containers/hypospray/combat/nanites(src)
-	new /obj/item/clothing/mask/gas/voice(src)
+	new /obj/item/clothing/mask/chameleon(src)
 
 /obj/structure/closet/thunderdome
 	name = "\improper Thunderdome closet"

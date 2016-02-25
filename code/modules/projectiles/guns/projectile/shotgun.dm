@@ -145,6 +145,7 @@
 	pump()
 
 /obj/item/weapon/gun/projectile/shotgun/boltaction/enchanted/dropped()
+	..()
 	guns_left = 0
 
 /obj/item/weapon/gun/projectile/shotgun/boltaction/enchanted/shoot_live_shot(mob/living/user as mob|obj, pointblank = 0, mob/pbtarget = null, message = 1)
@@ -323,8 +324,8 @@
 	burst_size = 1
 	fire_delay = 0
 	pin = /obj/item/device/firing_pin/implant/pindicate
-	action_button_name = null
 	can_pull_pin = 0
+	actions_types = list()
 
 /obj/item/weapon/gun/projectile/automatic/shotgun/bulldog/unrestricted
 	pin = /obj/item/device/firing_pin
