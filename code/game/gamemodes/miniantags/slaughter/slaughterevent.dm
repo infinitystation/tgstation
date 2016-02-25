@@ -2,8 +2,8 @@
 /datum/round_event_control/slaughter
 	name = "Spawn Slaughter Demon"
 	typepath = /datum/round_event/slaughter
-	weight = 1 //Very rare
-	max_occurrences = 1
+	weight = 0 //Very rare
+	max_occurrences = 0
 	earliest_start = 6000 //Let a couple people die first
 
 
