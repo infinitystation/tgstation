@@ -4,6 +4,13 @@
 	name = "Shower"
 	icon_state = "red"
 
+/area/mine/bravo
+	name = "Post Bravo"
+
+/area/engine/break_room
+	name = "Break Room"
+	icon_state = "yellow"
+
 /area/CP
 	name = "Control Post"
 	has_gravity = 1
