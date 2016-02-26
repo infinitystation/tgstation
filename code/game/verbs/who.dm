@@ -9,7 +9,6 @@
 	if(holder)
 		if(check_rights(R_ADMIN,0))//If they have +ADMIN, show hidden admins, player IC names and IC status
 			log_admin("[key_name(usr)] checked advanced who in-round")
-			message_admins("[key_name(usr)] checked advanced who in-round")
 			for(var/client/C in clients)
 				var/entry = "\t[C.key]"
 				if(C.holder && C.holder.fakekey)
