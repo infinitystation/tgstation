@@ -1179,7 +1179,7 @@
 			H.failed_last_breath = 0
 			if(H.getOxyLoss())
 				H.adjustOxyLoss(-5)
-			gas_breathed = breath_gases["o2"][MOLES]/6
+			gas_breathed = breath_gases["o2"][MOLES]
 			H.clear_alert("oxy")
 
 	//Exhale
@@ -1216,7 +1216,7 @@
 		else
 			H.failed_last_breath = 0
 			H.adjustOxyLoss(-5)
-			gas_breathed = breath_gases["co2"][MOLES]/6
+			gas_breathed = breath_gases["co2"][MOLES]
 			H.clear_alert("not_enough_co2")
 
 	//Exhale
@@ -1246,7 +1246,7 @@
 		else
 			H.failed_last_breath = 0
 			H.adjustOxyLoss(-5)
-			gas_breathed = breath_gases["plasma"][MOLES]/6
+			gas_breathed = breath_gases["plasma"][MOLES]
 			H.clear_alert("not_enough_tox")
 
 	//Exhale
