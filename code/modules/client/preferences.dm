@@ -1286,10 +1286,9 @@ var/list/preferences_datums = list()
 	if(be_blinded == 1)
 		character.disabilities |= BLIND
 	if(be_nearsight == 1)
-		character.disabilities |= NEARSIGHT
+		character.become_nearsighted()
 	if(be_deaf == 1)
 		character.disabilities |= DEAF
-	character.handle_disabilities()
 
 	character.flavor_text = sanitize_a0(flavor_text)
 	character.sec_imp_notes = sec_imp_notes
