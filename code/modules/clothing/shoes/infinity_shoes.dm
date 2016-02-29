@@ -33,3 +33,24 @@
 	icon_state = "black_open_shoes"
 	icon = 'icons/obj/clothing/infinity_work.dmi'
 	worn_icon = 'icons/mob/infinity_work.dmi'
+
+/obj/item/clothing/shoes/geta
+	name = "black geta"
+	desc = "A pair of gets. Some japanese fashion."
+	icon_state = "black_geta"
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'
+
+/obj/item/clothing/shoes/geta/red
+	name = "red geta"
+	desc = "A pair of red gets. With a small heel."
+	icon_state = "red_geta"
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'
+
+/obj/item/clothing/shoes/brand3
+	name = "Agressive black shoes"
+	desc = "Stylish black shoes. Anyooh production."
+	icon_state = "brand_shoes3"
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'

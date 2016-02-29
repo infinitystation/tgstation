@@ -65,6 +65,13 @@
 	return
 
 
+/obj/item/device/multitool/cyborg
+	name = "multitool"
+	desc = "Optimised and stripped-down version of a regular multitool."
+	icon = 'icons/obj/items_cyborg.dmi'
+	toolspeed = 2
+
+
 //Multimeter
 /obj/item/device/multitool/multimeter
 	name = "multimeter"

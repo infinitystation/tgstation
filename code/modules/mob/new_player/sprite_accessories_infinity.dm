@@ -58,6 +58,11 @@
 	icon = 'icons/mob/infinity_work.dmi'
 	gender = FEMALE
 
+/datum/sprite_accessory/facial_hair/broken
+	name = "Broken"
+	icon_state = "broken"
+	icon = 'icons/mob/more_hairs.dmi'
+
 /datum/sprite_accessory/hair/dads
 	name = "Dads"
 	icon_state = "dads"

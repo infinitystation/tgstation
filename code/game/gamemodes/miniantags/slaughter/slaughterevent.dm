@@ -4,7 +4,7 @@
 	typepath = /datum/round_event/slaughter
 	weight = 0 //Very rare
 	max_occurrences = 0
-	earliest_start = 6000 //Let a couple people die first
+	earliest_start = 36000 //1 hour
 
 
 
