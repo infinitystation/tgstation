@@ -8,7 +8,7 @@
 	name = "Post Bravo"
 
 /area/engine/break_room
-	name = "Break Room"
+	name = "Engineering Break Room"
 	icon_state = "yellow"
 
 /area/CP

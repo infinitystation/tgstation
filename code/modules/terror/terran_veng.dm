@@ -10,11 +10,34 @@
 	premium = list(/obj/item/weapon/gun/projectile/automatic/shotgun/bulldog/unrestricted = 2,/obj/item/ammo_box/magazine/m12g = 4)
 	contraband = list(/obj/item/weapon/gun/projectile/revolver/mateba = 1)
 
+
+//Eat-I-Mat//
+
+/obj/machinery/vending/eatimat
+	name = "\improper Eat-I-Mat"
+	desc = "Eat this."
+	icon_state = "boozeomat"
+	icon_deny = "boozeomat-deny"
+	products = list(/obj/item/weapon/reagent_containers/food/snacks/beans = 10,/obj/item/weapon/reagent_containers/food/snacks/burger = 20, /obj/item/weapon/reagent_containers/food/snacks/burrito = 20, /obj/item/weapon/reagent_containers/food/snacks/meatballspaghetti = 10,/obj/item/weapon/reagent_containers/food/snacks/meat/steak = 20,/obj/item/weapon/reagent_containers/food/snacks/boiledspaghetti = 15,/obj/item/weapon/reagent_containers/food/snacks/cracker = 20)
+	vend_delay = 20
+	product_slogans = "I'm your new cook!"
+	product_ads = "Time for dinner!"
+	req_access_txt = "0"
+	refill_canister = /obj/item/weapon/vending_refill/eatimat
+
+/obj/item/weapon/vending_refill/eatimat
+	machine_name = "Eat-I-Mat"
+	icon_state = "refill_booze"
+	charges = list(50, 0, 0)
+	init_charges = list(20, 4, 0)
+
+//Eat-I-Mat//
+
 /obj/machinery/light/small/floor
 	icon_state = "floor1"
 	base_state = "floor"
 	fitting = "floor"
-	brightness = 4
+	brightness = 5
 	layer = 2
 	desc = "A small floor lighting fixture."
 	light_type = /obj/item/weapon/light/bulb

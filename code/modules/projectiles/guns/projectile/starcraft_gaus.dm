@@ -1,5 +1,5 @@
 /obj/item/weapon/gun/projectile/automatic/gause
-	name = "Gause rifle"
+	name = "Gause rifle C-14"
 	desc = "'я уже заждался!'"
 	icon_state = "gause"
 	item_state = "gause"
@@ -15,8 +15,9 @@
 	burst_size = 4
 	fire_delay = 1
 
-/obj/item/ammo_casing/gause_spine
+/obj/item/ammo_casing/caseless/gause_spine
 	desc = "A 0.85mm casing."
 	caliber = "0.85"
-	icon_state = "s-casing"
+	icon_state = "s-casing-live"
 	projectile_type = /obj/item/projectile/bullet/gause_spine
+
