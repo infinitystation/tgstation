@@ -49,7 +49,7 @@
 /obj/item/weapon/soap/Crossed(AM as mob|obj)
 	if (istype(AM, /mob/living/carbon))
 		var/mob/living/carbon/M = AM
-		if(prob(Clamp(1, 50/cleanspeed, 5)))
+		if(prob(Clamp(50/cleanspeed, 1, 10)))
 			M.slip(4, 2, src)
 
 /obj/item/weapon/soap/afterattack(atom/target, mob/user, proximity)
