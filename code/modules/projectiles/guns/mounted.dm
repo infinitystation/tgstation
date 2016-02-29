@@ -7,6 +7,8 @@
 	force = 5
 	selfcharge = 1
 	can_flashlight = 0
+	can_pull_pin = 0
+	cell_removing = 0
 
 /obj/item/weapon/gun/energy/gun/advtaser/mounted/dropped()//if somebody manages to drop this somehow...
 	..()
@@ -20,6 +22,8 @@
 	item_state = "armcannonlase"
 	force = 5
 	selfcharge = 1
+	can_pull_pin = 0
+	cell_removing = 0
 
 /obj/item/weapon/gun/energy/laser/mounted/dropped()
 	..()

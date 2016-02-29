@@ -313,6 +313,7 @@
 	ammo_type = list(/obj/item/ammo_casing/energy/c3dbullet)
 	can_charge = 0
 	cell_removing = 0
+	can_pull_pin = 0
 
 /obj/item/weapon/gun/energy/printer/update_icon()
 	return
