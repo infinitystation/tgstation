@@ -46,3 +46,17 @@
 	premium = list(/obj/item/clothing/under/snow_maiden=1, /obj/item/clothing/under/snow_maiden/blue=1, /obj/item/clothing/under/candy_dress=2, /obj/item/clothing/under/bunny_suit=2,
 		/obj/item/clothing/suit/kimono/black=1, /obj/item/clothing/suit/kimono=1, /obj/item/clothing/suit/kimono/blue=1, /obj/item/clothing/head/lify_hat=1, /obj/item/clothing/under/lify=1,/obj/item/clothing/suit/kimono/white=1,
 		/obj/item/clothing/suit/kimono/short_red=1)
+
+
+/obj/structure/reagent_dispensers/cognackeg
+	name = "cognac keg"
+	desc = "A cognac keg"
+	icon = 'icons/obj/objects.dmi'
+	icon_state = "beertankTEMP"
+
+/obj/structure/reagent_dispensers/cognackeg/New()
+	..()
+	reagents.add_reagent("cognac",1000)
+
+/obj/structure/reagent_dispensers/cognackeg/blob_act()
+	explosion(src.loc,0,3,5,7,10)
