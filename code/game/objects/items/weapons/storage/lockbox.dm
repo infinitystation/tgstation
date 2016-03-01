@@ -116,3 +116,12 @@
 	for(var/i in 1 to 3)
 		new /obj/item/clothing/tie/medal/conduct(src)
 	new /obj/item/clothing/tie/medal/gold/captain(src)
+
+/obj/item/weapon/storage/lockbox/energysword
+	name = "lockbox(Enqual Sword)"
+	req_access = list(access_security)
+
+/obj/item/weapon/storage/lockbox/energysword/New()
+	..()
+	for(var/i in 1 to 1)
+		new /obj/item/weapon/melee/energy/energysword(src)
