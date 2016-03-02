@@ -370,6 +370,9 @@
 	else
 		clear_alert("drunk")
 
+	if(cultslurring)
+		cultslurring = max(cultslurring-1, 0)
+
 	if(silent)
 		silent = max(silent-1, 0)
 
