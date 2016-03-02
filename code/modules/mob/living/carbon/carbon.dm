@@ -70,7 +70,16 @@
 						stomach_contents.Remove(A)
 					src.gib()
 
-/mob/living/carbon/gib(animation = 1)
+/mob/living/carbon/gib(animation = 1, var/no_brain = 0)
+	death(1)
+	for(var/obj/item/organ/internal/I in internal_organs)
+		if(no_brain && istype(I, /obj/item/organ/internal/brain))
+			continue
+		if(I)
+			I.Remove(src)
+			I.loc = get_turf(src)
+			I.throw_at_fast(get_edge_target_turf(src,pick(alldirs)),rand(1,3),5)
+
 	for(var/mob/M in src)
 		if(M in stomach_contents)
 			stomach_contents.Remove(M)
@@ -323,9 +332,10 @@
 					if(internal)
 						internal = null
 						update_internals_hud_icon(0)
-					else if(ITEM && istype(ITEM, /obj/item/weapon/tank) && wear_mask && (wear_mask.flags & MASKINTERNALS))
-						internal = ITEM
-						update_internals_hud_icon(1)
+					else if(ITEM && istype(ITEM, /obj/item/weapon/tank))
+						if((wear_mask && (wear_mask.flags & MASKINTERNALS)) || getorganslot("breathing_tube"))
+							internal = ITEM
+							update_internals_hud_icon(1)
 
 					visible_message("<span class='danger'>[usr] [internal ? "opens" : "closes"] the valve on [src]'s [ITEM].</span>", \
 									"<span class='userdanger'>[usr] [internal ? "opens" : "closes"] the valve on [src]'s [ITEM].</span>")
@@ -802,13 +812,23 @@ var/const/GALOSHES_DONT_HELP = 4
 
 		for(var/datum/disease/D in viruses)
 			D.cure(0)
-		if(dna)
-			for(var/datum/mutation/human/HM in dna.mutations)
-				if(HM.quality != POSITIVE)
-					dna.remove_mutation(HM.name)
 	..()
 
 /mob/living/carbon/can_be_revived()
 	. = ..()
 	if(!getorgan(/obj/item/organ/internal/brain))
 		return 0
+
+/mob/living/carbon/harvest(mob/living/user)
+	if(qdeleted(src))
+		return
+	var/organs_amt = 0
+	for(var/obj/item/organ/internal/O in internal_organs)
+		if(prob(50))
+			organs_amt++
+			O.Remove(src)
+			O.loc = get_turf(src)
+	if(organs_amt)
+		user << "<span class='notice'>You retrieve some of [src]\'s internal organs!</span>"
+
+	..()

@@ -170,3 +170,32 @@
 	item_state = "w_suit"
 	worn_icon = 'icons/mob/infinity_work.dmi'
 	icon = 'icons/obj/clothing/infinity_work.dmi'
+
+/obj/item/clothing/suit/pullover
+	name = "pullover"
+	desc = "Soft and comfortable pullover. Just better than what your grandmother sewed."
+	icon_state = "pullover"
+	item_color = "pullover"
+	item_state = "w_suit"
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+
+/obj/item/clothing/suit/kimono/white
+	name = "white kimono"
+	desc = "Elegant white kimono."
+	icon_state = "white_kimono"
+	item_state = "w_suit"
+
+/obj/item/clothing/suit/kimono/short_red
+	name = "short kimono"
+	desc = "Elegant short kimono."
+	icon_state = "red_short_kimono"
+	item_state = "r_suit"
+
+/obj/item/clothing/suit/long_coat
+	name = "long suit jacket"
+	desc = "Just like the usual suit jacket, but longer."
+	icon_state = "long_coat"
+	item_state = "bl_suit"
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon = 'icons/obj/clothing/infinity_work.dmi'
