@@ -16,8 +16,7 @@
 /obj/machinery/vending/eatimat
 	name = "\improper Eat-I-Mat"
 	desc = "Eat this."
-	icon_state = "boozeomat"
-	icon_deny = "boozeomat-deny"
+	icon_state = "liberationstation"
 	products = list(/obj/item/weapon/reagent_containers/food/snacks/beans = 10,/obj/item/weapon/reagent_containers/food/snacks/burger = 20, /obj/item/weapon/reagent_containers/food/snacks/burrito = 20, /obj/item/weapon/reagent_containers/food/snacks/meatballspaghetti = 10,/obj/item/weapon/reagent_containers/food/snacks/meat/steak = 20,/obj/item/weapon/reagent_containers/food/snacks/boiledspaghetti = 15,/obj/item/weapon/reagent_containers/food/snacks/cracker = 20)
 	vend_delay = 20
 	product_slogans = "I'm your new cook!"
@@ -80,4 +79,3 @@
 	needs_permit = 0
 	force = 0
 	hitsound = "sound/weapons/punch2.ogg"
-	attack_verb = list("lashed", "disciplined")

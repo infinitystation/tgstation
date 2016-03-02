@@ -49,6 +49,9 @@
 /area/CP/shuttle/pod/two
 	name = "Remote Controlled pod two"
 
+/area/engine/rubicke
+	name = "Galerka"
+	icon_state = "yellow"
 
 /area/mercenaries
 	name = "Mercenariess area"
