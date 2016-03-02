@@ -278,7 +278,7 @@
 
 /obj/item/weapon/grown/bananapeel/Crossed(AM as mob|obj)
 	if (istype(AM, /mob/living/carbon))
-		if(prob(round(potency/25)))
+		if(prob(round(potency/15)))
 			var/mob/living/carbon/M = AM
 			var/stun = Clamp(potency / 10, 1, 10)
 			var/weaken = Clamp(potency / 20, 0.5, 5)

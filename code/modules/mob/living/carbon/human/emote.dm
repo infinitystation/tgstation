@@ -88,16 +88,16 @@
 			var/input = copytext(sanitize(input("Choose an emote to display.") as text|null),1,MAX_MESSAGE_LEN)
 			if (!input)
 				return
-			if(copytext(input,1,5) == "says")
+			if(copytext(input,1,8) == "говорит")
 				src << "<span class='danger'>Invalid emote.</span>"
 				return
-			else if(copytext(input,1,9) == "exclaims")
+			else if(copytext(input,1,11) == "восклицает")
 				src << "<span class='danger'>Invalid emote.</span>"
 				return
-			else if(copytext(input,1,6) == "yells")
+			else if(copytext(input,1,7) == "кричит")
 				src << "<span class='danger'>Invalid emote.</span>"
 				return
-			else if(copytext(input,1,5) == "asks")
+			else if(copytext(input,1,11) == "спрашивает")
 				src << "<span class='danger'>Invalid emote.</span>"
 				return
 			else
