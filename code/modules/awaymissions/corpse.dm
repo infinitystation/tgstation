@@ -49,7 +49,7 @@
 		M.faction = list(faction)
 	if(death)
 		M.death(1) //Kills the new mob
-	
+
 	M.adjustOxyLoss(oxy_damage)
 	M.adjustBruteLoss(brute_damage)
 	equip(M)
@@ -160,8 +160,8 @@
 //Non-human spawners
 
 /obj/effect/mob_spawn/AICorpse/create() //Creates a corrupted AI
-	var/A = locate(/mob/living/silicon/ai) in loc 
-	if(A) 
+	var/A = locate(/mob/living/silicon/ai) in loc
+	if(A)
 		return
 	var/L = new /datum/ai_laws/default/asimov
 	var/B = new /obj/item/device/mmi
@@ -219,62 +219,61 @@
 	id_job = "Operative"
 	id_access = "Syndicate"
 
-/obj/effect/landmark/corpse/trooper/bravo
+/obj/effect/mob_spawn/human/trooper/bravo
 	name = "UAC Trooper"
-	corpseuniform = /obj/item/clothing/under/pants/camo
-	corpsesuit = /obj/item/clothing/suit/armor/UACtrooperArmor
-	corpseshoes = /obj/item/clothing/shoes/combat/UACtrooperBoots
-	corpsegloves = /obj/item/clothing/gloves/combat
-	corpseradio = /obj/item/device/radio/headset
-	corpsemask = /obj/item/clothing/mask/gas
-	corpsehelmet = /obj/item/clothing/head/helmet/trooper
-	corpsepocket1 = /obj/item/ammo_box/magazine/a646
-	corpseid = 1
-	corpseidjob = "Bravo Squad"
-	corpseidaccess = "Syndicate"
+	uniform = /obj/item/clothing/under/pants/camo
+	suit = /obj/item/clothing/suit/armor/UACtrooperArmor
+	shoes = /obj/item/clothing/shoes/combat/UACtrooperBoots
+	gloves = /obj/item/clothing/gloves/combat
+	radio = /obj/item/device/radio/headset
+	mask = /obj/item/clothing/mask/gas
+	helmet = /obj/item/clothing/head/helmet/trooper
+	pocket1 = /obj/item/ammo_box/magazine/a646
+	has_id = 1
+	id_job = "Bravo Squad"
+	id_access = "Syndicate"
 
-/obj/effect/landmark/corpse/trooper/alpha
+/obj/effect/mob_spawn/human/trooper/alpha
 	name = "UAC Trooper"
-	corpseuniform = /obj/item/clothing/under/pants/camo
-	corpsesuit = /obj/item/clothing/suit/armor/UACtrooperArmor
-	corpseshoes = /obj/item/clothing/shoes/combat/UACtrooperBoots
-	corpsegloves = /obj/item/clothing/gloves/combat
-	corpseradio = /obj/item/device/radio/headset
-	corpsemask = /obj/item/clothing/mask/gas
-	corpsehelmet = /obj/item/clothing/head/helmet/trooper
-	corpsepocket1 = /obj/item/ammo_box/magazine/a646
-	corpseid = 1
-	corpseidjob = "Alpha Squad"
-	corpseidaccess = "Syndicate"
+	uniform = /obj/item/clothing/under/pants/camo
+	suit = /obj/item/clothing/suit/armor/UACtrooperArmor
+	shoes = /obj/item/clothing/shoes/combat/UACtrooperBoots
+	gloves = /obj/item/clothing/gloves/combat
+	radio = /obj/item/device/radio/headset
+	mask = /obj/item/clothing/mask/gas
+	helmet = /obj/item/clothing/head/helmet/trooper
+	pocket1 = /obj/item/ammo_box/magazine/a646
+	has_id = 1
+	id_job = "Alpha Squad"
+	id_access = "Syndicate"
 
-/obj/effect/landmark/corpse/guard
+/obj/effect/mob_spawn/human/guard
 	name = "Guard Soldier"
-	corpseuniform = /obj/item/clothing/under/syndicate/tacticool
-	corpsesuit = /obj/item/clothing/suit/armor/UACtrooperArmor
-	corpseshoes = /obj/item/clothing/shoes/jackboots
-	corpseradio = /obj/item/device/radio/headset
-	corpsehelmet = /obj/item/clothing/head/helmet/guard
+	uniform = /obj/item/clothing/under/syndicate/tacticool
+	suit = /obj/item/clothing/suit/armor/UACtrooperArmor
+	shoes = /obj/item/clothing/shoes/jackboots
+	radio = /obj/item/device/radio/headset
+	helmet = /obj/item/clothing/head/helmet/guard
 
-/obj/effect/landmark/corpse/guard/mask
+/obj/effect/mob_spawn/human/guard/mask
 	name = "Guard Soldier"
-	corpseuniform = /obj/item/clothing/under/syndicate/tacticool
-	corpsesuit = /obj/item/clothing/suit/armor/UACtrooperArmor
-	corpseshoes = /obj/item/clothing/shoes/jackboots
-	corpseradio = /obj/item/device/radio/headset
-	corpsemask = /obj/item/clothing/mask/gas/sechailer/swat
-	corpsehelmet = /obj/item/clothing/head/helmet/guard
+	uniform = /obj/item/clothing/under/syndicate/tacticool
+	suit = /obj/item/clothing/suit/armor/UACtrooperArmor
+	shoes = /obj/item/clothing/shoes/jackboots
+	radio = /obj/item/device/radio/headset
+	mask = /obj/item/clothing/mask/gas/sechailer/swat
+	helmet = /obj/item/clothing/head/helmet/guard
 
-/obj/effect/landmark/corpse/guard/PDF
+/obj/effect/mob_spawn/human/guard/PDF
 	name = "PDF Soldier"
-	corpseuniform = /obj/item/clothing/under/sec_corporate
-	corpsesuit = /obj/item/clothing/suit/armor/vest
-	corpseshoes = /obj/item/clothing/shoes/jackboots
-	corpseradio = /obj/item/device/radio/headset
-	corpsehelmet = /obj/item/clothing/head/helmet/riot
-	corpseid = 1
-	corpseidjob = "PDF private"
-	corpseidaccess = "Syndicate"
-///////////Civilians//////////////////////
+	uniform = /obj/item/clothing/under/sec_corporate
+	suit = /obj/item/clothing/suit/armor/vest
+	shoes = /obj/item/clothing/shoes/jackboots
+	radio = /obj/item/device/radio/headset
+	helmet = /obj/item/clothing/head/helmet/riot
+	has_id = 1
+	id_job = "PDF private"
+	id_access = "Syndicate"
 
 /obj/effect/mob_spawn/human/cook
 	name = "Cook"
@@ -288,13 +287,13 @@
 	id_job = "Cook"
 	id_access = "Cook"
 
-/obj/effect/landmark/corpse/civilian
+/obj/effect/mob_spawn/human/civilian
 	name = "Civilan"
-	corpseuniform = /obj/item/clothing/under/color/random
-	corpseshoes = /obj/item/clothing/shoes/sneakers/black
-	corpseid = 1
-	corpseidjob = "Civilan"
-	corpseidaccess = "assistant"
+	uniform = /obj/item/clothing/under/color/random
+	shoes = /obj/item/clothing/shoes/sneakers/black
+	has_id = 1
+	id_job = "Civilan"
+	id_access = "assistant"
 
 /obj/effect/mob_spawn/human/doctor
 	name = "Doctor"
