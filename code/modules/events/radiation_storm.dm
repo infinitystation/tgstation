@@ -56,4 +56,4 @@
 
 
 /datum/round_event/radiation_storm/end()
-	priority_announce("The radiation threat has passed. Please return to your workplaces.", "Anomaly Alert")
+	priority_announce("Радиация закончилась. Возвращайтесь на свои рабочие места.", "Аномальная тревога!")
