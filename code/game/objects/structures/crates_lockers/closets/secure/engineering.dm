@@ -19,7 +19,6 @@
 	new /obj/item/weapon/storage/box/permits(src)
 	new /obj/item/areaeditor/blueprints(src)
 	new /obj/item/weapon/airlock_painter(src)
-	new /obj/item/weapon/pipe_dispenser(src)
 	new /obj/item/weapon/rcd/loaded(src)
 	new /obj/item/weapon/holosign_creator/engineering(src)
 	new /obj/item/clothing/mask/gas(src)
@@ -29,6 +28,7 @@
 	new /obj/item/clothing/glasses/meson/engine(src)
 	new /obj/item/device/multitool/multimeter(src)
 	new /obj/item/weapon/door_remote/chief_engineer(src)
+	new /obj/item/weapon/pipe_dispenser(src)
 
 /obj/structure/closet/secure_closet/engineering_electrical
 	name = "electrical supplies locker"
