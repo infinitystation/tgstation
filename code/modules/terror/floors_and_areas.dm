@@ -7,6 +7,10 @@
 /area/mine/bravo
 	name = "Post Bravo"
 
+/area/mine/break_romm
+	name = "Mine station break room"
+	icon_state = "yellow"
+
 /area/engine/break_room
 	name = "Engineering Break Room"
 	icon_state = "yellow"
@@ -49,9 +53,9 @@
 /area/CP/shuttle/pod/two
 	name = "Remote Controlled pod two"
 
-/area/engine/rubicke
-	name = "Galerka"
-	icon_state = "yellow"
+/area/shuttle/NTcruiser
+	name = "Cruiser"
+	blob_allowed = 0 //Should go without saying, no blobs should take over centcom as a win condition.
 
 /area/mercenaries
 	name = "Mercenariess area"

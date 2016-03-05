@@ -79,3 +79,38 @@
 	needs_permit = 0
 	force = 0
 	hitsound = "sound/weapons/punch2.ogg"
+
+/obj/structure/chair/pews
+	name = "pews"
+	desc = "It looks comfy."
+	icon_state = "pews"
+	icon = 'icons/obj/infinity_object.dmi'
+	burn_state = FLAMMABLE
+	burntime = 40
+	buildstacktype = /obj/item/stack/sheet/mineral/wood
+	buildstackamount = 5
+	var/image/armrest = null
+	item_chair = null
+	can_buckle = 0
+
+/obj/structure/chair/comfy/New()
+	armrest = image("icons/obj/infinity_object.dmi", "pews_armrest")
+	armrest.layer = MOB_LAYER + 0.1
+
+	return ..()
+
+/obj/structure/chair/pews/post_buckle_mob(mob/living/M)
+	if(buckled_mob)
+		overlays += armrest
+	else
+		overlays -= armrest
+
+/obj/machinery/porta_turret/heavy
+	name = "heavy turret"
+	req_access = list(101)
+	emp_vunerable = 0
+	scan_range = 9
+	health = 150
+	installation = /obj/item/weapon/gun/energy/lasercannon
+	always_up = 1
+	faction = "neutral"
