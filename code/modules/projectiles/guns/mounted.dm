@@ -9,6 +9,7 @@
 	can_flashlight = 0
 	can_pull_pin = 0
 	cell_removing = 0
+	trigger_guard = TRIGGER_GUARD_ALLOW_ALL // Has no trigger at all, uses neural signals instead
 
 /obj/item/weapon/gun/energy/gun/advtaser/mounted/dropped()//if somebody manages to drop this somehow...
 	..()
@@ -24,6 +25,7 @@
 	selfcharge = 1
 	can_pull_pin = 0
 	cell_removing = 0
+	trigger_guard = TRIGGER_GUARD_ALLOW_ALL
 
 /obj/item/weapon/gun/energy/laser/mounted/dropped()
 	..()
