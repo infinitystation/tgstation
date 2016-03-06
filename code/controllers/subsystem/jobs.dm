@@ -43,8 +43,6 @@ var/datum/subsystem/job/SSjob
 
 
 /datum/subsystem/job/proc/Debug(text)
-	if(!Debug2)
-		return 0
 	job_debug.Add(text)
 	return 1
 
