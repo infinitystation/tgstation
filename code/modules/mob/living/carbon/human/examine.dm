@@ -201,7 +201,7 @@
 								foundghost = 0
 							break
 				if(!foundghost)
-					msg += " и [t_his] её душа отбыла"
+					msg += " и [t_his] душа отбыла"
 			msg += "...</span>\n"
 		else//Brain is gone, doesn't matter if they are AFK or present
 			msg += "<span class='deadsay'>Кажетс&#255, [t_his] мозг пропал...</span>\n"
