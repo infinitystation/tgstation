@@ -201,7 +201,7 @@
 								foundghost = 0
 							break
 				if(!foundghost)
-					msg += " и [t_his] её душа отбыла"
+					msg += " и [t_his] душа отбыла"
 			msg += "...</span>\n"
 		else//Brain is gone, doesn't matter if they are AFK or present
 			msg += "<span class='deadsay'>Кажетс&#255, [t_his] мозг пропал...</span>\n"
@@ -276,7 +276,7 @@
 			if(istype(src,/mob/living/carbon/human/interactive))
 				msg += "<span class='deadsay'>[t_He], видимо, болеет автоматизмом, [t_his] глаза потускнели и [t_his] рот слегка разинут.</span>\n"
 			else if(!key)
-				msg += "<span class='deadsay'>[t_He] страдает кататонией. Стрессы жизни в глубоком космосе доканали [t_him]. Спасение вр&#255;д ли поможет.</span>\n"
+				msg += "<span class='deadsay'>[t_He] страдает кататонией. Стрессы жизни в глубоком космосе доканали [t_his]. Спасение вр&#255;д ли поможет.</span>\n"
 			else if(!client)
 				msg += "[t_He] в апатии...\n"
 

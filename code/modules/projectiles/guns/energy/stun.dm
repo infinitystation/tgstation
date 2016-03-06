@@ -31,6 +31,8 @@
 	can_flashlight = 0
 	cell_removing = 0
 	can_charge = 0
+	cell_removing = 0
+	can_pull_pin = 0
 
 /obj/item/weapon/gun/energy/gun/advtaser/cyborg/newshot()
 	..()
@@ -48,6 +50,8 @@
 	name = "cyborg disabler"
 	desc = "An integrated disabler that draws from a cyborg's power cell. This weapon contains a limiter to prevent the cyborg's power cell from overheating."
 	can_charge = 0
+	cell_removing = 0
+	can_pull_pin = 0
 
 /obj/item/weapon/gun/energy/disabler/cyborg/newshot()
 	..()

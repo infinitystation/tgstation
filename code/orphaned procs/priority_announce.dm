@@ -42,6 +42,7 @@
 			P.info = text
 			C.messagetitle.Add("[title]")
 			C.messagetext.Add(text)
+			P.update_icon()
 
 /proc/minor_announce(message, title = "Attention:", alert)
 	if(!message)

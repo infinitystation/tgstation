@@ -5,9 +5,9 @@
 	worn_icon = 'icons/obj/starcraft.dmi'
 	icon_state = "helmet1"
 	armor = list(melee = 60, bullet = 50, laser = 60, energy = 40, bomb = 90, bio = 100, rad = 100)
-	flags_inv = HIDEFACE
-	permeability_coefficient = 0.01
 	max_heat_protection_temperature = FIRE_IMMUNITY_HELM_MAX_TEMP_PROTECT
+	flags_inv = 1009
+
 
 /obj/item/clothing/suit/space/hardsuit/space_adv/starcraft
 	name = "Power Armor"
@@ -20,8 +20,8 @@
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/space_adv/starcraft
 	slowdown = 2
 	w_class = 4
-	flags_inv = HIDEHAIR
 	max_heat_protection_temperature = FIRE_IMMUNITY_HELM_MAX_TEMP_PROTECT
+	flags_inv = 13
 
 /obj/item/clothing/head/helmet/space/hardsuit/space_adv/starcraft/red
 	name = "Power armor helmets"
@@ -44,4 +44,3 @@
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/space_adv/starcraft/red
 	slowdown = 2
 	w_class = 4
-	flags_inv = HIDEHAIR

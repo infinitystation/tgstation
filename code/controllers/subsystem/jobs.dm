@@ -43,9 +43,8 @@ var/datum/subsystem/job/SSjob
 
 
 /datum/subsystem/job/proc/Debug(text)
-	if(!Debug2)
-		return 0
 	job_debug.Add(text)
+	job_subsystem_debug << text
 	return 1
 
 
@@ -417,7 +416,7 @@ var/datum/subsystem/job/SSjob
 	for(var/i=equip_needed-5, i>0, i--)
 		if(secequipment.len)
 			var/spawnloc = secequipment[1]
-			new /obj/structure/closet/secure_closet/security(spawnloc)
+			new /obj/structure/closet/secure_closet/security/sec(spawnloc)
 			secequipment -= spawnloc
 		else //We ran out of spare locker spawns!
 			break

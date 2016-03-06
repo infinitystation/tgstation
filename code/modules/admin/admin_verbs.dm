@@ -69,8 +69,12 @@ var/list/admin_verbs_admin = list(
 	/client/proc/cmd_admin_local_narrate,	/*sends text to all mobs within view of atom*/
 	/client/proc/cmd_admin_create_centcom_report,
 	/client/proc/aooc,
+	/client/proc/cmd_change_command_name,
 	/client/proc/toggle_antag_hud, 	/*toggle display of the admin antag hud*/
-	/client/proc/toggle_AI_interact /*toggle admin ability to interact with machines as an AI*/
+	/client/proc/toggle_AI_interact, /*toggle admin ability to interact with machines as an AI*/
+	/client/proc/customiseSNPC, /* Customise any interactive crewmembers in the world */
+	/client/proc/resetSNPC, /* Resets any interactive crewmembers in the world */
+	/client/proc/toggleSNPC /* Toggles an npc's processing mode */
 	)
 var/list/admin_verbs_ban = list(
 	/client/proc/unban_panel,
@@ -198,6 +202,7 @@ var/list/admin_verbs_hideable = list(
 	/client/proc/cmd_admin_add_freeform_ai_law,
 	/client/proc/cmd_admin_add_random_ai_law,
 	/client/proc/cmd_admin_create_centcom_report,
+	/client/proc/cmd_change_command_name,
 	/client/proc/object_say,
 	/client/proc/toggle_random_events,
 	/client/proc/cmd_admin_add_random_ai_law,
@@ -469,7 +474,6 @@ var/list/admin_verbs_hideable = list(
 				mob.name = " "
 				mob.mouse_opacity = 0
 		log_admin("[key_name(usr)] has turned stealth mode [holder.fakekey ? "ON" : "OFF"]")
-		message_admins("[key_name_admin(usr)] has turned stealth mode [holder.fakekey ? "ON" : "OFF"]")
 	feedback_add_details("admin_verb","SM") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/drop_bomb()

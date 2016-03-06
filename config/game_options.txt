@@ -190,6 +190,9 @@ ALLOW_RANDOM_EVENTS
 ## Allow the AI job to be picked.
 ALLOW_AI
 
+### Secborg ###
+## Uncomment to prevent the secborg module from being chosen
+#DISABLE_SECBORG
 
 
 ### AWAY MISSIONS ###
@@ -268,7 +271,7 @@ ROUNDSTART_RACES human
 ROUNDSTART_RACES lizard
 ROUNDSTART_RACES tajaran
 #ROUNDSTART_RACES fly
-#ROUNDSTART_RACES plasmaman
+ROUNDSTART_RACES plasmaman
 #ROUNDSTART_RACES shadow
 #ROUNDSTART_RACES shadowling
 

@@ -23,9 +23,11 @@ var/global/list/map_transition_config = MAP_TRANSITION_CONFIG
 	var/date_string = time2text(world.realtime, "YYYY/MM-Month/DD-Day")
 	href_logfile = file("data/logs/[date_string] hrefs.htm")
 	diary = file("data/logs/[date_string].log")
+	job_subsystem_debug = file("data/logs/[date_string].log")
 	diaryofmeanpeople = file("data/logs/[date_string] Attack.log")
 	diary << "\n\nStarting up. [time2text(world.timeofday, "hh:mm.ss")]\n---------------------"
 	diaryofmeanpeople << "\n\nStarting up. [time2text(world.timeofday, "hh:mm.ss")]\n---------------------"
+	job_subsystem_debug << "\n\nStarting up. [time2text(world.timeofday, "hh:mm.ss")]\n---------------------"
 	changelog_hash = md5('html/changelog.html')					//used for telling if the changelog has changed recently
 
 	make_datum_references_lists()	//initialises global lists for referencing frequently used datums (so that we only ever do it once)
@@ -173,6 +175,26 @@ var/last_irc_status = 0
 		if(config.server)	//if you set a server location in config.txt, it sends you there instead of trying to reconnect to the same world address. -- NeoFite
 			C << link("byond://[config.server]")
 	..(0)
+
+var/inerror = 0
+/world/Error(var/exception/e)
+	//runtime while processing runtimes
+	if (inerror)
+		inerror = 0
+		return ..(e)
+	inerror = 1
+	//newline at start is because of the "runtime error" byond prints that can't be timestamped.
+	e.name = "\n\[[time2text(world.timeofday,"hh:mm:ss")]\][e.name]"
+
+	//this is done this way rather then replace text to pave the way for processing the runtime reports more thoroughly
+	//	(and because runtimes end with a newline, and we don't want to basically print an empty time stamp)
+	var/list/split = splittext(e.desc, "\n")
+	for (var/i in 1 to split.len)
+		if (split[i] != "")
+			split[i] = "\[[time2text(world.timeofday,"hh:mm:ss")]\][split[i]]"
+	e.desc = jointext(split, "\n")
+	inerror = 0
+	return ..(e)
 
 /world/proc/load_mode()
 	var/list/Lines = file2list("data/mode.txt")

@@ -300,3 +300,13 @@
 	materials = list(MAT_METAL = 2000, MAT_SILVER = 500)
 	build_path = /obj/item/weapon/suppressor
 	category = list("Weapons")
+
+/datum/design/energysword
+	name = "Enqual Sword"
+	desc = "This magnificent device emits light"
+	req_tech = list("combat" = 5, "materials" = 5, "powerstorage" = 5, "plasmatech" = 3, "bluespace" = 5, "magnets" = 6)
+	build_type = PROTOLATHE
+	materials = list(MAT_METAL = 6000, MAT_SILVER = 500, MAT_GLASS = 1000, MAT_PLASMA = 4000, MAT_GOLD = 500, MAT_DIAMOND = 3000, MAT_URANIUM = 1000)
+	build_path = /obj/item/weapon/storage/lockbox/energysword
+	category = list("Weapons")
+	access = list(access_armory)
