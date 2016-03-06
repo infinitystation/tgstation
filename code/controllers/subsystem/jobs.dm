@@ -44,6 +44,7 @@ var/datum/subsystem/job/SSjob
 
 /datum/subsystem/job/proc/Debug(text)
 	job_debug.Add(text)
+	job_subsystem_debug << text
 	return 1
 
 
