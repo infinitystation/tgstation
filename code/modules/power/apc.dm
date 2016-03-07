@@ -1077,7 +1077,7 @@
 
 /obj/machinery/power/apc/ex_act(severity, target)
 	..()
-	if(!gc_destroyed)
+	if(!qdeleted(src))
 		switch(severity)
 			if(2)
 				if(prob(50))
