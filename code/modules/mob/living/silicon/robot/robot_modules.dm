@@ -188,6 +188,7 @@
 	modules += new /obj/item/device/multitool/cyborg(src)
 	modules += new /obj/item/device/t_scanner(src)
 	modules += new /obj/item/device/analyzer(src)
+	modules += new /obj/item/device/assembly/signaler(src)
 
 	add_module(new /obj/item/stack/sheet/metal/cyborg())
 	add_module(new /obj/item/stack/sheet/glass/cyborg())

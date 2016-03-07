@@ -42,14 +42,14 @@ map TerrorStation
 	default
 endmap
 
-map voidefs
-	friendlyname Void Efficiency Station
+map HeavenStation
+	friendlyname Heaven Station
 endmap
 
 #map metastation
 #	friendlyname TG Meta Station
 #endmap
 
-map efficiencystation
-	friendlyname Efficiency Station
-endmap
+#map efficiencystation
+#	friendlyname TG Efficiency Station
+#endmap
