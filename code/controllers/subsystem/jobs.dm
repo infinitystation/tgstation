@@ -7,6 +7,7 @@ var/datum/subsystem/job/SSjob
 	var/list/occupations = list()		//List of all jobs
 	var/list/unassigned = list()		//Players who need jobs
 	var/list/job_debug = list()			//Debug info
+	var/assigned_len = 0				//Игроки с профой
 	var/initial_players_to_assign = 0 	//used for checking against population caps
 
 /datum/subsystem/job/New()
@@ -74,6 +75,7 @@ var/datum/subsystem/job/SSjob
 		Debug("Player: [player] is now Rank: [rank], JCP:[job.current_positions], JPL:[position_limit]")
 		player.mind.assigned_role = rank
 		unassigned -= player
+		assigned_len++
 		job.current_positions++
 		return 1
 	Debug("AR has failed, Player: [player], Rank: [rank]")
@@ -137,6 +139,7 @@ var/datum/subsystem/job/SSjob
 			Debug("GRJ Random job given, Player: [player], Job: [job]")
 			AssignRole(player, job.title)
 			unassigned -= player
+			assigned_len++
 			break
 
 /datum/subsystem/job/proc/ResetOccupations()
@@ -146,6 +149,7 @@ var/datum/subsystem/job/SSjob
 			player.mind.special_role = null
 	SetupOccupations()
 	unassigned = list()
+	assigned_len = 0
 	return
 
 
@@ -209,7 +213,7 @@ var/datum/subsystem/job/SSjob
  *  fills var "assigned_role" for all ready players.
  *  This proc must not have any side effect besides of modifying "assigned_role".
  **/
-/datum/subsystem/job/proc/DivideOccupations()
+/datum/subsystem/job/proc/DivideOccupations(required_players)
 	//Setup new player list and get the jobs list
 	Debug("Running DO")
 
@@ -315,16 +319,17 @@ var/datum/subsystem/job/SSjob
 						Debug("DO pass, Player: [player], Level:[level], Job:[job.title]")
 						AssignRole(player, job.title)
 						unassigned -= player
+						assigned_len++
 						break
 
 	// Hand out random jobs to the people who didn't get any in the last check
 	// Also makes sure that they got their preference correct
-	for(var/mob/new_player/player in unassigned)
+	/* for(var/mob/new_player/player in unassigned)
 		if(PopcapReached())
 			RejectPlayer(player)
 		else if(jobban_isbanned(player, "Assistant"))
 			GiveRandomJob(player) //you get to roll for random before everyone else just to be sure you don't get assistant. you're so speshul
-
+	*/// Рандомные профы тем, кто готов к рандому
 	for(var/mob/new_player/player in unassigned)
 		if(PopcapReached())
 			RejectPlayer(player)
@@ -341,7 +346,11 @@ var/datum/subsystem/job/SSjob
 			RejectPlayer(player)
 		Debug("AC2 Assistant located, Player: [player]")
 		AssignRole(player, "Assistant")
-	return 1
+
+	if(assigned_len>=required_players)
+		return 1
+	else
+		return 0
 
 //Gives the player the stuff he should have with his rank
 /datum/subsystem/job/proc/EquipRank(mob/living/H, rank, joined_late=0)
