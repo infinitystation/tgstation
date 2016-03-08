@@ -154,11 +154,12 @@ var/datum/subsystem/ticker/ticker
 
 	//Configure mode and assign player to special mode stuff
 	var/can_continue = 0
-	can_continue = src.mode.pre_setup()		//Choose antagonists
-	SSjob.DivideOccupations() 				//Distribute jobs
+	var/can_continue2 = 0
+	can_continue = src.mode.pre_setup()										//Choose antagonists
+	can_continue2 = SSjob.DivideOccupations(mode.required_players) 			//Distribute jobs
 
 	if(!Debug2)
-		if(!can_continue)
+		if(!can_continue && !can_continue2)
 			qdel(mode)
 			mode = null
 			world << "<B>Error setting up [master_mode].</B> Reverting to pre-game lobby."

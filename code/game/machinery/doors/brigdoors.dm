@@ -2,11 +2,11 @@
 #define FONT_SIZE "5pt"
 #define FONT_COLOR "#09f"
 #define FONT_STYLE "Arial Black"
-#define MAX_TIMER 9000
+#define MAX_TIMER 36000
 
-#define PRESET_SHORT 1200
-#define PRESET_MEDIUM 3000
-#define PRESET_LONG 6000
+#define PRESET_SHORT 9000
+#define PRESET_MEDIUM 18000
+#define PRESET_LONG 27000
 
 //This file was auto-corrected by findeclaration.exe on 25.5.2012 20:42:31
 
