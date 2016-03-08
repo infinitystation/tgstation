@@ -347,6 +347,9 @@ var/datum/subsystem/job/SSjob
 		Debug("AC2 Assistant located, Player: [player]")
 		AssignRole(player, "Assistant") */
 
+	for(var/mob/new_player/player in unassigned)
+		RejectPlayer2(player)
+
 	if(assigned_len>=required_players)
 		return 1
 	else
@@ -480,6 +483,14 @@ var/datum/subsystem/job/SSjob
 	if(player.mind && player.mind.special_role)
 		return
 	Debug("Popcap overflow Check observer located, Player: [player]")
+	player << "<b>You have failed to qualify for any job you desired.</b>"
+	unassigned -= player
+	player.ready = 0
+
+/datum/subsystem/job/proc/RejectPlayer2(mob/new_player/player)
+	if(player.mind && player.mind.special_role)
+		return
+	Debug("Job Assign Failed, Rejecting. Player: [player]")
 	player << "<b>You have failed to qualify for any job you desired.</b>"
 	unassigned -= player
 	player.ready = 0
