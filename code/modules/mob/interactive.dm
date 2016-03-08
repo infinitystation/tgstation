@@ -122,7 +122,7 @@
 /client/proc/resetSNPC(var/mob/A in SSnpc.botPool_l)
 	set name = "Reset SNPC"
 	set desc = "Reset the SNPC"
-	set category = "Admin"
+	set category = "Debug"
 
 	if(!holder)
 		return
@@ -139,7 +139,7 @@
 /client/proc/toggleSNPC(var/mob/A in SSnpc.botPool_l)
 	set name = "Toggle SNPC Proccessing Mode"
 	set desc = "Toggle SNPC Proccessing Mode"
-	set category = "Admin"
+	set category = "Debug"
 
 	if(!holder)
 		return
@@ -156,7 +156,7 @@
 /client/proc/customiseSNPC(var/mob/A in SSnpc.botPool_l)
 	set name = "Customize SNPC"
 	set desc = "Customise the SNPC"
-	set category = "Admin"
+	set category = "Debug"
 
 	if(!holder)
 		return
@@ -839,7 +839,7 @@
 		for(var/obj/machinery/hydroponics/tester in view(12,src))
 			considered[tester] = 1
 
-			if(!tester.planted)
+			if(!tester.myseed)
 				considered[tester] += 50
 			if(tester.weedlevel > 0)
 				considered[tester] += 5
@@ -866,7 +866,7 @@
 			else
 				if(HP.harvest || HP.dead)
 					HP.attack_hand(src)
-				else if(!HP.planted)
+				else if(!HP.myseed)
 					var/seedType = pick(typesof(/obj/item/seeds) - /obj/item/seeds)
 					var/obj/item/seeds/SEED = new seedType(src)
 					customEmote("[src] [pick("gibbers","drools","slobbers","claps wildly","spits")] towards [TARGET], producing a [SEED]!")
