@@ -149,7 +149,7 @@
 	item_chair = null
 
 /obj/structure/chair/comfy/New()
-	armrest = image("icons/obj/chairs.dmi", "comfychair_armrest")
+	armrest = image("[icon]", "[icon_state]_armrest")
 	armrest.layer = MOB_LAYER + 0.1
 
 	return ..()
@@ -182,20 +182,9 @@
 	icon = 'icons/obj/chairs2.dmi'
 	icon_state = "shblue"
 
-/obj/structure/chair/comfy/shuttle/New()
-	armrest = image("icons/obj/chairs2.dmi", "shblue_arm")
-	armrest.layer = MOB_LAYER + 0.1
-
-	return ..()
-
 /obj/structure/chair/comfy/shuttle/black
 	icon = 'icons/obj/chairs2.dmi'
 	icon_state = "shblack"
-
-/obj/structure/chair/comfy/shuttle/black/New()
-	armrest = image("icons/obj/chairs2.dmi", "shblack_arm")
-	armrest.layer = MOB_LAYER + 0.1
-	return ..()
 
 /obj/structure/chair/office
 	anchored = 0

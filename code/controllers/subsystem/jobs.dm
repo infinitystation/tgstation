@@ -136,6 +136,8 @@ var/datum/subsystem/job/SSjob
 
 
 		if((job.current_positions < job.spawn_positions) || job.spawn_positions == -1)
+			if(job in command_positions) //If you want a command position, select it!
+				continue
 			Debug("GRJ Random job given, Player: [player], Job: [job]")
 			AssignRole(player, job.title)
 			unassigned -= player
