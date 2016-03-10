@@ -168,8 +168,7 @@ var/datum/subsystem/job/SSjob
 			if(!candidates.len)
 				continue
 			var/mob/new_player/candidate = pick(candidates)
-			if(AssignRole(candidate, command_position))
-				return 1
+			AssignRole(candidate, command_position)
 	return 0
 
 
