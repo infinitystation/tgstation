@@ -338,14 +338,14 @@ var/datum/subsystem/job/SSjob
 
 	Debug("DO, Standard Check end")
 
-	Debug("DO, Running AC2")
+	/* Debug("DO, Running AC2")
 
 	// For those who wanted to be assistant if their preferences were filled, here you go.
 	for(var/mob/new_player/player in unassigned)
 		if(PopcapReached())
 			RejectPlayer(player)
 		Debug("AC2 Assistant located, Player: [player]")
-		AssignRole(player, "Assistant")
+		AssignRole(player, "Assistant") */
 
 	if(assigned_len>=required_players)
 		return 1
