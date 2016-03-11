@@ -2,7 +2,7 @@
 /obj/machinery/gibber
 	name = "gibber"
 	desc = "The name isn't descriptive enough?"
-	icon = 'icons/obj/kitchen.dmi'
+	icon = 'icons/obj/newkitchen.dmi'
 	icon_state = "grinder"
 	density = 1
 	anchored = 1
