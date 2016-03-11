@@ -159,18 +159,18 @@ var/datum/subsystem/job/SSjob
 //it locates a head or runs out of levels to check
 //This is basically to ensure that there's atleast a few heads in the round
 /datum/subsystem/job/proc/FillHeadPosition()
-	for(var/level = 1 to 3)
-		for(var/command_position in command_positions)
-			var/datum/job/job = GetJob(command_position)
-			if(!job)
-				continue
-			if((job.current_positions >= job.total_positions) && job.total_positions != -1)
-				continue
-			var/list/candidates = FindOccupationCandidates(job, level)
-			if(!candidates.len)
-				continue
-			var/mob/new_player/candidate = pick(candidates)
-			AssignRole(candidate, command_position)
+	var/level = 1
+	for(var/command_position in command_positions)
+		var/datum/job/job = GetJob(command_position)
+		if(!job)
+			continue
+		if((job.current_positions >= job.total_positions) && job.total_positions != -1)
+			continue
+		var/list/candidates = FindOccupationCandidates(job, level)
+		if(!candidates.len)
+			continue
+		var/mob/new_player/candidate = pick(candidates)
+		AssignRole(candidate, command_position)
 	return 0
 
 
