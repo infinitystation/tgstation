@@ -8,8 +8,8 @@
 /obj/machinery/icecream_vat
 	name = "ice cream vat"
 	desc = "Ding-aling ding dong. Get your Nanotrasen-approved ice cream!"
-	icon = 'icons/obj/kitchen.dmi'
-	icon_state = "icecream_vat"
+	icon = 'icons/obj/newkitchen.dmi'
+	icon_state = "ice_creamer0"
 	density = 1
 	anchored = 0
 	use_power = 0

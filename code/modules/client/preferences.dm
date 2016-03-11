@@ -571,7 +571,7 @@ var/list/preferences_datums = list()
 
 	HTML += "</center></table>"
 
-	HTML += "<center><br><a href='?_src_=prefs;preference=job;task=random'>[userandomjob ? "Get random job if preferences unavailable" : "Be an Assistant if preference unavailable"]</a></center>"
+	HTML += "<center><br><a href='?_src_=prefs;preference=job;task=random'>[userandomjob ? "Get random job if preferences unavailable" : "Stay in Lobby if preference unavailable"]</a></center>"
 	HTML += "<center><a href='?_src_=prefs;preference=job;task=reset'>Reset Preferences</a></center>"
 
 	user << browse(null, "window=preferences")

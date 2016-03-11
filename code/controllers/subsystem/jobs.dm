@@ -136,6 +136,8 @@ var/datum/subsystem/job/SSjob
 
 
 		if((job.current_positions < job.spawn_positions) || job.spawn_positions == -1)
+			if(job in command_positions) //If you want a command position, select it!
+				continue
 			Debug("GRJ Random job given, Player: [player], Job: [job]")
 			AssignRole(player, job.title)
 			unassigned -= player
@@ -157,19 +159,18 @@ var/datum/subsystem/job/SSjob
 //it locates a head or runs out of levels to check
 //This is basically to ensure that there's atleast a few heads in the round
 /datum/subsystem/job/proc/FillHeadPosition()
-	for(var/level = 1 to 3)
-		for(var/command_position in command_positions)
-			var/datum/job/job = GetJob(command_position)
-			if(!job)
-				continue
-			if((job.current_positions >= job.total_positions) && job.total_positions != -1)
-				continue
-			var/list/candidates = FindOccupationCandidates(job, level)
-			if(!candidates.len)
-				continue
-			var/mob/new_player/candidate = pick(candidates)
-			if(AssignRole(candidate, command_position))
-				return 1
+	var/level = 1
+	for(var/command_position in command_positions)
+		var/datum/job/job = GetJob(command_position)
+		if(!job)
+			continue
+		if((job.current_positions >= job.total_positions) && job.total_positions != -1)
+			continue
+		var/list/candidates = FindOccupationCandidates(job, level)
+		if(!candidates.len)
+			continue
+		var/mob/new_player/candidate = pick(candidates)
+		AssignRole(candidate, command_position)
 	return 0
 
 
@@ -347,6 +348,9 @@ var/datum/subsystem/job/SSjob
 		Debug("AC2 Assistant located, Player: [player]")
 		AssignRole(player, "Assistant") */
 
+	for(var/mob/new_player/player in unassigned)
+		RejectPlayer2(player)
+
 	if(assigned_len>=required_players)
 		return 1
 	else
@@ -436,8 +440,8 @@ var/datum/subsystem/job/SSjob
 	for(var/datum/job/J in occupations)
 		var/regex/jobs = new("[J.title]=(-1|\\d+),(-1|\\d+)")
 		jobs.Find(jobstext)
-		J.total_positions = text2num(jobs.group[2])
-		J.spawn_positions = text2num(jobs.group[3])
+		J.total_positions = text2num(jobs.group[1])
+		J.spawn_positions = text2num(jobs.group[2])
 
 /datum/subsystem/job/proc/HandleFeedbackGathering()
 	for(var/datum/job/job in occupations)
@@ -480,6 +484,14 @@ var/datum/subsystem/job/SSjob
 	if(player.mind && player.mind.special_role)
 		return
 	Debug("Popcap overflow Check observer located, Player: [player]")
+	player << "<b>You have failed to qualify for any job you desired.</b>"
+	unassigned -= player
+	player.ready = 0
+
+/datum/subsystem/job/proc/RejectPlayer2(mob/new_player/player)
+	if(player.mind && player.mind.special_role)
+		return
+	Debug("Job Assign Failed, Rejecting. Player: [player]")
 	player << "<b>You have failed to qualify for any job you desired.</b>"
 	unassigned -= player
 	player.ready = 0
