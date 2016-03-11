@@ -2,7 +2,7 @@
 /obj/machinery/processor
 	name = "food processor"
 	desc = "An industrial grinder used to process meat and other foods. Keep hands clear of intake area while operating."
-	icon = 'icons/obj/kitchen.dmi'
+	icon = 'icons/obj/newkitchen.dmi'
 	icon_state = "processor"
 	layer = 2.9
 	density = 1
@@ -158,7 +158,7 @@
 		var/obj/item/weapon/grab/G = O
 		if(!user.Adjacent(G.affecting))
 			return
-		if(G.affecting.buckled || G.affecting.buckled_mobs.len)
+		if(G.affecting.buckled || G.affecting.buckled_mob)
 			user << "<span class='warning'>[G.affecting] is attached to somthing!</span>"
 			return
 		what = G.affecting
