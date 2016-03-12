@@ -89,11 +89,21 @@
 	activation_time = world.time
 	timing = TRUE
 
+	var/prisoners
+	var/prisoners_alt
+
 	for(var/obj/machinery/door/window/brigdoor/door in targets)
 		if(door.density)
 			continue
 		spawn(0)
 			door.close()
+		for(var/mob/living/carbon/human/H in orange(2, door))
+			prisoners += "[key_name_admin(H)](<A HREF='?_src_=holder;adminmoreinfo=\ref[H]'>?</A>)(<A HREF='?_src_=holder;adminplayerobservefollow=\ref[H]'>FLW</A>) "
+			prisoners_alt += "[H.ckey]/[H.real_name] "
+			message_admins("Преступники посажены!")
+			message_admins("Игроки вокруг камеры: [prisoners]")
+			log_game("Преступники посажены!")
+			log_game("Игроки вокруг камеры: [prisoners_alt]")
 
 	for(var/obj/structure/closet/secure_closet/brig/C in targets)
 		if(C.broken)
@@ -123,7 +133,7 @@
 	var/prisoners_alt = ""
 	for(var/obj/machinery/door/window/brigdoor/door in targets)
 		for(var/mob/living/carbon/human/H in orange(2, door))
-			prisoners += "[key_name_admin(H)] "
+			prisoners += "[key_name_admin(H)](<A HREF='?_src_=holder;adminmoreinfo=\ref[H]'>?</A>)(<A HREF='?_src_=holder;adminplayerobservefollow=\ref[H]'>FLW</A>) "
 			prisoners_alt += "[H.ckey]/[H.real_name] "
 			message_admins("У преступник(ов) закончилсЯ срок заключениЯ.")
 			message_admins("Игроки вокруг камеры: [prisoners]")

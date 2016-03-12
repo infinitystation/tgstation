@@ -100,7 +100,7 @@
 	return ..()
 
 /obj/structure/chair/pews/post_buckle_mob(mob/living/M)
-	if(buckled_mob)
+	if(buckled_mobs.len)
 		overlays += armrest
 	else
 		overlays -= armrest
