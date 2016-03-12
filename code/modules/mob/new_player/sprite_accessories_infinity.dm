@@ -201,3 +201,8 @@
 	icon_state = "red_underwear"
 	icon = 'icons/mob/infinity_work.dmi'
 	gender = FEMALE
+
+/datum/sprite_accessory/hair/bigponytail
+	name = "Big Ponytail"
+	icon_state = "big_ponytail"
+	icon = 'icons/mob/more_hairs.dmi'
