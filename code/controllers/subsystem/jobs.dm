@@ -195,6 +195,7 @@ var/datum/subsystem/job/SSjob
 	var/ai_selected = 0
 	var/datum/job/job = GetJob("AI")
 	if(!job)
+		Debug("FAI: AI isn't exist")
 		return 0
 	for(var/i = job.total_positions, i > 0, i--)
 		for(var/level = 1 to 3)
@@ -207,6 +208,7 @@ var/datum/subsystem/job/SSjob
 					break
 	if(ai_selected)
 		return 1
+	Debug("FAI: Failed")
 	return 0
 
 
