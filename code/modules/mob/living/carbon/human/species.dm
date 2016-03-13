@@ -690,7 +690,7 @@
 			H.need_to_shit = min(SHIT_LEVEL_MAX, H.need_to_shit + HUNGER_FACTOR)
 
 	// nutrition decrease and satiety
-	if (H.nutrition > 0 && H.stat != DEAD && !H.dna.species.need_nutrition)
+	if (H.nutrition > 0 && H.stat != DEAD && H.dna.species.need_nutrition)
 		var/hunger_rate = HUNGER_FACTOR
 		if(H.satiety > 0)
 			H.satiety--
