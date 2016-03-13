@@ -320,7 +320,7 @@ var/const/CALL_SHUTTLE_REASON_LENGTH = 12
 			src.aistate = STATE_DEFAULT
 		if("AI-MessageCentcomm")
 			//if(src.authenticated==2)
-			if(CM.lastTimeUsed + 600 < world.time)
+			if(CM.lastTimeUsed + 600 > world.time)
 				usr << "Arrays recycling.  Please stand by."
 				return
 			var/input = input(usr, "Please choose a message to transmit to Centcom via quantum entanglement.  Please be aware that this process is very expensive, and abuse will lead to... termination.  Transmission does not guarantee a response.", "Send a message to Centcomm.", "")
@@ -331,7 +331,7 @@ var/const/CALL_SHUTTLE_REASON_LENGTH = 12
 		// OMG SYNDICATE ...LETTERHEAD
 		if("AI-MessageSyndicate")
 			if(/*(src.authenticated==2) && */(src.emagged))
-				if(CM.lastTimeUsed + 600 < world.time)
+				if(CM.lastTimeUsed + 600 > world.time)
 					usr << "Arrays recycling.  Please stand by."
 					return
 				var/input = input(usr, "Please choose a message to transmit to \[ABNORMAL ROUTING COORDINATES\] via quantum entanglement.  Please be aware that this process is very expensive, and abuse will lead to... termination. Transmission does not guarantee a response.", "Send a message to /??????/.", "")
