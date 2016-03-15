@@ -314,7 +314,7 @@
 /turf/indestructible/riveted/New()
 	..()
 	if(smooth)
-		smooth_icon(src)
+		queue_smooth(src)
 		icon_state = ""
 
 /turf/indestructible/riveted/uranium
