@@ -477,7 +477,8 @@
 
 /obj/structure/sink/kitchen
 	name = "kitchen sink"
-	icon_state = "sink_alt"
+	icon = 'icons/obj/newkitchen.dmi'
+	icon_state = "sink"
 
 
 /obj/structure/sink/puddle	//splishy splashy ^_^

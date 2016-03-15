@@ -101,7 +101,7 @@ var/list/teleportlocs = list()
 	power_equip = 0
 	power_environ = 0
 	valid_territory = 0
-	ambientsounds = list('sound/ambience/ambispace.ogg','sound/ambience/title2.ogg',)
+	ambientsounds = list('sound/ambience/ambispace.ogg','sound/ambience/ambispace1.ogg',)
 	blob_allowed = 0 //Eating up space doesn't count for victory as a blob.
 
 /area/space/nearstation
@@ -297,11 +297,11 @@ var/list/teleportlocs = list()
 	luminosity = 1
 	lighting_use_dynamic = 0
 	has_gravity = 1
+	requires_power = 0
 
 /area/prison/arrival_airlock
 	name = "Prison Station Airlock"
 	icon_state = "green"
-	requires_power = 0
 
 /area/prison/control
 	name = "Prison Security Checkpoint"

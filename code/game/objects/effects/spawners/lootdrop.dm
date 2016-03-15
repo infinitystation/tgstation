@@ -158,6 +158,24 @@
 				"" = 8
 				)
 
+/obj/effect/spawner/lootdrop/fall
+	name = "Random Fall ship parts"
+	desc = "This is a random Fall ship parts"
+	icon = 'icons/obj/items.dmi'
+	icon_state = "latexballon_bursted"
+	color = "Gray"
+	loot = list(
+				/obj/item/stack/rods = 5,
+				/obj/item/stack/sheet/metal = 8,
+				/obj/item/stack/cable_coil/cut = 6,
+				/obj/effect/spawner/lootdrop/trash = 3,
+				/obj/effect/spawner/lootdrop/food = 2,
+				/obj/item/weapon/shard = 6,
+				/obj/effect/decal/cleanable/blood/old = 2,
+				/obj/effect/decal/cleanable/robot_debris = 6,
+				"" = 6
+				)
+
 /obj/effect/spawner/lootdrop/food
 	name = "Random Food"
 	desc = "This is a Food"

@@ -11,6 +11,9 @@
 		new /obj/item/weapon/reagent_containers/food/condiment/flour(src)
 	new /obj/item/weapon/reagent_containers/food/condiment/rice(src)
 	new /obj/item/weapon/reagent_containers/food/condiment/sugar(src)
+	new /obj/item/weapon/storage/box/ppancakes(src)
+	new /obj/item/weapon/storage/box/ppancakes(src)
+	new /obj/item/weapon/storage/box/ppancakes(src)
 
 /obj/structure/closet/secure_closet/freezer/kitchen/mining
 	req_access = list()

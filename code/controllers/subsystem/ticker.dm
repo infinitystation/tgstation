@@ -55,7 +55,7 @@ var/datum/subsystem/ticker/ticker
 /datum/subsystem/ticker/New()
 	NEW_SS_GLOBAL(ticker)
 
-	login_music = pickweight(list('sound/ambience/title2.ogg' = 31, 'sound/ambience/title1.ogg' = 31, 'sound/ambience/title3.ogg' = 31, 'sound/ambience/clown.ogg' = 7)) // choose title music!
+	login_music = pickweight(list('sound/lobby/title1.ogg' = 31, 'sound/lobby/title2.ogg' = 31, 'sound/lobby/title3.ogg' = 31, 'sound/lobby/title4.ogg' = 31, 'sound/ambience/clown.ogg' = 7)) // choose title music!
 	/* if(SSevent.holidays && SSevent.holidays[APRIL_FOOLS])
 		login_music = 'sound/ambience/clown.ogg' */ // we don't want listen one login music
 
@@ -154,11 +154,12 @@ var/datum/subsystem/ticker/ticker
 
 	//Configure mode and assign player to special mode stuff
 	var/can_continue = 0
-	can_continue = src.mode.pre_setup()		//Choose antagonists
-	SSjob.DivideOccupations() 				//Distribute jobs
+	var/can_continue2 = 0
+	can_continue = src.mode.pre_setup()										//Choose antagonists
+	can_continue2 = SSjob.DivideOccupations(mode.required_players) 			//Distribute jobs
 
 	if(!Debug2)
-		if(!can_continue)
+		if(!can_continue && !can_continue2)
 			qdel(mode)
 			mode = null
 			world << "<B>Error setting up [master_mode].</B> Reverting to pre-game lobby."

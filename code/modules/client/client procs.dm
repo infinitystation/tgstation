@@ -152,6 +152,7 @@ var/next_external_rsc = 0
 		src.banprisoned = 1
 		prefs.muted |= MUTE_OOC | MUTE_PRAY | MUTE_DEADCHAT | MUTE_ADMINHELP
 		prefs.be_special = list()
+		message_admins("<span class='adminnotice'><b><font color=red>ÂÑÒÐÅ×ÀÉ ÇÝÊÀ! </font>Byond login: [key_name_admin(src)].</span>")
 
 	. = ..()	//calls mob.Login()
 

@@ -62,20 +62,22 @@
 		qdel(src)
 
 /obj/structure/chair/attack_tk(mob/user)
-	if(buckled_mob)
+	if(buckled_mobs.len)
 		..()
 	else
 		rotate()
 	return
 
 /obj/structure/chair/proc/handle_rotation(direction)
-	if(buckled_mob)
-		buckled_mob.buckled = null //Temporary, so Move() succeeds.
-		if(!direction || !buckled_mob.Move(get_step(src, direction), direction))
-			buckled_mob.buckled = src
-			dir = buckled_mob.dir
-			return 0
-		buckled_mob.buckled = src //Restoring
+	if(buckled_mobs.len)
+		for(var/m in buckled_mobs)
+			var/mob/living/buckled_mob = m
+			buckled_mob.buckled = null //Temporary, so Move() succeeds.
+			if(!direction || !buckled_mob.Move(get_step(src, direction), direction))
+				buckled_mob.buckled = src
+				dir = buckled_mob.dir
+				return 0
+			buckled_mob.buckled = src //Restoring
 	handle_layer()
 	return 1
 
@@ -88,8 +90,10 @@
 /obj/structure/chair/proc/spin()
 	dir = turn(dir, 90)
 	handle_layer()
-	if(buckled_mob)
-		buckled_mob.dir = dir
+	if(buckled_mobs.len)
+		for(var/m in buckled_mobs)
+			var/mob/living/buckled_mob = m
+			buckled_mob.dir = dir
 
 /obj/structure/chair/verb/rotate()
 	set name = "Rotate Chair"
@@ -145,13 +149,13 @@
 	item_chair = null
 
 /obj/structure/chair/comfy/New()
-	armrest = image("icons/obj/chairs.dmi", "comfychair_armrest")
+	armrest = image("[icon]", "[icon_state]_armrest")
 	armrest.layer = MOB_LAYER + 0.1
 
 	return ..()
 
 /obj/structure/chair/comfy/post_buckle_mob(mob/living/M)
-	if(buckled_mob)
+	if(buckled_mobs.len)
 		overlays += armrest
 	else
 		overlays -= armrest
@@ -178,20 +182,9 @@
 	icon = 'icons/obj/chairs2.dmi'
 	icon_state = "shblue"
 
-/obj/structure/chair/comfy/shuttle/New()
-	armrest = image("icons/obj/chairs2.dmi", "shblue_arm")
-	armrest.layer = MOB_LAYER + 0.1
-
-	return ..()
-
 /obj/structure/chair/comfy/shuttle/black
 	icon = 'icons/obj/chairs2.dmi'
 	icon_state = "shblack"
-
-/obj/structure/chair/comfy/shuttle/black/New()
-	armrest = image("icons/obj/chairs2.dmi", "shblack_arm")
-	armrest.layer = MOB_LAYER + 0.1
-	return ..()
 
 /obj/structure/chair/office
 	anchored = 0
@@ -217,7 +210,7 @@
 /obj/structure/chair/MouseDrop(over_object, src_location, over_location)
 	. = ..()
 	if(over_object == usr && Adjacent(usr))
-		if(!item_chair || !ishuman(usr) || buckled_mob)
+		if(!item_chair || !ishuman(usr) || buckled_mobs.len)
 			return
 		usr.visible_message("<span class='notice'>[usr] grabs \the [src.name].</span>", "<span class='notice'>You grab \the [src.name].</span>")
 		var/C = new item_chair(loc)

@@ -23,7 +23,7 @@ var/global/list/map_transition_config = MAP_TRANSITION_CONFIG
 	var/date_string = time2text(world.realtime, "YYYY/MM-Month/DD-Day")
 	href_logfile = file("data/logs/[date_string] hrefs.htm")
 	diary = file("data/logs/[date_string].log")
-	job_subsystem_debug = file("data/logs/[date_string].log")
+	job_subsystem_debug = file("data/logs/[date_string] j-debug.log")
 	diaryofmeanpeople = file("data/logs/[date_string] Attack.log")
 	diary << "\n\nStarting up. [time2text(world.timeofday, "hh:mm.ss")]\n---------------------"
 	diaryofmeanpeople << "\n\nStarting up. [time2text(world.timeofday, "hh:mm.ss")]\n---------------------"
@@ -109,7 +109,7 @@ var/last_irc_status = 0
 		s["host"] = host ? host : null
 		s["active_players"] = get_active_player_count()
 		s["players"] = clients.len
-		s["revision"] = revdata.revision
+		s["revision"] = revdata.commit
 		s["revision_date"] = revdata.date
 
 		var/list/adm = get_admin_counts()

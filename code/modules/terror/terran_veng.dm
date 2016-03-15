@@ -100,7 +100,7 @@
 	return ..()
 
 /obj/structure/chair/pews/post_buckle_mob(mob/living/M)
-	if(buckled_mob)
+	if(buckled_mobs.len)
 		overlays += armrest
 	else
 		overlays -= armrest
@@ -114,3 +114,27 @@
 	installation = /obj/item/weapon/gun/energy/lasercannon
 	always_up = 1
 	faction = "neutral"
+
+/obj/structure/sign/directions/dock
+	name = "docking port 1"
+	desc = "A direction sign, pointing out which way the Docking port 1 is."
+	icon_state = "dock_1"
+	icon = 'icons/obj/infinity_decals.dmi'
+
+/obj/structure/sign/directions/dock/two
+	name = "docking port 2"
+	desc = "A direction sign, pointing out which way the Docking port 2 is."
+	icon_state = "dock_2"
+	icon = 'icons/obj/infinity_decals.dmi'
+
+/obj/structure/sign/directions/dock/three
+	name = "docking port 3"
+	desc = "A direction sign, pointing out which way the Docking port 3 is."
+	icon_state = "dock_3"
+	icon = 'icons/obj/infinity_decals.dmi'
+
+/obj/structure/sign/directions/dock/four
+	name = "docking port 4"
+	desc = "A direction sign, pointing out which way the Docking port 4 is."
+	icon_state = "dock_4"
+	icon = 'icons/obj/infinity_decals.dmi'

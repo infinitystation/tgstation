@@ -5,6 +5,7 @@
 	desc = "A solid wall of slightly twitching tendrils."
 	health = 150
 	maxhealth = 150
+	brute_resist = 0.1
 	explosion_block = 3
 	fire_resist = 5
 	point_return = 2

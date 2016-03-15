@@ -569,3 +569,19 @@
 	new /obj/item/ammo_casing/shotgun/beanbag(src)
 	new /obj/item/ammo_casing/shotgun/beanbag(src)
 	new /obj/item/ammo_casing/shotgun/beanbag(src)
+
+/obj/item/weapon/storage/box/ppancakes/New()
+	name = "Packing Pancakes"
+	desc = "This is pachking pancakesm, yummy-yummy"
+	icon = 'icons/obj/food/infinity_food.dmi'
+	icon_state = "pa_pancakes"
+
+/obj/item/weapon/storage/box/ppancakes/New()
+	..()
+	contents = list()
+	new /obj/item/weapon/reagent_containers/food/snacks/pancake(src)
+	new /obj/item/weapon/reagent_containers/food/snacks/pancake(src)
+	new /obj/item/weapon/reagent_containers/food/snacks/pancake(src)
+	new /obj/item/weapon/reagent_containers/food/snacks/pancake(src)
+	new /obj/item/weapon/reagent_containers/food/snacks/pancake(src)
+	return

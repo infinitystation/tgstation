@@ -7,6 +7,7 @@ var/datum/subsystem/job/SSjob
 	var/list/occupations = list()		//List of all jobs
 	var/list/unassigned = list()		//Players who need jobs
 	var/list/job_debug = list()			//Debug info
+	var/assigned_len = 0				//Игроки с профой
 	var/initial_players_to_assign = 0 	//used for checking against population caps
 
 /datum/subsystem/job/New()
@@ -44,7 +45,7 @@ var/datum/subsystem/job/SSjob
 
 /datum/subsystem/job/proc/Debug(text)
 	job_debug.Add(text)
-	job_subsystem_debug << text
+	job_subsystem_debug << "\[[time_stamp()]]: [text]"
 	return 1
 
 
@@ -74,6 +75,7 @@ var/datum/subsystem/job/SSjob
 		Debug("Player: [player] is now Rank: [rank], JCP:[job.current_positions], JPL:[position_limit]")
 		player.mind.assigned_role = rank
 		unassigned -= player
+		assigned_len++
 		job.current_positions++
 		return 1
 	Debug("AR has failed, Player: [player], Rank: [rank]")
@@ -134,9 +136,12 @@ var/datum/subsystem/job/SSjob
 
 
 		if((job.current_positions < job.spawn_positions) || job.spawn_positions == -1)
+			if(job in command_positions) //If you want a command position, select it!
+				continue
 			Debug("GRJ Random job given, Player: [player], Job: [job]")
 			AssignRole(player, job.title)
 			unassigned -= player
+			assigned_len++
 			break
 
 /datum/subsystem/job/proc/ResetOccupations()
@@ -146,6 +151,7 @@ var/datum/subsystem/job/SSjob
 			player.mind.special_role = null
 	SetupOccupations()
 	unassigned = list()
+	assigned_len = 0
 	return
 
 
@@ -153,19 +159,18 @@ var/datum/subsystem/job/SSjob
 //it locates a head or runs out of levels to check
 //This is basically to ensure that there's atleast a few heads in the round
 /datum/subsystem/job/proc/FillHeadPosition()
-	for(var/level = 1 to 3)
-		for(var/command_position in command_positions)
-			var/datum/job/job = GetJob(command_position)
-			if(!job)
-				continue
-			if((job.current_positions >= job.total_positions) && job.total_positions != -1)
-				continue
-			var/list/candidates = FindOccupationCandidates(job, level)
-			if(!candidates.len)
-				continue
-			var/mob/new_player/candidate = pick(candidates)
-			if(AssignRole(candidate, command_position))
-				return 1
+	var/level = 1
+	for(var/command_position in command_positions)
+		var/datum/job/job = GetJob(command_position)
+		if(!job)
+			continue
+		if((job.current_positions >= job.total_positions) && job.total_positions != -1)
+			continue
+		var/list/candidates = FindOccupationCandidates(job, level)
+		if(!candidates.len)
+			continue
+		var/mob/new_player/candidate = pick(candidates)
+		AssignRole(candidate, command_position)
 	return 0
 
 
@@ -190,6 +195,7 @@ var/datum/subsystem/job/SSjob
 	var/ai_selected = 0
 	var/datum/job/job = GetJob("AI")
 	if(!job)
+		Debug("FAI: AI isn't exist")
 		return 0
 	for(var/i = job.total_positions, i > 0, i--)
 		for(var/level = 1 to 3)
@@ -202,6 +208,7 @@ var/datum/subsystem/job/SSjob
 					break
 	if(ai_selected)
 		return 1
+	Debug("FAI: Failed")
 	return 0
 
 
@@ -209,7 +216,7 @@ var/datum/subsystem/job/SSjob
  *  fills var "assigned_role" for all ready players.
  *  This proc must not have any side effect besides of modifying "assigned_role".
  **/
-/datum/subsystem/job/proc/DivideOccupations()
+/datum/subsystem/job/proc/DivideOccupations(required_players)
 	//Setup new player list and get the jobs list
 	Debug("Running DO")
 
@@ -315,16 +322,17 @@ var/datum/subsystem/job/SSjob
 						Debug("DO pass, Player: [player], Level:[level], Job:[job.title]")
 						AssignRole(player, job.title)
 						unassigned -= player
+						assigned_len++
 						break
 
 	// Hand out random jobs to the people who didn't get any in the last check
 	// Also makes sure that they got their preference correct
-	for(var/mob/new_player/player in unassigned)
+	/* for(var/mob/new_player/player in unassigned)
 		if(PopcapReached())
 			RejectPlayer(player)
 		else if(jobban_isbanned(player, "Assistant"))
 			GiveRandomJob(player) //you get to roll for random before everyone else just to be sure you don't get assistant. you're so speshul
-
+	*/// Рандомные профы тем, кто готов к рандому
 	for(var/mob/new_player/player in unassigned)
 		if(PopcapReached())
 			RejectPlayer(player)
@@ -333,15 +341,22 @@ var/datum/subsystem/job/SSjob
 
 	Debug("DO, Standard Check end")
 
-	Debug("DO, Running AC2")
+	/* Debug("DO, Running AC2")
 
 	// For those who wanted to be assistant if their preferences were filled, here you go.
 	for(var/mob/new_player/player in unassigned)
 		if(PopcapReached())
 			RejectPlayer(player)
 		Debug("AC2 Assistant located, Player: [player]")
-		AssignRole(player, "Assistant")
-	return 1
+		AssignRole(player, "Assistant") */
+
+	for(var/mob/new_player/player in unassigned)
+		RejectPlayer2(player)
+
+	if(assigned_len>=required_players)
+		return 1
+	else
+		return 0
 
 //Gives the player the stuff he should have with his rank
 /datum/subsystem/job/proc/EquipRank(mob/living/H, rank, joined_late=0)
@@ -427,8 +442,8 @@ var/datum/subsystem/job/SSjob
 	for(var/datum/job/J in occupations)
 		var/regex/jobs = new("[J.title]=(-1|\\d+),(-1|\\d+)")
 		jobs.Find(jobstext)
-		J.total_positions = text2num(jobs.group[2])
-		J.spawn_positions = text2num(jobs.group[3])
+		J.total_positions = text2num(jobs.group[1])
+		J.spawn_positions = text2num(jobs.group[2])
 
 /datum/subsystem/job/proc/HandleFeedbackGathering()
 	for(var/datum/job/job in occupations)
@@ -471,6 +486,14 @@ var/datum/subsystem/job/SSjob
 	if(player.mind && player.mind.special_role)
 		return
 	Debug("Popcap overflow Check observer located, Player: [player]")
+	player << "<b>You have failed to qualify for any job you desired.</b>"
+	unassigned -= player
+	player.ready = 0
+
+/datum/subsystem/job/proc/RejectPlayer2(mob/new_player/player)
+	if(player.mind && player.mind.special_role)
+		return
+	Debug("Job Assign Failed, Rejecting. Player: [player]")
 	player << "<b>You have failed to qualify for any job you desired.</b>"
 	unassigned -= player
 	player.ready = 0

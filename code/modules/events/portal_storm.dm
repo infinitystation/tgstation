@@ -1,7 +1,8 @@
 /datum/round_event_control/portal_storm_syndicate
 	name = "Portal Storm: Syndicate Shocktroops"
 	typepath = /datum/round_event/portal_storm/syndicate_shocktroop
-	weight = 2
+	weight = 0
+	max_occurrences = 0
 	earliest_start = 18000
 
 /datum/round_event/portal_storm/syndicate_shocktroop
