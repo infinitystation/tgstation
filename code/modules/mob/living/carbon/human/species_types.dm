@@ -93,6 +93,10 @@ var/regex/lizard_hiCC = new("Ñ+", "g")
 	if(H)
 		H.endTailWag()
 
+/datum/species/lizard/ash_walker
+	id = "ash_walker"
+	specflags = list(MUTCOLORS, NOBREATH, EYECOLOR,LIPS)
+
 /*
  PODPEOPLE
 */
