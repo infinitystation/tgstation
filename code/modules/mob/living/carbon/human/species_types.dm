@@ -92,11 +92,6 @@ var/regex/lizard_hiCC = new("Ñ+", "g")
 /datum/species/lizard/spec_death(gibbed, mob/living/carbon/human/H)
 	if(H)
 		H.endTailWag()
-
-/datum/species/lizard/ash_walker
-	id = "ash_walker"
-	specflags = list(MUTCOLORS, NOBREATH, EYECOLOR,LIPS)
-
 /*
  PODPEOPLE
 */
