@@ -735,6 +735,13 @@
 		else
 			H.throw_alert("nutrition", /obj/screen/alert/starving)
 
+	switch(H.need_to_shit)
+		if(SHIT_LEVEL_DANGER to SHIT_LEVEL_MAX)
+			H.throw_alert("toilet_shit", /obj/screen/alert/shit_now)
+		if(SHIT_LEVEL_WARNING to SHIT_LEVEL_DANGER)
+			H.throw_alert("toilet_shit", /obj/screen/alert/shit)
+		else
+			H.cleat_alert("toilet_shit")
 
 /datum/species/proc/update_sight(mob/living/carbon/human/H)
 	H.sight = initial(H.sight)
