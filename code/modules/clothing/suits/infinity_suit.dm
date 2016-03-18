@@ -199,3 +199,182 @@
 	item_state = "bl_suit"
 	worn_icon = 'icons/mob/infinity_work.dmi'
 	icon = 'icons/obj/clothing/infinity_work.dmi'
+
+/obj/item/clothing/suit/hunter
+	name = "hunter's coat"
+	desc = "Rugged and hard-wearing."
+	icon_state = "hunter_overcoat"
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	item_state = "gy_suit"
+	allowed = list(/obj/item/device/flashlight,/obj/item/weapon/tank/internals/emergency_oxygen,/obj/item/toy,/obj/item/weapon/storage/fancy/cigarettes,/obj/item/weapon/lighter)
+	body_parts_covered = CHEST|GROIN|ARMS
+
+/obj/item/clothing/suit/brown_long_jacket
+	name = "leather long jacket"
+	desc = "A brown long leather coat."
+	icon_state = "brown_long_jacket"
+	item_state = "brown_long_jacket"
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	item_state = "lb_suit"
+	allowed = list(/obj/item/device/flashlight,/obj/item/weapon/tank/internals/emergency_oxygen,/obj/item/toy,/obj/item/weapon/storage/fancy/cigarettes,/obj/item/weapon/lighter)
+	body_parts_covered = CHEST|GROIN|ARMS
+
+/obj/item/clothing/suit/toggle/brown_jacket
+	name = "leather jacket"
+	desc = "A brown leather coat."
+	icon_state = "brown_jacket"
+	item_state = "brown_jacket"
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	item_state = "lb_suit"
+	allowed = list(/obj/item/device/flashlight,/obj/item/weapon/tank/internals/emergency_oxygen,/obj/item/toy,/obj/item/weapon/storage/fancy/cigarettes,/obj/item/weapon/lighter)
+	body_parts_covered = CHEST|GROIN|ARMS
+
+/obj/item/clothing/suit/black_long_jacket
+	name = "leather long jacket"
+	desc = "A black long leather coat."
+	icon_state = "black_long_jacket"
+	item_state = "black_long_jacket"
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	item_state = "bl_suit"
+	allowed = list(/obj/item/device/flashlight,/obj/item/weapon/tank/internals/emergency_oxygen,/obj/item/toy,/obj/item/weapon/storage/fancy/cigarettes,/obj/item/weapon/lighter)
+	body_parts_covered = CHEST|GROIN|ARMS
+
+/obj/item/clothing/suit/toggle/hoodie
+	name = "black hoodie"
+	desc = "A warm, black sweatshirt."
+	icon_state = "cti_hoody"
+	item_state = "cti_hoody"
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	item_state = "bl_suit"
+	allowed = list(/obj/item/device/flashlight,/obj/item/weapon/tank/internals/emergency_oxygen,/obj/item/toy,/obj/item/weapon/storage/fancy/cigarettes,/obj/item/weapon/lighter)
+	body_parts_covered = CHEST|GROIN|ARMS
+
+/obj/item/clothing/suit/toggle/hoodie/grey
+	name = "grey hoodie"
+	desc = "A warm, grey sweatshirt."
+	icon_state = "mu_hoody"
+	item_state = "mu_hoody"
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	item_state = "gy_suit"
+
+/obj/item/clothing/suit/toggle/hoodie/blue
+	name = "blue hoodie"
+	desc = "A warm, blue sweatshirt with NT logo."
+	icon_state = "nt_hoody"
+	item_state = "nt_hoody"
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	item_state = "b_suit"
+
+/obj/item/clothing/suit/engineerjacket
+	name = "engineer jacket"
+	desc = "Engineer's jacket, protect from radiation and non-fashion."
+	icon_state = "civilengineer"
+	item_state = "civilengineer"
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	item_state = "rad_suit"
+	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 5, bio = 0, rad = 50)
+
+/obj/item/clothing/suit/gentlecoat
+	name = "gentle coat"
+	desc = "A soft coat."
+	icon_state = "gentlecoat"
+	item_state = "gentlecoat"
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	item_state = "bl_suit"
+
+/obj/item/clothing/suit/toggle/labcoat/emt/ems
+	name = "EM'S jacket"
+	desc = "A dark blue, martian-pattern, EMS jacket. It sports high-visibility reflective stripes and a star of life on the back."
+	icon_state = "ems_jacket"
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'
+
+/obj/item/clothing/suit/toggle/bomber
+	name = "bomber jacket"
+	desc = "A thick, well-worn WW2 leather bomber jacket."
+	icon_state = "bomber"
+	item_state = "bomber"
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	allowed = list(/obj/item/device/flashlight,/obj/item/weapon/tank/internals/emergency_oxygen,/obj/item/toy,/obj/item/weapon/storage/fancy/cigarettes,/obj/item/weapon/lighter)
+	body_parts_covered = CHEST|GROIN|ARMS
+	cold_protection = CHEST|GROIN|ARMS
+	min_cold_protection_temperature = FIRE_SUIT_MIN_TEMP_PROTECT
+
+/obj/item/clothing/suit/armor/hos/jensen
+	name = "armored trenchcoat"
+	desc = "A trenchcoat augmented with a special alloy for some protection and style."
+	icon_state = "jensencoat"
+	item_state = "jensencoat"
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'
+
+/obj/item/clothing/suit/forensics
+	name = "jacket"
+	desc = "A forensics technician jacket."
+	item_state = "det_suit"
+	icon_state = "forensics"
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	allowed = list(/obj/item/weapon/tank/internals/emergency_oxygen, /obj/item/device/flashlight,/obj/item/weapon/gun/energy,/obj/item/weapon/gun/projectile,/obj/item/ammo_casing,/obj/item/weapon/melee/baton,/obj/item/device/taperecorder)
+	armor = list(melee = 10, bullet = 10, laser = 15, energy = 10, bomb = 0, bio = 0, rad = 0)
+
+/obj/item/clothing/suit/forensics/long
+	name = "jacket"
+	desc = "A forensics technician jacket."
+	icon_state = "forensics_long"
+
+/obj/item/clothing/suit/rank/commissar
+	name = "Commissar tunic"
+	desc = "A stylish and protective tunic to give you foes fear while you serve the Emperor."
+	icon_state = "commissar"
+	item_state = "r_suit"
+	item_color = "commissar"
+	armor = list(melee = 10, bullet = 10, laser = 10,energy = 0, bomb = 0, bio = 0, rad = 0)
+	strip_delay = 60
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'
+
+/obj/item/clothing/suit/hooded/merser
+	name = "merser jacket"
+	desc = "Jacket with a white shirt"
+	icon_state = "merser_jacket"
+	item_state = "bl_suit"
+	item_color = "merser_jacket"
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	hooded = 1
+	togglename = "Toggle Hood"
+	hoodtype = /obj/item/clothing/head/merser
+
+/obj/item/clothing/head/merser
+	name = "merser jacket hood"
+	icon_state = "merser_hood"
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	body_parts_covered = HEAD
+	flags = NODROP
+	flags_inv = HIDEHAIR|HIDEEARS
+
+/obj/item/clothing/suit/rank/russofurcoat
+	name = "military fur coat"
+	desc = "Warm adn authority coat, for these, who know, what need to do in war."
+	icon_state = "russofurcoat"
+	item_state = "bl_suit"
+	item_color = "russofurcoat"
+	armor = list(melee = 10, bullet = 15, laser = 15, energy = 5, bomb = 10, bio = 0, rad = 0)
+	strip_delay = 60
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	body_parts_covered = CHEST|GROIN|ARMS
+	cold_protection = CHEST|GROIN|ARMS
+	min_cold_protection_temperature = FIRE_SUIT_MIN_TEMP_PROTECT
