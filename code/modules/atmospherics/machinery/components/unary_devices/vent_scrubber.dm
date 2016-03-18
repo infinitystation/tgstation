@@ -20,7 +20,7 @@
 	var/scrub_Toxins = 0
 	var/scrub_N2O = 0
 
-	var/volume_rate = 200
+	var/volume_rate = 400
 	var/widenet = 0 //is this scrubber acting on the 3x3 area around it.
 	var/list/turf/simulated/adjacent_turfs = list()
 
