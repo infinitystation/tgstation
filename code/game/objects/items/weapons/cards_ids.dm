@@ -282,5 +282,4 @@ update_label("John Doe", "Clowny")
 	icon_state = "id"
 	item_state = "card-id"
 	assignment = "UAC Paratrooper"
-	registered_name = "Paratrooper"
 	access = list(access_syndicate)

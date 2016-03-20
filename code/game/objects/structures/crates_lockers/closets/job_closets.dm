@@ -158,6 +158,8 @@
 		new /obj/item/clothing/head/soft/sec(src)
 	for(var/i in 1 to 3)
 		new /obj/item/clothing/mask/bandana/blue(src)
+	for(var/i in 1 to 3)
+		new /obj/item/clothing/head/beret/sec/corporate
 	return
 
 /obj/structure/closet/wardrobe/cargotech

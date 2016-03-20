@@ -118,6 +118,99 @@
 /turf/simulated/floor/plasteel/terror/darkred/corner
 	icon_state = "darkredcorners_t"
 
+//Necropolis//
+
+/turf/simulated/floor/plasteel/terror/necro
+	baseturf = /turf/simulated/floor/plating/asteroid/basalt/lava_land_surface
+	icon = 'icons/turf/floors.dmi'
+
+/turf/simulated/floor/plasteel/terror/necro/freezer
+	icon_state = "freezerfloor"
+
+/turf/simulated/floor/plasteel/terror/necro/bar
+	icon_state = "bar"
+
+/turf/simulated/floor/plasteel/terror/necro/darkvault
+	icon_state = "vault"
+
+/turf/simulated/floor/plasteel/terror/necro/darkwarning
+	icon_state = "warndark"
+/turf/simulated/floor/plasteel/terror/necro/darkwarning/corner
+	icon_state = "warndarkcorners"
+
+/turf/simulated/floor/plasteel/terror/necro/warning
+	icon_state = "warning"
+/turf/simulated/floor/plasteel/terror/necro/warning/corner
+	icon_state = "warningcorners"
+
+/turf/simulated/floor/plasteel/terror/necro/black
+	icon_state = "dark"
+	icon = 'icons/turf/infinity.dmi'
+
+/turf/simulated/floor/plasteel/terror/necro/darkyellow
+	icon_state = "darkbrownfull"
+/turf/simulated/floor/plasteel/terror/necro/darkyellow/side
+	icon_state = "darkbrown"
+/turf/simulated/floor/plasteel/terror/necro/darkyellow/corner
+	icon_state = "darkbrowncorners"
+
+/turf/simulated/floor/plasteel/terror/necro/brown
+	icon_state = "brown"
+/turf/simulated/floor/plasteel/terror/necro/brown/corner
+	icon_state = "browncorner"
+
+/turf/simulated/wall/lavaland
+	baseturf = /turf/simulated/floor/plating/asteroid/basalt/lava_land_surface
+
+/turf/simulated/wall/r_wall/lavaland
+	baseturf = /turf/simulated/floor/plating/asteroid/basalt/lava_land_surface
+
+/turf/simulated/floor/plating/lavaland
+	baseturf = /turf/simulated/floor/plating/asteroid/basalt/lava_land_surface
+
+/turf/simulated/floor/plasteel/terror/necro/blackvault
+	icon_state = "vault"
+	icon = 'icons/turf/infinity.dmi'
+/turf/simulated/floor/plasteel/terror/necro/blackvault/corner
+	icon_state = "vaultcorner"
+
+/turf/simulated/floor/plasteel/terror/necro/carpet
+	name = "Carpet"
+	icon = 'icons/turf/floors/carpet.dmi'
+	icon_state = "carpet"
+	floor_tile = /obj/item/stack/tile/carpet
+
+/turf/simulated/floor/plasteel/terror/necro/plating
+	name = "plating"
+	icon_state = "plating"
+
+/turf/simulated/floor/plasteel/terror/necro/whiteblue
+	icon_state = "whitebluefull"
+/turf/simulated/floor/plasteel/terror/necro/whiteblue/side
+	icon_state = "whiteblue"
+/turf/simulated/floor/plasteel/terror/necro/whiteblue/corner
+	icon_state = "whitebluecorner"
+
+/turf/simulated/floor/plasteel/terror/necro/white
+	icon_state = "white"
+
+
+/turf/simulated/floor/plasteel/terror/necro/stairs
+	icon_state = "ramptop"
+	icon = 'icons/turf/terror.dmi'
+/turf/simulated/floor/plasteel/terror/necro/stairs/bottom
+	icon_state = "rampbottom"
+/turf/simulated/floor/plasteel/terror/necro/stairs/top
+	icon_state = "ramptop"
+
+/turf/simulated/floor/plasteel/terror/necro/freezer
+	icon_state = "freezerfloor"
+
+/turf/simulated/floor/plasteel/terror/necro/wood
+	icon_state = "wood"
+	floor_tile = /obj/item/stack/tile/wood
+	broken_states = list("wood-broken", "wood-broken2", "wood-broken3", "wood-broken4", "wood-broken5", "wood-broken6", "wood-broken7")
+
 //City floors//
 
 /turf/simulated/floor/plasteel/terror/city
@@ -128,6 +221,7 @@
 	icon_state = "warndark"
 /turf/simulated/floor/plasteel/terror/city/darkwarning/corner
 	icon_state = "warndarkcorners"
+
 
 /turf/simulated/floor/plasteel/black
 	icon_state = "dark"

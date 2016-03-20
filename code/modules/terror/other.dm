@@ -115,6 +115,26 @@
 	always_up = 1
 	faction = "neutral"
 
+/datum/outfit/paratrooper
+	name = "UAC Paratrooper"
+	ears = /obj/item/device/radio/headset/syndicate/alt
+	uniform = /obj/item/clothing/under/uac
+	suit = /obj/item/clothing/suit/armor/uac
+	shoes = /obj/item/clothing/shoes/combat/uac
+	gloves = /obj/item/clothing/gloves/combat
+	id = /obj/item/weapon/card/id/uac
+	belt = /obj/item/device/flashlight
+	l_pocket = /obj/item/ammo_box/magazine/a646
+	r_pocket = /obj/item/ammo_box/magazine/a646
+	r_hand = /obj/item/weapon/gun/projectile/automatic/mg88
+
+
+/obj/structure/sign/nanotrasen
+	name = "Nanotrasen Emblem"
+	desc = "Nanotrasen Emblem - a two litters front of blue background."
+	icon_state = "NT"
+	icon = 'icons/obj/infinity_decals.dmi'
+
 /obj/structure/sign/directions/dock
 	name = "docking port 1"
 	desc = "A direction sign, pointing out which way the Docking port 1 is."
@@ -125,16 +145,25 @@
 	name = "docking port 2"
 	desc = "A direction sign, pointing out which way the Docking port 2 is."
 	icon_state = "dock_2"
-	icon = 'icons/obj/infinity_decals.dmi'
 
 /obj/structure/sign/directions/dock/three
 	name = "docking port 3"
 	desc = "A direction sign, pointing out which way the Docking port 3 is."
 	icon_state = "dock_3"
-	icon = 'icons/obj/infinity_decals.dmi'
 
 /obj/structure/sign/directions/dock/four
 	name = "docking port 4"
 	desc = "A direction sign, pointing out which way the Docking port 4 is."
 	icon_state = "dock_4"
-	icon = 'icons/obj/infinity_decals.dmi'
+
+/mob/living/simple_animal/crab/Groffee
+	name = "Groffee"
+	real_name = "Groffee"
+	desc = "It's Groffee, the lava-crab!"
+	icon_state = "evilcrab"
+	icon_living = "evilcrab"
+	icon_dead = "evilcrab_dead"
+	response_help  = "pets"
+	response_disarm = "gently pushes aside"
+	response_harm   = "stomps"
+	gold_core_spawnable = 0

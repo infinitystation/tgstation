@@ -23,9 +23,9 @@ z7 = empty space
         #include "map_files\TerrorStation\z2t.dmm"
         #include "map_files\TerrorStation\z3.dmm"
         #include "map_files\TerrorStation\z4.dmm"
-        #include "map_files\TerrorStation\z5.dmm"
-        #include "map_files\generic\z6.dmm"
-        #include "map_files\generic\z7.dmm"
+        #include "map_files\TerrorStation\lavaland_t.dmm"
+        #include "map_files\TerrorStation\z6.dmm"
+        #include "map_files\TerrorStation\z7.dmm"
         //#include "map_files\TerrorStation\z8.dmm"  //Polar station
         //#include "map_files\TerrorStation\z8train.dmm" //Train
         //#include "map_files\monorail_ivent\monorail.dmm" //Monorail Maks750rus

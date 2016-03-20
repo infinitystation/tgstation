@@ -696,6 +696,9 @@ var/global/list/rockTurfEdgeCache
 	environment_type = "basalt"
 	turf_type = /turf/simulated/floor/plating/asteroid/basalt/lava_land_surface
 	baseturf = /turf/simulated/chasm/straight_down/lava_land_surface
+	var/drop_x = 193
+	var/drop_y = 163
+	var/drop_z = 5
 
 /turf/simulated/mineral/random/volcanic
 	environment_type = "basalt"

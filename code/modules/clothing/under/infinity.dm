@@ -271,7 +271,7 @@
 	icon = 'icons/obj/clothing/infinity_work.dmi'
 	can_adjust = 0
 
-/obj/item/clothing/under/UACcamo
+/obj/item/clothing/under/uac
 	name = "trooper uniform"
 	desc = "A UAC Trooper uniform. Probably not the best choice for a space station."
 	worn_icon = 'icons/mob/uac/uniform.dmi'
