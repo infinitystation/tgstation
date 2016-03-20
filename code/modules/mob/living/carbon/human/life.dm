@@ -20,6 +20,7 @@
 #define COLD_GAS_DAMAGE_LEVEL_2 1.5 //Amount of damage applied when the current breath's temperature passes the 200K point
 #define COLD_GAS_DAMAGE_LEVEL_3 3 //Amount of damage applied when the current breath's temperature passes the 120K point
 
+#define BRAIN_DAMAGE_FILE "brain_damage_lines.json"
 
 /mob/living/carbon/human/Life()
 	set invisibility = 0
@@ -71,17 +72,10 @@
 
 	if (getBrainLoss() >= 60 && stat != DEAD)
 		if (prob(3))
-			switch(pick(1,2,3,4,5))
-				if(1)
-					say(pick("я пони!! юхууу!! Ќяяяяяя!!", "а что если  апитана накормить плазмой?", " апитан гандон", "[pick("", "этот придурок предатель!")] [pick("джиорж", "гирогий", "гоша", "джоржма")] [pick("абузы", "арбужи", "армузы")] напал на меня памагитиии!!!", "вы можете дать мне [pick("телекинез","способность ’алка","эппилапсию")]?", "я не болен", "самые вкусные бутерброды из ботанистов>", "я хочу погладить тех обезьянок", "прекрати нападать на меня!!!", "прекрати это!"))
-				if(2)
-					say(pick("шындыр-мындыр лапупындыр","гребаные вишенки!", "возьми меня", "моЄ лицо", "давай потихоньку!", "вааааа!!!", "красные вагончики быстрее", "за императора", "смешной котик", "к чЄрту гномиков, чувак, к черту их", "морские котикиииии", "тмор твабия это хмур бур пур", "жизнь как текстура плачущего человечка", "любовь может убить", "ѕј ≈“» »»»!!"))
-				if(3)
-					say(pick("ќ“ќ…ƒ» ќ“ ћ≈Ќя, „≈–“ќ¬ ”Ѕ»…÷ј!!!!", "“ы ебанный аутист!", ";—ѕј—»“≈, ў»“ №ё–»“» ѕџ“ј≈“—я ћ≈Ќя ”Ѕ»“№!!!", "“чо за херн€?????", "¬џ«¬... Ўј““Ћј!!!!!", "ќѕј—Ќќ—“№ —»Ќ√”Ћя–Ќќ—“№ ¬.... ѕор€дке, ха-ха-ха.", "»» ѕравило 22 ќткрой дверь", "„“ќ «ј „≈–“, “џ —≈–№≈«Ќќ „“ќ-Ћ»?", "ѕќЎ≈Ћ Ќј’≈≈≈–!", "’рум-хрум ќЅ¬ќ¬ќЅќЅќЅќ", ";;Ќј Ё“ќ… —“јЌ÷»» Ќ≈“ ¬џ∆»¬Ў»’", "„то за мудаки р€дом со мной?"))
-				if(4)
-					emote("drool")
-				if(5)
-					say(pick("REMOVE SINGULARITY", "INSTLL TEG", "TURBIN IS BEST ENGIENE", "SOLIRS CAN POWER THE HOLE STATION ANEWAY", "parasteng was best", "Tajaran has warrrres, if you have coin"))
+			if(prob(25))
+				emote("drool")
+			else
+				say(pick_list_replacements(BRAIN_DAMAGE_FILE, "brain_damage"))
 
 
 /mob/living/carbon/human/handle_mutations_and_radiation()
