@@ -236,7 +236,7 @@
 	new /obj/item/clothing/glasses/sunglasses(src)
 	new /obj/item/clothing/head/helmet/trooper(src)
 	new /obj/item/clothing/mask/gas/sechailer/swat(src)
-	new /obj/item/clothing/suit/armor/UACtrooperArmor(src)
+	new /obj/item/clothing/suit/armor/uac(src)
 	new /obj/item/weapon/gun/projectile/automatic/mg88(src)
 	new /obj/item/ammo_box/magazine/a646(src)
 	new /obj/item/ammo_box/magazine/a646(src)

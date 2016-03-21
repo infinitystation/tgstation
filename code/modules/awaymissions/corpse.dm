@@ -240,8 +240,8 @@
 /obj/effect/mob_spawn/human/trooper/bravo
 	name = "UAC Trooper"
 	uniform = /obj/item/clothing/under/pants/camo
-	suit = /obj/item/clothing/suit/armor/UACtrooperArmor
-	shoes = /obj/item/clothing/shoes/combat/UACtrooperBoots
+	suit = /obj/item/clothing/suit/armor/uac
+	shoes = /obj/item/clothing/shoes/combat/uac
 	gloves = /obj/item/clothing/gloves/combat
 	radio = /obj/item/device/radio/headset
 	mask = /obj/item/clothing/mask/gas
@@ -254,8 +254,8 @@
 /obj/effect/mob_spawn/human/trooper/alpha
 	name = "UAC Trooper"
 	uniform = /obj/item/clothing/under/pants/camo
-	suit = /obj/item/clothing/suit/armor/UACtrooperArmor
-	shoes = /obj/item/clothing/shoes/combat/UACtrooperBoots
+	suit = /obj/item/clothing/suit/armor/uac
+	shoes = /obj/item/clothing/shoes/combat/uac
 	gloves = /obj/item/clothing/gloves/combat
 	radio = /obj/item/device/radio/headset
 	mask = /obj/item/clothing/mask/gas
@@ -268,7 +268,7 @@
 /obj/effect/mob_spawn/human/guard
 	name = "Guard Soldier"
 	uniform = /obj/item/clothing/under/syndicate/tacticool
-	suit = /obj/item/clothing/suit/armor/UACtrooperArmor
+	suit = /obj/item/clothing/suit/armor/uac
 	shoes = /obj/item/clothing/shoes/jackboots
 	radio = /obj/item/device/radio/headset
 	helmet = /obj/item/clothing/head/helmet/guard
@@ -276,7 +276,7 @@
 /obj/effect/mob_spawn/human/guard/mask
 	name = "Guard Soldier"
 	uniform = /obj/item/clothing/under/syndicate/tacticool
-	suit = /obj/item/clothing/suit/armor/UACtrooperArmor
+	suit = /obj/item/clothing/suit/armor/uac
 	shoes = /obj/item/clothing/shoes/jackboots
 	radio = /obj/item/device/radio/headset
 	mask = /obj/item/clothing/mask/gas/sechailer/swat
