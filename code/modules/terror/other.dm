@@ -41,29 +41,6 @@
 	desc = "A small floor lighting fixture."
 	light_type = /obj/item/weapon/light/bulb
 
-
-
-/obj/machinery/computer/shuttle/remote_controlled_pod
-	name = "Remote Controlled Pod One"
-	desc = "Used to control the White ShipRemote Controlled Pod."
-	shuttleId = "whiteship"
-	possible_destinations = "whiteship_away;whiteship_home;whiteship_z4"
-	circuit = /obj/machinery/computer/shuttle/remote_controlled_pod
-
-/obj/machinery/computer/shuttle/remote_controlled_pod/two
-	name = "Remote Controlled Pod Two"
-	shuttleId = "whiteship"
-	possible_destinations = "whiteship_away;whiteship_home;whiteship_z4"
-	circuit = /obj/item/weapon/circuitboard/remote_controlled_pod/two
-
-/obj/item/weapon/circuitboard/remote_controlled_pod
-	name = "circuit board (Remote Controlled Pod One)"
-	build_path = /obj/machinery/computer/shuttle/remote_controlled_pod
-
-/obj/item/weapon/circuitboard/remote_controlled_pod/two
-	name = "circuit board (Remote Controlled Pod Two)"
-	build_path = /obj/machinery/computer/shuttle/remote_controlled_pod/two
-
 /obj/item/device/shadowcloak/ops
 	name = "stealth ops cloaker belt"
 	icon_state = "assaultbelt"
@@ -115,6 +92,16 @@
 	always_up = 1
 	faction = "neutral"
 
+/datum/job/paratrooper
+	title = "UAC paratrooper"
+	department_head = list("uac")
+	department_flag = ENGSEC
+	faction = "uac"
+	total_positions = 1
+	spawn_positions = 1
+	supervisors = "United Aerospace Space's paratrooper"
+	selection_color = "#ccccff"
+
 /datum/outfit/paratrooper
 	name = "UAC Paratrooper"
 	ears = /obj/item/device/radio/headset/syndicate/alt
@@ -122,12 +109,12 @@
 	suit = /obj/item/clothing/suit/armor/uac
 	shoes = /obj/item/clothing/shoes/combat/uac
 	gloves = /obj/item/clothing/gloves/combat
-	id = /obj/item/weapon/card/id/uac
-	belt = /obj/item/device/flashlight
+	head = /obj/item/clothing/head/helmet/trooper
+	id = /obj/item/weapon/card/id/silver
+	belt = /obj/item/device/flashlight/seclite
 	l_pocket = /obj/item/ammo_box/magazine/a646
 	r_pocket = /obj/item/ammo_box/magazine/a646
 	r_hand = /obj/item/weapon/gun/projectile/automatic/mg88
-
 
 /obj/structure/sign/nanotrasen
 	name = "Nanotrasen Emblem"
@@ -167,3 +154,7 @@
 	response_disarm = "gently pushes aside"
 	response_harm   = "stomps"
 	gold_core_spawnable = 0
+
+/obj/item/projectile/temp/Thot
+	name = "heat beam"
+	temperature = 600
