@@ -628,6 +628,7 @@
 	throw_message = "bounces harmlessly off of"
 	melee_damage_lower = 15
 	melee_damage_upper = 15
+	projectilesound = 'sound/hallucinations/growl1.ogg'
 	attacktext = "stares into the soul of"
 	a_intent = "harm"
 	speak_emote = list("telepathically cries")
