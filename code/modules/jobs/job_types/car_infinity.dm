@@ -5,20 +5,18 @@
 	department_head = list("Centcom")
 	department_flag = ENGSEC
 	faction = "Station"
-	total_positions = 2
+	total_positions = 1
 	spawn_positions = 0
 	supervisors = "Nanotrasen officials and Space law"
 	selection_color = "#dddddd"
 	req_admin_notify = 1
-	minimal_player_age = 21
+	minimal_player_age = 30
 
 	outfit = /datum/outfit/job/ifa
 
-	access = list(access_security, access_sec_doors, access_brig, access_maint_tunnels, access_all_personal_lockers,
-			            access_research, access_engine, access_mining, access_medical, access_construction, access_mailsorting,
+	access = list(access_security, access_sec_doors, access_brig, access_maint_tunnels, access_construction,
 			            access_heads, access_RC_announce, access_keycard_auth, access_gateway)
-	minimal_access = list(access_security, access_sec_doors, access_brig, access_maint_tunnels, access_all_personal_lockers,
-			            access_research, access_engine, access_mining, access_medical, access_construction, access_mailsorting,
+	access = list(access_security, access_sec_doors, access_brig, access_maint_tunnels, access_construction,
 			            access_heads, access_RC_announce, access_keycard_auth, access_gateway)
 
 /datum/outfit/job/ifa
@@ -32,7 +30,7 @@
 	suit = /obj/item/clothing/suit/toggle/lawyer/black
 	shoes = /obj/item/clothing/shoes/sneakers/brown
 	l_hand = /obj/item/weapon/storage/briefcase
-	backpack_contents = list(/obj/item/weapon/melee/classic_baton/telescopic=1, /obj/item/device/assembly/flash/handheld=1)
+	backpack_contents = list(/obj/item/device/assembly/flash/handheld=1)
 
 /datum/outfit/job/ifa/post_equip(mob/living/carbon/human/H)
 	..()
@@ -53,7 +51,7 @@
 	name = "\proper the internal affairs agent's encryption key"
 	desc = "An encryption key for a radio headset.  Channels are as follows: :c - command, :s - security."
 	icon_state = "cap_cypherkey"
-	channels = list("Command" = 1, "Security" = 1)
+	channels = list("Command" = 1)
 
 
 
