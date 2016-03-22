@@ -7,10 +7,6 @@
 /area/mine/bravo
 	name = "Post Bravo"
 
-/area/mine/break_romm
-	name = "Mine station break room"
-	icon_state = "yellow"
-
 /area/engine/break_room
 	name = "Engineering Break Room"
 	icon_state = "yellow"
@@ -87,10 +83,14 @@
 /area/mercenaries/base/coridor_4
 	name = "Mercenariess area"
 
+/area/mine/lab
+	name = "Field Laboratory"
+	icon_state = "medresearch"
 
-
-/area/mercenaries/base
-
+/area/mine/shelter
+	name = "lavaland shelter"
+	requires_power = 0
+	icon_state = "green"
 
 ///Flors///
 
@@ -111,7 +111,7 @@
 /turf/simulated/floor/plasteel/terror/whitered/corner
 	icon_state = "whiteredcorner_t"
 
-/turf/simulated/floor/plasteel/terror/darkred/
+/turf/simulated/floor/plasteel/terror/darkred
 	icon_state = "darkredfull_t"
 /turf/simulated/floor/plasteel/terror/darkred/side
 	icon_state = "darkred_t"
@@ -141,11 +141,27 @@
 /turf/simulated/floor/plasteel/terror/necro/warning
 	icon_state = "warning"
 /turf/simulated/floor/plasteel/terror/necro/warning/corner
-	icon_state = "warningcorners"
+	icon_state = "warningcorner"
+
+/turf/simulated/floor/plasteel/terror/necro/warnwhite
+	icon_state = "warnwhite"
+/turf/simulated/floor/plasteel/terror/necro/warnwhite/corner
+	icon_state = "warnwhitecorner"
+
+/turf/simulated/floor/plasteel/terror/necro/whitepurple
+	icon_state = "whitepurplefull"
+/turf/simulated/floor/plasteel/terror/necro/whitepurple/side
+	icon_state = "whitepurple"
+/turf/simulated/floor/plasteel/terror/necro/whitepurple/corner
+	icon_state = "whitepurplecorner"
 
 /turf/simulated/floor/plasteel/terror/necro/black
 	icon_state = "dark"
 	icon = 'icons/turf/infinity.dmi'
+/turf/simulated/floor/plasteel/terror/necro/black/outdoor
+	oxygen = 14
+	nitrogen = 23
+	temperature = 300
 
 /turf/simulated/floor/plasteel/terror/necro/darkyellow
 	icon_state = "darkbrownfull"
@@ -159,14 +175,13 @@
 /turf/simulated/floor/plasteel/terror/necro/brown/corner
 	icon_state = "browncorner"
 
-/turf/simulated/wall/lavaland
-	baseturf = /turf/simulated/floor/plating/asteroid/basalt/lava_land_surface
-
-/turf/simulated/wall/r_wall/lavaland
-	baseturf = /turf/simulated/floor/plating/asteroid/basalt/lava_land_surface
-
 /turf/simulated/floor/plating/lavaland
 	baseturf = /turf/simulated/floor/plating/asteroid/basalt/lava_land_surface
+
+/turf/simulated/floor/plating/lavaland/outdoor
+	oxygen = 14
+	nitrogen = 23
+	temperature = 300
 
 /turf/simulated/floor/plasteel/terror/necro/blackvault
 	icon_state = "vault"
@@ -174,15 +189,8 @@
 /turf/simulated/floor/plasteel/terror/necro/blackvault/corner
 	icon_state = "vaultcorner"
 
-/turf/simulated/floor/plasteel/terror/necro/carpet
-	name = "Carpet"
-	icon = 'icons/turf/floors/carpet.dmi'
-	icon_state = "carpet"
-	floor_tile = /obj/item/stack/tile/carpet
-
-/turf/simulated/floor/plasteel/terror/necro/plating
-	name = "plating"
-	icon_state = "plating"
+/turf/simulated/floor/carpet/necro
+	baseturf = /turf/simulated/floor/plating/lava/smooth/lava_land_surface
 
 /turf/simulated/floor/plasteel/terror/necro/whiteblue
 	icon_state = "whitebluefull"
@@ -193,7 +201,6 @@
 
 /turf/simulated/floor/plasteel/terror/necro/white
 	icon_state = "white"
-
 
 /turf/simulated/floor/plasteel/terror/necro/stairs
 	icon_state = "ramptop"
@@ -210,6 +217,7 @@
 	icon_state = "wood"
 	floor_tile = /obj/item/stack/tile/wood
 	broken_states = list("wood-broken", "wood-broken2", "wood-broken3", "wood-broken4", "wood-broken5", "wood-broken6", "wood-broken7")
+
 
 //City floors//
 

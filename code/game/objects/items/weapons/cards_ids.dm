@@ -278,8 +278,7 @@ update_label("John Doe", "Clowny")
 
 /obj/item/weapon/card/id/uac
 	name = "UAC ID"
-	desc = "A card used to provide ID and determine access"
-	icon_state = "id"
+	icon_state = "data"
 	item_state = "card-id"
 	assignment = "UAC Paratrooper"
 	access = list(access_syndicate)
