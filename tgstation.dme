@@ -1170,6 +1170,7 @@
 #include "code\modules\jobs\whitelist.dm"
 #include "code\modules\jobs\job_types\assistant.dm"
 #include "code\modules\jobs\job_types\captain.dm"
+#include "code\modules\jobs\job_types\car_infinity.dm"
 #include "code\modules\jobs\job_types\cargo_service.dm"
 #include "code\modules\jobs\job_types\civilian.dm"
 #include "code\modules\jobs\job_types\civilian_chaplain.dm"
