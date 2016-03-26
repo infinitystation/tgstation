@@ -51,6 +51,8 @@ var/datum/subsystem/ticker/ticker
 
 	var/maprotatechecked = 0
 
+	var/list/reports = list()
+
 
 /datum/subsystem/ticker/New()
 	NEW_SS_GLOBAL(ticker)

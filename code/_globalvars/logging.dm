@@ -13,5 +13,6 @@ var/list/OOClog = list()
 var/list/adminlog = list()
 
 var/job_subsystem_debug = null
+var/reports_log = null
 
 var/list/active_turfs_startlist = list()
