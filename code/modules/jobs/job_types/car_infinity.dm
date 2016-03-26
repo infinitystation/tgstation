@@ -16,7 +16,7 @@
 
 	access = list(access_security, access_sec_doors, access_brig, access_maint_tunnels, access_construction,
 			            access_heads, access_RC_announce, access_keycard_auth, access_gateway)
-	access = list(access_security, access_sec_doors, access_brig, access_maint_tunnels, access_construction,
+	minimal_access = list(access_security, access_sec_doors, access_brig, access_maint_tunnels, access_construction,
 			            access_heads, access_RC_announce, access_keycard_auth, access_gateway)
 
 /datum/outfit/job/ifa
