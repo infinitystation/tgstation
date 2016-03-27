@@ -171,7 +171,7 @@
 
 /datum/supply_pack/security/wall_flash
 	name = "Wall-Mounted Flash Crate"
-	cost = 10
+	cost = 1000
 	contains = list(/obj/item/weapon/storage/box/wall_flash,
 					/obj/item/weapon/storage/box/wall_flash,
 					/obj/item/weapon/storage/box/wall_flash,
@@ -1360,7 +1360,7 @@
 					/obj/item/clothing/head/helmet/space/eva,
 					/obj/item/clothing/mask/breath,
 					/obj/item/weapon/tank/internals/oxygen)
-	cost = 20
+	cost = 2000
 	crate_name = "EVA space suit crate"
 	access = access_eva
 
@@ -1369,7 +1369,7 @@
 	contains = list(/obj/item/clothing/suit/space/hardsuit/engine,
 					/obj/item/clothing/mask/breath,
 					/obj/item/weapon/tank/internals/oxygen)
-	cost = 20
+	cost = 2000
 	crate_name = "engineering space suit crate"
 	access = access_engine_equip
 
@@ -1378,7 +1378,7 @@
 	contains = list(/obj/item/clothing/suit/space/hardsuit/engine/atmos,
 					/obj/item/clothing/mask/breath,
 					/obj/item/weapon/tank/internals/oxygen)
-	cost = 20
+	cost = 2000
 	crate_name = "atmos space suit crate"
 	access = access_atmospherics
 
@@ -1387,7 +1387,7 @@
 	contains = list(/obj/item/clothing/suit/space/hardsuit/mining,
 					/obj/item/clothing/mask/breath,
 					/obj/item/weapon/tank/internals/oxygen)
-	cost = 20
+	cost = 2000
 	crate_name = "mining space suit crate"
 	access = access_mining
 
@@ -1396,7 +1396,7 @@
 	contains = list(/obj/item/clothing/suit/space/hardsuit/medical,
 					/obj/item/clothing/mask/breath,
 					/obj/item/weapon/tank/internals/oxygen)
-	cost = 20
+	cost = 2000
 	crate_name = "medical space suit crate"
 	access = access_medical
 
@@ -1405,7 +1405,7 @@
 	contains = list(/obj/item/clothing/suit/space/hardsuit/security,
 					/obj/item/clothing/mask/breath,
 					/obj/item/weapon/tank/internals/oxygen)
-	cost = 20
+	cost = 2000
 	crate_name = "security space suit crate"
 	access = access_security
 
@@ -1414,7 +1414,7 @@
 	contains = list(/obj/item/clothing/suit/space/hardsuit/syndi,
 					/obj/item/clothing/mask/breath,
 					/obj/item/weapon/tank/internals/oxygen)
-	cost = 100
+	cost = 10000
 	crate_type = /obj/structure/closet/crate
 	crate_name = "syndicate space suit crate"
 	hidden = 1

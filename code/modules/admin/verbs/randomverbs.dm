@@ -472,14 +472,20 @@ Traitors and the like can also be revived with the previous role mostly intact.
 	if(!holder)
 		src << "Only administrators may use this command."
 		return
-	var/input = input(usr, "Please enter anything you want. Anything. Serious.", "What?", "") as message|null
-	if(!input)
-		return
+	var/input
 
 	var/confirm = alert(src, "Do you want to announce the contents of the report to the crew?", "Announce", "Yes", "No")
 	if(confirm == "Yes")
-		priority_announce(input, null, 'sound/AI/commandreport.ogg')
+		input = input(usr, "Please enter anything you want. Anything. Serious.", "What?", "") as message|null
+		if(!input)
+			return
+		priority_announce(sanitize_a0(input), null, 'sound/AI/commandreport.ogg')
+		input = sanitize_a2u(input)
 	else
+		input = input(usr, "Please enter anything you want. Anything. Serious.", "What?", "") as message|null
+		if(!input)
+			return
+		input = parsepencode(input)
 		priority_announce("A report has been downloaded and printed out at all communications consoles.", "Incoming Classified Message", 'sound/AI/commandreport.ogg')
 
 	print_command_report(input,"[confirm=="Yes" ? "" : "Classified "][command_name()] Update")
@@ -1004,7 +1010,7 @@ var/list/datum/outfit/custom_outfits = list() //Admin created outfits
 	for(var/datum/atom_hud/H in huds)
 		if(istype(H, /datum/atom_hud/antag) || istype(H, /datum/atom_hud/data/human/security/advanced))
 			(adding_hud) ? H.add_hud_to(usr) : H.remove_hud_from(usr)
-	
+
 	for(var/datum/gang/G in ticker.mode.gangs)
 		var/datum/atom_hud/antag/H = G.ganghud
 		(adding_hud) ? H.add_hud_to(usr) : H.remove_hud_from(usr)
