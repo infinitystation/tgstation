@@ -115,7 +115,7 @@ var/datum/subsystem/job/SSjob
 		if(istype(job, GetJob("Assistant"))) // We don't want to give him assistant, that's boring!
 			continue
 
-		if(job in command_positions) //If you want a command position, select it!
+		if(job.title in command_positions) //If you want a command position, select it!
 			continue
 
 		if(jobban_isbanned(player, job.title))
@@ -136,8 +136,6 @@ var/datum/subsystem/job/SSjob
 
 
 		if((job.current_positions < job.spawn_positions) || job.spawn_positions == -1)
-			if(job in command_positions) //If you want a command position, select it!
-				continue
 			Debug("GRJ Random job given, Player: [player], Job: [job]")
 			AssignRole(player, job.title)
 			unassigned -= player

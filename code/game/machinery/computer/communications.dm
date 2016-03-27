@@ -31,10 +31,13 @@ var/const/CALL_SHUTTLE_REASON_LENGTH = 12
 	var/const/STATE_ALERT_LEVEL = 8
 	var/const/STATE_CONFIRM_LEVEL = 9
 	var/const/STATE_TOGGLE_EMERGENCY = 10
+	var/const/STATE_REPORT = 11
 
 	var/status_display_freq = "1435"
 	var/stat_msg1
 	var/stat_msg2
+
+	var/obj/item/weapon/paper/paper
 
 
 /obj/machinery/computer/communications/New()
@@ -166,7 +169,8 @@ var/const/CALL_SHUTTLE_REASON_LENGTH = 12
 			state = STATE_CONFIRM_LEVEL
 		if("changeseclevel")
 			state = STATE_ALERT_LEVEL
-
+		if("set_report")
+			src.state = STATE_REPORT
 		if("emergencyaccess")
 			state = STATE_TOGGLE_EMERGENCY
 		if("enableemergency")
@@ -200,7 +204,7 @@ var/const/CALL_SHUTTLE_REASON_LENGTH = 12
 		// OMG CENTCOM LETTERHEAD
 		if("MessageCentcomm")
 			//if(src.authenticated==2)
-			if(CM.lastTimeUsed + 600 > world.time)
+			if(CM.lastTimeUsed + 100 > world.time)
 				usr << "Arrays recycling.  Please stand by."
 				return
 			var/input = stripped_input(usr, "Please choose a message to transmit to Centcom via quantum entanglement.  Please be aware that this process is very expensive, and abuse will lead to... termination.  Transmission does not guarantee a response.", "Send a message to Centcomm.", "")
@@ -215,7 +219,7 @@ var/const/CALL_SHUTTLE_REASON_LENGTH = 12
 		// OMG SYNDICATE ...LETTERHEAD
 		if("MessageSyndicate")
 			if(/*(src.authenticated==2) && */(src.emagged))
-				if(CM.lastTimeUsed + 600 > world.time)
+				if(CM.lastTimeUsed + 100 > world.time)
 					usr << "Arrays recycling.  Please stand by."
 					return
 				var/input = input(usr, "Please choose a message to transmit to \[ABNORMAL ROUTING COORDINATES\] via quantum entanglement.  Please be aware that this process is very expensive, and abuse will lead to... termination. Transmission does not guarantee a response.", "Send a message to /??????/.", "")
@@ -233,7 +237,7 @@ var/const/CALL_SHUTTLE_REASON_LENGTH = 12
 
 		if("nukerequest") //When there's no other way
 			if(src.authenticated==2)
-				if(CM.lastTimeUsed + 600 > world.time)
+				if(CM.lastTimeUsed + 100 > world.time)
 					usr << "Arrays recycling. Please stand by."
 					return
 				var/input = input(usr, "Please enter the reason for requesting the nuclear self-destruct codes. Misuse of the nuclear request system will not be tolerated under any circumstances.  Transmission does not guarantee a response.", "Self Destruct Code Request.","")
@@ -245,6 +249,24 @@ var/const/CALL_SHUTTLE_REASON_LENGTH = 12
 				priority_announce("The codes for the on-station nuclear self-destruct have been requested by [usr]. Confirmation or denial of this request will be sent shortly.", "Nuclear Self Destruct Codes Requested",'sound/AI/commandreport.ogg')
 				CM.lastTimeUsed = world.time
 
+		if("eject_paper")
+			paper.loc = src.loc
+			paper = null
+			usr << "Paper ejected"
+
+		if("send_paper")
+			var/mob/M = usr
+			var/obj/item/weapon/card/id/I = M.get_active_hand()
+			if(istype(I, /obj/item/device/pda))
+				var/obj/item/device/pda/pda = I
+				I = pda.id
+			if(I && istype(I))
+				if(paper)
+					send_paper()
+					paper.loc = src.loc
+					paper = null
+			else
+				usr << "<span class='warning'>You need to swipe your ID!</span>"
 
 		// AI interface
 		if("ai-main")
@@ -320,7 +342,7 @@ var/const/CALL_SHUTTLE_REASON_LENGTH = 12
 			src.aistate = STATE_DEFAULT
 		if("AI-MessageCentcomm")
 			//if(src.authenticated==2)
-			if(CM.lastTimeUsed + 600 > world.time)
+			if(CM.lastTimeUsed + 100 > world.time)
 				usr << "Arrays recycling.  Please stand by."
 				return
 			var/input = input(usr, "Please choose a message to transmit to Centcom via quantum entanglement.  Please be aware that this process is very expensive, and abuse will lead to... termination.  Transmission does not guarantee a response.", "Send a message to Centcomm.", "")
@@ -331,7 +353,7 @@ var/const/CALL_SHUTTLE_REASON_LENGTH = 12
 		// OMG SYNDICATE ...LETTERHEAD
 		if("AI-MessageSyndicate")
 			if(/*(src.authenticated==2) && */(src.emagged))
-				if(CM.lastTimeUsed + 600 > world.time)
+				if(CM.lastTimeUsed + 100 > world.time)
 					usr << "Arrays recycling.  Please stand by."
 					return
 				var/input = input(usr, "Please choose a message to transmit to \[ABNORMAL ROUTING COORDINATES\] via quantum entanglement.  Please be aware that this process is very expensive, and abuse will lead to... termination. Transmission does not guarantee a response.", "Send a message to /??????/.", "")
@@ -345,6 +367,13 @@ var/const/CALL_SHUTTLE_REASON_LENGTH = 12
 /obj/machinery/computer/communications/attackby(obj/I, mob/user, params)
 	if(istype(I, /obj/item/weapon/card/id))
 		attack_hand(user)
+	else if(istype(I, /obj/item/weapon/paper))
+		if(!user.drop_item())
+			return
+		var/obj/item/weapon/paper/P = I
+		P.loc = src
+		paper = P
+		user << "<span class='notice'>You inserted the [P.name].</span>"
 	else
 		..()
 	return
@@ -404,6 +433,7 @@ var/const/CALL_SHUTTLE_REASON_LENGTH = 12
 
 				dat += "<BR>\[ <A HREF='?src=\ref[src];operation=status'>Set Status Display</A> \]"
 				dat += "<BR>\[ <A HREF='?src=\ref[src];operation=changeseclevel'>Change Alert Level</A> \]"
+				dat += "<BR>\[ <A HREF='?src=\ref[src];operation=set_report'>Send Report to Centcom</A> \]"
 				if(src.emagged == 0)
 					dat += "<BR>\[ <A HREF='?src=\ref[src];operation=MessageCentcomm'>Send Message to Centcom</A> \]"
 				else
@@ -470,6 +500,9 @@ var/const/CALL_SHUTTLE_REASON_LENGTH = 12
 			else
 				dat += "<b>Emergency Maintenance Access is currently <font color='green'>DISABLED</font></b>"
 				dat += "<BR>Lift access restrictions on maintenance and external airlocks? <BR>\[ <A HREF='?src=\ref[src];operation=enableemergency'>OK</A> | <A HREF='?src=\ref[src];operation=viewmessage'>Cancel</A> \]"
+		if(STATE_REPORT)
+			dat += "<A HREF='?src=\ref[src];operation=eject_paper'>Eject Paper</A><BR>"
+			dat += "<A HREF='?src=\ref[src];operation=send_paper'>Swipe ID</A> to send report.<BR>"
 
 	dat += "<BR><BR>\[ [(src.state != STATE_DEFAULT) ? "<A HREF='?src=\ref[src];operation=main'>Main Menu</A> | " : ""]<A HREF='?src=\ref[user];mach_close=communications'>Close</A> \]"
 	//user << browse(dat, "window=communications;size=400x500")
@@ -611,7 +644,25 @@ var/const/CALL_SHUTTLE_REASON_LENGTH = 12
 	log_say("[key_name(user)] has made a priority announcement: [input]")
 	message_admins("[key_name_admin(user)] has made a priority announcement.")
 
-
+/obj/machinery/computer/communications/proc/send_paper()
+	if(!paper)
+		return
+	if(!istype(paper))
+		return
+	var/obj/item/weapon/circuitboard/communications/CM = circuit
+	if(CM.lastTimeUsed + 100 > world.time)
+		usr << "Arrays recycling.  Please stand by."
+		return
+	var/report_info = "<HTML><HEAD><TITLE>[paper.name]</TITLE></HEAD><BODY>Report Time: [worldtime2text()]<HR>[paper.info]<HR>[paper.stamps]</BODY></HTML>"
+	var/datum/report/R = new
+	R.info = report_info
+	R.title = paper.name
+	R.time = world.time
+	ticker.reports += R
+	reports_log << "\[[time_stamp()]]: Reported to Centcom by [key_name(usr)]<BR>[R.info]<BR>"
+	send_report(R, usr)
+	usr << "Report transmitted."
+	CM.lastTimeUsed = world.time
 
 /obj/machinery/computer/communications/proc/post_status(command, data1, data2)
 
@@ -632,7 +683,6 @@ var/const/CALL_SHUTTLE_REASON_LENGTH = 12
 			status_signal.data["picture_state"] = data1
 
 	frequency.post_signal(src, status_signal)
-
 
 /obj/machinery/computer/communications/Destroy()
 	shuttle_caller_list -= src

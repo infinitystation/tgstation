@@ -104,8 +104,8 @@
 	icon_state = "warden_corporate"
 	item_state = "bl_suit"
 	item_color = "warden_corporate"
-	icon = 'icons/obj/clothing/paradise.dmi'
-	worn_icon = 'icons/mob/paradise_clothes.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon = 'icons/obj/clothing/infinity_work.dmi'
 	can_adjust = 0
 	armor = list(melee = 10, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0)
 	alt_covers_chest = 1
@@ -116,8 +116,8 @@
 	icon_state = "sec_corporate"
 	item_state = "bl_suit"
 	item_color = "sec_corporate"
-	icon = 'icons/obj/clothing/paradise.dmi'
-	worn_icon = 'icons/mob/paradise_clothes.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon = 'icons/obj/clothing/infinity_work.dmi'
 	can_adjust = 0
 	armor = list(melee = 10, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0)
 	alt_covers_chest = 1
@@ -128,8 +128,8 @@
 	icon_state = "hos_corporate"
 	item_state = "bl_suit"
 	item_color = "hos_corporate"
-	icon = 'icons/obj/clothing/paradise.dmi'
-	worn_icon = 'icons/mob/paradise_clothes.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon = 'icons/obj/clothing/infinity_work.dmi'
 	can_adjust = 0
 	armor = list(melee = 10, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0)
 	alt_covers_chest = 1
@@ -271,7 +271,7 @@
 	icon = 'icons/obj/clothing/infinity_work.dmi'
 	can_adjust = 0
 
-/obj/item/clothing/under/UACcamo
+/obj/item/clothing/under/uac
 	name = "trooper uniform"
 	desc = "A UAC Trooper uniform. Probably not the best choice for a space station."
 	worn_icon = 'icons/mob/uac/uniform.dmi'
@@ -434,4 +434,207 @@
 	item_state = "bl_suit"
 	worn_icon = 'icons/mob/infinity_work.dmi'
 	icon = 'icons/obj/clothing/infinity_work.dmi'
+	can_adjust = 0
+
+/obj/item/clothing/under/black_jumpskirt
+	name = "black jumpskirt"
+	desc = "A black jumpskirt, Sol size 0."
+	icon_state = "black_jumpskirt"
+	item_state = "b_suit"
+	item_color = "black_jumpskirt"
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	fitted = FEMALE_UNIFORM_TOP
+	can_adjust = 0
+
+/obj/item/clothing/under/blazer
+	name = "blue blazer"
+	desc = "A bold but yet conservative outfit, red corduroys, navy blazer and a tie."
+	icon_state = "blue_blazer"
+	item_state = "b_suit"
+	item_color = "blue_blazer"
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	can_adjust = 0
+
+/obj/item/clothing/under/rank/medical/black
+	name = "medical scrubs"
+	desc = "It's made of a special fiber that provides minor protection against biohazards. This one is in black."
+	icon_state = "scrubsblack"
+	item_color = "scrubsblack"
+	item_state = "bl_suit"
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	can_adjust = 0
+
+/obj/item/clothing/under/rank/chemist/newchem
+	desc = "It's made of a special fiber which provides minor protection against biohazards."
+	name = "chemist's jumpsuit"
+	icon_state = "chemist_new"
+	item_color = "chemist_new"
+	item_state = "w_suit"
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	can_adjust = 0
+
+/obj/item/clothing/under/rank/scientist/newsci
+	name = "scientist's jumpsuit"
+	desc = "Made of a special fiber that gives special protection against biohazards and small explosions."
+	icon_state = "scientist_new"
+	item_color = "scientist_new"
+	item_state = "w_suit"
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	can_adjust = 0
+
+/obj/item/clothing/under/rank/geneticist/newgen
+	name = "geneticist's jumpsuit"
+	desc = "It's made of a special fiber which provides minor protection against biohazards."
+	icon_state = "geneticist_new"
+	item_color = "geneticist_new"
+	item_state = "w_suit"
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	can_adjust = 0
+
+/obj/item/clothing/under/rank/virologist/newvir
+	name = "virologist's jumpsuit"
+	desc = "Made of a special fiber that gives increased protection against biohazards."
+	icon_state = "virologist_new"
+	item_color = "virologist_new"
+	item_state = "w_suit"
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	can_adjust = 0
+
+/obj/item/clothing/under/dress_fire/red
+	name = "red flame dress"
+	desc = "A small black dress with red flames print on it."
+	icon_state = "red_fire"
+	item_color = "red_fire"
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+
+
+/obj/item/clothing/under/rank/roboticist/newrob
+	desc = "It's a slimming black jumpsuit with reinforced seams; great for industrial work."
+	name = "roboticist's jumpsuit"
+	icon_state = "robotics2"
+	item_state = "bl_suit"
+	item_color = "robotics2"
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	can_adjust = 0
+
+/obj/item/clothing/under/rank/psych
+	desc = "A turqouise turtleneck and a pair of dark blue slacks, belonging to a psychologist."
+	name = "psychologist's turtleneck"
+	icon_state = "psychturtle"
+	item_state = "b_suit"
+	item_color = "psychturtle"
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	can_adjust = 0
+
+/obj/item/clothing/under/cuttop
+	name = "grey cut top"
+	desc = "A grey shirt that has had the top cut low."
+	icon_state = "cuttop"
+	item_state = "gy_suit"
+	item_color = "cuttop"
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+
+/obj/item/clothing/under/cuttop/red
+	name = "red cut top"
+	desc = "A red shirt that has had the top cut low."
+	icon_state = "cuttop_red"
+	item_state = "r_suit"
+	item_color = "cuttop_red"
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+
+/obj/item/clothing/under/hireling
+	name = "rough clothes"
+	desc = "A rather ominous set of hard-worn clothes."
+	icon_state = "hireling_uniform"
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	item_state = "w_suit"
+	item_color = "hireling_uniform"
+	can_adjust = 0
+
+/obj/item/clothing/under/manager
+	name = "manager's uniform"
+	desc = "Smells faintly of existential despair."
+	icon_state = "middle_manager"
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	item_state = "w_suit"
+	item_color = "middle_manager"
+	can_adjust = 0
+
+/obj/item/clothing/under/pinstripe
+	name = "pinstripe suit"
+	desc = "Looking sharp."
+	icon_state = "pinstripe"
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	item_state = "w_suit"
+	item_color = "pinstripe"
+	can_adjust = 0
+
+/obj/item/clothing/under/children
+	name = "children shirt"
+	desc = "A small T-shirt with a symbol on the middle."
+	icon_state = "children_shirt"
+	item_color = "children_shirt"
+	item_state = "w_suit"
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	fitted = FEMALE_UNIFORM_TOP
+	can_adjust = 0
+
+/obj/item/clothing/under/gotsis1
+	name = "dark gotsis dress"
+	desc = "A dress, from nice twins. This is a long dark dress, with red lines."
+	icon_state = "gotsis_dress_1"
+	item_color = "gotsis_dress_1"
+	item_state = "bl_suit"
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	fitted = FEMALE_UNIFORM_TOP
+	can_adjust = 0
+
+/obj/item/clothing/under/gotsis2
+	name = "gotsis dress"
+	desc = "A dress from nice twins. This is a dark dress, with a worm pullover."
+	icon_state = "gotsis_dress_2"
+	item_color = "gotsis_dress_2"
+	item_state = "bl_suit"
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	fitted = FEMALE_UNIFORM_TOP
+	can_adjust = 0
+
+/obj/item/clothing/under/stripper
+	name = "pink stripper suit"
+	desc = "Kinky uniform for proffesional strippers."
+	icon_state = "stripper_p"
+	item_color = "stripper_p"
+	item_state = "p_suit"
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	fitted = FEMALE_UNIFORM_TOP
+	can_adjust = 0
+
+/obj/item/clothing/under/stripper/green
+	name = "pink stripper suit"
+	desc = "Kinky green uniform for proffesional strippers."
+	icon_state = "stripper_g"
+	item_color = "stripper_g"
+	item_state = "g_suit"
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	fitted = FEMALE_UNIFORM_TOP
 	can_adjust = 0

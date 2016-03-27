@@ -17,7 +17,7 @@ var/list/slot2type = list("head" = /obj/item/clothing/head/changeling, "wear_mas
 	config_tag = "changeling"
 	antag_flag = ROLE_CHANGELING
 	restricted_jobs = list("AI", "Cyborg")
-	protected_jobs = list("Security Officer", "Warden", "Detective", "Head of Security", "Captain")
+	protected_jobs = list("Security Officer", "Warden", "Detective", "Head of Security", "Captain", "Internal Affairs Agent")
 	required_players = 10
 	required_enemies = 1
 	recommended_enemies = 4
@@ -504,7 +504,7 @@ var/list/slot2type = list("head" = /obj/item/clothing/head/changeling, "wear_mas
 
 /datum/game_mode/proc/update_changeling_icons_added(datum/mind/changling_mind)
 	var/datum/atom_hud/antag/hud = huds[ANTAG_HUD_CHANGELING]
-	hud.join_hud(changling_mind.current, 0)
+	hud.join_hud(changling_mind.current)
 	set_antag_hud(changling_mind.current, "changling")
 
 /datum/game_mode/proc/update_changeling_icons_removed(datum/mind/changling_mind)

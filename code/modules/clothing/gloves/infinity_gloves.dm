@@ -17,3 +17,12 @@
 	item_color = "wlong_gloves"
 	icon = 'icons/obj/clothing/infinity_work.dmi'
 	worn_icon = 'icons/mob/infinity_work.dmi'
+
+/obj/item/clothing/gloves/color/darklong
+	name = "dark long gloves"
+	desc = "Long dark gloves. From one of the twins."
+	icon_state = "darklongloves"
+	item_state = "darklongloves"
+	item_color = "darklongloves"
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'

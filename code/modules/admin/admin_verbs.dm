@@ -25,7 +25,8 @@ var/list/admin_verbs_default = list(
 	/datum/admins/proc/set_event_status,
 	/datum/admins/proc/view_event_status,
 	/client/proc/cmd_admin_allow_respawn,
-	/datum/admins/verb/reset_vote
+	/datum/admins/verb/reset_vote,
+	/client/proc/show_reports
 	)
 var/list/admin_verbs_admin = list(
 	/client/proc/player_panel_new,		/*shows an interface for all players, with links to various panels*/
@@ -365,8 +366,8 @@ var/list/admin_verbs_hideable = list(
 		src << "<font color='red'>Error: Aghost: Can't admin-ghost whilst in the lobby. Join or Observe first.</font>"
 	else
 		//ghostize
-		log_admin("[key_name(usr)] admin ghosted")
-		message_admins("[key_name_admin(usr)] admin ghosted")
+		log_admin("[key_name(usr)] admin ghosted.")
+		message_admins("[key_name_admin(usr)] admin ghosted.")
 		var/mob/body = mob
 		body.ghostize(1)
 		if(body && !body.key)

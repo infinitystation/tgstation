@@ -735,6 +735,13 @@
 		else
 			H.throw_alert("nutrition", /obj/screen/alert/starving)
 
+	switch(H.need_to_shit)
+		if(SHIT_LEVEL_DANGER to SHIT_LEVEL_MAX)
+			H.throw_alert("toilet_shit", /obj/screen/alert/shit_now)
+		if(SHIT_LEVEL_WARNING to SHIT_LEVEL_DANGER)
+			H.throw_alert("toilet_shit", /obj/screen/alert/shit)
+		else
+			H.clear_alert("toilet_shit")
 
 /datum/species/proc/update_sight(mob/living/carbon/human/H)
 	H.sight = initial(H.sight)
@@ -820,14 +827,14 @@
 
 	if(!(H.status_flags & IGNORESLOWDOWN))
 		if(!has_gravity(H))
-			// If there's no gravity we have the option of sanic speed.
+			// If there's no gravity we have the sanic speed of jetpack.
 			var/obj/item/weapon/tank/jetpack/J = H.back
 			var/obj/item/clothing/suit/space/hardsuit/C = H.wear_suit
 			if(!istype(J) && istype(C))
 				J = C.jetpack
 
-			if(istype(J) && J.turbo && J.allow_thrust(0.01, H))
-				. -= 2 // Turbo mode. Gotta go fast.
+			if(istype(J) && J.allow_thrust(0.01, H))
+				. -= 2
 		else
 			var/health_deficiency = (100 - H.health + H.staminaloss)
 			if(health_deficiency >= 40)
@@ -1102,13 +1109,13 @@
 			if(organ.take_damage(0, damage*burnmod))
 				H.update_damage_overlays(0)
 		if(TOX)
-			H.adjustToxLoss(damage * blocked)
+			H.adjustToxLoss(damage)
 		if(OXY)
-			H.adjustOxyLoss(damage * blocked)
+			H.adjustOxyLoss(damage)
 		if(CLONE)
-			H.adjustCloneLoss(damage * blocked)
+			H.adjustCloneLoss(damage)
 		if(STAMINA)
-			H.adjustStaminaLoss(damage * blocked)
+			H.adjustStaminaLoss(damage)
 	return 1
 
 /datum/species/proc/on_hit(obj/item/projectile/proj_type, mob/living/carbon/human/H)

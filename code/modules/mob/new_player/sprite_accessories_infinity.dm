@@ -206,3 +206,39 @@
 	name = "Big Ponytail"
 	icon_state = "big_ponytail"
 	icon = 'icons/mob/more_hairs.dmi'
+
+/datum/sprite_accessory/underwear/red_underwear
+	name = "Toxic Underwear"
+	icon_state = "toxic_underwear"
+	icon = 'icons/mob/infinity_work.dmi'
+	gender = FEMALE
+
+/datum/sprite_accessory/underwear/slooty
+	name = "Slooty Underwear"
+	icon_state = "slooty"
+	icon = 'icons/mob/infinity_work.dmi'
+	gender = FEMALE
+
+/datum/sprite_accessory/socks/black_stockings
+	name = "Realy Black Stockings"
+	icon_state = "black_stockings"
+	icon = 'icons/mob/infinity_work.dmi'
+	gender = FEMALE
+
+/datum/sprite_accessory/socks/red_stockings
+	name = "Red Stockings"
+	icon_state = "red_stockings"
+	icon = 'icons/mob/infinity_work.dmi'
+	gender = FEMALE
+
+/datum/sprite_accessory/socks/nain_stockings
+	name = "Nain Stockings"
+	icon_state = "neo_stockings"
+	icon = 'icons/mob/infinity_work.dmi'
+	gender = FEMALE
+
+/datum/sprite_accessory/socks/stripantyhose
+	name = "Striped Pantyhose"
+	icon_state = "strippantyhose"
+	icon = 'icons/mob/infinity_work.dmi'
+	gender = FEMALE

@@ -68,7 +68,7 @@
 /obj/item/clothing/head/beret/sec/corporate
 	name = "corporate beret"
 	desc = "A robust beret with the security insignia emblazoned on it. Uses reinforced fabric to offer sufficent protection."
-	icon_state = "sec_corporate"
+	icon_state = "sec_corporateb"
 	item_state = ""
 	worn_icon = 'icons/mob/infinity_work.dmi'
 	icon = 'icons/obj/clothing/infinity_work.dmi'
@@ -76,7 +76,7 @@
 /obj/item/clothing/head/HoS/beret/corporate
 	name = "head of security corporate beret"
 	desc = "A robust beret with the security insignia emblazoned on it. Uses reinforced fabric to offer sufficent protection."
-	icon_state = "hos_corporate"
+	icon_state = "hos_corporateb"
 	item_state = ""
 	worn_icon = 'icons/mob/infinity_work.dmi'
 	icon = 'icons/obj/clothing/infinity_work.dmi'
@@ -84,7 +84,7 @@
 /obj/item/clothing/head/warden/corporate
 	name = "warden corporate beret"
 	desc = "A robust beret with the security insignia emblazoned on it. Uses reinforced fabric to offer sufficent protection."
-	icon_state = "warden_corporate"
+	icon_state = "warden_corporateb"
 	item_state = ""
 	worn_icon = 'icons/mob/infinity_work.dmi'
 	icon = 'icons/obj/clothing/infinity_work.dmi'
@@ -104,3 +104,24 @@
 	item_state = ""
 	worn_icon = 'icons/mob/infinity_work.dmi'
 	icon = 'icons/obj/clothing/infinity_work.dmi'
+
+/obj/item/clothing/head/beret/centcom/captain
+	name = "centcom captain beret"
+	desc = "A robust beret with the security insignia emblazoned on it. Uses reinforced fabric to offer sufficent protection."
+	icon_state = "beret_centcom_captain"
+	item_state = ""
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+
+/obj/item/clothing/head/hat
+	name = "black hat"
+	desc = "Old western hat."
+	icon_state = "blackhat"
+	item_state = ""
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+
+/obj/item/clothing/head/hat/brown
+	name = "brown hat"
+	desc = "Old western hat."
+	icon_state = "brownhat"

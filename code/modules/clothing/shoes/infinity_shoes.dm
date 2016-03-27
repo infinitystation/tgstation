@@ -54,3 +54,10 @@
 	icon_state = "brand_shoes3"
 	icon = 'icons/obj/clothing/infinity_work.dmi'
 	worn_icon = 'icons/mob/infinity_work.dmi'
+
+/obj/item/clothing/shoes/shoes_rim/white
+	name = "white shoes with a rim"
+	desc = "Stylish white shoes. Anyooh production."
+	icon_state = "white_rim"
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'

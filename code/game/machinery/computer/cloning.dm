@@ -35,7 +35,7 @@
 	if(!(pod1.occupant || pod1.mess) && (pod1.efficiency > 5))
 		for(var/datum/data/record/R in records)
 			if(!(pod1.occupant || pod1.mess))
-				if(pod1.growclone(R.fields["ckey"], R.fields["name"], R.fields["UI"], R.fields["SE"], R.fields["mind"], R.fields["mrace"], R.fields["features"], R.fields["factions"]))
+				if(pod1.growclone(R.fields["ckey"], R.fields["name"], R.fields["UI"], R.fields["SE"], R.fields["mind"], R.fields["mrace"], R.fields["features"], R.fields["factions"], R.fields["age"], R.fields["visual_age"]))
 					records -= R
 
 /obj/machinery/computer/cloning/proc/updatemodules()
@@ -374,7 +374,8 @@
 	if(subject.dna.species)
 		R.fields["mrace"] = subject.dna.species.type
 	else
-		R.fields["mrace"] = /datum/species/human
+		var/datum/species/rando_race = pick(config.roundstart_races)
+		R.fields["mrace"] = rando_race.type
 	R.fields["ckey"] = subject.ckey
 	R.fields["name"] = subject.real_name
 	R.fields["id"] = copytext(md5(subject.real_name), 2, 6)

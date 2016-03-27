@@ -13,6 +13,7 @@
 	var/e_2 = "ое"
 	var/e_3 = "ее"
 	var/e_4 = "ым"
+	var/e_5 = "ось"
 
 	var/msg = "<span class='info'>*---------*\nЭто "
 
@@ -25,6 +26,7 @@
 		e_2 = "ое"
 		e_3 = "ее"
 		e_4 = "ым"
+		e_5 = "ось"
 	else
 		switch(gender)
 			if(MALE)
@@ -35,6 +37,7 @@
 				e_2 = "ый"
 				e_3 = "ий"
 				e_4 = "ым"
+				e_5 = "с&#255;"
 			if(FEMALE)
 				t_He = "Она"
 				t_his = "её"
@@ -43,6 +46,7 @@
 				e_2 = "а&#255;"
 				e_3 = "а&#255;"
 				e_4 = "ой"
+				e_5 = "ась"
 
 	msg += "<EM>[src.name]</EM>!\n"
 
@@ -263,6 +267,21 @@
 
 	if(reagents.has_reagent("teslium"))
 		msg += "[t_He] испускает нежное голубое свечение!\n"
+
+	if(drunkenness && !skipface && stat != DEAD) //Drunkenness
+		switch(drunkenness)
+			if(11 to 21)
+				msg += "[t_He] немножко пь&#255;н[e_1].\n"
+			if(21.01 to 41) //.01s are used in case drunkenness ends up to be a small decimal
+				msg += "[t_He] немного пь&#255;н[e_1].\n"
+			if(41.01 to 51)
+				msg += "[t_He] пь&#255;н[e_1] и н[t_his] немного пахнет спиртным.\n"
+			if(51.01 to 61)
+				msg += "[t_He] сильно пь&#255;н[e_1] и [t_his] движени&#255; тр&#255;кие, [t_his] дыхание сильно отдает алкоголем.\n"
+			if(61.01 to 91)
+				msg += "[t_He] напил[e_5] в хлам.\n"
+			if(91.01 to INFINITY)
+				msg += "[t_He] настолько пь&#255;н[e_1], что еле стоит на ногах. Помогите [t_him]!\n"
 
 	msg += "</span>"
 

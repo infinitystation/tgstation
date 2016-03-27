@@ -19,7 +19,7 @@
 
 /obj/item/weapon/implant/loyalty/implant(mob/target)
 	if(..())
-		if((target.mind in (ticker.mode.changelings | ticker.mode.abductors)) || is_shadow_or_thrall(target))
+		if((target.mind in (ticker.mode.changelings | ticker.mode.abductors)) || is_shadow_or_thrall(target) || (target.mind in ticker.mode.blue_deity_prophets|ticker.mode.red_deity_prophets|ticker.mode.red_deity_followers|ticker.mode.blue_deity_followers))
 			target.visible_message("<span class='warning'>[target] seems to resist the implant!</span>", "<span class='warning'>You feel the corporate tendrils of Nanotrasen try to invade your mind!</span>")
 			removed(target, 1)
 			qdel(src)

@@ -19,15 +19,17 @@
 	anchored = 1
 
 /obj/effect/mob_spawn/attack_ghost(mob/user)
-	if(ticker.current_state != GAME_STATE_PLAYING)
+	if(ticker.current_state != GAME_STATE_PLAYING || !loc)
 		return
 	var/ghost_role = alert("Become [mob_name]? (Warning, You can no longer be cloned!)",,"Yes","No")
-	if(ghost_role == "No")
+	if(ghost_role == "No" || !loc)
 		return
 	log_game("[user.ckey] became [mob_name]")
 	create(ckey = user.ckey)
 
-/obj/effect/mob_spawn/initialize()
+/obj/effect/mob_spawn/spawn_atom_to_world()
+	//We no longer need to spawn mobs, deregister ourself
+	SSobj.atom_spawners -= src
 	if(roundstart)
 		create()
 	else
@@ -35,6 +37,10 @@
 
 /obj/effect/mob_spawn/New()
 	..()
+	if(roundstart)
+		//Add to the atom spawners register for roundstart atom spawning
+		SSobj.atom_spawners += src
+
 	if(instant)
 		create()
 	else
@@ -234,8 +240,8 @@
 /obj/effect/mob_spawn/human/trooper/bravo
 	name = "UAC Trooper"
 	uniform = /obj/item/clothing/under/pants/camo
-	suit = /obj/item/clothing/suit/armor/UACtrooperArmor
-	shoes = /obj/item/clothing/shoes/combat/UACtrooperBoots
+	suit = /obj/item/clothing/suit/armor/uac
+	shoes = /obj/item/clothing/shoes/combat/uac
 	gloves = /obj/item/clothing/gloves/combat
 	radio = /obj/item/device/radio/headset
 	mask = /obj/item/clothing/mask/gas
@@ -248,8 +254,8 @@
 /obj/effect/mob_spawn/human/trooper/alpha
 	name = "UAC Trooper"
 	uniform = /obj/item/clothing/under/pants/camo
-	suit = /obj/item/clothing/suit/armor/UACtrooperArmor
-	shoes = /obj/item/clothing/shoes/combat/UACtrooperBoots
+	suit = /obj/item/clothing/suit/armor/uac
+	shoes = /obj/item/clothing/shoes/combat/uac
 	gloves = /obj/item/clothing/gloves/combat
 	radio = /obj/item/device/radio/headset
 	mask = /obj/item/clothing/mask/gas
@@ -262,7 +268,7 @@
 /obj/effect/mob_spawn/human/guard
 	name = "Guard Soldier"
 	uniform = /obj/item/clothing/under/syndicate/tacticool
-	suit = /obj/item/clothing/suit/armor/UACtrooperArmor
+	suit = /obj/item/clothing/suit/armor/uac
 	shoes = /obj/item/clothing/shoes/jackboots
 	radio = /obj/item/device/radio/headset
 	helmet = /obj/item/clothing/head/helmet/guard
@@ -270,7 +276,7 @@
 /obj/effect/mob_spawn/human/guard/mask
 	name = "Guard Soldier"
 	uniform = /obj/item/clothing/under/syndicate/tacticool
-	suit = /obj/item/clothing/suit/armor/UACtrooperArmor
+	suit = /obj/item/clothing/suit/armor/uac
 	shoes = /obj/item/clothing/shoes/jackboots
 	radio = /obj/item/device/radio/headset
 	mask = /obj/item/clothing/mask/gas/sechailer/swat

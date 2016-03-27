@@ -24,10 +24,12 @@ var/global/list/map_transition_config = MAP_TRANSITION_CONFIG
 	href_logfile = file("data/logs/[date_string] hrefs.htm")
 	diary = file("data/logs/[date_string].log")
 	job_subsystem_debug = file("data/logs/[date_string] j-debug.log")
+	reports_log = file("data/logs/[date_string] reports.htm")
 	diaryofmeanpeople = file("data/logs/[date_string] Attack.log")
 	diary << "\n\nStarting up. [time2text(world.timeofday, "hh:mm.ss")]\n---------------------"
 	diaryofmeanpeople << "\n\nStarting up. [time2text(world.timeofday, "hh:mm.ss")]\n---------------------"
 	job_subsystem_debug << "\n\nStarting up. [time2text(world.timeofday, "hh:mm.ss")]\n---------------------"
+	reports_log << "\n\nStarting up. [time2text(world.timeofday, "hh:mm.ss")]\n---------------------\n"
 	changelog_hash = md5('html/changelog.html')					//used for telling if the changelog has changed recently
 
 	make_datum_references_lists()	//initialises global lists for referencing frequently used datums (so that we only ever do it once)

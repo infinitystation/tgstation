@@ -41,29 +41,6 @@
 	desc = "A small floor lighting fixture."
 	light_type = /obj/item/weapon/light/bulb
 
-
-
-/obj/machinery/computer/shuttle/remote_controlled_pod
-	name = "Remote Controlled Pod One"
-	desc = "Used to control the White ShipRemote Controlled Pod."
-	shuttleId = "whiteship"
-	possible_destinations = "whiteship_away;whiteship_home;whiteship_z4"
-	circuit = /obj/machinery/computer/shuttle/remote_controlled_pod
-
-/obj/machinery/computer/shuttle/remote_controlled_pod/two
-	name = "Remote Controlled Pod Two"
-	shuttleId = "whiteship"
-	possible_destinations = "whiteship_away;whiteship_home;whiteship_z4"
-	circuit = /obj/item/weapon/circuitboard/remote_controlled_pod/two
-
-/obj/item/weapon/circuitboard/remote_controlled_pod
-	name = "circuit board (Remote Controlled Pod One)"
-	build_path = /obj/machinery/computer/shuttle/remote_controlled_pod
-
-/obj/item/weapon/circuitboard/remote_controlled_pod/two
-	name = "circuit board (Remote Controlled Pod Two)"
-	build_path = /obj/machinery/computer/shuttle/remote_controlled_pod/two
-
 /obj/item/device/shadowcloak/ops
 	name = "stealth ops cloaker belt"
 	icon_state = "assaultbelt"
@@ -115,6 +92,36 @@
 	always_up = 1
 	faction = "neutral"
 
+/datum/job/paratrooper
+	title = "UAC paratrooper"
+	department_head = list("uac")
+	department_flag = ENGSEC
+	faction = "uac"
+	total_positions = 1
+	spawn_positions = 1
+	supervisors = "United Aerospace Space's paratrooper"
+	selection_color = "#ccccff"
+
+/datum/outfit/paratrooper
+	name = "UAC Paratrooper"
+	ears = /obj/item/device/radio/headset/syndicate/alt
+	uniform = /obj/item/clothing/under/uac
+	suit = /obj/item/clothing/suit/armor/uac
+	shoes = /obj/item/clothing/shoes/combat/uac
+	gloves = /obj/item/clothing/gloves/combat
+	head = /obj/item/clothing/head/helmet/trooper
+	id = /obj/item/weapon/card/id/silver
+	belt = /obj/item/device/flashlight/seclite
+	l_pocket = /obj/item/ammo_box/magazine/a646
+	r_pocket = /obj/item/ammo_box/magazine/a646
+	r_hand = /obj/item/weapon/gun/projectile/automatic/mg88
+
+/obj/structure/sign/nanotrasen
+	name = "Nanotrasen Emblem"
+	desc = "Nanotrasen Emblem - a two litters front of blue background."
+	icon_state = "NT"
+	icon = 'icons/obj/infinity_decals.dmi'
+
 /obj/structure/sign/directions/dock
 	name = "docking port 1"
 	desc = "A direction sign, pointing out which way the Docking port 1 is."
@@ -125,16 +132,29 @@
 	name = "docking port 2"
 	desc = "A direction sign, pointing out which way the Docking port 2 is."
 	icon_state = "dock_2"
-	icon = 'icons/obj/infinity_decals.dmi'
 
 /obj/structure/sign/directions/dock/three
 	name = "docking port 3"
 	desc = "A direction sign, pointing out which way the Docking port 3 is."
 	icon_state = "dock_3"
-	icon = 'icons/obj/infinity_decals.dmi'
 
 /obj/structure/sign/directions/dock/four
 	name = "docking port 4"
 	desc = "A direction sign, pointing out which way the Docking port 4 is."
 	icon_state = "dock_4"
-	icon = 'icons/obj/infinity_decals.dmi'
+
+/mob/living/simple_animal/crab/Groffee
+	name = "Groffee"
+	real_name = "Groffee"
+	desc = "It's Groffee, the lava-crab!"
+	icon_state = "evilcrab"
+	icon_living = "evilcrab"
+	icon_dead = "evilcrab_dead"
+	response_help  = "pets"
+	response_disarm = "gently pushes aside"
+	response_harm   = "stomps"
+	gold_core_spawnable = 0
+
+/obj/item/projectile/temp/Thot
+	name = "heat beam"
+	temperature = 600

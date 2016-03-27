@@ -227,22 +227,25 @@
 	new /obj/item/clothing/shoes/combat/swat(src)
 
 /obj/structure/closet/gimmick/uac/trooper
-	name = "UAC Paratrooper equipment"
+	name = "Paratrooper equipment"
 	desc = "It's a storage unit for operational gear."
 	icon_state = "syndicate"
 
 /obj/structure/closet/gimmick/uac/trooper/New()
 	..()
+	new /obj/item/clothing/under/uac(src)
+	new /obj/item/clothing/shoes/combat/uac(src)
+	new /obj/item/clothing/mask/breath(src)
+	new /obj/item/clothing/suit/armor/uac(src)
 	new /obj/item/clothing/glasses/sunglasses(src)
+	new	/obj/item/device/radio/headset/syndicate/alt(src)
 	new /obj/item/clothing/head/helmet/trooper(src)
-	new /obj/item/clothing/mask/gas/sechailer/swat(src)
-	new /obj/item/clothing/suit/armor/UACtrooperArmor(src)
 	new /obj/item/weapon/gun/projectile/automatic/mg88(src)
 	new /obj/item/ammo_box/magazine/a646(src)
 	new /obj/item/ammo_box/magazine/a646(src)
 	new /obj/item/device/flashlight/seclite(src)
-	new /obj/item/device/radio(src)
 	new /obj/item/clothing/gloves/combat(src)
+	new /obj/item/weapon/storage/backpack/satchel_norm(src)
 
 /obj/structure/closet/gimmick/MEAT_GRINDER
 	name = "WAR!"
