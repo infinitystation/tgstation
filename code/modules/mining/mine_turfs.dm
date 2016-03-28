@@ -619,7 +619,8 @@
 	drop_z = 5
 
 /turf/simulated/chasm/straight_down/lava_land_surface/drop(atom/movable/AM)
-	visible_message("[AM] falls into [src]!")
+	if(!AM.invisibility)
+		visible_message("[AM] falls into [src]!")
 	qdel(AM)
 
 /turf/simulated/mineral/volcanic/lava_land_surface
