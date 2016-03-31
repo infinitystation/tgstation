@@ -29,7 +29,7 @@ var/global/list/map_transition_config = MAP_TRANSITION_CONFIG
 	diary << "\n\nStarting up. [time2text(world.timeofday, "hh:mm.ss")]\n---------------------"
 	diaryofmeanpeople << "\n\nStarting up. [time2text(world.timeofday, "hh:mm.ss")]\n---------------------"
 	job_subsystem_debug << "\n\nStarting up. [time2text(world.timeofday, "hh:mm.ss")]\n---------------------"
-	reports_log << "\n\nStarting up. [time2text(world.timeofday, "hh:mm.ss")]\n---------------------\n"
+	reports_log << "<br/><br/>Starting up. [time2text(world.timeofday, "hh:mm.ss")]<br/>---------------------<br/>"
 	changelog_hash = md5('html/changelog.html')					//used for telling if the changelog has changed recently
 
 	make_datum_references_lists()	//initialises global lists for referencing frequently used datums (so that we only ever do it once)
