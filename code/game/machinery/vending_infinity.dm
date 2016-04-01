@@ -19,6 +19,7 @@
 /obj/machinery/vending/clothing/wallshoes
 	name = "\improper Outerspace-Shoes"
 	desc = "Wall-mounted Outerspace designer shoes brand machine! For truly style!"
+	density = 0
 	icon = 'icons/obj/infinity_object.dmi'
 	icon_state = "vendo_shoes"
 	product_slogans = "Stop right here! Outerspace designer here! ;It's time for new clothe-experience! ;What? Never see that before?"
