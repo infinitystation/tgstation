@@ -638,3 +638,52 @@
 	icon = 'icons/obj/clothing/infinity_work.dmi'
 	fitted = FEMALE_UNIFORM_TOP
 	can_adjust = 0
+
+/obj/item/clothing/under/strippedshirt
+	name = "stripped red shirt"
+	desc = "Worm and light stripped red shirt."
+	icon_state = "stripped_shirt"
+	item_color = "stripped_shirt"
+	item_state = "r_suit"
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	can_adjust = 1
+
+/obj/item/clothing/under/shorts/black/sport
+	name = "sport shorts"
+	desc = "Light, tight small shorts for exercises."
+	icon_state = "sport_short"
+	item_color = "sport_short"
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	can_adjust = 0
+
+/obj/item/clothing/under/smuggler
+	name = "smuggler pants"
+	desc = "Just a regular pants with a extra fabric at the knees."
+	icon_state = "smuggler_pants"
+	item_color = "smuggler_pants"
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	can_adjust = 0
+
+/obj/item/clothing/under/big_shirt
+	name = "big T-shirt"
+	desc = "Extra big T-shirt. Some girl's like it."
+	icon_state = "bshirt_13"
+	item_color = "bshirt_13"
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	can_adjust = 0
+
+/obj/item/clothing/under/big_shirt/ussr
+	name = "big ussr T-shirt"
+	desc = "Extra big T-shirt with USSR symbol. Some girl's like it."
+	icon_state = "bshirt_ussr"
+	item_color = "bshirt_ussr"
+
+/obj/item/clothing/under/big_shirt/skirt
+	name = "big T-shirt with skirt"
+	desc = "Extra big T-shirt with skirt. Some girl's like it."
+	icon_state = "bshirt_skirt"
+	item_color = "bshirt_skirt"
