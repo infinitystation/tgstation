@@ -1,8 +1,8 @@
 /datum/round_event_control/prison_break
 	name = "Prison Break"
 	typepath = /datum/round_event/prison_break
-	weight = 5
 	max_occurrences = 1
+	min_players = 5
 
 /datum/round_event/prison_break
 	announceWhen = 50

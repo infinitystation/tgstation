@@ -2,6 +2,10 @@
  #define SAWN_OFF     1
  #define SAWN_SAWING -1
 
+ #define WEAPON_LIGHT 0
+ #define WEAPON_MEDIUM 1
+ #define WEAPON_HEAVY 2
+
 /obj/item/weapon/gun
 	name = "gun"
 	desc = "It's a gun. It's pretty terrible, though."
@@ -33,7 +37,7 @@
 	var/burst_size = 1					//how large a burst is
 	var/fire_delay = 0					//rate of fire for burst firing and semi auto
 	var/semicd = 0						//cooldown handler
-	var/heavy_weapon = 0
+	var/weapon_weight = WEAPON_LIGHT
 
 	var/unique_rename = 0 //allows renaming with a pen
 	var/unique_reskin = 0 //allows one-time reskinning
@@ -120,7 +124,7 @@
 		else
 			user.visible_message("<span class='danger'>[user] fires [src]!</span>", "<span class='danger'>You fire [src]!</span>", "You hear a [istype(src, /obj/item/weapon/gun/energy) ? "laser blast" : "gunshot"]!")
 
-	if(heavy_weapon)
+	if(weapon_weight >= WEAPON_MEDIUM)
 		if(user.get_inactive_hand())
 			if(prob(15))
 				if(user.drop_item())
@@ -165,7 +169,9 @@
 				user.drop_item()
 				return
 
-
+	if(weapon_weight == WEAPON_HEAVY && user.get_inactive_hand())
+		user << "<span class='userdanger'>You need both hands free to fire \the [src]!</span>"
+		return
 
 	process_fire(target,user,1,params)
 
@@ -177,7 +183,6 @@
 		return 0
 
 	return 1
-
 
 /obj/item/weapon/gun/proc/handle_pins(mob/living/user)
 	if(pin)
@@ -199,7 +204,7 @@ obj/item/weapon/gun/proc/newshot()
 	if(semicd)
 		return
 
-	if(heavy_weapon)
+	if(weapon_weight)
 		if(user.get_inactive_hand())
 			recoil = 4 //one-handed kick
 		else

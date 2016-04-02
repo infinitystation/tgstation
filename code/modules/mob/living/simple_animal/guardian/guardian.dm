@@ -356,7 +356,7 @@ var/global/list/parasites = list() //all currently existing/living guardians
 /obj/item/weapon/guardiancreator/attack_self(mob/living/user)
 	var/list/guardians = user.hasparasites()
 	if(guardians.len && !allowmultiple)
-		user << "You already have a [mob_name]!"
+		user << "<span class='holoparasite'>You already have a [mob_name]!</span>"
 		return
 	if(user.mind && user.mind.changeling && !allowling)
 		user << "[ling_failure]"
@@ -417,6 +417,11 @@ var/global/list/parasites = list() //all currently existing/living guardians
 		if("Assassin")
 			pickedtype = /mob/living/simple_animal/hostile/guardian/assassin
 
+	var/list/guardians = user.hasparasites()
+	if(guardians.len && !allowmultiple)
+		user << "<span class='holoparasite'>You already have a [mob_name]!</span>" //nice try, bucko
+		used = FALSE
+		return
 	var/mob/living/simple_animal/hostile/guardian/G = new pickedtype(user, theme)
 	G.summoner = user
 	G.key = key
