@@ -193,7 +193,7 @@
 		appears_dead = 1
 		if(getorgan(/obj/item/organ/internal/brain))//Only perform these checks if there is no brain
 			if(suiciding)
-				msg += "<span class='warning'>[t_He], кажетс&#255;, совершила самоубийство. Спасение бесполезно.</span>\n"
+				msg += "<span class='warning'>[t_He], кажетс&#255;, совершил[e_1] самоубийство. Спасение бесполезно.</span>\n"
 			msg += "<span class='deadsay'>[t_He] поникш[e_3] и бессознательн[e_2]; [t_He] не имеет признаков жизни"
 			if(!key)
 				var/foundghost = 0
