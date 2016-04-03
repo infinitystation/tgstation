@@ -985,6 +985,13 @@ var/list/uplink_items = list() // Global list so we only initialize this once.
 	cost = 20
 	include_modes = list(/datum/game_mode/nuclear)
 
+/datum/uplink_item/implants/antiloyalty
+	name = "FUCK THE NT implants"
+	desc = "Break up you and your friends from NT usurpation! \
+			Don't use them on security and captain."
+	item = /obj/item/weapon/storage/box/syndie_kit/imp_fuck_the_nt
+	cost = 5
+
 
 // Cybernetics
 /datum/uplink_item/cyber_implants

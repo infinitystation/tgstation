@@ -50,7 +50,6 @@ var/datum/subsystem/minimap/SSminimap
 	for(var/T in block(locate(x1, y1, z), locate(x2, y2, z)))
 		generate_tile(T, minimap)
 
-
 		//byond bug, this fixes OOM crashes by flattening and reseting the minimap icon holder every 128 tiles
 		counter--
 		if(counter <= 0)

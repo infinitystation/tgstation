@@ -137,9 +137,6 @@ var/global/list/RPD_recipes=list(
 	desc = "A device used to rapidly pipe things."
 	icon = 'icons/obj/items.dmi'
 	icon_state = "rpd"
-	opacity = 0
-	density = 0
-	anchored = 0
 	flags = CONDUCT
 	slot_flags = SLOT_BELT
 	force = 10
@@ -550,7 +547,7 @@ var/global/list/RPD_recipes=list(
 
 	if(istype(A,/area/shuttle)||istype(A,/turf/space/transit))
 		return 0
-	
+
 	//So that changing the menu settings doesn't affect the pipes already being built.
 	var/queued_p_type = p_type
 	var/queued_p_dir = p_dir

@@ -242,3 +242,31 @@
 	icon_state = "strippantyhose"
 	icon = 'icons/mob/infinity_work.dmi'
 	gender = FEMALE
+
+/datum/sprite_accessory/undershirt/white_lhoses
+	name = "Shirt with long hoses"
+	icon = 'icons/mob/infinity_work.dmi'
+	icon_state = "white_lhoses"
+	gender = FEMALE
+
+/datum/sprite_accessory/socks/thigh
+	name = "Green Thigh"
+	icon_state = "greenwhite_thigh"
+	icon = 'icons/mob/infinity_work.dmi'
+
+/datum/sprite_accessory/socks/thigh/white
+	name = "White Thigh"
+	icon_state = "whitered_thigh"
+	icon = 'icons/mob/infinity_work.dmi'
+
+/datum/sprite_accessory/undershirt/btop
+	name = "Big Top"
+	icon = 'icons/mob/infinity_work.dmi'
+	icon_state = "btop"
+	gender = FEMALE
+
+/datum/sprite_accessory/underwear/red_bottom
+	name = "Red Bottom"
+	icon = 'icons/mob/infinity_work.dmi'
+	icon_state = "red_bottom"
+	gender = FEMALE
