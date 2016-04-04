@@ -80,8 +80,8 @@
 	blob_allowed = 0
 
 /area/mine/lab
-    name = "Field Laboratory"
-    icon_state = "medresearch"
+	name = "Field Laboratory"
+	icon_state = "medresearch"
 	blob_allowed = 0
 
 /area/mine/shelter
