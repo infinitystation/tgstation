@@ -665,7 +665,7 @@
 "mO" = (/obj/machinery/atmospherics/components/unary/vent_pump{dir = 2; on = 1},/turf/simulated/floor/plasteel,/area/mine/production)
 "mP" = (/obj/machinery/camera{c_tag = "Processing Area Room"; dir = 8; network = list("MINE")},/obj/item/device/radio/intercom{dir = 8; name = "Station Intercom (General)"; pixel_x = 28},/turf/simulated/floor/plasteel{dir = 4; icon_state = "warning"},/area/mine/production)
 "mQ" = (/obj/machinery/mineral/ore_redemption,/turf/simulated/floor/plating{icon_state = "warnplate"; dir = 9},/area/mine/production)
-"mR" = (/obj/docking_port/stationary{dir = 8; dwidth = 3; height = 5; id = "mining_away"; name = "asteroid mine"; width = 7},/obj/docking_port/mobile{dir = 8; dwidth = 3; height = 6; id = "mining"; name = "mining shuttle"; travelDir = 90; width = 8},/turf/space,/area/space)
+"mR" = (/obj/docking_port/stationary{dir = 8; dwidth = 4; height = 8; id = "mining_away"; name = "asteroid mine"; width = 7},/obj/docking_port/mobile{dir = 8; dwidth = 4; height = 8; id = "mining"; name = "mining shuttle"; travelDir = 90; width = 7},/turf/space,/area/space)
 "mS" = (/obj/machinery/door/airlock/external{name = "Mining Shuttle Airlock"; req_access_txt = "0"},/turf/simulated/floor/plasteel{icon_state = "delivery"; name = "floor"},/area/mine/production)
 "mT" = (/turf/simulated/floor/plasteel,/area/mine/production)
 "mU" = (/obj/structure/disposalpipe/segment{dir = 1; icon_state = "pipe-c"},/turf/simulated/floor/plasteel,/area/mine/production)
@@ -969,3 +969,4 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 "}
+
