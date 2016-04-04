@@ -86,13 +86,14 @@
 	icon_state = "black_kimono"
 	item_state = "bl_suit"
 
-/obj/item/clothing/suit/longjacket
+/obj/item/clothing/suit/toggle/longjacket
 	name = "long jacket"
 	desc = "Ordinary jacket. Just a little bit longer."
 	icon_state = "longjacket"
 	item_state = "bl_suit"
 	icon = 'icons/obj/clothing/infinity_work.dmi'
 	worn_icon = 'icons/mob/infinity_work.dmi'
+	togglename = "zipper"
 
 /obj/item/clothing/suit/hooded/blue_fiery
 	name = "blue jacket"
@@ -378,3 +379,12 @@
 	body_parts_covered = CHEST|GROIN|ARMS
 	cold_protection = CHEST|GROIN|ARMS
 	min_cold_protection_temperature = FIRE_SUIT_MIN_TEMP_PROTECT
+
+/obj/item/clothing/suit/toggle/longjacket/green
+	name = "green long jacket"
+	desc = "Ordinary jacket. Just a little bit longer, and green."
+	icon_state = "glongjacket"
+	item_state = "bl_suit"
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	togglename = "zipper"

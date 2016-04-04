@@ -19,20 +19,13 @@
 
 /obj/item/weapon/implant/loyalty/implant(mob/target)
 	if(..())
-		if((target.mind in (ticker.mode.changelings | ticker.mode.abductors)) || is_shadow_or_thrall(target) || (target.mind in ticker.mode.blue_deity_prophets|ticker.mode.red_deity_prophets|ticker.mode.red_deity_followers|ticker.mode.blue_deity_followers))
+		if((target.mind in (ticker.mode.changelings | ticker.mode.abductors | ticker.mode.cult)) || isntloyal(target) || is_shadow_or_thrall(target) || (target.mind in ticker.mode.blue_deity_prophets|ticker.mode.red_deity_prophets|ticker.mode.red_deity_followers|ticker.mode.blue_deity_followers))
 			target.visible_message("<span class='warning'>[target] seems to resist the implant!</span>", "<span class='warning'>You feel the corporate tendrils of Nanotrasen try to invade your mind!</span>")
 			removed(target, 1)
 			qdel(src)
 			return -1
-		if(isntloyal(target))
-			imp_in = null
-			qdel(src)
-			return -1
 		target.mind.remove_all_antag_light()
-		if((target.mind in ticker.mode.cult) || (target.mind in ticker.mode.blue_deity_prophets|ticker.mode.red_deity_prophets))
-			target << "<span class='warning'>You feel the corporate tendrils of Nanotrasen try to invade your mind!</span>"
-		else
-			target << "<span class='notice'>You feel a surge of loyalty towards Nanotrasen.</span>"
+		target << "<span class='notice'>You feel a surge of loyalty towards Nanotrasen.</span>"
 		return 1
 	return 0
 

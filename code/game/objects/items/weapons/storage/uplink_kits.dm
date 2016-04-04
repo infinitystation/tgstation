@@ -233,12 +233,8 @@
 	var/obj/item/weapon/implanter/O = new(src)
 	O.imp = new /obj/item/weapon/implant/antiloyalty(O)
 	O.update_icon()
-	new /obj/item/weapon/implantcase/antiloyalty(src)
-	new /obj/item/weapon/implantcase/antiloyalty(src)
-	new /obj/item/weapon/implantcase/antiloyalty(src)
-	new /obj/item/weapon/implantcase/antiloyalty(src)
-	new /obj/item/weapon/implantcase/antiloyalty(src)
-	new /obj/item/weapon/implantcase/antiloyalty(src)
+	for(var/i in 1 to 6)
+		new /obj/item/weapon/implantcase/antiloyalty(src)
 	return
 
 /obj/item/weapon/storage/box/syndie_kit/nuke
