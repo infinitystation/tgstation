@@ -4,6 +4,38 @@
 	name = "Shower"
 	icon_state = "red"
 
+/area/security/gear
+	name = "Shower"
+	icon_state = "red"
+
+/area/security/security_gear
+	name = "Shower"
+	icon_state = "red"
+
+/area/security/dinner
+	name = "Shower"
+	icon_state = "red"
+
+/area/security/west
+	name = "Shower"
+	icon_state = "red"
+
+/area/security/infirmary
+	name = "Shower"
+	icon_state = "red"
+
+/area/security/center
+	name = "Shower"
+	icon_state = "red"
+
+/area/security/east
+	name = "Shower"
+	icon_state = "red"
+
+/area/security/mass_cell
+	name = "Shower"
+	icon_state = "red"
+
 /area/mine/bravo
 	name = "Post Bravo"
 
@@ -43,53 +75,12 @@
 	requires_power = 0
 	icon_state = "shuttle"
 
-/area/CP/shuttle/pod
-	name = "Remote Controlled pod one"
-
-/area/CP/shuttle/pod/two
-	name = "Remote Controlled pod two"
-
 /area/shuttle/NTcruiser
 	name = "Cruiser"
-	blob_allowed = 0 //Should go without saying, no blobs should take over centcom as a win condition.
-
-/area/mercenaries
-	name = "Mercenariess area"
-	icon_state = "red"
-	requires_power = 1
-	has_gravity = 1
-
-/area/mercenaries/shuttle
-	name = "Mercenariess shuttle"
-
-/area/mercenaries/base
-	name = "Mercenariess base"
-
-/area/mercenaries/base/storage
-	name = "Storage"
-
-/area/mercenaries/base/hypersleep_room
-	name = "Hypersleep room"
-
-/area/mercenaries/base/coridor_1
-	name = "Mercenariess area"
-
-/area/mercenaries/base/meeting_room
-	name = "Meeting room"
-
-/area/mercenaries/base/coridor_3
-	name = "Mercenariess area"
-
-/area/mercenaries/base/coridor_4
-	name = "Mercenariess area"
-
-/area/mine/lab
-	name = "Field Laboratory"
-	icon_state = "medresearch"
+	blob_allowed = 0
 
 /area/mine/shelter
 	name = "lavaland shelter"
-	requires_power = 0
 	icon_state = "green"
 
 ///Flors///
