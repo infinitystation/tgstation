@@ -79,6 +79,11 @@
 	name = "Cruiser"
 	blob_allowed = 0
 
+/area/mine/lab
+    name = "Field Laboratory"
+    icon_state = "medresearch"
+	blob_allowed = 0
+
 /area/mine/shelter
 	name = "lavaland shelter"
 	icon_state = "green"

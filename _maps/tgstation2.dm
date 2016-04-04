@@ -26,7 +26,7 @@ z7 = empty space
         #include "map_files\generic\lavaland.dmm"
         #include "map_files\generic\z6.dmm"
         #include "map_files\generic\z7.dmm"
-        //#include "map_files\TerrorStation\z9.dmm" //prison
+        #include "map_files\TerrorStation\z9.dmm" //prison
 
 		#define MAP_PATH "map_files/TgStation"
         #define MAP_FILE "tgstation.2.1.3.dmm"
