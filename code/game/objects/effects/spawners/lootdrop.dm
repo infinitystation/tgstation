@@ -152,3 +152,96 @@
 				/obj/structure/closet/crate/secure/loot = 20,
 				"" = 80
 				)
+
+/obj/effect/spawner/lootdrop/trash
+	name = "Random Trash"
+	desc = "This is a random Trash"
+	icon = 'icons/obj/items.dmi'
+	icon_state = "latexballon_bursted"
+	loot = list(
+				/obj/item/bodybag = 1,
+				/obj/item/clothing/glasses/sunglasses = 1,
+				/obj/item/weapon/shard = 5,
+				/obj/item/trash/can = 10,
+				/obj/item/trash/deadmouse = 3,
+				/obj/item/trash/pistachios = 4,
+				/obj/item/trash/raisins = 8,
+				/obj/item/trash/semki = 2,
+				/obj/item/trash/sosjerky = 14,
+				/obj/item/trash/candy = 25,
+				/obj/item/weapon/storage/fancy/cigarettes = 2,
+				/obj/item/stack/rods = 4,
+				/obj/item/stack/sheet/cardboard =7,
+				/obj/item/stack/packageWrap = 4,
+				/obj/item/weapon/c_tube = 3,
+				/obj/item/weapon/coin = 12,
+				/obj/item/weapon/paper = 29,
+				"" = 8
+				)
+
+/obj/effect/spawner/lootdrop/fall
+	name = "Random Fall ship parts"
+	desc = "This is a random Fall ship parts"
+	icon = 'icons/obj/items.dmi'
+	icon_state = "latexballon_bursted"
+	color = "Gray"
+	loot = list(
+				/obj/item/stack/rods = 5,
+				/obj/item/stack/sheet/metal = 8,
+				/obj/item/stack/cable_coil/cut = 6,
+				/obj/effect/spawner/lootdrop/trash = 3,
+				/obj/effect/spawner/lootdrop/food = 2,
+				/obj/item/weapon/shard = 6,
+				/obj/effect/decal/cleanable/blood/old = 2,
+				/obj/effect/decal/cleanable/robot_debris = 6,
+				"" = 6
+				)
+
+/obj/effect/spawner/lootdrop/food
+	name = "Random Food"
+	desc = "This is a Food"
+	icon = 'icons/obj/hydroponics/harvest.dmi'
+	icon_state = "tea_aspera_leaves"
+	loot = list(
+				/obj/item/weapon/reagent_containers/food/condiment/flour = 1,
+				/obj/item/weapon/reagent_containers/food/condiment/milk = 1,
+				/obj/item/weapon/reagent_containers/food/snacks/breadslice/plain = 2,
+				/obj/item/weapon/reagent_containers/food/snacks/burger = 1,
+				/obj/item/weapon/reagent_containers/food/snacks/cheesewedge = 2,
+				/obj/item/weapon/reagent_containers/food/snacks/egg = 2,
+				/obj/item/weapon/reagent_containers/food/snacks/sausage = 1,
+				/obj/item/weapon/reagent_containers/food/drinks/beer = 1,
+				/obj/item/weapon/reagent_containers/food/snacks/meat/slab = 1,
+				/obj/item/weapon/reagent_containers/food/snacks/meat/rawcutlet = 2,
+				/obj/item/weapon/reagent_containers/food/snacks/grown/carrot = 1,
+				/obj/item/weapon/reagent_containers/food/snacks/grown/potato =1,
+				/obj/item/weapon/reagent_containers/food/snacks/grown/cabbage = 1,
+				/obj/item/weapon/reagent_containers/food/snacks/grown/tomato = 2,
+				"" = 8
+				)
+
+/obj/effect/spawner/lootdrop/flora
+	name = "Random Flora"
+	desc = "This is a Flora"
+	icon = 'icons/obj/flora/ausflora.dmi'
+	icon_state = "brflowers_1"
+	loot = list(
+				/obj/structure/flora/ausbushes = 1,
+				/obj/structure/flora/ausbushes/reedbush = 1,
+				/obj/structure/flora/ausbushes/leafybush = 1,
+				/obj/structure/flora/ausbushes/palebush = 1,
+				/obj/structure/flora/ausbushes/stalkybush = 1,
+				/obj/structure/flora/ausbushes/grassybush = 1,
+				/obj/structure/flora/ausbushes/fernybush = 1,
+				/obj/structure/flora/ausbushes/sunnybush = 1,
+				/obj/structure/flora/ausbushes/genericbush = 1,
+				/obj/structure/flora/ausbushes/pointybush = 1,
+				/obj/structure/flora/ausbushes/lavendergrass = 1,
+				/obj/structure/flora/ausbushes/ywflowers = 1,
+				/obj/structure/flora/ausbushes/brflowers = 1,
+				/obj/structure/flora/ausbushes/ppflowers = 1,
+				/obj/structure/flora/ausbushes/sparsegrass = 1,
+				/obj/structure/flora/ausbushes/fullgrass = 1,
+				 "" = 5
+				)
+
