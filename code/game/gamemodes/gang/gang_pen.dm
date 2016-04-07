@@ -88,6 +88,11 @@
 
 /obj/item/weapon/implant/gang/implant(mob/target)
 	if(..())
+		if(isloyal(target))
+			target.visible_message("<span class='warning'>[target] seems to resist the implant!</span>", "<span class='warning'>You feel the influence of your enemies try to invade your mind!</span>")
+			qdel(src)
+			return 0
+
 		for(var/obj/item/weapon/implant/I in target)
 			if(I != src)
 				qdel(I)

@@ -173,8 +173,8 @@
 
 
 /datum/mind/proc/remove_gang()
-		ticker.mode.remove_gangster(src,0,1,1)
-		remove_objectives()
+	ticker.mode.remove_gangster(src,0,1,1)
+	remove_objectives()
 
 /datum/mind/proc/remove_hog_follower_prophet()
 	ticker.mode.red_deity_followers -= src

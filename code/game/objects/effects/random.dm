@@ -88,5 +88,5 @@
 					prob(2);/obj/random/bomb_supply,\
 					prob(1);/obj/item/weapon/extinguisher,\
 					prob(1);/obj/item/weapon/storage/belt/utility,\
-					prob(3);/obj/random/tool
-					prob(1)/obj/item/device/tape)
+					prob(3);/obj/random/tool,\
+					prob(1);/obj/item/device/tape)
