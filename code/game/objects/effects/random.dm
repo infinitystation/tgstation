@@ -3,23 +3,17 @@
 	desc = "This item type is used to spawn random objects at round-start"
 	icon = 'icons/misc/mark.dmi'
 	icon_state = "rup"
-	var/spawn_nothing_percentage = 0 // this variable determines the likelyhood that this random object will not spawn anything
+	var/spawn_nothing_percentage = 0
 
-
-// creates a new object and deletes itself
 /obj/random/New()
 	..()
 	if (!prob(spawn_nothing_percentage))
 		spawn_item()
 	del src
 
-
-// this function should return a specific item to spawn
 /obj/random/proc/item_to_spawn()
 	return 0
 
-
-// creates the random item
 /obj/random/proc/spawn_item()
 	var/build_path = item_to_spawn()
 	return (new build_path(src.loc))
@@ -47,7 +41,7 @@
 	item_to_spawn()
 		return pick(prob(1);/obj/item/weaponcrafting/reciever,\
 					prob(2);/obj/item/weaponcrafting/stock,\
-					prob(3);/obj/item/stack/packageWrap)
+					prob(2);/obj/item/stack/packageWrap)
 
 
 /obj/random/technology_scanner
@@ -56,8 +50,8 @@
 	icon = 'icons/obj/device.dmi'
 	icon_state = "atmos"
 	item_to_spawn()
-		return pick(prob(5);/obj/item/device/t_scanner,\
-					prob(5);/obj/item/device/analyzer)
+		return pick(/obj/item/device/t_scanner,\
+					/obj/item/device/analyzer)
 
 /obj/random/bomb_supply
 	name = "Bomb Supply"
@@ -67,7 +61,9 @@
 	item_to_spawn()
 		return pick(/obj/item/device/assembly/igniter,\
 					/obj/item/device/assembly/prox_sensor,\
-					/obj/item/device/assembly/signaler)
+					/obj/item/device/assembly/signaler
+					/obj/item/device/assembly/infra,\
+					/obj/item/device/assembly/timer)
 
 
 /obj/random/toolbox
@@ -91,18 +87,6 @@
 		return pick(prob(2);/obj/random/technology_scanner,\
 					prob(2);/obj/random/bomb_supply,\
 					prob(1);/obj/item/weapon/extinguisher,\
-					prob(2);/obj/item/weapon/storage/belt/utility,\
-					prob(5);/obj/random/tool)
-
-/obj/random/cave_of_death
-	name = "Random Supply"
-	desc = "This is a random piece of technology supplies."
-	icon = 'icons/obj/guns/toy.dmi'
-	icon_state = "foambox"
-	spawn_nothing_percentage = 75
-	item_to_spawn()
-		return pick(prob(5);/obj/item/weapon/stock_parts/cell/ammo,\
-					prob(3);/obj/item/weapon/switchblade,\
-					prob(1);/obj/item/stack/medical/bruise_pack,\
-					prob(2);/obj/item/stack/medical/gauze,\
-					prob(10);/obj/effect/decal/remains/human)
+					prob(1);/obj/item/weapon/storage/belt/utility,\
+					prob(3);/obj/random/tool
+					prob(1)/obj/item/device/tape)
