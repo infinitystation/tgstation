@@ -16,7 +16,7 @@
 	endWhen = 500
 	var/dispatched = 0
 	var/dispatch_type = 0
-	var/bonus_points = 100
+	var/bonus_points = 10000
 	var/thanks_msg = "В благодарность начислены кое-какие Карго-баллы (шаттл вернётся через 5 минут)."
 
 /datum/round_event/shuttle_loan/start()
