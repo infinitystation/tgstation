@@ -49,11 +49,9 @@
 	valid_territory = 0
 	icon_state = "green"
 
-
 /area/CP/library
 	name = "Library"
 	icon_state = "library"
-
 
 /area/CP/arrival
 	name = "Arrival area"
@@ -87,6 +85,9 @@
 /area/mine/shelter
 	name = "lavaland shelter"
 	icon_state = "green"
+
+/area/crew_quarters/gym
+	name = "Gym"
 
 ///Flors///
 
