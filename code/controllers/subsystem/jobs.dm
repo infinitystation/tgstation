@@ -261,7 +261,7 @@ var/datum/subsystem/job/SSjob
 		assistant_candidates -= player
 	Debug("DO, AC1 end")
 
-	//Select one head
+	//Select heads
 	Debug("DO, Running Head Check")
 	FillHeadPosition()
 	Debug("DO, Head Check end")
