@@ -94,5 +94,5 @@
 
 //shit levels for humans. No idea where else to put it
 #define SHIT_LEVEL_MAX 500
-#define SHIT_LEVEL_DANGER 480
-#define SHIT_LEVEL_WARNING 400
+#define SHIT_LEVEL_DANGER 375
+#define SHIT_LEVEL_WARNING 250
