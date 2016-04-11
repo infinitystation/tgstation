@@ -1,33 +1,33 @@
 <link rel='ractive' href='./back.ract'>
 
-<ui-display title='Scrubber Controls' button>
+<ui-display title='Управление очистителем воздуха' button>
   {{#partial button}}
     <back/>
   {{/partial}}
   {{#each data.scrubbers}}
     <ui-subdisplay title='{{long_name}}'>
-      <ui-section label='Power'>
+      <ui-section label='Питание'>
         <ui-button icon='{{power ? "power-off" : "close"}}' style='{{power ? "selected" : null}}'
-          action='power' params='{"id_tag": "{{id_tag}}", "val": {{+!power}}}'>{{power ? "On" : "Off"}}</ui-button>
+          action='power' params='{"id_tag": "{{id_tag}}", "val": {{+!power}}}'>{{power ? "Вкл" : "Выкл"}}</ui-button>
       </ui-section>
-      <ui-section label='Mode'>
+      <ui-section label='Режим'>
         <ui-button icon='{{scrubbing ? "filter" : "sign-in"}}' style='{{scrubbing ? null : "danger"}}'
-          action='scrubbing' params='{"id_tag": "{{id_tag}}", "val": {{+!scrubbing}}}'>{{scrubbing ? "Scrubbing" : "Siphoning"}}</ui-button>
+          action='scrubbing' params='{"id_tag": "{{id_tag}}", "val": {{+!scrubbing}}}'>{{scrubbing ? "Очистка" : "Откачка"}}</ui-button>
       </ui-section>
-      <ui-section label='Range'>
+      <ui-section label='Диапазон'>
         <ui-button icon='{{widenet ? "expand" : "compress"}}' style='{{widenet ? "selected" : null}}'
-          action='widenet' params='{"id_tag": "{{id_tag}}", "val": {{+!widenet}}}'>{{widenet ? "Expanded" : "Normal"}}</ui-button>
+          action='widenet' params='{"id_tag": "{{id_tag}}", "val": {{+!widenet}}}'>{{widenet ? "Расширенный" : "Нормальный"}}</ui-button>
       </ui-section>
-      <ui-section label='Filters'>
+      <ui-section label='Фильтры'>
         <ui-button icon='{{filter_co2 ? "check-square-o" : "square-o"}}' style='{{filter_co2 ? "selected" : null}}'
           action='co2_scrub' params='{"id_tag": "{{id_tag}}", "val": {{+!filter_co2}}}'>CO2</ui-button>
         <ui-button icon='{{filter_n2o ? "check-square-o" : "square-o"}}' style='{{filter_n2o ? "selected" : null}}'
           action='n2o_scrub' params='{"id_tag": "{{id_tag}}", "val": {{+!filter_n2o}}}'>N2O</ui-button>
         <ui-button icon='{{filter_toxins ? "check-square-o" : "square-o"}}' style='{{filter_toxins ? "selected" : null}}'
-          action='tox_scrub' params='{"id_tag": "{{id_tag}}", "val": {{+!filter_toxins}}}'>Plasma</ui-button>
+          action='tox_scrub' params='{"id_tag": "{{id_tag}}", "val": {{+!filter_toxins}}}'>Плазма</ui-button>
       </ui-section>
     </ui-subdisplay>
   {{else}}
-    <span class='bad'>Error: No scrubbers connected.</span>
+    <span class='bad'>Ошибка: Нет присоединенных очистителей.</span>
   {{/each}}
 </ui-display>
