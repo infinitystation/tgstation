@@ -126,7 +126,6 @@
 			var/reason = ""
 			if(requestonly)
 				reason = input("Reason:", name, "") as text|null
-				reason = remore_cyrillic(reason)
 				if(isnull(reason) || ..())
 					return
 
