@@ -250,6 +250,7 @@
 	// Generate the JSON.
 	var/json = json_encode(json_data)
 	// Strip #255/improper.
+	json = extA2U(json)
 	json = replacetext(json, "\proper", "")
 	json = replacetext(json, "\improper", "")
 	return json

@@ -8,6 +8,8 @@
 		#define MINING "Mining Asteroid"
 		#define EMPTY_AREA_1 "Empty Area 1"
 		#define EMPTY_AREA_2 "Empty Area 2"
+		#define EMPTY_AREA_3 "Empty Area 3"
+		#define EMPTY_AREA_4 "Empty Area 4"
 		#define AWAY_MISSION "Away Mission"
 		#define MONORAIL "Monorail"
 		#define ASTEROID "Asteroid"
