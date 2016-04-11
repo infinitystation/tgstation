@@ -56,15 +56,16 @@
 
 	switch(dispatch_type)
 		if(HIJACK_SYNDIE)
-			SSshuttle.centcom_message += "<font color=blue>Приближается команда угонщиков Синдиката.</font>"
+			SSshuttle.centcom_message += "Приближается команда угонщиков Синдиката."
 		if(RUSKY_PARTY)
-			SSshuttle.centcom_message += "<font color=blue>Приближаются празднующие русские.</font>"
+			SSshuttle.centcom_message += "Приближаются празднующие русские."
 		if(SPIDER_GIFT)
-			SSshuttle.centcom_message += "<font color=blue>Приближается подарок Клана Паука.</font>"
+			SSshuttle.centcom_message += "Приближается подарок Клана Паука."
 		if(DEPARTMENT_RESUPPLY)
-			SSshuttle.centcom_message += "<font color=blue>Приближается снабжение Департамента.</font>"
+			SSshuttle.centcom_message += "Приближается снабжение Департамента."
 		if(ANTIDOTE_NEEDED)
-			SSshuttle.centcom_message += "<font color=blue>Приближаются образцы вирусов</font>"
+			SSshuttle.centcom_message += "Приближаются образцы вирусов."
+	SSshuttle.centcom_message = sanitize_a0(SSshuttle.centcom_message)
 
 /datum/round_event/shuttle_loan/tick()
 	if(dispatched)

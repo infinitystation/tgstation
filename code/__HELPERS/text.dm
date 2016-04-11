@@ -547,7 +547,8 @@ var/list/binary = list("0","1")
 	t = replacetextEx(t, "\\xfc", "\\u044c")
 	t = replacetextEx(t, "\\xfd", "\\u044d")
 	t = replacetextEx(t, "\\xfe", "\\u044e")
-	t = replacetextEx(t, "\\xff", "\\u044f")
+	t = replacetextEx(t, "&#255;", "\\u044f")
+	t = replacetextEx(t, "&#1103;", "\\u044f")
 	return t
 
 /proc/char_split(t)
