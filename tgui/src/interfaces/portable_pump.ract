@@ -1,54 +1,54 @@
 <ui-notice>
-  <span>The regulator {{data.holding ? "is" : "is not"}} connected to a tank.</span>
+  <span>Регулятор {{data.holding ? "" : "не"}} подсоединен к баку.</span>
 </ui-notice>
-<ui-display title='Status' button>
-  <ui-section label='Pressure'>
-    <span>{{Math.round(adata.pressure)}} kPa</span>
+<ui-display title='Статус' button>
+  <ui-section label='Давление'>
+    <span>{{Math.round(adata.pressure)}} кПа</span>
   </ui-section>
-  <ui-section label='Port'>
-    <span class='{{data.connected ? "good" : "average"}}'>{{data.connected ? "Connected" : "Not Connected"}}</span>
+  <ui-section label='Порт'>
+    <span class='{{data.connected ? "good" : "average"}}'>{{data.connected ? "Подсоединен" : "Не подсоединен"}}</span>
   </ui-section>
 </ui-display>
-<ui-display title='Pump'>
-  <ui-section label='Power'>
+<ui-display title='Насос'>
+  <ui-section label='Питание'>
     <ui-button icon='{{data.on ? "power-off" : "close"}}'
       style='{{data.on ? "selected" : "null"}}'
-      action='power'>{{data.on ? "On" : "Off"}}</ui-button>
+      action='power'>{{data.on ? "Вкл" : "Выкл"}}</ui-button>
   </ui-section>
-  <ui-section label='Direction'>
+  <ui-section label='Направление'>
     <ui-button icon='{{data.direction == "out" ? "sign-out" : "sign-in"}}'
-      action='direction'>{{data.direction == "out" ? "Out" : "In"}}</ui-button>
+      action='direction'>{{data.direction == "out" ? "Выход" : "Вход"}}</ui-button>
   </ui-section>
-  <ui-section label='Target Pressure'>
+  <ui-section label='Целевое давление'>
     <ui-bar min='{{data.min_pressure}}' max='{{data.max_pressure}}'
-      value='{{data.target_pressure}}'>{{Math.round(adata.target_pressure)}} kPa</ui-bar>
+      value='{{data.target_pressure}}'>{{Math.round(adata.target_pressure)}} кПа</ui-bar>
   </ui-section>
-  <ui-section label='Pressure Regulator'>
+  <ui-section label='Регулятор давления'>
     <ui-button icon='refresh' state='{{data.target_pressure != data.default_pressure ? null : "disabled"}}'
-      action='pressure' params='{"pressure": "reset"}'>Reset</ui-button>
+      action='pressure' params='{"pressure": "reset"}'>Сброс</ui-button>
     <ui-button icon='minus' state='{{data.target_pressure > data.min_pressure ? null : "disabled"}}'
-      action='pressure' params='{"pressure": "min"}'>Min</ui-button>
-    <ui-button icon='pencil' action='pressure' params='{"pressure": "input"}'>Set</ui-button>
+      action='pressure' params='{"pressure": "min"}'>Мин</ui-button>
+    <ui-button icon='pencil' action='pressure' params='{"pressure": "input"}'>Установить</ui-button>
     <ui-button icon='plus' state='{{data.target_pressure < data.max_pressure ? null : "disabled"}}'
-      action='pressure' params='{"pressure": "max"}'>Max</ui-button>
+      action='pressure' params='{"pressure": "max"}'>Макс</ui-button>
   </ui-section>
 </ui-display>
-<ui-display title='Holding Tank' button>
+<ui-display title='Вмещающий сосуд' button>
   {{#partial button}}
     {{#if data.holding}}
-      <ui-button icon='eject' style='{{data.on ? "danger" : null}}' action='eject'>Eject</ui-button>
+      <ui-button icon='eject' style='{{data.on ? "danger" : null}}' action='eject'>Извлечь</ui-button>
     {{/if}}
   {{/partial}}
   {{#if data.holding}}
-		<ui-section label='Label'>
+		<ui-section label='Маркировка'>
 			{{data.holding.name}}
 		</ui-section>
-		<ui-section label='Pressure'>
-			{{Math.round(adata.holding.pressure)}} kPa
+		<ui-section label='Давление'>
+			{{Math.round(adata.holding.pressure)}} кПа
 		</ui-section>
 	{{else}}
 		<ui-section>
-			<span class='average'>No Holding Tank</span>
+			<span class='average'>Нет вмещающего сосуда</span>
 		</ui-section>
 	{{/if}}
 </ui-display>

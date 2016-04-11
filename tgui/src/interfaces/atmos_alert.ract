@@ -1,14 +1,14 @@
-<ui-display title='Alarms'>
+<ui-display title='Сигнализация'>
   <ul>
     {{#each data.priority}}
       <li><ui-button icon='close' style='danger' action='clear' params='{"zone": "{{.}}"}'>{{.}}</ui-button></li>
     {{else}}
-      <li><span class='good'>No Priority Alerts</span></li>
+      <li><span class='good'>Нет важных тревог</span></li>
     {{/each}}
     {{#each data.minor}}
       <li><ui-button icon='close' style='caution' action='clear' params='{"zone": "{{.}}"}'>{{.}}</ui-button></li>
     {{else}}
-      <li><span class='good'>No Minor Alerts</span></li>
+      <li><span class='good'>Нет незначительных тревог</span></li>
     {{/each}}
   </ul>
 </ui-display>

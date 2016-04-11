@@ -14,16 +14,16 @@
 </script>
 
 <ui-display>
-    <ui-section label='Alert Level'>
+    <ui-section label='Уровень тревоги'>
         <span class='{{seclevelState}}'>{{text.titleCase(data.seclevel)}}</span>
     </ui-section>
     <ui-section label='Controls'>
         <ui-button icon='{{data.alarm ? "close" : "bell-o"}}' action='{{data.alarm ? "reset" : "alarm"}}'>
-            {{data.alarm ? "Reset" : "Activate"}}</ui-button>
+            {{data.alarm ? "Сброс" : "Активировать"}}</ui-button>
     </ui-section>
     {{#if data.emagged}}
       <ui-section label='Warning'>
-        <span class='bad bold'>Safety measures offline. Device may exhibit abnormal behavior.</span>
+        <span class='bad bold'>Защита отключена. Устройство мможет работать непредсказуемо</span>
       </ui-section>
     {{/if}}
 </ui-display>

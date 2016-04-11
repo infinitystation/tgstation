@@ -12,24 +12,24 @@
 </script>
 
 <ui-notice>
-  <span>The regulator {{data.connected? "is" : "is not"}} connected to a mask.</span>
+  <span>Регулятор {{data.connected? "" : "не"}} не подсоединен к маске.</span>
 </ui-notice>
 <ui-display>
-  <ui-section label='Tank Pressure'>
+  <ui-section label='Давление'>
       <ui-bar min='0' max='1013' value='{{data.tankPressure}}'
-        state='{{tankPressureState}}'>{{Math.round(adata.tankPressure)}} kPa</ui-bar>
+        state='{{tankPressureState}}'>{{Math.round(adata.tankPressure)}} кПа</ui-bar>
   </ui-section>
-  <ui-section label='Release Pressure'>
+  <ui-section label='Давление выпуска'>
     <ui-bar min='{{data.minReleasePressure}}' max='{{data.maxReleasePressure}}'
-      value='{{data.releasePressure}}'>{{Math.round(adata.releasePressure)}} kPa</ui-bar>
+      value='{{data.releasePressure}}'>{{Math.round(adata.releasePressure)}} кПа</ui-bar>
   </ui-section>
-  <ui-section label='Pressure Regulator'>
+  <ui-section label='Регулятор давления'>
     <ui-button icon='refresh' state='{{data.releasePressure != data.defaultReleasePressure ? null : "disabled"}}'
-      action='pressure' params='{"pressure": "reset"}'>Reset</ui-button>
+      action='pressure' params='{"pressure": "reset"}'>Сброс</ui-button>
     <ui-button icon='minus' state='{{data.releasePressure > data.minReleasePressure ? null : "disabled"}}'
-      action='pressure' params='{"pressure": "min"}'>Min</ui-button>
-    <ui-button icon='pencil' action='pressure' params='{"pressure": "input"}'>Set</ui-button>
+      action='pressure' params='{"pressure": "min"}'>Мин</ui-button>
+    <ui-button icon='pencil' action='pressure' params='{"pressure": "input"}'>Установить</ui-button>
     <ui-button icon='plus' state='{{data.releasePressure < data.maxReleasePressure ? null : "disabled"}}'
-      action='pressure' params='{"pressure": "max"}'>Max</ui-button>
+      action='pressure' params='{"pressure": "max"}'>Макс</ui-button>
   </ui-section>
 </ui-display>

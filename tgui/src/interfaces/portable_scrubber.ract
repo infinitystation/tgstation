@@ -1,37 +1,37 @@
 <ui-notice>
-  <span>The regulator {{data.holding ? "is" : "is not"}} connected to a tank.</span>
+  <span>Регулятор {{data.holding ? "is" : "is not"}} подсоединен к баку.</span>
 </ui-notice>
-<ui-display title='Status' button>
-  <ui-section label='Pressure'>
-    <span>{{Math.round(adata.pressure)}} kPa</span>
+<ui-display title='Статус' button>
+  <ui-section label='Давление'>
+    <span>{{Math.round(adata.pressure)}} кПа</span>
   </ui-section>
-  <ui-section label='Port'>
-    <span class='{{data.connected ? "good" : "average"}}'>{{data.connected ? "Connected" : "Not Connected"}}</span>
+  <ui-section label='Порт'>
+    <span class='{{data.connected ? "good" : "average"}}'>{{data.connected ? "Подсоединен" : "Не подсоединен"}}</span>
   </ui-section>
 </ui-display>
-<ui-display title='Filter'>
-  <ui-section label='Power'>
+<ui-display title='Фильтр'>
+  <ui-section label='Питание'>
     <ui-button icon='{{data.on ? "power-off" : "close"}}'
       style='{{data.on ? "selected" : "null"}}'
-      action='power'>{{data.on ? "On" : "Off"}}</ui-button>
+      action='power'>{{data.on ? "Вкл" : "Выкл"}}</ui-button>
   </ui-section>
 </ui-display>
-<ui-display title='Holding Tank' button>
+<ui-display title='Вмещающий сосуд' button>
   {{#partial button}}
     {{#if data.holding}}
-      <ui-button icon='eject' style='{{data.on ? "danger" : null}}' action='eject'>Eject</ui-button>
+      <ui-button icon='eject' style='{{data.on ? "danger" : null}}' action='eject'>Извлечь</ui-button>
     {{/if}}
   {{/partial}}
   {{#if data.holding}}
-		<ui-section label='Label'>
+		<ui-section label='Маркировка'>
 			{{data.holding.name}}
 		</ui-section>
-		<ui-section label='Pressure'>
-			{{Math.round(adata.holding.pressure)}} kPa
+		<ui-section label='Давление'>
+			{{Math.round(adata.holding.pressure)}} кПа
 		</ui-section>
 	{{else}}
 		<ui-section>
-			<span class='average'>No Holding Tank</span>
+			<span class='average'>Нет вмещающего сосуда</span>
 		</ui-section>
 	{{/if}}
 </ui-display>

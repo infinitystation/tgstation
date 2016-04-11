@@ -8,34 +8,34 @@
     <span>Contents are being disinfected. Please wait.</span>
   </ui-notice>
 {{else}}
-  <ui-display title='Storage' button>
+  <ui-display title='Хранилище' button>
     {{#partial button}}
-      {{#if !data.open}}<ui-button icon='{{data.locked ? "unlock" : "lock"}}' action='lock'>{{data.locked ? 'Unlock' : 'Lock'}}</ui-button>{{/if}}
-      {{#if !data.locked}}<ui-button icon='{{data.open ? "sign-out" : "sign-in"}}' action='door'>{{data.open ? 'Close' : 'Open'}}</ui-button>{{/if}}
+      {{#if !data.open}}<ui-button icon='{{data.locked ? "unlock" : "lock"}}' action='lock'>{{data.locked ? 'Разблокировать' : 'Заблокировать'}}</ui-button>{{/if}}
+      {{#if !data.locked}}<ui-button icon='{{data.open ? "sign-out" : "sign-in"}}' action='door'>{{data.open ? 'Закрыть' : 'Открыть'}}</ui-button>{{/if}}
     {{/partial}}
     {{#if data.locked}}
       <ui-notice>
-        <span>Unit Locked</span>
+        <span>Заблокировано</span>
       </ui-notice>
     {{elseif data.open}}
-        <ui-section label='Helmet'>
+        <ui-section label='Шлем'>
           <ui-button icon='{{data.helmet ? "square" : "square-o"}}'state='{{data.helmet ? null : "disabled"}}'
-            action='dispense' params='{"item": "helmet"}'>{{data.helmet || "Empty"}}</ui-button>
+            action='dispense' params='{"item": "helmet"}'>{{data.helmet || "Пусто"}}</ui-button>
         </ui-section>
-        <ui-section label='Suit'>
+        <ui-section label='Костюм'>
           <ui-button icon='{{data.suit ? "square" : "square-o"}}' state='{{data.suit ? null : "disabled"}}'
-            action='dispense' params='{"item": "suit"}'>{{data.suit || "Empty"}}</ui-button>
+            action='dispense' params='{"item": "suit"}'>{{data.suit || "Пусто"}}</ui-button>
         </ui-section>
-        <ui-section label='Mask'>
+        <ui-section label='Маска'>
           <ui-button icon='{{data.mask ? "square" : "square-o"}}' state='{{data.mask ? null : "disabled"}}'
-            action='dispense' params='{"item": "mask"}'>{{data.mask || "Empty"}}</ui-button>
+            action='dispense' params='{"item": "mask"}'>{{data.mask || "Пусто"}}</ui-button>
         </ui-section>
-        <ui-section label='Storage'>
+        <ui-section label='Хранилище'>
           <ui-button icon='{{data.storage ? "square" : "square-o"}}' state='{{data.storage ? null : "disabled"}}'
-            action='dispense' params='{"item": "storage"}'>{{data.storage || "Empty"}}</ui-button>
+            action='dispense' params='{"item": "storage"}'>{{data.storage || "Пусто"}}</ui-button>
         </ui-section>
     {{else}}
-      <ui-button icon='recycle' state='{{data.occupied && data.safeties ? "disabled" : null}}' action='uv'>Disinfect</ui-button>
+      <ui-button icon='recycle' state='{{data.occupied && data.safeties ? "disabled" : null}}' action='uv'>Дезинфекция</ui-button>
     {{/if}}
   </ui-display>
 {{/if}}

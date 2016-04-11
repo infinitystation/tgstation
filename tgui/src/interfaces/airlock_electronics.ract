@@ -1,7 +1,7 @@
 <ui-display>
   <ui-section>
-    <ui-button icon='{{data.oneAccess ? "unlock" : "lock"}}' action='one_access'>{{data.oneAccess ? "One" : "All"}} Required</ui-button>
-    <ui-button icon='refresh' action='clear'>Clear</ui-button>
+    <ui-button icon='{{data.oneAccess ? "unlock" : "lock"}}' action='one_access'>Необходим {{data.oneAccess ? "One" : "All"}}</ui-button>
+    <ui-button icon='refresh' action='clear'>Очистить</ui-button>
   </ui-section>
   <hr/>
   <table>

@@ -1,30 +1,30 @@
-<ui-display title='Status'>
-  <ui-section label='Generated Power'>
-    {{Math.round(adata.generated)}}W
+<ui-display title='Статус'>
+  <ui-section label='Выходная мощность'>
+    {{Math.round(adata.generated)}}Вт
   </ui-section>
-  <ui-section label='Orientation'>
+  <ui-section label='Ориентация'>
     <span>{{Math.round(adata.angle)}}&deg; ({{data.direction}})</span>
   </ui-section>
-  <ui-section label='Adjust Angle'>
+  <ui-section label='Корректировка угла'>
     <ui-button icon='step-backward' action='angle' params='{"adjust": -15}'>15&deg;</ui-button>
     <ui-button icon='backward' action='angle' params='{"adjust": -5}'>5&deg;</ui-button>
     <ui-button icon='forward' action='angle' params='{"adjust": 5}'>5&deg;</ui-button>
     <ui-button icon='step-forward' action='angle' params='{"adjust": 15}'>15&deg;</ui-button>
 	</ui-section>
 </ui-display>
-<ui-display title='Tracking'>
-  <ui-section label='Tracker Mode'>
+<ui-display title='Слежение'>
+  <ui-section label='Режим слежения'>
     <ui-button icon='close' state='{{data.tracking_state == 0 ? "selected" : null}}'
-      action='tracking' params='{"mode": 0}'>Off</ui-button>
+      action='tracking' params='{"mode": 0}'>Выкл</ui-button>
     <ui-button icon='clock-o' state='{{data.tracking_state == 1 ? "selected" : null}}'
-      action='tracking' params='{"mode": 1}'>Timed</ui-button>
+      action='tracking' params='{"mode": 1}'>По таймеру</ui-button>
     <ui-button icon='refresh' state='{{data.connected_tracker ? data.tracking_state == 2 ? "selected" : null : "disabled"}}'
-      action='tracking' params='{"mode": 2}'>Auto</ui-button>
+      action='tracking' params='{"mode": 2}'>Авто</ui-button>
 	</ui-section>
-  <ui-section label='Tracking Rate'>
+  <ui-section label='Частота слежения'>
 		<span>{{Math.round(adata.tracking_rate)}}&deg;/h ({{data.rotating_way}})</span>
 	</ui-section>
-  <ui-section label='Adjust Rate'>
+  <ui-section label='Корректировка'>
     <ui-button icon='fast-backward' action='rate' params='{"adjust": -180}'>180&deg;</ui-button>
     <ui-button icon='step-backward' action='rate' params='{"adjust": -30}'>30&deg;</ui-button>
     <ui-button icon='backward' action='rate' params='{"adjust": -5}'>5&deg;</ui-button>
@@ -33,14 +33,14 @@
     <ui-button icon='fast-forward' action='rate' params='{"adjust": 180}'>180&deg;</ui-button>
 	</ui-section>
 </ui-display>
-<ui-display title="Devices" button>
+<ui-display title="Устройства" button>
   {{#partial button}}
-    <ui-button icon='refresh' action='refresh'>Refresh</ui-button>
+    <ui-button icon='refresh' action='refresh'>Обновить</ui-button>
   {{/partial}}
-	<ui-section label='Solar Tracker'>
-    <span class='{{data.connected_tracker ? "good" : "bad"}}'>{{data.connected_tracker ? "" : "Not "}}Found</span>
+	<ui-section label='Солнечный трекер'>
+    <span class='{{data.connected_tracker ? "good" : "bad"}}'>{{data.connected_tracker ? "" : "Не "}}Найден</span>
 	</ui-section>
-	<ui-section label='Solar Panels'>
-		<span class='{{data.connected_panels ? "good" : "bad"}}'>{{Math.round(adata.connected_panels)}} Panels Connected</span>
+	<ui-section label='Солнечные панели'>
+		<span class='{{data.connected_panels ? "good" : "bad"}}'>{{Math.round(adata.connected_panels)}} Панели подключены</span>
 	</ui-section>
 </ui-display>

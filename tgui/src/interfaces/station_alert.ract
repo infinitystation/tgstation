@@ -1,10 +1,10 @@
 {{#each data.alarms:class}}
-  <ui-display title='{{class}} Alarms'>
+  <ui-display title='{{class}} Тревоги'>
     <ul>
       {{#each .}}
         <li>{{.}}</li>
       {{else}}
-        <li>System Nominal</li>
+        <li>Системы в норме</li>
       {{/each}}
     </ul>
   </ui-display>
