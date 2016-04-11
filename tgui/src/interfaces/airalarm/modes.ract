@@ -1,6 +1,6 @@
 <link rel='ractive' href='./back.ract'>
 
-<ui-display title='Operating Modes' button>
+<ui-display title='Режимы работы' button>
   {{#partial button}}
     <back/>
   {{/partial}}

@@ -1,6 +1,6 @@
 <link rel='ractive' href='./back.ract'>
 
-<ui-display title='Alarm Thresholds' button>
+<ui-display title='Пороги тревоги' button>
   {{#partial button}}
     <back/>
   {{/partial}}
