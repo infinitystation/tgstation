@@ -1,18 +1,18 @@
 <ui-display>
-  <ui-section label='Power'>
+  <ui-section label='Питание'>
     <ui-button icon='{{data.on ? "power-off" : "close"}}' style='{{data.on ? "selected" : null}}'
-      action='power'>{{data.on ? "On" : "Off"}}</ui-button>
+      action='power'>{{data.on ? "Вкл" : "Выкл"}}</ui-button>
   </ui-section>
-  <ui-section label='Output Pressure'>
-    <ui-button icon='pencil' action='pressure' params='{"pressure": "input"}'>Set</ui-button>
-    <ui-button icon='plus' state='{{data.pressure == data.max_pressure ? "disabled" : null}}' action='pressure' params='{"pressure": "max"}'>Max</ui-button>
-    <span>{{Math.round(adata.pressure)}} kPa</span>
+  <ui-section label='Выходное давление'>
+    <ui-button icon='pencil' action='pressure' params='{"pressure": "input"}'>Установить</ui-button>
+    <ui-button icon='plus' state='{{data.pressure == data.max_pressure ? "disabled" : null}}' action='pressure' params='{"pressure": "max"}'>Макс</ui-button>
+    <span>{{Math.round(adata.pressure)}} кПа</span>
   </ui-section>
-  <ui-section label='Filter'>
+  <ui-section label='Фильтрация'>
     <ui-button state='{{data.filter_type == "" ? "selected" : null}}'
-      action='filter' params='{"mode": ""}'>Nothing</ui-button>
+      action='filter' params='{"mode": ""}'>Ничего</ui-button>
     <ui-button state='{{data.filter_type == "plasma" ? "selected" : null}}'
-      action='filter' params='{"mode": "plasma"}'>Plasma</ui-button>
+      action='filter' params='{"mode": "plasma"}'>Плазма</ui-button>
     <ui-button state='{{data.filter_type == "o2" ? "selected" : null}}'
       action='filter' params='{"mode": "o2"}'>O2</ui-button>
     <ui-button state='{{data.filter_type == "n2" ? "selected" : null}}'

@@ -1,17 +1,17 @@
-<ui-display title='Status'>
-    <ui-section label='Temperature'>
+<ui-display title='Статус'>
+    <ui-section label='Температура'>
         <span>{{Math.fixed(adata.temperature, 2)}} K</span>
     </ui-section>
-    <ui-section label='Pressure'>
-        <span>{{Math.fixed(adata.pressure, 2)}} kPa</span>
+    <ui-section label='Давление'>
+        <span>{{Math.fixed(adata.pressure, 2)}} кПа</span>
     </ui-section>
 </ui-display>
-<ui-display title='Controls'>
-    <ui-section label='Power'>
+<ui-display title='Управление'>
+    <ui-section label='Питание'>
         <ui-button icon='{{data.on ? "power-off" : "close"}}' style="{{data.on ? "selected" : null}}"
-            action='power'>{{data.on ? "On": "Off"}}</ui-button>
+            action='power'>{{data.on ? "Вкл": "Выкл"}}</ui-button>
     </ui-section>
-    <ui-section label='Target Temperature'>
+    <ui-section label='Целевая тепература'>
         <ui-button icon='fast-backward' style='{{data.target == data.min ? "disabled" : null}}'
             action='target' params='{"adjust": -20}'/>
         <ui-button icon='backward' style='{{data.target == data.min ? "disabled" : null}}'

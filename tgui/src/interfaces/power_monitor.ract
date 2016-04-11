@@ -39,30 +39,30 @@
   }
 </script>
 
-<ui-display title='Network'>
+<ui-display title='Сеть'>
   {{#if config.fancy}}
     <ui-linegraph points='{{graphData}}' height='500'
-        legend='["Available", "Load"]' colors='["rgb(0, 102, 0)", "rgb(153, 0, 0)"]'
-        xunit='seconds ago' xfactor='{{data.interval}}' yunit='W' yfactor='1'
+        legend='["Доступно", "Нагрузка"]' colors='["rgb(0, 102, 0)", "rgb(153, 0, 0)"]'
+        xunit='seconds ago' xfactor='{{data.interval}}' yunit='Вт' yfactor='1'
         xinc='{{data.stored / 10}}' yinc='9'/>
   {{else}}
-    <ui-section label='Available'>
+    <ui-section label='Доступно'>
       <span>{{data.supply}} W</span>
     </ui-section>
-    <ui-section label='Load'>
-        <span>{{data.demand}} W</span>
+    <ui-section label='Нагрузка'>
+        <span>{{data.demand}} Вт</span>
     </ui-section>
   {{/if}}
 </ui-display>
-<ui-display title='Areas'>
+<ui-display title='Зоны'>
   <ui-section nowrap>
-    <div class='content'>Area</div>
-    <div class='content'>Charge</div>
-    <div class='content'>Load</div>
-    <div class='content'>Status</div>
-    <div class='content'>Equipment</div>
-    <div class='content'>Lighting</div>
-    <div class='content'>Environment</div>
+    <div class='content'>Зона</div>
+    <div class='content'>Заряд</div>
+    <div class='content'>Нагрузка</div>
+    <div class='content'>Статус</div>
+    <div class='content'>Оборудование</div>
+    <div class='content'>Освещение</div>
+    <div class='content'>Жизнеобеспечение</div>
   </ui-section>
   {{#each data.areas}}
     <ui-section label='{{name}}' nowrap>

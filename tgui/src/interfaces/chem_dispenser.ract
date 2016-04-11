@@ -1,9 +1,9 @@
-<ui-display title='Status'>
-  <ui-section label='Energy'>
-    <ui-bar min='0' max='{{data.maxEnergy}}' value='{{data.energy}}'>{{Math.fixed(adata.energy)}} Units</ui-bar>
+<ui-display title='Статус'>
+  <ui-section label='Энергия'>
+    <ui-bar min='0' max='{{data.maxEnergy}}' value='{{data.energy}}'>{{Math.fixed(adata.energy)}} Единиц</ui-bar>
   </ui-section>
 </ui-display>
-<ui-display title='Dispense' button>
+<ui-display title='Выдать' button>
   {{#partial button}}
     {{#each data.beakerTransferAmounts}}
       <ui-button icon='plus' state='{{data.amount == . ? "selected" : null}}' action='amount' params='{"target": {{.}}}'>{{.}}</ui-button>
@@ -15,24 +15,24 @@
     {{/each}}
   </ui-section>
 </ui-display>
-<ui-display title='Beaker' button>
+<ui-display title='Колба' button>
   {{#partial button}}
     {{#each data.beakerTransferAmounts}}
       <ui-button icon='minus' action='remove' params='{"amount": {{.}}}'>{{.}}</ui-button>
     {{/each}}
-    <ui-button icon='eject' state='{{data.isBeakerLoaded ? null : "disabled"}}' action='eject'>Eject</ui-button>
+    <ui-button icon='eject' state='{{data.isBeakerLoaded ? null : "disabled"}}' action='eject'>Извлечь</ui-button>
   {{/partial}}
-  <ui-section label='Contents'>
+  <ui-section label='Содержимое'>
     {{#if data.isBeakerLoaded}}
-      <span>{{Math.round(adata.beakerCurrentVolume)}}/{{data.beakerMaxVolume}} Units</span>
+      <span>{{Math.round(adata.beakerCurrentVolume)}}/{{data.beakerMaxVolume}} Единиц</span>
       <br/>
       {{#each adata.beakerContents}}
-        <span class='highlight' intro-outro='fade'>{{Math.fixed(volume, 2)}} units of {{name}}</span><br/>
+        <span class='highlight' intro-outro='fade'>{{Math.fixed(volume, 2)}} единиц {{name}}</span><br/>
       {{else}}
-        <span class='bad'>Beaker Empty</span>
+        <span class='bad'>Колба пуста</span>
       {{/each}}
     {{else}}
-      <span class='average'>No Beaker</span>
+      <span class='average'>Нет колбы</span>
     {{/if}}
   </ui-section>
 </ui-display>

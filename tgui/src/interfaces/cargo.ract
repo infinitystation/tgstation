@@ -8,62 +8,62 @@
   }
 </script>
 
-<ui-display title='Cargo'>
-  <ui-section label='Shuttle'>
+<ui-display title='Грузовой трюм'>
+  <ui-section label='Шаттл'>
     {{#if data.docked && !data.requestonly}}
       <ui-button action='send'>{{data.location}}</ui-button>
     {{else}}
       <span>{{data.location}}</span>
     {{/if}}
   </ui-section>
-  <ui-section label='Credits'>
+  <ui-section label='Кредиты'>
     <span>{{Math.floor(adata.points)}}</span>
   </ui-section>
-  <ui-section label='Centcom Message'>
+  <ui-section label='Сообщения Центкома'>
       <span>{{data.message}}</span>
   </ui-section>
   {{#if data.loan && !data.requestonly}}
-    <ui-section label='Loan'>
+    <ui-section label='Заем'>
       {{#if !data.loan_dispatched}}
-        <ui-button action='loan'>Loan Shuttle</ui-button>
+        <ui-button action='loan'>Занять шаттл</ui-button>
       {{else}}
-        <span class='bad'>Loaned to Centcom</span>
+        <span class='bad'>Шаттл занят Центкому</span>
       {{/if}}
     </ui-section>
   {{/if}}
 </ui-display>
 {{#if !data.requestonly}}
-  <ui-display title='Cart' button>
+  <ui-display title='Корзина' button>
     {{#partial button}}
-      <ui-button icon='close' state='{{data.cart.length ? null : "disabled"}}' action='clear'>Clear</ui-button>
+      <ui-button icon='close' state='{{data.cart.length ? null : "disabled"}}' action='clear'>Очистить</ui-button>
     {{/partial}}
     {{#each data.cart}}
       <ui-section candystripe nowrap>
         <div class='content'>#{{id}}</div>
         <div class='content'>{{object}}</div>
-        <div class='content'>{{cost}} Credits</div>
+        <div class='content'>{{cost}} Кредитов</div>
         <div class='content'>
           <ui-button icon='minus' action='remove' params='{"id": "{{id}}"}'/>
         </div>
       </ui-section>
     {{else}}
-      <span>Nothing in Cart</span>
+      <span>Корзина пуста</span>
     {{/each}}
   </ui-display>
 {{/if}}
-<ui-display title='Requests' button>
+<ui-display title='Запросы' button>
   {{#partial button}}
     {{#if !data.requestonly}}
-      <ui-button icon='close' state='{{data.requests.length ? null : "disabled"}}' action='denyall'>Clear</ui-button>
+      <ui-button icon='close' state='{{data.requests.length ? null : "disabled"}}' action='denyall'>Очистить</ui-button>
     {{/if}}
   {{/partial}}
   {{#each data.requests}}
     <ui-section candystripe nowrap>
       <div class='content'>#{{id}}</div>
       <div class='content'>{{object}}</div>
-      <div class='content'>{{cost}} Credits</div>
-      <div class='content'>By {{orderer}}</div>
-      <div class='content'>Comment: {{reason}}</div>
+      <div class='content'>{{cost}} Кредитов</div>
+      <div class='content'>От {{orderer}}</div>
+      <div class='content'>Комментарий: {{reason}}</div>
       {{#if !data.requestonly}}
         <div class='content'>
           <ui-button icon='check' action='approve' params='{"id": "{{id}}"}'/>
@@ -72,7 +72,7 @@
       {{/if}}
     </ui-section>
     {{else}}
-      <span>No Requests</span>
+      <span>Нет запросов</span>
     {{/each}}
 </ui-display>
 <ui-tabs tabs='{{tabs}}'>
@@ -80,7 +80,7 @@
     <tab name='{{name}}'>
       {{#each packs}}
         <ui-section label='{{name}}' candystripe right>
-          <ui-button action='add' params='{"id": "{{id}}"}'>{{cost}} Credits</ui-button>
+          <ui-button action='add' params='{"id": "{{id}}"}'>{{cost}} Кредитов</ui-button>
         </ui-section>
       {{/each}}
     </tab>

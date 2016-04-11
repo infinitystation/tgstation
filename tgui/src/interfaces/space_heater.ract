@@ -1,31 +1,31 @@
-<ui-display title='Power' button>
+<ui-display title='Питание' button>
   {{#partial button}}
     {{#if data.open}}
-      <ui-button icon='eject' state='{{data.hasPowercell ? null : "disabled"}}' action='eject'>Eject</ui-button>
+      <ui-button icon='eject' state='{{data.hasPowercell ? null : "disabled"}}' action='eject'>Извлечь</ui-button>
     {{/if}}
   {{/partial}}
-  <ui-section label='Power'>
+  <ui-section label='Питание'>
     <ui-button icon='{{data.on ? "power-off" : "close"}}'
       style='{{data.on ? "selected" : null}}' state='{{data.hasPowercell ? null : "disabled"}}'
-      action='power'>{{data.on ? "On" : "Off"}}</ui-button>
+      action='power'>{{data.on ? "Вкл" : "Выкл"}}</ui-button>
   </ui-section>
-  <ui-section label='Cell'>
+  <ui-section label='Батарея'>
     {{#if data.hasPowercell}}
       <ui-bar min='0' max='100' value='{{data.powerLevel}}'>{{Math.fixed(adata.powerLevel)}}%</ui-bar>
 		{{else}}
-			<span class='bad'>No Cell</span>
+			<span class='bad'>Нет батареи</span>
 		{{/if}}
   </ui-section>
 </ui-display>
-<ui-display title='Thermostat'>
-  <ui-section label='Current Temperature'>
+<ui-display title='Термостат'>
+  <ui-section label='Текущая температура'>
 		<span>{{Math.round(adata.currentTemp)}}&deg;C</span>
 	</ui-section>
-	<ui-section label='Target Temperature'>
+	<ui-section label='Установить температуру'>
 		<span>{{Math.round(adata.targetTemp)}}&deg;C</span>
 	</ui-section>
   {{#if data.open}}
-    <ui-section label='Adjust Target'>
+    <ui-section label='Ккоректировка'>
       <ui-button icon='fast-backward' state='{{data.targetTemp > data.minTemp ? null : "disabled"}}' action='target' params='{"adjust": -20}'/>
       <ui-button icon='backward' state='{{data.targetTemp > data.minTemp ? null : "disabled"}}' action='target' params='{"adjust": -5}'/>
       <ui-button icon='pencil' action='target' params='{"target": "input"}'>Set</ui-button>
@@ -33,11 +33,11 @@
       <ui-button icon='fast-forward' state='{{data.targetTemp < data.maxTemp ? null : "disabled"}}' action='target' params='{"adjust": 20}'/>
 	  </ui-section>
 	{{/if}}
-  <ui-section label='Mode'>
+  <ui-section label='Режим'>
 		{{#if data.open}}
-      <ui-button icon='long-arrow-up' state='{{data.mode == "heat" ? "selected" : null}}' action='mode' params='{"mode": "heat"}'>Heat</ui-button>
-      <ui-button icon='long-arrow-down' state='{{data.mode == "cool" ? "selected" : null}}' action='mode' params='{"mode": "cool"}'>Cool</ui-button>
-      <ui-button icon='arrows-v' state='{{data.mode == "auto" ? "selected" : null}}' action='mode' params='{"mode": "auto"}'>Auto</ui-button>
+      <ui-button icon='long-arrow-up' state='{{data.mode == "heat" ? "selected" : null}}' action='mode' params='{"mode": "heat"}'>Обогрев</ui-button>
+      <ui-button icon='long-arrow-down' state='{{data.mode == "cool" ? "selected" : null}}' action='mode' params='{"mode": "cool"}'>Охлаждение</ui-button>
+      <ui-button icon='arrows-v' state='{{data.mode == "auto" ? "selected" : null}}' action='mode' params='{"mode": "auto"}'>Авто</ui-button>
 		{{else}}
 			<span>{{text.titleCase(data.mode)}}</span>
 		{{/if}}

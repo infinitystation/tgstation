@@ -13,30 +13,30 @@
 
 {{#if data.wiping}}
   <ui-notice>
-    <span>Wipe in progress!</span>
+    <span>Стирание в процессе!</span>
   </ui-notice>
 {{/if}}
 <ui-display title={{data.name || "Empty Card"}} button>
   {{#partial button}}
     {{#if data.name}}
-      <ui-button icon='trash' state='{{data.wiping || data.isDead ? "disabled" : null}}' action='wipe'>Wipe AI</ui-button>
+      <ui-button icon='trash' state='{{data.wiping || data.isDead ? "disabled" : null}}' action='wipe'>Стереть ИИ</ui-button>
     {{/if}}
   {{/partial}}
   {{#if data.name}}
     <ui-section label='Status'>
-        <span class='{{data.isDead || data.isBraindead ? "bad" : "good"}}'>{{data.isDead || data.isBraindead ? "Offline" : "Operational"}}</span>
+        <span class='{{data.isDead || data.isBraindead ? "bad" : "good"}}'>{{data.isDead || data.isBraindead ? "Не работает" : "Работает"}}</span>
     </ui-section>
-    <ui-section label='Software Integrity'>
+    <ui-section label='Целостность програмы'>
       <ui-bar min='0' max='100' value='{{data.health}}' state='{{healthState}}'>{{Math.round(adata.health)}}%</ui-bar>
     </ui-section>
-    <ui-section label='Laws'>
+    <ui-section label='Законы'>
       {{#each data.laws}}
         <span class='highlight'>{{.}}</span><br/>
       {{/each}}
     </ui-section>
     <ui-section label='Settings'>
-      <ui-button icon='signal' style='{{data.wireless ? "selected" : null}}' action="wireless">Wireless Activity</ui-button>
-      <ui-button icon='microphone' style='{{data.radio ? "selected" : null}}' action="radio">Subspace Radio</ui-button>
+      <ui-button icon='signal' style='{{data.wireless ? "selected" : null}}' action="wireless">Беспроводная активность</ui-button>
+      <ui-button icon='microphone' style='{{data.radio ? "selected" : null}}' action="radio">Подпространственная связь</ui-button>
     </ui-section>
   {{/if}}
 </ui-display>

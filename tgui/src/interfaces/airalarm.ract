@@ -6,8 +6,8 @@
 
 <ui-notice>
   {{#if data.siliconUser}}
-    <ui-section label='Interface Lock'>
-      <ui-button icon='{{data.locked ? "lock" : "unlock"}}' action='lock'>{{data.locked ? "Engaged" : "Disengaged"}}</ui-button>
+    <ui-section label='Блокировка интерфейса'>
+      <ui-button icon='{{data.locked ? "lock" : "unlock"}}' action='lock'>{{data.locked ? "Включена" : "Выключена"}}</ui-button>
     </ui-section>
   {{else}}
     <span>Swipe an ID card to {{data.locked ? "unlock" : "lock"}} this interface.</span>
@@ -16,27 +16,27 @@
 <status/>
 {{#if !data.locked || data.siliconUser}}
   {{#if config.screen == "home"}}
-      <ui-display title='Air Controls'>
+      <ui-display title='Управление системой кондиционирования'>
         <ui-section>
           <ui-button icon='{{data.atmos_alarm ? "exclamation-triangle" : "exclamation"}}' style='{{data.atmos_alarm ? "caution" : null}}'
-              action='{{data.atmos_alarm ? "reset" : "alarm"}}'>Area Atmosphere Alarm</ui-button>
+              action='{{data.atmos_alarm ? "reset" : "alarm"}}'>Area Атмосферная тревога</ui-button>
         </ui-section>
         <ui-section>
           <ui-button icon='{{data.mode == 3 ? "exclamation-triangle" : "exclamation"}}' style='{{data.mode == 3 ? "danger" : null}}'
-            action='mode' params='{"mode": {{data.mode == 3 ? 1 : 3}}}'>Panic Siphon</ui-button>
+            action='mode' params='{"mode": {{data.mode == 3 ? 1 : 3}}}'>Аварийная откачка</ui-button>
         </ui-section>
         <br/>
         <ui-section>
-          <ui-button icon='sign-out' action='tgui:view' params='{"screen": "vents"}'>Vent Controls</ui-button>
+          <ui-button icon='sign-out' action='tgui:view' params='{"screen": "vents"}'>Управление вентиляцией</ui-button>
         </ui-section>
         <ui-section>
-          <ui-button icon='filter' action='tgui:view' params='{"screen": "scrubbers"}'>Scrubber Controls</ui-button>
+          <ui-button icon='filter' action='tgui:view' params='{"screen": "scrubbers"}'>Управление очистителями</ui-button>
         </ui-section>
         <ui-section>
-          <ui-button icon='cog' action='tgui:view' params='{"screen": "modes"}'>Operating Mode</ui-button>
+          <ui-button icon='cog' action='tgui:view' params='{"screen": "modes"}'>Режим работы</ui-button>
         </ui-section>
         <ui-section>
-          <ui-button icon='bar-chart' action='tgui:view' params='{"screen": "thresholds"}'>Alarm Thresholds</ui-button>
+          <ui-button icon='bar-chart' action='tgui:view' params='{"screen": "thresholds"}'>Пороги тревоги</ui-button>
         </ui-section>
       </ui-display>
   {{elseif config.screen == "vents"}}

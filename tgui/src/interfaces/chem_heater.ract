@@ -1,29 +1,29 @@
-<ui-display title='Thermostat'>
-  <ui-section label='Power'>
+<ui-display title='Термостат'>
+  <ui-section label='Питание'>
     <ui-button icon='{{data.isActive ? "power-off" : "close"}}'
 		style='{{data.isActive ? "selected" : null}}'
 		state='{{data.isBeakerLoaded ? null : "disabled"}}'
-		action='power'>{{data.isActive ? "On" : "Off"}}</ui-button>
+		action='power'>{{data.isActive ? "Вкл" : "Выкл"}}</ui-button>
   </ui-section>
-  <ui-section label='Target'>
+  <ui-section label='Целевая температура'>
 	  <ui-button icon='pencil' action='temperature' params='{"target": "input"}'>{{Math.round(adata.targetTemp)}} K</ui-button>
   </ui-section>
 </ui-display>
-<ui-display title='Beaker' button>
+<ui-display title='Колба' button>
   {{#partial button}}
-    <ui-button icon='eject' state='{{data.isBeakerLoaded ? null : "disabled"}}' action='eject'>Eject</ui-button>
+    <ui-button icon='eject' state='{{data.isBeakerLoaded ? null : "disabled"}}' action='eject'>Извлечь</ui-button>
   {{/partial}}
-  <ui-section label='Contents'>
+  <ui-section label='Содержимое'>
     {{#if data.isBeakerLoaded}}
-      <span>Temperature: {{Math.round(adata.currentTemp)}} K</span>
+      <span>Температура: {{Math.round(adata.currentTemp)}} K</span>
       <br />
       {{#each adata.beakerContents}}
-        <span class='highlight' intro-outro='fade'>{{Math.fixed(volume, 2)}} units of {{name}}</span><br/>
+        <span class='highlight' intro-outro='fade'>{{Math.fixed(volume, 2)}} единиц {{name}}</span><br/>
       {{else}}
-        <span class='bad'>Beaker Empty</span>
+        <span class='bad'>Колба пуста</span>
       {{/each}}
     {{else}}
-      <span class='average'>No Beaker</span>
+      <span class='average'>Нет колбы</span>
     {{/if}}
   </ui-section>
 </ui-display>
