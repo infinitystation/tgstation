@@ -10,6 +10,7 @@ datum/track/New(var/title_name, var/audio)
 /obj/machinery/media/jukebox/
 	name = "space jukebox"
 	icon = 'icons/obj/jukebox.dmi'
+	desc = "Looks like genereic ancient jukebox but a bit spacey."
 	icon_state = "jukebox2-nopower"
 	var/state_base = "jukebox2"
 	anchored = 1
@@ -56,6 +57,8 @@ datum/track/New(var/title_name, var/audio)
 	StopPlaying()
 	..()
 
+
+
 /obj/machinery/media/jukebox/power_change()
 	if(!powered(power_channel) || !anchored)
 		stat |= NOPOWER
@@ -78,64 +81,15 @@ datum/track/New(var/title_name, var/audio)
 	if(playing)
 		overlays += "[state_base]-running"
 
-/obj/machinery/media/jukebox/attack_hand(var/mob/user as mob)
-	if(stat & (NOPOWER|BROKEN))
-		usr << "\The [src] doesn't appear to function."
-		return
-
-	var/title = "RetroBox - Space Style"
-	var/dat = ""
-
-	dat += "<b>Playing - [current_track ? current_track.title : "Nothing"]<b>"
-	dat += "<br/><a href='?src=\ref[src];play=1'>Play</a> <a href='?src=\ref[src];stop=1'>Stop</a><br/>"
-
-	for(var/datum/track/T in tracks)
-		dat += "<br/><a href='?src=\ref[src];change_track=[T.title]'>[T.title]</a>"
-
-	user.set_machine(src)
-	var/datum/browser/popup = new(user, "jukebox", title, 470, 500)
-	popup.set_content(dat)
-	popup.set_title_image(user.browse_rsc_icon(src.icon, src.icon_state))
-	popup.open(1)
-	return
-
-	return 0
-
-/obj/machinery/media/jukebox/Topic(href, href_list)
-	if(..())
-		return
-
-	if(!anchored)
-		usr << "<span class='warning'>You must secure \the [src] first.</span>"
-		return
-
-	if(stat & (NOPOWER|BROKEN))
-		usr << "\The [src] doesn't appear to function."
-		return
-
-	if(href_list["stop"])
-		StopPlaying()
-
-	if(href_list["play"])
-		if(current_track == null)
-			usr << "No track selected."
-		else
-			StartPlaying()
-
-	if(href_list["change_track"])
-		for(var/datum/track/T in tracks)
-			if(T.title == href_list["change_track"])
-				current_track = T
-				StartPlaying()
-
-	src.updateUsrDialog()
-	return 1
-
-/obj/machinery/media/jukebox/attack_ai(mob/user as mob)
-	return src.attack_hand(user)
+/obj/machinery/media/jukebox/attack_hand(mob/user)
+	src.add_fingerprint(user)
+	..()
 
 /obj/machinery/media/jukebox/attackby(obj/item/W as obj, mob/user as mob)
 	src.add_fingerprint(user)
+
+	if (istype(user, /mob/living/silicon) && get_dist(src,user)>1)
+		return src.attack_hand(user)
 
 	if(istype(W, /obj/item/weapon/wrench))
 		if(playing)
@@ -177,3 +131,48 @@ datum/track/New(var/title_name, var/audio)
 	playing = 1
 	use_power = 2
 	update_icon()
+
+
+// Now it will use TGUI - Destiant1on
+/obj/machinery/media/jukebox/ui_act(action, params)
+	if(..())
+	#ifdef DEBUG
+		src << "DEBUG: Nil"
+	#endif
+		return
+
+	switch(action)
+		if("play")
+			for(var/datum/track/T in tracks)
+				if(T.title == params["current_track"])
+					current_track = T
+					StartPlaying()
+					break
+
+		if("stop")
+			StopPlaying()
+	return 1
+
+/obj/machinery/media/jukebox/ui_data(mob/user)
+	var/list/data = list()
+
+	data["current_track"] = current_track != null ? current_track.title : ""
+	data["playing"] = playing
+
+	var/list/tgui_tracks = new
+	for(var/datum/track/T in tracks)
+		tgui_tracks[++tgui_tracks.len] = list("track" = T.title)
+
+	data["tracks"] = tgui_tracks
+
+	return data
+
+/obj/machinery/media/jukebox/ui_interact(mob/user, ui_key = "main", datum/tgui/ui = null, force_open = 0, datum/tgui/master_ui = null, datum/ui_state/state = default_state) // Remember to use the appropriate state.
+	if(stat & (NOPOWER|BROKEN))
+		usr << "\The [src] doesn't work."
+		return
+	ui = SStgui.try_update_ui(user, src, ui_key, ui, force_open)
+	if(!ui)
+		ui = new(user, src, ui_key, "jukebox", name, 500, 300, master_ui, state)
+		ui.open()
+

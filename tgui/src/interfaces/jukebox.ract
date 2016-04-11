@@ -1,0 +1,16 @@
+<ui-display title='Музыкальный автомат'>
+  <select value="{{trackSelect}}">
+    {{#data.tracks:i}}
+      <option id="{{i}}" value="{{track}}">{{track}}</option>
+    {{/data.tracks}}
+  </select>
+  <ui-section>
+    <ui-button icon='play' action='play' params='{"current_track": "{{trackSelect}}"}'></ui-button>
+    <ui-button icon='stop' action='stop'></ui-button>
+  </ui-section>
+    Сейчас играет: {{data.current_track != null ? data.current_track : "Ничего"}}
+  </ui-display>
+
+<script>
+  var trackSelect;
+</script>
