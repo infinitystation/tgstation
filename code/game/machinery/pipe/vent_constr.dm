@@ -1,10 +1,11 @@
-//for vent setting
+/*
+// only for vents vars
 var/setted = 0
 var/work_direction = 1
 var/id_tag = null
 var/freq = 1439
 
-//vent interaction
+// only for vents attackby appendix
 if ((istype(W, /obj/item/device/multitool)) && (pipe_type == PIPE_UVENT))
 	if(setted)
 		setted = 0
@@ -12,21 +13,9 @@ if ((istype(W, /obj/item/device/multitool)) && (pipe_type == PIPE_UVENT))
 		return ..()
 	else
 		interact(user)
-		return ..()
+		return ..() */
 
-//vent init
-var/obj/machinery/atmospherics/components/unary/vent_pump/V = new( src.loc )
-if(setted)
-	if(id_tag)
-		V.id_tag = id_tag
-	V.frequency = freq
-	V.set_frequency(freq)
-	V.internal_pressure_bound = 0
-	V.external_pressure_bound = 0
-	V.pump_direction = work_direction
-	V.construction(dir, pipe_dir, pipe_type, color)
-
-// pipe-device interaction
+// only for vent interaction
 /obj/item/pipe/interact(mob/user)
 	src.add_fingerprint(user)
 	setted = 1
@@ -41,8 +30,10 @@ if(setted)
 	popup.open(1)
 
 
+// only for vent topic
 /obj/item/pipe/Topic(href, href_list)
-	if(!ishuman(usr))	return
+	if(!ishuman(usr))
+		return
 	var/mob/living/carbon/human/user = usr
 	user.set_machine(src)
 
