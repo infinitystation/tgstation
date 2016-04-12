@@ -1,5 +1,5 @@
 <ui-notice>
-  <span>Регулятор {{data.holding ? "" : "не"}} подсоединен к баку.</span>
+  <span>Регулятор {{data.holding ? "" : "не"}} подсоединен к баллону.</span>
 </ui-notice>
 <ui-display title='Статус' button>
   <ui-section label='Давление'>
@@ -33,7 +33,7 @@
       action='pressure' params='{"pressure": "max"}'>Макс</ui-button>
   </ui-section>
 </ui-display>
-<ui-display title='Вмещающий сосуд' button>
+<ui-display title='Баллон' button>
   {{#partial button}}
     {{#if data.holding}}
       <ui-button icon='eject' style='{{data.on ? "danger" : null}}' action='eject'>Извлечь</ui-button>

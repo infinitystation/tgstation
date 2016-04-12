@@ -32,41 +32,41 @@ var/list/hardcoded_gases = list("o2","n2","co2","plasma") //the main four gases,
 /datum/gas/oxygen
 	id = "o2"
 	specific_heat = 20
-	name = "Oxygen"
+	name = "Кислород"
 
 /datum/gas/nitrogen
 	id = "n2"
 	specific_heat = 20
-	name = "Nitrogen"
+	name = "Азот"
 
 /datum/gas/carbon_dioxide //what the fuck is this?
 	id = "co2"
 	specific_heat = 30
-	name = "Carbon Dioxide"
+	name = "Углекислый газ"
 
 /datum/gas/plasma
 	id = "plasma"
 	specific_heat = 200
-	name = "Plasma"
+	name = "Плазма"
 	gas_overlay = "plasma"
 	moles_visible = MOLES_PLASMA_VISIBLE
 
 /datum/gas/nitrous_oxide
 	id = "n2o"
 	specific_heat = 40
-	name = "Nitrous Oxide"
+	name = "Веселящий газ"
 	gas_overlay = "nitrous_oxide"
 	moles_visible = 1
 
 /datum/gas/oxygen_agent_b
 	id = "agent_b"
 	specific_heat = 300
-	name = "Oxygen Agent B"
+	name = "Кислородный агент B"
 
 /datum/gas/volatile_fuel
 	id = "v_fuel"
 	specific_heat = 30
-	name = "Volatile Fuel"
+	name = "Летучее топливо"
 
 /obj/effect/overlay/gas/
 	icon = 'icons/effects/tile_effects.dmi'

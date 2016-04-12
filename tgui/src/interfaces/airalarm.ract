@@ -10,7 +10,7 @@
       <ui-button icon='{{data.locked ? "lock" : "unlock"}}' action='lock'>{{data.locked ? "Включена" : "Выключена"}}</ui-button>
     </ui-section>
   {{else}}
-    <span>Swipe an ID card to {{data.locked ? "unlock" : "lock"}} this interface.</span>
+    <span>Вставьте ID карту, чтобы {{data.locked ? "разблокировать" : "заблокировать"}} этот интерфейс.</span>
   {{/if}}
 </ui-notice>
 <status/>
@@ -19,7 +19,7 @@
       <ui-display title='Управление системой кондиционирования'>
         <ui-section>
           <ui-button icon='{{data.atmos_alarm ? "exclamation-triangle" : "exclamation"}}' style='{{data.atmos_alarm ? "caution" : null}}'
-              action='{{data.atmos_alarm ? "reset" : "alarm"}}'>Area Атмосферная тревога</ui-button>
+              action='{{data.atmos_alarm ? "reset" : "alarm"}}'>Атмосферная тревога</ui-button>
         </ui-section>
         <ui-section>
           <ui-button icon='{{data.mode == 3 ? "exclamation-triangle" : "exclamation"}}' style='{{data.mode == 3 ? "danger" : null}}'

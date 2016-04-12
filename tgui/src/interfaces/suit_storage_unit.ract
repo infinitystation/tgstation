@@ -1,11 +1,11 @@
 {{#if data.occupied && data.safeties}}
   <ui-notice>
-    <span>Biological entity detected in contents. Please remove.</span>
+    <span>Обнаружено биологическое существо. Произведите очистку</span>
   </ui-notice>
 {{/if}}
 {{#if data.uv_active}}
   <ui-notice>
-    <span>Contents are being disinfected. Please wait.</span>
+    <span>Содержимое обеззараживается.</span>
   </ui-notice>
 {{else}}
   <ui-display title='Хранилище' button>
