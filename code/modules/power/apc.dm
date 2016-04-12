@@ -634,7 +634,7 @@
 
 		"powerChannels" = list(
 			list(
-				"title" = "Equipment",
+				"title" = "Оборудование",
 				"powerLoad" = lastused_equip,
 				"status" = equipment,
 				"topicParams" = list(
@@ -644,7 +644,7 @@
 				)
 			),
 			list(
-				"title" = "Lighting",
+				"title" = "Освещение",
 				"powerLoad" = lastused_light,
 				"status" = lighting,
 				"topicParams" = list(
@@ -654,7 +654,7 @@
 				)
 			),
 			list(
-				"title" = "Environment",
+				"title" = "Жизнеобеспечение",
 				"powerLoad" = lastused_environ,
 				"status" = environ,
 				"topicParams" = list(
