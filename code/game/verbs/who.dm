@@ -79,3 +79,5 @@
 				msg += "\t[C] is a [C.holder.rank]\n"
 
 	src << msg
+	src << "<span class='info'>Админы также имеютс&#255; в общей Skype-конференции сервера. Выйдите с ними на контакт там.</span>"
+

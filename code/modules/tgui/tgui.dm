@@ -248,7 +248,7 @@
 		json_data["data"] = data
 
 	// Generate the JSON.
-	var/list/json = json_encode(json_data)
+	var/json = json_encode(json_data)
 	// Strip #255/improper.
 	json = extA2U(json)
 	json = replacetext(json, "\proper", "")
