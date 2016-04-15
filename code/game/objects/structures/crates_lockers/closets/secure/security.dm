@@ -97,7 +97,6 @@
 /obj/structure/closet/secure_closet/warden/New()
 	..()
 	new /obj/item/device/radio/headset/headset_sec(src)
-	new /obj/item/clothing/suit/armor/vest/warden(src)
 	new /obj/item/clothing/head/warden(src)
 	new /obj/item/clothing/head/beret/sec/navywarden(src)
 	new /obj/item/clothing/suit/armor/vest/warden/alt(src)
