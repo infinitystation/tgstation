@@ -204,4 +204,3 @@ var/datum/subsystem/events/SSevent
 /datum/subsystem/events/proc/resetFrequency()
 	frequency_lower = initial(frequency_lower)
 	frequency_upper = initial(frequency_upper)
-

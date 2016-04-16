@@ -295,7 +295,6 @@
 	for(var/t in turf_list)
 		var/turf/open/T = t
 		T.excited = 0
-		T.maptext = null
 		T.recently_active = 0
 		T.excited_group = null
 		SSair.active_turfs -= T
