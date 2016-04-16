@@ -70,6 +70,12 @@
 	wind_down = 300 // 30 seconds
 	wind_down_message = "The storm begins to fade. Should be safe to go outside again."
 
+	start_up_sound = 'sound/machines/pda_quest.ogg'
+	wind_down_sound = 'sound/machines/pda_quest.ogg'
+	adv_start_up_message = "Шторм начнется через некоторое время. Ищите укрытие."
+	adv_duration_message = "Шторм начался! Срочно в укрытие!"
+	adv_wind_down_message = "Шторм прошел. Можно выйти из укрытия."
+
 	target_z = ZLEVEL_LAVALAND
 	area_type = /area/lavaland/surface/outdoors
 

@@ -19,6 +19,13 @@
 	var/area_type = /area/space
 	var/stage = STARTUP_STAGE
 
+	// pda triggering
+	var/sound/start_up_sound
+	var/sound/duration_sound
+	var/sound/wind_down_sound
+	var/adv_start_up_message = "The wind begins to pick up."
+	var/adv_duration_message = "A storm has started!"
+	var/adv_wind_down_message = "The storm is passing."
 
 	var/start_up_overlay = "lava"
 	var/duration_overlay = "lava"
@@ -35,6 +42,8 @@
 	for(var/mob/M in player_list)
 		if(M.z == target_z)
 			M << "<span class='danger'><B>[start_up_message]</B></span>"
+
+	PDAs_trigger(start_up_sound, "<span class='danger'><B>[adv_start_up_message]</B></span>", target_z)
 
 	sleep(start_up_time)
 	stage = MAIN_STAGE
@@ -56,6 +65,8 @@
 					storm_act(L)
 			sleep(10)
 
+	PDAs_trigger(duration_sound, "<B>[adv_duration_message]</B>", target_z)
+
 	stage = WIND_DOWN_STAGE
 	weather_wind_down()
 
@@ -65,6 +76,8 @@
 	for(var/mob/M in player_list)
 		if(M.z == target_z)
 			M << "<span class='danger'><B>[wind_down_message]</B></span>"
+
+	PDAs_trigger(wind_down_sound, "<span class='danger'><B>[adv_wind_down_message]</B></span>", target_z)
 
 	sleep(wind_down)
 
