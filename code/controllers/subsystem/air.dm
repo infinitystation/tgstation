@@ -240,7 +240,6 @@ var/datum/subsystem/air/SSair
 	active_turfs -= T
 	if(istype(T))
 		T.excited = 0
-		T.maptext = null
 		if(T.excited_group)
 			T.excited_group.garbage_collect()
 
@@ -248,8 +247,6 @@ var/datum/subsystem/air/SSair
 /datum/subsystem/air/proc/add_to_active(turf/open/T, blockchanges = 1)
 	if(istype(T) && T.air)
 		T.excited = 1
-		if(active_turfs_debugging)
-			T.maptext = "ACTIVE"
 		active_turfs |= T
 		if(blockchanges && T.excited_group)
 			T.excited_group.garbage_collect()
@@ -277,12 +274,9 @@ var/datum/subsystem/air/SSair
 
 
 	if(active_turfs.len)
-		warning("There are [active_turfs.len] active turfs at roundstart, this is a mapping error caused by a difference of the air between the adjacent turfs. You can see its coordinates at /data/AT_list.txt or using \"Mapping -> Show roundstart AT list\" verb")
-		var/F = file("data/AT_list.txt")
-		fdel(F)
+		warning("There are [active_turfs.len] active turfs at roundstart, this is a mapping error caused by a difference of the air between the adjacent turfs. You can see its coordinates using \"Mapping -> Show roundstart AT list\" verb (debug verbs required)")
 		for(var/turf/T in active_turfs)
 			active_turfs_startlist += text("[T.x], [T.y], [T.z]\n")
-		text2file(jointext(active_turfs_startlist, null), "data/AT_list.txt")
 
 /datum/subsystem/air/proc/setup_atmos_machinery(z_level)
 	for (var/obj/machinery/atmospherics/AM in atmos_machinery)

@@ -133,6 +133,9 @@ var/datum/subsystem/garbage_collector/SSgarbage
 /proc/qdel(datum/D)
 	if(!D)
 		return
+#ifdef TESTING
+	SSgarbage.qdel_list += "[A.type]"
+#endif
 	if(!istype(D))
 		del(D)
 	else if(isnull(D.gc_destroyed))
@@ -154,6 +157,9 @@ var/datum/subsystem/garbage_collector/SSgarbage
 				PlaceInPool(D, 0)
 			if (QDEL_HINT_FINDREFERENCE)//qdel will, if TESTING is enabled, display all references to this object, then queue the object for deletion.
 				SSgarbage.QueueForQueuing(D)
+				#ifdef TESTING
+				A.find_references()
+				#endif
 			else
 				if(!("[D.type]" in SSgarbage.noqdelhint))
 					SSgarbage.noqdelhint += "[D.type]"

@@ -126,7 +126,7 @@
 #define MANIFEST_ERROR_CONTENTS		2
 #define MANIFEST_ERROR_ITEM			4
 
-#define TRANSITIONEDGE			3 //Distance from edge to move to another z-level
+#define TRANSITIONEDGE			7 //Distance from edge to move to another z-level
 
 
 
@@ -303,7 +303,6 @@ var/list/bloody_footprints_cache = list()
 
 //subtypesof(), typesof() without the parent path
 #define subtypesof(typepath) ( typesof(typepath) - typepath )
-
 
 //Bot types
 #define SEC_BOT				1	// Secutritrons (Beepsky) and ED-209s
