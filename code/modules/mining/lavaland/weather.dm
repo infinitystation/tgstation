@@ -55,6 +55,9 @@
 	for(var/mob/M in player_list)
 		if(M.z == target_z)
 			M << "<span class='danger'><B>[duration_message]</B></span>"
+
+	PDAs_trigger(duration_sound, "<span class='danger'><B>[adv_duration_message]</B></span>", target_z)
+
 	if(purely_aesthetic)
 		sleep(duration*10)
 	else  //Storm effects
@@ -64,8 +67,6 @@
 				if(storm_area in impacted_areas)
 					storm_act(L)
 			sleep(10)
-
-	PDAs_trigger(duration_sound, "<B>[adv_duration_message]</B>", target_z)
 
 	stage = WIND_DOWN_STAGE
 	weather_wind_down()

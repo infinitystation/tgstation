@@ -1,15 +1,18 @@
-/proc/PDAs_trigger(var/sound, var/message, var/zlevel=1, var/no_zlevel=0)
+/proc/PDAs_trigger(sound, message, zlevel=1, no_zlevel=0)
 	if(message)
 		message = sanitize_a0(message)
 	for(var/i in PDAs)
 		var/obj/item/device/pda/P = i
 		if(!no_zlevel)
-			if(P.z == zlevel)
+			var/turf/T = get_turf(P)
+			if(!T)
+				continue
+			if(T.z == zlevel)
 				P.trigger_alert(sound, message)
 		else
 			P.trigger_alert(sound, message)
 
-/obj/item/device/pda/proc/trigger_alert(var/sound, var/message)
+/obj/item/device/pda/proc/trigger_alert(sound, message)
 	if(!silent)
 		if(sound)
 			playsound(loc, sound, 75, 1)
