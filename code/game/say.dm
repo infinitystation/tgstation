@@ -78,7 +78,7 @@ var/list/freqtospan = list(
 		input = copytext(input, space + 1, length(input) + 1)
 		if(findtext(input, " ", 1, 2))
 			input = copytext(input, 2)
-		clean_input = input
+	clean_input = input
 	if(copytext(input, length(input) - 1) == "!!")
 		spans |= SPAN_YELL
 		return clean_input != "" ? "[check ? begin : verb_yell], \"[attach_spans(input, spans)]\"" : "[check ? begin : verb_yell]"
