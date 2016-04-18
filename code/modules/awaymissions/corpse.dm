@@ -275,34 +275,6 @@
 	id_job = "Alpha Squad"
 	id_access = "Syndicate"
 
-/obj/effect/mob_spawn/human/guard
-	name = "Guard Soldier"
-	uniform = /obj/item/clothing/under/syndicate/tacticool
-	suit = /obj/item/clothing/suit/armor/uac
-	shoes = /obj/item/clothing/shoes/jackboots
-	radio = /obj/item/device/radio/headset
-	helmet = /obj/item/clothing/head/helmet/guard
-
-/obj/effect/mob_spawn/human/guard/mask
-	name = "Guard Soldier"
-	uniform = /obj/item/clothing/under/syndicate/tacticool
-	suit = /obj/item/clothing/suit/armor/uac
-	shoes = /obj/item/clothing/shoes/jackboots
-	radio = /obj/item/device/radio/headset
-	mask = /obj/item/clothing/mask/gas/sechailer/swat
-	helmet = /obj/item/clothing/head/helmet/guard
-
-/obj/effect/mob_spawn/human/guard/PDF
-	name = "PDF Soldier"
-	uniform = /obj/item/clothing/under/sec_corporate
-	suit = /obj/item/clothing/suit/armor/vest
-	shoes = /obj/item/clothing/shoes/jackboots
-	radio = /obj/item/device/radio/headset
-	helmet = /obj/item/clothing/head/helmet/riot
-	has_id = 1
-	id_job = "PDF private"
-	id_access = "Syndicate"
-
 /obj/effect/mob_spawn/human/cook
 	name = "Cook"
 	uniform = /obj/item/clothing/under/rank/chef

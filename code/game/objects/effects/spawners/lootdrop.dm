@@ -186,14 +186,11 @@
 	icon_state = "latexballon_bursted"
 	color = "Gray"
 	loot = list(
-				/obj/item/stack/rods = 5,
-				/obj/item/stack/sheet/metal = 8,
-				/obj/item/stack/cable_coil/cut = 6,
-				/obj/effect/spawner/lootdrop/trash = 3,
-				/obj/effect/spawner/lootdrop/food = 2,
-				/obj/item/weapon/shard = 6,
-				/obj/effect/decal/cleanable/blood/old = 2,
-				/obj/effect/decal/cleanable/robot_debris = 6,
+				/obj/item/stack/rods = 4,
+				/obj/item/stack/sheet/metal = 5,
+				/obj/item/stack/cable_coil/cut = 3,
+				/obj/item/weapon/shard = 2,
+				/obj/effect/decal/cleanable/robot_debris = 4,
 				"" = 6
 				)
 
