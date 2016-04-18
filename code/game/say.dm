@@ -91,6 +91,12 @@ var/list/freqtospan = list(
 
 	return clean_input != "" ? "[check ? begin : verb_say], \"[input]\"" : "[check ? begin : verb_say]"
 
+/atom/movable/proc/get_custom_quote(input)
+	if(copytext(input, 1, 2) == "!" && findtext(input, "!", 3))
+		return 1
+	else
+		return 0
+
 /atom/movable/proc/lang_treat(atom/movable/speaker, message_langs, raw_message, list/spans)
 	if(languages & message_langs)
 		var/atom/movable/AM = speaker.GetSource()

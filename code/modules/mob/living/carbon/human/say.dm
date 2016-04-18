@@ -2,6 +2,8 @@
 	if(!input)
 		return "говорит, \"...\""	//not the best solution, but it will stop a large number of runtimes. The cause is somewhere in the Tcomms code
 	verb_say = dna.species.say_mod
+	if(get_custom_quote(input))
+		return ..(input, spans)
 	if(src.slurring)
 		input = attach_spans(input, spans)
 		return "невн&#255;тно говорит, \"[input]\""
