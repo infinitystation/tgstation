@@ -388,3 +388,43 @@
 	icon = 'icons/obj/clothing/infinity_work.dmi'
 	worn_icon = 'icons/mob/infinity_work.dmi'
 	togglename = "zipper"
+
+/obj/item/clothing/suit/hazard
+	name = "hazard suit"
+	desc = "Just an hazard suit..."
+	icon_state = "common"
+	icon = 'icons/obj/clothing/uac/suit.dmi'
+	worn_icon = 'icons/mob/uac/suit.dmi'
+	w_class = 4
+	gas_transfer_coefficient = 0.01
+	permeability_coefficient = 0.01
+	flags = THICKMATERIAL
+	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
+	slowdown = 1
+	allowed = list(/obj/item/weapon/tank/internals/emergency_oxygen,/obj/item/weapon/pen,/obj/item/device/flashlight/pen, /obj/item/weapon/reagent_containers/dropper, /obj/item/weapon/reagent_containers/syringe, /obj/item/weapon/reagent_containers/hypospray)
+	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 100, rad = 100)
+	flags_inv = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT
+	strip_delay = 70
+	put_on_delay = 70
+	burn_state = FIRE_PROOF
+
+/obj/item/clothing/head/hazard
+	name = "hazard helmet"
+	icon_state = "common"
+	desc = "A helmet that protects the head and face from biological comtaminants."
+	permeability_coefficient = 0.01
+	flags = THICKMATERIAL
+	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 100, rad = 100)
+	flags_inv = HIDEEARS|HIDEHAIR|HIDEFACIALHAIR
+	burn_state = FIRE_PROOF
+	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
+	icon = 'icons/obj/clothing/uac/hats.dmi'
+	worn_icon = 'icons/mob/uac/hats.dmi'
+
+
+/obj/item/clothing/shoes/boots
+	name = "Boots"
+	desc = "A pair of black boots."
+	icon_state = "common"
+	icon = 'icons/obj/clothing/uac/shoes.dmi'
+	worn_icon = 'icons/mob/uac/shoes.dmi'

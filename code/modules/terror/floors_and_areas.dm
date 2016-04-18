@@ -85,6 +85,7 @@
 /area/mine/shelter
 	name = "lavaland shelter"
 	icon_state = "green"
+	blob_allowed = 0
 
 /area/crew_quarters/gym
 	name = "Gym"
@@ -117,6 +118,20 @@
 
 //Necropolis//
 
+/turf/closed/mineral/random/high_chance/volcanic
+	environment_type = "basalt"
+	mineralChance = 25
+	mineralSpawnChanceList = list(
+		/turf/closed/mineral/uranium = 35, /turf/closed/mineral/diamond = 30, /turf/closed/mineral/gold = 45,
+		/turf/closed/mineral/silver = 50, /turf/closed/mineral/plasma = 50, /turf/closed/mineral/bscrystal = 20)
+	initial_gas_mix = "o2=14;n2=23;TEMP=300"
+	turf_type = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
+	baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
+
+/turf/closed/mineral/random/high_chance/New()
+	icon_state = "rock"
+	..()
+
 /turf/open/floor/plasteel/terror/necro
 	baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
 	icon = 'icons/turf/floors.dmi'
@@ -124,16 +139,29 @@
 /turf/open/floor/plasteel/terror/necro/freezer
 	icon_state = "freezerfloor"
 
+/turf/open/floor/plasteel/terror/necro/cult
+	icon_state = "cult"
+	name = "engraved floor"
+/turf/open/floor/plasteel/terror/necro/cult/outdoor
+	initial_gas_mix = "o2=14;n2=23;TEMP=300"
+
 /turf/open/floor/plasteel/terror/necro/bar
 	icon_state = "bar"
 
 /turf/open/floor/plasteel/terror/necro/darkvault
 	icon_state = "vault"
+/turf/open/floor/plasteel/terror/necro/darkvault/outdoor
+	initial_gas_mix = "o2=14;n2=23;TEMP=300"
 
 /turf/open/floor/plasteel/terror/necro/darkwarning
 	icon_state = "warndark"
 /turf/open/floor/plasteel/terror/necro/darkwarning/corner
 	icon_state = "warndarkcorners"
+
+/turf/open/floor/plasteel/terror/necro/darkwarning/outdoor
+	initial_gas_mix = "o2=14;n2=23;TEMP=300"
+/turf/open/floor/plasteel/terror/necro/darkwarning/corner/outdoor
+	initial_gas_mix = "o2=14;n2=23;TEMP=300"
 
 /turf/open/floor/plasteel/terror/necro/warning
 	icon_state = "warning"
@@ -156,9 +184,7 @@
 	icon_state = "dark"
 	icon = 'icons/turf/infinity.dmi'
 /turf/open/floor/plasteel/terror/necro/black/outdoor
-	oxygen = 14
-	nitrogen = 23
-	temperature = 300
+	initial_gas_mix = "o2=14;n2=23;TEMP=300"
 
 /turf/open/floor/plasteel/terror/necro/darkyellow
 	icon_state = "darkbrownfull"
@@ -174,17 +200,19 @@
 
 /turf/open/floor/plating/lavaland
 	baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
-
 /turf/open/floor/plating/lavaland/outdoor
-	oxygen = 14
-	nitrogen = 23
-	temperature = 300
+	initial_gas_mix = "o2=14;n2=23;TEMP=300"
 
 /turf/open/floor/plasteel/terror/necro/blackvault
 	icon_state = "vault"
 	icon = 'icons/turf/infinity.dmi'
 /turf/open/floor/plasteel/terror/necro/blackvault/corner
 	icon_state = "vaultcorner"
+
+/turf/open/floor/plasteel/terror/necro/blackvault/outdoor
+	initial_gas_mix = "o2=14;n2=23;TEMP=300"
+/turf/open/floor/plasteel/terror/necro/blackvault/corner/outdoor
+	initial_gas_mix = "o2=14;n2=23;TEMP=300"
 
 /turf/open/floor/carpet/necro
 	baseturf = /turf/open/floor/plating/lava/smooth/lava_land_surface
@@ -215,6 +243,20 @@
 	floor_tile = /obj/item/stack/tile/wood
 	broken_states = list("wood-broken", "wood-broken2", "wood-broken3", "wood-broken4", "wood-broken5", "wood-broken6", "wood-broken7")
 
+/turf/open/floor/plasteel/terror/necro/yellow
+	icon_state = "yellowfull"
+/turf/open/floor/plasteel/terror/necro/yellow/side
+	icon_state = "yellow"
+/turf/open/floor/plasteel/terror/necro/yellow/corner
+	icon_state = "yellowcorner"
+
+
+/turf/open/floor/plasteel/terror/necro/whiteyellow
+	icon_state = "whiteyellowfull"
+/turf/open/floor/plasteel/terror/necro/whiteyellow/side
+	icon_state = "whiteyellow"
+/turf/open/floor/plasteel/terror/necro/whiteyellow/corner
+	icon_state = "whiteyellowcorner"
 
 //City floors//
 

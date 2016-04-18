@@ -106,21 +106,21 @@
 			adjustBruteLoss(110)
 
 /mob/living/simple_animal/hostile/asteroid/goldgrub
-	name = "goldgrub"
-	desc = "A worm that grows fat from eating everything in its sight. Seems to enjoy precious metals and other shiny things, hence the name."
-	icon = 'icons/mob/animal.dmi'
-	icon_state = "Goldgrub"
-	icon_living = "Goldgrub"
-	icon_aggro = "Goldgrub_alert"
-	icon_dead = "Goldgrub_dead"
+	name = "bloodeater"
+	desc = "As an abstract-form thing, that grows fat from eating everything in its sight. Seems to enjoy precious metals and other shiny things, hence the name."
+	icon = 'icons/mob/lavaland/Monstr.dmi'
+	icon_state = "goldgrub"
+	icon_living = "goldgrub"
+	icon_aggro = "goldgrub"
+	icon_dead = "goldgrub_dead"
 	icon_gib = "syndicate_gib"
 	vision_range = 2
 	aggro_vision_range = 9
 	idle_vision_range = 2
 	move_to_delay = 5
-	friendly = "harmlessly rolls into"
-	maxHealth = 45
-	health = 45
+	friendly = "harmlessly slash into"
+	maxHealth = 70
+	health = 70
 	harm_intent_damage = 5
 	melee_damage_lower = 0
 	melee_damage_upper = 0
