@@ -458,6 +458,18 @@
 		user << "<span class='notice'>You wet [O] in [src].</span>"
 		playsound(loc, 'sound/effects/slosh.ogg', 25, 1)
 
+	if(istype(O, /obj/item/weapon/reagent_containers/food/snacks/monkeycube))
+		var/obj/item/weapon/reagent_containers/food/snacks/monkeycube/M = O
+		if(M.wrapped)
+			user << "<span class='notice'>You need to unwrap [src] first!</span>"
+			return
+		else
+			user << "<span class='notice'>You place [src] under a stream of water...</span>"
+			user.drop_item()
+			M.loc = get_turf(src)
+			M.Expand()
+			return
+
 	var/obj/item/I = O
 	if(!I || !istype(I))
 		return
@@ -473,7 +485,6 @@
 	O.clean_blood()
 	user.visible_message("<span class='notice'>[user] washes [I] using [src].</span>", \
 						"<span class='notice'>You wash [I] using [src].</span>")
-
 
 /obj/structure/sink/kitchen
 	name = "kitchen sink"

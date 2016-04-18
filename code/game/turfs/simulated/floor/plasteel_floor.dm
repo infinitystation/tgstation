@@ -399,9 +399,7 @@
 	return
 
 /turf/open/floor/plasteel/cult/airless
-	oxygen = 0
-	nitrogen = 0
-	temperature = TCMB
+	initial_gas_mix = "TEMP=2.7"
 
 
 

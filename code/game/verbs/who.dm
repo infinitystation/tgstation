@@ -77,7 +77,6 @@
 		for(var/client/C in admins)
 			if(!C.holder.fakekey)
 				msg += "\t[C] is a [C.holder.rank]\n"
-
+		msg += "<span class='info'>Админы также имеютс&#255; в общей Skype-конференции сервера. Выйдите с ними на контакт там.</span>"
 	src << msg
-	src << "<span class='info'>Админы также имеютс&#255; в общей Skype-конференции сервера. Выйдите с ними на контакт там.</span>"
 

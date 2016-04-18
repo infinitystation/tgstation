@@ -177,12 +177,9 @@ Turf and target are seperate in case you want to teleport some distance from a t
 	if (findtext(key, "Guest-", 1, 7) != 1) //was findtextEx
 		return 0
 
-	var/i = 7, ch, len = length(key)
+	var/i, ch, len = length(key)
 
-	if(copytext(key, 7, 8) == "W") //webclient
-		i++
-
-	for (, i <= len, ++i)
+	for (i = 7, i <= len, ++i)
 		ch = text2ascii(key, i)
 		if (ch < 48 || ch > 57)
 			return 0
@@ -1352,7 +1349,6 @@ proc/pick_closest_path(value)
 /proc/stoplag()
 	. = 1
 	sleep(world.tick_lag)
-#if DM_VERSION >= 510
 	if (world.tick_usage > TICK_LIMIT_TO_RUN) //woke up, still not enough tick, sleep for more.
 		. += 2
 		sleep(world.tick_lag*2)
@@ -1361,4 +1357,3 @@ proc/pick_closest_path(value)
 			sleep(world.tick_lag*4)
 			//you might be thinking of adding more steps to this, or making it use a loop and a counter var
 			//	not worth it.
-#endif

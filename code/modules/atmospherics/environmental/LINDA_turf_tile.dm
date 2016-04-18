@@ -15,7 +15,9 @@
 
 	//used for mapping and for breathing while in walls (because that's a thing that needs to be accounted for...)
 	//string parsed by /datum/gas/proc/copy_from_turf
-	var/initial_gas_mix = "o2=22;n2=82;TEMP=293.15" //approximation of MOLES_O2STANDARD and MOLES_N2STANDARD pending byond allowing constant expressions to be embedded in constant strings
+	var/initial_gas_mix = "o2=22;n2=82;TEMP=293.15"
+	//approximation of MOLES_O2STANDARD and MOLES_N2STANDARD pending byond allowing constant expressions to be embedded in constant strings
+	// If someone will place 0 of some gas there, SHIT WILL BREAK. Do not do that.
 
 /turf/open
 	//used for spacewind
@@ -295,7 +297,6 @@
 	for(var/t in turf_list)
 		var/turf/open/T = t
 		T.excited = 0
-		T.maptext = null
 		T.recently_active = 0
 		T.excited_group = null
 		SSair.active_turfs -= T

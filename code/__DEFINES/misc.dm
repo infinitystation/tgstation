@@ -126,7 +126,7 @@
 #define MANIFEST_ERROR_CONTENTS		2
 #define MANIFEST_ERROR_ITEM			4
 
-#define TRANSITIONEDGE			3 //Distance from edge to move to another z-level
+#define TRANSITIONEDGE			7 //Distance from edge to move to another z-level
 
 
 
@@ -304,7 +304,6 @@ var/list/bloody_footprints_cache = list()
 //subtypesof(), typesof() without the parent path
 #define subtypesof(typepath) ( typesof(typepath) - typepath )
 
-
 //Bot types
 #define SEC_BOT				1	// Secutritrons (Beepsky) and ED-209s
 #define MULE_BOT			2	// MULEbots
@@ -369,10 +368,7 @@ var/global/list/ghost_others_options = list(GHOST_OTHERS_SIMPLE, GHOST_OTHERS_DE
 /////////////////////////////////////
 //this was added midway thru 510, so it might not exist in some versions, but we can't check by minor verison
 #ifndef TILE_BOUND
-#if DM_VERSION >= 510
-#warn this version of 510 is too old, You should use byond 510.1332 or later when using 510.
-#endif
-#define TILE_BOUND 256
+#error this version of 510 is too old, You must use byond 510.1332 or later. (TILE_BOUND is not defined)
 #endif
 
 // Disabling certain features

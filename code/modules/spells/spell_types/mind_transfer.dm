@@ -54,6 +54,11 @@ Also, you never added distance checking after target is selected. I've went ahea
 	var/mob/living/victim = target//The target of the spell whos body will be transferred to.
 	var/mob/caster = user//The wizard/whomever doing the body transferring.
 
+	//HACKY CODE
+	if(isloyal(victim))
+		if(!((caster.mind in (ticker.mode.changelings | ticker.mode.abductors | ticker.mode.cult)) || is_shadow_or_thrall(target) || (target.mind in ticker.mode.blue_deity_prophets|ticker.mode.red_deity_prophets|ticker.mode.red_deity_followers|ticker.mode.blue_deity_followers)))
+			caster.mind.remove_all_antag_light()
+
 	//MIND TRANSFER BEGIN
 	if(caster.mind.special_verbs.len)//If the caster had any special verbs, remove them from the mob verb list.
 		for(var/V in caster.mind.special_verbs)//Since the caster is using an object spell system, this is mostly moot.

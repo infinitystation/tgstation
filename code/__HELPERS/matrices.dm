@@ -15,6 +15,7 @@
 		matrices += M
 	var/matrix/last = matrix(transform)
 	matrices += last
+
 	speed /= segments
 
 	animate(src, transform = matrices[1], time = speed, loops)
@@ -22,6 +23,7 @@
 		animate(transform = matrices[i], time = speed)
 		//doesn't have an object argument because this is "Stacking" with the animate call above
 		//3 billion% intentional
+
 
 //Dumps the matrix data in format a-f
 /matrix/proc/tolist()
