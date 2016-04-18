@@ -65,17 +65,31 @@ var/list/freqtospan = list(
 /atom/movable/proc/say_quote(input, list/spans=list())
 	if(!input)
 		return "says, \"...\""	//not the best solution, but it will stop a large number of runtimes. The cause is somewhere in the Tcomms code
+	var/check = 0
+	var/clean_input = ""
+	var/begin = copytext(input, 1, 2)
 	var/ending = copytext(input, length(input))
+	if(begin == "!")
+		var/space = findtext(input, "!", 3)
+		if(!space)
+			space = length(input) + 1
+		check = 1
+		begin = copytext(input, 2, space)
+		input = copytext(input, space + 1, length(input) + 1)
+		if(findtext(input, " ", 1, 2))
+			input = copytext(input, 2)
+		clean_input = input
 	if(copytext(input, length(input) - 1) == "!!")
 		spans |= SPAN_YELL
-		return "[verb_yell], \"[attach_spans(input, spans)]\""
+		return clean_input != "" ? "[check ? begin : verb_yell], \"[attach_spans(input, spans)]\"" : "[check ? begin : verb_yell]"
+
 	input = attach_spans(input, spans)
 	if(ending == "?")
-		return "[verb_ask], \"[input]\""
+		return clean_input != "" ? "[check ? begin : verb_ask], \"[input]\"" : "[check ? begin : verb_ask]"
 	if(ending == "!")
-		return "[verb_exclaim], \"[input]\""
+		return clean_input != "" ? "[check ? begin : verb_exclaim], \"[input]\"" : "[check ? begin : verb_exclaim]"
 
-	return "[verb_say], \"[input]\""
+	return clean_input != "" ? "[check ? begin : verb_say], \"[input]\"" : "[check ? begin : verb_say]"
 
 /atom/movable/proc/lang_treat(atom/movable/speaker, message_langs, raw_message, list/spans)
 	if(languages & message_langs)
