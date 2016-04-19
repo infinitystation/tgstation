@@ -273,7 +273,7 @@
 	name = "forked tongue"
 	desc = "A thin and long muscle typically found in reptilian races, apparently moonlights as a nose."
 	icon_state = "tonguelizard"
-	say_mod = "hisses"
+	say_mod = "шипит"
 
 /obj/item/organ/internal/tongue/lizard/TongueSpeech(var/message)
 	var/regex/lizard_hicc = new("с+", "g")
@@ -291,7 +291,7 @@
 	name = "proboscis"
 	desc = "A freakish looking meat tube that apparently can take in liquids."
 	icon_state = "tonguefly"
-	say_mod = "buzzes"
+	say_mod = "жужжит"
 
 /obj/item/organ/internal/tongue/fly/TongueSpeech(var/message)
 	var/regex/fly_bu3 = new("з+", "g")
@@ -309,7 +309,7 @@
 	name = "superlingual matrix"
 	desc = "A mysterious structure that allows for instant communication between users. Pretty impressive until you need to eat something."
 	icon_state = "tongueayylmao"
-	say_mod = "gibbers"
+	say_mod = "гремит"
 
 /obj/item/organ/internal/tongue/abductor/TongueSpeech(var/message)
 	//Hacks
@@ -333,7 +333,7 @@
 	name = "rotting tongue"
 	desc = "Between the decay and the fact that it's just lying there you doubt a tongue has ever seemed less sexy."
 	icon_state = "tonguezombie"
-	say_mod = "moans"
+	say_mod = "мычит"
 
 /obj/item/organ/internal/tongue/zombie/TongueSpeech(var/message)
 	var/list/message_list = splittext(message, " ")
@@ -355,7 +355,7 @@
 	name = "alien tongue"
 	desc = "According to leading xenobiologists the evolutionary benefit of having a second mouth in your mouth is \"that it looks badass\"."
 	icon_state = "tonguexeno"
-	say_mod = "hiss"
+	say_mod = "шипит"
 
 /obj/item/organ/internal/tongue/alien/TongueSpeech(var/message)
 	playsound(owner, "hiss", 25, 1, 1)

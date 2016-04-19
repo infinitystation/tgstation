@@ -78,7 +78,7 @@ var/list/freqtospan = list(
 		input = copytext(input, space + 1, length(input) + 1)
 		if(findtext(input, " ", 1, 2))
 			input = copytext(input, 2)
-		clean_input = input
+	clean_input = input
 	if(copytext(input, length(input) - 1) == "!!")
 		spans |= SPAN_YELL
 		return clean_input != "" ? "[check ? begin : verb_yell], \"[attach_spans(input, spans)]\"" : "[check ? begin : verb_yell]"
@@ -90,6 +90,12 @@ var/list/freqtospan = list(
 		return clean_input != "" ? "[check ? begin : verb_exclaim], \"[input]\"" : "[check ? begin : verb_exclaim]"
 
 	return clean_input != "" ? "[check ? begin : verb_say], \"[input]\"" : "[check ? begin : verb_say]"
+
+/atom/movable/proc/get_custom_quote(input)
+	if(copytext(input, 1, 2) == "!" && findtext(input, "!", 3))
+		return 1
+	else
+		return 0
 
 /atom/movable/proc/lang_treat(atom/movable/speaker, message_langs, raw_message, list/spans)
 	if(languages & message_langs)

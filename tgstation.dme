@@ -1751,7 +1751,6 @@
 #include "code\modules\telesci\telesci_computer.dm"
 #include "code\modules\terror\curtain.dm"
 #include "code\modules\terror\floors_and_areas.dm"
-#include "code\modules\terror\guard.dm"
 #include "code\modules\terror\other.dm"
 #include "code\modules\terror\terror_suit_storage_unit.dm"
 #include "code\modules\tgui\external.dm"

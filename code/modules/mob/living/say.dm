@@ -302,6 +302,8 @@ var/list/crit_allowed_modes = list(MODE_WHISPER,MODE_CHANGELING,MODE_ALIEN)
 	return 0
 
 /mob/living/say_quote(input, list/spans)
+	if(get_custom_quote(input))
+		return ..(input, spans)
 	var/tempinput = attach_spans(input, spans)
 	if (stuttering)
 		return "бормочет, \"[tempinput]\""

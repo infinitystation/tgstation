@@ -1,4 +1,7 @@
 /mob/living/silicon/robot/say_quote(var/text)
+	if(get_custom_quote(text))
+		return ..(text, list(SPAN_ROBOT))
+
 	var/ending = copytext(text, length(text))
 
 	if(ending == "?")
