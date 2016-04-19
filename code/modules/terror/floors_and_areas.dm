@@ -5,35 +5,35 @@
 	icon_state = "red"
 
 /area/security/gear
-	name = "Shower"
+	name = "Gear Room"
 	icon_state = "red"
 
 /area/security/security_gear
-	name = "Shower"
+	name = "Security Gear Room"
 	icon_state = "red"
 
 /area/security/dinner
-	name = "Shower"
+	name = "Dinner room"
 	icon_state = "red"
 
 /area/security/west
-	name = "Shower"
+	name = "West brig's corridor"
 	icon_state = "red"
 
 /area/security/infirmary
-	name = "Shower"
+	name = "Infirmary"
 	icon_state = "red"
 
 /area/security/center
-	name = "Shower"
+	name = "Central brig's corridor"
 	icon_state = "red"
 
 /area/security/east
-	name = "Shower"
+	name = "East brig's corridor"
 	icon_state = "red"
 
 /area/security/mass_cell
-	name = "Shower"
+	name = "Mass cell"
 	icon_state = "red"
 
 /area/mine/bravo
