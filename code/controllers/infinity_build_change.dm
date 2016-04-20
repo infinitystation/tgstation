@@ -56,7 +56,12 @@ var/datum/server_build/currentbuild
 				diary << "Unknown command in builds config: '[command]'"
 
 /proc/loadbuildname()
-	var/ext = shell("sh dir.sh")
+	shell("sh dir.sh > ext.txt")
+	var/ext
+	var/list/Lines = file2list("ext.txt")
+	if(Lines.len)
+		if(Lines[1])
+			ext = Lines[1]
 	for(var/build in config.buildlist)
 		var/datum/server_build/B = config.buildlist[build]
 
