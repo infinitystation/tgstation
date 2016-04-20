@@ -617,6 +617,9 @@ var/next_mob_id = 0
 		stat(null, "Map: [MAP_NAME]")
 		if (nextmap && istype(nextmap))
 			stat(null, "Next Map: [nextmap.friendlyname]")
+		stat(null, "Build: [currentbuild.friendlyname]")
+		if (nextbuild && istype(nextbuild))
+			stat(null, "Next Build: [nextbuild.friendlyname]")
 		stat(null, "Server Time: [time2text(world.realtime, "YYYY-MM-DD hh:mm")]")
 
 		var/ETA = SSshuttle.emergency.getModeStr()
