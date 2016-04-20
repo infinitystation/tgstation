@@ -43,6 +43,7 @@ var/global/list/map_transition_config = MAP_TRANSITION_CONFIG
 	appearance_loadbanfile()
 	LoadBans()
 	investigate_reset()
+	loadbuildname()
 
 	if(config && config.server_name != null && config.server_suffix && world.port > 0)
 		config.server_name += " #[(world.port % 1000) / 100]"
@@ -240,6 +241,7 @@ var/inerror = 0
 	config.loadsql("config/dbconfig.txt")
 	if (config.maprotation && SERVERTOOLS)
 		config.loadmaplist("config/maps.txt")
+	config.loadbuildlist("config/builds.txt")
 
 	// apply some settings from config..
 	abandon_allowed = config.respawn

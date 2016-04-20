@@ -120,6 +120,7 @@
 #include "code\controllers\configuration.dm"
 #include "code\controllers\controller.dm"
 #include "code\controllers\failsafe.dm"
+#include "code\controllers\infinity_build_change.dm"
 #include "code\controllers\infinity_server_tools.dm"
 #include "code\controllers\master.dm"
 #include "code\controllers\subsystem.dm"
