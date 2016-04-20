@@ -56,7 +56,7 @@ var/datum/server_build/currentbuild
 				diary << "Unknown command in builds config: '[command]'"
 
 /proc/loadbuildname()
-	var/ext = shell("dir.sh")
+	var/ext = shell("sh dir.sh")
 	for(var/build in config.buildlist)
 		var/datum/server_build/B = config.buildlist[build]
 
@@ -67,6 +67,10 @@ var/datum/server_build/currentbuild
 /client/proc/adminchangebuild()
 	set category = "Server"
 	set name = "Change Build"
+
+	if(!holder)
+		return
+
 	var/list/buildchoices = list()
 	for(var/build in config.buildlist)
 		var/datum/server_build/B = config.buildlist[build]
@@ -83,12 +87,13 @@ var/datum/server_build/currentbuild
 		return
 
 	ticker.buildchangechecked = 1
-	var/datum/server_build/B = config.buildlist[chosenbuild]
+	ticker.buildchanger_ckey = ckey
+	var/datum/server_build/B = buildchoices[chosenbuild]
 	nextbuild = B
 
-	message_admins("[key_name_admin(usr)] помен&#255;л билд на [B.name]([B.friendlyname])")
-	log_admin("[key_name(usr)] помен&#255;л билд на [B.name]([B.friendlyname])")
-	world << "<span class='boldannounce'>Билд изменен на [B.friendlyname] дл&#255; следующего раунда!</span>"
+	message_admins("[key_name_admin(usr)] помен&#255;л билд на [nextbuild.name]([nextbuild.friendlyname])")
+	log_admin("[key_name(usr)] помен&#255;л билд на [nextbuild.name]([nextbuild.friendlyname])")
+	world << "<span class='boldannounce'>Билд изменен на [nextbuild.friendlyname] дл&#255; следующего раунда!</span>"
 
 /proc/forcechangebuild(datum/server_build/B)
 	if(!istype(B))
