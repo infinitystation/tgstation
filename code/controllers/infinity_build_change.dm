@@ -56,7 +56,7 @@ var/datum/server_build/currentbuild
 				diary << "Unknown command in builds config: '[command]'"
 
 /proc/loadbuildname()
-	shell("sh dir.sh > ext.txt")
+	shell("sh ../dir.sh > ext.txt")
 	var/ext
 	var/list/Lines = file2list("ext.txt")
 	if(Lines.len)
@@ -102,6 +102,8 @@ var/datum/server_build/currentbuild
 
 /proc/forcechangebuild(datum/server_build/B)
 	if(!istype(B))
+		return
+	if(!B)
 		return
 	if(ticker.update_waiting)
 		return
