@@ -9,22 +9,26 @@ build tgstation
 	dmbfile tgstation
 	friendlyname TG Station
 	folder infinity
+	update infinity-tg
 endbuild
 
 build tgstationtest
 	dmbfile tgstation
 	friendlyname TG Station Test
 	folder infinity-tg
+	update infinity-tg
 endbuild
 
 build paradise
 	dmbfile paradise
 	friendlyname Paradise Station
 	folder infinity-par
+	update infinity-paradise
 endbuild
 
 build paradisetest
 	dmbfile paradise
 	friendlyname Paradise Station Test
 	folder infinity-paradise
+	update infinity-paradise
 endbuild

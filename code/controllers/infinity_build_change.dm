@@ -6,6 +6,7 @@ var/datum/server_build/currentbuild
 	var/friendlyname		// friendly name of build
 	var/dmb_file			// dmb file of build
 	var/folder				// folder of build
+	var/update				// update folder of build
 
 /datum/server_build/New(name)
 	src.name = name
@@ -49,6 +50,8 @@ var/datum/server_build/currentbuild
 				current_build.friendlyname = data
 			if("folder")
 				current_build.folder = data
+			if("update")
+				current_build.update = data
 			if("endbuild")
 				config.buildlist[current_build.name] = current_build
 				currentbuild = null
