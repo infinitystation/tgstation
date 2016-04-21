@@ -199,9 +199,7 @@
 	icon_state = "warningcorner"
 
 /turf/open/floor/plasteel/warning/airless
-	oxygen = 0
-	nitrogen = 0
-	temperature = TCMB
+	initial_gas_mix = "TEMP=2.7"
 
 /turf/open/floor/plasteel/warnplate
 	icon_state = "warnplate"

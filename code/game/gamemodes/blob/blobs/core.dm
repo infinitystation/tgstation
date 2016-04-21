@@ -17,6 +17,7 @@
 /obj/effect/blob/core/New(loc, client/new_overmind = null, new_rate = 2, placed = 0)
 	blob_cores += src
 	SSobj.processing |= src
+	poi_list |= src
 	update_icon() //so it atleast appears
 	if(!placed && !overmind)
 		create_overmind(new_overmind)
@@ -41,6 +42,7 @@
 		overmind.blob_core = null
 	overmind = null
 	SSobj.processing.Remove(src)
+	poi_list -= src
 	return ..()
 
 /obj/effect/blob/core/check_health()
