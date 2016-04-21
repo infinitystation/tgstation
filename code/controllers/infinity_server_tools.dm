@@ -5,7 +5,7 @@
 		return
 
 	log_game("Changing map to [VM.name]([VM.friendlyname])")
-	. = shell("sh map_rotate.sh [currentbuild.dmb_file] [VM.name] _maps")
+	. = shell("sh ../map_rotate.sh [currentbuild.dmb_file] [VM.name] _maps")
 	switch(.)
 		if(null)
 			message_admins("Failed to change map: Could not run map rotator")
