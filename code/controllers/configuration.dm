@@ -187,6 +187,8 @@
 	var/maprotation = 1
 	var/maprotatechancedelta = 0.75
 
+	var/list/datum/server_build/buildlist = list()
+
 	// Enables random events mid-round when set to 1
 	var/allow_random_events = 0
 

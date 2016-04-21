@@ -10,9 +10,12 @@ var/datum/subsystem/ticker/ticker
 
 	var/current_state = GAME_STATE_STARTUP	//state of current round (used by process()) Use the defines GAME_STATE_* !
 	var/force_ending = 0					//Round was ended by admin intervention
+	var/not_restarting = 0 					//when not restarting?
+
 	var/update_waiting = 0					//we need update at round ending
 	var/updater_ckey = ""					//who updating server?
-	var/not_restarting = 0 					//when not restarting?
+	var/buildchangechecked = 0				//build changing?
+	var/buildchanger_ckey = ""				//who changing build?
 
 	var/hide_mode = 0
 	var/datum/game_mode/mode = null
@@ -118,6 +121,8 @@ var/datum/subsystem/ticker/ticker
 				declare_completion(force_ending)
 				if(update_waiting)
 					force_update_server()
+				if(buildchangechecked && nextbuild)
+					forcechangebuild(nextbuild)
 				spawn(50)
 					if(mode.station_was_nuked)
 						world.Reboot("Station destroyed by Nuclear Device.", "end_proper", "nuke")
