@@ -1,6 +1,13 @@
 var/datum/server_build/nextbuild
 var/datum/server_build/currentbuild
 
+/datum/configuration
+	var/list/datum/server_build/buildlist = list()
+
+/datum/subsystem/ticker
+	var/buildchangechecked = 0				//build changing?
+	var/buildchanger_ckey = ""				//who changing build?
+
 /datum/server_build
 	var/name				// name of build
 	var/friendlyname		// friendly name of build
@@ -116,4 +123,4 @@ var/datum/server_build/currentbuild
 	sleep(100)
 
 	log_game("Changing build to [B.name]([B.friendlyname])")
-	. = shell("sh ../build_change.sh [B.dmb_file] [B.folder] [world.port]")
+	. = shell("sh ../change_build.sh [B.dmb_file] [B.folder] [world.port]")
