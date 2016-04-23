@@ -7,14 +7,28 @@ endbuild
 
 build tgstation
 	dmbfile tgstation
-	friendlyname TG Station
+	friendlyname /tg/station
 	folder infinity
 	update infinity-tg
 endbuild
 
 build tgstationtest
 	dmbfile tgstation
-	friendlyname TG Station Test
+	friendlyname /tg/station Test
 	folder infinity-tg
 	update infinity-tg
+endbuild
+
+build baystation12
+	dmbfile baystation12
+	friendlyname Baystation12
+	folder infinity-bay
+	update infinity-baystation
+endbuild
+
+build baystation12test
+	dmbfile baystation12
+	friendlyname Baystation12 Test
+	folder infinity-baystation
+	update infinity-baystation
 endbuild
