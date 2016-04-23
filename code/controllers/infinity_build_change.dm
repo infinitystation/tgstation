@@ -124,3 +124,14 @@ var/datum/server_build/currentbuild
 
 	log_game("Changing build to [B.name]([B.friendlyname])")
 	. = shell("sh ../change_build.sh [B.dmb_file] [B.folder] [world.port]")
+
+/* mob/Stat appendix
+		stat(null, "Map: [MAP_NAME]")
+		if(nextmap && istype(nextmap))
+			stat(null, "Next Map: [nextmap.friendlyname]")
+		if(currentbuild)
+			stat(null, "Build: [currentbuild.friendlyname]")
+		if (nextbuild && istype(nextbuild))
+			stat(null, "Next Build: [nextbuild.friendlyname]")
+		stat(null, "Server Time: [time2text(world.realtime, "YYYY-MM-DD hh:mm")]")
+*/
