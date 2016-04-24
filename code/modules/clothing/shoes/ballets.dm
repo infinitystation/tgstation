@@ -30,3 +30,9 @@
 	name = "red ballets"
 	desc = "Light and comfortable red shoes! Special series!"
 	icon_state = "rgballets"
+
+/obj/item/clothing/shoes/ballets/white/medical
+    name = "white ballets"
+    desc = "Light and comfortable white shoes!"
+    icon_state = "wballets"
+    permeability_coefficient = 0.01

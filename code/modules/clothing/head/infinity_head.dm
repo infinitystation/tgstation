@@ -125,3 +125,19 @@
 	name = "brown hat"
 	desc = "Old western hat."
 	icon_state = "brownhat"
+
+/obj/item/clothing/head/kitty/doggy
+	name = "doggy ears"
+	desc = "A pair of doggy ears! Woof!"
+	icon_state = "dog_ears"
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+
+/obj/item/clothing/head/kitty/doggy/equipped(mob/user, slot)
+	if(user && slot == slot_head)
+		update_icon(user)
+	..()
+
+/obj/item/clothing/head/kitty/doggy/update_icon(mob/living/carbon/human/user)
+	if(istype(user))
+		color = "#[user.hair_color]"

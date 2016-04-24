@@ -528,7 +528,7 @@
 
 /obj/item/clothing/under/rank/psych
 	desc = "A turqouise turtleneck and a pair of dark blue slacks, belonging to a psychologist."
-	name = "psychologist's turtleneck"
+	name = "Psychologist's turtleneck"
 	icon_state = "psychturtle"
 	item_state = "b_suit"
 	item_color = "psychturtle"
@@ -687,3 +687,30 @@
 	desc = "Extra big T-shirt with skirt. Some girl's like it."
 	icon_state = "bshirt_skirt"
 	item_color = "bshirt_skirt"
+
+/obj/item/clothing/under/chain_shirt
+	name = "chain jeans with shirt"
+	desc = "Those chain jeans, but with a shirt."
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon_state = "chain_with_shirt"
+	item_color = "chain_with_shirt"
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	alt_covers_chest = 1
+
+/obj/item/clothing/under/classic_suit
+	name = "classic suit"
+	desc = "High tailored classic suit,"
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon_state = "classic_suit"
+	item_color = "classic_suit"
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	can_adjust = 0
+
+/obj/item/clothing/under/smuggler/torn
+	name = "torn jeans"
+	desc = "Jeans with a holes. Stylish, anyway."
+	icon_state = "torn_jeans"
+	item_color = "torn_jeans"
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	can_adjust = 0

@@ -428,3 +428,33 @@
 	icon_state = "common"
 	icon = 'icons/obj/clothing/uac/shoes.dmi'
 	worn_icon = 'icons/mob/uac/shoes.dmi'
+
+/obj/item/clothing/suit/blackjack
+	name = "blackjack suit"
+	desc = "Black blackjack suit. Likely wearing when you play blackjack."
+	icon_state = "blackjack_suit"
+	item_state = "bl_suit"
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'
+
+/obj/item/clothing/suit/hooded/security_new
+	name = "security wintercoat"
+	desc = "A heavy jacket made from 'synthetic' animal furs."
+	icon_state = "coatsecurity"
+	item_state = "coatsecurity"
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	armor = list(melee = 25, bullet = 15, laser = 30, energy = 10, bomb = 25, bio = 0, rad = 0)
+	allowed = list(/obj/item/weapon/gun/energy,/obj/item/weapon/reagent_containers/spray/pepper,/obj/item/weapon/gun/projectile,/obj/item/ammo_box,/obj/item/ammo_casing,/obj/item/weapon/melee/baton,/obj/item/weapon/restraints/handcuffs,/obj/item/device/flashlight/seclite,/obj/item/weapon/melee/classic_baton/telescopic)
+	hoodtype = /obj/item/clothing/head/security_new
+
+/obj/item/clothing/head/security_new
+	name = "winter hood"
+	desc = "A hood attached to a heavy winter jacket."
+	icon_state = "winterhood_security"
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	body_parts_covered = HEAD
+	flags = NODROP
+	flags_inv = HIDEHAIR|HIDEFACE|HIDEEARS
+

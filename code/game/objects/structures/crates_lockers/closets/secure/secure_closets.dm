@@ -24,14 +24,11 @@
 	if(istype(W, /obj/item/device/multitool/multimeter))
 		if(!opened)
 			var/obj/item/device/multitool/multimeter/O = W
-			if(istype(O))
-				if(O.mode!=1)
-					user << "Переключите мультиметр"
-					return
-				else
-					src.interact(usr)
+			if(O.mode!=1)
+				user << "Переключите мультиметр"
+				return
 			else
-				..(W, user)
+				src.interact(usr)
 		else
 			..(W, user)
 	else
@@ -56,8 +53,7 @@
 	popup.open(1)
 
 /obj/structure/closet/secure_closet/Topic(href, href_list)
-	if(!ishuman(usr))
-		return
+	if(!ishuman(usr))	return
 	var/mob/living/carbon/human/user = usr
 	var/obj/item/device/multitool/multimeter/W = user.get_active_hand()
 	var/validate = 0

@@ -270,3 +270,33 @@
 	icon = 'icons/mob/infinity_work.dmi'
 	icon_state = "red_bottom"
 	gender = FEMALE
+
+/datum/sprite_accessory/socks/pink
+	name = "Pink Stockings"
+	icon = 'icons/mob/infinity_work.dmi'
+	icon_state = "pink_stockings"
+	gender = FEMALE
+
+/datum/sprite_accessory/underwear/white_top
+	name = "White Top"
+	icon = 'icons/mob/infinity_work.dmi'
+	icon_state = "white_top"
+	gender = FEMALE
+
+/datum/sprite_accessory/underwear/yellow
+	name = "Toxic Yellow"
+	icon = 'icons/mob/infinity_work.dmi'
+	icon_state = "toxic_yellow_bikini"
+	gender = FEMALE
+
+/datum/sprite_accessory/underwear/pink
+	name = "Pink Underwear"
+	icon = 'icons/mob/infinity_work.dmi'
+	icon_state = "pink_underwear"
+	gender = FEMALE
+
+/datum/sprite_accessory/socks/whitestockings
+	name = "White Stockings With Suspenders"
+	icon = 'icons/mob/infinity_work.dmi'
+	icon_state = "white_stockings_withsuspenders"
+	gender = FEMALE
