@@ -35,27 +35,6 @@
 	new /obj/item/device/radio/headset/syndicate/alt(src)
 
 
-/obj/structure/closet/gimmick/corporate/sec
-	name = "Corporate security closet"
-	icon_state = "tac"
-
-/obj/structure/closet/gimmick/corporate/sec/New()
-	..()
-	new /obj/item/clothing/under/sec_corporate(src)
-	new /obj/item/weapon/gun/energy/gun(src)
-	new /obj/item/clothing/shoes/jackboots(src)
-	new /obj/item/clothing/gloves/color/black(src)
-	new /obj/item/device/radio/headset/syndicate(src)
-	new	/obj/item/clothing/glasses/sunglasses(src)
-
-/obj/structure/closet/gimmick/corporate/sec/full
-	name = "Corporate security armory closet"
-
-/obj/structure/closet/gimmick/corporate/sec/full/New()
-	new /obj/item/clothing/suit/armor/vest(src)
-	new /obj/item/weapon/stock_parts/cell/ammo(src)
-	new /obj/item/stack/medical/bruise_pack(src)
-
 
 /obj/structure/closet/gimmick/zombie
 	name = "For light life"

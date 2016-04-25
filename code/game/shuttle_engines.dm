@@ -20,6 +20,7 @@
 	name = "propulsion"
 	icon_state = "propulsion"
 	opacity = 1
+	luminosity = 3
 
 /obj/structure/shuttle/engine/propulsion/burst
 	name = "burst"

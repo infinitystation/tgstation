@@ -65,3 +65,15 @@
 	new /obj/item/weapon/storage/box/metalfoam(src)
 	for(var/i in 1 to 3)
 		new /obj/item/weapon/rcd_ammo/large(src)
+
+/obj/structure/closet/secure_closet/uac
+	name = "Paratrooper equipment"
+	desc = "It's a storage unit for clothing."
+	icon_state = "hos"
+
+/obj/structure/closet/secure_closet/uac/New()
+	..()
+	new /obj/item/clothing/under/uac(src)
+	new /obj/item/clothing/shoes/combat/uac(src)
+	new /obj/item/clothing/suit/armor/uac(src)
+	new /obj/item/clothing/head/helmet/trooper(src)
