@@ -212,7 +212,7 @@
 /obj/item/toy/plushie
 	name = "plushie"
 	desc = "An adorable, soft, and cuddly plushie."
-	icon = 'icons/obj/toy.dmi'
+	icon = 'icons/obj/infinity_toys.dmi'
 	var/poof_sound = 'sound/weapons/thudswoosh.ogg'
 	attack_verb = list("poofed", "bopped", "whapped","cuddled","fluffed")
 
@@ -229,7 +229,7 @@
 /obj/random/plushie
 	name = "Random Plushie"
 	desc = "This is a random plushie"
-	icon = 'icons/obj/toy.dmi'
+	icon = 'icons/obj/infinity_toys.dmi'
 	icon_state = "redfox"
 
 /obj/random/plushie/item_to_spawn()
@@ -328,7 +328,7 @@
 /obj/item/toy/carpplushie
 	name = "space carp plushie"
 	desc = "An adorable stuffed toy that resembles a space carp."
-	icon = 'icons/obj/toy.dmi'
+	icon = 'icons/obj/infinity_toys.dmi'
 	icon_state = "carpplushie"
 	attack_verb = list("bitten", "eaten", "fin slapped")
 	bitesound = 'sound/weapons/bite.ogg'
@@ -345,7 +345,7 @@
 /obj/random/carp_plushie
 	name = "Random Carp Plushie"
 	desc = "This is a random plushie"
-	icon = 'icons/obj/toy.dmi'
+	icon = 'icons/obj/infinity_toys.dmi'
 	icon_state = "carpplushie"
 
 /obj/random/carp_plushie/item_to_spawn()
