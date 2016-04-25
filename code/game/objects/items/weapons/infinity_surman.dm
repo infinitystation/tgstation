@@ -59,3 +59,29 @@
 	worn_icon = 'icons/mob/infinity_work.dmi'
 	can_hold = list(/obj/item/weapon/blue_devil)
 	storage_slots = 1
+
+/obj/item/weapon/melee/classic_baton/katana
+	name = "wood katana"
+	desc = "Wooden katana. Made for training."
+	icon = 'icons/obj/infinity_object.dmi'
+	icon_state = "wood_katana"
+	item_state = "wood_katana"
+	lefthand_file = 'icons/mob/inhands/infinity_obj_left.dmi'
+	righthand_file = 'icons/mob/inhands/infinity_obj_right.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	slot_flags = SLOT_BELT
+
+/obj/item/weapon/twohanded/skipping_rope
+	name = "skipping rope"
+	desc = "Jump, jump, jump, jump, jump!"
+	icon = 'icons/obj/infinity_object.dmi'
+	icon_state = "skippingrope0"
+	lefthand_file = 'icons/mob/inhands/infinity_obj_left.dmi'
+	righthand_file = 'icons/mob/inhands/infinity_obj_right.dmi'
+	force = 5
+	throwforce = 0
+
+/obj/item/weapon/twohanded/skipping_rope/update_icon()
+	icon_state = "skippingrope[wielded]"
+	return
+

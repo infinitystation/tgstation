@@ -1,6 +1,13 @@
 var/datum/server_build/nextbuild
 var/datum/server_build/currentbuild
 
+/datum/configuration
+	var/list/datum/server_build/buildlist = list()
+
+/datum/subsystem/ticker
+	var/buildchangechecked = 0				//build changing?
+	var/buildchanger_ckey = ""				//who changing build?
+
 /datum/server_build
 	var/name				// name of build
 	var/friendlyname		// friendly name of build
@@ -116,4 +123,15 @@ var/datum/server_build/currentbuild
 	sleep(100)
 
 	log_game("Changing build to [B.name]([B.friendlyname])")
-	. = shell("sh ../build_change.sh [B.dmb_file] [B.folder] [world.port]")
+	. = shell("sh ../change_build.sh [B.dmb_file] [B.folder] [world.port]")
+
+/* mob/Stat appendix
+		stat(null, "Map: [MAP_NAME]")
+		if(nextmap && istype(nextmap))
+			stat(null, "Next Map: [nextmap.friendlyname]")
+		if(currentbuild)
+			stat(null, "Build: [currentbuild.friendlyname]")
+		if (nextbuild && istype(nextbuild))
+			stat(null, "Next Build: [nextbuild.friendlyname]")
+		stat(null, "Server Time: [time2text(world.realtime, "YYYY-MM-DD hh:mm")]")
+*/
