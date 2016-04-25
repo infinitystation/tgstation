@@ -206,6 +206,7 @@ var/next_external_rsc = 0
 
 	if(!void)
 		void = new()
+		void = void.MakeGreed()
 
 	screen += void
 
