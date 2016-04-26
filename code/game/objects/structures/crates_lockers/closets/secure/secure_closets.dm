@@ -17,25 +17,16 @@
 	for(var/i=1; i<=codelen; i++)
 		code1[i] = rand(0,9)
 		code2[i] = rand(0,9)
-	health = 200
-	secure = 1
-
-/obj/structure/closet/secure_closet/attackby(obj/item/weapon/W, mob/user, params)
-	if(istype(W, /obj/item/device/multitool/multimeter))
-		if(!opened)
-			var/obj/item/device/multitool/multimeter/O = W
-			if(O.mode!=1)
-				user << "Переключите мультиметр"
-				return
-			else
-				src.interact(usr)
-		else
-			..(W, user)
-	else
-		..(W, user)
-
 
 /obj/structure/closet/secure_closet/interact(mob/user)
+	var/obj/item/device/multitool/multimeter/W = user.get_active_hand()
+	if(opened)
+		return
+	if(!istype(W))
+		return
+	if(W.mode!=1)
+		user << "Переключите мультиметр"
+		return
 	src.add_fingerprint(user)
 	var/dat = ""
 	dat += "<a href='?src=\ref[src];check=1'>Проверить замок</a><br>"
