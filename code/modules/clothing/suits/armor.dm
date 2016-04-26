@@ -16,6 +16,7 @@
 	item_state = "armor"
 	blood_overlay_type = "armor"
 	armor = list(melee = 25, bullet = 15, laser = 25, energy = 10, bomb = 25, bio = 0, rad = 0)
+	dog_fashion = /datum/dog_fashion/back
 
 /obj/item/clothing/suit/armor/tacticool
 	name = "Tactical Armor"
@@ -55,6 +56,7 @@
 	heat_protection = CHEST|GROIN|ARMS|HANDS
 	strip_delay = 70
 	burn_state = FLAMMABLE
+	dog_fashion = null
 
 /obj/item/clothing/suit/armor/vest/warden/alt
 	name = "warden's armored jacket"
@@ -69,6 +71,7 @@
 	body_parts_covered = CHEST|GROIN|ARMS|LEGS
 	cold_protection = CHEST|GROIN|LEGS|ARMS
 	heat_protection = CHEST|GROIN|LEGS|ARMS
+	dog_fashion = null
 
 /obj/item/clothing/suit/armor/vest/capcarapace
 	name = "captain's carapace"
@@ -77,6 +80,7 @@
 	item_state = "armor"
 	body_parts_covered = CHEST|GROIN
 	armor = list(melee = 30, bullet = 15, laser = 30, energy = 10, bomb = 10, bio = 0, rad = 0)
+	dog_fashion = null
 
 /obj/item/clothing/suit/armor/vest/capcarapace/alt
 	name = "captain's parade jacket"
@@ -145,6 +149,7 @@
 	icon_state = "detective-armor"
 	allowed = list(/obj/item/weapon/tank/internals/emergency_oxygen,/obj/item/weapon/reagent_containers/spray/pepper,/obj/item/device/flashlight,/obj/item/weapon/gun/energy,/obj/item/weapon/gun/projectile,/obj/item/ammo_box,/obj/item/ammo_casing,/obj/item/weapon/melee/baton,/obj/item/weapon/restraints/handcuffs,/obj/item/weapon/storage/fancy/cigarettes,/obj/item/weapon/lighter,/obj/item/device/detective_scanner,/obj/item/device/taperecorder,/obj/item/weapon/melee/classic_baton/telescopic)
 	burn_state = FLAMMABLE
+	dog_fashion = null
 
 
 //Reactive armor
