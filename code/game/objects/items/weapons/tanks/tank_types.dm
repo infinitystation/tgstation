@@ -16,6 +16,7 @@
 	icon_state = "oxygen"
 	distribute_pressure = TANK_DEFAULT_RELEASE_PRESSURE
 	force = 8
+	dog_fashion = /datum/dog_fashion/back
 
 
 /obj/item/weapon/tank/internals/oxygen/New()
@@ -28,10 +29,12 @@
 /obj/item/weapon/tank/internals/oxygen/yellow
 	desc = "A tank of oxygen, this one is yellow."
 	icon_state = "oxygen_f"
+	dog_fashion = null
 
 /obj/item/weapon/tank/internals/oxygen/red
 	desc = "A tank of oxygen, this one is red."
 	icon_state = "oxygen_fr"
+	dog_fashion = null
 
 
 /*
@@ -57,7 +60,7 @@
 	name = "air tank"
 	desc = "Mixed anyone?"
 	icon_state = "oxygen"
-
+	dog_fashion = /datum/dog_fashion/back
 
 /obj/item/weapon/tank/internals/air/New()
 	..()
