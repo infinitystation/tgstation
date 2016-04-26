@@ -205,6 +205,10 @@
 	mob_species = /datum/species/lizard
 	helmet = /obj/item/clothing/head/helmet/gladiator
 	uniform = /obj/item/clothing/under/gladiator
+	back = /obj/item/weapon/twohanded/spear
+	belt = /obj/item/weapon/pickaxe/silver/poor
+	glasses = /obj/item/clothing/glasses/night/shadowling
+	faction = "wails"
 	roundstart = FALSE
 	death = FALSE
 	anchored = 0

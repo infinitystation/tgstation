@@ -380,3 +380,24 @@
 
 /obj/item/toy/carpplushie/void
 	icon_state = "voidcarp"
+
+//Кирка Ash-Walk'еров
+
+/obj/item/weapon/pickaxe/silver/poor
+	name = "ancient pickaxe"
+	icon_state = "spickaxe"
+	item_state = "spickaxe"
+	digspeed = 30
+	origin_tech = "materials=4"
+	desc = "Ancient, but surprisingly high quality and sharp pick... From it emanates darkness..."
+	force = 10
+
+/obj/machinery/porta_turret/syndicate/mining
+	scan_range = 9
+	health = 150
+	projectile = /obj/item/projectile/beam/emitter
+	eprojectile = /obj/item/projectile/beam/emitter
+	shot_sound = 'sound/weapons/marauder.ogg'
+	eshot_sound = 'sound/weapons/marauder.ogg'
+	base_icon_state = "syndie"
+	faction = "neutral"
