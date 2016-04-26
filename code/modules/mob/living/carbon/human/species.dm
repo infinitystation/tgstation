@@ -384,7 +384,7 @@
 			bodyparts_to_add -= "ears"
 
 	if("ears_tajaran" in mutant_bodyparts)
-		if((H.head.flags_inv & HIDEHAIR) || (H.wear_mask && (H.wear_mask.flags_inv & HIDEHAIR)))
+		if((H.head && (H.head.flags_inv & HIDEHAIR)) || (H.wear_mask && (H.wear_mask.flags_inv & HIDEHAIR)))
 			bodyparts_to_add -= "ears_tajaran"
 
 	if(!bodyparts_to_add)

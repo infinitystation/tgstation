@@ -263,7 +263,8 @@ var/inerror = 0
 
 	var/list/features = list()
 
-	features += "[currentbuild.friendlyname]"
+	if(currentbuild)
+		features += "[currentbuild.friendlyname]"
 
 	features += "Map - [MAP_NAME]"
 
