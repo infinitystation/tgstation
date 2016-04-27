@@ -6,7 +6,7 @@ DROP TABLE IF EXISTS `online_score`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `online_score` (
-  `ckey` text,
+  `ckey` varchar(32),
   `year` int(11),
   `month` int(11),
   `day` int(11),
