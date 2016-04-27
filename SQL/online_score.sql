@@ -7,10 +7,10 @@ DROP TABLE IF EXISTS `online_score`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `online_score` (
   `ckey` varchar(32),
-  `year` int(11),
-  `month` int(11),
-  `day` int(11),
-  `sum` int(11),
+  `year` int(11) DEFAULT 0,
+  `month` int(11) DEFAULT 0,
+  `day` int(11) DEFAULT 0,
+  `sum` int(11) DEFAULT 0,
   PRIMARY KEY (`ckey`, `year`, `month`, `day`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
