@@ -307,7 +307,7 @@ var/global/list/datum/cachedbook/cachedbooks // List of our cached book datums
 		user << "[scanner]'s associated machine has been set to [src]."
 		audible_message("[src] lets out a low, short blip.")
 	else
-		..()
+		return ..()
 
 /obj/machinery/computer/libraryconsole/bookmanagement/emag_act(mob/user)
 	if(density && !emagged)
@@ -464,6 +464,8 @@ var/global/list/datum/cachedbook/cachedbooks // List of our cached book datums
 		if(!user.drop_item())
 			return
 		O.loc = src
+	else
+		return ..()
 
 /obj/machinery/libraryscanner/attack_hand(mob/user)
 	usr.set_machine(src)
@@ -539,4 +541,4 @@ var/global/list/datum/cachedbook/cachedbooks // List of our cached book datums
 		b.icon_state = "book[rand(1,7)]"
 		qdel(O)
 	else
-		..()
+		return ..()

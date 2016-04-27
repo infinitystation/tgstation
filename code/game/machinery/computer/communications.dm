@@ -375,8 +375,7 @@ var/const/CALL_SHUTTLE_REASON_LENGTH = 12
 		paper = P
 		user << "<span class='notice'>You inserted the [P.name].</span>"
 	else
-		..()
-	return
+		return ..()
 
 /obj/machinery/computer/communications/emag_act(mob/user)
 	if(!emagged)
