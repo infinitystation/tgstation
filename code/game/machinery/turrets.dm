@@ -47,7 +47,7 @@
 	return
 
 
-/obj/machinery/gun_turret/proc/take_damage(damage)
+/obj/machinery/gun_turret/take_damage(damage, damage_type = BRUTE, sound_effect = 1)
 	health -= damage
 	switch(health)
 		if(101 to INFINITY)
@@ -61,7 +61,7 @@
 			state = 2
 
 	update_icon()
-	return
+	return ..()
 
 
 /obj/machinery/gun_turret/bullet_act(obj/item/projectile/Proj)

@@ -16,7 +16,6 @@ RCD
 	flags = CONDUCT | NOBLUDGEON
 	slot_flags = SLOT_BELT
 	force = 0
-	t0owforce = 10
 	throw_speed = 3
 	throw_range = 5
 	w_class = 3
@@ -544,10 +543,7 @@ RCD
 	item_state = "rcdw"
 	lefthand_file = 'icons/mob/inhands/infinity_obj_left.dmi'
 	righthand_file = 'icons/mob/inhands/infinity_obj_right.dmi'
-	force = 12
-	throwforce = 12
 	origin_tech = "engineering=6;materials=7;bluespace=4;plasmatech=4"
-	matter = 0
 	max_matter = 500
 	materials = list(MAT_METAL=20000, MAT_GLASS=2500, MAT_SILVER=2500, MAT_GOLD=2500, MAT_PLASMA=2500)
 	canRturf = 1
