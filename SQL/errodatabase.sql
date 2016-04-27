@@ -14,3 +14,4 @@ ALTER TABLE poll_textreply RENAME TO erro_poll_textreply;
 ALTER TABLE poll_vote RENAME TO erro_poll_vote;
 ALTER TABLE watch RENAME TO erro_watch;
 ALTER TABLE notes RENAME TO erro_notes;
+ALTER TABLE memo RENAME TO erro_memo;
