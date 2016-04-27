@@ -450,7 +450,7 @@ var/next_mob_id = 0
 		log_game("[usr.key] AM failed due to disconnect.")
 		return
 
-	if (stat != 2)
+	if(stat != 2)
 		usr << "\blue <B>You must be dead to use this!</B>"
 		return
 
@@ -461,27 +461,30 @@ var/next_mob_id = 0
 			client.allow_respawn = 1
 
 	//respawn allowed?
-	if (!(abandon_allowed) && !(client.allow_respawn))
+	if(!(abandon_allowed) && !(client.allow_respawn))
 		usr << "–еспавн отключен =("
 		return
 
 	//sandbox?
-	if (ticker.mode.name == "sandbox")
-		client.allow_respawn = 1
+	if(ticker)
+		if(ticker.mode.name == "sandbox")
+			client.allow_respawn = 1
 
 	//waiting
-	if (((world.time - src.timeofdeath) < 6000) && !client.allow_respawn)
+	if(((world.time - src.timeofdeath) < 6000) && !client.allow_respawn)
 		usr << "ѕотерпите немного для респавна!"
 		return
 	else
 		client.allow_respawn = 1
-		usr << "¬ы можете сейчас респавнится!"
 
 	log_game("[usr.name]/[usr.key] used abandon mob.")
 
 	if(client)
 		client.screen.Cut()
 		client.screen += client.void
+
+	if(!client.allow_respawn)
+		return
 
 	var/mob/new_player/M = new /mob/new_player()
 
