@@ -207,7 +207,7 @@
 	uniform = /obj/item/clothing/under/gladiator
 	back = /obj/item/weapon/twohanded/spear
 	belt = /obj/item/weapon/pickaxe/silver/poor
-	glasses = /obj/item/clothing/glasses/night/shadowling
+	glasses = /obj/item/clothing/glasses/night/shadowling/terror
 	faction = "wails"
 	roundstart = FALSE
 	death = FALSE
