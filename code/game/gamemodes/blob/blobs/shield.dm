@@ -9,3 +9,13 @@
 	explosion_block = 3
 	fire_resist = 5
 	point_return = 2
+
+
+/obj/effect/blob/shield/scannerreport()
+	return "Will prevent the spread of atmospheric changes."
+
+/obj/effect/blob/shield/fire_act(datum/gas_mixture/air, exposed_temperature, exposed_volume)
+	return
+
+/obj/effect/blob/shield/core
+	point_return = 0
