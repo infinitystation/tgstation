@@ -252,6 +252,8 @@ var/inerror = 0
 
 	if (config && config.server_name)
 		s += "<b>[config.server_name]</b> &#8212; "
+	else
+		s += "<b>[world.name]</b> &#8212; "
 
 	s += "<b>[config.station_name]</b>";
 	s += " ("
