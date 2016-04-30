@@ -135,7 +135,7 @@ var/global/list/RPD_recipes=list(
 /obj/item/weapon/pipe_dispenser
 	name = "Rapid Piping Device (RPD)"
 	desc = "A device used to rapidly pipe things."
-	icon = 'icons/obj/items.dmi'
+	icon = 'icons/obj/tools.dmi'
 	icon_state = "rpd"
 	flags = CONDUCT
 	slot_flags = SLOT_BELT
