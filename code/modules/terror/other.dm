@@ -123,7 +123,7 @@
 /obj/structure/chair/comfy/sofa/black
 	color = rgb(167,164,153)
 
-/obj/structure/chair/comfy/sofalime
+/obj/structure/chair/comfy/sofa/lime
 	color = rgb(255,251,0)
 
 /obj/structure/chair/comfy/sofa/corner
