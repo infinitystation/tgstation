@@ -1350,7 +1350,7 @@ var/list/preferences_datums = list()
 	if(icon_updates)
 		character.update_body()
 		character.update_hair()
-		character.update_mutcolor()
+		character.update_body_parts()
 	return 1
 
 /datum/preferences/proc/set_char_notes(user)
