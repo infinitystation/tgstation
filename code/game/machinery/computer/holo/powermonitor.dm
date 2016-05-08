@@ -6,7 +6,7 @@
 	use_power = 2
 	idle_power_usage = 40
 	active_power_usage = 200
-	circuit = /obj/item/weapon/circuitboard/holo/power
+	circuit = /obj/item/weapon/circuitboard/computer/holo/power
 
 	var/obj/structure/cable/attached
 

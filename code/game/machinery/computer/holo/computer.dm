@@ -35,7 +35,7 @@
 		playsound(src.loc, 'sound/items/Screwdriver.ogg', 50, 1)
 		user << "<span class='notice'> You start to disconnect the hololens...</span>"
 		if(do_after(user, 20/I.toolspeed, target = src))
-			var/obj/structure/computerframe/holoframe/A = new /obj/structure/computerframe/holoframe( src.loc )
+			var/obj/structure/frame/computer/holoframe/A = new /obj/structure/frame/computer/holoframe(src.loc)
 			A.circuit = circuit
 			A.anchored = 1
 			circuit = null

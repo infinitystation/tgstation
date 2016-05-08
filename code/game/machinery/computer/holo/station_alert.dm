@@ -3,7 +3,7 @@
 	desc = "Used to access the station's automated alert system."
 	icon_screen = "screen_generic"
 	icon_screen_contents = "alerts"
-	circuit = /obj/item/weapon/circuitboard/stationalert
+	circuit = /obj/item/weapon/circuitboard/computer/stationalert
 	var/alarms = list("Fire" = list(), "Atmosphere" = list(), "Power" = list())
 
 /obj/machinery/computer/holo/station_alert/ui_interact(mob/user, ui_key = "main", datum/tgui/ui = null, force_open = 0, \

@@ -445,6 +445,7 @@
 #include "code\game\machinery\computer\telecrystalconsoles.dm"
 #include "code\game\machinery\computer\holo\atmos_alert.dm"
 #include "code\game\machinery\computer\holo\computer.dm"
+#include "code\game\machinery\computer\holo\craft.dm"
 #include "code\game\machinery\computer\holo\powermonitor.dm"
 #include "code\game\machinery\computer\holo\station_alert.dm"
 #include "code\game\machinery\doors\airlock.dm"
