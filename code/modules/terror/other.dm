@@ -85,13 +85,19 @@
 
 /obj/machinery/porta_turret/heavy
 	name = "heavy turret"
+	desc = "Heavy turret, usually, installed on important sites or attacking ships."
 	req_access = list(101)
 	emp_vunerable = 0
-	scan_range = 9
+	scan_range = 15
 	health = 150
 	installation = /obj/item/weapon/gun/energy/lasercannon
 	always_up = 1
 	faction = "neutral"
+
+/obj/machinery/porta_turret/heavy/central_command
+	health = 120
+	scan_range = 10
+	desc = "Heavy turret, installed on Nanotrasen Central Command station."
 
 /obj/structure/chair/comfy/sofa
 	name = "comfy sofa"

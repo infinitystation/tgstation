@@ -261,7 +261,7 @@
 	name = "lava"
 	baseturf = /turf/open/floor/plating/lava/smooth
 	icon = 'icons/turf/floors/lava.dmi'
-	icon_state = "unsmooth"
+	icon_state = "smooth"
 	canSmoothWith = list(/turf/closed/wall, /turf/closed/mineral, /turf/open/floor/plating/lava/smooth, /turf/open/floor/plating/lava/smooth/lava_land_surface
 	)
 /turf/open/floor/plating/lava/smooth/airless
