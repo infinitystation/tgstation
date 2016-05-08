@@ -43,7 +43,7 @@
 /obj/machinery/chem_dispenser/bartender/New()
 	..()
 
-	var/obj/item/weapon/circuitboard/chem_dispenser/H = new /obj/item/weapon/circuitboard/chem_dispenser(null)
+	var/obj/item/weapon/circuitboard/machine/chem_dispenser/H = new /obj/item/weapon/circuitboard/machine/chem_dispenser(null)
 	H.build_path = /obj/machinery/chem_dispenser/bartender
 	H.name = "circuit board (Portable Bar Dispenser)"
 	H.req_components = list(
@@ -140,7 +140,7 @@
 		user << "You add the [I] to the machine!"
 
 // it was here for avoiding conflicts
-/obj/item/weapon/circuitboard/chem_dispenser/attackby(obj/item/I, mob/user)
+/obj/item/weapon/circuitboard/machine/chem_dispenser/attackby(obj/item/I, mob/user)
 	if(istype(I, /obj/item/device/multitool))
 		if(build_path == /obj/machinery/chem_dispenser/constructable)
 			build_path = /obj/machinery/chem_dispenser/bartender
@@ -164,3 +164,5 @@
 							/obj/item/weapon/stock_parts/manipulator = 1,
 							/obj/item/weapon/stock_parts/console_screen = 1,
 							/obj/item/weapon/stock_parts/cell = 1)
+	else
+		return ..()
