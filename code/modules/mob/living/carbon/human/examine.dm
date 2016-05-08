@@ -113,7 +113,9 @@
 		else
 			msg += "[t_He] носит \icon[gloves] [gloves] \n"
 	else if(blood_DNA)
-		msg += "<span class='warning'>[t_him] руки в крови </span>\n"
+		var/hand_number = get_num_arms()
+		if(hand_number)
+			msg += "<span class='warning'>[t_him] рук[hand_number > 1 ? "и" : "а"] в крови!</span>\n"
 
 	//handcuffed?
 
@@ -191,7 +193,7 @@
 	var/appears_dead = 0
 	if(stat == DEAD || (status_flags & FAKEDEATH))
 		appears_dead = 1
-		if(getorgan(/obj/item/organ/internal/brain))//Only perform these checks if there is no brain
+		if(getorgan(/obj/item/organ/brain))//Only perform these checks if there is no brain
 			if(suiciding)
 				msg += "<span class='warning'>[t_He], кажетс&#255;, совершил[e_1] самоубийство. Спасение бесполезно.</span>\n"
 			msg += "<span class='deadsay'>[t_He] поникш[e_3] и бессознательн[e_2]; [t_He] не имеет признаков жизни"
@@ -207,12 +209,25 @@
 				if(!foundghost)
 					msg += " и [t_his] душа отбыла"
 			msg += "...</span>\n"
-		else//Brain is gone, doesn't matter if they are AFK or present
+		else if(get_bodypart("head")) //Brain is gone, doesn't matter if they are AFK or present. Check for head first tho. Decapitation has similar message.
 			msg += "<span class='deadsay'>Кажетс&#255, [t_his] мозг пропал...</span>\n"
 
 	var/temp = getBruteLoss() //no need to calculate each of these twice
 
 	msg += "<span class='warning'>"
+
+	var/list/missing = list("head", "chest", "l_arm", "r_arm", "l_leg", "r_leg")
+	for(var/X in bodyparts)
+		var/obj/item/bodypart/BP = X
+		missing -= BP.body_zone
+		for(var/obj/item/I in BP.embedded_objects)
+			msg += "<B>[t_He] [t_has] \icon[I] [I], застр&#255;вшую в [t_his] [BP.name]!</B>\n"
+
+	for(var/t in missing)
+		if(t=="head")
+			msg += "<span class='deadsay'><B>[capitalize(t_his)] [parse_zone(t)] is missing!</B><span class='warning'>\n"
+			continue
+		msg += "<B>[capitalize(t_his)] [parse_zone(t)] пропала!</B>\n"
 
 	if(temp)
 		if(temp < 30)
@@ -233,11 +248,6 @@
 			msg += "[t_He] [t_has] незначительные клеточные повреждени&#255;.\n"
 		else
 			msg += "<B>[t_He] [t_has] сильные клеточные повреждени&#255;.</B>\n"
-
-
-	for(var/obj/item/organ/limb/L in organs)
-		for(var/obj/item/I in L.embedded_objects)
-			msg += "<B>[t_He] [t_has] \icon[I] [I], застр&#255;вшую в [t_his] [L.getDisplayName()]!</B>\n"
 
 
 	if(fire_stacks > 0)
@@ -291,7 +301,7 @@
 		else if(getBrainLoss() >= 60)
 			msg += "[t_He] [t_has] глупое выражение на [t_his] лице.\n"
 
-		if(getorgan(/obj/item/organ/internal/brain))
+		if(getorgan(/obj/item/organ/brain))
 			if(istype(src,/mob/living/carbon/human/interactive))
 				msg += "<span class='deadsay'>[t_He], видимо, болеет автоматизмом, [t_his] глаза потускнели и [t_his] рот слегка разинут.</span>\n"
 			else if(!key)
@@ -314,7 +324,7 @@
 
 	if(istype(user, /mob/living/carbon/human))
 		var/mob/living/carbon/human/H = user
-		var/obj/item/organ/internal/cyberimp/eyes/hud/CIH = H.getorgan(/obj/item/organ/internal/cyberimp/eyes/hud)
+		var/obj/item/organ/cyberimp/eyes/hud/CIH = H.getorgan(/obj/item/organ/cyberimp/eyes/hud)
 		if(istype(H.glasses, /obj/item/clothing/glasses/hud) || CIH)
 			var/perpname = get_face_name(get_id_name(""))
 			if(perpname)
@@ -323,9 +333,9 @@
 					msg += "<span class='deptradio'>Rank:</span> [R.fields["rank"]]<br>"
 					msg += "<a href='?src=\ref[src];hud=1;photo_front=1'>\[Front photo\]</a> "
 					msg += "<a href='?src=\ref[src];hud=1;photo_side=1'>\[Side photo\]</a><br>"
-				if(istype(H.glasses, /obj/item/clothing/glasses/hud/health) || istype(CIH,/obj/item/organ/internal/cyberimp/eyes/hud/medical))
+				if(istype(H.glasses, /obj/item/clothing/glasses/hud/health) || istype(CIH,/obj/item/organ/cyberimp/eyes/hud/medical))
 					var/implant_detect
-					for(var/obj/item/organ/internal/cyberimp/CI in internal_organs)
+					for(var/obj/item/organ/cyberimp/CI in internal_organs)
 						if(CI.status == ORGAN_ROBOTIC)
 							implant_detect += "[name] is modified with a [CI.name].<br>"
 					if(implant_detect)
@@ -341,7 +351,7 @@
 						msg += "<a href='?src=\ref[src];hud=m;evaluation=1'>\[Medical evaluation\]</a><br>"
 
 
-				if(istype(H.glasses, /obj/item/clothing/glasses/hud/security) || istype(CIH,/obj/item/organ/internal/cyberimp/eyes/hud/security))
+				if(istype(H.glasses, /obj/item/clothing/glasses/hud/security) || istype(CIH,/obj/item/organ/cyberimp/eyes/hud/security))
 					if(!user.stat && user != src)
 					//|| !user.canmove || user.restrained()) Fluff: Sechuds have eye-tracking technology and sets 'arrest' to people that the wearer looks and blinks at.
 						var/criminal = "None"

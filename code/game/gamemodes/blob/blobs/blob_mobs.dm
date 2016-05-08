@@ -89,6 +89,8 @@
 	attacktext = "hits"
 	attack_sound = 'sound/weapons/genhit1.ogg'
 	flying = 1
+	del_on_death = 1
+	deathmessage = "The blob spore explodes into a cloud of gas!"
 	var/death_cloud_size = 1 //size of cloud produced from a dying spore
 	var/list/human_overlays = list()
 	var/is_zombie = 0
@@ -151,7 +153,6 @@
 
 
 /mob/living/simple_animal/hostile/blob/blobspore/death(gibbed)
-	..(1)
 	// On death, create a small smoke of harmful gas (s-Acid)
 	var/datum/effect_system/smoke_spread/chem/S = new
 	var/turf/location = get_turf(src)
@@ -168,9 +169,10 @@
 	S.attach(location)
 	S.set_up(reagents, death_cloud_size, location, silent=1)
 	S.start()
+	if(factory)
+		factory.spore_delay = world.time + factory.spore_cooldown //put the factory on cooldown
 
-	ghostize()
-	qdel(src)
+	..()
 
 
 /mob/living/simple_animal/hostile/blob/blobspore/Destroy()
