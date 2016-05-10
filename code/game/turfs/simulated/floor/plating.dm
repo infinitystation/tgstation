@@ -262,7 +262,8 @@
 	baseturf = /turf/open/floor/plating/lava/smooth
 	icon = 'icons/turf/floors/lava.dmi'
 	icon_state = "smooth"
-	canSmoothWith = list(/turf/closed/wall, /turf/closed/mineral, /turf/open/floor/plating/lava/smooth, /turf/open/floor/plating/lava/smooth/lava_land_surface
+	smooth = SMOOTH_MORE
+	canSmoothWith = list(/turf/closed/wall, /turf/closed/mineral, /turf/open/floor/plating/lava/smooth, /turf/open/floor/plating/lava/smooth/lava_land_surface, /turf/closed/wall/r_wall
 	)
 /turf/open/floor/plating/lava/smooth/airless
 	initial_gas_mix = "TEMP=2.7"
