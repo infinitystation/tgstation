@@ -136,3 +136,15 @@
 	icon_state = "wooden_stool_toppled"
 	icon = 'icons/obj/infinity_object.dmi'
 	origin_type = /obj/structure/chair/stool/wood
+
+/obj/structure/chair/new_chair
+	name = "chair"
+	icon_state = "new_chair"
+	icon = 'icons/obj/infinity_object.dmi'
+	item_chair = /obj/item/chair/stool/new_chair
+
+/obj/item/chair/stool/new_chair
+	name = "chair"
+	icon_state = "new_chair_toppled"
+	icon = 'icons/obj/infinity_object.dmi'
+	origin_type = /obj/structure/chair/new_chair
