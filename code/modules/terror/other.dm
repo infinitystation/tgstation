@@ -99,6 +99,10 @@
 	scan_range = 10
 	desc = "Heavy turret, installed on Nanotrasen Central Command station."
 
+/obj/machinery/porta_turret/defensepylon_internal_turret/cult
+	faction = "cult"
+	side = "cult"
+
 /obj/structure/chair/comfy/sofa
 	name = "comfy sofa"
 	desc = "It looks comfy.\n<span class='notice'>Alt-click to rotate it clockwise.</span>"
