@@ -23727,7 +23727,7 @@
 	pixel_x = -30;
 	pixel_y = 0
 	},
-/obj/structure/filingcabinet,
+/obj/structure/filingcabinet/employment,
 /turf/open/floor/wood,
 /area/lawoffice)
 "aVu" = (
@@ -33852,7 +33852,14 @@
 /area/crew_quarters/theatre)
 "boC" = (
 /obj/structure/table/wood,
-/obj/item/weapon/lipstick/random,
+/obj/item/weapon/lipstick/random{
+	pixel_x = 2;
+	pixel_y = 2
+	},
+/obj/item/weapon/lipstick/random{
+	pixel_x = -2;
+	pixel_y = -2
+	},
 /turf/open/floor/wood,
 /area/crew_quarters/theatre)
 "boD" = (
@@ -45512,6 +45519,7 @@
 "bIQ" = (
 /obj/structure/cult/tome,
 /obj/item/clothing/under/suit_jacket/red,
+/obj/item/weapon/book/codex_gigas,
 /turf/open/floor/plasteel/cult,
 /area/library)
 "bIR" = (
@@ -62399,6 +62407,13 @@
 	dir = 2;
 	pixel_y = 24
 	},
+/obj/structure/table/wood,
+/obj/item/clothing/under/burial,
+/obj/item/clothing/under/burial,
+/obj/item/clothing/under/burial,
+/obj/item/clothing/under/burial,
+/obj/item/clothing/under/burial,
+/obj/item/clothing/under/burial,
 /turf/open/floor/plasteel{
 	icon_state = "dark"
 	},
@@ -78075,6 +78090,10 @@
 /area/hallway/primary/aft{
 	name = "Aft Port Hallway"
 	})
+"cSm" = (
+/obj/structure/closet/secure_closet/freezer/cream_pie,
+/turf/open/floor/wood,
+/area/crew_quarters/theatre)
 
 (1,1,1) = {"
 aaa
@@ -108279,7 +108298,7 @@ biH
 bjZ
 bkT
 bmM
-boC
+cSm
 bqO
 bte
 bmM

@@ -81,6 +81,7 @@
 			var/obj/effect/decal/cleanable/C = locate() in target
 			qdel(C)
 			target.clean_blood()
+			target.wash_cream()
 	return
 
 

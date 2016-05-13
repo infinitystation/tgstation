@@ -196,6 +196,8 @@
 		if(getorgan(/obj/item/organ/brain))//Only perform these checks if there is no brain
 			if(suiciding)
 				msg += "<span class='warning'>[t_He], кажетс&#255;, совершил[e_1] самоубийство. Спасение бесполезно.</span>\n"
+			if(hellbound)
+				msg += "<span class='warning'>[t_his] soul seems to have been ripped out of [t_his] body.  Revival is impossible.</span>\n"
 			msg += "<span class='deadsay'>[t_He] поникш[e_3] и бессознательн[e_2]; [t_He] не имеет признаков жизни"
 			if(!key)
 				var/foundghost = 0
