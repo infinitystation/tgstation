@@ -1,4 +1,6 @@
-﻿##Модифированный /tg/station
+##Модифированный /tg/station
+
+[![Build Status](https://travis-ci.org/infinitystation/-tg-station.svg)](https://travis-ci.org/infinitystation/-tg-station)
 
 **Сайт оригинального разработчика:** http://www.tgstation13.org  
 **Оригинальный код:** https://github.com/tgstation/-tg-station  
