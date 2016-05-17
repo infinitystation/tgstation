@@ -1,5 +1,4 @@
-﻿##Модифированный /tg/station v1.0.1
-Используется сервером Infinity byond://88.198.175.74:4738.
+﻿##Модифированный /tg/station
 
 **Сайт оригинального разработчика:** http://www.tgstation13.org  
 **Оригинальный код:** https://github.com/tgstation/-tg-station  
