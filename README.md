@@ -3,11 +3,10 @@
 
 **Сайт оригинального разработчика:** http://www.tgstation13.org  
 **Оригинальный код:** https://github.com/tgstation/-tg-station  
-**Код**: https://bitbucket.org/infinity_team/infinity-tg  
+**Код**: https://github.com/infinitystation/-tg-station  
 **Сайт разработчика:** http://infinity.smforum.ru/index.php  
 **IRC (На английском)**: irc://irc.rizon.net/coderbus  
-**Основная карта:** TerrorStation (_maps/map_files/TerrorStation)  
-**Используемая карта:** TerrorStation  
+**Используемые карта:** TerrorStation, HeavenStation
 
 ##ЗАГРУЗКА
 
