@@ -90,6 +90,10 @@
 /area/crew_quarters/gym
 	name = "Gym"
 
+/area/construction/brig
+	name = "Prison wing"
+	icon_state = "yellow"
+
 ///Flors///
 
 /turf/open/floor/plasteel/terror
