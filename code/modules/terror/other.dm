@@ -480,8 +480,28 @@
 	icon = 'icons/wall_closet.dmi'
 	icon_state = "w_closet"
 	icon_door = "w_closet"
-	density = 0
+	wall_mounted = 1
 	anchored = 1
+	storage_capacity = 20
+	mob_storage_capacity = 0
+	can_weld_shut = FALSE
 
-/obj/item/clothing/glasses/night/shadowling/terror
-	name = "crimson eyes"
+/obj/item/clothing/mask/gas/mercenaries
+	name = "mercenaries gas mask"
+	desc = "A mask that can be connected to an air supply."
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon_state = "gas_alt"
+	flags = BLOCK_GAS_SMOKE_EFFECT | MASKINTERNALS
+	flags_inv = HIDEEARS|HIDEFACIALHAIR
+	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 100, rad = 0)
+	item_state = "gas_alt"
+	flags_cover = MASKCOVERSMOUTH
+	burn_state = FIRE_PROOF
+
+//В будущем, снесу всё, что ниже, в отдельный файл.
+
+/obj/structure/alien_structure
+	name = "alien machinery"
+	icon_state = "computer1"
+	icon = 'icons/obj/infinity_alien.dmi'

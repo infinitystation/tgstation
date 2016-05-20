@@ -103,12 +103,12 @@
 			adjustBruteLoss(110)
 
 /mob/living/simple_animal/hostile/asteroid/goldgrub
-	name = "goldgrub"
+	name = "lifegrub"
 	desc = "A worm that grows fat from eating everything in its sight. Seems to enjoy precious metals and other shiny things, hence the name."
-	icon = 'icons/mob/lavaland/lavaland_monsters.dmi'
-	icon_state = "Goldgrub"
-	icon_living = "Goldgrub"
-	icon_aggro = "Goldgrub_alert"
+	icon = 'icons/mob/lavaland/Monstr.dmi'
+	icon_state = "goldgrub"
+	icon_living = "goldgrub"
+	icon_aggro = "goldgrub"
 	icon_dead = "Goldgrub_dead"
 	icon_gib = "syndicate_gib"
 	vision_range = 2
