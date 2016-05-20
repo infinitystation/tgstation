@@ -30,7 +30,6 @@
 	var/hair_color = null	// this allows races to have specific hair colors... if null, it uses the H's hair/facial hair colors. if "mutcolor", it uses the H's mutant_color
 	var/hair_alpha = 255	// the alpha used by the hair. 255 is completely solid, 0 is transparent.
 	var/use_skintones = 0	// does it use skintones or not? (spoiler alert this is only used by humans)
-	var/need_nutrition = 1  //Does it need to eat food on a regular basis?
 	var/exotic_blood = ""	// If your race wants to bleed something other than bog standard blood, change this to reagent id.
 	var/meat = /obj/item/weapon/reagent_containers/food/snacks/meat/slab/human //What the species drops on gibbing
 	var/skinned_type = /obj/item/stack/sheet/animalhide/generic
@@ -74,6 +73,7 @@
 	var/safe_toxins_max = 0.05
 	var/SA_para_min = 1 //Sleeping agent
 	var/SA_sleep_min = 5 //Sleeping agent
+	var/BZ_trip_balls_min = 1 //BZ gas.
 
 	//Breath damage
 	var/oxy_breath_dam_min = 1
@@ -745,7 +745,9 @@
 			H.need_to_shit = min(SHIT_LEVEL_MAX, H.need_to_shit + HUNGER_FACTOR)
 
 	// nutrition decrease and satiety
-	if (H.nutrition > 0 && H.stat != DEAD && H.dna.species.need_nutrition)
+	if (H.nutrition > 0 && H.stat != DEAD && \
+		H.dna && H.dna.species && (!(NOHUNGER in H.dna.species.specflags)))
+		// THEY HUNGER
 		var/hunger_rate = HUNGER_FACTOR
 		if(H.satiety > 0)
 			H.satiety--
@@ -1243,7 +1245,7 @@
 
 	var/list/breath_gases = breath.gases
 
-	breath.assert_gases("o2", "plasma", "co2", "n2o")
+	breath.assert_gases("o2", "plasma", "co2", "n2o", "bz")
 
 	//Partial pressures in our breath
 	var/O2_pp = breath.get_breath_partial_pressure(breath_gases["o2"][MOLES])
@@ -1350,6 +1352,9 @@
 	//-- TRACES --//
 
 	if(breath && !(NOBREATH in specflags))	// If there's some other shit in the air lets deal with it here.
+
+	// N2O
+
 		var/SA_pp = breath.get_breath_partial_pressure(breath_gases["n2o"][MOLES])
 		if(SA_pp > SA_para_min) // Enough to make us paralysed for a bit
 			H.Paralyse(3) // 3 gives them one second to wake up and run away a bit!
@@ -1358,6 +1363,16 @@
 		else if(SA_pp > 0.01)	// There is sleeping gas in their lungs, but only a little, so give them a bit of a warning
 			if(prob(20))
 				H.emote(pick("giggle", "laugh"))
+
+	// BZ
+
+		var/bz_pp = breath.get_breath_partial_pressure(breath_gases["bz"][MOLES])
+		if(bz_pp > BZ_trip_balls_min)
+			H.hallucination += 20
+			if(prob(33))
+				H.adjustBrainLoss(3)
+		else if(bz_pp > 0.01)
+			H.hallucination += 5//Removed at 2 per tick so this will slowly build up
 		handle_breath_temperature(breath, H)
 		breath.garbage_collect()
 
