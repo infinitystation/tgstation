@@ -228,7 +228,6 @@
 	uniform = /obj/item/clothing/under/gladiator
 	back = /obj/item/weapon/twohanded/spear
 	belt = /obj/item/weapon/pickaxe/silver/poor
-	glasses = /obj/item/clothing/glasses/night/shadowling/terror
 	faction = "wails"
 	roundstart = FALSE
 	death = FALSE
@@ -241,6 +240,7 @@
 	new_spawn << "Drag corpses to your nest to feed the young, and spawn more Ash Walkers. Bring glory to the tribe!"
 	if(ishuman(new_spawn))
 		var/mob/living/carbon/human/H = new_spawn
+		H.mind.AddSpell(new /obj/effect/proc_holder/spell/self/thrall_vision(null))
 		H.dna.species.specflags |= NOBREATH
 		H.dna.species.specflags |= NOGUNS
 		H.underwear = "Nude"
