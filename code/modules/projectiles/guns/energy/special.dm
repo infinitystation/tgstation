@@ -104,7 +104,7 @@
 	weapon_weight = WEAPON_LIGHT
 	origin_tech = "combat=2;powerstorage=1"
 	var/holds_charge = FALSE
-	var/unique_frequency = FALSE // modified by KA modkits
+	var/unique_frequency = FALSE // modified by KA modkits?	var/overheat = FALSE
 
 
 /obj/item/weapon/gun/energy/kinetic_accelerator/newshot()
@@ -169,14 +169,15 @@
 
 /obj/item/weapon/gun/energy/kinetic_accelerator/equipped(mob/user)
 	. = ..()
-	attempt_reload()
+	if(!can_shoot())
+		attempt_reload()
 
 /obj/item/weapon/gun/energy/kinetic_accelerator/dropped()
 	. = ..()
 	if(!holds_charge)
 		// Put it on a delay because moving item from slot to hand
 		// calls dropped().
-		spawn(overheat_time)
+		spawn(1)
 			if(!ismob(loc))
 				empty()
 
@@ -185,6 +186,10 @@
 	update_icon()
 
 /obj/item/weapon/gun/energy/kinetic_accelerator/proc/attempt_reload()
+	if(overheat)
+		return
+	overheat = TRUE
+
 	var/carried = 0
 	if(!unique_frequency)
 		for(var/obj/item/weapon/gun/energy/kinetic_accelerator/K in \
@@ -197,10 +202,8 @@
 		carried = 1
 
 	spawn(overheat_time * carried)
-		if(can_shoot())
-			return
-		else
-			reload()
+		reload()
+		overheat = FALSE
 
 /obj/item/weapon/gun/energy/kinetic_accelerator/emp_act(severity)
 	return
@@ -214,8 +217,7 @@
 	update_icon()
 
 /obj/item/weapon/gun/energy/kinetic_accelerator/update_icon()
-	var/obj/item/ammo_casing/energy/shot = ammo_type[select]
-	if(power_supply.charge < shot.e_cost)
+	if(!can_shoot())
 		icon_state = "[initial(icon_state)]_empty"
 	else
 		icon_state = initial(icon_state)
