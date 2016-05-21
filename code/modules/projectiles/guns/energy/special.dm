@@ -104,7 +104,8 @@
 	weapon_weight = WEAPON_LIGHT
 	origin_tech = "combat=2;powerstorage=1"
 	var/holds_charge = FALSE
-	var/unique_frequency = FALSE // modified by KA modkits?	var/overheat = FALSE
+	var/unique_frequency = FALSE // modified by KA modkits
+	var/overheat = FALSE
 
 
 /obj/item/weapon/gun/energy/kinetic_accelerator/newshot()
