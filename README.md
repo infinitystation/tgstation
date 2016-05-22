@@ -1,4 +1,6 @@
-﻿##Модифированный /tg/station
+##Модифированный /tg/station
+
+[![Build Status](https://travis-ci.org/infinitystation/-tg-station.svg)](https://travis-ci.org/infinitystation/-tg-station)
 
 **Сайт оригинального разработчика:** http://www.tgstation13.org  
 **Оригинальный код:** https://github.com/tgstation/-tg-station  
@@ -12,7 +14,8 @@
 Есть несколько способов скачать билд проекта.
 
 Вариант 1:  
-Скачать здесь в *.zip файле: https://bitbucket.org/infinity_team/infinity-tg/downloads
+Скачать здесь в *.zip файле.  
+Кнопка в правой части экрана.
 
 Вариант 2:  
 1. Установить любой другой GIT-клиент.  

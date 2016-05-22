@@ -30,7 +30,6 @@
 	var/hair_color = null	// this allows races to have specific hair colors... if null, it uses the H's hair/facial hair colors. if "mutcolor", it uses the H's mutant_color
 	var/hair_alpha = 255	// the alpha used by the hair. 255 is completely solid, 0 is transparent.
 	var/use_skintones = 0	// does it use skintones or not? (spoiler alert this is only used by humans)
-	var/need_nutrition = 1  //Does it need to eat food on a regular basis?
 	var/exotic_blood = ""	// If your race wants to bleed something other than bog standard blood, change this to reagent id.
 	var/meat = /obj/item/weapon/reagent_containers/food/snacks/meat/slab/human //What the species drops on gibbing
 	var/skinned_type = /obj/item/stack/sheet/animalhide/generic
@@ -74,6 +73,7 @@
 	var/safe_toxins_max = 0.05
 	var/SA_para_min = 1 //Sleeping agent
 	var/SA_sleep_min = 5 //Sleeping agent
+	var/BZ_trip_balls_min = 1 //BZ gas.
 
 	//Breath damage
 	var/oxy_breath_dam_min = 1
@@ -132,6 +132,32 @@
 		C.regenerate_limbs() //if we don't handle dismemberment, we grow our missing limbs back
 	if(exotic_blood)
 		C.reagents.add_reagent(exotic_blood, 80)
+
+	var/obj/item/organ/heart/heart = C.getorganslot("heart")
+	var/obj/item/organ/lungs/lungs = C.getorganslot("lungs")
+	var/obj/item/organ/appendix/appendix = C.getorganslot("appendix")
+
+	if((NOBLOOD in specflags) && heart)
+		heart.Remove(C)
+		qdel(heart)
+	else if((!(NOBLOOD in specflags)) && (!heart))
+		heart = new()
+		heart.Insert(C)
+
+	if((NOBREATH in specflags) && lungs)
+		lungs.Remove(C)
+		qdel(lungs)
+	else if((!(NOBREATH in specflags)) && (!lungs))
+		lungs = new()
+		lungs.Insert(C)
+
+	if((NOHUNGER in specflags) && appendix)
+		appendix.Remove(C)
+		qdel(appendix)
+	else if((!(NOHUNGER in specflags)) && (!appendix))
+		appendix = new()
+		appendix.Insert(C)
+
 	for(var/path in mutant_organs)
 		var/obj/item/organ/I = new path()
 		I.Insert(C)
@@ -505,7 +531,13 @@
 	H.apply_overlay(BODY_FRONT_LAYER)
 
 /datum/species/proc/spec_life(mob/living/carbon/human/H)
-	return
+	if(NOBREATH in specflags)
+		H.setOxyLoss(0)
+		H.losebreath = 0
+
+		var/takes_crit_damage = (!(NOCRITDAMAGE in specflags))
+		if((H.health < config.health_threshold_crit) && takes_crit_damage)
+			H.adjustBruteLoss(1)
 
 /datum/species/proc/spec_death(gibbed, mob/living/carbon/human/H)
 	return
@@ -745,7 +777,9 @@
 			H.need_to_shit = min(SHIT_LEVEL_MAX, H.need_to_shit + HUNGER_FACTOR)
 
 	// nutrition decrease and satiety
-	if (H.nutrition > 0 && H.stat != DEAD && H.dna.species.need_nutrition)
+	if (H.nutrition > 0 && H.stat != DEAD && \
+		H.dna && H.dna.species && (!(NOHUNGER in H.dna.species.specflags)))
+		// THEY HUNGER
 		var/hunger_rate = HUNGER_FACTOR
 		if(H.satiety > 0)
 			H.satiety--
@@ -933,6 +967,10 @@
 //////////////////
 
 /datum/species/proc/spec_attack_hand(mob/living/carbon/human/M, mob/living/carbon/human/H)
+
+	CHECK_DNA_AND_SPECIES(M)
+	CHECK_DNA_AND_SPECIES(H)
+
 	if(!istype(M)) //sanity check for drones.
 		return
 	if((M != H) && M.a_intent != "help" && H.check_shields(0, M.name, attack_type = UNARMED_ATTACK))
@@ -953,7 +991,17 @@
 					add_logs(M, H, "shaked")
 				return 1
 			else
-				M.do_cpr(H)
+				var/we_breathe = (!(NOBREATH in M.dna.species.specflags))
+				var/we_lung = M.getorganslot("lungs")
+
+				if(we_breathe && we_lung)
+					M.do_cpr(H)
+				else if(we_breathe && !we_lung)
+					M << "<span class='warning'>You have no lungs to breathe \
+						with, so cannot peform CPR.</span>"
+				else
+					M << "<span class='notice'>You do not breathe, so \
+						cannot perform CPR.</span>"
 
 		if("grab")
 			if(attacker_style && attacker_style.grab_act(M,H))
@@ -1213,7 +1261,8 @@
 /////////////
 
 /datum/species/proc/breathe(mob/living/carbon/human/H)
-	return
+	if(NOBREATH in specflags)
+		return TRUE
 
 /datum/species/proc/check_breath(datum/gas_mixture/breath, var/mob/living/carbon/human/H)
 	if((H.status_flags & GODMODE))
@@ -1225,16 +1274,13 @@
 		if(H.reagents.has_reagent("epinephrine") && lungs)
 			return
 		if(H.health >= config.health_threshold_crit)
-			if(NOBREATH in specflags)
-				return 1
 			H.adjustOxyLoss(HUMAN_MAX_OXYLOSS)
 			if(!lungs)
 				H.adjustOxyLoss(1)
-			H.failed_last_breath = 1
-		else
+		else if(!(NOCRITDAMAGE in specflags))
 			H.adjustOxyLoss(HUMAN_CRIT_MAX_OXYLOSS)
-			H.failed_last_breath = 1
 
+		H.failed_last_breath = 1
 		H.throw_alert("oxy", /obj/screen/alert/oxy)
 
 		return 0
@@ -1243,7 +1289,7 @@
 
 	var/list/breath_gases = breath.gases
 
-	breath.assert_gases("o2", "plasma", "co2", "n2o")
+	breath.assert_gases("o2", "plasma", "co2", "n2o", "bz")
 
 	//Partial pressures in our breath
 	var/O2_pp = breath.get_breath_partial_pressure(breath_gases["o2"][MOLES])
@@ -1350,6 +1396,9 @@
 	//-- TRACES --//
 
 	if(breath && !(NOBREATH in specflags))	// If there's some other shit in the air lets deal with it here.
+
+	// N2O
+
 		var/SA_pp = breath.get_breath_partial_pressure(breath_gases["n2o"][MOLES])
 		if(SA_pp > SA_para_min) // Enough to make us paralysed for a bit
 			H.Paralyse(3) // 3 gives them one second to wake up and run away a bit!
@@ -1358,6 +1407,16 @@
 		else if(SA_pp > 0.01)	// There is sleeping gas in their lungs, but only a little, so give them a bit of a warning
 			if(prob(20))
 				H.emote(pick("giggle", "laugh"))
+
+	// BZ
+
+		var/bz_pp = breath.get_breath_partial_pressure(breath_gases["bz"][MOLES])
+		if(bz_pp > BZ_trip_balls_min)
+			H.hallucination += 20
+			if(prob(33))
+				H.adjustBrainLoss(3)
+		else if(bz_pp > 0.01)
+			H.hallucination += 5//Removed at 2 per tick so this will slowly build up
 		handle_breath_temperature(breath, H)
 		breath.garbage_collect()
 

@@ -94,14 +94,18 @@
 	ammo_type = list(/obj/item/ammo_casing/energy/kinetic)
 	cell_type = /obj/item/weapon/stock_parts/cell/emproof
 	cell_removing = 0
-	needs_permit = 0 // Aparently these are safe to carry? I'm sure Golliaths would disagree.
+	// Apparently these are safe to carry? I'm sure goliaths would disagree.
+	needs_permit = 0
 	var/overheat_time = 16
 	var/range_add
 	upgrades = list("diamond" = 0, "screwdriver" = 0, "plasma" = 0)
 	unique_rename = 1
 	can_pull_pin = 0
-	weapon_weight = WEAPON_HEAVY
+	weapon_weight = WEAPON_LIGHT
 	origin_tech = "combat=2;powerstorage=1"
+	var/holds_charge = FALSE
+	var/unique_frequency = FALSE // modified by KA modkits
+	var/overheat = FALSE
 
 
 /obj/item/weapon/gun/energy/kinetic_accelerator/newshot()
@@ -151,10 +155,56 @@
 	overheat_time = 14
 	origin_tech = "combat=4;powerstorage=3"
 
+/obj/item/weapon/gun/energy/kinetic_accelerator/cyborg
+	holds_charge = TRUE
+	unique_frequency = TRUE
+
+/obj/item/weapon/gun/energy/kinetic_accelerator/New()
+	. = ..()
+	if(!holds_charge)
+		empty()
+
 /obj/item/weapon/gun/energy/kinetic_accelerator/shoot_live_shot()
-	..()
-	spawn(overheat_time)
+	. = ..()
+	attempt_reload()
+
+/obj/item/weapon/gun/energy/kinetic_accelerator/equipped(mob/user)
+	. = ..()
+	if(!can_shoot())
+		attempt_reload()
+
+/obj/item/weapon/gun/energy/kinetic_accelerator/dropped()
+	. = ..()
+	if(!holds_charge)
+		// Put it on a delay because moving item from slot to hand
+		// calls dropped().
+		spawn(1)
+			if(!ismob(loc))
+				empty()
+
+/obj/item/weapon/gun/energy/kinetic_accelerator/proc/empty()
+	power_supply.use(500)
+	update_icon()
+
+/obj/item/weapon/gun/energy/kinetic_accelerator/proc/attempt_reload()
+	if(overheat)
+		return
+	overheat = TRUE
+
+	var/carried = 0
+	if(!unique_frequency)
+		for(var/obj/item/weapon/gun/energy/kinetic_accelerator/K in \
+			loc.GetAllContents())
+
+			carried++
+
+		carried = max(carried, 1)
+	else
+		carried = 1
+
+	spawn(overheat_time * carried)
 		reload()
+		overheat = FALSE
 
 /obj/item/weapon/gun/energy/kinetic_accelerator/emp_act(severity)
 	return
@@ -168,8 +218,7 @@
 	update_icon()
 
 /obj/item/weapon/gun/energy/kinetic_accelerator/update_icon()
-	var/obj/item/ammo_casing/energy/shot = ammo_type[select]
-	if(power_supply.charge < shot.e_cost)
+	if(!can_shoot())
 		icon_state = "[initial(icon_state)]_empty"
 	else
 		icon_state = initial(icon_state)
@@ -188,6 +237,8 @@
 	unique_rename = 0
 	can_pull_pin = 1
 	overheat_time = 20
+	holds_charge = TRUE
+	unique_frequency = TRUE
 
 /obj/item/weapon/gun/energy/kinetic_accelerator/crossbow/large
 	name = "energy crossbow"
