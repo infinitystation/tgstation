@@ -241,7 +241,7 @@
 		if ("pout","pouts")
 			message = "<B>[src]</B> pouts."
 			m_type = 2
-		
+
 		if ("scream","screams")
 			message = "<B>[src]</B> душераздирающе кричит!"
 			playsound(loc, 'sound/emotions/scream.ogg', 20, 1, 1)
@@ -309,7 +309,7 @@
 
 		if ("snore","snores")
 			message = "<B>[src]</B> храпит."
-			playsound(loc, 'sound/effects/snore.ogg', 25, 1, 1)
+			playsound(loc, 'sound/effects/snore.ogg', 20, 1, 1)
 			m_type = 2
 
 		if ("stare","stares")
@@ -393,8 +393,13 @@
 			message = "<B>[src]</B> зевает."
 			m_type = 2
 
+		if ("fart", "farts")
+			message = "<B>[src]</B> пердит!"
+			playsound(loc, 'goon/sound/emotions/poo2.ogg', 25, 1, 1)
+			m_type = 2
+
 		if ("help")
-			src << "Help for emotes. You can use these emotes with say \"*emote\":\n\naflap, blush, bow-(none)/mob, burp, choke, chuckle, clap, collapse, cough, cross, dance, deathgasp, drool, flap, frown, gasp, giggle, glare-(none)/mob, grin, grimace, groan, jump, kiss, laugh, look, me, nod, point-atom, scream, shake, sigh, sit, smile, sneeze, sniff, snore, stare-(none)/mob, stretch, sulk, surrender, sway, tremble, twitch, twitch_s, wave, whimper, wsmile, yawn"
+			src << "Help for emotes. You can use these emotes with say \"*emote\":\n\naflap, blush, bow-(none)/mob, burp, choke, chuckle, clap, collapse, cough, cross, dance, deathgasp, drool, flap, frown, gasp, giggle, glare-(none)/mob, grin, grimace, groan, jump, kiss, laugh, look, me, nod, point-atom, scream, shake, sigh, sit, smile, sneeze, sniff, snore, stare-(none)/mob, stretch, sulk, surrender, sway, tremble, twitch, twitch_s, wave, whimper, wsmile, yawn, fart"
 
 		else
 			src << "<span class='notice'>Unusable emote '[act]'. Say *help for a list.</span>"
