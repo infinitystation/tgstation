@@ -309,7 +309,7 @@
 
 		if ("snore","snores")
 			message = "<B>[src]</B> храпит."
-			playsound(loc, 'sound/effects/snore.ogg', 20, 1, 1)
+			playsound(loc, 'sound/effects/snore.ogg', 25, 1, 1)
 			m_type = 2
 
 		if ("stare","stares")
@@ -395,7 +395,7 @@
 
 		if ("fart", "farts")
 			message = "<B>[src]</B> пердит!"
-			playsound(loc, 'goon/sound/emotions/poo2.ogg', 25, 1, 1)
+			playsound(loc, 'goon/sound/emotions/poo2.ogg', 20, 1, 1)
 			m_type = 2
 
 		if ("help")
