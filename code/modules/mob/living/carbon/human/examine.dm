@@ -280,6 +280,9 @@
 	if(reagents.has_reagent("teslium"))
 		msg += "[t_He] испускает нежное голубое свечение!\n"
 
+	if(stun_absorption)
+		msg += "[t_He] is radiating with a soft yellow light!\n" //Used by Vanguard
+
 	if(drunkenness && !skipface && stat != DEAD) //Drunkenness
 		switch(drunkenness)
 			if(11 to 21)

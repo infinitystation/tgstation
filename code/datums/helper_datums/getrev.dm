@@ -36,10 +36,10 @@ var/global/datum/getrev/revdata = new()
 		if(revdata.testmerge.len)
 			for(var/line in revdata.testmerge)
 				if(line)
-					src << "Test merge active of PR <a href='[config.githuburl]/pull-requests/[line]'>#[line]</a>"
-			src << "Based off master commit <a href='[config.githuburl]/commits/[revdata.parentcommit]'>[revdata.parentcommit]</a>"
+					src << "Test merge active of PR <a href='[config.githuburl]/pulls/[line]'>#[line]</a>"
+			src << "Based off master commit <a href='[config.githuburl]/commit/[revdata.parentcommit]'>[revdata.parentcommit]</a>"
 		else
-			src << "<a href='[config.githuburl]/commits/[revdata.commit]'>[revdata.commit]</a>"
+			src << "<a href='[config.githuburl]/commit/[revdata.commit]'>[revdata.commit]</a>"
 	else
 		src << "Revision unknown"
 	src << "<b>Current Infomational Settings:</b>"
