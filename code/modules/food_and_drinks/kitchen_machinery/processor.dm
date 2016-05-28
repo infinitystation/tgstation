@@ -3,7 +3,7 @@
 	name = "food processor"
 	desc = "An industrial grinder used to process meat and other foods. Keep hands clear of intake area while operating."
 	icon = 'icons/obj/kitchen.dmi'
-	icon_state = "processor-off"
+	icon_state = "processor"
 	layer = BELOW_OBJ_LAYER
 	density = 1
 	anchored = 1

@@ -137,7 +137,7 @@ WIKIURL http://infinity-wiki.ru/index.php
 RULESURL http://infinity.smforum.ru/index.php?topic=79.0
 
 ##Github address
-GITHUBURL https://bitbucket.org/infinity_team/infinity-tg
+GITHUBURL https://github.com/infinitystation/infinityctl
 
 ## Ban appeals URL - usually for a forum or wherever people should go to contact your admins.
 BANAPPEALS http://infinity.smforum.ru/
