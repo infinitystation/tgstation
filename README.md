@@ -7,7 +7,7 @@
 **Код**: https://github.com/infinitystation/-tg-station  
 **Сайт разработчика:** http://infinity.smforum.ru/index.php  
 **IRC (На английском)**: irc://irc.rizon.net/coderbus  
-**Используемые карта:** TerrorStation, HeavenStation
+**Используемые карты:** TerrorStation
 
 ##ЗАГРУЗКА
 

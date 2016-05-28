@@ -495,7 +495,7 @@
 
 /obj/structure/sink/kitchen
 	name = "kitchen sink"
-	icon = 'icons/obj/newkitchen.dmi'
+	icon = 'icons/obj/kitchen.dmi'
 	icon_state = "sink"
 
 

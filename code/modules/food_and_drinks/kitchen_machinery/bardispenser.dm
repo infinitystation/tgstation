@@ -1,5 +1,4 @@
 /*
-	It's was here for conflict avoiding
 	1. bartender's dispenser
 	2. bartender's dispenser construction
 
