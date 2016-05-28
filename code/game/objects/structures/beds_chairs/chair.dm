@@ -162,7 +162,7 @@
 
 /obj/structure/chair/comfy/New()
 	armrest = image("[icon]", "[icon_state]_armrest")
-	armrest.layer = MOB_LAYER + 0.1
+	armrest.layer = ABOVE_MOB_LAYER
 
 	return ..()
 

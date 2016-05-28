@@ -229,7 +229,7 @@
 		if(t=="head")
 			msg += "<span class='deadsay'><B>[capitalize(t_his)] [parse_zone(t)] is missing!</B><span class='warning'>\n"
 			continue
-		msg += "<B>[capitalize(t_his)] [parse_zone(t)] пропала!</B>\n"
+		msg += "<B>[capitalize(t_his)] [parse_zone(t)] отсутствует!</B>\n"
 
 	if(temp)
 		if(temp < 30)
@@ -258,6 +258,9 @@
 		msg += "[t_He] выгл&#255;дит немного смоченн[e_4].\n"
 
 
+	if(pulledby && pulledby.grab_state)
+		msg += "[t_his] удерживает [pulledby].\n"
+
 	if(nutrition < NUTRITION_LEVEL_STARVING - 50)
 		msg += "[t_He] сильно недоедает!\n"
 	else if(nutrition >= NUTRITION_LEVEL_FAT)
@@ -281,7 +284,7 @@
 		msg += "[t_He] испускает нежное голубое свечение!\n"
 
 	if(stun_absorption)
-		msg += "[t_He] is radiating with a soft yellow light!\n" //Used by Vanguard
+		msg += "[t_He] излучаетс&#255; м&#255;гким желтым светом!\n" //Used by Vanguard
 
 	if(drunkenness && !skipface && stat != DEAD) //Drunkenness
 		switch(drunkenness)
