@@ -9,7 +9,7 @@
 	name = "ice cream vat"
 	desc = "Ding-aling ding dong. Get your Nanotrasen-approved ice cream!"
 	icon = 'icons/obj/kitchen.dmi'
-	icon_state = "ice_creamer0"
+	icon_state = "icecream_vat"
 	density = 1
 	anchored = 0
 	use_power = 0
