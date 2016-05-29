@@ -39,6 +39,7 @@
 /obj/structure/closet/gimmick/zombie
 	name = "For light life"
 	desc = "Good luck, soldier."
+	anchored = 1
 
 /obj/structure/closet/gimmick/zombie/New()
 	..()

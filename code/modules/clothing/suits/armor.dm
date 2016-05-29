@@ -18,14 +18,6 @@
 	armor = list(melee = 25, bullet = 15, laser = 25, energy = 10, bomb = 25, bio = 0, rad = 0)
 	dog_fashion = /datum/dog_fashion/back
 
-/obj/item/clothing/suit/armor/tacticool
-	name = "Tactical Armor"
-	desc = "Ѕрон€ дл€ отр€дов специального назначени€, с виду как нова€... —топ, где опознавательные знаки?"
-	icon_state = "bulletproof"
-	item_state = "armor"
-	blood_overlay_type = "armor"
-	armor = list(melee = 45, bullet = 50, laser = 35, energy = 20, bomb = 35, bio = 0, rad = 0)
-
 /obj/item/clothing/suit/armor/vest/alt
 	desc = "An armored vest that protects against most types of damage."
 	icon_state = "armor"
