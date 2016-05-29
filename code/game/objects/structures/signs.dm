@@ -279,3 +279,39 @@
 	desc = "Black widow between red polygon."
 	icon = 'icons/obj/infinity_decals.dmi'
 	icon_state = "spider_clan"
+
+/obj/structure/sign/medbay_wall
+	name = "MEDBAY"
+	desc = "Big black words, what says it's a medbay."
+	icon = 'icons/obj/wall_signs.dmi'
+	icon_state = "med"
+
+/obj/structure/sign/brig_wall
+	name = "BRIG"
+	desc = "Big black words, what says it's a brig."
+	icon = 'icons/obj/wall_signs.dmi'
+	icon_state = "brig"
+
+/obj/structure/sign/cargo_wall
+	name = "CARGO"
+	desc = "Big black words, what says it's a cargo."
+	icon = 'icons/obj/wall_signs.dmi'
+	icon_state = "cargo"
+
+/obj/structure/sign/bridge_wall
+	name = "BRIDGE"
+	desc = "Big black words, what says it's a bridge."
+	icon = 'icons/obj/wall_signs.dmi'
+	icon_state = "bridge"
+
+/obj/structure/sign/rnd_wall
+	name = "RESEARCH DIVISION"
+	desc = "Big black words, what says it's a research division."
+	icon = 'icons/obj/wall_signs.dmi'
+	icon_state = "rnd"
+
+/obj/structure/sign/engi_wall
+	name = "ENGINEERING"
+	desc = "Big black words, what says it's a engineering."
+	icon = 'icons/obj/wall_signs_engi.dmi'
+	icon_state = "engi"
