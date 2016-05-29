@@ -300,3 +300,8 @@
 	icon = 'icons/mob/infinity_work.dmi'
 	icon_state = "white_stockings_withsuspenders"
 	gender = FEMALE
+
+/datum/sprite_accessory/hair/new_ponytail
+	name = "Ponytail 6"
+	icon_state = "ponytail"
+	icon = 'icons/mob/more_hairs.dmi'
