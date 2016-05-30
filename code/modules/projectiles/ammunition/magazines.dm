@@ -299,15 +299,6 @@ obj/item/ammo_box/magazine/tommygunm45
 	caliber = "a646"
 	max_ammo = 50
 
-/obj/item/ammo_box/magazine/a646/a646_empty
-
-/obj/item/ammo_box/magazine/a646/a646_empty/New()
-	..()
-	for(var/ammo in magazine.stored_ammo)
-		if(prob(95)) //95% chance
-			magazine.stored_ammo -= ammo
-
-
 /obj/item/ammo_box/magazine/m12g
 	name = "shotgun magazine (12g taser slugs)"
 	desc = "A drum magazine."
