@@ -138,7 +138,7 @@
 	H.update_hair()
 	human_overlays = H.overlays
 	update_icons()
-	H.loc = src
+	H.forceMove(src)
 	visible_message("<span class='warning'>The corpse of [H.name] suddenly rises!</span>")
 
 /mob/living/simple_animal/hostile/blob/blobspore/attack_ghost(mob/user)

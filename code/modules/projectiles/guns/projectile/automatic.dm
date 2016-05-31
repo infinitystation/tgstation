@@ -26,7 +26,6 @@
 	if(select == 1)
 		overlays += "[initial(icon_state)]burst"
 	icon_state = "[initial(icon_state)][magazine ? "-[magazine.max_ammo]" : ""][chambered ? "" : "-e"][suppressed ? "-suppressed" : ""]"
-	return
 
 /obj/item/weapon/gun/projectile/automatic/attackby(obj/item/A, mob/user, params)
 	. = ..()
@@ -110,7 +109,6 @@
 /obj/item/weapon/gun/projectile/automatic/c20r/update_icon()
 	..()
 	icon_state = "c20r[magazine ? "-[Ceiling(get_ammo(0)/4)*4]" : ""][chambered ? "" : "-e"][suppressed ? "-suppressed" : ""]"
-	return
 
 /obj/item/weapon/gun/projectile/automatic/wt550
 	name = "security auto rifle"
@@ -126,7 +124,6 @@
 /obj/item/weapon/gun/projectile/automatic/wt550/update_icon()
 	..()
 	icon_state = "wt550[magazine ? "-[Ceiling(get_ammo(0)/4)*4]" : ""]"
-	return
 
 /obj/item/weapon/gun/projectile/automatic/mini_uzi
 	name = "\improper 'Type U3' Uzi"
@@ -296,7 +293,6 @@
 	src.overlays = 0
 	update_magazine()
 	icon_state = "bulldog[chambered ? "" : "-e"]"
-	return
 
 /obj/item/weapon/gun/projectile/automatic/shotgun/bulldog/afterattack()
 	..()

@@ -111,17 +111,17 @@
 			Process_Incorpmove(direct)
 			return 0
 
-	if(Process_Grab()) //are we restrained by someone's grip?
-		return
-
-	if(mob.buckled)							//if we're buckled to something, tell it we moved.
-		return mob.buckled.relaymove(mob, direct)
-
 	if(mob.remote_control)					//we're controlling something, our movement is relayed to it
 		return mob.remote_control.relaymove(mob, direct)
 
 	if(isAI(mob))
 		return AIMove(n,direct,mob)
+
+	if(Process_Grab()) //are we restrained by someone's grip?
+		return
+
+	if(mob.buckled)							//if we're buckled to something, tell it we moved.
+		return mob.buckled.relaymove(mob, direct)
 
 	if(!mob.canmove)
 		return 0
@@ -161,7 +161,10 @@
 ///Checks to see if you are being grabbed and if so attemps to break it
 /client/proc/Process_Grab()
 	if(mob.pulledby)
-		if(mob.restrained(ignore_grab = 1))
+		if(mob.incapacitated(ignore_restraints = 1))
+			move_delay = world.time + 10
+			return 1
+		else if(mob.restrained(ignore_grab = 1))
 			move_delay = world.time + 10
 			src << "<span class='warning'>You're restrained! You can't move!</span>"
 			return 1
