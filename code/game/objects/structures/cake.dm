@@ -5,7 +5,6 @@
 	icon_state = "cake"
 	density = 1
 	anchored = 1
-	var/obj/item/weapon/reagent_containers/food/snacks/cakeslice/plain
 
 /obj/structure/cake/attackby(obj/item/I, mob/user, params)
 	if(istype(I, /obj/item/candle))
