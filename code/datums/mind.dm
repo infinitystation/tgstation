@@ -65,6 +65,7 @@
 	var/datum/mind/soulOwner //who owns the soul.  Under normal circumstances, this will point to src
 
 	var/rev_cooldown = 0 //need to cooldown rev-convert
+	var/mob/living/enslaved_to //If this mind's master is another mob (i.e. adamantine golems)
 
 /datum/mind/New(var/key)
 	src.key = key

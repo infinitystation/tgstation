@@ -96,3 +96,6 @@
 #define SHIT_LEVEL_MAX 500
 #define SHIT_LEVEL_DANGER 375
 #define SHIT_LEVEL_WARNING 250
+
+#define CLONER_FRESH_CLONE "fresh"
+#define CLONER_MATURE_CLONE "mature"
