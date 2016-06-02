@@ -198,6 +198,10 @@
 	icon = 'icons/obj/chairs2.dmi'
 	icon_state = "shblack"
 
+/obj/structure/chair/comfy/shuttle/black/noNT
+	icon = 'icons/obj/chairs2.dmi'
+	icon_state = "shblackS"
+
 /obj/structure/chair/office
 	anchored = 0
 	buildstackamount = 5
