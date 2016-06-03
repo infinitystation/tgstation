@@ -27,7 +27,8 @@ var/list/admin_verbs_default = list(
 	/client/proc/cmd_admin_allow_respawn,
 	/datum/admins/verb/reset_vote,
 	/client/proc/show_reports,
-	/client/proc/adminchangebuild
+	/client/proc/adminchangebuild,
+	/client/proc/generate_map_icon
 	)
 var/list/admin_verbs_admin = list(
 	/client/proc/player_panel_new,		/*shows an interface for all players, with links to various panels*/
