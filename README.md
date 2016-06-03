@@ -19,7 +19,7 @@
 
 Вариант 2:  
 1. Установить любой другой GIT-клиент.  
-Github for Windows, TortoiseGit, git-scm, SourceTree, или любой другой.
+Github for Windows, TortoiseGit, git-scm, SourceTree, или любой другой.  
 2. Зайти в клиент и клонировать репозиторий по ссылке:  
 https://github.com/infinitystation/-tg-station.git
 
