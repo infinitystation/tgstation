@@ -477,7 +477,7 @@
 
 /obj/structure/closet/wall
 	name = "wall closet"
-	icon = 'icons/wall_closet.dmi'
+	icon = 'icons/obj/wall_closet.dmi'
 	icon_state = "w_closet"
 	icon_door = "w_closet"
 	wall_mounted = 1
