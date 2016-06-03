@@ -128,6 +128,7 @@
 #include "code\controllers\controller.dm"
 #include "code\controllers\failsafe.dm"
 #include "code\controllers\infinity_build_change.dm"
+#include "code\controllers\infinity_map.dm"
 #include "code\controllers\infinity_maprotate.dm"
 #include "code\controllers\infinity_update_tools.dm"
 #include "code\controllers\master.dm"
