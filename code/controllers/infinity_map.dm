@@ -4,13 +4,16 @@ var/global/generating_map = 0
 	set category = "Server"
 	set name = "Create map icon"
 
-	var/zlevels_list = list(ZLEVEL_STATION, ZLEVEL_CENTCOM)
-
 	if(generating_map)
 		return
 
 	if(!usr.client.holder)
 		return
+
+	if(!check_rights(R_DEBUG))
+		return
+
+	var/zlevels_list = list(ZLEVEL_STATION, ZLEVEL_CENTCOM)
 
 	var/confirm = alert("Уверены? Этого НЕ нужно делать на игровом сервере", "Map icon", "Да", "Нет")
 
@@ -23,8 +26,6 @@ var/global/generating_map = 0
 		var/max_x = 1
 		var/max_y = 1
 		z_level = input("Выберите уровень", "Выбор уровнЯ") as null|anything in zlevels_list
-		world << "СОЗДАЕТСЯ ФОТО ИГРОВОГО УРОВНЯ [z_level]"
-		diary << "СОЗДАЕТСЯ ФОТО ИГРОВОГО УРОВНЯ [z_level]"
 		var/i
 		var/j
 		for(i = 1, i < world.maxx, i += 64)
@@ -34,28 +35,7 @@ var/global/generating_map = 0
 				max_y = (j+63>world.maxy) ? world.maxy : j+63
 				generate_map_self(z_level, i, j, max_x, max_y, "[MAP_NAME]_[z_level]_([i],[j];[max_x],[max_y])")
 
-	world << "ФОТО ИГРОВОГО УРОВНЯ [z_level] СОЗДАНО"
-	diary << "ФОТО ИГРОВОГО УРОВНЯ [z_level] СОЗДАНО"
 	generating_map = 0
-
-/* /mob/verb/generate_map_icon()
-	set category = "Server"
-	set name = "Create tile icon"
-
-	// Загрузка фона
-	var/icon/minimap = new /icon('icons/minimap.dmi')
-	// Установка размера иконки
-	minimap.Scale(32, 32)
-
-	var/turf/tile = get_turf(src)
-
-	generate_tile_self(tile, minimap)
-
-	// Создаем иконку
-	var/icon/final = new /icon()
-	final.Insert(minimap, "", SOUTH, 1, 0)
-	fcopy(final, "data/tile_icons/[x], [y], [z], [src.name] gen.png") */
-
 
 // Используется код миникарт
 /proc/generate_map_self(z = 1, x1 = 1, y1 = 1, x2 = world.maxx, y2 = world.maxy, name)
@@ -88,19 +68,14 @@ var/global/generating_map = 0
 	// Создаем иконку
 	var/icon/final = new /icon()
 	final.Insert(minimap, "", SOUTH, 1, 0)
-	if(fcopy(final, "data/map_icons/[name].png"))
-		world << "КАРТИНКА СОЗДАНА"
-		diary << "КАРТИНКА СОЗДАНА"
-	world << "ПРОХОД ЗАВЕРШЕН"
-	diary << "ПРОХОД ЗАВЕРШЕН"
+	fcopy(final, "data/map_icons/[name].png")
 
 // Функция рисования. Задано для спрайтов 32px и 64x64.
 /proc/generate_tile_self(turf/tile, icon/minimap, c_x, c_y)
 	var/icon/tile_icon
 	var/obj/obj
 	var/list/obj_icons = list()
-	diary << "[tile.x], [tile.y]"
-	// Don't use icons for space, just add objects in space if they exist.
+	// Космос должен быть черным! Просто поставим объекты на фон.
 	if(istype(tile, /turf/open/space))
 		obj = locate(/obj/structure/lattice/catwalk) in tile
 		if(obj)
@@ -133,8 +108,8 @@ var/global/generating_map = 0
 			tile_icon.Blend(obj_icon, ICON_OVERLAY)
 
 	if(tile_icon)
-		// Scale the icon.
+		// Меняем размер
 		tile_icon.Scale(32,32)
-		// Add the tile to the minimap.
+		// Вставляем маленькую иконку в большую
 		minimap.Blend(tile_icon, ICON_OVERLAY, ((c_x - 1) * 32), ((c_y - 1) * 32))
 		del(tile_icon)
