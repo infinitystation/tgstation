@@ -31,7 +31,7 @@ var/global/generating_map = 0
 			max_x = (i+63>world.maxx) ? world.maxx : i+63
 			max_y = 1
 			for(j = 1, j < world.maxy, j += 64)
-				max_y = (i+63>world.maxy) ? world.maxy : j+63
+				max_y = (j+63>world.maxy) ? world.maxy : j+63
 				generate_map_self(z_level, i, j, max_x, max_y, "[MAP_NAME]_[z_level]_([i],[j];[max_x],[max_y])")
 
 	world << "ФОТО ИГРОВОГО УРОВНЯ [z_level] СОЗДАНО"
@@ -69,7 +69,7 @@ var/global/generating_map = 0
 
 	// Цикл по всем тайлам
 	for(var/T in block(locate(x1, y1, z), locate(x2, y2, z)))
-		var/turf/TB
+		var/turf/TB = T
 		generate_tile_self(T, minimap, TB.x+1-x1, TB.y+1-y1)
 
 		// Баг BYOND'а. Чтобы избежать переполнения памяти, нужно через каждые 512 или менее тайлов, заново создавать иконку, заменяя ею старую.
