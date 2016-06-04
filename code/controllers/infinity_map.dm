@@ -38,7 +38,7 @@ var/global/generating_map = 0
 	diary << "ФОТО ИГРОВОГО УРОВНЯ [z_level] СОЗДАНО"
 	generating_map = 0
 
-/mob/verb/generate_map_icon()
+/* /mob/verb/generate_map_icon()
 	set category = "Server"
 	set name = "Create tile icon"
 
@@ -54,7 +54,7 @@ var/global/generating_map = 0
 	// Создаем иконку
 	var/icon/final = new /icon()
 	final.Insert(minimap, "", SOUTH, 1, 0)
-	fcopy(final, "data/tile_icons/[x], [y], [z], [src.name].png")
+	fcopy(final, "data/tile_icons/[x], [y], [z], [src.name] gen.png") */
 
 
 // Используется код миникарт
@@ -66,9 +66,11 @@ var/global/generating_map = 0
 
 	// Счетчик, для избежания переполнения памяти
 	var/counter = 512
+
 	// Цикл по всем тайлам
 	for(var/T in block(locate(x1, y1, z), locate(x2, y2, z)))
-		generate_tile_self(T, minimap)
+		var/turf/TB
+		generate_tile_self(T, minimap, TB.x+1-x1, TB.y+1-y1)
 
 		// Баг BYOND'а. Чтобы избежать переполнения памяти, нужно через каждые 512 или менее тайлов, заново создавать иконку, заменяя ею старую.
 		counter--
@@ -92,8 +94,8 @@ var/global/generating_map = 0
 	world << "ПРОХОД ЗАВЕРШЕН"
 	diary << "ПРОХОД ЗАВЕРШЕН"
 
-// Используемая функция на 03.06.2016
-/proc/generate_tile_self(turf/tile, icon/minimap)
+// Функция рисования. Задано для спрайтов 32px и 64x64.
+/proc/generate_tile_self(turf/tile, icon/minimap, c_x, c_y)
 	var/icon/tile_icon
 	var/obj/obj
 	var/list/obj_icons = list()
@@ -134,5 +136,5 @@ var/global/generating_map = 0
 		// Scale the icon.
 		tile_icon.Scale(32,32)
 		// Add the tile to the minimap.
-		minimap.Blend(tile_icon, ICON_OVERLAY, ((tile.x - 1) * 32), ((tile.y - 1) * 32))
+		minimap.Blend(tile_icon, ICON_OVERLAY, ((c_x - 1) * 32), ((c_y - 1) * 32))
 		del(tile_icon)
