@@ -38,6 +38,25 @@ var/global/generating_map = 0
 	diary << "ФОТО ИГРОВОГО УРОВНЯ [z_level] СОЗДАНО"
 	generating_map = 0
 
+/mob/verb/generate_map_icon()
+	set category = "Server"
+	set name = "Create tile icon"
+
+	// Загрузка фона
+	var/icon/minimap = new /icon('icons/minimap.dmi')
+	// Установка размера иконки
+	minimap.Scale(32, 32)
+
+	var/turf/tile = get_turf(src)
+
+	generate_tile_self(tile, icon/minimap)
+
+	// Создаем иконку
+	var/icon/final = new /icon()
+	final.Insert(minimap, "", SOUTH, 1, 0)
+	fcopy(final, "data/tile_icons/[x], [y], [z], [src.name].png")
+
+
 // Используется код миникарт
 /proc/generate_map_self(z = 1, x1 = 1, y1 = 1, x2 = world.maxx, y2 = world.maxy, name)
 	// Загрузка фона
@@ -78,7 +97,6 @@ var/global/generating_map = 0
 	var/icon/tile_icon
 	var/obj/obj
 	var/list/obj_icons = list()
-	world << "[tile.x], [tile.y]"
 	diary << "[tile.x], [tile.y]"
 	// Don't use icons for space, just add objects in space if they exist.
 	if(istype(tile, /turf/open/space))
