@@ -49,7 +49,7 @@ var/global/generating_map = 0
 
 	var/turf/tile = get_turf(src)
 
-	generate_tile_self(tile, icon/minimap)
+	generate_tile_self(tile, minimap)
 
 	// Создаем иконку
 	var/icon/final = new /icon()
