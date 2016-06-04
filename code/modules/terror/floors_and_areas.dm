@@ -94,6 +94,10 @@
 	name = "Prison wing"
 	icon_state = "yellow"
 
+/area/toxins/telepad
+	name = "Telepad control"
+	icon_state = "yellow"
+
 ///Flors///
 
 /turf/open/floor/plasteel/terror
