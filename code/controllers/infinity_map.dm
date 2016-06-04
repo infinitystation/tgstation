@@ -1,8 +1,13 @@
+var/global/generating_map = 0
+
 /client/proc/generate_map_icon()
 	set category = "Server"
 	set name = "Create map icon"
 
 	var/zlevels_list = list(ZLEVEL_STATION, ZLEVEL_CENTCOM)
+
+	if(generating_map)
+		return
 
 	if(!usr.client.holder)
 		return
@@ -14,19 +19,24 @@
 
 	var/z_level
 	if(confirm == "Äà")
-		var/max_x = 0
-		var/max_y = 0
+		generating_map = 1
+		var/max_x = 1
+		var/max_y = 1
 		z_level = input("Âûáåğèòå óğîâåíü", "Âûáîğ óğîâíß") as null|anything in zlevels_list
-		world << "ÑÎÇÄÀÅÒÑß ÔÎÒÎ ÈÃĞÎÂÎÃÎ ÓĞÎÂÍß [z_level]";
+		world << "ÑÎÇÄÀÅÒÑß ÔÎÒÎ ÈÃĞÎÂÎÃÎ ÓĞÎÂÍß [z_level]"
+		diary << "ÑÎÇÄÀÅÒÑß ÔÎÒÎ ÈÃĞÎÂÎÃÎ ÓĞÎÂÍß [z_level]"
 		var/i
 		var/j
-		for(i = 0, i < world.maxx, i += 64)
-			max_x = (i+64>world.maxx) ? world.maxx : i+64
-			for(j = 0, j < world.maxy, j += 64)
-				max_y = (i+64>world.maxy) ? world.maxy : j+64
+		for(i = 1, i < world.maxx, i += 64)
+			max_x = (i+63>world.maxx) ? world.maxx : i+63
+			max_y = 1
+			for(j = 1, j < world.maxy, j += 64)
+				max_y = (i+63>world.maxy) ? world.maxy : j+63
 				generate_map_self(z_level, i, j, max_x, max_y, "[MAP_NAME]_[z_level]_([i],[j];[max_x],[max_y])")
 
 	world << "ÔÎÒÎ ÈÃĞÎÂÎÃÎ ÓĞÎÂÍß [z_level] ÑÎÇÄÀÍÎ"
+	diary << "ÔÎÒÎ ÈÃĞÎÂÎÃÎ ÓĞÎÂÍß [z_level] ÑÎÇÄÀÍÎ"
+	generating_map = 0
 
 // Èñïîëüçóåòñÿ êîä ìèíèêàğò
 /proc/generate_map_self(z = 1, x1 = 1, y1 = 1, x2 = world.maxx, y2 = world.maxy, name)
@@ -57,7 +67,11 @@
 	// Ñîçäàåì èêîíêó
 	var/icon/final = new /icon()
 	final.Insert(minimap, "", SOUTH, 1, 0)
-	fcopy(final, "data/map_icons/[name].png")
+	if(fcopy(final, "data/map_icons/[name].png"))
+		world << "ÊÀĞÒÈÍÊÀ ÑÎÇÄÀÍÀ"
+		diary << "ÊÀĞÒÈÍÊÀ ÑÎÇÄÀÍÀ"
+	world << "ÏĞÎÕÎÄ ÇÀÂÅĞØÅÍ"
+	diary << "ÏĞÎÕÎÄ ÇÀÂÅĞØÅÍ"
 
 // Èñïîëüçóåìàÿ ôóíêöèÿ íà 03.06.2016
 /proc/generate_tile_self(turf/tile, icon/minimap)
@@ -65,6 +79,7 @@
 	var/obj/obj
 	var/list/obj_icons = list()
 	world << "[tile.x], [tile.y]"
+	diary << "[tile.x], [tile.y]"
 	// Don't use icons for space, just add objects in space if they exist.
 	if(istype(tile, /turf/open/space))
 		obj = locate(/obj/structure/lattice/catwalk) in tile
