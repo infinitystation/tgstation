@@ -141,3 +141,9 @@
 /obj/item/clothing/head/kitty/doggy/update_icon(mob/living/carbon/human/user)
 	if(istype(user))
 		color = "#[user.hair_color]"
+
+/obj/item/clothing/head/doctor_w_tophat
+	name = "tophat"
+	icon_state = "doctor_w_tophat"
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon = 'icons/obj/clothing/infinity_work.dmi'

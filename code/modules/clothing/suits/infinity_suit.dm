@@ -458,3 +458,27 @@
 	flags = NODROP
 	flags_inv = HIDEHAIR|HIDEFACE|HIDEEARS
 
+/obj/item/clothing/suit/hooded/dragon_cape
+	name = "dragon cape"
+	desc = "Legends doesn't burn villages."
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon_state = "dragon_cape"
+	hoodtype = /obj/item/clothing/head/dragon_helmet
+
+/obj/item/clothing/head/dragon_helmet
+	name = "dragon helmet"
+	desc = "Legends doesn't burn villages."
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon_state = "dragon_helmet"
+	body_parts_covered = HEAD
+	flags = NODROP
+	flags_inv = HIDEHAIR|HIDEFACE|HIDEEARS
+
+/obj/item/clothing/suit/doctor_w
+	name = "red tails"
+	desc = "Elegant red costume."
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon_state = "doctor_w"

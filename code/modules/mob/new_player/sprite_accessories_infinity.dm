@@ -305,3 +305,19 @@
 	name = "Ponytail 6"
 	icon_state = "ponytail"
 	icon = 'icons/mob/more_hairs.dmi'
+
+/datum/sprite_accessory/underwear/mini
+	name = "Mini Underwear"
+	icon = 'icons/mob/infinity_work.dmi'
+	icon_state = "mini_black"
+	gender = FEMALE
+
+/datum/sprite_accessory/underwear/mini/green
+	name = "Green Mini Underwear"
+	icon_state = "mini_green"
+	gender = FEMALE
+
+/datum/sprite_accessory/underwear/mini/red
+	name = "Red Mini Underwear"
+	icon_state = "mini_red"
+	gender = FEMALE
