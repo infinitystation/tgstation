@@ -64,3 +64,36 @@
 
 /obj/structure/reagent_dispensers/cognackeg/blob_act()
 	explosion(src.loc,0,3,5,7,10)
+
+/obj/machinery/mineral/equipment_vendor/terror/New()
+	..()
+	desc += "\nIt seems a few selections have been added."
+	prize_list += list(
+		new /datum/data/mining_equipment("Survival Pack",  		/obj/item/weapon/storage/box/mining/survival,		   	      			1100),
+		new /datum/data/mining_equipment("Premium absent",		/obj/item/weapon/reagent_containers/food/drinks/bottle/absinthe/premium,3000),
+		new /datum/data/mining_equipment("Empty Sandbag",		/obj/item/weapon/emptysandbag,											500),
+		new /datum/data/mining_equipment("d10 dice",			/obj/item/weapon/dice/d10,												250),
+		new /datum/data/mining_equipment("d6 dice",				/obj/item/weapon/dice/d6,												200),
+		new /datum/data/mining_equipment("Candle",				/obj/item/candle,														100),
+		new /datum/data/mining_equipment("Lantern",				/obj/item/device/flashlight/lantern,									350),
+		new /datum/data/mining_equipment("Guitar",				/obj/item/device/instrument/guitar,										800),
+		new /datum/data/mining_equipment("Universal Recorde", 	/obj/item/device/taperecorder,											500),
+		)
+
+/obj/item/weapon/circuitboard/machine/mining_equipment_vendor/terror
+	build_path = /obj/machinery/mineral/equipment_vendor/terror
+
+/obj/machinery/vending/eatimat
+	name = "\improper Eat-I-Mat"
+	desc = "Eat this."
+	icon_state = "liberationstation"
+	products = list(/obj/item/weapon/reagent_containers/food/snacks/beans = 10,/obj/item/weapon/reagent_containers/food/snacks/burger = 20, /obj/item/weapon/reagent_containers/food/snacks/burrito = 20, /obj/item/weapon/reagent_containers/food/snacks/meatballspaghetti = 10,/obj/item/weapon/reagent_containers/food/snacks/meat/steak = 20,/obj/item/weapon/reagent_containers/food/snacks/boiledspaghetti = 15,/obj/item/weapon/reagent_containers/food/snacks/cracker = 20)
+	vend_delay = 20
+	product_slogans = "I'm your new cook!"
+	product_ads = "Time for dinner!"
+	req_access_txt = "0"
+
+/obj/item/weapon/circuitboard/computer/eatimat
+	name = "circuit board (Eatiman)"
+	build_path = /obj/machinery/vending/eatimat
+	origin_tech = "programming=1;biotech=1"

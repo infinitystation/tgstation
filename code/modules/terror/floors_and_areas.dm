@@ -98,6 +98,10 @@
 	name = "Telepad control"
 	icon_state = "yellow"
 
+/area/maintenance/xmaint
+	name = "Xenolab Maintenance"
+	icon_state = "green"
+
 ///Flors///
 
 /turf/open/floor/plasteel/terror

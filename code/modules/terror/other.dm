@@ -1,65 +1,3 @@
-/obj/machinery/mineral/equipment_vendor/terror
-	prize_list = list(
-		new /datum/data/mining_equipment("Stimpack",			/obj/item/weapon/reagent_containers/hypospray/medipen/stimpack,	    	50),
-		new /datum/data/mining_equipment("Stimpack Bundle",		/obj/item/weapon/storage/box/medipens/utility,	 				  		200),
-		new /datum/data/mining_equipment("Whiskey",             /obj/item/weapon/reagent_containers/food/drinks/bottle/whiskey,    		100),
-		new /datum/data/mining_equipment("Absinthe",            /obj/item/weapon/reagent_containers/food/drinks/bottle/absinthe/premium,100),
-		new /datum/data/mining_equipment("Cigar",               /obj/item/clothing/mask/cigarette/cigar/havana,                    		150),
-		new /datum/data/mining_equipment("Soap",                /obj/item/weapon/soap/nanotrasen, 						          		200),
-		new /datum/data/mining_equipment("Laser Pointer",       /obj/item/device/laser_pointer, 				                   		300),
-		new /datum/data/mining_equipment("Alien Toy",           /obj/item/clothing/mask/facehugger/toy, 		                   		300),
-		new /datum/data/mining_equipment("Advanced Scanner",	/obj/item/device/t_scanner/adv_mining_scanner,                     		800),
-		new /datum/data/mining_equipment("Hivelord Stabilizer",	/obj/item/weapon/hivelordstabilizer			 ,                     		400),
-		new /datum/data/mining_equipment("Shelter Capsule",		/obj/item/weapon/survivalcapsule			 ,                     		400),
-		new /datum/data/mining_equipment("GAR scanners",		/obj/item/clothing/glasses/meson/gar,					  		   		500),
-		new /datum/data/mining_equipment("Explorer Belt",		/obj/item/weapon/storage/belt/mining,									500),
-		new /datum/data/mining_equipment("Brute First-Aid Kit",	/obj/item/weapon/storage/firstaid/brute,						   		600),
-		new /datum/data/mining_equipment("Jaunter",             /obj/item/device/wormhole_jaunter,                                 		600),
-		new /datum/data/mining_equipment("Kinetic Accelerator", /obj/item/weapon/gun/energy/kinetic_accelerator,               	   		750),
-		new /datum/data/mining_equipment("Resonator",           /obj/item/weapon/resonator,                                    	   		800),
-		new /datum/data/mining_equipment("Plasma Cutter", 		/obj/item/weapon/gun/energy/plasmacutter,				   		   		950),
-		new /datum/data/mining_equipment("Lazarus Injector",    /obj/item/weapon/lazarus_injector,                                		1000),
-		new /datum/data/mining_equipment("Silver Pickaxe",		/obj/item/weapon/pickaxe/silver,				                  		1000),
-		new /datum/data/mining_equipment("Jetpack Upgrade",		/obj/item/hardsuit_jetpack						,	              		2000),
-		new /datum/data/mining_equipment("Space Cash",    		/obj/item/stack/spacecash/c1000,                    			  		2000),
-		new /datum/data/mining_equipment("Diamond Pickaxe",		/obj/item/weapon/pickaxe/diamond,				                  		2000),
-		new /datum/data/mining_equipment("Super Resonator",     /obj/item/weapon/resonator/upgraded,                              		2500),
-		new /datum/data/mining_equipment("Super Accelerator",	/obj/item/weapon/gun/energy/kinetic_accelerator/super,			  		3000),
-		new /datum/data/mining_equipment("Point Transfer Card", /obj/item/weapon/card/mining_point_card,               			   		500),
-		new /datum/data/mining_equipment("Mining Drone",        /mob/living/simple_animal/hostile/mining_drone,                   		800),
-		new /datum/data/mining_equipment("Drone Melee Upgrade", /obj/item/device/mine_bot_ugprade,      			   			   		400),
-		new /datum/data/mining_equipment("Drone Health Upgrade",/obj/item/device/mine_bot_ugprade/health,      			   	       		400),
-		new /datum/data/mining_equipment("Drone Ranged Upgrade",/obj/item/device/mine_bot_ugprade/cooldown,      			   	   		600),
-		new /datum/data/mining_equipment("Drone AI Upgrade",    /obj/item/slimepotion/sentience/mining,	      			   	      		1000),
-		new /datum/data/mining_equipment("Survival Pack",  		/obj/item/weapon/storage/box/mining/survival,		   	      			1100),
-		new /datum/data/mining_equipment("Premium absent",		/obj/item/weapon/reagent_containers/food/drinks/bottle/absinthe/premium,3000),
-		new /datum/data/mining_equipment("Empty Sandbag",		/obj/item/weapon/emptysandbag,											500),
-		new /datum/data/mining_equipment("d10 dice",			/obj/item/weapon/dice/d10,												250),
-		new /datum/data/mining_equipment("d6 dice",				/obj/item/weapon/dice/d6,												200),
-		new /datum/data/mining_equipment("Candle",				/obj/item/candle,														100),
-		new /datum/data/mining_equipment("Lantern",				/obj/item/device/flashlight/lantern,									350),
-		new /datum/data/mining_equipment("Guitar",				/obj/item/device/instrument/guitar,										800),
-		new /datum/data/mining_equipment("Universal Recorde", 	/obj/item/device/taperecorder,											500),
-		)
-
-
-/obj/machinery/vending/eatimat
-	name = "\improper Eat-I-Mat"
-	desc = "Eat this."
-	icon_state = "liberationstation"
-	products = list(/obj/item/weapon/reagent_containers/food/snacks/beans = 10,/obj/item/weapon/reagent_containers/food/snacks/burger = 20, /obj/item/weapon/reagent_containers/food/snacks/burrito = 20, /obj/item/weapon/reagent_containers/food/snacks/meatballspaghetti = 10,/obj/item/weapon/reagent_containers/food/snacks/meat/steak = 20,/obj/item/weapon/reagent_containers/food/snacks/boiledspaghetti = 15,/obj/item/weapon/reagent_containers/food/snacks/cracker = 20)
-	vend_delay = 20
-	product_slogans = "I'm your new cook!"
-	product_ads = "Time for dinner!"
-	req_access_txt = "0"
-	refill_canister = /obj/item/weapon/vending_refill/eatimat
-
-/obj/item/weapon/vending_refill/eatimat
-	machine_name = "Eat-I-Mat"
-	icon_state = "refill_booze"
-	charges = list(50, 0, 0)
-	init_charges = list(20, 4, 0)
-
 /obj/machinery/light/small/floor
 	icon_state = "floor1"
 	base_state = "floor"
@@ -251,18 +189,11 @@
 	response_harm   = "stomps"
 	gold_core_spawnable = 0
 
-/obj/item/projectile/temp/Thot
-	name = "heat beam"
-	temperature = 600
-
 /obj/structure/dresser/metal
 	name = "dresser"
 	desc = "A nicely-crafted metal dresser. It's filled with lots of undies."
 	icon = 'icons/obj/infinity_object.dmi'
 	icon_state = "metal_dresser"
-
-//»√–”ÿ »!//
-
 
 /obj/item/toy/plushie
 	name = "plushie"
@@ -378,8 +309,6 @@
 	name = "tuxedo cat plushie"
 	icon_state = "tuxedocat"
 
-//»√–”ÿ »- ¿–œ€!//
-
 /obj/item/toy/carpplushie
 	name = "space carp plushie"
 	desc = "An adorable stuffed toy that resembles a space carp."
@@ -435,8 +364,6 @@
 
 /obj/item/toy/carpplushie/void
 	icon_state = "voidcarp"
-
-// ËÍ‡ Ash-Walk'ÂÓ‚
 
 /obj/item/weapon/pickaxe/silver/poor
 	name = "ancient pickaxe"
@@ -494,14 +421,44 @@
 	icon_state = "gas_alt"
 	flags = BLOCK_GAS_SMOKE_EFFECT | MASKINTERNALS
 	flags_inv = HIDEEARS|HIDEFACIALHAIR
-	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 100, rad = 0)
+	armor = list(melee = 15, bullet = 10, laser = 0,energy = 0, bomb = 20, bio = 100, rad = 25)
 	item_state = "gas_alt"
 	flags_cover = MASKCOVERSMOUTH
 	burn_state = FIRE_PROOF
-
-//¬ ·Û‰Û˘ÂÏ, ÒÌÂÒÛ ‚Ò∏, ˜ÚÓ ÌËÊÂ, ‚ ÓÚ‰ÂÎ¸Ì˚È Ù‡ÈÎ.
 
 /obj/structure/alien_structure
 	name = "alien machinery"
 	icon_state = "computer1"
 	icon = 'icons/obj/infinity_alien.dmi'
+
+/obj/item/weapon/storage/bag/ore/holding //miners, your messiah has arrived
+	name = "mining satchel of holding"
+	desc = "A revolution in convenience, this satchel allows for infinite ore storage. It's been outfitted with anti-malfunction safety measures."
+	storage_slots = INFINITY
+	max_combined_w_class = INFINITY
+	origin_tech = "bluespace=3"
+	icon_state = "satchel_bspace"
+
+/obj/item/weapon/storage/belt/holding
+	name = "belt of holding"
+	desc = "A belt that opens into a localized pocket of Blue Space. It's been outfitted with anti-malfunction safety measures."
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon_state = "belt_of_holding"
+	w_class = 3
+	max_w_class = 2
+	max_combined_w_class = 37
+	storage_slots = 14
+	max_combined_w_class = INFINITY
+	origin_tech = "bluespace=3"
+
+/datum/design/belt_holding
+	name = "Belt of Holding"
+	desc = "A belt that opens into a localized pocket of Blue Space."
+	id = "belt_holding"
+	req_tech = list("bluespace" = 3, "materials" = 5)
+	build_                             ËÏtype = PROTOLATHE
+	materials = list(MAT_GOLD = 2000, MAT_DIAMOND = 1000, MAT_URANIUM = 150)
+	reliability = 80
+	build_path = /obj/item/weapon/storage/belt/holding
+	category = list("Bluespace Designs")
