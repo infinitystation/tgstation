@@ -1078,6 +1078,7 @@
 #include "code\modules\countdown\countdown.dm"
 #include "code\modules\crafting\craft.dm"
 #include "code\modules\crafting\guncrafting.dm"
+#include "code\modules\crafting\infinity_recipes.dm"
 #include "code\modules\crafting\recipes.dm"
 #include "code\modules\detectivework\detective_work.dm"
 #include "code\modules\detectivework\evidence.dm"
