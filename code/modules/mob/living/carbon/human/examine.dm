@@ -269,12 +269,12 @@
 		else
 			msg += "[t_He] немного полноват[e_1].\n"
 
-	if(pale)
+	if(blood_volume < BLOOD_VOLUME_SAFE)
 		msg += "[t_He] бледноват[e_1].\n"
 
 	if(bleedsuppress)
 		msg += "[t_He] перев&#255;зан[e_1] чем-то.\n"
-	if(blood_max)
+	if(bleed_rate)
 		if(reagents.has_reagent("heparin"))
 			msg += "<b>[t_He] обильно кровоточит!</b>\n"
 		else

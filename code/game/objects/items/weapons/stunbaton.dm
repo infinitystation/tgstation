@@ -168,9 +168,7 @@
 
 
 /obj/item/weapon/melee/baton/emp_act(severity)
-	if(deductcharge(1000 / severity))
-		if(bcell.reliability != 100 && prob(50/severity))
-			bcell.reliability -= 10 / severity
+	deductcharge(1000 / severity)
 	..()
 
 //Makeshift stun baton. Replacement for stun gloves.

@@ -459,6 +459,5 @@
 	req_tech = list("bluespace" = 3, "materials" = 5)
 	build_type = PROTOLATHE
 	materials = list(MAT_GOLD = 2000, MAT_DIAMOND = 1000, MAT_URANIUM = 150)
-	reliability = 80
 	build_path = /obj/item/weapon/storage/belt/holding
 	category = list("Bluespace Designs")

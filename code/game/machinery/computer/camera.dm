@@ -148,6 +148,7 @@
 	network = list("thunder")
 	density = 0
 	circuit = null
+	clockwork = TRUE //it'd look very weird
 
 /obj/machinery/computer/security/telescreen/update_icon()
 	icon_state = initial(icon_state)
@@ -171,6 +172,7 @@
 	icon_state = "television"
 	icon_keyboard = null
 	icon_screen = "detective_tv"
+	clockwork = TRUE //it'd look weird
 
 
 /obj/machinery/computer/security/mining
