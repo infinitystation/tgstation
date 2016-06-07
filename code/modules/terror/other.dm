@@ -457,7 +457,7 @@
 	desc = "A belt that opens into a localized pocket of Blue Space."
 	id = "belt_holding"
 	req_tech = list("bluespace" = 3, "materials" = 5)
-	build_                             èìtype = PROTOLATHE
+	build_type = PROTOLATHE
 	materials = list(MAT_GOLD = 2000, MAT_DIAMOND = 1000, MAT_URANIUM = 150)
 	reliability = 80
 	build_path = /obj/item/weapon/storage/belt/holding

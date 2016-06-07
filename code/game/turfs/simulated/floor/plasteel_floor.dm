@@ -441,6 +441,14 @@
 	icon_state = "stairs-m"
 /turf/open/floor/plasteel/stairs/right
 	icon_state = "stairs-r"
+/turf/open/floor/plasteel/stairs/grey
+	icon_state = "stairs-grey"
+/turf/open/floor/plasteel/stairs/grey/left
+	icon_state = "stairs-grey-l"
+/turf/open/floor/plasteel/stairs/grey/medium
+	icon_state = "stairs-grey-m"
+/turf/open/floor/plasteel/stairs/grey/right
+	icon_state = "stairs-grey-r"
 /turf/open/floor/plasteel/stairs/old
 	icon_state = "stairs-old"
 
