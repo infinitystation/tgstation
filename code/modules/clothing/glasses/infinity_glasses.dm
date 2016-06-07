@@ -18,3 +18,11 @@
 	desc = "Used by engineering staff to see underfloor objects such as cables and pipes."
 	icon_state = "stylengi-tray"
 	mode = 0
+
+/obj/item/clothing/glasses/godtier
+	name = "God Tier Eye's"
+	desc = "Holy crap! You really broke those clock!"
+	icon_state = "godtier"
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	flags = NODROP
