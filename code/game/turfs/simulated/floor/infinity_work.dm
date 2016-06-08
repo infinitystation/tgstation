@@ -71,3 +71,7 @@
 /turf/open/floor/carpet/arcade
 	icon = 'icons/turf/floors/infinity_works.dmi'
 	icon_state = "arcade_carpet"
+/turf/open/floor/pool
+	name = "water"
+	icon = 'icons/turf/floors/infinity_works.dmi'
+	icon_state = "poolwaterfloor"
