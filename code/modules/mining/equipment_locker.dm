@@ -30,7 +30,7 @@
 /obj/item/weapon/circuitboard/machine/ore_redemption
 	name = "circuit board (Ore Redemption)"
 	build_path = /obj/machinery/mineral/ore_redemption
-	origin_tech = "programming=1;engineering=2"
+	origin_tech = "programming=2;engineering=2;plasmatech=3"
 	req_components = list(
 							/obj/item/weapon/stock_parts/console_screen = 1,
 							/obj/item/weapon/stock_parts/matter_bin = 1,
@@ -95,17 +95,6 @@
 						i++
 
 /obj/machinery/mineral/ore_redemption/attackby(obj/item/weapon/W, mob/user, params)
-	if (!powered())
-		return
-	if(istype(W,/obj/item/weapon/card/id))
-		var/obj/item/weapon/card/id/I = user.get_active_hand()
-		if(istype(I) && !istype(inserted_id))
-			if(!user.drop_item())
-				return
-			I.loc = src
-			inserted_id = I
-			interact(user)
-		return
 	if(exchange_parts(user, W))
 		return
 
@@ -120,6 +109,17 @@
 	if(default_deconstruction_crowbar(W))
 		return
 
+	if (!powered())
+		return
+	if(istype(W,/obj/item/weapon/card/id))
+		var/obj/item/weapon/card/id/I = user.get_active_hand()
+		if(istype(I) && !istype(inserted_id))
+			if(!user.drop_item())
+				return
+			I.loc = src
+			inserted_id = I
+			interact(user)
+		return
 	return ..()
 
 /obj/machinery/mineral/ore_redemption/deconstruction()
@@ -337,7 +337,7 @@
 /obj/item/weapon/circuitboard/machine/mining_equipment_vendor
 	name = "circuit board (Mining Equipment Vendor)"
 	build_path = /obj/machinery/mineral/equipment_vendor
-	origin_tech = "programming=1;engineering=2"
+	origin_tech = "programming=1;engineering=3"
 	req_components = list(
 							/obj/item/weapon/stock_parts/console_screen = 1,
 							/obj/item/weapon/stock_parts/matter_bin = 3)
@@ -617,14 +617,14 @@
 	var/fieldsactive = 0
 	var/burst_time = 30
 	var/fieldlimit = 4
-	origin_tech = "magnets=2;combat=2"
+	origin_tech = "magnets=3;engineering=3"
 
 /obj/item/weapon/resonator/upgraded
 	name = "upgraded resonator"
 	desc = "An upgraded version of the resonator that can produce more fields at once."
 	icon_state = "resonator_u"
 	item_state = "resonator_u"
-	origin_tech = "magnets=3;combat=3"
+	origin_tech = "materials=4;powerstorage=3;engineering=3;magnets=3"
 	fieldlimit = 6
 
 /obj/item/weapon/resonator/proc/CreateResonance(target, creator)
@@ -889,6 +889,7 @@
 	icon_state = "door_electronics"
 	icon = 'icons/obj/module.dmi'
 	sentience_type = SENTIENCE_MINEBOT
+	origin_tech = "programming=6"
 
 
 /**********************Lazarus Injector**********************/
@@ -906,7 +907,7 @@
 	var/loaded = 1
 	var/malfunctioning = 0
 	var/revive_type = SENTIENCE_ORGANIC //So you can't revive boss monsters or robots with it
-	origin_tech = "biotech=4"
+	origin_tech = "biotech=4;magnets=6"
 
 /obj/item/weapon/lazarus_injector/afterattack(atom/target, mob/user, proximity_flag)
 	if(!loaded)
@@ -1104,7 +1105,7 @@
 	icon_state = "bottle19"
 	desc = "Inject certain types of monster organs with this stabilizer to preserve their healing powers indefinitely."
 	w_class = 1
-	origin_tech = "biotech=1"
+	origin_tech = "biotech=3"
 
 /obj/item/weapon/hivelordstabilizer/afterattack(obj/item/organ/M, mob/user)
 	var/obj/item/organ/hivelord_core/C = M
@@ -1178,4 +1179,3 @@
 /obj/item/weapon/circuitboard/machine/mining_equipment_vendor/golem
 	name = "circuit board (Golem Ship Equipment Vendor)"
 	build_path = /obj/machinery/mineral/equipment_vendor/golem
-

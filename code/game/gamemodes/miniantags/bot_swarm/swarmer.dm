@@ -4,7 +4,7 @@
 	desc = "A currently unactivated swarmer. Swarmers can self activate at any time, it would be wise to immediately dispose of this."
 	icon = 'icons/mob/swarmer.dmi'
 	icon_state = "swarmer_unactivated"
-	origin_tech = "bluespace=4;materials=4;programming=6"
+	origin_tech = "bluespace=4;materials=4;programming=7"
 	materials = list(MAT_METAL=10000, MAT_GLASS=4000)
 
 
@@ -547,10 +547,12 @@
 /mob/living/simple_animal/hostile/swarmer/proc/ContactSwarmers()
 	var/message = input(src, "Announce to other swarmers", "Swarmer contact")
 	message = sanitize_a0(message)
+	// TODO get swarmers their own colour rather than just boldtext
 	var/rendered = "<B>Swarm communication - </b> [src] states: [message]"
 	if(message)
 		for(var/mob/M in mob_list)
 			if(isswarmer(M))
 				M << rendered
-			if(M in dead_mob_list)
-				M << "<a href='?src=\ref[M];follow=\ref[src]'>(F)</a> [rendered]"
+			if(isobserver(M))
+				var/link = FOLLOW_LINK(M, src)
+				M << "[link] [rendered]"

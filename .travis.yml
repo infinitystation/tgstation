@@ -45,5 +45,5 @@ script:
   - tools/travis/build_tools.sh
   - tools/travis/build_byond.sh
   
- notifications:
+notifications:
   slack: theinfinityteam:BJmDWGfHjOTmNweXNIDrJfZp

@@ -47,9 +47,8 @@ var/list/preferences_datums = list()
 	var/be_random_name = 0				//whether we'll have a random name every round
 	var/be_random_body = 0				//whether we'll have a random body every round
 	var/gender = MALE					//gender of character (well duh)
-	var/age = 30						//age of character
-	var/visual_age = 30					//visual age of character
-	var/blood_type = "A+"				//blood type (not-chooseable)
+	var/age = 30						//age of character?	var/visual_age = 30
+	var/visual_age = 30					//
 	var/underwear = "Nude"				//underwear type
 	var/undershirt = "Nude"				//undershirt type
 	var/socks = "Nude"					//socks type
@@ -104,7 +103,6 @@ var/list/preferences_datums = list()
 	var/list/ignoring = list()
 
 /datum/preferences/New(client/C)
-	blood_type = random_blood_type()
 	custom_names["ai"] = pick(ai_names)
 	custom_names["cyborg"] = pick(ai_names)
 	custom_names["clown"] = pick(clown_names)
@@ -208,7 +206,6 @@ var/list/preferences_datums = list()
 			else
 				dat += "<b>Species:</b> Human<BR>"
 
-			dat += "<b>Blood Type:</b> [blood_type]<BR>"
 			dat += "<b>Underwear:</b><BR><a href ='?_src_=prefs;preference=underwear;task=input'>[underwear]</a><BR>"
 			dat += "<b>Undershirt:</b><BR><a href ='?_src_=prefs;preference=undershirt;task=input'>[undershirt]</a><BR>"
 			dat += "<b>Socks:</b><BR><a href ='?_src_=prefs;preference=socks;task=input'>[socks]</a><BR>"
@@ -1351,7 +1348,6 @@ var/list/preferences_datums = list()
 	character.sec_imp_notes = sec_imp_notes
 	character.med_imp_notes = med_imp_notes
 
-	character.dna.blood_type = blood_type
 	character.dna.features = features.Copy()
 	character.dna.real_name = character.real_name
 	var/datum/species/chosen_species
