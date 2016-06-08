@@ -96,8 +96,11 @@
 	else
 		layer = OBJ_LAYER
 
-/obj/structure/chair/proc/spin()
-	dir = turn(dir, 90)
+/obj/structure/chair/proc/spin(to_dir)
+	if(!to_dir)
+		dir = turn(dir, 90)
+	else
+		dir = to_dir
 	handle_layer()
 	if(buckled_mobs.len)
 		for(var/m in buckled_mobs)
