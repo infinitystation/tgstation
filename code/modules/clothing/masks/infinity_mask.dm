@@ -14,3 +14,14 @@
 	icon = 'icons/obj/clothing/infinity_work.dmi'
 	worn_icon = 'icons/mob/infinity_work.dmi'
 	flags_cover = MASKCOVERSMOUTH
+
+/obj/item/clothing/mask/fawkes
+	name = "Guy Fawkes mask"
+	desc = "A mask designed to help you remember a specific date."
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon_state = "fawkes"
+	item_state = "fawkes"
+	flags_inv = HIDEFACE
+	flags_cover = MASKCOVERSMOUTH
+	w_class = 2
