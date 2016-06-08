@@ -25,3 +25,14 @@
 	flags_inv = HIDEFACE
 	flags_cover = MASKCOVERSMOUTH
 	w_class = 2
+
+/obj/item/clothing/mask/rubbermask
+	name = "Dallas mask"
+	desc = "That's a some old mask with flag of acient destroyed country. Looks like a clown mask, but more creepy. It smells a bills,blood and gunpowder. Officers for some reason are afraid of it."
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon_state = "rubbermask"
+	item_state = "rubbermask"
+	flags_inv = HIDEFACE
+	flags_cover = MASKCOVERSMOUTH
+	w_class = 2
