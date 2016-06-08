@@ -28,7 +28,7 @@
 
 /obj/item/clothing/mask/rubbermask
 	name = "Dallas mask"
-	desc = "A carnival mask popular among the childrens."
+	desc = "That's a some old mask with flag of acient destroyed country. Looks like a clown mask, but more creepy. It smells a bills,blood and gunpowder. Officers for some reason are afraid of it."
 	icon = 'icons/obj/clothing/infinity_work.dmi'
 	worn_icon = 'icons/mob/infinity_work.dmi'
 	icon_state = "rubbermask"
