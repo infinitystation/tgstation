@@ -102,6 +102,10 @@
 	name = "Xenolab Maintenance"
 	icon_state = "green"
 
+/area/security/punishment
+	name = "Punishment room"
+	icon_state = "sec_prison"
+
 ///Flors///
 
 /turf/open/floor/plasteel/terror
