@@ -35,3 +35,36 @@
 /turf/open/floor/plasteel/stairsnew/wood2/state
 	icon = 'icons/turf/floors/infinity_works.dmi'
 	icon_state = "wood2_stairs2"
+/turf/open/floor/wood/new_wood/wooden1
+	icon = 'icons/turf/floors/infinity_works.dmi'
+	icon_state = "wooden"
+/turf/open/floor/wood/new_wood/wooden2
+	icon = 'icons/turf/floors/infinity_works.dmi'
+	icon_state = "wooden-2"
+/turf/open/floor/engine/caution/south
+	icon = 'icons/turf/floors/infinity_works.dmi'
+	icon_state = "engine_caution_south"
+/turf/open/floor/engine/caution/north
+	icon = 'icons/turf/floors/infinity_works.dmi'
+	icon_state = "engine_caution_north"
+/turf/open/floor/engine/caution/west
+	icon = 'icons/turf/floors/infinity_works.dmi'
+	icon_state = "engine_caution_west"
+/turf/open/floor/engine/caution/east
+	icon = 'icons/turf/floors/infinity_works.dmi'
+	icon_state = "engine_caution_east"
+/turf/open/floor/engine/caution/corners
+	icon = 'icons/turf/floors/infinity_works.dmi'
+	icon_state = "engine_caution_corners"
+/turf/open/floor/engine/caution/ns
+	icon = 'icons/turf/floors/infinity_works.dmi'
+	icon_state = "engine_caution_ns"
+/turf/open/floor/engine/caution/we
+	icon = 'icons/turf/floors/infinity_works.dmi'
+	icon_state = "engine_caution_we"
+/turf/open/floor/engine/caution/misc
+	icon = 'icons/turf/floors/infinity_works.dmi'
+	icon_state = "engine_caution_misc"
+/turf/open/floor/engine/caution/corners2
+	icon = 'icons/turf/floors/infinity_works.dmi'
+	icon_state = "engine_caution_corners2"
