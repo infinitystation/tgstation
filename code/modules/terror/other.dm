@@ -431,20 +431,13 @@
 	icon_state = "computer1"
 	icon = 'icons/obj/infinity_alien.dmi'
 
-/obj/item/weapon/storage/bag/ore/holding //miners, your messiah has arrived
-	name = "mining satchel of holding"
-	desc = "A revolution in convenience, this satchel allows for infinite ore storage. It's been outfitted with anti-malfunction safety measures."
-	storage_slots = INFINITY
-	max_combined_w_class = INFINITY
-	origin_tech = "bluespace=3"
-	icon_state = "satchel_bspace"
-
 /obj/item/weapon/storage/belt/holding
 	name = "belt of holding"
 	desc = "A belt that opens into a localized pocket of Blue Space. It's been outfitted with anti-malfunction safety measures."
 	icon = 'icons/obj/clothing/infinity_work.dmi'
 	worn_icon = 'icons/mob/infinity_work.dmi'
 	icon_state = "belt_of_holding"
+	item_state = "belt_of_holding"
 	w_class = 3
 	max_w_class = 2
 	max_combined_w_class = 37
@@ -461,3 +454,7 @@
 	materials = list(MAT_GOLD = 2000, MAT_DIAMOND = 1000, MAT_URANIUM = 150)
 	build_path = /obj/item/weapon/storage/belt/holding
 	category = list("Bluespace Designs")
+
+/obj/item/weapon/paper/parting
+	name = "Parting"
+	info = "<b><center>–уководство по эксплуатации электрического стула</center></b><br><br> 1) ¬озьмите electrpack(шоковый рюкзак) в руку и проведите настройку частот. ќбратит внимание, что стандартные частоты (144.9 с кодом 2) - де активированы с целью избежания саботажа в работе стула. »змените частоту и код. Ќикому не сообщайте код помимо ’о—а, вардена или капитана.<br> 2) ѕрисоедените к electropack шлем - вы получите шоковый набор.<br> 3) «акрепите шоковый набор на стуле.<br> 4) Ќастройте signaler на выставленную в электропаке частоту. ¬сЄ, электрический стул готов.<br><br><b><center>ќбслуживание электрического стула</centrl></b><br>*ƒля отсоединения шокового набора от стула, используйте гаечный ключ. ƒля разоеденения частей - так же.<br>*—тул имеет задержку перед использованием - всего несколько секунд.<br>*ƒля проведения казни, закрепите осужденного на электрическом стуле и активируйте сигналлер.<br><br><br><small>”важаемый оператор, пожалуйста, помните, что на этом стуле вы производите казнь живого человека - такого же, как и вы.<br> Ќе забывайте об этом используйте его в самом крайнем случае.</small>"
