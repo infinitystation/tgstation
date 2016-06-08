@@ -25,3 +25,14 @@
 	flags_inv = HIDEFACE
 	flags_cover = MASKCOVERSMOUTH
 	w_class = 2
+
+/obj/item/clothing/mask/rubbermask
+	name = "Dallas mask"
+	desc = "A carnival mask popular among the childrens."
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon_state = "rubbermask"
+	item_state = "rubbermask"
+	flags_inv = HIDEFACE
+	flags_cover = MASKCOVERSMOUTH
+	w_class = 2
