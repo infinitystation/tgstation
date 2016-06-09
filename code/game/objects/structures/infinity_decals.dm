@@ -1,8 +1,9 @@
-/obj/structure/sign/curtainthing
+/obj/structure/curtainthing
 	name = "stage"
 	desc = ""
 	icon = 'icons/obj/infinity_decals.dmi'
 	icon_state = "curtainthing"
+	layer = SIGN_LAYER
 /obj/structure/sign/pool
 	name = "POOL"
 	desc = "Why not relax at the pool?"
@@ -14,3 +15,18 @@
 	icon = 'icons/obj/infinity_decals.dmi'
 	icon_state = "gym"
 
+/obj/structure/tile_edge/stripe
+	name = "hazard stripe"
+	icon = 'icons/obj/infinity_hazards.dmi'
+	icon_state = "stripe-edge"
+	layer = ABOVE_OPEN_TURF_LAYER
+/obj/structure/tile_edge/stripe/big
+	name = "hazard stripe"
+	icon = 'icons/obj/infinity_hazards.dmi'
+	icon_state = "bigstripe-edge"
+	layer = ABOVE_OPEN_TURF_LAYER
+/obj/structure/tile_edge/stripe/extra_big
+	name = "hazard stripe"
+	icon = 'icons/obj/infinity_hazards.dmi'
+	icon_state = "xtra_bigstripe-edge"
+	layer = ABOVE_OPEN_TURF_LAYER
