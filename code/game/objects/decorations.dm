@@ -14,3 +14,15 @@
 	icon_state = "sheetblue"
 	layer = ABOVE_MOB_LAYER
 	mouse_opacity = 0
+/obj/structure/pool
+	name = "pool"
+	density = 1
+	anchored = 1
+	icon = 'icons/obj/infinity_object.dmi'
+	icon_state = "pool"
+/obj/structure/pool/ladder
+	name = "ladder"
+	density = 0
+	anchored = 1
+	icon = 'icons/obj/infinity_object.dmi'
+	icon_state = "ladder"
