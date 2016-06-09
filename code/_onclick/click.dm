@@ -85,9 +85,6 @@
 	if(next_move > world.time) // in the year 2000...
 		return
 
-	if(buckled)
-		return
-
 	if(istype(loc,/obj/mecha))
 		var/obj/mecha/M = loc
 		return M.click_action(A,src,params)
@@ -306,41 +303,31 @@
 
 // Simple helper to face what you clicked on, in case it should be needed in more than one place
 /mob/proc/face_atom(atom/A)
-	if( stat != CONSCIOUS || !A || !x || !y || !A.x || !A.y )
+	if( buckled || stat != CONSCIOUS || !A || !x || !y || !A.x || !A.y )
 		return
-
-	var/to_dir
-
 	var/dx = A.x - x
 	var/dy = A.y - y
 	if(!dx && !dy) // Wall items are graphically shifted but on the floor
 		if(A.pixel_y > 16)
-			to_dir = NORTH
+			dir = NORTH
 		else if(A.pixel_y < -16)
-			to_dir = SOUTH
+			dir = SOUTH
 		else if(A.pixel_x > 16)
-			to_dir = EAST
+			dir = EAST
 		else if(A.pixel_x < -16)
-			to_dir = WEST
+			dir = WEST
 		return
 
 	if(abs(dx) < abs(dy))
 		if(dy > 0)
-			to_dir = NORTH
+			dir = NORTH
 		else
-			to_dir = SOUTH
+			dir = SOUTH
 	else
 		if(dx > 0)
-			to_dir = EAST
+			dir = EAST
 		else
-			to_dir = WEST
-
-	if(buckled)
-		var/obj/structure/chair/C = buckled
-		C.spin(to_dir)
-		return
-
-	dir = to_dir
+			dir = WEST
 
 /obj/screen/click_catcher
 	icon = 'icons/mob/screen_gen.dmi'
