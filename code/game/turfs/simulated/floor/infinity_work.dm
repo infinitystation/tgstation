@@ -75,3 +75,24 @@
 	name = "water"
 	icon = 'icons/turf/floors/infinity_works.dmi'
 	icon_state = "poolwaterfloor"
+/turf/open/floor/grass/newgrass
+	icon = 'icons/turf/floors/infinity_works.dmi'
+	icon_state = "grass"
+/turf/open/floor/grass/newgrass/grasstodirt
+	icon = 'icons/turf/floors/infinity_works.dmi'
+	icon_state = "grasstodirt"
+/turf/open/floor/grass/newgrass/dirttograss
+	icon = 'icons/turf/floors/infinity_works.dmi'
+	icon_state = "dirttograss"
+/turf/open/floor/grass/newgrass/dirt
+	icon = 'icons/turf/floors/infinity_works.dmi'
+	icon_state = "dirt"
+/turf/open/floor/grass/newgrass/dirt/dirt_dug
+	icon = 'icons/turf/floors/infinity_works.dmi'
+	icon_state = "dirt-dug"
+/turf/open/floor/grass/newgrass/swampgrass
+	icon = 'icons/turf/floors/infinity_works.dmi'
+	icon_state = "swampgrass"
+/turf/open/floor/grass/newgrass/swampgrass/swampgrass_edge
+	icon = 'icons/turf/floors/infinity_works.dmi'
+	icon_state = "swampgrass_edge"
