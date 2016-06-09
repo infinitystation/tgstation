@@ -410,9 +410,9 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 								L.req_access = A
 								L.desc = "A locked box with [new_item.name] and [new_item.name]'s research data on box"
 								L.origin_tech = new_item.origin_tech
-								L.name += " ([new_item.name])"
-							else
-								new_item.loc = linked_lathe.loc
+							L.name += " ([new_item.name])"
+						else
+							new_item.loc = linked_lathe.loc
 						if(!already_logged)
 							feedback_add_details("item_printed","[new_item.type]|[amount]")
 							already_logged = 1
