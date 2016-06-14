@@ -519,3 +519,9 @@ obj/item/weapon/gun/proc/newshot()
 	if(zoomable)
 		azoom = new()
 		azoom.gun = src
+
+
+/obj/item/weapon/gun/burn()
+	if(pin)
+		qdel(pin)
+	.=..()
