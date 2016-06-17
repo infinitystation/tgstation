@@ -87,6 +87,7 @@
 	name = "health scanner"
 	desc = "An in-floor health scanner that sends its data to connected status screens."
 	icon_state = "floorscan1"
+	layer = 2.1
 
 	find_partners(var/in_range = 0)
 		src.partners = list()
