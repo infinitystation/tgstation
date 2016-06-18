@@ -953,10 +953,6 @@ var/list/teleportlocs = list()
 	name = "Vacant Office"
 	icon_state = "security"
 
-/area/security/barracks
-	name = "Barracks"
-	icon_state = "security"
-
 /area/quartermaster
 	name = "Quartermasters"
 	icon_state = "quart"
