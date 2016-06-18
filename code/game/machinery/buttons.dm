@@ -95,6 +95,13 @@
 				playsound(loc, 'sound/items/Deconstruct.ogg', 50, 1)
 				qdel(src)
 
+		if (istype(W, /obj/item/device/multitool))
+			var/new_id = input(user, "Please enter new ID", src.name, src.id) as null|text
+			if (!new_id || new_id == src.id)
+				return
+			src.id = new_id
+			user << "You change [src]'s ID to [new_id]."
+
 		update_icon()
 		return
 
