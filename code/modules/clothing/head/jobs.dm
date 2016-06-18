@@ -107,7 +107,7 @@
 	name = "warden's police hat"
 	desc = "It's a special armored hat issued to the Warden of a security force. Protects the head from impacts."
 	icon_state = "policehelm"
-	armor = list(melee = 30, bullet = 5, laser = 25, energy = 10, bomb = 25, bio = 0, rad = 0)
+	armor = list(melee = 40, bullet = 30, laser = 30, energy = 10, bomb = 25, bio = 0, rad = 0)
 	strip_delay = 60
 
 	dog_fashion = /datum/dog_fashion/head/warden
@@ -118,7 +118,7 @@
 	worn_icon = 'icons/blue_brig/mob/head.dmi'
 	icon = 'icons/blue_brig/obj/clothing/hats.dmi'
 	icon_state = "beret_badge"
-	armor = list(melee = 30, bullet = 25, laser = 25,energy = 10, bomb = 25, bio = 0, rad = 0)
+	armor = list(melee = 40, bullet = 30, laser = 30,energy = 10, bomb = 25, bio = 0, rad = 0)
 	strip_delay = 60
 	dog_fashion = null
 
@@ -132,7 +132,7 @@
 	name = "warden's beret"
 	desc = "A special beret with the Warden's insignia emblazoned on it. For wardens with class."
 	icon_state = "wardenberet"
-	armor = list(melee = 30, bullet = 5, laser = 25, energy = 10, bomb = 25, bio = 0, rad = 0)
+	armor = list(melee = 40, bullet = 30, laser = 30, energy = 10, bomb = 25, bio = 0, rad = 0)
 	strip_delay = 60
 
 /obj/item/clothing/head/beret/sec/navyofficer

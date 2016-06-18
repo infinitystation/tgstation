@@ -19,7 +19,7 @@
 /obj/machinery/button/New(loc, ndir = 0, built = 0)
 	..()
 	if(built)
-		dir = ndir
+		setDir(ndir)
 		pixel_x = (dir & 3)? 0 : (dir == 4 ? -24 : 24)
 		pixel_y = (dir & 3)? (dir ==1 ? -24 : 24) : 0
 		panel_open = 1
@@ -94,6 +94,13 @@
 				transfer_fingerprints_to(new /obj/item/wallframe/button(get_turf(src)))
 				playsound(loc, 'sound/items/Deconstruct.ogg', 50, 1)
 				qdel(src)
+
+		if (istype(W, /obj/item/device/multitool))
+			var/new_id = input(user, "Please enter new ID", src.name, src.id) as null|text
+			if (!new_id || new_id == src.id)
+				return
+			src.id = new_id
+			user << "You change [src]'s ID to [new_id]."
 
 		update_icon()
 		return

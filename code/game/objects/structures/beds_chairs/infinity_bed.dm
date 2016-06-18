@@ -148,3 +148,26 @@
 	icon_state = "new_chair_toppled"
 	icon = 'icons/obj/infinity_object.dmi'
 	origin_type = /obj/structure/chair/new_chair
+
+/obj/structure/chair/stool/oneleg
+	icon_state = "oneleg_stool"
+	icon = 'icons/obj/infinity_object.dmi'
+	item_chair = /obj/item/chair/stool/oneleg
+
+/obj/item/chair/stool/oneleg
+	icon_state = "oneleg_stool_toppled"
+	icon = 'icons/obj/infinity_object.dmi'
+	origin_type = /obj/structure/chair/stool/oneleg
+
+/obj/structure/chair/comfy/sofa/bench
+	name = "bench"
+	icon = 'icons/obj/infinity_object.dmi'
+	icon_state = "sofa"
+
+/obj/structure/chair/comfy/sofa/bench/right
+	name = "bench"
+	icon_state = "sofa_right"
+
+/obj/structure/chair/comfy/sofa/bench/centre
+	name = "bench"
+	icon_state = "sofa_centre"

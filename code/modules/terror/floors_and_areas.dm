@@ -1,5 +1,10 @@
 ///Areas///
 
+/area/toxins/hss
+	name = "High Secured Storage"
+	icon = 'icons/turf/terror.dmi'
+	icon_state = "hss"
+
 /area/security/shower
 	name = "Shower"
 	icon_state = "red"
@@ -18,7 +23,8 @@
 
 /area/security/west
 	name = "West brig's corridor"
-	icon_state = "red"
+	icon = 'icons/turf/terror.dmi'
+	icon_state = "west"
 
 /area/security/infirmary
 	name = "Infirmary"
@@ -26,15 +32,22 @@
 
 /area/security/center
 	name = "Central brig's corridor"
-	icon_state = "red"
+	icon = 'icons/turf/terror.dmi'
+	icon_state = "central"
 
 /area/security/east
 	name = "East brig's corridor"
-	icon_state = "red"
+	icon = 'icons/turf/terror.dmi'
+	icon_state = "east"
 
 /area/security/mass_cell
 	name = "Mass cell"
 	icon_state = "red"
+
+/area/security/barracks
+	name = "Barracks"
+	icon = 'icons/turf/terror.dmi'
+	icon_state = "barracks"
 
 /area/mine/bravo
 	name = "Post Bravo"
@@ -96,7 +109,16 @@
 
 /area/toxins/telepad
 	name = "Telepad control"
-	icon_state = "yellow"
+	icon = 'icons/turf/terror.dmi'
+	icon_state = "tele"
+
+/area/maintenance/xmaint
+	name = "Xenolab Maintenance"
+	icon_state = "green"
+
+/area/security/punishment
+	name = "Punishment room"
+	icon_state = "sec_prison"
 
 ///Flors///
 

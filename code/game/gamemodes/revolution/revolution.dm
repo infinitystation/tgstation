@@ -151,7 +151,7 @@
 	if (!where2)
 		mob << "The Syndicate were unfortunately unable to get you a chameleon security HUD."
 	else
-		mob << "The chameleon security HUD in your [where2] will help you keep track of who is loyalty-implanted, and unable to be recruited."
+		mob << "The chameleon security HUD in your [where2] will help you keep track of who is mindshield-implanted, and unable to be recruited."
 
 
 /////////////////////////////////

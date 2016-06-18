@@ -32,4 +32,6 @@
 	if(client)
 		if(client.prefs.toggles & CHAT_GHOSTEARS && speaker in view(src))
 			message = "<b>(N)</b> [message]"
-	src << "<a href=?src=\ref[src];follow=\ref[speaker]>(F)</a>[message]"
+	var/link = FOLLOW_LINK(src, speaker)
+	src << "[link] [message]"
+

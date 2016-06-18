@@ -11,7 +11,7 @@
 	force = 10
 	throwforce = 7
 	w_class = 3
-	origin_tech = "combat=4"
+	origin_tech = "combat=5"
 	attack_verb = list("flogged", "whipped", "lashed", "disciplined")
 	hitsound = 'sound/weapons/slash.ogg' //pls replace
 	materials = list(MAT_METAL = 1000)
@@ -131,6 +131,56 @@
 	playsound(src.loc, 'sound/weapons/batonextend.ogg', 50, 1)
 	add_fingerprint(user)
 
+
+/obj/item/weapon/melee/chainsword
+	name = "chainsword"
+	desc = "The station is full of heretics, kill them all!"
+	icon = 'icons/obj/weapons.dmi'
+	icon_state = "chainswordoff"
+	item_state = "chainswordoff"
+	var/on = 0
+	force = 15
+	w_class = 4
+	slot_flags = SLOT_BACK
+
+/obj/item/weapon/melee/chainsword/attack_self(mob/user)
+	on = !on
+	if(on)
+		user << "<span class ='warning'>You enable chain.</span>"
+		icon_state = "chainswordon"
+		item_state = "chainswordon"
+		slot_flags = SLOT_BACK
+		w_class = 4
+		force = 30
+		hitsound = 'sound/weapons/chainsawhit.ogg'
+		attack_verb = list("sawed", "torn", "cut", "chopped", "diced")
+	else
+		user << "<span class ='notice'>You disable chain.</span>"
+		icon_state = "chainswordoff"
+		item_state = "chainswordoff"
+		slot_flags = SLOT_BACK
+		w_class = 4
+		force = 15
+		hitsound = 'sound/weapons/slice.ogg'
+		attack_verb = list("attacked", "slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
+
+	playsound(src.loc, 'sound/weapons/chainsawhit.ogg', 50, 1)
+	add_fingerprint(user)
+
+/obj/item/weapon/melee/chainsword/afterattack(atom/A as mob|obj|turf|area, mob/user, proximity)
+	if(!proximity) return
+	if(istype(A,/obj/structure/window))
+		var/obj/structure/window/W = A
+		W.shatter()
+	else if(istype(A,/obj/structure/grille))
+		var/obj/structure/grille/G = A
+		G.take_damage(16)
+
+
+
+
+
+
 /obj/item/weapon/melee/supermatter_sword
 	name = "supermatter sword"
 	desc = "In a station full of bad ideas, this might just be the worst."
@@ -143,7 +193,7 @@
 	armour_penetration = 1000
 	var/obj/machinery/power/supermatter_shard/shard
 	var/balanced = 1
-	origin_tech = "combat=5;materials=6"
+	origin_tech = "combat=7;materials=6"
 
 /obj/item/weapon/melee/supermatter_sword/New()
 	..()
@@ -220,5 +270,5 @@
 	T.ChangeTurf(T.baseturf)
 	T.CalculateAdjacentTurfs()
 
-/obj/item/weapon/melee/supermatter_sword/add_blood()
-	return
+/obj/item/weapon/melee/supermatter_sword/add_blood(list/blood_dna)
+	return 0

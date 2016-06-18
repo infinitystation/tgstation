@@ -61,3 +61,12 @@
 	icon_state = "white_rim"
 	icon = 'icons/obj/clothing/infinity_work.dmi'
 	worn_icon = 'icons/mob/infinity_work.dmi'
+
+/obj/item/clothing/shoes/mime
+	name = "mime shoes"
+	icon_state = "mime"
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'
+
+/obj/item/clothing/shoes/mime/biker
+	name = "Biker's shoes"

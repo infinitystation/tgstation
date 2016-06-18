@@ -458,3 +458,45 @@
 	flags = NODROP
 	flags_inv = HIDEHAIR|HIDEFACE|HIDEEARS
 
+/obj/item/clothing/suit/hooded/dragon_cape
+	name = "dragon cape"
+	desc = "Legends doesn't burn villages."
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon_state = "dragon_cape"
+	armor = list(melee = 55, bullet = 25, laser = 60, energy = 50, bomb = 50, bio = 60, rad = 50)
+	hoodtype = /obj/item/clothing/head/dragon_helmet
+	unacidable = 1
+
+/obj/item/clothing/head/dragon_helmet
+	name = "dragon helmet"
+	desc = "Legends doesn't burn villages."
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon_state = "dragon_helmet"
+	armor = list(melee = 55, bullet = 25, laser = 60, energy = 50, bomb = 50, bio = 60, rad = 50)
+	body_parts_covered = HEAD
+	heat_protection = HEAD
+	max_heat_protection_temperature = FIRE_IMMUNITY_HELM_MAX_TEMP_PROTECT
+	flags = NODROP
+	flags_inv = HIDEHAIR|HIDEFACE|HIDEEARS
+	unacidable = 1
+
+/obj/item/clothing/suit/doctor_w
+	name = "red tails"
+	desc = "Elegant red costume."
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon_state = "doctor_w"
+
+/obj/item/clothing/suit/admiral_tunic
+	name = "admiral tunic"
+	desc = "Worn by a Captain to show their class."
+	icon_state = "admiral_tunic"
+	item_state = "bio_suit"
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS
+	flags_inv = HIDEJUMPSUIT
+	allowed = list(/obj/item/weapon/disk, /obj/item/weapon/stamp, /obj/item/weapon/reagent_containers/food/drinks/flask, /obj/item/weapon/melee, /obj/item/weapon/storage/lockbox/medal, /obj/item/device/assembly/flash/handheld, /obj/item/weapon/storage/box/matches, /obj/item/weapon/lighter, /obj/item/clothing/mask/cigarette, /obj/item/weapon/storage/fancy/cigarettes, /obj/item/weapon/tank/internals/emergency_oxygen)
+

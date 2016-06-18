@@ -31,7 +31,7 @@
 	premium = list(/obj/item/clothing/shoes/geta/red=3, /obj/item/clothing/shoes/geta=2, /obj/item/clothing/shoes/brand3=4, /obj/item/clothing/shoes/shoes_rim=5,
 		/obj/item/clothing/shoes/black_open_shoes=2, /obj/item/clothing/shoes/brand1=3, /obj/item/clothing/shoes/brand2=5, /obj/item/clothing/shoes/ballets/red_gold=2,
 		/obj/item/clothing/shoes/ballets=2, /obj/item/clothing/shoes/ballets/white=2, /obj/item/clothing/shoes/ballets/black=2, /obj/item/clothing/shoes/ballets/violet=2,
-		/obj/item/clothing/shoes/ballets/yellow=2)
+		/obj/item/clothing/shoes/ballets/yellow=2,/obj/item/clothing/shoes/mime=2, /obj/item/clothing/shoes/mime/biker=1)
 
 /obj/machinery/vending/clothing/new_outerspace
 	name = "\improper DesignerBoard"
@@ -49,7 +49,7 @@
 		/obj/item/clothing/suit/toggle/brown_jacket=2, /obj/item/clothing/suit/brown_long_jacket=1)
 	premium = list(/obj/item/clothing/under/snow_maiden=1, /obj/item/clothing/under/snow_maiden/blue=1, /obj/item/clothing/under/candy_dress=2, /obj/item/clothing/under/bunny_suit=2,
 		/obj/item/clothing/suit/kimono/black=1, /obj/item/clothing/suit/kimono=1, /obj/item/clothing/suit/kimono/blue=1, /obj/item/clothing/head/lify_hat=1, /obj/item/clothing/under/lify=1,/obj/item/clothing/suit/kimono/white=1,
-		/obj/item/clothing/suit/kimono/short_red=1, /obj/item/clothing/suit/hooded/merser=2, /obj/item/clothing/under/gotsis1=2, /obj/item/clothing/under/gotsis2=2, /obj/item/clothing/gloves/color/darklong=2)
+		/obj/item/clothing/suit/kimono/short_red=1, /obj/item/clothing/suit/hooded/merser=2, /obj/item/clothing/under/gotsis1=2, /obj/item/clothing/under/gotsis2=2, /obj/item/clothing/gloves/color/darklong=2, /obj/item/clothing/mask/fawkes = 1, /obj/item/clothing/mask/rubbermask = 1, /obj/item/clothing/head/helmet/richard = 1, /obj/item/clothing/head/helmet/biker = 1, /obj/item/clothing/under/jacketsuit = 1, /obj/item/clothing/under/bikersuit = 1, /obj/item/clothing/gloves/bikergloves = 1)
 
 
 /obj/structure/reagent_dispensers/cognackeg
@@ -64,3 +64,36 @@
 
 /obj/structure/reagent_dispensers/cognackeg/blob_act()
 	explosion(src.loc,0,3,5,7,10)
+
+/obj/machinery/mineral/equipment_vendor/terror/New()
+	..()
+	desc += "\nIt seems a few selections have been added."
+	prize_list += list(
+		new /datum/data/mining_equipment("Survival Pack",  		/obj/item/weapon/storage/box/mining/survival,		   	      			1100),
+		new /datum/data/mining_equipment("Premium absent",		/obj/item/weapon/reagent_containers/food/drinks/bottle/absinthe/premium,3000),
+		new /datum/data/mining_equipment("Empty Sandbag",		/obj/item/weapon/emptysandbag,											500),
+		new /datum/data/mining_equipment("d10 dice",			/obj/item/weapon/dice/d10,												250),
+		new /datum/data/mining_equipment("d6 dice",				/obj/item/weapon/dice/d6,												200),
+		new /datum/data/mining_equipment("Candle",				/obj/item/candle,														100),
+		new /datum/data/mining_equipment("Lantern",				/obj/item/device/flashlight/lantern,									350),
+		new /datum/data/mining_equipment("Guitar",				/obj/item/device/instrument/guitar,										800),
+		new /datum/data/mining_equipment("Universal Recorde", 	/obj/item/device/taperecorder,											500),
+		)
+
+/obj/item/weapon/circuitboard/machine/mining_equipment_vendor/terror
+	build_path = /obj/machinery/mineral/equipment_vendor/terror
+
+/obj/machinery/vending/eatimat
+	name = "\improper Eat-I-Mat"
+	desc = "Eat this."
+	icon_state = "liberationstation"
+	products = list(/obj/item/weapon/reagent_containers/food/snacks/beans = 10,/obj/item/weapon/reagent_containers/food/snacks/burger = 20, /obj/item/weapon/reagent_containers/food/snacks/burrito = 20, /obj/item/weapon/reagent_containers/food/snacks/meatballspaghetti = 10,/obj/item/weapon/reagent_containers/food/snacks/meat/steak = 20,/obj/item/weapon/reagent_containers/food/snacks/boiledspaghetti = 15,/obj/item/weapon/reagent_containers/food/snacks/cracker = 20)
+	vend_delay = 20
+	product_slogans = "I'm your new cook!"
+	product_ads = "Time for dinner!"
+	req_access_txt = "0"
+
+/obj/item/weapon/circuitboard/computer/eatimat
+	name = "circuit board (Eatiman)"
+	build_path = /obj/machinery/vending/eatimat
+	origin_tech = "programming=1;biotech=1"

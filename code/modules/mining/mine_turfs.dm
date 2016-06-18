@@ -62,7 +62,7 @@
 	var/mineralSpawnChanceList = list(
 		/turf/closed/mineral/uranium = 5, /turf/closed/mineral/diamond = 1, /turf/closed/mineral/gold = 10,
 		/turf/closed/mineral/silver = 12, /turf/closed/mineral/plasma = 20, /turf/closed/mineral/iron = 40,
-		/turf/closed/mineral/gibtonite = 4, /turf/open/floor/plating/asteroid/airless/cave = 2, /turf/closed/mineral/bscrystal = 1)
+		/turf/open/floor/plating/asteroid/airless/cave = 2, /turf/closed/mineral/bscrystal = 1)
 		//Currently, Adamantine won't spawn as it has no uses. -Durandan
 	var/mineralChance = 13
 
@@ -99,7 +99,7 @@
 	mineralSpawnChanceList = list(
 		/turf/closed/mineral/uranium = 2, /turf/closed/mineral/diamond = 1, /turf/closed/mineral/gold = 4,
 		/turf/closed/mineral/silver = 6, /turf/closed/mineral/plasma = 15, /turf/closed/mineral/iron = 40,
-		/turf/closed/mineral/gibtonite = 2, /turf/closed/mineral/bscrystal = 1)
+		/turf/closed/mineral/bscrystal = 1)
 
 /turf/closed/mineral/random/low_chance/New()
 	icon_state = "rock"
@@ -206,14 +206,15 @@
 
 /turf/closed/mineral/gibtonite/proc/countdown(notify_admins = 0)
 	set waitfor = 0
-	while(stage == 1 && det_time > 0 && mineralAmt >= 1)
+	while(istype(src, /turf/closed/mineral/gibtonite) && stage == 1 && det_time > 0 && mineralAmt >= 1)
 		det_time--
 		sleep(5)
-	if(stage == 1 && det_time <= 0 && mineralAmt >= 1)
-		var/turf/bombturf = get_turf(src)
-		mineralAmt = 0
-		stage = 3
-		explosion(bombturf,1,3,5, adminlog = notify_admins)
+	if(istype(src, /turf/closed/mineral/gibtonite))
+		if(stage == 1 && det_time <= 0 && mineralAmt >= 1)
+			var/turf/bombturf = get_turf(src)
+			mineralAmt = 0
+			stage = 3
+			explosion(bombturf,1,3,5, adminlog = notify_admins)
 
 /turf/closed/mineral/gibtonite/proc/defuse()
 	if(stage == 1)
@@ -262,7 +263,7 @@
 
 /turf/open/floor/plating/asteroid/airless/cave/volcanic
 	mob_spawn_list = list(/mob/living/simple_animal/hostile/asteroid/goldgrub = 10, /mob/living/simple_animal/hostile/asteroid/goliath/beast = 50, /mob/living/simple_animal/hostile/asteroid/basilisk/watcher = 40, /mob/living/simple_animal/hostile/asteroid/hivelord/legion = 30,
-		/mob/living/simple_animal/hostile/spawner/lavaland = 2, /mob/living/simple_animal/hostile/spawner/lavaland/goliath = 3, /mob/living/simple_animal/hostile/spawner/lavaland/legion = 3, /mob/living/simple_animal/hostile/megafauna/dragon = 2)
+		/mob/living/simple_animal/hostile/spawner/lavaland = 2, /mob/living/simple_animal/hostile/spawner/lavaland/goliath = 3, /mob/living/simple_animal/hostile/spawner/lavaland/legion = 3, /mob/living/simple_animal/hostile/megafauna/dragon = 2, /mob/living/simple_animal/hostile/megafauna/bubblegum = 2, /mob/living/simple_animal/hostile/megafauna/colossus = 2)
 
 	turf_type = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
 	initial_gas_mix = "o2=14;n2=23;TEMP=300"
@@ -322,7 +323,7 @@
 		if(i > 2 && prob(33))
 			// We can't go a full loop though
 			next_angle = -next_angle
-			dir = angle2dir(dir2angle(dir) + next_angle)
+			setDir(angle2dir(dir2angle(dir) )+ next_angle)
 
 
 /turf/open/floor/plating/asteroid/airless/cave/proc/SpawnFloor(turf/T)
@@ -458,7 +459,7 @@
 	baseturf = /turf/open/floor/plating/asteroid/snow
 	icon_state = "snow"
 	icon_plating = "snow"
-	temperature = 180
+	initial_gas_mix = "TEMP=180"
 	slowdown = 2
 	environment_type = "snow"
 	sand_type = /obj/item/stack/sheet/mineral/snow
@@ -467,7 +468,7 @@
 	initial_gas_mix = "TEMP=2.7"
 
 /turf/open/floor/plating/asteroid/snow/temperatre
-	temperature = 255.37
+	initial_gas_mix = "TEMP=255.37"
 
 /turf/open/floor/plating/asteroid/New()
 	var/proper_name = name
@@ -631,7 +632,6 @@
 	environment_type = "basalt"
 	turf_type = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
 	baseturf = /turf/open/floor/plating/lava/smooth/lava_land_surface
-	initial_gas_mix = "o2=14;n2=23;TEMP=300"
 	defer_change = 1
 
 /turf/closed/mineral/random/volcanic
@@ -645,7 +645,7 @@
 	mineralSpawnChanceList = list(
 		/turf/closed/mineral/uranium/volcanic = 5, /turf/closed/mineral/diamond/volcanic = 1, /turf/closed/mineral/gold/volcanic = 10,
 		/turf/closed/mineral/silver/volcanic = 12, /turf/closed/mineral/plasma/volcanic = 20, /turf/closed/mineral/iron/volcanic = 40,
-		/turf/closed/mineral/gibtonite/volcanic = 4,/turf/open/floor/plating/asteroid/airless/cave/volcanic = 1, /turf/closed/mineral/bscrystal/volcanic = 1)
+		/turf/closed/mineral/gibtonite/volcanic = 4, /turf/open/floor/plating/asteroid/airless/cave/volcanic = 1, /turf/closed/mineral/bscrystal/volcanic = 1)
 
 /turf/closed/mineral/random/high_chance/volcanic
 	environment_type = "basalt"
@@ -771,3 +771,24 @@
 	slowdown = 0
 	smooth = SMOOTH_MORE|SMOOTH_BORDER
 	canSmoothWith = list (/turf/open/floor/plating/ash/rocky, /turf/closed)
+
+//Necropolis
+
+/turf/closed/indestructible/necropolis
+	name = "necropolis wall"
+	desc = "A seemingly impenetrable wall."
+	icon = 'icons/turf/walls.dmi'
+	explosion_block = 50
+	baseturf = /turf/closed/indestructible/necropolis
+
+/turf/open/indestructible/necropolis
+	name = "necropolis floor"
+	desc = "It's regarding you suspiciously."
+	icon = 'icons/turf/floors.dmi'
+	icon_state = "floor"
+	baseturf = /turf/open/indestructible/necropolis
+
+/turf/open/indestructible/necropolis/New()
+	..()
+	if(prob(12))
+		icon_state = "necropolis[rand(1,2)]"

@@ -22,22 +22,24 @@
 /obj/random/tool
 	name = "Random Tool"
 	desc = "This is a random tool"
-	icon = 'icons/obj/items.dmi'
-	icon_state = "welder"
+	icon = 'icons/obj/infinity_object.dmi'
+	icon_state = "x"
+	color = "#DE9E28"
 	item_to_spawn()
 		return pick(/obj/item/weapon/screwdriver,\
 					/obj/item/weapon/wirecutters,\
 					/obj/item/weapon/weldingtool,\
 					/obj/item/weapon/crowbar,\
-					/obj/item/weapon/wrench,\
-					/obj/item/device/flashlight)
+					/obj/item/stack/cable_coil,\
+					/obj/item/weapon/wrench)
 
 /obj/random/weaponcrafting
 	name = "Random weapon part"
 	desc = "This is a random weapon part"
-	icon = 'icons/obj/improvised.dmi'
-	icon_state = "riflestock"
+	icon = 'icons/obj/infinity_object.dmi'
+	icon_state = "x"
 	spawn_nothing_percentage = 25
+	color = "#DB3D3D"
 	item_to_spawn()
 		return pick(prob(1);/obj/item/weaponcrafting/reciever,\
 					prob(2);/obj/item/weaponcrafting/stock,\
@@ -47,30 +49,52 @@
 /obj/random/technology_scanner
 	name = "Random Scanner"
 	desc = "This is a random technology scanner."
-	icon = 'icons/obj/device.dmi'
-	icon_state = "atmos"
+	icon = 'icons/obj/infinity_object.dmi'
+	icon_state = "x"
+	color = "#3DD3DB"
+	spawn_nothing_percentage = 25
 	item_to_spawn()
 		return pick(/obj/item/device/t_scanner,\
+					/obj/item/device/healthanalyzer,\
 					/obj/item/device/analyzer)
+
+/obj/random/machine_parts
+	name = "Random Parts"
+	desc = "This is a random machines parts."
+	icon = 'icons/obj/infinity_object.dmi'
+	icon_state = "x"
+	color = "#3F6499"
+	spawn_nothing_percentage = 20
+	item_to_spawn()
+		return pick(/obj/item/weapon/stock_parts/capacitor,\
+					/obj/item/weapon/stock_parts/console_screen,\
+					/obj/item/weapon/stock_parts/manipulator,\
+					/obj/item/weapon/stock_parts/matter_bin,\
+					/obj/item/weapon/stock_parts/micro_laser,\
+					/obj/item/weapon/stock_parts/scanning_module)
 
 /obj/random/bomb_supply
 	name = "Bomb Supply"
 	desc = "This is a random bomb supply."
-	icon = 'icons/obj/assemblies/new_assemblies.dmi'
-	icon_state = "signaller"
+	icon = 'icons/obj/infinity_object.dmi'
+	color = "#D5DE28"
+	icon_state = "x"
+	spawn_nothing_percentage = 25
 	item_to_spawn()
 		return pick(/obj/item/device/assembly/igniter,\
 					/obj/item/device/assembly/prox_sensor,\
 					/obj/item/device/assembly/signaler
 					/obj/item/device/assembly/infra,\
-					/obj/item/device/assembly/timer)
+					/obj/item/device/assembly/timer,\
+					/obj/item/device/assembly/voice)
 
 
 /obj/random/toolbox
 	name = "Random Toolbox"
 	desc = "This is a random toolbox."
-	icon = 'icons/obj/storage.dmi'
-	icon_state = "red"
+	icon = 'icons/obj/infinity_object.dmi'
+	icon_state = "x"
+	color = "#3DDB5D"
 	item_to_spawn()
 		return pick(prob(3);/obj/item/weapon/storage/toolbox/mechanical,\
 					prob(2);/obj/item/weapon/storage/toolbox/electrical,\
@@ -80,13 +104,15 @@
 /obj/random/tech_supply
 	name = "Random Tech Supply"
 	desc = "This is a random piece of technology supplies."
-	icon = 'icons/obj/power.dmi'
-	icon_state = "cell"
-	spawn_nothing_percentage = 50
+	icon = 'icons/obj/infinity_object.dmi'
+	icon_state = "x"
+	color = "#288CDE"
+	spawn_nothing_percentage = 25
 	item_to_spawn()
 		return pick(prob(2);/obj/random/technology_scanner,\
-					prob(2);/obj/random/bomb_supply,\
-					prob(1);/obj/item/weapon/extinguisher,\
-					prob(1);/obj/item/weapon/storage/belt/utility,\
-					prob(3);/obj/random/tool,\
-					prob(1);/obj/item/device/tape)
+					prob(3);/obj/random/bomb_supply,\
+					prob(1);/obj/item/weapon/extinguisher/mini,\
+					prob(1);/obj/item/clothing/ears/earmuffs,\
+					prob(1);/obj/item/device/flashlight,\
+					prob(1);/obj/item/device/paicard,\
+					prob(3);/obj/random/tool)

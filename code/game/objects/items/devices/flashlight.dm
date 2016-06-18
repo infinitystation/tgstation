@@ -116,7 +116,7 @@
 			return
 		var/T = get_turf(target)
 		if(locate(/mob/living) in T)
-			PoolOrNew(/obj/effect/medical_holosign, list(T,user)) //produce a holographic glow
+			PoolOrNew(/obj/effect/overlay/temp/medical_holosign, list(T,user)) //produce a holographic glow
 			holo_cooldown = world.time + 100
 			return
 	..()
@@ -127,12 +127,11 @@
 	icon_state = "medi_holo"
 	duration = 30
 
-/obj/effect/medical_holosign/New(loc, creator)
+/obj/effect/overlay/temp/medical_holosign/New(loc, creator)
 	..()
 	playsound(loc, 'sound/machines/ping.ogg', 50, 0) //make some noise!
 	if(creator)
 		visible_message("<span class='danger'>[creator] created a medical hologram!</span>")
-
 
 /obj/item/device/flashlight/seclite
 	name = "seclite"
@@ -277,8 +276,7 @@ obj/item/device/flashlight/lamp/bananalamp
 	brightness_on = 6 //luminosity when on
 
 /obj/item/device/flashlight/emp
-	origin_tech = "magnets=4;syndicate=5"
-
+	origin_tech = "magnets=3;syndicate=´1"
 	var/emp_max_charges = 4
 	var/emp_cur_charges = 4
 	var/charge_tick = 0

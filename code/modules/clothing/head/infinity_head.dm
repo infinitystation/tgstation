@@ -141,3 +141,42 @@
 /obj/item/clothing/head/kitty/doggy/update_icon(mob/living/carbon/human/user)
 	if(istype(user))
 		color = "#[user.hair_color]"
+
+/obj/item/clothing/head/doctor_w_tophat
+	name = "tophat"
+	icon_state = "doctor_w_tophat"
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+
+/obj/item/clothing/head/helmet/biker
+	name = "Biker's Helmet"
+	desc = "This helmet should protect you from russians and masked vigilantes."
+	armor = list(melee = 25, bullet = 15, laser = 20, energy = 10, bomb = 10, bio = 0, rad = 0)
+	icon_state = "biker_helmet"
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR
+	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
+
+/obj/item/clothing/head/helmet/richard
+	name = "Richard"
+	desc = "Do you like hurting other people?"
+	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0)
+	icon_state = "richard"
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR
+	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
+
+/obj/item/clothing/head/helmet/doomguy
+	name = "Doomguy's helmet"
+	desc = "Шлем с маленькими вырезами дл&#255; глаз, в этих чертовых вырезах можно разгл&#255;деть смерть..."
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon_state = "doom"
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	flags = HEADBANGPROTECT
+	armor = list(melee = 40, bullet = 35, laser = 45,energy = 25, bomb = 40, bio = 5, rad = 0)
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR
+	strip_delay = 80
+	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
+
