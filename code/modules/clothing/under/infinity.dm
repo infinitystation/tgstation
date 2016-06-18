@@ -714,3 +714,20 @@
 	worn_icon = 'icons/mob/infinity_work.dmi'
 	icon = 'icons/obj/clothing/infinity_work.dmi'
 	can_adjust = 0
+
+/obj/item/clothing/under/jacketsuit
+	name = "richard's outfit"
+	desc = "Do you know what time it is?"
+	icon_state = "jacket"
+	item_color = "jacket"
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	can_adjust = 0
+
+/obj/item/clothing/under/bikersuit
+	name = "biker's outfit"
+	icon_state = "biker"
+	item_color = "biker"
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	can_adjust = 0
