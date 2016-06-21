@@ -6,3 +6,37 @@
 				/obj/item/stack/sheet/animalhide/ashdrake = 5)
 	time = 60
 	category = CAT_PRIMAL
+
+/datum/crafting_recipe/eng_un
+	name = "Unathi hardsuit"
+	result = /obj/item/clothing/suit/space/hardsuit/engine_unathi
+	reqs = list(/obj/item/clothing/suit/space/hardsuit/engine = 1)
+	tools = list(/obj/item/weapon/wirecutters)
+	time = 100
+	category = CAT_MISC
+
+/datum/crafting_recipe/un_eng
+	name = "Human hardsuit"
+	result = /obj/item/clothing/suit/space/hardsuit/engine
+	reqs = list(/obj/item/clothing/suit/space/hardsuit/engine_unathi = 1)
+	tools = list(/obj/item/weapon/wirecutters)
+	time = 100
+	category = CAT_MISC
+
+/* 																		Каким-то чертом выходит инженерный риг из рига атмоса
+/datum/crafting_recipe/atm_unatm
+	name = "atmos unathi hardsuit"
+	result = /obj/item/clothing/suit/space/hardsuit/engine/atmos_un
+	reqs = list(/obj/item/clothing/suit/space/hardsuit/engine/atmos = 1)
+	tools = list(/obj/item/weapon/wirecutters)
+	time = 100
+	category = CAT_MISC
+																		Хотя обратный процесс работает как надо! ;_;
+/datum/crafting_recipe/atm_unatm
+	name = "normal atmos hardsuit"
+	result = /obj/item/clothing/suit/space/hardsuit/engine/atmos
+	reqs = list(/obj/item/clothing/suit/space/hardsuit/engine/atmos_un= 1)
+	tools = list(/obj/item/weapon/wirecutters)
+	time = 100
+	category = CAT_MISC
+	*/
