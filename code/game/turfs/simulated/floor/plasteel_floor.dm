@@ -272,11 +272,9 @@
 	icon_state = "vault"
 
 /turf/open/floor/plasteel/blackvault
-	icon_state = "vault"
-	icon = 'icons/turf/infinity.dmi'
-
+	icon_state = "tvault"
 /turf/open/floor/plasteel/blackvault/corner
-	icon_state = "vaultcorner"
+	icon_state = "tvaultcorner"
 
 /turf/open/floor/plasteel/warningline
 	icon_state = "warningline"

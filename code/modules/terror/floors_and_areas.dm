@@ -90,6 +90,9 @@
 	name = "Cruiser"
 	blob_allowed = 0
 
+/area/shuttle/trooper
+	name = "Trooper Shuttle"
+
 /area/mine/lab
 	name = "Field Laboratory"
 	icon_state = "medresearch"

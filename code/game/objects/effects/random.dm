@@ -107,12 +107,11 @@
 	icon = 'icons/obj/infinity_object.dmi'
 	icon_state = "x"
 	color = "#288CDE"
-	spawn_nothing_percentage = 25
 	item_to_spawn()
-		return pick(prob(2);/obj/random/technology_scanner,\
-					prob(3);/obj/random/bomb_supply,\
+		return pick(prob(3);/obj/random/technology_scanner,\
+					prob(4);/obj/random/bomb_supply,\
 					prob(1);/obj/item/weapon/extinguisher/mini,\
 					prob(1);/obj/item/clothing/ears/earmuffs,\
-					prob(1);/obj/item/device/flashlight,\
+					prob(2);/obj/item/device/flashlight,\
 					prob(1);/obj/item/device/paicard,\
-					prob(3);/obj/random/tool)
+					prob(5);/obj/random/tool)

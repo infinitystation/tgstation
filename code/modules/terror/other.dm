@@ -484,3 +484,7 @@
 	name = "Secure Content Locker"
 	icon_state = "med"
 	anchored = 1
+
+/obj/item/weapon/folder/black
+	desc = "A black folder."
+	icon_state = "folder_syndie"
