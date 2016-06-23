@@ -65,7 +65,7 @@ obj/item/clothing/head/helmet/space/hardsuit/engine_unathi
 	heat_protection = HEAD
 	max_heat_protection_temperature = FIRE_IMMUNITY_HELM_MAX_TEMP_PROTECT
 
-/obj/item/clothing/suit/space/hardsuit/atmos_un
+/obj/item/clothing/suit/space/hardsuit/engine/atmos_un
 	name = "atmos hardsuit UN"
 	desc = "A special suit that protects against hazardous, low pressure environments. Built with lightweight materials for easier movement."
 	icon_state = "hardsuit-atmos_unathi"
