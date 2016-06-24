@@ -21,7 +21,7 @@ A small map intended for lowpop(40 players and less).
 		#include "map_files\generic\z7.dmm"
 		#include "map_files\generic\z8.dmm"
 		#include "map_files\generic\z9.dmm"
-		#include "map_files\TerrorStation\z9.dmm" //prison
+		#include "map_files\Infinity_MetaStation\z9.dmm" //prison
 
 		#define MAP_PATH "map_files/BirdStation"
         #define MAP_FILE "BirdStation.dmm"

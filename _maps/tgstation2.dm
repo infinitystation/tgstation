@@ -30,7 +30,7 @@ z9 = empty space
         #include "map_files\generic\z7.dmm"
         #include "map_files\generic\z8.dmm"
 		#include "map_files\generic\z9.dmm"
-		#include "map_files\TerrorStation\z9.dmm" //prison
+		#include "map_files\Infinity_MetaStation\z9.dmm" //prison
 
 		#define MAP_PATH "map_files/TgStation"
         #define MAP_FILE "tgstation.2.1.3.dmm"

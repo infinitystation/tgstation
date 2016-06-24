@@ -19,7 +19,7 @@ z7 = empty space
 
 		#define MINETYPE "lavaland"
 
-		#include "map_files\EfficiencyStation\EfficiencyStation.dmm"
+		#include "map_files\dexofanEfficiency\EfficiencyStation.dmm"
 		#include "map_files\generic\z2.dmm"
 		#include "map_files\generic\z3.dmm"
 		#include "map_files\generic\z4.dmm"
@@ -28,11 +28,11 @@ z7 = empty space
 		#include "map_files\generic\z7.dmm"
 		#include "map_files\generic\z8.dmm"
 		#include "map_files\generic\z9.dmm"
-		#include "map_files\TerrorStation\z9.dmm" //prison
+		#include "map_files\Infinity_MetaStation\z9.dmm" //prison
 
-		#define MAP_PATH "map_files/EfficiencyStation"
+		#define MAP_PATH "map_files/dexofanEfficiency"
         #define MAP_FILE "EfficiencyStation.dmm"
-        #define MAP_NAME "TG Efficiency Station"
+        #define MAP_NAME "TG Efficiency Station (dexofan's edits)"
 
 		#define MAP_TRANSITION_CONFIG	list(MAIN_STATION = CROSSLINKED, CENTCOMM = SELFLOOPING, ABANDONED_SATELLITE = CROSSLINKED, DERELICT = CROSSLINKED, MINING = SELFLOOPING, EMPTY_AREA_1 = CROSSLINKED, EMPTY_AREA_2 = CROSSLINKED, EMPTY_AREA_3 = CROSSLINKED, EMPTY_AREA_4 = CROSSLINKED, BANPRISON = SELFLOOPING)
 
