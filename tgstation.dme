@@ -414,6 +414,7 @@
 #include "code\game\machinery\droneDispenser.dm"
 #include "code\game\machinery\firealarm.dm"
 #include "code\game\machinery\flasher.dm"
+#include "code\game\machinery\floodlight.dm"
 #include "code\game\machinery\health_scanner.dm"
 #include "code\game\machinery\hologram.dm"
 #include "code\game\machinery\igniter.dm"
