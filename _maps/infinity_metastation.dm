@@ -19,24 +19,24 @@ z7 = empty space
 
 		#define MINETYPE "lavaland"
 
-        #include "map_files\TerrorStation\MetaStation.v41I.dmm"
-        #include "map_files\TerrorStation\z2t.dmm"
-        #include "map_files\TerrorStation\z3.dmm"
-        #include "map_files\TerrorStation\z4.dmm"
-        #include "map_files\TerrorStation\lavaland_t.dmm"
-        #include "map_files\TerrorStation\z6.dmm"
-        #include "map_files\TerrorStation\z7.dmm"
+        #include "map_files\Infinity_MetaStation\MetaStation.v41I.dmm"
+        #include "map_files\Infinity_MetaStation\z2t.dmm"
+        #include "map_files\Infinity_MetaStation\z3.dmm"
+        #include "map_files\Infinity_MetaStation\z4.dmm"
+        #include "map_files\Infinity_MetaStation\lavaland_t.dmm"
+        #include "map_files\Infinity_MetaStation\z6.dmm"
+        #include "map_files\Infinity_MetaStation\z7.dmm"
         //#include "map_files\monorail_ivent\monorail.dmm" //Monorail Maks750rus
-        #include "map_files\TerrorStation\z9.dmm" //prison
+        #include "map_files\Infinity_MetaStation\z9.dmm" //prison
 
-        #define MAP_PATH "map_files/TerrorStation"
+        #define MAP_PATH "map_files/Infinity_MetaStation"
         #define MAP_FILE "MetaStation.v41GS.dmm"
-        #define MAP_NAME "Terror's Meta Station"
+        #define MAP_NAME "Infinity MetaStation"
 
         #define MAP_TRANSITION_CONFIG	list(MAIN_STATION = CROSSLINKED, CENTCOMM = SELFLOOPING, ABANDONED_SATELLITE = CROSSLINKED, DERELICT = CROSSLINKED, MINING = SELFLOOPING, EMPTY_AREA_1 = CROSSLINKED, EMPTY_AREA_2 = CROSSLINKED, ASTEROID = SELFLOOPING, BANPRISON = SELFLOOPING)
 
 #elif !defined(MAP_OVERRIDE)
 
-	#warn a map has already been included, ignoring Terror's MetaStation.
+	#warn a map has already been included, ignoring Infinity MetaStation.
 
 #endif
