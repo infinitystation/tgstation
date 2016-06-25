@@ -7,12 +7,15 @@
 	var/name = "storm"
 	var/start_up_time = 300 //30 seconds
 	var/start_up_message = "The wind begins to pick up."
+	var/start_up_sound
 	var/duration = 120 //2 minutes
 	var/duration_lower = 120
 	var/duration_upper = 120
+	var/duration_sound
 	var/duration_message = "A storm has started!"
 	var/wind_down = 300 // 30 seconds
 	var/wind_down_message = "The storm is passing."
+	var/wind_down_sound
 
 	var/target_z = 1
 	var/exclude_walls = TRUE
@@ -20,9 +23,9 @@
 	var/stage = STARTUP_STAGE
 
 	// pda triggering
-	var/sound/start_up_sound
-	var/sound/duration_sound
-	var/sound/wind_down_sound
+	var/sound/pda_start_up_sound
+	var/sound/pda_duration_sound
+	var/sound/pda_wind_down_sound
 	var/adv_start_up_message = "The wind begins to pick up."
 	var/adv_duration_message = "A storm has started!"
 	var/adv_wind_down_message = "The storm is passing."
@@ -42,23 +45,24 @@
 	update_areas()
 	for(var/mob/M in player_list)
 		if(M.z == target_z)
-			M << "<span class='danger'><B>[start_up_message]</B></span>"
-
-	PDAs_trigger(start_up_sound, "<span class='danger'><B>[adv_start_up_message]</B></span>", target_z)
-
+			M << "<span class='warning'><B>[start_up_message]</B></span>"
+			if(start_up_sound)
+				M << start_up_sound
+	PDAs_trigger(pda_start_up_sound, "<span class='danger'><B>[adv_start_up_message]</B></span>", target_z)
 	sleep(start_up_time)
-	stage = MAIN_STAGE
-	weather_main()
+	if(src && stage != MAIN_STAGE)
+		stage = MAIN_STAGE
+		weather_main()
 
 
 /datum/weather/proc/weather_main()
 	update_areas()
 	for(var/mob/M in player_list)
 		if(M.z == target_z)
-			M << "<span class='danger'><B>[duration_message]</B></span>"
-
-	PDAs_trigger(duration_sound, "<span class='danger'><B>[adv_duration_message]</B></span>", target_z)
-
+			M << "<span class='userdanger'><i>[duration_message]</i></span>"
+			if(duration_sound)
+				M << duration_sound
+	PDAs_trigger(pda_duration_sound, "<span class='danger'><B>[adv_duration_message]</B></span>", target_z)
 	if(purely_aesthetic)
 		sleep(duration*10)
 	else  //Storm effects
@@ -69,8 +73,9 @@
 					storm_act(L)
 			sleep(10)
 
-	stage = WIND_DOWN_STAGE
-	weather_wind_down()
+	if(src && stage != WIND_DOWN_STAGE)
+		stage = WIND_DOWN_STAGE
+		weather_wind_down()
 
 
 /datum/weather/proc/weather_wind_down()
@@ -78,13 +83,14 @@
 	for(var/mob/M in player_list)
 		if(M.z == target_z)
 			M << "<span class='danger'><B>[wind_down_message]</B></span>"
-
-	PDAs_trigger(wind_down_sound, "<span class='danger'><B>[adv_wind_down_message]</B></span>", target_z)
-
+			if(wind_down_sound)
+				M << wind_down_sound
+	PDAs_trigger(pda_wind_down_sound, "<span class='danger'><B>[adv_wind_down_message]</B></span>", target_z)
 	sleep(wind_down)
 
-	stage = END_STAGE
-	update_areas()
+	if(src && stage != END_STAGE)
+		stage = END_STAGE
+		update_areas()
 
 
 /datum/weather/proc/storm_act(mob/living/L)

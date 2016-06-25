@@ -263,11 +263,6 @@
 	icon_state = "blueyellow"
 
 
-/turf/open/floor/plasteel/darkwarning
-	icon_state = "warndark"
-/turf/open/floor/plasteel/darkwarning/corner
-	icon_state = "warndarkcorners"
-
 /turf/open/floor/plasteel/darkvault
 	icon_state = "vault"
 
@@ -342,11 +337,6 @@
 	icon_state = "asteroidfloor"
 /turf/open/floor/plasteel/airless/asteroid
 	icon_state = "asteroidfloor"
-/turf/open/floor/plasteel/asteroid/warning
-	icon_state = "asteroidwarning"
-/turf/open/floor/plasteel/airless/asteroid/warning
-	icon_state = "asteroidwarning"
-
 
 /turf/open/floor/plasteel/recharge_floor
 	icon_state = "recharge_floor"

@@ -12120,7 +12120,7 @@
 	scrub_N2O = 0;
 	scrub_Toxins = 0
 	},
-/obj/structure/flora/kirbyplants{
+/obj/item/weapon/twohanded/required/kirbyplants{
 	icon_state = "plant-03";
 	layer = 4.1;
 	tag = "icon-plant-03"
@@ -12863,7 +12863,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/obj/structure/flora/kirbyplants{
+/obj/item/weapon/twohanded/required/kirbyplants{
 	icon_state = "plant-22"
 	},
 /obj/structure/sign/nanotrasen{
@@ -14469,7 +14469,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
-/obj/structure/flora/kirbyplants{
+/obj/item/weapon/twohanded/required/kirbyplants{
 	icon_state = "plant-03";
 	layer = 4.1
 	},
@@ -14602,7 +14602,7 @@
 	pixel_y = 32
 	},
 /obj/structure/table/wood,
-/obj/structure/flora/kirbyplants{
+/obj/item/weapon/twohanded/required/kirbyplants{
 	icon_state = "plant-17";
 	pixel_x = 6;
 	pixel_y = 16;
@@ -17135,7 +17135,7 @@
 /area/maintenance/aft)
 "aDJ" = (
 /obj/structure/table,
-/obj/structure/flora/kirbyplants{
+/obj/item/weapon/twohanded/required/kirbyplants{
 	icon_state = "plant-11";
 	pixel_y = 12;
 	tag = "icon-plant-11"
@@ -17533,7 +17533,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
-/obj/structure/flora/kirbyplants{
+/obj/item/weapon/twohanded/required/kirbyplants{
 	tag = "icon-plant-12";
 	icon_state = "plant-12";
 	layer = 4.1;
@@ -17959,7 +17959,7 @@
 /area/maintenance/aft)
 "aFc" = (
 /obj/effect/decal/cleanable/cobweb,
-/obj/structure/flora/kirbyplants{
+/obj/item/weapon/twohanded/required/kirbyplants{
 	icon_state = "plant-20";
 	layer = 4.1;
 	pixel_y = 3;
@@ -18201,7 +18201,7 @@
 /turf/closed/wall,
 /area/quartermaster/miningdock)
 "aFy" = (
-/obj/structure/flora/kirbyplants{
+/obj/item/weapon/twohanded/required/kirbyplants{
 	icon_state = "plant-03";
 	layer = 4.1;
 	tag = "icon-plant-03"
@@ -18649,7 +18649,7 @@
 "aGn" = (
 /obj/item/toy/cards/deck,
 /obj/structure/table/wood,
-/obj/structure/flora/kirbyplants{
+/obj/item/weapon/twohanded/required/kirbyplants{
 	icon_state = "plant-11";
 	pixel_x = 6;
 	pixel_y = 18;
@@ -18911,7 +18911,7 @@
 /area/maintenance/fpmaint2)
 "aGO" = (
 /obj/structure/table/reinforced,
-/obj/structure/flora/kirbyplants{
+/obj/item/weapon/twohanded/required/kirbyplants{
 	anchored = 1;
 	layer = 4.1;
 	pixel_y = 10
@@ -20575,7 +20575,7 @@
 	dir = 4;
 	pixel_x = 28
 	},
-/obj/structure/flora/kirbyplants{
+/obj/item/weapon/twohanded/required/kirbyplants{
 	icon_state = "plant-21";
 	layer = 4.1
 	},
@@ -20989,7 +20989,7 @@
 	},
 /area/hallway/secondary/entry)
 "aJX" = (
-/obj/structure/flora/kirbyplants{
+/obj/item/weapon/twohanded/required/kirbyplants{
 	icon_state = "plant-21";
 	layer = 4.1
 	},
@@ -22305,7 +22305,7 @@
 /obj/machinery/light/small{
 	dir = 8
 	},
-/obj/structure/flora/kirbyplants{
+/obj/item/weapon/twohanded/required/kirbyplants{
 	icon_state = "plant-10";
 	layer = 4.1;
 	tag = "icon-plant-10"
@@ -24510,7 +24510,7 @@
 	c_tag = "AI Upload Chamber - Fore";
 	network = list("SS13","RD","AIUpload")
 	},
-/obj/structure/flora/kirbyplants{
+/obj/item/weapon/twohanded/required/kirbyplants{
 	icon_state = "plant-07";
 	name = "Photosynthetic Potted plant";
 	pixel_y = 10;
@@ -25819,7 +25819,7 @@
 /turf/open/floor/plating,
 /area/construction)
 "aSM" = (
-/obj/structure/flora/kirbyplants{
+/obj/item/weapon/twohanded/required/kirbyplants{
 	icon_state = "plant-22"
 	},
 /turf/open/floor/plasteel{
@@ -26158,7 +26158,7 @@
 	scrub_N2O = 0;
 	scrub_Toxins = 0
 	},
-/obj/structure/flora/kirbyplants{
+/obj/item/weapon/twohanded/required/kirbyplants{
 	icon_state = "plant-03";
 	layer = 4.1
 	},
@@ -26263,7 +26263,7 @@
 	dir = 8;
 	on = 1
 	},
-/obj/structure/flora/kirbyplants{
+/obj/item/weapon/twohanded/required/kirbyplants{
 	icon_state = "plant-10";
 	layer = 4.1
 	},
@@ -26718,7 +26718,7 @@
 /turf/open/floor/plating,
 /area/maintenance/fsmaint)
 "aUp" = (
-/obj/structure/flora/kirbyplants{
+/obj/item/weapon/twohanded/required/kirbyplants{
 	icon_state = "plant-21";
 	layer = 4.1;
 	pixel_x = -3;
@@ -27258,7 +27258,7 @@
 	req_access_txt = "4"
 	},
 /obj/structure/table/wood,
-/obj/structure/flora/kirbyplants{
+/obj/item/weapon/twohanded/required/kirbyplants{
 	icon_state = "plant-11";
 	pixel_y = 12;
 	tag = "icon-plant-11"
@@ -27913,7 +27913,7 @@
 	pixel_x = -27;
 	pixel_y = 0
 	},
-/obj/structure/flora/kirbyplants{
+/obj/item/weapon/twohanded/required/kirbyplants{
 	icon_state = "plant-03";
 	layer = 4.1;
 	tag = "icon-plant-03"
@@ -28099,7 +28099,7 @@
 	scrub_N2O = 0;
 	scrub_Toxins = 0
 	},
-/obj/structure/flora/kirbyplants{
+/obj/item/weapon/twohanded/required/kirbyplants{
 	icon_state = "plant-13";
 	layer = 4.1
 	},
@@ -30085,7 +30085,7 @@
 	dir = 4;
 	pixel_x = 24
 	},
-/obj/structure/flora/kirbyplants{
+/obj/item/weapon/twohanded/required/kirbyplants{
 	icon_state = "plant-04";
 	layer = 4.1;
 	tag = "icon-plant-04"
@@ -30479,7 +30479,7 @@
 	dir = 4;
 	pixel_x = 24
 	},
-/obj/structure/flora/kirbyplants{
+/obj/item/weapon/twohanded/required/kirbyplants{
 	icon_state = "plant-21";
 	layer = 4.1;
 	pixel_x = -3;
@@ -30824,7 +30824,7 @@
 	icon_state = "0-8";
 	d2 = 8
 	},
-/obj/structure/flora/kirbyplants{
+/obj/item/weapon/twohanded/required/kirbyplants{
 	icon_state = "plant-21";
 	layer = 4.1
 	},
@@ -30881,7 +30881,7 @@
 /turf/open/floor/plating,
 /area/maintenance/port)
 "bbu" = (
-/obj/structure/flora/kirbyplants{
+/obj/item/weapon/twohanded/required/kirbyplants{
 	icon_state = "plant-13";
 	layer = 4.1;
 	tag = "icon-plant-13"
@@ -31461,7 +31461,7 @@
 	pixel_x = 27;
 	pixel_y = 0
 	},
-/obj/structure/flora/kirbyplants{
+/obj/item/weapon/twohanded/required/kirbyplants{
 	icon_state = "plant-16";
 	layer = 4.1;
 	tag = "icon-plant-16"
@@ -31717,7 +31717,7 @@
 	icon_state = "alarm0";
 	pixel_x = -22
 	},
-/obj/structure/flora/kirbyplants{
+/obj/item/weapon/twohanded/required/kirbyplants{
 	tag = "icon-plant-25";
 	icon_state = "plant-25"
 	},
@@ -33062,7 +33062,7 @@
 	},
 /area/hallway/secondary/entry)
 "beT" = (
-/obj/structure/flora/kirbyplants{
+/obj/item/weapon/twohanded/required/kirbyplants{
 	icon_state = "plant-05";
 	layer = 4.1;
 	tag = "icon-plant-05"
@@ -38518,7 +38518,7 @@
 /obj/item/weapon/reagent_containers/food/condiment/peppermill{
 	pixel_x = 3
 	},
-/obj/structure/flora/kirbyplants{
+/obj/item/weapon/twohanded/required/kirbyplants{
 	icon_state = "plant-15";
 	layer = 4.1;
 	pixel_y = 18;
@@ -39405,7 +39405,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/structure/flora/kirbyplants{
+/obj/item/weapon/twohanded/required/kirbyplants{
 	icon_state = "plant-13";
 	layer = 4.1;
 	tag = "icon-plant-13"
@@ -41052,7 +41052,7 @@
 	},
 /area/quartermaster/sorting)
 "brC" = (
-/obj/structure/flora/kirbyplants{
+/obj/item/weapon/twohanded/required/kirbyplants{
 	icon_state = "plant-16";
 	layer = 4.1;
 	tag = "icon-plant-16"
@@ -44225,7 +44225,7 @@
 	},
 /area/hallway/primary/starboard)
 "bwN" = (
-/obj/structure/flora/kirbyplants{
+/obj/item/weapon/twohanded/required/kirbyplants{
 	icon_state = "plant-20";
 	layer = 4.1;
 	tag = "icon-plant-20"
@@ -44301,7 +44301,7 @@
 	},
 /obj/structure/table/wood,
 /obj/structure/table/wood,
-/obj/structure/flora/kirbyplants{
+/obj/item/weapon/twohanded/required/kirbyplants{
 	icon_state = "plant-08";
 	layer = 4.1;
 	pixel_y = 12;
@@ -47324,7 +47324,7 @@
 	},
 /area/hallway/secondary/entry)
 "bBv" = (
-/obj/structure/flora/kirbyplants{
+/obj/item/weapon/twohanded/required/kirbyplants{
 	icon_state = "plant-18";
 	layer = 4.1;
 	tag = "icon-plant-18"
@@ -47389,7 +47389,7 @@
 	},
 /area/hallway/primary/port)
 "bBA" = (
-/obj/structure/flora/kirbyplants{
+/obj/item/weapon/twohanded/required/kirbyplants{
 	icon_state = "plant-21";
 	layer = 4.1
 	},
@@ -48219,7 +48219,7 @@
 /turf/closed/wall,
 /area/ai_monitored/storage/satellite)
 "bCY" = (
-/obj/structure/flora/kirbyplants{
+/obj/item/weapon/twohanded/required/kirbyplants{
 	icon_state = "plant-08";
 	layer = 4.1;
 	tag = "icon-plant-08"
@@ -48335,7 +48335,7 @@
 	pixel_y = 32
 	},
 /obj/structure/table,
-/obj/structure/flora/kirbyplants{
+/obj/item/weapon/twohanded/required/kirbyplants{
 	icon_state = "plant-07";
 	name = "Photosynthetic Potted plant";
 	pixel_y = 10;
@@ -51561,7 +51561,7 @@
 	},
 /area/tcommsat/computer)
 "bIQ" = (
-/obj/structure/flora/kirbyplants{
+/obj/item/weapon/twohanded/required/kirbyplants{
 	tag = "icon-plant-21";
 	icon_state = "plant-21"
 	},
@@ -51667,7 +51667,7 @@
 /turf/open/floor/wood,
 /area/security/barracks)
 "bJa" = (
-/obj/structure/flora/kirbyplants{
+/obj/item/weapon/twohanded/required/kirbyplants{
 	icon_state = "plant-22"
 	},
 /turf/open/floor/wood,
@@ -56170,7 +56170,7 @@
 	pixel_x = 0;
 	pixel_y = -28
 	},
-/obj/structure/flora/kirbyplants{
+/obj/item/weapon/twohanded/required/kirbyplants{
 	tag = "icon-plant-21";
 	icon_state = "plant-21"
 	},
@@ -56319,7 +56319,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
-/obj/structure/flora/kirbyplants{
+/obj/item/weapon/twohanded/required/kirbyplants{
 	tag = "icon-plant-22";
 	icon_state = "plant-22"
 	},
@@ -56595,7 +56595,7 @@
 	},
 /area/tcommsat/server)
 "bRs" = (
-/obj/structure/flora/kirbyplants{
+/obj/item/weapon/twohanded/required/kirbyplants{
 	icon_state = "plant-21";
 	layer = 4.1
 	},
@@ -59339,7 +59339,7 @@
 	},
 /area/tcommsat/server)
 "bWh" = (
-/obj/structure/flora/kirbyplants{
+/obj/item/weapon/twohanded/required/kirbyplants{
 	icon_state = "plant-06";
 	level = 4.1;
 	tag = "icon-plant-06"
@@ -60241,7 +60241,7 @@
 	dir = 8;
 	on = 1
 	},
-/obj/structure/flora/kirbyplants{
+/obj/item/weapon/twohanded/required/kirbyplants{
 	icon_state = "plant-03";
 	layer = 4.1;
 	tag = "icon-plant-03"
@@ -63640,7 +63640,7 @@
 	dir = 2;
 	initialize_directions = 13
 	},
-/obj/structure/flora/kirbyplants{
+/obj/item/weapon/twohanded/required/kirbyplants{
 	icon_state = "plant-21";
 	layer = 4.1
 	},
@@ -64976,7 +64976,7 @@
 	pixel_x = -27;
 	pixel_y = 0
 	},
-/obj/structure/flora/kirbyplants{
+/obj/item/weapon/twohanded/required/kirbyplants{
 	icon_state = "applebush";
 	layer = 4.1;
 	tag = "icon-applebush"
@@ -65096,7 +65096,7 @@
 	dir = 4;
 	pixel_x = 24
 	},
-/obj/structure/flora/kirbyplants{
+/obj/item/weapon/twohanded/required/kirbyplants{
 	icon_state = "plant-10";
 	layer = 4.1;
 	tag = "icon-plant-10"
@@ -69121,7 +69121,7 @@
 	name = "Medbay Central"
 	})
 "cmO" = (
-/obj/structure/flora/kirbyplants{
+/obj/item/weapon/twohanded/required/kirbyplants{
 	tag = "icon-plant-11";
 	icon_state = "plant-11"
 	},
@@ -69252,7 +69252,7 @@
 	pixel_x = 0;
 	pixel_y = -30
 	},
-/obj/structure/flora/kirbyplants{
+/obj/item/weapon/twohanded/required/kirbyplants{
 	icon_state = "plant-08";
 	layer = 4.1;
 	tag = "icon-plant-08"
@@ -70016,7 +70016,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 10
 	},
-/obj/structure/flora/kirbyplants{
+/obj/item/weapon/twohanded/required/kirbyplants{
 	tag = "icon-plant-19";
 	icon_state = "plant-19";
 	layer = 4.1;
@@ -71848,7 +71848,7 @@
 /obj/machinery/airalarm{
 	pixel_y = 23
 	},
-/obj/structure/flora/kirbyplants{
+/obj/item/weapon/twohanded/required/kirbyplants{
 	icon_state = "plant-13";
 	layer = 4.1;
 	tag = "icon-plant-13"
@@ -74774,7 +74774,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
-/obj/structure/flora/kirbyplants{
+/obj/item/weapon/twohanded/required/kirbyplants{
 	icon_state = "plant-06";
 	level = 4.1;
 	tag = "icon-plant-06"
@@ -75018,7 +75018,7 @@
 	name = "Research Division"
 	})
 "cwn" = (
-/obj/structure/flora/kirbyplants{
+/obj/item/weapon/twohanded/required/kirbyplants{
 	icon_state = "plant-10";
 	layer = 4.1;
 	tag = "icon-plant-10"
@@ -76086,7 +76086,7 @@
 	pixel_x = 30;
 	pixel_y = 0
 	},
-/obj/structure/flora/kirbyplants{
+/obj/item/weapon/twohanded/required/kirbyplants{
 	tag = "icon-plant-25";
 	icon_state = "plant-25"
 	},
@@ -76493,7 +76493,7 @@
 	},
 /area/medical/chemistry)
 "cyE" = (
-/obj/structure/flora/kirbyplants{
+/obj/item/weapon/twohanded/required/kirbyplants{
 	tag = "icon-plant-13";
 	icon_state = "plant-13"
 	},
@@ -79187,7 +79187,7 @@
 	name = "Research Division"
 	})
 "cCT" = (
-/obj/structure/flora/kirbyplants{
+/obj/item/weapon/twohanded/required/kirbyplants{
 	icon_state = "plant-10";
 	layer = 4.1;
 	tag = "icon-plant-10"
@@ -80673,7 +80673,7 @@
 	pixel_x = -23;
 	pixel_y = 0
 	},
-/obj/structure/flora/kirbyplants/dead,
+/obj/item/weapon/twohanded/required/kirbyplants/dead,
 /turf/open/floor/plasteel{
 	tag = "icon-cafeteria (NORTHEAST)";
 	icon_state = "cafeteria";
@@ -84900,7 +84900,7 @@
 	pixel_x = -32;
 	pixel_y = -32
 	},
-/obj/structure/flora/kirbyplants{
+/obj/item/weapon/twohanded/required/kirbyplants{
 	icon_state = "plant-10";
 	layer = 4.1
 	},
@@ -86104,7 +86104,7 @@
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
 	dir = 2
 	},
-/obj/structure/flora/kirbyplants{
+/obj/item/weapon/twohanded/required/kirbyplants{
 	icon_state = "plant-21";
 	layer = 4.1
 	},
@@ -86296,7 +86296,7 @@
 	name = "Medbay Aft"
 	})
 "cOu" = (
-/obj/structure/flora/kirbyplants{
+/obj/item/weapon/twohanded/required/kirbyplants{
 	icon_state = "plant-21";
 	layer = 4.1;
 	pixel_x = -3;
@@ -87313,7 +87313,7 @@
 	},
 /area/medical/virology)
 "cPU" = (
-/obj/structure/flora/kirbyplants{
+/obj/item/weapon/twohanded/required/kirbyplants{
 	tag = "icon-plant-22";
 	icon_state = "plant-22"
 	},
@@ -87427,7 +87427,7 @@
 /obj/structure/sign/biohazard{
 	pixel_x = -32
 	},
-/obj/structure/flora/kirbyplants{
+/obj/item/weapon/twohanded/required/kirbyplants{
 	icon_state = "plant-05";
 	layer = 4.1;
 	tag = "icon-plant-05"
@@ -90180,7 +90180,7 @@
 	dir = 4;
 	network = list("SS13")
 	},
-/obj/structure/flora/kirbyplants{
+/obj/item/weapon/twohanded/required/kirbyplants{
 	icon_state = "plant-24";
 	layer = 4.1;
 	tag = "icon-plant-24"
@@ -90242,7 +90242,7 @@
 	pixel_x = 27;
 	pixel_y = 0
 	},
-/obj/structure/flora/kirbyplants{
+/obj/item/weapon/twohanded/required/kirbyplants{
 	icon_state = "plant-14";
 	layer = 4.1;
 	tag = "icon-plant-14"
@@ -92448,7 +92448,7 @@
 	name = "Station Intercom (General)";
 	pixel_x = 29
 	},
-/obj/structure/flora/kirbyplants{
+/obj/item/weapon/twohanded/required/kirbyplants{
 	icon_state = "plant-16";
 	layer = 4.1;
 	tag = "icon-plant-16"
@@ -92623,7 +92623,7 @@
 	},
 /area/chapel/main)
 "cYT" = (
-/obj/structure/flora/kirbyplants{
+/obj/item/weapon/twohanded/required/kirbyplants{
 	tag = "icon-plant-21";
 	icon_state = "plant-21"
 	},
@@ -92632,7 +92632,7 @@
 	},
 /area/chapel/main)
 "cYU" = (
-/obj/structure/flora/kirbyplants{
+/obj/item/weapon/twohanded/required/kirbyplants{
 	icon_state = "plant-04";
 	layer = 4.1;
 	tag = "icon-plant-04"

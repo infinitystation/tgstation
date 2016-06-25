@@ -95,8 +95,7 @@
 	for(var/obj/machinery/door/window/brigdoor/door in targets)
 		if(door.density)
 			continue
-		spawn(0)
-			door.close()
+		addtimer(door, "close", 0)
 		for(var/mob/living/carbon/human/H in orange(2, door))
 			prisoners += "[key_name_admin(H)](<A HREF='?_src_=holder;adminmoreinfo=\ref[H]'>?</A>)(<A HREF='?_src_=holder;adminplayerobservefollow=\ref[H]'>FLW</A>) "
 			prisoners_alt += "[H.ckey]/[H.real_name] "
@@ -143,8 +142,7 @@
 	for(var/obj/machinery/door/window/brigdoor/door in targets)
 		if(!door.density)
 			continue
-		spawn(0)
-			door.open()
+		addtimer(door, "open", 0)
 
 	for(var/obj/structure/closet/secure_closet/brig/C in targets)
 		if(C.broken)
@@ -204,8 +202,8 @@
 /obj/machinery/door_timer/proc/set_picture(state)
 	if(maptext)
 		maptext = ""
-	overlays.Cut()
-	overlays += image('icons/obj/status_display.dmi', icon_state=state)
+	cut_overlays()
+	add_overlay(image('icons/obj/status_display.dmi', icon_state=state))
 
 
 //Checks to see if there's 1 line or 2, adds text-icons-numbers/letters over display
