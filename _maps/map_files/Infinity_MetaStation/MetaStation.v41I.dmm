@@ -2271,6 +2271,7 @@
 	d1 = 4;
 	d2 = 8
 	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /turf/open/floor/plasteel/red/side{
 	dir = 1
 	},
@@ -57241,7 +57242,7 @@
 	req_access_txt = "46"
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
-/turf/open/floor/wood,
+/turf/open/floor/wood/new_wood/wooden1,
 /area/crew_quarters/theatre)
 "bSA" = (
 /turf/closed/wall/r_wall,
@@ -58141,24 +58142,27 @@
 	},
 /area/crew_quarters/kitchen)
 "bUb" = (
+/turf/open/floor/wood/new_wood/wooden2,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/machinery/light_switch{
 	pixel_x = -26;
 	pixel_y = 0
 	},
-/turf/open/floor/wood/new_wood/wooden2,
+/turf/open/floor/carpet/arcade,
 /area/crew_quarters/theatre)
 "bUc" = (
+/turf/open/floor/wood/new_wood/wooden2,
 /obj/structure/dresser,
 /obj/machinery/newscaster{
 	pixel_x = 0;
 	pixel_y = 32
 	},
-/turf/open/floor/wood/new_wood/wooden2,
+/turf/open/floor/carpet/arcade,
 /area/crew_quarters/theatre)
 "bUd" = (
-/obj/machinery/vending/autodrobe,
 /turf/open/floor/wood/new_wood/wooden2,
+/obj/machinery/vending/autodrobe,
+/turf/open/floor/carpet/arcade,
 /area/crew_quarters/theatre)
 "bUe" = (
 /obj/machinery/door/firedoor,
@@ -59086,6 +59090,7 @@
 	},
 /area/crew_quarters/kitchen)
 "bVJ" = (
+/turf/open/floor/wood/new_wood/wooden2,
 /obj/machinery/light/small{
 	dir = 8
 	},
@@ -59097,24 +59102,27 @@
 	pixel_y = 0
 	},
 /obj/item/clothing/tie/dope_necklace,
-/turf/open/floor/wood/new_wood/wooden2,
+/turf/open/floor/carpet/arcade,
 /area/crew_quarters/theatre)
 "bVK" = (
+/turf/open/floor/wood/new_wood/wooden2,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 5
 	},
-/turf/open/floor/wood/new_wood/wooden2,
+/turf/open/floor/carpet/arcade,
 /area/crew_quarters/theatre)
 "bVL" = (
+/turf/open/floor/wood/new_wood/wooden2,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
 /obj/effect/landmark/start{
 	name = "Mime"
 	},
-/turf/open/floor/wood/new_wood/wooden2,
+/turf/open/floor/carpet/arcade,
 /area/crew_quarters/theatre)
 "bVM" = (
+/turf/open/floor/wood/new_wood/wooden2,
 /obj/machinery/light/small{
 	dir = 4
 	},
@@ -59125,7 +59133,7 @@
 	pixel_x = 32;
 	pixel_y = 0
 	},
-/turf/open/floor/wood/new_wood/wooden2,
+/turf/open/floor/carpet/arcade,
 /area/crew_quarters/theatre)
 "bVN" = (
 /obj/structure/table,
@@ -59906,12 +59914,14 @@
 /turf/open/floor/bluegrid,
 /area/ai_monitored/nuke_storage)
 "bXi" = (
+/turf/open/floor/wood/new_wood/wooden2,
 /obj/structure/chair/wood/wings{
 	dir = 8
 	},
-/turf/open/floor/wood/new_wood/wooden2,
+/turf/open/floor/carpet/arcade,
 /area/crew_quarters/theatre)
 "bXj" = (
+/turf/open/floor/wood/new_wood/wooden2,
 /obj/machinery/atmospherics/components/unary/vent_pump{
 	dir = 4;
 	on = 1
@@ -59919,9 +59929,10 @@
 /obj/effect/landmark/start{
 	name = "Clown"
 	},
-/turf/open/floor/wood/new_wood/wooden2,
+/turf/open/floor/carpet/arcade,
 /area/crew_quarters/theatre)
 "bXk" = (
+/turf/open/floor/wood/new_wood/wooden2,
 /obj/machinery/atmospherics/components/unary/vent_scrubber{
 	dir = 1;
 	on = 1;
@@ -59935,7 +59946,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
-/turf/open/floor/wood/new_wood/wooden2,
+/turf/open/floor/carpet/arcade,
 /area/crew_quarters/theatre)
 "bXl" = (
 /obj/machinery/door/airlock{
@@ -60838,6 +60849,7 @@
 	},
 /area/crew_quarters/kitchen)
 "bYN" = (
+/turf/open/floor/wood/new_wood/wooden2,
 /obj/machinery/light/small{
 	dir = 8
 	},
@@ -60851,9 +60863,10 @@
 	dir = 1;
 	pixel_y = -22
 	},
-/turf/open/floor/wood/new_wood/wooden2,
+/turf/open/floor/carpet/arcade,
 /area/crew_quarters/theatre)
 "bYO" = (
+/turf/open/floor/wood/new_wood/wooden2,
 /obj/item/clothing/mask/fakemoustache,
 /obj/item/clothing/mask/cigarette/pipe,
 /obj/machinery/camera{
@@ -60865,9 +60878,10 @@
 /obj/structure/sign/poster{
 	pixel_y = -32
 	},
-/turf/open/floor/wood/new_wood/wooden2,
+/turf/open/floor/carpet/arcade,
 /area/crew_quarters/theatre)
 "bYP" = (
+/turf/open/floor/wood/new_wood/wooden2,
 /obj/machinery/light/small,
 /obj/item/toy/prize/honk{
 	pixel_y = 12
@@ -60877,9 +60891,10 @@
 	name = "Station Intercom (General)";
 	pixel_y = -29
 	},
-/turf/open/floor/wood/new_wood/wooden2,
+/turf/open/floor/carpet/arcade,
 /area/crew_quarters/theatre)
 "bYQ" = (
+/turf/open/floor/wood/new_wood/wooden2,
 /obj/machinery/firealarm{
 	dir = 4;
 	pixel_x = 24
@@ -60891,7 +60906,7 @@
 /obj/structure/sign/poster{
 	pixel_y = -32
 	},
-/turf/open/floor/wood/new_wood/wooden2,
+/turf/open/floor/carpet/arcade,
 /area/crew_quarters/theatre)
 "bYR" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
@@ -72320,6 +72335,7 @@
 	name = "Medbay Central"
 	})
 "crV" = (
+/turf/open/floor/wood/new_wood/wooden2,
 /obj/structure/table/wood,
 /obj/structure/mirror{
 	pixel_x = -28
@@ -72334,7 +72350,7 @@
 	pixel_y = -2
 	},
 /obj/item/device/megaphone/clown,
-/turf/open/floor/wood/new_wood/wooden2,
+/turf/open/floor/carpet/arcade,
 /area/crew_quarters/theatre)
 "crW" = (
 /obj/structure/disposalpipe/segment,
@@ -94044,6 +94060,13 @@
 	dir = 9
 	},
 /area/toxins/xenobiology)
+"dcD" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/turf/open/floor/plasteel{
+	icon_state = "bot"
+	},
+/area/security/main)
 "dcE" = (
 /obj/structure/disposalpipe/trunk{
 	dir = 8
@@ -94053,6 +94076,22 @@
 	},
 /turf/open/floor/engine,
 /area/toxins/xenobiology)
+"dcF" = (
+/obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden{
+	dir = 8;
+	initialize_directions = 11
+	},
+/turf/open/floor/plasteel,
+/area/security/main)
+"dcG" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 9
+	},
+/turf/open/floor/plasteel{
+	icon_state = "bot"
+	},
+/area/security/main)
 "dcH" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/fulltile,
@@ -124323,7 +124362,7 @@ acT
 aeC
 adR
 aeK
-afP
+dcF
 afP
 ahW
 ajU
@@ -124579,8 +124618,8 @@ aio
 acU
 afa
 adU
-aeN
-aeN
+dcD
+dcG
 aeN
 ahZ
 ajX
