@@ -19,14 +19,14 @@
 					S.visible_message("<span style=\"color:red\">[S] lets out a horrible [pick("shriek", "squeal", "noise", "squawk", "screech", "whine", "squeak")]!</span>")
 					playsound(S.loc, 'sound/items/mic_feedback.ogg', 30, 1)
 
-	proc/hear_talk(mob/M as mob, msg, real_name)
+	Hear(message, atom/movable/speaker/M, message_langs, raw_message, radio_freq, spans)
 		if (!src.on)
 			return
 		var/turf/T = get_turf(src)
 		if (M in range(1, T))
-			src.talk_into(M, msg, null, real_name)
+			src.talk_into(M, message, null, real_name)
 
-	talk_into(mob/M as mob, messages, param, real_name, lang_id)
+	talk_into(mob/M as mob, messages, param)
 		if (!src.on)
 			return
 		var/speakers = 0
@@ -36,13 +36,13 @@
 		if (!speakers)
 			return
 		speakers += font_amp // 2 ain't huge so let's give ourselves a little boost
-		var/stuff = M.say_quote(messages[1])
+		var/stuff = messages
 		var/list/mobs_messaged = list()
 		for (var/obj/structure/loudspeaker/S in range(7, T))
 			for (var/mob/H in hearers(S, null))
 				if (H in mobs_messaged)
 					continue
-				H.audible_message("<font size=[min(src.max_font, max(0, speakers - round(get_dist(H, S) / 2), 1))]><b>[M.name]</b> [stuff]</font>")
+				H.say("<font size=[min(src.max_font, max(0, speakers - round(get_dist(H, S) / 2), 1))]><b>[M.name]</b> [stuff]</font>")
 				mobs_messaged += H
 		if (prob(10) && locate(/obj/structure/loudspeaker) in range(2, T))
 			for (var/obj/structure/loudspeaker/S in range(7, T))
@@ -83,7 +83,7 @@
 		else
 			return ..()
 
-	proc/hear_talk(mob/M as mob, msg, real_name)
+	Hear(message, atom/movable/speaker, message_langs, raw_message, radio_freq, spans)
 		if (!myMic || !myMic.on)
 			return
 		var/turf/T = get_turf(src)

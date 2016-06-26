@@ -55,7 +55,9 @@
 	icon = 'icons/turf/floors/infinity_works.dmi'
 	icon_state = "engine_caution_corners2"
 /turf/open/floor/carpet/arcade
+	icon = 'icons/turf/floors/carpet.dmi'
 	icon_state = "arcade_carpet"
+	floor_tile = /obj/item/stack/tile/carpet
 /turf/open/floor/pool
 	name = "water"
 	icon = 'icons/turf/floors/infinity_works.dmi'
