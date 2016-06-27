@@ -900,6 +900,10 @@ var/list/teleportlocs = list()
 	name = "Transfer Centre"
 	icon_state = "armory"
 
+/area/security/execution
+	name = "Execution"
+	icon_state = "firingrange"
+
 /*
 /area/security/transfer/New()
 	..()
