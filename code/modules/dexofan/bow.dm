@@ -46,9 +46,9 @@
 /obj/item/weapon/gun/projectile/bow/process_chamber()
 	return
 
-/obj/item/weapon/gun/projectile/bow/afterattack(atom/target as mob|obj|turf, mob/living/user as mob|obj, params)
-	newshot()
+/obj/item/weapon/gun/projectile/bow/afterattack(atom/target, mob/living/user, flag, params)
 	..()
+	newshot()
 
 /obj/item/weapon/gun/projectile/bow/examine(mob/user)
 	..()
