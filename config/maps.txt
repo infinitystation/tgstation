@@ -29,8 +29,8 @@ map ministation
 	friendlyname Mini Station
 endmap
 
-map TerrorStation
-	friendlyname Terror's Meta Station
+map infinity_meta
+	friendlyname Infinity Meta Station
 	default
 endmap
 
@@ -43,5 +43,5 @@ map metastation
 endmap
 
 map efficiencystation
-	friendlyname TG Efficiency Station
+	friendlyname dexofan's Efficiency Station
 endmap

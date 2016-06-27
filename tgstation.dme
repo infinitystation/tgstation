@@ -1105,6 +1105,8 @@
 #include "code\modules\detectivework\evidence.dm"
 #include "code\modules\detectivework\footprints_and_rag.dm"
 #include "code\modules\detectivework\scanner.dm"
+#include "code\modules\dexofan\arrow.dm"
+#include "code\modules\dexofan\bow.dm"
 #include "code\modules\dexofan\efficiency_zones.dm"
 #include "code\modules\dexofan\infinity_ladder.dm"
 #include "code\modules\emoji\emoji_parse.dm"
