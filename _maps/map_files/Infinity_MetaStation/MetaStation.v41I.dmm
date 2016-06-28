@@ -80355,7 +80355,7 @@
 	pixel_x = -23;
 	pixel_y = 0
 	},
-/obj/item/weapon/twohanded/required/kirbyplants/dead,
+/obj/structure/closet/secure_closet/RD,
 /turf/open/floor/plasteel{
 	tag = "icon-cafeteria (NORTHEAST)";
 	icon_state = "cafeteria";
@@ -80407,11 +80407,11 @@
 	},
 /area/crew_quarters/hor)
 "cEJ" = (
-/obj/structure/closet/secure_closet/RD,
 /obj/machinery/keycard_auth{
 	pixel_x = 0;
 	pixel_y = -24
 	},
+/obj/machinery/suit_storage_unit/rd,
 /turf/open/floor/plasteel{
 	tag = "icon-cafeteria (NORTHEAST)";
 	icon_state = "cafeteria";
@@ -108213,7 +108213,7 @@ bMV
 baL
 aaj
 aaj
-bTx
+baL
 bVj
 bWK
 baL
@@ -133640,8 +133640,8 @@ bjH
 bbP
 bnD
 bpv
-brh
-bta
+brc
+bsW
 bvk
 bxE
 bsW
@@ -133898,8 +133898,8 @@ blB
 bnz
 bpw
 bqZ
-bta
-bta
+bsW
+bsW
 bxF
 bsW
 bBh
@@ -134155,7 +134155,7 @@ blC
 bnC
 bpp
 bqX
-bta
+bsW
 bvl
 bxG
 bzE
