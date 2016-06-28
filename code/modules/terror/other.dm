@@ -382,7 +382,7 @@
 	shot_sound = 'sound/weapons/marauder.ogg'
 	eshot_sound = 'sound/weapons/marauder.ogg'
 	base_icon_state = "syndie"
-	faction = "neutral"
+	faction = list("neutral", "silicon")
 
 /obj/item/weapon/storage/box/mining/survival
 	name = "survival pack"
