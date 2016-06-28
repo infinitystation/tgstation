@@ -3727,7 +3727,7 @@
 /area/mine/lobby)
 "jJ" = (
 /obj/machinery/floodlight,
-/turf/open/floor/plasteel/terror/necro/darkvault{
+/turf/open/floor/plasteel/terror/necro/blackvault/outdoor{
 	tag = "icon-vault (WEST)";
 	icon_state = "vault";
 	dir = 8
@@ -3800,7 +3800,7 @@
 /obj/structure/tile_edge/stripe{
 	dir = 8
 	},
-/turf/open/floor/plasteel/terror/necro/black,
+/turf/open/floor/plasteel/terror/necro/black/outdoor,
 /area/lavaland/surface/outdoors)
 "jP" = (
 /turf/open/floor/plasteel/terror/necro/black,
@@ -3821,7 +3821,7 @@
 /obj/structure/tile_edge/stripe{
 	dir = 4
 	},
-/turf/open/floor/plasteel/terror/necro/black,
+/turf/open/floor/plasteel/terror/necro/black/outdoor,
 /area/lavaland/surface/outdoors)
 "jS" = (
 /obj/structure/tile_edge/stripe{
@@ -3830,7 +3830,7 @@
 /obj/structure/tile_edge/stripe{
 	dir = 1
 	},
-/turf/open/floor/plasteel/terror/necro/black,
+/turf/open/floor/plasteel/terror/necro/black/outdoor,
 /area/lavaland/surface/outdoors)
 "jT" = (
 /obj/structure/cable{
@@ -3874,18 +3874,18 @@
 	dir = 1
 	},
 /obj/structure/tile_edge/stripe,
-/turf/open/floor/plasteel/terror/necro/black,
+/turf/open/floor/plasteel/terror/necro/black/outdoor,
 /area/lavaland/surface/outdoors)
 "jW" = (
 /obj/structure/tile_edge/stripe,
-/turf/open/floor/plasteel/terror/necro/black,
+/turf/open/floor/plasteel/terror/necro/black/outdoor,
 /area/lavaland/surface/outdoors)
 "jX" = (
 /obj/structure/tile_edge/stripe{
 	dir = 4
 	},
 /obj/structure/tile_edge/stripe,
-/turf/open/floor/plasteel/terror/necro/black,
+/turf/open/floor/plasteel/terror/necro/black/outdoor,
 /area/lavaland/surface/outdoors)
 "jY" = (
 /obj/structure/tile_edge/stripe/big,
@@ -3895,7 +3895,7 @@
 /obj/structure/tile_edge/stripe{
 	dir = 4
 	},
-/turf/open/floor/plasteel/terror/necro/black,
+/turf/open/floor/plasteel/terror/necro/black/outdoor,
 /area/lavaland/surface/outdoors)
 "jZ" = (
 /obj/structure/cable{
@@ -22879,7 +22879,7 @@ ab
 ab
 kb
 jJ
-jP
+il
 jW
 ab
 ab

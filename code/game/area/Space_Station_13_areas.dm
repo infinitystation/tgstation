@@ -472,6 +472,12 @@ var/list/teleportlocs = list()
 	name = "Electrical Maintenance"
 	icon_state = "yellow"
 
+/area/maintenance/Electrical_engineer
+	name = "Electrical Engineer Office"
+	icon_state = "yellow"
+
+
+
 //Hallway
 
 /area/hallway/primary/fore
