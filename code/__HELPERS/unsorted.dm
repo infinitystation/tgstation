@@ -1389,4 +1389,18 @@ proc/pick_closest_path(value)
 	spawn(0)
 		animate(C, color = old_color, time = flash_time)
 
+/proc/can_puncture(obj/item/W as obj)		// For the record, WHAT THE HELL IS THIS METHOD OF DOING IT?
+	if(!W) return 0
+	if(W.is_sharp()) return 1
+	return ( \
+		W.is_sharp()												  || \
+		istype(W, /obj/item/weapon/screwdriver)                   || \
+		istype(W, /obj/item/weapon/pen)                           || \
+		istype(W, /obj/item/weapon/weldingtool)					  || \
+		istype(W, /obj/item/weapon/lighter)			  || \
+		istype(W, /obj/item/weapon/match)            		  || \
+		istype(W, /obj/item/clothing/mask/cigarette) 		      || \
+		istype(W, /obj/item/weapon/shovel) \
+	)
+
 #define RANDOM_COLOUR (rgb(rand(0,255),rand(0,255),rand(0,255)))

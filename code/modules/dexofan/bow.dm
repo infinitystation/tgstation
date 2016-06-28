@@ -47,8 +47,9 @@
 	return
 
 /obj/item/weapon/gun/projectile/bow/afterattack(atom/target, mob/living/user, flag, params)
-	..()
 	newshot()
+	..()
+
 
 /obj/item/weapon/gun/projectile/bow/examine(mob/user)
 	..()

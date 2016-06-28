@@ -365,6 +365,8 @@
 	},
 /obj/structure/rack,
 /obj/item/weapon/storage/box/lights,
+/obj/item/weapon/stock_parts/cell/high,
+/obj/item/weapon/stock_parts/cell/high,
 /turf/open/floor/plating/lavaland,
 /area/mine/lobby)
 "aW" = (
@@ -3083,10 +3085,6 @@
 /turf/open/floor/plasteel/terror/necro/brown/corner,
 /area/mine/lobby)
 "gs" = (
-/obj/item/weapon/twohanded/required/kirbyplants{
-	tag = "icon-plant-22";
-	icon_state = "plant-22"
-	},
 /obj/item/device/radio/intercom{
 	broadcasting = 0;
 	freerange = 0;
@@ -3096,6 +3094,9 @@
 	pixel_x = 0;
 	pixel_y = -30
 	},
+/obj/structure/table,
+/obj/machinery/cell_charger,
+/obj/item/weapon/stock_parts/cell/high,
 /turf/open/floor/plasteel/terror/necro/brown/corner,
 /area/mine/lobby)
 "gt" = (
@@ -3724,6 +3725,14 @@
 	},
 /turf/open/floor/plating/lavaland,
 /area/mine/lobby)
+"jJ" = (
+/obj/machinery/floodlight,
+/turf/open/floor/plasteel/terror/necro/darkvault{
+	tag = "icon-vault (WEST)";
+	icon_state = "vault";
+	dir = 8
+	},
+/area/lavaland/surface/outdoors)
 "jK" = (
 /obj/structure/cable{
 	d1 = 0;
@@ -3787,6 +3796,15 @@
 	dir = 1
 	},
 /area/mine/lobby)
+"jO" = (
+/obj/structure/tile_edge/stripe{
+	dir = 8
+	},
+/turf/open/floor/plasteel/terror/necro/black,
+/area/lavaland/surface/outdoors)
+"jP" = (
+/turf/open/floor/plasteel/terror/necro/black,
+/area/lavaland/surface/outdoors)
 "jQ" = (
 /obj/structure/cable{
 	d1 = 0;
@@ -3799,6 +3817,21 @@
 	},
 /turf/open/floor/plasteel/terror/necro/stairs/top,
 /area/mine/lobby)
+"jR" = (
+/obj/structure/tile_edge/stripe{
+	dir = 4
+	},
+/turf/open/floor/plasteel/terror/necro/black,
+/area/lavaland/surface/outdoors)
+"jS" = (
+/obj/structure/tile_edge/stripe{
+	dir = 8
+	},
+/obj/structure/tile_edge/stripe{
+	dir = 1
+	},
+/turf/open/floor/plasteel/terror/necro/black,
+/area/lavaland/surface/outdoors)
 "jT" = (
 /obj/structure/cable{
 	tag = "icon-1-2";
@@ -3836,6 +3869,34 @@
 	dir = 1
 	},
 /area/mine/lobby)
+"jV" = (
+/obj/structure/tile_edge/stripe{
+	dir = 1
+	},
+/obj/structure/tile_edge/stripe,
+/turf/open/floor/plasteel/terror/necro/black,
+/area/lavaland/surface/outdoors)
+"jW" = (
+/obj/structure/tile_edge/stripe,
+/turf/open/floor/plasteel/terror/necro/black,
+/area/lavaland/surface/outdoors)
+"jX" = (
+/obj/structure/tile_edge/stripe{
+	dir = 4
+	},
+/obj/structure/tile_edge/stripe,
+/turf/open/floor/plasteel/terror/necro/black,
+/area/lavaland/surface/outdoors)
+"jY" = (
+/obj/structure/tile_edge/stripe/big,
+/obj/structure/tile_edge/stripe{
+	dir = 8
+	},
+/obj/structure/tile_edge/stripe{
+	dir = 4
+	},
+/turf/open/floor/plasteel/terror/necro/black,
+/area/lavaland/surface/outdoors)
 "jZ" = (
 /obj/structure/cable{
 	d1 = 0;
@@ -21533,7 +21594,7 @@ ab
 an
 an
 an
-an
+ab
 ab
 ab
 cG
@@ -21791,8 +21852,8 @@ ab
 an
 an
 ab
-ab
-ab
+jS
+jY
 cR
 cV
 dL
@@ -22048,7 +22109,7 @@ ab
 ab
 ab
 ab
-ab
+jV
 ab
 cG
 fG
@@ -22302,10 +22363,10 @@ kA
 kA
 ab
 ab
+kb
+kb
 ab
-ab
-ab
-ab
+jV
 fE
 cG
 fF
@@ -22559,10 +22620,10 @@ kA
 ab
 ab
 ab
-kA
-ab
-ab
-ab
+kb
+jJ
+jO
+jW
 cD
 cG
 cG
@@ -22815,11 +22876,11 @@ ab
 ab
 ab
 ab
-kA
-kA
-kA
 ab
-ab
+kb
+jJ
+jP
+jW
 ab
 ab
 an
@@ -23072,11 +23133,11 @@ ab
 ab
 ab
 kA
-kA
-kA
-kA
 ab
-ab
+kb
+jJ
+jR
+jX
 ab
 ab
 ab
@@ -23329,9 +23390,9 @@ ab
 kA
 kA
 kA
-kA
 ab
-ab
+kb
+kb
 ab
 ab
 ab
@@ -24358,9 +24419,9 @@ ab
 ab
 ab
 ab
-kA
-kA
-kA
+ab
+ab
+ab
 ab
 ab
 an
@@ -24614,9 +24675,9 @@ ab
 ab
 ab
 bf
-kA
-kA
-kA
+ab
+ab
+ab
 ab
 ab
 ab

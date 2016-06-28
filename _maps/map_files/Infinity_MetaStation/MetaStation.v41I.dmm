@@ -50485,6 +50485,8 @@
 /obj/item/stack/sheet/metal{
 	amount = 50
 	},
+/obj/item/weapon/storage/box/inflatable,
+/obj/item/weapon/storage/box/inflatable,
 /obj/item/weapon/grenade/chem_grenade/metalfoam,
 /obj/item/weapon/grenade/chem_grenade/metalfoam,
 /turf/open/floor/plasteel{
@@ -95777,8 +95779,33 @@
 	},
 /turf/open/space,
 /area/space)
-"der" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+"del" = (
+/obj/structure/bodycontainer/morgue,
+/turf/open/floor/plasteel/black,
+/area/security/execution)
+"dem" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/open/floor/plasteel/black,
+/area/security/execution)
+"den" = (
+/obj/structure/table,
+/obj/item/weapon/storage/box/bodybags,
+/obj/item/weapon/pen,
+/turf/open/floor/plasteel/black,
+/area/security/execution)
+"deo" = (
+/obj/machinery/atmospherics/components/unary/vent_pump{
+	dir = 4;
+	on = 1
+	},
+/turf/open/floor/plasteel/black,
+/area/security/execution)
+"dep" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 10
+	},
 /turf/closed/wall/r_wall,
 /area/security/execution)
 "deq" = (
@@ -95790,34 +95817,9 @@
 	},
 /turf/open/floor/plasteel/black,
 /area/security/execution)
-"dep" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 10
-	},
+"der" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/closed/wall/r_wall,
-/area/security/execution)
-"deo" = (
-/obj/machinery/atmospherics/components/unary/vent_pump{
-	dir = 4;
-	on = 1
-	},
-/turf/open/floor/plasteel/black,
-/area/security/execution)
-"den" = (
-/obj/structure/table,
-/obj/item/weapon/storage/box/bodybags,
-/obj/item/weapon/pen,
-/turf/open/floor/plasteel/black,
-/area/security/execution)
-"dem" = (
-/obj/machinery/light/small{
-	dir = 4
-	},
-/turf/open/floor/plasteel/black,
-/area/security/execution)
-"del" = (
-/obj/structure/bodycontainer/morgue,
-/turf/open/floor/plasteel/black,
 /area/security/execution)
 
 (1,1,1) = {"
