@@ -4941,6 +4941,7 @@
 	pixel_x = 5
 	},
 /obj/machinery/power/apc{
+	aidisabled = 1;
 	dir = 2;
 	name = "Execution Chamber";
 	pixel_x = 0;
@@ -5510,7 +5511,7 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/security{
 	aiControlDisabled = 1;
-	id_tag = "prisonereducation";
+	id_tag = null;
 	name = "Prisoner Education Chamber";
 	req_access = null;
 	req_access_txt = "3"
@@ -5526,7 +5527,7 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/security{
 	aiControlDisabled = 1;
-	id_tag = "prisonereducation";
+	id_tag = null;
 	name = "Prisoner Education Chamber";
 	req_access = null;
 	req_access_txt = "3"
@@ -7968,17 +7969,15 @@
 /turf/open/floor/plating,
 /area/maintenance/disposal)
 "anZ" = (
-/obj/machinery/door/window/eastright{
-	base_state = "left";
-	dir = 5;
-	icon_state = "left";
-	name = "Danger: Conveyor Access";
-	req_access_txt = "12"
-	},
 /obj/machinery/conveyor{
 	dir = 6;
 	id = "garbage";
 	movedir = 8
+	},
+/obj/machinery/door/window/westleft{
+	dir = 4;
+	name = "Danger: Conveyor Access";
+	req_access_txt = "12"
 	},
 /turf/open/floor/plating,
 /area/maintenance/disposal)
@@ -49614,9 +49613,6 @@
 	name = "Distro to Waste";
 	on = 0
 	},
-/obj/machinery/light{
-	dir = 1
-	},
 /obj/machinery/atmospherics/components/unary/vent_scrubber{
 	dir = 1;
 	on = 1;
@@ -49642,6 +49638,9 @@
 /area/atmos)
 "bFz" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/visible{
+	dir = 1
+	},
+/obj/machinery/light{
 	dir = 1
 	},
 /turf/open/floor/plasteel{
@@ -95925,70 +95924,6 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/closed/wall/r_wall,
 /area/security/execution)
-"deB" = (
-/obj/structure/tile_edge/stripe,
-/obj/structure/tile_edge/stripe{
-	dir = 8
-	},
-/turf/open/floor/plasteel,
-/area/maintenance/Electrical_engineer)
-"deA" = (
-/obj/structure/tile_edge/stripe{
-	dir = 8
-	},
-/obj/machinery/atmospherics/components/unary/vent_scrubber{
-	dir = 1;
-	on = 1;
-	scrub_N2O = 0;
-	scrub_Toxins = 0
-	},
-/turf/open/floor/plasteel,
-/area/maintenance/Electrical_engineer)
-"dez" = (
-/obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/turf/open/floor/plasteel,
-/area/maintenance/Electrical_engineer)
-"dey" = (
-/turf/open/floor/plasteel,
-/area/maintenance/Electrical_engineer)
-"dex" = (
-/obj/structure/tile_edge/stripe{
-	dir = 1
-	},
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
-/turf/open/floor/plasteel,
-/area/maintenance/Electrical_engineer)
-"dew" = (
-/obj/structure/tile_edge/stripe,
-/obj/structure/tile_edge/stripe{
-	dir = 8
-	},
-/obj/structure/tile_edge/stripe{
-	dir = 1
-	},
-/turf/open/floor/plasteel,
-/area/maintenance/Electrical_engineer)
-"dev" = (
-/turf/closed/wall,
-/area/maintenance/Electrical_engineer)
-"deu" = (
-/obj/structure/reagent_dispensers/fueltank,
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
-/turf/open/floor/plasteel{
-	icon_state = "delivery";
-	name = "floor"
-	},
-/area/maintenance/Electrical_engineer)
-"det" = (
-/obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden{
-	dir = 1
-	},
-/turf/closed/wall,
-/area/crew_quarters/fitness)
 "des" = (
 /obj/structure/closet,
 /obj/item/weapon/poster/contraband,
@@ -96003,6 +95938,66 @@
 /obj/random/weaponcrafting,
 /turf/open/floor/plating,
 /area/maintenance/auxsolarstarboard)
+"det" = (
+/obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden{
+	dir = 1
+	},
+/turf/closed/wall,
+/area/crew_quarters/fitness)
+"deu" = (
+/obj/structure/reagent_dispensers/fueltank,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/turf/open/floor/plasteel{
+	icon_state = "delivery";
+	name = "floor"
+	},
+/area/maintenance/Electrical_engineer)
+"dev" = (
+/turf/closed/wall,
+/area/maintenance/Electrical_engineer)
+"dew" = (
+/obj/structure/tile_edge/stripe,
+/obj/structure/tile_edge/stripe{
+	dir = 8
+	},
+/obj/structure/tile_edge/stripe{
+	dir = 1
+	},
+/turf/open/floor/plasteel,
+/area/maintenance/Electrical_engineer)
+"dex" = (
+/obj/structure/tile_edge/stripe{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/turf/open/floor/plasteel,
+/area/maintenance/Electrical_engineer)
+"dey" = (
+/turf/open/floor/plasteel,
+/area/maintenance/Electrical_engineer)
+"dez" = (
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/open/floor/plasteel,
+/area/maintenance/Electrical_engineer)
+"deA" = (
+/obj/machinery/door/window/westleft{
+	dir = 4;
+	name = "Bridge Deliveries";
+	req_access_txt = "19"
+	},
+/turf/closed/wall/r_wall,
+/area/security/warden)
+"deB" = (
+/obj/structure/tile_edge/stripe,
+/obj/structure/tile_edge/stripe{
+	dir = 8
+	},
+/turf/open/floor/plasteel,
+/area/maintenance/Electrical_engineer)
 
 (1,1,1) = {"
 aaa
@@ -118961,7 +118956,7 @@ aaW
 alu
 amR
 aoq
-ajW
+deA
 aqW
 asD
 aul
@@ -140343,11 +140338,11 @@ bOy
 bPZ
 bRN
 bTo
-bRN
+cfZ
 bPZ
 bRN
 bTo
-bRN
+cfZ
 bPZ
 bRN
 bTo
@@ -140600,11 +140595,11 @@ bFv
 bQa
 bFv
 bML
-bFv
+bDs
 bQa
 bFv
 bML
-bFv
+bDs
 bQa
 bFv
 bML
