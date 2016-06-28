@@ -11040,51 +11040,71 @@
 /turf/open/floor/wood,
 /area/crew_quarters/sleep)
 "atq" = (
-/obj/structure/closet,
-/obj/item/weapon/poster/contraband,
-/obj/item/weapon/poster/contraband,
-/obj/item/weapon/poster/contraband,
-/obj/item/weapon/poster/contraband,
-/obj/item/weapon/poster/contraband,
-/obj/effect/spawner/lootdrop/maintenance{
-	lootcount = 2;
-	name = "2maintenance loot spawner"
+/obj/structure/reagent_dispensers/watertank,
+/turf/open/floor/plasteel{
+	icon_state = "delivery";
+	name = "floor"
 	},
-/obj/random/weaponcrafting,
-/turf/open/floor/plating,
-/area/maintenance/aft)
+/area/maintenance/Electrical_engineer)
 "atr" = (
 /turf/closed/wall,
 /area/maintenance/aft)
 "ats" = (
-/obj/structure/closet,
-/obj/item/weapon/storage/box/lights/mixed,
-/obj/effect/spawner/lootdrop/maintenance{
-	lootcount = 2;
-	name = "2maintenance loot spawner"
+/obj/structure/table,
+/obj/item/weapon/paper_bin,
+/obj/item/weapon/pen,
+/obj/structure/tile_edge/stripe{
+	dir = 1
 	},
-/obj/random/bomb_supply,
-/turf/open/floor/plating{
-	tag = "icon-platingdmg3";
-	icon_state = "platingdmg3"
+/obj/structure/tile_edge/stripe{
+	dir = 8
 	},
-/area/maintenance/aft)
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/plasteel,
+/area/maintenance/Electrical_engineer)
 "att" = (
-/obj/structure/rack,
-/obj/item/weapon/extinguisher,
-/obj/effect/spawner/lootdrop/maintenance,
-/obj/random/bomb_supply,
-/obj/random/bomb_supply,
-/turf/open/floor/plating,
-/area/maintenance/aft)
+/obj/structure/chair/office/light{
+	dir = 8
+	},
+/obj/structure/tile_edge/stripe{
+	dir = 1
+	},
+/obj/structure/cable/yellow{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/obj/machinery/power/apc{
+	cell_type = 10000;
+	dir = 8;
+	name = "Break Room APC";
+	pixel_x = 0;
+	pixel_y = 24
+	},
+/turf/open/floor/plasteel,
+/area/maintenance/Electrical_engineer)
 "atu" = (
-/obj/structure/rack,
-/obj/effect/landmark/costume,
-/obj/effect/spawner/lootdrop/maintenance,
-/obj/random/weaponcrafting,
-/obj/random/bomb_supply,
-/turf/open/floor/plating,
-/area/maintenance/aft)
+/obj/structure/table,
+/obj/machinery/cell_charger,
+/obj/item/weapon/stock_parts/cell/high{
+	charge = 100;
+	maxcharge = 15000
+	},
+/obj/structure/tile_edge/stripe{
+	dir = 4
+	},
+/obj/structure/tile_edge/stripe{
+	dir = 1
+	},
+/obj/item/device/radio/intercom{
+	freerange = 0;
+	frequency = 1459;
+	name = "Station Intercom (General)";
+	pixel_x = 29
+	},
+/turf/open/floor/plasteel,
+/area/maintenance/Electrical_engineer)
 "atv" = (
 /obj/effect/spawner/lootdrop{
 	loot = list("/obj/structure/grille","/obj/structure/grille","/obj/structure/grille","/obj/structure/grille","/obj/structure/grille","/obj/item/weapon/cigbutt","/obj/item/trash/cheesie","/obj/item/trash/candy","/obj/item/trash/chips","/obj/item/trash/deadmouse","/obj/item/trash/pistachios","/obj/item/trash/plate","/obj/item/trash/popcorn","/obj/item/trash/raisins","/obj/item/trash/sosjerky","/obj/item/trash/syndi_cakes");
@@ -12146,11 +12166,22 @@
 /turf/open/floor/carpet,
 /area/crew_quarters/sleep)
 "avc" = (
-/turf/open/floor/plating{
-	tag = "icon-panelscorched";
-	icon_state = "panelscorched"
+/obj/structure/table,
+/obj/item/device/flashlight{
+	pixel_x = 1;
+	pixel_y = 5
 	},
-/area/maintenance/aft)
+/obj/item/clothing/head/welding{
+	pixel_x = -3;
+	pixel_y = 5
+	},
+/obj/item/weapon/storage/belt/utility,
+/obj/structure/tile_edge/stripe,
+/obj/structure/tile_edge/stripe{
+	dir = 4
+	},
+/turf/open/floor/plasteel,
+/area/maintenance/Electrical_engineer)
 "avd" = (
 /obj/structure/closet/secure_closet/engineering_personal,
 /turf/open/floor/plasteel{
@@ -12811,40 +12842,81 @@
 /turf/open/floor/carpet,
 /area/crew_quarters/sleep)
 "awp" = (
-/obj/structure/mopbucket,
-/obj/item/weapon/mop,
-/obj/effect/landmark{
-	name = "blobstart"
+/obj/structure/closet/crate,
+/obj/item/clothing/mask/gas{
+	pixel_x = -3;
+	pixel_y = -3
 	},
-/obj/item/weapon/coin/silver,
-/turf/open/floor/plating{
-	tag = "icon-platingdmg2";
-	icon_state = "platingdmg2"
+/obj/item/clothing/glasses/meson,
+/obj/item/clothing/gloves/color/black,
+/obj/item/weapon/electronics/airlock,
+/obj/item/weapon/electronics/apc,
+/obj/item/stack/cable_coil{
+	pixel_x = 3;
+	pixel_y = -7
 	},
-/area/maintenance/aft)
-"awq" = (
-/obj/structure/closet/crate/hydroponics,
-/obj/effect/spawner/lootdrop/maintenance,
-/obj/item/weapon/coin/silver,
-/turf/open/floor/plating,
-/area/maintenance/aft)
-"awr" = (
-/obj/machinery/atmospherics/components/unary/vent_pump{
+/obj/item/device/multitool{
+	pixel_x = 4
+	},
+/obj/item/weapon/storage/box/lights/mixed,
+/obj/item/weapon/storage/box/lights/mixed,
+/obj/item/weapon/electronics/apc,
+/obj/item/weapon/electronics/airlock,
+/obj/machinery/airalarm{
 	dir = 4;
+	pixel_x = -23;
+	pixel_y = 0
+	},
+/turf/open/floor/plasteel{
+	icon_state = "delivery";
+	name = "floor"
+	},
+/area/maintenance/Electrical_engineer)
+"awq" = (
+/obj/structure/cable/yellow{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/turf/open/floor/plating,
+/area/maintenance/Electrical_engineer)
+"awr" = (
+/obj/structure/tile_edge/stripe{
+	dir = 4
+	},
+/obj/machinery/atmospherics/components/unary/vent_pump{
+	dir = 2;
 	on = 1
 	},
-/obj/effect/landmark{
-	name = "xeno_spawn";
-	pixel_x = -1
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
-/turf/open/floor/plating,
-/area/maintenance/aft)
+/obj/structure/cable/yellow{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8";
+	tag = ""
+	},
+/turf/open/floor/plasteel,
+/area/maintenance/Electrical_engineer)
 "aws" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 10
+/obj/structure/rack{
+	dir = 8;
+	layer = 2.9
 	},
-/turf/open/floor/plating,
-/area/maintenance/aft)
+/obj/random/tool,
+/obj/random/bomb_supply,
+/obj/effect/spawner/lootdrop/maintenance,
+/obj/item/weapon/storage/toolbox/mechanical{
+	pixel_x = -2;
+	pixel_y = -1
+	},
+/turf/open/floor/plasteel{
+	icon_state = "delivery";
+	name = "floor"
+	},
+/area/maintenance/Electrical_engineer)
 "awt" = (
 /obj/structure/closet/secure_closet/freezer{
 	name = "freezer"
@@ -13678,26 +13750,41 @@
 /turf/open/floor/carpet,
 /area/crew_quarters/sleep)
 "axG" = (
-/obj/item/weapon/cigbutt,
-/turf/open/floor/plating{
-	dir = 2;
-	icon_state = "warnplate"
+/obj/structure/closet/firecloset,
+/turf/open/floor/plasteel{
+	icon_state = "delivery";
+	name = "floor"
 	},
-/area/maintenance/aft)
+/area/maintenance/Electrical_engineer)
 "axH" = (
-/obj/structure/closet,
-/turf/open/floor/plating{
-	tag = "icon-platingdmg1";
-	icon_state = "platingdmg1"
+/obj/structure/tile_edge/stripe,
+/obj/structure/tile_edge/stripe{
+	dir = 4
 	},
-/area/maintenance/aft)
-"axI" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/turf/open/floor/plating{
-	dir = 2;
-	icon_state = "warnplate"
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
-/area/maintenance/aft)
+/turf/open/floor/plasteel,
+/area/maintenance/Electrical_engineer)
+"axI" = (
+/obj/structure/rack{
+	dir = 8;
+	layer = 2.9
+	},
+/obj/random/tool,
+/obj/random/bomb_supply,
+/obj/effect/spawner/lootdrop/maintenance,
+/obj/item/weapon/storage/toolbox/electrical{
+	pixel_y = 5
+	},
+/turf/open/floor/plasteel{
+	icon_state = "delivery";
+	name = "floor"
+	},
+/area/maintenance/Electrical_engineer)
 "axJ" = (
 /obj/structure/closet/crate{
 	icon_state = "crateopen";
@@ -14780,20 +14867,26 @@
 /turf/open/floor/wood,
 /area/crew_quarters/sleep)
 "azl" = (
-/obj/machinery/door/airlock/maintenance{
-	name = "Storage Room";
-	req_access_txt = "12"
+/obj/structure/tile_edge/stripe,
+/obj/machinery/light_switch{
+	pixel_x = 0;
+	pixel_y = -24
 	},
-/turf/open/floor/plating,
-/area/maintenance/aft)
+/turf/open/floor/plasteel,
+/area/maintenance/Electrical_engineer)
 "azm" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/machinery/door/airlock/maintenance{
 	name = "Storage Room";
 	req_access_txt = "12"
 	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/open/floor/plating,
-/area/maintenance/aft)
+/area/maintenance/Electrical_engineer)
 "azn" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -15320,11 +15413,8 @@
 /turf/open/floor/wood,
 /area/crew_quarters/sleep)
 "aAh" = (
-/obj/item/weapon/caution,
-/turf/open/floor/plating{
-	icon_state = "warnplate";
-	dir = 1
-	},
+/obj/structure/mopbucket,
+/turf/open/floor/plating,
 /area/maintenance/aft)
 "aAi" = (
 /obj/structure/cable/yellow{
@@ -15381,10 +15471,24 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
+	},
+/obj/item/clothing/head/cone{
+	pixel_x = -4;
+	pixel_y = 4
+	},
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
 	dir = 2
 	},
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8";
+	tag = ""
+	},
 /turf/open/floor/plating{
+	tag = "icon-warnplate (NORTH)";
 	icon_state = "warnplate";
 	dir = 1
 	},
@@ -20337,7 +20441,7 @@
 "aIW" = (
 /obj/structure/reagent_dispensers/watertank,
 /obj/machinery/light_switch{
-	pixel_x = -38
+	pixel_x = -24
 	},
 /turf/open/floor/plasteel{
 	icon_state = "bot";
@@ -95821,6 +95925,84 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/closed/wall/r_wall,
 /area/security/execution)
+"deB" = (
+/obj/structure/tile_edge/stripe,
+/obj/structure/tile_edge/stripe{
+	dir = 8
+	},
+/turf/open/floor/plasteel,
+/area/maintenance/Electrical_engineer)
+"deA" = (
+/obj/structure/tile_edge/stripe{
+	dir = 8
+	},
+/obj/machinery/atmospherics/components/unary/vent_scrubber{
+	dir = 1;
+	on = 1;
+	scrub_N2O = 0;
+	scrub_Toxins = 0
+	},
+/turf/open/floor/plasteel,
+/area/maintenance/Electrical_engineer)
+"dez" = (
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/open/floor/plasteel,
+/area/maintenance/Electrical_engineer)
+"dey" = (
+/turf/open/floor/plasteel,
+/area/maintenance/Electrical_engineer)
+"dex" = (
+/obj/structure/tile_edge/stripe{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/turf/open/floor/plasteel,
+/area/maintenance/Electrical_engineer)
+"dew" = (
+/obj/structure/tile_edge/stripe,
+/obj/structure/tile_edge/stripe{
+	dir = 8
+	},
+/obj/structure/tile_edge/stripe{
+	dir = 1
+	},
+/turf/open/floor/plasteel,
+/area/maintenance/Electrical_engineer)
+"dev" = (
+/turf/closed/wall,
+/area/maintenance/Electrical_engineer)
+"deu" = (
+/obj/structure/reagent_dispensers/fueltank,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/turf/open/floor/plasteel{
+	icon_state = "delivery";
+	name = "floor"
+	},
+/area/maintenance/Electrical_engineer)
+"det" = (
+/obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden{
+	dir = 1
+	},
+/turf/closed/wall,
+/area/crew_quarters/fitness)
+"des" = (
+/obj/structure/closet,
+/obj/item/weapon/poster/contraband,
+/obj/item/weapon/poster/contraband,
+/obj/item/weapon/poster/contraband,
+/obj/item/weapon/poster/contraband,
+/obj/item/weapon/poster/contraband,
+/obj/effect/spawner/lootdrop/maintenance{
+	lootcount = 2;
+	name = "2maintenance loot spawner"
+	},
+/obj/random/weaponcrafting,
+/turf/open/floor/plating,
+/area/maintenance/auxsolarstarboard)
 
 (1,1,1) = {"
 aaa
@@ -133945,10 +134127,10 @@ afq
 afq
 arO
 atq
-atr
+dew
 awp
 axG
-azl
+dev
 aAh
 atr
 aAk
@@ -134200,12 +134382,12 @@ afq
 afq
 afq
 afq
-arO
-atr
-atr
-atr
-atr
-atr
+det
+deu
+dex
+deA
+deB
+dev
 aAi
 aBG
 aDl
@@ -134459,10 +134641,10 @@ afq
 afq
 arO
 ats
-aqp
+dey
 awq
-awC
-atr
+azl
+dev
 aAj
 awC
 aAy
@@ -134716,11 +134898,11 @@ afq
 afq
 arO
 att
-arQ
+dez
 awr
 axH
-atr
-aAk
+azm
+aAl
 azs
 aAy
 aEM
@@ -134976,8 +135158,8 @@ atu
 avc
 aws
 axI
-azm
-aAl
+dev
+aAk
 aqp
 aAy
 aEN
@@ -135229,11 +135411,11 @@ anM
 anM
 anM
 arP
-atr
-atr
-atr
-atr
-atr
+dev
+dev
+dev
+dev
+dev
 aAm
 awC
 aAy
@@ -139594,7 +139776,7 @@ aaa
 aaj
 aaa
 aaa
-akV
+des
 amu
 aqA
 aqA
