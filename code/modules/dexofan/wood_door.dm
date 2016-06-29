@@ -3,8 +3,8 @@
 	icon_state = "wood"
 	mineralType = "wood"
 	hardness = 1
-	openSound = 'sound/effects/doorcreaky.ogg'
-	closeSound = 'sound/effects/doorcreaky.ogg'
+	openSound = 'sound/effects/door_open.ogg'
+	closeSound = 'sound/effects/door_close.ogg'
 	burn_state = FLAMMABLE
 	burntime = 30
 

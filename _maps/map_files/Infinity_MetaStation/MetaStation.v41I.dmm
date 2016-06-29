@@ -6071,7 +6071,7 @@
 	pixel_y = 16
 	},
 /turf/open/floor/noslip,
-/area/space)
+/area/engine/break_room)
 "akQ" = (
 /obj/structure/curtain/open/shower/engineering,
 /obj/machinery/shower{
@@ -6079,7 +6079,7 @@
 	},
 /obj/item/weapon/soap/nanotrasen,
 /turf/open/floor/noslip,
-/area/space)
+/area/engine/break_room)
 "akR" = (
 /turf/open/floor/plasteel{
 	icon_state = "dark"
@@ -6727,7 +6727,7 @@
 	pixel_y = 26
 	},
 /turf/open/floor/wood,
-/area/space)
+/area/engine/break_room)
 "alX" = (
 /obj/machinery/door/airlock/maintenance{
 	req_access_txt = "12"
@@ -6952,7 +6952,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "freezerfloor"
 	},
-/area/space)
+/area/engine/break_room)
 "amp" = (
 /obj/machinery/atmospherics/components/unary/vent_pump{
 	dir = 2;
@@ -6961,7 +6961,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "freezerfloor"
 	},
-/area/space)
+/area/engine/break_room)
 "amq" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -6974,7 +6974,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "freezerfloor"
 	},
-/area/space)
+/area/engine/break_room)
 "amr" = (
 /obj/machinery/light{
 	icon_state = "tube1";
@@ -7866,7 +7866,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "freezerfloor"
 	},
-/area/space)
+/area/engine/break_room)
 "anP" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/machinery/door/window/westleft{
@@ -7880,7 +7880,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "freezerfloor"
 	},
-/area/space)
+/area/engine/break_room)
 "anQ" = (
 /obj/structure/table,
 /obj/structure/window/reinforced,
@@ -7899,7 +7899,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "freezerfloor"
 	},
-/area/space)
+/area/engine/break_room)
 "anR" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 6
@@ -8637,7 +8637,7 @@
 /area/maintenance/aft)
 "api" = (
 /turf/open/floor/wood,
-/area/space)
+/area/engine/break_room)
 "apj" = (
 /obj/machinery/airalarm{
 	pixel_y = 24
@@ -8648,18 +8648,18 @@
 	scrub_Toxins = 0
 	},
 /turf/open/floor/wood,
-/area/space)
+/area/engine/break_room)
 "apk" = (
 /turf/open/floor/carpet,
-/area/space)
+/area/engine/break_room)
 "apl" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/open/floor/wood,
-/area/space)
+/area/engine/break_room)
 "apm" = (
 /obj/structure/bookcase/manuals/engineering,
 /turf/open/floor/wood,
-/area/space)
+/area/engine/break_room)
 "apn" = (
 /obj/machinery/atmospherics/components/unary/vent_pump{
 	dir = 1;
@@ -9326,28 +9326,28 @@
 	},
 /obj/structure/closet/wardrobe/engineering_yellow,
 /turf/open/floor/wood,
-/area/space)
+/area/engine/break_room)
 "aqr" = (
 /obj/structure/chair/comfy/sofa/corner/right/brown,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /turf/open/floor/carpet,
-/area/space)
+/area/engine/break_room)
 "aqs" = (
 /obj/structure/chair/comfy/black,
 /obj/structure/chair/comfy/sofa/corner/brown,
 /turf/open/floor/carpet,
-/area/space)
+/area/engine/break_room)
 "aqt" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/open/floor/carpet,
-/area/space)
+/area/engine/break_room)
 "aqu" = (
 /obj/item/weapon/twohanded/required/kirbyplants{
 	tag = "icon-plant-21";
 	icon_state = "plant-21"
 	},
 /turf/open/floor/wood,
-/area/space)
+/area/engine/break_room)
 "aqv" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/structure/cable{
@@ -10147,7 +10147,7 @@
 	pixel_y = 3
 	},
 /turf/open/floor/wood,
-/area/space)
+/area/engine/break_room)
 "arS" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -10157,7 +10157,7 @@
 	dir = 4
 	},
 /turf/open/floor/carpet,
-/area/space)
+/area/engine/break_room)
 "arT" = (
 /obj/structure/disposalpipe/segment{
 	dir = 2;
@@ -10166,21 +10166,21 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/structure/table/wood/poker,
 /turf/open/floor/carpet,
-/area/space)
+/area/engine/break_room)
 "arU" = (
 /obj/item/toy/cards/deck{
 	pixel_y = 4
 	},
 /obj/structure/table/wood/poker,
 /turf/open/floor/carpet,
-/area/space)
+/area/engine/break_room)
 "arV" = (
 /obj/structure/table/wood,
 /obj/machinery/reagentgrinder{
 	pixel_y = 12
 	},
 /turf/open/floor/wood,
-/area/space)
+/area/engine/break_room)
 "arW" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 6
@@ -11130,7 +11130,7 @@
 	},
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/wood,
-/area/space)
+/area/engine/break_room)
 "atx" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8";
@@ -11142,7 +11142,7 @@
 	dir = 4
 	},
 /turf/open/floor/carpet,
-/area/space)
+/area/engine/break_room)
 "aty" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
@@ -11160,7 +11160,7 @@
 /obj/item/weapon/coin/iron,
 /obj/structure/table/wood/poker,
 /turf/open/floor/carpet,
-/area/space)
+/area/engine/break_room)
 "atz" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
@@ -11173,14 +11173,14 @@
 /obj/item/weapon/fan,
 /obj/structure/table/wood/poker,
 /turf/open/floor/carpet,
-/area/space)
+/area/engine/break_room)
 "atA" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/open/floor/carpet,
-/area/space)
+/area/engine/break_room)
 "atB" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
@@ -11197,7 +11197,7 @@
 	pixel_x = 23
 	},
 /turf/open/floor/wood,
-/area/space)
+/area/engine/break_room)
 "atC" = (
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden{
 	dir = 1
@@ -12186,7 +12186,7 @@
 	dir = 1
 	},
 /turf/open/floor/wood,
-/area/space)
+/area/engine/break_room)
 "ave" = (
 /obj/structure/closet/secure_closet/freezer{
 	name = "freezer"
@@ -12199,7 +12199,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "bar"
 	},
-/area/space)
+/area/engine/break_room)
 "avf" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/chair/comfy/sofa/corner/right/brown{
@@ -12208,7 +12208,7 @@
 	dir = 1
 	},
 /turf/open/floor/carpet,
-/area/space)
+/area/engine/break_room)
 "avg" = (
 /obj/structure/cable/yellow{
 	d1 = 1;
@@ -12221,7 +12221,7 @@
 	dir = 1
 	},
 /turf/open/floor/carpet,
-/area/space)
+/area/engine/break_room)
 "avh" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/machinery/camera{
@@ -12239,7 +12239,7 @@
 	pixel_y = 0
 	},
 /turf/open/floor/carpet,
-/area/space)
+/area/engine/break_room)
 "avi" = (
 /turf/closed/wall/r_wall,
 /area/engine/break_room)
@@ -12933,7 +12933,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "bar"
 	},
-/area/space)
+/area/engine/break_room)
 "awu" = (
 /obj/structure/disposalpipe/segment{
 	dir = 1;
@@ -12946,7 +12946,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "bar"
 	},
-/area/space)
+/area/engine/break_room)
 "awv" = (
 /obj/structure/cable/yellow{
 	d1 = 1;
@@ -12958,7 +12958,7 @@
 	dir = 4
 	},
 /turf/open/floor/wood,
-/area/space)
+/area/engine/break_room)
 "aww" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/structure/disposalpipe/segment{
@@ -12966,7 +12966,7 @@
 	icon_state = "pipe-c"
 	},
 /turf/open/floor/wood,
-/area/space)
+/area/engine/break_room)
 "awx" = (
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
@@ -13792,7 +13792,7 @@
 	name = "break room shutters"
 	},
 /turf/open/floor/plating,
-/area/space)
+/area/engine/break_room)
 "axK" = (
 /obj/structure/table/reinforced,
 /obj/item/weapon/kitchen/rollingpin,
@@ -13804,7 +13804,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "bar"
 	},
-/area/space)
+/area/engine/break_room)
 "axL" = (
 /obj/item/device/radio/intercom{
 	freerange = 0;
@@ -13824,7 +13824,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "bar"
 	},
-/area/space)
+/area/engine/break_room)
 "axM" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
 	dir = 1
@@ -13841,7 +13841,7 @@
 	},
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/wood,
-/area/space)
+/area/engine/break_room)
 "axN" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden,
 /obj/structure/cable/yellow{
@@ -13864,7 +13864,7 @@
 	specialfunctions = 4
 	},
 /turf/open/floor/wood,
-/area/space)
+/area/engine/break_room)
 "axO" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -13884,7 +13884,7 @@
 	req_one_access_txt = "32;19"
 	},
 /turf/open/floor/plasteel/delivery,
-/area/space)
+/area/engine/break_room)
 "axP" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -95962,14 +95962,8 @@
 	},
 /turf/open/floor/plasteel,
 /area/maintenance/Electrical_engineer)
-"deE" = (
-/obj/machinery/door/airlock{
-	id_tag = "engi_toilet";
-	name = "Toilet"
-	},
-/turf/open/floor/plasteel{
-	icon_state = "freezerfloor"
-	},
+"deC" = (
+/turf/open/floor/plating,
 /area/space)
 "deD" = (
 /obj/machinery/button/door{
@@ -95987,10 +95981,16 @@
 /turf/open/floor/plasteel{
 	icon_state = "freezerfloor"
 	},
-/area/space)
-"deC" = (
-/turf/open/floor/plating,
-/area/space)
+/area/engine/break_room)
+"deE" = (
+/obj/machinery/door/airlock{
+	id_tag = "engi_toilet";
+	name = "Toilet"
+	},
+/turf/open/floor/plasteel{
+	icon_state = "freezerfloor"
+	},
+/area/engine/break_room)
 
 (1,1,1) = {"
 aaa
@@ -135916,7 +135916,7 @@ ajG
 ajG
 ajG
 ajG
-atr
+ajG
 azn
 aAo
 aBI
@@ -136163,17 +136163,17 @@ aaj
 aaj
 abx
 aen
-deC
-abz
-abz
-abz
+aen
+ajG
+ajG
+ajG
 alW
 aqq
 arR
 atw
 avd
 ave
-abz
+ajG
 ajG
 aAp
 aAy
@@ -136421,7 +136421,7 @@ aaa
 aaj
 aaa
 aaa
-abz
+ajG
 deD
 deE
 api
@@ -136677,10 +136677,10 @@ aaj
 aaj
 aaj
 aaj
-abz
-abz
-abz
-abz
+ajG
+ajG
+ajG
+ajG
 apj
 aqr
 arT
@@ -136934,7 +136934,7 @@ aaa
 aaa
 aaa
 aaj
-abz
+ajG
 akP
 amo
 anO
@@ -137191,7 +137191,7 @@ aaa
 aaa
 aaa
 aaj
-abz
+ajG
 akP
 amp
 anP
@@ -137448,7 +137448,7 @@ aaa
 aaa
 aaa
 aaj
-abz
+ajG
 akQ
 amq
 anQ
@@ -137456,7 +137456,7 @@ apm
 aqu
 arV
 atB
-ddY
+avi
 axJ
 axO
 avi
