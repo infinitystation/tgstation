@@ -206,13 +206,6 @@
 /turf/open/floor/plasteel/terror/necro/warnwhite/corner
 	icon_state = "warnwhitecorner"
 
-/turf/open/floor/plasteel/terror/necro/whitepurple
-	icon_state = "whitepurplefull"
-/turf/open/floor/plasteel/terror/necro/whitepurple/side
-	icon_state = "whitepurple"
-/turf/open/floor/plasteel/terror/necro/whitepurple/corner
-	icon_state = "whitepurplecorner"
-
 /turf/open/floor/plasteel/terror/necro/black
 	icon_state = "dark"
 	icon = 'icons/turf/infinity.dmi'
@@ -247,18 +240,12 @@
 /turf/open/floor/plasteel/terror/necro/blackvault/corner/outdoor
 	initial_gas_mix = "o2=14;n2=23;TEMP=300"
 
-/turf/open/floor/carpet/necro
-	baseturf = /turf/open/floor/plating/lava/smooth/lava_land_surface
-
 /turf/open/floor/plasteel/terror/necro/whiteblue
 	icon_state = "whitebluefull"
 /turf/open/floor/plasteel/terror/necro/whiteblue/side
 	icon_state = "whiteblue"
 /turf/open/floor/plasteel/terror/necro/whiteblue/corner
 	icon_state = "whitebluecorner"
-
-/turf/open/floor/plasteel/terror/necro/white
-	icon_state = "white"
 
 /turf/open/floor/plasteel/terror/necro/stairs
 	icon_state = "ramptop"
@@ -276,20 +263,8 @@
 	floor_tile = /obj/item/stack/tile/wood
 	broken_states = list("wood-broken", "wood-broken2", "wood-broken3", "wood-broken4", "wood-broken5", "wood-broken6", "wood-broken7")
 
-/turf/open/floor/plasteel/terror/necro/yellow
-	icon_state = "yellowfull"
-/turf/open/floor/plasteel/terror/necro/yellow/side
-	icon_state = "yellow"
-/turf/open/floor/plasteel/terror/necro/yellow/corner
-	icon_state = "yellowcorner"
-
-
-/turf/open/floor/plasteel/terror/necro/whiteyellow
-	icon_state = "whiteyellowfull"
-/turf/open/floor/plasteel/terror/necro/whiteyellow/side
-	icon_state = "whiteyellow"
-/turf/open/floor/plasteel/terror/necro/whiteyellow/corner
-	icon_state = "whiteyellowcorner"
+/turf/open/floor/plasteel/terror/necro/white
+	icon_state = "white"
 
 //City floors//
 
