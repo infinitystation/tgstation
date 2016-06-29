@@ -3440,6 +3440,7 @@
 /obj/structure/sign/goldenplaque{
 	pixel_y = 32
 	},
+/obj/item/weapon/storage/fancy/donut_box,
 /turf/open/floor/plasteel{
 	dir = 8;
 	icon_state = "vault";
@@ -4855,11 +4856,9 @@
 	dir = 4
 	},
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/glass_security{
-	aiControlDisabled = 1;
-	glass = 0;
+/obj/machinery/door/airlock/security{
 	name = "Execution Room";
-	req_access_txt = "63"
+	req_one_access_txt = "3"
 	},
 /turf/open/floor/plasteel/darkvault{
 	dir = 1;
@@ -5213,9 +5212,16 @@
 	},
 /area/security/dinner)
 "ajm" = (
-/obj/item/target/clown,
+/obj/structure/closet/crate{
+	icon_state = "crateopen";
+	opened = 1
+	},
+/obj/item/weapon/reagent_containers/spray/cleaner,
+/obj/item/weapon/reagent_containers/glass/bucket,
+/obj/item/weapon/mop,
+/obj/item/weapon/soap/homemade,
 /turf/open/floor/plating,
-/area/maintenance/fsmaint)
+/area/security/dinner)
 "ajn" = (
 /turf/closed/wall,
 /area/maintenance/fsmaint)
@@ -6684,26 +6690,19 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
 /turf/open/floor/plasteel/green/corner{
 	dir = 1
 	},
 /area/security/dinner)
 "alU" = (
 /obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/machinery/light{
+	icon_state = "tube1";
 	dir = 4
-	},
-/obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 5
 	},
 /turf/open/floor/plasteel,
 /area/security/dinner)
@@ -7683,12 +7682,25 @@
 	icon_state = "1-8";
 	tag = ""
 	},
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/open/floor/plasteel/green/side,
 /area/security/dinner)
 "anw" = (
-/obj/machinery/light{
-	icon_state = "tube1";
-	dir = 4
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 5
 	},
 /turf/open/floor/plasteel/green/side{
 	dir = 6
@@ -7696,18 +7708,21 @@
 /area/security/dinner)
 "anx" = (
 /obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
-	},
-/obj/structure/cable/yellow{
-	icon_state = "1-4";
-	d1 = 1;
-	d2 = 4
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 5
+	dir = 4
 	},
-/turf/open/floor/plating,
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/open/floor/plating{
+	dir = 8;
+	icon_state = "warnplate";
+	tag = ""
+	},
 /area/maintenance/fsmaint)
 "any" = (
 /obj/structure/disposalpipe/segment{
@@ -42039,8 +42054,14 @@
 /turf/open/floor/plating,
 /area/maintenance/fsmaint2)
 "bta" = (
-/turf/closed/wall/engi,
-/area/maintenance/fsmaint2)
+/obj/structure/closet/crate{
+	icon_state = "crateopen";
+	opened = 1
+	},
+/obj/item/weapon/storage/box/lights/mixed,
+/obj/item/weapon/storage/box/lights/mixed,
+/turf/open/floor/plating,
+/area/security/dinner)
 "btb" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/structure/cable/yellow{
@@ -57552,9 +57573,13 @@
 	},
 /area/ai_monitored/storage/satellite)
 "bTx" = (
-/obj/effect/spawner/structure/window/reinforced,
-/turf/closed/wall,
-/area/hallway/secondary/entry)
+/obj/machinery/door/airlock/glass_security{
+	name = "Storage";
+	req_access_txt = "63";
+	req_one_access_txt = "0"
+	},
+/turf/open/space,
+/area/security/dinner)
 "bTy" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
@@ -74018,18 +74043,14 @@
 /turf/open/floor/wood,
 /area/maintenance/asmaint)
 "cuI" = (
-/turf/open/floor/plasteel/stairsnew/wood1/state{
-	tag = "icon-wood_stairs2 (EAST)";
-	icon_state = "wood_stairs2";
+/turf/open/floor/plating,
+/area/security/dinner)
+"cuJ" = (
+/obj/machinery/light/small{
 	dir = 4
 	},
-/area/maintenance/asmaint)
-"cuJ" = (
-/obj/structure/mineral_door/wood{
-	name = "The Gobbetting Barmaid"
-	},
-/turf/open/floor/wood,
-/area/maintenance/asmaint)
+/turf/open/floor/plating,
+/area/security/dinner)
 "cuK" = (
 /obj/structure/table,
 /obj/item/weapon/hemostat,
@@ -74830,15 +74851,22 @@
 /turf/open/space,
 /area/space)
 "cvZ" = (
-/turf/open/floor/plasteel/stairsnew/wood1/state{
-	tag = "icon-wood_stairs2 (NORTHEAST)";
-	icon_state = "wood_stairs2";
-	dir = 5
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
-/area/maintenance/asmaint)
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
+	},
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/open/floor/plating,
+/area/maintenance/fsmaint)
 "cwa" = (
-/obj/structure/mineral_door/wood{
-	name = "The Gobbetting Barmaid"
+/obj/structure/mineral_door/wood/pyro{
+	dir = 8
 	},
 /turf/open/floor/wood{
 	icon_state = "wood-broken6"
@@ -95710,9 +95738,9 @@
 	},
 /obj/structure/chair,
 /obj/item/weapon/cigbutt,
-/obj/machinery/atmospherics/pipe/simple/cyan/visible{
-	dir = 10;
-	initialize_directions = 10
+/obj/machinery/atmospherics/pipe/manifold/cyan/visible{
+	dir = 1;
+	initialize_directions = 11
 	},
 /turf/open/floor/plating,
 /area/toxins/xenobiology)
@@ -95912,11 +95940,9 @@
 /turf/closed/wall/r_wall,
 /area/security/execution)
 "deq" = (
-/obj/machinery/door/airlock/glass_security{
-	aiControlDisabled = 1;
-	glass = 0;
+/obj/machinery/door/airlock/security{
 	name = "Morgue";
-	req_access_txt = "63"
+	req_one_access_txt = "3"
 	},
 /turf/open/floor/plasteel/black,
 /area/security/execution)
@@ -95984,12 +96010,11 @@
 /turf/open/floor/plasteel,
 /area/maintenance/Electrical_engineer)
 "deA" = (
-/obj/machinery/door/window/westleft{
-	dir = 4;
-	name = "Bridge Deliveries";
-	req_access_txt = "19"
+/obj/machinery/atmospherics/components/unary/vent_scrubber{
+	dir = 1;
+	on = 1
 	},
-/turf/closed/wall/r_wall,
+/turf/open/floor/plasteel,
 /area/security/warden)
 "deB" = (
 /obj/structure/tile_edge/stripe,
@@ -113115,9 +113140,9 @@ cog
 caJ
 cqS
 csn
+csj
 ctE
-cuI
-cvZ
+csj
 cxx
 cyQ
 czP
@@ -113372,8 +113397,8 @@ ckB
 caJ
 cqT
 cso
+cyQ
 caJ
-cuJ
 cwa
 caJ
 cyR
@@ -113630,7 +113655,7 @@ caJ
 caJ
 caJ
 caJ
-cfa
+caJ
 cfa
 caJ
 caJ
@@ -118956,7 +118981,7 @@ aaW
 alu
 amR
 aoq
-deA
+ajW
 aqW
 asD
 aul
@@ -127690,9 +127715,9 @@ abc
 aha
 ahd
 ahd
+bTx
 ahd
 alV
-ahd
 ahd
 ahd
 afY
@@ -127946,9 +127971,9 @@ afb
 abc
 ahb
 ahd
-afY
-ajn
-alW
+bta
+cuI
+aeX
 anx
 afY
 ajn
@@ -128204,10 +128229,10 @@ abc
 ahc
 ahd
 ajm
-akw
+cuJ
+aeX
+cvZ
 afY
-any
-aoV
 ajn
 afY
 afY
@@ -128460,9 +128485,9 @@ aaB
 aaR
 ahd
 ahd
-ajn
-ajn
-ajn
+aeX
+aeX
+aeX
 any
 aoW
 ajn
