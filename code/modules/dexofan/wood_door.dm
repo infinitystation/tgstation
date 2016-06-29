@@ -1,3 +1,11 @@
+/*/obj/item/device/key
+	name = "skeleton key"
+	desc = "It unlocks or locks doors."
+	icon = 'icons/obj/infinity_dexofan.dmi'
+	icon_state = "key"
+	item_state = "pen"
+	w_class = 1
+*/
 /obj/structure/mineral_door/wood/pyro
 	icon = 'icons/obj/infinity_dexofan.dmi'
 	icon_state = "wood"
@@ -7,6 +15,7 @@
 	closeSound = 'sound/effects/door_close.ogg'
 	burn_state = FLAMMABLE
 	burntime = 30
+	//var/locked = 0
 
 	Open()
 		isSwitchingStates = 1
