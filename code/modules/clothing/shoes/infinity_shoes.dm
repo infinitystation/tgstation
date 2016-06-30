@@ -70,3 +70,11 @@
 
 /obj/item/clothing/shoes/mime/biker
 	name = "Biker's shoes"
+
+/obj/item/clothing/shoes/giant
+	name = "giant boots"
+	desc = "This boots just a giant! Only for a true dads."
+	icon_state = "giant_sapog"
+	item_state = "giant_sapog"
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'

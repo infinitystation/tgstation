@@ -500,3 +500,16 @@
 	flags_inv = HIDEJUMPSUIT
 	allowed = list(/obj/item/weapon/disk, /obj/item/weapon/stamp, /obj/item/weapon/reagent_containers/food/drinks/flask, /obj/item/weapon/melee, /obj/item/weapon/storage/lockbox/medal, /obj/item/device/assembly/flash/handheld, /obj/item/weapon/storage/box/matches, /obj/item/weapon/lighter, /obj/item/clothing/mask/cigarette, /obj/item/weapon/storage/fancy/cigarettes, /obj/item/weapon/tank/internals/emergency_oxygen)
 
+/obj/item/clothing/suit/armor/giant
+	name = "giant armor"
+	desc = "Just a giant armor. For giants. Or dads.."
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon_state = "giant_armor"
+	item_state = "giant_armor"
+	body_parts_covered = CHEST|GROIN|ARMS|LEGS
+	armor = list(melee = 66, bullet = 50, laser = 48, energy = 33, bomb = 32, bio = 0, rad = 0)
+	flags_inv = HIDEJUMPSUIT
+	cold_protection = CHEST|GROIN|LEGS|ARMS
+	heat_protection = CHEST|GROIN|LEGS|ARMS
+	strip_delay = 80
