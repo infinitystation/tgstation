@@ -513,3 +513,14 @@
 	cold_protection = CHEST|GROIN|LEGS|ARMS
 	heat_protection = CHEST|GROIN|LEGS|ARMS
 	strip_delay = 80
+
+/obj/item/clothing/suit/sweater
+	name = "worn sweater"
+	desc = "The gray sweater, also look better with cup of coffee."
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	worn_icon = 'icons/mob/infinity_inriss.dmi' //Inriss, this sprite pretty good, thx.
+	icon_state = "sweater_striped_s"
+	item_state = "sweater_striped_s"
+	flags_inv = HIDEFACIALHAIR
+
+

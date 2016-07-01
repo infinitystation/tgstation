@@ -321,3 +321,13 @@
 	name = "Red Mini Underwear"
 	icon_state = "mini_red"
 	gender = FEMALE
+
+/datum/sprite_accessory/hair/shortflip
+	name = "Flippy Punk"
+	icon = 'icons/mob/more_hairs.dmi'
+	icon_state = "shortflip"
+
+/datum/sprite_accessory/hair/longemo_new
+	name = "Long Emo 2"
+	icon = 'icons/mob/more_hairs.dmi'
+	icon_state = "hair_longemo_new"

@@ -191,3 +191,13 @@
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR
 	flags = NODROP
 	dog_fashion = null
+
+/obj/item/clothing/head/skulltop //but they only for drone >:D
+	name = "skulltop"
+	desc = "A skulltop, best device for surfing in internet."
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	icon_state = "skulltop"
+	item_state = "skulltop"
+	flags_inv = HIDEHAIR
+
