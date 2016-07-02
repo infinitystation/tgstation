@@ -227,6 +227,9 @@
 /datum/action/item_action/switch_hud
 	name = "Switch HUD"
 
+/datum/action/item_action/music
+	name = "Enable Music Player"
+
 /datum/action/item_action/toggle_wings
 	name = "Toggle Wings"
 

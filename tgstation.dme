@@ -1109,6 +1109,7 @@
 #include "code\modules\dexofan\efficiency_zones.dm"
 #include "code\modules\dexofan\infinity_ladder.dm"
 #include "code\modules\dexofan\inflatable.dm"
+#include "code\modules\dexofan\mp3.dm"
 #include "code\modules\dexofan\wood_door.dm"
 #include "code\modules\emoji\emoji_parse.dm"
 #include "code\modules\events\_event.dm"

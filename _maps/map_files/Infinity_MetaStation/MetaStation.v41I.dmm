@@ -9079,7 +9079,7 @@
 /area/security/main)
 "apX" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
-/turf/closed/wall,
+/turf/closed/wall/r_wall,
 /area/security/dinner)
 "apY" = (
 /obj/machinery/door/firedoor,
@@ -9885,7 +9885,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
-/turf/closed/wall,
+/turf/closed/wall/r_wall,
 /area/security/east)
 "arr" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
@@ -11910,7 +11910,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
-/turf/closed/wall,
+/turf/closed/wall/r_wall,
 /area/security/east)
 "auG" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
@@ -17084,7 +17084,7 @@
 /area/security/east)
 "aCS" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
-/turf/closed/wall,
+/turf/closed/wall/r_wall,
 /area/security/detectives_office)
 "aCT" = (
 /obj/machinery/door/airlock/security{
@@ -17105,7 +17105,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 10
 	},
-/turf/closed/wall,
+/turf/closed/wall/r_wall,
 /area/security/east)
 "aCW" = (
 /obj/structure/disposalpipe/segment{
@@ -17495,7 +17495,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 9
 	},
-/turf/closed/wall,
+/turf/closed/wall/r_wall,
 /area/security/east)
 "aDy" = (
 /obj/machinery/camera/emp_proof{
@@ -18047,7 +18047,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 5
 	},
-/turf/closed/wall,
+/turf/closed/wall/r_wall,
 /area/security/detectives_office)
 "aEA" = (
 /obj/structure/rack,
@@ -96146,38 +96146,35 @@
 	icon_state = "freezerfloor"
 	},
 /area/engine/break_room)
-"deI" = (
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
-	dir = 4
+"deF" = (
+/obj/machinery/atmospherics/components/unary/vent_scrubber{
+	dir = 8;
+	on = 1
 	},
-/turf/open/floor/plasteel/red/side,
-/area/security/east)
-"deH" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 4
-	},
-/turf/open/floor/plasteel{
-	icon_state = "grimy"
-	},
+/turf/open/floor/plasteel,
 /area/security/east)
 "deG" = (
-/obj/structure/table/wood,
-/obj/item/weapon/cigbutt/cigarbutt{
-	pixel_x = 5;
-	pixel_y = -1
+/turf/closed/wall/r_wall,
+/area/maintenance/fsmaint)
+"deH" = (
+/obj/machinery/atmospherics/components/unary/vent_pump{
+	dir = 4;
+	on = 1
 	},
-/obj/item/weapon/phone{
-	desc = "Supposedly a direct line to NanoTrasen Central Command. It's not even plugged in.";
-	pixel_x = -3;
-	pixel_y = 3
-	},
-/turf/open/floor/plasteel{
-	icon_state = "grimy"
-	},
+/turf/open/floor/plasteel,
 /area/security/east)
-"deF" = (
-/turf/open/floor/plasteel{
-	icon_state = "grimy"
+"deI" = (
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/manifold/supply/hidden{
+	dir = 4;
+	initialize_directions = 13
+	},
+/turf/open/floor/plasteel/red/side{
+	dir = 4
 	},
 /area/security/east)
 
@@ -125828,14 +125825,14 @@ art
 axx
 ayS
 azW
-art
+ayS
 art
 aEx
 aCS
 aCS
 aCS
 aEz
-aCJ
+aBs
 aMr
 aNE
 aPs
@@ -126082,17 +126079,17 @@ aru
 asZ
 auJ
 auJ
-auJ
+deH
 atf
 auJ
-auJ
+deF
 auJ
 auJ
 aCT
 auJ
 aEy
 aEA
-aLb
+deG
 aMs
 aNF
 aNz
@@ -126339,7 +126336,7 @@ arv
 ate
 arr
 ata
-atc
+deI
 ayT
 aBu
 aBx
@@ -126591,22 +126588,22 @@ akr
 alQ
 ans
 aoQ
-aeX
-avU
+ahd
+avX
 arw
-avU
-avU
-avU
+avX
+avX
+avX
 auF
 azX
 arq
-avU
-avU
+avX
+avX
 arq
 aDv
 aIH
 aII
-aLb
+deG
 aLb
 aLb
 aLb
@@ -126858,12 +126855,12 @@ auG
 atd
 aCP
 aCR
-avU
+avX
 aCV
 aDx
-avU
-avU
-aLc
+avX
+avX
+deH
 aMu
 aNH
 aPu
@@ -127115,7 +127112,7 @@ auH
 aBw
 aCQ
 atd
-avU
+avX
 aoY
 aoZ
 ajn
@@ -127372,7 +127369,7 @@ axy
 azY
 aBv
 atd
-avU
+avX
 afY
 afY
 ajn
@@ -127623,13 +127620,13 @@ ahd
 deG
 ath
 auM
-avU
-avU
-avU
-avU
-avU
-avU
-avU
+avX
+avX
+avX
+avX
+avX
+avX
+avX
 aoW
 aoW
 ajn
@@ -127877,10 +127874,10 @@ ahd
 alV
 ahd
 ahd
-ajn
-ajn
-ajn
-ajn
+deG
+deG
+deG
+deG
 axA
 ayU
 ajn
