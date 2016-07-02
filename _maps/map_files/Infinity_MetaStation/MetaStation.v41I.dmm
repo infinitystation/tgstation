@@ -18338,16 +18338,18 @@
 	id = "Singularity";
 	name = "radiation shutters"
 	},
-/turf/open/floor/plasteel{
+/turf/open/floor/plating{
 	dir = 8;
-	icon_state = "warning"
+	icon_state = "warnplate";
+	tag = ""
 	},
 /area/engine/engineering)
 "aEY" = (
 /obj/structure/reagent_dispensers/watertank,
-/turf/open/floor/plasteel{
+/turf/open/floor/plating{
 	dir = 8;
-	icon_state = "warning"
+	icon_state = "warnplate";
+	tag = ""
 	},
 /area/engine/engineering)
 "aEZ" = (
@@ -19036,9 +19038,10 @@
 	icon_state = "4-8";
 	pixel_y = 0
 	},
-/turf/open/floor/plasteel{
+/turf/open/floor/plating{
 	dir = 8;
-	icon_state = "warning"
+	icon_state = "warnplate";
+	tag = ""
 	},
 /area/engine/engineering)
 "aGn" = (
@@ -19049,9 +19052,10 @@
 	d2 = 8;
 	icon_state = "0-8"
 	},
-/turf/open/floor/plasteel{
+/turf/open/floor/plating{
 	dir = 8;
-	icon_state = "warning"
+	icon_state = "warnplate";
+	tag = ""
 	},
 /area/engine/engineering)
 "aGo" = (
@@ -25605,10 +25609,7 @@
 /area/quartermaster/storage)
 "aSf" = (
 /obj/structure/table,
-/obj/item/weapon/paper_bin{
-	pixel_x = -3;
-	pixel_y = 7
-	},
+/obj/machinery/computer/stockexchange,
 /turf/open/floor/plasteel{
 	dir = 1;
 	icon_state = "brown"
@@ -26542,17 +26543,21 @@
 /area/quartermaster/storage)
 "aTG" = (
 /obj/structure/table,
-/obj/item/weapon/folder/yellow,
-/obj/item/weapon/pen{
-	pixel_x = 4;
-	pixel_y = 4
-	},
-/obj/item/weapon/pen/red,
 /obj/machinery/requests_console{
 	department = "Cargo Bay";
 	departmentType = 2;
 	pixel_x = 32;
 	pixel_y = 0
+	},
+/obj/item/weapon/paper_bin{
+	pixel_x = -3;
+	pixel_y = 7
+	},
+/obj/item/weapon/folder/yellow,
+/obj/item/weapon/pen/red,
+/obj/item/weapon/pen{
+	pixel_x = 4;
+	pixel_y = 4
 	},
 /turf/open/floor/plasteel,
 /area/quartermaster/storage)
@@ -27148,9 +27153,10 @@
 	id = "Singularity";
 	name = "radiation shutters"
 	},
-/turf/open/floor/plasteel{
+/turf/open/floor/plating{
 	dir = 8;
-	icon_state = "warning"
+	icon_state = "warnplate";
+	tag = ""
 	},
 /area/engine/engineering)
 "aUI" = (
@@ -28255,9 +28261,10 @@
 	d2 = 8;
 	icon_state = "0-8"
 	},
-/turf/open/floor/plasteel{
+/turf/open/floor/plating{
 	dir = 8;
-	icon_state = "warning"
+	icon_state = "warnplate";
+	tag = ""
 	},
 /area/engine/engineering)
 "aWq" = (
@@ -29682,9 +29689,10 @@
 /area/engine/engineering)
 "aYY" = (
 /obj/structure/reagent_dispensers/fueltank,
-/turf/open/floor/plasteel{
+/turf/open/floor/plating{
 	dir = 8;
-	icon_state = "warning"
+	icon_state = "warnplate";
+	tag = ""
 	},
 /area/engine/engineering)
 "aYZ" = (
