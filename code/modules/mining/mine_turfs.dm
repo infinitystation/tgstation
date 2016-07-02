@@ -264,7 +264,7 @@
 /turf/open/floor/plating/asteroid/airless/cave/volcanic
 	mob_spawn_list = list(/mob/living/simple_animal/hostile/asteroid/goldgrub = 10, /mob/living/simple_animal/hostile/asteroid/goliath/beast = 50, /mob/living/simple_animal/hostile/asteroid/basilisk/watcher = 40, /mob/living/simple_animal/hostile/asteroid/hivelord/legion = 30,
 		/mob/living/simple_animal/hostile/spawner/lavaland = 2, /mob/living/simple_animal/hostile/spawner/lavaland/goliath = 3, /mob/living/simple_animal/hostile/spawner/lavaland/legion = 3, \
-		/mob/living/simple_animal/hostile/megafauna/dragon = 0, /mob/living/simple_animal/hostile/megafauna/bubblegum = 0, /mob/living/simple_animal/hostile/megafauna/colossus = 0)
+		 /mob/living/simple_animal/hostile/megafauna/bubblegum = 0)
 
 	turf_type = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
 	initial_gas_mix = "o2=14;n2=23;TEMP=300"
@@ -660,7 +660,7 @@
 	mineralSpawnChanceList = list(
 		/turf/closed/mineral/uranium/volcanic = 5, /turf/closed/mineral/diamond/volcanic = 1, /turf/closed/mineral/gold/volcanic = 10,
 		/turf/closed/mineral/silver/volcanic = 12, /turf/closed/mineral/plasma/volcanic = 20, /turf/closed/mineral/iron/volcanic = 40,
-		/turf/closed/mineral/gibtonite/volcanic = 0, /turf/open/floor/plating/asteroid/airless/cave/volcanic = 1, /turf/closed/mineral/bscrystal/volcanic = 1)
+		/turf/open/floor/plating/asteroid/airless/cave/volcanic = 1, /turf/closed/mineral/bscrystal/volcanic = 1)
 
 /turf/closed/mineral/random/high_chance/volcanic
 	environment_type = "basalt"
