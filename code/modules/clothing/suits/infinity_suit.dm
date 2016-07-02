@@ -519,8 +519,8 @@
 	desc = "The gray sweater, also look better with cup of coffee."
 	icon = 'icons/obj/clothing/infinity_work.dmi'
 	worn_icon = 'icons/mob/infinity_inriss.dmi' //Inriss, this sprite pretty good, thx.
-	icon_state = "sweater_striped_s"
-	item_state = "sweater_striped_s"
+	icon_state = "sweater_stripped_s"
+	item_state = "sweater_stripped_s"
 	flags_inv = HIDEFACIALHAIR
 
 
