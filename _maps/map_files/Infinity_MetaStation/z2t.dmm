@@ -19967,12 +19967,27 @@
 	poweralm = 0;
 	requires_power = 0
 	})
+"aXh" = (
+/obj/structure/table,
+/obj/item/stack/medical/gauze,
+/obj/item/stack/medical/bruise_pack,
+/obj/item/stack/medical/ointment,
+/turf/open/floor/plasteel{
+	icon_state = "bot";
+	dir = 1
+	},
+/area/space)
 "aXi" = (
 /obj/structure/chair/comfy/shuttle/black{
 	dir = 1
 	},
 /turf/open/floor/plasteel/whitebot,
 /area/centcom/evac)
+"aXj" = (
+/turf/open/floor/plasteel/neutral/corner{
+	dir = 8
+	},
+/area/space)
 "aXk" = (
 /turf/open/floor/plasteel/whitebot,
 /obj/machinery/washing_machine,
@@ -20217,6 +20232,9 @@
 	poweralm = 0;
 	requires_power = 0
 	})
+"aXF" = (
+/turf/open/floor/plasteel/neutral/corner,
+/area/space)
 "aXG" = (
 /obj/machinery/door/window/northright{
 	base_state = "right";
@@ -20265,6 +20283,29 @@
 	dir = 4
 	},
 /area/shuttle/escape)
+"aXL" = (
+/obj/structure/closet/crate/medical{
+	name = "medical crate"
+	},
+/obj/item/weapon/storage/firstaid/regular,
+/obj/item/weapon/storage/firstaid/o2{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/item/weapon/storage/firstaid/toxin{
+	pixel_x = -4;
+	pixel_y = 3
+	},
+/mob/living/simple_animal/bot/medbot{
+	name = "\improper emergency medibot";
+	pixel_x = -3;
+	pixel_y = 2
+	},
+/turf/open/floor/plasteel{
+	icon_state = "bot";
+	dir = 1
+	},
+/area/space)
 "aXM" = (
 /obj/structure/table/reinforced,
 /turf/open/floor/plasteel/shuttle/red/syndicate,
@@ -20422,6 +20463,14 @@
 	poweralm = 0;
 	requires_power = 0
 	})
+"aXZ" = (
+/obj/machinery/recharge_station,
+/obj/structure/window/reinforced,
+/turf/open/floor/plasteel{
+	icon_state = "bot";
+	dir = 1
+	},
+/area/shuttle/escape)
 "aYa" = (
 /obj/machinery/door/airlock/shuttle{
 	name = "Cockpit";
@@ -20822,6 +20871,13 @@
 /turf/open/floor/plasteel/neutral{
 	dir = 4;
 	icon_state = "whiteblue"
+	},
+/area/shuttle/escape)
+"aYQ" = (
+/obj/machinery/vending/cigarette,
+/turf/open/floor/plasteel{
+	icon_state = "bot";
+	dir = 1
 	},
 /area/shuttle/escape)
 "aYR" = (
@@ -22440,12 +22496,35 @@
 	},
 /turf/open/floor/plasteel/neutral/corner,
 /area/shuttle/escape)
+"bbH" = (
+/obj/machinery/vending/snack,
+/turf/open/floor/plasteel{
+	icon_state = "bot";
+	dir = 1
+	},
+/area/shuttle/escape)
 "bbI" = (
 /obj/structure/chair/comfy/shuttle{
 	dir = 4
 	},
 /turf/open/floor/plasteel/neutral{
 	icon_state = "whiteblue"
+	},
+/area/shuttle/escape)
+"bbJ" = (
+/obj/machinery/vending/cola,
+/turf/open/floor/plasteel{
+	icon_state = "bot";
+	dir = 1
+	},
+/area/shuttle/escape)
+"bbK" = (
+/obj/structure/closet/crate/bin{
+	pixel_y = 6
+	},
+/turf/open/floor/plasteel{
+	icon_state = "bot";
+	dir = 1
 	},
 /area/shuttle/escape)
 "bbL" = (
@@ -22484,8 +22563,26 @@
 	dir = 4
 	},
 /area/shuttle/escape)
+"bbP" = (
+/obj/structure/chair/comfy/shuttle{
+	dir = 8
+	},
+/turf/open/floor/plasteel,
+/area/shuttle/escape)
 "bbQ" = (
 /turf/open/floor/carpet,
+/area/shuttle/escape)
+"bbR" = (
+/obj/structure/window/shuttle,
+/obj/structure/grille,
+/turf/open/floor/plating,
+/area/shuttle/escape)
+"bbS" = (
+/obj/machinery/suit_storage_unit/standard_unit,
+/turf/open/floor/plasteel{
+	dir = 2;
+	icon_state = "bot"
+	},
 /area/shuttle/escape)
 "bbT" = (
 /obj/structure/chair/comfy/shuttle{
@@ -22518,6 +22615,25 @@
 /turf/open/floor/plasteel{
 	dir = 1;
 	icon_state = "whitepurple"
+	},
+/area/shuttle/escape)
+"bbV" = (
+/obj/structure/window/shuttle,
+/obj/machinery/door/poddoor/shutters{
+	dir = 8;
+	id = "Emergency_Shuttle_Shutters";
+	name = "Emergency Shuttle shutters"
+	},
+/obj/structure/grille,
+/turf/open/floor/plating,
+/area/shuttle/escape)
+"bbW" = (
+/obj/machinery/door/airlock/glass_command{
+	name = "Shuttle E.V.A Storage"
+	},
+/turf/open/floor/plasteel{
+	icon_state = "delivery";
+	name = "floor"
 	},
 /area/shuttle/escape)
 "bbX" = (
@@ -49071,11 +49187,11 @@ aBi
 aBA
 anm
 aab
-aab
-aab
-aab
 arM
 ase
+asg
+ase
+bbV
 asg
 ase
 aYd
@@ -49328,11 +49444,11 @@ asc
 aCl
 anm
 aab
-aab
-aab
-aab
 aKZ
 asf
+arz
+aYQ
+aYe
 arz
 aWS
 aYc
@@ -49585,11 +49701,11 @@ aBj
 aBz
 anm
 aab
-aab
-aab
-aab
 aTf
 asf
+arz
+bbH
+aYe
 arz
 aWU
 aYc
@@ -49842,12 +49958,12 @@ anm
 anm
 anm
 aab
-aab
-aab
-arM
+atu
 ase
-ase
-ash
+arV
+bbJ
+aYe
+arz
 aWT
 aYc
 aYS
@@ -50098,12 +50214,12 @@ aab
 aab
 aab
 aab
-aab
-aab
 arM
 arV
 aUa
 aUA
+bbK
+aYe
 ast
 aXp
 aYt
@@ -50355,12 +50471,12 @@ aab
 aab
 aab
 aab
-aab
-aab
 arz
-aIm
+aXh
+aYe
+aKb
 aTY
-aKc
+aYe
 aVH
 aWV
 aYe
@@ -50612,10 +50728,10 @@ aab
 aab
 aab
 aab
-aab
-aab
 aDx
-aKc
+aXj
+aKb
+aUb
 aUb
 aTY
 aKb
@@ -50869,10 +50985,10 @@ aab
 aab
 aab
 aab
-aab
-aab
 arP
-aKb
+aXF
+aKc
+aUb
 aUb
 aUt
 aKc
@@ -51126,12 +51242,12 @@ aab
 aab
 aab
 aab
-aab
-aab
 arz
-aKE
+aXL
+aYe
+aKc
 aUt
-aKb
+aYe
 aVJ
 aXK
 aYu
@@ -51383,12 +51499,12 @@ aab
 aab
 aab
 aab
-aab
-aab
 asd
 arW
 aUs
-aUB
+aXZ
+bbP
+aYe
 asy
 ase
 ase
@@ -51641,11 +51757,11 @@ aab
 aab
 aab
 aab
-aab
-aab
-asd
+atu
 ase
-ase
+asg
+bbR
+bbW
 ash
 asV
 aYv
@@ -51898,11 +52014,11 @@ aab
 aab
 aab
 aab
-aab
-aab
-aab
 aUy
 asf
+arz
+aYe
+aYe
 arz
 asQ
 aYv
@@ -52155,11 +52271,11 @@ aab
 aab
 aab
 aab
-aab
-aab
-aab
 aUy
 asf
+arz
+bbS
+bbS
 arz
 aYb
 aYP
@@ -52412,10 +52528,10 @@ aab
 aab
 aab
 aab
-aab
-aab
-aab
 asd
+ase
+asz
+ase
 ase
 asz
 ase

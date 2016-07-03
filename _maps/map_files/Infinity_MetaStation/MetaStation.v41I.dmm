@@ -4508,7 +4508,7 @@
 	pixel_x = -27;
 	pixel_y = 0
 	},
-/obj/structure/closet,
+/obj/structure/bar,
 /turf/open/floor/plasteel{
 	dir = 8;
 	icon_state = "vault";
@@ -5919,6 +5919,10 @@
 /obj/machinery/light{
 	dir = 8
 	},
+/mob/living/simple_animal/chicken{
+	name = "Misha";
+	real_name = "Misha Mavashi"
+	},
 /turf/open/floor/plasteel{
 	icon_state = "dark"
 	},
@@ -6722,7 +6726,9 @@
 	density = 0;
 	pixel_y = 26
 	},
-/turf/open/floor/wood,
+/turf/open/floor/plasteel{
+	icon_state = "grimy"
+	},
 /area/engine/break_room)
 "alX" = (
 /obj/machinery/door/airlock/maintenance{
@@ -8632,7 +8638,9 @@
 	},
 /area/maintenance/aft)
 "api" = (
-/turf/open/floor/wood,
+/turf/open/floor/plasteel{
+	icon_state = "grimy"
+	},
 /area/engine/break_room)
 "apj" = (
 /obj/machinery/airalarm{
@@ -8643,18 +8651,24 @@
 	scrub_N2O = 0;
 	scrub_Toxins = 0
 	},
-/turf/open/floor/wood,
+/turf/open/floor/plasteel{
+	icon_state = "grimy"
+	},
 /area/engine/break_room)
 "apk" = (
 /turf/open/floor/carpet,
 /area/engine/break_room)
 "apl" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/turf/open/floor/wood,
+/turf/open/floor/plasteel{
+	icon_state = "grimy"
+	},
 /area/engine/break_room)
 "apm" = (
 /obj/structure/bookcase/manuals/engineering,
-/turf/open/floor/wood,
+/turf/open/floor/plasteel{
+	icon_state = "grimy"
+	},
 /area/engine/break_room)
 "apn" = (
 /obj/machinery/atmospherics/components/unary/vent_pump{
@@ -9319,7 +9333,9 @@
 	pixel_x = -24
 	},
 /obj/structure/closet/wardrobe/engineering_yellow,
-/turf/open/floor/wood,
+/turf/open/floor/plasteel{
+	icon_state = "grimy"
+	},
 /area/engine/break_room)
 "aqr" = (
 /obj/structure/chair/comfy/sofa/corner/right/brown,
@@ -9340,7 +9356,9 @@
 	tag = "icon-plant-21";
 	icon_state = "plant-21"
 	},
-/turf/open/floor/wood,
+/turf/open/floor/plasteel{
+	icon_state = "grimy"
+	},
 /area/engine/break_room)
 "aqv" = (
 /obj/effect/spawner/structure/window/reinforced,
@@ -10156,7 +10174,9 @@
 /obj/item/weapon/storage/firstaid/toxin{
 	pixel_y = 3
 	},
-/turf/open/floor/wood,
+/turf/open/floor/plasteel{
+	icon_state = "grimy"
+	},
 /area/engine/break_room)
 "arS" = (
 /obj/structure/disposalpipe/segment{
@@ -10189,7 +10209,9 @@
 /obj/machinery/reagentgrinder{
 	pixel_y = 12
 	},
-/turf/open/floor/wood,
+/turf/open/floor/plasteel{
+	icon_state = "grimy"
+	},
 /area/engine/break_room)
 "arW" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
@@ -10998,15 +11020,15 @@
 	},
 /area/security/east)
 "ath" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 10
-	},
 /obj/machinery/firealarm{
 	dir = 4;
 	pixel_x = 28
 	},
 /obj/machinery/light/small{
 	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 10
 	},
 /turf/open/floor/plasteel{
 	icon_state = "grimy"
@@ -11159,7 +11181,9 @@
 	icon_state = "0-4"
 	},
 /obj/structure/disposalpipe/segment,
-/turf/open/floor/wood,
+/turf/open/floor/plasteel{
+	icon_state = "grimy"
+	},
 /area/engine/break_room)
 "atx" = (
 /obj/structure/cable/yellow{
@@ -11226,7 +11250,9 @@
 /obj/machinery/light_switch{
 	pixel_x = 23
 	},
-/turf/open/floor/wood,
+/turf/open/floor/plasteel{
+	icon_state = "grimy"
+	},
 /area/engine/break_room)
 "atC" = (
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden{
@@ -11995,6 +12021,11 @@
 	dir = 8;
 	network = list("SS13")
 	},
+/obj/machinery/atmospherics/components/unary/vent_pump{
+	dir = 1;
+	on = 1
+	},
+/obj/item/weapon/pen,
 /turf/open/floor/plasteel{
 	icon_state = "grimy"
 	},
@@ -12203,7 +12234,9 @@
 /obj/structure/disposalpipe/trunk{
 	dir = 1
 	},
-/turf/open/floor/wood,
+/turf/open/floor/plasteel{
+	icon_state = "grimy"
+	},
 /area/engine/break_room)
 "ave" = (
 /obj/structure/closet/secure_closet/freezer{
@@ -12215,7 +12248,7 @@
 /obj/effect/spawner/lootdrop/food,
 /obj/effect/spawner/lootdrop/food,
 /turf/open/floor/plasteel{
-	icon_state = "bar"
+	icon_state = "grimy"
 	},
 /area/engine/break_room)
 "avf" = (
@@ -12948,10 +12981,11 @@
 	},
 /area/maintenance/Electrical_engineer)
 "awt" = (
-/turf/open/floor/plasteel{
-	icon_state = "bar"
+/obj/machinery/light/small{
+	dir = 8
 	},
-/area/engine/break_room)
+/turf/open/floor/plating,
+/area/maintenance/aft)
 "awu" = (
 /obj/structure/disposalpipe/segment{
 	dir = 1;
@@ -12962,7 +12996,7 @@
 	on = 1
 	},
 /turf/open/floor/plasteel{
-	icon_state = "bar"
+	icon_state = "grimy"
 	},
 /area/engine/break_room)
 "awv" = (
@@ -12975,7 +13009,9 @@
 	icon_state = "pipe-j1";
 	dir = 4
 	},
-/turf/open/floor/wood,
+/turf/open/floor/plasteel{
+	icon_state = "grimy"
+	},
 /area/engine/break_room)
 "aww" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
@@ -12983,7 +13019,9 @@
 	dir = 2;
 	icon_state = "pipe-c"
 	},
-/turf/open/floor/wood,
+/turf/open/floor/plasteel{
+	icon_state = "grimy"
+	},
 /area/engine/break_room)
 "awx" = (
 /obj/effect/spawner/structure/window/reinforced,
@@ -13833,7 +13871,7 @@
 	throwforce = 2
 	},
 /turf/open/floor/plasteel{
-	icon_state = "bar"
+	icon_state = "grimy"
 	},
 /area/engine/break_room)
 "axL" = (
@@ -13853,7 +13891,7 @@
 	pixel_y = 6
 	},
 /turf/open/floor/plasteel{
-	icon_state = "bar"
+	icon_state = "grimy"
 	},
 /area/engine/break_room)
 "axM" = (
@@ -13871,7 +13909,9 @@
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment,
-/turf/open/floor/wood,
+/turf/open/floor/plasteel{
+	icon_state = "grimy"
+	},
 /area/engine/break_room)
 "axN" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden,
@@ -13894,7 +13934,9 @@
 	req_access_txt = "0";
 	specialfunctions = 4
 	},
-/turf/open/floor/wood,
+/turf/open/floor/plasteel{
+	icon_state = "grimy"
+	},
 /area/engine/break_room)
 "axO" = (
 /obj/structure/disposalpipe/segment{
@@ -18051,10 +18093,6 @@
 /area/security/detectives_office)
 "aEA" = (
 /obj/structure/rack,
-/obj/machinery/flasher{
-	id = "holdingflash";
-	pixel_x = -25
-	},
 /obj/item/clothing/under/color/orange{
 	pixel_x = 1;
 	pixel_y = -1
@@ -20395,14 +20433,13 @@
 	},
 /area/security/detectives_office)
 "aIH" = (
-/obj/structure/chair{
-	dir = 8
-	},
 /obj/machinery/flasher{
-	id = "holdingflash";
-	pixel_x = 25
+	id = "holdingcell";
+	name = "floor-mounted flasher"
 	},
-/turf/open/floor/plasteel,
+/turf/open/floor/plasteel{
+	icon_state = "bot"
+	},
 /area/security/east)
 "aII" = (
 /obj/structure/chair{
@@ -21225,7 +21262,9 @@
 /obj/machinery/airalarm{
 	pixel_y = 23
 	},
-/turf/open/floor/wood,
+/turf/open/floor/plasteel{
+	icon_state = "grimy"
+	},
 /area/crew_quarters/sleep)
 "aKe" = (
 /obj/machinery/atmospherics/components/unary/vent_pump{
@@ -21240,7 +21279,9 @@
 	name = "xeno_spawn";
 	pixel_x = -1
 	},
-/turf/open/floor/wood,
+/turf/open/floor/plasteel{
+	icon_state = "grimy"
+	},
 /area/crew_quarters/sleep)
 "aKf" = (
 /obj/structure/bed/double/right,
@@ -21251,7 +21292,9 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
-/turf/open/floor/wood,
+/turf/open/floor/plasteel{
+	icon_state = "grimy"
+	},
 /area/crew_quarters/sleep)
 "aKg" = (
 /obj/structure/table,
@@ -21930,7 +21973,9 @@
 /obj/item/weapon/restraints/handcuffs/fake/kinky,
 /obj/item/weapon/restraints/handcuffs/fake/kinky,
 /obj/item/weapon/melee/chainofcommand/whip,
-/turf/open/floor/wood,
+/turf/open/floor/plasteel{
+	icon_state = "grimy"
+	},
 /area/crew_quarters/sleep)
 "aLq" = (
 /obj/item/device/radio/intercom{
@@ -21940,7 +21985,9 @@
 	pixel_x = 0;
 	pixel_y = -28
 	},
-/turf/open/floor/wood,
+/turf/open/floor/plasteel{
+	icon_state = "grimy"
+	},
 /area/crew_quarters/sleep)
 "aLr" = (
 /obj/structure/bed/double/left,
@@ -21952,7 +21999,9 @@
 	pixel_x = 29;
 	pixel_y = 1
 	},
-/turf/open/floor/wood,
+/turf/open/floor/plasteel{
+	icon_state = "grimy"
+	},
 /area/crew_quarters/sleep)
 "aLs" = (
 /obj/structure/closet,
@@ -27598,6 +27647,7 @@
 	pixel_y = -27
 	},
 /obj/structure/cable/yellow,
+/obj/machinery/vending/eatimat,
 /turf/open/floor/plasteel{
 	icon_state = "vault";
 	dir = 1
@@ -96185,6 +96235,38 @@
 	dir = 4
 	},
 /area/security/east)
+"deM" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 4
+	},
+/turf/open/floor/plasteel/red/side,
+/area/security/east)
+"deL" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
+	},
+/turf/open/floor/plasteel{
+	icon_state = "grimy"
+	},
+/area/security/east)
+"deK" = (
+/obj/item/weapon/phone{
+	desc = "Supposedly a direct line to NanoTrasen Central Command. It's not even plugged in.";
+	pixel_x = -3;
+	pixel_y = 3
+	},
+/obj/item/weapon/cigbutt/cigarbutt{
+	pixel_x = 5;
+	pixel_y = -1
+	},
+/obj/structure/table/wood,
+/turf/open/floor/plasteel/grimy,
+/area/maintenance/fsmaint)
+"deJ" = (
+/turf/open/floor/plasteel{
+	icon_state = "grimy"
+	},
+/area/security/east)
 
 (1,1,1) = {"
 aaa
@@ -125057,7 +125139,7 @@ aoK
 afR
 ark
 asZ
-deI
+deM
 avX
 axv
 ayQ
@@ -125314,7 +125396,7 @@ aoL
 afR
 ark
 asZ
-deI
+deM
 avX
 axw
 ayR
@@ -125571,7 +125653,7 @@ aoM
 afR
 ark
 asZ
-deI
+deM
 avX
 avX
 avX
@@ -126352,7 +126434,7 @@ atc
 atc
 aCU
 auJ
-auJ
+aIH
 auJ
 aMY
 aMt
@@ -126609,7 +126691,7 @@ avX
 avX
 arq
 aDv
-aIH
+aII
 aII
 deG
 aLb
@@ -127368,8 +127450,8 @@ alT
 anv
 aoT
 ahd
-deF
-deH
+deJ
+deL
 ars
 atb
 axz
@@ -127625,7 +127707,7 @@ alU
 anw
 aoU
 ahd
-deG
+deK
 ath
 auM
 avX
@@ -135342,7 +135424,7 @@ aws
 axI
 dev
 aAk
-aqp
+azn
 aAy
 aEN
 aGd
@@ -135854,7 +135936,7 @@ atv
 aqp
 aqp
 aqp
-aqp
+awt
 aAn
 aBH
 aAy
@@ -136111,7 +136193,7 @@ ajG
 ajG
 ajG
 ajG
-azn
+ajG
 aAo
 aBI
 aAy
@@ -136366,8 +136448,8 @@ aqq
 arR
 atw
 avd
+api
 ave
-ajG
 ajG
 aAp
 aAy
@@ -136623,7 +136705,7 @@ apk
 arS
 atx
 apk
-awt
+api
 axK
 ajG
 aAq
