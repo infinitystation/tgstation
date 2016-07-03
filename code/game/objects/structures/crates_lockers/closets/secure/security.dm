@@ -105,7 +105,7 @@
 	new /obj/item/device/radio/headset/headset_sec(src)
 	new /obj/item/clothing/head/warden(src)
 	new /obj/item/clothing/head/beret/sec/navywarden(src)
-	new /obj/item/clothing/suit/armor/vest/warden/alt(src)
+	new /obj/item/clothing/suit/armor/vest/warden(src)
 	new /obj/item/clothing/under/rank/warden/navyblue(src)
 	new /obj/item/clothing/under/warden_corporate(src)
 	new /obj/item/clothing/glasses/hud/security/sunglasses(src)
