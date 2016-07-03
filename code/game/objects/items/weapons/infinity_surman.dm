@@ -134,3 +134,8 @@
 /obj/item/weapon/reagent_containers/food/drinks/cup/death
 	desc = "Every gulp like a last."
 	icon_state = "death_cup"
+
+/obj/item/weapon/reagent_containers/food/drinks/cup/terran
+	desc = "To the last drop! Like in the fight, but to the last bullet!"
+	icon = 'code/modules/surman_nymary/surman_object.dmi'
+	icon_state = "terran_cup"
