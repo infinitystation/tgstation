@@ -1082,7 +1082,7 @@
 	dheight = 0;
 	dir = 1;
 	dwidth = 4;
-	height = 22;
+	height = 23;
 	id = "emergency_transit";
 	width = 14
 	},
@@ -11900,7 +11900,7 @@
 /obj/docking_port/stationary{
 	dir = 2;
 	dwidth = 6;
-	height = 22;
+	height = 23;
 	id = "emergency_away";
 	name = "Centcom";
 	width = 14
@@ -11909,7 +11909,7 @@
 	dheight = 0;
 	dir = 2;
 	dwidth = 6;
-	height = 22;
+	height = 23;
 	width = 14
 	},
 /turf/open/floor/plasteel{

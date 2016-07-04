@@ -94370,7 +94370,7 @@
 	dheight = 0;
 	dir = 2;
 	dwidth = 6;
-	height = 22;
+	height = 23;
 	id = "emergency_home";
 	name = "emergency evac bay";
 	width = 14
@@ -96275,63 +96275,6 @@
 	},
 /turf/open/space,
 /area/space)
-"deU" = (
-/turf/closed/wall/r_wall,
-/area/crew_quarters/courtroom)
-"deT" = (
-/obj/machinery/light/small{
-	dir = 1;
-	pixel_x = 0
-	},
-/obj/structure/toilet{
-	dir = 4
-	},
-/obj/item/weapon/kitchen/fork,
-/turf/open/floor/plasteel{
-	icon_state = "freezerfloor"
-	},
-/area/security/mass_cell)
-"deS" = (
-/obj/machinery/atmospherics/components/unary/vent_pump{
-	dir = 4;
-	on = 1
-	},
-/turf/closed/wall/r_wall,
-/area/security/east)
-"deR" = (
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
-/obj/machinery/door/window/northright{
-	name = "Unisex Bathroom"
-	},
-/turf/open/floor/plasteel,
-/area/security/mass_cell)
-"deQ" = (
-/obj/machinery/door/window/northright{
-	name = "Basketball Ñourt"
-	},
-/turf/open/floor/plasteel/neutral/side{
-	dir = 1
-	},
-/area/security/mass_cell)
-"deP" = (
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/turf/open/floor/plasteel/neutral/side{
-	dir = 1
-	},
-/area/security/mass_cell)
-"deO" = (
-/obj/machinery/firealarm{
-	dir = 8;
-	pixel_x = -24
-	},
-/turf/open/floor/plasteel/yellow/side{
-	tag = "icon-yellow (EAST)";
-	icon_state = "yellow";
-	dir = 4
-	},
-/area/security/mass_cell)
 "deN" = (
 /obj/machinery/light{
 	dir = 1
@@ -96355,6 +96298,63 @@
 	tag = "icon-vault (WEST)"
 	},
 /area/security/warden)
+"deO" = (
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -24
+	},
+/turf/open/floor/plasteel/yellow/side{
+	tag = "icon-yellow (EAST)";
+	icon_state = "yellow";
+	dir = 4
+	},
+/area/security/mass_cell)
+"deP" = (
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/turf/open/floor/plasteel/neutral/side{
+	dir = 1
+	},
+/area/security/mass_cell)
+"deQ" = (
+/obj/machinery/door/window/northright{
+	name = "Basketball Ñourt"
+	},
+/turf/open/floor/plasteel/neutral/side{
+	dir = 1
+	},
+/area/security/mass_cell)
+"deR" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/obj/machinery/door/window/northright{
+	name = "Unisex Bathroom"
+	},
+/turf/open/floor/plasteel,
+/area/security/mass_cell)
+"deS" = (
+/obj/machinery/atmospherics/components/unary/vent_pump{
+	dir = 4;
+	on = 1
+	},
+/turf/closed/wall/r_wall,
+/area/security/east)
+"deT" = (
+/obj/machinery/light/small{
+	dir = 1;
+	pixel_x = 0
+	},
+/obj/structure/toilet{
+	dir = 4
+	},
+/obj/item/weapon/kitchen/fork,
+/turf/open/floor/plasteel{
+	icon_state = "freezerfloor"
+	},
+/area/security/mass_cell)
+"deU" = (
+/turf/closed/wall/r_wall,
+/area/crew_quarters/courtroom)
 
 (1,1,1) = {"
 aaa
