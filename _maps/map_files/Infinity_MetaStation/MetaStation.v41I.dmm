@@ -5667,6 +5667,9 @@
 /obj/structure/table/reinforced,
 /obj/item/weapon/storage/toolbox/drone,
 /obj/item/weapon/crowbar/red,
+/obj/machinery/light{
+	dir = 1
+	},
 /turf/open/floor/plasteel{
 	dir = 8;
 	icon_state = "vault";
@@ -16236,12 +16239,12 @@
 /area/security/west)
 "aBB" = (
 /obj/effect/spawner/structure/window/reinforced,
-/obj/structure/cable/yellow{
-	d2 = 4;
-	icon_state = "0-4"
-	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
+	},
+/obj/structure/cable/yellow{
+	d2 = 2;
+	icon_state = "0-2"
 	},
 /turf/open/floor/plating,
 /area/security/mass_cell)
@@ -17982,13 +17985,10 @@
 /area/security/west)
 "aEz" = (
 /obj/effect/spawner/structure/window/reinforced,
-/obj/structure/cable/yellow{
-	d2 = 4;
-	icon_state = "0-4"
-	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
+/obj/structure/cable/yellow,
 /turf/open/floor/plating,
 /area/security/mass_cell)
 "aEA" = (
@@ -49769,8 +49769,8 @@
 	d2 = 2;
 	icon_state = "0-2"
 	},
-/obj/structure/table/wood,
-/obj/item/clothing/glasses/monocle,
+/obj/structure/easel,
+/obj/item/weapon/canvas/twentythreeXtwentythree,
 /turf/open/floor/carpet,
 /area/crew_quarters/theatre)
 "bFM" = (
@@ -55792,6 +55792,7 @@
 /obj/item/clothing/glasses/regular/hipster{
 	name = "Hipster Glasses"
 	},
+/obj/item/clothing/glasses/monocle,
 /turf/open/floor/carpet,
 /area/crew_quarters/theatre)
 "bQh" = (
@@ -96276,9 +96277,6 @@
 /turf/open/space,
 /area/space)
 "deN" = (
-/obj/machinery/light{
-	dir = 1
-	},
 /obj/structure/table/reinforced,
 /obj/machinery/recharger,
 /obj/machinery/power/apc{
@@ -96333,12 +96331,10 @@
 /turf/open/floor/plasteel,
 /area/security/mass_cell)
 "deS" = (
-/obj/machinery/atmospherics/components/unary/vent_pump{
-	dir = 4;
-	on = 1
-	},
-/turf/closed/wall/r_wall,
-/area/security/east)
+/obj/effect/spawner/structure/window/reinforced,
+/obj/structure/cable/yellow,
+/turf/open/floor/plating,
+/area/security/mass_cell)
 "deT" = (
 /obj/machinery/light/small{
 	dir = 1;
@@ -96355,6 +96351,14 @@
 "deU" = (
 /turf/closed/wall/r_wall,
 /area/crew_quarters/courtroom)
+"deV" = (
+/obj/effect/spawner/structure/window/reinforced,
+/obj/structure/cable/yellow{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/turf/open/floor/plating,
+/area/security/mass_cell)
 
 (1,1,1) = {"
 aaa
@@ -119321,9 +119325,9 @@ awd
 awd
 awd
 awd
-aAk
+deV
 aDd
-aAk
+deS
 awd
 awd
 awd
@@ -127038,7 +127042,7 @@ aGo
 aHM
 arG
 arG
-deS
+arG
 aNc
 aOo
 aQb
