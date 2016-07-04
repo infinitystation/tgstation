@@ -334,5 +334,6 @@
 
 /datum/sprite_accessory/hair/harleyhair
 	name = "Harley Quinn Hair"
+	icon_state = "harley_hair"
 	icon = 'icons/mob/more_hairs.dmi'
-	icon_state = "harleyhair"
+	gender = FEMALE
