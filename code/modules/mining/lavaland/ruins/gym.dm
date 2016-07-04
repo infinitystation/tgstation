@@ -101,9 +101,9 @@
 	desc = "You want to crow when you look at it."
 	icon = 'goon/icons/obj/fitness.dmi'
 	icon_state = "bar"
-	density = 1
+	density = 0
 	anchored = 1
-
+	layer = WALL_OBJ_LAYER
 /obj/structure/bar/attack_hand(mob/user as mob)
 	if(in_use)
 		user << "Its already in use - wait a bit."
