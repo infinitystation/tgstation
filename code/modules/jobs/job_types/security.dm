@@ -150,7 +150,7 @@ Detective
 	ears = /obj/item/device/radio/headset/headset_sec/alt
 	uniform = /obj/item/clothing/under/rank/det
 	shoes = /obj/item/clothing/shoes/sneakers/brown
-	suit = /obj/item/clothing/suit/det_suit
+	suit = /obj/item/clothing/suit/storage/det_suit
 	gloves = /obj/item/clothing/gloves/color/black
 	head = /obj/item/clothing/head/det_hat
 	l_pocket = /obj/item/toy/crayon/white
