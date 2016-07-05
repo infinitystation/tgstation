@@ -1520,6 +1520,11 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
+/obj/machinery/camera/motion{
+	c_tag = "Armory - Internal";
+	dir = 1;
+	network = list("SS13")
+	},
 /turf/open/floor/plasteel/vault{
 	dir = 6
 	},
@@ -1533,11 +1538,6 @@
 	pixel_y = -24
 	},
 /obj/machinery/light,
-/obj/machinery/camera/motion{
-	c_tag = "Armory - Internal";
-	dir = 1;
-	network = list("SS13")
-	},
 /obj/structure/cable/yellow{
 	icon_state = "0-4";
 	d2 = 4
@@ -1578,13 +1578,6 @@
 /obj/item/weapon/shield/riot{
 	pixel_x = 3;
 	pixel_y = -3
-	},
-/obj/machinery/button/door{
-	id = "armory";
-	name = "Armory Shutters";
-	pixel_x = 28;
-	pixel_y = 0;
-	req_access_txt = "3"
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /turf/open/floor/plasteel/vault{
@@ -2127,6 +2120,9 @@
 	d2 = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/machinery/door/poddoor/preopen{
+	id = "armory_lock"
+	},
 /turf/open/floor/plating,
 /area/security/armory)
 "adU" = (
@@ -2149,6 +2145,9 @@
 	d2 = 8;
 	icon_state = "2-8"
 	},
+/obj/machinery/door/poddoor/preopen{
+	id = "armory_lock"
+	},
 /turf/open/floor/plasteel/darkvault{
 	dir = 1;
 	icon = 'icons/turf/infinity.dmi';
@@ -2162,6 +2161,9 @@
 	d2 = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/obj/machinery/door/poddoor/preopen{
+	id = "armory_lock"
+	},
 /turf/open/floor/plating,
 /area/security/armory)
 "adW" = (
@@ -5650,6 +5652,13 @@
 	pixel_x = 5;
 	pixel_y = -3;
 	req_access_txt = "0"
+	},
+/obj/machinery/button/door{
+	id = "armory_lock";
+	name = "Armory Lockdown";
+	pixel_x = -5;
+	pixel_y = 6;
+	req_access_txt = "3"
 	},
 /turf/open/floor/plasteel{
 	dir = 8;
@@ -17372,6 +17381,9 @@
 	lootcount = 4;
 	name = "4maintenance loot spawner"
 	},
+/obj/machinery/light/small{
+	dir = 8
+	},
 /turf/open/floor/plating,
 /area/maintenance/fsmaint)
 "aDz" = (
@@ -21390,9 +21402,9 @@
 	},
 /area/crew_quarters/toilet)
 "aKy" = (
-/obj/effect/spawner/lootdrop/maintenance{
-	lootcount = 4;
-	name = "4maintenance loot spawner"
+/obj/machinery/door/airlock{
+	id_tag = "Toilet2";
+	name = "Unit 2"
 	},
 /turf/open/floor/plasteel{
 	icon_state = "freezerfloor"
@@ -26861,6 +26873,13 @@
 /obj/item/weapon/pen{
 	pixel_x = 4;
 	pixel_y = 4
+	},
+/obj/machinery/button/door{
+	id = "cargo_lock";
+	name = "Cargo Lockdown";
+	pixel_x = 24;
+	pixel_y = 24;
+	req_access_txt = "41"
 	},
 /turf/open/floor/plasteel,
 /area/quartermaster/storage)
@@ -35500,6 +35519,9 @@
 "bhY" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/fulltile,
+/obj/machinery/door/poddoor/shutters/preopen{
+	id = "cargo_lock"
+	},
 /turf/open/floor/plating,
 /area/quartermaster/sorting)
 "bhZ" = (
@@ -35511,6 +35533,9 @@
 	dir = 2;
 	forwards = 2;
 	id = "packageSort2"
+	},
+/obj/machinery/door/poddoor/shutters/preopen{
+	id = "cargo_lock"
 	},
 /turf/open/floor/plasteel/loadingarea,
 /area/quartermaster/sorting)
@@ -35600,6 +35625,10 @@
 	pixel_y = 7
 	},
 /obj/item/weapon/pen,
+/obj/machinery/door/poddoor/shutters/preopen{
+	dir = 4;
+	id = "cargo_lock"
+	},
 /turf/open/floor/plasteel,
 /area/quartermaster/sorting)
 "bih" = (
@@ -36345,6 +36374,11 @@
 /obj/structure/plasticflaps{
 	opacity = 0
 	},
+/obj/machinery/door/poddoor/shutters/preopen{
+	dir = 8;
+	id = "cargo_del";
+	name = "shutters"
+	},
 /turf/open/floor/plating,
 /area/quartermaster/sorting)
 "bjx" = (
@@ -36419,6 +36453,10 @@
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
+	},
+/obj/machinery/door/poddoor/shutters/preopen{
+	dir = 4;
+	id = "cargo_lock"
 	},
 /turf/open/floor/plating,
 /area/quartermaster/sorting)
@@ -37397,12 +37435,12 @@
 	},
 /area/maintenance/fpmaint2)
 "blh" = (
-/obj/effect/landmark{
-	name = "blobstart"
+/obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/poddoor/shutters/preopen{
+	id = "cargo_lock"
 	},
-/obj/machinery/space_heater,
 /turf/open/floor/plating,
-/area/maintenance/fpmaint2)
+/area/quartermaster/sorting)
 "bli" = (
 /obj/machinery/door/airlock/maintenance{
 	name = "Mailroom Maintenance";
@@ -37434,6 +37472,13 @@
 /obj/machinery/light{
 	icon_state = "tube1";
 	dir = 4
+	},
+/obj/machinery/button/door{
+	id = "cargo_del";
+	name = "Conveyor Lockdown";
+	pixel_x = 24;
+	pixel_y = 6;
+	req_access_txt = "48;50"
 	},
 /turf/open/floor/plasteel/warning{
 	dir = 1
@@ -37489,6 +37534,10 @@
 /area/quartermaster/sorting)
 "blr" = (
 /obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/poddoor/shutters/preopen{
+	dir = 4;
+	id = "cargo_lock"
+	},
 /turf/open/floor/plating,
 /area/quartermaster/sorting)
 "bls" = (
@@ -38445,9 +38494,13 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 10
 	},
+/obj/machinery/space_heater,
+/obj/effect/landmark{
+	name = "blobstart"
+	},
 /turf/open/floor/plating{
-	icon_state = "warnplate";
-	dir = 4
+	tag = "icon-panelscorched";
+	icon_state = "panelscorched"
 	},
 /area/maintenance/fpmaint2)
 "bnc" = (
@@ -38615,11 +38668,6 @@
 	dir = 4
 	},
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/glass_mining{
-	name = "Cargo Office";
-	req_access_txt = "0";
-	req_one_access_txt = "48;50"
-	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
@@ -38627,6 +38675,10 @@
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
+	},
+/obj/machinery/door/airlock/mining{
+	name = "Cargo Office";
+	req_one_access_txt = "48;50"
 	},
 /turf/open/floor/plasteel{
 	icon_state = "delivery";
@@ -41936,6 +41988,9 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
+/obj/machinery/door/poddoor/shutters/preopen{
+	id = "cargo_lock"
+	},
 /turf/open/floor/plating,
 /area/quartermaster/sorting)
 "bsR" = (
@@ -41948,12 +42003,18 @@
 	req_access_txt = "50"
 	},
 /obj/effect/spawner/lootdrop/maintenance,
+/obj/machinery/door/poddoor/shutters/preopen{
+	id = "cargo_lock"
+	},
 /turf/open/floor/plasteel/bot,
 /area/quartermaster/sorting)
 "bsS" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/fulltile,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/machinery/door/poddoor/shutters/preopen{
+	id = "cargo_lock"
+	},
 /turf/open/floor/plating,
 /area/quartermaster/sorting)
 "bsT" = (
@@ -41962,6 +42023,9 @@
 /obj/machinery/door/window{
 	req_one_access_txt = "32;19;47;48;50"
 	},
+/obj/machinery/door/poddoor/shutters/preopen{
+	id = "cargo_lock"
+	},
 /turf/open/floor/plasteel{
 	icon_state = "dark"
 	},
@@ -41969,6 +42033,9 @@
 "bsU" = (
 /obj/structure/disposalpipe/segment,
 /obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/poddoor/shutters/preopen{
+	id = "cargo_lock"
+	},
 /turf/open/floor/plating,
 /area/quartermaster/sorting)
 "bsV" = (
@@ -66168,6 +66235,15 @@
 	d2 = 8;
 	icon_state = "2-8"
 	},
+/obj/machinery/button/door{
+	desc = "A remote control switch for the security shutters.";
+	id = "sbMed";
+	name = "Shutters Control";
+	normaldoorcontrol = 0;
+	pixel_x = 24;
+	pixel_y = 24;
+	req_access_txt = "63"
+	},
 /turf/open/floor/plasteel{
 	icon_state = "red";
 	dir = 4
@@ -66181,6 +66257,10 @@
 /obj/structure/cable/yellow{
 	icon_state = "0-8";
 	d2 = 8
+	},
+/obj/machinery/door/poddoor/shutters/preopen{
+	dir = 4;
+	id = "sbMed"
 	},
 /turf/open/floor/plating,
 /area/security/checkpoint/medical)
@@ -67399,6 +67479,10 @@
 /obj/structure/cable/yellow{
 	icon_state = "0-8";
 	d2 = 8
+	},
+/obj/machinery/door/poddoor/shutters/preopen{
+	dir = 4;
+	id = "sbMed"
 	},
 /turf/open/floor/plating,
 /area/security/checkpoint/medical)
@@ -69074,6 +69158,10 @@
 /obj/machinery/door/firedoor,
 /obj/item/weapon/reagent_containers/glass/bottle/epinephrine,
 /obj/item/weapon/reagent_containers/syringe,
+/obj/machinery/door/poddoor/shutters/preopen{
+	dir = 4;
+	id = "postMed"
+	},
 /turf/open/floor/plasteel{
 	icon_state = "whitebluefull"
 	},
@@ -69963,6 +70051,15 @@
 	scrub_N2O = 0;
 	scrub_Toxins = 0
 	},
+/obj/machinery/button/door{
+	desc = "A remote control switch for the medbay shutters.";
+	id = "postMed";
+	name = "Medbay Shutters Control";
+	normaldoorcontrol = 0;
+	pixel_x = 24;
+	pixel_y = -24;
+	req_access_txt = "5"
+	},
 /turf/open/floor/plasteel{
 	dir = 6;
 	icon_state = "whiteblue"
@@ -69974,6 +70071,10 @@
 /obj/structure/table/reinforced,
 /obj/machinery/door/firedoor,
 /obj/item/weapon/reagent_containers/food/drinks/britcup,
+/obj/machinery/door/poddoor/shutters/preopen{
+	dir = 4;
+	id = "postMed"
+	},
 /turf/open/floor/plasteel{
 	icon_state = "whitebluefull"
 	},
@@ -72172,6 +72273,7 @@
 	dir = 4;
 	initialize_directions = 13
 	},
+/obj/structure/chair,
 /turf/open/floor/plasteel{
 	icon_state = "dark"
 	},
@@ -72193,6 +72295,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 6
 	},
+/obj/structure/chair,
 /turf/open/floor/plasteel{
 	icon_state = "dark"
 	},
@@ -79294,6 +79397,10 @@
 /area/medical/genetics)
 "cCO" = (
 /obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/poddoor/shutters/preopen{
+	dir = 4;
+	id = "genMed"
+	},
 /turf/open/floor/plating,
 /area/medical/genetics)
 "cCP" = (
@@ -79958,6 +80065,13 @@
 /obj/effect/landmark/start{
 	name = "Geneticist"
 	},
+/obj/machinery/button/door{
+	id = "genMed";
+	name = "genetics shutters control";
+	pixel_x = 26;
+	pixel_y = -26;
+	req_access_txt = "9"
+	},
 /turf/open/floor/plasteel{
 	icon_state = "blue";
 	dir = 4
@@ -79976,6 +80090,10 @@
 /obj/machinery/door/window/southleft{
 	dir = 4;
 	name = "Outer Window"
+	},
+/obj/machinery/door/poddoor/shutters/preopen{
+	dir = 4;
+	id = "genMed"
 	},
 /turf/open/floor/plating,
 /area/medical/genetics)
@@ -112667,7 +112785,7 @@ aqT
 auc
 bhX
 bjr
-blh
+ccQ
 bnb
 bpe
 bqO
@@ -115755,7 +115873,7 @@ bln
 bnn
 bpn
 bqY
-blr
+blh
 buG
 bwY
 bzj
@@ -128577,7 +128695,7 @@ amf
 axW
 age
 amf
-aCe
+ahl
 aDz
 apk
 aCf
