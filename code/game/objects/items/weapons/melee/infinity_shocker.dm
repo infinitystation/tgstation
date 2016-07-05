@@ -8,8 +8,8 @@
 	righthand_file = 'icons/mob/inhands/infinity_obj_right.dmi'
 	force = 0
 	throwforce = 0
-	stunforce = 5
-	hitcost = 1000
+	stunforce = 6
+	hitcost = 1250
 	w_class = 2
 	attack_verb = list("shocked")
 	slot_flags = SLOT_BELT
@@ -52,9 +52,3 @@ obj/item/weapon/melee/baton/shocker/baton_stun(mob/living/L, mob/user)
 	add_logs(user, L, "shocked")
 	return 1
 
-/obj/item/weapon/melee/baton/shocker/examine(mob/user)
-	..()
-	if(bcell)
-		user <<"<span class='notice'>The shocker is [round(bcell.percent())]% charged.</span>"
-	else
-		user <<"<span class='warning'>The shocker does not have a power source installed.</span>"
