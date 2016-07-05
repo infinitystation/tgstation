@@ -37852,6 +37852,7 @@
 	pixel_y = 1
 	},
 /obj/item/weapon/folder/black,
+/obj/item/clothing/ears/earmuffs/mp3,
 /turf/open/floor/carpet,
 /area/crew_quarters/captain_quarters)
 "blQ" = (
@@ -96415,10 +96416,6 @@
 	},
 /area/security/warden)
 "deO" = (
-/obj/machinery/firealarm{
-	dir = 8;
-	pixel_x = -24
-	},
 /turf/open/floor/plasteel/yellow/side{
 	tag = "icon-yellow (EAST)";
 	icon_state = "yellow";
