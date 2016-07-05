@@ -32,7 +32,7 @@
 	new /obj/item/device/multitool/multimeter(src)
 	new /obj/item/weapon/door_remote/chief_engineer(src)
 	new /obj/item/weapon/pipe_dispenser(src)
-	new /obj/item/weapon/melee/baton/shocker(src)
+	new /obj/item/weapon/melee/baton/shocker/loaded(src)
 
 /obj/structure/closet/secure_closet/engineering_electrical
 	name = "electrical supplies locker"

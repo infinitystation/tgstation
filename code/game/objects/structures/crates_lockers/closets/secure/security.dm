@@ -29,7 +29,7 @@
 	new /obj/item/weapon/restraints/handcuffs/cable/zipties(src)
 	new /obj/item/weapon/gun/energy/gun(src)
 	new /obj/item/weapon/door_remote/captain(src)
-	new /obj/item/weapon/melee/baton/shocker(src)
+	new /obj/item/weapon/melee/baton/shocker/loaded(src)
 
 
 /obj/structure/closet/secure_closet/hop
@@ -55,7 +55,7 @@
 	new /obj/item/weapon/gun/energy/gun(src)
 	new /obj/item/clothing/tie/petcollar(src)
 	new /obj/item/weapon/door_remote/civillian(src)
-	new /obj/item/weapon/melee/baton/shocker(src)
+	new /obj/item/weapon/melee/baton/shocker/loaded(src)
 
 
 /obj/structure/closet/secure_closet/hos
@@ -91,7 +91,7 @@
 	new /obj/item/device/flashlight/seclite(src)
 	new /obj/item/clothing/head/HoS/beret/corporate(src)
 	new /obj/item/weapon/pinpointer(src)
-	new /obj/item/weapon/melee/baton/shocker(src)
+	new /obj/item/weapon/melee/baton/shocker/loaded(src)
 
 
 /obj/structure/closet/secure_closet/warden
