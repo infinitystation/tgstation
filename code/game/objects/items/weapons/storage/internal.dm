@@ -31,7 +31,6 @@
 //doing it without the ability to call another proc's parent, really.
 /obj/item/weapon/storage/internal/proc/handle_mousedrop(mob/user as mob, obj/over_object as obj)
 	if (ishuman(user)) //so monkeys can take off their backpacks -- Urist
-
 		if (istype(user.loc,/obj/mecha)) // stops inventory actions in a mech
 			return 0
 
@@ -49,13 +48,25 @@
 			return 0
 
 		if (!( user.restrained() ) && !( user.stat ))
-			switch(over_object.name)
+			/*switch(over_object.name)
 				if("r_hand")
 					user.unEquip(master_item)
 					user.put_in_r_hand(master_item)
 				if("l_hand")
 					user.unEquip(master_item)
 					user.put_in_l_hand(master_item)
+					*/
+			if(istype(over_object, /obj/screen/inventory/hand))
+				var/obj/screen/inventory/hand/H = over_object
+				if(!user.unEquip(user.unEquip(master_item)))
+					return
+				switch(H.slot_id)
+					if(slot_r_hand)
+						//user.unEquip(master_item)
+						user.put_in_r_hand(master_item)
+					if(slot_l_hand)
+						//user.unEquip(master_item)
+						user.put_in_l_hand(master_item)
 			master_item.add_fingerprint(user)
 			return 0
 	return 0
