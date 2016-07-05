@@ -74,7 +74,7 @@
 	allowed = list(/obj/item/weapon/kitchen)
 
 //Detective
-/obj/item/clothing/suit/det_suit
+/obj/item/clothing/suit/storage/det_suit
 	name = "trenchcoat"
 	desc = "An 18th-century multi-purpose trenchcoat. Someone who wears this means serious business."
 	icon_state = "detective"
@@ -86,7 +86,7 @@
 	cold_protection = CHEST|GROIN|LEGS|ARMS
 	heat_protection = CHEST|GROIN|LEGS|ARMS
 
-/obj/item/clothing/suit/det_suit/grey
+/obj/item/clothing/suit/storage/det_suit/grey
 	name = "noir trenchcoat"
 	desc = "A hard-boiled private investigator's grey trenchcoat."
 	icon_state = "greydet"
