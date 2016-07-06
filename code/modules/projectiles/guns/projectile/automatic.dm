@@ -257,6 +257,14 @@
 		if(prob(95))
 			magazine.stored_ammo -= ammo
 
+/obj/item/weapon/gun/projectile/automatic/m90/m90_sc
+
+/obj/item/weapon/gun/projectile/automatic/m90/m90_sc/New()
+	..()
+	for(var/ammo in magazine.stored_ammo)
+		if(prob(25))
+			magazine.stored_ammo -= ammo
+
 
 // Bulldog shotgun //
 

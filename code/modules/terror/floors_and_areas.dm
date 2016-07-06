@@ -52,8 +52,8 @@
 /area/mine/bravo
 	name = "Post Bravo"
 
-/area/engine/break_room
-	name = "Engineering Break Room"
+/area/engine/rest_room
+	name = "Engineering Rest Room"
 	icon_state = "yellow"
 
 /area/CP
@@ -122,6 +122,10 @@
 /area/security/punishment
 	name = "Punishment room"
 	icon_state = "sec_prison"
+
+/area/ai_monitored/storage/AIlobby
+	name = "AI Satellite Lobby"
+	icon_state = "storage"
 
 ///Flors///
 

@@ -50,6 +50,7 @@
 	new_spawn << "<b>Drag the corpses of men and beasts to your nest. It will absorb them to create more of your kind. Glory to the Necropolis!</b>"
 	if(ishuman(new_spawn))
 		var/mob/living/carbon/human/H = new_spawn
+		H.mind.AddSpell(new /obj/effect/proc_holder/spell/self/thrall_vision(null))
 		H.underwear = "Nude"
 		H.update_body()
 
