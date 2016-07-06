@@ -150,6 +150,7 @@ var/next_external_rsc = 0
 		preferences_datums[ckey] = prefs
 	prefs.last_ip = address				//these are gonna be used for banning
 	prefs.last_id = computer_id			//these are gonna be used for banning
+	sethotkeys(1)						//set hoykeys from preferences (from_pref = 1)
 
 	if(IsBanPrisoned(src.key, src.address, src.computer_id))
 		src.banprisoned = 1

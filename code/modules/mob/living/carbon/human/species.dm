@@ -857,11 +857,9 @@
 						H.emote("collapse")
 					if(prob(15))
 						if(!( H.hair_style == "Shaved") || !(H.hair_style == "Bald") || (HAIR in specflags))
-							H << "<span class='danger'>¬аши волосы стали выпадать клочьями...<span>"
-							spawn(50)
-								H.facial_hair_style = "Shaved"
-								H.hair_style = "Bald"
-								H.update_hair()
+							H << "<span class='danger'>Your hair starts to \
+								fall out in clumps...<span>"
+							addtimer(src, "go_bald", 50, TRUE, H)
 
 				if(75 to 100)
 					if(prob(1))
@@ -871,6 +869,11 @@
 						H.domutcheck()
 		return 0
 	return 1
+
+/datum/species/proc/go_bald(mob/living/carbon/human/H)
+	H.facial_hair_style = "Shaved"
+	H.hair_style = "Bald"
+	H.update_hair()
 
 ////////////////
 // MOVE SPEED //

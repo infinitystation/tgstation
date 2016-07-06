@@ -70,7 +70,15 @@
 		return
 	if(production_time > world.time)
 		return
-	production_time = world.time + SLAB_PRODUCTION_TIME
+	var/servants = 0
+	var/production_slowdown = 0
+	for(var/mob/living/M in living_mob_list)
+		if(is_servant_of_ratvar(M) && (ishuman(M) || issilicon(M)))
+			servants++
+	if(servants > 5)
+		servants -= 5
+		production_slowdown = min(SLAB_SERVANT_SLOWDOWN * servants, SLAB_SLOWDOWN_MAXIMUM) //SLAB_SERVANT_SLOWDOWN additional seconds for each servant above 5, up to SLAB_SLOWDOWN_MAXIMUM
+	production_time = world.time + SLAB_PRODUCTION_TIME + production_slowdown
 	var/mob/living/L
 	if(isliving(loc))
 		L = loc
@@ -204,10 +212,10 @@
 	user << "<i>Total construction value: </i>[clockwork_construction_value]"
 	user << "<i>Total tinkerer's caches: </i>[clockwork_caches]"
 	user << "<i>Total tinkerer's daemons: </i>[clockwork_daemons] ([servants / 5 < clockwork_daemons ? "<span class='boldannounce'>DISABLED: Too few servants (5 servants per daemon)!</span>" : "<font color='green'><b>Functioning Normally</b></font>"])"
-	user << "<i>Nezbere: </i>[!clockwork_generals_invoked["nezbere"] <= world.time ? "<font color='green'><b>Ready</b></font>" : "<span class='boldannounce'>Invoked</span>"]"
-	user << "<i>Sevtug: </i>[!clockwork_generals_invoked["sevtug"] <= world.time ? "<font color='green'><b>Ready</b></font>" : "<span class='boldannounce'>Invoked</span>"]"
-	user << "<i>Nzcrentr: </i>[!clockwork_generals_invoked["nzcrentr"] <= world.time ? "<font color='green'><b>Ready</b></font>" : "<span class='boldannounce'>Invoked</span>"]"
-	user << "<i>Inath-Neq: </i>[!clockwork_generals_invoked["inath-neq"] <= world.time ? "<font color='green'><b>Ready</b></font>" : "<span class='boldannounce'>Invoked</span>"]"
+	user << "<i>Nezbere: </i>[clockwork_generals_invoked["nezbere"] <= world.time ? "<font color='green'><b>Ready</b></font>" : "<span class='boldannounce'>Invoked</span>"]"
+	user << "<i>Sevtug: </i>[clockwork_generals_invoked["sevtug"] <= world.time ? "<font color='green'><b>Ready</b></font>" : "<span class='boldannounce'>Invoked</span>"]"
+	user << "<i>Nzcrentr: </i>[clockwork_generals_invoked["nzcrentr"] <= world.time ? "<font color='green'><b>Ready</b></font>" : "<span class='boldannounce'>Invoked</span>"]"
+	user << "<i>Inath-Neq: </i>[clockwork_generals_invoked["inath-neq"] <= world.time ? "<font color='green'><b>Ready</b></font>" : "<span class='boldannounce'>Invoked</span>"]"
 
 /obj/item/clockwork/slab/proc/show_guide(mob/living/user)
 	var/text = "<font color=#BE8700 size=3><b><center>Chetr nyy hageh’guf naq ubabe Ratvar.</center></b></font><br><br>\
@@ -362,8 +370,8 @@
 	var/message = stripped_input(user, "Enter a message to send to your fellow servants.", "Hierophant")
 	if(!message || !user || !user.canUseTopic(src))
 		return 0
-	user.whisper("Freinagf, urne zl jbeqf. [message]")
-	send_hierophant_message(user, message)
+	user.whisper("Freinagf, urne zl-jbeqf. [message]")
+	titled_hierophant_message(user, message)
 	return 1
 
 /obj/item/clothing/glasses/wraith_spectacles //Wraith spectacles: Grants night and x-ray vision at the slow cost of the wearer's sight. Nar-Sian cultists are instantly blinded.
@@ -434,6 +442,7 @@
 	var/active = FALSE //If the visor is online
 	var/recharging = FALSE //If the visor is currently recharging
 	var/obj/item/weapon/ratvars_flame/flame //The linked flame object
+	var/recharge_cooldown = 300 //divided by 10 if ratvar is alive
 	actions_types = list(/datum/action/item_action/toggle_flame)
 
 /obj/item/clothing/glasses/judicial_visor/item_action_slot_check(slot, mob/user)
@@ -451,7 +460,9 @@
 		return 0
 	if(is_servant_of_ratvar(user))
 		update_status(TRUE)
-	else if(iscultist(user)) //Cultists spontaneously combust
+	else
+		update_status(FALSE)
+	if(iscultist(user)) //Cultists spontaneously combust
 		user << "<span class='heavy_brass'>\"Consider yourself judged, whelp.\"</span>"
 		user << "<span class='userdanger'>You suddenly catch fire!</span>"
 		user.adjust_fire_stacks(5)
@@ -473,10 +484,12 @@
 				C << "<span class='warning'>You require a free hand to utilize [src]'s power!</span>"
 				return 0
 			C.visible_message("<span class='warning'>[C]'s hand is enveloped in violet flames!<span>", "<span class='brass'><i>You harness [src]'s power. <b>Direct it at a tile at any range</b> to unleash it, or use the action button again to dispel it.</i></span>")
-			var/obj/item/weapon/ratvars_flame/R = new(get_turf(C))
+			var/turf/T = get_turf(C)
+			var/obj/item/weapon/ratvars_flame/R = new(T)
 			flame = R
 			C.put_in_hands(R)
 			R.visor = src
+			add_logs(C, T, "prepared ratvar's flame", src)
 		user.update_action_buttons_icon()
 
 /obj/item/clothing/glasses/judicial_visor/proc/update_status(change_to)
@@ -547,13 +560,15 @@
 				continue
 			V.recharging = TRUE //To prevent exploiting multiple visors to bypass the cooldown
 			V.update_status()
-			addtimer(V, "recharge_visor", ratvar_awakens ? 60 : 600, FALSE, user)
+			addtimer(V, "recharge_visor", (ratvar_awakens ? visor.recharge_cooldown*0.1 : visor.recharge_cooldown) * 2, FALSE, user)
 		clockwork_say(user, "Xarry, urn'guraf!")
 		user.visible_message("<span class='warning'>The flame in [user]'s hand rushes to [target]!</span>", "<span class='heavy_brass'>You direct [visor]'s power to [target]. You must wait for some time before doing this again.</span>")
-		new/obj/effect/clockwork/judicial_marker(get_turf(target), user)
+		var/turf/T = get_turf(target)
+		new/obj/effect/clockwork/judicial_marker(T, user)
+		add_logs(user, T, "used ratvar's flame to create a judicial marker")
 		user.update_action_buttons_icon()
 		user.update_inv_glasses()
-		addtimer(visor, "recharge_visor", ratvar_awakens ? 30 : 300, FALSE, user)//Cooldown is reduced by 10x if Ratvar is up
+		addtimer(visor, "recharge_visor", ratvar_awakens ? visor.recharge_cooldown*0.1 : visor.recharge_cooldown, FALSE, user)//Cooldown is reduced by 10x if Ratvar is up
 		qdel(src)
 		return 1
 

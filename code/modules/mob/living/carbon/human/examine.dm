@@ -311,7 +311,9 @@
 
 		if(getorgan(/obj/item/organ/brain))
 			if(istype(src,/mob/living/carbon/human/interactive))
-				msg += "<span class='deadsay'>[t_He], видимо, болеет автоматизмом, [t_his] глаза потускнели и [t_his] рот слегка разинут.</span>\n"
+				var/mob/living/carbon/human/interactive/auto = src
+				if(auto.showexaminetext)
+					msg += "<span class='deadsay'>[t_He], видимо, болеет автоматизмом, [t_his] глаза потускнели и [t_his] рот слегка разинут.</span>\n"
 			else if(!key)
 				msg += "<span class='deadsay'>[t_He] страдает кататонией. Стрессы жизни в глубоком космосе доканали [t_his]. Спасение вр&#255;д ли поможет.</span>\n"
 			else if(!client)

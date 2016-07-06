@@ -131,3 +131,13 @@
 	armor = list(melee = 10, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0)
 	strip_delay = 50
 	alt_covers_chest = 1
+
+/*
+ *Blueshirt
+ */
+
+/obj/item/clothing/under/rank/security/blueshirt
+	desc = "I'm a little busy right now, Calhoun."
+	icon_state = "blueshift"
+	item_state = "blueshift"
+	item_color = "blueshift"

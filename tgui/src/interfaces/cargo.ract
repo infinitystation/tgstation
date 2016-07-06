@@ -1,4 +1,4 @@
-<script>
+﻿<script>
   component.exports = {
     computed: {
       tabs () {
@@ -25,7 +25,9 @@
   {{#if data.loan && !data.requestonly}}
     <ui-section label='Заем'>
       {{#if !data.loan_dispatched}}
-        <ui-button action='loan'>Занять шаттл</ui-button>
+        <ui-button
+         state='{{data.away && data.docked ? null : "disabled"}}'
+         action='loan'>Занять шаттл</ui-button>
       {{else}}
         <span class='bad'>Шаттл занят Центкому</span>
       {{/if}}
