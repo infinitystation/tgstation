@@ -9081,7 +9081,7 @@
 	height = 22;
 	id = "syndicate";
 	name = "syndicate infiltrator";
-	travelDir = 180;
+	port_angle = 180;
 	width = 17
 	},
 /obj/docking_port/stationary{
@@ -13438,7 +13438,7 @@
 	height = 12;
 	id = "ferry";
 	name = "ferry shuttle";
-	travelDir = 180;
+	port_angle = 180;
 	width = 7
 	},
 /obj/docking_port/stationary{

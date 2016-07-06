@@ -17794,7 +17794,7 @@
 	height = 6;
 	id = "mining";
 	name = "mining shuttle";
-	travelDir = 90;
+	port_angle = 90;
 	width = 8
 	},
 /obj/docking_port/stationary{

@@ -23,7 +23,8 @@ z7 = empty space
         #include "map_files\Infinity_MetaStation\z2t.dmm"
         #include "map_files\Infinity_MetaStation\z3.dmm"
         #include "map_files\Infinity_MetaStation\z4.dmm"
-        #include "map_files\Infinity_MetaStation\lavaland_t.dmm"
+        #include "map_files\generic\lavaland.dmm"
+        //#include "map_files\Infinity_MetaStation\lavaland_t.dmm"
         #include "map_files\Infinity_MetaStation\z6.dmm"
         #include "map_files\Infinity_MetaStation\z7.dmm"
         //#include "map_files\monorail_ivent\monorail.dmm" //Monorail Maks750rus
