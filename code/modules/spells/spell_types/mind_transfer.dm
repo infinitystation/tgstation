@@ -60,7 +60,7 @@ Also, you never added distance checking after target is selected. I've went ahea
 
 	//HACKY CODE
 	if(isloyal(victim))
-		if(!((caster.mind in (ticker.mode.changelings | ticker.mode.abductors | ticker.mode.cult)) || is_shadow_or_thrall(target) || (target.mind in ticker.mode.blue_deity_prophets|ticker.mode.red_deity_prophets|ticker.mode.red_deity_followers|ticker.mode.blue_deity_followers)))
+		if(!((caster.mind in (ticker.mode.changelings | ticker.mode.abductors | ticker.mode.cult)) || (target.mind in ticker.mode.blue_deity_prophets|ticker.mode.red_deity_prophets|ticker.mode.red_deity_followers|ticker.mode.blue_deity_followers)))
 			caster.mind.remove_all_antag_light()
 
 	//MIND TRANSFER BEGIN

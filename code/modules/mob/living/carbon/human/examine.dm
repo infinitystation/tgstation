@@ -320,11 +320,8 @@
 		if(digitalcamo)
 			msg += "[t_He] двигает [t_him] телом грубым и неестественным образом.\n"
 
-	if(!skipface && is_thrall(src) && in_range(user,src))
-		msg += "[t_him] особенности, кажетс&#255;, неестественно и жестко искажены.\n"
-
 	temp = getFireLoss() + getBruteLoss()
-	if(!skipface && temp<80 && !(disabilities & HUSK) && !is_thrall(src))
+	if(!skipface && temp<80 && !(disabilities & HUSK))
 		if(visual_age < AGE_MAX-10)
 			msg += "[t_He] выгл&#255;дит на [visual_age-2]-[visual_age+2] лет.\n"
 		else

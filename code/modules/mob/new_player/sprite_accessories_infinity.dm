@@ -331,3 +331,9 @@
 	name = "Long Emo 2"
 	icon = 'icons/mob/more_hairs.dmi'
 	icon_state = "hair_longemo_new"
+
+/datum/sprite_accessory/hair/harleyhair
+	name = "Harley Quinn Hair"
+	icon_state = "harley_hair"
+	icon = 'icons/mob/more_hairs.dmi'
+	gender = FEMALE

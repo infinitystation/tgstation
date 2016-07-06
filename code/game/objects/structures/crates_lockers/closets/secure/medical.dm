@@ -72,7 +72,7 @@
 	new /obj/item/weapon/reagent_containers/hypospray/CMO(src)
 	new /obj/item/device/autoimplanter/cmo(src)
 	new /obj/item/weapon/door_remote/chief_medical_officer(src)
-	new /obj/item/weapon/melee/baton/shocker(src)
+	new /obj/item/weapon/melee/baton/shocker/loaded(src)
 
 
 /obj/structure/closet/secure_closet/animal

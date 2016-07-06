@@ -521,6 +521,10 @@
 	worn_icon = 'icons/mob/infinity_inriss.dmi' //Inriss, this sprite pretty good, thx.
 	icon_state = "sweater_stripped_s"
 	item_state = "sweater_stripped_s"
+	body_parts_covered = CHEST|HEAD
+	min_cold_protection_temperature = FIRE_SUIT_MIN_TEMP_PROTECT
+	cold_protection = CHEST|ARMS
 	flags_inv = HIDEFACIALHAIR
+
 
 
