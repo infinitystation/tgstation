@@ -48,25 +48,14 @@
 			return 0
 
 		if (!( user.restrained() ) && !( user.stat ))
-			/*switch(over_object.name)
-				if("r_hand")
+			var/obj/screen/inventory/hand/H = over_object
+			switch(H.slot_id)
+				if(slot_r_hand)
 					user.unEquip(master_item)
 					user.put_in_r_hand(master_item)
-				if("l_hand")
+				if(slot_l_hand)
 					user.unEquip(master_item)
 					user.put_in_l_hand(master_item)
-					*/
-			if(istype(over_object, /obj/screen/inventory/hand))
-				var/obj/screen/inventory/hand/H = over_object
-				if(!user.unEquip(user.unEquip(master_item)))
-					return
-				switch(H.slot_id)
-					if(slot_r_hand)
-						//user.unEquip(master_item)
-						user.put_in_r_hand(master_item)
-					if(slot_l_hand)
-						//user.unEquip(master_item)
-						user.put_in_l_hand(master_item)
 			master_item.add_fingerprint(user)
 			return 0
 	return 0
