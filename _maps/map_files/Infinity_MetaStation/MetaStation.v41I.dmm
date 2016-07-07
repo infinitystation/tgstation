@@ -13085,6 +13085,9 @@
 	dir = 1;
 	on = 1
 	},
+/obj/structure/tile_edge/stripe{
+	dir = 8
+	},
 /turf/open/floor/plasteel,
 /area/security/warden)
 "awJ" = (
