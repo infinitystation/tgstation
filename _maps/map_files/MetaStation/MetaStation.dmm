@@ -9980,7 +9980,7 @@
 /area/security/main)
 "arH" = (
 /obj/structure/rack,
-/obj/item/clothing/suit/hazardvest,
+/obj/item/clothing/suit/storage/hazardvest,
 /turf/open/floor/plating,
 /area/maintenance/fore)
 "arI" = (
@@ -15249,7 +15249,7 @@
 	pixel_y = 28
 	},
 /obj/item/clothing/tie/waistcoat,
-/obj/item/clothing/suit/toggle/lawyer/black,
+/obj/item/clothing/suit/storage/toggle/lawyer/black,
 /obj/item/clothing/under/suit_jacket/red,
 /obj/item/clothing/tie/black,
 /obj/item/clothing/under/lawyer/blacksuit,
@@ -15417,8 +15417,8 @@
 /obj/item/clothing/gloves/color/yellow,
 /obj/item/clothing/gloves/color/yellow,
 /obj/item/clothing/gloves/color/yellow,
-/obj/item/clothing/suit/hazardvest,
-/obj/item/clothing/suit/hazardvest,
+/obj/item/clothing/suit/storage/hazardvest,
+/obj/item/clothing/suit/storage/hazardvest,
 /obj/item/weapon/tank/internals/emergency_oxygen/engi,
 /obj/item/weapon/tank/internals/emergency_oxygen/engi,
 /turf/open/floor/plasteel/delivery{
@@ -16481,7 +16481,7 @@
 	contents = newlist(/obj/item/clothing/suit/armor/vest,/obj/item/weapon/gun/projectile/automatic/pistol,/obj/item/weapon/suppressor,/obj/item/weapon/melee/classic_baton/telescopic,/obj/item/clothing/mask/balaclava,/obj/item/bodybag,/obj/item/weapon/soap/nanotrasen)
 	},
 /obj/item/weapon/storage/backpack/dufflebag{
-	contents = newlist(/obj/item/clothing/under/lawyer/blacksuit,/obj/item/clothing/tie/waistcoat,/obj/item/clothing/suit/toggle/lawyer/black,/obj/item/clothing/shoes/laceup,/obj/item/clothing/gloves/color/black,/obj/item/clothing/glasses/sunglasses,/obj/item/clothing/head/fedora);
+	contents = newlist(/obj/item/clothing/under/lawyer/blacksuit,/obj/item/clothing/tie/waistcoat,/obj/item/clothing/suit/storage/toggle/lawyer/black,/obj/item/clothing/shoes/laceup,/obj/item/clothing/gloves/color/black,/obj/item/clothing/glasses/sunglasses,/obj/item/clothing/head/fedora);
 	desc = "A large dufflebag for holding extra things. There is a NanoTrasen logo on the back.";
 	icon_state = "duffle-syndieammo";
 	item_state = "duffle-syndieammo"
@@ -23085,7 +23085,7 @@
 	})
 "aOg" = (
 /obj/structure/rack,
-/obj/item/clothing/suit/hazardvest,
+/obj/item/clothing/suit/storage/hazardvest,
 /turf/open/floor/plating,
 /area/maintenance/starboard)
 "aOh" = (
@@ -25753,7 +25753,7 @@
 /obj/structure/rack{
 	dir = 1
 	},
-/obj/item/clothing/suit/hazardvest,
+/obj/item/clothing/suit/storage/hazardvest,
 /turf/open/floor/plasteel,
 /area/construction)
 "aSR" = (
@@ -32252,7 +32252,7 @@
 	pixel_y = 0
 	},
 /obj/item/clothing/gloves/color/fyellow,
-/obj/item/clothing/suit/hazardvest,
+/obj/item/clothing/suit/storage/hazardvest,
 /obj/item/device/multitool,
 /obj/effect/spawner/lootdrop/maintenance,
 /turf/open/floor/plasteel/yellow/side{
@@ -34782,9 +34782,9 @@
 /obj/item/clothing/suit/security/officer,
 /obj/item/clothing/suit/security/officer,
 /obj/item/clothing/under/rank/warden/navyblue,
-/obj/item/clothing/suit/security/warden,
+/obj/item/clothing/suit/storage/security/warden,
 /obj/item/clothing/under/rank/head_of_security/navyblue,
-/obj/item/clothing/suit/security/hos,
+/obj/item/clothing/suit/storage/security/hos,
 /obj/item/clothing/head/beret/sec/navyofficer,
 /obj/item/clothing/head/beret/sec/navyofficer,
 /obj/item/clothing/head/beret/sec/navyofficer,
@@ -53531,10 +53531,10 @@
 	dir = 8;
 	layer = 2.9
 	},
-/obj/item/clothing/suit/hazardvest,
-/obj/item/clothing/suit/hazardvest,
-/obj/item/clothing/suit/hazardvest,
-/obj/item/clothing/suit/hazardvest,
+/obj/item/clothing/suit/storage/hazardvest,
+/obj/item/clothing/suit/storage/hazardvest,
+/obj/item/clothing/suit/storage/hazardvest,
+/obj/item/clothing/suit/storage/hazardvest,
 /obj/item/clothing/gloves/color/black,
 /obj/item/clothing/gloves/color/black,
 /obj/item/clothing/gloves/color/black,
@@ -54056,8 +54056,8 @@
 	dir = 1;
 	layer = 2.9
 	},
-/obj/item/clothing/suit/hazardvest,
-/obj/item/clothing/suit/hazardvest,
+/obj/item/clothing/suit/storage/hazardvest,
+/obj/item/clothing/suit/storage/hazardvest,
 /obj/item/clothing/mask/breath,
 /obj/item/clothing/mask/breath,
 /turf/open/floor/plasteel/vault{
@@ -55950,8 +55950,8 @@
 	dir = 8;
 	layer = 2.9
 	},
-/obj/item/clothing/suit/hazardvest,
-/obj/item/clothing/suit/hazardvest,
+/obj/item/clothing/suit/storage/hazardvest,
+/obj/item/clothing/suit/storage/hazardvest,
 /obj/item/clothing/head/hardhat/orange{
 	name = "protective hat"
 	},
@@ -92451,23 +92451,23 @@
 /turf/open/floor/plasteel/shuttle/white,
 /area/shuttle/escape)
 "dcH" = (
-/obj/item/clothing/suit/hazardvest{
+/obj/item/clothing/suit/storage/hazardvest{
 	desc = "A high-visibility lifejacket complete with whistle and slot for oxygen tanks.";
 	name = "emergency lifejacket"
 	},
-/obj/item/clothing/suit/hazardvest{
+/obj/item/clothing/suit/storage/hazardvest{
 	desc = "A high-visibility lifejacket complete with whistle and slot for oxygen tanks.";
 	name = "emergency lifejacket"
 	},
-/obj/item/clothing/suit/hazardvest{
+/obj/item/clothing/suit/storage/hazardvest{
 	desc = "A high-visibility lifejacket complete with whistle and slot for oxygen tanks.";
 	name = "emergency lifejacket"
 	},
-/obj/item/clothing/suit/hazardvest{
+/obj/item/clothing/suit/storage/hazardvest{
 	desc = "A high-visibility lifejacket complete with whistle and slot for oxygen tanks.";
 	name = "emergency lifejacket"
 	},
-/obj/item/clothing/suit/hazardvest{
+/obj/item/clothing/suit/storage/hazardvest{
 	desc = "A high-visibility lifejacket complete with whistle and slot for oxygen tanks.";
 	name = "emergency lifejacket"
 	},

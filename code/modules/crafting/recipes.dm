@@ -346,7 +346,7 @@
 
 /datum/crafting_recipe/bonearmor
 	name = "Bone Armor"
-	result = /obj/item/clothing/suit/armor/bone
+	result = /obj/item/clothing/suit/storage/armor/bone
 	time = 30
 	reqs = list(/obj/item/stack/sheet/bone = 6)
 	category = CAT_PRIMAL

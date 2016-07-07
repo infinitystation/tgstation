@@ -91,7 +91,7 @@
 				/obj/item/clothing/head/ushanka = 1,
 				/obj/item/clothing/head/welding = 1,
 				/obj/item/clothing/mask/gas = 15,
-				/obj/item/clothing/suit/hazardvest = 1,
+				/obj/item/clothing/suit/storage/hazardvest = 1,
 				/obj/item/clothing/under/rank/vice = 1,
 				/obj/item/device/assembly/prox_sensor = 4,
 				/obj/item/device/assembly/timer = 3,

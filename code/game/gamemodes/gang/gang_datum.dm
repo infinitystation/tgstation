@@ -92,13 +92,13 @@
 			if("White Suits")
 				outfit_path = /obj/item/clothing/under/suit_jacket/white
 			if("Puffer Jackets")
-				outfit_path = /obj/item/clothing/suit/jacket/puffer
+				outfit_path = /obj/item/clothing/suit/storage/jacket/puffer
 			if("Leather Jackets")
-				outfit_path = /obj/item/clothing/suit/jacket/leather
+				outfit_path = /obj/item/clothing/suit/storage/jacket/leather
 			if("Leather Overcoats")
-				outfit_path = /obj/item/clothing/suit/jacket/leather/overcoat
+				outfit_path = /obj/item/clothing/suit/storage/jacket/leather/overcoat
 			if("Military Jackets")
-				outfit_path = /obj/item/clothing/suit/jacket/miljacket
+				outfit_path = /obj/item/clothing/suit/storage/jacket/miljacket
 			if("Soviet Uniforms")
 				outfit_path = /obj/item/clothing/under/soviet
 			if("Tactical Turtlenecks")

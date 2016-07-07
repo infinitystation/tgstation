@@ -160,7 +160,7 @@ Lawyer
 	belt = /obj/item/device/pda/lawyer
 	ears = /obj/item/device/radio/headset/headset_sec
 	uniform = /obj/item/clothing/under/lawyer/bluesuit
-	suit = /obj/item/clothing/suit/toggle/lawyer
+	suit = /obj/item/clothing/suit/storage/toggle/lawyer
 	shoes = /obj/item/clothing/shoes/laceup
 	l_hand = /obj/item/weapon/storage/briefcase/lawyer
 	l_pocket = /obj/item/device/laser_pointer
@@ -175,4 +175,4 @@ Lawyer
 	J.lawyers++
 	if(J.lawyers>1)
 		uniform = /obj/item/clothing/under/lawyer/purpsuit
-		suit = /obj/item/clothing/suit/toggle/lawyer/purple
+		suit = /obj/item/clothing/suit/storage/toggle/lawyer/purple
