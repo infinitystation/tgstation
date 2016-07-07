@@ -27,7 +27,7 @@
 	glasses = /obj/item/clothing/glasses/sunglasses
 	ears = /obj/item/device/radio/headset/headset_ifa
 	uniform = /obj/item/clothing/under/suit_jacket
-	suit = /obj/item/clothing/suit/toggle/lawyer/black
+	suit = /obj/item/clothing/suit/storage/toggle/lawyer/black
 	shoes = /obj/item/clothing/shoes/sneakers/brown
 	l_hand = /obj/item/weapon/storage/briefcase
 	backpack_contents = list(/obj/item/device/assembly/flash/handheld=1)

@@ -9,7 +9,7 @@
 	put_on_delay = 40
 	burn_state = FIRE_PROOF
 
-/obj/item/clothing/suit/armor/vest
+/obj/item/clothing/suit/storage/armor/vest
 	name = "armor"
 	desc = "A slim armored vest that protects against most types of damage."
 	icon_state = "armoralt"
@@ -18,16 +18,16 @@
 	armor = list(melee = 30, bullet = 30, laser = 30, energy = 10, bomb = 25, bio = 0, rad = 0)
 	dog_fashion = /datum/dog_fashion/back
 
-/obj/item/clothing/suit/armor/vest/alt
+/obj/item/clothing/suit/storage/armor/vest/alt
 	desc = "An armored vest that protects against most types of damage."
 	icon_state = "armor"
 	item_state = "armor"
 
-/obj/item/clothing/suit/armor/vest/blueshirt
+/obj/item/clothing/suit/storage/armor/vest/blueshirt
 	icon_state = "blueshift"
 	item_state = "blueshift"
 
-/obj/item/clothing/suit/armor/hos
+/obj/item/clothing/suit/storage/armor/hos
 	name = "armored greatcoat"
 	desc = "A greatcoat enchanced with a special alloy for some protection and style for those with a commanding presence."
 	icon_state = "hos"
@@ -38,7 +38,7 @@
 	heat_protection = CHEST|GROIN|LEGS|ARMS
 	strip_delay = 80
 
-/obj/item/clothing/suit/armor/hos/trenchcoat
+/obj/item/clothing/suit/storage/armor/hos/trenchcoat
 	name = "armored trenchoat"
 	desc = "A trenchcoat enchanced with a special lightweight kevlar. The epitome of tactical plainclothes."
 	icon_state = "hostrench"
@@ -46,7 +46,7 @@
 	flags_inv = 0
 	strip_delay = 80
 
-/obj/item/clothing/suit/armor/vest/warden
+/obj/item/clothing/suit/storage/armor/vest/warden
 	name = "warden's jacket"
 	desc = "A navy-blue armored jacket with blue shoulder designations and '/Warden/' stitched into one of the chest pockets."
 	icon_state = "warden_alt"
@@ -58,12 +58,12 @@
 	burn_state = FLAMMABLE
 	dog_fashion = null
 
-/obj/item/clothing/suit/armor/vest/warden/alt
+/obj/item/clothing/suit/storage/armor/vest/warden/alt
 	name = "warden's armored jacket"
 	desc = "A red jacket with silver rank pips and body armor strapped on top."
 	icon_state = "warden_jacket"
 
-/obj/item/clothing/suit/armor/vest/leather
+/obj/item/clothing/suit/storage/armor/vest/leather
 	name = "security overcoat"
 	desc = "Lightly armored leather overcoat meant as casual wear for high-ranking officers. Bears the crest of Nanotrasen Security."
 	icon_state = "leathercoat-sec"
@@ -73,7 +73,7 @@
 	heat_protection = CHEST|GROIN|LEGS|ARMS
 	dog_fashion = null
 
-/obj/item/clothing/suit/armor/vest/capcarapace
+/obj/item/clothing/suit/storage/armor/vest/capcarapace
 	name = "captain's carapace"
 	desc = "An armored vest reinforced with ceramic plates and pauldrons to provide additional protection whilst still offering maximum mobility and flexibility. Issued only to the station's finest, although it does chafe your nipples."
 	icon_state = "capcarapace"
@@ -82,13 +82,13 @@
 	armor = list(melee = 30, bullet = 15, laser = 30, energy = 10, bomb = 10, bio = 0, rad = 0)
 	dog_fashion = null
 
-/obj/item/clothing/suit/armor/vest/capcarapace/alt
+/obj/item/clothing/suit/storage/armor/vest/capcarapace/alt
 	name = "captain's parade jacket"
 	desc = "For when an armoured vest isn't fashionable enough."
 	icon_state = "capformal"
 	item_state = "capspacesuit"
 
-/obj/item/clothing/suit/armor/riot
+/obj/item/clothing/suit/storage/armor/riot
 	name = "riot suit"
 	desc = "A suit of armor with heavy padding to protect against melee attacks."
 	icon_state = "riot"
@@ -101,7 +101,7 @@
 	strip_delay = 80
 	put_on_delay = 60
 
-/obj/item/clothing/suit/armor/bone
+/obj/item/clothing/suit/storage/armor/bone
 	name = "bone armor"
 	desc = "A tribal armor plate, crafted from animal bone."
 	icon_state = "bonearmor"

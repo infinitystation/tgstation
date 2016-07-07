@@ -2091,9 +2091,9 @@
 /obj/item/clothing/suit/security/officer,
 /obj/item/clothing/suit/security/officer,
 /obj/item/clothing/under/rank/warden/navyblue,
-/obj/item/clothing/suit/security/warden,
+/obj/item/clothing/suit/storage/security/warden,
 /obj/item/clothing/under/rank/head_of_security/navyblue,
-/obj/item/clothing/suit/security/hos,
+/obj/machinery/computer/card/minor/hos,
 /obj/item/clothing/head/beret/sec/navyofficer,
 /obj/item/clothing/head/beret/sec/navyofficer,
 /obj/item/clothing/head/beret/sec/navyofficer,
@@ -11114,7 +11114,7 @@
 /area/security/east)
 "ats" = (
 /obj/structure/rack,
-/obj/item/clothing/suit/hazardvest,
+/obj/item/clothing/suit/storage/hazardvest,
 /turf/open/floor/plating,
 /area/maintenance/fsmaint)
 "att" = (
@@ -17482,7 +17482,7 @@
 	pixel_y = 22
 	},
 /obj/item/clothing/tie/waistcoat,
-/obj/item/clothing/suit/toggle/lawyer/black,
+/obj/item/clothing/suit/storage/toggle/lawyer/black,
 /obj/item/clothing/under/suit_jacket/red,
 /obj/item/clothing/tie/black,
 /obj/item/clothing/under/lawyer/blacksuit,
@@ -17661,8 +17661,8 @@
 /obj/item/clothing/gloves/color/yellow,
 /obj/item/clothing/gloves/color/yellow,
 /obj/item/clothing/gloves/color/yellow,
-/obj/item/clothing/suit/hazardvest,
-/obj/item/clothing/suit/hazardvest,
+/obj/item/clothing/suit/storage/hazardvest,
+/obj/item/clothing/suit/storage/hazardvest,
 /obj/item/weapon/tank/internals/emergency_oxygen/engi,
 /obj/item/weapon/tank/internals/emergency_oxygen/engi,
 /turf/open/floor/plasteel{
@@ -25509,7 +25509,7 @@
 /area/hallway/secondary/garden)
 "aRZ" = (
 /obj/structure/rack,
-/obj/item/clothing/suit/hazardvest,
+/obj/item/clothing/suit/storage/hazardvest,
 /obj/item/weapon/knuckles,
 /turf/open/floor/plating,
 /area/maintenance/aft)
@@ -28653,7 +28653,7 @@
 /obj/structure/rack{
 	dir = 1
 	},
-/obj/item/clothing/suit/hazardvest,
+/obj/item/clothing/suit/storage/hazardvest,
 /turf/open/floor/plasteel,
 /area/construction)
 "aXi" = (
@@ -35771,7 +35771,7 @@
 	pixel_y = 0
 	},
 /obj/item/clothing/gloves/color/fyellow,
-/obj/item/clothing/suit/hazardvest,
+/obj/item/clothing/suit/storage/hazardvest,
 /obj/item/device/multitool,
 /obj/effect/spawner/lootdrop/maintenance,
 /turf/open/floor/plasteel{
@@ -57834,10 +57834,10 @@
 	dir = 8;
 	layer = 2.9
 	},
-/obj/item/clothing/suit/hazardvest,
-/obj/item/clothing/suit/hazardvest,
-/obj/item/clothing/suit/hazardvest,
-/obj/item/clothing/suit/hazardvest,
+/obj/item/clothing/suit/storage/hazardvest,
+/obj/item/clothing/suit/storage/hazardvest,
+/obj/item/clothing/suit/storage/hazardvest,
+/obj/item/clothing/suit/storage/hazardvest,
 /obj/item/clothing/gloves/color/black,
 /obj/item/clothing/gloves/color/black,
 /obj/item/clothing/gloves/color/black,
@@ -58301,8 +58301,8 @@
 	dir = 1;
 	layer = 3.2
 	},
-/obj/item/clothing/suit/hazardvest,
-/obj/item/clothing/suit/hazardvest,
+/obj/item/clothing/suit/storage/hazardvest,
+/obj/item/clothing/suit/storage/hazardvest,
 /obj/item/clothing/mask/breath,
 /obj/item/clothing/mask/breath,
 /turf/open/floor/plasteel{
@@ -60220,8 +60220,8 @@
 	dir = 8;
 	layer = 2.9
 	},
-/obj/item/clothing/suit/hazardvest,
-/obj/item/clothing/suit/hazardvest,
+/obj/item/clothing/suit/storage/hazardvest,
+/obj/item/clothing/suit/storage/hazardvest,
 /obj/item/clothing/head/hardhat/orange{
 	name = "protective hat"
 	},
