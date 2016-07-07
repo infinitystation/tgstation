@@ -163,7 +163,7 @@
 	worn_icon = 'icons/mob/infinity_work.dmi'
 	icon = 'icons/obj/clothing/infinity_work.dmi'
 
-/obj/item/clothing/suit/sc_labcoat
+/obj/item/clothing/suit/storange/sc_labcoat
 	name = "science labcoat"
 	desc = "When you wear it, you feel like a real crazy scientist!"
 	icon_state = "sc_labcoat"
@@ -193,7 +193,7 @@
 	icon_state = "red_short_kimono"
 	item_state = "r_suit"
 
-/obj/item/clothing/suit/long_coat
+/obj/item/clothing/suit/storange/long_coat
 	name = "long suit jacket"
 	desc = "Just like the usual suit jacket, but longer."
 	icon_state = "long_coat"
@@ -319,7 +319,7 @@
 	icon = 'icons/obj/clothing/infinity_work.dmi'
 	worn_icon = 'icons/mob/infinity_work.dmi'
 
-/obj/item/clothing/suit/forensics
+/obj/item/clothing/suit/storange/forensics
 	name = "jacket"
 	desc = "A forensics technician jacket."
 	item_state = "det_suit"
@@ -329,7 +329,7 @@
 	allowed = list(/obj/item/weapon/tank/internals/emergency_oxygen, /obj/item/device/flashlight,/obj/item/weapon/gun/energy,/obj/item/weapon/gun/projectile,/obj/item/ammo_casing,/obj/item/weapon/melee/baton,/obj/item/device/taperecorder)
 	armor = list(melee = 10, bullet = 10, laser = 15, energy = 10, bomb = 0, bio = 0, rad = 0)
 
-/obj/item/clothing/suit/forensics/long
+/obj/item/clothing/suit/storange/forensics/long
 	name = "jacket"
 	desc = "A forensics technician jacket."
 	icon_state = "forensics_long"
