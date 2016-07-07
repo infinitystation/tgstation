@@ -283,7 +283,7 @@
 	item_state = "rad_suit"
 	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 5, bio = 0, rad = 50)
 
-/obj/item/clothing/suit/gentlecoat
+/obj/item/clothing/suit/storange/gentlecoat
 	name = "gentle coat"
 	desc = "A soft coat."
 	icon_state = "gentlecoat"
