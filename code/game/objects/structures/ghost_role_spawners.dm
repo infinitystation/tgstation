@@ -262,7 +262,7 @@
 	mob_name = "hotel security memeber"
 	uniform = /obj/item/clothing/under/rank/security/blueshirt
 	shoes = /obj/item/clothing/shoes/jackboots
-	suit = /obj/item/clothing/suit/storage/armor/vest/blueshirt
+	suit = /obj/item/clothing/suit/armor/vest/blueshirt
 	helmet = /obj/item/clothing/head/helmet/blueshirt
 	back = /obj/item/weapon/storage/backpack/security
 	belt = /obj/item/weapon/storage/belt/security/full

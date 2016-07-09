@@ -3,7 +3,7 @@
 
 	uniform = /obj/item/clothing/under/lawyer/blacksuit
 	id = /obj/item/weapon/card/id
-	suit = /obj/item/clothing/suit/storage/toggle/lawyer/black
+	suit = /obj/item/clothing/suit/toggle/lawyer/black
 	shoes = /obj/item/clothing/shoes/laceup
 	glasses = /obj/item/clothing/glasses/sunglasses
 	gloves = /obj/item/clothing/gloves/color/black

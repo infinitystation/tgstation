@@ -353,11 +353,11 @@
 		if("jacket")
 			if (check_cost(500/efficiency))
 				return 0
-			else new/obj/item/clothing/suit/storage/jacket/leather(src.loc)
+			else new/obj/item/clothing/suit/jacket/leather(src.loc)
 		if("overcoat")
 			if (check_cost(1000/efficiency))
 				return 0
-			else new/obj/item/clothing/suit/storage/jacket/leather/overcoat(src.loc)
+			else new/obj/item/clothing/suit/jacket/leather/overcoat(src.loc)
 		if("rice_hat")
 			if (check_cost(300/efficiency))
 				return 0

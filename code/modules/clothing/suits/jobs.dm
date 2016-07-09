@@ -74,7 +74,7 @@
 	allowed = list(/obj/item/weapon/kitchen)
 
 //Detective
-/obj/item/clothing/suit/storage/det_suit
+/obj/item/clothing/suit/det_suit
 	name = "trenchcoat"
 	desc = "An 18th-century multi-purpose trenchcoat. Someone who wears this means serious business."
 	icon_state = "detective"
@@ -86,14 +86,14 @@
 	cold_protection = CHEST|GROIN|LEGS|ARMS
 	heat_protection = CHEST|GROIN|LEGS|ARMS
 
-/obj/item/clothing/suit/storage/det_suit/grey
+/obj/item/clothing/suit/det_suit/grey
 	name = "noir trenchcoat"
 	desc = "A hard-boiled private investigator's grey trenchcoat."
 	icon_state = "greydet"
 	item_state = "greydet"
 
 //Engineering
-/obj/item/clothing/suit/storage/hazardvest
+/obj/item/clothing/suit/hazardvest
 	name = "hazard vest"
 	desc = "A high-visibility vest used in work zones."
 	icon_state = "hazard"
@@ -103,7 +103,7 @@
 	burn_state = FIRE_PROOF
 
 //Lawyer
-/obj/item/clothing/suit/storage/toggle/lawyer
+/obj/item/clothing/suit/toggle/lawyer
 	name = "blue suit jacket"
 	desc = "A snappy dress jacket."
 	icon_state = "suitjacket_blue"
@@ -112,13 +112,13 @@
 	body_parts_covered = CHEST|ARMS
 	togglename = "buttons"
 
-/obj/item/clothing/suit/storage/toggle/lawyer/purple
+/obj/item/clothing/suit/toggle/lawyer/purple
 	name = "purple suit jacket"
 	desc = "A foppish dress jacket."
 	icon_state = "suitjacket_purp"
 	item_state = "suitjacket_purp"
 
-/obj/item/clothing/suit/storage/toggle/lawyer/black
+/obj/item/clothing/suit/toggle/lawyer/black
 	name = "black suit jacket"
 	desc = "A professional suit jacket."
 	icon_state = "suitjacket_black"
@@ -134,21 +134,21 @@
 	blood_overlay_type = "armor" //it's the less thing that I can put here
 
 //Security
-/obj/item/clothing/suit/storage/security/officer
+/obj/item/clothing/suit/security/officer
 	name = "security officer's jacket"
 	desc = "This jacket is for those special occasions when a security officer isn't required to wear their armor."
 	icon_state = "officerbluejacket"
 	item_state = "officerbluejacket"
 	body_parts_covered = CHEST|ARMS
 
-/obj/item/clothing/suit/storage/security/warden
+/obj/item/clothing/suit/security/warden
 	name = "warden's jacket"
 	desc = "Perfectly suited for the warden that wants to leave an impression of style on those who visit the brig."
 	icon_state = "wardenbluejacket"
 	item_state = "wardenbluejacket"
 	body_parts_covered = CHEST|ARMS
 
-/obj/item/clothing/suit/storage/security/hos
+/obj/item/clothing/suit/security/hos
 	name = "head of security's jacket"
 	desc = "This piece of clothing was specifically designed for asserting superior authority."
 	icon_state = "hosbluejacket"
