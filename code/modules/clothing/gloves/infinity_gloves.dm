@@ -34,3 +34,11 @@
 	item_color = "biker-gloves"
 	icon = 'icons/obj/clothing/infinity_work.dmi'
 	worn_icon = 'icons/mob/infinity_work.dmi'
+
+/obj/item/clothing/gloves/giant
+	name = "giant gloves"
+	desc = "The just giant gloves. For true dads."
+	icon_state = "giant_gloves"
+	item_state = "giant_gloves"
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'

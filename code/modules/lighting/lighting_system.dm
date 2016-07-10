@@ -129,12 +129,10 @@
 		if(AM == owner)
 			continue
 		if(AM.opacity)
-			range = 0
+			range = 1
 			break
 
 	owner.luminosity = range
-	if (!range)
-		return 0
 	var/center_strength = 0
 	if (cap <= 0)
 		center_strength = LIGHTING_CAP/LIGHTING_LUM_FOR_FULL_BRIGHT*(luminosity)
@@ -311,6 +309,7 @@
 			lighting_changed = 0
 		if(lighting_object)
 			lighting_object.alpha = 0
+			qdel(lighting_object)
 			lighting_object = null
 	else
 		if(!lighting_object)

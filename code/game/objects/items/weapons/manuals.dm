@@ -912,7 +912,7 @@
 	icon_state ="chemistrybook"
 	author = "Nanotrasen"
 	title = "Chemistry Textbook"
-	page_link = "Guide_to_chemistry"
+	page_link = "Руководство_по_Химии"
 
 /obj/item/weapon/book/manual/wiki/engineering_construction
 	name = "Station Repairs and Construction"
@@ -948,7 +948,7 @@
 	icon_state = "book7"
 	author = "University of Bluespace"
 	title = "Teleportation Science - Bluespace for dummies!"
-	page_link = "Руководство_по_Телесайнсуe"
+	page_link = "Руководство_по_Телесайнсу"
 
 /obj/item/weapon/book/manual/wiki/engineering_hacking
 	name = "Hacking"
@@ -958,149 +958,218 @@
 	page_link = "Руководство_по_Взлому"
 
 //Inriss
-/obj/item/weapon/book/manual/wiki/Assitant
-	name = "AssistantBook"
-	icon_state ="bookAssistant"
+/obj/item/weapon/book/manual/wiki/assitant
+	name = "Assistant Book"
+	icon = 'icons/obj/infinity_object.dmi'
+	icon_state ="book_wiki_civilian"
 	author = "Assitant Encyclopedia"
 	title = "Assistant"
 	page_link = "Ассистент"
 
-/obj/item/weapon/book/manual/wiki/Captain
+/obj/item/weapon/book/manual/wiki/captain
 	name = "Captain Book"
-	icon_state ="bookCaptain"
+	icon = 'icons/obj/infinity_object.dmi'
+	icon_state ="book_wiki_head"
 	author = "Captain Encyclopedia"
 	title = "Captain"
 	page_link = "Капитан"
 
-/obj/item/weapon/book/manual/wiki/HoP
+/obj/item/weapon/book/manual/wiki/hop
 	name = "Head of Personnel"
-	icon_state ="bookHop"
+	icon = 'icons/obj/infinity_object.dmi'
+	icon_state ="book_wiki_head"
 	author = "HoP Encyclopedia"
 	title = "Head of Personnel"
 	page_link = "Глава_Персонала"
 
-/obj/item/weapon/book/manual/wiki/Quartermaster
+/obj/item/weapon/book/manual/wiki/quartermaster
 	name = "Quartermaster"
-	icon_state ="bookQuartermaster"
+	icon = 'icons/obj/infinity_object.dmi'
+	icon_state ="book_wiki_engineer"
 	author = "Quartermaster Encyclopedia"
 	title = "Quartermaster"
 	page_link = "Завхоз"
 
-/obj/item/weapon/book/manual/wiki/CargoTechinician
+/obj/item/weapon/book/manual/wiki/cargotechinician
 	name = "Cargo Techinician"
-	icon_state ="bookCargoTechinician"
+	icon = 'icons/obj/infinity_object.dmi'
+	icon_state ="book_wiki_engineer"
 	author = "Cargo Techinician Encyclopedia"
 	title = "Cargo Techinician"
 	page_link = "Грузчик"
 
-/obj/item/weapon/book/manual/wiki/ShaftMiner
+/obj/item/weapon/book/manual/wiki/shaftminer
 	name = "Shaft Miner"
-	icon_state ="bookShaftMiner"
+	icon = 'icons/obj/infinity_object.dmi'
+	icon_state ="book_wiki_engineer"
 	author = "Shaft Miner Encyclopedia"
 	title = "Shaft Miner"
 	page_link = "Шахтёр"
 
-/obj/item/weapon/book/manual/wiki/Bartender
+/obj/item/weapon/book/manual/wiki/bartender
 	name = "Bartender"
-	icon_state ="bookBartender"
+	icon = 'icons/obj/infinity_object.dmi'
+	icon_state ="book_wiki_civilian"
 	author = "Bartender Encyclopedia"
 	title = "Bartender"
 	page_link = "Бармен"
 
-/obj/item/weapon/book/manual/wiki/Chef
+/obj/item/weapon/book/manual/wiki/chef
 	name = "Chef"
-	icon_state ="bookChef"
+	icon = 'icons/obj/infinity_object.dmi'
+	icon_state ="book_wiki_civilian"
 	author = "Chef Encyclopedia"
 	title = "Chef"
 	page_link = "Повар"
 
-/obj/item/weapon/book/manual/wiki/Botanist
+/obj/item/weapon/book/manual/wiki/botanist
 	name = "Botanist"
-	icon_state ="bookBotanist"
+	icon = 'icons/obj/infinity_object.dmi'
+	icon_state ="book_wiki_civilian"
 	author = "Botanist Encyclopedia"
 	title = "Botanist"
 	page_link = "Ботаник"
 
-/obj/item/weapon/book/manual/wiki/Janitor
+/obj/item/weapon/book/manual/wiki/janitor
 	name = "Janitor"
-	icon_state ="bookJanitor"
+	icon = 'icons/obj/infinity_object.dmi'
+	icon_state ="book_wiki_civilian"
 	author = "Janitor Encyclopedia"
 	title = "Janitor"
 	page_link = "Уборщик"
 
 /obj/item/weapon/book/manual/wiki/Clown
 	name = "Clown"
-	icon_state ="bookClown"
+	icon = 'icons/obj/infinity_object.dmi'
+	icon_state ="book_wiki_civilian"
 	author = "Clown Encyclopedia"
 	title = "Clown"
 	page_link = "Клоун"
 
-/obj/item/weapon/book/manual/wiki/Mime
+/obj/item/weapon/book/manual/wiki/mime
 	name = "Mime"
-	icon_state ="bookMime"
+	icon = 'icons/obj/infinity_object.dmi'
+	icon_state ="book_wiki_civilian"
 	author = "Mime Encyclopedia"
 	title = "Mime"
 	page_link = "Мим"
 
-/obj/item/weapon/book/manual/wiki/Librarian
+/obj/item/weapon/book/manual/wiki/librarian
 	name = "Librarian"
-	icon_state ="bookLibrarian"
+	icon = 'icons/obj/infinity_object.dmi'
+	icon_state ="book_wiki_civilian"
 	author = "Librarian Encyclopedia"
 	title = "Librarian"
 	page_link = "Библиотекарь"
 
-/obj/item/weapon/book/manual/wiki/Chaplain
+/obj/item/weapon/book/manual/wiki/chaplain
 	name = "Chaplain"
-	icon_state ="bookChaplain"
+	icon = 'icons/obj/infinity_object.dmi'
+	icon_state ="book_wiki_civilian"
 	author = "Chaplain Encyclopedia"
 	title = "Chaplain"
 	page_link = "Каппелан"
 
-/obj/item/weapon/book/manual/wiki/ChiefEngineer
+/obj/item/weapon/book/manual/wiki/chiefengineer
 	name = "Chief Engineer"
-	icon_state ="bookChiefEngineer"
+	icon = 'icons/obj/infinity_object.dmi'
+	icon_state ="book_wiki_head"
 	author = "Chief Engineer Encyclopedia"
 	title = "Chief Engineer"
 	page_link = "Главный_Инженер"
 
-/obj/item/weapon/book/manual/wiki/StationEngineer
+/obj/item/weapon/book/manual/wiki/stationengineer
 	name = "Station Engineer"
-	icon_state ="bookStationEngineer"
+	icon_state ="book_wiki_engineer"
 	author = "Station Engineer Encyclopedia"
 	title = "Station Engineer"
 	page_link = "Инженер"
 
-/obj/item/weapon/book/manual/wiki/AtmosphericTechnician
+/obj/item/weapon/book/manual/wiki/atmospherictechnician
 	name = "Atmospheric Technician"
-	icon_state ="bookAtmosphericTechnician"
+	icon = 'icons/obj/infinity_object.dmi'
+	icon_state ="book_wiki_engineer"
 	author = "Atmospheric Technician Encyclopedia"
 	title = "Atmospheric Technician"
 	page_link = "Атмосферный_Техник"
 
-/obj/item/weapon/book/manual/wiki/ChiefMedicalOfficer
+/obj/item/weapon/book/manual/wiki/chiefmedicalofficer
 	name = "Chief Medical Officer"
-	icon_state ="bookChiefMedicalOfficer"
+	icon = 'icons/obj/infinity_object.dmi'
+	icon_state ="book_wiki_head"
 	author = "Chief Medical Officer Encyclopedia"
 	title = "ChiefMedicalOfficer"
-	page_link = "Главврач"
+	page_link = "Главный_Врач"
 
-/obj/item/weapon/book/manual/wiki/MedicalDoctor
+/obj/item/weapon/book/manual/wiki/medicaldoctor
 	name = "Medical Doctor"
-	icon_state ="bookMedicalDoctor"
+	icon = 'icons/obj/infinity_object.dmi'
+	icon_state ="book_wiki_medbay"
 	author = "Medical Doctor Encyclopedia"
 	title = "Medical Doctor"
 	page_link = "Доктор"
 
-/obj/item/weapon/book/manual/wiki/Chemist
+/obj/item/weapon/book/manual/wiki/chemist
 	name = "Chemist"
-	icon_state ="bookChemist"
+	icon = 'icons/obj/infinity_object.dmi'
+	icon_state ="book_wiki_medbay"
 	author = "Chemist Encyclopedia"
 	title = "Chemist"
 	page_link = "Химик"
 
-/obj/item/weapon/book/manual/wiki/Geneticst
+/obj/item/weapon/book/manual/wiki/geneticst
 	name = "Geneticst"
-	icon_state ="bookGeneticst"
+	icon_state ="book_wiki_medbay"
 	author = "Geneticst Encyclopedia"
 	title = "Geneticst"
 	page_link = "Генетик"
+
+/obj/item/weapon/book/manual/wiki/rd
+	name = "Research Director"
+	icon = 'icons/obj/infinity_object.dmi'
+	icon_state = "book_wiki_head"
+	author = "Research Director Encyclopedia"
+	title = "Research Director"
+	page_link = "Глава_исследовательского_отдела"
+
+/obj/item/weapon/book/manual/wiki/scientist
+	name = "Research Director"
+	icon = 'icons/obj/infinity_object.dmi'
+	icon_state = "book_wiki_scince"
+	author = "Scientist Encyclopedia"
+	title = "Scientist"
+	page_link = "Ученый"
+
+/obj/item/weapon/book/manual/wiki/roboticist
+	name = "Roboticist"
+	icon = 'icons/obj/infinity_object.dmi'
+	icon_state = "book_wiki_scince"
+	author = "Roboticist Encyclopedia"
+	title = "Roboticist"
+	page_link = "Робототехник"
+
+/obj/item/weapon/book/manual/wiki/hos
+	name = "Head Of Security"
+	icon = 'icons/obj/infinity_object.dmi'
+	icon_state = "book_wiki_security"
+	author = "Head Of Security Encyclopedia"
+	title = "Head Of Security"
+	page_link = "Глава_Службы_Безопасности"
+
+/obj/item/weapon/book/manual/wiki/warden
+	name = "Warden"
+	icon = 'icons/obj/infinity_object.dmi'
+	icon_state = "book_wiki_security"
+	author = "Warden Encyclopedia"
+	title = "Warden"
+	page_link = "Смотритель"
+
+/obj/item/weapon/book/manual/wiki/officer
+	name = "Officer"
+	icon = 'icons/obj/infinity_object.dmi'
+	icon_state = "book_wiki_security"
+	author = "Officer Encyclopedia"
+	title = "Officer"
+	page_link = "Офицер_СБ"
+
+

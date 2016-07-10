@@ -472,6 +472,12 @@ var/list/teleportlocs = list()
 	name = "Electrical Maintenance"
 	icon_state = "yellow"
 
+/area/maintenance/Electrical_engineer
+	name = "Electrical Engineer Office"
+	icon_state = "yellow"
+
+
+
 //Hallway
 
 /area/hallway/primary/fore
@@ -900,6 +906,10 @@ var/list/teleportlocs = list()
 	name = "Transfer Centre"
 	icon_state = "armory"
 
+/area/security/execution
+	name = "Execution"
+	icon_state = "firingrange"
+
 /*
 /area/security/transfer/New()
 	..()
@@ -951,6 +961,10 @@ var/list/teleportlocs = list()
 
 /area/security/vacantoffice
 	name = "Vacant Office"
+	icon_state = "security"
+
+/area/security/vacantoffice2
+	name = "Vacant Office B"
 	icon_state = "security"
 
 /area/quartermaster

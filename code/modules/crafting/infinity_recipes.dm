@@ -8,33 +8,33 @@
 	category = CAT_PRIMAL
 
 /datum/crafting_recipe/eng_un
-	name = "Unathi hardsuit"
-	result = /obj/item/clothing/suit/space/hardsuit/engine_unathi
+	name = "Convert engineer style hardsuit to unathi"
+	result = /obj/item/clothing/suit/space/hardsuit/engine_un
 	reqs = list(/obj/item/clothing/suit/space/hardsuit/engine = 1)
 	tools = list(/obj/item/weapon/wirecutters)
 	time = 100
 	category = CAT_MISC
 
-/datum/crafting_recipe/un_eng
-	name = "Human hardsuit"
+/datum/crafting_recipe/eng_un_revert
+	name = "Convert unathi hardsuit to engineer style"
 	result = /obj/item/clothing/suit/space/hardsuit/engine
-	reqs = list(/obj/item/clothing/suit/space/hardsuit/engine_unathi = 1)
+	reqs = list(/obj/item/clothing/suit/space/hardsuit/engine_un = 1)
 	tools = list(/obj/item/weapon/wirecutters)
 	time = 100
 	category = CAT_MISC
 
-/datum/crafting_recipe/atm_unatm
-	name = "atmos unathi hardsuit"
+/datum/crafting_recipe/atm_un //I dont know why one recipe give me ability craft ENGINEERING type to atmospheric.
+	name = "Convert atmospheric style hardsuit to unathi"
 	result = /obj/item/clothing/suit/space/hardsuit/atmos_un
 	reqs = list(/obj/item/clothing/suit/space/hardsuit/engine/atmos = 1)
 	tools = list(/obj/item/weapon/wirecutters)
 	time = 100
 	category = CAT_MISC
 
-/datum/crafting_recipe/atm_unatm
-	name = "normal atmos hardsuit"
+/datum/crafting_recipe/atm_un_revert
+	name = "Convert unathi hardsuit to atmospheric style"
 	result = /obj/item/clothing/suit/space/hardsuit/engine/atmos
-	reqs = list(/obj/item/clothing/suit/space/hardsuit/atmos_un= 1)
+	reqs = list(/obj/item/clothing/suit/space/hardsuit/atmos_un = 1)
 	tools = list(/obj/item/weapon/wirecutters)
 	time = 100
 	category = CAT_MISC

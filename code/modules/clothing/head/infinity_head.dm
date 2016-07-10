@@ -180,3 +180,24 @@
 	strip_delay = 80
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 
+/obj/item/clothing/head/dad
+	name = "mask of the Father"
+	desc = "THE LEGEND NEVER DIES."
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	icon_state = "dads_mask"
+	item_state = "dads_mask"
+	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0)
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR
+	flags = NODROP
+	dog_fashion = null
+
+/obj/item/clothing/head/skulltop //but they only for drone >:D
+	name = "skulltop"
+	desc = "A skulltop, best device for surfing in internet."
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	icon_state = "skulltop"
+	item_state = "skulltop"
+	flags_inv = HIDEHAIR
+

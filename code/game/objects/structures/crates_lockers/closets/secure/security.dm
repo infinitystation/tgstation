@@ -29,6 +29,8 @@
 	new /obj/item/weapon/restraints/handcuffs/cable/zipties(src)
 	new /obj/item/weapon/gun/energy/gun(src)
 	new /obj/item/weapon/door_remote/captain(src)
+	new /obj/item/weapon/melee/baton/shocker/loaded(src)
+
 
 /obj/structure/closet/secure_closet/hop
 	name = "\proper head of personnel's locker"
@@ -53,6 +55,8 @@
 	new /obj/item/weapon/gun/energy/gun(src)
 	new /obj/item/clothing/tie/petcollar(src)
 	new /obj/item/weapon/door_remote/civillian(src)
+	new /obj/item/weapon/melee/baton/shocker/loaded(src)
+
 
 /obj/structure/closet/secure_closet/hos
 	name = "\proper head of security's locker"
@@ -87,6 +91,8 @@
 	new /obj/item/device/flashlight/seclite(src)
 	new /obj/item/clothing/head/HoS/beret/corporate(src)
 	new /obj/item/weapon/pinpointer(src)
+	new /obj/item/weapon/melee/baton/shocker/loaded(src)
+
 
 /obj/structure/closet/secure_closet/warden
 	name = "\proper warden's locker"
@@ -99,7 +105,7 @@
 	new /obj/item/device/radio/headset/headset_sec(src)
 	new /obj/item/clothing/head/warden(src)
 	new /obj/item/clothing/head/beret/sec/navywarden(src)
-	new /obj/item/clothing/suit/armor/vest/warden/alt(src)
+	new /obj/item/clothing/suit/armor/vest/warden(src)
 	new /obj/item/clothing/under/rank/warden/navyblue(src)
 	new /obj/item/clothing/under/warden_corporate(src)
 	new /obj/item/clothing/glasses/hud/security/sunglasses(src)

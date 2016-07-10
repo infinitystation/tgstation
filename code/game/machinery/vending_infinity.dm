@@ -46,10 +46,11 @@
 		/obj/item/clothing/under/rank/vice2=2, /obj/item/clothing/under/doubleskirt=2, /obj/item/clothing/head/captoe=2, /obj/item/clothing/head/captoe/black=2, /obj/item/clothing/under/redsuit=3,
 		/obj/item/clothing/under/black_skirt=3, /obj/item/clothing/under/jeanschain=3, /obj/item/clothing/under/black_dress=2, /obj/item/clothing/suit/long_coat=3, /obj/item/clothing/suit/pullover=2, /obj/item/clothing/suit/toggle/bomber=3,
 		/obj/item/clothing/suit/gentlecoat=2, /obj/item/clothing/suit/toggle/hoodie/blue=2, /obj/item/clothing/suit/toggle/hoodie/grey=2, /obj/item/clothing/suit/toggle/hoodie=2, /obj/item/clothing/suit/black_long_jacket=1,
-		/obj/item/clothing/suit/toggle/brown_jacket=2, /obj/item/clothing/suit/brown_long_jacket=1)
+		/obj/item/clothing/suit/toggle/brown_jacket=2, /obj/item/clothing/suit/brown_long_jacket=1, /obj/item/clothing/suit/sweater=2)
 	premium = list(/obj/item/clothing/under/snow_maiden=1, /obj/item/clothing/under/snow_maiden/blue=1, /obj/item/clothing/under/candy_dress=2, /obj/item/clothing/under/bunny_suit=2,
 		/obj/item/clothing/suit/kimono/black=1, /obj/item/clothing/suit/kimono=1, /obj/item/clothing/suit/kimono/blue=1, /obj/item/clothing/head/lify_hat=1, /obj/item/clothing/under/lify=1,/obj/item/clothing/suit/kimono/white=1,
-		/obj/item/clothing/suit/kimono/short_red=1, /obj/item/clothing/suit/hooded/merser=2, /obj/item/clothing/under/gotsis1=2, /obj/item/clothing/under/gotsis2=2, /obj/item/clothing/gloves/color/darklong=2, /obj/item/clothing/mask/fawkes = 1, /obj/item/clothing/mask/rubbermask = 1, /obj/item/clothing/head/helmet/richard = 1, /obj/item/clothing/head/helmet/biker = 1, /obj/item/clothing/under/jacketsuit = 1, /obj/item/clothing/under/bikersuit = 1, /obj/item/clothing/gloves/bikergloves = 1)
+		/obj/item/clothing/suit/kimono/short_red=1, /obj/item/clothing/suit/hooded/merser=2, /obj/item/clothing/under/gotsis1=2, /obj/item/clothing/under/gotsis2=2, /obj/item/clothing/gloves/color/darklong=2, /obj/item/clothing/mask/fawkes = 1,
+		/obj/item/clothing/mask/rubbermask = 1, /obj/item/clothing/head/helmet/richard = 1, /obj/item/clothing/head/helmet/biker = 1, /obj/item/clothing/under/jacketsuit = 1, /obj/item/clothing/under/bikersuit = 1, /obj/item/clothing/gloves/bikergloves = 1)
 
 
 /obj/structure/reagent_dispensers/cognackeg

@@ -1,4 +1,5 @@
-
+/turf/open/floor/plasteel/arcade_carpet
+	icon_state = "arcade_carpet"
 /turf/open/floor/plasteel/stairsnew
 	icon_state = "medstairs_alone"
 /turf/open/floor/plasteel/stairsnew/left
@@ -16,22 +17,16 @@
 /turf/open/floor/plasteel/stairsnew/grey/right
 	icon_state = "Stairs2_wide"
 /turf/open/floor/plasteel/stairsnew/wood1
-	icon = 'icons/turf/floors/infinity_works.dmi'
 	icon_state = "wood_stairs"
 /turf/open/floor/plasteel/stairsnew/wood1/state
-	icon = 'icons/turf/floors/infinity_works.dmi'
 	icon_state = "wood_stairs2"
 /turf/open/floor/plasteel/stairsnew/wood2
-	icon = 'icons/turf/floors/infinity_works.dmi'
 	icon_state = "wood2_stairs"
 /turf/open/floor/plasteel/stairsnew/wood2/state
-	icon = 'icons/turf/floors/infinity_works.dmi'
 	icon_state = "wood2_stairs2"
 /turf/open/floor/wood/new_wood/wooden1
-	icon = 'icons/turf/floors/infinity_works.dmi'
 	icon_state = "wooden"
 /turf/open/floor/wood/new_wood/wooden2
-	icon = 'icons/turf/floors/infinity_works.dmi'
 	icon_state = "wooden-2"
 /turf/open/floor/engine/caution/south
 	icon = 'icons/turf/floors/infinity_works.dmi'
@@ -60,9 +55,6 @@
 /turf/open/floor/engine/caution/corners2
 	icon = 'icons/turf/floors/infinity_works.dmi'
 	icon_state = "engine_caution_corners2"
-/turf/open/floor/carpet/arcade
-	icon = 'icons/turf/floors/infinity_works.dmi'
-	icon_state = "arcade_carpet"
 /turf/open/floor/pool
 	name = "water"
 	icon = 'icons/turf/floors/infinity_works.dmi'

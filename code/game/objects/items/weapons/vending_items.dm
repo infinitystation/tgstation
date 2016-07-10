@@ -25,7 +25,7 @@
 /obj/item/weapon/vending_refill/examine(mob/user)
 	..()
 	if(charges[1] > 0)
-		user << "It can restock [charges[1]] item(s)."
+		user << "It can restock [charges[1]+charges[2]+charges[3]] item(s)."
 	else
 		user << "It's empty!"
 
@@ -34,8 +34,8 @@
 /obj/item/weapon/vending_refill/boozeomat
 	machine_name = "Booze-O-Mat"
 	icon_state = "refill_booze"
-	charges = list(53, 4, 0)//of 159 standard, 12 contraband
-	init_charges = list(53, 4, 0)
+	charges = list(54, 4, 0)//of 159 standard, 12 contraband
+	init_charges = list(54, 4, 0)
 
 /obj/item/weapon/vending_refill/coffee
 	machine_name = "Solar's Best Hot Drinks"

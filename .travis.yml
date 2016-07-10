@@ -9,13 +9,14 @@ env:
     - BUILD_TOOLS=false
     - DM_MAPFILE=""
     matrix:
-    - BUILD_TOOLS=true?	- DM_MAPFILE="terrorstation"
+    - BUILD_TOOLS=true?	- DM_MAPFILE="infinity_metastation"
     - DM_MAPFILE="tgstation2"
     - DM_MAPFILE="metastation"
     - DM_MAPFILE="ministation"
     - DM_MAPFILE="dreamstation"
     - DM_MAPFILE="birdstation"
     - DM_MAPFILE="efficiencystation"
+    - DM_MAPFILE="templates"
 
 
 cache:

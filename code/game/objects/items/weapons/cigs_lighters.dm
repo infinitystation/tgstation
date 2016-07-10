@@ -27,14 +27,11 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	heat = 1000
 
 /obj/item/weapon/match/process()
-	var/turf/location = get_turf(src)
 	smoketime--
 	if(smoketime < 1)
 		matchburnout()
-		return
-	if(location)
-		location.hotspot_expose(700, 5)
-		return
+	else
+		open_flame(heat)
 
 /obj/item/weapon/match/fire_act()
 	matchignite()
@@ -50,7 +47,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 		name = "lit match"
 		desc = "A match. This one is lit."
 		attack_verb = list("burnt","singed")
-		SSobj.processing |= src
+		START_PROCESSING(SSobj, src)
 		update_icon()
 	return
 
@@ -64,7 +61,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 		name = "burnt match"
 		desc = "A match. This one has seen better days."
 		attack_verb = null
-		SSobj.processing.Remove(src)
+		STOP_PROCESSING(SSobj, src)
 
 /obj/item/weapon/match/dropped(mob/user)
 	matchburnout()
@@ -130,12 +127,12 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 /obj/item/clothing/mask/cigarette/Destroy()
 	if(reagents)
 		qdel(reagents)
-	SSobj.processing -= src
+	STOP_PROCESSING(SSobj, src)
 	. = ..()
 
 /obj/item/clothing/mask/cigarette/attackby(obj/item/weapon/W, mob/user, params)
-	if(!lit && smoketime > 0 && W.is_hot())
-		var/lighting_text = is_lighter(W,user)
+	if(!lit && smoketime > 0)
+		var/lighting_text = W.ignition_effect(src, user)
 		if(lighting_text)
 			light(lighting_text)
 	else
@@ -154,29 +151,6 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 			else
 				user << "<span class='notice'>[src] is full.</span>"
 
-/obj/item/clothing/mask/cigarette/proc/is_lighter(obj/item/O, mob/user)
-	var/lighting_text = null
-	if(istype(O, /obj/item/weapon/weldingtool))
-		lighting_text = "<span class='notice'>[user] casually lights the [name] with [O], what a badass.</span>"
-	else if(istype(O, /obj/item/weapon/lighter/greyscale)) // we have to check for this first -- zippo lighters are default
-		lighting_text = "<span class='notice'>After some fiddling, [user] manages to light their [name] with [O].</span>"
-	else if(istype(O, /obj/item/weapon/lighter))
-		lighting_text = "<span class='rose'>With a single flick of their wrist, [user] smoothly lights their [name] with [O]. Damn they're cool.</span>"
-	else if(istype(O, /obj/item/weapon/melee/energy))
-		var/in_mouth = ""
-		if(iscarbon(user))
-			var/mob/living/carbon/C = user
-			if(C.wear_mask == src)
-				in_mouth = ", barely missing their nose"
-		lighting_text = "<span class='warning'>[user] swings their \
-			[O][in_mouth]. They light their [name] in the process.</span>"
-	else if(istype(O, /obj/item/device/assembly/igniter))
-		lighting_text = "<span class='notice'>[user] fiddles with [O], and manages to light their [name].</span>"
-	else if(istype(O, /obj/item/device/flashlight/flare))
-		lighting_text = "<span class='notice'>[user] lights their [name] with [O] like a real badass.</span>"
-	else if(O.is_hot())
-		lighting_text = "<span class='notice'>[user] lights their [name] with [O].</span>"
-	return lighting_text
 
 /obj/item/clothing/mask/cigarette/proc/light(flavor_text = null)
 	if(lit)
@@ -214,7 +188,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	if(flavor_text)
 		var/turf/T = get_turf(src)
 		T.visible_message(flavor_text)
-	SSobj.processing |= src
+	START_PROCESSING(SSobj, src)
 
 	//can't think of any other way to update the overlays :<
 	if(ismob(loc))
@@ -385,7 +359,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 /obj/item/clothing/mask/cigarette/pipe/Destroy()
 	if(reagents)
 		qdel(reagents)
-	SSobj.processing -= src
+	STOP_PROCESSING(SSobj, src)
 	. = ..()
 
 /obj/item/clothing/mask/cigarette/pipe/process()
@@ -402,12 +376,11 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 			M.update_inv_wear_mask()
 			packeditem = 0
 			name = "empty [initial(name)]"
-		SSobj.processing.Remove(src)
+		STOP_PROCESSING(SSobj, src)
 		return
 	open_flame()
 	if(reagents && reagents.total_volume)	//	check if it has any reagents at all
 		handle_reagents()
-	return
 
 
 /obj/item/clothing/mask/cigarette/pipe/attackby(obj/item/O, mob/user, params)
@@ -427,7 +400,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 		else
 			user << "<span class='warning'>It is already packed!</span>"
 	else
-		var/lighting_text = is_lighter(O,user)
+		var/lighting_text = O.ignition_effect(src,user)
 		if(lighting_text)
 			if(smoketime > 0)
 				light(lighting_text)
@@ -443,7 +416,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 		lit = 0
 		icon_state = icon_off
 		item_state = icon_off
-		SSobj.processing.Remove(src)
+		STOP_PROCESSING(SSobj, src)
 		return
 	if(!lit && smoketime > 0)
 		user << "<span class='notice'>You empty [src] onto [location].</span>"
@@ -487,7 +460,15 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 /obj/item/weapon/lighter/greyscale/New()
 	var/image/I = image(icon,"lighter-overlay")
 	I.color = color2hex(randomColor(1))
-	overlays += I
+	add_overlay(I)
+
+/obj/item/weapon/lighter/greyscale/ignition_effect(atom/A, mob/user)
+	. = "<span class='notice'>After some fiddling, [user] manages to \
+		light [A] with [src].</span>"
+
+/obj/item/weapon/lighter/ignition_effect(atom/A, mob/user)
+	. = "<span class='rose'>With a single flick of their wrist, [user] \
+		smoothly lights [A] with [src]. Damn they're cool.</span>"
 
 /obj/item/weapon/lighter/update_icon()
 	icon_state = lit ? "[icon_state]_on" : "[initial(icon_state)]"
@@ -512,7 +493,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 					user.visible_message("<span class='warning'>After a few attempts, [user] manages to light [src] - they however burn their finger in the process.</span>", "<span class='warning'>You burn yourself while lighting the lighter!</span>")
 
 			user.AddLuminosity(1)
-			SSobj.processing |= src
+			START_PROCESSING(SSobj, src)
 		else
 			lit = 0
 			update_icon()
@@ -524,7 +505,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 			else
 				user.visible_message("[user] quietly shuts off [src].", "<span class='notice'>You quietly shut off [src].")
 			user.AddLuminosity(-1)
-			SSobj.processing.Remove(src)
+			STOP_PROCESSING(SSobj, src)
 	else
 		return ..()
 	return
@@ -548,18 +529,13 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 		..()
 
 /obj/item/weapon/lighter/process()
-	var/turf/location = get_turf(src)
-	if(location)
-		location.hotspot_expose(700, 5)
-	return
+	open_flame()
 
 /obj/item/weapon/lighter/pickup(mob/user)
 	..()
 	if(lit)
 		SetLuminosity(0)
 		user.AddLuminosity(1)
-	return
-
 
 /obj/item/weapon/lighter/dropped(mob/user)
 	..()
@@ -567,7 +543,6 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 		if(user)
 			user.AddLuminosity(-1)
 		SetLuminosity(1)
-	return
 
 /obj/item/weapon/lighter/is_hot()
 	return lit * heat

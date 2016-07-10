@@ -488,3 +488,26 @@
 /obj/item/weapon/folder/black
 	desc = "A black folder."
 	icon_state = "folder_syndie"
+
+/obj/item/weapon/reagent_containers/pill/potass
+	name = "potassium iodide pill"
+	desc = "Use to remove radiation."
+	icon_state = "pill5"
+	list_reagents = list("potass_iodide" = 40)
+	roundstart = 1
+
+/obj/item/weapon/storage/firstaid/radiation
+	name = "radiation treatment kit"
+	desc = "Used for elimination from the body to radiation."
+	icon_state = "radfirstaid2"
+	item_state = "firstaid-brute"
+
+/obj/item/weapon/storage/firstaid/radiation/New()
+	..()
+	new /obj/item/weapon/reagent_containers/pill/potass(src)
+	new /obj/item/weapon/reagent_containers/pill/potass(src)
+	new /obj/item/weapon/reagent_containers/pill/potass(src)
+	new /obj/item/weapon/reagent_containers/pill/potass(src)
+	new /obj/item/weapon/reagent_containers/pill/mutadone(src)
+	new /obj/item/weapon/reagent_containers/hypospray/medipen(src)
+	new /obj/item/device/healthanalyzer(src)

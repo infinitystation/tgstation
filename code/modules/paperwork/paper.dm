@@ -159,7 +159,7 @@
 	info = null
 	stamps = null
 	stamped = list()
-	overlays.Cut()
+	cut_overlays()
 	updateinfolinks()
 	update_icon()
 
@@ -182,7 +182,10 @@
 	t = replacetext(t, "ÿ", "&#1103;")
 	t = replacetext(t, "\[large\]", "<font size=\"4\">")
 	t = replacetext(t, "\[/large\]", "</font>")
-	t = replacetext(t, "\[sign\]", "<font face=\"[SIGNFONT]\"><i>[user.real_name]</i></font>")
+	if(user)
+		t = replacetext(t, "\[sign\]", "<font face=\"[SIGNFONT]\"><i>[user.real_name]</i></font>")
+	else
+		t = replacetext(t, "\[sign\]", "")
 	t = replacetext(t, "\[field\]", "<span class=\"paper_field\"></span>")
 
 	if(!iscrayon)
@@ -193,7 +196,8 @@
 		t = replacetext(t, "\[list\]", "<ul>")
 		t = replacetext(t, "\[/list\]", "</ul>")
 
-		t = "<font face=\"[PEN_FONT]\" color=[P.colour]>[t]</font>"
+		if(P)
+			t = "<font face=\"[PEN_FONT]\" color=[P.colour]>[t]</font>"
 	else // If it is a crayon, and he still tries to use these, make them empty!
 		var/obj/item/toy/crayon/C = P
 		t = replacetext(t, "\[*\]", "")
@@ -217,7 +221,6 @@
 		fields++
 
 	return t
-
 
 /obj/item/weapon/paper/proc/openhelp(mob/user)
 	user << browse({"<HTML><HEAD><TITLE>Pen Help</TITLE></HEAD>
@@ -309,7 +312,7 @@
 		if(!stamped)
 			stamped = new
 		stamped += P.type
-		overlays += stampoverlay
+		add_overlay(stampoverlay)
 
 		user << "<span class='notice'>You stamp the paper with your rubber stamp.</span>"
 
