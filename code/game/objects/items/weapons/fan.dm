@@ -29,7 +29,7 @@
 
 /obj/item/weapon/fan/attack(mob/living/carbon/C, mob/living/carbon/human/user)
 	if(on)
-		user.visible_message("<span class='notice'>[user] wave air on [C] with [src]!</span>", \
-							"<span class='usernotice'>You wave air on [C] with [src]!</span>")
+		user.visible_message("[user] wave air on [C] with [src]!</span>", \
+							"<span class='notice'>You wave air on [C] with [src]!</span>")
 	else
 		return
