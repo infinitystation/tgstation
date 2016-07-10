@@ -447,7 +447,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 
 	var/datum/round_event/ion_storm/ion = new(0, announce_ion_laws, input)
 	ion.start()
-	
+
 	feedback_add_details("admin_verb","IONC") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/cmd_admin_rejuvenate(mob/living/M in mob_list)
@@ -486,7 +486,6 @@ Traitors and the like can also be revived with the previous role mostly intact.
 		input = input(usr, "Please enter anything you want. Anything. Serious.", "What?", "") as message|null
 		if(!input)
 			return
-		input = parsepencode(input)
 		priority_announce("A report has been downloaded and printed out at all communications consoles.", "Incoming Classified Message", 'sound/AI/commandreport.ogg')
 
 	print_command_report(input,"[confirm=="Yes" ? "" : "Classified "][command_name()] Update")

@@ -28,7 +28,7 @@
 	name = "tournament gangster"
 
 	uniform = /obj/item/clothing/under/rank/det
-	suit = /obj/item/clothing/suit/storage/det_suit
+	suit = /obj/item/clothing/suit/det_suit
 	glasses = /obj/item/clothing/glasses/thermal/monocle
 	head = /obj/item/clothing/head/det_hat
 	r_hand = /obj/item/weapon/gun/projectile

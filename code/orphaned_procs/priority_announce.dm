@@ -36,10 +36,11 @@
 	for (var/obj/machinery/computer/communications/C in machines)
 		if(!(C.stat & (BROKEN|NOPOWER)) && C.z == ZLEVEL_STATION)
 			var/obj/item/weapon/paper/P = new /obj/item/weapon/paper( C.loc )
-			P.name = "paper- '[title]'"
-			P.info = text
 			C.messagetitle.Add("[title]")
 			C.messagetext.Add(text)
+			P.name = "paper- '[title]'"
+			P.info = P.parsepencode(text)
+			P.updateinfolinks()
 			P.update_icon()
 
 /proc/minor_announce(message, title = "Attention:", alert)
