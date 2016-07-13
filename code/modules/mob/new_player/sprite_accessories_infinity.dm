@@ -337,3 +337,8 @@
 	icon_state = "harley_hair"
 	icon = 'icons/mob/more_hairs.dmi'
 	gender = FEMALE
+
+/datum/sprite_accessory/hair/hair_dave
+	name = "Style Brother"
+	icon = 'icons/mob/more_hairs.dmi'
+	icon_state = "hair_dave"
