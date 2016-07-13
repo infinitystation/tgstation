@@ -7,6 +7,13 @@
 	canSmoothWith = list(/turf/closed/wall/darksteel)
 	smooth = SMOOTH_TRUE
 
+/turf/closed/indestructible/riveted/darksteel
+	name = "darksteel wall"
+	icon = 'icons/turf/walls/darksteel_wall.dmi'
+	icon_state = "darksteel"
+	canSmoothWith = list(/turf/closed/wall/darksteel)
+	smooth = SMOOTH_TRUE
+
 /turf/closed/wall/med
 	icon = 'icons/turf/walls/med_wall.dmi'
 	icon_state = "med"

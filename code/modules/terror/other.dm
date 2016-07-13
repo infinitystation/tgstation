@@ -177,6 +177,39 @@
 	desc = "A direction sign, pointing out which way the Docking port 4 is."
 	icon_state = "dock_4"
 
+/obj/structure/sign/directions/shuttle
+	name = "shuttle sign"
+	desc = "A direction sign, pointing out which way the shuttle."
+	icon_state = "shuttle"
+	icon = 'icons/obj/infinity_decals.dmi'
+
+/obj/structure/sign/directions/cryo
+	name = "cryo sign"
+	icon = 'icons/obj/infinity_decals.dmi'
+	desc = "Index, which tells that you are in the cryogenic room."
+	icon_state = "cryo"
+
+/obj/structure/sign/directions/ert
+	name = "lead's equipment"
+	icon = 'icons/obj/infinity_decals.dmi'
+	desc = "Index, which tells that you are in the lead's room."
+	icon_state = "commander"
+
+/obj/structure/sign/directions/ert/security
+	name = "security's equipment"
+	desc = "Index, which tells that you are in the security's room."
+	icon_state = "security"
+
+/obj/structure/sign/directions/ert/engineer
+	name = "engineer's equipment"
+	desc = "Index, which tells that you are in the engineer's room."
+	icon_state = "engineer"
+
+/obj/structure/sign/directions/ert/medic
+	name = "medical's equipment"
+	desc = "Index, which tells that you are in the medical's room."
+	icon_state = "medic"
+
 /mob/living/simple_animal/crab/Groffee
 	name = "Groffee"
 	real_name = "Groffee"
@@ -408,6 +441,7 @@
 	icon_state = "w_closet"
 	icon_door = "w_closet"
 	wall_mounted = 1
+	large = FALSE
 	anchored = 1
 	storage_capacity = 20
 	mob_storage_capacity = 0
@@ -511,3 +545,26 @@
 	new /obj/item/weapon/reagent_containers/pill/mutadone(src)
 	new /obj/item/weapon/reagent_containers/hypospray/medipen(src)
 	new /obj/item/device/healthanalyzer(src)
+
+/obj/structure/hyper_sleep
+	name = "Hypersleeper's chamber"
+	icon = 'icons/obj/infinity_object.dmi'
+	icon_state = "body_scanner_0"
+
+/obj/structure/hyper_sleep/cable
+	name = "Hypersleeper's cable"
+	icon_state = "cryo_rear"
+
+/obj/structure/hyper_sleep/cable/tunnel
+	name = "Hypersleeper's tunnel"
+	icon_state = "cryo_rear_nocable"
+
+/obj/machinery/door/poddoor/big
+	icon = 'icons/obj/doors/1x2blast_hor.dmi'
+	icon_state = "closed"
+	bound_width = 64
+
+/obj/machinery/door/poddoor/big/preopen
+	icon_state = "open"
+	density = 0
+	opacity = 0

@@ -19,7 +19,7 @@ z7 = empty space
 
 		#define MINETYPE "lavaland"
 
-        #include "map_files\TerrorStation\lavaland.dmm" 	 // Planetoid 'Infernos'
+        #include "map_files\TerrorStation\lavaland.dmm" 	 // Planetoid 'Inferno'
         #include "map_files\TerrorStation\MetaStation.dmm"   // Space Station 'Infinity'
         #include "map_files\TerrorStation\z2.dmm"		 	 // Central Command
         #include "map_files\TerrorStation\z3.dmm" 			 // White Ship
