@@ -127,6 +127,12 @@
 	name = "AI Satellite Lobby"
 	icon_state = "storage"
 
+/area/zombie
+	name = "Zombie"
+	icon_state = "red"
+	requires_power = 0
+	has_gravity = 1
+
 ///Flors///
 
 /turf/open/floor/plasteel/terror

@@ -1038,7 +1038,7 @@
 	title = "Janitor"
 	page_link = "Уборщик"
 
-/obj/item/weapon/book/manual/wiki/Clown
+/obj/item/weapon/book/manual/wiki/clown
 	name = "Clown"
 	icon = 'icons/obj/infinity_object.dmi'
 	icon_state ="book_wiki_civilian"
@@ -1170,6 +1170,6 @@
 	icon_state = "book_wiki_security"
 	author = "Officer Encyclopedia"
 	title = "Officer"
-	page_link = "Офицер_СБ"
+	page_link = "Офицер_Службы_Безопасности"
 
 

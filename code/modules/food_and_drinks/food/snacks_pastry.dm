@@ -154,6 +154,7 @@
 	list_reagents = list("nutriment" = 4)
 	cooked_type = /obj/item/weapon/reagent_containers/food/snacks/donkpocket/warm
 	filling_color = "#CD853F"
+	trash = /obj/item/weapon/paper
 
 /obj/item/weapon/reagent_containers/food/snacks/donkpocket/warm
 	name = "warm Donk-pocket"

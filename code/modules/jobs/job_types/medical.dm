@@ -31,7 +31,7 @@ Chief Medical Officer
 	ears = /obj/item/device/radio/headset/heads/cmo
 	uniform = /obj/item/clothing/under/rank/chief_medical_officer
 	shoes = /obj/item/clothing/shoes/sneakers/brown
-	suit = /obj/item/clothing/suit/storage/toggle/labcoat/cmo
+	suit = /obj/item/clothing/suit/toggle/labcoat/cmo
 	l_hand = /obj/item/weapon/storage/firstaid/regular
 	suit_store = /obj/item/device/flashlight/pen
 	backpack_contents = list(/obj/item/weapon/melee/classic_baton/telescopic=1)
@@ -109,7 +109,7 @@ Chemist
 	ears = /obj/item/device/radio/headset/headset_med
 	uniform = /obj/item/clothing/under/rank/chemist
 	shoes = /obj/item/clothing/shoes/sneakers/white
-	suit =  /obj/item/clothing/suit/storage/toggle/labcoat/chemist
+	suit =  /obj/item/clothing/suit/toggle/labcoat/chemist
 
 	backpack = /obj/item/weapon/storage/backpack/chemistry
 	satchel = /obj/item/weapon/storage/backpack/satchel_chem
@@ -141,7 +141,7 @@ Geneticist
 	ears = /obj/item/device/radio/headset/headset_medsci
 	uniform = /obj/item/clothing/under/rank/geneticist
 	shoes = /obj/item/clothing/shoes/sneakers/white
-	suit =  /obj/item/clothing/suit/storage/toggle/labcoat/genetics
+	suit =  /obj/item/clothing/suit/toggle/labcoat/genetics
 	suit_store =  /obj/item/device/flashlight/pen
 
 	backpack = /obj/item/weapon/storage/backpack/genetics
@@ -175,7 +175,7 @@ Virologist
 	uniform = /obj/item/clothing/under/rank/virologist
 	mask = /obj/item/clothing/mask/surgical
 	shoes = /obj/item/clothing/shoes/sneakers/white
-	suit =  /obj/item/clothing/suit/storage/toggle/labcoat/virologist
+	suit =  /obj/item/clothing/suit/toggle/labcoat/virologist
 	suit_store =  /obj/item/device/flashlight/pen
 
 	backpack = /obj/item/weapon/storage/backpack/virology
