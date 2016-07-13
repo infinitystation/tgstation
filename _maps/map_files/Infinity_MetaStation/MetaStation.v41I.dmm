@@ -5363,7 +5363,7 @@
 "bZg" = (/obj/machinery/computer/security/telescreen/entertainment{pixel_x = 30; pixel_y = 0},/obj/machinery/photocopier,/turf/open/floor/wood,/area/library)
 "bZh" = (/obj/structure/easel,/turf/open/floor/plasteel{tag = "icon-cult"; icon_state = "cult"; dir = 2},/area/library)
 "bZi" = (/obj/structure/chair/comfy/brown,/turf/open/floor/plasteel{tag = "icon-cult"; icon_state = "cult"; dir = 2},/area/library)
-"bZj" = (/obj/structure/bookcase{name = "Forbidden Knowledge"},/obj/item/weapon/book/manual/wiki/Clown,/obj/item/weapon/book/manual/hydroponics_pod_people,/obj/item/weapon/book/manual/wiki/security_space_law,/turf/open/floor/plasteel{tag = "icon-cult"; icon_state = "cult"; dir = 2},/area/library)
+"bZj" = (/obj/structure/bookcase{name = "Forbidden Knowledge"},/obj/item/weapon/book/manual/wiki/clown,/obj/item/weapon/book/manual/hydroponics_pod_people,/obj/item/weapon/book/manual/wiki/security_space_law,/turf/open/floor/plasteel{tag = "icon-cult"; icon_state = "cult"; dir = 2},/area/library)
 "bZk" = (/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,/obj/item/device/radio/intercom{dir = 4; name = "Station Intercom (General)"; pixel_x = 27},/turf/open/floor/plasteel{dir = 4; icon_state = "neutralcorner"},/area/hallway/primary/central)
 "bZl" = (/turf/open/floor/plasteel{dir = 10; icon_state = "warning"},/area/ai_monitored/storage/eva)
 "bZm" = (/turf/open/floor/plasteel{dir = 2; icon_state = "warning"},/area/ai_monitored/storage/eva)
