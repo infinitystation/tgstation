@@ -241,7 +241,7 @@
 		if ("pout","pouts")
 			message = "<B>[src]</B> pouts."
 			m_type = 2
-		
+
 		if ("scream","screams")
 			message = "<B>[src]</B> душераздирающе кричит!"
 			playsound(loc, 'sound/emotions/scream.ogg', 20, 1, 1)
@@ -437,5 +437,8 @@
 	set name = "Set Flavor Text"
 	set desc = "Sets an extended description of your character's features."
 	set category = "IC"
+
+	if(appearance_isbanned(usr))
+		return
 
 	update_flavor_text()

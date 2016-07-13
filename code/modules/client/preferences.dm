@@ -1364,6 +1364,9 @@ var/list/preferences_datums = list()
 	return 1
 
 /datum/preferences/proc/set_char_notes(user)
+	if(appearance_isbanned(user))
+		return
+
 	var/dat = ""
 
 	dat += "<BR><a href='?_src_=prefs;preference=flavor_text'><b>Flavor Text:</b></a><BR>"
