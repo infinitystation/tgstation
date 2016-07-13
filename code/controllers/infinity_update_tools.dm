@@ -8,14 +8,14 @@
 	if (!usr.client.holder)
 		return
 	if(currentbuild.folder == currentbuild.update)
-		usr << "РћС€РёР±РєР°. РџРµСЂРµРєР»СЋС‡РёС‚Рµ Р±РёР»Рґ РЅР° РѕСЃРЅРѕРІРЅРѕР№"
+		usr << "Ошибка. Переключите билд на основной"
 		return
 	var/confirm = alert("End the round and update server?", "End Round", "Yes", "Cancel")
 	if(confirm == "Cancel")
 		return
 	if(confirm == "Yes")
-		message_admins("[key_name_admin(usr)] Р·Р°РїСѓСЃС‚РёР»(Р°) РѕР±РЅРѕРІР»РµРЅРёРµ СЃРµСЂРІРµСЂР°.")
-		log_game("[key_name_admin(usr)] Р·Р°РїСѓСЃС‚РёР»(Р°) РѕР±РЅРѕРІР»РµРЅРёРµ СЃРµСЂРІРµСЂР°.")
+		message_admins("[key_name_admin(usr)] запустил(а) обновление сервера.")
+		log_game("[key_name_admin(usr)] запустил(а) обновление сервера.")
 		force_update_server()
 
 /client/proc/update_server_round_end()
@@ -24,23 +24,23 @@
 	if (!usr.client.holder)
 		return
 	if(currentbuild.folder == currentbuild.update)
-		usr << "РћС€РёР±РєР°. РџРµСЂРµРєР»СЋС‡РёС‚Рµ Р±РёР»Рґ РЅР° РѕСЃРЅРѕРІРЅРѕР№"
+		usr << "Ошибка. Переключите билд на основной"
 		return
-	var/confirm = alert("РРЅРёС†РёРёСЂРѕРІР°С‚СЊ РѕР±РЅРѕРІР»РµРЅРёРµ РІ РєРѕРЅС†Рµ СЂР°СѓРЅРґР°?", "End Round", "Yes", "Cancel")
+	var/confirm = alert("Инициировать обновление в конце раунда?", "End Round", "Yes", "Cancel")
 	if(confirm == "Cancel")
 		return
 	if(confirm == "Yes")
-		message_admins("[key_name_admin(usr)] РёРЅРёС†РёРёСЂРѕРІР°Р»(Р°) РѕР±РЅРѕРІР»РµРЅРёРµ СЃРµСЂРІРµСЂР° РІ РєРѕРЅС†Рµ С‚РµРєСѓС‰РµРіРѕ СЂР°СѓРЅРґР°.")
-		log_game("[key_name_admin(usr)] РёРЅРёС†РёРёСЂРѕРІР°Р»(Р°) РѕР±РЅРѕРІР»РµРЅРёРµ СЃРµСЂРІРµСЂР° РІ РєРѕРЅС†Рµ С‚РµРєСѓС‰РµРіРѕ СЂР°СѓРЅРґР°.")
-		world << "<span class='adminooc'>РђРґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂ [usr.key] РёРЅРёС†РёРёСЂРѕРІР°Р»(Р°) РѕР±РЅРѕРІР»РµРЅРёРµ СЃРµСЂРІРµСЂР° РІ РєРѕРЅС†Рµ С‚РµРєСѓС‰РµРіРѕ СЂР°СѓРЅРґР°.</span>"
+		message_admins("[key_name_admin(usr)] инициировал(а) обновление сервера в конце текущего раунда.")
+		log_game("[key_name_admin(usr)] инициировал(а) обновление сервера в конце текущего раунда.")
+		world << "<span class='adminooc'>Администратор [usr.key] инициировал(а) обновление сервера в конце текущего раунда.</span>"
 		ticker.updater_ckey = usr.key
 		ticker.update_waiting = 1
 
 /proc/force_update_server()
 	if(currentbuild.folder == currentbuild.update)
-		world << "РћС€РёР±РєР° РѕР±РЅРѕРІР»РµРЅРё&#255;. РџРµСЂРµРєР»СЋС‡РёС‚РµСЃСЊ РёР· С‚РµСЃС‚РѕРІРѕРіРѕ Р±РёР»РґР° РЅР° РѕСЃРЅРѕРІРЅРѕР№."
+		world << "Ошибка обновлени&#255;. Переключитесь из тестового билда на основной."
 		return
-	world << "<span class='adminooc'><FONT size=5>Р’РќРРњРђРќРР•! РЎР•Р Р’Р•Р  РћР‘РќРћР’Р›РЇР•РўРЎРЇ Р§Р•Р Р•Р— 10 РЎР•РљРЈРќР”! РЎР•Р Р’Р•Р  РќР• Р‘РЈР”Р•Рў Р РђР‘РћРўРђРўР¬ РќР•РЎРљРћР›Р¬РљРћ РњРРќРЈРў!</FONT><br>РћР±РЅРѕРІР»РµРЅРёРµ РІ РєРѕРЅС†Рµ СЂР°СѓРЅРґР° РёРЅРёС†РёРёСЂРѕРІР°РЅРѕ Р°РґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂРѕРј [ticker.updater_ckey]</span>."
+	world << "<span class='adminooc'><FONT size=5>ВНИМАНИЕ! СЕРВЕР ОБНОВЛЯЕТСЯ ЧЕРЕЗ 10 СЕКУНД! СЕРВЕР НЕ БУДЕТ РАБОТАТЬ НЕСКОЛЬКО МИНУТ!</FONT><br>Обновление в конце раунда инициировано администратором [ticker.updater_ckey]</span>."
 	playsound_global('sound/effects/alarm.ogg', repeat=0, channel=1, volume=100)
 	sleep(100)
-	shell("infinityctl update -b tgstation --autostart")//TODO: РїРѕРјРµРЅСЏС‚СЊ
+	shell("infinityctl update -b tgstation --autostart")//TODO: поменять
