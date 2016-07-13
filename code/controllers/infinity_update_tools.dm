@@ -8,14 +8,14 @@
 	if (!usr.client.holder)
 		return
 	if(currentbuild.folder == currentbuild.update)
-		usr << "Ошибка. Переключите билд на основной"
+		usr << "ГЋГёГЁГЎГЄГ . ГЏГҐГ°ГҐГЄГ«ГѕГ·ГЁГІГҐ ГЎГЁГ«Г¤ Г­Г  Г®Г±Г­Г®ГўГ­Г®Г©"
 		return
 	var/confirm = alert("End the round and update server?", "End Round", "Yes", "Cancel")
 	if(confirm == "Cancel")
 		return
 	if(confirm == "Yes")
-		message_admins("[key_name_admin(usr)] запустил(а) обновление сервера.")
-		log_game("[key_name_admin(usr)] запустил(а) обновление сервера.")
+		message_admins("[key_name_admin(usr)] Г§Г ГЇГіГ±ГІГЁГ«(Г ) Г®ГЎГ­Г®ГўГ«ГҐГ­ГЁГҐ Г±ГҐГ°ГўГҐГ°Г .")
+		log_game("[key_name_admin(usr)] Г§Г ГЇГіГ±ГІГЁГ«(Г ) Г®ГЎГ­Г®ГўГ«ГҐГ­ГЁГҐ Г±ГҐГ°ГўГҐГ°Г .")
 		force_update_server()
 
 /client/proc/update_server_round_end()
@@ -24,23 +24,23 @@
 	if (!usr.client.holder)
 		return
 	if(currentbuild.folder == currentbuild.update)
-		usr << "Ошибка. Переключите билд на основной"
+		usr << "ГЋГёГЁГЎГЄГ . ГЏГҐГ°ГҐГЄГ«ГѕГ·ГЁГІГҐ ГЎГЁГ«Г¤ Г­Г  Г®Г±Г­Г®ГўГ­Г®Г©"
 		return
-	var/confirm = alert("Инициировать обновление в конце раунда?", "End Round", "Yes", "Cancel")
+	var/confirm = alert("Г€Г­ГЁГ¶ГЁГЁГ°Г®ГўГ ГІГј Г®ГЎГ­Г®ГўГ«ГҐГ­ГЁГҐ Гў ГЄГ®Г­Г¶ГҐ Г°Г ГіГ­Г¤Г ?", "End Round", "Yes", "Cancel")
 	if(confirm == "Cancel")
 		return
 	if(confirm == "Yes")
-		message_admins("[key_name_admin(usr)] инициировал(а) обновление сервера в конце текущего раунда.")
-		log_game("[key_name_admin(usr)] инициировал(а) обновление сервера в конце текущего раунда.")
-		world << "<span class='adminooc'>Администратор [usr.key] инициировал(а) обновление сервера в конце текущего раунда.</span>"
+		message_admins("[key_name_admin(usr)] ГЁГ­ГЁГ¶ГЁГЁГ°Г®ГўГ Г«(Г ) Г®ГЎГ­Г®ГўГ«ГҐГ­ГЁГҐ Г±ГҐГ°ГўГҐГ°Г  Гў ГЄГ®Г­Г¶ГҐ ГІГҐГЄГіГ№ГҐГЈГ® Г°Г ГіГ­Г¤Г .")
+		log_game("[key_name_admin(usr)] ГЁГ­ГЁГ¶ГЁГЁГ°Г®ГўГ Г«(Г ) Г®ГЎГ­Г®ГўГ«ГҐГ­ГЁГҐ Г±ГҐГ°ГўГҐГ°Г  Гў ГЄГ®Г­Г¶ГҐ ГІГҐГЄГіГ№ГҐГЈГ® Г°Г ГіГ­Г¤Г .")
+		world << "<span class='adminooc'>ГЂГ¤Г¬ГЁГ­ГЁГ±ГІГ°Г ГІГ®Г° [usr.key] ГЁГ­ГЁГ¶ГЁГЁГ°Г®ГўГ Г«(Г ) Г®ГЎГ­Г®ГўГ«ГҐГ­ГЁГҐ Г±ГҐГ°ГўГҐГ°Г  Гў ГЄГ®Г­Г¶ГҐ ГІГҐГЄГіГ№ГҐГЈГ® Г°Г ГіГ­Г¤Г .</span>"
 		ticker.updater_ckey = usr.key
 		ticker.update_waiting = 1
 
 /proc/force_update_server()
 	if(currentbuild.folder == currentbuild.update)
-		world << "Ошибка обновлени&#255;. Переключитесь из тестового билда на основной."
+		world << "ГЋГёГЁГЎГЄГ  Г®ГЎГ­Г®ГўГ«ГҐГ­ГЁ&#255;. ГЏГҐГ°ГҐГЄГ«ГѕГ·ГЁГІГҐГ±Гј ГЁГ§ ГІГҐГ±ГІГ®ГўГ®ГЈГ® ГЎГЁГ«Г¤Г  Г­Г  Г®Г±Г­Г®ГўГ­Г®Г©."
 		return
-	world << "<span class='adminooc'><FONT size=5>ВНИМАНИЕ! СЕРВЕР ОБНОВЛЯЕТСЯ ЧЕРЕЗ 10 СЕКУНД! СЕРВЕР НЕ БУДЕТ РАБОТАТЬ НЕСКОЛЬКО МИНУТ!</FONT><br>Обновление в конце раунда инициировано администратором [ticker.updater_ckey]</span>."
+	world << "<span class='adminooc'><FONT size=5>Г‚ГЌГ€ГЊГЂГЌГ€Г…! Г‘Г…ГђГ‚Г…Гђ ГЋГЃГЌГЋГ‚Г‹ГџГ…Г’Г‘Гџ Г—Г…ГђГ…Г‡ 10 Г‘Г…ГЉГ“ГЌГ„! Г‘Г…ГђГ‚Г…Гђ ГЌГ… ГЃГ“Г„Г…Г’ ГђГЂГЃГЋГ’ГЂГ’Гњ ГЌГ…Г‘ГЉГЋГ‹ГњГЉГЋ ГЊГ€ГЌГ“Г’!</FONT><br>ГЋГЎГ­Г®ГўГ«ГҐГ­ГЁГҐ Гў ГЄГ®Г­Г¶ГҐ Г°Г ГіГ­Г¤Г  ГЁГ­ГЁГ¶ГЁГЁГ°Г®ГўГ Г­Г® Г Г¤Г¬ГЁГ­ГЁГ±ГІГ°Г ГІГ®Г°Г®Г¬ [ticker.updater_ckey]</span>."
 	playsound_global('sound/effects/alarm.ogg', repeat=0, channel=1, volume=100)
 	sleep(100)
-	shell("infinityctl start -b tgstation --autostart")//TODO: поменять
+	shell("infinityctl update -b tgstation --autostart")//TODO: ГЇГ®Г¬ГҐГ­ГїГІГј
