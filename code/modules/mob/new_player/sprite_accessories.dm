@@ -497,6 +497,11 @@
 	icon = 'icons/mob/hair_encoder.dmi'
 	icon_state = "hair_encoder"
 
+/datum/sprite_accessory/hair/boddicker
+	name = "Boddicker"
+	icon_state = "hair_boddicker"
+
+
 /////////////////////////////
 // Facial Hair Definitions //
 /////////////////////////////
