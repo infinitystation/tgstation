@@ -90,7 +90,7 @@
 
 	//icon for some reasons
 	var/alt_icon = null
-	
+
 	//Flight and floating
 	var/override_float = 0
 
@@ -744,7 +744,7 @@
 	if (H.nutrition > 0 && H.stat != 2)
 		H.nutrition = max (0, H.nutrition - HUNGER_FACTOR)
 		if(H.client)
-			H.need_to_shit = min(SHIT_LEVEL_MAX, H.need_to_shit + HUNGER_FACTOR)
+			H.need_to_shit = min(SHIT_LEVEL_MAX, H.need_to_shit + (HUNGER_FACTOR/5))
 
 	// nutrition decrease and satiety
 	if (H.nutrition > 0 && H.stat != DEAD && \
