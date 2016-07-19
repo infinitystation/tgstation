@@ -178,7 +178,7 @@ var/global/normal_ooc_colour = OOC_COLOR
 		if(R_ADMIN)
 			if(C.prefs.chat_toggles & CHAT_LOOC)
 				var/prefix = "(R)LOOC"
-				var/link = "<a href='?_src_=holder;adminplayerobservefollow=\ref[S]'>(F)</A>"
+				var/link = "<a href='?_src_=holder;adminplayerobservefollow=\ref[S]'>(F)</A> "
 				if (C.mob in heard)
 					prefix = "LOOC"
 				C << "[link]<font color='#6699CC'><span class='ooc'><span class='prefix'>[prefix]:</span> <EM>[display_name]:</EM> <span class='message'>[msg]</span></span></font>"
