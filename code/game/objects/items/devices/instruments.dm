@@ -63,7 +63,7 @@
 	instrumentId = "guitar"
 
 /obj/item/device/instrument/eguitar
-	name = "eletric guitar"
+	name = "electric guitar"
 	desc = "Makes all your shredding needs possible."
 	icon = 'icons/obj/musician.dmi'
 	icon_state = "eguitar"
