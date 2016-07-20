@@ -1098,6 +1098,7 @@
 #include "code\modules\clothing\suits\wiz_robe.dm"
 #include "code\modules\clothing\under\color.dm"
 #include "code\modules\clothing\under\infinity.dm"
+#include "code\modules\clothing\under\infinity_badges.dm"
 #include "code\modules\clothing\under\miscellaneous.dm"
 #include "code\modules\clothing\under\pants.dm"
 #include "code\modules\clothing\under\shorts.dm"
