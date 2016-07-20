@@ -3,8 +3,10 @@
 /obj/item/clothing/ears/earmuffs/mp3
 	name = "Headphones with MP3"
 	desc = "It is a black portable wireless stereo head hanging, blue LCD display built-in FM radio Mp3 headset."
+	icon = 'icons/obj/infinity_object.dmi'
 	icon_state = "headphones_off"
 	item_state = "headphones_off"
+	worn_icon = 'icons/mob/infinity_work.dmi'
 	up = 0
 	actions_types = list(/datum/action/item_action/music)
 
