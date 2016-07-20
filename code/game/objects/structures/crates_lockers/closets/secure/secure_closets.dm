@@ -94,3 +94,13 @@
 			if(code2[inc]<0)
 				code2[inc] = 9
 			interact(user)
+
+/obj/structure/closet/secure_closet/attackby(obj/item/weapon/W, mob/user, params)
+	if(user in src)
+		return
+	if(!locked && !opened)
+		if(istype(W, /obj/item/device/multitool/multimeter))
+			interact(user)
+		return 1
+	else
+		..()
