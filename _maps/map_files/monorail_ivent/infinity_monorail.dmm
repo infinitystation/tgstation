@@ -1,0 +1,245 @@
+"aa" = (/turf/closed/indestructible/riveted,/area/monorail_max/grass)
+"ab" = (/turf/open/floor/grass/newgrass/swampgrass,/area/monorail_max/grass)
+"ac" = (/turf/closed/indestructible/riveted,/area/monorail_max/bridge)
+"ad" = (/turf/closed/indestructible/fakeglass{dir = 8},/area/monorail_max/bridge)
+"ae" = (/turf/closed/indestructible/fakeglass{dir = 4; icon_state = "fakewindows2"},/area/monorail_max/bridge)
+"af" = (/turf/closed/indestructible/fakeglass{dir = 4},/area/monorail_max/bridge)
+"ag" = (/obj/structure/table/reinforced,/turf/open/floor/plasteel/black,/area/monorail_max/bridge)
+"ah" = (/obj/machinery/computer/communications,/turf/open/floor/plasteel/black,/area/monorail_max/bridge)
+"ai" = (/turf/closed/indestructible/fakeglass{dir = 1},/area/monorail_max/bridge)
+"aj" = (/turf/open/floor/plasteel/black,/area/monorail_max/bridge)
+"ak" = (/turf/closed/indestructible/fakeglass,/area/monorail_max/bridge)
+"al" = (/obj/machinery/computer/secure_data,/turf/open/floor/plasteel/black,/area/monorail_max/bridge)
+"am" = (/obj/structure/table/reinforced,/obj/machinery/computer/security/wooden_tv,/turf/open/floor/plasteel/black,/area/monorail_max/bridge)
+"an" = (/turf/closed/indestructible/riveted,/area/monorail_max/captain)
+"ao" = (/turf/open/floor/plasteel/black,/area/monorail_max/captain)
+"ap" = (/turf/closed/indestructible/fakeglass{dir = 1},/area/monorail_max/captain)
+"aq" = (/obj/machinery/door/airlock/glass_command,/turf/open/floor/carpet,/area/monorail_max/captain)
+"ar" = (/turf/open/floor/carpet,/area/monorail_max/captain)
+"as" = (/turf/closed/indestructible/fakeglass,/area/monorail_max/captain)
+"at" = (/obj/machinery/door/airlock/glass_command,/turf/open/floor/plasteel/black,/area/monorail_max/bridge)
+"au" = (/obj/structure/table/reinforced,/turf/open/floor/plasteel/black,/area/monorail_max/captain)
+"av" = (/obj/structure/mineral_door/wood/pyro,/turf/open/floor/plasteel/black,/area/monorail_max/bridge)
+"aw" = (/turf/closed/indestructible/riveted,/area/monorail_max/coridor)
+"ax" = (/turf/open/floor/plating/warnplate{dir = 1},/area/monorail_max/coridor)
+"ay" = (/turf/open/floor/plating/warnplate,/area/monorail_max/coridor)
+"az" = (/turf/closed/indestructible/riveted,/area/monorail_max/lobby)
+"aA" = (/obj/structure/mineral_door/wood/pyro{dir = 1},/turf/open/floor/plasteel/black,/area/monorail_max/lobby)
+"aB" = (/turf/open/floor/plasteel/black,/area/monorail_max/lobby)
+"aC" = (/turf/closed/indestructible/fakeglass{dir = 1},/area/monorail_max/lobby)
+"aD" = (/turf/closed/indestructible/fakeglass,/area/monorail_max/lobby)
+"aE" = (/obj/machinery/door/airlock/glass_security,/turf/open/floor/plasteel/black,/area/monorail_max/lobby)
+"aF" = (/obj/machinery/door/airlock/glass_large,/obj/machinery/door/poddoor/big{name = "ticket monorail blast door"},/turf/open/floor/plasteel/black,/area/monorail_max/lobby)
+"aG" = (/obj/machinery/door/poddoor/shutters/preopen{dir = 4},/turf/open/floor/plating/warnplate{dir = 4},/area/monorail_max/lobby)
+"aH" = (/obj/structure/table/reinforced,/obj/machinery/ticketmachine,/obj/structure/window/reinforced{dir = 4},/turf/open/floor/plasteel/black,/area/monorail_max/lobby)
+"aI" = (/obj/machinery/door/poddoor/preopen{name = "monorail entry/exit door"},/turf/open/floor/plating,/area/monorail_max/lobby)
+"aJ" = (/obj/structure/table/reinforced,/obj/machinery/door/poddoor/shutters/preopen{dir = 4},/turf/open/floor/plasteel/black,/area/monorail_max/lobby)
+"aK" = (/obj/machinery/door/poddoor/preopen,/turf/open/floor/plating,/area/monorail_max/lobby)
+"aL" = (/obj/structure/mineral_door/wood/pyro,/turf/open/floor/plasteel/black,/area/monorail_max/lobby)
+"aM" = (/turf/closed/indestructible/riveted,/area/monorail_max/security)
+"aN" = (/obj/structure/mineral_door/wood/pyro{dir = 1},/turf/open/floor/plasteel/black,/area/monorail_max/security)
+"aO" = (/turf/open/floor/plasteel/black,/area/monorail_max/security)
+"aP" = (/turf/closed/indestructible/fakeglass{dir = 1},/area/monorail_max/security)
+"aQ" = (/turf/closed/indestructible/fakeglass,/area/monorail_max/security)
+"aR" = (/obj/machinery/computer/secure_data,/turf/open/floor/plasteel/black,/area/monorail_max/security)
+"aS" = (/obj/machinery/computer/security,/turf/open/floor/plasteel/black,/area/monorail_max/security)
+"aT" = (/obj/structure/mineral_door/wood/pyro,/turf/open/floor/plasteel/black,/area/monorail_max/security)
+"aU" = (/turf/closed/indestructible/riveted,/area/monorail_max/medbay)
+"aV" = (/obj/structure/mineral_door/wood/pyro{dir = 1},/turf/open/floor/plasteel/black,/area/monorail_max/medbay)
+"aW" = (/turf/open/floor/plasteel/black,/area/monorail_max/medbay)
+"aX" = (/turf/closed/indestructible/fakeglass{dir = 1},/area/monorail_max/medbay)
+"aY" = (/turf/closed/indestructible/fakeglass,/area/monorail_max/medbay)
+"aZ" = (/obj/structure/mineral_door/wood/pyro,/turf/open/floor/plasteel/black,/area/monorail_max/medbay)
+"ba" = (/turf/closed/indestructible/riveted,/area/monorail_max/cafeteria)
+"bb" = (/obj/structure/mineral_door/wood/pyro{dir = 1},/turf/open/floor/plasteel/black,/area/monorail_max/cafeteria)
+"bc" = (/obj/structure/piano,/turf/open/floor/plasteel/black,/area/monorail_max/cafeteria)
+"bd" = (/turf/open/floor/plasteel/black,/area/monorail_max/cafeteria)
+"be" = (/obj/machinery/computer/slot_machine,/turf/open/floor/plasteel/black,/area/monorail_max/cafeteria)
+"bf" = (/obj/structure/table,/obj/item/device/instrument/violin,/obj/item/device/instrument/guitar,/turf/open/floor/plasteel/black,/area/monorail_max/cafeteria)
+"bg" = (/obj/structure/table,/turf/open/floor/plasteel/black,/area/monorail_max/cafeteria)
+"bh" = (/turf/closed/indestructible/fakeglass{dir = 1},/area/monorail_max/cafeteria)
+"bi" = (/obj/structure/chair/comfy/sofa/corner/right/brown,/turf/open/floor/plasteel/black,/area/monorail_max/cafeteria)
+"bj" = (/obj/structure/chair/comfy/sofa/corner/brown,/turf/open/floor/plasteel/black,/area/monorail_max/cafeteria)
+"bk" = (/turf/closed/indestructible/fakeglass{dir = 1; icon_state = "fakewindows2"},/area/monorail_max/cafeteria)
+"bl" = (/obj/structure/table/wood,/turf/open/floor/plasteel/black,/area/monorail_max/cafeteria)
+"bm" = (/turf/closed/indestructible/fakeglass,/area/monorail_max/cafeteria)
+"bn" = (/obj/structure/chair/comfy/sofa/corner/right/brown{dir = 1},/turf/open/floor/plasteel/black,/area/monorail_max/cafeteria)
+"bo" = (/obj/structure/chair/comfy/sofa/corner/brown{dir = 1},/turf/open/floor/plasteel/black,/area/monorail_max/cafeteria)
+"bp" = (/obj/machinery/light{dir = 8},/turf/open/floor/plasteel/black,/area/monorail_max/cafeteria)
+"bq" = (/obj/machinery/light{dir = 4},/turf/open/floor/plasteel/black,/area/monorail_max/cafeteria)
+"br" = (/obj/structure/table/reinforced,/obj/machinery/door/poddoor/shutters/preopen{dir = 4},/turf/open/floor/plasteel/black,/area/monorail_max/cafeteria)
+"bs" = (/obj/structure/chair/stool/bar,/turf/open/floor/plasteel/black,/area/monorail_max/cafeteria)
+"bt" = (/obj/machinery/chem_dispenser/bartender,/turf/open/floor/plasteel/black,/area/monorail_max/cafeteria)
+"bu" = (/obj/structure/table/reinforced,/obj/item/weapon/book/manual/barman_recipes,/obj/machinery/door/poddoor/shutters/preopen{dir = 4},/turf/open/floor/plasteel/black,/area/monorail_max/cafeteria)
+"bv" = (/obj/structure/mineral_door/wood/pyro,/turf/open/floor/plasteel/black,/area/monorail_max/cafeteria)
+"bw" = (/turf/closed/indestructible/riveted,/area/monorail_max/dormitory)
+"bx" = (/obj/structure/mineral_door/wood/pyro{dir = 1},/turf/open/floor/plasteel/black,/area/monorail_max/dormitory)
+"by" = (/turf/open/floor/plasteel/black,/area/monorail_max/dormitory)
+"bz" = (/obj/machinery/space_heater,/turf/open/floor/plasteel/black,/area/monorail_max/dormitory)
+"bA" = (/obj/structure/table,/turf/open/floor/plasteel/black,/area/monorail_max/dormitory)
+"bB" = (/obj/structure/table,/obj/structure/bedsheetbin,/turf/open/floor/plasteel/black,/area/monorail_max/dormitory)
+"bC" = (/turf/closed/indestructible/fakeglass{dir = 6; icon_state = "fakewindows2"},/area/monorail_max/dormitory)
+"bD" = (/obj/machinery/door/airlock/glass_security,/turf/open/floor/plasteel/black,/area/monorail_max/dormitory)
+"bE" = (/obj/structure/table/reinforced,/turf/open/floor/plasteel/black,/area/monorail_max/dormitory)
+"bF" = (/obj/machinery/washing_machine,/turf/open/floor/plasteel/black,/area/monorail_max/dormitory)
+"bG" = (/obj/structure/bed/pod,/turf/open/floor/plasteel/black,/area/monorail_max/dormitory)
+"bH" = (/turf/closed/indestructible/riveted,/area/monorail_max/toilet)
+"bI" = (/obj/structure/mineral_door/wood/pyro{dir = 1},/turf/open/floor/plasteel/black,/area/monorail_max/toilet)
+"bJ" = (/obj/structure/sink{pixel_y = 30},/obj/structure/mirror{pixel_x = -30},/turf/open/floor/plasteel/freezer,/area/monorail_max/toilet)
+"bK" = (/turf/open/floor/plasteel/freezer,/area/monorail_max/toilet)
+"bL" = (/obj/structure/sink{pixel_y = 30},/obj/structure/mirror{pixel_x = 30},/turf/open/floor/plasteel/freezer,/area/monorail_max/toilet)
+"bM" = (/obj/structure/toilet{dir = 4},/turf/open/floor/plasteel/freezer,/area/monorail_max/toilet)
+"bN" = (/obj/structure/toilet{dir = 8},/turf/open/floor/plasteel/freezer,/area/monorail_max/toilet)
+
+(1,1,1) = {"
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaababababababababababababababababababababababababababababababababababaaaaaa
+aaaaaaababababababababababababababababababababababababababababababababababaaaaaa
+aaaaaaababababababababababababababababababababababababababababababababababaaaaaa
+aaaaaaababababababababababababababababababababababababababababababababababaaaaaa
+aaaaaaababababababababababababababababababababababababababababababababababaaaaaa
+aaaaaaababababababababababababababababababababababababababababababababababaaaaaa
+aaaaaaababababababababababababababababababababababababababababababababababaaaaaa
+aaaaaaababababababababababababababababababababababababababababababababababaaaaaa
+aaaaaaababababababababababababababababababababababababababababababababababaaaaaa
+aaaaaaababababababababababababababababababababababababababababababababababaaaaaa
+aaaaaaabababababababababababababababababacadaeafacababababababababababababaaaaaa
+aaaaaaababababababababababababababababacacagahagacacabababababababababababaaaaaa
+aaaaaaababababababababababababababababaiagajajajagaiabababababababababababaaaaaa
+aaaaaaababababababababababababababababakagajajajagakabababababababababababaaaaaa
+aaaaaaabababababababababababababababacacajajajajajacacababababababababababaaaaaa
+aaaaaaabababababababababababababababaiagajajajajajalaiababababababababababaaaaaa
+aaaaaaabababababababababababababababakagajajajajajamakababababababababababaaaaaa
+aaaaaaabababababababababababababababacajajajajajajalacababababababababababaaaaaa
+aaaaaaabababababababababababababababacajajajanananananababababababababababaaaaaa
+aaaaaaabababababababababababababababaiajajajanaoaoaoapababababababababababaaaaaa
+aaaaaaabababababababababababababababakajajajaqarararasababababababababababaaaaaa
+aaaaaaabababababababababababababababacatacatanarararanababababababababababaaaaaa
+aaaaaaabababababababababababababababaiajajajanarararapababababababababababaaaaaa
+aaaaaaabababababababababababababababakajajajanararaoasababababababababababaaaaaa
+aaaaaaabababababababababababababababacatacatanauauananababababababababababaaaaaa
+aaaaaaabababababababababababababababacajajajajajajajacababababababababababaaaaaa
+aaaaaaabababababababababababababababacajajajajajajajacababababababababababaaaaaa
+aaaaaaabababababababababababababababacacacacavacacacacababababababababababaaaaaa
+aaaaaaababababababababababababababababababawaxawabababababababababababababaaaaaa
+aaaaaaababababababababababababababababababawayawabababababababababababababaaaaaa
+aaaaaaabababababababababababababababazazazazaAazazazazababababababababababaaaaaa
+aaaaaaabababababababababababababababazaBaBaBaBaBaBaBazababababababababababaaaaaa
+aaaaaaabababababababababababababababazaBaBaBaBaBaBaBazababababababababababaaaaaa
+aaaaaaabababababababababababababababaCaBaBaBaBaBaBaBazababababababababababaaaaaa
+aaaaaaabababababababababababababababaDaBaBaBaBaBaBaBazababababababababababaaaaaa
+aaaaaaabababababababababababababababazaBaBaBaBaBaBaBazababababazazazazazazazaaaa
+aaaaaaabababababababababababababababazaBaBaBaBaBaBaBazababababazaBaBaBaBaBazaaaa
+aaaaaaabababababababababababababababazazaEazazaFaBazazazazazazazaBaBaBaBaBazaaaa
+aaaaaaabababababababababababababababazaBaBaBazaBaBaBazaGaBaBaBaBaBaBaBaBaBazaaaa
+aaaaaaabababababababababababababababazaBaBaBaHaBaBaBaIaGaBaBaBaBaBaBaBaBaBazaaaa
+aaaaaaabababababababababababababababazaBaBaBaJaBaBaBaKaGaBaBaBaBaBaBaBaBaBazaaaa
+aaaaaaabababababababababababababababazaBaBaBazaBaBaBazaGaBaBaBaBaBaBaBaBaBazaaaa
+aaaaaaabababababababababababababababazazaEazazaFaBazazazazazazazazazazazazazaaaa
+aaaaaaabababababababababababababababazaBaBaBaBaBaBaBazababababababababababaaaaaa
+aaaaaaabababababababababababababababazaBaBaBaBaBaBaBazababababababababababaaaaaa
+aaaaaaabababababababababababababababaCaBaBaBaBaBaBaBazababababababababababaaaaaa
+aaaaaaabababababababababababababababaDaBaBaBaBaBaBaBazababababababababababaaaaaa
+aaaaaaabababababababababababababababazaBaBaBaBaBaBaBazababababababababababaaaaaa
+aaaaaaabababababababababababababababazaBaBaBaBaBaBaBazababababababababababaaaaaa
+aaaaaaabababababababababababababababazazazazaLazazazazababababababababababaaaaaa
+aaaaaaababababababababababababababababababawaxawabababababababababababababaaaaaa
+aaaaaaababababababababababababababababababawayawabababababababababababababaaaaaa
+aaaaaaabababababababababababababababaMaMaMaMaNaMaMaMaMababababababababababaaaaaa
+aaaaaaabababababababababababababababaMaOaOaMaOaOaOaOaMababababababababababaaaaaa
+aaaaaaabababababababababababababababaMaOaOaMaOaOaOaOaMababababababababababaaaaaa
+aaaaaaabababababababababababababababaPaOaOaMaMaMaOaOaMababababababababababaaaaaa
+aaaaaaabababababababababababababababaQaOaOaOaOaMaOaOaMababababababababababaaaaaa
+aaaaaaabababababababababababababababaMaOaOaOaOaMaOaOaMababababababababababaaaaaa
+aaaaaaabababababababababababababababaMaOaOaOaOaMaOaOaMababababababababababaaaaaa
+aaaaaaabababababababababababababababaMaOaOaOaOaMaOaOaMababababababababababaaaaaa
+aaaaaaabababababababababababababababaMaRaOaOaOaMaOaOaMababababababababababaaaaaa
+aaaaaaabababababababababababababababaMaSaOaOaOaMaOaOaMababababababababababaaaaaa
+aaaaaaabababababababababababababababaMaOaOaOaOaMaOaOaMababababababababababaaaaaa
+aaaaaaabababababababababababababababaMaOaOaOaOaMaOaOaMababababababababababaaaaaa
+aaaaaaabababababababababababababababaMaOaOaOaOaMaOaOaMababababababababababaaaaaa
+aaaaaaabababababababababababababababaMaOaOaOaOaMaOaOaMababababababababababaaaaaa
+aaaaaaabababababababababababababababaMaOaOaOaOaMaOaOaMababababababababababaaaaaa
+aaaaaaabababababababababababababababaPaOaOaOaOaMaOaOaMababababababababababaaaaaa
+aaaaaaabababababababababababababababaQaOaOaMaMaMaOaOaMababababababababababaaaaaa
+aaaaaaabababababababababababababababaMaOaOaMaOaOaOaOaMababababababababababaaaaaa
+aaaaaaabababababababababababababababaMaOaOaMaOaOaOaOaMababababababababababaaaaaa
+aaaaaaabababababababababababababababaMaMaMaMaTaMaMaMaMababababababababababaaaaaa
+aaaaaaababababababababababababababababababawaxawabababababababababababababaaaaaa
+aaaaaaababababababababababababababababababawayawabababababababababababababaaaaaa
+aaaaaaabababababababababababababababaUaUaUaUaVaUaUaUaUababababababababababaaaaaa
+aaaaaaabababababababababababababababaUaWaWaUaWaWaWaWaUababababababababababaaaaaa
+aaaaaaabababababababababababababababaUaWaWaUaWaWaWaWaUababababababababababaaaaaa
+aaaaaaabababababababababababababababaXaWaWaUaUaUaWaWaUababababababababababaaaaaa
+aaaaaaabababababababababababababababaYaWaWaWaWaUaWaWaUababababababababababaaaaaa
+aaaaaaabababababababababababababababaUaWaWaWaWaUaWaWaUababababababababababaaaaaa
+aaaaaaabababababababababababababababaUaWaWaWaWaUaWaWaUababababababababababaaaaaa
+aaaaaaabababababababababababababababaUaWaWaWaWaUaWaWaUababababababababababaaaaaa
+aaaaaaabababababababababababababababaUaWaWaWaWaUaWaWaUababababababababababaaaaaa
+aaaaaaabababababababababababababababaUaWaWaWaWaUaWaWaUababababababababababaaaaaa
+aaaaaaabababababababababababababababaUaWaWaWaWaUaWaWaUababababababababababaaaaaa
+aaaaaaabababababababababababababababaUaWaWaWaWaUaWaWaUababababababababababaaaaaa
+aaaaaaabababababababababababababababaUaWaWaWaWaUaWaWaUababababababababababaaaaaa
+aaaaaaabababababababababababababababaUaWaWaWaWaUaWaWaUababababababababababaaaaaa
+aaaaaaabababababababababababababababaUaWaWaWaWaUaWaWaUababababababababababaaaaaa
+aaaaaaabababababababababababababababaXaWaWaWaWaUaWaWaUababababababababababaaaaaa
+aaaaaaabababababababababababababababaYaWaWaUaUaUaWaWaUababababababababababaaaaaa
+aaaaaaabababababababababababababababaUaWaWaUaWaWaWaWaUababababababababababaaaaaa
+aaaaaaabababababababababababababababaUaWaWaUaWaWaWaWaUababababababababababaaaaaa
+aaaaaaabababababababababababababababaUaUaUaUaZaUaUaUaUababababababababababaaaaaa
+aaaaaaababababababababababababababababababawaxawabababababababababababababaaaaaa
+aaaaaaababababababababababababababababababawayawabababababababababababababaaaaaa
+aaaaaaabababababababababababababababbababababbbabababaababababababababababaaaaaa
+aaaaaaabababababababababababababababbabcbdbdbdbdbebebaababababababababababaaaaaa
+aaaaaaabababababababababababababababbabfbgbdbdbdbdbdbaababababababababababaaaaaa
+aaaaaaabababababababababababababababbhbibjbdbdbdbibjbaababababababababababaaaaaa
+aaaaaaabababababababababababababababbkblblbdbdbdblblbaababababababababababaaaaaa
+aaaaaaabababababababababababababababbmbnbobdbdbdbnbobaababababababababababaaaaaa
+aaaaaaabababababababababababababababbabpbdbdbdbdbdbqbaababababababababababaaaaaa
+aaaaaaabababababababababababababababbhbibjbdbdbdbibjbaababababababababababaaaaaa
+aaaaaaabababababababababababababababbkblblbdbdbdblblbaababababababababababaaaaaa
+aaaaaaabababababababababababababababbmbnbobdbdbdbnbobaababababababababababaaaaaa
+aaaaaaabababababababababababababababbabababdbabdbdbdbaababababababababababaaaaaa
+aaaaaaabababababababababababababababbhbdbdbdbabdbdbdbaababababababababababaaaaaa
+aaaaaaabababababababababababababababbkbdbdbdbrbsbdbdbaababababababababababaaaaaa
+aaaaaaabababababababababababababababbmbdbdbdbrbsbdbdbaababababababababababaaaaaa
+aaaaaaabababababababababababababababbabpbdbdbrbsbdbqbaababababababababababaaaaaa
+aaaaaaabababababababababababababababbhbgbdbtbubsbdbdbaababababababababababaaaaaa
+aaaaaaabababababababababababababababbkbgbdbabababdbdbaababababababababababaaaaaa
+aaaaaaabababababababababababababababbmbgbdbabdbdbdbdbaababababababababababaaaaaa
+aaaaaaabababababababababababababababbabgbgbabdbdbdbdbaababababababababababaaaaaa
+aaaaaaabababababababababababababababbababababvbabababaababababababababababaaaaaa
+aaaaaaababababababababababababababababababawaxawabababababababababababababaaaaaa
+aaaaaaababababababababababababababababababawayawabababababababababababababaaaaaa
+aaaaaaabababababababababababababababbwbwbwbwbxbwbwbwbwababababababababababaaaaaa
+aaaaaaabababababababababababababababbwbybybwbybzbAbBbwababababababababababaaaaaa
+aaaaaaabababababababababababababababbCbybybDbybybybAbwababababababababababaaaaaa
+aaaaaaabababababababababababababababbwbybybEbybybybAbwababababababababababaaaaaa
+aaaaaaabababababababababababababababbwbwbwbwbwbybybFbwababababababababababaaaaaa
+aaaaaaabababababababababababababababbwbybGbybwbybybFbwababababababababababaaaaaa
+aaaaaaabababababababababababababababbCbAbybybybybybybwababababababababababaaaaaa
+aaaaaaabababababababababababababababbwbybGbybwbybybybwababababababababababaaaaaa
+aaaaaaabababababababababababababababbwbwbwbwbwbybybybwababababababababababaaaaaa
+aaaaaaabababababababababababababababbwbybGbybwbybybybwababababababababababaaaaaa
+aaaaaaabababababababababababababababbCbAbybybybybybybwababababababababababaaaaaa
+aaaaaaabababababababababababababababbwbybGbybwbybybybwababababababababababaaaaaa
+aaaaaaabababababababababababababababbwbwbwbwbwbybybybwababababababababababaaaaaa
+aaaaaaabababababababababababababababbwbybGbybwbybybybwababababababababababaaaaaa
+aaaaaaabababababababababababababababbCbAbybybybybybybwababababababababababaaaaaa
+aaaaaaabababababababababababababababbwbybGbybwbybybybwababababababababababaaaaaa
+aaaaaaabababababababababababababababbwbwbwbwbwbybybybwababababababababababaaaaaa
+aaaaaaabababababababababababababababbwbybybybybybybybwababababababababababaaaaaa
+aaaaaaabababababababababababababababbwbybybybybybybybwababababababababababaaaaaa
+aaaaaaabababababababababababababababbwbHbHbIbHbIbHbHbwababababababababababaaaaaa
+aaaaaaababababababababababababababababbHbJbKbHbKbLbHabababababababababababaaaaaa
+aaaaaaababababababababababababababababbHbHbKbHbKbHbHabababababababababababaaaaaa
+aaaaaaababababababababababababababababbHbMbKbHbKbNbHabababababababababababaaaaaa
+aaaaaaababababababababababababababababbHbHbHbHbHbHbHabababababababababababaaaaaa
+aaaaaaababababababababababababababababababababababababababababababababababaaaaaa
+aaaaaaababababababababababababababababababababababababababababababababababaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+"}
