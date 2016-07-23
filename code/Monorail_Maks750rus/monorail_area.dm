@@ -1,5 +1,11 @@
-// TRAIN
+//Rails, yes, just because nobody coded that thing
+/obj/structure/rails
+	name = "the rails"
+	desc = "A pair of rail"
+	icon = 'icons/obj/mining.dmi'
+	icon_state = "rail"
 
+//Train Area
 /area/monorail_max
 	name = "Monorail_Max"
 	icon_state = "purple"
