@@ -14,6 +14,7 @@
 
 /obj/item/projectile/beam/laser/heavylaser
 	name = "heavy laser"
+	icon = 'icons/obj/infinity_projectiles.dmi'
 	icon_state = "heavylaser"
 	damage = 40
 
@@ -39,6 +40,7 @@
 
 /obj/item/projectile/beam/xray
 	name = "xray beam"
+	icon = 'icons/obj/infinity_projectiles.dmi'
 	icon_state = "xray"
 	damage = 15
 	irradiate = 30
@@ -47,6 +49,7 @@
 
 /obj/item/projectile/beam/disabler
 	name = "disabler beam"
+	icon = 'icons/obj/infinity_projectiles.dmi'
 	icon_state = "omnilaser"
 	damage = 36
 	damage_type = STAMINA
@@ -56,6 +59,7 @@
 
 /obj/item/projectile/beam/pulse
 	name = "pulse"
+	icon = 'icons/obj/infinity_projectiles.dmi'
 	icon_state = "u_laser"
 	damage = 50
 	luminosity = 2
@@ -81,6 +85,7 @@
 
 /obj/item/projectile/beam/emitter
 	name = "emitter beam"
+	icon = 'icons/obj/infinity_projectiles.dmi'
 	icon_state = "emitter"
 	damage = 30
 	legacy = 1
@@ -96,6 +101,7 @@
 
 /obj/item/projectile/beam/lasertag
 	name = "laser tag beam"
+	icon = 'icons/obj/infinity_projectiles.dmi'
 	icon_state = "omnilaser"
 	hitsound = null
 	damage = 0
