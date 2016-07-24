@@ -1,6 +1,5 @@
 /mob/dead/observer/DblClickOn(var/atom/A, var/params)
-	if(client)
-		if(client.banprisoned)
+	if(client && client.banprisoned)
 			return
 	if(client.click_intercept)
 		if(call(client.click_intercept,"InterceptClickOn")(src,params,A))

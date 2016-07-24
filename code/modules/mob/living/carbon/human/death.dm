@@ -18,6 +18,9 @@
 	jitteriness = 0
 	heart_attack = 0
 
+	if(client && client.banprisoned)
+		qdel(src)
+
 	if(istype(loc, /obj/mecha))
 		var/obj/mecha/M = loc
 		if(M.occupant == src)
