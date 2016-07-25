@@ -2,7 +2,7 @@
 /obj/structure/rails
 	name = "the rails"
 	desc = "A pair of rail"
-	icon = 'icons/obj/mining.dmi'
+	icon = 'icons/obj/infinity_object.dmi'
 	icon_state = "rail"
 
 //Train Area
