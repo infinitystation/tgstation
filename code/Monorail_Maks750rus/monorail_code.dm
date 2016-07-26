@@ -28,6 +28,10 @@
 	name = "Toilet Monorail"
 	icon_state = "toilet"
 
+/area/monorail_max/lobby_station
+	name = "Monorail Station 'La Nitoki'"
+	icon_state = "green"
+
 /area/monorail_max/lobby
 	name = "Lobby Monorail"
 	icon_state = "entry"
