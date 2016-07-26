@@ -5,27 +5,27 @@
 	},
 /area/monorail_max/grass)
 "ab" = (
-/turf/open/floor/grass/newgrass/swampgrass,
+/turf/open/chasm/straight_down/lava_land_surface/monorail_swampgrass_movable,
 /area/monorail_max/grass)
 "ac" = (
-/turf/closed/indestructible/riveted,
+/turf/closed/wall/r_wall,
 /area/monorail_max/bridge)
 "ad" = (
-/turf/closed/indestructible/fakeglass{
-	dir = 8
-	},
+/obj/structure/grille,
+/obj/structure/window/reinforced/fulltile,
+/turf/open/floor/plating,
 /area/monorail_max/bridge)
 "ae" = (
-/turf/closed/indestructible/fakeglass{
-	dir = 4;
-	icon_state = "fakewindows2"
-	},
-/area/monorail_max/bridge)
+/obj/structure/grille,
+/obj/structure/window/reinforced/fulltile,
+/turf/open/floor/plasteel/black,
+/area/monorail_max/coridor)
 "af" = (
-/turf/closed/indestructible/fakeglass{
-	dir = 4
+/obj/machinery/light{
+	dir = 1
 	},
-/area/monorail_max/bridge)
+/turf/open/floor/plasteel/black,
+/area/monorail_max/medbay)
 "ag" = (
 /obj/structure/table/reinforced,
 /turf/open/floor/plasteel/black,
@@ -35,16 +35,16 @@
 /turf/open/floor/plasteel/black,
 /area/monorail_max/bridge)
 "ai" = (
-/turf/closed/indestructible/fakeglass{
-	dir = 1
-	},
+/obj/structure/grille,
+/obj/structure/window/reinforced/fulltile,
+/turf/open/floor/plasteel/black,
 /area/monorail_max/bridge)
 "aj" = (
 /turf/open/floor/plasteel/black,
 /area/monorail_max/bridge)
 "ak" = (
-/turf/closed/indestructible/fakeglass,
-/area/monorail_max/bridge)
+/turf/closed/wall,
+/area/monorail_max/medbay)
 "al" = (
 /obj/machinery/computer/secure_data,
 /turf/open/floor/plasteel/black,
@@ -55,16 +55,17 @@
 /turf/open/floor/plasteel/black,
 /area/monorail_max/bridge)
 "an" = (
-/turf/closed/indestructible/riveted,
+/turf/closed/wall/r_wall,
 /area/monorail_max/captain)
 "ao" = (
+/obj/machinery/computer/communications,
 /turf/open/floor/plasteel/black,
 /area/monorail_max/captain)
 "ap" = (
-/turf/closed/indestructible/fakeglass{
-	dir = 1
-	},
-/area/monorail_max/captain)
+/obj/structure/grille,
+/obj/structure/window/reinforced/fulltile,
+/turf/open/floor/plating,
+/area/monorail_max/medbay)
 "aq" = (
 /obj/machinery/door/airlock/glass_command,
 /turf/open/floor/carpet,
@@ -73,8 +74,9 @@
 /turf/open/floor/carpet,
 /area/monorail_max/captain)
 "as" = (
-/turf/closed/indestructible/fakeglass,
-/area/monorail_max/captain)
+/obj/machinery/light,
+/turf/open/floor/plasteel/black,
+/area/monorail_max/medbay)
 "at" = (
 /obj/machinery/door/airlock/glass_command,
 /turf/open/floor/plasteel/black,
@@ -88,7 +90,7 @@
 /turf/open/floor/plasteel/black,
 /area/monorail_max/bridge)
 "aw" = (
-/turf/closed/indestructible/riveted,
+/turf/open/floor/plating,
 /area/monorail_max/coridor)
 "ax" = (
 /turf/open/floor/plating/warnplate{
@@ -111,12 +113,15 @@
 /turf/open/floor/plasteel/black,
 /area/monorail_max/lobby)
 "aC" = (
-/turf/closed/indestructible/fakeglass{
+/obj/machinery/light{
 	dir = 1
 	},
-/area/monorail_max/lobby)
+/turf/open/floor/plasteel/black,
+/area/monorail_max/cafeteria)
 "aD" = (
-/turf/closed/indestructible/fakeglass,
+/obj/structure/grille,
+/obj/structure/window/reinforced/fulltile,
+/turf/open/floor/plasteel/black,
 /area/monorail_max/lobby)
 "aE" = (
 /obj/machinery/door/airlock/glass_security,
@@ -167,7 +172,7 @@
 /turf/open/floor/plasteel/black,
 /area/monorail_max/lobby)
 "aM" = (
-/turf/closed/indestructible/riveted,
+/turf/closed/wall/r_wall,
 /area/monorail_max/security)
 "aN" = (
 /obj/structure/mineral_door/wood/pyro{
@@ -179,27 +184,28 @@
 /turf/open/floor/plasteel/black,
 /area/monorail_max/security)
 "aP" = (
-/turf/closed/indestructible/fakeglass{
+/obj/machinery/computer/slot_machine,
+/obj/machinery/light{
 	dir = 1
 	},
-/area/monorail_max/security)
+/turf/open/floor/plasteel/black,
+/area/monorail_max/cafeteria)
 "aQ" = (
-/turf/closed/indestructible/fakeglass,
-/area/monorail_max/security)
+/turf/closed/wall,
+/area/monorail_max/cafeteria)
 "aR" = (
 /obj/machinery/computer/secure_data,
 /turf/open/floor/plasteel/black,
 /area/monorail_max/security)
 "aS" = (
-/obj/machinery/computer/security,
-/turf/open/floor/plasteel/black,
-/area/monorail_max/security)
+/turf/closed/wall/r_wall,
+/area/monorail_max/dormitory)
 "aT" = (
 /obj/structure/mineral_door/wood/pyro,
 /turf/open/floor/plasteel/black,
 /area/monorail_max/security)
 "aU" = (
-/turf/closed/indestructible/riveted,
+/turf/closed/wall/r_wall,
 /area/monorail_max/medbay)
 "aV" = (
 /obj/structure/mineral_door/wood/pyro{
@@ -211,20 +217,24 @@
 /turf/open/floor/plasteel/black,
 /area/monorail_max/medbay)
 "aX" = (
-/turf/closed/indestructible/fakeglass{
+/obj/machinery/space_heater,
+/obj/machinery/light{
 	dir = 1
 	},
-/area/monorail_max/medbay)
+/turf/open/floor/plasteel/black,
+/area/monorail_max/dormitory)
 "aY" = (
-/turf/closed/indestructible/fakeglass,
-/area/monorail_max/medbay)
+/obj/structure/grille,
+/obj/structure/window/reinforced/fulltile,
+/turf/open/floor/plating,
+/area/monorail_max/dormitory)
 "aZ" = (
 /obj/structure/mineral_door/wood/pyro,
 /turf/open/floor/plasteel/black,
 /area/monorail_max/medbay)
 "ba" = (
-/turf/closed/indestructible/riveted,
-/area/monorail_max/cafeteria)
+/turf/closed/wall,
+/area/monorail_max/dormitory)
 "bb" = (
 /obj/structure/mineral_door/wood/pyro{
 	dir = 1
@@ -253,9 +263,9 @@
 /turf/open/floor/plasteel/black,
 /area/monorail_max/cafeteria)
 "bh" = (
-/turf/closed/indestructible/fakeglass{
-	dir = 1
-	},
+/obj/structure/grille,
+/obj/structure/window/reinforced/fulltile,
+/turf/open/floor/plating,
 /area/monorail_max/cafeteria)
 "bi" = (
 /obj/structure/chair/comfy/sofa/corner/right/brown,
@@ -266,18 +276,18 @@
 /turf/open/floor/plasteel/black,
 /area/monorail_max/cafeteria)
 "bk" = (
-/turf/closed/indestructible/fakeglass{
-	dir = 1;
-	icon_state = "fakewindows2"
-	},
+/turf/closed/wall/r_wall,
 /area/monorail_max/cafeteria)
 "bl" = (
 /obj/structure/table/wood,
 /turf/open/floor/plasteel/black,
 /area/monorail_max/cafeteria)
 "bm" = (
-/turf/closed/indestructible/fakeglass,
-/area/monorail_max/cafeteria)
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/open/floor/plasteel/black,
+/area/monorail_max/dormitory)
 "bn" = (
 /obj/structure/chair/comfy/sofa/corner/right/brown{
 	dir = 1
@@ -332,8 +342,9 @@
 /turf/open/floor/plasteel/black,
 /area/monorail_max/cafeteria)
 "bw" = (
-/turf/closed/indestructible/riveted,
-/area/monorail_max/dormitory)
+/obj/machinery/light,
+/turf/open/floor/plasteel/black,
+/area/monorail_max/cafeteria)
 "bx" = (
 /obj/structure/mineral_door/wood/pyro{
 	dir = 1
@@ -344,9 +355,8 @@
 /turf/open/floor/plasteel/black,
 /area/monorail_max/dormitory)
 "bz" = (
-/obj/machinery/space_heater,
-/turf/open/floor/plasteel/black,
-/area/monorail_max/dormitory)
+/turf/closed/wall/r_wall,
+/area/monorail_max/toilet)
 "bA" = (
 /obj/structure/table,
 /turf/open/floor/plasteel/black,
@@ -357,11 +367,8 @@
 /turf/open/floor/plasteel/black,
 /area/monorail_max/dormitory)
 "bC" = (
-/turf/closed/indestructible/fakeglass{
-	dir = 6;
-	icon_state = "fakewindows2"
-	},
-/area/monorail_max/dormitory)
+/turf/closed/wall,
+/area/monorail_max/toilet)
 "bD" = (
 /obj/machinery/door/airlock/glass_security,
 /turf/open/floor/plasteel/black,
@@ -379,8 +386,9 @@
 /turf/open/floor/plasteel/black,
 /area/monorail_max/dormitory)
 "bH" = (
-/turf/closed/indestructible/riveted,
-/area/monorail_max/toilet)
+/obj/machinery/light,
+/turf/open/floor/plasteel/black,
+/area/monorail_max/dormitory)
 "bI" = (
 /obj/structure/mineral_door/wood/pyro{
 	dir = 1
@@ -420,25 +428,201 @@
 	},
 /turf/open/floor/plasteel/freezer,
 /area/monorail_max/toilet)
-"cI" = (
-/obj/machinery/vending/clothing/new_outerspace,
+"bO" = (
+/obj/structure/rails,
+/turf/open/chasm/straight_down/lava_land_surface/monorail_swampgrass_movable,
+/area/monorail_max/grass)
+"bP" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced/fulltile,
 /turf/open/floor/plasteel/black,
-/area/monorail_max/dormitory)
-"cH" = (
-/obj/machinery/vending/clothing/outerspace,
+/area/monorail_max/captain)
+"bQ" = (
+/obj/structure/closet/secure_closet/captains,
 /turf/open/floor/plasteel/black,
-/area/monorail_max/dormitory)
-"cG" = (
-/obj/machinery/vending/clothing,
+/area/monorail_max/captain)
+"bR" = (
+/obj/effect/landmark/latejoin,
 /turf/open/floor/plasteel/black,
-/area/monorail_max/dormitory)
-"cF" = (
-/obj/structure/chair/comfy/brown{
+/area/monorail_max/lobby)
+"bS" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced/fulltile,
+/turf/open/floor/plasteel/black,
+/area/monorail_max/security)
+"bT" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/open/floor/plasteel/black,
+/area/monorail_max/security)
+"bU" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/open/floor/plasteel/black,
+/area/monorail_max/security)
+"bV" = (
+/obj/structure/closet/crate/bin,
+/turf/open/floor/plasteel/black,
+/area/monorail_max/security)
+"bW" = (
+/obj/machinery/vending/cola,
+/turf/open/floor/plasteel/black,
+/area/monorail_max/security)
+"bX" = (
+/obj/machinery/vending/coffee,
+/turf/open/floor/plasteel/black,
+/area/monorail_max/security)
+"bY" = (
+/obj/machinery/vending/cigarette,
+/turf/open/floor/plasteel/black,
+/area/monorail_max/security)
+"bZ" = (
+/obj/machinery/vending/security,
+/turf/open/floor/plasteel/black,
+/area/monorail_max/security)
+"ca" = (
+/obj/machinery/door/airlock/glass_security,
+/turf/open/floor/plasteel/black,
+/area/monorail_max/security)
+"cb" = (
+/obj/structure/closet/secure_closet/security,
+/turf/open/floor/plasteel/black,
+/area/monorail_max/security)
+"cc" = (
+/obj/structure/chair/new_chair,
+/turf/open/floor/plasteel/black,
+/area/monorail_max/medbay)
+"cd" = (
+/obj/structure/table/glass,
+/obj/machinery/light{
 	dir = 1
 	},
+/turf/open/floor/plasteel/black,
+/area/monorail_max/medbay)
+"ce" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced/fulltile,
+/turf/open/floor/plasteel/black,
+/area/monorail_max/medbay)
+"cf" = (
+/obj/machinery/door/airlock/glass_large,
+/turf/open/floor/plasteel/black,
+/area/monorail_max/medbay)
+"cg" = (
 /obj/machinery/light{
-	dir = 2
+	dir = 4
 	},
+/turf/open/floor/plasteel/black,
+/area/monorail_max/medbay)
+"ch" = (
+/obj/structure/chair/new_chair{
+	dir = 4
+	},
+/turf/open/floor/plasteel/black,
+/area/monorail_max/medbay)
+"ci" = (
+/obj/structure/closet/crate/bin,
+/turf/open/floor/plasteel/black,
+/area/monorail_max/medbay)
+"cj" = (
+/obj/machinery/sleeper{
+	dir = 8
+	},
+/turf/open/floor/plasteel/black,
+/area/monorail_max/medbay)
+"ck" = (
+/obj/machinery/door/airlock/glass_medical,
+/turf/open/floor/plasteel/black,
+/area/monorail_max/medbay)
+"cl" = (
+/obj/machinery/vending/medical,
+/turf/open/floor/plasteel/black,
+/area/monorail_max/medbay)
+"cm" = (
+/obj/structure/closet/secure_closet/medical3,
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/open/floor/plasteel/black,
+/area/monorail_max/medbay)
+"cn" = (
+/obj/structure/table/glass,
+/turf/open/floor/plasteel/black,
+/area/monorail_max/medbay)
+"co" = (
+/obj/structure/closet/secure_closet/medical2,
+/turf/open/floor/plasteel/black,
+/area/monorail_max/medbay)
+"cp" = (
+/obj/structure/table,
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/open/floor/plasteel/black,
+/area/monorail_max/medbay)
+"cq" = (
+/obj/machinery/computer/operating,
+/turf/open/floor/plasteel/black,
+/area/monorail_max/medbay)
+"cr" = (
+/obj/structure/table/optable,
+/turf/open/floor/plasteel/black,
+/area/monorail_max/medbay)
+"cs" = (
+/obj/structure/table,
+/obj/item/weapon/storage/backpack/dufflebag/syndie/surgery,
+/turf/open/floor/plasteel/black,
+/area/monorail_max/medbay)
+"ct" = (
+/obj/structure/bed/roller,
+/turf/open/floor/plasteel/black,
+/area/monorail_max/medbay)
+"cu" = (
+/turf/open/floor/plasteel/terror/city/carpet,
+/area/monorail_max/cafeteria)
+"cv" = (
+/obj/structure/closet/crate/bin,
+/turf/open/floor/plasteel/black,
+/area/monorail_max/cafeteria)
+"cw" = (
+/obj/machinery/button{
+	pixel_x = 25;
+	pixel_y = -5
+	},
+/turf/open/floor/plasteel/black,
+/area/monorail_max/cafeteria)
+"cx" = (
+/obj/structure/chair/stool/bar,
+/turf/open/floor/plasteel/terror/city/carpet,
+/area/monorail_max/cafeteria)
+"cy" = (
+/obj/structure/closet/secure_closet/security,
+/turf/open/floor/plasteel/black,
+/area/monorail_max/dormitory)
+"cz" = (
+/obj/structure/chair/office/dark{
+	dir = 4
+	},
+/turf/open/floor/plasteel/black,
+/area/monorail_max/dormitory)
+"cA" = (
+/turf/open/floor/plasteel/terror/city/carpet,
+/area/monorail_max/dormitory)
+"cB" = (
+/obj/structure/chair/comfy/brown,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/plasteel/terror/city/carpet,
+/area/monorail_max/dormitory)
+"cC" = (
+/obj/structure/closet/wood,
+/turf/open/floor/plasteel/black,
+/area/monorail_max/dormitory)
+"cD" = (
+/obj/structure/table,
 /turf/open/floor/plasteel/terror/city/carpet,
 /area/monorail_max/dormitory)
 "cE" = (
@@ -450,205 +634,164 @@
 	},
 /turf/open/floor/plasteel/terror/city/carpet,
 /area/monorail_max/dormitory)
-"cD" = (
-/obj/structure/table,
-/turf/open/floor/plasteel/terror/city/carpet,
-/area/monorail_max/dormitory)
-"cC" = (
-/obj/structure/closet/wood,
-/turf/open/floor/plasteel/black,
-/area/monorail_max/dormitory)
-"cB" = (
-/obj/structure/chair/comfy/brown,
-/obj/machinery/light{
+"cF" = (
+/obj/structure/chair/comfy/brown{
 	dir = 1
 	},
-/turf/open/floor/plasteel/terror/city/carpet,
-/area/monorail_max/dormitory)
-"cA" = (
-/turf/open/floor/plasteel/terror/city/carpet,
-/area/monorail_max/dormitory)
-"cz" = (
-/obj/structure/chair/office/dark{
-	dir = 4
-	},
-/turf/open/floor/plasteel/black,
-/area/monorail_max/dormitory)
-"cy" = (
-/obj/structure/closet/secure_closet/security,
-/turf/open/floor/plasteel/black,
-/area/monorail_max/dormitory)
-"cx" = (
-/obj/structure/chair/stool/bar,
-/turf/open/floor/plasteel/terror/city/carpet,
-/area/monorail_max/cafeteria)
-"cw" = (
-/obj/machinery/button{
-	pixel_x = 25;
-	pixel_y = -5
-	},
-/turf/open/floor/plasteel/black,
-/area/monorail_max/cafeteria)
-"cv" = (
-/obj/structure/closet/crate/bin,
-/turf/open/floor/plasteel/black,
-/area/monorail_max/cafeteria)
-"cu" = (
-/turf/open/floor/plasteel/terror/city/carpet,
-/area/monorail_max/cafeteria)
-"ct" = (
-/obj/structure/bed/roller,
-/turf/open/floor/plasteel/black,
-/area/monorail_max/medbay)
-"cs" = (
-/obj/structure/table,
-/obj/item/weapon/storage/backpack/dufflebag/syndie/surgery,
-/turf/open/floor/plasteel/black,
-/area/monorail_max/medbay)
-"cr" = (
-/obj/structure/table/optable,
-/turf/open/floor/plasteel/black,
-/area/monorail_max/medbay)
-"cq" = (
-/obj/machinery/computer/operating,
-/turf/open/floor/plasteel/black,
-/area/monorail_max/medbay)
-"cp" = (
-/obj/structure/table,
 /obj/machinery/light{
-	dir = 4
+	dir = 2
 	},
+/turf/open/floor/plasteel/terror/city/carpet,
+/area/monorail_max/dormitory)
+"cG" = (
+/obj/machinery/vending/clothing,
 /turf/open/floor/plasteel/black,
-/area/monorail_max/medbay)
-"co" = (
-/obj/structure/closet/secure_closet/medical2,
+/area/monorail_max/dormitory)
+"cH" = (
+/obj/machinery/vending/clothing/outerspace,
 /turf/open/floor/plasteel/black,
-/area/monorail_max/medbay)
-"cn" = (
-/obj/structure/table/glass,
+/area/monorail_max/dormitory)
+"cI" = (
+/obj/machinery/vending/clothing/new_outerspace,
 /turf/open/floor/plasteel/black,
-/area/monorail_max/medbay)
-"cm" = (
-/obj/structure/closet/secure_closet/medical3,
-/obj/machinery/light{
-	dir = 4
-	},
+/area/monorail_max/dormitory)
+"df" = (
+/obj/machinery/light,
 /turf/open/floor/plasteel/black,
-/area/monorail_max/medbay)
-"cl" = (
-/obj/machinery/vending/medical,
-/turf/open/floor/plasteel/black,
-/area/monorail_max/medbay)
-"ck" = (
-/obj/machinery/door/airlock/glass_medical,
-/turf/open/floor/plasteel/black,
-/area/monorail_max/medbay)
-"cj" = (
-/obj/machinery/sleeper{
-	dir = 8
-	},
-/turf/open/floor/plasteel/black,
-/area/monorail_max/medbay)
-"ci" = (
-/obj/structure/closet/crate/bin,
-/turf/open/floor/plasteel/black,
-/area/monorail_max/medbay)
-"ch" = (
-/obj/structure/chair/new_chair{
-	dir = 4
-	},
-/turf/open/floor/plasteel/black,
-/area/monorail_max/medbay)
-"cg" = (
-/obj/machinery/light{
-	dir = 4
-	},
-/turf/open/floor/plasteel/black,
-/area/monorail_max/medbay)
-"cf" = (
-/obj/machinery/door/airlock/glass_large,
-/turf/open/floor/plasteel/black,
-/area/monorail_max/medbay)
-"ce" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced/fulltile,
-/turf/open/floor/plasteel/black,
-/area/monorail_max/medbay)
-"cd" = (
-/obj/structure/table/glass,
+/area/monorail_max/security)
+"de" = (
+/obj/machinery/computer/security,
 /obj/machinery/light{
 	dir = 1
 	},
 /turf/open/floor/plasteel/black,
-/area/monorail_max/medbay)
-"cc" = (
-/obj/structure/chair/new_chair,
-/turf/open/floor/plasteel/black,
-/area/monorail_max/medbay)
-"cb" = (
-/obj/structure/closet/secure_closet/security,
-/turf/open/floor/plasteel/black,
 /area/monorail_max/security)
-"ca" = (
-/obj/machinery/door/airlock/glass_security,
-/turf/open/floor/plasteel/black,
-/area/monorail_max/security)
-"bZ" = (
-/obj/machinery/vending/security,
-/turf/open/floor/plasteel/black,
-/area/monorail_max/security)
-"bY" = (
-/obj/machinery/vending/cigarette,
-/turf/open/floor/plasteel/black,
-/area/monorail_max/security)
-"bX" = (
-/obj/machinery/vending/coffee,
-/turf/open/floor/plasteel/black,
-/area/monorail_max/security)
-"bW" = (
-/obj/machinery/vending/cola,
-/turf/open/floor/plasteel/black,
-/area/monorail_max/security)
-"bV" = (
-/obj/structure/closet/crate/bin,
-/turf/open/floor/plasteel/black,
-/area/monorail_max/security)
-"bU" = (
-/obj/machinery/light{
-	dir = 4
-	},
-/turf/open/floor/plasteel/black,
-/area/monorail_max/security)
-"bT" = (
-/obj/machinery/light{
-	dir = 8
-	},
-/turf/open/floor/plasteel/black,
-/area/monorail_max/security)
-"bS" = (
+"dd" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/fulltile,
+/turf/open/floor/plating,
+/area/monorail_max/security)
+"dc" = (
+/obj/machinery/light{
+	dir = 1
+	},
 /turf/open/floor/plasteel/black,
 /area/monorail_max/security)
-"bR" = (
-/obj/effect/landmark/latejoin,
+"db" = (
+/obj/machinery/light,
 /turf/open/floor/plasteel/black,
 /area/monorail_max/lobby)
-"bQ" = (
-/obj/structure/closet/secure_closet/captains,
+"da" = (
+/obj/machinery/light{
+	dir = 4
+	},
 /turf/open/floor/plasteel/black,
-/area/monorail_max/captain)
-"bP" = (
+/area/monorail_max/lobby)
+"cZ" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/open/floor/plasteel/black,
+/area/monorail_max/lobby)
+"cY" = (
+/obj/structure/chair/comfy{
+	dir = 8
+	},
+/turf/open/floor/plasteel/black,
+/area/monorail_max/lobby)
+"cX" = (
+/obj/structure/table/glass,
+/turf/open/floor/plasteel/black,
+/area/monorail_max/lobby)
+"cW" = (
+/obj/structure/chair/comfy{
+	dir = 4
+	},
+/turf/open/floor/plasteel/black,
+/area/monorail_max/lobby)
+"cV" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/plasteel/black,
+/area/monorail_max/lobby)
+"cU" = (
+/turf/closed/wall/r_wall,
+/area/monorail_max/lobby)
+"cT" = (
+/turf/open/floor/plating{
+	dir = 4;
+	icon_state = "warnplate";
+	luminosity = 2;
+	initial_gas_mix = "TEMP=2.7"
+	},
+/area/monorail_max/coridor)
+"cS" = (
+/turf/open/floor/plating{
+	dir = 8;
+	icon_state = "warnplate";
+	tag = ""
+	},
+/area/monorail_max/coridor)
+"cR" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/fulltile,
+/turf/open/floor/plating,
+/area/monorail_max/coridor)
+"cQ" = (
+/turf/closed/wall/r_wall,
+/area/monorail_max/coridor)
+"cP" = (
+/obj/machinery/light,
+/turf/open/floor/plasteel/black,
+/area/monorail_max/bridge)
+"cO" = (
+/obj/structure/table/wood,
 /turf/open/floor/plasteel/black,
 /area/monorail_max/captain)
-"bO" = (
-/obj/structure/rails,
-/turf/open/floor/grass/newgrass/swampgrass,
-/area/monorail_max/grass)
+"cN" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/open/floor/carpet,
+/area/monorail_max/captain)
+"cM" = (
+/obj/item/weapon/bedsheet/captain,
+/obj/structure/bed,
+/turf/open/floor/carpet,
+/area/monorail_max/captain)
+"cL" = (
+/obj/machinery/computer/card,
+/turf/open/floor/plasteel/black,
+/area/monorail_max/captain)
+"cK" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/open/floor/plasteel/black,
+/area/monorail_max/bridge)
+"cJ" = (
+/obj/machinery/computer/card,
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/open/floor/plasteel/black,
+/area/monorail_max/bridge)
 
 (1,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -951,8 +1094,34 @@ aa
 aa
 aa
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 "}
 (3,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -1252,6 +1421,19 @@ ab
 ab
 ab
 ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 aa
 aa
 aa
@@ -1260,6 +1442,19 @@ aa
 aa
 aa
 aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 ab
 ab
 ab
@@ -1556,6 +1751,19 @@ ab
 ab
 ab
 ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 aa
 aa
 aa
@@ -1564,6 +1772,19 @@ aa
 aa
 aa
 aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 ab
 ab
 ab
@@ -1860,6 +2081,19 @@ ab
 ab
 ab
 ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 aa
 aa
 aa
@@ -1868,6 +2102,19 @@ aa
 aa
 aa
 aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 ab
 ab
 ab
@@ -2164,6 +2411,19 @@ ab
 ab
 ab
 ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 aa
 aa
 aa
@@ -2172,6 +2432,19 @@ aa
 aa
 aa
 aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 ab
 ab
 ab
@@ -2468,6 +2741,19 @@ ab
 ab
 ab
 ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 aa
 aa
 aa
@@ -2476,6 +2762,19 @@ aa
 aa
 aa
 aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 ab
 ab
 ab
@@ -2772,6 +3071,19 @@ ab
 ab
 ab
 ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 aa
 aa
 aa
@@ -2780,6 +3092,19 @@ aa
 aa
 aa
 aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 ab
 ab
 ab
@@ -3076,6 +3401,19 @@ ab
 ab
 ab
 ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 aa
 aa
 aa
@@ -3100,42 +3438,44 @@ ab
 ab
 ac
 ai
-ak
+ai
 ac
 ac
 ai
-ak
+ai
 ac
 ai
-ak
+ai
 ac
 ac
 ac
 ac
 ab
 ab
-az
-az
-az
-aC
+ab
+cU
+cU
+cU
 aD
-az
-az
-az
-az
-az
-az
-az
-az
-az
-az
-aC
 aD
-az
-az
-az
+cU
+cU
+cU
+cU
+aD
+aD
+cU
+cU
+cU
+cU
+aD
+aD
+cU
+cU
+cU
 ab
 ab
+ab
 aM
 aM
 aM
@@ -3150,78 +3490,89 @@ aM
 aM
 aM
 aM
-aM
-aP
-aQ
+dd
+dd
+dd
 aM
 aM
 aM
 ab
 ab
+ab
 aU
 aU
 aU
 aU
 aU
-aX
+ce
+aU
+aU
+aU
+ap
+ce
+aU
+aU
+aU
+aU
+aU
+aU
+aU
+aU
+aU
+ab
+ab
+ab
+bk
+bk
+bk
+bh
+bh
+bh
+bk
+bh
+bh
+bh
+bk
+bh
+bh
+bh
+bk
+bh
+bh
+bh
+bk
+bk
+ab
+ab
+ab
+aS
+aS
 aY
-aU
-aU
-aU
-aU
-aU
-aU
-aU
-aU
-aU
-aU
-aU
-aU
-aU
+aS
+aS
+aS
+aY
+aS
+aS
+aS
+aY
+aS
+aS
+aS
+aY
+aS
+aS
+aS
+aS
+aS
 ab
 ab
-ba
-ba
-ba
-bh
-bk
-bm
-ba
-bh
-bk
-bm
-ba
-bh
-bk
-bm
-ba
-bh
-bk
-bm
-ba
-ba
 ab
 ab
-bw
-bw
-bC
-bw
-bw
-bw
-bC
-bw
-bw
-bw
-bC
-bw
-bw
-bw
-bC
-bw
-bw
-bw
-bw
-bw
+ab
+ab
+ab
+ab
 ab
 ab
 ab
@@ -3248,8 +3599,8 @@ bO
 bO
 bO
 ac
-ai
-ak
+ad
+ad
 ac
 ag
 ag
@@ -3266,31 +3617,33 @@ aj
 ac
 bO
 bO
-az
+bO
+cU
 aB
 aB
+cW
+cW
 aB
 aB
+cU
+cZ
 aB
 aB
-az
+cZ
+cU
 aB
 aB
+cW
+cW
 aB
 aB
-az
-aB
-aB
-aB
-aB
-aB
-aB
-az
+cU
+bO
 bO
 bO
 aM
 aO
-bT
+aO
 aO
 aM
 aO
@@ -3300,14 +3653,15 @@ aM
 aO
 bV
 aM
-aS
+de
 aO
 aO
 aO
 aO
 aO
-aO
+df
 aM
+bO
 bO
 bO
 aU
@@ -3326,13 +3680,14 @@ ce
 aW
 aW
 cq
-aU
+ak
 ct
 aW
 aU
 bO
 bO
-ba
+bO
+bk
 bc
 bf
 bi
@@ -3342,7 +3697,7 @@ bp
 bi
 bl
 bn
-ba
+aQ
 bd
 bd
 bd
@@ -3351,33 +3706,42 @@ bg
 bg
 bg
 bg
-ba
+bk
 bO
 bO
-bw
+bO
+aS
 by
 by
 bE
-bw
+aS
 cB
 cD
 cE
-bw
+ba
 cB
 cD
 cF
-bw
+ba
 cB
 cD
 cF
-bw
+ba
 cG
 by
-bH
-bH
-bH
-bH
-bH
+bz
+bz
+bz
+bz
+bz
+bO
+bO
+bO
+bO
+bO
+bO
+bO
+bO
 bO
 bO
 aa
@@ -3402,27 +3766,28 @@ ac
 ac
 ag
 ag
+cJ
 aj
 aj
 aj
 aj
 aj
 aj
+ai
 aj
+aj
+ai
+aj
+cP
 ac
-aj
-aj
-ac
-aj
-aj
-ac
-ab
-ab
-az
+cQ
+cR
+cQ
+cU
+cV
 aB
-aB
-aB
-aB
+cX
+cX
 aB
 aB
 aE
@@ -3433,15 +3798,16 @@ aB
 aE
 aB
 aB
+cX
+cX
 aB
-aB
-aB
-aB
-az
-ab
-ab
+db
+cU
+cQ
+cR
+cQ
 aM
-aO
+dc
 aO
 aO
 aM
@@ -3460,8 +3826,9 @@ cb
 cb
 cb
 aM
-ab
-ab
+cQ
+ae
+cQ
 aU
 cd
 aW
@@ -3478,14 +3845,15 @@ ck
 aW
 aW
 cr
-aU
+ak
 ct
-aW
+as
 aU
-ab
-ab
-ba
-bd
+cQ
+cR
+cQ
+bk
+aC
 bg
 bj
 bl
@@ -3494,7 +3862,7 @@ bd
 bj
 bl
 bo
-ba
+aQ
 bd
 bd
 bd
@@ -3503,33 +3871,42 @@ bd
 bd
 bd
 bg
-ba
-ab
-ab
-bw
+bk
+cQ
+cR
+cQ
+aS
 cy
 by
 cz
-bw
+aS
 bG
 cA
 bG
-bw
+ba
 bG
 cA
 bG
-bw
+ba
 bG
 cA
 bG
-bw
+ba
 cH
-by
 bH
+bC
 bJ
-bH
+bC
 bM
-bH
+bz
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 ab
 ab
 aa
@@ -3569,28 +3946,30 @@ aj
 aj
 ac
 aw
+cS
 aw
-az
+cU
+aB
+aB
+cY
+cY
+aB
+aB
+cU
 aB
 aB
 aB
 aB
+cU
 aB
 aB
-az
+cY
+cY
 aB
 aB
-aB
-aB
-az
-aB
-aB
-aB
-aB
-aB
-aB
-az
+cU
 aw
+cS
 aw
 aM
 bS
@@ -3613,6 +3992,7 @@ aM
 aM
 aM
 aw
+cS
 aw
 aU
 cc
@@ -3630,13 +4010,14 @@ ce
 aW
 aW
 aW
-aU
+ak
 ct
 aW
 aU
 aw
+cS
 aw
-ba
+bk
 bd
 bd
 bd
@@ -3652,36 +4033,45 @@ bd
 bd
 bd
 bt
-ba
-ba
-ba
-ba
+aQ
+aQ
+aQ
+bk
 aw
+cS
 aw
-bw
-bw
+aS
+aS
 bD
 bE
-bw
+aS
 cC
 cA
 cC
-bw
+ba
 cC
 cA
 cC
-bw
+ba
 cC
 cA
 cC
-bw
+ba
 cI
 by
 bI
 bK
 bK
 bK
-bH
+bz
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 ab
 ab
 aa
@@ -3702,7 +4092,7 @@ ab
 ab
 ab
 ab
-ae
+ad
 ah
 aj
 aj
@@ -3721,6 +4111,7 @@ aj
 aj
 av
 ax
+aw
 ay
 aA
 aB
@@ -3729,12 +4120,12 @@ aB
 aB
 aB
 aB
-az
-az
+cU
+cU
 aH
 aJ
-az
-az
+cU
+cU
 aB
 aB
 aB
@@ -3743,6 +4134,7 @@ aB
 aB
 aL
 ax
+aw
 ay
 aN
 aO
@@ -3765,6 +4157,7 @@ aO
 aO
 aT
 ax
+aw
 ay
 aV
 aW
@@ -3773,20 +4166,21 @@ ce
 ci
 cj
 cj
-aU
+ak
 cm
 cn
 cn
 cm
-aU
+ak
 co
 cp
 cs
-aU
+ak
 ct
 aW
 aZ
 ax
+aw
 ay
 bb
 bd
@@ -3798,42 +4192,51 @@ cu
 cu
 cu
 cv
-ba
-ba
+aQ
+aQ
 br
 br
 br
 bu
-ba
+aQ
 bd
 bd
 bv
 ax
+aw
 ay
 bx
 by
 by
 by
-bw
-bw
+ba
+ba
 by
-bw
-bw
-bw
+ba
+ba
+ba
 by
-bw
-bw
-bw
+ba
+ba
+ba
 by
-bw
-bw
+ba
+ba
 bs
 by
-bH
-bH
-bH
-bH
-bH
+bC
+bC
+bC
+bC
+bz
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 ab
 ab
 aa
@@ -3854,7 +4257,7 @@ ab
 ab
 ab
 ab
-af
+ad
 ag
 aj
 aj
@@ -3873,8 +4276,9 @@ aj
 aj
 ac
 aw
+cT
 aw
-az
+cU
 aB
 aB
 aB
@@ -3893,8 +4297,9 @@ aB
 aB
 aB
 aB
-az
+cU
 aw
+cT
 aw
 aM
 bS
@@ -3917,30 +4322,32 @@ aO
 aO
 aM
 aw
+cT
 aw
 aU
 aW
 aW
-aU
-aU
-aU
-aU
-aU
-aU
-aU
-aU
-aU
-aU
-aU
-aU
-aU
-aU
+ak
+ak
+ak
+ak
+ak
+ak
+ak
+ak
+ak
+ak
+ak
+ak
+ak
+ak
 aW
 aW
 aU
 aw
+cT
 aw
-ba
+bk
 bd
 bd
 bd
@@ -3956,14 +4363,15 @@ cx
 cx
 cx
 cx
-ba
+aQ
 bd
-bd
-ba
-aw
-aw
 bw
-bz
+bk
+aw
+cT
+aw
+aS
+aX
 by
 by
 cA
@@ -3985,7 +4393,15 @@ bI
 bK
 bK
 bK
-bH
+bz
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 ab
 ab
 aa
@@ -4010,23 +4426,25 @@ ac
 ac
 ag
 ag
-aj
+cK
 aj
 aj
 aj
 bP
-ao
+cL
 ar
-ar
+cN
 ar
 ar
 au
 aj
-aj
+cP
 ac
-ab
-ab
-az
+cQ
+cR
+cQ
+cU
+cV
 aB
 aB
 aB
@@ -4043,19 +4461,19 @@ aB
 aB
 aB
 aB
-aB
-aB
-az
-ab
-ab
+db
+cU
+cQ
+cR
+cQ
+aM
+dc
+aO
+aO
 aM
 aO
 aO
 aO
-aM
-aO
-aO
-aO
 aO
 aO
 aO
@@ -4068,9 +4486,11 @@ aO
 aO
 aO
 aM
-ab
-ab
+cQ
+ae
+cQ
 aU
+af
 aW
 aW
 aW
@@ -4087,13 +4507,13 @@ aW
 aW
 aW
 aW
-aW
-aW
+as
 aU
-ab
-ab
-ba
-be
+cQ
+cR
+cQ
+bk
+aP
 bd
 bi
 bl
@@ -4111,10 +4531,11 @@ bd
 bd
 bd
 bd
-ba
-ab
-ab
-bw
+bk
+cQ
+cR
+cQ
+aS
 bA
 by
 by
@@ -4132,12 +4553,20 @@ by
 by
 by
 by
-by
 bH
+bC
 bL
-bH
+bC
 bN
-bH
+bz
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 ab
 ab
 aa
@@ -4160,76 +4589,74 @@ bO
 bO
 bO
 ac
-ai
-ak
+ad
+ad
 ac
 al
 am
 al
 an
 bQ
+cM
+an
 ar
-ar
-ar
-ao
+cO
 an
 aj
 aj
 ac
 bO
 bO
-az
+bO
+cU
 aB
 aB
 aB
 aB
 aB
 aB
-az
+cU
+da
+aB
+aB
+da
+cU
 aB
 aB
 aB
 aB
-az
 aB
 aB
-aB
-aB
-aB
-aB
-az
+cU
 bO
 bO
-aM
-aO
-bU
-aO
+bO
 aM
 aO
 aO
 aO
-bU
-aO
-aO
-aO
-aO
+aM
 aO
 aO
 aO
 bU
 aO
 aO
+aO
+aO
+aO
+aO
+aO
+bU
+aO
+aO
 aM
+bO
 bO
 bO
 aU
 aW
 aW
-cg
-aW
-aW
-aW
-cg
 aW
 aW
 aW
@@ -4238,13 +4665,19 @@ cg
 aW
 aW
 aW
+aW
 cg
+aW
+aW
+aW
+aW
 aW
 aW
 aU
 bO
 bO
-ba
+bO
+bk
 be
 bd
 bj
@@ -4263,33 +4696,42 @@ bd
 bd
 bd
 bd
-ba
+bk
 bO
 bO
-bw
+bO
+aS
 bB
 bA
 bA
 bF
 bF
+bm
+by
+by
+by
+bm
+by
+by
+by
+bm
 by
 by
 by
 by
-by
-by
-by
-by
-by
-by
-by
-by
-by
-bH
-bH
-bH
-bH
-bH
+bz
+bz
+bz
+bz
+bz
+bO
+bO
+bO
+bO
+bO
+bO
+bO
+bO
 bO
 bO
 aa
@@ -4315,51 +4757,53 @@ ab
 ab
 ab
 ac
-ai
-ak
+ad
+ad
 ac
 an
-ap
-as
+bP
+bP
 an
-ap
-as
+bP
+bP
 an
 ac
 ac
 ac
 ab
 ab
-az
-az
-az
-az
-az
-az
-az
-az
-az
+ab
+cU
+cU
+cU
+cU
+cU
+cU
+cU
+cU
+cU
 aI
 aK
-az
-az
-az
-az
-az
-az
-az
-az
-az
+cU
+cU
+cU
+cU
+cU
+cU
+cU
+cU
+cU
 ab
 ab
+ab
 aM
 aM
 aM
 aM
 aM
-aM
-aM
-aM
+dd
+dd
+dd
 aM
 aM
 aM
@@ -4374,6 +4818,7 @@ aM
 aM
 ab
 ab
+ab
 aU
 aU
 aU
@@ -4396,48 +4841,58 @@ aU
 aU
 ab
 ab
-ba
-ba
-ba
-ba
-ba
-ba
-ba
-ba
-ba
-ba
-ba
-ba
-ba
-ba
-ba
-ba
-ba
-ba
-ba
-ba
+ab
+bk
+bk
+bk
+bh
+bh
+bh
+bk
+bh
+bh
+bh
+bk
+bh
+bh
+bh
+bk
+bh
+bh
+bh
+bk
+bk
 ab
 ab
-bw
-bw
-bw
-bw
-bw
-bw
-bw
-bw
-bw
-bw
-bw
-bw
-bw
-bw
-bw
-bw
-bw
-bw
-bw
-bw
+ab
+aS
+aS
+aS
+aS
+aS
+aS
+aS
+aS
+aS
+aS
+aS
+aS
+aS
+aS
+aS
+aS
+aS
+aS
+aS
+aS
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 ab
 ab
 ab
@@ -4489,12 +4944,25 @@ ab
 ab
 ab
 ab
+ab
 az
 aG
 aG
 aG
 aG
 az
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 ab
 ab
 ab
@@ -4641,12 +5109,25 @@ ab
 ab
 ab
 ab
+ab
 az
 aB
 aB
 aB
 aB
 az
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 ab
 ab
 ab
@@ -4793,12 +5274,25 @@ ab
 ab
 ab
 ab
+ab
 az
 aB
 aB
 aB
 aB
 az
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 ab
 ab
 ab
@@ -4945,12 +5439,25 @@ ab
 ab
 ab
 ab
+ab
 az
 aB
 aB
 aB
 aB
 az
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 ab
 ab
 ab
@@ -5095,6 +5602,7 @@ ab
 ab
 ab
 ab
+ab
 az
 az
 az
@@ -5103,6 +5611,18 @@ aB
 aB
 aB
 az
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 ab
 ab
 ab
@@ -5247,6 +5767,7 @@ ab
 ab
 ab
 ab
+ab
 az
 aB
 aB
@@ -5255,6 +5776,18 @@ aB
 aB
 aB
 az
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 ab
 ab
 ab
@@ -5399,6 +5932,7 @@ ab
 ab
 ab
 ab
+ab
 az
 aB
 bR
@@ -5407,6 +5941,18 @@ aB
 aB
 aB
 az
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 ab
 ab
 ab
@@ -5551,6 +6097,7 @@ ab
 ab
 ab
 ab
+ab
 az
 aB
 aB
@@ -5559,6 +6106,18 @@ aB
 aB
 aB
 az
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 ab
 ab
 ab
@@ -5703,6 +6262,7 @@ ab
 ab
 ab
 ab
+ab
 az
 aB
 bR
@@ -5711,6 +6271,18 @@ aB
 aB
 aB
 az
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 ab
 ab
 ab
@@ -5855,6 +6427,7 @@ ab
 ab
 ab
 ab
+ab
 az
 aB
 aB
@@ -5863,6 +6436,18 @@ aB
 aB
 aB
 az
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 ab
 ab
 ab
@@ -6007,6 +6592,7 @@ ab
 ab
 ab
 ab
+ab
 az
 az
 az
@@ -6015,6 +6601,18 @@ az
 az
 az
 az
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 ab
 ab
 ab
@@ -6268,11 +6866,37 @@ ab
 ab
 ab
 ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 aa
 aa
 aa
 "}
 (38,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -6575,8 +7199,34 @@ aa
 aa
 aa
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 "}
 (40,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa

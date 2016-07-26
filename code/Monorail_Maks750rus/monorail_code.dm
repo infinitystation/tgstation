@@ -5,6 +5,17 @@
 	icon = 'icons/obj/infinity_object.dmi'
 	icon_state = "rail"
 
+//Turf
+/turf/open/chasm/straight_down/lava_land_surface/monorail_swampgrass_movable
+	name = "grass"
+	icon = 'icons/turf/floors/infinity_works.dmi'
+	icon_state = "swampgrass_movable"
+
+/turf/open/chasm/straight_down/lava_land_surface/monorail_desertsand_movable
+	name = "desert sand"
+	icon = 'icons/turf/floors/infinity_works.dmi'
+	icon_state = "desertsand_movable"
+
 //Train Area
 /area/monorail_max
 	name = "Monorail_Max"
@@ -32,6 +43,7 @@
 /area/monorail_max/grass
 	name = "Grass Monorail"
 	icon_state = "green"
+	requires_power = 1
 
 /area/monorail_max/cafeteria
 	name = "Cafeteria Monorail"

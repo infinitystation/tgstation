@@ -1914,7 +1914,7 @@
 #include "code\modules\VR\vr_sleeper.dm"
 #include "code\modules\zombie\items.dm"
 #include "code\modules\zombie\organs.dm"
-#include "code\Monorail_Maks750rus\monorail_area.dm"
+#include "code\Monorail_Maks750rus\monorail_code.dm"
 #include "code\Monorail_Maks750rus\Ticket_card.dm"
 #include "code\Monorail_Maks750rus\TicketMachine.dm"
 #include "code\orphaned_procs\AStar.dm"
