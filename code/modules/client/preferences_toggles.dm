@@ -4,7 +4,6 @@
 	set category = "Preferences"
 	set desc = ".Toggle Between seeing all mob speech, and only speech of nearby mobs"
 	if(src.banprisoned)
-		src.mob << "Вы заключенный бан-тюрьмы. Вам это не нужно"
 		return
 	prefs.chat_toggles ^= CHAT_GHOSTEARS
 	src << "As a ghost, you will now [(prefs.chat_toggles & CHAT_GHOSTEARS) ? "see all speech in the world" : "only see speech from nearby mobs"]."
@@ -16,7 +15,6 @@
 	set category = "Preferences"
 	set desc = ".Toggle Between seeing all mob emotes, and only emotes of nearby mobs"
 	if(src.banprisoned)
-		src.mob << "Вы заключенный бан-тюрьмы. Вам это не нужно"
 		return
 	prefs.chat_toggles ^= CHAT_GHOSTSIGHT
 	src << "As a ghost, you will now [(prefs.chat_toggles & CHAT_GHOSTSIGHT) ? "see all emotes in the world" : "only see emotes from nearby mobs"]."
@@ -28,7 +26,6 @@
 	set category = "Preferences"
 	set desc = ".Toggle between hearing all whispers, and only whispers of nearby mobs"
 	if(src.banprisoned)
-		src.mob << "Вы заключенный бан-тюрьмы. Вам это не нужно"
 		return
 	prefs.chat_toggles ^= CHAT_GHOSTWHISPER
 	src << "As a ghost, you will now [(prefs.chat_toggles & CHAT_GHOSTWHISPER) ? "see all whispers in the world" : "only see whispers from nearby mobs"]."
@@ -40,7 +37,6 @@
 	set category = "Preferences"
 	set desc = ".Enable or disable hearing radio chatter as a ghost"
 	if(src.banprisoned)
-		src.mob << "Вы заключенный бан-тюрьмы. Вам это не нужно"
 		return
 	prefs.chat_toggles ^= CHAT_GHOSTRADIO
 	src << "As a ghost, you will now [(prefs.chat_toggles & CHAT_GHOSTRADIO) ? "see radio chatter" : "not see radio chatter"]."
@@ -52,7 +48,6 @@
 	set category = "Preferences"
 	set desc = ".Toggle Between seeing all mob pda messages, and only pda messages of nearby mobs"
 	if(src.banprisoned)
-		src.mob << "Вы заключенный бан-тюрьмы. Вам это не нужно"
 		return
 	prefs.chat_toggles ^= CHAT_GHOSTPDA
 	src << "As a ghost, you will now [(prefs.chat_toggles & CHAT_GHOSTPDA) ? "see all pda messages in the world" : "only see pda messages from nearby mobs"]."
@@ -120,7 +115,6 @@
 	set category = "Preferences"
 	set desc ="Toggles seeing deadchat"
 	if(src.banprisoned)
-		src.mob << "Вы заключенный бан-тюрьмы. Вам это не нужно"
 		return
 	prefs.chat_toggles ^= CHAT_DEAD
 	prefs.save_preferences()
@@ -132,7 +126,6 @@
 	set category = "Preferences"
 	set desc = "Toggles seeing prayers"
 	if(src.banprisoned)
-		src.mob << "Вы заключенный бан-тюрьмы. Вам это не нужно"
 		return
 	prefs.chat_toggles ^= CHAT_PRAYER
 	prefs.save_preferences()
@@ -144,7 +137,6 @@
 	set category = "Preferences"
 	set desc = "Toggles hearing pray sounds."
 	if(src.banprisoned)
-		src.mob << "Вы заключенный бан-тюрьмы. Вам это не нужно"
 		return
 	prefs.toggles ^= SOUND_PRAYERS
 	prefs.save_preferences()
@@ -159,7 +151,6 @@
 	set category = "Preferences"
 	set desc = "Toggles whether or not you will be considered for antagonist status given during a round."
 	if(src.banprisoned)
-		src.mob << "Вы заключенный бан-тюрьмы. Вам это не нужно"
 		return
 	prefs.toggles ^= MIDROUND_ANTAG
 	prefs.save_preferences()
@@ -360,7 +351,6 @@ var/global/list/ghost_orbits = list(GHOST_ORBIT_CIRCLE,GHOST_ORBIT_TRIANGLE,GHOS
 	set category = "Preferences"
 	set desc = "Set default toggles"
 	if(src.banprisoned)
-		src.mob << "Вы заключенный бан-тюрьмы. Вам это не нужно"
 		return
 	prefs.chat_toggles = TOGGLES_DEFAULT_CHAT
 	prefs.toggles = TOGGLES_DEFAULT

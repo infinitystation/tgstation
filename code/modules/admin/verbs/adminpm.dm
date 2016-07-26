@@ -51,11 +51,11 @@
 		if(holder)
 			src << "<font color='red'>Error: Admin-PM: Client not found.</font>"
 		return
-	message_admins("[key_name_admin(src)] has started replying to [key_name(C, 0, 0)]'s admin help.")
+	message_admins("[key_name_admin(src)] has started replying to [key_name(C, 0, 1)]'s admin help.")
 	var/msg = input(src,"Message:", "Private message to [key_name(C, 0, 0)]") as text|null
 	msg = sanitize(copytext(msg,1,MAX_MESSAGE_LEN))
 	if (!msg)
-		message_admins("[key_name_admin(src)] has cancelled their reply to [key_name(C, 0, 0)]'s admin help.")
+		message_admins("[key_name_admin(src)] has cancelled their reply to [key_name(C, 0, 1)]'s admin help.")
 		return
 	cmd_admin_pm(whom, msg)
 
@@ -133,12 +133,12 @@
 	else
 		if(C.holder)
 			if(holder)	//both are admins
-				C << "<font color='red'>ЛС от Админа-<b>[key_name(src, C, 1)]</b>: [keywordparsedmsg]</font>"
-				src << "<font color='blue'>ЛС Админу-<b>[key_name(C, src, 1)]</b>: [keywordparsedmsg]</font>"
+				C << "<font color='red'>ЛС от Админа-<b>[key_name(src, C, 1)](<A HREF='?_src_=holder;adminplayerobservefollow=\ref[src.mob]'>FLW</A>)</b>: [keywordparsedmsg]</font>"
+				src << "<font color='blue'>ЛС Админу-<b>[key_name(C, src, 1)](<A HREF='?_src_=holder;adminplayerobservefollow=\ref[C.mob]'>FLW</A>)</b>: [keywordparsedmsg]</font>"
 
 			else		//recipient is an admin but sender is not
-				C << "<font color='red'>Ответное ЛС от-<b>[key_name(src, C, 1)]</b>: [keywordparsedmsg]</font>"
-				src << "<font color='blue'>ЛС-<b>Админам</b>: [msg]</font>"
+				C << "<font color='red'>Ответное ЛС от-<b>[key_name(src, C, 1)](<A HREF='?_src_=holder;adminplayerobservefollow=\ref[src.mob]'>FLW</A>)</b>: [keywordparsedmsg]</font>"
+				src << "<font color='blue'>ЛС-<b>Админу [key_name(src, C, 0)]</b>: [msg]</font>"
 
 			//play the recieving admin the adminhelp sound (if they have them enabled)
 			if(C.prefs.toggles & SOUND_ADMINHELP)
@@ -172,15 +172,15 @@
 				return
 
 	if(irc)
-		log_admin("PM: [key_name(src)]->IRC: [rawmsg]")
+		log_admin("PM: [key_name(src, include_name = 1)]->IRC: [rawmsg]")
 		for(var/client/X in admins)
-			X << "<B><font color='blue'>PM: [key_name(src, X, 0)]-&gt;IRC:</B> \blue [keywordparsedmsg]</font>" //inform X
+			X << "<B><font color='blue'>PM: [key_name(src, X, 1)]-&gt;IRC:</B> \blue [keywordparsedmsg]</font>" //inform X
 	else
-		log_admin("PM: [key_name(src)]->[key_name(C)]: [rawmsg]")
+		log_admin("PM: [key_name(src, include_name = 1)]->[key_name(C, include_name = 1)]: [rawmsg]")
 		//we don't use message_admins here because the sender/receiver might get it too
 		for(var/client/X in admins)
 			if(X.key!=key && X.key!=C.key)	//check client/X is an admin and isn't the sender or recipient
-				X << "<B><font color='blue'>ЛС: [key_name(src, X, 0)]-&gt;[key_name(C, X, 0)]:</B> \blue [keywordparsedmsg]</font>" //inform X
+				X << "<B><font color='blue'>ЛС: [key_name(src, X, 1)](<A HREF='?_src_=holder;adminplayerobservefollow=\ref[src.mob]'>FLW</A>)-&gt;[key_name(C, X, 1)](<A HREF='?_src_=holder;adminplayerobservefollow=\ref[C.mob]'>FLW</A>):</B> \blue [keywordparsedmsg]</font>" //inform X
 
 
 

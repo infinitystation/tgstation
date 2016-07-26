@@ -45,6 +45,8 @@
 	timeofdeath = world.time
 	tod = worldtime2text()
 	var/turf/T = get_turf(src)
+	if(client.banprisoned)
+		qdel(src)
 	if(mind && mind.name && mind.active && (T.z != ZLEVEL_CENTCOM))
 		var/area/A = get_area(T)
 		var/rendered = "<span class='game deadsay'><span class='name'>\
