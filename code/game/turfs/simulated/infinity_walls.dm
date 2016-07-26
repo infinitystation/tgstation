@@ -28,3 +28,7 @@
 	icon = 'icons/turf/walls/sec_wall.dmi'
 	icon_state = "sec"
 	canSmoothWith = list(/turf/closed/wall, /turf/closed/wall/med, /turf/closed/wall/engi, /turf/closed/wall/sec)
+
+/turf/closed/indestructible/riveted/infinity
+	icon_state = "riveted0"
+	icon = 'icons/turf/walls/indestructable_smooth.dmi'
