@@ -28,14 +28,14 @@
 	emp_vunerable = 0
 	scan_range = 15
 	health = 150
-	installation = /obj/item/weapon/gun/energy/lasercannon
-	always_up = 1
+	installation = /obj/item/weapon/gun/energy/laser
 	faction = "neutral"
 
 /obj/machinery/porta_turret/heavy/central_command
-	health = 120
-	scan_range = 10
+	health = 100
 	desc = "Heavy turret, installed on Nanotrasen Central Command station."
+	faction = "neutral"
+	density = 0
 
 /obj/machinery/porta_turret/defensepylon_internal_turret/cult
 	faction = "cult"
@@ -176,6 +176,63 @@
 	name = "docking port 4"
 	desc = "A direction sign, pointing out which way the Docking port 4 is."
 	icon_state = "dock_4"
+
+/obj/structure/sign/directions/shuttle
+	name = "shuttle sign"
+	desc = "A direction sign, pointing out which way the shuttle."
+	icon_state = "shuttle"
+	icon = 'icons/obj/infinity_decals.dmi'
+
+/obj/structure/sign/directions/cryo
+	name = "cryo sign"
+	icon = 'icons/obj/infinity_decals.dmi'
+	desc = "Index, which tells that you are in the cryogenic room."
+	icon_state = "cryo"
+
+/obj/structure/sign/directions/ert
+	name = "lead's equipment"
+	icon = 'icons/obj/infinity_decals.dmi'
+	desc = "Index, which tells that you are in the lead's room."
+	icon_state = "commander"
+
+/obj/structure/sign/directions/ert/security
+	name = "security's equipment"
+	desc = "Index, which tells that you are in the security's room."
+	icon_state = "security"
+
+/obj/structure/sign/directions/ert/engineer
+	name = "engineer's equipment"
+	desc = "Index, which tells that you are in the engineer's room."
+	icon_state = "engineer"
+
+
+/obj/structure/sign/directions/ert/medic
+	name = "medical's equipment"
+	desc = "Index, which tells that you are in the medical's room."
+	icon_state = "medic"
+
+/obj/structure/sign/directions/only
+	name = "Only 1"
+	desc = "Enter only by one."
+	icon_state = "Only 1"
+
+/obj/structure/sign/directions/civilian
+	name = "civilian pointer"
+	icon = 'icons/obj/infinity_decals.dmi'
+	desc = "Pointer, saying to you that in front will be civilian zone."
+	icon_state = "civilian"
+
+/obj/structure/sign/directions/personal
+	name = "personal pointer"
+	icon = 'icons/obj/infinity_decals.dmi'
+	desc = "Pointer, saying to you that in front will be personal-only zone."
+	icon_state = "personal"
+
+/obj/structure/sign/directions/administration
+	name = "administration pointer"
+	icon = 'icons/obj/infinity_decals.dmi'
+	desc = "Pointer, saying to you that in front will be administrative-only zone."
+	icon_state = "administration"
 
 /mob/living/simple_animal/crab/Groffee
 	name = "Groffee"
@@ -408,6 +465,7 @@
 	icon_state = "w_closet"
 	icon_door = "w_closet"
 	wall_mounted = 1
+	large = FALSE
 	anchored = 1
 	storage_capacity = 20
 	mob_storage_capacity = 0
@@ -511,3 +569,33 @@
 	new /obj/item/weapon/reagent_containers/pill/mutadone(src)
 	new /obj/item/weapon/reagent_containers/hypospray/medipen(src)
 	new /obj/item/device/healthanalyzer(src)
+
+/obj/structure/hyper_sleep
+	name = "Hypersleeper's chamber"
+	icon = 'icons/obj/infinity_object.dmi'
+	icon_state = "body_scanner_0"
+
+/obj/structure/hyper_sleep/cable
+	name = "Hypersleeper's cable"
+	icon_state = "cryo_rear"
+
+/obj/structure/hyper_sleep/cable/tunnel
+	name = "Hypersleeper's tunnel"
+	icon_state = "cryo_rear_nocable"
+
+/obj/machinery/door/poddoor/big
+	icon = 'icons/obj/doors/1x2blast_hor.dmi'
+	icon_state = "closed"
+	bound_width = 64
+
+/obj/machinery/door/poddoor/big/preopen
+	icon_state = "open"
+	density = 0
+	opacity = 0
+
+/obj/structure/window/shuttle/dark
+	name = "dark shuttle window"
+	icon = 'icons/obj/e.dmi'
+	icon_state = "dark_shuttle_window"
+	smooth = SMOOTH_TRUE
+	canSmoothWith = null

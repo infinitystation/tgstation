@@ -127,6 +127,23 @@
 	name = "AI Satellite Lobby"
 	icon_state = "storage"
 
+/area/zombie
+	name = "Zombie"
+	icon_state = "red"
+	requires_power = 0
+	has_gravity = 1
+
+// CENTCOM
+
+/area/centcom/lobby
+	name = "Centcom Lobby"
+	icon_state = "centcom"
+
+/area/centcom/security
+	name = "Centcom Security"
+	icon_state = "security"
+
+
 ///Flors///
 
 /turf/open/floor/plasteel/terror
@@ -269,80 +286,3 @@
 
 /turf/open/floor/plasteel/terror/necro/white
 	icon_state = "white"
-
-//City floors//
-
-/turf/open/floor/plasteel/terror/city
-	baseturf = "ironsand"
-	icon = 'icons/turf/floors.dmi'
-
-/turf/open/floor/plasteel/terror/city/darkwarning
-	icon_state = "warndark"
-/turf/open/floor/plasteel/terror/city/darkwarning/corner
-	icon_state = "warndarkcorners"
-
-
-/turf/open/floor/plasteel/black
-	icon_state = "dark"
-	icon = 'icons/turf/infinity.dmi'
-/turf/open/floor/plasteel/terror/city/black/side
-	icon_state = "black"
-/turf/open/floor/plasteel/terror/city/black/corner
-	icon_state = "blackcorner"
-/turf/open/floor/plasteel/terror/city/black/caution
-	icon_state = "caution"
-
-/turf/open/floor/plasteel/terror/city/vault
-	icon_state = "rockvault"
-	floor_tile = /obj/item/stack/tile/plasteel
-
-/turf/open/floor/plasteel/terror/city/grass
-	name = "Grass patch"
-	icon_state = "grass"
-	floor_tile = /obj/item/stack/tile/grass
-
-/turf/open/floor/plasteel/terror/city/carpet
-	name = "Carpet"
-	icon = 'icons/turf/floors/carpet.dmi'
-	icon_state = "carpet"
-	floor_tile = /obj/item/stack/tile/carpet
-
-/turf/open/floor/plasteel/terror/city/plating
-	name = "plating"
-	icon_state = "plating"
-	intact = 0
-
-/turf/open/floor/plasteel/terror/city/stairs
-	icon_state = "ramptop"
-	icon = 'icons/turf/terror.dmi'
-/turf/open/floor/plasteel/terror/city/stairs/bottom
-	icon_state = "rampbottom"
-/turf/open/floor/plasteel/terror/city/stairs/top
-	icon_state = "ramptop"
-
-/turf/open/floor/plasteel/terror/city/freezer
-	icon_state = "freezerfloor"
-
-/turf/open/floor/plasteel/terror/city/wood
-	icon_state = "wood"
-	floor_tile = /obj/item/stack/tile/wood
-	broken_states = list("wood-broken", "wood-broken2", "wood-broken3", "wood-broken4", "wood-broken5", "wood-broken6", "wood-broken7")
-
-/turf/open/floor/plasteel/terror/city/whitegreen
-	icon_state = "whitegreenfull"
-/turf/open/floor/plasteel/terror/city/whitegreen/side
-	icon_state = "whitegreen"
-/turf/open/floor/plasteel/terror/city/whitegreen/corner
-	icon_state = "whitegreencorner"
-
-/turf/open/floor/plasteel/terror/city/white
-	icon_state = "white"
-/turf/open/floor/plasteel/terror/city/white/side
-	icon_state = "whitehall"
-/turf/open/floor/plasteel/terror/city/white/corner
-	icon_state = "whitecorner"
-
-/turf/open/floor/plasteel/terror/city/whitebot
-	icon_state = "whitebot"
-/turf/open/floor/plasteel/terror/city/whitebot/delivery
-	icon_state = "whitedelivery"

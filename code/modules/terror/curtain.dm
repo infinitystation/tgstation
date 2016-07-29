@@ -1,4 +1,4 @@
-#define SHOWER_OPEN_LAYER OBJ_LAYER + 0.4
+/*#define SHOWER_OPEN_LAYER OBJ_LAYER + 0.4
 #define SHOWER_CLOSED_LAYER MOB_LAYER + 0.1
 
 /obj/structure/curtain
@@ -34,7 +34,7 @@
 		layer = SHOWER_CLOSED_LAYER
 	else
 		icon_state = "open"
-		layer = SHOWER_OPEN_LAYER
+		layer = SHOWER_OPEN_LAYER */
 
 /obj/structure/curtain/black
 	name = "black curtain"

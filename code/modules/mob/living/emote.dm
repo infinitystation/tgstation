@@ -241,7 +241,7 @@
 		if ("pout","pouts")
 			message = "<B>[src]</B> pouts."
 			m_type = 2
-		
+
 		if ("scream","screams")
 			message = "<B>[src]</B> душераздирающе кричит!"
 			playsound(loc, 'sound/emotions/scream.ogg', 20, 1, 1)
@@ -266,7 +266,7 @@
 						Shit(src)
 						return
 					else
-						need_to_shit -= max(0, rand(0, 200))
+						need_to_shit = max(0, need_to_shit - rand(0, 150))
 						T.open = 1
 						T.shit++
 						T.update_icon()
@@ -424,7 +424,7 @@
 
 /mob/living/proc/Shit(var/mob/living/M)
 	if(M.stat != DEAD)
-		M.need_to_shit = max(0,M.need_to_shit - rand(0, 300))
+		M.need_to_shit = max(0, M.need_to_shit - rand(0, 150))
 		M.AdjustStunned(3)
 		var/turf/pos = get_turf(M)
 		pos.add_shit_floor(M)
@@ -437,5 +437,8 @@
 	set name = "Set Flavor Text"
 	set desc = "Sets an extended description of your character's features."
 	set category = "IC"
+
+	if(appearance_isbanned(usr))
+		return
 
 	update_flavor_text()

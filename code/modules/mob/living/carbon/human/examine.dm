@@ -283,8 +283,10 @@
 	if(reagents.has_reagent("teslium"))
 		msg += "[t_He] испускает нежное голубое свечение!\n"
 
-	if(stun_absorption)
-		msg += "[t_He] излучаетс&#255; м&#255;гким желтым светом!\n" //Used by Vanguard
+	if(islist(stun_absorption))
+		for(var/i in stun_absorption)
+			if(stun_absorption[i]["end_time"] > world.time && stun_absorption[i]["examine_message"])
+				msg += "[t_He][stun_absorption[i]["examine_message"]]\n"
 
 	if(drunkenness && !skipface && stat != DEAD) //Drunkenness
 		switch(drunkenness)

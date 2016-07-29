@@ -97,7 +97,7 @@
 
 /obj/item/weapon/reagent_containers/food/drinks/cup/cult
 	desc = "Nar'sie <3"
-	icon_state = "soviet_cup"
+	icon_state = "cult_cup"
 
 /obj/item/weapon/reagent_containers/food/drinks/cup/med
 	desc = "What a lovely cup of morphine."

@@ -21,6 +21,9 @@
 	features = random_features()
 	age = rand(AGE_MIN,AGE_MAX)
 	visual_age = age
+	flavor_text = ""
+	sec_imp_notes = ""
+	med_imp_notes = ""
 
 /datum/preferences/proc/update_preview_icon()
 	// Silicons only need a very basic preview since there is no customization for them.

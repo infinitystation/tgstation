@@ -225,7 +225,7 @@
 	new /obj/item/ammo_box/magazine/a646(src)
 	new /obj/item/device/flashlight/seclite(src)
 	new /obj/item/clothing/gloves/combat(src)
-	new /obj/item/weapon/storage/backpack/satchel_norm(src)
+	new /obj/item/weapon/storage/backpack/satchel(src)
 
 /obj/structure/closet/gimmick/MEAT_GRINDER
 	name = "WAR!"

@@ -1,6 +1,8 @@
 /mob/dead/observer/Login()
 	..()
-
+	if(client && client.banprisoned)
+		Logout()
+		qdel(src)
 	ghost_accs = client.prefs.ghost_accs
 	ghost_others = client.prefs.ghost_others
 	var/preferred_form = null

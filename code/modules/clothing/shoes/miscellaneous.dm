@@ -21,7 +21,7 @@
 	armor = list(melee = 25, bullet = 25, laser = 25, energy = 25, bomb = 50, bio = 10, rad = 0)
 	strip_delay = 70
 	burn_state = FIRE_PROOF
-	can_hold_items = 1
+	pockets = /obj/item/weapon/storage/internal/pocket/shoes
 
 /obj/item/clothing/shoes/combat/swat //overpowered boots for death squads
 	name = "\improper SWAT boots"
@@ -82,8 +82,7 @@
 	item_state = "clown_shoes"
 	slowdown = SHOES_SLOWDOWN+1
 	item_color = "clown"
-	can_hold_items = 1
-	valid_held_items = list(/obj/item/weapon/bikehorn)
+	pockets = /obj/item/weapon/storage/internal/pocket/shoes/clown
 
 /obj/item/clothing/shoes/clown_shoes/step_action()
 	if(footstep > 1)
@@ -101,7 +100,7 @@
 	strip_delay = 50
 	put_on_delay = 50
 	burn_state = FIRE_PROOF
-	can_hold_items = 1
+	pockets = /obj/item/weapon/storage/internal/pocket/shoes
 
 /obj/item/clothing/shoes/jackboots/fast
 	slowdown = -1
@@ -115,7 +114,7 @@
 	min_cold_protection_temperature = SHOES_MIN_TEMP_PROTECT
 	heat_protection = FEET|LEGS
 	max_heat_protection_temperature = SHOES_MAX_TEMP_PROTECT
-	can_hold_items = 1
+	pockets = /obj/item/weapon/storage/internal/pocket/shoes
 
 /obj/item/clothing/shoes/workboots
 	name = "work boots"
@@ -124,7 +123,7 @@
 	item_state = "jackboots"
 	strip_delay = 40
 	put_on_delay = 40
-	can_hold_items = 1
+	pockets = /obj/item/weapon/storage/internal/pocket/shoes
 
 /obj/item/clothing/shoes/workboots/mining
 	name = "mining boots"
@@ -171,4 +170,4 @@
 	desc = "A pair of costume boots fashioned after bird talons."
 	icon_state = "griffinboots"
 	item_state = "griffinboots"
-	can_hold_items = 1
+	pockets = /obj/item/weapon/storage/internal/pocket/shoes

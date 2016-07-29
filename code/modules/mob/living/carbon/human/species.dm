@@ -90,7 +90,7 @@
 
 	//icon for some reasons
 	var/alt_icon = null
-	
+
 	//Flight and floating
 	var/override_float = 0
 
@@ -744,7 +744,7 @@
 	if (H.nutrition > 0 && H.stat != 2)
 		H.nutrition = max (0, H.nutrition - HUNGER_FACTOR)
 		if(H.client)
-			H.need_to_shit = min(SHIT_LEVEL_MAX, H.need_to_shit + HUNGER_FACTOR)
+			H.need_to_shit = min(SHIT_LEVEL_MAX, H.need_to_shit + (HUNGER_FACTOR/5))
 
 	// nutrition decrease and satiety
 	if (H.nutrition > 0 && H.stat != DEAD && \
@@ -944,7 +944,8 @@
 //////////////////
 
 /datum/species/proc/spec_attack_hand(mob/living/carbon/human/M, mob/living/carbon/human/H)
-
+	if(!istype(M))
+		return
 	CHECK_DNA_AND_SPECIES(M)
 	CHECK_DNA_AND_SPECIES(H)
 
@@ -1072,10 +1073,7 @@
 
 	var/hit_area
 	if(!affecting) //Something went wrong. Maybe the limb is missing?
-		H.visible_message("<span class='danger'>[user] has attempted to attack [H] with [I]!</span>", \
-						"<span class='userdanger'>[user] has attempted to attack [H] with [I]!</span>")
-		playsound(H, 'sound/weapons/punchmiss.ogg', 25, 1, -1)
-		return 0
+		affecting = H.bodyparts[1]
 
 	hit_area = affecting.name
 	var/def_zone = affecting.body_zone
