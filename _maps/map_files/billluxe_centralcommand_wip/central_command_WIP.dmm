@@ -2281,81 +2281,12 @@
 "fR" = (
 /turf/open/space,
 /area/centcom/control)
-"gl" = (
-/turf/open/floor/plasteel/green/side{
-	dir = 6
-	},
-/area/space)
-"gk" = (
-/turf/open/floor/plasteel/green/side,
-/area/space)
-"gj" = (
-/turf/open/floor/plasteel/green/side{
-	dir = 10
-	},
-/area/space)
-"gi" = (
-/turf/open/floor/plasteel/green/side{
-	dir = 1
-	},
-/area/space)
-"gh" = (
-/turf/open/floor/plasteel/green/side{
+"fS" = (
+/turf/closed/wall/darksteel,
+/area/centcom/security)
+"fT" = (
+/turf/open/floor/plasteel/darkred/side{
 	dir = 9
-	},
-/area/space)
-"gg" = (
-/obj/structure/table/reinforced,
-/turf/open/floor/plasteel,
-/area/space)
-"gf" = (
-/obj/effect/spawner/structure/window/reinforced,
-/turf/open/floor/plasteel/darkred/corner{
-	dir = 4
-	},
-/area/centcom/security)
-"ge" = (
-/turf/open/floor/plasteel/freezer,
-/area/space)
-"gd" = (
-/turf/closed/wall/r_wall,
-/area/centcom/security)
-"gc" = (
-/turf/open/floor/plasteel/darkred/corner{
-	dir = 1
-	},
-/area/centcom/security)
-"gb" = (
-/obj/effect/spawner/structure/window/reinforced,
-/turf/open/floor/plasteel/darkred/corner{
-	dir = 8
-	},
-/area/centcom/security)
-"ga" = (
-/obj/effect/spawner/structure/window/reinforced,
-/turf/open/floor/plasteel/darkred/corner,
-/area/centcom/security)
-"fZ" = (
-/turf/open/floor/plasteel/darkred/side{
-	dir = 4
-	},
-/area/centcom/security)
-"fY" = (
-/turf/open/floor/plasteel/darkred/corner{
-	dir = 4
-	},
-/area/centcom/security)
-"fX" = (
-/turf/open/floor/plasteel/black,
-/area/centcom/security)
-"fW" = (
-/turf/open/floor/plasteel/darkred/side{
-	dir = 8
-	},
-/area/centcom/security)
-"fV" = (
-/turf/open/floor/plasteel/darkred/side{
-	dir = 5
 	},
 /area/centcom/security)
 "fU" = (
@@ -2363,14 +2294,87 @@
 	dir = 1
 	},
 /area/centcom/security)
-"fT" = (
+"fV" = (
 /turf/open/floor/plasteel/darkred/side{
-	dir = 9
+	dir = 5
 	},
 /area/centcom/security)
-"fS" = (
-/turf/closed/wall/darksteel,
+"fW" = (
+/turf/open/floor/plasteel/darkred/side{
+	dir = 8
+	},
 /area/centcom/security)
+"fX" = (
+/turf/open/floor/plasteel/black,
+/area/centcom/security)
+"fY" = (
+/turf/open/floor/plasteel/darkred/corner{
+	dir = 4
+	},
+/area/centcom/security)
+"fZ" = (
+/turf/open/floor/plasteel/darkred/side{
+	dir = 4
+	},
+/area/centcom/security)
+"ga" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plasteel/darkred/corner,
+/area/centcom/security)
+"gb" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plasteel/darkred/corner{
+	dir = 8
+	},
+/area/centcom/security)
+"gc" = (
+/turf/open/floor/plasteel/darkred/corner{
+	dir = 1
+	},
+/area/centcom/security)
+"gd" = (
+/turf/closed/wall/r_wall,
+/area/centcom/security)
+"ge" = (
+/turf/open/floor/plasteel/freezer,
+/area/space)
+"gf" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plasteel/darkred/corner{
+	dir = 4
+	},
+/area/centcom/security)
+"gg" = (
+/obj/structure/table/reinforced,
+/turf/open/floor/plasteel,
+/area/space)
+"gh" = (
+/turf/open/floor/plasteel/green/side{
+	dir = 9
+	},
+/area/space)
+"gi" = (
+/turf/open/floor/plasteel/green/side{
+	dir = 1
+	},
+/area/space)
+"gj" = (
+/turf/open/floor/plasteel/green/side{
+	dir = 10
+	},
+/area/space)
+"gk" = (
+/turf/open/floor/plasteel/green/side,
+/area/space)
+"gl" = (
+/turf/open/floor/plasteel/green/side{
+	dir = 6
+	},
+/area/space)
+"gm" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/space)
 
 (1,1,1) = {"
 aa
@@ -21536,9 +21540,9 @@ bn
 bn
 bn
 gk
-ab
+gm
 aa
-ab
+gm
 aU
 aN
 aN
@@ -21793,9 +21797,9 @@ bn
 bn
 bn
 gk
-ab
+gm
 aa
-ab
+gm
 aU
 aN
 aN
@@ -22050,9 +22054,9 @@ bn
 bn
 bn
 gk
-ab
+gm
 aa
-ab
+gm
 aU
 aN
 aN
