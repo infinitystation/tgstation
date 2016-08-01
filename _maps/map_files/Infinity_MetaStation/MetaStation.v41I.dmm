@@ -16323,7 +16323,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 6
 	},
-/obj/machinery/vending/coffee,
+/obj/structure/bar,
 /turf/open/floor/plasteel/yellow/corner{
 	tag = "icon-yellowcorner (EAST)";
 	icon_state = "yellowcorner";
@@ -18057,12 +18057,7 @@
 /turf/open/floor/plating,
 /area/security/mass_cell)
 "aEE" = (
-/obj/structure/table/reinforced,
-/obj/item/weapon/twohanded/required/kirbyplants{
-	anchored = 1;
-	layer = 4.1;
-	pixel_y = 10
-	},
+/obj/machinery/vending/coffee,
 /turf/open/floor/plasteel/yellow/corner{
 	tag = "icon-yellowcorner (WEST)";
 	icon_state = "yellowcorner";
@@ -91809,6 +91804,9 @@
 "cWJ" = (
 /obj/machinery/door/firedoor,
 /obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
+	},
 /turf/open/floor/plating,
 /area/toxins/xenobiology)
 "cWK" = (
@@ -91817,9 +91815,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 5
-	},
+/obj/machinery/atmospherics/pipe/manifold/supply/hidden,
 /turf/open/floor/plasteel/stairsnew,
 /area/toxins/xenobiology)
 "cWL" = (
@@ -92306,14 +92302,12 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/machinery/light/small{
-	dir = 8
-	},
 /obj/structure/cable/yellow{
 	d1 = 1;
 	d2 = 4;
 	icon_state = "1-4"
 	},
+/obj/machinery/light/small/floor,
 /turf/open/floor/plasteel{
 	icon_state = "white"
 	},
@@ -92654,6 +92648,9 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 4
+	},
 /turf/open/floor/plasteel{
 	dir = 2;
 	icon_state = "whitepurple"
@@ -92662,10 +92659,11 @@
 "cYe" = (
 /obj/machinery/door/firedoor,
 /obj/effect/spawner/structure/window/reinforced,
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
-	dir = 5
-	},
 /obj/structure/cable/yellow,
+/obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden{
+	dir = 2;
+	initialize_directions = 11
+	},
 /turf/open/floor/plating,
 /area/toxins/telepad)
 "cYf" = (
@@ -96461,6 +96459,89 @@
 	},
 /turf/open/space,
 /area/space)
+"dfc" = (
+/obj/machinery/door/firedoor,
+/obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 4
+	},
+/turf/open/floor/plating,
+/area/toxins/xenobiology)
+"dfb" = (
+/obj/structure/rack{
+	layer = 2.8
+	},
+/obj/item/device/analyzer,
+/obj/item/weapon/storage/bag/plants/portaseeder,
+/obj/item/weapon/cultivator,
+/obj/item/weapon/reagent_containers/glass/bucket,
+/obj/item/weapon/shovel/spade,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 4
+	},
+/turf/open/floor/plasteel/whitepurple/side,
+/area/toxins/xenobiology)
+"dfa" = (
+/obj/machinery/plantgenes,
+/obj/machinery/atmospherics/components/unary/vent_scrubber{
+	dir = 4;
+	on = 1;
+	scrub_Toxins = 0
+	},
+/turf/open/floor/plasteel/whitepurple/side{
+	dir = 10
+	},
+/area/toxins/xenobiology)
+"deZ" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/glass_research{
+	name = "Science Hydroponics";
+	req_access_txt = "47";
+	req_one_access_txt = "0"
+	},
+/turf/open/floor/plasteel{
+	icon_state = "white"
+	},
+/area/toxins/xenobiology)
+"deY" = (
+/turf/open/floor/plasteel{
+	icon_state = "white"
+	},
+/area/toxins/xenobiology)
+"deX" = (
+/obj/structure/sink{
+	dir = 8;
+	icon_state = "sink";
+	pixel_x = -12;
+	pixel_y = 0;
+	tag = "icon-sink (WEST)"
+	},
+/turf/open/floor/plasteel/whitepurple/side{
+	dir = 8
+	},
+/area/toxins/xenobiology)
+"deW" = (
+/obj/machinery/hydroponics/constructable,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
+	},
+/turf/open/floor/plasteel/whitepurple/side{
+	dir = 1
+	},
+/area/toxins/xenobiology)
+"deV" = (
+/obj/machinery/hydroponics/constructable,
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/machinery/atmospherics/components/unary/vent_pump{
+	dir = 4;
+	on = 1
+	},
+/turf/open/floor/plasteel/whitepurple/side{
+	dir = 9
+	},
+/area/toxins/xenobiology)
 
 (1,1,1) = {"
 aaa
@@ -125688,7 +125769,7 @@ cRr
 cRr
 cRr
 cRr
-aaj
+asr
 aaj
 aaj
 cYy
@@ -125944,8 +126025,8 @@ cED
 cVT
 cWI
 cVT
-aaa
-aaa
+asr
+asr
 aaj
 aaa
 cYy
@@ -126198,11 +126279,11 @@ cRB
 cTu
 cUm
 cUY
-csC
-csC
-csC
-aaa
-aaj
+dcc
+dcc
+dcc
+dcc
+dcc
 aaj
 aaj
 cYy
@@ -126455,11 +126536,11 @@ cSA
 cKW
 cUn
 cUZ
-csC
-aaa
-aaa
-aaa
-aaa
+dcc
+deV
+deX
+dfa
+dcc
 aaj
 cZz
 cYy
@@ -126712,10 +126793,10 @@ cLQ
 cKW
 cUo
 cVa
-cVa
-aaa
-aaa
-aaa
+cYy
+deW
+deY
+dfb
 cVU
 cYy
 cZA
@@ -126971,8 +127052,8 @@ cUp
 cVb
 cVU
 cWJ
-cWJ
-cWJ
+deZ
+dfc
 cYy
 cZd
 cZB
