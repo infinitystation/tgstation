@@ -526,5 +526,10 @@
 	cold_protection = CHEST|ARMS
 	flags_inv = HIDEFACIALHAIR
 
-
-
+/obj/item/clothing/suit/hide_mantle
+	name = "hide mantle"
+	desc = "A rather grisly selection of cured hides and skin, sewn together to form a ragged mantle."
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon_state = "mantle-unathi"
+	item_state = "mantle-unathi"
