@@ -1,3 +1,6 @@
+//Как зафиксить таяр: Нужно перенести конечности из папки infi_human_parts_greyscale.dmi в human_parts_greyscale.dmi (с) Terror4000rus
+//Прошу прощения, что не придумал способ, как брать конечности из папки инфинити.
+
 /datum/species/tajaran // Tajaran are a humanoid race possesing cat-like features.
 	name = "Tajarans"
 	id = "tajaran"
@@ -13,7 +16,7 @@
 	meat = /obj/item/weapon/reagent_containers/food/snacks/meat/slab/human
 	skinned_type = /obj/item/stack/sheet/animalhide/generic
 	limbs_id = "tajaran"
-
+	blacklisted = 1
 
 /datum/species/tajaran/qualifies_for_rank(rank, list/features)
 	if(rank in command_positions)

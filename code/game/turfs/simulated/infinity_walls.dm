@@ -38,3 +38,6 @@
 	icon = 'icons/turf/walls/indestructable_smooth_ter.dmi'
 	canSmoothWith = list(/turf/closed/indestructible/riveted/infinity/terror)
 	smooth = SMOOTH_TRUE
+
+/turf/closed/wall/mineral/abductor/terror
+	canSmoothWith = list(/turf/closed/wall/mineral/abductor, /obj/structure/falsewall/abductor, /obj/machinery/door/airlock/abductor, /turf/closed/wall/mineral/abductor/terror)

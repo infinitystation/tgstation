@@ -214,7 +214,7 @@
 /obj/structure/sign/directions/only
 	name = "Only 1"
 	desc = "Enter only by one."
-	icon_state = "Only 1"
+	icon_state = "only"
 
 /obj/structure/sign/directions/civilian
 	name = "civilian pointer"
@@ -233,6 +233,28 @@
 	icon = 'icons/obj/infinity_decals.dmi'
 	desc = "Pointer, saying to you that in front will be administrative-only zone."
 	icon_state = "administration"
+
+/obj/structure/sign/directions/numbers
+	name = "One"
+	icon = 'icons/obj/infinity_decals.dmi'
+	desc = "Number one"
+	icon_state = "one"
+
+/obj/structure/sign/directions/numbers/two
+	name = "Two"
+	desc = "Number two"
+	icon_state = "two"
+
+/obj/structure/sign/directions/numbers/three
+	name = "Three"
+	desc = "Number three"
+	icon_state = "three"
+
+/obj/structure/sign/directions/numbers/four
+	name = "Four"
+	desc = "Number four"
+	icon_state = "four"
+
 
 /mob/living/simple_animal/crab/Groffee
 	name = "Groffee"
@@ -486,6 +508,7 @@
 
 /obj/structure/alien_structure
 	name = "alien machinery"
+	desc = "You does not know what the fuck is that..."
 	icon_state = "computer1"
 	icon = 'icons/obj/infinity_alien.dmi'
 
