@@ -1,18 +1,19 @@
-/datum/species/tajaran
-	// Tajaran are a humanoid race possesing cat-like features.
-	name = "Tajaran"
+/datum/species/tajaran // Tajaran are a humanoid race possesing cat-like features.
+	name = "Tajarans"
 	id = "tajaran"
 	say_mod = "мурлычит"
-	default_color = "00FF00"
-	roundstart = 0
-	specflags = list(EYECOLOR,LIPS)
+	default_color = "FFFFF"
+	specflags = list(EYECOLOR,MUTCOLORS)
+	mutant_organs = list(/obj/item/organ/tongue/tajaran)
 	mutant_bodyparts = list("tail_tajaran", "ears_tajaran", "tajaran_hair")
-	default_features = list("mcolor" = "CDC5BF", "ears_tajaran" = "Default", "tail_tajaran" = "Default", "tajaran_hair" = "Straight")
+	default_features = list("mcolor" = "FFF", "ears_tajaran" = "Default", "tail_tajaran" = "Default", "tajaran_hair" = "Straight")
 	attack_verb = "slash"
 	attack_sound = 'sound/weapons/slash.ogg'
 	miss_sound = 'sound/weapons/slashmiss.ogg'
-	meat = /obj/item/weapon/reagent_containers/food/snacks/meat/slab/human/mutant/lizard
-	alt_icon = 'icons/mob/infinity_human.dmi'
+	meat = /obj/item/weapon/reagent_containers/food/snacks/meat/slab/human
+	skinned_type = /obj/item/stack/sheet/animalhide/generic
+	limbs_id = "tajaran"
+
 
 /datum/species/tajaran/qualifies_for_rank(rank, list/features)
 	if(rank in command_positions)
@@ -20,3 +21,18 @@
 	if(rank in security_positions)
 		return 0
 	return 1
+
+/obj/item/organ/tongue/tajaran
+	say_mod = "мурлычит"
+
+/obj/item/organ/tongue/tajaran/TongueSpeech(var/message)
+	var/regex/tajaran_rrr = new("р+", "g")
+	var/regex/tajaran_rRR = new("Р+", "g")
+	var/regex/tajaran_rAr = new("r+", "g")
+	var/regex/tajaran_rAR = new("R+", "g")
+	if(copytext(message, 1, 2) != "*")
+		message = tajaran_rrr.Replace(message, "рр")
+		message = tajaran_rRR.Replace(message, "РР")
+		message = tajaran_rAr.Replace(message, "rr")
+		message = tajaran_rAR.Replace(message, "RR")
+	return message

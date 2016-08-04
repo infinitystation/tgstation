@@ -11,7 +11,7 @@
 	name = "darksteel wall"
 	icon = 'icons/turf/walls/darksteel_wall.dmi'
 	icon_state = "darksteel"
-	canSmoothWith = list(/turf/closed/wall/darksteel)
+	canSmoothWith = list(/turf/closed/indestructible/riveted/darksteel, /turf/closed/wall/darksteel)
 	smooth = SMOOTH_TRUE
 
 /turf/closed/wall/med
@@ -32,3 +32,9 @@
 /turf/closed/indestructible/riveted/infinity
 	icon_state = "riveted0"
 	icon = 'icons/turf/walls/indestructable_smooth.dmi'
+
+/turf/closed/indestructible/riveted/infinity/terror
+	icon_state = "riveted0"
+	icon = 'icons/turf/walls/indestructable_smooth_ter.dmi'
+	canSmoothWith = list(/turf/closed/indestructible/riveted/infinity/terror)
+	smooth = SMOOTH_TRUE
