@@ -22879,26 +22879,174 @@
 "ban" = (
 /turf/open/floor/wood,
 /area/shuttle/escape)
-"baS" = (
-/obj/structure/table/abductor,
-/obj/item/weapon/reagent_containers/glass/rag{
-	desc = "I like this.";
-	icon = 'icons/obj/items.dmi';
-	icon_state = "towel";
-	name = "towel"
+"bao" = (
+/obj/structure/fans/tiny/invisible,
+/turf/open/floor/plating/asteroid/snow/temperatre{
+	density = 1
+	},
+/area/syndicate_mothership)
+"bap" = (
+/obj/structure/fans/tiny/invisible,
+/turf/open/floor/plating/snowed/temperatre,
+/area/syndicate_mothership)
+"baq" = (
+/obj/machinery/portable_atmospherics/canister/oxygen,
+/turf/open/floor/plasteel/blackvault,
+/area/shuttle/syndicate)
+"bar" = (
+/obj/structure/table,
+/obj/item/weapon/storage/backpack/dufflebag/syndie/surgery,
+/turf/open/floor/plasteel/black,
+/area/shuttle/syndicate)
+"bas" = (
+/turf/open/floor/plasteel/darkvault{
+	dir = 8
+	},
+/area/shuttle/syndicate)
+"bat" = (
+/obj/structure/shuttle/engine/propulsion{
+	color = "#C862CC";
+	dir = 8;
+	icon_state = "propulsion_r";
+	layer = 2;
+	pixel_y = -10;
+	tag = "icon-propulsion_r (EAST)"
+	},
+/turf/open/space,
+/area/space)
+"bau" = (
+/obj/structure/sink{
+	color = "#C862CC";
+	pixel_y = 24
 	},
 /turf/open/floor/plating/abductor,
 /area/abductor_ship)
-"baR" = (
-/obj/structure/curtain/open/shower/alien,
-/obj/machinery/shower{
-	dir = 1
+"bav" = (
+/obj/structure/toilet{
+	color = "#C862CC";
+	dir = 8
+	},
+/turf/open/floor/plating/abductor,
+/area/abductor_ship)
+"baw" = (
+/obj/machinery/door/airlock/abductor{
+	name = "Restroom"
+	},
+/turf/open/floor/plating/abductor,
+/area/abductor_ship)
+"bax" = (
+/obj/machinery/smartfridge/chemistry{
+	color = "#C862CC"
+	},
+/turf/open/floor/plating/abductor,
+/area/abductor_ship)
+"bay" = (
+/obj/structure/alien_structure,
+/turf/open/floor/plating/abductor,
+/area/abductor_ship)
+"baz" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced/fulltile{
+	color = "#C862CC"
+	},
+/obj/machinery/door/poddoor/shutters/preopen{
+	color = "#C862CC";
+	dir = 4;
+	id = "alien_shutters_1";
+	name = "alien shutters"
 	},
 /turf/open/floor/plating/abductor2,
 /area/abductor_ship)
-"baQ" = (
-/obj/item/trash/deadmouse,
+"baA" = (
+/obj/structure/alien/weeds,
+/obj/machinery/camera{
+	c_tag = "Testing Chamer";
+	color = "#C862CC";
+	name = "alien camera";
+	network = list("AT_1")
+	},
 /turf/open/floor/engine,
+/area/abductor_ship)
+"baB" = (
+/obj/structure/alien/weeds,
+/turf/open/floor/engine,
+/area/abductor_ship)
+"baC" = (
+/obj/item/toy/cards/deck,
+/turf/open/floor/engine,
+/area/abductor_ship)
+"baD" = (
+/obj/structure/shuttle/engine/propulsion{
+	color = "#C862CC";
+	dir = 8;
+	icon_state = "burst_s";
+	layer = 2;
+	pixel_x = -10
+	},
+/turf/open/space,
+/area/space)
+"baE" = (
+/obj/structure/sign/directions/numbers,
+/turf/open/space,
+/area/space)
+"baF" = (
+/obj/machinery/door/airlock/abductor{
+	name = "Abduction Laboratory"
+	},
+/turf/open/floor/plating/abductor,
+/area/abductor_ship)
+"baG" = (
+/obj/machinery/door/airlock/abductor{
+	name = "Middle Section"
+	},
+/turf/open/floor/plating/abductor,
+/area/abductor_ship)
+"baH" = (
+/obj/machinery/door/airlock/abductor{
+	name = "Testing Laboratory"
+	},
+/turf/closed/wall/mineral/abductor/terror,
+/area/abductor_ship)
+"baI" = (
+/obj/machinery/door/poddoor/preopen{
+	color = "#C862CC";
+	id = "alien_blast_1"
+	},
+/turf/open/floor/engine,
+/area/abductor_ship)
+"baJ" = (
+/turf/open/floor/engine,
+/area/abductor_ship)
+"baK" = (
+/obj/structure/bed,
+/turf/open/floor/engine,
+/area/abductor_ship)
+"baL" = (
+/obj/machinery/flasher{
+	id = "alien_flasher_1";
+	pixel_x = 32
+	},
+/obj/item/clothing/head/ushanka,
+/turf/open/floor/engine,
+/area/abductor_ship)
+"baM" = (
+/obj/machinery/door/airlock/abductor{
+	name = "Shower"
+	},
+/turf/open/floor/plating/abductor,
+/area/abductor_ship)
+"baN" = (
+/obj/machinery/vending/eatimat{
+	color = "#C862CC"
+	},
+/turf/open/floor/plating/abductor,
+/area/abductor_ship)
+"baO" = (
+/obj/machinery/sleeper/syndie{
+	color = "#C862CC";
+	dir = 1
+	},
+/turf/open/floor/plating/abductor,
 /area/abductor_ship)
 "baP" = (
 /obj/machinery/button/flasher{
@@ -22934,175 +23082,27 @@
 	},
 /turf/open/floor/plating/abductor,
 /area/abductor_ship)
-"baO" = (
-/obj/machinery/sleeper/syndie{
-	color = "#C862CC";
+"baQ" = (
+/obj/item/trash/deadmouse,
+/turf/open/floor/engine,
+/area/abductor_ship)
+"baR" = (
+/obj/structure/curtain/open/shower/alien,
+/obj/machinery/shower{
 	dir = 1
-	},
-/turf/open/floor/plating/abductor,
-/area/abductor_ship)
-"baN" = (
-/obj/machinery/vending/eatimat{
-	color = "#C862CC"
-	},
-/turf/open/floor/plating/abductor,
-/area/abductor_ship)
-"baM" = (
-/obj/machinery/door/airlock/abductor{
-	name = "Shower"
-	},
-/turf/open/floor/plating/abductor,
-/area/abductor_ship)
-"baL" = (
-/obj/machinery/flasher{
-	id = "alien_flasher_1";
-	pixel_x = 32
-	},
-/obj/item/clothing/head/ushanka,
-/turf/open/floor/engine,
-/area/abductor_ship)
-"baK" = (
-/obj/structure/bed,
-/turf/open/floor/engine,
-/area/abductor_ship)
-"baJ" = (
-/turf/open/floor/engine,
-/area/abductor_ship)
-"baI" = (
-/obj/machinery/door/poddoor/preopen{
-	color = "#C862CC";
-	id = "alien_blast_1"
-	},
-/turf/open/floor/engine,
-/area/abductor_ship)
-"baH" = (
-/obj/machinery/door/airlock/abductor{
-	name = "Testing Laboratory"
-	},
-/turf/closed/wall/mineral/abductor/terror,
-/area/abductor_ship)
-"baG" = (
-/obj/machinery/door/airlock/abductor{
-	name = "Middle Section"
-	},
-/turf/open/floor/plating/abductor,
-/area/abductor_ship)
-"baF" = (
-/obj/machinery/door/airlock/abductor{
-	name = "Abduction Laboratory"
-	},
-/turf/open/floor/plating/abductor,
-/area/abductor_ship)
-"baE" = (
-/obj/structure/sign/directions/numbers,
-/turf/open/space,
-/area/space)
-"baD" = (
-/obj/structure/shuttle/engine/propulsion{
-	color = "#C862CC";
-	dir = 8;
-	icon_state = "burst_s";
-	layer = 2;
-	pixel_x = -10
-	},
-/turf/open/space,
-/area/space)
-"baC" = (
-/obj/item/toy/cards/deck,
-/turf/open/floor/engine,
-/area/abductor_ship)
-"baB" = (
-/obj/structure/alien/weeds,
-/turf/open/floor/engine,
-/area/abductor_ship)
-"baA" = (
-/obj/structure/alien/weeds,
-/obj/machinery/camera{
-	c_tag = "Testing Chamer";
-	color = "#C862CC";
-	name = "alien camera";
-	network = list("AT_1")
-	},
-/turf/open/floor/engine,
-/area/abductor_ship)
-"baz" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced/fulltile{
-	color = "#C862CC"
-	},
-/obj/machinery/door/poddoor/shutters/preopen{
-	color = "#C862CC";
-	dir = 4;
-	id = "alien_shutters_1";
-	name = "alien shutters"
 	},
 /turf/open/floor/plating/abductor2,
 /area/abductor_ship)
-"bay" = (
-/obj/structure/alien_structure,
-/turf/open/floor/plating/abductor,
-/area/abductor_ship)
-"bax" = (
-/obj/machinery/smartfridge/chemistry{
-	color = "#C862CC"
+"baS" = (
+/obj/structure/table/abductor,
+/obj/item/weapon/reagent_containers/glass/rag{
+	desc = "I like this.";
+	icon = 'icons/obj/items.dmi';
+	icon_state = "towel";
+	name = "towel"
 	},
 /turf/open/floor/plating/abductor,
 /area/abductor_ship)
-"baw" = (
-/obj/machinery/door/airlock/abductor{
-	name = "Restroom"
-	},
-/turf/open/floor/plating/abductor,
-/area/abductor_ship)
-"bav" = (
-/obj/structure/toilet{
-	color = "#C862CC";
-	dir = 8
-	},
-/turf/open/floor/plating/abductor,
-/area/abductor_ship)
-"bau" = (
-/obj/structure/sink{
-	color = "#C862CC";
-	pixel_y = 24
-	},
-/turf/open/floor/plating/abductor,
-/area/abductor_ship)
-"bat" = (
-/obj/structure/shuttle/engine/propulsion{
-	color = "#C862CC";
-	dir = 8;
-	icon_state = "propulsion_r";
-	layer = 2;
-	pixel_y = -10;
-	tag = "icon-propulsion_r (EAST)"
-	},
-/turf/open/space,
-/area/space)
-"bas" = (
-/turf/open/floor/plasteel/darkvault{
-	dir = 8
-	},
-/area/shuttle/syndicate)
-"bar" = (
-/obj/structure/table,
-/obj/item/weapon/storage/backpack/dufflebag/syndie/surgery,
-/turf/open/floor/plasteel/black,
-/area/shuttle/syndicate)
-"baq" = (
-/obj/machinery/portable_atmospherics/canister/oxygen,
-/turf/open/floor/plasteel/blackvault,
-/area/shuttle/syndicate)
-"bap" = (
-/obj/structure/fans/tiny/invisible,
-/turf/open/floor/plating/snowed/temperatre,
-/area/syndicate_mothership)
-"bao" = (
-/obj/structure/fans/tiny/invisible,
-/turf/open/floor/plating/asteroid/snow/temperatre{
-	density = 1
-	},
-/area/syndicate_mothership)
 
 (1,1,1) = {"
 aaa
@@ -52365,8 +52365,8 @@ aaa
 aaa
 aaa
 aaa
-aOs
-aOs
+aOH
+aOH
 aOH
 aOZ
 aOJ
@@ -52623,7 +52623,7 @@ aaa
 aaa
 aaa
 aaa
-aOs
+aOH
 aOI
 aPa
 aOJ
@@ -53137,7 +53137,7 @@ aaa
 aaa
 aaa
 aaa
-aOs
+aOH
 aOK
 aPb
 aOJ
@@ -53651,7 +53651,7 @@ aaa
 aaa
 aaa
 aaa
-aOs
+aOH
 aOM
 aPb
 aOJ
@@ -54165,7 +54165,7 @@ aaa
 aaa
 aaa
 aaa
-aOs
+aOH
 aOI
 aPc
 aOJ
@@ -54421,20 +54421,20 @@ aaa
 aaa
 aaa
 aaa
-aOs
-aOs
+aOH
+aOH
 aOH
 aOZ
 aOJ
 aOH
 aOs
-aOs
+aOH
 aOz
-aOs
+aOH
 aRA
-aOs
+aOH
 aOz
-aOs
+aOH
 aOs
 aOs
 aOq

@@ -1775,15 +1775,6 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
-/obj/machinery/button/door{
-	id = "cabin3_barr";
-	name = "Cabin Bolt Control";
-	normaldoorcontrol = 1;
-	pixel_x = 0;
-	pixel_y = 25;
-	req_access_txt = "3";
-	specialfunctions = 4
-	},
 /turf/open/floor/plasteel/green/side{
 	dir = 9
 	},
@@ -1810,18 +1801,11 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
-/obj/machinery/button/door{
-	id = "cabin2_barr";
-	name = "Cabin Bolt Control";
-	normaldoorcontrol = 1;
-	pixel_x = 0;
-	pixel_y = 25;
-	req_access_txt = "0";
-	req_one_access_txt = "3";
-	specialfunctions = 4
-	},
 /obj/machinery/light{
 	dir = 1
+	},
+/obj/machinery/airalarm{
+	pixel_y = 28
 	},
 /turf/open/floor/plasteel/green/side{
 	dir = 1
@@ -1862,15 +1846,6 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
-	},
-/obj/machinery/button/door{
-	id = "cabin1_barr";
-	name = "Cabin Bolt Control";
-	normaldoorcontrol = 1;
-	pixel_x = 0;
-	pixel_y = 25;
-	req_access_txt = "3";
-	specialfunctions = 4
 	},
 /turf/open/floor/plasteel/green/side{
 	dir = 1
@@ -2932,12 +2907,6 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/machinery/airalarm{
-	dir = 4;
-	locked = 0;
-	pixel_x = -23;
-	pixel_y = 0
-	},
 /turf/open/floor/plasteel/green/side{
 	dir = 8
 	},
@@ -3088,12 +3057,17 @@
 	},
 /area/holodeck/rec_center)
 "afx" = (
-/obj/effect/spawner/structure/window/reinforced,
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	req_access_txt = "0"
+/obj/structure/cable/yellow{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
 	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 6
+	},
+/obj/item/weapon/cigbutt,
 /turf/open/floor/plating,
-/area/crew_quarters/fitness)
+/area/maintenance/aft)
 "afy" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -3427,18 +3401,9 @@
 /obj/effect/spawner/lootdrop/food,
 /obj/effect/spawner/lootdrop/food,
 /obj/effect/spawner/lootdrop/food,
-/obj/effect/spawner/lootdrop/food,
-/obj/effect/spawner/lootdrop/food,
-/obj/effect/spawner/lootdrop/food,
-/obj/effect/spawner/lootdrop/food,
-/obj/effect/spawner/lootdrop/food,
-/obj/effect/spawner/lootdrop/food,
-/obj/effect/spawner/lootdrop/food,
-/obj/effect/spawner/lootdrop/food,
 /obj/structure/sign/goldenplaque{
 	pixel_y = 32
 	},
-/obj/item/weapon/storage/fancy/donut_box,
 /turf/open/floor/plasteel{
 	dir = 8;
 	icon_state = "vault";
@@ -3503,7 +3468,8 @@
 /area/maintenance/fsmaint)
 "agg" = (
 /obj/machinery/door/airlock/maintenance{
-	req_access_txt = "12"
+	req_access_txt = "0";
+	req_one_access_txt = "1;4;38;12"
 	},
 /turf/open/floor/plating,
 /area/crew_quarters/fitness)
@@ -4142,16 +4108,23 @@
 	},
 /area/crew_quarters/fitness)
 "ahx" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/obj/effect/spawner/structure/window/reinforced,
-/turf/open/floor/plating,
-/area/crew_quarters/fitness)
-"ahy" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	req_access_txt = "0"
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
-/turf/closed/wall,
-/area/crew_quarters/fitness)
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/turf/open/floor/plating{
+	icon_state = "platingdmg3"
+	},
+/area/maintenance/aft)
+"ahy" = (
+/obj/structure/rack,
+/obj/item/weapon/stock_parts/matter_bin,
+/turf/open/floor/plating{
+	icon_state = "platingdmg2"
+	},
+/area/maintenance/aft)
 "ahz" = (
 /turf/closed/wall,
 /area/maintenance/disposal)
@@ -4625,20 +4598,32 @@
 	},
 /area/crew_quarters/fitness)
 "aiv" = (
-/obj/machinery/atmospherics/pipe/manifold/supply/hidden{
-	dir = 8
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 5
 	},
-/turf/open/floor/plasteel,
-/area/crew_quarters/fitness)
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/obj/effect/landmark{
+	name = "blobstart"
+	},
+/turf/open/floor/plating,
+/area/maintenance/aft)
 "aiw" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 4
+	dir = 10
 	},
-/turf/open/floor/plasteel{
-	dir = 4;
-	icon_state = "neutralcorner"
+/obj/structure/cable/yellow{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
 	},
-/area/crew_quarters/fitness)
+/turf/open/floor/plating{
+	icon_state = "platingdmg3"
+	},
+/area/maintenance/aft)
 "aix" = (
 /obj/machinery/door/airlock/glass{
 	name = "Holodeck Door"
@@ -7963,7 +7948,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
-/turf/closed/wall,
+/turf/closed/wall/r_wall,
 /area/engine/rest_room)
 "aoi" = (
 /obj/machinery/camera{
@@ -9449,7 +9434,7 @@
 /obj/machinery/door/airlock/glass_command{
 	name = "Gravity Generator Area";
 	req_access_txt = "0";
-	req_one_access_txt = "32;19"
+	req_one_access_txt = "11"
 	},
 /turf/open/floor/plasteel{
 	icon_state = "dark"
@@ -12299,15 +12284,15 @@
 "avz" = (
 /obj/machinery/door/airlock/highsecurity{
 	name = "Gravity Generator Room";
-	req_access_txt = "0";
-	req_one_access_txt = "11"
+	req_access_txt = "11";
+	req_one_access_txt = "0"
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	req_access_txt = "0"
 	},
 /turf/open/floor/plasteel{
-	icon_state = "delivery";
-	name = "floor"
+	icon_state = "bot";
+	dir = 1
 	},
 /area/engine/gravity_generator)
 "avA" = (
@@ -12835,6 +12820,7 @@
 	dir = 8
 	},
 /obj/item/clothing/under/suit_jacket/navy,
+/obj/item/weapon/storage/backpack/satchel/leather/withwallet,
 /turf/open/floor/wood,
 /area/crew_quarters/sleep)
 "awx" = (
@@ -12934,6 +12920,7 @@
 /obj/machinery/light/small{
 	dir = 4
 	},
+/obj/item/weapon/storage/backpack/satchel/leather/withwallet,
 /turf/open/floor/carpet,
 /area/crew_quarters/sleep)
 "awH" = (
@@ -14959,6 +14946,7 @@
 /obj/machinery/airalarm{
 	pixel_y = 23
 	},
+/obj/item/weapon/storage/backpack/satchel/leather/withwallet,
 /turf/open/floor/carpet,
 /area/crew_quarters/sleep)
 "azH" = (
@@ -15045,6 +15033,7 @@
 	pixel_y = 23
 	},
 /obj/structure/closet/cabinet,
+/obj/item/weapon/storage/backpack/satchel/leather/withwallet,
 /turf/open/floor/wood,
 /area/crew_quarters/sleep)
 "azO" = (
@@ -15113,8 +15102,8 @@
 	req_one_access_txt = "0"
 	},
 /turf/open/floor/plasteel{
-	icon_state = "delivery";
-	name = "floor"
+	icon_state = "bot";
+	dir = 1
 	},
 /area/engine/engineering)
 "azU" = (
@@ -15634,7 +15623,7 @@
 /turf/open/floor/wood,
 /area/crew_quarters/sleep)
 "aAM" = (
-/obj/structure/mopbucket,
+/obj/item/weapon/caution,
 /turf/open/floor/plating,
 /area/maintenance/aft)
 "aAN" = (
@@ -20192,7 +20181,6 @@
 	pixel_x = 27;
 	pixel_y = 0
 	},
-/obj/item/clothing/suit/hooded/wintercoat/miner,
 /turf/open/floor/plasteel{
 	dir = 4;
 	icon_state = "brown"
@@ -22093,13 +22081,6 @@
 /obj/effect/spawner/lootdrop/food,
 /obj/effect/spawner/lootdrop/food,
 /obj/effect/spawner/lootdrop/food,
-/obj/effect/spawner/lootdrop/food,
-/obj/effect/spawner/lootdrop/food,
-/obj/effect/spawner/lootdrop/food,
-/obj/effect/spawner/lootdrop/food,
-/obj/effect/spawner/lootdrop/food,
-/obj/effect/spawner/lootdrop/food,
-/obj/effect/spawner/lootdrop/food,
 /turf/open/floor/wood,
 /area/crew_quarters/sleep)
 "aLZ" = (
@@ -22187,16 +22168,11 @@
 /turf/open/floor/plating,
 /area/maintenance/aft)
 "aMf" = (
-/obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
+/obj/machinery/light/small{
+	dir = 8
 	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/turf/open/floor/plating{
-	tag = "icon-platingdmg3";
-	icon_state = "platingdmg3"
-	},
+/obj/structure/easel,
+/turf/open/floor/plating,
 /area/maintenance/aft)
 "aMg" = (
 /obj/machinery/firealarm{
@@ -23071,9 +23047,10 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/obj/effect/spawner/lootdrop{
-	loot = list("/obj/structure/grille","/obj/structure/grille","/obj/structure/grille","/obj/structure/grille","/obj/structure/grille","/obj/item/weapon/cigbutt","/obj/item/trash/cheesie","/obj/item/trash/candy","/obj/item/trash/chips","/obj/item/trash/deadmouse","/obj/item/trash/pistachios","/obj/item/trash/plate","/obj/item/trash/popcorn","/obj/item/trash/raisins","/obj/item/trash/sosjerky","/obj/item/trash/syndi_cakes");
-	name = "maint grille or trash spawner"
+/obj/effect/spawner/lootdrop/maintenance,
+/obj/structure/sign/poster{
+	pixel_x = -32;
+	pixel_y = 0
 	},
 /turf/open/floor/plating,
 /area/maintenance/aft)
@@ -24497,6 +24474,7 @@
 /obj/item/clothing/under/assistantformal,
 /obj/item/clothing/suit/hooded/wintercoat,
 /obj/item/clothing/shoes/winterboots,
+/obj/item/weapon/storage/backpack/satchel,
 /turf/open/floor/plasteel{
 	icon_state = "vault"
 	},
@@ -24514,6 +24492,7 @@
 	},
 /obj/item/clothing/suit/hooded/wintercoat,
 /obj/item/clothing/shoes/winterboots,
+/obj/item/weapon/storage/backpack/satchel,
 /turf/open/floor/plasteel{
 	icon_state = "vault"
 	},
@@ -24528,6 +24507,7 @@
 	},
 /obj/item/clothing/suit/hooded/wintercoat,
 /obj/item/clothing/shoes/winterboots,
+/obj/item/weapon/storage/backpack/satchel,
 /turf/open/floor/plasteel{
 	icon_state = "vault"
 	},
@@ -24704,7 +24684,6 @@
 	name = "blobstart"
 	},
 /turf/open/floor/plating{
-	tag = "icon-platingdmg1";
 	icon_state = "platingdmg1"
 	},
 /area/maintenance/aft)
@@ -25428,8 +25407,6 @@
 /area/hallway/secondary/garden)
 "aSh" = (
 /obj/structure/rack,
-/obj/item/clothing/suit/hazardvest,
-/obj/item/weapon/knuckles,
 /turf/open/floor/plating,
 /area/maintenance/aft)
 "aSi" = (
@@ -27229,7 +27206,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/open/floor/plating{
-	tag = "icon-panelscorched";
 	icon_state = "panelscorched"
 	},
 /area/maintenance/aft)
@@ -29034,9 +29010,6 @@
 	},
 /obj/structure/closet/crate,
 /obj/effect/spawner/lootdrop/maintenance,
-/obj/random/weaponcrafting,
-/obj/item/weapon/knuckles,
-/obj/item/weapon/coin/silver,
 /turf/open/floor/plating,
 /area/maintenance/aft)
 "aYh" = (
@@ -41941,9 +41914,6 @@
 "btc" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/mineral/ore_redemption,
-/obj/machinery/door/window{
-	req_one_access_txt = "32;19;47;48;50"
-	},
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "cargo_lock"
 	},
@@ -71960,9 +71930,6 @@
 /obj/effect/spawner/lootdrop/food,
 /obj/effect/spawner/lootdrop/food,
 /obj/effect/spawner/lootdrop/food,
-/obj/effect/spawner/lootdrop/food,
-/obj/effect/spawner/lootdrop/food,
-/obj/effect/spawner/lootdrop/food,
 /obj/machinery/light/small{
 	dir = 4
 	},
@@ -84106,10 +84073,6 @@
 	name = "freezer"
 	},
 /obj/item/weapon/reagent_containers/food/drinks/bottle/orangejuice,
-/obj/effect/spawner/lootdrop/food,
-/obj/effect/spawner/lootdrop/food,
-/obj/effect/spawner/lootdrop/food,
-/obj/effect/spawner/lootdrop/food,
 /obj/effect/spawner/lootdrop/food,
 /obj/effect/spawner/lootdrop/food,
 /obj/effect/spawner/lootdrop/food,
@@ -117842,7 +117805,7 @@ aaa
 aaa
 aaa
 aaj
-aaW
+aiy
 aaW
 aaW
 aiy
@@ -118870,7 +118833,7 @@ aaa
 aaa
 aaa
 aaj
-aaW
+aiy
 aaW
 aaW
 aiy
@@ -128768,10 +128731,10 @@ dcc
 dcC
 dda
 dcK
-dcc
+cYy
 dcr
-dct
-dcj
+ddA
+dcK
 cYy
 dee
 bhV
@@ -129026,9 +128989,9 @@ cYy
 cYy
 cYy
 cYy
-dcr
-ddA
-dcK
+cYy
+cYy
+cYy
 cYy
 bhV
 bhV
@@ -129282,11 +129245,11 @@ aaa
 aaj
 aaa
 aaa
-cYy
-cYy
-cYy
-cYy
-cYy
+aaa
+aaa
+aaj
+aaj
+aaa
 aaa
 aaj
 aaa
@@ -134574,9 +134537,9 @@ awX
 aAQ
 awX
 aGE
-aIk
-asd
-aqC
+afx
+ahx
+aiv
 aMe
 awX
 aOO
@@ -134584,7 +134547,7 @@ aQI
 aSh
 awU
 aVk
-aqC
+aMf
 aYg
 awX
 ayr
@@ -134831,10 +134794,10 @@ aCn
 aDP
 aFm
 aGF
-aGF
-aGF
-aGF
-aMf
+bbf
+ahy
+aiw
+ahx
 aNx
 aGF
 aGF
