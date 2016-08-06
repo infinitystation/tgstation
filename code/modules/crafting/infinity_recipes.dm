@@ -10,7 +10,8 @@
 /datum/crafting_recipe/eng_un
 	name = "Convert engineer style hardsuit to unathi"
 	result = /obj/item/clothing/suit/space/hardsuit/engine_un
-	reqs = list(/obj/item/clothing/suit/space/hardsuit/engine = 1)
+	reqs = list(/obj/item/clothing/suit/space/hardsuit/engine = 1,
+				/obj/item/stack/rods = 1)
 	tools = list(/obj/item/weapon/wirecutters)
 	time = 100
 	category = CAT_MISC
