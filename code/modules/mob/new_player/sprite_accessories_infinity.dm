@@ -342,3 +342,8 @@
 	name = "Style Brother"
 	icon = 'icons/mob/more_hairs.dmi'
 	icon_state = "hair_dave"
+
+/datum/sprite_accessory/hair/hair_cia
+	name = "CIA"
+	icon = 'icons/mob/more_hairs.dmi'
+	icon_state = "hair_cia"

@@ -59,7 +59,6 @@
 /datum/sprite_accessory/tajaran/tail
 	icon = 'icons/mob/infinity_mutant_bodyparts.dmi'
 	color_src = MUTCOLORS
-	hasinner = 1
 
 /datum/sprite_accessory/tajaran/tail/default
 	name = "Default"

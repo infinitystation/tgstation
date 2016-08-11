@@ -15,12 +15,9 @@
 	miss_sound = 'sound/weapons/slashmiss.ogg'
 	meat = /obj/item/weapon/reagent_containers/food/snacks/meat/slab/human
 	skinned_type = /obj/item/stack/sheet/animalhide/generic
-	limbs_id = "tajaran"
 
 /datum/species/tajaran/qualifies_for_rank(rank, list/features)
 	if(rank in command_positions)
-		return 0
-	if(rank in security_positions)
 		return 0
 	return 1
 
@@ -33,8 +30,8 @@
 	var/regex/tajaran_rAr = new("r+", "g")
 	var/regex/tajaran_rAR = new("R+", "g")
 	if(copytext(message, 1, 2) != "*")
-		message = tajaran_rrr.Replace(message, "ğğ")
-		message = tajaran_rRR.Replace(message, "ĞĞ")
-		message = tajaran_rAr.Replace(message, "rr")
-		message = tajaran_rAR.Replace(message, "RR")
+		message = tajaran_rrr.Replace(message, "ğğğ")
+		message = tajaran_rRR.Replace(message, "ĞĞĞ")
+		message = tajaran_rAr.Replace(message, "rrr")
+		message = tajaran_rAR.Replace(message, "RRR")
 	return message
