@@ -99,3 +99,13 @@
 	name = "circuit board (Eatiman)"
 	build_path = /obj/machinery/vending/eatimat
 	origin_tech = "programming=1;biotech=1"
+
+/obj/machinery/vending/magivend/terror
+	products = list(/obj/item/clothing/head/wizard = 2,/obj/item/clothing/suit/wizrobe = 2,
+					/obj/item/clothing/head/wizard/red = 2,/obj/item/clothing/suit/wizrobe/red = 2,
+ 					/obj/item/clothing/head/wizard/yellow = 2,/obj/item/clothing/suit/wizrobe/yellow = 2,
+ 					/obj/item/clothing/head/wizard/black = 2,/obj/item/clothing/suit/wizrobe/black = 2,
+ 					/obj/item/clothing/head/wizard/magus = 2,
+ 					/obj/item/clothing/suit/wizrobe/magusblue = 2,/obj/item/clothing/suit/wizrobe/magusred = 2,
+ 					/obj/item/clothing/suit/wizrobe/marisa = 2,/obj/item/clothing/head/wizard/marisa = 2,
+ 					/obj/item/clothing/shoes/sandal = 2,/obj/item/weapon/staff = 2)

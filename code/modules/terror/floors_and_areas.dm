@@ -56,6 +56,10 @@
 	name = "Engineering Rest Room"
 	icon_state = "yellow"
 
+/area/engine/equipment_room
+	name = "Engineer equipment room"
+	icon_state = "yellow"
+
 /area/CP
 	name = "Control Post"
 	has_gravity = 1

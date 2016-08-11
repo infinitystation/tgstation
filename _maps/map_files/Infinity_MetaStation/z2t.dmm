@@ -1079,7 +1079,7 @@
 /turf/open/floor/plasteel/black,
 /area/tdome/arena_source)
 "adg" = (
-/turf/closed/indestructible/riveted,
+/turf/closed/indestructible/riveted/infinity/terror,
 /area/wreck/main{
 	has_gravity = 1;
 	name = "\improper Zombie";
@@ -1087,7 +1087,7 @@
 	})
 "adh" = (
 /obj/structure/sign/skull,
-/turf/closed/indestructible/riveted,
+/turf/closed/indestructible/riveted/infinity/terror,
 /area/wreck/main{
 	has_gravity = 1;
 	name = "\improper Zombie";
@@ -1299,7 +1299,7 @@
 /obj/structure/sign/securearea{
 	name = "\improper ROOM 6 - TIME TO DIE"
 	},
-/turf/closed/indestructible/riveted,
+/turf/closed/indestructible/riveted/infinity/terror,
 /area/wreck/main{
 	has_gravity = 1;
 	name = "\improper Zombie";
@@ -1510,7 +1510,7 @@
 /obj/structure/sign/securearea{
 	name = "\improper ROOM 5 - THE LAST LINE"
 	},
-/turf/closed/indestructible/riveted,
+/turf/closed/indestructible/riveted/infinity/terror,
 /area/wreck/main{
 	has_gravity = 1;
 	name = "\improper Zombie";
@@ -1824,7 +1824,7 @@
 	})
 "aep" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/closed/indestructible/riveted,
+/turf/closed/indestructible/riveted/infinity/terror,
 /area/wreck/main{
 	has_gravity = 1;
 	name = "\improper Zombie";
@@ -3179,7 +3179,7 @@
 /obj/structure/sign/securearea{
 	name = "\improper ROOM 4 - SAVE THEM ALL"
 	},
-/turf/closed/indestructible/riveted,
+/turf/closed/indestructible/riveted/infinity/terror,
 /area/wreck/main{
 	has_gravity = 1;
 	name = "\improper Zombie";
@@ -3195,7 +3195,7 @@
 	})
 "agK" = (
 /obj/structure/sign/nosmoking_1,
-/turf/closed/indestructible/riveted,
+/turf/closed/indestructible/riveted/infinity/terror,
 /area/wreck/main{
 	has_gravity = 1;
 	name = "\improper Zombie";
@@ -3211,7 +3211,7 @@
 	name = "poster - Work for a Future";
 	tag = "icon-poster17_legit"
 	},
-/turf/closed/indestructible/riveted,
+/turf/closed/indestructible/riveted/infinity/terror,
 /area/wreck/main{
 	has_gravity = 1;
 	name = "\improper Zombie";
@@ -4474,7 +4474,7 @@
 /obj/structure/sign/securearea{
 	name = "\improper ROOM 3, BASEMENT"
 	},
-/turf/closed/indestructible/riveted,
+/turf/closed/indestructible/riveted/infinity/terror,
 /area/wreck/main{
 	has_gravity = 1;
 	name = "\improper Zombie";
@@ -5004,7 +5004,7 @@
 /obj/structure/sign/securearea{
 	name = "\improper ROOM 2, DEAD AHEAD"
 	},
-/turf/closed/indestructible/riveted,
+/turf/closed/indestructible/riveted/infinity/terror,
 /area/wreck/main{
 	has_gravity = 1;
 	name = "\improper Zombie";
@@ -6605,10 +6605,6 @@
 /area/centcom/control)
 "anZ" = (
 /obj/structure/table/wood,
-/obj/effect/landmark{
-	name = "Teleport-Scroll"
-	},
-/obj/item/weapon/dice/d20,
 /obj/item/weapon/dice,
 /turf/open/floor/carpet,
 /area/wizard_station)
@@ -6796,13 +6792,13 @@
 /area/wizard_station)
 "aoA" = (
 /obj/structure/dresser,
-/obj/item/weapon/storage/backpack/satchel,
 /turf/open/floor/carpet,
 /area/wizard_station)
 "aoB" = (
 /obj/structure/table/wood,
-/obj/item/weapon/storage/bag/tray,
-/obj/item/weapon/reagent_containers/food/snacks/burger/spell,
+/obj/effect/landmark{
+	name = "Teleport-Scroll"
+	},
 /turf/open/floor/carpet,
 /area/wizard_station)
 "aoC" = (
@@ -9122,7 +9118,7 @@
 /area/shuttle/syndicate)
 "aux" = (
 /obj/structure/grille,
-/obj/structure/window/reinforced/fulltile,
+/obj/structure/window/shuttle/dark,
 /turf/open/floor/plating,
 /area/shuttle/syndicate)
 "auy" = (
@@ -12755,16 +12751,11 @@
 /turf/open/floor/engine,
 /area/abductor_ship)
 "aDh" = (
-/obj/structure/curtain/open/shower/alien,
-/obj/machinery/shower{
-	dir = 1
+/obj/effect/landmark/vr_spawn,
+/turf/open/floor{
+	icon_state = "floor"
 	},
-/obj/item/weapon/soap/deluxe{
-	cleanspeed = 20;
-	color = "#C862CC"
-	},
-/turf/open/floor/plating/abductor2,
-/area/abductor_ship)
+/area/centcom/evac)
 "aDi" = (
 /turf/open/floor/plasteel/stairsnew/grey/left,
 /area/syndicate_mothership{
@@ -13918,11 +13909,13 @@
 /turf/open/floor/plasteel/green/side,
 /area/centcom/evac)
 "aGe" = (
+/obj/effect/landmark/vr_spawn,
 /turf/open/floor/plasteel/yellowsiding/corner{
 	dir = 4
 	},
 /area/centcom/evac)
 "aGf" = (
+/obj/effect/landmark/vr_spawn,
 /turf/open/floor/plasteel/yellowsiding{
 	dir = 1
 	},
@@ -14172,9 +14165,11 @@
 	},
 /area/centcom/evac)
 "aGL" = (
+/obj/effect/landmark/vr_spawn,
 /turf/open/floor/plasteel/yellowsiding/corner,
 /area/centcom/evac)
 "aGM" = (
+/obj/effect/landmark/vr_spawn,
 /turf/open/floor/plasteel/yellowsiding,
 /area/centcom/evac)
 "aGN" = (
@@ -23005,7 +23000,7 @@
 /obj/machinery/door/airlock/abductor{
 	name = "Testing Laboratory"
 	},
-/turf/closed/wall/mineral/abductor/terror,
+/turf/open/floor/plating/abductor,
 /area/abductor_ship)
 "baI" = (
 /obj/machinery/door/poddoor/preopen{
@@ -23089,7 +23084,9 @@
 "baR" = (
 /obj/structure/curtain/open/shower/alien,
 /obj/machinery/shower{
-	dir = 1
+	dir = 4;
+	icon_state = "shower";
+	pixel_x = 6
 	},
 /turf/open/floor/plating/abductor2,
 /area/abductor_ship)
@@ -23103,6 +23100,20 @@
 	},
 /turf/open/floor/plating/abductor,
 /area/abductor_ship)
+"baV" = (
+/obj/effect/landmark/vr_spawn,
+/turf/open/floor/plasteel/yellowsiding{
+	dir = 8
+	},
+/area/centcom/evac)
+"baU" = (
+/turf/closed/indestructible/riveted/infinity/terror,
+/area/syndicate_mothership)
+"baT" = (
+/obj/structure/closet/cabinet,
+/obj/item/weapon/storage/backpack/satchel,
+/turf/open/floor/carpet,
+/area/wizard_station)
 
 (1,1,1) = {"
 aaa
@@ -26117,7 +26128,7 @@ bau
 baw
 aBf
 baM
-aDh
+baR
 aAp
 aaa
 aaa
@@ -27601,7 +27612,7 @@ amA
 amA
 anT
 akr
-aoa
+baT
 aoa
 aoB
 akr
@@ -29164,16 +29175,16 @@ aqk
 aqk
 aqk
 aqk
-aqS
-aqS
-aqS
-aqS
+baU
+baU
+baU
+baU
 atM
 atM
-aqS
-aqS
-aqS
-aqS
+baU
+baU
+baU
+baU
 aqk
 aqk
 aqk
@@ -29420,8 +29431,8 @@ aqm
 aqk
 aqk
 aqR
-aqS
-aqS
+baU
+baU
 asF
 asV
 atn
@@ -29430,8 +29441,8 @@ asG
 auz
 avb
 avD
-aqS
-aqS
+baU
+baU
 aqk
 aqk
 aqk
@@ -29677,7 +29688,7 @@ aqk
 aqk
 aqk
 aqk
-aqS
+baU
 ast
 asG
 asG
@@ -29688,7 +29699,7 @@ asW
 avc
 avE
 atr
-aqS
+baU
 aqk
 aqm
 aqR
@@ -29945,7 +29956,7 @@ asW
 avd
 asG
 awe
-aqS
+baU
 aqk
 aqk
 aqn
@@ -30202,7 +30213,7 @@ asW
 avc
 asG
 awf
-aqS
+baU
 aqR
 aqk
 aqm
@@ -30448,7 +30459,7 @@ aqk
 aqk
 aqk
 aqk
-aqS
+baU
 ast
 asG
 asG
@@ -30459,7 +30470,7 @@ asW
 ave
 avF
 awg
-aqS
+baU
 aqk
 aql
 aqR
@@ -30700,13 +30711,13 @@ apZ
 aqk
 aqk
 aqk
-aqS
-aqS
+baU
+baU
 aro
 aro
 aro
-aqS
-aqS
+baU
+baU
 asG
 asX
 asG
@@ -30715,12 +30726,12 @@ asG
 asG
 asG
 asG
-aqS
-aqS
-aqS
+baU
+baU
+baU
 aro
-aqS
-aqS
+baU
+baU
 apZ
 apZ
 apZ
@@ -30957,7 +30968,7 @@ apZ
 aqk
 aqk
 aqk
-aqS
+baU
 arg
 arp
 arp
@@ -30977,7 +30988,7 @@ awH
 avg
 avG
 axQ
-aqS
+baU
 aaa
 aaa
 aaa
@@ -31214,7 +31225,7 @@ apZ
 aqk
 aqn
 aqk
-aqS
+baU
 arg
 arp
 arF
@@ -31234,7 +31245,7 @@ awI
 atR
 axB
 axQ
-aqS
+baU
 aaa
 aaa
 aaa
@@ -31471,27 +31482,27 @@ apZ
 aqk
 aqk
 aqk
-aqS
+baU
 arg
 arp
 arF
 arU
 asi
-aqS
-aqS
+baU
+baU
 asI
-aqS
-aqS
-aqS
+baU
+baU
+baU
 aro
 avf
 aro
-aqS
+baU
 awJ
 axh
 axB
 axQ
-aqS
+baU
 aaa
 aaa
 aaa
@@ -31728,27 +31739,27 @@ apZ
 aqk
 aqk
 aqk
-aqS
+baU
 arg
 arp
 arp
 arV
 asj
-aqS
+baU
 asH
 asY
 ats
 ats
-aqS
+baU
 auA
 avg
 avG
-aqS
+baU
 awK
 axh
 axB
 axQ
-aqS
+baU
 aaa
 aaa
 aaa
@@ -31985,27 +31996,27 @@ apZ
 apZ
 apZ
 apZ
-aqS
-aqS
-aqS
-aqS
-aqS
-aqS
-aqS
+baU
+baU
+baU
+baU
+baU
+baU
+baU
 asH
 asY
 asY
 atP
-aqS
+baU
 auB
 atQ
 avH
-aqS
+baU
 awL
 axh
 axB
 axQ
-aqS
+baU
 aaa
 aaa
 aaa
@@ -32248,21 +32259,21 @@ aaa
 aaa
 aaa
 aaa
-aqS
+baU
 asI
-aqS
+baU
 asI
-aqS
-aqS
+baU
+baU
 aro
 avf
 aro
-aqS
+baU
 awM
 auB
 avH
 axR
-aqS
+baU
 aaa
 aaa
 aaa
@@ -32505,21 +32516,21 @@ aaa
 aaa
 aaa
 aaa
-aqS
+baU
 asJ
-aqS
+baU
 asJ
-aqS
-aqS
+baU
+baU
 auC
 atQ
 atQ
-aqS
-aqS
-aqS
-aqS
-aqS
-aqS
+baU
+baU
+baU
+baU
+baU
+baU
 aaa
 aaa
 aaa
@@ -32762,18 +32773,18 @@ aaa
 aaa
 aaa
 aaa
+baU
 aqS
-aqS
-aqS
-aqS
-aqS
+baU
+baU
+baU
 atR
 atR
 atR
 atR
 awj
-aqS
-aqS
+baU
+baU
 aaa
 aaa
 aaa
@@ -33022,7 +33033,7 @@ aaa
 aaa
 aaa
 aaa
-aqS
+baU
 atQ
 atQ
 atQ
@@ -33030,7 +33041,7 @@ atQ
 atQ
 atQ
 atQ
-aqS
+baU
 aaa
 aaa
 aaa
@@ -33279,7 +33290,7 @@ aaa
 aaa
 aaa
 aaa
-aqS
+baU
 atR
 atS
 atT
@@ -33287,7 +33298,7 @@ avh
 atT
 awk
 atR
-aqS
+baU
 aaa
 aaa
 aaa
@@ -33536,7 +33547,7 @@ aaa
 aaa
 aaa
 aaa
-aqS
+baU
 atS
 atT
 auD
@@ -33544,7 +33555,7 @@ aui
 avI
 atT
 awk
-aqS
+baU
 aaa
 aaa
 aaa
@@ -33793,7 +33804,7 @@ aaa
 aaa
 aaa
 aaa
-aqS
+baU
 atT
 auh
 aui
@@ -33801,7 +33812,7 @@ avi
 aui
 awl
 atT
-aqS
+baU
 aaa
 aaa
 aaa
@@ -34050,7 +34061,7 @@ aaa
 aaa
 aaa
 aaa
-aqS
+baU
 atU
 aui
 auE
@@ -34058,7 +34069,7 @@ avj
 avJ
 aui
 awN
-aqS
+baU
 aaa
 aaa
 aaa
@@ -34307,7 +34318,7 @@ aaa
 aaa
 aaa
 aaa
-aqS
+baU
 atT
 auj
 aui
@@ -34315,7 +34326,7 @@ avk
 aui
 awm
 atT
-aqS
+baU
 aaa
 aaa
 aaa
@@ -34564,7 +34575,7 @@ aaa
 aaa
 aaa
 aaa
-aqS
+baU
 atV
 atT
 auF
@@ -34572,7 +34583,7 @@ aui
 avK
 atT
 awn
-aqS
+baU
 aaa
 aaa
 aaa
@@ -34821,7 +34832,7 @@ aaa
 aaa
 aaa
 aaa
-aqS
+baU
 atR
 atV
 atT
@@ -34829,7 +34840,7 @@ avh
 atT
 awn
 atR
-aqS
+baU
 aaa
 aaa
 aaa
@@ -35078,15 +35089,15 @@ aaa
 aaa
 aaa
 aaa
-aqS
-aqS
-aqS
-aqS
-aqS
-aqS
-aqS
-aqS
-aqS
+baU
+baU
+baU
+baU
+baU
+baU
+baU
+baU
+baU
 aaa
 aaa
 aaa
@@ -49503,7 +49514,7 @@ aEW
 aEW
 aEW
 aBV
-aDK
+aAR
 aGZ
 aBV
 aDq
@@ -52071,9 +52082,9 @@ aDO
 aEk
 aEk
 aEk
-aEk
-aEk
-aEk
+baV
+baV
+baV
 aEk
 aEk
 aEk
@@ -52329,7 +52340,7 @@ aEl
 aEl
 aEl
 aGe
-aDN
+aDh
 aGL
 aEl
 aEl
@@ -52586,7 +52597,7 @@ aEm
 aFa
 aDN
 aGf
-aDN
+aDh
 aGM
 aDN
 aHt
@@ -52843,7 +52854,7 @@ aEn
 aFb
 aFE
 aGf
-aDN
+aDh
 aGM
 aHf
 aHu
@@ -53100,7 +53111,7 @@ aEo
 aFc
 aFF
 aGf
-aDN
+aDh
 aGM
 aHg
 aHv

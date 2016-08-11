@@ -90,6 +90,7 @@
 	desc = "Just a cup."
 	icon = 'icons/obj/infinity_object.dmi'
 	icon_state = "big_cup"
+	spillable = 1
 
 /obj/item/weapon/reagent_containers/food/drinks/cup/soviet
 	desc = "For the space-motherland!"
