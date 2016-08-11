@@ -39,7 +39,7 @@
 	item_color = "engineering_unathi"
 	worn_icon = 'icons/mob/infinity_work.dmi'
 	icon = 'icons/obj/clothing/infinity_work.dmi'
-	flash_protect = 0
+	flash_protect = 2
 	armor = list(melee = 30, bullet = 5, laser = 10, energy = 5, bomb = 50, bio = 100, rad = 50)
 	scan_reagents = 1
 
@@ -61,7 +61,7 @@
 	item_color = "atmos_unathi"
 	worn_icon = 'icons/mob/infinity_work.dmi'
 	icon = 'icons/obj/clothing/infinity_work.dmi'
-	flash_protect = 0
+	flash_protect = 2
 	armor = list(melee = 30, bullet = 5, laser = 10, energy = 5, bomb = 10, bio = 100, rad = 0)
 	heat_protection = HEAD
 	max_heat_protection_temperature = FIRE_IMMUNITY_HELM_MAX_TEMP_PROTECT
