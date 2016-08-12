@@ -223,10 +223,10 @@ Judgement: 10 servants, 100 CV, and any existing AIs are converted or destroyed
 
 
 
-/datum/clockwork_scripture/vanguard //Vanguard: Provides twenty seconds of stun immunity. At the end of the twenty seconds, 50% of all stuns absorbed are applied to the invoker.
+/datum/clockwork_scripture/vanguard //Vanguard: Provides twenty seconds of stun immunity. At the end of the twenty seconds, 25% of all stuns absorbed are applied to the invoker.
 	descname = "Self Stun Immunity"
 	name = "Vanguard"
-	desc = "Provides twenty seconds of stun immunity. At the end of the twenty seconds, the invoker is stunned for the equivalent of 50% of all stuns they absorbed. \
+	desc = "Provides twenty seconds of stun immunity. At the end of the twenty seconds, the invoker is stunned for the equivalent of 25% of all stuns they absorbed. \
 	Excessive absorption will cause unconsciousness."
 	invocations = list("Shield me...", "...from darkness!")
 	channel_time = 30
@@ -236,13 +236,13 @@ Judgement: 10 servants, 100 CV, and any existing AIs are converted or destroyed
 	var/total_duration = 200
 
 /datum/clockwork_scripture/vanguard/check_special_requirements()
-	if(islist(invoker.stun_absorption) && invoker.stun_absorption["vanguard"] && invoker.stun_absorption["vanguard"]["duration"] > world.time)
+	if(islist(invoker.stun_absorption) && invoker.stun_absorption["vanguard"] && invoker.stun_absorption["vanguard"]["end_time"] > world.time)
 		invoker << "<span class='warning'>You are already shielded by a Vanguard!</span>"
 		return 0
 	return 1
 
 /datum/clockwork_scripture/vanguard/scripture_effects()
-	invoker.add_stun_absorption("vanguard", world.time + total_duration, 1, "'s yellow aura momentarily intensifies!", "Your ward absorbs the stun!", " is radiating with a soft yellow light!")
+	invoker.add_stun_absorption("vanguard", total_duration, 1, "'s yellow aura momentarily intensifies!", "Your ward absorbs the stun!", " is radiating with a soft yellow light!")
 	invoker.visible_message("<span class='warning'>[invoker] begins to faintly glow!</span>", "<span class='brass'>You will absorb all stuns for the next twenty seconds.</span>")
 	spawn(total_duration)
 		if(!invoker)
@@ -251,7 +251,7 @@ Judgement: 10 servants, 100 CV, and any existing AIs are converted or destroyed
 		var/vanguard = invoker.stun_absorption["vanguard"]
 		var/stuns_blocked = 0
 		if(vanguard)
-			stuns_blocked = min(vanguard["stuns_absorbed"] * 0.5, 20)
+			stuns_blocked = min(vanguard["stuns_absorbed"] * 0.25, 20)
 		if(invoker.stat != DEAD)
 			var/message_to_invoker = "<span class='warning'>You feel your Vanguard quietly fade...</span>"
 			var/otheractiveabsorptions = FALSE
@@ -422,8 +422,8 @@ Judgement: 10 servants, 100 CV, and any existing AIs are converted or destroyed
 	tier = SCRIPTURE_DRIVER
 	one_per_tile = TRUE
 
-/datum/clockwork_scripture/create_object/tinkerers_cache/run_scripture()
-	var/cache_cost_increase = min(round(clockwork_caches*0.34), 5)
+/datum/clockwork_scripture/create_object/tinkerers_cache/New()
+	var/cache_cost_increase = min(round(clockwork_caches*0.2), 5)
 	for(var/i in required_components)
 		if(i != "replicant_alloy")
 			required_components[i] += cache_cost_increase
@@ -707,8 +707,8 @@ Judgement: 10 servants, 100 CV, and any existing AIs are converted or destroyed
 	consumed_components = list("vanguard_cogwheel" = 1, "guvax_capacitor" = 1)
 	whispered = TRUE
 	object_path = /obj/item/device/mmi/posibrain/soul_vessel
-	creator_message = "<span class='brass'>You form a soul vessel, which immediately begins drawing in the damned.</span>"
-	usage_tip = "The vessel functions as a servant for tier unlocking but not for invocation."
+	creator_message = "<span class='brass'>You form a soul vessel, which can be used in-hand to attract spirits, or used on an unconscious or dead human to extract their consciousness.</span>"
+	usage_tip = "The vessel can be used as a teleport target for Spatial Gateway, though it is generally better-used by placing it in a shell."
 	tier = SCRIPTURE_SCRIPT
 
 
@@ -1021,6 +1021,7 @@ Judgement: 10 servants, 100 CV, and any existing AIs are converted or destroyed
 	new/obj/effect/clockwork/general_marker/nezbere(get_turf(invoker))
 	hierophant_message("<span class='nezbere'>[text2ratvar("Armorer: \"I heed your call, champions. May your artifacts bring ruin upon the heathens that oppose our master!")]\"</span>", FALSE, invoker)
 	clockwork_generals_invoked["nezbere"] = world.time + CLOCKWORK_GENERAL_COOLDOWN
+	playsound(invoker, 'sound/magic/clockwork/invoke_general.ogg', 50, 0)
 	for(var/obj/structure/clockwork/ocular_warden/W in all_clockwork_objects) //Ocular wardens have increased damage and radius
 		W.damage_per_tick *= 1.5
 		W.sight_range *= 2
@@ -1049,7 +1050,7 @@ Judgement: 10 servants, 100 CV, and any existing AIs are converted or destroyed
 	name = "Invoke Sevtug, the Formless Pariah"
 	desc = "Taps the limitless power of Sevtug, one of Ratvar's four generals. The mental manipulation ability of the Pariah allows its wielder to cause mass hallucinations and confusion \
 	for all non-servant humans on the same z-level as them. The power of this scripture falls off somewhat with distance, and certain things may reduce its effects."
-	invocations = list("I call upon you, Fright!!", "Let your power shatter the sanity of the weak minded!!", "Let your tendrils hold sway over all!!")
+	invocations = list("I call upon you, Fright!!", "Let your power shatter the sanity of the weak-minded!!", "Let your tendrils hold sway over all!!")
 	channel_time = 150
 	required_components = list("belligerent_eye" = 3, "vanguard_cogwheel" = 3, "guvax_capacitor" = 6, "hierophant_ansible" = 3)
 	consumed_components = list("belligerent_eye" = 3, "vanguard_cogwheel" = 3, "guvax_capacitor" = 6, "hierophant_ansible" = 3)
@@ -1076,6 +1077,7 @@ Judgement: 10 servants, 100 CV, and any existing AIs are converted or destroyed
 	new/obj/effect/clockwork/general_marker/sevtug(get_turf(invoker))
 	hierophant_message("<span class='sevtug'>[text2ratvar("Fright: \"I heed your call, idiots. Get going and use this chance while it lasts!")]\"</span>", FALSE, invoker)
 	clockwork_generals_invoked["sevtug"] = world.time + CLOCKWORK_GENERAL_COOLDOWN
+	playsound(invoker, 'sound/magic/clockwork/invoke_general.ogg', 50, 0)
 	var/hum = get_sfx('sound/effects/screech.ogg') //like playsound, same sound for everyone affected
 	var/turf/T = get_turf(invoker)
 	for(var/mob/living/carbon/human/H in living_mob_list)
@@ -1113,16 +1115,16 @@ Judgement: 10 servants, 100 CV, and any existing AIs are converted or destroyed
 
 
 
-/datum/clockwork_scripture/invoke_nzcrentr //Invoke Nzcrentr, the Forgotten Arbiter: Imbues an immense amount of energy into the invoker. After several seconds, everyone nearby will be hit with a devastating chain lightning blast.
+/datum/clockwork_scripture/invoke_nzcrentr //Invoke Nzcrentr, the Eternal Thunderbolt: Imbues an immense amount of energy into the invoker. After several seconds, everyone nearby will be hit with a devastating chain lightning blast.
 	descname = "Lightning Blast"
-	name = "Invoke Nzcrentr, the Forgotten Arbiter"
+	name = "Invoke Nzcrentr, the Eternal Thunderbolt"
 	desc = "Taps the limitless power of Nzcrentr, one of Ratvar's four generals. The immense energy Nzcrentr wields will allow you to imbue a tiny fraction of it into your body. After several \
 	seconds, anyone nearby will be struck by a devastating lightning bolt."
 	invocations = list("I call upon you, Amperage!!", "Let your energy flow through me!!", "Let your boundless power shatter stars!!")
 	channel_time = 150
 	required_components = list("belligerent_eye" = 3, "guvax_capacitor" = 3, "replicant_alloy" = 3, "hierophant_ansible" = 6)
 	consumed_components = list("belligerent_eye" = 3, "guvax_capacitor" = 3, "replicant_alloy" = 3, "hierophant_ansible" = 6)
-	usage_tip = "Struck targets will also be knocked down for eight seconds."
+	usage_tip = "Struck targets will also be knocked down for about sixteen seconds."
 	tier = SCRIPTURE_REVENANT
 
 /datum/clockwork_scripture/invoke_nzcrentr/check_special_requirements()
@@ -1135,10 +1137,11 @@ Judgement: 10 servants, 100 CV, and any existing AIs are converted or destroyed
 /datum/clockwork_scripture/invoke_nzcrentr/scripture_effects()
 	new/obj/effect/clockwork/general_marker/nzcrentr(get_turf(invoker))
 	clockwork_generals_invoked["nzcrentr"] = world.time + CLOCKWORK_GENERAL_COOLDOWN
-	hierophant_message("<span class='nzcrentr'>[text2ratvar("Amperage: \"[invoker.name] has called forth my power. Hope they do not shatter under it!")]\"</span>", FALSE, invoker)
+	hierophant_message("<span class='nzcrentr'>[text2ratvar("Amperage: \"[invoker.real_name] has called forth my power. Hope they do not shatter under it!")]\"</span>", FALSE, invoker)
 	invoker.visible_message("<span class='warning'>[invoker] begins to radiate a blinding light!</span>", \
 	"<span class='nzcrentr'>\"[text2ratvar("The boss says it's okay to do this. Don't blame me if you die from it.")]\"</span>\n \
 	<span class='userdanger'>You feel limitless power surging through you!</span>")
+	playsound(invoker, 'sound/magic/clockwork/invoke_general.ogg', 50, 0)
 	playsound(invoker, 'sound/magic/lightning_chargeup.ogg', 100, 0)
 	animate(invoker, color = list(rgb(255, 255, 255), rgb(255, 255, 255), rgb(255, 255, 255), rgb(0,0,0)), time = 88) //Gradual advancement to extreme brightness
 	sleep(88)
@@ -1147,23 +1150,27 @@ Judgement: 10 servants, 100 CV, and any existing AIs are converted or destroyed
 		"<span class='nzcrentr'>\"[text2ratvar("I told you you wouldn't be able to handle it.")]\"</span>\n \
 		<span class='userdanger'>TOO... MUCH! CAN'T... TAKE IT!</span>")
 		playsound(invoker, 'sound/magic/lightningbolt.ogg', 100, 0)
-		animate(invoker, color = initial(invoker.color), time = 10)
-		for(var/mob/living/L in view(7, invoker))
-			if(is_servant_of_ratvar(L))
-				continue
-			invoker.Beam(L, icon_state = "nzcrentrs_power", icon = 'icons/effects/beam.dmi', time = 10)
-			var/randdamage = rand(40, 60)
-			if(iscarbon(L))
-				L.electrocute_act(randdamage, "Nzcrentr's power", 1, randdamage)
-			else
-				L.adjustFireLoss(randdamage)
-				L.visible_message(
-				"<span class='danger'>[L] was shocked by Nzcrentr's power!</span>", \
-				"<span class='userdanger'>You feel a powerful shock coursing through your body!</span>", \
-				"<span class='italics'>You hear a heavy electrical crack.</span>" \
-				)
-			L.Weaken(8)
-			playsound(L, 'sound/magic/LightningShock.ogg', 50, 1)
+		if(invoker.stat == CONSCIOUS)
+			animate(invoker, color = initial(invoker.color), time = 10)
+			for(var/mob/living/L in view(7, invoker))
+				if(is_servant_of_ratvar(L))
+					continue
+				invoker.Beam(L, icon_state = "nzcrentrs_power", icon = 'icons/effects/beam.dmi', time = 10)
+				var/randdamage = rand(40, 60)
+				if(iscarbon(L))
+					L.electrocute_act(randdamage, "Nzcrentr's power", 1, randdamage)
+				else
+					L.adjustFireLoss(randdamage)
+					L.visible_message(
+					"<span class='danger'>[L] was shocked by Nzcrentr's power!</span>", \
+					"<span class='userdanger'>You feel a powerful shock coursing through your body!</span>", \
+					"<span class='italics'>You hear a heavy electrical crack.</span>" \
+					)
+				L.Weaken(8)
+				playsound(L, 'sound/magic/LightningShock.ogg', 50, 1)
+		else
+			playsound(invoker, 'sound/magic/Disintegrate.ogg', 50, 1)
+			invoker.gib()
 		return 1
 	else
 		return 0
@@ -1193,6 +1200,7 @@ Judgement: 10 servants, 100 CV, and any existing AIs are converted or destroyed
 	new/obj/effect/clockwork/general_marker/inathneq(get_turf(invoker))
 	hierophant_message("<span class='inathneq'>[text2ratvar("Vanguard: \"I lend you my aid, champions! Let glory guide your blows!")]\"</span>", FALSE, invoker)
 	clockwork_generals_invoked["inath-neq"] = world.time + CLOCKWORK_GENERAL_COOLDOWN
+	playsound(invoker, 'sound/magic/clockwork/invoke_general.ogg', 50, 0)
 	if(invoker.real_name == "Lucio")
 		clockwork_say(invoker, text2ratvar("Aww, let's break it DOWN!!"))
 	var/list/affected_servants = list()

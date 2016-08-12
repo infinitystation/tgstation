@@ -3544,13 +3544,12 @@
 /turf/closed/wall/mineral/titanium,
 /area/shuttle/pod_1)
 "ahF" = (
-/turf/open/floor/plating,
 /obj/structure/shuttle/engine/propulsion/burst{
 	tag = "icon-propulsion (WEST)";
 	icon_state = "propulsion";
 	dir = 8
 	},
-/turf/closed/wall/mineral/titanium/interior,
+/turf/closed/wall/mineral/titanium,
 /area/shuttle/pod_1)
 "ahG" = (
 /obj/structure/sign/securearea{
@@ -3890,7 +3889,7 @@
 	icon_state = "propulsion";
 	dir = 8
 	},
-/turf/open/floor/plating,
+/turf/closed/wall/mineral/titanium,
 /area/shuttle/pod_2)
 "aiy" = (
 /obj/structure/sign/securearea{
@@ -4301,7 +4300,7 @@
 	icon_state = "propulsion";
 	dir = 8
 	},
-/turf/closed/wall/mineral/titanium/overspace,
+/turf/closed/wall/mineral/titanium,
 /area/shuttle/transport)
 "ajo" = (
 /obj/machinery/power/solar{
@@ -33051,6 +33050,9 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
+/obj/effect/landmark/start{
+	name = "Security Officer"
+	},
 /turf/open/floor/plasteel/darkred/side{
 	tag = "icon-darkred (NORTHEAST)";
 	dir = 5
@@ -39229,6 +39231,9 @@
 	tag = ""
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/effect/landmark/start{
+	name = "Security Officer"
+	},
 /turf/open/floor/plasteel/darkred/corner{
 	tag = "icon-darkredcorners (EAST)";
 	dir = 4
@@ -39271,6 +39276,9 @@
 	icon_state = "4-8";
 	pixel_x = 0;
 	tag = ""
+	},
+/obj/effect/landmark/start{
+	name = "Security Officer"
 	},
 /turf/open/floor/plasteel/darkred/corner{
 	tag = "icon-darkredcorners (NORTH)";
@@ -41907,6 +41915,9 @@
 	pixel_x = 0;
 	tag = ""
 	},
+/obj/effect/landmark/start{
+	name = "Security Officer"
+	},
 /turf/open/floor/plasteel/black,
 /area/security/main)
 "bFQ" = (
@@ -43442,6 +43453,9 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
+	},
+/obj/effect/landmark/start{
+	name = "Security Officer"
 	},
 /turf/open/floor/plasteel/black,
 /area/security/main)
@@ -50203,11 +50217,10 @@
 /turf/open/floor/plating,
 /area/security/prison)
 "bVy" = (
-/turf/open/floor/plating,
 /obj/structure/shuttle/engine/propulsion/burst{
 	dir = 4
 	},
-/turf/closed/wall/mineral/titanium/interior,
+/turf/closed/wall/mineral/titanium,
 /area/shuttle/pod_3)
 "bVz" = (
 /turf/closed/wall/mineral/titanium,
@@ -73103,11 +73116,10 @@
 /turf/open/floor/plating,
 /area/maintenance/asmaint2)
 "cOp" = (
-/turf/open/floor/plating,
 /obj/structure/shuttle/engine/propulsion/burst{
 	dir = 4
 	},
-/turf/closed/wall/mineral/titanium/interior,
+/turf/closed/wall/mineral/titanium,
 /area/shuttle/pod_4)
 "cOq" = (
 /turf/closed/wall/mineral/titanium,
@@ -82124,23 +82136,23 @@ aae
 afv
 aae
 aaa
-bmm
-bpP
 bnA
 bpP
 bnA
-bnA
-bnA
-bpP
-bpP
 bpP
 bnA
 bnA
 bnA
 bpP
+bpP
+bpP
+bnA
+bnA
 bnA
 bpP
-bmm
+bnA
+bpP
+bnA
 aaa
 aaa
 aaa
@@ -82380,7 +82392,7 @@ aae
 aab
 afv
 aaa
-bmm
+bnA
 bnA
 bpQ
 brZ
@@ -82400,7 +82412,7 @@ bRt
 bnA
 bnA
 bnA
-bmm
+bnA
 aaa
 aaa
 aaa
@@ -82658,7 +82670,7 @@ bnA
 bUy
 bVB
 bWW
-bmm
+bnA
 aaa
 aaa
 aaa
@@ -84200,7 +84212,7 @@ bnA
 bUD
 bVD
 bWW
-bmm
+bnA
 aae
 aaa
 aae
@@ -84436,7 +84448,7 @@ aae
 aaa
 afv
 aaa
-bmm
+bnA
 bnA
 bpV
 bsa
@@ -84456,7 +84468,7 @@ bRv
 bnA
 bnA
 bnA
-bmm
+bnA
 aaa
 aae
 aaa
@@ -84694,7 +84706,7 @@ aae
 afv
 aae
 aaa
-bmm
+bnA
 bnA
 bnA
 buf
@@ -84710,7 +84722,7 @@ bnA
 bNK
 bnA
 bnA
-bmm
+bnA
 aaa
 aaa
 aaa
@@ -109054,13 +109066,13 @@ aaa
 aaa
 aaa
 aaa
-ahD
+ahE
 ahQ
-ahD
+ahE
 aaa
-aiv
+aiw
 aiL
-aiv
+aiw
 aaa
 ajE
 ajP
@@ -110974,9 +110986,9 @@ aae
 aae
 aaa
 aaa
-cOr
+cOq
 cOL
-cOr
+cOq
 aaa
 aaa
 aaa
@@ -112137,7 +112149,7 @@ aaa
 aaa
 aaa
 aaa
-ahk
+aho
 aho
 ahX
 aho
@@ -112148,7 +112160,7 @@ ahl
 aho
 ahZ
 aho
-ahk
+aho
 aht
 akS
 alx
@@ -112391,7 +112403,7 @@ aaa
 aaa
 aaa
 aaa
-ahk
+aho
 aho
 aho
 aho
@@ -113419,7 +113431,7 @@ aaa
 aaa
 aaa
 aaa
-ahk
+aho
 aho
 aho
 aho
@@ -113679,7 +113691,7 @@ aaa
 aaa
 aaa
 aaa
-ahk
+aho
 aho
 ahZ
 aho
@@ -113690,7 +113702,7 @@ ahl
 aho
 ahZ
 aho
-ahk
+aho
 aht
 akU
 alA
@@ -114690,9 +114702,9 @@ aaa
 aaa
 aaa
 aaa
-aes
 aet
 aet
+aet
 afB
 afB
 afB
@@ -114702,7 +114714,7 @@ afB
 afB
 aet
 aet
-aes
+aet
 aaa
 aaa
 aaa
@@ -114946,7 +114958,7 @@ aaa
 aaa
 aaa
 aaa
-aes
+aet
 aet
 aeD
 aeF
@@ -114961,7 +114973,7 @@ ahb
 aeD
 aet
 ahh
-aes
+aet
 aaa
 aaa
 ahw
@@ -115202,7 +115214,7 @@ aaa
 aaa
 aaa
 aaa
-aes
+aet
 aet
 aeD
 aeF
@@ -115219,7 +115231,7 @@ aeG
 aet
 ahi
 aet
-aes
+aet
 aaa
 ahv
 ahv
@@ -115458,7 +115470,7 @@ aaa
 aaa
 aaa
 aaa
-aes
+aet
 aet
 aet
 aeG
@@ -115477,7 +115489,7 @@ aet
 afW
 aet
 aet
-aes
+aet
 ahw
 ahN
 ahw
@@ -115971,7 +115983,7 @@ aaa
 aaa
 aaa
 aaa
-aes
+aet
 aeD
 aeF
 aeF
@@ -116256,11 +116268,11 @@ ain
 ahM
 aiE
 ahw
-ajj
+ajk
 ajl
 ajL
 ajl
-ajj
+ajk
 ahw
 akZ
 alc
@@ -116865,13 +116877,13 @@ aOe
 cFW
 aaa
 aaa
-cIP
 cIQ
 cIQ
 cIQ
 cIQ
 cIQ
-cIP
+cIQ
+cIQ
 aaa
 aaa
 aaa
@@ -117513,7 +117525,7 @@ aaa
 aaa
 aaa
 aaa
-aes
+aet
 aeD
 aeF
 aeF
@@ -117790,7 +117802,7 @@ aet
 aet
 aet
 aet
-aes
+aet
 ahw
 ahN
 ahw
@@ -118028,7 +118040,7 @@ aaa
 aaa
 aaa
 aaa
-aes
+aet
 aeD
 afo
 aet
@@ -118046,7 +118058,7 @@ aeF
 aeF
 aeF
 aet
-aes
+aet
 aaa
 aaa
 aae
@@ -118286,7 +118298,7 @@ aaa
 aaa
 aaa
 aaa
-aes
+aet
 aet
 aet
 aeF
@@ -118302,7 +118314,7 @@ aeF
 ahe
 aeF
 aeD
-aes
+aet
 aaa
 aaa
 aaa
@@ -118544,7 +118556,7 @@ aaa
 aaa
 aaa
 aaa
-aes
+aet
 aet
 aeF
 aeF
@@ -118558,7 +118570,7 @@ aeF
 aeF
 aeF
 aeD
-aes
+aet
 aaa
 aaa
 aaa
@@ -118801,7 +118813,7 @@ aaa
 aaa
 aaa
 aaa
-aes
+aet
 aet
 afW
 aet
@@ -118815,7 +118827,7 @@ aet
 aet
 afW
 aet
-aes
+aet
 aaa
 aaa
 aaa
@@ -119057,7 +119069,7 @@ aaa
 aaa
 aaa
 aaa
-aes
+aet
 aeT
 afq
 afq
@@ -119073,7 +119085,7 @@ aet
 afq
 afq
 aeT
-aes
+aet
 aaa
 aaa
 aaa
@@ -119179,11 +119191,11 @@ cFW
 aaa
 aaa
 cIQ
-cJB
+cIQ
 cJz
 cJz
 cJz
-cLx
+cIQ
 cIQ
 aaa
 aaa
@@ -119313,7 +119325,7 @@ aaa
 aaa
 aaa
 aaa
-aes
+aet
 aeT
 afq
 afq
@@ -119331,7 +119343,7 @@ aeT
 afq
 afq
 aeT
-aes
+aet
 aaa
 aaa
 aaa
@@ -119435,13 +119447,13 @@ byO
 cFW
 aaa
 aaa
-cIP
+cIQ
 cIQ
 cKj
 cKj
 cKj
 cIQ
-cIP
+cIQ
 aaa
 aaa
 aaa
@@ -119569,13 +119581,13 @@ aaa
 aaa
 aaa
 aaa
-aes
+aet
 aet
 aeU
 aeU
 aeU
 aet
-aes
+aet
 aet
 aeF
 aeF
@@ -119583,13 +119595,13 @@ agN
 aeF
 aeF
 aet
-aes
+aet
 aet
 aeU
 aeU
 aeU
 aet
-aes
+aet
 aaa
 aaa
 aaa
@@ -119826,7 +119838,7 @@ aaa
 aaa
 aaa
 aaa
-aes
+aet
 aeK
 aeK
 aeK
@@ -119846,7 +119858,7 @@ aeK
 aeK
 aeK
 aeK
-aes
+aet
 aaa
 aaa
 aaa
@@ -120090,13 +120102,13 @@ aaa
 aaa
 aaa
 aaa
-aes
+aet
 aet
 aeD
 agP
 aeD
 aet
-aes
+aet
 aaa
 aaa
 aaa
@@ -120348,11 +120360,11 @@ aaa
 aaa
 aaa
 aaa
-aes
+aet
 aet
 agQ
 aet
-aes
+aet
 aaa
 aaa
 aaa
@@ -120862,11 +120874,11 @@ aaa
 aaa
 aaa
 aaa
-aes
+aet
 aet
 agQ
 aet
-aes
+aet
 aaa
 aaa
 aaa
@@ -122503,13 +122515,13 @@ cjL
 clz
 ccC
 aaa
-cqH
+cqI
 cqI
 cqJ
 cvw
 cqJ
 cqI
-cqH
+cqI
 aaa
 aaa
 afv
@@ -123432,11 +123444,11 @@ aaa
 aaa
 aaa
 aaa
-aes
+aet
 aet
 afC
 aet
-aes
+aet
 aaa
 aaa
 aaa
@@ -123531,13 +123543,13 @@ cjO
 clB
 ccC
 aaa
-cqH
+cqI
 cqI
 cqJ
 cvx
 cqJ
 cqI
-cqH
+cqI
 aaa
 aaa
 aaa
@@ -131228,9 +131240,9 @@ bwf
 bwf
 bTf
 bwf
-bVA
+bVz
 bWU
-bVA
+bVz
 aaa
 aaa
 aaa

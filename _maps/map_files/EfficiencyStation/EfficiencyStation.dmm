@@ -29436,11 +29436,10 @@
 /turf/open/floor/plating,
 /area/engine/break_room)
 "bfW" = (
-/turf/open/floor/plating,
 /obj/structure/shuttle/engine/propulsion/burst{
 	dir = 4
 	},
-/turf/closed/wall/mineral/titanium/interior,
+/turf/closed/wall/mineral/titanium,
 /area/shuttle/pod_4)
 "bfX" = (
 /turf/closed/wall/mineral/titanium,
@@ -46500,6 +46499,9 @@
 	dir = 8;
 	icon_state = "pipe-c"
 	},
+/obj/effect/landmark/start{
+	name = "Security Officer"
+	},
 /turf/open/floor/plasteel,
 /area/security/main)
 "bOf" = (
@@ -46534,6 +46536,9 @@
 	external_pressure_bound = 101.325;
 	on = 1;
 	pressure_checks = 1
+	},
+/obj/effect/landmark/start{
+	name = "Security Officer"
 	},
 /turf/open/floor/plasteel,
 /area/security/main)
@@ -47019,6 +47024,9 @@
 "bPm" = (
 /obj/effect/landmark{
 	name = "blobstart"
+	},
+/obj/effect/landmark/start{
+	name = "Security Officer"
 	},
 /turf/open/floor/plasteel,
 /area/security/main)
@@ -50191,6 +50199,9 @@
 /area/maintenance/starboard)
 "bVS" = (
 /obj/effect/landmark/event_spawn,
+/obj/effect/landmark/start{
+	name = "Security Officer"
+	},
 /turf/open/floor/plasteel,
 /area/security/main)
 "bVT" = (
@@ -52340,11 +52351,10 @@
 /turf/open/floor/plasteel/floorgrime,
 /area/security/prison)
 "cai" = (
-/turf/open/floor/plating,
 /obj/structure/shuttle/engine/propulsion/burst{
 	dir = 1
 	},
-/turf/closed/wall/mineral/titanium/interior,
+/turf/closed/wall/mineral/titanium,
 /area/shuttle/pod_3)
 "caj" = (
 /obj/machinery/door/airlock/shuttle{
@@ -55103,11 +55113,10 @@
 	},
 /area/shuttle/escape)
 "cgx" = (
-/turf/open/floor/plating,
 /obj/structure/shuttle/engine/propulsion/burst{
 	dir = 1
 	},
-/turf/closed/wall/mineral/titanium/interior,
+/turf/closed/wall/mineral/titanium,
 /area/shuttle/pod_1)
 "cgy" = (
 /obj/machinery/door/airlock/shuttle{
@@ -55132,11 +55141,10 @@
 	},
 /area/shuttle/pod_1)
 "cgA" = (
-/turf/open/floor/plating,
 /obj/structure/shuttle/engine/propulsion{
 	dir = 1
 	},
-/turf/closed/wall/mineral/titanium/interior,
+/turf/closed/wall/mineral/titanium,
 /area/shuttle/pod_2)
 "cgB" = (
 /obj/machinery/door/airlock/shuttle{
@@ -55151,11 +55159,10 @@
 /turf/open/floor/mineral/titanium/blue,
 /area/shuttle/pod_2)
 "cgC" = (
-/turf/open/floor/plating,
 /obj/structure/shuttle/engine/propulsion/burst{
 	dir = 1
 	},
-/turf/closed/wall/mineral/titanium/interior,
+/turf/closed/wall/mineral/titanium,
 /area/shuttle/pod_2)
 "cgD" = (
 /obj/structure/grille,
@@ -55923,18 +55930,18 @@
 /area/shuttle/escape)
 "ciF" = (
 /obj/structure/shuttle/engine/propulsion,
-/turf/closed/wall/mineral/titanium/overspace,
+/turf/closed/wall/mineral/titanium,
 /area/shuttle/transport)
 "ciG" = (
 /turf/open/floor/mineral/titanium/blue,
 /turf/closed/wall/mineral/titanium/interior,
 /area/shuttle/transport)
 "ciH" = (
-/turf/open/floor/plasteel/shuttle,
-/turf/closed/wall/shuttle/interior{
-	icon_state = "swall_f6"
+/obj/effect/landmark/start{
+	name = "Security Officer"
 	},
-/area/shuttle/transport)
+/turf/open/floor/plasteel,
+/area/security/main)
 "ciI" = (
 /turf/open/space,
 /area/shuttle/syndicate)
@@ -56338,6 +56345,9 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/effect/landmark/start{
+	name = "Security Officer"
+	},
 /turf/open/floor/plasteel,
 /area/security/main)
 "cjr" = (
@@ -56370,6 +56380,9 @@
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
+	},
+/obj/effect/landmark/start{
+	name = "Security Officer"
 	},
 /turf/open/floor/plasteel,
 /area/security/main)
@@ -74611,7 +74624,6 @@ aaa
 aaa
 aaa
 aaa
-bpZ
 bqa
 bqa
 bqa
@@ -74621,7 +74633,8 @@ bqa
 bqa
 bqa
 bqa
-bpZ
+bqa
+bqa
 aaa
 aaa
 aaa
@@ -76153,7 +76166,7 @@ aaa
 aaa
 aaa
 aaa
-bpZ
+bqa
 brN
 bta
 bqa
@@ -76163,7 +76176,7 @@ bKn
 bzJ
 bqa
 bqa
-bpZ
+bqa
 aaa
 aaa
 aaa
@@ -79537,7 +79550,7 @@ aaa
 aaa
 aaa
 aaa
-cfV
+cfW
 cgL
 cgL
 cgL
@@ -79545,7 +79558,7 @@ cgL
 cgL
 cgL
 cgL
-cfV
+cfW
 aaa
 aaa
 aaa
@@ -79793,7 +79806,7 @@ aaa
 aaa
 aaa
 aaa
-cfV
+cfW
 cfW
 cgM
 cgM
@@ -79803,7 +79816,7 @@ cgM
 cgM
 cgM
 cfW
-cfV
+cfW
 aaa
 aaa
 aaa
@@ -79926,11 +79939,6 @@ aaa
 aaa
 aaa
 aaa
-aay
-aaz
-aaz
-aaH
-aaH
 aaz
 aaz
 aaz
@@ -79940,13 +79948,18 @@ aaz
 aaz
 aaz
 aaH
+aaH
+aaz
+aaz
+aaz
+aaH
 aaz
 aaz
 aaz
 aaH
 aaH
 aaz
-aay
+aaz
 aaa
 aaa
 aaa
@@ -80977,7 +80990,7 @@ aaz
 aaz
 aaH
 aaH
-aay
+aaz
 aaa
 aaa
 aaa
@@ -81209,7 +81222,7 @@ aaa
 aaa
 aaa
 aaa
-aay
+aaz
 aaH
 aaz
 aaV
@@ -82237,7 +82250,7 @@ aaa
 aaa
 aaa
 aaa
-aay
+aaz
 aaH
 aaz
 aaY
@@ -82519,7 +82532,7 @@ aaz
 aaz
 aaH
 aaH
-aay
+aaz
 aaa
 aaa
 aab
@@ -83524,7 +83537,7 @@ aaa
 aaa
 aaa
 aaa
-aay
+aaz
 aaz
 aaz
 aaz
@@ -83544,7 +83557,7 @@ aaz
 aaH
 aaH
 aaz
-aay
+aaz
 aaa
 aaa
 aaa
@@ -83905,7 +83918,7 @@ afL
 aaa
 aaa
 aaa
-cfV
+cfW
 cfW
 cfW
 cfW
@@ -83915,7 +83928,7 @@ cii
 chQ
 cfW
 cfW
-cfV
+cfW
 aaa
 aaa
 aaa
@@ -84677,7 +84690,7 @@ aab
 aab
 aab
 aaa
-cfV
+cfW
 cgT
 chl
 chE
@@ -84685,7 +84698,7 @@ chV
 chE
 cir
 cgT
-cfV
+cfW
 aaa
 aaa
 aaa
@@ -84935,13 +84948,13 @@ aab
 aaa
 aaa
 aaa
-cfV
+cfW
 cga
 cga
 cga
 cga
 cga
-cfV
+cfW
 aaa
 aaa
 aaa
@@ -85168,7 +85181,7 @@ bLD
 bMO
 bOe
 bPm
-bOj
+ciH
 cjq
 bSX
 bUl
@@ -86196,7 +86209,7 @@ bEg
 bMR
 bOi
 bVS
-bOj
+ciH
 cjs
 bTb
 bUi
@@ -86671,11 +86684,11 @@ aSD
 aSA
 aSF
 aTP
-aWE
+aWF
 aWF
 aWG
 aWF
-aWE
+aWF
 aTP
 bcp
 aTS
@@ -87493,7 +87506,7 @@ bUi
 cai
 caO
 caO
-cck
+caO
 aaa
 aaa
 aaa
@@ -88007,7 +88020,7 @@ bUi
 cai
 caO
 caO
-cck
+caO
 aaa
 aaa
 aaa
@@ -88213,11 +88226,11 @@ aSI
 aSA
 aUL
 aTP
-aWE
+aWF
 aWF
 aYJ
 aWF
-aWE
+aWF
 aTP
 bcq
 aSA
@@ -92133,7 +92146,7 @@ cgf
 cgx
 cgU
 cgU
-chF
+cgU
 aaa
 aaa
 aaa
@@ -92647,7 +92660,7 @@ cgg
 cgx
 cgU
 cgU
-chF
+cgU
 aaa
 aaa
 aaa
@@ -93402,7 +93415,7 @@ bXW
 bXX
 bZz
 bXR
-caU
+cbH
 cbH
 ccp
 cbH
@@ -93413,7 +93426,7 @@ cbH
 cbH
 ccp
 cbH
-caU
+cbH
 aaa
 aaa
 aaa
@@ -93673,7 +93686,7 @@ cfn
 cbH
 cbH
 cbH
-caU
+cbH
 aaa
 aaa
 aaa
@@ -94701,7 +94714,7 @@ ccq
 cbH
 cbH
 cbH
-caU
+cbH
 aaa
 aaa
 aaa
@@ -94944,7 +94957,7 @@ bXX
 cjD
 bZz
 bXR
-caU
+cbH
 cbH
 ccp
 cbH
@@ -94955,7 +94968,7 @@ cbH
 cbH
 cfe
 cbH
-caU
+cbH
 aaa
 aaa
 aaa
@@ -95731,7 +95744,7 @@ cgk
 cgA
 cgX
 cgX
-chI
+cgX
 aaa
 aaa
 aaa
@@ -96245,7 +96258,7 @@ cgf
 cgC
 cgX
 cgX
-chI
+cgX
 aaa
 aaa
 aaa
@@ -96753,7 +96766,7 @@ bZz
 cam
 aab
 aaa
-cfo
+cfJ
 cfJ
 cfJ
 cgD
@@ -97781,7 +97794,7 @@ cem
 cam
 aaa
 aaa
-cfo
+cfJ
 cfJ
 cfJ
 cgD
@@ -105698,9 +105711,9 @@ aaa
 aaa
 aab
 aaa
-bfY
+bfX
 bhh
-bfY
+bfX
 aaa
 aab
 aab

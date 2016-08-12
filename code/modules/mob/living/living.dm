@@ -437,7 +437,14 @@ Sorry Giacom. Please don't be mad :(
 
 
 /mob/living/proc/electrocute_act(shock_damage, obj/source, siemens_coeff = 1, safety = 0, tesla_shock = 0)
-	  return 0 //only carbon liveforms have this proc
+	if(shock_damage > 0)
+		adjustFireLoss(shock_damage)
+		visible_message(
+			"<span class='danger'>[src] was shocked by \the [source]!</span>", \
+			"<span class='userdanger'>You feel a powerful shock coursing through your body!</span>", \
+			"<span class='italics'>You hear a heavy electrical crack.</span>" \
+		)
+		return shock_damage
 
 /mob/living/emp_act(severity)
 	var/list/L = src.get_contents()
@@ -645,6 +652,33 @@ Sorry Giacom. Please don't be mad :(
 	else
 		return pick("trails_1", "trails_2")
 
+/mob/living/experience_pressure_difference(pressure_difference, direction, pressure_resistance_prob_delta = 0)
+	if (client && client.move_delay >= world.time + world.tick_lag*2)
+		pressure_resistance_prob_delta -= 30
+
+	var/list/turfs_to_check = list()
+
+	if (has_limbs)
+		var/turf/T = get_step(src, angle2dir(dir2angle(direction)+90))
+		if (T)
+			turfs_to_check += T
+
+		T = get_step(src, angle2dir(dir2angle(direction)-90))
+		if (T)
+			turfs_to_check += T
+
+		for (var/t in turfs_to_check)
+			T = t
+			if (T.density)
+				pressure_resistance_prob_delta -= 20
+				continue
+			for (var/atom/movable/AM in T)
+				if (AM.density && AM.anchored)
+					pressure_resistance_prob_delta -= 20
+					break
+
+	..(pressure_difference, direction, pressure_resistance_prob_delta)
+
 /mob/living/verb/resist()
 	set name = "Resist"
 	set category = "IC"
@@ -765,7 +799,7 @@ Sorry Giacom. Please don't be mad :(
 		src << "<span class='warning'>You can't put \the [what.name] on [who], it's stuck to your hand!</span>"
 		return
 	if(what)
-		if(!what.mob_can_equip(who, where, 1))
+		if(!what.mob_can_equip(who, src, where, 1))
 			src << "<span class='warning'>\The [what.name] doesn't fit in that place!</span>"
 			return
 		visible_message("<span class='notice'>[src] tries to put [what] on [who].</span>")
@@ -1005,7 +1039,10 @@ Sorry Giacom. Please don't be mad :(
 	return 1
 
 /mob/living/proc/return_soul()
+	hellbound = 0
 	if(mind)
+		if(mind.soulOwner.devilinfo)//Not sure how this could happen, but whatever.
+			mind.soulOwner.devilinfo.remove_soul(mind)
 		mind.soulOwner = mind
 
 /mob/living/proc/has_bane(banetype)

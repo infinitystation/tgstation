@@ -260,13 +260,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	if(client && client.banprisoned)
 		return
 
-	//rp fix
-	if(stat == DEAD)				// dead
-		if(mental_dominator)
-			src << "<span class='warning'>This body's force of will is too strong! You can't break it enough to force them into a catatonic state.</span>"
-			if(mind_control_holder)
-				mind_control_holder << "<span class='userdanger'>Through tremendous force of will, you stop a catatonia attempt!</span>"
-			return 0
+	if(stat == DEAD)			// dead
 		ghostize(1)
 	if(stat == 1 && health<=0) 	// crit
 		succumb()
@@ -572,6 +566,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		return 0
 
 	target.key = key
+	target.faction = list("neutral")
 	return 1
 
 /mob/dead/observer/proc/server_hop()

@@ -799,6 +799,11 @@
 		else
 			jobs += "<td width='20%'><a href='?src=\ref[src];jobban3=deathsquad;jobban4=\ref[M]'>[replacetext("Deathsquad", " ", "&nbsp")]</a></td>"
 
+		if(jobban_isbanned(M, "lavaland"))
+			jobs += "<td width='20%'><a href='?src=\ref[src];jobban3=lavaland;jobban4=\ref[M]'><font color=red>[replacetext("Lavaland", " ", "&nbsp")]</font></a></td>"
+		else
+			jobs += "<td width='20%'><a href='?src=\ref[src];jobban3=lavaland;jobban4=\ref[M]'>[replacetext("Lavaland", " ", "&nbsp")]</a></td>"
+
 		jobs += "</tr></table>"
 
 	//Antagonist (Orange)
@@ -1094,6 +1099,10 @@
 	else if(href_list["shownoteckey"])
 		var/target_ckey = href_list["shownoteckey"]
 		show_note(target_ckey)
+
+	else if(href_list["shownoteckeylinkless"])
+		var/target_ckey = href_list["shownoteckeylinkless"]
+		show_note(target_ckey, null, 1)
 
 	else if(href_list["notessearch"])
 		var/target = href_list["notessearch"]
@@ -1709,7 +1718,8 @@
 		output_ai_laws()
 
 	else if(href_list["admincheckdevilinfo"])
-		output_devil_info()
+		var/mob/M = locate(href_list["admincheckdevilinfo"])
+		output_devil_info(M)
 
 	else if(href_list["adminmoreinfo"])
 		var/mob/M = locate(href_list["adminmoreinfo"])
@@ -2060,6 +2070,7 @@
 					else
 						var/atom/O = new path(target)
 						if(O)
+							O.admin_spawned = TRUE
 							O.setDir(obj_dir)
 							if(obj_name)
 								O.name = obj_name

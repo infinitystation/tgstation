@@ -641,9 +641,8 @@
 	},
 /area/security/prison)
 "abv" = (
-/turf/open/floor/plating,
 /obj/structure/shuttle/engine/propulsion/burst,
-/turf/closed/wall/mineral/titanium/interior,
+/turf/closed/wall/mineral/titanium,
 /area/shuttle/pod_2)
 "abw" = (
 /obj/machinery/door/airlock/shuttle{
@@ -1704,11 +1703,10 @@
 	name = "\improper Recreation Area"
 	})
 "adn" = (
-/turf/open/floor/plating,
 /obj/structure/shuttle/engine/propulsion/burst{
 	dir = 4
 	},
-/turf/closed/wall/mineral/titanium/interior,
+/turf/closed/wall/mineral/titanium,
 /area/shuttle/pod_3)
 "ado" = (
 /turf/closed/wall/mineral/titanium,
@@ -9128,9 +9126,6 @@
 /turf/open/floor/plasteel,
 /area/security/main)
 "aqh" = (
-/obj/effect/landmark/start{
-	name = "Security Officer"
-	},
 /obj/structure/extinguisher_cabinet{
 	pixel_x = 27;
 	pixel_y = 0
@@ -9849,6 +9844,9 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/effect/landmark/start{
+	name = "Security Officer"
+	},
 /turf/open/floor/plasteel/red/side,
 /area/security/main)
 "arw" = (
@@ -9863,6 +9861,9 @@
 	d1 = 2;
 	d2 = 8;
 	icon_state = "2-8"
+	},
+/obj/effect/landmark/start{
+	name = "Security Officer"
 	},
 /turf/open/floor/plasteel/red/side,
 /area/security/main)
@@ -9991,12 +9992,7 @@
 /area/crew_quarters/sleep)
 "arM" = (
 /obj/structure/grille,
-/obj/structure/window/reinforced/tinted{
-	dir = 5;
-	health = 120;
-	icon_state = "twindow";
-	reinf = 0
-	},
+/obj/structure/window/reinforced/tinted/fulltile,
 /obj/structure/cable/yellow{
 	d1 = 1;
 	d2 = 2;
@@ -11595,12 +11591,7 @@
 /area/security/main)
 "aul" = (
 /obj/structure/grille,
-/obj/structure/window/reinforced/tinted{
-	dir = 5;
-	health = 120;
-	icon_state = "twindow";
-	reinf = 0
-	},
+/obj/structure/window/reinforced/tinted/fulltile,
 /turf/open/floor/plating,
 /area/security/main)
 "aum" = (
@@ -11954,15 +11945,10 @@
 	})
 "auV" = (
 /obj/structure/grille,
-/obj/structure/window/reinforced/tinted{
-	dir = 5;
-	health = 120;
-	icon_state = "twindow";
-	reinf = 0
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/structure/window/reinforced/tinted/fulltile,
 /turf/open/floor/plating,
 /area/maintenance/fpmaint2{
 	name = "Port Maintenance"
@@ -21515,12 +21501,7 @@
 /area/crew_quarters/sleep)
 "aLa" = (
 /obj/structure/grille,
-/obj/structure/window/reinforced/tinted{
-	dir = 5;
-	health = 120;
-	icon_state = "twindow";
-	reinf = 0
-	},
+/obj/structure/window/reinforced/tinted/fulltile,
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/plating,
 /area/crew_quarters/sleep)
@@ -22999,12 +22980,7 @@
 /area/crew_quarters/locker)
 "aOa" = (
 /obj/structure/grille,
-/obj/structure/window/reinforced/tinted{
-	dir = 5;
-	health = 120;
-	icon_state = "twindow";
-	reinf = 0
-	},
+/obj/structure/window/reinforced/tinted/fulltile,
 /turf/open/floor/plating,
 /area/hallway/secondary/construction{
 	name = "\improper Garden"
@@ -24537,12 +24513,7 @@
 /area/crew_quarters/locker)
 "aQR" = (
 /obj/structure/grille,
-/obj/structure/window/reinforced/tinted{
-	dir = 5;
-	health = 120;
-	icon_state = "twindow";
-	reinf = 0
-	},
+/obj/structure/window/reinforced/tinted/fulltile,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
@@ -25097,12 +25068,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
-/obj/structure/window/reinforced/tinted{
-	dir = 5;
-	health = 120;
-	icon_state = "twindow";
-	reinf = 0
-	},
+/obj/structure/window/reinforced/tinted/fulltile,
 /turf/open/floor/plating,
 /area/crew_quarters/courtroom)
 "aRP" = (
@@ -25662,9 +25628,8 @@
 	name = "Arrivals"
 	})
 "aSK" = (
-/turf/open/floor/plating,
 /obj/structure/shuttle/engine/propulsion/burst,
-/turf/closed/wall/mineral/titanium/interior,
+/turf/closed/wall/mineral/titanium,
 /area/shuttle/pod_1)
 "aSL" = (
 /obj/machinery/door/airlock/shuttle{
@@ -26577,12 +26542,7 @@
 /area/hallway/primary/fore)
 "aUz" = (
 /obj/structure/grille,
-/obj/structure/window/reinforced/tinted{
-	dir = 5;
-	health = 120;
-	icon_state = "twindow";
-	reinf = 0
-	},
+/obj/structure/window/reinforced/tinted/fulltile,
 /turf/open/floor/plating,
 /area/crew_quarters/courtroom)
 "aUA" = (
@@ -27085,25 +27045,15 @@
 	})
 "aVu" = (
 /obj/structure/grille,
-/obj/structure/window/reinforced/tinted{
-	dir = 5;
-	health = 120;
-	icon_state = "twindow";
-	reinf = 0
-	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/obj/structure/window/reinforced/tinted/fulltile,
 /turf/open/floor/plating,
 /area/hallway/secondary/entry{
 	name = "Arrivals"
 	})
 "aVv" = (
 /obj/structure/grille,
-/obj/structure/window/reinforced/tinted{
-	dir = 5;
-	health = 120;
-	icon_state = "twindow";
-	reinf = 0
-	},
+/obj/structure/window/reinforced/tinted/fulltile,
 /turf/open/floor/plating,
 /area/hallway/secondary/entry{
 	name = "Arrivals"
@@ -34400,11 +34350,10 @@
 /turf/open/floor/plating,
 /area/engine/break_room)
 "bhJ" = (
-/turf/open/floor/plating,
 /obj/structure/shuttle/engine/propulsion/burst{
 	dir = 4
 	},
-/turf/closed/wall/mineral/titanium/interior,
+/turf/closed/wall/mineral/titanium,
 /area/shuttle/pod_4)
 "bhK" = (
 /turf/closed/wall/mineral/titanium,
@@ -53357,7 +53306,7 @@
 /area/bridge)
 "bOg" = (
 /obj/structure/rack,
-/obj/machinery/telecomms/bus,
+/obj/item/weapon/circuitboard/machine/telecomms/bus,
 /obj/item/weapon/circuitboard/machine/telecomms/broadcaster,
 /obj/machinery/atmospherics/components/unary/vent_pump{
 	dir = 1;
@@ -69115,12 +69064,7 @@
 "cpa" = (
 /obj/structure/grille,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/obj/structure/window/reinforced/tinted{
-	dir = 5;
-	health = 120;
-	icon_state = "twindow";
-	reinf = 0
-	},
+/obj/structure/window/reinforced/tinted/fulltile,
 /turf/open/floor/plating,
 /area/medical/research{
 	name = "Research Division"
@@ -77791,12 +77735,7 @@
 	})
 "cDj" = (
 /obj/structure/grille,
-/obj/structure/window/reinforced/tinted{
-	dir = 5;
-	health = 120;
-	icon_state = "twindow";
-	reinf = 0
-	},
+/obj/structure/window/reinforced/tinted/fulltile,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
@@ -85844,12 +85783,7 @@
 /area/chapel/office)
 "cQv" = (
 /obj/structure/grille,
-/obj/structure/window/reinforced/tinted{
-	dir = 5;
-	health = 120;
-	icon_state = "twindow";
-	reinf = 0
-	},
+/obj/structure/window/reinforced/tinted/fulltile,
 /turf/open/floor/plasteel/black,
 /area/chapel/office)
 "cQw" = (
@@ -92598,7 +92532,7 @@
 	},
 /area/chapel/main)
 "ddb" = (
-/turf/closed/wall/mineral/titanium/overspace,
+/turf/closed/wall/mineral/titanium,
 /area/shuttle/escape)
 "ddc" = (
 /turf/closed/wall/shuttle{
@@ -92607,7 +92541,7 @@
 /area/shuttle/escape)
 "ddd" = (
 /obj/structure/sign/nosmoking_2,
-/turf/closed/wall/mineral/titanium/nodiagonal,
+/turf/closed/wall/mineral/titanium,
 /area/shuttle/escape)
 "dde" = (
 /turf/closed/wall/shuttle{
@@ -92654,7 +92588,7 @@
 /area/shuttle/escape)
 "ddk" = (
 /obj/machinery/status_display,
-/turf/closed/wall/mineral/titanium/nodiagonal,
+/turf/closed/wall/mineral/titanium,
 /area/shuttle/escape)
 "ddl" = (
 /obj/structure/chair{
@@ -92678,7 +92612,7 @@
 /area/shuttle/escape)
 "ddo" = (
 /obj/structure/sign/bluecross_2,
-/turf/closed/wall/mineral/titanium/nodiagonal,
+/turf/closed/wall/mineral/titanium,
 /area/shuttle/escape)
 "ddp" = (
 /obj/structure/table,
@@ -92884,11 +92818,22 @@
 /turf/open/floor/mineral/titanium/blue,
 /area/shuttle/escape)
 "ddO" = (
-/turf/closed/wall/shuttle{
-	icon_state = "swall15";
-	dir = 2
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
-/area/shuttle/escape)
+/obj/structure/chair{
+	dir = 4
+	},
+/obj/effect/landmark/start{
+	name = "Security Officer"
+	},
+/turf/open/floor/plasteel/red/side{
+	dir = 8
+	},
+/area/security/main)
 "ddP" = (
 /obj/structure/table,
 /obj/item/weapon/restraints/handcuffs{
@@ -92938,7 +92883,7 @@
 /area/shuttle/escape)
 "ddY" = (
 /obj/structure/reagent_dispensers/peppertank,
-/turf/closed/wall/mineral/titanium/nodiagonal,
+/turf/closed/wall/mineral/titanium,
 /area/shuttle/escape)
 "ddZ" = (
 /obj/structure/rack,
@@ -93028,10 +92973,17 @@
 /turf/open/floor/mineral/titanium/blue,
 /area/shuttle/escape)
 "dem" = (
-/turf/closed/wall/shuttle{
-	icon_state = "diagonalWall3"
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/structure/chair{
+	dir = 8
 	},
-/area/shuttle/escape)
+/obj/effect/landmark/start{
+	name = "Security Officer"
+	},
+/turf/open/floor/plasteel/red/side{
+	dir = 4
+	},
+/area/security/main)
 "den" = (
 /obj/structure/table,
 /obj/item/weapon/folder/red{
@@ -93080,10 +93032,14 @@
 /turf/open/floor/mineral/titanium,
 /area/shuttle/escape)
 "deq" = (
-/turf/closed/wall/shuttle{
-	icon_state = "swall13";
-	dir = 2
+/obj/machinery/vending/wallmed{
+	name = "Emergency NanoMed";
+	pixel_x = 0;
+	pixel_y = 0;
+	req_access_txt = "0";
+	use_power = 0
 	},
+/turf/closed/wall/mineral/titanium,
 /area/shuttle/escape)
 "der" = (
 /obj/structure/sink,
@@ -93112,7 +93068,8 @@
 /turf/open/floor/plasteel/bot,
 /area/shuttle/escape)
 "deu" = (
-/turf/closed/wall/mineral/plastitanium,
+/obj/structure/extinguisher_cabinet,
+/turf/closed/wall/mineral/titanium,
 /area/shuttle/escape)
 "dev" = (
 /turf/open/space,
@@ -99555,11 +99512,11 @@ aaa
 aaa
 aaa
 aaa
-cZx
+cZz
 cZz
 cZC
 cZz
-cZx
+cZz
 aaa
 aaa
 aaa
@@ -100064,21 +100021,21 @@ aaa
 aaa
 aaa
 aaa
-cZx
-cZB
+cZz
+cZz
 cZY
 cZY
-cZB
+cZz
 cZz
 cZz
 dba
 cZz
 cZz
-cZB
+cZz
 cZY
 cZY
 cZz
-cZx
+cZz
 aaa
 aaa
 aaa
@@ -101616,7 +101573,7 @@ daT
 dbd
 dbs
 dai
-cZB
+cZz
 cZz
 dbY
 cZz
@@ -101867,7 +101824,7 @@ cZz
 cZz
 cZz
 cZz
-cZB
+cZz
 dai
 daV
 dbf
@@ -102381,7 +102338,7 @@ cZA
 cZP
 dag
 dat
-cZB
+cZz
 cZz
 cZz
 dbg
@@ -102856,7 +102813,7 @@ aaa
 aaa
 aaa
 aaa
-aOy
+aQb
 aQb
 aQb
 aSK
@@ -103148,11 +103105,11 @@ aYp
 aYo
 aYo
 aYo
-cZB
+cZz
 cZQ
 dah
 cZz
-cZB
+cZz
 dai
 daV
 dbh
@@ -103370,7 +103327,7 @@ aaa
 aaa
 aaa
 aaa
-aOy
+aQb
 aQb
 aQb
 aSK
@@ -103919,11 +103876,11 @@ aYq
 aYo
 aYo
 aYo
-cZB
+cZz
 cZz
 dal
 cZz
-cZB
+cZz
 dai
 daU
 dbm
@@ -104694,13 +104651,13 @@ cZA
 cZV
 dam
 dax
-cZB
+cZz
 cZz
 cZz
 dbn
 cZz
 cZz
-cZB
+cZz
 dbV
 dch
 dcv
@@ -105204,7 +105161,7 @@ bOI
 aSJ
 aaa
 aaf
-cZx
+cZz
 cZz
 cZA
 cZz
@@ -105218,7 +105175,7 @@ cZz
 cZz
 cZA
 cZz
-cZx
+cZz
 aaa
 aaa
 aaf
@@ -105979,13 +105936,13 @@ aaa
 aaa
 aaa
 aaa
-cZx
+cZz
 cZA
 cZA
 cZA
 cZA
 cZA
-cZx
+cZz
 aaa
 aaa
 aaa
@@ -108240,15 +108197,14 @@ asj
 atA
 aaf
 aaa
-axa
+axb
 axb
 axc
 axb
 axc
 axb
-axa
+axb
 aaa
-cYL
 cYM
 cYM
 cYM
@@ -108258,7 +108214,8 @@ cYM
 cYM
 cYM
 cYM
-cYL
+cYM
+cYM
 aaa
 aaa
 alQ
@@ -109268,13 +109225,13 @@ asj
 atA
 aaf
 aaa
-axa
+axb
 axb
 axc
 aAR
 axc
 axb
-axa
+axb
 aaa
 cYM
 cYP
@@ -109790,7 +109747,7 @@ aCj
 ayz
 aaf
 aaa
-cYL
+cYM
 cYM
 cYM
 cYQ
@@ -109800,7 +109757,7 @@ cYT
 cWM
 cYM
 cYM
-cYL
+cYM
 aaa
 aaf
 alQ
@@ -116056,10 +116013,10 @@ aaa
 ddg
 ddg
 ddg
-deu
+ddb
 ddg
 ddg
-deu
+ddb
 ddg
 ddg
 ddg
@@ -116309,18 +116266,18 @@ cTH
 cRh
 cOU
 aaa
-deu
+ddb
 ddi
 ddi
 ddi
-deu
+ddb
 ddi
 ddi
-deu
+ddb
 ddi
 ddi
 ddi
-deu
+ddb
 aaa
 aaa
 aaa
@@ -116461,15 +116418,15 @@ aor
 apK
 ahj
 agw
-atT
-avc
-awg
 avc
 avc
-awg
+atU
 avc
 avc
-atT
+atU
+avc
+avc
+avc
 aDN
 aDN
 aDN
@@ -116566,18 +116523,18 @@ cSB
 cTI
 cOU
 ddb
-dcC
-dcC
-dcC
-dcC
-dcC
-dcC
-dcC
-dcC
-dcC
-dcC
-dcC
-dcC
+ddb
+ddb
+ddb
+ddb
+ddb
+ddb
+ddb
+ddb
+ddb
+ddb
+ddb
+ddb
 ddb
 aaa
 aaa
@@ -116830,7 +116787,7 @@ dei
 dek
 dej
 del
-dcU
+deu
 ddI
 ddI
 ddI
@@ -117087,7 +117044,7 @@ ddW
 ddj
 dcI
 ddv
-dcC
+ddb
 dcP
 dcP
 dcP
@@ -117344,7 +117301,7 @@ dcI
 dcI
 ded
 ddx
-dcC
+ddb
 deb
 dcC
 dcP
@@ -117489,7 +117446,7 @@ aov
 ajs
 arf
 agw
-atT
+avc
 avc
 awk
 avc
@@ -117497,7 +117454,7 @@ avc
 avc
 aBm
 avc
-atT
+avc
 aDN
 aGy
 aIg
@@ -117603,7 +117560,7 @@ dcI
 dcI
 ddS
 ddD
-dcC
+ddb
 dea
 dea
 dcz
@@ -117850,20 +117807,20 @@ cSY
 cTp
 cTJ
 cUh
-dcC
-dcC
+ddb
+ddb
 ddk
-dcC
+ddb
 ddN
-dcC
+ddb
 ddk
-dcC
-dcC
-dcC
-dcC
+ddb
+ddb
+ddb
+ddb
 ddk
-dcC
-dcC
+ddb
+ddb
 aaa
 aaa
 aaa
@@ -118107,7 +118064,7 @@ cTa
 cTr
 cTL
 cOU
-dcC
+ddb
 ddH
 dcI
 dcI
@@ -118115,12 +118072,12 @@ dcI
 dcI
 dcI
 ddH
-dcC
+ddb
 ddA
 ddA
 ddA
 den
-dcC
+ddb
 aaa
 aaa
 aaa
@@ -118621,7 +118578,7 @@ cOU
 cOU
 cOU
 cOU
-dcC
+ddb
 ddf
 dcI
 ddl
@@ -118749,7 +118706,7 @@ aaa
 aaa
 aaf
 aaa
-aaM
+aaX
 aaX
 aaX
 abv
@@ -118882,16 +118839,16 @@ dcB
 dcI
 dcI
 ddl
-dcV
+deq
 ddf
 dcI
 ddl
-dcC
+ddb
 ddC
 ddV
 ddV
 ddB
-dcC
+ddb
 aaa
 aaa
 aaa
@@ -119143,12 +119100,12 @@ dcz
 ddf
 dcI
 ddh
-dcC
-dcC
+ddb
+ddb
 ddY
 ddk
-dcC
-dcC
+ddb
+ddb
 aaa
 aaa
 aaa
@@ -119263,7 +119220,7 @@ aaa
 aaf
 aaf
 aaa
-aaM
+aaX
 aaX
 aaX
 abv
@@ -119396,16 +119353,16 @@ dcB
 dcI
 dcI
 ddl
-dcU
+deu
 ddf
 dcI
 ddl
-dcC
+ddb
 ddu
 ddt
 ddw
 dep
-dcC
+ddb
 aaa
 aaa
 aaa
@@ -120176,7 +120133,7 @@ ddK
 ddK
 dcI
 ddp
-dcC
+ddb
 aaa
 aaa
 aaa
@@ -120429,11 +120386,11 @@ ddf
 dcI
 ddl
 ddo
-dcC
+ddb
 dcz
 ddm
-dcK
-dcC
+ddo
+ddb
 aaa
 aaa
 aaa
@@ -120677,7 +120634,7 @@ cTd
 cRK
 cRK
 cRK
-dcC
+ddb
 dcM
 dcI
 ddl
@@ -120685,12 +120642,12 @@ dcz
 ddf
 dcI
 ddl
-dcC
+ddb
 ddL
 ddZ
 dee
 des
-dcC
+ddb
 aaa
 aaa
 aaa
@@ -120947,7 +120904,7 @@ ddM
 dcT
 dcP
 ddy
-dcC
+ddb
 aaa
 aaa
 aaa
@@ -121199,7 +121156,7 @@ dcz
 ddf
 dcI
 ddl
-dcU
+deu
 ddR
 dcP
 dcP
@@ -121705,7 +121662,7 @@ cRq
 cRK
 cRK
 cRK
-dcC
+ddb
 dcI
 dcI
 dcI
@@ -121718,7 +121675,7 @@ ddT
 dcP
 dcP
 det
-dcC
+ddb
 aaa
 aaa
 aaa
@@ -121962,7 +121919,7 @@ aaf
 aaa
 aaa
 aaf
-dcC
+ddb
 dcH
 dcG
 dcH
@@ -121975,7 +121932,7 @@ ddU
 ddT
 ddT
 dcO
-dcC
+ddb
 aaf
 aaf
 aaf
@@ -122220,18 +122177,18 @@ aaf
 aaf
 aaf
 ddb
-dcC
+ddb
 dcz
-dcC
+ddb
 dcz
-dcF
+ddb
 dcz
-dcC
-dcC
-dcC
+ddb
+ddb
+ddb
 dcz
 dcz
-dcC
+ddb
 ddb
 aaa
 aaa
@@ -123138,9 +123095,9 @@ aed
 ajI
 akS
 ame
-anC
-anC
-anC
+ddO
+ddO
+ddO
 aru
 asM
 auf
@@ -124426,7 +124383,7 @@ amq
 boY
 aoN
 aqe
-arz
+arx
 asR
 aui
 avi
@@ -124940,7 +124897,7 @@ ams
 anI
 aoP
 aqg
-arz
+arx
 asT
 ajJ
 avi
@@ -125194,9 +125151,9 @@ aed
 ajP
 ala
 amt
-anJ
-anJ
-anJ
+dem
+dem
+dem
 arB
 asU
 auk
@@ -132118,12 +132075,12 @@ aaa
 aaa
 aaa
 aaa
-aaf
-aaf
 aai
-adp
+aaa
+aaa
+ado
 adM
-adp
+ado
 aeI
 afJ
 afJ
@@ -132375,9 +132332,9 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
 aag
+aaa
+aaa
 aaa
 bjU
 aaa
@@ -132632,9 +132589,9 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
 aai
+aaf
+aaf
 aaf
 aai
 aaf
@@ -137819,11 +137776,11 @@ ayr
 ayo
 bdf
 aBZ
-aaf
-bhL
+aaa
+bhK
 bjV
-bhL
-aaf
+bhK
+aaa
 aaf
 brt
 aaf
@@ -138081,7 +138038,7 @@ aaa
 cYF
 aaa
 aaf
-aaa
+aaf
 brt
 aaa
 aaf

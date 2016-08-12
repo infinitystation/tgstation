@@ -12,6 +12,7 @@
 		new /obj/item/weapon/storage/backpack/satchel/cap(src)
 	new /obj/item/clothing/suit/cloak/cap(src)
 	new /obj/item/weapon/storage/backpack/dufflebag/captain(src)
+	new /obj/item/clothing/head/crown/fancy(src)
 	new /obj/item/clothing/suit/captunic(src)
 	new /obj/item/clothing/under/captainparade(src)
 	new /obj/item/clothing/head/caphat/parade(src)
@@ -27,6 +28,7 @@
 	new /obj/item/clothing/glasses/sunglasses/gar/supergar(src)
 	new /obj/item/clothing/gloves/color/captain(src)
 	new /obj/item/weapon/restraints/handcuffs/cable/zipties(src)
+	new /obj/item/weapon/storage/belt/sabre(src)
 	new /obj/item/weapon/gun/energy/gun(src)
 	new /obj/item/weapon/door_remote/captain(src)
 	new /obj/item/weapon/melee/baton/shocker/loaded(src)
@@ -116,7 +118,7 @@
 	new /obj/item/weapon/storage/belt/security/full(src)
 	new /obj/item/device/flashlight/seclite(src)
 	new /obj/item/clothing/head/warden/corporate(src)
-	new /obj/item/clothing/gloves/color/black/krav_maga/sec(src)
+	new /obj/item/clothing/gloves/krav_maga/sec(src)
 	new /obj/item/weapon/door_remote/head_of_security(src)
 
 /obj/structure/closet/secure_closet/security
