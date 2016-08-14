@@ -1926,6 +1926,7 @@
 #include "code\Monorail_Maks750rus\monorail_code.dm"
 #include "code\Monorail_Maks750rus\Ticket_card.dm"
 #include "code\Monorail_Maks750rus\TicketMachine.dm"
+#include "code\Monorail_Maks750rus\test\Erp.dm"
 #include "code\orphaned_procs\AStar.dm"
 #include "code\orphaned_procs\dbcore.dm"
 #include "code\orphaned_procs\priority_announce.dm"

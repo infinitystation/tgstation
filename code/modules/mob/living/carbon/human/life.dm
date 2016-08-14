@@ -38,6 +38,9 @@
 
 		//Stuff jammed in your limbs hurts
 		handle_embedded_objects()
+
+		//erp handle
+		handle_lust()
 	//Update our name based on whether our face is obscured/disfigured
 	name = get_visible_name()
 
