@@ -1080,19 +1080,11 @@
 /area/tdome/arena_source)
 "adg" = (
 /turf/closed/indestructible/riveted/infinity/terror,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "adh" = (
 /obj/structure/sign/skull,
 /turf/closed/indestructible/riveted/infinity/terror,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "adi" = (
 /obj/effect/mine/pickup/healing{
 	name = "Heal Orb"
@@ -1107,11 +1099,7 @@
 	layer = 2.9
 	},
 /turf/open/floor/plasteel/rockvault/sandstone,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "adj" = (
 /obj/effect/mine/pickup/healing{
 	name = "Heal Orb"
@@ -1122,18 +1110,10 @@
 	req_access_txt = "150"
 	},
 /turf/open/floor/plasteel/rockvault/sandstone,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "adk" = (
 /turf/open/floor/plasteel/rockvault/sandstone,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "adl" = (
 /obj/structure/window/reinforced{
 	dir = 4
@@ -1142,29 +1122,17 @@
 	dir = 1
 	},
 /turf/open/floor/plasteel/rockvault/sandstone,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "adm" = (
 /obj/effect/forcefield,
 /turf/open/floor/plasteel/rockvault/alien,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "adn" = (
 /obj/structure/window/reinforced{
 	dir = 4
 	},
 /turf/open/floor/plasteel/rockvault/sandstone,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "ado" = (
 /obj/item/weapon/kitchen/knife/butcher,
 /obj/item/weapon/kitchen/knife/butcher,
@@ -1183,32 +1151,20 @@
 /obj/item/weapon/kitchen/knife/butcher,
 /obj/item/weapon/kitchen/knife/butcher,
 /turf/open/floor/plasteel/rockvault/sandstone,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "adp" = (
 /obj/structure/window/reinforced{
 	dir = 1;
 	pixel_y = 1
 	},
 /turf/open/floor/plasteel/rockvault/sandstone,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "adq" = (
 /obj/machinery/recharger/wallcharger{
 	pixel_x = -22
 	},
 /turf/open/floor/plasteel/rockvault/sandstone,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "adr" = (
 /obj/item/device/lightreplacer,
 /obj/item/device/lightreplacer,
@@ -1220,11 +1176,7 @@
 /obj/item/device/lightreplacer,
 /obj/structure/table/reinforced,
 /turf/open/floor/plasteel/rockvault/sandstone,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "ads" = (
 /obj/item/clothing/glasses/hud/toggle/thermal,
 /obj/item/clothing/glasses/hud/toggle/thermal,
@@ -1240,11 +1192,7 @@
 /obj/item/clothing/glasses/hud/toggle/thermal,
 /obj/structure/table/reinforced,
 /turf/open/floor/plasteel/rockvault/sandstone,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "adt" = (
 /obj/item/clothing/suit/space/hardsuit/space_adv/swat,
 /obj/item/clothing/suit/space/hardsuit/space_adv/swat,
@@ -1257,11 +1205,7 @@
 /obj/item/clothing/suit/space/hardsuit/space_adv/swat,
 /obj/structure/table/reinforced,
 /turf/open/floor/plasteel/rockvault/sandstone,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "adu" = (
 /obj/machinery/button/door{
 	id = "zomb";
@@ -1278,11 +1222,7 @@
 /obj/item/weapon/tank/internals/oxygen/red,
 /obj/item/weapon/tank/internals/oxygen/red,
 /turf/open/floor/plasteel/rockvault/sandstone,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "adv" = (
 /obj/item/weapon/gun/medbeam,
 /obj/item/weapon/gun/medbeam,
@@ -1290,21 +1230,13 @@
 /obj/item/weapon/gun/medbeam,
 /obj/item/weapon/gun/medbeam,
 /turf/open/floor/plasteel/rockvault/sandstone,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "adw" = (
 /obj/structure/sign/securearea{
 	name = "\improper ROOM 6 - TIME TO DIE"
 	},
 /turf/closed/indestructible/riveted/infinity/terror,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "adx" = (
 /obj/machinery/light{
 	dir = 4;
@@ -1325,59 +1257,35 @@
 /obj/item/weapon/gun/energy/laser/captain/scattershot,
 /obj/item/weapon/gun/energy/laser/captain/scattershot,
 /turf/open/floor/plasteel/rockvault/sandstone,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "ady" = (
 /turf/open/floor/plasteel/rockvault,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "adz" = (
 /obj/machinery/recharger,
 /turf/open/floor/plasteel/rockvault/sandstone,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "adA" = (
 /obj/machinery/door/poddoor{
 	id = "zomb";
 	name = "Win"
 	},
 /turf/open/floor/plasteel/rockvault/sandstone,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "adB" = (
 /obj/structure/window/reinforced/fulltile{
 	maxhealth = 1e+008;
 	name = "Titanium window"
 	},
 /turf/open/floor/plasteel/rockvault/sandstone,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "adC" = (
 /obj/structure/window/reinforced/fulltile{
 	maxhealth = 1e+008;
 	name = "Titanium window"
 	},
 /turf/open/floor/plating,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "adD" = (
 /obj/structure/toilet{
 	dir = 4
@@ -1389,32 +1297,20 @@
 	icon_state = "freezerfloor";
 	dir = 2
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "adE" = (
 /obj/machinery/door/airlock/wood,
 /turf/open/floor{
 	icon_state = "freezerfloor";
 	dir = 2
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "adF" = (
 /obj/machinery/light{
 	dir = 1
 	},
 /turf/open/floor/plasteel/rockvault,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "adG" = (
 /obj/structure/table/reinforced,
 /obj/item/stack/sheet/rglass{
@@ -1422,20 +1318,12 @@
 	},
 /obj/item/weapon/screwdriver,
 /turf/open/floor/plasteel/rockvault/sandstone,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "adH" = (
 /obj/machinery/recharger,
 /obj/machinery/light,
 /turf/open/floor/plasteel/rockvault/sandstone,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "adI" = (
 /obj/machinery/door/window{
 	dir = 1;
@@ -1445,11 +1333,7 @@
 	req_access_txt = "150"
 	},
 /turf/open/floor/plasteel/rockvault/sandstone,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "adJ" = (
 /obj/machinery/door/window{
 	base_state = "right";
@@ -1463,37 +1347,21 @@
 	req_access_txt = "150"
 	},
 /turf/open/floor/plasteel/rockvault/sandstone,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "adK" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/fulltile,
 /turf/open/floor/plasteel/rockvault/sandstone,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "adL" = (
 /turf/closed/wall/shuttle{
 	icon_state = "swall12";
 	dir = 2
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "adM" = (
 /turf/closed/wall/r_wall,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "adN" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/fulltile{
@@ -1501,21 +1369,13 @@
 	name = "Titanium window"
 	},
 /turf/open/floor/plating,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "adO" = (
 /obj/structure/sign/securearea{
 	name = "\improper ROOM 5 - THE LAST LINE"
 	},
 /turf/closed/indestructible/riveted/infinity/terror,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "adP" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/fulltile{
@@ -1523,11 +1383,7 @@
 	name = "Titanium window"
 	},
 /turf/closed/wall/r_wall,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "adQ" = (
 /obj/machinery/door/window{
 	base_state = "right";
@@ -1536,11 +1392,7 @@
 	req_access_txt = "150"
 	},
 /turf/open/floor/plasteel/rockvault,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "adR" = (
 /obj/effect/mine/pickup/healing{
 	name = "Heal Orb"
@@ -1555,11 +1407,7 @@
 	pixel_y = 1
 	},
 /turf/open/floor/plasteel/rockvault/sandstone,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "adS" = (
 /obj/structure/chair/office{
 	dir = 4
@@ -1570,34 +1418,18 @@
 /turf/open/floor/plasteel/neutral/corner{
 	dir = 4
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "adT" = (
 /turf/open/floor/plasteel/stairs/left,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "adU" = (
 /turf/open/floor/plasteel/stairs/right,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "adV" = (
 /turf/open/floor/plasteel/neutral/corner{
 	dir = 1
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "adW" = (
 /obj/machinery/recharger,
 /obj/effect/decal/cleanable/blood/old,
@@ -1607,20 +1439,12 @@
 /turf/open/floor/plasteel/neutral/side{
 	dir = 9
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "adX" = (
 /turf/open/floor/plasteel/neutral/side{
 	dir = 1
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "adY" = (
 /obj/machinery/light{
 	dir = 1
@@ -1628,21 +1452,13 @@
 /turf/open/floor/plasteel/neutral/side{
 	dir = 1
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "adZ" = (
 /obj/effect/decal/cleanable/blood/old,
 /turf/open/floor/plasteel/neutral/side{
 	dir = 1
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "aea" = (
 /obj/machinery/recharger,
 /obj/structure/chair/office{
@@ -1651,20 +1467,12 @@
 /turf/open/floor/plasteel/neutral/side{
 	dir = 5
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "aeb" = (
 /turf/open/floor/plasteel/neutral/corner{
 	dir = 4
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "aec" = (
 /obj/structure/chair/office{
 	dir = 8
@@ -1675,11 +1483,7 @@
 /turf/open/floor/plasteel/neutral/corner{
 	dir = 1
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "aed" = (
 /obj/structure/window/reinforced/fulltile{
 	maxhealth = 1e+008;
@@ -1687,38 +1491,22 @@
 	},
 /obj/structure/grille,
 /turf/open/floor/plating,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "aee" = (
 /obj/effect/decal/cleanable/blood/old,
 /turf/open/floor/plasteel/neutral/corner{
 	dir = 4
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "aef" = (
 /obj/item/weapon/screwdriver,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "aeg" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "aeh" = (
 /obj/effect/decal/cleanable/blood/old,
 /obj/structure/chair/office{
@@ -1728,11 +1516,7 @@
 /turf/open/floor/plasteel/neutral/corner{
 	dir = 1
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "aei" = (
 /obj/structure/chair/office{
 	dir = 4
@@ -1741,40 +1525,24 @@
 /turf/open/floor/plasteel/neutral/side{
 	dir = 8
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "aej" = (
 /obj/item/stack/medical/gauze,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "aek" = (
 /obj/effect/decal/cleanable/blood/old,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "ael" = (
 /obj/effect/decal/cleanable/blood/old,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/neutral/side{
 	dir = 4
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "aem" = (
 /obj/structure/chair/office{
 	dir = 4
@@ -1782,11 +1550,7 @@
 /turf/open/floor/plasteel/neutral/corner{
 	dir = 4
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "aen" = (
 /obj/structure/chair/office{
 	dir = 8
@@ -1794,11 +1558,7 @@
 /turf/open/floor/plasteel/neutral/corner{
 	dir = 1
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "aeo" = (
 /obj/effect/mine/pickup/healing{
 	name = "Heal Orb"
@@ -1817,19 +1577,11 @@
 	icon_state = "tube1"
 	},
 /turf/open/floor/plasteel/rockvault/sandstone,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "aep" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/closed/indestructible/riveted/infinity/terror,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "aeq" = (
 /obj/structure/toilet{
 	dir = 4
@@ -1838,11 +1590,7 @@
 	icon_state = "freezerfloor";
 	dir = 2
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "aer" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -1851,18 +1599,10 @@
 	icon_state = "freezerfloor";
 	dir = 2
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "aes" = (
 /turf/open/floor/plasteel,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "aet" = (
 /obj/item/stack/sheet/rglass{
 	amount = 20
@@ -1870,29 +1610,17 @@
 /turf/open/floor/plasteel/neutral/side{
 	dir = 10
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "aeu" = (
 /obj/item/stack/medical/gauze,
 /turf/open/floor/plasteel/neutral/side{
 	dir = 10
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "aev" = (
 /obj/effect/decal/cleanable/blood/old,
 /turf/open/floor/plasteel,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "aew" = (
 /obj/structure/chair/office{
 	dir = 8
@@ -1900,11 +1628,7 @@
 /turf/open/floor/plasteel/neutral/side{
 	dir = 6
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "aex" = (
 /obj/item/weapon/screwdriver,
 /obj/structure/chair/office{
@@ -1913,63 +1637,35 @@
 /turf/open/floor/plasteel/neutral/side{
 	dir = 6
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "aey" = (
 /obj/effect/gibspawner/human,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "aez" = (
 /turf/closed/wall/r_wall/rust,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "aeA" = (
 /turf/open/floor/plasteel/neutral/side{
 	dir = 6
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "aeB" = (
 /obj/item/stack/sheet/rglass{
 	amount = 20
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "aeC" = (
 /turf/open/floor/plasteel/neutral/side{
 	dir = 10
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "aeD" = (
 /turf/open/floor/plating,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "aeE" = (
 /obj/effect/mine/pickup/healing{
 	name = "Heal Orb"
@@ -1986,11 +1682,7 @@
 	pixel_y = 1
 	},
 /turf/open/floor/plasteel,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "aeF" = (
 /obj/machinery/door/window{
 	dir = 8;
@@ -1999,65 +1691,37 @@
 /turf/open/floor/plasteel/neutral/corner{
 	dir = 8
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "aeG" = (
 /obj/effect/decal/cleanable/blood/old,
 /obj/machinery/recharger,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "aeH" = (
 /obj/item/stack/sheet/rglass{
 	amount = 20
 	},
 /turf/open/floor/plasteel,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "aeI" = (
 /obj/machinery/recharger,
 /obj/effect/decal/cleanable/blood/old,
 /turf/open/floor/plasteel,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "aeJ" = (
 /obj/machinery/recharger,
 /turf/open/floor/plasteel,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "aeK" = (
 /obj/item/stack/medical/gauze,
 /turf/open/floor/plasteel,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "aeL" = (
 /obj/machinery/recharger,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "aeM" = (
 /obj/machinery/door/window{
 	base_state = "right";
@@ -2066,11 +1730,7 @@
 	req_access_txt = "150"
 	},
 /turf/open/floor/plasteel/neutral/corner,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "aeN" = (
 /obj/effect/mine/pickup/healing{
 	name = "Heal Orb"
@@ -2085,40 +1745,24 @@
 	pixel_y = 1
 	},
 /turf/open/floor/plasteel,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "aeO" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "aeP" = (
 /obj/item/weapon/shard,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "aeQ" = (
 /obj/effect/decal/cleanable/blood/old,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "aeR" = (
 /obj/machinery/door/window{
 	dir = 8;
@@ -2128,40 +1772,24 @@
 /turf/open/floor/plasteel/neutral/corner{
 	dir = 8
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "aeS" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/neutral/corner{
 	dir = 8
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "aeT" = (
 /obj/structure/window/reinforced,
 /turf/open/floor/plasteel/neutral/corner,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "aeU" = (
 /obj/structure/chair/office{
 	dir = 1
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/neutral/corner,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "aeV" = (
 /obj/structure/chair/office{
 	dir = 1
@@ -2171,28 +1799,16 @@
 /turf/open/floor/plasteel/neutral/corner{
 	dir = 8
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "aeW" = (
 /obj/structure/window/reinforced,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "aeX" = (
 /obj/machinery/light/small,
 /turf/open/floor/plasteel/neutral/corner,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "aeY" = (
 /obj/structure/chair/office{
 	dir = 1
@@ -2200,29 +1816,17 @@
 /turf/open/floor/plasteel/neutral/corner{
 	dir = 8
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "aeZ" = (
 /obj/structure/window/reinforced,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/neutral/corner{
 	dir = 8
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "afa" = (
 /turf/open/floor/plasteel/neutral/corner,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "afb" = (
 /obj/machinery/door/window{
 	base_state = "right";
@@ -2232,93 +1836,57 @@
 	},
 /obj/machinery/light/small,
 /turf/open/floor/plasteel/neutral/corner,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "afc" = (
 /obj/structure/window/reinforced,
 /obj/item/weapon/shard,
 /turf/open/floor/plasteel/neutral/corner{
 	dir = 8
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "afd" = (
 /obj/structure/window/reinforced,
 /obj/effect/decal/cleanable/blood/old,
 /turf/open/floor/plasteel/neutral/corner{
 	dir = 1
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "afe" = (
 /obj/structure/window/reinforced,
 /obj/item/weapon/shard{
 	icon_state = "medium"
 	},
 /turf/open/floor/plasteel,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "aff" = (
 /obj/item/weapon/shard,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/neutral/side{
 	dir = 8
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "afg" = (
 /obj/structure/window/reinforced,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/neutral/corner,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "afh" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "afi" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "afj" = (
 /obj/structure/window/reinforced,
 /obj/effect/decal/cleanable/blood/old,
 /turf/open/floor/plasteel/neutral/corner{
 	dir = 4
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "afk" = (
 /obj/item/weapon/shard{
 	icon_state = "small"
@@ -2326,50 +1894,30 @@
 /turf/open/floor/plasteel/neutral/corner{
 	dir = 1
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "afl" = (
 /obj/structure/window/reinforced,
 /turf/open/floor/plasteel,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "afm" = (
 /obj/structure/window/reinforced,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/neutral/side{
 	dir = 8
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "afn" = (
 /obj/item/weapon/shard{
 	icon_state = "small"
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/neutral/corner,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "afo" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "afp" = (
 /obj/item/weapon/shard{
 	icon_state = "small"
@@ -2378,11 +1926,7 @@
 /turf/open/floor/plasteel/neutral/corner{
 	dir = 8
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "afq" = (
 /obj/structure/window/reinforced,
 /obj/item/weapon/shard{
@@ -2392,11 +1936,7 @@
 /turf/open/floor/plasteel/neutral/corner{
 	dir = 4
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "afr" = (
 /obj/structure/window/reinforced,
 /obj/item/weapon/shard,
@@ -2404,11 +1944,7 @@
 /turf/open/floor/plasteel/neutral/corner{
 	dir = 4
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "afs" = (
 /obj/effect/decal/cleanable/blood/old,
 /obj/item/weapon/shard{
@@ -2418,11 +1954,7 @@
 /turf/open/floor/plasteel/neutral/side{
 	dir = 8
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "aft" = (
 /obj/structure/window/reinforced,
 /obj/structure/sign/poster{
@@ -2431,22 +1963,14 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/neutral/corner,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "afu" = (
 /obj/structure/window/reinforced,
 /obj/effect/decal/cleanable/blood/old,
 /turf/open/floor/plasteel/neutral/corner{
 	dir = 8
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "afv" = (
 /obj/structure/window/reinforced,
 /obj/item/weapon/shard,
@@ -2454,11 +1978,7 @@
 /turf/open/floor/plasteel/neutral/corner{
 	dir = 1
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "afw" = (
 /obj/structure/window/reinforced,
 /obj/effect/decal/cleanable/blood/old,
@@ -2466,29 +1986,17 @@
 	icon_state = "small"
 	},
 /turf/open/floor/plasteel,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "afx" = (
 /obj/item/weapon/shard,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/neutral/corner,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "afy" = (
 /turf/open/floor/plasteel/neutral/corner{
 	dir = 8
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "afz" = (
 /obj/effect/decal/cleanable/blood/old,
 /obj/item/weapon/shard,
@@ -2496,11 +2004,7 @@
 /turf/open/floor/plasteel/neutral/corner{
 	dir = 4
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "afA" = (
 /obj/structure/chair/office{
 	dir = 8
@@ -2513,11 +2017,7 @@
 /turf/open/floor/plasteel/neutral/side{
 	dir = 9
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "afB" = (
 /obj/structure/chair/office{
 	dir = 4
@@ -2528,11 +2028,7 @@
 /turf/open/floor/plasteel/neutral/side{
 	dir = 5
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "afC" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -2540,11 +2036,7 @@
 /turf/open/floor/plasteel/neutral/side{
 	dir = 9
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "afD" = (
 /obj/structure/chair/office{
 	dir = 4
@@ -2553,21 +2045,13 @@
 /turf/open/floor/plasteel/neutral/side{
 	dir = 5
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "afE" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/neutral/corner{
 	dir = 1
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "afF" = (
 /obj/structure/sign/poster{
 	pixel_x = 32;
@@ -2575,11 +2059,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/neutral/corner,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "afG" = (
 /obj/machinery/light/small{
 	dir = 8
@@ -2587,21 +2067,13 @@
 /turf/open/floor/plasteel/neutral/corner{
 	dir = 8
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "afH" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/neutral/side{
 	dir = 4
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "afI" = (
 /obj/structure/chair/office{
 	dir = 4
@@ -2609,22 +2081,14 @@
 /turf/open/floor/plasteel/neutral/side{
 	dir = 8
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "afJ" = (
 /obj/effect/decal/cleanable/blood/old,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/neutral/side{
 	dir = 8
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "afK" = (
 /obj/effect/decal/cleanable/blood/old,
 /obj/item/weapon/shard{
@@ -2634,11 +2098,7 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel/neutral/corner,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "afL" = (
 /obj/effect/decal/cleanable/blood/old,
 /obj/item/weapon/shard{
@@ -2647,11 +2107,7 @@
 /turf/open/floor/plasteel/neutral/corner{
 	dir = 8
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "afM" = (
 /obj/structure/chair/office{
 	dir = 8
@@ -2663,50 +2119,30 @@
 /turf/open/floor/plasteel/neutral/side{
 	dir = 10
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "afN" = (
 /obj/machinery/recharger,
 /turf/open/floor/plasteel/neutral/side{
 	dir = 6
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "afO" = (
 /obj/effect/decal/cleanable/blood/old,
 /turf/open/floor/plasteel/neutral/corner{
 	dir = 8
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "afP" = (
 /obj/item/weapon/shard,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "afQ" = (
 /obj/machinery/recharger,
 /turf/open/floor/plasteel/neutral/side{
 	dir = 10
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "afR" = (
 /obj/structure/window/reinforced{
 	dir = 8
@@ -2715,20 +2151,12 @@
 /turf/open/floor/plasteel/neutral/side{
 	dir = 6
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "afS" = (
 /turf/open/floor/plasteel/neutral/side{
 	dir = 8
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "afT" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light/small{
@@ -2737,19 +2165,11 @@
 /turf/open/floor/plasteel/neutral/side{
 	dir = 4
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "afU" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/neutral/corner,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "afV" = (
 /obj/item/weapon/shard{
 	icon_state = "medium"
@@ -2758,11 +2178,7 @@
 /turf/open/floor/plasteel/neutral/side{
 	dir = 8
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "afW" = (
 /obj/structure/chair/office{
 	dir = 8
@@ -2771,11 +2187,7 @@
 /turf/open/floor/plasteel/neutral/side{
 	dir = 9
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "afX" = (
 /obj/machinery/recharger/wallcharger{
 	pixel_y = 32
@@ -2783,11 +2195,7 @@
 /turf/open/floor/plasteel/neutral/side{
 	dir = 5
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "afY" = (
 /obj/item/weapon/shard{
 	icon_state = "medium"
@@ -2796,11 +2204,7 @@
 /turf/open/floor/plasteel/neutral/corner{
 	dir = 1
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "afZ" = (
 /obj/structure/chair/office{
 	dir = 8
@@ -2811,11 +2215,7 @@
 /turf/open/floor/plasteel/neutral/side{
 	dir = 9
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "aga" = (
 /obj/structure/chair/office{
 	dir = 4
@@ -2829,11 +2229,7 @@
 /turf/open/floor/plasteel/neutral/side{
 	dir = 5
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "agb" = (
 /obj/effect/decal/cleanable/blood/old,
 /obj/effect/decal/cleanable/dirt,
@@ -2841,31 +2237,19 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel/neutral/corner,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "agc" = (
 /obj/item/weapon/shard{
 	icon_state = "small"
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "agd" = (
 /turf/open/floor/plasteel/neutral/side{
 	dir = 4
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "age" = (
 /obj/structure/chair/office{
 	dir = 8
@@ -2877,11 +2261,7 @@
 /turf/open/floor/plasteel/neutral/side{
 	dir = 4
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "agf" = (
 /turf/open/space,
 /area/start)
@@ -2895,11 +2275,7 @@
 /turf/open/floor/plasteel/neutral/side{
 	dir = 10
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "agh" = (
 /obj/structure/chair/office{
 	dir = 4
@@ -2913,11 +2289,7 @@
 /turf/open/floor/plasteel/neutral/side{
 	dir = 6
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "agi" = (
 /obj/structure/chair/office{
 	dir = 8
@@ -2925,29 +2297,17 @@
 /turf/open/floor/plasteel/neutral/side{
 	dir = 10
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "agj" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/neutral/side{
 	dir = 8
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "agk" = (
 /obj/item/device/lightreplacer,
 /turf/open/floor/plasteel,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "agl" = (
 /obj/item/weapon/shard{
 	icon_state = "medium"
@@ -2955,22 +2315,14 @@
 /turf/open/floor/plasteel/neutral/side{
 	dir = 4
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "agm" = (
 /obj/effect/decal/cleanable/blood/old,
 /obj/item/weapon/shard,
 /turf/open/floor/plasteel/neutral/side{
 	dir = 8
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "agn" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light/small{
@@ -2979,11 +2331,7 @@
 /turf/open/floor/plasteel/neutral/side{
 	dir = 8
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "ago" = (
 /obj/effect/decal/cleanable/blood/old,
 /obj/item/weapon/shard{
@@ -2992,172 +2340,100 @@
 /turf/open/floor/plasteel/neutral/side{
 	dir = 4
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "agp" = (
 /obj/effect/decal/cleanable/blood/old,
 /turf/open/floor/plasteel/neutral/side{
 	dir = 8
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "agq" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light/small{
 	dir = 4
 	},
 /turf/open/floor/plasteel/neutral/corner,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "agr" = (
 /turf/closed/mineral,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "ags" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/neutral/side{
 	dir = 1
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "agt" = (
 /obj/effect/decal/cleanable/blood/old,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/neutral/corner{
 	dir = 4
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "agu" = (
 /obj/machinery/recharger,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/neutral/side{
 	dir = 1
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "agv" = (
 /obj/item/weapon/shard,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/neutral/corner{
 	dir = 1
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "agw" = (
 /obj/machinery/recharger,
 /turf/open/floor/plasteel/neutral/side{
 	dir = 1
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "agx" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/neutral/corner{
 	dir = 4
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "agy" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/neutral/side{
 	dir = 1
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "agz" = (
 /obj/effect/decal/cleanable/blood/old,
 /turf/open/floor/plasteel/neutral/side,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "agA" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/neutral/side,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "agB" = (
 /turf/open/floor/plasteel/neutral/side,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "agC" = (
 /obj/item/weapon/shard{
 	icon_state = "small"
 	},
 /turf/open/floor/plasteel/neutral/side,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "agD" = (
 /turf/open/floor/plasteel/darkvault{
 	dir = 10
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "agE" = (
 /turf/open/floor/plasteel/black,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "agF" = (
 /turf/open/floor/plasteel/darkvault{
 	dir = 6
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "agG" = (
 /obj/structure/sign/poster{
 	pixel_x = 32;
@@ -3166,11 +2442,7 @@
 /turf/open/floor/plasteel/darkvault{
 	dir = 6
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "agH" = (
 /obj/effect/landmark/start,
 /turf/open/space,
@@ -3180,27 +2452,15 @@
 	name = "\improper ROOM 4 - SAVE THEM ALL"
 	},
 /turf/closed/indestructible/riveted/infinity/terror,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "agJ" = (
 /obj/item/weapon/screwdriver,
 /turf/open/floor/plasteel/black,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "agK" = (
 /obj/structure/sign/nosmoking_1,
 /turf/closed/indestructible/riveted/infinity/terror,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "agL" = (
 /turf/closed/indestructible/riveted,
 /area/ctf)
@@ -3212,11 +2472,7 @@
 	tag = "icon-poster17_legit"
 	},
 /turf/closed/indestructible/riveted/infinity/terror,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "agN" = (
 /obj/machinery/recharger,
 /obj/item/stack/sheet/rglass{
@@ -3228,11 +2484,7 @@
 /turf/open/floor/plasteel/darkvault{
 	dir = 4
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "agO" = (
 /obj/machinery/light{
 	dir = 1
@@ -3242,58 +2494,34 @@
 	pixel_y = 32
 	},
 /turf/open/floor/plasteel/black,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "agP" = (
 /obj/item/weapon/screwdriver,
 /turf/open/floor/plasteel/darkvault{
 	dir = 4
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "agQ" = (
 /turf/open/floor/plasteel/darkwarning{
 	dir = 9
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "agR" = (
 /turf/open/floor/plasteel/darkwarning{
 	dir = 1
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "agS" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/darkwarning{
 	dir = 5
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "agT" = (
 /turf/open/floor/plasteel/darkvault{
 	dir = 1
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "agU" = (
 /obj/machinery/light{
 	dir = 1
@@ -3304,11 +2532,7 @@
 	tag = "icon-poster20_legit"
 	},
 /turf/open/floor/plasteel/black,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "agV" = (
 /obj/item/stack/medical/gauze,
 /obj/structure/table/reinforced,
@@ -3319,11 +2543,7 @@
 /turf/open/floor/plasteel/darkvault{
 	dir = 1
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "agW" = (
 /turf/open/floor/plasteel/darkblue/side{
 	tag = "icon-darkblue (NORTHWEST)";
@@ -3369,59 +2589,35 @@
 "ahc" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/black,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "ahd" = (
 /turf/open/floor/plasteel/darkvault{
 	dir = 4
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "ahe" = (
 /turf/open/floor/plasteel/darkwarning{
 	dir = 8
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "ahf" = (
 /obj/item/weapon/gun/energy/laser/scatter,
 /turf/open/floor/plasteel/darkvault{
 	dir = 8
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "ahg" = (
 /turf/open/floor/plasteel/darkwarning{
 	dir = 4
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "ahh" = (
 /obj/structure/table/reinforced,
 /obj/machinery/recharger,
 /turf/open/floor/plasteel/darkvault{
 	dir = 1
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "ahi" = (
 /obj/machinery/power/apc{
 	cell_type = 2.14748e+009;
@@ -3435,11 +2631,7 @@
 	d2 = 2
 	},
 /turf/open/floor/plating,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "ahj" = (
 /turf/open/floor/plasteel/darkblue/side{
 	tag = "icon-darkblue (WEST)";
@@ -3523,11 +2715,7 @@
 /turf/open/floor/plasteel/darkvault{
 	dir = 4
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "ahx" = (
 /obj/machinery/door/window{
 	base_state = "right";
@@ -3536,46 +2724,26 @@
 	req_access_txt = "150"
 	},
 /turf/open/floor/plasteel/black,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "ahy" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/darkvault{
 	dir = 4
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "ahz" = (
 /turf/open/floor/plasteel/darkwarning{
 	dir = 10
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "ahA" = (
 /turf/open/floor/plasteel/darkwarning,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "ahB" = (
 /turf/open/floor/plasteel/darkwarning{
 	dir = 6
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "ahC" = (
 /obj/item/stack/sheet/rglass{
 	amount = 20
@@ -3585,11 +2753,7 @@
 	req_access_txt = "150"
 	},
 /turf/open/floor/plasteel/black,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "ahD" = (
 /obj/effect/mine/pickup/healing{
 	name = "Heal Orb"
@@ -3608,11 +2772,7 @@
 /turf/open/floor/plasteel/darkvault{
 	dir = 1
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "ahE" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -3623,11 +2783,7 @@
 	icon_state = "1-2"
 	},
 /turf/open/floor/plating,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "ahF" = (
 /obj/structure/kitchenspike,
 /turf/open/floor/plasteel/black,
@@ -3654,11 +2810,7 @@
 /turf/open/floor/plasteel/darkvault{
 	dir = 10
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "ahH" = (
 /obj/machinery/door/window{
 	dir = 8;
@@ -3667,21 +2819,13 @@
 /turf/open/floor/plasteel/darkvault{
 	dir = 10
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "ahI" = (
 /obj/effect/decal/cleanable/blood/old,
 /turf/open/floor/plasteel/darkvault{
 	dir = 6
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "ahJ" = (
 /obj/machinery/door/window{
 	base_state = "right";
@@ -3692,11 +2836,7 @@
 /turf/open/floor/plasteel/darkvault{
 	dir = 6
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "ahK" = (
 /obj/structure/sign/poster{
 	pixel_x = 32;
@@ -3717,20 +2857,12 @@
 /turf/open/floor/plasteel/darkvault{
 	dir = 6
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "ahL" = (
 /obj/machinery/power/smes/magical,
 /obj/structure/cable,
 /turf/open/floor/plating,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "ahM" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced,
@@ -3739,11 +2871,7 @@
 	pixel_y = 1
 	},
 /turf/open/floor/plating,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "ahN" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced,
@@ -3756,11 +2884,7 @@
 	pixel_x = 0
 	},
 /turf/open/floor/plating,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "ahO" = (
 /obj/machinery/door/window{
 	req_access_txt = "150"
@@ -3772,11 +2896,7 @@
 /turf/open/floor/plasteel/darkvault{
 	dir = 10
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "ahP" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced,
@@ -3792,11 +2912,7 @@
 	dir = 8
 	},
 /turf/open/floor/plating,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "ahQ" = (
 /obj/machinery/door/window{
 	base_state = "right";
@@ -3812,11 +2928,7 @@
 /turf/open/floor/plasteel/darkvault{
 	dir = 6
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "ahR" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced,
@@ -3828,11 +2940,7 @@
 	dir = 8
 	},
 /turf/open/floor/plating,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "ahS" = (
 /turf/closed/indestructible/splashscreen,
 /area/start)
@@ -3874,22 +2982,14 @@
 /obj/effect/decal/cleanable/blood/old,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "aia" = (
 /obj/structure/window/reinforced{
 	dir = 1;
 	pixel_y = 1
 	},
 /turf/open/floor/plasteel/darkred/corner,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "aib" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/window/reinforced{
@@ -3899,11 +2999,7 @@
 /turf/open/floor/plasteel/darkred/side{
 	dir = 1
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "aic" = (
 /obj/structure/window/reinforced{
 	dir = 1;
@@ -3912,22 +3008,14 @@
 /turf/open/floor/plasteel/darkred/corner{
 	dir = 8
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "aid" = (
 /obj/structure/window/reinforced{
 	dir = 1;
 	pixel_y = 1
 	},
 /turf/open/floor/plasteel/black,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "aie" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/window/reinforced{
@@ -3935,11 +3023,7 @@
 	pixel_y = 1
 	},
 /turf/open/floor/plasteel/darkred/corner,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "aif" = (
 /obj/structure/window/reinforced{
 	dir = 1;
@@ -3948,11 +3032,7 @@
 /turf/open/floor/plasteel/darkred/side{
 	dir = 1
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "aig" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -3961,11 +3041,7 @@
 	pixel_y = 28
 	},
 /turf/open/floor/plasteel/black,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "aih" = (
 /obj/structure/window/reinforced/fulltile{
 	health = 1e+007;
@@ -3980,57 +3056,33 @@
 /area/ctf)
 "aij" = (
 /turf/open/floor/plasteel/darkred/corner,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "aik" = (
 /turf/open/floor/plasteel/darkred/side{
 	dir = 1
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "ail" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/darkred/corner{
 	dir = 8
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "aim" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/darkred/corner,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "ain" = (
 /turf/open/floor/plasteel/darkred/corner{
 	dir = 8
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "aio" = (
 /obj/structure/closet/gimmick/zombie,
 /turf/open/floor/plasteel/darkvault{
 	dir = 8
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "aip" = (
 /turf/open/floor/plasteel/darkblue/corner,
 /area/ctf)
@@ -4050,29 +3102,17 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel/darkred/corner,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "ait" = (
 /obj/machinery/recharger,
 /turf/open/floor/plasteel/darkred/side{
 	dir = 1
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "aiu" = (
 /obj/structure/barricade/wooden,
 /turf/open/floor/plasteel/black,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "aiv" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -4080,11 +3120,7 @@
 /turf/open/floor/plasteel/darkred/corner{
 	dir = 8
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "aiw" = (
 /turf/open/floor/plasteel/black,
 /turf/open/floor/plasteel/warningline{
@@ -4111,39 +3147,23 @@
 /turf/open/floor/plasteel/darkred/side{
 	dir = 1
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "aiA" = (
 /obj/effect/decal/cleanable/blood/old,
 /turf/open/floor/plasteel/darkred/corner{
 	dir = 8
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "aiB" = (
 /obj/structure/barricade/wooden,
 /turf/open/floor/plasteel/darkvault{
 	dir = 6
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "aiC" = (
 /obj/effect/gibspawner/human,
 /turf/open/floor/plasteel/darkred/corner,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "aiD" = (
 /turf/open/floor/plating{
 	icon_state = "warnplate";
@@ -4166,21 +3186,13 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "aiH" = (
 /obj/structure/barricade/wooden,
 /turf/open/floor/plasteel/darkvault{
 	dir = 10
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "aiI" = (
 /turf/open/floor/plasteel/darkblue/corner{
 	tag = "icon-darkbluecorners (NORTH)";
@@ -4204,29 +3216,17 @@
 /turf/open/floor{
 	icon_state = "stairs-l"
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "aiM" = (
 /turf/open/floor{
 	icon_state = "stairs-m"
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "aiN" = (
 /turf/open/floor{
 	icon_state = "stairs-r"
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "aiO" = (
 /obj/machinery/power/emitter/energycannon{
 	tag = "icon-emitter (NORTH)";
@@ -4302,19 +3302,11 @@
 /area/ctf)
 "aja" = (
 /turf/open/floor/wood,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "ajb" = (
 /obj/machinery/door/airlock/wood,
 /turf/open/floor/wood,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "ajc" = (
 /obj/machinery/recharger/wallcharger{
 	pixel_y = 32
@@ -4326,27 +3318,15 @@
 	status = 2
 	},
 /turf/open/floor/wood,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "ajd" = (
 /obj/effect/decal/cleanable/blood/old,
 /turf/open/floor/wood,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "aje" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "ajf" = (
 /obj/machinery/light{
 	dir = 1
@@ -4355,11 +3335,7 @@
 	pixel_y = 32
 	},
 /turf/open/floor/wood,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "ajg" = (
 /obj/structure/toilet{
 	dir = 8
@@ -4371,11 +3347,7 @@
 	icon_state = "freezerfloor";
 	dir = 2
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "ajh" = (
 /turf/open/floor/plasteel/circuit,
 /turf/open/floor/plasteel/warningline,
@@ -4420,11 +3392,7 @@
 	},
 /obj/structure/window/reinforced,
 /turf/open/floor/wood,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "ajn" = (
 /obj/machinery/door/window{
 	base_state = "right";
@@ -4433,22 +3401,14 @@
 	req_access_txt = "150"
 	},
 /turf/open/floor/wood,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "ajo" = (
 /obj/machinery/door/window{
 	dir = 4;
 	req_access_txt = "150"
 	},
 /turf/open/floor/wood,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "ajp" = (
 /obj/effect/mine/pickup/healing{
 	name = "Heal Orb"
@@ -4465,21 +3425,13 @@
 	},
 /obj/structure/window/reinforced,
 /turf/open/floor/wood,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "ajq" = (
 /obj/structure/sign/securearea{
 	name = "\improper ROOM 3, BASEMENT"
 	},
 /turf/closed/indestructible/riveted/infinity/terror,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "ajr" = (
 /turf/open/floor/plasteel/darkblue/side{
 	tag = "icon-darkblue (NORTHWEST)";
@@ -4564,11 +3516,7 @@
 	amount = 20
 	},
 /turf/open/floor/carpet,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "ajz" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -4578,19 +3526,11 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/carpet,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "ajA" = (
 /obj/structure/bed/dogbed,
 /turf/open/floor/carpet,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "ajB" = (
 /obj/effect/mine/pickup/healing{
 	name = "Heal Orb"
@@ -4607,22 +3547,14 @@
 	pixel_y = 1
 	},
 /turf/open/floor/wood,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "ajC" = (
 /obj/machinery/door/window{
 	dir = 8;
 	req_access_txt = "150"
 	},
 /turf/open/floor/wood,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "ajD" = (
 /obj/machinery/door/window{
 	base_state = "right";
@@ -4631,11 +3563,7 @@
 	req_access_txt = "150"
 	},
 /turf/open/floor/wood,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "ajE" = (
 /obj/effect/mine/pickup/healing{
 	name = "Heal Orb"
@@ -4650,19 +3578,11 @@
 	pixel_y = 1
 	},
 /turf/open/floor/wood,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "ajF" = (
 /obj/effect/decal/cleanable/blood/old,
 /turf/open/floor/carpet,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "ajG" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -4671,19 +3591,11 @@
 	pixel_y = 32
 	},
 /turf/open/floor/carpet,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "ajH" = (
 /obj/effect/gibspawner/human,
 /turf/open/floor/carpet,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "ajI" = (
 /turf/open/floor/plasteel/darkblue/side{
 	tag = "icon-darkblue (WEST)";
@@ -4714,57 +3626,33 @@
 /area/ctf)
 "ajM" = (
 /turf/open/floor/carpet,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "ajN" = (
 /obj/effect/decal/cleanable/blood/old,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/carpet,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "ajO" = (
 /obj/machinery/recharger,
 /obj/effect/decal/cleanable/blood/old,
 /turf/open/floor/wood,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "ajP" = (
 /obj/structure/closet,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/carpet,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "ajQ" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/carpet,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "ajR" = (
 /obj/structure/bed,
 /obj/item/weapon/bedsheet,
 /obj/item/stack/medical/gauze,
 /obj/effect/decal/cleanable/blood/old,
 /turf/open/floor/carpet,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "ajS" = (
 /obj/structure/bed,
 /obj/item/weapon/bedsheet/syndie,
@@ -4772,29 +3660,17 @@
 	name = "Heal Orb"
 	},
 /turf/open/floor/carpet,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "ajT" = (
 /obj/item/stack/sheet/rglass{
 	amount = 20
 	},
 /turf/open/floor/carpet,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "ajU" = (
 /obj/structure/window/reinforced,
 /turf/open/floor/wood,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "ajV" = (
 /obj/machinery/door/window{
 	req_access_txt = "150"
@@ -4804,32 +3680,20 @@
 	pixel_x = 0
 	},
 /turf/open/floor/wood,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "ajW" = (
 /obj/structure/window/reinforced{
 	dir = 1;
 	pixel_y = 1
 	},
 /turf/open/floor/wood,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "ajX" = (
 /obj/structure/closet,
 /obj/item/weapon/screwdriver,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/carpet,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "ajY" = (
 /obj/machinery/recharger/wallcharger{
 	pixel_y = 32
@@ -4838,21 +3702,13 @@
 	dir = 1
 	},
 /turf/open/floor/carpet,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "ajZ" = (
 /obj/machinery/light/small{
 	dir = 8
 	},
 /turf/open/floor/wood,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "aka" = (
 /obj/machinery/light/small{
 	active_power_usage = 0;
@@ -4861,19 +3717,11 @@
 	status = 2
 	},
 /turf/open/floor/wood,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "akb" = (
 /obj/structure/closet,
 /turf/open/floor/carpet,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "akc" = (
 /turf/open/floor/plasteel/circuit/gcircuit/animated,
 /area/ctf)
@@ -4881,27 +3729,15 @@
 /obj/effect/decal/cleanable/blood/old,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "ake" = (
 /obj/machinery/recharger,
 /turf/open/floor/wood,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "akf" = (
 /obj/effect/decal/cleanable/blood/old,
 /turf/open/floor/plating,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "akg" = (
 /obj/machinery/capture_the_flag/blue,
 /turf/open/floor/plasteel/circuit/gcircuit/animated,
@@ -4927,11 +3763,7 @@
 /obj/item/weapon/bedsheet/red,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/carpet,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "akm" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/item/weapon/twohanded/required/kirbyplants{
@@ -4940,11 +3772,7 @@
 	tag = "icon-plant-04"
 	},
 /turf/open/floor/wood,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "akn" = (
 /obj/structure/bed,
 /obj/item/weapon/bedsheet/patriot,
@@ -4952,11 +3780,7 @@
 	amount = 20
 	},
 /turf/open/floor/carpet,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "ako" = (
 /obj/item/weapon/shard{
 	color = "#008000";
@@ -4995,21 +3819,13 @@
 	icon_state = "freezerfloor";
 	dir = 2
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "akt" = (
 /obj/structure/sign/securearea{
 	name = "\improper ROOM 2, DEAD AHEAD"
 	},
 /turf/closed/indestructible/riveted/infinity/terror,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "aku" = (
 /obj/machinery/computer/security/wooden_tv{
 	desc = "Абсолютно бесполезный телевизор...";
@@ -5021,11 +3837,7 @@
 	icon_state = "bar";
 	dir = 2
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "akv" = (
 /obj/machinery/recharger/wallcharger{
 	pixel_y = 32
@@ -5036,11 +3848,7 @@
 	icon_state = "bar";
 	dir = 2
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "akw" = (
 /obj/machinery/recharger,
 /obj/machinery/light/small{
@@ -5051,11 +3859,7 @@
 	icon_state = "bar";
 	dir = 2
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "akx" = (
 /obj/machinery/recharger/wallcharger{
 	pixel_y = 32
@@ -5064,11 +3868,7 @@
 	icon_state = "bar";
 	dir = 2
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "aky" = (
 /obj/structure/table/wood,
 /obj/item/weapon/phone,
@@ -5076,11 +3876,7 @@
 	icon_state = "bar";
 	dir = 2
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "akz" = (
 /obj/structure/table/wood,
 /obj/machinery/recharger,
@@ -5089,11 +3885,7 @@
 	icon_state = "bar";
 	dir = 2
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "akA" = (
 /obj/structure/lattice,
 /turf/open/space/transit,
@@ -5122,20 +3914,12 @@
 	tag = "icon-plant-20"
 	},
 /turf/open/floor/wood,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "akF" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "akG" = (
 /obj/structure/table/wood,
 /obj/machinery/light/small{
@@ -5143,21 +3927,13 @@
 	},
 /obj/machinery/recharger,
 /turf/open/floor/wood,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "akH" = (
 /turf/open/floor{
 	icon_state = "bar";
 	dir = 2
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "akI" = (
 /obj/structure/table/wood,
 /obj/item/weapon/dice/d4,
@@ -5165,11 +3941,7 @@
 	icon_state = "bar";
 	dir = 2
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "akJ" = (
 /obj/structure/lattice,
 /obj/item/weapon/shard{
@@ -5194,11 +3966,7 @@
 /turf/open/floor{
 	icon_state = "cafeteria"
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "akN" = (
 /obj/machinery/recharger/wallcharger{
 	pixel_y = 32
@@ -5207,20 +3975,12 @@
 /turf/open/floor{
 	icon_state = "cafeteria"
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "akO" = (
 /turf/open/floor{
 	icon_state = "cafeteria"
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "akP" = (
 /obj/structure/sign/poster{
 	desc = "A large piece of space-resistant printed paper. A poster instructing the viewer to report suspicious activity to the security force.";
@@ -5232,61 +3992,37 @@
 /turf/open/floor{
 	icon_state = "cafeteria"
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "akQ" = (
 /obj/machinery/door/airlock/glass,
 /turf/open/floor{
 	icon_state = "cafeteria"
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "akR" = (
 /obj/structure/table/wood,
 /obj/machinery/recharger,
 /turf/open/floor/wood,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "akS" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor{
 	icon_state = "bar";
 	dir = 2
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "akT" = (
 /obj/structure/table/wood,
 /obj/item/stack/medical/gauze,
 /turf/open/floor/carpet,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "akU" = (
 /obj/structure/chair/comfy/black{
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/carpet,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "akV" = (
 /obj/structure/table/wood,
 /obj/machinery/recharger,
@@ -5294,11 +4030,7 @@
 	icon_state = "bar";
 	dir = 2
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "akW" = (
 /obj/structure/showcase{
 	desc = "A strange machine supposedly from another world. The Wizard Federation has been meddling with it for years.";
@@ -5334,21 +4066,13 @@
 /turf/open/floor{
 	icon_state = "cafeteria"
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "ala" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor{
 	icon_state = "cafeteria"
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "alb" = (
 /obj/item/stack/sheet/rglass{
 	amount = 20
@@ -5356,32 +4080,20 @@
 /turf/open/floor{
 	icon_state = "cafeteria"
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "alc" = (
 /obj/effect/decal/cleanable/blood/old,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor{
 	icon_state = "cafeteria"
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "ald" = (
 /obj/machinery/light/small{
 	dir = 4
 	},
 /turf/open/floor/wood,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "ale" = (
 /obj/machinery/light/small{
 	dir = 8
@@ -5393,30 +4105,18 @@
 	icon_state = "bar";
 	dir = 2
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "alf" = (
 /obj/structure/chair/comfy/black{
 	dir = 4
 	},
 /turf/open/floor/carpet,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "alg" = (
 /obj/structure/table/wood,
 /obj/item/weapon/dice/d10,
 /turf/open/floor/carpet,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "alh" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -5425,11 +4125,7 @@
 	icon_state = "bar";
 	dir = 2
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "ali" = (
 /turf/closed/indestructible/fakeglass{
 	color = "#008000";
@@ -5508,21 +4204,13 @@
 /turf/open/floor{
 	icon_state = "cafeteria"
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "als" = (
 /obj/structure/table/reinforced,
 /turf/open/floor{
 	icon_state = "cafeteria"
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "alt" = (
 /obj/structure/table/reinforced,
 /obj/item/stack/medical/gauze,
@@ -5530,11 +4218,7 @@
 /turf/open/floor{
 	icon_state = "cafeteria"
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "alu" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -5542,22 +4226,14 @@
 /turf/open/floor{
 	icon_state = "cafeteria"
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "alv" = (
 /obj/item/stack/sheet/rglass{
 	amount = 20
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "alw" = (
 /obj/machinery/door/airlock/glass,
 /obj/effect/decal/cleanable/dirt,
@@ -5565,48 +4241,28 @@
 	icon_state = "bar";
 	dir = 2
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "alx" = (
 /obj/effect/decal/cleanable/blood/old,
 /turf/open/floor{
 	icon_state = "bar";
 	dir = 2
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "aly" = (
 /obj/structure/table/wood,
 /turf/open/floor/carpet,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "alz" = (
 /obj/structure/chair/comfy/black{
 	dir = 8
 	},
 /turf/open/floor/carpet,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "alA" = (
 /obj/item/weapon/screwdriver,
 /turf/open/floor/carpet,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "alB" = (
 /obj/effect/decal/remains/human,
 /obj/effect/decal/cleanable/blood,
@@ -5664,31 +4320,19 @@
 /turf/open/floor{
 	icon_state = "cafeteria"
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "alJ" = (
 /obj/structure/table/wood,
 /obj/item/stack/medical/gauze,
 /turf/open/floor/wood,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "alK" = (
 /obj/machinery/door/airlock/glass,
 /turf/open/floor{
 	icon_state = "bar";
 	dir = 2
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "alL" = (
 /turf/closed/wall/shuttle{
 	icon_state = "swall0";
@@ -5757,42 +4401,26 @@
 /turf/open/floor{
 	icon_state = "cafeteria"
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "alW" = (
 /obj/structure/table,
 /obj/machinery/recharger,
 /turf/open/floor{
 	icon_state = "cafeteria"
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "alX" = (
 /obj/structure/table,
 /obj/machinery/microwave,
 /turf/open/floor{
 	icon_state = "cafeteria"
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "alY" = (
 /obj/structure/table/wood,
 /obj/item/weapon/screwdriver,
 /turf/open/floor/wood,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "alZ" = (
 /obj/machinery/recharger,
 /obj/structure/table/wood,
@@ -5800,11 +4428,7 @@
 	icon_state = "bar";
 	dir = 2
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "ama" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/table/wood,
@@ -5812,11 +4436,7 @@
 	icon_state = "bar";
 	dir = 2
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "amb" = (
 /obj/item/weapon/twohanded/required/kirbyplants{
 	icon_state = "plant-06";
@@ -5827,11 +4447,7 @@
 	icon_state = "bar";
 	dir = 2
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "amc" = (
 /obj/structure/shuttle/engine/propulsion{
 	icon_state = "propulsion";
@@ -5910,11 +4526,7 @@
 	req_access_txt = "150"
 	},
 /turf/open/floor/wood,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "amp" = (
 /turf/closed/wall/shuttle{
 	icon_state = "swall12";
@@ -5962,26 +4574,14 @@
 	dir = 1
 	},
 /turf/open/floor/plating/ironsand,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "amx" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/ironsand,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "amy" = (
 /turf/open/floor/plating/ironsand,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "amz" = (
 /obj/effect/forcefield,
 /turf/open/floor/plasteel/cult{
@@ -6038,37 +4638,21 @@
 /obj/effect/decal/cleanable/blood/old,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/ironsand,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "amI" = (
 /obj/machinery/recharger,
 /turf/open/floor/plating/ironsand,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "amJ" = (
 /obj/effect/decal/cleanable/blood/old,
 /turf/open/floor/plating/ironsand,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "amK" = (
 /obj/effect/decal/cleanable/blood/old,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/ironsand,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "amL" = (
 /obj/structure/door_assembly{
 	anchored = 1;
@@ -6095,11 +4679,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/ironsand,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "amO" = (
 /obj/structure/chair/wood/wings,
 /turf/open/floor{
@@ -6446,11 +5026,7 @@
 /turf/open/floor/plasteel/podhatch{
 	dir = 4
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "anH" = (
 /obj/structure/mirror{
 	pixel_y = 28
@@ -6458,11 +5034,7 @@
 /turf/open/floor/plasteel/podhatch{
 	dir = 8
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "anI" = (
 /obj/structure/barricade/security{
 	anchored = 1;
@@ -6473,29 +5045,17 @@
 /turf/open/floor/plasteel/loadingarea{
 	dir = 4
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "anJ" = (
 /turf/open/floor{
 	icon_state = "floor"
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "anK" = (
 /turf/open/floor/plasteel/loadingarea{
 	dir = 1
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "anL" = (
 /obj/structure/barricade/security{
 	anchored = 1;
@@ -6506,11 +5066,7 @@
 /turf/open/floor/plasteel/loadingarea{
 	dir = 8
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "anM" = (
 /obj/structure/mirror{
 	pixel_y = 28
@@ -6518,21 +5074,13 @@
 /turf/open/floor/plasteel/podhatch{
 	dir = 4
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "anN" = (
 /obj/structure/closet/gimmick/zombie,
 /turf/open/floor/plasteel/podhatch{
 	dir = 8
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "anO" = (
 /turf/open/floor/plasteel/cult/airless{
 	icon_state = "cultdamage"
@@ -6556,11 +5104,7 @@
 /turf/open/floor{
 	icon_state = "floor"
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "anS" = (
 /obj/machinery/light{
 	dir = 4
@@ -6568,11 +5112,7 @@
 /turf/open/floor{
 	icon_state = "floor"
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "anT" = (
 /obj/effect/forcefield,
 /turf/open/space/transit,
@@ -7377,11 +5917,7 @@
 	once = 0
 	},
 /turf/closed/wall/mineral/cult,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "apZ" = (
 /turf/closed/indestructible/rock/snow,
 /area/syndicate_mothership)
@@ -7449,28 +5985,16 @@
 /area/centcom/control)
 "aqh" = (
 /turf/open/floor/plasteel/cult,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "aqi" = (
 /turf/open/floor/plasteel/cult{
 	icon_state = "cultdamage7"
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "aqj" = (
 /obj/effect/decal/cleanable/blood/old,
 /turf/open/floor/plasteel/cult,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "aqk" = (
 /turf/open/floor/plating/asteroid/snow/temperatre,
 /area/syndicate_mothership)
@@ -7539,11 +6063,7 @@
 /turf/open/floor/plasteel/cult{
 	icon_state = "cultdamage"
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "aqv" = (
 /obj/machinery/chem_dispenser,
 /turf/open/floor/plasteel/neutral{
@@ -7621,11 +6141,7 @@
 /turf/open/floor/plasteel/cult{
 	icon_state = "cultdamage3"
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "aqG" = (
 /obj/machinery/firealarm{
 	dir = 8;
@@ -7711,20 +6227,12 @@
 "aqP" = (
 /obj/structure/cult/pylon,
 /turf/open/floor/plasteel/cult,
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "aqQ" = (
 /turf/open/floor/plasteel/cult{
 	icon_state = "cultdamage6"
 	},
-/area/wreck/main{
-	has_gravity = 1;
-	name = "\improper Zombie";
-	valid_territory = 0
-	})
+/area/zombie)
 "aqR" = (
 /obj/structure/flora/bush,
 /turf/open/floor/plating/asteroid/snow/temperatre,
@@ -8667,6 +7175,7 @@
 /obj/machinery/light/small{
 	dir = 4
 	},
+/obj/structure/fans/tiny/invisible,
 /turf/open/floor/plating/asteroid/snow/temperatre,
 /area/syndicate_mothership)
 "atn" = (
@@ -8833,11 +7342,7 @@
 	name = "outer blast door"
 	},
 /obj/structure/fans/tiny/invisible,
-/turf/open/floor/plasteel/darkvault{
-	dir = 1;
-	icon = 'icons/turf/infinity.dmi';
-	icon_state = "darkdelivery"
-	},
+/turf/open/floor/plasteel/darkvault/delivary,
 /area/shuttle/syndicate)
 "atM" = (
 /obj/machinery/door/poddoor/shutters{
@@ -8845,6 +7350,7 @@
 	id = "nukeop_ready";
 	name = "shuttle dock"
 	},
+/obj/structure/fans/tiny/invisible,
 /turf/open/floor/plasteel/bar,
 /area/syndicate_mothership)
 "atN" = (
@@ -8898,11 +7404,7 @@
 	opacity = 1;
 	req_access_txt = "150"
 	},
-/turf/open/floor/plasteel/darkvault{
-	dir = 1;
-	icon = 'icons/turf/infinity.dmi';
-	icon_state = "darkdelivery"
-	},
+/turf/open/floor/plasteel/darkvault/delivary,
 /area/shuttle/assault_pod)
 "atV" = (
 /turf/open/floor/plasteel/black,
@@ -8998,11 +7500,7 @@
 	req_access_txt = "150"
 	},
 /obj/structure/fans/tiny/invisible,
-/turf/open/floor/plasteel/darkvault{
-	dir = 1;
-	icon = 'icons/turf/infinity.dmi';
-	icon_state = "darkdelivery"
-	},
+/turf/open/floor/plasteel/darkvault/delivary,
 /area/shuttle/syndicate)
 "auh" = (
 /obj/structure/chair/office,
@@ -9128,6 +7626,7 @@
 	icon_state = "bulb-broken";
 	status = 2
 	},
+/obj/structure/fans/tiny/invisible,
 /turf/open/floor/plating/snowed/temperatre,
 /area/syndicate_mothership)
 "auz" = (
@@ -9332,11 +7831,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
-/turf/open/floor/plasteel/darkvault{
-	dir = 1;
-	icon = 'icons/turf/infinity.dmi';
-	icon_state = "darkdelivery"
-	},
+/turf/open/floor/plasteel/darkvault/delivary,
 /area/shuttle/syndicate)
 "auZ" = (
 /obj/machinery/atmospherics/components/unary/vent_pump{
@@ -9377,11 +7872,7 @@
 /obj/machinery/door/airlock/external{
 	req_access_txt = "150"
 	},
-/turf/open/floor/plasteel/darkvault{
-	dir = 1;
-	icon = 'icons/turf/infinity.dmi';
-	icon_state = "darkdelivery"
-	},
+/turf/open/floor/plasteel/darkvault/delivary,
 /area/syndicate_mothership)
 "avg" = (
 /turf/open/floor/plasteel/darkwarning{
@@ -9395,11 +7886,7 @@
 	opacity = 1;
 	req_access_txt = "150"
 	},
-/turf/open/floor/plasteel/darkvault{
-	dir = 1;
-	icon = 'icons/turf/infinity.dmi';
-	icon_state = "darkdelivery"
-	},
+/turf/open/floor/plasteel/darkvault/delivary,
 /area/shuttle/assault_pod)
 "avi" = (
 /obj/structure/chair/office{
@@ -9827,18 +8314,10 @@
 	name = "Equipment Room";
 	req_access_txt = "150"
 	},
-/turf/open/floor/plasteel/darkvault{
-	dir = 1;
-	icon = 'icons/turf/infinity.dmi';
-	icon_state = "darkdelivery"
-	},
+/turf/open/floor/plasteel/darkvault/delivary,
 /area/syndicate_mothership)
 "awi" = (
-/turf/open/floor/plasteel/darkvault{
-	dir = 1;
-	icon = 'icons/turf/infinity.dmi';
-	icon_state = "darkdelivery"
-	},
+/turf/open/floor/plasteel/darkvault/delivary,
 /area/syndicate_mothership)
 "awj" = (
 /obj/item/weapon/storage/book/bible,
@@ -10079,11 +8558,7 @@
 	dwidth = 3;
 	name = "steel rain"
 	},
-/turf/open/floor/plasteel/darkvault{
-	dir = 1;
-	icon = 'icons/turf/infinity.dmi';
-	icon_state = "darkdelivery"
-	},
+/turf/open/floor/plasteel/darkvault/delivary,
 /area/shuttle/assault_pod)
 "awO" = (
 /obj/machinery/airalarm{
@@ -10316,11 +8791,7 @@
 	opacity = 1;
 	req_access_txt = "0"
 	},
-/turf/open/floor/plasteel/darkvault{
-	dir = 1;
-	icon = 'icons/turf/infinity.dmi';
-	icon_state = "darkdelivery"
-	},
+/turf/open/floor/plasteel/darkvault/delivary,
 /area/centcom/control)
 "axp" = (
 /turf/open/floor/plasteel/black,
@@ -10904,11 +9375,7 @@
 	opacity = 1;
 	req_access_txt = "101"
 	},
-/turf/open/floor/plasteel/darkvault{
-	dir = 1;
-	icon = 'icons/turf/infinity.dmi';
-	icon_state = "darkdelivery"
-	},
+/turf/open/floor/plasteel/darkvault/delivary,
 /area/centcom/control)
 "ayF" = (
 /obj/machinery/door/airlock/centcom{
@@ -11068,11 +9535,7 @@
 	opacity = 1;
 	req_access_txt = "101"
 	},
-/turf/open/floor/plasteel/darkvault{
-	dir = 1;
-	icon = 'icons/turf/infinity.dmi';
-	icon_state = "darkdelivery"
-	},
+/turf/open/floor/plasteel/darkvault/delivary,
 /area/centcom/control)
 "azf" = (
 /obj/machinery/door/airlock/centcom{
@@ -11080,11 +9543,7 @@
 	opacity = 1;
 	req_access_txt = "101"
 	},
-/turf/open/floor/plasteel/darkvault{
-	dir = 1;
-	icon = 'icons/turf/infinity.dmi';
-	icon_state = "darkdelivery"
-	},
+/turf/open/floor/plasteel/darkvault/delivary,
 /area/centcom/control)
 "azg" = (
 /turf/closed/indestructible/riveted/darksteel,
@@ -13048,11 +11507,7 @@
 /obj/machinery/door/window/brigdoor/eastright{
 	req_access_txt = "101"
 	},
-/turf/open/floor/plasteel/darkvault{
-	dir = 1;
-	icon = 'icons/turf/infinity.dmi';
-	icon_state = "darkdelivery"
-	},
+/turf/open/floor/plasteel/darkvault/delivary,
 /area/shuttle/transport)
 "aDZ" = (
 /turf/open/floor/plasteel/shuttle{
@@ -13102,11 +11557,7 @@
 	opacity = 1;
 	req_access_txt = "101"
 	},
-/turf/open/floor/plasteel/darkvault{
-	dir = 1;
-	icon = 'icons/turf/infinity.dmi';
-	icon_state = "darkdelivery"
-	},
+/turf/open/floor/plasteel/darkvault/delivary,
 /area/centcom/evac)
 "aEh" = (
 /turf/open/floor/plasteel/darkwarning{
@@ -13176,11 +11627,7 @@
 	opacity = 1;
 	req_access_txt = "0"
 	},
-/turf/open/floor/plasteel/darkvault{
-	dir = 1;
-	icon = 'icons/turf/infinity.dmi';
-	icon_state = "darkdelivery"
-	},
+/turf/open/floor/plasteel/darkvault/delivary,
 /area/centcom/evac)
 "aEs" = (
 /turf/closed/indestructible/fakeglass,
@@ -13374,29 +11821,17 @@
 	turf_type = /turf/open/floor/plating;
 	width = 7
 	},
-/turf/open/floor/plasteel/darkvault{
-	dir = 1;
-	icon = 'icons/turf/infinity.dmi';
-	icon_state = "darkdelivery"
-	},
+/turf/open/floor/plasteel/darkvault/delivary,
 /area/shuttle/transport)
 "aEO" = (
 /obj/machinery/door/airlock/external{
 	name = "Ferry Airlock";
 	req_access_txt = "0"
 	},
-/turf/open/floor/plasteel/darkvault{
-	dir = 1;
-	icon = 'icons/turf/infinity.dmi';
-	icon_state = "darkdelivery"
-	},
+/turf/open/floor/plasteel/darkvault/delivary,
 /area/centcom/ferry)
 "aEP" = (
-/turf/open/floor/plasteel/darkvault{
-	dir = 1;
-	icon = 'icons/turf/infinity.dmi';
-	icon_state = "darkdelivery"
-	},
+/turf/open/floor/plasteel/darkvault/delivary,
 /area/centcom/ferry)
 "aEQ" = (
 /turf/open/floor{
@@ -13655,11 +12090,7 @@
 	opacity = 1;
 	req_access_txt = "101"
 	},
-/turf/open/floor/plasteel/darkvault{
-	dir = 1;
-	icon = 'icons/turf/infinity.dmi';
-	icon_state = "darkdelivery"
-	},
+/turf/open/floor/plasteel/darkvault/delivary,
 /area/centcom/ferry)
 "aFy" = (
 /turf/open/floor/plasteel/darkwarning{
@@ -14015,11 +12446,7 @@
 	opacity = 1;
 	req_access_txt = "109"
 	},
-/turf/open/floor/plasteel/darkvault{
-	dir = 1;
-	icon = 'icons/turf/infinity.dmi';
-	icon_state = "darkdelivery"
-	},
+/turf/open/floor/plasteel/darkvault/delivary,
 /area/centcom/ferry)
 "aGt" = (
 /obj/machinery/door/airlock/centcom{
@@ -14029,11 +12456,7 @@
 	opacity = 1;
 	req_access_txt = "101"
 	},
-/turf/open/floor/plasteel/darkvault{
-	dir = 1;
-	icon = 'icons/turf/infinity.dmi';
-	icon_state = "darkdelivery"
-	},
+/turf/open/floor/plasteel/darkvault/delivary,
 /area/centcom/evac)
 "aGu" = (
 /turf/open/floor{
@@ -14060,11 +12483,7 @@
 	id = "CentComPort";
 	name = "security door"
 	},
-/turf/open/floor/plasteel/darkvault{
-	dir = 1;
-	icon = 'icons/turf/infinity.dmi';
-	icon_state = "darkdelivery"
-	},
+/turf/open/floor/plasteel/darkvault/delivary,
 /area/centcom/evac)
 "aGx" = (
 /turf/open/floor{
@@ -14307,11 +12726,7 @@
 	opacity = 1;
 	req_access_txt = "101"
 	},
-/turf/open/floor/plasteel/darkvault{
-	dir = 1;
-	icon = 'icons/turf/infinity.dmi';
-	icon_state = "darkdelivery"
-	},
+/turf/open/floor/plasteel/darkvault/delivary,
 /area/centcom/evac)
 "aHb" = (
 /turf/open/floor/plasteel/darkwarning{
@@ -14341,11 +12756,7 @@
 	opacity = 1;
 	req_access_txt = "101"
 	},
-/turf/open/floor/plasteel/darkvault{
-	dir = 1;
-	icon = 'icons/turf/infinity.dmi';
-	icon_state = "darkdelivery"
-	},
+/turf/open/floor/plasteel/darkvault/delivary,
 /area/centcom/evac)
 "aHe" = (
 /obj/machinery/doorButtons/access_button{
@@ -14823,11 +13234,7 @@
 /area/centcom/ferry)
 "aIg" = (
 /obj/machinery/door/poddoor/ert,
-/turf/open/floor/plasteel/darkvault{
-	dir = 1;
-	icon = 'icons/turf/infinity.dmi';
-	icon_state = "darkdelivery"
-	},
+/turf/open/floor/plasteel/darkvault/delivary,
 /area/centcom/ferry)
 "aIh" = (
 /turf/open/floor/plasteel/darkwarning/corner{
@@ -14878,11 +13285,7 @@
 	opacity = 1;
 	req_access_txt = "101"
 	},
-/turf/open/floor/plasteel/darkvault{
-	dir = 1;
-	icon = 'icons/turf/infinity.dmi';
-	icon_state = "darkdelivery"
-	},
+/turf/open/floor/plasteel/darkvault/delivary,
 /area/centcom/evac)
 "aIo" = (
 /obj/machinery/computer/security/telescreen/entertainment{
@@ -15033,11 +13436,7 @@
 	opacity = 1;
 	req_access_txt = "101"
 	},
-/turf/open/floor/plasteel/darkvault{
-	dir = 1;
-	icon = 'icons/turf/infinity.dmi';
-	icon_state = "darkdelivery"
-	},
+/turf/open/floor/plasteel/darkvault/delivary,
 /area/centcom/ferry)
 "aII" = (
 /turf/open/floor/plasteel{
@@ -15769,11 +14168,7 @@
 /area/shuttle/NTcruiser)
 "aKD" = (
 /obj/machinery/door/airlock/external,
-/turf/open/floor/plasteel/darkvault{
-	dir = 1;
-	icon = 'icons/turf/infinity.dmi';
-	icon_state = "darkdelivery"
-	},
+/turf/open/floor/plasteel/darkvault/delivary,
 /area/shuttle/NTcruiser)
 "aKE" = (
 /obj/machinery/door/poddoor/preopen{
@@ -15787,11 +14182,7 @@
 /area/shuttle/NTcruiser)
 "aKF" = (
 /obj/machinery/door/airlock/glass_external,
-/turf/open/floor/plasteel/darkvault{
-	dir = 1;
-	icon = 'icons/turf/infinity.dmi';
-	icon_state = "darkdelivery"
-	},
+/turf/open/floor/plasteel/darkvault/delivary,
 /area/shuttle/NTcruiser)
 "aKG" = (
 /obj/machinery/door/airlock/external{
@@ -15799,11 +14190,7 @@
 	name = "Strike Cruiser";
 	req_access_txt = "101"
 	},
-/turf/open/floor/plasteel/darkvault{
-	dir = 1;
-	icon = 'icons/turf/infinity.dmi';
-	icon_state = "darkdelivery"
-	},
+/turf/open/floor/plasteel/darkvault/delivary,
 /area/centcom/ferry)
 "aKH" = (
 /turf/open/floor/plasteel/blackvault{
@@ -16029,11 +14416,7 @@
 	width = 15
 	},
 /obj/machinery/door/airlock/glass_external,
-/turf/open/floor/plasteel/darkvault{
-	dir = 1;
-	icon = 'icons/turf/infinity.dmi';
-	icon_state = "darkdelivery"
-	},
+/turf/open/floor/plasteel/darkvault/delivary,
 /area/shuttle/NTcruiser)
 "aLl" = (
 /obj/structure/rack,
@@ -16220,11 +14603,7 @@
 "aLF" = (
 /obj/machinery/door/airlock/glass_external,
 /obj/machinery/door/airlock/glass_external,
-/turf/open/floor/plasteel/darkvault{
-	dir = 1;
-	icon = 'icons/turf/infinity.dmi';
-	icon_state = "darkdelivery"
-	},
+/turf/open/floor/plasteel/darkvault/delivary,
 /area/shuttle/NTcruiser)
 "aLG" = (
 /turf/open/floor/plasteel/blackvault{
@@ -16382,11 +14761,7 @@
 	opacity = 1;
 	req_access_txt = "101"
 	},
-/turf/open/floor/plasteel/darkvault{
-	dir = 1;
-	icon = 'icons/turf/infinity.dmi';
-	icon_state = "darkdelivery"
-	},
+/turf/open/floor/plasteel/darkvault/delivary,
 /area/tdome/tdomeobserve)
 "aLY" = (
 /turf/open/floor/plating{
@@ -18112,22 +16487,14 @@
 	id = "CP1down";
 	name = "Enter"
 	},
-/turf/open/floor/plasteel/darkvault{
-	dir = 1;
-	icon = 'icons/turf/infinity.dmi';
-	icon_state = "darkdelivery"
-	},
+/turf/open/floor/plasteel/darkvault/delivary,
 /area/CP/CP1)
 "aQt" = (
 /obj/machinery/door/poddoor/preopen{
 	id = "CP2down";
 	name = "Enter"
 	},
-/turf/open/floor/plasteel/darkvault{
-	dir = 1;
-	icon = 'icons/turf/infinity.dmi';
-	icon_state = "darkdelivery"
-	},
+/turf/open/floor/plasteel/darkvault/delivary,
 /area/CP/CP2)
 "aQu" = (
 /turf/open/floor/plasteel/blackvault/corner{
@@ -18295,11 +16662,7 @@
 	name = "CP post two";
 	req_access_txt = "101"
 	},
-/turf/open/floor/plasteel/darkvault{
-	dir = 1;
-	icon = 'icons/turf/infinity.dmi';
-	icon_state = "darkdelivery"
-	},
+/turf/open/floor/plasteel/darkvault/delivary,
 /area/CP/CP2)
 "aQL" = (
 /turf/open/floor/plasteel/blackvault/corner{
@@ -18393,11 +16756,7 @@
 	name = "CP post one";
 	req_access_txt = "101"
 	},
-/turf/open/floor/plasteel/darkvault{
-	dir = 1;
-	icon = 'icons/turf/infinity.dmi';
-	icon_state = "darkdelivery"
-	},
+/turf/open/floor/plasteel/darkvault/delivary,
 /area/CP/CP1)
 "aQY" = (
 /turf/open/floor/plasteel/darkgreen/corner,
@@ -18624,11 +16983,7 @@
 	name = "Attacker-1";
 	width = 5
 	},
-/turf/open/floor/plasteel/darkvault{
-	dir = 1;
-	icon = 'icons/turf/infinity.dmi';
-	icon_state = "darkdelivery"
-	},
+/turf/open/floor/plasteel/darkvault/delivary,
 /area/shuttle/syndicate{
 	name = "\improper UAC shuttle"
 	})
@@ -18857,11 +17212,7 @@
 	})
 "aSd" = (
 /obj/machinery/door/airlock/external,
-/turf/open/floor/plasteel/darkvault{
-	dir = 1;
-	icon = 'icons/turf/infinity.dmi';
-	icon_state = "darkdelivery"
-	},
+/turf/open/floor/plasteel/darkvault/delivary,
 /area/wreck/main{
 	has_gravity = 1;
 	name = "\improper UAC BASE";
@@ -20514,11 +18865,7 @@
 /obj/machinery/door/airlock/external{
 	id_tag = "uac_airlock_exterior"
 	},
-/turf/open/floor/plasteel/darkvault{
-	dir = 1;
-	icon = 'icons/turf/infinity.dmi';
-	icon_state = "darkdelivery"
-	},
+/turf/open/floor/plasteel/darkvault/delivary,
 /area/wreck/main{
 	has_gravity = 1;
 	name = "\improper UAC BASE";
@@ -21710,11 +20057,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
-/turf/open/floor/plasteel/darkvault{
-	dir = 1;
-	icon = 'icons/turf/infinity.dmi';
-	icon_state = "darkdelivery"
-	},
+/turf/open/floor/plasteel/darkvault/delivary,
 /area/wreck/main{
 	has_gravity = 1;
 	name = "\improper UAC BASE";
@@ -21830,11 +20173,7 @@
 	})
 "aYi" = (
 /obj/machinery/door/airlock/centcom,
-/turf/open/floor/plasteel/darkvault{
-	dir = 1;
-	icon = 'icons/turf/infinity.dmi';
-	icon_state = "darkdelivery"
-	},
+/turf/open/floor/plasteel/darkvault/delivary,
 /area/wreck/main{
 	has_gravity = 1;
 	name = "\improper UAC BASE";
@@ -21844,11 +20183,7 @@
 "aYj" = (
 /obj/machinery/door/airlock/centcom,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/turf/open/floor/plasteel/darkvault{
-	dir = 1;
-	icon = 'icons/turf/infinity.dmi';
-	icon_state = "darkdelivery"
-	},
+/turf/open/floor/plasteel/darkvault/delivary,
 /area/wreck/main{
 	has_gravity = 1;
 	name = "\improper UAC BASE";
@@ -23100,20 +21435,20 @@
 	},
 /turf/open/floor/plating/abductor,
 /area/abductor_ship)
+"baT" = (
+/obj/structure/closet/cabinet,
+/obj/item/weapon/storage/backpack/satchel,
+/turf/open/floor/carpet,
+/area/wizard_station)
+"baU" = (
+/turf/closed/indestructible/riveted/infinity/terror,
+/area/syndicate_mothership)
 "baV" = (
 /obj/effect/landmark/vr_spawn,
 /turf/open/floor/plasteel/yellowsiding{
 	dir = 8
 	},
 /area/centcom/evac)
-"baU" = (
-/turf/closed/indestructible/riveted/infinity/terror,
-/area/syndicate_mothership)
-"baT" = (
-/obj/structure/closet/cabinet,
-/obj/item/weapon/storage/backpack/satchel,
-/turf/open/floor/carpet,
-/area/wizard_station)
 
 (1,1,1) = {"
 aaa
@@ -28922,8 +27257,8 @@ aqk
 are
 asU
 atm
-atl
-atl
+bap
+bap
 auy
 asU
 are
@@ -66270,8 +64605,8 @@ aaa
 aaa
 aaa
 aaa
-aPu
-aPu
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -66526,10 +64861,10 @@ aaa
 aaa
 aaa
 aaa
-aPu
-aPu
-aPu
-aPu
+aaa
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -66783,10 +65118,10 @@ aaa
 aaa
 aaa
 aaa
-aPu
-aUZ
-aVH
-aWv
+aaa
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -67038,12 +65373,12 @@ aaa
 aaa
 aaa
 aaa
-aPK
-aPu
-aPu
-aUZ
-aVI
-aWw
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -67291,16 +65626,16 @@ aaa
 aaa
 aaa
 aaa
-aPK
-aPu
-aPu
-aPu
-aPu
-aPu
-aPu
-aUZ
-aVJ
-aWx
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -67546,19 +65881,19 @@ aaa
 aaa
 aaa
 aaa
-aPu
-aPu
-aPu
-aPu
-aPu
-aPu
-aPu
-aPu
-aPu
-aPu
-aPu
-aPu
-aPK
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -67801,21 +66136,21 @@ aaa
 aaa
 aaa
 aaa
-aPK
-aPu
-aPu
-aPu
-aRd
-aRd
-aRd
-aRd
-aRd
-aTO
-aTO
-aVa
-aPu
-aPu
-aPu
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -68058,24 +66393,6 @@ aaa
 aaa
 aaa
 aaa
-aPu
-aPu
-aPu
-aPL
-aPL
-aPL
-aPL
-aPL
-aPL
-aPL
-aQS
-aPL
-aVa
-aPu
-aPu
-aPu
-aPu
-aPu
 aaa
 aaa
 aaa
@@ -68084,7 +66401,25 @@ aaa
 aaa
 aaa
 aaa
-bab
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -68314,25 +66649,25 @@ aaa
 aaa
 aaa
 aaa
-aPu
-aPu
-aPu
-aPL
-aQS
-aPL
-aRB
-aPL
-aPL
-aTi
-aTi
-aTi
-aPL
-aPL
-aWy
-aXe
-aXF
-aYc
-aWv
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -68571,25 +66906,25 @@ aaa
 aaa
 aaa
 aaa
-aPv
-aPL
-aPv
-aPL
-aPL
-aPL
-aRC
-aPL
-aQS
-aTj
-aTj
-aTj
-aPL
-aPL
-aWy
-aXe
-aUZ
-aVH
-aWw
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -68828,25 +67163,25 @@ aaa
 aaa
 aaa
 aaa
-aPv
-aPL
-aPv
-aPL
-aPL
-aPL
-aRD
-aPL
-aPL
-aPL
-aPL
-aPL
-aPL
-aQS
-aWy
-aXe
-aUZ
-aVI
-aWw
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -69085,25 +67420,25 @@ aaa
 aaa
 aaa
 aaa
-aPv
-aPL
-aPv
-aPL
-aPL
-aPL
-aRC
-aPL
-aPL
-aTj
-aTj
-aTj
-aPL
-aPL
-aWy
-aXe
-aUZ
-aVJ
-aWw
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -69342,25 +67677,25 @@ aaa
 aaa
 aaa
 aaa
-aPu
-aPu
-aPu
-aPL
-aPL
-aPL
-aRB
-aPL
-aPL
-aTk
-aTk
-aTk
-aPL
-aPL
-aWy
-aXe
-aXF
-aYd
-aWx
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -69600,24 +67935,24 @@ aaa
 aaa
 aaa
 aaa
-aPu
-aPu
-aPu
-aPL
-aQS
-aPL
-aPL
-aPL
-aQS
-aPL
-aPL
-aPL
-aVa
-aPu
-aPu
-aPu
-aPu
-aPu
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -69857,21 +68192,21 @@ aaa
 aaa
 aaa
 aaa
-aPK
-aPu
-aPu
-aPu
-aRe
-aRe
-aRe
-aRe
-aRe
-aTO
-aTO
-aVa
-aPu
-aPu
-aXf
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -70116,19 +68451,19 @@ aaa
 aaa
 aaa
 aaa
-aPu
-aPu
-aPu
-aPu
-aPu
-aPu
-aPu
-aPu
-aPu
-aPu
-aPu
-aPu
-aPK
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -70375,16 +68710,16 @@ aaa
 aaa
 aaa
 aaa
-aPK
-aPu
-aPu
-aPu
-aPu
-aPu
-aPu
-aUZ
-aVH
-aWv
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -70636,12 +68971,12 @@ aaa
 aaa
 aaa
 aaa
-aPK
-aPu
-aPu
-aUZ
-aVI
-aWw
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -70830,15 +69165,6 @@ aaa
 aaa
 aaa
 aaa
-ayw
-ayw
-ayw
-ayw
-ayw
-ayw
-ayw
-ayw
-ayw
 aaa
 aaa
 aaa
@@ -70895,10 +69221,19 @@ aaa
 aaa
 aaa
 aaa
-aPu
-aUZ
-aVJ
-aWx
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -71086,16 +69421,6 @@ aaa
 aaa
 aaa
 aaa
-ayw
-ayw
-azT
-azT
-aAW
-aBE
-aCe
-aCe
-aDc
-ayw
 aaa
 aaa
 aaa
@@ -71152,10 +69477,20 @@ aaa
 aaa
 aaa
 aaa
-aPu
-aPu
-aPu
-aPu
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -71343,18 +69678,6 @@ aaa
 aaa
 aaa
 aaa
-ayw
-azT
-aAg
-aAh
-aAh
-aAh
-aAh
-aAh
-aDd
-ayw
-ayw
-ayw
 aaa
 aaa
 aaa
@@ -71410,8 +69733,20 @@ aaa
 aaa
 aaa
 aaa
-aPu
-aPu
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -71600,18 +69935,18 @@ aaa
 aaa
 aaa
 aaa
-ayw
-azT
-aAh
-aAh
-aAX
-aAX
-aAY
-aCx
-aAh
-aDB
-ayN
-ayw
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -71852,28 +70187,28 @@ aaa
 aaa
 aaa
 aaa
-ayw
-ayw
-ayw
-ayw
-ayw
-ayw
-azT
-aAh
-aAz
-aAY
-aBF
-aCf
-aCx
-aAh
-azW
-azb
-ayw
-ayw
-ayw
-ayw
-ayw
-ayw
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -72109,28 +70444,28 @@ aaa
 aaa
 aaa
 aaa
-ayw
-ayJ
-ayJ
-ayJ
-ayJ
-ayw
-azU
-aAh
-aAh
-aAZ
-aAZ
-aAY
-aCx
-aAh
-aDB
-ayN
-ayw
-ayJ
-ayJ
-ayJ
-ayJ
-ayw
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -72366,28 +70701,28 @@ aaa
 aaa
 aaa
 aaa
-ayw
-ayJ
-ayJ
-ayJ
-ayJ
-ayw
-azV
-aAg
-aAh
-aAh
-aAh
-aAh
-aAh
-aAg
-ayw
-ayw
-ayw
-ayJ
-ayJ
-ayJ
-ayJ
-ayw
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -72623,28 +70958,28 @@ aaa
 aaa
 aaa
 aaa
-ayw
-ayJ
-ayJ
-ayJ
-ayJ
-ayw
-ayw
-azT
-azT
-aBa
-aAh
-aAh
-aCy
-aDe
-ayw
-aDW
-ayw
-ayJ
-ayJ
-ayJ
-ayJ
-ayw
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -72880,28 +71215,28 @@ aaa
 aaa
 aaa
 aaa
-ayw
-ayK
-aza
-ayK
-azA
-ayw
-ayw
-ayw
-ayw
-ayw
-aBG
-aBG
-ayK
-ayK
-ayw
-ayw
-ayw
-ayw
-ayK
-aza
-aza
-ayw
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -73137,28 +71472,28 @@ aaa
 aaa
 aaa
 aaa
-ayw
-ayJ
-ayJ
-ayJ
-ayJ
-ayJ
-ayJ
-ayJ
-ayJ
-ayK
-aBH
-aBH
-aBH
-aDf
-aDf
-aDf
-aDf
-ayK
-ayJ
-ayJ
-ayJ
-ayK
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -73394,28 +71729,28 @@ aaa
 aaa
 aaa
 aaa
-ayw
-ayJ
-ayJ
-ayJ
-ayJ
-ayJ
-ayJ
-ayJ
-ayJ
-aBb
-aBH
-aBH
-aBH
-aBH
-aBH
-aBH
-aBH
-aFl
-ayJ
-ayJ
-ayJ
-aFl
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -73651,28 +71986,28 @@ aaa
 aaa
 aaa
 aaa
-ayw
-ayL
-ayL
-ayL
-ayJ
-ayJ
-ayJ
-ayJ
-ayJ
-ayK
-aBI
-aBI
-aBH
-aBH
-aBH
-aBH
-aBH
-ayw
-aDB
-azp
-aDB
-ayw
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -73908,28 +72243,28 @@ aaa
 aaa
 aaa
 aaa
-ayw
-ayM
-ayM
-ayM
-ayJ
-ayJ
-ayw
-aAi
-aAi
-ayw
-ayw
-ayw
-ayw
-ayw
-aDC
-aDC
-ayw
-ayw
-ayN
-azb
-ayN
-ayw
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -74165,28 +72500,28 @@ aaa
 aaa
 aaa
 aaa
-ayw
-ayN
-azb
-azp
-ayJ
-azI
-ayw
-ayJ
-ayJ
-ayw
-ayN
-azb
-azb
-azp
-aBH
-aBH
-aEC
-ayw
-ayw
-ayw
-ayw
-ayw
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -74422,24 +72757,24 @@ aaa
 aaa
 aaa
 aaa
-ayw
-ayw
-ayw
-ayw
-ayw
-ayw
-ayw
-ayJ
-ayJ
-ayw
-ayM
-ayM
-ayM
-ayM
-aBH
-aBH
-aED
-ayw
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -74683,20 +73018,20 @@ aaa
 aaa
 aaa
 aaa
-ayw
-ayN
-ayM
-ayJ
-ayJ
-ayJ
-ayJ
-ayK
-aBH
-aBH
-aBH
-aBH
-aEE
-ayw
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -74940,20 +73275,20 @@ aaa
 aaa
 aaa
 aaa
-ayw
-azb
-azW
-ayJ
-ayJ
-ayJ
-ayJ
-aAi
-aBH
-aBH
-aBH
-aBH
-aEE
-ayw
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -75197,20 +73532,20 @@ aaa
 aaa
 aaa
 aaa
-ayw
-ayN
-ayM
-ayJ
-ayJ
-ayJ
-ayJ
-aAi
-aBH
-aBH
-aBH
-aBH
-aBI
-ayw
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -75454,20 +73789,20 @@ aaa
 aaa
 aaa
 aaa
-ayw
-ayw
-ayw
-aAj
-aAA
-aBc
-aBJ
-aCg
-aAA
-aAj
-aAA
-aAj
-ayw
-ayw
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -75714,15 +74049,15 @@ aaa
 aaa
 aaa
 aaa
-aAk
-aAB
-aAk
 aaa
-aAk
-aAB
-aAk
-aAB
-aAk
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -75971,15 +74306,15 @@ aaa
 aaa
 aaa
 aaa
-aAl
-aAA
-aAl
 aaa
-aAl
-aAA
-aAl
-aAA
-aAl
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa

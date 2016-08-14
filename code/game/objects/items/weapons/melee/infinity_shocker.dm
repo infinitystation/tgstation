@@ -8,11 +8,12 @@
 	righthand_file = 'icons/mob/inhands/infinity_obj_right.dmi'
 	force = 0
 	throwforce = 0
-	stunforce = 6
-	hitcost = 1250
+	stunforce = 5
+	hitcost = 1350
 	w_class = 2
 	attack_verb = list("shocked")
 	slot_flags = SLOT_BELT
+	throw_hit_chance = 0
 
 /obj/item/weapon/melee/baton/shocker/loaded/New()
 	..()

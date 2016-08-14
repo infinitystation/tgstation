@@ -17,8 +17,8 @@
 	name = "Security Gear Room"
 	icon_state = "red"
 
-/area/security/dinner
-	name = "Dinner room"
+/area/security/break_room
+	name = "Security Break Room"
 	icon_state = "red"
 
 /area/security/west
@@ -149,6 +149,10 @@
 
 
 ///Flors///
+
+/turf/open/floor/plasteel/darkvault/delivary
+	icon = 'icons/turf/infinity.dmi'
+	icon_state = "darkdelivery"
 
 /turf/open/floor/plasteel/terror
 	icon = 'icons/turf/terror.dmi'
