@@ -141,7 +141,7 @@ mob/living/carbon/human/proc/sexerp(var/mob/living/carbon/human/P = usr, var/mob
 						P.cum(P, M, "chest")
 				P.do_fucking_animation(M)
 			else
-				src << "<span class='warning'>Не для девушек.</span>"
+				src << "<span class='warning'>Не длЯ девушек.</span>"
 				return
 //Пах
 		if("groinmouth")

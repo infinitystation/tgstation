@@ -684,7 +684,11 @@
 				if(!checksuituniformtwo(M, P))
 					return
 				else
-					P.sexerp(P, M, "assmouth")
+					if(((M.gender == MALE) && (M.erpcooldown == 0)) || (M.gender == FEMALE))
+						P.sexerp(P, M, "asshands")
+					else
+						var/message = pick("Мне кажетс&#255; партнёр не хочет.", "Может ему немного дать передохнуть?")
+						usr << "[message]"
 		else if(href_list["sex"] == "asspenis")
 			if("asspenis")
 				if((!checksuituniformtwo(M, P)) || (!checksuituniformtwo(P, P)))
