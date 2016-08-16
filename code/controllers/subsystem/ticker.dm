@@ -62,7 +62,7 @@ var/datum/subsystem/ticker/ticker
 /datum/subsystem/ticker/New()
 	NEW_SS_GLOBAL(ticker)
 
-	login_music = pickweight(list('sound/lobby/title1.ogg' = 31, 'sound/lobby/title2.ogg' = 31, 'sound/lobby/title3.ogg' = 31, 'sound/lobby/title4.ogg' = 31, 'sound/ambience/clown.ogg' = 7)) // choose title music!
+	login_music = pickweight(list('sound/lobby/title1.ogg' = 31, 'sound/lobby/title2.ogg' = 31, 'sound/lobby/title3.ogg' = 31, 'sound/lobby/title4.ogg' = 31, 'sound/lobby/rare_pepe_meme_die_like_butt.ogg' = 7)) // choose title music!
 	/* if(SSevent.holidays && SSevent.holidays[APRIL_FOOLS])
 		login_music = 'sound/ambience/clown.ogg' */ // we don't want listen one login music
 
