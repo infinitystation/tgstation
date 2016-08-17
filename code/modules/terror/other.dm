@@ -489,7 +489,7 @@
 	name = "alien machinery"
 	icon_state = "computer1"
 	icon = 'icons/obj/infinity_alien.dmi'
-	desc = "You does not know what the fuck is that..."
+        desc = "You does not know what the fuck is that..."
 
 /obj/structure/sign/directions/numbers
  	name = "One"
