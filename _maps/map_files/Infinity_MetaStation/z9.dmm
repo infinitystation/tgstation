@@ -348,7 +348,6 @@
 /turf/open/floor/plasteel,
 /area/prison/control)
 "be" = (
-/obj/item/areaeditor/permit,
 /turf/open/floor/plasteel,
 /area/prison/control)
 "bf" = (

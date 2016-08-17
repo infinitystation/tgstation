@@ -27,6 +27,7 @@ Note: Must be placed west/left of and R&D console to function.
 								"Weapons",
 								"Ammo",
 								"Firing Pins",
+								"Computer Parts"
 								)
 
 
