@@ -206,14 +206,44 @@
 	name = "engraved floor"
 /turf/open/floor/plasteel/terror/necro/cult/outdoor
 	initial_gas_mix = "o2=14;n2=23;TEMP=300"
+	planetary_atmos = TRUE
 
 /turf/open/floor/plasteel/terror/necro/bar
 	icon_state = "bar"
+
+/turf/open/floor/plasteel/terror/necro/darkred
+	icon_state = "darkredfull"
+/turf/open/floor/plasteel/terror/necro/darkred/side
+	icon_state = "darkred"
+/turf/open/floor/plasteel/terror/necro/darkred/corner
+	icon_state = "darkredcorners"
+
+/turf/open/floor/plasteel/terror/necro/red
+	icon_state = "redfull"
+/turf/open/floor/plasteel/terror/necro/red/side
+	icon_state = "red"
+/turf/open/floor/plasteel/terror/necro/red/corner
+	icon_state = "redcorner"
+
+/turf/open/floor/plasteel/terror/necro/blue
+	icon_state = "bluefull"
+/turf/open/floor/plasteel/terror/necro/blue/side
+	icon_state = "blue"
+/turf/open/floor/plasteel/terror/necro/blue/corner
+	icon_state = "bluecorner"
+
+/turf/open/floor/plasteel/terror/necro/neutral
+	icon_state = "neutralfull"
+/turf/open/floor/plasteel/terror/necro/neutral/side
+	icon_state = "neutral"
+/turf/open/floor/plasteel/terror/necro/neutral/corner
+	icon_state = "neutralcorner"
 
 /turf/open/floor/plasteel/terror/necro/darkvault
 	icon_state = "vault"
 /turf/open/floor/plasteel/terror/necro/darkvault/outdoor
 	initial_gas_mix = "o2=14;n2=23;TEMP=300"
+	planetary_atmos = TRUE
 
 /turf/open/floor/plasteel/terror/necro/darkwarning
 	icon_state = "warndark"
@@ -222,8 +252,11 @@
 
 /turf/open/floor/plasteel/terror/necro/darkwarning/outdoor
 	initial_gas_mix = "o2=14;n2=23;TEMP=300"
+	planetary_atmos = TRUE
+
 /turf/open/floor/plasteel/terror/necro/darkwarning/corner/outdoor
 	initial_gas_mix = "o2=14;n2=23;TEMP=300"
+	planetary_atmos = TRUE
 
 /turf/open/floor/plasteel/terror/necro/warning
 	icon_state = "warning"
@@ -240,6 +273,7 @@
 	icon = 'icons/turf/infinity.dmi'
 /turf/open/floor/plasteel/terror/necro/black/outdoor
 	initial_gas_mix = "o2=14;n2=23;TEMP=300"
+	planetary_atmos = TRUE
 
 /turf/open/floor/plasteel/terror/necro/darkyellow
 	icon_state = "darkbrownfull"
@@ -255,19 +289,30 @@
 
 /turf/open/floor/plating/lavaland
 	baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
+
 /turf/open/floor/plating/lavaland/outdoor
 	initial_gas_mix = "o2=14;n2=23;TEMP=300"
+	planetary_atmos = TRUE
+
+/turf/open/floor/plating/lavaland/outdoor/necropolis
+	baseturf = /turf/open/indestructible/necropolis
+
+turf/open/floor/plating/lavaland/outdoor/fall
+	baseturf = /turf/open/chasm/straight_down/lava_land_surface
 
 /turf/open/floor/plasteel/terror/necro/blackvault
-	icon_state = "vault"
+	icon_state = "tvault"
 	icon = 'icons/turf/infinity.dmi'
 /turf/open/floor/plasteel/terror/necro/blackvault/corner
-	icon_state = "vaultcorner"
+	icon_state = "tvaultcorner"
 
 /turf/open/floor/plasteel/terror/necro/blackvault/outdoor
 	initial_gas_mix = "o2=14;n2=23;TEMP=300"
+	planetary_atmos = TRUE
+
 /turf/open/floor/plasteel/terror/necro/blackvault/corner/outdoor
 	initial_gas_mix = "o2=14;n2=23;TEMP=300"
+	planetary_atmos = TRUE
 
 /turf/open/floor/plasteel/terror/necro/whiteblue
 	icon_state = "whitebluefull"

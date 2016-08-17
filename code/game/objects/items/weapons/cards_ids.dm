@@ -278,7 +278,7 @@ update_label("John Doe", "Clowny")
 	icon_state = "data"
 	item_state = "card-id"
 	assignment = "UAC Paratrooper"
-	access = list(access_syndicate)
+	access = list(200)
 
 /obj/item/weapon/card/id/mining
 	name = "mining ID"
