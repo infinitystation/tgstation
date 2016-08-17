@@ -46,7 +46,6 @@
 	desc = "It looks comfy.\n<span class='notice'>Alt-click to rotate it clockwise.</span>"
 	icon_state = "comfychair2"
 	icon = 'code/Monorail_Maks750rus/monorail_ivent.dmi'
-	ghost_rotateble = 0
 
 /obj/structure/chair/comfy/sofa/New()
 	armrest = image("[icon]", "[icon_state]_armrest")
@@ -234,6 +233,28 @@
 	icon = 'icons/obj/infinity_decals.dmi'
 	desc = "Pointer, saying to you that in front will be administrative-only zone."
 	icon_state = "administration"
+
+/obj/structure/sign/directions/numbers
+	name = "One"
+	icon = 'icons/obj/infinity_decals.dmi'
+	desc = "Number one"
+	icon_state = "one"
+
+/obj/structure/sign/directions/numbers/two
+	name = "Two"
+	desc = "Number two"
+	icon_state = "two"
+
+/obj/structure/sign/directions/numbers/three
+	name = "Three"
+	desc = "Number three"
+	icon_state = "three"
+
+/obj/structure/sign/directions/numbers/four
+	name = "Four"
+	desc = "Number four"
+	icon_state = "four"
+
 
 /mob/living/simple_animal/crab/Groffee
 	name = "Groffee"
@@ -487,6 +508,7 @@
 
 /obj/structure/alien_structure
 	name = "alien machinery"
+	desc = "You does not know what the fuck is that..."
 	icon_state = "computer1"
 	icon = 'icons/obj/infinity_alien.dmi'
         desc = "You does not know what the fuck is that..."

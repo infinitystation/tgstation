@@ -10,7 +10,6 @@
 	var/buildstacktype = /obj/item/stack/sheet/metal
 	var/buildstackamount = 1
 	var/item_chair = /obj/item/chair // if null it can't be picked up
-	var/ghost_rotateble = 1
 
 /obj/structure/chair/New()
 	..()
@@ -95,7 +94,7 @@
 	set category = "Object"
 	set src in oview(1)
 
-	if(config.ghost_interaction && ghost_rotateble)
+	if(config.ghost_interaction)
 		spin()
 	else
 		if(!usr || !isturf(usr.loc))
