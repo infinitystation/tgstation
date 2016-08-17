@@ -42,12 +42,12 @@
 	death = FALSE
 	anchored = 0
 	density = 0
-	flavour_text = "<font size=3><b>Y</b></font><b>ou are an ash walker. Your tribe worships <span class='danger'>the Necropolis</span>. The wastes are sacred ground, its monsters a blessed bounty. \
-	You have seen lights in the distance... they foreshadow the arrival of outsiders that seek to tear apart the Necropolis and its domain. Fresh sacrifices for your nest.</b>"
+	flavour_text = "<font size=3><b>Вы</b></font><b> — Пепельный Ходок. Ваша земля богата пищей, но чужаки хотят её захватить. Вы должны создать своё племя и изгнать чужеземцев из вашего дома. Ваше племя покланяется <span class='danger'>Некрополису</span>. Эти пустоши - ваша свытяня, ваша земля с прекрасной флорой, на которую можно охотиться. \
+	Вы видите свет в дали..... чужеземцы прибыли на своих железных птицах, чтобы найти и разграбить вашу святыню - дары некрополиса. Время принести их в жертву вашему объекту поклонения...</b>"
 
 /obj/effect/mob_spawn/human/ash_walker/special(mob/living/new_spawn)
 	new_spawn.real_name = random_unique_lizard_name(gender)
-	new_spawn << "<b>Drag the corpses of men and beasts to your nest. It will absorb them to create more of your kind. Glory to the Necropolis!</b>"
+	new_spawn << "<b>Тащите мертвые тела существ и чудовищ к вашему гнезду. Они будут поглащены и после нескольких тел, вы получите себе подобного собрата. Слава Некрополису!</b>"
 	if(ishuman(new_spawn))
 		var/mob/living/carbon/human/H = new_spawn
 		//H.mind.AddSpell(new /obj/effect/proc_holder/spell/self/thrall_vision(null))
@@ -58,7 +58,7 @@
 	..()
 	var/area/A = get_area(src)
 	if(A)
-		notify_ghosts("An ash walker egg is ready to hatch in \the [A.name].", source = src, action=NOTIFY_ATTACK)
+		notify_ghosts("Яицо пепельного ходока готово вылупится в [A.name].", source = src, action=NOTIFY_ATTACK)
 
 //Timeless prisons: Spawns in Wish Granter prisons in lavaland. Ghosts become age-old users of the Wish Granter and are advised to seek repentance for their past.
 /obj/effect/mob_spawn/human/exile

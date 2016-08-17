@@ -836,6 +836,8 @@
 	icon = 'icons/turf/floors.dmi'
 	icon_state = "necro1"
 	baseturf = /turf/open/indestructible/necropolis
+	planetary_atmos = TRUE
+	initial_gas_mix = "o2=14;n2=23;TEMP=300"
 
 /turf/open/indestructible/necropolis/New()
 	..()

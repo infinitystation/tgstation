@@ -5626,6 +5626,7 @@
 /obj/item/device/megaphone/sec{
 	icon_state = "megaphone-command"
 	},
+/obj/item/weapon/gun/projectile/shotgun/automatic/dual_tube,
 /turf/open/floor/plasteel{
 	dir = 8;
 	icon_state = "vault";
