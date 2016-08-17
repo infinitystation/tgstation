@@ -2243,7 +2243,7 @@
 "aei" = (
 /obj/structure/closet/cabinet,
 /turf/open/floor/wood,
-/area/security/dinner)
+/area/security/break_room)
 "aej" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/security{
@@ -2897,7 +2897,7 @@
 /area/security/break_room)
 "afd" = (
 /turf/closed/wall,
-/area/security/dinner)
+/area/security/break_room)
 "afe" = (
 /turf/open/floor/plating,
 /area/space)
@@ -3905,7 +3905,7 @@
 "ahe" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /turf/closed/wall,
-/area/security/dinner)
+/area/security/break_room)
 "ahf" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 6
