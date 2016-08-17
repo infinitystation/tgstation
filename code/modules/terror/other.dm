@@ -215,7 +215,7 @@
 /obj/structure/sign/directions/only
 	name = "Only 1"
 	desc = "Enter only by one."
-	icon_state = "Only 1"
+	icon_state = "only"
 
 /obj/structure/sign/directions/civilian
 	name = "civilian pointer"
