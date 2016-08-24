@@ -46,6 +46,7 @@
 	desc = "It looks comfy.\n<span class='notice'>Alt-click to rotate it clockwise.</span>"
 	icon_state = "comfychair2"
 	icon = 'code/Monorail_Maks750rus/monorail_ivent.dmi'
+	ghost_rotateble = 0
 
 /obj/structure/chair/comfy/sofa/New()
 	armrest = image("[icon]", "[icon_state]_armrest")
