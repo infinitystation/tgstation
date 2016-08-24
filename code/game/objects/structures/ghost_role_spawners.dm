@@ -42,8 +42,8 @@
 	death = FALSE
 	anchored = 0
 	density = 0
-	flavour_text = "<font size=3><b>¬ы</b></font><b> Ч ѕепельный ’одок. ¬аша земл€ богата пищей, но чужаки хот€т еЄ захватить. ¬ы должны создать своЄ плем€ и изгнать чужеземцев из вашего дома. ¬аше плем€ поклан€етс€ <span class='danger'>Ќекрополису</span>. Ёти пустоши - ваша свыт€н€, ваша земл€ с прекрасной флорой, на которую можно охотитьс€. \
-	¬ы видите свет в дали..... чужеземцы прибыли на своих железных птицах, чтобы найти и разграбить вашу св€тыню - дары некрополиса. ¬рем€ принести их в жертву вашему объекту поклонени€...</b>"
+	flavour_text = "<font size=3><b>¬ы</b></font><b> Ч ѕепельный ’одок. ¬аша земля богата пищей, но чужаки хотят захватить еЄ. ¬ы должны создать своЄ племя и изгнать чужеземцев из вашего дома. ¬аше племя покланяется <span class='danger'>Ќекрополису</span>. Ёти пустоши - ваша свытяня, ваша земля с прекрасной флорой, на которую можно охотиться. \
+	¬ы видите свет в дали, на юго-западе... чужеземцы прибыли на своих железных птицах, чтобы найти и разграбить вашу святыню - дары Ќекрополиса. ¬ремя принести их в жертву вашему объекту поклонения...</b>"
 
 /obj/effect/mob_spawn/human/ash_walker/special(mob/living/new_spawn)
 	new_spawn.real_name = random_unique_lizard_name(gender)
@@ -58,7 +58,7 @@
 	..()
 	var/area/A = get_area(src)
 	if(A)
-		notify_ghosts("яицо пепельного ходока готово вылупитс€ в [A.name].", source = src, action=NOTIFY_ATTACK)
+		notify_ghosts("яицо пепельного ходока готово вылупится в [A.name].", source = src, action=NOTIFY_ATTACK)
 
 //Timeless prisons: Spawns in Wish Granter prisons in lavaland. Ghosts become age-old users of the Wish Granter and are advised to seek repentance for their past.
 /obj/effect/mob_spawn/human/exile

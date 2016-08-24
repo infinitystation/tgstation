@@ -139,7 +139,6 @@
 	new /obj/item/weapon/storage/backpack/security(src)
 	new /obj/item/weapon/storage/backpack/satchel/sec(src)
 	new /obj/item/weapon/storage/backpack/dufflebag/sec(src)
-	new /obj/item/weapon/storage/backpack/dufflebag/sec(src)
 	for(var/i in 1 to 3)
 		new /obj/item/clothing/under/rank/security/navyblue(src)
 	for(var/i in 1 to 3)
@@ -149,19 +148,15 @@
 	for(var/i in 1 to 3)
 		new /obj/item/clothing/head/beret/sec/navyofficer(src)
 	for(var/i in 1 to 3)
-		new /obj/item/clothing/head/beret/sec/corporate
+		new /obj/item/clothing/head/beret/sec/corporate(src)
 	for(var/i in 1 to 3)
 		new /obj/item/clothing/head/beret/sec(src)
 	for(var/i in 1 to 3)
 		new /obj/item/clothing/shoes/jackboots(src)
 	for(var/i in 1 to 3)
-		new /obj/item/clothing/suit/armor/vest(src)
-	for(var/i in 1 to 3)
 		new /obj/item/clothing/suit/hooded/security_new(src)
 	for(var/i in 1 to 3)
 		new /obj/item/clothing/head/soft/sec(src)
-	for(var/i in 1 to 3)
-		new /obj/item/clothing/mask/bandana/blue(src)
 	return
 
 /obj/structure/closet/wardrobe/cargotech

@@ -77,3 +77,8 @@
 	new /obj/item/clothing/shoes/combat/uac(src)
 	new /obj/item/clothing/suit/armor/uac(src)
 	new /obj/item/clothing/head/helmet/trooper(src)
+
+/obj/structure/closet/secure_closet/syndicate
+	name = "Syndicate Secure Closet"
+	icon = 'icons/obj/infinity_object.dmi'
+	icon_state = "secure_syndicate"

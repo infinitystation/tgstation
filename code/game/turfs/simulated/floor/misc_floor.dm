@@ -88,13 +88,16 @@
 	desc = "A section of plating covered in a light layer of snow."
 	icon = 'icons/turf/snow.dmi'
 	icon_state = "snowplating"
-	temperature = 180
+	initial_gas_mix = "o2=22;n2=82;TEMP=293.15"
+	temperature = 293
 
 /turf/open/floor/plating/snowed/colder
+	initial_gas_mix = "o2=22;n2=82;TEMP=140.15"
 	temperature = 140
 
 /turf/open/floor/plating/snowed/temperatre
-	temperature = 255.37
+	initial_gas_mix = "o2=24;n2=80;TEMP=255.37"
+	temperature = 255
 
 /turf/open/floor/noslip
 	name = "high-traction floor"
