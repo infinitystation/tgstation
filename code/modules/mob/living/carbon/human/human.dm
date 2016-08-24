@@ -24,6 +24,10 @@
 		var/obj/item/bodypart/O = X
 		O.owner = src
 
+	//"erp" (penis and resistance)
+	potenzia = (prob(80) ? rand(9, 14) : pick(rand(5, 13), rand(15, 20)))
+	resistenza = (prob(80) ? rand(150, 300) : pick(rand(10, 100), rand(350,600)))
+
 	//initialize dna. for spawned humans; overwritten by other code
 	create_dna(src)
 	randomize_human(src)
@@ -592,7 +596,111 @@
 											usr << "<span class='notice'>Successfully added comment.</span>"
 											return
 							usr << "<span class='warning'>Unable to locate a data core entry for this person.</span>"
+                          ///////////ERP/////////////
 
+	if(href_list["sex"])
+		var/mob/living/carbon/human/M = usr.affectedsex
+		var/mob/living/carbon/human/P = usr
+		if(get_dist(M.loc,usr.loc)>1)
+			usr << "\red Слишком далеко."
+			return
+
+		if(href_list["sex"] == "mouthkiss")
+			if("mouthkiss")
+				if((!checkheadmask(M, P)) || (!checkheadmask(P, P)))
+					return
+				else
+					P.sexerp(P, M, "mouthkiss")
+		else if(href_list["sex"] == "mouthpenis")
+			if("mouthpenis")
+				if((!checksuituniformtwo(P, P)) || (!checkheadmask(M, P)))
+					return
+				else
+					if (P.erpcooldown == 0)
+						P.sexerp(P, M, "mouthpenis")
+					else
+						var/message = pick("Я не хочу.", "Может немного передохнуть?", "Чуть позже.", "Дай отдохну.")
+						usr << "[message]"
+		else if(href_list["sex"] == "chestmouth")
+			if("chestmouth")
+				if((!checksuituniformtwo(M, P)) || (!checkheadmask(P, P)))
+					return
+				else
+					P.sexerp(P, M, "chestmouth")
+		else if(href_list["sex"] == "chesthands")
+			if("chesthands")
+				if(!checksuituniformtwo(M, P))
+					return
+				else
+					P.sexerp(P, M, "chesthands")
+		else if(href_list["sex"] == "chestpenis")
+			if("chestpenis")
+				if((!checksuituniformtwo(M, P)) || (!checksuituniformtwo(P, P)))
+					return
+				else
+					if(((P.gender == MALE) && (P.erpcooldown == 0)) || (P.gender == FEMALE))
+						P.sexerp(P, M, "chestpenis")
+					else
+						var/message = pick("Я не хочу.", "Может немного передохнуть?", "Чуть позже.", "Дай отдохну.")
+						usr << "[message]"
+		else if(href_list["sex"] == "groinmouth")
+			if("groinmouth")
+				if((!checksuituniformtwo(M, P)) || (!checkheadmask(P, P)))
+					return
+				else
+					if(((M.gender == MALE) && (M.erpcooldown == 0)) || (M.gender == FEMALE))
+						P.sexerp(P, M, "groinmouth")
+					else
+						var/message = pick("Мне кажетс&#255; партнёр не хочет.", "Может ему немного дать передохнуть?")
+						usr << "[message]"
+		else if(href_list["sex"] == "groinhands")
+			if("groinhands")
+				if(!checksuituniformtwo(M, P))
+					return
+				else
+					if(((M.gender == MALE) && (M.erpcooldown == 0)) || (M.gender == FEMALE))
+						P.sexerp(P, M, "groinhands")
+					else
+						var/message = pick("Мне кажетс&#255; партнёр не хочет.", "Может ему немного дать передохнуть?")
+						usr << "[message]"
+		else if(href_list["sex"] == "groinpenis")
+			if("groinpenis")
+				if((!checksuituniformtwo(M, P)) || (!checksuituniformtwo(P, P)))
+					return
+				else
+					if (P.erpcooldown == 0)
+						P.sexerp(P, M, "groinpenis")
+					else
+						var/message = pick("Я не хочу.", "Может немного передохнуть?", "Чуть позже.", "Дай отдохну.")
+						usr << "[message]"
+		else if(href_list["sex"] == "assmouth")
+			if("assmouth")
+				if((!checksuituniformtwo(M, P)) || (!checkheadmask(P, P)))
+					return
+				else
+					P.sexerp(P, M, "assmouth")
+		else if(href_list["sex"] == "asshands")
+			if("asshands")
+				if(!checksuituniformtwo(M, P))
+					return
+				else
+					if(((M.gender == MALE) && (M.erpcooldown == 0)) || (M.gender == FEMALE))
+						P.sexerp(P, M, "asshands")
+					else
+						var/message = pick("Мне кажетс&#255; партнёр не хочет.", "Может ему немного дать передохнуть?")
+						usr << "[message]"
+		else if(href_list["sex"] == "asspenis")
+			if("asspenis")
+				if((!checksuituniformtwo(M, P)) || (!checksuituniformtwo(P, P)))
+					return
+				else
+					if (P.erpcooldown == 0)
+						if (P.potenzia > 0)
+							P.sexerp(P, M, "asspenis")
+					else
+						var/message = pick("Я не хочу.", "Может немного передохнуть?", "Чуть позже.", "Дай отдохну.")
+						usr << "[message]"
+                          ///////////ERP End/////////////
 /mob/living/carbon/human/proc/canUseHUD()
 	return !(src.stat || src.weakened || src.stunned || src.restrained())
 

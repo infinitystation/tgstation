@@ -171,6 +171,9 @@
 			msg += "<span class='warning'>[t_He] [t_is] wearing \icon[wear_id] \a [wear_id] yet something doesn't seem right...</span>\n"
 		else*/
 		msg += "[t_He] носит  \icon[wear_id] \ [wear_id].\n"
+	//Penis (erp)
+	if(is_nude() && gender == MALE)
+		msg += "<B>Размер члена: [potenzia] см.</B>\n"
 	//Jitters
 
 
