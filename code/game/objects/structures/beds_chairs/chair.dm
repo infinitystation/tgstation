@@ -9,6 +9,7 @@
 	burn_state = FIRE_PROOF
 	var/buildstacktype = /obj/item/stack/sheet/metal
 	var/buildstackamount = 1
+	var/ghost_rotateble = 1
 	var/item_chair = /obj/item/chair // if null it can't be picked up
 
 /obj/structure/chair/New()
@@ -94,7 +95,7 @@
 	set category = "Object"
 	set src in oview(1)
 
-	if(config.ghost_interaction)
+	if(config.ghost_interaction && ghost_rotateble)
 		spin()
 	else
 		if(!usr || !isturf(usr.loc))
@@ -144,6 +145,7 @@
 	buildstackamount = 2
 	var/image/armrest = null
 	item_chair = null
+	ghost_rotateble = 1
 
 /obj/structure/chair/comfy/New()
 	armrest = image("[icon]", "[icon_state]_armrest")
