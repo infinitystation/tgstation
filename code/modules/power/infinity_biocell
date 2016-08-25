@@ -125,7 +125,7 @@
 	req_tech = list("powerstorage" = 8, "materials" = 7, "engineering" = 6, "bluespace" = 6,"biotech"=9, "plasmatech"=6)
 	build_type = PROTOLATHE
 	materials = list(MAT_GOLD = 800, MAT_URANIUM= 200, MAT_DIAMOND = 400, MAT_PLASMA = 1000)
-	reagents = list("plasmavirusfood" = 75,"omnizine" = 50, "tricordrazine" = 50, "uranium" = 25, "plasma" = 25) //More than 200 u, so it needs bluespace beaker to be made
+	reagents = list("plasmavirusfood" = 75, "omnizine" = 50, "tricordrazine" = 50, "plasma" = 50) //More than 200 u, so it needs bluespace beaker to be made
 	construction_time=200																						
 	build_path = /obj/item/weapon/stock_parts/cell/bio/plasma
 	category = list("Power Designs")
