@@ -405,6 +405,7 @@
 
 /obj/item/clockwork/slab/proc/show_hierophant(mob/living/user)
 	var/message = stripped_input(user, "Enter a message to send to your fellow servants.", "Hierophant")
+	message = sanitize_a0(message)
 	if(!message || !user || !user.canUseTopic(src))
 		return 0
 	clockwork_say(user, text2ratvar("Servants, hear my words. [message]"), TRUE)
