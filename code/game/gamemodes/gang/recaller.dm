@@ -308,6 +308,7 @@
 	if(!user)
 		return
 	var/message = stripped_input(user,"Discreetly send a gang-wide message.","Send Message") as null|text
+	message = sanitize_a0(message)
 	if(!message || !can_use(user))
 		return
 	if(user.z > 2)
