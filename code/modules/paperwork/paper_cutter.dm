@@ -2,7 +2,7 @@
 	name = "paper cutter"
 	desc = "Standard office equipment. Precisely cuts paper using a large blade."
 	icon = 'icons/obj/bureaucracy.dmi'
-	icon_state = "papercutter-cutter"
+	icon_state = "papercutter"
 	force = 5
 	throwforce = 5
 	w_class = 3
@@ -77,8 +77,8 @@
 	if(storedpaper)
 		playsound(src.loc, 'sound/weapons/slash.ogg', 50, 1)
 		user << "<span class='notice'>You neatly cut \the [storedpaper].</span>"
-		storedpaper = null
 		qdel(storedpaper)
+		storedpaper = null
 		new /obj/item/weapon/paperslip(get_turf(src))
 		new /obj/item/weapon/paperslip(get_turf(src))
 		update_icon()
