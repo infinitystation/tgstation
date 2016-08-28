@@ -19,6 +19,7 @@
 	var/target_sql_ckey = sanitizeSQL(target_ckey)
 	if(!notetext)
 		notetext = input(usr,"Write your Note","Add Note") as message
+		notetext = sanitize_a0(notetext)
 		if(!notetext)
 			return
 	notetext = sanitize_u0(notetext)
