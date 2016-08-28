@@ -117,7 +117,6 @@
 
 //////////////////////////////////////////// MESSAGING
 
-
 /datum/gang/proc/message_gangtools(message,beep=1,warning)
 	if(!gangtools.len || !message)
 		return
@@ -130,7 +129,6 @@
 
 
 //////////////////////////////////////////// INCOME
-
 
 /datum/gang/proc/income()
 	if(!bosses.len)
