@@ -1,0 +1,131 @@
+/obj/item/weapon/stock_parts/cell/bio
+	name = "bio power cell"
+	desc = "A rechargable electrochemical power cell. This one is able to charge itself due to some bacteriums inside."
+	icon = 'icons/obj/infinity_biocell.dmi'
+	icon_state = "cell"
+	origin_tech = "biotech=6"
+	materials = list(MAT_METAL=700, MAT_GLASS=50)
+	maxcharge = 500
+	chargerate = 50
+	var/s_rechargerate = 1
+
+/obj/item/weapon/stock_parts/cell/bio/process()
+	give(s_rechargerate)
+
+/obj/item/weapon/stock_parts/cell/bio/high
+	name = "high-capacity bio power cell"
+	icon_state = "hcell"
+	origin_tech = "powerstorage=2;biotech=6"
+	materials = list(MAT_GLASS = 60)
+	maxcharge = 5000
+	chargerate = 500
+	s_rechargerate = 2
+
+/obj/item/weapon/stock_parts/cell/bio/super
+	name = "super-capacity bio power cell"
+	icon_state = "scell"
+	origin_tech = "powerstorage=3;materials=3;biotech=7"
+	materials = list(MAT_GLASS=300)
+	maxcharge = 10000
+	chargerate = 1000
+	s_rechargerate = 4
+
+/obj/item/weapon/stock_parts/cell/bio/hyper
+	name = "hyper-capacity bio power cell"
+	icon_state = "hpcell"
+	origin_tech = "powerstorage=4;engineering=4;materials=4;biotech=7"
+	materials = list(MAT_GLASS=400)
+	maxcharge = 15000
+	chargerate = 1500
+	s_rechargerate = 8
+
+/obj/item/weapon/stock_parts/cell/bio/bluespace
+	name = "bluespace bio power cell"
+	icon_state = "bscell"
+	origin_tech = "powerstorage=7;bluespace=5;materials=6;engineering=6;biotech=8"
+	materials = list(MAT_GLASS=600)
+	maxcharge = 20000
+	chargerate = 2000
+	s_rechargerate = 16
+	
+/obj/item/weapon/stock_parts/cell/bio/plasma
+	name = "plasmalife power cell"
+	desc = "An extremely powerful selfrecharching plasmalife power cell."
+	icon_state = "plcell"
+	origin_tech = "powerstorage=7;materials=6;engineering=6;biotech=8;plasmatech=6"
+	materials = list(MAT_GLASS=1000)
+	maxcharge = 40000
+	chargerate = 4000
+	s_rechargerate = 400
+
+/datum/design/biocell
+	name = "Bio Power Cell"
+	desc = "A selfrecharching power cell that holds 500 units of energy."
+	id = "biocell"
+	req_tech = list("powerstorage" = 1, "biotech"=6)
+	build_type = PROTOLATHE
+	materials = list(MAT_METAL = 700, MAT_GLASS = 50)
+	reagents = list("virusfood" = 10, "radium" = 10)
+	construction_time=100
+	build_path = /obj/item/weapon/stock_parts/cell/bio
+	category = list("Power Designs")
+
+/datum/design/high_biocell
+	name = "High-Capacity Bio Power Cell"
+	desc = "A selfrecharching power cell that holds 5000 units of energy."
+	id = "high_biocell"
+	req_tech = list("powerstorage" = 2, "biotech"=6)
+	build_type = PROTOLATHE
+	materials = list(MAT_METAL = 700, MAT_GLASS = 60)
+	reagents = list("mutagenvirusfood" = 15, "radium" = 15)
+	construction_time=100
+	build_path = /obj/item/weapon/stock_parts/cell/bio/high
+	category = list("Power Designs")
+
+/datum/design/super_biocell
+	name = "Super-Capacity Bio Power Cell"
+	desc = "A selfrecharching power cell that holds 10000 units of energy."
+	id = "super_biocell"
+	req_tech = list("powerstorage" = 3, "materials" = 3, "biotech"=6)
+	build_type = PROTOLATHE
+	materials = list(MAT_METAL = 700, MAT_GLASS = 70)
+	reagents = list("plasmavirusfood" = 20, "radium" = 15)
+	construction_time=100
+	build_path = /obj/item/weapon/stock_parts/cell/bio/super
+	category = list("Power Designs")
+
+/datum/design/hyper_biocell
+	name = "Hyper-Capacity Bio Power Cell"
+	desc = "A selfrecharching power cell that holds 15000 units of energy."
+	id = "hyper_biocell"
+	req_tech = list("powerstorage" = 5, "materials" = 5, "engineering" = 5,"biotech"=7)
+	build_type = PROTOLATHE
+	materials = list(MAT_METAL = 700, MAT_GOLD = 150, MAT_SILVER = 150, MAT_GLASS = 80)
+	reagents = list("plasmavirusfood" = 20,"tricordrazine" = 5, "uranium" = 5)
+	construction_time=100
+	build_path = /obj/item/weapon/stock_parts/cell/bio/hyper
+	category = list("Power Designs")
+
+/datum/design/bluespace_biocell
+	name = "Bluespace Bio Power Cell"
+	desc = "A selfrecharching power cell that holds 20000 units of energy."
+	id = "bluespace_biocell"
+	req_tech = list("powerstorage" = 7, "materials" = 6, "engineering" = 6, "bluespace" = 6,"biotech"=8)
+	build_type = PROTOLATHE
+	materials = list(MAT_METAL = 800, MAT_GOLD = 300, MAT_SILVER = 300, MAT_GLASS = 160, MAT_DIAMOND = 160)
+	reagents = list("plasmavirusfood" = 20,"omnizine" = 10, "tricordrazine" = 10, "uranium" = 10)
+	construction_time=100
+	build_path = /obj/item/weapon/stock_parts/cell/bio/bluespace
+	category = list("Power Designs")
+	
+/datum/design/plasma_biocell
+	name = "Plasma-life Power Cell"
+	desc = "A selfrecharching power cell that holds 40000 units of energy."
+	id = "plasma_biocell"
+	req_tech = list("powerstorage" = 8, "materials" = 7, "engineering" = 6, "bluespace" = 6,"biotech"=9, "plasmatech"=6)
+	build_type = PROTOLATHE
+	materials = list(MAT_GOLD = 800, MAT_URANIUM= 200, MAT_DIAMOND = 400, MAT_PLASMA = 1000)
+	reagents = list("plasmavirusfood" = 75, "omnizine" = 50, "tricordrazine" = 50, "plasma" = 50) //More than 200 u, so it needs bluespace beaker to be made
+	construction_time=200																						
+	build_path = /obj/item/weapon/stock_parts/cell/bio/plasma
+	category = list("Power Designs")

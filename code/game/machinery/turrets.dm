@@ -181,4 +181,5 @@
 	name = "laser gun turret"
 	desc = "Protecting Our People"
 	health = 100
+	projectile_type = /obj/item/projectile/beam/laser
 	faction = "neutral"

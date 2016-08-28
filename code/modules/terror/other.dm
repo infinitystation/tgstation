@@ -46,6 +46,7 @@
 	desc = "It looks comfy.\n<span class='notice'>Alt-click to rotate it clockwise.</span>"
 	icon_state = "comfychair2"
 	icon = 'code/Monorail_Maks750rus/monorail_ivent.dmi'
+	ghost_rotateble = 0
 
 /obj/structure/chair/comfy/sofa/New()
 	armrest = image("[icon]", "[icon_state]_armrest")
@@ -540,6 +541,10 @@
 	name = "Parting"
 	info = "<b><center>–уководство по эксплуатации электрического стула</center></b><br><br> 1) ¬озьмите electrpack(шоковый рюкзак) в руку и проведите настройку частот. ќбратит внимание, что стандартные частоты (144.9 с кодом 2) - де активированы с целью избежания саботажа в работе стула. »змените частоту и код. Ќикому не сообщайте код помимо ’о—а, вардена или капитана.<br> 2) ѕрисоедените к electropack шлем - вы получите шоковый набор.<br> 3) «акрепите шоковый набор на стуле.<br> 4) Ќастройте signaler на выставленную в электропаке частоту. ¬сЄ, электрический стул готов.<br><br><b><center>ќбслуживание электрического стула</centrl></b><br>*ƒля отсоединения шокового набора от стула, используйте гаечный ключ. ƒля разоеденения частей - так же.<br>*—тул имеет задержку перед использованием - всего несколько секунд.<br>*ƒля проведения казни, закрепите осужденного на электрическом стуле и активируйте сигналлер.<br><br><br><small>”важаемый оператор, пожалуйста, помните, что на этом стуле вы производите казнь живого человека - такого же, как и вы.<br> Ќе забывайте об этом используйте его в самом крайнем случае.</small>"
 
+/obj/item/weapon/paper/syndicate
+	name = "Message"
+	info = "<i>¬ вашем автомате YouTool было обновлено оборудование, в коробку из-под пицы положили новую пиццу.<br>Ќемного изменили конструкцию медицинского отсека вашего корабля - добавили тюрьму.<br>¬ отдел инженерного оборудования был добавлен ѕластаниум для ремонта корабля в случае поломки."
+
 /turf/closed/wall/shuttle/infinity
 	icon = 'icons/obj/shuttle_new.dmi'
 	icon_state = "floor_block"
@@ -622,3 +627,10 @@
 	icon_state = "dark_shuttle_window"
 	smooth = SMOOTH_TRUE
 	canSmoothWith = null
+
+
+/obj/structure/sign/experementor
+	name = "E.X.P.E.R.I-MENTOR"
+	desc = "E.X.P.E.R.I-MENTOR's part will be forward."
+	icon_state = "experementor"
+	icon = 'icons/obj/infinity_decals.dmi'

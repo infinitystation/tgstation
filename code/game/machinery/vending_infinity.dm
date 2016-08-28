@@ -109,3 +109,21 @@
  					/obj/item/clothing/suit/wizrobe/magusblue = 2,/obj/item/clothing/suit/wizrobe/magusred = 2,
  					/obj/item/clothing/suit/wizrobe/marisa = 2,/obj/item/clothing/head/wizard/marisa = 2,
  					/obj/item/clothing/shoes/sandal = 2,/obj/item/weapon/staff = 2)
+
+/obj/machinery/vending/tool/syndicate
+	name = "\improper Syndicate YouTool"
+	desc = "Tools for our operatives."
+	icon = 'icons/obj/infinity_object.dmi'
+	icon_state = "SynTool"
+	icon_deny = "SynTool-deny"
+	req_access_txt = "150" //Common syndicate access
+	products = list(/obj/item/weapon/crowbar/red = 5,
+					/obj/item/device/multitool = 5,
+					/obj/item/weapon/screwdriver/nuke = 5,
+					/obj/item/weapon/wirecutters = 5,
+					/obj/item/weapon/wrench = 5,
+					/obj/item/weapon/weldingtool/largetank = 5,
+					/obj/item/device/analyzer = 5,
+					/obj/item/device/t_scanner = 5,
+					/obj/item/stack/cable_coil = 10)
+	premium = list(/obj/item/clothing/gloves/chameleon = 1,/obj/item/weapon/grenade/empgrenade = 2)

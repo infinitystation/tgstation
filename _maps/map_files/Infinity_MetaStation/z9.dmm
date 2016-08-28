@@ -3440,7 +3440,7 @@
 "iK" = (
 /obj/machinery/door/airlock/freezer{
 	name = "Freezer";
-	req_access_txt = "107"
+	req_access_txt = "0"
 	},
 /turf/open/floor/plasteel{
 	icon_state = "showroomfloor"
@@ -25373,9 +25373,9 @@ bg
 bg
 ih
 iv
-lI
-lQ
 lY
+lQ
+lI
 iv
 bg
 aa
@@ -26144,9 +26144,9 @@ bg
 id
 ih
 iv
-lK
-lR
 lZ
+lR
+lK
 iv
 id
 bg

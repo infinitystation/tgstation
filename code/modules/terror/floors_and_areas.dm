@@ -103,9 +103,14 @@
 	blob_allowed = 0
 
 /area/mine/shelter
-	name = "lavaland shelter"
+	name = "Lavaland shelter"
 	icon_state = "green"
 	blob_allowed = 0
+	ambientsounds = list('sound/ambience/ambimine.ogg')
+
+/area/mine/shelter/ash
+	name = "Ash Walkers' village"
+	icon_state = "red"
 
 /area/crew_quarters/gym
 	name = "Gym"
