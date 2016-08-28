@@ -409,3 +409,15 @@
 		/obj/item/weapon/reagent_containers/glass/bottle/mutagen = 1,
 		/obj/item/weapon/reagent_containers/glass/bottle/plasma = 1,
 		/obj/item/weapon/reagent_containers/glass/bottle/synaptizine = 1)
+
+/obj/machinery/smartfridge/chemistry/central_command
+	spawn_meds = list(
+		/obj/item/weapon/reagent_containers/pill/epinephrine = 15,
+		/obj/item/weapon/reagent_containers/glass/bottle/epinephrine = 5,
+		/obj/item/weapon/reagent_containers/glass/bottle/charcoal = 5,
+		/obj/item/weapon/reagent_containers/pill/mannitol = 5,
+		/obj/item/weapon/reagent_containers/pill/mutadone = 5,
+		/obj/item/weapon/reagent_containers/pill/patch/silver_sulf = 10,
+		/obj/item/weapon/reagent_containers/pill/patch/styptic = 10,
+		/obj/item/weapon/reagent_containers/pill/potass = 10,
+		/obj/item/weapon/reagent_containers/pill/salbutamol = 10)

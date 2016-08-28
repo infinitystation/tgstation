@@ -455,10 +455,10 @@
 	force = 10
 
 /obj/machinery/porta_turret/syndicate/mining
-	scan_range = 9
+	scan_range = 12
 	health = 150
-	projectile = /obj/item/projectile/beam/emitter
-	eprojectile = /obj/item/projectile/beam/emitter
+	projectile = /obj/item/projectile/beam/laser/heavylaser
+	eprojectile = /obj/item/projectile/beam/laser/heavylaser
 	shot_sound = 'sound/weapons/marauder.ogg'
 	eshot_sound = 'sound/weapons/marauder.ogg'
 	base_icon_state = "syndie"
@@ -545,6 +545,10 @@
 	name = "Message"
 	info = "<i>В вашем автомате YouTool было обновлено оборудование, в коробку из-под пицы положили новую пиццу.<br>Немного изменили конструкцию медицинского отсека вашего кораблЯ - добавили тюрьму.<br>В отдел инженерного оборудованиЯ был добавлен Пластаниум длЯ ремонта кораблЯ в случае поломки."
 
+/obj/item/weapon/paper/miners_oper
+	name = "Standart miner's operation guide"
+	info = "<center><b>Руководство по выживанию на планетоиде</b></center><br><center><b>Infernos</b></center><br><br>Данное руководство по выживанию в условиЯх планетоида 'Infernos' (в дальнейшнем Планета) ставит перед собой задачу повысить выживаемость среди шахерских комманд копрорации 'Нанотрейзен'. Пожалуйста, уделите внимание данному руководству и не забывайте о прочтенном.<br><br>Планета содержит в себе множество опасностей, самаЯ неприЯтнаЯ из которых - погодные ЯвлениЯ. <br>На планете регулЯрно происходЯт сдвиги тектонических плит, выбросы твердых магматических пород, извержениЯ вулканов, излиЯниЯ внутренних запасов планетарной магмы.<br>Ваша база была построена в секторе с минимальным количеством погодных Явлений, оставив лишь извержение местного вулкана 'H-721'.<br> При извержении (вы узнаете о нем по повышению количества пепла в воздухе) начинайте быстро двигатьсЯ к ближайшему укрытию к плотной крышей. Укрытием могут служить возведенные ремонтными дронами бункеры в пещерах, шахтерскаЯ база или У.В.В.У.О.В.С - Убежища ВыживаниЯ В УсловиЯх Опасности Внешней Среды. Шахтеры используют сокращение 'УдВ' или просто 'Убежище'.<br>ДлЯ дисклокации убежища возмите капсулу Стандартной Шаблонной Конструкции убежища, активируйте её кнопкой на одной из сторон, разместите в месте желаемого убежища и в течении 10 секунд бункер будет развернут и готов к эксплуатации.<br><br>ВтораЯ серьезнаЯ опасность длЯ шахтерских групп в условиЯх планеты - местнаЯ фауна.<br>Исследовательский отдел Нанотрейзен так и не получил достаточно образцов длЯ полного изучениЯ феномена, из-за чего вам даетсЯ простаЯ установка - всё, что не выглЯдит как шахтер, должно избегатьсЯ всеми возможными средствами. ДопускаетсЯ ликвидациЯ.<br><br>ПоследнЯЯ и самаЯ главнаЯ опасность - аномальнаЯ зона. Далеко на сервере от вашей базы расположена неизвестнаЯ конструкциЯ, которую из-за постоЯнных пепельных штормов невозможно просканировать. От данной конструкции часто исходЯт сигналы неизвестного происхождениЯ. Избегайте северной части шахт.<br><br><br>Конец руководства, спасибо за внимание."
+
 /turf/closed/wall/shuttle/infinity
 	icon = 'icons/obj/shuttle_new.dmi'
 	icon_state = "floor_block"
@@ -628,9 +632,56 @@
 	smooth = SMOOTH_TRUE
 	canSmoothWith = null
 
-
 /obj/structure/sign/experementor
 	name = "E.X.P.E.R.I-MENTOR"
 	desc = "E.X.P.E.R.I-MENTOR's part will be forward."
 	icon_state = "experementor"
 	icon = 'icons/obj/infinity_decals.dmi'
+
+/obj/effect/proc_holder/spell/self/REAL_NIGHT_VISION
+	name = "Darksight"
+	desc = "Gives you night vision."
+	panel = "Spells"
+	action_icon = 'icons/obj/infinity_object.dmi'
+	action_icon_state = "darksight"
+	action_background_icon_state = "bg_alien"
+	charge_max = 0
+	clothes_req = 0
+	active = 0
+
+/obj/effect/proc_holder/spell/self/REAL_NIGHT_VISION/cast(mob/living/carbon/human/user)
+	active = !active
+	if(active)
+		user << "<span class='notice'>You shift the nerves in your eyes, allowing you to see in the dark.</span>"
+		user.dna.species.darksight = 8
+		user.dna.species.invis_sight = SEE_INVISIBLE_MINIMUM
+	else
+		user << "<span class='notice'>You return your vision to normal.</span>"
+		user.dna.species.darksight = 0
+		user.dna.species.invis_sight = initial(user.dna.species.invis_sight)
+	user.update_sight()
+
+/proc/is_thrall(var/mob/living/M)
+	return istype(M) && M.mind && ticker && ticker.mode
+
+/obj/effect/proc_holder/spell/self/hivemind
+	name = "Hivemind"
+	desc = "Allows you to silently communicate with all other hivemind's members."
+	panel = "Spells"
+	charge_max = 20
+	human_req = 1
+	clothes_req = 0
+	action_icon_state = "commune"
+
+/obj/effect/proc_holder/spell/self/hivemind/cast(mob/living/carbon/human/user)
+	var/text = stripped_input(user, "Что вы желаете сообщить другим существам с подобной способностью?.", "КоммуникациЯ", "")
+	if(!text)
+		return
+	text = "<span class='shadowling'><i>[user.real_name]</i>: [text]</span>"
+	for(var/mob/M in mob_list)
+		if(is_thrall(M))
+			M << text
+		if(isobserver(M))
+			var/link = FOLLOW_LINK(M, user)
+			M << "[link] [text]"
+	log_say("[user.real_name]/[user.key] : [text]")
