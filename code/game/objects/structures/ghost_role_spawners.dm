@@ -39,6 +39,7 @@
 	helmet = /obj/item/clothing/head/helmet/gladiator
 	uniform = /obj/item/clothing/under/gladiator
 	roundstart = FALSE
+	faction = "ash"
 	death = FALSE
 	anchored = 0
 	density = 0
@@ -47,10 +48,11 @@
 
 /obj/effect/mob_spawn/human/ash_walker/special(mob/living/new_spawn)
 	new_spawn.real_name = random_unique_lizard_name(gender)
-	new_spawn << "<b>“ащите мертвые тела существ и чудовищ к вашему гнезду. ќни будут поглащены и после нескольких тел, вы получите себе подобного собрата. —лава Ќекрополису!</b>"
+	new_spawn << "<b>“ащите тела мертвых существ и чудовищ к вашему гнезду. ќни будут поглащены и после нескольких тел, вы получите себе подобного собрата. —лава Ќекрополису!</b>"
 	if(ishuman(new_spawn))
 		var/mob/living/carbon/human/H = new_spawn
-		//H.mind.AddSpell(new /obj/effect/proc_holder/spell/self/thrall_vision(null))
+		H.mind.AddSpell(new /obj/effect/proc_holder/spell/self/REAL_NIGHT_VISION(null))
+		H.mind.AddSpell(new /obj/effect/proc_holder/spell/self/hivemind(null))
 		H.underwear = "Nude"
 		H.update_body()
 
@@ -59,7 +61,6 @@
 	var/area/A = get_area(src)
 	if(A)
 		notify_ghosts("яицо пепельного ходока готово вылупится в [A.name].", source = src, action=NOTIFY_ATTACK)
-
 //Timeless prisons: Spawns in Wish Granter prisons in lavaland. Ghosts become age-old users of the Wish Granter and are advised to seek repentance for their past.
 /obj/effect/mob_spawn/human/exile
 	name = "timeless prison"

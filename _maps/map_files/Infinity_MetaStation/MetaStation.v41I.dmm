@@ -566,8 +566,8 @@
 	pixel_x = 6;
 	pixel_y = 28
 	},
-/obj/structure/reagent_dispensers/peppertank{
-	pixel_x = -32
+/obj/machinery/recharger/wallcharger{
+	pixel_x = -26
 	},
 /turf/open/floor/plasteel/black,
 /area/security/armory)
@@ -580,14 +580,13 @@
 	pixel_x = 6;
 	pixel_y = 28
 	},
-/obj/structure/extinguisher_cabinet{
-	pixel_x = 27;
-	pixel_y = 0
-	},
 /obj/machinery/atmospherics/components/unary/vent_scrubber{
 	on = 1;
 	scrub_N2O = 0;
 	scrub_Toxins = 0
+	},
+/obj/machinery/recharger/wallcharger{
+	pixel_x = 38
 	},
 /turf/open/floor/plasteel/black,
 /area/security/armory)
@@ -734,6 +733,9 @@
 	pixel_x = -29;
 	pixel_y = 23
 	},
+/obj/structure/reagent_dispensers/peppertank{
+	pixel_x = -32
+	},
 /turf/open/floor/plasteel/vault{
 	dir = 8
 	},
@@ -820,6 +822,10 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 10
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 27;
+	pixel_y = 0
 	},
 /turf/open/floor/plasteel/vault{
 	dir = 8
@@ -4901,11 +4907,21 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/structure/cable/yellow{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
 /turf/open/floor/plasteel/darkvault/delivary,
 /area/security/security_gear)
 "aja" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
-/turf/closed/wall/r_wall,
+/obj/effect/spawner/structure/window/reinforced,
+/obj/structure/cable/yellow{
+	icon_state = "0-8";
+	d2 = 8
+	},
+/turf/open/floor/plating,
 /area/security/security_gear)
 "ajb" = (
 /obj/machinery/recharge_station,
@@ -5576,9 +5592,8 @@
 	},
 /area/security/warden)
 "aki" = (
-/obj/machinery/photocopier{
-	pixel_y = 3
-	},
+/obj/structure/table/reinforced,
+/obj/item/weapon/storage/toolbox/drone,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/open/floor/plasteel{
 	dir = 8;
@@ -5596,10 +5611,6 @@
 /area/security/warden)
 "akk" = (
 /obj/structure/closet/secure_closet/warden,
-/obj/machinery/newscaster/security_unit{
-	pixel_x = 0;
-	pixel_y = 32
-	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/machinery/firealarm{
 	dir = 4;
@@ -15862,13 +15873,21 @@
 	},
 /area/shuttle/mining)
 "aBo" = (
-/obj/structure/table,
-/turf/open/floor/plasteel/darkyellow/side{
-	tag = "icon-darkyellow (SOUTHWEST)";
-	icon_state = "darkyellow";
-	dir = 10
+/obj/machinery/photocopier{
+	pixel_y = 3
 	},
-/area/shuttle/mining)
+/obj/machinery/airalarm{
+	pixel_y = 28
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/plasteel{
+	dir = 8;
+	icon_state = "vault";
+	tag = "icon-vault (WEST)"
+	},
+/area/security/warden)
 "aBp" = (
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
@@ -16614,13 +16633,11 @@
 	},
 /area/shuttle/mining)
 "aCI" = (
-/obj/structure/chair/comfy/shuttle{
-	dir = 8
-	},
-/turf/open/floor/plasteel/darkyellow/corner{
-	tag = "icon-darkyellowcorners (EAST)";
-	icon_state = "darkyellowcorners";
-	dir = 4
+/obj/machinery/computer/security/mining,
+/turf/open/floor/plasteel/darkyellow/side{
+	tag = "icon-darkyellow (SOUTHEAST)";
+	icon_state = "darkyellow";
+	dir = 6
 	},
 /area/shuttle/mining)
 "aCJ" = (
@@ -17525,26 +17542,23 @@
 /obj/structure/chair/comfy/shuttle{
 	dir = 4
 	},
-/obj/machinery/airalarm{
-	desc = "This particular atmos control unit appears to have no access restrictions.";
-	dir = 4;
-	icon_state = "alarm0";
-	locked = 0;
-	name = "all-access air alarm";
-	pixel_x = -24;
-	req_access = "0";
-	req_one_access = "0"
+/obj/machinery/light{
+	icon_state = "tube1";
+	dir = 8
 	},
 /turf/open/floor/plasteel/darkyellow/side{
 	dir = 8
 	},
 /area/shuttle/mining)
 "aEd" = (
+/obj/machinery/door/airlock/survival_pod/vertical{
+	name = "Mining Shuttle"
+	},
 /obj/docking_port/mobile{
 	callTime = 120;
 	dir = 8;
 	dwidth = 3;
-	height = 6;
+	height = 5;
 	id = "mining";
 	name = "mining shuttle";
 	port_angle = 90;
@@ -17553,22 +17567,17 @@
 /obj/docking_port/stationary{
 	dir = 8;
 	dwidth = 3;
-	height = 6;
+	height = 5;
 	id = "mining_home";
 	name = "Station's mining bay";
 	width = 8
-	},
-/obj/machinery/door/airlock/survival_pod/vertical{
-	name = "Mining Shuttle"
 	},
 /obj/structure/fans/tiny/invisible,
 /turf/open/floor/plasteel/darkvault/delivary,
 /area/shuttle/mining)
 "aEe" = (
-/obj/machinery/door/airlock/external{
-	name = "Mining Dock Airlock";
-	req_access = null;
-	req_access_txt = "0"
+/obj/machinery/door/airlock/glass_external{
+	name = "Mining Dock Airlock"
 	},
 /turf/open/floor/plating,
 /area/quartermaster/miningdock)
@@ -17586,7 +17595,10 @@
 	name = "Mining Dock";
 	req_access_txt = "48"
 	},
-/turf/open/floor/plasteel,
+/turf/open/floor/plasteel{
+	icon_state = "delivery";
+	name = "floor"
+	},
 /area/quartermaster/miningdock)
 "aEi" = (
 /turf/open/floor/plasteel{
@@ -19078,13 +19090,9 @@
 /turf/open/floor/plating,
 /area/maintenance/fpmaint2)
 "aHd" = (
-/obj/structure/ore_box,
-/obj/structure/window/reinforced{
-	dir = 4;
-	layer = 3.2
-	},
-/turf/open/floor/plasteel/darkvault{
-	dir = 8
+/obj/structure/fans/tiny/invisible,
+/turf/open/floor/plasteel{
+	icon_state = "dark"
 	},
 /area/shuttle/mining)
 "aHe" = (
@@ -19098,9 +19106,7 @@
 /turf/open/floor/plating/airless,
 /area/shuttle/mining)
 "aHf" = (
-/obj/structure/window/reinforced{
-	dir = 8
-	},
+/obj/structure/ore_box,
 /turf/open/floor/plasteel/darkvault{
 	dir = 8
 	},
@@ -19986,13 +19992,10 @@
 /turf/open/floor/plating,
 /area/maintenance/fpmaint2)
 "aIE" = (
-/obj/structure/shuttle/engine/propulsion{
-	icon_state = "propulsion_l"
-	},
-/obj/structure/shuttle/engine/platform{
+/obj/structure/chair/comfy/shuttle{
 	dir = 1
 	},
-/turf/open/floor/plating/airless,
+/turf/open/floor/plasteel/darkyellow/side,
 /area/shuttle/mining)
 "aIF" = (
 /obj/structure/shuttle/engine/propulsion{
@@ -21529,7 +21532,10 @@
 	name = "Mining Office";
 	req_access_txt = "48"
 	},
-/turf/open/floor/plasteel,
+/turf/open/floor/plasteel{
+	icon_state = "delivery";
+	name = "floor"
+	},
 /area/quartermaster/miningdock)
 "aLr" = (
 /obj/structure/disposalpipe/segment,
@@ -65861,14 +65867,15 @@
 /area/security/checkpoint/medical)
 "cis" = (
 /obj/structure/table,
-/obj/item/weapon/pen,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 10
 	},
-/obj/item/weapon/storage/firstaid/regular,
-/obj/item/weapon/storage/box/bodybags{
-	pixel_x = 3;
-	pixel_y = 2
+/obj/item/weapon/storage/firstaid/regular{
+	pixel_y = 7
+	},
+/obj/item/weapon/storage/box/masks{
+	pixel_x = 0;
+	pixel_y = 0
 	},
 /turf/open/floor/plasteel{
 	dir = 1;
@@ -70547,6 +70554,7 @@
 /obj/structure/disposalpipe/segment,
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/science{
+	id_tag = "ResearchFoyer";
 	name = "Research Division";
 	req_access_txt = "47"
 	},
@@ -70565,6 +70573,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/science{
+	id_tag = "ResearchFoyer";
 	name = "Research Division";
 	req_access_txt = "47"
 	},
@@ -110147,13 +110156,13 @@ aua
 avI
 aaj
 aaa
-ayK
-ayK
-ayL
-ayK
-ayL
-ayK
-ayK
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -110403,13 +110412,13 @@ asw
 aub
 avJ
 aaa
+aaa
 ayK
-azZ
-aBm
-aCG
-aEc
-aFC
-aHd
+ayK
+ayL
+ayK
+ayL
+ayK
 ayK
 aaa
 aaa
@@ -110660,14 +110669,14 @@ asw
 aub
 avJ
 aaa
-ayL
-aAa
-aBn
-aCH
-aCH
-aFC
+ayK
+azZ
+aCI
+aCG
+aEc
+aHf
 aHe
-aIE
+aIF
 aaa
 aLo
 aLo
@@ -110922,9 +110931,9 @@ aAb
 aBn
 aCH
 aCH
-aFC
-aHe
-aIF
+aIE
+ayK
+ayK
 aaa
 aLo
 aMr
@@ -111176,12 +111185,12 @@ avJ
 aaa
 ayK
 azZ
-aBo
-aCI
-aCH
 aFC
-aHf
-ayK
+aFC
+aHd
+aIE
+aHe
+aIF
 aaa
 aLo
 aMs
@@ -119902,7 +119911,7 @@ afJ
 agH
 afI
 aiX
-akg
+akh
 alJ
 anf
 aoI
@@ -120159,7 +120168,7 @@ afK
 agI
 afI
 aiX
-akh
+aBo
 alJ
 ang
 aoJ

@@ -200,10 +200,13 @@
 
 /turf/open/floor/plasteel/warning
 	icon_state = "warning"
+	icon = 'icons/turf/terror.dmi'
 /turf/open/floor/plasteel/airless/warning
 	icon_state = "warning"
+	icon = 'icons/turf/terror.dmi'
 /turf/open/floor/plasteel/warning/corner
 	icon_state = "warningcorner"
+	icon = 'icons/turf/terror.dmi'
 
 
 /turf/open/floor/plasteel/warning/airless
@@ -211,13 +214,14 @@
 
 /turf/open/floor/plasteel/airless/warning/corner
 	icon_state = "warningcorner"
-
+	icon = 'icons/turf/terror.dmi'
 
 /turf/open/floor/plasteel/warnwhite
 	icon_state = "warnwhite"
+	icon = 'icons/turf/terror.dmi'
 /turf/open/floor/plasteel/warnwhite/corner
 	icon_state = "warnwhitecorner"
-
+	icon = 'icons/turf/terror.dmi'
 
 /turf/open/floor/plasteel/whitebot
 	icon_state = "whitebot"

@@ -85,7 +85,7 @@
 
 //PLASTEEL BLACK
 /turf/open/floor/plasteel/darkwarning
-	icon = 'icons/turf/floors/warning.dmi'
+	icon = 'icons/turf/terror.dmi'
 	icon_state = "black_warn"
 /turf/open/floor/plasteel/darkwarning/corner
 	icon_state = "black_warn_corner"

@@ -7,7 +7,7 @@
 	density = 1
 	var/on = 0
 	var/obj/item/weapon/stock_parts/cell/cell
-	var/use = 5
+	var/use = 2
 	var/unlocked = 0
 	var/open = 0
 	var/brightness_on = 14
