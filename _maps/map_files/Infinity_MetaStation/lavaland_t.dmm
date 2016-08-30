@@ -927,7 +927,7 @@
 	pixel_y = 0
 	},
 /obj/structure/rack,
-/obj/item/weapon/storage/box/lights,
+/obj/item/weapon/storage/box/lights/mixed,
 /obj/item/weapon/stock_parts/cell/high,
 /obj/item/weapon/stock_parts/cell/high,
 /turf/open/floor/plating/lavaland,
@@ -1640,24 +1640,14 @@
 	},
 /area/mine/sleeper)
 "ee" = (
-/obj/machinery/floodlight,
-/obj/structure/window/reinforced{
-	dir = 8
+/obj/structure/sign/xeno_warning_mining{
+	pixel_x = 32
 	},
-/obj/structure/window/reinforced{
-	dir = 1;
-	pixel_y = 0
-	},
-/turf/open/floor/plasteel/terror/necro/darkvault{
-	tag = "icon-vault (WEST)";
-	icon_state = "vault";
-	dir = 8
-	},
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/lavaland/surface/outdoors)
 "ef" = (
-/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
-/turf/open/floor/plasteel/warningline{
-	dir = 9
+/turf/closed/wall{
+	baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
 	},
 /area/lavaland/surface/outdoors)
 "eg" = (
@@ -2200,9 +2190,13 @@
 /turf/open/floor/plasteel/terror/necro/black/outdoor,
 /area/mine/eva)
 "eW" = (
-/obj/machinery/light,
-/turf/open/floor/plating/lava/smooth/lava_land_surface,
-/area/lavaland/surface/outdoors)
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	req_access_txt = 1
+	},
+/turf/closed/wall{
+	baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
+	},
+/area/mine/storage)
 "eX" = (
 /obj/structure/cable{
 	icon_state = "0-2";
@@ -2392,9 +2386,6 @@
 	pixel_x = -27;
 	pixel_y = 0
 	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 6
-	},
 /turf/open/floor/plasteel/terror/necro/darkvault{
 	tag = "icon-vault (WEST)";
 	icon_state = "vault";
@@ -2409,9 +2400,6 @@
 	name = "Station Intercom (General)";
 	pixel_y = 20
 	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 4
-	},
 /turf/open/floor/plasteel/terror/necro/darkvault{
 	tag = "icon-vault (WEST)";
 	icon_state = "vault";
@@ -2425,9 +2413,6 @@
 	dir = 2;
 	network = list("MINE")
 	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 4
-	},
 /turf/open/floor/plasteel/terror/necro/darkvault{
 	tag = "icon-vault (WEST)";
 	icon_state = "vault";
@@ -2435,9 +2420,6 @@
 	},
 /area/mine/eva)
 "fm" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 4
-	},
 /obj/structure/table,
 /obj/item/device/gps/mining,
 /obj/item/device/gps/mining,
@@ -2452,26 +2434,22 @@
 /area/mine/eva)
 "fn" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 4
+	dir = 5
 	},
-/turf/closed/wall/r_wall{
-	baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
+/turf/open/floor/plasteel/terror/necro/darkvault{
+	tag = "icon-vault (NORTHWEST)";
+	icon_state = "vault";
+	dir = 9
 	},
-/area/mine/eva)
+/area/mine/storage)
 "fo" = (
-/obj/structure/sign/securearea{
-	desc = "A warning sign which reads 'HIGH VOLTAGE'";
-	icon_state = "shock";
-	name = "HIGH VOLTAGE";
-	pixel_y = 0
-	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 4
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 9
 	},
 /turf/closed/wall/r_wall{
 	baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
 	},
-/area/mine/eva)
+/area/mine/storage)
 "fp" = (
 /obj/item/device/radio/intercom{
 	broadcasting = 0;
@@ -2512,6 +2490,10 @@
 /obj/item/weapon/paper/miners_oper,
 /obj/machinery/newscaster{
 	pixel_y = 32
+	},
+/obj/machinery/light/small{
+	dir = 1;
+	pixel_x = 0
 	},
 /turf/open/floor/plasteel/terror/necro/black/outdoor,
 /area/mine/eva)
@@ -2692,7 +2674,9 @@
 /turf/open/floor/plating/lavaland,
 /area/mine/eva)
 "fJ" = (
-/obj/machinery/atmospherics/pipe/manifold/supply/hidden,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
+	},
 /turf/open/floor/plasteel/terror/necro/darkyellow/side{
 	tag = "icon-darkbrown (NORTHWEST)";
 	icon_state = "darkbrown";
@@ -2801,6 +2785,7 @@
 	},
 /area/mine/lobby)
 "fU" = (
+/obj/machinery/light/small,
 /turf/open/floor/plasteel/terror/necro/warning{
 	tag = "icon-warning (EAST)";
 	icon_state = "warning";
@@ -3007,9 +2992,8 @@
 	icon_state = "4-8";
 	pixel_y = 0
 	},
-/obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden{
-	dir = 1;
-	initialize_directions = 13
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
 	},
 /turf/open/floor/plasteel/terror/necro/darkyellow/side{
 	tag = "icon-darkbrown (SOUTHWEST)";
@@ -3039,9 +3023,6 @@
 	pixel_y = 0;
 	tag = ""
 	},
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
-	dir = 6
-	},
 /turf/open/floor/plasteel/terror/necro/darkyellow/side{
 	tag = "icon-darkbrown (SOUTHEAST)";
 	icon_state = "darkbrown";
@@ -3067,9 +3048,6 @@
 	icon_state = "2-8";
 	tag = ""
 	},
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
-	dir = 4
-	},
 /obj/structure/fans/tiny/invisible,
 /turf/open/floor/plasteel/terror/necro/darkwarning{
 	tag = "icon-warndark (EAST)";
@@ -3086,9 +3064,6 @@
 	tag = ""
 	},
 /obj/structure/fans/tiny/invisible,
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
-	dir = 4
-	},
 /obj/machinery/door/airlock/glass_external{
 	name = "Mining External Airlock";
 	req_access_txt = "54"
@@ -3109,9 +3084,6 @@
 	tag = "icon-4-8";
 	icon_state = "4-8"
 	},
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
-	dir = 4
-	},
 /obj/structure/fans/tiny/invisible,
 /turf/open/floor/plasteel/terror/necro/darkwarning{
 	tag = "icon-warndark (EAST)";
@@ -3125,9 +3097,6 @@
 	icon_state = "4-8"
 	},
 /obj/structure/fans/tiny/invisible,
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
-	dir = 4
-	},
 /obj/machinery/door/airlock/glass_external{
 	name = "Mining External Airlock";
 	req_access_txt = "54"
@@ -3331,9 +3300,6 @@
 	pixel_y = 0
 	},
 /obj/structure/table/reinforced,
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
-	dir = 5
-	},
 /obj/item/weapon/extinguisher/mini{
 	pixel_x = -10;
 	pixel_y = 3
@@ -3359,16 +3325,10 @@
 "gG" = (
 /obj/machinery/light,
 /obj/machinery/suit_storage_unit/mining,
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
-	dir = 4
-	},
 /turf/open/floor/plasteel/terror/necro/black,
 /area/mine/eva)
 "gH" = (
 /obj/machinery/suit_storage_unit/mining,
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
-	dir = 9
-	},
 /turf/open/floor/plasteel/terror/necro/black,
 /area/mine/eva)
 "gI" = (
@@ -3401,10 +3361,6 @@
 	},
 /obj/machinery/mech_bay_recharge_port,
 /obj/structure/cable,
-/obj/machinery/airalarm{
-	dir = 1;
-	pixel_y = -22
-	},
 /turf/open/floor/plating/lavaland,
 /area/mine/eva)
 "gK" = (
@@ -3448,6 +3404,7 @@
 	pixel_x = 6;
 	pixel_y = 3
 	},
+/obj/machinery/light/small,
 /turf/open/floor/plasteel/terror/necro/blackvault/outdoor{
 	tag = "icon-vault (WEST)";
 	icon_state = "vault";
@@ -3581,8 +3538,8 @@
 	},
 /area/mine/storage)
 "gZ" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 5
+/obj/machinery/atmospherics/pipe/manifold/supply/hidden{
+	dir = 8
 	},
 /turf/open/floor/plasteel/terror/necro/darkyellow/side{
 	tag = "icon-darkbrown (NORTHWEST)";
@@ -3715,6 +3672,9 @@
 	scrub_N2O = 0;
 	scrub_Toxins = 0
 	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	req_access_txt = 1
+	},
 /turf/open/floor/plasteel/terror/necro/darkyellow/side{
 	tag = "icon-darkbrown (WEST)";
 	icon_state = "darkbrown";
@@ -3795,6 +3755,9 @@
 /obj/structure/cable{
 	icon_state = "0-4";
 	d2 = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	req_access_txt = 1
 	},
 /turf/open/floor/plasteel/terror/necro/darkyellow/side{
 	tag = "icon-darkbrown (SOUTHWEST)";
@@ -3989,6 +3952,10 @@
 	pixel_x = 30;
 	pixel_y = 0
 	},
+/obj/machinery/atmospherics/components/unary/vent_pump{
+	dir = 8;
+	on = 1
+	},
 /turf/open/floor/plasteel/terror/necro/blackvault{
 	tag = "icon-vault (WEST)";
 	icon_state = "vault";
@@ -3996,9 +3963,8 @@
 	},
 /area/mine/storage)
 "hO" = (
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
-	icon_state = "intact";
-	dir = 5
+/obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden{
+	dir = 8
 	},
 /turf/closed/wall/r_wall{
 	baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
@@ -4082,9 +4048,8 @@
 	},
 /area/mine/storage)
 "hW" = (
-/obj/machinery/light{
-	dir = 4;
-	icon_state = "tube1"
+/obj/machinery/light/small{
+	dir = 4
 	},
 /turf/open/floor/plasteel/terror/necro/blackvault{
 	tag = "icon-vault (WEST)";
@@ -4203,6 +4168,12 @@
 /obj/machinery/firealarm{
 	dir = 4;
 	pixel_x = 24
+	},
+/obj/machinery/atmospherics/components/unary/vent_scrubber{
+	dir = 4;
+	on = 1;
+	scrub_N2O = 0;
+	scrub_Toxins = 0
 	},
 /turf/open/floor/plasteel/terror/necro/blackvault{
 	tag = "icon-vault (WEST)";
@@ -15419,7 +15390,7 @@ aQ
 aQ
 aQ
 aQ
-aQ
+an
 cr
 cz
 cz
@@ -16201,7 +16172,7 @@ aQ
 aQ
 an
 an
-eW
+aQ
 fv
 fT
 fv
@@ -16447,7 +16418,7 @@ aQ
 aQ
 aQ
 aQ
-aQ
+an
 cu
 cC
 cU
@@ -16704,7 +16675,7 @@ aQ
 aQ
 aQ
 aQ
-aQ
+an
 cu
 cD
 cV
@@ -16960,8 +16931,8 @@ aQ
 aQ
 aQ
 aQ
-aQ
-aQ
+an
+an
 cu
 cE
 cV
@@ -17217,8 +17188,8 @@ aQ
 aQ
 aQ
 aQ
-aQ
-aQ
+an
+an
 cv
 cF
 cW
@@ -17475,7 +17446,7 @@ aQ
 aQ
 aQ
 aQ
-aQ
+an
 cw
 cG
 cX
@@ -19036,8 +19007,8 @@ gQ
 gZ
 hn
 hu
-gP
-hM
+eW
+fn
 hM
 hM
 il
@@ -19552,8 +19523,8 @@ hp
 hw
 hD
 hO
-he
-he
+hD
+fo
 he
 he
 bw
@@ -20822,7 +20793,7 @@ aQ
 aQ
 aQ
 an
-bw
+an
 an
 an
 aQ
@@ -21075,16 +21046,16 @@ aQ
 aQ
 aQ
 aQ
-cp
+aQ
 aQ
 aQ
 an
-bw
+aQ
 aQ
 aQ
 aQ
 eR
-fn
+eR
 fN
 gm
 eR
@@ -21336,12 +21307,12 @@ aQ
 aQ
 aQ
 aQ
-cp
 aQ
 aQ
 aQ
 aQ
-fn
+aQ
+eR
 fO
 gn
 eR
@@ -21598,7 +21569,7 @@ aQ
 aQ
 aQ
 eR
-fo
+eS
 fN
 go
 eR
@@ -24165,7 +24136,7 @@ an
 an
 an
 an
-an
+ee
 an
 an
 an
@@ -24422,7 +24393,7 @@ an
 an
 an
 an
-aP
+ef
 an
 an
 an
@@ -25453,7 +25424,7 @@ aP
 an
 an
 an
-aQ
+an
 aQ
 aQ
 aQ

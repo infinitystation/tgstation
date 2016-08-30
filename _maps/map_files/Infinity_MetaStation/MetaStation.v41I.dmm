@@ -12155,6 +12155,11 @@
 	d1 = 4;
 	d2 = 8
 	},
+/obj/structure/chair/comfy/sofa/corner/brown{
+	tag = "icon-comfychair3 (NORTH)";
+	icon_state = "comfychair3";
+	dir = 1
+	},
 /turf/open/floor/carpet,
 /area/engine/rest_room)
 "avv" = (
@@ -15521,7 +15526,9 @@
 /turf/open/floor/wood,
 /area/crew_quarters/sleep)
 "aAM" = (
-/obj/item/weapon/caution,
+/obj/structure/mopbucket,
+/obj/item/weapon/reagent_containers/glass/bucket,
+/obj/item/weapon/mop,
 /turf/open/floor/plating,
 /area/maintenance/aft)
 "aAN" = (
@@ -17539,15 +17546,11 @@
 /turf/open/floor/plating,
 /area/maintenance/fpmaint2)
 "aEc" = (
-/obj/structure/chair/comfy/shuttle{
-	dir = 4
+/obj/effect/light_emitter{
+	name = ""
 	},
-/obj/machinery/light{
-	icon_state = "tube1";
-	dir = 8
-	},
-/turf/open/floor/plasteel/darkyellow/side{
-	dir = 8
+/turf/open/floor/plasteel{
+	icon_state = "dark"
 	},
 /area/shuttle/mining)
 "aEd" = (
@@ -20540,6 +20543,11 @@
 /turf/open/floor/carpet,
 /area/crew_quarters/sleep)
 "aJC" = (
+/obj/structure/chair/comfy/sofa/corner/brown{
+	tag = "icon-comfychair3 (NORTH)";
+	icon_state = "comfychair3";
+	dir = 1
+	},
 /turf/open/floor/carpet,
 /area/crew_quarters/sleep)
 "aJD" = (
@@ -104498,7 +104506,7 @@ aaa
 aaa
 aaa
 aam
-aaa
+aaj
 aaa
 aeT
 aaj
@@ -106294,7 +106302,7 @@ aaa
 aaa
 aaa
 aaa
-aaa
+aaj
 aeT
 aeT
 aeT
@@ -106550,7 +106558,7 @@ aaa
 aaa
 aaa
 aaa
-aaa
+aaj
 aeT
 aeT
 aeT
@@ -107836,7 +107844,7 @@ aaa
 aaa
 aaa
 aaa
-aaa
+aaj
 aqS
 aeT
 aeT
@@ -108350,7 +108358,7 @@ aaa
 aaa
 aaa
 aaa
-aaa
+aaj
 aeT
 aaa
 aaa
@@ -110673,7 +110681,7 @@ ayK
 azZ
 aCI
 aCG
-aEc
+aCG
 aHf
 aHe
 aIF
@@ -110747,7 +110755,7 @@ aaa
 aaa
 aaj
 aaa
-aaa
+aaj
 aaa
 aaa
 aaj
@@ -110929,7 +110937,7 @@ aaa
 ayL
 aAb
 aBn
-aCH
+aEc
 aCH
 aIE
 ayK
@@ -111003,9 +111011,9 @@ aaa
 aaa
 aaa
 aaj
-aaa
-aaa
-aaa
+aaj
+aaj
+aaj
 aaj
 aaj
 aaa
@@ -112439,7 +112447,7 @@ aaa
 aaa
 aaa
 aaa
-aaa
+aaj
 aaa
 aaa
 aaa
@@ -121952,7 +121960,7 @@ aaa
 aaa
 aaa
 aaa
-aai
+aah
 aaj
 aaj
 aaj
@@ -132758,7 +132766,7 @@ aaa
 abx
 abx
 agr
-ahu
+ajN
 aiu
 ajJ
 akY
