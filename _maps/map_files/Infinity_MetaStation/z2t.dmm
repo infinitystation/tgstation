@@ -12447,11 +12447,6 @@
 	pixel_y = 26
 	},
 /obj/item/weapon/folder/white,
-/obj/item/weapon/disk/design_disk,
-/obj/item/weapon/disk/tech_disk{
-	pixel_x = 0;
-	pixel_y = 0
-	},
 /turf/open/floor/plasteel{
 	dir = 1;
 	icon_state = "whitepurple"
@@ -12604,6 +12599,10 @@
 /turf/open/floor/plasteel,
 /area/shuttle/escape)
 "Ga" = (
+/obj/machinery/door/airlock/glass_science{
+	name = "Shuttle HSB";
+	req_access_txt = "47"
+	},
 /turf/open/floor/plasteel/whitebot/delivery,
 /area/shuttle/escape)
 "Gb" = (
@@ -13668,12 +13667,7 @@
 /turf/open/floor/plasteel/freezer,
 /area/centcom/ferry)
 "IF" = (
-/obj/structure/sink{
-	dir = 8;
-	icon_state = "sink";
-	pixel_x = -12;
-	pixel_y = 2
-	},
+/obj/structure/closet/secure_closet/medical2,
 /turf/open/floor/plasteel{
 	dir = 4;
 	icon_state = "whitehall"
@@ -13686,12 +13680,7 @@
 	},
 /area/centcom/evac)
 "IH" = (
-/obj/structure/closet/wall{
-	dir = 8;
-	icon_state = "w_closet";
-	pixel_x = 28;
-	tag = "icon-w_closet (WEST)"
-	},
+/obj/structure/closet/crate/freezer/blood,
 /turf/open/floor/plasteel{
 	tag = "icon-whitehall (WEST)";
 	icon_state = "whitehall";
@@ -18949,14 +18938,16 @@
 /turf/open/floor/plasteel/freezer,
 /area/centcom/ferry)
 "TM" = (
-/turf/open/floor/plasteel{
-	icon_state = "whitehall";
-	dir = 1
+/obj/structure/sink{
+	dir = 8;
+	icon_state = "sink";
+	pixel_x = -12;
+	pixel_y = 2
 	},
+/turf/open/floor/plasteel/whitebot,
 /area/centcom/evac)
 "TN" = (
-/obj/structure/closet/crate/freezer/blood,
-/turf/open/floor/plasteel,
+/turf/open/space,
 /area/centcom/evac)
 "TO" = (
 /obj/structure/hyper_sleep{
@@ -44152,7 +44143,7 @@ TL
 TL
 TL
 TP
-Lm
+Ln
 Lx
 LL
 LV
@@ -45180,7 +45171,7 @@ aa
 aa
 aa
 HB
-Lm
+Ln
 Lx
 LL
 LV
@@ -45420,9 +45411,9 @@ Ba
 Cl
 Aa
 Ba
-DE
-DE
-DE
+Cr
+Cr
+Cr
 Ba
 Aa
 Aa
@@ -45675,13 +45666,13 @@ Bb
 Bu
 BR
 Cm
-CD
+Cr
 CW
-DE
+Cr
 Ei
-DE
+Cr
 CW
-CD
+Aa
 aa
 aa
 aa
@@ -46975,7 +46966,7 @@ Aa
 Aa
 Aa
 Aa
-Aa
+TN
 aa
 aa
 aa
@@ -47229,10 +47220,10 @@ Sh
 Aa
 He
 HG
-Tb
+TM
 IF
-Jk
 Aa
+TN
 aa
 aa
 aa
@@ -47488,8 +47479,8 @@ SC
 HH
 HH
 HH
-TM
 Aa
+TN
 aa
 aa
 aa
@@ -47742,11 +47733,11 @@ CF
 Sk
 Aa
 SD
-SI
+HH
 Tc
 IG
-HH
 Aa
+TN
 aa
 aa
 aa
@@ -48002,8 +47993,8 @@ Hf
 HH
 HH
 HH
-TM
 Aa
+TN
 aa
 aa
 aa
@@ -48259,8 +48250,8 @@ Hg
 HJ
 HH
 IH
-TN
 Aa
+TN
 aa
 aa
 aa
@@ -48517,7 +48508,7 @@ Aa
 Td
 Aa
 Aa
-Aa
+TN
 aa
 aa
 aa

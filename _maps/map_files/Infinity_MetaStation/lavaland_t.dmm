@@ -944,8 +944,9 @@
 /area/mine/lobby)
 "cO" = (
 /obj/machinery/power/smes{
-	charge = 2e+006;
-	output_level = 100000
+	charge = 1e+006;
+	input_level = 4000;
+	output_level = 3500
 	},
 /obj/structure/cable{
 	d2 = 8;
@@ -1065,9 +1066,9 @@
 	pixel_x = 27;
 	pixel_y = 0
 	},
-/obj/structure/rack,
-/obj/item/weapon/mop,
-/obj/item/weapon/reagent_containers/glass/bucket,
+/obj/machinery/power/port_gen/pacman{
+	anchored = 1
+	},
 /turf/open/floor/plating/lavaland,
 /area/mine/lobby)
 "dc" = (
@@ -1186,16 +1187,10 @@
 /area/mine/lobby)
 "do" = (
 /obj/structure/cable{
-	d1 = 0;
-	d2 = 1;
-	icon_state = "1-2";
-	pixel_y = 0;
-	tag = "icon-1-2"
-	},
-/obj/structure/rack,
-/obj/item/weapon/storage/toolbox/mechanical{
-	pixel_x = -2;
-	pixel_y = -1
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4";
+	tag = "90Curve"
 	},
 /turf/open/floor/plating/lavaland,
 /area/mine/lobby)
@@ -1310,6 +1305,13 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 5
 	},
+/obj/machinery/power/apc{
+	dir = 8;
+	name = "Mining Staion's APC";
+	pixel_x = -27;
+	pixel_y = 2
+	},
+/obj/structure/cable,
 /turf/open/floor/plating/lavaland,
 /area/mine/lobby)
 "dC" = (
@@ -1320,13 +1322,15 @@
 /area/mine/lobby)
 "dD" = (
 /obj/machinery/light/small,
+/obj/structure/rack,
+/obj/item/weapon/storage/toolbox/mechanical{
+	pixel_x = -2;
+	pixel_y = -1
+	},
 /turf/open/floor/plating/lavaland,
 /area/mine/lobby)
 "dE" = (
-/obj/machinery/power/port_gen/pacman{
-	anchored = 1
-	},
-/obj/structure/cable,
+/obj/structure/closet/radiation,
 /turf/open/floor/plating/lavaland,
 /area/mine/lobby)
 "dF" = (
@@ -1657,29 +1661,29 @@
 	},
 /area/lavaland/surface/outdoors)
 "eg" = (
+/obj/machinery/power/rtg/advanced,
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
 	},
-/turf/open/floor/plasteel/terror/necro/blackvault/outdoor{
-	tag = "icon-vault (WEST)";
-	icon_state = "vault";
-	dir = 8
-	},
-/area/lavaland/surface/outdoors)
+/turf/open/floor/plasteel/terror/necro/darkwarning,
+/area/mine/lobby)
 "eh" = (
 /obj/structure/cable{
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/open/floor/plasteel/terror/necro/blackvault/outdoor{
+/obj/machinery/door/airlock/highsecurity{
+	name = "Radioisotope Thermoelectric Generator"
+	},
+/turf/open/floor/plasteel/terror/necro/darkvault{
 	tag = "icon-vault (WEST)";
 	icon_state = "vault";
 	dir = 8
 	},
-/area/lavaland/surface/outdoors)
+/area/mine/lobby)
 "ei" = (
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden{
 	dir = 8;
@@ -1830,9 +1834,10 @@
 /area/mine/sleeper)
 "ev" = (
 /obj/structure/cable{
-	d1 = 4;
+	d1 = 2;
 	d2 = 8;
-	icon_state = "4-8"
+	icon_state = "2-8";
+	tag = ""
 	},
 /obj/structure/cable{
 	d1 = 1;
@@ -1840,41 +1845,42 @@
 	icon_state = "1-8";
 	tag = ""
 	},
-/turf/open/floor/plasteel/terror/necro/blackvault/outdoor{
-	tag = "icon-vault (WEST)";
-	icon_state = "vault";
-	dir = 8
-	},
-/area/lavaland/surface/outdoors)
-"ew" = (
 /obj/structure/cable{
-	icon_state = "1-8"
-	},
-/obj/structure/cable{
-	tag = "icon-2-8";
-	icon_state = "2-8"
-	},
-/obj/machinery/door/airlock/glass_maintenance{
-	name = "Mining Base Alpha";
-	req_access_txt = "54"
-	},
-/turf/open/floor/plasteel/terror/necro/blackvault/outdoor{
-	tag = "icon-vault (WEST)";
-	icon_state = "vault";
-	dir = 8
-	},
-/area/lavaland/surface/outdoors)
-"ex" = (
-/obj/machinery/floodlight,
-/obj/structure/window/reinforced{
-	dir = 8
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
 /turf/open/floor/plasteel/terror/necro/darkvault{
 	tag = "icon-vault (WEST)";
 	icon_state = "vault";
 	dir = 8
 	},
-/area/lavaland/surface/outdoors)
+/area/mine/lobby)
+"ew" = (
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8";
+	tag = ""
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8";
+	tag = ""
+	},
+/turf/open/floor/plasteel/terror/necro/darkvault{
+	tag = "icon-vault (WEST)";
+	icon_state = "vault";
+	dir = 8
+	},
+/area/mine/lobby)
+"ex" = (
+/obj/structure/sign/radiation,
+/turf/closed/wall/r_wall{
+	baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
+	},
+/area/mine/lobby)
 "ey" = (
 /obj/machinery/light{
 	icon_state = "tube1";
@@ -2101,24 +2107,14 @@
 	},
 /area/mine/eva)
 "eM" = (
-/obj/structure/fans/tiny/invisible,
-/obj/machinery/door/airlock/glass_external{
-	name = "Mining External Airlock";
-	req_access_txt = "54"
+/obj/machinery/power/rtg/advanced,
+/obj/structure/cable,
+/turf/open/floor/plasteel/terror/necro/darkwarning{
+	tag = "icon-warndark (NORTH)";
+	icon_state = "warndark";
+	dir = 1
 	},
-/obj/structure/cable{
-	d1 = 0;
-	d2 = 1;
-	icon_state = "1-2";
-	pixel_y = 0;
-	tag = "icon-1-2"
-	},
-/turf/open/floor/plasteel/terror/necro/darkvault{
-	tag = "icon-vault (WEST)";
-	icon_state = "vault";
-	dir = 8
-	},
-/area/mine/eva)
+/area/mine/lobby)
 "eN" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/machinery/door/firedoor/border_only,
@@ -2169,54 +2165,39 @@
 	},
 /area/mine/eva)
 "eS" = (
-/obj/structure/ore_box,
-/obj/machinery/newscaster{
-	pixel_y = 32
+/obj/structure/sign/securearea{
+	desc = "A warning sign which reads 'HIGH VOLTAGE'";
+	icon_state = "shock";
+	name = "HIGH VOLTAGE";
+	pixel_y = 0
 	},
-/obj/machinery/camera{
-	c_tag = "EVA - lava";
-	dir = 4;
-	network = list("MINE")
+/turf/closed/wall/r_wall{
+	baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
 	},
-/turf/open/floor/plasteel/terror/necro/black,
 /area/mine/eva)
 "eT" = (
-/obj/structure/fans/tiny/invisible,
+/obj/effect/spawner/structure/window/reinforced,
 /obj/structure/cable{
-	d1 = 0;
-	d2 = 1;
-	icon_state = "1-2";
-	pixel_y = 0;
-	tag = "icon-1-2"
+	tag = "icon-2-4";
+	icon_state = "2-4"
 	},
-/turf/open/floor/plasteel/terror/necro/darkvault{
-	tag = "icon-vault (WEST)";
-	icon_state = "vault";
-	dir = 8
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
 	},
+/turf/open/floor/plating/lavaland/outdoor,
 /area/mine/eva)
 "eU" = (
-/obj/item/device/radio/intercom{
-	broadcasting = 0;
-	listening = 1;
-	name = "Station Intercom (General)";
-	pixel_y = 20
+/obj/effect/spawner/structure/window/reinforced,
+/obj/structure/cable{
+	tag = "icon-0-8";
+	icon_state = "0-8"
 	},
-/obj/structure/table,
-/turf/open/floor/plasteel/blackvault/corner{
-	tag = "icon-tvaultcorner (WEST)";
-	icon_state = "tvaultcorner";
-	dir = 8
-	},
+/turf/open/floor/plating/lavaland/outdoor,
 /area/mine/eva)
 "eV" = (
-/obj/structure/table,
-/obj/item/weapon/paper/miners_oper,
-/turf/open/floor/plasteel/blackvault{
-	tag = "icon-tvault (NORTHEAST)";
-	icon_state = "tvault";
-	dir = 5
-	},
+/turf/open/floor/plasteel/terror/necro/black/outdoor,
 /area/mine/eva)
 "eW" = (
 /obj/machinery/light,
@@ -2492,19 +2473,20 @@
 	},
 /area/mine/eva)
 "fp" = (
-/obj/machinery/light{
-	dir = 8
+/obj/item/device/radio/intercom{
+	broadcasting = 0;
+	listening = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 20
 	},
 /obj/structure/ore_box,
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 4
+/turf/open/floor/plasteel/terror/necro/blackvault/outdoor{
+	tag = "icon-vault (WEST)";
+	icon_state = "vault";
+	dir = 8
 	},
-/turf/open/floor/plasteel/terror/necro/black,
 /area/mine/eva)
 "fq" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 4
-	},
 /obj/structure/cable{
 	d1 = 0;
 	d2 = 1;
@@ -2512,34 +2494,37 @@
 	pixel_y = 0;
 	tag = "icon-1-2"
 	},
-/turf/open/floor/plasteel/terror/necro/darkvault{
-	tag = "icon-vault (WEST)";
-	icon_state = "vault";
-	dir = 8
-	},
+/obj/structure/chair,
+/turf/open/floor/plasteel/terror/necro/black/outdoor,
 /area/mine/eva)
 "fr" = (
-/obj/machinery/atmospherics/components/unary/vent_pump{
-	dir = 8;
-	on = 1
-	},
-/turf/open/floor/plasteel/terror/necro/black,
+/obj/structure/chair,
+/turf/open/floor/plasteel/terror/necro/black/outdoor,
 /area/mine/eva)
 "fs" = (
-/obj/structure/chair{
-	tag = "icon-chair (WEST)";
-	icon_state = "chair";
-	dir = 8
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4";
+	tag = ""
 	},
-/turf/open/floor/plasteel/blackvault{
-	tag = "icon-tvault (EAST)";
-	icon_state = "tvault";
-	dir = 4
+/obj/structure/table,
+/obj/item/weapon/paper/miners_oper,
+/obj/machinery/newscaster{
+	pixel_y = 32
 	},
+/turf/open/floor/plasteel/terror/necro/black/outdoor,
 /area/mine/eva)
 "ft" = (
-/obj/effect/spawner/structure/window/reinforced,
-/turf/open/floor/plating/lavaland,
+/obj/structure/grille{
+	health = 100;
+	name = "heavy grille"
+	},
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/turf/open/floor/plating/lavaland/outdoor,
 /area/mine/eva)
 "fu" = (
 /obj/effect/spawner/structure/window/reinforced,
@@ -2767,14 +2752,25 @@
 	},
 /area/mine/eva)
 "fP" = (
-/turf/open/floor/plasteel/terror/necro/black,
+/obj/structure/ore_box,
+/turf/open/floor/plasteel/terror/necro/blackvault/outdoor{
+	tag = "icon-vault (WEST)";
+	icon_state = "vault";
+	dir = 8
+	},
 /area/mine/eva)
 "fQ" = (
-/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
-/turf/open/floor/plasteel/warningline{
-	dir = 1
+/obj/structure/cable{
+	d1 = 0;
+	d2 = 1;
+	icon_state = "1-2"
 	},
-/area/lavaland/surface/outdoors)
+/turf/open/floor/plasteel/terror/necro/darkwarning/outdoor{
+	tag = "icon-warndark (EAST)";
+	icon_state = "warndark";
+	dir = 4
+	},
+/area/mine/eva)
 "fR" = (
 /obj/docking_port/stationary{
 	area_type = /area/lavaland/surface/outdoors;
@@ -3082,10 +3078,6 @@
 	},
 /area/mine/eva)
 "gm" = (
-/obj/machinery/door/airlock/external{
-	name = "Mining External Airlock";
-	req_access_txt = "54"
-	},
 /obj/structure/cable{
 	d1 = 4;
 	d2 = 8;
@@ -3096,6 +3088,10 @@
 /obj/structure/fans/tiny/invisible,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
+	},
+/obj/machinery/door/airlock/glass_external{
+	name = "Mining External Airlock";
+	req_access_txt = "54"
 	},
 /turf/open/floor/plasteel/terror/necro/darkvault{
 	icon = 'icons/turf/infinity.dmi';
@@ -3116,6 +3112,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
+/obj/structure/fans/tiny/invisible,
 /turf/open/floor/plasteel/terror/necro/darkwarning{
 	tag = "icon-warndark (EAST)";
 	icon_state = "warndark";
@@ -3123,10 +3120,6 @@
 	},
 /area/mine/eva)
 "go" = (
-/obj/machinery/door/airlock/external{
-	name = "Mining External Airlock";
-	req_access_txt = "54"
-	},
 /obj/structure/cable{
 	tag = "icon-4-8";
 	icon_state = "4-8"
@@ -3135,6 +3128,10 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
+/obj/machinery/door/airlock/glass_external{
+	name = "Mining External Airlock";
+	req_access_txt = "54"
+	},
 /turf/open/floor/plasteel/terror/necro/darkvault{
 	icon = 'icons/turf/infinity.dmi';
 	icon_state = "darkdelivery"
@@ -3142,43 +3139,37 @@
 /area/mine/eva)
 "gp" = (
 /obj/structure/cable{
+	tag = "icon-4-8";
+	icon_state = "4-8"
+	},
+/obj/structure/cable{
 	tag = "icon-2-8";
 	icon_state = "2-8"
 	},
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
-	dir = 4
+/turf/open/floor/plasteel/terror/necro/black/outdoor,
+/area/mine/eva)
+"gq" = (
+/obj/structure/cable{
+	tag = "icon-2-8";
+	icon_state = "2-8"
+	},
+/obj/structure/cable{
+	icon_state = "1-8"
 	},
 /obj/structure/cable{
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/open/floor/plasteel/terror/necro/darkvault{
-	tag = "icon-vault (WEST)";
-	icon_state = "vault";
-	dir = 8
-	},
-/area/mine/eva)
-"gq" = (
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
-	dir = 4
-	},
-/obj/structure/cable{
-	icon_state = "1-8"
-	},
-/turf/open/floor/plasteel/terror/necro/darkvault{
-	tag = "icon-vault (WEST)";
-	icon_state = "vault";
-	dir = 8
-	},
+/turf/open/floor/plasteel/terror/necro/black/outdoor,
 /area/mine/eva)
 "gr" = (
-/obj/machinery/atmospherics/components/unary/vent_scrubber{
-	dir = 8;
-	on = 1;
-	scrub_Toxins = 0
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
-/turf/open/floor/plasteel/terror/necro/black,
+/turf/open/floor/plasteel/terror/necro/black/outdoor,
 /area/mine/eva)
 "gs" = (
 /obj/effect/spawner/structure/window/reinforced,
@@ -3343,6 +3334,26 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 5
 	},
+/obj/item/weapon/extinguisher/mini{
+	pixel_x = -10;
+	pixel_y = 3
+	},
+/obj/item/weapon/extinguisher/mini{
+	pixel_x = -6;
+	pixel_y = 3
+	},
+/obj/item/weapon/extinguisher/mini{
+	pixel_x = -2;
+	pixel_y = 3
+	},
+/obj/item/weapon/extinguisher/mini{
+	pixel_x = 2;
+	pixel_y = 3
+	},
+/obj/item/weapon/extinguisher/mini{
+	pixel_x = 2;
+	pixel_y = 3
+	},
 /turf/open/floor/plasteel/terror/necro/black,
 /area/mine/eva)
 "gG" = (
@@ -3383,6 +3394,11 @@
 	},
 /area/mine/eva)
 "gJ" = (
+/obj/machinery/camera{
+	c_tag = "EVA - lava";
+	dir = 4;
+	network = list("MINE")
+	},
 /obj/machinery/mech_bay_recharge_port,
 /obj/structure/cable,
 /obj/machinery/airalarm{
@@ -3392,6 +3408,13 @@
 /turf/open/floor/plating/lavaland,
 /area/mine/eva)
 "gK" = (
+/obj/structure/cable{
+	d1 = 0;
+	d2 = 1;
+	icon_state = "1-2";
+	pixel_y = 0;
+	tag = "icon-1-2"
+	},
 /turf/open/floor/mech_bay_recharge_floor{
 	icon = 'icons/turf/infinity.dmi';
 	icon_state = "recharge_floor_black"
@@ -3399,23 +3422,37 @@
 /area/mine/eva)
 "gL" = (
 /obj/machinery/computer/mech_bay_power_console,
-/turf/open/floor/plasteel/terror/necro/black,
+/turf/open/floor/plasteel/terror/necro/blackvault/outdoor{
+	tag = "icon-vault (WEST)";
+	icon_state = "vault";
+	dir = 8
+	},
 /area/mine/eva)
 "gM" = (
-/obj/structure/rack,
-/obj/item/weapon/extinguisher/mini{
-	pixel_x = 3;
-	pixel_y = 9
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4";
+	tag = "90Curve"
 	},
-/obj/item/weapon/extinguisher/mini{
-	pixel_x = -1;
-	pixel_y = 7
+/obj/structure/table,
+/obj/item/weapon/storage/book/bible{
+	pixel_x = -6;
+	pixel_y = 3
 	},
-/obj/item/weapon/extinguisher/mini{
-	pixel_x = -5;
-	pixel_y = 5
+/obj/item/weapon/storage/book/bible{
+	pixel_x = 0;
+	pixel_y = 3
 	},
-/turf/open/floor/plasteel/terror/necro/black,
+/obj/item/weapon/storage/book/bible{
+	pixel_x = 6;
+	pixel_y = 3
+	},
+/turf/open/floor/plasteel/terror/necro/blackvault/outdoor{
+	tag = "icon-vault (WEST)";
+	icon_state = "vault";
+	dir = 8
+	},
 /area/mine/eva)
 "gN" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
@@ -3975,18 +4012,12 @@
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/lavaland/surface/outdoors)
 "hQ" = (
-/obj/structure/grille{
-	health = 100;
-	name = "heavy grille"
+/obj/machinery/door/airlock/glass_maintenance{
+	name = "Mining Base Alpha";
+	req_access_txt = "54"
 	},
-/obj/structure/cable{
-	d1 = 0;
-	d2 = 1;
-	icon_state = "1-2"
-	},
-/obj/structure/cable,
-/turf/open/floor/plating/lavaland/outdoor,
-/area/lavaland/surface/outdoors)
+/turf/open/floor/plasteel/terror/necro/black/outdoor,
+/area/mine/eva)
 "hR" = (
 /turf/closed/wall/r_wall{
 	baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
@@ -4310,26 +4341,32 @@
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/mine/shelter/ash)
 "iu" = (
-/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
-/obj/machinery/shower{
-	tag = "icon-shower (NORTH)";
-	icon_state = "shower";
-	dir = 1;
-	pixel_x = 5
+/obj/structure/cable{
+	icon_state = "1-8"
 	},
-/turf/open/floor/plasteel/warningline{
-	dir = 8
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8";
+	tag = ""
 	},
-/area/lavaland/surface/outdoors)
+/turf/open/floor/plasteel/terror/necro/darkwarning/outdoor{
+	tag = "icon-warndark (EAST)";
+	icon_state = "warndark";
+	dir = 4
+	},
+/area/mine/eva)
 "iv" = (
-/obj/structure/grille{
-	health = 100;
-	name = "heavy grille"
+/obj/effect/spawner/structure/window/reinforced,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4";
+	tag = "90Curve"
 	},
 /obj/structure/cable,
-/obj/structure/sign/electricshock,
 /turf/open/floor/plating/lavaland/outdoor,
-/area/lavaland/surface/outdoors)
+/area/mine/eva)
 "iw" = (
 /obj/item/device/gps/computer{
 	density = 0;
@@ -4349,15 +4386,16 @@
 	pixel_y = 0;
 	tag = "icon-1-2"
 	},
-/turf/open/floor/plasteel/terror/necro/darkvault{
-	tag = "icon-vault (WEST)";
-	icon_state = "vault";
-	dir = 8
-	},
+/turf/open/floor/plasteel/terror/necro/black/outdoor,
 /area/mine/eva)
 "iy" = (
-/turf/closed/wall/mineral/cult,
-/area/mine/shelter/ash)
+/obj/effect/spawner/structure/window/reinforced,
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/turf/open/floor/plating/lavaland/outdoor,
+/area/mine/eva)
 "iz" = (
 /obj/effect/mob_spawn/human/ash_walker,
 /turf/open/floor/plasteel/terror/necro/cult/outdoor,
@@ -19754,8 +19792,8 @@ bw
 cy
 cy
 cy
-cy
-cy
+eh
+ex
 dO
 eb
 es
@@ -20009,10 +20047,10 @@ aQ
 aQ
 aQ
 aQ
-aQ
-aQ
-an
-an
+cy
+eg
+ev
+eM
 dO
 ec
 et
@@ -20266,10 +20304,10 @@ aQ
 aQ
 aQ
 aQ
-aQ
-aQ
-aQ
-aQ
+cy
+eg
+ew
+eM
 dO
 ed
 eu
@@ -20523,10 +20561,10 @@ aQ
 aQ
 aQ
 aQ
-aQ
-aQ
-aQ
-aQ
+cy
+cy
+cy
+cy
 dO
 dO
 dO
@@ -21038,7 +21076,7 @@ aQ
 aQ
 aQ
 cp
-bw
+aQ
 aQ
 an
 bw
@@ -21295,7 +21333,7 @@ aQ
 aQ
 aQ
 aQ
-bw
+aQ
 aQ
 aQ
 cp
@@ -21552,13 +21590,13 @@ aQ
 aQ
 aQ
 aQ
-bw
-an
 aQ
 aQ
 aQ
 aQ
-eR
+aQ
+aQ
+aQ
 eR
 fo
 fN
@@ -21806,17 +21844,17 @@ aP
 aP
 aQ
 aQ
+aQ
+aQ
 an
-an
-bl
-bw
-cm
-bT
-ee
-ex
-ex
+aQ
+aQ
+aQ
+aQ
+aQ
+aQ
+aQ
 eR
-eS
 fp
 fP
 gp
@@ -22065,20 +22103,20 @@ an
 an
 an
 an
-bm
 an
-cn
-ci
-eg
-bY
-bY
-eM
+an
+aQ
+aQ
+aQ
+aQ
+aQ
+aQ
 eT
 fq
 ix
 gq
 gK
-ft
+iv
 aQ
 aQ
 aQ
@@ -22322,20 +22360,20 @@ an
 an
 an
 an
-bm
-bT
-dF
-ci
-eh
-ef
-iu
-eR
+an
+an
+an
+aQ
+aQ
+aQ
+aQ
+aQ
 eU
 fr
-fP
+eV
 gr
 gL
-ft
+iy
 aQ
 aQ
 aQ
@@ -22579,20 +22617,20 @@ an
 an
 an
 an
-bn
-bY
-bY
-bY
-ev
-fQ
 an
+aQ
+aQ
+aQ
+aQ
+aQ
+aQ
+aQ
 eR
-eV
 fs
-fs
-fs
+fQ
+iu
 gM
-eL
+eR
 aQ
 aQ
 aQ
@@ -22836,20 +22874,20 @@ an
 an
 an
 an
-bo
-ci
-ci
-ci
-eh
-fQ
 an
-eR
-eR
+aQ
+aQ
+cp
+bw
+bw
+an
+aQ
+eS
 ft
+hQ
+hQ
 ft
-ft
-eR
-eR
+eS
 aQ
 aQ
 aQ
@@ -23093,20 +23131,20 @@ an
 an
 an
 an
-bq
-cj
-ch
-ci
-eh
-fQ
-an
 an
 aQ
 aQ
 aQ
 aQ
-aQ
-aQ
+an
+an
+an
+cQ
+an
+an
+an
+an
+an
 aQ
 aQ
 aQ
@@ -23350,21 +23388,21 @@ an
 an
 an
 an
-bq
-an
-dP
-ci
-eh
-fQ
+aQ
+aQ
+aQ
+aQ
 an
 an
 an
-bw
-aQ
-aQ
-aQ
-aQ
-aQ
+an
+an
+an
+an
+an
+an
+an
+an
 aQ
 aQ
 aQ
@@ -23607,14 +23645,21 @@ aP
 an
 an
 an
-br
-an
-cn
-ci
-eh
-fQ
-an
 aQ
+aQ
+aQ
+an
+an
+an
+an
+an
+an
+an
+an
+an
+an
+an
+an
 bw
 bw
 aQ
@@ -23622,13 +23667,6 @@ aQ
 aQ
 aQ
 aQ
-aQ
-aQ
-aQ
-aQ
-aQ
-an
-an
 aQ
 aQ
 aQ
@@ -23864,28 +23902,28 @@ aP
 aP
 an
 an
-cP
-ck
-ck
-dQ
-ew
-hQ
-iv
-aQ
-aQ
-cp
-aQ
-aQ
-aQ
-aQ
-aQ
-aQ
-aQ
-aQ
+an
 aQ
 aQ
 an
 an
+an
+an
+an
+an
+an
+an
+an
+an
+an
+an
+aQ
+bw
+aQ
+aQ
+aQ
+aQ
+aQ
 aQ
 aQ
 aQ
@@ -24121,29 +24159,29 @@ aP
 aP
 an
 an
-cQ
 an
 an
 an
 an
 an
 an
-aQ
-aQ
-aQ
-aQ
-aQ
-aQ
-aQ
-aQ
-aQ
-aQ
-aQ
-aQ
 an
 an
 an
 an
+an
+an
+an
+an
+aQ
+aQ
+cp
+aQ
+aQ
+aQ
+aQ
+aQ
+aQ
 aQ
 aQ
 an
@@ -24375,10 +24413,16 @@ an
 aP
 aP
 aP
+aP
+aP
 an
 an
 an
 an
+an
+an
+an
+aP
 an
 an
 an
@@ -24395,12 +24439,6 @@ aQ
 aQ
 aQ
 aQ
-aQ
-aQ
-an
-an
-an
-an
 an
 an
 an
@@ -24633,10 +24671,16 @@ an
 aP
 aP
 aP
+aP
 an
 an
 an
 an
+an
+an
+aP
+aP
+aP
 an
 an
 an
@@ -24652,12 +24696,6 @@ aQ
 aQ
 aQ
 aQ
-aQ
-aQ
-an
-an
-an
-an
 an
 an
 an
@@ -24896,24 +24934,24 @@ aP
 an
 an
 an
+aP
+aP
+aP
 an
 an
 an
 an
-aQ
-aQ
-aQ
-aQ
-aQ
-aQ
-aQ
-aQ
-aQ
-aQ
-aQ
 an
 an
-an
+aQ
+aQ
+aQ
+aQ
+aQ
+aQ
+aQ
+aQ
+aQ
 an
 an
 an
@@ -25153,24 +25191,24 @@ an
 an
 an
 an
+aP
+aP
 an
 an
 an
 an
-aQ
-aQ
-aQ
-aQ
-aQ
-aQ
-aQ
-aQ
-aQ
-aQ
-aQ
-aQ
 an
 an
+aQ
+aQ
+aQ
+aQ
+aQ
+aQ
+aQ
+aQ
+aQ
+aQ
 an
 an
 an
@@ -25409,9 +25447,9 @@ an
 an
 an
 an
-an
-an
-an
+aP
+aP
+aP
 an
 an
 an
@@ -25425,8 +25463,8 @@ aQ
 aQ
 aQ
 an
-an
-an
+aQ
+aQ
 an
 an
 an
@@ -25667,7 +25705,7 @@ an
 an
 an
 an
-an
+aP
 an
 an
 aP
@@ -25682,7 +25720,7 @@ aQ
 aQ
 aQ
 an
-an
+aQ
 an
 an
 an
@@ -25936,7 +25974,7 @@ aQ
 aQ
 aQ
 aQ
-an
+aQ
 an
 an
 an
@@ -27209,12 +27247,12 @@ an
 aP
 aP
 aP
+an
+an
 aP
 aP
-aP
-aP
-aP
-aP
+an
+an
 aP
 aP
 aP
@@ -27466,12 +27504,12 @@ aP
 aP
 aP
 aP
+an
+an
+an
 aP
 aP
-aP
-aP
-aP
-aP
+an
 aP
 aP
 aP
@@ -27725,10 +27763,10 @@ aP
 aP
 aP
 aP
+an
 aP
-aP
-aP
-aP
+an
+an
 aP
 aP
 aP
@@ -27982,10 +28020,10 @@ an
 aP
 aP
 aP
-aP
-aP
-aP
-aP
+an
+an
+an
+an
 aP
 aP
 aP
@@ -28241,7 +28279,7 @@ aP
 aP
 aP
 aP
-aP
+an
 aP
 aP
 aP
@@ -37135,8 +37173,8 @@ aa
 aa
 aa
 aa
-iy
-iy
+aI
+aI
 aI
 an
 an
@@ -37390,9 +37428,9 @@ aa
 aa
 aa
 aa
-iy
-iy
-iy
+aI
+aI
+aI
 ak
 aI
 aI
@@ -37647,7 +37685,7 @@ aa
 aa
 aa
 aa
-iy
+aI
 iz
 aj
 ad
@@ -37904,7 +37942,7 @@ aa
 aa
 aa
 aa
-iy
+aI
 iz
 ad
 as
@@ -38161,7 +38199,7 @@ aa
 aa
 aa
 aa
-iy
+aI
 iA
 ad
 aH
@@ -38418,7 +38456,7 @@ aa
 aa
 aa
 aa
-iy
+aI
 ad
 ad
 aH
@@ -38675,7 +38713,7 @@ aa
 aa
 aa
 aa
-iy
+aI
 iB
 iz
 ad
@@ -38932,9 +38970,9 @@ aP
 aa
 aa
 aa
-iy
-iy
-iy
+aI
+aI
+aI
 ae
 aI
 aI
@@ -38942,8 +38980,8 @@ an
 an
 aI
 aI
-aI
 aH
+aI
 aI
 aI
 an
@@ -39191,8 +39229,8 @@ aa
 aa
 aa
 aa
-iy
-iy
+aI
+aI
 aI
 an
 an
@@ -39710,14 +39748,14 @@ aa
 aa
 an
 an
-iy
+aI
 aI
 aI
 aH
 aH
-iy
-iy
-iy
+aI
+aI
+aI
 an
 aa
 aa
@@ -39967,7 +40005,7 @@ aa
 aa
 an
 an
-iy
+aI
 ad
 ad
 ad
@@ -40224,14 +40262,14 @@ aa
 aa
 aa
 an
-iy
+aI
 aH
 aY
 aH
 ad
 aY
 ad
-iy
+aI
 aa
 aa
 aa
@@ -40995,14 +41033,14 @@ aa
 aa
 aa
 aa
-iy
+aI
 aN
 aH
 aH
 bd
 aH
 ad
-iy
+aI
 aa
 aa
 aa
@@ -41509,7 +41547,7 @@ aa
 aa
 aa
 aa
-iy
+aI
 ad
 aH
 cR
@@ -41766,13 +41804,13 @@ aa
 aa
 aa
 aa
-iy
 aI
 aI
-iy
-iy
 aI
-iy
+aI
+aI
+aI
+aI
 aI
 aa
 aa
