@@ -265,6 +265,7 @@
 		if("reason")
 			if(!value)
 				value = input("Insert the new reason for [pckey]'s ban", "New Reason", "[reason]", null) as null|text
+				value = sanitize_a0(value)
 				value = sanitizeSQL(value)
 				if(!value)
 					usr << "Cancelled"
