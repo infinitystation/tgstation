@@ -494,12 +494,14 @@
 				minutes = CMinutes + mins
 				duration = GetExp(minutes)
 				reason = input(usr,"Please State Reason.","Reason",reason2) as message
+				reason = sanitize_a0(reason)
 				if(!reason)
 					return
 			if("No")
 				temp = 0
 				duration = "Perma"
 				reason = input(usr,"Please State Reason.","Reason",reason2) as message
+				reason = sanitize_a0(reason)
 				if(!reason)
 					return
 
@@ -543,6 +545,7 @@
 		else switch(alert("Appearance ban [M.ckey]?",,"Yes","No", "Cancel"))
 			if("Yes")
 				var/reason = input(usr,"Please State Reason.","Reason") as message
+				reason = sanitize_a0(reason)
 				if(!reason)
 					return
 				ban_unban_log_save("[key_name(usr)] appearance banned [key_name(M)]. reason: [reason]")
@@ -980,6 +983,7 @@
 					if(!mins)
 						return
 					var/reason = input(usr,"Please State Reason.","Reason") as message
+					reason = sanitize_a0(reason)
 					if(!reason)
 						return
 
@@ -1005,6 +1009,7 @@
 					return 1
 				if("No")
 					var/reason = input(usr,"Please State Reason","Reason") as message
+					reason = sanitize_a0(reason)
 					if(reason)
 						var/msg
 						for(var/job in notbannedlist)
