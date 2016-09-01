@@ -71,7 +71,7 @@
 		last_message = message
 		src.last_message_count = 0
 		return 0
-
+/*
 //This stops files larger than UPLOAD_LIMIT being sent from client to server via input(), client.Import() etc.
 /client/AllowUpload(filename, filelength)
 	if(filelength > UPLOAD_LIMIT)
@@ -85,7 +85,7 @@
 		return 0
 	fileaccess_timer = world.time + FTPDELAY	*/
 	return 1
-
+*/
 
 	///////////
 	//CONNECT//
@@ -156,7 +156,7 @@ var/next_external_rsc = 0
 		src.banprisoned = 1
 		prefs.muted |= MUTE_OOC | MUTE_PRAY | MUTE_DEADCHAT | MUTE_ADMINHELP
 		prefs.be_special = list()
-		message_admins("<span class='adminnotice'><b><font color=red>ВСТРЕЧАЙ ЗЭКА! </font>Byond login: [key_name_admin(src)].</span>")
+		message_admins("<span class='adminnotice'><b><font color=red>Г‚Г‘Г’ГђГ…Г—ГЂГ‰ Г‡ГќГЉГЂ! </font>Byond login: [key_name_admin(src)].</span>")
 
 	. = ..()	//calls mob.Login()
 
@@ -211,14 +211,14 @@ var/next_external_rsc = 0
 			return 0
 
 		if (config.notify_new_player_age >= 0)
-			message_admins("<span class='adminnotice'><b><font color=red>К серверу присоединилсЯ игрок. </font>Byond login: [key_name(src)]. ВНИМАНИЕ - ПЕРВЫЙ РАЗ В ЖИЗНИ НА СЕРВЕРЕ. IP: [address]</span>")
+			message_admins("<span class='adminnotice'><b><font color=red>ГЉ Г±ГҐГ°ГўГҐГ°Гі ГЇГ°ГЁГ±Г®ГҐГ¤ГЁГ­ГЁГ«Г±Гџ ГЁГЈГ°Г®ГЄ. </font>Byond login: [key_name(src)]. Г‚ГЌГ€ГЊГЂГЌГ€Г… - ГЏГ…ГђГ‚Г›Г‰ ГђГЂГ‡ Г‚ Г†Г€Г‡ГЌГ€ ГЌГЂ Г‘Г…ГђГ‚Г…ГђГ…. IP: [address]</span>")
 			if (config.irc_first_connection_alert)
 				send2irc_adminless_only("New-user", "[key_name(src)] is connecting for the first time!")
 
 		player_age = 0 // set it from -1 to 0 so the job selection code doesn't have a panic attack
 
 	else if (isnum(player_age) && player_age < config.notify_new_player_age)
-		message_admins("<span class='adminnotice'><b><font color=red>К серверу присоединилсЯ игрок. </font>Byond login: [key_name_admin(src)]. В первые был на сервере [player_age] дней назад. IP: [address]</span>")
+		message_admins("<span class='adminnotice'><b><font color=red>ГЉ Г±ГҐГ°ГўГҐГ°Гі ГЇГ°ГЁГ±Г®ГҐГ¤ГЁГ­ГЁГ«Г±Гџ ГЁГЈГ°Г®ГЄ. </font>Byond login: [key_name_admin(src)]. Г‚ ГЇГҐГ°ГўГ»ГҐ ГЎГ»Г« Г­Г  Г±ГҐГ°ГўГҐГ°ГҐ [player_age] Г¤Г­ГҐГ© Г­Г Г§Г Г¤. IP: [address]</span>")
 
 	if(!IsGuestKey(key) && dbcon.IsConnected())
 		findJoinDate()
@@ -248,7 +248,7 @@ var/next_external_rsc = 0
 		clientmessages.Remove(ckey)
 
 	if(event_on_air)
-		src << "<span class='info'>На сервере [ticker ? "идет" : "готовитс&#255;"] ивент. Подробности читайте здесь: [event_url] или в Admin -> Admin-Notice. Также можете спросить администрацию через Adminhelp (F1)</span>"
+		src << "<span class='info'>ГЌГ  Г±ГҐГ°ГўГҐГ°ГҐ [ticker ? "ГЁГ¤ГҐГІ" : "ГЈГ®ГІГ®ГўГЁГІГ±&#255;"] ГЁГўГҐГ­ГІ. ГЏГ®Г¤Г°Г®ГЎГ­Г®Г±ГІГЁ Г·ГЁГІГ Г©ГІГҐ Г§Г¤ГҐГ±Гј: [event_url] ГЁГ«ГЁ Гў Admin -> Admin-Notice. Г’Г ГЄГ¦ГҐ Г¬Г®Г¦ГҐГІГҐ Г±ГЇГ°Г®Г±ГЁГІГј Г Г¤Г¬ГЁГ­ГЁГ±ГІГ°Г Г¶ГЁГѕ Г·ГҐГ°ГҐГ§ Adminhelp (F1)</span>"
 	if(config && config.autoconvert_notes)
 		convert_notes_sql(ckey)
 
