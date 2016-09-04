@@ -1141,6 +1141,7 @@
 				if(!mins)
 					return
 				var/reason = input(usr,"Please State Reason.","Reason") as message
+				reason = sanitize_a0(reason)
 				if(!reason)
 					return
 				AddBan(M.ckey, M.computer_id, reason, usr.ckey, 1, mins)
@@ -1162,6 +1163,7 @@
 				//qdel(M)	// See no reason why to delete mob. Important stuff can be lost. And ban can be lifted before round ends.
 			if("No")
 				var/reason = input(usr,"Please State Reason.","Reason") as message
+				reason = sanitize_a0(reason)
 				if(!reason)
 					return
 				switch(alert(usr,"IP ban?",,"Yes","No","Cancel"))
@@ -1201,6 +1203,7 @@
 				if(!mins)
 					return
 				var/reason = input(usr,"Please State Reason","Reason") as message
+				reason = sanitize_a0(reason)
 				if(!reason)
 					return
 				var/ip = alert(usr,"IP ban?",,"Yes","No","Cancel")
@@ -1230,6 +1233,7 @@
 				//qdel(M)	// See no reason why to delete mob. Important stuff can be lost. And ban can be lifted before round ends.
 			if("No")
 				var/reason = input(usr,"Please State Reason","Reason") as message
+				reason = sanitize_a0(reason)
 				if(!reason)
 					return
 				var/ip = alert(usr,"IP ban?",,"Yes","No","Cancel")
@@ -2150,6 +2154,7 @@
 
 	else if(href_list["ac_set_new_message"])
 		src.admincaster_feed_message.body = adminscrub(input(usr, "Write your Feed story.", "Network Channel Handler", ""))
+		src.admincaster_feed_message.body = sanitize_a0(src.admincaster_feed_message.body)
 		while (findtext(src.admincaster_feed_message.returnBody(-1)," ") == 1)
 			src.admincaster_feed_message.body = copytext(src.admincaster_feed_message.returnBody(-1),2,lentext(src.admincaster_feed_message.returnBody(-1))+1)
 		src.access_news_network()
@@ -2203,6 +2208,7 @@
 
 	else if(href_list["ac_set_wanted_desc"])
 		src.admincaster_wanted_message.body = adminscrub(input(usr, "Provide the a description of the Wanted person and any other details you deem important.", "Network Security Handler", ""))
+		src.admincaster_wanted_message.body = sanitize_a0(src.admincaster_wanted_message.body)
 		while (findtext(src.admincaster_wanted_message.body," ") == 1)
 			src.admincaster_wanted_message.body = copytext(src.admincaster_wanted_message.body,2,lentext(src.admincaster_wanted_message.body)+1)
 		src.access_news_network()

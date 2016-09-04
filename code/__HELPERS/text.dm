@@ -18,6 +18,11 @@
 	var/sqltext = dbcon.Quote(t);
 	return copytext(sqltext, 2, lentext(sqltext));//Quote() adds quotes around input, we already do that
 
+/proc/sanitizeSQL_a0(t as text)
+	var/sqltext = dbcon.Quote(t);
+	t = replacetext(t, "ÿ", "&#255;")
+	return copytext(sqltext, 2, lentext(sqltext)); //Quote() adds quotes around input, we already do that and fix "ÿ"
+
 /proc/format_table_name(table as text)
 	return sqlfdbktableprefix + table
 
