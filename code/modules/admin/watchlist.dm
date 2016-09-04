@@ -18,6 +18,7 @@
 		usr << "<span class='redtext'>[target_sql_ckey] is already on the watchlist.</span>"
 		return
 	var/reason = input(usr,"Please State Reason","Reason") as message
+	reason = sanitize_a0(reason)
 	if(!reason)
 		return
 	reason = sanitizeSQL(reason)
@@ -59,6 +60,7 @@
 		var/watch_reason = query_watchreason.item[1]
 		var/new_reason = input("Input new reason", "New Reason", "[watch_reason]") as message
 		new_reason = sanitizeSQL(new_reason)
+		new_reason = sanitize_a0(new_reason)
 		if(!new_reason)
 			return
 		var/sql_ckey = sanitizeSQL(usr.ckey)
