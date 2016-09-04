@@ -123,7 +123,7 @@
 		else
 			adminwho += ", [C]"
 
-	reason = sanitizeSQL(reason)
+	reason = sanitizeSQL_a0(reason)
 
 	if(maxadminbancheck)
 		var/DBQuery/adm_query = dbcon.NewQuery("SELECT count(id) AS num FROM [format_table_name("ban")] WHERE (a_ckey = '[a_ckey]') AND (bantype = 'ADMIN_PERMABAN'  OR (bantype = 'ADMIN_TEMPBAN' AND expiration_time > Now())) AND isnull(unbanned)")
@@ -265,8 +265,7 @@
 		if("reason")
 			if(!value)
 				value = input("Insert the new reason for [pckey]'s ban", "New Reason", "[reason]", null) as null|text
-				value = sanitize_a0(value)
-				value = sanitizeSQL(value)
+				value = sanitizeSQL_a0(value)
 				if(!value)
 					usr << "Cancelled"
 					return
