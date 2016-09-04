@@ -19,6 +19,7 @@
 	var/target_sql_ckey = sanitizeSQL(target_ckey)
 	if(!notetext)
 		notetext = input(usr,"Write your Note","Add Note") as message
+		notetext = sanitizeSQL_a0(notetext)
 		if(!notetext)
 			return
 	notetext = sanitizeSQL_a0(notetext)
@@ -92,11 +93,11 @@
 		var/old_note = query_find_note_edit.item[2]
 		var/adminckey = query_find_note_edit.item[3]
 		var/new_note = input("Input new note", "New Note", "[old_note]") as message
+		new_note = sanitizeSQL_a0(new_note)
 		if(!new_note)
 			return
-		new_note = sanitizeSQL_a0(new_note)
 		var/edit_text = "Edited by [sql_ckey] on [SQLtime()] from<br>[old_note]<br>to<br>[new_note]<hr>"
-		edit_text = sanitizeSQL_a0(edit_text)
+		edit_text = sanitizeSQL(edit_text)
 		var/DBQuery/query_update_note = dbcon.NewQuery("UPDATE [format_table_name("notes")] SET notetext = '[new_note]', last_editor = '[sql_ckey]', edits = CONCAT(IFNULL(edits,''),'[edit_text]') WHERE id = [note_id]")
 		if(!query_update_note.Execute())
 			var/err = query_update_note.ErrorMsg()
