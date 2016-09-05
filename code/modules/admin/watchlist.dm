@@ -18,9 +18,9 @@
 		usr << "<span class='redtext'>[target_sql_ckey] is already on the watchlist.</span>"
 		return
 	var/reason = input(usr,"Please State Reason","Reason") as message
+	reason = sanitizeSQL_a0(reason)
 	if(!reason)
 		return
-	reason = sanitizeSQL_a0(reason)
 	var/timestamp = SQLtime()
 	var/adminckey = usr.ckey
 	if(!adminckey)
