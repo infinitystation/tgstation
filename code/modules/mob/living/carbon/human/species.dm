@@ -502,7 +502,7 @@
 		H.losebreath = 0
 
 		var/takes_crit_damage = (!(NOCRITDAMAGE in specflags))
-		if((H.health < config.health_threshold_crit) && takes_crit_damage)
+		if((H.health < HEALTH_THRESHOLD_CRIT) && takes_crit_damage)
 			H.adjustBruteLoss(1)
 
 /datum/species/proc/spec_death(gibbed, mob/living/carbon/human/H)
@@ -844,17 +844,18 @@
 	if(!(RADIMMUNE in specflags))
 		if(H.radiation)
 			if (H.radiation > 100)
+				if(!H.weakened)
+					H.emote("collapse")
 				H.Weaken(10)
 				H << "<span class='danger'>Вы чувствуете слабость.</span>"
-				H.emote("collapse")
-
 			switch(H.radiation)
-
 				if(50 to 75)
 					if(prob(5))
+						if(!H.weakened)
+							H.emote("collapse")
 						H.Weaken(3)
 						H << "<span class='danger'>Вы чувствуете слабость.</span>"
-						H.emote("collapse")
+
 					if(prob(15))
 						if(!( H.hair_style == "Shaved") || !(H.hair_style == "Bald") || (HAIR in specflags))
 							H << "<span class='danger'>Your hair starts to \
@@ -888,7 +889,7 @@
 		. -= 2
 
 	if(!(H.status_flags & IGNORESLOWDOWN))
-		if(!has_gravity(H))
+		if(!H.has_gravity())
 			if(FLYING in specflags)
 				. += speedmod
 				return
@@ -1219,7 +1220,7 @@
 	if(!breath || (breath.total_moles() == 0) || !lungs)
 		if(H.reagents.has_reagent("epinephrine") && lungs)
 			return
-		if(H.health >= config.health_threshold_crit)
+		if(H.health >= HEALTH_THRESHOLD_CRIT)
 			H.adjustOxyLoss(HUMAN_MAX_OXYLOSS)
 			if(!lungs)
 				H.adjustOxyLoss(1)
@@ -1379,7 +1380,7 @@
 	if(!H || !safe_breath_min) //the other args are either: Ok being 0 or Specifically handled.
 		return 0
 
-	if(!(NOBREATH in specflags) || (H.health <= config.health_threshold_crit))
+	if(!(NOBREATH in specflags) || (H.health <= HEALTH_THRESHOLD_CRIT))
 		if(prob(20))
 			H.emote("gasp")
 		if(breath_pp > 0)

@@ -184,7 +184,7 @@
 	user << "<span class='notice'>You offer the sentience potion to [SM]...</span>"
 	being_used = 1
 
-	var/list/mob/dead/observer/candidates = pollCandidates("Do you want to play as [SM.name]?", ROLE_ALIEN, null, ROLE_ALIEN, 50, POLL_IGNORE_SENTIENCE_POTION) // see poll_ignore.dm
+	var/list/mob/dead/observer/candidates = pollCandidatesForMob("Do you want to play as [SM.name]?", ROLE_ALIEN, null, ROLE_ALIEN, 50, POLL_IGNORE_SENTIENCE_POTION, SM) // see poll_ignore.dm
 	var/mob/dead/observer/theghost = null
 	if(candidates.len)
 		theghost = pick(candidates)
@@ -239,7 +239,7 @@
 	user.mind.transfer_to(SM)
 	SM.languages_spoken = user.languages_spoken
 	SM.languages_understood = user.languages_understood
-	SM.faction = user.faction
+	SM.faction = user.faction.Copy()
 	SM.sentience_act() //Same deal here as with sentience
 	user.death()
 	SM << "<span class='notice'>In a quick flash, you feel your consciousness flow into [SM]!</span>"
@@ -382,6 +382,30 @@
 	uses --
 	if(!uses)
 		qdel(src)
+
+/obj/item/slimepotion/genderchange
+	name = "gender change potion"
+	desc = "An interesting chemical mix that changes the biological gender of what its applied to. Cannot be used on things that lack gender entirely."
+	icon = 'icons/obj/chemical.dmi'
+	icon_state = "potlightpink"
+
+/obj/item/slimepotion/genderchange/attack(mob/living/L, mob/user)
+	if(!istype(L) || L.stat == DEAD)
+		user << "<span class='warning'>The potion can only be used on living things!</span>"
+		return
+
+	if(L.gender != MALE && L.gender != FEMALE)
+		user << "<span class='warning'>The potion can only be used on gendered things!</span>"
+		return
+
+	if(L.gender == MALE)
+		L.gender = FEMALE
+		L.visible_message("<span class='notice'>[L] suddenly looks more feminine!</span>")
+	else
+		L.gender = MALE
+		L.visible_message("<span class='notice'>[L] suddenly looks more masculine!</span>")
+	L.regenerate_icons()
+	qdel(src)
 
 ////////Adamantine Golem stuff I dunno where else to put it
 

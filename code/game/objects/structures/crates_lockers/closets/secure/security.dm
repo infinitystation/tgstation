@@ -192,6 +192,7 @@
 	new /obj/item/device/radio/headset/headset_sec/alt(src)
 	new /obj/item/device/radio/headset/headset_sec(src)
 	new /obj/item/device/detective_scanner(src)
+	new /obj/item/device/flashlight/seclite(src)
 	new /obj/item/weapon/holosign_creator/security(src)
 	new /obj/item/weapon/reagent_containers/spray/pepper(src)
 	new /obj/item/clothing/suit/armor/vest/det_suit(src)

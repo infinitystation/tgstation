@@ -20,6 +20,7 @@
 	/obj/structure/closet,
 	/obj/structure/table,
 	/obj/structure/grille,
+	/obj/structure/girder,
 	/obj/structure/rack,
 	/obj/structure/barricade) //turned into a typecache in New()
 
@@ -73,6 +74,11 @@
 				AIStatus = AI_IDLE				// otherwise we go idle
 	return 1
 
+/mob/living/simple_animal/hostile/attacked_by(obj/item/I, mob/living/user)
+	if(stat == CONSCIOUS && !target && AIStatus != AI_OFF && !client && user)
+		FindTarget(list(user), 1)
+	return ..()
+
 /mob/living/simple_animal/hostile/bullet_act(obj/item/projectile/P)
 	if(stat == CONSCIOUS && !target && AIStatus != AI_OFF && !client)
 		if(P.firer && get_dist(src, P.firer) <= aggro_vision_range)
@@ -82,25 +88,20 @@
 
 //////////////HOSTILE MOB TARGETTING AND AGGRESSION////////////
 
-
 /mob/living/simple_animal/hostile/proc/ListTargets()//Step 1, find out what we can see
 	. = list()
 	if(!search_objects)
 		var/list/Mobs = hearers(vision_range, targets_from) - src //Remove self, so we don't suicide
 		. += Mobs
 
-		var/hostile_machines = list()
-		for(var/mecha in mechas_list)
-			hostile_machines += mecha
-		for(var/obj/machinery/porta_turret/P in machines)
-			hostile_machines += P
-		for(var/M in hostile_machines)
-			if(get_dist(M, targets_from) <= vision_range && can_see(targets_from, M, vision_range))
-				. += M
+		var/static/hostile_machines = typecacheof(list(/obj/machinery/porta_turret, /obj/mecha))
+
+		for(var/HM in typecache_filter_list(range(vision_range, targets_from), hostile_machines))
+			if(can_see(targets_from, HM, vision_range))
+				. += HM
 	else
 		var/list/Objects = oview(vision_range, targets_from)
 		. += Objects
-
 
 /mob/living/simple_animal/hostile/proc/FindTarget(var/list/possible_targets, var/HasTargetsList = 0)//Step 2, filter down possible targets to things we actually care about
 	. = list()

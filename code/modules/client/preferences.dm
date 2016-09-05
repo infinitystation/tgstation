@@ -162,7 +162,7 @@ var/list/preferences_datums = list()
 			dat += "<a href='?_src_=prefs;preference=job;task=menu'>Set Occupation Preferences</a><br></center>"
 			dat += "<h2>Identity</h2>"
 			dat += "<table width='100%'><tr><td width='75%' valign='top'>"
-			if(appearance_isbanned(user))
+			if(jobban_isbanned(user, "appearance"))
 				dat += "<b>You are banned from using custom names and appearances. You can continue to adjust your characters, but you will be randomised once you join the game.</b><br>"
 			dat += "<a href='?_src_=prefs;preference=name;task=random'>Random Name</A> "
 			dat += "<a href='?_src_=prefs;preference=name'>Always Random Name: [be_random_name ? "Yes" : "No"]</a><BR>"
@@ -1375,7 +1375,7 @@ var/list/preferences_datums = list()
 	return 1
 
 /datum/preferences/proc/set_char_notes(user)
-	if(appearance_isbanned(user))
+	if(jobban_isbanned(user, "appearance"))
 		return
 
 	var/dat = ""

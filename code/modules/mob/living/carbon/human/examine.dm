@@ -8,6 +8,7 @@
 	var/t_his = "их"
 	var/t_him = "им"
 	var/t_has = "имеет"
+	var/t_him2 = "им"
 
 	var/e_1 = "о"
 	var/e_2 = "ое"
@@ -33,6 +34,7 @@
 				t_He = "Он"
 				t_his = "его"
 				t_him = "ему"
+				t_him2 = "им"
 				e_1 = ""
 				e_2 = "ый"
 				e_3 = "ий"
@@ -42,6 +44,7 @@
 				t_He = "Она"
 				t_his = "её"
 				t_him = "ей"
+				t_him2 = "ей"
 				e_1 = "а"
 				e_2 = "а&#255;"
 				e_3 = "а&#255;"
@@ -183,13 +186,6 @@
 			msg += "<span class='warning'>[t_He] чуть-чуть подёргивает.</span>\n"
 
 
-
-	if(gender_ambiguous) //someone fucked up a gender reassignment surgery
-		if (gender == MALE)
-			msg += "[t_He] женственен по отношению к н[t_him].\n"
-		else
-			msg += "[t_He] мужественна по отношению к н[t_him].\n"
-
 	var/appears_dead = 0
 	if(stat == DEAD || (status_flags & FAKEDEATH))
 		appears_dead = 1
@@ -225,11 +221,18 @@
 		for(var/obj/item/I in BP.embedded_objects)
 			msg += "<B>[t_He] [t_has] \icon[I] [I], застр&#255;вшую в [t_his] [BP.name]!</B>\n"
 
+	//stores how many left limbs are missing
+	var/l_limbs_missing = 0
 	for(var/t in missing)
 		if(t=="head")
 			msg += "<span class='deadsay'><B>[capitalize(t_his)] [parse_zone(t)] is missing!</B><span class='warning'>\n"
 			continue
+		if(t == "l_arm" || t == "l_leg")
+			l_limbs_missing++
 		msg += "<B>[capitalize(t_his)] [parse_zone(t)] отсутствует!</B>\n"
+
+	if(l_limbs_missing >= 2)
+		msg += "С н[t_him2] все в пор&#255;дке.\n"
 
 	if(temp)
 		if(temp < 30)
@@ -374,10 +377,8 @@
 						msg += "<a href='?src=\ref[src];hud=s;add_crime=1'>\[Add crime\]</a> "
 						msg += "<a href='?src=\ref[src];hud=s;view_comment=1'>\[View comment log\]</a> "
 						msg += "<a href='?src=\ref[src];hud=s;add_comment=1'>\[Add comment\]</a>\n"
-	if(!get_bodypart(ARM_LEFT) && !get_bodypart(LEG_LEFT))
-		msg += "[t_He] looks all right now.\n"
-	
-	if(print_flavor_text()) 
+
+	if(print_flavor_text())
 		msg += "[print_flavor_text()]\n"
 
 	msg += "*---------*</span>"

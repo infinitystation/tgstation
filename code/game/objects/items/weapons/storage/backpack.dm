@@ -296,6 +296,11 @@
 	..()
 	PoolOrNew(/obj/item/stack/tile/plasteel, src)
 	new /obj/item/weapon/crowbar(src)
+	SSpersistence.new_secret_satchels += src
+
+/obj/item/weapon/storage/backpack/satchel/flat/Destroy()
+	SSpersistence.new_secret_satchels -= src
+	return ..()
 
 /obj/item/weapon/storage/backpack/satchel/flat/secret/
 	var/list/reward_one_of_these = list() //Intended for map editing
@@ -385,7 +390,7 @@
 	name = "suspicious looking dufflebag"
 	desc = "A large dufflebag for holding extra tactical supplies."
 	icon_state = "duffle-syndie"
-	item_state = "duffle-syndiemed"
+	item_state = "duffle-syndie"
 	origin_tech = "syndicate=1"
 	silent = 1
 	slowdown = 0

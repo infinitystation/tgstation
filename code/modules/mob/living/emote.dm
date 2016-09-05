@@ -438,7 +438,7 @@
 	set desc = "Sets an extended description of your character's features."
 	set category = "IC"
 
-	if(appearance_isbanned(usr))
+	if(jobban_isbanned(usr, "appearance"))
 		return
 
 	update_flavor_text()

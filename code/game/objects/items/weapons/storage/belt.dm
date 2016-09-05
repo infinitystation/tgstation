@@ -185,7 +185,10 @@
 		/obj/item/weapon/reagent_containers/pill,
 		/obj/item/weapon/storage/pill_bottle,
 		/obj/item/weapon/ore,
-		/obj/item/weapon/reagent_containers/food/drinks
+		/obj/item/weapon/reagent_containers/food/drinks,
+		/obj/item/organ/hivelord_core,
+		/obj/item/device/wormhole_jaunter
+
 		)
 
 
@@ -424,6 +427,7 @@
 	icon_state = "sheath"
 	item_state = "sheath"
 	storage_slots = 1
+	w_class = 4
 	max_w_class = 4
 	can_hold = list(
 		/obj/item/weapon/melee/sabre

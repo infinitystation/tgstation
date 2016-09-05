@@ -5,7 +5,7 @@
 // the same logical /area have the parent /area object... well, you would be mistaken.  If you
 // want to find machines, mobs, etc, in the same logical area, you will need to check all the
 // related areas.  This returns a master contents list to assist in that.
-/proc/area_contents(var/area/A)
+/proc/area_contents(area/A)
 	if(!istype(A)) return null
 	var/list/contents = list()
 	for(var/area/LSA in A.related)
@@ -365,9 +365,9 @@ var/list/mob/living/forced_ambiance_list = new
 				if(L.&& L.client)
 					L.client.played = 0
 
-/proc/has_gravity(atom/AT, turf/T)
-	if(!T)
-		T = get_turf(AT)
+/atom/proc/has_gravity(turf/T)
+	if(!T || !isturf(T))
+		T = get_turf(src)
 	var/area/A = get_area(T)
 	if(istype(T, /turf/open/space)) // Turf never has gravity
 		return 0

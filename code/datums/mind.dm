@@ -242,7 +242,7 @@
 
 	enslaved_to = creator
 
-	current.faction = creator.faction
+	current.faction = creator.faction.Copy()
 
 	if(special_role)
 		message_admins("[key_name_admin(current)](<A HREF='?_src_=holder;adminmoreinfo=\ref[current]'>?</A>) has been created by [key_name_admin(creator)](<A HREF='?_src_=holder;adminmoreinfo=\ref[creator]'>?</A>), an antagonist.")
@@ -1401,6 +1401,7 @@
 		special_role = "Syndicate"
 		ticker.mode.forge_syndicate_objectives(src)
 		ticker.mode.greet_syndicate(src)
+		current.faction |= "syndicate"
 
 		if(spawnloc)
 			current.loc = spawnloc
@@ -1449,7 +1450,6 @@
 		ticker.mode.wizards += src
 		special_role = "Wizard"
 		assigned_role = "Wizard"
-		//ticker.mode.learn_basic_spells(current)
 		if(!wizardstart.len)
 			current.loc = pick(latejoin)
 			current << "HOT INSERTION, GO GO GO"
@@ -1457,8 +1457,6 @@
 			current.loc = pick(wizardstart)
 
 		ticker.mode.equip_wizard(current)
-		for(var/obj/item/weapon/spellbook/S in current.contents)
-			S.op = 0
 		ticker.mode.name_wizard(current)
 		ticker.mode.forge_wizard_objectives(src)
 		ticker.mode.greet_wizard(src)
