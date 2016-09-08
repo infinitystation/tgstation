@@ -215,6 +215,7 @@
 /obj/structure/sign/directions/only
 	name = "Only 1"
 	desc = "Enter only by one."
+	icon = 'icons/obj/infinity_decals.dmi'
 	icon_state = "only"
 
 /obj/structure/sign/directions/civilian

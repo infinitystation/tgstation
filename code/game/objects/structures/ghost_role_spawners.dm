@@ -52,7 +52,6 @@
 	if(ishuman(new_spawn))
 		var/mob/living/carbon/human/H = new_spawn
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/self/REAL_NIGHT_VISION(null))
-		H.mind.AddSpell(new /obj/effect/proc_holder/spell/self/hivemind(null))
 		H.underwear = "Nude"
 		H.update_body()
 
