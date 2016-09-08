@@ -133,9 +133,17 @@ Contents:
 		Mind.objectives += O
 
 	//add some RP-fluff
-	Mind.store_memory("I am an elite mercenary assassin of the mighty Spider Clan. A <font color='red'><B>SPACE NINJA</B></font>!")
-	Mind.store_memory("Suprise is my weapon. Shadows are my armor. Without them, I am nothing. (//initialize your suit by right clicking on it, to use abilities like stealth)!")
-	Mind.store_memory("Officially, [helping_station?"Nanotrasen":"The Syndicate"] are my employer.")
+	Mind.store_memory("я - элитный наемник из  лана ѕаука. я -<font color='red'><B>космический ниндзя.</B></font>!")
+	Mind.store_memory("ћой меч - моя честь, моя честь - моя жизнь. (//запустите инициализацию костюма, чтобы получить доступ к стелс-режиму и остальным вещам)!")
+	Mind.store_memory("я <font color='red'><B>следую </B></font>7-ми пунктам Ѕусидо моего клана:<BR><BR>")
+	Mind.store_memory("1. —ледует взвешивать каждое слово и неизменно задавать себе вопрос, правда ли то, что собираешься сказать.")
+	Mind.store_memory("2. ¬ерность и защита проявляется в том, чтобы без страха идти на вражеские лучи и мечи, жертвуя жизнью, если жизни может лишиться оберегаемый.")
+	Mind.store_memory("3. —окол не подбирает брошенные зЄрна, даже если умирает с голоду. “ак и воин, орудуя зубочисткой, должен показывать, что сыт, даже если он ничего не ел.")
+	Mind.store_memory("4. ≈сли случится проиграть бой, то воин должен сложить голову, гордо назвать своЄ имя и умереть с улыбкой без унизительной поспешности.")
+	Mind.store_memory("5. ќбладающий лишь грубой силой не достоин звания воина. Ќе говоря уж о необходимости изучения наук, воин должен использовать досуг для упражнений в слове и постижения чайной церемонии.")
+	Mind.store_memory("6. ≈сли случится драться до последней капли крови, воин должен дать достойное оружие сопернику и сражаться без утаивания. ≈сли же соперник сражается без чести, то и воин не обязан сдерживать себя.")
+	Mind.store_memory("7. ¬оин должен, прежде всего, постоянно помнить, что может умереть в любой момент, и если такой момент настанет, то умереть должен с честью. ¬от главное дело.")
+	Mind.store_memory("¬ас нан€л [helping_station?"Nanotrasen":"The Syndicate"]")
 
 	//spawn the ninja and assign the candidate
 	var/mob/living/carbon/human/Ninja = create_space_ninja(spawn_loc)
