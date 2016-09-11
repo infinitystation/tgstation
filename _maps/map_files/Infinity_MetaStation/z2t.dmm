@@ -3,11 +3,11 @@
 /turf/open/space,
 /area/space)
 "ab" = (
-/turf/closed/indestructible/riveted/infinity/terror,
+/turf/closed/indestructible/riveted/infinity,
 /area/space)
 "ac" = (
 /obj/structure/window/reinforced,
-/turf/closed/indestructible/riveted/infinity/terror,
+/turf/closed/indestructible/riveted/infinity,
 /area/space)
 "ad" = (
 /obj/effect/landmark/transit,
@@ -17,7 +17,7 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
-/turf/closed/indestructible/riveted/infinity/terror,
+/turf/closed/indestructible/riveted/infinity,
 /area/space)
 "af" = (
 /obj/structure/foamedmetal,
@@ -58,7 +58,7 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/turf/closed/indestructible/riveted/infinity/terror,
+/turf/closed/indestructible/riveted/infinity,
 /area/space)
 "al" = (
 /turf/open/floor/holofloor/carpet,
@@ -124,7 +124,7 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/turf/closed/indestructible/riveted/infinity/terror,
+/turf/closed/indestructible/riveted/infinity,
 /area/space)
 "ax" = (
 /obj/structure/table,
@@ -258,7 +258,7 @@
 	dir = 1
 	},
 /obj/structure/window/reinforced,
-/turf/closed/indestructible/riveted/infinity/terror,
+/turf/closed/indestructible/riveted/infinity,
 /area/space)
 "aT" = (
 /obj/effect/holodeck_effect/mobspawner/pet,
@@ -962,10 +962,10 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
-/turf/closed/indestructible/riveted/infinity/terror,
+/turf/closed/indestructible/riveted/infinity,
 /area/space)
 "cO" = (
-/turf/closed/indestructible/riveted/infinity/terror,
+/turf/closed/indestructible/riveted/infinity,
 /area/tdome/arena_source)
 "cP" = (
 /obj/structure/rack,
@@ -1079,11 +1079,11 @@
 /turf/open/floor/plasteel/black,
 /area/tdome/arena_source)
 "dg" = (
-/turf/closed/indestructible/riveted/infinity/terror,
+/turf/closed/indestructible/riveted/infinity,
 /area/zombie)
 "dh" = (
 /obj/structure/sign/skull,
-/turf/closed/indestructible/riveted/infinity/terror,
+/turf/closed/indestructible/riveted/infinity,
 /area/zombie)
 "di" = (
 /obj/effect/mine/pickup/healing{
@@ -1609,7 +1609,7 @@
 /area/zombie)
 "eo" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/closed/indestructible/riveted/infinity/terror,
+/turf/closed/indestructible/riveted/infinity,
 /area/zombie)
 "ep" = (
 /obj/structure/toilet{
@@ -1679,7 +1679,7 @@
 /obj/structure/sign/securearea{
 	name = "\improper ROOM 5 - THE LAST LINE"
 	},
-/turf/closed/indestructible/riveted/infinity/terror,
+/turf/closed/indestructible/riveted/infinity,
 /area/zombie)
 "eA" = (
 /turf/open/floor/plasteel/neutral/side{
@@ -2407,7 +2407,7 @@
 "gu" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/closed/indestructible/riveted/infinity/terror,
+/turf/closed/indestructible/riveted/infinity,
 /area/zombie)
 "gv" = (
 /obj/item/weapon/shard{
@@ -2454,14 +2454,14 @@
 /obj/structure/sign/securearea{
 	name = "\improper ROOM 4 - SAVE THEM ALL"
 	},
-/turf/closed/indestructible/riveted/infinity/terror,
+/turf/closed/indestructible/riveted/infinity,
 /area/zombie)
 "gE" = (
 /obj/item/weapon/screwdriver,
 /turf/open/floor/plasteel/black,
 /area/zombie)
 "gF" = (
-/turf/closed/indestructible/riveted/infinity/terror,
+/turf/closed/indestructible/riveted/infinity,
 /area/ctf)
 "gG" = (
 /obj/structure/sign/poster{
@@ -2470,7 +2470,7 @@
 	name = "poster - Work for a Future";
 	tag = "icon-poster17_legit"
 	},
-/turf/closed/indestructible/riveted/infinity/terror,
+/turf/closed/indestructible/riveted/infinity,
 /area/zombie)
 "gH" = (
 /obj/machinery/recharger,
@@ -3376,7 +3376,7 @@
 /obj/structure/sign/securearea{
 	name = "\improper ROOM 3, BASEMENT"
 	},
-/turf/closed/indestructible/riveted/infinity/terror,
+/turf/closed/indestructible/riveted/infinity,
 /area/zombie)
 "jd" = (
 /turf/open/floor/plasteel/darkblue/side{
@@ -3770,7 +3770,7 @@
 /obj/structure/sign/securearea{
 	name = "\improper ROOM 2, DEAD AHEAD"
 	},
-/turf/closed/indestructible/riveted/infinity/terror,
+/turf/closed/indestructible/riveted/infinity,
 /area/zombie)
 "kg" = (
 /obj/machinery/computer/security/wooden_tv{
@@ -5173,7 +5173,7 @@
 /turf/open/floor/plasteel/cult,
 /area/wizard_station)
 "nN" = (
-/turf/closed/indestructible/riveted/infinity/terror,
+/turf/closed/indestructible/riveted/infinity,
 /area/centcom/control)
 "nO" = (
 /obj/structure/table/wood,
@@ -5931,7 +5931,7 @@
 	},
 /area/centcom/control)
 "pI" = (
-/turf/closed/indestructible/riveted/infinity/terror,
+/turf/closed/indestructible/riveted/infinity,
 /area/centcom/supply)
 "pJ" = (
 /obj/effect/step_trigger/message{
@@ -6276,7 +6276,7 @@
 	},
 /area/syndicate_mothership)
 "qF" = (
-/turf/closed/indestructible/riveted/infinity/terror,
+/turf/closed/indestructible/riveted/infinity,
 /area/syndicate_mothership)
 "qG" = (
 /obj/machinery/dna_scannernew,
@@ -9387,7 +9387,7 @@
 /turf/open/floor/plasteel/darkvault/delivary,
 /area/centcom/control)
 "ym" = (
-/turf/closed/indestructible/riveted/infinity/terror,
+/turf/closed/indestructible/riveted/infinity,
 /area/centcom/prison)
 "yn" = (
 /obj/structure/closet/secure_closet/brig{
@@ -9634,7 +9634,7 @@
 	},
 /area/centcom/control)
 "yR" = (
-/turf/closed/indestructible/riveted/infinity/terror,
+/turf/closed/indestructible/riveted/infinity,
 /area/centcom/security)
 "yS" = (
 /turf/closed/wall/shuttle/smooth/overspace,
@@ -10037,7 +10037,7 @@
 	},
 /area/centcom/evac)
 "zS" = (
-/turf/closed/indestructible/riveted/infinity/terror,
+/turf/closed/indestructible/riveted/infinity,
 /area/centcom/evac)
 "zT" = (
 /obj/item/candle/infinite{
@@ -10218,12 +10218,6 @@
 /obj/structure/grille,
 /obj/structure/window/reinforced/fulltile{
 	color = "#C862CC"
-	},
-/obj/machinery/door/poddoor/shutters/preopen{
-	color = "#C862CC";
-	dir = 4;
-	id = "alien_shutters_1";
-	name = "alien shutters"
 	},
 /turf/open/floor/plating/abductor2,
 /area/abductor_ship)
@@ -10406,7 +10400,7 @@
 	tag = "icon-poster2_legit";
 	icon_state = "poster2_legit"
 	},
-/turf/closed/indestructible/riveted/infinity/terror,
+/turf/closed/indestructible/riveted/infinity,
 /area/centcom/security)
 "AE" = (
 /obj/structure/lattice,
@@ -10533,7 +10527,7 @@
 /turf/open/floor/engine,
 /area/abductor_ship)
 "Ba" = (
-/turf/closed/indestructible/riveted/infinity/terror,
+/turf/closed/indestructible/riveted/infinity,
 /area/centcom/ferry)
 "Bb" = (
 /obj/machinery/door/poddoor{
@@ -10672,14 +10666,6 @@
 	req_access_txt = 0;
 	specialfunctions = 4
 	},
-/obj/machinery/computer/security/telescreen{
-	desc = "Used for watching the Testing Chamber.";
-	dir = 4;
-	name = "Testing Chamber Monitor";
-	network = list("AT_1");
-	pixel_x = -29;
-	pixel_y = 0
-	},
 /obj/machinery/button/door{
 	id = "alien_shutters_1";
 	name = "Shutters";
@@ -10797,7 +10783,7 @@
 	},
 /area/centcom/evac)
 "BI" = (
-/turf/closed/indestructible/riveted/infinity/terror,
+/turf/closed/indestructible/riveted/infinity,
 /area/centcom/lobby)
 "BJ" = (
 /obj/structure/closet,
@@ -11648,7 +11634,7 @@
 	tag = "icon-poster22_legit";
 	icon_state = "poster22_legit"
 	},
-/turf/closed/indestructible/riveted/infinity/terror,
+/turf/closed/indestructible/riveted/infinity,
 /area/centcom/security)
 "DP" = (
 /obj/machinery/door/firedoor,
@@ -11666,11 +11652,6 @@
 	},
 /obj/structure/chair/comfy/shuttle{
 	dir = 4
-	},
-/obj/machinery/camera{
-	c_tag = "Emeregency Shuttle";
-	dir = 4;
-	network = list("SS13")
 	},
 /turf/open/floor/plasteel/neutral/side{
 	dir = 8
@@ -12354,15 +12335,13 @@
 /turf/open/floor/plating/abductor2,
 /area/abductor_ship)
 "Fv" = (
-/obj/structure/alien/weeds,
-/obj/machinery/camera{
-	c_tag = "Testing Chamer";
-	color = "#C862CC";
-	name = "alien camera";
-	network = list("AT_2")
+/obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/poddoor{
+	id = "cc_lo_tu";
+	unacidable = 1
 	},
-/turf/open/floor/engine,
-/area/abductor_ship)
+/turf/closed/indestructible/riveted/infinity,
+/area/centcom/lobby)
 "Fw" = (
 /turf/open/floor/plasteel/terror/darkred/side{
 	tag = "icon-darkred_t (SOUTHWEST)";
@@ -12820,14 +12799,6 @@
 	pixel_x = 0;
 	pixel_y = -32
 	},
-/obj/machinery/computer/security/telescreen{
-	desc = "Used for watching the Testing Chamber.";
-	dir = 4;
-	name = "Testing Chamber Monitor";
-	network = list("AT_2");
-	pixel_x = -29;
-	pixel_y = 0
-	},
 /obj/machinery/button/door{
 	id = "alien_shutters_2";
 	name = "Shutters";
@@ -12860,7 +12831,7 @@
 /area/centcom/ferry)
 "GL" = (
 /obj/structure/sign/securearea,
-/turf/closed/indestructible/riveted/infinity/terror,
+/turf/closed/indestructible/riveted/infinity,
 /area/centcom/evac)
 "GM" = (
 /obj/structure/table/reinforced,
@@ -14099,28 +14070,18 @@
 /turf/open/floor/plating/abductor,
 /area/abductor_ship)
 "JT" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced/fulltile{
-	color = "#C862CC"
+/obj/machinery/porta_turret/heavy/central_command,
+/turf/open/floor/plating{
+	icon_state = "warnplate";
+	dir = 1
 	},
-/obj/machinery/door/poddoor/shutters/preopen{
-	color = "#C862CC";
-	dir = 4;
-	id = "alien_shutters_3";
-	name = "alien shutters"
-	},
-/turf/open/floor/plating/abductor2,
-/area/abductor_ship)
+/area/space)
 "JU" = (
-/obj/structure/alien/weeds,
-/obj/machinery/camera{
-	c_tag = "Testing Chamer";
-	color = "#C862CC";
-	name = "alien camera";
-	network = list("AT_3")
+/turf/open/floor/plating{
+	icon_state = "warnplate";
+	dir = 1
 	},
-/turf/open/floor/engine,
-/area/abductor_ship)
+/area/space)
 "JV" = (
 /turf/closed/wall/shuttle/smooth/nodiagonal,
 /area/shuttle/NTcruiser)
@@ -14231,7 +14192,7 @@
 /area/centcom/ferry)
 "Ki" = (
 /obj/structure/sign/directions/cryo,
-/turf/closed/indestructible/riveted/infinity/terror,
+/turf/closed/indestructible/riveted/infinity,
 /area/centcom/ferry)
 "Kj" = (
 /obj/machinery/door/poddoor/big/preopen{
@@ -14552,14 +14513,6 @@
 	pixel_y = -32;
 	req_access_txt = 0;
 	specialfunctions = 4
-	},
-/obj/machinery/computer/security/telescreen{
-	desc = "Used for watching the Testing Chamber.";
-	dir = 4;
-	name = "Testing Chamber Monitor";
-	network = list("AT_3");
-	pixel_x = -29;
-	pixel_y = 0
 	},
 /obj/machinery/button/door{
 	id = "alien_shutters_3";
@@ -15192,7 +15145,7 @@
 	},
 /area/shuttle/NTcruiser)
 "Mq" = (
-/turf/closed/indestructible/riveted/infinity/terror,
+/turf/closed/indestructible/riveted/infinity,
 /area/tdome/tdomeobserve)
 "Mr" = (
 /turf/open/floor/plating{
@@ -15379,7 +15332,7 @@
 /turf/open/floor/plating,
 /area/shuttle/NTcruiser)
 "MM" = (
-/turf/closed/indestructible/riveted/infinity/terror,
+/turf/closed/indestructible/riveted/infinity,
 /area/tdome/arena)
 "MN" = (
 /obj/structure/chair/comfy/beige,
@@ -15540,28 +15493,15 @@
 /turf/open/floor/plating/abductor,
 /area/abductor_ship)
 "Nf" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced/fulltile{
-	color = "#C862CC"
+/obj/machinery/door/airlock/maintenance{
+	name = "Turret maintenance";
+	req_one_access_txt = "101"
 	},
-/obj/machinery/door/poddoor/shutters/preopen{
-	color = "#C862CC";
-	dir = 4;
-	id = "alien_shutters_4";
-	name = "alien shutters"
-	},
-/turf/open/floor/plating/abductor2,
-/area/abductor_ship)
+/turf/open/floor/plating,
+/area/space)
 "Ng" = (
-/obj/structure/alien/weeds,
-/obj/machinery/camera{
-	c_tag = "Testing Chamer";
-	color = "#C862CC";
-	name = "alien camera";
-	network = list("AT_4")
-	},
-/turf/open/floor/engine,
-/area/abductor_ship)
+/turf/open/floor/plating,
+/area/space)
 "Nh" = (
 /obj/machinery/porta_turret/heavy{
 	scan_range = 15
@@ -15676,14 +15616,6 @@
 	pixel_y = -32;
 	req_access_txt = 0;
 	specialfunctions = 4
-	},
-/obj/machinery/computer/security/telescreen{
-	desc = "Used for watching the Testing Chamber.";
-	dir = 4;
-	name = "Testing Chamber Monitor";
-	network = list("AT_4");
-	pixel_x = -29;
-	pixel_y = 0
 	},
 /obj/machinery/button/door{
 	id = "alien_shutters_4";
@@ -15926,7 +15858,7 @@
 	name = "\improper Syndicate Battleship"
 	})
 "Oc" = (
-/turf/closed/indestructible/riveted/infinity/terror,
+/turf/closed/indestructible/riveted/infinity,
 /area/tdome/tdomeadmin)
 "Od" = (
 /obj/effect/landmark{
@@ -16655,7 +16587,7 @@
 	name = "\improper Syndicate Battleship"
 	})
 "PK" = (
-/turf/closed/indestructible/riveted/infinity/terror,
+/turf/closed/indestructible/riveted/infinity,
 /area/syndicate_mothership{
 	name = "\improper Syndicate Secret Base"
 	})
@@ -18321,7 +18253,7 @@
 /obj/machinery/vending/boozeomat{
 	req_access_txt = "150"
 	},
-/turf/closed/indestructible/riveted/infinity/terror,
+/turf/closed/indestructible/riveted/infinity,
 /area/syndicate_mothership{
 	name = "\improper Syndicate Secret Base"
 	})
@@ -19166,16 +19098,16 @@
 /area/shuttle/syndicate{
 	name = "\improper Syndicate Battleship"
 	})
-"Ut" = (
-/obj/machinery/implantchair/brainwash,
-/turf/open/floor/plasteel/darkred/side,
-/area/centcom/security)
 "Us" = (
 /obj/machinery/firealarm{
 	dir = 8;
 	pixel_x = -24
 	},
 /turf/open/floor/plasteel/black,
+/area/centcom/security)
+"Ut" = (
+/obj/machinery/implantchair/brainwash,
+/turf/open/floor/plasteel/darkred/side,
 /area/centcom/security)
 
 (1,1,1) = {"
@@ -24244,27 +24176,27 @@ aa
 aa
 zs
 zs
-Fu
+Aj
 Gh
-Fu
+Aj
 zs
 zs
 aa
 aa
 zs
 zs
-JT
+Aj
 Kx
-JT
+Aj
 zs
 zs
 aa
 aa
 zs
 zs
-Nf
+Aj
 Nr
-Nf
+Aj
 zs
 zs
 aa
@@ -24492,7 +24424,7 @@ pK
 aa
 zt
 zs
-Ak
+Al
 AX
 Al
 zs
@@ -24501,7 +24433,7 @@ aa
 aa
 zt
 zs
-Fv
+Al
 AX
 Al
 zs
@@ -24510,7 +24442,7 @@ aa
 aa
 zt
 zs
-JU
+Al
 Ky
 Al
 zs
@@ -24519,7 +24451,7 @@ aa
 aa
 zt
 zs
-Ng
+Al
 AX
 Al
 zs
@@ -56115,11 +56047,11 @@ BI
 FQ
 Gz
 Eq
-BI
-aa
-aa
-aa
-aa
+Fv
+JT
+ab
+ab
+ab
 aa
 aa
 aa
@@ -56372,11 +56304,11 @@ Fe
 FR
 GA
 GQ
-BI
-aa
-aa
-aa
-aa
+Fv
+JU
+Nf
+Ng
+ab
 aa
 aa
 aa

@@ -6,14 +6,25 @@
 	icon_state = "poolwater"
 	layer = ABOVE_MOB_LAYER
 	mouse_opacity = 0
+
 /obj/structure/poolwater/sea
 	name = "sea water"
 	density = 0
 	anchored = 1
 	icon = 'icons/obj/infinity_decals.dmi'
-	icon_state = "sheetblue"
+	icon_state = "sheetblue4"
 	layer = ABOVE_MOB_LAYER
 	mouse_opacity = 0
+
+/obj/structure/poolwater/sea/one
+	icon_state = "sheetblue1"
+
+/obj/structure/poolwater/sea/two
+	icon_state = "sheetblue2"
+
+/obj/structure/poolwater/sea/three
+	icon_state = "sheetblue3"
+
 /obj/structure/pool
 	name = "pool"
 	density = 1

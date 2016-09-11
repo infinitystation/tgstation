@@ -32,11 +32,7 @@
 /turf/closed/indestructible/riveted/infinity
 	icon_state = "riveted0"
 	icon = 'icons/turf/walls/indestructable_smooth.dmi'
-
-/turf/closed/indestructible/riveted/infinity/terror
-	icon_state = "riveted0"
-	icon = 'icons/turf/walls/indestructable_smooth_ter.dmi'
-	canSmoothWith = list(/turf/closed/indestructible/riveted/infinity/terror)
+	canSmoothWith = list(/turf/closed/indestructible/riveted/infinity)
 	smooth = SMOOTH_TRUE
 
 /turf/closed/wall/mineral/abductor/terror

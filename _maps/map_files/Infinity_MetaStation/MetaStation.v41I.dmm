@@ -83850,11 +83850,7 @@
 	},
 /area/toxins/test_area)
 "cKF" = (
-/turf/closed/indestructible{
-	desc = "A wall impregnated with Fixium, able to withstand massive explosions with ease";
-	icon_state = "riveted";
-	name = "hyper-reinforced wall"
-	},
+/turf/closed/indestructible/riveted/infinity,
 /area/toxins/test_area)
 "cKG" = (
 /turf/open/floor/plasteel{
@@ -95068,23 +95064,38 @@
 	},
 /turf/open/space,
 /area/space)
-"ddO" = (
+"ddG" = (
 /obj/item/stack/sheet/cardboard,
-/turf/open/floor/plating{
-	icon_state = "warnplate";
-	dir = 4
-	},
+/turf/open/floor/plating,
 /area/maintenance/fpmaint2)
-"ddN" = (
-/obj/item/stack/sheet/cardboard,
-/turf/open/floor/plating{
-	tag = "icon-panelscorched";
-	icon_state = "panelscorched"
+"ddH" = (
+/obj/item/weapon/crowbar/red,
+/turf/open/floor/plating,
+/area/construction)
+"ddI" = (
+/obj/structure/closet/crate{
+	icon_state = "crateopen";
+	opened = 1
 	},
-/area/maintenance/fpmaint2)
-"ddM" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 10
+/obj/effect/spawner/lootdrop/maintenance{
+	lootcount = 2;
+	name = "2maintenance loot spawner"
+	},
+/turf/open/floor/plasteel,
+/area/construction)
+"ddJ" = (
+/turf/open/space,
+/turf/closed/wall/shuttle{
+	dir = 1;
+	icon_state = "diagonalWall3"
+	},
+/area/hallway/secondary/entry)
+"ddK" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
 /obj/item/stack/sheet/cardboard,
 /turf/open/floor/plating,
@@ -95097,41 +95108,26 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/shuttle/arrival)
-"ddK" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
+"ddM" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 10
 	},
 /obj/item/stack/sheet/cardboard,
 /turf/open/floor/plating,
 /area/maintenance/fpmaint2)
-"ddJ" = (
-/turf/open/space,
-/turf/closed/wall/shuttle{
-	dir = 1;
-	icon_state = "diagonalWall3"
-	},
-/area/hallway/secondary/entry)
-"ddI" = (
-/obj/structure/closet/crate{
-	icon_state = "crateopen";
-	opened = 1
-	},
-/obj/effect/spawner/lootdrop/maintenance{
-	lootcount = 2;
-	name = "2maintenance loot spawner"
-	},
-/turf/open/floor/plasteel,
-/area/construction)
-"ddH" = (
-/obj/item/weapon/crowbar/red,
-/turf/open/floor/plating,
-/area/construction)
-"ddG" = (
+"ddN" = (
 /obj/item/stack/sheet/cardboard,
-/turf/open/floor/plating,
+/turf/open/floor/plating{
+	tag = "icon-panelscorched";
+	icon_state = "panelscorched"
+	},
+/area/maintenance/fpmaint2)
+"ddO" = (
+/obj/item/stack/sheet/cardboard,
+/turf/open/floor/plating{
+	icon_state = "warnplate";
+	dir = 4
+	},
 /area/maintenance/fpmaint2)
 
 (1,1,1) = {"

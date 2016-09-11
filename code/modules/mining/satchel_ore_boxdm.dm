@@ -2,8 +2,8 @@
 /**********************Ore box**************************/
 
 /obj/structure/ore_box
-	icon = 'icons/obj/mining.dmi'
-	icon_state = "orebox"
+	icon = 'icons/obj/infinity_object.dmi'
+	icon_state = "orebox1"
 	name = "ore box"
 	desc = "A heavy wooden box, which can be filled with a lot of ores."
 	density = 1

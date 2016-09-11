@@ -567,12 +567,9 @@
 	},
 /area/prison)
 "bL" = (
-/obj/structure/chair{
-	dir = 1
-	},
-/turf/open/floor/plasteel/blackvault{
-	dir = 6
-	},
+/obj/structure/table,
+/obj/item/toy/cards/deck,
+/turf/open/floor/plasteel/black,
 /area/prison)
 "bM" = (
 /obj/machinery/chem_master/condimaster{
@@ -3434,7 +3431,9 @@
 	name = "\improper Prison Kitchen"
 	})
 "iJ" = (
-/obj/structure/closet/secure_closet/freezer/kitchen,
+/obj/structure/closet/secure_closet/freezer/kitchen{
+	req_access = list(0)
+	},
 /turf/open/floor/plasteel/whitebot,
 /area/prison)
 "iK" = (
@@ -3559,9 +3558,7 @@
 /turf/open/floor/carpet,
 /area/prison/hallway/aft)
 "jb" = (
-/obj/machinery/door/airlock/glass{
-	name = "Dining Room"
-	},
+/obj/machinery/door/airlock/glass,
 /turf/open/floor/plasteel/whitebot/delivery,
 /area/prison)
 "jc" = (
@@ -4451,76 +4448,46 @@
 	name = "\improper Prison Kitchen"
 	})
 "lb" = (
-/turf/open/floor/plasteel/black,
-/area/prison/control{
-	name = "\improper Prison Kitchen"
-	})
-"lc" = (
-/turf/open/floor/plasteel/blackvault{
-	dir = 10
-	},
-/area/prison/control{
-	name = "\improper Prison Kitchen"
-	})
-"ld" = (
-/obj/structure/sink/kitchen{
-	desc = "A sink used for washing one's hands and face. It looks rusty and home-made";
-	name = "old sink";
-	pixel_y = 28
-	},
-/turf/open/floor/plasteel/blackvault,
-/area/prison/control{
-	name = "\improper Prison Kitchen"
-	})
-"le" = (
-/obj/item/seeds/wheat,
-/obj/item/weapon/grown/corncob,
-/obj/item/weapon/reagent_containers/food/snacks/grown/carrot,
-/obj/item/weapon/reagent_containers/food/snacks/grown/wheat,
-/obj/item/weapon/reagent_containers/food/snacks/grown/pumpkin{
-	pixel_y = 5
-	},
-/obj/structure/extinguisher_cabinet{
-	pixel_x = 27;
-	pixel_y = 0
-	},
-/obj/machinery/light{
-	icon_state = "tube1";
+/turf/open/floor/plasteel/red/corner{
 	dir = 4
 	},
-/obj/machinery/camera/autoname{
-	dir = 8;
-	network = list("SS13")
+/area/prison)
+"lc" = (
+/obj/structure/table/wood,
+/obj/item/weapon/statuebust{
+	pixel_x = 0;
+	pixel_y = 12
 	},
-/obj/structure/table/glass,
-/turf/open/floor/plasteel/vault{
-	dir = 8
-	},
-/area/prison/control{
-	name = "\improper Prison Kitchen"
-	})
+/turf/open/floor/wood,
+/area/prison)
+"ld" = (
+/obj/structure/table/wood,
+/obj/item/weapon/coin/twoheaded,
+/turf/open/floor/carpet,
+/area/prison)
+"le" = (
+/obj/structure/table/wood,
+/obj/item/weapon/storage/pill_bottle/dice,
+/turf/open/floor/carpet,
+/area/prison)
 "lf" = (
-/obj/machinery/chem_master/condimaster{
-	desc = "Used to separate out liquids - useful for purifying botanical extracts. Also dispenses condiments.";
-	name = "BrewMaster 2199";
-	pixel_x = -4
+/obj/structure/table/wood,
+/obj/machinery/computer/libraryconsole/bookmanagement/prison{
+	pixel_y = 8
 	},
-/turf/open/floor/plasteel/vault{
-	dir = 8
-	},
-/area/prison/control{
-	name = "\improper Prison Kitchen"
-	})
+/turf/open/floor/wood,
+/area/prison)
 "lg" = (
-/turf/open/floor/plasteel/darkyellow/side{
-	dir = 1
-	},
-/area/prison/hallway/aft)
+/obj/structure/table/reinforced,
+/obj/item/weapon/soap/nanotrasen,
+/turf/open/floor/plasteel/whiteyellow,
+/area/prison)
 "lh" = (
-/turf/open/floor/plasteel/blackvault{
-	dir = 8
+/obj/item/weapon/storage/box/monkeycubes,
+/turf/open/floor/plasteel{
+	icon_state = "showroomfloor"
 	},
-/area/prison/hallway/aft)
+/area/prison)
 "li" = (
 /obj/structure/mirror{
 	pixel_x = -32
@@ -4584,16 +4551,8 @@
 /turf/open/floor/plasteel/darkgreen/corner,
 /area/prison)
 "lq" = (
-/obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/glass_security{
-	name = "Block B, security room";
-	req_access_txt = "101"
-	},
-/turf/open/floor/plasteel/darkvault{
-	dir = 1;
-	icon = 'icons/turf/infinity.dmi';
-	icon_state = "darkdelivery"
-	},
+/obj/machinery/door/airlock/glass,
+/turf/open/floor/plating,
 /area/prison)
 "lr" = (
 /obj/machinery/door/firedoor,
@@ -4601,10 +4560,9 @@
 /turf/open/floor/plasteel/black,
 /area/prison)
 "ls" = (
-/obj/structure/table/reinforced,
-/obj/machinery/microwave,
-/turf/open/floor/plasteel/darkred/side{
-	dir = 9
+/obj/machinery/door/airlock/glass,
+/turf/open/floor/plasteel/darkred/corner{
+	dir = 8
 	},
 /area/prison)
 "lt" = (
@@ -4623,24 +4581,18 @@
 	},
 /area/prison)
 "lu" = (
-/obj/structure/table/reinforced,
-/obj/machinery/recharger,
-/turf/open/floor/plasteel/darkred/side{
-	dir = 8
-	},
+/obj/machinery/door/airlock/glass,
+/turf/open/floor/plasteel/black,
 /area/prison)
 "lv" = (
-/obj/machinery/door/window/eastleft{
-	name = "Small kitchen";
-	req_access_txt = "101"
-	},
-/turf/open/floor/plasteel/darkred/side{
-	dir = 4
-	},
+/obj/machinery/door/airlock/glass,
+/turf/open/floor/plasteel/darkred/corner,
 /area/prison)
 "lw" = (
-/obj/structure/chair/comfy/black,
-/turf/open/floor/plasteel/black,
+/obj/machinery/vending/cigarette,
+/turf/open/floor/plasteel/darkvault{
+	dir = 8
+	},
 /area/prison)
 "lx" = (
 /obj/structure/bed,
@@ -4657,16 +4609,7 @@
 	},
 /area/prison)
 "ly" = (
-/obj/structure/table/reinforced,
-/obj/item/weapon/storage/box/donkpockets,
-/obj/machinery/newscaster{
-	hitstaken = 1;
-	pixel_x = 0;
-	pixel_y = -32
-	},
-/turf/open/floor/plasteel/darkred/side{
-	dir = 10
-	},
+/turf/open/floor/plasteel/darkred/corner,
 /area/prison)
 "lz" = (
 /obj/structure/bookcase/random,
@@ -4732,15 +4675,18 @@
 /turf/open/floor/carpet,
 /area/prison)
 "lK" = (
-/obj/structure/chair/comfy/sofa/corner/right/brown{
-	tag = "icon-comfychair1 (WEST)";
-	icon_state = "comfychair1";
+/obj/machinery/vending/sustenance,
+/turf/open/floor/plasteel/darkvault{
 	dir = 8
 	},
-/turf/open/floor/carpet,
 /area/prison)
 "lL" = (
-/turf/open/floor/plasteel/white/corner,
+/obj/structure/chair{
+	dir = 4
+	},
+/turf/open/floor/plasteel/blackvault{
+	dir = 9
+	},
 /area/prison)
 "lM" = (
 /obj/item/weapon/twohanded/required/kirbyplants{
@@ -4789,24 +4735,23 @@
 	},
 /area/prison)
 "lQ" = (
-/obj/structure/chair/comfy/sofa/brown{
-	tag = "icon-comfychair2 (EAST)";
-	icon_state = "comfychair2";
-	dir = 4
-	},
-/turf/open/floor/carpet,
+/obj/structure/table,
+/turf/open/floor/plasteel/black,
 /area/prison)
 "lR" = (
-/obj/structure/chair/comfy/sofa/brown{
-	tag = "icon-comfychair2 (WEST)";
-	icon_state = "comfychair2";
+/obj/structure/chair{
 	dir = 8
 	},
-/turf/open/floor/carpet,
+/turf/open/floor/plasteel/blackvault{
+	dir = 5
+	},
 /area/prison)
 "lS" = (
-/turf/open/floor/plasteel/white/side{
+/obj/structure/chair{
 	dir = 4
+	},
+/turf/open/floor/plasteel/blackvault{
+	dir = 10
 	},
 /area/prison)
 "lT" = (
@@ -4857,12 +4802,12 @@
 /turf/open/floor/carpet,
 /area/prison)
 "lZ" = (
-/obj/structure/chair/comfy/sofa/corner/brown{
-	tag = "icon-comfychair3 (WEST)";
-	icon_state = "comfychair3";
+/obj/structure/chair{
 	dir = 8
 	},
-/turf/open/floor/carpet,
+/turf/open/floor/plasteel/blackvault{
+	dir = 6
+	},
 /area/prison)
 "ma" = (
 /obj/machinery/door/airlock{
@@ -21243,8 +21188,8 @@ aa
 aa
 aa
 aa
-bs
-bh
+aa
+aa
 aa
 aa
 aa
@@ -21500,14 +21445,14 @@ aa
 aa
 aa
 aa
-bi
-bt
 aa
 aa
 aa
 aa
 aa
 aa
+bs
+bh
 aa
 aa
 aa
@@ -21763,8 +21708,8 @@ aa
 aa
 aa
 aa
-aa
-aa
+bi
+bt
 aa
 aa
 aa
@@ -24856,10 +24801,10 @@ dj
 hq
 cw
 bg
-bg
-bg
-bg
-bg
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -25113,14 +25058,14 @@ bg
 bg
 bg
 bg
-bg
-lz
-lz
-bg
-bg
-bg
-bg
-bg
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -25370,14 +25315,14 @@ dh
 ht
 hF
 bg
-bg
-ih
-iv
-lY
-lQ
-lI
-iv
-bg
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -25627,14 +25572,14 @@ hg
 cO
 hG
 bg
-ik
-ih
-ip
-lJ
-lJ
-lJ
-jn
-bg
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -25884,15 +25829,15 @@ dj
 hq
 cw
 bg
-ik
-ih
-lD
-lJ
-lJ
-lJ
-iw
-bg
-bg
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -26141,15 +26086,15 @@ bg
 bg
 bg
 bg
-id
-ih
-iv
-lZ
-lR
-lK
-iv
-id
 bg
+bg
+bg
+bg
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -26395,16 +26340,11 @@ fG
 ek
 er
 bg
-aa
-aa
-bg
 lz
-ih
-ih
-ih
-ih
-ih
-ih
+lz
+lz
+lz
+lz
 lz
 bg
 bg
@@ -26415,7 +26355,12 @@ bg
 bg
 bg
 bg
-bg
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -26652,18 +26597,12 @@ fH
 gl
 gF
 bg
-aa
-aa
-bg
-bg
 lz
-ih
 iv
+lY
+lI
 iv
-ih
 lz
-bg
-bg
 bg
 mr
 ms
@@ -26673,6 +26612,12 @@ mr
 bV
 mr
 bg
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -26909,18 +26854,12 @@ fI
 et
 gG
 bg
-aa
-aa
-bg
 lz
-iv
-ih
-iv
-iv
-ih
-iv
+ip
+ld
+lJ
+jn
 lz
-bg
 bg
 ms
 mr
@@ -26930,6 +26869,12 @@ bI
 mr
 bV
 bg
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -27166,18 +27111,12 @@ eq
 bg
 gH
 bg
-aa
-aa
-bg
 lz
-iv
-ih
-iv
-iv
-ih
-iv
+lD
+lJ
+le
+iw
 lz
-bg
 bg
 mr
 ms
@@ -27187,6 +27126,12 @@ mr
 bV
 mr
 bg
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -27423,18 +27368,12 @@ fK
 bg
 gI
 bg
-aa
-aa
-bg
 lz
 iv
-ih
 iv
 iv
-ih
 iv
 lz
-bg
 bg
 ms
 mr
@@ -27444,6 +27383,12 @@ bI
 mr
 bV
 bg
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -27680,27 +27625,27 @@ fL
 bg
 gJ
 bg
-aa
-aa
-bg
-bg
 lz
+lc
 ih
-iv
-iv
 ih
-lz
+lf
 lz
 bg
-bg
-aJ
+mr
 ms
-aJ
-bT
-aJ
+mr
+bI
+mr
 bV
-aJ
+mr
 bg
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -27938,26 +27883,26 @@ bg
 gK
 bg
 bg
-bg
-bg
-bg
-bg
 gn
 iX
 iX
 gn
 bg
 bg
+gn
+gn
+gn
+lq
+gn
 bg
 bg
-aL
-by
-aL
-aL
-aL
-by
-aL
 bg
+bg
+bg
+bg
+aa
+aa
+aa
 aa
 aa
 aa
@@ -28191,13 +28136,9 @@ bg
 eW
 fs
 fN
-gm
-gL
-gm
-gm
-gm
-gm
-gm
+eY
+gM
+fN
 gm
 eY
 fs
@@ -28206,15 +28147,19 @@ fN
 gm
 gm
 gm
+gm
+eY
+fs
+fN
+ls
 mn
 mn
-mn
-mn
-mn
-mn
-mn
-mn
+lL
+lS
 bg
+aa
+aa
+aa
 aa
 aa
 aa
@@ -28463,15 +28408,15 @@ fs
 fs
 fs
 fs
+lu
 cO
 cO
-cO
-cO
-cO
-cO
-cO
-cO
+lQ
+bL
 bg
+aa
+aa
+aa
 aa
 aa
 aa
@@ -28705,30 +28650,30 @@ bg
 eW
 fs
 fP
-ft
-gN
-ft
-ft
-ft
+lb
+gM
+fP
 ft
 ft
 ft
 ft
-lL
-lS
-lS
-js
 ft
 ft
+lb
+fs
+fs
+fP
+ft
+ft
+lv
 mo
-mo
-mo
-mo
-mo
-mo
-mo
-mo
+ly
+lR
+lZ
 bg
+aa
+aa
+aa
 aa
 aa
 aa
@@ -28978,14 +28923,14 @@ gn
 gn
 gn
 bg
-aP
-bz
-bK
-cO
-aP
-bW
-bK
+mo
+ly
+lL
+lS
 bg
+aa
+aa
+aa
 aa
 aa
 aa
@@ -29222,9 +29167,9 @@ fL
 bg
 gJ
 bg
-ls
-lu
-ly
+aa
+aa
+aa
 bg
 iy
 lE
@@ -29235,14 +29180,14 @@ ju
 lE
 mh
 bg
-bp
-bA
+mo
+ly
 bL
-cO
-bp
-cd
-bL
+lQ
 bg
+aa
+aa
+aa
 aa
 aa
 aa
@@ -29479,9 +29424,9 @@ lo
 bg
 gI
 bg
-hy
-cO
-hV
+aa
+aa
+aa
 bg
 lA
 iz
@@ -29492,14 +29437,14 @@ iz
 iz
 jJ
 bg
+mo
+ly
+lR
+lZ
 bg
-bg
-bg
-bg
-bg
-bg
-bg
-bg
+aa
+aa
+aa
 aa
 aa
 aa
@@ -29736,9 +29681,9 @@ ex
 bg
 gH
 bg
-hz
-lv
-hW
+aa
+aa
+aa
 bg
 iA
 iQ
@@ -29749,11 +29694,11 @@ iQ
 iQ
 jK
 bg
-aa
-aa
-aa
-aa
-aa
+lw
+lK
+bg
+bg
+bg
 aa
 aa
 aa
@@ -29992,10 +29937,10 @@ ln
 fS
 lk
 gR
-dj
-hA
-cO
-hX
+bg
+aa
+aa
+aa
 bg
 iB
 iB
@@ -30006,9 +29951,9 @@ iB
 iB
 iB
 bg
-aa
-aa
-aa
+bg
+bg
+bg
 aa
 aa
 aa
@@ -30249,10 +30194,10 @@ fv
 fT
 ev
 gS
-lq
-hA
-lw
-hY
+bg
+aa
+aa
+aa
 bg
 iC
 lF
@@ -30506,10 +30451,10 @@ ln
 fU
 go
 ew
-dj
-hB
-hL
-hZ
+bg
+aa
+aa
+aa
 bg
 lA
 iz
@@ -31797,7 +31742,7 @@ bg
 bg
 im
 iH
-lH
+lg
 lO
 jc
 jd
@@ -33342,7 +33287,7 @@ aa
 aa
 bg
 lX
-mb
+lh
 mf
 bg
 aa
