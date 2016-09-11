@@ -1013,11 +1013,6 @@
 		if(istype(F, /turf/closed/mineral))
 			var/turf/closed/mineral/M = F
 			M.ChangeTurf(M.turf_type)
-	gps = new /obj/item/device/gps/internal(src)
-
-/mob/living/simple_animal/hostile/spawner/lavaland/Destroy()
-	qdel(gps)
-	. = ..()
 
 #define MEDAL_PREFIX "Tendril"
 /mob/living/simple_animal/hostile/spawner/lavaland/death()

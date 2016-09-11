@@ -620,6 +620,8 @@
 	icon = 'icons/obj/doors/1x2blast_hor.dmi'
 	icon_state = "closed"
 	bound_width = 64
+	density = 1
+	opacity = 1
 
 /obj/machinery/door/poddoor/big/preopen
 	icon_state = "open"

@@ -60,6 +60,10 @@
 	name = "Engineer equipment room"
 	icon_state = "yellow"
 
+/area/toxins/xeno_lobby
+	name = "Xenobiology Lab's lobby"
+	icon_state = "toxlab"
+
 /area/CP
 	name = "Control Post"
 	has_gravity = 1

@@ -391,6 +391,7 @@
 	item_state = "knight_green"
 
 /obj/item/clothing/suit/armor/riot/knight/yellow
+	icon = 'icons/obj/clothing/infinity_work.dmi'
 	icon_state = "knight_yellow"
 	item_state = "knight_yellow"
 
