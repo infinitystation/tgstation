@@ -2463,7 +2463,6 @@
 /obj/item/weapon/grenade/barrier{
 	pixel_x = -8
 	},
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/machinery/light{
 	dir = 8
 	},
