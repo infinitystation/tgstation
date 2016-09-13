@@ -25,13 +25,11 @@
 	..()
 	create_reagents(50)
 	tracked_implants += src
+	reagents.set_reacting(FALSE)
 
 /obj/item/weapon/implant/chem/Destroy()
 	..()
 	tracked_implants -= src
-
-
-
 
 /obj/item/weapon/implant/chem/trigger(emote, mob/source)
 	if(emote == "deathgasp")
@@ -53,16 +51,54 @@
 		qdel(src)
 
 
+
+
+
 /obj/item/weapon/implantcase/chem
 	name = "implant case - 'Remote Chemical'"
 	desc = "A glass case containing a remote chemical implant."
+	flags = OPENCONTAINER
 
 /obj/item/weapon/implantcase/chem/New()
 	imp = new /obj/item/weapon/implant/chem(src)
 	..()
-	
+
 /obj/item/weapon/implantcase/chem/attackby(obj/item/weapon/W, mob/user, params)
 	if(imp)
 		imp.attackby(W, user, params)
-	else 
+	else
+		return ..()
+
+/obj/item/weapon/implantcase/chem/attackby(obj/item/weapon/W, mob/user, params)
+	if(istype(W, /obj/item/weapon/pen))
+		var/t = stripped_input(user, "What would you like the label to be?", name, null)
+		if(user.get_active_hand() != W)
+			return
+		if(!in_range(src, user) && loc != user)
+			return
+		if(t)
+			name = "implant case - '[t]'"
+		else
+			name = "implant case"
+	else if(istype(W, /obj/item/weapon/implanter))
+		var/obj/item/weapon/implanter/I = W
+		if(I.imp)
+			if(imp || I.imp.implanted)
+				return
+			I.imp.loc = src
+			imp = I.imp
+			I.imp = null
+			update_icon()
+			I.update_icon()
+		else
+			if(imp)
+				if(I.imp)
+					return
+				imp.loc = I
+				I.imp = imp
+				imp = null
+				update_icon()
+			I.update_icon()
+
+	else
 		return ..()

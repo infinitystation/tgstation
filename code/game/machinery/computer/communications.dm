@@ -643,11 +643,12 @@ var/const/CALL_SHUTTLE_REASON_LENGTH = 12
 	return dat
 
 /obj/machinery/computer/communications/proc/make_announcement(mob/living/user, is_silicon)
-	var/input = stripped_input(user, "Please choose a message to announce to the station crew.", "What?")
+	var/input = stripped_input(usr, "Please choose a message to announce to the station crew.", "What?")
 	if(!input || !user.canUseTopic(src))
 		return
+	input = sanitize_a0(input)
 	if(is_silicon)
-		minor_announce(input,"[user.name] Announces:")
+		minor_announce(html_decode(input),"[user.name] Announces:")
 		ai_message_cooldown = 1
 		spawn(600)//One minute cooldown
 			ai_message_cooldown = 0

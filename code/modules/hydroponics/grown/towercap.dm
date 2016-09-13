@@ -45,6 +45,7 @@
 	attack_verb = list("bashed", "battered", "bludgeoned", "whacked")
 	var/plank_type = /obj/item/stack/sheet/mineral/wood
 	var/plank_name = "wooden planks"
+	var/fromtree = 0
 	var/list/accepted = list(/obj/item/weapon/reagent_containers/food/snacks/grown/tobacco,
 	/obj/item/weapon/reagent_containers/food/snacks/grown/tea,
 	/obj/item/weapon/reagent_containers/food/snacks/grown/ambrosia/vulgaris,
@@ -79,9 +80,10 @@
 			usr << "<span class ='warning'>You must dry this first!</span>"
 
 /obj/item/weapon/grown/log/tree
-	seed = null
+	seed = /obj/item/seeds/tower
 	name = "wood log"
 	desc = "TIMMMMM-BERRRRRRRRRRR!"
+	accepted = list()
 
 /obj/item/weapon/grown/log/steel
 	seed = /obj/item/seeds/tower/steel
