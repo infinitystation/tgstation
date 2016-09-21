@@ -1,4 +1,4 @@
-/mob/living/var/emoteCooldown = 200 // each 10 is real second
+/mob/living/var/emoteCooldown = 100 // each 10 is real second
 /mob/living/var/emoteLastUse = -1000
 
 /mob/living/verb/emoteCooldownCheck()
@@ -6,7 +6,7 @@
 		emoteLastUse = world.time
 		return 1
 	else
-		src << "ћежду эмоциями должно пройти более 20 секунд"
+		src << "ћежду эмоциями должно пройти более 10 секунд"
 		return 0
 
 /mob/living/verb/vomit_verb()

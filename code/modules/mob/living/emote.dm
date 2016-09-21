@@ -335,11 +335,12 @@
 			m_type = 1
 
 		if ("surrender","surrenders")
-			message = "<B>[src]</B> puts their hands on their head and falls to the ground, they surrender!"
-			if(sleeping)
-				return //Can't surrender while asleep.
-			Weaken(20) //So you can't resist.
-			m_type = 1
+			if(emoteCooldownCheck() == 1)
+				message = "<B>[src]</B> закидывает руки за голову и ложитс&#255; на пол!"
+				if(sleeping)
+					return //Can't surrender while asleep.
+				Weaken(20) //So you can't resist.
+				m_type = 1
 
 		if ("faint","faints")
 			message = "<B>[src]</B> faints."
