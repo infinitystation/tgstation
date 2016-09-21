@@ -311,7 +311,7 @@ var/next_mob_id = 0
 	A.examine(src)
 
 /mob/living/verb/surrender()
-	set name = "—даться"
+	set name = "Surrender"
 	set category = "IC"
 	emote("surrender")
 
