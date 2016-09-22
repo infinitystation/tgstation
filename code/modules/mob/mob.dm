@@ -310,6 +310,11 @@ var/next_mob_id = 0
 	face_atom(A)
 	A.examine(src)
 
+/mob/living/verb/surrender()
+	set name = "Surrender"
+	set category = "IC"
+	emote("surrender")
+
 //same as above
 //note: ghosts can point, this is intended
 //visible_message will handle invisibility properly

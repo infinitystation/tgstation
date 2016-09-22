@@ -404,7 +404,7 @@
 /obj/item/toy/carpplushie
 	name = "space carp plushie"
 	desc = "An adorable stuffed toy that resembles a space carp."
-	icon = 'icons/obj/infinity_toys.dmi'
+	icon = 'icons/obj/toy.dmi'
 	icon_state = "carpplushie"
 	attack_verb = list("bitten", "eaten", "fin slapped")
 	bitesound = 'sound/weapons/bite.ogg'
