@@ -2,7 +2,7 @@
 /obj/item/seeds/weeds
 	name = "pack of weed seeds"
 	desc = "Yo mang, want some weeds?"
-	icon_state = "seed"
+	icon_state = "weeds"
 	species = "weeds"
 	plantname = "Starthistle"
 	lifespan = 100
@@ -13,6 +13,8 @@
 	potency = -1
 	oneharvest = 1
 	growthstages = 4
+	growing_icon = 'icons/obj/hydroponics/growing_flowers.dmi'
+	icon_dead = "weeds-dead"
 	plant_type = PLANT_WEED
 
 
