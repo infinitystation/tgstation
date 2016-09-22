@@ -26,11 +26,11 @@
 	belt = /obj/item/device/pda/heads
 	glasses = /obj/item/clothing/glasses/sunglasses
 	ears = /obj/item/device/radio/headset/headset_ifa
-	uniform = /obj/item/clothing/under/suit_jacket
+	uniform = /obj/item/clothing/under/suit_jacket/charcoal
 	suit = /obj/item/clothing/suit/toggle/lawyer/black
-	shoes = /obj/item/clothing/shoes/sneakers/brown
-	l_hand = /obj/item/weapon/storage/briefcase
-	backpack_contents = list(/obj/item/device/assembly/flash/handheld=1)
+	shoes = /obj/item/clothing/shoes/laceup
+	l_hand = /obj/item/weapon/storage/secure/briefcase
+	l_pocket = /obj/item/weapon/melee/baton/shocker/loaded
 
 /datum/outfit/job/ifa/post_equip(mob/living/carbon/human/H)
 	..()

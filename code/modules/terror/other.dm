@@ -206,11 +206,22 @@
 	desc = "Index, which tells that you are in the engineer's room."
 	icon_state = "engineer"
 
-
 /obj/structure/sign/directions/ert/medic
 	name = "medical's equipment"
 	desc = "Index, which tells that you are in the medical's room."
 	icon_state = "medic"
+
+/obj/structure/sign/directions/synd
+	name = "Syndicate's sign"
+	desc = "That's our galaxy."
+	icon = 'icons/obj/infinity_decals.dmi'
+	icon_state = "synd_sim"
+
+/obj/structure/sign/directions/s
+	name = "S"
+	desc = "That's just big a letter S..."
+	icon = 'icons/obj/infinity_decals.dmi'
+	icon_state = "S"
 
 /obj/structure/sign/directions/only
 	name = "Only 1"
@@ -615,6 +626,10 @@
 /obj/structure/hyper_sleep/cable/tunnel
 	name = "Hypersleeper's tunnel"
 	icon_state = "cryo_rear_nocable"
+
+/obj/structure/table/steel
+	name = "black table"
+	color = "#666666"
 
 /obj/machinery/door/poddoor/big
 	icon = 'icons/obj/doors/1x2blast_hor.dmi'
