@@ -39,7 +39,7 @@
 
 /obj/machinery/porta_turret/defensepylon_internal_turret/cult
 	faction = "cult"
-	side = "cult"
+	//side = "cult"
 
 /obj/structure/chair/comfy/sofa
 	name = "comfy sofa"

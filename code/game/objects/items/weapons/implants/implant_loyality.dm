@@ -19,7 +19,7 @@
 
 /obj/item/weapon/implant/mindshield/implant(mob/target)
 	if(..())
-		if((target.mind in (ticker.mode.changelings | ticker.mode.abductors | ticker.mode.cult)) || isntloyal(target) || (target.mind in ticker.mode.blue_deity_prophets|ticker.mode.red_deity_prophets|ticker.mode.red_deity_followers|ticker.mode.blue_deity_followers))
+		if((target.mind in (ticker.mode.changelings | ticker.mode.abductors | ticker.mode.cult)) || isntloyal(target))
 			target.visible_message("<span class='warning'>[target] seems to resist the implant!</span>", "<span class='warning'>You feel something interfering with your mental conditioning, but you resist it!</span>")
 			removed(target, 1)
 			qdel(src)
@@ -35,7 +35,6 @@
 			target << "<span class='boldnotice'>Your mind suddenly feels terribly vulnerable. You are no longer safe from brainwashing.</span>"
 		return 1
 	return 0
-
 
 /obj/item/weapon/implanter/mindshield
 	name = "implanter (mindshield)"

@@ -48,7 +48,7 @@
 		if(16)
 			new /obj/item/weapon/guardiancreator(src)
 		if(17)
-			new /obj/item/borg/upgrade/modkit/aoe/mobs(src)
+			new /obj/item/borg/upgrade/modkit/aoe/turfs/andmobs(src)
 		if(18)
 			new /obj/item/device/warp_cube/red(src)
 		if(19)
@@ -195,7 +195,7 @@
 
 /obj/item/projectile/hook/fire(setAngle)
 	if(firer)
-		chain = Beam(firer, icon_state = "chain", icon = 'icons/obj/lavaland/artefacts.dmi', time = INFINITY, maxdistance = INFINITY)
+		chain = firer.Beam(src, icon_state = "chain", time = INFINITY, maxdistance = INFINITY)
 	..()
 
 /obj/item/projectile/hook/on_hit(atom/target)
@@ -342,11 +342,7 @@
 				var/obj/screen/inventory/hand/H = over_object
 				if(!M.unEquip(src))
 					return
-				switch(H.slot_id)
-					if(slot_r_hand)
-						M.put_in_r_hand(src)
-					if(slot_l_hand)
-						M.put_in_l_hand(src)
+				M.put_in_hand(src, H.held_index)
 
 			add_fingerprint(usr)
 
@@ -636,7 +632,9 @@
 	var/transform_string = "lava"
 	var/reset_turf_type = /turf/open/floor/plating/asteroid/basalt
 	var/reset_string = "basalt"
-	var/cooldown = 200
+	var/create_cooldown = 100
+	var/create_delay = 30
+	var/reset_cooldown = 50
 	var/timer = 0
 	var/banned_turfs
 
@@ -658,15 +656,31 @@
 		if(!istype(T))
 			return
 		if(!istype(T, turf_type))
-			user.visible_message("<span class='danger'>[user] turns \the [T] into [transform_string]!</span>")
-			message_admins("[key_name_admin(user)] fired the lava staff at (<A HREF='?_src_=holder;adminplayerobservecoodjump=1;X=[T.x];Y=[T.y];Z=[T.z]'>[get_area(target)] ([T.x], [T.y], [T.z])</a>).")
-			log_game("[key_name(user)] fired the lava staff at [get_area(target)] ([T.x], [T.y], [T.z]).")
-			T.ChangeTurf(turf_type)
+			var/obj/effect/overlay/temp/lavastaff/L = PoolOrNew(/obj/effect/overlay/temp/lavastaff, T)
+			L.alpha = 0
+			animate(L, alpha = 255, time = create_delay)
+			user.visible_message("<span class='danger'>[user] points [src] at [T]!</span>")
+			timer = world.time + create_delay + 1
+			if(do_after(user, create_delay, target = T))
+				user.visible_message("<span class='danger'>[user] turns \the [T] into [transform_string]!</span>")
+				message_admins("[key_name_admin(user)] fired the lava staff at [get_area(target)]. [ADMIN_COORDJMP(T)]")
+				log_game("[key_name(user)] fired the lava staff at [get_area(target)] [COORD(T)].")
+				T.ChangeTurf(turf_type)
+				timer = world.time + create_cooldown
+				qdel(L)
+			else
+				timer = world.time
+				qdel(L)
+				return
 		else
 			user.visible_message("<span class='danger'>[user] turns \the [T] into [reset_string]!</span>")
 			T.ChangeTurf(reset_turf_type)
-		playsound(get_turf(src),'sound/magic/Fireball.ogg', 200, 1)
-		timer = world.time + cooldown
+			timer = world.time + reset_cooldown
+		playsound(T,'sound/magic/Fireball.ogg', 200, 1)
+
+/obj/effect/overlay/temp/lavastaff
+	icon_state = "lavastaff_warn"
+	duration = 50
 
 ///Bubblegum
 
@@ -690,15 +704,13 @@
 
 /obj/structure/closet/crate/necropolis/bubblegum/New()
 	..()
-	var/loot = rand(1,4)
+	var/loot = rand(1,3)
 	switch(loot)
 		if(1)
-			new /obj/item/weapon/antag_spawner/slaughter_demon(src)
-		if(2)
 			new /obj/item/mayhem(src)
-		if(3)
+		if(2)
 			new /obj/item/blood_contract(src)
-		if(4)
+		if(3)
 			new /obj/item/weapon/gun/magic/staff/spellblade(src)
 
 /obj/item/blood_contract
@@ -738,7 +750,7 @@
 			if(H == L)
 				continue
 			H << "<span class='userdanger'>You have an overwhelming desire to kill [L]. They have been marked red! Go kill them!</span>"
-			H.equip_to_slot_or_del(new /obj/item/weapon/kitchen/knife/butcher(H), slot_l_hand)
+			H.put_in_hands_or_del(new /obj/item/weapon/kitchen/knife/butcher(H))
 
 	qdel(src)
 
@@ -810,10 +822,12 @@
 				user.visible_message("<span class='hierophant_warning'>[user] creates a strange rune beneath them!</span>", \
 				"<span class='hierophant'>You create a hierophant rune, which you can teleport yourself and any allies to at any time!</span>\n\
 				<span class='notice'>You can remove the rune to place a new one by striking it with the staff.</span>")
+			else
+				timer = world.time
 		else
 			user << "<span class='warning'>You need to be on solid ground to produce a rune!</span>"
 		return
-	if(src != user.l_hand && src != user.r_hand) //you need to hold the staff to teleport
+	if(!user.is_holding(src)) //you need to hold the staff to teleport
 		user << "<span class='warning'>You need to hold the staff in your hands to [rune ? "teleport with it":"create a rune"]!</span>"
 		return
 	if(get_dist(user, rune) <= 2) //rune too close abort
@@ -862,6 +876,8 @@
 		for(var/mob/living/L in range(1, source))
 			addtimer(src, "teleport_mob", 0, FALSE, source, L, T, user) //regardless, take all mobs near us along
 		sleep(6) //at this point the blasts detonate
+	else
+		timer = world.time
 	teleporting = FALSE
 	if(user)
 		user.update_action_buttons_icon()

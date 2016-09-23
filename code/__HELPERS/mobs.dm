@@ -198,7 +198,7 @@ Proc for attack log creation, because really why not
 
 	var/target_loc = target.loc
 
-	var/holding = user.get_active_hand()
+	var/holding = user.get_active_held_item()
 	var/datum/progressbar/progbar
 	if (progress)
 		progbar = new(user, time, target)
@@ -220,7 +220,7 @@ Proc for attack log creation, because really why not
 			drifting = 0
 			user_loc = user.loc
 
-		if((!drifting && user.loc != user_loc) || target.loc != target_loc || user.get_active_hand() != holding || user.incapacitated() || user.lying )
+		if((!drifting && user.loc != user_loc) || target.loc != target_loc || user.get_active_held_item() != holding || user.incapacitated() || user.lying )
 			. = 0
 			break
 	if (progress)
@@ -240,7 +240,7 @@ Proc for attack log creation, because really why not
 	if(!user.Process_Spacemove(0) && user.inertia_dir)
 		drifting = 1
 
-	var/holding = user.get_active_hand()
+	var/holding = user.get_active_held_item()
 
 	var/holdingnull = 1 //User's hand started out empty, check for an empty hand
 	if(holding)
@@ -277,7 +277,7 @@ Proc for attack log creation, because really why not
 				if(!holding)
 					. = 0
 					break
-			if(user.get_active_hand() != holding)
+			if(user.get_active_held_item() != holding)
 				. = 0
 				break
 	if (progress)
@@ -298,7 +298,7 @@ Proc for attack log creation, because really why not
 	for(var/atom/target in targets)
 		originalloc[target] = target.loc
 
-	var/holding = user.get_active_hand()
+	var/holding = user.get_active_held_item()
 	var/datum/progressbar/progbar
 	if(progress)
 		progbar = new(user, time, targets[1])
@@ -322,7 +322,7 @@ Proc for attack log creation, because really why not
 				user_loc = user.loc
 
 			for(var/atom/target in targets)
-				if((!drifting && user_loc != user.loc) || originalloc[target] != target.loc || user.get_active_hand() != holding || user.incapacitated() || user.lying )
+				if((!drifting && user_loc != user.loc) || originalloc[target] != target.loc || user.get_active_held_item() != holding || user.incapacitated() || user.lying )
 					. = 0
 					break mainloop
 	if(progbar)

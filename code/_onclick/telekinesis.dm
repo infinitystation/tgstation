@@ -86,7 +86,7 @@ var/const/tk_maxrange = 15
 
 //stops TK grabs being equipped anywhere but into hands
 /obj/item/tk_grab/equipped(mob/user, slot)
-	if( (slot == slot_l_hand) || (slot== slot_r_hand) )
+	if(slot == slot_hands)
 		return
 	qdel(src)
 	return
@@ -212,7 +212,7 @@ var/const/tk_maxrange = 15
 /*
 		if(istype(user, /mob/living/carbon))
 			if(user:mutations & TK && get_dist(source, user) <= 7)
-				if(user:get_active_hand())
+				if(user:get_active_held_item())
 					return 0
 				var/X = source:x
 				var/Y = source:y

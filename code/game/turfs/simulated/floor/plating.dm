@@ -238,10 +238,17 @@
 	slowdown = 2
 	luminosity = 1
 
+/turf/open/floor/plating/lava/ex_act()
+	return
+
 /turf/open/floor/plating/lava/airless
 	initial_gas_mix = "TEMP=2.7"
 
 /turf/open/floor/plating/lava/Entered(atom/movable/AM)
+	if(burn_stuff(AM))
+		START_PROCESSING(SSobj, src)
+
+/turf/open/floor/plating/lava/hitby(atom/movable/AM)
 	if(burn_stuff(AM))
 		START_PROCESSING(SSobj, src)
 

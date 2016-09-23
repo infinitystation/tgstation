@@ -184,7 +184,7 @@
 
 		if ("handshake")
 			m_type = 1
-			if (!src.restrained() && !src.r_hand)
+			if (!src.restrained() && get_empty_held_indexes())
 				var/mob/M = null
 				if (param)
 					for (var/mob/A in view(1, src))
@@ -194,7 +194,7 @@
 				if (M == src)
 					M = null
 				if (M)
-					if (M.canmove && !M.r_hand && !M.restrained())
+					if (M.canmove && M.get_empty_held_indexes() && !M.restrained())
 						message = "<B>[src]</B> пожимает руку [M]."
 					else
 						message = "<B>[src]</B> прот&#255;гивает руку дл&#255; рукопожати&#255; [M]."
@@ -307,12 +307,16 @@
 
 		if ("signal","signals")
 			if (!src.restrained())
+				var/maximum_fingers = 10
+				var/full_hands
+				for(var/obj/item/I in held_items)
+					full_hands++
+				maximum_fingers = (held_items.len-full_hands)*5
 				var/t1 = round(text2num(param))
 				if (isnum(t1))
-					if (t1 <= 5 && (!src.r_hand || !src.l_hand))
+					if (t1 <= maximum_fingers)
 						message = "<B>[src]</B> поднимает [t1] пальцев."
-					else if (t1 <= 10 && (!src.r_hand && !src.l_hand))
-						message = "<B>[src]</B> поднимает [t1] пальцев."
+
 			m_type = 1
 
 		if ("sneeze","sneezes")

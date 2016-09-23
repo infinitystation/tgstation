@@ -3181,7 +3181,7 @@
 /turf/open/space/transit,
 /area/space)
 "iC" = (
-/obj/structure/divine/trap/ctf/blue,
+/obj/structure/trap/ctf/blue,
 /turf/open/floor/plasteel/blue,
 /area/ctf)
 "iD" = (
@@ -3220,7 +3220,7 @@
 /turf/open/floor/plasteel/terror/darkred,
 /area/ctf)
 "iI" = (
-/obj/structure/divine/trap/ctf/red,
+/obj/structure/trap/ctf/red,
 /turf/open/floor/plasteel/terror/red,
 /area/ctf)
 "iJ" = (
@@ -4769,7 +4769,7 @@
 	},
 /area/wizard_station)
 "mN" = (
-/obj/structure/cult/tome,
+/obj/structure/destructible/cult/tome,
 /turf/open/floor{
 	tag = "icon-cult";
 	icon_state = "cult"
@@ -4857,7 +4857,7 @@
 	},
 /area/wizard_station)
 "mY" = (
-/obj/structure/cult/talisman{
+/obj/structure/destructible/cult/talisman{
 	desc = "A altar dedicated to the Wizard's Federation"
 	},
 /obj/item/weapon/kitchen/knife/ritual,
@@ -4992,7 +4992,7 @@
 	},
 /area/wizard_station)
 "nn" = (
-/obj/structure/cult/pylon,
+/obj/structure/destructible/cult/pylon,
 /turf/open/floor{
 	tag = "icon-cult";
 	icon_state = "cult"
@@ -5675,7 +5675,7 @@
 	},
 /area/centcom/control)
 "pd" = (
-/obj/structure/cult/forge{
+/obj/structure/destructible/cult/forge{
 	desc = "A engine used in powering the wizards ship";
 	name = "magma engine"
 	},

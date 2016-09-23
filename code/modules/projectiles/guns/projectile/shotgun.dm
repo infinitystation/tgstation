@@ -22,7 +22,7 @@
 		update_icon()
 	if(istype(A, /obj/item/weapon/wirecutters))
 		if(pin)
-			if(user.l_hand != src && user.r_hand != src)
+			if(!user.is_holding(src))
 				user << "<span class='notice'>You'll need [src] in your hands to do that.</span>"
 				return
 			user << "<span class ='notice'>Вы вынимаете ударник с [src]...</span>"

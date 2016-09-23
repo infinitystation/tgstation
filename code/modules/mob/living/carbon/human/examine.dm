@@ -8,7 +8,7 @@
 	var/t_his = "их"
 	var/t_him = "им"
 	var/t_has = "имеет"
-	var/t_him2 = "им"
+	//var/t_him2 = "им"
 
 	var/e_1 = "о"
 	var/e_2 = "ое"
@@ -34,7 +34,7 @@
 				t_He = "Он"
 				t_his = "его"
 				t_him = "ему"
-				t_him2 = "им"
+				//t_him2 = "им"
 				e_1 = ""
 				e_2 = "ый"
 				e_3 = "ий"
@@ -44,7 +44,7 @@
 				t_He = "Она"
 				t_his = "её"
 				t_him = "ей"
-				t_him2 = "ей"
+				//t_him2 = "ей"
 				e_1 = "а"
 				e_2 = "а&#255;"
 				e_3 = "а&#255;"
@@ -91,23 +91,17 @@
 	//back
 	if(back)
 		if(back.blood_DNA)
-			msg += "<span class='warning'>[t_He] носит \icon[back] [back.gender==PLURAL?"some":"a"] окровавленый [back] на спине.</span>\n"
+			msg += "<span class='warning'>[t_He] носит \icon[back] окровавленны[back.gender==PLURAL?"е":"й"] [back] на спине.</span>\n"
 		else
 			msg += "[t_He] носит \icon[back] [back] на спине.\n"
 
-	//left hand
-	if(l_hand && !(l_hand.flags&ABSTRACT))
-		if(l_hand.blood_DNA)
-			msg += "<span class='warning'>[t_He] держит \icon[l_hand] [l_hand.gender==PLURAL?"some":"a"] окровавленый [l_hand.name] в левой руке!</span>\n"
-		else
-			msg += "[t_He] держит \icon[l_hand] [l_hand] в левой руке.\n"
-
-	//правой руке
-	if(r_hand && !(r_hand.flags&ABSTRACT))
-		if(r_hand.blood_DNA)
-			msg += "<span class='warning'>[t_He] держит \icon[r_hand] [r_hand.gender==PLURAL?"some":"a"] окровавленый [r_hand.name] в правой руке!</span>\n"
-		else
-			msg += "[t_He] держит \icon[r_hand] [r_hand] в правой руке.\n"
+	//Hands
+	for(var/obj/item/I in held_items)
+		if(!(I.flags & ABSTRACT))
+			if(I.blood_DNA)
+				msg += "<span class='warning'>[t_He] держит \icon[I] окровавленны[I.gender==PLURAL?"е":"й"] [I.name] на [t_his] [get_held_index_name(get_held_index_of_item(I))]!</span>\n"
+			else
+				msg += "[t_He] держит \icon[I] [I] на [t_his] [get_held_index_name(get_held_index_of_item(I))].\n"
 
 	//gloves
 	if(gloves && !(slot_gloves in obscured))
@@ -221,18 +215,33 @@
 		for(var/obj/item/I in BP.embedded_objects)
 			msg += "<B>[t_He] [t_has] \icon[I] [I], застр&#255;вшую в [t_his] [BP.name]!</B>\n"
 
-	//stores how many left limbs are missing
+	//stores missing limbs
 	var/l_limbs_missing = 0
+	var/r_limbs_missing = 0
 	for(var/t in missing)
 		if(t=="head")
 			msg += "<span class='deadsay'><B>[capitalize(t_his)] [parse_zone(t)] is missing!</B><span class='warning'>\n"
 			continue
 		if(t == "l_arm" || t == "l_leg")
 			l_limbs_missing++
-		msg += "<B>[capitalize(t_his)] [parse_zone(t)] отсутствует!</B>\n"
+		else if(t == "r_arm" || t == "r_leg")
+			r_limbs_missing++
 
-	if(l_limbs_missing >= 2)
-		msg += "С н[t_him2] все в пор&#255;дке.\n"
+		msg += "<B>[capitalize(t_his)] [parse_zone(t)] отсутствует!!</B>\n"
+
+	var/rus_verb = ""
+	switch(gender)
+		if(MALE)
+			rus_verb = "цел"
+		if(FEMALE)
+			rus_verb = "цела"
+		if(PLURAL || NEUTER)
+			rus_verb = "цело"
+
+	if(l_limbs_missing >= 2 && r_limbs_missing == 0)
+		msg += "[t_He] [rus_verb]"
+	else if(l_limbs_missing || r_limbs_missing)
+		msg += "capitalize(t_him) чего-то не хватает...\n"
 
 	if(temp)
 		if(temp < 30)

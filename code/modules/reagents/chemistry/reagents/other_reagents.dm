@@ -174,7 +174,7 @@
 	if(data >= 30)		// 12 units, 54 seconds @ metabolism 0.4 units & tick rate 1.8 sec
 		if(!M.stuttering)
 			M.stuttering = 1
-		M.stuttering += 4
+		M.stuttering = min(M.stuttering+4, 10)
 		M.Dizzy(5)
 		if(iscultist(M) && prob(5))
 			M.say(pick("Av'te Nar'sie","Pa'lid Mors","INO INO ORA ANA","SAT ANA!","Daim'niodeis Arc'iai Le'eones","R'ge Na'sie","Diabo us Vo'iscum","Eld' Mon Nobis"))
@@ -188,11 +188,9 @@
 				if("emote")
 					M.visible_message("<span class='warning'>[M] [pick("whimpers quietly", "shivers as though cold", "glances around in paranoia")].</span>")
 	if(data >= 75)	// 30 units, 135 seconds
-		if(iscultist(M) || is_handofgod_cultist(M) || is_handofgod_prophet(M) || is_servant_of_ratvar(M))
+		if(iscultist(M) || is_servant_of_ratvar(M))
 			if(iscultist(M))
 				ticker.mode.remove_cultist(M.mind, 1, 1)
-			else if(is_handofgod_cultist(M) || is_handofgod_prophet(M))
-				ticker.mode.remove_hog_follower(M.mind)
 			else if(is_servant_of_ratvar(M))
 				remove_servant_of_ratvar(M)
 			holder.remove_reagent(id, volume)	// maybe this is a little too perfect and a max() cap on the statuses would be better??
@@ -537,7 +535,7 @@
 	color = "#808080" // rgb: 128, 128, 128
 
 /datum/reagent/chlorine/on_mob_life(mob/living/M)
-	M.take_organ_damage(1*REM, 0, 0)
+	M.take_bodypart_damage(1*REM, 0, 0)
 	. = 1
 	..()
 
@@ -748,10 +746,8 @@
 				if(H.lip_style)
 					H.lip_style = null
 					H.update_body()
-			if(C.r_hand)
-				C.r_hand.clean_blood()
-			if(C.l_hand)
-				C.l_hand.clean_blood()
+			for(var/obj/item/I in C.held_items)
+				I.clean_blood()
 			if(C.wear_mask)
 				if(C.wear_mask.clean_blood())
 					C.update_inv_wear_mask()
