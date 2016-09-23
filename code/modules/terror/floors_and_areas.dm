@@ -49,6 +49,10 @@
 	icon = 'icons/turf/terror.dmi'
 	icon_state = "barracks"
 
+/area/security/top_level_post
+	name = "Bunker's airlock"
+	icon_state = "red"
+
 /area/mine/bravo
 	name = "Post Bravo"
 
@@ -63,6 +67,22 @@
 /area/toxins/xeno_lobby
 	name = "Xenobiology Lab's lobby"
 	icon_state = "toxlab"
+
+/area/engine/top_level_rtg
+	name = "Top Level RTG"
+	icon_state = "engine"
+
+/area/crew_quarters/toilet/top
+	name = "Top Level Toilets"
+	icon_state = "toilet"
+
+/area/hallway/primary/central/top
+	name = "Top Level Lobby"
+	icon_state = "hallC"
+
+/area/quartermaster/hangar
+	name = "Hangar"
+	icon_state = "yellow"
 
 /area/CP
 	name = "Control Post"
@@ -98,8 +118,11 @@
 	name = "Cruiser"
 	blob_allowed = 0
 
-/area/shuttle/trooper
-	name = "Trooper Shuttle"
+/area/shuttle/lift_one
+	name = "Service Lift"
+
+/area/shuttle/life_two
+	name = "Lift"
 
 /area/mine/lab
 	name = "Field Laboratory"

@@ -323,6 +323,11 @@
 /turf/closed/wall/shuttle/survival/pod
 	canSmoothWith = list(/turf/closed/wall/shuttle/survival, /obj/machinery/door/airlock, /obj/structure/window/fulltile, /obj/structure/window/reinforced/fulltile, /obj/structure/window/reinforced/tinted/fulltile, /obj/structure/window/shuttle, /obj/structure/shuttle/engine)
 
+/turf/closed/wall/shuttle/survival/nodiagonal/lift_one
+	canSmoothWith = list(/turf/closed/wall/shuttle/survival/nodiagonal/lift_one, /obj/machinery/door/airlock/survival_pod, /obj/structure/window/shuttle/survival_pod)
+
+/turf/closed/wall/shuttle/survival/nodiagonal/lift_two
+	canSmoothWith = list(/turf/closed/wall/shuttle/survival/nodiagonal/lift_two, /obj/machinery/door/airlock/survival_pod, /obj/structure/window/shuttle/survival_pod)
 //Window
 /obj/structure/window/shuttle/survival_pod
 	name = "pod window"

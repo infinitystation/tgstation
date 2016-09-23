@@ -37,3 +37,19 @@
 
 /turf/closed/wall/mineral/abductor/terror
 	canSmoothWith = list(/turf/closed/wall/mineral/abductor, /obj/structure/falsewall/abductor, /obj/machinery/door/airlock/abductor, /turf/closed/wall/mineral/abductor/terror)
+
+/turf/closed/indestructible/riveted/snow
+	name = "Snow rocks"
+	icon_state = "rockyash"
+	var/smooth_icon = 'icons/turf/walls/snow_rocks.dmi'
+	icon = 'icons/turf/terror.dmi'
+	canSmoothWith = list(/turf/closed/indestructible/riveted/snow)
+	smooth = SMOOTH_MORE|SMOOTH_BORDER
+
+/turf/closed/indestructible/riveted/ice
+	name = "Ice rocks"
+	icon_state = "rockyash2"
+	var/smooth_icon = 'icons/turf/walls/ice_rocks.dmi'
+	icon = 'icons/turf/terror.dmi'
+	canSmoothWith = list(/turf/closed/indestructible/riveted/ice)
+	smooth = SMOOTH_MORE|SMOOTH_BORDER
