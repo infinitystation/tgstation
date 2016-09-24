@@ -20,9 +20,9 @@
 	if(!notetext)
 		notetext = input(usr,"Write your Note","Add Note") as message
 		notetext = sanitizeSQL_a0(notetext)
+		notetext = html_decode(notetext)
 		if(!notetext)
 			return
-	notetext = sanitizeSQL_a0(notetext)
 	if(!timestamp)
 		timestamp = SQLtime()
 	if(!adminckey)
