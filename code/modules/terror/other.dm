@@ -486,13 +486,12 @@
 	..()
 	new /obj/item/weapon/reagent_containers/pill/patch/silver_sulf(src)
 	new /obj/item/weapon/reagent_containers/pill/patch/silver_sulf(src)
-	new /obj/item/weapon/reagent_containers/pill/patch/silver_sulf(src)
 	new /obj/item/weapon/reagent_containers/pill/patch/styptic(src)
 	new /obj/item/weapon/reagent_containers/pill/patch/styptic(src)
-	new /obj/item/weapon/reagent_containers/pill/patch/styptic(src)
-	new /obj/item/stack/medical/bruise_pack(src)
-	new /obj/item/weapon/reagent_containers/food/snacks/donkpocket(src)
-	new /obj/item/weapon/reagent_containers/food/snacks/donkpocket(src)
+	new /obj/item/weapon/reagent_containers/hypospray/medipen/survival(src)
+	new /obj/item/weapon/reagent_containers/hypospray/medipen/survival(src)
+	new /obj/item/weapon/reagent_containers/food/snacks/donkpocket/warm(src)
+	new /obj/item/weapon/reagent_containers/food/snacks/donkpocket/warm(src)
 
 /obj/structure/closet/wall
 	name = "wall closet"

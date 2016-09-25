@@ -73,12 +73,11 @@
 		new /datum/data/mining_equipment("Survival Pack",  		/obj/item/weapon/storage/box/mining/survival,		   	      			1100),
 		new /datum/data/mining_equipment("Premium absent",		/obj/item/weapon/reagent_containers/food/drinks/bottle/absinthe/premium,3000),
 		new /datum/data/mining_equipment("Empty Sandbag",		/obj/item/weapon/emptysandbag,											500),
-		new /datum/data/mining_equipment("d10 dice",			/obj/item/weapon/dice/d10,												250),
-		new /datum/data/mining_equipment("d6 dice",				/obj/item/weapon/dice/d6,												200),
 		new /datum/data/mining_equipment("Candle",				/obj/item/candle,														100),
 		new /datum/data/mining_equipment("Lantern",				/obj/item/device/flashlight/lantern,									350),
-		new /datum/data/mining_equipment("Guitar",				/obj/item/device/instrument/guitar,										800),
 		new /datum/data/mining_equipment("Universal Recorde", 	/obj/item/device/taperecorder,											500),
+		new /datum/data/mining_equipment("Heat goggles", 		/obj/item/clothing/glasses/heat,										250),
+		new /datum/data/mining_equipment("Meson goggles", 		/obj/item/clothing/glasses/meson,										400),
 		)
 
 /obj/item/weapon/circuitboard/machine/mining_equipment_vendor/terror
@@ -127,3 +126,26 @@
 					/obj/item/device/t_scanner = 5,
 					/obj/item/stack/cable_coil = 10)
 	premium = list(/obj/item/clothing/gloves/chameleon = 1,/obj/item/weapon/grenade/empgrenade = 2)
+
+/obj/machinery/vending/security_clothes
+	name = "Security clothes"
+	desc = "All our clothes - it is your clothes!"
+	icon = 'icons/obj/infinity_object.dmi'
+	icon_state = "sec"
+	icon_deny = "sec-deny"
+	req_access = list(access_security)
+	products = list(/obj/item/clothing/head/soft/sec = 5,
+					/obj/item/clothing/head/beret/sec = 5,
+					/obj/item/clothing/under/rank/security/blue = 5,
+					/obj/item/clothing/head/beret/sec/navyofficer = 5,
+					/obj/item/clothing/under/rank/security/navyblue = 5,
+					/obj/item/clothing/head/beret/sec/corporate = 5,
+					/obj/item/clothing/under/sec_corporate = 5,
+					/obj/item/clothing/suit/hooded/security_new = 4,
+					/obj/item/weapon/storage/backpack/dufflebag/sec = 2,
+					/obj/item/weapon/storage/backpack/satchel/sec = 3,
+					/obj/item/weapon/storage/backpack/security = 3,
+					/obj/item/clothing/shoes/jackboots = 8)
+	premium = list(/obj/item/clothing/under/syndicate/camo = 1,
+					/obj/item/clothing/under/rank/security = 1,
+					/obj/item/clothing/glasses/hud/security = 1)

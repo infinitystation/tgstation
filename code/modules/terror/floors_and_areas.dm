@@ -190,25 +190,25 @@
 	icon = 'icons/turf/terror.dmi'
 
 /turf/open/floor/plasteel/terror/red
-	icon_state = "redfull_t"
+	icon_state = "redfull"
 /turf/open/floor/plasteel/terror/red/side
-	icon_state = "red_t"
+	icon_state = "red"
 /turf/open/floor/plasteel/terror/red/corner
-	icon_state = "redcorner_t"
+	icon_state = "redcorner"
 
 /turf/open/floor/plasteel/terror/whitered
-	icon_state = "whiteredfull_t"
+	icon_state = "whiteredfull"
 /turf/open/floor/plasteel/terror/whitered/side
-	icon_state = "whitered_t"
+	icon_state = "whitered"
 /turf/open/floor/plasteel/terror/whitered/corner
-	icon_state = "whiteredcorner_t"
+	icon_state = "whiteredcorner"
 
 /turf/open/floor/plasteel/terror/darkred
-	icon_state = "darkredfull_t"
+	icon_state = "darkredfull"
 /turf/open/floor/plasteel/terror/darkred/side
-	icon_state = "darkred_t"
+	icon_state = "darkred"
 /turf/open/floor/plasteel/terror/darkred/corner
-	icon_state = "darkredcorners_t"
+	icon_state = "darkredcorners"
 
 //Necropolis//
 

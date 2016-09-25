@@ -1444,7 +1444,8 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/structure/table/reinforced,
-/obj/item/weapon/screwdriver,
+/obj/item/weapon/paper_bin,
+/obj/item/weapon/pen,
 /turf/open/floor/plasteel/terror/necro/brown/corner{
 	tag = "icon-browncorner (NORTH)";
 	icon_state = "browncorner";
@@ -2191,11 +2192,10 @@
 	pixel_y = 23;
 	req_access = null
 	},
-/obj/structure/table/reinforced,
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/item/weapon/storage/box/hug/medical,
+/obj/structure/bookcase/random,
 /turf/open/floor/plasteel/terror/necro/brown/corner{
 	tag = "icon-browncorner (EAST)";
 	icon_state = "browncorner";
@@ -2203,15 +2203,10 @@
 	},
 /area/mine/lobby)
 "eY" = (
-/obj/structure/table/reinforced,
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/item/weapon/paper_bin{
-	pixel_x = -2;
-	pixel_y = 4
-	},
-/obj/item/weapon/pen,
+/obj/structure/bookcase/random,
 /turf/open/floor/plasteel/terror/necro/brown/corner{
 	tag = "icon-browncorner (EAST)";
 	icon_state = "browncorner";
@@ -2409,6 +2404,11 @@
 	dir = 1;
 	pixel_x = 0
 	},
+/obj/item/clothing/glasses/meson,
+/obj/item/clothing/glasses/meson,
+/obj/item/clothing/glasses/meson,
+/obj/item/clothing/glasses/meson,
+/obj/item/clothing/glasses/meson,
 /turf/open/floor/plasteel/terror/necro/black/outdoor,
 /area/mine/eva)
 "fn" = (
@@ -3193,6 +3193,13 @@
 /turf/open/floor/plasteel/terror/necro/brown/corner,
 /area/mine/lobby)
 "gz" = (
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -24
+	},
+/obj/structure/chair{
+	dir = 1
+	},
 /turf/open/floor/plasteel/terror/necro/brown/corner,
 /area/mine/lobby)
 "gA" = (
@@ -3200,6 +3207,8 @@
 	pixel_x = 27;
 	pixel_y = 0
 	},
+/obj/structure/table/reinforced,
+/obj/item/weapon/folder,
 /turf/open/floor/plasteel/terror/necro/brown/corner,
 /area/mine/lobby)
 "gB" = (
@@ -3233,6 +3242,10 @@
 	icon_state = "plant-20";
 	layer = 4.1;
 	tag = "icon-plant-20"
+	},
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -24
 	},
 /turf/open/floor/plasteel/terror/necro/brown/corner{
 	tag = "icon-browncorner (WEST)";
@@ -3339,7 +3352,7 @@
 	pixel_y = -32;
 	tag = "icon-poster18"
 	},
-/turf/open/floor/plating/lavaland,
+/turf/open/floor/plating/lavaland/outdoor,
 /area/mine/eva)
 "gM" = (
 /obj/structure/cable{
@@ -4042,11 +4055,6 @@
 	c_tag = "Morgue";
 	dir = 4;
 	network = list("MINE")
-	},
-/obj/item/device/radio/intercom{
-	dir = 8;
-	name = "Station Intercom (General)";
-	pixel_x = -28
 	},
 /turf/open/floor/plasteel/terror/necro/darkvault{
 	tag = "icon-vault (WEST)";
@@ -22489,8 +22497,8 @@ aJ
 aJ
 aJ
 aJ
-aJ
-aJ
+at
+at
 aJ
 at
 at
@@ -22746,8 +22754,8 @@ aJ
 aJ
 aJ
 aJ
-aJ
-aJ
+at
+at
 aJ
 aJ
 at
@@ -23004,9 +23012,9 @@ aJ
 aJ
 aJ
 aJ
-aJ
-aJ
-aJ
+at
+at
+at
 at
 at
 at
@@ -23257,14 +23265,14 @@ aJ
 aJ
 aJ
 aJ
+aJ
+aJ
+aJ
+aJ
+aJ
 at
 at
 at
-aJ
-aJ
-aJ
-aJ
-aJ
 at
 at
 at
@@ -23517,10 +23525,10 @@ aJ
 at
 at
 at
+aJ
+aJ
+aJ
 at
-aJ
-aJ
-aJ
 at
 at
 at
@@ -23775,10 +23783,10 @@ at
 at
 at
 at
-at
 aJ
 aJ
-at
+aJ
+aJ
 at
 at
 at
@@ -24550,7 +24558,7 @@ at
 at
 aJ
 aJ
-at
+aJ
 at
 at
 aJ
@@ -25837,7 +25845,7 @@ at
 at
 at
 at
-at
+aJ
 at
 at
 at
@@ -26094,7 +26102,7 @@ at
 at
 at
 at
-at
+aJ
 at
 at
 at
@@ -26350,9 +26358,9 @@ at
 at
 at
 at
-at
-at
-at
+aJ
+aJ
+aJ
 at
 at
 at
@@ -26609,7 +26617,7 @@ at
 at
 at
 aJ
-at
+aJ
 at
 at
 at
