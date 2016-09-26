@@ -566,10 +566,10 @@
 	screen_loc = "11:6,2:-11"
 	wheel_buttons_type = /obj/screen/wheel_button/talk
 	buttons_names = list("help","hello","bye","stop","thanks","come","out", "yes", "no")
-	var/list/word_messages = list(list("Help!","Help me!"), list("Hello.", "Hi."), list("Bye.", "Goodbye."),\
-									list("Stop!", "Halt!"), list("Thanks.", "Thanks!", "Thank you."), \
-									list("Come.", "Follow me."), list("Out!", "Go away!", "Get out!"), \
-									list("Yes.", "Affirmative."), list("No.", "Negative"))
+	var/list/word_messages = list(list("Помогите!","Помогите мне!","Спасите!"), list("Здравствуйте.", "Привет.","Приветствую"), list("Пока.", "Досвидания.","До скорого."),\
+									list("Постой!", "Остановись!","Стой!","Стоять!"), list("Спасибо.", "Спасибо!", "Благодарю."), \
+									list("Войдите.", "За мной.","Входите.","Входи","Войди"), list("Выходи!", "Уходи!", "Вон!","Выйдите.","Выходите.","Проваливай."), \
+									list("Да.", "Конечно.","Да,да."), list("Нет.", "Отнюдь нет!"))
 
 /obj/screen/wheel/talk/set_button(obj/screen/wheel_button/WB, button_number)
 	..()
