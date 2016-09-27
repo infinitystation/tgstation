@@ -53,7 +53,7 @@
 		if(state)
 			icon_state = "woodopen"
 		else
-			icon_state = "wood" //TODO: Исправить ~bear1ake
+			icon_state = "wood" //TODO:: Исправить ~bear1ake
 
 /obj/structure/mineral_door/wood/pyro/Dismantle(devastated = 0)
 	if(!devastated)

@@ -27,6 +27,7 @@ var/global/list/horns_list = list()
 var/global/list/ears_list_tajaran = list()
 var/global/list/frills_list = list()
 var/global/list/spines_list = list()
+var/global/list/legs_list = list()
 var/global/list/animated_spines_list = list()
 
 	//Mutant Human bits
