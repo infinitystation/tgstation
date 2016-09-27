@@ -9,7 +9,8 @@ env:
     - BUILD_TOOLS=false
     - DM_MAPFILE=""
     matrix:
-    - BUILD_TOOLS=true?	- DM_MAPFILE="infinity_metastation"
+    - BUILD_TOOLS=true
+	- DM_MAPFILE="infinity_metastation"
     - DM_MAPFILE="tgstation2"
     - DM_MAPFILE="metastation"
     - DM_MAPFILE="ministation"
