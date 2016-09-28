@@ -27,11 +27,11 @@
 	init_sprite_accessory_subtypes(/datum/sprite_accessory/frills, frills_list)
 	init_sprite_accessory_subtypes(/datum/sprite_accessory/spines, spines_list)
 	init_sprite_accessory_subtypes(/datum/sprite_accessory/spines_animated, animated_spines_list)
-	//Tajaran bodyparts
 	init_sprite_accessory_subtypes(/datum/sprite_accessory/thair, hair_styles_tajaran)
 	init_sprite_accessory_subtypes(/datum/sprite_accessory/tajaran/tail, tails_list_tajaran)
 	init_sprite_accessory_subtypes(/datum/sprite_accessory/tajaran/ears, ears_list_tajaran)
 	init_sprite_accessory_subtypes(/datum/sprite_accessory/wings, r_wings_list,roundstart = TRUE)
+	init_sprite_accessory_subtypes(/datum/sprite_accessory/legs, legs_list)
 
 	//Species
 	for(var/spath in subtypesof(/datum/species))
