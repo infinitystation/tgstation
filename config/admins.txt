@@ -13,7 +13,6 @@ destinat1on = Game Master
 
 iuferev2012 = Game Master
 terror4000rus = Game Master
-thehero13 = Game Master
 surman = Game Master
 
 alexmorgan = Game Master
