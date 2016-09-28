@@ -3162,6 +3162,13 @@
 	},
 /area/security/main)
 "afK" = (
+/obj/machinery/vending/wallmed{
+	name = "Emergency NanoMed";
+	pixel_x = 0;
+	pixel_y = 30;
+	req_access_txt = "0";
+	use_power = 0
+	},
 /turf/open/floor/plasteel/red/side{
 	dir = 5
 	},
@@ -9905,10 +9912,10 @@
 	d2 = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/machinery/hologram/holopad,
 /turf/open/floor/plasteel,
 /area/security/east)
 "ars" = (
-/obj/machinery/hologram/holopad,
 /obj/structure/cable/yellow{
 	icon_state = "4-8";
 	d1 = 4;
@@ -17099,16 +17106,15 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden,
 /obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 9
+	},
 /turf/open/floor/plasteel,
 /area/hallway/primary/fore)
 "aDn" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	req_access_txt = "0"
-	},
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
-	dir = 4
 	},
 /turf/open/floor/plasteel/red/corner{
 	dir = 4
@@ -17755,13 +17761,19 @@
 /turf/open/floor/plasteel,
 /area/hallway/primary/fore)
 "aEC" = (
-/obj/structure/cable/yellow{
-	icon_state = "4-8";
-	d1 = 4;
-	d2 = 8
+/obj/machinery/power/apc{
+	cell_type = 2500;
+	dir = 4;
+	name = "Fore Primary Hallway's APC";
+	pixel_x = 26;
+	pixel_y = 0
 	},
-/obj/machinery/atmospherics/pipe/manifold/supply/hidden{
-	dir = 8
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	req_access_txt = "0"
+	},
+/obj/structure/cable/yellow{
+	d2 = 8;
+	icon_state = "0-8"
 	},
 /turf/open/floor/plasteel,
 /area/hallway/primary/fore)
@@ -21532,7 +21544,6 @@
 /obj/structure/toilet{
 	dir = 4
 	},
-/obj/item/weapon/kitchen/fork,
 /turf/open/floor/plasteel{
 	icon_state = "freezerfloor"
 	},
@@ -75899,12 +75910,6 @@
 	},
 /area/maintenance/asmaint)
 "cxZ" = (
-/obj/machinery/atmospherics/components/unary/vent_scrubber{
-	dir = 4;
-	on = 1;
-	scrub_N2O = 0;
-	scrub_Toxins = 0
-	},
 /obj/machinery/light_switch{
 	pixel_x = -28;
 	pixel_y = 0
@@ -75916,8 +75921,11 @@
 	},
 /area/medical/surgery)
 "cya" = (
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
-	dir = 9
+/obj/machinery/atmospherics/components/unary/vent_scrubber{
+	dir = 1;
+	on = 1;
+	scrub_N2O = 0;
+	scrub_Toxins = 0
 	},
 /turf/open/floor/plasteel{
 	icon_state = "white"
@@ -75930,18 +75938,15 @@
 	},
 /area/medical/surgery)
 "cyc" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 5
+/obj/machinery/atmospherics/components/unary/vent_pump{
+	dir = 1;
+	on = 1
 	},
 /turf/open/floor/plasteel{
 	icon_state = "white"
 	},
 /area/medical/surgery)
 "cyd" = (
-/obj/machinery/atmospherics/components/unary/vent_pump{
-	dir = 8;
-	on = 1
-	},
 /obj/structure/closet/wall{
 	dir = 8;
 	icon_state = "w_closet";
@@ -95138,6 +95143,10 @@
 	},
 /turf/open/space,
 /area/space)
+"ddP" = (
+/obj/machinery/satellite,
+/turf/open/space,
+/area/space)
 
 (1,1,1) = {"
 aaa
@@ -95403,7 +95412,7 @@ aaa
 aaa
 aaa
 aaa
-aaa
+ddP
 aaa
 aaa
 aaa
@@ -113800,8 +113809,8 @@ crA
 csR
 ctV
 cvk
-cvk
 cya
+cwI
 czb
 coK
 cBf
@@ -114314,8 +114323,8 @@ crC
 csS
 ctX
 cvm
-cvm
 cyc
+cwI
 czd
 coK
 cBg
@@ -116539,7 +116548,7 @@ aaa
 aaa
 aaa
 aai
-aaO
+aai
 aaT
 aaT
 aaO
@@ -116795,7 +116804,7 @@ aaa
 aaa
 aaa
 aaa
-aai
+aaa
 aai
 aaU
 abi
@@ -117309,7 +117318,7 @@ aaa
 aaa
 aaa
 aaa
-aai
+aaa
 aai
 aaU
 abk
@@ -117567,7 +117576,7 @@ aaa
 aaa
 aaa
 aai
-aaO
+aai
 aaT
 aaT
 aaO
@@ -117821,7 +117830,7 @@ aaa
 aaa
 aaa
 aaa
-aag
+aam
 aai
 aai
 aaa
@@ -118078,7 +118087,7 @@ aaa
 aaa
 aaa
 aaa
-aag
+aam
 aai
 aaa
 aai
@@ -120903,7 +120912,7 @@ aaa
 aaa
 aaa
 aaa
-aaa
+aai
 aag
 aaa
 aaa
@@ -144078,7 +144087,7 @@ aaa
 aaa
 aaa
 aaa
-aaa
+aai
 aag
 aaa
 aaa
@@ -144096,7 +144105,7 @@ aai
 aaa
 aaa
 aaa
-aaa
+aai
 aag
 aaa
 aam
@@ -144335,7 +144344,7 @@ aaa
 aaa
 aaa
 aaa
-aaa
+aai
 aag
 aaa
 aaa
@@ -144353,7 +144362,7 @@ aai
 aaa
 aaa
 aaa
-aaa
+aai
 aag
 aaa
 aah
@@ -149723,7 +149732,7 @@ aaa
 aaa
 aaa
 aaa
-aaa
+aai
 aam
 aPj
 aQF
@@ -149980,7 +149989,7 @@ aaa
 aaa
 aaa
 aaa
-aaa
+aai
 aam
 aPk
 aQG
@@ -150237,7 +150246,7 @@ aaa
 aaa
 aaa
 aaa
-aaa
+aai
 aam
 aPj
 aQF
@@ -150494,7 +150503,7 @@ aaa
 aaa
 aaa
 aaa
-aaa
+aai
 aam
 aPj
 aQF
@@ -150751,7 +150760,7 @@ aaa
 aaa
 aaa
 aaa
-aaa
+aai
 aam
 aPj
 aQF

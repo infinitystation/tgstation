@@ -42,7 +42,7 @@ WALK_DELAY 3
 
 ## The variables below affect the movement of specific mob types.
 HUMAN_DELAY 0
-ROBOT_DELAY -1
+ROBOT_DELAY 0
 MONKEY_DELAY 0
 ALIEN_DELAY -1
 SLIME_DELAY 1
@@ -329,9 +329,9 @@ MIDROUND_ANTAG_LIFE_CHECK 0.7
 ###Limit Spell Choices##
 ## Uncomment to disallow wizards from using certain spells that may be too chaotic/fun for your playerbase
 
-#NO_SUMMON_GUNS
-#NO_SUMMON_MAGIC
-#NO_SUMMON_EVENTS
+NO_SUMMON_GUNS
+NO_SUMMON_MAGIC
+NO_SUMMON_EVENTS
 
 ##Comment for "normal" explosions, which ignore obstacles
 ##Uncomment for explosions that react to doors and walls

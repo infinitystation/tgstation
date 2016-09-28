@@ -248,7 +248,8 @@
 /area/mine/shelter)
 "aY" = (
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface{
-	dug = 1
+	dug = 1;
+	icon_state = "basalt_dug"
 	},
 /area/lavaland/surface/outdoors)
 "aZ" = (
@@ -269,7 +270,8 @@
 "bc" = (
 /obj/effect/spawner/lootdrop/fall,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface{
-	dug = 1
+	dug = 1;
+	icon_state = "basalt_dug"
 	},
 /area/lavaland/surface/outdoors)
 "bd" = (
@@ -309,7 +311,8 @@
 /obj/effect/decal/cleanable/ash,
 /obj/item/ammo_casing/a646/no,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface{
-	dug = 1
+	dug = 1;
+	icon_state = "basalt_dug"
 	},
 /area/lavaland/surface/outdoors)
 "bj" = (
@@ -402,7 +405,8 @@
 /obj/item/ammo_casing/a646/no,
 /obj/item/ammo_casing/a646/no,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface{
-	dug = 1
+	dug = 1;
+	icon_state = "basalt_dug"
 	},
 /area/lavaland/surface/outdoors)
 "bv" = (
@@ -411,7 +415,8 @@
 	icon_state = "blood1"
 	},
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface{
-	dug = 1
+	dug = 1;
+	icon_state = "basalt_dug"
 	},
 /area/lavaland/surface/outdoors)
 "bw" = (
@@ -833,6 +838,11 @@
 /obj/item/weapon/storage/box/lights/mixed,
 /obj/item/weapon/stock_parts/cell/high,
 /obj/item/weapon/stock_parts/cell/high,
+/obj/machinery/camera{
+	c_tag = "Maint";
+	dir = 2;
+	network = list("MINE")
+	},
 /turf/open/floor/plating/lavaland,
 /area/mine/lobby)
 "cJ" = (
@@ -848,8 +858,8 @@
 "cK" = (
 /obj/machinery/power/smes{
 	charge = 1e+006;
-	input_level = 4000;
-	output_level = 3500
+	input_level = 10000;
+	output_level = 7000
 	},
 /obj/structure/cable{
 	d2 = 8;
@@ -1681,10 +1691,11 @@
 	},
 /area/mine/sleeper)
 "em" = (
-/obj/structure/sign/xeno_warning_mining{
-	pixel_x = 32
+/obj/item/ammo_casing/a646/no,
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface{
+	dug = 1;
+	icon_state = "basalt_dug"
 	},
-/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/lavaland/surface/outdoors)
 "en" = (
 /obj/structure/sign/xeno_warning_mining,
@@ -2520,19 +2531,12 @@
 /turf/open/floor/plasteel/terror/necro,
 /area/mine/lobby)
 "fy" = (
-/obj/machinery/light{
-	dir = 4
+/obj/effect/decal/cleanable/ash,
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface{
+	dug = 1;
+	icon_state = "basalt_dug"
 	},
-/obj/structure/extinguisher_cabinet{
-	pixel_x = 27;
-	pixel_y = 0
-	},
-/turf/open/floor/plasteel/terror/necro/brown/corner{
-	tag = "icon-browncorner (EAST)";
-	icon_state = "browncorner";
-	dir = 4
-	},
-/area/mine/lobby)
+/area/lavaland/surface/outdoors)
 "fz" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
 	tag = "icon-manifold (NORTH)";
@@ -5874,11 +5878,11 @@ aA
 at
 at
 at
-aJ
-aJ
-aJ
-aJ
-aJ
+at
+at
+at
+at
+at
 aJ
 aJ
 aJ
@@ -6132,9 +6136,9 @@ at
 at
 at
 at
-aJ
-aJ
-aJ
+at
+at
+at
 aJ
 aJ
 aJ
@@ -6389,8 +6393,8 @@ aA
 aA
 at
 at
-aJ
-aJ
+at
+at
 aJ
 aJ
 aJ
@@ -6646,8 +6650,8 @@ aA
 aA
 at
 at
-aJ
-aJ
+at
+at
 aJ
 aJ
 aJ
@@ -6902,8 +6906,8 @@ aA
 aA
 aA
 at
-aJ
-aJ
+at
+at
 aJ
 aJ
 aJ
@@ -7159,8 +7163,8 @@ aA
 aA
 aA
 at
-aJ
-aJ
+at
+at
 aJ
 aJ
 aJ
@@ -7416,8 +7420,8 @@ aA
 aA
 aA
 at
-aJ
-aJ
+at
+at
 aJ
 aJ
 aJ
@@ -7674,7 +7678,7 @@ aA
 at
 at
 at
-aJ
+at
 aJ
 aJ
 aJ
@@ -11786,7 +11790,7 @@ aA
 at
 at
 at
-aJ
+at
 aJ
 aJ
 aJ
@@ -12043,7 +12047,7 @@ aA
 aA
 at
 at
-aJ
+at
 aJ
 aJ
 aJ
@@ -12300,8 +12304,8 @@ aA
 aA
 at
 at
-aJ
-aJ
+at
+at
 aJ
 aJ
 aJ
@@ -12557,8 +12561,8 @@ aA
 aA
 aA
 at
-aJ
-aJ
+at
+at
 aJ
 aJ
 aJ
@@ -12814,8 +12818,8 @@ aA
 aA
 aA
 at
-aJ
-aJ
+at
+at
 aJ
 aJ
 aJ
@@ -13071,8 +13075,8 @@ aA
 aA
 aA
 at
-aJ
-aJ
+at
+at
 aJ
 aJ
 aJ
@@ -13328,8 +13332,8 @@ aA
 aA
 at
 at
-aJ
-aJ
+at
+at
 aJ
 aJ
 aJ
@@ -13585,8 +13589,8 @@ aA
 at
 at
 at
-aJ
-aJ
+at
+at
 aJ
 aJ
 aJ
@@ -13842,8 +13846,8 @@ aA
 at
 at
 at
-aJ
-aJ
+at
+at
 aJ
 aJ
 aJ
@@ -14099,7 +14103,7 @@ aA
 aA
 at
 at
-aJ
+at
 aJ
 aJ
 aJ
@@ -15905,7 +15909,7 @@ aJ
 aJ
 aJ
 aJ
-aJ
+at
 aJ
 aJ
 aJ
@@ -16160,11 +16164,11 @@ aJ
 aJ
 aJ
 aJ
-aJ
-aJ
-aJ
-aJ
-aJ
+at
+at
+at
+at
+at
 aJ
 aJ
 aJ
@@ -16412,15 +16416,15 @@ aA
 at
 at
 at
+at
 aJ
 aJ
 aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
+at
+at
+at
+at
+at
 aJ
 aJ
 aJ
@@ -16669,14 +16673,14 @@ at
 at
 at
 at
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
+at
+at
+at
+at
+at
+at
+at
+at
 aJ
 aJ
 aJ
@@ -16926,12 +16930,12 @@ aA
 at
 at
 at
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
+at
+at
+at
+at
+at
+at
 aJ
 aJ
 aJ
@@ -17183,11 +17187,11 @@ aA
 at
 at
 at
-aJ
-aJ
-aJ
-aJ
-aJ
+at
+at
+at
+at
+at
 aJ
 aJ
 aJ
@@ -17440,7 +17444,7 @@ aA
 aA
 at
 at
-aJ
+at
 aJ
 aJ
 aJ
@@ -63013,7 +63017,7 @@ aJ
 aJ
 at
 aR
-at
+aY
 aJ
 aJ
 aJ
@@ -63271,7 +63275,7 @@ aR
 aW
 at
 bs
-at
+aY
 aJ
 aJ
 aJ
@@ -63786,7 +63790,7 @@ bj
 bp
 bc
 aW
-bw
+em
 aV
 aJ
 aJ
@@ -64301,8 +64305,8 @@ aW
 bq
 aY
 aS
-bz
-aR
+fy
+bc
 aJ
 aJ
 aJ
@@ -64559,7 +64563,7 @@ aW
 bc
 aR
 aV
-aR
+bc
 aJ
 aJ
 aJ
