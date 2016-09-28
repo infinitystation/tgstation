@@ -2,9 +2,10 @@
 	set category = "IC"
 	set name = "Give"
 
-	var/obj/item/I = usr.get_inactive_held_item()
+	var/obj/item/I = usr.get_active_held_item()
 	if(!I)
-		I = usr.get_inactive_held_item()
+		I = usr.get_active_held_item()
+
 	if(!I)
 		usr << "<span class='warning'>You don't have anything in your hands to give to \the [target].</span>"
 		return
@@ -25,7 +26,7 @@
 		target << "<span class='warning'>\The [usr] seems to have given up on passing \the [I] to you.</span>"
 		return
 
-	if(!target.get_inactive_hand_index())
+	if(!target.get_empty_held_indexes())
 		target << "<span class='warning'>Your hands are full.</span>"
 		usr << "<span class='warning'>Their hands are full.</span>"
 		return
