@@ -36,10 +36,10 @@
 			priority_announce("Грузовой отдел: Кажется, мы заказали двойную норму пакетов снабжения департаментов в этом месяце. Мы можем отправить их вам?","Департамент Снабжения ЦК")
 			thanks_msg = "Шаттл вернётся через 5 минут."
 			bonus_points = 0
-		if(ANTIDOTE_NEEDED) //TODO:: Перевод ~bear1ake
-			priority_announce("Cargo: Your station has been chosen for an epidemiological research project. Send us your cargo shuttle to receive your research samples.", "Centcom Research Initiatives")
-		if (PIZZA_DELIVERY)
-			priority_announce("Cargo: It looks like a neighbouring station accidentally delivered their pizza to you instead", "Centcom Spacepizza Division")
+		if(ANTIDOTE_NEEDED)
+			priority_announce("Грузовой отдел: Ваша станция была выбрана для эпидемического эксперимента. Отправьте нам ваш грузовой шаттл для передачи образцов.", "Исследовательские инциативы Центрального Командования")
+		if(PIZZA_DELIVERY)
+			priority_announce("Грузовой отдел: Похоже, что соседняя станция случайно отправила свою пиццу нам вместо того, чтобы отправить её по адрессу, можем ли мы вам переслать её?", "Отдел доставки пиццы Центрального Командования")
 
 /datum/round_event/shuttle_loan/proc/loan_shuttle()
 	priority_announce(thanks_msg, "Грузовой шаттл реквизирован ЦК.")
@@ -61,10 +61,10 @@
 			SSshuttle.centcom_message += "Приближается подарок Клана Паука."
 		if(DEPARTMENT_RESUPPLY)
 			SSshuttle.centcom_message += "Приближается снабжение Департамента."
-		if(ANTIDOTE_NEEDED) //TODO:: Перевод ~bear1ake
-			SSshuttle.centcom_message += "Virus samples incoming."
+		if(ANTIDOTE_NEEDED)
+			SSshuttle.centcom_message += "Приближаются образцы вируса."
 		if(PIZZA_DELIVERY)
-			SSshuttle.centcom_message += "Pizza delivery for [world.name]"
+			SSshuttle.centcom_message += "Доставка пиццы для [world.name]."
 	SSshuttle.centcom_message = sanitize_a0(SSshuttle.centcom_message)
 
 /datum/round_event/shuttle_loan/tick()

@@ -74003,7 +74003,7 @@
 /turf/open/floor/engine/vacuum,
 /area/maintenance/incinerator)
 "cvi" = (
-/obj/structure/mineral_door/wood{
+/obj/structure/mineral_door/wood/pyro{
 	dir = 8
 	},
 /turf/open/floor/wood{
