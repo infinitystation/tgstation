@@ -13,6 +13,7 @@
 
 /datum/action/innate/cultcomm/Activate()
 	var/input = stripped_input(usr, "Please choose a message to tell to the other acolytes.", "Voice of Blood", "")
+	input = sanitize_a0(input)
 	if(!input || !IsAvailable())
 		return
 
