@@ -10350,7 +10350,7 @@
 /obj/machinery/door/poddoor{
 	icon = 'icons/obj/doors/blastdoor_hor.dmi';
 	id = "cc_sp_exit";
-	unacidable = 1
+	resistance_flags = 8
 	},
 /turf/open/floor/plasteel/darkvault{
 	dir = 1;
@@ -10823,7 +10823,7 @@
 /obj/machinery/door/poddoor{
 	icon = 'icons/obj/doors/blastdoor_hor.dmi';
 	id = "cc_sp_enter";
-	unacidable = 1
+	resistance_flags = 8
 	},
 /turf/open/floor/plasteel/darkvault{
 	dir = 1;
@@ -11626,7 +11626,7 @@
 /obj/machinery/door/poddoor{
 	icon = 'icons/obj/doors/blastdoor_hor.dmi';
 	id = "cc_lo_tu";
-	unacidable = 1
+	resistance_flags = 8
 	},
 /turf/open/floor/plating,
 /area/centcom/lobby)
@@ -12339,7 +12339,7 @@
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/door/poddoor{
 	id = "cc_lo_tu";
-	unacidable = 1
+	resistance_flags = 8
 	},
 /turf/closed/indestructible/riveted/infinity,
 /area/centcom/lobby)
@@ -15761,7 +15761,7 @@
 /obj/machinery/door/poddoor{
 	icon = 'icons/obj/doors/blastdoor_hor.dmi';
 	id = "cc_lo_tu";
-	unacidable = 1
+	resistance_flags = 8
 	},
 /turf/open/space,
 /area/space)
@@ -15770,7 +15770,7 @@
 /obj/machinery/door/poddoor{
 	icon = 'icons/obj/doors/blastdoor.dmi';
 	id = "cc_lo_tu";
-	unacidable = 1
+	resistance_flags = 8
 	},
 /turf/open/floor/plating,
 /area/centcom/lobby)

@@ -6,7 +6,7 @@
 	anchored = 1
 	can_buckle = 1
 	buckle_lying = 0 //you sit in a chair, not lay
-	burn_state = FIRE_PROOF
+	resistance_flags = FIRE_PROOF
 	var/buildstacktype = /obj/item/stack/sheet/metal
 	var/buildstackamount = 1
 	var/ghost_rotateble = 1
@@ -119,7 +119,7 @@
 	icon_state = "wooden_chair"
 	name = "wooden chair"
 	desc = "Old is never too old to not be in fashion."
-	burn_state = FLAMMABLE
+	resistance_flags = 0
 	burntime = 20
 	buildstacktype = /obj/item/stack/sheet/mineral/wood
 	buildstackamount = 3
@@ -140,7 +140,7 @@
 	desc = "It looks comfy.\n<span class='notice'>Alt-click to rotate it clockwise.</span>"
 	icon_state = "comfychair"
 	color = rgb(255,255,255)
-	burn_state = FLAMMABLE
+	resistance_flags = 0
 	burntime = 30
 	buildstackamount = 2
 	var/image/armrest = null
@@ -324,7 +324,7 @@
 	name = "wooden chair"
 	icon_state = "wooden_chair_toppled"
 	item_state = "woodenchair"
-	burn_state = FLAMMABLE
+	resistance_flags = 0
 	burntime = 20
 	hitsound = 'sound/weapons/genhit1.ogg'
 	origin_type = /obj/structure/chair/wood

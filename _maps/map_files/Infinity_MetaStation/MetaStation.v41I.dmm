@@ -94873,7 +94873,7 @@
 "ddk" = (
 /obj/machinery/atmospherics/components/unary/outlet_injector/on{
 	dir = 1;
-	unacidable = 1
+	resistance_flags = 8
 	},
 /turf/open/floor/engine,
 /area/toxins/xenobiology)

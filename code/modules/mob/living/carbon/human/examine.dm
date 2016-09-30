@@ -1,28 +1,25 @@
 /mob/living/carbon/human/examine(mob/user)
+//this is very slightly better than it was because you can use it more places. still can't do \his[src] though.
+	var/t_He = they_pronoun(TRUE)
+	var/t_His = their_pronoun(TRUE)
+	var/t_his = their_pronoun()
+	var/t_him = them_pronoun()
+	var/t_has = get_has()
+	var/t_is = get_is()
 
 	var/list/obscured = check_obscured_slots()
 	var/skipface = (wear_mask && (wear_mask.flags_inv & HIDEFACE)) || (head && (head.flags_inv & HIDEFACE))
 
-	// crappy hacks because you can't do \his[src] etc. I'm sorry this proc is so unreadable, blame the text macros :<
-	var/t_He = "Оно" //capitalised for use at the start of each line.
-	var/t_his = "их"
-	var/t_him = "им"
-	var/t_has = "имеет"
-	//var/t_him2 = "им"
-
+			// Чертовы окончания! ~bear1ake
 	var/e_1 = "о"
 	var/e_2 = "ое"
 	var/e_3 = "ее"
 	var/e_4 = "ым"
 	var/e_5 = "ось"
 
-	var/msg = "<span class='info'>*---------*\nЭто "
+	var/msg = "<span class='info'>*---------*\n??? "
 
 	if( (slot_w_uniform in obscured) && skipface ) //big suits/masks/helmets make it hard to tell their gender
-		t_He = "Оно"
-		t_his = "их"
-		t_him = "ним"
-		t_has = "имеет"
 		e_1 = "о"
 		e_2 = "ое"
 		e_3 = "ее"
@@ -31,27 +28,17 @@
 	else
 		switch(gender)
 			if(MALE)
-				t_He = "Он"
-				t_his = "его"
-				t_him = "ему"
-				//t_him2 = "им"
 				e_1 = ""
 				e_2 = "ый"
 				e_3 = "ий"
 				e_4 = "ым"
 				e_5 = "с&#255;"
 			if(FEMALE)
-				t_He = "Она"
-				t_his = "её"
-				t_him = "ей"
-				//t_him2 = "ей"
 				e_1 = "а"
 				e_2 = "а&#255;"
 				e_3 = "а&#255;"
 				e_4 = "ой"
 				e_5 = "ась"
-
-	msg += "<EM>[src.name]</EM>!\n"
 
 	//uniform
 	if(w_uniform && !(slot_w_uniform in obscured))
@@ -187,7 +174,7 @@
 			if(suiciding)
 				msg += "<span class='warning'>[t_He], кажетс&#255;, совершил[e_1] самоубийство. Спасение бесполезно.</span>\n"
 			if(hellbound)
-				msg += "<span class='warning'>[t_his] soul seems to have been ripped out of [t_his] body.  Revival is impossible.</span>\n"
+				msg += "<span class='warning'>[t_His] soul seems to have been ripped out of [t_his] body.  Revival is impossible.</span>\n"
 			msg += "<span class='deadsay'>[t_He] поникш[e_3] и бессознательн[e_2]; [t_He] не имеет признаков жизни"
 			if(!key)
 				var/foundghost = 0
@@ -220,7 +207,7 @@
 	var/r_limbs_missing = 0
 	for(var/t in missing)
 		if(t=="head")
-			msg += "<span class='deadsay'><B>[capitalize(t_his)] [parse_zone(t)] is missing!</B><span class='warning'>\n"
+			msg += "<span class='deadsay'><B>[t_His] [parse_zone(t)] is missing!</B><span class='warning'>\n"
 			continue
 		if(t == "l_arm" || t == "l_leg")
 			l_limbs_missing++
@@ -298,9 +285,9 @@
 	if(islist(stun_absorption))
 		for(var/i in stun_absorption)
 			if(stun_absorption[i]["end_time"] > world.time && stun_absorption[i]["examine_message"])
-				msg += "[t_He][stun_absorption[i]["examine_message"]]\n"
+				msg += "[t_He] [t_is][stun_absorption[i]["examine_message"]]\n"
 
-	if(drunkenness && !skipface && stat != DEAD) //Drunkenness
+	if(drunkenness && !skipface && !appears_dead) //Drunkenness
 		switch(drunkenness)
 			if(11 to 21)
 				msg += "[t_He] немножко пь&#255;н[e_1].\n"
@@ -343,7 +330,7 @@
 		else
 			msg += "Вы не можете определить [t_his] возраст.\n"
 
-	if(istype(user, /mob/living/carbon/human))
+	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
 		var/obj/item/organ/cyberimp/eyes/hud/CIH = H.getorgan(/obj/item/organ/cyberimp/eyes/hud)
 		if(istype(H.glasses, /obj/item/clothing/glasses/hud) || CIH)

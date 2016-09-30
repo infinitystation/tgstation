@@ -15,7 +15,7 @@
 	item_color = "rd"
 	armor = list(melee = 10, bullet = 5, laser = 10, energy = 5, bomb = 10, bio = 100, rad = 90)
 	slowdown = 1
-	unacidable = 1
+	resistance_flags = FIRE_PROOF | UNACIDABLE
 
 /obj/item/clothing/suit/space/hardsuit/space_adv
 	name = "Space working hardsuit"
@@ -28,7 +28,7 @@
 	armor = list(melee = 10, bullet = 5, laser = 10, energy = 5, bomb = 10, bio = 100, rad = 90)
 	allowed = list(/obj/item/device/flashlight,/obj/item/weapon/tank,/obj/item/weapon/storage/bag/ore,/obj/item/device/t_scanner,/obj/item/weapon/pickaxe, /obj/item/weapon/rcd)
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/space_adv
-	unacidable = 1
+	resistance_flags = FIRE_PROOF | UNACIDABLE
 
 /obj/item/clothing/suit/space/hardsuit/space_adv/New()
 	jetpack = new /obj/item/weapon/tank/jetpack/suit(src)
