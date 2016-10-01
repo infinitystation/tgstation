@@ -7,7 +7,7 @@
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 0
-	supervisors = "Nanotrasen officials and Space law"
+	supervisors = "Представителям Нанотрайзен и Космическому Закону"
 	selection_color = "#dddddd"
 	req_admin_notify = 1
 	minimal_player_age = 30

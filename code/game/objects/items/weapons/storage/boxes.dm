@@ -103,6 +103,11 @@
 	..()
 	new /obj/item/device/radio/off(src)
 
+/obj/item/weapon/storage/box/security/centcom/New()
+	..()
+	new /obj/item/stack/medical/bruise_pack(src)
+	new /obj/item/stack/medical/ointment(src)
+
 /obj/item/weapon/storage/box/gloves
 	name = "box of latex gloves"
 	desc = "Contains sterile latex gloves."

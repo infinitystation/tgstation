@@ -9,7 +9,7 @@ Quartermaster
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the head of personnel"
+	supervisors = "Главе Персонала"
 	selection_color = "#d7b088"
 
 	outfit = /datum/outfit/job/quartermaster
@@ -38,7 +38,7 @@ Cargo Technician
 	faction = "Station"
 	total_positions = 3
 	spawn_positions = 2
-	supervisors = "the quartermaster and the head of personnel"
+	supervisors = "Завхозу и Главе Персонала"
 	selection_color = "#dcba97"
 
 	outfit = /datum/outfit/job/cargo_tech
@@ -65,7 +65,7 @@ Shaft Miner
 	faction = "Station"
 	total_positions = 5
 	spawn_positions = 3
-	supervisors = "the quartermaster and the head of personnel"
+	supervisors = "Завхозу и Главе Персонала"
 	selection_color = "#dcba97"
 
 	outfit = /datum/outfit/job/miner
@@ -104,7 +104,7 @@ Bartender
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the head of personnel"
+	supervisors = "Главе Персонала"
 	selection_color = "#bbe291"
 
 	outfit = /datum/outfit/job/bartender
@@ -135,7 +135,7 @@ Cook
 	faction = "Station"
 	total_positions = 2
 	spawn_positions = 1
-	supervisors = "the head of personnel"
+	supervisors = "Главе Персонала"
 	selection_color = "#bbe291"
 	var/cooks = 0 //Counts cooks amount
 
@@ -181,7 +181,7 @@ Botanist
 	faction = "Station"
 	total_positions = 3
 	spawn_positions = 2
-	supervisors = "the head of personnel"
+	supervisors = "Главе Персонала"
 	selection_color = "#bbe291"
 
 	outfit = /datum/outfit/job/botanist
@@ -214,7 +214,7 @@ Janitor
 	faction = "Station"
 	total_positions = 2
 	spawn_positions = 1
-	supervisors = "the head of personnel"
+	supervisors = "Главе Персонала"
 	selection_color = "#bbe291"
 	var/global/janitors = 0
 

@@ -570,6 +570,14 @@ var/list/teleportlocs = list()
 	name = "Chief Engineer's Office"
 	icon_state = "head_quarters"
 
+/area/crew_quarters/hos
+	name = "Head Of Security's Office"
+	icon_state = "head_quarters"
+
+/area/crew_quarters/cmo
+	name = "Chief Medical Officer's Office"
+	icon_state = "head_quarters"
+
 /area/mint
 	name = "Mint"
 	icon_state = "green"
@@ -1036,6 +1044,14 @@ var/list/teleportlocs = list()
 	name = "Research and Development"
 	icon_state = "toxlab"
 
+/area/toxins/robotics //ƒабы двери открывались при грей-тайде
+	name = "Robotics Lab"
+	icon_state = "ass_line"
+
+/area/toxins/chargebay //ƒабы двери открывались при грей-тайде
+	name = "Mech Bay"
+	icon_state = "mechbay"
+
 /area/toxins/xenobiology
 	name = "Xenobiology Lab"
 	icon_state = "toxlab"
@@ -1062,6 +1078,10 @@ var/list/teleportlocs = list()
 	icon_state = "toxmisc"
 
 /area/toxins/server
+	name = "Server Room"
+	icon_state = "server"
+
+/area/server //ƒабы двери не открывались при грей-тайде
 	name = "Server Room"
 	icon_state = "server"
 
