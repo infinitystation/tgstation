@@ -1097,7 +1097,7 @@
 				if(prob(25))
 					set_broken()
 
-/obj/machinery/power/apc/blob_act(obj/effect/blob/B)
+/obj/machinery/power/apc/blob_act(obj/structure/blob/B)
 	set_broken()
 
 /obj/machinery/power/apc/disconnect_terminal()

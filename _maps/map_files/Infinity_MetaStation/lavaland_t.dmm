@@ -566,7 +566,7 @@
 	maxwater = 99999;
 	name = "necropolis' soil";
 	nutrilevel = 99999;
-	unacidable = 1;
+	resistance_flags = 8;
 	unsecuring_tool = null;
 	waterlevel = 99999
 	},

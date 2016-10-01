@@ -23,7 +23,8 @@
 	strip_delay = 80
 	flags_inv = HIDEEARS|HIDEEYES|HEADCOVERSMOUTH|HIDEHAIR
 	flags_cover = HEADCOVERSEYES
-	burn_state = -1
+	resistance_flags = FIRE_PROOF
+
 
 /obj/item/clothing/head/blue_ny_hat
 	name = "blue New Year hat"

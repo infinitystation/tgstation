@@ -1143,16 +1143,12 @@
 			if("head")
 				if(H.stat == CONSCIOUS && armor_block < 50)
 					if(prob(I.force)) //TODO:: Перевести с учетом пола моба, пример: ~bear1ake
-						/*
 						if(H.gender == FEMALE)
 							H.visible_message("<span class='danger'>[H] была вырублена без сознани&#255;!</span>", \
 										"<span class='userdanger'>[H] была вырублена без сознани&#255;!</span>")
 						else
 							H.visible_message("<span class='danger'>[H] был вырублен без сознани&#255;!</span>", \
 										"<span class='userdanger'>[H] был вырублен без сознани&#255;!</span>")
-?						*/
-						H.visible_message("<span class='danger'>[H] has been knocked senseless!</span>", \
-										"<span class='userdanger'>[H] has been knocked senseless!</span>")
 						H.confused = max(H.confused, 20)
 						H.adjust_blurriness(10)
 
@@ -1170,11 +1166,15 @@
 						H.glasses.add_mob_blood(H)
 						H.update_inv_glasses()
 
-			if("chest")	//TODO:: Перевести с учетом пола моба. Пример указан выше. ~bear1ake
+			if("chest")
 				if(H.stat == CONSCIOUS && armor_block < 50)
 					if(prob(I.force))
-						H.visible_message("<span class='danger'>[H] has been knocked down!</span>", \
-									"<span class='userdanger'>[H] has been knocked down!</span>")
+						if(H.gender == FEMALE)
+							H.visible_message("<span class='danger'>[H] была сбита с ног!</span>", \
+										"<span class='userdanger'>[H] была сбита с ног!</span>")
+						else
+							H.visible_message("<span class='danger'>[H] был сбит с ног!</span>", \
+										"<span class='userdanger'>[H] был сбит с ног!</span>")
 						H.apply_effect(3, WEAKEN, armor_block)
 
 				if(bloody)

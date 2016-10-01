@@ -516,7 +516,7 @@
 	armor = list(melee = 15, bullet = 10, laser = 0,energy = 0, bomb = 20, bio = 100, rad = 25)
 	item_state = "gas_alt"
 	flags_cover = MASKCOVERSMOUTH
-	burn_state = FIRE_PROOF
+	resistance_flags = FIRE_PROOF
 
 /obj/structure/alien_structure
 	name = "alien machinery"
