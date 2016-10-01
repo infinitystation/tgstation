@@ -6016,21 +6016,38 @@
 	},
 /area/zombie)
 "pU" = (
-/obj/effect/decal/cleanable/blood/old,
-/turf/open/floor/plasteel/cult,
-/area/zombie)
-"pV" = (
-/obj/structure/barricade/security{
-	anchored = 1;
-	maxhealth = 1000;
-	name = "Unbreakable barrier";
-	req_access = list(151)
+/obj/item/weapon/statuebust{
+	pixel_y = 14
 	},
-/turf/open/floor/pod/light,
-/area/zombie)
+/obj/structure/table,
+/turf/open/floor/plasteel/black,
+/area/centcom/security)
+"pV" = (
+/obj/structure/mirror/magic/badmin{
+	pixel_y = 28
+	},
+/obj/structure/table,
+/turf/open/floor/plasteel/black,
+/area/centcom/security)
 "pW" = (
-/turf/open/floor/pod/dark,
-/area/zombie)
+/obj/structure/mirror/magic/badmin{
+	pixel_y = 28
+	},
+/obj/structure/table,
+/obj/item/weapon/lipstick{
+	pixel_x = -3
+	},
+/obj/item/weapon/lipstick/black{
+	pixel_x = 0
+	},
+/obj/item/weapon/lipstick/jade{
+	pixel_x = 3
+	},
+/obj/item/weapon/lipstick/purple{
+	pixel_x = 6
+	},
+/turf/open/floor/plasteel/black,
+/area/centcom/security)
 "pX" = (
 /turf/open/floor/plating/asteroid/snow/temperatre,
 /area/syndicate_mothership)
@@ -6096,10 +6113,11 @@
 	},
 /area/centcom/control)
 "qh" = (
-/turf/open/floor/plasteel/cult{
-	icon_state = "cultdamage"
+/obj/structure/chair/comfy/black{
+	dir = 1
 	},
-/area/zombie)
+/turf/open/floor/plasteel/black,
+/area/centcom/security)
 "qi" = (
 /obj/machinery/chem_dispenser,
 /turf/open/floor/plasteel/neutral{
@@ -6174,10 +6192,12 @@
 /turf/open/floor/plasteel/warning,
 /area/centcom/supply)
 "qs" = (
-/turf/open/floor/plasteel/cult{
-	icon_state = "cultdamage3"
+/obj/machinery/door/airlock/centcom{
+	name = "Security Checkpoint";
+	req_one_access_txt = "101"
 	},
-/area/zombie)
+/turf/open/floor/plasteel/black,
+/area/centcom/security)
 "qt" = (
 /obj/machinery/firealarm{
 	dir = 8;
@@ -6261,10 +6281,12 @@
 	},
 /area/centcom/supply)
 "qC" = (
-/turf/open/floor/plasteel/cult{
-	icon_state = "cultdamage6"
+/turf/open/floor/plasteel/green/side{
+	tag = "icon-green (WEST)";
+	icon_state = "green";
+	dir = 8
 	},
-/area/zombie)
+/area/space)
 "qD" = (
 /obj/structure/flora/bush,
 /turf/open/floor/plating/asteroid/snow/temperatre,
@@ -9030,6 +9052,7 @@
 /obj/structure/mirror{
 	pixel_x = -28
 	},
+/obj/effect/decal/cleanable/blood/old,
 /turf/open/floor/plasteel/darkwarning{
 	dir = 1
 	},
@@ -10222,15 +10245,12 @@
 /turf/open/floor/plating/abductor2,
 /area/abductor_ship)
 "Ak" = (
-/obj/structure/alien/weeds,
-/obj/machinery/camera{
-	c_tag = "Testing Chamer";
-	color = "#C862CC";
-	name = "alien camera";
-	network = list("AT_1")
+/turf/open/floor/plasteel/green/side{
+	tag = "icon-green (EAST)";
+	icon_state = "green";
+	dir = 4
 	},
-/turf/open/floor/engine,
-/area/abductor_ship)
+/area/space)
 "Al" = (
 /obj/structure/alien/weeds,
 /turf/open/floor/engine,
@@ -10398,11 +10418,11 @@
 	},
 /area/centcom/security)
 "AD" = (
-/obj/item/weapon/poster{
-	tag = "icon-poster2_legit";
-	icon_state = "poster2_legit"
+/obj/effect/spawner/structure/window/reinforced,
+/obj/structure/sign/nanotrasen{
+	pixel_y = 32
 	},
-/turf/closed/indestructible/riveted/infinity,
+/turf/open/floor/plating,
 /area/centcom/security)
 "AE" = (
 /obj/structure/lattice,
@@ -11638,8 +11658,7 @@
 /turf/closed/indestructible/riveted/infinity,
 /area/centcom/security)
 "DP" = (
-/obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/centcom{
+/obj/machinery/door/airlock/glass_security{
 	name = "Security Checkpoint";
 	req_one_access_txt = "63;101"
 	},
@@ -12323,25 +12342,32 @@
 /turf/open/floor/plating/abductor,
 /area/abductor_ship)
 "Fu" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced/fulltile{
-	color = "#C862CC"
+/obj/structure/mirror/magic/badmin{
+	pixel_y = 28
 	},
-/obj/machinery/door/poddoor/shutters/preopen{
-	color = "#C862CC";
-	dir = 4;
-	id = "alien_shutters_2";
-	name = "alien shutters"
+/obj/structure/table,
+/turf/open/floor{
+	icon_state = "dark"
 	},
-/turf/open/floor/plating/abductor2,
-/area/abductor_ship)
+/area/centcom/lobby)
 "Fv" = (
-/obj/effect/spawner/structure/window/reinforced,
-/obj/machinery/door/poddoor{
-	id = "cc_lo_tu";
-	unacidable = 1
+/obj/structure/mirror/magic/badmin{
+	pixel_y = 28
 	},
-/turf/closed/indestructible/riveted/infinity,
+/obj/structure/table,
+/obj/item/weapon/lipstick{
+	pixel_x = -3
+	},
+/obj/item/weapon/lipstick/black{
+	pixel_x = 0
+	},
+/obj/item/weapon/lipstick/jade{
+	pixel_x = 3
+	},
+/obj/item/weapon/lipstick/purple{
+	pixel_x = 6
+	},
+/turf/open/floor/plasteel/black,
 /area/centcom/lobby)
 "Fw" = (
 /turf/open/floor/plasteel/terror/darkred/side{
@@ -12531,9 +12557,12 @@
 	},
 /area/centcom/lobby)
 "FV" = (
-/obj/effect/spawner/structure/window/reinforced,
-/obj/structure/sign/nanotrasen,
-/turf/open/floor/plating,
+/obj/structure/chair/comfy/black{
+	dir = 1
+	},
+/turf/open/floor{
+	icon_state = "dark"
+	},
 /area/centcom/lobby)
 "FW" = (
 /obj/structure/chair/comfy/shuttle{
@@ -13075,6 +13104,9 @@
 /area/centcom/lobby)
 "Ho" = (
 /obj/machinery/porta_turret/heavy/central_command,
+/obj/structure/sign/nanotrasen{
+	pixel_x = -32
+	},
 /turf/open/floor/plating/airless,
 /area/centcom/lobby)
 "Hp" = (
@@ -15749,22 +15781,18 @@
 /turf/open/floor/plasteel/black,
 /area/tdome/arena)
 "NP" = (
-/mob/living/simple_animal/butterfly{
-	name = "Magtine"
-	},
 /turf/open/floor{
-	tag = "icon-cult";
-	icon_state = "cult"
+	icon_state = "dark"
 	},
-/area/wizard_station)
+/area/centcom/lobby)
 "NQ" = (
-/obj/machinery/door/poddoor{
-	icon = 'icons/obj/doors/blastdoor_hor.dmi';
-	id = "cc_lo_tu";
-	unacidable = 1
+/obj/machinery/door/airlock/centcom{
+	name = "Centcom Customs";
+	opacity = 1;
+	req_access_txt = "101"
 	},
-/turf/open/space,
-/area/space)
+/turf/closed/indestructible/riveted/infinity,
+/area/centcom/lobby)
 "NR" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/door/poddoor{
@@ -22839,7 +22867,7 @@ mc
 lF
 kd
 mB
-NP
+kx
 lq
 kx
 kx
@@ -40558,7 +40586,7 @@ gF
 jv
 jv
 jv
-jU
+jv
 jv
 jv
 jv
@@ -54252,9 +54280,9 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
+BI
+BI
+BI
 BI
 BI
 BI
@@ -54509,10 +54537,10 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
+BI
+Fu
+FV
+NP
 BI
 FL
 Gw
@@ -54766,10 +54794,10 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
+BI
+Fv
+NP
+NP
 BI
 FM
 Gx
@@ -55019,14 +55047,14 @@ aa
 aa
 aa
 aa
-aa
-aa
+ab
+ab
 BI
 BI
 BI
 BI
 BI
-BI
+NQ
 BI
 FN
 Gx
@@ -55276,9 +55304,9 @@ aa
 aa
 aa
 aa
-aa
-aa
-BI
+ab
+qC
+Cp
 Cp
 Cp
 Cp
@@ -55533,9 +55561,9 @@ aa
 aa
 aa
 aa
-aa
-aa
-BI
+ab
+Ak
+Cq
 Cq
 Cq
 Cq
@@ -55786,7 +55814,7 @@ aa
 aa
 aa
 aa
-NQ
+aa
 yR
 yR
 yR
@@ -57838,9 +57866,9 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
+yR
+yR
+yR
 yR
 yR
 yR
@@ -58095,10 +58123,10 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
 yR
+pU
+zG
+zG
 zG
 zk
 zH
@@ -58352,10 +58380,10 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
 yR
+pV
+qh
+zG
 zG
 zk
 zH
@@ -58609,10 +58637,10 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
 yR
+pV
+qh
+zG
 yR
 yR
 yR
@@ -58866,11 +58894,11 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
 yR
+pW
+qh
+zG
+qs
 zG
 zk
 Us
@@ -59123,10 +59151,10 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
+yR
+yR
+yR
+yR
 yR
 zG
 yR
@@ -59388,16 +59416,16 @@ yR
 yR
 yR
 yR
+yR
+yR
+yR
 AD
-yR
-yR
-Cy
 CW
 Cy
 Cy
 EB
 Fk
-FV
+EB
 Fk
 EB
 BI
