@@ -3,7 +3,7 @@
 Обращаем внимание, что игровая механика, инструкции, рецепты и т.д. в /tg/station отличаются от Baystation и /vg/station.
 
 Наша wiki по игре на русском языке:
-http://infinity-wiki.ru (кнопка Wiki сверху)
+http://infinity.so (кнопка Wiki сверху)
 Форум сервера:
 http://infinity.smforum.ru/index.php (кнопка Forum сверху)
 Исходный код билда:
