@@ -3,6 +3,7 @@
 #define SPIDER_GIFT 3
 #define DEPARTMENT_RESUPPLY 4
 #define ANTIDOTE_NEEDED 5
+#define PIZZA_DELIVERY 6
 
 
 /datum/round_event_control/shuttle_loan
@@ -20,7 +21,7 @@
 	var/thanks_msg = "В благодарность начислены кое-какие Карго-баллы (шаттл вернётся через 5 минут)."
 
 /datum/round_event/shuttle_loan/start()
-	dispatch_type = pick(HIJACK_SYNDIE, RUSKY_PARTY, DEPARTMENT_RESUPPLY, ANTIDOTE_NEEDED)
+	dispatch_type = pick(HIJACK_SYNDIE, RUSKY_PARTY, DEPARTMENT_RESUPPLY, ANTIDOTE_NEEDED, PIZZA_DELIVERY)
 
 /datum/round_event/shuttle_loan/announce()
 	SSshuttle.shuttle_loan = src
@@ -36,7 +37,9 @@
 			thanks_msg = "Шаттл вернётся через 5 минут."
 			bonus_points = 0
 		if(ANTIDOTE_NEEDED)
-			priority_announce("Грузовой отдел: Ваша станция была выбрана для эпидемиологического эксперимента. Пришлите нам ваш грузовой шаттл, чтобы принять ваши образцы для исследования.", "Отдел Исследовательских Инициатив ЦК")
+			priority_announce("Грузовой отдел: Ваша станция была выбрана для эпидемического эксперимента. Отправьте нам ваш грузовой шаттл для передачи образцов.", "Исследовательские инциативы Центрального Командования")
+		if(PIZZA_DELIVERY)
+			priority_announce("Грузовой отдел: Похоже, что соседняя станция случайно отправила свою пиццу нам вместо того, чтобы отправить её по адрессу, можем ли мы вам переслать её?", "Отдел доставки пиццы Центрального Командования")
 
 /datum/round_event/shuttle_loan/proc/loan_shuttle()
 	priority_announce(thanks_msg, "Грузовой шаттл реквизирован ЦК.")
@@ -59,7 +62,9 @@
 		if(DEPARTMENT_RESUPPLY)
 			SSshuttle.centcom_message += "Приближается снабжение Департамента."
 		if(ANTIDOTE_NEEDED)
-			SSshuttle.centcom_message += "Приближаются образцы вирусов."
+			SSshuttle.centcom_message += "Приближаются образцы вируса."
+		if(PIZZA_DELIVERY)
+			SSshuttle.centcom_message += "Доставка пиццы для [world.name]."
 	SSshuttle.centcom_message = sanitize_a0(SSshuttle.centcom_message)
 
 /datum/round_event/shuttle_loan/tick()
@@ -125,7 +130,7 @@
 
 				for(var/i in 1 to 5)
 					T = pick_n_take(empty_shuttle_turfs)
-					new /obj/effect/spider/stickyweb(T)
+					new /obj/structure/spider/stickyweb(T)
 
 			if(ANTIDOTE_NEEDED)
 				var/virus_type = pick(/datum/disease/beesease, /datum/disease/brainrot, /datum/disease/fluspanish)
@@ -166,6 +171,16 @@
 				for(var/i in 1 to 5)
 					var/decal = pick(/obj/effect/decal/cleanable/flour, /obj/effect/decal/cleanable/robot_debris, /obj/effect/decal/cleanable/oil)
 					new decal(pick_n_take(empty_shuttle_turfs))
+			if(PIZZA_DELIVERY)
+				shuttle_spawns.Add(/obj/item/pizzabox/margherita)
+				shuttle_spawns.Add(/obj/item/pizzabox/margherita)
+				shuttle_spawns.Add(/obj/item/pizzabox/meat)
+				shuttle_spawns.Add(/obj/item/pizzabox/meat)
+				shuttle_spawns.Add(/obj/item/pizzabox/vegetable)
+				if(prob(10))
+					shuttle_spawns.Add(/obj/item/pizzabox/bomb)
+				else
+					shuttle_spawns.Add(/obj/item/pizzabox/margherita)
 
 		var/false_positive = 0
 		while(shuttle_spawns.len && empty_shuttle_turfs.len)
@@ -182,3 +197,4 @@
 #undef SPIDER_GIFT
 #undef DEPARTMENT_RESUPPLY
 #undef ANTIDOTE_NEEDED
+#undef PIZZA_DELIVERY

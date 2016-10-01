@@ -18,6 +18,9 @@
 /obj/item/weapon/gun/projectile/automatic/proto/unrestricted
 	pin = /obj/item/device/firing_pin
 
+/obj/item/weapon/gun/projectile/automatic/proto/mindshield
+	pin = /obj/item/device/firing_pin/implant/mindshield
+
 /obj/item/weapon/gun/projectile/automatic/update_icon()
 	..()
 	cut_overlays()

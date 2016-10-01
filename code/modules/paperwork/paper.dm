@@ -17,7 +17,7 @@
 	pressure_resistance = 0
 	slot_flags = SLOT_HEAD
 	body_parts_covered = HEAD
-	burn_state = FLAMMABLE
+	resistance_flags = 0
 	burntime = 5
 	dog_fashion = /datum/dog_fashion/head
 
@@ -40,7 +40,7 @@
 
 /obj/item/weapon/paper/update_icon()
 
-	if(burn_state == ON_FIRE)
+	if(resistance_flags & ON_FIRE)
 		icon_state = "paper_onfire"
 		return
 	if(info)
@@ -280,7 +280,7 @@
 /obj/item/weapon/paper/attackby(obj/item/weapon/P, mob/living/carbon/human/user, params)
 	..()
 
-	if(burn_state == ON_FIRE)
+	if(resistance_flags & ON_FIRE)
 		return
 
 	if(is_blind(user))
@@ -379,7 +379,7 @@
 
 /obj/item/weapon/paper/centcom
 	name = "Official Bulletin"
-	info = "<BR>Служба Безопасности ЦК<BR>Портовое отделение<BR>Оффициальный документ<BR><BR>Инспектор,<BR>Эвакуационный шаттл прибудет сегодня.<BR><BR>Разрешайте проход только членам корпорации Нанотрайзен. О каждом челевеке, что не является членом корпорации Нанотрайзен, сообщайте охране. Красная кнопка под столом.<BR><BR>Заведующий портового отделения"
+	info = "<BR>Служба Безопасности ЦК<BR>Портовое отделение<BR>Оффициальный документ<BR><BR>Инспектор,<BR>Эвакуационный шаттл прибудет сегоднЯ.<BR><BR>Разрешайте проход только членам корпорации Нанотрайзен. О каждом челевеке, что не ЯвлЯетсЯ членом корпорации Нанотрайзен, сообщайте охране. КраснаЯ кнопка под столом.<BR><BR>Заведующий портового отделениЯ"
 
 /obj/item/weapon/paper/range
 	name = "paper- Firing Range Instructions"

@@ -226,6 +226,12 @@
 			return get_ert_access("med")
 		if("Centcom Bartender")
 			return list(access_cent_general, access_cent_living, access_cent_bar)
+		if("Centcom Securty Private")
+			return list(access_cent_general, access_security, access_sec_doors, access_brig, access_court, access_medical, access_forensics_lockers,
+						access_engine, access_maint_tunnels, access_mining, access_cargo)
+		if("Centcom Securty Sergeant")
+			return list(access_cent_general, access_security, access_sec_doors, access_brig, access_court, access_medical, access_forensics_lockers,
+						access_engine, access_maint_tunnels, access_mining, access_cargo)
 
 /proc/get_all_accesses()
 	return list(access_security, access_sec_doors, access_brig, access_armory, access_forensics_lockers, access_court,
@@ -459,7 +465,7 @@
 	return get_all_jobs() + list("Prisoner")
 
 /proc/get_all_centcom_jobs()
-	return list("VIP Guest","Custodian","Thunderdome Overseer","Centcom Official","Medical Officer","Death Commando","Research Officer","Special Ops Officer","Admiral","Centcom Commander","Emergency Response Team Commander","Security Response Officer","Engineer Response Officer", "Medical Response Officer","Centcom Bartender")
+	return list("VIP Guest","Custodian","Thunderdome Overseer","Centcom Official","Medical Officer","Death Commando","Research Officer","Special Ops Officer","Admiral","Centcom Commander","Emergency Response Team Commander","Security Response Officer","Engineer Response Officer", "Medical Response Officer","Centcom Bartender","Centcom Securty Private","Centcom Securty Sergeant")
 
 /obj/item/proc/GetJobName() //Used in secHUD icon generation
 	var/obj/item/weapon/card/id/I = GetID()

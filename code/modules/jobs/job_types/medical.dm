@@ -9,7 +9,7 @@ Chief Medical Officer
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the captain"
+	supervisors = "Капитану"
 	selection_color = "#ffddf0"
 	req_admin_notify = 1
 	minimal_player_age = 7
@@ -59,7 +59,7 @@ Medical Doctor
 	faction = "Station"
 	total_positions = 5
 	spawn_positions = 3
-	supervisors = "the chief medical officer"
+	supervisors = "Старшему Медицинскому Офицеру"
 	selection_color = "#ffeef0"
 
 	outfit = /datum/outfit/job/doctor
@@ -93,7 +93,7 @@ Chemist
 	faction = "Station"
 	total_positions = 2
 	spawn_positions = 2
-	supervisors = "the chief medical officer"
+	supervisors = "Старшему Медицинскому Офицеру"
 	selection_color = "#ffeef0"
 
 	outfit = /datum/outfit/job/chemist
@@ -126,7 +126,7 @@ Geneticist
 	faction = "Station"
 	total_positions = 2
 	spawn_positions = 2
-	supervisors = "the chief medical officer and research director"
+	supervisors = "Старшему Медицинскому Офицеру (клонирование) и Главе Исследований (генетика)"
 	selection_color = "#ffeef0"
 
 	outfit = /datum/outfit/job/geneticist
@@ -159,7 +159,7 @@ Virologist
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the chief medical officer"
+	supervisors = "Старшему Медицинскому Офицеру"
 	selection_color = "#ffeef0"
 
 	outfit = /datum/outfit/job/virologist

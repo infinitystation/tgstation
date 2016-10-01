@@ -406,7 +406,7 @@
 	flags_inv = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT
 	strip_delay = 70
 	put_on_delay = 70
-	burn_state = FIRE_PROOF
+	resistance_flags = FIRE_PROOF
 
 /obj/item/clothing/head/hazard
 	name = "hazard helmet"
@@ -416,7 +416,7 @@
 	flags = THICKMATERIAL
 	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 100, rad = 100)
 	flags_inv = HIDEEARS|HIDEHAIR|HIDEFACIALHAIR
-	burn_state = FIRE_PROOF
+	resistance_flags = FIRE_PROOF
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 	icon = 'icons/obj/clothing/uac/hats.dmi'
 	worn_icon = 'icons/mob/uac/hats.dmi'
@@ -466,7 +466,7 @@
 	icon_state = "dragon_cape"
 	armor = list(melee = 55, bullet = 25, laser = 60, energy = 50, bomb = 50, bio = 60, rad = 50)
 	hoodtype = /obj/item/clothing/head/dragon_helmet
-	unacidable = 1
+	resistance_flags = FIRE_PROOF | UNACIDABLE
 
 /obj/item/clothing/head/dragon_helmet
 	name = "dragon helmet"
@@ -480,7 +480,7 @@
 	max_heat_protection_temperature = FIRE_IMMUNITY_HELM_MAX_TEMP_PROTECT
 	flags = NODROP
 	flags_inv = HIDEHAIR|HIDEFACE|HIDEEARS
-	unacidable = 1
+	resistance_flags = FIRE_PROOF | UNACIDABLE
 
 /obj/item/clothing/suit/doctor_w
 	name = "red tails"
