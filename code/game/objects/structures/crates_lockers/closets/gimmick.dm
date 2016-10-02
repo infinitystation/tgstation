@@ -2,8 +2,6 @@
 	name = "cabinet"
 	desc = "Old will forever be in fashion."
 	icon_state = "cabinet"
-	burn_state = FLAMMABLE
-	burntime = 20
 
 /obj/structure/closet/acloset
 	name = "strange closet"
