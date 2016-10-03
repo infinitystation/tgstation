@@ -463,7 +463,7 @@
 	icon_state = "hardsuit0-sec"
 	item_state = "sec_helm"
 	item_color = "sec"
-	armor = list(melee = 30, bullet = 15, laser = 30,energy = 10, bomb = 10, bio = 100, rad = 50, fire = 75, acid = 75)
+	armor = list(melee = 30, bullet = 30, laser = 30, energy = 30, bomb = 10, bio = 100, rad = 50, fire = 75, acid = 75)
 
 
 /obj/item/clothing/suit/space/hardsuit/security
@@ -476,7 +476,7 @@
 	desc = "A special suit that protects against hazardous, low pressure environments. Has an additional layer of armor."
 	item_state = "sec_hardsuit"
 	allowed = list(/obj/item/device/flashlight,/obj/item/weapon/tank/internals, /obj/item/weapon/gun/energy,/obj/item/weapon/reagent_containers/spray/pepper,/obj/item/weapon/gun/projectile,/obj/item/ammo_box,/obj/item/ammo_casing,/obj/item/weapon/melee/baton,/obj/item/weapon/restraints/handcuffs)
-	armor = list(melee = 30, bullet = 15, laser = 30, energy = 10, bomb = 10, bio = 100, rad = 50, fire = 75, acid = 75)
+	armor = list(melee = 30, bullet = 30, laser = 30, energy = 30, bomb = 10, bio = 100, rad = 50, fire = 75, acid = 75)
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/security
 
 /obj/item/clothing/head/helmet/space/hardsuit/security/hos
@@ -485,7 +485,7 @@
 	worn_icon = 'icons/blue_brig/mob/head.dmi'
 	icon_state = "hardsuit0-hos"
 	item_color = "hos"
-	armor = list(melee = 45, bullet = 25, laser = 30,energy = 10, bomb = 25, bio = 100, rad = 50, fire = 95, acid = 95)
+	armor = list(melee = 45, bullet = 35, laser = 35, energy = 15, bomb = 25, bio = 100, rad = 50, fire = 95, acid = 95)
 
 
 /obj/item/clothing/suit/space/hardsuit/security/hos
@@ -494,7 +494,7 @@
 	icon = 'icons/blue_brig/obj/clothing/suits.dmi'
 	name = "head of security's hardsuit"
 	desc = "A special bulky suit that protects against hazardous, low pressure environments. Has an additional layer of armor."
-	armor = list(melee = 45, bullet = 25, laser = 30, energy = 10, bomb = 25, bio = 100, rad = 50, fire = 95, acid = 95)
+	armor = list(melee = 45, bullet = 35, laser = 35, energy = 15, bomb = 25, bio = 100, rad = 50, fire = 95, acid = 95)
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/security/hos
 
 	//Captain
@@ -503,7 +503,7 @@
 	icon_state = "capspace"
 	item_state = "capspacehelmet"
 	desc = "A special hardsuit helmet designed for only the most fashionable of military figureheads."
-	armor = list(melee = 40, bullet = 50, laser = 50, energy = 25, bomb = 50, bio = 100, rad = 50, fire = 100, acid = 95)
+	armor = list(melee = 40, bullet = 50, laser = 50, energy = 30, bomb = 50, bio = 100, rad = 50, fire = 100, acid = 95)
 	actions_types = list()
 
 /obj/item/clothing/head/helmet/space/hardsuit/captain/attack_self()
@@ -515,7 +515,7 @@
 	icon_state = "caparmor"
 	item_state = "capspacesuit"
 	allowed = list(/obj/item/weapon/tank/internals, /obj/item/device/flashlight,/obj/item/weapon/gun/energy, /obj/item/weapon/gun/projectile, /obj/item/ammo_box, /obj/item/ammo_casing, /obj/item/weapon/melee/baton,/obj/item/weapon/restraints/handcuffs)
-	armor = list(melee = 40, bullet = 50, laser = 50, energy = 25, bomb = 50, bio = 100, rad = 50, fire = 100, acid = 95)
+	armor = list(melee = 40, bullet = 50, laser = 50, energy = 30, bomb = 50, bio = 100, rad = 50, fire = 100, acid = 95)
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/captain
 
 	//Clown

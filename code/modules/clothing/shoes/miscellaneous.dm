@@ -38,7 +38,7 @@
 	icon_state = "boots"
 	permeability_coefficient = 0.01
 	flags = NOSLIP
-	armor = list(melee = 40, bullet = 80, laser = 45,energy = 25, bomb = 40, bio = 5, rad = 0)
+	armor = list(melee = 40, bullet = 80, laser = 45,energy = 25, bomb = 40, bio = 5, rad = 0, fire = 0, acid = 50)
 
 /obj/item/clothing/shoes/sandal
 	desc = "A pair of rather plain, wooden sandals."

@@ -35,7 +35,7 @@
 	icon = 'icons/blue_brig/obj/clothing/hats.dmi'
 	icon_state = "helmetalt"
 	item_state = "helmetalt"
-	armor = list(melee = 15, bullet = 40, laser = 10, energy = 10, bomb = 40, bio = 0, rad = 0, fire = 0, acid = 50)
+	armor = list(melee = 15, bullet = 60, laser = 10, energy = 10, bomb = 40, bio = 0, rad = 0, fire = 0, acid = 50)
 	can_flashlight = 1
 	dog_fashion = null
 
@@ -54,7 +54,7 @@
 	alt_toggle_message = "You push the visor up on"
 	can_toggle = 1
 	flags = HEADBANGPROTECT
-	armor = list(melee = 41, bullet = 15, laser = 5,energy = 5, bomb = 5, bio = 2, rad = 0, fire = 0, acid = 50)
+	armor = list(melee = 50, bullet = 15, laser = 5,energy = 5, bomb = 5, bio = 2, rad = 0, fire = 0, acid = 50)
 	flags_inv = HIDEEARS|HIDEFACE
 	strip_delay = 80
 	actions_types = list(/datum/action/item_action/toggle)
@@ -108,7 +108,7 @@
 	desc = "An extremely robust, space-worthy helmet in a nefarious red and black stripe pattern."
 	icon_state = "swatsyndie"
 	item_state = "swatsyndie"
-	armor = list(melee = 40, bullet = 30, laser = 30,energy = 30, bomb = 50, bio = 90, rad = 20, fire = 20, acid = 50)
+	armor = list(melee = 40, bullet = 30, laser = 30, energy = 30, bomb = 50, bio = 90, rad = 20, fire = 20, acid = 50)
 	cold_protection = HEAD
 	min_cold_protection_temperature = SPACE_HELM_MIN_TEMP_PROTECT
 	heat_protection = HEAD
@@ -124,7 +124,7 @@
 	icon = 'icons/obj/clothing/uac/hats.dmi'
 	icon_state = "helmet"
 	flags = HEADBANGPROTECT
-	armor = list(melee = 40, bullet = 35, laser = 45,energy = 25, bomb = 40, bio = 5, rad = 0)
+	armor = list(melee = 40, bullet = 35, laser = 45,energy = 25, bomb = 40, bio = 5, rad = 0, fire = 20, acid = 50)
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR
 	strip_delay = 80
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
@@ -183,7 +183,7 @@
 	icon_state = "redtaghelm"
 	flags_cover = HEADCOVERSEYES
 	item_state = "redtaghelm"
-	armor = list(melee = 15, bullet = 10, laser = 20,energy = 10, bomb = 20, bio = 0, rad = 0, fire = 0, acid = 50)
+	armor = list(melee = 15, bullet = 10, laser = 20, energy = 10, bomb = 20, bio = 0, rad = 0, fire = 0, acid = 50)
 	// Offer about the same protection as a hardhat.
 	dog_fashion = null
 
@@ -193,7 +193,7 @@
 	icon_state = "bluetaghelm"
 	flags_cover = HEADCOVERSEYES
 	item_state = "bluetaghelm"
-	armor = list(melee = 15, bullet = 10, laser = 20,energy = 10, bomb = 20, bio = 0, rad = 0, fire = 0, acid = 50)
+	armor = list(melee = 15, bullet = 10, laser = 20, energy = 10, bomb = 20, bio = 0, rad = 0, fire = 0, acid = 50)
 	// Offer about the same protection as a hardhat.
 	dog_fashion = null
 
@@ -202,7 +202,7 @@
 	desc = "A classic metal helmet."
 	icon_state = "knight_green"
 	item_state = "knight_green"
-	armor = list(melee = 41, bullet = 15, laser = 5,energy = 5, bomb = 5, bio = 2, rad = 0, fire = 0, acid = 50)
+	armor = list(melee = 41, bullet = 15, laser = 5, energy = 5, bomb = 5, bio = 2, rad = 0, fire = 0, acid = 50)
 	flags = null
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH

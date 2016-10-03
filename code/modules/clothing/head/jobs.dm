@@ -118,14 +118,14 @@
 	worn_icon = 'icons/blue_brig/mob/head.dmi'
 	icon = 'icons/blue_brig/obj/clothing/hats.dmi'
 	icon_state = "beret_badge"
-	armor = list(melee = 40, bullet = 30, laser = 30,energy = 10, bomb = 25, bio = 0, rad = 0, fire = 0, acid = 50)
+	armor = list(melee = 40, bullet = 30, laser = 30, energy = 10, bomb = 25, bio = 0, rad = 0, fire = 0, acid = 50)
 	strip_delay = 60
 	dog_fashion = null
 
 /obj/item/clothing/head/beret/sec/navyhos
 	name = "head of security's beret"
 	desc = "A special beret with the Head of Security's insignia emblazoned on it. A symbol of excellence, a badge of courage, a mark of distinction."
-	armor = list(melee = 60, bullet = 5, laser = 25, energy = 10, bomb = 25, bio = 0, rad = 0)
+	armor = list(melee = 60, bullet = 5, laser = 25, energy = 10, bomb = 25, bio = 0, rad = 0, fire = 0, acid = 50)
 	icon_state = "hosberet"
 
 /obj/item/clothing/head/beret/sec/navywarden

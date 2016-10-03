@@ -30,7 +30,7 @@
 	worn_icon = 'icons/mob/paradise_clothes.dmi'
 	fitted = FEMALE_UNIFORM_TOP
 	can_adjust = 0
-	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 10, bio = 10, rad = 0)
+	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 10, bio = 10, rad = 0, fire = 0, acid = 0)
 
 /obj/item/clothing/under/mai_yang
 	name = "white cheongsam"
@@ -107,7 +107,7 @@
 	worn_icon = 'icons/mob/infinity_work.dmi'
 	icon = 'icons/obj/clothing/infinity_work.dmi'
 	can_adjust = 0
-	armor = list(melee = 10, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0)
+	armor = list(melee = 10, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
 	alt_covers_chest = 1
 
 /obj/item/clothing/under/sec_corporate
@@ -119,7 +119,7 @@
 	worn_icon = 'icons/mob/infinity_work.dmi'
 	icon = 'icons/obj/clothing/infinity_work.dmi'
 	can_adjust = 0
-	armor = list(melee = 10, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0)
+	armor = list(melee = 10, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
 	alt_covers_chest = 1
 
 /obj/item/clothing/under/hos_corporate
@@ -131,7 +131,7 @@
 	worn_icon = 'icons/mob/infinity_work.dmi'
 	icon = 'icons/obj/clothing/infinity_work.dmi'
 	can_adjust = 0
-	armor = list(melee = 10, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0)
+	armor = list(melee = 10, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
 	alt_covers_chest = 1
 
 /obj/item/clothing/under/hos_formal_female
@@ -163,7 +163,7 @@
 	item_color = "ce_female_shorts"
 	icon = 'icons/obj/clothing/infinity_work.dmi'
 	worn_icon = 'icons/mob/infinity_work.dmi'
-	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 10)
+	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 10, fire = 0, acid = 0)
 	resistance_flags = FIRE_PROOF
 
 /obj/item/clothing/under/cmo_dress
@@ -177,7 +177,7 @@
 	fitted = FEMALE_UNIFORM_TOP
 	can_adjust = 0
 	permeability_coefficient = 0.50
-	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 10, rad = 0)
+	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 10, rad = 0, fire = 0, acid = 0)
 
 /obj/item/clothing/under/schoolgirlblack
 	name = "black schoolgirl uniform"
@@ -277,7 +277,7 @@
 	worn_icon = 'icons/mob/uac/uniform.dmi'
 	icon = 'icons/obj/clothing/uac/uniform.dmi'
 	icon_state = "uac_uniform"
-	armor = list(melee = 10, bullet = 10, laser = 10, energy = 10, bomb = 10, bio = 10, rad = 10)
+	armor = list(melee = 10, bullet = 10, laser = 10, energy = 10, bomb = 10, bio = 10, rad = 10, fire = 0, acid = 0)
 
 /obj/item/clothing/under/shorts_denim
 	name = "denim shorts"

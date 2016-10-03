@@ -281,7 +281,7 @@
 	icon = 'icons/obj/clothing/infinity_work.dmi'
 	worn_icon = 'icons/mob/infinity_work.dmi'
 	item_state = "rad_suit"
-	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 5, bio = 0, rad = 50)
+	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 5, bio = 0, rad = 50, fire = 0, acid = 0)
 
 /obj/item/clothing/suit/gentlecoat
 	name = "gentle coat"
@@ -327,7 +327,7 @@
 	icon = 'icons/obj/clothing/infinity_work.dmi'
 	worn_icon = 'icons/mob/infinity_work.dmi'
 	allowed = list(/obj/item/weapon/tank/internals/emergency_oxygen, /obj/item/device/flashlight,/obj/item/weapon/gun/energy,/obj/item/weapon/gun/projectile,/obj/item/ammo_casing,/obj/item/weapon/melee/baton,/obj/item/device/taperecorder)
-	armor = list(melee = 10, bullet = 10, laser = 15, energy = 10, bomb = 0, bio = 0, rad = 0)
+	armor = list(melee = 10, bullet = 10, laser = 15, energy = 10, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
 
 /obj/item/clothing/suit/forensics/long
 	name = "jacket"
@@ -340,7 +340,7 @@
 	icon_state = "commissar"
 	item_state = "r_suit"
 	item_color = "commissar"
-	armor = list(melee = 10, bullet = 10, laser = 10,energy = 0, bomb = 0, bio = 0, rad = 0)
+	armor = list(melee = 10, bullet = 10, laser = 10,energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 50)
 	strip_delay = 60
 	icon = 'icons/obj/clothing/infinity_work.dmi'
 	worn_icon = 'icons/mob/infinity_work.dmi'
@@ -372,7 +372,7 @@
 	icon_state = "russofurcoat"
 	item_state = "bl_suit"
 	item_color = "russofurcoat"
-	armor = list(melee = 10, bullet = 15, laser = 15, energy = 5, bomb = 10, bio = 0, rad = 0)
+	armor = list(melee = 10, bullet = 15, laser = 15, energy = 5, bomb = 10, bio = 0, rad = 0, fire = 0, acid = 0)
 	strip_delay = 60
 	icon = 'icons/obj/clothing/infinity_work.dmi'
 	worn_icon = 'icons/mob/infinity_work.dmi'
@@ -402,7 +402,7 @@
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
 	slowdown = 1
 	allowed = list(/obj/item/weapon/tank/internals/emergency_oxygen,/obj/item/weapon/pen,/obj/item/device/flashlight/pen, /obj/item/weapon/reagent_containers/dropper, /obj/item/weapon/reagent_containers/syringe, /obj/item/weapon/reagent_containers/hypospray)
-	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 100, rad = 100)
+	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 100, rad = 100, fire = 0, acid = 10)
 	flags_inv = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT
 	strip_delay = 70
 	put_on_delay = 70
@@ -414,7 +414,7 @@
 	desc = "A helmet that protects the head and face from biological comtaminants."
 	permeability_coefficient = 0.01
 	flags = THICKMATERIAL
-	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 100, rad = 100)
+	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 100, rad = 100, fire = 0, acid = 10)
 	flags_inv = HIDEEARS|HIDEHAIR|HIDEFACIALHAIR
 	resistance_flags = FIRE_PROOF
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
@@ -444,7 +444,7 @@
 	item_state = "coatsecurity"
 	icon = 'icons/obj/clothing/infinity_work.dmi'
 	worn_icon = 'icons/mob/infinity_work.dmi'
-	armor = list(melee = 25, bullet = 15, laser = 30, energy = 10, bomb = 25, bio = 0, rad = 0)
+	armor = list(melee = 25, bullet = 15, laser = 30, energy = 10, bomb = 25, bio = 0, rad = 0, fire = 0, acid = 10)
 	allowed = list(/obj/item/weapon/gun/energy,/obj/item/weapon/reagent_containers/spray/pepper,/obj/item/weapon/gun/projectile,/obj/item/ammo_box,/obj/item/ammo_casing,/obj/item/weapon/melee/baton,/obj/item/weapon/restraints/handcuffs,/obj/item/device/flashlight/seclite,/obj/item/weapon/melee/classic_baton/telescopic)
 	hoodtype = /obj/item/clothing/head/security_new
 
@@ -464,7 +464,7 @@
 	icon = 'icons/obj/clothing/infinity_work.dmi'
 	worn_icon = 'icons/mob/infinity_work.dmi'
 	icon_state = "dragon_cape"
-	armor = list(melee = 55, bullet = 25, laser = 60, energy = 50, bomb = 50, bio = 60, rad = 50)
+	armor = list(melee = 55, bullet = 25, laser = 60, energy = 50, bomb = 50, bio = 60, rad = 50, fire = 90, acid = 80)
 	hoodtype = /obj/item/clothing/head/dragon_helmet
 	resistance_flags = FIRE_PROOF | UNACIDABLE
 
@@ -474,7 +474,7 @@
 	icon = 'icons/obj/clothing/infinity_work.dmi'
 	worn_icon = 'icons/mob/infinity_work.dmi'
 	icon_state = "dragon_helmet"
-	armor = list(melee = 55, bullet = 25, laser = 60, energy = 50, bomb = 50, bio = 60, rad = 50)
+	armor = list(melee = 55, bullet = 25, laser = 60, energy = 50, bomb = 50, bio = 60, rad = 50, fire = 90, acid = 60)
 	body_parts_covered = HEAD
 	heat_protection = HEAD
 	max_heat_protection_temperature = FIRE_IMMUNITY_HELM_MAX_TEMP_PROTECT
@@ -508,7 +508,7 @@
 	icon_state = "giant_armor"
 	item_state = "giant_armor"
 	body_parts_covered = CHEST|GROIN|ARMS|LEGS
-	armor = list(melee = 66, bullet = 50, laser = 48, energy = 33, bomb = 32, bio = 0, rad = 0)
+	armor = list(melee = 66, bullet = 50, laser = 48, energy = 33, bomb = 32, bio = 0, rad = 0, fire = 50, acid = 40)
 	flags_inv = HIDEJUMPSUIT
 	cold_protection = CHEST|GROIN|LEGS|ARMS
 	heat_protection = CHEST|GROIN|LEGS|ARMS
