@@ -231,7 +231,7 @@ RCD
 	return ..()
 
 /obj/item/weapon/rcd/attackby(obj/item/weapon/W, mob/user, params)
-	if(isrobot(user))	//Make sure cyborgs can't load their RCDs
+	if(iscyborg(user))	//Make sure cyborgs can't load their RCDs
 		return
 	var/loaded = 0
 	if(istype(W, /obj/item/weapon/rcd_ammo))
@@ -309,7 +309,7 @@ RCD
 
 	switch(mode)
 		if(1)
-			if(istype(A, /turf/open/space))
+			if(isspaceturf(A))
 				var/turf/open/space/S = A
 				if(useResource(floorcost, user))
 					user << "<span class='notice'>You start building floor...</span>"
@@ -318,7 +318,7 @@ RCD
 					return 1
 				return 0
 
-			if(istype(A, /turf/open/floor))
+			if(isfloorturf(A))
 				var/turf/open/floor/F = A
 				if(checkResource(wallcost, user))
 					user << "<span class='notice'>You start building wall...</span>"
@@ -345,7 +345,7 @@ RCD
 				return 0
 
 		if(2)
-			if(istype(A, /turf/open/floor))
+			if(isfloorturf(A))
 				if(checkResource(airlockcost, user))
 					var/door_check = 1
 					for(var/obj/machinery/door/D in A)
@@ -385,12 +385,12 @@ RCD
 				return 0
 
 		if(3)
-			if(istype(A, /turf/closed/wall))
+			if(iswallturf(A))
 				var/turf/closed/wall/W = A
 				if(istype(W, /turf/closed/wall/r_wall) && !canRturf)
 					return 0
 				if(checkResource(deconwallcost, user))
-					user << "<span class='notice'>You start deconstructing wall...</span>"
+					user << "<span class='notice'>You start deconstructing [W]...</span>"
 					playsound(src.loc, 'sound/machines/click.ogg', 50, 1)
 					if(do_after(user, deconwalldelay, target = A))
 						if(!useResource(deconwallcost, user)) return 0
@@ -399,7 +399,7 @@ RCD
 						return 1
 				return 0
 
-			if(istype(A, /turf/open/floor))
+			if(isfloorturf(A))
 				var/turf/open/floor/F = A
 				if(istype(F, /turf/open/floor/engine) && !canRturf)
 					return 0
@@ -450,7 +450,7 @@ RCD
 					return 0
 
 		if (4)
-			if(istype(A, /turf/open/floor))
+			if(isfloorturf(A))
 				if(checkResource(grillecost, user))
 					if(locate(/obj/structure/grille) in A)
 						user << "<span class='warning'>There is already a grille there!</span>"
@@ -533,7 +533,7 @@ RCD
 	canRturf = 1
 
 /obj/item/weapon/rcd/borg/useResource(amount, mob/user)
-	if(!isrobot(user))
+	if(!iscyborg(user))
 		return 0
 	var/mob/living/silicon/robot/borgy = user
 	if(!borgy.cell)
@@ -546,7 +546,7 @@ RCD
 	return .
 
 /obj/item/weapon/rcd/borg/checkResource(amount, mob/user)
-	if(!isrobot(user))
+	if(!iscyborg(user))
 		return 0
 	var/mob/living/silicon/robot/borgy = user
 	if(!borgy.cell)

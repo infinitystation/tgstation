@@ -141,7 +141,7 @@
 	var/rendered = "<span class='big'><font color=\"#EE4000\"><b>\[Blob Telepathy\] [name](<font color=\"[blob_reagent_datum.color]\">[blob_reagent_datum.name]</font>)</b> [message_a]</font></span>"
 
 	for(var/mob/M in mob_list)
-		if(isovermind(M) || isobserver(M) || isblobzombie(M) || istype(M, /mob/living/simple_animal/hostile/blob))
+		if(isovermind(M) || isblobzombie(M) || istype(M, /mob/living/simple_animal/hostile/blob))
 			M << rendered
 		if(isobserver(M))
 			var/link = FOLLOW_LINK(M, src)
@@ -180,7 +180,7 @@
 			return 0
 	else
 		var/area/A = get_area(NewLoc)
-		if(istype(NewLoc, /turf/open/space) || istype(A, /area/shuttle)) //if unplaced, can't go on shuttles or space tiles
+		if(isspaceturf(NewLoc) || istype(A, /area/shuttle)) //if unplaced, can't go on shuttles or space tiles
 			return 0
 		loc = NewLoc
 		return 1

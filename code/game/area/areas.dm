@@ -325,7 +325,7 @@
 var/list/mob/living/forced_ambiance_list = new
 
 /area/Entered(A)
-	if(!istype(A,/mob/living))
+	if(!isliving(A))
 		return
 
 	var/mob/living/L = A
@@ -370,7 +370,7 @@ var/list/mob/living/forced_ambiance_list = new
 	if(!T || !isturf(T))
 		T = get_turf(src)
 	var/area/A = get_area(T)
-	if(istype(T, /turf/open/space)) // Turf never has gravity
+	if(isspaceturf(T)) // Turf never has gravity
 		return 0
 	else if(A && A.has_gravity) // Areas which always has gravity
 		return 1

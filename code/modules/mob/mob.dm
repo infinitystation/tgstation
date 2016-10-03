@@ -512,7 +512,7 @@ var/next_mob_id = 0
 	if(src.client.banprisoned)
 		return
 
-	if(stat != DEAD || istype(src, /mob/new_player))
+	if(stat != DEAD || isnewplayer(src))
 		usr << "<span class='notice'>You must be observing to use this!</span>"
 		return
 
@@ -604,7 +604,7 @@ var/next_mob_id = 0
 		return
 	if(!Adjacent(usr))
 		return
-	if(istype(M, /mob/living/silicon/ai))
+	if(isAI(M))
 		return
 	show_inv(usr)
 
@@ -671,7 +671,7 @@ var/next_mob_id = 0
 			var/list/overrides = list()
 			for(var/image/I in client.images)
 				if(I.loc && I.loc.loc == listed_turf && I.override)
-					overrides = I.loc
+					overrides += I.loc
 			for(var/atom/A in listed_turf)
 				if(!A.mouse_opacity)
 					continue
@@ -757,7 +757,7 @@ var/next_mob_id = 0
 			layer = initial(layer)
 	update_transform()
 	update_action_buttons_icon()
-	if(istype(src, /mob/living))
+	if(isliving(src))
 		var/mob/living/L = src
 		if(L.has_status_effect(/datum/status_effect/freon))
 			canmove = 0

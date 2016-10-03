@@ -20,36 +20,3 @@
 	bcell = new(src)
 	update_icon()
 	return
-
-obj/item/weapon/melee/baton/shocker/baton_stun(mob/living/L, mob/user)
-	if(ishuman(L))
-		var/mob/living/carbon/human/H = L
-		if(H.check_shields(0, "[user]'s [name]", src, MELEE_ATTACK))
-			playsound(L, 'sound/weapons/Genhit.ogg', 50, 1)
-			return 0
-	if(isrobot(loc))
-		var/mob/living/silicon/robot/R = loc
-		if(!R || !R.cell || !R.cell.use(hitcost))
-			return 0
-	else
-		if(!deductcharge(hitcost))
-			return 0
-
-	user.lastattacked = L
-	L.lastattacker = user
-
-	L.Stun(stunforce)
-	L.Weaken(stunforce)
-	L.apply_effect(STUTTER, stunforce)
-
-	L.visible_message("<span class='danger'>[user] has shocked [L] with [src]!</span>", \
-							"<span class='userdanger'>[user] has shocked you with [src]!</span>")
-	playsound(loc, 'sound/weapons/shocker_attack.ogg', 50, 1, -1)
-
-	if(ishuman(L))
-		var/mob/living/carbon/human/H = L
-		H.forcesay(hit_appends)
-
-	add_logs(user, L, "shocked")
-	return 1
-

@@ -351,7 +351,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	set desc= "Teleport to a location"
 	if(client && client.banprisoned)
 		return
-	if(!istype(usr, /mob/dead/observer))
+	if(!isobserver(usr))
 		usr << "Not when you're not dead!"
 		return
 	var/A
@@ -431,7 +431,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	if(client && client.banprisoned)
 		return
 
-	if(istype(usr, /mob/dead/observer)) //Make sure they're an observer!
+	if(isobserver(usr)) //Make sure they're an observer!
 
 
 		var/list/dest = list() //List of possible destinations (mobs)

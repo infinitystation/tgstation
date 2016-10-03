@@ -96,7 +96,7 @@
 
 		if(wisp.orbiting)
 			var/atom/A = wisp.orbiting.orbiting
-			if(istype(A, /mob/living))
+			if(isliving(A))
 				var/mob/living/M = A
 				M.sight &= ~SEE_MOBS
 				M << "<span class='notice'>Your vision returns to \
@@ -794,7 +794,7 @@
 		addtimer(src, "aoe_burst", 0, FALSE, T, user)
 		add_logs(user, target, "fired 3x3 blast at", src)
 	else
-		if(istype(target, /turf/closed/mineral) && get_dist(user, target) < 6) //target is minerals, we can hit it(even if we can't see it)
+		if(ismineralturf(target) && get_dist(user, target) < 6) //target is minerals, we can hit it(even if we can't see it)
 			addtimer(src, "cardinal_blasts", 0, FALSE, T, user)
 			timer = world.time + cooldown_time
 		else if(target in view(5, get_turf(user))) //if the target is in view, hit it
