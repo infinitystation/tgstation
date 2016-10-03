@@ -148,3 +148,8 @@
 	new /obj/item/clothing/suit/armor/uac(src)
 	new	/obj/item/device/radio/headset(src)
 	new /obj/item/clothing/head/helmet/trooper(src)
+
+/obj/structure/closet/gimmick/zombie
+	name = "uao"
+	desc = "It's a storage unit for operational gear."
+	icon_state = "syndicate"

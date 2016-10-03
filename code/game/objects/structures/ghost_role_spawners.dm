@@ -59,7 +59,7 @@
 	..()
 	var/area/A = get_area(src)
 	if(A)
-		notify_ghosts("яицо пепельного ходока готово вылупитьс&#255; в [A.name].", source = src, action=NOTIFY_ATTACK)
+		notify_ghosts("яйцо пепельного ходока готово вылупитьс&#255; в [A.name].", source = src, action=NOTIFY_ATTACK)
 //Timeless prisons: Spawns in Wish Granter prisons in lavaland. Ghosts become age-old users of the Wish Granter and are advised to seek repentance for their past.
 /obj/effect/mob_spawn/human/exile
 	name = "timeless prison"
