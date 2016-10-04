@@ -17,7 +17,7 @@
 	var/e_4 = "ым"
 	var/e_5 = "ось"
 
-	var/msg = "<span class='info'>*---------*\n??? "
+	var/msg = "<span class='info'>*---------*\n Это <EM>[src.name]</EM>! "
 
 	if( (slot_w_uniform in obscured) && skipface ) //big suits/masks/helmets make it hard to tell their gender
 		e_1 = "о"
