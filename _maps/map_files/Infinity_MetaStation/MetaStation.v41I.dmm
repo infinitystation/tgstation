@@ -95161,15 +95161,26 @@
 	initial_gas_mix = "n2=500;TEMP=80"
 	},
 /area/toxins/xenobiology)
+"ddQ" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/turf/open/floor/carpet,
+/area/bridge)
 "ddR" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
 /turf/open/floor/carpet,
 /area/bridge)
-"ddQ" = (
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
-/turf/open/floor/carpet,
+"ddS" = (
+/obj/structure/bed/dogbed{
+	desc = "A comfy-looking koala bed. You can even strap your koala in, in case the gravity turns off.";
+	name = "koala bed"
+	},
+/mob/living/simple_animal/pet/koala/haradrim,
+/turf/open/floor/plasteel{
+	dir = 6;
+	icon_state = "darkblue"
+	},
 /area/bridge)
 
 (1,1,1) = {"
@@ -121764,7 +121775,7 @@ bmd
 boa
 bob
 brF
-btA
+ddS
 bvU
 byd
 bzI
