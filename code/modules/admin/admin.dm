@@ -405,7 +405,7 @@ var/global/BSACooldown = 0
 
 
 /datum/admins/proc/Game()
-	if(!check_rights(0))
+	if(!check_rights())
 		return
 
 	var/dat = {"
