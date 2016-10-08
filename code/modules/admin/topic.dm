@@ -1885,10 +1885,10 @@
 
 		input = sanitize(copytext(input,1,MAX_MESSAGE_LEN))	//fix
 
-		src.owner << "You sent [input] to [H] via a secure channel."
-		log_admin("[src.owner] replied to [key_name(H)]'s Centcom message with the message [input].")
-		message_admins("[src.owner] replied to [key_name(H)]'s Centcom message with: \"[input]\"")
-		H << "You hear something crackle in your ears for a moment before a voice speaks.  \"Please stand by for a message from Central Command.  Message as follows. [input].  Message ends.\""
+		src.owner << "¬ы отправили:<b><font color='blue'>[input]</b></font>."
+		log_admin("[src.owner] ответил на сообщение, которое отправил [key_name(H)], он получил: [input].")
+		message_admins("[src.owner] отвечает на сообщение, которое отправил [key_name(H)], он получил: [input].")
+		H << "¬ наушнике раздалс&#255; небольшой треск, но потом прозвучал голос, передав сообщение. <b><font color='blue'>[input].</b></font>  онец сообщени&#255;."
 
 	else if(href_list["show_report"])
 		var/datum/report/R = locate(href_list["show_report"])
