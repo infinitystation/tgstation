@@ -4,7 +4,7 @@
 
 		#define MINETYPE "lavaland"
 
-		#include "map_files\dexofanEfficiency\EfficiencyStation.dmm"
+		#include "map_files\EfficiencyStation\EfficiencyStation.dmm"
 		#include "map_files\generic\z2.dmm"
 		#include "map_files\generic\z3.dmm"
 		#include "map_files\generic\z4.dmm"
@@ -17,9 +17,9 @@
 		#include "map_files\generic\z10.dmm"
 		#include "map_files\generic\z11.dmm"
 
-		#define MAP_PATH "map_files/dexofanEfficiency"
+		#define MAP_PATH "map_files/EfficiencyStation"
         #define MAP_FILE "EfficiencyStation.dmm"
-        #define MAP_NAME "TG Efficiency Station (dexofan's edits)"
+        #define MAP_NAME "TG Efficiency Station"
 
 		#define MAP_TRANSITION_CONFIG DEFAULT_MAP_TRANSITION_CONFIG
 

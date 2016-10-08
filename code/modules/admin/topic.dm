@@ -1181,6 +1181,7 @@
 					M << "<span class='danger'>No ban appeals URL has been set.</span>"
 				ban_unban_log_save("[usr.client.ckey] has HARD permabanned [M.ckey]. - Reason: [reason] - This is a permanent ban.")
 				world << "<span class='adminnotice'><b>BAN: Администратор [usr.client.ckey] ЖЕСТКО и перманентно забанил(а) [M.ckey]. Причина: [reason].</b></span>"
+				world << sound('sound/effects/permabanned.ogg')
 				log_admin("[usr.client.ckey] has HARD banned [M.ckey].\nReason: [reason]\nThis is a permanent ban.")
 				message_admins("<span class='adminnotice'>[usr.client.ckey] has HARD banned [M.ckey].\nReason: [reason]\nThis is a permanent ban.</span>")
 				feedback_inc("ban_perma",1)
@@ -1248,6 +1249,7 @@
 					M << "<span class='danger'>No ban appeals URL has been set.</span>"
 				ban_unban_log_save("[usr.client.ckey] has soft permabanned [M.ckey]. - Reason: [reason] - This is a permanent ban.")
 				world << "<span class='adminnotice'><b>BAN: Администратор [usr.client.ckey] перманентно отправил(а) [M.ckey] в бан-тюрьму. Причина: [reason].</b></span>"
+				world << sound('sound/effects/permabanned.ogg')
 				log_admin("[usr.client.ckey] has soft banned [M.ckey].\nReason: [reason]\nThis is a permanent ban.")
 				message_admins("<span class='adminnotice'>[usr.client.ckey] has soft banned [M.ckey].\nReason: [reason]\nThis is a permanent ban.</span>")
 				feedback_inc("ban_soft_perma",1)
