@@ -77,7 +77,7 @@
 	return ..()
 
 /obj/item/weapon/storage/lockbox/loyalty
-	name = "lockbox of mindshield implants"
+	name = "lockbox of loyalty implants"
 	req_access = list(access_security)
 
 /obj/item/weapon/storage/lockbox/loyalty/New()

@@ -1,8 +1,8 @@
 //This file was auto-corrected by findeclaration.exe on 25.5.2012 20:42:32
 
 /obj/machinery/implantchair
-	name = "mindshield implanter"
-	desc = "Used to implant occupants with mindshield implants."
+	name = "loyalty implanter"
+	desc = "Used to implant occupants with loyalty implants."
 	icon = 'icons/obj/machines/implantchair.dmi'
 	icon_state = "implantchair"
 	density = 1
@@ -51,7 +51,7 @@
 	data["ready_implants"]  = ready_implants
 	data["ready"] = ready
 	data["replenishing"] = replenishing
-	
+
 	return data
 
 /obj/machinery/implantchair/ui_act(action, params)
@@ -189,4 +189,3 @@
 	log_game("[key_name_admin(user)] brainwashed [key_name_admin(C)] with objective '[objective]'.")
 	return 1
 
-	

@@ -376,10 +376,10 @@ datum/supply_pack
 	crate_name = "auto rifle ammo crate"
 
 /datum/supply_pack/security/armory/mindshield
-	name = "mindshield implants Crate"
+	name = "Loyality implants Crate"
 	cost = 4000
 	contains = list(/obj/item/weapon/storage/lockbox/loyalty)
-	crate_name = "mindshield implant crate"
+	crate_name = "loyalty implant crate"
 
 /datum/supply_pack/security/armory/trackingimp
 	name = "Tracking Implants Crate"
