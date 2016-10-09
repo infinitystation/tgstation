@@ -355,7 +355,7 @@
 
 /obj/effect/overlay/temp/dust_animation
 	icon = 'icons/mob/mob.dmi'
-	duration = 15
+	duration = 5
 
 /obj/effect/overlay/temp/dust_animation/New(loc, dust_icon)
 	icon_state = dust_icon // Before ..() so the correct icon is flick()'d
