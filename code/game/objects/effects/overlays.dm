@@ -355,7 +355,7 @@
 
 /obj/effect/overlay/temp/dust_animation
 	icon = 'icons/mob/mob.dmi'
-	duration = 5
+	duration = 15
 
 /obj/effect/overlay/temp/dust_animation/New(loc, dust_icon)
 	icon_state = dust_icon // Before ..() so the correct icon is flick()'d
@@ -388,7 +388,7 @@
 /obj/effect/overlay/temp/heal //color is white by default, set to whatever is needed
 	name = "healing glow"
 	icon_state = "heal"
-	duration = 15
+	duration = 5
 
 /obj/effect/overlay/temp/heal/New(loc, colour)
 	..()
