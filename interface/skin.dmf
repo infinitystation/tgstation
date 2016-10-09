@@ -1008,7 +1008,7 @@ window "mainwindow"
 		is-minimized = false
 		is-maximized = false
 		can-scroll = none
-		icon = 'icons\\ss13_64.dmi'
+		icon = 'icons\\ss13_32.png'
 		image = ""
 		image-mode = stretch
 		keep-aspect = false
