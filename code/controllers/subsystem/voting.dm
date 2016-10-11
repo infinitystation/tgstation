@@ -191,6 +191,7 @@ var/datum/subsystem/vote/SSvote
 					if(!option || mode || !usr.client)
 						break
 					choices.Add(option)
+				world << sound('sound/effects/voted.ogg')
 			else
 				return 0
 		mode = vote_type
@@ -297,7 +298,7 @@ var/datum/subsystem/vote/SSvote
 			if(usr.client.holder)
 				initiate_vote("custom",usr.key)
 		else
-			submit_vote(round(text2num(href_list["vote"])))
+			submit_vote(round(text2num(href_list["vote"])))	 ///////// TUTURUTU TUTURUTU
 	usr.vote()
 
 /datum/subsystem/vote/proc/remove_action_buttons()
