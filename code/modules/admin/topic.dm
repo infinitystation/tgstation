@@ -1181,7 +1181,6 @@
 					M << "<span class='danger'>No ban appeals URL has been set.</span>"
 				ban_unban_log_save("[usr.client.ckey] has HARD permabanned [M.ckey]. - Reason: [reason] - This is a permanent ban.")
 				world << "<span class='adminnotice'><b>BAN: Администратор [usr.client.ckey] ЖЕСТКО и перманентно забанил(а) [M.ckey]. Причина: [reason].</b></span>"
-				world << sound('sound/effects/permabanned.ogg')
 				log_admin("[usr.client.ckey] has HARD banned [M.ckey].\nReason: [reason]\nThis is a permanent ban.")
 				message_admins("<span class='adminnotice'>[usr.client.ckey] has HARD banned [M.ckey].\nReason: [reason]\nThis is a permanent ban.</span>")
 				feedback_inc("ban_perma",1)
@@ -1249,7 +1248,6 @@
 					M << "<span class='danger'>No ban appeals URL has been set.</span>"
 				ban_unban_log_save("[usr.client.ckey] has soft permabanned [M.ckey]. - Reason: [reason] - This is a permanent ban.")
 				world << "<span class='adminnotice'><b>BAN: Администратор [usr.client.ckey] перманентно отправил(а) [M.ckey] в бан-тюрьму. Причина: [reason].</b></span>"
-				world << sound('sound/effects/permabanned.ogg')
 				log_admin("[usr.client.ckey] has soft banned [M.ckey].\nReason: [reason]\nThis is a permanent ban.")
 				message_admins("<span class='adminnotice'>[usr.client.ckey] has soft banned [M.ckey].\nReason: [reason]\nThis is a permanent ban.</span>")
 				feedback_inc("ban_soft_perma",1)
@@ -1885,10 +1883,10 @@
 
 		input = sanitize(copytext(input,1,MAX_MESSAGE_LEN))	//fix
 
-		src.owner << "You sent [input] to [H] via a secure channel."
-		log_admin("[src.owner] replied to [key_name(H)]'s Centcom message with the message [input].")
-		message_admins("[src.owner] replied to [key_name(H)]'s Centcom message with: \"[input]\"")
-		H << "You hear something crackle in your ears for a moment before a voice speaks.  \"Please stand by for a message from Central Command.  Message as follows. [input].  Message ends.\""
+		src.owner << "Вы отправили:<b><font color='blue'>[input]</b></font>."
+		log_admin("[src.owner] ответил на сообщение, которое отправил [key_name(H)], он получил: [input].")
+		message_admins("[src.owner] отвечает на сообщение, которое отправил [key_name(H)], он получил: [input].")
+		H << "В наушнике раздалс&#255; небольшой треск, но потом прозвучал голос, передав сообщение. <b><font color='blue'>[input].</b></font> Конец сообщени&#255;."
 
 	else if(href_list["show_report"])
 		var/datum/report/R = locate(href_list["show_report"])

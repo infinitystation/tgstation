@@ -315,7 +315,7 @@ Judgement: 10 servants, 100 CV, and any existing AIs are converted or destroyed
 	invocations = list("Enlighten this heathen!", "All are insects before Engine!", "Purge all untruths and honor Engine.")
 	channel_time = 50
 	required_components = list("guvax_capacitor" = 1)
-	usage_tip = "Only works on those in melee range and does not penetrate mindshield implants. Much more efficient than a Sigil of Submission at low Servant amounts."
+	usage_tip = "Only works on those in melee range and does not penetrate loyalty implants. Much more efficient than a Sigil of Submission at low Servant amounts."
 	tier = SCRIPTURE_DRIVER
 	sort_priority = 5
 
