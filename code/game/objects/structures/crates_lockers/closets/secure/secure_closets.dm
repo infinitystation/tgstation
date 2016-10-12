@@ -24,7 +24,7 @@
 		return
 	if(!istype(W))
 		return
-	if(W.mode!=1)
+	if(!W.mode)
 		user << "Переключите мультиметр"
 		return
 	src.add_fingerprint(user)
@@ -44,7 +44,8 @@
 	popup.open(1)
 
 /obj/structure/closet/secure_closet/Topic(href, href_list)
-	if(!ishuman(usr))	return
+	if(!ishuman(usr))
+		return
 	var/mob/living/carbon/human/user = usr
 	var/obj/item/device/multitool/multimeter/W = user.get_active_held_item()
 	var/validate = 0
@@ -98,9 +99,9 @@
 /obj/structure/closet/secure_closet/attackby(obj/item/weapon/W, mob/user, params)
 	if(user in src)
 		return
-	if(!locked && !opened)
+	if(locked && !opened)
 		if(istype(W, /obj/item/device/multitool/multimeter))
 			interact(user)
-		return 1
+		return ..()
 	else
 		..()

@@ -118,9 +118,9 @@
 /mob/get_has(temp_gender)
 	if(!temp_gender)
 		temp_gender = gender
-	. = "has"
+	. = "имеет"
 	if(temp_gender == PLURAL)
-		. = "have"
+		. = "имеет"
 
 /mob/get_is(temp_gender)
 	if(!temp_gender)
