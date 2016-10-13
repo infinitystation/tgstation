@@ -256,9 +256,34 @@
 		text = copytext(text, 1, max_length)
 	return trim_left(trim_right(text))
 
+/proc/ruppertext(t as text)
+	t = uppertext(t)
+	. = ""
+	for(var/i in 1 to length(t))
+		var/a = text2ascii(t, i)
+		if (a > 223)
+			. += ascii2text(a - 32)
+		else if (a == 184)
+			. += ascii2text(168)
+		else
+			. += ascii2text(a)
+	. = replacetext(.,"&#255;","ß")
+
+/proc/rlowertext(t as text)
+	t = lowertext(t)
+	. = ""
+	for(var/i in 1 to length(t))
+		var/a = text2ascii(t, i)
+		if (a > 191 && a < 224)
+			. += ascii2text(a + 32)
+		else if (a == 168)
+			. += ascii2text(184)
+		else
+			. += ascii2text(a)
+
 //Returns a string with the first element of the string capitalized.
 /proc/capitalize(t as text)
-	return uppertext(copytext(t, 1, 2)) + copytext(t, 2)
+	return ruppertext(copytext(t, 1, 2)) + copytext(t, 2)
 
 //Centers text by adding spaces to either side of the string.
 /proc/dd_centertext(message, length)
