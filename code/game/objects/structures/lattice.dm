@@ -11,7 +11,8 @@
 	canSmoothWith = list(/obj/structure/lattice,
 	/turf/open/floor,
 	/turf/closed/wall,
-	/obj/structure/falsewall)
+	/obj/structure/falsewall,
+	/turf/closed/indestructible/riveted/infinity)
 	smooth = SMOOTH_MORE
 	//	flags = CONDUCT
 

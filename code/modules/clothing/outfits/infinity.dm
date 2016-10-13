@@ -50,7 +50,7 @@
 	r_pocket = /obj/item/ammo_box/magazine/smgm9mm
 	id = /obj/item/weapon/card/id
 
-/datum/outfit/private_security/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+/datum/outfit/security_private/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	if(visualsOnly)
 		return
 
@@ -90,7 +90,7 @@
 	r_pocket = /obj/item/ammo_box/magazine/smgm9mm
 	id = /obj/item/weapon/card/id
 
-/datum/outfit/private_security/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+/datum/outfit/security_sergeant/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	if(visualsOnly)
 		return
 

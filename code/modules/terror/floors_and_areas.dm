@@ -169,6 +169,15 @@
 	requires_power = 0
 	has_gravity = 1
 
+/area/planet/bunker
+	name = "Near Bunker"
+	icon_state = "purple"
+	requires_power = 0
+	has_gravity = 1
+	luminosity = 1
+	lighting_use_dynamic = DYNAMIC_LIGHTING_ENABLED
+	valid_territory = 0
+
 // CENTCOM
 
 /area/centcom/lobby
