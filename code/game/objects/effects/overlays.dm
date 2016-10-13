@@ -388,7 +388,7 @@
 /obj/effect/overlay/temp/heal //color is white by default, set to whatever is needed
 	name = "healing glow"
 	icon_state = "heal"
-	duration = 15
+	duration = 5
 
 /obj/effect/overlay/temp/heal/New(loc, colour)
 	..()
