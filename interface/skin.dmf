@@ -173,11 +173,11 @@ macro "default"
 		is-disabled = false
 	elem 
 		name = "F7"
-		command = "Admin-PM"
+		command = "Stealth-Mode"
 		is-disabled = false
 	elem 
 		name = "F8"
-		command = "Invisimin"
+		command = "Toggle-Build-Mode-Self"
 		is-disabled = false
 	elem 
 		name = "F12"
@@ -435,11 +435,11 @@ macro "hotkeys"
 		is-disabled = false
 	elem 
 		name = "F7"
-		command = "Admin-PM"
+		command = "Stealth-Mode"
 		is-disabled = false
 	elem 
 		name = "F8"
-		command = "Invisimin"
+		command = "Toggle-Build-Mode-Self"
 		is-disabled = false
 	elem 
 		name = "F12"
@@ -597,11 +597,11 @@ macro "robot-default"
 		is-disabled = false
 	elem 
 		name = "F7"
-		command = "Admin-PM"
+		command = "Stealth-Mode"
 		is-disabled = false
 	elem 
 		name = "F8"
-		command = "Invisimin"
+		command = "Toggle-Build-Mode-Self"
 		is-disabled = false
 	elem 
 		name = "F12"
@@ -827,11 +827,11 @@ macro "robot-hotkeys"
 		is-disabled = false
 	elem 
 		name = "F7"
-		command = "Admin-PM"
+		command = "Stealth-Mode"
 		is-disabled = false
 	elem 
 		name = "F8"
-		command = "Invisimin"
+		command = "Toggle-Build-Mode-Self"
 		is-disabled = false
 	elem 
 		name = "F12"
