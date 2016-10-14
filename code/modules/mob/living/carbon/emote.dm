@@ -14,10 +14,6 @@
 	//var/m_type = 1
 
 	switch(act)//Even carbon organisms want it alphabetically ordered..
-		if ("aflap")
-			if (!src.restrained())
-				message = "<B>[src]</B> ј√–≈——»¬Ќќ хлопает крыль&#255;ми!"
-				m_type = 2
 
 		if ("airguitar")
 			if (!src.restrained())
@@ -30,10 +26,6 @@
 
 		if ("blink_r")
 			message = "<B>[src]</B> быстро моргает."
-			m_type = 1
-
-		if ("blush","blushes")
-			message = "<B>[src]</B> краснеет."
 			m_type = 1
 
 		if ("bow","bows")
@@ -89,15 +81,6 @@
 				message = "<B>[src]</B> издаЄт громкий шум."
 				m_type = 2
 
-		if ("deathgasp","deathgasps")
-			message = "<B>[src]</B> замирает, конечности расслабл&#255;ютс&#255;, глаза станов&#255;тс&#255; мЄртвыми и безжизненными..."
-			m_type = 1
-
-		if ("flap","flaps")
-			if (!src.restrained())
-				message = "<B>[src]</B> хлопает крыль&#255;ми."
-				m_type = 2
-
 		if ("gasp","gasps")
 			if (!muzzled)
 				..(act)
@@ -123,20 +106,12 @@
 				..()
 			return
 
-		if ("nod","nods")
-			message = "<B>[src]</B> кивает."
-			m_type = 1
-
 		if ("scream","screams")
 			if (!muzzled)
 				..(act)
 			else
 				message = "<B>[src]</B> издаЄт очень громкий шум."
 				m_type = 2
-
-		if ("shake","shakes")
-			message = "<B>[src]</B> тр&#255;сЄт головой."
-			m_type = 1
 
 		if ("sneeze","sneezes")
 			if (!muzzled)
@@ -151,10 +126,6 @@
 			else
 				message = "<B>[src]</B> вздыхает."
 				m_type = 2
-
-		if ("sniff","sniffs")
-			message = "<B>[src]</B> принюхиваетс&#255;."
-			m_type = 2
 
 		if ("snore","snores")
 			if (!muzzled)

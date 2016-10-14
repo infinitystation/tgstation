@@ -172,7 +172,7 @@
 "dp" = (/obj/structure/window/reinforced,/turf/open/floor/plasteel/airless,/area/mine/explored)
 "dq" = (/obj/structure/window/reinforced,/turf/open/floor/plating/airless,/area/mine/explored)
 "dr" = (/obj/structure/table,/obj/item/trash/plate,/obj/item/weapon/kitchen/fork,/turf/open/floor/plasteel{icon_state = "floorgrime"},/area/mine/laborcamp)
-"ds" = (/obj/effect/decal/cleanable/cobweb2,/obj/structure/chair{dir = 8},/turf/open/floor/plasteel{icon_state = "floorgrime"},/area/mine/laborcamp)
+"ds" = (/obj/effect/decal/cleanable/cobweb/cobweb2,/obj/structure/chair{dir = 8},/turf/open/floor/plasteel{icon_state = "floorgrime"},/area/mine/laborcamp)
 "dt" = (/obj/machinery/atmospherics/pipe/simple,/obj/structure/cable{tag = "icon-1-2"; icon_state = "1-2"},/turf/open/floor/plasteel{icon_state = "floorgrime"},/area/mine/laborcamp)
 "du" = (/obj/machinery/status_display{density = 0; layer = 4; pixel_x = 0; pixel_y = 32},/turf/open/floor/plasteel{icon_state = "floorgrime"},/area/mine/laborcamp)
 "dv" = (/obj/machinery/atmospherics/pipe/simple,/obj/item/device/radio/intercom{desc = "Talk through this. It looks like it has been modified to not broadcast."; dir = 2; name = "Prison Intercom (General)"; pixel_x = 0; pixel_y = 24; prison_radio = 1},/turf/open/floor/plasteel{icon_state = "floorgrime"},/area/mine/laborcamp)

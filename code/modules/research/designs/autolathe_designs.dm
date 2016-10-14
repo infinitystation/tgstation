@@ -515,7 +515,7 @@
 	name = "Light tube"
 	id = "light_tube"
 	build_type = AUTOLATHE
-	materials = list(MAT_METAL = 60, MAT_GLASS = 100)
+	materials = list(MAT_GLASS = 100)
 	build_path = /obj/item/weapon/light/tube
 	category = list("initial", "Construction")
 
@@ -523,7 +523,7 @@
 	name = "Light bulb"
 	id = "light_bulb"
 	build_type = AUTOLATHE
-	materials = list(MAT_METAL = 60, MAT_GLASS = 100)
+	materials = list(MAT_GLASS = 100)
 	build_path = /obj/item/weapon/light/bulb
 	category = list("initial", "Construction")
 

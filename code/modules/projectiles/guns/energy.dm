@@ -48,6 +48,9 @@
 	fire_delay = shot.delay
 
 /obj/item/weapon/gun/energy/Destroy()
+	if(power_supply)
+		qdel(power_supply)
+		power_supply = null
 	STOP_PROCESSING(SSobj, src)
 	return ..()
 
@@ -177,7 +180,3 @@
 			STOP_PROCESSING(SSobj, src)
 	..()
 
-/obj/item/weapon/gun/energy/burn()
-	if(power_supply)
-		qdel(power_supply)
-	.=..()

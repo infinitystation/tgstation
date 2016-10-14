@@ -27,12 +27,14 @@
 	req_access = list(101)
 	emp_vunerable = 0
 	scan_range = 15
-	health = 150
+	obj_integrity = 150
+	max_integrity = 150
 	installation = /obj/item/weapon/gun/energy/laser
 	faction = "neutral"
 
 /obj/machinery/porta_turret/heavy/central_command
-	health = 100
+	obj_integrity = 150
+	max_integrity = 150
 	desc = "Heavy turret, installed on Nanotrasen Central Command station."
 	faction = "neutral"
 	density = 0
@@ -468,7 +470,8 @@
 
 /obj/machinery/porta_turret/syndicate/mining
 	scan_range = 12
-	health = 150
+	obj_integrity = 150
+	max_integrity = 150
 	projectile = /obj/item/projectile/beam/laser/heavylaser
 	eprojectile = /obj/item/projectile/beam/laser/heavylaser
 	shot_sound = 'sound/weapons/marauder.ogg'

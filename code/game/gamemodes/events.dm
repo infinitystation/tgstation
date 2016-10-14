@@ -1,7 +1,7 @@
 /proc/power_failure()
 	priority_announce("Обнаружена аномальнаЯ активность в энергосети станции [station_name()]. В качестве превентивной меры энергопитание станции будет отключено на неопределённый период.", "Критическое падение энергии", 'sound/AI/poweroff.ogg')
 	for(var/obj/machinery/power/smes/S in machines)
-		if(istype(get_area(S), /area/turret_protected) || S.z != ZLEVEL_STATION)
+		if(istype(get_area(S), /area/ai_monitored/turret_protected) || S.z != ZLEVEL_STATION)
 			continue
 		S.charge = 0
 		S.output_level = 0
@@ -9,7 +9,7 @@
 		S.update_icon()
 		S.power_change()
 
-	var/list/skipped_areas = list(/area/engine/engineering, /area/turret_protected/ai)
+	var/list/skipped_areas = list(/area/engine/engineering, /area/ai_monitored/turret_protected/ai)
 
 	for(var/area/A in world)
 		if( !A.requires_power || A.always_unpowered )

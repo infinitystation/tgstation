@@ -201,7 +201,7 @@
 	if(!proximity) return
 	if(istype(A,/obj/structure/window))
 		var/obj/structure/window/W = A
-		W.shatter()
+		W.deconstruct(FALSE)
 	else if(istype(A,/obj/structure/grille))
 		var/obj/structure/grille/G = A
 		G.take_damage(16)

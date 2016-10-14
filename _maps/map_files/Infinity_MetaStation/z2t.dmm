@@ -1385,7 +1385,7 @@
 "dO" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/fulltile{
-	maxhealth = 1e+008;
+	max_integrity = 1e+008;
 	name = "Titanium window"
 	},
 /obj/structure/window/reinforced,
@@ -1404,7 +1404,7 @@
 /area/zombie)
 "dP" = (
 /obj/structure/window/reinforced/fulltile{
-	maxhealth = 1e+008;
+	max_integrity = 1e+008;
 	name = "Titanium window"
 	},
 /obj/structure/grille,
@@ -3017,8 +3017,8 @@
 /area/zombie)
 "hZ" = (
 /obj/structure/window/reinforced/fulltile{
-	health = 1e+007;
-	maxhealth = 1e+007;
+	obj_integrity = 1e+007;
+	max_integrity = 1e+007;
 	name = "hardened window"
 	},
 /turf/open/floor/plating,
@@ -5886,7 +5886,6 @@
 /area/centcom/control)
 "pP" = (
 /obj/machinery/newscaster{
-	hitstaken = 0;
 	pixel_x = 0;
 	pixel_y = -32
 	},
@@ -16233,7 +16232,6 @@
 	})
 "Pj" = (
 /obj/machinery/newscaster{
-	hitstaken = 0;
 	pixel_x = 0;
 	pixel_y = -32
 	},
@@ -17436,7 +17434,6 @@
 /obj/structure/table,
 /obj/item/weapon/hand_labeler,
 /obj/machinery/newscaster{
-	hitstaken = 0;
 	pixel_x = 0;
 	pixel_y = -32
 	},

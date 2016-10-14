@@ -1,11 +1,11 @@
 /mob/living/carbon/human/examine(mob/user)
 //this is very slightly better than it was because you can use it more places. still can't do \his[src] though.
-	var/t_He = they_pronoun(TRUE)
-	var/t_His = their_pronoun(TRUE)
-	var/t_his = their_pronoun()
-	var/t_him = them_pronoun()
-	var/t_has = get_has()
-	var/t_is = get_is()
+	var/t_He = p_they(TRUE)
+	var/t_His = p_their(TRUE)
+	var/t_his = p_their()
+	var/t_him = p_them()
+	var/t_has = p_have()
+	var/t_is = p_are()
 
 	var/list/obscured = check_obscured_slots()
 	var/skipface = (wear_mask && (wear_mask.flags_inv & HIDEFACE)) || (head && (head.flags_inv & HIDEFACE))
@@ -350,10 +350,10 @@
 						msg += "Detected cybernetic modifications:<br>"
 						msg += implant_detect
 					if(R)
-						var/health = R.fields["p_stat"]
-						msg += "<a href='?src=\ref[src];hud=m;p_stat=1'>\[[health]\]</a>"
-						health = R.fields["m_stat"]
-						msg += "<a href='?src=\ref[src];hud=m;m_stat=1'>\[[health]\]</a><br>"
+						var/health_r = R.fields["p_stat"]
+						msg += "<a href='?src=\ref[src];hud=m;p_stat=1'>\[[health_r]\]</a>"
+						health_r = R.fields["m_stat"]
+						msg += "<a href='?src=\ref[src];hud=m;m_stat=1'>\[[health_r]\]</a><br>"
 					R = find_record("name", perpname, data_core.medical)
 					if(R)
 						msg += "<a href='?src=\ref[src];hud=m;evaluation=1'>\[Medical evaluation\]</a><br>"

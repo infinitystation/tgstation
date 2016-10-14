@@ -68,7 +68,7 @@
 /turf/open/indestructible/necropolis,
 /area/lavaland/surface/outdoors)
 "am" = (
-/obj/effect/decal/cleanable/cobweb2,
+/obj/effect/decal/cleanable/cobweb/cobweb2,
 /turf/open/indestructible/necropolis,
 /area/lavaland/surface/outdoors)
 "an" = (
@@ -2424,7 +2424,7 @@
 /area/mine/eva)
 "fn" = (
 /obj/structure/grille{
-	health = 100;
+	obj_integrity = 100;
 	name = "heavy grille"
 	},
 /obj/structure/cable{

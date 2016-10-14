@@ -66,7 +66,7 @@
 			m_type = 2
 
 		if ("cross","crosses")
-			message = "<B>[src]</B> crosses their arms."
+			message = "<B>[src]</B> crosses [p_their()] arms."
 			m_type = 2
 
 		if ("chuckle","chuckles")
@@ -327,7 +327,7 @@
 				message = "<B>[src]</B> п&#255;литс&#255;."
 
 		if ("stretch","stretches")
-			message = "<B>[src]</B> stretches their arms."
+			message = "<B>[src]</B> stretches [p_their()] arms."
 			m_type = 2
 
 		if ("sulk","sulks")
@@ -341,14 +341,6 @@
 					return //Can't surrender while asleep.
 				Weaken(20) //So you can't resist.
 				m_type = 1
-
-		if ("faint","faints")
-			message = "<B>[src]</B> faints."
-			if(sleeping)
-				return //Can't faint while asleep
-			SetSleeping(10) //Short-short nap
-			m_type = 1
-
 
 		if ("sway","sways")
 			message = "<B>[src]</B> раскачиваетс&#255; до головокружени&#255;."

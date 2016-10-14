@@ -144,10 +144,10 @@
 		if ("wings")
 			if (!src.restrained())
 				if(dna && dna.species &&((dna.features["wings"] != "None") && ("wings" in dna.species.mutant_bodyparts)))
-					message = "<B>[src]</B> opens \his wings."
+					message = "<B>[src]</B> opens [p_their()] wings."
 					OpenWings()
 				else if(dna && dna.species &&((dna.features["wings"] != "None") && ("wingsopen" in dna.species.mutant_bodyparts)))
-					message = "<B>[src]</B> closes \his wings."
+					message = "<B>[src]</B> closes [p_their()] wings."
 					CloseWings()
 				else
 					src << "<span class='notice'>Unusable emote '[act]'. Say *help for a list.</span>"
@@ -213,7 +213,7 @@
 				if (M)
 					message = "<B>[src]</B> обнимает [M]."
 				else
-					message = "<B>[src]</B> обнимает сам себ&#255;."
+					message = "<B>[src]</B> обнимает себ&#255;."
 
 		if ("me")
 			if(silent)
@@ -359,7 +359,7 @@
 
 		if("wag","wags")
 			if(dna && dna.species && (("tail_lizard" in dna.species.mutant_bodyparts) || ((dna.features["tail_human"] != "None") && !("waggingtail_human" in dna.species.mutant_bodyparts))))
-				message = "<B>[src]</B> wags \his tail."
+				message = "<B>[src]</B> wags [p_their()] tail."
 				startTailWag()
 			else if(dna && dna.species && (("waggingtail_lizard" in dna.species.mutant_bodyparts) || ("waggingtail_human" in dna.species.mutant_bodyparts)))
 				endTailWag()
