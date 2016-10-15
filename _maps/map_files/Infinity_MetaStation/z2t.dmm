@@ -5259,9 +5259,8 @@
 /area/wizard_station)
 "on" = (
 /obj/structure/table/wood,
-/obj/effect/landmark{
-	name = "Teleport-Scroll"
-	},
+/obj/item/weapon/teleportation_scroll/apprentice,
+/obj/item/weapon/storage/backpack/satchel,
 /turf/open/floor/carpet,
 /area/wizard_station)
 "oo" = (
@@ -5436,7 +5435,6 @@
 /area/wizard_station)
 "oK" = (
 /obj/structure/dresser,
-/obj/item/weapon/storage/backpack/satchel,
 /turf/open/floor/carpet,
 /area/wizard_station)
 "oL" = (
@@ -5932,10 +5930,10 @@
 	icon_state = "wall3";
 	dir = 9
 	},
-/area/space)
+/area/centcom/lobby)
 "pW" = (
 /turf/closed/wall/shuttle/syndie,
-/area/space)
+/area/centcom/lobby)
 "pX" = (
 /turf/open/floor/plating/asteroid/snow/temperatre,
 /area/syndicate_mothership)
@@ -6007,7 +6005,7 @@
 	icon_state = "wall3";
 	dir = 5
 	},
-/area/space)
+/area/centcom/lobby)
 "qi" = (
 /obj/machinery/chem_dispenser,
 /turf/open/floor/plasteel/neutral{
@@ -8636,12 +8634,6 @@
 /area/syndicate_mothership)
 "wK" = (
 /obj/structure/chair/office/dark,
-/obj/machinery/button/door{
-	id = "CCturret";
-	name = "Open Turret Shutter";
-	pixel_x = 26;
-	pixel_y = -26
-	},
 /turf/open/floor/plasteel{
 	dir = 10;
 	icon_state = "warning"
@@ -8654,6 +8646,12 @@
 /area/centcom/control)
 "wM" = (
 /obj/structure/chair/office/dark,
+/obj/machinery/button/door{
+	id = "CCturret";
+	name = "Open Turret Shutter";
+	pixel_x = 26;
+	pixel_y = -26
+	},
 /turf/open/floor/plasteel{
 	dir = 6;
 	icon_state = "warning"
@@ -8764,12 +8762,6 @@
 /area/syndicate_mothership)
 "xd" = (
 /obj/structure/table/reinforced,
-/obj/machinery/button/door{
-	id = "CCturret";
-	name = "Open Turret Shutter";
-	pixel_x = 26;
-	pixel_y = -26
-	},
 /turf/open/floor/plasteel,
 /area/centcom/control)
 "xe" = (
@@ -10295,10 +10287,7 @@
 /area/centcom/security)
 "AC" = (
 /obj/structure/table,
-/obj/item/weapon/paper_bin{
-	pixel_x = -3;
-	pixel_y = 7
-	},
+/obj/item/weapon/paper_bin,
 /obj/item/weapon/pen,
 /turf/open/floor/plasteel/darkvault{
 	dir = 8
@@ -10355,8 +10344,10 @@
 	},
 /area/shuttle/escape)
 "AL" = (
-/obj/structure/chair/comfy/shuttle{
-	dir = 8
+/obj/machinery/shower{
+	dir = 8;
+	icon_state = "shower";
+	name = "emergency shower"
 	},
 /turf/open/floor/plasteel,
 /area/shuttle/escape)
@@ -11018,18 +11009,14 @@
 	},
 /area/shuttle/escape)
 "CF" = (
-/obj/structure/sink{
-	icon_state = "sink";
-	dir = 8;
-	pixel_x = -12;
-	pixel_y = 2
+/obj/structure/curtain/medical,
+/obj/machinery/shower{
+	dir = 4;
+	icon_state = "shower";
+	pixel_x = 6
 	},
-/obj/structure/mirror{
-	pixel_x = -28
-	},
-/turf/open/floor/plasteel/neutral{
-	dir = 1;
-	icon_state = "whiteblue"
+/turf/open/floor/plasteel{
+	icon_state = "freezerfloor"
 	},
 /area/shuttle/escape)
 "CG" = (
@@ -11042,10 +11029,7 @@
 	req_access_txt = "0";
 	use_power = 0
 	},
-/turf/open/floor/plasteel/neutral{
-	dir = 1;
-	icon_state = "whiteblue"
-	},
+/turf/open/floor/plasteel/whiteblue,
 /area/shuttle/escape)
 "CH" = (
 /obj/structure/table,
@@ -11067,10 +11051,7 @@
 /obj/machinery/status_display{
 	pixel_y = 31
 	},
-/turf/open/floor/plasteel/neutral{
-	dir = 9;
-	icon_state = "whiteblue"
-	},
+/turf/open/floor/plasteel/whiteblue,
 /area/shuttle/escape)
 "CI" = (
 /obj/structure/shuttle/engine/propulsion{
@@ -11211,12 +11192,11 @@
 	},
 /area/shuttle/escape)
 "Dc" = (
-/obj/machinery/sleeper{
-	icon_state = "sleeper-open";
+/obj/structure/chair/comfy/shuttle{
 	dir = 8
 	},
 /turf/open/floor/plasteel/neutral{
-	dir = 4;
+	dir = 5;
 	icon_state = "whiteblue"
 	},
 /area/shuttle/escape)
@@ -11480,10 +11460,8 @@
 	},
 /area/shuttle/transport)
 "DG" = (
-/turf/closed/indestructible/fakeglass{
-	icon_state = "fakewindows";
-	dir = 8
-	},
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
 /area/centcom/ferry)
 "DH" = (
 /turf/closed/indestructible/fakeglass{
@@ -11572,10 +11550,12 @@
 /turf/open/floor/plasteel/neutral/corner,
 /area/shuttle/escape)
 "DS" = (
-/obj/structure/chair/comfy/shuttle{
+/obj/machinery/sleeper{
+	icon_state = "sleeper-open";
 	dir = 4
 	},
 /turf/open/floor/plasteel/neutral{
+	dir = 10;
 	icon_state = "whiteblue"
 	},
 /area/shuttle/escape)
@@ -11591,8 +11571,7 @@
 	},
 /area/shuttle/escape)
 "DU" = (
-/obj/structure/table,
-/obj/item/weapon/defibrillator/loaded,
+/obj/machinery/vending/medical,
 /turf/open/floor/plasteel/neutral{
 	dir = 6;
 	icon_state = "whiteblue"
@@ -12434,7 +12413,7 @@
 	icon_state = "wall3";
 	dir = 6
 	},
-/area/space)
+/area/centcom/lobby)
 "FW" = (
 /obj/structure/chair/comfy/shuttle{
 	dir = 4
@@ -12488,6 +12467,12 @@
 	},
 /area/shuttle/escape)
 "Gd" = (
+/obj/structure/sink{
+	dir = 4;
+	icon_state = "sink";
+	pixel_x = 11;
+	pixel_y = 0
+	},
 /turf/open/floor/plasteel{
 	dir = 6;
 	icon_state = "whitepurple"
@@ -13095,10 +13080,7 @@
 /area/centcom/lobby)
 "HE" = (
 /obj/structure/table/wood,
-/obj/item/weapon/paper_bin{
-	pixel_x = -3;
-	pixel_y = 7
-	},
+/obj/item/weapon/paper_bin,
 /obj/item/weapon/pen,
 /turf/open/floor/wood,
 /area/centcom/lobby)
@@ -13140,10 +13122,6 @@
 /turf/open/floor/plating,
 /area/shuttle/NTcruiser)
 "HK" = (
-/obj/structure/window/reinforced{
-	dir = 1;
-	layer = 2.9
-	},
 /turf/open/floor/plating,
 /area/shuttle/NTcruiser)
 "HL" = (
@@ -13522,16 +13500,9 @@
 	},
 /area/shuttle/escape)
 "IH" = (
-/turf/open/floor{
-	dir = 6;
-	icon = 'icons/turf/floors.dmi';
-	icon_state = "plating"
-	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/turf/closed/wall/shuttle/smooth,
-/area/shuttle/NTcruiser)
+/obj/machinery/porta_turret/heavy/central_command,
+/turf/open/floor/plating/airless,
+/area/centcom/lobby)
 "II" = (
 /obj/machinery/vending/tool{
 	req_access_txt = "101"
@@ -13904,10 +13875,7 @@
 /area/centcom/lobby)
 "JO" = (
 /obj/structure/table,
-/obj/item/weapon/paper_bin{
-	pixel_x = -3;
-	pixel_y = 7
-	},
+/obj/item/weapon/paper_bin,
 /obj/item/weapon/pen,
 /obj/machinery/button/door{
 	id = "Emergency_Shuttle_Shutters";
@@ -14286,12 +14254,11 @@
 	},
 /area/shuttle/NTcruiser)
 "KI" = (
-/turf/closed/indestructible/fakeglass{
-	tag = "icon-fakewindows (SOUTHEAST)";
-	icon_state = "fakewindows";
-	dir = 6
+/turf/open/floor/plasteel/neutral{
+	dir = 9;
+	icon_state = "whiteblue"
 	},
-/area/centcom/ferry)
+/area/shuttle/escape)
 "KJ" = (
 /turf/open/floor/plasteel/darkred/side{
 	dir = 8
@@ -15169,24 +15136,21 @@
 	},
 /area/tdome/tdomeobserve)
 "MF" = (
-/obj/machinery/porta_turret/heavy{
-	scan_range = 15
+/turf/open/floor/plasteel/neutral{
+	dir = 1;
+	icon_state = "whiteblue"
 	},
-/obj/structure/window/reinforced,
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/turf/open/floor/plating,
-/area/shuttle/NTcruiser)
+/area/shuttle/escape)
 "MG" = (
-/turf/open/floor{
-	dir = 6;
-	icon = 'icons/turf/floors.dmi';
-	icon_state = "plating"
+/obj/machinery/sleeper{
+	icon_state = "sleeper-open";
+	dir = 4
 	},
-/obj/structure/window/reinforced,
-/turf/closed/wall/shuttle/smooth,
-/area/shuttle/NTcruiser)
+/turf/open/floor/plasteel/neutral{
+	dir = 8;
+	icon_state = "whiteblue"
+	},
+/area/shuttle/escape)
 "MH" = (
 /obj/item/weapon/storage/box/gloves{
 	pixel_x = 3;
@@ -15475,9 +15439,14 @@
 /turf/open/floor/engine,
 /area/abductor_ship)
 "Nt" = (
-/obj/structure/window/reinforced,
-/turf/open/floor/plating,
-/area/shuttle/NTcruiser)
+/obj/structure/chair/comfy/shuttle{
+	dir = 8
+	},
+/turf/open/floor/plasteel/neutral{
+	dir = 4;
+	icon_state = "whiteblue"
+	},
+/area/shuttle/escape)
 "Nu" = (
 /turf/open/floor/plating,
 /turf/closed/wall/shuttle/smooth,
@@ -22977,8 +22946,8 @@ iB
 iB
 nb
 nc
-nc
-nc
+nP
+nP
 kT
 nc
 nc
@@ -23234,8 +23203,8 @@ iB
 iB
 kb
 nd
-nf
-nc
+nx
+nP
 ko
 nP
 nP
@@ -23491,8 +23460,8 @@ iB
 iB
 kc
 nc
-nc
-nc
+nP
+nP
 kT
 nc
 nc
@@ -26111,7 +26080,7 @@ sW
 tx
 so
 sF
-uJ
+uI
 so
 vF
 qF
@@ -32314,15 +32283,15 @@ Ce
 Ce
 Ce
 Cc
-HJ
-IH
+Nh
+HN
 JV
 KX
 LA
 LQ
 JV
-IH
-MF
+HN
+Nh
 Gk
 Ce
 Ce
@@ -32571,7 +32540,7 @@ Ce
 Ce
 Ce
 Cc
-HL
+HN
 JV
 KA
 KY
@@ -32579,7 +32548,7 @@ LB
 LR
 Mj
 JV
-MG
+HN
 Gk
 Ce
 Ce
@@ -34882,8 +34851,8 @@ Gk
 Ce
 Ce
 Cc
-HJ
-IH
+Nh
+HN
 HM
 HM
 HM
@@ -35139,7 +35108,7 @@ Gk
 Ce
 Ce
 Cc
-HL
+HN
 HM
 Js
 Ka
@@ -36680,7 +36649,7 @@ CK
 Gk
 Ce
 Cc
-HJ
+Nh
 HM
 IN
 Jw
@@ -36694,7 +36663,7 @@ Mx
 LE
 MX
 HM
-MF
+Nh
 Gk
 Ba
 aa
@@ -36951,7 +36920,7 @@ MB
 MK
 MY
 HM
-Nt
+HK
 Gk
 Ba
 aa
@@ -37194,7 +37163,7 @@ Gk
 Ce
 Ce
 Cc
-HL
+HN
 HM
 HM
 HM
@@ -37208,7 +37177,7 @@ HM
 HM
 HM
 HM
-MG
+HN
 Gk
 Ba
 aa
@@ -37974,7 +37943,7 @@ DG
 Lo
 Lo
 Lo
-IQ
+DG
 Di
 Di
 Di
@@ -38214,20 +38183,20 @@ Ba
 Ba
 Ba
 Ba
-DH
+DG
 DZ
-EP
-Fz
-Fz
-Fz
-Fz
-Fz
-Fz
-Fz
-Fz
-Fz
-Fz
-KI
+DG
+DG
+DG
+DG
+DG
+DG
+DG
+DG
+DG
+DG
+DG
+DG
 Lp
 Ea
 DI
@@ -59303,10 +59272,10 @@ BI
 BI
 BI
 BI
-aa
-aa
-aa
-aa
+BI
+BI
+BI
+BI
 aa
 aa
 aa
@@ -59535,9 +59504,9 @@ BI
 aa
 aa
 aa
-aa
-aa
-aa
+AE
+AE
+AE
 aa
 AE
 AE
@@ -59563,7 +59532,7 @@ AE
 aa
 aa
 aa
-aa
+BI
 aa
 aa
 aa
@@ -59798,7 +59767,7 @@ aa
 aa
 aa
 aa
-AE
+aa
 Cy
 CW
 Cy
@@ -59820,7 +59789,7 @@ AE
 AE
 aa
 aa
-aa
+BI
 aa
 aa
 aa
@@ -60077,7 +60046,7 @@ AE
 aa
 aa
 aa
-aa
+BI
 aa
 aa
 aa
@@ -60334,7 +60303,7 @@ AE
 AE
 aa
 aa
-aa
+BI
 aa
 aa
 aa
@@ -60591,7 +60560,7 @@ AE
 AE
 aa
 aa
-aa
+BI
 aa
 aa
 aa
@@ -60848,7 +60817,7 @@ aa
 AE
 AE
 AE
-aa
+BI
 aa
 aa
 aa
@@ -61105,7 +61074,7 @@ aa
 AE
 aa
 aa
-aa
+BI
 aa
 aa
 aa
@@ -61362,7 +61331,7 @@ aa
 AE
 aa
 aa
-aa
+BI
 aa
 aa
 aa
@@ -61619,7 +61588,7 @@ aa
 AE
 AE
 AE
-aa
+BI
 aa
 aa
 aa
@@ -61876,7 +61845,7 @@ aa
 AE
 aa
 aa
-aa
+BI
 aa
 aa
 aa
@@ -62112,10 +62081,10 @@ zo
 AK
 zK
 BU
-CE
-Da
+Fp
 zK
-DR
+zp
+CE
 EF
 Fp
 zK
@@ -62133,7 +62102,7 @@ AE
 AE
 aa
 aa
-aa
+BI
 aa
 aa
 aa
@@ -62370,8 +62339,8 @@ AL
 zK
 yT
 yT
-yT
 Dz
+AM
 CC
 yT
 yT
@@ -62390,7 +62359,7 @@ AE
 AE
 AE
 AE
-aa
+BI
 aa
 aa
 aa
@@ -62627,8 +62596,8 @@ AM
 Bl
 yT
 CF
-Db
-Db
+KI
+MG
 DS
 yT
 Fq
@@ -62646,8 +62615,8 @@ aa
 AE
 aa
 aa
-aa
-aa
+IH
+BI
 aa
 aa
 aa
@@ -62884,7 +62853,7 @@ zK
 zK
 yT
 CG
-Db
+MF
 Db
 DT
 yT
@@ -62904,7 +62873,7 @@ AE
 aa
 aa
 aa
-aa
+BI
 aa
 aa
 aa
@@ -63142,7 +63111,7 @@ AN
 yT
 CH
 Dc
-Dc
+Nt
 DU
 yT
 Fs
@@ -63161,7 +63130,7 @@ AE
 aa
 aa
 aa
-aa
+BI
 aa
 aa
 aa
@@ -63418,7 +63387,7 @@ AE
 aa
 aa
 aa
-aa
+BI
 aa
 aa
 aa
@@ -63675,7 +63644,7 @@ AE
 aa
 aa
 aa
-aa
+BI
 aa
 aa
 aa
@@ -63932,7 +63901,7 @@ AE
 aa
 aa
 aa
-aa
+BI
 aa
 aa
 aa
@@ -64169,7 +64138,7 @@ aa
 aa
 aa
 aa
-aa
+AE
 aa
 aa
 aa
@@ -64178,9 +64147,9 @@ AE
 aa
 aa
 aa
-aa
-aa
-aa
+AE
+AE
+AE
 aa
 aa
 aa
@@ -64189,7 +64158,7 @@ AE
 aa
 aa
 aa
-aa
+BI
 aa
 aa
 aa
@@ -64420,19 +64389,22 @@ aa
 aa
 aa
 aa
+AE
+AE
+AE
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+IH
+AE
+AE
+AE
 aa
 Fv
 AE
 AE
 aa
+AE
+IH
+AE
 aa
 aa
 aa
@@ -64443,10 +64415,7 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
+BI
 aa
 aa
 aa
@@ -64690,20 +64659,20 @@ BI
 BI
 BI
 BI
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+BI
+BI
+BI
+BI
+BI
+BI
+BI
+BI
+BI
+BI
+BI
+BI
+BI
+BI
 aa
 aa
 aa

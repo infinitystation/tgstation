@@ -135,6 +135,12 @@
 					icon_state = "morgue4" // Cloneable
 					break
 
+/obj/structure/bodycontainer/morgue/south
+	name = "morgue"
+	desc = "Used to keep bodies in until someone fetches them."
+	icon_state = "morgue1"
+	opendir = SOUTH
+
 /*
  * Crematorium
  */

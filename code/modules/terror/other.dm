@@ -523,7 +523,7 @@
 
 /obj/structure/alien_structure
 	name = "alien machinery"
-	desc = "You does not know what the fuck is that..."
+	desc = "You don't know what the fuck is that..."
 	icon_state = "computer1"
 	icon = 'icons/obj/infinity_alien.dmi'
 

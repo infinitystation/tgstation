@@ -745,13 +745,14 @@
 /turf/open/floor/plasteel/terror/necro/bar,
 /area/mine/cafeteria)
 "cx" = (
+/obj/effect/portal,
+/turf/closed/mineral/random/high_chance/volcanic,
+/area/lavaland/surface/outdoors)
+"cy" = (
+/obj/structure/chair/comfy/sofa/corner/right/brown,
 /obj/effect/landmark/start{
 	name = "Shaft Miner"
 	},
-/turf/open/floor/plasteel/terror/necro/bar,
-/area/mine/cafeteria)
-"cy" = (
-/obj/structure/chair/comfy/sofa/corner/right/brown,
 /turf/open/floor/plasteel/terror/necro/bar,
 /area/mine/cafeteria)
 "cz" = (
@@ -772,6 +773,9 @@
 /obj/structure/cable{
 	tag = "icon-1-2";
 	icon_state = "1-2"
+	},
+/obj/effect/landmark/start{
+	name = "Shaft Miner"
 	},
 /turf/open/floor/plasteel/terror/necro/bar,
 /area/mine/cafeteria)
@@ -933,6 +937,9 @@
 /obj/machinery/light{
 	icon_state = "tube1";
 	dir = 4
+	},
+/obj/effect/landmark/start{
+	name = "Shaft Miner"
 	},
 /turf/open/floor/plasteel/terror/necro/bar,
 /area/mine/cafeteria)
@@ -1262,11 +1269,12 @@
 /turf/open/floor/plating/lavaland,
 /area/mine/lobby)
 "dy" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 10
+/obj/structure/chair/stool/oneleg,
+/obj/effect/landmark/start{
+	name = "Shaft Miner"
 	},
-/turf/open/floor/plating/lavaland,
-/area/mine/lobby)
+/turf/open/floor/plasteel/terror/necro/bar,
+/area/mine/cafeteria)
 "dz" = (
 /obj/machinery/light/small,
 /obj/structure/rack,
@@ -1296,8 +1304,9 @@
 	},
 /area/mine/lobby)
 "dD" = (
+/obj/structure/holosign/barrier/engineering,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
-/area/mine/cafeteria)
+/area/lavaland/surface/outdoors)
 "dE" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/machinery/camera{
@@ -1414,6 +1423,9 @@
 	dir = 4
 	},
 /obj/structure/chair/stool/oneleg,
+/obj/effect/landmark/start{
+	name = "Shaft Miner"
+	},
 /turf/open/floor/plasteel/terror/necro/bar,
 /area/mine/cafeteria)
 "dQ" = (
@@ -15331,7 +15343,7 @@ eO
 fp
 fR
 eO
-at
+dD
 at
 aK
 aK
@@ -16089,7 +16101,7 @@ aK
 aK
 aK
 cp
-cx
+cM
 cM
 db
 co
@@ -17377,7 +17389,7 @@ cs
 cC
 cR
 cM
-dt
+dy
 dt
 dP
 eb
@@ -32589,7 +32601,7 @@ an
 an
 an
 an
-an
+cx
 an
 an
 at
@@ -32846,7 +32858,7 @@ an
 an
 an
 an
-an
+cx
 an
 at
 at
@@ -33103,7 +33115,7 @@ at
 an
 an
 an
-an
+cx
 at
 at
 at
@@ -64625,7 +64637,7 @@ aJ
 aJ
 aJ
 aJ
-ck
+aJ
 aJ
 aJ
 aJ
@@ -64882,7 +64894,7 @@ aJ
 aJ
 aJ
 aJ
-ck
+aJ
 aJ
 aJ
 aJ

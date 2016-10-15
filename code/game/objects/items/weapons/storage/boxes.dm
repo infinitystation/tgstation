@@ -103,6 +103,10 @@
 	..()
 	new /obj/item/device/radio/off(src)
 
+/obj/item/weapon/storage/box/security/centcom
+	desc = "—тандартный набор снаряжения дл€ офицера охраны ÷ ."
+	icon_state = "implant"
+
 /obj/item/weapon/storage/box/security/centcom/New()
 	..()
 	new /obj/item/stack/medical/bruise_pack(src)
