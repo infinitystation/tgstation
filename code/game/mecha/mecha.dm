@@ -256,6 +256,9 @@
 		user << "It's equipped with:"
 		for(var/obj/item/mecha_parts/mecha_equipment/ME in equipment)
 			user << "\icon[ME] [ME]"
+	if(isobserver(user))
+		if(check_rights(1))
+			user << "[occupant] сидит в мехе. (<a href='?_src_=holder;adminplayerobservefollow=\ref[occupant]'>FLW</A>) (<A HREF='?_src_=holder;adminplayeropts=\ref[occupant]'>PP</A>) (<a href='?_src_=holder;freezemecha=\ref[src]'>Freeze</A>)"
 
 //processing internal damage, temperature, air regulation, alert updates, lights power use.
 /obj/mecha/process()
@@ -390,6 +393,8 @@
 /obj/mecha/proc/click_action(atom/target,mob/user,params)
 	if(!occupant || occupant != user )
 		return
+	if(frozen)
+		return
 	if(!locate(/turf) in list(target,target.loc)) // Prevents inventory from being drilled
 		return
 	if(phasing)
@@ -460,6 +465,8 @@
 /obj/mecha/relaymove(mob/user,direction)
 	if(!direction)
 		return
+	if(frozen)
+		return
 	if(user != occupant) //While not "realistic", this piece is player friendly.
 		user.forceMove(get_turf(src))
 		user << "<span class='notice'>You climb out from [src].</span>"
@@ -476,6 +483,8 @@
 
 /obj/mecha/proc/domove(direction)
 	if(!can_move)
+		return 0
+	if(frozen)
 		return 0
 	if(!Process_Spacemove(direction))
 		return 0
@@ -897,6 +906,8 @@
 
 /obj/mecha/proc/go_out(var/forced, var/atom/newloc = loc)
 	if(!occupant)
+		return
+	if(frozen && !forced)
 		return
 	var/atom/movable/mob_container
 	occupant.clear_alert("charge")

@@ -1659,6 +1659,14 @@
 		var/mob/dead/observer/A = C.mob
 		A.ManualFollow(AM)
 
+	else if(href_list["freezemecha"])
+		if(!isobserver(usr) && !check_rights(R_ADMIN))
+			return
+
+		var/obj/mecha/M = locate(href_list["freezemecha"])
+
+		usr.client.freezemecha(M)
+
 	else if(href_list["adminplayerobservecoodjump"])
 		if(!isobserver(usr) && !check_rights(R_ADMIN))
 			return
