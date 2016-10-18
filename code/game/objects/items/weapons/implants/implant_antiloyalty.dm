@@ -17,21 +17,23 @@
 	return dat
 
 
-/obj/item/weapon/implant/antiloyalty/implant(mob/target)
+/obj/item/weapon/implant/antiloyalty/implant(mob/target, mob/user, silent = 0)
 	if(..())
-		if(isloyal(target))
-			target.visible_message("<span class='warning'>[target] seems to resist the implant!</span>", "<span class='warning'>Вы ненадолго чувствуете свободу от НТ и очень сильную боль в голове!</span>")
+		if(target.isloyal())
+			if(!silent)
+				target.visible_message("<span class='warning'>[target] seems to resist the implant!</span>", "<span class='warning'>Вы ненадолго чувствуете свободу от НТ и очень сильную боль в голове!</span>")
 			imp_in = null
 			qdel(src)
 			return -1
 		target.mind.readd_antag_light()
-		target << "<span class='notice'>You feel a surge of freedom from NT.</span>"
+		if(!silent)
+			target << "<span class='notice'>You feel a surge of freedom from NT.</span>"
 		return 1
 	return 0
 
-/obj/item/weapon/implant/antiloyalty/removed(mob/target)
+/obj/item/weapon/implant/antiloyalty/removed(mob/target, silent = 0, special = 0)
 	if(..())
-		if(target.stat != DEAD)
+		if(target.stat != DEAD && !silent)
 			target << "<span class='boldnotice'>Вы чувствуете что-то странное св&#255;занное с НТ</span>"
 		return 1
 	return 0
