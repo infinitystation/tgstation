@@ -387,14 +387,14 @@
 	R.fields["age"] = subject.age
 	R.fields["visual_age"] = subject.visual_age
 	//Add an implant if needed
-	var/obj/item/weapon/implant/health/imp = locate(/obj/item/weapon/implant/health, subject)
+	var/obj/item/weapon/implant/health/imp
+	for(var/obj/item/weapon/implant/health/HI in subject.implants)
+		imp = HI
+		break
 	if(!imp)
 		imp = new /obj/item/weapon/implant/health(subject)
-		imp.implanted = subject
-		R.fields["imp"] = "\ref[imp]"
-	//Update it if needed
-	else
-		R.fields["imp"] = "\ref[imp]"
+		imp.implant(subject)
+	R.fields["imp"] = "\ref[imp]"
 
 	if (!isnull(subject.mind)) //Save that mind so traitors can continue traitoring after cloning.
 		R.fields["mind"] = "\ref[subject.mind]"

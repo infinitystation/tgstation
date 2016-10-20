@@ -62,7 +62,7 @@ Also, you never added distance checking after target is selected. I've went ahea
 	var/mob/caster = user//The wizard/whomever doing the body transferring.
 
 	//HACKY CODE
-	if(isloyal(victim))
+	if(victim.isloyal())
 		if(!(caster.mind in (ticker.mode.changelings | ticker.mode.abductors | ticker.mode.cult)))
 			caster.mind.remove_all_antag_light()
 

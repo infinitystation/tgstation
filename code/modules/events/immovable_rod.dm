@@ -65,7 +65,7 @@ In my current plan for it, 'solid' will be defined as anything with density == 1
 		qdel(src)
 	return ..()
 
-/obj/effect/immovablerod/ex_act(test)
+/obj/effect/immovablerod/ex_act(severity, target)
 	return 0
 
 /obj/effect/immovablerod/Bump(atom/clong)
