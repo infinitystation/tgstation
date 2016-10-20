@@ -45,3 +45,7 @@ endmap
 map efficiencystation
 	friendlyname dexofan's Efficiency Station
 endmap
+
+map pubbystation
+	friendlyname Pubby Station
+endmap

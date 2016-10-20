@@ -64,7 +64,7 @@
 		if(ANTIDOTE_NEEDED)
 			SSshuttle.centcom_message += "Приближаются образцы вируса."
 		if(PIZZA_DELIVERY)
-			SSshuttle.centcom_message += "Доставка пиццы для [world.name]."
+			SSshuttle.centcom_message += "Доставка пиццы для [station_name()]."
 	SSshuttle.centcom_message = sanitize_a0(SSshuttle.centcom_message)
 
 /datum/round_event/shuttle_loan/tick()
