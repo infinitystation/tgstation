@@ -140,7 +140,6 @@
 "aw" = (
 /obj/structure/bed/double/right,
 /obj/machinery/newscaster{
-	hitstaken = 1;
 	pixel_x = 0;
 	pixel_y = 29
 	},
