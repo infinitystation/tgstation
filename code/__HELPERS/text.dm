@@ -19,7 +19,7 @@
 	return copytext(sqltext, 2, lentext(sqltext));//Quote() adds quotes around input, we already do that
 
 /proc/sanitizeSQL_a0(t as text)
-	t = replacetext(t, "ÿ", "&#255;")
+	t = replacetext(t, "ÿ", "&#1103;")
 	var/sqltext = dbcon.Quote(t);
 	return copytext(sqltext, 2, lentext(sqltext)); //Quote() adds quotes around input, we already do that and fix "ÿ"
 
