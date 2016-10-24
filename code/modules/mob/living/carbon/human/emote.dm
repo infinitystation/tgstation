@@ -358,7 +358,7 @@
 
 		if("wag","wags")
 			if(dna && dna.species && (("tail_lizard" in dna.species.mutant_bodyparts) || ((dna.features["tail_human"] != "None") && !("waggingtail_human" in dna.species.mutant_bodyparts))))
-				message = "<B>[src]</B> wags [p_their()] tail."
+				message = "<B>[src]</B> вил&#255;ет своим хвостом."
 				startTailWag()
 			else if(dna && dna.species && (("waggingtail_lizard" in dna.species.mutant_bodyparts) || ("waggingtail_human" in dna.species.mutant_bodyparts)))
 				endTailWag()
