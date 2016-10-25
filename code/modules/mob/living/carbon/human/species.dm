@@ -789,15 +789,15 @@
 		H.metabolism_efficiency = 1
 	else if(H.nutrition > NUTRITION_LEVEL_FED && H.satiety > 80)
 		if(H.metabolism_efficiency != 1.25 && (H.dna && H.dna.species && !(NOHUNGER in H.dna.species.specflags)))
-			H << "<span class='notice'>Вы чувствуете себЯ энергичным.</span>"
+			H << "<span class='notice'>yсеб&#255; энергичным.</span>"
 			H.metabolism_efficiency = 1.25
 	else if(H.nutrition < NUTRITION_LEVEL_STARVING + 50)
 		if(H.metabolism_efficiency != 0.8)
-			H << "<span class='notice'>Вы чувствуете себЯ вЯлым.</span>"
+			H << "<span class='notice'>Вы чувствуете себ&#255; в&#255;лым.</span>"
 		H.metabolism_efficiency = 0.8
 	else
 		if(H.metabolism_efficiency == 1.25)
-			H << "<span class='notice'>Вы больше не чувствуете себЯ энергичным.</span>"
+			H << "<span class='notice'>Вы больше не чувствуете себ&#255; энергичным.</span>"
 		H.metabolism_efficiency = 1
 
 	switch(H.nutrition)
@@ -1237,9 +1237,9 @@
 	// called when hit by a projectile
 	switch(proj_type)
 		if(/obj/item/projectile/energy/floramut) // overwritten by plants/pods
-			H.show_message("<span class='notice'>Радиационный пучок безвредно рассеиваетсЯ через ваше тело.</span>")
+			H.show_message("<span class='notice'>Радиационный пучок безвредно рассеиваетс&#255; через ваше тело.</span>")
 		if(/obj/item/projectile/energy/florayield)
-			H.show_message("<span class='notice'>Радиационный пучок безвредно рассеиваетсЯ через ваше тело.</span>")
+			H.show_message("<span class='notice'>Радиационный пучок безвредно рассеиваетс&#255; через ваше тело.</span>")
 	return
 
 /////////////

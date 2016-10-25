@@ -35,7 +35,7 @@ Bonus
 		var/mob/living/M = A.affected_mob
 		switch(A.stage)
 			if(1, 2, 3, 4)
-				M << "<span class='warning'>[pick("Тебе тошнит.", "Ты чувствуешь, что сейчас тебЯ вырвет!")]</span>"
+				M << "<span class='warning'>[pick("Тебе тошнит.", "Ты чувствуешь, что сейчас теб&#255; вырвет!")]</span>"
 			else
 				Vomit(M)
 
@@ -45,7 +45,7 @@ Bonus
 	M.vomit(20)
 
 	M.visible_message("<span class='warning'>[M] блюёт на пол!</span>", \
-					"<span class='userdanger'>ТебЯ вырвало на пол!</span>")
+					"<span class='userdanger'>Теб&#255; вырвало на пол!</span>")
 
 	M.nutrition -= 20
 	M.adjustToxLoss(-3)
