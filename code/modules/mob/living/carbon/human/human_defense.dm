@@ -279,7 +279,7 @@
 			affecting = get_bodypart("chest")
 		var/armor = run_armor_check(affecting, "melee", armour_penetration = M.armour_penetration)
 		apply_damage(damage, M.melee_damage_type, affecting, armor)
-		damage_clothes(damage, BRUTE, "melee", affecting.body_zone)
+		damage_clothes(damage, M.melee_damage_type, "melee", affecting.body_zone)
 
 
 /mob/living/carbon/human/attack_slime(mob/living/simple_animal/slime/M)
@@ -332,7 +332,7 @@
 			updatehealth()
 
 		visible_message("<span class='danger'>[M.name] has hit [src]!</span>", \
-								"<span class='userdanger'>[M.name] has hit [src]!</span>", null, 2, M.occupant)
+								"<span class='userdanger'>[M.name] has hit [src]!</span>", null, COMBAT_MESSAGE_RANGE, M.occupant)
 		add_logs(M.occupant, src, "attacked", M, "(INTENT: [uppertext(M.occupant.a_intent)]) (DAMTYPE: [uppertext(M.damtype)])")
 
 	else
@@ -406,7 +406,7 @@
 
 
 //Added a safety check in case you want to shock a human mob directly through electrocute_act.
-/mob/living/carbon/human/electrocute_act(shock_damage, obj/source, siemens_coeff = 1, safety = 0, override = 0, tesla_shock = 0)
+/mob/living/carbon/human/electrocute_act(shock_damage, obj/source, siemens_coeff = 1, safety = 0, override = 0, tesla_shock = 0, illusion = 0)
 	if(tesla_shock)
 		var/total_coeff = 1
 		if(gloves)
@@ -424,12 +424,12 @@
 			var/obj/item/clothing/gloves/G = gloves
 			gloves_siemens_coeff = G.siemens_coefficient
 		siemens_coeff = gloves_siemens_coeff
-	if(heart_attack)
+	if(heart_attack && !illusion)
 		if(shock_damage * siemens_coeff >= 1 && prob(25))
 			heart_attack = 0
 			if(stat == CONSCIOUS)
 				src << "<span class='notice'>You feel your heart beating again!</span>"
-	. = ..(shock_damage,source,siemens_coeff,safety,override,tesla_shock)
+	. = ..(shock_damage,source,siemens_coeff,safety,override,tesla_shock, illusion)
 	if(.)
 		electrocution_animation(40)
 
