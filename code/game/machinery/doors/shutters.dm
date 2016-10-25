@@ -27,3 +27,11 @@
 /obj/machinery/door/poddoor/shutters/close(ignorepower = 0)
 	..()
 	layer = CLOSED_DOOR_LAYER
+
+/obj/machinery/door/poddoor/shutters/corner
+	icon = 'icons/obj/doors/shutters_corner.dmi'
+
+/obj/machinery/door/poddoor/shutters/corner/opeopen
+	icon_state = "open"
+	density = 0
+	opacity = 0
