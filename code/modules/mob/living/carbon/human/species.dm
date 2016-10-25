@@ -789,15 +789,15 @@
 		H.metabolism_efficiency = 1
 	else if(H.nutrition > NUTRITION_LEVEL_FED && H.satiety > 80)
 		if(H.metabolism_efficiency != 1.25 && (H.dna && H.dna.species && !(NOHUNGER in H.dna.species.specflags)))
-			H << "<span class='notice'>¬ы чувствуете себя энергичным.</span>"
+			H << "<span class='notice'>yсеб&#255; энергичным.</span>"
 			H.metabolism_efficiency = 1.25
 	else if(H.nutrition < NUTRITION_LEVEL_STARVING + 50)
 		if(H.metabolism_efficiency != 0.8)
-			H << "<span class='notice'>¬ы чувствуете себя вялым.</span>"
+			H << "<span class='notice'>¬ы чувствуете себя в&#255;лым.</span>"
 		H.metabolism_efficiency = 0.8
 	else
 		if(H.metabolism_efficiency == 1.25)
-			H << "<span class='notice'>¬ы больше не чувствуете себя энергичным.</span>"
+			H << "<span class='notice'>¬ы больше не чувствуете себ&#255; энергичным.</span>"
 		H.metabolism_efficiency = 1
 
 	switch(H.nutrition)

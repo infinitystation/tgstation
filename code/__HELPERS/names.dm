@@ -56,9 +56,6 @@ var/religion_name = null
 
 	if(config && config.station_name)
 		station_name = config.station_name
-	else
-		station_name = new_station_name()
-
 	return station_name
 
 /proc/new_station_name()

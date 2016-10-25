@@ -56,7 +56,7 @@
 /datum/supply_order/proc/generateManifest(obj/structure/closet/crate/C)
 	var/obj/item/weapon/paper/manifest/P = new(C, id, pack.cost)
 
-	var/station_name = (P.errors & MANIFEST_ERROR_NAME) ? new_station_name() : station_name()
+	var/station_name = (P.errors & MANIFEST_ERROR_NAME) ? station_name() : station_name()
 
 	P.name = "shipping manifest - #[id] ([pack.name])"
 	P.info += "<h2>[command_name()] Shipping Manifest</h2>"

@@ -189,7 +189,6 @@ var/datum/subsystem/vote/SSvote
 					if(!option || mode || !usr.client)
 						break
 					choices.Add(option)
-				world << sound('sound/effects/voted.ogg')
 			else
 				return 0
 		mode = vote_type
