@@ -227,8 +227,8 @@
 
 	if(l_limbs_missing >= 2 && r_limbs_missing == 0)
 		msg += "[t_He] [rus_verb]"
-	else if(l_limbs_missing || r_limbs_missing)
-		msg += "capitalize(t_him) чего-то не хватает...\n"
+//	else if(l_limbs_missing || r_limbs_missing)
+	//	msg += "[capitalize(t_him)] чего-то не хватает..."
 
 	if(temp)
 		if(temp < 30)
