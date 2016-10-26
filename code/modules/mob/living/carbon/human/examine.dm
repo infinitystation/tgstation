@@ -227,8 +227,8 @@
 
 	if(l_limbs_missing >= 2 && r_limbs_missing == 0)
 		msg += "[t_He] [rus_verb]"
-	else if(l_limbs_missing || r_limbs_missing)
-		msg += "capitalize(t_him) чего-то не хватает...\n"
+//	else if(l_limbs_missing || r_limbs_missing)
+	//	msg += "[capitalize(t_him)] чего-то не хватает..."
 
 	if(temp)
 		if(temp < 30)
@@ -315,6 +315,10 @@
 				var/mob/living/carbon/human/interactive/auto = src
 				if(auto.showexaminetext)
 					msg += "<span class='deadsay'>[t_He], видимо, болеет автоматизмом, [t_his] глаза потускнели и [t_his] рот слегка разинут.</span>\n"
+				if(auto.debugexamine)
+					var/dodebug = auto.doing2string(auto.doing)
+					var/interestdebug = auto.interest2string(auto.interest)
+					msg += "<span class='deadsay'>[t_He] [t_is] appears to be [interestdebug] and [dodebug].</span>\n"
 			else if(!key)
 				msg += "<span class='deadsay'>[t_He] страдает кататонией. Стрессы жизни в глубоком космосе доканали [t_his]. Спасение вр&#255;д ли поможет.</span>\n"
 			else if(!client)

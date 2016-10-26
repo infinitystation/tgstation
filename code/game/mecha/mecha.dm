@@ -257,9 +257,11 @@
 		user << "It's equipped with:"
 		for(var/obj/item/mecha_parts/mecha_equipment/ME in equipment)
 			user << "\icon[ME] [ME]"
-	if(isobserver(user))
-		if(check_rights(1))
+	if(check_rights_for(user.client, R_ADMIN))
+		if(occupant)
 			user << "[occupant] сидит в мехе. (<a href='?_src_=holder;adminplayerobservefollow=\ref[occupant]'>FLW</A>) (<A HREF='?_src_=holder;adminplayeropts=\ref[occupant]'>PP</A>) (<a href='?_src_=holder;freezemecha=\ref[src]'>Freeze</A>)"
+		else
+			user << "Внутри меха никого нет."
 
 //processing internal damage, temperature, air regulation, alert updates, lights power use.
 /obj/mecha/process()
