@@ -153,7 +153,7 @@ ALLOW_WEBCLIENT
 FORUMURL http://infinity.smforum.ru/
 
 ## Wiki address
-WIKIURL http://infinity.so
+WIKIURL http://wiki.infinity.so
 
 ##Rules address
 RULESURL http://infinity.smforum.ru/index.php?topic=79.0
