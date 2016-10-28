@@ -18,7 +18,7 @@
 		else
 			speaker = V.source
 	if(client)
-		if(client.prefs.toggles & CHAT_GHOSTEARS && speaker in view(src))
+		if(CHAT_GHOSTEARS && speaker in view(src))
 			message = "<b>(N)</b> [message]"
 	var/link = FOLLOW_LINK(src, speaker)
 	src << "[link] [message]"
