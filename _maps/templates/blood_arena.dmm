@@ -1,0 +1,59 @@
+"a" = (/turf/template_noop,/area/template_noop)
+"b" = (/turf/closed/indestructible/riveted{icon = 'icons/turf/walls/cult_wall.dmi'; icon_state = "cult"},/area/wizard_station{name = "Blood Arena"})
+"c" = (/obj/structure/table/wood,/obj/item/weapon/tome,/turf/open/floor/engine/cult{baseturf = /turf/open/floor/plating/lava/smooth/lava_land_surface; initial_gas_mix = "o2=22;n2=82;TEMP=293.15"},/area/wizard_station{name = "Blood Arena"})
+"d" = (/obj/structure/table/wood,/obj/item/organ/heart,/turf/open/floor/engine/cult{baseturf = /turf/open/floor/plating/lava/smooth/lava_land_surface; initial_gas_mix = "o2=22;n2=82;TEMP=293.15"},/area/wizard_station{name = "Blood Arena"})
+"e" = (/obj/structure/table/wood,/obj/item/weapon/sharpener/cult,/turf/open/floor/engine/cult{baseturf = /turf/open/floor/plating/lava/smooth/lava_land_surface; initial_gas_mix = "o2=22;n2=82;TEMP=293.15"},/area/wizard_station{name = "Blood Arena"})
+"f" = (/obj/structure/destructible/cult/pylon,/turf/open/floor/engine/cult{baseturf = /turf/open/floor/plating/lava/smooth/lava_land_surface; initial_gas_mix = "o2=22;n2=82;TEMP=293.15"},/area/wizard_station{name = "Blood Arena"})
+"g" = (/turf/open/floor/engine/cult{baseturf = /turf/open/floor/plating/lava/smooth/lava_land_surface; initial_gas_mix = "o2=22;n2=82;TEMP=293.15"},/area/wizard_station{name = "Blood Arena"})
+"h" = (/obj/structure/chair/comfy/throne,/turf/open/floor/engine/cult{baseturf = /turf/open/floor/plating/lava/smooth/lava_land_surface; initial_gas_mix = "o2=22;n2=82;TEMP=293.15"},/area/wizard_station{name = "Blood Arena"})
+"i" = (/obj/machinery/door/airlock/cult/glass,/turf/open/floor/engine/cult{baseturf = /turf/open/floor/plating/lava/smooth/lava_land_surface; initial_gas_mix = "o2=22;n2=82;TEMP=293.15"},/area/wizard_station{name = "Blood Arena"})
+"j" = (/obj/structure/emergency_shield/sanguine{max_integrity = 1000; obj_integrity = 1000},/turf/open/floor/engine/cult{baseturf = /turf/open/floor/plating/lava/smooth/lava_land_surface; initial_gas_mix = "o2=22;n2=82;TEMP=293.15"},/area/wizard_station{name = "Blood Arena"})
+"k" = (/turf/open/floor/plating/ashplanet/rocky{baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface; initial_gas_mix = "o2=22;n2=82;TEMP=293.15"},/area/wizard_station{name = "Blood Arena"})
+"l" = (/turf/open/floor/plasteel/stairsnew/wood1{baseturf = /turf/open/floor/plating/ashplanet/wateryrock},/area/wizard_station{name = "Blood Arena"})
+"m" = (/obj/item/weapon/legion_skull,/turf/open/floor/plating/ashplanet/ash{baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface; initial_gas_mix = "o2=22;n2=82;TEMP=293.15"},/area/wizard_station{name = "Blood Arena"})
+"n" = (/turf/open/floor/plating/ashplanet/ash{baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface; initial_gas_mix = "o2=22;n2=82;TEMP=293.15"},/area/wizard_station{name = "Blood Arena"})
+"o" = (/obj/effect/decal/cleanable/blood/old,/turf/open/floor/engine/cult{baseturf = /turf/open/floor/plating/lava/smooth/lava_land_surface; initial_gas_mix = "o2=22;n2=82;TEMP=293.15"},/area/wizard_station{name = "Blood Arena"})
+"p" = (/obj/effect/decal/cleanable/ash/large,/obj/effect/decal/remains/human,/turf/open/floor/plating/ashplanet/ash{baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface; initial_gas_mix = "o2=22;n2=82;TEMP=293.15"},/area/wizard_station{name = "Blood Arena"})
+"q" = (/obj/item/clothing/mask/gas/sechailer/swat,/turf/open/floor/plating/ashplanet/ash{baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface; initial_gas_mix = "o2=22;n2=82;TEMP=293.15"},/area/wizard_station{name = "Blood Arena"})
+"r" = (/obj/item/weapon/card/id/centcom{assignment = "Strike Team Member"; name = "Major Pain (Strike Team Member)"; registered_name = "Major Pain"},/turf/open/floor/engine/cult{baseturf = /turf/open/floor/plating/lava/smooth/lava_land_surface; initial_gas_mix = "o2=22;n2=82;TEMP=293.15"},/area/wizard_station{name = "Blood Arena"})
+"s" = (/obj/effect/decal/cleanable/blood/old,/turf/open/floor/plating/ashplanet/ash{baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface; initial_gas_mix = "o2=22;n2=82;TEMP=293.15"},/area/wizard_station{name = "Blood Arena"})
+"t" = (/obj/effect/decal/cleanable/ash/large,/obj/effect/decal/cleanable/blood/old{pixel_x = 30},/obj/item/ammo_casing/a646/no,/obj/effect/decal/remains/human,/turf/open/floor/engine/cult{baseturf = /turf/open/floor/plating/lava/smooth/lava_land_surface; initial_gas_mix = "o2=22;n2=82;TEMP=293.15"},/area/wizard_station{name = "Blood Arena"})
+"u" = (/obj/item/ammo_casing/a646/no,/turf/open/floor/plating/ashplanet/rocky{baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface; initial_gas_mix = "o2=22;n2=82;TEMP=293.15"},/area/wizard_station{name = "Blood Arena"})
+"v" = (/obj/item/weapon/storage/firstaid,/obj/effect/decal/cleanable/blood/old,/turf/open/floor/plating/ashplanet/ash{baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface; initial_gas_mix = "o2=22;n2=82;TEMP=293.15"},/area/wizard_station{name = "Blood Arena"})
+"w" = (/obj/effect/decal/cleanable/ash/large,/obj/item/weapon/extinguisher/mini,/turf/open/floor/plating/ashplanet/ash{baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface; initial_gas_mix = "o2=22;n2=82;TEMP=293.15"},/area/wizard_station{name = "Blood Arena"})
+"x" = (/obj/item/bodypart/l_leg,/turf/open/floor/plating/ashplanet/ash{baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface; initial_gas_mix = "o2=22;n2=82;TEMP=293.15"},/area/wizard_station{name = "Blood Arena"})
+"y" = (/obj/item/ammo_casing/a646/no,/turf/open/floor/plating/ashplanet/ash{baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface; initial_gas_mix = "o2=22;n2=82;TEMP=293.15"},/area/wizard_station{name = "Blood Arena"})
+"z" = (/obj/effect/decal/cleanable/blood/tracks,/turf/open/floor/plating/ashplanet/ash{baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface; initial_gas_mix = "o2=22;n2=82;TEMP=293.15"},/area/wizard_station{name = "Blood Arena"})
+"A" = (/obj/item/bodypart/r_arm,/turf/open/floor/plating/ashplanet/ash{baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface; initial_gas_mix = "o2=22;n2=82;TEMP=293.15"},/area/wizard_station{name = "Blood Arena"})
+"B" = (/obj/structure/fans/tiny/invisible,/turf/open/floor/plating/ashplanet/rocky{baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface; initial_gas_mix = "o2=22;n2=82;TEMP=293.15"},/area/wizard_station{name = "Blood Arena"})
+"C" = (/obj/effect/decal/cleanable/blood/tracks,/obj/effect/decal/cleanable/ash/large,/obj/structure/fans/tiny/invisible,/turf/open/floor/plating/ashplanet/ash{baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface; initial_gas_mix = "o2=22;n2=82;TEMP=293.15"},/area/wizard_station{name = "Blood Arena"})
+"D" = (/obj/structure/fans/tiny/invisible,/turf/open/floor/plating/ashplanet/ash{baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface; initial_gas_mix = "o2=22;n2=82;TEMP=293.15"},/area/wizard_station{name = "Blood Arena"})
+"E" = (/obj/item/clothing/head/helmet/space/hardsuit/deathsquad,/obj/structure/fans/tiny/invisible,/turf/open/floor/plating/ashplanet/rocky{baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface; initial_gas_mix = "o2=22;n2=82;TEMP=293.15"},/area/wizard_station{name = "Blood Arena"})
+"F" = (/obj/effect/decal/cleanable/blood/old,/obj/effect/decal/remains/human,/obj/structure/fans/tiny/invisible,/turf/open/floor/engine/cult{baseturf = /turf/open/floor/plating/lava/smooth/lava_land_surface; initial_gas_mix = "o2=22;n2=82;TEMP=293.15"},/area/wizard_station{name = "Blood Arena"})
+
+(1,1,1) = {"
+aaaaaaabbbbbaaaaaaa
+aaaaabbbbbbbbbaaaaa
+aaaabbbbcdebbbbaaaa
+aaaabbfgggggfbbaaaa
+aaaabbggghgggbbaaaa
+aaabbbgggggggbbbaaa
+aabbbbijjjjjibbbbaa
+abbbkklkkmnnlggbbba
+bbbggnnngggnnngkbbb
+bbbgnnnnonnnknngbbb
+bbknnnnnnnnpnnnngbb
+bbgngnknngqknnggrbb
+bbgnsnnnngnnnngntbb
+bbggnnnnnnnnsnnnubb
+bbbgnnpkgnnnnknkbbb
+bbbknvnnnnnnwnnkbbb
+abbbnnnnkngnnngbbba
+abbbbnnsnkxnggbbbba
+aabbbbknynnggbbbbaa
+aaabbbbbyunbbbbbaaa
+aaaabbbbnznbbbbaaaa
+aaaaabbbAzkbbbaaaaa
+aaaaaabbBCDbbaaaaaa
+aaaaaaabEFDbaaaaaaa
+"}
