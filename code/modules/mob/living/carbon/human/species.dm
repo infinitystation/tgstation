@@ -740,7 +740,7 @@
 	//The fucking FAT mutation is the dumbest shit ever. It makes the code so difficult to work with
 	if(H.disabilities & FAT)
 		if(H.overeatduration < 100)
-			H << "<span class='notice'>¬ы опять чувствуете себя в норме!</span>"
+			H << "<span class='notice'>¬ы оп&#255;ть чувствуете себ&#255; в норме!</span>"
 			H.disabilities &= ~FAT
 			H.update_inv_w_uniform()
 			H.update_inv_wear_suit()
@@ -789,7 +789,7 @@
 		H.metabolism_efficiency = 1
 	else if(H.nutrition > NUTRITION_LEVEL_FED && H.satiety > 80)
 		if(H.metabolism_efficiency != 1.25 && (H.dna && H.dna.species && !(NOHUNGER in H.dna.species.specflags)))
-			H << "<span class='notice'>yсеб&#255; энергичным.</span>"
+			H << "<span class='notice'>¬ы чувствуете себ&#255; энергичным.</span>"
 			H.metabolism_efficiency = 1.25
 	else if(H.nutrition < NUTRITION_LEVEL_STARVING + 50)
 		if(H.metabolism_efficiency != 0.8)

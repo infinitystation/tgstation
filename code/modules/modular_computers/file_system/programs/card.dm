@@ -27,6 +27,7 @@
 		"Chief Engineer",
 		"Research Director",
 		"Chief Medical Officer",
+		"Internal Affairs Agent",
 		"Chaplain")
 
 	//The scaling factor of max total positions in relation to the total amount of people on board the station in %
