@@ -4548,12 +4548,12 @@
 	dir = 8;
 	layer = 2.9
 	},
-/obj/item/clothing/tie/red{
+/obj/item/clothing/neck/tie/red{
 	pixel_x = -5;
 	pixel_y = 3
 	},
-/obj/item/clothing/tie/horrible,
-/obj/item/clothing/tie/blue{
+/obj/item/clothing/neck/tie/horrible,
+/obj/item/clothing/neck/tie/blue{
 	pixel_x = 5;
 	pixel_y = -2
 	},
@@ -9028,7 +9028,7 @@
 /obj/structure/rack,
 /obj/item/clothing/under/color/red,
 /obj/item/clothing/ears/earmuffs,
-/obj/item/clothing/tie/red,
+/obj/item/clothing/neck/tie/red,
 /obj/item/clothing/head/soft/red,
 /turf/open/floor/plasteel{
 	icon_state = "vault"
@@ -9038,7 +9038,7 @@
 /obj/structure/rack,
 /obj/item/clothing/under/color/blue,
 /obj/item/clothing/ears/earmuffs,
-/obj/item/clothing/tie/blue,
+/obj/item/clothing/neck/tie/blue,
 /obj/item/clothing/head/soft/blue,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /turf/open/floor/plasteel{
@@ -13848,7 +13848,7 @@
 /turf/open/floor/carpet,
 /area/security/detectives_office)
 "axL" = (
-/obj/item/clothing/tie/petcollar,
+/obj/item/clothing/neck/petcollar,
 /obj/item/weapon/pen,
 /turf/open/floor/plating,
 /area/maintenance/fsmaint)
@@ -16385,7 +16385,7 @@
 /obj/item/clothing/tie/waistcoat,
 /obj/item/clothing/suit/toggle/lawyer/black,
 /obj/item/clothing/under/suit_jacket/red,
-/obj/item/clothing/tie/black,
+/obj/item/clothing/neck/tie/black,
 /obj/item/clothing/under/lawyer/blacksuit,
 /obj/item/clothing/under/wfleetcommander,
 /obj/item/clothing/under/schoolgirlblack,
@@ -40765,7 +40765,7 @@
 	pixel_x = 0;
 	pixel_y = 30
 	},
-/obj/item/clothing/tie/petcollar,
+/obj/item/clothing/neck/petcollar,
 /turf/open/floor/wood,
 /area/crew_quarters/heads)
 "brs" = (
@@ -42243,7 +42243,6 @@
 /obj/item/clothing/mask/pig,
 /obj/item/weapon/bikehorn,
 /obj/structure/table/wood,
-/obj/item/clothing/tie/dope_necklace,
 /obj/machinery/light/small{
 	dir = 1
 	},
@@ -62954,7 +62953,7 @@
 /area/maintenance/fpmaint2)
 "cdP" = (
 /obj/structure/closet,
-/obj/item/clothing/tie/stethoscope,
+/obj/item/clothing/neck/stethoscope,
 /obj/item/weapon/hemostat,
 /obj/effect/spawner/lootdrop/maintenance,
 /turf/open/floor/plating,
@@ -65453,7 +65452,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/item/clothing/tie/stethoscope,
+/obj/item/clothing/neck/stethoscope,
 /turf/open/floor/plating{
 	tag = "icon-platingdmg1";
 	icon_state = "platingdmg1"
@@ -66559,8 +66558,8 @@
 	pixel_x = 0;
 	pixel_y = 2
 	},
-/obj/item/clothing/tie/stethoscope,
-/obj/item/clothing/tie/stethoscope,
+/obj/item/clothing/neck/stethoscope,
+/obj/item/clothing/neck/stethoscope,
 /obj/item/weapon/gun/syringe,
 /obj/structure/table/glass,
 /turf/open/floor/plasteel{
@@ -68037,7 +68036,7 @@
 	d2 = 2;
 	icon_state = "0-2"
 	},
-/obj/item/clothing/tie/stethoscope,
+/obj/item/clothing/neck/stethoscope,
 /turf/open/floor/plasteel{
 	tag = "icon-vault";
 	icon_state = "vault"
@@ -72881,7 +72880,7 @@
 /obj/item/weapon/folder/blue,
 /obj/structure/table/glass,
 /obj/item/weapon/stamp/cmo,
-/obj/item/clothing/tie/petcollar,
+/obj/item/clothing/neck/petcollar,
 /turf/open/floor/plasteel{
 	dir = 8;
 	icon_state = "barber"
@@ -75437,7 +75436,7 @@
 /obj/item/weapon/screwdriver{
 	pixel_y = 6
 	},
-/obj/item/clothing/tie/stethoscope,
+/obj/item/clothing/neck/stethoscope,
 /obj/item/weapon/wrench/medical,
 /turf/open/floor/plasteel{
 	dir = 4;
@@ -76893,7 +76892,7 @@
 "czW" = (
 /obj/structure/table/glass,
 /obj/item/weapon/pen,
-/obj/item/clothing/tie/stethoscope,
+/obj/item/clothing/neck/stethoscope,
 /obj/structure/extinguisher_cabinet{
 	pixel_x = 6;
 	pixel_y = -30
@@ -77303,7 +77302,7 @@
 "cAN" = (
 /obj/structure/table,
 /obj/item/weapon/folder/white,
-/obj/item/clothing/tie/stethoscope,
+/obj/item/clothing/neck/stethoscope,
 /obj/machinery/light/small{
 	dir = 8
 	},
@@ -78643,7 +78642,7 @@
 "cCV" = (
 /obj/structure/table,
 /obj/item/weapon/folder/white,
-/obj/item/clothing/tie/stethoscope,
+/obj/item/clothing/neck/stethoscope,
 /obj/machinery/light/small{
 	dir = 8
 	},
