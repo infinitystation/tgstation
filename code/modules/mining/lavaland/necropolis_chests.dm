@@ -462,16 +462,14 @@
 
 /obj/structure/closet/crate/necropolis/dragon/New()
 	..()
-	var/loot = rand(1,4)
+	var/loot = rand(1,3)
 	switch(loot)
 		if(1)
 			new /obj/item/weapon/melee/ghost_sword(src)
 		if(2)
-			new /obj/item/weapon/lava_staff(src)
-		if(3)
 			new /obj/item/weapon/spellbook/oneuse/sacredflame(src)
 			new /obj/item/weapon/gun/magic/wand/fireball(src)
-		if(4)
+		if(3)
 			new /obj/item/weapon/dragons_blood(src)
 
 /obj/item/weapon/melee/ghost_sword
@@ -710,9 +708,9 @@
 	var/loot = rand(1,3)
 	switch(loot)
 		if(1)
-			new /obj/item/mayhem(src)
+			new /obj/item/weapon/gun/magic/staff/spellblade(src) //new /obj/item/mayhem(src)
 		if(2)
-			new /obj/item/blood_contract(src)
+			new /obj/item/weapon/gun/magic/staff/spellblade(src) //new /obj/item/blood_contract(src)
 		if(3)
 			new /obj/item/weapon/gun/magic/staff/spellblade(src)
 

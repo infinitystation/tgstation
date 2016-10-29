@@ -84,23 +84,19 @@
 	},
 /area/solar/auxport)
 "aak" = (
-/obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/structure/disposalpipe/sortjunction{
-	dir = 2;
-	icon_state = "pipe-j1s";
-	sortType = 18
-	},
-/obj/machinery/atmospherics/pipe/manifold/supply/hidden{
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
-/turf/open/floor/plating/warnplate{
-	dir = 8
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
-/area/space)
+/turf/open/floor/plating{
+	dir = 2;
+	icon_state = "warnplate"
+	},
+/area/maintenance/fsmaint)
 "aal" = (
 /obj/structure/grille,
 /turf/open/space,
@@ -248,24 +244,19 @@
 	},
 /area/solar/auxport)
 "aay" = (
-/obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
-/obj/structure/disposalpipe/sortjunction{
-	dir = 2;
-	icon_state = "pipe-j1s";
-	sortType = 19
-	},
-/obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden{
-	dir = 1;
-	initialize_directions = 11
-	},
-/turf/open/floor/plating/warnplate{
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
-/area/space)
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/open/floor/plating{
+	tag = "icon-platingdmg2";
+	icon_state = "platingdmg2"
+	},
+/area/maintenance/fsmaint)
 "aaz" = (
 /obj/item/stack/cable_coil,
 /obj/structure/lattice/catwalk,
@@ -1025,6 +1016,7 @@
 /obj/item/device/megaphone/sec{
 	icon_state = "megaphone-command"
 	},
+/obj/item/clothing/tie/badge/hos,
 /turf/open/floor/plasteel/blackvault{
 	dir = 4
 	},
@@ -4556,12 +4548,12 @@
 	dir = 8;
 	layer = 2.9
 	},
-/obj/item/clothing/tie/red{
+/obj/item/clothing/neck/tie/red{
 	pixel_x = -5;
 	pixel_y = 3
 	},
-/obj/item/clothing/tie/horrible,
-/obj/item/clothing/tie/blue{
+/obj/item/clothing/neck/tie/horrible,
+/obj/item/clothing/neck/tie/blue{
 	pixel_x = 5;
 	pixel_y = -2
 	},
@@ -4729,6 +4721,7 @@
 /obj/structure/table/reinforced,
 /obj/item/weapon/storage/toolbox/drone,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/item/weapon/storage/bag/trash,
 /turf/open/floor/plasteel{
 	dir = 8;
 	icon_state = "vault";
@@ -4751,6 +4744,7 @@
 	pixel_x = 24
 	},
 /obj/item/weapon/gun/energy/laser/scatter/shotty,
+/obj/item/clothing/tie/badge/warden,
 /turf/open/floor/plasteel{
 	dir = 8;
 	icon_state = "vault";
@@ -6558,8 +6552,6 @@
 	name = "freezer"
 	},
 /obj/effect/spawner/lootdrop/food,
-/obj/effect/spawner/lootdrop/food,
-/obj/effect/spawner/lootdrop/food,
 /obj/structure/cable/yellow{
 	icon_state = "4-8";
 	d1 = 4;
@@ -7304,7 +7296,12 @@
 /area/security/gear)
 "anb" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/storage/box/holobadge,
+/obj/item/clothing/tie/badge/holo,
+/obj/item/clothing/tie/badge/holo,
+/obj/item/clothing/tie/badge/holo,
+/obj/item/clothing/tie/badge/holo,
+/obj/item/clothing/tie/badge/holo,
+/obj/item/clothing/tie/badge/holo,
 /turf/open/floor/plasteel/red/side{
 	dir = 10
 	},
@@ -9031,7 +9028,7 @@
 /obj/structure/rack,
 /obj/item/clothing/under/color/red,
 /obj/item/clothing/ears/earmuffs,
-/obj/item/clothing/tie/red,
+/obj/item/clothing/neck/tie/red,
 /obj/item/clothing/head/soft/red,
 /turf/open/floor/plasteel{
 	icon_state = "vault"
@@ -9041,7 +9038,7 @@
 /obj/structure/rack,
 /obj/item/clothing/under/color/blue,
 /obj/item/clothing/ears/earmuffs,
-/obj/item/clothing/tie/blue,
+/obj/item/clothing/neck/tie/blue,
 /obj/item/clothing/head/soft/blue,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /turf/open/floor/plasteel{
@@ -12814,6 +12811,7 @@
 	pixel_y = 30
 	},
 /obj/structure/table/wood,
+/obj/item/clothing/tie/badge,
 /obj/item/clothing/head/hat/brown,
 /obj/item/weapon/melee/classic_baton,
 /turf/open/floor/carpet,
@@ -12965,8 +12963,6 @@
 /obj/structure/closet/secure_closet/freezer{
 	name = "freezer"
 	},
-/obj/effect/spawner/lootdrop/food,
-/obj/effect/spawner/lootdrop/food,
 /obj/effect/spawner/lootdrop/food,
 /turf/open/floor/wood,
 /area/engine/rest_room)
@@ -13852,6 +13848,7 @@
 /turf/open/floor/carpet,
 /area/security/detectives_office)
 "axL" = (
+/obj/item/clothing/neck/petcollar,
 /obj/item/weapon/pen,
 /turf/open/floor/plating,
 /area/maintenance/fsmaint)
@@ -15367,9 +15364,7 @@
 	icon_state = "4-8";
 	pixel_y = 0
 	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 9
-	},
+/obj/machinery/atmospherics/pipe/manifold/supply/hidden,
 /turf/open/floor/plasteel{
 	icon_state = "grimy"
 	},
@@ -15381,6 +15376,9 @@
 	icon_state = "4-8";
 	pixel_y = 0
 	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
+	},
 /turf/open/floor/carpet,
 /area/security/detectives_office)
 "aAt" = (
@@ -15390,6 +15388,15 @@
 	icon_state = "2-8";
 	tag = ""
 	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
+	},
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8";
+	pixel_y = 0
+	},
 /turf/open/floor/carpet,
 /area/security/detectives_office)
 "aAu" = (
@@ -15397,9 +15404,27 @@
 	name = "Detective Maintenance";
 	req_access_txt = "4"
 	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
+	},
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8";
+	pixel_y = 0
+	},
 /turf/open/floor/plating,
 /area/security/detectives_office)
 "aAv" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
+	},
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8";
+	pixel_y = 0
+	},
 /turf/open/floor/plating{
 	dir = 8;
 	icon_state = "warnplate";
@@ -16360,7 +16385,7 @@
 /obj/item/clothing/tie/waistcoat,
 /obj/item/clothing/suit/toggle/lawyer/black,
 /obj/item/clothing/under/suit_jacket/red,
-/obj/item/clothing/tie/black,
+/obj/item/clothing/neck/tie/black,
 /obj/item/clothing/under/lawyer/blacksuit,
 /obj/item/clothing/under/wfleetcommander,
 /obj/item/clothing/under/schoolgirlblack,
@@ -16822,6 +16847,7 @@
 /area/security/west)
 "aCP" = (
 /obj/structure/table/wood,
+/obj/item/weapon/reagent_containers/food/drinks/mug/tea,
 /turf/open/floor/carpet,
 /area/security/west)
 "aCQ" = (
@@ -17136,6 +17162,12 @@
 /obj/effect/spawner/lootdrop{
 	loot = list("/obj/structure/grille","/obj/structure/grille","/obj/structure/grille","/obj/structure/grille","/obj/structure/grille","/obj/item/weapon/cigbutt","/obj/item/trash/cheesie","/obj/item/trash/candy","/obj/item/trash/chips","/obj/item/trash/deadmouse","/obj/item/trash/pistachios","/obj/item/trash/plate","/obj/item/trash/popcorn","/obj/item/trash/raisins","/obj/item/trash/sosjerky","/obj/item/trash/syndi_cakes");
 	name = "maint grille or trash spawner"
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
 /turf/open/floor/plating{
 	icon_state = "panelscorched"
@@ -19229,7 +19261,7 @@
 	dir = 5
 	},
 /obj/machinery/flasher{
-	id = "Isolator_2";
+	id = "Iso_2";
 	pixel_x = 0;
 	pixel_y = -28
 	},
@@ -19280,7 +19312,7 @@
 	dir = 9
 	},
 /obj/machinery/flasher{
-	id = "Isolator_1";
+	id = "Iso_1";
 	pixel_x = 0;
 	pixel_y = -28
 	},
@@ -19307,10 +19339,6 @@
 	},
 /area/security/west)
 "aHp" = (
-/obj/structure/holohoop{
-	density = 0;
-	dir = 4
-	},
 /turf/open/floor/plasteel/neutral/side{
 	dir = 8
 	},
@@ -19332,10 +19360,6 @@
 	},
 /area/security/mass_cell)
 "aHr" = (
-/obj/structure/holohoop{
-	density = 0;
-	dir = 8
-	},
 /turf/open/floor/plasteel/neutral/side{
 	dir = 4
 	},
@@ -19395,12 +19419,28 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
+	},
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/open/floor/plating{
 	tag = "icon-panelscorched";
 	icon_state = "panelscorched"
 	},
 /area/maintenance/fsmaint)
 "aHz" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
+	},
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/open/floor/plating{
 	icon_state = "warnplate";
 	dir = 4
@@ -19410,6 +19450,14 @@
 /obj/effect/spawner/lootdrop{
 	loot = list("/obj/structure/grille","/obj/structure/grille","/obj/structure/grille","/obj/structure/grille","/obj/structure/grille","/obj/item/weapon/cigbutt","/obj/item/trash/cheesie","/obj/item/trash/candy","/obj/item/trash/chips","/obj/item/trash/deadmouse","/obj/item/trash/pistachios","/obj/item/trash/plate","/obj/item/trash/popcorn","/obj/item/trash/raisins","/obj/item/trash/sosjerky","/obj/item/trash/syndi_cakes");
 	name = "maint grille or trash spawner"
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
+	},
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
 /turf/open/floor/plating{
 	dir = 8;
@@ -24937,7 +24985,6 @@
 /obj/structure/table/wood,
 /obj/item/weapon/book/manual/wiki/security_space_law,
 /obj/item/weapon/book/manual/wiki/security_space_law,
-/obj/item/weapon/pen/red,
 /obj/machinery/button/door{
 	id = "lawyer_shutters";
 	name = "law office shutters control";
@@ -24948,6 +24995,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 5
 	},
+/obj/item/clothing/tie/lawyers_badge,
 /turf/open/floor/wood,
 /area/lawoffice)
 "aRF" = (
@@ -25588,13 +25636,6 @@
 /obj/item/weapon/pen{
 	pixel_x = 4;
 	pixel_y = 4
-	},
-/obj/machinery/button/door{
-	id = "cargo_lock";
-	name = "Cargo Lockdown";
-	pixel_x = 24;
-	pixel_y = 24;
-	req_access_txt = "41"
 	},
 /turf/open/floor/plasteel,
 /area/quartermaster/storage)
@@ -27579,10 +27620,6 @@
 /obj/item/weapon/twohanded/required/kirbyplants{
 	icon_state = "plant-13";
 	layer = 4.1
-	},
-/obj/machinery/light_switch{
-	pixel_x = 28;
-	pixel_y = 0
 	},
 /turf/open/floor/plasteel{
 	dir = 4;
@@ -33151,6 +33188,8 @@
 /area/quartermaster/storage)
 "beQ" = (
 /obj/structure/closet/wardrobe/cargotech,
+/obj/item/clothing/under/rank/cargotech/infinity,
+/obj/item/clothing/suit/cargo_jacket,
 /turf/open/floor/plasteel{
 	dir = 2;
 	icon_state = "warning"
@@ -33159,6 +33198,8 @@
 "beR" = (
 /obj/structure/closet/wardrobe/cargotech,
 /obj/structure/disposalpipe/segment,
+/obj/item/clothing/under/rank/cargotech/infinity,
+/obj/item/clothing/suit/cargo_jacket,
 /turf/open/floor/plasteel{
 	dir = 6;
 	icon_state = "warning";
@@ -34178,10 +34219,22 @@
 /turf/open/floor/plating,
 /area/maintenance/fpmaint2)
 "bgs" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced/fulltile,
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/manifold/supply/hidden{
+	dir = 4
+	},
+/obj/structure/cable/yellow{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
 /turf/open/floor/plating,
-/area/quartermaster/sorting)
+/area/maintenance/fsmaint)
 "bgt" = (
 /obj/structure/plasticflaps{
 	opacity = 1
@@ -37909,6 +37962,9 @@
 	dir = 2;
 	network = list("SS13")
 	},
+/obj/machinery/light{
+	dir = 1
+	},
 /turf/open/floor/plasteel{
 	dir = 1;
 	icon_state = "yellowcorner"
@@ -40602,8 +40658,7 @@
 /turf/open/floor/plasteel/bot,
 /area/quartermaster/sorting)
 "brj" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced/fulltile,
+/obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/open/floor/plating,
 /area/quartermaster/sorting)
@@ -40710,7 +40765,7 @@
 	pixel_x = 0;
 	pixel_y = 30
 	},
-/obj/item/clothing/tie/petcollar,
+/obj/item/clothing/neck/petcollar,
 /turf/open/floor/wood,
 /area/crew_quarters/heads)
 "brs" = (
@@ -41000,7 +41055,7 @@
 "brO" = (
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
-/area/maintenance/fsmaint2)
+/area/crew_quarters/theatre)
 "brP" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /turf/closed/wall,
@@ -41030,16 +41085,9 @@
 /turf/closed/wall,
 /area/maintenance/fsmaint2)
 "brS" = (
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
-/obj/machinery/light{
-	icon_state = "tube1";
-	dir = 8
-	},
-/turf/open/floor/plasteel{
-	dir = 8;
-	icon_state = "cautioncorner"
-	},
-/area/hallway/primary/starboard)
+/mob/living/simple_animal/sloth/paperwork,
+/turf/open/floor/plasteel,
+/area/quartermaster/storage)
 "brT" = (
 /obj/structure/disposalpipe/segment{
 	dir = 1;
@@ -42195,7 +42243,6 @@
 /obj/item/clothing/mask/pig,
 /obj/item/weapon/bikehorn,
 /obj/structure/table/wood,
-/obj/item/clothing/tie/dope_necklace,
 /obj/machinery/light/small{
 	dir = 1
 	},
@@ -53321,7 +53368,7 @@
 	icon_state = "1-2"
 	},
 /turf/open/floor/plating,
-/area/gateway)
+/area/maintenance/maintcentral)
 "bMJ" = (
 /obj/structure/sign/directions/engineering{
 	desc = "A direction sign, pointing out which way the escape arm is.";
@@ -53341,7 +53388,7 @@
 	pixel_y = -8
 	},
 /turf/closed/wall,
-/area/gateway)
+/area/maintenance/maintcentral)
 "bMK" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /turf/open/floor/plasteel{
@@ -54111,7 +54158,7 @@
 /turf/open/floor/plating/warnplate{
 	dir = 1
 	},
-/area/gateway)
+/area/maintenance/maintcentral)
 "bOh" = (
 /turf/closed/wall,
 /area/gateway)
@@ -55062,7 +55109,7 @@
 /turf/open/floor/plating{
 	icon_state = "panelscorched"
 	},
-/area/gateway)
+/area/maintenance/maintcentral)
 "bPZ" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/machinery/door/firedoor,
@@ -55941,7 +55988,7 @@
 	name = "blobstart"
 	},
 /turf/open/floor/plating,
-/area/gateway)
+/area/maintenance/maintcentral)
 "bRJ" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/machinery/status_display{
@@ -56964,7 +57011,7 @@
 	icon_state = "1-2"
 	},
 /turf/open/floor/plating,
-/area/gateway)
+/area/maintenance/maintcentral)
 "bTr" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/item/device/radio/intercom{
@@ -57720,7 +57767,7 @@
 /turf/open/floor/plating{
 	icon_state = "platingdmg2"
 	},
-/area/gateway)
+/area/maintenance/maintcentral)
 "bUP" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/machinery/light{
@@ -58697,7 +58744,7 @@
 /turf/open/floor/plating/warnplate{
 	dir = 8
 	},
-/area/gateway)
+/area/maintenance/maintcentral)
 "bWx" = (
 /obj/structure/table,
 /obj/machinery/light{
@@ -59436,7 +59483,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/open/floor/plating/warnplate,
-/area/gateway)
+/area/maintenance/maintcentral)
 "bXN" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/machinery/firealarm{
@@ -60215,7 +60262,7 @@
 	req_access_txt = "0"
 	},
 /turf/open/floor/plating,
-/area/gateway)
+/area/maintenance/maintcentral)
 "bYY" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/structure/extinguisher_cabinet{
@@ -62906,7 +62953,7 @@
 /area/maintenance/fpmaint2)
 "cdP" = (
 /obj/structure/closet,
-/obj/item/clothing/tie/stethoscope,
+/obj/item/clothing/neck/stethoscope,
 /obj/item/weapon/hemostat,
 /obj/effect/spawner/lootdrop/maintenance,
 /turf/open/floor/plating,
@@ -65405,7 +65452,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/item/clothing/tie/stethoscope,
+/obj/item/clothing/neck/stethoscope,
 /turf/open/floor/plating{
 	tag = "icon-platingdmg1";
 	icon_state = "platingdmg1"
@@ -66511,8 +66558,8 @@
 	pixel_x = 0;
 	pixel_y = 2
 	},
-/obj/item/clothing/tie/stethoscope,
-/obj/item/clothing/tie/stethoscope,
+/obj/item/clothing/neck/stethoscope,
+/obj/item/clothing/neck/stethoscope,
 /obj/item/weapon/gun/syringe,
 /obj/structure/table/glass,
 /turf/open/floor/plasteel{
@@ -67989,7 +68036,7 @@
 	d2 = 2;
 	icon_state = "0-2"
 	},
-/obj/item/clothing/tie/stethoscope,
+/obj/item/clothing/neck/stethoscope,
 /turf/open/floor/plasteel{
 	tag = "icon-vault";
 	icon_state = "vault"
@@ -70106,9 +70153,6 @@
 /obj/structure/closet/secure_closet/freezer{
 	name = "freezer"
 	},
-/obj/effect/spawner/lootdrop/food,
-/obj/effect/spawner/lootdrop/food,
-/obj/effect/spawner/lootdrop/food,
 /obj/machinery/light/small{
 	dir = 4
 	},
@@ -72836,7 +72880,7 @@
 /obj/item/weapon/folder/blue,
 /obj/structure/table/glass,
 /obj/item/weapon/stamp/cmo,
-/obj/item/clothing/tie/petcollar,
+/obj/item/clothing/neck/petcollar,
 /turf/open/floor/plasteel{
 	dir = 8;
 	icon_state = "barber"
@@ -75392,7 +75436,7 @@
 /obj/item/weapon/screwdriver{
 	pixel_y = 6
 	},
-/obj/item/clothing/tie/stethoscope,
+/obj/item/clothing/neck/stethoscope,
 /obj/item/weapon/wrench/medical,
 /turf/open/floor/plasteel{
 	dir = 4;
@@ -76848,7 +76892,7 @@
 "czW" = (
 /obj/structure/table/glass,
 /obj/item/weapon/pen,
-/obj/item/clothing/tie/stethoscope,
+/obj/item/clothing/neck/stethoscope,
 /obj/structure/extinguisher_cabinet{
 	pixel_x = 6;
 	pixel_y = -30
@@ -77258,7 +77302,7 @@
 "cAN" = (
 /obj/structure/table,
 /obj/item/weapon/folder/white,
-/obj/item/clothing/tie/stethoscope,
+/obj/item/clothing/neck/stethoscope,
 /obj/machinery/light/small{
 	dir = 8
 	},
@@ -78598,7 +78642,7 @@
 "cCV" = (
 /obj/structure/table,
 /obj/item/weapon/folder/white,
-/obj/item/clothing/tie/stethoscope,
+/obj/item/clothing/neck/stethoscope,
 /obj/machinery/light/small{
 	dir = 8
 	},
@@ -82249,9 +82293,6 @@
 	name = "freezer"
 	},
 /obj/item/weapon/reagent_containers/food/drinks/bottle/orangejuice,
-/obj/effect/spawner/lootdrop/food,
-/obj/effect/spawner/lootdrop/food,
-/obj/effect/spawner/lootdrop/food,
 /turf/open/floor/plasteel{
 	tag = "icon-cafeteria (NORTHEAST)";
 	icon_state = "cafeteria";
@@ -94486,6 +94527,139 @@
 	},
 /turf/open/space,
 /area/space)
+"ddG" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 5
+	},
+/obj/structure/cable/yellow{
+	icon_state = "1-4";
+	d1 = 1;
+	d2 = 4
+	},
+/turf/open/floor/plating,
+/area/maintenance/fsmaint)
+"ddF" = (
+/obj/machinery/atmospherics/pipe/manifold/supply/hidden,
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "1-4";
+	d1 = 1;
+	d2 = 4
+	},
+/turf/open/floor/plating,
+/area/maintenance/fsmaint)
+"ddE" = (
+/obj/effect/spawner/lootdrop{
+	loot = list("/obj/structure/grille","/obj/structure/grille","/obj/structure/grille","/obj/structure/grille","/obj/structure/grille","/obj/item/weapon/cigbutt","/obj/item/trash/cheesie","/obj/item/trash/candy","/obj/item/trash/chips","/obj/item/trash/deadmouse","/obj/item/trash/pistachios","/obj/item/trash/plate","/obj/item/trash/popcorn","/obj/item/trash/raisins","/obj/item/trash/sosjerky","/obj/item/trash/syndi_cakes");
+	name = "maint grille or trash spawner"
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
+	},
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/open/floor/plating,
+/area/maintenance/fsmaint)
+"ddD" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
+	},
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/open/floor/plating{
+	dir = 8;
+	icon_state = "warnplate";
+	tag = ""
+	},
+/area/maintenance/fsmaint)
+"ddC" = (
+/obj/machinery/door/airlock/maintenance{
+	req_access_txt = "12"
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
+	},
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/open/floor/plating,
+/area/maintenance/fsmaint)
+"ddB" = (
+/obj/machinery/atmospherics/pipe/manifold/supply/hidden{
+	dir = 8
+	},
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/open/floor/plasteel/red/corner,
+/area/hallway/primary/fore)
+"ddA" = (
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "1-4";
+	d1 = 1;
+	d2 = 4
+	},
+/turf/open/floor/plasteel,
+/area/hallway/primary/fore)
+"ddz" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/open/floor/plating,
+/area/maintenance/fsmaint)
+"ddy" = (
+/obj/structure/closet/crate/internals,
+/turf/open/floor/plating,
+/area/maintenance/fsmaint)
+"ddx" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 10
+	},
+/obj/structure/cable/yellow{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/turf/open/floor/plating,
+/area/maintenance/fsmaint)
+"ddw" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
+	},
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8";
+	pixel_y = 0
+	},
+/turf/open/floor/carpet,
+/area/security/detectives_office)
+"ddv" = (
+/obj/structure/closet/crate/secure/weapon,
+/turf/open/floor/plating,
+/area/maintenance/fsmaint)
 
 (1,1,1) = {"
 aaa
@@ -108463,7 +108637,7 @@ aaa
 aai
 aai
 aaa
-aaa
+aai
 apb
 apc
 apb
@@ -108721,7 +108895,7 @@ aaa
 aaa
 aaa
 aaa
-aaa
+aai
 aaa
 aaa
 aaa
@@ -111563,7 +111737,7 @@ aVH
 aVH
 bdj
 beL
-bgs
+bjM
 bhP
 bjE
 blA
@@ -111826,7 +112000,7 @@ bjE
 blB
 bnC
 bpi
-bgs
+bjM
 bsU
 bvp
 bxy
@@ -112077,7 +112251,7 @@ aPt
 bbx
 bdl
 beN
-bgs
+bjM
 bhP
 bjF
 blC
@@ -112839,7 +113013,7 @@ aMf
 aNE
 aPt
 aQV
-aPt
+brS
 aUb
 aPt
 aXe
@@ -121826,7 +122000,7 @@ aBI
 aDn
 aEA
 aGb
-aEy
+ddA
 aEy
 aJU
 aLf
@@ -122083,7 +122257,7 @@ aBJ
 aDo
 aEB
 aGc
-aHx
+ddB
 aHx
 aJV
 aLg
@@ -122340,7 +122514,7 @@ auF
 auF
 auF
 auF
-arG
+ddC
 ahS
 aJW
 aJW
@@ -122597,7 +122771,7 @@ aBK
 aDp
 aEC
 auF
-aAv
+ddD
 anx
 aJW
 aLh
@@ -123111,7 +123285,7 @@ aBL
 aDr
 aEE
 auF
-ajc
+aov
 aID
 aJW
 aLj
@@ -123368,7 +123542,7 @@ aBM
 auF
 auF
 auF
-arI
+ddE
 ahS
 aJW
 aLk
@@ -123625,7 +123799,7 @@ aBN
 auF
 aEF
 aGd
-ajc
+aov
 aIE
 aJW
 aLl
@@ -123877,12 +124051,12 @@ auz
 awm
 axK
 ayR
-ayQ
+ddw
 aBO
 auF
 aEG
 ajc
-ajc
+aov
 awr
 aJW
 aLm
@@ -124139,7 +124313,7 @@ auF
 auF
 aDs
 aGe
-ajc
+aov
 aIF
 aJW
 aLn
@@ -124396,7 +124570,7 @@ ajc
 aDs
 aEH
 ajc
-arI
+ddE
 aIG
 aJW
 aLo
@@ -124648,12 +124822,12 @@ auC
 awo
 ahS
 ayT
-ajc
-ajc
+ddx
+ddz
 aDt
-ajc
-ajc
-ajc
+ddz
+ddz
+ddF
 aIH
 aJW
 aLp
@@ -125167,7 +125341,7 @@ ahS
 ahS
 ahS
 ahS
-arG
+ddC
 ahS
 aJX
 aLq
@@ -125681,8 +125855,8 @@ atp
 apX
 ahS
 aGf
-ajc
-ajc
+ddx
+ddG
 aJX
 aLs
 aMG
@@ -125939,7 +126113,7 @@ ahS
 ahS
 ahS
 ahS
-aDw
+aak
 aJY
 aLt
 aMH
@@ -126190,13 +126364,13 @@ ahS
 awr
 apV
 ahS
-ajc
+ddy
 atp
 ahS
 aEJ
 aGg
 atn
-arI
+ddE
 aJX
 aLu
 aMI
@@ -126230,14 +126404,14 @@ bHi
 bJe
 bKP
 bMJ
-bOh
-bOh
-bOh
-bOh
-bOh
-bOh
-bOh
-bOh
+bgL
+bgL
+bgL
+bgL
+bgL
+bgL
+bgL
+bgL
 bZZ
 cbh
 ccK
@@ -126453,7 +126627,7 @@ ahS
 ajc
 ajc
 atn
-auO
+aay
 aJX
 aJX
 aJX
@@ -126701,7 +126875,7 @@ apX
 ajc
 ajc
 ahS
-ajc
+ddv
 ajc
 ahS
 aAy
@@ -126710,7 +126884,7 @@ anv
 aAA
 anv
 anv
-anv
+bgs
 aJZ
 aLv
 aMJ
@@ -127246,11 +127420,11 @@ bkt
 bmx
 bom
 bpT
-brN
-brN
-brN
-brN
-brN
+btO
+btO
+btO
+btO
+btO
 btW
 btW
 bFM
@@ -127503,7 +127677,7 @@ bdS
 bmy
 bon
 bpU
-brN
+btO
 btK
 bwh
 bym
@@ -127760,7 +127934,7 @@ bku
 bmz
 boo
 bpV
-brN
+btO
 btL
 bwi
 byn
@@ -128017,7 +128191,7 @@ bkv
 bmy
 bon
 bpW
-brN
+btO
 btM
 bwj
 byo
@@ -128274,7 +128448,7 @@ bkw
 bmA
 bop
 bpX
-brN
+btO
 btN
 bwk
 byp
@@ -128467,7 +128641,7 @@ aaa
 aaa
 aaa
 aaa
-aak
+aaa
 aaa
 aaa
 aaa
@@ -128531,7 +128705,7 @@ bdS
 bmB
 bon
 bpU
-brN
+btO
 btO
 bwl
 byq
@@ -128788,7 +128962,7 @@ bdS
 bmC
 boq
 bpY
-brN
+btO
 btP
 bwm
 byr
@@ -129045,7 +129219,7 @@ bkx
 bmy
 bon
 bpU
-brN
+btO
 btQ
 bwn
 bys
@@ -130073,7 +130247,7 @@ bct
 bmy
 bon
 bpU
-brN
+btO
 btU
 bwq
 byw
@@ -130330,7 +130504,7 @@ bkA
 bmy
 bon
 bpZ
-brN
+btO
 btV
 bwr
 byx
@@ -130587,7 +130761,7 @@ bdW
 bmE
 bos
 bqa
-brN
+btW
 btW
 bws
 btW
@@ -130844,7 +131018,7 @@ bdW
 bmy
 bon
 bpU
-brN
+btW
 btX
 bwt
 byy
@@ -131101,7 +131275,7 @@ bdW
 bmF
 bot
 bqb
-brN
+btW
 btY
 bwu
 byz
@@ -131358,7 +131532,7 @@ bdW
 bmy
 bon
 bqc
-brN
+btW
 btZ
 bwv
 byA
@@ -131615,7 +131789,7 @@ baQ
 bmG
 bon
 bpU
-brN
+btW
 bua
 bwv
 byB
@@ -131872,7 +132046,7 @@ baQ
 bmy
 bon
 bpU
-brN
+btW
 bub
 bwv
 byC
@@ -132129,7 +132303,7 @@ baQ
 bmy
 bon
 bqd
-brN
+btW
 buc
 bww
 byD
@@ -132584,7 +132758,7 @@ aaa
 aaa
 aaa
 aaa
-aay
+aaa
 aaa
 aaa
 aaa
@@ -133414,7 +133588,7 @@ baR
 bmJ
 box
 bqg
-brS
+bug
 bug
 bug
 byH

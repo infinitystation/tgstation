@@ -64,41 +64,8 @@
 	..()
 
 /obj/item/weapon/implantcase/chem/attackby(obj/item/weapon/W, mob/user, params)
-	if(imp)
-		imp.attackby(W, user, params)
-	else
-		return ..()
-
-/obj/item/weapon/implantcase/chem/attackby(obj/item/weapon/W, mob/user, params)
-	if(istype(W, /obj/item/weapon/pen))
-		var/t = stripped_input(user, "What would you like the label to be?", name, null)
-		if(user.get_active_held_item() != W)
-			return
-		if(!in_range(src, user) && loc != user)
-			return
-		if(t)
-			name = "implant case - '[t]'"
-		else
-			name = "implant case"
-	else if(istype(W, /obj/item/weapon/implanter))
-		var/obj/item/weapon/implanter/I = W
-		if(I.imp)
-			if(imp || I.imp.implanted)
-				return
-			I.imp.loc = src
-			imp = I.imp
-			I.imp = null
-			update_icon()
-			I.update_icon()
-		else
-			if(imp)
-				if(I.imp)
-					return
-				imp.loc = I
-				I.imp = imp
-				imp = null
-				update_icon()
-			I.update_icon()
-
+	if(istype(W,/obj/item/weapon/reagent_containers/syringe) && imp)
+		W.afterattack(imp, user, params)
+		return TRUE
 	else
 		return ..()

@@ -98,6 +98,16 @@
 	fitted = FEMALE_UNIFORM_TOP
 	can_adjust = 0
 
+/obj/item/clothing/under/rank/cargotech/infinity
+	name = "cargo technician's jumpsuit"
+	desc = "√рузчик, грузчик, парень работящий!"
+	icon_state = "cargotech"
+	item_state = "lb_suit"
+	item_color = "cargo"
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	can_adjust = 0
+
 /obj/item/clothing/under/warden_corporate
 	name = "warden corporate uniform"
 	desc = "Unusual warden's uniform."
