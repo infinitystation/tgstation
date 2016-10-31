@@ -648,7 +648,6 @@ var/const/CALL_SHUTTLE_REASON_LENGTH = 12
 	var/input = stripped_input(user, "Please choose a message to announce to the station crew.", "What?")
 	if(!input || !user.canUseTopic(src))
 		return
-	input = sanitize_a0(input)
 	if(is_silicon)
 		if(ai_message_cooldown > world.time)
 			return
