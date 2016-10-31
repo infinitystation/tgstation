@@ -1,0 +1,56 @@
+"a" = (/turf/template_noop,/area/template_noop)
+"b" = (/turf/closed/wall/mineral/iron,/area/mine/shelter/ash)
+"c" = (/obj/effect/mob_spawn/human/ash_walker,/turf/open/floor/plasteel/terror/necro/cult/outdoor,/area/mine/shelter/ash)
+"d" = (/mob/living/simple_animal/hostile/spawner/ash_walker,/turf/open/floor/plasteel/terror/necro/cult/outdoor,/area/mine/shelter/ash)
+"e" = (/turf/open/floor/plasteel/terror/necro/cult/outdoor,/area/mine/shelter/ash)
+"f" = (/obj/structure/table/wood,/turf/open/floor/plasteel/terror/necro/cult/outdoor,/area/mine/shelter/ash)
+"g" = (/mob/living/simple_animal/hostile/asteroid/gutlunch/guthen,/turf/open/floor/plasteel/terror/necro/cult/outdoor,/area/mine/shelter/ash)
+"h" = (/turf/template_noop,/area/lavaland/surface/outdoors)
+"i" = (/turf/open/floor/plating/asteroid/basalt/lava_land_surface,/area/lavaland/surface/outdoors)
+"j" = (/obj/structure/table/wood,/obj/item/weapon/pickaxe/silver/poor,/obj/item/weapon/pickaxe/silver/poor,/obj/item/weapon/pickaxe/silver/poor,/obj/item/weapon/pickaxe/silver/poor,/obj/item/weapon/pickaxe/silver/poor,/turf/open/floor/plasteel/terror/necro/cult/outdoor,/area/mine/shelter/ash)
+"k" = (/obj/item/organ/tongue/lizard,/turf/open/floor/plasteel/terror/necro/cult/outdoor,/area/mine/shelter/ash)
+"l" = (/turf/open/floor/plating/asteroid/basalt/lava_land_surface,/area/mine/shelter/ash)
+"m" = (/obj/structure/table/wood,/obj/item/weapon/soap/syndie,/turf/open/floor/plasteel/terror/necro/cult/outdoor,/area/mine/shelter/ash)
+"n" = (/mob/living/simple_animal/hostile/asteroid/gutlunch/gubbuck,/turf/open/floor/plasteel/terror/necro/cult/outdoor,/area/mine/shelter/ash)
+"o" = (/turf/closed/mineral/volcanic/lava_land_surface,/area/lavaland/surface/outdoors)
+"p" = (/obj/structure/table/wood,/obj/item/weapon/restraints/legcuffs/bola,/turf/open/floor/plating/asteroid/basalt/lava_land_surface,/area/mine/shelter/ash)
+"q" = (/obj/structure/table/wood,/obj/item/weapon/twohanded/bonespear,/obj/item/weapon/twohanded/bonespear,/turf/open/floor/plating/asteroid/basalt/lava_land_surface,/area/mine/shelter/ash)
+"r" = (/obj/item/weapon/cultivator,/turf/open/floor/plating/asteroid/basalt/lava_land_surface,/area/mine/shelter/ash)
+"s" = (/obj/item/seeds/cherry,/turf/open/floor/plasteel/terror/necro/cult/outdoor,/area/mine/shelter/ash)
+"t" = (/obj/effect/mob_spawn/human/ash_walker,/turf/open/floor/plating/asteroid/basalt/lava_land_surface,/area/mine/shelter/ash)
+"u" = (/obj/structure/bed/roller,/turf/open/floor/plating/asteroid/basalt/lava_land_surface,/area/mine/shelter/ash)
+"v" = (/obj/structure/closet/crate/necropolis,/obj/item/seeds/apple,/obj/item/seeds/apple,/obj/item/seeds/banana,/obj/item/seeds/berry,/obj/item/seeds/berry,/obj/item/seeds/berry,/turf/open/floor/plating/asteroid/basalt/lava_land_surface,/area/mine/shelter/ash)
+"w" = (/obj/machinery/hydroponics/soil{color = "gray"; maxnutri = 99999; maxwater = 99999; name = "necropolis' soil"; nutrilevel = 99999; resistance_flags = 8; unsecuring_tool = null; waterlevel = 99999},/turf/open/floor/plasteel/terror/necro/cult/outdoor,/area/mine/shelter/ash)
+"x" = (/obj/item/weapon/bedsheet/rd,/obj/structure/bed/dogbed,/turf/open/floor/plating/asteroid/basalt/lava_land_surface,/area/mine/shelter/ash)
+"y" = (/obj/structure/firepit{anchored = 1},/turf/open/floor/plating/asteroid/basalt/lava_land_surface{dug = 1; icon_state = "basalt_dug"},/area/lavaland/surface/outdoors)
+"z" = (/obj/item/weapon/reagent_containers/glass/bucket,/turf/open/floor/plasteel/terror/necro/cult/outdoor,/area/mine/shelter/ash)
+"A" = (/obj/structure/sink/puddle,/turf/open/floor/plating/asteroid/basalt/lava_land_surface,/area/mine/shelter/ash)
+"B" = (/obj/item/weapon/kitchen/knife/combat/bone,/turf/open/floor/plating/asteroid/basalt/lava_land_surface,/area/mine/shelter/ash)
+"C" = (/obj/item/weapon/pickaxe/speardrill,/turf/open/floor/plating/asteroid/basalt/lava_land_surface,/area/mine/shelter/ash)
+"D" = (/obj/item/weapon/reagent_containers/food/snacks/grown/mushroom/glowshroom,/turf/open/floor/plasteel/terror/necro/cult/outdoor,/area/mine/shelter/ash)
+"E" = (/obj/structure/closet/crate/necropolis,/turf/open/floor/plating/asteroid/basalt/lava_land_surface,/area/mine/shelter/ash)
+"F" = (/obj/structure/table/wood,/obj/item/weapon/storage/bag/plants/portaseeder,/turf/open/floor/plating/asteroid/basalt/lava_land_surface,/area/mine/shelter/ash)
+"G" = (/obj/item/seeds/cocoapod,/turf/open/floor/plating/asteroid/basalt/lava_land_surface,/area/mine/shelter/ash)
+"H" = (/obj/item/seeds/banana,/turf/open/floor/plating/asteroid/basalt/lava_land_surface,/area/mine/shelter/ash)
+
+(1,1,1) = {"
+aaaaabbbbbbbaaaaaaaaaaa
+aaaaabccdefbaaaaaaaaaaa
+aaaabbgeeecbbaaaaaaaaaa
+ahiabjekllembaaaaaaaaaa
+ahiibbellnlbbaaiaaaaaaa
+ahiiibblllbbiiiiiaaaaaa
+aaaiiibblbbiiiiiiiiiaaa
+abbbbiiiiiiiiobbbbbbbbb
+bbpqbbiiiiibbbbellrseeb
+bpltubiiiiibtvbewewlwlb
+bxlllliiyiillllellllzAb
+bBlClbiiiiiblllleleDeeb
+bbutbbiiiiibEFbGwewlweb
+abbbbiiiiiibbbbeelHereb
+aaiiiiiiiiiiiabbbbbbbbb
+aaiiiiiiiiiiaaaaaaaaaaa
+aaaiiiiiiiiiaaaaaaaaaaa
+aaaiiiiiiiiaaaaaaaaaaaa
+aaaaaiiiiiaaaaaaaaaaaaa
+"}

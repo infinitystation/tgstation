@@ -705,3 +705,8 @@
 			var/link = FOLLOW_LINK(M, user)
 			M << "[link] [text]"
 	log_say("[user.real_name]/[user.key] : [text]")
+
+/obj/item/weapon/reagent_containers/pill/charcoal/low
+	name = "small antitoxin pill"
+	icon_state = "pill17"
+	list_reagents = list("charcoal" = 10)

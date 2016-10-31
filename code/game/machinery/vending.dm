@@ -828,6 +828,15 @@ IF YOU MODIFY THE PRODUCTS LIST OF A MACHINE, MAKE SURE TO UPDATE ITS RESUPPLY C
 	armor = list(melee = 100, bullet = 100, laser = 100, energy = 100, bomb = 0, bio = 0, rad = 0, fire = 100, acid = 50)
 	resistance_flags = FIRE_PROOF
 
+/obj/machinery/vending/wallmed/regular
+	name = "Regular NanoMed"
+	desc = "Wall-mounted regular Medical Equipment dispenser."
+	products = list(/obj/item/weapon/reagent_containers/pill/charcoal/low = 2,
+					/obj/item/stack/medical/bruise_pack = 3,
+					/obj/item/stack/medical/ointment = 3,
+					/obj/item/stack/medical/gauze = 2)
+	contraband = list(/obj/item/weapon/reagent_containers/pill/morphine = 1)
+
 /obj/machinery/vending/security
 	name = "\improper SecTech"
 	desc = "A security equipment vendor"

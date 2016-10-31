@@ -101,7 +101,7 @@
 
 /area/lavaland/underground
 	name = "Lavaland Caves"
-	icon_state = "unexplored"
+	icon_state = "explored"
 	music = null
 	always_unpowered = 1
 	requires_power = 1
@@ -116,5 +116,10 @@
 	name = "Lavaland Wastes"
 	outdoors = 1
 
+/area/lavaland/surface/outdoors/near
+	name = "Lavaland Near Base"
+	icon_state = "unexplored"
+
 /area/lavaland/surface/outdoors/explored
 	name = "Lavaland Labor Camp"
+	icon_state = "unexplored"

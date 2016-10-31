@@ -197,7 +197,7 @@
 
 /obj/effect/spawner/lootdrop/fall
 	name = "Random Fall ship parts"
-	desc = "This is a random Fall ship parts"
+	desc = "This is a random falled ship parts"
 	icon = 'icons/obj/items.dmi'
 	icon_state = "latexballon_bursted"
 	color = "Gray"
@@ -205,7 +205,7 @@
 				/obj/item/stack/rods = 4,
 				/obj/item/stack/sheet/metal = 5,
 				/obj/item/stack/cable_coil/cut = 3,
-				/obj/item/weapon/shard = 2,
+				/obj/item/weapon/shard = 1,
 				/obj/effect/decal/cleanable/robot_debris = 4,
 				"" = 6
 				)

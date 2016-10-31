@@ -259,6 +259,13 @@
 /turf/open/floor/plasteel/terror/necro/darkred/corner
 	icon_state = "darkredcorners"
 
+/turf/open/floor/plasteel/terror/necro/whitepurple
+	icon_state = "whitepurplefull"
+/turf/open/floor/plasteel/terror/necro/whitepurple/side
+	icon_state = "whitepurple"
+/turf/open/floor/plasteel/terror/necro/whitepurple/corner
+	icon_state = "whitepurplecorner"
+
 /turf/open/floor/plasteel/terror/necro/red
 	icon_state = "redfull"
 /turf/open/floor/plasteel/terror/necro/red/side
@@ -285,6 +292,13 @@
 /turf/open/floor/plasteel/terror/necro/darkvault/outdoor
 	initial_gas_mix = "o2=14;n2=23;TEMP=300"
 	planetary_atmos = TRUE
+
+/turf/open/floor/plasteel/terror/necro/darkpurple
+	icon_state = "darkpurplefull"
+/turf/open/floor/plasteel/terror/necro/darkpurple/side
+	icon_state = "darkpurple"
+/turf/open/floor/plasteel/terror/necro/darkpurple/corner
+	icon_state = "darkpurplecorners"
 
 /turf/open/floor/plasteel/terror/necro/darkwarning
 	icon_state = "warndark"
@@ -321,6 +335,13 @@
 /turf/open/floor/plasteel/terror/necro/darkyellow/side
 	icon_state = "darkbrown"
 /turf/open/floor/plasteel/terror/necro/darkyellow/corner
+	icon_state = "darkbrowncorners"
+
+/turf/open/floor/plasteel/terror/necro/darkbrown
+	icon_state = "darkbrownfull"
+/turf/open/floor/plasteel/terror/necro/darkbrown/side
+	icon_state = "darkbrown"
+/turf/open/floor/plasteel/terror/necro/darkbrown/corner
 	icon_state = "darkbrowncorners"
 
 /turf/open/floor/plasteel/terror/necro/brown
