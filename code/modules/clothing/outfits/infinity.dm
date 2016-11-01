@@ -106,3 +106,27 @@
 	W.assignment = "Centcom Securty Sergeant"
 	W.registered_name = H.real_name
 	W.update_label()
+
+/datum/outfit/nar_cult
+	name = "Nar-sie's cultist"
+
+	uniform = /obj/item/clothing/under/color/black
+	shoes = /obj/item/clothing/shoes/cult/alt
+	suit = /obj/item/clothing/suit/cultrobes/alt
+	head = /obj/item/clothing/head/culthood/alt
+	l_pocket = /obj/item/weapon/tome
+	r_pocket = /obj/item/weapon/paper/talisman
+	back = /obj/item/weapon/storage/backpack/cultpack
+	suit_store = /obj/item/weapon/melee/cultblade
+
+/datum/outfit/clock_cult
+	name = "Ratvar's cultist"
+
+	uniform = /obj/item/clothing/under/color/orange
+	shoes = /obj/item/clothing/shoes/clockwork
+	suit = /obj/item/clothing/suit/armor/clockwork
+	head = /obj/item/clothing/head/helmet/clockwork
+	gloves = /obj/item/clothing/gloves/clockwork
+	l_pocket = /obj/item/clockwork/slab/starter
+	r_pocket = /obj/item/weapon/nullrod/tribal_knife
+	back = /obj/item/weapon/storage/backpack/satchel

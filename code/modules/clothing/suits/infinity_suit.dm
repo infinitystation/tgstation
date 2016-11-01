@@ -533,3 +533,11 @@
 	worn_icon = 'icons/mob/infinity_work.dmi'
 	icon_state = "mantle-unathi"
 	item_state = "mantle-unathi"
+
+/obj/item/clothing/suit/cargo_jacket
+	name = "cargo jacket"
+	desc = "В ряд кладет и тащит!"
+	icon_state = "cargo_jacket"
+	item_state = "bl_suit"
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'

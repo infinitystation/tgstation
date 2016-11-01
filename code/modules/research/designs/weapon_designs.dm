@@ -303,3 +303,23 @@
 	materials = list(MAT_SILVER = 8000, MAT_GOLD = 8000, MAT_URANIUM = 8000, MAT_GLASS = 12000, MAT_METAL = 12000, MAT_DIAMOND = 3000)
 	build_path = /obj/item/weapon/gun/energy/gravity_gun
 	category = list("Weapons")
+
+/datum/design/hardquiver
+	name = "Hardlight Quiver"
+	desc = "An energy-infused quiver that recharges bolts for use in a hardlight bow."
+	id = "hardquiver"
+	req_tech = list("combat" = 5, "materials" = 6, "bluespace" = 2, "powerstorage" = 3, "magnets" = 5)
+	build_type = PROTOLATHE
+	materials = list(MAT_SILVER = 6000, MAT_GOLD = 7500, MAT_URANIUM = 3250, MAT_GLASS = 7000, MAT_METAL = 2500, MAT_DIAMOND = 1250, MAT_TITANIUM = 1000)
+	build_path = /obj/item/weapon/storage/backpack/quiver/hardlight
+	category = list("Weapons")
+
+/datum/design/hardbow
+	name = "Hardlight Bow"
+	desc = "A REAL energy bow. Who needs those rusty Syndicate energy bows that aren't even real?"
+	id = "hardbow"
+	req_tech = list("combat" = 5, "materials" = 6, "bluespace" = 2, "powerstorage" = 3, "magnets" = 5)
+	build_type = PROTOLATHE
+	materials = list(MAT_SILVER = 3500, MAT_GOLD = 5750, MAT_URANIUM = 1250, MAT_GLASS = 3000, MAT_METAL =  3000, MAT_DIAMOND = 625, MAT_TITANIUM = 3500)	//HARDLIGHT CAN'T MELT TITANIUM BOWS.
+	build_path = /obj/item/weapon/gun/projectile/bow/hardlight
+	category = list("Weapons")

@@ -179,6 +179,12 @@
 	icon = 'icons/obj/chairs2.dmi'
 	icon_state = "shblackS"
 
+/obj/structure/chair/comfy/throne
+	name = "blood throne"
+	desc = "It looks comfy... Comfy for our blood lord."
+	icon = 'icons/obj/chairs2.dmi'
+	icon_state = "throne"
+
 /obj/structure/chair/office
 	anchored = 0
 	buildstackamount = 5

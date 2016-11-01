@@ -47,11 +47,9 @@
 	dat += "Space Asshole      <a href='byond://?src=\ref[src];music2=1'>Play</a><br>"
 	dat += "Undertale      <a href='byond://?src=\ref[src];music3=1'>Play</a><br>"
 	dat += "Magic Fly         <a href='byond://?src=\ref[src];music4=1'>Play</a><br>"
-	dat += "Frank Sinatra - Blue Moon       <a href='byond://?src=\ref[src];music5=1'>Play</a><br>"
 	dat += "Dvar Hishmaliin		<a href='byond://?src=\ref[src];music6=1'>Play</a><br>"
 	dat += "Gay Bar		<a href='byond://?src=\ref[src];music7=1'>Play</a><br>"
 	dat += "Staying Alive		<a href='byond://?src=\ref[src];music8=1'>Play</a><br>"
-	dat += "Johnny Cash - Hurt		<a href='byond://?src=\ref[src];music9=1'>Play</a><br>"
 
 	dat += "Stop Music <a href='byond://?src=\ref[src];music10=1'>Stop</a><br>"
 
@@ -71,18 +69,13 @@
 		usr << sound('sound/music/undertale.ogg',channel=4, volume=100);
 	else if(href_list["music4"])
 		usr << sound('sound/music/magic_fly.ogg',channel=4, volume=100);
-	else if(href_list["music5"])
-		usr << sound('sound/playlist/Frank Sinatra - Blue Moon.ogg',channel=4, volume=100);
 	else if(href_list["music6"])
 		usr << sound('sound/music/dvar_hishmaliin.ogg',channel=4, volume=100);
 	else if(href_list["music7"])
 		usr << sound('sound/music/gay_bar.ogg',channel=4, volume=100);
 	else if(href_list["music8"])
 		usr << sound('sound/music/staying_alive.ogg',channel=4, volume=100);
-	else if(href_list["music9"])
-		usr << sound('sound/playlist/Johnny Cash - Hurt.ogg',channel=4, volume=100);
 	else if(href_list["music10"])
 		usr << sound(null, channel = 4)
-
 
 	updateUsrDialog()

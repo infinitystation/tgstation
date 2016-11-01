@@ -513,7 +513,7 @@ This is here to make the tiles around the station mininuke change when it's arme
 	return ..()
 
 /obj/item/weapon/disk/nuclear/suicide_act(mob/user)
-	user.visible_message("<span class='suicide'>[user] is going delta! It looks like [user.p_theyre()] trying to commit suicide!</span>")
+	user.visible_message("<span class='suicide'>[user] вручную активирует диск &#255;дерной аутентификации! Ёто насто&#255;щее самоубийство!</span>")
 	playsound(user.loc, 'sound/machines/Alarm.ogg', 50, -1, 1)
 	var/end_time = world.time + 100
 	var/orig_color = user.color
@@ -526,7 +526,7 @@ This is here to make the tiles around the station mininuke change when it's arme
 			user.color = "#FF0000"
 		sleep(1)
 	user.color = orig_color
-	user.visible_message("<span class='suicide'>[user] was destroyed by the nuclear blast!</span>")
+	user.visible_message("<span class='suicide'>Ќа [user] обрушилс&#255; шквал &#255;дерной смеси!</span>")
 	return OXYLOSS
 
 /obj/item/weapon/disk/nuclear/process()

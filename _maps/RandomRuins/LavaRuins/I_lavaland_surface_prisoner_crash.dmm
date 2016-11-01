@@ -1,0 +1,82 @@
+"aa" = (/turf/template_noop,/area/template_noop)
+"ab" = (/turf/closed/mineral/volcanic/lava_land_surface,/area/lavaland/surface/outdoors)
+"ac" = (/turf/open/floor/plating/asteroid/basalt/lava_land_surface,/area/lavaland/surface/outdoors)
+"ad" = (/obj/effect/spawner/lootdrop/fall,/turf/open/floor/plating/asteroid/basalt/lava_land_surface,/area/lavaland/surface/outdoors)
+"ae" = (/turf/open/floor/plating/asteroid/basalt/lava_land_surface{dug = 1; icon_state = "basalt_dug"},/area/lavaland/surface/outdoors)
+"af" = (/turf/closed/wall/shuttle/smooth{baseturf = /turf/open/floor/plating/lava/smooth},/area/lavaland/surface/outdoors)
+"ag" = (/obj/effect/spawner/lootdrop/fall,/turf/open/floor/plating/asteroid/basalt/lava_land_surface{dug = 1; icon_state = "basalt_dug"},/area/lavaland/surface/outdoors)
+"ah" = (/obj/structure/shuttle/engine/propulsion{tag = "icon-burst_s (EAST)"; icon_state = "burst_s"; dir = 4},/obj/structure/shuttle/engine/platform{dir = 8; icon_state = "platform"; pixel_x = 32; tag = "icon-platform (WEST)"},/obj/structure/shuttle/engine/platform{tag = "icon-platform (EAST)"; icon_state = "platform"; dir = 4},/turf/open/floor/plating/lavaland/outdoor,/area/lavaland/surface/outdoors)
+"ai" = (/turf/closed/wall/mineral/titanium/nodiagonal{baseturf = /turf/open/floor/plating/lava/smooth},/area/ruin/unpowered)
+"aj" = (/turf/closed/wall/mineral/titanium/nodiagonal{baseturf = /turf/open/floor/plating/lava/smooth},/area/lavaland/surface/outdoors)
+"ak" = (/obj/machinery/door/airlock/shuttle,/turf/open/floor/plating/lavaland/outdoor,/area/lavaland/surface/outdoors)
+"al" = (/obj/structure/door_assembly/door_assembly_shuttle,/turf/open/floor/plating/lavaland/outdoor,/area/lavaland/surface/outdoors)
+"am" = (/obj/structure/girder,/turf/open/floor/plating/lavaland/outdoor,/area/ruin/unpowered)
+"an" = (/obj/structure/shuttle/engine/propulsion{tag = "icon-propulsion_l (EAST)"; icon_state = "propulsion_l"; dir = 4},/obj/structure/shuttle/engine/platform{tag = "icon-platform (EAST)"; icon_state = "platform"; dir = 4},/obj/structure/shuttle/engine/platform{dir = 8; icon_state = "platform"; pixel_x = 32; tag = "icon-platform (WEST)"},/turf/open/floor/plating/lavaland/outdoor,/area/ruin/unpowered)
+"ao" = (/obj/structure/rack,/obj/item/weapon/pickaxe,/obj/item/weapon/pickaxe,/obj/item/weapon/pickaxe,/obj/item/weapon/pickaxe,/obj/item/device/flashlight/lantern,/obj/item/device/flashlight/lantern,/turf/open/floor/plasteel/terror/necro/black,/area/ruin/unpowered)
+"ap" = (/obj/effect/mob_spawn/human/prisoner_transport{tag = "icon-sleeper_s (EAST)"; icon_state = "sleeper_s"; dir = 4},/obj/effect/spawner/lootdrop/fall,/turf/open/floor/plasteel/terror/necro/blackvault{tag = "icon-tvault (WEST)"; icon_state = "tvault"; dir = 8},/area/ruin/unpowered)
+"aq" = (/obj/effect/mob_spawn/human/prisoner_transport{tag = "icon-sleeper_s (EAST)"; icon_state = "sleeper_s"; dir = 4},/obj/structure/sign/nanotrasen{pixel_y = 31},/turf/open/floor/plasteel/terror/necro/blackvault{tag = "icon-tvault (WEST)"; icon_state = "tvault"; dir = 8},/area/ruin/unpowered)
+"ar" = (/obj/effect/mob_spawn/human/prisoner_transport{tag = "icon-sleeper_s (EAST)"; icon_state = "sleeper_s"; dir = 4},/turf/open/floor/plasteel/terror/necro/blackvault{tag = "icon-tvault (WEST)"; icon_state = "tvault"; dir = 8},/area/ruin/unpowered)
+"as" = (/obj/effect/spawner/lootdrop/fall,/obj/machinery/doorButtons/airlock_controller{pixel_x = -32},/turf/open/floor/plasteel/terror/necro/black/outdoor,/area/lavaland/surface/outdoors)
+"at" = (/obj/machinery/recharger/wallcharger{pixel_x = 32},/turf/open/floor/plating/lavaland/outdoor,/area/ruin/unpowered)
+"au" = (/obj/effect/spawner/lootdrop/fall,/obj/structure/chair/comfy/shuttle,/obj/effect/spawner/lootdrop/fall,/turf/open/floor/plasteel/terror/necro/black/outdoor,/area/ruin/unpowered)
+"av" = (/obj/structure/shuttle/engine/propulsion{icon_state = "propulsion"; dir = 4},/obj/structure/shuttle/engine/platform{tag = "icon-platform (EAST)"; icon_state = "platform"; dir = 4},/obj/structure/shuttle/engine/platform{dir = 8; icon_state = "platform"; pixel_x = 32; tag = "icon-platform (WEST)"},/turf/open/floor/plating/lavaland/outdoor,/area/ruin/unpowered)
+"aw" = (/obj/effect/mob_spawn/human/nanotrasensoldier,/obj/effect/decal/cleanable/blood,/obj/item/device/flashlight/seclite,/obj/effect/light_emitter,/obj/machinery/light/small{tag = "icon-bulb1 (WEST)"; icon_state = "bulb1"; dir = 8},/turf/open/floor/plasteel/terror/necro/black,/area/ruin/unpowered)
+"ax" = (/obj/item/weapon/gun/projectile/automatic/pistol/m1911,/turf/open/floor/plasteel/terror/necro/black,/area/ruin/unpowered)
+"ay" = (/obj/effect/spawner/lootdrop/fall,/turf/open/floor/plasteel/terror/necro/black,/area/ruin/unpowered)
+"az" = (/turf/open/floor/plasteel/terror/necro/black,/area/ruin/unpowered)
+"aA" = (/obj/machinery/door/airlock/shuttle,/turf/open/floor/plasteel/terror/necro/black,/area/ruin/unpowered)
+"aB" = (/turf/open/floor/plasteel/terror/necro/black/outdoor,/area/ruin/unpowered)
+"aC" = (/obj/effect/spawner/lootdrop/fall,/turf/open/floor/plasteel/terror/necro/black/outdoor,/area/ruin/unpowered)
+"aD" = (/obj/structure/door_assembly/door_assembly_shuttle,/turf/open/floor/plasteel/terror/necro/black/outdoor,/area/ruin/unpowered)
+"aE" = (/obj/item/weapon/shard,/turf/open/floor/plasteel/terror/necro/black/outdoor,/area/ruin/unpowered)
+"aF" = (/obj/effect/mob_spawn/human/nanotrasensoldier,/obj/effect/spawner/lootdrop/fall,/turf/open/floor/plasteel/terror/necro/black/outdoor,/area/lavaland/surface/outdoors)
+"aG" = (/obj/structure/shuttle/engine/propulsion{tag = "icon-propulsion_r (EAST)"; icon_state = "propulsion_r"; dir = 4},/obj/structure/shuttle/engine/platform{tag = "icon-platform (EAST)"; icon_state = "platform"; dir = 4},/obj/structure/shuttle/engine/platform{dir = 8; icon_state = "platform"; pixel_x = 32; tag = "icon-platform (WEST)"},/turf/open/floor/plating/lavaland/outdoor,/area/lavaland/surface/outdoors)
+"aH" = (/obj/structure/closet/crate/internals,/obj/item/weapon/crowbar/large,/turf/open/floor/plasteel/terror/necro/black,/area/ruin/unpowered)
+"aI" = (/obj/effect/mob_spawn/human/prisoner_transport{tag = "icon-sleeper_s (EAST)"; icon_state = "sleeper_s"; dir = 4},/obj/machinery/vending/wallmed/regular{pixel_y = -28},/turf/open/floor/plasteel/terror/necro/blackvault{tag = "icon-tvault (WEST)"; icon_state = "tvault"; dir = 8},/area/ruin/unpowered)
+"aJ" = (/turf/open/floor/plasteel/terror/necro/black/outdoor,/area/lavaland/surface/outdoors)
+"aK" = (/obj/effect/mob_spawn/human/nanotrasensoldier,/obj/effect/spawner/lootdrop/fall,/turf/open/floor/plating/lavaland/outdoor,/area/ruin/unpowered)
+"aL" = (/obj/item/weapon/shard,/obj/effect/spawner/lootdrop/fall,/turf/open/floor/plasteel/terror/necro/black/outdoor,/area/lavaland/surface/outdoors)
+"aM" = (/obj/item/stack/sheet/metal,/turf/open/floor/plating/asteroid/basalt/lava_land_surface{dug = 1; icon_state = "basalt_dug"},/area/lavaland/surface/outdoors)
+"aN" = (/obj/item/stack/sheet/metal,/turf/open/floor/plating/lavaland/outdoor,/area/lavaland/surface/outdoors)
+"aO" = (/obj/structure/girder,/obj/item/stack/sheet/mineral/titanium{amount = 2},/turf/open/floor/plating/lavaland/outdoor,/area/lavaland/surface/outdoors)
+"aP" = (/turf/closed/wall/mineral/titanium/nodiagonal{baseturf = /turf/open/floor/plating/lava/smooth},/area/space)
+"aQ" = (/obj/structure/girder,/turf/open/floor/plating/lavaland/outdoor,/area/lavaland/surface/outdoors)
+"aR" = (/obj/effect/decal/fakelattice,/obj/item/stack/sheet/mineral/titanium{amount = 2},/turf/open/floor/plating/asteroid/basalt/lava_land_surface,/area/lavaland/surface/outdoors)
+"aS" = (/turf/open/floor/plating/lavaland/outdoor,/area/lavaland/surface/outdoors)
+"aT" = (/obj/item/stack/sheet/mineral/titanium{amount = 2},/turf/open/floor/plating/asteroid/basalt/lava_land_surface{dug = 1; icon_state = "basalt_dug"},/area/lavaland/surface/outdoors)
+"aU" = (/obj/item/stack/sheet/metal,/turf/open/floor/plating/asteroid/basalt/lava_land_surface,/area/lavaland/surface/outdoors)
+"aV" = (/obj/effect/spawner/lootdrop/fall,/obj/item/stack/sheet/mineral/titanium{amount = 2},/turf/open/floor/plating/lavaland/outdoor,/area/lavaland/surface/outdoors)
+"aW" = (/obj/item/stack/sheet/mineral/titanium{amount = 2},/turf/open/floor/plating/asteroid/basalt/lava_land_surface,/area/lavaland/surface/outdoors)
+"aX" = (/obj/structure/girder,/turf/open/floor/plating/asteroid/basalt/lava_land_surface,/area/lavaland/surface/outdoors)
+"aY" = (/obj/item/toy/carpplushie/dragon,/turf/open/floor/plating/asteroid/basalt/lava_land_surface,/area/lavaland/surface/outdoors)
+"aZ" = (/obj/effect/spawner/lootdrop/fall,/turf/open/floor/plating/lavaland/outdoor,/area/lavaland/surface/outdoors)
+"ba" = (/obj/effect/decal/cleanable/blood,/turf/open/floor/plating/asteroid/basalt/lava_land_surface{dug = 1; icon_state = "basalt_dug"},/area/lavaland/surface/outdoors)
+"bb" = (/obj/effect/spawner/lootdrop/fall,/obj/effect/spawner/lootdrop/fall,/turf/open/floor/plating/asteroid/basalt/lava_land_surface,/area/lavaland/surface/outdoors)
+"bc" = (/obj/item/weapon/shard{icon_state = "small"},/turf/open/floor/plating/asteroid/basalt/lava_land_surface,/area/lavaland/surface/outdoors)
+"bd" = (/obj/item/weapon/gun/projectile/automatic/pistol/m1911,/turf/open/floor/plating/asteroid/basalt/lava_land_surface,/area/lavaland/surface/outdoors)
+"be" = (/obj/item/weapon/shard,/turf/open/floor/plating/asteroid/basalt/lava_land_surface,/area/lavaland/surface/outdoors)
+"bf" = (/obj/effect/mob_spawn/human/nanotrasensoldier,/obj/effect/decal/cleanable/blood,/turf/open/floor/plating/asteroid/basalt/lava_land_surface,/area/lavaland/surface/outdoors)
+"bg" = (/obj/effect/decal/cleanable/blood,/obj/item/device/flashlight/seclite,/turf/open/floor/plating/asteroid/basalt/lava_land_surface,/area/lavaland/surface/outdoors)
+
+(1,1,1) = {"
+aaaaaaaaaaaaaaaaaaaaabababacacacacacacabacacabababababababababab
+aaaaaaaaaaaaaaaaaaaaaaaaabababacacacacadacacacababababababababab
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaabababadacadacadacababababababababab
+aaaaaaaaaaaaaaaaaaaaaaaaaaababababacacacacacacababababababababab
+aaaaaaaaaaaaaaaaaaaaaaaaaaababababacadadacacacababababababababab
+aaaaaaaaaaaaaaaaaaaaaaabababababacacacacadadadacabababababababab
+aaaaaaaaaaaaaaaaaaaaababababababacadadacacadacacabababababababab
+aaaaaaaaaaaaaaaaacacacacacadacacaeafabababacacadabababababababab
+aaacacacacacacaeaeaeagadacacadaeagahaiaiabababacadababababababab
+acadacacacadacaeagaeagagagagaeafajaiaiaiaiaiaiakalaiamababababab
+acadacadacaeagagaeagagaeaeagaganaiaoapaqararaiasataiauababababab
+acacacaeagagaeaeagaeaeagagagaeavaiawaxayazazaAaBaCaDaEaFabababab
+acacagaeagaeagaeagagaeaeaeaeagaGaiaHapaIarapaiaCaJaiaKaLabababab
+acagaeaeagagaeagaeagadagadagaMaNaOaPaiaiaiaiaQaRalaiaNaOabababab
+acacacaeagaeaSagaeagadacaeagaeagaTaSaNaUaVacadacacacaWacabababab
+aaacacacaeaeacacacaeaeacadacacaeagaeaTaXaUadacaYadacacababababab
+aaaaaaaaaaaaaaaaacacacacacacadacadacaZacbabbadadacababababababab
+aaaaaaaaaaaaaaaaaaaaacababacacbcbdacacaWacadacacbeababababababab
+aaaaaaaaaaaaaaaaaaaaaaaaabababacacbfbgadacababababababababababab
+aaaaaaaaaaaaaaaaaaaaaaaaabababababacacadacababababababababababab
+"}

@@ -15,6 +15,7 @@
  *		Handcuff, mousetrap, and pillbottle boxes,
  *		Snap-pops and matchboxes,
  *		Replacement light boxes.
+ *		Action Figure Boxes
  *		Various paper bags.
  *
  *		For syndicate call-ins see uplink_kits.dm
@@ -647,6 +648,17 @@
 	new /obj/item/weapon/reagent_containers/food/snacks/pancake(src)
 	new /obj/item/weapon/reagent_containers/food/snacks/pancake(src)
 	return
+
+/obj/item/weapon/storage/box/actionfigure
+	name = "box of action figures"
+	desc = "The latest set of collectable action figures."
+	icon_state = "box"
+
+/obj/item/weapon/storage/box/actionfigure/New()
+	..()
+	for(var/i in 1 to 4)
+		var/randomFigure = pick(subtypesof(/obj/item/toy/figure))
+		new randomFigure(src)
 
 #define NODESIGN "None"
 #define NANOTRASEN "NanotrasenStandard"

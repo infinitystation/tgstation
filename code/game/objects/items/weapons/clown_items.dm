@@ -42,8 +42,7 @@
 	cleanspeed = 10 //much faster than mop so it is useful for traitors who want to clean crime scenes
 
 /obj/item/weapon/soap/suicide_act(mob/user)
-	user.say(";FFFFFFFFFFFFFFFFUUUUUUUDGE!!")
-	user.visible_message("<span class='suicide'>[user] lifts [src] to their mouth and gnaws on it furiously, producing a thick froth! [user.p_they(TRUE)]'ll never get that BB gun now!")
+	user.visible_message("<span class='suicide'>[user] кладет мыло в свой рот и начинает его грызть! Из его рта полилась кака&#255;-то пена!")
 	PoolOrNew(/obj/effect/particle_effect/foam, loc)
 	return (TOXLOSS)
 
@@ -107,7 +106,8 @@
 	var/cooldowntime = 20
 
 /obj/item/weapon/bikehorn/suicide_act(mob/user)
-	user.visible_message("<span class='suicide'>[user] solemnly points the horn at [user.p_their()] temple! It looks like [user.p_theyre()] trying to commit suicide!</span>")
+	user.say(";МОЙ ГУДОК ПРОНЗИТ НЕБЕСА!")
+	user.visible_message("<span class='suicide'>[user] пондимает свой гудок к небесам и собирается совершить самоубийство!</span>")
 	playsound(src.loc, honksound, 50, 1)
 	return (BRUTELOSS)
 

@@ -1,0 +1,48 @@
+"a" = (/turf/template_noop,/area/template_noop)
+"b" = (/turf/closed/mineral/volcanic/lava_land_surface,/area/lavaland/surface/outdoors)
+"c" = (/turf/open/floor/plating/asteroid/basalt/lava_land_surface,/area/lavaland/surface/outdoors)
+"d" = (/obj/effect/decal/remains/human,/obj/effect/decal/cleanable/blood/old,/turf/open/floor/plating/asteroid/basalt/lava_land_surface,/area/lavaland/surface/outdoors)
+"e" = (/obj/effect/decal/remains/human,/turf/open/floor/plating/asteroid/basalt/lava_land_surface,/area/lavaland/surface/outdoors)
+"f" = (/obj/effect/decal/cleanable/blood/old,/turf/open/floor/plating/asteroid/basalt/lava_land_surface,/area/lavaland/surface/outdoors)
+"g" = (/turf/open/indestructible/necropolis,/area/lavaland/surface/outdoors)
+"h" = (/obj/effect/decal/cleanable/ash/large,/turf/open/indestructible/necropolis,/area/lavaland/surface/outdoors)
+"i" = (/obj/effect/decal/cleanable/blood/old,/turf/open/indestructible/necropolis,/area/lavaland/surface/outdoors)
+"j" = (/turf/closed/indestructible/necropolis,/area/lavaland/surface/outdoors)
+"k" = (/obj/machinery/wish_granter,/turf/open/indestructible/necropolis,/area/lavaland/surface/outdoors)
+"l" = (/obj/effect/decal/cleanable/blood/drip,/turf/open/indestructible/necropolis,/area/lavaland/surface/outdoors)
+"m" = (/obj/effect/decal/remains/human,/turf/open/indestructible/necropolis,/area/lavaland/surface/outdoors)
+"n" = (/obj/effect/decal/cleanable/ash,/turf/open/indestructible/necropolis,/area/lavaland/surface/outdoors)
+"o" = (/obj/effect/decal/cleanable/blood/drip,/turf/open/floor/plating/asteroid/basalt/lava_land_surface,/area/lavaland/surface/outdoors)
+
+(1,1,1) = {"
+aaaaaaaaaabbbbbbbbbbbbbbbaaaab
+aaaaaaaaabbbbbbbbbbbbbbbaaaaab
+aaaaaaaabbbbbbbccccdbbbbaaaabb
+aaaaaabbbbbbbecfbbcccbbbaaabbb
+aaaaabbbbbbbcccccbbccbbccaabbb
+aaaaabbbbbbbcccccbcccbbcccbbbb
+aaaabbbbbbbccgdccccfcbcdccbbbb
+aaabbbbbbbbccgccecccccccccbbbb
+aaabbbbbbbbbchgccccecccccccbbb
+aabbbbbbbbbggighgccccccccccbbb
+abbbbbbbcbbhghgghggccbcccdccbb
+bbbbbbbcggiggjgijghigccccccccb
+bbbbbbccgggghjjjjjghggggcceccb
+abaabccccggihjjkjjhghggggccccb
+aaaacccceccgggjjjjhcccghgccccb
+aaaaccfccccchgijjgicccfcccbccb
+aaaaccccfccehggghghggceccbbcfb
+aaacccecceclgghgheccgccccbbccb
+aaaccccccccmnccbbccbcfccbbbccb
+aacccccccccgcocbbbbbbcbbbbcfcb
+aabcccecccccccdcbbbbbbbbbbccbb
+bbbbccccccfcocccbbbbbbbbbcccbc
+bbbbbccccccccebbbbbbbbbbbccdcc
+bbbbbfccccdccccbbbbbbbbbbbcccb
+bbbbbcecccccoccbbbbbbbbbbbbacb
+bbbbbcccccccccccbbbbbbbbbbbaab
+bbbbbbcccdccccccbbbbbbbbabaaab
+bbbbbbbcccccocccbbbbbbbbaaaaab
+bbbbbbbbccccecfccbbbbbbbbaaaab
+bbbbbbbbbbccfoccccbbbbbbbbaaab
+"}

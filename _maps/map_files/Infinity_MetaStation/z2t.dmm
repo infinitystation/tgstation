@@ -13109,33 +13109,20 @@
 	},
 /area/centcom/ferry)
 "HJ" = (
-/obj/machinery/porta_turret/heavy{
-	scan_range = 15
-	},
-/obj/structure/window/reinforced{
-	dir = 1;
-	layer = 2.9
-	},
-/obj/structure/window/reinforced{
+/obj/structure/chair/wood/wings{
+	tag = "icon-wooden_chair_wings (WEST)";
+	icon_state = "wooden_chair_wings";
 	dir = 8
 	},
-/turf/open/floor/plating,
-/area/shuttle/NTcruiser)
+/turf/open/floor/engine/cult,
+/area/wizard_station)
 "HK" = (
 /turf/open/floor/plating,
 /area/shuttle/NTcruiser)
 "HL" = (
-/turf/open/floor{
-	dir = 6;
-	icon = 'icons/turf/floors.dmi';
-	icon_state = "plating"
-	},
-/obj/structure/window/reinforced{
-	dir = 1;
-	layer = 2.9
-	},
-/turf/closed/wall/shuttle/smooth,
-/area/shuttle/NTcruiser)
+/obj/machinery/porta_turret/heavy/central_command,
+/turf/open/space,
+/area/space)
 "HM" = (
 /turf/closed/wall/shuttle/smooth,
 /area/shuttle/NTcruiser)
@@ -21156,11 +21143,11 @@ kd
 kd
 kd
 kd
-nz
-nE
 nJ
+nc
 nE
-nf
+nc
+nJ
 kd
 iB
 iB
@@ -21413,11 +21400,11 @@ kd
 nm
 km
 kd
+nJ
 nc
+HJ
 nc
-nc
-nc
-nc
+nJ
 kd
 mM
 ne
@@ -21927,11 +21914,11 @@ nP
 nP
 nP
 kd
+nJ
 nz
-nE
 nc
-nE
-nf
+nc
+nJ
 kd
 nc
 nc
@@ -60300,7 +60287,7 @@ aa
 aa
 aa
 AE
-AE
+aa
 aa
 aa
 BI
@@ -60555,10 +60542,10 @@ aa
 aa
 aa
 aa
-aa
 AE
 AE
 aa
+AE
 aa
 BI
 aa
@@ -60813,10 +60800,10 @@ yT
 yS
 aa
 aa
+AE
 aa
 AE
-AE
-AE
+IH
 BI
 aa
 aa
@@ -61070,10 +61057,10 @@ Jk
 yT
 yS
 aa
-aa
 AE
-aa
-aa
+AE
+AE
+AE
 BI
 aa
 aa
@@ -61327,8 +61314,8 @@ Jl
 JO
 Kt
 aa
-aa
 AE
+aa
 aa
 aa
 BI
@@ -61584,8 +61571,8 @@ Jm
 JP
 Kt
 aa
-aa
 AE
+aa
 AE
 AE
 BI
@@ -61841,9 +61828,9 @@ Jm
 JQ
 Kt
 aa
-aa
 AE
-aa
+AE
+AE
 aa
 BI
 aa
@@ -62099,7 +62086,7 @@ JR
 Kt
 aa
 AE
-AE
+aa
 aa
 aa
 BI
@@ -63127,7 +63114,7 @@ AE
 AE
 AE
 AE
-aa
+AE
 aa
 aa
 BI

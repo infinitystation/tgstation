@@ -189,7 +189,7 @@
 					msg += " и [t_his] душа отбыла"
 			msg += "...</span>\n"
 		else if(get_bodypart("head")) //Brain is gone, doesn't matter if they are AFK or present. Check for head first tho. Decapitation has similar message.
-			msg += "<span class='deadsay'>Кажетс&#255, [t_his] мозг пропал...</span>\n"
+			msg += "<span class='deadsay'>Кажетс&#255;, [t_his] мозг пропал...</span>\n"
 
 	var/temp = getBruteLoss() //no need to calculate each of these twice
 
