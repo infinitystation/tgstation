@@ -17,39 +17,47 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
-/turf/closed/indestructible/riveted/infinity,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/turf/closed/indestructible/riveted,
 /area/space)
 "af" = (
 /obj/structure/foamedmetal,
 /obj/structure/window{
-	tag = "icon-rwindow (WEST)";
 	icon_state = "rwindow";
 	dir = 8
 	},
-/turf/open/floor/holofloor/plating,
+/turf/open/floor/holofloor/asteroid,
 /area/holodeck/rec_center/bunker)
 "ag" = (
 /obj/structure/foamedmetal,
 /obj/structure/window{
-	tag = "icon-rwindow (EAST)";
 	icon_state = "rwindow";
 	dir = 4
 	},
-/turf/open/floor/holofloor/plating,
+/turf/open/floor/holofloor/asteroid,
 /area/holodeck/rec_center/bunker)
 "ah" = (
-/obj/structure/barricade/security/ctf,
-/turf/open/floor/holofloor/plating,
+/turf/open/floor/holofloor/asteroid,
 /area/holodeck/rec_center/bunker)
 "ai" = (
-/turf/open/floor/holofloor/plating,
+/turf/open/floor/holofloor{
+	tag = "icon-asteroid_warn_side (WEST)";
+	icon_state = "asteroid_warn_side";
+	dir = 8
+	},
 /area/holodeck/rec_center/bunker)
 "aj" = (
 /obj/structure/table,
 /obj/item/stack/medical/ointment{
 	heal_burn = 10
 	},
-/turf/open/floor/holofloor/plating,
+/turf/open/floor/holofloor{
+	tag = "icon-asteroid_warn_side (WEST)";
+	icon_state = "asteroid_warn_side";
+	dir = 8
+	},
 /area/holodeck/rec_center/bunker)
 "ak" = (
 /obj/structure/window/reinforced{
@@ -64,17 +72,17 @@
 /turf/open/floor/holofloor/carpet,
 /area/holodeck/rec_center/lounge)
 "am" = (
-/obj/structure/chair/wood/normal{
-	tag = "icon-wooden_chair (EAST)";
-	icon_state = "wooden_chair";
-	dir = 4
+/obj/structure/closet/crate/bin,
+/turf/open/floor/holofloor{
+	icon_state = "wood";
+	dir = 9
 	},
-/turf/open/floor/holofloor/carpet,
 /area/holodeck/rec_center/lounge)
 "an" = (
-/obj/structure/table/wood/poker,
-/obj/effect/holodeck_effect/cards,
-/turf/open/floor/holofloor/carpet,
+/turf/open/floor/holofloor{
+	icon_state = "wood";
+	dir = 9
+	},
 /area/holodeck/rec_center/lounge)
 "ao" = (
 /obj/structure/table/wood/poker,
@@ -82,12 +90,15 @@
 /turf/open/floor/holofloor/carpet,
 /area/holodeck/rec_center/lounge)
 "ap" = (
-/obj/structure/chair/wood/normal{
-	tag = "icon-wooden_chair (WEST)";
-	icon_state = "wooden_chair";
-	dir = 8
+/obj/structure/table/wood,
+/obj/item/device/flashlight/lamp/green{
+	layer = 3.3;
+	pixel_y = 0
 	},
-/turf/open/floor/holofloor/carpet,
+/turf/open/floor/holofloor{
+	icon_state = "wood";
+	dir = 9
+	},
 /area/holodeck/rec_center/lounge)
 "aq" = (
 /turf/open/floor/holofloor/plating,
@@ -96,11 +107,7 @@
 /turf/open/floor/holofloor/plating,
 /area/holodeck/rec_center/offline)
 "as" = (
-/turf/open/floor/holofloor{
-	icon_state = "engine";
-	name = "Burn-Mix Floor";
-	initial_gas_mix = "o2=2500;plasma=5000;TEMP=370"
-	},
+/turf/open/floor/holofloor/plating/burnmix,
 /area/holodeck/rec_center/burn)
 "at" = (
 /turf/open/floor/holofloor{
@@ -124,20 +131,23 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/turf/closed/indestructible/riveted/infinity,
+/turf/closed/indestructible/riveted,
 /area/space)
 "ax" = (
 /obj/structure/table,
 /obj/machinery/recharger,
-/turf/open/floor/holofloor/plating,
+/turf/open/floor/holofloor{
+	tag = "icon-asteroidfloor (WEST)";
+	icon_state = "asteroidfloor";
+	dir = 8
+	},
 /area/holodeck/rec_center/bunker)
 "ay" = (
-/obj/structure/chair/wood/normal{
-	tag = "icon-wooden_chair (NORTH)";
-	icon_state = "wooden_chair";
-	dir = 1
+/obj/structure/chair/wood/normal,
+/turf/open/floor/holofloor{
+	icon_state = "wood";
+	dir = 9
 	},
-/turf/open/floor/holofloor/carpet,
 /area/holodeck/rec_center/lounge)
 "az" = (
 /obj/effect/holodeck_effect/mobspawner,
@@ -145,11 +155,7 @@
 /area/holodeck/rec_center/wildlife)
 "aA" = (
 /obj/effect/holodeck_effect/sparks,
-/turf/open/floor/holofloor{
-	icon_state = "engine";
-	name = "Burn-Mix Floor";
-	initial_gas_mix = "o2=2500;plasma=5000;TEMP=370"
-	},
+/turf/open/floor/holofloor/plating/burnmix,
 /area/holodeck/rec_center/burn)
 "aB" = (
 /turf/open/floor/holofloor{
@@ -169,16 +175,18 @@
 "aE" = (
 /obj/structure/table,
 /obj/item/weapon/gun/energy/laser,
-/turf/open/floor/holofloor/plating,
+/turf/open/floor/holofloor{
+	tag = "icon-asteroidfloor (WEST)";
+	icon_state = "asteroidfloor";
+	dir = 8
+	},
 /area/holodeck/rec_center/bunker)
 "aF" = (
 /obj/structure/window/reinforced/tinted{
-	tag = "icon-rwindow (EAST)";
 	icon_state = "rwindow";
 	dir = 4
 	},
 /turf/open/floor/holofloor{
-	tag = "icon-wood (NORTHWEST)";
 	icon_state = "wood";
 	dir = 9
 	},
@@ -189,10 +197,14 @@
 /turf/open/floor/holofloor/carpet,
 /area/holodeck/rec_center/lounge)
 "aH" = (
-/obj/structure/chair/comfy/brown{
-	buildstackamount = 0
+/obj/structure/chair/wood/normal{
+	icon_state = "wooden_chair";
+	dir = 1
 	},
-/turf/open/floor/holofloor/carpet,
+/turf/open/floor/holofloor{
+	icon_state = "wood";
+	dir = 9
+	},
 /area/holodeck/rec_center/lounge)
 "aI" = (
 /turf/open/floor/holofloor{
@@ -208,7 +220,9 @@
 /area/holodeck/rec_center/court)
 "aK" = (
 /obj/structure/table/wood,
-/obj/item/device/flashlight/lamp/green,
+/obj/item/device/flashlight/lamp/green{
+	pixel_y = 4
+	},
 /turf/open/floor/holofloor/carpet,
 /area/holodeck/rec_center/lounge)
 "aL" = (
@@ -225,11 +239,13 @@
 "aN" = (
 /obj/structure/table,
 /obj/item/stack/medical/bruise_pack{
-	amount = 10;
-	heal_brute = 10;
-	name = "tiny bruise pack"
+	heal_brute = 10
 	},
-/turf/open/floor/holofloor/plating,
+/turf/open/floor/holofloor{
+	tag = "icon-asteroid_warn_side (WEST)";
+	icon_state = "asteroid_warn_side";
+	dir = 8
+	},
 /area/holodeck/rec_center/bunker)
 "aO" = (
 /obj/structure/table/wood/poker,
@@ -271,8 +287,8 @@
 /obj/structure/table/glass,
 /obj/item/weapon/surgicaldrill,
 /turf/open/floor/holofloor{
-	tag = "icon-warnwhite (NORTHWEST)";
-	icon_state = "warnwhite";
+	tag = "icon-white_warn (NORTHWEST)";
+	icon_state = "white_warn";
 	dir = 9
 	},
 /area/holodeck/rec_center/medical)
@@ -280,8 +296,8 @@
 /obj/structure/table/glass,
 /obj/item/weapon/hemostat,
 /turf/open/floor/holofloor{
-	tag = "icon-warnwhite (NORTH)";
-	icon_state = "warnwhite";
+	tag = "icon-white_warn (NORTH)";
+	icon_state = "white_warn";
 	dir = 1
 	},
 /area/holodeck/rec_center/medical)
@@ -292,8 +308,8 @@
 	},
 /obj/item/weapon/circular_saw,
 /turf/open/floor/holofloor{
-	tag = "icon-warnwhite (NORTH)";
-	icon_state = "warnwhite";
+	tag = "icon-white_warn (NORTH)";
+	icon_state = "white_warn";
 	dir = 1
 	},
 /area/holodeck/rec_center/medical)
@@ -301,17 +317,18 @@
 /obj/structure/table/glass,
 /obj/item/weapon/retractor,
 /turf/open/floor/holofloor{
-	tag = "icon-warnwhite (NORTH)";
-	icon_state = "warnwhite";
+	tag = "icon-white_warn (NORTH)";
+	icon_state = "white_warn";
 	dir = 1
 	},
 /area/holodeck/rec_center/medical)
 "aZ" = (
 /obj/structure/table/glass,
+/obj/item/stack/medical/gauze,
 /obj/item/weapon/cautery,
 /turf/open/floor/holofloor{
-	tag = "icon-warnwhite (NORTHEAST)";
-	icon_state = "warnwhite";
+	tag = "icon-white_warn (NORTHEAST)";
+	icon_state = "white_warn";
 	dir = 5
 	},
 /area/holodeck/rec_center/medical)
@@ -322,7 +339,9 @@
 	},
 /area/holodeck/rec_center/basketball)
 "bb" = (
-/obj/structure/holohoop,
+/obj/structure/holohoop{
+	layer = 3.9
+	},
 /turf/open/floor/holofloor{
 	dir = 1;
 	icon_state = "red"
@@ -338,29 +357,35 @@
 /turf/open/floor/holofloor/beach,
 /area/holodeck/rec_center/beach)
 "be" = (
+/turf/open/floor/holofloor/basalt,
 /obj/structure/table,
 /obj/machinery/readybutton,
 /turf/open/floor/holofloor{
-	dir = 9;
-	icon_state = "red"
+	tag = "icon-warningline";
+	icon_state = "warningline";
+	dir = 2
 	},
 /area/holodeck/rec_center/thunderdome)
 "bf" = (
+/turf/open/floor/holofloor/basalt,
 /obj/structure/table,
 /obj/item/clothing/head/helmet/thunderdome,
 /obj/item/clothing/suit/armor/tdome/red,
 /obj/item/clothing/under/color/red,
 /obj/item/weapon/holo/esword/red,
 /turf/open/floor/holofloor{
-	dir = 1;
-	icon_state = "red"
+	tag = "icon-warningline";
+	icon_state = "warningline";
+	dir = 2
 	},
 /area/holodeck/rec_center/thunderdome)
 "bg" = (
+/turf/open/floor/holofloor/basalt,
 /obj/structure/table,
 /turf/open/floor/holofloor{
-	dir = 5;
-	icon_state = "red"
+	tag = "icon-warningline";
+	icon_state = "warningline";
+	dir = 2
 	},
 /area/holodeck/rec_center/thunderdome)
 "bh" = (
@@ -387,21 +412,20 @@
 /obj/item/weapon/surgical_drapes,
 /obj/item/weapon/razor,
 /turf/open/floor/holofloor{
-	tag = "icon-warnwhite (WEST)";
-	icon_state = "warnwhite";
+	tag = "icon-white_warn (WEST)";
+	icon_state = "white_warn";
 	dir = 8
 	},
 /area/holodeck/rec_center/medical)
 "bl" = (
 /turf/open/floor/holofloor{
-	icon_state = "white";
-	tag = "icon-bluespace"
+	icon_state = "white"
 	},
 /area/holodeck/rec_center/medical)
 "bm" = (
 /turf/open/floor/holofloor{
-	tag = "icon-warnwhite (EAST)";
-	icon_state = "warnwhite";
+	tag = "icon-white_warn (EAST)";
+	icon_state = "white_warn";
 	dir = 4
 	},
 /area/holodeck/rec_center/medical)
@@ -430,10 +454,7 @@
 /turf/open/floor/holofloor/beach,
 /area/holodeck/rec_center/beach)
 "bs" = (
-/turf/open/floor/holofloor{
-	dir = 8;
-	icon_state = "red"
-	},
+/turf/open/floor/holofloor/basalt,
 /area/holodeck/rec_center/thunderdome)
 "bt" = (
 /turf/open/floor/holofloor,
@@ -461,29 +482,26 @@
 /area/holodeck/rec_center/dodgeball)
 "by" = (
 /turf/open/floor/holofloor{
-	tag = "icon-warnwhite (SOUTHWEST)";
-	icon_state = "warnwhite";
+	tag = "icon-white_warn (SOUTHWEST)";
+	icon_state = "white_warn";
 	dir = 10
 	},
 /area/holodeck/rec_center/medical)
 "bz" = (
 /turf/open/floor/holofloor{
-	tag = "icon-warnwhite";
-	icon_state = "warnwhite"
+	icon_state = "white_warn"
 	},
 /area/holodeck/rec_center/medical)
 "bA" = (
 /obj/structure/table/optable,
 /turf/open/floor/holofloor{
-	tag = "icon-warnwhite";
-	icon_state = "warnwhite"
+	icon_state = "white_warn"
 	},
 /area/holodeck/rec_center/medical)
 "bB" = (
 /obj/machinery/computer/operating,
 /turf/open/floor/holofloor{
-	tag = "icon-warnwhite";
-	icon_state = "warnwhite"
+	icon_state = "white_warn"
 	},
 /area/holodeck/rec_center/medical)
 "bC" = (
@@ -492,8 +510,8 @@
 /obj/item/clothing/suit/apron/surgical,
 /obj/item/clothing/mask/surgical,
 /turf/open/floor/holofloor{
-	tag = "icon-warnwhite (SOUTHEAST)";
-	icon_state = "warnwhite";
+	tag = "icon-white_warn (SOUTHEAST)";
+	icon_state = "white_warn";
 	dir = 6
 	},
 /area/holodeck/rec_center/medical)
@@ -514,8 +532,7 @@
 	dir = 1
 	},
 /turf/open/floor/holofloor{
-	icon_state = "white";
-	tag = "icon-bluespace"
+	icon_state = "white"
 	},
 /area/holodeck/rec_center/medical)
 "bG" = (
@@ -527,31 +544,33 @@
 /obj/structure/table/glass,
 /obj/machinery/reagentgrinder,
 /turf/open/floor/holofloor{
-	tag = "icon-warnwhite (NORTHWEST)";
-	icon_state = "warnwhite";
+	tag = "icon-white_warn (NORTHWEST)";
+	icon_state = "white_warn";
 	dir = 9
 	},
 /area/holodeck/rec_center/medical)
 "bI" = (
 /turf/open/floor/holofloor{
-	tag = "icon-warnwhite (WEST)";
-	icon_state = "warnwhite";
-	dir = 8
+	tag = "icon-white_warn (NORTHEAST)";
+	icon_state = "white_warn";
+	dir = 5
 	},
 /area/holodeck/rec_center/medical)
 "bJ" = (
 /obj/structure/table/glass,
+/obj/item/weapon/storage/box/syringes{
+	pixel_x = 4;
+	pixel_y = 4
+	},
 /obj/item/weapon/storage/box/beakers,
 /turf/open/floor/holofloor{
-	icon_state = "white";
-	tag = "icon-bluespace"
+	icon_state = "white"
 	},
 /area/holodeck/rec_center/medical)
 "bK" = (
 /obj/machinery/washing_machine,
 /turf/open/floor/holofloor{
-	icon_state = "white";
-	tag = "icon-bluespace"
+	icon_state = "white"
 	},
 /area/holodeck/rec_center/medical)
 "bL" = (
@@ -579,10 +598,7 @@
 /area/holodeck/rec_center/beach)
 "bP" = (
 /obj/structure/window,
-/turf/open/floor/holofloor{
-	dir = 8;
-	icon_state = "red"
-	},
+/turf/open/floor/holofloor/basalt,
 /area/holodeck/rec_center/thunderdome)
 "bQ" = (
 /obj/structure/window,
@@ -628,24 +644,22 @@
 "bV" = (
 /obj/machinery/chem_master,
 /turf/open/floor/holofloor{
-	tag = "icon-warnwhite (SOUTHWEST)";
-	icon_state = "warnwhite";
+	tag = "icon-white_warn (SOUTHWEST)";
+	icon_state = "white_warn";
 	dir = 10
 	},
 /area/holodeck/rec_center/medical)
 "bW" = (
 /obj/structure/table/glass,
-/obj/item/weapon/storage/box/syringes,
+/obj/item/device/healthanalyzer,
 /turf/open/floor/holofloor{
-	icon_state = "white";
-	tag = "icon-bluespace"
+	icon_state = "white"
 	},
 /area/holodeck/rec_center/medical)
 "bX" = (
 /obj/structure/closet/wardrobe/white,
 /turf/open/floor/holofloor{
-	icon_state = "white";
-	tag = "icon-bluespace"
+	icon_state = "white"
 	},
 /area/holodeck/rec_center/medical)
 "bY" = (
@@ -674,10 +688,7 @@
 /obj/structure/window{
 	dir = 1
 	},
-/turf/open/floor/holofloor{
-	dir = 8;
-	icon_state = "green"
-	},
+/turf/open/floor/holofloor/basalt,
 /area/holodeck/rec_center/thunderdome)
 "cd" = (
 /obj/structure/window{
@@ -768,37 +779,39 @@
 "cq" = (
 /obj/structure/bed,
 /obj/item/weapon/bedsheet/medical,
+/obj/structure/window{
+	dir = 1
+	},
 /turf/open/floor/holofloor{
-	tag = "icon-warnwhite (NORTHWEST)";
-	icon_state = "warnwhite";
+	tag = "icon-white_warn (NORTHWEST)";
+	icon_state = "white_warn";
 	dir = 9
 	},
 /area/holodeck/rec_center/medical)
 "cr" = (
 /obj/structure/window{
-	tag = "icon-rwindow (WEST)";
 	icon_state = "rwindow";
 	dir = 8
 	},
 /obj/structure/bed,
 /obj/item/weapon/bedsheet/medical,
+/obj/structure/window{
+	dir = 1
+	},
 /turf/open/floor/holofloor{
-	tag = "icon-warnwhite (NORTHEAST)";
-	icon_state = "warnwhite";
+	tag = "icon-white_warn (NORTHEAST)";
+	icon_state = "white_warn";
 	dir = 5
 	},
 /area/holodeck/rec_center/medical)
 "cs" = (
 /obj/structure/window{
-	tag = "icon-rwindow (WEST)";
 	icon_state = "rwindow";
 	dir = 8
 	},
-/obj/structure/window,
 /obj/machinery/computer/pandemic,
 /turf/open/floor/holofloor{
-	icon_state = "white";
-	tag = "icon-bluespace"
+	icon_state = "white"
 	},
 /area/holodeck/rec_center/medical)
 "ct" = (
@@ -814,26 +827,25 @@
 	},
 /area/holodeck/rec_center/dodgeball)
 "cv" = (
-/obj/machinery/door/window/westleft,
 /turf/open/floor/holofloor{
-	tag = "icon-warnwhitecorner (WEST)";
-	icon_state = "warnwhitecorner";
-	dir = 8
+	dir = 8;
+	icon_state = "white_warn_corner";
+	tag = "icon-white_warn (WEST)"
 	},
 /area/holodeck/rec_center/medical)
 "cw" = (
 /obj/machinery/door/window/westleft,
 /turf/open/floor/holofloor{
-	tag = "icon-warnwhite (NORTHEAST)";
-	icon_state = "warnwhite";
-	dir = 5
+	tag = "icon-white_warn (NORTH)";
+	icon_state = "white_warn";
+	dir = 1
 	},
 /area/holodeck/rec_center/medical)
 "cx" = (
-/obj/machinery/door/window/westleft,
 /turf/open/floor/holofloor{
-	tag = "icon-warnwhite";
-	icon_state = "warnwhite"
+	tag = "icon-white_warn (NORTH)";
+	icon_state = "white_warn";
+	dir = 1
 	},
 /area/holodeck/rec_center/medical)
 "cy" = (
@@ -842,50 +854,45 @@
 "cz" = (
 /obj/structure/bed,
 /obj/item/weapon/bedsheet/medical,
+/obj/machinery/iv_drip{
+	density = 0
+	},
 /turf/open/floor/holofloor{
-	tag = "icon-warnwhite (SOUTHWEST)";
-	icon_state = "warnwhite";
+	tag = "icon-white_warn (SOUTHWEST)";
+	icon_state = "white_warn";
 	dir = 10
 	},
 /area/holodeck/rec_center/medical)
 "cA" = (
 /obj/structure/window{
-	tag = "icon-rwindow (WEST)";
 	icon_state = "rwindow";
 	dir = 8
 	},
 /obj/structure/bed,
 /obj/item/weapon/bedsheet/medical,
+/obj/machinery/iv_drip{
+	density = 0
+	},
 /turf/open/floor/holofloor{
-	tag = "icon-warnwhite";
-	icon_state = "warnwhite"
+	icon_state = "white_warn"
 	},
 /area/holodeck/rec_center/medical)
 "cB" = (
-/obj/structure/window{
-	tag = "icon-rwindow (WEST)";
-	icon_state = "rwindow";
-	dir = 8
-	},
-/obj/machinery/sleeper{
-	tag = "icon-sleeper-open (NORTH)";
-	icon_state = "sleeper-open";
-	dir = 1
+/obj/machinery/iv_drip{
+	density = 0
 	},
 /turf/open/floor/holofloor{
-	tag = "icon-warnwhite";
-	icon_state = "warnwhite"
+	icon_state = "white_warn"
 	},
 /area/holodeck/rec_center/medical)
 "cC" = (
 /obj/machinery/sleeper{
-	tag = "icon-sleeper-open (NORTH)";
 	icon_state = "sleeper-open";
 	dir = 1
 	},
 /turf/open/floor/holofloor{
-	tag = "icon-warnwhite (SOUTHEAST)";
-	icon_state = "warnwhite";
+	tag = "icon-white_warn (SOUTHEAST)";
+	icon_state = "white_warn";
 	dir = 6
 	},
 /area/holodeck/rec_center/medical)
@@ -897,7 +904,8 @@
 /area/holodeck/rec_center/basketball)
 "cE" = (
 /obj/structure/holohoop{
-	dir = 1
+	dir = 1;
+	layer = 4.1
 	},
 /turf/open/floor/holofloor{
 	dir = 2;
@@ -914,29 +922,35 @@
 /turf/open/floor/holofloor/beach/water,
 /area/holodeck/rec_center/beach)
 "cH" = (
+/turf/open/floor/holofloor/basalt,
 /obj/structure/table,
 /turf/open/floor/holofloor{
-	dir = 10;
-	icon_state = "green"
+	tag = "icon-warningline (NORTH)";
+	icon_state = "warningline";
+	dir = 1
 	},
 /area/holodeck/rec_center/thunderdome)
 "cI" = (
+/turf/open/floor/holofloor/basalt,
 /obj/structure/table,
 /obj/item/clothing/head/helmet/thunderdome,
 /obj/item/clothing/suit/armor/tdome/green,
 /obj/item/clothing/under/color/green,
 /obj/item/weapon/holo/esword/green,
 /turf/open/floor/holofloor{
-	dir = 2;
-	icon_state = "green"
+	tag = "icon-warningline (NORTH)";
+	icon_state = "warningline";
+	dir = 1
 	},
 /area/holodeck/rec_center/thunderdome)
 "cJ" = (
+/turf/open/floor/holofloor/basalt,
 /obj/structure/table,
 /obj/machinery/readybutton,
 /turf/open/floor/holofloor{
-	dir = 6;
-	icon_state = "green"
+	tag = "icon-warningline (NORTH)";
+	icon_state = "warningline";
+	dir = 1
 	},
 /area/holodeck/rec_center/thunderdome)
 "cK" = (
@@ -1687,863 +1701,876 @@
 	},
 /area/zombie)
 "eB" = (
-/obj/item/stack/sheet/rglass{
-	amount = 20
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel,
-/area/zombie)
+/turf/closed/indestructible/riveted,
+/area/space)
 "eC" = (
-/turf/open/floor/plasteel/neutral/side{
-	dir = 10
-	},
-/area/zombie)
+/obj/structure/window/reinforced,
+/turf/closed/indestructible/riveted,
+/area/space)
 "eD" = (
-/turf/open/floor/plating,
-/area/zombie)
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/closed/indestructible/riveted,
+/area/space)
 "eE" = (
-/obj/effect/mine/pickup/healing{
-	name = "Heal Orb"
-	},
-/obj/machinery/door/window{
-	base_state = "right";
-	dir = 4;
-	icon_state = "right";
-	req_access_txt = "150"
-	},
-/obj/structure/window/reinforced,
-/obj/structure/window/reinforced{
-	dir = 1;
-	pixel_y = 1
-	},
-/turf/open/floor/plasteel,
-/area/zombie)
+/turf/open/floor/holofloor/snow/cold,
+/area/holodeck/rec_center/winterwonderland)
 "eF" = (
-/obj/machinery/door/window{
-	dir = 8;
-	req_access_txt = "150"
+/obj/structure/table/wood{
+	layer = 3.3
 	},
-/turf/open/floor/plasteel/neutral/corner{
-	dir = 8
+/obj/item/weapon/twohanded/required/kirbyplants{
+	icon_state = "plant-05";
+	layer = 4.1;
+	pixel_y = 4
 	},
-/area/zombie)
+/turf/open/floor/holofloor{
+	icon_state = "wood";
+	dir = 9
+	},
+/area/holodeck/rec_center/lounge)
 "eG" = (
-/obj/effect/decal/cleanable/blood/old,
-/obj/machinery/recharger,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel,
-/area/zombie)
+/obj/structure/flora/bush,
+/turf/open/floor/holofloor/snow/cold,
+/area/holodeck/rec_center/winterwonderland)
 "eH" = (
-/obj/item/stack/sheet/rglass{
-	amount = 20
+/obj/item/toy/snowball{
+	pixel_x = 0;
+	pixel_y = 6
 	},
-/turf/open/floor/plasteel,
-/area/zombie)
+/obj/item/toy/snowball{
+	pixel_x = 5;
+	pixel_y = 0
+	},
+/obj/item/toy/snowball{
+	pixel_x = -4
+	},
+/turf/open/floor/holofloor/snow/cold,
+/area/holodeck/rec_center/winterwonderland)
 "eI" = (
-/obj/machinery/recharger,
-/obj/effect/decal/cleanable/blood/old,
-/turf/open/floor/plasteel,
-/area/zombie)
+/turf/open/floor/holofloor{
+	tag = "icon-asteroid_warn (WEST)";
+	icon_state = "asteroid_warn";
+	dir = 8
+	},
+/area/holodeck/rec_center/bunker)
 "eJ" = (
-/obj/machinery/recharger,
-/turf/open/floor/plasteel,
-/area/zombie)
+/obj/structure/table/wood,
+/obj/item/weapon/storage/box/matches{
+	pixel_x = -4;
+	pixel_y = 8
+	},
+/turf/open/floor/holofloor{
+	icon_state = "wood";
+	dir = 9
+	},
+/area/holodeck/rec_center/lounge)
 "eK" = (
-/obj/item/stack/medical/gauze,
-/turf/open/floor/plasteel,
-/area/zombie)
+/obj/structure/flora/grass/brown,
+/turf/open/floor/holofloor/snow/cold,
+/area/holodeck/rec_center/winterwonderland)
 "eL" = (
-/obj/machinery/recharger,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel,
-/area/zombie)
+/obj/structure/chair/wood/normal{
+	icon_state = "wooden_chair";
+	dir = 4
+	},
+/turf/open/floor/holofloor{
+	icon_state = "wood";
+	dir = 9
+	},
+/area/holodeck/rec_center/lounge)
 "eM" = (
-/obj/machinery/door/window{
-	base_state = "right";
-	dir = 4;
-	icon_state = "right";
-	req_access_txt = "150"
+/obj/structure/table/wood/poker,
+/obj/item/clothing/mask/cigarette/pipe,
+/turf/open/floor/holofloor{
+	icon_state = "wood";
+	dir = 9
 	},
-/turf/open/floor/plasteel/neutral/corner,
-/area/zombie)
+/area/holodeck/rec_center/lounge)
 "eN" = (
-/obj/effect/mine/pickup/healing{
-	name = "Heal Orb"
+/obj/structure/table/wood/poker,
+/obj/structure/table/wood/poker,
+/obj/effect/holodeck_effect/cards,
+/turf/open/floor/holofloor{
+	icon_state = "wood";
+	dir = 9
 	},
-/obj/machinery/door/window{
-	dir = 8;
-	req_access_txt = "150"
-	},
-/obj/structure/window/reinforced,
-/obj/structure/window/reinforced{
-	dir = 1;
-	pixel_y = 1
-	},
-/turf/open/floor/plasteel,
-/area/zombie)
+/area/holodeck/rec_center/lounge)
 "eO" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel,
-/area/zombie)
+/obj/structure/chair/wood/normal{
+	icon_state = "wooden_chair";
+	dir = 8
+	},
+/turf/open/floor/holofloor{
+	icon_state = "wood";
+	dir = 9
+	},
+/area/holodeck/rec_center/lounge)
 "eP" = (
-/obj/item/weapon/shard,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel,
-/area/zombie)
+/obj/structure/statue/snow/snowman{
+	anchored = 1
+	},
+/turf/open/floor/holofloor/snow/cold,
+/area/holodeck/rec_center/winterwonderland)
 "eQ" = (
-/obj/effect/decal/cleanable/blood/old,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel,
-/area/zombie)
+/obj/structure/chair/wood/wings,
+/turf/open/floor/holofloor/snow/cold,
+/area/holodeck/rec_center/winterwonderland)
 "eR" = (
-/obj/machinery/door/window{
-	dir = 8;
-	req_access_txt = "150"
+/obj/structure/window/reinforced,
+/turf/open/floor/holofloor{
+	icon_state = "wood";
+	dir = 9
 	},
-/obj/machinery/light/small,
-/turf/open/floor/plasteel/neutral/corner{
-	dir = 8
-	},
-/area/zombie)
+/area/holodeck/rec_center/lounge)
 "eS" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel/neutral/corner{
-	dir = 8
-	},
-/area/zombie)
+/obj/structure/flora/tree/pine,
+/turf/open/floor/holofloor/snow/cold,
+/area/holodeck/rec_center/winterwonderland)
 "eT" = (
-/obj/structure/window/reinforced,
-/turf/open/floor/plasteel/neutral/corner,
-/area/zombie)
+/obj/structure/chair/wood,
+/turf/open/floor/holofloor/snow/cold,
+/area/holodeck/rec_center/winterwonderland)
 "eU" = (
-/obj/structure/chair/office{
-	dir = 1
+/obj/structure/table/wood,
+/obj/item/weapon/twohanded/required/kirbyplants{
+	icon_state = "plant-05";
+	layer = 4.1;
+	pixel_y = 10
 	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel/neutral/corner,
-/area/zombie)
+/turf/open/floor/holofloor{
+	icon_state = "wood";
+	dir = 9
+	},
+/area/holodeck/rec_center/lounge)
 "eV" = (
-/obj/structure/chair/office{
-	dir = 1
+/turf/open/floor/holofloor{
+	dir = 9;
+	icon_state = "stairs-l"
 	},
-/obj/machinery/light/small,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel/neutral/corner{
-	dir = 8
-	},
-/area/zombie)
+/area/holodeck/rec_center/lounge)
 "eW" = (
-/obj/structure/window/reinforced,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel,
-/area/zombie)
+/turf/open/floor/holofloor{
+	dir = 9;
+	icon_state = "stairs-r"
+	},
+/area/holodeck/rec_center/lounge)
 "eX" = (
-/obj/machinery/light/small,
-/turf/open/floor/plasteel/neutral/corner,
-/area/zombie)
+/obj/structure/chair/comfy/brown{
+	dir = 4
+	},
+/turf/open/floor/holofloor/carpet,
+/area/holodeck/rec_center/lounge)
 "eY" = (
-/obj/structure/chair/office{
-	dir = 1
-	},
-/turf/open/floor/plasteel/neutral/corner{
+/obj/structure/chair/comfy/brown{
 	dir = 8
 	},
-/area/zombie)
+/turf/open/floor/holofloor/carpet,
+/area/holodeck/rec_center/lounge)
 "eZ" = (
-/obj/structure/window/reinforced,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel/neutral/corner{
-	dir = 8
-	},
-/area/zombie)
+/obj/structure/table/wood,
+/obj/item/device/instrument/violin,
+/turf/open/floor/holofloor/carpet,
+/area/holodeck/rec_center/lounge)
 "fa" = (
-/turf/open/floor/plasteel/neutral/corner,
-/area/zombie)
+/obj/structure/table/wood,
+/obj/item/weapon/book/manual/barman_recipes,
+/obj/item/clothing/mask/cigarette/pipe,
+/turf/open/floor/holofloor/carpet,
+/area/holodeck/rec_center/lounge)
 "fb" = (
-/obj/machinery/door/window{
-	base_state = "right";
-	dir = 4;
-	icon_state = "right";
-	req_access_txt = "150"
+/obj/structure/window/reinforced{
+	dir = 1
 	},
-/obj/machinery/light/small,
-/turf/open/floor/plasteel/neutral/corner,
-/area/zombie)
+/obj/structure/window/reinforced,
+/turf/closed/indestructible/riveted,
+/area/space)
 "fc" = (
-/obj/structure/window/reinforced,
-/obj/item/weapon/shard,
-/turf/open/floor/plasteel/neutral/corner{
-	dir = 8
-	},
-/area/zombie)
+/obj/effect/holodeck_effect/mobspawner/bee,
+/turf/open/floor/holofloor/asteroid,
+/area/holodeck/rec_center/anthophila)
 "fd" = (
-/obj/structure/window/reinforced,
-/obj/effect/decal/cleanable/blood/old,
-/turf/open/floor/plasteel/neutral/corner{
-	dir = 1
-	},
-/area/zombie)
+/obj/structure/flora/ausbushes/sunnybush,
+/turf/open/floor/holofloor/grass,
+/area/holodeck/rec_center/pet_lounge)
 "fe" = (
-/obj/structure/window/reinforced,
-/obj/item/weapon/shard{
-	icon_state = "medium"
-	},
-/turf/open/floor/plasteel,
-/area/zombie)
+/obj/structure/flora/ausbushes/genericbush,
+/turf/open/floor/holofloor/grass,
+/area/holodeck/rec_center/pet_lounge)
 "ff" = (
-/obj/item/weapon/shard,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel/neutral/side{
-	dir = 8
-	},
-/area/zombie)
+/obj/structure/flora/ausbushes/ppflowers,
+/turf/open/floor/holofloor/grass,
+/area/holodeck/rec_center/pet_lounge)
 "fg" = (
-/obj/structure/window/reinforced,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel/neutral/corner,
-/area/zombie)
+/obj/effect/holodeck_effect/mobspawner/pet,
+/obj/structure/flora/ausbushes/brflowers,
+/turf/open/floor/holofloor/grass,
+/area/holodeck/rec_center/pet_lounge)
 "fh" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating,
-/area/zombie)
+/obj/structure/flora/ausbushes/brflowers,
+/turf/open/floor/holofloor/grass,
+/area/holodeck/rec_center/pet_lounge)
 "fi" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating,
-/area/zombie)
+/obj/item/weapon/storage/bag/easterbasket{
+	name = "picnic basket";
+	pixel_y = 6
+	},
+/turf/open/floor/holofloor{
+	icon_state = "redbluefull"
+	},
+/area/holodeck/rec_center/pet_lounge)
 "fj" = (
-/obj/structure/window/reinforced,
-/obj/effect/decal/cleanable/blood/old,
-/turf/open/floor/plasteel/neutral/corner{
-	dir = 4
+/obj/item/trash/plate,
+/turf/open/floor/holofloor{
+	icon_state = "redbluefull"
 	},
-/area/zombie)
+/area/holodeck/rec_center/pet_lounge)
 "fk" = (
-/obj/item/weapon/shard{
-	icon_state = "small"
-	},
-/turf/open/floor/plasteel/neutral/corner{
-	dir = 1
-	},
-/area/zombie)
+/obj/effect/holodeck_effect/mobspawner/monkey,
+/turf/open/floor/holofloor/beach,
+/area/holodeck/rec_center/beach)
 "fl" = (
-/obj/structure/window/reinforced,
-/turf/open/floor/plasteel,
-/area/zombie)
+/obj/structure/flora/ausbushes/palebush,
+/turf/open/floor/holofloor/grass,
+/area/holodeck/rec_center/pet_lounge)
 "fm" = (
-/obj/structure/window/reinforced,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel/neutral/side{
-	dir = 8
+/obj/effect/holodeck_effect/mobspawner/pet,
+/turf/open/floor/holofloor{
+	icon_state = "redbluefull"
 	},
-/area/zombie)
+/area/holodeck/rec_center/pet_lounge)
 "fn" = (
-/obj/item/weapon/shard{
-	icon_state = "small"
+/obj/item/weapon/shovel/spade{
+	pixel_x = 2;
+	pixel_y = -2
 	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel/neutral/corner,
-/area/zombie)
+/turf/open/floor/holofloor{
+	icon_state = "redbluefull"
+	},
+/area/holodeck/rec_center/pet_lounge)
 "fo" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating,
-/area/zombie)
+/obj/effect/holodeck_effect/mobspawner/bee,
+/obj/item/clothing/head/beekeeper_head,
+/turf/open/floor/holofloor/asteroid,
+/area/holodeck/rec_center/anthophila)
 "fp" = (
-/obj/item/weapon/shard{
-	icon_state = "small"
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel/neutral/corner{
-	dir = 8
-	},
-/area/zombie)
+/obj/effect/holodeck_effect/mobspawner/bee,
+/obj/effect/decal/remains/human,
+/obj/item/clothing/suit/beekeeper_suit,
+/turf/open/floor/holofloor/asteroid,
+/area/holodeck/rec_center/anthophila)
 "fq" = (
-/obj/structure/window/reinforced,
-/obj/item/weapon/shard{
-	icon_state = "medium"
-	},
-/obj/structure/barricade/wooden,
-/turf/open/floor/plasteel/neutral/corner{
-	dir = 4
-	},
-/area/zombie)
+/obj/effect/holodeck_effect/mobspawner/bee,
+/obj/item/weapon/melee/flyswatter,
+/turf/open/floor/holofloor/asteroid,
+/area/holodeck/rec_center/anthophila)
 "fr" = (
-/obj/structure/window/reinforced,
-/obj/item/weapon/shard,
-/obj/structure/barricade/wooden,
-/turf/open/floor/plasteel/neutral/corner{
-	dir = 4
+/turf/open/floor/holofloor{
+	tag = "icon-white_warn (SOUTHEAST)";
+	icon_state = "white_warn";
+	dir = 6
 	},
-/area/zombie)
+/area/holodeck/rec_center/medical)
 "fs" = (
-/obj/effect/decal/cleanable/blood/old,
-/obj/item/weapon/shard{
-	icon_state = "medium"
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel/neutral/side{
-	dir = 8
-	},
-/area/zombie)
+/obj/structure/sink/puddle,
+/turf/open/floor/holofloor/grass,
+/area/holodeck/rec_center/pet_lounge)
 "ft" = (
-/obj/structure/window/reinforced,
-/obj/structure/sign/poster{
-	pixel_x = 32;
-	pixel_y = 0
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel/neutral/corner,
-/area/zombie)
+/obj/item/weapon/reagent_containers/glass/bucket,
+/turf/open/floor/holofloor/grass,
+/area/holodeck/rec_center/pet_lounge)
 "fu" = (
-/obj/structure/window/reinforced,
-/obj/effect/decal/cleanable/blood/old,
-/turf/open/floor/plasteel/neutral/corner{
-	dir = 8
-	},
-/area/zombie)
+/obj/machinery/hydroponics/soil,
+/turf/open/floor/holofloor/grass,
+/area/holodeck/rec_center/pet_lounge)
 "fv" = (
-/obj/structure/window/reinforced,
-/obj/item/weapon/shard,
-/obj/structure/barricade/wooden,
-/turf/open/floor/plasteel/neutral/corner{
-	dir = 1
-	},
-/area/zombie)
+/obj/machinery/hydroponics/soil,
+/obj/item/weapon/cultivator,
+/turf/open/floor/holofloor/grass,
+/area/holodeck/rec_center/pet_lounge)
 "fw" = (
-/obj/structure/window/reinforced,
-/obj/effect/decal/cleanable/blood/old,
-/obj/item/weapon/shard{
-	icon_state = "small"
-	},
-/turf/open/floor/plasteel,
-/area/zombie)
+/obj/machinery/hydroponics/soil,
+/obj/effect/holodeck_effect/mobspawner/pet,
+/turf/open/floor/holofloor/grass,
+/area/holodeck/rec_center/pet_lounge)
 "fx" = (
-/obj/item/weapon/shard,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel/neutral/corner,
-/area/zombie)
+/obj/structure/flora/ausbushes/grassybush,
+/turf/open/floor/holofloor/grass,
+/area/holodeck/rec_center/pet_lounge)
 "fy" = (
-/turf/open/floor/plasteel/neutral/corner{
-	dir = 8
-	},
-/area/zombie)
+/obj/item/weapon/reagent_containers/glass/bucket,
+/turf/open/floor/holofloor/beach/coast_t,
+/area/holodeck/rec_center/beach)
 "fz" = (
-/obj/effect/decal/cleanable/blood/old,
-/obj/item/weapon/shard,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel/neutral/corner{
-	dir = 4
-	},
-/area/zombie)
+/obj/item/weapon/shovel/spade,
+/turf/open/floor/holofloor/beach/coast_t,
+/area/holodeck/rec_center/beach)
 "fA" = (
-/obj/structure/chair/office{
-	dir = 8
-	},
-/obj/structure/window/reinforced{
-	dir = 4;
-	pixel_x = 0
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel/neutral/side{
-	dir = 9
-	},
-/area/zombie)
+/obj/structure/flora/ausbushes/pointybush,
+/turf/open/floor/holofloor/grass,
+/area/holodeck/rec_center/pet_lounge)
 "fB" = (
-/obj/structure/chair/office{
-	dir = 4
+/turf/open/floor/holofloor{
+	tag = "icon-white_warn (WEST)";
+	icon_state = "white_warn";
+	dir = 8
 	},
-/obj/machinery/light/small{
-	dir = 1
-	},
-/turf/open/floor/plasteel/neutral/side{
-	dir = 5
-	},
-/area/zombie)
+/area/holodeck/rec_center/medical)
 "fC" = (
-/obj/machinery/light/small{
-	dir = 1
-	},
-/turf/open/floor/plasteel/neutral/side{
-	dir = 9
-	},
-/area/zombie)
+/turf/open/floor/holofloor/beach/coast_b,
+/area/holodeck/rec_center/beach)
 "fD" = (
-/obj/structure/chair/office{
-	dir = 4
+/obj/structure/window{
+	icon_state = "rwindow";
+	dir = 8
 	},
-/obj/item/weapon/shard,
-/turf/open/floor/plasteel/neutral/side{
-	dir = 5
+/obj/machinery/sleeper{
+	icon_state = "sleeper-open";
+	dir = 1
 	},
-/area/zombie)
+/turf/open/floor/holofloor{
+	icon_state = "white_warn"
+	},
+/area/holodeck/rec_center/medical)
 "fE" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel/neutral/corner{
-	dir = 1
-	},
-/area/zombie)
+/turf/open/floor/holofloor/plating,
+/area/holodeck/rec_center/refuel)
 "fF" = (
-/obj/structure/sign/poster{
-	pixel_x = 32;
-	pixel_y = 0
+/turf/open/floor/holofloor/grass,
+/turf/open/floor/holofloor{
+	tag = "icon-warningline";
+	icon_state = "warningline";
+	dir = 2
 	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel/neutral/corner,
-/area/zombie)
+/area/holodeck/rec_center/spacechess)
 "fG" = (
-/obj/machinery/light/small{
-	dir = 8
-	},
-/turf/open/floor/plasteel/neutral/corner{
-	dir = 8
-	},
-/area/zombie)
+/obj/item/weapon/banner/blue,
+/turf/open/floor/holofloor/grass,
+/area/holodeck/rec_center/thunderdome1218)
 "fH" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel/neutral/side{
-	dir = 4
-	},
-/area/zombie)
+/obj/structure/table/wood/fancy,
+/obj/item/clothing/suit/armor/riot/knight/blue,
+/obj/item/clothing/head/helmet/knight/blue,
+/obj/item/weapon/claymore/weak,
+/turf/open/floor/holofloor/grass,
+/area/holodeck/rec_center/thunderdome1218)
 "fI" = (
-/obj/structure/chair/office{
-	dir = 4
+/obj/structure/table/wood/fancy,
+/obj/item/clothing/head/crown/fancy{
+	pixel_y = 6
 	},
-/turf/open/floor/plasteel/neutral/side{
-	dir = 8
-	},
-/area/zombie)
+/turf/open/floor/holofloor/grass,
+/area/holodeck/rec_center/thunderdome1218)
 "fJ" = (
-/obj/effect/decal/cleanable/blood/old,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel/neutral/side{
-	dir = 8
-	},
-/area/zombie)
+/obj/structure/table/wood/fancy,
+/obj/item/clothing/suit/armor/riot/knight/red,
+/obj/item/clothing/head/helmet/knight/red,
+/obj/item/weapon/claymore/weak,
+/turf/open/floor/holofloor/grass,
+/area/holodeck/rec_center/thunderdome1218)
 "fK" = (
-/obj/effect/decal/cleanable/blood/old,
-/obj/item/weapon/shard{
-	icon_state = "small"
-	},
-/obj/machinery/light/small{
-	dir = 4
-	},
-/turf/open/floor/plasteel/neutral/corner,
-/area/zombie)
+/obj/item/weapon/banner/red,
+/turf/open/floor/holofloor/grass,
+/area/holodeck/rec_center/thunderdome1218)
 "fL" = (
-/obj/effect/decal/cleanable/blood/old,
-/obj/item/weapon/shard{
-	icon_state = "medium"
-	},
-/turf/open/floor/plasteel/neutral/corner{
-	dir = 8
-	},
-/area/zombie)
+/turf/open/floor/holofloor/hyperspace,
+/area/holodeck/rec_center/kobayashi)
 "fM" = (
-/obj/structure/chair/office{
-	dir = 8
-	},
-/obj/structure/window/reinforced{
-	dir = 4;
-	pixel_x = 0
-	},
-/turf/open/floor/plasteel/neutral/side{
-	dir = 10
-	},
-/area/zombie)
+/obj/structure/window/reinforced,
+/turf/open/floor/holofloor/hyperspace,
+/area/holodeck/rec_center/kobayashi)
 "fN" = (
-/obj/machinery/recharger,
-/turf/open/floor/plasteel/neutral/side{
-	dir = 6
+/obj/structure/closet{
+	density = 0;
+	opened = 1
 	},
-/area/zombie)
+/obj/item/clothing/suit/judgerobe,
+/obj/item/clothing/head/powdered_wig,
+/turf/open/floor/holofloor{
+	dir = 8;
+	icon_state = "dark";
+	tag = "icon-white_warn (WEST)"
+	},
+/area/holodeck/rec_center/chapelcourt)
 "fO" = (
-/obj/effect/decal/cleanable/blood/old,
-/turf/open/floor/plasteel/neutral/corner{
-	dir = 8
+/obj/structure/table/wood/fancy,
+/obj/item/clothing/suit/nun,
+/obj/item/clothing/head/nun_hood,
+/obj/item/clothing/suit/holidaypriest,
+/turf/open/floor/holofloor{
+	dir = 8;
+	icon_state = "dark";
+	tag = "icon-white_warn (WEST)"
 	},
-/area/zombie)
+/area/holodeck/rec_center/chapelcourt)
 "fP" = (
-/obj/item/weapon/shard,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel,
-/area/zombie)
+/obj/structure/table/wood/fancy,
+/obj/item/weapon/storage/book/bible,
+/turf/open/floor/holofloor{
+	dir = 8;
+	icon_state = "dark";
+	tag = "icon-white_warn (WEST)"
+	},
+/area/holodeck/rec_center/chapelcourt)
 "fQ" = (
-/obj/machinery/recharger,
-/turf/open/floor/plasteel/neutral/side{
-	dir = 10
+/obj/structure/table/wood/fancy,
+/obj/item/weapon/book/manual/wiki/security_space_law,
+/turf/open/floor/holofloor{
+	dir = 8;
+	icon_state = "dark";
+	tag = "icon-white_warn (WEST)"
 	},
-/area/zombie)
+/area/holodeck/rec_center/chapelcourt)
 "fR" = (
-/obj/structure/window/reinforced{
-	dir = 8
+/obj/structure/closet{
+	name = "Evidence Closet"
 	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel/neutral/side{
-	dir = 6
+/turf/open/floor/holofloor{
+	dir = 8;
+	icon_state = "dark";
+	tag = "icon-white_warn (WEST)"
 	},
-/area/zombie)
+/area/holodeck/rec_center/chapelcourt)
 "fS" = (
-/turf/open/floor/plasteel/neutral/side{
-	dir = 8
+/obj/machinery/conveyor/holodeck{
+	dir = 5;
+	icon_state = "conveyor0";
+	id = "holocoaster";
+	movedir = null;
+	verted = -1
 	},
-/area/zombie)
+/turf/open/floor/holofloor/asteroid,
+/area/holodeck/rec_center/rollercoaster)
 "fT" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/machinery/light/small{
-	dir = 4
+/obj/machinery/conveyor/holodeck{
+	dir = 8;
+	id = "holocoaster"
 	},
-/turf/open/floor/plasteel/neutral/side{
-	dir = 4
-	},
-/area/zombie)
+/turf/open/floor/holofloor/asteroid,
+/area/holodeck/rec_center/rollercoaster)
 "fU" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel/neutral/corner,
-/area/zombie)
+/obj/machinery/conveyor/holodeck{
+	dir = 6;
+	id = "holocoaster";
+	movedir = null;
+	verted = -1
+	},
+/turf/open/floor/holofloor/asteroid,
+/area/holodeck/rec_center/rollercoaster)
 "fV" = (
-/obj/item/weapon/shard{
-	icon_state = "medium"
+/turf/open/floor/holofloor{
+	dir = 8;
+	icon_state = "green"
 	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel/neutral/side{
-	dir = 8
-	},
-/area/zombie)
+/area/holodeck/rec_center/firingrange)
 "fW" = (
-/obj/structure/chair/office{
-	dir = 8
-	},
-/obj/item/weapon/shard,
-/turf/open/floor/plasteel/neutral/side{
-	dir = 9
-	},
-/area/zombie)
-"fX" = (
-/turf/open/floor/plasteel/neutral/side{
-	dir = 5
-	},
-/area/zombie)
-"fY" = (
-/obj/item/weapon/shard{
-	icon_state = "medium"
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel/neutral/corner{
+/obj/structure/window/reinforced{
 	dir = 1
 	},
-/area/zombie)
-"fZ" = (
-/obj/structure/chair/office{
+/obj/structure/window/reinforced{
 	dir = 8
 	},
-/turf/open/floor/plasteel/neutral/side{
+/turf/open/floor/holofloor{
+	tag = "icon-white_warn (NORTHWEST)";
+	icon_state = "white_warn";
 	dir = 9
 	},
-/area/zombie)
-"ga" = (
-/obj/structure/chair/office{
-	dir = 4
+/area/holodeck/rec_center/firingrange)
+"fX" = (
+/obj/structure/window/reinforced{
+	dir = 1
 	},
-/obj/item/weapon/shard{
-	icon_state = "small"
+/turf/open/floor/holofloor{
+	tag = "icon-white_warn (NORTH)";
+	icon_state = "white_warn";
+	dir = 1
 	},
-/obj/structure/sign/poster{
-	pixel_y = 32
-	},
-/turf/open/floor/plasteel/neutral/side{
-	dir = 5
-	},
-/area/zombie)
-"gb" = (
-/obj/effect/decal/cleanable/blood/old,
-/obj/effect/decal/cleanable/dirt,
-/obj/machinery/light/small{
-	dir = 4
-	},
-/turf/open/floor/plasteel/neutral/corner,
-/area/zombie)
-"gc" = (
-/obj/item/weapon/shard{
-	icon_state = "small"
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel,
-/area/zombie)
-"gd" = (
-/turf/open/floor/plasteel/neutral/side{
-	dir = 4
-	},
-/area/zombie)
-"ge" = (
-/obj/structure/chair/office{
-	dir = 8
+/area/holodeck/rec_center/firingrange)
+"fY" = (
+/obj/structure/window/reinforced{
+	dir = 1
 	},
 /obj/structure/window/reinforced{
-	dir = 4;
-	pixel_x = 0
-	},
-/turf/open/floor/plasteel/neutral/side{
 	dir = 4
 	},
-/area/zombie)
+/turf/open/floor/holofloor{
+	tag = "icon-white_warn (NORTHEAST)";
+	icon_state = "white_warn";
+	dir = 5
+	},
+/area/holodeck/rec_center/firingrange)
+"fZ" = (
+/turf/open/floor/holofloor{
+	dir = 4;
+	icon_state = "green"
+	},
+/area/holodeck/rec_center/firingrange)
+"ga" = (
+/obj/structure/reagent_dispensers/fueltank,
+/turf/open/floor/holofloor/plating,
+/area/holodeck/rec_center/refuel)
+"gb" = (
+/obj/item/cardboard_cutout/adaptive{
+	color = "#9999BB";
+	icon_state = "cutout_viva";
+	name = "Black Rook";
+	tag = "icon-cutout_viva"
+	},
+/turf/open/floor/holofloor{
+	dir = 8;
+	icon_state = "dark";
+	tag = "icon-white_warn (WEST)"
+	},
+/area/holodeck/rec_center/spacechess)
+"gc" = (
+/obj/item/cardboard_cutout/adaptive{
+	color = "#9999BB";
+	icon_state = "cutout_mime";
+	name = "Black Queen";
+	tag = "icon-cutout_mime"
+	},
+/turf/open/floor/holofloor{
+	icon_state = "white"
+	},
+/area/holodeck/rec_center/spacechess)
+"gd" = (
+/obj/item/cardboard_cutout/adaptive{
+	color = "#9999BB";
+	icon_state = "cutout_clown";
+	name = "Black King";
+	tag = "icon-cutout_clown"
+	},
+/turf/open/floor/holofloor{
+	dir = 8;
+	icon_state = "dark";
+	tag = "icon-white_warn (WEST)"
+	},
+/area/holodeck/rec_center/spacechess)
+"ge" = (
+/obj/item/cardboard_cutout/adaptive{
+	color = "#9999BB";
+	icon_state = "cutout_ian";
+	name = "Black Knight";
+	tag = "icon-cutout_ian"
+	},
+/turf/open/floor/holofloor{
+	icon_state = "white"
+	},
+/area/holodeck/rec_center/spacechess)
 "gf" = (
 /turf/open/space,
 /area/start)
 "gg" = (
-/obj/structure/chair/office{
-	dir = 8
-	},
-/obj/structure/sign/poster{
-	pixel_y = -32
-	},
-/turf/open/floor/plasteel/neutral/side{
-	dir = 10
-	},
-/area/zombie)
+/turf/open/floor/holofloor/grass,
+/area/holodeck/rec_center/thunderdome1218)
 "gh" = (
-/obj/structure/chair/office{
-	dir = 4
+/obj/structure/chair/wood/wings,
+/turf/open/floor/holofloor/grass,
+/area/holodeck/rec_center/thunderdome1218)
+"gi" = (
+/obj/structure/window/reinforced,
+/obj/machinery/mass_driver{
+	dir = 1;
+	icon_state = "mass_driver";
+	id = "trektorpedo1";
+	name = "photon torpedo tube";
+	tag = "icon-mass_driver (NORTH)"
 	},
+/obj/item/toy/minimeteor{
+	color = "";
+	icon = 'icons/effects/effects.dmi';
+	icon_state = "impact_laser";
+	name = "photon torpedo"
+	},
+/turf/open/floor/holofloor/hyperspace,
+/area/holodeck/rec_center/kobayashi)
+"gj" = (
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/obj/item/weapon/shard{
-	icon_state = "small"
+/obj/machinery/computer/arcade/orion_trail{
+	desc = "A test for cadets";
+	events = list("Raiders" = 3, "Interstellar Flux" = 1, "Illness" = 3, "Breakdown" = 2, "Malfunction" = 2, "Collision" = 1, "Spaceport" = 2);
+	icon = 'icons/obj/machines/particle_accelerator.dmi';
+	icon_state = "control_boxp";
+	name = "Kobayashi Maru control computer";
+	prizes = list(/obj/item/weapon/paper/trek_diploma = 1);
+	settlers = list("Kirk","Worf","Gene")
 	},
-/turf/open/floor/plasteel/neutral/side{
-	dir = 6
-	},
-/area/zombie)
-"gi" = (
-/obj/structure/chair/office{
-	dir = 8
-	},
-/turf/open/floor/plasteel/neutral/side{
-	dir = 10
-	},
-/area/zombie)
-"gj" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel/neutral/side{
-	dir = 8
-	},
-/area/zombie)
+/turf/open/floor/holofloor/plating,
+/area/holodeck/rec_center/kobayashi)
 "gk" = (
-/obj/item/device/lightreplacer,
-/turf/open/floor/plasteel,
-/area/zombie)
+/obj/machinery/button/massdriver{
+	id = "trektorpedo1";
+	layer = 3.9;
+	name = "photon torpedo button";
+	pixel_x = -16;
+	pixel_y = -5
+	},
+/obj/machinery/button/massdriver{
+	id = "trektorpedo2";
+	layer = 3.9;
+	name = "photon torpedo button";
+	pixel_x = 16;
+	pixel_y = -5
+	},
+/obj/machinery/computer/arcade/orion_trail{
+	desc = "A test for cadets";
+	events = list("Raiders" = 3, "Interstellar Flux" = 1, "Illness" = 3, "Breakdown" = 2, "Malfunction" = 2, "Collision" = 1, "Spaceport" = 2);
+	icon = 'icons/obj/machines/particle_accelerator.dmi';
+	icon_state = "control_boxp";
+	name = "Kobayashi Maru control computer";
+	prizes = list(/obj/item/weapon/paper/trek_diploma = 1);
+	settlers = list("Kirk","Worf","Gene")
+	},
+/turf/open/floor/holofloor/plating,
+/area/holodeck/rec_center/kobayashi)
 "gl" = (
-/obj/item/weapon/shard{
-	icon_state = "medium"
-	},
-/turf/open/floor/plasteel/neutral/side{
+/obj/structure/window/reinforced{
 	dir = 4
 	},
-/area/zombie)
+/obj/machinery/computer/arcade/orion_trail{
+	desc = "A test for cadets";
+	events = list("Raiders" = 3, "Interstellar Flux" = 1, "Illness" = 3, "Breakdown" = 2, "Malfunction" = 2, "Collision" = 1, "Spaceport" = 2);
+	icon = 'icons/obj/machines/particle_accelerator.dmi';
+	icon_state = "control_boxp";
+	name = "Kobayashi Maru control computer";
+	prizes = list(/obj/item/weapon/paper/trek_diploma = 1);
+	settlers = list("Kirk","Worf","Gene")
+	},
+/turf/open/floor/holofloor/plating,
+/area/holodeck/rec_center/kobayashi)
 "gm" = (
-/obj/effect/decal/cleanable/blood/old,
-/obj/item/weapon/shard,
-/turf/open/floor/plasteel/neutral/side{
-	dir = 8
+/obj/structure/window/reinforced,
+/obj/machinery/mass_driver{
+	dir = 1;
+	icon_state = "mass_driver";
+	id = "trektorpedo2";
+	name = "photon torpedo tube";
+	tag = "icon-mass_driver (NORTH)"
 	},
-/area/zombie)
+/obj/item/toy/minimeteor{
+	color = "";
+	icon = 'icons/effects/effects.dmi';
+	icon_state = "impact_laser";
+	name = "photon torpedo"
+	},
+/turf/open/floor/holofloor/hyperspace,
+/area/holodeck/rec_center/kobayashi)
 "gn" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/machinery/light/small{
-	dir = 8
-	},
-/turf/open/floor/plasteel/neutral/side{
-	dir = 8
-	},
-/area/zombie)
-"go" = (
-/obj/effect/decal/cleanable/blood/old,
-/obj/item/weapon/shard{
-	icon_state = "small"
-	},
-/turf/open/floor/plasteel/neutral/side{
+/obj/structure/chair{
 	dir = 4
 	},
-/area/zombie)
-"gp" = (
-/obj/effect/decal/cleanable/blood/old,
-/turf/open/floor/plasteel/neutral/side{
-	dir = 8
-	},
-/area/zombie)
-"gq" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/machinery/light/small{
-	dir = 4
-	},
-/turf/open/floor/plasteel/neutral/corner,
-/area/zombie)
-"gr" = (
-/obj/effect/decal/cleanable/blood/old,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel/neutral/corner{
-	dir = 4
-	},
-/area/zombie)
-"gs" = (
-/obj/item/weapon/shard,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel/neutral/corner{
+/turf/open/floor/holofloor{
+	tag = "icon-chapel (NORTH)";
+	icon_state = "chapel";
 	dir = 1
 	},
-/area/zombie)
-"gt" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel/neutral/side{
+/area/holodeck/rec_center/chapelcourt)
+"go" = (
+/turf/open/floor/holofloor{
+	tag = "icon-chapel (EAST)";
+	icon_state = "chapel";
 	dir = 4
 	},
-/area/zombie)
+/area/holodeck/rec_center/chapelcourt)
+"gp" = (
+/obj/structure/chair,
+/turf/open/floor/holofloor{
+	dir = 8;
+	icon_state = "dark";
+	tag = "icon-white_warn (WEST)"
+	},
+/area/holodeck/rec_center/chapelcourt)
+"gq" = (
+/turf/open/floor/holofloor{
+	tag = "icon-chapel (NORTH)";
+	icon_state = "chapel";
+	dir = 1
+	},
+/area/holodeck/rec_center/chapelcourt)
+"gr" = (
+/obj/structure/chair{
+	dir = 8
+	},
+/turf/open/floor/holofloor{
+	tag = "icon-chapel (EAST)";
+	icon_state = "chapel";
+	dir = 4
+	},
+/area/holodeck/rec_center/chapelcourt)
+"gs" = (
+/obj/machinery/conveyor/holodeck{
+	id = "holocoaster"
+	},
+/turf/open/floor/holofloor/asteroid,
+/area/holodeck/rec_center/rollercoaster)
+"gt" = (
+/turf/open/floor/holofloor/asteroid,
+/area/holodeck/rec_center/rollercoaster)
 "gu" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/closed/indestructible/riveted/infinity,
-/area/zombie)
+/obj/machinery/conveyor/holodeck{
+	dir = 1;
+	id = "holocoaster";
+	layer = 2.5
+	},
+/turf/open/floor/holofloor/asteroid,
+/area/holodeck/rec_center/rollercoaster)
 "gv" = (
-/obj/item/weapon/shard{
-	icon_state = "small"
+/obj/structure/window/reinforced{
+	dir = 8
 	},
-/turf/open/floor/plasteel/neutral/side,
-/area/zombie)
+/turf/open/floor/holofloor{
+	tag = "icon-white_warn (WEST)";
+	icon_state = "white_warn";
+	dir = 8
+	},
+/area/holodeck/rec_center/firingrange)
 "gw" = (
-/turf/open/floor/plasteel/neutral/side,
-/area/zombie)
+/obj/structure/target_stake,
+/obj/machinery/magnetic_module,
+/turf/open/floor/holofloor{
+	icon_state = "white"
+	},
+/area/holodeck/rec_center/firingrange)
 "gx" = (
-/obj/effect/decal/cleanable/blood/old,
-/turf/open/floor/plasteel/neutral/side{
-	dir = 6
+/obj/structure/window/reinforced{
+	dir = 4
 	},
-/area/zombie)
+/turf/open/floor/holofloor{
+	tag = "icon-white_warn (EAST)";
+	icon_state = "white_warn";
+	dir = 4
+	},
+/area/holodeck/rec_center/firingrange)
 "gy" = (
-/turf/open/floor/plasteel/darkvault{
-	dir = 10
+/obj/item/cardboard_cutout/adaptive{
+	color = "#9999BB";
+	icon_state = "cutout_greytide";
+	name = "Black Pawn";
+	tag = "icon-cutout_greytide"
 	},
-/area/zombie)
+/turf/open/floor/holofloor{
+	icon_state = "white"
+	},
+/area/holodeck/rec_center/spacechess)
 "gz" = (
-/turf/open/floor/plasteel/black,
-/area/zombie)
+/obj/item/cardboard_cutout/adaptive{
+	color = "#9999BB";
+	icon_state = "cutout_greytide";
+	name = "Black Pawn";
+	tag = "icon-cutout_greytide"
+	},
+/turf/open/floor/holofloor{
+	dir = 8;
+	icon_state = "dark";
+	tag = "icon-white_warn (WEST)"
+	},
+/area/holodeck/rec_center/spacechess)
 "gA" = (
-/turf/open/floor/plasteel/darkvault{
-	dir = 6
+/obj/machinery/door/window/westleft{
+	dir = 2;
+	icon_state = "right"
 	},
-/area/zombie)
+/turf/open/floor/holofloor/grass,
+/area/holodeck/rec_center/thunderdome1218)
 "gB" = (
-/obj/structure/sign/poster{
-	pixel_x = 32;
-	pixel_y = 0
-	},
-/turf/open/floor/plasteel/darkvault{
-	dir = 6
-	},
-/area/zombie)
+/obj/structure/window/reinforced,
+/turf/open/floor/holofloor/grass,
+/area/holodeck/rec_center/thunderdome1218)
 "gC" = (
 /obj/effect/landmark/start,
 /turf/open/space,
 /area/start)
 "gD" = (
-/obj/structure/sign/securearea{
-	name = "\improper ROOM 4 - SAVE THEM ALL"
+/obj/machinery/door/window/westleft{
+	dir = 2
 	},
-/turf/closed/indestructible/riveted/infinity,
-/area/zombie)
+/turf/open/floor/holofloor/grass,
+/area/holodeck/rec_center/thunderdome1218)
 "gE" = (
-/obj/item/weapon/screwdriver,
-/turf/open/floor/plasteel/black,
-/area/zombie)
+/obj/structure/table/glass,
+/obj/machinery/recharger,
+/turf/open/floor/holofloor/plating,
+/area/holodeck/rec_center/kobayashi)
 "gF" = (
 /turf/closed/indestructible/riveted/infinity,
 /area/ctf)
 "gG" = (
-/obj/structure/sign/poster{
-	desc = "A large piece of space-resistant printed paper. A poster encouraging you to work for your future - but what it is, no one is really sure.";
-	icon_state = "poster17_legit";
-	name = "poster - Work for a Future";
-	tag = "icon-poster17_legit"
-	},
-/turf/closed/indestructible/riveted/infinity,
-/area/zombie)
+/turf/open/floor/holofloor/plating,
+/area/holodeck/rec_center/kobayashi)
 "gH" = (
-/obj/machinery/recharger,
-/obj/item/stack/sheet/rglass{
-	amount = 20
+/obj/structure/chair/comfy{
+	tag = "icon-comfychair (NORTH)";
+	icon_state = "comfychair";
+	dir = 1
 	},
-/obj/machinery/recharger/wallcharger{
-	pixel_y = 32
-	},
-/turf/open/floor/plasteel/darkvault{
-	dir = 4
-	},
-/area/zombie)
+/turf/open/floor/holofloor/plating,
+/area/holodeck/rec_center/kobayashi)
 "gI" = (
-/obj/machinery/light{
-	dir = 1
-	},
-/obj/effect/decal/cleanable/blood/old,
-/obj/machinery/recharger/wallcharger{
-	pixel_y = 32
-	},
-/turf/open/floor/plasteel/black,
-/area/zombie)
+/obj/structure/table/glass,
+/obj/item/weapon/gun/energy/gun/mini/practice_phaser,
+/turf/open/floor/holofloor/plating,
+/area/holodeck/rec_center/kobayashi)
 "gJ" = (
-/obj/item/weapon/screwdriver,
-/turf/open/floor/plasteel/darkvault{
+/obj/structure/chair{
 	dir = 4
 	},
-/area/zombie)
+/turf/open/floor/holofloor{
+	dir = 8;
+	icon_state = "chapel";
+	tag = "icon-chapel"
+	},
+/area/holodeck/rec_center/chapelcourt)
 "gK" = (
-/turf/open/floor/plasteel/darkwarning{
-	dir = 9
+/turf/open/floor/holofloor{
+	tag = "icon-chapel";
+	icon_state = "chapel";
+	dir = 2
 	},
-/area/zombie)
+/area/holodeck/rec_center/chapelcourt)
 "gL" = (
-/turf/open/floor/plasteel/darkwarning{
-	dir = 1
+/obj/item/weapon/gavelblock,
+/obj/item/weapon/gavelhammer,
+/obj/structure/table/wood,
+/turf/open/floor/holofloor{
+	dir = 8;
+	icon_state = "dark";
+	tag = "icon-white_warn (WEST)"
 	},
-/area/zombie)
+/area/holodeck/rec_center/chapelcourt)
 "gM" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel/darkwarning{
-	dir = 5
+/turf/open/floor/holofloor{
+	dir = 8;
+	icon_state = "chapel";
+	tag = "icon-chapel"
 	},
-/area/zombie)
+/area/holodeck/rec_center/chapelcourt)
 "gN" = (
-/obj/machinery/recharger/wallcharger{
-	pixel_y = 32
+/obj/structure/chair{
+	dir = 8
 	},
-/turf/open/floor/plasteel/darkvault{
-	dir = 1
+/turf/open/floor/holofloor{
+	tag = "icon-chapel";
+	icon_state = "chapel";
+	dir = 2
 	},
-/area/zombie)
+/area/holodeck/rec_center/chapelcourt)
 "gO" = (
-/obj/machinery/light{
-	dir = 1
-	},
-/obj/machinery/recharger/wallcharger{
-	pixel_y = 32
-	},
-/turf/open/floor/plasteel/black,
-/area/zombie)
+/obj/item/weapon/shovel,
+/turf/open/floor/holofloor/asteroid,
+/area/holodeck/rec_center/rollercoaster)
 "gP" = (
-/obj/item/stack/medical/gauze,
-/obj/structure/table/reinforced,
-/obj/structure/sign/poster{
-	pixel_x = 32;
-	pixel_y = 0
+/obj/structure/window/reinforced{
+	dir = 8
 	},
-/turf/open/floor/plasteel/darkvault{
-	dir = 1
+/turf/open/floor/holofloor{
+	tag = "icon-white_warn (SOUTHWEST)";
+	icon_state = "white_warn";
+	dir = 10
 	},
-/area/zombie)
+/area/holodeck/rec_center/firingrange)
 "gQ" = (
 /turf/open/floor/plasteel/darkblue/side{
 	tag = "icon-darkblue (NORTHWEST)";
@@ -2587,42 +2614,51 @@
 	},
 /area/ctf)
 "gW" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel/black,
-/area/zombie)
+/turf/open/floor/holofloor{
+	icon_state = "white_warn"
+	},
+/area/holodeck/rec_center/firingrange)
 "gX" = (
-/turf/open/floor/plasteel/darkvault{
+/obj/structure/window/reinforced{
 	dir = 4
 	},
-/area/zombie)
+/turf/open/floor/holofloor{
+	tag = "icon-white_warn (SOUTHEAST)";
+	icon_state = "white_warn";
+	dir = 6
+	},
+/area/holodeck/rec_center/firingrange)
 "gY" = (
-/turf/open/floor/plasteel/darkwarning{
-	dir = 8
-	},
-/area/zombie)
+/obj/item/weapon/weldingtool,
+/turf/open/floor/holofloor/plating,
+/area/holodeck/rec_center/refuel)
 "gZ" = (
-/obj/item/weapon/gun/energy/laser/scatter,
-/turf/open/floor/plasteel/darkvault{
+/turf/open/floor/holofloor{
+	dir = 8;
+	icon_state = "dark";
+	tag = "icon-white_warn (WEST)"
+	},
+/area/holodeck/rec_center/spacechess)
+"ha" = (
+/turf/open/floor/holofloor{
+	icon_state = "white"
+	},
+/area/holodeck/rec_center/spacechess)
+"hb" = (
+/turf/open/floor/holofloor{
+	tag = "icon-stairs-old (WEST)";
+	icon_state = "stairs-old";
 	dir = 8
 	},
-/area/zombie)
-"ha" = (
-/turf/open/floor/plasteel/darkwarning{
-	dir = 4
-	},
-/area/zombie)
-"hb" = (
-/turf/open/floor/plasteel/darkvault{
-	dir = 1
-	},
-/area/zombie)
+/area/holodeck/rec_center/thunderdome1218)
 "hc" = (
-/obj/structure/table/reinforced,
-/obj/machinery/recharger,
-/turf/open/floor/plasteel/darkvault{
-	dir = 1
+/obj/structure/table/wood,
+/obj/item/weapon/melee/chainofcommand{
+	name = "chain whip"
 	},
-/area/zombie)
+/obj/item/weapon/twohanded/spear,
+/turf/open/floor/holofloor/asteroid,
+/area/holodeck/rec_center/thunderdome1218)
 "hd" = (
 /turf/open/floor/plasteel/darkblue/side{
 	tag = "icon-darkblue (WEST)";
@@ -2691,239 +2727,139 @@
 /turf/open/floor/plasteel/terror/red,
 /area/ctf)
 "hr" = (
-/obj/structure/sign/poster{
-	desc = "A large piece of space-resistant printed paper. Enlist in the Nanotrasen Deathsquadron reserves today!";
-	icon_state = "poster29_legit";
-	name = "poster - Enlist";
-	pixel_x = -32;
-	pixel_y = 0;
-	tag = "icon-poster29_legit"
-	},
-/obj/effect/mine/pickup/healing{
-	name = "Heal Orb"
-	},
-/obj/machinery/door/window{
-	dir = 4;
-	req_access_txt = "150"
-	},
-/obj/structure/window/reinforced{
-	dir = 1;
-	pixel_y = 1
-	},
-/obj/structure/window/reinforced,
-/turf/open/floor/plasteel/darkvault{
-	dir = 4
-	},
-/area/zombie)
+/obj/structure/table/wood,
+/obj/item/weapon/scythe,
+/obj/item/weapon/twohanded/spear,
+/turf/open/floor/holofloor/asteroid,
+/area/holodeck/rec_center/thunderdome1218)
 "hs" = (
-/obj/machinery/door/window{
-	base_state = "right";
-	dir = 8;
-	icon_state = "right";
-	req_access_txt = "150"
-	},
-/turf/open/floor/plasteel/black,
-/area/zombie)
+/obj/structure/table/wood,
+/obj/item/weapon/tailclub,
+/obj/item/weapon/twohanded/spear,
+/turf/open/floor/holofloor/asteroid,
+/area/holodeck/rec_center/thunderdome1218)
 "ht" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel/darkvault{
+/turf/open/floor/holofloor{
+	dir = 8;
+	icon_state = "dark";
+	tag = "icon-white_warn (WEST)"
+	},
+/area/holodeck/rec_center/chapelcourt)
+"hu" = (
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/turf/open/floor/holofloor{
+	dir = 8;
+	icon_state = "red"
+	},
+/area/holodeck/rec_center/firingrange)
+"hv" = (
+/turf/open/floor/holofloor,
+/area/holodeck/rec_center/firingrange)
+"hw" = (
+/obj/structure/window/reinforced{
 	dir = 4
 	},
-/area/zombie)
-"hu" = (
-/turf/open/floor/plasteel/darkwarning{
-	dir = 10
-	},
-/area/zombie)
-"hv" = (
-/turf/open/floor/plasteel/darkwarning,
-/area/zombie)
-"hw" = (
-/turf/open/floor/plasteel/darkwarning{
-	dir = 6
-	},
-/area/zombie)
-"hx" = (
-/obj/item/stack/sheet/rglass{
-	amount = 20
-	},
-/obj/machinery/door/window{
+/turf/open/floor/holofloor{
 	dir = 4;
-	req_access_txt = "150"
+	icon_state = "red"
 	},
-/turf/open/floor/plasteel/black,
-/area/zombie)
+/area/holodeck/rec_center/firingrange)
+"hx" = (
+/turf/open/floor/holofloor/asteroid,
+/area/holodeck/rec_center/thunderdome1218)
 "hy" = (
-/obj/effect/mine/pickup/healing{
-	name = "Heal Orb"
-	},
-/obj/machinery/door/window{
-	base_state = "right";
-	dir = 8;
-	icon_state = "right";
-	req_access_txt = "150"
-	},
-/obj/structure/window/reinforced{
-	dir = 1;
-	pixel_y = 1
-	},
-/obj/structure/window/reinforced,
-/turf/open/floor/plasteel/darkvault{
-	dir = 1
-	},
-/area/zombie)
+/obj/machinery/modular_computer/console/preset/civilian,
+/turf/open/floor/holofloor/plating,
+/area/holodeck/rec_center/kobayashi)
 "hz" = (
 /obj/structure/kitchenspike,
 /turf/open/floor/plasteel/black,
 /area/ctf)
 "hA" = (
-/obj/structure/sign/poster{
-	icon_state = "poster24";
-	pixel_x = -32
+/obj/structure/chair/office/dark{
+	dir = 8
 	},
-/obj/machinery/door/window{
-	base_state = "right";
-	dir = 4;
-	icon_state = "right";
-	req_access_txt = "150"
-	},
-/obj/effect/mine/pickup/healing{
-	name = "Heal Orb"
-	},
-/obj/structure/window/reinforced{
-	dir = 1;
-	pixel_y = 1
-	},
-/obj/structure/window/reinforced,
-/turf/open/floor/plasteel/darkvault{
-	dir = 10
-	},
-/area/zombie)
+/turf/open/floor/holofloor/plating,
+/area/holodeck/rec_center/kobayashi)
 "hB" = (
-/obj/machinery/door/window{
-	dir = 8;
-	req_access_txt = "150"
+/obj/structure/chair/office/dark{
+	dir = 4
 	},
-/turf/open/floor/plasteel/darkvault{
-	dir = 10
-	},
-/area/zombie)
+/turf/open/floor/holofloor/plating,
+/area/holodeck/rec_center/kobayashi)
 "hC" = (
-/obj/effect/decal/cleanable/blood/old,
-/turf/open/floor/plasteel/darkvault{
-	dir = 6
-	},
-/area/zombie)
+/obj/machinery/computer/station_alert,
+/turf/open/floor/holofloor/plating,
+/area/holodeck/rec_center/kobayashi)
 "hD" = (
-/obj/machinery/door/window{
-	base_state = "right";
-	dir = 4;
-	icon_state = "right";
-	req_access_txt = "150"
+/obj/structure/chair{
+	dir = 1
 	},
-/turf/open/floor/plasteel/darkvault{
-	dir = 6
+/turf/open/floor/holofloor{
+	tag = "icon-chapel (NORTH)";
+	icon_state = "chapel";
+	dir = 1
 	},
-/area/zombie)
+/area/holodeck/rec_center/chapelcourt)
 "hE" = (
-/obj/structure/sign/poster{
-	pixel_x = 32;
-	pixel_y = 0
+/obj/structure/chair{
+	dir = 1
 	},
-/obj/machinery/door/window{
-	dir = 8;
-	req_access_txt = "150"
+/turf/open/floor/holofloor{
+	tag = "icon-chapel (EAST)";
+	icon_state = "chapel";
+	dir = 4
 	},
-/obj/effect/mine/pickup/healing{
-	name = "Heal Orb"
-	},
-/obj/structure/window/reinforced{
-	dir = 1;
-	pixel_y = 1
-	},
-/obj/structure/window/reinforced,
-/turf/open/floor/plasteel/darkvault{
-	dir = 6
-	},
-/area/zombie)
+/area/holodeck/rec_center/chapelcourt)
 "hF" = (
-/obj/structure/grille,
+/obj/machinery/modular_computer/console/preset/civilian,
 /obj/structure/window/reinforced,
-/obj/structure/window/reinforced{
-	dir = 1;
-	pixel_y = 1
-	},
-/turf/open/floor/plating,
-/area/zombie)
+/turf/open/floor/holofloor/plating,
+/area/holodeck/rec_center/kobayashi)
 "hG" = (
-/obj/structure/grille,
+/obj/machinery/computer/atmos_alert,
 /obj/structure/window/reinforced,
-/obj/structure/window/reinforced{
-	dir = 1;
-	pixel_y = 1
-	},
-/obj/structure/window/reinforced{
-	dir = 4;
-	pixel_x = 0
-	},
-/turf/open/floor/plating,
-/area/zombie)
+/turf/open/floor/holofloor/plating,
+/area/holodeck/rec_center/kobayashi)
 "hH" = (
-/obj/machinery/door/window{
-	req_access_txt = "150"
+/obj/structure/chair{
+	dir = 1
 	},
-/obj/machinery/door/window{
-	dir = 1;
-	req_access_txt = "150"
+/turf/open/floor/holofloor{
+	dir = 8;
+	icon_state = "chapel";
+	tag = "icon-chapel"
 	},
-/turf/open/floor/plasteel/darkvault{
-	dir = 10
-	},
-/area/zombie)
+/area/holodeck/rec_center/chapelcourt)
 "hI" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced,
-/obj/structure/window/reinforced{
-	dir = 1;
-	pixel_y = 1
+/obj/structure/chair{
+	dir = 1
 	},
-/obj/structure/window/reinforced{
-	dir = 4;
-	pixel_x = 0
+/turf/open/floor/holofloor{
+	tag = "icon-chapel";
+	icon_state = "chapel";
+	dir = 2
 	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/turf/open/floor/plating,
-/area/zombie)
+/area/holodeck/rec_center/chapelcourt)
 "hJ" = (
-/obj/machinery/door/window{
-	base_state = "right";
-	icon_state = "right";
-	req_access_txt = "150"
+/obj/machinery/conveyor/holodeck{
+	id = "holocoaster"
 	},
-/obj/machinery/door/window{
-	base_state = "right";
+/obj/structure/chair/office{
 	dir = 1;
-	icon_state = "right";
-	req_access_txt = "150"
+	name = "coaster car"
 	},
-/turf/open/floor/plasteel/darkvault{
-	dir = 6
-	},
-/area/zombie)
+/turf/open/floor/holofloor/asteroid,
+/area/holodeck/rec_center/rollercoaster)
 "hK" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced,
-/obj/structure/window/reinforced{
-	dir = 1;
-	pixel_y = 1
+/obj/machinery/conveyor_switch/oneway{
+	convdir = -1;
+	id = "holocoaster"
 	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/turf/open/floor/plating,
-/area/zombie)
+/turf/open/floor/holofloor/asteroid,
+/area/holodeck/rec_center/rollercoaster)
 "hL" = (
 /turf/closed/indestructible/splashscreen,
 /area/start)
@@ -2962,59 +2898,61 @@
 	},
 /area/ctf)
 "hS" = (
-/obj/effect/decal/cleanable/blood/old,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating,
-/area/zombie)
+/obj/structure/window/reinforced,
+/turf/open/floor/holofloor/plating,
+/area/holodeck/rec_center/kobayashi)
 "hT" = (
-/obj/structure/window/reinforced{
-	dir = 1;
-	pixel_y = 1
+/obj/item/cardboard_cutout/adaptive{
+	icon_state = "cutout_greytide";
+	name = "White Pawn";
+	tag = "icon-cutout_greytide"
 	},
-/turf/open/floor/plasteel/darkred/corner,
-/area/zombie)
+/turf/open/floor/holofloor{
+	dir = 8;
+	icon_state = "dark";
+	tag = "icon-white_warn (WEST)"
+	},
+/area/holodeck/rec_center/spacechess)
 "hU" = (
-/obj/structure/window/reinforced{
-	dir = 1;
-	pixel_y = 1
+/obj/item/cardboard_cutout/adaptive{
+	icon_state = "cutout_greytide";
+	name = "White Pawn";
+	tag = "icon-cutout_greytide"
 	},
-/turf/open/floor/plasteel/darkred/side{
-	dir = 1
+/turf/open/floor/holofloor{
+	icon_state = "white"
 	},
-/area/zombie)
+/area/holodeck/rec_center/spacechess)
 "hV" = (
-/obj/structure/window/reinforced{
-	dir = 1;
-	pixel_y = 1
+/obj/structure/window/reinforced,
+/turf/open/floor/holofloor/asteroid,
+/area/holodeck/rec_center/thunderdome1218)
+"hW" = (
+/obj/machinery/door/window/westleft{
+	dir = 2
 	},
-/turf/open/floor/plasteel/darkred/corner{
+/turf/open/floor/holofloor/asteroid,
+/area/holodeck/rec_center/thunderdome1218)
+"hX" = (
+/obj/machinery/door/window/westleft{
+	dir = 2;
+	icon_state = "right"
+	},
+/turf/open/floor/holofloor/plating,
+/area/holodeck/rec_center/kobayashi)
+"hY" = (
+/obj/structure/table,
+/obj/item/weapon/folder,
+/obj/item/weapon/pen/blue,
+/obj/structure/window/reinforced{
 	dir = 8
 	},
-/area/zombie)
-"hW" = (
-/obj/structure/window/reinforced{
-	dir = 1;
-	pixel_y = 1
+/turf/open/floor/holofloor{
+	tag = "icon-neutral (NORTH)";
+	icon_state = "neutral";
+	dir = 1
 	},
-/turf/open/floor/plasteel/black,
-/area/zombie)
-"hX" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/window/reinforced{
-	dir = 1;
-	pixel_y = 1
-	},
-/turf/open/floor/plasteel/darkred/corner,
-/area/zombie)
-"hY" = (
-/obj/machinery/light/small{
-	dir = 4
-	},
-/obj/structure/mirror{
-	pixel_y = 28
-	},
-/turf/open/floor/plasteel/black,
-/area/zombie)
+/area/holodeck/rec_center/kobayashi)
 "hZ" = (
 /obj/structure/window/reinforced/fulltile{
 	obj_integrity = 1e+007;
@@ -3028,34 +2966,60 @@
 /turf/open/floor/plasteel/warningline,
 /area/ctf)
 "ib" = (
-/turf/open/floor/plasteel/darkred/corner,
-/area/zombie)
-"ic" = (
-/turf/open/floor/plasteel/darkred/side{
+/obj/structure/table,
+/obj/item/weapon/folder,
+/obj/item/weapon/pen,
+/turf/open/floor/holofloor{
+	tag = "icon-neutral (NORTH)";
+	icon_state = "neutral";
 	dir = 1
 	},
-/area/zombie)
+/area/holodeck/rec_center/kobayashi)
+"ic" = (
+/obj/structure/table,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/item/weapon/folder,
+/obj/item/weapon/pen/red,
+/turf/open/floor/holofloor{
+	tag = "icon-neutral (NORTH)";
+	icon_state = "neutral";
+	dir = 1
+	},
+/area/holodeck/rec_center/kobayashi)
 "id" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel/darkred/corner{
-	dir = 8
+/obj/machinery/door/window/westleft{
+	dir = 2
 	},
-/area/zombie)
+/turf/open/floor/holofloor/plating,
+/area/holodeck/rec_center/kobayashi)
 "ie" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel/darkred/corner,
-/area/zombie)
+/obj/structure/closet/crate/miningcar{
+	can_buckle = 1;
+	desc = "Great for mining!";
+	name = "minecart"
+	},
+/turf/open/floor/holofloor/asteroid,
+/area/holodeck/rec_center/rollercoaster)
 "if" = (
-/turf/open/floor/plasteel/darkred/corner{
+/obj/structure/table/reinforced,
+/obj/machinery/recharger,
+/obj/structure/window/reinforced{
 	dir = 8
 	},
-/area/zombie)
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/turf/open/floor/holofloor{
+	dir = 8;
+	icon_state = "red"
+	},
+/area/holodeck/rec_center/firingrange)
 "ig" = (
-/obj/structure/closet/gimmick/zombie,
-/turf/open/floor/plasteel/darkvault{
-	dir = 8
-	},
-/area/zombie)
+/obj/item/weapon/paper/range,
+/turf/open/floor/holofloor,
+/area/holodeck/rec_center/firingrange)
 "ih" = (
 /turf/open/floor/plasteel/darkblue/corner,
 /area/ctf)
@@ -3071,25 +3035,43 @@
 /turf/open/floor/plating,
 /area/ctf)
 "ik" = (
-/obj/machinery/light/small{
-	dir = 8
+/obj/structure/table/reinforced,
+/obj/machinery/magnetic_controller{
+	autolink = 1
 	},
-/turf/open/floor/plasteel/darkred/corner,
-/area/zombie)
-"il" = (
-/obj/machinery/recharger,
-/turf/open/floor/plasteel/darkred/side{
-	dir = 1
-	},
-/area/zombie)
-"im" = (
-/obj/machinery/light/small{
+/obj/structure/window/reinforced{
 	dir = 4
 	},
-/turf/open/floor/plasteel/darkred/corner{
-	dir = 8
+/obj/structure/window/reinforced{
+	dir = 1
 	},
-/area/zombie)
+/turf/open/floor/holofloor{
+	dir = 4;
+	icon_state = "red"
+	},
+/area/holodeck/rec_center/firingrange)
+"il" = (
+/obj/item/cardboard_cutout/adaptive{
+	icon_state = "cutout_viva";
+	name = "White Rook";
+	tag = "icon-cutout_viva"
+	},
+/turf/open/floor/holofloor{
+	icon_state = "white"
+	},
+/area/holodeck/rec_center/spacechess)
+"im" = (
+/obj/item/cardboard_cutout/adaptive{
+	icon_state = "cutout_mime";
+	name = "White Queen";
+	tag = "icon-cutout_mime"
+	},
+/turf/open/floor/holofloor{
+	dir = 8;
+	icon_state = "dark";
+	tag = "icon-white_warn (WEST)"
+	},
+/area/holodeck/rec_center/spacechess)
 "in" = (
 /turf/open/floor/plasteel/black,
 /turf/open/floor/plasteel/warningline{
@@ -3112,21 +3094,34 @@
 	},
 /area/ctf)
 "iq" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel/darkred/side{
+/obj/item/cardboard_cutout/adaptive{
+	icon_state = "cutout_clown";
+	name = "White King";
+	tag = "icon-cutout_clown"
+	},
+/turf/open/floor/holofloor{
+	icon_state = "white"
+	},
+/area/holodeck/rec_center/spacechess)
+"ir" = (
+/obj/item/cardboard_cutout/adaptive{
+	icon_state = "cutout_ian";
+	name = "White Knight";
+	tag = "icon-cutout_ian"
+	},
+/turf/open/floor/holofloor{
+	dir = 8;
+	icon_state = "dark";
+	tag = "icon-white_warn (WEST)"
+	},
+/area/holodeck/rec_center/spacechess)
+"is" = (
+/turf/open/floor/holofloor{
+	tag = "icon-neutral (NORTH)";
+	icon_state = "neutral";
 	dir = 1
 	},
-/area/zombie)
-"ir" = (
-/obj/effect/decal/cleanable/blood/old,
-/turf/open/floor/plasteel/darkred/corner{
-	dir = 8
-	},
-/area/zombie)
-"is" = (
-/obj/effect/gibspawner/human,
-/turf/open/floor/plasteel/darkred/corner,
-/area/zombie)
+/area/holodeck/rec_center/kobayashi)
 "it" = (
 /turf/open/floor/plating{
 	icon_state = "warnplate";
@@ -3145,11 +3140,11 @@
 	},
 /area/ctf)
 "iw" = (
-/obj/effect/decal/cleanable/blood/old,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating,
-/area/zombie)
+/obj/structure/chair{
+	dir = 1
+	},
+/turf/open/floor/holofloor,
+/area/holodeck/rec_center/kobayashi)
 "ix" = (
 /turf/open/floor/plasteel/darkblue/corner{
 	tag = "icon-darkbluecorners (NORTH)";
@@ -3243,53 +3238,64 @@
 	},
 /area/ctf)
 "iM" = (
-/turf/open/floor/wood,
-/area/zombie)
-"iN" = (
-/obj/machinery/door/airlock/wood,
-/turf/open/floor/wood,
-/area/zombie)
-"iO" = (
-/obj/machinery/recharger/wallcharger{
-	pixel_y = 32
-	},
-/obj/machinery/light{
-	active_power_usage = 0;
+/turf/open/floor/holofloor{
 	dir = 1;
-	icon_state = "tube-broken";
-	status = 2
+	icon_state = "green"
 	},
-/turf/open/floor/wood,
-/area/zombie)
+/area/holodeck/rec_center/firingrange)
+"iN" = (
+/turf/open/floor/holofloor/grass,
+/turf/open/floor/holofloor{
+	tag = "icon-warningline (NORTH)";
+	icon_state = "warningline";
+	dir = 1
+	},
+/area/holodeck/rec_center/spacechess)
+"iO" = (
+/obj/structure/chair/wood/normal{
+	icon_state = "wooden_chair";
+	dir = 1
+	},
+/turf/open/floor/holofloor/grass,
+/area/holodeck/rec_center/thunderdome1218)
 "iP" = (
-/obj/effect/decal/cleanable/blood/old,
-/turf/open/floor/wood,
-/area/zombie)
+/obj/structure/rack,
+/obj/item/clothing/under/trek/medsci,
+/obj/item/clothing/under/trek/medsci,
+/obj/item/clothing/under/trek/command,
+/turf/open/floor/holofloor{
+	tag = "icon-neutral (NORTH)";
+	icon_state = "neutral";
+	dir = 1
+	},
+/area/holodeck/rec_center/kobayashi)
 "iQ" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/wood,
-/area/zombie)
-"iR" = (
-/obj/machinery/light{
-	dir = 1
-	},
-/obj/machinery/recharger/wallcharger{
-	pixel_y = 32
-	},
-/turf/open/floor/wood,
-/area/zombie)
-"iS" = (
-/obj/structure/toilet{
-	dir = 8
-	},
-/obj/machinery/light/small{
-	dir = 1
-	},
-/turf/open/floor{
-	icon_state = "freezerfloor";
+/turf/open/floor/holofloor{
+	tag = "icon-neutral";
+	icon_state = "neutral";
 	dir = 2
 	},
-/area/zombie)
+/area/holodeck/rec_center/kobayashi)
+"iR" = (
+/obj/structure/rack,
+/obj/item/clothing/under/trek/engsec,
+/obj/item/clothing/under/trek/engsec,
+/turf/open/floor/holofloor{
+	tag = "icon-neutral (NORTH)";
+	icon_state = "neutral";
+	dir = 1
+	},
+/area/holodeck/rec_center/kobayashi)
+"iS" = (
+/obj/machinery/conveyor/holodeck{
+	dir = 9;
+	icon_state = "conveyor0";
+	id = "holocoaster";
+	tag = "icon-conveyor0 (NORTHWEST)";
+	verted = -1
+	},
+/turf/open/floor/holofloor/asteroid,
+/area/holodeck/rec_center/rollercoaster)
 "iT" = (
 /turf/open/floor/plasteel/circuit,
 /turf/open/floor/plasteel/warningline,
@@ -3325,59 +3331,36 @@
 /turf/open/floor/plasteel/circuit/rcircuit,
 /area/ctf)
 "iY" = (
-/obj/effect/mine/pickup/healing{
-	name = "Heal Orb"
-	},
-/obj/machinery/door/window{
+/obj/machinery/conveyor/holodeck{
 	dir = 4;
-	req_access_txt = "150"
+	id = "holocoaster"
 	},
-/obj/structure/window/reinforced{
-	dir = 1;
-	pixel_y = 1
-	},
-/obj/structure/window/reinforced,
-/turf/open/floor/wood,
-/area/zombie)
+/turf/open/floor/holofloor/asteroid,
+/area/holodeck/rec_center/rollercoaster)
 "iZ" = (
-/obj/machinery/door/window{
-	base_state = "right";
-	dir = 8;
-	icon_state = "right";
-	req_access_txt = "150"
+/obj/machinery/conveyor/holodeck{
+	dir = 10;
+	id = "holocoaster";
+	verted = -1
 	},
-/turf/open/floor/wood,
-/area/zombie)
+/turf/open/floor/holofloor/asteroid,
+/area/holodeck/rec_center/rollercoaster)
 "ja" = (
-/obj/machinery/door/window{
-	dir = 4;
-	req_access_txt = "150"
-	},
-/turf/open/floor/wood,
-/area/zombie)
+/obj/item/target,
+/obj/item/target/clown,
+/turf/open/floor/holofloor,
+/area/holodeck/rec_center/firingrange)
 "jb" = (
-/obj/effect/mine/pickup/healing{
-	name = "Heal Orb"
-	},
-/obj/machinery/door/window{
-	base_state = "right";
-	dir = 8;
-	icon_state = "right";
-	req_access_txt = "150"
-	},
-/obj/structure/window/reinforced{
-	dir = 1;
-	pixel_y = 1
-	},
-/obj/structure/window/reinforced,
-/turf/open/floor/wood,
-/area/zombie)
+/obj/item/target,
+/obj/item/target/syndicate,
+/turf/open/floor/holofloor,
+/area/holodeck/rec_center/firingrange)
 "jc" = (
-/obj/structure/sign/securearea{
-	name = "\improper ROOM 3, BASEMENT"
-	},
-/turf/closed/indestructible/riveted/infinity,
-/area/zombie)
+/obj/structure/rack,
+/obj/item/weapon/gun/energy/laser/practice,
+/obj/item/clothing/ears/earmuffs,
+/turf/open/floor/holofloor,
+/area/holodeck/rec_center/firingrange)
 "jd" = (
 /turf/open/floor/plasteel/darkblue/side{
 	tag = "icon-darkblue (NORTHWEST)";
@@ -3457,91 +3440,106 @@
 	},
 /area/ctf)
 "jk" = (
-/obj/structure/closet,
-/obj/item/stack/sheet/rglass{
-	amount = 20
+/obj/structure/window/reinforced{
+	dir = 1
 	},
-/turf/open/floor/carpet,
-/area/zombie)
+/turf/closed/indestructible/riveted,
+/area/space)
 "jl" = (
-/obj/machinery/light/small{
-	dir = 1
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -24
 	},
-/obj/machinery/recharger/wallcharger{
-	pixel_y = 32
+/obj/machinery/firealarm{
+	pixel_y = 27
 	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/carpet,
-/area/zombie)
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -24
+	},
+/obj/machinery/firealarm{
+	dir = 4;
+	pixel_x = 24
+	},
+/turf/open/floor/engine/caution,
+/area/space)
 "jm" = (
-/obj/structure/bed/dogbed,
-/turf/open/floor/carpet,
-/area/zombie)
+/turf/open/space,
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Battleship"
+	})
 "jn" = (
-/obj/effect/mine/pickup/healing{
-	name = "Heal Orb"
+/obj/item/weapon/twohanded/required/kirbyplants{
+	icon_state = "plant-13";
+	layer = 4.1;
+	tag = "icon-plant-13"
 	},
-/obj/machinery/door/window{
-	base_state = "right";
-	dir = 4;
-	icon_state = "right";
-	req_access_txt = "150"
-	},
-/obj/structure/window/reinforced,
-/obj/structure/window/reinforced{
-	dir = 1;
-	pixel_y = 1
-	},
-/turf/open/floor/wood,
-/area/zombie)
+/turf/open/floor/plasteel/whiteyellow/side,
+/area/shuttle/NTcruiser)
 "jo" = (
-/obj/machinery/door/window{
-	dir = 8;
-	req_access_txt = "150"
-	},
-/turf/open/floor/wood,
-/area/zombie)
-"jp" = (
-/obj/machinery/door/window{
-	base_state = "right";
-	dir = 4;
-	icon_state = "right";
-	req_access_txt = "150"
-	},
-/turf/open/floor/wood,
-/area/zombie)
-"jq" = (
-/obj/effect/mine/pickup/healing{
-	name = "Heal Orb"
-	},
-/obj/machinery/door/window{
-	dir = 8;
-	req_access_txt = "150"
-	},
-/obj/structure/window/reinforced,
-/obj/structure/window/reinforced{
+/obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/poddoor/shutters/corner/opeopen{
+	tag = "icon-open (NORTH)";
+	icon_state = "open";
 	dir = 1;
-	pixel_y = 1
+	id = "scrui_shutters"
 	},
-/turf/open/floor/wood,
-/area/zombie)
+/turf/open/floor/plating,
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
+"jp" = (
+/obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/poddoor/shutters/preopen{
+	dir = 1;
+	id = "scrui_shutters"
+	},
+/turf/open/floor/plating,
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
+"jq" = (
+/obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/poddoor/shutters/corner/opeopen{
+	tag = "icon-open (EAST)";
+	icon_state = "open";
+	dir = 4;
+	id = "scrui_shutters"
+	},
+/turf/open/floor/plating,
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "jr" = (
-/obj/effect/decal/cleanable/blood/old,
-/turf/open/floor/carpet,
-/area/zombie)
+/obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/poddoor/shutters/preopen{
+	dir = 8;
+	id = "scrui_shutters"
+	},
+/turf/open/floor/plating,
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "js" = (
-/obj/machinery/light/small{
-	dir = 1
+/obj/machinery/computer/shuttle/syndicate{
+	name = "Syndicate Cruiser Terminal";
+	possible_destinations = "station;sector_bravo;der";
+	shuttleId = "Battleship"
 	},
-/obj/machinery/recharger/wallcharger{
-	pixel_y = 32
+/turf/open/floor/plasteel/darkvault{
+	dir = 8
 	},
-/turf/open/floor/carpet,
-/area/zombie)
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "jt" = (
-/obj/effect/gibspawner/human,
-/turf/open/floor/carpet,
-/area/zombie)
+/obj/machinery/computer/communications,
+/turf/open/floor/plasteel/darkvault{
+	dir = 8
+	},
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "ju" = (
 /turf/open/floor/plasteel/darkblue/side{
 	tag = "icon-darkblue (WEST)";
@@ -3571,119 +3569,222 @@
 /turf/open/floor/plasteel/circuit/rcircuit,
 /area/ctf)
 "jy" = (
-/turf/open/floor/carpet,
-/area/zombie)
-"jz" = (
-/obj/effect/decal/cleanable/blood/old,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/carpet,
-/area/zombie)
-"jA" = (
-/obj/machinery/recharger,
-/obj/effect/decal/cleanable/blood/old,
-/turf/open/floor/wood,
-/area/zombie)
-"jB" = (
-/obj/structure/closet,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/carpet,
-/area/zombie)
-"jC" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/carpet,
-/area/zombie)
-"jD" = (
-/obj/structure/bed,
-/obj/item/weapon/bedsheet,
-/obj/item/stack/medical/gauze,
-/obj/effect/decal/cleanable/blood/old,
-/turf/open/floor/carpet,
-/area/zombie)
-"jE" = (
-/obj/structure/bed,
-/obj/item/weapon/bedsheet/syndie,
-/obj/effect/mine/pickup/healing{
-	name = "Heal Orb"
-	},
-/turf/open/floor/carpet,
-/area/zombie)
-"jF" = (
-/obj/item/stack/sheet/rglass{
-	amount = 20
-	},
-/turf/open/floor/carpet,
-/area/zombie)
-"jG" = (
-/obj/structure/window/reinforced,
-/turf/open/floor/wood,
-/area/zombie)
-"jH" = (
-/obj/machinery/door/window{
-	req_access_txt = "150"
-	},
-/obj/structure/window/reinforced{
+/obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/poddoor/shutters/preopen{
 	dir = 4;
-	pixel_x = 0
+	id = "scrui_shutters"
 	},
-/turf/open/floor/wood,
-/area/zombie)
-"jI" = (
-/obj/structure/window/reinforced{
-	dir = 1;
-	pixel_y = 1
-	},
-/turf/open/floor/wood,
-/area/zombie)
-"jJ" = (
-/obj/structure/closet,
-/obj/item/weapon/screwdriver,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/carpet,
-/area/zombie)
-"jK" = (
-/obj/machinery/recharger/wallcharger{
-	pixel_y = 32
-	},
-/obj/machinery/light/small{
+/turf/open/floor/plating,
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
+"jz" = (
+/turf/closed/wall/r_wall,
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
+"jA" = (
+/obj/structure/chair/comfy/shuttle/black/noNT{
+	tag = "icon-shblackS (NORTH)";
+	icon_state = "shblackS";
 	dir = 1
 	},
-/turf/open/floor/carpet,
-/area/zombie)
-"jL" = (
-/obj/machinery/light/small{
+/obj/machinery/button/door{
+	id = "Hangar A";
+	layer = 5;
+	name = "Dock Door A";
+	normaldoorcontrol = 0;
+	pixel_x = 5;
+	pixel_y = 27;
+	req_access_txt = "150";
+	specialfunctions = 4
+	},
+/turf/open/floor/plasteel/terror/darkred/corner{
+	tag = "icon-darkredcorners_t (NORTH)";
+	icon_state = "darkredcorners_t";
+	dir = 1
+	},
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
+"jB" = (
+/obj/structure/chair/comfy/shuttle/black/noNT{
+	tag = "icon-shblackS (NORTH)";
+	icon_state = "shblackS";
+	dir = 1
+	},
+/obj/machinery/button/door{
+	id = "scrui_shutters";
+	layer = 5;
+	name = "Dock Door A";
+	normaldoorcontrol = 0;
+	pixel_x = 5;
+	pixel_y = 27;
+	req_access_txt = "150";
+	specialfunctions = 4
+	},
+/turf/open/floor/plasteel/terror/darkred/corner{
+	tag = "icon-darkredcorners_t (EAST)";
+	icon_state = "darkredcorners_t";
+	dir = 4
+	},
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
+"jC" = (
+/obj/machinery/computer/camera_advanced,
+/turf/open/floor/plasteel/darkvault{
 	dir = 8
 	},
-/turf/open/floor/wood,
-/area/zombie)
-"jM" = (
-/obj/machinery/light/small{
-	active_power_usage = 0;
-	dir = 4;
-	icon_state = "bulb-broken";
-	status = 2
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
+"jD" = (
+/obj/machinery/computer/crew,
+/turf/open/floor/plasteel/darkvault{
+	dir = 8
 	},
-/turf/open/floor/wood,
-/area/zombie)
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
+"jE" = (
+/turf/open/floor/plasteel/terror/darkred/corner{
+	tag = "icon-darkredcorners_t (NORTH)";
+	icon_state = "darkredcorners_t";
+	dir = 1
+	},
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
+"jF" = (
+/turf/open/floor/plasteel/terror/darkred/corner{
+	tag = "icon-darkredcorners_t (EAST)";
+	icon_state = "darkredcorners_t";
+	dir = 4
+	},
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
+"jG" = (
+/turf/open/floor/plasteel/black,
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
+"jH" = (
+/obj/machinery/computer/station_alert,
+/turf/open/floor/plasteel/darkvault{
+	dir = 8
+	},
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
+"jI" = (
+/obj/structure/chair/comfy/shuttle/black/noNT{
+	tag = "icon-shblackS (NORTH)";
+	icon_state = "shblackS";
+	dir = 1
+	},
+/turf/open/floor/plasteel/black,
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
+"jJ" = (
+/obj/structure/chair/comfy/shuttle/black/noNT{
+	tag = "icon-shblackS (EAST)";
+	icon_state = "shblackS";
+	dir = 4
+	},
+/turf/open/floor/plasteel/black,
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
+"jK" = (
+/obj/machinery/artillerycontrol/syndie,
+/turf/open/floor/plasteel/darkvault{
+	dir = 8
+	},
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
+"jL" = (
+/obj/structure/window/reinforced{
+	color = "#FFFF00";
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	color = "#FFFF00";
+	dir = 8
+	},
+/obj/machinery/gun_turret/laser{
+	dir = 1
+	},
+/turf/open/floor/plating/airless/warnplate{
+	tag = "icon-plating_warn (NORTHWEST)";
+	icon_state = "plating_warn";
+	dir = 9
+	},
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
+"jM" = (
+/obj/structure/window/reinforced{
+	color = "#FFFF00";
+	dir = 1
+	},
+/turf/open/floor/plating/airless/warnplate{
+	tag = "icon-plating_warn (NORTH)";
+	icon_state = "plating_warn";
+	dir = 1
+	},
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "jN" = (
-/obj/structure/closet,
-/turf/open/floor/carpet,
-/area/zombie)
+/obj/structure/table/reinforced,
+/turf/open/floor/plasteel/darkvault{
+	dir = 8
+	},
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "jO" = (
 /turf/open/floor/plasteel/circuit/gcircuit/animated,
 /area/ctf)
 "jP" = (
-/obj/effect/decal/cleanable/blood/old,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/wood,
-/area/zombie)
+/obj/machinery/gun_turret/laser{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	color = "#FFFF00";
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	color = "#FFFF00";
+	dir = 4
+	},
+/turf/open/floor/plating/airless/warnplate{
+	tag = "icon-plating_warn (NORTHEAST)";
+	icon_state = "plating_warn";
+	dir = 5
+	},
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "jQ" = (
-/obj/machinery/recharger,
-/turf/open/floor/wood,
-/area/zombie)
+/obj/machinery/door/airlock/centcom{
+	name = "Bridge"
+	},
+/turf/open/floor/plasteel/darkvault/delivary,
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "jR" = (
-/obj/effect/decal/cleanable/blood/old,
-/turf/open/floor/plating,
-/area/zombie)
+/obj/structure/table,
+/obj/item/weapon/soap/syndie,
+/turf/open/floor/plasteel/cafeteria,
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "jS" = (
 /obj/machinery/capture_the_flag/blue,
 /turf/open/floor/plasteel/circuit/gcircuit/animated,
@@ -3705,40 +3806,40 @@
 /turf/open/floor/plasteel/circuit/gcircuit/animated,
 /area/ctf)
 "jX" = (
-/obj/structure/bed,
-/obj/item/weapon/bedsheet/red,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/carpet,
-/area/zombie)
+/obj/structure/table,
+/turf/open/floor/plasteel/cafeteria,
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "jY" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/item/weapon/twohanded/required/kirbyplants{
-	icon_state = "plant-04";
-	layer = 4.1;
-	tag = "icon-plant-04"
-	},
-/turf/open/floor/wood,
-/area/zombie)
+/obj/machinery/vending/eatimat,
+/turf/open/floor/plasteel/cafeteria,
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "jZ" = (
-/obj/structure/bed,
-/obj/item/weapon/bedsheet/patriot,
-/obj/item/stack/sheet/rglass{
-	amount = 20
-	},
-/turf/open/floor/carpet,
-/area/zombie)
+/turf/closed/wall,
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "ka" = (
-/obj/item/weapon/shard{
-	color = "#008000";
-	icon_state = "small"
+/obj/structure/sign/directions/engineering{
+	desc = "A direction sign, pointing out which way the bridge is.";
+	dir = 1;
+	icon_state = "direction_bridge";
+	name = "bridge";
+	pixel_y = 32;
+	tag = "icon-direction_bridge (EAST)"
 	},
-/obj/structure/grille{
-	color = "#008000";
-	density = 0;
-	icon_state = "brokengrille"
+/obj/structure/closet/emcloset{
+	anchored = 1
 	},
-/turf/open/floor/plating,
-/area/wizard_station)
+/turf/open/floor/plasteel/blackvault/corner{
+	dir = 4
+	},
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "kb" = (
 /turf/closed/indestructible/fakeglass{
 	color = "#008000";
@@ -3757,92 +3858,112 @@
 /turf/closed/indestructible/riveted/uranium,
 /area/wizard_station)
 "ke" = (
-/obj/structure/toilet,
-/obj/machinery/light/small{
-	dir = 1
+/turf/open/floor/plasteel/blackvault/corner{
+	dir = 4
 	},
-/turf/open/floor{
-	icon_state = "freezerfloor";
-	dir = 2
-	},
-/area/zombie)
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "kf" = (
-/obj/structure/sign/securearea{
-	name = "\improper ROOM 2, DEAD AHEAD"
+/turf/open/floor/plasteel/blackvault/corner{
+	dir = 8
 	},
-/turf/closed/indestructible/riveted/infinity,
-/area/zombie)
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "kg" = (
-/obj/machinery/computer/security/wooden_tv{
-	desc = "Абсолютно бесполезный телевизор...";
-	name = "TV from your house";
-	network = null
+/obj/structure/closet/emcloset{
+	anchored = 1
 	},
-/obj/structure/table/wood,
-/turf/open/floor{
-	icon_state = "bar";
-	dir = 2
+/turf/open/floor/plasteel/blackvault/corner{
+	dir = 8
 	},
-/area/zombie)
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "kh" = (
+/obj/structure/rack,
+/obj/item/ammo_box/c45nostamina,
+/obj/item/ammo_box/magazine/smgm45,
+/obj/item/ammo_box/magazine/smgm45,
 /obj/machinery/recharger/wallcharger{
 	pixel_y = 32
 	},
-/obj/item/device/lightreplacer,
-/obj/structure/table/wood,
-/turf/open/floor{
-	icon_state = "bar";
-	dir = 2
+/turf/open/floor/plasteel/darkvault{
+	dir = 8
 	},
-/area/zombie)
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "ki" = (
-/obj/machinery/recharger,
-/obj/machinery/light/small{
+/obj/structure/rack,
+/obj/structure/sign/directions/synd{
+	pixel_y = 31
+	},
+/obj/item/weapon/gun/projectile/automatic/c20r{
+	pixel_x = -5;
+	pixel_y = 4
+	},
+/obj/item/weapon/gun/projectile/automatic/c20r,
+/turf/open/floor/plasteel/darkvault{
+	dir = 8
+	},
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
+"kj" = (
+/obj/structure/rack,
+/obj/item/weapon/gun/energy/gun{
+	pixel_x = -3;
+	pixel_y = 2
+	},
+/obj/item/weapon/gun/energy/gun,
+/obj/machinery/recharger/wallcharger{
+	pixel_y = 32
+	},
+/turf/open/floor/plasteel/darkvault{
+	dir = 8
+	},
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
+"kk" = (
+/obj/structure/window/reinforced{
+	color = "#FFFF00";
+	dir = 8
+	},
+/turf/open/floor/plating/airless/warnplate{
+	tag = "icon-plating_warn (WEST)";
+	icon_state = "plating_warn";
+	dir = 8
+	},
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
+"kl" = (
+/obj/structure/chair{
 	dir = 1
 	},
-/obj/structure/table/wood,
-/turf/open/floor{
-	icon_state = "bar";
-	dir = 2
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -27;
+	pixel_y = 0
 	},
-/area/zombie)
-"kj" = (
-/obj/machinery/recharger/wallcharger{
-	pixel_y = 32
-	},
-/turf/open/floor{
-	icon_state = "bar";
-	dir = 2
-	},
-/area/zombie)
-"kk" = (
-/obj/structure/table/wood,
-/obj/item/weapon/phone,
-/turf/open/floor{
-	icon_state = "bar";
-	dir = 2
-	},
-/area/zombie)
-"kl" = (
-/obj/structure/table/wood,
-/turf/open/floor{
-	icon_state = "bar";
-	dir = 2
-	},
-/area/zombie)
+/turf/open/floor/plasteel/cafeteria,
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "km" = (
 /obj/structure/bookcase/random/reference,
 /turf/open/floor/wood,
 /area/wizard_station)
 "kn" = (
-/obj/item/weapon/shard{
-	color = "#008000"
+/obj/structure/chair{
+	dir = 1
 	},
-/turf/open/floor{
-	tag = "icon-cult";
-	icon_state = "cult"
-	},
-/area/wizard_station)
+/turf/open/floor/plasteel/cafeteria,
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "ko" = (
 /obj/machinery/door/airlock{
 	icon = 'icons/obj/doors/airlocks/station/uranium.dmi';
@@ -3851,58 +3972,78 @@
 /turf/open/floor/engine/cult/airless,
 /area/wizard_station)
 "kp" = (
-/turf/open/floor{
-	tag = "icon-cultdamage3";
-	icon_state = "cultdamage3"
-	},
-/area/wizard_station)
+/turf/open/floor/plasteel/cafeteria,
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "kq" = (
-/obj/machinery/recharger/wallcharger{
-	pixel_y = 32
+/obj/machinery/door/airlock/glass,
+/obj/structure/sign/directions/civilian{
+	pixel_y = 24
 	},
-/obj/effect/decal/cleanable/dirt,
-/obj/item/weapon/twohanded/required/kirbyplants{
-	icon_state = "plant-20";
-	layer = 4.1;
-	tag = "icon-plant-20"
-	},
-/turf/open/floor/wood,
-/area/zombie)
+/turf/open/floor/plasteel/cafeteria,
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "kr" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/wood,
-/area/zombie)
+/obj/structure/sign/directions/s{
+	layer = 2.1;
+	pixel_x = 16;
+	pixel_y = -16
+	},
+/turf/open/floor/plasteel/black,
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "ks" = (
-/obj/structure/table/wood,
-/obj/machinery/light/small{
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 27;
+	pixel_y = 0
+	},
+/turf/open/floor/plasteel/blackvault/corner{
+	dir = 8
+	},
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
+"kt" = (
+/turf/open/floor/plasteel/terror/darkred/side{
+	tag = "icon-darkred_t (NORTH)";
+	icon_state = "darkred_t";
 	dir = 1
 	},
-/obj/machinery/recharger,
-/turf/open/floor/wood,
-/area/zombie)
-"kt" = (
-/turf/open/floor{
-	icon_state = "bar";
-	dir = 2
-	},
-/area/zombie)
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "ku" = (
-/obj/structure/table/wood,
-/obj/item/weapon/dice/d4,
-/turf/open/floor{
-	icon_state = "bar";
-	dir = 2
+/obj/structure/window/reinforced{
+	color = "#FFFF00";
+	dir = 4
 	},
-/area/zombie)
+/turf/open/floor/plating/airless/warnplate{
+	tag = "icon-plating_warn (EAST)";
+	icon_state = "plating_warn";
+	dir = 4
+	},
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "kv" = (
-/obj/structure/lattice,
-/obj/item/weapon/shard{
-	color = "#008000";
-	icon_state = "medium"
+/obj/machinery/gun_turret/laser{
+	dir = 9
 	},
-/turf/open/space/transit,
-/area/wizard_station)
+/obj/structure/window/reinforced{
+	color = "#FFFF00";
+	dir = 8
+	},
+/turf/open/floor/plating/airless/warnplate{
+	tag = "icon-plating_warn (WEST)";
+	icon_state = "plating_warn";
+	dir = 8
+	},
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "kw" = (
 /mob/living/simple_animal/bot/medbot/mysterious{
 	desc = "If you don't accidentally blow yourself up from time to time you're not really a wizard anyway.";
@@ -3919,173 +4060,219 @@
 /turf/open/floor/engine/cult,
 /area/wizard_station)
 "ky" = (
-/obj/effect/decal/cleanable/blood/gibs/body,
-/turf/open/floor{
-	tag = "icon-cult";
-	icon_state = "cult"
+/obj/structure/sink{
+	dir = 8;
+	icon_state = "sink";
+	pixel_x = -11;
+	pixel_y = 0
 	},
-/area/wizard_station)
+/obj/structure/mirror{
+	pixel_x = -28
+	},
+/turf/open/floor/plasteel/cafeteria,
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "kz" = (
-/obj/structure/table/reinforced,
-/obj/effect/gibspawner/human,
-/obj/item/weapon/screwdriver,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor{
-	icon_state = "cafeteria"
-	},
-/area/zombie)
-"kA" = (
-/obj/machinery/recharger/wallcharger{
-	pixel_y = 32
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor{
-	icon_state = "cafeteria"
-	},
-/area/zombie)
-"kB" = (
-/turf/open/floor{
-	icon_state = "cafeteria"
-	},
-/area/zombie)
-"kC" = (
-/obj/structure/sign/poster{
-	desc = "A large piece of space-resistant printed paper. A poster instructing the viewer to report suspicious activity to the security force.";
-	icon_state = "poster21_legit";
-	name = "poster - Report";
-	pixel_y = 31;
-	tag = "icon-poster21_legit"
-	},
-/turf/open/floor{
-	icon_state = "cafeteria"
-	},
-/area/zombie)
-"kD" = (
 /obj/machinery/door/airlock/glass,
-/turf/open/floor{
-	icon_state = "cafeteria"
+/turf/open/floor/plasteel/cafeteria,
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
+"kA" = (
+/turf/open/floor/plasteel/blackvault/corner,
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
+"kB" = (
+/turf/open/floor/plasteel/blackvault/corner{
+	dir = 1
 	},
-/area/zombie)
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
+"kC" = (
+/obj/machinery/door/airlock/highsecurity{
+	name = "Special Ops Bay";
+	req_access_txt = "150"
+	},
+/turf/open/floor/plasteel/darkvault/delivary,
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
+"kD" = (
+/obj/machinery/vending/wallmed/regular{
+	pixel_x = 30;
+	pixel_y = 0
+	},
+/turf/open/floor/plasteel/black,
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "kE" = (
-/obj/structure/table/wood,
-/obj/machinery/recharger,
-/turf/open/floor/wood,
-/area/zombie)
+/obj/machinery/gun_turret/laser{
+	dir = 5
+	},
+/obj/structure/window/reinforced{
+	color = "#FFFF00";
+	dir = 4
+	},
+/turf/open/floor/plating/airless/warnplate{
+	tag = "icon-plating_warn (EAST)";
+	icon_state = "plating_warn";
+	dir = 4
+	},
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "kF" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor{
-	icon_state = "bar";
-	dir = 2
+/obj/structure/toilet{
+	dir = 4
 	},
-/area/zombie)
+/obj/machinery/button/door{
+	id = "s_cruiser_toilet";
+	name = "Lock";
+	normaldoorcontrol = 1;
+	pixel_x = 0;
+	pixel_y = 24;
+	req_access_txt = "101";
+	specialfunctions = 4
+	},
+/turf/open/floor/plasteel{
+	icon_state = "freezerfloor"
+	},
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "kG" = (
-/obj/structure/table/wood,
-/obj/machinery/recharger,
-/turf/open/floor/carpet,
-/area/zombie)
+/obj/machinery/door/airlock{
+	id_tag = "s_cruiser_toilet"
+	},
+/turf/open/floor/plasteel{
+	icon_state = "freezerfloor"
+	},
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "kH" = (
-/obj/structure/chair/comfy/black{
-	dir = 8
+/obj/machinery/newscaster{
+	pixel_x = 32
 	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/carpet,
-/area/zombie)
+/turf/open/floor/plasteel/cafeteria,
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "kI" = (
-/obj/structure/showcase{
-	desc = "A strange machine supposedly from another world. The Wizard Federation has been meddling with it for years.";
-	icon = 'icons/obj/machines/telecomms.dmi';
-	icon_state = "processor";
-	name = "byond random number generator"
-	},
-/turf/open/floor{
-	tag = "icon-cultdamage7";
-	icon_state = "cultdamage7"
-	},
-/area/wizard_station)
-"kJ" = (
-/obj/effect/decal/cleanable/blood,
-/turf/open/floor{
-	tag = "icon-cult";
-	icon_state = "cult"
-	},
-/area/wizard_station)
-"kK" = (
-/obj/structure/showcase{
-	desc = "A historical figure of great importance to the wizard federation. He spent his long life learning magic, stealing artifacts, and harassing idiots with swords. May he rest forever, Rodney.";
-	icon = 'icons/mob/mob.dmi';
-	icon_state = "nim";
-	name = "wizard of yendor showcase"
-	},
-/turf/open/floor{
-	tag = "icon-cult";
-	icon_state = "cult"
-	},
-/area/wizard_station)
-"kL" = (
-/obj/structure/sign/poster{
-	icon_state = "poster3_legit";
-	pixel_x = -31;
-	tag = "icon-poster3_legit"
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor{
-	icon_state = "cafeteria"
-	},
-/area/zombie)
-"kM" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor{
-	icon_state = "cafeteria"
-	},
-/area/zombie)
-"kN" = (
-/obj/item/stack/sheet/rglass{
-	amount = 20
-	},
-/turf/open/floor{
-	icon_state = "cafeteria"
-	},
-/area/zombie)
-"kO" = (
-/obj/effect/decal/cleanable/blood/old,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor{
-	icon_state = "cafeteria"
-	},
-/area/zombie)
-"kP" = (
-/obj/machinery/light/small{
+/obj/structure/chair{
 	dir = 4
 	},
-/turf/open/floor/wood,
-/area/zombie)
-"kQ" = (
-/obj/machinery/light/small{
+/turf/open/floor/plasteel/blackvault/corner,
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
+"kJ" = (
+/obj/structure/sign/directions/security{
+	dir = 4;
+	icon_state = "direction_sec";
+	pixel_x = 32;
+	tag = "icon-direction_sec (EAST)"
+	},
+/obj/machinery/vending/coffee,
+/turf/open/floor/plasteel/blackvault/corner{
+	dir = 1
+	},
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
+"kK" = (
+/obj/structure/tank_dispenser/oxygen,
+/turf/open/floor/plasteel/darkwarning,
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
+"kL" = (
+/turf/open/floor/plasteel/darkwarning,
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
+"kM" = (
+/obj/structure/sign/directions/engineering{
+	desc = "A direction sign, pointing out which way the bridge is.";
+	dir = 1;
+	icon_state = "direction_bridge";
+	name = "bridge";
+	pixel_x = -32;
+	pixel_y = 9;
+	tag = "icon-direction_bridge (EAST)"
+	},
+/obj/machinery/door/airlock/glass_maintenance{
+	name = "Main Hallway"
+	},
+/turf/open/floor/plasteel/blackvault/corner{
+	dir = 4
+	},
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
+"kN" = (
+/obj/machinery/door/airlock/glass_maintenance{
+	name = "Main Hallway"
+	},
+/turf/open/floor/plasteel/blackvault/corner{
 	dir = 8
 	},
-/obj/item/stack/sheet/rglass{
-	amount = 20
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
+"kO" = (
+/obj/machinery/door/airlock/glass_maintenance{
+	name = "Hardsuits";
+	req_access_txt = "150"
 	},
-/turf/open/floor{
-	icon_state = "bar";
+/turf/open/floor/plasteel/darkvault/delivary,
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
+"kP" = (
+/obj/machinery/atmospherics/components/unary/thermomachine/freezer{
 	dir = 2
 	},
-/area/zombie)
+/turf/open/floor/plasteel/whitebot,
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
+"kQ" = (
+/obj/machinery/atmospherics/components/unary/portables_connector/visible,
+/obj/machinery/portable_atmospherics/canister/oxygen,
+/turf/open/floor/plasteel/whitebot,
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "kR" = (
-/obj/structure/chair/comfy/black{
-	dir = 4
+/obj/machinery/atmospherics/components/unary/cryo_cell{
+	layer = 3.3
 	},
-/turf/open/floor/carpet,
-/area/zombie)
+/turf/open/floor/plasteel/whiteblue/side{
+	dir = 1
+	},
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "kS" = (
-/obj/machinery/light/small{
-	dir = 4
+/obj/structure/table/glass,
+/obj/item/weapon/reagent_containers/glass/beaker/cryoxadone/full_pack{
+	pixel_x = -4
 	},
-/turf/open/floor{
-	icon_state = "bar";
-	dir = 2
+/obj/item/weapon/reagent_containers/dropper{
+	pixel_y = 9
 	},
-/area/zombie)
+/obj/item/weapon/wrench/medical,
+/turf/open/floor/plasteel/whiteblue/side{
+	dir = 1
+	},
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "kT" = (
 /turf/closed/indestructible/fakeglass{
 	color = "#008000";
@@ -4094,18 +4281,15 @@
 	},
 /area/wizard_station)
 "kU" = (
-/obj/effect/forcefield,
-/obj/structure/door_assembly{
-	anchored = 1;
-	icon = 'icons/obj/doors/door_assembly.dmi';
-	icon_state = "door_as_uranium1";
-	name = "Bridge"
+/obj/machinery/vending/medical{
+	req_access_txt = "150"
 	},
-/turf/open/floor{
-	tag = "icon-cult";
-	icon_state = "cult"
+/turf/open/floor/plasteel/whiteblue/side{
+	dir = 1
 	},
-/area/wizard_station)
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "kV" = (
 /turf/open/floor/plasteel/darkblue/side{
 	tag = "icon-darkblue (SOUTHWEST)";
@@ -4157,102 +4341,128 @@
 	},
 /area/ctf)
 "lc" = (
-/obj/machinery/light/small{
+/obj/machinery/shieldgen,
+/turf/open/floor/plasteel/darkvault{
 	dir = 8
 	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor{
-	icon_state = "cafeteria"
-	},
-/area/zombie)
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "ld" = (
-/obj/structure/table/reinforced,
-/obj/machinery/recharger,
-/turf/open/floor{
-	icon_state = "cafeteria"
+/obj/machinery/suit_storage_unit/syndicate,
+/turf/open/floor/plasteel/darkvault{
+	dir = 8
 	},
-/area/zombie)
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "le" = (
-/obj/structure/table/reinforced,
-/obj/item/stack/medical/gauze,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor{
-	icon_state = "cafeteria"
+/turf/open/floor/plasteel/darkwarning{
+	dir = 8
 	},
-/area/zombie)
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "lf" = (
-/obj/machinery/light/small{
+/turf/open/floor/plasteel/darkwarning{
 	dir = 4
 	},
-/turf/open/floor{
-	icon_state = "cafeteria"
-	},
-/area/zombie)
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "lg" = (
-/obj/item/stack/sheet/rglass{
-	amount = 20
+/obj/machinery/sleeper{
+	icon_state = "sleeper-open";
+	dir = 4
 	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/wood,
-/area/zombie)
+/obj/machinery/atmospherics/pipe/simple/general/visible{
+	dir = 5
+	},
+/turf/open/floor/plasteel/whiteblue/side{
+	dir = 10
+	},
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "lh" = (
-/obj/machinery/door/airlock/glass,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor{
-	icon_state = "bar";
-	dir = 2
+/obj/machinery/atmospherics/pipe/manifold/general/visible,
+/turf/open/floor/plasteel{
+	icon_state = "white"
 	},
-/area/zombie)
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "li" = (
-/obj/effect/decal/cleanable/blood/old,
-/turf/open/floor{
-	icon_state = "bar";
-	dir = 2
+/obj/machinery/atmospherics/pipe/simple/general/visible{
+	dir = 9
 	},
-/area/zombie)
+/turf/open/floor/plasteel{
+	icon_state = "white"
+	},
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "lj" = (
-/obj/structure/table/wood,
-/turf/open/floor/carpet,
-/area/zombie)
+/turf/open/floor/plasteel{
+	icon_state = "white"
+	},
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "lk" = (
-/obj/structure/chair/comfy/black{
+/turf/open/floor/plasteel/whiteblue/corner{
+	tag = "icon-whitebluecorner (EAST)";
+	icon_state = "whitebluecorner";
+	dir = 4
+	},
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
+"ll" = (
+/obj/machinery/door/airlock/glass_medical{
+	name = "Medical Bay";
+	req_access_txt = "150"
+	},
+/turf/open/floor/plasteel{
+	icon_state = "white"
+	},
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
+"lm" = (
+/obj/structure/closet/emcloset{
+	anchored = 1
+	},
+/turf/open/floor/plasteel/darkvault{
 	dir = 8
 	},
-/turf/open/floor/carpet,
-/area/zombie)
-"ll" = (
-/obj/item/weapon/screwdriver,
-/turf/open/floor/carpet,
-/area/zombie)
-"lm" = (
-/turf/open/space/transit,
-/obj/structure/shuttle/engine/propulsion{
-	dir = 4;
-	icon_state = "burst_s"
-	},
-/turf/closed/wall/shuttle{
-	dir = 8;
-	icon_state = "diagonalWall3"
-	},
-/area/wizard_station)
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "ln" = (
 /obj/effect/decal/remains/xeno,
 /turf/open/floor/grass,
 /area/wizard_station)
 "lo" = (
-/turf/open/floor/plasteel/cult,
-/turf/closed/wall/shuttle{
-	dir = 1;
-	icon_state = "diagonalWall3"
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -27;
+	pixel_y = 0
 	},
-/area/wizard_station)
+/obj/machinery/sleeper{
+	icon_state = "sleeper-open";
+	dir = 4
+	},
+/turf/open/floor/plasteel/whiteblue/side{
+	dir = 10
+	},
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "lp" = (
-/obj/effect/decal/remains/human,
-/obj/effect/decal/cleanable/blood,
-/turf/open/floor/plasteel/cult{
-	icon_state = "cultdamage6"
-	},
-/area/wizard_station)
+/turf/open/floor/plasteel/whiteblue/corner,
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "lq" = (
 /obj/structure/table/wood,
 /obj/item/clothing/suit/wizrobe/magusblue,
@@ -4264,14 +4474,13 @@
 /turf/open/floor/engine/cult,
 /area/wizard_station)
 "lr" = (
-/obj/structure/mirror/magic/lesser{
-	pixel_x = 28
+/obj/structure/closet/firecloset/full,
+/turf/open/floor/plasteel/darkvault{
+	dir = 8
 	},
-/turf/open/floor{
-	tag = "icon-cult";
-	icon_state = "cult"
-	},
-/area/wizard_station)
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "ls" = (
 /turf/open/floor/plasteel/bot,
 /area/wizard_station)
@@ -4306,49 +4515,79 @@
 	},
 /area/ctf)
 "lx" = (
-/obj/effect/decal/cleanable/blood/old,
-/turf/open/floor{
-	icon_state = "cafeteria"
+/obj/structure/window/reinforced{
+	dir = 1;
+	pixel_y = 2
 	},
-/area/zombie)
+/obj/structure/closet/secure_closet/chemical{
+	req_access_txt = "150"
+	},
+/turf/open/floor/plasteel{
+	dir = 8;
+	icon_state = "whiteyellow"
+	},
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "ly" = (
-/obj/structure/table/wood,
-/obj/item/stack/medical/gauze,
-/turf/open/floor/wood,
-/area/zombie)
+/obj/structure/chair/office/light,
+/turf/open/floor/plasteel{
+	icon_state = "white"
+	},
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "lz" = (
-/obj/machinery/door/airlock/glass,
-/turf/open/floor{
-	icon_state = "bar";
-	dir = 2
+/obj/structure/window/reinforced{
+	dir = 1;
+	pixel_y = 2
 	},
-/area/zombie)
+/obj/structure/window/reinforced{
+	dir = 4;
+	pixel_x = 3
+	},
+/obj/machinery/chem_dispenser{
+	layer = 2.7
+	},
+/turf/open/floor/plasteel{
+	dir = 4;
+	icon_state = "whiteyellow";
+	tag = "icon-whitehall (WEST)"
+	},
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "lA" = (
-/turf/closed/indestructible/fakedoor{
-	name = "Strike Pod 4"
+/obj/structure/table/optable,
+/obj/machinery/smartfridge/chemistry{
+	density = 0;
+	pixel_y = -32
 	},
-/area/wizard_station)
+/turf/open/floor/plasteel/whiteblue/side{
+	dir = 4
+	},
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "lB" = (
-/obj/structure/chair/comfy/shuttle/black/noNT{
-	tag = "icon-shblackS (EAST)";
-	icon_state = "shblackS";
-	dir = 4
+/obj/structure/sign/directions/medical{
+	dir = 8;
+	pixel_x = 0;
+	pixel_y = 0
 	},
-/turf/open/floor/plasteel/darkwarning{
-	dir = 8
-	},
-/area/wizard_station)
+/turf/closed/wall,
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "lC" = (
-/obj/structure/chair/comfy/shuttle/black/noNT{
-	tag = "icon-shblackS (EAST)";
-	icon_state = "shblackS";
-	dir = 4
+/obj/machinery/chem_heater,
+/turf/open/floor/plasteel{
+	dir = 8;
+	icon_state = "whiteyellow"
 	},
-/turf/open/floor/plasteel/darkwarning{
-	tag = "icon-warndark (EAST)";
-	dir = 4
-	},
-/area/wizard_station)
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "lD" = (
 /obj/item/weapon/statuebust{
 	pixel_y = 12
@@ -4357,11 +4596,19 @@
 /turf/open/floor/wood,
 /area/wizard_station)
 "lE" = (
-/obj/item/ammo_casing/a646/no,
-/obj/item/ammo_casing/a646/no,
-/obj/item/ammo_casing/a646/no,
-/turf/open/floor/plasteel/cult,
-/area/wizard_station)
+/obj/structure/table/glass,
+/obj/item/weapon/reagent_containers/glass/beaker/large,
+/obj/item/weapon/reagent_containers/glass/beaker{
+	pixel_x = 8;
+	pixel_y = 2
+	},
+/obj/item/weapon/reagent_containers/dropper,
+/turf/open/floor/plasteel{
+	icon_state = "white"
+	},
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "lF" = (
 /obj/structure/table/wood,
 /obj/item/stack/medical/bruise_pack,
@@ -4369,11 +4616,22 @@
 /turf/open/floor/engine/cult,
 /area/wizard_station)
 "lG" = (
-/turf/open/floor{
-	tag = "icon-cultdamage7";
-	icon_state = "cultdamage7"
+/obj/structure/window/reinforced{
+	dir = 4;
+	pixel_x = 3
 	},
-/area/wizard_station)
+/obj/machinery/chem_master{
+	layer = 2.7;
+	pixel_x = -2
+	},
+/turf/open/floor/plasteel{
+	dir = 4;
+	icon_state = "whiteyellow";
+	tag = "icon-whitehall (WEST)"
+	},
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "lH" = (
 /obj/structure/closet/crate{
 	icon_state = "crateopen";
@@ -4402,55 +4660,74 @@
 	},
 /area/ctf)
 "lK" = (
-/obj/item/weapon/twohanded/required/kirbyplants,
-/turf/open/floor{
-	icon_state = "cafeteria"
+/obj/structure/closet/crate/medical{
+	name = "Surgery tools"
 	},
-/area/zombie)
+/obj/item/weapon/retractor,
+/obj/item/weapon/hemostat,
+/obj/item/weapon/cautery,
+/obj/item/weapon/circular_saw,
+/obj/item/weapon/scalpel,
+/turf/open/floor/plasteel/whitebot,
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "lL" = (
-/obj/structure/table,
-/turf/open/floor{
-	icon_state = "cafeteria"
+/obj/structure/sign/directions/synd{
+	pixel_x = 32;
+	pixel_y = 0
 	},
-/area/zombie)
+/turf/open/floor/plasteel/blackvault/corner{
+	dir = 8
+	},
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "lM" = (
-/obj/structure/table,
-/obj/machinery/microwave,
-/turf/open/floor{
-	icon_state = "cafeteria"
+/obj/machinery/portable_atmospherics/canister/air,
+/turf/open/floor/plasteel/darkvault{
+	dir = 8
 	},
-/area/zombie)
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "lN" = (
-/obj/structure/table/wood,
-/obj/item/weapon/screwdriver,
-/turf/open/floor/wood,
-/area/zombie)
+/turf/open/floor/plasteel/darkwarning{
+	dir = 9
+	},
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "lO" = (
-/obj/machinery/recharger,
-/turf/open/floor{
-	icon_state = "bar";
-	dir = 2
+/turf/open/floor/plasteel/darkwarning{
+	dir = 1
 	},
-/area/zombie)
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "lP" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/table/wood,
-/turf/open/floor{
-	icon_state = "bar";
-	dir = 2
+/turf/open/floor/plasteel/darkwarning{
+	dir = 5
 	},
-/area/zombie)
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "lQ" = (
-/obj/item/weapon/twohanded/required/kirbyplants{
-	icon_state = "plant-06";
-	level = 4.1;
-	tag = "icon-plant-06"
+/obj/structure/window/reinforced{
+	color = "#FFFF00";
+	dir = 8
 	},
-/turf/open/floor{
-	icon_state = "bar";
-	dir = 2
+/obj/machinery/gun_turret/laser{
+	dir = 9
 	},
-/area/zombie)
+/turf/open/floor/plating/airless/warnplate{
+	tag = "icon-plating_warn (WEST)";
+	icon_state = "plating_warn";
+	dir = 8
+	},
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "lR" = (
 /obj/machinery/door/airlock{
 	icon = 'icons/obj/doors/airlocks/station/uranium.dmi';
@@ -4459,34 +4736,47 @@
 /turf/open/floor/wood,
 /area/wizard_station)
 "lS" = (
-/turf/open/floor/plasteel/cult,
-/turf/closed/wall/shuttle{
-	tag = "icon-diagonalWall3 (NORTHWEST)";
-	icon_state = "diagonalWall3";
-	dir = 9
+/obj/structure/closet/crate/bin,
+/turf/open/floor/plasteel/darkvault{
+	dir = 8
 	},
-/area/wizard_station)
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "lT" = (
-/obj/item/ammo_casing/a646/no,
-/obj/item/ammo_casing/a646/no,
-/turf/open/floor/plasteel/cult,
-/area/wizard_station)
+/obj/structure/reagent_dispensers/fueltank,
+/turf/open/floor/plasteel/darkvault{
+	dir = 8
+	},
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "lU" = (
-/obj/item/ammo_casing/a646/no,
-/obj/item/ammo_casing/a646/no,
-/obj/item/ammo_casing/a646/no,
-/turf/open/floor{
-	tag = "icon-cultdamage";
-	icon_state = "cultdamage"
+/obj/structure/window/reinforced{
+	color = "#FFFF00";
+	dir = 4
 	},
-/area/wizard_station)
+/obj/machinery/gun_turret/laser{
+	dir = 5
+	},
+/turf/open/floor/plating/airless/warnplate{
+	tag = "icon-plating_warn (EAST)";
+	icon_state = "plating_warn";
+	dir = 4
+	},
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "lV" = (
-/obj/effect/forcefield,
-/turf/open/floor{
-	tag = "icon-cultdamage7";
-	icon_state = "cultdamage7"
+/obj/structure/closet/secure_closet/atmospherics{
+	req_access = "150"
 	},
-/area/wizard_station)
+/turf/open/floor/plasteel/darkvault{
+	dir = 8
+	},
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "lW" = (
 /obj/structure/table/wood,
 /obj/item/clothing/suit/wizrobe/magusred,
@@ -4495,8 +4785,15 @@
 /turf/open/floor/engine/cult,
 /area/wizard_station)
 "lX" = (
-/turf/open/space/transit,
-/area/wizard_station)
+/obj/structure/closet/secure_closet/engineering_personal{
+	req_access = "150"
+	},
+/turf/open/floor/plasteel/darkvault{
+	dir = 8
+	},
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "lY" = (
 /turf/open/floor/plasteel/circuit/rcircuit,
 /turf/open/floor/plasteel/warningline{
@@ -4518,33 +4815,38 @@
 	},
 /area/ctf)
 "mb" = (
-/obj/machinery/door/window{
-	req_access_txt = "150"
+/obj/machinery/vending/tool/syndicate,
+/turf/open/floor/plasteel/darkvault{
+	dir = 8
 	},
-/turf/open/floor/wood,
-/area/zombie)
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "mc" = (
 /obj/structure/table/wood,
 /obj/item/weapon/retractor,
 /turf/open/floor/engine/cult,
 /area/wizard_station)
 "md" = (
-/obj/item/ammo_casing/a646/no,
-/obj/item/ammo_casing/a646/no,
-/turf/open/floor{
-	tag = "icon-cult";
-	icon_state = "cult"
+/obj/machinery/space_heater,
+/turf/open/floor/plasteel/darkvault{
+	dir = 8
 	},
-/area/wizard_station)
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "me" = (
-/obj/item/ammo_casing/a646/no,
-/obj/item/ammo_casing/a646/no,
-/obj/item/ammo_casing/a646/no,
-/turf/open/floor{
-	tag = "icon-cultdamage5";
-	icon_state = "cultdamage5"
+/obj/structure/rack,
+/obj/item/stack/sheet/metal{
+	amount = 50
 	},
-/area/wizard_station)
+/obj/item/stack/sheet/glass/fifty,
+/turf/open/floor/plasteel/darkvault{
+	dir = 8
+	},
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "mf" = (
 /obj/item/weapon/reagent_containers/food/snacks/meat/slab/human/mutant/lizard,
 /turf/open/floor/grass,
@@ -4565,44 +4867,86 @@
 	},
 /area/ctf)
 "mj" = (
-/obj/machinery/light/small{
-	dir = 1
+/turf/open/floor/plasteel/darkwarning{
+	dir = 10
 	},
-/turf/open/floor/plating/ironsand,
-/area/zombie)
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "mk" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating/ironsand,
-/area/zombie)
+/turf/open/floor/plasteel/darkwarning{
+	dir = 6
+	},
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "ml" = (
-/turf/open/floor/plating/ironsand,
-/area/zombie)
+/obj/machinery/autolathe,
+/turf/open/floor/plasteel/darkvault{
+	dir = 8
+	},
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "mm" = (
-/obj/effect/forcefield,
-/turf/open/floor/plasteel/cult{
-	icon_state = "cultdamage"
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -27;
+	pixel_y = 0
 	},
-/area/wizard_station)
+/turf/open/floor/plasteel/darkyellow/side{
+	dir = 8
+	},
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "mn" = (
-/obj/machinery/vending/magivend/terror,
-/turf/open/floor/plasteel/cult,
-/area/wizard_station)
+/turf/open/floor/plasteel/darkyellow/corner{
+	tag = "icon-darkyellowcorners (EAST)";
+	icon_state = "darkyellowcorners";
+	dir = 4
+	},
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "mo" = (
-/obj/machinery/vending/snack,
-/turf/open/floor{
-	tag = "icon-cultdamage";
-	icon_state = "cultdamage"
+/obj/structure/sign/directions/medical{
+	dir = 1;
+	icon_state = "direction_med";
+	pixel_x = 0;
+	pixel_y = 8;
+	tag = "icon-direction_med (NORTH)"
 	},
-/area/wizard_station)
+/obj/structure/sign/directions/engineering{
+	dir = 8;
+	icon_state = "direction_eng";
+	pixel_y = -8;
+	tag = "icon-direction_eng (WEST)"
+	},
+/obj/structure/sign/directions/engineering{
+	desc = "A direction sign, pointing out which way the bridge is.";
+	dir = 1;
+	icon_state = "direction_bridge";
+	name = "bridge";
+	pixel_y = 0;
+	tag = "icon-direction_bridge (EAST)"
+	},
+/turf/closed/wall,
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "mp" = (
-/obj/item/clothing/head/wizard/black,
-/obj/item/clothing/suit/wizrobe/black,
-/obj/structure/table/wood,
-/turf/open/floor{
-	tag = "icon-cultdamage3";
-	icon_state = "cultdamage3"
+/obj/structure/sign/directions/security{
+	dir = 1;
+	icon_state = "direction_sec";
+	pixel_x = 32;
+	tag = "icon-direction_sec (NORTH)"
 	},
-/area/wizard_station)
+/turf/open/floor/plasteel/blackvault/corner{
+	dir = 8
+	},
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "mq" = (
 /turf/open/floor/plasteel/terror/darkred/corner{
 	tag = "icon-darkredcorners_t (NORTH)";
@@ -4619,37 +4963,46 @@
 	},
 /area/ctf)
 "ms" = (
-/obj/effect/decal/cleanable/blood/old,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating/ironsand,
-/area/zombie)
+/obj/machinery/door/airlock/engineering{
+	name = "Anti-breach equipment";
+	req_access_txt = "150"
+	},
+/turf/open/floor/plasteel/darkvault/delivary,
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "mt" = (
-/obj/machinery/recharger,
-/turf/open/floor/plating/ironsand,
-/area/zombie)
+/obj/machinery/suit_storage_unit/terror/engineering,
+/turf/open/floor/plasteel/darkvault{
+	dir = 8
+	},
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "mu" = (
-/obj/effect/decal/cleanable/blood/old,
-/turf/open/floor/plating/ironsand,
-/area/zombie)
+/turf/open/floor/plasteel/darkyellow/side{
+	dir = 8
+	},
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "mv" = (
-/obj/effect/decal/cleanable/blood/old,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating/ironsand,
-/area/zombie)
+/obj/machinery/door/airlock/engineering{
+	name = "Engineering Bay";
+	req_access_txt = "150"
+	},
+/turf/open/floor/plasteel/darkvault/delivary,
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "mw" = (
-/obj/structure/door_assembly{
-	anchored = 1;
-	icon = 'icons/obj/doors/door_assembly.dmi';
-	icon_state = "door_as_uranium0";
-	name = "Break Room"
+/obj/machinery/door/airlock/glass_maintenance{
+	name = "Main Hallway"
 	},
-/obj/effect/decal/cleanable/blood/splatter,
-/turf/open/floor{
-	tag = "icon-cult";
-	icon_state = "cult"
-	},
-/area/wizard_station)
+/turf/open/floor/plasteel/darkvault/delivary,
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "mx" = (
 /obj/structure/destructible/cult/talisman{
 	desc = "A altar dedicated to the Wizard's Federation"
@@ -4658,61 +5011,67 @@
 /turf/open/floor/engine/cult,
 /area/wizard_station)
 "my" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating/ironsand,
-/area/zombie)
+/obj/machinery/recharger/wallcharger{
+	pixel_y = 32
+	},
+/turf/open/floor/plasteel/darkwarning{
+	dir = 8
+	},
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "mz" = (
-/obj/structure/chair/wood/wings,
-/turf/open/floor{
-	tag = "icon-cult";
-	icon_state = "cult"
+/obj/machinery/vending/wallmed/regular{
+	pixel_y = 30
 	},
-/area/wizard_station)
+/turf/open/floor/plasteel/darkwarning{
+	dir = 4
+	},
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "mA" = (
-/obj/structure/table/wood,
-/obj/item/stack/medical/bruise_pack,
-/obj/item/stack/medical/ointment,
-/turf/open/floor{
-	tag = "icon-cult";
-	icon_state = "cult"
+/obj/machinery/door/airlock/glass_external{
+	name = "Main External Airlock";
+	req_access_txt = "150"
 	},
-/area/wizard_station)
+/obj/structure/fans/tiny/invisible,
+/turf/open/floor/plasteel/darkvault/delivary,
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "mB" = (
-/obj/structure/table/wood,
-/obj/item/weapon/retractor,
-/turf/open/floor{
-	tag = "icon-cult";
-	icon_state = "cult"
-	},
-/area/wizard_station)
+/obj/structure/fans/tiny/invisible,
+/turf/open/floor/plasteel/darkvault/delivary,
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "mC" = (
-/obj/structure/bookcase/random/religion,
-/turf/open/floor{
-	tag = "icon-cult";
-	icon_state = "cult"
+/obj/machinery/door/airlock/external{
+	name = "Main External Airlock";
+	req_access_txt = "150"
 	},
-/area/wizard_station)
+/obj/machinery/door/poddoor{
+	id = "Hangar A"
+	},
+/obj/structure/fans/tiny/invisible,
+/turf/open/floor/plasteel/darkvault/delivary,
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "mD" = (
-/obj/structure/table/wood,
-/obj/item/clothing/suit/wizrobe/magusblue,
-/obj/item/clothing/head/wizard/magus,
-/obj/item/weapon/staff,
-/turf/open/floor{
-	tag = "icon-cult";
-	icon_state = "cult"
-	},
-/area/wizard_station)
+/turf/open/floor/plasteel/darkyellow/corner,
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "mE" = (
-/obj/structure/table/wood,
-/obj/item/clothing/suit/wizrobe/magusred,
-/obj/item/clothing/head/wizard/magus,
-/obj/item/weapon/staff,
-/turf/open/floor{
-	tag = "icon-cult";
-	icon_state = "cult"
+/obj/structure/sign/directions/eva{
+	pixel_y = -23
 	},
-/area/wizard_station)
+/turf/open/floor/plasteel/blackvault/corner,
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "mF" = (
 /obj/effect/decal/remains/human,
 /obj/effect/decal/cleanable/blood/splatter,
@@ -4723,23 +5082,25 @@
 /turf/open/floor/grass,
 /area/wizard_station)
 "mH" = (
-/turf/open/floor/plasteel/cult,
-/turf/closed/wall/shuttle{
-	dir = 8;
-	icon_state = "diagonalWall3"
+/obj/structure/sign/directions/dock{
+	pixel_y = -23
 	},
-/area/wizard_station)
+/turf/open/floor/plasteel/blackvault/corner{
+	dir = 1
+	},
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "mI" = (
-/turf/open/space/transit,
-/obj/structure/shuttle/engine/propulsion{
-	dir = 8;
-	icon_state = "burst_s"
+/obj/machinery/computer/shuttle/syndicate{
+	name = "Syndicate Cruiser Terminal";
+	possible_destinations = "station;sector_bravo;der";
+	shuttleId = "Battleship"
 	},
-/turf/closed/wall/shuttle{
-	dir = 1;
-	icon_state = "diagonalWall3"
-	},
-/area/wizard_station)
+/turf/open/floor/plasteel/darkwarning,
+/area/syndicate_mothership{
+	name = "\improper Syndicate Secret Base"
+	})
 "mJ" = (
 /obj/structure/sign/fire{
 	pixel_x = 32
@@ -4771,56 +5132,78 @@
 	},
 /area/wizard_station)
 "mN" = (
-/obj/structure/destructible/cult/tome,
-/turf/open/floor{
-	tag = "icon-cult";
-	icon_state = "cult"
+/obj/structure/rack,
+/obj/item/stack/sheet/plasteel/twenty,
+/obj/item/stack/sheet/plasteel/twenty,
+/turf/open/floor/plasteel/darkvault{
+	dir = 8
 	},
-/area/wizard_station)
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "mO" = (
-/obj/structure/closet/crate{
-	icon_state = "crateopen";
-	opened = 1
+/obj/structure/rack,
+/obj/item/stack/sheet/metal/fifty,
+/obj/item/stack/sheet/metal/fifty,
+/obj/item/stack/sheet/glass/fifty,
+/obj/item/stack/sheet/glass/fifty,
+/turf/open/floor/plasteel/darkvault{
+	dir = 8
 	},
-/obj/item/clothing/suit/wizrobe/red,
-/obj/item/clothing/head/wizard/red,
-/obj/item/weapon/staff,
-/obj/item/clothing/shoes/sandal,
-/turf/open/floor{
-	tag = "icon-cult";
-	icon_state = "cult"
-	},
-/area/wizard_station)
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "mP" = (
 /obj/structure/rack,
-/obj/item/weapon/gun/magic/staff/spellblade,
-/turf/open/floor/plasteel/cult/airless{
-	icon_state = "cultdamage"
+/obj/item/weapon/storage/toolbox/mechanical{
+	pixel_x = -2;
+	pixel_y = 3
 	},
-/area/wizard_station)
+/obj/item/weapon/storage/toolbox/mechanical{
+	pixel_x = 1;
+	pixel_y = -1
+	},
+/turf/open/floor/plasteel/darkvault{
+	dir = 8
+	},
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "mQ" = (
-/turf/open/floor/plasteel/cult/airless,
-/area/wizard_station)
+/obj/machinery/door/airlock/command{
+	name = "EVA storage";
+	req_access_txt = "150"
+	},
+/turf/open/floor/plasteel/darkvault/delivary,
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "mR" = (
 /obj/item/weapon/reagent_containers/food/snacks/meat/slab/xeno,
 /turf/open/floor/grass,
 /area/wizard_station)
 "mS" = (
-/obj/structure/chair/comfy/shuttle/black/noNT{
-	tag = "icon-shblackS (WEST)";
-	icon_state = "shblackS";
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -27;
+	pixel_y = 0
+	},
+/obj/machinery/recharge_station,
+/turf/open/floor/plasteel/darkvault{
 	dir = 8
 	},
-/turf/open/floor/plasteel/darkwarning{
-	tag = "icon-warndark (EAST)";
-	dir = 4
-	},
-/area/wizard_station)
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "mT" = (
-/turf/closed/indestructible/fakedoor{
-	name = "Strike Pod 3"
+/obj/machinery/portable_atmospherics/canister/oxygen{
+	anchored = 1
 	},
-/area/wizard_station)
+/turf/open/floor/plasteel/darkvault{
+	dir = 8
+	},
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "mU" = (
 /turf/closed/indestructible/fakeglass{
 	color = "#008000";
@@ -4829,15 +5212,21 @@
 	},
 /area/wizard_station)
 "mV" = (
-/obj/item/weapon/shard{
-	color = "#008000";
-	icon_state = "small"
+/obj/structure/tank_dispenser/oxygen,
+/obj/structure/sign/securearea{
+	desc = "A warning sign which reads 'EXTERNAL AIRLOCK'";
+	icon_state = "space";
+	layer = 4;
+	name = "EXTERNAL AIRLOCK";
+	pixel_x = 32;
+	pixel_y = 0
 	},
-/turf/open/floor{
-	tag = "icon-cult";
-	icon_state = "cult"
+/turf/open/floor/plasteel/darkvault{
+	dir = 8
 	},
-/area/wizard_station)
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "mW" = (
 /turf/open/floor/plasteel/terror/darkred/side{
 	tag = "icon-darkred_t (NORTHEAST)";
@@ -4886,12 +5275,13 @@
 	},
 /area/wizard_station)
 "nf" = (
-/obj/structure/chair/wood/wings{
-	icon_state = "wooden_chair_wings";
-	dir = 1
+/obj/machinery/suit_storage_unit/standard_unit,
+/turf/open/floor/plasteel/darkvault{
+	dir = 8
 	},
-/turf/open/floor/engine/cult,
-/area/wizard_station)
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "ng" = (
 /obj/structure/showcase{
 	desc = "A strange machine supposedly from another world. The Wizard Federation has been meddling with it for years.";
@@ -7747,10 +8137,11 @@
 /turf/open/floor/plasteel/bar,
 /area/syndicate_mothership)
 "uJ" = (
-/obj/structure/table/wood,
-/obj/item/weapon/paper/syndicate,
-/turf/open/floor/plasteel/bar,
-/area/syndicate_mothership)
+/obj/structure/shuttle/engine/heater,
+/turf/closed/wall,
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "uK" = (
 /obj/structure/table/wood,
 /obj/item/toy/plushie/crimson_fox,
@@ -9872,7 +10263,7 @@
 /obj/structure/shuttle/engine/platform{
 	dir = 1
 	},
-/turf/open/floor/plating/airless,
+/turf/closed/wall/shuttle/smooth/nodiagonal,
 /area/shuttle/escape)
 "zJ" = (
 /obj/structure/tank_dispenser/oxygen{
@@ -11178,14 +11569,17 @@
 /turf/open/floor/plasteel/shuttle/red,
 /area/shuttle/escape)
 "Da" = (
-/obj/structure/sign/nanotrasen{
-	pixel_x = 32;
+/obj/machinery/suit_storage_unit/standard_unit,
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -27;
 	pixel_y = 0
 	},
-/turf/open/floor/plasteel/neutral/corner{
-	dir = 4
+/turf/open/floor/plasteel/darkvault{
+	dir = 8
 	},
-/area/shuttle/escape)
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "Db" = (
 /turf/open/floor/plasteel/neutral{
 	icon_state = "white"
@@ -11464,11 +11858,19 @@
 /turf/open/floor/plating,
 /area/centcom/ferry)
 "DH" = (
-/turf/closed/indestructible/fakeglass{
-	icon_state = "fakewindows";
-	dir = 4
+/obj/structure/shuttle/engine/propulsion{
+	icon_state = "propulsion_l"
 	},
-/area/centcom/ferry)
+/obj/structure/shuttle/engine/platform{
+	dir = 1
+	},
+/obj/structure/shuttle/engine/platform{
+	pixel_y = 32
+	},
+/turf/open/floor/plating/airless/warnplate,
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "DI" = (
 /turf/open/floor/plasteel/blackvault,
 /area/centcom/ferry)
@@ -11978,11 +12380,17 @@
 /turf/open/floor/plasteel/blackvault,
 /area/shuttle/transport)
 "EP" = (
-/turf/closed/indestructible/fakeglass{
-	icon_state = "fakewindows";
-	dir = 5
+/obj/structure/shuttle/engine/propulsion,
+/obj/structure/shuttle/engine/platform{
+	dir = 1
 	},
-/area/centcom/ferry)
+/obj/structure/shuttle/engine/platform{
+	pixel_y = 32
+	},
+/turf/open/floor/plating/airless/warnplate,
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "EQ" = (
 /turf/open/floor/plasteel/blackvault/corner,
 /area/centcom/ferry)
@@ -12240,11 +12648,19 @@
 	},
 /area/shuttle/transport)
 "Fz" = (
-/turf/closed/indestructible/fakeglass{
-	icon_state = "fakewindows2";
+/obj/structure/shuttle/engine/propulsion{
+	icon_state = "propulsion_r"
+	},
+/obj/structure/shuttle/engine/platform{
 	dir = 1
 	},
-/area/centcom/ferry)
+/obj/structure/shuttle/engine/platform{
+	pixel_y = 32
+	},
+/turf/open/floor/plating/airless/warnplate,
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "FA" = (
 /turf/open/floor/plasteel/darkvault{
 	dir = 8
@@ -13120,9 +13536,41 @@
 /turf/open/floor/plating,
 /area/shuttle/NTcruiser)
 "HL" = (
-/obj/machinery/porta_turret/heavy/central_command,
-/turf/open/space,
-/area/space)
+/obj/structure/rack{
+	dir = 8;
+	layer = 2.9
+	},
+/obj/item/weapon/tank/jetpack/carbondioxide{
+	pixel_x = 4;
+	pixel_y = -1
+	},
+/obj/item/weapon/tank/jetpack/carbondioxide{
+	pixel_x = 0;
+	pixel_y = 0
+	},
+/obj/item/weapon/tank/jetpack/carbondioxide{
+	pixel_x = -4;
+	pixel_y = 1
+	},
+/obj/machinery/door/window/northleft{
+	dir = 1;
+	name = "Jetpack Storage";
+	pixel_x = -1;
+	pixel_y = 0;
+	req_access_txt = "150"
+	},
+/obj/structure/window/reinforced{
+	dir = 4;
+	layer = 2.9
+	},
+/turf/open/floor/plasteel{
+	dir = 8;
+	icon_state = "vault";
+	tag = "icon-vault (WEST)"
+	},
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "HM" = (
 /turf/closed/wall/shuttle/smooth,
 /area/shuttle/NTcruiser)
@@ -13993,9 +14441,13 @@
 	},
 /area/shuttle/NTcruiser)
 "Ka" = (
-/obj/machinery/recharge_station,
-/turf/open/floor/plasteel/whitebot,
-/area/shuttle/NTcruiser)
+/obj/structure/tank_dispenser/oxygen,
+/turf/open/floor/plasteel/darkvault{
+	dir = 8
+	},
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
+	})
 "Kb" = (
 /turf/open/floor/plasteel/whiteyellow/side{
 	dir = 10
@@ -14005,11 +14457,7 @@
 /turf/open/floor/plasteel/whiteyellow/side,
 /area/shuttle/NTcruiser)
 "Kd" = (
-/obj/item/weapon/twohanded/required/kirbyplants{
-	icon_state = "plant-13";
-	layer = 4.1;
-	tag = "icon-plant-13"
-	},
+/obj/machinery/recharge_station,
 /turf/open/floor/plasteel/whiteyellow/side{
 	dir = 6
 	},
@@ -15517,10 +15965,7 @@
 /turf/open/floor/plasteel/terror/darkred,
 /area/tdome/arena)
 "NE" = (
-/obj/machinery/camera/xray{
-	c_tag = "Arena";
-	network = list("thunder")
-	},
+/obj/machinery/camera/thunder,
 /turf/open/floor/plasteel/black,
 /area/tdome/arena)
 "NF" = (
@@ -18713,31 +19158,50 @@
 	name = "\improper Syndicate Battleship"
 	})
 "TR" = (
-/turf/open/floor/plasteel{
-	icon_state = "dark"
+/obj/machinery/gun_turret/laser{
+	dir = 2
 	},
-/area/syndicate_mothership{
-	name = "\improper Syndicate Secret Base"
+/obj/structure/window/reinforced{
+	color = "#FFFF00";
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	color = "#FFFF00"
+	},
+/turf/open/floor/plating/airless/warnplate{
+	tag = "icon-plating_warn (SOUTHWEST)";
+	icon_state = "plating_warn";
+	dir = 10
+	},
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
 	})
 "TS" = (
-/obj/machinery/door/poddoor{
-	name = "Command Center"
+/obj/structure/window/reinforced{
+	color = "#FFFF00"
 	},
-/turf/open/floor/plasteel{
-	icon_state = "dark"
-	},
-/area/syndicate_mothership{
-	name = "\improper Syndicate Secret Base"
+/turf/open/floor/plating/airless/warnplate,
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
 	})
 "TT" = (
-/obj/item/weapon/paper{
-	info = "<b> WORK IN PROGRESS </b>"
+/obj/machinery/gun_turret/laser{
+	dir = 2
 	},
-/turf/open/floor/plasteel{
-	icon_state = "dark"
+/obj/structure/window/reinforced{
+	color = "#FFFF00";
+	dir = 4
 	},
-/area/syndicate_mothership{
-	name = "\improper Syndicate Secret Base"
+/obj/structure/window/reinforced{
+	color = "#FFFF00"
+	},
+/turf/open/floor/plating/airless/warnplate{
+	tag = "icon-plating_warn (SOUTHEAST)";
+	icon_state = "plating_warn";
+	dir = 6
+	},
+/area/shuttle/syndicate{
+	name = "\improper Syndicate Cruiser"
 	})
 "TU" = (
 /obj/structure/chair/office{
@@ -18939,26 +19403,24 @@
 "Ur" = (
 /obj/docking_port/stationary{
 	area_type = /area/shuttle/syndicate;
-	dwidth = 9;
-	height = 58;
+	dwidth = 8;
+	height = 29;
 	id = "station";
 	name = "Secret Station";
-	width = 18
+	width = 19
 	},
 /obj/docking_port/mobile{
 	callTime = 250;
-	dwidth = 9;
-	height = 58;
+	dwidth = 8;
+	height = 29;
 	id = "Battleship";
 	name = "Slaughterer";
 	port_angle = -270;
-	width = 18
+	width = 19
 	},
-/turf/closed/wall/shuttle{
-	icon_state = "wall3"
-	},
+/turf/closed/wall/r_wall,
 /area/shuttle/syndicate{
-	name = "\improper Syndicate Battleship"
+	name = "\improper Syndicate Cruiser"
 	})
 "Us" = (
 /obj/machinery/firealarm{
@@ -18973,6 +19435,7 @@
 /area/centcom/security)
 
 (1,1,1) = {"
+aa
 aa
 aa
 aa
@@ -19064,7 +19527,6 @@ gf
 hL
 aa
 aa
-aa
 iB
 iB
 iB
@@ -19186,44 +19648,44 @@ aa
 aa
 aa
 aa
-NG
-NW
-Oe
-NW
-NN
-NN
-NW
-Oe
-NW
-NN
-NN
-NW
-Oe
-NW
-NN
-NN
-NW
-Oe
-NW
-NN
-NN
-NN
-NW
-Oe
-NW
-NN
-NN
-NN
-NW
-Oe
-NW
-NN
-TA
-TA
-TA
-NN
-NN
-Uf
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+jz
+kk
+lQ
+kk
+jz
+jz
+jz
+jz
+aa
+aa
 aa
 aa
 aa
@@ -19304,22 +19766,22 @@ aa
 aa
 aa
 aa
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
 aa
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
 aa
 aa
 iB
@@ -19439,48 +19901,48 @@ aa
 aa
 aa
 aa
-NG
-NW
-Oe
-NW
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-TB
-TB
-TB
-NN
-Uc
-Ug
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+jz
+kk
+kv
+kk
+jz
+jz
+jz
+jz
+jz
+jz
+jz
+jz
+jz
+mt
+mt
+jz
+aa
+aa
 aa
 aa
 aa
@@ -19561,22 +20023,22 @@ aa
 aa
 aa
 aa
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
 aa
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
 aa
 aa
 iB
@@ -19694,54 +20156,54 @@ aa
 aa
 aa
 aa
-NG
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-TC
-TC
-TC
-NN
-NN
-NN
-NN
-NN
-NN
-Uf
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+jL
+jz
+jz
+jz
+jz
+jz
+jz
+kP
+lg
+lo
+lx
+lC
+jZ
+lV
+mm
+mu
+mu
+jz
+jz
+jZ
+DH
+aa
+aa
+aa
 "}
 (4,1,1) = {"
 aa
@@ -19818,22 +20280,22 @@ aa
 aa
 aa
 aa
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
 aa
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
 aa
 aa
 iB
@@ -19951,54 +20413,54 @@ aa
 aa
 aa
 aa
-NH
-NN
-NN
-NX
-Of
-Os
-Oy
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Oy
-Ok
-Ok
-Ok
-Ok
-Oy
-Ok
-NN
-NN
-Uc
-Uo
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+jM
+jz
+jR
+kl
+jZ
+kF
+jZ
+kQ
+lh
+lj
+ly
+lE
+jZ
+lX
+mn
+jG
+mD
+mN
+jz
+uJ
+EP
+aa
+aa
+aa
 "}
 (5,1,1) = {"
 aa
@@ -20075,22 +20537,22 @@ aa
 aa
 aa
 aa
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
 aa
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
 aa
 aa
 iB
@@ -20208,54 +20670,54 @@ zs
 aa
 aa
 aa
-NI
-NN
-NN
-NY
-Og
-Ot
-NN
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Oy
-Ok
-Ok
-Ok
-TY
-NN
-Uh
-Um
-NN
-NN
-Ul
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+jz
+jz
+jX
+kn
+jZ
+kG
+jZ
+kR
+li
+lj
+lz
+lG
+jZ
+mb
+mn
+jG
+mD
+mO
+jz
+uJ
+EP
+aa
+aa
+aa
 "}
 (6,1,1) = {"
 aa
@@ -20332,22 +20794,22 @@ aa
 aa
 aa
 aa
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
 aa
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
 aa
 aa
 iB
@@ -20465,53 +20927,53 @@ zs
 zs
 aa
 aa
-NH
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-Oy
-NN
-NN
-NN
-NN
-NN
-NN
-Oy
-NN
-NN
-Ok
-Ok
-NN
-NN
-NN
-PC
-PC
-PC
-NN
-NN
-Oy
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-SG
-Ok
-Ok
-TZ
-NN
-NN
-NN
-Uc
-Uo
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+jo
+jr
+jr
+jz
+jz
+jY
+kp
+ky
+kH
+jZ
+kS
+lj
+lj
+lj
+lK
+jZ
+md
+mn
+mn
+mD
+mP
+jz
+uJ
+Fz
+aa
+aa
 aa
 "}
 (7,1,1) = {"
@@ -20589,22 +21051,22 @@ aa
 aa
 aa
 aa
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
 aa
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
 aa
 aa
 iB
@@ -20722,56 +21184,57 @@ BV
 zs
 aa
 aa
-NJ
-NN
-NN
-NN
-Oh
-Oh
-Ok
-Ok
-Ok
-OB
-NN
-OF
-OG
-OF
-OG
-Ok
-Pf
-NN
-Ok
-Ok
-NN
-NN
-NN
-PS
-PS
-Qr
-QI
-QY
-Ok
-NN
-NN
-NN
-SF
-SF
-SF
-SF
-SF
-Tt
-Ok
-Ok
-Ok
-Ok
-Ud
-Ui
-NN
-Uc
-Up
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+jp
+jC
+jI
+jK
+jz
+jZ
+kq
+kz
+jZ
+jZ
+kU
+lk
+lp
+lA
+jZ
+jZ
+jZ
+jZ
+mv
+mv
+jZ
+jz
+jz
+jz
+jz
+kk
+TR
 "}
 (8,1,1) = {"
+aa
 aa
 aa
 aa
@@ -20861,7 +21324,6 @@ gf
 gf
 gf
 gf
-aa
 aa
 aa
 iB
@@ -20980,53 +21442,53 @@ zs
 aa
 aa
 aa
-NH
-NN
-NN
-Oi
-Oj
-Oz
-Ok
-Ok
-OC
-NN
-Ok
-Ok
-Ok
-Ok
-Ok
-Pg
-NN
-Ok
-Ok
-NN
-NN
-PH
-Ok
-Qe
-Ok
-Ok
-Ok
-Ok
-PS
-NN
-NN
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-TO
-TP
-Ok
-Ue
-Uj
-NN
-Uc
-Uq
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+jo
+jr
+jz
+jD
+jG
+jK
+jz
+ka
+ke
+kA
+kI
+jZ
+jZ
+ll
+ll
+lB
+jZ
+lS
+lm
+mo
+ke
+mE
+jZ
+nf
+Da
+nf
+jz
+jz
+TS
 "}
 (9,1,1) = {"
 aa
@@ -21103,22 +21565,22 @@ aa
 aa
 aa
 aa
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
 aa
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
 aa
 aa
 iB
@@ -21237,52 +21699,52 @@ zs
 aa
 aa
 aa
-NI
-NN
-NN
-Oj
-Ou
-Oz
-Ok
-Ok
-OD
-NN
-OG
-OF
-OG
-OG
-Ok
-Ph
-NN
-Ok
-Ok
-PC
-PF
-PI
-Ok
-Ok
-Ok
-QJ
-QZ
-Ok
-RH
-PS
-NN
-SG
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-TP
-TU
-Ok
-Ue
-Uj
-NN
-NN
-NN
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+jp
+js
+jA
+jE
+jE
+jE
+jQ
+ke
+kr
+jG
+kA
+kM
+ke
+ke
+ke
+ke
+ke
+ke
+ke
+ke
+ke
+kA
+mQ
+lN
+le
+mj
+HL
+jz
 Ur
 "}
 (10,1,1) = {"
@@ -21360,22 +21822,22 @@ aa
 aa
 aa
 aa
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
 aa
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
 aa
 aa
 iB
@@ -21494,53 +21956,53 @@ zs
 aa
 aa
 aa
-NH
-NN
-NN
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-NN
-Ok
-Ok
-Ok
-Ok
-Ok
-Ph
-NN
-Ok
-Ok
-NN
-NN
-PJ
-Ok
-Oh
-Ok
-Ok
-Ok
-Ok
-PS
-NN
-NN
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-TQ
-TP
-Ok
-Ue
-Uj
-NN
-Uc
-Uo
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+jp
+jt
+jB
+jF
+jF
+jF
+jQ
+kf
+jG
+jG
+kB
+kN
+kf
+kf
+kf
+kf
+lL
+kf
+kf
+mp
+kf
+kB
+mQ
+lP
+lf
+mk
+Ka
+jz
+jz
 "}
 (11,1,1) = {"
 aa
@@ -21617,22 +22079,22 @@ aa
 aa
 aa
 aa
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
 aa
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
 aa
 aa
 iB
@@ -21750,54 +22212,54 @@ zs
 zs
 aa
 aa
-NG
-NN
-NN
-NN
-Ol
-Ov
-OA
-Ok
-Ok
-OE
-NN
-OG
-OG
-OF
-OG
-Ok
-Ph
-NN
-Ok
-Ok
-NN
-NN
-NN
-PS
-PS
-Qr
-QK
-Ra
-Rt
-NN
-NN
-NN
-SH
-SH
-SH
-SH
-SH
-Tu
-Ok
-Ok
-Ok
-Ok
-Ud
-Uk
-NN
-Uc
-Up
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+jq
+jy
+jz
+jG
+jJ
+jN
+jz
+kg
+ks
+kB
+kJ
+jZ
+lc
+lm
+lr
+jZ
+jZ
+jZ
+jZ
+jZ
+kf
+mH
+jZ
+nf
+nf
+nf
+jz
+jz
+TS
 "}
 (12,1,1) = {"
 aa
@@ -21874,22 +22336,22 @@ aa
 aa
 aa
 aa
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
 aa
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
 aa
 aa
 iB
@@ -22007,54 +22469,54 @@ BY
 zs
 aa
 aa
-NH
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-Oy
-NN
-NN
-NN
-NN
-NN
-NN
-Oy
-NN
-NN
-Ok
-Ok
-NN
-NN
-NN
-PC
-PC
-PC
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-SG
-Ok
-Ok
-Ua
-NN
-NN
-NN
-Uc
-Uq
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+jp
+jH
+jK
+jK
+jz
+jz
+jz
+kC
+jz
+jz
+jz
+jz
+jz
+jz
+lM
+lT
+me
+jZ
+mw
+mw
+jZ
+jz
+jz
+jz
+jz
+ku
+TT
 "}
 (13,1,1) = {"
 aa
@@ -22131,22 +22593,22 @@ aa
 aa
 aa
 aa
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
 aa
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
 aa
 aa
 iB
@@ -22264,54 +22726,54 @@ BZ
 zs
 aa
 aa
-NI
-NN
-NN
-NZ
-Om
-Ow
-NN
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Oy
-Ok
-Ok
-Ok
-Ub
-NN
-Ok
-Un
-NN
-NN
-Uf
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+jq
+jy
+jy
+jz
+jz
+kh
+kt
+jG
+kK
+jz
+ld
+ld
+ld
+jz
+lN
+le
+mj
+jZ
+my
+le
+mS
+jz
+uJ
+DH
+aa
+aa
+aa
 "}
 (14,1,1) = {"
 aa
@@ -22388,22 +22850,22 @@ aa
 aa
 aa
 aa
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
 aa
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
 aa
 aa
 iB
@@ -22521,54 +22983,54 @@ zs
 zs
 aa
 aa
-NH
-NN
-NN
-Oa
-On
-Ox
-Oy
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Ok
-Oy
-Ok
-Ok
-Ok
-Ok
-Oy
-Ok
-Un
-NN
-Uc
-Uq
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+jz
+jz
+ki
+kt
+jG
+kL
+kO
+le
+le
+le
+jz
+lO
+jG
+kL
+ms
+jG
+jG
+mT
+jz
+uJ
+EP
+aa
+aa
+aa
 "}
 (15,1,1) = {"
 aa
@@ -22645,22 +23107,22 @@ aa
 aa
 aa
 aa
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
-gf
 aa
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
+gf
 aa
 aa
 iB
@@ -22778,54 +23240,54 @@ zs
 aa
 aa
 aa
-NJ
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-TD
-TD
-TD
-NN
-NN
-NN
-NN
-NN
-NN
-Ul
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+jM
+jz
+kj
+kt
+kD
+kL
+kO
+lf
+lf
+lf
+jz
+lP
+lf
+mk
+jZ
+mz
+lf
+mV
+jz
+uJ
+EP
+aa
+aa
+aa
 "}
 (16,1,1) = {"
 aa
@@ -23037,49 +23499,49 @@ aa
 aa
 aa
 aa
-NJ
-Ob
-Oo
-Ob
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-NN
-TE
-TE
-TE
-NN
-Uc
-Ug
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+jP
+jz
+jz
+jz
+jz
+jz
+jz
+ld
+ld
+ld
+jz
+lc
+lc
+ml
+jZ
+mA
+mA
+jz
+jz
+uJ
+Fz
 aa
 aa
 aa
@@ -23298,44 +23760,44 @@ aa
 aa
 aa
 aa
-NJ
-Ob
-Oo
-Ob
-NN
-NN
-Ob
-Oo
-Ob
-NN
-NN
-Ob
-Oo
-Ob
-NN
-NN
-Ob
-Oo
-Ob
-NN
-NN
-NN
-Ob
-Oo
-Ob
-NN
-NN
-NN
-Ob
-Oo
-Ob
-NN
-TF
-TF
-TF
-NN
-NN
-Ul
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+jz
+ku
+kE
+ku
+jz
+jz
+jz
+jz
+jz
+jz
+jz
+jz
+jz
+mB
+mB
+jz
+aa
+aa
 aa
 aa
 aa
@@ -23583,14 +24045,14 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-Tv
-TG
-TG
-TG
-Tv
+jz
+ku
+lU
+ku
+jz
+mC
+mC
+jz
 aa
 aa
 aa
@@ -23835,19 +24297,19 @@ aa
 aa
 aa
 aa
-Px
-Px
 aa
 aa
-Px
-Px
 aa
 aa
-Tw
-TH
-TH
-TH
-Tw
+aa
+aa
+aa
+aa
+aa
+Tv
+TG
+TG
+Tv
 aa
 aa
 aa
@@ -24085,26 +24547,26 @@ aa
 aa
 aa
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 Px
 Px
 aa
 aa
+Px
+Px
 aa
-Px
-Px
-Px
-Px
-Px
-Px
-Px
-Px
-Px
-Px
-Tx
-Qg
-Qg
-Qg
-Tx
+aa
+Tw
+TH
+TH
+Tw
 aa
 aa
 aa
@@ -24341,30 +24803,30 @@ aa
 aa
 aa
 aa
+aa
+aa
 Px
 Px
-Px
-Px
+aa
+aa
 aa
 Px
 Px
 Px
 Px
 Px
-PK
-PK
-PK
-PK
-PK
-PK
-PK
-TG
-TG
-TG
-PK
 Px
 Px
 Px
+Px
+Px
+Tx
+Qg
+Qg
+Tx
+aa
+aa
+aa
 aa
 aa
 aa
@@ -24597,27 +25059,27 @@ aa
 aa
 aa
 aa
+aa
+aa
 Px
 Px
 Px
 Px
-Px
-Px
+aa
 Px
 Px
 Px
 Px
 Px
 PK
-SI
-SU
-Tg
-Tk
-Tk
 PK
-TI
-TH
-TV
+PK
+PK
+PK
+PK
+PK
+TG
+TG
 PK
 Px
 Px
@@ -24853,7 +25315,8 @@ aa
 aa
 aa
 aa
-Px
+aa
+aa
 Px
 Px
 Px
@@ -24866,20 +25329,19 @@ Px
 Px
 Px
 PK
-PK
-PK
+SI
+SU
 Tg
-Tg
-Tg
+Tk
+Tk
 PK
-TJ
-TR
-TW
+TI
+TV
 PK
 Px
 Px
 Px
-Px
+aa
 aa
 aa
 "}
@@ -25110,27 +25572,27 @@ aa
 aa
 aa
 aa
+aa
+Px
+Px
+Px
+Px
+Px
+Px
+Px
+Px
+Px
 Px
 Px
 Px
 PK
 PK
 PK
-PK
-PK
-PK
-PK
-PK
-PK
-PK
-SI
-SU
 Tg
 Tg
-Tl
+Tg
 PK
-TK
-TR
+TJ
 TW
 PK
 Px
@@ -25367,27 +25829,27 @@ aa
 aa
 aa
 aa
+aa
 Px
 Px
 Px
 PK
-PT
-PT
-PT
-PT
-PT
-PK
-RI
-RV
 PK
 PK
 PK
-Th
 PK
 PK
+PK
+PK
+PK
+PK
+SI
+SU
+Tg
+Tg
+Tl
 PK
 TK
-TR
 TW
 PK
 Px
@@ -25627,31 +26089,31 @@ aa
 aa
 Px
 Px
+Px
 PK
-PU
-Qf
-Qf
-Qf
-Qf
-Ru
-RJ
-RJ
-RJ
-RJ
-RJ
-RJ
-RJ
-Tm
-Ty
-TL
-TR
+PT
+PT
+PT
+PT
+PT
+PK
+RI
+RV
+PK
+PK
+PK
+Th
+PK
+PK
+PK
+TK
 TW
 PK
 Px
 Px
 Px
 Px
-Px
+aa
 aa
 "}
 (27,1,1) = {"
@@ -25882,26 +26344,26 @@ aa
 aa
 aa
 aa
+aa
 Px
 Px
 PK
-PV
-Qg
-Qg
-Qg
-Qg
-Rv
-Qg
-Qg
-Qg
-Qg
-Qg
-Qg
-Qg
-Tn
-Tz
-TM
-TR
+PU
+Qf
+Qf
+Qf
+Qf
+Ru
+RJ
+RJ
+RJ
+RJ
+RJ
+RJ
+RJ
+Tm
+Ty
+TL
 TW
 PK
 Px
@@ -26139,27 +26601,27 @@ aa
 aa
 aa
 aa
+aa
 Px
 Px
 PK
-PW
-PW
-PW
-PW
-PW
-PK
-RK
-RW
-RW
-RW
-RW
-RW
-RW
-PK
-PK
-TN
-TS
-TX
+PV
+Qg
+Qg
+Qg
+Qg
+Rv
+Qg
+Qg
+Qg
+Qg
+Qg
+Qg
+Qg
+Tn
+Tz
+TM
+TW
 PK
 Px
 Px
@@ -26396,27 +26858,27 @@ aa
 aa
 aa
 aa
+aa
 Px
 Px
 PK
+PW
+PW
+PW
+PW
+PW
 PK
-PK
-PK
-PK
-PK
-PK
-PK
-RW
-So
-So
-So
+RK
 RW
 RW
-To
+RW
+RW
+RW
+RW
 PK
-TK
-TR
-TW
+PK
+TN
+TX
 PK
 Px
 Px
@@ -26656,23 +27118,23 @@ aa
 aa
 Px
 Px
-Px
-Px
-Px
-Px
-Px
-Px
 PK
-RX
-Sp
-SJ
-SV
+PK
+PK
+PK
+PK
+PK
+PK
+PK
+RW
+So
+So
 So
 RW
-Tp
+RW
+To
 PK
 TK
-TT
 TW
 PK
 Px
@@ -26919,24 +27381,24 @@ Px
 Px
 Px
 Px
+Px
 PK
-RY
-RY
-RY
-SW
+RX
+Sp
+SJ
+SV
 So
 RW
-PK
+Tp
 PK
 TK
-TR
 TW
 PK
 Px
 Px
 Px
 Px
-aa
+Px
 aa
 "}
 (32,1,1) = {"
@@ -27169,6 +27631,7 @@ aa
 aa
 aa
 aa
+aa
 Px
 Px
 Px
@@ -27177,16 +27640,15 @@ Px
 Px
 Px
 PK
-PK
-Sq
 RY
-Sp
+RY
+RY
+SW
 So
 RW
 PK
 PK
 TK
-TR
 TW
 PK
 Px
@@ -27435,16 +27897,16 @@ Px
 Px
 Px
 PK
-Sr
+PK
+Sq
 RY
-SJ
+Sp
 So
 RW
-Tq
 PK
 PK
-PK
-PK
+TK
+mI
 PK
 Px
 Px
@@ -27691,18 +28153,18 @@ Px
 Px
 Px
 Px
+Px
 PK
-Ss
+Sr
 RY
-SV
+SJ
 So
 RW
-Tr
+Tq
 PK
-Px
-Px
-Px
-Px
+PK
+PK
+PK
 Px
 Px
 Px
@@ -27943,20 +28405,20 @@ aa
 aa
 aa
 aa
-aa
+Px
+Px
 Px
 Px
 Px
 Px
 PK
-St
+Ss
 RY
-SJ
+SV
 So
 RW
-Ts
+Tr
 PK
-Px
 Px
 Px
 Px
@@ -28201,19 +28663,19 @@ aa
 aa
 aa
 aa
+aa
 Px
 Px
 Px
 Px
 PK
+St
 RY
-RY
-Sp
+SJ
 So
 RW
+Ts
 PK
-PK
-Px
 Px
 Px
 Px
@@ -28462,13 +28924,15 @@ aa
 Px
 Px
 Px
+Px
+PK
+RY
+RY
+Sp
+So
+RW
 PK
 PK
-SK
-PK
-PK
-PK
-PK
 Px
 Px
 Px
@@ -28476,8 +28940,6 @@ Px
 Px
 Px
 Px
-Px
-aa
 aa
 aa
 "}
@@ -28716,24 +29178,24 @@ aa
 aa
 aa
 aa
-Px
-Px
-Px
-Px
-Px
-Px
-Px
-Px
-Px
-Px
-Px
-Px
-Px
-Px
-Px
-Px
-Px
 aa
+Px
+Px
+Px
+PK
+PK
+SK
+PK
+PK
+PK
+PK
+Px
+Px
+Px
+Px
+Px
+Px
+Px
 aa
 aa
 aa
@@ -28989,7 +29451,7 @@ Px
 Px
 Px
 Px
-aa
+Px
 aa
 aa
 aa
@@ -29231,7 +29693,7 @@ aa
 aa
 aa
 aa
-Px
+aa
 Px
 Px
 Px
@@ -29489,9 +29951,6 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
 Px
 Px
 Px
@@ -29502,7 +29961,10 @@ Px
 Px
 Px
 Px
-aa
+Px
+Px
+Px
+Px
 aa
 aa
 aa
@@ -29750,15 +30212,15 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
 Px
 Px
 Px
 Px
 Px
-aa
+Px
+Px
+Px
+Px
 aa
 aa
 aa
@@ -30011,11 +30473,11 @@ aa
 aa
 aa
 aa
-aa
 Px
 Px
-aa
-aa
+Px
+Px
+Px
 aa
 aa
 aa
@@ -30270,8 +30732,8 @@ aa
 aa
 aa
 aa
-aa
-aa
+Px
+Px
 aa
 aa
 aa
@@ -35098,7 +35560,7 @@ Cc
 HN
 HM
 Js
-Ka
+Js
 HM
 HM
 LG
@@ -35869,7 +36331,7 @@ Cc
 HM
 IK
 Ju
-Kc
+jn
 KF
 Lg
 LI
@@ -59489,7 +59951,7 @@ aa
 aa
 BI
 aa
-aa
+AE
 aa
 AE
 AE
@@ -59746,7 +60208,7 @@ aa
 aa
 BI
 aa
-aa
+AE
 aa
 aa
 aa
@@ -60002,8 +60464,8 @@ aa
 aa
 aa
 BI
-aa
-aa
+AE
+AE
 aa
 aa
 yS
@@ -60259,8 +60721,8 @@ aa
 aa
 aa
 BI
-aa
-aa
+AE
+AE
 aa
 aa
 zl
@@ -60516,8 +60978,8 @@ aa
 aa
 aa
 BI
-aa
-aa
+AE
+AE
 aa
 aa
 zm
@@ -62315,8 +62777,8 @@ aa
 aa
 aa
 BI
-aa
-aa
+AE
+AE
 aa
 yS
 yT
@@ -62572,8 +63034,8 @@ aa
 aa
 aa
 BI
-aa
-aa
+AE
+AE
 aa
 aa
 yT
@@ -62830,7 +63292,7 @@ aa
 aa
 BI
 aa
-aa
+AE
 aa
 aa
 zr
@@ -63086,9 +63548,9 @@ aa
 aa
 aa
 BI
-aa
-aa
-aa
+AE
+AE
+AE
 aa
 zr
 zI
@@ -63345,7 +63807,7 @@ aa
 BI
 aa
 aa
-aa
+AE
 aa
 yS
 yT
@@ -63600,9 +64062,9 @@ aa
 aa
 aa
 BI
+AE
 aa
-aa
-aa
+AE
 aa
 aa
 aa
@@ -63857,13 +64319,13 @@ aa
 aa
 aa
 BI
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+AE
+AE
+AE
+AE
+AE
+AE
+AE
 aa
 aa
 aa
@@ -64114,16 +64576,16 @@ aa
 aa
 aa
 BI
+AE
+aa
+AE
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+AE
+AE
+AE
+AE
 aa
 AE
 aa
@@ -64372,9 +64834,9 @@ aa
 aa
 BI
 aa
-aa
-aa
-aa
+AE
+AE
+AE
 aa
 AE
 AE
@@ -73457,40 +73919,40 @@ aa
 aa
 "}
 (213,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+eB
+eD
+eD
+eD
+eD
+eD
+eD
+eD
+eD
+eD
+eD
+eB
+eD
+eD
+eD
+eD
+eD
+eD
+eD
+eD
+eD
+eD
+eB
+eD
+eD
+eD
+eD
+eD
+eD
+eD
+eD
+eD
+eD
+eB
 aa
 aa
 aa
@@ -73714,40 +74176,40 @@ aa
 aa
 "}
 (214,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+eC
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+fb
+fc
+fc
+fc
+fc
+fc
+fc
+fc
+fc
+fc
+fc
+fb
+fE
+fE
+fE
+fE
+fE
+fE
+fE
+fE
+fE
+fE
+jk
 aa
 aa
 aa
@@ -73971,40 +74433,40 @@ aa
 aa
 "}
 (215,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+eC
+eE
+eG
+eE
+eE
+eQ
+eS
+eK
+eE
+eH
+eE
+fb
+fc
+fc
+fc
+fc
+fc
+fc
+fc
+fc
+fc
+fc
+fb
+fE
+ga
+ga
+fE
+ga
+ga
+fE
+ga
+ga
+fE
+jk
 aa
 aa
 aa
@@ -74228,40 +74690,40 @@ aa
 aa
 "}
 (216,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+eC
+eE
+eH
+eE
+eE
+eE
+eE
+eE
+eE
+eH
+eE
+fb
+fc
+fc
+fc
+fc
+fo
+fp
+fc
+fc
+fc
+fc
+fb
+fE
+ga
+ga
+gY
+ga
+ga
+gY
+ga
+ga
+fE
+jk
 aa
 aa
 aa
@@ -74485,40 +74947,40 @@ aa
 aa
 "}
 (217,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+eC
+eE
+eH
+eK
+eP
+eE
+eT
+eE
+eE
+eK
+eE
+fb
+fc
+fc
+fc
+fc
+fc
+fq
+fc
+fc
+fc
+fc
+fb
+fE
+ga
+ga
+fE
+ga
+ga
+fE
+ga
+ga
+fE
+jk
 aa
 aa
 aa
@@ -74742,40 +75204,40 @@ aa
 aa
 "}
 (218,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+eC
+eE
+eE
+eE
+eE
+eE
+eG
+eE
+eE
+eE
+eE
+fb
+fc
+fc
+fc
+fc
+fc
+fc
+fc
+fc
+fc
+fc
+fb
+fE
+fE
+fE
+fE
+fE
+fE
+fE
+fE
+fE
+fE
+jk
 aa
 aa
 aa
@@ -74999,7 +75461,7 @@ aa
 aa
 "}
 (219,1,1) = {"
-ab
+eB
 ae
 ae
 ae
@@ -75010,7 +75472,7 @@ ae
 ae
 ae
 ae
-ab
+eB
 ae
 ae
 ae
@@ -75021,18 +75483,18 @@ ae
 ae
 ae
 ae
-ab
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+eB
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+eB
 aa
 aa
 aa
@@ -75256,7 +75718,7 @@ aa
 aa
 "}
 (220,1,1) = {"
-ac
+eC
 af
 af
 af
@@ -75267,18 +75729,29 @@ af
 af
 af
 af
-aS
+fb
+aU
+fe
+aT
+fl
 aT
 aU
+fl
 aT
+fd
 aU
-aT
-aT
-aU
-aT
-aU
-aT
-cN
+fb
+fF
+gb
+gy
+gZ
+ha
+gZ
+ha
+hT
+il
+iN
+jk
 aa
 aa
 aa
@@ -75353,55 +75826,44 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+NG
+NW
+Oe
+NW
+NN
+NN
+NW
+Oe
+NW
+NN
+NN
+NW
+Oe
+NW
+NN
+NN
+NW
+Oe
+NW
+NN
+NN
+NN
+NW
+Oe
+NW
+NN
+NN
+NN
+NW
+Oe
+NW
+NN
+TA
+TA
+TA
+NN
+NN
+Uf
 aa
 aa
 aa
@@ -75513,7 +75975,7 @@ aa
 aa
 "}
 (221,1,1) = {"
-ac
+eC
 ag
 ag
 ag
@@ -75524,18 +75986,29 @@ ag
 ag
 ag
 ag
-aS
-aU
+fb
+fd
 aT
+fh
 aU
 aU
-aU
-aU
-aU
-aU
-aT
-aU
-cN
+ff
+fs
+fu
+fu
+fl
+fb
+fF
+gc
+gz
+ha
+gZ
+ha
+gZ
+hU
+im
+iN
+jk
 aa
 aa
 aa
@@ -75606,59 +76079,48 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+NG
+NW
+Oe
+NW
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+TB
+TB
+TB
+NN
+Uc
+Ug
 aa
 aa
 aa
@@ -75770,29 +76232,40 @@ aa
 aa
 "}
 (222,1,1) = {"
-ac
+eC
 ah
 ah
-ai
-ai
 ah
 ah
-ai
-ai
 ah
 ah
-aS
-aT
+ah
+ah
+ah
+ah
+fb
 aU
-aT
+ff
+fi
+fm
 aU
-aT
-aT
 aU
-aT
+fh
+fv
+fw
 aU
-aT
-cN
+fb
+fF
+gd
+gy
+gZ
+ha
+gZ
+ha
+hT
+iq
+iN
+jk
 aa
 aa
 aa
@@ -75861,65 +76334,54 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+NG
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+TC
+TC
+TC
+NN
+NN
+NN
+NN
+NN
+NN
+Uf
 aa
 aa
 aa
@@ -76027,29 +76489,40 @@ aa
 aa
 "}
 (223,1,1) = {"
-ac
+eC
 ai
+eI
+eI
 ai
+eI
+eI
 ai
+eI
+eI
 ai
-ai
-ai
-ai
-ai
-ai
-ai
-aS
+fb
+fe
+fg
+fj
+fn
 aU
-aT
-aU
-aU
-aU
-aU
-aU
-aU
-aT
-aU
-cN
+fd
+ft
+fw
+fu
+fe
+fb
+fF
+ge
+gz
+ha
+gZ
+ha
+gZ
+hU
+ir
+iN
+jk
 aa
 aa
 aa
@@ -76118,65 +76591,54 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+NH
+NN
+NN
+NX
+Of
+Os
+Oy
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Oy
+Ok
+Ok
+Ok
+Ok
+Oy
+Ok
+NN
+NN
+Uc
+Uo
 aa
 aa
 aa
@@ -76284,7 +76746,7 @@ aa
 aa
 "}
 (224,1,1) = {"
-ac
+eC
 aj
 ax
 aE
@@ -76295,18 +76757,29 @@ ai
 aE
 ax
 aN
-aS
+fb
+aU
+aU
 aT
+fl
 aU
 aT
 aU
-bG
-aT
+fx
+fA
 aU
-aT
-aU
-aT
-cN
+fb
+fF
+gb
+gy
+gZ
+ha
+gZ
+ha
+hT
+il
+iN
+jk
 aa
 aa
 aa
@@ -76375,65 +76848,54 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+NI
+NN
+NN
+NY
+Og
+Ot
+NN
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Oy
+Ok
+Ok
+Ok
+TY
+NN
+Uh
+Um
+NN
+NN
+Ul
 aa
 aa
 aa
@@ -76541,29 +77003,40 @@ aa
 aa
 "}
 (225,1,1) = {"
-ab
-ak
-ak
-ak
-ak
-ak
-ak
-ak
-ak
-ak
-ak
-ab
-ak
-ak
-ak
-ak
-ak
-ak
-ak
-ak
-ak
-ak
-ab
+eB
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+eB
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+eB
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+eB
 aa
 aa
 aa
@@ -76632,64 +77105,53 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+NH
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+Oy
+NN
+NN
+NN
+NN
+NN
+NN
+Oy
+NN
+NN
+Ok
+Ok
+NN
+NN
+NN
+PC
+PC
+PC
+NN
+NN
+Oy
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+SG
+Ok
+Ok
+TZ
+NN
+NN
+NN
+Uc
+Uo
 aa
 aa
 aa
@@ -76798,41 +77260,40 @@ aa
 aa
 "}
 (226,1,1) = {"
-ac
-al
-al
+eC
+eF
+eJ
+an
+an
 aF
 aF
 aF
 aF
 aF
 aF
-al
-al
-aS
+fb
 aV
 bk
 by
 bl
 bH
 bV
-ci
+bl
 cq
-bI
+fB
 cz
-cN
-cO
-cO
-cO
-cO
-cO
-cO
-cO
-cO
-cO
-cO
-cO
-cO
+eC
+fG
+gg
+gA
+hb
+hx
+hx
+hx
+hV
+gg
+iO
+jk
 aa
 aa
 aa
@@ -76901,52 +77362,53 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+NJ
+NN
+NN
+NN
+Oh
+Oh
+Ok
+Ok
+Ok
+OB
+NN
+OF
+OG
+OF
+OG
+Ok
+Pf
+NN
+Ok
+Ok
+NN
+NN
+NN
+PS
+PS
+Qr
+QI
+QY
+Ok
+NN
+NN
+NN
+SF
+SF
+SF
+SF
+SF
+Tt
+Ok
+Ok
+Ok
+Ok
+Ud
+Ui
+NN
+Uc
+Up
 aa
 aa
 aa
@@ -77055,40 +77517,51 @@ aa
 aa
 "}
 (227,1,1) = {"
-ac
+eC
 am
-al
-al
-aG
-al
-al
+an
+eL
+an
+eR
+eU
 aK
-al
-al
-am
-aS
+eX
+eX
+eZ
+fb
 aW
 bl
 bz
 bl
 bI
-bI
-ci
+fr
+bl
 cr
 cv
 cA
-cN
+eC
+fH
+gg
+gB
+hc
+hx
+hx
+hx
+hV
+gg
+iO
+jk
 cO
-cP
-cR
-cS
-cS
-cS
-cS
-cS
-cS
-db
-de
+cO
+cO
+cO
+cO
+cO
+cO
+cO
+cO
+cO
+cO
 cO
 aa
 aa
@@ -77146,64 +77619,53 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+jm
+NH
+NN
+NN
+Oi
+Oj
+Oz
+Ok
+Ok
+OC
+NN
+Ok
+Ok
+Ok
+Ok
+Ok
+Pg
+NN
+Ok
+Ok
+NN
+NN
+PH
+Ok
+Qe
+Ok
+Ok
+Ok
+Ok
+PS
+NN
+NN
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+TO
+TP
+Ok
+Ue
+Uj
+NN
+Uc
+Uq
 aa
 aa
 aa
@@ -77312,18 +77774,18 @@ aa
 aa
 "}
 (228,1,1) = {"
-ac
+eC
 an
 ay
-al
+eM
 aH
+an
+eV
+al
 al
 al
 aL
-al
-aM
-aO
-aS
+fb
 aX
 bl
 bA
@@ -77333,8 +77795,19 @@ bW
 bl
 cs
 cw
-cA
-cN
+fD
+eC
+fI
+gh
+gB
+hr
+hx
+hx
+hx
+hW
+gg
+iO
+jk
 cO
 cP
 cR
@@ -77403,64 +77876,53 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+jm
+NI
+NN
+NN
+Oj
+Ou
+Oz
+Ok
+Ok
+OD
+NN
+OG
+OF
+OG
+OG
+Ok
+Ph
+NN
+Ok
+Ok
+PC
+PF
+PI
+Ok
+Ok
+Ok
+QJ
+QZ
+Ok
+RH
+PS
+NN
+SG
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+TP
+TU
+Ok
+Ue
+Uj
+NN
+NN
+NN
 aa
 aa
 aa
@@ -77569,18 +78031,18 @@ aa
 aa
 "}
 (229,1,1) = {"
-ac
-ao
+eC
+an
 ay
-al
+eN
 aH
+an
+eW
+al
 al
 al
 aL
-al
-aM
-an
-aS
+fb
 aY
 bl
 bB
@@ -77591,7 +78053,18 @@ bl
 bl
 cx
 cB
-cN
+eC
+fJ
+gg
+gB
+hs
+hx
+hx
+hx
+hV
+gg
+iO
+jk
 cO
 cP
 cR
@@ -77660,64 +78133,53 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+jm
+NH
+NN
+NN
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+NN
+Ok
+Ok
+Ok
+Ok
+Ok
+Ph
+NN
+Ok
+Ok
+NN
+NN
+PJ
+Ok
+Oh
+Ok
+Ok
+Ok
+Ok
+PS
+NN
+NN
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+TQ
+TP
+Ok
+Ue
+Uj
+NN
+Uc
+Uo
 aa
 aa
 aa
@@ -77826,18 +78288,18 @@ aa
 aa
 "}
 (230,1,1) = {"
-ac
+eC
 ap
+an
+eO
+an
+eR
+eU
 al
-al
-al
-al
-al
-al
-al
-al
-ap
-aS
+eY
+eY
+fa
+fb
 aZ
 bm
 bC
@@ -77846,9 +78308,20 @@ bK
 bX
 bl
 bl
-bz
+bI
 cC
-cN
+eC
+fK
+gg
+gD
+hb
+hx
+hx
+hx
+hV
+gg
+iO
+jk
 cO
 cP
 cR
@@ -77917,64 +78390,53 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+NG
+NN
+NN
+NN
+Ol
+Ov
+OA
+Ok
+Ok
+OE
+NN
+OG
+OG
+OF
+OG
+Ok
+Ph
+NN
+Ok
+Ok
+NN
+NN
+NN
+PS
+PS
+Qr
+QK
+Ra
+Rt
+NN
+NN
+NN
+SH
+SH
+SH
+SH
+SH
+Tu
+Ok
+Ok
+Ok
+Ok
+Ud
+Uk
+NN
+Uc
+Up
 aa
 aa
 aa
@@ -78083,29 +78545,40 @@ aa
 aa
 "}
 (231,1,1) = {"
-ab
-ak
-ak
-ak
-ak
-ak
-ak
-ak
-ak
-ak
-ak
-ab
-ak
-ak
-ak
-ak
-ak
-ak
-ak
-ak
-ak
-ak
-ab
+eB
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+eB
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+eB
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+eB
 cO
 cP
 cR
@@ -78174,64 +78647,53 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+NH
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+Oy
+NN
+NN
+NN
+NN
+NN
+NN
+Oy
+NN
+NN
+Ok
+Ok
+NN
+NN
+NN
+PC
+PC
+PC
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+SG
+Ok
+Ok
+Ua
+NN
+NN
+NN
+Uc
+Uq
 aa
 aa
 aa
@@ -78340,7 +78802,7 @@ aa
 aa
 "}
 (232,1,1) = {"
-ac
+eC
 aq
 aq
 aq
@@ -78351,7 +78813,7 @@ aq
 aq
 aq
 aq
-aS
+fb
 ba
 bn
 bn
@@ -78362,19 +78824,30 @@ cj
 cj
 cj
 cD
-cN
+fb
+fL
+gi
+gE
+gG
+hy
+hF
+gG
+hX
+is
+iP
+jk
 cO
+cP
+cR
+cS
+cS
+cS
+cS
+cS
+cS
+db
+de
 cO
-cO
-cX
-cX
-cX
-cX
-cX
-cX
-cO
-cO
-cO
 aa
 aa
 aa
@@ -78431,65 +78904,54 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+NI
+NN
+NN
+NZ
+Om
+Ow
+NN
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Oy
+Ok
+Ok
+Ok
+Ub
+NN
+Ok
+Un
+NN
+NN
+Uf
 aa
 aa
 aa
@@ -78597,7 +79059,7 @@ aa
 aa
 "}
 (233,1,1) = {"
-ac
+eC
 aq
 az
 aq
@@ -78608,7 +79070,7 @@ aq
 aq
 az
 aq
-aS
+fb
 ba
 bn
 bD
@@ -78619,18 +79081,31 @@ bo
 ct
 cj
 cD
-cN
+fb
+fM
+gj
+gG
+gG
+hA
+hA
+hS
+hY
+iw
+iQ
+jk
+cO
+cO
+cO
+cX
+cX
+cX
+cX
+cX
+cX
+cO
+cO
+cO
 aa
-Lz
-cS
-cY
-cY
-cY
-cY
-cY
-cY
-cS
-Lz
 aa
 aa
 aa
@@ -78686,67 +79161,54 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+NH
+NN
+NN
+Oa
+On
+Ox
+Oy
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Oy
+Ok
+Ok
+Ok
+Ok
+Oy
+Ok
+Un
+NN
+Uc
+Uq
 aa
 aa
 aa
@@ -78854,7 +79316,7 @@ aa
 aa
 "}
 (234,1,1) = {"
-ac
+eC
 aq
 aq
 aq
@@ -78865,7 +79327,7 @@ aq
 aq
 aq
 aq
-aS
+fb
 bb
 bo
 bD
@@ -78876,18 +79338,29 @@ ck
 ct
 bo
 cE
-cN
+fb
+fM
+gk
+gH
+gG
+gG
+gG
+hS
+ib
+iw
+iQ
+jk
 aa
-Nf
-cT
-cU
-cU
-cU
-cU
-cU
-cU
-dc
-Nf
+Lz
+cS
+cY
+cY
+cY
+cY
+cY
+cY
+cS
+Lz
 aa
 aa
 aa
@@ -78945,65 +79418,54 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+NJ
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+TD
+TD
+TD
+NN
+NN
+NN
+NN
+NN
+NN
+Ul
 aa
 aa
 aa
@@ -79111,7 +79573,7 @@ aa
 aa
 "}
 (235,1,1) = {"
-ac
+eC
 aq
 az
 aq
@@ -79122,7 +79584,7 @@ aq
 aq
 az
 aq
-aS
+fb
 bc
 bp
 bD
@@ -79133,17 +79595,28 @@ bo
 ct
 cl
 cF
-cN
+fb
+fM
+gl
+gG
+gG
+hB
+hB
+hS
+ic
+iw
+iQ
+jk
 aa
 Nf
+cT
 cU
 cU
 cU
 cU
 cU
 cU
-cU
-cU
+dc
 Nf
 aa
 aa
@@ -79204,59 +79677,48 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+NJ
+Ob
+Oo
+Ob
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+NN
+TE
+TE
+TE
+NN
+Uc
+Ug
 aa
 aa
 aa
@@ -79368,7 +79830,7 @@ aa
 aa
 "}
 (236,1,1) = {"
-ac
+eC
 aq
 aq
 aq
@@ -79379,7 +79841,7 @@ aq
 aq
 aq
 aq
-aS
+fb
 bc
 bp
 bp
@@ -79390,7 +79852,18 @@ cl
 cl
 cl
 cF
-cN
+fb
+fL
+gm
+gI
+gG
+hC
+hG
+gG
+id
+is
+iR
+jk
 aa
 Nf
 cU
@@ -79465,55 +79938,44 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+NJ
+Ob
+Oo
+Ob
+NN
+NN
+Ob
+Oo
+Ob
+NN
+NN
+Ob
+Oo
+Ob
+NN
+NN
+Ob
+Oo
+Ob
+NN
+NN
+NN
+Ob
+Oo
+Ob
+NN
+NN
+NN
+Ob
+Oo
+Ob
+NN
+TF
+TF
+TF
+NN
+NN
+Ul
 aa
 aa
 aa
@@ -79625,29 +80087,40 @@ aa
 aa
 "}
 (237,1,1) = {"
-ab
-ak
-ak
-ak
-ak
-ak
-ak
-ak
-ak
-ak
-ak
-ab
-ak
-ak
-ak
-ak
-ak
-ak
-ak
-ak
-ak
-ak
-ab
+eB
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+eB
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+eB
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+eB
 aa
 Nf
 cU
@@ -79659,17 +80132,6 @@ cU
 cU
 cU
 Nf
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
 aa
 aa
 aa
@@ -79882,7 +80344,7 @@ aa
 aa
 "}
 (238,1,1) = {"
-ac
+eC
 ar
 ar
 ar
@@ -79893,8 +80355,7 @@ ar
 ar
 ar
 ar
-aS
-bd
+fb
 bd
 bd
 bd
@@ -79903,8 +80364,20 @@ bd
 bd
 bd
 cy
+fC
 cG
-cN
+fb
+fN
+gn
+gJ
+ht
+hD
+hH
+hD
+hH
+hD
+gM
+jk
 aa
 Nf
 cU
@@ -79916,17 +80389,6 @@ cU
 cU
 cU
 Nf
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
 aa
 aa
 aa
@@ -80139,7 +80601,7 @@ aa
 aa
 "}
 (239,1,1) = {"
-ac
+eC
 ar
 ar
 ar
@@ -80150,18 +80612,29 @@ ar
 ar
 ar
 ar
-aS
+fb
 bd
 bq
-bd
+fk
 bd
 bO
 bd
 bd
-bd
-cy
+fy
+fC
 cG
-cN
+fb
+fO
+go
+gK
+ht
+hE
+hI
+hE
+hI
+hE
+gK
+jk
 aa
 Nf
 cU
@@ -80173,17 +80646,6 @@ cU
 cU
 cU
 Nf
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
 aa
 aa
 aa
@@ -80396,7 +80858,7 @@ aa
 aa
 "}
 (240,1,1) = {"
-ac
+eC
 ar
 ar
 ar
@@ -80407,7 +80869,7 @@ ar
 ar
 ar
 ar
-aS
+fb
 bd
 bd
 bd
@@ -80415,10 +80877,21 @@ bd
 bd
 bd
 bd
-bd
-cy
+fz
+fC
 cG
-cN
+fb
+fP
+gp
+gL
+ht
+ht
+ht
+ht
+ht
+ht
+ht
+jk
 aa
 Nf
 cU
@@ -80430,17 +80903,6 @@ cU
 cU
 cU
 Nf
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
 aa
 aa
 aa
@@ -80653,7 +81115,7 @@ aa
 aa
 "}
 (241,1,1) = {"
-ac
+eC
 ar
 ar
 ar
@@ -80664,18 +81126,29 @@ ar
 ar
 ar
 ar
-aS
+fb
 bd
 br
-bd
+fk
 bd
 bd
 cb
 bd
-bd
 cy
+fC
 cG
-cN
+fb
+fQ
+gq
+gM
+ht
+hD
+hH
+hD
+hH
+hD
+gM
+jk
 aa
 Nf
 cU
@@ -80687,17 +81160,6 @@ cU
 cU
 cU
 Nf
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
 aa
 aa
 aa
@@ -80910,7 +81372,7 @@ aa
 aa
 "}
 (242,1,1) = {"
-ac
+eC
 ar
 ar
 ar
@@ -80921,8 +81383,7 @@ ar
 ar
 ar
 ar
-aS
-bd
+fb
 bd
 bd
 bd
@@ -80931,8 +81392,20 @@ bd
 bd
 bd
 cy
+fC
 cG
-cN
+fb
+fR
+gr
+gN
+ht
+hE
+hI
+hE
+hI
+hE
+gK
+jk
 aa
 Nf
 cU
@@ -80944,17 +81417,6 @@ cU
 cU
 cU
 Nf
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
 aa
 aa
 aa
@@ -81167,29 +81629,40 @@ aa
 aa
 "}
 (243,1,1) = {"
-ab
-ak
-ak
-ak
-ak
-ak
-ak
-ak
-ak
-ak
-ak
-ab
-ak
-ak
-ak
-ak
-ak
-ak
-ak
-ak
-ak
-ak
-ab
+eB
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+eB
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+eB
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+eB
 aa
 Nf
 cU
@@ -81201,17 +81674,6 @@ cU
 cU
 cU
 Nf
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
 aa
 aa
 aa
@@ -81424,7 +81886,7 @@ aa
 aa
 "}
 (244,1,1) = {"
-ac
+eC
 as
 as
 as
@@ -81435,18 +81897,29 @@ as
 as
 as
 as
-aS
+fb
 be
 bs
 bs
 bs
 bP
 cc
-cm
-cm
-cm
+bs
+bs
+bs
 cH
-cN
+fb
+fS
+gs
+gs
+gs
+gs
+hJ
+hJ
+hJ
+hJ
+iS
+jk
 aa
 Nf
 cU
@@ -81458,17 +81931,6 @@ cU
 cU
 cU
 Nf
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
 aa
 aa
 aa
@@ -81681,7 +82143,7 @@ aa
 aa
 "}
 (245,1,1) = {"
-ac
+eC
 as
 aA
 as
@@ -81692,18 +82154,29 @@ as
 as
 aA
 as
-aS
+fb
 bf
-bt
-bt
-bt
-bQ
-cd
-bt
-bt
-bt
+bs
+bs
+bs
+bP
+cc
+bs
+bs
+bs
 cI
-cN
+fb
+fT
+gt
+gO
+gt
+gt
+hK
+gt
+gt
+gt
+iY
+jk
 aa
 Nf
 cU
@@ -81715,17 +82188,6 @@ cU
 cU
 cU
 Nf
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
 aa
 aa
 aa
@@ -81938,7 +82400,7 @@ aa
 aa
 "}
 (246,1,1) = {"
-ac
+eC
 as
 as
 as
@@ -81949,18 +82411,286 @@ aA
 as
 as
 as
-aS
+fb
 bf
-bt
-bt
-bt
-bQ
-cd
-bt
-bt
-bt
+bs
+bs
+bs
+bP
+cc
+bs
+bs
+bs
 cI
-cN
+fb
+fT
+gt
+gt
+gt
+gt
+gt
+gt
+gt
+gt
+iY
+jk
+aa
+Nf
+cU
+cU
+cU
+cU
+cU
+cU
+cU
+cU
+Nf
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(247,1,1) = {"
+eC
+as
+aA
+as
+as
+as
+as
+as
+as
+aA
+as
+fb
+bf
+bs
+bs
+bs
+bP
+cc
+bs
+bs
+bs
+cI
+fb
+fT
+gt
+gt
+gt
+gt
+gt
+gt
+ie
+gt
+iY
+jk
 aa
 Nf
 cV
@@ -82182,277 +82912,9 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-"}
-(247,1,1) = {"
-ac
-as
-aA
-as
-as
-as
-as
-as
-as
-aA
-as
-aS
-bf
-bt
-bt
-bt
-bQ
-cd
-bt
-bt
-bt
-cI
-cN
-aa
-Ng
-cW
-cZ
-cZ
-cZ
-cZ
-cZ
-cZ
-cW
-Ng
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
 "}
 (248,1,1) = {"
-ac
+eC
 as
 as
 as
@@ -82463,40 +82925,40 @@ as
 as
 as
 as
-aS
+fb
 bg
-bu
-bu
-bu
-bR
-ce
-cn
-cn
-cn
+bs
+bs
+bs
+bP
+cc
+bs
+bs
+bs
 cJ
-cN
-cO
-cO
-cO
-da
-da
-da
-da
-da
-da
-cO
-cO
-cO
+fb
+fU
+gu
+gu
+gu
+gu
+gu
+gu
+gu
+gu
+iZ
+jk
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+Ng
+cW
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cW
+Ng
 aa
 aa
 aa
@@ -82709,52 +83171,52 @@ aa
 aa
 "}
 (249,1,1) = {"
-ab
-ak
-ak
-ak
-ak
-ak
-ak
-ak
-ak
-ak
-ak
-ab
-ak
-ak
-ak
-ak
-ak
-ak
-ak
-ak
-ak
-ak
-ab
+eB
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+eB
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+eB
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+eB
 cO
-cQ
-cR
-cW
-cW
-cW
-cW
-cW
-cW
-db
-df
 cO
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+cO
+da
+da
+da
+da
+da
+da
+cO
+cO
+cO
 aa
 aa
 aa
@@ -82966,7 +83428,7 @@ aa
 aa
 "}
 (250,1,1) = {"
-ac
+eC
 at
 aB
 aB
@@ -82977,7 +83439,7 @@ aI
 aI
 aI
 aP
-aS
+fb
 bh
 bv
 bv
@@ -82988,7 +83450,18 @@ co
 co
 co
 cK
-cN
+fb
+fV
+fV
+fV
+fV
+fV
+fV
+fV
+fV
+fV
+fV
+jk
 cO
 cQ
 cR
@@ -83001,17 +83474,6 @@ cW
 db
 df
 cO
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
 aa
 aa
 aa
@@ -83223,7 +83685,7 @@ aa
 aa
 "}
 (251,1,1) = {"
-ac
+eC
 au
 aC
 aC
@@ -83234,7 +83696,7 @@ aC
 aC
 aC
 aQ
-aS
+fb
 bi
 bw
 bE
@@ -83245,7 +83707,18 @@ bw
 cu
 bw
 cL
-cN
+fb
+fW
+gv
+gP
+hu
+hu
+hu
+hu
+if
+iM
+ja
+jk
 cO
 cQ
 cR
@@ -83258,17 +83731,6 @@ cW
 db
 df
 cO
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
 aa
 aa
 aa
@@ -83480,7 +83942,7 @@ aa
 aa
 "}
 (252,1,1) = {"
-ac
+eC
 au
 aC
 aC
@@ -83491,7 +83953,7 @@ aC
 aC
 aC
 aQ
-aS
+fb
 bi
 bw
 bE
@@ -83502,7 +83964,18 @@ bw
 cu
 bw
 cL
-cN
+fb
+fX
+gw
+gW
+hv
+hv
+hv
+hv
+ig
+iM
+jb
+jk
 cO
 cQ
 cR
@@ -83515,17 +83988,6 @@ cW
 db
 df
 cO
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
 aa
 aa
 aa
@@ -83737,7 +84199,7 @@ aa
 aa
 "}
 (253,1,1) = {"
-ac
+eC
 au
 aC
 aC
@@ -83748,7 +84210,7 @@ aC
 aC
 aC
 aQ
-aS
+fb
 bi
 bw
 bE
@@ -83759,7 +84221,18 @@ bw
 cu
 bw
 cL
-cN
+fb
+fY
+gx
+gX
+hw
+hw
+hw
+hw
+ik
+iM
+jc
+jk
 cO
 cQ
 cR
@@ -83981,20 +84454,9 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
 "}
 (254,1,1) = {"
-ac
+eC
 av
 aD
 aD
@@ -84005,7 +84467,7 @@ aJ
 aJ
 aJ
 aR
-aS
+fb
 bj
 bx
 bx
@@ -84016,32 +84478,32 @@ cp
 cp
 cp
 cM
-cN
+fb
+fZ
+fZ
+fZ
+fZ
+fZ
+fZ
+fZ
+fZ
+fZ
+fZ
+jk
 cO
+cQ
+cR
+cW
+cW
+cW
+cW
+cW
+cW
+db
+df
 cO
-cO
-cO
-cO
-cO
-cO
-cO
-cO
-cO
-cO
-cO
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+jl
 aa
 aa
 aa
@@ -84251,7 +84713,7 @@ aa
 aa
 "}
 (255,1,1) = {"
-ab
+eB
 aw
 aw
 aw
@@ -84262,7 +84724,7 @@ aw
 aw
 aw
 aw
-ab
+eB
 aw
 aw
 aw
@@ -84273,30 +84735,30 @@ aw
 aw
 aw
 aw
-ab
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+eB
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+eB
+cO
+cO
+cO
+cO
+cO
+cO
+cO
+cO
+cO
+cO
+cO
+cO
 aa
 aa
 aa

@@ -241,6 +241,12 @@
 	desc = "A sign labelling an area as a place where xenobiological entities are researched."
 	icon_state = "xenobio"
 
+/obj/structure/sign/directions
+	name = "some direction"
+	desc = "This way!"
+	icon_state = "direction_sci"
+	resistance_flags = FIRE_PROOF
+
 /obj/structure/sign/directions/science
 	name = "science department"
 	desc = "A direction sign, pointing out which way the Science department is."

@@ -137,22 +137,6 @@
 /obj/structure/chair/comfy/sofa/corner/right/lime
 	color = rgb(255,251,0)
 
-/datum/outfit/paratrooper
-	name = "UAC Paratrooper"
-	ears = /obj/item/device/radio/headset/syndicate/alt
-	uniform = /obj/item/clothing/under/uac
-	suit = /obj/item/clothing/suit/armor/uac
-	shoes = /obj/item/clothing/shoes/combat/uac
-	gloves = /obj/item/clothing/gloves/combat
-	head = /obj/item/clothing/head/helmet/trooper
-	id = /obj/item/weapon/card/id/silver
-	glasses = /obj/item/clothing/glasses/night
-	mask = /obj/item/clothing/mask/breath
-	belt = /obj/item/ammo_box/magazine/a646
-	l_pocket = /obj/item/weapon/tank/internals/emergency_oxygen
-	r_pocket = /obj/item/ammo_box/magazine/a646
-	r_hand = /obj/item/weapon/gun/projectile/automatic/mg88
-
 /obj/structure/sign/nanotrasen
 	name = "Nanotrasen Emblem"
 	desc = "Nanotrasen Emblem - a two litters a front of blue background."
@@ -230,6 +214,12 @@
 	desc = "Enter only by one."
 	icon = 'icons/obj/infinity_decals.dmi'
 	icon_state = "only"
+
+/obj/structure/sign/directions/eva
+	name = "EVA sign"
+	desc = "EVA is here!"
+	icon = 'icons/obj/infinity_decals.dmi'
+	icon_state = "EVA"
 
 /obj/structure/sign/directions/civilian
 	name = "civilian pointer"

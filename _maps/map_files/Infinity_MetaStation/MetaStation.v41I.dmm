@@ -6732,6 +6732,9 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
+	},
 /turf/open/floor/plating,
 /area/maintenance/fsmaint)
 "amc" = (
@@ -16385,7 +16388,6 @@
 /obj/item/clothing/tie/waistcoat,
 /obj/item/clothing/suit/toggle/lawyer/black,
 /obj/item/clothing/under/suit_jacket/red,
-/obj/structure/chair/comfy/sofa/corner/black,
 /obj/item/clothing/under/lawyer/blacksuit,
 /obj/item/clothing/under/wfleetcommander,
 /obj/item/clothing/under/schoolgirlblack,
@@ -94501,11 +94503,11 @@
 "dds" = (
 /obj/docking_port/stationary{
 	area_type = /area/shuttle/syndicate;
-	dwidth = 9;
-	height = 58;
+	dwidth = 8;
+	height = 29;
 	id = "sector_bravo";
 	name = "Space Station";
-	width = 18
+	width = 19
 	},
 /turf/open/space,
 /area/space)
