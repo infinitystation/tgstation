@@ -41,7 +41,7 @@
 
 /obj/item/clothing/under/halloween/soviet
 	name = "soviet uniform"
-	desc = "For the Motherland!"
+	desc = "For the Motherland! IT'S A FAKE!"
 	icon_state = "soviet"
 	item_state = "soviet"
 	item_color = "soviet"
@@ -90,6 +90,8 @@
 
 //HATS
 
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+
 /obj/item/clothing/head/halloween
 	name = "bowler-hat"
 	desc = "Gentleman, elite aboard! IT'S A FAKE!"
@@ -122,7 +124,6 @@
 	desc = "A heavy helmet made of brass. IT'S A FAKE!"
 	icon = 'icons/obj/clothing/clockwork_garb.dmi'
 	icon_state = "clockwork_helmet"
-	flags_cover = HEADCOVERSEYES
 	flags_inv = HIDEEARS
 
 /obj/item/clothing/head/halloween/syndicate
@@ -137,7 +138,8 @@
 	name = "xenos helmet"
 	icon_state = "xenos"
 	item_state = "xenos_helm"
-	desc = "A helmet made out of chitinous alien hide."
+	desc = "A helmet made out of chitinous alien hide. IT'S A FAKE!"
+	flags_cover = HEADCOVERSEYES
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 
 /obj/item/clothing/head/halloween/culthood
@@ -159,7 +161,7 @@
 	name = "ninja hood"
 	icon_state = "s-ninja"
 	item_state = "s-ninja_mask"
-	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+	flags_inv = HIDEEARS|HIDEHAIR|HIDEFACIALHAIR
 
 /obj/item/clothing/head/halloween/magus
 	name = "magus helm"
@@ -216,7 +218,7 @@
 	name = "paper sack hat"
 	desc = "A paper sack with crude holes cut out for eyes. Useful for hiding one's identity or ugliness. IT'S A FAKE!"
 	icon_state = "papersack"
-	flags_inv = HIDEHAIR|HIDEFACE|HIDEEARS
+	flags_inv = HIDEHAIR|HIDEFACE|HIDEEARS|HIDEEYES|HIDEFACIALHAIR
 
 /obj/item/clothing/head/halloween/lizard
 	name = "lizardskin cloche hat"
@@ -251,8 +253,8 @@
 	desc = "A horribly bloated suit made from human skins. IT'S A FAKE!"
 	icon_state = "lingspacesuit"
 	item_state = "labcoat"
-	body_parts_covered = CHEST|GROIN|ARMS
-	hooded = 1
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS|HANDS
+	flags_inv = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT
 	actions_types = list(/datum/action/item_action/toggle_human_head)
 	hoodtype = /obj/item/clothing/head/halloween/human_head
 
@@ -260,7 +262,6 @@
 	name = "bloated human head"
 	desc = "A horribly bloated and mismatched human head. IT'S A FAKE!"
 	icon_state = "lingspacehelmet"
-	body_parts_covered = HEAD
 	flags = NODROP
 	flags_cover = HEADCOVERSEYES
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
@@ -270,6 +271,7 @@
 	desc = "An unnerving black gem-lined robe that reeks of death and decay. IT'S A FAKE!"
 	icon_state = "blackwizard"
 	item_state = "blackwizrobe"
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	flags_inv = HIDEJUMPSUIT
 
 /obj/item/clothing/suit/halloween/magusblue
@@ -284,6 +286,7 @@
 	desc = "A set of armored robes that seem to radiate a dark power. IT'S A FAKE!"
 	icon_state = "magusred"
 	item_state = "magusred"
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	flags_inv = HIDEJUMPSUIT
 
 /obj/item/clothing/suit/halloween/marisa
@@ -291,6 +294,7 @@
 	desc = "Magic is all about the spell power, ZE! IT'S A FAKE!"
 	icon_state = "marisa"
 	item_state = "marisarobe"
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	flags_inv = HIDEJUMPSUIT
 
 /obj/item/clothing/suit/halloween/red
@@ -298,6 +302,7 @@
 	desc = "A magnificent red gem-lined robe that seems to radiate power. IT'S A FAKE!"
 	icon_state = "redwizard"
 	item_state = "redwizrobe"
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	flags_inv = HIDEJUMPSUIT
 
 /obj/item/clothing/suit/halloween/yellow
@@ -305,6 +310,7 @@
 	desc = "A magnificant yellow gem-lined robe that seems to radiate power. IT'S A FAKE!"
 	icon_state = "yellowwizard"
 	item_state = "yellowwizrobe"
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	flags_inv = HIDEJUMPSUIT
 
 /obj/item/clothing/suit/halloween/clockwork
@@ -313,6 +319,7 @@
 	icon = 'icons/obj/clothing/clockwork_garb.dmi'
 	icon_state = "clockwork_cuirass"
 	icon_state = "clockwork_cuirass"
+	body_parts_covered = CHEST|GROIN|LEGS
 	w_class = 3
 
 /obj/item/clothing/suit/halloween/syndicate
@@ -321,6 +328,7 @@
 	item_state = "space_suit_syndicate"
 	desc = "Has a tag on it: Totally not property of of a hostile corporation, honest! IT'S A FAKE!"
 	w_class = 3
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS|HANDS
 	flags_inv = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT
 
 /obj/item/clothing/suit/halloween/xenos
@@ -344,29 +352,31 @@
 	desc = "An armored hood worn by the followers of Nar-Sie. IT'S A FAKE!"
 	icon_state = "cult_hoodalt"
 	item_state = "cult_hoodalt"
-	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	flags_inv = HIDEJUMPSUIT
+	flags_inv = HIDEEARS|HIDEHAIR
 
 /obj/item/clothing/suit/halloween/space_ninja
 	name = "ninja suit"
 	desc = "A unique, vaccum-proof suit of nano-enhanced armor designed specifically for Spider Clan assassins. IT'S A FAKE!"
 	icon_state = "s-ninja"
 	item_state = "s-ninja_suit"
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS|HANDS
+	flags_inv = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT
 
 /obj/item/clothing/suit/hooded/halloween/cult
 	name = "nar-sien hardened armor"
 	icon_state = "cult_armor"
 	item_state = "cult_armor"
-	desc = "A heavily-armored exosuit worn by warriors of the Nar-Sien cult. It can withstand hard vacuum."
+	desc = "A heavily-armored exosuit worn by warriors of the Nar-Sien cult. It can withstand hard vacuum.IT'S A FAKE!"
 	w_class = 3
 	hoodtype = /obj/item/clothing/head/hooded/halloween/cult
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS|HANDS
+	flags_inv = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT
 
 /obj/item/clothing/head/hooded/halloween/cult
 	name = "nar-sien hardened helmet"
-	desc = "A heavily-armored helmet worn by warriors of the Nar-Sien cult. It can withstand hard vacuum."
+	desc = "A heavily-armored helmet worn by warriors of the Nar-Sien cult. It can withstand hard vacuum.IT'S A FAKE!"
 	icon_state = "cult_helmet"
 	item_state = "cult_helmet"
-	body_parts_covered = HEAD
 	flags = NODROP
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 

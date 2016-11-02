@@ -275,13 +275,6 @@ update_label("John Doe", "Clowny")
 	name = "Prisoner #13-007"
 	registered_name = "Prisoner #13-007"
 
-/obj/item/weapon/card/id/uac
-	name = "UAC ID"
-	icon_state = "data"
-	item_state = "card-id"
-	assignment = "UAC Paratrooper"
-	access = list(200)
-
 /obj/item/weapon/card/id/mining
 	name = "mining ID"
 	access = list(access_mining, access_mining_station, access_mineral_storeroom)

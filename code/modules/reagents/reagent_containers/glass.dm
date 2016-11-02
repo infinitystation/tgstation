@@ -192,6 +192,9 @@
 /obj/item/weapon/reagent_containers/glass/beaker/cryoxadone
 	list_reagents = list("cryoxadone" = 30)
 
+/obj/item/weapon/reagent_containers/glass/beaker/cryoxadone/full_pack
+	list_reagents = list("cryoxadone" = 25, "mutadone" = 10, "mannitol" = 10, "epinephrine" = 5)
+
 /obj/item/weapon/reagent_containers/glass/beaker/sulphuric
 	list_reagents = list("sacid" = 50)
 

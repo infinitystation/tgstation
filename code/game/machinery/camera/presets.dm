@@ -37,6 +37,20 @@
 	upgradeXRay()
 	upgradeMotion()
 
+// Thunderome's camera
+/obj/machinery/camera/thunder
+	start_active = 1
+	obj_integrity = 500
+	max_integrity = 500
+	c_tag = "Arena"
+	icon_state = "xraycam"
+
+/obj/machinery/camera/all/New()
+	..()
+	upgradeEmpProof()
+	upgradeXRay()
+
+
 // AUTONAME
 
 /obj/machinery/camera/autoname
