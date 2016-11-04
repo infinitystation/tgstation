@@ -54,11 +54,6 @@
 	if(visualsOnly)
 		return
 
-	var/obj/item/weapon/implant/mindshield/L = new/obj/item/weapon/implant/mindshield(H)
-	L.imp_in = H
-	L.implanted = 1
-	H.sec_hud_set_implants()
-
 	var/obj/item/weapon/card/id/W = H.wear_id
 	W.icon_state = "centcom"
 	W.access = get_centcom_access("Centcom Securty Private")
@@ -66,6 +61,9 @@
 	W.assignment = "Centcom Securty Private"
 	W.registered_name = H.real_name
 	W.update_label()
+
+	var/obj/item/weapon/implant/mindshield/L = new/obj/item/weapon/implant/mindshield(H)
+	L.implant(H, null, 1)
 
 /datum/outfit/security_sergeant
 	name = "Centcom Securty Sergeant"
@@ -95,9 +93,7 @@
 		return
 
 	var/obj/item/weapon/implant/mindshield/L = new/obj/item/weapon/implant/mindshield(H)
-	L.imp_in = H
-	L.implanted = 1
-	H.sec_hud_set_implants()
+	L.implant(H, null, 1)
 
 	var/obj/item/weapon/card/id/W = H.wear_id
 	W.icon_state = "centcom"
