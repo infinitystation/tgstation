@@ -113,6 +113,15 @@
 	desc = "A silver-plated pickaxe that mines slightly faster than standard-issue."
 	force = 17
 
+/obj/item/weapon/pickaxe/silver/poor //For ash-walker's
+	name = "ancient pickaxe"
+	icon_state = "spickaxe"
+	item_state = "spickaxe"
+	digspeed = 30
+	origin_tech = "materials=4"
+	desc = "Ancient, but surprisingly high quality and sharp pick... From it emanates darkness..."
+	force = 10
+
 /obj/item/weapon/pickaxe/diamond
 	name = "diamond-tipped pickaxe"
 	icon_state = "dpickaxe"

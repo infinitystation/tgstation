@@ -44,3 +44,15 @@
 	response_disarm = "gently pushes aside"
 	response_harm   = "stomps"
 	gold_core_spawnable = 0
+
+/mob/living/simple_animal/crab/Groffee
+	name = "Groffee"
+	real_name = "Groffee"
+	desc = "It's Groffee, the lava-crab!"
+	icon_state = "evilcrab"
+	icon_living = "evilcrab"
+	icon_dead = "evilcrab_dead"
+	response_help  = "pets"
+	response_disarm = "gently pushes aside"
+	response_harm   = "stomps"
+	gold_core_spawnable = 0

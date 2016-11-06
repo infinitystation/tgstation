@@ -23,6 +23,10 @@
 	desc = "A white folder."
 	icon_state = "folder_white"
 
+/obj/item/weapon/folder/black
+	desc = "A black folder."
+	icon_state = "folder_syndie"
+
 
 /obj/item/weapon/folder/update_icon()
 	cut_overlays()

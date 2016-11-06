@@ -33,3 +33,9 @@
 
 		add_fingerprint(H)
 		H.update_body()
+
+/obj/structure/dresser/metal
+	name = "dresser"
+	desc = "A nicely-crafted metal dresser. It's filled with lots of undies."
+	icon = 'icons/obj/infinity_object.dmi'
+	icon_state = "metal_dresser"

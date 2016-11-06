@@ -99,6 +99,22 @@
 	new /obj/item/device/healthanalyzer(src)
 	return
 
+/obj/item/weapon/storage/firstaid/radiation
+	name = "radiation treatment kit"
+	desc = "Used for elimination from the body to radiation."
+	icon_state = "radfirstaid2"
+	item_state = "firstaid-brute"
+
+/obj/item/weapon/storage/firstaid/radiation/New()
+	..()
+	if(empty) return
+	for(var/i in 1 to 4)
+		new /obj/item/weapon/reagent_containers/pill/potass(src)
+	new /obj/item/weapon/reagent_containers/pill/mutadone(src)
+	new /obj/item/weapon/reagent_containers/hypospray/medipen(src)
+	new /obj/item/device/healthanalyzer(src)
+	return
+
 /obj/item/weapon/storage/firstaid/tactical
 	name = "combat medical kit"
 	desc = "I hope you've got insurance."

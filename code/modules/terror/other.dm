@@ -7,11 +7,6 @@
 	desc = "A small floor lighting fixture."
 	light_type = /obj/item/weapon/light/bulb
 
-/obj/item/device/shadowcloak/ops
-	name = "stealth ops cloaker belt"
-	icon_state = "assaultbelt"
-	item_state = "assault"
-
 /obj/item/weapon/melee/chainofcommand/whip
 	name = "whip"
 	desc = "Mrrr..."
@@ -136,148 +131,6 @@
 
 /obj/structure/chair/comfy/sofa/corner/right/lime
 	color = rgb(255,251,0)
-
-/obj/structure/sign/nanotrasen
-	name = "Nanotrasen Emblem"
-	desc = "Nanotrasen Emblem - a two litters a front of blue background."
-	icon_state = "NT"
-	icon = 'icons/obj/infinity_decals.dmi'
-
-/obj/structure/sign/directions/dock
-	name = "docking port 1"
-	desc = "A direction sign, pointing out which way the Docking port 1 is."
-	icon_state = "dock_1"
-	icon = 'icons/obj/infinity_decals.dmi'
-
-/obj/structure/sign/directions/dock/two
-	name = "docking port 2"
-	desc = "A direction sign, pointing out which way the Docking port 2 is."
-	icon_state = "dock_2"
-
-/obj/structure/sign/directions/dock/three
-	name = "docking port 3"
-	desc = "A direction sign, pointing out which way the Docking port 3 is."
-	icon_state = "dock_3"
-
-/obj/structure/sign/directions/dock/four
-	name = "docking port 4"
-	desc = "A direction sign, pointing out which way the Docking port 4 is."
-	icon_state = "dock_4"
-
-/obj/structure/sign/directions/shuttle
-	name = "shuttle sign"
-	desc = "A direction sign, pointing out which way the shuttle."
-	icon_state = "shuttle"
-	icon = 'icons/obj/infinity_decals.dmi'
-
-/obj/structure/sign/directions/cryo
-	name = "cryo sign"
-	icon = 'icons/obj/infinity_decals.dmi'
-	desc = "Index, which tells that you are in the cryogenic room."
-	icon_state = "cryo"
-
-/obj/structure/sign/directions/ert
-	name = "lead's equipment"
-	icon = 'icons/obj/infinity_decals.dmi'
-	desc = "Index, which tells that you are in the lead's room."
-	icon_state = "commander"
-
-/obj/structure/sign/directions/ert/security
-	name = "security's equipment"
-	desc = "Index, which tells that you are in the security's room."
-	icon_state = "security"
-
-/obj/structure/sign/directions/ert/engineer
-	name = "engineer's equipment"
-	desc = "Index, which tells that you are in the engineer's room."
-	icon_state = "engineer"
-
-/obj/structure/sign/directions/ert/medic
-	name = "medical's equipment"
-	desc = "Index, which tells that you are in the medical's room."
-	icon_state = "medic"
-
-/obj/structure/sign/directions/synd
-	name = "Syndicate's sign"
-	desc = "That's our galaxy."
-	icon = 'icons/obj/infinity_decals.dmi'
-	icon_state = "synd_sim"
-
-/obj/structure/sign/directions/s
-	name = "S"
-	desc = "That's just big a letter S..."
-	icon = 'icons/obj/infinity_decals.dmi'
-	icon_state = "S"
-
-/obj/structure/sign/directions/only
-	name = "Only 1"
-	desc = "Enter only by one."
-	icon = 'icons/obj/infinity_decals.dmi'
-	icon_state = "only"
-
-/obj/structure/sign/directions/eva
-	name = "EVA sign"
-	desc = "EVA is here!"
-	icon = 'icons/obj/infinity_decals.dmi'
-	icon_state = "EVA"
-
-/obj/structure/sign/directions/civilian
-	name = "civilian pointer"
-	icon = 'icons/obj/infinity_decals.dmi'
-	desc = "Pointer, saying to you that in front will be civilian zone."
-	icon_state = "civilian"
-
-/obj/structure/sign/directions/personal
-	name = "personal pointer"
-	icon = 'icons/obj/infinity_decals.dmi'
-	desc = "Pointer, saying to you that in front will be personal-only zone."
-	icon_state = "personal"
-
-/obj/structure/sign/directions/administration
-	name = "administration pointer"
-	icon = 'icons/obj/infinity_decals.dmi'
-	desc = "Pointer, saying to you that in front will be administrative-only zone."
-	icon_state = "administration"
-
-/obj/structure/sign/directions/numbers
-	name = "One"
-	icon = 'icons/obj/infinity_decals.dmi'
-	desc = "Number one"
-	icon_state = "one"
-
-/obj/structure/sign/directions/numbers/two
-	name = "Two"
-	desc = "Number two"
-	icon_state = "two"
-
-/obj/structure/sign/directions/numbers/three
-	name = "Three"
-	desc = "Number three"
-	icon_state = "three"
-
-/obj/structure/sign/directions/numbers/four
-	name = "Four"
-	desc = "Number four"
-	icon_state = "four"
-
-
-/mob/living/simple_animal/crab/Groffee
-	name = "Groffee"
-	real_name = "Groffee"
-	desc = "It's Groffee, the lava-crab!"
-	icon_state = "evilcrab"
-	icon_living = "evilcrab"
-	icon_dead = "evilcrab_dead"
-	response_help  = "pets"
-	response_disarm = "gently pushes aside"
-	response_harm   = "stomps"
-	gold_core_spawnable = 0
-
-/obj/structure/dresser/metal
-	name = "dresser"
-	desc = "A nicely-crafted metal dresser. It's filled with lots of undies."
-	icon = 'icons/obj/infinity_object.dmi'
-	icon_state = "metal_dresser"
 
 /obj/item/toy/plushie
 	name = "plushie"
@@ -449,15 +302,6 @@
 /obj/item/toy/carpplushie/void
 	icon_state = "voidcarp"
 
-/obj/item/weapon/pickaxe/silver/poor
-	name = "ancient pickaxe"
-	icon_state = "spickaxe"
-	item_state = "spickaxe"
-	digspeed = 30
-	origin_tech = "materials=4"
-	desc = "Ancient, but surprisingly high quality and sharp pick... From it emanates darkness..."
-	force = 10
-
 /obj/machinery/porta_turret/syndicate/mining
 	scan_range = 12
 	obj_integrity = 150
@@ -468,23 +312,6 @@
 	eshot_sound = 'sound/weapons/marauder.ogg'
 	base_icon_state = "syndie"
 	faction = "neutral"
-
-/obj/item/weapon/storage/box/mining/survival
-	name = "survival pack"
-	desc = "Поможет прожить на пол минуты дольше."
-	icon_state = "survival_box"
-	icon = 'icons/obj/survival_pack.dmi'
-
-/obj/item/weapon/storage/box/mining/survival/New()
-	..()
-	new /obj/item/weapon/reagent_containers/pill/patch/silver_sulf(src)
-	new /obj/item/weapon/reagent_containers/pill/patch/silver_sulf(src)
-	new /obj/item/weapon/reagent_containers/pill/patch/styptic(src)
-	new /obj/item/weapon/reagent_containers/pill/patch/styptic(src)
-	new /obj/item/weapon/reagent_containers/hypospray/medipen/survival(src)
-	new /obj/item/weapon/reagent_containers/hypospray/medipen/survival(src)
-	new /obj/item/weapon/reagent_containers/food/snacks/donkpocket/warm(src)
-	new /obj/item/weapon/reagent_containers/food/snacks/donkpocket/warm(src)
 
 /obj/structure/closet/wall
 	name = "wall closet"
@@ -498,38 +325,11 @@
 	mob_storage_capacity = 0
 	can_weld_shut = FALSE
 
-/obj/item/clothing/mask/gas/mercenaries
-	name = "mercenaries gas mask"
-	desc = "A mask that can be connected to an air supply."
-	icon = 'icons/obj/clothing/infinity_work.dmi'
-	worn_icon = 'icons/mob/infinity_work.dmi'
-	icon_state = "gas_alt"
-	flags = BLOCK_GAS_SMOKE_EFFECT | MASKINTERNALS
-	flags_inv = HIDEEARS|HIDEFACIALHAIR
-	armor = list(melee = 15, bullet = 10, laser = 0, energy = 0, bomb = 20, bio = 100, rad = 25, fire = 30, acid = 0)
-	item_state = "gas_alt"
-	flags_cover = MASKCOVERSMOUTH
-	resistance_flags = FIRE_PROOF
-
 /obj/structure/alien_structure
 	name = "alien machinery"
 	desc = "You don't know what the fuck is that..."
 	icon_state = "computer1"
 	icon = 'icons/obj/infinity_alien.dmi'
-
-/obj/item/weapon/storage/belt/holding
-	name = "belt of holding"
-	desc = "A belt that opens into a localized pocket of Blue Space. It's been outfitted with anti-malfunction safety measures."
-	icon = 'icons/obj/clothing/infinity_work.dmi'
-	worn_icon = 'icons/mob/infinity_work.dmi'
-	icon_state = "belt_of_holding"
-	item_state = "belt_of_holding"
-	w_class = 3
-	max_w_class = 2
-	max_combined_w_class = 37
-	storage_slots = 14
-	max_combined_w_class = INFINITY
-	origin_tech = "bluespace=3"
 
 /datum/design/belt_holding
 	name = "Belt of Holding"
@@ -541,74 +341,10 @@
 	build_path = /obj/item/weapon/storage/belt/holding
 	category = list("Bluespace Designs")
 
-/obj/item/weapon/paper/parting
-	name = "Parting"
-	info = "<b><center>Руководство по эксплуатации электрического стула</center></b><br><br> 1) Возьмите electrpack(шоковый рюкзак) в руку и проведите настройку частот. Обратит внимание, что стандартные частоты (144.9 с кодом 2) - де активированы с целью избежаниЯ саботажа в работе стула. Измените частоту и код. Никому не сообщайте код помимо ХоСа, вардена или капитана.<br> 2) Присоедените к electropack шлем - вы получите шоковый набор.<br> 3) Закрепите шоковый набор на стуле.<br> 4) Настройте signaler на выставленную в электропаке частоту. Всё, электрический стул готов.<br><br><b><center>Обслуживание электрического стула</centrl></b><br>*ДлЯ отсоединениЯ шокового набора от стула, используйте гаечный ключ. ДлЯ разоеденениЯ частей - так же.<br>*Стул имеет задержку перед использованием - всего несколько секунд.<br>*ДлЯ проведениЯ казни, закрепите осужденного на электрическом стуле и активируйте сигналлер.<br><br><br><small>Уважаемый оператор, пожалуйста, помните, что на этом стуле вы производите казнь живого человека - такого же, как и вы.<br> Не забывайте об этом используйте его в самом крайнем случае.</small>"
-
-/obj/item/weapon/paper/syndicate
-	name = "Message"
-	info = "<i>В вашем автомате YouTool было обновлено оборудование, в коробку из-под пицы положили новую пиццу.<br>Немного изменили конструкцию медицинского отсека вашего кораблЯ - добавили тюрьму.<br>В отдел инженерного оборудованиЯ был добавлен Пластаниум длЯ ремонта кораблЯ в случае поломки."
-
-/obj/item/weapon/paper/miners_oper
-	name = "Standart miner's operation guide"
-	info = "<center><b>Руководство по выживанию на планетоиде</b></center><br><center><b>Infernos</b></center><br><br>Данное руководство по выживанию в условиЯх планетоида 'Infernos' (в дальнейшнем Планета) ставит перед собой задачу повысить выживаемость среди шахерских комманд копрорации 'Нанотрейзен'. Пожалуйста, уделите внимание данному руководству и не забывайте о прочтенном.<br><br>Планета содержит в себе множество опасностей, самаЯ неприЯтнаЯ из которых - погодные ЯвлениЯ. <br>На планете регулЯрно происходЯт сдвиги тектонических плит, выбросы твердых магматических пород, извержениЯ вулканов, излиЯниЯ внутренних запасов планетарной магмы.<br>Ваша база была построена в секторе с минимальным количеством погодных Явлений, оставив лишь извержение местного вулкана 'H-721'.<br> При извержении (вы узнаете о нем по повышению количества пепла в воздухе) начинайте быстро двигатьсЯ к ближайшему укрытию к плотной крышей. Укрытием могут служить возведенные ремонтными дронами бункеры в пещерах, шахтерскаЯ база или У.В.В.У.О.В.С - Убежища ВыживаниЯ В УсловиЯх Опасности Внешней Среды. Шахтеры используют сокращение 'УдВ' или просто 'Убежище'.<br>ДлЯ дисклокации убежища возмите капсулу Стандартной Шаблонной Конструкции убежища, активируйте её кнопкой на одной из сторон, разместите в месте желаемого убежища и в течении 10 секунд бункер будет развернут и готов к эксплуатации.<br><br>ВтораЯ серьезнаЯ опасность длЯ шахтерских групп в условиЯх планеты - местнаЯ фауна.<br>Исследовательский отдел Нанотрейзен так и не получил достаточно образцов длЯ полного изучениЯ феномена, из-за чего вам даетсЯ простаЯ установка - всё, что не выглЯдит как шахтер, должно избегатьсЯ всеми возможными средствами. ДопускаетсЯ ликвидациЯ.<br><br>ПоследнЯЯ и самаЯ главнаЯ опасность - аномальнаЯ зона. Далеко на сервере от вашей базы расположена неизвестнаЯ конструкциЯ, которую из-за постоЯнных пепельных штормов невозможно просканировать. От данной конструкции часто исходЯт сигналы неизвестного происхождениЯ. Избегайте северной части шахт.<br><br><br>Конец руководства, спасибо за внимание."
-
-/obj/item/weapon/paper/central_prison
-	name = "Prisoner's transport center"
-	info = "<center><b>Центр Транспортировки Заключенных</b></center><br><br>Уважаемый член охраны, пожалуйста, подождите прибытиЯ ответственного за даннйы КПП сотрудника. По прибытию, передайте ему заключенных и начинайте проходитть процедуру проверки документов по стандартам экипажа."
-
-/turf/closed/wall/shuttle/infinity
-	icon = 'icons/obj/shuttle_new.dmi'
-	icon_state = "floor_block"
-
-/turf/closed/wall/shuttle/infinity/window
-	opacity = 0
-
-/obj/machinery/door/airlock/glass_large/infinity
-	name = "secured glass airlock"
-	icon = 'icons/obj/new_shuttle_1x2.dmi'
-	overlays_file = 'icons/obj/doors/airlocks/glass_large/overlays.dmi'
-	opacity = 0
-	assemblytype = null
-	glass = 1
-	bound_width = 64 // 2x1
-
-/turf/open/floor/plasteel/terror/shuttle
-	name = "shuttle floor"
-	icon = 'icons/obj/shuttle_new.dmi'
-	icon_state = "medstairs_alone"
-
 /obj/structure/closet/secure_closet/rnd_st
 	name = "Secure Content Locker"
 	icon_state = "med"
 	anchored = 1
-
-/obj/item/weapon/folder/black
-	desc = "A black folder."
-	icon_state = "folder_syndie"
-
-/obj/item/weapon/reagent_containers/pill/potass
-	name = "potassium iodide pill"
-	desc = "Use to remove radiation."
-	icon_state = "pill5"
-	list_reagents = list("potass_iodide" = 40)
-	roundstart = 1
-
-/obj/item/weapon/storage/firstaid/radiation
-	name = "radiation treatment kit"
-	desc = "Used for elimination from the body to radiation."
-	icon_state = "radfirstaid2"
-	item_state = "firstaid-brute"
-
-/obj/item/weapon/storage/firstaid/radiation/New()
-	..()
-	new /obj/item/weapon/reagent_containers/pill/potass(src)
-	new /obj/item/weapon/reagent_containers/pill/potass(src)
-	new /obj/item/weapon/reagent_containers/pill/potass(src)
-	new /obj/item/weapon/reagent_containers/pill/potass(src)
-	new /obj/item/weapon/reagent_containers/pill/mutadone(src)
-	new /obj/item/weapon/reagent_containers/hypospray/medipen(src)
-	new /obj/item/device/healthanalyzer(src)
 
 /obj/structure/hyper_sleep
 	name = "Hypersleeper's chamber"
@@ -641,12 +377,6 @@
 	icon_state = "dark_shuttle_window"
 	smooth = SMOOTH_TRUE
 	canSmoothWith = null
-
-/obj/structure/sign/experementor
-	name = "E.X.P.E.R.I-MENTOR"
-	desc = "E.X.P.E.R.I-MENTOR's part will be forward."
-	icon_state = "experementor"
-	icon = 'icons/obj/infinity_decals.dmi'
 
 /obj/effect/proc_holder/spell/self/REAL_NIGHT_VISION
 	name = "Darksight"
@@ -694,9 +424,56 @@
 		if(isobserver(M))
 			var/link = FOLLOW_LINK(M, user)
 			M << "[link] [text]"
-	log_say("[user.real_name]/[user.key] : [text]")
+		log_say("[user.real_name]/[user.key] : [text]")
 
-/obj/item/weapon/reagent_containers/pill/charcoal/low
-	name = "small antitoxin pill"
-	icon_state = "pill17"
-	list_reagents = list("charcoal" = 10)
+/obj/item/clothing/mask/balaclava/white
+	name = "white balaclava"
+	desc = "Spooky?"
+	icon_state = "white_balaclava"
+	item_state = "white_balaclava"
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	actions_types = null
+	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE|HIDEFACIALHAIR
+	visor_flags_inv = HIDEFACE|HIDEFACIALHAIR
+	flags_cover = MASKCOVERSEYES | MASKCOVERSMOUTH
+	resistance_flags = FIRE_PROOF
+	flags = BLOCK_GAS_SMOKE_EFFECT
+
+/obj/item/clothing/mask/killer
+	name = "killer's mask"
+	desc = "ЧУВАААК!"
+	icon_state = "killer"
+	item_state = "killer"
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE|HIDEFACIALHAIR
+	visor_flags_inv = HIDEFACE|HIDEFACIALHAIR
+	flags_cover = MASKCOVERSEYES | MASKCOVERSMOUTH
+	resistance_flags = FIRE_PROOF
+	flags = BLOCK_GAS_SMOKE_EFFECT
+
+/obj/item/clothing/suit/killer_suit
+	name = "killer robes"
+	desc = "Чёрная-чёрная роба чёрного-чёрного парня с чёрно-чёрной улицы. Без расизма."
+	icon_state = "killer_suit"
+	item_state = "killer_suit"
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS|NECK
+	allowed = list(/obj/item/weapon/kitchen/knife,/obj/item/bodypart/head,)
+	armor = list(melee = 20, bullet = 10, laser = 25,energy = 30, bomb = 10, bio = 65, rad = 0, fire = 10, acid = 10)
+
+/obj/item/weapon/cultivator/killer
+	name = "hook"
+	desc = "Необычно острый и блесстящий на свете крюк..."
+	icon = 'icons/obj/infinity_weapons.dmi'
+	icon_state = "hook"
+	item_state = "hook"
+	lefthand_file = 'icons/mob/inhands/infinity_obj_left.dmi'
+	righthand_file = 'icons/mob/inhands/infinity_obj_right.dmi'
+	origin_tech = "engineering=2;biotech=3"
+	force = 60
+	throwforce = 10
+	attack_verb = list("slashed", "sliced", "cut", "clawed", "hooked")
+	hitsound = 'sound/weapons/bladeslice.ogg'

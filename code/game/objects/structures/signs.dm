@@ -331,3 +331,132 @@
 	desc = "Big black words, what says it's a engineering."
 	icon = 'icons/obj/wall_signs_engi.dmi'
 	icon_state = "engi"
+
+/obj/structure/sign/nanotrasen
+	name = "Nanotrasen Emblem"
+	desc = "Nanotrasen Emblem - a two litters a front of blue background."
+	icon_state = "NT"
+	icon = 'icons/obj/infinity_decals.dmi'
+
+/obj/structure/sign/directions/dock
+	name = "docking port 1"
+	desc = "A direction sign, pointing out which way the Docking port 1 is."
+	icon_state = "dock_1"
+	icon = 'icons/obj/infinity_decals.dmi'
+
+/obj/structure/sign/directions/dock/two
+	name = "docking port 2"
+	desc = "A direction sign, pointing out which way the Docking port 2 is."
+	icon_state = "dock_2"
+
+/obj/structure/sign/directions/dock/three
+	name = "docking port 3"
+	desc = "A direction sign, pointing out which way the Docking port 3 is."
+	icon_state = "dock_3"
+
+/obj/structure/sign/directions/dock/four
+	name = "docking port 4"
+	desc = "A direction sign, pointing out which way the Docking port 4 is."
+	icon_state = "dock_4"
+
+/obj/structure/sign/directions/shuttle
+	name = "shuttle sign"
+	desc = "A direction sign, pointing out which way the shuttle."
+	icon_state = "shuttle"
+	icon = 'icons/obj/infinity_decals.dmi'
+
+/obj/structure/sign/directions/cryo
+	name = "cryo sign"
+	icon = 'icons/obj/infinity_decals.dmi'
+	desc = "Index, which tells that you are in the cryogenic room."
+	icon_state = "cryo"
+
+/obj/structure/sign/directions/ert
+	name = "lead's equipment"
+	icon = 'icons/obj/infinity_decals.dmi'
+	desc = "Index, which tells that you are in the lead's room."
+	icon_state = "commander"
+
+/obj/structure/sign/directions/ert/security
+	name = "security's equipment"
+	desc = "Index, which tells that you are in the security's room."
+	icon_state = "security"
+
+/obj/structure/sign/directions/ert/engineer
+	name = "engineer's equipment"
+	desc = "Index, which tells that you are in the engineer's room."
+	icon_state = "engineer"
+
+/obj/structure/sign/directions/ert/medic
+	name = "medical's equipment"
+	desc = "Index, which tells that you are in the medical's room."
+	icon_state = "medic"
+
+/obj/structure/sign/directions/synd
+	name = "Syndicate's sign"
+	desc = "That's our galaxy."
+	icon = 'icons/obj/infinity_decals.dmi'
+	icon_state = "synd_sim"
+
+/obj/structure/sign/directions/s
+	name = "S"
+	desc = "That's just big a letter S..."
+	icon = 'icons/obj/infinity_decals.dmi'
+	icon_state = "S"
+
+/obj/structure/sign/directions/only
+	name = "Only 1"
+	desc = "Enter only by one."
+	icon = 'icons/obj/infinity_decals.dmi'
+	icon_state = "only"
+
+/obj/structure/sign/directions/eva
+	name = "EVA sign"
+	desc = "EVA is here!"
+	icon = 'icons/obj/infinity_decals.dmi'
+	icon_state = "EVA"
+
+/obj/structure/sign/directions/civilian
+	name = "civilian pointer"
+	icon = 'icons/obj/infinity_decals.dmi'
+	desc = "Pointer, saying to you that in front will be civilian zone."
+	icon_state = "civilian"
+
+/obj/structure/sign/directions/personal
+	name = "personal pointer"
+	icon = 'icons/obj/infinity_decals.dmi'
+	desc = "Pointer, saying to you that in front will be personal-only zone."
+	icon_state = "personal"
+
+/obj/structure/sign/directions/administration
+	name = "administration pointer"
+	icon = 'icons/obj/infinity_decals.dmi'
+	desc = "Pointer, saying to you that in front will be administrative-only zone."
+	icon_state = "administration"
+
+/obj/structure/sign/directions/numbers
+	name = "One"
+	icon = 'icons/obj/infinity_decals.dmi'
+	desc = "Number one"
+	icon_state = "one"
+
+/obj/structure/sign/directions/numbers/two
+	name = "Two"
+	desc = "Number two"
+	icon_state = "two"
+
+/obj/structure/sign/directions/numbers/three
+	name = "Three"
+	desc = "Number three"
+	icon_state = "three"
+
+/obj/structure/sign/directions/numbers/four
+	name = "Four"
+	desc = "Number four"
+	icon_state = "four"
+
+/obj/structure/sign/experementor
+	name = "E.X.P.E.R.I-MENTOR"
+	desc = "E.X.P.E.R.I-MENTOR's part will be forward."
+	icon_state = "experementor"
+	icon = 'icons/obj/infinity_decals.dmi'

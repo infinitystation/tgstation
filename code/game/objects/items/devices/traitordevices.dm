@@ -223,3 +223,8 @@ effective or pretty fucking useless.
 		else
 			charge = min(max_charge,charge + 50) //Charge in the dark
 		animate(user,alpha = Clamp(255 - charge,0,255),time = 10)
+
+/obj/item/device/shadowcloak/ops //Only admin-spawn
+	name = "stealth ops cloaker belt"
+	icon_state = "assaultbelt"
+	item_state = "assault"

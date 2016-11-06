@@ -165,3 +165,16 @@
 	name = "carp mask"
 	desc = "Gnash gnash."
 	icon_state = "carp_mask"
+
+/obj/item/clothing/mask/gas/mercenaries
+	name = "mercenaries gas mask"
+	desc = "Защитная маска с ударопрочным прозрачным стеклом. Особая система фильтрации воздуха укзывает на то, что фильтрует она что-то ещё помимо токсичного газа... На обратной стороне лямки видна надпись 'Umbrella Corporation'."
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon_state = "gas_alt"
+	flags = BLOCK_GAS_SMOKE_EFFECT | MASKINTERNALS
+	flags_inv = HIDEEARS|HIDEFACIALHAIR
+	armor = list(melee = 15, bullet = 10, laser = 0, energy = 0, bomb = 20, bio = 100, rad = 25, fire = 30, acid = 20)
+	item_state = "gas_alt"
+	flags_cover = MASKCOVERSMOUTH
+	resistance_flags = FIRE_PROOF

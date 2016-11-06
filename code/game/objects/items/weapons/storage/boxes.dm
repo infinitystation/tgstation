@@ -164,6 +164,21 @@
 	for(var/i in 1 to 5)
 		new /obj/item/weapon/reagent_containers/hypospray/medipen/stimpack(src)
 
+/obj/item/weapon/storage/box/mining/survival
+	name = "survival pack"
+	desc = "Ќастояща€ выгода - попупка коробочки со всем нужным дл€ выживания и долгих рейдов на тварей планетоида."
+	icon_state = "survival_box"
+	icon = 'icons/obj/survival_pack.dmi'
+
+/obj/item/weapon/storage/box/mining/survival/New()
+	..()
+	new /obj/item/weapon/reagent_containers/pill/patch/silver_sulf(src)
+	new /obj/item/weapon/reagent_containers/pill/patch/styptic(src)
+	new /obj/item/weapon/reagent_containers/hypospray/medipen/survival(src)
+	new /obj/item/weapon/reagent_containers/hypospray/medipen/survival(src)
+	new /obj/item/weapon/reagent_containers/food/snacks/donkpocket/warm(src)
+	new /obj/item/weapon/reagent_containers/food/snacks/donkpocket/warm(src)
+
 /obj/item/weapon/storage/box/beakers
 	name = "box of beakers"
 	icon_state = "beaker"
