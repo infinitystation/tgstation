@@ -129,6 +129,10 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	name = "Dormitory Maintenance"
 	icon_state = "fsmaint"
 
+/area/maintenance/brsmaint
+	name = "Brig Maintenance"
+	icon_state = "fsmaint"
+
 /area/maintenance/fsmaint2
 	name = "Bar Maintenance"
 	icon_state = "fsmaint"

@@ -380,11 +380,13 @@
 	flags = NODROP
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 
-//obj/machinery/vending/halloween
+//Hallowen's vending machines//
+
+///obj/machinery/vending/halloween
 //	name = "Spooky Under-Vender!"
 //	desc = "Праздничный набор одежды плохих парней, что наши уважаемые оперативники Нанотрайзен содрали с тел поверженных врагов."
 //	product_slogans = "Кредиты или жизнь!;Переходи на тёмную сторону!;Бууу!;Не верьте описанию - у нас самаЯ настоЯщаЯ одежда! Почти;Они убили Джонни!;Забирай, не зевай!;Грахаха!;А вы знаете, что этот призрак настоЯщий?;Terror's corporate не одобрЯет наш автомат!"
-//	product_ads = "Это последнее, что ты возьмешь в эту ночь...;А эту шмотку мы откопали на кладбище.;Будет сидеть как на мертвеце, когда это увидет охрана!;Это защитит твои мозги...;Прошлый владелец любил эту вещь - даже умер в ней!;Помни - антагонисты где-то рЯдом!;А ведь когда-то, мы продавали сигареты!.;...И вы выиграли ещё одну бесполезную шмотку!;Наши шапки отгонЯют оборотней!;"
+//	product_ads = "Это последнее, что ты возьмешь в эту ночь...;А эту шмотку мы откопали на кладбище.;Будет сидеть как на мертвеце, когда это увидет охрана!;Это защитит твои мозги...;Прошлый владелец любил эту вещь - даже умер в ней!;Помни - антагонисты где-то рЯдом!;А ведь когда-то, мы продавали сигареты!;...И вы выиграли ещё одну бесполезную шмотку!;Наши шапки отгонЯют оборотней!;"
 //	vend_delay = 20
 //	icon = 'icons/obj/infinity_object.dmi'
 //	icon_state = "halloween"
@@ -394,11 +396,9 @@
 //					/obj/item/clothing/under/halloween/camo = 6,
 //					/obj/item/clothing/under/halloween/jester = 3,
 //					/obj/item/clothing/under/halloween/soviet = 12)
-//	contraband = null
-//	premium = null
 //	refill_canister = /obj/item/weapon/vending_refill/cigarette
 //
-//obj/machinery/vending/halloween/shoes
+///obj/machinery/vending/halloween/shoes
 //	name = "Spooky Shoes-Vender!"
 //	products = list(/obj/item/clothing/shoes/halloween/clockwork = 5,
 //					/obj/item/clothing/shoes/halloween/combat = 5,
@@ -406,8 +406,8 @@
 //					/obj/item/clothing/shoes/halloween/cult_alt = 4,
 //					/obj/item/clothing/shoes/halloween/space_ninja = 6)
 //
-//obj/machinery/vending/halloween/hats
-//	name = "Spooky Hats-Vender!"
+///obj/machinery/vending/halloween/hats
+//	name = "Spooky Hat-Vender!"
 //	products = list(/obj/item/clothing/head/halloween/red_wizard = 4,
 //					/obj/item/clothing/head/halloween/yellow = 4,
 //					/obj/item/clothing/head/halloween/marisa = 3,
@@ -428,7 +428,7 @@
 //					/obj/item/clothing/head/halloween/papersack = 10,
 //					/obj/item/clothing/head/halloween/lizard = 3)
 //
-//obj/machinery/vending/halloween/suit
+///obj/machinery/vending/halloween/suit
 //	name = "Spooky Suit-Vender!"
 //	products = list(/obj/item/clothing/suit/hooded/halloween/bloated_human = 4,
 //					/obj/item/clothing/suit/halloween/black = 4,
