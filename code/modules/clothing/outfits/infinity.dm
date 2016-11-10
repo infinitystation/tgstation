@@ -29,6 +29,21 @@
 	W.registered_name = H.real_name
 	W.update_label()
 
+
+/datum/outfit/jason_voorhees
+	name = "Jason Voorhees"
+
+	suit = /obj/item/clothing/suit/toggle/brown_jacket
+	mask = /obj/item/clothing/mask/gas/mime
+	r_hand = /obj/item/weapon/kitchen/knife/combat
+
+/datum/outfit/michael_myers
+	name = "Michael Myers"
+
+	mask = /obj/item/clothing/mask/gas/mime
+	r_hand = /obj/item/weapon/kitchen/knife
+
+
 /datum/outfit/security_private
 	name = "Centcom Securty Private"
 
