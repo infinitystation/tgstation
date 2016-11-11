@@ -217,7 +217,6 @@
 /area/ruin/unpowered)
 "aE" = (
 /obj/item/weapon/shard,
-/obj/item/weapon/gun/ballistic/automatic/pistol/m1911,
 /turf/open/floor/plasteel/terror/necro/black/outdoor,
 /area/ruin/unpowered)
 "aF" = (
@@ -371,7 +370,7 @@
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/lavaland/surface/outdoors)
 "bd" = (
-/obj/item/weapon/gun/ballistic/automatic/pistol/m1911,
+/obj/item/weapon/gun/projectile/automatic/pistol/m1911,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/lavaland/surface/outdoors)
 "be" = (
@@ -803,7 +802,7 @@ ai
 aN
 aT
 aZ
-bd
+ac
 bg
 ac
 "}
