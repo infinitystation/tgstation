@@ -598,7 +598,6 @@
 /area/awaymission/beach)
 "bM" = (
 /obj/structure/bed/dogbed,
-/obj/item/clothing/tie/petcollar,
 /turf/open/floor/plating/beach/sand,
 /area/awaymission/beach)
 "bN" = (
@@ -667,12 +666,12 @@
 /obj/structure/poolwater/sea/two,
 /turf/open/floor/plating/beach/water,
 /area/awaymission/beach)
-"cd" = (
-/obj/structure/poolwater/sea/three,
-/turf/open/floor/plating/beach/water,
-/area/awaymission/beach)
 "cc" = (
 /obj/structure/poolwater/sea/one,
+/turf/open/floor/plating/beach/water,
+/area/awaymission/beach)
+"cd" = (
+/obj/structure/poolwater/sea/three,
 /turf/open/floor/plating/beach/water,
 /area/awaymission/beach)
 
