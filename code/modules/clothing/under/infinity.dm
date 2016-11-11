@@ -102,8 +102,7 @@
 	name = "cargo technician's jumpsuit"
 	desc = "√рузчик, грузчик, парень работящий!"
 	icon_state = "cargotech"
-	item_state = "lb_suit"
-	item_color = "cargo"
+	item_state = "cargotech"
 	icon = 'icons/obj/clothing/infinity_work.dmi'
 	worn_icon = 'icons/mob/infinity_work.dmi'
 	can_adjust = 0
