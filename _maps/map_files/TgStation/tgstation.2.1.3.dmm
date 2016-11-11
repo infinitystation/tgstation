@@ -420,8 +420,8 @@
 /obj/machinery/firealarm{
 	pixel_y = 24
 	},
-/obj/item/weapon/gun/energy/gun/dragnet,
-/obj/item/weapon/gun/energy/gun/dragnet,
+/obj/item/weapon/gun/energy/e_gun/dragnet,
+/obj/item/weapon/gun/energy/e_gun/dragnet,
 /turf/open/floor/plasteel/vault{
 	dir = 8
 	},
@@ -1126,12 +1126,12 @@
 /area/ai_monitored/security/armory)
 "acM" = (
 /obj/structure/rack,
-/obj/item/weapon/gun/energy/gun{
+/obj/item/weapon/gun/energy/e_gun{
 	pixel_x = -3;
 	pixel_y = 3
 	},
-/obj/item/weapon/gun/energy/gun,
-/obj/item/weapon/gun/energy/gun{
+/obj/item/weapon/gun/energy/e_gun,
+/obj/item/weapon/gun/energy/e_gun{
 	pixel_x = 3;
 	pixel_y = -3
 	},
@@ -1322,12 +1322,12 @@
 /area/ai_monitored/security/armory)
 "adj" = (
 /obj/structure/rack,
-/obj/item/weapon/gun/energy/gun/advtaser{
+/obj/item/weapon/gun/energy/e_gun/advtaser{
 	pixel_x = -3;
 	pixel_y = 3
 	},
-/obj/item/weapon/gun/energy/gun/advtaser,
-/obj/item/weapon/gun/energy/gun/advtaser{
+/obj/item/weapon/gun/energy/e_gun/advtaser,
+/obj/item/weapon/gun/energy/e_gun/advtaser{
 	pixel_x = 3;
 	pixel_y = -3
 	},
@@ -1337,12 +1337,12 @@
 /area/ai_monitored/security/armory)
 "adk" = (
 /obj/structure/rack,
-/obj/item/weapon/gun/projectile/shotgun/riot{
+/obj/item/weapon/gun/ballistic/shotgun/riot{
 	pixel_x = -3;
 	pixel_y = 3
 	},
-/obj/item/weapon/gun/projectile/shotgun/riot,
-/obj/item/weapon/gun/projectile/shotgun/riot{
+/obj/item/weapon/gun/ballistic/shotgun/riot,
+/obj/item/weapon/gun/ballistic/shotgun/riot{
 	pixel_x = 3;
 	pixel_y = -3
 	},
@@ -8604,9 +8604,7 @@
 /area/space/nearstation)
 "asD" = (
 /turf/open/floor/plating/warnplate{
-	dir = 4;
-	luminosity = 2;
-	initial_gas_mix = "o2=0.01;n2=0.01"
+	dir = 4
 	},
 /area/shuttle/auxillary_base)
 "asE" = (
@@ -14677,7 +14675,7 @@
 /obj/item/clothing/head/bearpelt,
 /obj/item/weapon/reagent_containers/food/drinks/drinkingglass/shotglass,
 /obj/item/weapon/reagent_containers/food/drinks/drinkingglass/shotglass,
-/obj/item/weapon/gun/projectile/revolver/russian,
+/obj/item/weapon/gun/ballistic/revolver/russian,
 /obj/item/ammo_box/a357,
 /obj/item/weapon/reagent_containers/food/drinks/bottle/vodka/badminka,
 /turf/open/floor/plasteel/vault{
@@ -16333,7 +16331,7 @@
 /area/maintenance/fsmaint2)
 "aJE" = (
 /obj/item/weapon/reagent_containers/food/drinks/shaker,
-/obj/item/weapon/gun/projectile/revolver/doublebarrel,
+/obj/item/weapon/gun/ballistic/revolver/doublebarrel,
 /obj/structure/table/wood,
 /obj/item/stack/spacecash/c10,
 /obj/item/stack/spacecash/c100,
@@ -25096,7 +25094,7 @@
 /obj/machinery/conveyor{
 	dir = 6;
 	id = "garbage";
-	verted = 1
+	verted = -1
 	},
 /turf/open/floor/plating,
 /area/maintenance/disposal)
@@ -42268,9 +42266,6 @@
 /turf/open/floor/plasteel,
 /area/tcommsat/computer)
 "bON" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 4
-	},
 /obj/structure/grille,
 /obj/structure/window/reinforced/fulltile,
 /obj/machinery/door/poddoor/shutters/preopen{
@@ -42510,7 +42505,7 @@
 	dir = 8;
 	external_pressure_bound = 0;
 	frequency = 1441;
-	id_tag = "mix_in";
+	id_tag = "mix_out";
 	initialize_directions = 1;
 	internal_pressure_bound = 4000;
 	on = 1;
@@ -43024,7 +43019,7 @@
 	frequency = 1441;
 	input_tag = "mix_in";
 	name = "Gas Mix Tank Control";
-	output_tag = "mix_in";
+	output_tag = "mix_out";
 	sensors = list("mix_sensor" = "Tank")
 	},
 /turf/open/floor/plasteel/green/side{
@@ -54465,9 +54460,6 @@
 	pixel_x = 3;
 	pixel_y = -3
 	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 10
-	},
 /turf/open/floor/plasteel/bot{
 	dir = 2
 	},
@@ -55534,9 +55526,6 @@
 /turf/open/floor/plating,
 /area/shuttle/syndicate)
 "crh" = (
-/obj/structure/transit_tube{
-	icon_state = "Block"
-	},
 /turf/open/floor/plating/warnplate{
 	dir = 8
 	},
@@ -55679,12 +55668,10 @@
 /turf/open/floor/plasteel/warning,
 /area/hallway/secondary/entry)
 "crA" = (
-/obj/structure/transit_tube/station{
-	dir = 8;
-	icon_state = "closed";
-	reverse_launch = 1
-	},
 /obj/structure/transit_tube_pod,
+/obj/structure/transit_tube/station/reverse/flipped{
+	dir = 4
+	},
 /turf/open/floor/plating/warnplate{
 	dir = 8
 	},
@@ -55843,9 +55830,7 @@
 /turf/open/floor/mineral/titanium/blue,
 /area/shuttle/escape)
 "crR" = (
-/obj/structure/transit_tube{
-	icon_state = "N-S"
-	},
+/obj/structure/transit_tube,
 /turf/open/floor/plating/warnplate{
 	dir = 8
 	},
@@ -55892,10 +55877,8 @@
 /turf/open/floor/plating,
 /area/engine/engineering)
 "crY" = (
-/obj/structure/transit_tube{
-	icon_state = "N-S"
-	},
 /obj/structure/window/reinforced/fulltile,
+/obj/structure/transit_tube,
 /turf/open/floor/plating,
 /area/engine/engineering)
 "crZ" = (
@@ -55981,8 +55964,8 @@
 /turf/open/space,
 /area/space)
 "csi" = (
-/obj/structure/transit_tube{
-	icon_state = "N-SE"
+/obj/structure/transit_tube/curved/flipped{
+	dir = 1
 	},
 /turf/open/space,
 /area/space)
@@ -55995,8 +55978,8 @@
 /turf/open/floor/plating/airless,
 /area/space/nearstation)
 "csl" = (
-/obj/structure/transit_tube{
-	icon_state = "E-NW"
+/obj/structure/transit_tube/curved{
+	dir = 4
 	},
 /turf/open/space,
 /area/space)
@@ -56007,12 +55990,12 @@
 /turf/open/floor/plating/airless,
 /area/space/nearstation)
 "csn" = (
-/obj/structure/transit_tube,
+/obj/structure/transit_tube/horizontal,
 /turf/open/space,
 /area/space)
 "cso" = (
-/obj/structure/transit_tube,
 /obj/structure/lattice,
+/obj/structure/transit_tube/crossing/horizontal,
 /turf/open/space,
 /area/space)
 "csp" = (
@@ -56208,18 +56191,18 @@
 /turf/open/space,
 /area/space)
 "csM" = (
-/obj/structure/transit_tube,
 /obj/structure/lattice,
 /obj/machinery/atmospherics/pipe/simple/yellow/visible,
+/obj/structure/transit_tube/crossing/horizontal,
 /turf/open/space,
 /area/space)
 "csN" = (
-/obj/structure/transit_tube,
+/obj/structure/transit_tube/horizontal,
 /turf/open/floor/plating,
 /area/ai_monitored/turret_protected/aisat_interior)
 "csO" = (
 /obj/structure/window/reinforced/fulltile,
-/obj/structure/transit_tube,
+/obj/structure/transit_tube/horizontal,
 /turf/open/floor/plating,
 /area/ai_monitored/turret_protected/aisat_interior)
 "csP" = (
@@ -56248,9 +56231,7 @@
 /turf/open/floor/plating,
 /area/ai_monitored/turret_protected/aisat_interior)
 "csU" = (
-/obj/structure/transit_tube/station{
-	reverse_launch = 1
-	},
+/obj/structure/transit_tube/station/reverse,
 /turf/open/floor/plating,
 /area/ai_monitored/turret_protected/aisat_interior)
 "csV" = (
@@ -57771,7 +57752,7 @@
 "cvG" = (
 /obj/machinery/porta_turret/ai{
 	dir = 4;
-	installation = /obj/item/weapon/gun/energy/gun
+	installation = /obj/item/weapon/gun/energy/e_gun
 	},
 /obj/machinery/light{
 	icon_state = "tube1";
@@ -57811,7 +57792,7 @@
 "cvJ" = (
 /obj/machinery/porta_turret/ai{
 	dir = 4;
-	installation = /obj/item/weapon/gun/energy/gun
+	installation = /obj/item/weapon/gun/energy/e_gun
 	},
 /obj/machinery/light{
 	icon_state = "tube1";
@@ -86260,7 +86241,7 @@ asj
 asU
 ats
 atY
-awg
+auo
 axy
 ayN
 azP
@@ -86517,7 +86498,7 @@ arS
 apU
 atu
 cCi
-auo
+awg
 axy
 ayM
 azs
@@ -94060,7 +94041,7 @@ crA
 crR
 crY
 csi
-csL
+aaa
 aaa
 aaf
 aag
@@ -94316,7 +94297,7 @@ cqY
 cqY
 cqY
 cig
-csh
+aaa
 csl
 aaa
 aaf
@@ -95088,7 +95069,7 @@ aaa
 aaa
 aaf
 aaa
-csp
+csn
 aaa
 aaf
 aag
@@ -96116,7 +96097,7 @@ aaa
 aaa
 aaf
 aaa
-csp
+csn
 aaa
 aaf
 aag
@@ -97144,7 +97125,7 @@ aaa
 aaa
 aaf
 aaa
-csp
+csn
 aaa
 aaf
 aag
@@ -99457,7 +99438,7 @@ aaa
 aaa
 aaf
 csD
-csT
+ctb
 csV
 ctb
 ctj

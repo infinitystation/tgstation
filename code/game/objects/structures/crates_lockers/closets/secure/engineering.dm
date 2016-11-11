@@ -6,7 +6,7 @@
 /obj/structure/closet/secure_closet/engineering_chief/New()
 	..()
 	new /obj/item/clothing/glasses/meson/engine/style(src)
-	new /obj/item/clothing/suit/cloak/ce(src)
+	new /obj/item/clothing/neck/cloak/ce(src)
 	new /obj/item/clothing/under/rank/chief_engineer(src)
 	new /obj/item/clothing/under/ce_female_shorts(src)
 	new /obj/item/clothing/head/hardhat/white(src)

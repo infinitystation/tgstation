@@ -51,10 +51,7 @@
 	cell_removing = 0
 	can_pull_pin = 0
 	origin_tech = null
-
-/obj/item/weapon/gun/energy/laser/cyborg/newshot()
-	..()
-	robocharge()
+	use_cyborg_cell = 1
 
 /obj/item/weapon/gun/energy/laser/cyborg/emp_act()
 	return

@@ -140,7 +140,6 @@
 /obj/structure/chair/comfy/New()
 	armrest = image("[icon]", "[icon_state]_armrest")
 	armrest.layer = ABOVE_MOB_LAYER
-
 	return ..()
 
 /obj/structure/chair/comfy/post_buckle_mob(mob/living/M)

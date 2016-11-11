@@ -10,7 +10,7 @@
 		new /obj/item/weapon/storage/backpack/captain(src)
 	else
 		new /obj/item/weapon/storage/backpack/satchel/cap(src)
-	new /obj/item/clothing/suit/cloak/cap(src)
+	new /obj/item/clothing/neck/cloak/cap(src)
 	new /obj/item/weapon/storage/backpack/dufflebag/captain(src)
 	new /obj/item/clothing/head/crown/fancy(src)
 	new /obj/item/clothing/suit/captunic(src)
@@ -29,7 +29,7 @@
 	new /obj/item/clothing/gloves/color/captain(src)
 	new /obj/item/weapon/restraints/handcuffs/cable/zipties(src)
 	new /obj/item/weapon/storage/belt/sabre(src)
-	new /obj/item/weapon/gun/energy/gun(src)
+	new /obj/item/weapon/gun/energy/e_gun(src)
 	new /obj/item/weapon/door_remote/captain(src)
 	new /obj/item/weapon/melee/baton/shocker/loaded(src)
 
@@ -54,7 +54,7 @@
 	new /obj/item/device/assembly/flash/handheld(src)
 	new /obj/item/clothing/glasses/sunglasses(src)
 	new /obj/item/weapon/restraints/handcuffs/cable/zipties(src)
-	new /obj/item/weapon/gun/energy/gun(src)
+	new /obj/item/weapon/gun/energy/e_gun(src)
 	new /obj/item/clothing/neck/petcollar(src)
 	new /obj/item/weapon/door_remote/civillian(src)
 	new /obj/item/weapon/melee/baton/shocker/loaded(src)
@@ -68,7 +68,7 @@
 
 /obj/structure/closet/secure_closet/hos/New()
 	..()
-	new /obj/item/clothing/suit/cloak/hos(src)
+	new /obj/item/clothing/neck/cloak/hos(src)
 	new /obj/item/weapon/cartridge/hos(src)
 	new /obj/item/device/radio/headset/heads/hos(src)
 	new /obj/item/clothing/under/hosparadefem(src)
@@ -89,7 +89,7 @@
 	new /obj/item/weapon/storage/box/flashbangs(src)
 	new /obj/item/weapon/shield/riot/tele(src)
 	new /obj/item/weapon/storage/belt/security/full(src)
-	new /obj/item/weapon/gun/energy/gun/hos(src)
+	new /obj/item/weapon/gun/energy/e_gun/hos(src)
 	new /obj/item/device/flashlight/seclite(src)
 	new /obj/item/clothing/head/HoS/beret/corporate(src)
 	new /obj/item/weapon/pinpointer(src)
@@ -200,8 +200,8 @@
 	new /obj/item/ammo_box/c38(src)
 	new /obj/item/ammo_box/c38(src)
 	new /obj/item/weapon/storage/belt/holster(src)
-	new /obj/item/weapon/gun/projectile/revolver/detective(src)
 	new /obj/item/clothing/head/blackflatcap(src)
+	new /obj/item/weapon/gun/ballistic/revolver/detective(src)
 
 /obj/structure/closet/secure_closet/injection
 	name = "lethal injections"
@@ -263,7 +263,7 @@
 	for(var/i in 1 to 3)
 		new /obj/item/weapon/storage/box/rubbershot(src)
 	for(var/i in 1 to 3)
-		new /obj/item/weapon/gun/projectile/shotgun/riot(src)
+		new /obj/item/weapon/gun/ballistic/shotgun/riot(src)
 
 /obj/structure/closet/secure_closet/armory3
 	name = "armory energy gun locker"
@@ -275,7 +275,7 @@
 	new /obj/item/weapon/storage/box/firingpins(src)
 	new /obj/item/weapon/gun/energy/ionrifle(src)
 	for(var/i in 1 to 3)
-		new /obj/item/weapon/gun/energy/gun(src)
+		new /obj/item/weapon/gun/energy/e_gun(src)
 	for(var/i in 1 to 3)
 		new /obj/item/weapon/gun/energy/laser(src)
 
@@ -286,7 +286,7 @@
 
 /obj/structure/closet/secure_closet/tac/New()
 	..()
-	new /obj/item/weapon/gun/projectile/automatic/wt550(src)
+	new /obj/item/weapon/gun/ballistic/automatic/wt550(src)
 	new /obj/item/clothing/head/helmet/alt(src)
 	new /obj/item/clothing/mask/gas/sechailer(src)
 	new /obj/item/clothing/suit/armor/bulletproof(src)

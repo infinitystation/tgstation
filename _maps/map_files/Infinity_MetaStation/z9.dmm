@@ -7,8 +7,8 @@
 /area/prison/control)
 "ac" = (
 /obj/structure/rack,
-/obj/item/weapon/gun/energy/gun,
-/obj/item/weapon/gun/energy/gun,
+/obj/item/weapon/gun/energy/e_gun,
+/obj/item/weapon/gun/energy/e_gun,
 /turf/open/floor/plasteel/darkvault{
 	dir = 8
 	},
@@ -29,9 +29,9 @@
 /area/prison/control)
 "af" = (
 /obj/structure/rack,
-/obj/item/weapon/gun/energy/gun,
-/obj/item/weapon/gun/energy/gun,
-/obj/item/weapon/gun/energy/gun,
+/obj/item/weapon/gun/energy/e_gun,
+/obj/item/weapon/gun/energy/e_gun,
+/obj/item/weapon/gun/energy/e_gun,
 /turf/open/floor/plasteel/darkvault{
 	dir = 4
 	},
@@ -773,7 +773,7 @@
 /area/prison/cell_block/A)
 "cm" = (
 /obj/machinery/porta_turret{
-	installation = /obj/item/weapon/gun/energy/gun
+	installation = /obj/item/weapon/gun/energy/e_gun
 	},
 /turf/open/floor/plating,
 /area/prison/control)
@@ -2042,7 +2042,7 @@
 /area/prison/cell_block/A)
 "fn" = (
 /obj/machinery/porta_turret{
-	installation = /obj/item/weapon/gun/energy/gun
+	installation = /obj/item/weapon/gun/energy/e_gun
 	},
 /turf/open/floor/plating,
 /area/prison)
@@ -2108,7 +2108,7 @@
 /area/prison/cell_block/B)
 "fy" = (
 /obj/machinery/porta_turret{
-	installation = /obj/item/weapon/gun/energy/gun
+	installation = /obj/item/weapon/gun/energy/e_gun
 	},
 /turf/open/floor/plating,
 /area/prison/cell_block/B)

@@ -623,7 +623,6 @@
 	item_state = "staffofstorms"
 	icon = 'icons/obj/guns/magic.dmi'
 	slot_flags = SLOT_BACK
-	item_state = "staffofstorms"
 	w_class = 4
 	force = 25
 	damtype = BURN
@@ -742,7 +741,7 @@
 		survive.owner = L.mind
 		L.mind.objectives += survive
 		L << "<span class='userdanger'>You've been marked for death! Don't let the demons get you!</span>"
-		L.color = "#FF0000"
+		L.add_atom_colour("#FF0000", ADMIN_COLOUR_PRIORITY)
 		spawn()
 			var/obj/effect/mine/pickup/bloodbath/B = new(L)
 			B.mineEffect(L)

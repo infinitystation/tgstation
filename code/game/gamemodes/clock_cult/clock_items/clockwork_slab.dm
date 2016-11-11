@@ -5,17 +5,22 @@
 	icon_state = "dread_ipad"
 	slot_flags = SLOT_BELT
 	w_class = 2
-	var/list/stored_components = list("belligerent_eye" = 0, "vanguard_cogwheel" = 0, "guvax_capacitor" = 0, "replicant_alloy" = 0, "hierophant_ansible" = 0)
+	var/list/stored_components = list(BELLIGERENT_EYE = 0, VANGUARD_COGWHEEL = 0, GEIS_CAPACITOR = 0, REPLICANT_ALLOY = 0, HIEROPHANT_ANSIBLE = 0)
 	var/busy //If the slab is currently being used by something
 	var/production_time = 0
 	var/no_cost = FALSE //If the slab is admin-only and needs no components and has no scripture locks
 	var/nonhuman_usable = FALSE //if the slab can be used by nonhumans, defaults to off
 	var/produces_components = TRUE //if it produces components at all
+	var/list/shown_scripture = list(SCRIPTURE_DRIVER = FALSE, SCRIPTURE_SCRIPT = FALSE, SCRIPTURE_APPLICATION = FALSE, SCRIPTURE_REVENANT = FALSE, SCRIPTURE_JUDGEMENT = FALSE)
+	var/text_hidden = FALSE
+	var/compact_scripture = FALSE
 	var/obj/effect/proc_holder/slab/slab_ability //the slab's current bound ability, for certain scripture
-	actions_types = list(/datum/action/item_action/clock/hierophant, /datum/action/item_action/clock/guvax, /datum/action/item_action/clock/vanguard)
+	var/datum/clockwork_scripture/quickbind_slot_one //these are paths, not instances
+	var/datum/clockwork_scripture/quickbind_slot_two //accordingly, use initial() for non-list vars
+	actions_types = list(/datum/action/item_action/clock/hierophant, /datum/action/item_action/clock/quickbind_one, /datum/action/item_action/clock/quickbind_two)
 
 /obj/item/clockwork/slab/starter
-	stored_components = list("belligerent_eye" = 1, "vanguard_cogwheel" = 1, "guvax_capacitor" = 1, "replicant_alloy" = 1, "hierophant_ansible" = 1)
+	stored_components = list(BELLIGERENT_EYE = 1, VANGUARD_COGWHEEL = 1, GEIS_CAPACITOR = 1, REPLICANT_ALLOY = 1, HIEROPHANT_ANSIBLE = 1)
 
 /obj/item/clockwork/slab/internal //an internal motor for mobs running scripture
 	name = "scripture motor"
@@ -36,6 +41,8 @@
 
 /obj/item/clockwork/slab/New()
 	..()
+	quickbind_to_one(/datum/clockwork_scripture/ranged_ability/geis_prep)
+	quickbind_to_two(/datum/clockwork_scripture/vanguard)
 	START_PROCESSING(SSobj, src)
 	production_time = world.time + SLAB_PRODUCTION_TIME
 
@@ -89,17 +96,21 @@
 	..()
 	if(is_servant_of_ratvar(user) || isobserver(user))
 		user << "Use the <span class='brass'>Hierophant Network</span> action button to communicate with other servants."
-		user << "Clockwork slabs will only generate components if held by a human or if inside a storage item held by a human, and when generating a component will prevent all other slabs held from generating components.<br>"
-		user << "Attacking a slab, a fellow Servant with a slab, or a cache with this slab will transfer this slab's components into that slab's components, their slab's components, or the global cache, respectively."
+		user << "Clockwork slabs will only make components if held or if inside an item held by a human, and when making a component will prevent all other slabs held from making components."
+		user << "Hitting a slab, a Servant with a slab, or a cache will <b>transfer</b> this slab's components into the target, the target's slab, or the global cache, respectively."
+		if(quickbind_slot_one)
+			user << "Quickbind button One: <span class='[get_component_span(initial(quickbind_slot_one.primary_component))]'>[initial(quickbind_slot_one.name)]</span>"
+		if(quickbind_slot_two)
+			user << "Quickbind button Two: <span class='[get_component_span(initial(quickbind_slot_two.primary_component))]'>[initial(quickbind_slot_two.name)]</span>"
 		if(clockwork_caches)
 			user << "<b>Stored components (with global cache):</b>"
 			for(var/i in stored_components)
-				user << "<span class='[get_component_span(i)]_small'><i>[get_component_name(i)][i != "replicant_alloy" ? "s":""]:</i> <b>[stored_components[i]]</b> \
+				user << "<span class='[get_component_span(i)]_small'><i>[get_component_name(i)][i != REPLICANT_ALLOY ? "s":""]:</i> <b>[stored_components[i]]</b> \
 				(<b>[stored_components[i] + clockwork_component_cache[i]]</b>)</span>"
 		else
 			user << "<b>Stored components:</b>"
 			for(var/i in stored_components)
-				user << "<span class='[get_component_span(i)]_small'><i>[get_component_name(i)][i != "replicant_alloy" ? "s":""]:</i> <b>[stored_components[i]]</b></span>"
+				user << "<span class='[get_component_span(i)]_small'><i>[get_component_name(i)][i != REPLICANT_ALLOY ? "s":""]:</i> <b>[stored_components[i]]</b></span>"
 
 //Component Transferal
 /obj/item/clockwork/slab/attack(mob/living/target, mob/living/carbon/human/user)
@@ -148,31 +159,15 @@
 	else
 		return ..()
 
-//Slab actions; Hierophant, Guvax, Vanguard
+//Slab actions; Hierophant, Quickbind One and Two
 /obj/item/clockwork/slab/ui_action_click(mob/user, actiontype)
 	switch(actiontype)
 		if(/datum/action/item_action/clock/hierophant)
 			show_hierophant(user)
-		if(/datum/action/item_action/clock/guvax)
-			if(!nonhuman_usable && !ishuman(user))
-				return
-			if(src == user.get_active_held_item())
-				var/datum/clockwork_scripture/ranged_ability/guvax_prep/convert = new
-				convert.slab = src
-				convert.invoker = user
-				convert.run_scripture()
-			else
-				user << "<span class='warning'>You need to hold the slab in your active hand to recite scripture!</span>"
-		if(/datum/action/item_action/clock/vanguard)
-			if(!nonhuman_usable && !ishuman(user))
-				return
-			if(src == user.get_active_held_item())
-				var/datum/clockwork_scripture/vanguard/antistun = new
-				antistun.slab = src
-				antistun.invoker = user
-				antistun.run_scripture()
-			else
-				user << "<span class='warning'>You need to hold the slab in your active hand to recite scripture!</span>"
+		if(/datum/action/item_action/clock/quickbind_one)
+			recite_scripture(quickbind_slot_one, user, FALSE)
+		if(/datum/action/item_action/clock/quickbind_two)
+			recite_scripture(quickbind_slot_two, user, FALSE)
 
 /obj/item/clockwork/slab/proc/show_hierophant(mob/living/user)
 	var/message = stripped_input(user, "Enter a message to send to your fellow servants.", "Hierophant")
@@ -215,17 +210,15 @@
 		return 0
 	switch(action)
 		if("Recital")
-			if(user.get_active_held_item() != src)
-				user << "<span class='warning'>You need to hold the slab in your active hand to recite scripture!</span>"
-				return
-			recite_scripture(user)
+			try_recite_scripture(user)
 		if("Recollection")
-			show_guide(user)
+			user.set_machine(src)
+			interact(user)
 		if("Cancel")
 			return
 	return 1
 
-/obj/item/clockwork/slab/proc/recite_scripture(mob/living/user)
+/obj/item/clockwork/slab/proc/try_recite_scripture(mob/living/user)
 	var/list/tiers_of_scripture = scripture_unlock_check()
 	for(var/i in tiers_of_scripture)
 		if(!tiers_of_scripture[i] && !ratvar_awakens && !no_cost)
@@ -233,36 +226,41 @@
 			tiers_of_scripture -= i
 	var/scripture_tier = input(user, "Choose a category of scripture to recite.", "[src]") as null|anything in tiers_of_scripture
 	if(!scripture_tier || !user.canUseTopic(src))
-		return 0
+		return FALSE
 	var/list/available_scriptures = list()
-	var/datum/clockwork_scripture/scripture_to_recite
 	switch(scripture_tier)
 		if(SCRIPTURE_DRIVER,SCRIPTURE_SCRIPT,SCRIPTURE_APPLICATION,SCRIPTURE_REVENANT,SCRIPTURE_JUDGEMENT); //; for the empty if
 		else
 			user << "<span class='warning'>That section of scripture is still locked!</span>"
-			return 0
+			return FALSE
 	for(var/S in sortList(subtypesof(/datum/clockwork_scripture), /proc/cmp_clockscripture_priority))
 		var/datum/clockwork_scripture/C = S
 		if(initial(C.tier) == scripture_tier)
 			available_scriptures["[initial(C.name)] ([initial(C.descname)])"] = C
 	if(!available_scriptures.len)
-		return 0
+		return FALSE
 	var/chosen_scripture_key = input(user, "Choose a piece of scripture to recite.", "[src]") as null|anything in available_scriptures
 	var/datum/clockwork_scripture/chosen_scripture = available_scriptures[chosen_scripture_key]
-	if(!chosen_scripture || !user.canUseTopic(src) || user.get_active_held_item() != src)
-		return 0
-	tiers_of_scripture = scripture_unlock_check()
-	if(!ratvar_awakens && !no_cost && !tiers_of_scripture[initial(chosen_scripture.tier)])
-		user << "<span class='warning'>That scripture is no longer unlocked, and cannot be recited!</span>"
-		return 0
-	scripture_to_recite = new chosen_scripture
+	return recite_scripture(chosen_scripture, user, TRUE)
+
+/obj/item/clockwork/slab/proc/recite_scripture(datum/clockwork_scripture/scripture, mob/living/user, delayed)
+	if(!scripture || !user || !user.canUseTopic(src) || (!nonhuman_usable && !ishuman(user)))
+		return FALSE
+	if(user.get_active_held_item() != src)
+		user << "<span class='warning'>You need to hold the slab in your active hand to recite scripture!</span>"
+		return FALSE
+	var/list/tiers_of_scripture = scripture_unlock_check()
+	if(!ratvar_awakens && !no_cost && !tiers_of_scripture[initial(scripture.tier)])
+		user << "<span class='warning'>That scripture is no[delayed ? " longer":"t"] unlocked, and cannot be recited!</span>"
+		return FALSE
+	var/datum/clockwork_scripture/scripture_to_recite = new scripture
 	scripture_to_recite.slab = src
 	scripture_to_recite.invoker = user
 	scripture_to_recite.run_scripture()
-	return 1
+	return TRUE
 
 //Guide to Serving Ratvar
-/obj/item/clockwork/slab/proc/show_guide(mob/living/user)
+/obj/item/clockwork/slab/interact(mob/living/user)
 	var/text = "If you're seeing this, file a bug report."
 	if(ratvar_awakens)
 		text = "<font color=#BE8700 size=3><b>"
@@ -270,73 +268,118 @@
 			text += "HONOR RATVAR "
 		text += "</b></font>"
 	else
-		text = "<font color=#BE8700 size=3><b><center>Chetr nyy hagehguf-naq-ubabe Ratvar.</center></b></font><br><br>\
+
+		text = "<font color=#BE8700 size=3><b><center>Chetr nyy hagehguf-naq-ubabe Ratvar.</center></b></font><br>\
 		\
-		First and foremost, you serve Ratvar, the Clockwork Justiciar, in any ways he sees fit. This is with no regard to your personal well-being, and you would do well to think of the larger \
-		scale of things than your life. Through foul and unholy magics was the Celestial Derelict formed, and fouler still those which trapped your master within it for all eternity. The Justiciar \
-		wishes retribution upon those who performed this terrible act upon him - the Nar-Sian cultists - and you are to help him obtain it.<br><br>\
-		\
-		This is not a trivial task. Due to the nature of his prison, Ratvar is incapable of directly influencing the mortal plane. There is, however, a workaround - links between the perceptible \
-		universe and Reebe (the Celestial Derelict) can be created and utilized. This is typically done via the creation of a slab akin to the one you are holding right now. The slabs tap into the \
-		tidal flow of energy and information keeping Reebe sealed and presents it as meaningless images to preserve sanity. This slab can utilize the power in many different ways.<br><br>\
-		\
-		This is done through <b><font color=#BE8700>Components</font></b> - pieces of the Justiciar's body that have since fallen off in the countless years since his imprisonment. Ratvar's unfortunate condition results \
-		in the fragmentation of his body. These components still house great power on their own, and can slowly be drawn from Reebe by links capable of doing so.<br>\
-		The most basic of these links lies in the clockwork slab, which will slowly generate components over time - one component of a random type is produced every 1 minute and 30 seconds, plus 30 seconds per each servant above 5, \
-		which is obviously inefficient. There are other, more efficient, ways to create these components through scripture and certain structures.<br><br>\
-		\
-		In addition to their ability to generate components, slabs also possess other functionalities...<br><br>\
-		\
-		The first functionality of the slab is <b><font color=#BE8700>Recital</font></b>. This allows you to consume components either from your slab or from the global cache (more on that in the scripture list) to perform \
-		effects usually considered magical in nature.<br>\
-		Effects vary considerably, including mass conversion, construction of various structures, or causing a massive global hallucination. Nevertheless, scripture is extremely important to a successful takeover.<br><br>\
-		\
-		The second functionality of the clockwork slab is <b><font color=#BE8700>Recollection</font></b>, which will display this guide.<br><br>\
-		\
-		The third to fifth functionalities are several buttons in the top left while holding the slab, from left to right, they are:<br>\
-		<b><font color=#DAAA18>Hierophant Network</font></b>, which allows communication to other servants.<br>\
-		<b><font color=#AF0AAF>Guvax</font></b>, which simply allows you to quickly invoke the Guvax scripture.<br>\
-		<b><font color=#1E8CE1>Vanguard</font></b>, which, like Guvax, simply allows you to quickly invoke the Vanguard scripture.<br><br>\
-		\
-		Examine the slab for component amount information.<br><br>\
-		\
-		A complete list of scripture, its effects, and its requirements can be found below.<br>\
-		Key:<br><font color=#6E001A>BE</font> = Belligerent Eyes<br>\
-		<font color=#1E8CE1>VC</font> = Vanguard Cogwheels<br>\
-		<font color=#AF0AAF>GC</font> = Guvax Capacitors<br>\
-		<font color=#5A6068>RA</font> = Replicant Alloy<br>\
-		<font color=#DAAA18>HA</font> = Hierophant Ansibles<br>"
+		<center><font size=1><A href='?src=\ref[src];hidetext=1'>[text_hidden ? "Show":"Hide"] Information</A></font></center><br>"
+		if(!text_hidden)
+			var/servants = 0
+			var/production_time = SLAB_PRODUCTION_TIME
+			for(var/mob/living/M in living_mob_list)
+				if(is_servant_of_ratvar(M) && (ishuman(M) || issilicon(M)))
+					servants++
+			if(servants > 5)
+				servants -= 5
+				production_time += min(SLAB_SERVANT_SLOWDOWN * servants, SLAB_SLOWDOWN_MAXIMUM)
+			var/production_text_addon = ""
+			if(production_time != SLAB_PRODUCTION_TIME+SLAB_SLOWDOWN_MAXIMUM)
+				production_text_addon = ", which increases for each human or silicon servant above <b>5</b>"
+			production_time = production_time/600
+			var/production_text = "<b>[round(production_time)] minute\s"
+			if(production_time != round(production_time))
+				production_time -= round(production_time)
+				production_time *= 60
+				production_text += " and [round(production_time, 1)] second\s"
+			production_text += "</b>"
+			production_text += production_text_addon
+
+			text += "First and foremost, you serve Ratvar, the Clockwork Justicar, in any ways he sees fit. This is with no regard to your personal well-being, and you would do well to think of the larger \
+			scale of things than your life. Ratvar wishes retribution upon those that trapped him in Reebe - the Nar-Sian cultists - and you are to help him obtain it.<br><br>\
+			\
+			Ratvar, being trapped in Reebe, the Celestial Derelict, cannot directly affect the mortal plane. However, links, such as this Clockwork Slab, can be created to draw \
+			<b><font color=#BE8700>Components</font></b>, fragments of the Justicar, from Reebe, and those Components can be used to draw power and material from Reebe through arcane chants \
+			known as <b><font color=#BE8700>Scripture</font></b>.<br><br>\
+			\
+			One component of a random type is made in this slab every [production_text].<br>\
+			<font color=#BE8700>Components</font> are stored either within slabs, where they can only be accessed by that slab, or in the Global Cache accessed by Tinkerer's Caches, which all slabs \
+			can draw from to recite scripture.<br>\
+			There are five types of component, and in general, <font color=#6E001A>Belligerent Eyes</font> are aggressive and judgemental, <font color=#1E8CE1>Vanguard Cogwheels</font> are defensive and \
+			repairing, <font color=#AF0AAF>Geis Capacitors</font> are for conversion and control, <font color=#5A6068>Replicant Alloy</font> is for construction and fuel, and \
+			<font color=#DAAA18>Hierophant Ansibles</font> are for transmission and power, though in combination their effects become more nuanced.<br><br>\
+			\
+			There are also five tiers of <font color=#BE8700>Scripture</font>; <font color=#BE8700>[SCRIPTURE_DRIVER]</font>, <font color=#BE8700>[SCRIPTURE_SCRIPT]</font>, <font color=#BE8700>[SCRIPTURE_APPLICATION]</font>, <font color=#BE8700>[SCRIPTURE_REVENANT]</font>, and <font color=#BE8700>[SCRIPTURE_JUDGEMENT]</font>.<br>\
+			Each tier has additional requirements, including Servants, Tinkerer's Caches, and <b>Construction Value</b>(<b>CV</b>). Construction Value is gained by creating structures or converting the \
+			station, and everything too large to hold will grant some amount of it.<br><br>\
+			\
+			This would be a massive amount of information to try and keep track of, but all Servants have the <b><font color=#BE8700>Global Records</font></b> alert, which appears in the top right.<br>\
+			Mousing over that alert will display Servants, Caches, CV, and other information, such as the tiers of scripture that are unlocked.<br><br>\
+			\
+			On that note, <font color=#BE8700>Scripture</font> is recited through <b><font color=#BE8700>Recital</font></b>, the first and most important function of the slab.<br>\
+			All scripture requires some amount of <font color=#BE8700>Components</font> to recite, and only the weakest scripture does not consume any components when recited.<br>\
+			However, weak is relative when it comes to scripture; even the 'weakest' could be enough to dominate a station in the hands of cunning Servants, and higher tiers of scripture are even \
+			stronger in the right hands.<br><br>\
+			\
+			Some effects of scripture include granting the invoker a temporary complete immunity to stuns, summoning a turret that can attack anything that sets eyes on it, binding a powerful guardian \
+			to the invoker, or even, at one of the highest tiers, granting all nearby Servants temporary invulnerability.<br>\
+			However, the most important scripture is <font color=#AF0AAF>Geis</font>, which allows you to convert heathens with relative ease.<br><br>\
+			\
+			The second function of the clockwork slab is <b><font color=#BE8700>Recollection</font></b>, which will display this guide and allows for the quickbinding and <font color=#BE8700>recital</font> \
+			of scripture.<br><br>\
+			\
+			The third to fifth functions are three buttons in the top left while holding the slab.<br>From left to right, they are:<br>\
+			<b><font color=#DAAA18>Hierophant Network</font></b>, which allows communication to other Servants.<br>\
+			<b>Quickbind slot One</b>, currently set to <b><font color=[get_component_color_brightalloy(initial(quickbind_slot_one.primary_component))]>[initial(quickbind_slot_one.name)]</font></b>.<br>\
+			<b>Quickbind slot Two</b>, currently set to <b><font color=[get_component_color_brightalloy(initial(quickbind_slot_two.primary_component))]>[initial(quickbind_slot_two.name)]</font></b>.<br><br>\
+			\
+			Examine the slab to check the number of components it has available.<br><br>\
+			\
+			<center><font size=1><A href='?src=\ref[src];hidetext=1'>Hide Above Information</A></font></center><br>"
+
+		text += "A complete list of scripture, its effects, and its requirements can be found, and thus <b>Quickbound</b> to this slab, below.<br>\
+		<font size=1>Key:<br>"
+		for(var/i in clockwork_component_cache)
+			text += "<b><font color=[get_component_color_brightalloy(i)]>[get_component_acronym(i)]</font></b> = [get_component_name(i)][i != REPLICANT_ALLOY ? "s":""]<br>"
+		text += "</font><br><center><font size=1><A href='?src=\ref[src];compactscripture=1'>Compact Scripture Text: [compact_scripture ? "ON":"OFF"]</A></font></center><br>"
 		var/text_to_add = ""
-		var/drivers = "<br><font color=#BE8700 size=3><b>[SCRIPTURE_DRIVER]</b></font><br><i>These scriptures are always unlocked.</i><br>"
-		var/scripts = "<br><font color=#BE8700 size=3><b>[SCRIPTURE_SCRIPT]</b></font><br><i>These scriptures require at least five servants and a tinkerer's cache.</i><br>"
-		var/applications = "<br><font color=#BE8700 size=3><b>[SCRIPTURE_APPLICATION]</b></font><br><i>These scriptures require at least eight servants, three tinkerer's caches, and 100CV.</i><br>"
-		var/revenant = "<br><font color=#BE8700 size=3><b>[SCRIPTURE_REVENANT]</b></font><br><i>These scriptures require at least ten servants and 200CV.</i><br>"
-		var/judgement = "<br><font color=#BE8700 size=3><b>[SCRIPTURE_JUDGEMENT]</b></font><br><i>These scriptures require at least twelve servants and 300CV. In addition, there may not be any active non-servant AIs.</i><br>"
+		var/drivers = "<br><b><A href='?src=\ref[src];Driver=1'>[SCRIPTURE_DRIVER]</A></b><br><font size=1><i>These scriptures are always unlocked.</i>[compact_scripture ? "":"</font>"]<br>"
+		var/scripts = "<br><b><A href='?src=\ref[src];Script=1'>[SCRIPTURE_SCRIPT]</A></b><br><font size=1><i>These scriptures require at least <b>5</b> Servants and \
+		<b>1</b> Tinkerer's Cache.</i>[compact_scripture ? "":"</font>"]<br>"
+		var/applications = "<br><b><A href='?src=\ref[src];Application=1'>[SCRIPTURE_APPLICATION]</A></b><br><font size=1><i>These scriptures require at least <b>8</b> Servants, \
+		<b>3</b> Tinkerer's Caches, and <b>100CV</b>.</i>[compact_scripture ? "":"</font>"]<br>"
+		var/revenant = "<br><b><A href='?src=\ref[src];Revenant=1'>[SCRIPTURE_REVENANT]</A></b><br><font size=1><i>These scriptures require at least <b>10</b> Servants, \
+		<b>4</b> Tinkerer's Caches, and <b>200CV</b>.</i>[compact_scripture ? "":"</font>"]<br>"
+		var/judgement = "<br><b><A href='?src=\ref[src];Judgement=1'>[SCRIPTURE_JUDGEMENT]</A></b><br><font size=1><i>This scripture requires at least <b>12</b> Servants, \
+		<b>5</b> Tinkerer's Caches, and <b>300CV</b>.<br>In addition, there may not be any active non-Servant AIs.</i>[compact_scripture ? "":"</font>"]<br>"
 		for(var/V in sortList(subtypesof(/datum/clockwork_scripture), /proc/cmp_clockscripture_priority))
 			var/datum/clockwork_scripture/S = V
-			if(initial(S.tier) != SCRIPTURE_PERIPHERAL)
+			var/initial_tier = initial(S.tier)
+			if(initial_tier != SCRIPTURE_PERIPHERAL && shown_scripture[initial_tier])
 				var/datum/clockwork_scripture/S2 = new V
 				var/list/req_comps = S2.required_components
 				var/list/cons_comps = S2.consumed_components
 				qdel(S2)
-				var/scripture_text = "<br><b><font color=#BE8700>[initial(S.name)]</font>:</b><br>[initial(S.desc)]<br><b>Invocation Time:</b> <b>[initial(S.channel_time) / 10]</b> seconds<br>\
-				<b>Component Requirement: </b>\
-				[req_comps["belligerent_eye"] ?  "<font color=#6E001A><b>[req_comps["belligerent_eye"]]</b> BE</font>" : ""] \
-				[req_comps["vanguard_cogwheel"] ? "<font color=#1E8CE1><b>[req_comps["vanguard_cogwheel"]]</b> VC</font>" : ""] \
-				[req_comps["guvax_capacitor"] ? "<font color=#AF0AAF><b>[req_comps["guvax_capacitor"]]</b> GC</font>" : ""] \
-				[req_comps["replicant_alloy"] ? "<font color=#5A6068><b>[req_comps["replicant_alloy"]]</b> RA</font>" : ""] \
-				[req_comps["hierophant_ansible"] ? "<font color=#DAAA18><b>[req_comps["hierophant_ansible"]]</b> HA</font>" : ""]<br>"
-				for(var/i in cons_comps)
-					if(cons_comps[i])
-						scripture_text += "<b>Component Cost: </b>\
-						[cons_comps["belligerent_eye"] ?  "<font color=#6E001A><b>[cons_comps["belligerent_eye"]]</b> BE</font>" : ""] \
-						[cons_comps["vanguard_cogwheel"] ? "<font color=#1E8CE1><b>[cons_comps["vanguard_cogwheel"]]</b> VC</font>" : ""] \
-						[cons_comps["guvax_capacitor"] ? "<font color=#AF0AAF><b>[cons_comps["guvax_capacitor"]]</b> GC</font>" : ""] \
-						[cons_comps["replicant_alloy"] ? "<font color=#5A6068><b>[cons_comps["replicant_alloy"]]</b> RA</font>" : ""] \
-						[cons_comps["hierophant_ansible"] ? "<font color=#DAAA18><b>[cons_comps["hierophant_ansible"]]</b> HA</font>" : ""]<br>"
-						break //we want this to only show up if the scripture has a cost of some sort
-				scripture_text += "<b>Tip:</b> [initial(S.usage_tip)]<br>"
-				switch(initial(S.tier))
+				var/scripture_text = "<br><b><font color=[get_component_color_brightalloy(initial(S.primary_component))]>[initial(S.name)]</font>:</b>"
+				if(!compact_scripture)
+					scripture_text += "<br>[initial(S.desc)]<br><b>Invocation Time:</b> <b>[initial(S.channel_time) / 10]</b> second\s\
+					[initial(S.invokers_required) > 1 ? "<br><b>Invokers Required:</b> <b>[initial(S.invokers_required)]</b>":""]\
+					<br><b>Component Requirement:</b>"
+				for(var/i in req_comps)
+					if(req_comps[i])
+						scripture_text += " <font color=[get_component_color_brightalloy(i)]><b>[req_comps[i]]</b> [get_component_acronym(i)]</font>"
+				if(!compact_scripture)
+					for(var/a in cons_comps)
+						if(cons_comps[a])
+							scripture_text += "<br><b>Component Cost:</b>"
+							for(var/i in cons_comps)
+								if(cons_comps[i])
+									scripture_text += " <font color=[get_component_color_brightalloy(i)]><b>[cons_comps[i]]</b> [get_component_acronym(i)]</font>"
+							break //we want this to only show up if the scripture has a cost of some sort
+					scripture_text += "<br><b>Tip:</b> [initial(S.usage_tip)]"
+				if(initial(S.quickbind))
+					scripture_text += "<br><font color=#BE8700 size=1>[S == quickbind_slot_one || S == quickbind_slot_two ? "Currently Quickbound":\
+					"<A href='?src=\ref[src];Quickbindone=[S]'>Quickbind to button One</A>| <A href='?src=\ref[src];Quickbindtwo=[S]'>Quickbind to button Two</A>"]</font>"
+				scripture_text += "<br><b><A href='?src=\ref[src];Recite=[S]'>Recite</A></b><br>"
+				switch(initial_tier)
 					if(SCRIPTURE_DRIVER)
 						drivers += scripture_text
 					if(SCRIPTURE_SCRIPT)
@@ -347,10 +390,70 @@
 						revenant += scripture_text
 					if(SCRIPTURE_JUDGEMENT)
 						judgement += scripture_text
-		text_to_add += "[drivers]<br>[scripts]<br>[applications]<br>[revenant]<br>[judgement]<br>"
-		text_to_add += "<font color=#BE8700 size=3><b><center>Purge all untruths and honor Ratvar.</center></b></font>"
+		if(compact_scripture)
+			text_to_add += "[drivers]</font>[scripts]</font>[applications]</font>[revenant]</font>[judgement]</font>"
+		else
+			text_to_add += "[drivers][scripts][applications][revenant][judgement]"
+		text_to_add += "<br><font color=#BE8700 size=3><b><center>Purge all untruths and honor Ratvar.</center></b></font>"
 		text += text_to_add
 	var/datum/browser/popup = new(user, "slab", "", 600, 500)
 	popup.set_content(text)
 	popup.open()
 	return 1
+
+/obj/item/clockwork/slab/Topic(href, href_list)
+	. = ..()
+	if(.)
+		return .
+
+	if(!usr || !src || !(src in usr) || usr.incapacitated())
+		if(usr && usr.machine == src)
+			usr.unset_machine()
+		return 0
+
+	if(href_list["Recite"])
+		href_list["Recite"] = text2path(href_list["Recite"])
+		addtimer(src, "recite_scripture", 0, FALSE, href_list["Recite"], usr, FALSE)
+		return
+
+	if(href_list["Quickbindone"])
+		quickbind_to_one(href_list["Quickbindone"])
+
+	if(href_list["Quickbindtwo"])
+		quickbind_to_two(href_list["Quickbindtwo"])
+
+	if(href_list["hidetext"])
+		text_hidden = !text_hidden
+
+	if(href_list["compactscripture"])
+		compact_scripture = !compact_scripture
+
+	for(var/i in shown_scripture)
+		if(href_list[i])
+			shown_scripture[i] = !shown_scripture[i]
+
+	interact(usr)
+
+/obj/item/clockwork/slab/proc/quickbind_to_one(datum/clockwork_scripture/scripture) //takes a typepath(typecast for initial()) and binds it to slot 1
+	if(!ispath(scripture) && istext(scripture))
+		scripture = text2path(scripture) //if given as a href, the scripture will be a string and not a path. obviously, we need a path and not a string
+	if(!scripture || quickbind_slot_two == scripture)
+		return
+	quickbind_slot_one = scripture
+	for(var/datum/action/item_action/clock/quickbind_one/O in actions)
+		O.name = initial(quickbind_slot_one.name)
+		O.desc = initial(quickbind_slot_one.quickbind_desc)
+		O.button_icon_state = initial(quickbind_slot_one.name)
+		O.UpdateButtonIcon()
+
+/obj/item/clockwork/slab/proc/quickbind_to_two(datum/clockwork_scripture/scripture) //takes a typepath(typecast for initial()) and binds it to slot 2
+	if(!ispath(scripture) && istext(scripture))
+		scripture = text2path(scripture) //if given as a href, the scripture will be a string and not a path. obviously, we need a path and not a string
+	if(!scripture || quickbind_slot_one == scripture)
+		return
+	quickbind_slot_two = scripture
+	for(var/datum/action/item_action/clock/quickbind_two/O in actions)
+		O.name = initial(quickbind_slot_two.name)
+		O.desc = initial(quickbind_slot_two.quickbind_desc)
+		O.button_icon_state = initial(quickbind_slot_two.name)
+		O.UpdateButtonIcon()

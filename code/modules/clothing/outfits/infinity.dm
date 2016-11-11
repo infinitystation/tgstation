@@ -17,7 +17,7 @@
 	for(var/obj/item/holster_item in ready_holster)
 		qdel(holster_item)
 	for(var/i=1, i>0, i--)
-		ready_holster.handle_item_insertion(new /obj/item/weapon/gun/projectile/automatic/pistol,1)
+		ready_holster.handle_item_insertion(new /obj/item/weapon/gun/ballistic/automatic/pistol,1)
 	ready_holster.handle_item_insertion(new /obj/item/ammo_box/magazine/m10mm,1)
 	ready_holster.handle_item_insertion(new /obj/item/ammo_box/magazine/m10mm,1)
 
@@ -54,7 +54,7 @@
 	suit = /obj/item/clothing/suit/armor/vest
 	head = /obj/item/clothing/head/helmet/sec
 	glasses = /obj/item/clothing/glasses/hud/security/sunglasses
-	belt = /obj/item/weapon/gun/projectile/automatic/proto/mindshield
+	belt = /obj/item/weapon/gun/ballistic/automatic/proto/mindshield
 	l_pocket = /obj/item/ammo_box/magazine/smgm9mm
 	back = /obj/item/weapon/storage/backpack/security
 	backpack_contents = list(/obj/item/weapon/storage/box/security/centcom=1,\
@@ -90,7 +90,7 @@
 	suit = /obj/item/clothing/suit/armor/vest
 	head = /obj/item/clothing/head/warden/corporate
 	glasses = /obj/item/clothing/glasses/hud/security/sunglasses
-	belt = /obj/item/weapon/gun/projectile/automatic/proto/mindshield
+	belt = /obj/item/weapon/gun/ballistic/automatic/proto/mindshield
 	l_pocket = /obj/item/ammo_box/magazine/smgm9mm
 	back = /obj/item/weapon/storage/backpack/security
 	backpack_contents = list(/obj/item/weapon/storage/box/security/centcom=1,\
@@ -157,7 +157,7 @@
 	belt = /obj/item/ammo_box/magazine/a646
 	l_pocket = /obj/item/weapon/tank/internals/emergency_oxygen
 	r_pocket = /obj/item/ammo_box/magazine/a646
-	r_hand = /obj/item/weapon/gun/projectile/automatic/mg88
+	r_hand = /obj/item/weapon/gun/ballistic/automatic/mg88
 
 /datum/outfit/trooper/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	if(visualsOnly)
