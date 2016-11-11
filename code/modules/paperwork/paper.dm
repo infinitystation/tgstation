@@ -188,6 +188,7 @@
 	else
 		t = replacetext(t, "\[sign\]", "")
 	t = replacetext(t, "\[field\]", "<span class=\"paper_field\"></span>")
+	t = replacetext(t, "\[tab\]", "&nbsp;")
 
 	if(!iscrayon)
 		t = replacetext(t, "\[*\]", "<li>")

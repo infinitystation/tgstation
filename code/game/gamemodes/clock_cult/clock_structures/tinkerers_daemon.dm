@@ -8,6 +8,7 @@
 	inactive_icon = "tinkerers_daemon"
 	max_integrity = 100
 	obj_integrity = 100
+	construction_value = 25
 	break_message = "<span class='warning'>The daemon shatters into millions of pieces!</span>"
 	debris = list(/obj/item/clockwork/alloy_shards/large = 2, \
 	/obj/item/clockwork/alloy_shards/medium = 4, \
@@ -31,7 +32,7 @@
 	if(is_servant_of_ratvar(user) || isobserver(user))
 		if(active)
 			if(component_id_to_produce)
-				user << "<span class='[get_component_span(component_id_to_produce)]_small'>It is currently producing [get_component_name(component_id_to_produce)][component_id_to_produce != "replicant_alloy" ? "s":""].</span>"
+				user << "<span class='[get_component_span(component_id_to_produce)]_small'>It is currently producing [get_component_name(component_id_to_produce)][component_id_to_produce != REPLICANT_ALLOY ? "s":""].</span>"
 			else
 				user << "<span class='brass'>It is currently producing random components.</span>"
 		user << "<span class='nezbere_small'>It will produce a component every <b>[production_cooldown*0.1]</b> seconds and requires at least the following power for each component type:</span>"
@@ -45,8 +46,24 @@
 	if(active)
 		toggle(0, user)
 	else
+		var/servants = 0
+		for(var/mob/living/L in living_mob_list)
+			if(is_servant_of_ratvar(L))
+				servants++
+		if(servants * 0.2 < clockwork_daemons)
+			user << "<span class='nezbere'>\"There are too few servants for this daemon to work.\"</span>"
+			return
 		if(!clockwork_caches)
-			user << "<span class='warning'>There are no clockwork caches! Activating this daemon would be a waste of power.</span>"
+			user << "<span class='nezbere'>\"You require a cache for this daemon to operate. Get to it.\"</span>"
+			return
+		var/min_power_usable = 0
+		for(var/i in clockwork_component_cache)
+			if(!min_power_usable)
+				min_power_usable = get_component_cost(i)
+			else
+				min_power_usable = min(min_power_usable, get_component_cost(i))
+		if(total_accessable_power() < min_power_usable)
+			user << "<span class='nezbere'>\"You need more power to activate this daemon, friend.\"</span>"
 			return
 		var/choice = alert(user,"Activate Daemon...",,"Specific Component","Random Component","Cancel")
 		switch(choice)
@@ -56,7 +73,11 @@
 					components["[get_component_name(i)] ([get_component_cost(i)]W)"] = i
 				var/input_component = input(user, "Choose a component type.", name) as null|anything in components
 				component_id_to_produce = components[input_component]
-				if(!user.canUseTopic(src, BE_CLOSE) || active)
+				servants = 0
+				for(var/mob/living/L in living_mob_list)
+					if(is_servant_of_ratvar(L))
+						servants++
+				if(!user.canUseTopic(src, BE_CLOSE) || active || !clockwork_caches || servants * 0.2 < clockwork_daemons)
 					return
 				if(!component_id_to_produce)
 					user << "<span class='warning'>You decide not to select a component and activate the daemon.</span>"

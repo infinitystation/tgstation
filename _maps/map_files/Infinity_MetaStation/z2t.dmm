@@ -2510,7 +2510,7 @@
 /area/holodeck/rec_center/kobayashi)
 "gI" = (
 /obj/structure/table/glass,
-/obj/item/weapon/gun/energy/gun/mini/practice_phaser,
+/obj/item/weapon/gun/energy/e_gun/mini/practice_phaser,
 /turf/open/floor/holofloor/plating,
 /area/holodeck/rec_center/kobayashi)
 "gJ" = (
@@ -3900,11 +3900,11 @@
 /obj/structure/sign/directions/synd{
 	pixel_y = 31
 	},
-/obj/item/weapon/gun/projectile/automatic/c20r{
+/obj/item/weapon/gun/ballistic/automatic/c20r{
 	pixel_x = -5;
 	pixel_y = 4
 	},
-/obj/item/weapon/gun/projectile/automatic/c20r,
+/obj/item/weapon/gun/ballistic/automatic/c20r,
 /turf/open/floor/plasteel/darkvault{
 	dir = 8
 	},
@@ -3913,11 +3913,11 @@
 	})
 "kj" = (
 /obj/structure/rack,
-/obj/item/weapon/gun/energy/gun{
+/obj/item/weapon/gun/energy/e_gun{
 	pixel_x = -3;
 	pixel_y = 2
 	},
-/obj/item/weapon/gun/energy/gun,
+/obj/item/weapon/gun/energy/e_gun,
 /obj/machinery/recharger/wallcharger{
 	pixel_y = 32
 	},

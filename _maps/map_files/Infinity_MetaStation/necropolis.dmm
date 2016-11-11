@@ -1646,7 +1646,7 @@
 /area/ruin/powered)
 "el" = (
 /obj/structure/rack,
-/obj/item/weapon/gun/projectile/automatic/mg88{
+/obj/item/weapon/gun/ballistic/automatic/mg88{
 	pixel_x = -3;
 	pixel_y = 3
 	},

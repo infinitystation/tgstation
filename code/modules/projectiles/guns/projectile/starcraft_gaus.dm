@@ -1,4 +1,4 @@
-/obj/item/weapon/gun/projectile/automatic/gause
+/obj/item/weapon/gun/ballistic/automatic/gause
 	name = "Gause rifle C-14"
 	desc = "'я уже заждался!'"
 	icon_state = "gause"

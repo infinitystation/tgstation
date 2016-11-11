@@ -76,6 +76,11 @@
 				stat("Internal Atmosphere Info", internal.name)
 				stat("Tank Pressure", internal.air_contents.return_pressure())
 				stat("Distribution Pressure", internal.distribute_pressure)
+
+		var/mob/living/simple_animal/borer/B = has_brain_worms()
+		if(B && B.controlling)
+			stat("Chemicals", B.chemicals)
+
 		if(mind)
 			if(mind.changeling)
 				stat("Chemical Storage", "[mind.changeling.chem_charges]/[mind.changeling.chem_storage]")
@@ -720,9 +725,11 @@
 /mob/living/carbon/human/proc/electrocution_animation(anim_duration)
 	//Handle mutant parts if possible
 	if(dna && dna.species)
+		add_atom_colour("#000000", TEMPORARY_COLOUR_PRIORITY)
 		add_overlay("electrocuted_base")
 		spawn(anim_duration)
 			if(src)
+				remove_atom_colour(TEMPORARY_COLOUR_PRIORITY, "#000000")
 				overlays -= "electrocuted_base"
 
 	else //or just do a generic animation

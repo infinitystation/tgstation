@@ -626,7 +626,7 @@
 "cj" = (
 /obj/effect/decal/remains/human,
 /obj/effect/decal/cleanable/blood/old,
-/obj/item/weapon/gun/projectile/automatic/c20r/sc_c20r,
+/obj/item/weapon/gun/ballistic/automatic/c20r/sc_c20r,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/lavaland/surface/outdoors)
 "ck" = (
