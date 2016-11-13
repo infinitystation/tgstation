@@ -65,6 +65,7 @@ var/total_borer_hosts_needed = 10
 	health = 20
 	maxHealth = 20
 	melee_damage_lower = 5
+	speed = 0.5
 	melee_damage_upper = 5
 	stop_automated_movement = TRUE
 	attacktext = "chomps"
