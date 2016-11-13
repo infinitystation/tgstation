@@ -102,9 +102,11 @@
 	name = "cargo technician's jumpsuit"
 	desc = "√рузчик, грузчик, парень работящий!"
 	icon_state = "cargotech"
+	item_color = "cargotech"
 	item_state = "cargotech"
 	icon = 'icons/obj/clothing/infinity_work.dmi'
 	worn_icon = 'icons/mob/infinity_work.dmi'
+	body_parts_covered = CHEST|GROIN|ARMS|LEGS
 	can_adjust = 0
 
 /obj/item/clothing/under/warden_corporate

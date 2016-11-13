@@ -65,8 +65,8 @@
 	desc = "A robot of unknown design, they seek only to consume materials and replicate themselves indefinitely."
 	speak_emote = list("tones")
 	bubble_icon = "swarmer"
-	health = 40
-	maxHealth = 40
+	health = 35
+	maxHealth = 35
 	status_flags = CANPUSH
 	icon_state = "swarmer"
 	icon_living = "swarmer"
@@ -90,7 +90,7 @@
 	attacktext = "shocks"
 	attack_sound = 'sound/effects/EMPulse.ogg'
 	friendly = "pinches"
-	speed = 0
+	speed = 0.5
 	faction = list("swarmer")
 	AIStatus = AI_OFF
 	pass_flags = PASSTABLE
