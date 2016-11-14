@@ -8401,6 +8401,11 @@
 /obj/machinery/newscaster{
 	pixel_y = 32
 	},
+/obj/machinery/button/door{
+	id = "cunit2";
+	name = "Lock";
+	pixel_x = 32
+	},
 /turf/open/floor/plasteel{
 	icon_state = "showroomfloor"
 	},
@@ -13906,13 +13911,7 @@
 	},
 /area/shuttle/escape)
 "IG" = (
-/obj/structure/extinguisher_cabinet{
-	pixel_x = 27;
-	pixel_y = 0
-	},
-/turf/open/floor/plasteel/red/side{
-	dir = 4
-	},
+/turf/closed/wall/mineral/titanium,
 /area/shuttle/escape)
 "IH" = (
 /obj/machinery/porta_turret/heavy/central_command,
@@ -14107,21 +14106,30 @@
 /turf/open/floor/carpet,
 /area/centcom/lobby)
 "Jk" = (
-/turf/closed/wall/mineral/titanium,
-/area/shuttle/escape)
-"Jl" = (
 /obj/machinery/status_display,
 /turf/closed/wall/mineral/titanium,
 /area/shuttle/escape)
-"Jm" = (
+"Jl" = (
 /turf/closed/indestructible/riveted,
 /area/centcom/ferry)
-"Jn" = (
+"Jm" = (
 /turf/open/floor/mineral/titanium,
 /area/shuttle/escape)
-"Jo" = (
+"Jn" = (
 /turf/open/floor/mineral/plastitanium,
 /area/shuttle/escape)
+"Jo" = (
+/obj/machinery/button/door{
+	id = "kitcheniu";
+	name = "Kitchen Shutters Control";
+	pixel_x = -4;
+	pixel_y = 26;
+	req_access_txt = "28"
+	},
+/obj/structure/table,
+/obj/item/weapon/reagent_containers/food/snacks/mint,
+/turf/open/floor/plasteel/cafeteria,
+/area/centcom/control)
 "Jp" = (
 /obj/machinery/abductor/experiment{
 	team = 3
@@ -14632,9 +14640,13 @@
 	},
 /area/shuttle/NTcruiser)
 "KI" = (
-/obj/machinery/shuttle_manipulator,
-/turf/open/floor/plasteel/black,
-/area/centcom/security)
+/turf/open/space,
+/turf/closed/wall/shuttle/syndie{
+	tag = "icon-wall3 (NORTHEAST)";
+	icon_state = "wall3";
+	dir = 5
+	},
+/area/space)
 "KJ" = (
 /turf/open/floor/plasteel/darkred/side{
 	dir = 8
@@ -15512,16 +15524,18 @@
 	},
 /area/tdome/tdomeobserve)
 "MF" = (
-/turf/open/space,
-/turf/closed/wall/shuttle/syndie{
-	tag = "icon-wall3 (NORTHEAST)";
-	icon_state = "wall3";
-	dir = 5
-	},
-/area/space)
-"MG" = (
 /turf/closed/wall/shuttle/syndie,
 /area/space)
+"MG" = (
+/obj/machinery/button/door{
+	id = "cunit2";
+	name = "Lock";
+	pixel_x = 32
+	},
+/turf/open/floor/plasteel/whitegreen/side{
+	dir = 9
+	},
+/area/centcom/evac)
 "MH" = (
 /obj/item/weapon/storage/box/gloves{
 	pixel_x = 3;
@@ -48888,7 +48902,7 @@ OJ
 OR
 Pb
 OS
-Pm
+MG
 Pt
 Py
 OS
@@ -51646,8 +51660,8 @@ nN
 tI
 tV
 uu
-tJ
-vv
+tW
+tW
 nN
 ww
 nN
@@ -51903,7 +51917,7 @@ ti
 tJ
 tJ
 tJ
-tW
+tJ
 vw
 nN
 nN
@@ -52417,7 +52431,7 @@ tk
 tJ
 tX
 uv
-tJ
+tW
 tJ
 tJ
 wx
@@ -52931,7 +52945,7 @@ nN
 tK
 tK
 uw
-uX
+uY
 tJ
 tJ
 wz
@@ -53188,7 +53202,7 @@ nN
 nN
 nN
 nN
-tJ
+Jo
 tJ
 tJ
 wA
@@ -53445,7 +53459,7 @@ tm
 sw
 sw
 ux
-uY
+tJ
 vx
 tJ
 ux
@@ -58342,7 +58356,7 @@ aa
 aa
 aa
 yR
-KI
+zG
 zk
 zH
 zX
@@ -59612,9 +59626,9 @@ aa
 aa
 aa
 aa
-Jm
+Jl
 JO
-Jm
+Jl
 aa
 aa
 aa
@@ -59868,14 +59882,14 @@ aa
 aa
 aa
 aa
-Jk
-Jk
+IG
+IG
 JP
-Jk
-Jk
-Jk
-Jk
-Jk
+IG
+IG
+IG
+IG
+IG
 aa
 aa
 aa
@@ -60125,14 +60139,14 @@ aa
 aa
 aa
 aa
-Jl
-Jn
-Jn
-Jn
-Jn
-Jn
-Jn
-Jl
+Jk
+Jm
+Jm
+Jm
+Jm
+Jm
+Jm
+Jk
 aa
 aa
 aa
@@ -60382,14 +60396,14 @@ aa
 aa
 aa
 aa
-Jk
-Jn
-Jn
-Jn
-Jn
-Jn
-Jn
-Jk
+IG
+Jm
+Jm
+Jm
+Jm
+Jm
+Jm
+IG
 aa
 aa
 aa
@@ -60639,14 +60653,14 @@ aa
 aa
 aa
 aa
-Jk
-Jo
-Jo
-Jo
-Jo
+IG
 Jn
-Jo
-Jk
+Jn
+Jn
+Jn
+Jm
+Jn
+IG
 aa
 aa
 aa
@@ -60896,14 +60910,14 @@ aa
 aa
 aa
 aa
-Jk
-Jo
-Jo
-Jo
-Jo
+IG
 Jn
-Jo
-Jk
+Jn
+Jn
+Jn
+Jm
+Jn
+IG
 aa
 aa
 aa
@@ -61153,14 +61167,14 @@ aa
 aa
 aa
 aa
-Jk
-Jn
+IG
+Jm
 JQ
-Jn
-Jn
-Jn
-Jn
-Jk
+Jm
+Jm
+Jm
+Jm
+IG
 aa
 aa
 aa
@@ -61410,14 +61424,14 @@ aa
 aa
 aa
 aa
-Jl
-Jn
+Jk
+Jm
 JR
 Kt
-Jn
-Jn
-Jn
-Jl
+Jm
+Jm
+Jm
+Jk
 aa
 aa
 aa
@@ -61667,14 +61681,14 @@ aa
 aa
 aa
 aa
-Jk
-Jk
-Jk
-Jk
-Jk
-Jk
-Jk
-Jk
+IG
+IG
+IG
+IG
+IG
+IG
+IG
+IG
 aa
 aa
 aa
@@ -64007,9 +64021,9 @@ aa
 aa
 aa
 aa
+KI
 MF
-MG
-MG
+MF
 FV
 aa
 aa
@@ -73409,7 +73423,7 @@ aa
 aa
 aa
 aa
-aa
+ad
 aa
 aa
 aa
