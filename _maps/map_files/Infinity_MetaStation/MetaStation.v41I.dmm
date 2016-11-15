@@ -758,9 +758,7 @@
 /turf/open/floor/plasteel/blackvault,
 /area/crew_quarters/hos)
 "abw" = (
-/obj/machinery/computer/camera_advanced{
-	icon = 'icons/blue_brig/obj/seccomp.dmi'
-	},
+/obj/machinery/computer/security,
 /turf/open/floor/plasteel/blackvault,
 /area/crew_quarters/hos)
 "abx" = (
@@ -1951,6 +1949,16 @@
 	name = "old sink";
 	pixel_y = 28
 	},
+/obj/machinery/airalarm{
+	desc = "This particular atmos control unit appears to have no access restrictions.";
+	dir = 8;
+	icon_state = "alarm0";
+	locked = 0;
+	name = "all-access air alarm";
+	pixel_x = 24;
+	req_access = "0";
+	req_one_access = "0"
+	},
 /turf/open/floor/plasteel/darkred{
 	dir = 4
 	},
@@ -2173,7 +2181,7 @@
 	pixel_y = -26
 	},
 /obj/machinery/camera{
-	c_tag = "Head of Security's Office";
+	c_tag = "Brig - Head of Security's Office";
 	dir = 8;
 	network = list("SS13")
 	},
@@ -2452,16 +2460,6 @@
 	},
 /area/security/execution)
 "aex" = (
-/obj/machinery/airalarm{
-	desc = "This particular atmos control unit appears to have no access restrictions.";
-	dir = 8;
-	icon_state = "alarm0";
-	locked = 0;
-	name = "all-access air alarm";
-	pixel_x = 24;
-	req_access = "0";
-	req_one_access = "0"
-	},
 /turf/open/floor/plasteel/darkred/side{
 	dir = 5
 	},
@@ -2485,6 +2483,10 @@
 	},
 /obj/machinery/light{
 	dir = 8
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -27;
+	pixel_y = 0
 	},
 /turf/open/floor/plasteel{
 	icon_state = "bot"
@@ -2536,10 +2538,6 @@
 	},
 /area/security/security_gear)
 "aeD" = (
-/obj/structure/extinguisher_cabinet{
-	pixel_x = 27;
-	pixel_y = 0
-	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /turf/open/floor/mech_bay_recharge_floor,
 /area/security/security_gear)
@@ -3059,6 +3057,11 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/structure/cable/yellow{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
 /turf/open/floor/plasteel/red/side{
 	dir = 6
 	},
@@ -3074,9 +3077,11 @@
 	icon_state = "recharge_port";
 	dir = 1
 	},
-/turf/open/floor/plasteel{
-	icon_state = "bot"
+/obj/structure/cable/yellow{
+	d2 = 8;
+	icon_state = "0-8"
 	},
+/turf/open/floor/plating,
 /area/security/security_gear)
 "afA" = (
 /obj/structure/rack,
@@ -3094,9 +3099,7 @@
 /turf/closed/wall/r_wall,
 /area/security/main)
 "afE" = (
-/obj/machinery/computer/camera_advanced{
-	icon = 'icons/blue_brig/obj/seccomp.dmi'
-	},
+/obj/machinery/computer/security,
 /turf/open/floor/plasteel/red/side{
 	dir = 9
 	},
@@ -3612,7 +3615,7 @@
 "agJ" = (
 /obj/structure/chair/comfy/sofa/corner/right/brown,
 /obj/machinery/camera{
-	c_tag = "Break Room";
+	c_tag = "Brig - Break Room";
 	dir = 2;
 	network = list("SS13")
 	},
@@ -3974,7 +3977,7 @@
 	pixel_y = -24
 	},
 /obj/machinery/camera{
-	c_tag = "Prisoner Kill Chamber";
+	c_tag = "Brig - Kill Chamber";
 	dir = 1;
 	network = list("SS13")
 	},
@@ -4681,7 +4684,7 @@
 /area/security/warden)
 "aiC" = (
 /obj/machinery/camera{
-	c_tag = "Warden's Office";
+	c_tag = "Brig - Warden's Office";
 	dir = 2;
 	network = list("SS13")
 	},
@@ -5508,7 +5511,7 @@
 	pixel_y = -4
 	},
 /obj/machinery/camera{
-	c_tag = "Security - Gear Room";
+	c_tag = "Brig - Gear Room";
 	dir = 8;
 	network = list("SS13")
 	},
@@ -5707,7 +5710,7 @@
 	pixel_y = 0
 	},
 /obj/machinery/camera{
-	c_tag = "Firing Range";
+	c_tag = "Brig - Firing Range";
 	dir = 8;
 	network = list("SS13")
 	},
@@ -6734,6 +6737,11 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
+/obj/machinery/camera{
+	c_tag = "Brig - East maint";
+	dir = 2;
+	network = list("SS13")
+	},
 /turf/open/floor/plating,
 /area/maintenance/fsmaint)
 "amc" = (
@@ -7127,9 +7135,7 @@
 /turf/open/floor/plating,
 /area/security/warden)
 "amP" = (
-/obj/machinery/computer/camera_advanced{
-	icon = 'icons/blue_brig/obj/seccomp.dmi'
-	},
+/obj/machinery/computer/security,
 /obj/machinery/light_switch{
 	pixel_x = -24;
 	pixel_y = -20
@@ -7352,7 +7358,7 @@
 /area/security/main)
 "anh" = (
 /obj/machinery/camera{
-	c_tag = "Security - Office - Starboard";
+	c_tag = "Brig - Office - Starboard";
 	dir = 1;
 	network = list("SS13")
 	},
@@ -10844,7 +10850,7 @@
 /obj/machinery/light,
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden,
 /obj/machinery/camera{
-	c_tag = "Central - East corridor";
+	c_tag = "Brig - East corridor";
 	dir = 1;
 	network = list("SS13")
 	},
@@ -13696,9 +13702,7 @@
 	pixel_x = 0;
 	pixel_y = -30
 	},
-/obj/machinery/computer/camera_advanced{
-	icon = 'icons/blue_brig/obj/seccomp.dmi'
-	},
+/obj/machinery/computer/security,
 /turf/open/floor/plasteel{
 	dir = 8;
 	icon_state = "vault";
@@ -14444,7 +14448,7 @@
 /area/security/detectives_office)
 "ayR" = (
 /obj/machinery/camera{
-	c_tag = "Detective's Office";
+	c_tag = "Brig - Detective's Office";
 	dir = 8;
 	network = list("SS13")
 	},
@@ -17596,7 +17600,7 @@
 	req_access = list(1)
 	},
 /obj/machinery/camera{
-	c_tag = "Brig - West brig's corridor - Special";
+	c_tag = "Brig - West corridor - South";
 	dir = 4;
 	network = list("SS13")
 	},
@@ -29133,7 +29137,6 @@
 	},
 /area/quartermaster/storage)
 "aYC" = (
-/obj/structure/closet/secure_closet/security/cargo,
 /obj/machinery/light_switch{
 	pixel_x = -25;
 	pixel_y = 0
@@ -29141,6 +29144,7 @@
 /obj/machinery/airalarm{
 	pixel_y = 23
 	},
+/obj/structure/filingcabinet,
 /turf/open/floor/plasteel{
 	icon_state = "red";
 	dir = 9
@@ -29157,6 +29161,7 @@
 	d2 = 2;
 	icon_state = "0-2"
 	},
+/obj/structure/closet/secure_closet/security/cargo,
 /turf/open/floor/plasteel{
 	icon_state = "red";
 	dir = 1
@@ -29181,11 +29186,7 @@
 	},
 /area/security/checkpoint/supply)
 "aYF" = (
-/obj/structure/filingcabinet,
-/obj/structure/reagent_dispensers/peppertank{
-	pixel_x = 30;
-	pixel_y = 0
-	},
+/obj/machinery/computer/security,
 /turf/open/floor/plasteel{
 	icon_state = "red";
 	dir = 5
@@ -32800,15 +32801,14 @@
 	},
 /area/engine/engineering)
 "bel" = (
-/obj/structure/filingcabinet,
-/obj/structure/reagent_dispensers/peppertank{
-	pixel_x = 0;
-	pixel_y = 30
-	},
+/obj/structure/table,
+/obj/item/weapon/paper_bin,
+/obj/item/weapon/pen,
 /obj/machinery/airalarm{
-	dir = 4;
-	pixel_x = -23;
-	pixel_y = 0
+	frequency = 1439;
+	locked = 0;
+	pixel_y = 23;
+	req_access = null
 	},
 /turf/open/floor/plasteel{
 	icon_state = "red";
@@ -32817,9 +32817,7 @@
 /area/security/checkpoint/engineering)
 "bem" = (
 /obj/structure/table,
-/obj/machinery/recharger{
-	pixel_y = 4
-	},
+/obj/item/weapon/folder/blue,
 /obj/item/device/radio/intercom{
 	freerange = 0;
 	frequency = 1459;
@@ -32827,18 +32825,19 @@
 	pixel_x = 0;
 	pixel_y = 21
 	},
+/obj/machinery/light{
+	dir = 1
+	},
 /turf/open/floor/plasteel{
 	icon_state = "red";
 	dir = 1
 	},
 /area/security/checkpoint/engineering)
 "ben" = (
-/obj/structure/table,
-/obj/item/weapon/paper_bin,
-/obj/item/weapon/pen,
+/obj/machinery/computer/security,
 /obj/machinery/newscaster/security_unit{
-	pixel_x = 30;
-	pixel_y = 0
+	pixel_x = 0;
+	pixel_y = 32
 	},
 /turf/open/floor/plasteel{
 	icon_state = "red";
@@ -33068,7 +33067,7 @@
 /turf/closed/wall/shuttle/smooth/overspace,
 /area/shuttle/arrival)
 "beA" = (
-/turf/closed/wall/shuttle/smooth,
+/turf/closed/wall/shuttle/smooth/nodiagonal,
 /area/shuttle/arrival)
 "beB" = (
 /turf/open/floor/plating{
@@ -34096,10 +34095,10 @@
 	},
 /area/engine/engineering)
 "bga" = (
-/obj/item/weapon/screwdriver{
-	pixel_y = 10
+/obj/structure/table,
+/obj/machinery/recharger{
+	pixel_y = 4
 	},
-/obj/item/device/radio/off,
 /obj/machinery/computer/security/telescreen{
 	dir = 4;
 	name = "MiniSat Monitor";
@@ -34116,27 +34115,16 @@
 /obj/structure/chair/office/dark{
 	dir = 4
 	},
-/obj/effect/landmark/start/depsec/engineering,
 /turf/open/floor/plasteel,
 /area/security/checkpoint/engineering)
 "bgc" = (
-/obj/structure/table,
-/obj/item/weapon/book/manual/wiki/security_space_law,
-/obj/machinery/light{
-	dir = 4
+/obj/structure/rack,
+/obj/effect/spawner/lootdrop/maintenance,
+/turf/open/floor/plating{
+	tag = "icon-platingdmg1";
+	icon_state = "platingdmg1"
 	},
-/obj/machinery/requests_console{
-	department = "Security";
-	departmentType = 5;
-	pixel_x = 30;
-	pixel_y = 0
-	},
-/obj/item/weapon/folder/blue,
-/turf/open/floor/plasteel{
-	icon_state = "red";
-	dir = 4
-	},
-/area/security/checkpoint/engineering)
+/area/maintenance/atmos_control)
 "bgd" = (
 /turf/open/floor/plating{
 	icon_state = "panelscorched"
@@ -34264,7 +34252,7 @@
 /obj/structure/shuttle/engine/platform{
 	dir = 4
 	},
-/turf/closed/wall/shuttle/smooth,
+/turf/closed/wall/shuttle/smooth/nodiagonal,
 /area/shuttle/arrival)
 "bgm" = (
 /obj/structure/shuttle/engine/propulsion{
@@ -35064,7 +35052,8 @@
 	name = "Station Intercom (General)";
 	pixel_y = 20
 	},
-/obj/machinery/computer/security,
+/obj/structure/table/reinforced,
+/obj/item/weapon/folder/blue,
 /turf/open/floor/plasteel{
 	icon_state = "red";
 	dir = 1
@@ -37743,9 +37732,7 @@
 	},
 /area/bridge)
 "bmj" = (
-/obj/machinery/computer/camera_advanced{
-	icon = 'icons/blue_brig/obj/seccomp.dmi'
-	},
+/obj/machinery/computer/security,
 /turf/open/floor/plasteel{
 	dir = 1;
 	icon_state = "darkred";
@@ -42743,12 +42730,12 @@
 	icon_state = "4-8";
 	pixel_y = 0
 	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 6
-	},
 /obj/structure/window/reinforced{
 	dir = 4;
 	pixel_x = 0
+	},
+/obj/machinery/atmospherics/pipe/manifold/supply/visible{
+	dir = 1
 	},
 /turf/open/floor/plasteel{
 	icon_state = "dark"
@@ -57296,6 +57283,7 @@
 /area/storage/auxillary)
 "bTG" = (
 /obj/structure/closet,
+/obj/item/clothing/gloves/color/black,
 /turf/open/floor/plating{
 	icon_state = "panelscorched"
 	},
@@ -61802,6 +61790,12 @@
 	},
 /area/hydroponics)
 "cbB" = (
+/obj/structure/closet,
+/obj/effect/spawner/lootdrop/maintenance{
+	lootcount = 3;
+	name = "3maintenance loot spawner"
+	},
+/obj/item/clothing/glasses/welding,
 /turf/open/floor/plating{
 	icon_state = "panelscorched"
 	},
@@ -62653,9 +62647,22 @@
 	},
 /area/maintenance/atmos_control)
 "cdd" = (
-/obj/structure/grille/broken,
-/turf/open/floor/plating,
-/area/maintenance/atmos_control)
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/door/poddoor/preopen{
+	id = "virus_ebola"
+	},
+/turf/open/floor/plasteel{
+	dir = 8;
+	icon_state = "whitegreen";
+	tag = "icon-whitehall (WEST)"
+	},
+/area/medical/medbay_aft{
+	name = "Medbay Aft"
+	})
 "cde" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 6
@@ -64797,6 +64804,9 @@
 	name = "Research Division"
 	})
 "cgN" = (
+/obj/machinery/newscaster/security_unit{
+	pixel_y = 32
+	},
 /obj/structure/table,
 /obj/machinery/recharger{
 	pixel_y = 4
@@ -64805,49 +64815,27 @@
 	pixel_x = -27;
 	pixel_y = 6
 	},
-/obj/machinery/newscaster/security_unit{
-	pixel_y = 32
-	},
 /turf/open/floor/plasteel{
 	icon_state = "red";
 	dir = 9
 	},
 /area/security/checkpoint/science)
 "cgO" = (
-/obj/structure/table,
 /obj/machinery/requests_console{
 	department = "Security RnD";
 	departmentType = 2;
 	pixel_y = 30
 	},
-/obj/machinery/button/door{
-	id = "Biohazard";
-	name = "Biohazard Shutter Control";
-	pixel_x = 0;
-	pixel_y = 7;
-	req_access_txt = "47"
-	},
-/obj/machinery/button/door{
-	desc = "A remote control switch for the medbay foyer.";
-	id = "ResearchFoyer";
-	name = "Research Door Button";
-	normaldoorcontrol = 1;
-	pixel_x = 0;
-	pixel_y = -2
-	},
+/obj/structure/table,
+/obj/item/weapon/paper_bin,
+/obj/item/weapon/pen,
 /turf/open/floor/plasteel{
 	icon_state = "red";
 	dir = 1
 	},
 /area/security/checkpoint/science)
 "cgP" = (
-/obj/structure/table,
-/obj/item/weapon/paper_bin,
-/obj/item/weapon/pen,
-/obj/machinery/firealarm{
-	dir = 4;
-	pixel_x = 24
-	},
+/obj/machinery/computer/security,
 /turf/open/floor/plasteel{
 	icon_state = "red";
 	dir = 5
@@ -65121,6 +65109,10 @@
 "chi" = (
 /obj/structure/closet,
 /obj/item/stack/cable_coil/random,
+/obj/effect/spawner/lootdrop/maintenance{
+	lootcount = 4;
+	name = "4maintenance loot spawner"
+	},
 /turf/open/floor/plating{
 	icon_state = "warnplate";
 	dir = 1
@@ -65675,7 +65667,7 @@
 	})
 "cia" = (
 /obj/machinery/camera{
-	c_tag = "Medbay Storage";
+	c_tag = "Medbay - Storage";
 	dir = 8;
 	network = list("SS13","Medbay")
 	},
@@ -65991,7 +65983,6 @@
 /area/security/checkpoint/science)
 "ciA" = (
 /obj/machinery/computer/secure_data,
-/obj/item/weapon/book/manual/wiki/security_space_law,
 /obj/machinery/computer/security/telescreen{
 	desc = "Used for watching the RD's goons from the safety of his office.";
 	dir = 8;
@@ -66973,10 +66964,6 @@
 /turf/open/floor/plasteel,
 /area/security/checkpoint/science)
 "cke" = (
-/obj/structure/reagent_dispensers/peppertank{
-	pixel_x = 30;
-	pixel_y = 0
-	},
 /obj/structure/chair{
 	dir = 8
 	},
@@ -66985,6 +66972,21 @@
 	dir = 8;
 	network = list("SS13","RD");
 	pixel_x = 0
+	},
+/obj/machinery/button/door{
+	desc = "A remote control switch for the medbay foyer.";
+	id = "ResearchFoyer";
+	name = "Research Door Button";
+	normaldoorcontrol = 1;
+	pixel_x = 28;
+	pixel_y = -5
+	},
+/obj/machinery/button/door{
+	id = "Biohazard";
+	name = "Biohazard Shutter Control";
+	pixel_x = 28;
+	pixel_y = 4;
+	req_access_txt = "47"
 	},
 /turf/open/floor/plasteel{
 	icon_state = "red";
@@ -67466,7 +67468,7 @@
 	pixel_y = -30
 	},
 /obj/machinery/camera{
-	c_tag = "Medbay Foyer";
+	c_tag = "Medbay - Foyer";
 	dir = 1;
 	network = list("SS13","Medbay")
 	},
@@ -68506,6 +68508,10 @@
 /area/security/checkpoint/science)
 "cmx" = (
 /obj/structure/closet/secure_closet/security/science,
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -24
+	},
 /turf/open/floor/plasteel{
 	icon_state = "red"
 	},
@@ -69834,7 +69840,7 @@
 	dir = 4
 	},
 /obj/machinery/camera{
-	c_tag = "Medbay Hallway Fore";
+	c_tag = "Medbay - Hallway - Enter";
 	dir = 2;
 	network = list("SS13","Medbay")
 	},
@@ -70596,7 +70602,7 @@
 	dir = 5
 	},
 /obj/machinery/camera{
-	c_tag = "Medbay Sleepers";
+	c_tag = "Medbay - Sleepers";
 	dir = 4;
 	network = list("SS13","Medbay")
 	},
@@ -73047,7 +73053,7 @@
 /obj/item/stack/cable_coil,
 /obj/item/stack/cable_coil,
 /obj/machinery/camera{
-	c_tag = "Chemistry";
+	c_tag = "Medbay - Chemistry";
 	dir = 4;
 	network = list("SS13","Medbay")
 	},
@@ -73778,7 +73784,7 @@
 	d2 = 8
 	},
 /obj/machinery/camera{
-	c_tag = "CMO's Office";
+	c_tag = "Medbay - CMO's Office";
 	dir = 8;
 	network = list("SS13","Medbay")
 	},
@@ -76165,7 +76171,7 @@
 	pixel_x = -24
 	},
 /obj/machinery/camera{
-	c_tag = "Medbay Hallway Central";
+	c_tag = "Medbay - Hallway - Central";
 	dir = 4;
 	network = list("SS13","Medbay")
 	},
@@ -83493,6 +83499,11 @@
 	pixel_y = 30
 	},
 /obj/structure/table/glass,
+/obj/machinery/button/door{
+	id = "virus_ebola";
+	name = "Virology Lock";
+	pixel_x = 28
+	},
 /turf/open/floor/plasteel/whitegreen/side{
 	dir = 5
 	},
@@ -84794,8 +84805,10 @@
 /obj/structure/sink{
 	pixel_y = 28
 	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 4
+/obj/machinery/atmospherics/components/binary/passive_gate{
+	dir = 8;
+	name = "Virology passive gate";
+	on = 1
 	},
 /turf/open/floor/plasteel/warnwhite{
 	dir = 1
@@ -84817,17 +84830,11 @@
 	},
 /area/medical/virology)
 "cMD" = (
-/obj/machinery/firealarm{
-	dir = 2;
-	pixel_y = 24
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
 	},
-/obj/machinery/atmospherics/components/binary/passive_gate{
-	dir = 8;
-	name = "Virology passive gate";
-	on = 1
-	},
-/obj/machinery/iv_drip{
-	density = 0
+/obj/machinery/door/poddoor/preopen{
+	id = "virus_ebola"
 	},
 /turf/open/floor/plasteel{
 	dir = 8;
@@ -85990,10 +85997,8 @@
 /obj/structure/sign/biohazard{
 	pixel_x = -32
 	},
-/obj/item/weapon/twohanded/required/kirbyplants{
-	icon_state = "plant-05";
-	layer = 4.1;
-	tag = "icon-plant-05"
+/obj/machinery/door/poddoor/preopen{
+	id = "virus_ebola"
 	},
 /turf/open/floor/plasteel{
 	dir = 8;
@@ -91594,7 +91599,7 @@
 	icon_state = "tube1"
 	},
 /obj/machinery/camera{
-	c_tag = "Secure Lab - Airlock";
+	c_tag = "RnD Xenobiology Lab - Airlock";
 	dir = 8;
 	network = list("SS13","RD")
 	},
@@ -92342,7 +92347,7 @@
 /area/toxins/xenobiology)
 "cZn" = (
 /obj/machinery/camera{
-	c_tag = "Secure Lab - Fore";
+	c_tag = "RnD Xenobiology Lab - Near Enter";
 	dir = 2;
 	network = list("SS13","RD")
 	},
@@ -93063,7 +93068,7 @@
 /area/toxins/xenobiology)
 "daJ" = (
 /obj/machinery/camera{
-	c_tag = "Xenobiology Lab - Pen #1";
+	c_tag = "RnD - Xenobiology Lab - Pen #1";
 	dir = 4;
 	network = list("SS13","RD","Xeno")
 	},
@@ -93157,7 +93162,7 @@
 /area/toxins/xenobiology)
 "daS" = (
 /obj/machinery/camera{
-	c_tag = "Xenobiology Lab - Pen #2";
+	c_tag = "RnD - Xenobiology Lab - Pen #2";
 	dir = 8;
 	network = list("SS13","RD","Xeno")
 	},
@@ -93321,7 +93326,7 @@
 	pixel_y = 0
 	},
 /obj/machinery/camera{
-	c_tag = "Secure Lab - Central";
+	c_tag = "RnD Xenobiology Lab - Slimes";
 	dir = 8;
 	network = list("SS13","RD")
 	},
@@ -93384,7 +93389,7 @@
 /area/toxins/xenobiology)
 "dbk" = (
 /obj/machinery/camera{
-	c_tag = "Xenobiology Lab - Pen #3";
+	c_tag = "RnD Xenobiology Lab - Pen #3";
 	dir = 4;
 	network = list("SS13","RD","Xeno")
 	},
@@ -93468,7 +93473,7 @@
 /area/toxins/xenobiology)
 "dbq" = (
 /obj/machinery/camera{
-	c_tag = "Xenobiology Lab - Pen #4";
+	c_tag = "RnD - Xenobiology Lab - Pen #4";
 	dir = 8;
 	network = list("SS13","RD","Xeno")
 	},
@@ -93737,7 +93742,7 @@
 	dir = 8
 	},
 /obj/machinery/camera{
-	c_tag = "Xenobiology Lab - Pen #5";
+	c_tag = "RnD - Xenobiology Lab - Pen #5";
 	dir = 4;
 	network = list("SS13","RD","Xeno")
 	},
@@ -93814,7 +93819,7 @@
 	dir = 4
 	},
 /obj/machinery/camera{
-	c_tag = "Xenobiology Lab - Pen #6";
+	c_tag = "RnD - Xenobiology Lab - Pen #6";
 	dir = 8;
 	network = list("SS13","RD","Xeno")
 	},
@@ -94069,7 +94074,7 @@
 	pixel_x = 24
 	},
 /obj/machinery/camera{
-	c_tag = "Xenobiology Lab - Aft-Starboard";
+	c_tag = "RnD - Xenobiology Lab - Near Chamber";
 	dir = 8;
 	network = list("SS13","RD")
 	},
@@ -94555,7 +94560,7 @@
 /area/toxins/xenobiology)
 "ddm" = (
 /obj/machinery/camera{
-	c_tag = "Xenobiology Lab - Kill Chamber";
+	c_tag = "RnD - Xenobiology Lab - Kill Chamber";
 	dir = 1;
 	network = list("SS13","RD","Xeno");
 	start_active = 1
@@ -94939,681 +94944,165 @@
 	icon_state = "browncorner"
 	},
 /area/storage/primary)
-"dfT" = (
-/obj/machinery/button/flasher{
-	id = "emshuttlebridgeflash";
-	name = "cockpit flasher button";
-	pixel_y = 24;
-	req_access_txt = "0";
-	req_one_access_txt = "1;63;19"
-	},
-/turf/open/floor/plasteel/red/side{
-	dir = 5
-	},
-/area/shuttle/escape)
-"dfS" = (
-/turf/open/floor/plasteel/red/corner{
+"ded" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
-/area/shuttle/escape)
-"dfR" = (
-/turf/open/floor/plasteel/red/corner{
-	dir = 1
+/obj/structure/lattice/catwalk,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8";
+	pixel_y = 0
 	},
-/area/shuttle/escape)
-"dfQ" = (
-/obj/structure/chair/comfy/shuttle{
-	dir = 8
-	},
-/obj/item/device/radio/intercom{
-	dir = 4;
-	name = "Station Intercom (General)";
-	pixel_x = 0;
-	pixel_y = 24
-	},
-/turf/open/floor/plasteel/red/side{
-	dir = 9
-	},
-/area/shuttle/escape)
-"dfP" = (
-/obj/machinery/status_display{
-	pixel_y = 31
-	},
-/obj/machinery/computer/camera_advanced{
-	icon = 'icons/blue_brig/obj/seccomp.dmi'
-	},
-/turf/open/floor/plasteel/neutral/side{
+/obj/structure/transit_tube/horizontal,
+/obj/structure/transit_tube_pod{
+	tag = "icon-pod (EAST)";
+	icon_state = "pod";
 	dir = 4
 	},
+/turf/open/space,
+/area/space)
+"dee" = (
+/turf/closed/wall/shuttle/smooth/overspace,
 /area/shuttle/escape)
-"dfO" = (
-/obj/machinery/door/airlock/glass_command{
-	name = "Cockpit";
-	req_access_txt = "19"
+"def" = (
+/turf/closed/wall/shuttle/smooth/nodiagonal,
+/area/shuttle/escape)
+"deg" = (
+/obj/machinery/door/airlock/shuttle{
+	id_tag = "Emeregency_Shuttle_Rear_Airlock_Lock";
+	name = "Emergency Shuttle's Exit"
 	},
 /turf/open/floor/plasteel{
 	icon_state = "delivery";
 	name = "floor"
 	},
 /area/shuttle/escape)
-"dfN" = (
-/obj/structure/chair/comfy/shuttle{
-	dir = 8
+"deh" = (
+/obj/machinery/door/airlock/shuttle{
+	id_tag = "Emeregency_Shuttle_Rear_Airlock_Lock";
+	name = "Emergency Shuttle's Exit"
 	},
-/obj/machinery/flasher{
-	id = "emshuttlebridgeflash";
-	pixel_y = -24;
-	use_power = 1
+/obj/docking_port/mobile/emergency{
+	dheight = 0;
+	dir = 2;
+	dwidth = 6;
+	height = 23;
+	port_angle = -180;
+	width = 14
 	},
-/turf/open/floor/plasteel/neutral/side{
-	dir = 6
+/obj/docking_port/stationary{
+	dheight = 0;
+	dir = 2;
+	dwidth = 6;
+	height = 23;
+	id = "emergency_home";
+	name = "emergency evac bay";
+	width = 14
+	},
+/turf/open/floor/plasteel{
+	icon_state = "delivery";
+	name = "floor"
 	},
 /area/shuttle/escape)
-"dfM" = (
-/obj/machinery/flasher{
-	id = "emshuttlebridgeflash";
-	pixel_y = -24;
-	use_power = 1
+"dei" = (
+/obj/structure/shuttle/engine/propulsion{
+	icon_state = "propulsion";
+	dir = 1
 	},
-/obj/structure/chair/comfy/shuttle{
-	dir = 4
+/obj/structure/shuttle/engine/platform,
+/turf/open/floor/plating/airless,
+/area/shuttle/escape)
+"dej" = (
+/obj/structure/shuttle/engine/propulsion{
+	icon_state = "propulsion_l";
+	dir = 1
 	},
-/turf/open/floor/plasteel/neutral/side{
-	dir = 10
+/obj/structure/shuttle/engine/platform,
+/turf/open/floor/plating/airless,
+/area/shuttle/escape)
+"dek" = (
+/obj/structure/table,
+/obj/item/stack/medical/gauze,
+/obj/item/stack/medical/bruise_pack,
+/obj/item/stack/medical/ointment,
+/turf/open/floor/plasteel{
+	icon_state = "bot";
+	dir = 1
 	},
 /area/shuttle/escape)
-"dfL" = (
-/obj/machinery/camera{
-	c_tag = "Shuttle - Storage - Cell B";
-	dir = 1;
-	network = list("ST_shuttle")
-	},
-/turf/open/floor/plasteel/whitebot,
-/area/shuttle/escape)
-"dfK" = (
-/obj/machinery/camera{
-	c_tag = "Shuttle - Storage - Cell A";
-	dir = 1;
-	network = list("ST_shuttle")
-	},
-/turf/open/floor/plasteel/whitebot,
-/area/shuttle/escape)
-"dfJ" = (
-/obj/structure/chair/comfy/shuttle{
-	dir = 4
-	},
+"del" = (
 /turf/open/floor/plasteel/neutral/corner{
 	dir = 8
 	},
 /area/shuttle/escape)
-"dfI" = (
-/obj/structure/chair/comfy/shuttle{
-	dir = 1
-	},
-/turf/open/floor/wood,
-/area/shuttle/escape)
-"dfH" = (
-/obj/machinery/vending/wallmed{
-	name = "Emergency NanoMed";
-	pixel_x = 0;
-	pixel_y = -30;
-	req_access_txt = "0";
-	use_power = 0
-	},
-/obj/structure/chair/comfy/shuttle{
-	dir = 1
-	},
-/turf/open/floor/wood,
-/area/shuttle/escape)
-"dfG" = (
-/obj/structure/chair/comfy/shuttle{
-	dir = 1
-	},
-/obj/machinery/status_display{
-	pixel_y = -31
-	},
-/turf/open/floor/wood,
-/area/shuttle/escape)
-"dfF" = (
-/obj/machinery/door/poddoor{
-	id = "HSS_cell_shuttle_2";
-	name = "HSS Cell B"
-	},
-/turf/open/floor/plasteel/whitebot/delivery,
-/area/shuttle/escape)
-"dfE" = (
-/obj/machinery/door/poddoor{
-	id = "HSS_cell_shuttle_1";
-	name = "HSS Cell A"
-	},
-/turf/open/floor/plasteel/whitebot/delivery,
-/area/shuttle/escape)
-"dfD" = (
-/obj/structure/chair/comfy/shuttle{
-	dir = 8
-	},
+"dem" = (
 /turf/open/floor/plasteel/neutral/corner,
 /area/shuttle/escape)
-"dfC" = (
-/obj/structure/sink{
-	dir = 4;
-	icon_state = "sink";
-	pixel_x = 11;
-	pixel_y = 0
+"den" = (
+/obj/structure/closet/crate/medical{
+	name = "medical crate"
+	},
+/obj/item/weapon/storage/firstaid/regular,
+/obj/item/weapon/storage/firstaid/o2{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/item/weapon/storage/firstaid/toxin{
+	pixel_x = -4;
+	pixel_y = 3
+	},
+/mob/living/simple_animal/bot/medbot{
+	name = "\improper emergency medibot";
+	pixel_x = -3;
+	pixel_y = 2
 	},
 /turf/open/floor/plasteel{
-	dir = 6;
-	icon_state = "whitepurple"
+	icon_state = "bot";
+	dir = 1
 	},
 /area/shuttle/escape)
-"dfB" = (
-/obj/machinery/computer/security/telescreen{
-	dir = 1;
-	name = "Storage Cell Monitor";
-	network = list("ST_shuttle");
-	pixel_x = 0;
-	pixel_y = -30
+"deo" = (
+/obj/structure/shuttle/engine/propulsion{
+	icon_state = "propulsion_r";
+	dir = 1
+	},
+/obj/structure/shuttle/engine/platform,
+/turf/open/floor/plating/airless,
+/area/shuttle/escape)
+"dep" = (
+/obj/structure/shuttle/engine/platform{
+	dir = 1
+	},
+/turf/closed/wall/shuttle/smooth/nodiagonal,
+/area/shuttle/escape)
+"deq" = (
+/obj/structure/tank_dispenser/oxygen{
+	layer = 2.7;
+	pixel_x = -1;
+	pixel_y = 2
 	},
 /turf/open/floor/plasteel{
-	dir = 2;
-	icon_state = "whitepurple"
+	icon_state = "bot";
+	dir = 1
 	},
 /area/shuttle/escape)
-"dfA" = (
-/turf/open/floor/plasteel{
-	dir = 10;
-	icon_state = "whitepurple";
-	tag = "icon-whitehall (WEST)"
-	},
-/area/shuttle/escape)
-"dfz" = (
-/obj/machinery/door/airlock/glass_science{
-	name = "Shuttle HSB";
-	req_access_txt = "47"
-	},
-/turf/open/floor/plasteel/whitebot/delivery,
-/area/shuttle/escape)
-"dfy" = (
-/obj/structure/chair/comfy/shuttle{
-	dir = 4
-	},
+"der" = (
 /turf/open/floor/plasteel,
 /area/shuttle/escape)
-"dfx" = (
-/obj/structure/chair/comfy/shuttle{
-	dir = 8
-	},
-/turf/open/floor/wood,
-/area/shuttle/escape)
-"dfw" = (
-/turf/open/floor/wood,
-/area/shuttle/escape)
-"dfv" = (
-/obj/structure/chair/comfy/shuttle{
-	dir = 4
-	},
-/obj/structure/extinguisher_cabinet{
-	pixel_x = -27;
-	pixel_y = 0
-	},
-/turf/open/floor/wood,
-/area/shuttle/escape)
-"dfu" = (
-/obj/structure/closet/secure_closet/rnd_st,
-/turf/open/floor/plasteel{
-	dir = 5;
-	icon_state = "whitepurple";
-	tag = "icon-whitehall (WEST)"
-	},
-/area/shuttle/escape)
-"dft" = (
-/obj/structure/table,
-/obj/machinery/button/door{
-	id = "HSS_cell_shuttle_1";
-	name = "HSS Cell A";
-	pixel_x = -6;
-	pixel_y = 26
-	},
-/obj/machinery/button/door{
-	id = "HSS_cell_shuttle_2";
-	name = "HSS Cell B";
-	pixel_x = 6;
-	pixel_y = 26
-	},
-/obj/item/weapon/folder/white,
-/turf/open/floor/plasteel{
-	dir = 1;
-	icon_state = "whitepurple"
-	},
-/area/shuttle/escape)
-"dfs" = (
-/obj/structure/chair/comfy/shuttle,
-/obj/item/device/radio/intercom{
-	broadcasting = 0;
-	listening = 1;
-	name = "Station Intercom (General)";
-	pixel_y = 24
-	},
-/turf/open/floor/plasteel{
-	dir = 9;
-	icon_state = "whitepurple"
-	},
-/area/shuttle/escape)
-"dfr" = (
-/obj/machinery/door/airlock/shuttle{
-	name = "Emergency Shuttle Airlock"
-	},
-/turf/open/floor/wood,
-/area/shuttle/escape)
-"dfq" = (
-/turf/open/floor/carpet,
-/area/shuttle/escape)
-"dfp" = (
-/obj/machinery/door/airlock/shuttle{
-	id_tag = "Emeregency_Shuttle_Right_Airlock_Lock";
-	name = "Emergency Shuttle Airlock"
-	},
-/turf/open/floor/wood,
-/area/shuttle/escape)
-"dfo" = (
-/obj/structure/extinguisher_cabinet{
-	pixel_x = 27;
-	pixel_y = 0
-	},
-/obj/structure/chair/comfy/shuttle{
-	dir = 8
-	},
-/turf/open/floor/plasteel/neutral/side{
-	dir = 4
-	},
-/area/shuttle/escape)
-"dfn" = (
-/obj/structure/chair/comfy/shuttle,
-/obj/item/device/radio/intercom{
-	dir = 4;
-	name = "Station Intercom (General)";
-	pixel_x = 0;
-	pixel_y = 24
-	},
-/turf/open/floor/wood,
-/area/shuttle/escape)
-"dfm" = (
-/obj/structure/chair/comfy/shuttle,
-/turf/open/floor/wood,
-/area/shuttle/escape)
-"dfl" = (
-/obj/structure/grille,
-/obj/structure/window/shuttle,
-/obj/machinery/door/poddoor/shutters{
-	dir = 8;
-	id = "Emergency_Shuttle_Shutters";
-	name = "Emergency Shuttle shutters"
-	},
-/turf/open/floor/plating,
-/area/shuttle/escape)
-"dfk" = (
-/obj/machinery/vending/medical,
-/turf/open/floor/plasteel/neutral{
-	dir = 6;
-	icon_state = "whiteblue"
-	},
-/area/shuttle/escape)
-"dfj" = (
-/obj/item/device/radio/intercom{
-	broadcasting = 0;
-	listening = 1;
-	name = "Station Intercom (General)";
-	pixel_y = -30
-	},
-/turf/open/floor/plasteel/neutral{
-	icon_state = "whiteblue"
-	},
-/area/shuttle/escape)
-"dfi" = (
-/obj/machinery/sleeper{
-	icon_state = "sleeper-open";
-	dir = 4
-	},
-/turf/open/floor/plasteel/neutral{
-	dir = 10;
-	icon_state = "whiteblue"
-	},
-/area/shuttle/escape)
-"dfh" = (
-/obj/structure/chair/comfy/shuttle{
-	dir = 8
-	},
-/turf/open/floor/plasteel/neutral/side{
-	dir = 4
-	},
-/area/shuttle/escape)
-"dfg" = (
-/obj/item/device/radio/intercom{
-	dir = 4;
-	name = "Station Intercom (General)";
-	pixel_x = -31
-	},
-/obj/structure/chair/comfy/shuttle{
-	dir = 4
-	},
-/turf/open/floor/plasteel/neutral/side{
-	dir = 8
-	},
-/area/shuttle/escape)
-"dff" = (
-/obj/structure/grille,
-/obj/structure/window/shuttle,
-/obj/machinery/door/poddoor/shutters{
-	dir = 4;
-	id = "Emergency_Shuttle_Shutters";
-	name = "Emergency Shuttle shutters"
-	},
-/turf/open/floor/plating,
-/area/shuttle/escape)
-"dfe" = (
-/obj/structure/chair/comfy/shuttle{
-	dir = 8
-	},
-/turf/open/floor/plasteel/neutral{
-	dir = 4;
-	icon_state = "whiteblue"
-	},
-/area/shuttle/escape)
-"dfd" = (
-/turf/open/floor/plasteel/neutral{
-	icon_state = "white"
-	},
-/area/shuttle/escape)
-"dfc" = (
-/obj/machinery/sleeper{
-	icon_state = "sleeper-open";
-	dir = 4
-	},
-/turf/open/floor/plasteel/neutral{
-	dir = 8;
-	icon_state = "whiteblue"
-	},
-/area/shuttle/escape)
-"dfb" = (
-/obj/structure/reagent_dispensers/peppertank{
-	pixel_x = 0;
-	pixel_y = -29
-	},
-/obj/structure/chair/comfy/shuttle/black{
-	tag = "icon-shblack (NORTH)";
-	icon_state = "shblack";
+"des" = (
+/obj/structure/rack{
 	dir = 1
 	},
-/turf/open/floor/plasteel/shuttle/red,
-/area/shuttle/escape)
-"dfa" = (
-/obj/structure/chair/comfy/shuttle/black{
-	tag = "icon-shblack (NORTH)";
-	icon_state = "shblack";
-	dir = 1
-	},
-/turf/open/floor/plasteel/shuttle/red,
-/area/shuttle/escape)
-"deZ" = (
-/obj/structure/table,
-/obj/machinery/recharger{
-	active_power_usage = 0;
-	idle_power_usage = 0;
-	use_power = 0
-	},
-/obj/machinery/button/flasher{
-	id = "emshuttleflash";
-	name = "brig flasher button";
-	pixel_y = -23;
-	req_access_txt = "0";
-	req_one_access_txt = "1;63;19"
-	},
-/obj/item/device/radio/intercom{
-	dir = 4;
-	name = "Station Intercom (General)";
-	pixel_x = -31
-	},
-/turf/open/floor/plasteel/shuttle/red,
-/area/shuttle/escape)
-"deY" = (
-/obj/structure/chair/comfy/shuttle{
-	dir = 8
-	},
-/turf/open/floor/plasteel/neutral{
-	dir = 5;
-	icon_state = "whiteblue"
-	},
-/area/shuttle/escape)
-"deX" = (
-/turf/open/floor/plasteel/neutral{
-	dir = 1;
-	icon_state = "whiteblue"
-	},
-/area/shuttle/escape)
-"deW" = (
-/turf/open/floor/plasteel/neutral{
-	dir = 9;
-	icon_state = "whiteblue"
-	},
-/area/shuttle/escape)
-"deV" = (
-/obj/machinery/door/airlock/glass_medical{
-	id_tag = null;
-	name = "Escape Shuttle Infirmary";
-	req_access_txt = "0"
-	},
-/turf/open/floor/plasteel/whitebot/delivery,
-/area/shuttle/escape)
-"deU" = (
-/obj/machinery/door/airlock/glass_security{
-	name = "Brig";
-	req_access_txt = "2"
-	},
-/turf/open/floor/plasteel/shuttle/red,
-/area/shuttle/escape)
-"deT" = (
-/turf/open/floor/plasteel/shuttle/red,
-/area/shuttle/escape)
-"deS" = (
-/obj/machinery/door/airlock/shuttle{
-	id_tag = "Emeregency_Shuttle_Right_Airlock_Lock";
-	name = "Emergency Shuttle Airlock"
-	},
-/turf/open/floor/plasteel/shuttle/red,
-/area/shuttle/escape)
-"deR" = (
-/obj/structure/table,
-/obj/item/weapon/scalpel{
-	pixel_y = 12
-	},
-/obj/item/weapon/circular_saw,
-/obj/item/weapon/retractor{
-	pixel_x = 4
-	},
-/obj/item/weapon/hemostat{
-	pixel_x = -4
-	},
-/obj/item/clothing/gloves/color/latex,
-/obj/item/clothing/mask/surgical,
-/obj/structure/sign/nosmoking_2{
-	pixel_x = 32
-	},
-/obj/machinery/status_display{
-	pixel_y = 31
-	},
-/turf/open/floor/plasteel/whiteblue,
-/area/shuttle/escape)
-"deQ" = (
-/obj/structure/table/optable,
-/obj/item/weapon/surgical_drapes,
-/obj/machinery/vending/wallmed{
-	name = "Emergency NanoMed";
-	pixel_x = 0;
-	pixel_y = 30;
-	req_access_txt = "0";
-	use_power = 0
-	},
-/turf/open/floor/plasteel/whiteblue,
-/area/shuttle/escape)
-"deP" = (
-/obj/structure/curtain/medical,
-/obj/machinery/shower{
-	dir = 4;
-	icon_state = "shower";
-	pixel_x = 6
-	},
-/turf/open/floor/plasteel{
-	icon_state = "freezerfloor"
-	},
-/area/shuttle/escape)
-"deO" = (
-/obj/structure/chair/comfy/shuttle{
-	dir = 8
-	},
-/turf/open/floor/plasteel/neutral/corner{
-	dir = 4
-	},
-/area/shuttle/escape)
-"deN" = (
-/obj/structure/chair/comfy/shuttle{
-	dir = 4
-	},
-/turf/open/floor/plasteel/neutral/corner{
-	dir = 1
-	},
-/area/shuttle/escape)
-"deM" = (
-/obj/structure/grille,
-/obj/structure/window/shuttle,
-/turf/open/floor/plating,
-/area/shuttle/escape)
-"deL" = (
-/obj/structure/chair/comfy/shuttle/black,
-/turf/open/floor/plasteel/shuttle/red,
-/area/shuttle/escape)
-"deK" = (
-/obj/structure/chair/comfy/shuttle/black,
-/obj/machinery/flasher{
-	id = "emshuttleflash";
-	pixel_y = 24
-	},
-/turf/open/floor/plasteel/shuttle/red,
-/area/shuttle/escape)
-"deJ" = (
-/obj/structure/chair/comfy/shuttle/black,
-/obj/machinery/status_display{
-	pixel_y = 31
-	},
-/turf/open/floor/plasteel/shuttle/red,
-/area/shuttle/escape)
-"deI" = (
-/obj/structure/sign/bluecross_2{
-	pixel_x = 32
-	},
-/obj/structure/chair/comfy/shuttle{
-	dir = 8
-	},
-/turf/open/floor/plasteel/neutral/side{
-	dir = 4
-	},
-/area/shuttle/escape)
-"deH" = (
-/obj/structure/chair/comfy/shuttle{
-	dir = 4
-	},
-/turf/open/floor/plasteel/neutral/side{
-	dir = 8
-	},
-/area/shuttle/escape)
-"deG" = (
-/obj/machinery/door/airlock/glass_command{
-	name = "Shuttle E.V.A Storage"
-	},
-/turf/open/floor/plasteel{
-	icon_state = "delivery";
-	name = "floor"
-	},
-/area/shuttle/escape)
-"deF" = (
-/obj/structure/window/shuttle,
-/obj/machinery/door/poddoor/shutters{
-	dir = 8;
-	id = "Emergency_Shuttle_Shutters";
-	name = "Emergency Shuttle shutters"
-	},
-/obj/structure/grille,
-/turf/open/floor/plating,
-/area/shuttle/escape)
-"deE" = (
-/obj/machinery/suit_storage_unit/standard_unit,
-/turf/open/floor/plasteel{
-	dir = 2;
-	icon_state = "bot"
-	},
-/area/shuttle/escape)
-"deD" = (
-/obj/structure/window/shuttle,
-/obj/structure/grille,
-/turf/open/floor/plating,
-/area/shuttle/escape)
-"deC" = (
-/obj/machinery/shower{
-	dir = 8;
-	icon_state = "shower";
-	name = "emergency shower"
-	},
-/turf/open/floor/plasteel,
-/area/shuttle/escape)
-"deB" = (
-/turf/open/floor/plasteel/neutral/corner{
-	dir = 1
-	},
-/area/shuttle/escape)
-"deA" = (
-/turf/open/floor/plasteel/neutral/corner{
-	dir = 4
-	},
-/area/shuttle/escape)
-"dez" = (
-/obj/structure/closet/crate/bin{
-	pixel_y = 0
-	},
+/obj/item/weapon/tank/internals/oxygen/red,
+/obj/item/clothing/suit/fire/firefighter,
+/obj/item/clothing/mask/gas,
+/obj/item/clothing/head/hardhat/red,
 /turf/open/floor/plasteel{
 	icon_state = "bot";
 	dir = 1
 	},
-/area/shuttle/escape)
-"dey" = (
-/obj/machinery/vending/cola,
-/turf/open/floor/plasteel{
-	icon_state = "bot";
-	dir = 1
-	},
-/area/shuttle/escape)
-"dex" = (
-/obj/machinery/vending/snack,
-/turf/open/floor/plasteel{
-	icon_state = "bot";
-	dir = 1
-	},
-/area/shuttle/escape)
-"dew" = (
-/obj/machinery/vending/cigarette,
-/turf/open/floor/plasteel{
-	icon_state = "bot";
-	dir = 1
-	},
-/area/shuttle/escape)
-"dev" = (
-/obj/machinery/recharge_station,
-/obj/structure/window/reinforced,
-/turf/open/floor/plasteel{
-	icon_state = "bot";
-	dir = 1
-	},
-/area/shuttle/escape)
-"deu" = (
-/turf/open/floor/plasteel/neutral,
 /area/shuttle/escape)
 "det" = (
 /obj/item/clothing/suit/hazardvest{
@@ -95699,166 +95188,715 @@
 	dir = 1
 	},
 /area/shuttle/escape)
-"des" = (
-/obj/structure/rack{
-	dir = 1
-	},
-/obj/item/weapon/tank/internals/oxygen/red,
-/obj/item/clothing/suit/fire/firefighter,
-/obj/item/clothing/mask/gas,
-/obj/item/clothing/head/hardhat/red,
+"deu" = (
+/turf/open/floor/plasteel/neutral,
+/area/shuttle/escape)
+"dev" = (
+/obj/machinery/recharge_station,
+/obj/structure/window/reinforced,
 /turf/open/floor/plasteel{
 	icon_state = "bot";
 	dir = 1
 	},
 /area/shuttle/escape)
-"der" = (
+"dew" = (
+/obj/machinery/vending/cigarette,
+/turf/open/floor/plasteel{
+	icon_state = "bot";
+	dir = 1
+	},
+/area/shuttle/escape)
+"dex" = (
+/obj/machinery/vending/snack,
+/turf/open/floor/plasteel{
+	icon_state = "bot";
+	dir = 1
+	},
+/area/shuttle/escape)
+"dey" = (
+/obj/machinery/vending/cola,
+/turf/open/floor/plasteel{
+	icon_state = "bot";
+	dir = 1
+	},
+/area/shuttle/escape)
+"dez" = (
+/obj/structure/closet/crate/bin{
+	pixel_y = 0
+	},
+/turf/open/floor/plasteel{
+	icon_state = "bot";
+	dir = 1
+	},
+/area/shuttle/escape)
+"deA" = (
+/turf/open/floor/plasteel/neutral/corner{
+	dir = 4
+	},
+/area/shuttle/escape)
+"deB" = (
+/turf/open/floor/plasteel/neutral/corner{
+	dir = 1
+	},
+/area/shuttle/escape)
+"deC" = (
+/obj/machinery/shower{
+	dir = 8;
+	icon_state = "shower";
+	name = "emergency shower"
+	},
 /turf/open/floor/plasteel,
 /area/shuttle/escape)
-"deq" = (
-/obj/structure/tank_dispenser/oxygen{
-	layer = 2.7;
-	pixel_x = -1;
-	pixel_y = 2
+"deD" = (
+/obj/structure/window/shuttle,
+/obj/structure/grille,
+/turf/open/floor/plating,
+/area/shuttle/escape)
+"deE" = (
+/obj/machinery/suit_storage_unit/standard_unit,
+/turf/open/floor/plasteel{
+	dir = 2;
+	icon_state = "bot"
+	},
+/area/shuttle/escape)
+"deF" = (
+/obj/structure/window/shuttle,
+/obj/machinery/door/poddoor/shutters{
+	dir = 8;
+	id = "Emergency_Shuttle_Shutters";
+	name = "Emergency Shuttle shutters"
+	},
+/obj/structure/grille,
+/turf/open/floor/plating,
+/area/shuttle/escape)
+"deG" = (
+/obj/machinery/door/airlock/glass_command{
+	name = "Shuttle E.V.A Storage"
 	},
 /turf/open/floor/plasteel{
-	icon_state = "bot";
+	icon_state = "delivery";
+	name = "floor"
+	},
+/area/shuttle/escape)
+"deH" = (
+/obj/structure/chair/comfy/shuttle{
+	dir = 4
+	},
+/turf/open/floor/plasteel/neutral/side{
+	dir = 8
+	},
+/area/shuttle/escape)
+"deI" = (
+/obj/structure/sign/bluecross_2{
+	pixel_x = 32
+	},
+/obj/structure/chair/comfy/shuttle{
+	dir = 8
+	},
+/turf/open/floor/plasteel/neutral/side{
+	dir = 4
+	},
+/area/shuttle/escape)
+"deJ" = (
+/obj/structure/chair/comfy/shuttle/black,
+/obj/machinery/status_display{
+	pixel_y = 31
+	},
+/turf/open/floor/plasteel/shuttle/red,
+/area/shuttle/escape)
+"deK" = (
+/obj/structure/chair/comfy/shuttle/black,
+/obj/machinery/flasher{
+	id = "emshuttleflash";
+	pixel_y = 24
+	},
+/turf/open/floor/plasteel/shuttle/red,
+/area/shuttle/escape)
+"deL" = (
+/obj/structure/chair/comfy/shuttle/black,
+/turf/open/floor/plasteel/shuttle/red,
+/area/shuttle/escape)
+"deM" = (
+/obj/structure/grille,
+/obj/structure/window/shuttle,
+/turf/open/floor/plating,
+/area/shuttle/escape)
+"deN" = (
+/obj/structure/chair/comfy/shuttle{
+	dir = 4
+	},
+/turf/open/floor/plasteel/neutral/corner{
 	dir = 1
 	},
 /area/shuttle/escape)
-"dep" = (
-/obj/structure/shuttle/engine/platform{
-	dir = 1
+"deO" = (
+/obj/structure/chair/comfy/shuttle{
+	dir = 8
 	},
-/turf/closed/wall/shuttle/smooth/nodiagonal,
+/turf/open/floor/plasteel/neutral/corner{
+	dir = 4
+	},
 /area/shuttle/escape)
-"deo" = (
-/obj/structure/shuttle/engine/propulsion{
-	icon_state = "propulsion_r";
-	dir = 1
-	},
-/obj/structure/shuttle/engine/platform,
-/turf/open/floor/plating/airless,
-/area/shuttle/escape)
-"den" = (
-/obj/structure/closet/crate/medical{
-	name = "medical crate"
-	},
-/obj/item/weapon/storage/firstaid/regular,
-/obj/item/weapon/storage/firstaid/o2{
-	pixel_x = 3;
-	pixel_y = 3
-	},
-/obj/item/weapon/storage/firstaid/toxin{
-	pixel_x = -4;
-	pixel_y = 3
-	},
-/mob/living/simple_animal/bot/medbot{
-	name = "\improper emergency medibot";
-	pixel_x = -3;
-	pixel_y = 2
+"deP" = (
+/obj/structure/curtain/medical,
+/obj/machinery/shower{
+	dir = 4;
+	icon_state = "shower";
+	pixel_x = 6
 	},
 /turf/open/floor/plasteel{
-	icon_state = "bot";
-	dir = 1
+	icon_state = "freezerfloor"
 	},
 /area/shuttle/escape)
-"dem" = (
+"deQ" = (
+/obj/structure/table/optable,
+/obj/item/weapon/surgical_drapes,
+/obj/machinery/vending/wallmed{
+	name = "Emergency NanoMed";
+	pixel_x = 0;
+	pixel_y = 30;
+	req_access_txt = "0";
+	use_power = 0
+	},
+/turf/open/floor/plasteel/whiteblue,
+/area/shuttle/escape)
+"deR" = (
+/obj/structure/table,
+/obj/item/weapon/scalpel{
+	pixel_y = 12
+	},
+/obj/item/weapon/circular_saw,
+/obj/item/weapon/retractor{
+	pixel_x = 4
+	},
+/obj/item/weapon/hemostat{
+	pixel_x = -4
+	},
+/obj/item/clothing/gloves/color/latex,
+/obj/item/clothing/mask/surgical,
+/obj/structure/sign/nosmoking_2{
+	pixel_x = 32
+	},
+/obj/machinery/status_display{
+	pixel_y = 31
+	},
+/turf/open/floor/plasteel/whiteblue,
+/area/shuttle/escape)
+"deS" = (
+/obj/machinery/door/airlock/shuttle{
+	id_tag = "Emeregency_Shuttle_Right_Airlock_Lock";
+	name = "Emergency Shuttle Airlock"
+	},
+/turf/open/floor/plasteel/shuttle/red,
+/area/shuttle/escape)
+"deT" = (
+/turf/open/floor/plasteel/shuttle/red,
+/area/shuttle/escape)
+"deU" = (
+/obj/machinery/door/airlock/glass_security{
+	name = "Brig";
+	req_access_txt = "2"
+	},
+/turf/open/floor/plasteel/shuttle/red,
+/area/shuttle/escape)
+"deV" = (
+/obj/machinery/door/airlock/glass_medical{
+	id_tag = null;
+	name = "Escape Shuttle Infirmary";
+	req_access_txt = "0"
+	},
+/turf/open/floor/plasteel/whitebot/delivery,
+/area/shuttle/escape)
+"deW" = (
+/turf/open/floor/plasteel/neutral{
+	dir = 9;
+	icon_state = "whiteblue"
+	},
+/area/shuttle/escape)
+"deX" = (
+/turf/open/floor/plasteel/neutral{
+	dir = 1;
+	icon_state = "whiteblue"
+	},
+/area/shuttle/escape)
+"deY" = (
+/obj/structure/chair/comfy/shuttle{
+	dir = 8
+	},
+/turf/open/floor/plasteel/neutral{
+	dir = 5;
+	icon_state = "whiteblue"
+	},
+/area/shuttle/escape)
+"deZ" = (
+/obj/structure/table,
+/obj/machinery/recharger{
+	active_power_usage = 0;
+	idle_power_usage = 0;
+	use_power = 0
+	},
+/obj/machinery/button/flasher{
+	id = "emshuttleflash";
+	name = "brig flasher button";
+	pixel_y = -23;
+	req_access_txt = "0";
+	req_one_access_txt = "1;63;19"
+	},
+/obj/item/device/radio/intercom{
+	dir = 4;
+	name = "Station Intercom (General)";
+	pixel_x = -31
+	},
+/turf/open/floor/plasteel/shuttle/red,
+/area/shuttle/escape)
+"dfa" = (
+/obj/structure/chair/comfy/shuttle/black{
+	tag = "icon-shblack (NORTH)";
+	icon_state = "shblack";
+	dir = 1
+	},
+/turf/open/floor/plasteel/shuttle/red,
+/area/shuttle/escape)
+"dfb" = (
+/obj/structure/reagent_dispensers/peppertank{
+	pixel_x = 0;
+	pixel_y = -29
+	},
+/obj/structure/chair/comfy/shuttle/black{
+	tag = "icon-shblack (NORTH)";
+	icon_state = "shblack";
+	dir = 1
+	},
+/turf/open/floor/plasteel/shuttle/red,
+/area/shuttle/escape)
+"dfc" = (
+/obj/machinery/sleeper{
+	icon_state = "sleeper-open";
+	dir = 4
+	},
+/turf/open/floor/plasteel/neutral{
+	dir = 8;
+	icon_state = "whiteblue"
+	},
+/area/shuttle/escape)
+"dfd" = (
+/turf/open/floor/plasteel/neutral{
+	icon_state = "white"
+	},
+/area/shuttle/escape)
+"dfe" = (
+/obj/structure/chair/comfy/shuttle{
+	dir = 8
+	},
+/turf/open/floor/plasteel/neutral{
+	dir = 4;
+	icon_state = "whiteblue"
+	},
+/area/shuttle/escape)
+"dff" = (
+/obj/structure/grille,
+/obj/structure/window/shuttle,
+/obj/machinery/door/poddoor/shutters{
+	dir = 4;
+	id = "Emergency_Shuttle_Shutters";
+	name = "Emergency Shuttle shutters"
+	},
+/turf/open/floor/plating,
+/area/shuttle/escape)
+"dfg" = (
+/obj/item/device/radio/intercom{
+	dir = 4;
+	name = "Station Intercom (General)";
+	pixel_x = -31
+	},
+/obj/structure/chair/comfy/shuttle{
+	dir = 4
+	},
+/turf/open/floor/plasteel/neutral/side{
+	dir = 8
+	},
+/area/shuttle/escape)
+"dfh" = (
+/obj/structure/chair/comfy/shuttle{
+	dir = 8
+	},
+/turf/open/floor/plasteel/neutral/side{
+	dir = 4
+	},
+/area/shuttle/escape)
+"dfi" = (
+/obj/machinery/sleeper{
+	icon_state = "sleeper-open";
+	dir = 4
+	},
+/turf/open/floor/plasteel/neutral{
+	dir = 10;
+	icon_state = "whiteblue"
+	},
+/area/shuttle/escape)
+"dfj" = (
+/obj/item/device/radio/intercom{
+	broadcasting = 0;
+	listening = 1;
+	name = "Station Intercom (General)";
+	pixel_y = -30
+	},
+/turf/open/floor/plasteel/neutral{
+	icon_state = "whiteblue"
+	},
+/area/shuttle/escape)
+"dfk" = (
+/obj/machinery/vending/medical,
+/turf/open/floor/plasteel/neutral{
+	dir = 6;
+	icon_state = "whiteblue"
+	},
+/area/shuttle/escape)
+"dfl" = (
+/obj/structure/grille,
+/obj/structure/window/shuttle,
+/obj/machinery/door/poddoor/shutters{
+	dir = 8;
+	id = "Emergency_Shuttle_Shutters";
+	name = "Emergency Shuttle shutters"
+	},
+/turf/open/floor/plating,
+/area/shuttle/escape)
+"dfm" = (
+/obj/structure/chair/comfy/shuttle,
+/turf/open/floor/wood,
+/area/shuttle/escape)
+"dfn" = (
+/obj/structure/chair/comfy/shuttle,
+/obj/item/device/radio/intercom{
+	dir = 4;
+	name = "Station Intercom (General)";
+	pixel_x = 0;
+	pixel_y = 24
+	},
+/turf/open/floor/wood,
+/area/shuttle/escape)
+"dfo" = (
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 27;
+	pixel_y = 0
+	},
+/obj/structure/chair/comfy/shuttle{
+	dir = 8
+	},
+/turf/open/floor/plasteel/neutral/side{
+	dir = 4
+	},
+/area/shuttle/escape)
+"dfp" = (
+/obj/machinery/door/airlock/shuttle{
+	id_tag = "Emeregency_Shuttle_Right_Airlock_Lock";
+	name = "Emergency Shuttle Airlock"
+	},
+/turf/open/floor/wood,
+/area/shuttle/escape)
+"dfq" = (
+/turf/open/floor/carpet,
+/area/shuttle/escape)
+"dfr" = (
+/obj/machinery/door/airlock/shuttle{
+	name = "Emergency Shuttle Airlock"
+	},
+/turf/open/floor/wood,
+/area/shuttle/escape)
+"dfs" = (
+/obj/structure/chair/comfy/shuttle,
+/obj/item/device/radio/intercom{
+	broadcasting = 0;
+	listening = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 24
+	},
+/turf/open/floor/plasteel{
+	dir = 9;
+	icon_state = "whitepurple"
+	},
+/area/shuttle/escape)
+"dft" = (
+/obj/structure/table,
+/obj/machinery/button/door{
+	id = "HSS_cell_shuttle_1";
+	name = "HSS Cell A";
+	pixel_x = -6;
+	pixel_y = 26
+	},
+/obj/machinery/button/door{
+	id = "HSS_cell_shuttle_2";
+	name = "HSS Cell B";
+	pixel_x = 6;
+	pixel_y = 26
+	},
+/obj/item/weapon/folder/white,
+/turf/open/floor/plasteel{
+	dir = 1;
+	icon_state = "whitepurple"
+	},
+/area/shuttle/escape)
+"dfu" = (
+/obj/structure/closet/secure_closet/rnd_st,
+/turf/open/floor/plasteel{
+	dir = 5;
+	icon_state = "whitepurple";
+	tag = "icon-whitehall (WEST)"
+	},
+/area/shuttle/escape)
+"dfv" = (
+/obj/structure/chair/comfy/shuttle{
+	dir = 4
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -27;
+	pixel_y = 0
+	},
+/turf/open/floor/wood,
+/area/shuttle/escape)
+"dfw" = (
+/turf/open/floor/wood,
+/area/shuttle/escape)
+"dfx" = (
+/obj/structure/chair/comfy/shuttle{
+	dir = 8
+	},
+/turf/open/floor/wood,
+/area/shuttle/escape)
+"dfy" = (
+/obj/structure/chair/comfy/shuttle{
+	dir = 4
+	},
+/turf/open/floor/plasteel,
+/area/shuttle/escape)
+"dfz" = (
+/obj/machinery/door/airlock/glass_science{
+	name = "Shuttle HSB";
+	req_access_txt = "47"
+	},
+/turf/open/floor/plasteel/whitebot/delivery,
+/area/shuttle/escape)
+"dfA" = (
+/turf/open/floor/plasteel{
+	dir = 10;
+	icon_state = "whitepurple";
+	tag = "icon-whitehall (WEST)"
+	},
+/area/shuttle/escape)
+"dfB" = (
+/obj/machinery/computer/security/telescreen{
+	dir = 1;
+	name = "Storage Cell Monitor";
+	network = list("ST_shuttle");
+	pixel_x = 0;
+	pixel_y = -30
+	},
+/turf/open/floor/plasteel{
+	dir = 2;
+	icon_state = "whitepurple"
+	},
+/area/shuttle/escape)
+"dfC" = (
+/obj/structure/sink{
+	dir = 4;
+	icon_state = "sink";
+	pixel_x = 11;
+	pixel_y = 0
+	},
+/turf/open/floor/plasteel{
+	dir = 6;
+	icon_state = "whitepurple"
+	},
+/area/shuttle/escape)
+"dfD" = (
+/obj/structure/chair/comfy/shuttle{
+	dir = 8
+	},
 /turf/open/floor/plasteel/neutral/corner,
 /area/shuttle/escape)
-"del" = (
+"dfE" = (
+/obj/machinery/door/poddoor{
+	id = "HSS_cell_shuttle_1";
+	name = "HSS Cell A"
+	},
+/turf/open/floor/plasteel/whitebot/delivery,
+/area/shuttle/escape)
+"dfF" = (
+/obj/machinery/door/poddoor{
+	id = "HSS_cell_shuttle_2";
+	name = "HSS Cell B"
+	},
+/turf/open/floor/plasteel/whitebot/delivery,
+/area/shuttle/escape)
+"dfG" = (
+/obj/structure/chair/comfy/shuttle{
+	dir = 1
+	},
+/obj/machinery/status_display{
+	pixel_y = -31
+	},
+/turf/open/floor/wood,
+/area/shuttle/escape)
+"dfH" = (
+/obj/machinery/vending/wallmed{
+	name = "Emergency NanoMed";
+	pixel_x = 0;
+	pixel_y = -30;
+	req_access_txt = "0";
+	use_power = 0
+	},
+/obj/structure/chair/comfy/shuttle{
+	dir = 1
+	},
+/turf/open/floor/wood,
+/area/shuttle/escape)
+"dfI" = (
+/obj/structure/chair/comfy/shuttle{
+	dir = 1
+	},
+/turf/open/floor/wood,
+/area/shuttle/escape)
+"dfJ" = (
+/obj/structure/chair/comfy/shuttle{
+	dir = 4
+	},
 /turf/open/floor/plasteel/neutral/corner{
 	dir = 8
 	},
 /area/shuttle/escape)
-"dek" = (
-/obj/structure/table,
-/obj/item/stack/medical/gauze,
-/obj/item/stack/medical/bruise_pack,
-/obj/item/stack/medical/ointment,
-/turf/open/floor/plasteel{
-	icon_state = "bot";
-	dir = 1
+"dfK" = (
+/obj/machinery/camera{
+	c_tag = "Shuttle - Storage - Cell A";
+	dir = 1;
+	network = list("ST_shuttle")
+	},
+/turf/open/floor/plasteel/whitebot,
+/area/shuttle/escape)
+"dfL" = (
+/obj/machinery/camera{
+	c_tag = "Shuttle - Storage - Cell B";
+	dir = 1;
+	network = list("ST_shuttle")
+	},
+/turf/open/floor/plasteel/whitebot,
+/area/shuttle/escape)
+"dfM" = (
+/obj/machinery/flasher{
+	id = "emshuttlebridgeflash";
+	pixel_y = -24;
+	use_power = 1
+	},
+/obj/structure/chair/comfy/shuttle{
+	dir = 4
+	},
+/turf/open/floor/plasteel/neutral/side{
+	dir = 10
 	},
 /area/shuttle/escape)
-"dej" = (
-/obj/structure/shuttle/engine/propulsion{
-	icon_state = "propulsion_l";
-	dir = 1
+"dfN" = (
+/obj/structure/chair/comfy/shuttle{
+	dir = 8
 	},
-/obj/structure/shuttle/engine/platform,
-/turf/open/floor/plating/airless,
-/area/shuttle/escape)
-"dei" = (
-/obj/structure/shuttle/engine/propulsion{
-	icon_state = "propulsion";
-	dir = 1
+/obj/machinery/flasher{
+	id = "emshuttlebridgeflash";
+	pixel_y = -24;
+	use_power = 1
 	},
-/obj/structure/shuttle/engine/platform,
-/turf/open/floor/plating/airless,
-/area/shuttle/escape)
-"deh" = (
-/obj/machinery/door/airlock/shuttle{
-	id_tag = "Emeregency_Shuttle_Rear_Airlock_Lock";
-	name = "Emergency Shuttle's Exit"
-	},
-/obj/docking_port/mobile/emergency{
-	dheight = 0;
-	dir = 2;
-	dwidth = 6;
-	height = 23;
-	port_angle = -180;
-	width = 14
-	},
-/obj/docking_port/stationary{
-	dheight = 0;
-	dir = 2;
-	dwidth = 6;
-	height = 23;
-	id = "emergency_home";
-	name = "emergency evac bay";
-	width = 14
-	},
-/turf/open/floor/plasteel{
-	icon_state = "delivery";
-	name = "floor"
+/turf/open/floor/plasteel/neutral/side{
+	dir = 6
 	},
 /area/shuttle/escape)
-"deg" = (
-/obj/machinery/door/airlock/shuttle{
-	id_tag = "Emeregency_Shuttle_Rear_Airlock_Lock";
-	name = "Emergency Shuttle's Exit"
+"dfO" = (
+/obj/machinery/door/airlock/glass_command{
+	name = "Cockpit";
+	req_access_txt = "19"
 	},
 /turf/open/floor/plasteel{
 	icon_state = "delivery";
 	name = "floor"
 	},
 /area/shuttle/escape)
-"def" = (
-/turf/closed/wall/shuttle/smooth/nodiagonal,
+"dfP" = (
+/obj/machinery/status_display{
+	pixel_y = 31
+	},
+/obj/machinery/computer/security,
+/turf/open/floor/plasteel/neutral/side{
+	dir = 4
+	},
 /area/shuttle/escape)
-"dee" = (
-/turf/closed/wall/shuttle/smooth/overspace,
+"dfQ" = (
+/obj/structure/chair/comfy/shuttle{
+	dir = 8
+	},
+/obj/item/device/radio/intercom{
+	dir = 4;
+	name = "Station Intercom (General)";
+	pixel_x = 0;
+	pixel_y = 24
+	},
+/turf/open/floor/plasteel/red/side{
+	dir = 9
+	},
 /area/shuttle/escape)
-"ded" = (
+"dfR" = (
+/turf/open/floor/plasteel/red/corner{
+	dir = 1
+	},
+/area/shuttle/escape)
+"dfS" = (
+/turf/open/floor/plasteel/red/corner{
+	dir = 4
+	},
+/area/shuttle/escape)
+"dfT" = (
+/obj/machinery/button/flasher{
+	id = "emshuttlebridgeflash";
+	name = "cockpit flasher button";
+	pixel_y = 24;
+	req_access_txt = "0";
+	req_one_access_txt = "1;63;19"
+	},
+/turf/open/floor/plasteel/red/side{
+	dir = 5
+	},
+/area/shuttle/escape)
+"dfW" = (
+/obj/structure/closet/crate,
+/obj/effect/spawner/lootdrop/maintenance{
+	lootcount = 2;
+	name = "2maintenance loot spawner"
+	},
+/turf/open/floor/plating,
+/area/maintenance/atmos_control)
+"dfV" = (
+/obj/structure/lattice/catwalk,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
-/obj/structure/lattice/catwalk,
 /obj/structure/cable{
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8";
 	pixel_y = 0
 	},
-/obj/structure/transit_tube/horizontal,
-/obj/structure/transit_tube_pod{
-	tag = "icon-pod (EAST)";
-	icon_state = "pod";
-	dir = 4
-	},
+/obj/structure/transit_tube/crossing/horizontal,
 /turf/open/space,
 /area/space)
+"dfU" = (
+/obj/structure/filingcabinet,
+/obj/machinery/requests_console{
+	department = "Security";
+	departmentType = 5;
+	pixel_x = 30;
+	pixel_y = 0
+	},
+/turf/open/floor/plasteel{
+	icon_state = "red";
+	dir = 4
+	},
+/area/security/checkpoint/engineering)
 
 (1,1,1) = {"
 aaa
@@ -117365,7 +117403,7 @@ cEC
 cKy
 bZy
 cMD
-cNB
+cdd
 cOr
 bZy
 cQk
@@ -133009,8 +133047,8 @@ bWH
 bYa
 bZd
 bOk
-bWM
-cdc
+dfW
+bgc
 cey
 cfI
 chf
@@ -133781,7 +133819,7 @@ bYb
 bZg
 bOk
 cbC
-cdd
+byK
 cdg
 cfK
 chh
@@ -134037,8 +134075,8 @@ bOk
 bYc
 bZh
 bOk
-bWM
-bWM
+byK
+byK
 cdg
 cfK
 chi
@@ -138121,8 +138159,8 @@ aZB
 bbb
 bcP
 ben
-bgc
 bhu
+dfU
 biV
 bkK
 bmW
@@ -146352,9 +146390,9 @@ aai
 aai
 aai
 aai
-aaa
-buz
-aaa
+aai
+dfV
+aai
 aai
 aaa
 aaa
