@@ -432,8 +432,9 @@ var/next_mob_id = 0
 
 	//sandbox?
 	if(ticker)
-		if(ticker.mode.name == "sandbox")
-			client.allow_respawn = 1
+		if(ticker.mode)
+			if(ticker.mode.name == "sandbox")
+				client.allow_respawn = 1
 
 	//waiting
 	if(((world.time - src.timeofdeath) < 6000) && !client.allow_respawn)
