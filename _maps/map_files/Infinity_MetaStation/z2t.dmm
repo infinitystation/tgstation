@@ -3707,22 +3707,7 @@
 	name = "\improper Syndicate Cruiser"
 	})
 "jL" = (
-/obj/structure/window/reinforced{
-	color = "#FFFF00";
-	dir = 1
-	},
-/obj/structure/window/reinforced{
-	color = "#FFFF00";
-	dir = 8
-	},
-/obj/machinery/gun_turret/laser{
-	dir = 1
-	},
-/turf/open/floor/plating/airless/warnplate{
-	tag = "icon-plating_warn (NORTHWEST)";
-	icon_state = "plating_warn";
-	dir = 9
-	},
+/turf/open/space,
 /area/shuttle/syndicate{
 	name = "\improper Syndicate Cruiser"
 	})
@@ -3928,15 +3913,10 @@
 	name = "\improper Syndicate Cruiser"
 	})
 "kk" = (
-/obj/structure/window/reinforced{
-	color = "#FFFF00";
-	dir = 8
+/obj/machinery/porta_turret/syndicate{
+	dir = 2
 	},
-/turf/open/floor/plating/airless/warnplate{
-	tag = "icon-plating_warn (WEST)";
-	icon_state = "plating_warn";
-	dir = 8
-	},
+/turf/closed/wall,
 /area/shuttle/syndicate{
 	name = "\improper Syndicate Cruiser"
 	})
@@ -6320,7 +6300,7 @@
 	icon_state = "wall3";
 	dir = 9
 	},
-/area/centcom/lobby)
+/area/space)
 "pW" = (
 /turf/closed/wall/shuttle/syndie,
 /area/centcom/lobby)
@@ -7771,7 +7751,7 @@
 	height = 22;
 	id = "syndicate";
 	name = "syndicate infiltrator";
-	port_angle = 180;
+	port_angle = 0;
 	width = 17
 	},
 /obj/docking_port/stationary{
@@ -12001,7 +11981,7 @@
 	height = 12;
 	id = "ferry";
 	name = "ferry shuttle";
-	port_angle = 180;
+	port_angle = 0;
 	width = 7
 	},
 /obj/docking_port/stationary{
@@ -12763,6 +12743,12 @@
 /obj/structure/chair/office/dark{
 	dir = 8
 	},
+/obj/effect/step_trigger/sound_effect{
+	extra_range = 4;
+	name = "Next";
+	sound = 'sound/effects/next.ogg';
+	triggerer_only = 0
+	},
 /turf/open/floor/plasteel/black,
 /area/centcom/lobby)
 "FS" = (
@@ -13153,12 +13139,6 @@
 	name = "Centcom Customs";
 	opacity = 1;
 	req_access_txt = "101"
-	},
-/obj/effect/step_trigger/sound_effect{
-	extra_range = 4;
-	name = "Next";
-	sound = 'sound/effects/next.ogg';
-	triggerer_only = 0
 	},
 /turf/open/floor/plasteel/darkvault{
 	dir = 1;
@@ -15067,6 +15047,7 @@
 	height = 23;
 	id = "cruiser";
 	name = "Cruiser";
+	port_angle = 90;
 	width = 15
 	},
 /obj/machinery/door/airlock/glass_external,
@@ -19130,21 +19111,10 @@
 	name = "\improper Syndicate Cruiser"
 	})
 "TT" = (
-/obj/machinery/gun_turret/laser{
-	dir = 2
+/obj/machinery/porta_turret/syndicate{
+	dir = 1
 	},
-/obj/structure/window/reinforced{
-	color = "#FFFF00";
-	dir = 4
-	},
-/obj/structure/window/reinforced{
-	color = "#FFFF00"
-	},
-/turf/open/floor/plating/airless/warnplate{
-	tag = "icon-plating_warn (SOUTHEAST)";
-	icon_state = "plating_warn";
-	dir = 6
-	},
+/turf/closed/wall/r_wall,
 /area/shuttle/syndicate{
 	name = "\improper Syndicate Cruiser"
 	})
@@ -19360,10 +19330,10 @@
 	height = 29;
 	id = "Battleship";
 	name = "Slaughterer";
-	port_angle = -270;
+	port_angle = -180;
 	width = 19
 	},
-/turf/closed/wall/r_wall,
+/turf/open/floor/plating,
 /area/shuttle/syndicate{
 	name = "\improper Syndicate Cruiser"
 	})
@@ -19621,10 +19591,10 @@ aa
 aa
 aa
 aa
-jz
-kk
-lQ
-kk
+jL
+jL
+jL
+TT
 jz
 jz
 jz
@@ -19870,10 +19840,10 @@ aa
 aa
 aa
 aa
-jz
-kk
-kv
-kk
+jL
+jL
+jL
+TT
 jz
 jz
 jz
@@ -20382,7 +20352,7 @@ aa
 aa
 aa
 aa
-jM
+jL
 jz
 jR
 kl
@@ -20639,7 +20609,7 @@ aa
 aa
 aa
 aa
-jz
+TT
 jz
 jX
 kn
@@ -21176,7 +21146,7 @@ jz
 jz
 jz
 kk
-TR
+jL
 "}
 (8,1,1) = {"
 aa
@@ -21433,7 +21403,7 @@ Da
 nf
 jz
 jz
-TS
+jL
 "}
 (9,1,1) = {"
 aa
@@ -21947,7 +21917,7 @@ lf
 mk
 Ka
 jz
-jz
+jL
 "}
 (11,1,1) = {"
 aa
@@ -22204,7 +22174,7 @@ nf
 nf
 jz
 jz
-TS
+jL
 "}
 (12,1,1) = {"
 aa
@@ -22460,8 +22430,8 @@ jz
 jz
 jz
 jz
-ku
-TT
+kk
+jL
 "}
 (13,1,1) = {"
 aa
@@ -22952,7 +22922,7 @@ aa
 aa
 aa
 aa
-jz
+TT
 jz
 ki
 kt
@@ -23209,7 +23179,7 @@ aa
 aa
 aa
 aa
-jM
+jL
 jz
 kj
 kt
@@ -23466,7 +23436,7 @@ aa
 aa
 aa
 aa
-jP
+jL
 jz
 jz
 jz
@@ -23725,10 +23695,10 @@ aa
 aa
 aa
 aa
-jz
-ku
-kE
-ku
+jL
+jL
+jL
+TT
 jz
 jz
 jz
@@ -23990,10 +23960,10 @@ aa
 aa
 aa
 aa
-jz
-ku
-lU
-ku
+jL
+jL
+jL
+TT
 jz
 mC
 mC
@@ -48902,7 +48872,7 @@ OJ
 OR
 Pb
 OS
-MG
+Pm
 Pt
 Py
 OS
@@ -61953,7 +61923,7 @@ aa
 BI
 AE
 AE
-pW
+MF
 aa
 aa
 aa
@@ -62210,7 +62180,7 @@ aa
 BI
 AE
 AE
-pW
+MF
 yV
 aa
 aa
@@ -62467,7 +62437,7 @@ aa
 BI
 aa
 aa
-qh
+KI
 aa
 aa
 aa
@@ -75773,34 +75743,34 @@ aa
 aa
 NG
 NW
-Oe
+NW
 NW
 NN
 NN
 NW
-Oe
+NW
 NW
 NN
 NN
 NW
-Oe
+NW
 NW
 NN
 NN
 NW
-Oe
 NW
-NN
-NN
-NN
-NW
-Oe
 NW
 NN
 NN
 NN
 NW
-Oe
+NW
+NW
+NN
+NN
+NN
+NW
+NW
 NW
 NN
 TA
@@ -76026,7 +75996,7 @@ aa
 aa
 NG
 NW
-Oe
+NW
 NW
 NN
 NN
@@ -76793,7 +76763,7 @@ aa
 aa
 aa
 aa
-NI
+NH
 NN
 NN
 NY
@@ -77822,7 +77792,7 @@ aa
 aa
 aa
 jm
-NI
+NH
 NN
 NN
 Oj
@@ -78849,7 +78819,7 @@ aa
 aa
 aa
 aa
-NI
+NH
 NN
 NN
 NZ
@@ -79624,7 +79594,7 @@ aa
 aa
 NJ
 Ob
-Oo
+Ob
 Ob
 NN
 NN
@@ -79885,34 +79855,34 @@ aa
 aa
 NJ
 Ob
-Oo
+Ob
 Ob
 NN
 NN
 Ob
-Oo
+Ob
 Ob
 NN
 NN
 Ob
-Oo
+Ob
 Ob
 NN
 NN
 Ob
-Oo
 Ob
-NN
-NN
-NN
-Ob
-Oo
 Ob
 NN
 NN
 NN
 Ob
-Oo
+Ob
+Ob
+NN
+NN
+NN
+Ob
+Ob
 Ob
 NN
 TF

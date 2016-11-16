@@ -307,6 +307,36 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	name = "Dormitories"
 	icon_state = "Sleep"
 
+/area/crew_quarters/sleep/one
+	name = "Dormitories room 1"
+	icon = 'icons/turf/terror.dmi'
+	icon_state = "Sleep_one"
+
+/area/crew_quarters/sleep/two
+	name = "Dormitories room 2"
+	icon = 'icons/turf/terror.dmi'
+	icon_state = "Sleep_two"
+
+/area/crew_quarters/sleep/three
+	name = "Dormitories room 3"
+	icon = 'icons/turf/terror.dmi'
+	icon_state = "Sleep_three"
+
+/area/crew_quarters/sleep/four
+	name = "Dormitories room 4"
+	icon = 'icons/turf/terror.dmi'
+	icon_state = "Sleep_four"
+
+/area/crew_quarters/sleep/five
+	name = "Dormitories room 5"
+	icon = 'icons/turf/terror.dmi'
+	icon_state = "Sleep_five"
+
+/area/crew_quarters/sleep/six
+	name = "Dormitories room 6"
+	icon = 'icons/turf/terror.dmi'
+	icon_state = "Sleep_six"
+
 /area/crew_quarters/sleep_male
 	name = "Male Dorm"
 	icon_state = "Sleep"
