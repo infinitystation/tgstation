@@ -367,10 +367,12 @@
 
 /proc/flick_overlay(image/I, list/show_to, duration)
 	for(var/client/C in show_to)
-		C.images += I
+		if(C)
+			C.images += I
 	spawn(duration)
 		for(var/client/C in show_to)
-			C.images -= I
+			if(C)
+				C.images -= I
 
 /proc/get_active_player_count(var/alive_check = 0, var/afk_check = 0, var/human_check = 0)
 	// Get active players who are playing in the round
