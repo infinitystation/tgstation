@@ -8,12 +8,12 @@
 	cure_chance = 10
 	agent = "SBR 'Death'"
 	viable_mobtypes = list(/mob/living/carbon/human)
-	desc = "Неопознанное инкубатором биологическое оружие - бесконтрольное развитие, гарантированная мутация, бесповоротная смерть."
+	desc = "Неопознанное инкубатором биологическое оружие - бесконтрольное развитие, гарантированнаЯ мутациЯ, бесповоротнаЯ смерть. Для замедлениЯ процесса разрушениЯ организма, вводите спейсалин."
 	disease_flags = CAN_CARRY|CAN_RESIST
-	permeability_mod = 0.5
+	permeability_mod = 1
 	severity = BIOHAZARD
 
-/datum/disease/fluspanish/stage_act()
+/datum/disease/bio_weapon/stage_act()
 	..()
 	switch(stage)
 		if(2)
@@ -56,3 +56,5 @@
 				affected_mob.updatehealth()
 			if(prob(1))
 				affected_mob.vomit(10)
+
+	return
