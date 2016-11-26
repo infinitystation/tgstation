@@ -25,7 +25,8 @@
 			removed(target, 1)
 			qdel(src)
 			return -1
-		target.mind.remove_all_antag_light()
+		if(target.mind)
+			target.mind.remove_all_antag_light()
 		if(!silent)
 			target << "<span class='notice'>You feel a surge of loyalty towards Nanotrasen.</span>"
 		return 1

@@ -190,7 +190,7 @@
 /turf/open/floor/plasteel/terror/necro/black,
 /area/ruin/unpowered)
 "ax" = (
-/obj/item/weapon/gun/projectile/automatic/pistol/m1911,
+/obj/item/weapon/gun/ballistic/automatic/pistol/m1911,
 /turf/open/floor/plasteel/terror/necro/black,
 /area/ruin/unpowered)
 "ay" = (
@@ -370,7 +370,7 @@
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/lavaland/surface/outdoors)
 "bd" = (
-/obj/item/weapon/gun/projectile/automatic/pistol/m1911,
+/obj/item/weapon/gun/ballistic/automatic/pistol/m1911,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/lavaland/surface/outdoors)
 "be" = (

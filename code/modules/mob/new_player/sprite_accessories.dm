@@ -464,6 +464,10 @@
 	name = "Bob Hair 2"
 	icon_state = "hair_bob2"
 
+/datum/sprite_accessory/hair/boddicker
+	name = "Boddicker"
+	icon_state = "hair_boddicker"
+
 /datum/sprite_accessory/hair/long
 	name = "Long Hair 1"
 	icon_state = "hair_long"
@@ -496,11 +500,6 @@
 	name = "Encoder"
 	icon = 'icons/mob/hair_encoder.dmi'
 	icon_state = "hair_encoder"
-
-/datum/sprite_accessory/hair/boddicker
-	name = "Boddicker"
-	icon_state = "hair_boddicker"
-
 
 /////////////////////////////
 // Facial Hair Definitions //
@@ -585,6 +584,11 @@
 /datum/sprite_accessory/facial_hair/fu
 	name = "Fu Manchu"
 	icon_state = "facial_fumanchu"
+
+/datum/sprite_accessory/facial_hair/brokenman
+	name = "Broken Man"
+	icon_state = "facial_brokenman"
+
 
 ///////////////////////////
 // Underwear Definitions //
