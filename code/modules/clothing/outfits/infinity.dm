@@ -169,3 +169,40 @@
 	W.assignment = "Trooper"
 	W.registered_name = H.real_name
 	W.update_label()
+
+/datum/outfit/survivor
+	name = "Survivor"
+
+	uniform = /obj/item/clothing/under/color/brown
+	shoes = /obj/item/clothing/shoes/jackboots
+	suit = /obj/item/clothing/suit/hooded/explorer
+	suit_store = /obj/item/weapon/tank/internals/oxygen
+	mask = /obj/item/clothing/mask/gas/explorer
+	belt = /obj/item/weapon/storage/belt/utility/full
+	glasses = /obj/item/clothing/glasses/welding
+	ears = /obj/item/device/radio/headset
+	gloves = /obj/item/clothing/gloves/combat
+	l_pocket = /obj/item/device/flashlight/seclite
+	r_pocket = /obj/item/weapon/extinguisher/mini
+	back = /obj/item/weapon/storage/backpack/explorer
+	backpack_contents = list(/obj/item/weapon/survivalcapsule=1,\
+		/obj/item/stack/sheet/metal/fifty=2,\
+		/obj/item/stack/sheet/glass/fifty=1,\
+		/obj/item/weapon/gun/energy/e_gun/nuclear/event=1,\
+		/obj/item/device/wormhole_jaunter=1,\
+		/obj/item/weapon/pickaxe/drill=1,\
+		/obj/item/weapon/storage/bag/ore=1,\
+		/obj/item/device/t_scanner/adv_mining_scanner/lesser=1)
+	id = /obj/item/weapon/card/id
+
+/datum/outfit/survivor/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	if(visualsOnly)
+		return
+
+	var/obj/item/weapon/card/id/W = H.wear_id
+	W.icon_state = "data"
+	W.access = get_all_accesses()
+	W.access += get_centcom_access("Admiral")
+	W.assignment = "Survivor"
+	W.registered_name = H.real_name
+	W.update_label()

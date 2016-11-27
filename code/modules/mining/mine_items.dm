@@ -53,7 +53,6 @@
 	new /obj/item/weapon/gun/energy/kinetic_accelerator(src)
 	new /obj/item/clothing/glasses/meson(src)
 	new /obj/item/weapon/survivalcapsule(src)
-	new /obj/item/device/assault_pod/mining(src)
 
 
 /**********************Shuttle Computer**************************/

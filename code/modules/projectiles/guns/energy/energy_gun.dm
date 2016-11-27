@@ -131,3 +131,18 @@
 				add_overlay("[icon_state]_fail_1")
 			if(151 to INFINITY)
 				add_overlay("[icon_state]_fail_2")
+
+/obj/item/weapon/gun/energy/e_gun/nuclear/event
+	name = "advanced energy gun"
+	desc = "An energy gun with an experimental miniaturized nuclear reactor that automatically charges the internal power cell."
+	icon_state = "nucgun"
+	item_state = "nucgun"
+	origin_tech = "combat=4;materials=5;powerstorage=3"
+	cell_removing = 0
+	cell_type = /obj/item/weapon/stock_parts/cell/ammo
+	charge_delay = 1
+	pin = /obj/item/device/firing_pin
+	can_charge = 0
+	ammo_x_offset = 1
+	ammo_type = list(/obj/item/ammo_casing/energy/laser, /obj/item/ammo_casing/energy/disabler)
+	selfcharge = 1
