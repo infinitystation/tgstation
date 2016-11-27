@@ -55,9 +55,13 @@
 /turf/open/floor/plasteel/shuttle,
 /area/shuttle/abandoned)
 "ag" = (
+/obj/structure/shuttle/engine/platform{
+	dir = 8;
+	pixel_x = 32
+	},
 /obj/structure/shuttle/engine/propulsion{
-	icon_state = "propulsion_l";
-	dir = 4
+	dir = 8;
+	icon_state = "propulsion_r"
 	},
 /obj/structure/shuttle/engine/platform{
 	dir = 4
@@ -68,7 +72,7 @@
 /obj/structure/shuttle/engine/platform{
 	dir = 8
 	},
-/turf/closed/wall/shuttle/smooth,
+/turf/closed/wall/shuttle/smooth/nodiagonal,
 /area/shuttle/abandoned)
 "ai" = (
 /obj/structure/toilet{
@@ -288,11 +292,15 @@
 /area/shuttle/abandoned)
 "av" = (
 /obj/structure/shuttle/engine/propulsion{
-	icon_state = "propulsion";
-	dir = 4
+	dir = 8;
+	icon_state = "propulsion"
 	},
 /obj/structure/shuttle/engine/platform{
 	dir = 4
+	},
+/obj/structure/shuttle/engine/platform{
+	dir = 8;
+	pixel_x = 32
 	},
 /turf/open/floor/plating/airless,
 /area/shuttle/abandoned)
@@ -608,7 +616,7 @@
 	req_access_txt = "0";
 	use_power = 0
 	},
-/turf/closed/wall/shuttle/smooth,
+/turf/closed/wall/shuttle/smooth/nodiagonal,
 /area/shuttle/abandoned)
 "aV" = (
 /obj/machinery/door/airlock/shuttle{
@@ -1057,9 +1065,7 @@
 	desc = "A thin layer of dust coating the floor.";
 	name = "dust"
 	},
-/obj/machinery/computer/shuttle/white_ship{
-	possible_destinations = "whiteship_away;whiteship_home;whiteship_z4;whiteship_lavaland;whiteship_z5;whiteship_test"
-	},
+/obj/machinery/computer/shuttle/white_ship,
 /turf/open/floor/plasteel/shuttle{
 	icon_state = "shuttlefloor3"
 	},
@@ -1244,7 +1250,7 @@
 /area/shuttle/abandoned)
 "bT" = (
 /obj/structure/sign/botany,
-/turf/closed/wall/shuttle/smooth,
+/turf/closed/wall/shuttle/smooth/nodiagonal,
 /area/shuttle/abandoned)
 "bU" = (
 /obj/machinery/door/airlock/shuttle{
@@ -1278,7 +1284,7 @@
 /area/shuttle/abandoned)
 "bX" = (
 /obj/structure/sign/bluecross_2,
-/turf/closed/wall/shuttle/smooth,
+/turf/closed/wall/shuttle/smooth/nodiagonal,
 /area/shuttle/abandoned)
 "bY" = (
 /obj/machinery/door/airlock/shuttle{
@@ -1473,7 +1479,7 @@
 /obj/machinery/smartfridge{
 	use_power = 0
 	},
-/turf/closed/wall/shuttle/smooth,
+/turf/closed/wall/shuttle/smooth/nodiagonal,
 /area/shuttle/abandoned)
 "cn" = (
 /obj/structure/sink{
@@ -1600,11 +1606,15 @@
 /area/shuttle/abandoned)
 "cx" = (
 /obj/structure/shuttle/engine/propulsion{
-	icon_state = "propulsion_r";
-	dir = 4
+	dir = 8;
+	icon_state = "propulsion_l"
 	},
 /obj/structure/shuttle/engine/platform{
 	dir = 4
+	},
+/obj/structure/shuttle/engine/platform{
+	dir = 8;
+	pixel_x = 32
 	},
 /turf/open/floor/plating/airless,
 /area/shuttle/abandoned)
@@ -1789,6 +1799,20 @@
 /turf/open/floor/plasteel/shuttle{
 	icon_state = "shuttlefloor3"
 	},
+/area/shuttle/abandoned)
+"cL" = (
+/obj/structure/shuttle/engine/platform{
+	dir = 8;
+	pixel_x = 32
+	},
+/obj/structure/shuttle/engine/propulsion{
+	dir = 8;
+	icon_state = "propulsion"
+	},
+/obj/structure/shuttle/engine/platform{
+	dir = 4
+	},
+/turf/open/floor/plating/airless,
 /area/shuttle/abandoned)
 
 (1,1,1) = {"
@@ -13573,9 +13597,9 @@ aa
 aa
 aa
 ab
-ab
+ad
 af
-ab
+ad
 ab
 aa
 aa
@@ -13828,7 +13852,7 @@ aa
 ag
 av
 av
-av
+cL
 ac
 bg
 aq
@@ -14086,11 +14110,11 @@ ah
 ah
 ah
 ah
-ab
-ab
+ad
+ad
 bp
-ab
-ab
+ad
+ad
 ah
 ah
 ah
@@ -14338,21 +14362,21 @@ aa
 aa
 aa
 aa
-ab
-ab
-ab
-ab
-ab
+ad
+ad
+ad
+ad
+ad
 aX
 bh
 aq
 bG
 bN
-ab
-ab
-ab
-ab
-ab
+ad
+ad
+ad
+ad
+ad
 aa
 aa
 aa
@@ -14595,21 +14619,21 @@ aa
 aa
 aa
 aa
-ab
+ad
 ai
-ab
+ad
 aI
-ab
+ad
 aB
 aB
 aB
 aB
 aB
-ab
+ad
 bZ
 ck
 cy
-ab
+ad
 aa
 aa
 aa
@@ -15109,11 +15133,11 @@ aa
 aa
 aa
 aa
-ab
-ab
-ab
-ab
-ab
+ad
+ad
+ad
+ad
+ad
 aZ
 bj
 br
@@ -15376,11 +15400,11 @@ bj
 bs
 bH
 aB
-ab
+ad
 cb
 cl
 cy
-ab
+ad
 aa
 aa
 aa
@@ -15623,7 +15647,7 @@ aa
 aa
 aa
 aa
-ab
+ad
 al
 ay
 aL
@@ -15634,10 +15658,10 @@ bt
 bH
 aB
 ad
-ab
+ad
 cm
-ab
-ab
+ad
+ad
 aa
 aa
 aa
@@ -15880,11 +15904,11 @@ aa
 aa
 aa
 aa
-ab
-ab
-ab
-ab
-ab
+ad
+ad
+ad
+ad
+ad
 aB
 bk
 bu
@@ -15894,7 +15918,7 @@ bV
 aB
 cn
 cA
-ab
+ad
 aa
 aa
 aa
@@ -16137,17 +16161,17 @@ aa
 aa
 aa
 aa
-ab
+ad
 am
 az
 aM
-ab
+ad
 bb
 aB
 aq
 aB
 aB
-ab
+ad
 cc
 aq
 cB
@@ -16399,12 +16423,12 @@ an
 aA
 aN
 ad
-ab
-ab
+ad
+ad
 bv
-ab
-ab
-ab
+ad
+ad
+ad
 cd
 co
 cC
@@ -16661,11 +16685,11 @@ aB
 aB
 aB
 aB
-ab
+ad
 ce
 cp
 cD
-ab
+ad
 aa
 aa
 aa
@@ -16908,21 +16932,21 @@ aa
 aa
 aa
 aa
-ab
+ad
 ao
 aB
 aO
-ab
+ad
 aB
 bl
 bw
 bI
 aB
-ab
-ab
-ab
-ab
-ab
+ad
+ad
+ad
+ad
+ad
 aa
 aa
 aa
@@ -17166,20 +17190,20 @@ aa
 aa
 aa
 ad
-ab
+ad
 aC
-ab
+ad
 ad
 aB
 bm
 bx
 bJ
 bO
-ab
+ad
 cf
 cq
 cE
-ab
+ad
 aa
 aa
 aa
@@ -17689,11 +17713,11 @@ aB
 bz
 aq
 aB
-ab
+ad
 cg
 cs
 cG
-ab
+ad
 aa
 aa
 aa
@@ -17937,20 +17961,20 @@ aa
 aa
 aa
 ad
-ab
+ad
 aE
-ab
+ad
 ad
 aB
 bl
 bA
 bI
 aB
-ab
-ab
-ab
-ab
-ab
+ad
+ad
+ad
+ad
+ad
 aa
 aa
 aa
@@ -18193,11 +18217,11 @@ aa
 aa
 aa
 aa
-ab
+ad
 ar
 aF
 aP
-ab
+ad
 aB
 bl
 bB
@@ -18207,7 +18231,7 @@ bX
 ch
 ct
 cH
-ab
+ad
 aa
 aa
 aa
@@ -18712,11 +18736,11 @@ at
 aG
 aQ
 ad
-ab
-ab
+ad
+ad
 bC
-ab
-ab
+ad
+ad
 ad
 ci
 cv
@@ -18964,21 +18988,21 @@ aa
 aa
 aa
 aa
-ab
+ad
 au
 aH
 aR
-ab
+ad
 bc
 bn
 aB
 bK
 bP
-ab
+ad
 cj
 cw
 cK
-ab
+ad
 aa
 aa
 aa
@@ -19222,19 +19246,19 @@ aa
 aa
 aa
 ab
-ab
+ad
 ac
-ab
-ab
+ad
+ad
 bd
 aq
 aB
 ba
 bQ
-ab
-ab
+ad
+ad
 ac
-ab
+ad
 ab
 aa
 aa

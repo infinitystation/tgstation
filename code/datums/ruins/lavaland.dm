@@ -58,7 +58,7 @@
 	suffix = "I_lavaland_surface_seed_vault.dmm"
 	cost = 10
 
-/datum/map_template/ruin/lavaland/ash_walker
+//datum/map_template/ruin/lavaland/ash_walker
 	name = "Ash Walker Nest"
 	id = "ash-walker"
 	description = "A race of unbreathing lizards live here, that run faster \

@@ -10117,7 +10117,7 @@
 "zt" = (
 /obj/structure/shuttle/engine/propulsion{
 	color = "#C862CC";
-	dir = 8;
+	dir = 4;
 	icon_state = "propulsion_r";
 	layer = 2;
 	pixel_y = -10;
@@ -10503,7 +10503,7 @@
 "An" = (
 /obj/structure/shuttle/engine/propulsion{
 	color = "#C862CC";
-	dir = 8;
+	dir = 4;
 	icon_state = "burst_s";
 	layer = 2;
 	pixel_x = -10
@@ -11417,7 +11417,7 @@
 "CI" = (
 /obj/structure/shuttle/engine/propulsion{
 	color = "#C862CC";
-	dir = 8;
+	dir = 4;
 	icon_state = "propulsion_l";
 	layer = 2;
 	pixel_y = 10
@@ -11566,16 +11566,16 @@
 /area/shuttle/escape)
 "Dd" = (
 /obj/structure/shuttle/engine/propulsion{
-	tag = "icon-propulsion_l (EAST)";
-	icon_state = "propulsion_l";
-	dir = 4
-	},
-/obj/structure/shuttle/engine/platform{
-	dir = 4
+	dir = 8;
+	icon_state = "propulsion_r";
+	tag = "icon-propulsion_r (EAST)"
 	},
 /obj/structure/shuttle/engine/platform{
 	dir = 8;
 	pixel_x = 32
+	},
+/obj/structure/shuttle/engine/platform{
+	dir = 4
 	},
 /turf/open/floor{
 	dir = 8;
@@ -11779,16 +11779,16 @@
 /area/shuttle/escape)
 "DB" = (
 /obj/structure/shuttle/engine/propulsion{
-	tag = "icon-propulsion_r (EAST)";
-	icon_state = "propulsion_r";
-	dir = 4
-	},
-/obj/structure/shuttle/engine/platform{
-	dir = 4
+	dir = 8;
+	icon_state = "propulsion_l";
+	tag = "icon-propulsion_l (EAST)"
 	},
 /obj/structure/shuttle/engine/platform{
 	dir = 8;
 	pixel_x = 32
+	},
+/obj/structure/shuttle/engine/platform{
+	dir = 4
 	},
 /turf/open/floor{
 	dir = 8;
@@ -13711,12 +13711,8 @@
 /area/shuttle/NTcruiser)
 "Ih" = (
 /obj/structure/shuttle/engine/propulsion{
-	dir = 8;
-	icon_state = "propulsion_r";
-	tag = "icon-propulsion_r (EAST)"
-	},
-/obj/structure/shuttle/engine/platform{
-	dir = 8
+	dir = 4;
+	icon_state = "propulsion_l"
 	},
 /obj/structure/shuttle/engine/platform{
 	dir = 8
@@ -13937,8 +13933,8 @@
 /area/shuttle/NTcruiser)
 "IO" = (
 /obj/structure/shuttle/engine/propulsion{
-	icon_state = "propulsion";
-	dir = 8
+	dir = 4;
+	icon_state = "propulsion"
 	},
 /obj/structure/shuttle/engine/platform{
 	dir = 8
@@ -14152,8 +14148,9 @@
 /area/shuttle/NTcruiser)
 "Jx" = (
 /obj/structure/shuttle/engine/propulsion{
-	dir = 8;
-	icon_state = "propulsion_l"
+	dir = 4;
+	icon_state = "propulsion_r";
+	tag = "icon-propulsion_r (EAST)"
 	},
 /obj/structure/shuttle/engine/platform{
 	dir = 8
@@ -19084,32 +19081,17 @@
 	name = "\improper Syndicate Battleship"
 	})
 "TR" = (
-/obj/machinery/gun_turret/laser{
-	dir = 2
+/obj/structure/shuttle/engine/propulsion{
+	icon_state = "propulsion_l"
 	},
-/obj/structure/window/reinforced{
-	color = "#FFFF00";
-	dir = 8
-	},
-/obj/structure/window/reinforced{
-	color = "#FFFF00"
-	},
-/turf/open/floor/plating/airless/warnplate{
-	tag = "icon-plating_warn (SOUTHWEST)";
-	icon_state = "plating_warn";
-	dir = 10
-	},
-/area/shuttle/syndicate{
-	name = "\improper Syndicate Cruiser"
-	})
+/turf/open/space/transit,
+/area/space)
 "TS" = (
-/obj/structure/window/reinforced{
-	color = "#FFFF00"
+/obj/structure/shuttle/engine/propulsion{
+	icon_state = "propulsion_r"
 	},
-/turf/open/floor/plating/airless/warnplate,
-/area/shuttle/syndicate{
-	name = "\improper Syndicate Cruiser"
-	})
+/turf/open/space/transit,
+/area/space)
 "TT" = (
 /obj/machinery/porta_turret/syndicate{
 	dir = 1
@@ -19591,9 +19573,9 @@ aa
 aa
 aa
 aa
-jL
-jL
-jL
+aa
+aa
+aa
 TT
 jz
 jz
@@ -19840,9 +19822,9 @@ aa
 aa
 aa
 aa
-jL
-jL
-jL
+aa
+aa
+aa
 TT
 jz
 jz
@@ -20095,7 +20077,7 @@ aa
 aa
 aa
 aa
-jL
+aa
 jz
 jz
 jz
@@ -20352,7 +20334,7 @@ aa
 aa
 aa
 aa
-jL
+aa
 jz
 jR
 kl
@@ -21146,7 +21128,7 @@ jz
 jz
 jz
 kk
-jL
+aa
 "}
 (8,1,1) = {"
 aa
@@ -21403,7 +21385,7 @@ Da
 nf
 jz
 jz
-jL
+aa
 "}
 (9,1,1) = {"
 aa
@@ -21917,7 +21899,7 @@ lf
 mk
 Ka
 jz
-jL
+aa
 "}
 (11,1,1) = {"
 aa
@@ -22174,7 +22156,7 @@ nf
 nf
 jz
 jz
-jL
+aa
 "}
 (12,1,1) = {"
 aa
@@ -22431,7 +22413,7 @@ jz
 jz
 jz
 kk
-jL
+aa
 "}
 (13,1,1) = {"
 aa
@@ -23179,7 +23161,7 @@ aa
 aa
 aa
 aa
-jL
+aa
 jz
 kj
 kt
@@ -23338,7 +23320,7 @@ nc
 nc
 oI
 pS
-pT
+TR
 iB
 iB
 iB
@@ -23436,7 +23418,7 @@ aa
 aa
 aa
 aa
-jL
+aa
 jz
 jz
 jz
@@ -23695,9 +23677,9 @@ aa
 aa
 aa
 aa
-jL
-jL
-jL
+aa
+aa
+aa
 TT
 jz
 jz
@@ -23852,7 +23834,7 @@ nc
 nc
 oI
 pS
-pT
+TS
 iB
 iB
 iB
@@ -23960,9 +23942,9 @@ aa
 aa
 aa
 aa
-jL
-jL
-jL
+aa
+aa
+aa
 TT
 jz
 mC
@@ -38052,7 +38034,7 @@ LK
 Mc
 Mp
 JV
-ML
+Ih
 IO
 Jx
 Nu

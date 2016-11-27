@@ -43,7 +43,7 @@
 	name = "inflatable wall"
 	undeploy_path = /obj/item/inflatable/wall
 
-/obj/structure/inflatable/New(location)
+/obj/structure/inflatable/New(loc)
 	..()
 	air_update_turf(1)
 

@@ -115,6 +115,7 @@
 /area/lavaland/surface/outdoors
 	name = "Lavaland Wastes"
 	outdoors = 1
+	ambientsounds = list('sound/ambience/ambilava.ogg','sound/doom/sigh.ogg','sound/doom/horror.ogg','sound/doom/whispers.ogg','sound/doom/hell_pray.ogg','sound/doom/damned.ogg')
 
 /area/lavaland/surface/outdoors/near
 	name = "Lavaland Near Base"

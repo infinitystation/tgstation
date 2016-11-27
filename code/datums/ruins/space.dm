@@ -210,7 +210,7 @@
 		\"ethics violations\". It seems like someone finally got sick of \
 		it, but the equipment still works."
 
-/datum/map_template/ruin/space/thederelict
+//datum/map_template/ruin/space/thederelict
 	id = "thederelict"
 	suffix = "thederelict.dmm"
 	name = "Kosmicheskaya Stantsiya 13"

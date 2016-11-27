@@ -791,7 +791,7 @@
 /obj/structure/table/wood,
 /obj/item/device/flashlight/lamp,
 /turf/open/floor/carpet,
-/area/security/break_room)
+/area/security/barracks/one)
 "abA" = (
 /obj/structure/bed,
 /obj/item/weapon/bedsheet/nanotrasen,
@@ -800,7 +800,7 @@
 	pixel_y = 26
 	},
 /turf/open/floor/carpet,
-/area/security/break_room)
+/area/security/barracks/one)
 "abB" = (
 /turf/closed/wall,
 /area/security/break_room)
@@ -813,7 +813,7 @@
 /area/crew_quarters/fitness)
 "abD" = (
 /obj/structure/shuttle/engine/propulsion{
-	dir = 4;
+	dir = 8;
 	icon_state = "burst_s"
 	},
 /turf/closed/wall/shuttle/smooth,
@@ -1113,10 +1113,20 @@
 	scrub_Toxins = 1
 	},
 /turf/open/floor/carpet,
-/area/security/break_room)
+/area/security/barracks/one)
 "ace" = (
+/obj/machinery/power/apc{
+	dir = 4;
+	name = "Security's dormitories room 1 APC";
+	pixel_x = 24;
+	pixel_y = 0
+	},
+/obj/structure/cable/yellow{
+	d2 = 2;
+	icon_state = "0-2"
+	},
 /turf/open/floor/carpet,
-/area/security/break_room)
+/area/security/barracks/one)
 "acf" = (
 /turf/open/floor/plating,
 /area/crew_quarters/fitness)
@@ -1476,7 +1486,7 @@
 /obj/structure/closet/cabinet,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /turf/open/floor/carpet,
-/area/security/break_room)
+/area/security/barracks/one)
 "acO" = (
 /obj/machinery/button/door{
 	id = "cabin3_barr";
@@ -1491,8 +1501,13 @@
 	dir = 2;
 	on = 1
 	},
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/open/floor/carpet,
-/area/security/break_room)
+/area/security/barracks/one)
 "acP" = (
 /obj/machinery/atmospherics/components/unary/vent_pump{
 	dir = 2;
@@ -1507,8 +1522,13 @@
 	req_access_txt = "0";
 	specialfunctions = 4
 	},
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/open/floor/carpet,
-/area/security/break_room)
+/area/security/barracks/two)
 "acQ" = (
 /turf/open/floor/plating/warnplate{
 	dir = 2
@@ -1780,8 +1800,13 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	req_access_txt = "0"
 	},
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/open/floor/wood,
-/area/security/break_room)
+/area/security/barracks/one)
 "adn" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/security{
@@ -1793,8 +1818,13 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	req_access_txt = "0"
 	},
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/open/floor/wood,
-/area/security/break_room)
+/area/security/barracks/two)
 "ado" = (
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
@@ -2254,6 +2284,11 @@
 /area/security/break_room)
 "adV" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden,
+/obj/structure/cable/yellow{
+	icon_state = "1-4";
+	d1 = 1;
+	d2 = 4
+	},
 /turf/open/floor/carpet,
 /area/security/break_room)
 "adW" = (
@@ -2269,11 +2304,26 @@
 	dir = 2;
 	network = list("SS13")
 	},
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/open/floor/carpet,
 /area/security/break_room)
 "adX" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 9
+	},
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/cable/yellow{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
 	},
 /turf/open/floor/carpet,
 /area/security/break_room)
@@ -2683,6 +2733,11 @@
 "aeP" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
+	},
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
 /turf/open/floor/carpet,
 /area/security/break_room)
@@ -3216,6 +3271,11 @@
 	name = "Sleep room";
 	req_access_txt = "63"
 	},
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/open/floor/wood,
 /area/security/break_room)
 "afQ" = (
@@ -3629,6 +3689,11 @@
 /turf/open/floor/carpet,
 /area/security/break_room)
 "agL" = (
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/open/floor/wood,
 /area/security/break_room)
 "agM" = (
@@ -4259,6 +4324,11 @@
 	external_pressure_bound = 101.325;
 	on = 1;
 	pressure_checks = 1
+	},
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
 /turf/open/floor/wood,
 /area/security/break_room)
@@ -4902,6 +4972,11 @@
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
 	dir = 4;
 	initialize_directions = 11
+	},
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
 /turf/open/floor/wood,
 /area/security/break_room)
@@ -34431,14 +34506,14 @@
 /turf/closed/wall/shuttle/smooth/nodiagonal,
 /area/shuttle/arrival)
 "bgm" = (
-/obj/structure/shuttle/engine/propulsion{
-	dir = 8;
-	icon_state = "burst_s"
-	},
 /obj/structure/shuttle/engine/platform{
 	dir = 8;
 	layer = 4;
 	pixel_x = 0
+	},
+/obj/structure/shuttle/engine/propulsion{
+	dir = 4;
+	icon_state = "burst_s"
 	},
 /turf/open/floor/plating/airless,
 /area/shuttle/arrival)
@@ -37099,7 +37174,7 @@
 /area/engine/break_room)
 "bkN" = (
 /obj/structure/shuttle/engine/propulsion{
-	dir = 4;
+	dir = 8;
 	icon_state = "burst_s"
 	},
 /turf/closed/wall/shuttle/smooth,
@@ -37343,15 +37418,14 @@
 /turf/open/floor/plasteel/white,
 /area/shuttle/arrival)
 "blo" = (
-/obj/structure/shuttle/engine/propulsion{
-	tag = "icon-burst_r (WEST)";
-	icon_state = "burst_r";
-	dir = 8
-	},
 /obj/structure/shuttle/engine/platform{
 	dir = 8;
 	layer = 4;
 	pixel_x = 0
+	},
+/obj/structure/shuttle/engine/propulsion{
+	dir = 4;
+	icon_state = "propulsion_l"
 	},
 /turf/open/floor/plating/airless,
 /area/shuttle/arrival)
@@ -38617,9 +38691,9 @@
 /area/shuttle/arrival)
 "bnr" = (
 /obj/structure/shuttle/engine/propulsion{
-	tag = "icon-propulsion (WEST)";
+	dir = 4;
 	icon_state = "propulsion";
-	dir = 8
+	tag = "icon-propulsion (WEST)"
 	},
 /obj/structure/shuttle/engine/platform{
 	dir = 8;
@@ -39489,15 +39563,14 @@
 /turf/open/floor/plasteel/white,
 /area/shuttle/arrival)
 "boU" = (
-/obj/structure/shuttle/engine/propulsion{
-	tag = "icon-burst_l (WEST)";
-	icon_state = "burst_l";
-	dir = 8
-	},
 /obj/structure/shuttle/engine/platform{
 	dir = 8;
 	layer = 4;
 	pixel_x = 0
+	},
+/obj/structure/shuttle/engine/propulsion{
+	dir = 4;
+	icon_state = "propulsion_r"
 	},
 /turf/open/floor/plating/airless,
 /area/shuttle/arrival)
@@ -44477,7 +44550,9 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/obj/structure/transit_tube_pod,
+/obj/structure/transit_tube_pod{
+	dir = 1
+	},
 /turf/open/floor/plasteel{
 	icon_state = "darkbluecorners"
 	},
@@ -96058,22 +96133,23 @@
 	},
 /turf/open/floor/plating,
 /area/maintenance/atmos_control)
-"dgk" = (
+"dfX" = (
+/turf/closed/wall,
+/area/crew_quarters/sleep/five)
+"dfY" = (
+/turf/closed/wall,
+/area/crew_quarters/sleep/four)
+"dfZ" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
-/obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/turf/open/floor/carpet,
-/area/crew_quarters/sleep)
-"dgj" = (
+/turf/closed/wall,
+/area/crew_quarters/sleep/four)
+"dga" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
 /obj/machinery/power/apc{
 	dir = 2;
-	name = "Dorm's room 2 APC";
+	name = "Dorm's room 4 APC";
 	pixel_x = 0;
 	pixel_y = -28
 	},
@@ -96082,16 +96158,41 @@
 	icon_state = "0-8"
 	},
 /turf/open/floor/carpet,
-/area/crew_quarters/sleep/two)
-"dgi" = (
+/area/crew_quarters/sleep/four)
+"dgb" = (
+/turf/closed/wall,
+/area/crew_quarters/sleep/six)
+"dgc" = (
+/turf/closed/wall,
+/area/crew_quarters/sleep/three)
+"dgd" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
 /turf/closed/wall,
-/area/crew_quarters/sleep/two)
-"dgh" = (
+/area/crew_quarters/sleep/six)
+"dge" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 4
+	},
 /turf/closed/wall,
-/area/crew_quarters/sleep/two)
+/area/crew_quarters/sleep/three)
+"dgf" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
+	},
+/obj/machinery/power/apc{
+	dir = 2;
+	name = "Dorm's room 6 APC";
+	pixel_x = 0;
+	pixel_y = -28
+	},
+/obj/structure/cable/yellow{
+	icon_state = "0-4";
+	d2 = 4
+	},
+/turf/open/floor/carpet,
+/area/crew_quarters/sleep/six)
 "dgg" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
@@ -96110,47 +96211,22 @@
 	icon_state = "grimy"
 	},
 /area/crew_quarters/sleep/three)
-"dgf" = (
+"dgh" = (
+/turf/closed/wall,
+/area/crew_quarters/sleep/two)
+"dgi" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 4
+	},
+/turf/closed/wall,
+/area/crew_quarters/sleep/two)
+"dgj" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
 /obj/machinery/power/apc{
 	dir = 2;
-	name = "Dorm's room 6 APC";
-	pixel_x = 0;
-	pixel_y = -28
-	},
-/obj/structure/cable/yellow{
-	icon_state = "0-4";
-	d2 = 4
-	},
-/turf/open/floor/carpet,
-/area/crew_quarters/sleep/six)
-"dge" = (
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
-	dir = 4
-	},
-/turf/closed/wall,
-/area/crew_quarters/sleep/three)
-"dgd" = (
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
-	dir = 4
-	},
-/turf/closed/wall,
-/area/crew_quarters/sleep/six)
-"dgc" = (
-/turf/closed/wall,
-/area/crew_quarters/sleep/three)
-"dgb" = (
-/turf/closed/wall,
-/area/crew_quarters/sleep/six)
-"dga" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 4
-	},
-/obj/machinery/power/apc{
-	dir = 2;
-	name = "Dorm's room 4 APC";
+	name = "Dorm's room 2 APC";
 	pixel_x = 0;
 	pixel_y = -28
 	},
@@ -96159,17 +96235,73 @@
 	icon_state = "0-8"
 	},
 /turf/open/floor/carpet,
-/area/crew_quarters/sleep/four)
-"dfZ" = (
+/area/crew_quarters/sleep/two)
+"dgk" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/open/floor/carpet,
+/area/crew_quarters/sleep)
+"dgu" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /turf/closed/wall,
-/area/crew_quarters/sleep/four)
-"dfY" = (
+/area/security/barracks/two)
+"dgt" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /turf/closed/wall,
-/area/crew_quarters/sleep/four)
-"dfX" = (
+/area/security/barracks/one)
+"dgs" = (
+/obj/structure/closet/cabinet,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/turf/open/floor/carpet,
+/area/security/barracks/two)
+"dgr" = (
+/obj/machinery/atmospherics/components/unary/vent_scrubber{
+	dir = 2;
+	on = 1;
+	scrub_N2O = 1;
+	scrub_Toxins = 1
+	},
+/turf/open/floor/carpet,
+/area/security/barracks/two)
+"dgq" = (
+/obj/machinery/power/apc{
+	dir = 8;
+	name = "Security's dormitories room 2 APC";
+	pixel_x = -25
+	},
+/obj/structure/cable/yellow{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/turf/open/floor/carpet,
+/area/security/barracks/two)
+"dgp" = (
+/obj/structure/table/wood,
+/obj/item/device/flashlight/lamp,
+/turf/open/floor/carpet,
+/area/security/barracks/two)
+"dgo" = (
+/obj/structure/bed,
+/obj/item/weapon/bedsheet/nanotrasen,
+/obj/structure/dresser{
+	density = 0;
+	pixel_y = 26
+	},
+/turf/open/floor/carpet,
+/area/security/barracks/two)
+"dgn" = (
 /turf/closed/wall,
-/area/crew_quarters/sleep/five)
+/area/security/barracks/two)
+"dgm" = (
+/turf/closed/wall/r_wall,
+/area/security/barracks/two)
+"dgl" = (
+/turf/closed/wall/r_wall,
+/area/security/barracks/one)
 
 (1,1,1) = {"
 aaa
@@ -125796,11 +125928,11 @@ aai
 aag
 aai
 aaa
-abe
-abe
-abe
-abe
-abe
+dgl
+dgl
+dgl
+dgl
+dgl
 adT
 abB
 abB
@@ -126053,11 +126185,11 @@ aaa
 aag
 aai
 aai
-abe
+dgl
 abz
 acd
 acN
-adl
+dgt
 adU
 aeM
 abB
@@ -126310,7 +126442,7 @@ aaa
 aag
 aai
 aaa
-abe
+dgl
 abA
 ace
 acO
@@ -126567,11 +126699,11 @@ aaa
 aaa
 aai
 aaa
-abe
-abB
-abB
-abB
-abB
+dgm
+dgn
+dgn
+dgn
+dgn
 adW
 aeO
 afO
@@ -126824,9 +126956,9 @@ aaa
 aaG
 aai
 aai
-abe
-abA
-ace
+dgm
+dgo
+dgq
 acP
 adn
 adX
@@ -127081,11 +127213,11 @@ aaa
 aag
 aai
 aaa
-abe
-abz
-acd
-acN
-adl
+dgm
+dgp
+dgr
+dgs
+dgu
 adY
 aeQ
 adl
@@ -127338,11 +127470,11 @@ aaa
 aag
 aai
 aai
-abe
-abe
-abe
-abe
-abe
+dgm
+dgm
+dgm
+dgm
+dgm
 adZ
 adZ
 adZ

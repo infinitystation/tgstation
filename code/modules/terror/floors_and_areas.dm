@@ -45,9 +45,17 @@
 	icon_state = "red"
 
 /area/security/barracks
-	name = "Barracks"
+	name = "Security's dormitories"
 	icon = 'icons/turf/terror.dmi'
 	icon_state = "barracks"
+
+/area/security/barracks/one
+	name = "Security's dormitories room 1"
+	icon_state = "Sleep_one"
+
+/area/security/barracks/two
+	name = "Security's dormitories room 2"
+	icon_state = "Sleep_two"
 
 /area/security/top_level_post
 	name = "Bunker's airlock"

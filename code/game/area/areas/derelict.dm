@@ -4,6 +4,7 @@
 	name = "Derelict Station"
 	icon_state = "storage"
 	blob_allowed = 0 //Nope, no winning on the derelict as a blob. Gotta eat the station.
+	ambientsounds = list('sound/doom/damned.ogg')
 
 /area/derelict/hallway/primary
 	name = "Derelict Primary Hallway"
