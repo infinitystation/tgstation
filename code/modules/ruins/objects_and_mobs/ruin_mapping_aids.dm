@@ -12,3 +12,7 @@
 	for(var/turf/T in get_area_turfs(thearea, z))
 		if(T.baseturf != T.type) //Don't break indestructible walls and the like
 			T.baseturf = baseturf
+
+/obj/effect/baseturf_helper/beach
+	name = "beach baseturf editor"
+	baseturf /turf/open/floor/plating/beach/sand
