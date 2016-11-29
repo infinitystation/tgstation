@@ -15,4 +15,4 @@
 
 /obj/effect/baseturf_helper/beach
 	name = "beach baseturf editor"
-	baseturf /turf/open/floor/plating/beach/sand
+	baseturf = /turf/open/floor/plating/beach/sand
