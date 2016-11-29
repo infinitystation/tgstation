@@ -174,7 +174,7 @@
 	name = "Survivor"
 
 	uniform = /obj/item/clothing/under/color/brown
-	shoes = /obj/item/clothing/shoes/jackboots
+	shoes = /obj/item/clothing/shoes/workboots/mining
 	suit = /obj/item/clothing/suit/hooded/explorer
 	suit_store = /obj/item/weapon/tank/internals/oxygen
 	mask = /obj/item/clothing/mask/gas/explorer
@@ -185,14 +185,13 @@
 	l_pocket = /obj/item/device/flashlight/seclite
 	r_pocket = /obj/item/weapon/extinguisher/mini
 	back = /obj/item/weapon/storage/backpack/explorer
-	backpack_contents = list(/obj/item/weapon/survivalcapsule=1,\
-		/obj/item/stack/sheet/metal/fifty=2,\
+	backpack_contents = list(/obj/item/stack/sheet/metal/fifty=2,\
 		/obj/item/stack/sheet/glass/fifty=1,\
 		/obj/item/weapon/gun/energy/e_gun/nuclear/event=1,\
-		/obj/item/device/wormhole_jaunter=1,\
-		/obj/item/weapon/pickaxe/drill=1,\
+		/obj/item/weapon/pickaxe/speardrill =1,\
 		/obj/item/weapon/storage/bag/ore=1,\
-		/obj/item/device/t_scanner/adv_mining_scanner/lesser=1)
+		/obj/item/device/t_scanner/adv_mining_scanner/lesser=1,\
+		/obj/item/clothing/glasses/meson =1)
 	id = /obj/item/weapon/card/id
 
 /datum/outfit/survivor/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
