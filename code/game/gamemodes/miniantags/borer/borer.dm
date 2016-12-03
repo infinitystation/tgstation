@@ -14,6 +14,7 @@
 	if(isborer(loc))
 
 		message = sanitize(message)
+		message = sanitize_a0(message) //propusk pervogo sanitiza ???
 		if(!message)
 			return
 		log_say("[key_name(src)] : [message]")
@@ -175,6 +176,7 @@ var/total_borer_hosts_needed = 10
 		return
 
 	var/input = stripped_input(src, "Please enter a message to tell your host.", "Borer", null)
+	input = sanitize_a0(input)
 	if(!input)
 		return
 
@@ -203,6 +205,7 @@ var/total_borer_hosts_needed = 10
 		return
 
 	var/input = stripped_input(src, "Please enter a message to tell the borer.", "Message", null)
+	input = sanitize_a0(input)
 	if(!input)
 		return
 
@@ -227,6 +230,7 @@ var/total_borer_hosts_needed = 10
 		return
 	var/mob/living/captive_brain/CB = B.host_brain
 	var/input = stripped_input(src, "Please enter a message to tell the trapped mind.", "Message", null)
+	input = sanitize_a0(input)
 	if(!input)
 		return
 
@@ -285,6 +289,7 @@ var/total_borer_hosts_needed = 10
 /mob/living/simple_animal/borer/say(message)
 	if(dd_hasprefix(message, ";"))
 		message = copytext(message,2)
+		message = sanitize_a0(message)
 		for(var/borer in borers)
 			borer << "<span class='borer'>Cortical Link: [truename] sings, \"[message]\""
 		for(var/mob/dead in dead_mob_list)
