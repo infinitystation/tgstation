@@ -36,8 +36,8 @@
 	return
 
 /client/verb/github()
-	set name = "Code"
-	set desc = "Visit bitbicket"
+	set name = "github"
+	set desc = "Visit github"
 	set hidden = 1
 	if(config.githuburl)
 		if(alert("This will open the bitbucket repository in your browser. Are you sure?",,"Yes","No")=="No")

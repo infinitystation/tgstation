@@ -6,14 +6,14 @@
 	desc = "Attack the weak point for massive damage."
 	health = 1000
 	maxHealth = 1000
-	a_intent = "harm"
+	a_intent = INTENT_HARM
 	sentience_type = SENTIENCE_BOSS
 	environment_smash = 3
 	obj_damage = 400
 	luminosity = 3
 	faction = list("mining", "boss")
 	weather_immunities = list("lava","ash")
-	flying = 1
+	movement_type = FLYING
 	robust_searching = 1
 	ranged_ignores_vision = TRUE
 	stat_attack = 2

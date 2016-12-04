@@ -33,7 +33,7 @@
 		/obj/item/device/analyzer,
 		/obj/item/weapon/extinguisher/mini,
 		/obj/item/device/radio,
-		/obj/item/clothing/gloves/
+		/obj/item/clothing/gloves
 		)
 
 /obj/item/weapon/storage/belt/utility/chief
@@ -82,7 +82,7 @@
 	desc = "Can hold various medical equipment."
 	icon_state = "medicalbelt"
 	item_state = "medical"
-	max_w_class = 4
+	max_w_class = WEIGHT_CLASS_BULKY
 	can_hold = list(
 		/obj/item/device/healthanalyzer,
 		/obj/item/weapon/dnainjector,
@@ -134,7 +134,7 @@
 	icon_state = "securitybelt"
 	item_state = "security"//Could likely use a better one.
 	storage_slots = 5
-	max_w_class = 3 //Because the baton wouldn't fit otherwise. - Neerti
+	max_w_class = WEIGHT_CLASS_NORMAL //Because the baton wouldn't fit otherwise. - Neerti
 	can_hold = list(
 		/obj/item/weapon/melee/baton,
 		/obj/item/weapon/melee/classic_baton,
@@ -171,8 +171,8 @@
 	icon_state = "explorer1"
 	item_state = "explorer1"
 	storage_slots = 6
-	w_class = 4
-	max_w_class = 4 //Pickaxes are big.
+	w_class = WEIGHT_CLASS_BULKY
+	max_w_class = WEIGHT_CLASS_BULKY //Pickaxes are big.
 	max_combined_w_class = 20 //Not an issue with this whitelist, probably.
 	can_hold = list(
 		/obj/item/weapon/crowbar,
@@ -258,7 +258,7 @@
 	desc = "A syndicate belt designed to be used by boarding parties.  Its style is modeled after the hardsuits they wear."
 	icon_state = "militarybelt"
 	item_state = "military"
-	max_w_class = 2
+	max_w_class = WEIGHT_CLASS_SMALL
 
 /obj/item/weapon/storage/belt/military/army
 	name = "army belt"
@@ -278,7 +278,7 @@
 	desc = "A belt for holding grenades."
 	icon_state = "grenadebeltnew"
 	item_state = "security"
-	max_w_class = 4
+	max_w_class = WEIGHT_CLASS_BULKY
 	storage_slots = 30
 	can_hold = list(
 		/obj/item/weapon/grenade,
@@ -348,7 +348,7 @@
 	icon_state = "janibelt"
 	item_state = "janibelt"
 	storage_slots = 6
-	max_w_class = 4 // Set to this so the  light replacer can fit.
+	max_w_class = WEIGHT_CLASS_BULKY // Set to this so the  light replacer can fit.
 	can_hold = list(
 		/obj/item/weapon/grenade/chem_grenade,
 		/obj/item/device/lightreplacer,
@@ -357,7 +357,7 @@
 		/obj/item/weapon/soap,
 		/obj/item/weapon/holosign_creator,
 		/obj/item/key/janitor,
-		/obj/item/clothing/gloves/
+		/obj/item/clothing/gloves
 		)
 
 /obj/item/weapon/storage/belt/bandolier
@@ -376,7 +376,7 @@
 	icon_state = "holster"
 	item_state = "holster"
 	storage_slots = 3
-	max_w_class = 3
+	max_w_class = WEIGHT_CLASS_NORMAL
 	can_hold = list(
 		/obj/item/weapon/gun/ballistic/automatic/pistol,
 		/obj/item/weapon/gun/ballistic/revolver,
@@ -390,7 +390,7 @@
 	icon_state = "fannypack_leather"
 	item_state = "fannypack_leather"
 	storage_slots = 3
-	max_w_class = 2
+	max_w_class = WEIGHT_CLASS_SMALL
 
 /obj/item/weapon/storage/belt/fannypack/black
 	name = "black fannypack"
@@ -448,8 +448,8 @@
 	icon_state = "sheath"
 	item_state = "sheath"
 	storage_slots = 1
-	w_class = 4
-	max_w_class = 4
+	w_class = WEIGHT_CLASS_BULKY
+	max_w_class = WEIGHT_CLASS_BULKY
 	can_hold = list(
 		/obj/item/weapon/melee/sabre
 		)

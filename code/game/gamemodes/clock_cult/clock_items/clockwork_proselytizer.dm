@@ -4,7 +4,7 @@
 	desc = "An odd, L-shaped device that hums with energy."
 	clockwork_desc = "A device that allows the replacing of mundane objects with Ratvarian variants. It requires liquified Replicant Alloy to function."
 	icon_state = "clockwork_proselytizer"
-	w_class = 3
+	w_class = WEIGHT_CLASS_NORMAL
 	force = 5
 	flags = NOBLUDGEON
 	var/stored_alloy = 0 //Requires this to function; each chunk of replicant alloy provides REPLICANT_ALLOY_UNIT
@@ -24,7 +24,7 @@
 	clockwork_desc = "A cogscarab's internal proselytizer. It can only be successfully used by a cogscarab and requires liquified Replicant Alloy to function."
 	metal_to_alloy = TRUE
 	item_state = "nothing"
-	w_class = 1
+	w_class = WEIGHT_CLASS_TINY
 	speed_multiplier = 0.5
 	var/debug = FALSE
 
@@ -48,6 +48,18 @@
 	..()
 	if(is_servant_of_ratvar(user) || isobserver(user))
 		user << "<span class='alloy'>It will use cell charge at a rate of <b>[CLOCKCULT_ALLOY_TO_POWER_MULTIPLIER]</b> charge to <b>1</b> alloy if it has insufficient alloy.</span>"
+		user << "<span class='alloy'><b>[get_power_alloy()]</b> is usable in this manner.</span>"
+
+/obj/item/clockwork/clockwork_proselytizer/cyborg/get_power_alloy() //returns alloy plus the alloy we have from power, where we need such
+	var/mob/living/silicon/robot/R = loc
+	var/alloy_power = 0
+	var/current_charge = 0
+	if(istype(R) && R.cell)
+		current_charge = R.cell.charge
+		while(current_charge > CLOCKCULT_ALLOY_TO_POWER_MULTIPLIER)
+			current_charge -= CLOCKCULT_ALLOY_TO_POWER_MULTIPLIER
+			alloy_power++
+	return ..() + alloy_power
 
 /obj/item/clockwork/clockwork_proselytizer/cyborg/can_use_alloy(amount)
 	if(amount != RATVAR_ALLOY_CHECK)
@@ -76,7 +88,7 @@
 		user << "<span class='brass'>Can also form some objects into Brass sheets, as well as reform Clockwork Walls into Clockwork Floors, and vice versa.</span>"
 		if(uses_alloy)
 			if(metal_to_alloy)
-				user << "<span class='alloy'>It can convert Brass sheets to liquified replicant alloy at a rate of <b>1</b> sheet to <b>[REPLICANT_FLOOR]</b> alloy.</span>"
+				user << "<span class='alloy'>It can convert rods, metal, plasteel, and brass to liquified replicant alloy at rates of <b>1:1</b>, <b>1:2</b>, <b>1:5</b>, and <b>1:10</b>, respectively.</span>"
 			user << "<span class='alloy'>It has <b>[stored_alloy]/[max_alloy]</b> units of liquified alloy stored.</span>"
 			user << "<span class='alloy'>Use it on a Tinkerer's Cache, strike it with Replicant Alloy, or attack Replicant Alloy with it to add additional liquified alloy.</span>"
 			if(reform_alloy)
@@ -114,6 +126,9 @@
 	if(!is_servant_of_ratvar(user))
 		return ..()
 	proselytize(target, user)
+
+/obj/item/clockwork/clockwork_proselytizer/proc/get_power_alloy()
+	return stored_alloy
 
 /obj/item/clockwork/clockwork_proselytizer/proc/modify_stored_alloy(amount)
 	stored_alloy = Clamp(stored_alloy + amount, 0, max_alloy)

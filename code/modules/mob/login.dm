@@ -70,4 +70,5 @@
 				AA.display_to(list(src))
 
 	update_client_colour()
-	client.click_intercept = null
+	if(client)
+		client.click_intercept = null

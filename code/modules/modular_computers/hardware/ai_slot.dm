@@ -3,7 +3,7 @@
 	desc = "A module allowing this computer to interface with most common intelliCard modules. Necessary for some programs to run properly."
 	power_usage = 100 //W
 	icon_state = "card_mini"
-	w_class = 2
+	w_class = WEIGHT_CLASS_SMALL
 	origin_tech = "programming=2"
 	device_type = MC_AI
 
@@ -11,10 +11,10 @@
 	var/locked = FALSE
 
 
-obj/item/weapon/computer_hardware/ai_slot/examine(mob/user)
+/obj/item/weapon/computer_hardware/ai_slot/examine(mob/user)
 	..()
 	if(stored_card)
-		user << "There appears to be an intelliCard loaded."
+		user << "There appears to be an intelliCard loaded. There appears to be a pinhole protecting a manual eject button. A screwdriver could probably press it"
 
 /obj/item/weapon/computer_hardware/ai_slot/on_install(obj/item/device/modular_computer/M, mob/living/user = null)
 	M.add_verb(device_type)
@@ -44,13 +44,13 @@ obj/item/weapon/computer_hardware/ai_slot/examine(mob/user)
 	return TRUE
 
 
-/obj/item/weapon/computer_hardware/ai_slot/try_eject(forced = 0,mob/living/user = null)
+/obj/item/weapon/computer_hardware/ai_slot/try_eject(slot=0,mob/living/user = null,forced = 0)
 	if(!stored_card)
 		user << "<span class='warning'>There is no card in \the [src].</span>"
 		return FALSE
 
 	if(locked && !forced)
-		user << "<span class='warning'>Safeties prevent you from removing the card while reconstruction is in progress...</span>"
+		user << "<span class='warning'>Safeties prevent you from removing the card until reconstruction is complete...</span>"
 		return FALSE
 
 	if(stored_card)

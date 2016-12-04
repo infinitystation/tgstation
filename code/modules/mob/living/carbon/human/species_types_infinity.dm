@@ -6,7 +6,7 @@
 	id = "tajaran"
 	say_mod = "мурлычит"
 	default_color = "FFFFF"
-	specflags = list(EYECOLOR,MUTCOLORS) //LIPS не выставлять. Спрайт лица длиннее, чем у человека.
+	species_traits = list(EYECOLOR,MUTCOLORS) //LIPS не выставлять. Спрайт лица длиннее, чем у человека.
 	mutant_organs = list(/obj/item/organ/tongue/tajaran)
 	mutant_bodyparts = list("tail_tajaran", "ears_tajaran", "tajaran_hair")
 	default_features = list("mcolor" = "FFF", "ears_tajaran" = "Default", "tail_tajaran" = "Default", "tajaran_hair" = "Straight")

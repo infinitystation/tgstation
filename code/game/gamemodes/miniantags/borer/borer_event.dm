@@ -7,7 +7,7 @@
 	earliest_start = 12000
 
 /datum/round_event/borer
-	announceWhen = 3000 //Borers get 5 minutes till the crew tries to murder them.
+	announceWhen = 2400 //Borers get 4 minutes till the crew tries to murder them.
 	var/successSpawn = 0
 
 	var/spawncount = 2

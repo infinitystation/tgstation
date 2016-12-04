@@ -32,7 +32,7 @@
 	turns_per_move = 5
 	attacktext = "stings"
 	speed = -1
-	flying = 1
+	movement_type = FLYING
 	maxHealth = 100
 	health = 100
 	mouse_opacity = 2

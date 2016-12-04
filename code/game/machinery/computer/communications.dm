@@ -270,7 +270,6 @@ var/const/CALL_SHUTTLE_REASON_LENGTH = 12
 				usr << "Arrays recycling.  Please stand by."
 				return
 			var/input = stripped_input(usr, "Please choose a message to transmit to Centcom via quantum entanglement.  Please be aware that this process is very expensive, and abuse will lead to... termination.  Transmission does not guarantee a response.", "Send a message to Centcomm.", "")
-			input = sanitize_a0(input) //zamena kavichek,"Ya".
 			if(!input || !(usr in view(1,src)))
 				return
 			playsound(src, 'sound/machines/terminal_prompt_confirm.ogg', 50, 0)
@@ -287,7 +286,7 @@ var/const/CALL_SHUTTLE_REASON_LENGTH = 12
 					usr << "<span class='warning'>Arrays recycling.  Please stand by.</span>"
 					playsound(src, 'sound/machines/terminal_prompt_deny.ogg', 50, 0)
 					return
-				var/input = input(usr, "Please choose a message to transmit to \[ABNORMAL ROUTING COORDINATES\] via quantum entanglement.  Please be aware that this process is very expensive, and abuse will lead to... termination. Transmission does not guarantee a response.", "Send a message to /??????/.", "")
+				var/input = stripped_input(usr, "Please choose a message to transmit to \[ABNORMAL ROUTING COORDINATES\] via quantum entanglement.  Please be aware that this process is very expensive, and abuse will lead to... termination. Transmission does not guarantee a response.", "Send a message to /??????/.", "")
 				if(!input || !(usr in view(1,src)))
 					return
 				playsound(src, 'sound/machines/terminal_prompt_confirm.ogg', 50, 0)
@@ -472,9 +471,6 @@ var/const/CALL_SHUTTLE_REASON_LENGTH = 12
 		var/dat2 = src.interact_ai(user) // give the AI a different interact proc to limit its access
 		if(dat2)
 			dat +=  dat2
-			//user << browse(dat, "window=communications;size=400x500")
-			//onclose(user, "communications")
-
 			popup.set_content(dat)
 			popup.open()
 		return
@@ -582,7 +578,7 @@ var/const/CALL_SHUTTLE_REASON_LENGTH = 12
 			dat += "Budget: [SSshuttle.points] Credits.<BR>"
 			for(var/shuttle_id in shuttle_templates)
 				var/datum/map_template/shuttle/S = shuttle_templates[shuttle_id]
-				if(S.credit_cost < INFINITY)
+				if(S.can_be_bought && S.credit_cost < INFINITY)
 					dat += "[S.name] | [S.credit_cost] Credits<BR>"
 					dat += "[S.description]<BR>"
 					dat += "<A href='?src=\ref[src];operation=buyshuttle;chosen_shuttle=\ref[S]'>(<font color=red><i>Purchase</i></font>)</A><BR><BR>"
