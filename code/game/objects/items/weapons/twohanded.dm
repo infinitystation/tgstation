@@ -625,3 +625,19 @@
 
 /obj/item/weapon/twohanded/bonespear/update_icon()
 		icon_state = "bone_spear[wielded]"
+
+/obj/item/weapon/twohanded/required/hammer
+	name = "war hammer"
+	desc = "За Армока и Инквизицию! Бить держва в двух руках!"
+	icon_state = "mjollnir0"
+	flags = CONDUCT
+	slot_flags = SLOT_BACK
+	force = 5
+	force_unwielded = 5
+	force_wielded = 20
+	throwforce = 15
+	throw_range = 1
+	w_class = 5
+	origin_tech = "combat=3"
+	armor = list(melee = 10, bullet = 0, laser = 0, energy = 0, bomb = 5, bio = 0, rad = 0, fire = 0, acid = 30)
+	resistance_flags = FIRE_PROOF | ACID_PROOF

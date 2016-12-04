@@ -25,6 +25,10 @@
 	icon_state = "armor"
 	item_state = "armor"
 
+/obj/item/clothing/suit/armor/vest/alt/dwarf
+	name = "Iron vest"
+	armor = list(melee = 40, bullet = 30, laser = 15,energy = 5, bomb = 35, bio = 0, rad = 0, fire = 40, acid = 40)
+
 /obj/item/clothing/suit/armor/vest/blueshirt
 	icon_state = "blueshift"
 	item_state = "blueshift"
