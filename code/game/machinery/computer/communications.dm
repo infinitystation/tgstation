@@ -270,6 +270,7 @@ var/const/CALL_SHUTTLE_REASON_LENGTH = 12
 				usr << "Arrays recycling.  Please stand by."
 				return
 			var/input = stripped_input(usr, "Please choose a message to transmit to Centcom via quantum entanglement.  Please be aware that this process is very expensive, and abuse will lead to... termination.  Transmission does not guarantee a response.", "Send a message to Centcomm.", "")
+			input = sanitize_a0(input) //zamena kavichek,"Ya".
 			if(!input || !(usr in view(1,src)))
 				return
 			playsound(src, 'sound/machines/terminal_prompt_confirm.ogg', 50, 0)
