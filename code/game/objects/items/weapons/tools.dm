@@ -618,6 +618,10 @@ obj/item/weapon/weldingtool/proc/switched_off(mob/user)
 	icon_state = "brasswelder"
 	item_state = "brasswelder"
 
+/obj/item/weapon/weldingtool/experimental/brass/dwarf
+	name = "strange welding tool"
+	max_fuel = 50000
+
 
 /obj/item/weapon/weldingtool/experimental/process()
 	..()

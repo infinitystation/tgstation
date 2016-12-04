@@ -206,6 +206,18 @@
 		/turf/closed/mineral/silver/volcanic = 12, /turf/closed/mineral/plasma/volcanic = 20, /turf/closed/mineral/iron/volcanic = 40,
 		/turf/closed/mineral/gibtonite/volcanic = 4, /turf/open/floor/plating/asteroid/airless/cave/volcanic = 1, /turf/closed/mineral/bscrystal/volcanic = 1)
 
+/turf/closed/mineral/random/volcanic/no_cave
+	environment_type = "basalt"
+	turf_type = /turf/open/floor/plating/asteroid/basalt/lava_land_surface/normal_air
+	baseturf = /turf/open/floor/plating/lava/smooth/lava_land_surface/normal_air
+	initial_gas_mix = "o2=22;n2=82;TEMP=293.15"
+	mineralChance = 10
+	mineralSpawnChanceList = list(
+		/turf/closed/mineral/diamond/volcanic/normal_air = 1, /turf/closed/mineral/gold/volcanic/normal_air = 10,
+		/turf/closed/mineral/silver/volcanic/normal_air = 12, /turf/closed/mineral/iron/volcanic/normal_air = 40,
+		/turf/closed/mineral/gibtonite/volcanic/normal_air = 4, /turf/closed/mineral/bscrystal/volcanic/normal_air = 1)
+
+
 /turf/closed/mineral/random/labormineral
 	mineralSpawnChanceList = list(
 		/turf/closed/mineral/iron = 100, /turf/closed/mineral/uranium = 1, /turf/closed/mineral/diamond = 1,
@@ -242,6 +254,13 @@
 	initial_gas_mix = "o2=14;n2=23;TEMP=300"
 	defer_change = 1
 
+/turf/closed/mineral/iron/volcanic/normal_air
+	environment_type = "basalt"
+	turf_type = /turf/open/floor/plating/asteroid/basalt/lava_land_surface/normal_air
+	baseturf = /turf/open/floor/plating/lava/smooth/lava_land_surface/normal_air
+	initial_gas_mix = "o2=22;n2=82;TEMP=293.15"
+	defer_change = 1
+
 
 /turf/closed/mineral/uranium
 	mineralType = /obj/item/weapon/ore/uranium
@@ -270,6 +289,13 @@
 	initial_gas_mix = "o2=14;n2=23;TEMP=300"
 	defer_change = 1
 
+/turf/closed/mineral/diamond/volcanic/normal_air
+	environment_type = "basalt"
+	turf_type = /turf/open/floor/plating/asteroid/basalt/lava_land_surface/normal_air
+	baseturf = /turf/open/floor/plating/lava/smooth/lava_land_surface/normal_air
+	initial_gas_mix = "o2=22;n2=82;TEMP=293.15"
+	defer_change = 1
+
 
 /turf/closed/mineral/gold
 	mineralType = /obj/item/weapon/ore/gold
@@ -284,6 +310,13 @@
 	initial_gas_mix = "o2=14;n2=23;TEMP=300"
 	defer_change = 1
 
+/turf/closed/mineral/gold/volcanic/normal_air
+	environment_type = "basalt"
+	turf_type = /turf/open/floor/plating/asteroid/basalt/lava_land_surface/normal_air
+	baseturf = /turf/open/floor/plating/lava/smooth/lava_land_surface/normal_air
+	initial_gas_mix = "o2=22;n2=82;TEMP=293.15"
+	defer_change = 1
+
 
 /turf/closed/mineral/silver
 	mineralType = /obj/item/weapon/ore/silver
@@ -296,6 +329,13 @@
 	turf_type = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
 	baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
 	initial_gas_mix = "o2=14;n2=23;TEMP=300"
+	defer_change = 1
+
+/turf/closed/mineral/silver/volcanic/normal_air
+	environment_type = "basalt"
+	turf_type = /turf/open/floor/plating/asteroid/basalt/lava_land_surface/normal_air
+	baseturf = /turf/open/floor/plating/lava/smooth/lava_land_surface/normal_air
+	initial_gas_mix = "o2=22;n2=82;TEMP=293.15"
 	defer_change = 1
 
 
@@ -347,6 +387,13 @@
 	turf_type = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
 	baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
 	initial_gas_mix = "o2=14;n2=23;TEMP=300"
+	defer_change = 1
+
+/turf/closed/mineral/bscrystal/volcanic/normal_air
+	environment_type = "basalt"
+	turf_type = /turf/open/floor/plating/asteroid/basalt/lava_land_surface/normal_air
+	baseturf = /turf/open/floor/plating/lava/smooth/lava_land_surface/normal_air
+	initial_gas_mix = "o2=22;n2=82;TEMP=293.15"
 	defer_change = 1
 
 
@@ -485,4 +532,11 @@
 	turf_type = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
 	baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
 	initial_gas_mix = "o2=14;n2=23;TEMP=300"
+	defer_change = 1
+
+/turf/closed/mineral/gibtonite/volcanic/normal_air
+	environment_type = "basalt"
+	turf_type = /turf/open/floor/plating/asteroid/basalt/lava_land_surface/normal_air
+	baseturf = /turf/open/floor/plating/lava/smooth/lava_land_surface/normal_air
+	initial_gas_mix = "o2=22;n2=82;TEMP=293.15"
 	defer_change = 1

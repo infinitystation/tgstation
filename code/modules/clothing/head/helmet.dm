@@ -148,6 +148,11 @@
 	strip_delay = 80
 	dog_fashion = null
 
+/obj/item/clothing/head/helmet/thunderdome/dwarf
+	name = "Iron helmet"
+	desc = "<i>'Let the battle commence!'</i>"
+	armor = list(melee = 30, bullet = 20, laser = 15,energy = 5, bomb = 35, bio = 0, rad = 0, fire = 30, acid = 40)
+
 /obj/item/clothing/head/helmet/roman
 	name = "roman helmet"
 	desc = "An ancient helmet made of bronze and leather."

@@ -100,5 +100,10 @@
 	planetary_atmos = TRUE
 	baseturf = /turf/open/chasm/straight_down/lava_land_surface
 
+/turf/open/floor/plating/lava/smooth/lava_land_surface/normal_air
+	initial_gas_mix = "o2=22;n2=82;TEMP=293.15"
+	planetary_atmos = TRUE
+	baseturf = /turf/open/chasm/straight_down/lava_land_surface/normal_air
+
 /turf/open/floor/plating/lava/smooth/airless
 	initial_gas_mix = "TEMP=2.7"

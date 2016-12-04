@@ -101,7 +101,7 @@
 
 /area/lavaland/underground
 	name = "Lavaland Caves"
-	icon_state = "explored"
+	icon_state = "unexplored"
 	music = null
 	always_unpowered = 1
 	requires_power = 1
@@ -115,7 +115,7 @@
 /area/lavaland/surface/outdoors
 	name = "Lavaland Wastes"
 	outdoors = 1
-	ambientsounds = list('sound/ambience/ambilava.ogg','sound/doom/sigh.ogg','sound/doom/horror.ogg','sound/doom/whispers.ogg','sound/doom/hell_pray.ogg','sound/doom/damned.ogg')
+	ambientsounds = 'sound/ambience/ambilava.ogg'
 
 /area/lavaland/surface/outdoors/near
 	name = "Lavaland Near Base"
