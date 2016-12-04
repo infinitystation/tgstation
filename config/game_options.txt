@@ -200,7 +200,7 @@ ALLOW_AI
 
 ### Peacekeeper Borg ###
 ## Uncomment to prevent the peacekeeper cyborg module from being chosen
-#DISABLE_PEACEBORG
+DISABLE_PEACEBORG
 
 ### AWAY MISSIONS ###
 
