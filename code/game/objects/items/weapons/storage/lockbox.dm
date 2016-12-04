@@ -5,6 +5,7 @@
 	desc = "A locked box."
 	icon_state = "lockbox+l"
 	item_state = "syringe_kit"
+	resistance_flags = ACID_PROOF
 	w_class = 4
 	max_w_class = 3
 	max_combined_w_class = 14 //The sum of the w_classes of all the items in this storage item.
