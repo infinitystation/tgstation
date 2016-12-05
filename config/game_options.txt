@@ -165,13 +165,13 @@ TRAITOR_OBJECTIVES_AMOUNT 2
 PROTECT_ROLES_FROM_ANTAGONIST
 
 ## Uncomment to prohibit assistants from becoming most antagonists.
-PROTECT_ASSISTANT_FROM_ANTAGONIST
+#PROTECT_ASSISTANT_FROM_ANTAGONIST
 
 ## If non-human species are barred from joining as a head of staff
 ENFORCE_HUMAN_AUTHORITY
 
 ## If late-joining players have a chance to become a traitor/changeling
-#ALLOW_LATEJOIN_ANTAGONISTS
+ALLOW_LATEJOIN_ANTAGONISTS
 
 ## Uncomment to allow players to see the set odds of different rounds in secret/random in the get server revision screen. This will NOT tell the current roundtype.
 #SHOW_GAME_TYPE_ODDS
