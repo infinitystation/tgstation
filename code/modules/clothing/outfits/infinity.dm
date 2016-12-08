@@ -205,3 +205,9 @@
 	W.assignment = "Survivor"
 	W.registered_name = H.real_name
 	W.update_label()
+
+/datum/outfit/dwarf
+	name = "aDwarf"
+
+	uniform = /obj/item/clothing/under/color/random
+	shoes = /obj/item/clothing/shoes/sandal
