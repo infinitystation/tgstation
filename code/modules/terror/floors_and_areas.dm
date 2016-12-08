@@ -17,9 +17,13 @@
 	name = "Security Gear Room"
 	icon_state = "red"
 
-/area/security/break_room
-	name = "Security Break Room"
+/area/security/east_brig
+	name = "East Brig"
 	icon_state = "red"
+
+/area/security/break_room
+	name = "Brig Break Room"
+	icon_state = "green"
 
 /area/security/west
 	name = "West brig's corridor"
