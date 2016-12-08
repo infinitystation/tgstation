@@ -1,7 +1,7 @@
 /obj/item/weapon/folder
 	name = "folder"
 	desc = "A folder."
-	icon = 'icons/obj/bureaucracy.dmi'
+	icon = 'icons/obj/Infinity_bureaucracy.dmi'
 	icon_state = "folder"
 	w_class = WEIGHT_CLASS_SMALL
 	pressure_resistance = 2
@@ -25,7 +25,7 @@
 
 /obj/item/weapon/folder/black
 	desc = "A black folder."
-	icon_state = "folder_syndie"
+	icon_state = "folder_black"
 
 
 /obj/item/weapon/folder/update_icon()
