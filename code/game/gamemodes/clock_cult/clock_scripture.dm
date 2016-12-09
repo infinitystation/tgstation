@@ -46,6 +46,11 @@ Judgement: 12 servants, 5 caches, 300 CV, and any existing AIs are converted or 
 	var/static/list/nzcrentr_penalty = list("You'd be easy to hunt in that little hunk of metal.", "Boss says you need to get back to the beacon.", "Boss says I can kill you if you do this again.", \
 	"Sending you power is too difficult here.", "Boss says stop wasting time.")
 
+/datum/clockwork_scripture/New()
+	creation_update()
+
+/datum/clockwork_scripture/proc/creation_update() //updates any on-creation effects
+
 /datum/clockwork_scripture/proc/run_scripture()
 	if(can_recite() && has_requirements())
 		if(slab.busy)
@@ -62,8 +67,8 @@ Judgement: 12 servants, 5 caches, 300 CV, and any existing AIs are converted or 
 						else
 							clockwork_component_cache[i]--
 							used_cache_components[i]++
-		else
-			channel_time *= 0.5 //if ratvar has awoken or the slab has no cost, half channel time
+			update_slab_info()
+		channel_time *= slab.speed_multiplier
 		if(!recital() || !check_special_requirements() || !scripture_effects()) //if we fail any of these, refund components used
 			for(var/i in used_slab_components)
 				if(used_slab_components[i])
@@ -74,7 +79,8 @@ Judgement: 12 servants, 5 caches, 300 CV, and any existing AIs are converted or 
 			for(var/i in used_cache_components)
 				if(used_cache_components[i])
 					clockwork_component_cache[i] += consumed_components[i]
-		else if(slab && !slab.no_cost) //if the slab exists and isn't debug, log the scripture as being used
+			update_slab_info()
+		else if(slab && !slab.no_cost && !ratvar_awakens) //if the slab exists and isn't debug and ratvar isn't up, log the scripture as being used
 			feedback_add_details("clockcult_scripture_recited", name)
 	if(slab)
 		slab.busy = null

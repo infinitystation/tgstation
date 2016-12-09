@@ -909,8 +909,8 @@ var/list/obj/machinery/newscaster/allCasters = list()
 	var/creationTime
 
 /obj/item/weapon/newspaper/suicide_act(mob/user)
-	user.visible_message("<span class='suicide'>[user] сконцентрировалс&#255; на чтении газеты! Кажетс&#255;, [user.p_they()] пытаетс&#255; решить судоку... и у него получаетс&#255;!</span>")
-	user.say("&#255; РЕШИЛ ЭТОТ СУДОКУ! &#255; ВЫИГРАЛ КУЧУ КРЕДИТОВ! НУЖНО ОТПРАЗДНОВАТЬ!")
+	user.visible_message("<span class='suicide'>[user] is focusing intently on [src]! It looks like [user.p_theyre()] trying to commit sudoku... until [user.p_their()] eyes light up with realization!</span>")
+	user.say(";JOURNALISM IS MY CALLING! EVERYBODY APPRECIATES UNBIASED REPORTI-GLORF")
 	var/mob/living/carbon/human/H = user
 	var/obj/W = new /obj/item/weapon/reagent_containers/food/drinks/bottle/whiskey(H.loc)
 	playsound(H.loc, 'sound/items/drink.ogg', rand(10,50), 1)

@@ -21,6 +21,7 @@
 	can_be_unanchored = 1
 	resistance_flags = ACID_PROOF
 	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 80, acid = 100)
+	CanAtmosPass = ATMOS_PASS_PROC
 
 /obj/structure/window/examine(mob/user)
 	..()
@@ -440,7 +441,7 @@
 	max_integrity = 100
 	armor = list(melee = 60, bullet = 25, laser = 0, energy = 0, bomb = 25, bio = 100, rad = 100, fire = 80, acid = 100)
 	explosion_block = 2 //fancy AND hard to destroy. the most useful combination.
-	glass_type = /obj/item/stack/sheet/brass
+	glass_type = /obj/item/stack/tile/brass
 	glass_amount = 1
 	var/made_glow = FALSE
 
