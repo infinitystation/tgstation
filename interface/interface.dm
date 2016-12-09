@@ -40,7 +40,7 @@
 	set desc = "Visit github"
 	set hidden = 1
 	if(config.githuburl)
-		if(alert("This will open the bitbucket repository in your browser. Are you sure?",,"Yes","No")=="No")
+		if(alert("This will open the github repository in your browser. Are you sure?",,"Yes","No")=="No")
 			return
 		src << link(config.githuburl)
 	else
