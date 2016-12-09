@@ -78,7 +78,11 @@
 	..()
 
 /obj/effect/mob_spawn/human/exile/special(mob/living/new_spawn)
-	new_spawn.real_name = "Wish Granter's Victim ([rand(0,999)])"
+	var/rand_name = 0
+	rand_name = rand(0,999)
+	if(rand_name == 255)
+		rand_name += 1
+	new_spawn.real_name = "Wish Granter's Victim ([rand_name])"
 	var/wish = rand(1,4)
 	switch(wish)
 		if(1)
@@ -236,7 +240,11 @@
 	though fate has other plans for you. You remember that you were convicted of "
 
 /obj/effect/mob_spawn/human/prisoner_transport/special(mob/living/L)
-	L.real_name = "NTP #LL-0[rand(111,999)]" //Nanotrasen Prisoner #Lavaland-(numbers)
+	var/rand_name = 0
+	rand_name = rand(0,999)
+	if(rand_name == 255)
+		rand_name += 1
+	L.real_name = "NTP #LL-0[rand_name]" //Nanotrasen Prisoner #Lavaland-(numbers)
 	L.name = L.real_name
 
 /obj/effect/mob_spawn/human/prisoner_transport/New()

@@ -52,7 +52,11 @@
 		if(Q.stat == DEAD)
 			continue
 		if(Q.client)
-			name = "alien princess ([rand(1, 999)])"	//if this is too cutesy feel free to change it/remove it.
+			var/rand_name = 0
+			rand_name = rand(0,999)
+			if(rand_name == 255)
+				rand_name += 1
+			name = "alien princess ([rand_name])"	//if this is too cutesy feel free to change it/remove it.
 			break
 
 	real_name = src.name

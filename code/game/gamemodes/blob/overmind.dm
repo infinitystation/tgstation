@@ -42,7 +42,11 @@
 			manualplace_min_time += world.time
 		autoplace_max_time += world.time
 	overminds += src
-	var/new_name = "[initial(name)] ([rand(1, 999)])"
+	var/rand_name = 0
+	rand_name = rand(0,999)
+	if(rand_name == 255)
+		rand_name += 1
+	var/new_name = "[initial(name)] ([rand_name])"
 	name = new_name
 	real_name = new_name
 	last_attack = world.time

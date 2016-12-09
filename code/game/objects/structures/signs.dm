@@ -403,6 +403,7 @@
 	desc = "That's just big a letter S..."
 	icon = 'icons/obj/infinity_decals.dmi'
 	icon_state = "S"
+	layer = 2.1
 
 /obj/structure/sign/directions/only
 	name = "Only 1"

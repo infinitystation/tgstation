@@ -130,7 +130,11 @@
 			maxHealth += A.armor["melee"] //That zombie's got armor, I want armor!
 	maxHealth += 40
 	health = maxHealth
-	name = "blob zombie ([rand(100,999)])"
+	var/rand_name = 0
+	rand_name = rand(0,999)
+	if(rand_name == 255)
+		rand_name += 1
+	name = "blob zombie ([rand_name])"
 	real_name = name
 	desc = "A shambling corpse animated by the blob."
 	melee_damage_lower += 8
