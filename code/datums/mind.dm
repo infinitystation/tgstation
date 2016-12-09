@@ -758,7 +758,7 @@
 				new_objective.target_amount = target_number
 
 			if ("custom")
-				var/expl = stripped_input(usr, "Custom objective:", "Objective", objective ? objective.explanation_text : "")
+				var/expl = sanitize_a0(stripped_input(usr, "Custom objective:", "Objective", objective ? objective.explanation_text : ""))
 				if (!expl)
 					return
 				new_objective = new /datum/objective
