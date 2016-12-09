@@ -10,8 +10,12 @@
 				else //no choice? force static
 					D.staticOverlays |= staticOverlays["static"]
 					D.client.images |= staticOverlays["static"]
+	var/rand_num = 0
+	rand_num = rand(1, 1000)
+	if(rand_num == 255)
+		rand_num += 1
 	if(unique_name)
-		name = "[name] ([rand(1, 1000)])"
+		name = "[name] ([rand_num])"
 		real_name = name
 	var/datum/atom_hud/data/human/medical/advanced/medhud = huds[DATA_HUD_MEDICAL_ADVANCED]
 	medhud.add_to_hud(src)

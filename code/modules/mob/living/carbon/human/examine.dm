@@ -164,7 +164,7 @@
 		if(200 to 300)
 			msg += "<span class='warning'>[t_He] сильно дрожит.</span>\n"
 		if(100 to 200)
-			msg += "<span class='warning'>[t_He] чуть-чуть подёргивает.</span>\n"
+			msg += "<span class='warning'>[t_He] чуть-чуть подёргиваетc&#255;.</span>\n"
 
 
 	var/appears_dead = 0
