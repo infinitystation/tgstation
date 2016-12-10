@@ -92,8 +92,9 @@ var/list/freqtospan = list(
 	return clean_input != "" ? "[check ? begin : verb_say], \"[input]\"" : "[check ? begin : verb_say]"
 
 /atom/movable/proc/get_custom_quote(input)
-	if(copytext(input, 1, 2) == "!" && findtext(input, "!", 3))
-		return 1
+	var/begin = findtext(input, "!", 3)
+	if(copytext(input, 1, 2) == "!" && begin)
+		return begin
 	else
 		return 0
 

@@ -551,10 +551,14 @@
 	var/regex/lizard_hiss = new("s+", "g")
 	var/regex/lizard_hiSS = new("S+", "g")
 	if(copytext(message, 1, 2) != "*")
+		var/begin = get_custom_quote(message)
+		var/quote = copytext(message, 1, begin)
+		message = copytext(message, begin)
 		message = lizard_hiss.Replace(message, "sss")
 		message = lizard_hiSS.Replace(message, "SSS")
 		message = lizard_hicc.Replace(message, "ñññ")
 		message = lizard_hiCC.Replace(message, "ÑÑÑ")
+		message = quote + message
 	return message
 
 /obj/item/organ/tongue/fly
@@ -569,10 +573,14 @@
 	var/regex/fly_buzz = new("z+", "g")
 	var/regex/fly_buZZ = new("Z+", "g")
 	if(copytext(message, 1, 2) != "*")
+		var/begin = get_custom_quote(message)
+		var/quote = copytext(message, 1, begin)
+		message = copytext(message, begin)
 		message = fly_buzz.Replace(message, "zzz")
 		message = fly_buZZ.Replace(message, "ZZZ")
 		message = fly_bu3.Replace(message, "ççç")
 		message = fly_bu33.Replace(message, "ÇÇÇ")
+		message = quote + message
 	return message
 
 /obj/item/organ/tongue/abductor
