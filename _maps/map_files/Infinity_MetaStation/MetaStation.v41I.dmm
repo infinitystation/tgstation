@@ -11114,10 +11114,11 @@
 	},
 /area/security/east_brig)
 "atl" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/machinery/light{
+	icon_state = "tube1";
 	dir = 8
 	},
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /turf/open/floor/plasteel/red/side{
 	dir = 8
 	},
@@ -11215,8 +11216,8 @@
 /obj/item/weapon/storage/backpack/satchel/leather/withwallet,
 /obj/item/clothing/under/suit_jacket/navy,
 /obj/machinery/button/door{
-	id = "Cabin5";
-	name = "Cabin Bolt Control";
+	id = "mineshower";
+	name = "Bolt Control";
 	normaldoorcontrol = 1;
 	pixel_x = 25;
 	pixel_y = 0;
@@ -18192,6 +18193,7 @@
 /area/crew_quarters/toilet)
 "aEM" = (
 /obj/machinery/door/airlock{
+	id_tag = "mineshower";
 	name = "Unisex Showers";
 	req_access_txt = "0"
 	},
@@ -23669,8 +23671,7 @@
 /obj/machinery/light_switch{
 	pixel_y = 28
 	},
-/obj/structure/rack,
-/obj/item/weapon/pinpointer,
+/obj/machinery/computer/bank_machine,
 /turf/open/floor/plasteel{
 	icon_state = "vault";
 	dir = 4
@@ -27161,7 +27162,8 @@
 	pixel_y = -27
 	},
 /obj/structure/cable/yellow,
-/obj/machinery/vending/eatimat,
+/obj/structure/rack,
+/obj/item/weapon/pinpointer,
 /turf/open/floor/plasteel{
 	icon_state = "vault";
 	dir = 1
@@ -27194,6 +27196,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 5
 	},
+/obj/item/weapon/storage/bag/money,
 /turf/open/floor/plasteel{
 	icon_state = "vault";
 	dir = 4
@@ -80722,6 +80725,7 @@
 	},
 /area/toxins/mixing)
 "cFx" = (
+/obj/structure/closet/cardboard,
 /turf/open/floor/plating{
 	tag = "icon-platingdmg3";
 	icon_state = "platingdmg3"
@@ -95304,6 +95308,7 @@
 /area/maintenance/brsmaint)
 "dea" = (
 /obj/structure/closet/cardboard,
+/obj/item/stack/spacecash/c10,
 /turf/open/floor/plating{
 	tag = "icon-platingdmg2";
 	icon_state = "platingdmg2"
@@ -96586,22 +96591,19 @@
 	},
 /turf/open/floor/wood,
 /area/security/break_room)
-"dgM" = (
-/obj/structure/table,
-/obj/structure/bedsheetbin,
-/obj/item/device/radio/intercom{
-	freerange = 0;
-	frequency = 1459;
-	name = "Station Intercom (General)";
-	pixel_x = 0;
-	pixel_y = -26
+"dgH" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 10
 	},
-/turf/open/floor/plasteel/bot,
+/turf/closed/wall,
 /area/security/east_brig)
-"dgL" = (
-/obj/machinery/washing_machine,
-/turf/open/floor/plasteel/bot,
+"dgI" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/turf/closed/wall,
 /area/security/east_brig)
+"dgJ" = (
+/turf/closed/wall,
+/area/security/detectives_office)
 "dgK" = (
 /obj/machinery/door/airlock{
 	id_tag = "sec_toi";
@@ -96615,19 +96617,43 @@
 	icon_state = "freezerfloor"
 	},
 /area/security/east_brig)
-"dgJ" = (
-/turf/closed/wall,
-/area/security/detectives_office)
-"dgI" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/turf/closed/wall,
+"dgL" = (
+/obj/machinery/washing_machine,
+/turf/open/floor/plasteel/bot,
 /area/security/east_brig)
-"dgH" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 10
+"dgM" = (
+/obj/structure/table,
+/obj/structure/bedsheetbin,
+/obj/item/device/radio/intercom{
+	freerange = 0;
+	frequency = 1459;
+	name = "Station Intercom (General)";
+	pixel_x = 0;
+	pixel_y = -26
 	},
-/turf/closed/wall,
+/turf/open/floor/plasteel/bot,
 /area/security/east_brig)
+"dgR" = (
+/obj/structure/closet/cardboard,
+/turf/open/floor/plating,
+/area/maintenance/asmaint2)
+"dgQ" = (
+/obj/structure/closet/cardboard,
+/turf/open/floor/plating,
+/area/maintenance/asmaint)
+"dgP" = (
+/obj/structure/closet/cardboard,
+/turf/open/floor/plating,
+/area/maintenance/fpmaint2)
+"dgO" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/structure/closet/cardboard,
+/turf/open/floor/plating,
+/area/maintenance/fpmaint2)
+"dgN" = (
+/obj/item/mushroom_bowl,
+/turf/closed/wall,
+/area/engine/rest_room)
 
 (1,1,1) = {"
 aaa
@@ -110898,7 +110924,7 @@ aFv
 apb
 bNx
 bPn
-bQY
+dgO
 bQY
 bQY
 bQY
@@ -115024,7 +115050,7 @@ ceW
 cga
 chJ
 cju
-cdL
+dgQ
 bZy
 cmX
 coo
@@ -115272,7 +115298,7 @@ bzq
 bzq
 bVO
 bNw
-aGS
+dgP
 bZB
 azC
 bYw
@@ -130984,7 +131010,7 @@ cFs
 cFs
 cMh
 cNe
-csl
+dgR
 cAC
 cqE
 cQU
@@ -134293,7 +134319,7 @@ bXZ
 bZf
 bOk
 cbB
-bWM
+bTI
 cez
 cfK
 cbC
@@ -137315,7 +137341,7 @@ aai
 aai
 aai
 aai
-ajv
+dgN
 ajv
 ajv
 ajv
