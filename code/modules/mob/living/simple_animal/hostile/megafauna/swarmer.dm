@@ -301,7 +301,7 @@ var/global/list/AISwarmerCapsByType = list(/mob/living/simple_animal/hostile/swa
 
 /mob/living/simple_animal/hostile/swarmer/ai/melee_combat/AttackingTarget()
 	if(isliving(target))
-		if(prob(35))
+		if(prob(5))
 			StartAction(30)
 			DisperseTarget(target)
 		else

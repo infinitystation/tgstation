@@ -162,7 +162,7 @@
 "aF" = (
 /obj/effect/decal/cleanable/blood/old,
 /obj/item/weapon/pickaxe/silver/poor,
-/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/turf/open/indestructible/necropolis,
 /area/lavaland/surface/outdoors)
 "aG" = (
 /obj/item/weapon/paper/crumpled/bloody{
@@ -177,7 +177,7 @@
 /obj/item/weapon/paper/crumpled/bloody{
 	info = "<i>эти богатые скалы стои крови дл\green нашей крепости...</i>"
 	},
-/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/turf/open/indestructible/necropolis,
 /area/lavaland/surface/outdoors)
 "aJ" = (
 /turf/closed/mineral/random/volcanic,
@@ -659,79 +659,72 @@
 	},
 /area/mine/cafeteria)
 "cp" = (
-/obj/structure/cable{
-	tag = "icon-0-4";
-	icon_state = "0-4"
-	},
-/obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "mine_shutters"
 	},
-/obj/machinery/door/firedoor,
+/obj/effect/spawner/structure/window/reinforced,
+/obj/structure/cable{
+	icon_state = "0-4";
+	d2 = 4
+	},
 /turf/open/floor/plating/lavaland,
 /area/mine/cafeteria)
 "cq" = (
-/obj/structure/cable{
-	tag = "icon-4-8";
-	icon_state = "4-8"
-	},
-/obj/structure/cable{
-	tag = "icon-0-4";
-	icon_state = "0-4"
-	},
-/obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "mine_shutters"
 	},
-/obj/machinery/door/firedoor,
+/obj/effect/spawner/structure/window/reinforced,
+/obj/structure/cable{
+	icon_state = "0-4";
+	d2 = 4
+	},
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
+	},
 /turf/open/floor/plating/lavaland,
 /area/mine/cafeteria)
 "cr" = (
-/obj/structure/cable{
-	tag = "icon-2-8";
-	icon_state = "2-8"
-	},
-/obj/structure/cable{
-	tag = "icon-2-4";
-	icon_state = "2-4"
-	},
-/obj/structure/cable{
-	tag = "icon-0-2";
-	icon_state = "0-2"
-	},
-/obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "mine_shutters"
 	},
-/obj/machinery/door/firedoor,
+/obj/effect/spawner/structure/window/reinforced,
+/obj/structure/cable{
+	icon_state = "0-4";
+	d2 = 4
+	},
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/obj/structure/cable{
+	icon_state = "0-2";
+	d2 = 2
+	},
 /turf/open/floor/plating/lavaland,
 /area/mine/cafeteria)
 "cs" = (
+/obj/effect/spawner/structure/window/reinforced,
 /obj/structure/cable{
-	tag = "icon-4-8";
-	icon_state = "4-8"
+	icon_state = "0-4";
+	d2 = 4
 	},
 /obj/structure/cable{
-	tag = "icon-0-8";
+	d2 = 8;
 	icon_state = "0-8"
 	},
-/obj/effect/spawner/structure/window/reinforced,
-/obj/machinery/door/poddoor/shutters/preopen{
-	id = "mine_shutters"
-	},
-/obj/machinery/door/firedoor,
+/obj/structure/sign/directions/dock/two,
 /turf/open/floor/plating/lavaland,
-/area/mine/cafeteria)
+/area/mine/lobby)
 "ct" = (
-/obj/structure/cable{
-	tag = "icon-0-8";
-	icon_state = "0-8"
-	},
-/obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "mine_shutters"
 	},
-/obj/machinery/door/firedoor,
+/obj/effect/spawner/structure/window/reinforced,
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
+	},
 /turf/open/floor/plating/lavaland,
 /area/mine/cafeteria)
 "cu" = (
@@ -748,9 +741,11 @@
 /turf/open/floor/plasteel/terror/necro/bar,
 /area/mine/cafeteria)
 "cx" = (
-/obj/effect/portal,
-/turf/closed/mineral/random/high_chance/volcanic,
-/area/lavaland/surface/outdoors/near)
+/obj/structure/sign/directions/eva,
+/turf/closed/wall{
+	baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
+	},
+/area/mine/eva)
 "cy" = (
 /obj/structure/chair/comfy/sofa/corner/right/brown,
 /obj/effect/landmark/start{
@@ -849,6 +844,9 @@
 	c_tag = "Maint";
 	dir = 2;
 	network = list("MINE")
+	},
+/obj/structure/sign/nosmoking_1{
+	pixel_y = 32
 	},
 /turf/open/floor/plating/lavaland,
 /area/mine/lobby)
@@ -1307,8 +1305,8 @@
 	},
 /area/mine/lobby)
 "dD" = (
-/obj/structure/holosign/barrier/engineering,
-/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/obj/structure/girder,
+/turf/open/floor/plating/lavaland/outdoor,
 /area/lavaland/surface/outdoors)
 "dE" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
@@ -1804,6 +1802,7 @@
 	icon_state = "4-8";
 	pixel_y = 0
 	},
+/obj/machinery/door/firedoor,
 /turf/open/floor/plating/lavaland,
 /area/mine/sleeper)
 "ex" = (
@@ -1978,14 +1977,15 @@
 "eJ" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/structure/cable{
-	tag = "icon-2-4";
-	icon_state = "2-4"
-	},
-/obj/structure/cable{
 	icon_state = "0-2";
 	pixel_y = 1;
 	d2 = 2
 	},
+/obj/structure/cable{
+	tag = "icon-0-4";
+	icon_state = "0-4"
+	},
+/obj/machinery/door/firedoor,
 /turf/open/floor/plating/lavaland/outdoor,
 /area/mine/eva)
 "eK" = (
@@ -1994,6 +1994,7 @@
 	tag = "icon-0-8";
 	icon_state = "0-8"
 	},
+/obj/machinery/door/firedoor,
 /turf/open/floor/plating/lavaland/outdoor,
 /area/mine/eva)
 "eL" = (
@@ -2018,14 +2019,12 @@
 "eN" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4";
-	tag = ""
-	},
-/obj/structure/cable{
 	icon_state = "0-4";
 	d2 = 4
+	},
+/obj/structure/cable{
+	icon_state = "0-2";
+	d2 = 2
 	},
 /turf/open/floor/plating/lavaland,
 /area/mine/lobby)
@@ -2045,84 +2044,45 @@
 /area/mine/lobby)
 "eP" = (
 /obj/effect/spawner/structure/window/reinforced,
-/obj/structure/sign/securearea{
-	desc = "A warning sign which reads 'KEEP CLEAR OF DOCKING AREA'.";
-	name = "KEEP CLEAR: DOCKING AREA";
-	pixel_y = 0
-	},
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
 /obj/structure/cable{
 	icon_state = "0-4";
 	d2 = 4
 	},
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/obj/structure/sign/directions/dock,
 /turf/open/floor/plating/lavaland,
 /area/mine/lobby)
 "eQ" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/structure/cable{
 	icon_state = "0-4";
 	d2 = 4
+	},
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
 	},
 /turf/open/floor/plating/lavaland,
 /area/mine/lobby)
 "eR" = (
-/obj/structure/cable{
-	icon_state = "0-4";
-	d2 = 4
-	},
-/obj/effect/spawner/structure/window/reinforced,
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/turf/open/floor/plating/lavaland,
-/area/mine/lobby)
+/obj/structure/door_assembly/door_assembly_ext/glass,
+/turf/open/floor/plating/lavaland/outdoor,
+/area/lavaland/surface/outdoors)
 "eS" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8";
-	pixel_y = 0
+/turf/closed/wall/shuttle/smooth/nodiagonal{
+	baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
 	},
-/obj/structure/cable{
-	icon_state = "0-4";
-	d2 = 4
-	},
-/obj/effect/spawner/structure/window/reinforced,
-/obj/structure/sign/securearea{
-	desc = "A warning sign which reads 'HIGH VOLTAGE'";
-	icon_state = "shock";
-	name = "HIGH VOLTAGE";
-	pixel_y = 0
-	},
-/turf/open/floor/plating/lavaland,
-/area/mine/lobby)
+/area/lavaland/surface/outdoors)
 "eT" = (
-/obj/effect/spawner/structure/window/reinforced,
-/obj/machinery/door/firedoor,
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8";
-	pixel_x = 0;
-	tag = ""
+/obj/structure/window/reinforced{
+	dir = 4;
+	layer = 2.9
 	},
-/obj/structure/cable{
-	icon_state = "0-4";
-	d2 = 4
-	},
-/turf/open/floor/plating/lavaland,
-/area/mine/lobby)
+/turf/open/floor/plating/lavaland/outdoor,
+/area/lavaland/surface/outdoors)
 "eU" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/structure/cable{
@@ -2423,6 +2383,10 @@
 /area/mine/eva)
 "fo" = (
 /obj/effect/spawner/structure/window/reinforced,
+/obj/structure/cable{
+	icon_state = "0-2";
+	d2 = 2
+	},
 /obj/structure/cable,
 /turf/open/floor/plating/lavaland,
 /area/mine/lobby)
@@ -2686,13 +2650,9 @@
 /turf/open/floor/plasteel/terror/necro/black/outdoor,
 /area/mine/eva)
 "fQ" = (
-/obj/effect/spawner/structure/window/reinforced,
-/obj/structure/cable{
-	icon_state = "0-2";
-	d2 = 2
-	},
-/turf/open/floor/plating/lavaland,
-/area/mine/lobby)
+/obj/structure/chair/stool,
+/turf/open/floor/plating/lavaland/outdoor,
+/area/lavaland/surface/outdoors)
 "fR" = (
 /obj/structure/fans/tiny/invisible,
 /turf/open/floor/plasteel/terror/necro/warning{
@@ -3100,54 +3060,41 @@
 "gt" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
-	},
-/obj/structure/cable{
 	icon_state = "0-4";
 	d2 = 4
 	},
+/obj/structure/cable,
 /turf/open/floor/plating/lavaland,
 /area/mine/lobby)
 "gu" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8";
-	pixel_y = 0
-	},
+/obj/effect/spawner/structure/window/reinforced,
 /obj/structure/cable{
 	icon_state = "0-4";
 	d2 = 4
 	},
-/obj/effect/spawner/structure/window/reinforced,
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/obj/structure/sign/securearea{
+	desc = "A warning sign which reads 'HIGH VOLTAGE'";
+	icon_state = "shock";
+	name = "HIGH VOLTAGE";
+	pixel_y = -32
+	},
 /turf/open/floor/plating/lavaland,
 /area/mine/lobby)
 "gv" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8";
-	pixel_y = 0
-	},
-/obj/structure/cable{
-	icon_state = "0-4";
-	d2 = 4
-	},
-/obj/effect/spawner/structure/window/reinforced,
-/obj/machinery/door/firedoor,
-/turf/open/floor/plating/lavaland,
-/area/mine/lobby)
+/obj/structure/closet/crate,
+/obj/item/stack/sheet/metal/five,
+/turf/open/floor/plating/lavaland/outdoor,
+/area/lavaland/surface/outdoors)
 "gw" = (
 /obj/structure/cable{
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8";
 	pixel_y = 0
-	},
-/obj/structure/sign/directions/dock{
-	pixel_y = -28
 	},
 /obj/machinery/computer/shuttle/mining,
 /obj/machinery/camera{
@@ -3272,11 +3219,6 @@
 /turf/open/floor/plasteel/terror/necro/brown/corner,
 /area/mine/lobby)
 "gH" = (
-/obj/machinery/firealarm{
-	dir = 8;
-	pixel_x = -25;
-	pixel_y = 0
-	},
 /obj/structure/table/reinforced,
 /obj/item/weapon/extinguisher/mini{
 	pixel_x = -10;
@@ -3297,6 +3239,10 @@
 /obj/item/weapon/extinguisher/mini{
 	pixel_x = 2;
 	pixel_y = 3
+	},
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -24
 	},
 /turf/open/floor/plasteel/terror/necro/black,
 /area/mine/eva)
@@ -3409,7 +3355,7 @@
 	icon_state = "browncorner";
 	dir = 8
 	},
-/area/mine/lobby)
+/area/mine/living_quarters)
 "gQ" = (
 /obj/structure/cable{
 	tag = "icon-1-2";
@@ -3418,7 +3364,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/machinery/door/firedoor,
 /turf/open/floor/plasteel/terror/necro/brown/corner,
-/area/mine/lobby)
+/area/mine/living_quarters)
 "gR" = (
 /turf/closed/wall{
 	baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
@@ -3452,13 +3398,12 @@
 /area/mine/storage)
 "gU" = (
 /obj/effect/spawner/structure/window/reinforced,
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4";
-	tag = "90Curve"
-	},
 /obj/structure/cable,
+/obj/structure/cable{
+	tag = "icon-0-4";
+	icon_state = "0-4"
+	},
+/obj/machinery/door/firedoor,
 /turf/open/floor/plating/lavaland/outdoor,
 /area/mine/eva)
 "gV" = (
@@ -3467,6 +3412,7 @@
 	d2 = 8;
 	icon_state = "0-8"
 	},
+/obj/machinery/door/firedoor,
 /turf/open/floor/plating/lavaland/outdoor,
 /area/mine/eva)
 "gW" = (
@@ -3503,23 +3449,39 @@
 /turf/open/floor/plasteel/terror/necro/brown/corner,
 /area/mine/living_quarters)
 "ha" = (
-/obj/structure/table,
-/obj/item/weapon/reagent_containers/glass/rag{
-	desc = "I like this.";
-	icon = 'icons/obj/items.dmi';
-	icon_state = "towel";
-	name = "towel"
+/obj/structure/bed,
+/obj/item/weapon/bedsheet/brown,
+/obj/machinery/button/door{
+	id = "miningdorm3";
+	name = "Door Bolt Control";
+	normaldoorcontrol = 1;
+	pixel_x = -25;
+	pixel_y = 0;
+	req_access_txt = "0";
+	specialfunctions = 4
 	},
-/obj/item/weapon/soap/nanotrasen{
-	pixel_y = 4
+/turf/open/floor/carpet{
+	baseturf = /turf/open/floor/plating/lava/smooth/lava_land_surface
 	},
-/turf/open/floor/plasteel/terror/necro/freezer,
 /area/mine/living_quarters)
 "hb" = (
-/obj/structure/curtain/open/shower,
-/obj/machinery/shower{
-	dir = 8;
-	pixel_x = -5
+/obj/structure/toilet,
+/obj/machinery/newscaster{
+	pixel_x = -30;
+	pixel_y = 0
+	},
+/obj/machinery/light/small{
+	dir = 1;
+	pixel_x = 0
+	},
+/obj/machinery/button/door{
+	id = "minetoilet";
+	name = "Bolt Control";
+	normaldoorcontrol = 1;
+	pixel_x = 25;
+	pixel_y = 0;
+	req_access_txt = "0";
+	specialfunctions = 4
 	},
 /turf/open/floor/plasteel/terror/necro/freezer,
 /area/mine/living_quarters)
@@ -3604,23 +3566,36 @@
 	},
 /area/mine/storage)
 "hj" = (
-/obj/structure/toilet{
-	dir = 4
+/obj/structure/table,
+/obj/effect/holodeck_effect/cards{
+	pixel_x = -2;
+	pixel_y = 5
 	},
-/turf/open/floor/plasteel/terror/necro/freezer,
-/area/mine/living_quarters)
+/obj/item/weapon/reagent_containers/food/drinks/drinkingglass/shotglass{
+	pixel_x = 4;
+	pixel_y = 2
+	},
+/obj/item/weapon/reagent_containers/food/drinks/drinkingglass/shotglass{
+	pixel_x = -7;
+	pixel_y = 15
+	},
+/turf/open/floor/plating/lavaland/outdoor,
+/area/lavaland/surface/outdoors)
 "hk" = (
-/obj/machinery/light/small,
-/obj/structure/sink/kitchen{
-	desc = "A sink used for washing one's hands and face. It looks rusty and home-made";
-	name = "sink";
-	pixel_y = 28
+/obj/structure/sink{
+	dir = 8;
+	icon_state = "sink";
+	pixel_x = -11;
+	pixel_y = 0
+	},
+/obj/structure/mirror{
+	pixel_x = -24
 	},
 /turf/open/floor/plasteel/terror/necro/freezer,
 /area/mine/living_quarters)
 "hl" = (
 /obj/machinery/door/airlock{
-	id_tag = "toilet_cruiser";
+	id_tag = "minetoilet";
 	name = "Toilet";
 	req_access_txt = "0"
 	},
@@ -3637,30 +3612,17 @@
 	},
 /area/mine/living_quarters)
 "hn" = (
-/obj/machinery/door/airlock{
-	name = "Unisex Showers";
-	req_access_txt = "0"
-	},
-/turf/open/floor/plasteel/terror/necro/freezer,
-/area/mine/living_quarters)
+/obj/structure/closet/crate,
+/turf/open/floor/plating/lavaland/outdoor,
+/area/lavaland/surface/outdoors)
 "ho" = (
-/obj/machinery/light/small,
-/turf/open/floor/plasteel/terror/necro/freezer,
-/area/mine/living_quarters)
+/obj/structure/frame/computer,
+/turf/open/floor/plating/lavaland/outdoor,
+/area/lavaland/surface/outdoors)
 "hp" = (
-/obj/structure/sink{
-	dir = 4;
-	icon_state = "sink";
-	pixel_x = 11;
-	pixel_y = 0
-	},
-/obj/structure/mirror{
-	pixel_x = 28
-	},
-/turf/open/floor/plasteel{
-	icon_state = "freezerfloor"
-	},
-/area/mine/living_quarters)
+/obj/structure/grille,
+/turf/open/floor/plating/lavaland/outdoor,
+/area/lavaland/surface/outdoors)
 "hq" = (
 /obj/structure/ore_box,
 /turf/open/floor/plasteel/terror/necro/darkvault{
@@ -3721,15 +3683,13 @@
 /turf/open/floor/plasteel/terror/necro/black,
 /area/mine/storage)
 "hw" = (
-/obj/machinery/firealarm{
-	dir = 4;
-	pixel_x = 28
-	},
 /obj/structure/cable{
 	tag = "icon-1-2";
 	icon_state = "1-2"
 	},
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 9
+	},
 /turf/open/floor/plasteel/terror/necro/brown/corner,
 /area/mine/living_quarters)
 "hx" = (
@@ -3806,31 +3766,33 @@
 	},
 /area/mine/living_quarters)
 "hD" = (
+/obj/machinery/shower{
+	dir = 4;
+	pixel_x = 5
+	},
+/obj/structure/curtain/open/shower,
+/obj/machinery/newscaster{
+	pixel_x = -30;
+	pixel_y = 0
+	},
+/obj/item/weapon/soap,
 /obj/machinery/button/door{
-	id = "miningdorm3";
-	name = "Door Bolt Control";
+	id = "mineshower";
+	name = "Bolt Control";
 	normaldoorcontrol = 1;
 	pixel_x = 25;
 	pixel_y = 0;
 	req_access_txt = "0";
 	specialfunctions = 4
 	},
-/obj/structure/bed,
-/obj/item/weapon/bedsheet/brown,
-/turf/open/floor/carpet{
-	baseturf = /turf/open/floor/plating/lava/smooth/lava_land_surface
-	},
+/turf/open/floor/plasteel/terror/necro/freezer,
 /area/mine/living_quarters)
 "hE" = (
 /obj/structure/cable{
 	tag = "icon-1-2";
 	icon_state = "1-2"
 	},
-/obj/machinery/atmospherics/components/unary/vent_scrubber{
-	dir = 1;
-	on = 1;
-	scrub_Toxins = 0
-	},
+/obj/machinery/door/firedoor,
 /turf/open/floor/plasteel/terror/necro/brown/corner,
 /area/mine/living_quarters)
 "hF" = (
@@ -3914,8 +3876,19 @@
 /turf/open/floor/plasteel/terror/necro/wood,
 /area/mine/living_quarters)
 "hN" = (
-/obj/machinery/atmospherics/pipe/manifold/supply/hidden{
-	dir = 8
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	req_access_txt = 1
+	},
+/obj/machinery/atmospherics/components/unary/vent_scrubber{
+	dir = 4;
+	on = 1;
+	scrub_N2O = 0;
+	scrub_Toxins = 0
+	},
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -24;
+	pixel_y = 0
 	},
 /turf/open/floor/plasteel/terror/necro/brown/corner{
 	tag = "icon-browncorner (WEST)";
@@ -3927,10 +3900,6 @@
 /obj/structure/cable{
 	tag = "icon-1-2";
 	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/components/unary/vent_pump{
-	dir = 8;
-	on = 1
 	},
 /turf/open/floor/plasteel/terror/necro/brown/corner,
 /area/mine/living_quarters)
@@ -4014,9 +3983,6 @@
 	icon_state = "tube1";
 	dir = 8
 	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	req_access_txt = 1
-	},
 /obj/machinery/camera{
 	c_tag = "Dorms";
 	dir = 4;
@@ -4026,6 +3992,9 @@
 	dir = 8;
 	name = "Station Intercom (General)";
 	pixel_x = -28
+	},
+/obj/machinery/atmospherics/pipe/manifold/supply/hidden{
+	dir = 8
 	},
 /turf/open/floor/plasteel/terror/necro/brown/corner{
 	tag = "icon-browncorner (WEST)";
@@ -4041,6 +4010,10 @@
 /obj/structure/extinguisher_cabinet{
 	pixel_x = 27;
 	pixel_y = 0
+	},
+/obj/machinery/atmospherics/components/unary/vent_pump{
+	dir = 8;
+	on = 1
 	},
 /turf/open/floor/plasteel/terror/necro/brown/corner,
 /area/mine/living_quarters)
@@ -4151,6 +4124,10 @@
 	icon_state = "1-2";
 	pixel_y = 0;
 	tag = "icon-1-2"
+	},
+/obj/machinery/firealarm{
+	dir = 4;
+	pixel_x = 24
 	},
 /turf/open/floor/plasteel/terror/necro/brown/corner,
 /area/mine/living_quarters)
@@ -4297,14 +4274,34 @@
 /turf/open/floor/plasteel/terror/necro/black,
 /area/mine/storage)
 "it" = (
-/turf/closed/mineral/volcanic/lava_land_surface,
-/area/lavaland/surface/outdoors/near)
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	req_access_txt = 1
+	},
+/obj/machinery/door/firedoor,
+/turf/open/floor/plasteel/terror/necro/brown/corner{
+	tag = "icon-browncorner (WEST)";
+	icon_state = "browncorner";
+	dir = 8
+	},
+/area/mine/living_quarters)
 "iu" = (
-/turf/closed/mineral/random/high_chance/volcanic,
-/area/lavaland/surface/outdoors/near)
+/obj/structure/closet/wall{
+	dir = 4;
+	pixel_x = -28
+	},
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/open/floor/plasteel/terror/necro/freezer,
+/area/mine/living_quarters)
 "iv" = (
-/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
-/area/lavaland/surface/outdoors/near)
+/obj/machinery/door/airlock{
+	id_tag = "mineshower";
+	name = "Unisex Showers";
+	req_access_txt = "0"
+	},
+/turf/open/floor/plasteel/terror/necro/freezer,
+/area/mine/living_quarters)
 "iw" = (
 /turf/closed/wall/mineral/iron,
 /area/lavaland/surface/outdoors)
@@ -4314,13 +4311,13 @@
 /area/mine/shelter/ash)
 
 (1,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
-aj
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 aj
 an
 at
@@ -4571,13 +4568,13 @@ aK
 aK
 "}
 (2,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
-aj
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 an
 an
 at
@@ -4828,11 +4825,11 @@ aK
 aK
 "}
 (3,1,1) = {"
-aa
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
+ab
 aj
 aj
 an
@@ -5085,10 +5082,10 @@ aK
 aK
 "}
 (4,1,1) = {"
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
 aj
 aj
 an
@@ -5342,11 +5339,11 @@ aK
 aK
 "}
 (5,1,1) = {"
-aa
-aa
-aa
-aa
-aj
+ab
+ab
+ab
+ab
+ab
 an
 an
 at
@@ -5599,10 +5596,10 @@ aK
 aK
 "}
 (6,1,1) = {"
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
 aj
 an
 at
@@ -5856,11 +5853,11 @@ aK
 aK
 "}
 (7,1,1) = {"
-aa
-aa
-aa
-aa
-aj
+ab
+ab
+ab
+ab
+ab
 an
 at
 at
@@ -6113,11 +6110,11 @@ aK
 aK
 "}
 (8,1,1) = {"
-aa
-aa
-aa
-aa
-aj
+ab
+ab
+ab
+ab
+ab
 an
 at
 an
@@ -6370,10 +6367,10 @@ aK
 aK
 "}
 (9,1,1) = {"
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
 aj
 an
 at
@@ -6627,10 +6624,10 @@ aK
 aK
 "}
 (10,1,1) = {"
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
 aj
 an
 at
@@ -6884,11 +6881,11 @@ aK
 aK
 "}
 (11,1,1) = {"
-aa
-aa
-aa
-aa
-aj
+ab
+ab
+ab
+ab
+ab
 an
 at
 at
@@ -7141,10 +7138,10 @@ aK
 aK
 "}
 (12,1,1) = {"
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
 aj
 an
 at
@@ -7398,11 +7395,11 @@ aK
 aK
 "}
 (13,1,1) = {"
-aa
-aa
-aa
-aa
-aj
+ab
+ab
+ab
+ab
+ab
 an
 at
 at
@@ -7655,10 +7652,10 @@ aK
 aK
 "}
 (14,1,1) = {"
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
 aj
 an
 an
@@ -7912,11 +7909,11 @@ aK
 aK
 "}
 (15,1,1) = {"
-aa
-aa
-aa
-aa
-aj
+ab
+ab
+ab
+ab
+ab
 an
 an
 an
@@ -8169,12 +8166,12 @@ aK
 aK
 "}
 (16,1,1) = {"
-aa
-aa
-aa
-aa
-aj
-aj
+ab
+ab
+ab
+ab
+ab
+ab
 an
 an
 an
@@ -8426,12 +8423,12 @@ aK
 aK
 "}
 (17,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aj
+ab
+ab
+ab
+ab
+ab
+ab
 an
 an
 an
@@ -8683,13 +8680,13 @@ aK
 aK
 "}
 (18,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aj
-aj
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 an
 an
 an
@@ -8940,13 +8937,13 @@ aK
 aK
 "}
 (19,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
-aj
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 an
 an
 an
@@ -9197,11 +9194,11 @@ aK
 aK
 "}
 (20,1,1) = {"
-aa
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
+ab
 aj
 aj
 an
@@ -9454,11 +9451,11 @@ aK
 aK
 "}
 (21,1,1) = {"
-aa
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
+ab
 aj
 an
 an
@@ -9711,12 +9708,12 @@ aK
 aK
 "}
 (22,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aj
+ab
+ab
+ab
+ab
+ab
+ab
 an
 an
 an
@@ -9968,12 +9965,12 @@ aK
 aK
 "}
 (23,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aj
+ab
+ab
+ab
+ab
+ab
+ab
 aj
 an
 an
@@ -10225,12 +10222,12 @@ aK
 aK
 "}
 (24,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
+ab
+ab
 aj
 an
 an
@@ -10482,13 +10479,13 @@ aK
 aK
 "}
 (25,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
-aj
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 aj
 an
 at
@@ -10739,14 +10736,14 @@ aK
 aK
 "}
 (26,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aj
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 an
 at
 at
@@ -10996,14 +10993,14 @@ aK
 aK
 "}
 (27,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aj
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 an
 at
 at
@@ -11253,12 +11250,12 @@ aK
 aK
 "}
 (28,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
+ab
+ab
 aj
 aj
 an
@@ -11510,12 +11507,12 @@ aK
 aK
 "}
 (29,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
+ab
+ab
 aj
 an
 an
@@ -11767,12 +11764,12 @@ aK
 aK
 "}
 (30,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
+ab
+ab
 aj
 an
 at
@@ -12024,13 +12021,13 @@ aK
 aK
 "}
 (31,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
-aj
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 an
 at
 at
@@ -12281,13 +12278,13 @@ aK
 aK
 "}
 (32,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
-aj
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 an
 at
 at
@@ -12538,13 +12535,13 @@ aK
 aK
 "}
 (33,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
-aj
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 an
 at
 an
@@ -12795,13 +12792,13 @@ aK
 aK
 "}
 (34,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
-aj
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 an
 at
 an
@@ -13052,13 +13049,13 @@ aK
 aK
 "}
 (35,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
-aj
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 an
 at
 an
@@ -13309,12 +13306,12 @@ aK
 aK
 "}
 (36,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
+ab
+ab
 aj
 an
 at
@@ -13566,12 +13563,12 @@ aK
 aK
 "}
 (37,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
+ab
+ab
 aj
 an
 at
@@ -13823,12 +13820,12 @@ aK
 aK
 "}
 (38,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
+ab
+ab
 aj
 an
 at
@@ -14051,7 +14048,7 @@ at
 at
 aK
 aK
-at
+aK
 at
 at
 at
@@ -14080,11 +14077,11 @@ aK
 aK
 "}
 (39,1,1) = {"
-aa
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
+ab
 aj
 aj
 an
@@ -14308,13 +14305,13 @@ at
 at
 at
 aK
-at
-at
-at
-at
-at
-at
 aK
+at
+at
+at
+at
+at
+at
 aK
 aK
 aK
@@ -14337,11 +14334,11 @@ aK
 aK
 "}
 (40,1,1) = {"
-aa
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
+ab
 aj
 an
 an
@@ -14567,11 +14564,11 @@ at
 aK
 at
 at
-at
-at
-at
-aK
-aK
+dD
+aV
+eS
+aV
+eS
 aK
 aK
 aK
@@ -14594,12 +14591,12 @@ aK
 aK
 "}
 (41,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aj
+ab
+ab
+ab
+ab
+ab
+ab
 an
 an
 an
@@ -14824,11 +14821,11 @@ at
 at
 at
 at
-at
-at
-aK
-aK
-aK
+dD
+eT
+eS
+eT
+dD
 aK
 aK
 aK
@@ -14851,12 +14848,12 @@ aK
 aK
 "}
 (42,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aj
+ab
+ab
+ab
+ab
+ab
+ab
 an
 an
 an
@@ -15079,13 +15076,13 @@ at
 at
 eN
 fo
-fQ
+fo
 gt
-at
-at
-aK
-aK
-aK
+dD
+fQ
+hj
+fQ
+dD
 aK
 aK
 aK
@@ -15108,11 +15105,11 @@ aK
 aK
 "}
 (43,1,1) = {"
-aa
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
+ab
 aj
 an
 an
@@ -15338,11 +15335,11 @@ eO
 fp
 fR
 eO
-dD
-at
-aK
-aK
-aK
+aV
+aV
+fQ
+aV
+hp
 aK
 aK
 aK
@@ -15365,11 +15362,11 @@ aK
 aK
 "}
 (44,1,1) = {"
-aa
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
+ab
 aj
 an
 an
@@ -15594,17 +15591,17 @@ at
 eP
 fq
 fS
-eP
+cs
+eR
+aV
+aV
+aV
+hp
+aK
+aK
 at
 at
 at
-aK
-aK
-aK
-aK
-at
-at
-aK
 aK
 aK
 aK
@@ -15622,11 +15619,11 @@ aK
 aK
 "}
 (45,1,1) = {"
-aa
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
+ab
 aj
 an
 an
@@ -15852,17 +15849,17 @@ eQ
 fq
 fT
 eQ
+dD
+aV
+aV
+ho
+dD
 at
 at
 at
-aK
-aK
-aK
 at
 at
 at
-at
-aK
 aK
 aK
 aK
@@ -15879,11 +15876,11 @@ aK
 aK
 "}
 (46,1,1) = {"
-aa
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
+ab
 aj
 aj
 an
@@ -16105,16 +16102,16 @@ at
 at
 at
 at
-eR
+eQ
 fr
 fT
-eR
+eQ
+eS
+gv
+hn
+hp
+eS
 at
-gW
-gW
-gW
-gW
-gW
 hV
 hV
 hV
@@ -16136,12 +16133,12 @@ aK
 aK
 "}
 (47,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
+ab
+ab
 aj
 an
 an
@@ -16362,21 +16359,21 @@ at
 at
 at
 at
-eS
+eQ
 fs
 fU
 gu
-at
 gW
-hj
-gX
-hC
-hK
-hW
+gW
+gW
+gW
+gW
+gW
+hV
 ic
 il
 hV
-aK
+at
 aK
 aK
 aK
@@ -16393,13 +16390,13 @@ aK
 aK
 "}
 (48,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
-aj
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 an
 an
 an
@@ -16619,21 +16616,21 @@ co
 co
 co
 cu
-eT
+eQ
 ft
 fV
-gv
-cu
+eQ
 gW
+hb
 hk
 gX
 hD
-hL
+iu
 hW
 id
 im
 hV
-aK
+at
 aK
 aK
 aK
@@ -16650,12 +16647,12 @@ aK
 aK
 "}
 (49,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aj
+ab
+ab
+ab
+ab
+ab
+ab
 aj
 an
 an
@@ -16880,12 +16877,12 @@ eU
 fu
 fW
 gw
-dh
+gX
 gX
 hl
 gX
 gX
-hM
+iv
 hW
 ie
 hW
@@ -16907,10 +16904,10 @@ aK
 aK
 "}
 (50,1,1) = {"
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
 aj
 aj
 an
@@ -17140,9 +17137,9 @@ gx
 gP
 gY
 hm
-hm
-hm
 hN
+it
+hm
 hX
 if
 in
@@ -17164,10 +17161,10 @@ aK
 aK
 "}
 (51,1,1) = {"
-aa
-aa
-aa
-aj
+ab
+ab
+ab
+ab
 aj
 an
 an
@@ -17380,7 +17377,7 @@ aK
 aK
 aK
 at
-cs
+cq
 cC
 cR
 cM
@@ -17421,10 +17418,10 @@ aK
 aK
 "}
 (52,1,1) = {"
-aa
-aa
-aa
-aj
+ab
+ab
+ab
+ab
 an
 an
 an
@@ -17637,7 +17634,7 @@ aK
 aK
 aK
 aK
-cs
+cq
 cD
 cS
 cM
@@ -17651,9 +17648,9 @@ eX
 fx
 fZ
 gz
-dh
 gX
-hn
+gX
+hM
 gX
 gX
 hP
@@ -17678,10 +17675,10 @@ aK
 aK
 "}
 (53,1,1) = {"
-aa
-aa
-aa
-aj
+ab
+ab
+ab
+ab
 an
 an
 an
@@ -17908,9 +17905,9 @@ eY
 fD
 ga
 gA
-dh
+gX
 ha
-ho
+hL
 gX
 hF
 hL
@@ -17935,10 +17932,10 @@ aK
 aK
 "}
 (54,1,1) = {"
-aa
-aa
-aa
-aj
+ab
+ab
+ab
+ab
 an
 an
 an
@@ -18165,9 +18162,9 @@ eZ
 gB
 gb
 dh
-dh
-hb
-hp
+gX
+hC
+hK
 gX
 hC
 hK
@@ -18192,10 +18189,10 @@ aK
 aK
 "}
 (55,1,1) = {"
-aa
-aa
-aa
-aj
+ab
+ab
+ab
+ab
 an
 an
 at
@@ -18422,7 +18419,7 @@ fa
 fz
 gc
 gC
-dh
+gX
 gX
 gX
 gX
@@ -18449,10 +18446,10 @@ aK
 aK
 "}
 (56,1,1) = {"
-aa
-aa
-aa
-aj
+ab
+ab
+ab
+ab
 aj
 an
 an
@@ -18706,12 +18703,12 @@ aK
 aK
 "}
 (57,1,1) = {"
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
 aj
-aj
+ab
 an
 at
 at
@@ -18963,12 +18960,12 @@ aK
 aK
 "}
 (58,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aj
+ab
+ab
+ab
+ab
+ab
+ab
 an
 an
 at
@@ -19220,13 +19217,13 @@ aK
 aK
 "}
 (59,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aj
-aj
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 an
 at
 at
@@ -19477,13 +19474,13 @@ aK
 aK
 "}
 (60,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
-aj
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 an
 at
 at
@@ -19706,7 +19703,7 @@ eH
 eH
 fE
 gh
-eH
+cx
 eH
 hg
 hu
@@ -19734,12 +19731,12 @@ aK
 aK
 "}
 (61,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aj
+ab
+ab
+ab
+ab
+ab
+ab
 aj
 an
 at
@@ -19991,11 +19988,11 @@ aK
 aK
 "}
 (62,1,1) = {"
-aa
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
+ab
 aj
 an
 an
@@ -20248,11 +20245,11 @@ aK
 aK
 "}
 (63,1,1) = {"
-aa
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
+ab
 aj
 an
 at
@@ -20505,10 +20502,10 @@ aK
 aK
 "}
 (64,1,1) = {"
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
 aj
 aj
 an
@@ -20762,10 +20759,10 @@ aK
 aK
 "}
 (65,1,1) = {"
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
 aj
 an
 an
@@ -21019,10 +21016,10 @@ aK
 aK
 "}
 (66,1,1) = {"
-aa
-aa
-aa
-aj
+ab
+ab
+ab
+ab
 aj
 an
 at
@@ -21276,10 +21273,10 @@ aK
 aK
 "}
 (67,1,1) = {"
-aa
-aa
-aa
-aj
+ab
+ab
+ab
+ab
 an
 an
 at
@@ -21533,10 +21530,10 @@ aK
 aK
 "}
 (68,1,1) = {"
-aa
-aa
-aa
-aj
+ab
+ab
+ab
+ab
 an
 at
 at
@@ -21790,10 +21787,10 @@ aK
 aK
 "}
 (69,1,1) = {"
-aa
-aa
-aa
-aj
+ab
+ab
+ab
+ab
 an
 at
 at
@@ -22047,10 +22044,10 @@ aK
 aK
 "}
 (70,1,1) = {"
-aa
-aa
-aa
-aj
+ab
+ab
+ab
+ab
 an
 an
 at
@@ -22304,10 +22301,10 @@ aK
 aK
 "}
 (71,1,1) = {"
-aa
-aa
-aa
-aj
+ab
+ab
+ab
+ab
 aj
 an
 at
@@ -22561,10 +22558,10 @@ aK
 aK
 "}
 (72,1,1) = {"
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
 aj
 an
 an
@@ -22818,12 +22815,12 @@ aK
 aK
 "}
 (73,1,1) = {"
-aa
-aa
-aa
-aa
-aj
-aj
+ab
+ab
+ab
+ab
+ab
+ab
 an
 at
 at
@@ -23075,12 +23072,12 @@ aK
 aK
 "}
 (74,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aj
+ab
+ab
+ab
+ab
+ab
+ab
 an
 at
 at
@@ -23332,12 +23329,12 @@ aK
 aK
 "}
 (75,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aj
+ab
+ab
+ab
+ab
+ab
+ab
 an
 at
 at
@@ -23589,11 +23586,11 @@ aK
 aK
 "}
 (76,1,1) = {"
-aa
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
+ab
 aj
 an
 an
@@ -23846,11 +23843,11 @@ aK
 aK
 "}
 (77,1,1) = {"
-aa
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
+ab
 aj
 aj
 an
@@ -24103,13 +24100,13 @@ aK
 aK
 "}
 (78,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
-aj
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 an
 at
 at
@@ -24360,13 +24357,13 @@ aK
 aK
 "}
 (79,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
-aj
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 an
 at
 at
@@ -24617,13 +24614,13 @@ aK
 aK
 "}
 (80,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
-aj
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 an
 at
 at
@@ -24874,12 +24871,12 @@ aK
 aK
 "}
 (81,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
+ab
+ab
 aj
 an
 at
@@ -25131,12 +25128,12 @@ aK
 aK
 "}
 (82,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
+ab
+ab
 aj
 an
 an
@@ -25388,13 +25385,13 @@ aK
 aK
 "}
 (83,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
-aj
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 an
 an
 an
@@ -25645,11 +25642,11 @@ aK
 aK
 "}
 (84,1,1) = {"
-aa
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
+ab
 aj
 aj
 an
@@ -25902,11 +25899,11 @@ aK
 aK
 "}
 (85,1,1) = {"
-aa
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
+ab
 aj
 an
 an
@@ -26159,11 +26156,11 @@ aK
 aK
 "}
 (86,1,1) = {"
-aa
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
+ab
 aj
 an
 an
@@ -26416,12 +26413,12 @@ aK
 aK
 "}
 (87,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aj
+ab
+ab
+ab
+ab
+ab
+ab
 an
 an
 an
@@ -26673,10 +26670,10 @@ aK
 aK
 "}
 (88,1,1) = {"
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
 aj
 aj
 an
@@ -26930,10 +26927,10 @@ aK
 aK
 "}
 (89,1,1) = {"
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
 aj
 an
 an
@@ -27187,10 +27184,10 @@ aK
 aK
 "}
 (90,1,1) = {"
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
 aj
 an
 an
@@ -27444,11 +27441,11 @@ aK
 aK
 "}
 (91,1,1) = {"
-aa
-aa
-aa
-aa
-aj
+ab
+ab
+ab
+ab
+ab
 an
 an
 an
@@ -27701,11 +27698,11 @@ aK
 aK
 "}
 (92,1,1) = {"
-aa
-aa
-aa
-aa
-aj
+ab
+ab
+ab
+ab
+ab
 an
 an
 at
@@ -27958,10 +27955,10 @@ aK
 aK
 "}
 (93,1,1) = {"
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
 aj
 an
 an
@@ -28215,10 +28212,10 @@ aK
 aK
 "}
 (94,1,1) = {"
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
 aj
 aj
 an
@@ -28472,11 +28469,11 @@ aK
 aK
 "}
 (95,1,1) = {"
-aa
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
+ab
 aj
 an
 an
@@ -28729,11 +28726,11 @@ aK
 aK
 "}
 (96,1,1) = {"
-aa
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
+ab
 aj
 aj
 an
@@ -28986,13 +28983,13 @@ aK
 aK
 "}
 (97,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
-aj
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 an
 an
 an
@@ -29243,13 +29240,13 @@ aK
 aK
 "}
 (98,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
-aj
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 aj
 an
 an
@@ -29500,13 +29497,13 @@ aK
 aK
 "}
 (99,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 aj
 an
 an
@@ -29757,12 +29754,12 @@ aK
 aK
 "}
 (100,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
+ab
+ab
 aj
 aj
 an
@@ -30014,12 +30011,12 @@ aK
 aK
 "}
 (101,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aj
+ab
+ab
+ab
+ab
+ab
+ab
 aj
 an
 an
@@ -30271,12 +30268,12 @@ aK
 aK
 "}
 (102,1,1) = {"
-aa
-aa
-aa
-aa
-aj
-aj
+ab
+ab
+ab
+ab
+ab
+ab
 an
 an
 an
@@ -30528,11 +30525,11 @@ aK
 aK
 "}
 (103,1,1) = {"
-aa
-aa
-aa
-aa
-aj
+ab
+ab
+ab
+ab
+ab
 an
 an
 an
@@ -30788,8 +30785,8 @@ aK
 ab
 ab
 ab
-aa
-aj
+ab
+ab
 an
 an
 an
@@ -31045,8 +31042,8 @@ aK
 ab
 ab
 ab
-aa
-aj
+ab
+ab
 an
 at
 at
@@ -31302,8 +31299,8 @@ aK
 ab
 ab
 ab
-aa
-aj
+ab
+ab
 an
 at
 at
@@ -31559,8 +31556,8 @@ aK
 ab
 ab
 ab
-aj
-aj
+ab
+ab
 an
 at
 at
@@ -31816,7 +31813,7 @@ aK
 ab
 ab
 ab
-aj
+ab
 an
 an
 at
@@ -32073,9 +32070,9 @@ aK
 ab
 ab
 ab
-aj
+ab
 an
-at
+aq
 at
 at
 at
@@ -32330,9 +32327,9 @@ aK
 ab
 ab
 ab
-aj
+ab
 an
-at
+aq
 at
 at
 an
@@ -32587,10 +32584,10 @@ aK
 ab
 ab
 ab
-aj
+ab
 an
-at
-at
+aq
+aq
 at
 an
 an
@@ -32844,11 +32841,11 @@ aK
 ab
 ab
 ab
-aj
+ab
 an
-at
-at
-at
+aq
+aq
+aq
 an
 an
 an
@@ -33101,12 +33098,12 @@ aK
 ab
 ab
 ab
-aj
+ab
 an
-at
-at
-at
-at
+aq
+aq
+aq
+aq
 an
 an
 an
@@ -33358,14 +33355,14 @@ aK
 ab
 ab
 ab
-aj
+ab
 an
 an
-at
-au
-at
-at
-at
+aq
+ai
+aq
+aq
+aq
 at
 at
 at
@@ -33615,15 +33612,15 @@ aK
 ab
 ab
 ab
-aj
-aj
+ab
+ab
 an
-at
-at
-at
-at
-at
-at
+aq
+aq
+aq
+aq
+aq
+aq
 at
 at
 at
@@ -33873,14 +33870,14 @@ ab
 ab
 ab
 ab
-aj
+ab
 an
-at
-at
-at
-at
-at
-at
+aq
+aq
+aq
+aq
+aq
+aq
 at
 at
 at
@@ -34130,15 +34127,15 @@ ab
 ab
 ab
 ab
-aj
+ab
 an
 an
-at
-at
-at
-at
-at
-at
+aq
+aq
+aq
+aq
+aq
+aq
 at
 at
 at
@@ -34387,15 +34384,15 @@ ab
 ab
 ab
 ab
-aj
-aj
+ab
+ab
 an
-at
-at
-at
-at
-at
-at
+aq
+aq
+aq
+aq
+aq
+aq
 at
 at
 at
@@ -34645,15 +34642,15 @@ ab
 ab
 ab
 ab
-aj
+ab
 an
-an
-at
-at
-at
-at
-at
-at
+aq
+aq
+aq
+aq
+aq
+aq
+aq
 at
 at
 at
@@ -34905,13 +34902,13 @@ ab
 ab
 ab
 ab
-at
-at
-at
-at
-at
-at
-at
+aq
+aq
+aq
+aq
+aq
+aq
+aq
 at
 at
 aA
@@ -35163,12 +35160,12 @@ ab
 ab
 ab
 aq
-at
-at
-at
-at
-at
-at
+aq
+aq
+aq
+aq
+aq
+aq
 at
 at
 aA
@@ -35421,12 +35418,12 @@ ab
 ab
 aq
 aq
-at
-at
-at
-at
-at
-at
+aq
+aq
+aq
+aq
+aq
+aq
 at
 at
 aA
@@ -35679,11 +35676,11 @@ ab
 ab
 aq
 aq
-at
-at
-at
-at
-at
+aq
+aq
+aq
+aq
+aq
 at
 at
 aA
@@ -35936,12 +35933,12 @@ ab
 ab
 aq
 aq
-at
-at
-au
-at
-at
-at
+aq
+aq
+ai
+aq
+aq
+aq
 at
 at
 aA
@@ -36196,13 +36193,13 @@ aq
 aq
 aq
 aF
-at
 aq
-at
+aq
+aq
 aI
-at
-at
-at
+aq
+aq
+aq
 at
 at
 at
@@ -36458,11 +36455,11 @@ aq
 aq
 aq
 aq
-at
-at
-at
-at
-at
+aq
+aq
+aq
+aq
+aq
 at
 at
 at
@@ -36712,12 +36709,12 @@ aq
 aq
 aq
 aq
-at
-at
-at
-at
-at
-at
+aq
+aq
+aq
+aq
+aq
+aq
 at
 at
 at
@@ -36966,10 +36963,10 @@ aq
 aq
 aq
 aq
-at
 aq
-at
-at
+aq
+aq
+aq
 aA
 at
 aA
@@ -37223,9 +37220,9 @@ aq
 aq
 aq
 aq
-at
-at
-at
+aq
+aq
+aq
 aA
 aA
 aA
@@ -37479,10 +37476,10 @@ ab
 aq
 aq
 aq
-at
-at
-at
-at
+aq
+aq
+aq
+aq
 aA
 aA
 aA
@@ -37736,10 +37733,10 @@ ab
 aq
 aq
 aq
-at
-at
-at
-at
+aq
+aq
+aq
+aq
 aA
 aA
 aA
@@ -37992,11 +37989,11 @@ ab
 an
 aq
 aq
-at
-at
-at
-at
-at
+aq
+aq
+aq
+aq
+aq
 aA
 aA
 aA
@@ -38248,12 +38245,12 @@ ab
 ab
 an
 aq
-at
-at
-at
-at
-at
-at
+aq
+aq
+aq
+aq
+aq
+aq
 aA
 aA
 aA
@@ -38504,14 +38501,14 @@ ab
 ab
 an
 an
-at
-at
-at
-at
-at
-at
-at
-at
+aq
+aq
+aq
+aq
+aq
+aq
+aq
+aq
 aA
 aA
 aA
@@ -38760,15 +38757,15 @@ ab
 ab
 an
 an
-at
-at
-at
-at
+aq
+aq
+aq
+aq
 an
-at
-at
-at
-at
+aq
+aq
+aq
+aq
 aA
 aA
 aA
@@ -39016,16 +39013,16 @@ ab
 ab
 ab
 an
-at
-at
-at
-at
+aq
+aq
+aq
+aq
 an
 an
 an
-at
-at
-at
+aq
+aq
+aq
 aA
 aA
 aA
@@ -39271,18 +39268,18 @@ ab
 ab
 ab
 ab
-aj
+ab
 an
-at
-at
-at
-at
-an
-an
+aq
+aq
+aq
+aq
 an
 an
-at
-at
+an
+an
+aq
+aq
 aA
 aA
 aA
@@ -39527,19 +39524,19 @@ ab
 ab
 ab
 ab
-aj
-aj
+ab
+ab
 an
-at
-at
-at
-an
-an
+aq
+aq
+aq
 an
 an
 an
-at
-at
+an
+an
+aq
+aq
 aA
 aA
 aA
@@ -39784,19 +39781,19 @@ ab
 ab
 ab
 ab
-aj
+ab
 an
 an
-at
-at
-at
-an
-an
-an
+aq
+aq
+aq
 an
 an
 an
-at
+an
+an
+an
+aq
 aA
 aA
 aA
@@ -40044,8 +40041,8 @@ ab
 ab
 an
 an
-at
-at
+aq
+aq
 an
 an
 an
@@ -40053,7 +40050,7 @@ an
 an
 an
 at
-at
+aq
 aA
 aA
 aA
@@ -40298,8 +40295,8 @@ ab
 ab
 ab
 ab
-aj
-aj
+ab
+ab
 an
 an
 at
@@ -40556,8 +40553,8 @@ ab
 ab
 ab
 ab
-aj
-aj
+ab
+ab
 an
 at
 an
@@ -40814,7 +40811,7 @@ ab
 ab
 ab
 ab
-aj
+ab
 an
 at
 at
@@ -41071,7 +41068,7 @@ ab
 ab
 ab
 ab
-aj
+ab
 an
 at
 at
@@ -41585,7 +41582,7 @@ ab
 ab
 ab
 ab
-aj
+ab
 an
 at
 at
@@ -41842,7 +41839,7 @@ ab
 ab
 ab
 ab
-aj
+ab
 an
 at
 at
@@ -42099,7 +42096,7 @@ ab
 ab
 ab
 ab
-aj
+ab
 an
 at
 at
@@ -42356,7 +42353,7 @@ ab
 ab
 ab
 ab
-aj
+ab
 an
 at
 at
@@ -42612,8 +42609,8 @@ ab
 ab
 ab
 ab
-aj
-aj
+ab
+ab
 an
 at
 at
@@ -43125,8 +43122,8 @@ ab
 ab
 ab
 ab
-aj
-aj
+ab
+ab
 an
 an
 at
@@ -43382,7 +43379,7 @@ ab
 ab
 ab
 ab
-aj
+ab
 an
 an
 an
@@ -43639,7 +43636,7 @@ ab
 ab
 ab
 ab
-aj
+ab
 an
 an
 an
@@ -43896,7 +43893,7 @@ ab
 ab
 ab
 ab
-aj
+ab
 an
 an
 an
@@ -44153,7 +44150,7 @@ ab
 ab
 ab
 ab
-aj
+ab
 an
 an
 an
@@ -44406,12 +44403,12 @@ aK
 aK
 "}
 (157,1,1) = {"
-aa
-aa
-aa
-aa
-aj
-aj
+ab
+ab
+ab
+ab
+ab
+ab
 an
 an
 at
@@ -44663,12 +44660,12 @@ aK
 aK
 "}
 (158,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aj
+ab
+ab
+ab
+ab
+ab
+ab
 an
 an
 at
@@ -44920,13 +44917,13 @@ aK
 aK
 "}
 (159,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aj
-aj
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 an
 at
 at
@@ -45177,13 +45174,13 @@ aK
 aK
 "}
 (160,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
-aj
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 an
 at
 at
@@ -45434,13 +45431,13 @@ aK
 aK
 "}
 (161,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
-aj
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 an
 at
 at
@@ -45691,13 +45688,13 @@ aK
 aK
 "}
 (162,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
-aj
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 an
 at
 at
@@ -45948,13 +45945,13 @@ aK
 aK
 "}
 (163,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
-aj
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 an
 at
 an
@@ -46205,13 +46202,13 @@ aK
 aK
 "}
 (164,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
-aj
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 an
 at
 an
@@ -46462,13 +46459,13 @@ aK
 aK
 "}
 (165,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aj
-aj
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 an
 at
 at
@@ -46719,12 +46716,12 @@ aK
 aK
 "}
 (166,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aj
+ab
+ab
+ab
+ab
+ab
+ab
 an
 an
 at
@@ -46976,12 +46973,12 @@ aK
 aK
 "}
 (167,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aj
+ab
+ab
+ab
+ab
+ab
+ab
 an
 at
 at
@@ -47233,11 +47230,11 @@ aK
 aK
 "}
 (168,1,1) = {"
-aa
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
+ab
 aj
 an
 at
@@ -47490,11 +47487,11 @@ aK
 aK
 "}
 (169,1,1) = {"
-aa
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
+ab
 aj
 an
 at
@@ -47747,11 +47744,11 @@ aK
 aK
 "}
 (170,1,1) = {"
-aa
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
+ab
 aj
 an
 at
@@ -48004,12 +48001,12 @@ aK
 aK
 "}
 (171,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aj
+ab
+ab
+ab
+ab
+ab
+ab
 an
 at
 at
@@ -48261,11 +48258,11 @@ aK
 aK
 "}
 (172,1,1) = {"
-aa
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
+ab
 aj
 an
 at
@@ -48518,11 +48515,11 @@ aK
 aK
 "}
 (173,1,1) = {"
-aa
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
+ab
 aj
 an
 at
@@ -48775,12 +48772,12 @@ aK
 aK
 "}
 (174,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aj
+ab
+ab
+ab
+ab
+ab
+ab
 an
 at
 at
@@ -49032,11 +49029,11 @@ aK
 aK
 "}
 (175,1,1) = {"
-aa
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
+ab
 aj
 an
 an
@@ -49289,13 +49286,13 @@ aK
 aK
 "}
 (176,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aj
-aj
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 an
 an
 at
@@ -49546,12 +49543,12 @@ aK
 aK
 "}
 (177,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
+ab
+ab
 aj
 aj
 an
@@ -49803,14 +49800,14 @@ aK
 aK
 "}
 (178,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aj
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 an
 at
 at
@@ -50060,14 +50057,14 @@ aK
 aK
 "}
 (179,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aj
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 an
 an
 at
@@ -50317,13 +50314,13 @@ aK
 aK
 "}
 (180,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 aj
 aj
 an
@@ -50574,14 +50571,14 @@ aK
 aK
 "}
 (181,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 aj
 an
 at
@@ -50831,15 +50828,15 @@ aK
 aK
 "}
 (182,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aj
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 an
 at
 at
@@ -51088,15 +51085,15 @@ aK
 aK
 "}
 (183,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aj
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 an
 at
 at
@@ -51345,14 +51342,14 @@ aK
 aK
 "}
 (184,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 aj
 an
 at
@@ -51602,13 +51599,13 @@ aK
 aK
 "}
 (185,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 aj
 aj
 an
@@ -51859,13 +51856,13 @@ aK
 aK
 "}
 (186,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 aj
 an
 an
@@ -52116,13 +52113,13 @@ aK
 aK
 "}
 (187,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 aj
 an
 at
@@ -52373,13 +52370,13 @@ aK
 aK
 "}
 (188,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
-aj
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 aj
 an
 at
@@ -52630,13 +52627,13 @@ aK
 aK
 "}
 (189,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aj
-aj
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 an
 an
 at
@@ -52887,11 +52884,11 @@ aK
 aK
 "}
 (190,1,1) = {"
-aa
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
+ab
 aj
 an
 an
@@ -53144,11 +53141,11 @@ aK
 aK
 "}
 (191,1,1) = {"
-aa
-aa
-aa
-aa
-aj
+ab
+ab
+ab
+ab
+ab
 aj
 an
 at
@@ -53401,11 +53398,11 @@ aK
 aK
 "}
 (192,1,1) = {"
-aa
-aa
-aa
-aa
-aj
+ab
+ab
+ab
+ab
+ab
 an
 an
 at
@@ -53658,11 +53655,11 @@ aK
 aK
 "}
 (193,1,1) = {"
-aa
-aa
-aa
-aa
-aj
+ab
+ab
+ab
+ab
+ab
 an
 at
 at
@@ -53915,11 +53912,11 @@ aK
 aK
 "}
 (194,1,1) = {"
-aa
-aa
-aa
-aa
-aj
+ab
+ab
+ab
+ab
+ab
 an
 at
 at
@@ -54172,11 +54169,11 @@ aK
 aK
 "}
 (195,1,1) = {"
-aa
-aa
-aa
-aa
-aj
+ab
+ab
+ab
+ab
+ab
 an
 at
 at
@@ -54429,11 +54426,11 @@ aK
 aK
 "}
 (196,1,1) = {"
-aa
-aa
-aa
-aa
-aj
+ab
+ab
+ab
+ab
+ab
 an
 at
 at
@@ -54686,11 +54683,11 @@ aK
 aK
 "}
 (197,1,1) = {"
-aa
-aa
-aa
-aa
-aj
+ab
+ab
+ab
+ab
+ab
 an
 an
 at
@@ -54943,11 +54940,11 @@ aK
 aK
 "}
 (198,1,1) = {"
-aa
-aa
-aa
-aa
-aj
+ab
+ab
+ab
+ab
+ab
 aj
 an
 at
@@ -55200,11 +55197,11 @@ aK
 aK
 "}
 (199,1,1) = {"
-aa
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
+ab
 aj
 an
 at
@@ -55457,12 +55454,12 @@ aK
 aK
 "}
 (200,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aj
+ab
+ab
+ab
+ab
+ab
+ab
 an
 an
 at
@@ -55714,12 +55711,12 @@ aK
 aK
 "}
 (201,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aj
+ab
+ab
+ab
+ab
+ab
+ab
 aj
 an
 at
@@ -55971,12 +55968,12 @@ aK
 aK
 "}
 (202,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
+ab
+ab
 aj
 an
 at
@@ -56228,12 +56225,12 @@ aK
 aK
 "}
 (203,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
+ab
+ab
 aj
 an
 at
@@ -56485,12 +56482,12 @@ aK
 aK
 "}
 (204,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
+ab
+ab
 aj
 an
 at
@@ -56742,13 +56739,13 @@ aK
 aK
 "}
 (205,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
-aj
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 an
 at
 at
@@ -56999,13 +56996,13 @@ aK
 aK
 "}
 (206,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
-aj
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 an
 at
 at
@@ -57256,13 +57253,13 @@ aK
 aK
 "}
 (207,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
-aj
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 an
 an
 at
@@ -57513,12 +57510,12 @@ aK
 aK
 "}
 (208,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
+ab
+ab
 aj
 aj
 an
@@ -57770,13 +57767,13 @@ aK
 aK
 "}
 (209,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 aj
 an
 an
@@ -58027,13 +58024,13 @@ aK
 aK
 "}
 (210,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 aj
 an
 an
@@ -58284,13 +58281,13 @@ aK
 aK
 "}
 (211,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 aj
 an
 an
@@ -58541,14 +58538,14 @@ aK
 aK
 "}
 (212,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aj
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 an
 an
 an
@@ -58798,13 +58795,13 @@ aK
 aK
 "}
 (213,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 aj
 an
 an
@@ -59055,13 +59052,13 @@ aK
 aK
 "}
 (214,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 aj
 an
 an
@@ -59312,12 +59309,12 @@ aK
 aK
 "}
 (215,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
+ab
+ab
 aj
 aj
 an
@@ -59569,12 +59566,12 @@ aK
 aK
 "}
 (216,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
+ab
+ab
 aj
 an
 an
@@ -59826,12 +59823,12 @@ aK
 aK
 "}
 (217,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
+ab
+ab
 aj
 an
 an
@@ -60083,12 +60080,12 @@ aK
 aK
 "}
 (218,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
+ab
+ab
 aj
 an
 an
@@ -60340,12 +60337,12 @@ aK
 aK
 "}
 (219,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
+ab
+ab
 aj
 an
 an
@@ -60597,13 +60594,13 @@ aK
 aK
 "}
 (220,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
-aj
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 an
 an
 an
@@ -60854,13 +60851,13 @@ aK
 aK
 "}
 (221,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
-aj
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 an
 an
 an
@@ -61111,12 +61108,12 @@ aK
 aK
 "}
 (222,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
+ab
+ab
 aj
 an
 an
@@ -61368,12 +61365,12 @@ aK
 aK
 "}
 (223,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
+ab
+ab
 aj
 an
 an
@@ -61625,12 +61622,12 @@ aK
 aK
 "}
 (224,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
+ab
+ab
 aj
 an
 an
@@ -61882,12 +61879,12 @@ aK
 aK
 "}
 (225,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
+ab
+ab
 aj
 aj
 an
@@ -62139,14 +62136,14 @@ aK
 aK
 "}
 (226,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aj
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 an
 at
 at
@@ -62396,13 +62393,13 @@ aK
 aK
 "}
 (227,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 aj
 an
 at
@@ -62653,12 +62650,12 @@ aK
 aK
 "}
 (228,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
+ab
+ab
 aj
 aj
 an
@@ -62910,12 +62907,12 @@ aK
 aK
 "}
 (229,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
+ab
+ab
 aj
 an
 an
@@ -63167,11 +63164,11 @@ aK
 aK
 "}
 (230,1,1) = {"
-aa
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
+ab
 aj
 aj
 an
@@ -63424,11 +63421,11 @@ aK
 aK
 "}
 (231,1,1) = {"
-aa
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
+ab
 aj
 an
 an
@@ -63681,12 +63678,12 @@ aK
 aK
 "}
 (232,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aj
+ab
+ab
+ab
+ab
+ab
+ab
 an
 at
 at
@@ -63938,12 +63935,12 @@ aK
 aK
 "}
 (233,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aj
+ab
+ab
+ab
+ab
+ab
+ab
 an
 at
 at
@@ -64195,12 +64192,12 @@ aK
 aK
 "}
 (234,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aj
+ab
+ab
+ab
+ab
+ab
+ab
 an
 at
 at
@@ -64452,11 +64449,11 @@ aK
 aK
 "}
 (235,1,1) = {"
-aa
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
+ab
 aj
 an
 at
@@ -64709,11 +64706,11 @@ aK
 aK
 "}
 (236,1,1) = {"
-aa
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
+ab
 aj
 an
 at
@@ -64966,12 +64963,12 @@ aK
 aK
 "}
 (237,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aj
+ab
+ab
+ab
+ab
+ab
+ab
 an
 an
 at
@@ -65223,12 +65220,12 @@ aK
 aK
 "}
 (238,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aj
+ab
+ab
+ab
+ab
+ab
+ab
 aj
 an
 at
@@ -65480,12 +65477,12 @@ aK
 aK
 "}
 (239,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
+ab
+ab
 aj
 an
 at
@@ -65737,12 +65734,12 @@ aK
 aK
 "}
 (240,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
+ab
+ab
 aj
 an
 an
@@ -65994,12 +65991,12 @@ aK
 aK
 "}
 (241,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
+ab
+ab
 aj
 aj
 an
@@ -66251,13 +66248,13 @@ aK
 aK
 "}
 (242,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 aj
 an
 at
@@ -66508,13 +66505,13 @@ aK
 aK
 "}
 (243,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 aj
 an
 at
@@ -66765,14 +66762,14 @@ aK
 aK
 "}
 (244,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aj
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 an
 an
 at
@@ -67022,15 +67019,15 @@ aK
 aK
 "}
 (245,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aj
-aj
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 an
 at
 at
@@ -67279,15 +67276,15 @@ aK
 aK
 "}
 (246,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aj
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 an
 an
 at
@@ -67536,16 +67533,16 @@ aK
 aK
 "}
 (247,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aj
-aj
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 an
 an
 at
@@ -67793,15 +67790,15 @@ aK
 aK
 "}
 (248,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 aj
 aj
 an
@@ -68050,16 +68047,16 @@ aK
 aK
 "}
 (249,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 aj
 an
 at
@@ -68307,16 +68304,16 @@ aK
 aK
 "}
 (250,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 aj
 an
 an
@@ -68564,16 +68561,16 @@ aK
 aK
 "}
 (251,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 aj
 aj
 an
@@ -68821,17 +68818,17 @@ aK
 aK
 "}
 (252,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 aj
 aj
 an
@@ -69078,18 +69075,18 @@ aK
 aK
 "}
 (253,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 aj
 an
 an
@@ -69335,20 +69332,20 @@ aK
 aK
 "}
 (254,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aj
-aj
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 an
 at
 at
@@ -69592,19 +69589,19 @@ aK
 aK
 "}
 (255,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 aj
 an
 at
