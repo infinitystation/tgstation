@@ -473,12 +473,10 @@ var/global/BSACooldown = 0
 	if(!check_rights(0))
 		return
 
-	var/message = stripped_input("Global message to send:", "Admin Announce", null, null)  as message
+	var/message = stripped_multiline_input("Global message to send:", "Admin Announce", null, null)  as message
 	if(message)
-		if(!check_rights(R_SERVER,0))
-			message = adminscrub(message,500)
-		world << "<span class='adminnotice'><b>[usr.client.holder.fakekey ? "Administrator" : usr.key] Announces:</b></span>\n \t [sanitize(message)]"
-		log_admin("Announce: [key_name(usr)] : [sanitize(message)]")
+		world << "<span class='adminnotice'><b>[usr.client.holder.fakekey ? "Administrator" : usr.key] Announces:</b></span>\n \t [sanitize_a0(message)]"
+		log_admin("Announce: [key_name(usr)] : [sanitize_a0(message)]")
 	feedback_add_details("admin_verb","A") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /datum/admins/proc/set_admin_notice()
