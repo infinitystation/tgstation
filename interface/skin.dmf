@@ -1092,7 +1092,7 @@ menu "menu"
 window "mainwindow"
 	elem "mainwindow"
 		type = MAIN
-		pos = 0,0
+		pos = 281,0
 		size = 640x440
 		anchor1 = none
 		anchor2 = none
@@ -1120,7 +1120,7 @@ window "mainwindow"
 		is-minimized = false
 		is-maximized = false
 		can-scroll = none
-		icon = 'icons\\ss13_32.png'
+		icon = 'icons\\ss13_64.png'
 		image = ""
 		image-mode = stretch
 		keep-aspect = false
