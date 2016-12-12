@@ -55,8 +55,9 @@
 /datum/reagent/consumable/edrink/on_mob_life(mob/living/M)
 	if(prob(3))
 		M << "<span style=\"color:#005E00; font-weight: bold;\">You totally don\'t want to die anymore</span>"
-		if (M.reagents.get_reagent_amount("ephedrine") < 5)
-			M.reagents.add_reagent("ephedrine", 1.5)
+	M.AdjustParalysis(-1, 0)
+	M.AdjustStunned(-1, 0)
+	M.AdjustWeakened(-1, 0)
 	M.AdjustSleeping(-2, 0)
 	M.adjustStaminaLoss(-5)
 	if (M.bodytemperature > 310)//310 is the normal bodytemp. 310.055
@@ -69,7 +70,7 @@
 	desc = "It fills your body with energy, makes you want to make a forced march with a rifle at the ready."
 	icon = 'icons/obj/food/infinity_fsrm.dmi'
 	icon_state = "tonic_m"
-	list_reagents = list("edrink" = 45, "ephedrine" = 5)
+	list_reagents = list("edrink" = 50)
 
 /obj/item/weapon/reagent_containers/pill/vitamin
 	name = "Combat-V multivitamin"
