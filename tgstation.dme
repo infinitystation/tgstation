@@ -1280,6 +1280,7 @@
 #include "code\modules\food_and_drinks\food\condiment.dm"
 #include "code\modules\food_and_drinks\food\customizables.dm"
 #include "code\modules\food_and_drinks\food\infinity_food.dm"
+#include "code\modules\food_and_drinks\food\infinity_fsrm.dm"
 #include "code\modules\food_and_drinks\food\snacks.dm"
 #include "code\modules\food_and_drinks\food\snacks_bread.dm"
 #include "code\modules\food_and_drinks\food\snacks_burgers.dm"
