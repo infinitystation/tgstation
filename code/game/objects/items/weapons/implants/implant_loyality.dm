@@ -3,6 +3,7 @@
 	desc = "God bless Nanotrasen!"
 	icon_state = "loyal"
 	origin_tech = "materials=2;biotech=4;programming=4"
+	activated = 0
 
 /obj/item/weapon/implant/mindshield/get_data()
 	var/dat = {"<b>Implant Specifications:</b><BR>
@@ -16,12 +17,18 @@
 				<b>Integrity:</b> Implant will last so long as the nanobots are inside the bloodstream."}
 	return dat
 
-/obj/item/weapon/implant/mindshield/activate(cause)
+/obj/screen/alert/loyalty_imp
+	name = "loyalty implanted"
+	desc = "Я чувствую ло&#1103;льность к Нанотрайзен! Слава корпорации!"
+	icon = 'icons/mob/alert_infinity.dmi'
+	icon_state = "loyal"
+
+/*/obj/item/weapon/implant/mindshield/activate(cause)
 	if(!cause || !imp_in)
 		return 0
 	if(cause == "action_button" && alert(imp_in, "Вы действительно хотите узнать, что делает этот имплант?", "Подтверждение", "Да", "Нет") != "Да")
 		return 0
-	imp_in << "<span class='notice'>Я чувствую ло&#255;льность к Нанотрайзен! Слава корпорации!</span>"
+	imp_in << "<span class='notice'>Я чувствую ло&#255;льность к Нанотрайзен! Слава корпорации!</span>" */
 
 /obj/item/weapon/implant/mindshield/implant(mob/living/carbon/target, mob/user, silent = 0)
 	if(..())
@@ -35,6 +42,7 @@
 			target.mind.remove_all_antag_light()
 		if(!silent)
 			target << "<span class='notice'>Вы чувствуете сильную ло&#255;льность к Нанотрайзен...</span>"
+		target.throw_alert("loyalty_implanted", /obj/screen/alert/loyalty_imp)
 		return 1
 	return 0
 
@@ -42,6 +50,7 @@
 	if(..())
 		if(target.stat != DEAD && !silent)
 			target << "<span class='boldnotice'>Вы чувствуете, как ло&#255;льность к Нанотрайзен покидает вас вместе с вашей жизнью...</span>"
+		target.clear_alert("loyalty_implanted")
 		return 1
 	return 0
 
