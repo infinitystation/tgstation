@@ -96633,27 +96633,27 @@
 	},
 /turf/open/floor/plasteel/bot,
 /area/security/east_brig)
-"dgR" = (
-/obj/structure/closet/cardboard,
-/turf/open/floor/plating,
-/area/maintenance/asmaint2)
-"dgQ" = (
-/obj/structure/closet/cardboard,
-/turf/open/floor/plating,
-/area/maintenance/asmaint)
-"dgP" = (
-/obj/structure/closet/cardboard,
-/turf/open/floor/plating,
-/area/maintenance/fpmaint2)
+"dgN" = (
+/obj/item/mushroom_bowl,
+/turf/closed/wall,
+/area/engine/rest_room)
 "dgO" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/structure/closet/cardboard,
 /turf/open/floor/plating,
 /area/maintenance/fpmaint2)
-"dgN" = (
-/obj/item/mushroom_bowl,
-/turf/closed/wall,
-/area/engine/rest_room)
+"dgP" = (
+/obj/structure/closet/cardboard,
+/turf/open/floor/plating,
+/area/maintenance/fpmaint2)
+"dgQ" = (
+/obj/structure/closet/cardboard,
+/turf/open/floor/plating,
+/area/maintenance/asmaint)
+"dgR" = (
+/obj/structure/closet/cardboard,
+/turf/open/floor/plating,
+/area/maintenance/asmaint2)
 
 (1,1,1) = {"
 aaa

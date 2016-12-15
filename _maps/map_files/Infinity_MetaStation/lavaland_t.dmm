@@ -420,8 +420,12 @@
 	},
 /area/lavaland/surface/outdoors)
 "bw" = (
-/obj/item/ammo_casing/a646/no,
-/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/obj/effect/gibspawner/human,
+/obj/effect/light_emitter{
+	set_cap = 3;
+	set_luminosity = 5
+	},
+/turf/open/indestructible/hierophant,
 /area/lavaland/surface/outdoors)
 "bx" = (
 /obj/effect/gibspawner/human,
@@ -436,8 +440,8 @@
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/lavaland/surface/outdoors)
 "bz" = (
-/obj/effect/decal/cleanable/ash,
-/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/obj/effect/decal/cleanable/blood/gibs/down,
+/turf/open/indestructible/hierophant,
 /area/lavaland/surface/outdoors)
 "bA" = (
 /obj/effect/decal/cleanable/blood/footprints{
@@ -455,26 +459,39 @@
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/lavaland/surface/outdoors)
 "bC" = (
-/obj/effect/decal/cleanable/blood/footprints{
-	dir = 2;
-	icon_state = "blood1"
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 4
 	},
-/obj/effect/decal/cleanable/blood/drip,
-/obj/item/ammo_casing/a646/no,
-/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
-/area/lavaland/surface/outdoors)
+/obj/structure/sign/securearea{
+	desc = "A warning sign which reads 'HIGH VOLTAGE'";
+	icon_state = "shock";
+	name = "HIGH VOLTAGE";
+	pixel_y = -32
+	},
+/turf/open/floor/plasteel/terror/necro/warning,
+/area/mine/lobby)
 "bD" = (
-/obj/effect/decal/cleanable/blood/footprints{
-	dir = 2;
-	icon_state = "blood1"
-	},
-/obj/effect/decal/cleanable/ash,
-/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/obj/structure/holosign/barrier/engineering,
+/turf/open/floor/plating/lavaland/outdoor,
 /area/lavaland/surface/outdoors)
 "bE" = (
-/obj/effect/decal/cleanable/blood/drip,
-/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
-/area/lavaland/surface/outdoors)
+/obj/machinery/door/firedoor/border_only{
+	tag = "icon-door_open (NORTH)";
+	icon_state = "door_open";
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2";
+	pixel_y = 0;
+	tag = ""
+	},
+/turf/open/floor/plasteel/stairsnew/grey/left{
+	baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
+	},
+/area/mine/living_quarters)
 "bF" = (
 /turf/closed/wall/mineral/iron,
 /area/mine/shelter/ash)
@@ -624,14 +641,50 @@
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/mine/shelter/ash)
 "cj" = (
-/obj/effect/decal/remains/human,
-/obj/effect/decal/cleanable/blood/old,
-/obj/item/weapon/gun/ballistic/automatic/c20r/sc_c20r,
-/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
-/area/lavaland/surface/outdoors)
+/obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden{
+	dir = 8;
+	initialize_directions = 11
+	},
+/obj/machinery/airalarm{
+	dir = 4;
+	pixel_x = -23;
+	pixel_y = 0
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2";
+	pixel_y = 0;
+	tag = ""
+	},
+/turf/open/floor/plasteel/terror/necro/brown/corner{
+	tag = "icon-browncorner (WEST)";
+	icon_state = "browncorner";
+	dir = 8
+	},
+/area/mine/living_quarters)
 "ck" = (
-/turf/open/floor/plating/lavaland/outdoor,
-/area/lavaland/surface/outdoors/near)
+/obj/machinery/button/door{
+	id = "miningdorm1";
+	name = "Door Bolt Control";
+	normaldoorcontrol = 1;
+	pixel_x = -25;
+	pixel_y = 0;
+	req_access_txt = "0";
+	specialfunctions = 4
+	},
+/obj/structure/closet,
+/obj/machinery/atmospherics/components/unary/vent_scrubber{
+	dir = 8;
+	on = 1;
+	scrub_Toxins = 0
+	},
+/turf/open/floor/plasteel/terror/necro/darkred/side{
+	tag = "icon-darkred (WEST)";
+	icon_state = "darkred";
+	dir = 8
+	},
+/area/mine/living_quarters)
 "cl" = (
 /obj/machinery/porta_turret/syndicate/mining,
 /turf/open/floor/plating/lavaland/outdoor,
@@ -660,6 +713,7 @@
 /area/mine/cafeteria)
 "cp" = (
 /obj/machinery/door/poddoor/shutters/preopen{
+	dir = 1;
 	id = "mine_shutters"
 	},
 /obj/effect/spawner/structure/window/reinforced,
@@ -671,6 +725,7 @@
 /area/mine/cafeteria)
 "cq" = (
 /obj/machinery/door/poddoor/shutters/preopen{
+	dir = 1;
 	id = "mine_shutters"
 	},
 /obj/effect/spawner/structure/window/reinforced,
@@ -686,6 +741,7 @@
 /area/mine/cafeteria)
 "cr" = (
 /obj/machinery/door/poddoor/shutters/preopen{
+	dir = 1;
 	id = "mine_shutters"
 	},
 /obj/effect/spawner/structure/window/reinforced,
@@ -718,6 +774,7 @@
 /area/mine/lobby)
 "ct" = (
 /obj/machinery/door/poddoor/shutters/preopen{
+	dir = 1;
 	id = "mine_shutters"
 	},
 /obj/effect/spawner/structure/window/reinforced,
@@ -1401,11 +1458,11 @@
 /turf/open/floor/plating/lava/smooth/lava_land_surface,
 /area/lavaland/surface/outdoors)
 "dN" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/machinery/newscaster{
 	pixel_x = -30;
 	pixel_y = 0
 	},
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /turf/open/floor/plasteel/terror/necro/bar,
 /area/mine/cafeteria)
 "dO" = (
@@ -1542,6 +1599,10 @@
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden{
 	dir = 8;
 	initialize_directions = 11
+	},
+/obj/machinery/light{
+	icon_state = "tube1";
+	dir = 8
 	},
 /turf/open/floor/plasteel/terror/necro/bar,
 /area/mine/cafeteria)
@@ -1690,10 +1751,6 @@
 	},
 /area/lavaland/surface/outdoors)
 "eo" = (
-/obj/machinery/light{
-	icon_state = "tube1";
-	dir = 8
-	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/machinery/firealarm{
 	dir = 8;
@@ -2699,7 +2756,7 @@
 	},
 /area/mine/lobby)
 "fW" = (
-/obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden,
+/obj/machinery/atmospherics/pipe/manifold4w/scrubbers/hidden,
 /turf/open/floor/plasteel/terror/necro/brown/corner{
 	tag = "icon-browncorner (WEST)";
 	icon_state = "browncorner";
@@ -3068,22 +3125,12 @@
 /area/mine/lobby)
 "gu" = (
 /obj/effect/spawner/structure/window/reinforced,
-/obj/structure/cable{
-	icon_state = "0-4";
-	d2 = 4
-	},
-/obj/structure/cable{
-	d2 = 8;
-	icon_state = "0-8"
-	},
-/obj/structure/sign/securearea{
-	desc = "A warning sign which reads 'HIGH VOLTAGE'";
-	icon_state = "shock";
-	name = "HIGH VOLTAGE";
-	pixel_y = -32
+/obj/machinery/door/poddoor/shutters/preopen{
+	dir = 8;
+	id = "mine_shutters2"
 	},
 /turf/open/floor/plating/lavaland,
-/area/mine/lobby)
+/area/mine/living_quarters)
 "gv" = (
 /obj/structure/closet/crate,
 /obj/item/stack/sheet/metal/five,
@@ -3096,11 +3143,12 @@
 	icon_state = "4-8";
 	pixel_y = 0
 	},
-/obj/machinery/computer/shuttle/mining,
-/obj/machinery/camera{
-	c_tag = "Shuttle Docking Foyer";
-	dir = 1;
-	network = list("MINE")
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4";
+	tag = ""
 	},
 /turf/open/floor/plasteel/terror/necro/brown/corner{
 	tag = "icon-browncorner (WEST)";
@@ -3117,11 +3165,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	req_access_txt = 1
 	},
-/turf/open/floor/plasteel/terror/necro/brown/corner{
-	tag = "icon-browncorner (WEST)";
-	icon_state = "browncorner";
-	dir = 8
-	},
+/turf/open/floor/plasteel/terror/necro/brown/corner,
 /area/mine/lobby)
 "gy" = (
 /obj/structure/cable{
@@ -3129,6 +3173,12 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/obj/structure/chair/stool,
+/obj/machinery/camera{
+	c_tag = "Shuttle Docking Foyer";
+	dir = 1;
+	network = list("MINE")
+	},
 /turf/open/floor/plasteel/terror/necro/brown/corner,
 /area/mine/lobby)
 "gz" = (
@@ -3136,9 +3186,7 @@
 	dir = 1;
 	pixel_y = -24
 	},
-/obj/structure/chair{
-	dir = 1
-	},
+/obj/machinery/computer/shuttle/mining,
 /turf/open/floor/plasteel/terror/necro/brown/corner,
 /area/mine/lobby)
 "gA" = (
@@ -3346,24 +3394,34 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	req_access_txt = 1
 	},
-/obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/glass_large{
-	name = "Crew Quarters Access"
+/obj/machinery/door/firedoor/border_only{
+	tag = "icon-door_open (NORTH)";
+	icon_state = "door_open";
+	dir = 1
+	},
+/turf/open/floor/plasteel/stairsnew/grey/right{
+	baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
+	},
+/area/mine/living_quarters)
+"gQ" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/obj/machinery/atmospherics/components/unary/vent_pump{
+	dir = 4;
+	layer = 2.4;
+	on = 1
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2";
+	pixel_y = 0;
+	tag = ""
 	},
 /turf/open/floor/plasteel/terror/necro/brown/corner{
 	tag = "icon-browncorner (WEST)";
 	icon_state = "browncorner";
 	dir = 8
 	},
-/area/mine/living_quarters)
-"gQ" = (
-/obj/structure/cable{
-	tag = "icon-1-2";
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
-/obj/machinery/door/firedoor,
-/turf/open/floor/plasteel/terror/necro/brown/corner,
 /area/mine/living_quarters)
 "gR" = (
 /turf/closed/wall{
@@ -3426,64 +3484,41 @@
 	},
 /area/mine/living_quarters)
 "gY" = (
-/obj/machinery/airalarm{
+/obj/machinery/firealarm{
 	dir = 4;
-	icon_state = "alarm0";
-	pixel_x = -22
+	pixel_x = 24
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	req_access_txt = 1
 	},
-/turf/open/floor/plasteel/terror/necro/brown/corner{
-	tag = "icon-browncorner (WEST)";
-	icon_state = "browncorner";
-	dir = 8
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 4
 	},
+/turf/open/floor/plasteel/terror/necro/brown/corner,
 /area/mine/living_quarters)
 "gZ" = (
-/obj/structure/cable{
-	tag = "icon-1-2";
-	icon_state = "1-2"
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
-/turf/open/floor/plasteel/terror/necro/brown/corner,
+/turf/closed/wall{
+	baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
+	},
 /area/mine/living_quarters)
 "ha" = (
 /obj/structure/bed,
 /obj/item/weapon/bedsheet/brown,
-/obj/machinery/button/door{
-	id = "miningdorm3";
-	name = "Door Bolt Control";
-	normaldoorcontrol = 1;
-	pixel_x = -25;
-	pixel_y = 0;
-	req_access_txt = "0";
-	specialfunctions = 4
+/obj/structure/dresser{
+	density = 0;
+	pixel_y = 26
 	},
-/turf/open/floor/carpet{
-	baseturf = /turf/open/floor/plating/lava/smooth/lava_land_surface
-	},
+/turf/open/floor/plasteel/terror/necro/black,
 /area/mine/living_quarters)
 "hb" = (
-/obj/structure/toilet,
-/obj/machinery/newscaster{
-	pixel_x = -30;
-	pixel_y = 0
+/obj/machinery/door/airlock{
+	id_tag = "miningdorm1";
+	name = "Room 1"
 	},
-/obj/machinery/light/small{
-	dir = 1;
-	pixel_x = 0
-	},
-/obj/machinery/button/door{
-	id = "minetoilet";
-	name = "Bolt Control";
-	normaldoorcontrol = 1;
-	pixel_x = 25;
-	pixel_y = 0;
-	req_access_txt = "0";
-	specialfunctions = 4
-	},
-/turf/open/floor/plasteel/terror/necro/freezer,
+/turf/open/floor/plasteel/terror/necro/darkred,
 /area/mine/living_quarters)
 "hc" = (
 /obj/structure/ore_box,
@@ -3571,14 +3606,7 @@
 	pixel_x = -2;
 	pixel_y = 5
 	},
-/obj/item/weapon/reagent_containers/food/drinks/drinkingglass/shotglass{
-	pixel_x = 4;
-	pixel_y = 2
-	},
-/obj/item/weapon/reagent_containers/food/drinks/drinkingglass/shotglass{
-	pixel_x = -7;
-	pixel_y = 15
-	},
+/obj/item/weapon/reagent_containers/food/drinks/drinkingglass/shotglass,
 /turf/open/floor/plating/lavaland/outdoor,
 /area/lavaland/surface/outdoors)
 "hk" = (
@@ -3602,14 +3630,8 @@
 /turf/open/floor/plasteel/terror/necro/freezer,
 /area/mine/living_quarters)
 "hm" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	req_access_txt = 1
-	},
-/turf/open/floor/plasteel/terror/necro/brown/corner{
-	tag = "icon-browncorner (WEST)";
-	icon_state = "browncorner";
-	dir = 8
-	},
+/obj/machinery/atmospherics/pipe/manifold4w/supply/hidden,
+/turf/open/floor/plasteel/terror/necro/brown/corner,
 /area/mine/living_quarters)
 "hn" = (
 /obj/structure/closet/crate,
@@ -3683,14 +3705,12 @@
 /turf/open/floor/plasteel/terror/necro/black,
 /area/mine/storage)
 "hw" = (
-/obj/structure/cable{
-	tag = "icon-1-2";
-	icon_state = "1-2"
-	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
-	dir = 9
+	dir = 10
 	},
-/turf/open/floor/plasteel/terror/necro/brown/corner,
+/turf/closed/wall{
+	baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
+	},
 /area/mine/living_quarters)
 "hx" = (
 /obj/structure/ore_box,
@@ -3760,63 +3780,57 @@
 	},
 /area/mine/storage)
 "hC" = (
-/obj/structure/dresser,
-/turf/open/floor/carpet{
-	baseturf = /turf/open/floor/plating/lava/smooth/lava_land_surface
+/obj/structure/table,
+/obj/machinery/newscaster{
+	pixel_y = 32
+	},
+/obj/random/plushie,
+/turf/open/floor/plasteel/terror/necro/darkred/side{
+	tag = "icon-darkred (EAST)";
+	icon_state = "darkred";
+	dir = 4
 	},
 /area/mine/living_quarters)
 "hD" = (
-/obj/machinery/shower{
-	dir = 4;
-	pixel_x = 5
+/obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden{
+	dir = 8;
+	initialize_directions = 11
 	},
-/obj/structure/curtain/open/shower,
-/obj/machinery/newscaster{
-	pixel_x = -30;
-	pixel_y = 0
-	},
-/obj/item/weapon/soap,
-/obj/machinery/button/door{
-	id = "mineshower";
-	name = "Bolt Control";
-	normaldoorcontrol = 1;
-	pixel_x = 25;
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2";
 	pixel_y = 0;
-	req_access_txt = "0";
-	specialfunctions = 4
+	tag = ""
 	},
-/turf/open/floor/plasteel/terror/necro/freezer,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4";
+	tag = ""
+	},
+/turf/open/floor/plasteel/terror/necro/brown/corner{
+	tag = "icon-browncorner (WEST)";
+	icon_state = "browncorner";
+	dir = 8
+	},
 /area/mine/living_quarters)
 "hE" = (
-/obj/structure/cable{
-	tag = "icon-1-2";
-	icon_state = "1-2"
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 5
 	},
-/obj/machinery/door/firedoor,
-/turf/open/floor/plasteel/terror/necro/brown/corner,
+/turf/closed/wall{
+	baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
+	},
 /area/mine/living_quarters)
 "hF" = (
-/obj/machinery/button/door{
-	id = "miningdorm1";
-	name = "Door Bolt Control";
-	normaldoorcontrol = 1;
-	pixel_x = -25;
-	pixel_y = 0;
-	req_access_txt = "0";
-	specialfunctions = 4
+/obj/structure/dresser{
+	density = 0;
+	pixel_y = 26
 	},
 /obj/structure/bed,
 /obj/item/weapon/bedsheet/brown,
-/obj/structure/sign/poster{
-	icon_state = "poster5";
-	pixel_x = 3;
-	pixel_y = 34;
-	serial_number = 5;
-	tag = "icon-poster5"
-	},
-/turf/open/floor/carpet{
-	baseturf = /turf/open/floor/plating/lava/smooth/lava_land_surface
-	},
+/turf/open/floor/plasteel/terror/necro/black,
 /area/mine/living_quarters)
 "hG" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
@@ -3857,58 +3871,88 @@
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/lavaland/surface/outdoors)
 "hK" = (
-/obj/structure/table,
-/turf/open/floor/carpet{
-	baseturf = /turf/open/floor/plating/lava/smooth/lava_land_surface
+/obj/structure/chair{
+	dir = 1
+	},
+/turf/open/floor/plasteel/terror/necro/darkred/side{
+	tag = "icon-darkred (EAST)";
+	icon_state = "darkred";
+	dir = 4
 	},
 /area/mine/living_quarters)
 "hL" = (
 /obj/machinery/light/small,
-/turf/open/floor/carpet{
-	baseturf = /turf/open/floor/plating/lava/smooth/lava_land_surface
+/obj/machinery/atmospherics/components/unary/vent_pump{
+	dir = 8;
+	on = 1
 	},
+/turf/open/floor/plasteel/terror/necro/black,
 /area/mine/living_quarters)
 "hM" = (
-/obj/machinery/door/airlock{
-	id_tag = "miningdorm3";
-	name = "Room 3"
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
 	},
-/turf/open/floor/plasteel/terror/necro/wood,
+/obj/item/device/radio/intercom{
+	broadcasting = 0;
+	listening = 1;
+	name = "Station Intercom (General)";
+	pixel_y = -28
+	},
+/turf/open/floor/plasteel/terror/necro/darkred/side{
+	tag = "icon-darkred (WEST)";
+	icon_state = "darkred";
+	dir = 8
+	},
 /area/mine/living_quarters)
 "hN" = (
+/obj/machinery/light{
+	dir = 4
+	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	req_access_txt = 1
 	},
-/obj/machinery/atmospherics/components/unary/vent_scrubber{
-	dir = 4;
-	on = 1;
-	scrub_N2O = 0;
-	scrub_Toxins = 0
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 4
 	},
-/obj/machinery/firealarm{
-	dir = 8;
-	pixel_x = -24;
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/obj/machinery/power/apc{
+	dir = 4;
+	name = "Living Quarter's APC";
+	pixel_x = 26;
 	pixel_y = 0
+	},
+/turf/open/floor/plasteel/terror/necro/brown/corner,
+/area/mine/living_quarters)
+"hO" = (
+/obj/machinery/door/airlock{
+	id_tag = "miningdorm2";
+	name = "Room 2"
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
+	},
+/turf/open/floor/plasteel/terror/necro/darkred,
+/area/mine/living_quarters)
+"hP" = (
+/obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden{
+	dir = 8;
+	initialize_directions = 11
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2";
+	pixel_y = 0;
+	tag = ""
 	},
 /turf/open/floor/plasteel/terror/necro/brown/corner{
 	tag = "icon-browncorner (WEST)";
 	icon_state = "browncorner";
 	dir = 8
 	},
-/area/mine/living_quarters)
-"hO" = (
-/obj/structure/cable{
-	tag = "icon-1-2";
-	icon_state = "1-2"
-	},
-/turf/open/floor/plasteel/terror/necro/brown/corner,
-/area/mine/living_quarters)
-"hP" = (
-/obj/machinery/door/airlock{
-	id_tag = "miningdorm1";
-	name = "Room 1"
-	},
-/turf/open/floor/plasteel/terror/necro/wood,
 /area/mine/living_quarters)
 "hQ" = (
 /obj/structure/bodycontainer/morgue,
@@ -3974,27 +4018,14 @@
 	},
 /area/mine/maintenance)
 "hW" = (
-/turf/closed/wall{
-	baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
-	},
-/area/mine/maintenance)
-"hX" = (
-/obj/machinery/light{
-	icon_state = "tube1";
-	dir = 8
-	},
-/obj/machinery/camera{
-	c_tag = "Dorms";
-	dir = 4;
-	network = list("MINE")
-	},
-/obj/item/device/radio/intercom{
-	dir = 8;
-	name = "Station Intercom (General)";
-	pixel_x = -28
-	},
-/obj/machinery/atmospherics/pipe/manifold/supply/hidden{
-	dir = 8
+/obj/machinery/door/firedoor,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2";
+	pixel_y = 0;
+	tag = ""
 	},
 /turf/open/floor/plasteel/terror/necro/brown/corner{
 	tag = "icon-browncorner (WEST)";
@@ -4002,20 +4033,34 @@
 	dir = 8
 	},
 /area/mine/living_quarters)
-"hY" = (
-/obj/structure/cable{
-	tag = "icon-1-2";
-	icon_state = "1-2"
-	},
-/obj/structure/extinguisher_cabinet{
-	pixel_x = 27;
-	pixel_y = 0
-	},
-/obj/machinery/atmospherics/components/unary/vent_pump{
-	dir = 8;
-	on = 1
+"hX" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	req_access_txt = 1
 	},
 /turf/open/floor/plasteel/terror/necro/brown/corner,
+/area/mine/living_quarters)
+"hY" = (
+/obj/machinery/button/door{
+	id = "miningdorm2";
+	name = "Door Bolt Control";
+	normaldoorcontrol = 1;
+	pixel_x = -25;
+	pixel_y = 0;
+	req_access_txt = "0";
+	specialfunctions = 4
+	},
+/obj/structure/closet,
+/obj/machinery/atmospherics/components/unary/vent_scrubber{
+	dir = 8;
+	on = 1;
+	scrub_Toxins = 0
+	},
+/turf/open/floor/plasteel/terror/necro/darkred/side{
+	tag = "icon-darkred (WEST)";
+	icon_state = "darkred";
+	dir = 8
+	},
 /area/mine/living_quarters)
 "hZ" = (
 /obj/structure/bodycontainer/morgue,
@@ -4048,62 +4093,42 @@
 	},
 /area/mine/storage)
 "ic" = (
-/obj/machinery/telecomms/relay/preset/mining,
-/turf/open/floor/plasteel{
-	tag = "icon-vault (EAST)";
-	icon_state = "vault";
-	dir = 4
-	},
-/area/mine/maintenance)
-"id" = (
-/obj/machinery/light/small{
-	dir = 1;
-	pixel_x = 0
-	},
-/obj/machinery/airalarm{
-	frequency = 1439;
-	locked = 0;
-	pixel_y = 23;
-	req_access = null
-	},
-/obj/structure/cable{
-	tag = "icon-2-4";
-	icon_state = "2-4"
-	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 6
-	},
-/turf/open/floor/plasteel/terror/necro/darkvault{
-	tag = "icon-vault (NORTHWEST)";
-	icon_state = "vault";
-	dir = 9
-	},
-/area/mine/maintenance)
-"ie" = (
-/obj/machinery/door/airlock/maintenance{
-	name = "Mining Station Communications";
-	req_access_txt = "48"
-	},
-/obj/structure/cable{
-	tag = "icon-4-8";
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 4
-	},
-/turf/open/floor/plasteel/terror/necro/darkvault{
-	icon = 'icons/turf/infinity.dmi';
-	icon_state = "darkdelivery"
-	},
-/area/mine/maintenance)
-"if" = (
-/obj/structure/cable{
-	tag = "icon-4-8";
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 9;
+/obj/structure/toilet,
+/obj/machinery/newscaster{
+	pixel_x = -30;
 	pixel_y = 0
+	},
+/obj/machinery/button/door{
+	id = "minetoilet";
+	name = "Bolt Control";
+	normaldoorcontrol = 1;
+	pixel_x = 25;
+	pixel_y = 0;
+	req_access_txt = "0";
+	specialfunctions = 4
+	},
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/open/floor/plasteel/terror/necro/freezer,
+/area/mine/living_quarters)
+"id" = (
+/obj/machinery/atmospherics/pipe/manifold/supply/hidden{
+	dir = 8;
+	initialize_directions = 13
+	},
+/turf/open/floor/plasteel/terror/necro/brown/corner,
+/area/mine/living_quarters)
+"ie" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 5
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2";
+	pixel_y = 0;
+	tag = ""
 	},
 /turf/open/floor/plasteel/terror/necro/brown/corner{
 	tag = "icon-browncorner (WEST)";
@@ -4111,19 +4136,12 @@
 	dir = 8
 	},
 /area/mine/living_quarters)
-"ig" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8";
-	tag = ""
+"if" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	req_access_txt = 1
 	},
-/obj/structure/cable{
-	d1 = 0;
-	d2 = 1;
-	icon_state = "1-2";
-	pixel_y = 0;
-	tag = "icon-1-2"
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 4
 	},
 /obj/machinery/firealarm{
 	dir = 4;
@@ -4131,9 +4149,9 @@
 	},
 /turf/open/floor/plasteel/terror/necro/brown/corner,
 /area/mine/living_quarters)
-"ih" = (
+"ig" = (
 /obj/machinery/button/door{
-	id = "miningdorm2";
+	id = "miningdorm3";
 	name = "Door Bolt Control";
 	normaldoorcontrol = 1;
 	pixel_x = -25;
@@ -4141,10 +4159,33 @@
 	req_access_txt = "0";
 	specialfunctions = 4
 	},
-/obj/structure/bed,
-/obj/item/weapon/bedsheet/brown,
-/turf/open/floor/carpet{
-	baseturf = /turf/open/floor/plating/lava/smooth/lava_land_surface
+/obj/structure/closet,
+/obj/machinery/atmospherics/components/unary/vent_scrubber{
+	dir = 8;
+	on = 1;
+	scrub_Toxins = 0
+	},
+/turf/open/floor/plasteel/terror/necro/darkred/side{
+	tag = "icon-darkred (WEST)";
+	icon_state = "darkred";
+	dir = 8
+	},
+/area/mine/living_quarters)
+"ih" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 6
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2";
+	pixel_y = 0;
+	tag = ""
+	},
+/turf/open/floor/plasteel/terror/necro/brown/corner{
+	tag = "icon-browncorner (WEST)";
+	icon_state = "browncorner";
+	dir = 8
 	},
 /area/mine/living_quarters)
 "ii" = (
@@ -4184,73 +4225,84 @@
 	},
 /area/mine/storage)
 "il" = (
+/obj/machinery/light/small,
 /obj/machinery/atmospherics/components/unary/vent_pump{
-	dir = 4;
-	layer = 2.4;
+	dir = 8;
 	on = 1
 	},
-/turf/open/floor/plasteel{
-	tag = "icon-vault (NORTH)";
-	icon_state = "vault";
-	dir = 1
-	},
-/area/mine/maintenance)
-"im" = (
-/obj/machinery/power/apc{
-	dir = 2;
-	name = "Mining Communications APC";
-	pixel_x = 1;
-	pixel_y = -25
-	},
-/obj/structure/cable,
-/obj/machinery/camera{
-	c_tag = "Communications Relay";
-	dir = 8;
-	network = list("MINE")
-	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 9;
-	pixel_y = 0
+/obj/structure/sign/poster{
+	icon_state = "poster18";
+	pixel_y = -32;
+	serial_number = 18;
+	tag = "icon-poster18"
 	},
 /turf/open/floor/plasteel/terror/necro/black,
-/area/mine/maintenance)
-"in" = (
-/obj/machinery/power/apc{
-	dir = 8;
-	name = "Mining Station Starboard Wing APC";
-	pixel_x = -27;
-	pixel_y = 2
-	},
-/obj/structure/cable{
-	icon_state = "0-4";
-	d2 = 4
-	},
-/obj/item/weapon/twohanded/required/kirbyplants{
-	icon_state = "plant-21";
-	layer = 4.1
-	},
-/turf/open/floor/plasteel/terror/necro/brown/corner{
-	tag = "icon-browncorner (WEST)";
-	icon_state = "browncorner";
-	dir = 8
-	},
 /area/mine/living_quarters)
-"io" = (
+"im" = (
+/obj/machinery/door/airlock/maintenance{
+	name = "Mining Station Communications";
+	req_access_txt = "48"
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	req_access_txt = 1
+	},
 /obj/structure/cable{
 	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8";
+	d2 = 2;
+	icon_state = "1-2";
+	pixel_y = 0;
 	tag = ""
 	},
+/turf/open/floor/plasteel/terror/necro/darkvault{
+	tag = "icon-vault (WEST)";
+	icon_state = "vault";
+	dir = 8
+	},
+/area/mine/maintenance)
+"in" = (
+/obj/machinery/atmospherics/pipe/manifold/supply/hidden,
+/obj/machinery/light,
 /turf/open/floor/plasteel/terror/necro/brown/corner,
 /area/mine/living_quarters)
-"ip" = (
+"io" = (
 /obj/machinery/door/airlock{
-	id_tag = "miningdorm2";
-	name = "Room 2"
+	id_tag = "miningdorm3";
+	name = "Room 3"
 	},
-/turf/open/floor/plasteel/terror/necro/wood,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
+	},
+/turf/open/floor/plasteel/terror/necro/darkred,
 /area/mine/living_quarters)
+"ip" = (
+/obj/machinery/power/apc{
+	dir = 4;
+	name = "Mining Communications APC";
+	pixel_x = -27;
+	pixel_y = 0
+	},
+/obj/machinery/airalarm{
+	dir = 1;
+	pixel_y = -22
+	},
+/obj/machinery/camera{
+	c_tag = "Communications Relay";
+	dir = 1;
+	network = list("MINE")
+	},
+/obj/machinery/atmospherics/components/unary/vent_pump{
+	tag = "icon-vent_map (NORTH)";
+	icon_state = "vent_map";
+	dir = 1;
+	on = 1
+	},
+/obj/structure/cable,
+/turf/open/floor/plasteel/terror/necro/darkvault{
+	tag = "icon-vault (WEST)";
+	icon_state = "vault";
+	dir = 8
+	},
+/area/mine/maintenance)
 "iq" = (
 /obj/structure/table/reinforced,
 /obj/item/weapon/twohanded/required/kirbyplants{
@@ -4274,33 +4326,62 @@
 /turf/open/floor/plasteel/terror/necro/black,
 /area/mine/storage)
 "it" = (
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 27;
+	pixel_y = 0
+	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	req_access_txt = 1
 	},
-/obj/machinery/door/firedoor,
+/obj/machinery/atmospherics/components/unary/vent_scrubber{
+	dir = 8;
+	on = 1;
+	scrub_Toxins = 0
+	},
+/obj/machinery/camera{
+	c_tag = "Mining Station - Dormitories";
+	dir = 8;
+	network = list("MINE")
+	},
+/turf/open/floor/plasteel/terror/necro/brown/corner,
+/area/mine/living_quarters)
+"iu" = (
+/obj/machinery/telecomms/relay/preset/mining,
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/item/device/radio/intercom{
+	broadcasting = 0;
+	listening = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 20
+	},
+/turf/open/floor/plasteel/terror/necro/darkvault{
+	tag = "icon-vault (WEST)";
+	icon_state = "vault";
+	dir = 8
+	},
+/area/mine/maintenance)
+"iv" = (
+/obj/machinery/button/door{
+	id = "mine_shutters2";
+	name = "Shutters control";
+	pixel_x = -24;
+	pixel_y = 0
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2";
+	pixel_y = 0;
+	tag = ""
+	},
 /turf/open/floor/plasteel/terror/necro/brown/corner{
 	tag = "icon-browncorner (WEST)";
 	icon_state = "browncorner";
 	dir = 8
 	},
-/area/mine/living_quarters)
-"iu" = (
-/obj/structure/closet/wall{
-	dir = 4;
-	pixel_x = -28
-	},
-/obj/machinery/light/small{
-	dir = 8
-	},
-/turf/open/floor/plasteel/terror/necro/freezer,
-/area/mine/living_quarters)
-"iv" = (
-/obj/machinery/door/airlock{
-	id_tag = "mineshower";
-	name = "Unisex Showers";
-	req_access_txt = "0"
-	},
-/turf/open/floor/plasteel/terror/necro/freezer,
 /area/mine/living_quarters)
 "iw" = (
 /turf/closed/wall/mineral/iron,
@@ -4309,6 +4390,222 @@
 /obj/structure/table/wood,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/mine/shelter/ash)
+"jf" = (
+/obj/effect/decal/cleanable/blood,
+/obj/effect/decal/cleanable/blood/tracks{
+	tag = "icon-tracks (SOUTHWEST)";
+	icon_state = "tracks";
+	dir = 10
+	},
+/turf/open/indestructible/hierophant,
+/area/lavaland/surface/outdoors)
+"je" = (
+/obj/effect/decal/cleanable/blood/gibs/core,
+/turf/open/indestructible/hierophant,
+/area/lavaland/surface/outdoors)
+"jd" = (
+/obj/effect/decal/cleanable/blood/old,
+/obj/effect/decal/remains/human,
+/turf/open/indestructible/hierophant,
+/area/lavaland/surface/outdoors)
+"jc" = (
+/obj/effect/decal/cleanable/blood/gibs/up,
+/turf/open/indestructible/hierophant,
+/area/lavaland/surface/outdoors)
+"jb" = (
+/obj/effect/decal/remains/human,
+/obj/effect/decal/cleanable/blood,
+/turf/open/indestructible/hierophant,
+/area/lavaland/surface/outdoors)
+"ja" = (
+/obj/effect/decal/cleanable/blood,
+/obj/effect/decal/cleanable/blood/tracks{
+	tag = "icon-tracks (WEST)";
+	icon_state = "tracks";
+	dir = 8
+	},
+/turf/open/indestructible/hierophant,
+/area/lavaland/surface/outdoors)
+"iZ" = (
+/mob/living/simple_animal/hostile/megafauna/hierophant,
+/turf/open/indestructible/hierophant,
+/area/lavaland/surface/outdoors)
+"iY" = (
+/obj/effect/decal/cleanable/blood/tracks{
+	tag = "icon-tracks (SOUTHEAST)";
+	icon_state = "tracks";
+	dir = 6
+	},
+/turf/open/indestructible/hierophant,
+/area/lavaland/surface/outdoors)
+"iX" = (
+/obj/effect/decal/cleanable/blood/tracks{
+	tag = "icon-tracks (NORTHWEST)";
+	icon_state = "tracks";
+	dir = 9
+	},
+/obj/effect/decal/cleanable/blood,
+/turf/open/indestructible/hierophant,
+/area/lavaland/surface/outdoors)
+"iW" = (
+/obj/effect/decal/cleanable/blood/tracks{
+	tag = "icon-tracks (WEST)";
+	icon_state = "tracks";
+	dir = 8
+	},
+/obj/effect/light_emitter{
+	set_cap = 3;
+	set_luminosity = 7
+	},
+/turf/open/indestructible/hierophant,
+/area/lavaland/surface/outdoors)
+"iV" = (
+/obj/effect/decal/cleanable/blood/tracks{
+	tag = "icon-tracks (WEST)";
+	icon_state = "tracks";
+	dir = 8
+	},
+/turf/open/indestructible/hierophant,
+/area/lavaland/surface/outdoors)
+"iU" = (
+/obj/effect/gibspawner/human,
+/obj/effect/decal/cleanable/blood/tracks{
+	tag = "icon-tracks (SOUTHEAST)";
+	icon_state = "tracks";
+	dir = 6
+	},
+/turf/open/indestructible/hierophant,
+/area/lavaland/surface/outdoors)
+"iT" = (
+/obj/effect/decal/remains/human,
+/obj/effect/decal/cleanable/blood,
+/obj/effect/decal/cleanable/blood/tracks{
+	tag = "icon-tracks (NORTHEAST)";
+	icon_state = "tracks";
+	dir = 5
+	},
+/turf/open/indestructible/hierophant,
+/area/lavaland/surface/outdoors)
+"iS" = (
+/obj/effect/decal/cleanable/blood/tracks{
+	tag = "icon-tracks (SOUTHWEST)";
+	icon_state = "tracks";
+	dir = 10
+	},
+/turf/open/indestructible/hierophant,
+/area/lavaland/surface/outdoors)
+"iR" = (
+/obj/effect/decal/cleanable/ash,
+/turf/open/indestructible/hierophant,
+/area/lavaland/surface/outdoors)
+"iQ" = (
+/obj/effect/decal/cleanable/blood/gibs/limb,
+/turf/open/indestructible/hierophant,
+/area/lavaland/surface/outdoors)
+"iP" = (
+/obj/effect/decal/cleanable/blood/tracks{
+	tag = "icon-tracks (NORTHWEST)";
+	icon_state = "tracks";
+	dir = 9
+	},
+/turf/open/indestructible/hierophant,
+/area/lavaland/surface/outdoors)
+"iO" = (
+/obj/effect/decal/cleanable/blood/old,
+/turf/open/indestructible/hierophant,
+/area/lavaland/surface/outdoors)
+"iN" = (
+/obj/effect/light_emitter,
+/turf/open/indestructible/hierophant,
+/area/lavaland/surface/outdoors)
+"iM" = (
+/obj/effect/decal/cleanable/blood/tracks{
+	tag = "icon-tracks (NORTHEAST)";
+	icon_state = "tracks";
+	dir = 5
+	},
+/turf/open/indestructible/hierophant,
+/area/lavaland/surface/outdoors)
+"iL" = (
+/obj/effect/decal/cleanable/blood,
+/turf/open/indestructible/hierophant,
+/area/lavaland/surface/outdoors)
+"iK" = (
+/obj/effect/gibspawner/generic,
+/turf/open/indestructible/hierophant,
+/area/lavaland/surface/outdoors)
+"iJ" = (
+/obj/effect/light_emitter{
+	set_cap = 3;
+	set_luminosity = 5
+	},
+/turf/open/indestructible/hierophant,
+/area/lavaland/surface/outdoors)
+"iI" = (
+/obj/effect/decal/cleanable/blood/tracks{
+	tag = "icon-tracks (SOUTHWEST)";
+	icon_state = "tracks";
+	dir = 10
+	},
+/obj/effect/decal/cleanable/blood,
+/turf/open/indestructible/hierophant,
+/area/lavaland/surface/outdoors)
+"iH" = (
+/obj/effect/decal/cleanable/blood/old,
+/obj/effect/decal/remains/human,
+/obj/effect/light_emitter{
+	set_cap = 3;
+	set_luminosity = 5
+	},
+/turf/open/indestructible/hierophant,
+/area/lavaland/surface/outdoors)
+"iG" = (
+/obj/effect/decal/cleanable/blood/old,
+/obj/effect/decal/cleanable/blood/tracks{
+	tag = "icon-tracks (EAST)";
+	icon_state = "tracks";
+	dir = 4
+	},
+/turf/open/indestructible/hierophant,
+/area/lavaland/surface/outdoors)
+"iF" = (
+/obj/effect/decal/cleanable/blood/tracks{
+	tag = "icon-tracks (EAST)";
+	icon_state = "tracks";
+	dir = 4
+	},
+/turf/open/indestructible/hierophant,
+/area/lavaland/surface/outdoors)
+"iE" = (
+/obj/effect/light_emitter{
+	set_cap = 3;
+	set_luminosity = 7
+	},
+/turf/open/indestructible/hierophant,
+/area/lavaland/surface/outdoors)
+"iD" = (
+/obj/effect/decal/cleanable/blood/gibs/limb,
+/obj/effect/decal/cleanable/blood,
+/turf/open/indestructible/hierophant,
+/area/lavaland/surface/outdoors)
+"iC" = (
+/obj/effect/gibspawner/human,
+/turf/open/indestructible/hierophant,
+/area/lavaland/surface/outdoors)
+"iB" = (
+/turf/open/indestructible/hierophant,
+/area/lavaland/surface/outdoors)
+"iA" = (
+/obj/effect/decal/cleanable/cobweb,
+/turf/open/indestructible/hierophant,
+/area/lavaland/surface/outdoors)
+"iz" = (
+/obj/effect/decal/cleanable/blood/tracks,
+/turf/open/indestructible/hierophant,
+/area/lavaland/surface/outdoors)
+"iy" = (
+/turf/closed/indestructible/riveted/hierophant,
+/area/lavaland/surface/outdoors)
 
 (1,1,1) = {"
 ab
@@ -13784,7 +14081,7 @@ aK
 aK
 aK
 aK
-at
+aK
 at
 at
 at
@@ -14040,8 +14337,8 @@ aK
 aK
 aK
 aK
-at
-at
+aK
+aK
 at
 at
 at
@@ -14296,9 +14593,9 @@ aK
 aK
 aK
 aK
-at
-at
-at
+aK
+aK
+aK
 at
 at
 at
@@ -14311,7 +14608,7 @@ at
 at
 at
 at
-at
+aK
 aK
 aK
 aK
@@ -14554,7 +14851,7 @@ aK
 aK
 aK
 aK
-at
+aK
 at
 at
 at
@@ -15065,10 +15362,10 @@ aK
 aK
 aK
 aK
+aK
 at
 at
-aK
-aK
+at
 at
 at
 at
@@ -15325,7 +15622,7 @@ cn
 cv
 cv
 cY
-aK
+at
 at
 at
 at
@@ -15335,7 +15632,7 @@ eO
 fp
 fR
 eO
-aV
+bD
 aV
 fQ
 aV
@@ -15854,7 +16151,7 @@ aV
 aV
 ho
 dD
-at
+aK
 at
 at
 at
@@ -16104,7 +16401,7 @@ at
 at
 eQ
 fr
-fT
+bC
 eQ
 eS
 gv
@@ -16112,10 +16409,10 @@ hn
 hp
 eS
 at
-hV
-hV
-hV
-hV
+gW
+gW
+gW
+gW
 aV
 aV
 cl
@@ -16362,17 +16659,17 @@ at
 eQ
 fs
 fU
-gu
+eQ
+at
+at
+at
+at
+at
+at
 gW
-gW
-gW
-gW
-gW
-gW
-hV
 ic
-il
-hV
+hk
+gW
 at
 aK
 aK
@@ -16621,17 +16918,17 @@ ft
 fV
 eQ
 gW
-hb
-hk
+gW
+gu
+gu
+gu
+gW
+gW
 gX
-hD
-iu
-hW
-id
-im
+hl
+gW
 hV
-at
-aK
+hV
 aK
 aK
 aK
@@ -16877,18 +17174,18 @@ eU
 fu
 fW
 gw
-gX
-gX
-hl
-gX
-gX
+bE
+cj
+gQ
+hD
+hP
 iv
 hW
 ie
-hW
+ih
+im
+ip
 hV
-aK
-aK
 aK
 aK
 aK
@@ -17139,13 +17436,13 @@ gY
 hm
 hN
 it
-hm
+id
 hX
 if
 in
 gW
-aK
-aK
+iu
+hV
 aK
 aK
 aK
@@ -17391,18 +17688,18 @@ eW
 fw
 fY
 gy
-gQ
+gX
 gZ
-gZ
+hb
 hw
 hE
 hO
-hY
-ig
+gX
+gZ
 io
 gW
-aK
-aK
+hV
+hV
 aK
 aK
 aK
@@ -17649,16 +17946,16 @@ fx
 fZ
 gz
 gX
-gX
+ck
 hM
 gX
+hY
+hM
 gX
-hP
-gX
-gX
-ip
+ig
+hM
 gW
-aK
+at
 aK
 aK
 aK
@@ -17912,8 +18209,8 @@ gX
 hF
 hL
 gX
-ih
-hL
+hF
+il
 gW
 at
 aK
@@ -19458,8 +19755,8 @@ ik
 hi
 hi
 aV
-aV
 cl
+aK
 aK
 aK
 aK
@@ -40326,31 +40623,31 @@ aJ
 aJ
 aJ
 aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
+iy
+iy
+iy
+iy
+iy
+iy
+iy
+iy
+iy
+iy
+iy
+iy
+iV
+iy
+iy
+iy
+iy
+iy
+iy
+iy
+iy
+iy
+iy
+iy
+iy
 aJ
 aJ
 aJ
@@ -40583,31 +40880,31 @@ aJ
 aJ
 aJ
 aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
+iy
+iA
+iB
+iB
+iB
+iB
+iB
+iB
+iB
+iB
+iB
+iB
+iV
+iB
+iB
+iB
+iB
+iB
+iB
+iB
+iB
+iB
+iB
+iB
+iy
 aJ
 aJ
 aJ
@@ -40840,31 +41137,31 @@ aJ
 aJ
 aJ
 aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
+iy
+iB
+iC
+iB
+iB
+iB
+iB
+iB
+iO
+iB
+iQ
+iB
+iW
+iB
+iB
+iB
+iB
+iO
+iB
+iB
+iB
+iB
+iB
+iL
+iy
 aJ
 aJ
 aJ
@@ -41097,31 +41394,31 @@ aJ
 aJ
 aJ
 aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
+iy
+iB
+iB
+iH
+iB
+iB
+iB
+iB
+iB
+iB
+iR
+iB
+iM
+iz
+iz
+iB
+iB
+iC
+iB
+iB
+iB
+iJ
+iB
+iB
+iy
 aJ
 aJ
 aJ
@@ -41354,31 +41651,31 @@ aJ
 aJ
 aJ
 aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
+iy
+iB
+iB
+iB
+iy
+iB
+iB
+iB
+iy
+iy
+iy
+iy
+iy
+iy
+iy
+iy
+iy
+iB
+iB
+iB
+iy
+iB
+iB
+iB
+iy
 aJ
 aJ
 aJ
@@ -41611,31 +41908,31 @@ aJ
 aJ
 aJ
 aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
+iy
+iB
+iD
+iB
+iB
+iK
+iB
+iB
+iB
+iB
+iB
+iB
+iX
+iz
+iz
+iz
+iz
+iz
+iY
+iK
+iB
+iB
+iB
+iB
+iy
 aJ
 aJ
 aJ
@@ -41868,31 +42165,31 @@ aJ
 aJ
 aJ
 aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
+iy
+iB
+iB
+iB
+iB
+iF
+iE
+iB
+iB
+iB
+iB
+iP
+iY
+iB
+iB
+iB
+iB
+iB
+iE
+iB
+iB
+iB
+bz
+iB
+iy
 aJ
 aJ
 aJ
@@ -42125,31 +42422,31 @@ at
 aJ
 aJ
 aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
+iy
+iB
+iB
+iB
+iB
+iB
+iB
+iB
+iB
+iB
+iB
+iV
+iN
+iB
+iB
+iB
+iB
+iB
+iB
+iB
+iB
+iB
+iB
+iB
+iy
 aJ
 aJ
 aJ
@@ -42382,31 +42679,31 @@ at
 aJ
 aJ
 aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
+iy
+iB
+iB
+iB
+iy
+iF
+iB
+iB
+iB
+iB
+iy
+iV
+iB
+iB
+iy
+iB
+iB
+iQ
+iB
+iB
+iy
+iB
+iB
+iB
+iy
 aJ
 aJ
 aJ
@@ -42639,31 +42936,31 @@ at
 aJ
 aJ
 aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
+iy
+iB
+iB
+iB
+iy
+iB
+iB
+iI
+iB
+iB
+iB
+iK
+iB
+iB
+iB
+iB
+iB
+iB
+iB
+iB
+iy
+iB
+iB
+jd
+iy
 aJ
 aJ
 aJ
@@ -42896,31 +43193,31 @@ at
 aJ
 aJ
 aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
+iy
+iB
+iB
+iB
+iy
+iB
+iB
+iB
+iy
+iP
+iS
+iB
+iB
+iB
+jb
+iB
+iy
+iB
+iB
+iB
+iy
+iB
+iB
+iB
+iy
 aJ
 aJ
 aJ
@@ -43153,31 +43450,31 @@ at
 aJ
 aJ
 aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
+iy
+iB
+iB
+iB
+iy
+iB
+iB
+iM
+iB
+iB
+iB
+iB
+iB
+iB
+iB
+iB
+iB
+iB
+iC
+jf
+iy
+iB
+iB
+iB
+iy
 aJ
 aJ
 aJ
@@ -43410,31 +43707,31 @@ aJ
 aJ
 aJ
 aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
+iz
+iB
+iE
+iI
+iy
+iB
+iB
+iN
+iB
+iB
+iF
+iB
+iZ
+iB
+jc
+iL
+iB
+iN
+iB
+iB
+iy
+iP
+iE
+iz
+iz
 aJ
 aJ
 aJ
@@ -43667,31 +43964,31 @@ aJ
 aJ
 aJ
 aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
+iy
+iB
+iB
+iF
+iy
+iB
+iB
+iB
+iB
+iB
+iF
+iB
+iB
+iB
+iB
+iB
+iB
+iB
+iB
+iC
+iy
+iB
+iB
+iB
+iy
 aJ
 aJ
 aJ
@@ -43924,31 +44221,31 @@ aJ
 aJ
 aJ
 aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
+iy
+iB
+iB
+iF
+iy
+iB
+iB
+iB
+iy
+iB
+iB
+iB
+iB
+iR
+iB
+iB
+iy
+iB
+iB
+iF
+iy
+iB
+iB
+iB
+iy
 aJ
 aJ
 aJ
@@ -44181,31 +44478,31 @@ aJ
 aJ
 aJ
 aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
+iy
+iB
+iB
+iB
+iy
+iB
+iB
+iD
+iB
+iB
+iT
+iS
+iB
+iB
+iB
+iB
+iB
+iB
+iB
+iB
+iy
+iB
+iB
+iB
+iy
 aJ
 aJ
 aJ
@@ -44438,31 +44735,31 @@ aJ
 aJ
 aJ
 aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
+iy
+iB
+iF
+iB
+iy
+iB
+iB
+iB
+iB
+iB
+iy
+iB
+iB
+iB
+iy
+iB
+iB
+iB
+iB
+iB
+iy
+iB
+iO
+iB
+iy
 aJ
 aJ
 aJ
@@ -44695,31 +44992,31 @@ aJ
 aJ
 aJ
 aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
+iy
+iB
+iF
+iB
+iB
+iB
+iB
+iB
+iB
+iB
+iB
+iB
+iN
+iB
+iB
+iB
+iB
+iB
+iB
+iV
+iB
+iB
+iB
+iB
+iy
 aJ
 aJ
 aJ
@@ -44952,31 +45249,31 @@ aJ
 aJ
 aJ
 aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
+iy
+iB
+iF
+iB
+iB
+iB
+iE
+iB
+iB
+iB
+iF
+iB
+iB
+iB
+iB
+iO
+iB
+iB
+iE
+iB
+iB
+iY
+iB
+iB
+iy
 aJ
 aJ
 aJ
@@ -45209,31 +45506,31 @@ aJ
 aJ
 aJ
 aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
+iy
+iB
+iB
+iB
+iB
+iK
+iB
+iz
+iz
+iB
+iU
+iB
+iB
+iB
+iB
+iB
+iB
+iB
+jd
+iC
+iB
+iB
+iB
+iB
+iy
 aJ
 aJ
 aJ
@@ -45466,31 +45763,31 @@ aJ
 aJ
 aJ
 aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
+iy
+iB
+iG
+iB
+iy
+iB
+iB
+iB
+iy
+iy
+iy
+iy
+iy
+iy
+iy
+iy
+iy
+iB
+iB
+iB
+iy
+iB
+iB
+iL
+iy
 aJ
 aJ
 aJ
@@ -45723,31 +46020,31 @@ aJ
 aJ
 aJ
 aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
+iy
+iB
+iB
+iJ
+iB
+iB
+iM
+iB
+iB
+iB
+iz
+iB
+iB
+iB
+iD
+iB
+iB
+iB
+iB
+iB
+iB
+bw
+iB
+iB
+iy
 aJ
 aJ
 aJ
@@ -45980,31 +46277,31 @@ aJ
 aJ
 aJ
 aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
+iy
+iB
+iB
+iB
+iB
+iL
+iB
+iB
+iB
+iB
+iB
+iB
+iW
+iB
+iB
+iB
+iL
+iB
+iB
+iB
+iB
+iB
+iB
+iB
+iy
 aJ
 aJ
 aJ
@@ -46237,31 +46534,31 @@ aJ
 aJ
 aJ
 aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
+iy
+iB
+iB
+iB
+iB
+iB
+iB
+iB
+iB
+iB
+iB
+iB
+iV
+iB
+iB
+iB
+iB
+iB
+je
+iB
+iB
+iB
+iB
+iB
+iy
 aJ
 aJ
 aJ
@@ -46494,31 +46791,31 @@ aJ
 aJ
 aJ
 aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
+iy
+iy
+iy
+iy
+iy
+iy
+iy
+iy
+iy
+iy
+iy
+iy
+ja
+iy
+iy
+iy
+iy
+iy
+iy
+iy
+iy
+iy
+iy
+iy
+iy
 aJ
 aJ
 aJ

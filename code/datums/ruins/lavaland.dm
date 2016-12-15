@@ -121,7 +121,7 @@
 	// Generates nothing but atmos runtimes and salt
 	cost = 0
 
-/datum/map_template/ruin/lavaland/hierophant
+//datum/map_template/ruin/lavaland/hierophant
 	name = "Hierophant's Arena"
 	id = "hierophant"
 	description = "A huge fucking bird priest awaits you in this arena."
