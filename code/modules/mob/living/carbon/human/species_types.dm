@@ -1303,6 +1303,7 @@ var/global/image/plasmaman_on_fire = image("icon"='icons/mob/OnFire.dmi', "icon_
 	meat = null
 	damage_overlay_type = "synth"
 	limbs_id = "synth"
+	sexes = 0
 
 /datum/species/android/on_species_gain(mob/living/carbon/C)
 	. = ..()

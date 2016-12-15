@@ -1,8 +1,8 @@
 /obj/item/weapon/implant/mindshield
 	name = "loyalty implant"
 	desc = "God bless Nanotrasen!"
+	icon_state = "loyal"
 	origin_tech = "materials=2;biotech=4;programming=4"
-	activated = 0
 
 /obj/item/weapon/implant/mindshield/get_data()
 	var/dat = {"<b>Implant Specifications:</b><BR>
@@ -16,26 +16,32 @@
 				<b>Integrity:</b> Implant will last so long as the nanobots are inside the bloodstream."}
 	return dat
 
+/obj/item/weapon/implant/mindshield/activate(cause)
+	if(!cause || !imp_in)
+		return 0
+	if(cause == "action_button" && alert(imp_in, "Вы действительно хотите узнать, что делает этот имплант?", "Подтверждение", "Да", "Нет") != "Да")
+		return 0
+	imp_in << "<span class='notice'>Я чувствую ло&#255;льность к Нанотрайзен! Слава корпорации!</span>"
 
 /obj/item/weapon/implant/mindshield/implant(mob/living/carbon/target, mob/user, silent = 0)
 	if(..())
 		if((target.mind in (ticker.mode.changelings | ticker.mode.abductors | ticker.mode.cult)) || target.isntloyal())
 			if(!silent)
-				target.visible_message("<span class='warning'>[target] seems to resist the implant!</span>", "<span class='warning'>You feel the corporate tendrils of Nanotrasen try to invade your mind!</span>")
+				target.visible_message("<span class='warning'>[target] сморщилс&#255;, сопротивл&#255;&#255;сь импланту!</span>", "<span class='warning'>Вы чувствуете, как Нанотрайзен пытаетс&#255; подчинить вашу волю себе! Сопротивл&#255;йтесь!</span>")
 			removed(target, 1)
 			qdel(src)
 			return -1
 		if(target.mind)
 			target.mind.remove_all_antag_light()
 		if(!silent)
-			target << "<span class='notice'>You feel a surge of loyalty towards Nanotrasen.</span>"
+			target << "<span class='notice'>Вы чувствуете сильную ло&#255;льность к Нанотрайзен...</span>"
 		return 1
 	return 0
 
 /obj/item/weapon/implant/mindshield/removed(mob/target, silent = 0, special = 0)
 	if(..())
 		if(target.stat != DEAD && !silent)
-			target << "<span class='boldnotice'>You feel a sense of liberation as Nanotrasen's grip on your mind fades away.</span>"
+			target << "<span class='boldnotice'>Вы чувствуете, как ло&#255;льность к Нанотрайзен покидает вас вместе с вашей жизнью...</span>"
 		return 1
 	return 0
 
