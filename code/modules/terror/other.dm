@@ -44,8 +44,7 @@
 	color = "purple"
 	obj_integrity = 90
 	max_integrity = 90
-	projectile = /obj/item/projectile/energy/declone
-	eprojectile = /obj/item/projectile/energy/declone
+	lethal_projectile = /obj/item/projectile/energy/declone
 	installation = /obj/item/weapon/gun/energy/alien/base
 
 /obj/structure/chair/comfy/sofa
