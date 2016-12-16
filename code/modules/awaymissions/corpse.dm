@@ -326,6 +326,7 @@
 /obj/effect/mob_spawn/human/civilian
 	name = "Civilan"
 	uniform = /obj/item/clothing/under/color/random
+	back = /obj/item/weapon/storage/backpack/satchel
 	shoes = /obj/item/clothing/shoes/sneakers/black
 	has_id = 1
 	id_job = "Civilan"

@@ -536,8 +536,26 @@
 
 /obj/item/clothing/suit/cargo_jacket
 	name = "cargo jacket"
-	desc = "В ряд кладет и тащит!"
+	desc = "В р&#255;д кладет и тащит!"
 	icon_state = "cargo_jacket"
 	item_state = "bl_suit"
 	icon = 'icons/obj/clothing/infinity_work.dmi'
 	worn_icon = 'icons/mob/infinity_work.dmi'
+
+/obj/item/clothing/suit/armor/combat_heavy
+	name = "Heavy Combat Armor"
+	desc = "Full-body combat armor produced by Ion Incorporated for its private military forces. Often worn by riflemen or other front-line combat troops. Covers the entire body excluding the head with ceramic plates infused with goliath plates and coated in ablative materials, allowing for extreme ballistic protection and moderate laser or energy protection. Comes in a dark, urban camouflage."
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon_state = "combat_armor"
+	item_state = "combat_armor"
+	blood_overlay_type = "armor"
+	w_class = 4
+	flags = THICKMATERIAL
+	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
+	cold_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
+	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
+	armor = list(melee = 35, bullet = 60, laser = 45, energy = 40, bomb = 60, bio = 0, rad = 0, fire = 60, acid = 80)
+	strip_delay = 130
+	put_on_delay = 75
+	slowdown = 0.5

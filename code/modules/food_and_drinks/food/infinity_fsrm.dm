@@ -65,7 +65,7 @@
 	..()
 	. = 1
 
-/obj/item/weapon/reagent_containers/food/drinks/soda_cans/fsrm/tonic
+/obj/item/weapon/reagent_containers/food/drinks/soda_cans/fsrm_tonic
 	name = "Berserker Energy Drink"
 	desc = "It fills your body with energy, makes you want to make a forced march with a rifle at the ready."
 	icon = 'icons/obj/food/infinity_fsrm.dmi'
@@ -96,7 +96,7 @@
 /obj/item/weapon/storage/box/fsrm/New()
 	..()
 	new /obj/item/weapon/reagent_containers/pill/vitamin(src)
-	new /obj/item/weapon/reagent_containers/food/drinks/soda_cans/fsrm/tonic(src)
+	new /obj/item/weapon/reagent_containers/food/drinks/soda_cans/fsrm_tonic(src)
 	new /obj/item/weapon/reagent_containers/food/snacks/fsrm/pork(src)
 	new /obj/item/weapon/reagent_containers/food/snacks/fsrm/choclate(src)
 	new /obj/item/weapon/reagent_containers/food/snacks/fsrm/sosjerky(src)

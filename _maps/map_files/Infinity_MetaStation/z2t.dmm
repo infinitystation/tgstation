@@ -11165,6 +11165,7 @@
 	icon_state = "shower";
 	pixel_x = 6
 	},
+/obj/item/weapon/soap/deluxe,
 /turf/open/floor/plating/abductor2,
 /area/abductor_ship)
 "BZ" = (
