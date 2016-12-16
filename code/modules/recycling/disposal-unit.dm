@@ -77,7 +77,7 @@
 				mode = SCREWS_OUT
 			else
 				mode = PRESSURE_OFF
-			playsound(src.loc, 'sound/items/Screwdriver.ogg', 50, 1)
+			playsound(src.loc, I.usesound, 50, 1)
 			user << "<span class='notice'>You [mode == SCREWS_OUT ? "remove":"attach"] the screws around the power connection.</span>"
 			return
 		else if(istype(I,/obj/item/weapon/weldingtool) && mode == SCREWS_OUT)
@@ -85,7 +85,7 @@
 			if(W.remove_fuel(0,user))
 				playsound(src.loc, 'sound/items/Welder2.ogg', 100, 1)
 				user << "<span class='notice'>You start slicing the floorweld off \the [src]...</span>"
-				if(do_after(user,20/I.toolspeed, target = src) && mode == SCREWS_OUT)
+				if(do_after(user,20*I.toolspeed, target = src) && mode == SCREWS_OUT)
 					if(!W.isOn())
 						return
 					user << "<span class='notice'>You slice the floorweld off \the [src].</span>"

@@ -306,10 +306,9 @@
 	scan_range = 12
 	obj_integrity = 150
 	max_integrity = 150
-	projectile = /obj/item/projectile/beam/laser/heavylaser
-	eprojectile = /obj/item/projectile/beam/laser/heavylaser
-	shot_sound = 'sound/weapons/marauder.ogg'
-	eshot_sound = 'sound/weapons/marauder.ogg'
+	mode = TURRET_LETHAL
+	lethal_projectile = /obj/item/projectile/beam/laser/heavylaser
+	lethal_projectile_sound = 'sound/weapons/marauder.ogg'
 	base_icon_state = "syndie"
 	faction = "neutral"
 

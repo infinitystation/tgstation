@@ -88,7 +88,7 @@
 /obj/item/device/multitool/cyborg
 	name = "multitool"
 	desc = "Optimised and stripped-down version of a regular multitool."
-	toolspeed = 2
+	toolspeed = 0.5
 
 
 //Multimeter
@@ -109,3 +109,11 @@
 	else
 		mode = 1 // Checking
 		user << "<span class='notice'>Включен режим прозвонки</span>"
+
+/obj/item/device/multitool/abductor
+	name = "alien multitool"
+	desc = "An omni-technological interface."
+	icon = 'icons/obj/abductor.dmi'
+	icon_state = "multitool"
+	toolspeed = 0.1
+	origin_tech = "magnets=5;engineering=5;abductor=3"

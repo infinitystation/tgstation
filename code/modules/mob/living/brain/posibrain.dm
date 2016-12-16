@@ -26,6 +26,7 @@ var/global/posibrain_notif_cooldown = 0
 	var/new_mob_message = "<span class='notice'>The positronic brain chimes quietly.</span>"
 	var/dead_message = "<span class='deadsay'>It appears to be completely inactive. The reset light is blinking.</span>"
 	var/list/fluff_names = list("ARNC","JNLG","CHRI","DUNC","JRD","KOR","RZH","MSO","RR","HG","TKRG","WJ","VLF","BR1","T4R","SRM","IRS","BST","TBX","VRT","NC","FFL","PXR","SRT","DST")
+	var/picked_fluff_name //which fluff name we picked
 
 
 /obj/item/device/mmi/posibrain/Topic(href, href_list)
@@ -96,7 +97,6 @@ var/global/posibrain_notif_cooldown = 0
 	brainmob.mind.remove_all_antag()
 	brainmob.mind.wipe_memory()
 	update_icon()
-	return
 
 /obj/item/device/mmi/posibrain/proc/transfer_personality(mob/candidate)
 	if(used || (brainmob && brainmob.key)) //Prevents hostile takeover if two ghosts get the prompt or link for the same brain.
@@ -153,7 +153,8 @@ var/global/posibrain_notif_cooldown = 0
 	rand_name = rand(0,999)
 	if(rand_name == 255)
 		rand_name += 1
-	brainmob.name = "[pick(fluff_names)]-[rand_name]"
+	picked_fluff_name = pick(fluff_names)
+	brainmob.name = "[picked_fluff_name]-[rand_name]"
 	brainmob.real_name = brainmob.name
 	brainmob.loc = src
 	brainmob.container = src

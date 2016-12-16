@@ -49,7 +49,7 @@
 	if(..())
 		if(target.stat != DEAD && !silent)
 			target << "<span class='boldnotice'>Вы чувствуете что-то странное св&#255;занное с Нанотрайзен..</span>"
-		target.remove_alert("antiloyalty_implanted")
+		target.clear_alert("antiloyalty_implanted")
 		return 1
 	return 0
 

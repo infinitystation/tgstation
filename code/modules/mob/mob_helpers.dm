@@ -308,7 +308,7 @@ It's fairly easy to fix if dealing with single letters but not so much with comp
 		switch(input)
 			if(INTENT_HELP, INTENT_DISARM, INTENT_GRAB, INTENT_HARM)
 				a_intent = input
-			if(INTENT_NEXT)
+			if(INTENT_HOTKEY_RIGHT)
 				switch (a_intent)
 					if(INTENT_HELP)
 						a_intent = INTENT_DISARM
@@ -318,6 +318,16 @@ It's fairly easy to fix if dealing with single letters but not so much with comp
 						a_intent = INTENT_HARM
 					if(INTENT_HARM)
 						a_intent = INTENT_HELP
+			if(INTENT_HOTKEY_LEFT)
+				switch (a_intent)
+					if(INTENT_HELP)
+						a_intent = INTENT_HARM
+					if(INTENT_DISARM)
+						a_intent = INTENT_HELP
+					if(INTENT_GRAB)
+						a_intent = INTENT_DISARM
+					if(INTENT_HARM)
+						a_intent = INTENT_GRAB
 
 		if(hud_used && hud_used.action_intent)
 			hud_used.action_intent.icon_state = "[a_intent]"
@@ -328,7 +338,7 @@ It's fairly easy to fix if dealing with single letters but not so much with comp
 				a_intent = INTENT_HELP
 			if(INTENT_HARM)
 				a_intent = INTENT_HARM
-			if(INTENT_NEXT)
+			if(INTENT_HOTKEY_RIGHT, INTENT_HOTKEY_LEFT)
 				switch (a_intent)
 					if(INTENT_HELP)
 						a_intent = INTENT_HARM

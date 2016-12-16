@@ -306,6 +306,8 @@
 					verbs -= /obj/item/weapon/gun/proc/toggle_gunlight
 				for(var/datum/action/item_action/toggle_gunlight/TGL in actions)
 					qdel(TGL)
+	else
+		..()
 
 	if(istype(I, /obj/item/weapon/wirecutters))
 		if(pin && can_pull_pin)

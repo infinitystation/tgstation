@@ -120,6 +120,7 @@
 	new /obj/item/clothing/head/warden/corporate(src)
 	new /obj/item/clothing/gloves/krav_maga/sec(src)
 	new /obj/item/weapon/door_remote/head_of_security(src)
+	new /obj/item/weapon/gun/ballistic/shotgun/automatic/dual_tube(src)
 
 /obj/structure/closet/secure_closet/security
 	name = "security officer's locker"
