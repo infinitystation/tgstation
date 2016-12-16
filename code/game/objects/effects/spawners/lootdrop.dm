@@ -268,3 +268,24 @@
 				 "" = 5
 				)
 
+/obj/effect/spawner/lootdrop/alien
+	name = "Random alien's items"
+	desc = "This is a random alien's items. Place it on the alien's base."
+	icon = 'icons/mob/alien.dmi'
+	icon_state = "weed_extract"
+	loot = list(
+				/obj/item/stack/sheet/mineral/abductor = 5,
+				/obj/item/stack/sheet/lessergem = 2,
+				/obj/item/stack/sheet/greatergem = 1,
+				/obj/item/stack/sheet/mineral/adamantine = 2,
+				/obj/item/stack/sheet/xenochitin = 2,
+				/obj/item/weapon/restraints/handcuffs/alien = 1,
+				/obj/item/bodybag/bluespace = 1,
+				/obj/item/device/assembly/control/massdriver = 1,
+				/obj/item/device/assembly/health = 1,
+				/obj/item/device/assembly/prox_sensor = 2,
+				/obj/item/device/assembly/signaler = 2,
+				/obj/item/stack/rods = 3,
+				/obj/item/weapon/crowbar/large = 1,
+				"" = 6
+				)

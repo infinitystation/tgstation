@@ -181,6 +181,14 @@
 	requires_power = 0
 	has_gravity = 1
 
+/area/alien_base
+	name = "Alien Base"
+	icon_state = "green"
+	requires_power = 0
+	has_gravity = 1
+	luminosity = 1
+	valid_territory = 0
+
 /area/planet/bunker
 	name = "Near Bunker"
 	icon_state = "purple"

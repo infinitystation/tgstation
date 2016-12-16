@@ -70,6 +70,7 @@
 	shaded_charge = 0
 	pin = /obj/item/device/firing_pin/implant/mindshield
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/scatter/disabler, /obj/item/ammo_casing/energy/electrode)
+	slot_flags = SLOT_BACK
 
 ///Laser Cannon
 

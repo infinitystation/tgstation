@@ -38,6 +38,16 @@
 	faction = "cult"
 	//side = "cult"
 
+/obj/machinery/porta_turret/defensepylon_internal_turret/alien
+	name = "Alien's defenced turret"
+	faction = "abductor"
+	color = "purple"
+	obj_integrity = 90
+	max_integrity = 90
+	projectile = /obj/item/projectile/energy/declone
+	eprojectile = /obj/item/projectile/energy/declone
+	installation = /obj/item/weapon/gun/energy/alien/base
+
 /obj/structure/chair/comfy/sofa
 	name = "comfy sofa"
 	desc = "It looks comfy.\n<span class='notice'>Alt-click to rotate it clockwise.</span>"

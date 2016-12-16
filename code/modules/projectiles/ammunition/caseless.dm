@@ -28,6 +28,12 @@
 	icon_state = "s-casing-live"
 	projectile_type = /obj/item/projectile/bullet/a84mm
 
+/obj/item/ammo_casing/caseless/a68
+	desc = "A 6.8x43mm caseless cartridge."
+	caliber = "6.8"
+	icon_state = "s-casing-live"
+	projectile_type = /obj/item/projectile/bullet/heavybullet2
+
 /obj/item/ammo_casing/caseless/magspear
 	name = "magnetic spear"
 	desc = "A reusable spear that is typically loaded into kinetic spearguns."

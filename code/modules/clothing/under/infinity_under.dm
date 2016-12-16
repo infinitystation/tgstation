@@ -100,7 +100,7 @@
 
 /obj/item/clothing/under/rank/cargotech/infinity
 	name = "cargo technician's jumpsuit"
-	desc = "√рузчик, грузчик, парень работящий!"
+	desc = "√рузчик, грузчик, парень работ&#255;щий!"
 	icon_state = "cargotech"
 	item_color = "cargotech"
 	item_state = "cargotech"
@@ -742,3 +742,14 @@
 	worn_icon = 'icons/mob/infinity_work.dmi'
 	icon = 'icons/obj/clothing/infinity_work.dmi'
 	can_adjust = 0
+
+/obj/item/clothing/under/syndicate/camo/urban
+	name = "urban-camouflage fatigues"
+	desc = "A set of fatigues in a dark urban camouflage. Manufactured by Ion Incorporated for its private military contractors in need of a robust uniform."
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon_state = "pmc"
+	item_state = "black"
+	item_color = "pmc"
+	can_adjust = 0
+	armor = list(melee = 10, bullet = 5, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0, fire = 10, acid = 5)

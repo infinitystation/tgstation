@@ -88,6 +88,10 @@
 /obj/item/projectile/bullet/heavybullet
 	damage = 35
 
+/obj/item/projectile/bullet/heavybullet2
+	damage = 40
+	armour_penetration = 15
+
 /obj/item/projectile/bullet/rpellet
 	damage = 3
 	stamina = 25

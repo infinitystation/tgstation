@@ -25,7 +25,6 @@
 	flags_cover = HEADCOVERSEYES
 	resistance_flags = FIRE_PROOF
 
-
 /obj/item/clothing/head/blue_ny_hat
 	name = "blue New Year hat"
 	desc = "Ho ho ho!"
@@ -202,3 +201,18 @@
 	item_state = "skulltop"
 	flags_inv = HIDEHAIR
 
+/obj/item/clothing/head/helmet/combat_heavy
+	name = "Heavy Combat Helmet"
+	desc = "A combat helmet made out of goliath hide plates infused with ablative materials in a dark urban camouflage."
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon_state = "swat_pmc"
+	item_state = "swat_pmc"
+	armor = list(melee = 25, bullet = 50, laser = 50, energy = 45, bomb = 25, bio = 0, rad = 0, fire = 50, acid = 60)
+	cold_protection = HEAD
+	min_cold_protection_temperature = HELMET_MIN_TEMP_PROTECT
+	heat_protection = HEAD
+	max_heat_protection_temperature = HELMET_MAX_TEMP_PROTECT
+	flags = HEADBANGPROTECT | HEADCOVERSEYES
+	flags_inv = HIDEHAIR
+	strip_delay = 60

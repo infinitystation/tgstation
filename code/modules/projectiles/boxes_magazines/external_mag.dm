@@ -329,8 +329,14 @@
 	..()
 	icon_state = "a762-[round(ammo_count(),10)]"
 
-
-
+/obj/item/ammo_box/magazine/xmg80
+	name = "XMG80 Magazine (6.8x43mm Caseless)"
+	icon_state = "xmg80mag"
+	icon = 'icons/obj/infinity_weapons.dmi'
+	origin_tech = "combat=2"
+	ammo_type = /obj/item/ammo_casing/caseless/a68
+	caliber = "a68"
+	max_ammo = 30
 
 //// RECHARGEABLE MAGAZINES
 
