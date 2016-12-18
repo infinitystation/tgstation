@@ -228,18 +228,18 @@
 	gloves = /obj/item/clothing/gloves/combat
 	l_pocket = /obj/item/device/flashlight/seclite
 	r_pocket = /obj/item/ammo_box/magazine/xmg80
+	id = /obj/item/weapon/card/id
 	back = /obj/item/weapon/storage/backpack/security
 	backpack_contents = list(/obj/item/weapon/storage/box/security/centcom=1,\
 		/obj/item/weapon/grenade/plastic/c4=2,\
 		/obj/item/weapon/kitchen/knife/combat=1)
-	id = /obj/item/weapon/card/id
 
 /datum/outfit/combat/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	if(visualsOnly)
 		return
 
 	var/obj/item/weapon/card/id/W = H.wear_id
-	W.icon_state = "centcome"
+	W.icon_state = "centcom"
 	W.access = get_all_accesses()
 	W.access += get_centcom_access("Admiral")
 	W.assignment = "Squad Alpha"
