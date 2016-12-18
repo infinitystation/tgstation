@@ -45,7 +45,7 @@
 
 
 /datum/outfit/security_private
-	name = "Centcom Securty Private"
+	name = "Centcom Security Private"
 
 	uniform = /obj/item/clothing/under/sec_corporate
 	shoes = /obj/item/clothing/shoes/jackboots
@@ -71,9 +71,9 @@
 
 	var/obj/item/weapon/card/id/W = H.wear_id
 	W.icon_state = "centcom"
-	W.access = get_centcom_access("Centcom Securty Private")
+	W.access = get_centcom_access("Centcom Security Private")
 	W.access += access_weapons
-	W.assignment = "Centcom Securty Private"
+	W.assignment = "Centcom Security Private"
 	W.registered_name = H.real_name
 	W.update_label()
 
@@ -81,7 +81,7 @@
 	L.implant(H, null, 1)
 
 /datum/outfit/security_sergeant
-	name = "Centcom Securty Sergeant"
+	name = "Centcom Security Sergeant"
 
 	uniform = /obj/item/clothing/under/warden_corporate
 	shoes = /obj/item/clothing/shoes/jackboots
@@ -112,9 +112,9 @@
 
 	var/obj/item/weapon/card/id/W = H.wear_id
 	W.icon_state = "centcom"
-	W.access = get_centcom_access("Centcom Securty Sergeant")
+	W.access = get_centcom_access("Centcom Security Sergeant")
 	W.access += access_weapons
-	W.assignment = "Centcom Securty Sergeant"
+	W.assignment = "Centcom Security Sergeant"
 	W.registered_name = H.real_name
 	W.update_label()
 
@@ -207,7 +207,41 @@
 	W.update_label()
 
 /datum/outfit/dwarf
-	name = "aDwarf"
+	name = "Dwarf"
 
 	uniform = /obj/item/clothing/under/color/random
 	shoes = /obj/item/clothing/shoes/sandal
+	back = /obj/item/weapon/storage/backpack/explorer
+
+/datum/outfit/combat
+	name = "Special Force"
+
+	uniform = /obj/item/clothing/under/syndicate/camo/urban
+	shoes = /obj/item/clothing/shoes/combat
+	suit = /obj/item/clothing/suit/armor/combat_heavy
+	suit_store = /obj/item/weapon/gun/ballistic/automatic/xmg80
+	mask = /obj/item/clothing/mask/gas/mercenaries
+	head = /obj/item/clothing/head/helmet/combat_heavy
+	belt = /obj/item/weapon/storage/belt/military/assault/special_force
+	glasses = /obj/item/clothing/glasses/hud/security/sunglasses
+	ears = /obj/item/device/radio/headset/headset_cent/alt
+	gloves = /obj/item/clothing/gloves/combat
+	l_pocket = /obj/item/device/flashlight/seclite
+	r_pocket = /obj/item/ammo_box/magazine/xmg80
+	back = /obj/item/weapon/storage/backpack/security
+	backpack_contents = list(/obj/item/weapon/storage/box/security/centcom=1,\
+		/obj/item/weapon/grenade/plastic/c4=2,\
+		/obj/item/weapon/kitchen/knife/combat=1)
+	id = /obj/item/weapon/card/id
+
+/datum/outfit/combat/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	if(visualsOnly)
+		return
+
+	var/obj/item/weapon/card/id/W = H.wear_id
+	W.icon_state = "centcome"
+	W.access = get_all_accesses()
+	W.access += get_centcom_access("Admiral")
+	W.assignment = "Squad Alpha"
+	W.registered_name = H.real_name
+	W.update_label()

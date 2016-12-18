@@ -426,7 +426,7 @@
 	set_luminosity = 5
 	},
 /turf/open/indestructible/hierophant,
-/area/lavaland/surface/outdoors)
+/area/ruin/unpowered/hierophant)
 "bx" = (
 /obj/effect/gibspawner/human,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
@@ -442,7 +442,7 @@
 "bz" = (
 /obj/effect/decal/cleanable/blood/gibs/down,
 /turf/open/indestructible/hierophant,
-/area/lavaland/surface/outdoors)
+/area/ruin/unpowered/hierophant)
 "bA" = (
 /obj/effect/decal/cleanable/blood/footprints{
 	dir = 2;
@@ -4276,7 +4276,7 @@
 /area/mine/living_quarters)
 "ip" = (
 /obj/machinery/power/apc{
-	dir = 4;
+	dir = 8;
 	name = "Mining Communications APC";
 	pixel_x = -27;
 	pixel_y = 0
@@ -4390,63 +4390,153 @@
 /obj/structure/table/wood,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/mine/shelter/ash)
-"jf" = (
+"iy" = (
+/turf/closed/indestructible/riveted/hierophant,
+/area/ruin/unpowered/hierophant)
+"iz" = (
+/obj/effect/decal/cleanable/blood/tracks,
+/turf/open/indestructible/hierophant,
+/area/ruin/unpowered/hierophant)
+"iA" = (
+/obj/effect/decal/cleanable/cobweb,
+/turf/open/indestructible/hierophant,
+/area/ruin/unpowered/hierophant)
+"iB" = (
+/turf/open/indestructible/hierophant,
+/area/ruin/unpowered/hierophant)
+"iC" = (
+/obj/effect/gibspawner/human,
+/turf/open/indestructible/hierophant,
+/area/ruin/unpowered/hierophant)
+"iD" = (
+/obj/effect/decal/cleanable/blood/gibs/limb,
 /obj/effect/decal/cleanable/blood,
+/turf/open/indestructible/hierophant,
+/area/ruin/unpowered/hierophant)
+"iE" = (
+/obj/effect/light_emitter{
+	set_cap = 3;
+	set_luminosity = 7
+	},
+/turf/open/indestructible/hierophant,
+/area/ruin/unpowered/hierophant)
+"iF" = (
+/obj/effect/decal/cleanable/blood/tracks{
+	tag = "icon-tracks (EAST)";
+	icon_state = "tracks";
+	dir = 4
+	},
+/turf/open/indestructible/hierophant,
+/area/ruin/unpowered/hierophant)
+"iG" = (
+/obj/effect/decal/cleanable/blood/old,
+/obj/effect/decal/cleanable/blood/tracks{
+	tag = "icon-tracks (EAST)";
+	icon_state = "tracks";
+	dir = 4
+	},
+/turf/open/indestructible/hierophant,
+/area/ruin/unpowered/hierophant)
+"iH" = (
+/obj/effect/decal/cleanable/blood/old,
+/obj/effect/decal/remains/human,
+/obj/effect/light_emitter{
+	set_cap = 3;
+	set_luminosity = 5
+	},
+/turf/open/indestructible/hierophant,
+/area/ruin/unpowered/hierophant)
+"iI" = (
+/obj/effect/decal/cleanable/blood/tracks{
+	tag = "icon-tracks (SOUTHWEST)";
+	icon_state = "tracks";
+	dir = 10
+	},
+/obj/effect/decal/cleanable/blood,
+/turf/open/indestructible/hierophant,
+/area/ruin/unpowered/hierophant)
+"iJ" = (
+/obj/effect/light_emitter{
+	set_cap = 3;
+	set_luminosity = 5
+	},
+/turf/open/indestructible/hierophant,
+/area/ruin/unpowered/hierophant)
+"iK" = (
+/obj/effect/gibspawner/generic,
+/turf/open/indestructible/hierophant,
+/area/ruin/unpowered/hierophant)
+"iL" = (
+/obj/effect/decal/cleanable/blood,
+/turf/open/indestructible/hierophant,
+/area/ruin/unpowered/hierophant)
+"iM" = (
+/obj/effect/decal/cleanable/blood/tracks{
+	tag = "icon-tracks (NORTHEAST)";
+	icon_state = "tracks";
+	dir = 5
+	},
+/turf/open/indestructible/hierophant,
+/area/ruin/unpowered/hierophant)
+"iN" = (
+/obj/effect/light_emitter,
+/turf/open/indestructible/hierophant,
+/area/ruin/unpowered/hierophant)
+"iO" = (
+/obj/effect/decal/cleanable/blood/old,
+/turf/open/indestructible/hierophant,
+/area/ruin/unpowered/hierophant)
+"iP" = (
+/obj/effect/decal/cleanable/blood/tracks{
+	tag = "icon-tracks (NORTHWEST)";
+	icon_state = "tracks";
+	dir = 9
+	},
+/turf/open/indestructible/hierophant,
+/area/ruin/unpowered/hierophant)
+"iQ" = (
+/obj/effect/decal/cleanable/blood/gibs/limb,
+/turf/open/indestructible/hierophant,
+/area/ruin/unpowered/hierophant)
+"iR" = (
+/obj/effect/decal/cleanable/ash,
+/turf/open/indestructible/hierophant,
+/area/ruin/unpowered/hierophant)
+"iS" = (
 /obj/effect/decal/cleanable/blood/tracks{
 	tag = "icon-tracks (SOUTHWEST)";
 	icon_state = "tracks";
 	dir = 10
 	},
 /turf/open/indestructible/hierophant,
-/area/lavaland/surface/outdoors)
-"je" = (
-/obj/effect/decal/cleanable/blood/gibs/core,
-/turf/open/indestructible/hierophant,
-/area/lavaland/surface/outdoors)
-"jd" = (
-/obj/effect/decal/cleanable/blood/old,
+/area/ruin/unpowered/hierophant)
+"iT" = (
 /obj/effect/decal/remains/human,
-/turf/open/indestructible/hierophant,
-/area/lavaland/surface/outdoors)
-"jc" = (
-/obj/effect/decal/cleanable/blood/gibs/up,
-/turf/open/indestructible/hierophant,
-/area/lavaland/surface/outdoors)
-"jb" = (
-/obj/effect/decal/remains/human,
-/obj/effect/decal/cleanable/blood,
-/turf/open/indestructible/hierophant,
-/area/lavaland/surface/outdoors)
-"ja" = (
 /obj/effect/decal/cleanable/blood,
 /obj/effect/decal/cleanable/blood/tracks{
-	tag = "icon-tracks (WEST)";
+	tag = "icon-tracks (NORTHEAST)";
 	icon_state = "tracks";
-	dir = 8
+	dir = 5
 	},
 /turf/open/indestructible/hierophant,
-/area/lavaland/surface/outdoors)
-"iZ" = (
-/mob/living/simple_animal/hostile/megafauna/hierophant,
-/turf/open/indestructible/hierophant,
-/area/lavaland/surface/outdoors)
-"iY" = (
+/area/ruin/unpowered/hierophant)
+"iU" = (
+/obj/effect/gibspawner/human,
 /obj/effect/decal/cleanable/blood/tracks{
 	tag = "icon-tracks (SOUTHEAST)";
 	icon_state = "tracks";
 	dir = 6
 	},
 /turf/open/indestructible/hierophant,
-/area/lavaland/surface/outdoors)
-"iX" = (
+/area/ruin/unpowered/hierophant)
+"iV" = (
 /obj/effect/decal/cleanable/blood/tracks{
-	tag = "icon-tracks (NORTHWEST)";
+	tag = "icon-tracks (WEST)";
 	icon_state = "tracks";
-	dir = 9
+	dir = 8
 	},
-/obj/effect/decal/cleanable/blood,
 /turf/open/indestructible/hierophant,
-/area/lavaland/surface/outdoors)
+/area/ruin/unpowered/hierophant)
 "iW" = (
 /obj/effect/decal/cleanable/blood/tracks{
 	tag = "icon-tracks (WEST)";
@@ -4458,154 +4548,64 @@
 	set_luminosity = 7
 	},
 /turf/open/indestructible/hierophant,
-/area/lavaland/surface/outdoors)
-"iV" = (
+/area/ruin/unpowered/hierophant)
+"iX" = (
 /obj/effect/decal/cleanable/blood/tracks{
-	tag = "icon-tracks (WEST)";
+	tag = "icon-tracks (NORTHWEST)";
 	icon_state = "tracks";
-	dir = 8
+	dir = 9
 	},
+/obj/effect/decal/cleanable/blood,
 /turf/open/indestructible/hierophant,
-/area/lavaland/surface/outdoors)
-"iU" = (
-/obj/effect/gibspawner/human,
+/area/ruin/unpowered/hierophant)
+"iY" = (
 /obj/effect/decal/cleanable/blood/tracks{
 	tag = "icon-tracks (SOUTHEAST)";
 	icon_state = "tracks";
 	dir = 6
 	},
 /turf/open/indestructible/hierophant,
-/area/lavaland/surface/outdoors)
-"iT" = (
-/obj/effect/decal/remains/human,
+/area/ruin/unpowered/hierophant)
+"iZ" = (
+/mob/living/simple_animal/hostile/megafauna/hierophant,
+/turf/open/indestructible/hierophant,
+/area/ruin/unpowered/hierophant)
+"ja" = (
 /obj/effect/decal/cleanable/blood,
 /obj/effect/decal/cleanable/blood/tracks{
-	tag = "icon-tracks (NORTHEAST)";
+	tag = "icon-tracks (WEST)";
 	icon_state = "tracks";
-	dir = 5
+	dir = 8
 	},
 /turf/open/indestructible/hierophant,
-/area/lavaland/surface/outdoors)
-"iS" = (
+/area/ruin/unpowered/hierophant)
+"jb" = (
+/obj/effect/decal/remains/human,
+/obj/effect/decal/cleanable/blood,
+/turf/open/indestructible/hierophant,
+/area/ruin/unpowered/hierophant)
+"jc" = (
+/obj/effect/decal/cleanable/blood/gibs/up,
+/turf/open/indestructible/hierophant,
+/area/ruin/unpowered/hierophant)
+"jd" = (
+/obj/effect/decal/cleanable/blood/old,
+/obj/effect/decal/remains/human,
+/turf/open/indestructible/hierophant,
+/area/ruin/unpowered/hierophant)
+"je" = (
+/obj/effect/decal/cleanable/blood/gibs/core,
+/turf/open/indestructible/hierophant,
+/area/ruin/unpowered/hierophant)
+"jf" = (
+/obj/effect/decal/cleanable/blood,
 /obj/effect/decal/cleanable/blood/tracks{
 	tag = "icon-tracks (SOUTHWEST)";
 	icon_state = "tracks";
 	dir = 10
 	},
 /turf/open/indestructible/hierophant,
-/area/lavaland/surface/outdoors)
-"iR" = (
-/obj/effect/decal/cleanable/ash,
-/turf/open/indestructible/hierophant,
-/area/lavaland/surface/outdoors)
-"iQ" = (
-/obj/effect/decal/cleanable/blood/gibs/limb,
-/turf/open/indestructible/hierophant,
-/area/lavaland/surface/outdoors)
-"iP" = (
-/obj/effect/decal/cleanable/blood/tracks{
-	tag = "icon-tracks (NORTHWEST)";
-	icon_state = "tracks";
-	dir = 9
-	},
-/turf/open/indestructible/hierophant,
-/area/lavaland/surface/outdoors)
-"iO" = (
-/obj/effect/decal/cleanable/blood/old,
-/turf/open/indestructible/hierophant,
-/area/lavaland/surface/outdoors)
-"iN" = (
-/obj/effect/light_emitter,
-/turf/open/indestructible/hierophant,
-/area/lavaland/surface/outdoors)
-"iM" = (
-/obj/effect/decal/cleanable/blood/tracks{
-	tag = "icon-tracks (NORTHEAST)";
-	icon_state = "tracks";
-	dir = 5
-	},
-/turf/open/indestructible/hierophant,
-/area/lavaland/surface/outdoors)
-"iL" = (
-/obj/effect/decal/cleanable/blood,
-/turf/open/indestructible/hierophant,
-/area/lavaland/surface/outdoors)
-"iK" = (
-/obj/effect/gibspawner/generic,
-/turf/open/indestructible/hierophant,
-/area/lavaland/surface/outdoors)
-"iJ" = (
-/obj/effect/light_emitter{
-	set_cap = 3;
-	set_luminosity = 5
-	},
-/turf/open/indestructible/hierophant,
-/area/lavaland/surface/outdoors)
-"iI" = (
-/obj/effect/decal/cleanable/blood/tracks{
-	tag = "icon-tracks (SOUTHWEST)";
-	icon_state = "tracks";
-	dir = 10
-	},
-/obj/effect/decal/cleanable/blood,
-/turf/open/indestructible/hierophant,
-/area/lavaland/surface/outdoors)
-"iH" = (
-/obj/effect/decal/cleanable/blood/old,
-/obj/effect/decal/remains/human,
-/obj/effect/light_emitter{
-	set_cap = 3;
-	set_luminosity = 5
-	},
-/turf/open/indestructible/hierophant,
-/area/lavaland/surface/outdoors)
-"iG" = (
-/obj/effect/decal/cleanable/blood/old,
-/obj/effect/decal/cleanable/blood/tracks{
-	tag = "icon-tracks (EAST)";
-	icon_state = "tracks";
-	dir = 4
-	},
-/turf/open/indestructible/hierophant,
-/area/lavaland/surface/outdoors)
-"iF" = (
-/obj/effect/decal/cleanable/blood/tracks{
-	tag = "icon-tracks (EAST)";
-	icon_state = "tracks";
-	dir = 4
-	},
-/turf/open/indestructible/hierophant,
-/area/lavaland/surface/outdoors)
-"iE" = (
-/obj/effect/light_emitter{
-	set_cap = 3;
-	set_luminosity = 7
-	},
-/turf/open/indestructible/hierophant,
-/area/lavaland/surface/outdoors)
-"iD" = (
-/obj/effect/decal/cleanable/blood/gibs/limb,
-/obj/effect/decal/cleanable/blood,
-/turf/open/indestructible/hierophant,
-/area/lavaland/surface/outdoors)
-"iC" = (
-/obj/effect/gibspawner/human,
-/turf/open/indestructible/hierophant,
-/area/lavaland/surface/outdoors)
-"iB" = (
-/turf/open/indestructible/hierophant,
-/area/lavaland/surface/outdoors)
-"iA" = (
-/obj/effect/decal/cleanable/cobweb,
-/turf/open/indestructible/hierophant,
-/area/lavaland/surface/outdoors)
-"iz" = (
-/obj/effect/decal/cleanable/blood/tracks,
-/turf/open/indestructible/hierophant,
-/area/lavaland/surface/outdoors)
-"iy" = (
-/turf/closed/indestructible/riveted/hierophant,
-/area/lavaland/surface/outdoors)
+/area/ruin/unpowered/hierophant)
 
 (1,1,1) = {"
 ab

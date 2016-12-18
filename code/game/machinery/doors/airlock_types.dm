@@ -562,8 +562,6 @@
 /obj/machinery/door/airlock/abductor/base
 
 /obj/machinery/door/airlock/abductor/base/allowed(mob/M)
-	if(!density)
-		return 1
 	if(isabductor(M))
 		return 1
 	else

@@ -27,7 +27,7 @@
 	products = list(/obj/item/clothing/shoes/geta/red=3, /obj/item/clothing/shoes/geta=2, /obj/item/clothing/shoes/brand3=4, /obj/item/clothing/shoes/shoes_rim=5,
 		/obj/item/clothing/shoes/black_open_shoes=2, /obj/item/clothing/shoes/brand1=3, /obj/item/clothing/shoes/brand2=5, /obj/item/clothing/shoes/ballets/red_gold=2,
 		/obj/item/clothing/shoes/ballets=2, /obj/item/clothing/shoes/ballets/white=2, /obj/item/clothing/shoes/ballets/black=2, /obj/item/clothing/shoes/ballets/violet=2,
-		/obj/item/clothing/shoes/ballets/yellow=2, /obj/item/clothing/shoes/shoes_rim/white=3)
+		/obj/item/clothing/shoes/ballets/yellow=2, /obj/item/clothing/shoes/shoes_rim/white=3, /obj/item/clothing/shoes/laceup = 3)
 	premium = list(/obj/item/clothing/shoes/geta/red=3, /obj/item/clothing/shoes/geta=2, /obj/item/clothing/shoes/brand3=4, /obj/item/clothing/shoes/shoes_rim=5,
 		/obj/item/clothing/shoes/black_open_shoes=2, /obj/item/clothing/shoes/brand1=3, /obj/item/clothing/shoes/brand2=5, /obj/item/clothing/shoes/ballets/red_gold=2,
 		/obj/item/clothing/shoes/ballets=2, /obj/item/clothing/shoes/ballets/white=2, /obj/item/clothing/shoes/ballets/black=2, /obj/item/clothing/shoes/ballets/violet=2,

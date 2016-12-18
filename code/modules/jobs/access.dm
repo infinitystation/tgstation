@@ -230,10 +230,10 @@
 			return get_ert_access("med")
 		if("Centcom Bartender")
 			return list(access_cent_general, access_cent_living, access_cent_bar)
-		if("Centcom Securty Private")
+		if("Centcom Security Private")
 			return list(access_cent_general, access_security, access_sec_doors, access_brig, access_court, access_medical, access_forensics_lockers,
 						access_engine, access_maint_tunnels, access_mining, access_cargo)
-		if("Centcom Securty Sergeant")
+		if("Centcom Security Sergeant")
 			return list(access_cent_general, access_security, access_sec_doors, access_brig, access_court, access_medical, access_forensics_lockers,
 						access_engine, access_maint_tunnels, access_mining, access_cargo)
 

@@ -429,6 +429,12 @@
 	desc = "Pointer, saying to you that in front will be personal-only zone."
 	icon_state = "personal"
 
+/obj/structure/sign/directions/alien
+	name = "alien sign"
+	icon = 'icons/obj/infinity_alien.dmi'
+	desc = "So cute images!"
+	icon_state = "sign_1"
+
 /obj/structure/sign/directions/administration
 	name = "administration pointer"
 	icon = 'icons/obj/infinity_decals.dmi'
