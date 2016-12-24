@@ -38,14 +38,6 @@ map terror_metastation
 	friendlyname Terro's Meta
 endmap
 
-map metastation
-	friendlyname TG Meta Station
-endmap
-
-map efficiencystation
-	friendlyname dexofan's Efficiency Station
-endmap
-
 map pubbystation
 	friendlyname Pubby Station
 endmap
