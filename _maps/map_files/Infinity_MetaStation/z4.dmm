@@ -280,7 +280,6 @@
 	},
 /obj/structure/table,
 /obj/item/weapon/paper_bin{
-	amount = 0;
 	icon_state = "paper_bin0"
 	},
 /turf/open/floor/plating/airless,

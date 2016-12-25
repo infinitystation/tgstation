@@ -501,6 +501,10 @@
 	icon = 'icons/mob/hair_encoder.dmi'
 	icon_state = "hair_encoder"
 
+/datum/sprite_accessory/hair/sidecut
+	name = "Sidecut"
+	icon_state = "hair_sidecut"
+
 /////////////////////////////
 // Facial Hair Definitions //
 /////////////////////////////

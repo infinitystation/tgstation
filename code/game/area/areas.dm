@@ -49,6 +49,7 @@
 	var/list/related			// the other areas of the same type as this
 
 	var/sound/forced_ambience = null
+	var/parallax_movedir = 0
 
 	var/global/global_uid = 0
 	var/uid
