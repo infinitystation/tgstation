@@ -35431,8 +35431,10 @@
 /turf/open/space,
 /area/space)
 "bhC" = (
-/obj/machinery/door/airlock/shuttle{
-	name = "Arrivals Shuttle Airlock"
+/obj/machinery/door/airlock/titanium{
+	id_tag = null;
+	name = "Emergency Shuttle Airlock";
+	req_one_access_txt = "0"
 	},
 /turf/open/floor/plasteel/whitebot/delivery,
 /area/shuttle/arrival)
@@ -42601,6 +42603,7 @@
 	},
 /obj/structure/table/wood,
 /obj/item/device/assembly/flash/handheld,
+/obj/item/weapon/paper/notice_show,
 /turf/open/floor/wood,
 /area/crew_quarters/heads)
 "btl" = (
@@ -47670,7 +47673,6 @@
 	pixel_x = 32;
 	pixel_y = 0
 	},
-/obj/item/weapon/paper/notice_show,
 /turf/open/floor/wood,
 /area/crew_quarters/heads)
 "bBE" = (
@@ -95654,9 +95656,10 @@
 /turf/closed/wall/shuttle/smooth/nodiagonal,
 /area/shuttle/escape)
 "deg" = (
-/obj/machinery/door/airlock/shuttle{
+/obj/machinery/door/airlock/titanium{
 	id_tag = "Emeregency_Shuttle_Rear_Airlock_Lock";
-	name = "Emergency Shuttle's Exit"
+	name = "Emergency Shuttle Airlock";
+	req_one_access_txt = "0"
 	},
 /turf/open/floor/plasteel{
 	icon_state = "delivery";
@@ -95664,10 +95667,6 @@
 	},
 /area/shuttle/escape)
 "deh" = (
-/obj/machinery/door/airlock/shuttle{
-	id_tag = "Emeregency_Shuttle_Rear_Airlock_Lock";
-	name = "Emergency Shuttle's Exit"
-	},
 /obj/docking_port/mobile/emergency{
 	dheight = 0;
 	dir = 2;
@@ -95684,6 +95683,11 @@
 	id = "emergency_home";
 	name = "emergency evac bay";
 	width = 14
+	},
+/obj/machinery/door/airlock/titanium{
+	id_tag = "Emeregency_Shuttle_Rear_Airlock_Lock";
+	name = "Emergency Shuttle Airlock";
+	req_one_access_txt = "0"
 	},
 /turf/open/floor/plasteel{
 	icon_state = "delivery";
@@ -95954,8 +95958,9 @@
 /turf/open/floor/plating,
 /area/shuttle/escape)
 "deG" = (
-/obj/machinery/door/airlock/glass_command{
-	name = "Shuttle E.V.A Storage"
+/obj/machinery/door/airlock/glass_titanium{
+	name = "Emergency Shuttle Airlock";
+	req_access_txt = "19"
 	},
 /turf/open/floor/plasteel{
 	icon_state = "delivery";
@@ -96067,9 +96072,10 @@
 /turf/open/floor/plasteel/whiteblue,
 /area/shuttle/escape)
 "deS" = (
-/obj/machinery/door/airlock/shuttle{
+/obj/machinery/door/airlock/titanium{
 	id_tag = "Emeregency_Shuttle_Right_Airlock_Lock";
-	name = "Emergency Shuttle Airlock"
+	name = "Emergency Shuttle Airlock";
+	req_one_access_txt = "1;4"
 	},
 /turf/open/floor/plasteel/shuttle/red,
 /area/shuttle/escape)
@@ -96077,17 +96083,17 @@
 /turf/open/floor/plasteel/shuttle/red,
 /area/shuttle/escape)
 "deU" = (
-/obj/machinery/door/airlock/glass_security{
-	name = "Brig";
-	req_access_txt = "2"
+/obj/machinery/door/airlock/glass_titanium{
+	name = "Emergency Shuttle Airlock";
+	req_access_txt = "0";
+	req_one_access_txt = "1;4"
 	},
 /turf/open/floor/plasteel/shuttle/red,
 /area/shuttle/escape)
 "deV" = (
-/obj/machinery/door/airlock/glass_medical{
-	id_tag = null;
-	name = "Escape Shuttle Infirmary";
-	req_access_txt = "0"
+/obj/machinery/door/airlock/glass_titanium{
+	name = "Emergency Shuttle Airlock";
+	req_access_txt = "5"
 	},
 /turf/open/floor/plasteel/whitebot/delivery,
 /area/shuttle/escape)
@@ -96273,9 +96279,10 @@
 	},
 /area/shuttle/escape)
 "dfp" = (
-/obj/machinery/door/airlock/shuttle{
+/obj/machinery/door/airlock/titanium{
 	id_tag = "Emeregency_Shuttle_Right_Airlock_Lock";
-	name = "Emergency Shuttle Airlock"
+	name = "Emergency Shuttle Airlock";
+	req_one_access_txt = "0"
 	},
 /turf/open/floor/wood,
 /area/shuttle/escape)
@@ -96283,7 +96290,7 @@
 /turf/open/floor/carpet,
 /area/shuttle/escape)
 "dfr" = (
-/obj/machinery/door/airlock/shuttle{
+/obj/machinery/door/airlock/glass_titanium{
 	name = "Emergency Shuttle Airlock"
 	},
 /turf/open/floor/wood,
@@ -96355,8 +96362,8 @@
 /turf/open/floor/plasteel,
 /area/shuttle/escape)
 "dfz" = (
-/obj/machinery/door/airlock/glass_science{
-	name = "Shuttle HSB";
+/obj/machinery/door/airlock/glass_titanium{
+	name = "Emergency Shuttle Airlock";
 	req_access_txt = "47"
 	},
 /turf/open/floor/plasteel/whitebot/delivery,
@@ -96964,49 +96971,36 @@
 /obj/structure/closet/cardboard,
 /turf/open/floor/plating,
 /area/maintenance/asmaint2)
-"dhc" = (
-/obj/machinery/atmospherics/pipe/simple/yellow/visible,
-/turf/open/floor/plasteel/caution/corner,
-/area/atmos)
-"dhb" = (
-/obj/machinery/atmospherics/pipe/simple/cyan/visible{
-	dir = 4
+"dgS" = (
+/turf/open/floor/plasteel,
+/area/quartermaster/sorting)
+"dgT" = (
+/obj/structure/table,
+/obj/machinery/computer/stockexchange,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/plasteel,
+/area/quartermaster/sorting)
+"dgU" = (
+/obj/structure/table/reinforced,
+/obj/item/weapon/paper_bin,
+/obj/item/weapon/pen,
+/obj/machinery/door/firedoor,
+/obj/machinery/door/window/westleft{
+	dir = 1;
+	name = "Cargo Desk";
+	req_access_txt = "50"
 	},
+/turf/open/floor/plasteel,
+/area/quartermaster/sorting)
+"dgV" = (
+/obj/machinery/atmospherics/pipe/manifold/supply/hidden,
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/plasteel{
 	dir = 1;
-	icon_state = "caution"
+	icon_state = "neutralcorner"
 	},
-/area/atmos)
-"dha" = (
-/obj/structure/noticeboard/hop,
-/obj/item/weapon/paper/notice/job_application,
-/obj/item/weapon/paper/notice/dismissal,
-/obj/item/weapon/paper/notice/request,
-/obj/item/weapon/paper/notice/complaint,
-/turf/closed/wall,
-/area/bridge/meeting_room)
-"dgZ" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 9
-	},
-/turf/closed/wall/r_wall,
-/area/ai_monitored/storage/AIlobby)
-"dgY" = (
-/obj/machinery/atmospherics/pipe/manifold/supply/hidden{
-	dir = 8;
-	initialize_directions = 13
-	},
-/turf/closed/wall/r_wall,
-/area/ai_monitored/storage/AIlobby)
-"dgX" = (
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/structure/lattice,
-/obj/structure/lattice/catwalk,
-/obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/turf/open/space,
-/area/space)
+/area/hallway/primary/port)
 "dgW" = (
 /obj/structure/cable/yellow{
 	d1 = 4;
@@ -97020,36 +97014,49 @@
 	},
 /turf/open/floor/plasteel,
 /area/hallway/primary/port)
-"dgV" = (
-/obj/machinery/atmospherics/pipe/manifold/supply/hidden,
-/obj/structure/disposalpipe/segment,
+"dgX" = (
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/lattice,
+/obj/structure/lattice/catwalk,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/turf/open/space,
+/area/space)
+"dgY" = (
+/obj/machinery/atmospherics/pipe/manifold/supply/hidden{
+	dir = 8;
+	initialize_directions = 13
+	},
+/turf/closed/wall/r_wall,
+/area/ai_monitored/storage/AIlobby)
+"dgZ" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 9
+	},
+/turf/closed/wall/r_wall,
+/area/ai_monitored/storage/AIlobby)
+"dha" = (
+/obj/structure/noticeboard/hop,
+/obj/item/weapon/paper/notice/job_application,
+/obj/item/weapon/paper/notice/dismissal,
+/obj/item/weapon/paper/notice/request,
+/obj/item/weapon/paper/notice/complaint,
+/turf/closed/wall,
+/area/bridge/meeting_room)
+"dhb" = (
+/obj/machinery/atmospherics/pipe/simple/cyan/visible{
+	dir = 4
+	},
 /turf/open/floor/plasteel{
 	dir = 1;
-	icon_state = "neutralcorner"
+	icon_state = "caution"
 	},
-/area/hallway/primary/port)
-"dgU" = (
-/obj/structure/table/reinforced,
-/obj/item/weapon/paper_bin,
-/obj/item/weapon/pen,
-/obj/machinery/door/firedoor,
-/obj/machinery/door/window/westleft{
-	dir = 1;
-	name = "Cargo Desk";
-	req_access_txt = "50"
-	},
-/turf/open/floor/plasteel,
-/area/quartermaster/sorting)
-"dgT" = (
-/obj/structure/table,
-/obj/machinery/computer/stockexchange,
-/obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/obj/structure/disposalpipe/segment,
-/turf/open/floor/plasteel,
-/area/quartermaster/sorting)
-"dgS" = (
-/turf/open/floor/plasteel,
-/area/quartermaster/sorting)
+/area/atmos)
+"dhc" = (
+/obj/machinery/atmospherics/pipe/simple/yellow/visible,
+/turf/open/floor/plasteel/caution/corner,
+/area/atmos)
 
 (1,1,1) = {"
 aaa
@@ -123731,7 +123738,7 @@ deu
 deA
 der
 del
-dfO
+deG
 dfR
 der
 bsl
@@ -123988,7 +123995,7 @@ deu
 deB
 der
 dem
-dfO
+deG
 dfS
 der
 bsl
