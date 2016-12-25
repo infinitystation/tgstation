@@ -122,3 +122,8 @@
 	name = "Staff Notice Board"
 	desc = "Important notices from the heads of staff"
 	req_access = list(access_heads)
+
+/obj/structure/noticeboard/robot
+	name = "Robotics Notice Board"
+	desc = "Important notices from the Roboticist"
+	req_access = list(access_robotics)

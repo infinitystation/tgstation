@@ -532,6 +532,7 @@
 	icon_state = "0-4"
 	},
 /obj/machinery/door/poddoor/preopen{
+	icon = 'icons/obj/doors/blastdoor_hor.dmi';
 	id = "hosspace";
 	name = "space shutters"
 	},
@@ -548,6 +549,7 @@
 	icon_state = "0-4"
 	},
 /obj/machinery/door/poddoor/preopen{
+	icon = 'icons/obj/doors/blastdoor_hor.dmi';
 	id = "hosspace";
 	name = "space shutters"
 	},
@@ -564,6 +566,7 @@
 	d2 = 8
 	},
 /obj/machinery/door/poddoor/preopen{
+	icon = 'icons/obj/doors/blastdoor_hor.dmi';
 	id = "hosspace";
 	name = "space shutters"
 	},
@@ -771,7 +774,21 @@
 /turf/open/floor/plasteel/blackvault,
 /area/crew_quarters/hos)
 "aby" = (
-/obj/structure/table/wood,
+/obj/structure/filingcabinet,
+/obj/item/weapon/paper/notice/arrest_warrant,
+/obj/item/weapon/paper/notice/arrest_warrant,
+/obj/item/weapon/paper/notice/arrest_warrant,
+/obj/item/weapon/paper/notice/search_warrant,
+/obj/item/weapon/paper/notice/search_warrant,
+/obj/item/weapon/paper/notice/search_warrant,
+/obj/item/weapon/paper/notice/confession,
+/obj/item/weapon/paper/notice/confession,
+/obj/item/weapon/paper/notice/exosuit_passport,
+/obj/item/weapon/paper/notice/exosuit_passport,
+/obj/item/weapon/storage/secure/safe/HoS{
+	pixel_x = 36;
+	pixel_y = 28
+	},
 /obj/machinery/requests_console{
 	announcementConsole = 1;
 	department = "Head of Security's Desk";
@@ -779,11 +796,6 @@
 	name = "Head of Security RC";
 	pixel_x = 0;
 	pixel_y = 30
-	},
-/obj/machinery/computer/med_data/laptop,
-/obj/item/weapon/storage/secure/safe/HoS{
-	pixel_x = 36;
-	pixel_y = 28
 	},
 /turf/open/floor/plasteel/blackvault,
 /area/crew_quarters/hos)
@@ -1446,6 +1458,7 @@
 	pixel_x = 12;
 	pixel_y = 8
 	},
+/obj/item/weapon/paper/notice_show,
 /turf/open/floor/carpet,
 /area/crew_quarters/hos)
 "acK" = (
@@ -2188,10 +2201,6 @@
 	c_tag = "Brig - Head of Security's Office";
 	dir = 8;
 	network = list("SS13")
-	},
-/obj/machinery/computer/security/telescreen/entertainment{
-	pixel_x = 0;
-	pixel_y = -32
 	},
 /turf/open/floor/plasteel/blackvault{
 	dir = 8
@@ -4742,6 +4751,16 @@
 	pixel_y = 30
 	},
 /obj/structure/filingcabinet,
+/obj/item/weapon/paper/notice/arrest_warrant,
+/obj/item/weapon/paper/notice/arrest_warrant,
+/obj/item/weapon/paper/notice/arrest_warrant,
+/obj/item/weapon/paper/notice/search_warrant,
+/obj/item/weapon/paper/notice/search_warrant,
+/obj/item/weapon/paper/notice/search_warrant,
+/obj/item/weapon/paper/notice/confession,
+/obj/item/weapon/paper/notice/confession,
+/obj/item/weapon/paper/notice/exosuit_passport,
+/obj/item/weapon/paper/notice/exosuit_passport,
 /turf/open/floor/plasteel{
 	dir = 8;
 	icon_state = "vault";
@@ -26981,6 +27000,7 @@
 	supply_display = 1
 	},
 /obj/item/device/megaphone/cargo,
+/obj/item/weapon/paper/notice_show,
 /turf/open/floor/plasteel,
 /area/quartermaster/storage)
 "aUi" = (
@@ -29149,6 +29169,15 @@
 	dir = 8;
 	icon_state = "pipe-c"
 	},
+/obj/structure/noticeboard/ce{
+	dir = 1;
+	icon_state = "nboard00";
+	pixel_y = -30;
+	tag = "icon-nboard00 (NORTH)"
+	},
+/obj/item/weapon/paper/notice/complaint,
+/obj/item/weapon/paper/notice/dismissal,
+/obj/item/weapon/paper/notice/request,
 /turf/open/floor/plasteel{
 	dir = 2;
 	icon_state = "warning"
@@ -30152,9 +30181,12 @@
 	},
 /area/engine/engineering)
 "aZy" = (
-/obj/machinery/light_switch,
-/turf/closed/wall,
-/area/engine/engineering)
+/obj/machinery/atmospherics/pipe/simple/yellow/visible,
+/turf/open/floor/plasteel{
+	icon_state = "caution";
+	dir = 4
+	},
+/area/atmos)
 "aZz" = (
 /obj/structure/rack{
 	dir = 8;
@@ -31102,6 +31134,9 @@
 	icon_state = "1-4"
 	},
 /obj/machinery/light/small,
+/obj/machinery/light_switch{
+	pixel_y = -28
+	},
 /turf/open/floor/plasteel{
 	dir = 2;
 	icon_state = "warning"
@@ -33136,6 +33171,7 @@
 	charge = 100;
 	maxcharge = 15000
 	},
+/obj/item/weapon/paper/notice_show,
 /turf/open/floor/plasteel{
 	dir = 8;
 	icon_state = "neutralcorner"
@@ -33814,6 +33850,10 @@
 	},
 /obj/structure/table,
 /obj/item/weapon/folder/yellow,
+/obj/structure/noticeboard/qm{
+	pixel_y = 30
+	},
+/obj/item/weapon/paper/notice/request,
 /turf/open/floor/plasteel{
 	dir = 1;
 	icon_state = "brown"
@@ -34765,7 +34805,7 @@
 	icon_state = "0-4"
 	},
 /turf/open/floor/plasteel/brown{
-	dir = 9
+	dir = 1
 	},
 /area/quartermaster/sorting)
 "bgw" = (
@@ -34774,29 +34814,30 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/structure/cable/yellow{
 	d1 = 2;
 	d2 = 8;
 	icon_state = "2-8";
 	tag = ""
 	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	icon_state = "intact";
+	dir = 5
+	},
 /turf/open/floor/plasteel/brown{
 	dir = 1
 	},
 /area/quartermaster/sorting)
 "bgx" = (
-/obj/machinery/atmospherics/components/unary/vent_scrubber{
-	dir = 2;
-	on = 1;
-	scrub_N2O = 0;
-	scrub_Toxins = 0
-	},
 /obj/machinery/status_display{
 	density = 0;
 	pixel_x = 0;
 	pixel_y = 32;
 	supply_display = 1
+	},
+/obj/machinery/photocopier,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 10
 	},
 /turf/open/floor/plasteel/brown{
 	dir = 1
@@ -35608,9 +35649,7 @@
 	pixel_x = -27;
 	pixel_y = 0
 	},
-/turf/open/floor/plasteel/brown{
-	dir = 8
-	},
+/turf/open/floor/plasteel,
 /area/quartermaster/sorting)
 "bhU" = (
 /obj/structure/cable/yellow{
@@ -35621,24 +35660,22 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/obj/machinery/atmospherics/components/unary/vent_scrubber{
+	dir = 4;
+	on = 1;
+	scrub_Toxins = 0
+	},
 /turf/open/floor/plasteel,
 /area/quartermaster/sorting)
 "bhV" = (
 /obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden{
-	dir = 8;
-	initialize_directions = 11
-	},
-/turf/open/floor/plasteel,
-/area/quartermaster/sorting)
-"bhW" = (
-/obj/structure/disposalpipe/segment{
 	dir = 2;
 	icon_state = "pipe-c"
 	},
+/obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden,
+/turf/open/floor/plasteel,
+/area/quartermaster/sorting)
+"bhW" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
@@ -36133,6 +36170,12 @@
 "biQ" = (
 /obj/structure/filingcabinet/chestdrawer,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/obj/item/weapon/paper/notice/complaint,
+/obj/item/weapon/paper/notice/complaint,
+/obj/item/weapon/paper/notice/dismissal,
+/obj/item/weapon/paper/notice/dismissal,
+/obj/item/weapon/paper/notice/request,
+/obj/item/weapon/paper/notice/request,
 /mob/living/simple_animal/parrot/Poly,
 /turf/open/floor/plasteel{
 	icon_state = "vault";
@@ -36696,9 +36739,7 @@
 	dir = 4;
 	network = list("SS13")
 	},
-/turf/open/floor/plasteel/brown{
-	dir = 8
-	},
+/turf/open/floor/plasteel,
 /area/quartermaster/sorting)
 "bjI" = (
 /obj/structure/cable/yellow{
@@ -36706,23 +36747,24 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
-	dir = 5
-	},
 /turf/open/floor/plasteel,
 /area/quartermaster/sorting)
 "bjJ" = (
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
-	dir = 9
+/turf/open/floor/plasteel/caution/corner{
+	tag = "icon-cautioncorner (WEST)";
+	icon_state = "cautioncorner";
+	dir = 8
 	},
-/turf/open/floor/plasteel,
-/area/quartermaster/sorting)
+/area/atmos)
 "bjK" = (
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/plasteel,
 /area/quartermaster/sorting)
 "bjL" = (
 /obj/structure/filingcabinet/filingcabinet,
+/obj/item/weapon/paper/notice/request,
+/obj/item/weapon/paper/notice/request,
+/obj/item/weapon/paper/notice/request,
 /turf/open/floor/plasteel/brown{
 	dir = 4
 	},
@@ -36901,6 +36943,7 @@
 	d2 = 4
 	},
 /obj/machinery/door/poddoor/preopen{
+	icon = 'icons/obj/doors/blastdoor_hor.dmi';
 	id = "bridge blast";
 	layer = 2.9;
 	name = "bridge blast door"
@@ -36924,6 +36967,7 @@
 	icon_state = "2-8"
 	},
 /obj/machinery/door/poddoor/preopen{
+	icon = 'icons/obj/doors/blastdoor_hor.dmi';
 	id = "bridge blast";
 	layer = 2.9;
 	name = "bridge blast door"
@@ -36942,6 +36986,7 @@
 	d2 = 8
 	},
 /obj/machinery/door/poddoor/preopen{
+	icon = 'icons/obj/doors/blastdoor_hor.dmi';
 	id = "bridge blast";
 	layer = 2.9;
 	name = "bridge blast door"
@@ -36955,6 +37000,7 @@
 	d2 = 8
 	},
 /obj/machinery/door/poddoor/preopen{
+	icon = 'icons/obj/doors/blastdoor_hor.dmi';
 	id = "bridge blast";
 	layer = 2.9;
 	name = "bridge blast door"
@@ -36971,6 +37017,7 @@
 	d2 = 4
 	},
 /obj/machinery/door/poddoor/preopen{
+	icon = 'icons/obj/doors/blastdoor_hor.dmi';
 	id = "bridge blast";
 	layer = 2.9;
 	name = "bridge blast door"
@@ -36994,6 +37041,7 @@
 	icon_state = "2-4"
 	},
 /obj/machinery/door/poddoor/preopen{
+	icon = 'icons/obj/doors/blastdoor_hor.dmi';
 	id = "bridge blast";
 	layer = 2.9;
 	name = "bridge blast door"
@@ -37012,6 +37060,7 @@
 	d2 = 4
 	},
 /obj/machinery/door/poddoor/preopen{
+	icon = 'icons/obj/doors/blastdoor_hor.dmi';
 	id = "bridge blast";
 	layer = 2.9;
 	name = "bridge blast door"
@@ -37030,6 +37079,7 @@
 	icon_state = "0-2"
 	},
 /obj/machinery/door/poddoor/preopen{
+	icon = 'icons/obj/doors/blastdoor_hor.dmi';
 	id = "bridge blast";
 	layer = 2.9;
 	name = "bridge blast door"
@@ -37808,8 +37858,9 @@
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
 	dir = 2
 	},
-/turf/open/floor/plasteel/brown{
-	dir = 8
+/turf/open/floor/plasteel{
+	dir = 2;
+	icon_state = "warning"
 	},
 /area/quartermaster/sorting)
 "blJ" = (
@@ -37821,7 +37872,11 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
-/turf/open/floor/plasteel,
+/turf/open/floor/plasteel{
+	tag = "icon-warningcorner (NORTH)";
+	icon_state = "warningcorner";
+	dir = 1
+	},
 /area/quartermaster/sorting)
 "blK" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
@@ -37833,20 +37888,20 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/holopad,
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/plasteel,
 /area/quartermaster/sorting)
 "blL" = (
-/obj/structure/disposalpipe/segment,
 /obj/effect/landmark/start{
 	name = "Cargo Technician"
-	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 4
 	},
 /obj/structure/cable/yellow{
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/manifold/supply/hidden{
+	dir = 1
 	},
 /turf/open/floor/plasteel,
 /area/quartermaster/sorting)
@@ -38049,6 +38104,7 @@
 /obj/effect/spawner/structure/window/reinforced,
 /obj/structure/cable/yellow,
 /obj/machinery/door/poddoor/preopen{
+	icon = 'icons/obj/doors/blastdoor.dmi';
 	id = "bridge blast";
 	layer = 2.9;
 	name = "bridge blast door"
@@ -38185,6 +38241,7 @@
 	icon_state = "1-8"
 	},
 /obj/machinery/door/poddoor/preopen{
+	icon = 'icons/obj/doors/blastdoor.dmi';
 	id = "bridge blast";
 	layer = 2.9;
 	name = "bridge blast door"
@@ -38997,16 +39054,15 @@
 	},
 /area/quartermaster/sorting)
 "bnI" = (
-/obj/machinery/photocopier,
-/turf/open/floor/plasteel/brown{
-	dir = 8
+/turf/open/floor/plasteel{
+	icon_state = "bot"
 	},
 /area/quartermaster/sorting)
 "bnJ" = (
-/obj/structure/chair/office/dark{
-	dir = 8
+/turf/open/floor/plasteel{
+	dir = 8;
+	icon_state = "warning"
 	},
-/turf/open/floor/plasteel,
 /area/quartermaster/sorting)
 "bnK" = (
 /obj/machinery/disposal/bin,
@@ -39140,6 +39196,7 @@
 	icon_state = "0-2"
 	},
 /obj/machinery/door/poddoor/preopen{
+	icon = 'icons/obj/doors/blastdoor_hor.dmi';
 	id = "bridge blast";
 	layer = 2.9;
 	name = "bridge blast door"
@@ -39997,54 +40054,54 @@
 	},
 /area/quartermaster/sorting)
 "bpo" = (
-/obj/structure/table,
-/obj/machinery/computer/stockexchange,
-/obj/machinery/firealarm{
-	dir = 8;
-	pixel_x = -26;
+/obj/machinery/mineral/ore_redemption{
+	output_dir = 1
+	},
+/obj/structure/noticeboard{
+	desc = "A board for pinning important notices upon. Probably helpful for keeping track of requests.";
+	dir = 4;
+	name = "requests board";
+	pixel_x = -30;
 	pixel_y = 0
 	},
-/turf/open/floor/plasteel/brown{
-	dir = 10
+/turf/open/floor/plasteel{
+	icon_state = "bot"
 	},
 /area/quartermaster/sorting)
 "bpp" = (
+/obj/structure/chair/office/dark{
+	dir = 4
+	},
+/turf/open/floor/plasteel{
+	dir = 8;
+	icon_state = "warning"
+	},
+/area/quartermaster/sorting)
+"bpq" = (
 /obj/structure/table,
 /obj/item/weapon/clipboard,
 /obj/item/weapon/folder/yellow,
 /obj/item/weapon/folder/yellow,
-/obj/item/device/multitool,
 /obj/item/weapon/pen/red,
-/turf/open/floor/plasteel/brown{
-	dir = 2
-	},
-/area/quartermaster/sorting)
-"bpq" = (
-/turf/open/floor/plasteel/brown{
-	dir = 2
-	},
+/obj/item/weapon/paper/notice/request,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/plasteel,
 /area/quartermaster/sorting)
 "bpr" = (
-/obj/structure/disposalpipe/segment,
-/turf/open/floor/plasteel/brown{
-	dir = 2
+/obj/machinery/atmospherics/pipe/manifold/general/visible{
+	dir = 8
 	},
-/area/quartermaster/sorting)
+/turf/open/floor/plasteel/caution/corner,
+/area/atmos)
 "bps" = (
 /obj/machinery/autolathe,
 /obj/machinery/newscaster{
 	pixel_x = 28;
 	pixel_y = 0
 	},
-/obj/item/device/radio/intercom{
-	freerange = 0;
-	frequency = 1459;
-	name = "Station Intercom (General)";
-	pixel_x = 0;
-	pixel_y = -28
-	},
 /turf/open/floor/plasteel/brown{
-	dir = 6
+	dir = 4
 	},
 /area/quartermaster/sorting)
 "bpt" = (
@@ -41161,17 +41218,21 @@
 /turf/open/floor/plating,
 /area/quartermaster/sorting)
 "brk" = (
-/obj/machinery/door/firedoor,
-/obj/machinery/mineral/ore_redemption,
-/turf/open/floor/plasteel{
-	icon_state = "dark"
-	},
-/area/quartermaster/sorting)
-"brl" = (
-/obj/structure/disposalpipe/segment,
 /obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/plating,
 /area/quartermaster/sorting)
+"brl" = (
+/obj/machinery/atmospherics/pipe/simple/yellow/visible{
+	dir = 4
+	},
+/turf/open/floor/plasteel/caution/corner{
+	tag = "icon-cautioncorner (WEST)";
+	icon_state = "cautioncorner";
+	dir = 8
+	},
+/area/atmos)
 "brm" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
@@ -41317,6 +41378,8 @@
 	req_access_txt = "19"
 	},
 /obj/machinery/door/poddoor/preopen{
+	dir = 4;
+	icon = 'icons/obj/doors/blastdoor.dmi';
 	id = "bridge blast";
 	name = "bridge blast door"
 	},
@@ -42402,10 +42465,13 @@
 	},
 /area/hallway/primary/port)
 "bta" = (
+/obj/structure/noticeboard/qm{
+	pixel_y = 30
+	},
+/obj/item/weapon/paper/notice/request,
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
 	dir = 1
 	},
-/obj/structure/disposalpipe/segment,
 /turf/open/floor/plasteel{
 	dir = 1;
 	icon_state = "neutralcorner"
@@ -43183,12 +43249,11 @@
 	icon_state = "4-8";
 	pixel_y = 0
 	},
-/obj/machinery/atmospherics/components/unary/vent_pump{
-	dir = 4;
-	on = 1
-	},
 /obj/structure/chair/office/dark{
 	dir = 1
+	},
+/obj/machinery/atmospherics/components/unary/vent_pump{
+	on = 1
 	},
 /turf/open/floor/plasteel{
 	icon_state = "dark"
@@ -43206,17 +43271,11 @@
 	dir = 4;
 	pixel_x = 0
 	},
-/obj/machinery/atmospherics/pipe/manifold/supply/visible{
-	dir = 1
-	},
 /turf/open/floor/plasteel{
 	icon_state = "dark"
 	},
 /area/ai_monitored/storage/AIlobby)
 "buv" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 4
-	},
 /obj/structure/lattice/catwalk,
 /obj/structure/cable{
 	d1 = 4;
@@ -43226,6 +43285,9 @@
 	},
 /obj/structure/window/reinforced{
 	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 6
 	},
 /turf/open/space,
 /area/space)
@@ -43936,10 +43998,8 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	req_access_txt = "0"
 	},
-/obj/structure/disposalpipe/sortjunction{
-	dir = 8;
-	icon_state = "pipe-j1s";
-	sortType = 3
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/open/floor/plasteel,
 /area/hallway/primary/port)
@@ -44129,6 +44189,18 @@
 /obj/structure/filingcabinet/chestdrawer{
 	pixel_y = 2
 	},
+/obj/item/weapon/paper/notice/job_application,
+/obj/item/weapon/paper/notice/job_application,
+/obj/item/weapon/paper/notice/job_application,
+/obj/item/weapon/paper/notice/job_application,
+/obj/item/weapon/paper/notice/request,
+/obj/item/weapon/paper/notice/request,
+/obj/item/weapon/paper/notice/request,
+/obj/item/weapon/paper/notice/dismissal,
+/obj/item/weapon/paper/notice/dismissal,
+/obj/item/weapon/paper/notice/complaint,
+/obj/item/weapon/paper/notice/complaint,
+/obj/item/weapon/paper/notice/complaint,
 /turf/open/floor/wood,
 /area/crew_quarters/heads)
 "bvL" = (
@@ -44140,6 +44212,13 @@
 	},
 /area/bridge)
 "bvM" = (
+/obj/structure/noticeboard/staff{
+	dir = 1;
+	pixel_y = -30
+	},
+/obj/item/weapon/paper/notice/request,
+/obj/item/weapon/paper/notice/dismissal,
+/obj/item/weapon/paper/notice/complaint,
 /turf/open/floor/plasteel{
 	dir = 6;
 	icon_state = "darkblue"
@@ -44749,6 +44828,7 @@
 /obj/machinery/light_switch{
 	pixel_y = -26
 	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/open/floor/plasteel{
 	icon_state = "dark"
 	},
@@ -44764,7 +44844,6 @@
 /obj/structure/transit_tube/station/reverse{
 	dir = 8
 	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/structure/transit_tube_pod{
 	dir = 1
 	},
@@ -45667,6 +45746,7 @@
 /obj/item/weapon/paper_bin,
 /obj/item/weapon/pen,
 /obj/structure/window/reinforced,
+/obj/item/weapon/paper/notice_show,
 /turf/open/floor/wood,
 /area/crew_quarters/captain_quarters)
 "byg" = (
@@ -46071,9 +46151,16 @@
 	},
 /area/ai_monitored/storage/AIlobby)
 "byR" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/turf/closed/wall/r_wall,
-/area/ai_monitored/storage/AIlobby)
+/obj/machinery/atmospherics/pipe/simple/cyan/visible,
+/obj/machinery/atmospherics/pipe/simple/yellow/visible{
+	dir = 4
+	},
+/turf/open/floor/plasteel/caution/corner{
+	tag = "icon-cautioncorner (WEST)";
+	icon_state = "cautioncorner";
+	dir = 8
+	},
+/area/atmos)
 "byS" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
@@ -46605,18 +46692,27 @@
 	pixel_y = 0
 	},
 /turf/open/floor/plasteel{
-	tag = "icon-darkbluecorners";
+	tag = "icon-darkbluecorners (EAST)";
 	icon_state = "darkbluecorners";
-	temperature = 273.15
+	dir = 4
 	},
 /area/bridge)
 "bzQ" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/structure/noticeboard/captain{
+	dir = 8;
+	icon_state = "nboard00";
+	pixel_x = 30;
+	tag = "icon-nboard00 (WEST)"
+	},
+/obj/item/weapon/paper/notice/confession,
+/obj/item/weapon/paper/notice/dismissal,
+/obj/item/weapon/paper/notice/job_application,
+/obj/item/weapon/paper/notice/request,
 /turf/open/floor/plasteel{
-	dir = 1;
+	dir = 8;
 	icon_state = "darkbluecorners";
-	tag = "icon-darkbluecorners";
-	temperature = 273.15
+	tag = "icon-darkbluecorners"
 	},
 /area/bridge)
 "bzR" = (
@@ -46927,6 +47023,7 @@
 "bAw" = (
 /obj/machinery/door/poddoor{
 	density = 0;
+	icon = 'icons/obj/doors/blastdoor_hor.dmi';
 	icon_state = "open";
 	id = "atmos";
 	name = "Atmos Blast Door";
@@ -46938,13 +47035,6 @@
 	},
 /area/engine/break_room)
 "bAx" = (
-/obj/machinery/door/poddoor{
-	density = 0;
-	icon_state = "open";
-	id = "atmos";
-	name = "Atmos Blast Door";
-	opacity = 0
-	},
 /obj/structure/cable/yellow{
 	d1 = 1;
 	d2 = 2;
@@ -46953,23 +47043,32 @@
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
 	dir = 8
 	},
+/obj/machinery/door/poddoor{
+	density = 0;
+	icon = 'icons/obj/doors/blastdoor_hor.dmi';
+	icon_state = "open";
+	id = "atmos";
+	name = "Atmos Blast Door";
+	opacity = 0
+	},
 /turf/open/floor/plasteel{
 	icon_state = "delivery";
 	name = "floor"
 	},
 /area/engine/break_room)
 "bAy" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/machinery/door/poddoor{
 	density = 0;
+	icon = 'icons/obj/doors/blastdoor_hor.dmi';
 	icon_state = "open";
 	id = "atmos";
 	name = "Atmos Blast Door";
 	opacity = 0
 	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /turf/open/floor/plasteel{
 	icon_state = "delivery";
 	name = "floor"
@@ -47021,21 +47120,17 @@
 	},
 /area/ai_monitored/storage/AIlobby)
 "bAC" = (
-/obj/machinery/atmospherics/pipe/manifold/supply/hidden{
-	dir = 1
-	},
 /obj/machinery/door/airlock/external{
 	name = "MiniSat Space Access Airlock";
 	req_access_txt = "0";
 	req_one_access_txt = "32;19"
 	},
+/obj/machinery/atmospherics/pipe/manifold/supply/hidden{
+	dir = 4
+	},
 /turf/open/floor/plating,
 /area/ai_monitored/storage/AIlobby)
 "bAD" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 9;
-	pixel_y = 0
-	},
 /obj/structure/sign/securearea{
 	desc = "A warning sign which reads 'EXTERNAL AIRLOCK'";
 	icon_state = "space";
@@ -47575,6 +47670,7 @@
 	pixel_x = 32;
 	pixel_y = 0
 	},
+/obj/item/weapon/paper/notice_show,
 /turf/open/floor/wood,
 /area/crew_quarters/heads)
 "bBE" = (
@@ -47717,9 +47813,9 @@
 	network = list("SS13")
 	},
 /turf/open/floor/plasteel{
-	tag = "icon-darkbluecorners";
+	tag = "icon-darkbluecorners (EAST)";
 	icon_state = "darkbluecorners";
-	temperature = 273.15
+	dir = 4
 	},
 /area/bridge)
 "bBQ" = (
@@ -47733,7 +47829,7 @@
 	pixel_x = 24
 	},
 /turf/open/floor/plasteel{
-	dir = 1;
+	dir = 8;
 	icon_state = "darkbluecorners";
 	tag = "icon-darkbluecorners"
 	},
@@ -48617,6 +48713,7 @@
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/door/poddoor{
 	density = 0;
+	icon = 'icons/obj/doors/blastdoor.dmi';
 	icon_state = "open";
 	id = "hop";
 	layer = 3.1;
@@ -48634,6 +48731,7 @@
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/door/poddoor{
 	density = 0;
+	icon = 'icons/obj/doors/blastdoor.dmi';
 	icon_state = "open";
 	id = "hop";
 	layer = 3.1;
@@ -48650,6 +48748,7 @@
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/door/poddoor{
 	density = 0;
+	icon = 'icons/obj/doors/blastdoor.dmi';
 	icon_state = "open";
 	id = "hop";
 	layer = 3.1;
@@ -48682,6 +48781,7 @@
 	},
 /obj/machinery/door/poddoor{
 	density = 0;
+	icon = 'icons/obj/doors/blastdoor.dmi';
 	icon_state = "open";
 	id = "hop";
 	layer = 3.1;
@@ -48794,9 +48894,9 @@
 	icon_state = "1-2"
 	},
 /turf/open/floor/plasteel{
-	tag = "icon-darkbluecorners";
+	tag = "icon-darkbluecorners (EAST)";
 	icon_state = "darkbluecorners";
-	temperature = 273.15
+	dir = 4
 	},
 /area/bridge)
 "bDL" = (
@@ -48811,10 +48911,9 @@
 	req_access_txt = "19"
 	},
 /turf/open/floor/plasteel{
-	dir = 1;
+	dir = 8;
 	icon_state = "darkbluecorners";
-	tag = "icon-darkbluecorners";
-	temperature = 273.15
+	tag = "icon-darkbluecorners"
 	},
 /area/bridge)
 "bDM" = (
@@ -49687,6 +49786,8 @@
 "bFr" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/machinery/door/poddoor/preopen{
+	dir = 4;
+	icon = 'icons/obj/doors/blastdoor_hor.dmi';
 	id = "bridge blast";
 	name = "bridge blast door"
 	},
@@ -49700,6 +49801,8 @@
 	initialize_directions = 13
 	},
 /obj/machinery/door/poddoor/preopen{
+	dir = 4;
+	icon = 'icons/obj/doors/blastdoor_hor.dmi';
 	id = "bridge blast";
 	name = "bridge blast door"
 	},
@@ -49795,24 +49898,29 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/poddoor/preopen{
+	dir = 4;
+	icon = 'icons/obj/doors/blastdoor_hor.dmi';
 	id = "bridge blast";
 	name = "bridge blast door"
 	},
 /turf/open/floor/plasteel{
-	icon_state = "dark"
+	tag = "icon-darkbluecorners (EAST)";
+	icon_state = "darkbluecorners";
+	dir = 4
 	},
 /area/bridge)
 "bFD" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/machinery/door/poddoor/preopen{
+	dir = 4;
+	icon = 'icons/obj/doors/blastdoor_hor.dmi';
 	id = "bridge blast";
 	name = "bridge blast door"
 	},
 /turf/open/floor/plasteel{
-	dir = 1;
+	dir = 8;
 	icon_state = "darkbluecorners";
-	tag = "icon-darkbluecorners";
-	temperature = 273.15
+	tag = "icon-darkbluecorners"
 	},
 /area/bridge)
 "bFE" = (
@@ -50606,6 +50714,7 @@
 	},
 /obj/machinery/door/poddoor{
 	density = 0;
+	icon = 'icons/obj/doors/blastdoor_hor.dmi';
 	icon_state = "open";
 	id = "council blast";
 	layer = 2.9;
@@ -50626,6 +50735,7 @@
 	},
 /obj/machinery/door/poddoor{
 	density = 0;
+	icon = 'icons/obj/doors/blastdoor_hor.dmi';
 	icon_state = "open";
 	id = "council blast";
 	layer = 2.9;
@@ -50637,6 +50747,7 @@
 "bHd" = (
 /obj/machinery/door/poddoor{
 	density = 0;
+	icon = 'icons/obj/doors/blastdoor_hor.dmi';
 	icon_state = "open";
 	id = "council blast";
 	layer = 2.9;
@@ -50666,6 +50777,7 @@
 	},
 /obj/machinery/door/poddoor{
 	density = 0;
+	icon = 'icons/obj/doors/blastdoor_hor.dmi';
 	icon_state = "open";
 	id = "council blast";
 	layer = 2.9;
@@ -51501,9 +51613,6 @@
 	scrub_N2O = 1;
 	scrub_Toxins = 1
 	},
-/obj/machinery/firealarm{
-	pixel_y = 27
-	},
 /turf/open/floor/plasteel{
 	dir = 1;
 	icon_state = "neutralcorner"
@@ -52058,7 +52167,10 @@
 /obj/item/weapon/wirecutters,
 /obj/item/weapon/screwdriver,
 /obj/item/weapon/wrench,
-/turf/open/floor/plasteel,
+/turf/open/floor/plasteel{
+	icon_state = "caution";
+	dir = 4
+	},
 /area/atmos)
 "bJD" = (
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/visible{
@@ -52518,6 +52630,10 @@
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
+	},
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -24
 	},
 /turf/open/floor/plasteel{
 	dir = 8;
@@ -54174,7 +54290,10 @@
 /area/atmos)
 "bNj" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
-/turf/open/floor/plasteel,
+/turf/open/floor/plasteel{
+	icon_state = "caution";
+	dir = 4
+	},
 /area/atmos)
 "bNk" = (
 /obj/effect/spawner/structure/window/reinforced,
@@ -55027,7 +55146,11 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
-/turf/open/floor/plasteel,
+/turf/open/floor/plasteel/caution/corner{
+	tag = "icon-cautioncorner (EAST)";
+	icon_state = "cautioncorner";
+	dir = 4
+	},
 /area/atmos)
 "bOM" = (
 /obj/machinery/atmospherics/pipe/simple/cyan/visible{
@@ -55041,25 +55164,37 @@
 	initialize_directions = 11
 	},
 /obj/machinery/meter,
-/turf/open/floor/plasteel,
+/turf/open/floor/plasteel{
+	dir = 1;
+	icon_state = "caution"
+	},
 /area/atmos)
 "bOO" = (
 /obj/machinery/atmospherics/pipe/simple/yellow/visible{
 	color = "purple"
 	},
 /obj/machinery/meter,
-/turf/open/floor/plasteel,
+/turf/open/floor/plasteel{
+	dir = 1;
+	icon_state = "caution"
+	},
 /area/atmos)
 "bOP" = (
 /obj/machinery/atmospherics/pipe/simple/yellow/visible{
 	dir = 6
 	},
 /obj/machinery/meter,
-/turf/open/floor/plasteel,
+/turf/open/floor/plasteel{
+	dir = 1;
+	icon_state = "caution"
+	},
 /area/atmos)
 "bOQ" = (
 /obj/machinery/atmospherics/pipe/manifold/yellow/visible,
-/turf/open/floor/plasteel,
+/turf/open/floor/plasteel{
+	dir = 1;
+	icon_state = "caution"
+	},
 /area/atmos)
 "bOR" = (
 /obj/machinery/atmospherics/pipe/manifold/yellow/visible{
@@ -55068,7 +55203,10 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/turf/open/floor/plasteel,
+/turf/open/floor/plasteel{
+	dir = 1;
+	icon_state = "caution"
+	},
 /area/atmos)
 "bOS" = (
 /obj/structure/window/reinforced{
@@ -58686,7 +58824,11 @@
 /obj/machinery/atmospherics/pipe/manifold/yellow/visible{
 	dir = 8
 	},
-/turf/open/floor/plasteel,
+/turf/open/floor/plasteel/caution/corner{
+	tag = "icon-cautioncorner (EAST)";
+	icon_state = "cautioncorner";
+	dir = 4
+	},
 /area/atmos)
 "bVx" = (
 /obj/machinery/atmospherics/pipe/simple/green/visible,
@@ -61732,7 +61874,11 @@
 /area/atmos)
 "caH" = (
 /obj/machinery/atmospherics/pipe/manifold4w/yellow/visible,
-/turf/open/floor/plasteel,
+/turf/open/floor/plasteel/caution/corner{
+	tag = "icon-cautioncorner (EAST)";
+	icon_state = "cautioncorner";
+	dir = 4
+	},
 /area/atmos)
 "caI" = (
 /obj/machinery/atmospherics/components/binary/pump{
@@ -61749,9 +61895,10 @@
 	dir = 1;
 	pixel_y = 1
 	},
-/turf/open/floor/plasteel{
-	tag = "icon-vault";
-	icon_state = "vault"
+/turf/open/floor/plasteel/vault{
+	tag = "icon-vault (NORTHEAST)";
+	icon_state = "vault";
+	dir = 5
 	},
 /area/atmos)
 "caJ" = (
@@ -62405,8 +62552,10 @@
 	dir = 4;
 	pixel_x = 0
 	},
-/turf/open/floor/plasteel{
-	icon_state = "vault"
+/turf/open/floor/plasteel/vault{
+	tag = "icon-vault (NORTHEAST)";
+	icon_state = "vault";
+	dir = 5
 	},
 /area/atmos)
 "cbP" = (
@@ -63225,6 +63374,13 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
+/obj/machinery/door/poddoor{
+	density = 0;
+	icon_state = "open";
+	id = "atmos";
+	name = "Atmos Blast Door";
+	opacity = 0
+	},
 /turf/open/floor/plating{
 	icon_state = "warnplate";
 	dir = 4
@@ -63375,7 +63531,7 @@
 /obj/machinery/atmospherics/pipe/manifold/yellow/visible{
 	dir = 4
 	},
-/turf/open/floor/plasteel,
+/turf/open/floor/plasteel/caution/corner,
 /area/atmos)
 "cdw" = (
 /obj/machinery/atmospherics/components/trinary/filter{
@@ -63388,8 +63544,10 @@
 	pixel_x = 0
 	},
 /obj/structure/window/reinforced,
-/turf/open/floor/plasteel{
-	icon_state = "vault"
+/turf/open/floor/plasteel/vault{
+	tag = "icon-vault (NORTHEAST)";
+	icon_state = "vault";
+	dir = 5
 	},
 /area/atmos)
 "cdx" = (
@@ -63989,6 +64147,13 @@
 	},
 /area/maintenance/atmos_control)
 "ceF" = (
+/obj/machinery/door/poddoor{
+	density = 0;
+	icon_state = "open";
+	id = "atmos";
+	name = "Atmos Blast Door";
+	opacity = 0
+	},
 /turf/open/floor/plating{
 	tag = "icon-platingdmg3";
 	icon_state = "platingdmg3"
@@ -64698,7 +64863,7 @@
 	pixel_x = -30
 	},
 /turf/open/floor/plasteel{
-	dir = 8;
+	dir = 10;
 	icon_state = "caution"
 	},
 /area/atmos)
@@ -64706,14 +64871,20 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/visible{
 	dir = 10
 	},
-/turf/open/floor/plasteel,
+/turf/open/floor/plasteel{
+	dir = 2;
+	icon_state = "caution"
+	},
 /area/atmos)
 "cfS" = (
 /obj/machinery/atmospherics/components/binary/pump{
 	dir = 4;
 	name = "N2 to Pure"
 	},
-/turf/open/floor/plasteel,
+/turf/open/floor/plasteel{
+	dir = 2;
+	icon_state = "caution"
+	},
 /area/atmos)
 "cfT" = (
 /obj/machinery/atmospherics/pipe/simple/yellow/visible{
@@ -64726,20 +64897,27 @@
 /obj/machinery/atmospherics/pipe/simple/yellow/visible{
 	dir = 4
 	},
-/turf/open/floor/plasteel,
+/turf/open/floor/plasteel/caution/corner,
 /area/atmos)
 "cfV" = (
 /obj/machinery/atmospherics/pipe/manifold/yellow/visible{
 	dir = 1
 	},
-/turf/open/floor/plasteel,
+/turf/open/floor/plasteel{
+	dir = 2;
+	icon_state = "caution"
+	},
 /area/atmos)
 "cfW" = (
 /obj/machinery/atmospherics/pipe/manifold/yellow/visible{
 	dir = 4
 	},
 /obj/machinery/meter,
-/turf/open/floor/plasteel,
+/turf/open/floor/plasteel/caution/corner{
+	tag = "icon-cautioncorner (EAST)";
+	icon_state = "cautioncorner";
+	dir = 4
+	},
 /area/atmos)
 "cfX" = (
 /obj/structure/window/reinforced{
@@ -65675,9 +65853,7 @@
 	on = 0
 	},
 /obj/structure/window/reinforced,
-/turf/open/floor/plasteel{
-	icon_state = "redfull"
-	},
+/turf/open/floor/plasteel/terror/red,
 /area/atmos)
 "chq" = (
 /obj/structure/window/reinforced,
@@ -65694,9 +65870,7 @@
 /obj/machinery/atmospherics/pipe/simple/general/visible{
 	color = "#330000"
 	},
-/turf/open/floor/plasteel{
-	icon_state = "redfull"
-	},
+/turf/open/floor/plasteel/terror/red,
 /area/atmos)
 "chr" = (
 /obj/structure/window/reinforced,
@@ -65708,9 +65882,7 @@
 /obj/machinery/atmospherics/pipe/simple/green/visible{
 	dir = 4
 	},
-/turf/open/floor/plasteel{
-	icon_state = "redfull"
-	},
+/turf/open/floor/plasteel/terror/red,
 /area/atmos)
 "chs" = (
 /obj/structure/window/reinforced{
@@ -68937,6 +69109,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/structure/disposalpipe/segment,
 /obj/machinery/door/poddoor/preopen{
+	icon = 'icons/obj/doors/blastdoor_hor.dmi';
 	id = "Biohazard";
 	name = "biohazard containment door"
 	},
@@ -68954,6 +69127,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/machinery/door/poddoor/preopen{
+	icon = 'icons/obj/doors/blastdoor_hor.dmi';
 	id = "Biohazard";
 	name = "biohazard containment door"
 	},
@@ -72467,7 +72641,7 @@
 "csc" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/machinery/door/poddoor/preopen{
-	icon = 'icons/obj/doors/blastdoor.dmi';
+	icon = 'icons/obj/doors/blastdoor_hor.dmi';
 	id = "telelab";
 	name = "test chamber blast door"
 	},
@@ -72476,7 +72650,7 @@
 /area/toxins/explab)
 "csd" = (
 /obj/machinery/door/poddoor/preopen{
-	icon = 'icons/obj/doors/blastdoor.dmi';
+	icon = 'icons/obj/doors/blastdoor_hor.dmi';
 	id = "telelab";
 	name = "test chamber blast door"
 	},
@@ -72485,7 +72659,7 @@
 /area/toxins/explab)
 "cse" = (
 /obj/machinery/door/poddoor/preopen{
-	icon = 'icons/obj/doors/blastdoor.dmi';
+	icon = 'icons/obj/doors/blastdoor_hor.dmi';
 	id = "telelab";
 	name = "test chamber blast door"
 	},
@@ -73445,6 +73619,10 @@
 	icon_state = "tube1";
 	dir = 8
 	},
+/obj/machinery/light_switch{
+	pixel_x = -26;
+	pixel_y = 0
+	},
 /turf/open/floor/plasteel{
 	dir = 8;
 	icon_state = "barber"
@@ -74199,6 +74377,14 @@
 	icon_state = "2-8"
 	},
 /obj/structure/filingcabinet/chestdrawer,
+/obj/item/weapon/paper/notice/complaint,
+/obj/item/weapon/paper/notice/complaint,
+/obj/item/weapon/paper/notice/cybernetic_modification,
+/obj/item/weapon/paper/notice/cybernetic_modification,
+/obj/item/weapon/paper/notice/dismissal,
+/obj/item/weapon/paper/notice/dismissal,
+/obj/item/weapon/paper/notice/request,
+/obj/item/weapon/paper/notice/request,
 /turf/open/floor/plasteel{
 	dir = 8;
 	icon_state = "barber"
@@ -76140,6 +76326,7 @@
 	dir = 4
 	},
 /obj/item/weapon/storage/secure/briefcase,
+/obj/item/weapon/paper/notice_show,
 /turf/open/floor/plasteel{
 	dir = 8;
 	icon_state = "barber"
@@ -77452,6 +77639,16 @@
 "czT" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/obj/structure/noticeboard/cmo{
+	dir = 8;
+	icon_state = "nboard00";
+	pixel_x = 30;
+	tag = "icon-nboard00 (WEST)"
+	},
+/obj/item/weapon/paper/notice/request,
+/obj/item/weapon/paper/notice/dismissal,
+/obj/item/weapon/paper/notice/cybernetic_modification,
+/obj/item/weapon/paper/notice/complaint,
 /turf/open/floor/plasteel{
 	dir = 4;
 	icon_state = "whitebluecorner"
@@ -77463,10 +77660,6 @@
 /obj/machinery/disposal/bin,
 /obj/structure/disposalpipe/trunk{
 	dir = 1
-	},
-/obj/machinery/light_switch{
-	pixel_x = -28;
-	pixel_y = 0
 	},
 /obj/machinery/newscaster{
 	pixel_x = 0;
@@ -77651,6 +77844,7 @@
 	pixel_y = -5;
 	req_access_txt = "47"
 	},
+/obj/item/weapon/paper/notice_show,
 /turf/open/floor/plasteel{
 	tag = "icon-cafeteria (NORTHEAST)";
 	icon_state = "cafeteria";
@@ -78184,6 +78378,10 @@
 "cBk" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
 	dir = 8
+	},
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -24
 	},
 /turf/open/floor/plasteel{
 	dir = 5;
@@ -79578,10 +79776,17 @@
 	})
 "cDv" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
-/obj/machinery/firealarm{
-	dir = 4;
-	pixel_x = 24
+/obj/structure/noticeboard/rd{
+	dir = 8;
+	icon_state = "nboard00";
+	pixel_x = 30;
+	tag = "icon-nboard00 (WEST)"
 	},
+/obj/item/weapon/paper/notice/exosuit_passport,
+/obj/item/weapon/paper/notice/request,
+/obj/item/weapon/paper/notice/complaint,
+/obj/item/weapon/paper/notice/dismissal,
+/obj/item/weapon/paper/notice/cybernetic_modification,
 /turf/open/floor/plasteel{
 	dir = 4;
 	icon_state = "whitebluecorner"
@@ -79689,6 +79894,16 @@
 	pixel_x = 29;
 	pixel_y = 0
 	},
+/obj/item/weapon/paper/notice/cybernetic_modification,
+/obj/item/weapon/paper/notice/cybernetic_modification,
+/obj/item/weapon/paper/notice/dismissal,
+/obj/item/weapon/paper/notice/dismissal,
+/obj/item/weapon/paper/notice/complaint,
+/obj/item/weapon/paper/notice/complaint,
+/obj/item/weapon/paper/notice/request,
+/obj/item/weapon/paper/notice/request,
+/obj/item/weapon/paper/notice/exosuit_passport,
+/obj/item/weapon/paper/notice/exosuit_passport,
 /turf/open/floor/plasteel{
 	tag = "icon-cafeteria (NORTHEAST)";
 	icon_state = "cafeteria";
@@ -83030,6 +83245,7 @@
 	},
 /obj/item/weapon/paper_bin,
 /obj/structure/table,
+/obj/item/weapon/paper/morguereminder,
 /turf/open/floor/plasteel/darkvault{
 	dir = 8
 	},
@@ -83041,16 +83257,16 @@
 	},
 /area/hallway/primary/aft)
 "cIY" = (
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
-/obj/item/device/radio/intercom{
-	freerange = 0;
-	frequency = 1459;
-	name = "Station Intercom (General)";
-	pixel_x = 29
+/obj/structure/table/reinforced,
+/obj/item/weapon/paper_bin,
+/obj/structure/noticeboard/robot{
+	pixel_y = 30
 	},
+/obj/item/weapon/paper/notice/exosuit_passport,
+/obj/item/weapon/paper/notice/cybernetic_modification,
+/obj/item/weapon/paper/notice/cyborg_application,
 /turf/open/floor/plasteel{
-	dir = 2;
-	icon_state = "purplecorner"
+	icon_state = "purplefull"
 	},
 /area/hallway/primary/aft)
 "cIZ" = (
@@ -83595,6 +83811,12 @@
 	pixel_y = 26;
 	req_access_txt = "29"
 	},
+/obj/item/weapon/paper/notice/cyborg_application,
+/obj/item/weapon/paper/notice/cyborg_application,
+/obj/item/weapon/paper/notice/cybernetic_modification,
+/obj/item/weapon/paper/notice/cybernetic_modification,
+/obj/item/weapon/paper/notice/exosuit_passport,
+/obj/item/weapon/paper/notice/exosuit_passport,
 /turf/open/floor/plasteel{
 	icon_state = "bot"
 	},
@@ -89380,6 +89602,7 @@
 /area/maintenance/asmaint2)
 "cTi" = (
 /obj/machinery/door/poddoor/preopen{
+	icon = 'icons/obj/doors/blastdoor_hor.dmi';
 	id = "xeno_blastdoor";
 	name = "biohazard containment door"
 	},
@@ -89392,6 +89615,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/poddoor/preopen{
+	icon = 'icons/obj/doors/blastdoor_hor.dmi';
 	id = "xeno_blastdoor";
 	name = "biohazard containment door"
 	},
@@ -89406,6 +89630,7 @@
 	pixel_x = 29
 	},
 /obj/machinery/door/poddoor/preopen{
+	icon = 'icons/obj/doors/blastdoor_hor.dmi';
 	id = "xeno_blastdoor";
 	name = "biohazard containment door"
 	},
@@ -96627,6 +96852,14 @@
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/structure/noticeboard/hos{
+	pixel_y = 30
+	},
+/obj/item/weapon/paper/notice/arrest_warrant,
+/obj/item/weapon/paper/notice/complaint,
+/obj/item/weapon/paper/notice/confession,
+/obj/item/weapon/paper/notice/dismissal,
+/obj/item/weapon/paper/notice/search_warrant,
 /turf/open/floor/plasteel/red/side{
 	dir = 5
 	},
@@ -96731,6 +96964,92 @@
 /obj/structure/closet/cardboard,
 /turf/open/floor/plating,
 /area/maintenance/asmaint2)
+"dhc" = (
+/obj/machinery/atmospherics/pipe/simple/yellow/visible,
+/turf/open/floor/plasteel/caution/corner,
+/area/atmos)
+"dhb" = (
+/obj/machinery/atmospherics/pipe/simple/cyan/visible{
+	dir = 4
+	},
+/turf/open/floor/plasteel{
+	dir = 1;
+	icon_state = "caution"
+	},
+/area/atmos)
+"dha" = (
+/obj/structure/noticeboard/hop,
+/obj/item/weapon/paper/notice/job_application,
+/obj/item/weapon/paper/notice/dismissal,
+/obj/item/weapon/paper/notice/request,
+/obj/item/weapon/paper/notice/complaint,
+/turf/closed/wall,
+/area/bridge/meeting_room)
+"dgZ" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 9
+	},
+/turf/closed/wall/r_wall,
+/area/ai_monitored/storage/AIlobby)
+"dgY" = (
+/obj/machinery/atmospherics/pipe/manifold/supply/hidden{
+	dir = 8;
+	initialize_directions = 13
+	},
+/turf/closed/wall/r_wall,
+/area/ai_monitored/storage/AIlobby)
+"dgX" = (
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/lattice,
+/obj/structure/lattice/catwalk,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/turf/open/space,
+/area/space)
+"dgW" = (
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/disposalpipe/sortjunction{
+	dir = 8;
+	icon_state = "pipe-j1s";
+	sortType = 3
+	},
+/turf/open/floor/plasteel,
+/area/hallway/primary/port)
+"dgV" = (
+/obj/machinery/atmospherics/pipe/manifold/supply/hidden,
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/plasteel{
+	dir = 1;
+	icon_state = "neutralcorner"
+	},
+/area/hallway/primary/port)
+"dgU" = (
+/obj/structure/table/reinforced,
+/obj/item/weapon/paper_bin,
+/obj/item/weapon/pen,
+/obj/machinery/door/firedoor,
+/obj/machinery/door/window/westleft{
+	dir = 1;
+	name = "Cargo Desk";
+	req_access_txt = "50"
+	},
+/turf/open/floor/plasteel,
+/area/quartermaster/sorting)
+"dgT" = (
+/obj/structure/table,
+/obj/machinery/computer/stockexchange,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/plasteel,
+/area/quartermaster/sorting)
+"dgS" = (
+/turf/open/floor/plasteel,
+/area/quartermaster/sorting)
 
 (1,1,1) = {"
 aaa
@@ -115870,7 +116189,7 @@ bjH
 blI
 bnI
 bpo
-beS
+bjM
 bsU
 bvu
 bxx
@@ -116127,7 +116446,7 @@ bjI
 blJ
 bnJ
 bpp
-bjM
+dgU
 bsT
 bvn
 bxx
@@ -116380,13 +116699,13 @@ aXj
 beS
 bgx
 bhV
-bjJ
+bjK
 blK
-bnF
+dgT
 bpq
 brk
-bsT
-bvn
+dgV
+dgW
 bxx
 bzs
 bBq
@@ -116637,11 +116956,11 @@ aXj
 beV
 bgy
 bhW
-bjK
+dgS
 blL
-bjK
-bpr
-brl
+bnF
+dgS
+beS
 bta
 bvv
 bxF
@@ -121789,7 +122108,7 @@ bzF
 bBD
 bpA
 bFp
-bFj
+dha
 bII
 bKu
 bMr
@@ -124400,7 +124719,7 @@ cEW
 cFS
 cGT
 cAf
-cIY
+cgD
 cvq
 cKU
 cLO
@@ -124658,7 +124977,7 @@ cCo
 cGU
 cHQ
 cCo
-cwQ
+cIY
 cvr
 cJc
 cJc
@@ -137190,7 +137509,7 @@ aLJ
 aVl
 aWB
 aXS
-aZu
+aSg
 baR
 baR
 baR
@@ -137996,7 +138315,7 @@ caA
 cbJ
 cdn
 bHJ
-bHJ
+bjJ
 chp
 cjc
 cks
@@ -138218,7 +138537,7 @@ aTF
 aVp
 aWF
 aXW
-aZy
+aZu
 aSg
 bcP
 bcP
@@ -138510,7 +138829,7 @@ bNi
 cbL
 cdp
 ceI
-bSg
+bpr
 chr
 cje
 ckt
@@ -139024,7 +139343,7 @@ caC
 bLx
 cdr
 bOM
-cfT
+brl
 cht
 cjg
 cks
@@ -139269,7 +139588,7 @@ bEu
 bEu
 bLy
 bEu
-bOM
+dhb
 bQC
 bSf
 bCr
@@ -140031,7 +140350,7 @@ bsf
 bsh
 but
 bwN
-bsf
+dgY
 bAC
 bCx
 bEx
@@ -140052,7 +140371,7 @@ caF
 cbN
 cdt
 ceL
-cfU
+byR
 chx
 bQJ
 cku
@@ -140288,7 +140607,7 @@ bsf
 bsi
 buu
 bwO
-byR
+bAz
 bAD
 bCy
 bEy
@@ -140544,8 +140863,8 @@ bkO
 bsf
 bsj
 buv
-aQH
-bsf
+dgX
+dgZ
 bAE
 bCz
 bEz
@@ -140556,16 +140875,16 @@ bLD
 bNm
 bOR
 bQH
-bQH
-bQH
+dhc
+aZy
 bVw
 bQH
-bQH
-bQH
+dhc
+aZy
 caH
 bQH
 cdv
-bQH
+aZy
 cfW
 chz
 cji
