@@ -96,6 +96,10 @@
 	name = "Hangar"
 	icon_state = "yellow"
 
+/area/shuttle/science
+	name = "Science Shuttle"
+	blob_allowed = FALSE
+
 /area/CP
 	name = "Control Post"
 	has_gravity = 1

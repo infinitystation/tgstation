@@ -471,9 +471,13 @@
 /turf/open/floor/plasteel/terror/necro/warning,
 /area/mine/lobby)
 "bD" = (
-/obj/structure/holosign/barrier/engineering,
-/turf/open/floor/plating/lavaland/outdoor,
-/area/lavaland/surface/outdoors)
+/obj/machinery/door/airlock/glass_titanium{
+	name = "Science shuttle"
+	},
+/turf/open/floor/plasteel/whitebot/delivery{
+	baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
+	},
+/area/shuttle/science)
 "bE" = (
 /obj/machinery/door/firedoor/border_only{
 	tag = "icon-door_open (NORTH)";
@@ -679,11 +683,7 @@
 	on = 1;
 	scrub_Toxins = 0
 	},
-/turf/open/floor/plasteel/terror/necro/darkred/side{
-	tag = "icon-darkred (WEST)";
-	icon_state = "darkred";
-	dir = 8
-	},
+/turf/open/floor/carpet,
 /area/mine/living_quarters)
 "cl" = (
 /obj/machinery/porta_turret/syndicate/mining,
@@ -1362,9 +1362,28 @@
 	},
 /area/mine/lobby)
 "dD" = (
-/obj/structure/girder,
-/turf/open/floor/plating/lavaland/outdoor,
-/area/lavaland/surface/outdoors)
+/obj/docking_port/mobile{
+	callTime = 120;
+	dir = 4;
+	dwidth = 3;
+	height = 7;
+	id = "mining_sci";
+	name = "Исследователь-15";
+	port_angle = 180;
+	width = 4
+	},
+/obj/docking_port/stationary{
+	area_type = /area/lavaland/surface/outdoors/near;
+	dir = 4;
+	height = 7;
+	id = "mining_base_sci";
+	name = "Mining base";
+	width = 4
+	},
+/turf/closed/wall/shuttle/smooth{
+	baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
+	},
+/area/shuttle/science)
 "dE" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/machinery/camera{
@@ -1672,6 +1691,11 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -25;
+	pixel_y = 0
+	},
 /turf/open/floor/plasteel/terror/necro/brown/corner{
 	tag = "icon-browncorner (NORTH)";
 	icon_state = "browncorner";
@@ -2011,12 +2035,22 @@
 	d2 = 1;
 	icon_state = "1-2"
 	},
+/obj/machinery/door/firedoor/border_only{
+	tag = "icon-door_open (NORTH)";
+	icon_state = "door_open";
+	dir = 1
+	},
 /turf/open/floor/plasteel/stairsnew/grey/left{
 	baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
 	},
 /area/mine/lobby)
 "eG" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/obj/machinery/door/firedoor/border_only{
+	tag = "icon-door_open (NORTH)";
+	icon_state = "door_open";
+	dir = 1
+	},
 /turf/open/floor/plasteel/stairsnew/grey/right{
 	baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
 	},
@@ -2125,21 +2159,23 @@
 /turf/open/floor/plating/lavaland,
 /area/mine/lobby)
 "eR" = (
-/obj/structure/door_assembly/door_assembly_ext/glass,
+/obj/structure/window/shuttle,
+/obj/structure/grille,
 /turf/open/floor/plating/lavaland/outdoor,
-/area/lavaland/surface/outdoors)
+/area/shuttle/science)
 "eS" = (
-/turf/closed/wall/shuttle/smooth/nodiagonal{
+/turf/closed/wall/shuttle/smooth{
 	baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
 	},
-/area/lavaland/surface/outdoors)
+/area/shuttle/science)
 "eT" = (
-/obj/structure/window/reinforced{
-	dir = 4;
-	layer = 2.9
+/obj/structure/table,
+/obj/machinery/newscaster{
+	pixel_y = 32
 	},
-/turf/open/floor/plating/lavaland/outdoor,
-/area/lavaland/surface/outdoors)
+/obj/random/plushie,
+/turf/open/floor/carpet,
+/area/mine/living_quarters)
 "eU" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/structure/cable{
@@ -2707,9 +2743,10 @@
 /turf/open/floor/plasteel/terror/necro/black/outdoor,
 /area/mine/eva)
 "fQ" = (
-/obj/structure/chair/stool,
-/turf/open/floor/plating/lavaland/outdoor,
-/area/lavaland/surface/outdoors)
+/turf/open/floor/plasteel/whitebot{
+	baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
+	},
+/area/shuttle/science)
 "fR" = (
 /obj/structure/fans/tiny/invisible,
 /turf/open/floor/plasteel/terror/necro/warning{
@@ -3129,13 +3166,26 @@
 	dir = 8;
 	id = "mine_shutters2"
 	},
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
 /turf/open/floor/plating/lavaland,
 /area/mine/living_quarters)
 "gv" = (
-/obj/structure/closet/crate,
-/obj/item/stack/sheet/metal/five,
-/turf/open/floor/plating/lavaland/outdoor,
-/area/lavaland/surface/outdoors)
+/obj/structure/curtain/open/shower,
+/obj/item/weapon/soap/deluxe,
+/obj/machinery/light/small,
+/obj/machinery/shower{
+	dir = 4;
+	pixel_x = 5
+	},
+/obj/machinery/newscaster{
+	pixel_y = 32
+	},
+/turf/open/floor/plasteel/terror/necro/freezer,
+/area/mine/living_quarters)
 "gw" = (
 /obj/structure/cable{
 	d1 = 4;
@@ -3511,14 +3561,14 @@
 	density = 0;
 	pixel_y = 26
 	},
-/turf/open/floor/plasteel/terror/necro/black,
+/turf/open/floor/carpet,
 /area/mine/living_quarters)
 "hb" = (
 /obj/machinery/door/airlock{
 	id_tag = "miningdorm1";
 	name = "Room 1"
 	},
-/turf/open/floor/plasteel/terror/necro/darkred,
+/turf/open/floor/wood,
 /area/mine/living_quarters)
 "hc" = (
 /obj/structure/ore_box,
@@ -3601,23 +3651,27 @@
 	},
 /area/mine/storage)
 "hj" = (
-/obj/structure/table,
-/obj/effect/holodeck_effect/cards{
-	pixel_x = -2;
-	pixel_y = 5
+/obj/machinery/light{
+	icon_state = "tube1";
+	dir = 8
 	},
-/obj/item/weapon/reagent_containers/food/drinks/drinkingglass/shotglass,
-/turf/open/floor/plating/lavaland/outdoor,
-/area/lavaland/surface/outdoors)
+/turf/open/floor/plasteel/whitebot{
+	baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
+	},
+/area/shuttle/science)
 "hk" = (
+/obj/structure/mirror{
+	pixel_x = -28
+	},
 /obj/structure/sink{
 	dir = 8;
 	icon_state = "sink";
 	pixel_x = -11;
 	pixel_y = 0
 	},
-/obj/structure/mirror{
-	pixel_x = -24
+/obj/machinery/firealarm{
+	dir = 4;
+	pixel_x = 24
 	},
 /turf/open/floor/plasteel/terror/necro/freezer,
 /area/mine/living_quarters)
@@ -3634,17 +3688,57 @@
 /turf/open/floor/plasteel/terror/necro/brown/corner,
 /area/mine/living_quarters)
 "hn" = (
-/obj/structure/closet/crate,
-/turf/open/floor/plating/lavaland/outdoor,
-/area/lavaland/surface/outdoors)
+/obj/structure/dresser/metal{
+	density = 0;
+	pixel_y = 26
+	},
+/obj/structure/closet/wall{
+	dir = 1;
+	pixel_y = -30
+	},
+/obj/item/weapon/reagent_containers/glass/rag{
+	desc = "I like this.";
+	icon = 'icons/obj/items.dmi';
+	icon_state = "towel";
+	name = "towel"
+	},
+/obj/machinery/button/door{
+	id = "mineshower";
+	name = "Bolt Control";
+	normaldoorcontrol = 1;
+	pixel_x = -10;
+	pixel_y = -25;
+	req_access_txt = "0";
+	specialfunctions = 4
+	},
+/turf/open/floor/plasteel/terror/necro/freezer,
+/area/mine/living_quarters)
 "ho" = (
-/obj/structure/frame/computer,
-/turf/open/floor/plating/lavaland/outdoor,
-/area/lavaland/surface/outdoors)
+/obj/machinery/door/airlock{
+	id_tag = "mineshower";
+	name = "Showers";
+	req_access_txt = "0"
+	},
+/turf/open/floor/plasteel/terror/necro/freezer,
+/area/mine/living_quarters)
 "hp" = (
-/obj/structure/grille,
-/turf/open/floor/plating/lavaland/outdoor,
-/area/lavaland/surface/outdoors)
+/obj/item/device/radio/intercom{
+	broadcasting = 0;
+	listening = 1;
+	name = "Station Intercom (General)";
+	pixel_y = -28
+	},
+/obj/machinery/atmospherics/components/unary/vent_pump{
+	dir = 4;
+	layer = 2.4;
+	on = 1
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 27;
+	pixel_y = 0
+	},
+/turf/open/floor/plasteel/terror/necro/freezer,
+/area/mine/living_quarters)
 "hq" = (
 /obj/structure/ore_box,
 /turf/open/floor/plasteel/terror/necro/darkvault{
@@ -3785,11 +3879,10 @@
 	pixel_y = 32
 	},
 /obj/random/plushie,
-/turf/open/floor/plasteel/terror/necro/darkred/side{
-	tag = "icon-darkred (EAST)";
-	icon_state = "darkred";
-	dir = 4
+/obj/machinery/atmospherics/components/unary/vent_pump{
+	on = 1
 	},
+/turf/open/floor/carpet,
 /area/mine/living_quarters)
 "hD" = (
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden{
@@ -3807,6 +3900,12 @@
 	d1 = 1;
 	d2 = 4;
 	icon_state = "1-4";
+	tag = ""
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8";
 	tag = ""
 	},
 /turf/open/floor/plasteel/terror/necro/brown/corner{
@@ -3830,7 +3929,7 @@
 	},
 /obj/structure/bed,
 /obj/item/weapon/bedsheet/brown,
-/turf/open/floor/plasteel/terror/necro/black,
+/turf/open/floor/carpet,
 /area/mine/living_quarters)
 "hG" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
@@ -3874,19 +3973,20 @@
 /obj/structure/chair{
 	dir = 1
 	},
-/turf/open/floor/plasteel/terror/necro/darkred/side{
-	tag = "icon-darkred (EAST)";
-	icon_state = "darkred";
-	dir = 4
+/obj/item/weapon/storage/secure/safe{
+	pixel_x = 32
 	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 9
+	},
+/turf/open/floor/carpet,
 /area/mine/living_quarters)
 "hL" = (
 /obj/machinery/light/small,
-/obj/machinery/atmospherics/components/unary/vent_pump{
-	dir = 8;
-	on = 1
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
 	},
-/turf/open/floor/plasteel/terror/necro/black,
+/turf/open/floor/carpet,
 /area/mine/living_quarters)
 "hM" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
@@ -3898,11 +3998,7 @@
 	name = "Station Intercom (General)";
 	pixel_y = -28
 	},
-/turf/open/floor/plasteel/terror/necro/darkred/side{
-	tag = "icon-darkred (WEST)";
-	icon_state = "darkred";
-	dir = 8
-	},
+/turf/open/floor/carpet,
 /area/mine/living_quarters)
 "hN" = (
 /obj/machinery/light{
@@ -3934,7 +4030,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
-/turf/open/floor/plasteel/terror/necro/darkred,
+/turf/open/floor/wood,
 /area/mine/living_quarters)
 "hP" = (
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden{
@@ -4056,11 +4152,7 @@
 	on = 1;
 	scrub_Toxins = 0
 	},
-/turf/open/floor/plasteel/terror/necro/darkred/side{
-	tag = "icon-darkred (WEST)";
-	icon_state = "darkred";
-	dir = 8
-	},
+/turf/open/floor/carpet,
 /area/mine/living_quarters)
 "hZ" = (
 /obj/structure/bodycontainer/morgue,
@@ -4093,22 +4185,14 @@
 	},
 /area/mine/storage)
 "ic" = (
-/obj/structure/toilet,
-/obj/machinery/newscaster{
-	pixel_x = -30;
-	pixel_y = 0
-	},
-/obj/machinery/button/door{
-	id = "minetoilet";
-	name = "Bolt Control";
-	normaldoorcontrol = 1;
-	pixel_x = 25;
-	pixel_y = 0;
-	req_access_txt = "0";
-	specialfunctions = 4
-	},
 /obj/machinery/light/small{
 	dir = 1
+	},
+/obj/machinery/atmospherics/components/unary/vent_scrubber{
+	dir = 4;
+	on = 1;
+	scrub_N2O = 0;
+	scrub_Toxins = 0
 	},
 /turf/open/floor/plasteel/terror/necro/freezer,
 /area/mine/living_quarters)
@@ -4120,9 +4204,6 @@
 /turf/open/floor/plasteel/terror/necro/brown/corner,
 /area/mine/living_quarters)
 "ie" = (
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
-	dir = 5
-	},
 /obj/structure/cable{
 	d1 = 1;
 	d2 = 2;
@@ -4130,6 +4211,7 @@
 	pixel_y = 0;
 	tag = ""
 	},
+/obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden,
 /turf/open/floor/plasteel/terror/necro/brown/corner{
 	tag = "icon-browncorner (WEST)";
 	icon_state = "browncorner";
@@ -4165,11 +4247,7 @@
 	on = 1;
 	scrub_Toxins = 0
 	},
-/turf/open/floor/plasteel/terror/necro/darkred/side{
-	tag = "icon-darkred (WEST)";
-	icon_state = "darkred";
-	dir = 8
-	},
+/turf/open/floor/carpet,
 /area/mine/living_quarters)
 "ih" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
@@ -4200,10 +4278,6 @@
 	},
 /area/mine/storage)
 "ij" = (
-/obj/machinery/firealarm{
-	dir = 4;
-	pixel_x = 24
-	},
 /obj/machinery/atmospherics/components/unary/vent_scrubber{
 	dir = 4;
 	on = 1;
@@ -4225,26 +4299,17 @@
 	},
 /area/mine/storage)
 "il" = (
-/obj/machinery/light/small,
-/obj/machinery/atmospherics/components/unary/vent_pump{
-	dir = 8;
-	on = 1
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
 	},
-/obj/structure/sign/poster{
-	icon_state = "poster18";
-	pixel_y = -32;
-	serial_number = 18;
-	tag = "icon-poster18"
+/turf/closed/wall/r_wall{
+	baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
 	},
-/turf/open/floor/plasteel/terror/necro/black,
 /area/mine/living_quarters)
 "im" = (
 /obj/machinery/door/airlock/maintenance{
 	name = "Mining Station Communications";
 	req_access_txt = "48"
-	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	req_access_txt = 1
 	},
 /obj/structure/cable{
 	d1 = 1;
@@ -4252,6 +4317,9 @@
 	icon_state = "1-2";
 	pixel_y = 0;
 	tag = ""
+	},
+/obj/machinery/atmospherics/pipe/manifold/supply/hidden{
+	dir = 4
 	},
 /turf/open/floor/plasteel/terror/necro/darkvault{
 	tag = "icon-vault (WEST)";
@@ -4272,7 +4340,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
-/turf/open/floor/plasteel/terror/necro/darkred,
+/turf/open/floor/wood,
 /area/mine/living_quarters)
 "ip" = (
 /obj/machinery/power/apc{
@@ -4606,6 +4674,122 @@
 	},
 /turf/open/indestructible/hierophant,
 /area/ruin/unpowered/hierophant)
+"jp" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 4
+	},
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock{
+	name = "Unisex Restrooms";
+	req_access_txt = "0"
+	},
+/turf/open/floor/plasteel/terror/necro/freezer,
+/area/mine/living_quarters)
+"jo" = (
+/obj/structure/toilet{
+	dir = 4
+	},
+/obj/machinery/newscaster{
+	pixel_y = 32
+	},
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/machinery/button/door{
+	id = "minetoilet";
+	name = "Bolt Control";
+	normaldoorcontrol = 1;
+	pixel_x = 0;
+	pixel_y = -25;
+	req_access_txt = "0";
+	specialfunctions = 4
+	},
+/turf/open/floor/plasteel/terror/necro/freezer,
+/area/mine/living_quarters)
+"jn" = (
+/obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/poddoor/shutters/preopen{
+	dir = 8;
+	id = "mine_shutters2"
+	},
+/obj/structure/cable,
+/turf/open/floor/plating/lavaland,
+/area/mine/living_quarters)
+"jm" = (
+/obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/poddoor/shutters/preopen{
+	dir = 8;
+	id = "mine_shutters2"
+	},
+/obj/structure/cable,
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable{
+	icon_state = "0-4";
+	d2 = 4
+	},
+/turf/open/floor/plating/lavaland,
+/area/mine/living_quarters)
+"jl" = (
+/obj/structure/frame/computer,
+/turf/open/floor/plasteel/terror/necro/whitepurple/side{
+	tag = "icon-whitepurple (EAST)";
+	icon_state = "whitepurple";
+	dir = 4
+	},
+/area/shuttle/science)
+"jk" = (
+/obj/machinery/computer/shuttle{
+	name = "Science Shuttle Console";
+	possible_destinations = "mining_base_sci";
+	shuttleId = "mining_sci"
+	},
+/turf/open/floor/plasteel/terror/necro/whitepurple/side{
+	tag = "icon-whitepurple (EAST)";
+	icon_state = "whitepurple";
+	dir = 4
+	},
+/area/shuttle/science)
+"jj" = (
+/obj/structure/chair/comfy/shuttle{
+	dir = 4
+	},
+/turf/open/floor/plasteel/terror/necro/whitepurple/side{
+	tag = "icon-whitepurple (WEST)";
+	icon_state = "whitepurple";
+	dir = 8
+	},
+/area/shuttle/science)
+"ji" = (
+/turf/open/floor/plasteel/terror/necro/warnwhite{
+	tag = "icon-warnwhite (WEST)";
+	icon_state = "warnwhite";
+	dir = 8
+	},
+/area/shuttle/science)
+"jh" = (
+/obj/structure/shuttle/engine/platform{
+	dir = 8;
+	layer = 4;
+	pixel_x = 32
+	},
+/obj/structure/shuttle/engine/propulsion{
+	dir = 8;
+	icon_state = "burst_s"
+	},
+/obj/structure/shuttle/engine/platform{
+	dir = 4
+	},
+/turf/open/floor/plating/lavaland/outdoor,
+/area/shuttle/science)
+"jg" = (
+/turf/closed/wall/shuttle/smooth/nodiagonal{
+	baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
+	},
+/area/shuttle/science)
 
 (1,1,1) = {"
 ab
@@ -14338,7 +14522,7 @@ aK
 aK
 aK
 aK
-aK
+at
 at
 at
 at
@@ -14595,7 +14779,7 @@ aK
 aK
 aK
 aK
-aK
+at
 at
 at
 at
@@ -14851,7 +15035,7 @@ aK
 aK
 aK
 aK
-aK
+at
 at
 at
 at
@@ -14862,10 +15046,10 @@ aK
 at
 at
 dD
-aV
+jh
+jh
 eS
-aV
-eS
+aK
 aK
 aK
 aK
@@ -15118,11 +15302,11 @@ at
 at
 at
 at
-dD
-eT
-eS
-eT
-dD
+jg
+jg
+jg
+jg
+aK
 aK
 aK
 aK
@@ -15363,9 +15547,9 @@ aK
 aK
 aK
 aK
-at
-at
-at
+aK
+aK
+aK
 at
 at
 at
@@ -15375,11 +15559,11 @@ eN
 fo
 fo
 gt
-dD
+jg
 fQ
 hj
-fQ
-dD
+jg
+at
 aK
 aK
 aK
@@ -15622,7 +15806,7 @@ cn
 cv
 cv
 cY
-at
+aK
 at
 at
 at
@@ -15633,16 +15817,16 @@ fp
 fR
 eO
 bD
-aV
-fQ
-aV
-hp
-aK
-aK
-aK
+ji
+ji
+jg
 at
 aK
 aK
+aK
+gW
+gW
+gW
 aK
 aK
 aK
@@ -15890,16 +16074,16 @@ fq
 fS
 cs
 eR
-aV
-aV
-aV
-hp
-aK
-aK
-at
-at
+jj
+jj
+eR
 at
 aK
+gW
+gW
+gW
+gv
+gW
 aK
 aK
 aK
@@ -16146,17 +16330,17 @@ eQ
 fq
 fT
 eQ
-dD
-aV
-aV
-ho
-dD
+jg
+jk
+jl
+jg
+at
 aK
-at
-at
-at
-at
-at
+gW
+jo
+gX
+hn
+gW
 aK
 aK
 aK
@@ -16404,19 +16588,19 @@ fr
 bC
 eQ
 eS
-gv
-hn
-hp
+eR
+eR
 eS
 at
+at
 gW
-gW
-gW
+hl
+gX
+ho
 gW
 aV
 aV
 cl
-aK
 aK
 aK
 aK
@@ -16669,9 +16853,9 @@ at
 gW
 ic
 hk
+hp
 gW
 at
-aK
 aK
 aK
 aK
@@ -16920,14 +17104,14 @@ eQ
 gW
 gW
 gu
-gu
-gu
+jm
+jn
 gW
 gW
+jp
 gX
-hl
+il
 gW
-hV
 hV
 aK
 aK
@@ -17440,7 +17624,7 @@ id
 hX
 if
 in
-gW
+hV
 iu
 hV
 aK
@@ -18210,7 +18394,7 @@ hF
 hL
 gX
 hF
-il
+hL
 gW
 at
 aK
@@ -18466,7 +18650,7 @@ gX
 hC
 hK
 gX
-hC
+eT
 hK
 gW
 at
@@ -19240,7 +19424,7 @@ ia
 ia
 ir
 hi
-aK
+at
 aK
 aK
 aK
@@ -20773,10 +20957,10 @@ fH
 gk
 gJ
 eI
-at
-at
-at
+aK
+aK
 aV
+aK
 aK
 aK
 aK
@@ -21030,10 +21214,10 @@ fI
 gl
 gK
 eI
-at
-at
+aK
 aK
 aV
+aK
 aK
 aK
 aK
@@ -21287,10 +21471,10 @@ fJ
 gm
 eI
 eI
-at
 aK
 aK
 cl
+aK
 aK
 aK
 aK
