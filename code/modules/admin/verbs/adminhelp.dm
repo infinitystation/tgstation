@@ -148,6 +148,7 @@
 			final = "[msg] - All admins AFK ([adm["afk"]]/[adm["total"]]), stealthminned ([adm["stealth"]]/[adm["total"]]), or lack[rights2text(requiredflags, " ")] ([adm["noflags"]]/[adm["total"]])"
 		//send2irc(source,final)
 		//send2otherserver(source,final)
+		log_admin("WARNING: [final]")
 
 
 /proc/send2irc(msg,msg2)
