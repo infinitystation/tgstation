@@ -10,7 +10,7 @@
 
 /obj/machinery/suit_storage_unit/terror/empty
 
-/obj/machinery/suit_storage_unit/terror/suit_storage_breath
+/obj/machinery/suit_storage_unit/terror/breath
 	mask_type = /obj/item/clothing/mask/breath
 
 /obj/machinery/suit_storage_unit/terror/hazard
