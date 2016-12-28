@@ -146,8 +146,8 @@
 			final = "[msg] - No admins online"
 		else
 			final = "[msg] - All admins AFK ([adm["afk"]]/[adm["total"]]), stealthminned ([adm["stealth"]]/[adm["total"]]), or lack[rights2text(requiredflags, " ")] ([adm["noflags"]]/[adm["total"]])"
-		send2irc(source,final)
-		send2otherserver(source,final)
+		//send2irc(source,final)
+		//send2otherserver(source,final)
 
 
 /proc/send2irc(msg,msg2)

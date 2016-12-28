@@ -138,7 +138,7 @@ CHECK_RANDOMIZER
 #IPINTEL_DOMAIN check.getipintel.net
 
 ## Uncomment to allow web client connections
-ALLOW_WEBCLIENT
+#ALLOW_WEBCLIENT
 
 ## Uncomment to restrict web client connections to byond members
 ## This makes for a nice pay gate to cut down on ban evading, as the webclient's cid system isn't that great
@@ -238,7 +238,7 @@ NOTIFY_NEW_PLAYER_AGE 0
 
 ## Notify the irc channel when a new player makes their first connection
 ##	Requres database
-IRC_FIRST_CONNECTION_ALERT
+#IRC_FIRST_CONNECTION_ALERT
 
 ## Deny all new connections by ckeys we haven't seen before (exempts admins and only denies the connection if the database is enabled and connected)
 ##	Requires database
