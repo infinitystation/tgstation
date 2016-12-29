@@ -991,19 +991,6 @@
 	maxbodytemp = INFINITY
 	loot = list(/obj/effect/collapse, /obj/structure/closet/crate/necropolis/tendril)
 	del_on_death = 1
-	var/gps = null
-
-/mob/living/simple_animal/hostile/spawner/lavaland/New()
-	..()
-	for(var/F in RANGE_TURFS(1, src))
-		if(ismineralturf(F))
-			var/turf/closed/mineral/M = F
-			M.ChangeTurf(M.turf_type,FALSE,TRUE)
-	gps = new /obj/item/device/gps/internal(src)
-
-/mob/living/simple_animal/hostile/spawner/lavaland/Destroy()
-	qdel(gps)
-	. = ..()
 
 #define MEDAL_PREFIX "Tendril"
 /mob/living/simple_animal/hostile/spawner/lavaland/death()

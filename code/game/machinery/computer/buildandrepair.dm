@@ -184,7 +184,10 @@
 /obj/item/weapon/circuitboard/computer/adv_security
 	name = "circuit board (Advanced Security Camera)"
 	build_path = /obj/machinery/computer/camera_advanced
-	origin_tech = "programming=4;combat=2"
+/obj/item/weapon/circuitboard/computer/adv_security/xenobio
+	name = "circuit board (Slime management console)"
+	build_path = /obj/machinery/computer/camera_advanced/xenobio
+	origin_tech = "programming=4;bluespace=3;biotech=4"
 /obj/item/weapon/circuitboard/computer/aiupload
 	name = "circuit board (AI Upload)"
 	build_path = /obj/machinery/computer/upload/ai

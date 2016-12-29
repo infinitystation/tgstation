@@ -97086,49 +97086,6 @@
 /obj/machinery/atmospherics/pipe/simple/yellow/visible,
 /turf/open/floor/plasteel/caution/corner,
 /area/atmos)
-"dhk" = (
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
-/turf/open/floor/carpet,
-/area/crew_quarters/bar)
-"dhj" = (
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
-	dir = 4
-	},
-/turf/open/floor/carpet,
-/area/crew_quarters/bar)
-"dhi" = (
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
-	dir = 4
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/turf/open/floor/wood,
-/area/crew_quarters/theatre)
-"dhh" = (
-/turf/closed/wall/shuttle/survival,
-/area/space)
-"dhg" = (
-/turf/closed/wall/shuttle/survival/nodiagonal,
-/area/shuttle/supply)
-"dhf" = (
-/obj/structure/closet/crate{
-	icon_state = "crateopen";
-	opened = 1
-	},
-/obj/item/stack/sheet/metal{
-	amount = 10
-	},
-/obj/item/weapon/wrench,
-/obj/random/tool,
-/obj/random/tool,
-/obj/random/tool,
-/turf/open/floor/plating,
-/area/maintenance/aft)
-"dhe" = (
-/turf/closed/wall/shuttle/survival/nodiagonal,
-/area/shuttle/mining)
 "dhd" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -97144,6 +97101,49 @@
 /obj/machinery/light/small,
 /turf/open/floor/plating,
 /area/maintenance/aft)
+"dhe" = (
+/turf/closed/wall/shuttle/survival/nodiagonal,
+/area/shuttle/mining)
+"dhf" = (
+/obj/structure/closet/crate{
+	icon_state = "crateopen";
+	opened = 1
+	},
+/obj/item/stack/sheet/metal{
+	amount = 10
+	},
+/obj/item/weapon/wrench,
+/obj/random/tool,
+/obj/random/tool,
+/obj/random/tool,
+/turf/open/floor/plating,
+/area/maintenance/aft)
+"dhg" = (
+/turf/closed/wall/shuttle/survival/nodiagonal,
+/area/shuttle/supply)
+"dhh" = (
+/turf/closed/wall/shuttle/survival,
+/area/space)
+"dhi" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/turf/open/floor/wood,
+/area/crew_quarters/theatre)
+"dhj" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 4
+	},
+/turf/open/floor/carpet,
+/area/crew_quarters/bar)
+"dhk" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/turf/open/floor/carpet,
+/area/crew_quarters/bar)
 
 (1,1,1) = {"
 aaa
@@ -111646,7 +111646,7 @@ dhg
 dhg
 dhg
 dhg
-dhh
+aJx
 aaa
 aaa
 apb
@@ -113188,7 +113188,7 @@ aSA
 aTU
 dhg
 dhg
-dhh
+aJx
 aaa
 aai
 apb
@@ -131711,7 +131711,7 @@ bAe
 bCc
 bCc
 bCc
-bHt
+bHn
 bJj
 bKU
 bMQ

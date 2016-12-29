@@ -31,6 +31,7 @@
 	attacktext = "glomps"
 	attack_sound = 'sound/effects/blobattack.ogg'
 	butcher_results = list(/obj/item/weapon/reagent_containers/food/snacks/meat/slab = 2)
+	gold_core_spawnable = 0 //Приз данжа.
 
 	var/morphed = 0
 	var/atom/movable/form = null
