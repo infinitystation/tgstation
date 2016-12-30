@@ -11438,7 +11438,16 @@
 /turf/closed/wall/shuttle/smooth,
 /area/shuttle/transport)
 "CL" = (
-/turf/closed/wall/shuttle/smooth,
+/obj/machinery/door/airlock/shuttle{
+	name = "Transport Shuttle Airlock";
+	req_access_txt = "0"
+	},
+/obj/structure/fans/tiny/invisible,
+/turf/open/floor/plasteel/warnwhite/side{
+	tag = "icon-white_warn_side (EAST)";
+	icon_state = "white_warn_side";
+	dir = 4
+	},
 /area/shuttle/transport)
 "CM" = (
 /obj/structure/grille,
@@ -11589,14 +11598,12 @@
 	},
 /area/shuttle/transport)
 "Df" = (
-/obj/structure/window/reinforced{
-	dir = 4;
-	pixel_x = 0
+/obj/machinery/door/airlock/external{
+	name = "Ferry Airlock";
+	req_access_txt = "0"
 	},
-/turf/open/floor/plasteel/darkvault{
-	dir = 8
-	},
-/area/shuttle/transport)
+/turf/open/floor/plating,
+/area/centcom/ferry)
 "Dg" = (
 /obj/structure/chair/comfy/shuttle/black,
 /turf/open/floor/plasteel/blackvault{
@@ -13499,7 +13506,10 @@
 /turf/open/floor/engine/cult,
 /area/wizard_station)
 "HK" = (
-/turf/open/floor/plating,
+/obj/machinery/porta_turret/heavy{
+	scan_range = 15
+	},
+/turf/closed/wall/shuttle/smooth,
 /area/shuttle/NTcruiser)
 "HL" = (
 /obj/structure/rack{
@@ -14595,13 +14605,11 @@
 /area/shuttle/NTcruiser)
 "KF" = (
 /obj/effect/spawner/structure/window/reinforced,
-/turf/open/floor/plating,
+/turf/open/floor/plasteel/black,
 /area/shuttle/NTcruiser)
 "KG" = (
 /obj/structure/window/reinforced,
-/turf/open/floor/plating{
-	icon_state = "warnplate"
-	},
+/turf/open/floor/plasteel/darkwarning,
 /area/shuttle/NTcruiser)
 "KH" = (
 /obj/machinery/porta_turret/heavy{
@@ -14612,8 +14620,7 @@
 	dir = 4;
 	layer = 2.9
 	},
-/turf/open/floor/plating{
-	icon_state = "warnplate";
+/turf/open/floor/plasteel/darkwarning{
 	dir = 6
 	},
 /area/shuttle/NTcruiser)
@@ -14767,7 +14774,7 @@
 	},
 /obj/structure/grille,
 /obj/structure/window/shuttle,
-/turf/open/floor/plating,
+/turf/open/floor/plasteel/black,
 /area/shuttle/NTcruiser)
 "KX" = (
 /obj/machinery/computer/camera_advanced{
@@ -15028,7 +15035,7 @@
 /area/shuttle/NTcruiser)
 "LK" = (
 /obj/docking_port/stationary{
-	area_type = /area/centcom/ferry;
+	area_type = /area/shuttle/NTcruiser;
 	dheight = 0;
 	dir = 8;
 	dwidth = 7;
@@ -15045,7 +15052,7 @@
 	height = 23;
 	id = "cruiser";
 	name = "Cruiser";
-	port_angle = 90;
+	port_angle = 180;
 	width = 15
 	},
 /obj/machinery/door/airlock/glass_external,
@@ -15360,9 +15367,8 @@
 	dir = 1;
 	layer = 2.9
 	},
-/turf/open/floor/plating{
-	dir = 1;
-	icon_state = "warnplate"
+/turf/open/floor/plasteel/darkwarning{
+	dir = 1
 	},
 /area/shuttle/NTcruiser)
 "Mp" = (
@@ -15377,8 +15383,7 @@
 	dir = 4;
 	layer = 2.9
 	},
-/turf/open/floor/plating{
-	icon_state = "warnplate";
+/turf/open/floor/plasteel/darkwarning{
 	dir = 5
 	},
 /area/shuttle/NTcruiser)
@@ -18446,21 +18451,21 @@
 	name = "\improper Syndicate Battleship"
 	})
 "SG" = (
-/obj/structure/sign/skull{
-	pixel_y = 32
+/turf/open/floor/plating{
+	icon_state = "warnplate";
+	dir = 4
 	},
-/turf/open/floor/plasteel/shuttle/red/syndicate,
-/area/shuttle/syndicate{
-	name = "\improper Syndicate Battleship"
-	})
+/area/centcom/ferry)
 "SH" = (
-/obj/machinery/suit_storage_unit/syndicate,
-/turf/open/floor/plasteel/podhatch{
+/obj/structure/shuttle/engine/propulsion{
+	dir = 8;
+	icon_state = "propulsion_r";
+	tag = "icon-propulsion_r (EAST)"
+	},
+/turf/open/floor/plating/warnplate{
 	dir = 8
 	},
-/area/shuttle/syndicate{
-	name = "\improper Syndicate Battleship"
-	})
+/area/shuttle/transport)
 "SI" = (
 /obj/structure/toilet,
 /turf/open/floor{
@@ -18891,21 +18896,22 @@
 	name = "\improper Syndicate Secret Base"
 	})
 "Tt" = (
-/obj/structure/tank_dispenser/oxygen,
-/turf/open/floor/plasteel/podhatch{
-	dir = 6
+/obj/structure/shuttle/engine/heater{
+	tag = "icon-heater (WEST)";
+	icon_state = "heater";
+	dir = 8
 	},
-/area/shuttle/syndicate{
-	name = "\improper Syndicate Battleship"
-	})
+/obj/structure/window/reinforced{
+	dir = 4;
+	pixel_x = 0
+	},
+/turf/open/floor/plating/warnplate{
+	dir = 8
+	},
+/area/shuttle/transport)
 "Tu" = (
-/obj/structure/tank_dispenser/oxygen,
-/turf/open/floor/plasteel/podhatch{
-	dir = 10
-	},
-/area/shuttle/syndicate{
-	name = "\improper Syndicate Battleship"
-	})
+/turf/closed/wall/mineral/titanium/nodiagonal,
+/area/shuttle/transport)
 "Tv" = (
 /turf/closed/indestructible/fakeglass{
 	icon_state = "fakewindows";
@@ -18941,59 +18947,44 @@
 	name = "\improper Syndicate Secret Base"
 	})
 "TA" = (
-/obj/machinery/door/poddoor{
-	id = "Hangar B"
-	},
-/turf/open/floor/plasteel/podhatch{
-	dir = 8
-	},
-/area/shuttle/syndicate{
-	name = "\improper Syndicate Battleship"
-	})
+/turf/closed/wall/mineral/titanium,
+/area/shuttle/transport)
 "TB" = (
-/obj/structure/fans/tiny/invisible,
-/turf/open/floor/plasteel/podhatch{
-	dir = 4
+/obj/structure/window/shuttle,
+/obj/structure/grille,
+/turf/open/floor{
+	icon_state = "dark"
 	},
-/area/shuttle/syndicate{
-	name = "\improper Syndicate Battleship"
-	})
+/area/shuttle/transport)
 "TC" = (
-/obj/machinery/door/airlock/external{
-	name = "Dock B";
-	req_access_txt = "150"
-	},
-/turf/open/floor/plasteel/shuttle/red/syndicate,
-/area/shuttle/syndicate{
-	name = "\improper Syndicate Battleship"
-	})
+/obj/structure/sign/nanotrasen,
+/turf/closed/wall/mineral/titanium,
+/area/shuttle/transport)
 "TD" = (
-/obj/machinery/door/airlock/external{
-	name = "Dock A";
-	req_access_txt = "150"
-	},
-/turf/open/floor/plasteel/shuttle/red/syndicate,
-/area/shuttle/syndicate{
-	name = "\improper Syndicate Battleship"
-	})
-"TE" = (
-/obj/structure/fans/tiny/invisible,
-/turf/open/floor/plasteel/podhatch{
+/obj/structure/shuttle/engine/propulsion{
+	tag = "icon-burst_l (WEST)";
+	icon_state = "burst_l";
 	dir = 8
 	},
-/area/shuttle/syndicate{
-	name = "\improper Syndicate Battleship"
-	})
+/turf/open/floor/plating/warnplate{
+	dir = 8
+	},
+/area/shuttle/transport)
+"TE" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/shuttle/transport)
 "TF" = (
-/obj/machinery/door/poddoor{
-	id = "Hangar A"
+/obj/structure/table/reinforced,
+/obj/machinery/recharger,
+/obj/machinery/vending/wallmed{
+	name = "Emergency NanoMed";
+	pixel_x = -1;
+	pixel_y = 30;
+	req_access_txt = "0";
+	use_power = 0
 	},
-/turf/open/floor/plasteel/podhatch{
-	dir = 4
-	},
-/area/shuttle/syndicate{
-	name = "\improper Syndicate Battleship"
-	})
+/turf/open/floor/plasteel/bot,
+/area/shuttle/transport)
 "TG" = (
 /obj/machinery/door/airlock/external{
 	name = "Dock"
@@ -19062,25 +19053,23 @@
 	name = "\improper Syndicate Secret Base"
 	})
 "TO" = (
-/obj/structure/table,
-/obj/item/weapon/reagent_containers/food/drinks/drinkingglass/shotglass,
-/turf/open/floor/plasteel/shuttle/red/syndicate,
-/area/shuttle/syndicate{
-	name = "\improper Syndicate Battleship"
-	})
+/obj/structure/chair/comfy/shuttle/black,
+/turf/open/floor/plasteel/bot,
+/area/shuttle/transport)
 "TP" = (
-/obj/structure/table,
-/turf/open/floor/plasteel/shuttle/red/syndicate,
-/area/shuttle/syndicate{
-	name = "\improper Syndicate Battleship"
-	})
+/obj/machinery/status_display{
+	density = 0;
+	pixel_x = 0;
+	pixel_y = 32;
+	supply_display = 1
+	},
+/obj/structure/chair/comfy/shuttle/black,
+/turf/open/floor/plasteel/bot,
+/area/shuttle/transport)
 "TQ" = (
-/obj/structure/table,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/vodka,
-/turf/open/floor/plasteel/shuttle/red/syndicate,
-/area/shuttle/syndicate{
-	name = "\improper Syndicate Battleship"
-	})
+/obj/structure/closet/crate,
+/turf/open/floor/plasteel/bot,
+/area/shuttle/transport)
 "TR" = (
 /obj/structure/shuttle/engine/propulsion{
 	icon_state = "propulsion_l"
@@ -19102,13 +19091,12 @@
 	name = "\improper Syndicate Cruiser"
 	})
 "TU" = (
-/obj/structure/chair/office{
-	dir = 1
+/obj/machinery/door/airlock/shuttle{
+	name = "Transport Shuttle Airlock";
+	req_access_txt = "0"
 	},
-/turf/open/floor/plasteel/shuttle/red/syndicate,
-/area/shuttle/syndicate{
-	name = "\improper Syndicate Battleship"
-	})
+/turf/open/floor/plasteel/warnwhite/side,
+/area/shuttle/transport)
 "TV" = (
 /turf/open/floor/plasteel/darkwarning{
 	dir = 10
@@ -19130,163 +19118,169 @@
 	name = "\improper Syndicate Secret Base"
 	})
 "TY" = (
-/obj/machinery/sleeper/syndie{
-	tag = "icon-sleeper_s (NORTH)";
-	icon_state = "sleeper_s";
-	dir = 1
-	},
-/turf/open/floor/plasteel/podhatch{
-	dir = 9
-	},
-/area/shuttle/syndicate{
-	name = "\improper Syndicate Battleship"
-	})
+/obj/structure/fans/tiny/invisible,
+/turf/open/floor/plasteel/delivery,
+/area/shuttle/transport)
 "TZ" = (
-/obj/machinery/recharge_station,
-/turf/open/floor/plasteel/podhatch{
-	dir = 5
-	},
-/area/shuttle/syndicate{
-	name = "\improper Syndicate Battleship"
-	})
+/turf/open/floor/plasteel/delivery,
+/area/shuttle/transport)
 "Ua" = (
-/obj/machinery/recharge_station,
-/turf/open/floor/plasteel/podhatch{
-	dir = 9
-	},
-/area/shuttle/syndicate{
-	name = "\improper Syndicate Battleship"
-	})
-"Ub" = (
-/obj/machinery/sleeper/syndie{
-	tag = "icon-sleeper_s (NORTH)";
-	icon_state = "sleeper_s";
-	dir = 1
-	},
-/turf/open/floor/plasteel/podhatch{
-	dir = 5
-	},
-/area/shuttle/syndicate{
-	name = "\improper Syndicate Battleship"
-	})
-"Uc" = (
-/obj/structure/shuttle/engine/heater,
-/obj/structure/shuttle/engine/platform,
-/turf/closed/wall/shuttle{
-	icon_state = "wall3"
-	},
-/area/shuttle/syndicate{
-	name = "\improper Syndicate Battleship"
-	})
-"Ud" = (
-/obj/machinery/computer/mech_bay_power_console,
-/turf/open/floor/plasteel/podhatch{
-	dir = 1
-	},
-/area/shuttle/syndicate{
-	name = "\improper Syndicate Battleship"
-	})
-"Ue" = (
-/turf/open/floor/plasteel/podhatch{
-	dir = 1
-	},
-/area/shuttle/syndicate{
-	name = "\improper Syndicate Battleship"
-	})
-"Uf" = (
-/turf/open/space,
-/turf/closed/wall/shuttle{
-	icon_state = "diagonalWall3"
-	},
-/area/shuttle/syndicate{
-	name = "\improper Syndicate Battleship"
-	})
-"Ug" = (
-/obj/structure/shuttle/engine/propulsion{
-	icon_state = "burst_s"
-	},
-/obj/structure/shuttle/engine/platform{
-	dir = 1
-	},
-/turf/open/floor/plating/airless,
-/area/shuttle/syndicate{
-	name = "\improper Syndicate Battleship"
-	})
-"Uh" = (
-/obj/machinery/door/window{
-	base_state = "right";
-	dir = 8;
-	icon_state = "right";
-	name = "Tactical Toilet";
-	opacity = 1;
-	req_access_txt = "150"
-	},
-/turf/open/floor/plasteel/shuttle/red/syndicate,
-/area/shuttle/syndicate{
-	name = "\improper Syndicate Battleship"
-	})
-"Ui" = (
-/obj/machinery/mech_bay_recharge_port,
-/turf/open/floor/plasteel/podhatch,
-/area/shuttle/syndicate{
-	name = "\improper Syndicate Battleship"
-	})
-"Uj" = (
-/turf/open/floor/plasteel/podhatch,
-/area/shuttle/syndicate{
-	name = "\improper Syndicate Battleship"
-	})
-"Uk" = (
-/obj/machinery/mech_bay_recharge_port{
+/turf/open/floor/plasteel/warnwhite/end{
+	tag = "icon-white_warn_end (WEST)";
+	icon_state = "white_warn_end";
 	dir = 8
 	},
-/turf/open/floor/plasteel/podhatch,
-/area/shuttle/syndicate{
-	name = "\improper Syndicate Battleship"
-	})
-"Ul" = (
-/turf/open/space,
-/turf/closed/wall/shuttle{
-	dir = 4;
-	icon_state = "diagonalWall3"
+/area/shuttle/transport)
+"Ub" = (
+/turf/open/floor/plasteel/warnwhite/side{
+	tag = "icon-white_warn_side (EAST)";
+	icon_state = "white_warn_side";
+	dir = 4
 	},
-/area/shuttle/syndicate{
-	name = "\improper Syndicate Battleship"
-	})
-"Um" = (
-/obj/structure/toilet{
+/area/shuttle/transport)
+"Uc" = (
+/turf/open/floor/plasteel/warnwhite/end{
+	tag = "icon-white_warn_end (EAST)";
+	icon_state = "white_warn_end";
+	dir = 4
+	},
+/area/shuttle/transport)
+"Ud" = (
+/obj/structure/chair/comfy/shuttle/black{
+	dir = 4
+	},
+/turf/open/floor/plasteel/warnwhite/end{
+	tag = "icon-white_warn_end (WEST)";
+	icon_state = "white_warn_end";
+	dir = 8
+	},
+/area/shuttle/transport)
+"Ue" = (
+/obj/machinery/computer/shuttle/ferry/request,
+/turf/open/floor/plasteel/warnwhite/end{
+	tag = "icon-white_warn_end (EAST)";
+	icon_state = "white_warn_end";
+	dir = 4
+	},
+/area/shuttle/transport)
+"Uf" = (
+/obj/structure/window/shuttle,
+/obj/structure/grille,
+/obj/docking_port/stationary{
+	area_type = /area/centcom/ferry;
+	dir = 8;
+	dwidth = 2;
+	height = 14;
+	id = "ferry_away";
+	name = "unknown";
+	turf_type = /turf/open/floor/plating;
+	width = 5
+	},
+/obj/docking_port/mobile{
+	dir = 8;
+	dwidth = 2;
+	height = 14;
+	id = "ferry";
+	name = "Транспортный шаттл";
+	port_angle = 0;
+	width = 5
+	},
+/turf/open/floor{
+	icon_state = "dark"
+	},
+/area/shuttle/transport)
+"Ug" = (
+/obj/structure/shuttle/engine/propulsion{
+	tag = "icon-burst_r (WEST)";
+	icon_state = "burst_r";
+	dir = 8
+	},
+/turf/open/floor/plating/warnplate{
+	dir = 8
+	},
+/area/shuttle/transport)
+"Uh" = (
+/obj/structure/table/reinforced,
+/obj/machinery/recharger,
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 0;
+	pixel_y = -30
+	},
+/turf/open/floor/plasteel/bot,
+/area/shuttle/transport)
+"Ui" = (
+/obj/structure/chair/comfy/shuttle/black{
 	dir = 1
 	},
-/turf/open/floor/plasteel/shuttle/red/syndicate,
-/area/shuttle/syndicate{
-	name = "\improper Syndicate Battleship"
-	})
-"Un" = (
-/obj/structure/reagent_dispensers/fueltank,
-/turf/open/floor/plasteel/shuttle/red/syndicate,
-/area/shuttle/syndicate{
-	name = "\improper Syndicate Battleship"
-	})
-"Uo" = (
+/turf/open/floor/plasteel/bot,
+/area/shuttle/transport)
+"Uj" = (
+/obj/machinery/ai_status_display{
+	pixel_x = 0;
+	pixel_y = -32
+	},
+/obj/structure/chair/comfy/shuttle/black{
+	dir = 1
+	},
+/turf/open/floor/plasteel/bot,
+/area/shuttle/transport)
+"Uk" = (
 /obj/structure/shuttle/engine/propulsion{
+	dir = 8;
+	icon_state = "propulsion_l";
+	tag = "icon-propulsion_l (EAST)"
+	},
+/turf/open/floor/plating/warnplate{
+	dir = 8
+	},
+/area/shuttle/transport)
+"Ul" = (
+/turf/open/floor/plasteel/darkwarning{
+	dir = 6
+	},
+/area/centcom/ferry)
+"Um" = (
+/turf/open/floor{
+	dir = 6;
+	icon = 'icons/turf/floors.dmi';
+	icon_state = "plating"
+	},
+/obj/machinery/porta_turret/heavy{
+	scan_range = 15
+	},
+/turf/closed/wall/shuttle/smooth,
+/area/shuttle/NTcruiser)
+"Un" = (
+/obj/structure/shuttle/engine/propulsion{
+	dir = 4;
 	icon_state = "propulsion_l"
 	},
 /obj/structure/shuttle/engine/platform{
-	dir = 1
+	dir = 8
 	},
-/turf/open/floor/plating/airless,
-/area/shuttle/syndicate{
-	name = "\improper Syndicate Battleship"
-	})
-"Up" = (
-/obj/structure/shuttle/engine/propulsion,
+/turf/open/floor/plasteel/black,
+/area/shuttle/NTcruiser)
+"Uo" = (
+/obj/structure/shuttle/engine/propulsion{
+	dir = 4;
+	icon_state = "propulsion"
+	},
 /obj/structure/shuttle/engine/platform{
-	dir = 1
+	dir = 8
 	},
-/turf/open/floor/plating/airless,
-/area/shuttle/syndicate{
-	name = "\improper Syndicate Battleship"
-	})
+/turf/open/floor/plasteel/black,
+/area/shuttle/NTcruiser)
+"Up" = (
+/obj/structure/shuttle/engine/propulsion{
+	dir = 4;
+	icon_state = "propulsion_r";
+	tag = "icon-propulsion_r (EAST)"
+	},
+/obj/structure/shuttle/engine/platform{
+	dir = 8
+	},
+/turf/open/floor/plasteel/black,
+/area/shuttle/NTcruiser)
 "Uq" = (
 /obj/structure/sign/directions/civilian,
 /turf/closed/wall,
@@ -32107,23 +32101,23 @@ aa
 aa
 aa
 Ba
-Ce
-Ce
-Ce
-Ce
-Ce
 Cb
 CJ
 CJ
 CJ
 CJ
 CJ
-GJ
-Ce
-Ce
-Ce
-Ce
-Ce
+CJ
+CJ
+CJ
+CJ
+CJ
+CJ
+CJ
+CJ
+CJ
+CJ
+CJ
 Ba
 aa
 aa
@@ -32364,23 +32358,23 @@ aa
 aa
 aa
 Ba
+Cc
 Ce
 Ce
 Ce
-Cb
-CJ
-HI
+Ce
+Ce
 HN
 KW
 KW
 KW
 HN
-Mr
-CJ
-GJ
 Ce
 Ce
 Ce
+Ce
+Ce
+Gk
 Ba
 aa
 aa
@@ -32621,23 +32615,23 @@ aa
 aa
 aa
 Ba
-Ce
-Ce
-Ce
 Cc
-Nh
-HN
+Ce
+Ce
+Ce
+Ce
+Um
 JV
 KX
 LA
 LQ
 JV
-HN
-Nh
+Um
+Ce
+Ce
+Ce
+Ce
 Gk
-Ce
-Ce
-Ce
 Ba
 aa
 aa
@@ -32878,10 +32872,10 @@ aa
 aa
 aa
 Ba
-Ce
-Ce
-Ce
 Cc
+Ce
+Ce
+Ce
 HN
 JV
 KA
@@ -32891,10 +32885,10 @@ LR
 Mj
 JV
 HN
+Ce
+Ce
+Ce
 Gk
-Ce
-Ce
-Ce
 Ba
 aa
 aa
@@ -33135,10 +33129,10 @@ aa
 aa
 aa
 Ba
-Ce
-Ce
-Ce
 Cc
+Ce
+Ce
+Ce
 HM
 JW
 KB
@@ -33148,10 +33142,10 @@ KZ
 Mk
 Mk
 HM
+Ce
+Ce
+Ce
 Gk
-Ce
-Ce
-Ce
 Ba
 aa
 aa
@@ -33392,10 +33386,10 @@ aa
 aa
 aa
 Ba
-Ce
-Ce
-Ce
 Cc
+Ce
+Ce
+Ce
 HM
 JX
 KC
@@ -33405,10 +33399,10 @@ La
 Ml
 Ms
 HM
+Ce
+Ce
+Ce
 Gk
-Ce
-Ce
-Ce
 Ba
 aa
 aa
@@ -33649,10 +33643,10 @@ aa
 aa
 aa
 Ba
-Ce
-Ce
-Ce
 Cc
+Ce
+Ce
+Ce
 HM
 HM
 HM
@@ -33662,10 +33656,10 @@ HM
 HM
 HM
 HM
+Ce
+Ce
+Ce
 Gk
-Ce
-Ce
-Ce
 Ba
 aa
 aa
@@ -33906,10 +33900,10 @@ aa
 aa
 aa
 Ba
-Ce
-Ce
-Ce
 Cc
+Ce
+Ce
+Ce
 HM
 JY
 HM
@@ -33919,10 +33913,10 @@ LS
 HM
 Mt
 HM
+Ce
+Ce
+Ce
 Gk
-Ce
-Ce
-Ce
 Ba
 aa
 aa
@@ -34163,10 +34157,10 @@ aa
 aa
 aa
 Ba
-Ce
-Ce
-Ce
 Cc
+Ce
+Ce
+Ce
 HM
 JZ
 KD
@@ -34176,10 +34170,10 @@ La
 Mm
 Mu
 HM
+Ce
+Ce
+Ce
 Gk
-Ce
-Ce
-Ce
 Ba
 aa
 aa
@@ -34404,26 +34398,26 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+Ba
+Ba
+Ba
+Ba
+Ba
+Ba
+Ba
+Ba
+Ba
+Ba
+Ba
 aa
 aa
 aa
 aa
 Ba
-Ce
-Ce
-Ce
 Cc
+Ce
+Ce
+Ce
 HN
 HM
 JV
@@ -34433,10 +34427,10 @@ LT
 JV
 HM
 HN
+Ce
+Ce
+Ce
 Gk
-Ce
-Ce
-Ce
 Ba
 aa
 aa
@@ -34661,39 +34655,39 @@ aa
 aa
 aa
 aa
-aa
+Ba
+Ce
+Ce
+SG
+SG
+SG
+SG
+SG
+GJ
+Ce
+Ba
 aa
 aa
 aa
 aa
 Ba
-Ca
-Ca
-Ca
-Ca
-Ca
-Ca
-Ca
-Ca
-Ca
-Ba
+Cc
 Ce
 Ce
 Ce
-Cd
-Di
-CN
+Ce
+Ce
 HM
 Ld
 LE
 LU
 HM
-Gj
-Di
-Gl
 Ce
 Ce
 Ce
+Ce
+Ce
+Gk
 Ba
 aa
 aa
@@ -34918,39 +34912,39 @@ aa
 aa
 aa
 aa
-aa
+Ba
+Ce
+Cc
+SH
+TD
+Ce
+Ug
+Uk
+Gk
+Ce
+Ba
 aa
 aa
 aa
 aa
 Ba
-Cb
-CJ
-CJ
-CJ
-CJ
-CJ
-CJ
-CJ
-GJ
+Cc
 Ce
 Ce
-Cb
-CJ
-CJ
-CJ
-HI
+Ce
+Ce
+Ce
 HM
 Ld
 LE
 LU
 HM
-Mr
-CJ
-CJ
-CJ
-GJ
 Ce
+Ce
+Ce
+Ce
+Ce
+Gk
 Ba
 aa
 aa
@@ -35175,25 +35169,25 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
 Ba
+Ce
 Cc
-CK
-Dd
-DB
-CL
-Dd
-DB
-CK
+Tt
+TE
+TU
+TE
+Tt
 Gk
 Ce
-Ce
+Ba
+Ba
+Ba
+Ba
+Ba
+Ba
 Cc
-Nh
+Ce
+Ce
 HN
 HM
 HM
@@ -35205,9 +35199,9 @@ HM
 HM
 HM
 HN
-Nh
-Gk
 Ce
+Ce
+Gk
 Ba
 aa
 aa
@@ -35432,26 +35426,26 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
 Ba
+Ce
 Cc
-CL
-CL
-CL
-CL
-CL
-CL
-CL
+Tu
+Tu
+TY
+Tu
+Tu
 Gk
 Ce
+DG
+GK
+IR
+JA
+DG
 Ce
 Cc
-HN
-HM
+Ce
+Um
+JV
 Js
 Js
 HM
@@ -35461,10 +35455,10 @@ HM
 HM
 Mv
 MH
-HM
-HN
-Gk
+JV
+Um
 Ce
+Gk
 Ba
 aa
 aa
@@ -35689,24 +35683,24 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
 Ba
-Cc
-CL
-De
-De
-CL
-EJ
-Fw
-CL
-Gk
-Ce
 Ce
 Cc
+TA
+TF
+TZ
+Uh
+TA
+DG
+DG
+DG
+ET
+Ea
+Gn
+DG
+Ce
+Cc
+Ce
 HM
 II
 Jt
@@ -35720,8 +35714,8 @@ Mw
 MI
 MS
 HM
-Gk
 Ce
+Gk
 Ba
 aa
 aa
@@ -35946,24 +35940,24 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
 Ba
+Ce
 Cc
+TB
+TO
+Ua
+TZ
 CL
 Df
-DC
-CL
-EK
-Fx
-CL
-Gk
 Ce
+Df
+ET
+Ea
+Gn
+DG
 Ce
 Cc
+Ce
 HM
 IJ
 Ju
@@ -35977,8 +35971,8 @@ Mx
 LE
 MT
 HM
-Gk
 Ce
+Gk
 Ba
 aa
 aa
@@ -36203,24 +36197,24 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
 Ba
-Cc
-CM
-Dg
-DD
-DV
-EL
-Fy
-CM
-Gk
-Ce
 Ce
 Cc
+TC
+TO
+Ub
+Ui
+TC
+DG
+DG
+DG
+ET
+Ea
+Gn
+DG
+Ce
+Cc
+Ce
 HM
 IK
 Ju
@@ -36234,8 +36228,8 @@ My
 LE
 MU
 HM
-Gk
 Ce
+Gk
 Ba
 aa
 aa
@@ -36460,24 +36454,24 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
 Ba
+Ce
 Cc
-CL
-Dg
-DD
-DW
-EM
-DD
-CL
+TB
+TO
+Ub
+Ui
+TB
 Gk
 Ce
+DG
+ET
+Ea
+Gn
+DG
 Ce
 Cc
+Ce
 HM
 IL
 Jv
@@ -36491,8 +36485,8 @@ Mz
 MJ
 MV
 HM
-Gk
 Ce
+Gk
 Ba
 aa
 aa
@@ -36717,24 +36711,24 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
 Ba
+Ce
 Cc
-CL
-Dg
-DD
-DD
-DD
-DD
-CL
+TB
+TO
+Ub
+Ui
+TB
 Gk
 Ce
-Cb
-HI
+DG
+ET
+Ea
+Gn
+DG
+Ce
+Cc
+Ce
 HM
 IM
 Jw
@@ -36748,8 +36742,8 @@ MA
 MI
 MW
 HM
-Mr
-GJ
+Ce
+Gk
 Ba
 aa
 aa
@@ -36974,24 +36968,24 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
 Ba
-Cc
-CK
-Dh
-DE
-DD
-EN
-Dh
-CK
-Gk
 Ce
 Cc
-Nh
+TA
+TP
+Ub
+Uj
+TA
+DG
+DG
+DG
+ET
+Ea
+Gn
+DG
+Ce
+Cc
+Ce
 HM
 IN
 Jw
@@ -37005,7 +36999,7 @@ Mx
 LE
 MX
 HM
-Nh
+Ce
 Gk
 Ba
 aa
@@ -37231,21 +37225,21 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
 Ba
-Cd
-CN
+Ce
+Cc
+TB
+TO
+Uc
+TZ
 CL
-Dg
-DD
-EO
-CL
-Gj
-Gl
+Df
+Ce
+Df
+ET
+Ea
+Gn
+DG
 Ce
 Cc
 HK
@@ -37488,21 +37482,21 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
 Ba
 Ce
 Cc
-CM
-Dg
-DD
-EO
-CM
-Gk
-Ce
+TA
+TQ
+TZ
+TQ
+TA
+DG
+DG
+DG
+ET
+Ea
+Gn
+DG
 Ce
 Cc
 HN
@@ -37745,21 +37739,21 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
 Ba
 Ce
 Cc
-CL
-Dg
-DD
-EO
-CL
+TA
+Tu
+Ud
+Tu
+TA
 Gk
 Ce
+DG
+ET
+Ea
+Gn
+DG
 Ce
 Cc
 HM
@@ -38002,27 +37996,27 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
 Ba
 Ce
 Cc
-CK
-DF
-DX
-DF
-CK
+Ce
+TB
+Ue
+TB
+Ce
 Gk
 Ce
+DG
+ET
+Ea
+Gn
+DG
 Ce
 Cc
 HN
-Ih
-IO
-Jx
+Un
+Uo
+Up
 JV
 KH
 Ln
@@ -38259,21 +38253,21 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
 Ba
 Ce
-Cd
-Di
-DG
-DY
-DG
-Di
-Gl
+Cc
 Ce
+TA
+Uf
+TA
+Ce
+Gk
+Ce
+DG
+EU
+FD
+Ul
+DG
 Ce
 Cd
 Di
@@ -38516,20 +38510,20 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
 Ba
+Ce
+Cd
+Di
+Di
+Di
+Di
+Di
+Gl
+Ce
 Ba
-Ba
-Ba
-DG
-DZ
-DG
-DG
-DG
+DY
+DY
+DY
 DG
 DG
 DG
@@ -38773,20 +38767,20 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
 Ba
-DI
+Ce
+Ce
+Ce
+Ce
+Ce
+Ce
+Ce
+Ce
+Ce
+Ba
+Lp
 Ea
 DI
-FA
-FA
 FA
 FA
 FA
@@ -39030,20 +39024,20 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
 Ba
-DI
+Ba
+Ca
+Ca
+Ca
+Ca
+Ca
+Ca
+Ca
+Ba
+Ba
+Lp
 Ea
 DI
-DZ
-DZ
 DZ
 DZ
 DZ
@@ -39295,12 +39289,12 @@ aa
 aa
 aa
 aa
+aa
+aa
 Ba
-DI
+Lp
 Ea
 EQ
-FB
-FB
 FB
 FB
 FB
@@ -39552,10 +39546,10 @@ aa
 aa
 aa
 aa
+aa
+aa
 Ba
-DI
-Eb
-ER
+Lp
 Ea
 Gm
 Eb
@@ -39809,7 +39803,7 @@ aa
 aa
 aa
 aa
-Ba
+aa
 Ba
 Ba
 ES
@@ -41612,7 +41606,7 @@ aa
 Ba
 Ee
 ET
-FC
+Ea
 Gn
 Ba
 aa

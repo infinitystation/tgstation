@@ -34,8 +34,8 @@ map infinity_metastation
 	default
 endmap
 
-map terror_metastation
-	friendlyname Terro's Meta
+map deltastation2
+	friendlyname Delta Station
 endmap
 
 map pubbystation
