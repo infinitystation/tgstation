@@ -753,3 +753,11 @@
 	item_color = "pmc"
 	can_adjust = 0
 	armor = list(melee = 10, bullet = 5, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0, fire = 10, acid = 5)
+
+/obj/item/clothing/under/janitor_uniform
+	name = "exclusive janitor uniform"
+	desc = "Looks like Nanotrasen got so much money to create this uniform!"
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	icon_state = "janitor_uniform"
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	can_adjust = 0

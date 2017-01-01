@@ -216,3 +216,12 @@
 	flags = HEADBANGPROTECT | HEADCOVERSEYES
 	flags_inv = HIDEHAIR
 	strip_delay = 60
+
+/obj/item/clothing/head/janitor_cap
+	name = "exclusive janitor red cap"
+	desc = "Looks like Nanotrasen got so much money to create this pretty red cap!"
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon_state = "janitor_cap"
+	item_state = "janitor_cap"
+	worn_icon = 'icons/mob/infinity_work.dmi'
