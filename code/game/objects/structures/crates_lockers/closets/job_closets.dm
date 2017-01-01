@@ -75,7 +75,9 @@
 	new /obj/item/clothing/shoes/galoshes(src)
 	new /obj/item/weapon/watertank/janitor(src)
 	new /obj/item/weapon/storage/belt/janitor(src)
-
+	new /obj/item/clothing/head/janitor_cap(src)
+	new /obj/item/clothing/suit/janitor_jacket(src)
+	new /obj/item/clothing/under/janitor_uniform(src)
 
 /obj/structure/closet/lawcloset
 	name = "legal closet"

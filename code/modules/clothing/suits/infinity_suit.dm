@@ -559,3 +559,12 @@
 	strip_delay = 130
 	put_on_delay = 75
 	slowdown = 0.5
+
+/obj/item/clothing/suit/janitor_jacket
+	name = "exclusive janitor jacket"
+	desc = "Looks like Nanotrasen got so much money to create this jacket!"
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon_state = "janitor_jacket"
+	item_state = "ro_suit"
+	worn_icon = 'icons/mob/infinity_work.dmi'
