@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/infinitystation/-tg-station.svg)](https://travis-ci.org/infinitystation/-tg-station)
 
 **Сайт оригинального разработчика:** http://www.tgstation13.org  
-**Оригинальный код:** https://github.com/tgstation/-tg-station  
+**Оригинальный код:** https://github.com/tgstation/tgstation  
 **Код**: https://github.com/infinitystation/-tg-station  
 **Сайт разработчика:** http://infinity.smforum.ru/index.php  
 **IRC (На английском)**: irc://irc.rizon.net/coderbus  
