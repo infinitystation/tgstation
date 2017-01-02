@@ -44,10 +44,15 @@
 	// new display
 	// register for radio system
 
-/obj/machinery/status_display/New()
+/obj/machinery/status_display/New(loc, ndir, building)
 	..()
 	if(SSradio)
 		SSradio.add_object(src, frequency)
+
+	if(building)
+		setDir(ndir)
+		pixel_x = (dir & 3)? 0 : (dir == 4 ? -32 : 32)
+		pixel_y = (dir & 3)? (dir ==1 ? -32 : 32) : 0
 
 /obj/machinery/status_display/initialize()
 	if(SSradio)

@@ -71,7 +71,18 @@
 					broken = 0
 					icon_state = initial(icon_state)
 					desc = initial(desc)
-	else
+	else if(istype(I, /obj/item/weapon/screwdriver))
+		user << "<span class='notice'>You start unscrew [name][broken ? " remains" : ""]...</span>"
+		playsound(loc, I.usesound, 50, 1)
+		if(do_after(user, 60*I.toolspeed, target = src))
+			playsound(loc, 'sound/items/Deconstruct.ogg', 50, 1)
+			user << "<span class='notice'>You unscrew [name][broken ? " remains" : ""].</span>"
+			if(broken)
+				user << "<span class='warning'>The broken remains of [src] fall on the ground.</span>"
+				new /obj/item/weapon/shard(loc)
+			else
+				new /obj/item/wallframe/mirror(loc)
+			qdel(src)
 		return ..()
 
 /obj/structure/mirror/play_attack_sound(damage_amount, damage_type = BRUTE, damage_flag = 0)
@@ -220,3 +231,10 @@
 
 /obj/structure/mirror/magic/proc/curse(mob/living/user)
 	return
+
+/obj/structure/mirror/New(loc, ndir, building)
+	..()
+	if(building)
+		setDir(ndir)
+		pixel_x = (dir & 3)? 0 : (dir == 4 ? -28 : 28)
+		pixel_y = (dir & 3)? (dir ==1 ? -28 : 28) : 0
