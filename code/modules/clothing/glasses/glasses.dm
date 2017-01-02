@@ -11,6 +11,8 @@
 
 /obj/item/clothing/glasses/weldingvisortoggle(mob/user)
 	. = ..()
+	if(/obj/item/clothing/glasses/welding)
+		return
 	if(. && user)
 		user.update_sight()
 
