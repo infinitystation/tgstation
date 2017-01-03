@@ -14,7 +14,8 @@
 	/turf/open/floor,
 	/turf/closed/wall,
 	/obj/structure/falsewall,
-	/turf/closed/indestructible/riveted/infinity)
+	/turf/closed/indestructible/riveted/infinity,
+	/turf/closed/indestructible/riveted/darksteel)
 	smooth = SMOOTH_MORE
 	//	flags = CONDUCT
 
