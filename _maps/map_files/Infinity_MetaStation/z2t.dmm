@@ -11120,9 +11120,6 @@
 /area/centcom/security)
 "BS" = (
 /obj/machinery/porta_turret/heavy/central_command,
-/obj/structure/sign/directions/dock/three{
-	pixel_x = -32
-	},
 /turf/open/floor/plating/airless,
 /area/centcom/security)
 "BT" = (
@@ -38024,9 +38021,9 @@ LK
 Mc
 Mp
 JV
-Ih
-IO
-Jx
+Un
+Uo
+Up
 Nu
 Gk
 Ba
@@ -59856,7 +59853,7 @@ Fl
 EB
 Fl
 EB
-Ho
+IH
 AE
 aa
 AE

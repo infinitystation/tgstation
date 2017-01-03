@@ -17,8 +17,16 @@ map birdstation
 	friendlyname Birdboat Station
 endmap
 
-map deltastation2
-	friendlyname Delta Station
+map tgstation2
+	friendlyname Box (TG Station 2)
+endmap
+
+map dreamstation
+	friendlyname Dream Station
+endmap
+
+map ministation
+	friendlyname Mini Station
 endmap
 
 map infinity_metastation
@@ -26,18 +34,10 @@ map infinity_metastation
 	default
 endmap
 
-map metastation
-	friendlyname Meta Station
-endmap
-
-map ministation
-	friendlyname Mini Station
+map deltastation2
+	friendlyname Delta Station
 endmap
 
 map pubbystation
 	friendlyname Pubby Station
-endmap
-
-map tgstation2
-	friendlyname Box (TG Station 2)
 endmap
