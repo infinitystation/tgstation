@@ -98,6 +98,7 @@
 	storage_slots = INFINITY
 	max_combined_w_class = INFINITY
 	origin_tech = "bluespace=4;materials=3;engineering=3"
+	icon = 'icons/obj/infinity_object.dmi'
 	icon_state = "satchel_bspace"
 
 // -----------------------------

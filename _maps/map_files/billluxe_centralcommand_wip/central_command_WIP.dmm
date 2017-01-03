@@ -3,13 +3,19 @@
 /turf/open/space,
 /area/space)
 "ab" = (
-/obj/machinery/door/airlock/freezer,
-/turf/open/floor/plasteel/freezer,
-/area/centcom/control)
+/turf/open/space,
+/area/centcom/security)
 "ac" = (
-/turf/closed/indestructible/riveted/darksteel,
+/obj/structure/lattice,
+/turf/open/space,
 /area/centcom/security)
 "ad" = (
+/turf/closed/wall/darksteel,
+/area/centcom/security)
+"ae" = (
+/turf/closed/indestructible/riveted/darksteel,
+/area/centcom/security)
+"af" = (
 /obj/structure/closet/secure_closet/brig{
 	id = "Cell 1c";
 	name = "Cell 1c Locker";
@@ -17,27 +23,28 @@
 	},
 /turf/open/floor/plasteel/black,
 /area/centcom/security)
-"ae" = (
+"ag" = (
 /turf/open/floor/plasteel/darkwarning{
 	dir = 4
 	},
 /area/centcom/security)
-"af" = (
-/obj/effect/spawner/structure/window/reinforced,
-/turf/open/floor/plasteel/black,
-/area/centcom/security)
-"ag" = (
-/obj/structure/table,
-/turf/open/floor/plasteel/green/side{
-	dir = 8
-	},
-/area/centcom)
 "ah" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plasteel/darkred/corner{
+	dir = 4
+	},
+/area/centcom/security)
+"ai" = (
+/turf/open/floor/plasteel/darkred/side{
+	dir = 1
+	},
+/area/centcom/security)
+"aj" = (
 /turf/open/floor/plasteel/darkwarning{
 	dir = 8
 	},
 /area/centcom/security)
-"ai" = (
+"ak" = (
 /obj/structure/closet/secure_closet/brig{
 	id = "Cell 4c";
 	name = "Cell 4 Locker";
@@ -45,7 +52,7 @@
 	},
 /turf/open/floor/plasteel/black,
 /area/centcom/security)
-"aj" = (
+"al" = (
 /obj/structure/sink{
 	dir = 8;
 	icon_state = "sink";
@@ -58,7 +65,7 @@
 	dir = 8
 	},
 /area/centcom/security)
-"ak" = (
+"am" = (
 /obj/machinery/door/window/brigdoor/eastleft{
 	id = "Cell 1c";
 	name = "Cell 1";
@@ -66,7 +73,10 @@
 	},
 /turf/open/floor/plasteel/black,
 /area/centcom/security)
-"al" = (
+"an" = (
+/turf/open/floor/plasteel/black,
+/area/centcom/security)
+"ao" = (
 /obj/machinery/door/window/brigdoor/westright{
 	id = "Cell 4c";
 	name = "Cell 4";
@@ -74,7 +84,7 @@
 	},
 /turf/open/floor/plasteel/black,
 /area/centcom/security)
-"am" = (
+"ap" = (
 /obj/structure/sink{
 	dir = 4;
 	icon_state = "sink";
@@ -87,25 +97,36 @@
 	dir = 8
 	},
 /area/centcom/security)
-"an" = (
+"aq" = (
+/turf/open/space,
+/area/centcom/control)
+"ar" = (
 /obj/structure/bed,
 /obj/item/weapon/bedsheet/brown,
 /turf/open/floor/plasteel/black,
 /area/centcom/security)
-"ao" = (
+"as" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plasteel/darkred/corner,
+/area/centcom/security)
+"at" = (
 /turf/open/floor/plasteel/darkred/corner{
 	dir = 8
 	},
 /area/centcom/security)
-"ap" = (
+"au" = (
 /turf/open/floor/plasteel/darkred/corner,
 /area/centcom/security)
-"aq" = (
-/turf/open/floor/plasteel/green/side{
-	dir = 4
+"av" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plasteel/darkred/corner{
+	dir = 8
 	},
-/area/centcom)
-"ar" = (
+/area/centcom/security)
+"aw" = (
+/turf/closed/wall/r_wall,
+/area/centcom/security)
+"ax" = (
 /obj/machinery/door_timer{
 	dir = 8;
 	id = "Cell 1c";
@@ -117,7 +138,7 @@
 	dir = 8
 	},
 /area/centcom/security)
-"as" = (
+"ay" = (
 /obj/machinery/door_timer{
 	dir = 4;
 	id = "Cell 4c";
@@ -129,7 +150,11 @@
 	dir = 4
 	},
 /area/centcom/security)
-"at" = (
+"az" = (
+/obj/structure/lattice,
+/turf/open/space,
+/area/centcom/control)
+"aA" = (
 /obj/structure/closet/secure_closet/brig{
 	id = "Cell 2c";
 	name = "Cell 2 Locker";
@@ -137,35 +162,30 @@
 	},
 /turf/open/floor/plasteel/black,
 /area/centcom/security)
-"au" = (
-/obj/machinery/door/airlock/centcom{
-	id_tag = "cc_airlock_interior";
-	name = "Centcom";
-	opacity = 1;
-	req_access_txt = "101"
-	},
-/turf/open/floor/plasteel,
-/area/centcom/security)
-"av" = (
-/obj/structure/chair/new_chair,
-/turf/open/floor/plasteel/green/corner{
+"aB" = (
+/turf/open/floor/plasteel/darkred/corner{
 	dir = 1
 	},
-/area/centcom)
-"aw" = (
+/area/centcom/security)
+"aC" = (
+/turf/open/floor/plasteel/darkred/corner{
+	dir = 4
+	},
+/area/centcom/security)
+"aD" = (
 /obj/item/device/flashlight/lamp,
 /obj/structure/table,
 /turf/open/floor/plasteel/darkred/side{
 	dir = 1
 	},
 /area/centcom/security)
-"ax" = (
+"aE" = (
 /obj/structure/chair/comfy/black,
 /turf/open/floor/plasteel/darkred/side{
 	dir = 1
 	},
 /area/centcom/security)
-"ay" = (
+"aF" = (
 /obj/machinery/recharger{
 	active_power_usage = 0;
 	idle_power_usage = 0;
@@ -176,7 +196,13 @@
 	dir = 5
 	},
 /area/centcom/security)
-"az" = (
+"aG" = (
+/turf/closed/wall/darksteel,
+/area/centcom/control)
+"aH" = (
+/turf/closed/wall/darksteel,
+/area/space)
+"aI" = (
 /obj/machinery/door/window/brigdoor/eastleft{
 	id = "Cell 2c";
 	name = "Cell 2";
@@ -184,7 +210,7 @@
 	},
 /turf/open/floor/plasteel/black,
 /area/centcom/security)
-"aA" = (
+"aJ" = (
 /obj/machinery/newscaster{
 	pixel_x = 32
 	},
@@ -192,10 +218,74 @@
 	dir = 4
 	},
 /area/centcom/security)
-"aB" = (
+"aK" = (
+/obj/structure/closet/secure_closet/freezer/fridge,
+/turf/open/floor/plasteel/freezer,
+/area/centcom/control)
+"aL" = (
+/turf/open/floor/plasteel/freezer,
+/area/centcom/control)
+"aM" = (
+/obj/structure/closet/secure_closet/freezer/meat,
+/turf/open/floor/plasteel/freezer,
+/area/centcom/control)
+"aN" = (
+/obj/structure/closet/secure_closet/freezer/cream_pie,
+/turf/open/floor/plasteel/freezer,
+/area/centcom/control)
+"aO" = (
+/obj/structure/table,
+/turf/open/floor/plasteel/cafeteria,
+/area/centcom/control)
+"aP" = (
+/obj/structure/table,
+/obj/item/weapon/kitchen/rollingpin,
+/turf/open/floor/plasteel/cafeteria,
+/area/centcom/control)
+"aQ" = (
+/obj/structure/table,
+/obj/item/weapon/storage/fancy/egg_box{
+	pixel_y = 10
+	},
+/turf/open/floor/plasteel/cafeteria,
+/area/centcom/control)
+"aR" = (
+/obj/machinery/processor,
+/turf/open/floor/plasteel/cafeteria,
+/area/centcom/control)
+"aS" = (
+/obj/structure/sink/kitchen{
+	pixel_y = 30
+	},
+/turf/open/floor/plasteel/cafeteria,
+/area/centcom/control)
+"aT" = (
+/obj/structure/closet/crate/bin{
+	pixel_y = 10
+	},
+/turf/open/floor/plasteel/cafeteria,
+/area/centcom/control)
+"aU" = (
+/obj/structure/table,
+/obj/machinery/microwave,
+/turf/open/floor/plasteel/cafeteria,
+/area/centcom/control)
+"aV" = (
+/obj/structure/table,
+/obj/machinery/microwave,
+/turf/open/floor/plasteel/cafeteria,
+/area/centcom/security)
+"aW" = (
+/turf/open/floor/plasteel/cafeteria,
+/area/centcom/security)
+"aX" = (
+/obj/machinery/vending/dinnerware,
+/turf/open/floor/plasteel/cafeteria,
+/area/centcom/control)
+"aY" = (
 /turf/open/floor/plasteel/darkred/side,
 /area/centcom/security)
-"aC" = (
+"aZ" = (
 /obj/machinery/firealarm{
 	dir = 1;
 	pixel_y = -24
@@ -208,40 +298,29 @@
 	},
 /turf/open/floor/plasteel/darkred/side,
 /area/centcom/security)
-"aD" = (
+"ba" = (
 /obj/machinery/vending/sustenance,
 /turf/open/floor/plasteel/darkred/side{
 	dir = 9
 	},
 /area/centcom/security)
-"aE" = (
-/turf/closed/wall/darksteel,
-/area/centcom/control)
-"aF" = (
-/obj/structure/table/reinforced,
-/turf/open/floor/plasteel,
-/area/centcom/security)
-"aG" = (
-/turf/open/floor/plasteel/blackvault/corner,
-/area/centcom/evac)
-"aH" = (
-/obj/machinery/door_timer{
-	dir = 8;
-	id = "Cell 2c";
-	name = "Cell 2c";
-	pixel_x = -32;
-	req_access = list(101)
+"bb" = (
+/turf/closed/wall/shuttle/smooth/overspace,
+/area/shuttle/escape)
+"bc" = (
+/turf/closed/wall/shuttle/smooth/nodiagonal,
+/area/shuttle/escape)
+"bd" = (
+/obj/machinery/door/airlock/shuttle{
+	id_tag = "Emeregency_Shuttle_Rear_Airlock_Lock";
+	name = "Emergency Shuttle's Exit"
 	},
-/turf/open/floor/plasteel/darkred/side{
-	dir = 8
+/turf/open/floor/plasteel{
+	icon_state = "delivery";
+	name = "floor"
 	},
-/area/centcom/security)
-"aI" = (
-/turf/open/floor/plasteel/darkred/side{
-	dir = 4
-	},
-/area/centcom/control)
-"aJ" = (
+/area/shuttle/escape)
+"be" = (
 /obj/machinery/door/airlock/shuttle{
 	id_tag = "Emeregency_Shuttle_Rear_Airlock_Lock";
 	name = "Emergency Shuttle's Exit"
@@ -267,114 +346,56 @@
 	name = "floor"
 	},
 /area/shuttle/escape)
-"aK" = (
-/obj/machinery/door/airlock/shuttle{
-	id_tag = "Emeregency_Shuttle_Rear_Airlock_Lock";
-	name = "Emergency Shuttle's Exit"
-	},
-/turf/open/floor/plasteel{
-	icon_state = "delivery";
-	name = "floor"
-	},
-/area/shuttle/escape)
-"aL" = (
-/turf/closed/wall/shuttle/smooth/overspace,
-/area/shuttle/escape)
-"aM" = (
-/turf/closed/wall/shuttle/smooth/nodiagonal,
-/area/shuttle/escape)
-"aN" = (
-/turf/open/floor/plasteel,
+"bf" = (
+/turf/open/floor/plasteel/cafeteria,
 /area/centcom/control)
-"aO" = (
-/obj/structure/closet/secure_closet/brig{
-	id = "Cell 3c";
-	name = "Cell 3 Locker";
+"bg" = (
+/turf/open/floor/plasteel/cafeteria,
+/area/space)
+"bh" = (
+/obj/structure/table,
+/obj/item/weapon/reagent_containers/food/condiment/saltshaker{
+	pixel_y = 10
+	},
+/obj/item/weapon/reagent_containers/food/condiment/peppermill{
+	pixel_y = 5
+	},
+/turf/open/floor/plasteel/cafeteria,
+/area/centcom/control)
+"bi" = (
+/obj/machinery/door_timer{
+	dir = 8;
+	id = "Cell 2c";
+	name = "Cell 2c";
+	pixel_x = -32;
 	req_access = list(101)
 	},
-/turf/open/floor/plasteel/black,
-/area/centcom/security)
-"aP" = (
-/turf/open/floor/carpet,
-/area/shuttle/escape)
-"aQ" = (
 /turf/open/floor/plasteel/darkred/side{
-	dir = 6
+	dir = 8
 	},
 /area/centcom/security)
-"aR" = (
-/obj/machinery/door/airlock/security,
+"bj" = (
 /turf/open/floor/plasteel/darkred/side{
-	dir = 9
+	dir = 4
 	},
 /area/centcom/security)
-"aS" = (
-/obj/machinery/door/airlock/security,
-/turf/open/floor/plasteel/darkred/side{
-	dir = 5
-	},
-/area/centcom/security)
-"aT" = (
-/turf/open/floor/plasteel/green/side{
-	dir = 9
-	},
-/area/centcom/control)
-"aU" = (
-/turf/open/floor/plasteel/green/side{
+"bk" = (
+/obj/structure/shuttle/engine/propulsion{
+	icon_state = "propulsion";
 	dir = 1
 	},
-/area/centcom/control)
-"aV" = (
-/turf/closed/wall/darksteel,
-/area/centcom/evac)
-"aW" = (
-/turf/open/floor/plasteel/green/corner{
+/obj/structure/shuttle/engine/platform,
+/turf/open/floor/plating/airless,
+/area/shuttle/escape)
+"bl" = (
+/obj/structure/shuttle/engine/propulsion{
+	icon_state = "propulsion_l";
 	dir = 1
 	},
-/area/centcom/control)
-"aX" = (
-/obj/machinery/door/airlock/shuttle{
-	name = "Emergency Shuttle Airlock"
-	},
-/turf/open/floor/wood,
+/obj/structure/shuttle/engine/platform,
+/turf/open/floor/plating/airless,
 /area/shuttle/escape)
-"aY" = (
-/obj/structure/table,
-/obj/machinery/button/door{
-	id = "HSS_cell_shuttle_1";
-	name = "HSS Cell A";
-	pixel_x = -6;
-	pixel_y = 26
-	},
-/obj/machinery/button/door{
-	id = "HSS_cell_shuttle_2";
-	name = "HSS Cell B";
-	pixel_x = 6;
-	pixel_y = 26
-	},
-/obj/item/weapon/folder/white,
-/obj/item/weapon/disk/design_disk,
-/obj/item/weapon/disk/tech_disk{
-	pixel_x = 0;
-	pixel_y = 0
-	},
-/turf/open/floor/plasteel{
-	dir = 1;
-	icon_state = "whitepurple"
-	},
-/area/shuttle/escape)
-"aZ" = (
-/obj/structure/closet/secure_closet/rnd_st,
-/turf/open/floor/plasteel{
-	dir = 5;
-	icon_state = "whitepurple";
-	tag = "icon-whitehall (WEST)"
-	},
-/area/shuttle/escape)
-"ba" = (
-/turf/open/floor/plasteel,
-/area/shuttle/escape)
-"bb" = (
+"bm" = (
 /obj/structure/table,
 /obj/item/stack/medical/gauze,
 /obj/item/stack/medical/bruise_pack,
@@ -384,43 +405,91 @@
 	dir = 1
 	},
 /area/shuttle/escape)
-"bc" = (
+"bn" = (
 /turf/open/floor/plasteel/neutral/corner{
 	dir = 8
 	},
 /area/shuttle/escape)
-"bd" = (
-/turf/open/floor/wood,
+"bo" = (
+/turf/open/floor/plasteel/neutral/corner,
 /area/shuttle/escape)
-"be" = (
-/turf/open/floor/plasteel/green/corner{
-	dir = 4
+"bp" = (
+/obj/structure/closet/crate/medical{
+	name = "medical crate"
 	},
-/area/centcom/control)
-"bf" = (
-/obj/machinery/door/window/brigdoor/eastleft{
-	id = "Cell 3c";
-	name = "Cell 3";
+/obj/item/weapon/storage/firstaid/regular,
+/obj/item/weapon/storage/firstaid/o2{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/item/weapon/storage/firstaid/toxin{
+	pixel_x = -4;
+	pixel_y = 3
+	},
+/mob/living/simple_animal/bot/medbot{
+	name = "\improper emergency medibot";
+	pixel_x = -3;
+	pixel_y = 2
+	},
+/turf/open/floor/plasteel{
+	icon_state = "bot";
+	dir = 1
+	},
+/area/shuttle/escape)
+"bq" = (
+/obj/structure/shuttle/engine/propulsion{
+	icon_state = "propulsion_r";
+	dir = 1
+	},
+/obj/structure/shuttle/engine/platform,
+/turf/open/floor/plating/airless,
+/area/shuttle/escape)
+"br" = (
+/turf/open/space,
+/area/centcom)
+"bs" = (
+/obj/structure/lattice,
+/turf/open/space,
+/area/centcom)
+"bt" = (
+/turf/closed/wall/darksteel,
+/area/centcom)
+"bu" = (
+/turf/open/floor/plasteel/freezer,
+/area/centcom)
+"bv" = (
+/obj/machinery/door/airlock/freezer{
 	req_access_txt = "101"
+	},
+/turf/open/floor/plasteel/freezer,
+/area/centcom)
+"bw" = (
+/turf/open/floor/plasteel/cafeteria,
+/area/centcom)
+"bx" = (
+/obj/structure/table,
+/turf/open/floor/plasteel/cafeteria,
+/area/centcom/security)
+"by" = (
+/obj/structure/closet/secure_closet/brig{
+	id = "Cell 3c";
+	name = "Cell 3 Locker";
+	req_access = list(101)
 	},
 /turf/open/floor/plasteel/black,
 /area/centcom/security)
-"bg" = (
-/turf/open/floor/plasteel/green/side{
-	dir = 8
+"bz" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plasteel/darkred/corner{
+	dir = 1
 	},
-/area/centcom/control)
-"bh" = (
+/area/centcom/security)
+"bA" = (
 /turf/open/floor/plasteel/darkred/side{
 	dir = 9
 	},
-/area/centcom/evac)
-"bi" = (
-/turf/open/floor/plasteel/green/side{
-	dir = 10
-	},
-/area/centcom/control)
-"bj" = (
+/area/centcom/security)
+"bB" = (
 /obj/machinery/airalarm{
 	frequency = 1439;
 	locked = 0;
@@ -433,7 +502,7 @@
 	dir = 1
 	},
 /area/centcom/security)
-"bk" = (
+"bC" = (
 /obj/structure/table,
 /obj/item/weapon/storage/box/handcuffs,
 /turf/open/floor{
@@ -442,7 +511,27 @@
 	dir = 5
 	},
 /area/centcom/security)
-"bl" = (
+"bD" = (
+/obj/structure/shuttle/engine/platform{
+	dir = 1
+	},
+/turf/open/floor/plating/airless,
+/area/shuttle/escape)
+"bE" = (
+/obj/structure/tank_dispenser/oxygen{
+	layer = 2.7;
+	pixel_x = -1;
+	pixel_y = 2
+	},
+/turf/open/floor/plasteel{
+	icon_state = "bot";
+	dir = 1
+	},
+/area/shuttle/escape)
+"bF" = (
+/turf/open/floor/plasteel,
+/area/shuttle/escape)
+"bG" = (
 /obj/structure/rack{
 	dir = 1
 	},
@@ -455,57 +544,66 @@
 	dir = 1
 	},
 /area/shuttle/escape)
-"bm" = (
-/obj/structure/chair/comfy/shuttle{
-	dir = 4
+"bH" = (
+/obj/structure/kitchenspike,
+/turf/open/floor/plasteel/freezer,
+/area/centcom)
+"bI" = (
+/obj/machinery/gibber/autogibber,
+/turf/open/floor/plasteel/freezer,
+/area/centcom)
+"bJ" = (
+/obj/structure/table/reinforced,
+/obj/item/weapon/reagent_containers/food/condiment/saltshaker{
+	pixel_x = -10;
+	pixel_y = 5
+	},
+/obj/item/weapon/reagent_containers/food/condiment/peppermill{
+	pixel_y = 5
 	},
 /turf/open/floor/plasteel,
-/area/shuttle/escape)
-"bn" = (
-/obj/structure/table,
-/turf/open/floor/plasteel/cafeteria,
+/area/centcom)
+"bK" = (
+/obj/structure/table/reinforced,
+/obj/item/weapon/reagent_containers/food/snacks/customizable/pie,
+/turf/open/floor/plasteel,
+/area/centcom)
+"bL" = (
+/obj/structure/table/reinforced,
+/turf/open/floor/plasteel,
+/area/centcom)
+"bM" = (
+/obj/structure/table/reinforced,
+/obj/item/weapon/storage/fancy/donut_box,
+/turf/open/floor/plasteel,
 /area/centcom/control)
-"bo" = (
-/obj/machinery/computer/security/telescreen{
-	dir = 1;
-	name = "Storage Cell Monitor";
-	network = list("ST_shuttle");
-	pixel_x = 0;
-	pixel_y = -30
+"bN" = (
+/obj/structure/table/reinforced,
+/obj/item/weapon/storage/fancy/donut_box,
+/turf/open/floor/plasteel,
+/area/space)
+"bO" = (
+/obj/machinery/door/airlock/glass{
+	req_access_txt = "101"
 	},
-/turf/open/floor/plasteel{
-	dir = 2;
-	icon_state = "whitepurple"
-	},
-/area/shuttle/escape)
-"bp" = (
-/turf/open/floor/plasteel/green/side,
+/turf/open/floor/plasteel,
 /area/centcom/control)
-"bq" = (
-/obj/structure/closet/crate/bin,
-/obj/machinery/door_timer{
-	dir = 2;
+"bP" = (
+/obj/machinery/door/window/brigdoor/eastleft{
 	id = "Cell 3c";
-	name = "Cell 3c";
-	pixel_x = 0;
-	pixel_y = -32;
-	req_access = list(101)
+	name = "Cell 3";
+	req_access_txt = "101"
 	},
-/turf/open/floor/plasteel/darkred/side,
+/turf/open/floor/plasteel/black,
 /area/centcom/security)
-"br" = (
-/obj/item/weapon/twohanded/required/kirbyplants{
-	tag = "icon-plant-13";
-	icon_state = "plant-13"
+"bQ" = (
+/obj/machinery/door/airlock/glass_security{
+	name = "Brig";
+	req_access_txt = "2"
 	},
-/obj/machinery/airalarm{
-	dir = 1;
-	icon_state = "alarm0";
-	pixel_y = -22
-	},
-/turf/open/floor/plasteel/darkred/side,
+/turf/open/floor/plasteel/black,
 /area/centcom/security)
-"bs" = (
+"bR" = (
 /obj/machinery/door/airlock/centcom{
 	id_tag = "cc_airlock_interior";
 	name = "Centcom";
@@ -513,13 +611,13 @@
 	req_access_txt = "101"
 	},
 /turf/open/floor/plasteel,
-/area/centcom/evac)
-"bt" = (
+/area/centcom/security)
+"bS" = (
 /turf/open/floor/plasteel{
 	icon_state = "dark"
 	},
 /area/centcom/security)
-"bu" = (
+"bT" = (
 /obj/machinery/computer/prisoner,
 /turf/open/floor{
 	dir = 4;
@@ -527,13 +625,11 @@
 	tag = "icon-darkred"
 	},
 /area/centcom/security)
-"bv" = (
-/turf/open/floor/plasteel{
-	dir = 6;
-	icon_state = "whitepurple"
-	},
-/area/shuttle/escape)
-"bw" = (
+"bU" = (
+/obj/structure/lattice,
+/turf/open/space,
+/area/space)
+"bV" = (
 /obj/item/clothing/suit/hazardvest{
 	desc = "A high-visibility lifejacket complete with whistle and slot for oxygen tanks.";
 	name = "emergency lifejacket"
@@ -617,31 +713,93 @@
 	dir = 1
 	},
 /area/shuttle/escape)
-"bx" = (
-/obj/machinery/door/poddoor{
-	id = "HSS_cell_shuttle_2";
-	name = "HSS Cell B"
-	},
-/turf/open/floor/plasteel/whitebot/delivery,
+"bW" = (
+/turf/open/floor/plasteel/neutral,
 /area/shuttle/escape)
-"by" = (
-/turf/closed/wall/r_wall,
-/area/centcom/evac)
-"bz" = (
+"bX" = (
+/obj/machinery/recharge_station,
+/obj/structure/window/reinforced,
+/turf/open/floor/plasteel{
+	icon_state = "bot";
+	dir = 1
+	},
+/area/shuttle/escape)
+"bY" = (
+/turf/open/floor/plasteel/green/side{
+	dir = 9
+	},
+/area/centcom)
+"bZ" = (
+/turf/open/floor/plasteel/green/side{
+	dir = 10
+	},
+/area/centcom)
+"ca" = (
+/turf/open/floor/plasteel/green/side,
+/area/centcom)
+"cb" = (
+/turf/open/floor/plasteel/green/side,
+/area/centcom/control)
+"cc" = (
+/turf/open/floor/plasteel/green/side{
+	dir = 6
+	},
+/area/centcom/control)
+"cd" = (
+/turf/open/floor/plasteel/green/side{
+	dir = 1
+	},
+/area/centcom/control)
+"ce" = (
+/turf/open/floor/plasteel,
+/area/centcom/security)
+"cf" = (
+/turf/open/floor/plasteel/green/side{
+	dir = 5
+	},
+/area/centcom/control)
+"cg" = (
+/obj/structure/closet/crate/bin,
+/obj/machinery/door_timer{
+	dir = 2;
+	id = "Cell 3c";
+	name = "Cell 3c";
+	pixel_x = 0;
+	pixel_y = -32;
+	req_access = list(101)
+	},
+/turf/open/floor/plasteel/darkred/side,
+/area/centcom/security)
+"ch" = (
+/obj/item/weapon/twohanded/required/kirbyplants{
+	tag = "icon-plant-13";
+	icon_state = "plant-13"
+	},
+/obj/machinery/airalarm{
+	dir = 1;
+	icon_state = "alarm0";
+	pixel_y = -22
+	},
+/turf/open/floor/plasteel/darkred/side,
+/area/centcom/security)
+"ci" = (
 /turf/open/floor/plasteel/darkred/side{
 	dir = 10
 	},
 /area/centcom/security)
-"bA" = (
-/turf/open/floor/plasteel/green/corner{
-	dir = 8
+"cj" = (
+/obj/machinery/button/door{
+	id = "cc_sec_exit_dock";
+	pixel_y = -28;
+	req_access_txt = "101"
 	},
-/area/centcom/control)
-"bB" = (
+/turf/open/floor/plasteel/darkred/side,
+/area/centcom/security)
+"ck" = (
 /obj/structure/chair/office/dark,
 /turf/open/floor/plasteel/darkred/side,
 /area/centcom/security)
-"bC" = (
+"cl" = (
 /obj/machinery/computer/secure_data,
 /turf/open/floor{
 	dir = 4;
@@ -649,288 +807,329 @@
 	tag = "icon-darkred"
 	},
 /area/centcom/security)
-"bD" = (
-/obj/machinery/vending/wallmed{
-	name = "Emergency NanoMed";
-	pixel_x = 0;
-	pixel_y = -30;
-	req_access_txt = "0";
-	use_power = 0
-	},
-/obj/structure/chair/comfy/shuttle{
-	dir = 1
-	},
-/turf/open/floor/wood,
-/area/shuttle/escape)
-"bE" = (
-/obj/structure/chair/comfy/shuttle{
-	dir = 4
-	},
-/turf/open/floor/plasteel/neutral/corner{
-	dir = 8
-	},
-/area/shuttle/escape)
-"bF" = (
+"cm" = (
+/obj/structure/lattice,
+/turf/open/space,
+/area/centcom/evac)
+"cn" = (
+/turf/open/space,
+/area/centcom/evac)
+"co" = (
 /obj/machinery/vending/cigarette,
 /turf/open/floor/plasteel{
 	icon_state = "bot";
 	dir = 1
 	},
 /area/shuttle/escape)
-"bG" = (
+"cp" = (
 /obj/machinery/vending/snack,
 /turf/open/floor/plasteel{
 	icon_state = "bot";
 	dir = 1
 	},
 /area/shuttle/escape)
-"bH" = (
+"cq" = (
 /obj/machinery/vending/cola,
 /turf/open/floor/plasteel{
 	icon_state = "bot";
 	dir = 1
 	},
 /area/shuttle/escape)
-"bI" = (
-/obj/machinery/camera{
-	c_tag = "Shuttle - Storage - Cell B";
-	dir = 1;
-	network = list("ST_shuttle")
+"cr" = (
+/obj/structure/closet/crate/bin{
+	pixel_y = 0
 	},
-/turf/open/floor/plasteel/whitebot,
+/turf/open/floor/plasteel{
+	icon_state = "bot";
+	dir = 1
+	},
 /area/shuttle/escape)
-"bJ" = (
-/turf/open/floor/plasteel/blackvault/corner{
+"cs" = (
+/turf/open/floor/plasteel/neutral/corner{
 	dir = 4
 	},
-/area/centcom/evac)
-"bK" = (
+/area/shuttle/escape)
+"ct" = (
 /turf/open/floor/plasteel/neutral/corner{
 	dir = 1
 	},
 /area/shuttle/escape)
-"bL" = (
+"cu" = (
+/obj/structure/chair/comfy/shuttle{
+	dir = 8
+	},
+/turf/open/floor/plasteel,
+/area/shuttle/escape)
+"cv" = (
 /obj/structure/window/shuttle,
 /obj/structure/grille,
 /turf/open/floor/plating,
 /area/shuttle/escape)
-"bM" = (
-/turf/open/floor/plasteel/green/corner,
-/area/centcom/control)
-"bN" = (
-/obj/structure/table/reinforced,
+"cw" = (
+/obj/machinery/suit_storage_unit/standard_unit,
+/turf/open/floor/plasteel{
+	dir = 2;
+	icon_state = "bot"
+	},
+/area/shuttle/escape)
+"cx" = (
+/turf/open/floor/plasteel/green/side{
+	dir = 1
+	},
+/area/centcom)
+"cy" = (
+/turf/open/floor/plasteel/green/corner{
+	dir = 1
+	},
+/area/centcom)
+"cz" = (
 /turf/open/floor/plasteel,
-/area/centcom/evac)
-"bO" = (
-/obj/machinery/flasher{
-	id = "emshuttlebridgeflash";
-	pixel_y = -24;
-	use_power = 1
-	},
-/obj/structure/chair/comfy/shuttle{
-	dir = 4
-	},
-/turf/open/floor/plasteel/neutral/side{
-	dir = 10
-	},
-/area/shuttle/escape)
-"bP" = (
-/turf/open/floor/plasteel/red/side{
-	dir = 4
-	},
-/area/centcom/evac)
-"bQ" = (
-/obj/structure/chair/comfy/shuttle{
-	dir = 8
-	},
-/obj/machinery/flasher{
-	id = "emshuttlebridgeflash";
-	pixel_y = -24;
-	use_power = 1
-	},
-/turf/open/floor/plasteel/neutral/side{
-	dir = 6
-	},
-/area/shuttle/escape)
-"bR" = (
-/obj/structure/chair/new_chair{
-	dir = 4
-	},
-/turf/open/floor/plasteel/blackvault{
-	dir = 8
-	},
-/area/centcom/evac)
-"bS" = (
-/obj/structure/chair/new_chair{
-	dir = 8
-	},
-/turf/open/floor/plasteel/blackvault{
-	dir = 4
-	},
-/area/centcom/evac)
-"bT" = (
-/turf/open/floor/plasteel/darkred/side{
-	dir = 8
-	},
+/area/centcom)
+"cA" = (
+/turf/open/floor/plasteel,
 /area/centcom/control)
-"bU" = (
-/obj/machinery/door/poddoor,
-/turf/open/floor/plasteel/darkred/corner{
-	dir = 1
-	},
-/area/centcom/security)
-"bV" = (
-/turf/open/floor/plasteel/darkvault{
-	dir = 8
-	},
-/area/centcom/security)
-"bW" = (
-/obj/machinery/door/poddoor/preopen,
-/turf/open/floor/plasteel/darkred/corner{
+"cB" = (
+/turf/open/floor/plasteel,
+/area/space)
+"cC" = (
+/turf/open/floor/plasteel/green/side{
 	dir = 4
 	},
 /area/centcom/security)
-"bX" = (
-/turf/open/floor/plasteel/darkred/side{
-	dir = 5
-	},
-/area/centcom/evac)
-"bY" = (
-/obj/structure/closet/crate/bin,
-/turf/open/floor/plasteel/red/side{
-	dir = 9
-	},
-/area/centcom/evac)
-"bZ" = (
-/obj/structure/chair/new_chair,
-/turf/open/floor/plasteel/red/side{
-	dir = 1
-	},
-/area/centcom/evac)
-"ca" = (
-/turf/open/floor/plasteel/red/side{
-	dir = 1
-	},
-/area/centcom/evac)
-"cb" = (
+"cD" = (
 /obj/structure/table/reinforced,
-/obj/machinery/status_display{
-	pixel_y = 31
+/obj/machinery/door/window/brigdoor/southright{
+	req_access_txt = "101"
 	},
-/turf/open/floor/plasteel/red/side{
-	dir = 1
+/obj/machinery/door/window/brigdoor/northright{
+	req_access_txt = "101"
 	},
+/turf/open/floor/plasteel,
+/area/centcom/security)
+"cE" = (
+/obj/structure/table/reinforced,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced,
+/turf/open/floor/plasteel,
+/area/centcom/security)
+"cF" = (
+/turf/closed/wall/darksteel,
 /area/centcom/evac)
-"cc" = (
+"cG" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/centcom/evac)
+"cH" = (
+/obj/structure/window/shuttle,
+/obj/machinery/door/poddoor/shutters{
+	dir = 8;
+	id = "Emergency_Shuttle_Shutters";
+	name = "Emergency Shuttle shutters"
+	},
+/obj/structure/grille,
+/turf/open/floor/plating,
+/area/shuttle/escape)
+"cI" = (
 /obj/machinery/door/airlock/glass_command{
-	name = "Cockpit";
-	req_access_txt = "19"
+	name = "Shuttle E.V.A Storage"
 	},
 /turf/open/floor/plasteel{
 	icon_state = "delivery";
 	name = "floor"
 	},
 /area/shuttle/escape)
-"cd" = (
-/obj/machinery/vending/coffee,
-/turf/open/floor/plasteel/blackvault{
+"cJ" = (
+/obj/structure/chair/new_chair,
+/turf/open/floor/plasteel/green/side{
 	dir = 8
 	},
-/area/centcom/evac)
-"ce" = (
-/obj/machinery/button/flasher{
-	id = "emshuttlebridgeflash";
-	name = "cockpit flasher button";
-	pixel_y = 24;
-	req_access_txt = "0";
-	req_one_access_txt = "1;63;19"
+/area/centcom)
+"cK" = (
+/obj/structure/chair/new_chair,
+/turf/open/floor/plasteel,
+/area/centcom)
+"cL" = (
+/obj/structure/chair/new_chair,
+/turf/open/floor/plasteel,
+/area/centcom/control)
+"cM" = (
+/obj/structure/chair/new_chair,
+/turf/open/floor/plasteel,
+/area/centcom/security)
+"cN" = (
+/obj/structure/chair/new_chair,
+/turf/open/floor/plasteel/green/side{
+	dir = 4
 	},
-/turf/open/floor/plasteel/red/side{
+/area/centcom/control)
+"cO" = (
+/obj/machinery/door/poddoor{
+	id = "cc_sec_exit_dock"
+	},
+/turf/open/floor/plasteel/darkred/corner{
+	dir = 1
+	},
+/area/centcom/security)
+"cP" = (
+/turf/open/floor/plasteel/darkvault{
+	dir = 8
+	},
+/area/centcom/security)
+"cQ" = (
+/obj/machinery/door/poddoor/preopen{
+	id = "cc_sec_exit_dock"
+	},
+/turf/open/floor/plasteel/darkred/corner{
+	dir = 4
+	},
+/area/centcom/security)
+"cR" = (
+/turf/open/floor/plasteel/darkred/side{
 	dir = 5
 	},
-/area/shuttle/escape)
-"cf" = (
-/obj/structure/table,
-/obj/item/weapon/storage/firstaid/regular,
-/obj/item/weapon/restraints/handcuffs,
+/area/centcom/security)
+"cS" = (
+/turf/open/floor/plasteel/red/side{
+	dir = 9
+	},
+/area/centcom/evac)
+"cT" = (
+/obj/structure/chair/new_chair,
+/turf/open/floor/plasteel/red/side{
+	dir = 1
+	},
+/area/centcom/evac)
+"cU" = (
+/obj/structure/chair/new_chair,
 /obj/machinery/status_display{
 	pixel_y = 31
 	},
-/turf/open/floor/plating{
-	icon_state = "bot"
+/turf/open/floor/plasteel/red/side{
+	dir = 1
 	},
-/area/shuttle/escape)
-"cg" = (
-/turf/open/floor/plasteel/yellowsiding{
+/area/centcom/evac)
+"cV" = (
+/turf/open/floor/plasteel/red/side{
+	dir = 1
+	},
+/area/centcom/evac)
+"cW" = (
+/obj/structure/table/reinforced,
+/obj/machinery/status_display{
+	pixel_y = 31
+	},
+/turf/open/floor/plasteel/red/side{
+	dir = 1
+	},
+/area/centcom/evac)
+"cX" = (
+/obj/structure/closet/crate/bin,
+/turf/open/floor/plasteel/red/side{
+	dir = 9
+	},
+/area/centcom/evac)
+"cY" = (
+/turf/open/floor/plasteel/red/side{
+	dir = 5
+	},
+/area/centcom/evac)
+"cZ" = (
+/obj/structure/chair/comfy/shuttle{
 	dir = 4
 	},
-/area/centcom/evac)
-"ch" = (
-/turf/open/floor/plasteel/green/corner,
-/area/centcom/evac)
-"ci" = (
-/obj/machinery/door/poddoor,
+/turf/open/floor/plasteel/neutral/side{
+	dir = 8
+	},
+/area/shuttle/escape)
+"da" = (
+/obj/structure/sign/bluecross_2{
+	pixel_x = 32
+	},
+/obj/structure/chair/comfy/shuttle{
+	dir = 8
+	},
+/turf/open/floor/plasteel/neutral/side{
+	dir = 4
+	},
+/area/shuttle/escape)
+"db" = (
+/obj/structure/table,
+/turf/open/floor/plasteel/green/side{
+	dir = 8
+	},
+/area/centcom)
+"dc" = (
+/obj/structure/table,
+/turf/open/floor/plasteel,
+/area/centcom)
+"dd" = (
+/obj/structure/table,
+/turf/open/floor/plasteel,
+/area/centcom/control)
+"de" = (
+/obj/structure/table,
+/turf/open/floor/plasteel,
+/area/centcom/security)
+"df" = (
+/obj/structure/table,
+/turf/open/floor/plasteel/green/side{
+	dir = 4
+	},
+/area/centcom/control)
+"dg" = (
+/turf/open/floor/plasteel/darkred/side{
+	dir = 8
+	},
+/area/centcom/security)
+"dh" = (
+/obj/machinery/door/poddoor{
+	id = "cc_sec_exit_dock"
+	},
 /turf/open/floor/plasteel/darkred/corner{
 	dir = 8
 	},
 /area/centcom/security)
-"cj" = (
+"di" = (
 /turf/open/floor/plasteel/darkvault{
 	dir = 1;
 	icon = 'icons/turf/infinity.dmi';
 	icon_state = "darkdelivery"
 	},
 /area/centcom/security)
-"ck" = (
-/obj/machinery/door/poddoor/preopen,
+"dj" = (
+/obj/machinery/door/poddoor/preopen{
+	id = "cc_sec_exit_dock"
+	},
 /turf/open/floor/plasteel/darkred/corner,
 /area/centcom/security)
-"cl" = (
-/turf/open/floor/plasteel/black,
-/area/centcom/evac)
-"cm" = (
-/obj/machinery/door/airlock/security,
+"dk" = (
+/obj/machinery/door/airlock/glass_security{
+	name = "Brig";
+	req_access_txt = "2"
+	},
 /turf/closed/wall/darksteel,
 /area/centcom/security)
-"cn" = (
-/turf/open/floor/plasteel/red/side{
-	dir = 8
-	},
-/area/centcom/evac)
-"co" = (
+"dl" = (
 /turf/open/floor/plasteel,
 /area/centcom/evac)
-"cp" = (
-/turf/closed/indestructible/riveted/darksteel,
-/area/centcom/control)
-"cq" = (
-/obj/machinery/vending/cola,
-/turf/open/floor/plasteel/blackvault{
-	dir = 8
-	},
+"dm" = (
+/turf/open/floor/plasteel/red/side,
 /area/centcom/evac)
-"cr" = (
-/obj/machinery/computer/crew,
-/turf/open/floor/plasteel/neutral/side{
+"dn" = (
+/turf/open/floor/plasteel/red/side{
 	dir = 4
 	},
-/area/shuttle/escape)
-"cs" = (
-/obj/structure/chair/comfy/shuttle{
-	dir = 8
-	},
-/turf/open/floor/plasteel/red/side{
-	dir = 8
-	},
-/area/shuttle/escape)
-"ct" = (
+/area/centcom/evac)
+"do" = (
 /obj/structure/chair/comfy/shuttle/black,
 /obj/machinery/status_display{
 	pixel_y = 31
 	},
 /turf/open/floor/plasteel/shuttle/red,
 /area/shuttle/escape)
-"cu" = (
+"dp" = (
 /obj/structure/chair/comfy/shuttle/black,
 /obj/machinery/flasher{
 	id = "emshuttleflash";
@@ -938,20 +1137,24 @@
 	},
 /turf/open/floor/plasteel/shuttle/red,
 /area/shuttle/escape)
-"cv" = (
+"dq" = (
 /obj/structure/chair/comfy/shuttle/black,
 /turf/open/floor/plasteel/shuttle/red,
 /area/shuttle/escape)
-"cw" = (
-/obj/structure/extinguisher_cabinet{
-	pixel_x = 27;
-	pixel_y = 0
-	},
-/turf/open/floor/plasteel/red/side{
+"dr" = (
+/obj/structure/grille,
+/obj/structure/window/shuttle,
+/turf/open/floor/plating,
+/area/shuttle/escape)
+"ds" = (
+/obj/structure/chair/comfy/shuttle{
 	dir = 4
 	},
+/turf/open/floor/plasteel/neutral/corner{
+	dir = 1
+	},
 /area/shuttle/escape)
-"cx" = (
+"dt" = (
 /obj/structure/chair/comfy/shuttle{
 	dir = 8
 	},
@@ -959,13 +1162,7 @@
 	dir = 4
 	},
 /area/shuttle/escape)
-"cy" = (
-/obj/structure/closet/wardrobe/chemistry_white,
-/turf/open/floor/plasteel/neutral{
-	icon_state = "whiteblue"
-	},
-/area/centcom/control)
-"cz" = (
+"du" = (
 /obj/structure/sink{
 	icon_state = "sink";
 	dir = 8;
@@ -980,20 +1177,105 @@
 	icon_state = "whiteblue"
 	},
 /area/shuttle/escape)
-"cA" = (
-/turf/open/floor/plasteel/red/side{
+"dv" = (
+/obj/structure/table/optable,
+/obj/item/weapon/surgical_drapes,
+/obj/machinery/vending/wallmed{
+	name = "Emergency NanoMed";
+	pixel_x = 0;
+	pixel_y = 30;
+	req_access_txt = "0";
+	use_power = 0
+	},
+/turf/open/floor/plasteel/neutral{
+	dir = 1;
+	icon_state = "whiteblue"
+	},
+/area/shuttle/escape)
+"dw" = (
+/obj/structure/table,
+/obj/item/weapon/scalpel{
+	pixel_y = 12
+	},
+/obj/item/weapon/circular_saw,
+/obj/item/weapon/retractor{
+	pixel_x = 4
+	},
+/obj/item/weapon/hemostat{
+	pixel_x = -4
+	},
+/obj/item/clothing/gloves/color/latex,
+/obj/item/clothing/mask/surgical,
+/obj/structure/sign/nosmoking_2{
+	pixel_x = 32
+	},
+/obj/machinery/status_display{
+	pixel_y = 31
+	},
+/turf/open/floor/plasteel/neutral{
+	dir = 9;
+	icon_state = "whiteblue"
+	},
+/area/shuttle/escape)
+"dx" = (
+/obj/structure/chair/new_chair{
+	dir = 1
+	},
+/turf/open/floor/plasteel/green/side{
 	dir = 10
 	},
-/area/centcom/evac)
-"cB" = (
-/turf/open/floor/plasteel/red/side,
-/area/centcom/evac)
-"cC" = (
-/turf/open/floor/plasteel/red/corner{
+/area/centcom)
+"dy" = (
+/obj/structure/chair/new_chair{
+	dir = 1
+	},
+/turf/open/floor/plasteel/green/side,
+/area/centcom)
+"dz" = (
+/turf/open/floor/plasteel/green/corner{
 	dir = 8
 	},
+/area/centcom)
+"dA" = (
+/turf/open/floor/plasteel/green/corner,
+/area/centcom)
+"dB" = (
+/obj/structure/chair/new_chair{
+	dir = 1
+	},
+/turf/open/floor/plasteel/green/side,
+/area/centcom/control)
+"dC" = (
+/turf/open/floor/plasteel,
+/area/centcom/lobby)
+"dD" = (
+/turf/closed/wall/darksteel,
+/area/centcom/lobby)
+"dE" = (
+/obj/structure/chair/new_chair{
+	dir = 1
+	},
+/turf/open/floor/plasteel/green/side{
+	dir = 6
+	},
+/area/centcom/control)
+"dF" = (
+/obj/machinery/door/airlock/glass_large{
+	name = "Brig";
+	req_access_txt = "0"
+	},
+/turf/open/floor/plasteel/darkred/side{
+	dir = 9
+	},
+/area/centcom/security)
+"dG" = (
+/obj/machinery/door/airlock/glass_security{
+	name = "Brig";
+	req_access_txt = "2"
+	},
+/turf/open/floor/plating,
 /area/centcom/evac)
-"cD" = (
+"dH" = (
 /obj/machinery/door/airlock/glass_external{
 	name = "Docking Port A"
 	},
@@ -1001,34 +1283,27 @@
 	dir = 4
 	},
 /area/centcom/evac)
-"cE" = (
+"dI" = (
 /turf/open/floor/plating,
 /area/centcom/evac)
-"cF" = (
+"dJ" = (
 /obj/machinery/door/airlock/shuttle{
 	id_tag = "Emeregency_Shuttle_Right_Airlock_Lock";
 	name = "Emergency Shuttle Airlock"
 	},
 /turf/open/floor/plasteel/shuttle/red,
 /area/shuttle/escape)
-"cG" = (
-/obj/structure/sign/nosmoking_2{
-	pixel_x = 0;
-	pixel_y = 30
+"dK" = (
+/turf/open/floor/plasteel/shuttle/red,
+/area/shuttle/escape)
+"dL" = (
+/obj/machinery/door/airlock/glass_security{
+	name = "Brig";
+	req_access_txt = "2"
 	},
-/turf/open/floor/plasteel{
-	dir = 9;
-	icon_state = "whiteblue"
-	},
-/area/centcom/control)
-"cH" = (
-/obj/machinery/computer/crew,
-/turf/open/floor/plasteel{
-	dir = 1;
-	icon_state = "whiteblue"
-	},
-/area/centcom/control)
-"cI" = (
+/turf/open/floor/plasteel/shuttle/red,
+/area/shuttle/escape)
+"dM" = (
 /obj/structure/sign/nanotrasen{
 	pixel_x = 32;
 	pixel_y = 0
@@ -1037,56 +1312,126 @@
 	dir = 4
 	},
 /area/shuttle/escape)
-"cJ" = (
+"dN" = (
 /turf/open/floor/plasteel/neutral{
 	icon_state = "white"
 	},
 /area/shuttle/escape)
-"cK" = (
+"dO" = (
+/obj/machinery/sleeper{
+	icon_state = "sleeper-open";
+	dir = 8
+	},
+/turf/open/floor/plasteel/neutral{
+	dir = 4;
+	icon_state = "whiteblue"
+	},
+/area/shuttle/escape)
+"dP" = (
 /turf/open/floor/plasteel/green/side{
+	dir = 8
+	},
+/area/centcom)
+"dQ" = (
+/turf/open/floor/plasteel/green/side{
+	dir = 4
+	},
+/area/centcom)
+"dR" = (
+/turf/open/floor/plasteel/darkred/side{
+	dir = 8
+	},
+/area/centcom/control)
+"dS" = (
+/turf/open/floor/plasteel/darkred/side{
+	dir = 4
+	},
+/area/centcom/control)
+"dT" = (
+/turf/open/floor/plasteel/yellowsiding{
 	dir = 9
 	},
-/area/centcom/evac)
-"cL" = (
-/turf/open/floor/plasteel/green/side{
+/area/centcom/lobby)
+"dU" = (
+/turf/open/floor/plasteel/yellowsiding{
 	dir = 1
 	},
-/area/centcom/evac)
-"cM" = (
-/turf/open/floor/plasteel/green/side{
+/area/centcom/lobby)
+"dV" = (
+/obj/machinery/status_display{
+	pixel_y = 31
+	},
+/turf/open/floor/plasteel/yellowsiding{
+	dir = 1
+	},
+/area/centcom/lobby)
+"dW" = (
+/obj/machinery/status_display{
+	pixel_y = 31
+	},
+/turf/open/floor/plasteel/yellowsiding{
 	dir = 5
 	},
-/area/centcom/evac)
-"cN" = (
+/area/centcom/lobby)
+"dX" = (
 /turf/open/floor/plasteel/loadingarea{
 	dir = 8
 	},
-/area/centcom/evac)
-"cO" = (
-/obj/machinery/door/poddoor,
+/area/centcom/lobby)
+"dY" = (
+/obj/machinery/door/poddoor{
+	id = "cc_entry_dock"
+	},
 /turf/open/floor/plasteel,
-/area/centcom/evac)
-"cP" = (
+/area/centcom/lobby)
+"dZ" = (
 /turf/open/floor/plasteel/delivery,
-/area/centcom/evac)
-"cQ" = (
-/obj/machinery/door/poddoor/preopen,
+/area/centcom/lobby)
+"ea" = (
+/obj/machinery/door/poddoor/preopen{
+	id = "cc_entry_dock"
+	},
 /turf/open/floor/plasteel,
-/area/centcom/evac)
-"cR" = (
-/obj/machinery/computer/med_data,
-/turf/open/floor/plasteel{
-	dir = 5;
-	icon_state = "whiteblue"
+/area/centcom/lobby)
+"eb" = (
+/turf/open/floor/plasteel/yellowsiding{
+	dir = 5
 	},
-/area/centcom/control)
-"cS" = (
-/obj/machinery/vending/cigarette,
+/area/centcom/lobby)
+"ec" = (
+/obj/item/weapon/twohanded/required/kirbyplants/random,
 /turf/open/floor/plasteel/blackvault{
-	dir = 8
+	dir = 9
 	},
 /area/centcom/evac)
-"cT" = (
+"ed" = (
+/obj/structure/chair/new_chair,
+/obj/machinery/status_display{
+	pixel_y = 31
+	},
+/turf/open/floor/plasteel/blackvault{
+	dir = 1
+	},
+/area/centcom/evac)
+"ee" = (
+/obj/structure/chair/new_chair,
+/turf/open/floor/plasteel/blackvault{
+	dir = 1
+	},
+/area/centcom/evac)
+"ef" = (
+/obj/structure/table,
+/turf/open/floor/plasteel/blackvault{
+	dir = 1
+	},
+/area/centcom/evac)
+"eg" = (
+/obj/item/weapon/twohanded/required/kirbyplants/random,
+/turf/open/floor/plasteel/blackvault{
+	dir = 1
+	},
+/area/centcom/evac)
+"eh" = (
 /obj/structure/table,
 /obj/machinery/recharger{
 	active_power_usage = 0;
@@ -1107,99 +1452,110 @@
 	},
 /turf/open/floor/plasteel/shuttle/red,
 /area/shuttle/escape)
-"cU" = (
-/turf/open/floor/plasteel/red/side{
-	dir = 10
+"ei" = (
+/obj/structure/chair/comfy/shuttle/black{
+	tag = "icon-shblack (NORTH)";
+	icon_state = "shblack";
+	dir = 1
 	},
+/turf/open/floor/plasteel/shuttle/red,
 /area/shuttle/escape)
-"cV" = (
-/turf/open/floor/plasteel/red/side{
-	dir = 6
+"ej" = (
+/obj/structure/reagent_dispensers/peppertank{
+	pixel_x = 0;
+	pixel_y = -29
 	},
+/obj/structure/chair/comfy/shuttle/black{
+	tag = "icon-shblack (NORTH)";
+	icon_state = "shblack";
+	dir = 1
+	},
+/turf/open/floor/plasteel/shuttle/red,
 /area/shuttle/escape)
-"cW" = (
+"ek" = (
+/obj/machinery/door/airlock/glass_medical{
+	id_tag = null;
+	name = "Escape Shuttle Infirmary";
+	req_access_txt = "0"
+	},
+/turf/open/floor/plasteel/whitebot/delivery,
+/area/shuttle/escape)
+"el" = (
+/obj/structure/grille,
+/obj/structure/window/shuttle,
+/obj/machinery/door/poddoor/shutters{
+	dir = 4;
+	id = "Emergency_Shuttle_Shutters";
+	name = "Emergency Shuttle shutters"
+	},
+/turf/open/floor/plating,
+/area/shuttle/escape)
+"em" = (
+/obj/machinery/door/airlock/glass_large{
+	name = "Dining room";
+	req_access_txt = "0"
+	},
 /turf/open/floor/plasteel/green/side{
 	dir = 8
 	},
-/area/centcom/evac)
-"cX" = (
-/turf/open/floor/plasteel/green/side{
-	dir = 4
-	},
-/area/centcom/evac)
-"cY" = (
-/turf/open/floor/plasteel/green/side,
-/area/centcom/evac)
-"cZ" = (
-/turf/open/floor/plasteel/bot,
-/area/centcom/evac)
-"da" = (
-/turf/open/floor/plasteel/yellowsiding/corner{
-	dir = 4
-	},
-/area/centcom/evac)
-"db" = (
+/area/centcom)
+"en" = (
 /turf/open/floor/plasteel/yellowsiding{
-	dir = 5
+	dir = 8
 	},
-/area/centcom/evac)
-"dc" = (
-/obj/structure/chair/new_chair,
+/area/centcom/lobby)
+"eo" = (
+/turf/open/floor/plasteel/green/corner,
+/area/centcom/lobby)
+"ep" = (
+/turf/open/floor/plasteel/green/side,
+/area/centcom/lobby)
+"eq" = (
+/turf/open/floor/plasteel/green/corner{
+	dir = 8
+	},
+/area/centcom/lobby)
+"er" = (
+/turf/open/floor/plasteel/yellowsiding{
+	dir = 4
+	},
+/area/centcom/lobby)
+"es" = (
+/turf/open/floor/plasteel/bot,
+/area/centcom/lobby)
+"et" = (
 /turf/open/floor/plasteel/blackvault{
-	dir = 9
+	dir = 8
 	},
 /area/centcom/evac)
-"dd" = (
-/obj/structure/chair/new_chair,
-/turf/open/floor/plasteel/blackvault{
-	dir = 1
-	},
+"eu" = (
+/turf/open/floor/plasteel/black,
 /area/centcom/evac)
-"de" = (
-/turf/open/floor/plasteel/blackvault{
-	dir = 1
+"ev" = (
+/obj/item/device/radio/intercom{
+	dir = 4;
+	name = "Station Intercom (General)";
+	pixel_x = -31
 	},
-/area/centcom/evac)
-"df" = (
-/obj/structure/table,
-/turf/open/floor/plasteel/blackvault{
-	dir = 1
+/obj/structure/chair/comfy/shuttle{
+	dir = 4
 	},
-/area/centcom/evac)
-"dg" = (
-/obj/structure/AIcore/deactivated,
-/turf/open/floor/greengrid,
+/obj/machinery/camera{
+	c_tag = "Emeregency Shuttle";
+	dir = 4;
+	network = list("SS13")
+	},
+/turf/open/floor/plasteel/neutral/side{
+	dir = 8
+	},
 /area/shuttle/escape)
-"dh" = (
-/obj/machinery/chem_dispenser,
-/turf/open/floor/plasteel/neutral{
-	icon_state = "whiteblue"
-	},
-/area/centcom/control)
-"di" = (
-/obj/machinery/chem_heater,
-/obj/structure/extinguisher_cabinet{
-	pixel_y = 30
-	},
-/turf/open/floor/plasteel/neutral{
-	dir = 6;
-	icon_state = "whiteblue"
-	},
-/area/centcom/control)
-"dj" = (
+"ew" = (
 /obj/structure/chair/comfy/shuttle{
 	dir = 8
 	},
 /turf/open/floor/plasteel/neutral/corner,
 /area/shuttle/escape)
-"dk" = (
-/obj/machinery/smartfridge/chemistry,
-/turf/open/floor/plasteel{
-	heat_capacity = 1e+006;
-	icon_state = "white"
-	},
-/area/centcom/control)
-"dl" = (
+"ex" = (
 /obj/structure/chair/comfy/shuttle{
 	dir = 4
 	},
@@ -1207,35 +1563,80 @@
 	icon_state = "whiteblue"
 	},
 /area/shuttle/escape)
-"dm" = (
-/turf/open/floor/plasteel/green/corner{
+"ey" = (
+/obj/item/device/radio/intercom{
+	broadcasting = 0;
+	listening = 1;
+	name = "Station Intercom (General)";
+	pixel_y = -30
+	},
+/turf/open/floor/plasteel/neutral{
+	icon_state = "whiteblue"
+	},
+/area/shuttle/escape)
+"ez" = (
+/obj/structure/table,
+/obj/item/weapon/defibrillator/loaded,
+/turf/open/floor/plasteel/neutral{
+	dir = 6;
+	icon_state = "whiteblue"
+	},
+/area/shuttle/escape)
+"eA" = (
+/turf/open/floor/plasteel/green/side{
+	dir = 8
+	},
+/area/centcom/control)
+"eB" = (
+/turf/open/floor/plasteel/green/side{
+	dir = 4
+	},
+/area/centcom/control)
+"eC" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plasteel,
+/area/centcom/lobby)
+"eD" = (
+/turf/closed/wall/r_wall,
+/area/centcom/lobby)
+"eE" = (
+/obj/structure/table/reinforced,
+/obj/machinery/door/window/brigdoor/northright{
+	req_access_txt = "101"
+	},
+/obj/machinery/door/window/brigdoor/southright{
+	req_access_txt = "101"
+	},
+/turf/open/floor/plasteel,
+/area/centcom/lobby)
+"eF" = (
+/obj/structure/table/reinforced,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/turf/open/floor/plasteel,
+/area/centcom/lobby)
+"eG" = (
+/turf/open/floor/plasteel/yellowsiding/corner{
+	dir = 1
+	},
+/area/centcom/lobby)
+"eH" = (
+/turf/open/floor/plasteel/blackvault/corner{
 	dir = 1
 	},
 /area/centcom/evac)
-"dn" = (
-/turf/open/floor/plasteel/stairsnew/right{
-	dir = 8
-	},
+"eI" = (
+/turf/open/floor/plasteel/blackvault/corner,
 /area/centcom/evac)
-"do" = (
-/turf/open/floor/plasteel/blackvault{
-	dir = 8
-	},
+"eJ" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plasteel/black,
 /area/centcom/evac)
-"dp" = (
-/obj/structure/chair/office/light{
-	dir = 8
-	},
-/turf/open/floor/plasteel{
-	heat_capacity = 1e+006;
-	icon_state = "white"
-	},
-/area/centcom/control)
-"dq" = (
-/obj/structure/chair/comfy/shuttle,
-/turf/open/floor/wood,
-/area/shuttle/escape)
-"dr" = (
+"eK" = (
 /obj/structure/grille,
 /obj/structure/window/shuttle,
 /obj/machinery/door/poddoor/shutters{
@@ -1245,84 +1646,182 @@
 	},
 /turf/open/floor/plating,
 /area/shuttle/escape)
-"ds" = (
-/obj/structure/closet/crate/bin,
-/turf/open/floor/plasteel/blackvault{
-	dir = 10
+"eL" = (
+/obj/structure/chair/comfy/shuttle,
+/turf/open/floor/wood,
+/area/shuttle/escape)
+"eM" = (
+/obj/structure/chair/comfy/shuttle,
+/obj/item/device/radio/intercom{
+	dir = 4;
+	name = "Station Intercom (General)";
+	pixel_x = 0;
+	pixel_y = 24
 	},
-/area/centcom/evac)
-"dt" = (
+/turf/open/floor/wood,
+/area/shuttle/escape)
+"eN" = (
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 27;
+	pixel_y = 0
+	},
+/obj/structure/chair/comfy/shuttle{
+	dir = 8
+	},
+/turf/open/floor/plasteel/neutral/side{
+	dir = 4
+	},
+/area/shuttle/escape)
+"eO" = (
+/turf/open/floor/plasteel/yellowsiding{
+	dir = 9
+	},
+/area/centcom/control)
+"eP" = (
+/turf/open/floor/plasteel/yellowsiding{
+	dir = 1
+	},
+/area/centcom/control)
+"eQ" = (
+/obj/machinery/status_display{
+	pixel_y = 31
+	},
+/turf/open/floor/plasteel/yellowsiding{
+	dir = 1
+	},
+/area/centcom/control)
+"eR" = (
+/turf/open/floor/plasteel/yellowsiding/corner{
+	dir = 1
+	},
+/area/centcom/control)
+"eS" = (
+/turf/open/floor/plasteel/yellowsiding/corner{
+	dir = 4
+	},
+/area/centcom/control)
+"eT" = (
+/turf/open/floor/plasteel/green/side{
+	dir = 4
+	},
+/area/centcom/lobby)
+"eU" = (
+/obj/structure/chair/comfy/sofa/corner/right/brown,
+/turf/open/floor/plasteel/green/corner{
+	dir = 1
+	},
+/area/centcom/lobby)
+"eV" = (
+/obj/structure/chair/comfy/sofa/corner/brown,
+/turf/open/floor/plasteel,
+/area/centcom/lobby)
+"eW" = (
+/obj/item/weapon/twohanded/required/kirbyplants/random,
+/turf/open/floor/plasteel/green{
+	icon_state = "bluefull"
+	},
+/area/centcom/lobby)
+"eX" = (
+/turf/open/floor/carpet,
+/area/centcom/lobby)
+"eY" = (
+/obj/structure/chair/comfy/sofa/corner/right/brown,
+/turf/open/floor/plasteel,
+/area/centcom/lobby)
+"eZ" = (
+/obj/item/device/radio/intercom{
+	dir = 4;
+	name = "Station Intercom (General)";
+	pixel_x = -31;
+	pixel_y = -3
+	},
+/turf/open/floor/plasteel/darkred/side{
+	dir = 9
+	},
+/area/centcom/lobby)
+"fa" = (
 /turf/open/floor/plasteel/darkred/corner{
 	dir = 1
 	},
-/area/centcom/evac)
-"du" = (
+/area/centcom/lobby)
+"fb" = (
 /obj/structure/chair/office/dark{
 	dir = 1
 	},
 /turf/open/floor/plasteel/black,
-/area/centcom/evac)
-"dv" = (
+/area/centcom/lobby)
+"fc" = (
 /turf/open/floor/plasteel/darkred/corner{
 	dir = 4
 	},
-/area/centcom/evac)
-"dw" = (
-/turf/open/floor/plasteel/stairsnew/medium{
+/area/centcom/lobby)
+"fd" = (
+/obj/machinery/button/door{
+	id = "cc_entry_dock";
+	name = "entry check point blastdoor";
+	pixel_y = 28;
+	req_access_txt = "101"
+	},
+/turf/open/floor/plasteel/darkred/side{
+	dir = 5
+	},
+/area/centcom/lobby)
+"fe" = (
+/turf/open/floor/plasteel/yellowsiding/corner{
+	dir = 4
+	},
+/area/centcom/lobby)
+"ff" = (
+/turf/open/floor/plasteel/stairsnew/right{
 	dir = 8
 	},
 /area/centcom/evac)
-"dx" = (
-/turf/open/floor/plasteel/blackvault/corner{
-	dir = 1
+"fg" = (
+/obj/structure/chair/new_chair{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 4;
+	pixel_x = 0
+	},
+/turf/open/floor/plasteel/blackvault{
+	dir = 4
 	},
 /area/centcom/evac)
-"dy" = (
-/turf/open/floor/plasteel/blackvault,
+"fh" = (
+/obj/structure/chair/new_chair{
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/turf/open/floor/plasteel/blackvault{
+	dir = 8
+	},
 /area/centcom/evac)
-"dz" = (
+"fi" = (
 /obj/machinery/door/airlock/glass_external{
 	name = "Docking Port A"
 	},
 /turf/open/floor/plasteel/blackvault,
 /area/centcom/evac)
-"dA" = (
-/turf/open/floor/plasteel/blackvault{
-	dir = 6
-	},
-/area/centcom/evac)
-"dB" = (
+"fj" = (
 /obj/machinery/door/airlock/shuttle{
 	id_tag = "Emeregency_Shuttle_Right_Airlock_Lock";
 	name = "Emergency Shuttle Airlock"
 	},
 /turf/open/floor/wood,
 /area/shuttle/escape)
-"dC" = (
-/obj/machinery/computer/communications,
-/turf/open/floor/plasteel/neutral/side{
-	dir = 1
-	},
+"fk" = (
+/turf/open/floor/carpet,
 /area/shuttle/escape)
-"dD" = (
-/obj/structure/table,
-/obj/machinery/recharger{
-	active_power_usage = 0;
-	idle_power_usage = 0;
-	pixel_y = 4;
-	use_power = 0
+"fl" = (
+/obj/machinery/door/airlock/shuttle{
+	name = "Emergency Shuttle Airlock"
 	},
-/obj/machinery/button/door{
-	id = "Emergency_Shuttle_Cockpit_Shutters";
-	name = "Cockpit Shutters button";
-	pixel_x = 24;
-	pixel_y = 8
-	},
-/turf/open/floor/plasteel/neutral/side{
-	dir = 1
-	},
+/turf/open/floor/wood,
 /area/shuttle/escape)
-"dE" = (
+"fm" = (
 /obj/structure/chair/comfy/shuttle{
 	dir = 8
 	},
@@ -1330,16 +1829,7 @@
 	dir = 4
 	},
 /area/shuttle/escape)
-"dF" = (
-/obj/structure/chair/office/light{
-	dir = 1
-	},
-/turf/open/floor/plasteel{
-	heat_capacity = 1e+006;
-	icon_state = "white"
-	},
-/area/centcom/control)
-"dG" = (
+"fn" = (
 /obj/structure/chair/comfy/shuttle,
 /obj/item/device/radio/intercom{
 	broadcasting = 0;
@@ -1352,54 +1842,68 @@
 	icon_state = "whitepurple"
 	},
 /area/shuttle/escape)
-"dH" = (
-/turf/open/floor/plasteel/blackvault{
-	dir = 4
+"fo" = (
+/obj/structure/table,
+/obj/machinery/button/door{
+	id = "HSS_cell_shuttle_1";
+	name = "HSS Cell A";
+	pixel_x = -6;
+	pixel_y = 26
 	},
-/area/centcom/evac)
-"dI" = (
-/obj/structure/chair/new_chair{
-	dir = 8
+/obj/machinery/button/door{
+	id = "HSS_cell_shuttle_2";
+	name = "HSS Cell B";
+	pixel_x = 6;
+	pixel_y = 26
 	},
-/obj/structure/window/reinforced{
-	dir = 4;
-	pixel_x = 0
+/obj/item/weapon/folder/white,
+/obj/item/weapon/disk/design_disk,
+/obj/item/weapon/disk/tech_disk{
+	pixel_x = 0;
+	pixel_y = 0
 	},
-/turf/open/floor/plasteel/blackvault{
-	dir = 4
-	},
-/area/centcom/evac)
-"dJ" = (
-/obj/structure/chair/new_chair{
-	dir = 4
-	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/turf/open/floor/plasteel/blackvault{
-	dir = 8
-	},
-/area/centcom/evac)
-"dK" = (
-/obj/structure/closet/crate/bin,
-/turf/open/floor/plasteel/blackvault{
-	dir = 4
-	},
-/area/centcom/evac)
-"dL" = (
-/obj/structure/chair/office/light,
 /turf/open/floor/plasteel{
-	heat_capacity = 1e+006;
-	icon_state = "white"
+	dir = 1;
+	icon_state = "whitepurple"
+	},
+/area/shuttle/escape)
+"fp" = (
+/obj/structure/closet/secure_closet/rnd_st,
+/turf/open/floor/plasteel{
+	dir = 5;
+	icon_state = "whitepurple";
+	tag = "icon-whitehall (WEST)"
+	},
+/area/shuttle/escape)
+"fq" = (
+/turf/open/floor/plasteel/yellowsiding{
+	dir = 8
 	},
 /area/centcom/control)
-"dM" = (
-/obj/machinery/chem_master,
-/turf/open/floor/plasteel/green{
-	icon_state = "bluefull"
+"fr" = (
+/obj/machinery/door/airlock/centcom{
+	id_tag = "cc_airlock_interior";
+	name = "Centcom";
+	opacity = 1;
+	req_access_txt = "101"
 	},
-/area/centcom/control)
-"dN" = (
+/turf/open/floor/plasteel,
+/area/centcom/lobby)
+"fs" = (
+/obj/machinery/door/airlock/centcom{
+	id_tag = "cc_control_point_door";
+	name = "Centcom";
+	opacity = 1;
+	req_access_txt = "101"
+	},
+/turf/open/floor/plasteel,
+/area/centcom/lobby)
+"ft" = (
+/turf/open/floor/plasteel/stairsnew/medium{
+	dir = 8
+	},
+/area/centcom/evac)
+"fu" = (
 /obj/structure/chair/comfy/shuttle{
 	dir = 4
 	},
@@ -1409,72 +1913,195 @@
 	},
 /turf/open/floor/wood,
 /area/shuttle/escape)
-"dO" = (
+"fv" = (
+/turf/open/floor/wood,
+/area/shuttle/escape)
+"fw" = (
 /obj/structure/chair/comfy/shuttle{
 	dir = 8
 	},
 /turf/open/floor/wood,
 /area/shuttle/escape)
-"dP" = (
-/obj/structure/table,
-/obj/item/weapon/storage/box/beakers,
-/turf/open/floor/plasteel/green{
-	icon_state = "bluefull"
+"fx" = (
+/obj/structure/chair/comfy/shuttle{
+	dir = 4
 	},
-/area/centcom/control)
-"dQ" = (
-/obj/structure/table,
-/obj/item/weapon/folder,
-/obj/item/weapon/paper_bin,
-/obj/item/weapon/pen,
-/obj/structure/sign/nosmoking_2{
-	pixel_x = 32
-	},
-/turf/open/floor/plasteel/neutral{
-	dir = 9;
-	icon_state = "whiteblue"
-	},
-/area/centcom/control)
-"dR" = (
+/turf/open/floor/plasteel,
+/area/shuttle/escape)
+"fy" = (
 /obj/machinery/door/airlock/glass_research{
 	name = "High Secured Storage";
 	req_access_txt = "47"
 	},
 /turf/open/floor/plasteel/whitebot/delivery,
 /area/shuttle/escape)
-"dS" = (
+"fz" = (
 /turf/open/floor/plasteel{
 	dir = 10;
 	icon_state = "whitepurple";
 	tag = "icon-whitehall (WEST)"
 	},
 /area/shuttle/escape)
-"dT" = (
+"fA" = (
+/obj/machinery/computer/security/telescreen{
+	dir = 1;
+	name = "Storage Cell Monitor";
+	network = list("ST_shuttle");
+	pixel_x = 0;
+	pixel_y = -30
+	},
+/turf/open/floor/plasteel{
+	dir = 2;
+	icon_state = "whitepurple"
+	},
+/area/shuttle/escape)
+"fB" = (
+/turf/open/floor/plasteel{
+	dir = 6;
+	icon_state = "whitepurple"
+	},
+/area/shuttle/escape)
+"fC" = (
+/turf/open/floor/plasteel/yellowsiding{
+	dir = 10
+	},
+/area/centcom/control)
+"fD" = (
+/turf/open/floor/plasteel/yellowsiding,
+/area/centcom/control)
+"fE" = (
+/turf/open/floor/plasteel/yellowsiding/corner{
+	dir = 8
+	},
+/area/centcom/control)
+"fF" = (
+/turf/open/floor/plasteel/yellowsiding/corner,
+/area/centcom/control)
+"fG" = (
+/turf/open/floor/plasteel/yellowsiding/corner{
+	dir = 8
+	},
+/area/centcom/lobby)
+"fH" = (
+/obj/structure/chair/comfy/sofa/corner/brown{
+	dir = 1
+	},
+/turf/open/floor/plasteel/green/corner{
+	dir = 8
+	},
+/area/centcom/lobby)
+"fI" = (
+/obj/structure/chair/comfy/sofa/corner/right/brown{
+	dir = 1
+	},
+/turf/open/floor/plasteel,
+/area/centcom/lobby)
+"fJ" = (
+/obj/structure/chair/comfy/sofa/corner/brown{
+	dir = 1
+	},
+/turf/open/floor/plasteel,
+/area/centcom/lobby)
+"fK" = (
+/obj/structure/chair/comfy/sofa/corner/right/brown{
+	dir = 1
+	},
+/obj/item/device/radio/intercom{
+	broadcasting = 0;
+	listening = 1;
+	name = "Station Intercom (General)";
+	pixel_x = 28;
+	pixel_y = 3
+	},
+/turf/open/floor/plasteel,
+/area/centcom/lobby)
+"fL" = (
 /obj/structure/closet/crate/bin,
 /turf/open/floor/plasteel/darkred/side{
 	dir = 10
 	},
-/area/centcom/evac)
-"dU" = (
+/area/centcom/lobby)
+"fM" = (
+/obj/machinery/button/door{
+	id = "cc_exit_dock";
+	pixel_y = -28;
+	req_access_txt = "101"
+	},
 /turf/open/floor/plasteel/darkred/corner{
 	dir = 8
 	},
-/area/centcom/evac)
-"dV" = (
+/area/centcom/lobby)
+"fN" = (
 /obj/structure/chair/office/dark,
 /turf/open/floor/plasteel/darkred/corner,
-/area/centcom/evac)
-"dW" = (
+/area/centcom/lobby)
+"fO" = (
+/obj/machinery/button/door{
+	id = "cc_control_point_door";
+	name = "Check point door bolts";
+	pixel_x = 25;
+	pixel_y = 5;
+	req_access_txt = "101"
+	},
 /turf/open/floor/plasteel/darkred/side{
 	dir = 6
 	},
-/area/centcom/evac)
-"dX" = (
-/turf/open/floor/plasteel/blackvault/corner{
+/area/centcom/lobby)
+"fP" = (
+/turf/open/floor/plasteel/yellowsiding/corner,
+/area/centcom/lobby)
+"fQ" = (
+/turf/open/floor/plasteel/stairsnew/left{
 	dir = 8
 	},
 /area/centcom/evac)
-"dY" = (
+"fR" = (
+/obj/structure/flora/ausbushes/brflowers,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/turf/open/floor/grass,
+/area/centcom/evac)
+"fS" = (
+/obj/structure/flora/ausbushes/grassybush,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 4;
+	pixel_x = 0
+	},
+/turf/open/floor/grass,
+/area/centcom/evac)
+"fT" = (
+/obj/structure/flora/ausbushes/genericbush,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/turf/open/floor/grass,
+/area/centcom/evac)
+"fU" = (
+/obj/structure/flora/ausbushes/leafybush,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 4;
+	pixel_x = 0
+	},
+/turf/open/floor/grass,
+/area/centcom/evac)
+"fV" = (
 /obj/machinery/door/airlock/glass_external{
 	name = "Docking Port A"
 	},
@@ -1482,47 +2109,64 @@
 	dir = 1
 	},
 /area/centcom/evac)
-"dZ" = (
-/obj/machinery/door/airlock/glass_medical{
-	id_tag = 0;
-	name = "Medbay";
-	req_access_txt = "101"
-	},
-/turf/open/floor/plasteel{
-	dir = 1;
-	icon_state = "whiteblue"
-	},
-/area/centcom/control)
-"ea" = (
+"fW" = (
 /obj/machinery/door/poddoor{
 	id = "HSS_cell_shuttle_1";
 	name = "HSS Cell A"
 	},
 /turf/open/floor/plasteel/whitebot/delivery,
 /area/shuttle/escape)
-"eb" = (
-/turf/open/floor/plasteel/yellowsiding/corner,
-/area/centcom/evac)
-"ec" = (
-/turf/open/floor/plasteel/stairsnew/left{
+"fX" = (
+/obj/machinery/door/poddoor{
+	id = "HSS_cell_shuttle_2";
+	name = "HSS Cell B"
+	},
+/turf/open/floor/plasteel/whitebot/delivery,
+/area/shuttle/escape)
+"fY" = (
+/turf/open/floor/plasteel{
+	dir = 8;
+	icon_state = "whitered";
+	tag = "icon-whitehall (WEST)"
+	},
+/area/centcom/control)
+"fZ" = (
+/turf/open/floor/plasteel{
+	dir = 4;
+	icon_state = "whiteblue"
+	},
+/area/centcom/control)
+"ga" = (
+/turf/open/floor/plasteel/green/corner{
+	dir = 4
+	},
+/area/centcom/lobby)
+"gb" = (
+/obj/structure/table/reinforced,
+/obj/structure/window/reinforced{
+	dir = 4;
+	pixel_x = 0
+	},
+/obj/structure/window/reinforced,
+/turf/open/floor/plasteel,
+/area/centcom/lobby)
+"gc" = (
+/obj/structure/table/reinforced,
+/obj/machinery/door/window/brigdoor/southleft{
+	req_access_txt = "101"
+	},
+/obj/machinery/door/window/brigdoor/northleft{
+	req_access_txt = "101"
+	},
+/turf/open/floor/plasteel,
+/area/centcom/lobby)
+"gd" = (
+/obj/machinery/vending/cola,
+/turf/open/floor/plasteel/blackvault{
 	dir = 8
 	},
 /area/centcom/evac)
-"ed" = (
-/obj/machinery/chem_dispenser,
-/turf/open/floor/plasteel/neutral{
-	dir = 1;
-	icon_state = "whiteblue"
-	},
-/area/centcom/control)
-"ee" = (
-/obj/machinery/chem_heater,
-/turf/open/floor/plasteel/neutral{
-	dir = 1;
-	icon_state = "whiteblue"
-	},
-/area/centcom/control)
-"ef" = (
+"ge" = (
 /obj/structure/chair/comfy/shuttle{
 	dir = 1
 	},
@@ -1531,25 +2175,34 @@
 	},
 /turf/open/floor/wood,
 /area/shuttle/escape)
-"eg" = (
+"gf" = (
+/obj/machinery/vending/wallmed{
+	name = "Emergency NanoMed";
+	pixel_x = 0;
+	pixel_y = -30;
+	req_access_txt = "0";
+	use_power = 0
+	},
 /obj/structure/chair/comfy/shuttle{
 	dir = 1
 	},
 /turf/open/floor/wood,
 /area/shuttle/escape)
-"eh" = (
-/obj/structure/table,
-/obj/item/weapon/storage/box/syringes,
-/obj/machinery/firealarm{
-	dir = 1;
-	pixel_y = -24
+"gg" = (
+/obj/structure/chair/comfy/shuttle{
+	dir = 1
 	},
-/turf/open/floor/plasteel/neutral{
-	dir = 1;
-	icon_state = "whiteblue"
+/turf/open/floor/wood,
+/area/shuttle/escape)
+"gh" = (
+/obj/structure/chair/comfy/shuttle{
+	dir = 4
 	},
-/area/centcom/control)
-"ei" = (
+/turf/open/floor/plasteel/neutral/corner{
+	dir = 8
+	},
+/area/shuttle/escape)
+"gi" = (
 /obj/machinery/camera{
 	c_tag = "Shuttle - Storage - Cell A";
 	dir = 1;
@@ -1557,101 +2210,177 @@
 	},
 /turf/open/floor/plasteel/whitebot,
 /area/shuttle/escape)
-"ej" = (
-/turf/open/floor/plasteel/green/corner{
-	dir = 8
+"gj" = (
+/obj/machinery/camera{
+	c_tag = "Shuttle - Storage - Cell B";
+	dir = 1;
+	network = list("ST_shuttle")
 	},
-/area/centcom/evac)
-"ek" = (
+/turf/open/floor/plasteel/whitebot,
+/area/shuttle/escape)
+"gk" = (
+/obj/machinery/status_display{
+	pixel_y = 31
+	},
+/turf/open/floor/plasteel/green/corner{
+	dir = 4
+	},
+/area/centcom/lobby)
+"gl" = (
+/turf/open/floor/plasteel/green/side{
+	dir = 1
+	},
+/area/centcom/lobby)
+"gm" = (
+/turf/open/floor/plasteel/green/corner{
+	dir = 1
+	},
+/area/centcom/lobby)
+"gn" = (
 /turf/open/floor/plasteel/loadingarea{
 	dir = 4
 	},
+/area/centcom/lobby)
+"go" = (
+/obj/machinery/door/poddoor/preopen{
+	id = "cc_exit_dock"
+	},
+/turf/open/floor/plasteel,
+/area/centcom/lobby)
+"gp" = (
+/obj/machinery/door/poddoor{
+	id = "cc_exit_dock"
+	},
+/turf/open/floor/plasteel,
+/area/centcom/lobby)
+"gq" = (
+/obj/machinery/vending/cigarette,
+/turf/open/floor/plasteel/blackvault{
+	dir = 8
+	},
 /area/centcom/evac)
-"el" = (
+"gr" = (
+/obj/structure/chair/new_chair{
+	dir = 8
+	},
+/turf/open/floor/plasteel/blackvault{
+	dir = 4
+	},
+/area/centcom/evac)
+"gs" = (
+/obj/machinery/flasher{
+	id = "emshuttlebridgeflash";
+	pixel_y = -24;
+	use_power = 1
+	},
+/obj/structure/chair/comfy/shuttle{
+	dir = 4
+	},
+/turf/open/floor/plasteel/neutral/side{
+	dir = 10
+	},
+/area/shuttle/escape)
+"gt" = (
+/obj/structure/chair/comfy/shuttle{
+	dir = 8
+	},
+/obj/machinery/flasher{
+	id = "emshuttlebridgeflash";
+	pixel_y = -24;
+	use_power = 1
+	},
+/turf/open/floor/plasteel/neutral/side{
+	dir = 6
+	},
+/area/shuttle/escape)
+"gu" = (
+/turf/open/floor/plasteel/yellowsiding{
+	dir = 10
+	},
+/area/centcom/lobby)
+"gv" = (
+/turf/open/floor/plasteel/yellowsiding,
+/area/centcom/lobby)
+"gw" = (
 /turf/open/floor/plasteel/yellowsiding{
 	dir = 6
 	},
-/area/centcom/evac)
-"em" = (
+/area/centcom/lobby)
+"gx" = (
+/obj/structure/closet/crate/bin,
 /turf/open/floor/plasteel/blackvault{
-	dir = 5
-	},
-/area/centcom/evac)
-"en" = (
-/obj/structure/bed/roller,
-/turf/open/floor/plasteel{
-	dir = 8;
-	icon_state = "whitered";
-	tag = "icon-whitehall (WEST)"
-	},
-/area/centcom/control)
-"eo" = (
-/obj/structure/chair/new_chair{
-	dir = 4
-	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/turf/open/floor/plasteel{
-	heat_capacity = 1e+006;
-	icon_state = "white"
-	},
-/area/centcom/control)
-"ep" = (
-/obj/structure/chair/new_chair{
-	dir = 8
-	},
-/turf/open/floor/plasteel{
-	dir = 4;
-	icon_state = "whiteblue"
-	},
-/area/centcom/control)
-"eq" = (
-/obj/effect/spawner/structure/window/reinforced,
-/turf/open/floor/plasteel{
-	heat_capacity = 1e+006;
-	icon_state = "white"
-	},
-/area/centcom/control)
-"er" = (
-/obj/structure/plasticflaps,
-/obj/machinery/disposal/deliveryChute{
-	dir = 1
-	},
-/turf/open/floor/plasteel/yellowsiding/corner,
-/area/centcom/evac)
-"es" = (
-/turf/open/floor/plasteel/green/side{
 	dir = 10
 	},
 /area/centcom/evac)
-"et" = (
-/turf/open/floor/plasteel/green/side{
+"gy" = (
+/turf/open/floor/plasteel/blackvault/corner{
+	dir = 8
+	},
+/area/centcom/evac)
+"gz" = (
+/turf/open/floor/plasteel/blackvault/corner{
+	dir = 4
+	},
+/area/centcom/evac)
+"gA" = (
+/obj/structure/chair/new_chair{
+	dir = 8
+	},
+/turf/open/floor/plasteel/blackvault{
 	dir = 6
 	},
 /area/centcom/evac)
-"eu" = (
-/obj/structure/table/glass,
-/obj/item/weapon/storage/firstaid/brute,
-/obj/item/weapon/storage/firstaid/brute,
-/obj/item/weapon/storage/firstaid/brute,
+"gB" = (
+/obj/machinery/door/airlock/glass_command{
+	name = "Cockpit";
+	req_access_txt = "19"
+	},
 /turf/open/floor/plasteel{
-	dir = 8;
-	icon_state = "whitered";
-	tag = "icon-whitehall (WEST)"
+	icon_state = "delivery";
+	name = "floor"
+	},
+/area/shuttle/escape)
+"gC" = (
+/turf/open/floor/plasteel/black,
+/area/centcom/lobby)
+"gD" = (
+/obj/machinery/door/airlock/glass_large{
+	name = "Medbay";
+	req_access_txt = "0"
+	},
+/turf/open/floor/plasteel{
+	dir = 10;
+	icon_state = "whitered"
 	},
 /area/centcom/control)
-"ev" = (
-/obj/structure/table/glass,
-/obj/item/weapon/storage/firstaid/regular,
-/obj/item/weapon/storage/firstaid/regular,
-/obj/item/weapon/storage/firstaid/regular,
+"gE" = (
 /turf/open/floor/plasteel{
-	heat_capacity = 1e+006;
-	icon_state = "white"
+	dir = 6;
+	icon_state = "whiteblue"
 	},
 /area/centcom/control)
-"ew" = (
+"gF" = (
+/obj/machinery/vending/coffee,
+/turf/open/floor/plasteel,
+/area/centcom/evac)
+"gG" = (
+/obj/machinery/vending/cola,
+/turf/open/floor/plasteel,
+/area/centcom/evac)
+"gH" = (
+/obj/machinery/vending/snack,
+/turf/open/floor/plasteel,
+/area/centcom/control)
+"gI" = (
+/obj/structure/closet/crate/bin,
+/turf/open/floor/plasteel,
+/area/centcom/control)
+"gJ" = (
+/turf/open/floor/plasteel/blackvault{
+	dir = 4
+	},
+/area/centcom/evac)
+"gK" = (
 /obj/machinery/status_display{
 	pixel_y = 31
 	},
@@ -1662,7 +2391,7 @@
 	dir = 4
 	},
 /area/shuttle/escape)
-"ex" = (
+"gL" = (
 /obj/structure/chair/comfy/shuttle{
 	dir = 8
 	},
@@ -1676,116 +2405,49 @@
 	dir = 9
 	},
 /area/shuttle/escape)
-"ey" = (
+"gM" = (
 /turf/open/floor/plasteel/red/corner{
 	dir = 1
 	},
 /area/shuttle/escape)
-"ez" = (
+"gN" = (
 /turf/open/floor/plasteel/red/corner{
 	dir = 4
 	},
 /area/shuttle/escape)
-"eA" = (
-/obj/machinery/door/airlock/glass_large{
-	name = "Medbay";
-	req_access_txt = "101"
+"gO" = (
+/obj/machinery/button/flasher{
+	id = "emshuttlebridgeflash";
+	name = "cockpit flasher button";
+	pixel_y = 24;
+	req_access_txt = "0";
+	req_one_access_txt = "1;63;19"
 	},
-/turf/open/floor/plasteel{
-	dir = 10;
-	icon_state = "whitered"
+/turf/open/floor/plasteel/red/side{
+	dir = 5
 	},
+/area/shuttle/escape)
+"gP" = (
+/obj/structure/table,
+/obj/item/weapon/storage/firstaid/regular,
+/obj/item/weapon/restraints/handcuffs,
+/obj/machinery/status_display{
+	pixel_y = 31
+	},
+/turf/open/floor/plating{
+	icon_state = "bot"
+	},
+/area/shuttle/escape)
+"gQ" = (
+/turf/closed/indestructible/riveted/darksteel,
 /area/centcom/control)
-"eB" = (
-/turf/open/floor/plasteel{
-	heat_capacity = 1e+006;
-	icon_state = "white"
-	},
-/area/centcom/control)
-"eC" = (
-/obj/structure/bodycontainer/morgue,
-/turf/open/floor/plasteel{
-	icon_state = "whitebluefull"
-	},
-/area/centcom/control)
-"eD" = (
-/obj/structure/bed/roller,
-/turf/open/floor/plasteel{
-	dir = 10;
-	icon_state = "whitered"
-	},
-/area/centcom/control)
-"eE" = (
-/turf/open/floor/plasteel{
-	dir = 5;
+"gR" = (
+/obj/structure/closet/wardrobe/chemistry_white,
+/turf/open/floor/plasteel/neutral{
 	icon_state = "whiteblue"
 	},
 /area/centcom/control)
-"eF" = (
-/obj/structure/chair/new_chair{
-	dir = 1
-	},
-/turf/open/floor/plasteel/blackvault{
-	dir = 10
-	},
-/area/centcom/evac)
-"eG" = (
-/obj/structure/chair/new_chair{
-	dir = 1
-	},
-/turf/open/floor/plasteel/blackvault,
-/area/centcom/evac)
-"eH" = (
-/obj/structure/chair/new_chair{
-	dir = 4
-	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/turf/open/floor/plasteel{
-	dir = 2;
-	icon_state = "whiteblue"
-	},
-/area/centcom/control)
-"eI" = (
-/obj/structure/chair/new_chair{
-	dir = 1
-	},
-/turf/open/floor/plasteel/blackvault{
-	dir = 6
-	},
-/area/centcom/evac)
-"eJ" = (
-/obj/structure/chair/new_chair{
-	dir = 8
-	},
-/turf/open/floor/plasteel{
-	dir = 6;
-	icon_state = "whiteblue"
-	},
-/area/centcom/control)
-"eK" = (
-/obj/structure/table/glass,
-/obj/item/weapon/storage/firstaid/fire,
-/obj/item/weapon/storage/firstaid/fire,
-/obj/item/weapon/storage/firstaid/fire,
-/turf/open/floor/plasteel{
-	dir = 8;
-	icon_state = "whitered";
-	tag = "icon-whitehall (WEST)"
-	},
-/area/centcom/control)
-"eL" = (
-/obj/structure/table/glass,
-/obj/item/weapon/storage/firstaid/toxin,
-/obj/item/weapon/storage/firstaid/toxin,
-/obj/item/weapon/storage/firstaid/toxin,
-/turf/open/floor/plasteel{
-	heat_capacity = 1e+006;
-	icon_state = "white"
-	},
-/area/centcom/control)
-"eM" = (
+"gS" = (
 /obj/structure/table,
 /obj/item/clothing/glasses/science,
 /obj/item/clothing/glasses/science,
@@ -1801,121 +2463,247 @@
 	icon_state = "whiteblue"
 	},
 /area/centcom/control)
-"eN" = (
-/obj/structure/mirror{
-	pixel_y = 30
-	},
-/turf/open/floor/plasteel/freezer,
-/area/centcom/control)
-"eO" = (
-/turf/open/floor/plasteel{
-	dir = 1;
-	icon_state = "whitebluecorner"
-	},
-/area/centcom/control)
-"eP" = (
-/obj/structure/table/reinforced,
+"gT" = (
+/obj/machinery/atmospherics/components/unary/cryo_cell,
 /turf/open/floor/plasteel{
 	dir = 9;
 	icon_state = "whiteblue"
 	},
 /area/centcom/control)
-"eQ" = (
+"gU" = (
 /turf/open/floor/plasteel{
 	dir = 1;
 	icon_state = "whiteblue"
 	},
 /area/centcom/control)
-"eR" = (
-/turf/open/floor/plasteel{
-	dir = 9;
-	icon_state = "whiteblue"
-	},
-/area/centcom/control)
-"eS" = (
-/obj/machinery/atmospherics/components/unary/cryo_cell{
-	dir = 4
-	},
+"gV" = (
+/obj/machinery/atmospherics/components/unary/cryo_cell,
 /turf/open/floor/plasteel{
 	dir = 1;
 	icon_state = "whiteblue"
 	},
 /area/centcom/control)
-"eT" = (
-/obj/machinery/atmospherics/pipe/manifold/general/visible{
-	dir = 1
-	},
-/turf/open/floor/plasteel{
-	dir = 1;
-	icon_state = "whiteblue"
-	},
-/area/centcom/control)
-"eU" = (
-/obj/machinery/atmospherics/components/unary/cryo_cell{
-	dir = 8
-	},
+"gW" = (
 /turf/open/floor/plasteel{
 	dir = 5;
 	icon_state = "whiteblue"
 	},
 /area/centcom/control)
-"eV" = (
-/obj/structure/toilet{
+"gX" = (
+/obj/structure/bodycontainer/morgue,
+/turf/open/floor/plasteel{
+	icon_state = "whitebluefull"
+	},
+/area/centcom/control)
+"gY" = (
+/obj/item/weapon/twohanded/required/kirbyplants/random,
+/turf/open/floor/plasteel/blackvault{
+	dir = 10
+	},
+/area/centcom/evac)
+"gZ" = (
+/obj/structure/chair/new_chair{
+	dir = 1
+	},
+/turf/open/floor/plasteel/blackvault,
+/area/centcom/evac)
+"ha" = (
+/obj/structure/table,
+/turf/open/floor/plasteel/blackvault,
+/area/centcom/evac)
+"hb" = (
+/obj/item/weapon/twohanded/required/kirbyplants/random,
+/turf/open/floor/plasteel/blackvault{
+	dir = 6
+	},
+/area/centcom/evac)
+"hc" = (
+/obj/machinery/computer/crew,
+/turf/open/floor/plasteel/neutral/side{
+	dir = 4
+	},
+/area/shuttle/escape)
+"hd" = (
+/obj/structure/chair/comfy/shuttle{
 	dir = 8
 	},
-/turf/open/floor/plasteel/freezer,
-/area/centcom/control)
-"eW" = (
-/obj/structure/table/glass,
-/obj/item/weapon/storage/firstaid/o2,
-/obj/item/weapon/storage/firstaid/o2,
-/obj/item/weapon/storage/firstaid/o2,
-/turf/open/floor/plasteel{
-	dir = 10;
-	icon_state = "whitered"
+/turf/open/floor/plasteel/red/side{
+	dir = 8
 	},
-/area/centcom/control)
-"eX" = (
-/obj/machinery/vending/medical,
-/turf/open/floor/plasteel{
-	dir = 2;
+/area/shuttle/escape)
+"he" = (
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 27;
+	pixel_y = 0
+	},
+/turf/open/floor/plasteel/red/side{
+	dir = 4
+	},
+/area/shuttle/escape)
+"hf" = (
+/obj/machinery/chem_dispenser,
+/turf/open/floor/plasteel/neutral{
 	icon_state = "whiteblue"
 	},
 /area/centcom/control)
-"eY" = (
-/obj/structure/sink{
-	dir = 8;
-	icon_state = "sink";
-	pixel_x = -11;
-	pixel_y = 0
+"hg" = (
+/obj/machinery/chem_heater,
+/obj/structure/extinguisher_cabinet{
+	pixel_y = 30
 	},
-/turf/open/floor/plasteel/freezer,
+/turf/open/floor/plasteel/neutral{
+	dir = 6;
+	icon_state = "whiteblue"
+	},
 /area/centcom/control)
-"eZ" = (
+"hh" = (
+/turf/open/floor/plasteel{
+	heat_capacity = 1e+006;
+	icon_state = "white"
+	},
+/area/centcom/control)
+"hi" = (
+/obj/machinery/smartfridge/chemistry,
+/turf/open/floor/plasteel{
+	heat_capacity = 1e+006;
+	icon_state = "white"
+	},
+/area/centcom/control)
+"hj" = (
+/obj/structure/sign/nosmoking_2{
+	pixel_x = 0;
+	pixel_y = 30
+	},
+/turf/open/floor/plasteel{
+	dir = 9;
+	icon_state = "whiteblue"
+	},
+/area/centcom/control)
+"hk" = (
+/turf/open/floor/plasteel{
+	dir = 1;
+	icon_state = "whitebluecorner"
+	},
+/area/centcom/control)
+"hl" = (
+/obj/structure/table/reinforced,
+/turf/open/floor/plasteel{
+	dir = 9;
+	icon_state = "whiteblue"
+	},
+/area/centcom/control)
+"hm" = (
+/obj/machinery/computer/crew,
+/turf/open/floor/plasteel{
+	dir = 1;
+	icon_state = "whiteblue"
+	},
+/area/centcom/control)
+"hn" = (
+/obj/machinery/computer/med_data,
+/turf/open/floor/plasteel{
+	dir = 5;
+	icon_state = "whiteblue"
+	},
+/area/centcom/control)
+"ho" = (
+/obj/structure/table/glass,
+/obj/item/weapon/defibrillator,
+/turf/open/floor/plasteel{
+	dir = 9;
+	icon_state = "whiteblue"
+	},
+/area/centcom/control)
+"hp" = (
+/obj/structure/table/glass,
+/obj/structure/sign/nosmoking_2{
+	pixel_x = 0;
+	pixel_y = 30
+	},
+/turf/open/floor/plasteel{
+	dir = 1;
+	icon_state = "whiteblue"
+	},
+/area/centcom/control)
+"hq" = (
+/obj/machinery/atmospherics/pipe/simple/general/visible{
+	dir = 5
+	},
+/turf/open/floor/plasteel{
+	dir = 1;
+	icon_state = "whitebluecorner"
+	},
+/area/centcom/control)
+"hr" = (
+/obj/machinery/atmospherics/pipe/simple/general/visible{
+	dir = 4
+	},
+/turf/open/floor/plasteel{
+	heat_capacity = 1e+006;
+	icon_state = "white"
+	},
+/area/centcom/control)
+"hs" = (
+/obj/machinery/atmospherics/pipe/manifold/general/visible,
+/turf/open/floor/plasteel{
+	heat_capacity = 1e+006;
+	icon_state = "white"
+	},
+/area/centcom/control)
+"ht" = (
+/obj/machinery/atmospherics/pipe/manifold/general/visible{
+	dir = 4
+	},
+/turf/open/floor/plasteel{
+	heat_capacity = 1e+006;
+	icon_state = "white"
+	},
+/area/centcom/control)
+"hu" = (
 /obj/machinery/computer/atmos_alert,
 /turf/open/floor/plasteel/neutral/side{
 	dir = 4
 	},
 /area/shuttle/escape)
-"fa" = (
+"hv" = (
+/turf/open/floor/plasteel/red/side{
+	dir = 10
+	},
+/area/shuttle/escape)
+"hw" = (
 /obj/structure/chair/comfy/shuttle,
 /turf/open/floor/plasteel/red/side,
 /area/shuttle/escape)
-"fb" = (
-/obj/structure/curtain/open/shower,
-/obj/machinery/shower{
+"hx" = (
+/turf/open/floor/plasteel/red/side{
+	dir = 6
+	},
+/area/shuttle/escape)
+"hy" = (
+/obj/structure/AIcore/deactivated,
+/turf/open/floor/greengrid,
+/area/shuttle/escape)
+"hz" = (
+/obj/structure/chair/office/light{
 	dir = 1
 	},
-/turf/open/floor/plasteel/freezer,
-/area/centcom/control)
-"fc" = (
 /turf/open/floor/plasteel{
-	dir = 8;
-	icon_state = "whitered";
-	tag = "icon-whitehall (WEST)"
+	heat_capacity = 1e+006;
+	icon_state = "white"
 	},
 /area/centcom/control)
-"fd" = (
+"hA" = (
+/obj/machinery/door/airlock/glass_medical{
+	id_tag = 0;
+	name = "Medbay";
+	req_access_txt = "101"
+	},
+/turf/open/floor/plasteel{
+	heat_capacity = 1e+006;
+	icon_state = "white"
+	},
+/area/centcom/control)
+"hB" = (
 /obj/structure/table/reinforced,
 /turf/open/floor/plasteel{
 	dir = 8;
@@ -1923,7 +2711,16 @@
 	tag = "icon-whitehall (WEST)"
 	},
 /area/centcom/control)
-"fe" = (
+"hC" = (
+/obj/structure/chair/office/light{
+	dir = 8
+	},
+/turf/open/floor/plasteel{
+	heat_capacity = 1e+006;
+	icon_state = "white"
+	},
+/area/centcom/control)
+"hD" = (
 /obj/machinery/door/airlock/glass_medical{
 	id_tag = null;
 	name = "Medbay Desk";
@@ -1934,35 +2731,27 @@
 	icon_state = "white"
 	},
 /area/centcom/control)
-"ff" = (
-/obj/machinery/atmospherics/pipe/simple/general/visible,
+"hE" = (
+/obj/machinery/atmospherics/pipe/manifold/general/visible{
+	dir = 8
+	},
 /turf/open/floor/plasteel{
 	heat_capacity = 1e+006;
 	icon_state = "white"
 	},
 /area/centcom/control)
-"fg" = (
+"hF" = (
+/obj/machinery/atmospherics/components/unary/thermomachine/freezer{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
 /turf/open/floor/plasteel{
-	dir = 4;
-	icon_state = "whiteblue"
+	icon_state = "whitebluefull"
 	},
 /area/centcom/control)
-"fh" = (
-/obj/machinery/vending/cigarette,
-/turf/open/floor/plasteel{
-	tag = "icon-vault (NORTHEAST)";
-	icon_state = "vault";
-	dir = 5
-	},
-/area/centcom/control)
-"fi" = (
-/turf/open/floor/plasteel{
-	tag = "icon-vault (NORTHEAST)";
-	icon_state = "vault";
-	dir = 5
-	},
-/area/centcom/control)
-"fj" = (
+"hG" = (
 /obj/structure/table,
 /obj/item/weapon/paper_bin{
 	pixel_x = -3;
@@ -1994,102 +2783,50 @@
 	dir = 1
 	},
 /area/shuttle/escape)
-"fk" = (
+"hH" = (
 /obj/machinery/computer/emergency_shuttle,
 /turf/open/floor/plasteel/neutral/side{
 	dir = 1
 	},
 /area/shuttle/escape)
-"fl" = (
-/obj/structure/table,
-/turf/open/floor/plasteel{
-	tag = "icon-vault (NORTHEAST)";
-	icon_state = "vault";
-	dir = 5
-	},
-/area/centcom/control)
-"fm" = (
-/obj/structure/chair/new_chair,
-/turf/open/floor/plasteel{
-	tag = "icon-vault (NORTHEAST)";
-	icon_state = "vault";
-	dir = 5
-	},
-/area/centcom/control)
-"fn" = (
-/turf/open/floor/plasteel{
-	dir = 8;
-	icon_state = "whitebluecorner"
-	},
-/area/centcom/control)
-"fo" = (
-/obj/machinery/sleeper{
-	icon_state = "sleeper-open";
-	dir = 4
-	},
-/turf/open/floor/plasteel{
-	icon_state = "whitebluefull"
-	},
-/area/centcom/control)
-"fp" = (
-/turf/open/floor/plasteel{
-	icon_state = "whitebluefull"
-	},
-/area/centcom/control)
-"fq" = (
-/obj/machinery/sleeper{
-	icon_state = "sleeper-open";
-	dir = 8
-	},
-/turf/open/floor/plasteel{
-	icon_state = "whitebluefull"
-	},
-/area/centcom/control)
-"fr" = (
-/obj/machinery/portable_atmospherics/canister/oxygen,
-/obj/machinery/atmospherics/components/unary/portables_connector/visible{
-	dir = 4
-	},
-/turf/open/floor/plasteel{
-	dir = 10;
-	icon_state = "whitered"
-	},
-/area/centcom/control)
-"fs" = (
-/obj/machinery/atmospherics/pipe/manifold/general/visible{
+"hI" = (
+/obj/machinery/computer/communications,
+/turf/open/floor/plasteel/neutral/side{
 	dir = 1
 	},
-/turf/open/floor/plasteel{
-	heat_capacity = 1e+006;
-	icon_state = "white"
-	},
-/area/centcom/control)
-"ft" = (
-/obj/machinery/atmospherics/pipe/manifold/general/visible,
-/turf/open/floor/plasteel{
-	heat_capacity = 1e+006;
-	icon_state = "white"
-	},
-/area/centcom/control)
-"fu" = (
-/obj/machinery/atmospherics/components/unary/thermomachine/freezer{
-	dir = 8
-	},
-/turf/open/floor/plasteel{
-	dir = 4;
-	icon_state = "whiteblue"
-	},
-/area/centcom/control)
-"fv" = (
-/obj/structure/grille,
-/obj/structure/window/shuttle,
-/obj/machinery/door/poddoor/shutters{
-	id = "Emergency_Shuttle_Cockpit_Shutters";
-	name = "Emergency Shuttle Cockpit shutters"
-	},
-/turf/open/floor/plating,
 /area/shuttle/escape)
-"fw" = (
+"hJ" = (
+/obj/structure/table,
+/obj/machinery/recharger{
+	active_power_usage = 0;
+	idle_power_usage = 0;
+	pixel_y = 4;
+	use_power = 0
+	},
+/obj/machinery/button/door{
+	id = "Emergency_Shuttle_Cockpit_Shutters";
+	name = "Cockpit Shutters button";
+	pixel_x = 24;
+	pixel_y = 8
+	},
+/turf/open/floor/plasteel/neutral/side{
+	dir = 1
+	},
+/area/shuttle/escape)
+"hK" = (
+/obj/machinery/chem_master,
+/turf/open/floor/plasteel/green{
+	icon_state = "bluefull"
+	},
+/area/centcom/control)
+"hL" = (
+/obj/structure/table,
+/obj/item/weapon/storage/box/beakers,
+/turf/open/floor/plasteel/green{
+	icon_state = "bluefull"
+	},
+/area/centcom/control)
+"hM" = (
 /obj/structure/chair/office/light{
 	dir = 4
 	},
@@ -2098,7 +2835,7 @@
 	icon_state = "white"
 	},
 /area/centcom/control)
-"fx" = (
+"hN" = (
 /obj/structure/table/reinforced,
 /obj/machinery/door/window{
 	base_state = "right";
@@ -2112,73 +2849,182 @@
 	icon_state = "white"
 	},
 /area/centcom/control)
-"fy" = (
+"hO" = (
+/obj/structure/chair/office/light,
+/turf/open/floor/plasteel{
+	heat_capacity = 1e+006;
+	icon_state = "white"
+	},
+/area/centcom/control)
+"hP" = (
+/obj/machinery/sleeper{
+	icon_state = "sleeper-open";
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/turf/open/floor/plasteel{
+	icon_state = "whitebluefull"
+	},
+/area/centcom/control)
+"hQ" = (
+/turf/open/floor/plasteel{
+	icon_state = "whitebluefull"
+	},
+/area/centcom/control)
+"hR" = (
+/obj/machinery/sleeper{
+	icon_state = "sleeper-open";
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 4;
+	pixel_x = 0
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/turf/open/floor/plasteel{
+	icon_state = "whitebluefull"
+	},
+/area/centcom/control)
+"hS" = (
+/obj/machinery/atmospherics/pipe/manifold/general/visible{
+	dir = 8
+	},
+/turf/open/floor/plasteel{
+	heat_capacity = 1e+006;
+	icon_state = "white"
+	},
+/area/centcom/control{
+	dir = 4
+	})
+"hT" = (
+/obj/machinery/atmospherics/components/unary/portables_connector/visible{
+	dir = 8
+	},
+/obj/machinery/portable_atmospherics/canister/oxygen,
+/turf/open/floor/plasteel{
+	icon_state = "whitebluefull"
+	},
+/area/centcom/control)
+"hU" = (
+/obj/structure/grille,
+/obj/structure/window/shuttle,
+/obj/machinery/door/poddoor/shutters{
+	id = "Emergency_Shuttle_Cockpit_Shutters";
+	name = "Emergency Shuttle Cockpit shutters"
+	},
+/turf/open/floor/plating,
+/area/shuttle/escape)
+"hV" = (
+/obj/structure/table,
+/obj/item/weapon/folder,
+/obj/item/weapon/paper_bin,
+/obj/item/weapon/pen,
+/obj/structure/sign/nosmoking_2{
+	pixel_x = 32
+	},
+/turf/open/floor/plasteel/neutral{
+	dir = 9;
+	icon_state = "whiteblue"
+	},
+/area/centcom/control)
+"hW" = (
+/obj/structure/chair/new_chair{
+	dir = 4
+	},
+/turf/open/floor/plasteel{
+	dir = 8;
+	icon_state = "whitered";
+	tag = "icon-whitehall (WEST)"
+	},
+/area/centcom/control)
+"hX" = (
 /obj/structure/table/reinforced,
 /turf/open/floor/plasteel{
 	dir = 10;
 	icon_state = "whitered"
 	},
 /area/centcom/control)
-"fz" = (
+"hY" = (
 /obj/structure/table/reinforced,
 /turf/open/floor/plasteel{
 	dir = 2;
 	icon_state = "whiteblue"
 	},
 /area/centcom/control)
-"fA" = (
-/obj/machinery/portable_atmospherics/canister/oxygen,
-/obj/machinery/atmospherics/components/unary/portables_connector/visible{
+"hZ" = (
+/obj/machinery/sleeper{
+	icon_state = "sleeper-open";
 	dir = 4
 	},
+/obj/structure/window/reinforced,
 /turf/open/floor/plasteel{
-	dir = 9;
+	icon_state = "whitebluefull"
+	},
+/area/centcom/control)
+"ia" = (
+/obj/machinery/sleeper{
+	icon_state = "sleeper-open";
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 4;
+	pixel_x = 0
+	},
+/obj/structure/window/reinforced,
+/turf/open/floor/plasteel{
+	icon_state = "whitebluefull"
+	},
+/area/centcom/control)
+"ib" = (
+/obj/machinery/atmospherics/pipe/simple/general/visible{
+	dir = 5
+	},
+/turf/open/floor/plasteel{
+	heat_capacity = 1e+006;
+	icon_state = "white"
+	},
+/area/centcom/control)
+"ic" = (
+/obj/machinery/atmospherics/components/unary/portables_connector/visible{
+	dir = 8
+	},
+/obj/machinery/portable_atmospherics/canister/oxygen,
+/obj/structure/window/reinforced,
+/turf/open/floor/plasteel{
+	icon_state = "whitebluefull"
+	},
+/area/centcom/control)
+"id" = (
+/obj/machinery/chem_dispenser,
+/turf/open/floor/plasteel/neutral{
+	dir = 1;
 	icon_state = "whiteblue"
 	},
 /area/centcom/control)
-"fB" = (
-/obj/machinery/atmospherics/pipe/simple/general/visible{
-	dir = 9
-	},
-/turf/open/floor/plasteel{
-	heat_capacity = 1e+006;
-	icon_state = "white"
+"ie" = (
+/obj/machinery/chem_heater,
+/turf/open/floor/plasteel/neutral{
+	dir = 1;
+	icon_state = "whiteblue"
 	},
 /area/centcom/control)
-"fC" = (
-/obj/machinery/door/airlock/glass_medical{
-	id_tag = 0;
-	name = "Medbay";
-	req_access_txt = "101"
-	},
-/turf/open/floor/plasteel{
-	heat_capacity = 1e+006;
-	icon_state = "white"
-	},
-/area/centcom/control)
-"fD" = (
-/turf/open/floor/plasteel{
-	dir = 4;
-	icon_state = "whitebluecorner"
-	},
-/area/centcom/control)
-"fE" = (
-/obj/effect/spawner/structure/window,
-/turf/open/floor/plasteel{
-	tag = "icon-vault (NORTHEAST)";
-	icon_state = "vault";
-	dir = 5
-	},
-/area/centcom/control)
-"fF" = (
+"if" = (
 /obj/structure/table,
-/obj/item/weapon/storage/box/bodybags,
-/turf/open/floor/plasteel{
-	heat_capacity = 1e+006;
-	icon_state = "white"
+/obj/item/weapon/storage/box/syringes,
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -24
+	},
+/turf/open/floor/plasteel/neutral{
+	dir = 1;
+	icon_state = "whiteblue"
 	},
 /area/centcom/control)
-"fG" = (
+"ig" = (
 /obj/structure/table,
 /obj/machinery/reagentgrinder,
 /turf/open/floor/plasteel/neutral/corner{
@@ -2186,7 +3032,275 @@
 	icon_state = "whitebluecorner"
 	},
 /area/centcom/control)
-"fH" = (
+"ih" = (
+/turf/open/floor/plasteel{
+	dir = 4;
+	icon_state = "whitebluecorner"
+	},
+/area/centcom/control)
+"ii" = (
+/obj/machinery/door/airlock/glass_medical{
+	id_tag = 0;
+	name = "Medbay";
+	req_access_txt = "101"
+	},
+/turf/open/floor/plasteel{
+	dir = 1;
+	icon_state = "whiteblue"
+	},
+/area/centcom/control)
+"ij" = (
+/obj/structure/table,
+/obj/item/weapon/storage/box/bodybags,
+/obj/item/weapon/storage/box/bodybags,
+/turf/open/floor/plasteel{
+	heat_capacity = 1e+006;
+	icon_state = "white"
+	},
+/area/centcom/control)
+"ik" = (
+/turf/open/floor/plasteel{
+	dir = 2;
+	icon_state = "whitebluecorner"
+	},
+/area/centcom/control)
+"il" = (
+/obj/machinery/door/airlock/glass_medical{
+	id_tag = 0;
+	name = "Medbay";
+	req_access_txt = "101"
+	},
+/turf/open/floor/plasteel{
+	dir = 2;
+	icon_state = "whiteblue"
+	},
+/area/centcom/control)
+"im" = (
+/turf/open/floor/plasteel{
+	dir = 8;
+	icon_state = "whitebluecorner"
+	},
+/area/centcom/control)
+"in" = (
+/turf/open/floor/plasteel{
+	dir = 2;
+	icon_state = "whiteblue"
+	},
+/area/centcom/control)
+"io" = (
+/obj/structure/bed/roller,
+/turf/open/floor/plasteel{
+	dir = 8;
+	icon_state = "whitered";
+	tag = "icon-whitehall (WEST)"
+	},
+/area/centcom/control)
+"ip" = (
+/obj/structure/chair/new_chair{
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/turf/open/floor/plasteel{
+	heat_capacity = 1e+006;
+	icon_state = "white"
+	},
+/area/centcom/control)
+"iq" = (
+/obj/structure/chair/new_chair{
+	dir = 8
+	},
+/turf/open/floor/plasteel{
+	dir = 4;
+	icon_state = "whiteblue"
+	},
+/area/centcom/control)
+"ir" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plasteel{
+	heat_capacity = 1e+006;
+	icon_state = "white"
+	},
+/area/centcom/control)
+"is" = (
+/turf/open/floor/plasteel{
+	dir = 10;
+	icon_state = "whitered"
+	},
+/area/centcom/control)
+"it" = (
+/obj/structure/table/glass,
+/obj/item/weapon/storage/firstaid/brute,
+/obj/item/weapon/storage/firstaid/brute,
+/obj/item/weapon/storage/firstaid/brute,
+/turf/open/floor/plasteel{
+	dir = 8;
+	icon_state = "whitered";
+	tag = "icon-whitehall (WEST)"
+	},
+/area/centcom/control)
+"iu" = (
+/turf/open/floor/plasteel/green/corner{
+	dir = 8
+	},
+/area/centcom/control)
+"iv" = (
+/obj/structure/table/glass,
+/obj/item/weapon/storage/firstaid/regular,
+/obj/item/weapon/storage/firstaid/regular,
+/obj/item/weapon/storage/firstaid/regular,
+/turf/open/floor/plasteel{
+	heat_capacity = 1e+006;
+	icon_state = "white"
+	},
+/area/centcom/control)
+"iw" = (
+/obj/structure/sign/nosmoking_2{
+	pixel_x = 0;
+	pixel_y = 0
+	},
+/turf/closed/wall/darksteel,
+/area/centcom/control)
+"ix" = (
+/obj/structure/bed/roller,
+/turf/open/floor/plasteel{
+	dir = 10;
+	icon_state = "whitered"
+	},
+/area/centcom/control)
+"iy" = (
+/obj/structure/chair/new_chair{
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/turf/open/floor/plasteel{
+	dir = 2;
+	icon_state = "whiteblue"
+	},
+/area/centcom/control)
+"iz" = (
+/obj/structure/chair/new_chair{
+	dir = 8
+	},
+/turf/open/floor/plasteel{
+	dir = 6;
+	icon_state = "whiteblue"
+	},
+/area/centcom/control)
+"iA" = (
+/obj/structure/table/glass,
+/obj/item/weapon/storage/firstaid/fire,
+/obj/item/weapon/storage/firstaid/fire,
+/obj/item/weapon/storage/firstaid/fire,
+/turf/open/floor/plasteel{
+	dir = 8;
+	icon_state = "whitered";
+	tag = "icon-whitehall (WEST)"
+	},
+/area/centcom/control)
+"iB" = (
+/obj/structure/table/glass,
+/obj/item/weapon/storage/firstaid/toxin,
+/obj/item/weapon/storage/firstaid/toxin,
+/obj/item/weapon/storage/firstaid/toxin,
+/turf/open/floor/plasteel{
+	heat_capacity = 1e+006;
+	icon_state = "white"
+	},
+/area/centcom/control)
+"iC" = (
+/obj/structure/mirror{
+	pixel_y = 28
+	},
+/turf/open/floor/plasteel/freezer,
+/area/centcom/control)
+"iD" = (
+/obj/structure/toilet{
+	dir = 2;
+	pixel_x = 0;
+	pixel_y = 18
+	},
+/turf/open/floor/plasteel/freezer,
+/area/centcom/control)
+"iE" = (
+/obj/structure/table/glass,
+/obj/item/weapon/storage/firstaid/o2,
+/obj/item/weapon/storage/firstaid/o2,
+/obj/item/weapon/storage/firstaid/o2,
+/turf/open/floor/plasteel{
+	dir = 10;
+	icon_state = "whitered"
+	},
+/area/centcom/control)
+"iF" = (
+/obj/machinery/vending/medical,
+/turf/open/floor/plasteel{
+	dir = 2;
+	icon_state = "whiteblue"
+	},
+/area/centcom/control)
+"iG" = (
+/obj/structure/sink{
+	dir = 8;
+	icon_state = "sink";
+	pixel_x = -11;
+	pixel_y = 0
+	},
+/turf/open/floor/plasteel/freezer,
+/area/centcom/control)
+"iH" = (
+/obj/structure/curtain/open/shower,
+/obj/machinery/shower{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/turf/open/floor/plasteel/freezer,
+/area/centcom/control)
+"iI" = (
+/obj/machinery/vending/cigarette,
+/turf/open/floor/plasteel{
+	tag = "icon-vault (NORTHEAST)";
+	icon_state = "vault";
+	dir = 5
+	},
+/area/centcom/control)
+"iJ" = (
+/turf/open/floor/plasteel{
+	tag = "icon-vault (NORTHEAST)";
+	icon_state = "vault";
+	dir = 5
+	},
+/area/centcom/control)
+"iK" = (
+/obj/structure/table,
+/turf/open/floor/plasteel{
+	tag = "icon-vault (NORTHEAST)";
+	icon_state = "vault";
+	dir = 5
+	},
+/area/centcom/control)
+"iL" = (
+/obj/structure/chair/new_chair,
+/turf/open/floor/plasteel{
+	tag = "icon-vault (NORTHEAST)";
+	icon_state = "vault";
+	dir = 5
+	},
+/area/centcom/control)
+"iM" = (
+/obj/effect/spawner/structure/window,
+/turf/open/floor/plasteel{
+	tag = "icon-vault (NORTHEAST)";
+	icon_state = "vault";
+	dir = 5
+	},
+/area/centcom/control)
+"iN" = (
 /obj/structure/table,
 /obj/item/weapon/hemostat,
 /obj/item/weapon/retractor{
@@ -2197,30 +3311,7 @@
 	icon_state = "white"
 	},
 /area/centcom/control)
-"fI" = (
-/turf/open/floor/plasteel{
-	dir = 2;
-	icon_state = "whiteblue"
-	},
-/area/centcom/control)
-"fJ" = (
-/obj/machinery/door/airlock/glass_medical{
-	id_tag = 0;
-	name = "Medbay";
-	req_access_txt = "101"
-	},
-/turf/open/floor/plasteel{
-	dir = 2;
-	icon_state = "whiteblue"
-	},
-/area/centcom/control)
-"fK" = (
-/turf/open/floor/plasteel{
-	dir = 2;
-	icon_state = "whitebluecorner"
-	},
-/area/centcom/control)
-"fL" = (
+"iO" = (
 /obj/structure/table,
 /obj/item/weapon/scalpel{
 	pixel_y = 12
@@ -2231,19 +3322,7 @@
 	icon_state = "white"
 	},
 /area/centcom/control)
-"fM" = (
-/turf/open/floor/plasteel{
-	dir = 10;
-	icon_state = "whitered"
-	},
-/area/centcom/control)
-"fN" = (
-/turf/open/floor/plasteel{
-	dir = 6;
-	icon_state = "whiteblue"
-	},
-/area/centcom/control)
-"fO" = (
+"iP" = (
 /obj/structure/table,
 /obj/item/clothing/mask/surgical,
 /obj/item/clothing/gloves/color/latex,
@@ -2252,14 +3331,14 @@
 	icon_state = "white"
 	},
 /area/centcom/control)
-"fP" = (
+"iQ" = (
 /obj/structure/closet/secure_closet/medical2,
 /turf/open/floor/plasteel{
 	heat_capacity = 1e+006;
 	icon_state = "white"
 	},
 /area/centcom/control)
-"fQ" = (
+"iR" = (
 /obj/structure/table/optable,
 /obj/item/weapon/surgical_drapes,
 /turf/open/floor/plasteel{
@@ -2267,673 +3346,20 @@
 	icon_state = "white"
 	},
 /area/centcom/control)
-"fR" = (
+"iS" = (
 /obj/structure/table/glass,
 /turf/open/floor/plasteel{
 	dir = 10;
 	icon_state = "whitered"
 	},
 /area/centcom/control)
-"fS" = (
-/turf/closed/wall/darksteel,
-/area/centcom/security)
-"fT" = (
-/turf/open/floor/plasteel/darkred/side{
-	dir = 9
-	},
-/area/centcom/security)
-"fU" = (
-/turf/open/floor/plasteel/darkred/side{
-	dir = 1
-	},
-/area/centcom/security)
-"fV" = (
-/turf/open/floor/plasteel/darkred/side{
-	dir = 5
-	},
-/area/centcom/security)
-"fW" = (
-/turf/open/floor/plasteel/darkred/side{
-	dir = 8
-	},
-/area/centcom/security)
-"fX" = (
-/turf/open/floor/plasteel/black,
-/area/centcom/security)
-"fY" = (
-/turf/open/floor/plasteel/darkred/corner{
-	dir = 4
-	},
-/area/centcom/security)
-"fZ" = (
-/turf/open/floor/plasteel/darkred/side{
-	dir = 4
-	},
-/area/centcom/security)
-"ga" = (
-/obj/effect/spawner/structure/window/reinforced,
-/turf/open/floor/plasteel/darkred/corner,
-/area/centcom/security)
-"gb" = (
-/obj/effect/spawner/structure/window/reinforced,
-/turf/open/floor/plasteel/darkred/corner{
-	dir = 8
-	},
-/area/centcom/security)
-"gc" = (
-/turf/open/floor/plasteel/darkred/corner{
-	dir = 1
-	},
-/area/centcom/security)
-"gd" = (
-/turf/closed/wall/r_wall,
-/area/centcom/security)
-"ge" = (
-/obj/structure/closet/secure_closet/freezer/fridge,
-/turf/open/floor/plasteel/freezer,
-/area/centcom/control)
-"gf" = (
-/obj/effect/spawner/structure/window/reinforced,
-/turf/open/floor/plasteel/darkred/corner{
-	dir = 4
-	},
-/area/centcom/security)
-"gg" = (
-/obj/structure/table/reinforced,
-/obj/item/weapon/reagent_containers/food/condiment/saltshaker{
-	pixel_x = -10;
-	pixel_y = 5
-	},
-/obj/item/weapon/reagent_containers/food/condiment/peppermill{
-	pixel_y = 5
-	},
-/turf/open/floor/plasteel,
-/area/centcom/control)
-"gh" = (
-/obj/structure/chair/new_chair,
-/turf/open/floor/plasteel/green/side{
-	dir = 9
-	},
-/area/centcom)
-"gi" = (
-/obj/structure/chair/new_chair,
-/turf/open/floor/plasteel/green/side{
-	dir = 1
-	},
-/area/centcom)
-"gj" = (
-/turf/open/floor/plasteel/green/side{
-	dir = 10
-	},
-/area/centcom)
-"gk" = (
-/turf/open/floor/plasteel/green/side,
-/area/centcom)
-"gl" = (
-/turf/open/floor/plasteel/green/side{
-	dir = 5
-	},
-/area/centcom)
-"gm" = (
+"iT" = (
 /obj/structure/table/glass,
 /turf/open/floor/plasteel{
 	dir = 6;
 	icon_state = "whiteblue"
 	},
 /area/centcom/control)
-"hP" = (
-/obj/structure/extinguisher_cabinet{
-	pixel_x = 27;
-	pixel_y = 0
-	},
-/obj/structure/chair/comfy/shuttle{
-	dir = 8
-	},
-/turf/open/floor/plasteel/neutral/side{
-	dir = 4
-	},
-/area/shuttle/escape)
-"hO" = (
-/obj/structure/chair/comfy/shuttle,
-/obj/item/device/radio/intercom{
-	dir = 4;
-	name = "Station Intercom (General)";
-	pixel_x = 0;
-	pixel_y = 24
-	},
-/turf/open/floor/wood,
-/area/shuttle/escape)
-"hN" = (
-/obj/effect/spawner/structure/window/reinforced,
-/turf/open/floor/plating,
-/area/centcom/control)
-"hM" = (
-/turf/open/floor/plasteel/green/side{
-	dir = 4
-	},
-/area/centcom/control)
-"hL" = (
-/obj/structure/table,
-/obj/item/weapon/defibrillator/loaded,
-/turf/open/floor/plasteel/neutral{
-	dir = 6;
-	icon_state = "whiteblue"
-	},
-/area/shuttle/escape)
-"hK" = (
-/obj/item/device/radio/intercom{
-	broadcasting = 0;
-	listening = 1;
-	name = "Station Intercom (General)";
-	pixel_y = -30
-	},
-/turf/open/floor/plasteel/neutral{
-	icon_state = "whiteblue"
-	},
-/area/shuttle/escape)
-"hJ" = (
-/obj/item/device/radio/intercom{
-	dir = 4;
-	name = "Station Intercom (General)";
-	pixel_x = -31
-	},
-/obj/structure/chair/comfy/shuttle{
-	dir = 4
-	},
-/obj/machinery/camera{
-	c_tag = "Emeregency Shuttle";
-	dir = 4;
-	network = list("SS13")
-	},
-/turf/open/floor/plasteel/neutral/side{
-	dir = 8
-	},
-/area/shuttle/escape)
-"hI" = (
-/obj/structure/chair/new_chair,
-/obj/machinery/status_display{
-	pixel_y = 31
-	},
-/turf/open/floor/plasteel/blackvault{
-	dir = 1
-	},
-/area/centcom/evac)
-"hH" = (
-/obj/structure/grille,
-/obj/structure/window/shuttle,
-/obj/machinery/door/poddoor/shutters{
-	dir = 4;
-	id = "Emergency_Shuttle_Shutters";
-	name = "Emergency Shuttle shutters"
-	},
-/turf/open/floor/plating,
-/area/shuttle/escape)
-"hG" = (
-/obj/machinery/door/airlock/glass_medical{
-	id_tag = null;
-	name = "Escape Shuttle Infirmary";
-	req_access_txt = "0"
-	},
-/turf/open/floor/plasteel/whitebot/delivery,
-/area/shuttle/escape)
-"hF" = (
-/obj/structure/reagent_dispensers/peppertank{
-	pixel_x = 0;
-	pixel_y = -29
-	},
-/obj/structure/chair/comfy/shuttle/black{
-	tag = "icon-shblack (NORTH)";
-	icon_state = "shblack";
-	dir = 1
-	},
-/turf/open/floor/plasteel/shuttle/red,
-/area/shuttle/escape)
-"hE" = (
-/obj/structure/chair/comfy/shuttle/black{
-	tag = "icon-shblack (NORTH)";
-	icon_state = "shblack";
-	dir = 1
-	},
-/turf/open/floor/plasteel/shuttle/red,
-/area/shuttle/escape)
-"hD" = (
-/obj/machinery/sleeper{
-	icon_state = "sleeper-open";
-	dir = 8
-	},
-/turf/open/floor/plasteel/neutral{
-	dir = 4;
-	icon_state = "whiteblue"
-	},
-/area/shuttle/escape)
-"hC" = (
-/obj/machinery/door/airlock/glass_security{
-	name = "Brig";
-	req_access_txt = "2"
-	},
-/turf/open/floor/plasteel/shuttle/red,
-/area/shuttle/escape)
-"hB" = (
-/turf/open/floor/plasteel/shuttle/red,
-/area/shuttle/escape)
-"hA" = (
-/obj/structure/lattice,
-/turf/open/space,
-/area/centcom)
-"hz" = (
-/obj/structure/table,
-/obj/item/weapon/scalpel{
-	pixel_y = 12
-	},
-/obj/item/weapon/circular_saw,
-/obj/item/weapon/retractor{
-	pixel_x = 4
-	},
-/obj/item/weapon/hemostat{
-	pixel_x = -4
-	},
-/obj/item/clothing/gloves/color/latex,
-/obj/item/clothing/mask/surgical,
-/obj/structure/sign/nosmoking_2{
-	pixel_x = 32
-	},
-/obj/machinery/status_display{
-	pixel_y = 31
-	},
-/turf/open/floor/plasteel/neutral{
-	dir = 9;
-	icon_state = "whiteblue"
-	},
-/area/shuttle/escape)
-"hy" = (
-/obj/structure/table/optable,
-/obj/item/weapon/surgical_drapes,
-/obj/machinery/vending/wallmed{
-	name = "Emergency NanoMed";
-	pixel_x = 0;
-	pixel_y = 30;
-	req_access_txt = "0";
-	use_power = 0
-	},
-/turf/open/floor/plasteel/neutral{
-	dir = 1;
-	icon_state = "whiteblue"
-	},
-/area/shuttle/escape)
-"hx" = (
-/obj/structure/chair/comfy/shuttle{
-	dir = 4
-	},
-/turf/open/floor/plasteel/neutral/corner{
-	dir = 1
-	},
-/area/shuttle/escape)
-"hw" = (
-/obj/structure/grille,
-/obj/structure/window/shuttle,
-/turf/open/floor/plating,
-/area/shuttle/escape)
-"hv" = (
-/obj/effect/spawner/structure/window/reinforced,
-/turf/open/floor/plating,
-/area/centcom)
-"hu" = (
-/obj/structure/chair/new_chair{
-	dir = 1
-	},
-/turf/open/floor/plasteel/green/side,
-/area/centcom)
-"ht" = (
-/obj/structure/chair/new_chair{
-	dir = 1
-	},
-/turf/open/floor/plasteel/green/side{
-	dir = 10
-	},
-/area/centcom)
-"hs" = (
-/obj/structure/sign/bluecross_2{
-	pixel_x = 32
-	},
-/obj/structure/chair/comfy/shuttle{
-	dir = 8
-	},
-/turf/open/floor/plasteel/neutral/side{
-	dir = 4
-	},
-/area/shuttle/escape)
-"hr" = (
-/obj/structure/chair/comfy/shuttle{
-	dir = 4
-	},
-/turf/open/floor/plasteel/neutral/side{
-	dir = 8
-	},
-/area/shuttle/escape)
-"hq" = (
-/turf/open/floor/plasteel/red/corner{
-	dir = 1
-	},
-/area/centcom/evac)
-"hp" = (
-/obj/structure/chair/new_chair,
-/obj/machinery/status_display{
-	pixel_y = 31
-	},
-/turf/open/floor/plasteel/red/side{
-	dir = 1
-	},
-/area/centcom/evac)
-"ho" = (
-/turf/open/floor/plasteel/red/side{
-	dir = 9
-	},
-/area/centcom/evac)
-"hn" = (
-/turf/open/floor/plasteel/green/corner{
-	dir = 8
-	},
-/area/centcom)
-"hm" = (
-/turf/open/floor/plasteel/green/corner,
-/area/centcom)
-"hl" = (
-/obj/machinery/door/airlock/glass_command{
-	name = "Shuttle E.V.A Storage"
-	},
-/turf/open/floor/plasteel{
-	icon_state = "delivery";
-	name = "floor"
-	},
-/area/shuttle/escape)
-"hk" = (
-/obj/structure/window/shuttle,
-/obj/machinery/door/poddoor/shutters{
-	dir = 8;
-	id = "Emergency_Shuttle_Shutters";
-	name = "Emergency Shuttle shutters"
-	},
-/obj/structure/grille,
-/turf/open/floor/plating,
-/area/shuttle/escape)
-"hj" = (
-/turf/open/floor/plasteel/red/side{
-	dir = 5
-	},
-/area/centcom/evac)
-"hi" = (
-/turf/open/floor/plasteel/green/corner{
-	dir = 1
-	},
-/area/centcom)
-"hh" = (
-/obj/structure/chair/new_chair,
-/turf/open/floor/plasteel,
-/area/centcom)
-"hg" = (
-/obj/machinery/suit_storage_unit/standard_unit,
-/turf/open/floor/plasteel{
-	dir = 2;
-	icon_state = "bot"
-	},
-/area/shuttle/escape)
-"hf" = (
-/obj/structure/chair/comfy/shuttle{
-	dir = 8
-	},
-/turf/open/floor/plasteel,
-/area/shuttle/escape)
-"he" = (
-/turf/open/floor/plasteel/neutral/corner{
-	dir = 4
-	},
-/area/shuttle/escape)
-"hd" = (
-/obj/structure/closet/crate/bin{
-	pixel_y = 0
-	},
-/turf/open/floor/plasteel{
-	icon_state = "bot";
-	dir = 1
-	},
-/area/shuttle/escape)
-"hc" = (
-/obj/effect/spawner/structure/window/reinforced,
-/turf/open/floor/plating,
-/area/centcom/evac)
-"hb" = (
-/obj/structure/chair/new_chair{
-	dir = 8
-	},
-/turf/open/floor/plasteel/green/side{
-	dir = 4
-	},
-/area/centcom)
-"ha" = (
-/obj/structure/chair/new_chair{
-	dir = 4
-	},
-/turf/open/floor/plasteel,
-/area/centcom)
-"gZ" = (
-/obj/structure/chair/new_chair{
-	dir = 1
-	},
-/turf/open/floor/plasteel,
-/area/centcom)
-"gY" = (
-/obj/structure/chair/new_chair{
-	dir = 1
-	},
-/turf/open/floor/plasteel/green/side{
-	dir = 8
-	},
-/area/centcom)
-"gX" = (
-/obj/machinery/recharge_station,
-/obj/structure/window/reinforced,
-/turf/open/floor/plasteel{
-	icon_state = "bot";
-	dir = 1
-	},
-/area/shuttle/escape)
-"gW" = (
-/turf/open/floor/plasteel/neutral,
-/area/shuttle/escape)
-"gV" = (
-/turf/open/floor/plasteel/green/side{
-	dir = 8
-	},
-/area/centcom)
-"gU" = (
-/obj/structure/table,
-/turf/open/floor/plasteel,
-/area/centcom)
-"gT" = (
-/obj/structure/tank_dispenser/oxygen{
-	layer = 2.7;
-	pixel_x = -1;
-	pixel_y = 2
-	},
-/turf/open/floor/plasteel{
-	icon_state = "bot";
-	dir = 1
-	},
-/area/shuttle/escape)
-"gS" = (
-/obj/structure/shuttle/engine/platform{
-	dir = 1
-	},
-/turf/open/floor/plating/airless,
-/area/shuttle/escape)
-"gR" = (
-/turf/open/floor/plasteel,
-/area/centcom)
-"gQ" = (
-/turf/open/floor/plasteel/green/side{
-	dir = 6
-	},
-/area/centcom)
-"gP" = (
-/turf/open/floor/plasteel/green/side{
-	dir = 9
-	},
-/area/centcom)
-"gO" = (
-/turf/open/floor/plasteel/green/side{
-	dir = 1
-	},
-/area/centcom)
-"gN" = (
-/turf/closed/wall/darksteel,
-/area/centcom)
-"gM" = (
-/obj/structure/shuttle/engine/propulsion{
-	icon_state = "propulsion_r";
-	dir = 1
-	},
-/obj/structure/shuttle/engine/platform,
-/turf/open/floor/plating/airless,
-/area/shuttle/escape)
-"gL" = (
-/obj/structure/closet/crate/medical{
-	name = "medical crate"
-	},
-/obj/item/weapon/storage/firstaid/regular,
-/obj/item/weapon/storage/firstaid/o2{
-	pixel_x = 3;
-	pixel_y = 3
-	},
-/obj/item/weapon/storage/firstaid/toxin{
-	pixel_x = -4;
-	pixel_y = 3
-	},
-/mob/living/simple_animal/bot/medbot{
-	name = "\improper emergency medibot";
-	pixel_x = -3;
-	pixel_y = 2
-	},
-/turf/open/floor/plasteel{
-	icon_state = "bot";
-	dir = 1
-	},
-/area/shuttle/escape)
-"gK" = (
-/turf/open/floor/plasteel/neutral/corner,
-/area/shuttle/escape)
-"gJ" = (
-/obj/structure/shuttle/engine/propulsion{
-	icon_state = "propulsion_l";
-	dir = 1
-	},
-/obj/structure/shuttle/engine/platform,
-/turf/open/floor/plating/airless,
-/area/shuttle/escape)
-"gI" = (
-/obj/structure/shuttle/engine/propulsion{
-	icon_state = "propulsion";
-	dir = 1
-	},
-/obj/structure/shuttle/engine/platform,
-/turf/open/floor/plating/airless,
-/area/shuttle/escape)
-"gH" = (
-/obj/machinery/door/airlock/glass,
-/turf/open/floor/plasteel,
-/area/centcom/control)
-"gG" = (
-/obj/structure/table/reinforced,
-/obj/item/weapon/storage/fancy/donut_box,
-/turf/open/floor/plasteel,
-/area/centcom/control)
-"gF" = (
-/obj/structure/table/reinforced,
-/turf/open/floor/plasteel,
-/area/centcom/control)
-"gE" = (
-/obj/structure/table/reinforced,
-/obj/item/weapon/reagent_containers/food/snacks/customizable/pie,
-/turf/open/floor/plasteel,
-/area/centcom/control)
-"gD" = (
-/obj/machinery/gibber/autogibber,
-/turf/open/floor/plasteel/freezer,
-/area/centcom/control)
-"gC" = (
-/obj/structure/kitchenspike,
-/turf/open/floor/plasteel/freezer,
-/area/centcom/control)
-"gB" = (
-/obj/structure/table,
-/obj/item/weapon/reagent_containers/food/condiment/saltshaker{
-	pixel_y = 10
-	},
-/obj/item/weapon/reagent_containers/food/condiment/peppermill{
-	pixel_y = 5
-	},
-/turf/open/floor/plasteel/cafeteria,
-/area/centcom/control)
-"gA" = (
-/obj/machinery/vending/dinnerware,
-/turf/open/floor/plasteel/cafeteria,
-/area/centcom/control)
-"gz" = (
-/turf/open/floor/plasteel/cafeteria,
-/area/centcom/control)
-"gy" = (
-/obj/structure/table,
-/obj/machinery/microwave,
-/turf/open/floor/plasteel/cafeteria,
-/area/centcom/control)
-"gx" = (
-/obj/structure/closet/crate/bin,
-/turf/open/floor/plasteel/cafeteria,
-/area/centcom/control)
-"gw" = (
-/obj/structure/sink/kitchen{
-	pixel_y = 30
-	},
-/turf/open/floor/plasteel/cafeteria,
-/area/centcom/control)
-"gv" = (
-/obj/machinery/processor,
-/turf/open/floor/plasteel/cafeteria,
-/area/centcom/control)
-"gu" = (
-/obj/structure/table,
-/obj/item/weapon/storage/fancy/egg_box{
-	pixel_y = 10
-	},
-/turf/open/floor/plasteel/cafeteria,
-/area/centcom/control)
-"gt" = (
-/obj/structure/table,
-/obj/item/weapon/kitchen/rollingpin,
-/turf/open/floor/plasteel/cafeteria,
-/area/centcom/control)
-"gs" = (
-/obj/machinery/icecream_vat,
-/turf/open/floor/plasteel/freezer,
-/area/centcom/control)
-"gr" = (
-/obj/machinery/food_cart,
-/turf/open/floor/plasteel/freezer,
-/area/centcom/control)
-"gq" = (
-/obj/structure/closet/secure_closet/freezer/cream_pie,
-/turf/open/floor/plasteel/freezer,
-/area/centcom/control)
-"gp" = (
-/obj/structure/closet/secure_closet/freezer/meat,
-/turf/open/floor/plasteel/freezer,
-/area/centcom/control)
-"go" = (
-/turf/open/floor/plasteel/freezer,
-/area/centcom/control)
-"gn" = (
-/obj/structure/lattice,
-/turf/open/space,
-/area/space)
 
 (1,1,1) = {"
 aa
@@ -19531,13 +19957,13 @@ aa
 aa
 aa
 aa
-gn
-gN
-gN
-gN
-gN
-gN
-gN
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -19782,19 +20208,19 @@ aa
 aa
 aa
 aa
-gN
-gN
-gN
-gN
-gN
-gn
-gn
-aE
-aT
-bg
-bg
-bi
-aE
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -20031,27 +20457,27 @@ aa
 aa
 aa
 aa
-aE
-aE
-aE
-aE
-aE
-aE
-gN
-gN
-gN
-gh
-ag
-ht
-gN
-gn
-gn
-aE
-aU
-aN
-aN
-bp
-aE
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -20288,27 +20714,27 @@ aa
 aa
 aa
 aa
-aE
-ge
-ge
-go
-gC
-aE
-gh
-ag
-gY
-av
-gU
-hu
-gN
-gn
-gn
-aE
-aU
-aN
-aN
-bp
-aE
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -20545,27 +20971,27 @@ aa
 aa
 aa
 aa
-aE
-go
-go
-go
-gC
-aE
-gi
-gU
-gZ
-hh
-gU
-hu
-gN
-gn
-gn
-aE
-aU
-aN
-aN
-bp
-aE
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -20802,27 +21228,27 @@ aa
 aa
 aa
 aa
-aE
-gp
-gp
-go
-gC
-aE
-gi
-gU
-gZ
-gR
-gR
-gk
-gN
-gN
-gN
-aE
-aU
-aN
-aN
-bp
-aE
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -21059,27 +21485,27 @@ aa
 aa
 aa
 aa
-aE
-go
-go
-go
-go
-aE
-gO
-gR
-gR
-gP
-gV
-gV
-gV
-gV
-gV
-bg
-aW
-aN
-aN
-bp
-aE
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -21316,27 +21742,27 @@ aa
 aa
 aa
 aa
-aE
-gq
-gq
-go
-go
-aE
-gi
-gU
-gZ
-gO
-hm
-aq
-aq
-aq
-aq
-hM
-be
-aN
-aN
-bp
-aE
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+bU
+bU
+aa
+bU
+bU
+bU
 aa
 aa
 aa
@@ -21573,27 +21999,27 @@ aa
 aa
 aa
 aa
-aE
-go
-go
-go
-go
-aE
-gi
-gU
-gZ
-gO
-gk
-gN
-gN
-hv
-gN
-aE
-aU
-aN
-aN
-bp
-aE
+aa
+aa
+aa
+aa
+bU
+bU
+bU
+bU
+bU
+bU
+aa
+aa
+aa
+aa
+bU
+aG
+aG
+aG
+aG
+aG
+bU
 aa
 aa
 aa
@@ -21830,28 +22256,28 @@ aa
 aa
 aa
 aa
-aE
-gr
-gs
-go
-gD
-aE
-gi
-gU
-gZ
-gO
-gk
-gN
-hA
-gn
-gn
-aE
-aU
-aN
-aN
-bp
-aE
 aa
+aa
+aa
+aG
+aG
+aG
+bt
+bt
+bt
+aa
+bU
+aa
+aa
+aa
+bU
+aG
+eO
+fq
+fC
+aG
+bU
+bU
 aa
 aa
 aa
@@ -22087,28 +22513,28 @@ aa
 aa
 aa
 aa
-aE
-aE
-aE
-ab
-aE
-aE
-gP
-gV
-gV
-hi
-gk
-hv
-hA
-gn
-gn
-hN
-aU
-aN
-aN
-bp
-aE
 aa
+aa
+bU
+aG
+aK
+aK
+bu
+bH
+bt
+bU
+aa
+bU
+bU
+bU
+bU
+aG
+eP
+cA
+fD
+aG
+bU
+bU
 aa
 aa
 aa
@@ -22345,27 +22771,27 @@ aa
 aa
 aa
 aa
-aE
-bn
-gz
-gz
-gg
-gj
-gR
-gR
-gR
-gk
-hv
-hA
-gn
-gn
-hN
-aU
-aN
-aN
-bp
-aE
 aa
+bU
+aG
+aL
+aL
+bu
+bH
+bt
+bt
+bt
+bt
+bt
+aG
+bU
+aG
+eP
+cA
+fD
+aG
+aa
+bU
 aa
 aa
 aa
@@ -22602,27 +23028,27 @@ aa
 aa
 aa
 aa
-aE
-gt
-gz
-gz
-gE
-gk
-gR
-gR
-gR
-gk
-hv
-hA
-gn
-gn
-hN
-aU
-aN
-aN
-bp
-aE
 aa
+bU
+aG
+aM
+aM
+bu
+bH
+bt
+bY
+cJ
+db
+dx
+aG
+aa
+aG
+eQ
+cA
+fD
+aG
+aa
+bU
 aa
 aa
 aa
@@ -22859,27 +23285,27 @@ aa
 aa
 aa
 aa
-aE
-gu
-gz
-gz
-gF
-gk
-gR
-gR
-gR
-gk
-gN
-hA
-gn
-gn
-aE
-aU
-aN
-aN
-bp
-aE
 aa
+bU
+aG
+aL
+aL
+bu
+bI
+bt
+cx
+cK
+dc
+dy
+aG
+bU
+aG
+eP
+cA
+fD
+aG
+aa
+bU
 aa
 aa
 aa
@@ -23116,27 +23542,27 @@ aa
 aa
 aa
 aa
-aE
-gv
-gz
-gz
-gF
-gk
-gR
-gR
-gR
-gk
-gN
-gN
-hv
-gN
-aE
-aU
-aN
-aN
-bp
-aE
 aa
+aa
+aG
+aN
+aN
+bu
+bt
+bt
+cx
+cK
+dc
+dy
+bt
+bs
+aG
+eP
+cA
+fD
+aG
+bU
+bU
 aa
 aa
 aa
@@ -23373,26 +23799,26 @@ aa
 aa
 aa
 aa
-aE
-gw
-gz
-gz
-gF
-gk
-gR
-gR
-gR
-hn
-gV
-gV
-gV
-gV
-bg
-aW
-aN
-aN
-bp
-aE
+aa
+aa
+aG
+aG
+aG
+bv
+bt
+bY
+cy
+cz
+cz
+ca
+bt
+bt
+aG
+eP
+cA
+fD
+aG
+bU
 aa
 aa
 aa
@@ -23630,26 +24056,26 @@ aa
 aa
 aa
 aa
-aE
-gx
-gz
-gz
-gG
-gk
-gR
-gR
-gR
-gR
-hm
-aq
-aq
-aq
-hM
-be
-aN
-aN
-bp
-aE
+aa
+bU
+aG
+aO
+bf
+bw
+bJ
+bZ
+cz
+cz
+cz
+dz
+dP
+em
+eA
+eR
+cA
+fD
+aG
+bU
 aa
 aa
 aa
@@ -23887,26 +24313,26 @@ aa
 aa
 aa
 aa
-aE
-gy
-gz
-gz
-gG
-gQ
-gR
-gR
-gR
-gR
-gk
-gN
-gN
-gN
-aE
-aU
-aN
-aN
-bp
-aE
+aa
+aa
+aG
+aP
+bf
+bw
+bK
+ca
+cz
+cz
+cz
+dA
+dQ
+dQ
+eB
+eS
+cA
+fD
+aG
+bU
 aa
 aa
 aa
@@ -24144,26 +24570,26 @@ aa
 aa
 aa
 aa
-aE
-gy
-gz
-gz
-aE
-gO
-gR
-ha
-ha
-ha
-gk
-gN
-gn
-gn
-aE
-aU
-aN
-aN
-bp
-aE
+aa
+bU
+aG
+aQ
+bf
+bw
+bL
+ca
+cz
+cz
+cz
+ca
+aG
+aG
+aG
+eP
+cA
+fD
+aG
+bU
 aa
 aa
 aa
@@ -24401,27 +24827,27 @@ aa
 aa
 aa
 aa
-aE
-gz
-gz
-gz
-gH
-gR
-gR
-gU
-gU
-gU
-gk
-gN
-gn
-gn
-aE
-aU
-aN
-aN
-bp
-aE
 aa
+bU
+aG
+aR
+bf
+bw
+bL
+ca
+cz
+cK
+dc
+dy
+aG
+bU
+aG
+eP
+cA
+fD
+aG
+bU
+bU
 aa
 aa
 aa
@@ -24658,27 +25084,27 @@ aa
 aa
 aa
 aa
-aE
-gA
-gB
-bn
-aE
-gl
-aq
-hb
-hb
-hb
-gQ
-gN
-gn
-gn
-aE
-aU
-aN
-aN
-bp
-aE
 aa
+aa
+aG
+aS
+bf
+bw
+bL
+ca
+cz
+cK
+dc
+dy
+aG
+aa
+aG
+eP
+cA
+fD
+aG
+bU
+bU
 aa
 aa
 aa
@@ -24915,34 +25341,34 @@ aa
 aa
 aa
 aa
-aE
-aE
-aE
-aE
-aE
-aE
-aE
-aE
-aE
-aE
-aE
-aE
-gn
-gn
-aE
-aU
-aN
-aN
-bp
-aE
 aa
 aa
+aG
+aT
+bf
+bf
+bM
+cb
+cA
+cL
+dd
+dB
+aG
+bU
+aG
+eP
+cA
+fD
+aG
+bU
+bU
 aa
+bU
+bU
+bU
 aa
-aa
-aa
-aa
-aa
+bU
+bU
 aa
 aa
 aa
@@ -25171,37 +25597,37 @@ aa
 aa
 aa
 aa
-gn
-gn
-gn
-gn
-gn
-gn
-gn
-gn
-gn
-gn
-gn
-gn
-gn
-gn
-gn
-aE
+aa
+aa
+aa
+aG
 aU
-aN
-aN
-bp
-aE
+bf
+bf
+bM
+cc
+cA
+cA
+cA
+cb
+aG
+bU
+aG
+eP
+cA
+fD
+aG
+bU
+bU
+bU
+gQ
+gQ
+gQ
+gQ
+gQ
+gQ
+gQ
 aa
-aa
-aa
-cp
-cp
-cp
-cp
-cp
-cp
-cp
 aa
 aa
 aa
@@ -25427,38 +25853,38 @@ aa
 aa
 aa
 aa
-fS
-fS
-fS
-fS
-fS
-fS
-fS
-fS
-fS
-fS
-fS
-fS
-fS
-fS
-gn
-gn
-aE
+aa
+aa
+aa
+bU
+aG
 aU
-aN
-aN
-bp
-aE
-aa
-aa
-aa
-cp
-dh
-dF
-dM
-dL
-ed
-cp
+bf
+bf
+aG
+cd
+cA
+cL
+dd
+dB
+aG
+bU
+aG
+eQ
+cA
+fD
+aG
+bU
+bU
+bU
+gQ
+hf
+hz
+hK
+hO
+id
+gQ
+bU
 aa
 aa
 aa
@@ -25680,42 +26106,42 @@ aa
 aa
 aa
 aa
-fS
-fS
-fS
-fS
-fS
-fT
-fW
-fW
-fW
-fW
-fW
-fW
-fW
-fW
-fW
-fW
-bz
-fS
-gn
-gn
-aE
-aU
-aN
-aN
-bp
-aE
 aa
 aa
-cp
-cp
-di
-eB
-dP
-eB
-ee
-cp
+aa
+aa
+aa
+aa
+aa
+bU
+aG
+bf
+bf
+bf
+bO
+cA
+cA
+cL
+dd
+dB
+aG
+bU
+aG
+eP
+cA
+fD
+aG
+bU
+bU
+gQ
+gQ
+hg
+hh
+hL
+hh
+ie
+gQ
+bU
 aa
 aa
 aa
@@ -25937,42 +26363,42 @@ aa
 aa
 aa
 aa
-fS
-fT
-fW
-fW
-fW
-gc
-fX
-fX
-fX
-fX
-fX
-fX
-fX
-fX
-fX
-fX
-aB
-fS
-gn
-gn
-aE
-aU
-aN
-aN
-bp
-aE
 aa
 aa
-cp
-cy
+aa
+aa
+aa
+aa
+aa
+aa
+aG
+aX
+bh
+aO
+aG
+cf
 eB
-eB
-eB
-eB
-eh
-cp
+cN
+df
+dE
+aG
+bU
+aG
+eP
+cA
+fD
+aG
+bU
+aa
+gQ
+gR
+hh
+hh
+hh
+hh
+if
+gQ
+bU
 aa
 aa
 aa
@@ -26194,44 +26620,44 @@ aa
 aa
 aa
 aa
-fS
-fU
-fX
-fX
-fX
-fX
-fX
-fX
-fX
-fX
-fX
-fX
-fX
-fX
-fX
-fX
-aB
-fS
-gn
-gn
-aE
-aU
-aN
-aN
-bp
-aE
 aa
 aa
-cp
-eM
-eB
-eB
-fw
-dQ
-fG
-cp
 aa
 aa
+aa
+aa
+aa
+bU
+aG
+aG
+aG
+aG
+aG
+aG
+aG
+aG
+aG
+aG
+aG
+bU
+aG
+eP
+cA
+fD
+aG
+bU
+aa
+gQ
+gS
+hh
+hh
+hM
+hV
+ig
+gQ
+aa
+aa
+bU
 aa
 aa
 aa
@@ -26451,45 +26877,45 @@ aa
 aa
 aa
 aa
-fS
-fU
-fX
-fX
-fX
-fX
-fX
-fX
-fX
-fX
-fX
-fX
-fX
-fX
-fX
-fX
-aB
-fS
-gn
-gn
-aE
-aU
-aN
-aN
-bp
-aE
 aa
 aa
-cp
-cp
-dk
-fC
-fx
-cp
-cp
-cp
-cp
-cp
-cp
+aa
+aa
+aa
+aa
+aa
+bU
+bU
+aa
+bU
+bU
+bU
+bU
+bU
+bU
+aa
+bU
+bU
+bU
+aG
+eP
+cA
+fD
+aG
+bU
+bU
+gQ
+gQ
+hi
+hA
+hN
+gQ
+gQ
+gQ
+gQ
+gQ
+gQ
+gQ
 aa
 aa
 aa
@@ -26708,46 +27134,46 @@ aa
 aa
 aa
 aa
-fS
-fU
-fX
-fX
-fX
-fX
-fX
-fX
-fX
-fX
-fX
-fX
-fX
-fX
-fX
-fX
-aB
-fS
-aE
-aE
-aE
-aU
-aN
-aN
-bp
-aE
-aE
-aE
-aE
-cG
-eB
-eB
-eB
-fc
-fc
-en
-en
-eD
-aE
 aa
+aa
+aa
+aa
+aa
+bU
+aa
+bU
+aa
+bU
+bU
+aa
+aa
+bU
+ad
+ad
+ad
+ad
+aG
+aG
+aG
+eP
+cA
+fD
+aG
+aG
+aG
+aG
+aG
+hj
+hh
+hh
+hW
+hW
+fY
+io
+io
+ix
+aG
+bU
 aa
 aa
 aa
@@ -26965,45 +27391,45 @@ aa
 aa
 aa
 aa
-fS
-fU
-fX
-fX
-fX
-fX
-fX
-fX
-fX
-fX
-fX
-fX
-fX
-fX
-fX
-fX
-ao
-aR
-bT
-bT
-bg
-aW
-aN
-aN
+aa
+aa
+ad
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ad
 bA
-bg
-fc
-fc
-eA
-eO
-eB
-eB
-eB
-eB
-eB
-eB
-eB
-fI
-aE
+dg
+dF
+dR
+dR
+dR
+eR
+cA
+fE
+fY
+fY
+fY
+gD
+fY
+hk
+hh
+hh
+hh
+hh
+hh
+hh
+hh
+in
+aG
 aa
 aa
 aa
@@ -27222,46 +27648,46 @@ aa
 aa
 aa
 aa
-fS
-fU
-fX
-fX
-fX
-fX
-fX
-fX
-fX
-fX
-fX
-fX
-fX
-fX
-fX
-fX
-ap
-aS
-aI
-aI
-be
-aN
-aN
-aN
-aN
-bM
-fg
-fg
-fN
-fg
-fg
-fg
-fg
-fD
-eB
-eo
-eo
-eH
-aE
 aa
+bU
+ad
+af
+al
+ar
+aw
+aA
+al
+ar
+aw
+by
+al
+ar
+ad
+ai
+an
+cR
+dS
+dS
+dS
+eS
+cA
+fF
+fZ
+fZ
+fZ
+gE
+fZ
+fZ
+fZ
+fZ
+fZ
+ih
+hh
+ip
+ip
+iy
+aG
+bU
 aa
 aa
 aa
@@ -27479,48 +27905,48 @@ aa
 aa
 aa
 aa
-fS
-fV
-fY
-fX
-fX
-fX
-fX
-fX
-fX
-fX
-fX
-fX
-fX
-fX
-fX
-fX
-aB
-fS
-aV
-aV
-aU
-aN
-aN
-aN
-aN
-bp
-aV
-aV
-aE
+aa
+bU
+ad
+ag
+ag
+ag
+aw
+ag
+ag
+ag
+aw
+ag
+ag
+ag
+ad
+ai
+aY
+ad
+aG
+aG
+aG
 eP
-fd
-fd
-fy
-eQ
-eB
-eB
-eB
-fI
-aE
-aa
-aa
-aa
+cA
+fD
+aG
+aG
+aG
+cF
+aG
+hl
+hB
+hB
+hX
+gU
+hh
+hh
+hh
+in
+aG
+bU
+bU
+bU
 aa
 aa
 aa
@@ -27736,50 +28162,50 @@ aa
 aa
 aa
 aa
-fS
-fS
-fV
-fZ
-fZ
-fZ
-fZ
-fZ
-fZ
-fZ
-fZ
-fZ
-fZ
-fZ
-fY
-fX
-aB
-fS
-cK
-cW
-dm
-co
-co
-co
-co
-ej
-cW
-es
-aE
-cH
-dp
-eB
-fz
-eQ
-eB
-eB
-eB
-fI
-aE
 aa
+bU
+ad
+ah
+am
+as
+aw
+ah
+aI
+as
+aw
+ah
+bP
+as
+ad
+ai
+aY
+ad
+dT
+en
+en
+eG
+dC
+fG
+en
+en
+gu
+gF
+aG
+hm
+hC
+hh
+hY
+gU
+hh
+hh
+hh
+in
+aG
 aa
-aa
-aa
-aa
+bU
+bU
+bU
+bU
 aa
 aa
 aa
@@ -27994,53 +28420,53 @@ aa
 aa
 aa
 aa
-fS
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-fS
-fV
-fZ
-aQ
-fS
-cL
-co
-co
-co
-co
-co
-co
-co
-ch
-et
-aE
-cR
-eB
-dL
-fz
-eQ
-fK
-ep
-ep
-eJ
-aE
+bU
+ad
+ai
+an
+at
+ax
+aB
+an
+at
+bi
+aB
+an
+cg
+ad
+ai
+aY
+ad
+dU
+dC
+eo
+eT
+eT
+eT
+ga
+dC
+gv
+gG
+aG
+hn
+hh
+hO
+hY
+gU
+ik
+iq
+iq
+iz
+aG
+bU
+aG
+aG
+aG
+aG
+aG
 aa
-aE
-aE
-aE
-aE
-aE
-aa
-aa
-aa
+bU
+bU
 aa
 aa
 aa
@@ -28251,54 +28677,54 @@ aa
 aa
 aa
 aa
-fS
+aa
 ad
-aj
+ai
 an
-gd
-at
-aj
+au
+ay
+aC
 an
-gd
-aO
-aj
+au
+bj
+aC
 an
-gd
-fT
-fW
-bz
-fS
-cL
-co
-co
-co
-co
-co
-co
-co
-cY
-aE
-aE
-aE
-fe
-aE
-aE
-dZ
-fJ
-aE
-aE
-aE
-aE
-aE
-aE
-fi
-fi
-fE
-aE
-aE
-aE
-aE
-aE
+ch
+ad
+ai
+aY
+ad
+dV
+eo
+dD
+eC
+eC
+eC
+dD
+gk
+gv
+gH
+aG
+aG
+hD
+aG
+aG
+ii
+il
+aG
+aG
+aG
+aG
+aG
+aG
+iJ
+iJ
+iM
+aG
+aG
+aG
+aG
+aG
 aa
 aa
 aa
@@ -28508,54 +28934,54 @@ aa
 aa
 aa
 aa
-fS
-ae
-ae
-ae
-gd
-ae
-ae
-ae
-gd
-ae
-ae
-ae
-gd
-fU
-fX
+aa
+ad
+ah
+ao
+av
+aw
+aD
+an
+aY
+ad
+bz
+bQ
+av
+ad
 aB
-fS
-cL
-co
-co
-co
-co
-co
-co
-co
-cY
-aE
-eR
-fc
-eB
-fo
-fo
-eO
-fn
-aE
-eu
-eK
-eW
-aE
-fh
-fi
-fm
-fE
+aY
+ad
+dU
+ep
+eC
+eU
+dC
 fH
-eB
-eB
-eB
-aE
+eC
+gl
+gv
+gI
+aG
+ho
+hh
+hP
+hZ
+hk
+im
+aG
+it
+iA
+iE
+aG
+iI
+iJ
+iL
+iM
+iN
+hh
+hh
+hh
+aG
 aa
 aa
 aa
@@ -28765,55 +29191,55 @@ aa
 aa
 aa
 aa
-fS
-af
-ak
-ga
-gd
-gf
-az
-ga
-gd
-gf
-bf
-ga
-gd
-fU
-fX
-aB
-fS
-cL
-co
-co
-co
-co
-co
-co
-co
-cY
+bU
+ad
+aj
+aj
+aj
+aw
 aE
-eQ
-eB
-eB
-fp
-fp
-eB
-eB
-fC
-eB
-eB
+an
+aZ
+ad
+an
+an
+an
+an
+an
+aY
+ad
+dU
+ep
+eC
+eV
+dC
 fI
-aE
-fi
-fi
-fi
-fE
-fL
-eB
-fQ
-eB
-aE
-aa
+eC
+gl
+gv
+aG
+aG
+hp
+hh
+hQ
+hQ
+hh
+hh
+hA
+hh
+hh
+in
+aG
+iJ
+iJ
+iJ
+iM
+iO
+hh
+iR
+hh
+aG
+bU
 aa
 aa
 aa
@@ -29022,54 +29448,54 @@ aa
 aa
 aa
 aa
-fS
-fX
-fX
-ao
+bU
+ad
+ak
+ap
 ar
-gc
-fX
-ao
-aH
-gc
-fX
-bq
-gd
-fU
-fX
-aB
-fS
-cL
-co
-co
-co
-co
-co
-co
-co
-cY
-aE
-eQ
-eB
-eB
-fp
-fp
-eB
-fI
+aw
+aF
+aJ
+ba
+ad
+an
+an
+an
+an
+an
+aY
+ad
+dU
 eq
-eB
-eB
-fI
-aE
-fl
-fi
-fm
-fE
-fO
-eB
-eB
-eB
-aE
+eC
+eW
+dC
+eW
+eC
+gm
+gv
+aG
+gT
+hq
+hh
+hQ
+hQ
+hh
+in
+ir
+iu
+hh
+in
+aG
+iK
+iJ
+iL
+iM
+iP
+hh
+hh
+hh
+aG
 aa
 aa
 aa
@@ -29279,55 +29705,55 @@ aa
 aa
 aa
 aa
-fS
-fX
-fX
-ap
-as
-fY
-fX
-ap
-fZ
-fY
-fX
-br
-gd
-fU
-fX
-aB
-fS
-cL
-co
-co
-co
-co
-co
-co
-co
-cY
-aE
-eQ
-eB
-eB
-fq
-fq
-eB
-fI
-eq
-ev
-eL
+bU
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+bR
+aw
+aw
+aC
+aY
+ad
+dU
+dC
+dC
 eX
-aE
-fl
-fi
-fm
-fE
-fP
-eB
-eB
-eB
-aE
-aa
+eX
+eX
+dC
+dC
+gv
+aG
+gU
+hr
+hh
+hR
+ia
+hh
+in
+ir
+iv
+iB
+iF
+aG
+iK
+iJ
+iL
+iM
+iQ
+hh
+hh
+aG
+aG
+bU
 aa
 aa
 aa
@@ -29536,54 +29962,54 @@ aa
 aa
 aa
 aa
-fS
-af
-al
-gb
-gd
+aa
+aa
+bU
+aa
+bU
+bU
+bU
+bU
+bU
+ad
+bA
+bS
+ci
 aw
-fX
-aB
-gd
-fU
-fX
-fX
-fX
-fX
-fX
-aB
-fS
-cL
-co
-co
-co
-co
-co
-co
-co
-cY
-aE
-eQ
-eB
-eB
-fr
-fA
-eB
-fI
-eq
-eq
-eq
-aE
-aE
-aE
-fC
-aE
-aE
-aE
-fC
-aE
-aE
-aE
+ai
+aY
+ad
+dV
+dC
+dC
+eX
+eX
+eX
+dC
+dC
+gv
+aG
+gV
+hs
+hh
+hh
+hh
+hh
+in
+ir
+ir
+ir
+aG
+aG
+aG
+hA
+aG
+aG
+aG
+hA
+aG
+aG
+bU
 aa
 aa
 aa
@@ -29793,54 +30219,54 @@ aa
 aa
 aa
 aa
-fS
-ah
-ah
-ah
-gd
-ax
-fX
-aC
-gd
-fU
-fX
-fX
-fX
-fX
-fX
-aB
-fS
-cL
-co
-co
-co
-co
-co
-co
-co
-cY
-aE
-eS
-eB
-eB
-fs
-fB
-eB
-fn
-fc
-fc
-fc
-fc
-fc
-fc
-eB
-fc
-fc
-fc
-eB
-fc
-fR
-aE
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+bU
+aa
+ad
+ai
+bS
+cj
+aw
+cO
+dh
+ad
+dU
+dC
+dC
+eX
+eX
+eX
+dC
+dC
+gv
+aG
+gU
+hr
+hh
+hh
+hh
+hh
+im
+fY
+fY
+fY
+fY
+fY
+fY
+hh
+fY
+fY
+fY
+hh
+iS
+aG
+bU
 aa
 aa
 aa
@@ -30050,54 +30476,54 @@ aa
 aa
 aa
 aa
-fS
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+bU
+ad
 ai
-am
-an
-gd
-ay
-aA
-aD
-gd
-fU
-fX
-fX
-fX
-fX
-fX
-aB
-fS
-cM
-cX
-cX
-cX
-co
-cX
-cX
-cX
-et
-aE
-eT
-ff
-ff
-ft
-eB
-eB
-eB
-fK
-fg
-eB
-fg
-fg
-fg
-eB
-fg
-fg
-fg
-eB
-fg
-gm
-aE
+bS
+aY
+cD
+cP
+di
+ad
+dU
+eo
+eC
+eW
+dC
+eW
+eC
+ga
+gv
+aG
+gV
+ht
+hE
+hS
+ib
+hh
+hh
+ik
+fZ
+hh
+fZ
+fZ
+fZ
+hh
+fZ
+fZ
+fZ
+hh
+iT
+aG
+bU
 aa
 aa
 aa
@@ -30307,55 +30733,55 @@ aa
 aa
 aa
 aa
-fS
-fS
-fS
-fS
-fS
-fS
-fS
-fS
-fS
-fV
-fZ
-fX
-fZ
-fZ
-fY
-aB
-fS
-cL
-cY
-by
-by
-bs
-by
-by
-cL
-cY
-aE
-eU
-fg
-fg
-fu
-fg
-fD
-fK
-fN
-aE
-fC
-aE
-aE
-aE
-fC
-aE
-aE
-aE
-fC
-aE
-aE
-aE
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+ad
+bB
+bS
+ck
+cE
+cP
+di
+ad
+dU
+ep
+eC
+eY
+dC
+fJ
+eC
+gl
+gv
+aG
+gW
+fZ
+hF
+hT
+ic
+ih
+ik
+gE
+iw
+hA
+aG
+aG
+aG
+hA
+aG
+aG
+aG
+hA
+aG
+aG
+bU
+bU
 aa
 aa
 aa
@@ -30572,46 +30998,46 @@ aa
 aa
 aa
 aa
-fS
-fS
-gd
-au
-gd
-gd
-fU
-aB
-fS
-cN
-cN
-by
-bh
+aa
+ad
+bC
+bT
 cl
-dT
-by
-ek
-ek
-aE
-aE
-aE
-aE
-aE
-aE
-eQ
-fI
-aE
-aE
-eN
-eY
-aE
-fl
-fi
-fi
-fE
-fP
-eB
-eB
-eB
-aE
+aw
+cQ
+dj
+ad
+dU
+ep
+eC
+eV
+dC
+fK
+eC
+gl
+gv
+aG
+aG
+aG
+aG
+aG
+aG
+ii
+il
+aG
+aG
+iC
+iG
+aG
+iK
+iJ
+iJ
+iM
+iQ
+hh
+hh
+aG
+aG
 aa
 aa
 aa
@@ -30830,46 +31256,46 @@ aa
 aa
 aa
 aa
-fS
-fT
-bt
-bz
-gd
-fU
-aB
-fS
-cO
-cO
-by
-dt
-cl
-dU
-by
-cQ
-cQ
-aE
-eC
-eC
-eC
-eC
-eC
-eO
-fn
-fM
-aE
-eV
-fb
-aE
-fl
-fi
-fm
-fE
-fO
-eB
-eB
-eB
-aE
-aa
+ad
+ad
+ad
+ad
+ad
+ai
+aY
+ad
+dW
+er
+eD
+eD
+fr
+eD
+eD
+dW
+gw
+aG
+gX
+gX
+gX
+gX
+gX
+hk
+im
+is
+aG
+iD
+iH
+aG
+iK
+iJ
+iL
+iM
+iP
+hh
+hh
+hh
+aG
+bU
 aa
 aa
 aa
@@ -31087,45 +31513,45 @@ aa
 aa
 aa
 aa
-fS
-fU
-bt
-aB
-gd
+aa
 bU
-ci
-fS
-cP
-cZ
-bN
-du
-cl
-cl
-bN
-cZ
-cP
-aE
-eQ
-eB
-eB
-eB
-eB
-eB
-eB
-fI
-aE
-aE
-aE
-aE
-fi
-fi
-fm
-fE
+aa
+aa
+ad
+ai
+aY
+ad
+dX
+dX
+eD
+eZ
+gC
 fL
-eB
-fQ
-eB
-aE
+eD
+gn
+gn
+aG
+gU
+hh
+hh
+hh
+hh
+hh
+hh
+in
+aG
+aG
+aG
+aG
+iJ
+iJ
+iL
+iM
+iO
+hh
+iR
+hh
+aG
 aa
 aa
 aa
@@ -31344,45 +31770,45 @@ aa
 aa
 aa
 aa
-fS
-fU
-bt
-aB
-aF
-bV
-cj
-fS
-cP
-cZ
-bN
-dv
-cl
-dV
-bN
-cZ
-cP
-aE
-eC
-eC
-eC
-eC
-eC
-fF
-eB
-fI
-aE
 aa
 aa
-aE
-fh
-fi
-fi
-fE
-fH
-eB
-eB
-eB
-aE
+bU
+aa
+ad
+ai
+aY
+ad
+dY
+dY
+eD
+fa
+gC
+fM
+eD
+go
+go
+aG
+gX
+gX
+gX
+gX
+gX
+ij
+hh
+in
+aG
+aa
+bU
+aG
+iI
+iJ
+iJ
+iM
+iN
+hh
+hh
+hh
+aG
 aa
 aa
 aa
@@ -31601,45 +32027,45 @@ aa
 aa
 aa
 aa
-fS
-bj
-bt
-bB
-aF
-bV
-cj
-fS
-cQ
-cQ
-by
-bX
-cl
-dW
-by
-cO
-cO
-aE
-eQ
-eB
-eB
-eB
-eB
-eB
-eB
-fI
-aE
 aa
 aa
-aE
-aE
-fi
-fm
-fE
-aE
-aE
-aE
-aE
-aE
+bU
+bU
+ad
+ai
+aY
+ad
+dZ
+es
+eE
+fb
+gC
+gC
+gb
+es
+dZ
+aG
+gU
+hh
+hh
+hh
+hh
+hh
+hh
+in
+aG
+bU
+aa
+aG
+aG
+iJ
+iL
+iM
+aG
+aG
+aG
+aG
+aG
 aa
 aa
 aa
@@ -31858,44 +32284,44 @@ aa
 aa
 aa
 aa
-fS
-bk
-bu
-bC
-gd
-bW
-ck
-fS
-cN
-cN
-by
-by
-bs
-by
-by
-ek
-ek
-aE
-eE
-fg
-fg
-fg
-fg
-fg
-fg
+aa
+aa
+aa
+bU
+ad
+ai
+aY
+ad
+dZ
+es
+eF
+fc
+gC
 fN
-aE
+gc
+es
+dZ
+aG
+gW
+fZ
+fZ
+fZ
+fZ
+fZ
+fZ
+gE
+aG
 aa
 aa
+bU
+aG
+aG
+aG
+aG
+aG
 aa
-aE
-aE
-aE
-aE
-aE
-aa
-aa
-aa
+bU
+bU
 aa
 aa
 aa
@@ -32115,39 +32541,39 @@ aa
 aa
 aa
 aa
-fS
-fS
-fS
-fS
-fS
-fU
-aB
-fS
-co
-co
-co
-co
-co
-co
-co
-co
-co
-aE
-aE
-aE
-aE
-aE
-aE
-aE
-aE
-aE
-aE
 aa
 aa
 aa
+bU
+ad
+ai
+aY
+ad
+ea
+ea
+eD
+fd
+gC
+fO
+eD
+gp
+gp
+aG
+aG
+aG
+aG
+aG
+aG
+aG
+aG
+aG
+aG
+bU
+bU
 aa
 aa
-aa
+bU
+bU
 aa
 aa
 aa
@@ -32374,31 +32800,31 @@ aa
 aa
 aa
 aa
+bU
+bU
+ad
+cR
+an
+ad
+dX
+dX
+eD
+eD
+fs
+eD
+eD
 gn
+gn
+cF
+bU
+bU
+bU
 aa
-fS
-fV
-fX
-fS
-co
-co
-co
-co
-co
-co
-co
-co
-co
-aV
+bU
+bU
+bU
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+bU
 aa
 aa
 aa
@@ -32632,23 +33058,23 @@ aa
 aa
 aa
 aa
-gn
-fS
-fS
-cm
-fS
-aV
-da
-co
-co
-co
-co
-co
-co
-er
-aV
+bU
+ad
+ad
+dk
+ad
+dT
+en
+eG
+dC
+dC
+dC
+fG
+en
+gu
+cF
 aa
-aa
+bU
 aa
 aa
 aa
@@ -32889,22 +33315,22 @@ aa
 aa
 aa
 aa
-gn
-aV
-ho
-cn
-cA
-aV
-db
-da
-co
-co
-co
-eb
-cg
-el
-aV
 aa
+cF
+cS
+dl
+dG
+eb
+er
+er
+fe
+dC
+fP
+er
+er
+gw
+cF
+bU
 aa
 aa
 aa
@@ -33146,27 +33572,27 @@ aa
 aa
 aa
 aa
-gn
-aV
-bZ
-co
-cB
-aV
-aV
-dn
-dw
-dw
-dw
-ec
-aV
-aV
-aV
-aV
-aV
-aV
-aV
-gn
-gn
+aa
+cF
+cT
+dm
+cF
+cF
+cF
+cF
+ff
+ft
+fQ
+cF
+cF
+cF
+cF
+bU
+bU
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -33403,28 +33829,28 @@ aa
 aa
 aa
 aa
-gn
-aV
-bZ
-co
-cB
-aV
-dc
-do
-do
-do
-do
-do
-do
-bR
-cd
-cq
-cS
-ds
-aV
-aV
-aV
-gn
+aa
+cF
+cT
+dm
+cF
+ec
+et
+et
+et
+et
+et
+gd
+gq
+gx
+cF
+cF
+cF
+bU
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -33660,28 +34086,28 @@ aa
 aa
 aa
 aa
-gn
-aV
-hp
-co
-cB
-aV
-hI
-cl
-cl
-cl
-cl
-cl
-cl
-cl
-cl
-cl
-cl
-aG
-do
-eF
-aV
-gn
+bU
+cF
+cU
+dm
+cF
+ed
+eu
+eu
+eu
+eu
+eu
+eu
+eu
+eI
+et
+gY
+cF
+bU
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -33917,28 +34343,28 @@ aa
 aa
 aa
 aa
-gn
-aV
-bZ
-co
-cB
-aV
-dd
-cl
-dx
-dI
-dI
-dI
-dX
-dx
-dI
-dI
-dI
-dX
-cl
-eG
-aV
-gn
+bU
+cF
+cT
+dm
+cF
+ee
+eu
+eu
+eu
+eu
+eu
+eu
+eu
+eu
+eu
+gZ
+cF
+bU
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -34174,28 +34600,28 @@ aa
 aa
 aa
 aa
-gn
-hc
-ca
-co
-cB
-hc
-de
-cl
-aG
-dJ
-dJ
-dJ
-bJ
-aG
-dJ
-dJ
-dJ
-bJ
-cl
-eG
-hc
-gn
+bU
+cG
+cV
+dm
+cG
+ef
+eu
+eH
+fg
+fg
+fR
+fg
+fg
+gy
+eu
+gZ
+cG
+bU
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -34431,28 +34857,28 @@ aa
 aa
 aa
 aa
-gn
-hc
-ca
-co
-cB
-hc
-df
-cl
-cl
-cl
-cl
-cl
-cl
-cl
-cl
-cl
-cl
-cl
-cl
-dy
-hc
-gn
+aa
+cG
+cV
+dm
+cG
+ef
+eu
+eI
+fh
+fh
+fS
+fh
+fh
+gz
+eu
+ha
+cG
+bU
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -34688,28 +35114,28 @@ aa
 aa
 aa
 aa
-gn
-hc
-ca
-co
-cB
-hc
-df
-cl
-cl
-cl
-cl
-cl
-cl
-cl
-cl
-cl
-cl
-cl
-cl
-eG
-hc
-gn
+aa
+cG
+cV
+dm
+cG
+ef
+eu
+eu
+eu
+eu
+eu
+eu
+eu
+eu
+eu
+gZ
+cG
+bU
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -34945,28 +35371,28 @@ aa
 aa
 aa
 aa
-gn
-hc
-ca
-co
-cB
-hc
-de
-cl
-dx
-dI
-dI
-dI
-dX
-dx
-dI
-dI
-dI
-dX
-cl
-eG
-hc
-gn
+aa
+cG
+cV
+dm
+cG
+ef
+eu
+eu
+eu
+eu
+eu
+eu
+eu
+eu
+eu
+gZ
+cG
+bU
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -35202,28 +35628,28 @@ aa
 aa
 aa
 aa
-gn
-aV
-bZ
-co
-cB
-aV
-dd
-cl
-aG
-dJ
-dJ
-dJ
-bJ
-aG
-dJ
-dJ
-dJ
-bJ
-cl
-eG
-hc
-gn
+bU
+cF
+cT
+dm
+cF
+ee
+eu
+eH
+fg
+fg
+fT
+fg
+fg
+gy
+eu
+gZ
+cG
+bU
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -35459,28 +35885,28 @@ aa
 aa
 aa
 aa
-gn
-aV
-cb
-co
-cB
-aV
-hI
-cl
-cl
-cl
-cl
-cl
-cl
-cl
-cl
-cl
-cl
-cl
-cl
-dy
-hc
-gn
+bU
+cF
+cW
+dm
+cF
+ed
+eu
+eI
+fh
+fh
+fU
+fh
+fh
+gz
+eu
+ha
+cG
+bU
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -35715,29 +36141,29 @@ aa
 aa
 aa
 aa
-gn
-aV
-aV
-bZ
-co
-cB
-aV
-de
-cl
-cl
-cl
-cl
-cl
-cl
-cl
-cl
-cl
-cl
-cl
-cl
-eG
-hc
-gn
+aa
+bU
+cF
+cF
+dm
+cF
+eg
+eu
+eu
+eu
+eu
+eu
+eu
+eu
+eu
+eu
+gZ
+cG
+bU
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -35972,29 +36398,29 @@ aa
 aa
 aa
 aa
-gn
-hc
-bY
-hq
-co
-cB
-aV
-dd
-cl
-cl
-cl
-cl
-cl
-cl
-cl
-cl
-cl
-cl
-cl
-cl
-eG
-aV
-gn
+aa
+aa
+cG
+cX
+dm
+cF
+ee
+eu
+eu
+eu
+eu
+eu
+eu
+eu
+eu
+eu
+gZ
+cF
+bU
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -36229,29 +36655,29 @@ aa
 aa
 aa
 aa
-gn
-hc
-ca
-co
-co
-cC
-aV
-dd
-cl
-cl
-hc
-cl
-cl
-cl
-cl
-cl
-cl
-cl
-dx
-dH
-eI
-aV
-gn
+aa
+bU
+cG
+cV
+dm
+cF
+cF
+eu
+eu
+eu
+eu
+eu
+eu
+eu
+eH
+gJ
+hb
+cF
+bU
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -36486,29 +36912,29 @@ aa
 aa
 aa
 aa
-gn
-hc
-hj
-bP
-bP
-co
-aV
-em
-cl
-cl
-hc
-cl
-cl
-dK
-bS
-bS
-bS
-bS
-dA
-aV
-aV
-aV
-gn
+aa
+bU
+cG
+cY
+dn
+dl
+cF
+cF
+eJ
+eu
+cG
+eu
+cG
+gr
+gA
+cF
+cF
+cF
+bU
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -36743,28 +37169,28 @@ aa
 aa
 aa
 aa
-gn
-hc
-hc
-hc
-hc
-cD
-aV
-aV
-hc
-dz
-hc
-dY
-hc
-aV
-hc
-hc
-hc
-hc
-aV
-aV
-gn
-gn
+aa
+aa
+cG
+cG
+cG
+dH
+cF
+cF
+cG
+fi
+cG
+fV
+cG
+cG
+cF
+cF
+bU
+bU
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -37001,24 +37427,24 @@ aa
 aa
 aa
 aa
-gn
-gn
-gn
-hc
-cE
-aV
-gn
-hc
-cE
-hc
-cE
-hc
-gn
-gn
-gn
-gn
-gn
-gn
+aa
+bU
+bU
+cG
+dI
+cF
+bU
+cG
+dI
+cG
+dI
+cG
+bU
+bU
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -37260,17 +37686,17 @@ aa
 aa
 aa
 aa
-gn
-hc
-cD
-aV
-gn
-hc
-dz
-hc
-dY
-hc
-gn
+bU
+cG
+dH
+cF
+bU
+cG
+fi
+cG
+fV
+cG
+bU
 aa
 aa
 aa
@@ -37512,22 +37938,22 @@ aa
 aa
 aa
 aa
-aL
-aM
-aM
-aM
-hk
-aM
-aM
-cF
-aM
-aM
-dr
-dB
-aM
-dB
-dr
-aL
+bb
+bc
+bc
+bc
+cH
+bc
+bc
+dJ
+bc
+bc
+eK
+fj
+bc
+fj
+eK
+bb
 aa
 aa
 aa
@@ -37769,22 +38195,22 @@ aa
 aa
 aa
 aa
-gI
-gS
-aM
+bk
+bD
+bc
+co
 bF
-ba
-aM
-ct
-hB
-cT
-aM
-dq
-aP
-dN
-aP
-ef
-aM
+bc
+do
+dK
+eh
+bc
+eL
+fk
+fu
+fk
+ge
+bc
 aa
 aa
 aa
@@ -38026,23 +38452,23 @@ aa
 aa
 aa
 aa
-gJ
-gS
-aM
-bG
-ba
-aM
-cu
-hB
-hE
-aM
-hO
-aP
-bd
-aP
+bl
 bD
-aM
-aL
+bc
+cp
+bF
+bc
+dp
+dK
+ei
+bc
+eM
+fk
+fv
+fk
+gf
+bc
+bb
 aa
 aa
 aa
@@ -38283,27 +38709,27 @@ aa
 aa
 aa
 aa
-aM
-aM
-aM
-bH
-ba
-aM
-cv
-hB
-hF
-aM
+bc
+bc
+bc
+cq
+bF
+bc
 dq
-aP
-dO
-aP
-eg
-aM
-aM
-aM
-aM
-aM
-aL
+dK
+ej
+bc
+eL
+fk
+fw
+fk
+gg
+bc
+bc
+bc
+bc
+bc
+bb
 aa
 aa
 aa
@@ -38539,29 +38965,29 @@ aa
 aa
 aa
 aa
-aL
-aM
-gT
-bw
-hd
-ba
-aM
-hw
-hC
-hw
-aM
-hw
-aX
-hw
-aX
-hw
-aM
-aM
-ew
+bb
+bc
+bE
+bV
 cr
-eZ
-aM
-aL
+bF
+bc
+dr
+dL
+dr
+bc
+dr
+fl
+dr
+fl
+dr
+bc
+bc
+gK
+hc
+hu
+bc
+bb
 aa
 aa
 aa
@@ -38796,29 +39222,29 @@ aa
 aa
 aa
 aa
-aM
-bb
-ba
-gK
-he
-ba
-hr
-hx
-ba
 bc
-hJ
-hx
-ba
 bm
-ba
-bE
-bO
-aM
-ex
+bF
+bo
 cs
-cU
-fj
-fv
+bF
+cZ
+ds
+bF
+bn
+ev
+ds
+bF
+fx
+bF
+gh
+gs
+bc
+gL
+hd
+hv
+hG
+hU
 aa
 aa
 aa
@@ -39053,29 +39479,29 @@ aa
 aa
 aa
 aa
-aK
-bc
-gK
-gW
-gW
-he
-gK
-gW
-he
-gK
-gW
-he
-gK
-gW
-he
-ba
-bc
-cc
-ey
-ba
-fa
-fk
-fv
+bd
+bn
+bo
+bW
+bW
+cs
+bo
+bW
+cs
+bo
+bW
+cs
+bo
+bW
+cs
+bF
+bn
+gB
+gM
+bF
+hw
+hH
+hU
 aa
 aa
 aa
@@ -39310,29 +39736,29 @@ aa
 aa
 aa
 aa
-aJ
-gK
-bc
-gW
-gW
-bK
-bc
-gW
-bK
-bc
-gW
-bK
-bc
-gW
-bK
-ba
-gK
-cc
-ez
-ba
-fa
-dC
-fv
+be
+bo
+bn
+bW
+bW
+ct
+bn
+bW
+ct
+bn
+bW
+ct
+bn
+bW
+ct
+bF
+bo
+gB
+gN
+bF
+hw
+hI
+hU
 aa
 aa
 aa
@@ -39567,29 +39993,29 @@ aa
 aa
 aa
 aa
-aM
-gL
-ba
 bc
-bK
-ba
-hs
-cx
-cI
-ba
-dj
-hP
-dE
-ba
-dj
-cx
-bQ
-aM
-ce
-cw
-cV
-dD
-fv
+bp
+bF
+bn
+ct
+bF
+da
+dt
+dM
+bF
+ew
+eN
+fm
+bF
+ew
+dt
+gt
+bc
+gO
+he
+hx
+hJ
+hU
 aa
 aa
 aa
@@ -39824,29 +40250,29 @@ aa
 aa
 aa
 aa
-aL
-aM
-bl
-gX
-hf
-ba
-aM
-aM
-aM
-hG
-hw
-aM
-aM
-dR
-aM
-aM
-aM
-aM
-cf
-aM
-dg
-aM
-aL
+bb
+bc
+bG
+bX
+cu
+bF
+bc
+bc
+bc
+ek
+dr
+bc
+bc
+fy
+bc
+bc
+bc
+bc
+gP
+bc
+hy
+bc
+bb
 aa
 aa
 aa
@@ -40082,27 +40508,27 @@ aa
 aa
 aa
 aa
-aM
-aM
-aM
-bL
-hl
-aM
-cz
-cJ
-cJ
-dl
-aM
-dG
-dS
-ea
-ei
-aM
-aM
-aM
-aM
-aM
-aL
+bc
+bc
+bc
+cv
+cI
+bc
+du
+dN
+dN
+ex
+bc
+fn
+fz
+fW
+gi
+bc
+bc
+bc
+bc
+bc
+bb
 aa
 aa
 aa
@@ -40339,23 +40765,23 @@ aa
 aa
 aa
 aa
-gM
-gS
-aM
-ba
-ba
-aM
-hy
-cJ
-cJ
-hK
-aM
-aY
-bo
-aM
-aM
-aM
-aL
+bq
+bD
+bc
+bF
+bF
+bc
+dv
+dN
+dN
+ey
+bc
+fo
+fA
+bc
+bc
+bc
+bb
 aa
 aa
 aa
@@ -40596,22 +41022,22 @@ aa
 aa
 aa
 aa
-gM
-gS
-aM
-hg
-hg
-aM
-hz
-hD
-hD
-hL
-aM
-aZ
-bv
-bx
-bI
-aM
+bq
+bD
+bc
+cw
+cw
+bc
+dw
+dO
+dO
+ez
+bc
+fp
+fB
+fX
+gj
+bc
 aa
 aa
 aa
@@ -40853,22 +41279,22 @@ aa
 aa
 aa
 aa
-aL
-aM
-aM
-aM
-aM
-aM
-aM
-aM
-hH
-aM
-aM
-aM
-aM
-aM
-aM
-aL
+bb
+bc
+bc
+bc
+bc
+bc
+bc
+bc
+el
+bc
+bc
+bc
+bc
+bc
+bc
+bb
 aa
 aa
 aa

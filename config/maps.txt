@@ -34,7 +34,7 @@ map infinity_metastation
 	default
 endmap
 
-map deltastation
+map deltastation2
 	friendlyname Delta Station
 endmap
 
