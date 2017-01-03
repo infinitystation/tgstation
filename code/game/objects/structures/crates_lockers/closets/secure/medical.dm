@@ -94,3 +94,19 @@
 	..()
 	new /obj/item/weapon/storage/box/pillbottles(src)
 	new /obj/item/weapon/storage/box/pillbottles(src)
+
+/obj/structure/closet/secure_closet/psychiatric
+	name = "Psychiatric cabinet"
+	req_access = list(access_medical)
+	icon_state = "cabinet"
+	resistance_flags = FLAMMABLE
+	obj_integrity = 70
+	max_integrity = 70
+
+/obj/structure/closet/secure_closet/psychiatric/New()
+	..()
+	new /obj/item/clothing/suit/straight_jacket(src)
+	new /obj/item/weapon/storage/box/syringes(src)
+	new /obj/item/weapon/reagent_containers/glass/bottle/morphine(src)
+	new /obj/item/weapon/reagent_containers/glass/bottle/morphine(src)
+	new /obj/item/toy/plushie/corgi(src)

@@ -2759,7 +2759,7 @@
 	req_one_access_txt = "0"
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 5
+	dir = 4
 	},
 /turf/open/floor/plasteel/delivery,
 /area/security/range)
@@ -70275,12 +70275,6 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 10
 	},
-/obj/item/weapon/twohanded/required/kirbyplants{
-	tag = "icon-plant-19";
-	icon_state = "plant-19";
-	layer = 4.1;
-	pixel_y = 3
-	},
 /turf/open/floor/plasteel{
 	dir = 8;
 	icon_state = "whiteblue"
@@ -83118,7 +83112,7 @@
 	dir = 8;
 	pixel_x = -24
 	},
-/obj/structure/closet/secure_closet/personal/patient,
+/obj/machinery/vending/medical,
 /turf/open/floor/plasteel{
 	dir = 2;
 	icon_state = "whitecorner"
@@ -84273,6 +84267,10 @@
 	dir = 4
 	},
 /obj/machinery/door/firedoor,
+/obj/structure/sign/nosmoking_2{
+	pixel_x = 0;
+	pixel_y = -30
+	},
 /turf/open/floor/plasteel,
 /area/medical/medbay_aft{
 	name = "Medbay Aft"
@@ -84909,37 +84907,37 @@
 	name = "Medbay Aft"
 	})
 "cLC" = (
-/obj/machinery/recharge_station,
-/turf/open/floor/plasteel{
-	dir = 4;
-	icon_state = "whitecorner"
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -24
 	},
+/obj/structure/closet/secure_closet/psychiatric,
+/turf/open/floor/wood,
 /area/medical/medbay_aft{
 	name = "Medbay Aft"
 	})
 "cLD" = (
-/obj/item/device/healthanalyzer{
-	pixel_x = 1;
-	pixel_y = 4
+/obj/structure/reagent_dispensers/water_cooler,
+/obj/machinery/airalarm{
+	pixel_y = 24
 	},
-/obj/structure/sign/nosmoking_2{
-	pixel_x = 0;
-	pixel_y = -30
+/obj/machinery/camera{
+	c_tag = "Medbay - Psychiatric";
+	dir = 2;
+	network = list("SS13","Medbay")
 	},
-/obj/structure/table/glass,
-/turf/open/floor/plasteel{
-	dir = 1;
-	icon_state = "whitehall"
-	},
+/turf/open/floor/wood,
 /area/medical/medbay_aft{
 	name = "Medbay Aft"
 	})
 "cLE" = (
-/obj/machinery/vending/medical,
-/turf/open/floor/plasteel{
-	dir = 1;
-	icon_state = "whitecorner"
+/obj/structure/table/wood,
+/obj/item/toy/dummy{
+	pixel_x = -8;
+	pixel_y = 14
 	},
+/obj/item/weapon/storage/box/cups,
+/turf/open/floor/wood,
 /area/medical/medbay_aft{
 	name = "Medbay Aft"
 	})
@@ -85523,11 +85521,8 @@
 	})
 "cMF" = (
 /obj/item/weapon/twohanded/required/kirbyplants{
-	icon_state = "plant-21";
-	layer = 4.1;
-	pixel_x = -3;
-	pixel_y = 3;
-	tag = "icon-plant-21"
+	tag = "icon-plant-21";
+	icon_state = "plant-21"
 	},
 /turf/open/floor/plasteel{
 	dir = 8;
@@ -86244,6 +86239,7 @@
 	name = "Medbay Aft"
 	})
 "cNH" = (
+/obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/medical{
 	name = "Medbay psychiatric room";
 	req_access_txt = "5"
@@ -86253,8 +86249,9 @@
 	name = "Medbay Aft"
 	})
 "cNI" = (
-/obj/machinery/airalarm{
-	pixel_y = 24
+/obj/structure/chair/comfy/brown{
+	icon_state = "comfychair";
+	dir = 4
 	},
 /turf/open/floor/wood,
 /area/medical/medbay_aft{
@@ -86266,7 +86263,13 @@
 	name = "Medbay Aft"
 	})
 "cNK" = (
-/obj/structure/reagent_dispensers/water_cooler,
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/structure/table/wood,
+/obj/machinery/computer/med_data/laptop{
+	density = 0
+	},
 /turf/open/floor/wood,
 /area/medical/medbay_aft{
 	name = "Medbay Aft"
@@ -86760,8 +86763,8 @@
 	name = "Medbay Aft"
 	})
 "cOy" = (
-/obj/structure/chair/wood/normal,
-/turf/open/floor/carpet,
+/obj/structure/bookcase/random/fiction,
+/turf/open/floor/wood,
 /area/medical/medbay_aft{
 	name = "Medbay Aft"
 	})
@@ -86771,22 +86774,9 @@
 	name = "Medbay Aft"
 	})
 "cOA" = (
-/obj/structure/table/wood,
-/obj/item/weapon/storage/box/cups,
-/obj/item/device/radio/intercom{
-	freerange = 0;
-	frequency = 1459;
-	name = "Station Intercom (General)";
-	pixel_x = 29
-	},
-/obj/machinery/light/small{
-	dir = 4
-	},
-/obj/item/toy/dummy{
-	pixel_x = -8;
-	pixel_y = 14
-	},
-/turf/open/floor/carpet,
+/obj/structure/rack,
+/obj/item/weapon/storage/box/lights/mixed,
+/turf/open/floor/plating,
 /area/medical/medbay_aft{
 	name = "Medbay Aft"
 	})
@@ -87343,8 +87333,13 @@
 /turf/open/floor/plating,
 /area/maintenance/asmaint)
 "cPu" = (
-/obj/structure/table/wood,
-/obj/machinery/computer/med_data/laptop,
+/obj/machinery/button/door{
+	id = "psy";
+	name = "shutters control";
+	pixel_x = -24;
+	pixel_y = 0;
+	req_access_txt = "0"
+	},
 /turf/open/floor/carpet,
 /area/medical/medbay_aft{
 	name = "Medbay Aft"
@@ -87354,6 +87349,12 @@
 	dir = 8;
 	icon_state = "comfychair";
 	tag = ""
+	},
+/obj/item/device/radio/intercom{
+	freerange = 0;
+	frequency = 1459;
+	name = "Station Intercom (General)";
+	pixel_x = 29
 	},
 /turf/open/floor/carpet,
 /area/medical/medbay_aft{
@@ -87752,11 +87753,15 @@
 "cQh" = (
 /obj/structure/rack,
 /obj/effect/spawner/lootdrop/maintenance,
+/obj/random/weaponcrafting,
 /turf/open/floor/plating,
 /area/maintenance/asmaint)
 "cQi" = (
-/obj/effect/spawner/lootdrop/maintenance,
-/obj/random/weaponcrafting,
+/obj/structure/rack,
+/obj/effect/spawner/lootdrop/maintenance{
+	lootcount = 2;
+	name = "2maintenance loot spawner"
+	},
 /turf/open/floor/plating,
 /area/maintenance/asmaint)
 "cQj" = (
@@ -87842,29 +87847,16 @@
 /turf/open/floor/plating,
 /area/maintenance/asmaint)
 "cQp" = (
-/obj/structure/closet,
-/obj/item/clothing/suit/straight_jacket,
-/obj/item/weapon/reagent_containers/glass/bottle/morphine,
-/obj/item/weapon/reagent_containers/glass/bottle/morphine,
-/obj/item/weapon/storage/box/syringes,
-/turf/open/floor/wood,
+/obj/machinery/light/small,
+/turf/open/floor/carpet,
 /area/medical/medbay_aft{
 	name = "Medbay Aft"
 	})
 "cQq" = (
-/obj/structure/chair/wood/normal{
-	dir = 1
-	},
-/obj/machinery/firealarm{
-	dir = 1;
-	pixel_y = -24
-	},
-/obj/machinery/button/door{
-	id = "psy";
-	name = "shutters control";
-	pixel_x = -24;
-	pixel_y = 28;
-	req_access_txt = "0"
+/obj/structure/chair/comfy/brown{
+	dir = 4;
+	icon_state = "comfychair";
+	tag = ""
 	},
 /turf/open/floor/carpet,
 /area/medical/medbay_aft{
@@ -97051,17 +97043,10 @@
 /turf/closed/wall/shuttle/survival/nodiagonal,
 /area/shuttle/supply)
 "dhh" = (
-/obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 4
-	},
-/obj/item/weapon/storage/box/lights/mixed,
 /turf/open/floor/plating,
-/area/maintenance/asmaint)
+/area/medical/medbay_aft{
+	name = "Medbay Aft"
+	})
 "dhi" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
@@ -97082,27 +97067,10 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /turf/open/floor/carpet,
 /area/crew_quarters/bar)
-"dhq" = (
+"dhl" = (
 /obj/machinery/shieldgen,
 /turf/open/floor/plating,
-/area/maintenance/fpmaint2)
-"dhp" = (
-/obj/machinery/atmospherics/components/unary/vent_pump{
-	dir = 8;
-	on = 1
-	},
-/turf/open/floor/plasteel/neutral,
-/area/hallway/secondary/entry)
-"dho" = (
-/turf/open/floor/plasteel/neutral,
-/area/hallway/secondary/entry)
-"dhn" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/turf/open/floor/plasteel{
-	dir = 8;
-	icon_state = "warning"
-	},
-/area/hallway/secondary/entry)
+/area/maintenance/fsmaint)
 "dhm" = (
 /obj/machinery/light{
 	icon_state = "tube1";
@@ -97114,10 +97082,27 @@
 	icon_state = "warning"
 	},
 /area/hallway/secondary/entry)
-"dhl" = (
+"dhn" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/turf/open/floor/plasteel{
+	dir = 8;
+	icon_state = "warning"
+	},
+/area/hallway/secondary/entry)
+"dho" = (
+/turf/open/floor/plasteel/neutral,
+/area/hallway/secondary/entry)
+"dhp" = (
+/obj/machinery/atmospherics/components/unary/vent_pump{
+	dir = 8;
+	on = 1
+	},
+/turf/open/floor/plasteel/neutral,
+/area/hallway/secondary/entry)
+"dhq" = (
 /obj/machinery/shieldgen,
 /turf/open/floor/plating,
-/area/maintenance/fsmaint)
+/area/maintenance/fpmaint2)
 
 (1,1,1) = {"
 aaa
@@ -119141,7 +119126,7 @@ cEC
 cND
 cEC
 cEC
-dhh
+cna
 cRn
 cRU
 cSU
@@ -120169,8 +120154,8 @@ cMI
 cNG
 cOw
 cEC
-cEC
-cEC
+cOA
+dhh
 cBP
 cRX
 cTF
@@ -120426,7 +120411,7 @@ cEC
 cNH
 cOx
 cEC
-cQp
+cEC
 cEC
 cRZ
 cRX
@@ -120678,10 +120663,10 @@ cCa
 cIN
 cJD
 cKH
-cLC
 cEC
-cNI
-cOy
+cLC
+cNJ
+cNJ
 cPu
 cQq
 cEC
@@ -120935,12 +120920,12 @@ cHM
 cIO
 cJE
 cKI
-cLD
 cEC
-cNJ
+cLD
+cNI
+cOy
 cOz
-cOz
-cOz
+cQp
 cEC
 cSb
 cRX
@@ -121192,10 +121177,10 @@ cCa
 cIP
 cJF
 cKJ
-cLE
 cEC
+cLE
 cNK
-cOA
+cOy
 cPv
 cQr
 cEC
