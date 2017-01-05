@@ -5,6 +5,7 @@
 	var/announcement
 
 	text = sanitize_a0(copytext(text,1,MAX_MESSAGE_LEN))
+	title = sanitize_a0(title)
 
 	if(type == "Priority")
 		announcement += "<h1 class='alert'>Priority Announcement</h1>"

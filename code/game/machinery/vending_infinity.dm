@@ -106,7 +106,7 @@
  					/obj/item/clothing/head/wizard/magus = 2,
  					/obj/item/clothing/suit/wizrobe/magusblue = 2,/obj/item/clothing/suit/wizrobe/magusred = 2,
  					/obj/item/clothing/suit/wizrobe/marisa = 2,/obj/item/clothing/head/wizard/marisa = 2,
- 					/obj/item/clothing/shoes/sandal = 2,/obj/item/weapon/staff = 2)
+ 					/obj/item/clothing/shoes/sandal = 2,/obj/item/clothing/suit/hooded/skeletor_hoody = 1)
 
 /obj/machinery/vending/tool/syndicate
 	name = "\improper Syndicate YouTool"

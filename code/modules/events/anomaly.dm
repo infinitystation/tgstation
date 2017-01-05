@@ -25,7 +25,7 @@
 		setup(safety_loop)
 
 /datum/round_event/anomaly/announce()
-	priority_announce("—канеры большого радиуса действия обнаружили волны гипер-энергетического потока. ћесто ожидаемого воздействия: [impact_area.name].", "“ревога! јномалия!")
+	priority_announce("—канеры большого радиуса действи€ обнаружили волны гипер-энергетического потока. ѕредположительное место воздействи€: [impact_area.name].", "“ревога! јномалия!")
 
 /datum/round_event/anomaly/start()
 	var/turf/T = safepick(get_area_turfs(impact_area))
