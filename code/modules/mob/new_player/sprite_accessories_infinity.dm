@@ -347,3 +347,10 @@
 	name = "CIA"
 	icon = 'icons/mob/more_hairs.dmi'
 	icon_state = "hair_cia"
+
+/datum/sprite_accessory/hair/undercut
+	name = "Undercut"
+	icon = 'icons/mob/more_hairs.dmi'
+	icon_state = "hair_undercut"
+
+

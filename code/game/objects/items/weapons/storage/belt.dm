@@ -164,6 +164,14 @@
 	new /obj/item/weapon/melee/baton/loaded(src)
 	update_icon()
 
+/obj/item/weapon/storage/belt/security/centcome/New()
+	..()
+	new /obj/item/weapon/melee/baton/loaded(src)
+	new /obj/item/weapon/restraints/handcuffs(src)
+	new /obj/item/weapon/restraints/handcuffs(src)
+	new /obj/item/weapon/grenade/flashbang(src)
+	new /obj/item/ammo_box/magazine/smgm9mm(src)
+	new /obj/item/ammo_box/magazine/smgm9mm(src)
 
 /obj/item/weapon/storage/belt/mining
 	name = "explorer's webbing"

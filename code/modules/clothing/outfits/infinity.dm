@@ -54,15 +54,11 @@
 	suit = /obj/item/clothing/suit/armor/vest
 	head = /obj/item/clothing/head/helmet/sec
 	glasses = /obj/item/clothing/glasses/hud/security/sunglasses
-	belt = /obj/item/weapon/gun/ballistic/automatic/proto/mindshield
-	l_pocket = /obj/item/ammo_box/magazine/smgm9mm
+	belt = /obj/item/weapon/storage/belt/security/centcome
+	suit_store = /obj/item/weapon/gun/ballistic/automatic/proto/mindshield
 	back = /obj/item/weapon/storage/backpack/security
 	backpack_contents = list(/obj/item/weapon/storage/box/security/centcom=1,\
-		/obj/item/weapon/melee/baton/loaded=1,\
-		/obj/item/weapon/restraints/handcuffs=2,\
-		/obj/item/weapon/grenade/flashbang=1,\
 		/obj/item/device/flashlight=1)
-	r_pocket = /obj/item/ammo_box/magazine/smgm9mm
 	id = /obj/item/weapon/card/id
 
 /datum/outfit/security_private/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -90,17 +86,13 @@
 	suit = /obj/item/clothing/suit/armor/vest
 	head = /obj/item/clothing/head/warden/corporate
 	glasses = /obj/item/clothing/glasses/hud/security/sunglasses
-	belt = /obj/item/weapon/gun/ballistic/automatic/proto/mindshield
-	l_pocket = /obj/item/ammo_box/magazine/smgm9mm
+	belt = /obj/item/weapon/storage/belt/security/centcome
+	suit_store = /obj/item/weapon/gun/ballistic/automatic/proto/mindshield
 	back = /obj/item/weapon/storage/backpack/security
 	backpack_contents = list(/obj/item/weapon/storage/box/security/centcom=1,\
-		/obj/item/weapon/melee/baton/loaded=1,\
-		/obj/item/weapon/restraints/handcuffs=2,\
-		/obj/item/weapon/grenade/flashbang=1,\
 		/obj/item/weapon/shield/riot/tele=1,\
 		/obj/item/weapon/grenade/barrier=2,\
 		/obj/item/device/flashlight=1)
-	r_pocket = /obj/item/ammo_box/magazine/smgm9mm
 	id = /obj/item/weapon/card/id
 
 /datum/outfit/security_sergeant/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
