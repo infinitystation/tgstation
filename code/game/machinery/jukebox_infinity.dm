@@ -24,20 +24,22 @@ datum/track/New(var/title_name, var/audio)
 
 	var/datum/track/current_track
 	var/list/datum/track/tracks = list(
-		new/datum/track("American Authors - What We Live For", 'sound/playlist/american-authors-what-we-live-for.ogg'),
-		new/datum/track("Back To Future OST - Back To Future", 'sound/playlist/Back-To-Future.ogg'),
-		new/datum/track("Disciples - They Don't know", 'sound/playlist/disciples-they-don-t-know.ogg'),
-		new/datum/track("Madcon - Don't Worry", 'sound/playlist/madcon-feat-dont-worry.ogg'),
-		new/datum/track("MIA - Paper Planet", 'sound/playlist/mia-paper-planet.ogg'),
-		new/datum/track("ONE-OK-ROCK - Answer Is Near", 'sound/playlist/one-ok-rock-answer-is-near.ogg'),
-		new/datum/track("Imagine Dragons - Radioactive", 'sound/playlist/Radioactive.ogg'),
-		new/datum/track("Yiruma - River Flows In You", 'sound/playlist/river-flows-in-you.ogg'),
-		new/datum/track("Sam Brown - Stop", 'sound/playlist/sam-brown-stop.ogg'),
-		new/datum/track("Taio Cruz feat - Hangover", 'sound/playlist/Taio_Cruz_feat-Hangover.ogg'),
-		new/datum/track("The_White_Stripes - The Hardest Button To Button", 'sound/playlist/The_Hardest_Button_To_Button-The_White_Stripes.ogg'),
-		new/datum/track("Twisted Sister - I wanna rock", 'sound/playlist/twisted-sister-i-wanna-rock.ogg'),
-		new/datum/track("Brat 2 OST - Vechno Molodoj", 'sound/playlist/vechno-molodoj-brat2.ogg'),
-		new/datum/track("Victor Tsoy - Kukushka", 'sound/playlist/Victor Tsoy - Kukushka.ogg')
+		new/datum/track("Bee Gees - Stayin' Alive", 'sound/playlist/bee_jees_stayin_alive.ogg'),
+		new/datum/track("Fever The Ghost - Source", 'sound/playlist/fever_the_ghost_source.ogg'),
+		new/datum/track("I'm a member of the Midnight Crew", 'sound/playlist/im_a_member_of_the_midnight_crew.ogg'),
+		new/datum/track("Iron Maiden - Out of The Silent Planet", 'sound/playlist/iron_maiden_out_of_the_silent_planet.ogg'),
+		new/datum/track("Iron Savior - 01 The Landing", 'sound/playlist/iron_savior_the_landing.ogg'),
+		new/datum/track("Justice - D.A.N.C.E.", 'sound/playlist/justice_dance.ogg'),
+		new/datum/track("Malcolm Brown - Do You Remem8er Me", 'sound/playlist/malcolm_brown_do_you_remember_me.ogg'),
+		new/datum/track("M83 - Midnight City", 'sound/playlist/m83_midnight.ogg'),
+		new/datum/track("Mystery Skulls - Magic", 'sound/playlist/mystery_skulls_magic.ogg'),
+		new/datum/track("Nirvana - Smells like teen spirit", 'sound/playlist/nirvana_smells_like_teen_spirit.ogg'),
+		new/datum/track("Pixel Piracy - Sailing the World", 'sound/playlist/pixel_piracy_sailing_the_world.ogg'),
+		new/datum/track("Rick Astley - Never Gonna Give You Up", 'sound/playlist/rick_astley_nggup.ogg'),
+		new/datum/track("EVO - In Space", 'sound/playlist/evo_v_kosmos.ogg'),
+		new/datum/track("Starset - Antigravity", 'sound/playlist/starset_antigravity.ogg'),
+		new/datum/track("U-Free - My New Black Benzo", 'sound/playlist/ufree_my_new_black_benzo.ogg'),
+		new/datum/track("Wolfgun - Beautiful", 'sound/playlist/wolfgun_beautiful.ogg')
 	)
 
 /obj/machinery/media/jukebox/New()
