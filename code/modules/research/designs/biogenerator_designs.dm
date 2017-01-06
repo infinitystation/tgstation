@@ -215,6 +215,7 @@
 	name = "Synthetic meat"
 	id = "synth_meat"
 	build_type = BIOGENERATOR
+	materials = list(MAT_BIOMASS = 250)
 	build_path = /obj/item/weapon/reagent_containers/food/snacks/meat/slab/synthmeat
 	category = list("initial","Food")
 
