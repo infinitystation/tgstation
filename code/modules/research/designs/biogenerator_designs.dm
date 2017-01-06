@@ -210,3 +210,11 @@
 	materials = list(MAT_BIOMASS = 300)
 	build_path = /obj/item/clothing/head/rice_hat
 	category = list("initial","Leather and Cloth")
+
+/datum/design/synth_meat
+	name = "Synthetic meat"
+	id = "synth_meat"
+	build_type = BIOGENERATOR
+	build_path = /obj/item/weapon/reagent_containers/food/snacks/meat/slab/synthmeat
+	category = list("initial","Food")
+
