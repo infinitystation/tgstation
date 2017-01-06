@@ -567,4 +567,22 @@
 	worn_icon = 'icons/mob/infinity_work.dmi'
 	icon_state = "janitor_jacket"
 	item_state = "ro_suit"
+
+/obj/item/clothing/suit/hooded/skeletor_hoody
+	name = "True villain's garbings"
+	desc = "We will win this game the old-fashioned way, the tried and true way: we will cheat!"
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	icon_state = "skeletor_garbings"
 	worn_icon = 'icons/mob/infinity_work.dmi'
+	hooded = 1
+	togglename = "Toggle Hood"
+	hoodtype = /obj/item/clothing/head/skeletor_hoody
+
+/obj/item/clothing/head/skeletor_hoody
+	name = "True villain's hood"
+	desc = "I'm so powerful I even impress myself!"
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	icon_state = "skeletor_hood"
+	body_parts_covered = HEAD
+	flags = NODROP
+	flags_inv = HIDEHAIR|HIDEEARS

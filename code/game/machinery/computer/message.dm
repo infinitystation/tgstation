@@ -387,6 +387,7 @@
 					//Enter message
 					if("Message")
 						custommessage	= stripped_input(usr, "Please enter your message.")
+						custommessage 	= sanitize_a0(custommessage)
 
 					//Send message
 					if("Send")

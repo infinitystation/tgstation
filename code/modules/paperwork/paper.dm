@@ -256,6 +256,7 @@
 		var/t =  stripped_multiline_input("Enter what you want to write:", "Write")
 		if(!t)
 			return
+		t = copytext(t, 1, 3 * MAX_MESSAGE_LEN)
 		var/obj/item/i = usr.get_active_held_item()	//Check to see if he still got that darn pen, also check if he's using a crayon or pen.
 		var/iscrayon = 0
 		if(!istype(i, /obj/item/weapon/pen))
