@@ -1530,7 +1530,6 @@
 #include "code\modules\mob\living\carbon\human\say.dm"
 #include "code\modules\mob\living\carbon\human\species.dm"
 #include "code\modules\mob\living\carbon\human\species_types.dm"
-#include "code\modules\mob\living\carbon\human\species_types_infinity.dm"
 #include "code\modules\mob\living\carbon\human\status_procs.dm"
 #include "code\modules\mob\living\carbon\human\update_icons.dm"
 #include "code\modules\mob\living\carbon\human\whisper.dm"

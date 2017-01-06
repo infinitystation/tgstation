@@ -203,7 +203,7 @@
 	else
 		return
 
-/obj/item/clothing/mask/gas/sechailer/attackby(obj/item/weapon/W, mob/user, params)
+/obj/item/clothing/mask/gas/sechailer/swat/syndicate/attackby(obj/item/weapon/W, mob/user, params)
 	if(istype(W, /obj/item/weapon/screwdriver))
 		switch(aggressiveness)
 			if(1)
@@ -213,7 +213,7 @@
 				user << "<span class='notice'>Вы выбрали режим призыва к сдачек.</span>"
 				aggressiveness = 1
 
-/obj/item/clothing/mask/gas/sechailer/verb/shalt()
+/obj/item/clothing/mask/gas/sechailer/swat/syndicate/verb/shalt()
 	set category = "Object"
 	set name = "HALT"
 	set src in usr
