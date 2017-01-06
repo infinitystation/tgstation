@@ -5831,22 +5831,21 @@
 	},
 /area/centcom/control)
 "oM" = (
-/obj/machinery/atmospherics/components/unary/cryo_cell{
-	dir = 4
+/obj/structure/chair/office/dark{
+	dir = 1
 	},
-/turf/open/floor/plasteel{
-	icon_state = "whitebluefull"
+/turf/open/floor/plasteel/darkred/side{
+	dir = 1
 	},
-/area/centcom/control)
+/area/centcom/evac)
 "oN" = (
-/obj/machinery/atmospherics/pipe/simple/general/visible{
+/obj/structure/chair/office/dark{
 	dir = 4
 	},
-/turf/open/floor/plasteel/neutral{
-	dir = 8;
-	icon_state = "whiteblue"
+/turf/open/floor/plasteel/darkred/side{
+	dir = 1
 	},
-/area/centcom/control)
+/area/centcom/evac)
 "oO" = (
 /obj/machinery/door/airlock/centcom{
 	name = "Thunderdome Gear Room";
@@ -12299,6 +12298,7 @@
 "Em" = (
 /obj/structure/table/wood,
 /obj/item/weapon/storage/pill_bottle/dice,
+/obj/structure/fans/tiny,
 /turf/open/floor/plasteel/grimy,
 /area/centcom/ferry)
 "En" = (
@@ -14548,7 +14548,7 @@
 /turf/open/floor/plasteel/bot,
 /area/centcom/evac)
 "Jz" = (
-/obj/structure/chair/office/light{
+/obj/structure/chair/comfy/shuttle/black{
 	dir = 8
 	},
 /turf/open/floor/plasteel/warnwhite/end{
@@ -53013,7 +53013,7 @@ Fi
 Iu
 IN
 Jw
-JH
+oM
 Kr
 Kr
 KP
@@ -53527,7 +53527,7 @@ Fi
 Iu
 IN
 Jy
-JH
+oN
 Kr
 Kr
 KS
