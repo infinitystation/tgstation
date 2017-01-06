@@ -2003,8 +2003,8 @@
 	pixel_x = 0;
 	pixel_y = 32
 	},
-/turf/open/floor/plasteel{
-	icon_state = "bot"
+/turf/open/floor/plasteel/warning{
+	dir = 10
 	},
 /area/security/security_gear)
 "adE" = (
@@ -2020,8 +2020,8 @@
 	d2 = 2;
 	icon_state = "0-2"
 	},
-/turf/open/floor/plasteel{
-	icon_state = "bot"
+/turf/open/floor/plasteel/warning{
+	dir = 6
 	},
 /area/security/security_gear)
 "adF" = (
@@ -3553,8 +3553,8 @@
 /area/security/security_gear)
 "agt" = (
 /obj/machinery/suit_storage_unit/security,
-/turf/open/floor/plasteel{
-	icon_state = "bot"
+/turf/open/floor/plasteel/warning{
+	dir = 9
 	},
 /area/security/security_gear)
 "agu" = (
@@ -3586,8 +3586,10 @@
 	dir = 4
 	},
 /obj/structure/closet/bombcloset,
-/turf/open/floor/plasteel{
-	icon_state = "bot"
+/turf/open/floor/plasteel/warning{
+	tag = "icon-plasteel_warn (NORTHWEST)";
+	icon_state = "plasteel_warn";
+	dir = 9
 	},
 /area/security/security_gear)
 "agx" = (
@@ -4195,11 +4197,7 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/turf/open/floor/plasteel{
-	dir = 8;
-	icon_state = "vault";
-	tag = "icon-vault (WEST)"
-	},
+/turf/open/floor/plasteel/darkwarning,
 /area/security/gear)
 "ahD" = (
 /obj/structure/closet/secure_closet/security/sec,
@@ -4213,22 +4211,14 @@
 	icon_state = "0-8";
 	d2 = 8
 	},
-/turf/open/floor/plasteel{
-	dir = 8;
-	icon_state = "vault";
-	tag = "icon-vault (WEST)"
-	},
+/turf/open/floor/plasteel/darkwarning,
 /area/security/gear)
 "ahE" = (
 /obj/structure/closet/secure_closet/security/sec,
 /obj/machinery/airalarm{
 	pixel_y = 28
 	},
-/turf/open/floor/plasteel{
-	dir = 8;
-	icon_state = "vault";
-	tag = "icon-vault (WEST)"
-	},
+/turf/open/floor/plasteel/darkwarning,
 /area/security/gear)
 "ahF" = (
 /obj/effect/spawner/structure/window/reinforced,
@@ -4713,11 +4703,7 @@
 	pixel_y = 6;
 	req_access_txt = "3"
 	},
-/turf/open/floor/plasteel{
-	dir = 8;
-	icon_state = "vault";
-	tag = "icon-vault (WEST)"
-	},
+/turf/open/floor/plasteel/darkwarning,
 /area/security/warden)
 "aiB" = (
 /obj/machinery/power/apc{
@@ -4732,10 +4718,8 @@
 	icon_state = "0-2"
 	},
 /obj/machinery/computer/prisoner,
-/turf/open/floor/plasteel{
-	dir = 8;
-	icon_state = "vault";
-	tag = "icon-vault (WEST)"
+/turf/open/floor/plasteel/darkwarning{
+	dir = 6
 	},
 /area/security/warden)
 "aiC" = (
@@ -4810,10 +4794,8 @@
 	},
 /obj/item/weapon/gun/energy/laser/scatter/shotty,
 /obj/item/clothing/tie/badge/warden,
-/turf/open/floor/plasteel{
-	dir = 8;
-	icon_state = "vault";
-	tag = "icon-vault (WEST)"
+/turf/open/floor/plasteel/darkwarning{
+	dir = 10
 	},
 /area/security/warden)
 "aiH" = (
@@ -5384,9 +5366,7 @@
 /obj/structure/closet{
 	name = "Evidence Closet 5"
 	},
-/turf/open/floor/plasteel/vault{
-	dir = 4
-	},
+/turf/open/floor/plasteel/darkwarning,
 /area/security/west)
 "ajQ" = (
 /obj/structure/closet{
@@ -5398,9 +5378,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/turf/open/floor/plasteel/vault{
-	dir = 4
-	},
+/turf/open/floor/plasteel/darkwarning,
 /area/security/west)
 "ajR" = (
 /obj/structure/closet{
@@ -5409,9 +5387,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
-/turf/open/floor/plasteel/vault{
-	dir = 4
-	},
+/turf/open/floor/plasteel/darkwarning,
 /area/security/west)
 "ajS" = (
 /obj/structure/closet{
@@ -5420,9 +5396,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
-/turf/open/floor/plasteel/vault{
-	dir = 4
-	},
+/turf/open/floor/plasteel/darkwarning,
 /area/security/west)
 "ajT" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
@@ -5486,10 +5460,8 @@
 	pixel_x = 0;
 	pixel_y = 30
 	},
-/turf/open/floor/plasteel{
-	dir = 8;
-	icon_state = "vault";
-	tag = "icon-vault (WEST)"
+/turf/open/floor/plasteel/darkwarning{
+	dir = 4
 	},
 /area/security/warden)
 "ajZ" = (
@@ -6292,10 +6264,8 @@
 	d1 = 4;
 	d2 = 8
 	},
-/turf/open/floor/plasteel{
-	dir = 8;
-	icon_state = "vault";
-	tag = "icon-vault (WEST)"
+/turf/open/floor/plasteel/darkwarning{
+	dir = 4
 	},
 /area/security/warden)
 "alv" = (
@@ -7131,8 +7101,8 @@
 /obj/structure/closet{
 	name = "Evidence Closet 6"
 	},
-/turf/open/floor/plasteel/vault{
-	dir = 1
+/turf/open/floor/plasteel/darkwarning{
+	dir = 9
 	},
 /area/security/west)
 "amJ" = (
@@ -7143,7 +7113,7 @@
 	dir = 4;
 	pixel_x = 28
 	},
-/turf/open/floor/plasteel/vault{
+/turf/open/floor/plasteel/darkwarning{
 	dir = 1
 	},
 /area/security/west)
@@ -7187,10 +7157,8 @@
 	pixel_x = -24;
 	pixel_y = -20
 	},
-/turf/open/floor/plasteel{
-	dir = 8;
-	icon_state = "vault";
-	tag = "icon-vault (WEST)"
+/turf/open/floor/plasteel/darkwarning{
+	dir = 4
 	},
 /area/security/warden)
 "amQ" = (
@@ -7312,10 +7280,8 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
-/turf/open/floor/plasteel{
-	dir = 8;
-	icon_state = "vault";
-	tag = "icon-vault (WEST)"
+/turf/open/floor/plasteel/darkwarning{
+	dir = 1
 	},
 /area/security/gear)
 "amY" = (
@@ -7324,18 +7290,14 @@
 	pixel_x = 0;
 	pixel_y = -30
 	},
-/turf/open/floor/plasteel{
-	dir = 8;
-	icon_state = "vault";
-	tag = "icon-vault (WEST)"
+/turf/open/floor/plasteel/darkwarning{
+	dir = 1
 	},
 /area/security/gear)
 "amZ" = (
 /obj/structure/closet/secure_closet/security/sec,
-/turf/open/floor/plasteel{
-	dir = 8;
-	icon_state = "vault";
-	tag = "icon-vault (WEST)"
+/turf/open/floor/plasteel/darkwarning{
+	dir = 1
 	},
 /area/security/gear)
 "ana" = (
@@ -7595,7 +7557,11 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
-/turf/open/floor/plasteel/bot,
+/turf/open/floor/plasteel/warning{
+	tag = "icon-plasteel_warn (NORTHEAST)";
+	icon_state = "plasteel_warn";
+	dir = 5
+	},
 /area/security/range)
 "ant" = (
 /obj/structure/bed,
@@ -7637,7 +7603,9 @@
 	pixel_y = -28
 	},
 /obj/structure/cable/yellow,
-/turf/open/floor/plasteel/bot,
+/turf/open/floor/plasteel/warning{
+	dir = 9
+	},
 /area/security/range)
 "anv" = (
 /obj/structure/disposalpipe/segment,
@@ -7918,7 +7886,7 @@
 	req_access_txt = "0";
 	req_one_access_txt = "3,4"
 	},
-/turf/open/floor/plasteel/vault{
+/turf/open/floor/plasteel/darkwarning{
 	dir = 1
 	},
 /area/security/west)
@@ -7931,7 +7899,7 @@
 	pixel_y = 0
 	},
 /obj/structure/table,
-/turf/open/floor/plasteel/vault{
+/turf/open/floor/plasteel/darkwarning{
 	dir = 1
 	},
 /area/security/west)
@@ -9074,10 +9042,10 @@
 	},
 /obj/item/device/radio/intercom{
 	anyai = 1;
-	broadcasting = 1;
+	broadcasting = 0;
 	freerange = 1;
 	frequency = 1424;
-	listening = 0;
+	listening = 1;
 	name = "Interrogation Intercom";
 	pixel_x = 0;
 	pixel_y = 22
@@ -10733,10 +10701,10 @@
 	},
 /obj/item/device/radio/intercom{
 	anyai = 1;
-	broadcasting = 1;
+	broadcasting = 0;
 	freerange = 1;
 	frequency = 1424;
-	listening = 0;
+	listening = 1;
 	name = "Interrogation Intercom";
 	pixel_x = 0;
 	pixel_y = -26
@@ -96882,7 +96850,9 @@
 /area/security/east_brig)
 "dgL" = (
 /obj/machinery/washing_machine,
-/turf/open/floor/plasteel/bot,
+/turf/open/floor/plasteel/warning{
+	dir = 1
+	},
 /area/security/east_brig)
 "dgM" = (
 /obj/structure/table,
@@ -96894,7 +96864,9 @@
 	pixel_x = 0;
 	pixel_y = -26
 	},
-/turf/open/floor/plasteel/bot,
+/turf/open/floor/plasteel/warning{
+	dir = 1
+	},
 /area/security/east_brig)
 "dgN" = (
 /obj/structure/grille,
@@ -97103,6 +97075,14 @@
 /obj/machinery/shieldgen,
 /turf/open/floor/plating,
 /area/maintenance/fpmaint2)
+"dhr" = (
+/obj/machinery/suit_storage_unit/security,
+/turf/open/floor/plasteel/warning{
+	tag = "icon-plasteel_warn (NORTHEAST)";
+	icon_state = "plasteel_warn";
+	dir = 5
+	},
+/area/security/security_gear)
 
 (1,1,1) = {"
 aaa
@@ -121340,7 +121320,7 @@ aaO
 adE
 aeA
 afw
-agt
+dhr
 adB
 aiD
 akb
