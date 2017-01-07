@@ -240,3 +240,154 @@
 	if((slot_w_uniform in obscured) && skipface)
 		temp_gender = PLURAL
 	return ..()
+
+		// ѕриставки, ибо без них очень худо. ~Quardbreak
+/datum/proc/p_e_1(temp_gender)
+	. = "о"
+
+/datum/proc/p_e_2(temp_gender)
+	. = "ое"
+
+/datum/proc/p_e_3(temp_gender)
+	. = "ее"
+
+/datum/proc/p_e_4(temp_gender)
+	. = "ым"
+
+/datum/proc/p_e_5(temp_gender)
+	. = "ось"
+
+/client/p_e_1(temp_gender)
+	if(!temp_gender)
+		temp_gender = gender
+	. = "о"
+	switch(temp_gender)
+		if(FEMALE)
+			. = "а"
+		if(MALE)
+			. = ""
+
+/client/p_e_2(temp_gender)
+	if(!temp_gender)
+		temp_gender = gender
+	. = "oe"
+	switch(temp_gender)
+		if(FEMALE)
+			. = "а&#255;"
+		if(MALE)
+			. = "ый"
+
+/client/p_e_3(temp_gender)
+	if(!temp_gender)
+		temp_gender = gender
+	. = "ее"
+	switch(temp_gender)
+		if(FEMALE)
+			. = "а&#255;"
+		if(MALE)
+			. = "ий"
+
+/client/p_e_4(temp_gender)
+	if(!temp_gender)
+		temp_gender = gender
+	. = "ым"
+	switch(temp_gender)
+		if(FEMALE)
+			. = "ой"
+		if(MALE)
+			. = "ым"
+
+/client/p_e_5(temp_gender)
+	if(!temp_gender)
+		temp_gender = gender
+	. = "ось"
+	switch(temp_gender)
+		if(FEMALE)
+			. = "ась"
+		if(MALE)
+			. = "с&#255;"
+
+/mob/p_e_1(temp_gender)
+	if(!temp_gender)
+		temp_gender = gender
+	. = "о"
+	switch(temp_gender)
+		if(FEMALE)
+			. = "а"
+		if(MALE)
+			. = ""
+
+/mob/p_e_2(temp_gender)
+	if(!temp_gender)
+		temp_gender = gender
+	. = "oe"
+	switch(temp_gender)
+		if(FEMALE)
+			. = "а&#255;"
+		if(MALE)
+			. = "ый"
+
+/mob/p_e_3(temp_gender)
+	if(!temp_gender)
+		temp_gender = gender
+	. = "ее"
+	switch(temp_gender)
+		if(FEMALE)
+			. = "а&#255;"
+		if(MALE)
+			. = "ий"
+
+/mob/p_e_4(temp_gender)
+	if(!temp_gender)
+		temp_gender = gender
+	. = "ым"
+	switch(temp_gender)
+		if(FEMALE)
+			. = "ой"
+		if(MALE)
+			. = "ым"
+
+/mob/p_e_5(temp_gender)
+	if(!temp_gender)
+		temp_gender = gender
+	. = "ось"
+	switch(temp_gender)
+		if(FEMALE)
+			. = "ась"
+		if(MALE)
+			. = "с&#255;"
+
+/mob/living/carbon/human/p_e_1(temp_gender)
+	var/list/obscured = check_obscured_slots()
+	var/skipface = (wear_mask && (wear_mask.flags_inv & HIDEFACE)) || (head && (head.flags_inv & HIDEFACE))
+	if((slot_w_uniform in obscured) && skipface)
+		temp_gender = PLURAL
+	return ..()
+
+/mob/living/carbon/human/p_e_2(temp_gender)
+	var/list/obscured = check_obscured_slots()
+	var/skipface = (wear_mask && (wear_mask.flags_inv & HIDEFACE)) || (head && (head.flags_inv & HIDEFACE))
+	if((slot_w_uniform in obscured) && skipface)
+		temp_gender = PLURAL
+	return ..()
+
+/mob/living/carbon/human/p_e_3(temp_gender)
+	var/list/obscured = check_obscured_slots()
+	var/skipface = (wear_mask && (wear_mask.flags_inv & HIDEFACE)) || (head && (head.flags_inv & HIDEFACE))
+	if((slot_w_uniform in obscured) && skipface)
+		temp_gender = PLURAL
+	return ..()
+
+/mob/living/carbon/human/p_e_4(temp_gender)
+	var/list/obscured = check_obscured_slots()
+	var/skipface = (wear_mask && (wear_mask.flags_inv & HIDEFACE)) || (head && (head.flags_inv & HIDEFACE))
+	if((slot_w_uniform in obscured) && skipface)
+		temp_gender = PLURAL
+	return ..()
+
+/mob/living/carbon/human/p_e_5(temp_gender)
+	var/list/obscured = check_obscured_slots()
+	var/skipface = (wear_mask && (wear_mask.flags_inv & HIDEFACE)) || (head && (head.flags_inv & HIDEFACE))
+	if((slot_w_uniform in obscured) && skipface)
+		temp_gender = PLURAL
+	return ..()

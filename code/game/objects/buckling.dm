@@ -101,13 +101,13 @@
 	if(buckle_mob(M))
 		if(M == user)
 			M.visible_message(\
-				"<span class='notice'>[M] пристегнул [M.p_them()]  [src].</span>",\
+				"<span class='notice'>[M] пристегнул[M.p_e_1()] [user] [src].</span>",\
 				"<span class='notice'>¬ы пристегнули себ&#255; к [src].</span>",\
 				"<span class='italics'>¬ы слышите металический скрежет.</span>")// lyazg
 		else
 			M.visible_message(\
-				"<span class='warning'>[user] пристегнул [M] к [src]!</span>",\
-				"<span class='warning'>[user] пристегнул вас к [src]!</span>",\
+				"<span class='warning'>[user] пристегнул[user.p_e_1()] [M] к [src]!</span>",\
+				"<span class='warning'>[user] пристегнул[user.p_e_1()] ¬ас к [src]!</span>",\
 				"<span class='italics'>¬ы слышите металлический скрежет.</span>")
 		return 1
 
@@ -117,12 +117,12 @@
 	if(M)
 		if(M != user)
 			M.visible_message(\
-				"<span class='notice'>[user] отстугнул [M] от [src].</span>",\
-				"<span class='notice'>[user] отстугнул вас от [src].</span>",\
+				"<span class='notice'>[user] отстегнул [M] от [src].</span>",\
+				"<span class='notice'>[user] отстегнул ¬ас от [src].</span>",\
 				"<span class='italics'>¬ы слышите металлический скрежет.</span>")
 		else
 			M.visible_message(\
-				"<span class='notice'>[M] отстегнул[M.p_them()] от [src].</span>",\
+				"<span class='notice'>[M] отстегнул[M.p_e_1()] [user] от [src].</span>",\
 				"<span class='notice'>¬ы отстегнули себ&#255; от [src].</span>",\
 				"<span class='italics'>¬ы слышите металлический скрежет.</span>")
 		add_fingerprint(user)
