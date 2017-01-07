@@ -14,7 +14,7 @@
 	var/shock_cooldown = 0
 
 /obj/item/device/electropack/suicide_act(mob/user)
-	user.visible_message("<span class='suicide'>[user] hooks [user.p_them()]self to the electropack and spams the trigger! It looks like [user.p_theyre()] trying to commit suicide!</span>")
+	user.visible_message("<span class='suicide'>[user] надел[user.p_e_1()] на себ&#255; шокерный набор и прожимает кнопку включени&#255;! Кажетс&#255; [user.p_they()] пытал[user.p_e_5()] покончить жизнь самоубийством!</span>")
 	return (FIRELOSS)
 
 /obj/item/device/electropack/initialize()

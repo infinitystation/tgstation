@@ -15,7 +15,7 @@
 	hitsound = 'sound/weapons/smash.ogg'
 
 /obj/item/weapon/storage/toolbox/suicide_act(mob/user)
-	user.visible_message("<span class='suicide'>[user] robusts [user.p_them()]self with [src]! It looks like [user.p_theyre()] trying to commit suicide!</span>")
+	user.visible_message("<span class='suicide'>[user] робустит сам[user.p_e_1()] себя с помощью &#255;щика для инструментов! Кажетс&#255; [user.p_they()] пытал[user.p_e_5()] покончить жизнь самоубийством!</span>")
 	return (BRUTELOSS)
 
 /obj/item/weapon/storage/toolbox/emergency

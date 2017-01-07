@@ -22,7 +22,7 @@
 	icon_state = "giftdeliverypackage[rand(1,5)]"
 
 /obj/item/weapon/a_gift/suicide_act(mob/user)
-	user.visible_message("<span class='suicide'>[user] peeks inside [src] and cries [user.p_them()]self to death! It looks like [user.p_they()] [user.p_were()] on the naughty list...</span>")
+	user.visible_message("<span class='suicide'>[user] загл&#255;дывает внутрь подарка и вопит до смерти! Кажетс&#255; [user.p_they()] попал[user.p_e_1()] в список непослушных...</span>")
 	return (BRUTELOSS)
 
 /obj/item/weapon/a_gift/attack_self(mob/M)

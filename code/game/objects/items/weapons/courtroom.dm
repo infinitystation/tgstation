@@ -14,7 +14,7 @@
 	resistance_flags = FLAMMABLE
 
 /obj/item/weapon/gavelhammer/suicide_act(mob/user)
-	user.visible_message("<span class='suicide'>[user] has sentenced [user.p_them()]self to death with [src]! It looks like [user.p_theyre()] trying to commit suicide!</span>")
+	user.visible_message("<span class='suicide'>[user] приговорил[user.p_e_1()] себ&#255; к смерти с помощью молотка! Кажетс&#255; [user.p_they()] пытал[user.p_e_5()] покончить жизнь самоубийством!</span>")
 	playsound(loc, 'sound/items/gavel.ogg', 50, 1, -1)
 	return (BRUTELOSS)
 

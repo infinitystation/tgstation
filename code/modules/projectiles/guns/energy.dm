@@ -157,20 +157,20 @@
 
 /obj/item/weapon/gun/energy/suicide_act(mob/user)
 	if (src.can_shoot())
-		user.visible_message("<span class='suicide'>[user] is putting the barrel of [src] in [user.p_their()] mouth.  It looks like [user.p_theyre()] trying to commit suicide!</span>")
+		user.visible_message("<span class='suicide'>[user] вставил[user.p_e_1()] ствол в рот.  Кажетс&#255; [user.p_they()] пытал[user.p_e_5()] покончить жизнь самоубийством!</span>")
 		sleep(25)
 		if(user.is_holding(src))
-			user.visible_message("<span class='suicide'>[user] melts [user.p_their()] face off with [src]!</span>")
+			user.visible_message("<span class='suicide'>[user] лицо буквально расплавл&#255;етс&#255;!</span>")
 			playsound(loc, fire_sound, 50, 1, -1)
 			var/obj/item/ammo_casing/energy/shot = ammo_type[select]
 			power_supply.use(shot.e_cost)
 			update_icon()
 			return(FIRELOSS)
 		else
-			user.visible_message("<span class='suicide'>[user] panics and starts choking to death!</span>")
+			user.visible_message("<span class='suicide'>[user] начал[user.p_e_1()] паниковать и задыхатьс&#255; до смерти!</span>")
 			return(OXYLOSS)
 	else
-		user.visible_message("<span class='suicide'>[user] is pretending to blow [user.p_their()] brains out with [src]! It looks like [user.p_theyre()] trying to commit suicide!</b></span>")
+		user.visible_message("<span class='suicide'>[user] делает вид, что [user.p_their()] мозги были взорваны стволом! Кажетс&#255; [user.p_they()] пытал[user.p_e_5()] покончить жизнь самоубийством!</b></span>")
 		playsound(loc, 'sound/weapons/empty.ogg', 50, 1, -1)
 		return (OXYLOSS)
 

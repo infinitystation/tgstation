@@ -25,7 +25,7 @@
 	materials = list(MAT_METAL = 1000)
 
 /obj/item/weapon/melee/chainofcommand/suicide_act(mob/user)
-	user.visible_message("<span class='suicide'>[user] is strangling [user.p_them()]self with [src]! It looks like [user.p_theyre()] trying to commit suicide!</span>")
+	user.visible_message("<span class='suicide'>[user] душит себ&#255; с помощью цепи! Кажетс&#255; [user.p_they()] пытал[user.p_e_5()] покончить жизнь самоубийством!</span>")
 	return (OXYLOSS)
 
 /obj/item/weapon/melee/synthetic_arm_blade
@@ -135,7 +135,7 @@
 	var/mob/living/carbon/human/H = user
 	var/obj/item/organ/brain/B = H.getorgan(/obj/item/organ/brain)
 
-	user.visible_message("<span class='suicide'>[user] stuffs [src] up [user.p_their()] nose and presses the 'extend' button! It looks like [user.p_theyre()] trying to clear their mind.</span>")
+	user.visible_message("<span class='suicide'>[user] вставил[user.p_e_1()] телескоптическую дубинку себе в нос и нажал[user.p_e_1()] на ней кнопку 'удлинить'! Кажетс&#255; [user.p_they()] пытал[user.p_e_5()] очистить свой разум.</span>")
 	if(!on)
 		src.attack_self(user)
 	else
@@ -287,7 +287,7 @@
 	consume_everything()
 
 /obj/item/weapon/melee/supermatter_sword/suicide_act(mob/user)
-	user.visible_message("<span class='suicide'>[user] touches [src]'s blade. It looks like [user.p_theyre()] tired of waiting for the radiation to kill [user.p_them()]!</span>")
+	user.visible_message("<span class='suicide'>[user] дотрагиваетс&#255; до меча из суперматерии. Кажетс&#255; [user.p_they()] пытал[user.p_e_5()] ждать пока радиация убьёт [user.p_them()]!</span>")
 	user.drop_item()
 	shard.Bumped(user)
 

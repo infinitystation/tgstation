@@ -90,7 +90,7 @@
 	add_fingerprint(usr)
 
 /obj/item/weapon/paper/suicide_act(mob/user)
-	user.visible_message("<span class='suicide'>[user] scratches a grid on [user.p_their()] wrist with the paper! It looks like [user.p_theyre()] trying to commit sudoku...</span>")
+	user.visible_message("<span class='suicide'>[user] выцарапывает сетку на зап&#255;стье с помощью бумаги! Кажетс&#255; [user.p_they()] пытал[user.p_e_5()] покончить жизнь судокой...</span>")
 	return (BRUTELOSS)
 
 /obj/item/weapon/paper/attack_self(mob/user)

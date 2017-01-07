@@ -13,7 +13,7 @@
 	resistance_flags = FIRE_PROOF
 
 /obj/item/weapon/melee/energy/suicide_act(mob/user)
-	user.visible_message("<span class='suicide'>[user] is [pick("slitting [user.p_their()] stomach open with", "falling on")] [src]! It looks like [user.p_theyre()] trying to commit seppuku!</span>")
+	user.visible_message("<span class='suicide'>[user] вспорнул[user.p_e_1()] себе живот с помощью энергетического оружия! Кажетс&#255; [user.p_they()] пытал[user.p_e_5()] покончить жизнь сэппукой!</span>")
 	return (BRUTELOSS|FIRELOSS)
 
 /obj/item/weapon/melee/energy/add_blood(list/blood_dna)
@@ -42,7 +42,7 @@
 	attack_verb_on = list()
 
 /obj/item/weapon/melee/energy/axe/suicide_act(mob/user)
-	user.visible_message("<span class='suicide'>[user] swings [src] towards [user.p_their()] head! It looks like [user.p_theyre()] trying to commit suicide!</span>")
+	user.visible_message("<span class='suicide'>[user] размахивает топором в сторону своей головы! Кажетс&#255; [user.p_they()] пытал[user.p_e_5()] покончить жизнь самоубийством!</span>")
 	return (BRUTELOSS|FIRELOSS)
 
 /obj/item/weapon/melee/energy/sword

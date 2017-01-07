@@ -10,10 +10,10 @@
 	dog_fashion = /datum/dog_fashion/head/chef
 
 /obj/item/clothing/head/chefhat/suicide_act(mob/user)
-	user.visible_message("<span class='suicide'>[user] is donning [src]! It looks like [user.p_theyre()] trying to become a chef.</span>")
+	user.visible_message("<span class='suicide'>[user] надевает шапку повара!  ажетс&#255; [user.p_they()] пытал[user.p_e_5()] стать поваром.</span>")
 	user.say("Bork Bork Bork!")
 	sleep(20)
-	user.visible_message("<span class='suicide'>[user] climbs into an imaginary oven!</span>")
+	user.visible_message("<span class='suicide'>[user] забираетс€ в вымышленную микроволновку!</span>")
 	user.say("BOOORK!")
 	playsound(user, 'sound/machines/ding.ogg', 50, 1)
 	return(FIRELOSS)

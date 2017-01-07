@@ -20,7 +20,7 @@
 
 /obj/item/weapon/papercutter/suicide_act(mob/user)
 	if(storedcutter)
-		user.visible_message("<span class='suicide'>[user] is beheading [user.p_them()]self with [src.name]! It looks like [user.p_theyre()] trying to commit suicide!</span>")
+		user.visible_message("<span class='suicide'>[user] обезглавливает себ&#255; с помощью резки дл&#255; бумаги!  ажетс&#255; [user.p_they()] пытал[user.p_e_5()] покончить жизнь самоубийством!</span>")
 		if(iscarbon(user))
 			var/mob/living/carbon/C = user
 			var/obj/item/bodypart/BP = C.get_bodypart("head")
@@ -29,7 +29,7 @@
 				playsound(loc,pick('sound/misc/desceration-01.ogg','sound/misc/desceration-02.ogg','sound/misc/desceration-01.ogg') ,50, 1, -1)
 		return (BRUTELOSS)
 	else
-		user.visible_message("<span class='suicide'>[user] repeatedly bashes [src.name] against [user.p_their()] head! It looks like [user.p_theyre()] trying to commit suicide!</span>")
+		user.visible_message("<span class='suicide'>[user] неоднократно колотит инструментом дл&#255; резки бумаги по своей голове!  ажетс&#255; [user.p_they()] пытал[user.p_e_5()] покончить жизнь самоубийством!</span>")
 		playsound(loc, 'sound/items/gavel.ogg', 50, 1, -1)
 		return (BRUTELOSS)
 

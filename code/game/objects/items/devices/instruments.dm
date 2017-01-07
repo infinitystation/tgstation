@@ -19,7 +19,7 @@
 	return ..()
 
 /obj/item/device/instrument/suicide_act(mob/user)
-	user.visible_message("<span class='suicide'>[user] begins to play 'Gloomy Sunday'! It looks like [user.p_theyre()] trying to commit suicide!</span>")
+	user.visible_message("<span class='suicide'>[user] приступает к игре 'Мрачное воскресенье'! Кажетс&#255; [user.p_they()] пытал[user.p_e_5()] покончить жизнь самоубийством!</span>")
 	return (BRUTELOSS)
 
 /obj/item/device/instrument/initialize()

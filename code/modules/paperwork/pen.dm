@@ -26,7 +26,7 @@
 	var/colour = "black"	//what colour the ink is!
 
 /obj/item/weapon/pen/suicide_act(mob/user)
-	user.visible_message("<span class='suicide'>[user] is scribbling numbers all over [user.p_them()]self with [src]! It looks like [user.p_theyre()] trying to commit sudoku...</span>")
+	user.visible_message("<span class='suicide'>[user] пытаетьс&#255; выцарапать на себе числа в помощью ручки! Кажетс&#255; [user.p_they()] пытал[user.p_e_5()] покончить жизнь судокой...</span>")
 	return(BRUTELOSS)
 
 /obj/item/weapon/pen/blue

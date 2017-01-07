@@ -19,7 +19,7 @@
 	var/throw_hit_chance = 35
 
 /obj/item/weapon/melee/baton/suicide_act(mob/user)
-	user.visible_message("<span class='suicide'>[user] is putting the live [name] in [user.p_their()] mouth! It looks like [user.p_theyre()] trying to commit suicide!</span>")
+	user.visible_message("<span class='suicide'>[user] вставляет работающую дубинку себе в рот! Кажетс&#255; [user.p_they()] пытал[user.p_e_5()] покончить жизнь самоубийством!</span>")
 	return (FIRELOSS)
 
 /obj/item/weapon/melee/baton/New()

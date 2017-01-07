@@ -114,7 +114,7 @@
 
 /obj/item/weapon/tank/suicide_act(mob/user)
 	var/mob/living/carbon/human/H = user
-	user.visible_message("<span class='suicide'>[user] is putting [src]'s valve to [user.p_their()] lips! It looks like [user.p_theyre()] trying to commit suicide!</span>")
+	user.visible_message("<span class='suicide'>[user] вставил[user.p_e_1()] баллон в свой рот!  ажетс&#255; [user.p_they()] пытал[user.p_e_5()] покончить жизнь самоубийством!</span>")
 	playsound(loc, 'sound/effects/spray.ogg', 10, 1, -3)
 	if (H && !qdeleted(H))
 		for(var/obj/item/W in H)

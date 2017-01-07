@@ -75,7 +75,7 @@
 	user << "<span class='warning'>The [name] whizzles quietly.<span>"
 
 /obj/item/weapon/gun/magic/suicide_act(mob/user)
-	user.visible_message("<span class='suicide'>[user] is twisting [src] above [user.p_their()] head, releasing a magical blast! It looks like [user.p_theyre()] trying to commit suicide!</span>")
+	user.visible_message("<span class='suicide'>[user] взмахивает посохом над своей головой, выпуска&#255; магический зар&#255;д! Кажетс&#255; [user.p_they()] пытал[user.p_e_5()] покончить жизнь самоубийством!</span>")
 	playsound(loc, fire_sound, 50, 1, -1)
 	return (FIRELOSS)
 

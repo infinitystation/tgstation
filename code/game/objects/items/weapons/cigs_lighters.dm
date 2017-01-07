@@ -114,7 +114,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	heat = 1000
 
 /obj/item/clothing/mask/cigarette/suicide_act(mob/user)
-	user.visible_message("<span class='suicide'>[user] настолько раздражен(а), что начинает часто курить. Видимо, [user.p_they()] хочет заработать рак.</span>")
+	user.visible_message("<span class='suicide'>[user] настолько раздражен[user.p_e_1()], что начинает часто курить. Видимо, [user.p_they()] хочет заработать рак.</span>")
 	return (TOXLOSS|OXYLOSS)
 
 /obj/item/clothing/mask/cigarette/New()
@@ -601,7 +601,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	var/emagged = 0 //LET THE GRIEF BEGIN
 
 /obj/item/clothing/mask/vape/suicide_act(mob/user)
-	user.visible_message("<span class='suicide'>[user] пыхтит, как паровоз. Электронна&#255; сигарета настолько его поглотила, что он хочет посв&#255;тить ей свою жизнь!")//it doesn't give you cancer, it is cancer
+	user.visible_message("<span class='suicide'>[user] пыхтит, как паровоз. Электронна&#255; сигарета настолько [user.p_their()] поглотила, что [user.p_they()] хочет посв&#255;тить ей свою жизнь!")//it doesn't give you cancer, it is cancer
 	return (TOXLOSS|OXYLOSS)
 
 

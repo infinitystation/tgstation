@@ -296,7 +296,7 @@
 				msg += "[t_He] в апатии...\n"
 
 		if(digitalcamo)
-			msg += "[t_He] двигает [t_him] телом грубым и неестественным образом.\n"
+			msg += "[t_He] двигает своим телом грубым и неестественным образом.\n"
 
 	temp = getFireLoss() + getBruteLoss()
 	if(!skipface && temp<80 && !(disabilities & HUSK))

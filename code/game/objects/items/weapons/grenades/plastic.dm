@@ -19,7 +19,7 @@
 	qdel(nadeassembly)
 	nadeassembly = null
 	target = null
-	..()
+	return ..()
 
 /obj/item/weapon/grenade/plastic/attackby(obj/item/I, mob/user, params)
 	if(!nadeassembly && istype(I, /obj/item/device/assembly_holder))
@@ -89,21 +89,26 @@
 /obj/item/weapon/grenade/plastic/suicide_act(mob/user)
 	message_admins("[key_name_admin(user)](<A HREF='?_src_=holder;adminmoreinfo=\ref[user]'>?</A>) (<A HREF='?_src_=holder;adminplayerobservefollow=\ref[user]'>FLW</A>) suicided with [src] at ([user.x],[user.y],[user.z] - <A HREF='?_src_=holder;adminplayerobservecoodjump=1;X=[user.x];Y=[user.y];Z=[user.z]'>JMP</a>)",0,1)
 	message_admins("[key_name(user)] suicided with [src] at ([user.x],[user.y],[user.z])")
-	user.visible_message("<span class='suicide'>[user] activates the [src] and holds it above [user.p_their()] head! It looks like [user.p_theyre()] going out with a bang!</span>")
-	var/message_say = "FOR NO RAISIN!"
+	user.visible_message("<span class='suicide'>[user] àêòèâèğóåò áîìáó è äåğæèò å¸ íàä ñâîåé ãîëîâîé! Êàæåòñ&#255; [user.p_they()] ïûòàë[user.p_e_5()] ïîêîí÷èòü æèçíü âìåñòå ñî âçğûâîì!</span>")
+
+	var/message_say = "ÇÀ ÌÈĞ ÁÅÇ ÈÇŞÌÈÍÎÊ!"
 	if(user.mind)
-		if(user.mind.special_role)
+		if(alert("ÂÛ ÒÅĞĞÎĞÈÑÒ?",,"Äà", "Íåò") == "Äà")
+			message_say = "ÀËËÀÕÓ ÀÊÁÀĞ!!"
+
+		else if(user.mind.special_role)
 			var/role = lowertext(user.mind.special_role)
 			if(role == "traitor" || role == "syndicate")
-				message_say = "FOR THE SYNDICATE!"
+				message_say = "ÇÀ ÑÈÍÄÈÊÀÒ!!"
 			else if(role == "changeling")
-				message_say = "FOR THE HIVE!"
+				message_say = "ÂÎ ÑËÀÂÓ ĞÎß!!"
 			else if(role == "cultist")
-				message_say = "FOR NAR-SIE!"
+				message_say = "ÇÀ ÍÀĞ-ÑÈ!!"
 			else if(role == "revolutionary" || role == "head revolutionary")
-				message_say = "VIVA LA REVOLUTION!"
+				message_say = "ÂÈÂÀ Ëß ĞÅÂÎËŞÖÈß!!"
 			else if(user.mind.gang_datum)
-				message_say = "[uppertext(user.mind.gang_datum.name)] RULES!"
+				message_say = "[uppertext(user.mind.gang_datum.name)] ĞÓËÈÒ!!"
+
 	user.say(message_say)
 	explosion(user,0,2,0) //Cheap explosion imitation because putting prime() here causes runtimes
 	user.gib(1, 1)

@@ -293,7 +293,7 @@
 	sharpness = IS_SHARP
 
 /obj/item/weapon/shard/suicide_act(mob/user)
-	user.visible_message("<span class='suicide'>[user] is slitting [user.p_their()] [pick("wrists", "throat")] with the shard of glass! It looks like [user.p_theyre()] trying to commit suicide.</span>")
+	user.visible_message("<span class='suicide'>[user] начинает резать своё [pick("зап&#255;стье руки", "горло")] с помощью осколка стекла! Кажетс&#255; [user.p_they()] пытал[user.p_e_5()] покончить жизнь самоубийством.</span>")
 	return (BRUTELOSS)
 
 

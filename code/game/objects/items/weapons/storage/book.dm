@@ -20,7 +20,7 @@
 	var/deity_name = "Christ"
 
 /obj/item/weapon/storage/book/bible/suicide_act(mob/user)
-	user.visible_message("<span class='suicide'>[user] is offering [user.p_them()]self to [deity_name]! It looks like [user.p_theyre()] trying to commit suicide!</span>")
+	user.visible_message("<span class='suicide'>[user] предложил[user.p_e_1()] себя [deity_name]! Кажетс&#255; [user.p_they()] пытал[user.p_e_5()] покончить жизнь самоубийством!</span>")
 	return (BRUTELOSS)
 
 /obj/item/weapon/storage/book/bible/booze

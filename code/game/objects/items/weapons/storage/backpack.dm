@@ -41,7 +41,7 @@
 
 
 /obj/item/weapon/storage/backpack/holding/suicide_act(mob/user)
-	user.visible_message("<span class='suicide'>[user] is jumping into [src]! It looks like [user.p_theyre()] trying to commit suicide.</span>")
+	user.visible_message("<span class='suicide'>[user] прыгает в бездонный рюкзак! Кажетс&#255; [user.p_they()] пытал[user.p_e_5()] поселитьс&#255; в карманном измерении.</span>")
 	user.drop_item()
 	user.Stun(5)
 	sleep(20)
@@ -96,7 +96,7 @@
 	max_combined_w_class = 60
 
 /obj/item/weapon/storage/backpack/santabag/suicide_act(mob/user)
-	user.visible_message("<span class='suicide'>[user] places [src] over their head and pulls it tight! It looks like they aren't in the Christmas spirit...</span>")
+	user.visible_message("<span class='suicide'>[user] надел[user.p_e_1()] мешок Санты на голову и пот&#255;нул[user.p_e_1()] кра&#255; мешка вниз! Кажетс&#255; [user.p_they()] не являл[user.p_e_5()] духом Рождества...</span>")
 	return (OXYLOSS)
 
 /obj/item/weapon/storage/backpack/cultpack
