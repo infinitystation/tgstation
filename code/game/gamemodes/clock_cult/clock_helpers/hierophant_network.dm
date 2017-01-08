@@ -19,6 +19,7 @@
 		return FALSE
 	var/parsed_message = "<span class='[name_span]'>[user_title ? "[user_title] ":""][findtextEx(user.name, user.real_name) ? user.name : "[user.real_name] (as [user.name])"]: \
 	</span><span class='[message_span]'>\"[message]\"</span>"
+	parsed_message = sanitize_a0(parsed_message)
 	hierophant_message(parsed_message, FALSE, user)
 	return TRUE
 
