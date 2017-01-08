@@ -6,39 +6,17 @@
 	var/t_him = p_them()
 	var/t_has = p_have()
 	var/t_is = p_are()
+	// Чертовы окончания! ~bear1ake
+	var/e_1	= p_e_1()
+	var/e_2	= p_e_2()
+	var/e_3	= p_e_3()
+	var/e_4	= p_e_4()
+	var/e_5 = p_e_5()
 
 	var/list/obscured = check_obscured_slots()
 	var/skipface = (wear_mask && (wear_mask.flags_inv & HIDEFACE)) || (head && (head.flags_inv & HIDEFACE))
 
-			// Чертовы окончания! ~bear1ake
-	var/e_1 = "о"
-	var/e_2 = "ое"
-	var/e_3 = "ее"
-	var/e_4 = "ым"
-	var/e_5 = "ось"
-
 	var/msg = "<span class='info'>*---------*\nЭто <EM>[src.name]</EM>!\n"
-
-	if( (slot_w_uniform in obscured) && skipface ) //big suits/masks/helmets make it hard to tell their gender
-		e_1 = "о"
-		e_2 = "ое"
-		e_3 = "ее"
-		e_4 = "ым"
-		e_5 = "ось"
-	else
-		switch(gender)
-			if(MALE)
-				e_1 = ""
-				e_2 = "ый"
-				e_3 = "ий"
-				e_4 = "ым"
-				e_5 = "с&#255;"
-			if(FEMALE)
-				e_1 = "а"
-				e_2 = "а&#255;"
-				e_3 = "а&#255;"
-				e_4 = "ой"
-				e_5 = "ась"
 
 	//uniform
 	if(w_uniform && !(slot_w_uniform in obscured))
@@ -318,7 +296,7 @@
 				msg += "[t_He] в апатии...\n"
 
 		if(digitalcamo)
-			msg += "[t_He] двигает [t_him] телом грубым и неестественным образом.\n"
+			msg += "[t_He] двигает своим телом грубым и неестественным образом.\n"
 
 	temp = getFireLoss() + getBruteLoss()
 	if(!skipface && temp<80 && !(disabilities & HUSK))

@@ -91,7 +91,7 @@
 		user << "The charge meter reads [round(src.percent() )]%."
 
 /obj/item/weapon/stock_parts/cell/suicide_act(mob/user)
-	user.visible_message("<span class='suicide'>[user] is licking the electrodes of [src]! It looks like [user.p_theyre()] trying to commit suicide!</span>")
+	user.visible_message("<span class='suicide'>[user] попыта[user.p_e_5()] лизнуть контакты батарейки! Кажетс&#255; [user.p_they()] пытал[user.p_e_5()] покончить жизнь самоубийством!</span>")
 	return (FIRELOSS)
 
 /obj/item/weapon/stock_parts/cell/attackby(obj/item/W, mob/user, params)

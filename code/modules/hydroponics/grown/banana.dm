@@ -25,16 +25,16 @@
 	bitesize = 5
 
 /obj/item/weapon/reagent_containers/food/snacks/grown/banana/suicide_act(mob/user)
-	user.visible_message("<span class='suicide'>[user] is aiming [src] at [user.p_them()]self! It looks like [user.p_theyre()] trying to commit suicide!</span>")
+	user.visible_message("<span class='suicide'>[user] наводит банан  на себ&#255;! Кажетс&#255; [user.p_they()] пытал[user.p_e_5()] покончить жизнь самоубийством!</span>")
 	playsound(loc, 'sound/items/bikehorn.ogg', 50, 1, -1)
 	sleep(25)
 	if(!user)
 		return (OXYLOSS)
-	user.say("BANG!")
+	user.say("БЭНГ!")
 	sleep(25)
 	if(!user)
 		return (OXYLOSS)
-	user.visible_message("<B>[user]</B> laughs so hard they begin to suffocate!")
+	user.visible_message("<B>[user]</B> смеётс&#255; до потери дыхани&#255;!")
 	return (OXYLOSS)
 
 /obj/item/weapon/grown/bananapeel
@@ -49,7 +49,7 @@
 	throw_range = 7
 
 /obj/item/weapon/grown/bananapeel/suicide_act(mob/user)
-	user.visible_message("<span class='suicide'>[user] is deliberately slipping on [src]! It looks like [user.p_theyre()] trying to commit suicide!</span>")
+	user.visible_message("<span class='suicide'>[user] умышленно подскальзываетс&#255; на банановой кожуре! Кажетс&#255; [user.p_they()] пытал[user.p_e_5()] покончить жизнь самоубийством!</span>")
 	playsound(loc, 'sound/misc/slip.ogg', 50, 1, -1)
 	return (BRUTELOSS)
 

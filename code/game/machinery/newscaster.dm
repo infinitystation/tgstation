@@ -909,13 +909,13 @@ var/list/obj/machinery/newscaster/allCasters = list()
 	var/creationTime
 
 /obj/item/weapon/newspaper/suicide_act(mob/user)
-	user.visible_message("<span class='suicide'>[user] is focusing intently on [src]! It looks like [user.p_theyre()] trying to commit sudoku... until [user.p_their()] eyes light up with realization!</span>")
-	user.say(";JOURNALISM IS MY CALLING! EVERYBODY APPRECIATES UNBIASED REPORTI-GLORF")
+	user.visible_message("<span class='suicide'>[user] пристально фокусирусируетс&#255; на [src]! Кажетс&#255; [user.p_they()] пытал[user.p_e_5()] сделать судоку... пока [user.p_their()] глаза не загорелись реализацией!</span>")
+	user.say(";ЖУРНАЛИЗМ ЭТО МОЁ ПРИЗВАНИЕ! ВСЕ ВЫСОКО ОЦЕНИВАЮТ НОВО-*ГЛОТЬ*")
 	var/mob/living/carbon/human/H = user
 	var/obj/W = new /obj/item/weapon/reagent_containers/food/drinks/bottle/whiskey(H.loc)
 	playsound(H.loc, 'sound/items/drink.ogg', rand(10,50), 1)
 	W.reagents.trans_to(H, W.reagents.total_volume)
-	user.visible_message("<span class='suicide'>[user] залпом выпивает виски! Это было лишним.</span>")
+	user.visible_message("<span class='suicide'>[user] залпом выпивает виски! Кажетс&#255; это было лишним.</span>")
 
 	return(TOXLOSS)
 

@@ -26,21 +26,26 @@
 	return ..()
 
 /obj/item/weapon/c4/suicide_act(mob/user)
-	user.visible_message("<span class='suicide'>[user] activates the [src.name] and holds it above [user.p_their()] head! It looks like [user.p_theyre()] going out with a bang!</span>")
-	var/message_say = "FOR NO RAISIN!"
+	user.visible_message("<span class='suicide'>[user] àêòèâèğóåò áîìáó è äåğæèò å¸ íàä ñâîåé ãîëîâîé! Êàæåòñ&#255; [user.p_they()] ïûòàë[user.p_e_5()] ïîêîí÷èòü æèçíü âìåñòå ñî âçğûâîì!</span>")
+	var/message_say = "ÇÀ ÌÈĞ ÁÅÇ ÈÇŞÌÈÍÎÊ!"
+
 	if(user.mind)
-		if(user.mind.special_role)
+		if(alert("ÂÛ ÒÅĞĞÎĞÈÑÒ?",,"Äà", "Íåò") == "Äà")
+			message_say = "ÀËËÀÕÓ ÀÊÁÀĞ!!"
+
+		else if(user.mind.special_role)
 			var/role = lowertext(user.mind.special_role)
 			if(role == "traitor" || role == "syndicate")
-				message_say = "FOR THE SYNDICATE!"
+				message_say = "ÇÀ ÑÈÍÄÈÊÀÒ!!"
 			else if(role == "changeling")
-				message_say = "FOR THE HIVE!"
+				message_say = "ÂÎ ÑËÀÂÓ ĞÎß!!"
 			else if(role == "cultist")
-				message_say = "FOR NAR-SIE!"
+				message_say = "ÇÀ ÍÀĞ-ÑÈ!!"
 			else if(role == "revolutionary" || role == "head revolutionary")
-				message_say = "VIVA LA REVOLUTION!"
+				message_say = "ÂÈÂÀ Ëß ĞÅÂÎËŞÖÈß!!"
 			else if(user.mind.gang_datum)
-				message_say = "[uppertext(user.mind.gang_datum.name)] RULES!"
+				message_say = "[uppertext(user.mind.gang_datum.name)] ĞÓËÈÒ!!"
+
 	user.say(message_say)
 	target = user
 	message_admins("[ADMIN_LOOKUPFLW(user)] suicided with [name] at [ADMIN_COORDJMP(src)]",0,1)

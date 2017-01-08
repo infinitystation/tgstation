@@ -17,7 +17,7 @@
 	resistance_flags = FIRE_PROOF
 
 /obj/item/weapon/banhammer/suicide_act(mob/user)
-		user.visible_message("<span class='suicide'>[user] is hitting [user.p_them()]self with [src]! It looks like [user.p_theyre()] trying to ban [user.p_them()]self from life.</span>")
+		user.visible_message("<span class='suicide'>[user] удар&#255;ет по себе самому с помощью банхаммера! Кажетс&#255; [user.p_they()] пытал[user.p_e_5()] забанить самого себя.</span>")
 		return (BRUTELOSS|FIRELOSS|TOXLOSS|OXYLOSS)
 
 /obj/item/weapon/banhammer/attack(mob/M, mob/user)
@@ -38,8 +38,8 @@
 	attack_verb = list("attacked", "slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
 
 /obj/item/weapon/sord/suicide_act(mob/user)
-	user.visible_message("<span class='suicide'>[user] is trying to impale [user.p_them()]self with [src]! It might be a suicide attempt if it weren't so shitty.</span>", \
-	"<span class='suicide'>You try to impale yourself with [src], but it's USELESS...</span>")
+	user.visible_message("<span class='suicide'>[user] пытаеться проткнуть себ&#255; с помощью дерьмового меча! Похоже это бы была попытка самоубийства, если бы всё не было так дерьмово...</span>", \
+	"<span class='suicide'>Вы попробовали проткнуть себ&#255; с помощью дерьмового меча, но это было БЕСПОЛЕЗНО...</span>")
 	return SHAME
 
 /obj/item/weapon/claymore
@@ -62,7 +62,7 @@
 	resistance_flags = FIRE_PROOF
 
 /obj/item/weapon/claymore/suicide_act(mob/user)
-	user.visible_message("<span class='suicide'>[user] is falling on [src]! It looks like [user.p_theyre()] trying to commit suicide!</span>")
+	user.visible_message("<span class='suicide'>[user] падает на конец клеймора! Кажетс&#255; [user.p_they()] пытал[user.p_e_5()] покончить жизнь самоубийством!</span>")
 	return(BRUTELOSS)
 
 var/highlander_claymores = 0
@@ -200,7 +200,7 @@ var/highlander_claymores = 0
 	slot_flags = null
 
 /obj/item/weapon/katana/suicide_act(mob/user)
-	user.visible_message("<span class='suicide'>[user] is slitting [user.p_their()] stomach open with [src]! It looks like [user.p_theyre()] trying to commit seppuku!</span>")
+	user.visible_message("<span class='suicide'>[user] разрезает брюшную полость с помощью катаны! Кажетс&#255; [user.p_they()] пытал[user.p_e_5()] покончить жизнь сеппукой!</span>")
 	return(BRUTELOSS)
 
 /obj/item/weapon/wirerod
@@ -298,7 +298,7 @@ var/highlander_claymores = 0
 		sharpness = IS_BLUNT
 
 /obj/item/weapon/switchblade/suicide_act(mob/user)
-	user.visible_message("<span class='suicide'>[user] is slitting [user.p_their()] own throat with [src]! It looks like [user.p_theyre()] trying to commit suicide!</span>")
+	user.visible_message("<span class='suicide'>[user] перерезает своё горло с помощью складного ножика! Кажетс&#255; [user.p_they()] пытал[user.p_e_5()] покончить жизнь самоубийством!</span>")
 	return (BRUTELOSS)
 
 /obj/item/weapon/phone
@@ -316,9 +316,9 @@ var/highlander_claymores = 0
 
 /obj/item/weapon/phone/suicide_act(mob/user)
 	if(locate(/obj/structure/chair/stool) in user.loc)
-		user.visible_message("<span class='suicide'>[user] begins to tie a noose with [src]'s cord! It looks like [user.p_theyre()] trying to commit suicide!</span>")
+		user.visible_message("<span class='suicide'>[user] начинает зав&#255;зывать петлю с помощью телефонного провода! Кажетс&#255; [user.p_they()] пытал[user.p_e_5()] покончить жизнь самоубийством!</span>")
 	else
-		user.visible_message("<span class='suicide'>[user] is strangling [user.p_them()]self with [src]'s cord! It looks like [user.p_theyre()] trying to commit suicide!</span>")
+		user.visible_message("<span class='suicide'>[user] начинает душить себ&#255; с помощью телефонного провода! Кажетс&#255; [user.p_they()] пытал[user.p_e_5()] покончить жизнь самоубийством!</span>")
 	return(OXYLOSS)
 
 /obj/item/weapon/cane
@@ -374,7 +374,7 @@ var/highlander_claymores = 0
 	icon_state = "ectoplasm"
 
 /obj/item/weapon/ectoplasm/suicide_act(mob/user)
-	user.visible_message("<span class='suicide'>[user] is inhaling [src]! It looks like [user.p_theyre()] trying to visit the astral plane.</span>")
+	user.visible_message("<span class='suicide'>[user] вдыхает экстоплазму! Кажетс&#255; [user.p_they()] пытал[user.p_e_5()] посетить астральный мир.</span>")
 	return (OXYLOSS)
 
 /obj/item/weapon/mounted_chainsaw

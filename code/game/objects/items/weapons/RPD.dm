@@ -182,7 +182,7 @@ var/global/list/RPD_recipes=list(
 	show_menu(user)
 
 /obj/item/weapon/pipe_dispenser/suicide_act(mob/user)
-	user.visible_message("<span class='suicide'>[user] points the end of the RPD down [user.p_their()] throat and presses a button! It looks like [user.p_theyre()] trying to commit suicide...</span>")
+	user.visible_message("<span class='suicide'>[user] указывает на конец РПД на свой рот и нажимает на кнопку! Кажетс&#255; [user.p_they()] пытал[user.p_e_5()] покончить жизнь самоубийством...</span>")
 	playsound(get_turf(user), 'sound/machines/click.ogg', 50, 1)
 	playsound(get_turf(user), 'sound/items/Deconstruct.ogg', 50, 1)
 	return(BRUTELOSS)

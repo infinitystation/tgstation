@@ -40,7 +40,7 @@
 /obj/item/whistle/attack_self(mob/user as mob)
 	if(spam_flag == 0)
 		spam_flag = 1
-		user.visible_message("<span style=\"color:red\"><B>[user]</B> blows [src]!</span>")
+		user.visible_message("<span style=\"color:red\"><B>[user]</B> свистит в свисток!</span>")
 		playsound(src.loc, src.sound_whistle, 35, 1)
 		src.add_fingerprint(user)
 		spawn(20)
@@ -48,10 +48,9 @@
 	return
 
 /obj/item/whistle/suicide_act(mob/user)
-	user.visible_message("<span style=\"color:red\"><b>[user] swallows the [src.name]. \He begins to choke, the [src.name] sounding shrilly!</b></span>")
-
+	user.visible_message("<span style=\"color:red\"><b>[user] проглатывает [src.name]. [user.p_they()] начинает задыхатьс&#255;, заставл&#255;&#255; свисток внутри себя визжать!</b></span>")
 	//fuck it that'll do
-	var/whistlesound = src.sound_whistle //so we can still use it when the whistle is deleted
+	var/whistlesound = 'sound/items/whistle.ogg' //so we can still use it when the whistle is deleted
 	playsound(user.loc, whistlesound, 35, 1)
 	spawn(20)
 		if(prob(50))
