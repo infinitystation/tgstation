@@ -470,7 +470,19 @@
 	return get_all_jobs() + list("Prisoner")
 
 /proc/get_all_centcom_jobs()
-	return list("VIP Guest","Custodian","Thunderdome Overseer","Centcom Official","Medical Officer","Death Commando","Research Officer","Special Ops Officer","Admiral","Centcom Commander","Emergency Response Team Commander","Security Response Officer","Engineer Response Officer", "Medical Response Officer","Centcom Bartender","Centcom Securty Private","Centcom Securty Sergeant")
+	return list("VIP Guest","Custodian","Thunderdome Overseer","Centcom Official","Medical Officer",
+	"Research Officer","Special Ops Officer","Admiral","Centcom Commander",
+	"Emergency Response Team Commander","Security Response Officer","Engineer Response Officer",
+	"Medical Response Officer","Centcom Bartender","Centcom Security Private","Centcom Security Sergeant")
+
+/proc/get_enemy_access(job)
+	switch(job)
+		if("Squad Alpha")
+			return get_all_centcom_access()
+
+/proc/get_all_enemy_jobs() //Наёмники НТ - самые плохие и самые брутальные.
+	return list("Squad Alpha","Death Commando")
+
 
 /obj/item/proc/GetJobName() //Used in secHUD icon generation
 	var/obj/item/weapon/card/id/I = GetID()
@@ -481,4 +493,6 @@
 		return jobName
 	if(jobName in get_all_centcom_jobs()) //Return with the NT logo if it is a Centcom job
 		return "Centcom"
+	if(jobName in get_all_enemy_jobs()) //Отряд зачистки НТ
+		return "Deathsquad"
 	return "Unknown" //Return unknown if none of the above apply
