@@ -178,7 +178,7 @@
 		I.owner << "<span class='warning'>Your photon projector implant overheats and deactivates!</span>"
 		I.Retract()
 	overheat = FALSE
-	addtimer(src, "cooldown", flashcd * 2)
+	addtimer(CALLBACK(src, .proc/cooldown), flashcd * 2)
 
 /obj/item/device/assembly/flash/armimplant/try_use_flash(mob/user = null)
 	if(overheat)
@@ -186,7 +186,7 @@
 			I.owner << "<span class='warning'>Your photon projector is running too hot to be used again so quickly!</span>"
 		return FALSE
 	overheat = TRUE
-	addtimer(src, "cooldown", flashcd)
+	addtimer(CALLBACK(src, .proc/cooldown), flashcd)
 	playsound(src.loc, 'sound/weapons/flash.ogg', 100, 1)
 	update_icon(1)
 	return TRUE
@@ -249,7 +249,7 @@
 	else if(flash)
 		item_state = "flashshield_flash"
 		item_state = "flashshield_flash"
-		addtimer(src, "update_icon", 5)
+		addtimer(CALLBACK(src, .proc/update_icon), 5)
 
 	if(holder)
 		holder.update_icon()

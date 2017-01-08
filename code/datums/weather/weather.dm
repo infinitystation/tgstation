@@ -79,7 +79,7 @@
 			if(telegraph_sound)
 				M << sound(telegraph_sound)
 	PDAs_trigger(pda_start_up_sound, "<span class='danger'><B>[adv_start_up_message]</B></span>", target_z)
-	addtimer(src, "start", telegraph_duration)
+	addtimer(CALLBACK(src, .proc/start), telegraph_duration)
 
 /datum/weather/proc/start()
 	if(stage >= MAIN_STAGE)
@@ -95,7 +95,7 @@
 				M << sound(weather_sound)
 	START_PROCESSING(SSweather, src)
 	PDAs_trigger(pda_duration_sound, "<span class='danger'><B>[adv_duration_message]</B></span>", target_z)
-	addtimer(src, "wind_down", weather_duration)
+	addtimer(CALLBACK(src, .proc/wind_down), weather_duration)
 
 /datum/weather/proc/wind_down()
 	if(stage >= WIND_DOWN_STAGE)
@@ -111,7 +111,7 @@
 				M << sound(end_sound)
 	STOP_PROCESSING(SSweather, src)
 	PDAs_trigger(pda_wind_down_sound, "<span class='danger'><B>[adv_wind_down_message]</B></span>", target_z)
-	addtimer(src, "end", end_duration)
+	addtimer(CALLBACK(src, .proc/end), end_duration)
 
 /datum/weather/proc/end()
 	if(stage == END_STAGE)

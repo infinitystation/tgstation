@@ -25,19 +25,20 @@ map dreamstation
 	friendlyname Dream Station
 endmap
 
-map ministation
-	friendlyname Mini Station
 endmap
 
 map infinity_metastation
 	friendlyname Infinity Meta Station
 	default
-endmap
-
-map deltastation2
+map deltastation
 	friendlyname Delta Station
 endmap
 
 map pubbystation
 	friendlyname Pubby Station
+endmap
+
+map omegastation
+	friendlyname Omega Station
+	maxplayers 35
 endmap

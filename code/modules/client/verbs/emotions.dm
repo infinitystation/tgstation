@@ -1,3 +1,4 @@
+//TODO@inf-dev Перевести на datum эмоуты. ~bear1ake@inf-dev
 /mob/living/var/emoteCooldown = 100 // each 10 is real second
 /mob/living/var/emoteLastUse = -1000
 

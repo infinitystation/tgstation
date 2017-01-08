@@ -109,20 +109,7 @@
 			if(M.client && (is_servant_of_ratvar(M) || isobserver(M) || M.stat == DEAD))
 				viewing += M.client
 		flick_overlay(I, viewing, 8)
-
-		var/swapdamage = FALSE
-		if(L.has_dna()) //if has_dna() is true they're at least carbon
-			var/mob/living/carbon/C = L
-			if(TOXINLOVER in C.dna.species.species_traits)
-				swapdamage = TRUE
-		if(isanimal(L))
-			var/mob/living/simple_animal/A = L
-			if(A.damage_coeff[TOX] < 0)
-				swapdamage = TRUE
-		if(swapdamage) //they'd take damage, we need to swap it
-			L.adjustToxLoss(3)
-		else
-			L.adjustToxLoss(-3)
+		L.adjustToxLoss(-3, TRUE, TRUE)
 
 /turf/open/floor/clockwork/attackby(obj/item/I, mob/living/user, params)
 	if(istype(I, /obj/item/weapon/crowbar))
@@ -146,7 +133,7 @@
 		var/previouscolor = color
 		color = "#960000"
 		animate(src, color = previouscolor, time = 8)
-		addtimer(src, "update_atom_colour", 8)
+		addtimer(CALLBACK(src, /atom/proc/update_atom_colour), 8)
 
 
 /turf/open/floor/bluespace

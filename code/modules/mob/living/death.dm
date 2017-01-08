@@ -44,6 +44,7 @@
 
 
 /mob/living/death(gibbed)
+	stat = DEAD
 	unset_machine()
 	timeofdeath = world.time
 	tod = worldtime2text()
@@ -53,11 +54,8 @@
 			qdel(src)
 	if(mind && mind.name && mind.active && (T.z != ZLEVEL_CENTCOM))
 		var/area/A = get_area(T)
-		var/rendered = "<span class='game deadsay'><span class='name'>\
-			[mind.name]</span> has died at <span class='name'>[A.name]\
-			</span>.</span>"
-		deadchat_broadcast(rendered, follow_target = src,
-			message_type=DEADCHAT_DEATHRATTLE)
+		var/rendered = "<span class='deadsay'><b>[mind.name]</b> has died at <b>[A.name]</b>.</span>"
+		deadchat_broadcast(rendered, follow_target = src, message_type=DEADCHAT_DEATHRATTLE)
 	if(mind)
 		mind.store_memory("Time of death: [tod]", 0)
 	living_mob_list -= src
@@ -77,3 +75,4 @@
 	update_canmove()
 	med_hud_set_health()
 	med_hud_set_status()
+	return TRUE

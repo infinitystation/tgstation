@@ -1,3 +1,6 @@
+/*ALL DNA, SPECIES, AND GENETICS-RELATED DEFINES GO HERE*/
+
+#define CHECK_DNA_AND_SPECIES(C) if((!(C.dna)) || (!(C.dna.species))) return
 
 //Defines copying names of mutations in all cases, make sure to change this if you change mutation's name
 #define HULK		"Hulk"
@@ -80,25 +83,6 @@
 #define TR_KEEPSRC		128
 #define TR_KEEPORGANS	256
 
-//Organ stuff, It's here because "Genetics" is the most relevant file for organs and bodyparts
-#define ORGAN_ORGANIC   1
-#define ORGAN_ROBOTIC   2
-
-#define BODYPART_ORGANIC   1
-#define BODYPART_ROBOTIC   2
-
-#define MONKEY_BODYPART "monkey"
-#define ALIEN_BODYPART "alien"
-#define LARVA_BODYPART "larva"
-#define DEVIL_BODYPART "devil"
-
-//Nutrition levels for humans. No idea where else to put it
-#define NUTRITION_LEVEL_FAT 600
-#define NUTRITION_LEVEL_FULL 550
-#define NUTRITION_LEVEL_WELL_FED 450
-#define NUTRITION_LEVEL_FED 350
-#define NUTRITION_LEVEL_HUNGRY 250
-#define NUTRITION_LEVEL_STARVING 150
 
 //shit levels for humans. No idea where else to put it
 #define SHIT_LEVEL_MAX 500
@@ -107,15 +91,6 @@
 
 #define CLONER_FRESH_CLONE "fresh"
 #define CLONER_MATURE_CLONE "mature"
-
-//Blood levels
-#define BLOOD_VOLUME_MAXIMUM		2000
-#define BLOOD_VOLUME_SLIME_SPLIT	1120
-#define BLOOD_VOLUME_NORMAL			560
-#define BLOOD_VOLUME_SAFE			501
-#define BLOOD_VOLUME_OKAY			336
-#define BLOOD_VOLUME_BAD			224
-#define BLOOD_VOLUME_SURVIVE		122
 
 //species traits for mutantraces
 #define MUTCOLORS		1

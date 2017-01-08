@@ -141,3 +141,4 @@
 	icon_state = "blueshift"
 	item_state = "blueshift"
 	item_color = "blueshift"
+	can_adjust = 0

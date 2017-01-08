@@ -3781,7 +3781,7 @@
 /turf/open/floor/plasteel/circuit/gcircuit/animated,
 /area/ctf)
 "jT" = (
-/obj/item/weapon/twohanded/required/ctf/blue,
+/obj/item/weapon/twohanded/ctf/blue,
 /turf/open/floor/plasteel/circuit/gcircuit/animated,
 /area/ctf)
 "jU" = (
@@ -3789,7 +3789,7 @@
 /turf/open/floor/plasteel/circuit/gcircuit/off,
 /area/ctf)
 "jV" = (
-/obj/item/weapon/twohanded/required/ctf/red,
+/obj/item/weapon/twohanded/ctf/red,
 /turf/open/floor/plasteel/circuit/gcircuit/animated,
 /area/ctf)
 "jW" = (

@@ -168,7 +168,7 @@
 	if(device)
 		device.pulsed()
 
-	addtimer(src, "update_icon", 15)
+	addtimer(CALLBACK(src, .proc/update_icon), 15)
 
 /obj/machinery/button/power_change()
 	..()
