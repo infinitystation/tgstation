@@ -70,19 +70,79 @@
 		s.start()
 		..()
 
-/*	TODO: Сделать код сборки Йе-На. ~Quardbreak
+//	TODO: Сделать код сборки Йе-На. ~Quardbreak
 
-	/obj/item/borgi_suit
+/obj/item/borgi_legs_w
+	name = "metallic front legs"
+	desc = "A skeletal limb wrapped in pseudomuscles, with a low-conductivity case."
+	icon =  'icons/mob/infinity_mob.dmi'
+	icon_state = "borgi_legs_w+o"
+	item_state = "buildpipe"
+	attack_verb = list("slapped", "punched")
+
+/obj/item/borgi_legs_s
+	name = "metallic hind legs"
+	desc = "A pair of doggy legs limbs!"
+	icon = 'icons/mob/infinity_mob.dmi'
+	icon_state = "borgi_legs_s+o"
+	item_state = "buildpipe"
+	attack_verb = list("slapped", "punched")
+
+/obj/item/borgi_chest
+	name = "cyborg torso"
+	desc = "A heavily reinforced case containing cyborg logic boards, with space for a standard power cell."
+	icon = 'icons/mob/infinity_mob.dmi'
+	icon_state = "borgi_chest+o"
+	item_state = "buildpipe"
+	var/wired = 0
+	var/obj/item/weapon/stock_parts/cell/cell = null
+
+/obj/item/borgi_chest/attackby(obj/item/W, mob/user, params)
+	if(istype(W, /obj/item/weapon/stock_parts/cell))
+		if(src.cell)
+			user << "<span class='warning'>Внутри уже есть батарейка!</span>"
+			return
+		else
+			if(!user.unEquip(W))
+				return
+			W.loc = src
+			src.cell = W
+			user << "<span class='notice'>Вы установили батарейку в корпус.</span>"
+	else if(istype(W, /obj/item/stack/cable_coil))
+		if(src.wired)
+			user << "<span class='warning'>Внутри уже есть провода!</span>"
+			return
+		var/obj/item/stack/cable_coil/coil = W
+		if (coil.use(1))
+			src.wired = 1
+			user << "<span class='notice'>Вы подсоеденили внутри корпуса провода.</span>"
+		else
+			user << "<span class='warning'>Вам необходим минимум один моток провода дл&#255; этого!</span>"
+	else
+		return ..()
+
+/obj/item/borgi_head
+	name = "cyborg head"
+	desc = "A standard reinforced braincase, with spine-plugged neural socket and sensor gimbals."
+	item_state = "buildpipe"
+	icon = 'icons/mob/infinity_mob.dmi'
+	icon_state = "borgi_head"
+
+/obj/item/borgi_disk
+	name = "dog memory hardrive"
+	desc = "Look at that cute puppy! If i could build body for him..."
+	icon = 'icons/mob/infinity_mob.dmi'
+	icon_state = "borgi_disk"
+
+/obj/item/borgi_suit
 	name = "borgi endoskeleton"
 	desc = "Let's build him!"
-	icon =  'icons/mob/infinity_mob.dmi'
+	icon = 'icons/mob/infinity_mob.dmi'
 	icon_state = "borgi_suit"
-	var/obj/item/bodypart/l_arm/borgi/l_arm = null
-	var/obj/item/bodypart/r_arm/borgi/r_arm = null
-	var/obj/item/bodypart/l_leg/borgi/l_leg = null
-	var/obj/item/bodypart/r_leg/borgi/r_leg = null
-	var/obj/item/bodypart/chest/borgi/chest = null
-	var/obj/item/bodypart/head/borgi/head = null
+	var/obj/item/borgi_legs_w = null
+	var/obj/item/borgi_legs_s = null
+	var/obj/item/borgi_chest = null
+	var/obj/item/borgi_head = null
 
 /obj/item/borgi_suit/New()
 	..()
@@ -90,109 +150,87 @@
 
 /obj/item/borgi_suit/proc/updateicon()
 	src.cut_overlays()
-	if(src.l_arm)
-		src.add_overlay("l_arm+o")
-	if(src.r_arm)
-		src.add_overlay("r_arm+o")
-	if(src.chest)
-		src.add_overlay("chest+o")
-	if(src.l_leg)
-		src.add_overlay("l_leg+o")
-	if(src.r_leg)
-		src.add_overlay("r_leg+o")
-	if(src.head)
-		src.add_overlay("head+o")
+	if(src.borgi_legs_s)
+		src.add_overlay("borgi_legs_w+o")
+	if(src.borgi_legs_w)
+		src.add_overlay("borgi_legs_s+o")
+	if(src.borgi_chest)
+		src.add_overlay("borgi_chest+o")
+	if(src.borgi_head)
+		src.add_overlay("borgi_head+o")
 
 /obj/item/borgi_suit/proc/check_completion()
-	if(src.l_arm && src.r_arm)
-		if(src.l_leg && src.r_leg)
-			if(src.chest && src.head)
-				feedback_inc("borgi_frames_built",1)
-				return 1
+	if(src.borgi_legs_w && src.borgi_legs_s)
+		if(src.borgi_head && src.borgi_chest)
+			feedback_inc("borgi_frames_built",1)
+			return 1
 	return 0
 
 /obj/item/borgi_suit/attackby(obj/item/W, mob/user, params)
-	if(istype(W, /obj/item/bodypart/l_leg/borgi))
-		if(src.l_leg)
+	if(istype(W, /obj/item/borgi_legs_w))
+		if(src.borgi_legs_w)
 			return
 		if(!user.unEquip(W))
 			return
 		W.forceMove(src)
 		W.icon_state = initial(W.icon_state)
 		W.cut_overlays()
-		src.l_leg = W
+		src.borgi_legs_w = W
 		src.updateicon()
 
-	else if(istype(W, /obj/item/bodypart/r_leg/borgi))
-		if(src.r_leg)
+	else if(istype(W, /obj/item/borgi_legs_s))
+		if(src.borgi_legs_s)
 			return
 		if(!user.unEquip(W))
 			return
 		W.forceMove(src)
 		W.icon_state = initial(W.icon_state)
 		W.cut_overlays()
-		src.r_leg = W
+		src.borgi_legs_s = W
 		src.updateicon()
 
-	else if(istype(W, /obj/item/bodypart/l_arm/borgi))
-		if(src.l_arm)
-			return
-		if(!user.unEquip(W))
-			return
-		W.forceMove(src)
-		W.icon_state = initial(W.icon_state)
-		W.cut_overlays()
-		src.l_arm = W
-		src.updateicon()
-
-	else if(istype(W, /obj/item/bodypart/r_arm/borgi))
-		if(src.r_arm)
-			return
-		if(!user.unEquip(W))
-			return
-		W.forceMove(src)
-		W.icon_state = initial(W.icon_state)//in case it is a dismembered robotic limb
-		W.cut_overlays()
-		src.r_arm = W
-		src.updateicon()
-
-	else if(istype(W, /obj/item/bodypart/chest/borgi))
-		var/obj/item/bodypart/chest/borgi/CH = W
-		if(src.chest)
+	else if(istype(W, /obj/item/borgi_chest))
+		var/obj/item/borgi_chest/CH = W
+		if(src.borgi_chest)
 			return
 		if(CH.wired && CH.cell)
 			if(!user.unEquip(CH))
 				return
 			CH.forceMove(src)
-			CH.icon_state = initial(CH.icon_state) //in case it is a dismembered robotic limb
+			CH.icon_state = initial(CH.icon_state)
 			CH.cut_overlays()
-			src.chest = CH
+			src.borgi_chest = CH
 			src.updateicon()
 		else if(!CH.wired)
-			user << "<span class='warning'>You need to attach wires to it first!</span>"
+			user << "<span class='warning'>Сперва вам нужно подсоеденить провода!</span>"
 		else
-			user << "<span class='warning'>You need to attach a cell to it first!</span>"
+			user << "<span class='warning'>Вам необходимо вставить батарейку в корпус!</span>"
 
-	else if(istype(W, /obj/item/bodypart/head/borgi))
-		var/obj/item/bodypart/head/borgi/HD = W
-		for(var/X in HD.contents)
-			if(istype(X, /obj/item/organ))
-				user << "<span class='warning'>There are organs inside [HD]!</span>"
-				return
-		if(src.head)
+	else if(istype(W, /obj/item/borgi_head))
+		if(src.borgi_head)
 			return
-		if(HD.flash2 && HD.flash1)
-			if(!user.unEquip(HD))
-				return
-			HD.loc = src
-			HD.icon_state = initial(HD.icon_state)//in case it is a dismembered robotic limb
-			HD.cut_overlays()
-			src.head = HD
-			src.updateicon()
-		else
-			user << "<span class='warning'>You need to attach a flash to it first!</span>"
+		if(!user.unEquip(W))
+			return
+		W.forceMove(src)
+		W.icon_state = initial(W.icon_state)
+		W.cut_overlays()
+		src.borgi_head = W
+		src.updateicon()
 
-			/mob/living/simple_animal/pet/dog/corgi/Ian/borgi/O = new /mob/living/simple_animal/pet/dog/corgi/Ian/borgi(get_turf(loc))
+	else if(istype(W, /obj/item/borgi_disk))
+		if(check_completion())
+			if(!isturf(loc))
+				user << "<span class='warning'>Вам не удобно вставить носитель, поставьте заготовку на пол.</span>"
+				return
+			if(!user.unEquip(W))
+				return
+			user << "<span class='notice'>Вы вставили носитель информации в дисковод модели.</span>"
+			var/mob/living/simple_animal/pet/dog/corgi/Ian/borgi/O = new /mob/living/simple_animal/pet/dog/corgi/Ian/borgi(get_turf(loc))
+			qdel(W)
+
 			if(!O)
 				return
-*/
+
+			W.loc = O
+			src.loc = O
+			qdel(src)
