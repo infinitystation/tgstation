@@ -39,3 +39,11 @@
 	tools = list(/obj/item/weapon/wirecutters)
 	time = 100
 	category = CAT_MISC
+
+/datum/crafting_recipe/bonepickaxe
+	name = "Bone Pickaxe"
+	result = /obj/item/weapon/pickaxe/bone
+	time = 40
+	reqs = list(/obj/item/stack/sheet/bone = 5,
+				 /obj/item/stack/sheet/sinew = 2)
+	category = CAT_PRIMAL

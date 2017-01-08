@@ -161,7 +161,6 @@
 /area/lavaland/surface/outdoors)
 "aF" = (
 /obj/effect/decal/cleanable/blood/old,
-/obj/item/weapon/pickaxe/silver/poor,
 /turf/open/indestructible/necropolis,
 /area/lavaland/surface/outdoors)
 "aG" = (
@@ -520,11 +519,9 @@
 /area/mine/shelter/ash)
 "bL" = (
 /obj/structure/table/wood,
-/obj/item/weapon/pickaxe/silver/poor,
-/obj/item/weapon/pickaxe/silver/poor,
-/obj/item/weapon/pickaxe/silver/poor,
-/obj/item/weapon/pickaxe/silver/poor,
-/obj/item/weapon/pickaxe/silver/poor,
+/obj/item/weapon/pickaxe/bone,
+/obj/item/weapon/pickaxe/bone,
+/obj/item/weapon/pickaxe/bone,
 /turf/open/floor/plasteel/terror/necro/cult/outdoor,
 /area/mine/shelter/ash)
 "bM" = (
@@ -4674,16 +4671,89 @@
 	},
 /turf/open/indestructible/hierophant,
 /area/ruin/unpowered/hierophant)
-"jp" = (
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+"jg" = (
+/turf/closed/wall/shuttle/smooth/nodiagonal{
+	baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
+	},
+/area/shuttle/science)
+"jh" = (
+/obj/structure/shuttle/engine/platform{
+	dir = 8;
+	layer = 4;
+	pixel_x = 32
+	},
+/obj/structure/shuttle/engine/propulsion{
+	dir = 8;
+	icon_state = "burst_s"
+	},
+/obj/structure/shuttle/engine/platform{
 	dir = 4
 	},
-/obj/machinery/door/firedoor,
-/obj/machinery/door/airlock{
-	name = "Unisex Restrooms";
-	req_access_txt = "0"
+/turf/open/floor/plating/lavaland/outdoor,
+/area/shuttle/science)
+"ji" = (
+/turf/open/floor/plasteel/terror/necro/warnwhite{
+	tag = "icon-warnwhite (WEST)";
+	icon_state = "warnwhite";
+	dir = 8
 	},
-/turf/open/floor/plasteel/terror/necro/freezer,
+/area/shuttle/science)
+"jj" = (
+/obj/structure/chair/comfy/shuttle{
+	dir = 4
+	},
+/turf/open/floor/plasteel/terror/necro/whitepurple/side{
+	tag = "icon-whitepurple (WEST)";
+	icon_state = "whitepurple";
+	dir = 8
+	},
+/area/shuttle/science)
+"jk" = (
+/obj/machinery/computer/shuttle{
+	name = "Science Shuttle Console";
+	possible_destinations = "mining_base_sci";
+	shuttleId = "mining_sci"
+	},
+/turf/open/floor/plasteel/terror/necro/whitepurple/side{
+	tag = "icon-whitepurple (EAST)";
+	icon_state = "whitepurple";
+	dir = 4
+	},
+/area/shuttle/science)
+"jl" = (
+/obj/structure/frame/computer,
+/turf/open/floor/plasteel/terror/necro/whitepurple/side{
+	tag = "icon-whitepurple (EAST)";
+	icon_state = "whitepurple";
+	dir = 4
+	},
+/area/shuttle/science)
+"jm" = (
+/obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/poddoor/shutters/preopen{
+	dir = 8;
+	id = "mine_shutters2"
+	},
+/obj/structure/cable,
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable{
+	icon_state = "0-4";
+	d2 = 4
+	},
+/turf/open/floor/plating/lavaland,
+/area/mine/living_quarters)
+"jn" = (
+/obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/poddoor/shutters/preopen{
+	dir = 8;
+	id = "mine_shutters2"
+	},
+/obj/structure/cable,
+/turf/open/floor/plating/lavaland,
 /area/mine/living_quarters)
 "jo" = (
 /obj/structure/toilet{
@@ -4706,90 +4776,17 @@
 	},
 /turf/open/floor/plasteel/terror/necro/freezer,
 /area/mine/living_quarters)
-"jn" = (
-/obj/effect/spawner/structure/window/reinforced,
-/obj/machinery/door/poddoor/shutters/preopen{
-	dir = 8;
-	id = "mine_shutters2"
+"jp" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 4
 	},
-/obj/structure/cable,
-/turf/open/floor/plating/lavaland,
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock{
+	name = "Unisex Restrooms";
+	req_access_txt = "0"
+	},
+/turf/open/floor/plasteel/terror/necro/freezer,
 /area/mine/living_quarters)
-"jm" = (
-/obj/effect/spawner/structure/window/reinforced,
-/obj/machinery/door/poddoor/shutters/preopen{
-	dir = 8;
-	id = "mine_shutters2"
-	},
-/obj/structure/cable,
-/obj/structure/cable{
-	icon_state = "0-2";
-	pixel_y = 1;
-	d2 = 2
-	},
-/obj/structure/cable{
-	icon_state = "0-4";
-	d2 = 4
-	},
-/turf/open/floor/plating/lavaland,
-/area/mine/living_quarters)
-"jl" = (
-/obj/structure/frame/computer,
-/turf/open/floor/plasteel/terror/necro/whitepurple/side{
-	tag = "icon-whitepurple (EAST)";
-	icon_state = "whitepurple";
-	dir = 4
-	},
-/area/shuttle/science)
-"jk" = (
-/obj/machinery/computer/shuttle{
-	name = "Science Shuttle Console";
-	possible_destinations = "mining_base_sci";
-	shuttleId = "mining_sci"
-	},
-/turf/open/floor/plasteel/terror/necro/whitepurple/side{
-	tag = "icon-whitepurple (EAST)";
-	icon_state = "whitepurple";
-	dir = 4
-	},
-/area/shuttle/science)
-"jj" = (
-/obj/structure/chair/comfy/shuttle{
-	dir = 4
-	},
-/turf/open/floor/plasteel/terror/necro/whitepurple/side{
-	tag = "icon-whitepurple (WEST)";
-	icon_state = "whitepurple";
-	dir = 8
-	},
-/area/shuttle/science)
-"ji" = (
-/turf/open/floor/plasteel/terror/necro/warnwhite{
-	tag = "icon-warnwhite (WEST)";
-	icon_state = "warnwhite";
-	dir = 8
-	},
-/area/shuttle/science)
-"jh" = (
-/obj/structure/shuttle/engine/platform{
-	dir = 8;
-	layer = 4;
-	pixel_x = 32
-	},
-/obj/structure/shuttle/engine/propulsion{
-	dir = 8;
-	icon_state = "burst_s"
-	},
-/obj/structure/shuttle/engine/platform{
-	dir = 4
-	},
-/turf/open/floor/plating/lavaland/outdoor,
-/area/shuttle/science)
-"jg" = (
-/turf/closed/wall/shuttle/smooth/nodiagonal{
-	baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
-	},
-/area/shuttle/science)
 
 (1,1,1) = {"
 ab

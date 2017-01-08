@@ -173,3 +173,11 @@
 		attack_verb = list("hit", "poked")
 		playsound(user, 'sound/weapons/saberoff.ogg', 35, 1)
 
+/obj/item/weapon/pickaxe/bone
+	icon = 'icons/obj/infinity_weapons.dmi'
+	icon_state = "bonepickaxe"
+	item_state = "bpickaxe"
+	lefthand_file = 'icons/mob/inhands/infinity_obj_left.dmi'
+	righthand_file = 'icons/mob/inhands/infinity_obj_right.dmi'
+	materials = list()
+	origin_tech = ""

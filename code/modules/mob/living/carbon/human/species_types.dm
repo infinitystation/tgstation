@@ -16,14 +16,7 @@
 /datum/species/human/qualifies_for_rank(rank, list/features)
 	if((!features["tail_human"] || features["tail_human"] == "None") && (!features["ears"] || features["ears"] == "None"))
 		return 1	//Pure humans are always allowed in all roles.
-	//Mutants are not allowed in most roles.
 	if(rank in security_positions) //This list does not include lawyers.
-		return 0
-	if(rank in science_positions)
-		return 0
-	if(rank in medical_positions)
-		return 0
-	if(rank in engineering_positions)
 		return 0
 	if(rank == "Quartermaster") //QM is not contained in command_positions but we still want to bar mutants from it.
 		return 0
@@ -89,6 +82,34 @@
 	id = "ashlizard"
 	limbs_id = "lizard"
 	species_traits = list(MUTCOLORS,EYECOLOR,LIPS,NOBREATH,NOGUNS,DIGITIGRADE)
+
+
+/datum/species/lizard/ashwalker/IsAdvancedToolUser()
+	. = 0
+
+/datum/species/lizard/ashwalker/on_species_gain(mob/living/carbon/human/C, datum/species/old_species)
+	C.handcrafting.categories = list(CAT_PRIMAL)
+
+/datum/species/lizard/ashwalker/on_species_loss(mob/living/carbon/human/C)
+	C.handcrafting.categories = list(CAT_WEAPON,
+				CAT_AMMO,
+				CAT_ROBOT,
+				CAT_MISC,
+				CAT_PRIMAL,
+				CAT_BREAD,
+				CAT_BURGER,
+				CAT_CAKE,
+				CAT_EGG,
+				CAT_MEAT,
+				CAT_MISCFOOD,
+				CAT_PASTRY,
+				CAT_PIE,
+				CAT_PIZZA,
+				CAT_SALAD,
+				CAT_SANDWICH,
+				CAT_SOUP,
+				CAT_SPAGHETTI)
+
 /*
  PODPEOPLE
 */
