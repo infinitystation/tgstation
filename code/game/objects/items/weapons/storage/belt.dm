@@ -164,14 +164,21 @@
 	new /obj/item/weapon/melee/baton/loaded(src)
 	update_icon()
 
+/obj/item/weapon/storage/belt/security/centcome_alert/New()
+	..()
+	new /obj/item/weapon/melee/baton/loaded(src)
+	new /obj/item/weapon/grenade/flashbang(src)
+	new /obj/item/ammo_box/magazine/wt550m9(src)
+	new /obj/item/ammo_box/magazine/wt550m9(src)
+	new /obj/item/ammo_box/magazine/wt550m9(src)
+
 /obj/item/weapon/storage/belt/security/centcome/New()
 	..()
 	new /obj/item/weapon/melee/baton/loaded(src)
 	new /obj/item/weapon/restraints/handcuffs(src)
 	new /obj/item/weapon/restraints/handcuffs(src)
 	new /obj/item/weapon/grenade/flashbang(src)
-	new /obj/item/ammo_box/magazine/smgm9mm(src)
-	new /obj/item/ammo_box/magazine/smgm9mm(src)
+	new /obj/item/weapon/grenade/flashbang(src)
 
 /obj/item/weapon/storage/belt/mining
 	name = "explorer's webbing"

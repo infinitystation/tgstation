@@ -5706,33 +5706,30 @@
 	},
 /area/centcom/control)
 "ov" = (
-/obj/structure/table,
-/obj/item/weapon/circular_saw,
-/obj/item/weapon/surgical_drapes,
-/obj/item/weapon/surgicaldrill,
-/turf/open/floor/plasteel/neutral{
-	dir = 1;
-	icon_state = "whiteblue"
+/obj/effect/landmark{
+	name = "Centcomsec"
+	},
+/turf/open/floor/plasteel/warning{
+	dir = 1
 	},
 /area/centcom/control)
 "ow" = (
-/obj/structure/table,
-/obj/item/weapon/scalpel,
-/obj/item/weapon/cautery,
-/turf/open/floor/plasteel/neutral{
-	dir = 1;
-	icon_state = "whiteblue"
+/obj/machinery/button/door{
+	id = "XCCsecdepartment";
+	layer = 3;
+	name = "CC Security Checkpoint Control";
+	pixel_x = -23;
+	pixel_y = -24
+	},
+/turf/open/floor/plasteel/warning{
+	dir = 10
 	},
 /area/centcom/control)
 "ox" = (
-/obj/structure/closet/crate/freezer,
-/obj/structure/sign/nosmoking_2{
-	pixel_x = 32
+/obj/effect/landmark{
+	name = "Centcomsec"
 	},
-/turf/open/floor/plasteel/neutral{
-	dir = 1;
-	icon_state = "whiteblue"
-	},
+/turf/open/floor/plasteel/warning,
 /area/centcom/control)
 "oy" = (
 /obj/structure/toilet{
@@ -5750,38 +5747,46 @@
 /turf/open/floor/plasteel/warning,
 /area/wizard_station)
 "oB" = (
-/turf/open/floor/plasteel/neutral{
-	icon_state = "whiteblue"
+/obj/structure/grille,
+/obj/structure/window/reinforced/fulltile,
+/obj/machinery/door/poddoor/preopen{
+	icon = 'icons/obj/doors/blastdoor_hor.dmi';
+	id = "XCCassault"
 	},
+/turf/open/floor/plating,
 /area/centcom/control)
 "oC" = (
-/turf/open/floor/plasteel/neutral/corner{
-	dir = 8;
-	icon_state = "whitebluecorner"
-	},
-/area/centcom/control)
+/obj/structure/sign/directions/dock,
+/turf/closed/indestructible/riveted/infinity,
+/area/centcom/evac)
 "oD" = (
-/obj/machinery/atmospherics/pipe/simple/general/visible,
-/turf/open/floor/plasteel/neutral/corner{
-	icon_state = "whitebluecorner"
+/obj/structure/sign/directions/security{
+	desc = "A direction sign, pointing out which way the security department is.";
+	dir = 1;
+	icon_state = "direction_sec";
+	pixel_x = 0;
+	pixel_y = 24;
+	tag = "icon-direction_sec (NORTH)"
+	},
+/turf/open/floor/plasteel/green/corner{
+	dir = 4
 	},
 /area/centcom/control)
 "oE" = (
-/obj/structure/table,
-/obj/item/weapon/storage/box/gloves,
-/turf/open/floor/plasteel{
-	heat_capacity = 1e+006;
-	icon_state = "white"
-	},
-/area/centcom/control)
+/obj/structure/sign/directions/dock/two,
+/turf/closed/indestructible/riveted/infinity,
+/area/centcom/ferry)
 "oF" = (
-/obj/structure/table,
-/obj/item/weapon/storage/box/masks,
-/turf/open/floor/plasteel{
-	heat_capacity = 1e+006;
-	icon_state = "white"
+/obj/structure/sign/directions/shuttle{
+	dir = 8;
+	icon_state = "shuttle";
+	pixel_y = 24;
+	tag = "icon-shuttle (WEST)"
 	},
-/area/centcom/control)
+/turf/open/floor/plasteel/green/corner{
+	dir = 1
+	},
+/area/centcom/ferry)
 "oG" = (
 /obj/machinery/conveyor{
 	dir = 1;
@@ -5791,10 +5796,10 @@
 /turf/open/floor/plasteel/warning/side,
 /area/centcom/supply)
 "oH" = (
-/obj/structure/window/reinforced/fulltile,
-/obj/structure/grille,
-/obj/machinery/door/poddoor/shutters/preopen{
-	id = "CCoper2"
+/obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/poddoor/preopen{
+	icon = 'icons/obj/doors/blastdoor.dmi';
+	id = "XCCassault"
 	},
 /turf/open/floor/plating,
 /area/centcom/control)
@@ -5821,14 +5826,12 @@
 /turf/open/floor/carpet,
 /area/wizard_station)
 "oL" = (
-/obj/machinery/firealarm{
-	dir = 4;
-	pixel_x = 24
+/obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/poddoor/preopen{
+	icon = 'icons/obj/doors/blastdoor_hor.dmi';
+	id = "XCCassault"
 	},
-/turf/open/floor/plasteel/neutral/corner{
-	dir = 1;
-	icon_state = "whitebluecorner"
-	},
+/turf/open/floor/plating,
 /area/centcom/control)
 "oM" = (
 /obj/structure/chair/office/dark{
@@ -11151,6 +11154,12 @@
 /obj/structure/chair{
 	dir = 8
 	},
+/obj/structure/sign/directions/security{
+	dir = 4;
+	icon_state = "direction_sec";
+	pixel_x = 32;
+	tag = "icon-direction_sec (EAST)"
+	},
 /turf/open/floor/plasteel/red/side{
 	dir = 4
 	},
@@ -11439,6 +11448,12 @@
 /obj/structure/table,
 /obj/item/weapon/paper_bin,
 /obj/item/weapon/pen,
+/obj/machinery/button/door{
+	id = "XCCsec3";
+	name = "XCC Shutter 3 Control";
+	pixel_x = 0;
+	pixel_y = -24
+	},
 /turf/open/floor/plasteel/green/side{
 	dir = 6
 	},
@@ -13104,6 +13119,12 @@
 	pixel_y = 24;
 	req_access_txt = "2"
 	},
+/obj/machinery/button/door{
+	id = "XCCassault";
+	name = "Arrival anti-assault lockdown";
+	pixel_x = 8;
+	pixel_y = 24
+	},
 /turf/open/floor/plasteel/vault{
 	dir = 8
 	},
@@ -13754,7 +13775,7 @@
 /area/centcom/ferry)
 "HC" = (
 /obj/structure/closet/secure_closet/ertEngi,
-/obj/structure/sign/directions/engineering{
+/obj/structure/sign/directions/ert/engineer{
 	pixel_y = 24
 	},
 /turf/open/floor/plasteel/warning,
@@ -13806,13 +13827,8 @@
 /area/centcom/ferry)
 "HH" = (
 /obj/structure/closet/secure_closet/ertCom,
-/obj/structure/sign/directions/engineering{
-	desc = "A direction sign, pointing out which way the Command department is.";
-	dir = 2;
-	icon_state = "direction_bridge";
-	name = "command department";
-	pixel_y = 24;
-	tag = "icon-direction_bridge"
+/obj/structure/sign/directions/ert{
+	pixel_y = 24
 	},
 /turf/open/floor/plasteel/warning,
 /area/centcom/ferry)
@@ -14808,8 +14824,7 @@
 	})
 "Kb" = (
 /obj/structure/closet/secure_closet/ertMed,
-/obj/structure/sign/directions/medical{
-	dir = 1;
+/obj/structure/sign/directions/ert/medic{
 	pixel_y = -24
 	},
 /turf/open/floor/plasteel/warning{
@@ -14861,8 +14876,7 @@
 /area/centcom/ferry)
 "Kg" = (
 /obj/structure/closet/secure_closet/ertSec,
-/obj/structure/sign/directions/security{
-	dir = 1;
+/obj/structure/sign/directions/ert/security{
 	pixel_y = -24
 	},
 /turf/open/floor/plasteel/warning{
@@ -38353,13 +38367,13 @@ CH
 Dx
 Ee
 EN
-zx
-DG
 Ba
+DG
+oE
 FL
 Gm
 He
-Ba
+oE
 AE
 aa
 Ce
@@ -38605,12 +38619,12 @@ aa
 aa
 aa
 aa
-zy
+Ba
 CJ
 Dy
 Ef
 EO
-zy
+Ba
 FK
 Gl
 GF
@@ -40411,7 +40425,7 @@ Em
 ER
 Fm
 Ba
-Dw
+oF
 GP
 Ee
 zy
@@ -41185,7 +41199,7 @@ FN
 Gu
 Gm
 Gu
-zx
+Ba
 DA
 HP
 Id
@@ -41956,7 +41970,7 @@ Ba
 Dy
 Gm
 Ef
-Ba
+zx
 HA
 El
 Ig
@@ -47088,8 +47102,8 @@ yR
 vn
 qh
 nN
-qh
-tT
+nN
+oD
 yR
 nN
 FV
@@ -47598,7 +47612,7 @@ qp
 Ar
 rc
 rc
-Ar
+nN
 Cz
 nN
 Cz
@@ -48368,7 +48382,7 @@ qH
 qL
 qL
 qL
-vw
+ow
 qp
 wz
 nN
@@ -48881,8 +48895,8 @@ rc
 qp
 qp
 qp
-sg
-sK
+ov
+ox
 qf
 qp
 nN
@@ -48897,8 +48911,8 @@ xi
 rc
 qf
 nN
-Cz
-Cz
+oH
+oH
 qi
 qf
 nN
@@ -49138,11 +49152,11 @@ qy
 sN
 th
 qp
-sg
-sK
+ov
+ox
 qp
 vq
-qp
+oB
 Dn
 DQ
 qy
@@ -49158,7 +49172,7 @@ yP
 zc
 wQ
 yJ
-Cz
+oL
 wx
 Cz
 qy
@@ -49395,11 +49409,11 @@ su
 us
 zC
 qf
-sg
-sK
+ov
+ox
 qp
 wz
-qp
+oB
 Dp
 DQ
 yY
@@ -49415,7 +49429,7 @@ yQ
 yR
 ze
 yK
-Cz
+oL
 vs
 Cz
 su
@@ -49652,11 +49666,11 @@ qy
 sN
 zD
 qp
-sg
-sK
+ov
+ox
 qp
 vq
-qp
+oB
 Dq
 DQ
 yz
@@ -49672,7 +49686,7 @@ yQ
 ze
 yR
 Jl
-Cz
+oL
 vq
 Cz
 su
@@ -49909,8 +49923,8 @@ rc
 qp
 qp
 qp
-sg
-sK
+ov
+ox
 qf
 qp
 qf
@@ -50170,7 +50184,7 @@ si
 sK
 qp
 vs
-qp
+oB
 Dr
 DQ
 ED
@@ -50186,7 +50200,7 @@ HW
 ze
 yR
 Jt
-Cz
+oL
 wz
 Cz
 su
@@ -50427,7 +50441,7 @@ qM
 vx
 qp
 wx
-qp
+oB
 Ds
 DQ
 su
@@ -50443,7 +50457,7 @@ HW
 yR
 ze
 Ju
-Cz
+oL
 wx
 Cz
 su
@@ -50700,7 +50714,7 @@ HX
 Ir
 HW
 Jv
-Cz
+oL
 wz
 Cz
 qy
@@ -51197,7 +51211,7 @@ us
 us
 us
 BR
-qp
+oB
 vq
 qp
 DR
@@ -55055,7 +55069,7 @@ tG
 nN
 nN
 zS
-zS
+oC
 EF
 EF
 FF
@@ -55067,7 +55081,7 @@ EF
 FF
 EF
 EF
-zS
+oC
 zS
 zS
 zS

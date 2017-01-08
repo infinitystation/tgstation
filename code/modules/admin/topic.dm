@@ -135,6 +135,13 @@
 				else
 					message_admins("[key_name_admin(usr)] tried to create a revenant. Unfortunately, there were no candidates available.")
 					log_admin("[key_name(usr)] failed to create a revenant.")
+			if("crew")
+				if(src.makeWar1())
+					message_admins("[key_name(usr)] создает персонал ЦК.")
+					log_admin("[key_name(usr)] создал персонал ЦК.")
+				else
+					message_admins("[key_name_admin(usr)] попыталс&#255; создать персонал ЦК, однако, передумал.")
+					log_admin("[key_name(usr)] не смог создать персонал ЦК.")
 
 	else if(href_list["forceevent"])
 		if(!check_rights(R_FUN))

@@ -120,14 +120,16 @@
 	icon_state = "wt550"
 	item_state = "arg"
 	mag_type = /obj/item/ammo_box/magazine/wt550m9
-	fire_delay = 2
+	fire_delay = 1
 	can_suppress = 0
 	burst_size = 2
-	actions_types = list()
 
 /obj/item/weapon/gun/ballistic/automatic/wt550/update_icon()
 	..()
 	icon_state = "wt550[magazine ? "-[Ceiling(get_ammo(0)/4)*4]" : ""]"
+
+/obj/item/weapon/gun/ballistic/automatic/wt550/mindshield
+	pin = /obj/item/device/firing_pin/implant/mindshield
 
 /obj/item/weapon/gun/ballistic/automatic/mini_uzi
 	name = "\improper 'Type U3' Uzi"
