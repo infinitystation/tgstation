@@ -32,28 +32,28 @@
 /datum/emote/living/carbon/moan
 	key = "moan"
 	key_third_person = "moans"
-	message = "moans!"
-	message_mime = "appears to moan!"
+	message = "стонет!"
+	message_mime = "изображает стоны!"
 	emote_type = EMOTE_AUDIBLE
 
 /datum/emote/living/carbon/roll
 	key = "roll"
 	key_third_person = "rolls"
-	message = "rolls."
+	message = "катается по полу."
 	mob_type_allowed_typecache = list(/mob/living/carbon/monkey, /mob/living/carbon/alien)
 	restraint_check = TRUE
 
 /datum/emote/living/carbon/scratch
 	key = "scratch"
 	key_third_person = "scratches"
-	message = "scratches."
+	message = "чешет свою голову."
 	mob_type_allowed_typecache = list(/mob/living/carbon/monkey, /mob/living/carbon/alien)
 	restraint_check = TRUE
 
 /datum/emote/living/carbon/screech
 	key = "screech"
 	key_third_person = "screeches"
-	message = "screeches."
+	message = "кричит."
 	mob_type_allowed_typecache = list(/mob/living/carbon/monkey, /mob/living/carbon/alien)
 
 /datum/emote/living/carbon/sign
@@ -77,10 +77,10 @@
 
 /datum/emote/living/carbon/tail
 	key = "tail"
-	message = "waves their tail."
+	message = "виляет своим хвостом."
 	mob_type_allowed_typecache = list(/mob/living/carbon/monkey, /mob/living/carbon/alien)
 
 /datum/emote/living/carbon/wink
 	key = "wink"
 	key_third_person = "winks"
-	message = "winks."
+	message = "подмигивает."

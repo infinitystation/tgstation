@@ -45,17 +45,17 @@
 /datum/emote/sound/silicon/chime
 	key = "chime"
 	key_third_person = "chimes"
-	message = "chimes."
+	message = "проигрывает звук звона."
 	sound = 'sound/machines/chime.ogg'
 
 /datum/emote/sound/silicon/sad
 	key = "sad"
-	message = "plays a sad trombone..."
+	message = "проигрывает грустную мелодию..."
 	sound = 'sound/misc/sadtrombone.ogg'
 
 /datum/emote/sound/silicon/warn
 	key = "warn"
-	message = "blares an alarm!"
+	message = "проигрывает мелодию тревоги!"
 	sound = 'sound/machines/warning-buzzer.ogg'
 
 /mob/living/silicon/robot/verb/powerwarn()

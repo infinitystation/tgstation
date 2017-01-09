@@ -5,7 +5,7 @@
 /obj/item/weapon/poster/legit/wanted/New(turf/loc, icon/person_icon, wanted_name, description)
 	..(loc)
 	name = "wanted poster ([wanted_name])"
-	desc = "A wanted poster for [wanted_name]."
+	desc = "Разыскиваетс&#255; [wanted_name]!"
 	poster_desc = description
 	qdel(resulting_poster)
 	resulting_poster = new /obj/structure/sign/poster/wanted(person_icon, wanted_name, poster_desc)

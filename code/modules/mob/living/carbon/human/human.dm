@@ -431,6 +431,8 @@
 											if(R)
 												var/t1 = stripped_input("Please input minor crime names:", "Security HUD", "", null)
 												var/t2 = stripped_multiline_input("Please input minor crime details:", "Security HUD", "", null)
+												t1 = sanitize_a0(t1)
+												t2 = sanitize_a0(t2)
 												if(R)
 													if (!t1 || !t2 || !allowed_access)
 														return
@@ -446,6 +448,8 @@
 											if(R)
 												var/t1 = stripped_input("Please input major crime names:", "Security HUD", "", null)
 												var/t2 = stripped_multiline_input("Please input major crime details:", "Security HUD", "", null)
+												t1 = sanitize_a0(t1)
+												t2 = sanitize_a0(t2)
 												if(R)
 													if (!t1 || !t2 || !allowed_access)
 														return
@@ -475,6 +479,7 @@
 								if(href_list["add_comment"])
 									if(R)
 										var/t1 = stripped_multiline_input("Add Comment:", "Secure. records", null, null)
+										t1 = sanitize_a0(t1)
 										if(R)
 											if (!t1 || !allowed_access)
 												return

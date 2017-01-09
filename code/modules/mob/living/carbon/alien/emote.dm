@@ -4,13 +4,13 @@
 /datum/emote/living/alien/gnarl
 	key = "gnarl"
 	key_third_person = "gnarls"
-	message = "gnarls and shows its teeth..."
+	message = "рычит и показывает свои длинные зубы..."
 
 /datum/emote/living/alien/hiss
 	key = "hiss"
 	key_third_person = "hisses"
-	message_alien = "hisses."
-	message_larva = "hisses softly."
+	message_alien = "шипит."
+	message_larva = "еле слышно шипит."
 
 /datum/emote/living/alien/hiss/run_emote(mob/user, params)
 	. = ..()
@@ -20,8 +20,8 @@
 /datum/emote/living/alien/roar
 	key = "roar"
 	key_third_person = "roars"
-	message_alien = "roars"
-	message_larva = "sofly roars"
+	message_alien = "громко рычит"
+	message_larva = "еле слышно рычит"
 	emote_type = EMOTE_AUDIBLE
 
 /datum/emote/living/alien/roar/run_emote(mob/user, params)
