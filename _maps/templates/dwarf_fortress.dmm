@@ -253,7 +253,7 @@
 /turf/open/floor/wood,
 /area/lavaland/underground)
 "bb" = (
-/obj/item/weapon/twohanded/required/ctf/red,
+/obj/item/weapon/twohanded/ctf/red,
 /turf/open/floor/wood,
 /area/lavaland/underground)
 "bc" = (
