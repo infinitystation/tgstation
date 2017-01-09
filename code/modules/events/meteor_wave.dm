@@ -41,7 +41,7 @@
 			kill()
 
 /datum/round_event/meteor_wave/announce()
-	priority_announce("ПрЯмо по курсу станции обнаружены метеоры. Приготовьтесь к столкновению.", "Тревога! Метеоры!", 'sound/AI/meteors.ogg')
+	priority_announce("Прямо по курсу станции обнаружены метеоры. Приготовьтесь к столкновению.", "Тревога! Метеоры!", 'sound/AI/meteors.ogg')
 
 /datum/round_event/meteor_wave/tick()
 	if(IsMultiple(activeFor, 3))

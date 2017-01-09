@@ -442,7 +442,7 @@ var/next_mob_id = 0
 
 	//waiting
 	if(((world.time - src.timeofdeath) < 6000) && !client.allow_respawn)
-		usr << "Потерпите немного длЯ респавна!"
+		usr << "Потерпите немного дл&#255; респавна!"
 		return
 	else
 		client.allow_respawn = 1

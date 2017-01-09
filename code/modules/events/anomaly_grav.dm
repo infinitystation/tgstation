@@ -9,7 +9,7 @@
 	announceWhen = 20
 
 /datum/round_event/anomaly/anomaly_grav/announce()
-	priority_announce("Сканеры дальнего радиуса действия обнаружили гравитационную аномалию. Предположительное место воздействия: [impact_area.name].", "Тревога! АномалиЯ!")
+	priority_announce("Сканеры дальнего радиуса действия обнаружили гравитационную аномалию. Предположительное место воздействия: [impact_area.name].", "Тревога! Аномалия!")
 
 /datum/round_event/anomaly/anomaly_grav/start()
 	var/turf/T = safepick(get_area_turfs(impact_area))

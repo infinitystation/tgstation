@@ -18,7 +18,7 @@
 	else
 		announcement += "<h1 class='alert'>[command_name()] Update</h1>"
 		if (title && length(title) > 0)
-			announcement += "<br><h2 class='alert'>[html_encode(title)]</h2>"
+			announcement += "<br><h2 class='alert'>[sanitize_a0(title)]</h2>"
 		if(title == "")
 			news_network.SubmitArticle(text, "Central Command Update", "Station Announcements", null)
 		else
