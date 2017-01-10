@@ -40,13 +40,14 @@
 	limbs_id = "lizard"
 	species_traits = list(MUTCOLORS,EYECOLOR,LIPS,NOBREATH,NOGUNS,DIGITIGRADE)
 
-/datum/species/lizard/ashwalker/IsAdvancedToolUser()
-	. = 0
-
 /datum/species/lizard/ashwalker/on_species_gain(mob/living/carbon/human/C, datum/species/old_species)
+	C.languages_spoken = ASHWALKER
+	C.languages_understood = ASHWALKER
 	C.handcrafting.categories = list(CAT_PRIMAL)
 
 /datum/species/lizard/ashwalker/on_species_loss(mob/living/carbon/human/C)
+	C.languages_spoken = initial(C.languages_spoken)
+	C.languages_understood = initial(C.languages_understood)
 	C.handcrafting.categories = list(CAT_WEAPON,
 				CAT_AMMO,
 				CAT_ROBOT,

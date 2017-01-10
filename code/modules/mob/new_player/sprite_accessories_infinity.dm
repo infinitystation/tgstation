@@ -353,4 +353,18 @@
 	icon = 'icons/mob/more_hairs.dmi'
 	icon_state = "hair_undercut"
 
+/datum/sprite_accessory/tails/human/dog
+	name = "Dog"
+	icon_state = "dog"
+	color_src = HAIR
 
+/datum/sprite_accessory/tails_animated/human/dog
+	name = "Dog"
+	icon_state = "dog"
+	color_src = HAIR
+
+/datum/sprite_accessory/ears/dog
+	name = "Dog"
+	icon_state = "dog"
+	hasinner = 1
+	color_src = HAIR

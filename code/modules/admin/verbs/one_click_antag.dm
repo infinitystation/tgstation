@@ -573,7 +573,7 @@
 			alert = "Green"
 	var/teamsize = min(7,input("Максимальное количество бойцов в отрЯде? (Макс: 7)", "Выберите размер группы",4) as null|num)
 	var/mission = input("Выберите задание длЯ отрЯда", "Назначьте цель", "Защитить ЦК.")
-	var/list/mob/dead/observer/candidates = pollCandidates("Вы желаете стать сотрудником охраны ЦК при следующем уровне угрозы: [alert]?", "Приглашение в элиту", null)
+	var/list/mob/dead/observer/candidates = pollCandidates("Вы желаете стать сотрудником охраны ЦК при следующем уровне угрозы: [alert] с целью: [mission]?", "Приглашение в элиту", null)
 	var/teamSpawned = 0
 
 	if(candidates.len > 0)

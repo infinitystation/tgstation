@@ -1,4 +1,4 @@
-//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE 
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "aaa" = (
 /turf/open/space,
 /area/space)
@@ -7322,6 +7322,21 @@
 /obj/item/clothing/tie/badge/holo,
 /obj/item/clothing/tie/badge/holo,
 /obj/item/clothing/tie/badge/holo,
+/obj/item/clothing/tie/badge/holo/cord{
+	pixel_x = 15
+	},
+/obj/item/clothing/tie/badge/holo/cord{
+	pixel_x = 15
+	},
+/obj/item/clothing/tie/badge/holo/cord{
+	pixel_x = 15
+	},
+/obj/item/clothing/tie/badge/holo/cord{
+	pixel_x = 15
+	},
+/obj/item/clothing/tie/badge/holo/cord{
+	pixel_x = 15
+	},
 /turf/open/floor/plasteel/red/side{
 	dir = 10
 	},
@@ -40195,6 +40210,9 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/effect/landmark/start{
+	name = "Internal Affairs Agent"
+	},
 /turf/open/floor/plasteel{
 	icon_state = "dark"
 	},
@@ -44573,11 +44591,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	req_access_txt = "0"
-	},
-/obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
 	},
 /obj/structure/disposalpipe/sortjunction{
 	dir = 2;
@@ -58996,6 +59009,7 @@
 	pixel_x = 30;
 	pixel_y = 0
 	},
+/obj/item/weapon/book/codex_gigas,
 /turf/open/floor/plasteel{
 	tag = "icon-cult";
 	icon_state = "cult";
@@ -90229,6 +90243,7 @@
 "cUu" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/table/wood,
+/obj/item/weapon/book/codex_gigas,
 /turf/open/floor/plasteel{
 	icon_state = "grimy"
 	},
@@ -104651,7 +104666,7 @@ aaa
 aaa
 aaa
 aaa
-aaa
+aai
 aaa
 aaa
 aai
@@ -104925,8 +104940,8 @@ bAN
 aZM
 aai
 aai
-aai
-aai
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -105161,12 +105176,12 @@ aaa
 aaa
 aaa
 aaa
-aai
-aai
+aaa
+aaa
 aai
 aai
 aag
-aai
+aaa
 aaa
 aaa
 aai
@@ -105181,14 +105196,14 @@ bCI
 bEQ
 aZM
 aaa
-aaa
 aai
 aai
 aai
 aai
 aai
 aai
-aaa
+aai
+aai
 aaa
 aaa
 aaa
@@ -105423,7 +105438,7 @@ aai
 aai
 aaa
 aaa
-aai
+aaa
 aaa
 aaa
 aaa
@@ -105437,7 +105452,8 @@ bAP
 bCJ
 bER
 aZM
-aaa
+aai
+aai
 aaa
 aaa
 aaa
@@ -105445,8 +105461,7 @@ aaa
 aaa
 aaa
 aai
-aai
-aai
+aaa
 aaa
 aaa
 aaa
@@ -105678,8 +105693,8 @@ aai
 aai
 aai
 aai
-aai
-aai
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -105701,7 +105716,7 @@ aaa
 aaa
 aaa
 aaa
-aaa
+aai
 aai
 aai
 aai
@@ -105958,7 +105973,7 @@ aaa
 aaa
 aaa
 aaa
-aaa
+aai
 aZM
 aZM
 aZM
@@ -107764,7 +107779,7 @@ dho
 bbo
 cdE
 aZM
-aaa
+aai
 aaa
 aaa
 aaa
@@ -108535,7 +108550,7 @@ bUb
 bCM
 cdF
 aZM
-aaa
+aai
 aaa
 aaa
 aaa
@@ -109048,7 +109063,7 @@ bLQ
 bUc
 bVF
 aVv
-aaa
+aai
 aaa
 aaa
 aaa
@@ -109305,8 +109320,8 @@ bLR
 bUd
 bVG
 aVv
-aaa
-aaa
+aai
+aai
 aaa
 aaa
 aaa
@@ -151668,7 +151683,7 @@ aaa
 aaa
 aaa
 aaa
-aai
+aaa
 aan
 aPi
 aQE
@@ -151925,7 +151940,7 @@ aaa
 aaa
 aaa
 aaa
-aai
+aaa
 aan
 aPj
 aQF
@@ -152182,7 +152197,7 @@ aaa
 aaa
 aaa
 aaa
-aai
+aaa
 aan
 aPi
 aQE
@@ -152439,7 +152454,7 @@ aaa
 aaa
 aaa
 aaa
-aai
+aaa
 aan
 aPi
 aQE
@@ -152696,7 +152711,7 @@ aaa
 aaa
 aaa
 aaa
-aai
+aaa
 aan
 aPi
 aQE

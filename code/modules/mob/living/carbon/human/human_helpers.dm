@@ -94,7 +94,8 @@
 
 
 /mob/living/carbon/human/IsAdvancedToolUser()
- 	return dna.species.IsAdvancedToolUser()
+    return 1//Humans can use guns and such
+
 
 /mob/living/carbon/human/InCritical()
 	return (health <= HEALTH_THRESHOLD_CRIT && stat == UNCONSCIOUS)
