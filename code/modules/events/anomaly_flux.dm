@@ -11,7 +11,7 @@
 	announceWhen = 20
 
 /datum/round_event/anomaly/anomaly_flux/announce()
-	priority_announce("Сканеры большого радиуса действия обнаружили волны гипер-энергетического потока. Предположительное место воздействия: [impact_area.name].", "Тревога! АномалиЯ!")
+	priority_announce("Сканеры дальнего радиуса действия обнаружили волны гипер-энергетического потока. Место ожидаемого воздействия: [impact_area.name].", "Тревога! Аномалия!")
 
 /datum/round_event/anomaly/anomaly_flux/start()
 	var/turf/T = safepick(get_area_turfs(impact_area))

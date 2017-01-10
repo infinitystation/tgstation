@@ -8,11 +8,11 @@
 	announceWhen	= 1
 
 /datum/round_event/processor_overload/announce()
-	var/alert = pick(	"Exospheric bubble inbound. Processor overload is likely. Please contact you*%xp25)`6cq-BZZT", \
-						"Exospheric bubble inbound. Processor overload is likel*1eta;c5;'1vВ¬-BZZZT", \
-						"Exospheric bubble inbound. Processor ov#MCi46:5.;@63-BZZZZT", \
-						"Exospheric bubble inbo'Fz\\k55_@-BZZZZZT", \
-						"Exospheri:%ВЈ QCbyj^j</.3-BZZZZZZT", \
+	var/alert = pick(	"Обнаружен экзосферный пузырь. Возможна перегрузка процессора. Свяжитесь со сво*%xp25)`6cq-BZZT", \
+						"Обнаружен экзосферный пузырь. Возможна перегрузка проц*1eta;c5;'1vВ¬-BZZZT", \
+						"Обнаружен экзосферный пузырь. Возможна пе#MCi46:5.;@63-BZZZZT", \
+						"Обнаружен экзосферный пу'Fz\\k55_@-BZZZZZT", \
+						"Обнаружен экз:%ВЈ QCbyj^j</.3-BZZZZZZT", \
 						"!!hy%;f3l7e,<$^-BZZZZZZZT")
 
 	for(var/mob/living/silicon/ai/A in ai_list)

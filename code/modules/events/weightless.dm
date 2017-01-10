@@ -12,7 +12,7 @@
 	announceWhen = rand(0,10)
 
 /datum/round_event/weightless/announce()
-	priority_announce("Внимание: нарушение в работе системы искусственной гравитации.")
+	priority_announce("Внимание: нарушение в работе системы искусственной гравитации.", "Сбой гравитационных систем")
 
 /datum/round_event/weightless/start()
 	for(var/obj/machinery/gravity_generator/main/station/S in machines)

@@ -31,7 +31,7 @@
 
 /datum/round_event/ghost_role/alien_infestation/announce()
 	if(successSpawn)
-		priority_announce("Неидентифицированные признаки жизни замечены прибывшими на станцию [station_name()]. Проверьте все внешние доступы на станцию, включаЯ воздуховоды и вентилЯции", "Lifesign Alert", 'sound/AI/aliens.ogg')
+		priority_announce("На станции [station_name()] зарегестрированы признаки неидентифицированной инопланетной жизни. экипажу рекомендуется сохранять бдительность и рекомендуется ввести режим повышенной опасности.", "Тревога! Чужеродная жизнь!", 'sound/AI/aliens.ogg')
 
 
 /datum/round_event/ghost_role/alien_infestation/spawn_role()
