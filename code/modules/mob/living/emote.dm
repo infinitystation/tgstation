@@ -18,6 +18,7 @@
 	mob_type_allowed_typecache = list(/mob/living)
 	mob_type_blacklist_typecache = list(/mob/living/simple_animal/slime, /mob/living/brain)
 
+
 /datum/emote/living/blush
 	key = "blush"
 	key_third_person = "blushes"
@@ -44,11 +45,7 @@
 /datum/emote/living/cross
 	key = "cross"
 	key_third_person = "crosses"
-	if(gender == FEMALE)
-		message = "скрестила руки у себя на груди."
-	else
-		message = "скрестил руки у себя на груди."
-	restraint_check = TRUE
+	message = "скрестил руки у себя на груди." //[M.p_e_1()] - функция для окончания в зависимости от пола моба, типа Сделал/СделалА. ~Quardbreak
 
 /datum/emote/living/chuckle
 	key = "chuckle"
@@ -59,10 +56,7 @@
 /datum/emote/living/collapse
 	key = "collapse"
 	key_third_person = "collapses"
-	if(gender == FEMALE)
-		message = "упала!"
-	else
-		message = "упал!"
+	message = "упал!" //[M.p_e_1()] - функция для окончания в зависимости от пола моба, типа Сделал/СделалА. ~Quardbreak
 	emote_type = EMOTE_AUDIBLE
 
 /datum/emote/living/collapse/run_emote(mob/user, params)
