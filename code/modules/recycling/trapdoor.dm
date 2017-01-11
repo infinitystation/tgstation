@@ -25,7 +25,7 @@
 	icon_state = "trapdoor_open"
 	spawn(5)
 		for(var/mob/living/M in loc)
-			if(M.mob_has_gravity && (!M.anchored || (!M.buckled && M.buckled.anchored)))
+			if(M.mob_has_gravity() && (!M.anchored || (!M.buckled && M.buckled.anchored)))
 				M.loc = src
 				trap_flush()
 				if(auto_close_on_mob)
@@ -61,7 +61,7 @@
 	if(open)
 		if(istype(AM, /mob/living/))
 			var/mob/living/M = AM
-			if(!M.mob_has_gravity || M.anchored || (M.buckled && M.buckled.anchored))
+			if(!M.mob_has_gravity() || M.anchored || (M.buckled && M.buckled.anchored))
 				return
 			M.loc = src
 			trap_flush()
@@ -90,7 +90,7 @@
 		return
 	add_fingerprint(user)
 	if(user == target)
-		if(!target.mob_has_gravity)
+		if(!target.mob_has_gravity())
 			user.visible_message("[user] is attempting to dive into [src].", \
 				"<span class='notice'>You start diving into [src]...</span>")
 			if(!do_mob(target, user, 10))
@@ -109,7 +109,7 @@
 			if(!do_mob(target, user, 30))
 				return
 			var/chance = 25 // normal chance, 25% to fall inside
-			var/turf/simulated/T = get_turf(src)
+			var/turf/open/floor/T = get_turf(src)
 			var/M = "fall inside"
 			var/U = "falls inside"
 			if(user.disabilities & CLUMSY)

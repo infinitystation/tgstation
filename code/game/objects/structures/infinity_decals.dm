@@ -36,3 +36,10 @@
 	icon_state = "xtra_bigstripe-edge"
 	layer = ABOVE_OPEN_TURF_LAYER
 	anchored = 1
+
+/obj/structure/skeleton_stand
+	name = "skeleton stand"
+	desc = ""
+	icon = 'icons/obj/infinity_object.dmi'
+	icon_state = "skeleton_stand"
+	anchored = 1
