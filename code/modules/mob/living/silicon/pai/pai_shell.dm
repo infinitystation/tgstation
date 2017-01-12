@@ -53,6 +53,9 @@
 	if(!holoform)
 		. = fold_out(force)
 		return
+	if(istype(loc, /obj/machinery/atmospherics/pipe/simple))
+		visible_message("<span class='notice'>[src] is going to deactivate its holochassis emitter and fold back into a compact card, but it fucked up by some reason.</span>")
+		return
 	visible_message("<span class='notice'>[src] deactivates its holochassis emitter and folds back into a compact card!</span>")
 	stop_pulling()
 	if(client)
