@@ -212,8 +212,7 @@
 		t = "<font face=\"[CRAYON_FONT]\" color=[C.paint_color]><b>[t]</b></font>"
 
 //	t = replacetext(t, "#", "") // Junk converted to nothing!
-
-//Count the fields
+//	countags(t) // lets count this shietty tags!
 	var/laststart = 1
 	while(1)
 		var/i = findtext(t, "<span class=\"paper_field\">", laststart)
@@ -223,6 +222,8 @@
 		fields++
 
 	return t
+
+
 
 /obj/item/weapon/paper/proc/openhelp(mob/user)
 	user << browse({"<HTML><HEAD><TITLE>Pen Help</TITLE></HEAD>
@@ -244,6 +245,23 @@
 		\[*\] : A dot used for lists.<br>
 		\[hr\] : Adds a horizontal rule.
 	</BODY></HTML>"}, "window=paper_help")
+
+/obj/item/weapon/paper/proc/countags(t)
+	var/laststart = 1
+	while(1)
+		var/i = findtext(t, "<span class=\"paper_field\">", laststart)
+		if(i == 0 | fields == 50)
+			break
+		laststart = i+1
+		fields++
+
+	laststart = 1 //make fields grate again - recount another tag - [list\]
+	while(1)
+		var/i = findtext(t, "<ul>", laststart)
+		if(i == 0 | fields == 50)
+			break
+		laststart = i+1
+		fields++
 
 
 /obj/item/weapon/paper/Topic(href, href_list)
