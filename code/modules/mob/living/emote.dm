@@ -28,7 +28,7 @@
 	key = "bow"
 	key_third_person = "bows"
 	message = "bows."
-	message_param = "кланяется %t."
+	message_param = "клан&#255;етс&#255; %t."
 
 /datum/emote/living/burp
 	key = "burp"
@@ -39,13 +39,13 @@
 /datum/emote/living/choke
 	key = "choke"
 	key_third_person = "chokes"
-	message = "давится!"
+	message = "давитс&#255;!"
 	emote_type = EMOTE_AUDIBLE
 
 /datum/emote/living/cross
 	key = "cross"
 	key_third_person = "crosses"
-	message = "скрестил руки у себя на груди." //[M.p_e_1()] - функция для окончания в зависимости от пола моба, типа Сделал/СделалА. ~Quardbreak
+	message = "скрестил руки у себ&#255; на груди." //[M.p_e_1()] - функция для окончания в зависимости от пола моба, типа Сделал/СделалА. ~Quardbreak
 
 /datum/emote/living/chuckle
 	key = "chuckle"
@@ -67,7 +67,7 @@
 /datum/emote/living/cough
 	key = "cough"
 	key_third_person = "coughs"
-	message = "кашляет!"
+	message = "кашл&#255;ет!"
 	emote_type = EMOTE_AUDIBLE
 
 /datum/emote/living/dance
@@ -79,11 +79,11 @@
 /datum/emote/living/deathgasp
 	key = "deathgasp"
 	key_third_person = "deathgasps"
-	message = "замирает, конечности расслабляются, глаза становятся мёртвыми и безжизненными..."
-	message_robot = "cильно вздрагивает и через мгновение полностью останавливается, его глаза медленно темнеют/"
-	message_AI = "мигает, трещина пересекает экран, откуда свисела пара искрящихся проводов. Экран засиял ошибкой."
-	message_alien = "визжит искажённым криком, затем рухнул со своих лап. Зелёная кипящая и булькающая жидкость потекла из его пасти."
-	message_larva = "Испускает болезненное шипения, выпуская из себя остатки воздуха, после чего перестает двигаться и падает на пол."
+	message = "замирает, конечности расслабл&#255;ютс&#255;, глаза станов&#255;тс&#255; мёртвыми и безжизненными..."
+	message_robot = "cильно вздрагивает и через мгновение полностью останавливаетс&#255;, его глаза медленно темнеют/"
+	message_AI = "мигает, трещина пересекает экран, откуда свисела пара искр&#255;щихс&#255; проводов. Экран заси&#255;л ошибкой."
+	message_alien = "визжит искажённым криком, затем рухнул со своих лап. Зелёна&#255; кип&#255;ща&#255; и булькающа&#255; жидкость потекла из его пасти."
+	message_larva = "Испускает болезненное шипени&#255;, выпуска&#255; из себ&#255; остатки воздуха, после чего перестает двигатьс&#255; и падает на пол."
 	message_monkey = "lets out a faint chimper as it collapses and stops moving..."
 	stat_allowed = UNCONSCIOUS
 
@@ -110,7 +110,7 @@
 /datum/emote/living/flap
 	key = "flap"
 	key_third_person = "flaps"
-	message = "хлопает своими крыльями."
+	message = "хлопает своими крыль&#255;ми."
 	var/wing_time = 20
 
 /datum/emote/living/flap/run_emote(mob/user, params)
@@ -129,7 +129,7 @@
 /datum/emote/living/flap/aflap
 	key = "aflap"
 	key_third_person = "aflaps"
-	message = "в злости хлопает своими крыльями!"
+	message = "в злости хлопает своими крыль&#255;ми!"
 	wing_time = 10
 
 /datum/emote/living/flip
@@ -145,7 +145,7 @@
 /datum/emote/living/frown
 	key = "frown"
 	key_third_person = "frowns"
-	message = "хмурится."
+	message = "хмуритс&#255;."
 
 /datum/emote/living/gag
 	key = "gag"
@@ -156,7 +156,7 @@
 /datum/emote/living/gasp
 	key = "gasp"
 	key_third_person = "gasps"
-	message = "задыхается!"
+	message = "задыхаетс&#255;!"
 	emote_type = EMOTE_AUDIBLE
 	stat_allowed = UNCONSCIOUS
 
@@ -177,7 +177,7 @@
 /datum/emote/living/grin
 	key = "grin"
 	key_third_person = "grins"
-	message = "усмехается."
+	message = "усмехаетс&#255;."
 
 /datum/emote/living/groan
 	key = "groan"
@@ -206,7 +206,7 @@
 /datum/emote/living/laugh
 	key = "laugh"
 	key_third_person = "laughs"
-	message = "смеется."
+	message = "смеетс&#255;."
 	emote_type = EMOTE_AUDIBLE
 
 /datum/emote/living/look
@@ -244,13 +244,13 @@
 /datum/emote/living/scowl
 	key = "scowl"
 	key_third_person = "scowls"
-	message = "хмурится."
+	message = "хмуритс&#255;."
 	emote_type = EMOTE_AUDIBLE
 
 /datum/emote/living/shake
 	key = "shake"
 	key_third_person = "shakes"
-	message = "трясет головой."
+	message = "тр&#255;сет головой."
 	emote_type = EMOTE_AUDIBLE
 
 /datum/emote/living/sigh
@@ -262,12 +262,12 @@
 /datum/emote/living/sit
 	key = "sit"
 	key_third_person = "sits"
-	message = "садится."
+	message = "садитс&#255;."
 
 /datum/emote/living/smile
 	key = "smile"
 	key_third_person = "smiles"
-	message = "улыбается."
+	message = "улыбаетс&#255;."
 
 /datum/emote/living/sneeze
 	key = "sneeze"
@@ -278,7 +278,7 @@
 /datum/emote/living/smug
 	key = "smug"
 	key_third_person = "smugs"
-	message = "самодовольно ухмыляется."
+	message = "самодовольно ухмыл&#255;етс&#255;."
 
 /datum/emote/living/sniff
 	key = "sniff"
@@ -296,8 +296,8 @@
 /datum/emote/living/stare
 	key = "stare"
 	key_third_person = "stares"
-	message = "уставился."
-	message_param = "уставился на %t."
+	message = "уставилс&#255;."
+	message_param = "уставилс&#255; на %t."
 
 /datum/emote/living/strech
 	key = "stretch"
@@ -307,12 +307,12 @@
 /datum/emote/living/sulk
 	key = "sulk"
 	key_third_person = "sulks"
-	message = "надулся."
+	message = "надулс&#255;."
 
 /datum/emote/living/surrender
 	key = "surrender"
 	key_third_person = "surrenders"
-	message = "кладет руки за голову и медленно ложится на пол!"
+	message = "кладет руки за голову и медленно ложитс&#255; на пол!"
 	emote_type = EMOTE_AUDIBLE
 
 /datum/emote/living/surrender/run_emote(mob/user, params)
@@ -323,7 +323,7 @@
 /datum/emote/living/sway
 	key = "sway"
 	key_third_person = "sways"
-	message = "пошатывается"
+	message = "пошатываетс&#255;"
 
 /datum/emote/living/tremble
 	key = "tremble"
@@ -333,7 +333,7 @@
 /datum/emote/living/twitch
 	key = "twitch"
 	key_third_person = "twitches"
-	message = "дергается."
+	message = "дергаетс&#255;."
 
 /datum/emote/living/twitch_s
 	key = "twitch_s"
@@ -348,12 +348,12 @@
 	key = "whimper"
 	key_third_person = "whimpers"
 	message = "хнычет."
-	message_mime = "его лицо становится грустным, а из слез льются воображаемые слезы."
+	message_mime = "его лицо становитс&#255; грустным, а из слез льютс&#255; воображаемые слезы."
 
 /datum/emote/living/wsmile
 	key = "wsmile"
 	key_third_person = "wsmiles"
-	message = "слабо улыбается."
+	message = "слабо улыбаетс&#255;."
 
 /datum/emote/living/yawn
 	key = "yawn"
