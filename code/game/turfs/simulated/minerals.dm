@@ -404,6 +404,7 @@
 	turf_type = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
 	baseturf = /turf/open/floor/plating/lava/smooth/lava_land_surface
 	defer_change = 1
+	icon_state = "rock_labor"
 
 /turf/closed/mineral/clown/volcanic
 	environment_type = "basalt"
