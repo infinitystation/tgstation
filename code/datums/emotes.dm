@@ -41,6 +41,12 @@ var/global/list/emote_list = list()
 		msg = replacetext(msg, "them", user.p_them())
 	if(findtext(msg, "%s"))
 		msg = replacetext(msg, "%s", user.p_s())
+	if(findtext(msg, "'e_1'"))
+		msg = replacetext(msg, "'e_1'", user.p_e_1())//*пусто*/а
+	if(findtext(msg, "'e_5'"))
+		msg = replacetext(msg, "'e_5'", user.p_e_5())//ся/ась
+	if(findtext(msg, "'t_his'"))
+		msg = replacetext(msg, "'t_his'", user.p_their()) //его/её
 
 	var/mob/living/L = user
 	for(var/obj/item/weapon/implant/I in L.implants)

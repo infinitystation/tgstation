@@ -10,12 +10,12 @@
 /datum/emote/slime/jiggle
 	key = "jiggle"
 	key_third_person = "jiggles"
-	message = "покачивается."
+	message = "покачиваетс&#255;."
 
 /datum/emote/slime/light
 	key = "light"
 	key_third_person = "lights"
-	message = "на секунду загорается ярким светом, а потом потухает."
+	message = "на секунду загораетс&#255; &#255;рким светом, а потом потухает."
 
 /datum/emote/slime/vibrate
 	key = "vibrate"

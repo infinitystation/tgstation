@@ -10,7 +10,7 @@
 /datum/emote/living/carbon/human/dap
 	key = "dap"
 	key_third_person = "daps"
-	message = "из-за того, что не может найти друга, которому бы дал кулачок. Дает его самому себе."
+	message = "из-за того, что не может найти друга, которому бы дал'e_1' кулачок. Дает его самому себе."
 	message_param = "дает кулачок %t."
 	restraint_check = TRUE
 
@@ -34,7 +34,7 @@
 /datum/emote/living/carbon/human/hug
 	key = "hug"
 	key_third_person = "hugs"
-	message = "обнимает сам себя."
+	message = "обнимает сам'e_1' себ&#255;."
 	message_param = "hugs %t."
 	restraint_check = TRUE
 	emote_type = EMOTE_AUDIBLE
@@ -47,7 +47,7 @@
 
 /datum/emote/living/carbon/human/pale
 	key = "pale"
-	message = "на секунду побледнел."
+	message = "на секунду побледнел'e_1'."
 
 /datum/emote/living/carbon/human/raise
 	key = "raise"
@@ -70,7 +70,7 @@
 /datum/emote/living/carbon/human/wag
 	key = "wag"
 	key_third_person = "wags"
-	message = "виляет свои хвостом."
+	message = "вил&#255;ет свои хвостом."
 
 /datum/emote/living/carbon/human/wag/run_emote(mob/user, params)
 	. = ..()

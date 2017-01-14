@@ -39,7 +39,7 @@
 /datum/emote/living/carbon/roll
 	key = "roll"
 	key_third_person = "rolls"
-	message = "катается по полу."
+	message = "катаетс&#255; по полу."
 	mob_type_allowed_typecache = list(/mob/living/carbon/monkey, /mob/living/carbon/alien)
 	restraint_check = TRUE
 
@@ -77,7 +77,7 @@
 
 /datum/emote/living/carbon/tail
 	key = "tail"
-	message = "виляет своим хвостом."
+	message = "вил&#255;ет своим хвостом."
 	mob_type_allowed_typecache = list(/mob/living/carbon/monkey, /mob/living/carbon/alien)
 
 /datum/emote/living/carbon/wink
