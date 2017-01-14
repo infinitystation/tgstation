@@ -25,11 +25,11 @@ map dreamstation
 	friendlyname Dream Station
 endmap
 
-endmap
-
 map infinity_metastation
 	friendlyname Infinity Meta Station
 	default
+endmap
+
 map deltastation
 	friendlyname Delta Station
 endmap

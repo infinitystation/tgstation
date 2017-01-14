@@ -115,7 +115,7 @@
 	description = "Wormhole lifebelts are for LOSERS, who you are better than."
 	suffix = "I_lavaland_surface_pride.dmm"
 
-/datum/map_template/ruin/lavaland/sin/sloth
+//datum/map_template/ruin/lavaland/sin/sloth
 	name = "Ruin of Sloth"
 	id = "sloth"
 	description = "..."

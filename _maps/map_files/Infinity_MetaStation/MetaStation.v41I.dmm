@@ -822,7 +822,9 @@
 /obj/machinery/light/small{
 	dir = 8
 	},
-/turf/open/floor/plating,
+/turf/open/floor/plating/warnplate{
+	dir = 4
+	},
 /area/crew_quarters/fitness)
 "abD" = (
 /obj/structure/shuttle/engine/propulsion{
@@ -1137,7 +1139,9 @@
 /turf/open/floor/wood,
 /area/security/break_room)
 "acf" = (
-/turf/open/floor/plating,
+/turf/open/floor/plating/warnplate{
+	dir = 4
+	},
 /area/crew_quarters/fitness)
 "acg" = (
 /obj/machinery/door/airlock/shuttle{
@@ -1458,7 +1462,6 @@
 	pixel_x = 12;
 	pixel_y = 8
 	},
-/obj/item/weapon/paper/notice_show,
 /turf/open/floor/carpet,
 /area/crew_quarters/hos)
 "acK" = (
@@ -1682,7 +1685,11 @@
 /obj/machinery/door/poddoor/preopen{
 	id = "armory_lock"
 	},
-/turf/open/floor/plasteel/darkvault/delivary,
+/turf/open/floor/plasteel/darkwarning/side{
+	tag = "icon-black_warn_side (EAST)";
+	icon_state = "black_warn_side";
+	dir = 4
+	},
 /area/ai_monitored/security/armory)
 "adc" = (
 /obj/effect/spawner/structure/window/reinforced,
@@ -1837,6 +1844,7 @@
 	icon_state = "1-2";
 	tag = ""
 	},
+/obj/structure/fans/tiny,
 /turf/open/floor/plating{
 	icon_state = "warnplate";
 	dir = 1
@@ -2633,8 +2641,10 @@
 	name = "Head Of Security";
 	req_access_txt = "58"
 	},
-/turf/open/floor/plasteel{
-	icon_state = "dark"
+/turf/open/floor/plasteel/darkwarning/side{
+	tag = "icon-black_warn_side (EAST)";
+	icon_state = "black_warn_side";
+	dir = 4
 	},
 /area/crew_quarters/hos)
 "aeJ" = (
@@ -2761,7 +2771,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
-/turf/open/floor/plasteel/delivery,
+/turf/open/floor/plasteel/warning/side,
 /area/security/range)
 "aeS" = (
 /obj/machinery/light/small{
@@ -3600,7 +3610,11 @@
 	name = "Escape Pod Two";
 	req_one_access_txt = "63"
 	},
-/turf/open/floor/plasteel/darkvault/delivary,
+/turf/open/floor/plasteel/darkwarning/side{
+	tag = "icon-black_warn_side (EAST)";
+	icon_state = "black_warn_side";
+	dir = 4
+	},
 /area/security/gear)
 "agz" = (
 /obj/structure/reagent_dispensers/peppertank{
@@ -4151,7 +4165,11 @@
 	d2 = 4;
 	icon_state = "2-4"
 	},
-/turf/open/floor/plasteel/darkvault/delivary,
+/turf/open/floor/plasteel/darkwarning/side{
+	tag = "icon-black_warn_side (EAST)";
+	icon_state = "black_warn_side";
+	dir = 4
+	},
 /area/security/security_gear)
 "ahz" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
@@ -4326,7 +4344,8 @@
 /area/maintenance/fsmaint)
 "ahT" = (
 /obj/machinery/door/airlock/external{
-	req_access_txt = "13"
+	req_access_txt = "0";
+	req_one_access_txt = "10;13"
 	},
 /turf/open/floor/plating,
 /area/maintenance/fsmaint)
@@ -4629,7 +4648,11 @@
 	req_access = null;
 	req_access_txt = "3"
 	},
-/turf/open/floor/plasteel/darkvault/delivary,
+/turf/open/floor/plasteel/darkwarning/side{
+	tag = "icon-black_warn_side (EAST)";
+	icon_state = "black_warn_side";
+	dir = 4
+	},
 /area/security/execution)
 "aiz" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
@@ -4641,7 +4664,11 @@
 	req_access = null;
 	req_access_txt = "3"
 	},
-/turf/open/floor/plasteel/darkvault/delivary,
+/turf/open/floor/plasteel/darkwarning/side{
+	tag = "icon-black_warn_side (EAST)";
+	icon_state = "black_warn_side";
+	dir = 4
+	},
 /area/security/execution)
 "aiA" = (
 /obj/structure/table/reinforced,
@@ -4792,7 +4819,6 @@
 	dir = 4;
 	pixel_x = 24
 	},
-/obj/item/weapon/gun/energy/laser/scatter/shotty,
 /obj/item/clothing/tie/badge/warden,
 /turf/open/floor/plasteel/darkwarning{
 	dir = 10
@@ -4928,7 +4954,9 @@
 	req_access_txt = "63"
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
-/turf/open/floor/plasteel/red/side{
+/turf/open/floor/plasteel/warning/side{
+	tag = "icon-plasteel_warn_side (WEST)";
+	icon_state = "plasteel_warn_side";
 	dir = 8
 	},
 /area/security/east_brig)
@@ -4971,8 +4999,10 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/turf/open/floor/plasteel/red/side{
-	dir = 4
+/turf/open/floor/plasteel/warning/side{
+	tag = "icon-plasteel_warn_side (WEST)";
+	icon_state = "plasteel_warn_side";
+	dir = 8
 	},
 /area/security/east_brig)
 "aja" = (
@@ -6201,9 +6231,7 @@
 	req_access_txt = "0";
 	req_one_access_txt = "1;4"
 	},
-/turf/open/floor/plasteel/vault{
-	dir = 8
-	},
+/turf/open/floor/plasteel/darkwarning/side,
 /area/security/west)
 "alq" = (
 /obj/structure/cable/yellow{
@@ -6556,7 +6584,9 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/open/floor/plasteel/red/side{
+/turf/open/floor/plasteel/warning/side{
+	tag = "icon-plasteel_warn_side (NORTH)";
+	icon_state = "plasteel_warn_side";
 	dir = 1
 	},
 /area/security/east_brig)
@@ -6952,6 +6982,7 @@
 	icon_state = "1-2";
 	tag = ""
 	},
+/obj/structure/fans/tiny,
 /turf/open/floor/plating{
 	icon_state = "warnplate";
 	dir = 1
@@ -7474,7 +7505,11 @@
 	name = "East Brig";
 	req_access_txt = "63"
 	},
-/turf/open/floor/plasteel/red/side,
+/turf/open/floor/plasteel/warning/side{
+	tag = "icon-plasteel_warn_side (NORTH)";
+	icon_state = "plasteel_warn_side";
+	dir = 1
+	},
 /area/security/east_brig)
 "anm" = (
 /obj/structure/disposalpipe/segment{
@@ -7936,8 +7971,10 @@
 	name = "Brig";
 	req_access_txt = "63"
 	},
-/turf/open/floor/plasteel{
-	icon_state = "delivery"
+/turf/open/floor/plasteel/warning/side{
+	tag = "icon-plasteel_warn_side (EAST)";
+	icon_state = "plasteel_warn_side";
+	dir = 4
 	},
 /area/security/west)
 "aob" = (
@@ -7952,8 +7989,10 @@
 	d1 = 4;
 	d2 = 8
 	},
-/turf/open/floor/plasteel{
-	icon_state = "delivery"
+/turf/open/floor/plasteel/warning/side{
+	tag = "icon-plasteel_warn_side (EAST)";
+	icon_state = "plasteel_warn_side";
+	dir = 4
 	},
 /area/security/west)
 "aoc" = (
@@ -8026,7 +8065,11 @@
 	name = "Brig Control";
 	req_access_txt = "3"
 	},
-/turf/open/floor/plasteel/darkvault/delivary,
+/turf/open/floor/plasteel/darkwarning/side{
+	tag = "icon-black_warn_side (EAST)";
+	icon_state = "black_warn_side";
+	dir = 4
+	},
 /area/security/warden)
 "aoi" = (
 /obj/structure/disposalpipe/segment,
@@ -8056,7 +8099,11 @@
 	d2 = 4;
 	icon_state = "2-4"
 	},
-/turf/open/floor/plasteel/darkvault/delivary,
+/turf/open/floor/plasteel/darkwarning/side{
+	tag = "icon-black_warn_side (EAST)";
+	icon_state = "black_warn_side";
+	dir = 4
+	},
 /area/security/gear)
 "aok" = (
 /obj/effect/spawner/structure/window/reinforced,
@@ -8146,8 +8193,10 @@
 	req_access_txt = "63";
 	req_one_access_txt = "0"
 	},
-/turf/open/floor/plasteel{
-	icon_state = "delivery"
+/turf/open/floor/plasteel/warning/side{
+	tag = "icon-plasteel_warn_side (WEST)";
+	icon_state = "plasteel_warn_side";
+	dir = 8
 	},
 /area/security/main)
 "aoq" = (
@@ -8163,8 +8212,10 @@
 	req_access_txt = "63";
 	req_one_access_txt = "0"
 	},
-/turf/open/floor/plasteel{
-	icon_state = "delivery"
+/turf/open/floor/plasteel/warning/side{
+	tag = "icon-plasteel_warn_side (WEST)";
+	icon_state = "plasteel_warn_side";
+	dir = 8
 	},
 /area/security/main)
 "aor" = (
@@ -8738,7 +8789,7 @@
 	name = "Brig";
 	req_access_txt = "63"
 	},
-/turf/open/floor/plasteel/red,
+/turf/open/floor/plasteel/warning/side,
 /area/security/center)
 "apt" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
@@ -10078,11 +10129,7 @@
 	req_access_txt = "0";
 	req_one_access_txt = "1;4"
 	},
-/turf/open/floor/plasteel/darkvault{
-	dir = 1;
-	icon = 'icons/turf/infinity.dmi';
-	icon_state = "darkdelivery"
-	},
+/turf/open/floor/plasteel/darkwarning/side,
 /area/security/east)
 "ary" = (
 /turf/open/floor/plasteel/terror/darkred/side{
@@ -10868,7 +10915,7 @@
 /obj/machinery/ai_status_display{
 	pixel_y = -32
 	},
-/turf/open/floor/plasteel/red,
+/turf/open/floor/plasteel/warning/side,
 /area/security/center)
 "asM" = (
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden{
@@ -10976,7 +11023,7 @@
 	name = "Brig";
 	req_access_txt = "63"
 	},
-/turf/open/floor/plasteel/red,
+/turf/open/floor/plasteel/warning/side,
 /area/security/center)
 "asW" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
@@ -11473,9 +11520,10 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	req_access_txt = "0"
 	},
-/turf/open/floor/plasteel{
-	icon_state = "bot";
-	dir = 1
+/turf/open/floor/plasteel/warning/side{
+	tag = "icon-plasteel_warn_side (EAST)";
+	icon_state = "plasteel_warn_side";
+	dir = 4
 	},
 /area/engine/gravity_generator)
 "atQ" = (
@@ -11891,10 +11939,10 @@
 	req_access_txt = "63"
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/turf/open/floor/plasteel/darkvault{
-	dir = 1;
-	icon = 'icons/turf/infinity.dmi';
-	icon_state = "darkdelivery"
+/turf/open/floor/plasteel/darkwarning/side{
+	tag = "icon-black_warn_side (EAST)";
+	icon_state = "black_warn_side";
+	dir = 4
 	},
 /area/security/east)
 "auB" = (
@@ -11921,7 +11969,11 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/structure/disposalpipe/segment,
-/turf/open/floor/plasteel/darkblue,
+/turf/open/floor/plasteel/darkwarning/side{
+	tag = "icon-black_warn_side (EAST)";
+	icon_state = "black_warn_side";
+	dir = 4
+	},
 /area/security/east)
 "auE" = (
 /obj/machinery/door/firedoor,
@@ -11931,7 +11983,11 @@
 	req_access_txt = "63"
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/turf/open/floor/plasteel/darkblue,
+/turf/open/floor/plasteel/darkwarning/side{
+	tag = "icon-black_warn_side (EAST)";
+	icon_state = "black_warn_side";
+	dir = 4
+	},
 /area/security/east)
 "auF" = (
 /turf/closed/wall/r_wall,
@@ -11971,10 +12027,10 @@
 	d2 = 8;
 	icon_state = "1-8"
 	},
-/turf/open/floor/plasteel/darkvault{
-	dir = 1;
-	icon = 'icons/turf/infinity.dmi';
-	icon_state = "darkdelivery"
+/turf/open/floor/plasteel/darkwarning/side{
+	tag = "icon-black_warn_side (EAST)";
+	icon_state = "black_warn_side";
+	dir = 4
 	},
 /area/security/detectives_office)
 "auI" = (
@@ -13528,6 +13584,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/structure/fans/tiny,
 /turf/open/floor/plating{
 	icon_state = "warnplate";
 	dir = 4
@@ -13592,6 +13649,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/structure/fans/tiny,
 /turf/open/floor/plating{
 	tag = "icon-warnplate (WEST)";
 	icon_state = "warnplate";
@@ -14301,7 +14359,11 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/turf/open/floor/plating,
+/turf/open/floor/plasteel/warning/side{
+	tag = "icon-plasteel_warn_side (EAST)";
+	icon_state = "plasteel_warn_side";
+	dir = 4
+	},
 /area/maintenance/Electrical_engineer)
 "aye" = (
 /obj/structure/closet/crate{
@@ -14352,9 +14414,10 @@
 	req_access_txt = "10";
 	req_one_access_txt = "0"
 	},
-/turf/open/floor/plasteel{
-	icon_state = "bot";
-	dir = 1
+/turf/open/floor/plasteel/warning/side{
+	tag = "icon-plasteel_warn_side (EAST)";
+	icon_state = "plasteel_warn_side";
+	dir = 4
 	},
 /area/engine/engineering)
 "ayj" = (
@@ -14703,7 +14766,11 @@
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment,
-/turf/open/floor/plasteel/darkblue,
+/turf/open/floor/plasteel/darkwarning/side{
+	tag = "icon-black_warn_side (EAST)";
+	icon_state = "black_warn_side";
+	dir = 4
+	},
 /area/security/east)
 "ayM" = (
 /obj/machinery/door/firedoor,
@@ -14717,7 +14784,11 @@
 	pixel_x = 25
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/turf/open/floor/plasteel/darkblue,
+/turf/open/floor/plasteel/darkwarning/side{
+	tag = "icon-black_warn_side (EAST)";
+	icon_state = "black_warn_side";
+	dir = 4
+	},
 /area/security/east)
 "ayN" = (
 /turf/open/floor/plasteel{
@@ -15950,6 +16021,7 @@
 	icon_state = "4-8";
 	pixel_y = 0
 	},
+/obj/structure/fans/tiny,
 /turf/open/floor/plating{
 	icon_state = "warnplate";
 	dir = 4
@@ -18687,7 +18759,11 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
-/turf/open/floor/plasteel/darkvault/delivary,
+/turf/open/floor/plasteel/darkwarning/side{
+	tag = "icon-black_warn_side (NORTH)";
+	icon_state = "black_warn_side";
+	dir = 1
+	},
 /area/security/west)
 "aFJ" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
@@ -18709,7 +18785,11 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
-/turf/open/floor/plasteel/darkvault/delivary,
+/turf/open/floor/plasteel/darkwarning/side{
+	tag = "icon-black_warn_side (NORTH)";
+	icon_state = "black_warn_side";
+	dir = 1
+	},
 /area/security/west)
 "aFM" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
@@ -19280,10 +19360,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
-/turf/open/floor/plasteel{
-	icon_state = "bot";
-	dir = 1
-	},
+/turf/open/floor/plasteel/warning/side,
 /area/engine/equipment_room)
 "aGH" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
@@ -19406,6 +19483,7 @@
 	name = "EXTERNAL AIRLOCK";
 	pixel_x = 32
 	},
+/obj/structure/fans/tiny,
 /turf/open/floor/plating{
 	icon_state = "warnplate";
 	dir = 1
@@ -21223,9 +21301,10 @@
 "aJT" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/machinery/door/firedoor,
-/turf/open/floor/plasteel{
-	dir = 8;
-	icon_state = "redcorner"
+/turf/open/floor/plasteel/warning/side{
+	tag = "icon-plasteel_warn_side (EAST)";
+	icon_state = "plasteel_warn_side";
+	dir = 4
 	},
 /area/hallway/primary/fore)
 "aJU" = (
@@ -21235,16 +21314,21 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/firedoor,
-/turf/open/floor/plasteel,
+/turf/open/floor/plasteel/warning/side{
+	tag = "icon-plasteel_warn_side (EAST)";
+	icon_state = "plasteel_warn_side";
+	dir = 4
+	},
 /area/hallway/primary/fore)
 "aJV" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	req_access_txt = "0"
 	},
 /obj/machinery/door/firedoor,
-/turf/open/floor/plasteel{
-	dir = 2;
-	icon_state = "redcorner"
+/turf/open/floor/plasteel/warning/side{
+	tag = "icon-plasteel_warn_side (EAST)";
+	icon_state = "plasteel_warn_side";
+	dir = 4
 	},
 /area/hallway/primary/fore)
 "aJW" = (
@@ -26941,7 +27025,6 @@
 	supply_display = 1
 	},
 /obj/item/device/megaphone/cargo,
-/obj/item/weapon/paper/notice_show,
 /turf/open/floor/plasteel,
 /area/quartermaster/storage)
 "aUi" = (
@@ -28373,10 +28456,7 @@
 	name = "Power Monitoring";
 	req_access_txt = "32"
 	},
-/turf/open/floor/plasteel{
-	icon_state = "bot";
-	dir = 1
-	},
+/turf/open/floor/plasteel/warning/side,
 /area/engine/engine_smes)
 "aWz" = (
 /obj/structure/cable/yellow{
@@ -28538,21 +28618,19 @@
 /obj/structure/chair{
 	dir = 4
 	},
-/turf/open/floor/plating{
-	tag = "icon-platingdmg1";
-	icon_state = "platingdmg1"
+/turf/open/floor/plating/warnplate{
+	dir = 1
 	},
 /area/hallway/secondary/entry)
 "aWQ" = (
 /obj/machinery/light/small,
-/turf/open/floor/plating{
-	icon_state = "warnplate";
+/turf/open/floor/plating/warnplate{
 	dir = 1
 	},
 /area/hallway/secondary/entry)
 "aWR" = (
-/turf/open/floor/plating{
-	icon_state = "warnplate"
+/turf/open/floor/plating/warnplate{
+	dir = 1
 	},
 /area/hallway/secondary/entry)
 "aWS" = (
@@ -29785,9 +29863,10 @@
 /obj/machinery/door/airlock/glass{
 	name = "Fore Primary Hallway"
 	},
-/turf/open/floor/plasteel{
-	dir = 8;
-	icon_state = "redcorner"
+/turf/open/floor/plasteel/warning/side{
+	tag = "icon-plasteel_warn_side (EAST)";
+	icon_state = "plasteel_warn_side";
+	dir = 4
 	},
 /area/hallway/primary/fore)
 "aYW" = (
@@ -29800,7 +29879,11 @@
 /obj/machinery/door/airlock/glass{
 	name = "Fore Primary Hallway"
 	},
-/turf/open/floor/plasteel,
+/turf/open/floor/plasteel/warning/side{
+	tag = "icon-plasteel_warn_side (EAST)";
+	icon_state = "plasteel_warn_side";
+	dir = 4
+	},
 /area/hallway/primary/fore)
 "aYX" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
@@ -29810,9 +29893,10 @@
 /obj/machinery/door/airlock/glass{
 	name = "Fore Primary Hallway"
 	},
-/turf/open/floor/plasteel{
-	dir = 2;
-	icon_state = "redcorner"
+/turf/open/floor/plasteel/warning/side{
+	tag = "icon-plasteel_warn_side (EAST)";
+	icon_state = "plasteel_warn_side";
+	dir = 4
 	},
 /area/hallway/primary/fore)
 "aYY" = (
@@ -30235,8 +30319,8 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/open/floor/plasteel{
-	icon_state = "dark"
+/turf/open/floor/plasteel/darkwarning/corner{
+	dir = 8
 	},
 /area/ai_monitored/turret_protected/ai)
 "aZJ" = (
@@ -30248,8 +30332,8 @@
 	icon_state = "0-8";
 	d2 = 8
 	},
-/turf/open/floor/plasteel{
-	icon_state = "dark"
+/turf/open/floor/plasteel/darkwarning{
+	dir = 1
 	},
 /area/ai_monitored/turret_protected/ai)
 "aZK" = (
@@ -30276,8 +30360,8 @@
 	tag = ""
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/turf/open/floor/plasteel{
-	icon_state = "dark"
+/turf/open/floor/plasteel/darkwarning/corner{
+	dir = 4
 	},
 /area/ai_monitored/turret_protected/ai)
 "aZL" = (
@@ -31040,9 +31124,10 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/turf/open/floor/plasteel{
-	icon_state = "bot";
-	dir = 1
+/turf/open/floor/plasteel/warning/side{
+	tag = "icon-plasteel_warn_side (EAST)";
+	icon_state = "plasteel_warn_side";
+	dir = 4
 	},
 /area/engine/engineering)
 "baZ" = (
@@ -31112,6 +31197,7 @@
 	icon_state = "4-8";
 	pixel_y = 0
 	},
+/obj/structure/fans/tiny,
 /turf/open/floor/plating{
 	icon_state = "warnplate";
 	dir = 4
@@ -31639,9 +31725,10 @@
 	dir = 4
 	},
 /obj/machinery/door/firedoor,
-/turf/open/floor/plasteel{
-	dir = 1;
-	icon_state = "neutralcorner"
+/turf/open/floor/plasteel/warning/side{
+	tag = "icon-plasteel_warn_side (NORTH)";
+	icon_state = "plasteel_warn_side";
+	dir = 1
 	},
 /area/hallway/primary/central)
 "bbU" = (
@@ -32682,7 +32769,11 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/door/firedoor,
-/turf/open/floor/plasteel,
+/turf/open/floor/plasteel/warning/side{
+	tag = "icon-plasteel_warn_side (NORTH)";
+	icon_state = "plasteel_warn_side";
+	dir = 1
+	},
 /area/hallway/primary/central)
 "bdA" = (
 /obj/structure/cable/yellow{
@@ -33104,7 +33195,6 @@
 	charge = 100;
 	maxcharge = 15000
 	},
-/obj/item/weapon/paper/notice_show,
 /turf/open/floor/plasteel{
 	dir = 8;
 	icon_state = "neutralcorner"
@@ -33903,9 +33993,10 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/open/floor/plasteel{
-	dir = 2;
-	icon_state = "neutralcorner"
+/turf/open/floor/plasteel/warning/side{
+	tag = "icon-plasteel_warn_side (NORTH)";
+	icon_state = "plasteel_warn_side";
+	dir = 1
 	},
 /area/hallway/primary/central)
 "bfk" = (
@@ -34070,9 +34161,10 @@
 	pixel_y = -22
 	},
 /obj/machinery/door/firedoor,
-/turf/open/floor/plasteel{
-	dir = 8;
-	icon_state = "neutralcorner"
+/turf/open/floor/plasteel/warning/side{
+	tag = "icon-plasteel_warn_side (NORTH)";
+	icon_state = "plasteel_warn_side";
+	dir = 1
 	},
 /area/hallway/primary/central)
 "bfx" = (
@@ -35838,9 +35930,10 @@
 "biv" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/machinery/door/firedoor,
-/turf/open/floor/plasteel{
-	dir = 8;
-	icon_state = "neutralcorner"
+/turf/open/floor/plasteel/warning/side{
+	tag = "icon-plasteel_warn_side (WEST)";
+	icon_state = "plasteel_warn_side";
+	dir = 8
 	},
 /area/hallway/primary/central)
 "biw" = (
@@ -35851,16 +35944,21 @@
 	},
 /obj/structure/disposalpipe/segment,
 /obj/machinery/door/firedoor,
-/turf/open/floor/plasteel,
+/turf/open/floor/plasteel/warning/side{
+	tag = "icon-plasteel_warn_side (WEST)";
+	icon_state = "plasteel_warn_side";
+	dir = 8
+	},
 /area/hallway/primary/central)
 "bix" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	req_access_txt = "0"
 	},
 /obj/machinery/door/firedoor,
-/turf/open/floor/plasteel{
-	dir = 4;
-	icon_state = "neutralcorner"
+/turf/open/floor/plasteel/warning/side{
+	tag = "icon-plasteel_warn_side (WEST)";
+	icon_state = "plasteel_warn_side";
+	dir = 8
 	},
 /area/hallway/primary/central)
 "biy" = (
@@ -36145,9 +36243,10 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/turf/open/floor/plasteel{
-	icon_state = "bot";
-	dir = 1
+/turf/open/floor/plasteel/warning/side{
+	tag = "icon-plasteel_warn_side (EAST)";
+	icon_state = "plasteel_warn_side";
+	dir = 4
 	},
 /area/engine/engineering)
 "biT" = (
@@ -36722,9 +36821,10 @@
 /area/hallway/primary/port)
 "bjQ" = (
 /obj/machinery/door/firedoor,
-/turf/open/floor/plasteel{
-	dir = 1;
-	icon_state = "brown"
+/turf/open/floor/plasteel/warning/side{
+	tag = "icon-plasteel_warn_side (NORTH)";
+	icon_state = "plasteel_warn_side";
+	dir = 1
 	},
 /area/hallway/primary/port)
 "bjR" = (
@@ -37314,7 +37414,9 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
-/turf/open/floor/plating,
+/turf/open/floor/plating/warnplate{
+	dir = 4
+	},
 /area/engine/break_room)
 "bkN" = (
 /obj/structure/shuttle/engine/propulsion{
@@ -37466,7 +37568,6 @@
 	pixel_x = 28;
 	pixel_y = 0
 	},
-/obj/item/toy/plushie/robo_corgi,
 /turf/open/floor/plasteel{
 	icon_state = "dark"
 	},
@@ -38297,10 +38398,7 @@
 /obj/machinery/door/airlock/glass{
 	name = "Starboard Primary Hallway"
 	},
-/turf/open/floor/plasteel{
-	dir = 1;
-	icon_state = "yellowcorner"
-	},
+/turf/open/floor/plasteel/warning/side,
 /area/hallway/primary/starboard)
 "bmy" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
@@ -38378,7 +38476,6 @@
 	pixel_x = 0;
 	pixel_y = 32
 	},
-/obj/machinery/door/firedoor,
 /turf/open/floor/plasteel{
 	dir = 1;
 	icon_state = "yellowcorner"
@@ -38433,10 +38530,7 @@
 	dir = 2;
 	icon_state = "pipe-c"
 	},
-/turf/open/floor/plasteel{
-	dir = 1;
-	icon_state = "yellowcorner"
-	},
+/turf/open/floor/plasteel/warning/side,
 /area/hallway/primary/starboard)
 "bmJ" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
@@ -39315,7 +39409,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/open/floor/plasteel,
+/turf/open/floor/plasteel/warning/side,
 /area/hallway/primary/starboard)
 "bon" = (
 /obj/structure/cable/yellow{
@@ -39459,7 +39553,7 @@
 	icon_state = "pipe-c";
 	dir = 1
 	},
-/turf/open/floor/plasteel,
+/turf/open/floor/plasteel/warning/side,
 /area/hallway/primary/starboard)
 "box" = (
 /obj/structure/cable/yellow{
@@ -39763,7 +39857,11 @@
 	dir = 4
 	},
 /obj/machinery/door/firedoor,
-/turf/open/floor/plasteel,
+/turf/open/floor/plasteel/warning/side{
+	tag = "icon-plasteel_warn_side (NORTH)";
+	icon_state = "plasteel_warn_side";
+	dir = 1
+	},
 /area/hallway/secondary/entry)
 "boZ" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
@@ -39814,7 +39912,11 @@
 	dir = 4
 	},
 /obj/machinery/door/firedoor,
-/turf/open/floor/plasteel,
+/turf/open/floor/plasteel/warning/side{
+	tag = "icon-plasteel_warn_side (NORTH)";
+	icon_state = "plasteel_warn_side";
+	dir = 1
+	},
 /area/hallway/primary/port)
 "bpe" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
@@ -40128,9 +40230,10 @@
 "bpy" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/machinery/door/firedoor,
-/turf/open/floor/plasteel{
-	dir = 1;
-	icon_state = "neutralcorner"
+/turf/open/floor/plasteel/warning/side{
+	tag = "icon-plasteel_warn_side (WEST)";
+	icon_state = "plasteel_warn_side";
+	dir = 8
 	},
 /area/hallway/primary/central)
 "bpz" = (
@@ -40401,10 +40504,7 @@
 /obj/machinery/door/airlock/glass{
 	name = "Starboard Primary Hallway"
 	},
-/turf/open/floor/plasteel{
-	dir = 8;
-	icon_state = "cautioncorner"
-	},
+/turf/open/floor/plasteel/warning/side,
 /area/hallway/primary/starboard)
 "bpU" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
@@ -40448,6 +40548,10 @@
 	dir = 2;
 	initialize_directions = 13
 	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 0;
+	pixel_y = -30
+	},
 /turf/open/floor/plasteel{
 	dir = 8;
 	icon_state = "cautioncorner"
@@ -40471,14 +40575,8 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
-/obj/item/device/radio/intercom{
-	name = "Station Intercom (General)";
-	pixel_y = -29
-	},
-/turf/open/floor/plasteel{
-	dir = 8;
-	icon_state = "cautioncorner"
-	},
+/obj/machinery/door/firedoor,
+/turf/open/floor/plasteel/warning/side,
 /area/hallway/primary/starboard)
 "bqa" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
@@ -40748,10 +40846,7 @@
 	pixel_x = -26;
 	pixel_y = 0
 	},
-/turf/open/floor/plasteel{
-	icon_state = "vault";
-	dir = 8
-	},
+/turf/open/floor/plasteel/darkwarning,
 /area/ai_monitored/turret_protected/aisat)
 "bqD" = (
 /obj/machinery/teleport/station,
@@ -40761,17 +40856,11 @@
 	pixel_x = 0;
 	pixel_y = 32
 	},
-/turf/open/floor/plasteel{
-	icon_state = "vault";
-	dir = 8
-	},
+/turf/open/floor/plasteel/darkwarning,
 /area/ai_monitored/turret_protected/aisat)
 "bqE" = (
 /obj/machinery/teleport/hub,
-/turf/open/floor/plasteel{
-	icon_state = "vault";
-	dir = 8
-	},
+/turf/open/floor/plasteel/darkwarning,
 /area/ai_monitored/turret_protected/aisat)
 "bqF" = (
 /turf/closed/wall/r_wall,
@@ -41002,7 +41091,11 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/door/firedoor,
-/turf/open/floor/plasteel,
+/turf/open/floor/plasteel/warning/side{
+	tag = "icon-plasteel_warn_side (NORTH)";
+	icon_state = "plasteel_warn_side";
+	dir = 1
+	},
 /area/hallway/secondary/entry)
 "bqY" = (
 /obj/structure/cable/yellow{
@@ -41076,7 +41169,11 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/door/firedoor,
-/turf/open/floor/plasteel,
+/turf/open/floor/plasteel/warning/side{
+	tag = "icon-plasteel_warn_side (NORTH)";
+	icon_state = "plasteel_warn_side";
+	dir = 1
+	},
 /area/hallway/primary/port)
 "bre" = (
 /obj/structure/cable/yellow{
@@ -41167,9 +41264,10 @@
 "brm" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
-/turf/open/floor/plasteel{
-	dir = 8;
-	icon_state = "brown"
+/turf/open/floor/plasteel/warning/side{
+	tag = "icon-plasteel_warn_side (WEST)";
+	icon_state = "plasteel_warn_side";
+	dir = 8
 	},
 /area/hallway/primary/port)
 "brn" = (
@@ -41181,9 +41279,10 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/firedoor,
-/turf/open/floor/plasteel{
-	dir = 4;
-	icon_state = "brown"
+/turf/open/floor/plasteel/warning/side{
+	tag = "icon-plasteel_warn_side (WEST)";
+	icon_state = "plasteel_warn_side";
+	dir = 8
 	},
 /area/hallway/primary/port)
 "bro" = (
@@ -41644,7 +41743,7 @@
 	d2 = 4;
 	icon_state = "1-4"
 	},
-/turf/open/floor/plasteel,
+/turf/open/floor/plasteel/warning/side,
 /area/engine/break_room)
 "brW" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
@@ -41759,35 +41858,26 @@
 	},
 /area/ai_monitored/storage/AIlobby)
 "bsi" = (
-/obj/structure/window/reinforced{
-	dir = 4;
-	pixel_x = 0
-	},
 /obj/machinery/ai_status_display{
 	pixel_y = 32
 	},
-/obj/item/weapon/twohanded/required/kirbyplants{
-	icon_state = "plant-21";
-	layer = 4.1;
-	pixel_x = -3;
-	pixel_y = 3;
-	tag = "icon-plant-21"
+/obj/structure/transit_tube/station/reverse/flipped{
+	tag = "icon-closed_terminus1 (NORTH)";
+	icon_state = "closed_terminus1";
+	dir = 1
 	},
-/turf/open/floor/plasteel{
-	icon_state = "dark"
+/turf/open/floor/plasteel/darkwarning{
+	dir = 10
 	},
 /area/ai_monitored/storage/AIlobby)
 "bsj" = (
-/obj/structure/window/reinforced{
+/obj/structure/transit_tube/curved{
+	tag = "icon-curved0 (WEST)";
+	icon_state = "curved0";
 	dir = 8
 	},
-/obj/structure/lattice,
-/obj/structure/transit_tube/curved/flipped{
-	tag = "icon-curved1 (EAST)";
-	icon_state = "curved1";
-	dir = 4
-	},
-/turf/open/space,
+/obj/structure/window/reinforced/fulltile,
+/turf/open/floor/plating,
 /area/space)
 "bsk" = (
 /turf/open/floor/plasteel/red/side{
@@ -41804,13 +41894,13 @@
 	},
 /area/shuttle/escape)
 "bsn" = (
-/obj/structure/window/reinforced{
+/obj/structure/transit_tube/curved/flipped{
+	tag = "icon-curved1 (EAST)";
+	icon_state = "curved1";
 	dir = 4
 	},
-/obj/structure/transit_tube/curved{
-	tag = "icon-curved0 (WEST)";
-	icon_state = "curved0";
-	dir = 8
+/obj/structure/window/reinforced{
+	dir = 4
 	},
 /turf/open/space,
 /area/space)
@@ -41822,13 +41912,13 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/obj/item/weapon/twohanded/required/kirbyplants{
-	icon_state = "plant-22"
+/obj/structure/transit_tube/horizontal,
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
 	},
-/turf/open/floor/plasteel{
-	dir = 1;
-	icon_state = "darkbluecorners"
-	},
+/turf/open/floor/plasteel/darkwarning/corner,
 /area/ai_monitored/storage/satellite)
 "bsp" = (
 /obj/structure/window/reinforced{
@@ -41841,13 +41931,14 @@
 /obj/machinery/airalarm{
 	pixel_y = 28
 	},
-/obj/machinery/atmospherics/components/unary/vent_pump{
-	dir = 2;
-	on = 1
+/obj/structure/transit_tube/station/reverse,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
-/turf/open/floor/plasteel{
-	dir = 1;
-	icon_state = "darkbluecorners"
+/turf/open/floor/plasteel/darkwarning{
+	dir = 6
 	},
 /area/ai_monitored/storage/satellite)
 "bsq" = (
@@ -41855,9 +41946,13 @@
 	dir = 1;
 	pixel_y = 1
 	},
+/obj/item/weapon/twohanded/required/kirbyplants{
+	icon_state = "plant-22"
+	},
 /obj/structure/cable{
-	tag = "icon-2-4";
-	icon_state = "2-4"
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
 /turf/open/floor/plasteel{
 	dir = 1;
@@ -41872,8 +41967,8 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/structure/cable{
-	tag = "icon-4-8";
-	icon_state = "4-8"
+	d2 = 8;
+	icon_state = "0-8"
 	},
 /turf/open/floor/plasteel{
 	dir = 1;
@@ -41889,8 +41984,8 @@
 	dir = 6
 	},
 /obj/structure/cable{
-	tag = "icon-4-8";
-	icon_state = "4-8"
+	icon_state = "0-4";
+	d2 = 4
 	},
 /turf/open/floor/plasteel{
 	dir = 1;
@@ -42475,9 +42570,10 @@
 /obj/machinery/door/airlock/glass{
 	name = "Port Primary Hallway"
 	},
-/turf/open/floor/plasteel{
-	dir = 1;
-	icon_state = "neutralcorner"
+/turf/open/floor/plasteel/warning/side{
+	tag = "icon-plasteel_warn_side (NORTH)";
+	icon_state = "plasteel_warn_side";
+	dir = 1
 	},
 /area/hallway/primary/port)
 "bth" = (
@@ -42532,7 +42628,6 @@
 	},
 /obj/structure/table/wood,
 /obj/item/device/assembly/flash/handheld,
-/obj/item/weapon/paper/notice_show,
 /turf/open/floor/wood,
 /area/crew_quarters/heads)
 "btl" = (
@@ -43191,9 +43286,6 @@
 	icon_state = "4-8";
 	pixel_y = 0
 	},
-/obj/structure/chair/office/dark{
-	dir = 1
-	},
 /obj/machinery/atmospherics/components/unary/vent_pump{
 	on = 1
 	},
@@ -43202,41 +43294,30 @@
 	},
 /area/ai_monitored/storage/AIlobby)
 "buu" = (
-/obj/structure/transit_tube/curved,
 /obj/structure/cable{
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8";
 	pixel_y = 0
 	},
-/obj/structure/window/reinforced{
-	dir = 4;
-	pixel_x = 0
-	},
-/turf/open/floor/plasteel{
-	icon_state = "dark"
+/turf/open/floor/plasteel/darkwarning{
+	dir = 4
 	},
 /area/ai_monitored/storage/AIlobby)
 "buv" = (
-/obj/structure/lattice/catwalk,
+/obj/effect/spawner/structure/window/reinforced,
 /obj/structure/cable{
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8";
 	pixel_y = 0
-	},
-/obj/structure/window/reinforced{
-	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 6
 	},
-/turf/open/space,
+/turf/open/floor/plating,
 /area/space)
 "buw" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 4
-	},
 /obj/structure/lattice/catwalk,
 /obj/structure/cable{
 	d1 = 4;
@@ -43244,12 +43325,17 @@
 	icon_state = "4-8";
 	pixel_y = 0
 	},
-/turf/open/space,
-/area/space)
-"bux" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
+/obj/structure/transit_tube/curved{
+	tag = "icon-curved0 (EAST)";
+	icon_state = "curved0";
+	dir = 4
+	},
+/turf/open/space,
+/area/space)
+"bux" = (
 /obj/structure/lattice/catwalk,
 /obj/structure/cable{
 	d1 = 4;
@@ -43258,6 +43344,9 @@
 	pixel_y = 0
 	},
 /obj/structure/transit_tube/crossing/horizontal,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
+	},
 /turf/open/space,
 /area/space)
 "buy" = (
@@ -43315,14 +43404,19 @@
 /area/shuttle/escape)
 "buC" = (
 /obj/structure/lattice/catwalk,
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 4
-	},
 /obj/structure/cable{
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8";
 	pixel_y = 0
+	},
+/obj/structure/transit_tube/curved/flipped{
+	tag = "icon-curved1 (WEST)";
+	icon_state = "curved1";
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
 	},
 /turf/open/space,
 /area/space)
@@ -43331,14 +43425,14 @@
 	dir = 4
 	},
 /obj/structure/lattice/catwalk,
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 4
-	},
 /obj/structure/cable{
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8";
 	pixel_y = 0
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
 	},
 /turf/open/space,
 /area/space)
@@ -43346,34 +43440,33 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/obj/structure/table,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8";
-	pixel_y = 0
-	},
-/obj/structure/transit_tube/curved/flipped,
-/turf/open/floor/plasteel{
-	icon_state = "dark"
+/obj/item/toy/plushie/robo_corgi,
+/turf/open/floor/plasteel/darkwarning{
+	dir = 4
 	},
 /area/ai_monitored/storage/satellite)
 "buF" = (
-/obj/structure/cable{
-	d2 = 8;
-	icon_state = "0-8"
-	},
-/obj/machinery/atmospherics/pipe/manifold/supply/hidden{
-	dir = 4
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 10
 	},
 /turf/open/floor/plasteel{
 	icon_state = "dark"
 	},
 /area/ai_monitored/storage/satellite)
 "buG" = (
-/obj/structure/cable,
+/obj/machinery/atmospherics/components/unary/vent_pump{
+	dir = 2;
+	on = 1
+	},
 /turf/open/floor/plasteel{
 	icon_state = "dark"
 	},
@@ -43898,7 +43991,11 @@
 	dir = 4
 	},
 /obj/machinery/door/firedoor,
-/turf/open/floor/plasteel,
+/turf/open/floor/plasteel/warning/side{
+	tag = "icon-plasteel_warn_side (NORTH)";
+	icon_state = "plasteel_warn_side";
+	dir = 1
+	},
 /area/hallway/primary/port)
 "bvt" = (
 /obj/structure/cable/yellow{
@@ -43998,7 +44095,11 @@
 /obj/machinery/door/airlock/glass{
 	name = "Port Primary Hallway"
 	},
-/turf/open/floor/plasteel,
+/turf/open/floor/plasteel/warning/side{
+	tag = "icon-plasteel_warn_side (NORTH)";
+	icon_state = "plasteel_warn_side";
+	dir = 1
+	},
 /area/hallway/primary/port)
 "bvA" = (
 /obj/structure/cable/yellow{
@@ -44775,21 +44876,15 @@
 	},
 /area/ai_monitored/storage/AIlobby)
 "bwO" = (
-/obj/structure/window/reinforced{
-	dir = 4;
-	pixel_x = 0
-	},
 /obj/structure/sign/securearea{
 	pixel_y = -32
 	},
-/obj/structure/transit_tube/station/reverse{
-	dir = 8
+/obj/item/weapon/twohanded/required/kirbyplants{
+	icon_state = "plant-21";
+	layer = 4.1
 	},
-/obj/structure/transit_tube_pod{
-	dir = 1
-	},
-/turf/open/floor/plasteel{
-	icon_state = "dark"
+/turf/open/floor/plasteel/darkwarning{
+	dir = 4
 	},
 /area/ai_monitored/storage/AIlobby)
 "bwP" = (
@@ -44839,19 +44934,22 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/obj/structure/transit_tube/station/reverse/flipped{
-	dir = 8
+/obj/structure/table,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
 	},
-/turf/open/floor/plasteel{
-	icon_state = "darkbluecorners";
-	dir = 8
+/obj/item/weapon/twohanded/required/kirbyplants{
+	icon_state = "plant-07";
+	name = "Photosynthetic Potted plant";
+	pixel_y = 10;
+	tag = "icon-plant-07"
+	},
+/turf/open/floor/plasteel/darkwarning{
+	dir = 4
 	},
 /area/ai_monitored/storage/satellite)
 "bwU" = (
 /obj/structure/window/reinforced,
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 5
-	},
 /obj/machinery/light/small,
 /obj/machinery/camera{
 	c_tag = "MiniSat Exterior Access";
@@ -44868,15 +44966,15 @@
 	d2 = 4;
 	icon_state = "0-4"
 	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 5
+	},
 /turf/open/floor/plasteel{
 	icon_state = "darkbluecorners";
 	dir = 8
 	},
 /area/ai_monitored/storage/satellite)
 "bwV" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 4
-	},
 /obj/structure/window/reinforced,
 /obj/structure/cable/yellow{
 	d1 = 4;
@@ -44884,6 +44982,7 @@
 	icon_state = "4-8";
 	pixel_y = 0
 	},
+/obj/machinery/atmospherics/pipe/manifold/supply/hidden,
 /turf/open/floor/plasteel{
 	icon_state = "darkbluecorners";
 	dir = 8
@@ -45351,9 +45450,10 @@
 	dir = 4
 	},
 /obj/machinery/door/firedoor,
-/turf/open/floor/plasteel{
-	dir = 8;
-	icon_state = "neutralcorner"
+/turf/open/floor/plasteel/warning/side{
+	tag = "icon-plasteel_warn_side (NORTH)";
+	icon_state = "plasteel_warn_side";
+	dir = 1
 	},
 /area/hallway/primary/port)
 "bxE" = (
@@ -45433,9 +45533,10 @@
 /obj/machinery/door/airlock/glass{
 	name = "Port Primary Hallway"
 	},
-/turf/open/floor/plasteel{
-	dir = 8;
-	icon_state = "neutralcorner"
+/turf/open/floor/plasteel/warning/side{
+	tag = "icon-plasteel_warn_side (NORTH)";
+	icon_state = "plasteel_warn_side";
+	dir = 1
 	},
 /area/hallway/primary/port)
 "bxK" = (
@@ -45687,7 +45788,6 @@
 /obj/item/weapon/paper_bin,
 /obj/item/weapon/pen,
 /obj/structure/window/reinforced,
-/obj/item/weapon/paper/notice_show,
 /turf/open/floor/wood,
 /area/crew_quarters/captain_quarters)
 "byg" = (
@@ -46094,9 +46194,6 @@
 	},
 /area/atmos)
 "byS" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 4
-	},
 /obj/structure/lattice/catwalk,
 /obj/structure/cable{
 	d1 = 4;
@@ -46104,17 +46201,27 @@
 	icon_state = "4-8";
 	pixel_y = 0
 	},
-/obj/structure/transit_tube/curved{
-	tag = "icon-curved0 (EAST)";
-	icon_state = "curved0";
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
+	},
+/obj/structure/transit_tube/horizontal,
+/turf/open/space,
+/area/space)
+"byT" = (
+/obj/structure/transit_tube/horizontal,
+/obj/structure/lattice/catwalk,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8";
+	pixel_y = 0
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
 /turf/open/space,
 /area/space)
-"byT" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 4
-	},
+"byU" = (
 /obj/structure/lattice/catwalk,
 /obj/structure/cable{
 	d1 = 4;
@@ -46123,23 +46230,8 @@
 	pixel_y = 0
 	},
 /obj/structure/transit_tube/horizontal,
-/turf/open/space,
-/area/space)
-"byU" = (
-/obj/structure/lattice/catwalk,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
-	},
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8";
-	pixel_y = 0
-	},
-/obj/structure/transit_tube/curved/flipped{
-	tag = "icon-curved1 (WEST)";
-	icon_state = "curved1";
-	dir = 8
 	},
 /turf/open/space,
 /area/space)
@@ -47074,6 +47166,7 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
+/obj/structure/fans/tiny,
 /turf/open/floor/plating{
 	icon_state = "warnplate";
 	dir = 4
@@ -47310,7 +47403,11 @@
 	dir = 4
 	},
 /obj/machinery/door/firedoor,
-/turf/open/floor/plasteel,
+/turf/open/floor/plasteel/warning/side{
+	tag = "icon-plasteel_warn_side (NORTH)";
+	icon_state = "plasteel_warn_side";
+	dir = 1
+	},
 /area/hallway/secondary/entry)
 "bBb" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
@@ -47891,7 +47988,11 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/firedoor,
-/turf/open/floor/plasteel,
+/turf/open/floor/plasteel/warning/side{
+	tag = "icon-plasteel_warn_side (EAST)";
+	icon_state = "plasteel_warn_side";
+	dir = 4
+	},
 /area/hallway/primary/central)
 "bCa" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
@@ -47899,9 +48000,10 @@
 	},
 /obj/structure/disposalpipe/segment,
 /obj/machinery/door/firedoor,
-/turf/open/floor/plasteel{
-	dir = 4;
-	icon_state = "neutralcorner"
+/turf/open/floor/plasteel/warning/side{
+	tag = "icon-plasteel_warn_side (EAST)";
+	icon_state = "plasteel_warn_side";
+	dir = 4
 	},
 /area/hallway/primary/central)
 "bCb" = (
@@ -48080,9 +48182,10 @@
 	name = "Atmospherics";
 	req_access_txt = "24"
 	},
-/turf/open/floor/plasteel{
-	icon_state = "bot";
-	dir = 1
+/turf/open/floor/plasteel/warning/side{
+	tag = "icon-plasteel_warn_side (EAST)";
+	icon_state = "plasteel_warn_side";
+	dir = 4
 	},
 /area/atmos)
 "bCt" = (
@@ -50896,6 +50999,7 @@
 /obj/machinery/light/small{
 	dir = 8
 	},
+/obj/structure/fans/tiny,
 /turf/open/floor/plasteel/delivery,
 /area/hallway/secondary/entry)
 "bHu" = (
@@ -55763,9 +55867,10 @@
 "bPZ" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/machinery/door/firedoor,
-/turf/open/floor/plasteel{
-	dir = 1;
-	icon_state = "neutralcorner"
+/turf/open/floor/plasteel/warning/side{
+	tag = "icon-plasteel_warn_side (EAST)";
+	icon_state = "plasteel_warn_side";
+	dir = 4
 	},
 /area/hallway/primary/central)
 "bQa" = (
@@ -55773,9 +55878,10 @@
 	req_access_txt = "0"
 	},
 /obj/machinery/door/firedoor,
-/turf/open/floor/plasteel{
-	dir = 2;
-	icon_state = "neutralcorner"
+/turf/open/floor/plasteel/warning/side{
+	tag = "icon-plasteel_warn_side (EAST)";
+	icon_state = "plasteel_warn_side";
+	dir = 4
 	},
 /area/hallway/primary/central)
 "bQb" = (
@@ -61352,9 +61458,7 @@
 	dir = 4
 	},
 /obj/machinery/door/firedoor,
-/turf/open/floor/plasteel/neutral/side{
-	dir = 1
-	},
+/turf/open/floor/plasteel/warning/side,
 /area/hallway/primary/central)
 "bZR" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
@@ -61541,10 +61645,7 @@
 	pixel_x = 0;
 	pixel_y = 21
 	},
-/turf/open/floor/plasteel{
-	dir = 1;
-	icon_state = "neutralcorner"
-	},
+/turf/open/floor/plasteel/warning/side,
 /area/hallway/primary/central)
 "caf" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
@@ -61711,6 +61812,10 @@
 /turf/open/floor/plating,
 /area/crew_quarters/kitchen)
 "caw" = (
+/obj/item/clothing/mask/bandana/skull,
+/obj/item/clothing/mask/cigarette/rollie/trippy{
+	pixel_x = -8
+	},
 /turf/open/floor/plating{
 	icon_state = "panelscorched"
 	},
@@ -62836,10 +62941,7 @@
 	dir = 4
 	},
 /obj/machinery/door/firedoor,
-/turf/open/floor/plasteel{
-	dir = 8;
-	icon_state = "neutralcorner"
-	},
+/turf/open/floor/plasteel/warning/side,
 /area/hallway/primary/central)
 "cct" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
@@ -62982,10 +63084,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/open/floor/plasteel{
-	dir = 2;
-	icon_state = "neutralcorner"
-	},
+/turf/open/floor/plasteel/warning/side,
 /area/hallway/primary/central)
 "ccI" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
@@ -64519,9 +64618,10 @@
 	},
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/glass,
-/turf/open/floor/plasteel{
-	dir = 8;
-	icon_state = "bluecorner"
+/turf/open/floor/plasteel/warning/side{
+	tag = "icon-plasteel_warn_side (EAST)";
+	icon_state = "plasteel_warn_side";
+	dir = 4
 	},
 /area/hallway/primary/aft)
 "cfq" = (
@@ -64532,15 +64632,20 @@
 	},
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/glass,
-/turf/open/floor/plasteel,
+/turf/open/floor/plasteel/warning/side{
+	tag = "icon-plasteel_warn_side (EAST)";
+	icon_state = "plasteel_warn_side";
+	dir = 4
+	},
 /area/hallway/primary/aft)
 "cfr" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/glass,
-/turf/open/floor/plasteel{
-	dir = 2;
-	icon_state = "purplecorner"
+/turf/open/floor/plasteel/warning/side{
+	tag = "icon-plasteel_warn_side (EAST)";
+	icon_state = "plasteel_warn_side";
+	dir = 4
 	},
 /area/hallway/primary/aft)
 "cfs" = (
@@ -64879,6 +64984,7 @@
 	pixel_y = 0;
 	tag = ""
 	},
+/obj/structure/fans/tiny,
 /turf/open/floor/plating/airless,
 /area/maintenance/portsolar)
 "cfZ" = (
@@ -66994,7 +67100,7 @@
 	req_access_txt = "0";
 	req_one_access_txt = "24;150"
 	},
-/turf/open/floor/plating,
+/turf/open/floor/plating/warnplate/side,
 /area/atmos)
 "cjm" = (
 /obj/structure/sign/securearea{
@@ -67008,6 +67114,7 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
+/obj/structure/fans/tiny,
 /turf/open/floor/plating{
 	icon_state = "warnplate";
 	dir = 4
@@ -67756,6 +67863,7 @@
 	pixel_x = 0;
 	pixel_y = 32
 	},
+/obj/structure/fans/tiny,
 /turf/open/floor/plating{
 	tag = "icon-warnplate (WEST)";
 	icon_state = "warnplate";
@@ -73571,6 +73679,8 @@
 	pixel_y = 2
 	},
 /obj/structure/table/glass,
+/obj/item/clothing/tie/armband/med,
+/obj/item/clothing/tie/armband/med,
 /turf/open/floor/plasteel{
 	dir = 8;
 	icon_state = "barber"
@@ -76255,7 +76365,6 @@
 	dir = 4
 	},
 /obj/item/weapon/storage/secure/briefcase,
-/obj/item/weapon/paper/notice_show,
 /turf/open/floor/plasteel{
 	dir = 8;
 	icon_state = "barber"
@@ -77659,9 +77768,10 @@
 	req_access_txt = "0"
 	},
 /obj/machinery/door/firedoor,
-/turf/open/floor/plasteel{
-	dir = 8;
-	icon_state = "bluecorner"
+/turf/open/floor/plasteel/warning/side{
+	tag = "icon-plasteel_warn_side (EAST)";
+	icon_state = "plasteel_warn_side";
+	dir = 4
 	},
 /area/hallway/primary/aft)
 "cAe" = (
@@ -77671,14 +77781,19 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/firedoor,
-/turf/open/floor/plasteel,
+/turf/open/floor/plasteel/warning/side{
+	tag = "icon-plasteel_warn_side (EAST)";
+	icon_state = "plasteel_warn_side";
+	dir = 4
+	},
 /area/hallway/primary/aft)
 "cAf" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/machinery/door/firedoor,
-/turf/open/floor/plasteel{
-	dir = 2;
-	icon_state = "neutralcorner"
+/turf/open/floor/plasteel/warning/side{
+	tag = "icon-plasteel_warn_side (EAST)";
+	icon_state = "plasteel_warn_side";
+	dir = 4
 	},
 /area/hallway/primary/aft)
 "cAg" = (
@@ -77773,7 +77888,6 @@
 	pixel_y = -5;
 	req_access_txt = "47"
 	},
-/obj/item/weapon/paper/notice_show,
 /turf/open/floor/plasteel{
 	tag = "icon-cafeteria (NORTHEAST)";
 	icon_state = "cafeteria";
@@ -80384,6 +80498,7 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
+/obj/structure/fans/tiny,
 /turf/open/floor/plating{
 	icon_state = "warnplate";
 	dir = 4
@@ -82519,9 +82634,10 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	req_access_txt = "0"
 	},
-/turf/open/floor/plasteel{
-	dir = 8;
-	icon_state = "neutralcorner"
+/turf/open/floor/plasteel/warning/side{
+	tag = "icon-plasteel_warn_side (EAST)";
+	icon_state = "plasteel_warn_side";
+	dir = 4
 	},
 /area/hallway/primary/aft)
 "cHQ" = (
@@ -87681,6 +87797,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/structure/fans/tiny,
 /turf/open/floor/plating{
 	icon_state = "warnplate";
 	dir = 4
@@ -87915,9 +88032,10 @@
 /obj/machinery/door/airlock/glass{
 	name = "Departure Lounge"
 	},
-/turf/open/floor/plasteel{
-	dir = 8;
-	icon_state = "neutralcorner"
+/turf/open/floor/plasteel/warning/side{
+	tag = "icon-plasteel_warn_side (EAST)";
+	icon_state = "plasteel_warn_side";
+	dir = 4
 	},
 /area/hallway/secondary/exit)
 "cQz" = (
@@ -87930,7 +88048,11 @@
 /obj/machinery/door/airlock/glass{
 	name = "Departure Lounge"
 	},
-/turf/open/floor/plasteel,
+/turf/open/floor/plasteel/warning/side{
+	tag = "icon-plasteel_warn_side (EAST)";
+	icon_state = "plasteel_warn_side";
+	dir = 4
+	},
 /area/hallway/secondary/exit)
 "cQA" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
@@ -87938,9 +88060,10 @@
 /obj/machinery/door/airlock/glass{
 	name = "Departure Lounge"
 	},
-/turf/open/floor/plasteel{
-	dir = 2;
-	icon_state = "neutralcorner"
+/turf/open/floor/plasteel/warning/side{
+	tag = "icon-plasteel_warn_side (EAST)";
+	icon_state = "plasteel_warn_side";
+	dir = 4
 	},
 /area/hallway/secondary/exit)
 "cQB" = (
@@ -91136,6 +91259,7 @@
 	pixel_y = 0;
 	tag = ""
 	},
+/obj/structure/fans/tiny,
 /turf/open/floor/plating{
 	dir = 2;
 	icon_state = "warnplate"
@@ -92883,6 +93007,7 @@
 /obj/machinery/light/small{
 	dir = 4
 	},
+/obj/structure/fans/tiny,
 /turf/open/floor/plasteel{
 	icon_state = "delivery"
 	},
@@ -95411,6 +95536,7 @@
 /turf/closed/wall,
 /area/maintenance/brsmaint)
 "ddJ" = (
+/obj/structure/fans/tiny,
 /turf/open/floor/plasteel/delivery,
 /area/hallway/secondary/entry)
 "ddK" = (
@@ -96952,13 +97078,9 @@
 /turf/open/floor/plasteel,
 /area/hallway/primary/port)
 "dgX" = (
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/structure/lattice,
-/obj/structure/lattice/catwalk,
+/obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/turf/open/space,
+/turf/open/floor/plating,
 /area/space)
 "dgY" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
@@ -97098,6 +97220,129 @@
 	dir = 5
 	},
 /area/security/security_gear)
+"dhs" = (
+/obj/structure/fans/tiny,
+/turf/open/floor/plating,
+/area/maintenance/fsmaint)
+"dht" = (
+/obj/structure/sign/securearea{
+	desc = "A warning sign which reads 'EXTERNAL AIRLOCK'";
+	icon_state = "space";
+	layer = 4;
+	name = "EXTERNAL AIRLOCK";
+	pixel_x = 0;
+	pixel_y = 32
+	},
+/obj/structure/fans/tiny,
+/turf/open/floor/plating{
+	icon_state = "warnplate";
+	dir = 4
+	},
+/area/maintenance/aft)
+"dhu" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
+	},
+/obj/machinery/door/firedoor,
+/turf/open/floor/plasteel/warning/side,
+/area/hallway/primary/starboard)
+"dhv" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
+	},
+/obj/item/device/radio/intercom{
+	freerange = 0;
+	frequency = 1459;
+	name = "Station Intercom (General)";
+	pixel_x = 0;
+	pixel_y = 28
+	},
+/turf/open/floor/plasteel{
+	dir = 1;
+	icon_state = "yellowcorner"
+	},
+/area/hallway/primary/starboard)
+"dhw" = (
+/turf/open/floor/plating/warnplate{
+	dir = 4
+	},
+/area/engine/break_room)
+"dhx" = (
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/door/firedoor,
+/turf/open/floor/plasteel/warning/side,
+/area/hallway/primary/starboard)
+"dhy" = (
+/turf/open/floor/plating/warnplate{
+	dir = 4
+	},
+/area/engine/break_room)
+"dhz" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 4
+	},
+/obj/machinery/light,
+/turf/open/floor/plasteel{
+	dir = 8;
+	icon_state = "cautioncorner"
+	},
+/area/hallway/primary/starboard)
+"dhA" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/obj/machinery/door/firedoor,
+/turf/open/floor/plasteel/warning/side{
+	tag = "icon-plasteel_warn_side (EAST)";
+	icon_state = "plasteel_warn_side";
+	dir = 4
+	},
+/area/hallway/primary/central)
+"dhB" = (
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/door/firedoor,
+/turf/open/floor/plasteel/warning/side,
+/area/hallway/primary/central)
+"dhC" = (
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/door/firedoor,
+/turf/open/floor/plasteel/warning/side,
+/area/hallway/primary/central)
+"dhD" = (
+/obj/structure/falsewall,
+/turf/open/floor/plating,
+/area/hydroponics)
+"dhE" = (
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/fans/tiny,
+/turf/open/floor/plating{
+	icon_state = "warnplate";
+	dir = 8
+	},
+/area/maintenance/asmaint)
+"dhF" = (
+/obj/structure/fans/tiny,
+/turf/open/floor/plasteel{
+	icon_state = "delivery"
+	},
+/area/hallway/secondary/exit)
 
 (1,1,1) = {"
 aaa
@@ -106198,7 +106443,7 @@ aaa
 aaa
 aaa
 aaa
-aQI
+aSt
 aSt
 aSt
 aVw
@@ -106712,7 +106957,7 @@ aaa
 aaa
 aaa
 aaa
-aQI
+aSt
 aSt
 aSt
 aVw
@@ -112901,8 +113146,8 @@ bfd
 bfd
 bfd
 bfd
-bBg
-bDd
+bxD
+bjQ
 bEX
 bGD
 bIq
@@ -114224,7 +114469,7 @@ cyA
 czK
 bZy
 cBM
-cCO
+dhE
 cDI
 bZy
 aaa
@@ -115724,7 +115969,7 @@ blG
 bnH
 bpn
 beS
-bsY
+bpd
 bvs
 bxD
 apb
@@ -119061,7 +119306,7 @@ bfd
 bfd
 bie
 bjQ
-blT
+bjQ
 bie
 bfd
 bro
@@ -119327,7 +119572,7 @@ bvA
 bxK
 bzv
 bBv
-bDt
+bpy
 bFi
 bzv
 bIA
@@ -119337,7 +119582,7 @@ bNK
 bzv
 bzv
 bzv
-bDt
+bpy
 bzv
 bzv
 bYM
@@ -119834,14 +120079,14 @@ bih
 bjS
 bjS
 bjS
-bpz
+biv
 brp
 bjS
 bvC
 bvC
 bzx
 bjS
-bpz
+biv
 bjS
 bjS
 bIC
@@ -119851,7 +120096,7 @@ bNM
 bPy
 bNM
 bSQ
-bUs
+biv
 bVX
 bXn
 bPy
@@ -121655,7 +121900,7 @@ bNS
 bNS
 bMn
 bZQ
-bdz
+dhB
 ccs
 cdS
 cdS
@@ -122614,7 +122859,7 @@ aai
 aai
 aai
 aaa
-abU
+acC
 acC
 acC
 adI
@@ -123128,7 +123373,7 @@ aai
 aai
 aaa
 aaa
-abU
+acC
 acC
 acC
 adI
@@ -123760,7 +124005,7 @@ cXo
 cXJ
 cYo
 cYI
-cYo
+dhF
 cYI
 deg
 del
@@ -127309,7 +127554,7 @@ bWr
 bRE
 bMB
 cae
-bdz
+dhB
 ccH
 ceh
 cfx
@@ -127536,7 +127781,7 @@ aWb
 aXv
 aJW
 aJW
-bco
+bbT
 bdz
 bfw
 bgP
@@ -129092,7 +129337,7 @@ btI
 bwe
 byk
 bzX
-biv
+dhA
 bgR
 bFK
 bHj
@@ -129100,7 +129345,7 @@ bJf
 bKQ
 bMK
 bOi
-bPZ
+dhA
 bRJ
 bTr
 bUP
@@ -130075,7 +130320,7 @@ aaa
 aai
 aqC
 ahT
-ajc
+dhs
 ahT
 amc
 anv
@@ -131142,7 +131387,7 @@ biC
 bdS
 bmB
 bon
-bpU
+dhz
 btO
 btO
 bwl
@@ -131399,7 +131644,7 @@ bdS
 bdS
 bmC
 boq
-bpY
+bpU
 btO
 btP
 bwm
@@ -132939,8 +133184,8 @@ aaa
 aaa
 aaa
 bkA
-bmy
-bon
+dhu
+dhx
 bpZ
 btO
 btV
@@ -133197,8 +133442,8 @@ bhb
 bdW
 bdW
 bmE
-bos
-bqa
+bon
+bpU
 btW
 btW
 bws
@@ -133477,7 +133722,7 @@ bWF
 bXX
 bOk
 cav
-cau
+dhD
 cda
 cew
 cfG
@@ -133967,7 +134212,7 @@ bdW
 bhe
 bdW
 bdW
-bmy
+dhv
 bon
 bqc
 btW
@@ -134437,7 +134682,7 @@ aai
 abg
 abC
 acf
-acQ
+acf
 adp
 aem
 aff
@@ -135463,9 +135708,9 @@ aaa
 aan
 aai
 aaa
-abF
+abE
 acj
-abF
+abE
 ado
 aeo
 aeo
@@ -135768,7 +136013,7 @@ baR
 baR
 bmI
 bow
-bqa
+bpZ
 brR
 brN
 brN
@@ -140135,8 +140380,8 @@ aoL
 bhw
 avr
 bkM
-bmY
-bmY
+dhw
+dhw
 bsf
 bsg
 bus
@@ -141162,13 +141407,13 @@ atV
 bge
 atV
 aaa
-bkP
+bkO
 bnc
-bkP
+bkO
 aaa
-bwR
-buw
 aai
+buw
+aaa
 aai
 aqC
 bCq
@@ -141426,7 +141671,7 @@ aaa
 aai
 byS
 aaa
-aai
+aaa
 aai
 bCq
 bEB
@@ -142454,8 +142699,8 @@ aai
 aaa
 byT
 aaa
-aaa
 aai
+aaa
 aaa
 aai
 bGm
@@ -142711,8 +142956,8 @@ aai
 aaa
 byT
 aaa
-aaa
 aai
+aaa
 aaa
 aai
 bGm
@@ -143215,7 +143460,7 @@ aAR
 aAR
 azz
 atV
-bgh
+dht
 bcQ
 atW
 aqC
@@ -146821,7 +147066,7 @@ aaa
 aaa
 aai
 aaa
-buz
+byT
 aaa
 aai
 aaa
@@ -147078,7 +147323,7 @@ aaa
 aaa
 aai
 aaa
-buz
+byT
 aaa
 aai
 aaa
@@ -147592,7 +147837,7 @@ aai
 aai
 aai
 aai
-dfV
+bux
 aai
 aai
 aaa
@@ -148105,7 +148350,7 @@ aqC
 aqC
 aai
 aai
-bwS
+aai
 buC
 aai
 aai
