@@ -35,6 +35,36 @@
 	canSmoothWith = list(/turf/closed/indestructible/riveted/infinity)
 	smooth = SMOOTH_TRUE
 
+/turf/closed/wall/destiny
+	name = "ship wall"
+	icon = 'icons/turf/walls/destiny_wall.dmi'
+	canSmoothWith = list(
+	/turf/closed/wall,
+	/turf/closed/wall/r_wall,
+	/obj/structure/falsewall,
+	/obj/structure/falsewall/brass,
+	/obj/structure/falsewall/reinforced,
+	/turf/closed/wall/rust,
+	/turf/closed/wall/r_wall/rust,
+	/turf/closed/wall/clockwork,
+	/turf/closed/wall/destiny,
+	/turf/closed/wall/r_wall/destiny)
+
+/turf/closed/wall/r_wall/destiny
+	name = "reinforced ship wall"
+	icon = 'icons/turf/walls/destiny_reinforced_wall.dmi'
+	canSmoothWith = list(
+	/turf/closed/wall,
+	/turf/closed/wall/r_wall,
+	/obj/structure/falsewall,
+	/obj/structure/falsewall/brass,
+	/obj/structure/falsewall/reinforced,
+	/turf/closed/wall/rust,
+	/turf/closed/wall/r_wall/rust,
+	/turf/closed/wall/clockwork,
+	/turf/closed/wall/destiny,
+	/turf/closed/wall/r_wall/destiny)
+
 /turf/closed/wall/mineral/abductor/terror
 	canSmoothWith = list(/turf/closed/wall/mineral/abductor, /obj/structure/falsewall/abductor, /obj/machinery/door/airlock/abductor, /turf/closed/wall/mineral/abductor/terror)
 

@@ -10,12 +10,15 @@
 	max_integrity = 50
 	layer = LATTICE_LAYER //under pipes
 	var/obj/item/stack/rods/stored
-	canSmoothWith = list(/obj/structure/lattice,
+	canSmoothWith = list(
+	/obj/structure/lattice,
 	/turf/open/floor,
 	/turf/closed/wall,
 	/obj/structure/falsewall,
 	/turf/closed/indestructible/riveted/infinity,
-	/turf/closed/indestructible/riveted/darksteel)
+	/turf/closed/indestructible/riveted/darksteel,
+	/turf/closed/wall/destiny,
+	/turf/closed/wall/r_wall/destiny)
 	smooth = SMOOTH_MORE
 	//	flags = CONDUCT
 
