@@ -47,8 +47,7 @@
 	/turf/closed/wall/rust,
 	/turf/closed/wall/r_wall/rust,
 	/turf/closed/wall/clockwork,
-	/turf/closed/wall/destiny,
-	/turf/closed/wall/r_wall/destiny)
+	/turf/closed/wall/destiny)
 
 /turf/closed/wall/r_wall/destiny
 	name = "reinforced ship wall"
@@ -62,7 +61,6 @@
 	/turf/closed/wall/rust,
 	/turf/closed/wall/r_wall/rust,
 	/turf/closed/wall/clockwork,
-	/turf/closed/wall/destiny,
 	/turf/closed/wall/r_wall/destiny)
 
 /turf/closed/wall/mineral/abductor/terror
