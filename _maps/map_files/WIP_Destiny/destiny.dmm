@@ -1058,6 +1058,966 @@
 "cn" = (
 /turf/closed/wall/destiny,
 /area/space)
+"co" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/space)
+"cp" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/space)
+"cq" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/space)
+"cr" = (
+/obj/machinery/door/firedoor,
+/turf/open/floor/plasteel/black,
+/area/space)
+"cs" = (
+/obj/machinery/door/firedoor,
+/turf/open/floor/plasteel/black,
+/area/space)
+"ct" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/space)
+"cu" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/space)
+"cv" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/space)
+"cw" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/space)
+"cx" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/space)
+"cy" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/space)
+"cz" = (
+/obj/machinery/door/firedoor,
+/turf/open/floor/plasteel/black,
+/area/space)
+"cA" = (
+/obj/machinery/door/firedoor,
+/turf/open/floor/plasteel/black,
+/area/space)
+"cB" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/space)
+"cC" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/space)
+"cD" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/space)
+"cE" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/space)
+"cF" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/space)
+"cG" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/space)
+"cH" = (
+/obj/machinery/door/firedoor,
+/turf/open/floor/plasteel/black,
+/area/space)
+"cI" = (
+/obj/machinery/door/firedoor,
+/turf/open/floor/plasteel/black,
+/area/space)
+"cJ" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/space)
+"cK" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/space)
+"cL" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/space)
+"cM" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/space)
+"cN" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/space)
+"cO" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/space)
+"cP" = (
+/obj/machinery/door/firedoor,
+/turf/open/floor/plasteel/black,
+/area/space)
+"cQ" = (
+/obj/machinery/door/firedoor,
+/turf/open/floor/plasteel/black,
+/area/space)
+"cR" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/space)
+"cS" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/space)
+"cT" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/space)
+"cU" = (
+/obj/machinery/door/firedoor,
+/turf/open/floor/plasteel/black,
+/area/space)
+"cV" = (
+/obj/machinery/door/firedoor,
+/turf/open/floor/plasteel/black,
+/area/space)
+"cW" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/space)
+"cX" = (
+/turf/open/floor/plating,
+/area/space)
+"cY" = (
+/turf/open/floor/plating,
+/area/space)
+"cZ" = (
+/turf/open/floor/plating,
+/area/space)
+"da" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/maintenance{
+	req_access_txt = "0";
+	req_one_access_txt = "12;27;37"
+	},
+/turf/open/floor/plating,
+/area/space)
+"db" = (
+/turf/open/floor/plasteel{
+	icon_state = "freezerfloor"
+	},
+/area/space)
+"dc" = (
+/turf/open/floor/plasteel{
+	icon_state = "freezerfloor"
+	},
+/area/space)
+"dd" = (
+/turf/open/floor/plasteel{
+	icon_state = "freezerfloor"
+	},
+/area/space)
+"de" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/space)
+"df" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/space)
+"dg" = (
+/turf/open/floor/plating,
+/area/space)
+"dh" = (
+/turf/open/floor/plating,
+/area/space)
+"di" = (
+/turf/open/floor/plating,
+/area/space)
+"dj" = (
+/obj/machinery/door/airlock{
+	id_tag = "mineshower";
+	name = "Unisex Showers";
+	req_access_txt = "0"
+	},
+/turf/open/floor/plasteel{
+	icon_state = "freezerfloor"
+	},
+/area/space)
+"dk" = (
+/turf/open/floor/plasteel{
+	icon_state = "freezerfloor"
+	},
+/area/space)
+"dl" = (
+/turf/open/floor/plasteel{
+	icon_state = "freezerfloor"
+	},
+/area/space)
+"dm" = (
+/turf/open/floor/plasteel{
+	icon_state = "freezerfloor"
+	},
+/area/space)
+"dn" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/space)
+"do" = (
+/turf/open/floor/plating,
+/area/space)
+"dp" = (
+/turf/open/floor/plating,
+/area/space)
+"dq" = (
+/turf/open/floor/plating,
+/area/space)
+"dr" = (
+/turf/open/floor/plating,
+/area/space)
+"ds" = (
+/turf/open/floor/plasteel/orange/corner{
+	tag = "icon-orangecorner (NORTH)";
+	icon_state = "orangecorner";
+	dir = 1
+	},
+/area/space)
+"dt" = (
+/turf/open/floor/plasteel/orange/side{
+	tag = "icon-orange (NORTH)";
+	icon_state = "orange";
+	dir = 1
+	},
+/area/space)
+"du" = (
+/turf/open/floor/plasteel/orange/corner{
+	tag = "icon-orangecorner (EAST)";
+	icon_state = "orangecorner";
+	dir = 4
+	},
+/area/space)
+"dv" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/space)
+"dw" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/space)
+"dx" = (
+/turf/open/floor/plating,
+/area/space)
+"dy" = (
+/turf/open/floor/plating,
+/area/space)
+"dz" = (
+/turf/open/floor/plating,
+/area/space)
+"dA" = (
+/turf/open/floor/plating,
+/area/space)
+"dB" = (
+/obj/machinery/door/firedoor,
+/turf/open/floor/plating,
+/area/space)
+"dC" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/space)
+"dD" = (
+/turf/open/floor/plasteel/orange/side{
+	tag = "icon-orange (WEST)";
+	icon_state = "orange";
+	dir = 8
+	},
+/area/space)
+"dE" = (
+/turf/open/floor/plasteel,
+/area/space)
+"dF" = (
+/turf/open/floor/plasteel,
+/area/space)
+"dG" = (
+/turf/open/floor/plasteel/orange,
+/area/space)
+"dH" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/space)
+"dI" = (
+/turf/open/floor/plating,
+/area/space)
+"dJ" = (
+/turf/open/floor/plating,
+/area/space)
+"dK" = (
+/turf/open/floor/plating,
+/area/space)
+"dL" = (
+/turf/open/floor/plating,
+/area/space)
+"dM" = (
+/obj/machinery/door/firedoor,
+/turf/open/floor/plating,
+/area/space)
+"dN" = (
+/turf/open/floor/plasteel,
+/area/space)
+"dO" = (
+/turf/open/floor/plasteel,
+/area/space)
+"dP" = (
+/turf/open/floor/plasteel/orange/corner,
+/area/space)
+"dQ" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/space)
+"dR" = (
+/turf/open/floor/plasteel/orange/side{
+	tag = "icon-orange (WEST)";
+	icon_state = "orange";
+	dir = 8
+	},
+/area/space)
+"dS" = (
+/turf/open/floor/plasteel,
+/area/space)
+"dT" = (
+/turf/open/floor/plasteel,
+/area/space)
+"dU" = (
+/obj/machinery/door/airlock/external,
+/turf/open/floor/plating,
+/area/space)
+"dV" = (
+/turf/open/floor/plating,
+/area/space)
+"dW" = (
+/obj/machinery/door/airlock/external,
+/turf/open/floor/plating,
+/area/space)
+"dX" = (
+/turf/open/floor/plating,
+/area/space)
+"dY" = (
+/turf/open/floor/plating,
+/area/space)
+"dZ" = (
+/turf/open/floor/plating,
+/area/space)
+"ea" = (
+/turf/open/floor/plating,
+/area/space)
+"eb" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/space)
+"ec" = (
+/turf/open/floor/plasteel/orange/side{
+	tag = "icon-orange (WEST)";
+	icon_state = "orange";
+	dir = 8
+	},
+/area/space)
+"ed" = (
+/turf/open/floor/plasteel,
+/area/space)
+"ee" = (
+/turf/open/floor/plasteel/orange/corner{
+	tag = "icon-orangecorner (EAST)";
+	icon_state = "orangecorner";
+	dir = 4
+	},
+/area/space)
+"ef" = (
+/turf/open/floor/plating,
+/area/space)
+"eg" = (
+/turf/open/floor/plating,
+/area/space)
+"eh" = (
+/turf/open/floor/plating,
+/area/space)
+"ei" = (
+/turf/open/floor/plating,
+/area/space)
+"ej" = (
+/obj/machinery/door/firedoor,
+/turf/open/floor/plating,
+/area/space)
+"ek" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/space)
+"el" = (
+/turf/open/floor/plasteel,
+/area/space)
+"em" = (
+/turf/open/floor/plasteel,
+/area/space)
+"en" = (
+/turf/open/floor/plasteel,
+/area/space)
+"eo" = (
+/turf/open/floor/plasteel/orange,
+/area/space)
+"ep" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/space)
+"eq" = (
+/turf/open/floor/plating,
+/area/space)
+"er" = (
+/turf/open/floor/plating,
+/area/space)
+"es" = (
+/turf/open/floor/plating,
+/area/space)
+"et" = (
+/turf/open/floor/plating,
+/area/space)
+"eu" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/space)
+"ev" = (
+/turf/open/floor/plasteel/orange/side{
+	tag = "icon-orange (WEST)";
+	icon_state = "orange";
+	dir = 8
+	},
+/area/space)
+"ew" = (
+/turf/open/floor/plasteel,
+/area/space)
+"ex" = (
+/turf/open/floor/plasteel/orange/corner,
+/area/space)
+"ey" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/space)
+"ez" = (
+/turf/open/floor/plasteel/orange/side{
+	tag = "icon-orange (WEST)";
+	icon_state = "orange";
+	dir = 8
+	},
+/area/space)
+"eA" = (
+/turf/open/floor/plasteel,
+/area/space)
+"eB" = (
+/turf/open/floor/plasteel,
+/area/space)
+"eC" = (
+/obj/machinery/door/airlock/external,
+/turf/open/floor/plating,
+/area/space)
+"eD" = (
+/turf/open/floor/plating,
+/area/space)
+"eE" = (
+/obj/machinery/door/airlock/external,
+/turf/open/floor/plating,
+/area/space)
+"eF" = (
+/turf/open/floor/plating,
+/area/space)
+"eG" = (
+/turf/open/floor/plating,
+/area/space)
+"eH" = (
+/turf/open/floor/plating,
+/area/space)
+"eI" = (
+/turf/open/floor/plating,
+/area/space)
+"eJ" = (
+/obj/machinery/door/firedoor,
+/turf/open/floor/plating,
+/area/space)
+"eK" = (
+/turf/open/floor/plasteel,
+/area/space)
+"eL" = (
+/turf/open/floor/plasteel,
+/area/space)
+"eM" = (
+/turf/open/floor/plasteel/orange/corner{
+	tag = "icon-orangecorner (EAST)";
+	icon_state = "orangecorner";
+	dir = 4
+	},
+/area/space)
+"eN" = (
+/turf/open/floor/plating,
+/area/space)
+"eO" = (
+/turf/open/floor/plating,
+/area/space)
+"eP" = (
+/turf/open/floor/plating,
+/area/space)
+"eQ" = (
+/turf/open/floor/plating,
+/area/space)
+"eR" = (
+/obj/machinery/door/firedoor,
+/turf/open/floor/plating,
+/area/space)
+"eS" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/space)
+"eT" = (
+/turf/open/floor/plasteel/orange/side{
+	tag = "icon-orange (WEST)";
+	icon_state = "orange";
+	dir = 8
+	},
+/area/space)
+"eU" = (
+/turf/open/floor/plasteel,
+/area/space)
+"eV" = (
+/turf/open/floor/plasteel,
+/area/space)
+"eW" = (
+/turf/open/floor/plasteel/orange,
+/area/space)
+"eX" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/space)
+"eY" = (
+/turf/open/floor/plating,
+/area/space)
+"eZ" = (
+/turf/open/floor/plating,
+/area/space)
+"fa" = (
+/turf/open/floor/plating,
+/area/space)
+"fb" = (
+/turf/open/floor/plating,
+/area/space)
+"fc" = (
+/turf/open/floor/plasteel/orange/corner{
+	tag = "icon-orangecorner (WEST)";
+	icon_state = "orangecorner";
+	dir = 8
+	},
+/area/space)
+"fd" = (
+/turf/open/floor/plasteel/orange/side,
+/area/space)
+"fe" = (
+/turf/open/floor/plasteel/orange/corner,
+/area/space)
+"ff" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/space)
+"fg" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/space)
+"fh" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/space)
+"fi" = (
+/turf/open/floor/plasteel,
+/area/space)
+"fj" = (
+/turf/open/floor/plasteel,
+/area/space)
+"fk" = (
+/turf/open/floor/plasteel,
+/area/space)
+"fl" = (
+/turf/open/floor/plasteel,
+/area/space)
+"fm" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/maintenance{
+	req_access_txt = "0";
+	req_one_access_txt = "12;27;37"
+	},
+/turf/open/floor/plating,
+/area/space)
+"fn" = (
+/turf/open/floor/plating,
+/area/space)
+"fo" = (
+/turf/open/floor/plating,
+/area/space)
+"fp" = (
+/turf/open/floor/plating,
+/area/space)
+"fq" = (
+/turf/open/floor/plating,
+/area/space)
+"fr" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/space)
+"fs" = (
+/turf/open/floor/plasteel,
+/area/space)
+"ft" = (
+/turf/open/floor/plasteel,
+/area/space)
+"fu" = (
+/turf/open/floor/plasteel,
+/area/space)
+"fv" = (
+/turf/open/floor/plasteel,
+/area/space)
+"fw" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/space)
+"fx" = (
+/turf/open/floor/plasteel,
+/area/space)
+"fy" = (
+/turf/open/floor/plasteel,
+/area/space)
+"fz" = (
+/turf/open/floor/plasteel,
+/area/space)
+"fA" = (
+/turf/open/floor/plasteel,
+/area/space)
+"fB" = (
+/obj/machinery/door/firedoor,
+/turf/open/floor/plasteel,
+/area/space)
+"fC" = (
+/turf/open/floor/plasteel/white,
+/area/space)
+"fD" = (
+/turf/open/floor/plasteel/white,
+/area/space)
+"fE" = (
+/turf/open/floor/plasteel/white,
+/area/space)
+"fF" = (
+/turf/open/floor/plasteel/white,
+/area/space)
+"fG" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/space)
+"fH" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/space)
+"fI" = (
+/turf/open/floor/plasteel,
+/area/space)
+"fJ" = (
+/turf/open/floor/plasteel,
+/area/space)
+"fK" = (
+/turf/open/floor/plasteel,
+/area/space)
+"fL" = (
+/turf/open/floor/plasteel,
+/area/space)
+"fM" = (
+/obj/machinery/door/firedoor,
+/turf/open/floor/plasteel/white,
+/area/space)
+"fN" = (
+/turf/open/floor/plasteel/white,
+/area/space)
+"fO" = (
+/turf/open/floor/plasteel/white,
+/area/space)
+"fP" = (
+/turf/open/floor/plasteel/white,
+/area/space)
+"fQ" = (
+/turf/open/floor/plasteel/white,
+/area/space)
+"fR" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/space)
+"fS" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/space)
+"fT" = (
+/turf/open/floor/plasteel,
+/area/space)
+"fU" = (
+/turf/open/floor/plasteel,
+/area/space)
+"fV" = (
+/turf/open/floor/plasteel,
+/area/space)
+"fW" = (
+/turf/open/floor/plasteel,
+/area/space)
+"fX" = (
+/turf/open/floor/plasteel,
+/area/space)
+"fY" = (
+/turf/open/floor/plasteel,
+/area/space)
+"fZ" = (
+/turf/open/floor/plasteel,
+/area/space)
+"ga" = (
+/turf/open/floor/plasteel,
+/area/space)
+"gb" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/space)
+"gc" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/space)
+"gd" = (
+/turf/open/floor/plasteel/warning{
+	dir = 1
+	},
+/area/space)
+"ge" = (
+/turf/open/floor/plasteel/warning{
+	dir = 1
+	},
+/area/space)
+"gf" = (
+/turf/open/floor/plasteel/warning{
+	dir = 1
+	},
+/area/space)
+"gg" = (
+/turf/open/floor/plasteel/warning{
+	dir = 1
+	},
+/area/space)
+"gh" = (
+/obj/effect/spawner/structure/window,
+/turf/open/floor/plating,
+/area/space)
+"gi" = (
+/obj/effect/spawner/structure/window,
+/turf/open/floor/plating,
+/area/space)
+"gj" = (
+/turf/open/floor/plasteel,
+/area/space)
+"gk" = (
+/turf/open/floor/plasteel,
+/area/space)
+"gl" = (
+/turf/open/floor/plasteel,
+/area/space)
+"gm" = (
+/turf/open/floor/plasteel,
+/area/space)
+"gn" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/space)
+"go" = (
+/turf/open/floor/plasteel/stairsnew/grey/right{
+	tag = "icon-Stairs2_wide (NORTH)";
+	icon_state = "Stairs2_wide";
+	dir = 1
+	},
+/area/space)
+"gp" = (
+/turf/open/floor/plasteel/stairsnew/grey/left{
+	tag = "icon-Stairs_wide (NORTH)";
+	icon_state = "Stairs_wide";
+	dir = 1
+	},
+/area/space)
+"gq" = (
+/obj/effect/spawner/structure/window,
+/turf/open/floor/plating,
+/area/space)
+"gr" = (
+/obj/effect/spawner/structure/window,
+/turf/open/floor/plating,
+/area/space)
+"gs" = (
+/turf/open/floor/plasteel/stairsnew/grey/right{
+	tag = "icon-Stairs2_wide (NORTH)";
+	icon_state = "Stairs2_wide";
+	dir = 1
+	},
+/area/space)
+"gt" = (
+/turf/open/floor/plasteel/stairsnew/grey/left{
+	tag = "icon-Stairs_wide (NORTH)";
+	icon_state = "Stairs_wide";
+	dir = 1
+	},
+/area/space)
+"gu" = (
+/obj/machinery/door/airlock/external,
+/turf/open/floor/plasteel/black,
+/area/space)
+"gv" = (
+/obj/machinery/door/airlock/external,
+/turf/open/floor/plasteel/black,
+/area/space)
+"gw" = (
+/obj/machinery/door/firedoor,
+/turf/open/floor/plasteel/black,
+/area/space)
+"gx" = (
+/obj/machinery/door/firedoor,
+/turf/open/floor/plasteel/black,
+/area/space)
+"gy" = (
+/obj/machinery/door/airlock/external,
+/turf/open/floor/plasteel/black,
+/area/space)
+"gz" = (
+/obj/machinery/door/airlock/external,
+/turf/open/floor/plasteel/black,
+/area/space)
+"gA" = (
+/turf/open/floor/plasteel/stairsnew/grey/left,
+/area/space)
+"gB" = (
+/turf/open/floor/plasteel/stairsnew/grey/right,
+/area/space)
+"gC" = (
+/obj/effect/spawner/structure/window,
+/turf/open/floor/plating,
+/area/space)
+"gD" = (
+/obj/effect/spawner/structure/window,
+/turf/open/floor/plating,
+/area/space)
+"gE" = (
+/turf/open/floor/plasteel/stairsnew/grey/left,
+/area/space)
+"gF" = (
+/turf/open/floor/plasteel/stairsnew/grey/right,
+/area/space)
+"gG" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/space)
+"gH" = (
+/turf/open/floor/plasteel/warning,
+/area/space)
+"gI" = (
+/turf/open/floor/plasteel/warning,
+/area/space)
+"gJ" = (
+/turf/open/floor/plasteel/warning,
+/area/space)
+"gK" = (
+/turf/open/floor/plasteel/warning,
+/area/space)
+"gL" = (
+/obj/effect/spawner/structure/window,
+/turf/open/floor/plating,
+/area/space)
+"gM" = (
+/obj/effect/spawner/structure/window,
+/turf/open/floor/plating,
+/area/space)
+"gN" = (
+/turf/open/floor/plasteel,
+/area/space)
+"gO" = (
+/turf/open/floor/plasteel,
+/area/space)
+"gP" = (
+/turf/open/floor/plasteel,
+/area/space)
+"gQ" = (
+/turf/open/floor/plasteel,
+/area/space)
+"gR" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/space)
+"gS" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/space)
+"gT" = (
+/turf/open/floor/plasteel,
+/area/space)
+"gU" = (
+/turf/open/floor/plasteel,
+/area/space)
+"gV" = (
+/turf/open/floor/plasteel,
+/area/space)
+"gW" = (
+/turf/open/floor/plasteel,
+/area/space)
+"gX" = (
+/obj/machinery/door/firedoor,
+/turf/open/floor/plasteel/black,
+/area/space)
+"gY" = (
+/obj/machinery/door/firedoor,
+/turf/open/floor/plasteel/black,
+/area/space)
+"gZ" = (
+/obj/machinery/door/firedoor,
+/turf/open/floor/plasteel/black,
+/area/space)
+"ha" = (
+/turf/open/floor/plasteel,
+/area/space)
+"hb" = (
+/turf/open/floor/plasteel,
+/area/space)
+"hc" = (
+/turf/open/floor/plasteel,
+/area/space)
+"hd" = (
+/turf/open/floor/plasteel,
+/area/space)
+"he" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/space)
+"hf" = (
+/obj/machinery/door/firedoor,
+/turf/open/floor/plasteel/black,
+/area/space)
+"hg" = (
+/obj/machinery/door/firedoor,
+/turf/open/floor/plasteel/black,
+/area/space)
+"hh" = (
+/obj/machinery/door/firedoor,
+/turf/open/floor/plasteel/black,
+/area/space)
 
 (1,1,1) = {"
 aa
@@ -32513,32 +33473,32 @@ aa
 aa
 aa
 aa
+aD
 aa
 aa
 aa
+aD
 aa
 aa
 aa
+aD
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aD
+fh
+aD
+fw
+fH
+aD
+fS
+gc
+aD
+gu
+aD
+gG
+gS
+aD
 aa
 aa
 aa
@@ -32767,35 +33727,35 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aD
+cW
+df
+aD
+do
+dx
+dI
+aD
+dX
+ef
+eq
+aD
+eF
+eN
+eY
+aD
+fi
+fs
+fx
+fI
+cn
+fT
+gd
+aD
+aK
+aD
+gH
+gT
+cn
 aa
 aa
 aa
@@ -33008,51 +33968,51 @@ ab
 ab
 ab
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aD
+co
+cq
+cu
+aD
+cw
+cy
+cC
+aD
+cE
+cG
+cK
+aD
+cM
+cO
+cS
+aD
+cX
+dg
+aD
+dp
+dy
+dJ
+aD
+dY
+eg
+er
+aD
+eG
+eO
+eZ
+aD
+fj
+ft
+fy
+fJ
+cn
+fU
+ge
+aD
+gv
+aD
+gI
+gU
+cn
 aa
 aa
 aa
@@ -33266,50 +34226,50 @@ aD
 ad
 ad
 aD
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+bK
+bK
+bK
+cn
+bK
+bK
+bK
+cn
+bK
+bK
+bK
+cn
+bK
+bK
+bK
+aD
+cY
+dh
+aD
+dq
+dz
+dK
+aD
+dZ
+eh
+es
+aD
+eH
+eP
+fa
+aD
+fk
+fu
+fz
+fK
+cn
+fV
+gf
+go
+aK
+gA
+gJ
+gV
+cn
 aa
 aa
 aa
@@ -33523,50 +34483,50 @@ ce
 ch
 cl
 cn
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+bK
+bK
+bK
+cn
+bK
+bK
+bK
+cn
+bK
+bK
+bK
+cn
+bK
+bK
+bK
+aD
+cZ
+di
+aD
+dr
+dA
+dL
+aD
+ea
+ei
+et
+aD
+eI
+eQ
+fb
+aD
+fl
+fv
+fA
+fL
+cn
+fW
+gg
+gp
+aK
+gB
+gK
+gW
+cn
 aa
 aa
 aa
@@ -33780,50 +34740,50 @@ cf
 aK
 aK
 cn
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+cn
+cr
+cn
+cn
+cn
+cz
+cn
+cn
+cn
+cH
+cn
+cn
+cn
+cP
+cn
+aD
+da
+cn
+aD
+aD
+dB
+aD
+aD
+aD
+ej
+aD
+aD
+aD
+eR
+aD
+aD
+cn
+cn
+fB
+cn
+cn
+cn
+gh
+gq
+gw
+gC
+gL
+cn
+cn
 aa
 aa
 aa
@@ -34037,50 +34997,50 @@ cg
 ci
 aV
 aV
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+cU
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+gX
+hf
 aa
 aa
 aa
@@ -34294,50 +35254,50 @@ aD
 aN
 aK
 aK
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+cV
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+gY
+hg
 aa
 aa
 aa
@@ -34551,50 +35511,50 @@ aD
 cj
 aK
 aD
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aD
+cs
+aD
+aD
+aD
+cA
+aD
+aD
+aD
+cI
+aD
+aD
+aD
+cQ
+aD
+aD
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+gZ
+hh
 aa
 aa
 aa
@@ -34808,50 +35768,50 @@ bc
 aN
 aK
 aD
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+bK
+bK
+bK
+cn
+bK
+bK
+bK
+cn
+bK
+bK
+bK
+cn
+bK
+bK
+bK
+aD
+cn
+dj
+aD
+aD
+dC
+dM
+dQ
+eb
+ek
+eu
+ey
+eJ
+eS
+aD
+aD
+fm
+cn
+cn
+fM
+cn
+cn
+gi
+gr
+gx
+gD
+gM
+cn
+cn
 aa
 aa
 aa
@@ -35065,50 +36025,50 @@ aV
 ck
 cm
 aD
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+bK
+bK
+bK
+cn
+bK
+bK
+bK
+cn
+bK
+bK
+bK
+cn
+bK
+bK
+bK
+aD
+db
+dk
+aD
+ds
+dD
+dN
+dR
+ec
+el
+ev
+ez
+eK
+eT
+fc
+aD
+fn
+cn
+fC
+fN
+cn
+fX
+gj
+gs
+aK
+gE
+gN
+ha
+cn
 aa
 aa
 aa
@@ -35322,50 +36282,50 @@ aD
 ad
 ad
 aD
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+bK
+bK
+bK
+cn
+bK
+bK
+bK
+cn
+bK
+bK
+bK
+cn
+bK
+bK
+bK
+aD
+dc
+dl
+aD
+dt
+dE
+dO
+dS
+ed
+em
+ew
+eA
+eL
+eU
+fd
+aD
+fo
+cn
+fD
+fO
+cn
+fY
+gk
+gt
+aK
+gF
+gO
+hb
+cn
 aa
 aa
 aa
@@ -35578,51 +36538,51 @@ ab
 ab
 ab
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aD
+cp
+ct
+cv
+aD
+cx
+cB
+cD
+aD
+cF
+cJ
+cL
+aD
+cN
+cR
+cT
+aD
+dd
+dm
+aD
+du
+dF
+dP
+dT
+ee
+en
+ex
+eB
+eM
+eV
+fe
+aD
+fp
+cn
+fE
+fP
+cn
+fZ
+gl
+aD
+gy
+aD
+gP
+hc
+cn
 aa
 aa
 aa
@@ -35851,35 +36811,35 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aD
+de
+dn
+aD
+dv
+dG
+aD
+dU
+aD
+eo
+aD
+eC
+aD
+eW
+ff
+aD
+fq
+cn
+fF
+fQ
+cn
+ga
+gm
+aD
+aK
+aD
+gQ
+hd
+cn
 aa
 aa
 aa
@@ -36112,31 +37072,31 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+dw
+dH
+aD
+dV
+aD
+ep
+aD
+eD
+aD
+eX
+fg
+aD
+fr
+aD
+fG
+fR
+aD
+gb
+gn
+aD
+gz
+aD
+gR
+he
+aD
 aa
 aa
 aa
@@ -36371,13 +37331,13 @@ aa
 aa
 aa
 aa
+aD
+dW
+aD
 aa
-aa
-aa
-aa
-aa
-aa
-aa
+aD
+eE
+aD
 aa
 aa
 aa
