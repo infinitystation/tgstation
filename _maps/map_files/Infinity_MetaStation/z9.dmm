@@ -1406,12 +1406,6 @@
 /obj/structure/sign/bluecross_2{
 	pixel_y = 32
 	},
-/obj/item/device/radio/intercom/prison{
-	dir = 1;
-	icon = 'icons/obj/starcraft.dmi';
-	icon_state = "Megafon";
-	name = "Criuser intercome"
-	},
 /turf/open/floor/plasteel/darkyellow/side{
 	dir = 9
 	},
