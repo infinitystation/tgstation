@@ -115,18 +115,6 @@
 	strip_delay = 80
 	dog_fashion = null
 
-/obj/item/clothing/head/helmet/trooper
-	name = "\improper Trooper Helmet"
-	desc = "Шлем с маленькими вырезами дл&#255; глаз, в этих чертовых вырезах можно разгл&#255;деть смерть..."
-	worn_icon = 'icons/mob/uac/hats.dmi'
-	icon = 'icons/obj/clothing/uac/hats.dmi'
-	icon_state = "helmet"
-	flags = HEADBANGPROTECT
-	armor = list(melee = 40, bullet = 35, laser = 45,energy = 25, bomb = 40, bio = 5, rad = 0, fire = 20, acid = 50)
-	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR
-	strip_delay = 80
-	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
-
 /obj/item/clothing/head/helmet/swat/nanotrasen
 	name = "\improper SWAT helmet"
 	desc = "An extremely robust, space-worthy helmet with the Nanotrasen logo emblazoned on the top."

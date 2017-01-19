@@ -224,4 +224,16 @@
 	worn_icon = 'icons/mob/infinity_work.dmi'
 	icon_state = "janitor_cap"
 	item_state = "janitor_cap"
+
+/obj/item/clothing/head/helmet/trooper
+	name = "\improper Trooper Helmet"
+	desc = "Шлем с маленькими вырезами дл&#255; глаз, в этих чертовых вырезах можно разгл&#255;деть смерть..."
+	icon = 'icons/obj/clothing/infinity_work.dmi'
 	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon_state = "marine_helmet"
+	item_state = "marine_helmet"
+	flags = HEADBANGPROTECT
+	armor = list(melee = 40, bullet = 35, laser = 45,energy = 25, bomb = 40, bio = 5, rad = 0, fire = 20, acid = 50)
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR
+	strip_delay = 80
+	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
