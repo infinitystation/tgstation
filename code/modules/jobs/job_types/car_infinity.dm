@@ -6,7 +6,7 @@
 	department_flag = ENGSEC
 	faction = "Station"
 	total_positions = 1
-	spawn_positions = 0
+	spawn_positions = 1
 	supervisors = "Представителям Нанотрайзен и Космическому Закону"
 	selection_color = "#dddddd"
 	req_admin_notify = 1
@@ -14,10 +14,8 @@
 
 	outfit = /datum/outfit/job/ifa
 
-	access = list(access_security, access_sec_doors, access_brig, access_maint_tunnels, access_construction,
-			            access_heads, access_RC_announce, access_keycard_auth, access_gateway)
-	minimal_access = list(access_security, access_sec_doors, access_brig, access_maint_tunnels, access_construction,
-			            access_heads, access_RC_announce, access_keycard_auth, access_gateway)
+	access = list(access_security, access_sec_doors, access_brig, access_maint_tunnels, access_construction, access_heads, access_RC_announce, access_keycard_auth, access_gateway)
+	minimal_access = list(access_security, access_sec_doors, access_brig, access_maint_tunnels, access_construction, access_heads, access_RC_announce, access_keycard_auth, access_gateway)
 
 /datum/outfit/job/ifa
 	name = "Internal Affairs Agent"
