@@ -663,6 +663,11 @@
 			if(config.enforce_human_authority)
 				SAVEOperative.set_species(/datum/species/human)
 
+			if(alert != "Green")
+				for(var/obj/machinery/door/poddoor/crew/door in airlocks)
+					spawn(0)
+						door.open()
+
 			//Logging and cleanup
 			if(numagents == 1)
 				message_admins("Был создан персонал ЦК согласно следующем коду: [alert] с миссией: [mission]")

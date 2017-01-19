@@ -32225,15 +32225,10 @@
 	dir = 8;
 	layer = 2.9
 	},
-/obj/item/weapon/circuitboard/computer/cloning{
-	pixel_x = 0
-	},
 /obj/item/weapon/circuitboard/computer/med_data{
 	pixel_x = 3;
 	pixel_y = -3
 	},
-/obj/item/weapon/circuitboard/machine/clonescanner,
-/obj/item/weapon/circuitboard/machine/clonepod,
 /obj/item/weapon/circuitboard/computer/scan_consolenew,
 /turf/open/floor/plasteel{
 	icon_state = "dark"
@@ -83005,8 +83000,11 @@
 /turf/closed/wall/r_wall,
 /area/medical/virology)
 "cID" = (
-/obj/machinery/door/firedoor,
 /obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/poddoor/shutters/preopen{
+	dir = 1;
+	id = "virus_ebola_space"
+	},
 /turf/open/floor/plating,
 /area/medical/virology)
 "cIE" = (
@@ -84117,39 +84115,31 @@
 	pixel_y = 2
 	},
 /obj/item/weapon/storage/box/syringes,
-/obj/machinery/power/apc{
-	cell_type = 5000;
-	dir = 1;
-	name = "Virology APC";
-	pixel_x = 0;
-	pixel_y = 24
-	},
-/obj/structure/cable/yellow{
-	d2 = 4;
-	icon_state = "0-4"
-	},
-/obj/structure/cable/yellow{
-	icon_state = "0-8";
-	d2 = 8
-	},
 /obj/structure/table/glass,
+/obj/structure/reagent_dispensers/virusfood{
+	density = 0;
+	pixel_x = 0;
+	pixel_y = 30
+	},
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/open/floor/plasteel/whitegreen/side{
 	dir = 9
 	},
 /area/medical/virology)
 "cKu" = (
-/obj/item/weapon/book/manual/wiki/infections{
-	pixel_y = 7
-	},
-/obj/item/weapon/reagent_containers/syringe/antiviral,
-/obj/item/weapon/reagent_containers/dropper,
-/obj/item/weapon/reagent_containers/spray/cleaner,
 /obj/structure/cable/yellow{
 	d1 = 2;
 	d2 = 8;
 	icon_state = "2-8"
 	},
-/obj/structure/table/glass,
+/obj/machinery/computer/pandemic{
+	layer = 2.5;
+	pixel_x = -4
+	},
 /turf/open/floor/plasteel/whitegreen/side{
 	dir = 5
 	},
@@ -84172,20 +84162,36 @@
 	},
 /area/medical/virology)
 "cKx" = (
-/obj/item/clothing/gloves/color/latex,
-/obj/item/device/healthanalyzer,
-/obj/item/clothing/glasses/hud/health,
-/obj/structure/reagent_dispensers/virusfood{
-	density = 0;
-	pixel_x = 0;
-	pixel_y = 30
-	},
 /obj/structure/table/glass,
 /obj/machinery/button/door{
 	id = "virus_ebola";
 	name = "Virology Lock";
-	pixel_x = 28
+	pixel_x = 28;
+	pixel_y = 5
 	},
+/obj/machinery/power/apc{
+	cell_type = 5000;
+	dir = 1;
+	name = "Virology APC";
+	pixel_x = 0;
+	pixel_y = 24
+	},
+/obj/structure/cable/yellow{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/obj/machinery/button/door{
+	id = "virus_ebola_space";
+	name = "Virology Space Lockdown";
+	pixel_x = 28;
+	pixel_y = -5
+	},
+/obj/item/weapon/book/manual/wiki/infections{
+	pixel_y = 7
+	},
+/obj/item/weapon/reagent_containers/syringe/antiviral,
+/obj/item/weapon/reagent_containers/dropper,
+/obj/item/weapon/reagent_containers/spray/cleaner,
 /turf/open/floor/plasteel/whitegreen/side{
 	dir = 5
 	},
@@ -84821,28 +84827,31 @@
 /turf/open/floor/plating,
 /area/medical/virology)
 "cLt" = (
-/obj/item/weapon/paper_bin,
-/obj/machinery/light/small{
-	dir = 8
-	},
-/obj/structure/table/glass,
 /obj/structure/sign/deathsposal{
 	pixel_x = -30;
 	pixel_y = 0
 	},
+/obj/machinery/light/small{
+	dir = 8
+	},
+/obj/structure/table/glass,
 /turf/open/floor/plasteel/whitegreen/side{
 	dir = 8
 	},
 /area/medical/virology)
 "cLu" = (
-/obj/structure/chair/office/light{
-	dir = 1;
-	pixel_y = 3
-	},
 /obj/structure/cable/yellow{
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
+	},
+/obj/structure/chair/office/light{
+	dir = 8
+	},
+/obj/structure/cable/yellow{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
 	},
 /turf/open/floor/plasteel/whitegreen/corner{
 	dir = 4
@@ -84852,16 +84861,23 @@
 /obj/machinery/atmospherics/components/unary/vent_pump{
 	on = 1
 	},
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/open/floor/plasteel/whitegreen/side{
 	dir = 1
 	},
 /area/medical/virology)
 "cLw" = (
-/obj/structure/chair/office/light{
-	dir = 4
-	},
 /obj/effect/landmark/start{
 	name = "Virologist"
+	},
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
 /turf/open/floor/plasteel/whitegreen/corner{
 	tag = "icon-whitegreencorner (NORTH)";
@@ -84870,25 +84886,20 @@
 	},
 /area/medical/virology)
 "cLx" = (
-/obj/item/weapon/folder/white,
-/obj/item/weapon/folder/white,
-/obj/item/weapon/pen/red,
 /obj/machinery/requests_console{
 	department = "Virology";
 	name = "Virology Requests Console";
 	pixel_x = 29;
 	pixel_y = 0
 	},
-/obj/item/stack/sheet/mineral/plasma{
-	layer = 2.9
-	},
-/obj/item/stack/sheet/mineral/plasma{
-	layer = 2.9
-	},
-/obj/item/stack/sheet/mineral/plasma{
-	layer = 2.9
-	},
 /obj/structure/table/glass,
+/obj/item/weapon/paper_bin,
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8";
+	tag = ""
+	},
 /turf/open/floor/plasteel/whitegreen/side{
 	dir = 4
 	},
@@ -85396,52 +85407,87 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
-/obj/effect/spawner/structure/window,
 /obj/machinery/door/firedoor{
 	icon = 'icons/obj/doors/DoorHazard.dmi';
 	name = "hazardlock";
 	opacity = 0
 	},
+/obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
 /area/medical/virology)
 "cMt" = (
-/obj/machinery/disposal/bin,
-/obj/structure/disposalpipe/trunk,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/obj/structure/table/glass,
+/obj/structure/window/reinforced,
+/obj/item/clothing/gloves/color/latex,
+/obj/item/device/healthanalyzer,
+/obj/item/clothing/glasses/hud/health,
 /turf/open/floor/plasteel/whitegreen/side{
 	dir = 8
 	},
 /area/medical/virology)
 "cMu" = (
+/obj/item/weapon/folder/white,
+/obj/item/weapon/folder/white,
+/obj/item/weapon/pen/red,
+/obj/item/stack/sheet/mineral/plasma{
+	layer = 2.9
+	},
+/obj/item/stack/sheet/mineral/plasma{
+	layer = 2.9
+	},
+/obj/item/stack/sheet/mineral/plasma{
+	layer = 2.9
+	},
+/obj/structure/table/glass,
+/obj/structure/window/reinforced,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/supply/hidden{
+	dir = 1
+	},
 /obj/structure/cable/yellow{
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/machinery/atmospherics/pipe/manifold/supply/hidden{
-	dir = 1
+/turf/open/floor/plasteel/whitegreen/side{
+	dir = 8
 	},
-/turf/open/floor/plasteel/white,
 /area/medical/virology)
 "cMv" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
 	dir = 2
 	},
+/obj/machinery/disposal/bin,
+/obj/structure/disposalpipe/trunk{
+	dir = 8
+	},
+/obj/structure/window/reinforced,
 /turf/open/floor/plasteel/white,
 /area/medical/virology)
 "cMw" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
+/obj/machinery/door/window/northright{
+	base_state = "left";
+	dir = 2;
+	icon_state = "left";
+	name = "Virology Laboratroy";
+	pixel_x = 3;
+	req_access_txt = "39"
+	},
 /turf/open/floor/plasteel/white,
 /area/medical/virology)
 "cMx" = (
-/obj/machinery/computer/pandemic{
-	layer = 2.5;
-	pixel_x = -4
-	},
 /obj/machinery/light{
 	dir = 4;
 	icon_state = "tube1"
@@ -85453,6 +85499,12 @@
 	pixel_x = 28;
 	pixel_y = 0
 	},
+/obj/structure/window/reinforced,
+/obj/structure/table/glass,
+/obj/item/weapon/folder/white{
+	pixel_y = 4
+	},
+/obj/item/weapon/pen/red,
 /turf/open/floor/plasteel/whitegreen/side{
 	dir = 4
 	},
@@ -85464,10 +85516,13 @@
 /turf/closed/wall/r_wall,
 /area/medical/virology)
 "cMz" = (
-/obj/machinery/door/firedoor,
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
+	},
+/obj/machinery/door/poddoor/shutters/preopen{
+	dir = 1;
+	id = "virus_ebola_space"
 	},
 /turf/open/floor/plating,
 /area/medical/virology)
@@ -86598,12 +86653,12 @@
 	dir = 1;
 	initialize_directions = 13
 	},
-/obj/effect/spawner/structure/window,
 /obj/machinery/door/firedoor{
 	icon = 'icons/obj/doors/DoorHazard.dmi';
 	name = "hazardlock";
 	opacity = 0
 	},
+/obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
 /area/medical/virology)
 "cOj" = (
@@ -89718,8 +89773,11 @@
 	dir = 8;
 	icon_state = "pipe-c"
 	},
-/obj/machinery/door/firedoor,
 /obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/poddoor/shutters/preopen{
+	dir = 8;
+	id = "virus_ebola_space"
+	},
 /turf/open/floor/plating,
 /area/medical/virology)
 "cTt" = (
@@ -97282,6 +97340,76 @@
 	icon_state = "warnplate"
 	},
 /area/maintenance/asmaint2)
+"dhH" = (
+/obj/structure/transit_tube/horizontal,
+/obj/structure/lattice/catwalk,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8";
+	pixel_y = 0
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
+	},
+/obj/structure/transit_tube_pod{
+	tag = "icon-pod (WEST)";
+	icon_state = "pod";
+	dir = 8
+	},
+/turf/open/space,
+/area/space)
+"dhI" = (
+/obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/poddoor/shutters/preopen{
+	dir = 8;
+	id = "virus_ebola_space"
+	},
+/turf/open/floor/plating,
+/area/medical/virology)
+"dhJ" = (
+/obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/poddoor/shutters/preopen{
+	id = "virus_ebola_space"
+	},
+/turf/open/floor/plating,
+/area/medical/virology)
+"dhK" = (
+/obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/poddoor/shutters/preopen{
+	id = "virus_ebola_space"
+	},
+/turf/open/floor/plating,
+/area/medical/virology)
+"dhL" = (
+/obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/poddoor/shutters/preopen{
+	id = "virus_ebola_space"
+	},
+/turf/open/floor/plating,
+/area/medical/virology)
+"dhM" = (
+/obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/poddoor/shutters/preopen{
+	dir = 4;
+	id = "virus_ebola_space"
+	},
+/turf/open/floor/plating,
+/area/medical/virology)
+"dhN" = (
+/obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/poddoor/shutters/preopen{
+	id = "virus_ebola_space"
+	},
+/turf/open/floor/plating,
+/area/medical/virology)
+"dhO" = (
+/obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/poddoor/shutters/preopen{
+	id = "virus_ebola_space"
+	},
+/turf/open/floor/plating,
+/area/medical/virology)
 
 (1,1,1) = {"
 aaa
@@ -113391,7 +113519,7 @@ cIC
 cIC
 cIC
 cIC
-cID
+dhI
 cIC
 cIC
 cIC
@@ -113911,7 +114039,7 @@ cPk
 cQd
 cRa
 cRN
-cID
+dhN
 aai
 aaa
 aaa
@@ -114425,7 +114553,7 @@ cPl
 cQd
 cRb
 cRN
-cID
+dhO
 cTq
 aai
 aai
@@ -116480,7 +116608,7 @@ cIC
 cIC
 cIC
 cIC
-cID
+dhM
 cIC
 cIC
 cIC
@@ -116733,7 +116861,7 @@ aaa
 aaa
 cMz
 cNt
-cID
+dhJ
 cPs
 aai
 aaa
@@ -116990,7 +117118,7 @@ aai
 aai
 cMz
 cNu
-cID
+dhK
 aai
 aai
 aai
@@ -117247,7 +117375,7 @@ bZy
 aaa
 cMz
 cNv
-cID
+dhL
 aaa
 aai
 aaa
@@ -144692,7 +144820,7 @@ aaa
 aaa
 aai
 aaa
-byT
+dhH
 aaa
 aai
 aai

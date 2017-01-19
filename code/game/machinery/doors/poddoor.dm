@@ -22,6 +22,10 @@
 /obj/machinery/door/poddoor/ert
 	desc = "A heavy duty blast door that only opens for dire emergencies."
 
+/obj/machinery/door/poddoor/crew
+	desc = "A heavy duty blast door that only opens for dire emergencies."
+	icon = 'icons/obj/doors/blastdoor_hor.dmi'
+
 //special poddoors that open when emergency shuttle docks at centcom
 /obj/machinery/door/poddoor/shuttledock
 	var/checkdir = 4	//door won't open if turf in this dir is `turftype`

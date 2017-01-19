@@ -20925,6 +20925,18 @@
 	},
 /turf/open/floor/plating,
 /area/centcom/evac)
+"Yv" = (
+/obj/machinery/door/poddoor/crew,
+/turf/open/floor/plasteel/delivery,
+/area/centcom/control)
+"Yw" = (
+/obj/machinery/door/poddoor/crew,
+/turf/open/floor/plasteel/delivery,
+/area/centcom/control)
+"Yx" = (
+/obj/machinery/door/poddoor/crew,
+/turf/open/floor/plasteel/delivery,
+/area/centcom/control)
 
 (1,1,1) = {"
 aa
@@ -47790,7 +47802,7 @@ UA
 UA
 UA
 UX
-Ga
+Yv
 UX
 EA
 yR
@@ -48047,7 +48059,7 @@ UB
 UB
 UB
 xi
-Ga
+Yw
 xi
 tU
 yR
@@ -48304,7 +48316,7 @@ UC
 UL
 UC
 UX
-Ga
+Yx
 UX
 Vk
 yR
@@ -55794,7 +55806,7 @@ HI
 Fi
 Iu
 IR
-Yu
+Yt
 JF
 zS
 aa
