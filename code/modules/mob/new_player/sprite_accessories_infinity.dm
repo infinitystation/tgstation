@@ -353,6 +353,11 @@
 	icon = 'icons/mob/more_hairs.dmi'
 	icon_state = "undercut"
 
+/datum/sprite_accessory/hair/hair_encoder
+	name = "Encoder"
+	icon = 'icons/mob/more_hairs.dmi'
+	icon_state = "hair_encoder"
+
 /datum/sprite_accessory/tails/human/dog
 	name = "Dog"
 	icon_state = "dog"

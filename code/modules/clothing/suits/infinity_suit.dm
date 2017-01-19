@@ -576,9 +576,8 @@
 /obj/item/clothing/suit/armor/uac
 	name = "Trooper Armor"
 	desc = "— виду тяжела€ брон€ с двумя поручнями по краям... —топ, она стальна€?"
-	desc = "I'm so powerful I even impress myself!"
 	icon = 'icons/obj/clothing/infinity_work.dmi'
 	worn_icon = 'icons/mob/infinity_work.dmi'
 	icon_state = "marine_armor"
 	item_state = "marine_armor"
-	armor = list(melee = 70 bullet = 80, laser = 35, energy = 20, bomb = 35, bio = 0, rad = 20)
+	armor = list(melee = 70, bullet = 80, laser = 35, energy = 20, bomb = 35, bio = 0, rad = 20, fire = 30, acid = 20)

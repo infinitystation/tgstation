@@ -127,14 +127,6 @@
 	strip_delay = 70
 	put_on_delay = 50
 
-/obj/item/clothing/suit/armor/uac
-	name = "Trooper Armor"
-	desc = "— виду тяжела€ брон€ с двумя поручнями по краям... —топ, она стальна€?"
-	worn_icon = 'icons/mob/uac/suit.dmi'
-	icon = 'icons/obj/clothing/uac/suit.dmi'
-	icon_state = "armor"
-	armor = list(melee = 45, bullet = 80, laser = 35, energy = 20, bomb = 35, bio = 0, rad = 0)
-
 /obj/item/clothing/suit/armor/laserproof
 	name = "reflector vest"
 	desc = "A vest that excels in protecting the wearer against energy projectiles, as well as occasionally reflecting them."
