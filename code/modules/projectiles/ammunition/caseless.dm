@@ -35,6 +35,13 @@
 	icon_state = "null"
 	projectile_type = /obj/item/projectile/bullet/heavybullet2
 
+/obj/item/ammo_casing/caseless/gause_spine
+	desc = "A 0.75mm spine."
+	caliber = "0.75"
+	icon = 'icons/obj/infinity_weapons.dmi'
+	icon_state = "null"
+	projectile_type = /obj/item/projectile/bullet/gause_spine
+
 /obj/item/ammo_casing/caseless/magspear
 	name = "magnetic spear"
 	desc = "A reusable spear that is typically loaded into kinetic spearguns."

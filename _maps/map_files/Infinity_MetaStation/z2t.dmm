@@ -3467,7 +3467,7 @@
 	dir = 4;
 	pixel_x = 24
 	},
-/turf/open/floor/engine/caution,
+/turf/open/floor/plating/airless,
 /area/space)
 "jm" = (
 /turf/open/space,
@@ -6654,7 +6654,7 @@
 /turf/open/floor/plating,
 /area/shuttle/syndicate)
 "qZ" = (
-/turf/open/space,
+/turf/open/floor/plating/asteroid/snow/temperatre,
 /obj/machinery/porta_turret/syndicate{
 	dir = 1
 	},
@@ -7029,7 +7029,11 @@
 	name = "Cockpit";
 	req_access_txt = "150"
 	},
-/turf/open/floor/plasteel/darkvault/delivary,
+/turf/open/floor/plasteel/darkwarning/side{
+	tag = "icon-black_warn_side (EAST)";
+	icon_state = "black_warn_side";
+	dir = 4
+	},
 /area/shuttle/syndicate)
 "sa" = (
 /turf/open/floor/plating/asteroid/snow/temperatre,
@@ -7998,7 +8002,7 @@
 	name = "E.V.A. Gear Storage";
 	req_access_txt = "150"
 	},
-/turf/open/floor/plasteel/darkvault/delivary,
+/turf/open/floor/plasteel/darkwarning/side,
 /area/shuttle/syndicate)
 "uB" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
@@ -8022,7 +8026,7 @@
 /obj/machinery/door/airlock/external{
 	req_access_txt = "150"
 	},
-/turf/open/floor/plasteel/darkvault/delivary,
+/turf/open/floor/plasteel/darkwarning/side,
 /area/shuttle/syndicate)
 "uF" = (
 /obj/machinery/atmospherics/components/unary/vent_pump{
@@ -8065,7 +8069,7 @@
 /obj/machinery/door/airlock/external{
 	req_access_txt = "150"
 	},
-/turf/open/floor/plasteel/darkvault/delivary,
+/turf/open/floor/plasteel/darkwarning/side,
 /area/syndicate_mothership)
 "uM" = (
 /turf/open/floor/plasteel/darkwarning{
@@ -8217,6 +8221,10 @@
 	tag = "icon-recharge_port (NORTH)";
 	icon_state = "recharge_port";
 	dir = 1
+	},
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
 	},
 /turf/open/floor/plasteel/vault{
 	dir = 8
@@ -8742,6 +8750,10 @@
 /area/syndicate_mothership)
 "wk" = (
 /obj/machinery/mech_bay_recharge_port,
+/obj/structure/cable{
+	icon_state = "0-2";
+	d2 = 2
+	},
 /turf/open/floor/plasteel/darkvault{
 	dir = 8
 	},
@@ -8930,7 +8942,7 @@
 /obj/machinery/door/airlock/hatch{
 	req_access_txt = "150"
 	},
-/turf/open/floor/plasteel/darkvault/delivary,
+/turf/open/floor/plasteel/darkwarning/side,
 /area/shuttle/syndicate)
 "wG" = (
 /obj/machinery/door/window/westright{
@@ -9811,9 +9823,6 @@
 /obj/machinery/light{
 	icon_state = "tube1";
 	dir = 8
-	},
-/obj/effect/landmark/start{
-	name = "Captain"
 	},
 /turf/open/floor/plasteel/white,
 /area/centcom/ferry)
@@ -13410,7 +13419,7 @@
 	},
 /obj/structure/mirror{
 	desc = "Mirror mirror on the wall, who is the most robust of them all?";
-	pixel_x = -28
+	pixel_x = 28
 	},
 /turf/open/floor/plasteel/whitered/corner{
 	tag = "icon-whiteredcorner (NORTH)";
@@ -14050,7 +14059,7 @@
 	},
 /obj/structure/mirror{
 	desc = "Mirror mirror on the wall, who is the most robust of them all?";
-	pixel_x = -28
+	pixel_x = 28
 	},
 /turf/open/floor/plasteel/white,
 /area/tdome/tdomeobserve)
@@ -14575,7 +14584,7 @@
 	},
 /obj/structure/mirror{
 	desc = "Mirror mirror on the wall, who is the most robust of them all?";
-	pixel_x = -28
+	pixel_x = 28
 	},
 /turf/open/floor/plasteel/whitered/side{
 	dir = 8
@@ -16024,7 +16033,7 @@
 	},
 /obj/structure/mirror{
 	desc = "Mirror mirror on the wall, who is the most robust of them all?";
-	pixel_x = -28
+	pixel_x = 28
 	},
 /turf/open/floor/plasteel/whitered/corner{
 	tag = "icon-whiteredcorner (WEST)";
@@ -19259,7 +19268,7 @@
 	name = "\improper Syndicate Secret Base"
 	})
 "Tt" = (
-/obj/machinery/computer/shuttle/ferry,
+/obj/machinery/computer/shuttle/ferry/request,
 /turf/open/floor/plasteel/warnwhite/end{
 	tag = "icon-white_warn_end (WEST)";
 	icon_state = "white_warn_end";
@@ -19892,13 +19901,6 @@
 	pixel_x = 7;
 	pixel_y = -24
 	},
-/obj/machinery/button/door{
-	id = "CCcrew";
-	layer = 3.5;
-	name = "Central Command Crew";
-	pixel_x = 0;
-	pixel_y = -35
-	},
 /turf/open/floor/plasteel/darkwarning/corner{
 	dir = 4
 	},
@@ -19977,7 +19979,7 @@
 /area/centcom/control)
 "UX" = (
 /obj/machinery/door/airlock/centcom{
-	locked = 1;
+	locked = 0;
 	name = "Sector Beta";
 	opacity = 1;
 	req_access_txt = "101"
@@ -20221,7 +20223,7 @@
 /turf/open/floor/plasteel/darkwarning{
 	dir = 10
 	},
-/area/centcom/prison)
+/area/centcom/control)
 "VD" = (
 /obj/structure/closet/wardrobe/cargotech,
 /turf/open/floor/plasteel/bot,
@@ -20237,7 +20239,7 @@
 /turf/open/floor/plating,
 /area/centcom/prison)
 "VG" = (
-/turf/open/space,
+/turf/open/floor/plating/asteroid/snow/temperatre,
 /obj/machinery/porta_turret/syndicate{
 	dir = 1
 	},
@@ -20282,7 +20284,7 @@
 	icon_state = "asteroid8";
 	name = "sand"
 	},
-/area/centcom/prison)
+/area/centcom/control)
 "VN" = (
 /turf/closed/wall/mineral/plastitanium,
 /area/shuttle/syndicate)
@@ -20392,7 +20394,7 @@
 /turf/closed/wall/mineral/plastitanium,
 /area/shuttle/syndicate)
 "Wf" = (
-/turf/open/space,
+/turf/open/floor/plating/asteroid/snow/temperatre,
 /turf/closed/wall/mineral/plastitanium{
 	icon_state = "diagonalWall3"
 	},
@@ -20416,7 +20418,7 @@
 /turf/closed/wall/mineral/plastitanium,
 /area/shuttle/syndicate)
 "Wm" = (
-/turf/open/space,
+/turf/open/floor/plating/asteroid/snow/temperatre,
 /turf/closed/wall/mineral/plastitanium{
 	dir = 4;
 	icon_state = "diagonalWall3"
@@ -20568,7 +20570,11 @@
 	name = "Ready Room";
 	req_access_txt = "150"
 	},
-/turf/open/floor/plasteel/darkvault/delivary,
+/turf/open/floor/plasteel/darkwarning/side{
+	tag = "icon-black_warn_side (EAST)";
+	icon_state = "black_warn_side";
+	dir = 4
+	},
 /area/shuttle/syndicate)
 "WV" = (
 /turf/closed/wall/mineral/plastitanium,
@@ -20882,6 +20888,43 @@
 	},
 /turf/open/floor/plasteel/green/side,
 /area/tdome/arena)
+"Ys" = (
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -27;
+	pixel_y = 0
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 27;
+	pixel_y = 0
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -5;
+	pixel_y = 30
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -5;
+	pixel_y = -30
+	},
+/turf/open/floor/plating/airless,
+/area/space)
+"Yt" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced/fulltile,
+/obj/machinery/door/poddoor/preopen{
+	icon = 'icons/obj/doors/blastdoor_hor.dmi';
+	id = "XCCassault"
+	},
+/turf/open/floor/plating,
+/area/centcom/evac)
+"Yu" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced/fulltile,
+/obj/machinery/door/poddoor/preopen{
+	icon = 'icons/obj/doors/blastdoor_hor.dmi';
+	id = "XCCassault"
+	},
+/turf/open/floor/plating,
+/area/centcom/evac)
 
 (1,1,1) = {"
 aa
@@ -21299,13 +21342,13 @@ pX
 pX
 pX
 vy
-Xr
-Xu
-Xy
-XC
-XG
-XO
-XX
+VH
+VH
+VH
+VH
+VH
+VH
+VH
 rY
 qE
 pX
@@ -21550,12 +21593,12 @@ pX
 pX
 pX
 qW
-WE
-WK
-WR
-WY
-Xb
-Xf
+VH
+VH
+VH
+VH
+VH
+VH
 vW
 wB
 wV
@@ -21806,13 +21849,13 @@ pX
 pX
 pX
 pX
-Wu
+VH
 to
 to
 WS
 to
 to
-Xg
+VH
 vX
 rz
 rl
@@ -22063,13 +22106,13 @@ pX
 pX
 pX
 pX
-Wv
+VH
 WF
 ry
 ry
 ry
 rL
-Xh
+VH
 vY
 rz
 rl
@@ -22314,26 +22357,26 @@ pX
 pX
 qE
 VG
-VN
-VW
-Wc
+VH
+VH
+VH
 Wf
 pX
 pX
-Ww
+VH
 WG
 rB
 rB
 rz
 rP
-Xi
+VH
 vZ
 wD
 rl
 xk
-XH
-XP
-XY
+VH
+VH
+VH
 sa
 qE
 pX
@@ -22574,21 +22617,21 @@ VH
 rk
 rx
 rK
-Wg
+VH
 pX
 pX
-Wx
+VH
 tp
 tN
 ua
 rz
 Xc
-Xj
+VH
 wa
 rz
 rl
 xl
-XI
+VH
 pX
 pX
 pX
@@ -22831,22 +22874,22 @@ qY
 VO
 ry
 rL
-Wh
-Wp
-Ws
-Wy
-WH
-WL
-WT
+VH
+VH
+VH
+VH
+VH
+VH
+VH
 uA
 vb
-Xk
+VH
 wb
 wF
 vb
-XD
-XJ
-XQ
+VH
+VH
+VH
 rY
 pX
 pX
@@ -23088,7 +23131,7 @@ qY
 rm
 rz
 rM
-Wi
+VH
 sk
 sz
 sz
@@ -23098,12 +23141,12 @@ vb
 rz
 Xd
 vz
-va
+Xd
 rz
-va
+Xd
 xm
 xy
-XR
+VH
 xP
 pX
 pX
@@ -23357,10 +23400,10 @@ rz
 rz
 rz
 rz
-va
+Xd
 xn
 xz
-XS
+VH
 xQ
 pX
 pX
@@ -23599,10 +23642,10 @@ pX
 pX
 qS
 qY
-ro
+VO
 rz
 rO
-Wj
+VH
 sm
 sB
 sB
@@ -23610,14 +23653,14 @@ sB
 sB
 vb
 rz
-va
+Xd
 vA
-va
+Xd
 rz
-va
+Xd
 xm
 xA
-XT
+VH
 xR
 pX
 pX
@@ -23859,22 +23902,22 @@ qY
 VP
 VX
 Wd
-Wk
-Wq
-Wt
-Wz
-WI
-WM
-WV
+VH
+VH
+VH
+VH
+VH
+VH
+VH
 uE
 vb
-Xl
-Xs
+VH
+VH
 wF
 vb
-XE
-XK
-XU
+VH
+VH
+VH
 sa
 pX
 pX
@@ -24112,25 +24155,25 @@ pX
 pX
 pX
 qE
-VI
+VH
 rp
 rC
 rQ
-Wl
+VH
 pX
 pX
-WA
+VH
 WJ
 WN
 ud
 rz
 rz
-Xm
+VH
 wd
 rz
 rl
 xp
-XL
+VH
 pX
 pX
 pX
@@ -24370,26 +24413,26 @@ pX
 qD
 qE
 qZ
-VQ
-VY
-We
+VH
+VH
+VH
 Wm
 pX
 pX
-WB
+VH
 tr
 tO
 ue
 rz
 rz
-Xn
+VH
 we
 wD
 rl
 xq
-XM
-XV
-XZ
+VH
+VH
+VH
 rY
 qE
 pX
@@ -24633,20 +24676,20 @@ pX
 pX
 pX
 pX
-WC
+VH
 ts
 WO
 uf
 WZ
-ve
-Xo
+WZ
+VH
 wf
 rz
 rM
 ry
 xB
 xK
-Ya
+VH
 xP
 qE
 pX
@@ -24890,20 +24933,20 @@ pX
 pX
 pX
 pX
-WD
+VH
 tt
 WP
 WW
 uG
 vf
-Xp
+VH
 wg
 wD
 rz
 rz
 rz
 xL
-Yb
+VH
 xQ
 qE
 pX
@@ -25150,17 +25193,17 @@ pX
 sS
 tu
 tP
-WX
-Xa
-Xe
-Xq
+VH
+VH
+VH
+VH
 wh
 wH
 rB
 rB
 xC
 xM
-Yc
+VH
 xR
 qE
 pX
@@ -25411,13 +25454,13 @@ pX
 sC
 pX
 vB
-Xt
-Xv
-Xz
-XF
-XN
-XW
-Yd
+VH
+VH
+VH
+VH
+VH
+VH
+VH
 sa
 qE
 pX
@@ -30290,9 +30333,9 @@ qF
 sr
 qF
 qF
-tz
-tz
-tz
+uM
+uM
+uM
 qF
 qF
 qF
@@ -45754,7 +45797,7 @@ MM
 Mi
 Yk
 Ym
-Yo
+Ym
 Yq
 Mi
 MM
@@ -45945,7 +45988,7 @@ aa
 aa
 aa
 aa
-UG
+UF
 pf
 qQ
 rg
@@ -46202,7 +46245,7 @@ aa
 aa
 aa
 aa
-UH
+UF
 UP
 yR
 yR
@@ -46472,7 +46515,7 @@ qg
 rw
 VD
 VJ
-VS
+VD
 nN
 rW
 qV
@@ -46723,7 +46766,7 @@ nN
 nN
 Vg
 xi
-sy
+Vg
 nN
 nN
 nN
@@ -46979,8 +47022,8 @@ nN
 nN
 nN
 Vh
-Vp
-Vr
+Vh
+Vh
 nN
 nN
 nN
@@ -47230,14 +47273,14 @@ nN
 nN
 nN
 Uz
-UI
-UQ
+Uz
+Uz
 nN
 nN
 nN
-Vi
+Vg
 xi
-sy
+Vg
 nN
 nN
 nN
@@ -47744,11 +47787,11 @@ vv
 wy
 vv
 UA
-UJ
-UR
+UA
+UA
 UX
-Vb
-Ve
+Ga
+UX
 EA
 yR
 Vs
@@ -48001,16 +48044,16 @@ xi
 wy
 xi
 UB
-UK
-US
+UB
+UB
 xi
-Vc
+Ga
 xi
 tU
 yR
 um
 qp
-Vy
+Vx
 nN
 nN
 nN
@@ -48259,10 +48302,10 @@ wy
 vv
 UC
 UL
-UT
-UY
-Vd
-Vf
+UC
+UX
+Ga
+UX
 Vk
 yR
 Vt
@@ -48524,7 +48567,7 @@ Vl
 Ga
 vw
 qp
-Vz
+Vx
 nN
 nN
 nN
@@ -48779,7 +48822,7 @@ nN
 nN
 Vm
 xi
-Vu
+Vm
 nN
 nN
 nN
@@ -49035,16 +49078,16 @@ su
 nN
 nN
 Vn
-Vq
-Vv
+Vn
+Vn
 nN
 nN
 VA
 qp
-VK
-VT
-VZ
-ym
+Uz
+Uz
+Uz
+nN
 sh
 qp
 zp
@@ -49291,9 +49334,9 @@ UV
 UZ
 nN
 nN
-Vo
+Vm
 xi
-Vw
+Vm
 nN
 nN
 qp
@@ -49301,7 +49344,7 @@ qp
 qp
 qp
 qp
-ym
+nN
 nN
 nN
 nN
@@ -49865,8 +49908,8 @@ MM
 MM
 Od
 Yl
-Yn
-Yp
+Ym
+Ym
 Yr
 Od
 MM
@@ -50084,7 +50127,7 @@ qf
 qp
 nN
 nN
-Cz
+oH
 qf
 sw
 nN
@@ -51866,12 +51909,12 @@ ym
 qk
 qx
 ym
-VB
-VE
-VL
-VU
-Wa
-ym
+qp
+qp
+qp
+qp
+qp
+nN
 nN
 qf
 qp
@@ -51892,7 +51935,7 @@ tb
 yd
 tb
 Hm
-Yg
+Yf
 HX
 Ir
 HW
@@ -52124,11 +52167,11 @@ qj
 qw
 ym
 VC
-VF
+qp
 VM
-VV
-Wb
-ym
+VM
+VM
+nN
 nN
 yT
 zq
@@ -52380,12 +52423,12 @@ ym
 ym
 ym
 ym
-ym
-ym
-ym
-ym
-ym
-ym
+nN
+nN
+nN
+nN
+nN
+nN
 qf
 tG
 us
@@ -53181,7 +53224,7 @@ Fi
 Fi
 Iu
 IN
-ww
+Yt
 JE
 ww
 KE
@@ -55751,7 +55794,7 @@ HI
 Fi
 Iu
 IR
-ww
+Yu
 JF
 zS
 aa
@@ -85181,7 +85224,7 @@ qe
 cO
 aa
 aa
-aa
+Ys
 aa
 aa
 aa

@@ -330,28 +330,28 @@
 /datum/sprite_accessory/hair/longemo_new
 	name = "Long Emo 2"
 	icon = 'icons/mob/more_hairs.dmi'
-	icon_state = "hair_longemo_new"
+	icon_state = "longemo_new"
 
 /datum/sprite_accessory/hair/harleyhair
 	name = "Harley Quinn Hair"
-	icon_state = "harley_hair"
+	icon_state = "harley"
 	icon = 'icons/mob/more_hairs.dmi'
 	gender = FEMALE
 
 /datum/sprite_accessory/hair/hair_dave
 	name = "Style Brother"
 	icon = 'icons/mob/more_hairs.dmi'
-	icon_state = "hair_dave"
+	icon_state = "dave"
 
 /datum/sprite_accessory/hair/hair_cia
 	name = "CIA"
 	icon = 'icons/mob/more_hairs.dmi'
-	icon_state = "hair_cia"
+	icon_state = "cia"
 
 /datum/sprite_accessory/hair/undercut
 	name = "Undercut"
 	icon = 'icons/mob/more_hairs.dmi'
-	icon_state = "hair_undercut"
+	icon_state = "undercut"
 
 /datum/sprite_accessory/tails/human/dog
 	name = "Dog"

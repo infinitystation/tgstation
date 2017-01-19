@@ -17936,6 +17936,7 @@
 	icon_state = "1-2"
 	},
 /obj/item/weapon/ore/glass,
+/obj/item/weapon/storage/box/fsrm,
 /turf/open/floor/plasteel{
 	icon_state = "floorgrime"
 	},
@@ -32503,7 +32504,11 @@
 /obj/machinery/door/airlock/glass_external{
 	name = "Arrival Airlock"
 	},
-/turf/open/floor/plating,
+/turf/open/floor/plasteel/warning/side{
+	tag = "icon-plasteel_warn_side (EAST)";
+	icon_state = "plasteel_warn_side";
+	dir = 4
+	},
 /area/hallway/secondary/entry)
 "bdc" = (
 /obj/effect/spawner/structure/window/reinforced,
@@ -33542,10 +33547,7 @@
 /turf/closed/wall/shuttle/smooth/nodiagonal,
 /area/shuttle/arrival)
 "beB" = (
-/turf/open/floor/plating{
-	dir = 2;
-	icon_state = "warnplate"
-	},
+/turf/open/floor/plasteel/delivery,
 /area/hallway/secondary/entry)
 "beC" = (
 /obj/structure/cable/yellow{
@@ -41878,7 +41880,7 @@
 	},
 /obj/structure/window/reinforced/fulltile,
 /turf/open/floor/plating,
-/area/space)
+/area/ai_monitored/storage/AIlobby)
 "bsk" = (
 /turf/open/floor/plasteel/red/side{
 	dir = 10
@@ -43316,7 +43318,7 @@
 	dir = 6
 	},
 /turf/open/floor/plating,
-/area/space)
+/area/ai_monitored/storage/AIlobby)
 "buw" = (
 /obj/structure/lattice/catwalk,
 /obj/structure/cable{
@@ -47319,9 +47321,7 @@
 /obj/machinery/door/airlock/glass_external{
 	name = "Heavy Shuttle airlock"
 	},
-/turf/open/floor/plasteel{
-	icon_state = "delivery"
-	},
+/turf/open/floor/plasteel/warning/side,
 /area/hallway/secondary/entry)
 "bAS" = (
 /turf/open/floor/plasteel/stairsnew/grey/right{
@@ -52162,10 +52162,7 @@
 	d1 = 1;
 	d2 = 4
 	},
-/turf/open/floor/plasteel{
-	icon_state = "bot";
-	dir = 1
-	},
+/turf/open/floor/plasteel/warning/side,
 /area/atmos)
 "bJz" = (
 /obj/structure/cable/yellow{
@@ -53554,7 +53551,7 @@
 	name = "Distribution Loop";
 	req_access_txt = "24"
 	},
-/turf/open/floor/plasteel,
+/turf/open/floor/plasteel/warning/side,
 /area/atmos)
 "bLz" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/visible{
@@ -54061,7 +54058,11 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	req_access_txt = 1
 	},
-/turf/open/floor/plasteel/delivery,
+/turf/open/floor/plasteel/warning/side{
+	tag = "icon-plasteel_warn_side (EAST)";
+	icon_state = "plasteel_warn_side";
+	dir = 4
+	},
 /area/gateway)
 "bME" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
@@ -58609,6 +58610,12 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
+/obj/item/weapon/reagent_containers/food/condiment/enzyme{
+	layer = 5
+	},
+/obj/item/weapon/reagent_containers/glass/beaker{
+	pixel_x = 5
+	},
 /turf/open/floor/plasteel{
 	tag = "icon-cafeteria (NORTHEAST)";
 	icon_state = "cafeteria";
@@ -59394,7 +59401,7 @@
 	d2 = 8;
 	icon_state = "2-8"
 	},
-/turf/open/floor/plasteel,
+/turf/open/floor/plasteel/warning/side,
 /area/gateway)
 "bWs" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber{
@@ -59494,26 +59501,14 @@
 /turf/open/floor/carpet,
 /area/crew_quarters/bar)
 "bWz" = (
-/obj/effect/spawner/structure/window/reinforced,
-/obj/machinery/door/poddoor/shutters/preopen{
-	dir = 8;
-	id = "kitchenwindow";
-	name = "kitchen shutter"
-	},
-/turf/open/floor/plating,
+/obj/machinery/smartfridge/food,
+/turf/closed/wall,
 /area/crew_quarters/kitchen)
 "bWA" = (
 /obj/structure/cable/yellow{
 	d1 = 2;
 	d2 = 4;
 	icon_state = "2-4"
-	},
-/obj/structure/table,
-/obj/item/weapon/reagent_containers/food/condiment/enzyme{
-	layer = 5
-	},
-/obj/item/weapon/reagent_containers/glass/beaker{
-	pixel_x = 5
 	},
 /turf/open/floor/plasteel{
 	tag = "icon-cafeteria (NORTHEAST)";
@@ -67115,10 +67110,7 @@
 	dir = 1
 	},
 /obj/structure/fans/tiny,
-/turf/open/floor/plating{
-	icon_state = "warnplate";
-	dir = 4
-	},
+/turf/open/floor/plating,
 /area/atmos)
 "cjn" = (
 /obj/structure/lattice/catwalk,
@@ -69156,9 +69148,7 @@
 	id = "Biohazard";
 	name = "biohazard containment door"
 	},
-/turf/open/floor/plasteel{
-	icon_state = "delivery"
-	},
+/turf/open/floor/plasteel/whitebot/delivery,
 /area/medical/research{
 	name = "Research Division"
 	})
@@ -69174,9 +69164,7 @@
 	id = "Biohazard";
 	name = "biohazard containment door"
 	},
-/turf/open/floor/plasteel{
-	icon_state = "delivery"
-	},
+/turf/open/floor/plasteel/whitebot/delivery,
 /area/medical/research{
 	name = "Research Division"
 	})
@@ -69918,8 +69906,10 @@
 	name = "Research Division";
 	req_access_txt = "47"
 	},
-/turf/open/floor/plasteel{
-	icon_state = "delivery"
+/turf/open/floor/plasteel/warnwhite/side{
+	tag = "icon-white_warn_side (EAST)";
+	icon_state = "white_warn_side";
+	dir = 4
 	},
 /area/medical/research{
 	name = "Research Division"
@@ -69937,8 +69927,10 @@
 	name = "Research Division";
 	req_access_txt = "47"
 	},
-/turf/open/floor/plasteel{
-	icon_state = "delivery"
+/turf/open/floor/plasteel/warnwhite/side{
+	tag = "icon-white_warn_side (EAST)";
+	icon_state = "white_warn_side";
+	dir = 4
 	},
 /area/medical/research{
 	name = "Research Division"
@@ -70626,9 +70618,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
-/turf/open/floor/plasteel{
-	icon_state = "white"
-	},
+/turf/open/floor/plasteel/warnwhite/side,
 /area/medical/chemistry)
 "coK" = (
 /obj/structure/cable/yellow{
@@ -73171,10 +73161,10 @@
 	req_access_txt = "0";
 	req_one_access_txt = "47;29"
 	},
-/turf/open/floor/plasteel{
-	tag = "icon-cafeteria (NORTHEAST)";
-	icon_state = "cafeteria";
-	dir = 5
+/turf/open/floor/plasteel/warnwhite/side{
+	tag = "icon-white_warn_side (EAST)";
+	icon_state = "white_warn_side";
+	dir = 4
 	},
 /area/medical/research{
 	name = "Research Division"
@@ -74700,7 +74690,7 @@
 	name = "Research and Development Lab";
 	req_access_txt = "7"
 	},
-/turf/open/floor/plasteel/whitebot/delivery,
+/turf/open/floor/plasteel/warnwhite/side,
 /area/toxins/lab)
 "cvz" = (
 /obj/structure/cable/yellow{
@@ -74990,7 +74980,7 @@
 	name = "Experimentation Lab";
 	req_access_txt = "8"
 	},
-/turf/open/floor/plasteel/whitebot/delivery,
+/turf/open/floor/plasteel/warnwhite/side,
 /area/toxins/explab)
 "cvO" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
@@ -78915,51 +78905,21 @@
 /turf/closed/wall,
 /area/medical/genetics_cloning)
 "cCb" = (
-/obj/machinery/shower{
-	tag = "icon-shower (EAST)";
-	icon_state = "shower";
-	dir = 4
-	},
-/obj/machinery/door/window/southleft{
-	dir = 2;
-	name = "Cloning Shower"
-	},
-/obj/structure/mirror{
-	pixel_x = -28
-	},
+/obj/structure/table,
+/obj/item/weapon/storage/book/bible,
 /turf/open/floor/plasteel{
 	tag = "icon-vault";
 	icon_state = "vault"
 	},
 /area/medical/genetics_cloning)
 "cCc" = (
-/obj/machinery/door/window/southleft{
-	base_state = "right";
-	dir = 2;
-	icon_state = "right";
-	name = "Cloning Shower"
-	},
-/obj/structure/sink/kitchen{
-	desc = "A sink used for washing one's hands and face. It looks rusty and home-made";
-	name = "sink";
-	pixel_y = 26
-	},
 /turf/open/floor/plasteel{
 	tag = "icon-vault";
 	icon_state = "vault"
 	},
 /area/medical/genetics_cloning)
 "cCd" = (
-/obj/machinery/clonepod{
-	pixel_y = 2
-	},
-/obj/item/device/radio/intercom{
-	freerange = 0;
-	frequency = 1459;
-	name = "Station Intercom (General)";
-	pixel_x = 29
-	},
-/obj/structure/window/reinforced,
+/obj/structure/frame/machine,
 /turf/open/floor/plasteel{
 	tag = "icon-vault";
 	icon_state = "vault"
@@ -79197,11 +79157,7 @@
 	req_access_txt = "30";
 	req_one_access_txt = "0"
 	},
-/turf/open/floor/plasteel{
-	tag = "icon-cafeteria (NORTHEAST)";
-	icon_state = "cafeteria";
-	dir = 5
-	},
+/turf/open/floor/plasteel/warnwhite/side,
 /area/crew_quarters/hor)
 "cCx" = (
 /obj/structure/cable/yellow{
@@ -79600,16 +79556,6 @@
 	name = "Medbay Aft"
 	})
 "cDc" = (
-/obj/structure/sink{
-	dir = 8;
-	icon_state = "sink";
-	pixel_x = -12;
-	pixel_y = 2
-	},
-/obj/machinery/light_switch{
-	pixel_x = -23;
-	pixel_y = 0
-	},
 /turf/open/floor/plasteel{
 	dir = 9;
 	icon_state = "whiteblue"
@@ -79619,7 +79565,6 @@
 /obj/effect/landmark/start{
 	name = "Geneticist"
 	},
-/obj/machinery/holopad,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 6
 	},
@@ -79632,10 +79577,8 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 10
 	},
-/obj/machinery/computer/cloning,
-/obj/machinery/light{
-	dir = 4
-	},
+/obj/structure/frame/computer,
+/obj/item/stack/sheet/glass,
 /turf/open/floor/plasteel{
 	dir = 5;
 	icon_state = "whiteblue"
@@ -80149,6 +80092,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
+/obj/item/stack/cable_coil/yellow,
 /turf/open/floor/plasteel{
 	dir = 8;
 	icon_state = "whiteblue"
@@ -80173,7 +80117,12 @@
 	dir = 2;
 	initialize_directions = 13
 	},
-/obj/machinery/dna_scannernew,
+/obj/structure/frame/machine,
+/obj/item/weapon/paper{
+	icon_state = "paper_words";
+	info = "<i>”становка клонирования была неисправна. — целью ремонта, был произведЄн полный демонтаж отсека дл\green поиска причины поломки. ≈сли вы каким-то образом найдЄте, из-за чего люди в капсуле посреди клонирования получали сверх-тЄлые генетические мутации, собщите в ќтдел  онструирования ÷ентрального  омандования.</i>";
+	name = "Message"
+	},
 /turf/open/floor/plasteel{
 	dir = 4;
 	icon_state = "whiteblue"
@@ -81055,9 +81004,10 @@
 	name = "Toxins Space Access";
 	req_access_txt = "8"
 	},
-/turf/open/floor/plasteel{
-	icon_state = "bot";
-	dir = 1
+/turf/open/floor/plasteel/warning/side{
+	tag = "icon-plasteel_warn_side (EAST)";
+	icon_state = "plasteel_warn_side";
+	dir = 4
 	},
 /area/toxins/mixing)
 "cFx" = (
@@ -81190,14 +81140,6 @@
 	name = "Medbay Aft"
 	})
 "cFG" = (
-/obj/machinery/button/door{
-	desc = "A remote control switch for the cloning door.";
-	id = "CloningDoor";
-	name = "Cloning Exit Button";
-	normaldoorcontrol = 1;
-	pixel_x = -23;
-	pixel_y = 8
-	},
 /turf/open/floor/plasteel{
 	dir = 10;
 	icon_state = "whiteblue"
@@ -81210,6 +81152,7 @@
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
 	dir = 8
 	},
+/obj/structure/chair/stool,
 /turf/open/floor/plasteel{
 	dir = 2;
 	icon_state = "whiteblue"
@@ -81842,38 +81785,31 @@
 	name = "Medbay Aft"
 	})
 "cGH" = (
-/obj/item/weapon/book/manual/medical_cloning{
-	pixel_y = 6
-	},
 /obj/machinery/firealarm{
 	dir = 8;
 	pixel_x = -24
 	},
-/obj/structure/table/glass,
+/obj/structure/chair/stool,
 /turf/open/floor/plasteel/blackvault{
 	dir = 1
 	},
 /area/medical/genetics_cloning)
 "cGI" = (
-/obj/item/weapon/storage/box/rxglasses{
-	pixel_x = 3;
-	pixel_y = 3
-	},
-/obj/item/weapon/storage/box/bodybags,
-/obj/item/weapon/pen,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/obj/structure/table/glass,
+/obj/structure/table,
+/obj/item/weapon/reagent_containers/food/drinks/bottle/vodka,
+/obj/item/toy/cards/deck,
 /turf/open/floor/plasteel/blackvault{
 	dir = 1
 	},
 /area/medical/genetics_cloning)
 "cGJ" = (
-/obj/structure/closet/secure_closet/personal/patient,
 /obj/machinery/airalarm{
 	dir = 8;
 	icon_state = "alarm0";
 	pixel_x = 24
 	},
+/obj/structure/chair/stool,
 /turf/open/floor/plasteel/blackvault{
 	dir = 1
 	},
@@ -82017,9 +81953,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
-/turf/open/floor/plasteel{
-	icon_state = "delivery"
-	},
+/turf/open/floor/plasteel/warning/side,
 /area/toxins/chargebay)
 "cGV" = (
 /obj/structure/cable/yellow{
@@ -82621,7 +82555,11 @@
 	opacity = 1;
 	req_access_txt = "9"
 	},
-/turf/open/floor/plasteel/darkvault/delivary,
+/turf/open/floor/plasteel/darkwarning/side{
+	tag = "icon-black_warn_side (EAST)";
+	icon_state = "black_warn_side";
+	dir = 4
+	},
 /area/medical/genetics)
 "cHO" = (
 /obj/structure/sign/directions/evac{
@@ -82965,9 +82903,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
-/turf/open/floor/plasteel{
-	icon_state = "delivery"
-	},
+/turf/open/floor/plasteel/warning/side,
 /area/toxins/mixing)
 "cIs" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
@@ -83338,8 +83274,10 @@
 	req_access_txt = "29"
 	},
 /obj/structure/disposalpipe/segment,
-/turf/open/floor/plasteel{
-	icon_state = "delivery"
+/turf/open/floor/plasteel/warning/side{
+	tag = "icon-plasteel_warn_side (EAST)";
+	icon_state = "plasteel_warn_side";
+	dir = 4
 	},
 /area/toxins/chargebay)
 "cJc" = (
@@ -84080,6 +84018,7 @@
 /turf/open/floor/plating,
 /area/toxins/mixing)
 "cKh" = (
+/obj/structure/fans/tiny,
 /turf/open/floor/plating{
 	icon_state = "warnplate";
 	dir = 4
@@ -84434,7 +84373,7 @@
 	opacity = 1;
 	req_access_txt = "5"
 	},
-/turf/open/floor/plasteel/darkvault/delivary,
+/turf/open/floor/plasteel/darkwarning/side,
 /area/medical/morgue)
 "cKL" = (
 /obj/structure/disposalpipe/segment{
@@ -85090,7 +85029,7 @@
 	opacity = 1;
 	req_access_txt = "6"
 	},
-/turf/open/floor/plasteel/darkvault/delivary,
+/turf/open/floor/plasteel/darkwarning/side,
 /area/medical/morgue)
 "cLL" = (
 /turf/open/floor/plasteel/blackvault{
@@ -87056,9 +86995,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
-/turf/open/floor/plasteel{
-	icon_state = "delivery"
-	},
+/turf/open/floor/plasteel/warning/side,
 /area/toxins/robotics)
 "cOQ" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
@@ -87121,7 +87058,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/open/floor/plasteel/darkvault/delivary,
+/turf/open/floor/plasteel/darkwarning/side,
 /area/server)
 "cOU" = (
 /obj/structure/cable/yellow{
@@ -87696,9 +87633,7 @@
 /obj/machinery/atmospherics/pipe/simple{
 	dir = 4
 	},
-/turf/open/floor/plasteel{
-	icon_state = "dark"
-	},
+/turf/open/floor/plasteel/darkwarning/side,
 /area/server)
 "cPT" = (
 /obj/machinery/atmospherics/pipe/simple{
@@ -88717,7 +88652,11 @@
 	name = "Secure Lab";
 	req_access_txt = "47"
 	},
-/turf/open/floor/plasteel/whitebot/delivery,
+/turf/open/floor/plasteel/warnwhite/side{
+	tag = "icon-white_warn_side (EAST)";
+	icon_state = "white_warn_side";
+	dir = 4
+	},
 /area/medical/research{
 	name = "Research Division"
 	})
@@ -90206,7 +90145,11 @@
 	name = "Secure Lab";
 	req_access_txt = "47"
 	},
-/turf/open/floor/plasteel/whitebot/delivery,
+/turf/open/floor/plasteel/warnwhite/side{
+	tag = "icon-white_warn_side (EAST)";
+	icon_state = "white_warn_side";
+	dir = 4
+	},
 /area/toxins/xeno_lobby)
 "cUe" = (
 /obj/structure/sign/securearea,
@@ -91022,9 +90965,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
-/turf/open/floor/plasteel{
-	icon_state = "redfull"
-	},
+/turf/open/floor/plasteel/warning/side,
 /area/hallway/secondary/exit)
 "cVB" = (
 /obj/structure/cable/yellow{
@@ -91135,9 +91076,7 @@
 	icon_state = "4-8";
 	pixel_y = 0
 	},
-/turf/open/floor/plasteel{
-	icon_state = "white"
-	},
+/turf/open/floor/plasteel/warnwhite/side,
 /area/toxins/xeno_lobby)
 "cVI" = (
 /obj/structure/cable/yellow{
@@ -91183,9 +91122,7 @@
 	name = "Telepad control";
 	req_access_txt = "47"
 	},
-/turf/open/floor/plasteel{
-	icon_state = "white"
-	},
+/turf/open/floor/plasteel/warnwhite/side,
 /area/toxins/telepad)
 "cVK" = (
 /obj/structure/cable/yellow{
@@ -91287,6 +91224,7 @@
 	pixel_x = -23;
 	pixel_y = 0
 	},
+/obj/item/clothing/suit/studentuni,
 /turf/open/floor/plasteel{
 	icon_state = "grimy"
 	},
@@ -91353,10 +91291,7 @@
 	},
 /area/chapel/office)
 "cVZ" = (
-/turf/open/floor/plasteel{
-	dir = 4;
-	icon_state = "chapel"
-	},
+/turf/open/floor/plasteel/terror/chapel,
 /area/chapel/main)
 "cWa" = (
 /obj/structure/chair/comfy/sofa/corner/right/brown,
@@ -91661,9 +91596,7 @@
 	icon_state = "tube1";
 	dir = 8
 	},
-/turf/open/floor/plasteel{
-	icon_state = "chapel"
-	},
+/turf/open/floor/plasteel/terror/chapel,
 /area/chapel/main)
 "cWF" = (
 /obj/structure/chair/comfy/sofa/corner/right/brown,
@@ -91707,10 +91640,7 @@
 	name = "Station Intercom (General)";
 	pixel_x = 29
 	},
-/turf/open/floor/plasteel{
-	dir = 8;
-	icon_state = "chapel"
-	},
+/turf/open/floor/plasteel/terror/chapel,
 /area/chapel/main)
 "cWK" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber{
@@ -91768,7 +91698,11 @@
 	name = "Secure Lab External Airlock";
 	req_access_txt = "55"
 	},
-/turf/open/floor/plasteel/whitebot/delivery,
+/turf/open/floor/plasteel/warnwhite/side{
+	tag = "icon-white_warn_side (EAST)";
+	icon_state = "white_warn_side";
+	dir = 4
+	},
 /area/toxins/xeno_lobby)
 "cWP" = (
 /obj/effect/spawner/structure/window/reinforced,
@@ -91794,7 +91728,11 @@
 	name = "Telepad base";
 	req_access_txt = "47"
 	},
-/turf/open/floor/plasteel/whitebot/delivery,
+/turf/open/floor/plasteel/warnwhite/side{
+	tag = "icon-white_warn_side (EAST)";
+	icon_state = "white_warn_side";
+	dir = 4
+	},
 /area/toxins/telepad)
 "cWR" = (
 /obj/effect/spawner/structure/window/reinforced,
@@ -92808,7 +92746,11 @@
 	name = "Secure Lab Internal Airlock";
 	req_access_txt = "55"
 	},
-/turf/open/floor/plasteel/whitebot/delivery,
+/turf/open/floor/plasteel/warnwhite/side{
+	tag = "icon-white_warn_side (EAST)";
+	icon_state = "white_warn_side";
+	dir = 4
+	},
 /area/toxins/xeno_lobby)
 "cYP" = (
 /obj/structure/table/glass,
@@ -92934,10 +92876,7 @@
 /area/chapel/main)
 "cYX" = (
 /obj/structure/bookcase/random/religion,
-/turf/open/floor/plasteel{
-	dir = 1;
-	icon_state = "chapel"
-	},
+/turf/open/floor/plasteel/terror/chapel,
 /area/chapel/main)
 "cYY" = (
 /obj/machinery/light/small,
@@ -92946,10 +92885,7 @@
 	dir = 1;
 	network = list("SS13")
 	},
-/turf/open/floor/plasteel{
-	dir = 4;
-	icon_state = "chapel"
-	},
+/turf/open/floor/plasteel/terror/chapel,
 /area/chapel/main)
 "cYZ" = (
 /turf/open/floor/plasteel/stairsnew/grey{
@@ -92991,17 +92927,11 @@
 	pixel_x = 6;
 	pixel_y = -25
 	},
-/turf/open/floor/plasteel{
-	dir = 1;
-	icon_state = "chapel"
-	},
+/turf/open/floor/plasteel/terror/chapel,
 /area/chapel/main)
 "cZe" = (
 /obj/structure/bookcase/random/reference,
-/turf/open/floor/plasteel{
-	dir = 4;
-	icon_state = "chapel"
-	},
+/turf/open/floor/plasteel/terror/chapel,
 /area/chapel/main)
 "cZf" = (
 /obj/machinery/light/small{
@@ -93684,9 +93614,10 @@
 "dav" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/machinery/door/firedoor,
-/turf/open/floor/plasteel{
-	icon_state = "delivery";
-	name = "floor"
+/turf/open/floor/plasteel/warnwhite/side{
+	tag = "icon-white_warn_side (EAST)";
+	icon_state = "white_warn_side";
+	dir = 4
 	},
 /area/toxins/xenobiology)
 "daw" = (
@@ -93698,9 +93629,10 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/machinery/door/firedoor,
-/turf/open/floor/plasteel{
-	icon_state = "delivery";
-	name = "floor"
+/turf/open/floor/plasteel/warnwhite/side{
+	tag = "icon-white_warn_side (EAST)";
+	icon_state = "white_warn_side";
+	dir = 4
 	},
 /area/toxins/xenobiology)
 "dax" = (
@@ -93709,9 +93641,10 @@
 	dir = 4
 	},
 /obj/machinery/door/firedoor,
-/turf/open/floor/plasteel{
-	icon_state = "delivery";
-	name = "floor"
+/turf/open/floor/plasteel/warnwhite/side{
+	tag = "icon-white_warn_side (EAST)";
+	icon_state = "white_warn_side";
+	dir = 4
 	},
 /area/toxins/xenobiology)
 "day" = (
@@ -97081,7 +97014,7 @@
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/open/floor/plating,
-/area/space)
+/area/ai_monitored/storage/AIlobby)
 "dgY" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
 	dir = 8;
@@ -97343,6 +97276,12 @@
 	icon_state = "delivery"
 	},
 /area/hallway/secondary/exit)
+"dhG" = (
+/obj/structure/fans/tiny,
+/turf/open/floor/plating{
+	icon_state = "warnplate"
+	},
+/area/maintenance/asmaint2)
 
 (1,1,1) = {"
 aaa
@@ -121686,7 +121625,7 @@ cRX
 cTK
 cUE
 cUA
-cWf
+cVZ
 cWJ
 cWf
 cXG
@@ -126824,7 +126763,7 @@ cJc
 cAC
 cCJ
 cTZ
-cCJ
+dhG
 cTZ
 aqC
 aqC

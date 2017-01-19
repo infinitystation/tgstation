@@ -240,23 +240,6 @@
 	burst_size = 3
 	fire_delay = 1
 
-/obj/item/weapon/gun/ballistic/automatic/mg88
-	name = "MG88 'Enforcer'"
-	desc = "A robust assault rifle used by United Aerospace Corporation."
-	icon_state = "mg88"
-	item_state = "mg88"
-	icon = 'icons/obj/guns/uac_gun.dmi'
-	lefthand_file = 'icons/mob/uac/uac_lefthand.dmi'
-	righthand_file = 'icons/mob/uac/uac_righthand.dmi'
-	origin_tech = "combat=5;materials=3"
-	mag_type = /obj/item/ammo_box/magazine/a646
-	pin = /obj/item/device/firing_pin
-	fire_sound = 'sound/weapons/Gunshot_smg.ogg'
-	slot_flags = 0
-	can_suppress = 0
-	burst_size = 4
-	fire_delay = 1
-
 // Bulldog shotgun //
 
 /obj/item/weapon/gun/ballistic/automatic/shotgun/bulldog
@@ -312,7 +295,7 @@
 	origin_tech = "combat=6;engineering=3;syndicate=6"
 	mag_type = /obj/item/ammo_box/magazine/mm556x45
 	weapon_weight = WEAPON_HEAVY
-	fire_sound = 'sound/weapons/Gunshot_smg.ogg'
+	fire_sound = 'sound/weapons/gunshot_g36.ogg'
 	var/cover_open = 0
 	can_suppress = 0
 	burst_size = 3

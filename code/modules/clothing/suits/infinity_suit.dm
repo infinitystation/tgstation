@@ -389,45 +389,31 @@
 	worn_icon = 'icons/mob/infinity_work.dmi'
 	togglename = "zipper"
 
-/obj/item/clothing/suit/hazard
+/obj/item/clothing/suit/bio_suit/hazard
 	name = "hazard suit"
-	desc = "Just an hazard suit..."
-	icon_state = "common"
-	icon = 'icons/obj/clothing/uac/suit.dmi'
-	worn_icon = 'icons/mob/uac/suit.dmi'
-	w_class = 4
-	gas_transfer_coefficient = 0.01
-	permeability_coefficient = 0.01
-	flags = THICKMATERIAL
-	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
-	slowdown = 1
-	allowed = list(/obj/item/weapon/tank/internals/emergency_oxygen,/obj/item/weapon/pen,/obj/item/device/flashlight/pen, /obj/item/weapon/reagent_containers/dropper, /obj/item/weapon/reagent_containers/syringe, /obj/item/weapon/reagent_containers/hypospray)
-	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 100, rad = 100, fire = 0, acid = 10)
-	flags_inv = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT
-	strip_delay = 70
-	put_on_delay = 70
-	resistance_flags = FIRE_PROOF
+	desc = "Just a hazard suit..."
+	icon_state = "science_suit"
+	item_state = "science_suit"
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	armor = list(melee = 15, bullet = 0, laser = 10, energy = 10, bomb = 0, bio = 100, rad = 100, fire = 30, acid = 100)
 
-/obj/item/clothing/head/hazard
+/obj/item/clothing/head/bio_suit/hazard
 	name = "hazard helmet"
-	icon_state = "common"
 	desc = "A helmet that protects the head and face from biological comtaminants."
-	permeability_coefficient = 0.01
-	flags = THICKMATERIAL
-	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 100, rad = 100, fire = 0, acid = 10)
-	flags_inv = HIDEEARS|HIDEHAIR|HIDEFACIALHAIR
-	resistance_flags = FIRE_PROOF
-	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
-	icon = 'icons/obj/clothing/uac/hats.dmi'
-	worn_icon = 'icons/mob/uac/hats.dmi'
-
+	icon_state = "science_helmet"
+	item_state = "science_helmet"
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	armor = list(melee = 5, bullet = 5, laser = 0,energy = 10, bomb = 0, bio = 100, rad = 100, fire = 30, acid = 40)
 
 /obj/item/clothing/shoes/boots
 	name = "Boots"
 	desc = "A pair of black boots."
-	icon_state = "common"
-	icon = 'icons/obj/clothing/uac/shoes.dmi'
-	worn_icon = 'icons/mob/uac/shoes.dmi'
+	icon_state = "shoes"
+	item_state = "bl_suit"
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'
 
 /obj/item/clothing/suit/blackjack
 	name = "blackjack suit"
@@ -586,3 +572,13 @@
 	body_parts_covered = HEAD
 	flags = NODROP
 	flags_inv = HIDEHAIR|HIDEEARS
+
+/obj/item/clothing/suit/armor/uac
+	name = "Trooper Armor"
+	desc = "— виду тяжела€ брон€ с двумя поручнями по краям... —топ, она стальна€?"
+	desc = "I'm so powerful I even impress myself!"
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon_state = "marine_armor"
+	item_state = "marine_armor"
+	armor = list(melee = 70 bullet = 80, laser = 35, energy = 20, bomb = 35, bio = 0, rad = 20)

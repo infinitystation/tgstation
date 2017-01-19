@@ -154,12 +154,12 @@
 
 /obj/item/ammo_box/magazine/a646
 	name = "box magazine (6.46mm)"
-	icon_state = "mg88"
-	icon = 'icons/obj/uac_ammo.dmi'
+	icon_state = "a646"
+	icon = 'icons/obj/infinity_weapons.dmi'
 	origin_tech = "combat=2"
 	ammo_type = /obj/item/ammo_casing/a646
 	caliber = "a646"
-	max_ammo = 50
+	max_ammo = 30
 
 /obj/item/ammo_box/magazine/m12g
 	name = "shotgun magazine (12g taser slugs)"
@@ -337,6 +337,29 @@
 	ammo_type = /obj/item/ammo_casing/caseless/a68
 	caliber = "a68"
 	max_ammo = 30
+
+/obj/item/ammo_box/magazine/xmg80/update_icon()
+	..()
+	if(ammo_count())
+		icon_state = "xmg80mag-30"
+	else
+		icon_state = "xmg80mag"
+
+/obj/item/ammo_box/magazine/spine
+	name = "spine clip (0.75mm)"
+	icon_state = "spine075mag"
+	icon = 'icons/obj/infinity_weapons.dmi'
+	origin_tech = "combat=3"
+	ammo_type = /obj/item/ammo_casing/caseless/gause_spine
+	caliber = "0.75"
+	max_ammo = 50
+
+/obj/item/ammo_box/magazine/spine/update_icon()
+	..()
+	if(ammo_count())
+		icon_state = "spine075mag-50"
+	else
+		icon_state = "spine075mag"
 
 //// RECHARGEABLE MAGAZINES
 

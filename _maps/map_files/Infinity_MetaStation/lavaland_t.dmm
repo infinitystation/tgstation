@@ -657,9 +657,9 @@
 	tag = ""
 	},
 /turf/open/floor/plasteel/terror/necro/brown/corner{
-	tag = "icon-browncorner (WEST)";
+	tag = "icon-browncorner (NORTH)";
 	icon_state = "browncorner";
-	dir = 8
+	dir = 1
 	},
 /area/mine/living_quarters)
 "ck" = (
@@ -678,7 +678,9 @@
 	on = 1;
 	scrub_Toxins = 0
 	},
-/turf/open/floor/carpet,
+/turf/open/floor/carpet{
+	baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
+	},
 /area/mine/living_quarters)
 "cl" = (
 /obj/machinery/porta_turret/syndicate/mining,
@@ -1187,11 +1189,7 @@
 /obj/machinery/door/airlock/highsecurity{
 	name = "Radioisotope Thermoelectric Generator"
 	},
-/turf/open/floor/plasteel/terror/necro/darkvault{
-	tag = "icon-vault (WEST)";
-	icon_state = "vault";
-	dir = 8
-	},
+/turf/open/floor/plasteel/terror/necro/darkwarning/side,
 /area/mine/lobby)
 "dn" = (
 /obj/structure/cable{
@@ -1360,7 +1358,7 @@
 /obj/docking_port/mobile{
 	callTime = 120;
 	dir = 4;
-	dwidth = 3;
+	dwidth = 0;
 	height = 7;
 	id = "mining_sci";
 	name = "Исследователь-15";
@@ -1368,7 +1366,7 @@
 	width = 4
 	},
 /obj/docking_port/stationary{
-	area_type = /area/lavaland/surface/outdoors/near;
+	area_type = /area/lavaland/surface/outdoors;
 	dir = 4;
 	height = 7;
 	id = "mining_base_sci";
@@ -1976,7 +1974,7 @@
 /area/mine/sleeper)
 "eB" = (
 /obj/docking_port/stationary{
-	area_type = /area/lavaland/surface/outdoors/near;
+	area_type = /area/lavaland/surface/outdoors;
 	dir = 1;
 	dwidth = 3;
 	height = 5;
@@ -2124,8 +2122,10 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/open/floor/plasteel/delivery{
-	baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
+/turf/open/floor/plasteel/terror/necro/warning/side{
+	tag = "icon-plasteel_warn_side (WEST)";
+	icon_state = "plasteel_warn_side";
+	dir = 8
 	},
 /area/mine/lobby)
 "eP" = (
@@ -2169,7 +2169,9 @@
 	pixel_y = 32
 	},
 /obj/random/plushie,
-/turf/open/floor/carpet,
+/turf/open/floor/carpet{
+	baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
+	},
 /area/mine/living_quarters)
 "eU" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
@@ -2527,9 +2529,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
-/turf/open/floor/plasteel/delivery{
-	baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
-	},
+/turf/open/floor/plasteel/terror/necro/warning/side,
 /area/mine/lobby)
 "fu" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
@@ -2735,7 +2735,7 @@
 	name = "Mining Base Alpha";
 	req_access_txt = "54"
 	},
-/turf/open/floor/plasteel/terror/necro/black/outdoor,
+/turf/open/floor/plasteel/terror/necro/darkwarning/side,
 /area/mine/eva)
 "fQ" = (
 /turf/open/floor/plasteel/whitebot{
@@ -2783,9 +2783,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
-/turf/open/floor/plasteel/delivery{
-	baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
-	},
+/turf/open/floor/plasteel/terror/necro/warning/side,
 /area/mine/lobby)
 "fW" = (
 /obj/machinery/atmospherics/pipe/manifold4w/scrubbers/hidden,
@@ -2875,9 +2873,7 @@
 	pixel_x = 0;
 	tag = ""
 	},
-/turf/open/floor/plasteel/delivery{
-	baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
-	},
+/turf/open/floor/plasteel/terror/necro/warning/side,
 /area/mine/lobby)
 "gc" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
@@ -2970,10 +2966,7 @@
 	name = "Mining Station EVA";
 	req_access_txt = "54"
 	},
-/turf/open/floor/plasteel/terror/necro/darkvault{
-	icon = 'icons/turf/infinity.dmi';
-	icon_state = "darkdelivery"
-	},
+/turf/open/floor/plasteel/terror/necro/darkwarning/side,
 /area/mine/eva)
 "gi" = (
 /obj/structure/cable{
@@ -3058,10 +3051,7 @@
 	name = "Mining External Airlock";
 	req_access_txt = "54"
 	},
-/turf/open/floor/plasteel/terror/necro/darkvault{
-	icon = 'icons/turf/infinity.dmi';
-	icon_state = "darkdelivery"
-	},
+/turf/open/floor/plasteel/terror/necro/darkwarning/side,
 /area/mine/eva)
 "gn" = (
 /obj/structure/cable{
@@ -3075,10 +3065,9 @@
 	icon_state = "4-8"
 	},
 /obj/structure/fans/tiny/invisible,
-/turf/open/floor/plasteel/terror/necro/darkwarning{
-	tag = "icon-warndark (EAST)";
-	icon_state = "warndark";
-	dir = 4
+/turf/open/floor/plasteel/terror/necro/darkvault{
+	icon = 'icons/turf/infinity.dmi';
+	icon_state = "darkdelivery"
 	},
 /area/mine/eva)
 "go" = (
@@ -3091,10 +3080,7 @@
 	name = "Mining External Airlock";
 	req_access_txt = "54"
 	},
-/turf/open/floor/plasteel/terror/necro/darkvault{
-	icon = 'icons/turf/infinity.dmi';
-	icon_state = "darkdelivery"
-	},
+/turf/open/floor/plasteel/terror/necro/darkwarning/side,
 /area/mine/eva)
 "gp" = (
 /obj/structure/cable{
@@ -3251,9 +3237,7 @@
 /obj/machinery/door/airlock/glass{
 	name = "Port Primary Hallway"
 	},
-/turf/open/floor/plasteel/delivery{
-	baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
-	},
+/turf/open/floor/plasteel/terror/necro/warning/side,
 /area/mine/lobby)
 "gC" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
@@ -3395,6 +3379,7 @@
 	tag = "icon-1-2"
 	},
 /turf/open/floor/mech_bay_recharge_floor{
+	baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface;
 	icon = 'icons/turf/infinity.dmi';
 	icon_state = "recharge_floor_black";
 	initial_gas_mix = "o2=14;n2=23;TEMP=300"
@@ -3463,9 +3448,9 @@
 	tag = ""
 	},
 /turf/open/floor/plasteel/terror/necro/brown/corner{
-	tag = "icon-browncorner (WEST)";
+	tag = "icon-browncorner (NORTH)";
 	icon_state = "browncorner";
-	dir = 8
+	dir = 1
 	},
 /area/mine/living_quarters)
 "gR" = (
@@ -3494,9 +3479,10 @@
 	req_access_txt = "0";
 	req_one_access_txt = "6;48"
 	},
-/turf/open/floor/plasteel/terror/necro/darkvault{
-	icon = 'icons/turf/infinity.dmi';
-	icon_state = "darkdelivery"
+/turf/open/floor/plasteel/terror/necro/darkwarning/side{
+	tag = "icon-black_warn_side (EAST)";
+	icon_state = "black_warn_side";
+	dir = 4
 	},
 /area/mine/storage)
 "gU" = (
@@ -3539,7 +3525,11 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
-/turf/open/floor/plasteel/terror/necro/brown/corner,
+/turf/open/floor/plasteel/terror/necro/brown/corner{
+	tag = "icon-browncorner (EAST)";
+	icon_state = "browncorner";
+	dir = 4
+	},
 /area/mine/living_quarters)
 "gZ" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
@@ -3556,14 +3546,16 @@
 	density = 0;
 	pixel_y = 26
 	},
-/turf/open/floor/carpet,
+/turf/open/floor/carpet{
+	baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
+	},
 /area/mine/living_quarters)
 "hb" = (
 /obj/machinery/door/airlock{
 	id_tag = "miningdorm1";
 	name = "Room 1"
 	},
-/turf/open/floor/wood,
+/turf/open/floor/plasteel/terror/necro/wood,
 /area/mine/living_quarters)
 "hc" = (
 /obj/structure/ore_box,
@@ -3680,7 +3672,11 @@
 /area/mine/living_quarters)
 "hm" = (
 /obj/machinery/atmospherics/pipe/manifold4w/supply/hidden,
-/turf/open/floor/plasteel/terror/necro/brown/corner,
+/turf/open/floor/plasteel/terror/necro/brown/corner{
+	tag = "icon-browncorner (EAST)";
+	icon_state = "browncorner";
+	dir = 4
+	},
 /area/mine/living_quarters)
 "hn" = (
 /obj/structure/dresser/metal{
@@ -3877,7 +3873,9 @@
 /obj/machinery/atmospherics/components/unary/vent_pump{
 	on = 1
 	},
-/turf/open/floor/carpet,
+/turf/open/floor/carpet{
+	baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
+	},
 /area/mine/living_quarters)
 "hD" = (
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden{
@@ -3903,11 +3901,7 @@
 	icon_state = "1-8";
 	tag = ""
 	},
-/turf/open/floor/plasteel/terror/necro/brown/corner{
-	tag = "icon-browncorner (WEST)";
-	icon_state = "browncorner";
-	dir = 8
-	},
+/turf/open/floor/plasteel/terror/necro,
 /area/mine/living_quarters)
 "hE" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
@@ -3924,7 +3918,9 @@
 	},
 /obj/structure/bed,
 /obj/item/weapon/bedsheet/brown,
-/turf/open/floor/carpet,
+/turf/open/floor/carpet{
+	baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
+	},
 /area/mine/living_quarters)
 "hG" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
@@ -3940,9 +3936,10 @@
 	req_access_txt = "0";
 	req_one_access_txt = "6;48"
 	},
-/turf/open/floor/plasteel/terror/necro/darkvault{
-	icon = 'icons/turf/infinity.dmi';
-	icon_state = "darkdelivery"
+/turf/open/floor/plasteel/terror/necro/darkwarning/side{
+	tag = "icon-black_warn_side (EAST)";
+	icon_state = "black_warn_side";
+	dir = 4
 	},
 /area/mine/storage)
 "hI" = (
@@ -3974,14 +3971,18 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 9
 	},
-/turf/open/floor/carpet,
+/turf/open/floor/carpet{
+	baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
+	},
 /area/mine/living_quarters)
 "hL" = (
 /obj/machinery/light/small,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
-/turf/open/floor/carpet,
+/turf/open/floor/carpet{
+	baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
+	},
 /area/mine/living_quarters)
 "hM" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
@@ -3993,7 +3994,9 @@
 	name = "Station Intercom (General)";
 	pixel_y = -28
 	},
-/turf/open/floor/carpet,
+/turf/open/floor/carpet{
+	baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
+	},
 /area/mine/living_quarters)
 "hN" = (
 /obj/machinery/light{
@@ -4015,7 +4018,7 @@
 	pixel_x = 26;
 	pixel_y = 0
 	},
-/turf/open/floor/plasteel/terror/necro/brown/corner,
+/turf/open/floor/plasteel/terror/necro,
 /area/mine/living_quarters)
 "hO" = (
 /obj/machinery/door/airlock{
@@ -4025,7 +4028,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
-/turf/open/floor/wood,
+/turf/open/floor/plasteel/terror/necro/wood,
 /area/mine/living_quarters)
 "hP" = (
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden{
@@ -4118,9 +4121,9 @@
 	pixel_y = 0;
 	tag = ""
 	},
-/turf/open/floor/plasteel/terror/necro/brown/corner{
-	tag = "icon-browncorner (WEST)";
-	icon_state = "browncorner";
+/turf/open/floor/plasteel/terror/necro/warning/side{
+	tag = "icon-plasteel_warn_side (WEST)";
+	icon_state = "plasteel_warn_side";
 	dir = 8
 	},
 /area/mine/living_quarters)
@@ -4129,7 +4132,11 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	req_access_txt = 1
 	},
-/turf/open/floor/plasteel/terror/necro/brown/corner,
+/turf/open/floor/plasteel/terror/necro/warning/side{
+	tag = "icon-plasteel_warn_side (WEST)";
+	icon_state = "plasteel_warn_side";
+	dir = 8
+	},
 /area/mine/living_quarters)
 "hY" = (
 /obj/machinery/button/door{
@@ -4147,7 +4154,9 @@
 	on = 1;
 	scrub_Toxins = 0
 	},
-/turf/open/floor/carpet,
+/turf/open/floor/carpet{
+	baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
+	},
 /area/mine/living_quarters)
 "hZ" = (
 /obj/structure/bodycontainer/morgue,
@@ -4208,9 +4217,9 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden,
 /turf/open/floor/plasteel/terror/necro/brown/corner{
-	tag = "icon-browncorner (WEST)";
+	tag = "icon-browncorner (NORTH)";
 	icon_state = "browncorner";
-	dir = 8
+	dir = 1
 	},
 /area/mine/living_quarters)
 "if" = (
@@ -4224,7 +4233,11 @@
 	dir = 4;
 	pixel_x = 24
 	},
-/turf/open/floor/plasteel/terror/necro/brown/corner,
+/turf/open/floor/plasteel/terror/necro/brown/corner{
+	tag = "icon-browncorner (EAST)";
+	icon_state = "browncorner";
+	dir = 4
+	},
 /area/mine/living_quarters)
 "ig" = (
 /obj/machinery/button/door{
@@ -4242,7 +4255,9 @@
 	on = 1;
 	scrub_Toxins = 0
 	},
-/turf/open/floor/carpet,
+/turf/open/floor/carpet{
+	baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
+	},
 /area/mine/living_quarters)
 "ih" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
@@ -4316,10 +4331,10 @@
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
 	dir = 4
 	},
-/turf/open/floor/plasteel/terror/necro/darkvault{
-	tag = "icon-vault (WEST)";
-	icon_state = "vault";
-	dir = 8
+/turf/open/floor/plasteel/terror/necro/darkwarning/side{
+	tag = "icon-black_warn_side (EAST)";
+	icon_state = "black_warn_side";
+	dir = 4
 	},
 /area/mine/maintenance)
 "in" = (
@@ -4335,7 +4350,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
-/turf/open/floor/wood,
+/turf/open/floor/plasteel/terror/necro/wood,
 /area/mine/living_quarters)
 "ip" = (
 /obj/machinery/power/apc{
@@ -4361,9 +4376,8 @@
 	},
 /obj/structure/cable,
 /turf/open/floor/plasteel/terror/necro/darkvault{
-	tag = "icon-vault (WEST)";
-	icon_state = "vault";
-	dir = 8
+	icon = 'icons/turf/infinity.dmi';
+	icon_state = "darkdelivery"
 	},
 /area/mine/maintenance)
 "iq" = (
@@ -4876,42 +4890,10 @@
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/mine/shelter/ash)
 "jP" = (
-/obj/structure/window{
-	tag = "icon-window (NORTH)";
-	icon_state = "window";
-	dir = 1
-	},
-/obj/structure/window{
-	tag = "icon-window (WEST)";
-	icon_state = "window";
-	dir = 8
-	},
-/obj/structure/window{
-	tag = "icon-window (EAST)";
-	icon_state = "window";
-	dir = 4
-	},
-/obj/structure/window,
 /mob/living/simple_animal/hostile/megafauna/colossus,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/lavaland/surface/outdoors)
 "jQ" = (
-/obj/structure/window{
-	tag = "icon-window (NORTH)";
-	icon_state = "window";
-	dir = 1
-	},
-/obj/structure/window{
-	tag = "icon-window (WEST)";
-	icon_state = "window";
-	dir = 8
-	},
-/obj/structure/window{
-	tag = "icon-window (EAST)";
-	icon_state = "window";
-	dir = 4
-	},
-/obj/structure/window,
 /mob/living/simple_animal/hostile/megafauna/bubblegum,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/lavaland/surface/outdoors)
@@ -5224,22 +5206,6 @@
 "lg" = (
 /obj/item/weapon/ore/gold,
 /obj/item/weapon/ore/gold,
-/obj/structure/window{
-	tag = "icon-window (EAST)";
-	icon_state = "window";
-	dir = 4
-	},
-/obj/structure/window,
-/obj/structure/window{
-	tag = "icon-window (WEST)";
-	icon_state = "window";
-	dir = 8
-	},
-/obj/structure/window{
-	tag = "icon-window (NORTH)";
-	icon_state = "window";
-	dir = 1
-	},
 /mob/living/simple_animal/hostile/megafauna/dragon,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/lavaland/surface/outdoors)
@@ -25347,7 +25313,7 @@ at
 at
 at
 at
-at
+aJ
 en
 at
 at
@@ -25603,7 +25569,7 @@ at
 at
 at
 at
-at
+aJ
 aJ
 aJ
 aJ
@@ -25859,7 +25825,7 @@ at
 aJ
 at
 at
-at
+aJ
 aJ
 aJ
 aJ
@@ -26116,7 +26082,7 @@ at
 at
 at
 at
-at
+aJ
 aJ
 aJ
 at
@@ -26372,7 +26338,7 @@ at
 at
 at
 at
-at
+aJ
 aJ
 aJ
 aJ
@@ -26629,13 +26595,13 @@ at
 at
 at
 at
-at
-at
+aJ
+aJ
 aJ
 at
 at
-aJ
-aJ
+at
+at
 aJ
 aJ
 aJ
@@ -27148,8 +27114,8 @@ at
 at
 at
 at
-at
-at
+aJ
+aJ
 aJ
 aJ
 aJ
@@ -27405,8 +27371,8 @@ at
 at
 at
 at
-at
-at
+aJ
+aJ
 aJ
 aJ
 aJ
@@ -27661,9 +27627,9 @@ at
 at
 aJ
 aJ
-at
-at
-at
+aJ
+aJ
+aJ
 aJ
 aJ
 aJ
@@ -27920,7 +27886,7 @@ aJ
 aJ
 aJ
 aJ
-at
+aJ
 aJ
 aJ
 aJ
@@ -28173,12 +28139,12 @@ at
 aJ
 aJ
 aJ
-at
-at
 aJ
 aJ
-at
-at
+aJ
+aJ
+aJ
+aJ
 aJ
 aJ
 aJ
@@ -28430,12 +28396,12 @@ aJ
 aJ
 aJ
 aJ
-at
-at
-at
 aJ
 aJ
-at
+aJ
+aJ
+aJ
+aJ
 aJ
 aJ
 aJ
@@ -28689,10 +28655,10 @@ aJ
 aJ
 aJ
 aJ
-at
 aJ
-at
-at
+aJ
+aJ
+aJ
 aJ
 aJ
 aJ
@@ -28946,10 +28912,10 @@ at
 aJ
 aJ
 aJ
-at
-at
-at
-at
+aJ
+aJ
+aJ
+aJ
 aJ
 aJ
 aJ
@@ -29205,7 +29171,7 @@ aJ
 aJ
 aJ
 aJ
-at
+aJ
 aJ
 aJ
 aJ
@@ -35529,23 +35495,23 @@ aJ
 aJ
 aJ
 aJ
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aJ
+aJ
+aJ
+aJ
+aJ
+aJ
+aJ
+aJ
+aJ
+aJ
+aJ
+aJ
+aJ
+aJ
+aJ
+aJ
+aJ
 aJ
 aJ
 aJ
@@ -35786,23 +35752,23 @@ aJ
 aJ
 aJ
 aJ
+aJ
+aJ
+aJ
+aJ
+aJ
 aa
 aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aJ
+aJ
+aJ
+aJ
+aJ
+aJ
+aJ
 aJ
 aJ
 aJ
@@ -36043,6 +36009,10 @@ aJ
 aa
 aa
 aa
+aJ
+aJ
+aJ
+aJ
 aa
 aa
 aa
@@ -36051,16 +36021,12 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aJ
+aJ
+aJ
+aJ
+aJ
+aJ
 aJ
 aJ
 aJ
@@ -36299,25 +36265,25 @@ aJ
 aJ
 aa
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aJ
 aJ
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aJ
+aJ
+aJ
 aJ
 aJ
 aJ
@@ -39892,7 +39858,7 @@ aJ
 aJ
 aJ
 aJ
-aJ
+aa
 aa
 aa
 aa
@@ -40149,7 +40115,7 @@ aJ
 aJ
 aJ
 aJ
-aJ
+aa
 aa
 aa
 aa
@@ -40671,7 +40637,7 @@ aa
 aa
 aa
 aa
-aa
+iw
 iw
 at
 bF
@@ -41200,7 +41166,7 @@ aa
 aa
 aa
 aJ
-aa
+aJ
 aJ
 aJ
 aJ
@@ -41438,10 +41404,10 @@ aJ
 aa
 aa
 aa
-aJ
-aJ
-aJ
-aJ
+aa
+aa
+aa
+aa
 iw
 iw
 iw
@@ -41457,7 +41423,7 @@ aa
 aa
 aa
 aJ
-aa
+aJ
 aJ
 aJ
 aJ
@@ -41694,8 +41660,8 @@ aJ
 aJ
 aJ
 aJ
-aJ
-aJ
+aa
+aa
 aa
 aa
 aa
@@ -41714,7 +41680,7 @@ aa
 aa
 aa
 aJ
-aa
+aJ
 aJ
 aJ
 aJ
@@ -41971,7 +41937,7 @@ aa
 aa
 aa
 aJ
-aa
+aJ
 aJ
 aJ
 aJ
@@ -42228,7 +42194,7 @@ aa
 aa
 aa
 aJ
-aa
+aJ
 aJ
 aJ
 aJ
@@ -42485,7 +42451,7 @@ aa
 aa
 aa
 aJ
-aa
+aJ
 aJ
 aJ
 aJ
@@ -42742,7 +42708,7 @@ aa
 aa
 aa
 aJ
-aa
+aJ
 aJ
 aJ
 aJ
@@ -42998,8 +42964,8 @@ aa
 aa
 aa
 aa
-aa
-aa
+aJ
+aJ
 aJ
 aJ
 aJ
@@ -43255,8 +43221,8 @@ aa
 aa
 aa
 aa
-aa
-aa
+aJ
+aJ
 aJ
 aJ
 aJ
@@ -43512,7 +43478,7 @@ aa
 aa
 aa
 aa
-aa
+aJ
 aJ
 aJ
 aJ
@@ -43768,8 +43734,8 @@ aa
 aa
 aa
 aa
-aa
-aa
+aJ
+aJ
 aJ
 aJ
 aJ
@@ -44025,8 +43991,8 @@ aa
 aa
 aa
 aa
-aa
-aa
+aJ
+aJ
 aJ
 aJ
 aJ
@@ -44281,9 +44247,9 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
+aJ
+aJ
+aJ
 aJ
 aJ
 aJ
@@ -49399,7 +49365,7 @@ aJ
 aJ
 aJ
 aJ
-aa
+aJ
 aJ
 aJ
 aJ
@@ -49656,7 +49622,7 @@ aJ
 aJ
 aJ
 aJ
-aa
+aJ
 aJ
 aJ
 aJ
@@ -49913,9 +49879,9 @@ aJ
 aJ
 aJ
 aJ
-aa
-aa
-aa
+aJ
+aJ
+aJ
 aJ
 aJ
 aJ
@@ -50170,9 +50136,9 @@ aJ
 aJ
 aJ
 aJ
-aa
-aa
-aa
+aJ
+aJ
+aJ
 aJ
 aJ
 aJ
@@ -50427,9 +50393,9 @@ aJ
 aJ
 aJ
 aJ
-aa
-aa
-aa
+aJ
+aJ
+aJ
 aJ
 aJ
 aJ
@@ -50684,9 +50650,9 @@ aJ
 aJ
 aJ
 aJ
-aa
-aa
-aa
+aJ
+aJ
+aJ
 aJ
 aJ
 aJ
@@ -50941,9 +50907,9 @@ aJ
 aJ
 aJ
 aJ
-aa
-aa
-aa
+aJ
+aJ
+aJ
 aJ
 aJ
 aJ
@@ -51198,9 +51164,9 @@ aJ
 aJ
 aJ
 aJ
-aa
-aa
-aa
+aJ
+aJ
+aJ
 aJ
 aJ
 aJ
@@ -51455,9 +51421,9 @@ aJ
 aJ
 aJ
 aJ
-aa
-aa
-aa
+aJ
+aJ
+aJ
 aJ
 aJ
 aJ
@@ -51712,9 +51678,9 @@ aJ
 aJ
 aJ
 aJ
-aa
-aa
-aa
+aJ
+aJ
+aJ
 aJ
 aJ
 aJ
@@ -51969,9 +51935,9 @@ aJ
 aJ
 aJ
 aJ
-aa
-aa
-aa
+aJ
+aJ
+aJ
 aJ
 aJ
 aJ
@@ -52226,8 +52192,8 @@ aJ
 aJ
 aJ
 aJ
-aa
-aa
+aJ
+aJ
 aJ
 aJ
 aJ
@@ -52459,10 +52425,6 @@ aJ
 aJ
 aJ
 aJ
-aa
-aa
-aa
-aa
 aJ
 aJ
 aJ
@@ -52483,8 +52445,12 @@ aJ
 aJ
 aJ
 aJ
-aa
-aa
+aJ
+aJ
+aJ
+aJ
+aJ
+aJ
 aJ
 aJ
 aJ
@@ -52716,10 +52682,6 @@ aJ
 aJ
 aJ
 aJ
-aa
-aa
-aa
-aa
 aJ
 aJ
 aJ
@@ -52739,8 +52701,12 @@ aJ
 aJ
 aJ
 aJ
-aa
-aa
+aJ
+aJ
+aJ
+aJ
+aJ
+aJ
 aJ
 aJ
 aJ
@@ -52973,8 +52939,8 @@ aJ
 aJ
 aJ
 aJ
-aa
-aa
+aJ
+aJ
 aJ
 aJ
 aJ
@@ -52996,8 +52962,8 @@ aL
 aJ
 aJ
 aJ
-aa
-aa
+aJ
+aJ
 aJ
 aJ
 aJ
@@ -53230,8 +53196,8 @@ aJ
 aJ
 aJ
 aJ
-aa
-aa
+aJ
+aJ
 aJ
 aJ
 aJ
@@ -53487,8 +53453,6 @@ aJ
 aJ
 aJ
 aJ
-aa
-aa
 aJ
 aJ
 aJ
@@ -53508,8 +53472,10 @@ aJ
 aJ
 aJ
 aJ
-aa
-aa
+aJ
+aJ
+aJ
+aJ
 aJ
 aJ
 aJ
@@ -53744,8 +53710,6 @@ aJ
 aJ
 aJ
 aJ
-aa
-aa
 aJ
 aJ
 aJ
@@ -53765,8 +53729,10 @@ aJ
 aJ
 aJ
 aJ
-aa
-aa
+aJ
+aJ
+aJ
+aJ
 aJ
 aJ
 aJ
@@ -54022,8 +53988,8 @@ aJ
 aJ
 aJ
 aJ
-aa
-aa
+aJ
+aJ
 aJ
 aJ
 aJ
@@ -54279,8 +54245,8 @@ aJ
 aJ
 aJ
 aJ
-aa
-aa
+aJ
+aJ
 aJ
 aJ
 aJ
@@ -54536,8 +54502,8 @@ aJ
 aJ
 aJ
 aJ
-aa
-aa
+aJ
+aJ
 aJ
 aJ
 aJ
@@ -58718,14 +58684,14 @@ aJ
 aJ
 aJ
 aJ
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aJ
+aJ
+aJ
+aJ
+aJ
+aJ
+aJ
+aJ
 aJ
 aJ
 aJ
@@ -58975,15 +58941,15 @@ aJ
 aJ
 aJ
 aJ
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aJ
+aJ
+aJ
+aJ
+aJ
+aJ
+aJ
+aJ
+aJ
 aJ
 aJ
 aJ
@@ -59238,9 +59204,9 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
+aJ
+aJ
+aJ
 aJ
 aJ
 aJ
@@ -62326,8 +62292,8 @@ at
 aa
 aa
 aa
-aJ
-aJ
+aa
+aa
 aJ
 aJ
 aJ
@@ -62563,7 +62529,7 @@ aJ
 aJ
 aJ
 aJ
-aJ
+aa
 at
 at
 at
@@ -62584,8 +62550,8 @@ jT
 aa
 aa
 aa
-aJ
-aJ
+aa
+aa
 aJ
 aJ
 aJ
@@ -62820,7 +62786,7 @@ aJ
 aJ
 aJ
 aJ
-aJ
+aa
 jR
 at
 at
@@ -62842,8 +62808,8 @@ aa
 aa
 aa
 aa
-aJ
-aJ
+aa
+aa
 aJ
 aJ
 aJ
@@ -63077,8 +63043,8 @@ aJ
 aJ
 aJ
 aJ
-aJ
-aJ
+aa
+aa
 at
 at
 at
@@ -63100,8 +63066,8 @@ aa
 aa
 aa
 aa
-aJ
-aJ
+aa
+aa
 aJ
 aJ
 aJ
@@ -63334,8 +63300,8 @@ aJ
 aJ
 aJ
 aJ
-aJ
-aJ
+aa
+aa
 jT
 at
 at
@@ -63343,7 +63309,7 @@ at
 at
 aY
 at
-jY
+at
 at
 at
 at
@@ -63357,9 +63323,9 @@ au
 aa
 aa
 aa
-aJ
-aJ
-aJ
+aa
+aa
+aa
 aJ
 aJ
 aJ
@@ -63591,8 +63557,8 @@ aJ
 aJ
 aJ
 aJ
-aJ
-aJ
+aa
+aa
 jR
 at
 at
@@ -63615,9 +63581,9 @@ aa
 aa
 aa
 aa
-aJ
-aJ
-aJ
+aa
+aa
+aa
 aJ
 aJ
 aJ
@@ -63872,9 +63838,9 @@ aa
 aa
 aa
 aa
-aJ
-aJ
-aJ
+aa
+aa
+aa
 aJ
 aJ
 aJ
@@ -64129,8 +64095,8 @@ au
 aa
 aa
 aa
-aJ
-aJ
+aa
+aa
 aJ
 aJ
 aJ
@@ -64386,9 +64352,9 @@ jT
 aa
 aa
 aa
-aJ
-aJ
-aJ
+aa
+aa
+aa
 aJ
 aJ
 aJ
@@ -64643,8 +64609,8 @@ aY
 aa
 aa
 aa
-aJ
-aJ
+aa
+aa
 aJ
 aJ
 aJ
@@ -64875,7 +64841,7 @@ aJ
 aJ
 aJ
 aJ
-aa
+aJ
 aa
 aa
 aa
@@ -64900,8 +64866,8 @@ au
 aa
 aa
 aa
-aJ
-aJ
+aa
+aa
 aJ
 aJ
 aJ
@@ -65132,9 +65098,9 @@ aJ
 aJ
 aJ
 aJ
-aa
-aa
-aa
+aJ
+aJ
+aJ
 aa
 aa
 aa
@@ -65157,8 +65123,8 @@ at
 aa
 aa
 aa
-aJ
-aJ
+aa
+aa
 aJ
 aJ
 aJ
@@ -65389,11 +65355,11 @@ aJ
 aJ
 aJ
 aJ
-aa
-aa
-aa
-aa
-aa
+aJ
+aJ
+aJ
+aJ
+aJ
 aa
 aa
 aa
@@ -65414,8 +65380,8 @@ aa
 aa
 aa
 aa
-aJ
-aJ
+aa
+aa
 aJ
 aJ
 aJ
@@ -65646,13 +65612,13 @@ aJ
 aJ
 aJ
 aJ
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aJ
+aJ
+aJ
+aJ
+aJ
+aJ
+aJ
 aa
 aa
 aa
@@ -65671,8 +65637,8 @@ aa
 aa
 aa
 aa
-aJ
-aJ
+aa
+aa
 aJ
 aJ
 aJ
@@ -65903,33 +65869,33 @@ aJ
 aJ
 aJ
 aJ
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
 aJ
 aJ
+aJ
+aJ
+aJ
+aJ
+aJ
+aJ
+aJ
+aJ
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aJ
 aJ
 aJ
@@ -66160,33 +66126,33 @@ aJ
 aJ
 aJ
 aJ
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
 aJ
 aJ
+aJ
+aJ
+aJ
+aJ
+aJ
+aJ
+aJ
+aJ
+aJ
+aJ
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aJ
 aJ
 aJ
@@ -66418,14 +66384,14 @@ aJ
 aJ
 aJ
 aJ
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aJ
+aJ
+aJ
+aJ
+aJ
+aJ
+aJ
+aJ
 aJ
 aJ
 aJ
@@ -66442,7 +66408,7 @@ aa
 aa
 aa
 aa
-aJ
+aa
 aJ
 aJ
 aJ
@@ -66698,7 +66664,7 @@ aa
 aa
 aa
 aa
-aJ
+aa
 aJ
 aJ
 aJ
@@ -66945,16 +66911,16 @@ aJ
 aJ
 aJ
 aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aJ
 aJ
 aJ
@@ -67202,16 +67168,16 @@ aJ
 aJ
 aJ
 aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aJ
 aJ
 aJ
@@ -67461,14 +67427,14 @@ aJ
 aJ
 aJ
 aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aJ
 aJ
 aJ
@@ -67718,12 +67684,12 @@ aJ
 aJ
 aJ
 aJ
-aJ
-aJ
-aJ
-aJ
-aJ
-aJ
+aa
+aa
+aa
+aa
+aa
+aa
 aJ
 aJ
 aJ

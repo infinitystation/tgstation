@@ -78,13 +78,11 @@
 	l_pocket = /obj/item/device/flashlight/seclite
 	r_pocket = /obj/item/weapon/extinguisher/mini
 	back = /obj/item/weapon/storage/backpack/explorer
-	backpack_contents = list(/obj/item/stack/sheet/metal/fifty=2,\
-		/obj/item/stack/sheet/glass/fifty=1,\
-		/obj/item/weapon/gun/energy/e_gun/nuclear/event=1,\
-		/obj/item/weapon/pickaxe/speardrill =1,\
-		/obj/item/weapon/storage/bag/ore=1,\
+	backpack_contents = list(/obj/item/weapon/gun/energy/kinetic_accelerator=1,\
+		/obj/item/weapon/storage/bag/ore=2,\
 		/obj/item/device/t_scanner/adv_mining_scanner/lesser=1,\
-		/obj/item/clothing/glasses/meson =1)
+		/obj/item/clothing/glasses/meson =1,\
+		/obj/item/weapon/kitchen/knife/combat/survival=1)
 	id = /obj/item/weapon/card/id
 
 /datum/outfit/survivor/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)

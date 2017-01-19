@@ -792,3 +792,19 @@
 	materials = list(MAT_METAL = 2000, MAT_GLASS = 1000)
 	build_path = /obj/item/device/modular_computer/tablet
 	category = list("initial","Misc")
+
+/datum/design/cardboard
+	name = "Cardboard"
+	id = "cardboard"
+	build_type = AUTOLATHE
+	materials = list(MAT_METAL = 200)
+	build_path = /obj/item/stack/sheet/cardboard
+	category = list("initial","Misc")
+
+/datum/design/welding_goggles
+	name = "Welding Goggles"
+	id = "welding_goggles"
+	build_type = AUTOLATHE
+	materials = list(MAT_METAL = 450, MAT_GLASS = 1800)
+	build_path = /obj/item/clothing/glasses/welding
+	category = list("initial","Tools")

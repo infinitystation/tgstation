@@ -24,20 +24,20 @@
 
 /obj/item/weapon/gun/ballistic/automatic/gause //By Terror4000rus
 	name = "Gause rifle C-14"
-	desc = "'я уже заждался!'"
-	icon_state = "gause"
-	item_state = "gause"
-	icon = 'icons/obj/starcraft.dmi'
-	lefthand_file = 'icons/mob/starcraft/starcraft_righthand .dmi'
-	righthand_file = 'icons/mob/starcraft/starcraft_lefthand.dmi'
+	desc = "“€жЄла&#255; пушка дл€ самых плохих парней - винтовка √ауса. –азгон€юща&#255; с помощью электромагнитного пол&#255; металлические 7-ми миллимитровые бронебойные патроны, это оружие готово уничтожить всЄ, что не понравитс&#255; его обладателю. ѕускай ты и машина дл€ убийства, по-македонски стрел&#255;ть не выйдет."
+	icon_state = "c14"
+	item_state = "c14"
+	icon = 'icons/obj/infinity_weapons.dmi'
+	lefthand_file = 'icons/mob/inhands/infinity_obj_left.dmi'
+	righthand_file = 'icons/mob/inhands/infinity_obj_right.dmi'
 	origin_tech = "combat=5;materials=3"
 	pin = /obj/item/device/firing_pin
 	mag_type = /obj/item/ammo_box/magazine/spine
-	fire_sound = 'sound/weapons/Gunshot4.ogg'
-	slot_flags = 0
+	fire_sound = 'sound/weapons/gunshot_g36.ogg'
 	can_suppress = 0
-	burst_size = 4
+	burst_size = 3
 	fire_delay = 1
+	weapon_weight = WEAPON_HEAVY
 
 /obj/item/weapon/gun/ballistic/automatic/proto/mindshield //By Terror4000rus
 	pin = /obj/item/device/firing_pin/implant/mindshield
@@ -47,32 +47,20 @@
 	desc = "A robust assault rifle used by United Aerospace Corporation."
 	icon_state = "mg88"
 	item_state = "mg88"
-	icon = 'icons/obj/guns/uac_gun.dmi'
-	lefthand_file = 'icons/mob/uac/uac_lefthand.dmi'
-	righthand_file = 'icons/mob/uac/uac_righthand.dmi'
+	icon = 'icons/obj/infinity_weapons.dmi'
+	lefthand_file = 'icons/mob/inhands/infinity_obj_left.dmi'
+	righthand_file = 'icons/mob/inhands/infinity_obj_right.dmi'
 	origin_tech = "combat=5;materials=3"
 	mag_type = /obj/item/ammo_box/magazine/a646
 	pin = /obj/item/device/firing_pin
 	fire_sound = 'sound/weapons/Gunshot_smg.ogg'
-	slot_flags = 0
 	can_suppress = 0
-	burst_size = 4
+	burst_size = 2
 	fire_delay = 1
 
 /obj/item/weapon/gun/energy/alien/base //By Terror4000rus
 	can_pull_pin = 0
 
 /obj/item/weapon/gun/energy/e_gun/nuclear/event //By Terror4000rus
-	name = "advanced energy gun"
-	desc = "An energy gun with an experimental miniaturized nuclear reactor that automatically charges the internal power cell."
-	icon_state = "nucgun"
-	item_state = "nucgun"
-	origin_tech = "combat=4;materials=5;powerstorage=3"
-	cell_removing = 0
-	cell_type = /obj/item/weapon/stock_parts/cell/ammo
-	charge_delay = 1
 	pin = /obj/item/device/firing_pin
-	can_charge = 0
-	ammo_x_offset = 1
 	ammo_type = list(/obj/item/ammo_casing/energy/laser, /obj/item/ammo_casing/energy/disabler)
-	selfcharge = 1

@@ -168,9 +168,11 @@ Contains:
 /obj/item/clothing/head/helmet/space/hardsuit/ert/sec
 	desc = "Standard issue security helmet for the ERT."
 	worn_icon = 'icons/blue_brig/mob/head.dmi'
+	icon = 'icons/blue_brig/obj/clothing/suits.dmi'
 	icon_state = "hardsuit0-ert_security"
 	item_state = "hardsuit0-ert_security"
 	item_color = "ert_security"
+
 
 /obj/item/clothing/suit/space/hardsuit/ert/sec
 	desc = "Standard issue security suit for the ERT."

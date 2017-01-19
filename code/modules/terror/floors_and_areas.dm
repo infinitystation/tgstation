@@ -65,9 +65,6 @@
 	name = "Bunker's airlock"
 	icon_state = "red"
 
-/area/mine/bravo
-	name = "Post Bravo"
-
 /area/engine/rest_room
 	name = "Engineering Rest Room"
 	icon_state = "yellow"
@@ -150,6 +147,9 @@
 	icon_state = "green"
 	blob_allowed = 0
 	ambientsounds = list('sound/ambience/ambimine.ogg')
+
+/area/mine/bravo
+	name = "Post Bravo"
 
 /area/mine/shelter/ash
 	name = "Ash Walkers' village"
@@ -259,6 +259,10 @@
 	icon_state = "rock"
 	..()
 
+/turf/open/floor/plasteel/terror/chapel
+	icon = 'icons/turf/infinity.dmi'
+	icon_state = "chapel2"
+
 /turf/open/floor/plasteel/terror/necro
 	baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
 	icon = 'icons/turf/floors.dmi'
@@ -328,6 +332,8 @@
 	icon_state = "warndark"
 /turf/open/floor/plasteel/terror/necro/darkwarning/corner
 	icon_state = "warndarkcorners"
+/turf/open/floor/plasteel/terror/necro/darkwarning/side
+	icon_state = "black_warn_side"
 
 /turf/open/floor/plasteel/terror/necro/darkwarning/outdoor
 	initial_gas_mix = "o2=14;n2=23;TEMP=300"
@@ -341,9 +347,13 @@
 	icon_state = "warning"
 /turf/open/floor/plasteel/terror/necro/warning/corner
 	icon_state = "warningcorner"
+/turf/open/floor/plasteel/terror/necro/warning/side
+	icon_state = "plasteel_warn_side"
 
 /turf/open/floor/plasteel/terror/necro/warnwhite
 	icon_state = "warnwhite"
+/turf/open/floor/plasteel/terror/necro/warnwhite/side
+	icon_state = "white_warn_side"
 /turf/open/floor/plasteel/terror/necro/warnwhite/corner
 	icon_state = "warnwhitecorner"
 
@@ -425,3 +435,15 @@ turf/open/floor/plating/lavaland/outdoor/fall
 
 /turf/open/floor/plasteel/terror/necro/white
 	icon_state = "white"
+
+/turf/open/floor/plasteel/terror/necro/bot
+	icon_state = "bot"
+/turf/open/floor/plasteel/terror/necro/delivery
+	icon_state = "delivery"
+/turf/open/floor/plasteel/terror/necro/loadingarea
+	icon_state = "loadingarea"
+
+/turf/open/floor/plasteel/terror/necro/whitebot
+	icon_state = "whitebot"
+/turf/open/floor/plasteel/terror/necro/whitebot/delivery
+	icon_state = "whitedelivery"

@@ -73,6 +73,7 @@
 	mask = /obj/item/clothing/mask/gas
 	suit = /obj/item/clothing/suit/space/hardsuit/space_adv/military
 	head = null
+	ears = /obj/item/device/radio/headset/headset_cent/alt
 	back = /obj/item/weapon/storage/backpack/security
 	suit_store = /obj/item/weapon/tank/internals/oxygen
 	backpack_contents = list(/obj/item/weapon/storage/box/security/centcom=1,\
@@ -101,7 +102,6 @@
 	head = /obj/item/clothing/head/bio_hood/security
 	mask = /obj/item/clothing/mask/gas
 	suit_store = /obj/item/weapon/gun/ballistic/automatic/wt550/mindshield
-	back = /obj/item/weapon/tank/internals/oxygen
 
 
 /////////////////////////////////
@@ -148,6 +148,7 @@
 
 	suit = /obj/item/clothing/suit/space/hardsuit/space_adv/swat
 	head = null
+	ears = /obj/item/device/radio/headset/headset_cent/alt
 	mask = /obj/item/clothing/mask/gas
 	glasses = /obj/item/clothing/glasses/thermal
 	suit_store = /obj/item/weapon/tank/internals/oxygen
@@ -177,8 +178,6 @@
 	suit = /obj/item/clothing/suit/bio_suit/security
 	head = /obj/item/clothing/head/bio_hood/security
 	mask = /obj/item/clothing/mask/gas
-	suit_store = /obj/item/weapon/gun/ballistic/automatic/wt550/mindshield
-	back = /obj/item/weapon/tank/internals/oxygen
 
 
 //////////////////////////

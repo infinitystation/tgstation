@@ -14,7 +14,7 @@
 	mask_type = /obj/item/clothing/mask/breath
 
 /obj/machinery/suit_storage_unit/terror/hazard
-	suit_type = /obj/item/clothing/suit/hazard
+	/obj/item/clothing/suit/bio_suit/hazard
 	mask_type = /obj/item/clothing/mask/breath
-	helmet_type = /obj/item/clothing/head/hazard
+	helmet_type = /obj/item/clothing/head/bio_suit/hazard
 	storage_type = /obj/item/weapon/tank/internals/emergency_oxygen/double

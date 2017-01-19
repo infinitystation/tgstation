@@ -17,24 +17,6 @@
 	desc = "It's a storage unit for things that have no right being here."
 	icon_state = "syndicate"
 
-/obj/structure/closet/gimmick/starcraft
-	name = "Marine closet"
-	desc = "Good luck"
-	icon_state = "tac"
-
-/obj/structure/closet/gimmick/starcraft/New()
-	..()
-	new /obj/item/clothing/under/syndicate/tacticool(src)
-	new /obj/item/clothing/shoes/combat/swat(src)
-	new /obj/item/clothing/suit/space/hardsuit/space_adv/starcraft(src)
-	new /obj/item/weapon/reagent_containers/hypospray/medipen/stimpack(src)
-	new /obj/item/clothing/gloves/combat(src)
-	new /obj/item/weapon/gun/ballistic/automatic/gause(src)
-	new /obj/item/ammo_box/magazine/spine(src)
-	new /obj/item/clothing/mask/breath(src)
-	new /obj/item/weapon/tank/jetpack/oxygen/harness(src)
-	new /obj/item/device/radio/headset/syndicate/alt(src)
-
 /obj/structure/closet/gimmick/russian
 	name = "russian surplus closet"
 	desc = "It's a storage unit for Russian standard-issue surplus."

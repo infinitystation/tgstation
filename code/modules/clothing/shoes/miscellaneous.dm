@@ -30,16 +30,6 @@
 	flags = NOSLIP
 	armor = list(melee = 40, bullet = 30, laser = 25, energy = 25, bomb = 50, bio = 30, rad = 30, fire = 90, acid = 50)
 
-/obj/item/clothing/shoes/combat/uac
-	name = "\improper troopers boots"
-	desc = "High speed, no drag combat boots."
-	worn_icon = 'icons/mob/uac/shoes.dmi'
-	icon = 'icons/obj/clothing/uac/shoes.dmi'
-	icon_state = "boots"
-	permeability_coefficient = 0.01
-	flags = NOSLIP
-	armor = list(melee = 40, bullet = 80, laser = 45,energy = 25, bomb = 40, bio = 5, rad = 0, fire = 0, acid = 50)
-
 /obj/item/clothing/shoes/sandal
 	desc = "A pair of rather plain, wooden sandals."
 	name = "sandals"
