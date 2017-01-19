@@ -52,6 +52,7 @@ Judgement: 12 servants, 5 caches, 300 CV, and any existing AIs are converted or 
 /datum/clockwork_scripture/proc/creation_update() //updates any on-creation effects
 
 /datum/clockwork_scripture/proc/run_scripture()
+	var/successful = FALSE
 	if(can_recite() && has_requirements())
 		if(slab.busy)
 			invoker << "<span class='warning'>[slab] refuses to work, displaying the message: \"[slab.busy]!\"</span>"
@@ -80,12 +81,14 @@ Judgement: 12 servants, 5 caches, 300 CV, and any existing AIs are converted or 
 				if(used_cache_components[i])
 					clockwork_component_cache[i] += consumed_components[i]
 			update_slab_info()
-		else if(slab && !slab.no_cost && !ratvar_awakens) //if the slab exists and isn't debug and ratvar isn't up, log the scripture as being used
-			feedback_add_details("clockcult_scripture_recited", name)
+		else
+			successful = TRUE
+			if(slab && !slab.no_cost && !ratvar_awakens) //if the slab exists and isn't debug and ratvar isn't up, log the scripture as being used
+				feedback_add_details("clockcult_scripture_recited", name)
 	if(slab)
 		slab.busy = null
 	qdel(src)
-	return TRUE
+	return successful
 
 /datum/clockwork_scripture/proc/can_recite() //If the words can be spoken
 	if(!invoker || !slab || invoker.get_active_held_item() != slab)
@@ -261,6 +264,12 @@ Judgement: 12 servants, 5 caches, 300 CV, and any existing AIs are converted or 
 	var/ranged_type = /obj/effect/proc_holder/slab
 	var/ranged_message = "This is a huge goddamn bug, how'd you cast this?"
 	var/timeout_time = 0
+	var/allow_mobility = TRUE //if moving and swapping hands is allowed during the while
+	var/datum/progressbar/progbar
+
+/datum/clockwork_scripture/ranged_ability/Destroy()
+	qdel(progbar)
+	return ..()
 
 /datum/clockwork_scripture/ranged_ability/scripture_effects()
 	slab.icon_state = slab_icon
@@ -270,12 +279,20 @@ Judgement: 12 servants, 5 caches, 300 CV, and any existing AIs are converted or 
 	invoker.update_inv_hands()
 	var/end_time = world.time + timeout_time
 	var/successful = FALSE
-	while(slab && slab.slab_ability && !slab.slab_ability.finished && (slab.slab_ability.in_progress || !timeout_time || world.time <= end_time))
-		successful = slab.slab_ability.successful
+	var/turf/T = get_turf(invoker)
+	while(slab && slab.slab_ability && !slab.slab_ability.finished && (slab.slab_ability.in_progress || !timeout_time || world.time <= end_time) && \
+		(allow_mobility || (can_recite() && T == get_turf(invoker))))
+		if(progbar)
+			if(slab.slab_ability.in_progress)
+				qdel(progbar)
+			else
+				progbar.update(end_time - world.time)
 		sleep(1)
 	if(slab)
-		if(slab.slab_ability && !slab.slab_ability.finished)
-			slab.slab_ability.remove_ranged_ability()
+		if(slab.slab_ability)
+			successful = slab.slab_ability.successful
+			if(!slab.slab_ability.finished)
+				slab.slab_ability.remove_ranged_ability()
 		slab.icon_state = "dread_ipad"
 		if(invoker)
 			invoker.update_inv_hands()

@@ -6,7 +6,7 @@
 	department_flag = ENGSEC
 	faction = "Station"
 	total_positions = 1
-	spawn_positions = 0
+	spawn_positions = 1
 	supervisors = "Представителям Нанотрайзен и Космическому Закону"
 	selection_color = "#dddddd"
 	req_admin_notify = 1
@@ -14,10 +14,8 @@
 
 	outfit = /datum/outfit/job/ifa
 
-	access = list(access_security, access_sec_doors, access_brig, access_maint_tunnels, access_construction,
-			            access_heads, access_RC_announce, access_keycard_auth, access_gateway)
-	minimal_access = list(access_security, access_sec_doors, access_brig, access_maint_tunnels, access_construction,
-			            access_heads, access_RC_announce, access_keycard_auth, access_gateway)
+	access = list(access_security, access_sec_doors, access_brig, access_maint_tunnels, access_construction, access_heads, access_RC_announce, access_keycard_auth, access_gateway)
+	minimal_access = list(access_security, access_sec_doors, access_brig, access_maint_tunnels, access_construction, access_heads, access_RC_announce, access_keycard_auth, access_gateway)
 
 /datum/outfit/job/ifa
 	name = "Internal Affairs Agent"
@@ -32,11 +30,7 @@
 	l_hand = /obj/item/weapon/storage/secure/briefcase
 	l_pocket = /obj/item/weapon/melee/baton/shocker/loaded
 
-/datum/outfit/job/ifa/post_equip(mob/living/carbon/human/H)
-	..()
-
-	var/obj/item/weapon/implant/mindshield/L = new/obj/item/weapon/implant/mindshield(H)
-	L.implant(H, null, 1)
+	implants = list(/obj/item/weapon/implant/mindshield)
 
 /obj/item/device/radio/headset/headset_ifa
 	name = "internal affairs agent's radio headset"
