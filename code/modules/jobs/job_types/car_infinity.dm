@@ -30,11 +30,7 @@
 	l_hand = /obj/item/weapon/storage/secure/briefcase
 	l_pocket = /obj/item/weapon/melee/baton/shocker/loaded
 
-/datum/outfit/job/ifa/post_equip(mob/living/carbon/human/H)
-	..()
-
-	var/obj/item/weapon/implant/mindshield/L = new/obj/item/weapon/implant/mindshield(H)
-	L.implant(H, null, 1)
+	implants = list(/obj/item/weapon/implant/mindshield)
 
 /obj/item/device/radio/headset/headset_ifa
 	name = "internal affairs agent's radio headset"
