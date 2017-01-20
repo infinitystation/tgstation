@@ -181,8 +181,8 @@ Cook
 
 	outfit = /datum/outfit/job/cook
 
-	access = list(access_hydroponics, access_bar, access_kitchen, access_morgue)
-	minimal_access = list(access_kitchen, access_morgue)
+	access = list(access_hydroponics, access_bar, access_kitchen)
+	minimal_access = list(access_kitchen)
 
 /datum/outfit/job/cook
 	name = "Cook"

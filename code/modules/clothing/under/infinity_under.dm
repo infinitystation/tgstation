@@ -282,13 +282,14 @@
 	icon = 'icons/obj/clothing/infinity_work.dmi'
 	can_adjust = 0
 
-/obj/item/clothing/under/uac
+/obj/item/clothing/under/syndicate/uac
 	name = "trooper uniform"
 	desc = "A UAC Trooper uniform. Probably not the best choice for a space station."
 	icon = 'icons/obj/clothing/infinity_work.dmi'
 	worn_icon = 'icons/mob/infinity_work.dmi'
 	item_state = "uac_uniform"
-	armor = list(melee = 10, bullet = 10, laser = 10, energy = 10, bomb = 10, bio = 10, rad = 10, fire = 0, acid = 0)
+	icon_state = "uac_uniform"
+	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
 
 /obj/item/clothing/under/shorts_denim
 	name = "denim shorts"

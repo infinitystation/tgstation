@@ -73,10 +73,10 @@
 
 /obj/structure/closet/secure_closet/uac/New()
 	..()
-	new /obj/item/clothing/under/uac(src)
-	new /obj/item/clothing/shoes/combat/uac(src)
+	new /obj/item/clothing/under/syndicate/uac(src)
+	new /obj/item/clothing/shoes/combat/swat/uac(src)
 	new /obj/item/clothing/suit/armor/uac(src)
-	new /obj/item/clothing/head/helmet/trooper(src)
+	new /obj/item/clothing/head/helmet/uac(src)
 
 /obj/structure/closet/secure_closet/syndicate
 	name = "Syndicate Secure Closet"

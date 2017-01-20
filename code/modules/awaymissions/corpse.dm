@@ -299,11 +299,11 @@
 	name = "UAC Trooper"
 	uniform = /obj/item/clothing/under/pants/camo
 	suit = /obj/item/clothing/suit/armor/uac
-	shoes = /obj/item/clothing/shoes/combat/uac
+	shoes = /obj/item/clothing/shoes/combat/swat/uac
 	gloves = /obj/item/clothing/gloves/combat
 	radio = /obj/item/device/radio/headset
 	mask = /obj/item/clothing/mask/gas
-	helmet = /obj/item/clothing/head/helmet/trooper
+	helmet = /obj/item/clothing/head/helmet/uac
 	pocket1 = /obj/item/ammo_box/magazine/a646
 	has_id = 1
 	id_job = "Bravo Squad"
@@ -313,11 +313,11 @@
 	name = "UAC Trooper"
 	uniform = /obj/item/clothing/under/pants/camo
 	suit = /obj/item/clothing/suit/armor/uac
-	shoes = /obj/item/clothing/shoes/combat/uac
+	shoes = /obj/item/clothing/shoes/combat/swat/uac
 	gloves = /obj/item/clothing/gloves/combat
 	radio = /obj/item/device/radio/headset
 	mask = /obj/item/clothing/mask/gas
-	helmet = /obj/item/clothing/head/helmet/trooper
+	helmet = /obj/item/clothing/head/helmet/uac
 	pocket1 = /obj/item/ammo_box/magazine/a646
 	has_id = 1
 	id_job = "Alpha Squad"

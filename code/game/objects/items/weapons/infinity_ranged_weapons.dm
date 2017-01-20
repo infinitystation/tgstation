@@ -10,9 +10,9 @@
 	can_suppress = 0
 	w_class = 3
 	burst_size = 2
-	fire_delay = 1
+	fire_delay = 1.5
 	force = 10
-	origin_tech = "combat=4;materials=4;syndicate=3"
+	origin_tech = "combat=4;materials=4;syndicate=1"
 	fire_sound = 'sound/weapons/gunshot_g36.ogg'
 
 /obj/item/weapon/gun/ballistic/automatic/xmg80/update_icon()

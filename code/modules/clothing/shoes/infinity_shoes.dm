@@ -79,13 +79,10 @@
 	icon = 'icons/obj/clothing/infinity_work.dmi'
 	worn_icon = 'icons/mob/infinity_work.dmi'
 
-/obj/item/clothing/shoes/combat/uac
-	name = "Troopers boots"
-	desc = "High speed, no drag combat boots."
+/obj/item/clothing/shoes/combat/swat/uac
+	name = "troopers boots"
 	icon = 'icons/obj/clothing/infinity_work.dmi'
 	worn_icon = 'icons/mob/infinity_work.dmi'
 	icon_state = "uac_shoes"
 	item_state = "uac_shoes"
-	permeability_coefficient = 0.01
-	flags = NOSLIP
-	armor = list(melee = 40, bullet = 80, laser = 45,energy = 25, bomb = 40, bio = 5, rad = 0, fire = 0, acid = 50)
+	armor = list(melee = 40, bullet = 40, laser = 25,energy = 35, bomb = 20, bio = 40, rad = 0, fire = 30, acid = 60)

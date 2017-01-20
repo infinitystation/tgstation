@@ -39,11 +39,11 @@
 	name = "UAC Trooper"
 
 	ears = /obj/item/device/radio/headset/syndicate/alt
-	uniform = /obj/item/clothing/under/uac
+	uniform = /obj/item/clothing/under/syndicate/uac
 	suit = /obj/item/clothing/suit/armor/uac
-	shoes = /obj/item/clothing/shoes/combat/uac
+	shoes = /obj/item/clothing/shoes/combat/swat/uac
 	gloves = /obj/item/clothing/gloves/combat
-	head = /obj/item/clothing/head/helmet/trooper
+	head = /obj/item/clothing/head/helmet/uac
 	id = /obj/item/weapon/card/id
 	glasses = /obj/item/clothing/glasses/night
 	mask = /obj/item/clothing/mask/breath

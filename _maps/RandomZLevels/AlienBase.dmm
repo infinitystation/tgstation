@@ -1,4 +1,4 @@
-//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE 
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "aa" = (
 /turf/open/space,
 /area/space)
@@ -769,66 +769,216 @@
 	icon_state = "alien3"
 	},
 /area/space)
-"dB" = (
-/obj/machinery/door/airlock/abductor/base,
-/turf/open/floor/plating/abductor,
+"cH" = (
+/turf/closed/wall/mineral/abductor,
 /area/alien_base)
-"dA" = (
-/obj/machinery/porta_turret/defensepylon_internal_turret/alien,
-/turf/open/floor/plating/abductor,
-/area/alien_base)
-"dz" = (
-/obj/effect/spawner/structure/window/reinforced,
+"cI" = (
 /turf/open/floor/plating/abductor2,
 /area/alien_base)
-"dy" = (
+"cJ" = (
 /obj/structure/shuttle/engine/propulsion{
 	color = "#C862CC";
 	dir = 4;
-	icon_state = "propulsion_l";
+	icon_state = "propulsion_r";
 	layer = 2;
-	pixel_y = 10
+	pixel_y = -10;
+	tag = "icon-propulsion_r (EAST)"
 	},
 /turf/open/floor/plating/abductor2,
 /area/alien_base)
-"dx" = (
-/obj/structure/table/abductor,
-/obj/item/weapon/reagent_containers/glass/rag{
-	desc = "I like this.";
-	icon = 'icons/obj/items.dmi';
-	icon_state = "towel";
-	name = "towel"
+"cK" = (
+/obj/machinery/abductor/experiment{
+	name = "alien machinery";
+	team = 2
 	},
 /turf/open/floor/plating/abductor,
 /area/alien_base)
-"dw" = (
-/obj/structure/curtain/open/shower/alien,
-/obj/machinery/shower{
-	dir = 4;
-	icon_state = "shower";
-	pixel_x = 6
+"cL" = (
+/obj/effect/landmark/abductor/console{
+	team = 3
 	},
-/obj/item/weapon/soap/deluxe,
-/turf/open/floor/plating/abductor2,
-/area/alien_base)
-"dv" = (
-/obj/structure/bed/abductor,
 /turf/open/floor/plating/abductor,
 /area/alien_base)
-"du" = (
-/obj/structure/table/abductor,
-/obj/item/weapon/surgicaldrill/alien,
-/obj/item/weapon/circular_saw/alien,
+"cM" = (
+/obj/machinery/abductor/pad,
 /turf/open/floor/plating/abductor,
 /area/alien_base)
-"dt" = (
-/obj/machinery/abductor/gland_dispenser{
+"cN" = (
+/obj/structure/sink{
+	color = "#C862CC";
+	pixel_y = 24
+	},
+/turf/open/floor/plating/abductor,
+/area/alien_base)
+"cO" = (
+/obj/structure/toilet{
+	color = "#C862CC";
+	dir = 8
+	},
+/turf/open/floor/plating/abductor,
+/area/alien_base)
+"cP" = (
+/obj/machinery/computer/camera_advanced/abductor{
 	name = "alien machinery"
 	},
 /turf/open/floor/plating/abductor,
 /area/alien_base)
-"ds" = (
+"cQ" = (
+/turf/open/floor/plating/abductor,
+/area/alien_base)
+"cR" = (
+/obj/structure/closet/abductor,
+/turf/open/floor/plating/abductor,
+/area/alien_base)
+"cS" = (
+/obj/machinery/door/airlock/abductor{
+	name = "Restroom"
+	},
+/turf/open/floor/plating/abductor,
+/area/alien_base)
+"cT" = (
+/obj/machinery/smartfridge/chemistry{
+	color = "#C862CC"
+	},
+/turf/open/floor/plating/abductor,
+/area/alien_base)
+"cU" = (
+/obj/machinery/chem_dispenser{
+	color = "#C862CC";
+	emagged = 1
+	},
+/turf/open/floor/plating/abductor,
+/area/alien_base)
+"cV" = (
+/obj/structure/alien_structure,
+/turf/open/floor/plating/abductor,
+/area/alien_base)
+"cW" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced/fulltile{
+	color = "#C862CC"
+	},
+/turf/open/floor/plating/abductor2,
+/area/alien_base)
+"cX" = (
+/obj/structure/alien/weeds,
 /turf/open/floor/engine,
+/area/alien_base)
+"cY" = (
+/obj/item/toy/cards/deck,
+/turf/open/floor/engine,
+/area/alien_base)
+"cZ" = (
+/obj/structure/shuttle/engine/propulsion{
+	color = "#C862CC";
+	dir = 4;
+	icon_state = "burst_s";
+	layer = 2;
+	pixel_x = -10
+	},
+/turf/open/floor/plating/abductor2,
+/area/alien_base)
+"da" = (
+/obj/item/weapon/retractor/alien,
+/obj/item/weapon/hemostat/alien,
+/obj/structure/table/abductor,
+/turf/open/floor/plating/abductor,
+/area/alien_base)
+"db" = (
+/obj/effect/landmark/abductor/scientist{
+	team = 3
+	},
+/turf/open/floor/plating/abductor,
+/area/alien_base)
+"dc" = (
+/obj/structure/table/optable/abductor,
+/turf/open/floor/plating/abductor,
+/area/alien_base)
+"dd" = (
+/obj/effect/landmark/abductor/agent{
+	team = 3
+	},
+/turf/open/floor/plating/abductor,
+/area/alien_base)
+"de" = (
+/obj/machinery/door/airlock/abductor{
+	name = "Abduction Laboratory"
+	},
+/turf/open/floor/plating/abductor,
+/area/alien_base)
+"df" = (
+/obj/machinery/door/airlock/abductor{
+	name = "Middle Section"
+	},
+/turf/open/floor/plating/abductor,
+/area/alien_base)
+"dg" = (
+/obj/machinery/door/airlock/abductor{
+	name = "Testing Laboratory"
+	},
+/turf/open/floor/plating/abductor,
+/area/alien_base)
+"dh" = (
+/obj/machinery/door/poddoor/preopen{
+	color = "#C862CC";
+	id = "alien_blast_3"
+	},
+/turf/open/floor/engine,
+/area/alien_base)
+"di" = (
+/obj/item/trash/syndi_cakes,
+/turf/open/floor/engine,
+/area/alien_base)
+"dj" = (
+/obj/structure/bed,
+/turf/open/floor/engine,
+/area/alien_base)
+"dk" = (
+/obj/machinery/flasher{
+	id = "alien_flasher_3";
+	pixel_x = 32
+	},
+/turf/open/floor/engine,
+/area/alien_base)
+"dl" = (
+/obj/item/weapon/surgical_drapes,
+/obj/item/weapon/paper/abductor,
+/obj/item/weapon/scalpel/alien,
+/obj/structure/table/abductor,
+/obj/item/weapon/cautery/alien,
+/turf/open/floor/plating/abductor,
+/area/alien_base)
+"dm" = (
+/obj/structure/table/abductor,
+/obj/item/weapon/storage/box/alienhandcuffs{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/turf/open/floor/plating/abductor,
+/area/alien_base)
+"dn" = (
+/obj/machinery/door/airlock/abductor{
+	name = "Shower"
+	},
+/turf/open/floor/plating/abductor,
+/area/alien_base)
+"do" = (
+/obj/machinery/vending/eatimat{
+	color = "#C862CC"
+	},
+/turf/open/floor/plating/abductor,
+/area/alien_base)
+"dp" = (
+/obj/structure/table/abductor,
+/obj/item/weapon/storage/box/beakers,
+/turf/open/floor/plating/abductor,
+/area/alien_base)
+"dq" = (
+/obj/machinery/sleeper/syndie{
+	color = "#C862CC";
+	dir = 1
+	},
+/turf/open/floor/plating/abductor,
 /area/alien_base)
 "dr" = (
 /obj/machinery/button/flasher{
@@ -856,216 +1006,66 @@
 	},
 /turf/open/floor/plating/abductor,
 /area/alien_base)
-"dq" = (
-/obj/machinery/sleeper/syndie{
-	color = "#C862CC";
-	dir = 1
-	},
-/turf/open/floor/plating/abductor,
-/area/alien_base)
-"dp" = (
-/obj/structure/table/abductor,
-/obj/item/weapon/storage/box/beakers,
-/turf/open/floor/plating/abductor,
-/area/alien_base)
-"do" = (
-/obj/machinery/vending/eatimat{
-	color = "#C862CC"
-	},
-/turf/open/floor/plating/abductor,
-/area/alien_base)
-"dn" = (
-/obj/machinery/door/airlock/abductor{
-	name = "Shower"
-	},
-/turf/open/floor/plating/abductor,
-/area/alien_base)
-"dm" = (
-/obj/structure/table/abductor,
-/obj/item/weapon/storage/box/alienhandcuffs{
-	pixel_x = 3;
-	pixel_y = 3
-	},
-/turf/open/floor/plating/abductor,
-/area/alien_base)
-"dl" = (
-/obj/item/weapon/surgical_drapes,
-/obj/item/weapon/paper/abductor,
-/obj/item/weapon/scalpel/alien,
-/obj/structure/table/abductor,
-/obj/item/weapon/cautery/alien,
-/turf/open/floor/plating/abductor,
-/area/alien_base)
-"dk" = (
-/obj/machinery/flasher{
-	id = "alien_flasher_3";
-	pixel_x = 32
-	},
+"ds" = (
 /turf/open/floor/engine,
 /area/alien_base)
-"dj" = (
-/obj/structure/bed,
-/turf/open/floor/engine,
-/area/alien_base)
-"di" = (
-/obj/item/trash/syndi_cakes,
-/turf/open/floor/engine,
-/area/alien_base)
-"dh" = (
-/obj/machinery/door/poddoor/preopen{
-	color = "#C862CC";
-	id = "alien_blast_3"
-	},
-/turf/open/floor/engine,
-/area/alien_base)
-"dg" = (
-/obj/machinery/door/airlock/abductor{
-	name = "Testing Laboratory"
-	},
-/turf/open/floor/plating/abductor,
-/area/alien_base)
-"df" = (
-/obj/machinery/door/airlock/abductor{
-	name = "Middle Section"
-	},
-/turf/open/floor/plating/abductor,
-/area/alien_base)
-"de" = (
-/obj/machinery/door/airlock/abductor{
-	name = "Abduction Laboratory"
-	},
-/turf/open/floor/plating/abductor,
-/area/alien_base)
-"dd" = (
-/obj/effect/landmark/abductor/agent{
-	team = 3
-	},
-/turf/open/floor/plating/abductor,
-/area/alien_base)
-"dc" = (
-/obj/structure/table/optable/abductor,
-/turf/open/floor/plating/abductor,
-/area/alien_base)
-"db" = (
-/obj/effect/landmark/abductor/scientist{
-	team = 3
-	},
-/turf/open/floor/plating/abductor,
-/area/alien_base)
-"da" = (
-/obj/item/weapon/retractor/alien,
-/obj/item/weapon/hemostat/alien,
-/obj/structure/table/abductor,
-/turf/open/floor/plating/abductor,
-/area/alien_base)
-"cZ" = (
-/obj/structure/shuttle/engine/propulsion{
-	color = "#C862CC";
-	dir = 4;
-	icon_state = "burst_s";
-	layer = 2;
-	pixel_x = -10
-	},
-/turf/open/floor/plating/abductor2,
-/area/alien_base)
-"cY" = (
-/obj/item/toy/cards/deck,
-/turf/open/floor/engine,
-/area/alien_base)
-"cX" = (
-/obj/structure/alien/weeds,
-/turf/open/floor/engine,
-/area/alien_base)
-"cW" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced/fulltile{
-	color = "#C862CC"
-	},
-/turf/open/floor/plating/abductor2,
-/area/alien_base)
-"cV" = (
-/obj/structure/alien_structure,
-/turf/open/floor/plating/abductor,
-/area/alien_base)
-"cU" = (
-/obj/machinery/chem_dispenser{
-	color = "#C862CC";
-	emagged = 1
-	},
-/turf/open/floor/plating/abductor,
-/area/alien_base)
-"cT" = (
-/obj/machinery/smartfridge/chemistry{
-	color = "#C862CC"
-	},
-/turf/open/floor/plating/abductor,
-/area/alien_base)
-"cS" = (
-/obj/machinery/door/airlock/abductor{
-	name = "Restroom"
-	},
-/turf/open/floor/plating/abductor,
-/area/alien_base)
-"cR" = (
-/obj/structure/closet/abductor,
-/turf/open/floor/plating/abductor,
-/area/alien_base)
-"cQ" = (
-/turf/open/floor/plating/abductor,
-/area/alien_base)
-"cP" = (
-/obj/machinery/computer/camera_advanced/abductor{
+"dt" = (
+/obj/machinery/abductor/gland_dispenser{
 	name = "alien machinery"
 	},
 /turf/open/floor/plating/abductor,
 /area/alien_base)
-"cO" = (
-/obj/structure/toilet{
-	color = "#C862CC";
-	dir = 8
+"du" = (
+/obj/structure/table/abductor,
+/obj/item/weapon/surgicaldrill/alien,
+/obj/item/weapon/circular_saw/alien,
+/turf/open/floor/plating/abductor,
+/area/alien_base)
+"dv" = (
+/obj/structure/bed/abductor,
+/turf/open/floor/plating/abductor,
+/area/alien_base)
+"dw" = (
+/obj/structure/curtain/open/shower/alien,
+/obj/machinery/shower{
+	dir = 4;
+	icon_state = "shower";
+	pixel_x = 6
+	},
+/obj/item/weapon/soap/deluxe,
+/turf/open/floor/plating/abductor2,
+/area/alien_base)
+"dx" = (
+/obj/structure/table/abductor,
+/obj/item/weapon/reagent_containers/glass/rag{
+	desc = "I like this.";
+	icon = 'icons/obj/items.dmi';
+	icon_state = "towel";
+	name = "towel"
 	},
 /turf/open/floor/plating/abductor,
 /area/alien_base)
-"cN" = (
-/obj/structure/sink{
-	color = "#C862CC";
-	pixel_y = 24
-	},
-/turf/open/floor/plating/abductor,
-/area/alien_base)
-"cM" = (
-/obj/machinery/abductor/pad,
-/turf/open/floor/plating/abductor,
-/area/alien_base)
-"cL" = (
-/obj/effect/landmark/abductor/console{
-	team = 3
-	},
-/turf/open/floor/plating/abductor,
-/area/alien_base)
-"cK" = (
-/obj/machinery/abductor/experiment{
-	name = "alien machinery";
-	team = 2
-	},
-/turf/open/floor/plating/abductor,
-/area/alien_base)
-"cJ" = (
+"dy" = (
 /obj/structure/shuttle/engine/propulsion{
 	color = "#C862CC";
 	dir = 4;
-	icon_state = "propulsion_r";
+	icon_state = "propulsion_l";
 	layer = 2;
-	pixel_y = -10;
-	tag = "icon-propulsion_r (EAST)"
+	pixel_y = 10
 	},
 /turf/open/floor/plating/abductor2,
 /area/alien_base)
-"cI" = (
+"dz" = (
+/obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating/abductor2,
 /area/alien_base)
-"cH" = (
-/turf/closed/wall/mineral/abductor,
+"dA" = (
+/obj/machinery/porta_turret/defensepylon_internal_turret/alien,
+/turf/open/floor/plating/abductor,
+/area/alien_base)
+"dB" = (
+/obj/machinery/door/airlock/abductor/base,
+/turf/open/floor/plating/abductor,
 /area/alien_base)
 
 (1,1,1) = {"
@@ -20226,7 +20226,7 @@ cQ
 cH
 cI
 cI
-bj
+aN
 cH
 cH
 cH

@@ -225,9 +225,9 @@
 	icon_state = "janitor_cap"
 	item_state = "janitor_cap"
 
-/obj/item/clothing/head/helmet/trooper
-	name = "\improper Trooper Helmet"
-	desc = "Шлем с маленькими вырезами дл&#255; глаз, в этих чертовых вырезах можно разгл&#255;деть смерть..."
+/obj/item/clothing/head/helmet/uac
+	name = "trooper helmet"
+	desc = "Стандартный шлем десантного отделени&#255; корпорации UAC. Во вс&#255;ком случае, об этом символизирует маленький значок сбоку шлема."
 	icon = 'icons/obj/clothing/infinity_work.dmi'
 	worn_icon = 'icons/mob/infinity_work.dmi'
 	icon_state = "marine_helmet"

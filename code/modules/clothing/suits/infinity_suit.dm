@@ -574,10 +574,11 @@
 	flags_inv = HIDEHAIR|HIDEEARS
 
 /obj/item/clothing/suit/armor/uac
-	name = "Trooper Armor"
-	desc = "— виду тяжела€ брон€ с двумя поручнями по краям... —топ, она стальна€?"
+	name = "trooper armor"
+	desc = "“€жЄла€ боева€ брон€ десанта корпорации UAC. »сход€ из глухости при стучание, больша€ часть брони сделана с упором на сдерживание физических объектов..."
 	icon = 'icons/obj/clothing/infinity_work.dmi'
 	worn_icon = 'icons/mob/infinity_work.dmi'
 	icon_state = "marine_armor"
 	item_state = "marine_armor"
-	armor = list(melee = 70, bullet = 80, laser = 35, energy = 20, bomb = 35, bio = 0, rad = 20, fire = 30, acid = 20)
+	slowdown = 0.5
+	armor = list(melee = 50, bullet = 60, laser = 35, energy = 20, bomb = 35, bio = 0, rad = 20, fire = 30, acid = 20)

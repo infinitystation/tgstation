@@ -98,7 +98,7 @@
 /obj/structure/closet/gimmick/uac/New()
 	..()
 	new /obj/item/clothing/under/pants/camo(src)
-	new /obj/item/clothing/shoes/combat/uac(src)
+	new /obj/item/clothing/shoes/combat/swat/uac(src)
 
 /obj/structure/closet/gimmick/uac/trooper
 	name = "Paratrooper equipment"
@@ -107,13 +107,13 @@
 
 /obj/structure/closet/gimmick/uac/trooper/New()
 	..()
-	new /obj/item/clothing/under/uac(src)
-	new /obj/item/clothing/shoes/combat/uac(src)
+	new /obj/item/clothing/under/syndicate/uac(src)
+	new /obj/item/clothing/shoes/combat/swat/uac(src)
 	new /obj/item/clothing/mask/breath(src)
 	new /obj/item/clothing/suit/armor/uac(src)
 	new /obj/item/clothing/glasses/sunglasses(src)
 	new	/obj/item/device/radio/headset/syndicate/alt(src)
-	new /obj/item/clothing/head/helmet/trooper(src)
+	new /obj/item/clothing/head/helmet/uac(src)
 	new /obj/item/weapon/gun/ballistic/automatic/mg88(src)
 	new /obj/item/ammo_box/magazine/a646(src)
 	new /obj/item/ammo_box/magazine/a646(src)
@@ -127,12 +127,12 @@
 
 /obj/structure/closet/gimmick/uac/trooper/lab/New()
 	..()
-	new /obj/item/clothing/under/uac(src)
-	new /obj/item/clothing/shoes/combat/uac(src)
+	new /obj/item/clothing/under/syndicate/uac(src)
+	new /obj/item/clothing/shoes/combat/swat/uac(src)
 	new /obj/item/clothing/mask/breath(src)
 	new /obj/item/clothing/suit/armor/uac(src)
 	new	/obj/item/device/radio/headset(src)
-	new /obj/item/clothing/head/helmet/trooper(src)
+	new /obj/item/clothing/head/helmet/uac(src)
 
 /obj/structure/closet/gimmick/zombie
 	name = "uao"

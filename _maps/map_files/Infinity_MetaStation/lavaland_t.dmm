@@ -672,12 +672,12 @@
 	req_access_txt = "0";
 	specialfunctions = 4
 	},
-/obj/structure/closet,
 /obj/machinery/atmospherics/components/unary/vent_scrubber{
 	dir = 8;
 	on = 1;
 	scrub_Toxins = 0
 	},
+/obj/structure/closet/cabinet,
 /turf/open/floor/carpet{
 	baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
 	},
@@ -2182,11 +2182,7 @@
 	pixel_x = 0;
 	tag = ""
 	},
-/turf/open/floor/plasteel/terror/necro/brown/corner{
-	tag = "icon-browncorner (NORTH)";
-	icon_state = "browncorner";
-	dir = 1
-	},
+/turf/open/floor/plasteel/terror/necro,
 /area/mine/lobby)
 "eV" = (
 /obj/structure/cable{
@@ -2209,11 +2205,7 @@
 	icon_state = "2-8";
 	tag = ""
 	},
-/turf/open/floor/plasteel/terror/necro/brown/corner{
-	tag = "icon-browncorner (EAST)";
-	icon_state = "browncorner";
-	dir = 4
-	},
+/turf/open/floor/plasteel/terror/necro,
 /area/mine/lobby)
 "eW" = (
 /obj/structure/disposalpipe/segment{
@@ -2243,22 +2235,14 @@
 	dir = 4
 	},
 /obj/structure/bookcase/random,
-/turf/open/floor/plasteel/terror/necro/brown/corner{
-	tag = "icon-browncorner (EAST)";
-	icon_state = "browncorner";
-	dir = 4
-	},
+/turf/open/floor/plasteel/delivery,
 /area/mine/lobby)
 "eY" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
 /obj/structure/bookcase/random,
-/turf/open/floor/plasteel/terror/necro/brown/corner{
-	tag = "icon-browncorner (EAST)";
-	icon_state = "browncorner";
-	dir = 4
-	},
+/turf/open/floor/plasteel/delivery,
 /area/mine/lobby)
 "eZ" = (
 /obj/structure/disposalpipe/segment{
@@ -2278,11 +2262,7 @@
 	dir = 4
 	},
 /obj/machinery/mineral/equipment_vendor/terror,
-/turf/open/floor/plasteel/terror/necro/brown/corner{
-	tag = "icon-browncorner (NORTH)";
-	icon_state = "browncorner";
-	dir = 1
-	},
+/turf/open/floor/plasteel/terror/necro,
 /area/mine/lobby)
 "fb" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
@@ -2294,22 +2274,14 @@
 	d2 = 1;
 	icon_state = "1-2"
 	},
-/turf/open/floor/plasteel/terror/necro/brown/corner{
-	tag = "icon-browncorner (NORTH)";
-	icon_state = "browncorner";
-	dir = 1
-	},
+/turf/open/floor/plasteel/terror/necro,
 /area/mine/lobby)
 "fc" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/open/floor/plasteel/terror/necro/brown/corner{
-	tag = "icon-browncorner (EAST)";
-	icon_state = "browncorner";
-	dir = 4
-	},
+/turf/open/floor/plasteel/terror/necro,
 /area/mine/lobby)
 "fd" = (
 /obj/machinery/light{
@@ -2787,11 +2759,7 @@
 /area/mine/lobby)
 "fW" = (
 /obj/machinery/atmospherics/pipe/manifold4w/scrubbers/hidden,
-/turf/open/floor/plasteel/terror/necro/brown/corner{
-	tag = "icon-browncorner (WEST)";
-	icon_state = "browncorner";
-	dir = 8
-	},
+/turf/open/floor/plasteel/terror/necro,
 /area/mine/lobby)
 "fX" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
@@ -3181,11 +3149,7 @@
 	icon_state = "2-4";
 	tag = ""
 	},
-/turf/open/floor/plasteel/terror/necro/brown/corner{
-	tag = "icon-browncorner (WEST)";
-	icon_state = "browncorner";
-	dir = 8
-	},
+/turf/open/floor/plasteel/terror/necro,
 /area/mine/lobby)
 "gx" = (
 /obj/structure/cable{
@@ -3196,7 +3160,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	req_access_txt = 1
 	},
-/turf/open/floor/plasteel/terror/necro/brown/corner,
+/turf/open/floor/plasteel/terror/necro,
 /area/mine/lobby)
 "gy" = (
 /obj/structure/cable{
@@ -3218,7 +3182,7 @@
 	pixel_y = -24
 	},
 /obj/machinery/computer/shuttle/mining,
-/turf/open/floor/plasteel/terror/necro/brown/corner,
+/turf/open/floor/plasteel/delivery,
 /area/mine/lobby)
 "gA" = (
 /obj/structure/extinguisher_cabinet{
@@ -3227,7 +3191,7 @@
 	},
 /obj/structure/table/reinforced,
 /obj/item/weapon/folder,
-/turf/open/floor/plasteel/terror/necro/brown/corner,
+/turf/open/floor/plasteel/delivery,
 /area/mine/lobby)
 "gB" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
@@ -3287,7 +3251,7 @@
 	d2 = 1;
 	icon_state = "1-2"
 	},
-/turf/open/floor/plasteel/terror/necro/brown/corner,
+/turf/open/floor/plasteel/terror/necro,
 /area/mine/lobby)
 "gG" = (
 /obj/structure/table,
@@ -4148,12 +4112,12 @@
 	req_access_txt = "0";
 	specialfunctions = 4
 	},
-/obj/structure/closet,
 /obj/machinery/atmospherics/components/unary/vent_scrubber{
 	dir = 8;
 	on = 1;
 	scrub_Toxins = 0
 	},
+/obj/structure/closet/cabinet,
 /turf/open/floor/carpet{
 	baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
 	},
@@ -4249,12 +4213,12 @@
 	req_access_txt = "0";
 	specialfunctions = 4
 	},
-/obj/structure/closet,
 /obj/machinery/atmospherics/components/unary/vent_scrubber{
 	dir = 8;
 	on = 1;
 	scrub_Toxins = 0
 	},
+/obj/structure/closet/cabinet,
 /turf/open/floor/carpet{
 	baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
 	},
@@ -17865,7 +17829,7 @@ dZ
 eo
 eC
 eU
-fu
+fB
 fW
 gw
 bE
