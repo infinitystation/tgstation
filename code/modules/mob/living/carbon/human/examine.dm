@@ -244,7 +244,7 @@
 
 	if(bleedsuppress)
 		msg += "[t_He] перев&#255;зан[e_1] чем-то.\n"
-	if(bleed_rate)
+	else if(bleed_rate)
 		if(reagents.has_reagent("heparin"))
 			msg += "<b>[t_He] обильно кровоточит!</b>\n"
 		else

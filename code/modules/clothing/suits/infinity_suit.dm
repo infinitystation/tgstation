@@ -15,11 +15,10 @@
 	item_color = "black_hoody"
 	icon = 'icons/obj/clothing/infinity_work.dmi'
 	worn_icon = 'icons/mob/infinity_work.dmi'
-	hooded = 1
 	togglename = "Toggle Hood"
-	hoodtype = /obj/item/clothing/head/blackhoody
+	hoodtype = /obj/item/clothing/head/hooded/blackhoody
 
-/obj/item/clothing/head/blackhoody
+/obj/item/clothing/head/hooded/blackhoody
 	name = "black hood"
 	icon_state = "blackhoody"
 	worn_icon = 'icons/mob/infinity_work.dmi'
@@ -102,11 +101,10 @@
 	item_state = "bl_suit"
 	icon = 'icons/obj/clothing/infinity_work.dmi'
 	worn_icon = 'icons/mob/infinity_work.dmi'
-	hooded = 1
 	togglename = "Toggle Hood"
-	hoodtype = /obj/item/clothing/head/whitehoody
+	hoodtype = /obj/item/clothing/head/hooded/whitehoody
 
-/obj/item/clothing/head/whitehoody
+/obj/item/clothing/head/hooded/whitehoody
 	name = "white hood"
 	icon_state = "whitehoody"
 	worn_icon = 'icons/mob/infinity_work.dmi'
@@ -353,11 +351,10 @@
 	item_color = "merser_jacket"
 	icon = 'icons/obj/clothing/infinity_work.dmi'
 	worn_icon = 'icons/mob/infinity_work.dmi'
-	hooded = 1
 	togglename = "Toggle Hood"
-	hoodtype = /obj/item/clothing/head/merser
+	hoodtype = /obj/item/clothing/head/hooded/merser
 
-/obj/item/clothing/head/merser
+/obj/item/clothing/head/hooded/merser
 	name = "merser jacket hood"
 	icon_state = "merser_hood"
 	worn_icon = 'icons/mob/infinity_work.dmi'
@@ -432,9 +429,9 @@
 	worn_icon = 'icons/mob/infinity_work.dmi'
 	armor = list(melee = 25, bullet = 15, laser = 30, energy = 10, bomb = 25, bio = 0, rad = 0, fire = 0, acid = 10)
 	allowed = list(/obj/item/weapon/gun/energy,/obj/item/weapon/reagent_containers/spray/pepper,/obj/item/weapon/gun,/obj/item/ammo_box,/obj/item/ammo_casing,/obj/item/weapon/melee/baton,/obj/item/weapon/restraints/handcuffs,/obj/item/device/flashlight/seclite,/obj/item/weapon/melee/classic_baton/telescopic)
-	hoodtype = /obj/item/clothing/head/security_new
+	hoodtype = /obj/item/clothing/head/hooded/security_new
 
-/obj/item/clothing/head/security_new
+/obj/item/clothing/head/hooded/security_new
 	name = "winter hood"
 	desc = "A hood attached to a heavy winter jacket."
 	icon_state = "winterhood_security"
@@ -451,10 +448,10 @@
 	worn_icon = 'icons/mob/infinity_work.dmi'
 	icon_state = "dragon_cape"
 	armor = list(melee = 55, bullet = 25, laser = 60, energy = 50, bomb = 50, bio = 60, rad = 50, fire = 90, acid = 80)
-	hoodtype = /obj/item/clothing/head/dragon_helmet
+	hoodtype = /obj/item/clothing/head/hooded/dragon_helmet
 	resistance_flags = FIRE_PROOF | UNACIDABLE
 
-/obj/item/clothing/head/dragon_helmet
+/obj/item/clothing/head/hooded/dragon_helmet
 	name = "dragon helmet"
 	desc = "Legends doesn't burn villages."
 	icon = 'icons/obj/clothing/infinity_work.dmi'
@@ -560,11 +557,10 @@
 	icon = 'icons/obj/clothing/infinity_work.dmi'
 	icon_state = "skeletor_garbings"
 	worn_icon = 'icons/mob/infinity_work.dmi'
-	hooded = 1
 	togglename = "Toggle Hood"
-	hoodtype = /obj/item/clothing/head/skeletor_hoody
+	hoodtype = /obj/item/clothing/head/hooded/skeletor_hoody
 
-/obj/item/clothing/head/skeletor_hoody
+/obj/item/clothing/head/hooded/skeletor_hoody
 	name = "True villain's hood"
 	desc = "I'm so powerful I even impress myself!"
 	icon = 'icons/obj/clothing/infinity_work.dmi'

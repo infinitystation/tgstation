@@ -10944,7 +10944,7 @@
 /turf/open/floor/engine,
 /area/abductor_ship)
 "Bu" = (
-/turf/open/floor/plasteel/red,
+/turf/open/floor/plasteel/terror/red,
 /area/tdome/tdomeobserve)
 "Bv" = (
 /obj/machinery/vending/cola,
@@ -14334,7 +14334,7 @@
 	dir = 4;
 	pixel_x = 11
 	},
-/turf/open/floor/plasteel/red,
+/turf/open/floor/plasteel/terror/red,
 /area/tdome/tdomeobserve)
 "IX" = (
 /obj/machinery/computer/card/centcom,
@@ -15980,7 +15980,7 @@
 /area/tdome/tdomeobserve)
 "MT" = (
 /obj/machinery/light,
-/turf/open/floor/plasteel/red,
+/turf/open/floor/plasteel/terror/red,
 /area/tdome/tdomeobserve)
 "MU" = (
 /obj/structure/table/wood,
@@ -19873,7 +19873,7 @@
 	pixel_y = -7;
 	req_access_txt = "101"
 	},
-/obj/item/weapon/storage/fancy,
+/obj/item/weapon/storage/fancy/donut_box,
 /obj/machinery/button/door{
 	id = "XCCFerry";
 	name = "Hanger Bay Shutters";
@@ -48059,7 +48059,7 @@ UB
 UB
 UB
 xi
-Yw
+Yv
 xi
 tU
 yR
@@ -48316,7 +48316,7 @@ UC
 UL
 UC
 UX
-Yx
+Yv
 UX
 Vk
 yR

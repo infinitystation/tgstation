@@ -167,7 +167,7 @@ var/list/spells = typesof(/obj/effect/proc_holder/spell) //needed for the badmin
 		/obj/item/clothing/suit/space/hardsuit/shielded/wizard,
 		/obj/item/clothing/head/helmet/space/hardsuit/shielded/wizard,
 		/obj/item/clothing/suit/hooded/skeletor_hoody,
-		/obj/item/clothing/head/skeletor_hoody))
+		/obj/item/clothing/head/hooded/skeletor_hoody))
 
 		if(clothes_req) //clothes check
 			if(!is_type_in_typecache(H.wear_suit, casting_clothes))
