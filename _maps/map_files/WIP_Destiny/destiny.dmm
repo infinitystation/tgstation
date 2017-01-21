@@ -583,9 +583,7 @@
 /obj/machinery/door/airlock/silver{
 	name = "Bathroom"
 	},
-/turf/open/floor/plasteel{
-	icon_state = "white"
-	},
+/turf/open/floor/plasteel/showroomfloor,
 /area/space)
 "bw" = (
 /obj/machinery/camera{
@@ -601,7 +599,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/turf/open/floor/plasteel/white,
+/turf/open/floor/plasteel/showroomfloor,
 /area/space)
 "bx" = (
 /obj/structure/table/wood,
@@ -633,7 +631,7 @@
 /obj/effect/landmark/start{
 	name = "Captain"
 	},
-/turf/open/floor/plasteel/white,
+/turf/open/floor/plasteel/showroomfloor,
 /area/space)
 "bA" = (
 /obj/machinery/airalarm{
@@ -674,7 +672,7 @@
 /obj/machinery/door/window/northleft,
 /obj/machinery/atmospherics/components/unary/vent_pump/on,
 /obj/item/weapon/bikehorn/rubberducky,
-/turf/open/floor/plasteel/white,
+/turf/open/floor/plasteel/showroomfloor,
 /area/space)
 "bE" = (
 /obj/structure/chair/comfy/black,
@@ -1711,7 +1709,7 @@
 /turf/open/floor/plasteel,
 /area/space)
 "fC" = (
-/turf/open/floor/plasteel/white,
+/turf/open/floor/plasteel/showroomfloor,
 /area/space)
 "fD" = (
 /turf/open/floor/plasteel/white,
@@ -1744,7 +1742,7 @@
 /area/space)
 "fM" = (
 /obj/machinery/door/firedoor,
-/turf/open/floor/plasteel/white,
+/turf/open/floor/plasteel/showroomfloor,
 /area/space)
 "fN" = (
 /turf/open/floor/plasteel/white,
@@ -2276,10 +2274,11 @@
 	},
 /area/space)
 "hU" = (
-/turf/closed/wall/shuttle/smooth,
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
 /area/shuttle/pod_3)
 "hV" = (
-/turf/closed/wall/shuttle/smooth,
+/turf/open/floor/plasteel/black,
 /area/shuttle/pod_3)
 "hW" = (
 /turf/closed/wall/shuttle/smooth,
@@ -2335,16 +2334,7 @@
 /turf/open/floor/plasteel/white,
 /area/shuttle/pod_1)
 "id" = (
-/obj/machinery/door/airlock/shuttle{
-	name = "Escape Pod Airlock"
-	},
-/obj/docking_port/mobile/pod{
-	dir = 8;
-	id = "pod3";
-	name = "escape pod 3";
-	port_angle = -180
-	},
-/turf/open/floor/plasteel/white,
+/turf/open/floor/plasteel/black,
 /area/shuttle/pod_1)
 "ie" = (
 /turf/open/floor/plating/warnplate{
@@ -2352,7 +2342,7 @@
 	},
 /area/space)
 "if" = (
-/turf/closed/wall/shuttle/smooth,
+/turf/closed/wall/r_wall/destiny,
 /area/shuttle/pod_3)
 "ig" = (
 /turf/closed/wall/shuttle/smooth,
@@ -2396,6 +2386,4807 @@
 "ip" = (
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/space,
+/area/space)
+"iq" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2";
+	pixel_y = 0;
+	tag = ""
+	},
+/turf/open/floor/plasteel/black,
+/area/space)
+"ir" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2";
+	pixel_y = 0;
+	tag = ""
+	},
+/turf/open/floor/plasteel/black,
+/area/space)
+"is" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2";
+	pixel_y = 0;
+	tag = ""
+	},
+/turf/open/floor/plasteel/black,
+/area/space)
+"it" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2";
+	pixel_y = 0;
+	tag = ""
+	},
+/turf/open/floor/plasteel/black,
+/area/space)
+"iu" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2";
+	pixel_y = 0;
+	tag = ""
+	},
+/turf/open/floor/plasteel/black,
+/area/space)
+"iv" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2";
+	pixel_y = 0;
+	tag = ""
+	},
+/turf/open/floor/plasteel/black,
+/area/space)
+"iw" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2";
+	pixel_y = 0;
+	tag = ""
+	},
+/turf/open/floor/plasteel/black,
+/area/space)
+"ix" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2";
+	pixel_y = 0;
+	tag = ""
+	},
+/turf/open/floor/plasteel/black,
+/area/space)
+"iy" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2";
+	pixel_y = 0;
+	tag = ""
+	},
+/turf/open/floor/plasteel/black,
+/area/space)
+"iz" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2";
+	pixel_y = 0;
+	tag = ""
+	},
+/turf/open/floor/plasteel/black,
+/area/space)
+"iA" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2";
+	pixel_y = 0;
+	tag = ""
+	},
+/turf/open/floor/plasteel/black,
+/area/space)
+"iB" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2";
+	pixel_y = 0;
+	tag = ""
+	},
+/turf/open/floor/plasteel/black,
+/area/space)
+"iC" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2";
+	pixel_y = 0;
+	tag = ""
+	},
+/turf/open/floor/plasteel/black,
+/area/space)
+"iD" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2";
+	pixel_y = 0;
+	tag = ""
+	},
+/turf/open/floor/plasteel/black,
+/area/space)
+"iE" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2";
+	pixel_y = 0;
+	tag = ""
+	},
+/turf/open/floor/plasteel/black,
+/area/space)
+"iF" = (
+/obj/machinery/door/firedoor,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2";
+	pixel_y = 0;
+	tag = ""
+	},
+/turf/open/floor/plasteel/black,
+/area/space)
+"iG" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2";
+	pixel_y = 0;
+	tag = ""
+	},
+/turf/open/floor/plasteel/black,
+/area/space)
+"iH" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2";
+	pixel_y = 0;
+	tag = ""
+	},
+/turf/open/floor/plasteel/black,
+/area/space)
+"iI" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2";
+	pixel_y = 0;
+	tag = ""
+	},
+/turf/open/floor/plasteel/black,
+/area/space)
+"iJ" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2";
+	pixel_y = 0;
+	tag = ""
+	},
+/turf/open/floor/plasteel/black,
+/area/space)
+"iK" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2";
+	pixel_y = 0;
+	tag = ""
+	},
+/turf/open/floor/plasteel/black,
+/area/space)
+"iL" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2";
+	pixel_y = 0;
+	tag = ""
+	},
+/turf/open/floor/plasteel/black,
+/area/space)
+"iM" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2";
+	pixel_y = 0;
+	tag = ""
+	},
+/turf/open/floor/plasteel/black,
+/area/space)
+"iN" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2";
+	pixel_y = 0;
+	tag = ""
+	},
+/turf/open/floor/plasteel/black,
+/area/space)
+"iO" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2";
+	pixel_y = 0;
+	tag = ""
+	},
+/turf/open/floor/plasteel/black,
+/area/space)
+"iP" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2";
+	pixel_y = 0;
+	tag = ""
+	},
+/turf/open/floor/plasteel/black,
+/area/space)
+"iQ" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2";
+	pixel_y = 0;
+	tag = ""
+	},
+/turf/open/floor/plasteel/black,
+/area/space)
+"iR" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2";
+	pixel_y = 0;
+	tag = ""
+	},
+/turf/open/floor/plasteel/black,
+/area/space)
+"iS" = (
+/turf/open/floor/plasteel{
+	icon_state = "delivery";
+	name = "floor"
+	},
+/area/space)
+"iT" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/shuttle/pod_1)
+"iU" = (
+/turf/open/floor/plasteel/black,
+/area/shuttle/pod_1)
+"iV" = (
+/turf/open/floor/plasteel/black,
+/area/shuttle/pod_1)
+"iW" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2";
+	pixel_y = 0;
+	tag = ""
+	},
+/turf/open/floor/plasteel/black,
+/area/space)
+"iX" = (
+/obj/machinery/button/door{
+	id = "QMLoaddoor";
+	layer = 4;
+	name = "Loading Doors";
+	pixel_x = -27;
+	pixel_y = -5
+	},
+/obj/machinery/button/door{
+	dir = 2;
+	id = "QMLoaddoor2";
+	layer = 4;
+	name = "Loading Doors";
+	pixel_x = -27;
+	pixel_y = 5
+	},
+/obj/machinery/computer/cargo,
+/turf/open/floor/plasteel{
+	icon_state = "bot"
+	},
+/area/space)
+"iY" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2";
+	pixel_y = 0;
+	tag = ""
+	},
+/turf/open/floor/plasteel/black,
+/area/space)
+"iZ" = (
+/turf/open/floor/plasteel{
+	icon_state = "delivery";
+	name = "floor"
+	},
+/area/space)
+"ja" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2";
+	pixel_y = 0;
+	tag = ""
+	},
+/turf/open/floor/plasteel/black,
+/area/space)
+"jb" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2";
+	pixel_y = 0;
+	tag = ""
+	},
+/turf/open/floor/plasteel/black,
+/area/space)
+"jc" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2";
+	pixel_y = 0;
+	tag = ""
+	},
+/turf/open/floor/plasteel/black,
+/area/space)
+"jd" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2";
+	pixel_y = 0;
+	tag = ""
+	},
+/turf/open/floor/plasteel/black,
+/area/space)
+"je" = (
+/turf/closed/wall/shuttle/survival,
+/area/space)
+"jf" = (
+/turf/closed/wall/shuttle/survival/nodiagonal,
+/area/space)
+"jg" = (
+/turf/closed/wall/shuttle/survival/nodiagonal,
+/area/space)
+"jh" = (
+/turf/closed/wall/shuttle/survival/nodiagonal,
+/area/space)
+"ji" = (
+/turf/closed/wall/shuttle/survival,
+/area/space)
+"jj" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2";
+	pixel_y = 0;
+	tag = ""
+	},
+/turf/open/floor/plasteel/black,
+/area/space)
+"jk" = (
+/turf/closed/wall/shuttle/survival,
+/area/space)
+"jl" = (
+/turf/closed/wall/shuttle/survival/nodiagonal,
+/area/space)
+"jm" = (
+/turf/open/floor/plasteel/darkyellow/side{
+	dir = 1
+	},
+/area/space)
+"jn" = (
+/turf/open/floor/plasteel/darkyellow/side,
+/area/space)
+"jo" = (
+/turf/open/floor/plasteel/darkyellow/side{
+	dir = 1
+	},
+/area/space)
+"jp" = (
+/turf/closed/wall/shuttle/survival/nodiagonal,
+/area/space)
+"jq" = (
+/turf/closed/wall/shuttle/survival,
+/area/space)
+"jr" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2";
+	pixel_y = 0;
+	tag = ""
+	},
+/turf/open/floor/plasteel/black,
+/area/space)
+"js" = (
+/turf/closed/wall/shuttle/survival/nodiagonal,
+/area/space)
+"jt" = (
+/turf/open/floor/plasteel/darkyellow/corner{
+	tag = "icon-darkyellowcorners (WEST)";
+	icon_state = "darkyellowcorners";
+	dir = 8
+	},
+/area/space)
+"ju" = (
+/turf/open/floor/plasteel/darkwarning,
+/area/space)
+"jv" = (
+/turf/open/floor/plasteel/darkwarning,
+/area/space)
+"jw" = (
+/turf/open/floor/plasteel/darkwarning,
+/area/space)
+"jx" = (
+/turf/open/floor/plasteel/darkwarning,
+/area/space)
+"jy" = (
+/turf/closed/wall/shuttle/survival/nodiagonal,
+/area/space)
+"jz" = (
+/obj/effect/spawner/structure/window/reinforced,
+/obj/structure/sign/securearea{
+	desc = "A warning sign which reads 'EXTERNAL AIRLOCK'";
+	icon_state = "space";
+	layer = 4;
+	name = "EXTERNAL AIRLOCK";
+	pixel_x = 0
+	},
+/turf/open/floor/plating,
+/area/space)
+"jA" = (
+/obj/machinery/light{
+	icon_state = "tube1";
+	dir = 8
+	},
+/obj/machinery/conveyor{
+	tag = "icon-conveyor0 (NORTHEAST)";
+	icon_state = "conveyor0";
+	dir = 5;
+	movedir = 2;
+	id = "QMLoad"
+	},
+/turf/open/floor/plating,
+/area/space)
+"jB" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2";
+	pixel_y = 0;
+	tag = ""
+	},
+/turf/open/floor/plasteel/black,
+/area/space)
+"jC" = (
+/turf/closed/wall/shuttle/survival/nodiagonal,
+/area/space)
+"jD" = (
+/turf/open/floor/plasteel/darkyellow/side{
+	dir = 8
+	},
+/area/space)
+"jE" = (
+/obj/machinery/conveyor/auto{
+	dir = 4;
+	movedir = 4
+	},
+/turf/open/floor/plating{
+	icon_state = "warnplate";
+	dir = 10
+	},
+/area/space)
+"jF" = (
+/obj/machinery/conveyor/auto{
+	dir = 4;
+	movedir = 4
+	},
+/turf/open/floor/plating{
+	dir = 2;
+	icon_state = "warnplate"
+	},
+/area/space)
+"jG" = (
+/obj/machinery/conveyor/auto{
+	dir = 4;
+	movedir = 4
+	},
+/turf/open/floor/plating{
+	dir = 2;
+	icon_state = "warnplate"
+	},
+/area/space)
+"jH" = (
+/obj/machinery/conveyor/auto{
+	dir = 4;
+	movedir = 4
+	},
+/turf/open/floor/plating{
+	dir = 2;
+	icon_state = "warnplate"
+	},
+/area/space)
+"jI" = (
+/obj/machinery/conveyor{
+	dir = 4;
+	id = "QMLoad2";
+	movedir = 4
+	},
+/obj/machinery/door/poddoor{
+	id = "QMLoaddoor2";
+	name = "supply dock loading door"
+	},
+/turf/open/floor/plating,
+/area/space)
+"jJ" = (
+/obj/machinery/door/poddoor{
+	density = 1;
+	icon_state = "closed";
+	id = "QMLoaddoor2";
+	name = "Supply Dock Loading Door";
+	opacity = 1
+	},
+/obj/machinery/conveyor{
+	dir = 4;
+	id = "QMLoad2";
+	movedir = 8
+	},
+/obj/structure/fans/tiny/invisible,
+/turf/open/floor/plating,
+/area/space)
+"jK" = (
+/obj/machinery/conveyor{
+	dir = 4;
+	id = "QMLoad2";
+	movedir = 8
+	},
+/obj/structure/plasticflaps,
+/turf/open/floor/plating,
+/area/space)
+"jL" = (
+/obj/machinery/door/poddoor{
+	density = 1;
+	icon_state = "closed";
+	id = "QMLoaddoor2";
+	name = "Supply Dock Loading Door";
+	opacity = 1
+	},
+/obj/machinery/conveyor{
+	dir = 4;
+	id = "QMLoad2";
+	movedir = 8
+	},
+/turf/open/floor/plating,
+/area/space)
+"jM" = (
+/obj/machinery/conveyor{
+	tag = "icon-conveyor0 (SOUTHWEST)";
+	icon_state = "conveyor0";
+	dir = 10;
+	movedir = 2;
+	id = "QMLoad"
+	},
+/turf/open/floor/plating,
+/area/space)
+"jN" = (
+/turf/open/floor/plasteel/warning{
+	dir = 9
+	},
+/area/space)
+"jO" = (
+/obj/machinery/conveyor_switch/oneway{
+	convdir = 1;
+	id = "QMLoad2";
+	pixel_x = 6
+	},
+/turf/open/floor/plasteel/warning{
+	dir = 1
+	},
+/area/space)
+"jP" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2";
+	pixel_y = 0;
+	tag = ""
+	},
+/turf/open/floor/plasteel/black,
+/area/space)
+"jQ" = (
+/turf/closed/wall/shuttle/survival/nodiagonal,
+/area/space)
+"jR" = (
+/turf/open/floor/plasteel/darkyellow/side{
+	dir = 8
+	},
+/area/space)
+"jS" = (
+/turf/open/floor/plasteel/darkvault{
+	dir = 8
+	},
+/area/space)
+"jT" = (
+/turf/open/floor/plasteel/darkvault{
+	dir = 8
+	},
+/area/space)
+"jU" = (
+/turf/open/floor/plasteel/darkvault{
+	dir = 8
+	},
+/area/space)
+"jV" = (
+/turf/open/floor/plasteel/darkyellow/corner,
+/area/space)
+"jW" = (
+/obj/machinery/door/airlock/survival_pod/vertical{
+	name = "Cargo Shuttle";
+	req_access_txt = "31"
+	},
+/turf/open/floor/plasteel/darkvault/delivary,
+/area/space)
+"jX" = (
+/obj/machinery/door/airlock/glass_external{
+	name = "Supply Dock Airlock";
+	req_access_txt = "31"
+	},
+/turf/open/floor/plating,
+/area/space)
+"jY" = (
+/obj/machinery/light/small,
+/turf/open/floor/plating,
+/area/space)
+"jZ" = (
+/obj/machinery/door/airlock/glass_external{
+	name = "Supply Dock Airlock";
+	req_access_txt = "31"
+	},
+/turf/open/floor/plating,
+/area/space)
+"ka" = (
+/turf/open/floor/plasteel{
+	icon_state = "delivery";
+	name = "floor"
+	},
+/area/space)
+"kb" = (
+/obj/structure/window/reinforced{
+	dir = 4;
+	layer = 2.9
+	},
+/turf/open/floor/plasteel,
+/area/space)
+"kc" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2";
+	pixel_y = 0;
+	tag = ""
+	},
+/turf/open/floor/plasteel/black,
+/area/space)
+"kd" = (
+/turf/closed/wall/shuttle/survival/nodiagonal,
+/area/space)
+"ke" = (
+/turf/open/floor/plasteel/darkyellow/side{
+	dir = 8
+	},
+/area/space)
+"kf" = (
+/turf/open/floor/plasteel/darkvault{
+	dir = 8
+	},
+/area/space)
+"kg" = (
+/turf/open/floor/plasteel/darkvault{
+	dir = 8
+	},
+/area/space)
+"kh" = (
+/turf/open/floor/plasteel/darkvault{
+	dir = 8
+	},
+/area/space)
+"ki" = (
+/obj/machinery/button/door{
+	dir = 2;
+	id = "QMLoaddoor2";
+	name = "Loading Doors";
+	pixel_x = 24;
+	pixel_y = 8
+	},
+/obj/machinery/button/door{
+	id = "QMLoaddoor";
+	name = "Loading Doors";
+	pixel_x = 24;
+	pixel_y = -8
+	},
+/turf/open/floor/plasteel/darkyellow/side{
+	dir = 4
+	},
+/area/space)
+"kj" = (
+/turf/closed/wall/shuttle/survival/nodiagonal,
+/area/space)
+"kk" = (
+/obj/machinery/button/door{
+	id = "QMLoaddoor";
+	layer = 4;
+	name = "Loading Doors";
+	pixel_x = -27;
+	pixel_y = -5
+	},
+/obj/machinery/button/door{
+	dir = 2;
+	id = "QMLoaddoor2";
+	layer = 4;
+	name = "Loading Doors";
+	pixel_x = -27;
+	pixel_y = 5
+	},
+/obj/machinery/computer/cargo,
+/turf/open/floor/plasteel{
+	icon_state = "bot"
+	},
+/area/space)
+"kl" = (
+/obj/structure/window/reinforced{
+	dir = 4;
+	layer = 2.9
+	},
+/turf/open/floor/plasteel,
+/area/space)
+"km" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2";
+	pixel_y = 0;
+	tag = ""
+	},
+/turf/open/floor/plasteel/black,
+/area/space)
+"kn" = (
+/turf/closed/wall/shuttle/survival/nodiagonal,
+/area/space)
+"ko" = (
+/turf/open/floor/plasteel/darkyellow/side{
+	dir = 8
+	},
+/area/space)
+"kp" = (
+/turf/open/floor/plasteel/darkvault{
+	dir = 8
+	},
+/area/space)
+"kq" = (
+/turf/open/floor/plasteel/darkvault{
+	dir = 8
+	},
+/area/space)
+"kr" = (
+/turf/open/floor/plasteel/darkvault{
+	dir = 8
+	},
+/area/space)
+"ks" = (
+/turf/open/floor/plasteel/darkyellow/corner{
+	tag = "icon-darkyellowcorners (EAST)";
+	icon_state = "darkyellowcorners";
+	dir = 4
+	},
+/area/space)
+"kt" = (
+/obj/docking_port/mobile/supply{
+	dwidth = 5;
+	width = 12
+	},
+/obj/docking_port/stationary{
+	dir = 8;
+	dwidth = 5;
+	height = 7;
+	id = "supply_home";
+	name = "Cargo Bay";
+	width = 12
+	},
+/obj/machinery/door/airlock/survival_pod/vertical{
+	name = "Cargo Shuttle";
+	req_access_txt = "31"
+	},
+/turf/open/floor/plasteel/darkvault/delivary,
+/area/space)
+"ku" = (
+/obj/machinery/door/airlock/glass_external{
+	name = "Supply Dock Airlock";
+	req_access_txt = "31"
+	},
+/turf/open/floor/plating,
+/area/space)
+"kv" = (
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/open/floor/plating,
+/area/space)
+"kw" = (
+/obj/machinery/door/airlock/glass_external{
+	name = "Supply Dock Airlock";
+	req_access_txt = "31"
+	},
+/turf/open/floor/plating,
+/area/space)
+"kx" = (
+/turf/open/floor/plasteel{
+	icon_state = "delivery";
+	name = "floor"
+	},
+/area/space)
+"ky" = (
+/obj/structure/window/reinforced{
+	dir = 4;
+	layer = 2.9
+	},
+/turf/open/floor/plasteel,
+/area/space)
+"kz" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2";
+	pixel_y = 0;
+	tag = ""
+	},
+/turf/open/floor/plasteel/black,
+/area/space)
+"kA" = (
+/turf/closed/wall/shuttle/survival/nodiagonal,
+/area/space)
+"kB" = (
+/turf/open/floor/plasteel/darkyellow/side{
+	dir = 8
+	},
+/area/space)
+"kC" = (
+/obj/machinery/conveyor/auto{
+	dir = 8;
+	movedir = 8
+	},
+/turf/open/floor/plating{
+	icon_state = "warnplate";
+	dir = 9
+	},
+/area/space)
+"kD" = (
+/obj/machinery/conveyor/auto{
+	dir = 8;
+	movedir = 8
+	},
+/turf/open/floor/plating{
+	icon_state = "warnplate";
+	dir = 1
+	},
+/area/space)
+"kE" = (
+/obj/machinery/conveyor/auto{
+	dir = 8;
+	movedir = 8
+	},
+/turf/open/floor/plating{
+	icon_state = "warnplate";
+	dir = 1
+	},
+/area/space)
+"kF" = (
+/obj/machinery/conveyor/auto{
+	dir = 8;
+	movedir = 8
+	},
+/turf/open/floor/plating{
+	icon_state = "warnplate";
+	dir = 1
+	},
+/area/space)
+"kG" = (
+/obj/machinery/conveyor{
+	dir = 8;
+	id = "QMLoad";
+	movedir = 4
+	},
+/obj/machinery/door/poddoor{
+	id = "QMLoaddoor";
+	name = "supply dock loading door"
+	},
+/turf/open/floor/plating,
+/area/space)
+"kH" = (
+/obj/machinery/door/poddoor{
+	density = 1;
+	icon_state = "closed";
+	id = "QMLoaddoor";
+	name = "Supply Dock Loading Door";
+	opacity = 1
+	},
+/obj/machinery/conveyor{
+	dir = 8;
+	id = "QMLoad"
+	},
+/obj/structure/fans/tiny/invisible,
+/turf/open/floor/plating,
+/area/space)
+"kI" = (
+/obj/machinery/conveyor{
+	dir = 8;
+	id = "QMLoad"
+	},
+/obj/structure/plasticflaps,
+/turf/open/floor/plating,
+/area/space)
+"kJ" = (
+/obj/machinery/door/poddoor{
+	density = 1;
+	icon_state = "closed";
+	id = "QMLoaddoor";
+	name = "Supply Dock Loading Door";
+	opacity = 1
+	},
+/obj/machinery/conveyor{
+	dir = 8;
+	id = "QMLoad"
+	},
+/turf/open/floor/plating,
+/area/space)
+"kK" = (
+/obj/machinery/conveyor{
+	tag = "icon-conveyor0 (SOUTHEAST)";
+	icon_state = "conveyor0";
+	dir = 6;
+	movedir = 2;
+	id = "QMLoad"
+	},
+/turf/open/floor/plating,
+/area/space)
+"kL" = (
+/turf/open/floor/plasteel/warning{
+	dir = 10
+	},
+/area/space)
+"kM" = (
+/obj/machinery/conveyor_switch/oneway{
+	convdir = 1;
+	id = "QMLoad";
+	pixel_x = 6
+	},
+/turf/open/floor/plasteel/warning,
+/area/space)
+"kN" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2";
+	pixel_y = 0;
+	tag = ""
+	},
+/turf/open/floor/plasteel/black,
+/area/space)
+"kO" = (
+/turf/closed/wall/shuttle/survival/nodiagonal,
+/area/space)
+"kP" = (
+/turf/open/floor/plasteel/darkyellow/corner{
+	tag = "icon-darkyellowcorners (NORTH)";
+	icon_state = "darkyellowcorners";
+	dir = 1
+	},
+/area/space)
+"kQ" = (
+/turf/open/floor/plasteel/darkwarning{
+	dir = 1
+	},
+/area/space)
+"kR" = (
+/turf/open/floor/plasteel/darkwarning{
+	dir = 1
+	},
+/area/space)
+"kS" = (
+/turf/open/floor/plasteel/darkwarning{
+	dir = 1
+	},
+/area/space)
+"kT" = (
+/turf/open/floor/plasteel/darkwarning{
+	dir = 1
+	},
+/area/space)
+"kU" = (
+/turf/closed/wall/shuttle/survival/nodiagonal,
+/area/space)
+"kV" = (
+/obj/effect/spawner/structure/window/reinforced,
+/obj/structure/sign/securearea{
+	desc = "A warning sign which reads 'EXTERNAL AIRLOCK'";
+	icon_state = "space";
+	layer = 4;
+	name = "EXTERNAL AIRLOCK";
+	pixel_x = 0
+	},
+/turf/open/floor/plating,
+/area/space)
+"kW" = (
+/obj/machinery/conveyor{
+	tag = "icon-conveyor0 (NORTHWEST)";
+	icon_state = "conveyor0";
+	dir = 9;
+	movedir = 2;
+	id = "QMLoad"
+	},
+/obj/machinery/light{
+	icon_state = "tube1";
+	dir = 8
+	},
+/turf/open/floor/plating,
+/area/space)
+"kX" = (
+/obj/machinery/conveyor{
+	dir = 8;
+	id = "QMLoad"
+	},
+/turf/open/floor/plating,
+/area/space)
+"kY" = (
+/obj/machinery/conveyor{
+	dir = 8;
+	id = "QMLoad"
+	},
+/turf/open/floor/plating,
+/area/space)
+"kZ" = (
+/obj/machinery/conveyor{
+	dir = 8;
+	id = "QMLoad"
+	},
+/turf/open/floor/plating,
+/area/space)
+"la" = (
+/obj/machinery/door/firedoor,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2";
+	pixel_y = 0;
+	tag = ""
+	},
+/turf/open/floor/plasteel/black,
+/area/space)
+"lb" = (
+/turf/closed/wall/shuttle/survival/nodiagonal,
+/area/space)
+"lc" = (
+/turf/closed/wall/shuttle/survival/nodiagonal,
+/area/space)
+"ld" = (
+/turf/closed/wall/shuttle/survival/nodiagonal,
+/area/space)
+"le" = (
+/turf/closed/wall/shuttle/survival/nodiagonal,
+/area/space)
+"lf" = (
+/turf/closed/wall/shuttle/survival/nodiagonal,
+/area/space)
+"lg" = (
+/turf/closed/wall/shuttle/survival/nodiagonal,
+/area/space)
+"lh" = (
+/turf/closed/wall/shuttle/survival/nodiagonal,
+/area/space)
+"li" = (
+/obj/machinery/door/firedoor,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2";
+	pixel_y = 0;
+	tag = ""
+	},
+/turf/open/floor/plasteel/black,
+/area/space)
+"lj" = (
+/turf/closed/wall/shuttle/survival,
+/area/space)
+"lk" = (
+/obj/structure/shuttle/engine/propulsion{
+	icon_state = "burst_l"
+	},
+/obj/structure/shuttle/engine/platform{
+	dir = 1
+	},
+/obj/structure/shuttle/engine/platform{
+	layer = 4;
+	pixel_y = 32
+	},
+/turf/open/floor/plating/airless,
+/area/space)
+"ll" = (
+/obj/structure/shuttle/engine/propulsion,
+/obj/structure/shuttle/engine/platform{
+	dir = 1
+	},
+/obj/structure/shuttle/engine/platform{
+	layer = 4;
+	pixel_y = 32
+	},
+/turf/open/floor/plating/airless,
+/area/space)
+"lm" = (
+/obj/structure/shuttle/engine/propulsion,
+/obj/structure/shuttle/engine/platform{
+	dir = 1
+	},
+/obj/structure/shuttle/engine/platform{
+	layer = 4;
+	pixel_y = 32
+	},
+/turf/open/floor/plating/airless,
+/area/space)
+"ln" = (
+/obj/structure/shuttle/engine/propulsion,
+/obj/structure/shuttle/engine/platform{
+	dir = 1
+	},
+/obj/structure/shuttle/engine/platform{
+	layer = 4;
+	pixel_y = 32
+	},
+/turf/open/floor/plating/airless,
+/area/space)
+"lo" = (
+/obj/structure/shuttle/engine/propulsion{
+	icon_state = "burst_r"
+	},
+/obj/structure/shuttle/engine/platform{
+	dir = 1
+	},
+/obj/structure/shuttle/engine/platform{
+	layer = 4;
+	pixel_y = 32
+	},
+/turf/open/floor/plating/airless,
+/area/space)
+"lp" = (
+/turf/closed/wall/shuttle/survival,
+/area/space)
+"lq" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/machinery/power/solar{
+	id = "leftsidesolar";
+	name = "Left-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"lr" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/machinery/power/solar{
+	id = "leftsidesolar";
+	name = "Left-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"ls" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/machinery/power/solar{
+	id = "leftsidesolar";
+	name = "Left-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"lt" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/machinery/power/solar{
+	id = "leftsidesolar";
+	name = "Left-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"lu" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/machinery/power/solar{
+	id = "leftsidesolar";
+	name = "Left-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"lv" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/machinery/power/solar{
+	id = "leftsidesolar";
+	name = "Left-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"lw" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/machinery/power/solar{
+	id = "leftsidesolar";
+	name = "Left-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"lx" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/machinery/power/solar{
+	id = "leftsidesolar";
+	name = "Left-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"ly" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/machinery/power/solar{
+	id = "rightsidesolar";
+	name = "Right-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"lz" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/machinery/power/solar{
+	id = "rightsidesolar";
+	name = "Right-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"lA" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/machinery/power/solar{
+	id = "rightsidesolar";
+	name = "Right-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"lB" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/machinery/power/solar{
+	id = "rightsidesolar";
+	name = "Right-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"lC" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/machinery/power/solar{
+	id = "rightsidesolar";
+	name = "Right-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"lD" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/machinery/power/solar{
+	id = "rightsidesolar";
+	name = "Right-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"lE" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/machinery/power/solar{
+	id = "rightsidesolar";
+	name = "Right-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"lF" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/machinery/power/solar{
+	id = "rightsidesolar";
+	name = "Right-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"lG" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "leftsidesolar";
+	name = "Left-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"lH" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "leftsidesolar";
+	name = "Left-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"lI" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "leftsidesolar";
+	name = "Left-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"lJ" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "leftsidesolar";
+	name = "Left-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"lK" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "leftsidesolar";
+	name = "Left-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"lL" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "leftsidesolar";
+	name = "Left-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"lM" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "leftsidesolar";
+	name = "Left-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"lN" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "leftsidesolar";
+	name = "Left-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"lO" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "rightsidesolar";
+	name = "Right-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"lP" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "rightsidesolar";
+	name = "Right-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"lQ" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "rightsidesolar";
+	name = "Right-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"lR" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "rightsidesolar";
+	name = "Right-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"lS" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "rightsidesolar";
+	name = "Right-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"lT" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "rightsidesolar";
+	name = "Right-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"lU" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "rightsidesolar";
+	name = "Right-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"lV" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "rightsidesolar";
+	name = "Right-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"lW" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	d2 = 2
+	},
+/obj/machinery/power/solar{
+	id = "leftsidesolar";
+	name = "Left-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless{
+	icon_state = "solarpanel"
+	},
+/area/space)
+"lX" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "leftsidesolar";
+	name = "Left-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"lY" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "leftsidesolar";
+	name = "Left-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"lZ" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "leftsidesolar";
+	name = "Left-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"ma" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "leftsidesolar";
+	name = "Left-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"mb" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "leftsidesolar";
+	name = "Left-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"mc" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "leftsidesolar";
+	name = "Left-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"md" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "leftsidesolar";
+	name = "Left-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"me" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "leftsidesolar";
+	name = "Left-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"mf" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "rightsidesolar";
+	name = "Right-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"mg" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "rightsidesolar";
+	name = "Right-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"mh" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "rightsidesolar";
+	name = "Right-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"mi" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "rightsidesolar";
+	name = "Right-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"mj" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "rightsidesolar";
+	name = "Right-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"mk" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "rightsidesolar";
+	name = "Right-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"ml" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "rightsidesolar";
+	name = "Right-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"mm" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "rightsidesolar";
+	name = "Right-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"mn" = (
+/obj/structure/cable,
+/obj/machinery/power/tracker,
+/turf/open/floor/plasteel/airless{
+	icon_state = "solarpanel"
+	},
+/area/space)
+"mo" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "leftsidesolar";
+	name = "Left-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"mp" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "leftsidesolar";
+	name = "Left-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"mq" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "leftsidesolar";
+	name = "Left-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"mr" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "leftsidesolar";
+	name = "Left-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"ms" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "leftsidesolar";
+	name = "Left-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"mt" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "leftsidesolar";
+	name = "Left-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"mu" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "leftsidesolar";
+	name = "Left-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"mv" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "leftsidesolar";
+	name = "Left-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"mw" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "rightsidesolar";
+	name = "Right-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"mx" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "rightsidesolar";
+	name = "Right-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"my" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "rightsidesolar";
+	name = "Right-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"mz" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "rightsidesolar";
+	name = "Right-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"mA" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "rightsidesolar";
+	name = "Right-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"mB" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "rightsidesolar";
+	name = "Right-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"mC" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "rightsidesolar";
+	name = "Right-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"mD" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "rightsidesolar";
+	name = "Right-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"mE" = (
+/obj/structure/cable,
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/machinery/power/solar{
+	id = "leftsidesolar";
+	name = "Left-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"mF" = (
+/obj/structure/cable,
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/machinery/power/solar{
+	id = "leftsidesolar";
+	name = "Left-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"mG" = (
+/obj/structure/cable,
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/machinery/power/solar{
+	id = "leftsidesolar";
+	name = "Left-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"mH" = (
+/obj/structure/cable,
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/machinery/power/solar{
+	id = "leftsidesolar";
+	name = "Left-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"mI" = (
+/obj/structure/cable,
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/machinery/power/solar{
+	id = "leftsidesolar";
+	name = "Left-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"mJ" = (
+/obj/structure/cable,
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/machinery/power/solar{
+	id = "leftsidesolar";
+	name = "Left-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"mK" = (
+/obj/structure/cable,
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/machinery/power/solar{
+	id = "leftsidesolar";
+	name = "Left-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"mL" = (
+/obj/structure/cable,
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/machinery/power/solar{
+	id = "leftsidesolar";
+	name = "Left-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"mM" = (
+/obj/machinery/gateway{
+	dir = 9
+	},
+/turf/open/floor/plasteel/vault{
+	dir = 1
+	},
+/area/space)
+"mN" = (
+/obj/machinery/gateway{
+	dir = 1
+	},
+/obj/machinery/status_display{
+	density = 0;
+	layer = 4;
+	pixel_x = 0;
+	pixel_y = 32
+	},
+/turf/open/floor/plasteel/vault{
+	dir = 8
+	},
+/area/space)
+"mO" = (
+/obj/machinery/gateway{
+	dir = 5
+	},
+/turf/open/floor/plasteel/vault{
+	dir = 4
+	},
+/area/space)
+"mP" = (
+/obj/structure/cable,
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/machinery/power/solar{
+	id = "rightsidesolar";
+	name = "Right-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"mQ" = (
+/obj/structure/cable,
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/machinery/power/solar{
+	id = "rightsidesolar";
+	name = "Right-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"mR" = (
+/obj/structure/cable,
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/machinery/power/solar{
+	id = "rightsidesolar";
+	name = "Right-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"mS" = (
+/obj/structure/cable,
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/machinery/power/solar{
+	id = "rightsidesolar";
+	name = "Right-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"mT" = (
+/obj/structure/cable,
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/machinery/power/solar{
+	id = "rightsidesolar";
+	name = "Right-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"mU" = (
+/obj/structure/cable,
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/machinery/power/solar{
+	id = "rightsidesolar";
+	name = "Right-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"mV" = (
+/obj/structure/cable,
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/machinery/power/solar{
+	id = "rightsidesolar";
+	name = "Right-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"mW" = (
+/obj/structure/cable,
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/machinery/power/solar{
+	id = "rightsidesolar";
+	name = "Right-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"mX" = (
+/obj/structure/cable{
+	icon_state = "0-4";
+	d2 = 4
+	},
+/obj/machinery/power/tracker,
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"mY" = (
+/obj/structure/lattice/catwalk,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8";
+	pixel_y = 0;
+	tag = ""
+	},
+/turf/open/space,
+/area/space)
+"mZ" = (
+/obj/structure/lattice/catwalk,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8";
+	pixel_y = 0;
+	tag = ""
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/turf/open/space,
+/area/space)
+"na" = (
+/obj/structure/lattice/catwalk,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8";
+	pixel_y = 0;
+	tag = ""
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/turf/open/space,
+/area/space)
+"nb" = (
+/obj/structure/lattice/catwalk,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8";
+	pixel_y = 0;
+	tag = ""
+	},
+/turf/open/space,
+/area/space)
+"nc" = (
+/obj/structure/lattice/catwalk,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8";
+	pixel_y = 0;
+	tag = ""
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/turf/open/space,
+/area/space)
+"nd" = (
+/obj/structure/lattice/catwalk,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8";
+	pixel_y = 0;
+	tag = ""
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/turf/open/space,
+/area/space)
+"ne" = (
+/obj/structure/lattice/catwalk,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8";
+	pixel_y = 0;
+	tag = ""
+	},
+/turf/open/space,
+/area/space)
+"nf" = (
+/obj/structure/lattice/catwalk,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8";
+	pixel_y = 0;
+	tag = ""
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/turf/open/space,
+/area/space)
+"ng" = (
+/obj/structure/lattice/catwalk,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8";
+	pixel_y = 0;
+	tag = ""
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/turf/open/space,
+/area/space)
+"nh" = (
+/obj/structure/lattice/catwalk,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8";
+	pixel_y = 0;
+	tag = ""
+	},
+/turf/open/space,
+/area/space)
+"ni" = (
+/obj/structure/lattice/catwalk,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8";
+	pixel_y = 0;
+	tag = ""
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/turf/open/space,
+/area/space)
+"nj" = (
+/obj/structure/lattice/catwalk,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8";
+	pixel_y = 0;
+	tag = ""
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/turf/open/space,
+/area/space)
+"nk" = (
+/obj/structure/lattice/catwalk,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8";
+	pixel_y = 0;
+	tag = ""
+	},
+/turf/open/space,
+/area/space)
+"nl" = (
+/obj/machinery/door/airlock/glass_external{
+	name = "Solar Maintenance";
+	req_one_access_txt = "10;13"
+	},
+/turf/open/floor/plating,
+/area/space)
+"nm" = (
+/obj/machinery/door/airlock/glass_external{
+	name = "Solar Maintenance";
+	req_one_access_txt = "10;13"
+	},
+/turf/open/floor/plating,
+/area/space)
+"nn" = (
+/obj/machinery/gateway{
+	dir = 8
+	},
+/turf/open/floor/plasteel/vault{
+	dir = 8
+	},
+/area/space)
+"no" = (
+/obj/machinery/gateway/centerstation,
+/turf/open/floor/plasteel/black,
+/area/space)
+"np" = (
+/obj/machinery/gateway{
+	dir = 4
+	},
+/turf/open/floor/plasteel/vault{
+	dir = 8
+	},
+/area/space)
+"nq" = (
+/obj/machinery/door/airlock/glass_external{
+	name = "Solar Maintenance";
+	req_one_access_txt = "10;13"
+	},
+/turf/open/floor/plating,
+/area/space)
+"nr" = (
+/obj/machinery/door/airlock/glass_external{
+	name = "Solar Maintenance";
+	req_one_access_txt = "10;13"
+	},
+/turf/open/floor/plating,
+/area/space)
+"ns" = (
+/obj/structure/lattice/catwalk,
+/turf/open/space,
+/area/space)
+"nt" = (
+/obj/structure/lattice/catwalk,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8";
+	pixel_y = 0;
+	tag = ""
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/turf/open/space,
+/area/space)
+"nu" = (
+/obj/structure/lattice/catwalk,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8";
+	pixel_y = 0;
+	tag = ""
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/turf/open/space,
+/area/space)
+"nv" = (
+/obj/structure/lattice/catwalk,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8";
+	pixel_y = 0;
+	tag = ""
+	},
+/turf/open/space,
+/area/space)
+"nw" = (
+/obj/structure/lattice/catwalk,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8";
+	pixel_y = 0;
+	tag = ""
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/turf/open/space,
+/area/space)
+"nx" = (
+/obj/structure/lattice/catwalk,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8";
+	pixel_y = 0;
+	tag = ""
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/turf/open/space,
+/area/space)
+"ny" = (
+/obj/structure/lattice/catwalk,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8";
+	pixel_y = 0;
+	tag = ""
+	},
+/turf/open/space,
+/area/space)
+"nz" = (
+/obj/structure/lattice/catwalk,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8";
+	pixel_y = 0;
+	tag = ""
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/turf/open/space,
+/area/space)
+"nA" = (
+/obj/structure/lattice/catwalk,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8";
+	pixel_y = 0;
+	tag = ""
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/turf/open/space,
+/area/space)
+"nB" = (
+/obj/structure/lattice/catwalk,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8";
+	pixel_y = 0;
+	tag = ""
+	},
+/turf/open/space,
+/area/space)
+"nC" = (
+/obj/structure/lattice/catwalk,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8";
+	pixel_y = 0;
+	tag = ""
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/turf/open/space,
+/area/space)
+"nD" = (
+/obj/structure/lattice/catwalk,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8";
+	pixel_y = 0;
+	tag = ""
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/turf/open/space,
+/area/space)
+"nE" = (
+/obj/structure/lattice/catwalk,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8";
+	pixel_y = 0;
+	tag = ""
+	},
+/turf/open/space,
+/area/space)
+"nF" = (
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"nG" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "leftsidesolar";
+	name = "Left-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"nH" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "leftsidesolar";
+	name = "Left-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"nI" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "leftsidesolar";
+	name = "Left-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"nJ" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "leftsidesolar";
+	name = "Left-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"nK" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "leftsidesolar";
+	name = "Left-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"nL" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "leftsidesolar";
+	name = "Left-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"nM" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "leftsidesolar";
+	name = "Left-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"nN" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "leftsidesolar";
+	name = "Left-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"nO" = (
+/obj/structure/table/wood,
+/turf/open/space,
+/area/space)
+"nP" = (
+/obj/structure/table/wood,
+/turf/open/space,
+/area/space)
+"nQ" = (
+/obj/structure/table/wood,
+/turf/open/space,
+/area/space)
+"nR" = (
+/obj/machinery/gateway{
+	dir = 10
+	},
+/turf/open/floor/plasteel/vault{
+	dir = 4
+	},
+/area/space)
+"nS" = (
+/obj/machinery/gateway,
+/obj/structure/cable/yellow{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/turf/open/floor/plasteel/vault{
+	dir = 8
+	},
+/area/space)
+"nT" = (
+/obj/machinery/gateway{
+	dir = 6
+	},
+/turf/open/floor/plasteel/vault{
+	dir = 1
+	},
+/area/space)
+"nU" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "rightsidesolar";
+	name = "Right-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"nV" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "rightsidesolar";
+	name = "Right-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"nW" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "rightsidesolar";
+	name = "Right-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"nX" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "rightsidesolar";
+	name = "Right-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"nY" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "rightsidesolar";
+	name = "Right-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"nZ" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "rightsidesolar";
+	name = "Right-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"oa" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "rightsidesolar";
+	name = "Right-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"ob" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "rightsidesolar";
+	name = "Right-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"oc" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "leftsidesolar";
+	name = "Left-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"od" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "leftsidesolar";
+	name = "Left-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"oe" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "leftsidesolar";
+	name = "Left-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"of" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "leftsidesolar";
+	name = "Left-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"og" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "leftsidesolar";
+	name = "Left-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"oh" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "leftsidesolar";
+	name = "Left-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"oi" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "leftsidesolar";
+	name = "Left-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"oj" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "leftsidesolar";
+	name = "Left-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"ok" = (
+/turf/open/floor/plasteel/arcade_carpet,
+/area/space)
+"ol" = (
+/turf/open/floor/plasteel/arcade_carpet,
+/area/space)
+"om" = (
+/turf/open/floor/plasteel/arcade_carpet,
+/area/space)
+"on" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "rightsidesolar";
+	name = "Right-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"oo" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "rightsidesolar";
+	name = "Right-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"op" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "rightsidesolar";
+	name = "Right-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"oq" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "rightsidesolar";
+	name = "Right-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"or" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "rightsidesolar";
+	name = "Right-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"os" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "rightsidesolar";
+	name = "Right-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"ot" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "rightsidesolar";
+	name = "Right-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"ou" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "rightsidesolar";
+	name = "Right-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"ov" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "leftsidesolar";
+	name = "Left-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"ow" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "leftsidesolar";
+	name = "Left-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"ox" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "leftsidesolar";
+	name = "Left-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"oy" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "leftsidesolar";
+	name = "Left-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"oz" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "leftsidesolar";
+	name = "Left-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"oA" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "leftsidesolar";
+	name = "Left-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"oB" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "leftsidesolar";
+	name = "Left-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"oC" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "leftsidesolar";
+	name = "Left-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"oD" = (
+/obj/structure/table/wood,
+/turf/open/space,
+/area/space)
+"oE" = (
+/obj/structure/table/wood,
+/turf/open/space,
+/area/space)
+"oF" = (
+/turf/open/floor/plasteel/arcade_carpet,
+/area/space)
+"oG" = (
+/obj/structure/chair/wood/normal{
+	tag = "icon-wooden_chair (EAST)";
+	icon_state = "wooden_chair";
+	dir = 4
+	},
+/turf/open/floor/plasteel/arcade_carpet,
+/area/space)
+"oH" = (
+/obj/machinery/computer/arcade/battle,
+/turf/open/floor/plasteel/arcade_carpet,
+/area/space)
+"oI" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "rightsidesolar";
+	name = "Right-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"oJ" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "rightsidesolar";
+	name = "Right-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"oK" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "rightsidesolar";
+	name = "Right-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"oL" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "rightsidesolar";
+	name = "Right-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"oM" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "rightsidesolar";
+	name = "Right-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"oN" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "rightsidesolar";
+	name = "Right-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"oO" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "rightsidesolar";
+	name = "Right-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"oP" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "rightsidesolar";
+	name = "Right-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"oQ" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "leftsidesolar";
+	name = "Left-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"oR" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "leftsidesolar";
+	name = "Left-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"oS" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "leftsidesolar";
+	name = "Left-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"oT" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "leftsidesolar";
+	name = "Left-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"oU" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "leftsidesolar";
+	name = "Left-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"oV" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "leftsidesolar";
+	name = "Left-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"oW" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "leftsidesolar";
+	name = "Left-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"oX" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "leftsidesolar";
+	name = "Left-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"oY" = (
+/turf/open/floor/plasteel/stairsnew/left{
+	tag = "icon-medstairs_wide (EAST)";
+	icon_state = "medstairs_wide";
+	dir = 4
+	},
+/area/space)
+"oZ" = (
+/turf/open/floor/plasteel/arcade_carpet,
+/area/space)
+"pa" = (
+/obj/structure/chair/wood/normal{
+	tag = "icon-wooden_chair (EAST)";
+	icon_state = "wooden_chair";
+	dir = 4
+	},
+/turf/open/floor/plasteel/arcade_carpet,
+/area/space)
+"pb" = (
+/obj/machinery/computer/arcade/orion_trail,
+/turf/open/floor/plasteel/arcade_carpet,
+/area/space)
+"pc" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "rightsidesolar";
+	name = "Right-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"pd" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "rightsidesolar";
+	name = "Right-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"pe" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "rightsidesolar";
+	name = "Right-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"pf" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "rightsidesolar";
+	name = "Right-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"pg" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "rightsidesolar";
+	name = "Right-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"ph" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "rightsidesolar";
+	name = "Right-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"pi" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "rightsidesolar";
+	name = "Right-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"pj" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1;
+	d2 = 2
+	},
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "rightsidesolar";
+	name = "Right-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"pk" = (
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "leftsidesolar";
+	name = "Left-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"pl" = (
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "leftsidesolar";
+	name = "Left-Side Solar Array"
+	},
+/obj/machinery/power/solar{
+	id = "leftsidesolar";
+	name = "Left-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"pm" = (
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "leftsidesolar";
+	name = "Left-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"pn" = (
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "leftsidesolar";
+	name = "Left-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"po" = (
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "leftsidesolar";
+	name = "Left-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"pp" = (
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "leftsidesolar";
+	name = "Left-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"pq" = (
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "leftsidesolar";
+	name = "Left-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"pr" = (
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "leftsidesolar";
+	name = "Left-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"ps" = (
+/turf/open/floor/plasteel/stairsnew/right{
+	tag = "icon-medstairs2_wide (EAST)";
+	icon_state = "medstairs2_wide";
+	dir = 4
+	},
+/area/space)
+"pt" = (
+/turf/open/floor/plasteel/arcade_carpet,
+/area/space)
+"pu" = (
+/turf/open/floor/plasteel/arcade_carpet,
+/area/space)
+"pv" = (
+/turf/open/floor/plasteel/arcade_carpet,
+/area/space)
+"pw" = (
+/obj/structure/chair/comfy/sofa/corner/right/brown,
+/turf/open/floor/plasteel/arcade_carpet,
+/area/space)
+"px" = (
+/obj/structure/chair/comfy/sofa/corner/brown,
+/turf/open/floor/plasteel/arcade_carpet,
+/area/space)
+"py" = (
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "rightsidesolar";
+	name = "Right-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"pz" = (
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "rightsidesolar";
+	name = "Right-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"pA" = (
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "rightsidesolar";
+	name = "Right-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"pB" = (
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "rightsidesolar";
+	name = "Right-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"pC" = (
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "rightsidesolar";
+	name = "Right-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"pD" = (
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "rightsidesolar";
+	name = "Right-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"pE" = (
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "rightsidesolar";
+	name = "Right-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"pF" = (
+/obj/structure/cable,
+/obj/machinery/power/solar{
+	id = "rightsidesolar";
+	name = "Right-Side Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space)
+"pG" = (
+/obj/structure/table/wood,
+/turf/open/space,
+/area/space)
+"pH" = (
+/obj/machinery/disposal/bin,
+/turf/open/floor/plasteel/arcade_carpet,
+/area/space)
+"pI" = (
+/turf/open/floor/plasteel/arcade_carpet,
+/area/space)
+"pJ" = (
+/turf/open/floor/plasteel/arcade_carpet,
+/area/space)
+"pK" = (
+/obj/structure/table,
+/turf/open/floor/plasteel/arcade_carpet,
+/area/space)
+"pL" = (
+/obj/structure/table,
+/turf/open/floor/plasteel/arcade_carpet,
+/area/space)
+"pM" = (
+/turf/open/floor/plasteel/stairsnew/left,
+/area/space)
+"pN" = (
+/turf/open/floor/plasteel/stairsnew/right,
+/area/space)
+"pO" = (
+/turf/open/floor/plasteel/chapel{
+	tag = "icon-chapel (NORTH)";
+	icon_state = "chapel";
+	dir = 1
+	},
+/area/space)
+"pP" = (
+/turf/open/floor/plasteel/chapel{
+	tag = "icon-chapel (EAST)";
+	icon_state = "chapel";
+	dir = 4
+	},
+/area/space)
+"pQ" = (
+/turf/open/floor/plasteel/chapel{
+	tag = "icon-chapel (NORTH)";
+	icon_state = "chapel";
+	dir = 1
+	},
+/area/space)
+"pR" = (
+/turf/open/floor/plasteel/chapel{
+	tag = "icon-chapel (WEST)";
+	icon_state = "chapel";
+	dir = 8
+	},
+/area/space)
+"pS" = (
+/turf/open/floor/plasteel/chapel,
+/area/space)
+"pT" = (
+/turf/open/floor/plasteel/chapel{
+	tag = "icon-chapel (WEST)";
+	icon_state = "chapel";
+	dir = 8
+	},
+/area/space)
+"pU" = (
+/turf/open/floor/plasteel/chapel{
+	tag = "icon-chapel (NORTH)";
+	icon_state = "chapel";
+	dir = 1
+	},
+/area/space)
+"pV" = (
+/turf/open/floor/plasteel/chapel{
+	tag = "icon-chapel (EAST)";
+	icon_state = "chapel";
+	dir = 4
+	},
+/area/space)
+"pW" = (
+/turf/open/floor/plasteel/chapel{
+	tag = "icon-chapel (NORTH)";
+	icon_state = "chapel";
+	dir = 1
+	},
+/area/space)
+"pX" = (
+/turf/open/floor/plasteel/chapel{
+	tag = "icon-chapel (EAST)";
+	icon_state = "chapel";
+	dir = 4
+	},
+/area/space)
+"pY" = (
+/turf/open/floor/plasteel/chapel{
+	tag = "icon-chapel (WEST)";
+	icon_state = "chapel";
+	dir = 8
+	},
+/area/space)
+"pZ" = (
+/turf/open/floor/plasteel/chapel,
+/area/space)
+"qa" = (
+/turf/open/floor/plasteel/chapel{
+	tag = "icon-chapel (WEST)";
+	icon_state = "chapel";
+	dir = 8
+	},
+/area/space)
+"qb" = (
+/turf/open/floor/plasteel/chapel,
+/area/space)
+"qc" = (
+/turf/open/floor/plasteel/chapel{
+	tag = "icon-chapel (NORTH)";
+	icon_state = "chapel";
+	dir = 1
+	},
+/area/space)
+"qd" = (
+/turf/open/floor/plasteel/chapel{
+	tag = "icon-chapel (EAST)";
+	icon_state = "chapel";
+	dir = 4
+	},
+/area/space)
+"qe" = (
+/turf/open/floor/plasteel/chapel{
+	tag = "icon-chapel (NORTH)";
+	icon_state = "chapel";
+	dir = 1
+	},
+/area/space)
+"qf" = (
+/turf/open/floor/plasteel/chapel{
+	tag = "icon-chapel (EAST)";
+	icon_state = "chapel";
+	dir = 4
+	},
+/area/space)
+"qg" = (
+/turf/open/floor/plasteel/chapel{
+	tag = "icon-chapel (NORTH)";
+	icon_state = "chapel";
+	dir = 1
+	},
+/area/space)
+"qh" = (
+/turf/open/floor/plasteel/chapel{
+	tag = "icon-chapel (WEST)";
+	icon_state = "chapel";
+	dir = 8
+	},
+/area/space)
+"qi" = (
+/turf/open/floor/plasteel/chapel,
+/area/space)
+"qj" = (
+/turf/open/floor/plasteel/chapel{
+	tag = "icon-chapel (WEST)";
+	icon_state = "chapel";
+	dir = 8
+	},
+/area/space)
+"qk" = (
+/turf/open/floor/plasteel/chapel,
+/area/space)
+"ql" = (
+/turf/open/floor/plasteel/chapel{
+	tag = "icon-chapel (WEST)";
+	icon_state = "chapel";
+	dir = 8
+	},
+/area/space)
+"qm" = (
+/obj/structure/table/wood,
+/turf/open/floor/plasteel/chapel{
+	tag = "icon-chapel (NORTH)";
+	icon_state = "chapel";
+	dir = 1
+	},
+/area/space)
+"qn" = (
+/obj/structure/table/wood,
+/turf/open/floor/plasteel/chapel{
+	tag = "icon-chapel (EAST)";
+	icon_state = "chapel";
+	dir = 4
+	},
+/area/space)
+"qo" = (
+/obj/structure/table/wood,
+/turf/open/floor/plasteel/chapel{
+	tag = "icon-chapel (NORTH)";
+	icon_state = "chapel";
+	dir = 1
+	},
+/area/space)
+"qp" = (
+/turf/open/floor/plasteel/chapel{
+	tag = "icon-chapel (NORTH)";
+	icon_state = "chapel";
+	dir = 1
+	},
+/area/space)
+"qq" = (
+/turf/open/floor/plasteel/stairsnew/wood2{
+	tag = "icon-wood2_stairs (WEST)";
+	icon_state = "wood2_stairs";
+	dir = 8
+	},
+/area/space)
+"qr" = (
+/turf/open/floor/plasteel/grimy,
+/area/space)
+"qs" = (
+/turf/open/floor/plasteel/grimy,
+/area/space)
+"qt" = (
+/turf/open/floor/plasteel/grimy,
+/area/space)
+"qu" = (
+/turf/open/floor/plasteel/grimy,
+/area/space)
+"qv" = (
+/turf/open/floor/plasteel/grimy,
+/area/space)
+"qw" = (
+/turf/open/floor/plasteel/grimy,
+/area/space)
+"qx" = (
+/turf/open/floor/plasteel/grimy,
+/area/space)
+"qy" = (
+/turf/open/floor/plasteel/grimy,
+/area/space)
+"qz" = (
+/turf/open/floor/plasteel/grimy,
+/area/space)
+"qA" = (
+/turf/open/floor/plasteel/grimy,
+/area/space)
+"qB" = (
+/turf/open/floor/plasteel/grimy,
+/area/space)
+"qC" = (
+/turf/open/floor/plasteel/grimy,
+/area/space)
+"qD" = (
+/turf/open/floor/plasteel/grimy,
+/area/space)
+"qE" = (
+/turf/open/floor/plasteel/grimy,
+/area/space)
+"qF" = (
+/obj/machinery/door/airlock/external{
+	req_access_txt = "13"
+	},
+/turf/open/floor/plating,
+/area/space)
+"qG" = (
+/obj/machinery/door/airlock/external{
+	req_access_txt = "13"
+	},
+/turf/open/floor/plating,
+/area/space)
+"qH" = (
+/obj/machinery/vending/dinnerware,
+/turf/open/space,
+/area/space)
+"qI" = (
+/obj/structure/table/reinforced,
+/turf/open/floor/plasteel{
+	icon_state = "showroomfloor"
+	},
+/area/space)
+"qJ" = (
+/obj/structure/kitchenspike,
+/turf/open/floor/plasteel{
+	icon_state = "showroomfloor"
+	},
+/area/space)
+"qK" = (
+/obj/structure/kitchenspike,
+/turf/open/floor/plasteel{
+	icon_state = "showroomfloor"
+	},
+/area/space)
+"qL" = (
+/obj/machinery/door/airlock/external{
+	req_access_txt = "13"
+	},
+/turf/open/floor/plating,
+/area/space)
+"qM" = (
+/turf/open/floor/plasteel{
+	icon_state = "showroomfloor"
+	},
+/area/space)
+"qN" = (
+/turf/open/floor/plasteel{
+	icon_state = "showroomfloor"
+	},
+/area/space)
+"qO" = (
+/turf/open/floor/plasteel{
+	icon_state = "showroomfloor"
+	},
+/area/space)
+"qP" = (
+/obj/machinery/airalarm/kitchen_cold_room{
+	pixel_y = 25
+	},
+/obj/machinery/gibber,
+/turf/open/floor/plasteel{
+	icon_state = "showroomfloor"
+	},
+/area/space)
+"qQ" = (
+/obj/structure/table/reinforced,
+/turf/open/space,
+/area/space)
+"qR" = (
+/obj/structure/table/reinforced,
+/turf/open/space,
+/area/space)
+"qS" = (
+/obj/structure/table/reinforced,
+/turf/open/space,
+/area/space)
+"qT" = (
+/turf/open/floor/plasteel{
+	icon_state = "showroomfloor"
+	},
+/area/space)
+"qU" = (
+/turf/open/floor/plasteel{
+	icon_state = "showroomfloor"
+	},
+/area/space)
+"qV" = (
+/obj/structure/table/reinforced,
+/turf/open/space,
+/area/space)
+"qW" = (
+/obj/structure/table/reinforced,
+/turf/open/space,
+/area/space)
+"qX" = (
+/obj/structure/table/reinforced,
+/turf/open/space,
+/area/space)
+"qY" = (
+/turf/open/floor/plasteel{
+	icon_state = "showroomfloor"
+	},
+/area/space)
+"qZ" = (
+/turf/open/floor/plasteel{
+	icon_state = "showroomfloor"
+	},
+/area/space)
+"ra" = (
+/obj/structure/table/reinforced,
+/turf/open/floor/plasteel{
+	icon_state = "showroomfloor"
+	},
+/area/space)
+"rb" = (
+/turf/open/floor/plasteel{
+	icon_state = "showroomfloor"
+	},
+/area/space)
+"rc" = (
+/obj/machinery/processor,
+/turf/open/space,
+/area/space)
+"rd" = (
+/obj/structure/closet/secure_closet/freezer/fridge,
+/turf/open/space,
+/area/space)
+"re" = (
+/obj/structure/closet/secure_closet/freezer/kitchen,
+/turf/open/space,
+/area/space)
+"rf" = (
+/obj/machinery/power/smes/engineering,
+/turf/open/space,
+/area/space)
+"rg" = (
+/obj/machinery/door/airlock/external{
+	req_access_txt = "13"
+	},
+/turf/open/floor/plating,
+/area/space)
+"rh" = (
+/obj/machinery/door/airlock/external{
+	req_access_txt = "13"
+	},
+/turf/open/floor/plating,
+/area/space)
+"ri" = (
+/obj/machinery/door/airlock/external{
+	req_access_txt = "13"
+	},
+/turf/open/floor/plating,
+/area/space)
+"rj" = (
+/obj/machinery/door/airlock/external{
+	req_access_txt = "13"
+	},
+/turf/open/floor/plating,
+/area/space)
+"rk" = (
+/obj/machinery/door/airlock/external{
+	req_access_txt = "13"
+	},
+/turf/open/floor/plating,
+/area/space)
+"rl" = (
+/obj/machinery/door/airlock/external{
+	req_access_txt = "13"
+	},
+/turf/open/floor/plating,
+/area/space)
+"rm" = (
+/turf/open/floor/engine,
+/area/space)
+"rn" = (
+/turf/open/floor/engine,
+/area/space)
+"ro" = (
+/turf/open/floor/engine,
+/area/space)
+"rp" = (
+/turf/open/floor/engine,
+/area/space)
+"rq" = (
+/turf/open/floor/engine,
+/area/space)
+"rr" = (
+/turf/open/floor/engine,
+/area/space)
+"rs" = (
+/turf/open/floor/engine,
+/area/space)
+"rt" = (
+/turf/open/floor/engine,
+/area/space)
+"ru" = (
+/turf/open/floor/engine,
+/area/space)
+"rv" = (
+/turf/open/floor/engine,
+/area/space)
+"rw" = (
+/turf/open/floor/engine,
+/area/space)
+"rx" = (
+/turf/open/floor/engine,
+/area/space)
+"ry" = (
+/turf/open/floor/engine,
+/area/space)
+"rz" = (
+/turf/open/floor/engine,
+/area/space)
+"rA" = (
+/turf/open/floor/engine,
+/area/space)
+"rB" = (
+/turf/open/floor/engine,
+/area/space)
+"rC" = (
+/turf/open/floor/engine,
+/area/space)
+"rD" = (
+/turf/open/floor/engine,
+/area/space)
+"rE" = (
+/turf/open/floor/engine,
+/area/space)
+"rF" = (
+/turf/open/floor/engine,
+/area/space)
+"rG" = (
+/turf/open/floor/engine,
+/area/space)
+"rH" = (
+/turf/open/floor/engine,
+/area/space)
+"rI" = (
+/turf/open/floor/engine,
+/area/space)
+"rJ" = (
+/turf/open/floor/engine,
+/area/space)
+"rK" = (
+/turf/open/floor/engine,
+/area/space)
+"rL" = (
+/turf/open/floor/engine,
+/area/space)
+"rM" = (
+/turf/open/floor/engine,
+/area/space)
+"rN" = (
+/turf/open/floor/engine,
+/area/space)
+"rO" = (
+/turf/open/floor/engine,
+/area/space)
+"rP" = (
+/turf/open/floor/engine,
+/area/space)
+"rQ" = (
+/turf/open/floor/engine,
+/area/space)
+"rR" = (
+/turf/open/floor/engine,
+/area/space)
+"rS" = (
+/turf/open/floor/engine,
+/area/space)
+"rT" = (
+/turf/open/floor/engine,
+/area/space)
+"rU" = (
+/turf/open/floor/engine,
+/area/space)
+"rV" = (
+/turf/open/floor/engine,
+/area/space)
+"rW" = (
+/turf/open/floor/engine,
+/area/space)
+"rX" = (
+/turf/open/floor/engine,
+/area/space)
+"rY" = (
+/turf/open/floor/engine,
+/area/space)
+"rZ" = (
+/turf/open/floor/engine,
+/area/space)
+"sa" = (
+/turf/open/floor/engine,
+/area/space)
+"sb" = (
+/turf/open/floor/engine,
+/area/space)
+"sc" = (
+/turf/open/floor/engine,
+/area/space)
+"sd" = (
+/turf/open/floor/engine,
+/area/space)
+"se" = (
+/turf/open/floor/engine,
+/area/space)
+"sf" = (
+/turf/open/floor/engine,
+/area/space)
+"sg" = (
+/turf/open/floor/engine,
+/area/space)
+"sh" = (
+/turf/open/floor/engine,
+/area/space)
+"si" = (
+/turf/open/floor/engine,
+/area/space)
+"sj" = (
+/turf/open/floor/engine,
+/area/space)
+"sk" = (
+/turf/open/floor/engine,
+/area/space)
+"sl" = (
+/obj/machinery/atmospherics/components/binary/circulator,
+/turf/open/floor/engine,
+/area/space)
+"sm" = (
+/obj/machinery/power/generator,
+/turf/open/floor/engine,
+/area/space)
+"sn" = (
+/obj/machinery/atmospherics/components/binary/circulator{
+	icon_state = "circ2-off";
+	side = 2;
+	tag = "icon-circ2-off"
+	},
+/turf/open/floor/engine,
+/area/space)
+"so" = (
+/turf/open/floor/engine,
+/area/space)
+"sp" = (
+/turf/open/floor/engine,
+/area/space)
+"sq" = (
+/turf/open/floor/engine,
+/area/space)
+"sr" = (
+/turf/open/floor/engine,
+/area/space)
+"ss" = (
+/turf/open/floor/engine,
+/area/space)
+"st" = (
+/turf/open/floor/engine,
+/area/space)
+"su" = (
+/turf/open/floor/engine,
+/area/space)
+"sv" = (
+/turf/open/floor/engine,
+/area/space)
+"sw" = (
+/turf/open/floor/engine,
+/area/space)
+"sx" = (
+/turf/open/floor/engine,
+/area/space)
+"sy" = (
+/turf/open/floor/engine,
+/area/space)
+"sz" = (
+/turf/open/floor/engine,
+/area/space)
+"sA" = (
+/turf/open/floor/engine,
+/area/space)
+"sB" = (
+/turf/open/floor/engine,
+/area/space)
+"sC" = (
+/turf/open/floor/engine,
+/area/space)
+"sD" = (
+/turf/open/floor/engine,
+/area/space)
+"sE" = (
+/turf/open/floor/engine,
+/area/space)
+"sF" = (
+/turf/open/floor/engine,
+/area/space)
+"sG" = (
+/turf/open/floor/engine,
+/area/space)
+"sH" = (
+/turf/open/floor/engine,
+/area/space)
+"sI" = (
+/turf/open/floor/engine,
+/area/space)
+"sJ" = (
+/turf/open/floor/engine,
+/area/space)
+"sK" = (
+/turf/open/floor/engine,
+/area/space)
+"sL" = (
+/turf/open/floor/engine,
+/area/space)
+"sM" = (
+/turf/open/floor/engine,
+/area/space)
+"sN" = (
+/turf/open/floor/engine,
+/area/space)
+"sO" = (
+/turf/open/floor/engine,
+/area/space)
+"sP" = (
+/turf/open/floor/engine,
+/area/space)
+"sQ" = (
+/turf/open/floor/engine,
+/area/space)
+"sR" = (
+/turf/open/floor/engine,
+/area/space)
+"sS" = (
+/turf/open/floor/engine,
+/area/space)
+"sT" = (
+/turf/open/floor/engine,
+/area/space)
+"sU" = (
+/turf/open/floor/engine,
+/area/space)
+"sV" = (
+/turf/open/floor/engine,
+/area/space)
+"sW" = (
+/turf/open/floor/engine,
+/area/space)
+"sX" = (
+/turf/open/floor/engine,
+/area/space)
+"sY" = (
+/turf/open/floor/engine,
+/area/space)
+"sZ" = (
+/turf/open/floor/engine,
+/area/space)
+"ta" = (
+/turf/open/floor/engine,
+/area/space)
+"tb" = (
+/turf/open/floor/engine,
+/area/space)
+"tc" = (
+/turf/open/floor/engine,
+/area/space)
+"td" = (
+/turf/open/floor/engine,
+/area/space)
+"te" = (
+/turf/open/floor/engine,
+/area/space)
+"tf" = (
+/turf/open/floor/engine,
+/area/space)
+"tg" = (
+/turf/open/floor/engine,
+/area/space)
+"th" = (
+/turf/open/floor/engine,
+/area/space)
+"ti" = (
+/turf/open/floor/engine,
+/area/space)
+"tj" = (
+/turf/open/floor/engine,
+/area/space)
+"tk" = (
+/turf/open/floor/engine,
+/area/space)
+"tl" = (
+/turf/open/floor/engine,
+/area/space)
+"tm" = (
+/turf/open/floor/engine,
+/area/space)
+"tn" = (
+/turf/open/floor/engine,
+/area/space)
+"to" = (
+/turf/open/floor/engine,
+/area/space)
+"tp" = (
+/turf/open/floor/engine,
+/area/space)
+"tq" = (
+/turf/open/floor/engine,
+/area/space)
+"tr" = (
+/turf/open/floor/engine,
+/area/space)
+"ts" = (
+/turf/open/floor/engine,
+/area/space)
+"tt" = (
+/turf/open/floor/engine,
+/area/space)
+"tu" = (
+/turf/open/floor/engine,
+/area/space)
+"tv" = (
+/turf/open/floor/engine,
+/area/space)
+"tw" = (
+/turf/open/floor/engine,
+/area/space)
+"tx" = (
+/turf/open/floor/engine,
+/area/space)
+"ty" = (
+/turf/open/floor/engine,
+/area/space)
+"tz" = (
+/turf/open/floor/engine,
+/area/space)
+"tA" = (
+/turf/open/floor/engine,
+/area/space)
+"tB" = (
+/turf/open/floor/engine,
+/area/space)
+"tC" = (
+/turf/open/floor/engine,
+/area/space)
+"tD" = (
+/turf/open/floor/engine,
+/area/space)
+"tE" = (
+/turf/open/floor/engine,
+/area/space)
+"tF" = (
+/turf/open/floor/engine,
+/area/space)
+"tG" = (
+/turf/open/floor/engine,
+/area/space)
+"tH" = (
+/turf/open/floor/engine,
+/area/space)
+"tI" = (
+/turf/open/floor/engine,
+/area/space)
+"tJ" = (
+/turf/open/floor/engine,
+/area/space)
+"tK" = (
+/turf/open/floor/engine,
+/area/space)
+"tL" = (
+/turf/open/floor/engine,
+/area/space)
+"tM" = (
+/turf/open/floor/engine,
+/area/space)
+"tN" = (
+/turf/open/floor/engine,
+/area/space)
+"tO" = (
+/turf/open/floor/engine,
+/area/space)
+"tP" = (
+/turf/open/floor/engine,
+/area/space)
+"tQ" = (
+/turf/open/floor/engine,
+/area/space)
+"tR" = (
+/turf/open/floor/engine,
+/area/space)
+"tS" = (
+/turf/open/floor/engine,
+/area/space)
+"tT" = (
+/turf/open/floor/engine,
+/area/space)
+"tU" = (
+/turf/open/floor/engine,
+/area/space)
+"tV" = (
+/turf/open/floor/engine,
+/area/space)
+"tW" = (
+/turf/open/floor/engine,
+/area/space)
+"tX" = (
+/turf/open/floor/engine,
+/area/space)
+"tY" = (
+/turf/open/floor/engine,
+/area/space)
+"tZ" = (
+/turf/open/floor/engine,
+/area/space)
+"ua" = (
+/turf/open/floor/engine,
+/area/space)
+"ub" = (
+/turf/open/floor/engine,
+/area/space)
+"uc" = (
+/turf/open/floor/engine,
+/area/space)
+"ud" = (
+/turf/open/floor/engine,
+/area/space)
+"ue" = (
+/turf/open/floor/engine,
+/area/space)
+"uf" = (
+/turf/open/floor/engine,
+/area/space)
+"ug" = (
+/turf/open/floor/engine,
+/area/space)
+"uh" = (
+/turf/open/floor/engine,
+/area/space)
+"ui" = (
+/turf/open/floor/engine,
+/area/space)
+"uj" = (
+/turf/open/floor/engine,
+/area/space)
+"uk" = (
+/turf/open/floor/engine,
+/area/space)
+"ul" = (
+/turf/open/floor/engine,
+/area/space)
+"um" = (
+/turf/open/floor/engine,
+/area/space)
+"un" = (
+/turf/open/floor/engine,
+/area/space)
+"uo" = (
+/turf/open/floor/engine,
+/area/space)
+"up" = (
+/turf/open/floor/engine,
+/area/space)
+"uq" = (
+/turf/open/floor/engine,
+/area/space)
+"ur" = (
+/turf/open/floor/engine,
+/area/space)
+"us" = (
+/turf/open/floor/engine,
+/area/space)
+"ut" = (
+/turf/open/floor/engine,
+/area/space)
+"uu" = (
+/turf/open/floor/engine,
+/area/space)
+"uv" = (
+/turf/open/floor/engine,
+/area/space)
+"uw" = (
+/turf/open/floor/engine,
+/area/space)
+"ux" = (
+/turf/open/floor/engine,
+/area/space)
+"uy" = (
+/turf/open/floor/engine,
 /area/space)
 
 (1,1,1) = {"
@@ -23932,7 +28723,7 @@ aa
 aa
 cn
 cn
-aa
+rg
 aD
 aD
 ab
@@ -24189,9 +28980,9 @@ cn
 aa
 aa
 cn
-aa
-aa
-aa
+cX
+cX
+rk
 ab
 aa
 aa
@@ -24447,7 +29238,7 @@ aa
 aa
 cn
 cn
-aa
+ri
 aD
 aD
 aa
@@ -24704,8 +29495,8 @@ aa
 aa
 aa
 cn
-aa
-aa
+cX
+cX
 aD
 aa
 aa
@@ -24962,7 +29753,7 @@ aa
 aa
 cn
 cn
-aa
+cX
 aD
 aD
 aa
@@ -25219,8 +30010,8 @@ aa
 aa
 aa
 cn
-aa
-aa
+cX
+cX
 aD
 aa
 aa
@@ -25476,8 +30267,8 @@ aa
 aa
 aa
 cn
-aa
-aa
+cX
+cX
 aD
 aD
 aa
@@ -25733,9 +30524,9 @@ aa
 aa
 aa
 cn
-aa
-aa
-aa
+cX
+cX
+cX
 aD
 aa
 aa
@@ -25990,9 +30781,9 @@ aa
 aa
 aa
 cn
-aa
-aa
-aa
+cX
+cX
+cX
 aD
 aD
 aa
@@ -26249,8 +31040,8 @@ cn
 cn
 cn
 cn
-aa
-aa
+cX
+cX
 aD
 aa
 aa
@@ -26506,8 +31297,8 @@ aa
 aa
 aa
 cn
-aa
-aa
+cX
+cX
 aD
 aD
 aa
@@ -26763,9 +31554,9 @@ aa
 aa
 aa
 cn
-aa
-aa
-aa
+cX
+cX
+cX
 aD
 aa
 aa
@@ -27020,7 +31811,7 @@ aa
 aa
 aa
 aD
-aa
+cX
 aD
 aD
 aD
@@ -28747,8 +33538,8 @@ aa
 aa
 aa
 aa
-aa
-aa
+lW
+mn
 aa
 aa
 aa
@@ -29264,7 +34055,7 @@ aa
 aa
 aa
 aa
-aa
+mX
 aa
 aa
 aa
@@ -29339,9 +34130,9 @@ aa
 aa
 aa
 aD
-aa
-aa
-aa
+cX
+cX
+cX
 aa
 aa
 aa
@@ -29521,39 +34312,7 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aD
-aD
+mY
 aa
 aa
 aa
@@ -29585,6 +34344,27 @@ aa
 aa
 aa
 aD
+aD
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -29599,6 +34379,17 @@ aD
 aa
 aa
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aD
+cX
+cX
+cX
 aa
 aa
 aa
@@ -29773,17 +34564,17 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+lq
+lG
+lX
+mo
+mE
+mZ
+nG
+oc
+ov
+oQ
+pk
 aa
 aa
 aa
@@ -29812,6 +34603,10 @@ aD
 aD
 aa
 aa
+aD
+aD
+aD
+aD
 aa
 aa
 aa
@@ -29832,6 +34627,7 @@ aa
 aa
 aa
 aa
+aD
 aa
 aa
 aa
@@ -29847,15 +34643,10 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+cX
+cX
+cX
+cX
 aa
 aa
 aa
@@ -30030,6 +34821,17 @@ aa
 aa
 aa
 aa
+lr
+lH
+lY
+mp
+mF
+na
+nH
+od
+ow
+oR
+pl
 aa
 aa
 aa
@@ -30039,6 +34841,29 @@ aa
 aa
 aa
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aD
+aD
+aa
+aa
+aa
+aD
+aa
+aa
+aD
 aa
 aa
 aa
@@ -30066,40 +34891,6 @@ aa
 aa
 aD
 aD
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aD
-aD
 aD
 aD
 aD
@@ -30111,7 +34902,7 @@ aa
 aa
 aD
 aD
-aa
+cX
 aD
 aD
 aa
@@ -30292,44 +35083,7 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aD
-aD
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+nb
 aa
 aa
 aa
@@ -30358,6 +35112,24 @@ aa
 aa
 aa
 aD
+aD
+aa
+aa
+aD
+aa
+aD
+aa
+aa
+aD
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -30369,8 +35141,27 @@ aa
 aa
 aD
 aa
+aD
 aa
 aa
+aa
+aa
+aa
+aa
+aD
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aD
+cX
+cX
+cX
 aa
 aa
 aa
@@ -30544,17 +35335,17 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+ls
+lI
+lZ
+mq
+mG
+nc
+nI
+oe
+ox
+oS
+pm
 aa
 aa
 aa
@@ -30580,23 +35371,16 @@ aD
 aD
 aa
 aa
+aD
+aD
 aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aD
+aD
+aD
+aD
 aa
 aa
 aa
@@ -30621,13 +35405,20 @@ aa
 aa
 aa
 aa
+aD
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
 aD
 aD
-aa
-aa
+cX
+cX
 aa
 aa
 aa
@@ -30801,58 +35592,17 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aD
-ip
-aD
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+lt
+lJ
+ma
+mr
+mH
+nd
+nJ
+of
+oy
+oT
+pn
 aa
 aa
 aa
@@ -30872,6 +35622,27 @@ aa
 aa
 aa
 aD
+ik
+aD
+aa
+aa
+aa
+aD
+aD
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aD
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -30884,7 +35655,27 @@ aa
 aa
 aD
 aa
+aD
 aa
+aa
+aa
+aa
+aa
+aa
+aD
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aD
+cX
+cX
 aa
 aa
 aa
@@ -31063,48 +35854,7 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aD
-aa
-aD
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+ne
 aa
 aa
 aa
@@ -31127,6 +35877,47 @@ aa
 aa
 aa
 aD
+aa
+aD
+aa
+aa
+aa
+cn
+aa
+aD
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aD
+aa
+aa
+aa
+aa
+aa
+aa
+aD
+aa
+aa
+aa
+aa
+aD
+aD
+aD
+aD
+aD
+aa
+aD
+aa
+aa
+aa
+aa
+aD
 aD
 aD
 aD
@@ -31140,7 +35931,7 @@ aa
 aa
 aa
 aD
-aa
+cX
 aD
 aD
 aa
@@ -31315,67 +36106,17 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aD
-aD
-aD
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+lu
+lK
+mb
+ms
+mI
+nf
+nK
+og
+oz
+oU
+po
 aa
 aa
 aa
@@ -31393,6 +36134,14 @@ aa
 aD
 aD
 aD
+aa
+aa
+aa
+cn
+cn
+cn
+aa
+aD
 aD
 aD
 aD
@@ -31400,6 +36149,48 @@ aD
 aa
 aa
 aa
+aa
+aa
+aa
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aD
+aD
+aD
+aD
+aD
+aD
+aD
+cX
+cX
+cX
 aa
 aa
 aa
@@ -31556,33 +36347,33 @@ aa
 aa
 aa
 aa
+jk
+js
+jC
+jQ
+kd
+kn
+kA
+kO
+lb
+lj
 aa
 aa
 aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+lv
+lL
+mc
+mt
+mJ
+ng
+nL
+oh
+oA
+oV
+pp
 aa
 aa
 aa
@@ -31596,67 +36387,67 @@ aa
 aa
 aa
 aD
-io
+ik
 aD
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+cn
+cn
+cn
+dE
+dE
+dE
+dE
+dE
+dE
+dE
+aD
+dE
+aD
+aD
+aD
+aD
+aD
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+cX
+cX
+cX
+cX
 aa
 aa
 aa
@@ -31812,6 +36603,17 @@ aa
 aa
 aa
 aa
+je
+jl
+jt
+jD
+jR
+ke
+ko
+kB
+kP
+lc
+lk
 aa
 aa
 aa
@@ -31823,18 +36625,7 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+nh
 aa
 aa
 aa
@@ -31856,64 +36647,64 @@ aD
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+cn
+cn
+cn
+dE
+dE
+dE
+dE
+dE
+dE
+dE
+dE
+dE
+dE
+dE
+dE
+dE
+dE
+dE
+dE
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
 aD
-aa
-aa
-aa
+cX
+cX
+cX
 aa
 aa
 aa
@@ -32069,34 +36860,34 @@ aa
 aa
 aa
 aa
+jf
+jm
+ju
+jE
+jS
+kf
+kp
+kC
+kQ
+ld
+ll
 aa
 aa
 aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+lw
+lM
+md
+mu
+mK
+ni
+nM
+oi
+oB
+oW
+pq
 aa
 aa
 aa
@@ -32114,53 +36905,37 @@ aa
 aa
 aa
 aa
+cn
+dE
+dE
+dE
+cn
+cn
+cn
+cn
+cn
+cn
+dE
+dE
+cn
+cn
+cn
+cn
+cn
+cn
+aK
+aK
+aK
+aD
+aD
+aD
+aD
+aD
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aD
+aD
 aa
 aa
 aa
@@ -32169,7 +36944,23 @@ aa
 aa
 aD
 aD
+aD
 aa
+aa
+aD
+aD
+aD
+aD
+aD
+aD
+aD
+aD
+aD
+aD
+aD
+aD
+aD
+cX
 aD
 aD
 aa
@@ -32326,34 +37117,34 @@ aa
 aa
 aa
 aa
+jg
+jn
+jv
+jF
+jT
+kg
+kq
+kD
+kR
+le
+lm
 aa
 aa
 aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+lx
+lN
+me
+mv
+mL
+nj
+nN
+oj
+oC
+oX
+pr
 aa
 aa
 aa
@@ -32361,7 +37152,7 @@ aa
 aa
 aa
 aD
-in
+ik
 aD
 aa
 aa
@@ -32371,54 +37162,37 @@ aa
 aa
 aa
 aa
+cn
+dE
+dE
+dE
+cn
 aa
 aa
 aa
 aa
+cn
+dE
+dE
+cn
 aa
 aa
 aa
 aa
+cn
+aK
+aK
+aK
+aD
+aa
+aa
+aa
+aD
 aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aD
 aa
 aa
 aa
@@ -32429,6 +37203,23 @@ aD
 aa
 aa
 aa
+aa
+aa
+aa
+aD
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aD
+cX
+cX
+cX
 aa
 aa
 aa
@@ -32583,6 +37374,17 @@ aa
 aa
 aa
 aa
+jh
+jo
+jw
+jG
+jU
+kh
+kr
+kE
+kS
+lf
+ln
 aa
 aa
 aa
@@ -32594,18 +37396,7 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+nk
 aa
 aa
 aa
@@ -32628,6 +37419,45 @@ aa
 aa
 aa
 aa
+dE
+dE
+dE
+dE
+cn
+aa
+aa
+aa
+aa
+dE
+dE
+dE
+cn
+aa
+aa
+aa
+aa
+cn
+aK
+aK
+aK
+aa
+aa
+aa
+aa
+aD
+aa
+aa
+aa
+aa
+aD
+aa
+aa
+aa
+aa
+aa
+aa
+aD
+rf
 aa
 aa
 aa
@@ -32644,48 +37474,9 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+cX
+cX
+cX
 aa
 aa
 aa
@@ -32834,6 +37625,45 @@ aa
 aa
 aa
 aa
+iS
+iX
+iZ
+aa
+aa
+aa
+ji
+jp
+jx
+jH
+jV
+ki
+ks
+kF
+kT
+lg
+lo
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+co
+nl
+co
+aa
+aa
+aa
+aa
+aD
+ik
+aD
+aD
+aD
 aa
 aa
 aa
@@ -32846,19 +37676,51 @@ aa
 aa
 aa
 aa
+cn
+cn
+cn
+cn
+cn
+aa
+aa
+aa
+aa
+cn
+dE
+dE
+cn
+aa
+aa
+aa
+aa
+cn
+aK
+aK
+aK
+aa
+aa
+aa
+aa
+aD
+aa
+aa
+aa
+aD
+aD
 aa
 aa
 aa
 aa
 aa
 aa
+aD
+aD
 aa
 aa
 aa
 aa
 aa
-aa
-aa
+aD
 aa
 aa
 aa
@@ -32869,80 +37731,9 @@ aa
 aa
 aa
 aD
-im
-aD
-aD
-aD
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aD
-aa
-aa
-aa
+cX
+cX
+cX
 aa
 aa
 aa
@@ -33091,45 +37882,45 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
 aD
-aD
-aD
-aD
+gu
 aD
 aa
 aa
 aa
 aa
+jq
+jy
+jI
+jW
+kj
+kt
+kG
+kU
+lh
+lp
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+co
+cX
+co
+aD
+aD
+aD
+aD
+aD
+cX
+cX
+cX
+cX
 aa
 aa
 aa
@@ -33142,52 +37933,36 @@ aa
 aa
 aa
 aa
+cn
+aa
+aa
+aa
+cn
+cn
+cn
+cn
+cn
+cn
+dE
+cn
+cn
+cn
+aa
+cn
+cn
+cn
+aK
+aK
+aK
 aa
 aa
 aa
 aa
+aD
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aD
 aa
 aa
 aa
@@ -33200,6 +37975,22 @@ aD
 aa
 aa
 aa
+aa
+aa
+aD
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aD
+cX
+cX
+cX
 aa
 aa
 aa
@@ -33356,13 +38147,13 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+jz
+jJ
+jX
+co
+ku
+kH
+kV
 aa
 aa
 aa
@@ -33376,9 +38167,17 @@ aD
 aD
 aD
 aD
-aa
+nm
 aD
 aD
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+cn
 aa
 aa
 aa
@@ -33395,6 +38194,7 @@ aa
 aa
 aa
 aa
+cn
 aa
 aa
 aa
@@ -33407,44 +38207,19 @@ aa
 aa
 aa
 aa
+cn
+aK
+aK
+aK
 aa
 aa
 aa
 aa
+aD
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aD
 aa
 aa
 aa
@@ -33456,6 +38231,22 @@ aa
 aD
 aa
 aa
+aa
+aa
+aa
+aD
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aD
+cX
+cX
 aD
 aD
 aa
@@ -33613,13 +38404,13 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+co
+jK
+jY
+co
+kv
+kI
+co
 aD
 aD
 aD
@@ -33630,6 +38421,20 @@ ik
 aD
 aD
 aD
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+cn
+cn
+cn
+cn
+cX
+cn
+cn
 aa
 aa
 aa
@@ -33642,9 +38447,11 @@ aa
 aa
 aa
 aa
+cn
 aa
 aa
 aa
+cn
 aa
 aa
 aa
@@ -33658,63 +38465,47 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aK
+aK
+aK
 aa
 aa
 aa
 aD
 aD
+aD
+aD
+aD
+aD
+aD
+aD
+aD
+aD
+aD
+aD
+aD
+aD
+aD
+aD
+aD
 aa
 aa
 aa
-aa
+aD
+aD
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+aD
+aD
+cX
+cX
+cX
+cX
 aa
 aa
 aa
@@ -33855,37 +38646,69 @@ ab
 hi
 hj
 ho
-ht
+hj
 aD
 hA
-hH
-hM
+ho
+hA
 aD
 hU
-ia
+iT
 if
-aD
-co
-aD
 co
 co
 aD
 co
 co
 aD
-gu
-aD
 co
+jL
+jZ
+co
+kw
+kJ
 co
 aD
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+cn
 aa
 aa
+co
+aK
+aK
+aK
 aa
 aa
 aa
 aa
 aa
 aa
+cn
+cn
+cn
+cn
+cn
+cn
+cn
+cn
+cn
+cn
+cn
 aa
 aa
 aa
@@ -33899,59 +38722,13 @@ aa
 aa
 aa
 aa
+aK
+aK
+aK
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aD
 aa
 aa
 aa
@@ -33968,10 +38745,24 @@ aa
 aa
 aa
 aD
+aa
+aa
+aa
 aD
-aa
-aa
-aa
+rm
+rB
+rQ
+sf
+su
+sJ
+sY
+to
+tJ
+aD
+aD
+cX
+cX
+cX
 aa
 aa
 aa
@@ -34110,34 +38901,71 @@ aD
 co
 co
 aD
-hk
+hj
 hp
-hu
+hj
 aD
-hB
-hI
-hN
+hA
+hp
+hA
 aD
 hV
-ib
-ig
-aD
+iU
+if
+dE
 dE
 dE
 dE
 dE
 cn
-dE
-gd
-aD
+jA
+jM
+ka
+kk
+kx
+kK
+kW
+cn
+cX
+cn
+cn
+cn
+cn
+cn
+cn
+cn
+cn
+cn
+cn
+cX
+cn
+cn
+cn
+cn
+cn
+aa
+pG
+co
 aK
-aD
-gH
-dE
+aK
 cn
 aa
 aa
+cn
+cn
 aa
+cn
+cn
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+cX
 aa
 aa
 aa
@@ -34151,9 +38979,13 @@ aa
 aa
 aa
 aa
+aK
+aK
+aK
 aa
 aa
 aa
+aD
 aa
 aa
 aa
@@ -34169,66 +39001,25 @@ aa
 aa
 aa
 aa
+aD
+aD
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aD
+rn
+rC
+rR
+sg
+sv
+sK
+sZ
+tp
+tK
+cX
+cX
+cX
+cX
+cX
 aa
 aa
 aa
@@ -34367,42 +39158,71 @@ aD
 cX
 cX
 aD
-hl
+hj
 hq
-hv
+hj
 co
-hC
-hJ
-hO
+hA
+hq
+hA
 co
-hW
-ic
-ih
+hV
+iV
+hU
+dE
+dE
+dE
+dE
+dE
 co
-dE
-dE
-dE
-dE
+cX
+jN
+kb
+kl
+ky
+kL
+kX
 cn
-dE
-gd
-aD
-gu
-aD
-gH
-dE
+cX
 cn
 aa
 aa
+cn
 aa
 aa
+cn
 aa
 aa
+cn
+cX
+cn
+nO
 aa
 aa
 aa
 aa
 aa
+co
+aK
+aK
+cn
+cn
+cn
+cn
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+cX
 aa
 aa
 aa
@@ -34416,76 +39236,47 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aK
+aK
+aK
 aa
 aa
 aa
 aD
-aD
-aD
 aa
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+ro
+rD
+rS
+sh
+sw
+sL
+ta
+tq
+tL
+aD
+aD
+aD
+cX
+cX
 aa
 aa
 aa
@@ -34624,45 +39415,71 @@ aD
 cX
 cX
 aD
-hm
+hj
 hr
-hw
+hj
 co
-hD
+hA
 hK
-hP
+hA
 co
-hX
+hV
 id
-ii
+hU
+dE
+dE
+dE
+dE
+dE
 co
-dE
-dE
-dE
-dE
-cn
-dE
+cX
 gd
 go
 aK
 gA
 gH
-dE
+kY
+cn
+cX
 cn
 aa
 aa
+cn
 aa
 aa
+cn
 aa
 aa
+cn
+cX
+cn
+nP
 aa
+oD
 aa
 aa
 aa
 aa
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aD
 aa
 aa
 aa
+aD
+aK
+aK
+cX
 aa
 aa
 aa
@@ -34675,56 +39492,14 @@ aa
 aa
 aa
 aa
+cn
+aK
+aK
+aK
+aD
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aD
 aa
 aa
 aa
@@ -34741,7 +39516,23 @@ aa
 aa
 aa
 aD
+aD
 aa
+aa
+aD
+rp
+rE
+rT
+si
+sx
+sM
+tb
+tr
+tM
+tY
+ud
+aD
+cX
 aD
 aD
 ab
@@ -34885,97 +39676,87 @@ hn
 hs
 hx
 aD
-hE
-hL
-hQ
+hn
+hs
+hx
 aD
-hY
-ie
-ij
+aK
+aK
 aD
+dE
 dE
 dE
 dE
 dE
 cn
-dE
-gd
+cX
+jO
 gp
 aK
 gB
-gH
-dE
+kM
+kZ
+cn
+cX
 cn
 aa
 aa
+cn
 aa
 aa
+cn
 aa
 aa
+cn
+cX
+cn
+nQ
 aa
+oE
 aa
 aa
 aa
+co
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aD
 aa
 aa
 aa
+aD
 aa
 aa
 aa
+aD
+aK
+aK
+cn
+cX
+cX
 aa
+cX
+cX
+cX
 aa
+cn
+cn
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+cn
+cn
+aK
+aK
+aK
+aD
+aD
+aD
+aD
 aa
 aa
 aa
@@ -34996,11 +39777,21 @@ aa
 aa
 aa
 aD
-aa
+rq
+rF
+rU
+sj
+sy
+sN
+tc
+ts
+tN
 aD
-aa
-aa
-aa
+ue
+aD
+cX
+cX
+cX
 ab
 ab
 ab
@@ -35146,12 +39937,12 @@ aD
 dB
 aD
 aD
-aD
-dB
-aD
+aK
+aK
 aD
 cn
 cn
+co
 fB
 cn
 cn
@@ -35163,77 +39954,63 @@ gh
 gh
 cn
 cn
+cX
+cn
+cn
 aa
+cn
+cn
 aa
+cn
+cn
 aa
+cn
+cX
+cn
+cn
+co
+co
 aa
 aa
+co
+cn
+aK
+aK
+cn
 aa
+aD
 aa
 aa
 aa
+aD
 aa
 aa
 aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aD
+aD
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+cX
 aa
 aa
 aa
@@ -35254,6 +40031,20 @@ aa
 aa
 aD
 aa
+aa
+aa
+aD
+rr
+rG
+rV
+sk
+sz
+sO
+td
+tt
+tO
+aD
+uf
 aD
 aD
 aD
@@ -35373,9 +40164,6 @@ bT
 bY
 cc
 cg
-ci
-aV
-aV
 aK
 aK
 aK
@@ -35391,6 +40179,37 @@ aK
 aK
 aK
 aK
+aK
+aK
+aK
+cr
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+cr
 cr
 aK
 aK
@@ -35414,12 +40233,41 @@ aK
 aK
 aK
 aK
+aD
+aD
+aD
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aD
+aa
 aK
 aK
 aK
 aK
-cr
-cr
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+cX
 aa
 aa
 aa
@@ -35442,79 +40290,22 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aD
+rs
+rH
+rW
+sl
+sA
+sP
+te
+tu
+tP
+cX
+ug
+un
+uq
+ut
+uw
 ab
 ab
 ab
@@ -35630,7 +40421,53 @@ bU
 bf
 cd
 aD
-aN
+ci
+aV
+aV
+iq
+ir
+is
+it
+iu
+iv
+iw
+ix
+iy
+iz
+iA
+iB
+iC
+iD
+iE
+iF
+iG
+iH
+iI
+iJ
+iK
+iL
+iM
+iN
+iO
+iP
+iQ
+iR
+iW
+iY
+ja
+jb
+jc
+jd
+jj
+jr
+jB
+jP
+kc
+km
+kz
+kN
+la
+li
 aK
 aK
 aK
@@ -35648,7 +40485,25 @@ aK
 aK
 aK
 aK
-cr
+aK
+aK
+aK
+aK
+aK
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aK
 aK
 aK
@@ -35669,14 +40524,7 @@ aK
 aK
 aK
 aK
-aK
-aK
-aK
-aK
-aK
-aK
-cr
-cr
+cX
 aa
 aa
 aa
@@ -35699,79 +40547,22 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aD
+rt
+rI
+rX
+sm
+sB
+sQ
+tf
+tv
+tQ
+cX
+uh
+uo
+ur
+uu
+ux
 ab
 ab
 ab
@@ -35934,6 +40725,31 @@ aK
 aK
 cr
 cr
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aD
+aD
+aD
 aa
 aa
 aa
@@ -35944,7 +40760,28 @@ aa
 aa
 aa
 aa
+aD
 aa
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+cX
 aa
 aa
 aa
@@ -35967,68 +40804,22 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aD
+ru
+rJ
+rY
+sn
+sC
+sR
+tg
+tw
+tR
+cX
+ui
+up
+us
+uv
+uy
 ab
 ab
 ab
@@ -36191,13 +40982,63 @@ gh
 gh
 cn
 cn
+cX
+cn
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+cn
+co
+co
+co
+cn
+co
+oY
+ps
+co
+cn
+aK
+aK
+aD
 aa
+aD
+aD
+aD
+aD
+aD
 aa
 aa
 aa
 aa
 aa
 aa
+aD
+aD
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+cX
 aa
 aa
 aa
@@ -36216,70 +41057,20 @@ aa
 aa
 aa
 aa
+aD
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aD
+rv
+rK
+rZ
+so
+sD
+sS
+th
+tx
+tS
 aD
 aD
 aD
@@ -36427,10 +41218,10 @@ ds
 dD
 dE
 hz
-hF
+hz
 dE
-hR
-hT
+hz
+hz
 dE
 dD
 fc
@@ -36448,76 +41239,66 @@ gA
 dE
 dE
 cn
+cX
+cn
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+co
+mM
+nn
+nR
+ok
+oF
+oZ
+pt
+pH
+co
+aK
+aK
+aD
 aa
 aa
 aa
 aa
 aa
+aD
+aD
+aD
+aD
+aD
 aa
 aa
 aa
+aD
+aK
+aK
+cn
 aa
+cn
 aa
 aa
 aa
+cX
+cX
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+cX
+cX
+cn
+aK
+aK
+aK
+aD
+aD
+aD
+aD
 aa
 aa
 aa
@@ -36538,11 +41319,21 @@ aa
 aa
 aa
 aD
-aa
+rw
+rL
+sa
+sp
+sE
+sT
+ti
+ty
+tT
 aD
-aa
-aa
-aa
+uj
+aD
+cX
+cX
+cX
 ab
 ab
 ab
@@ -36705,6 +41496,29 @@ gB
 dE
 dE
 cn
+cX
+cn
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+cn
+mN
+no
+nS
+ol
+oG
+pa
+pu
+pI
+pM
+aK
+aK
+aD
 aa
 aa
 aa
@@ -36717,6 +41531,8 @@ aa
 aa
 aa
 aa
+aD
+aD
 aa
 aa
 aa
@@ -36724,61 +41540,22 @@ aa
 aa
 aa
 aa
+cX
+cX
 aa
 aa
 aa
 aa
 aa
+cX
+cX
+aK
+aK
+aK
+aD
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aD
 aa
 aa
 aa
@@ -36795,9 +41572,23 @@ aa
 aa
 aa
 aD
-aa
 aD
 aa
+aa
+aD
+rx
+rM
+sb
+sq
+sF
+sU
+tj
+tz
+tU
+tZ
+uk
+aD
+cX
 aD
 aD
 ab
@@ -36943,9 +41734,9 @@ hy
 dE
 hG
 dE
-hS
+hy
 dE
-hZ
+hG
 dE
 fe
 aD
@@ -36957,11 +41748,48 @@ cn
 dE
 dE
 aD
-gu
+dU
 aD
 dE
 dE
 cn
+cX
+cn
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+co
+mO
+np
+nT
+om
+oH
+pb
+pv
+pJ
+pN
+aK
+aK
+aD
+aD
+aD
+aD
+aD
+aD
+aD
+aD
+aD
+aD
+aD
+aD
+aD
+aD
+qH
 aa
 aa
 aa
@@ -36969,6 +41797,7 @@ aa
 aa
 aa
 aa
+cX
 aa
 aa
 aa
@@ -36976,9 +41805,14 @@ aa
 aa
 aa
 aa
+cX
+aK
+aK
+aK
 aa
 aa
 aa
+aD
 aa
 aa
 aa
@@ -36998,64 +41832,21 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aD
+ry
+rN
+sc
+sr
+sG
+sV
+tk
+tA
+tV
+ua
+ul
+aD
+cX
+cX
 aa
 aa
 aa
@@ -37213,11 +42004,47 @@ fC
 cn
 dE
 dE
-aD
+co
+cX
+co
+dE
+dE
+cn
+cX
+cn
+cn
+cn
+cn
+cn
+cn
+cn
+cn
+cn
+cn
+cn
+cn
+cn
+cn
+cn
+cn
+pw
+pK
+co
 aK
-aD
-dE
-dE
+aK
+aK
+pO
+pR
+pU
+pY
+qc
+qh
+qm
+bK
+cn
+aK
+aK
+aK
 cn
 aa
 aa
@@ -37227,6 +42054,7 @@ aa
 aa
 aa
 aa
+cX
 aa
 aa
 aa
@@ -37234,9 +42062,14 @@ aa
 aa
 aa
 aa
+cX
+aK
+aK
+aK
 aa
 aa
 aa
+aD
 aa
 aa
 aa
@@ -37252,67 +42085,25 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aD
+aD
+aD
+aD
+aD
+rz
+rO
+sd
+ss
+sH
+sW
+tl
+tB
+tW
+ub
+um
+aD
+cX
+cX
 aa
 aa
 aa
@@ -37453,123 +42244,123 @@ aa
 ab
 co
 co
+co
+cX
+co
+co
+co
+cX
+co
+co
+co
+aD
+co
+aD
+co
+co
+aD
+co
+co
+co
+cX
+co
+co
+co
 aD
 cX
-aD
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+cn
+px
+pL
 co
+aK
+aK
+aK
+pP
+pS
+pV
+pZ
+qd
+qi
+qn
+bK
+cn
+aK
+aK
+aK
+cn
+aa
+aa
+qQ
+qV
+aa
+cn
+cn
+aa
+cX
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+cX
+aK
+aK
+aK
+aa
+aa
+aa
+aD
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aD
+aa
+aa
+aa
+aD
+rA
+rP
+se
+st
+sI
+sX
+tm
+tC
+tX
+uc
+aD
 aD
 cX
-aD
-co
-co
-aD
-co
-aD
-co
-co
-aD
-co
-co
-aD
-gu
-aD
-co
-co
-aD
-aD
-aD
-aD
-aD
-aD
-il
-aD
-aD
-aD
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+cX
 aa
 aa
 aa
@@ -37710,13 +42501,13 @@ aa
 aa
 ab
 ab
-aD
-dU
-aD
+co
+cX
+co
 ab
-aD
-dU
-aD
+co
+cX
+co
 ab
 aa
 aa
@@ -37727,6 +42518,57 @@ aa
 aa
 aa
 aa
+co
+dU
+co
+aa
+aa
+aD
+aD
+aD
+aD
+aD
+aD
+co
+aD
+aD
+aD
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+cn
+cn
+cn
+cn
+cX
+cn
+cn
+pQ
+pT
+pW
+qa
+qe
+qj
+qo
+bK
+cn
+aK
+aK
+aK
+cn
+aa
+aa
+qR
+qW
+aa
+aa
+aa
+aa
+cX
 aa
 aa
 aa
@@ -37734,10 +42576,10 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
+cX
+aK
+aK
+aK
 aa
 aa
 aa
@@ -37745,88 +42587,37 @@ aD
 aD
 aD
 aD
+aD
+aD
+aD
+aD
+aD
+aD
+aD
+aD
+aD
+aD
+aD
+aD
+aD
+aa
+aa
 aa
 aD
 aD
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aD
+aD
+cX
+cX
+aD
+aD
+tD
+aD
+cX
+aD
+cX
+cX
+cX
 aa
 aa
 aa
@@ -37967,19 +42758,13 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+co
+dU
+co
+ab
+co
+dU
+co
 aa
 aa
 aa
@@ -38008,6 +42793,59 @@ aD
 aD
 aD
 aD
+nq
+aD
+aD
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+cn
+cn
+cn
+pX
+qb
+qf
+qk
+cn
+qq
+cn
+cn
+aK
+cn
+cn
+aa
+aa
+qS
+qX
+aa
+aa
+aa
+aa
+cX
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+cX
+aK
+aK
+aK
+aa
+aa
+aa
+aa
+aD
+aa
+aa
+aa
+aa
 aD
 aa
 aa
@@ -38016,74 +42854,27 @@ aa
 aa
 aa
 aa
+aD
 aa
 aa
 aa
 aa
 aa
+aD
 aa
 aa
 aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aD
+tE
+aD
+cX
+cX
+cX
+aD
+aD
 aa
 aa
 aa
@@ -38258,21 +43049,56 @@ aa
 aa
 aa
 aa
+co
+cX
+co
+aD
+aD
+aD
+aD
+aD
+cX
+cX
+cX
+cX
+cX
+cn
+cX
+cn
+qg
+ql
+qp
+qr
+qt
+qw
+qz
+qC
+cn
 aa
 aa
 aa
 aa
 aa
+rc
+cn
 aa
+cX
+cX
 aa
 aa
 aa
 aa
 aa
+cX
+cX
+aK
+aK
+aK
 aa
 aa
 aa
 aa
+aD
 aa
 aa
 aa
@@ -38285,61 +43111,26 @@ aa
 aa
 aa
 aa
+aD
 aa
 aa
 aa
 aa
 aa
+aD
 aa
 aa
 aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+cX
+tF
+aD
+cX
+cX
+cX
+cX
 aa
 aa
 aa
@@ -38515,88 +43306,88 @@ aa
 aa
 aa
 aa
+co
+nr
+co
 aa
 aa
 aa
 aa
+aD
+co
+aD
+aD
+aD
+cX
+cX
+cX
+cn
+cn
+cn
+cn
+qs
+qu
+qx
+qA
+qD
+cn
+cn
 aa
+cn
 aa
 aa
+rd
+cn
 aa
 aa
+cX
+cX
+cX
 aa
+cX
+cX
+cX
 aa
+aK
+aK
+aK
 aa
 aa
 aa
 aa
+aD
 aa
 aa
 aa
 aa
+aD
+aD
 aa
 aa
 aa
 aa
 aa
 aa
+aD
 aa
 aa
 aa
 aa
 aa
+aD
 aa
 aa
 aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+cX
+tG
+aD
+cX
+cX
+cX
+cX
 aa
 aa
 aa
@@ -38773,6 +43564,7 @@ aa
 aa
 aa
 aa
+ns
 aa
 aa
 aa
@@ -38782,8 +43574,27 @@ aa
 aa
 aa
 aa
+aD
+aD
+aD
+cX
+cX
+cX
+cX
+cn
+cn
+qv
+qy
+qB
+qE
+cn
+qI
+qM
+cn
 aa
 aa
+re
+cn
 aa
 aa
 aa
@@ -38794,15 +43605,20 @@ aa
 aa
 aa
 aa
+aK
+aK
+aK
 aa
 aa
 aa
 aa
+aD
 aa
 aa
 aa
 aa
 aa
+aD
 aa
 aa
 aa
@@ -38815,45 +43631,20 @@ aa
 aa
 aa
 aa
+aD
 aa
 aa
 aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aD
+tH
+aD
+cX
+cX
+cX
+cX
 aa
 aa
 aa
@@ -39025,29 +43816,66 @@ aa
 aa
 aa
 aa
+ly
+lO
+mf
+mw
+mP
+nt
+nU
+on
+oI
+pc
+py
 aa
 aa
 aa
 aa
 aa
 aa
+aD
+co
+aD
+cX
+cX
+cX
+cn
+cn
+cn
+cn
+cn
+cn
+qJ
+qN
+cn
+cn
+cn
+cn
+cn
 aa
 aa
 aa
 aa
 aa
 aa
+cX
 aa
 aa
 aa
+aK
+aK
+aK
+aD
 aa
 aa
 aa
+aD
 aa
 aa
 aa
 aa
 aa
+aD
 aa
 aa
 aa
@@ -39060,57 +43888,20 @@ aa
 aa
 aa
 aa
+aD
 aa
 aa
 aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+tn
+tI
+aD
+cX
+cX
+cX
+cX
 aa
 aa
 aa
@@ -39282,6 +44073,17 @@ aa
 aa
 aa
 aa
+lz
+lP
+mg
+mx
+mQ
+nu
+nV
+oo
+oJ
+pd
+pz
 aa
 aa
 aa
@@ -39290,6 +44092,22 @@ aa
 aa
 aa
 aa
+aD
+aD
+aD
+cX
+cX
+cX
+cX
+cX
+cX
+cn
+qK
+qO
+qT
+qY
+ra
+cn
 aa
 aa
 aa
@@ -39297,77 +44115,50 @@ aa
 aa
 aa
 aa
+cX
 aa
 aa
 aa
+aK
+aK
+aK
+aD
+aD
+aD
+aD
+aD
+aD
 aa
 aa
 aa
+aD
+aD
+aD
+aD
+aD
+aD
+aD
+aD
+aD
+aD
 aa
 aa
+aD
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aD
+aD
+aD
+aD
+aD
+aD
+aD
+aD
+aD
+aD
+aD
+cX
+aD
+aD
 aa
 aa
 aa
@@ -39544,6 +44335,7 @@ aa
 aa
 aa
 aa
+nv
 aa
 aa
 aa
@@ -39559,6 +44351,20 @@ aa
 aa
 aa
 aa
+aD
+aD
+aD
+cX
+cX
+cX
+cn
+cn
+cn
+qP
+qU
+qZ
+rb
+cn
 aa
 aa
 aa
@@ -39566,64 +44372,49 @@ aa
 aa
 aa
 aa
+cX
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+cn
+cX
+cX
+cX
 aa
 aa
 aa
@@ -39796,91 +44587,91 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+lA
+lQ
+mh
+my
+mR
+nw
+nW
+op
+oK
+pe
+pA
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aD
+co
+aD
+cX
+qF
+cX
+cn
+cn
+cn
+cX
+cn
+cn
+cn
+cX
+cn
+cn
+cn
+cn
+cn
+cn
+aa
+aa
+aa
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+cn
+cX
+cX
+cX
 aa
 aa
 aa
@@ -40053,91 +44844,91 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+lB
+lR
+mi
+mz
+mS
+nx
+nX
+oq
+oL
+pf
+pB
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aD
+aD
+aD
+cX
+qL
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+cn
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+aK
+cn
+cX
+cX
+cX
 aa
 aa
 aa
@@ -40315,6 +45106,7 @@ aa
 aa
 aa
 aa
+ny
 aa
 aa
 aa
@@ -40336,16 +45128,42 @@ aa
 aa
 aa
 aa
+aD
+qG
+aD
+cX
+cn
+cn
+cX
+cn
+cn
+cX
+cX
+cn
 aa
 aa
 aa
+cn
 aa
 aa
+cn
+cX
+aD
 aa
 aa
 aa
+aD
+aD
+aD
+aD
+aD
+aD
+aD
+aD
+aD
 aa
 aa
+aD
 aa
 aa
 aa
@@ -40357,44 +45175,17 @@ aa
 aa
 aa
 aa
+aD
+aD
 aa
+aD
+aD
+cn
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+cn
+cX
+aD
+aD
 aa
 aa
 aa
@@ -40567,6 +45358,17 @@ aa
 aa
 aa
 aa
+lC
+lS
+mj
+mA
+mT
+nz
+nY
+or
+oM
+pg
+pC
 aa
 aa
 aa
@@ -40585,9 +45387,25 @@ aa
 aa
 aa
 aa
+aD
+co
+aD
+cX
+cX
+cX
+cn
+cX
+cX
+cX
 aa
 aa
 aa
+cn
+cX
+cX
+cn
+cX
+aD
 aa
 aa
 aa
@@ -40599,8 +45417,10 @@ aa
 aa
 aa
 aa
+cX
 aa
 aa
+aD
 aa
 aa
 aa
@@ -40612,45 +45432,16 @@ aa
 aa
 aa
 aa
+aD
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aD
+cX
+cX
+cX
+cX
+cX
 aa
 aa
 aa
@@ -40824,6 +45615,17 @@ aa
 aa
 aa
 aa
+lD
+lT
+mk
+mB
+mU
+nA
+nZ
+os
+oN
+ph
+pD
 aa
 aa
 aa
@@ -40844,12 +45646,23 @@ aa
 aa
 aa
 aa
+aD
+aD
+aD
+cX
+cn
+cX
+cX
+cn
 aa
 aa
 aa
 aa
 aa
 aa
+cn
+cX
+aD
 aa
 aa
 aa
@@ -40861,8 +45674,10 @@ aa
 aa
 aa
 aa
+cX
 aa
 aa
+aD
 aa
 aa
 aa
@@ -40874,40 +45689,16 @@ aa
 aa
 aa
 aa
+aD
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aD
+cX
+cX
+cX
+cX
+cX
 aa
 aa
 aa
@@ -41086,6 +45877,7 @@ aa
 aa
 aa
 aa
+nB
 aa
 aa
 aa
@@ -41113,12 +45905,21 @@ aa
 aa
 aa
 aa
+aD
+aD
+cn
+cX
+cX
+cn
 aa
 aa
 aa
 aa
 aa
 aa
+cn
+cX
+aD
 aa
 aa
 aa
@@ -41133,6 +45934,7 @@ aa
 aa
 aa
 aa
+aD
 aa
 aa
 aa
@@ -41144,27 +45946,16 @@ aa
 aa
 aa
 aa
+aD
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aD
+cX
+cX
+cX
+cX
+cX
 aa
 aa
 aa
@@ -41338,6 +46129,17 @@ aa
 aa
 aa
 aa
+lE
+lU
+ml
+mC
+mV
+nC
+oa
+ot
+oO
+pi
+pE
 aa
 aa
 aa
@@ -41361,11 +46163,20 @@ aa
 aa
 aa
 aa
+aD
+aD
+cX
+cX
+cn
+cn
 aa
 aa
 aa
 aa
 aa
+cX
+cX
+aD
 aa
 aa
 aa
@@ -41380,6 +46191,7 @@ aa
 aa
 aa
 aa
+aD
 aa
 aa
 aa
@@ -41391,37 +46203,16 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aD
+aD
+aD
+aD
+aD
+cX
+cX
+cX
+aD
+aD
 aa
 aa
 aa
@@ -41595,6 +46386,17 @@ aa
 aa
 aa
 aa
+lF
+lV
+mm
+mD
+mW
+nD
+ob
+ou
+oP
+pj
+pF
 aa
 aa
 aa
@@ -41619,8 +46421,19 @@ aa
 aa
 aa
 aa
+aD
+aD
+cX
+cX
+cn
+cn
 aa
 aa
+cn
+cn
+cn
+cX
+aD
 aa
 aa
 aa
@@ -41632,10 +46445,18 @@ aa
 aa
 aa
 aa
+cX
 aa
 aa
+aD
+aD
 aa
 aa
+cn
+cn
+cn
+cn
+cn
 aa
 aa
 aa
@@ -41643,41 +46464,11 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+cn
+cX
+cX
+cX
+cX
 aa
 aa
 aa
@@ -41857,6 +46648,7 @@ aa
 aa
 aa
 aa
+nE
 aa
 aa
 aa
@@ -41887,6 +46679,18 @@ aa
 aa
 aa
 aa
+aD
+aD
+cX
+cX
+cn
+cn
+cn
+cn
+cX
+cX
+cX
+aD
 aa
 aa
 aa
@@ -41898,15 +46702,18 @@ aa
 aa
 aa
 aa
+cX
 aa
 aa
 aa
+aD
 aa
 aa
 aa
 aa
 aa
 aa
+cn
 aa
 aa
 aa
@@ -41914,27 +46721,11 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+cn
+cX
+cX
+cX
+cX
 aa
 aa
 aa
@@ -42114,6 +46905,7 @@ aa
 aa
 aa
 aa
+nF
 aa
 aa
 aa
@@ -42145,15 +46937,40 @@ aa
 aa
 aa
 aa
+aD
+aD
+cX
+cX
+cX
+cX
+cX
+cX
+aD
+aD
+aD
+aD
+aD
+aD
+aD
+aD
+aD
+aD
+aD
+aD
+aD
+aD
+aD
 aa
 aa
 aa
+aD
 aa
 aa
 aa
 aa
 aa
 aa
+cn
 aa
 aa
 aa
@@ -42161,37 +46978,11 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+cn
+cX
+cX
+cX
+cX
 aa
 aa
 aa
@@ -42404,6 +47195,14 @@ aa
 aa
 aa
 aa
+aD
+aD
+cX
+cX
+cX
+cX
+cX
+aD
 aa
 aa
 aa
@@ -42411,44 +47210,36 @@ aa
 aa
 aa
 aa
+aD
+aa
+aa
+aa
+aa
+aa
+cX
+aa
+aa
+aa
+aD
+aa
+aa
+aa
+aa
+aa
+cn
+cn
 aa
 aa
 aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aD
+aD
+cX
+aD
+aD
+aD
 aa
 aa
 aa
@@ -42662,6 +47453,37 @@ aa
 aa
 aa
 aa
+aD
+aD
+cX
+cX
+cX
+cX
+aD
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aD
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aD
+aa
+aa
+aa
+aa
+aa
+cn
 aa
 aa
 aa
@@ -42673,38 +47495,7 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+cX
 aa
 aa
 aa
@@ -42920,6 +47711,36 @@ aa
 aa
 aa
 aa
+aD
+aD
+cX
+cX
+cX
+aD
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aD
+aa
+aa
+aa
+aa
+aa
+cX
+aa
+aa
+aa
+aD
+aa
+aa
+aa
+aa
+aa
+cn
 aa
 aa
 aa
@@ -42930,38 +47751,8 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aD
+aD
 aa
 aa
 aa
@@ -43178,6 +47969,35 @@ aa
 aa
 aa
 aa
+aD
+aD
+cX
+cX
+aD
+aD
+aD
+aa
+aa
+aa
+aD
+aD
+aD
+aa
+aa
+aa
+aa
+aa
+cX
+aa
+aa
+aD
+aD
+aD
+aD
+aD
+aD
+aD
+aD
 aa
 aa
 aa
@@ -43189,36 +48009,7 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+ab
 aa
 aa
 aa
@@ -43436,6 +48227,12 @@ aa
 aa
 aa
 aa
+aD
+aD
+cX
+cX
+cX
+cX
 aa
 aa
 aa
@@ -43447,6 +48244,17 @@ aa
 aa
 aa
 aa
+aD
+aa
+aa
+aD
+aa
+aa
+aa
+aa
+aa
+aa
+aD
 aa
 aa
 aa
@@ -43458,24 +48266,7 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+ab
 aa
 aa
 aa
@@ -43694,6 +48485,33 @@ aa
 aa
 aa
 aa
+aD
+cX
+cX
+cX
+aD
+aa
+aa
+aa
+aD
+aD
+aD
+aD
+aD
+aD
+aD
+aD
+aD
+aa
+aa
+cX
+aa
+aa
+aa
+aa
+aa
+aa
+aD
 aa
 aa
 aa
@@ -43705,34 +48523,7 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+ab
 aa
 aa
 aa
@@ -43951,6 +48742,15 @@ aa
 aa
 aa
 aa
+aD
+aD
+cX
+cX
+aD
+aD
+aD
+aD
+aD
 aa
 aa
 aa
@@ -43958,38 +48758,29 @@ aa
 aa
 aa
 aa
+cX
+aa
+aa
+cX
 aa
 aa
 aa
 aa
 aa
 aa
+aD
+aa
+aa
+aa
+cX
 aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aD
+aD
+aD
+ab
 aa
 aa
 aa
@@ -44209,6 +49000,14 @@ aa
 aa
 aa
 aa
+aD
+cX
+cX
+cX
+cn
+cX
+cX
+cn
 aa
 aa
 aa
@@ -44226,24 +49025,16 @@ aa
 aa
 aa
 aa
+aD
+aa
+aa
+aa
+cX
 aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+cX
 aa
 aa
 aa
@@ -44466,6 +49257,22 @@ aa
 aa
 aa
 aa
+aD
+aD
+cX
+cX
+cX
+cX
+cX
+cn
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+cX
 aa
 aa
 aa
@@ -44475,32 +49282,16 @@ aa
 aa
 aa
 aa
+aD
 aa
 aa
 aa
+aD
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+cX
+cX
+aD
+aD
 aa
 aa
 aa
@@ -44724,6 +49515,13 @@ aa
 aa
 aa
 aa
+aD
+cX
+cX
+cn
+cX
+cX
+cn
 aa
 aa
 aa
@@ -44734,21 +49532,14 @@ aa
 aa
 aa
 aa
+cX
 aa
 aa
 aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aD
 aa
 aa
 aa
@@ -44981,6 +49772,13 @@ aa
 aa
 aa
 aa
+aD
+aD
+cX
+cn
+cX
+cX
+cn
 aa
 aa
 aa
@@ -44988,32 +49786,25 @@ aa
 aa
 aa
 aa
+cX
+aa
+aa
+cX
 aa
 aa
 aa
 aa
 aa
 aa
+aD
 aa
 aa
 aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aD
+aD
 aa
 aa
 aa
@@ -45239,30 +50030,30 @@ aa
 aa
 aa
 aa
+aD
+cX
+aD
+aD
+aD
+aD
+aD
+aD
+aD
+aD
+aD
+aD
+aD
+aD
+aa
+aa
+aD
 aa
 aa
 aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aD
 aa
 aa
 aa
@@ -45496,37 +50287,37 @@ aa
 aa
 aa
 aa
+aD
+cX
+aD
 aa
 aa
 aa
 aa
 aa
 aa
+aD
 aa
 aa
 aa
+aD
 aa
 aa
+aD
+aD
+aD
+aD
 aa
+aD
+aD
+aD
+aD
+aD
+cn
+cn
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aD
+aD
 aa
 aa
 aa
@@ -45753,6 +50544,9 @@ aa
 aa
 aa
 aa
+aD
+cX
+aD
 aa
 aa
 aa
@@ -45779,10 +50573,7 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
+aD
 aa
 aa
 aa
@@ -46010,6 +50801,20 @@ aa
 aa
 aa
 aa
+aD
+cX
+aD
+aD
+aa
+aa
+aa
+aa
+aa
+aD
+aa
+aa
+aa
+aD
 aa
 aa
 aa
@@ -46021,25 +50826,11 @@ aa
 aa
 aa
 aa
+aD
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aD
+aD
 aa
 aa
 aa
@@ -46267,6 +51058,20 @@ aa
 aa
 aa
 aa
+aD
+cX
+cX
+aD
+aa
+aa
+aa
+aD
+aD
+aD
+aD
+aD
+aa
+aD
 aa
 aa
 aa
@@ -46278,24 +51083,10 @@ aa
 aa
 aa
 aa
+aD
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aD
 aa
 aa
 aa
@@ -46524,6 +51315,20 @@ aa
 aa
 aa
 aa
+aD
+aD
+cX
+aD
+aa
+aa
+aa
+aD
+aa
+aa
+aa
+aD
+aD
+aD
 aa
 aa
 aa
@@ -46534,25 +51339,11 @@ aa
 aa
 aa
 aa
+aD
+aD
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aD
+aD
 aa
 aa
 aa
@@ -46782,6 +51573,19 @@ aa
 aa
 aa
 aa
+aD
+cX
+aD
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aD
 aa
 aa
 aa
@@ -46792,23 +51596,10 @@ aa
 aa
 aa
 aa
+aD
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aD
 aa
 aa
 aa
@@ -47039,33 +51830,33 @@ aa
 aa
 aa
 aa
+aD
+cX
+aD
+aa
+aa
+aa
+aD
+aa
+aa
+aa
+aD
+aD
+aD
+aD
+aa
+aD
+aD
 aa
 aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aD
+aD
+rj
+aD
+aD
 aa
 aa
 aa
@@ -47296,33 +52087,33 @@ aa
 aa
 aa
 aa
+aD
+cX
+aD
+aa
+aa
+aa
+aD
+aD
+aa
+aD
+aD
 aa
 aa
 aa
 aa
 aa
+aD
 aa
 aa
 aa
 aa
 aa
+aD
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+rl
+ab
 aa
 aa
 aa
@@ -47553,33 +52344,33 @@ aa
 aa
 aa
 aa
+aD
+cX
+aD
+aD
+aa
+aa
+aD
 aa
 aa
 aa
+aD
+aD
+aD
 aa
 aa
 aa
+aD
+aD
+aD
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aD
+aD
+rh
+aD
+aD
+ab
 aa
 aa
 aa
@@ -47810,6 +52601,10 @@ aa
 aa
 aa
 aa
+aD
+cX
+cX
+aD
 aa
 aa
 aa
@@ -47818,23 +52613,19 @@ aa
 aa
 aa
 aa
+aD
+aa
+aa
+aa
+aD
 aa
 aa
 aa
 aa
+aD
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aD
 aa
 aa
 aa
@@ -48067,31 +52858,31 @@ aa
 aa
 aa
 aa
+aD
+aD
+cX
+aD
+aa
+aa
+aD
 aa
 aa
 aa
+aD
+aD
+aD
+aD
+aD
+aD
+aD
 aa
 aa
 aa
+aD
+aD
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aD
+aD
 aa
 aa
 aa
@@ -48325,6 +53116,16 @@ aa
 aa
 aa
 aa
+aD
+cX
+aa
+aa
+aa
+aD
+aD
+aD
+aa
+aD
 aa
 aa
 aa
@@ -48334,20 +53135,10 @@ aa
 aa
 aa
 aa
+aD
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aD
 aa
 aa
 aa
@@ -48582,6 +53373,16 @@ aa
 aa
 aa
 aa
+aD
+cX
+aD
+aa
+aa
+aa
+aa
+aa
+aa
+aD
 aa
 aa
 aa
@@ -48590,21 +53391,11 @@ aa
 aa
 aa
 aa
+aD
+aD
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aD
+aD
 aa
 aa
 aa
@@ -48839,28 +53630,28 @@ aa
 aa
 aa
 aa
+aD
+cX
+aD
+aa
+aa
+aD
+aD
+aD
+aD
+aD
 aa
 aa
 aa
 aa
 aa
+aD
+aD
+aD
+aD
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aD
 aa
 aa
 aa
@@ -49096,6 +53887,9 @@ aa
 aa
 aa
 aa
+aD
+cX
+aD
 aa
 aa
 aa
@@ -49109,15 +53903,12 @@ aa
 aa
 aa
 aa
+aD
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
+aD
+aD
 aa
 aa
 aa
@@ -49353,27 +54144,27 @@ aa
 aa
 aa
 aa
+aD
+cX
+aD
+aa
+aa
+aa
+aD
 aa
 aa
 aa
 aa
 aa
 aa
+aD
+aa
+aD
+aD
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aD
+aD
 aa
 aa
 aa
@@ -49610,26 +54401,26 @@ aa
 aa
 aa
 aa
+aD
+cX
+aD
+aa
+aa
+aa
+aD
 aa
 aa
 aa
 aa
 aa
 aa
+aD
 aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aD
+aD
 aa
 aa
 aa
@@ -49867,25 +54658,25 @@ aa
 aa
 aa
 aa
+aD
+cX
+aD
 aa
 aa
 aa
+aD
 aa
 aa
 aa
+aD
+aD
+aD
+aD
 aa
+cn
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aD
+aD
 aa
 aa
 aa
@@ -50124,24 +54915,24 @@ aa
 aa
 aa
 aa
+aD
+cX
+aD
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aD
+aD
+aD
+aD
+aD
+cX
+cX
+cX
+cX
+aD
+aD
+aD
 aa
 aa
 aa
@@ -50381,22 +55172,22 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aD
+cX
+aD
+aD
+aD
+aD
+aD
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+cX
 aa
 aa
 aa
@@ -50638,22 +55429,22 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aD
+cX
+cX
+cn
+cX
+cn
+cn
+cX
+cn
+cX
+cn
+cX
+cn
+cn
+aD
+aD
 aa
 aa
 aa
@@ -50895,21 +55686,21 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aD
+cX
+cX
+cX
+cX
+cn
+cn
+cX
+cX
+cX
+cX
+cX
+cX
+aD
+aD
 aa
 aa
 aa
@@ -51152,20 +55943,20 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aD
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+aD
+aD
 aa
 aa
 aa
@@ -51409,19 +56200,19 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aD
+cX
+cX
+cn
+cn
+cX
+cX
+cX
+cn
+cX
+cX
+aD
+aD
 aa
 aa
 aa
@@ -51666,18 +56457,18 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aD
+aD
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+aD
+aD
 aa
 aa
 aa
@@ -51924,16 +56715,16 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aD
+cX
+cX
+cX
+cX
+cX
+cX
+cX
+aD
+aD
 aa
 aa
 aa
@@ -52181,15 +56972,15 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aD
+cn
+cn
+cX
+cn
+cn
+cn
+aD
+aD
 aa
 aa
 aa
@@ -52438,14 +57229,14 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aD
+cX
+cX
+cX
+cX
+cX
+aD
+aD
 aa
 aa
 aa
@@ -52695,13 +57486,13 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+aD
+cX
+cX
+cX
+cX
+aD
+aD
 aa
 aa
 aa
@@ -52952,12 +57743,12 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
+aD
+cX
+cX
+cX
+aD
+aD
 aa
 aa
 aa
@@ -53209,11 +58000,11 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
+aD
+aD
+cX
+aD
+aD
 aa
 aa
 aa
@@ -53467,9 +58258,9 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
+aD
+cX
+aD
 aa
 aa
 aa

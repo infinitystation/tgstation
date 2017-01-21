@@ -320,7 +320,7 @@
 /area/alien_base)
 "bj" = (
 /obj/structure/bed/abductor,
-/obj/effect/mob_spawn/human/corpse/clown,
+/obj/effect/mob_spawn/human/clown,
 /turf/open/floor/plating/abductor2,
 /area/alien_base)
 "bk" = (
