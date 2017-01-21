@@ -142,7 +142,7 @@
 
 			else		//recipient is an admin but sender is not
 				C << "<font color='red'>Ответное ЛС от-<b>[key_name(src, C, 1)](<A HREF='?_src_=holder;adminplayerobservefollow=\ref[src.mob]'>FLW</A>)</b>: [keywordparsedmsg]</font>"
-				src << "<font color='blue'>ЛС-<b>Админу [key_name(src, C, 0)]</b>: [msg]</font>"
+				src << "<font color='blue'>ЛС-<b>Админу [key_name(C, src, 0)]</b>: [msg]</font>"
 
 			//play the recieving admin the adminhelp sound (if they have them enabled)
 			if(C.prefs.toggles & SOUND_ADMINHELP)
