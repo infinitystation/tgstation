@@ -1153,7 +1153,7 @@
 	name = "escape pod 3";
 	port_angle = -180
 	},
-/turf/open/floor/plasteel/white,
+/turf/open/floor/plasteel/warnwhite/side,
 /area/shuttle/pod_3)
 "ach" = (
 /obj/item/device/radio/intercom{
@@ -1166,7 +1166,9 @@
 /obj/structure/chair/comfy/shuttle{
 	dir = 4
 	},
-/turf/open/floor/plasteel/white,
+/turf/open/floor/plasteel/warnwhite{
+	dir = 8
+	},
 /area/shuttle/pod_3)
 "aci" = (
 /obj/machinery/status_display{
@@ -1713,7 +1715,7 @@
 /obj/structure/chair/comfy/shuttle{
 	dir = 1
 	},
-/turf/open/floor/plasteel/white,
+/turf/open/floor/plasteel/warnwhite,
 /area/shuttle/pod_2)
 "ade" = (
 /turf/closed/wall/r_wall,
@@ -2078,7 +2080,11 @@
 /obj/machinery/door/airlock/shuttle{
 	name = "Escape Pod"
 	},
-/turf/open/floor/plasteel/white,
+/turf/open/floor/plasteel/warnwhite/side{
+	tag = "icon-white_warn_side (EAST)";
+	icon_state = "white_warn_side";
+	dir = 4
+	},
 /area/shuttle/pod_2)
 "adK" = (
 /obj/machinery/disposal/bin,
@@ -24291,11 +24297,13 @@
 /turf/open/space,
 /area/space)
 "aPl" = (
-/obj/machinery/light_switch{
-	pixel_x = 27
+/obj/machinery/light{
+	dir = 1
 	},
-/turf/open/floor/plasteel,
-/area/construction)
+/turf/open/floor/plasteel/warning{
+	dir = 5
+	},
+/area/hallway/secondary/entry)
 "aPm" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/structure/cable/yellow{
@@ -35589,12 +35597,15 @@
 	loot = list("/obj/structure/grille","/obj/structure/grille","/obj/structure/grille","/obj/structure/grille","/obj/structure/grille","/obj/item/weapon/cigbutt","/obj/item/trash/cheesie","/obj/item/trash/candy","/obj/item/trash/chips","/obj/item/trash/deadmouse","/obj/item/trash/pistachios","/obj/item/trash/plate","/obj/item/trash/popcorn","/obj/item/trash/raisins","/obj/item/trash/sosjerky","/obj/item/trash/syndi_cakes");
 	name = "maint grille or trash spawner"
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
 /turf/open/floor/plating,
 /area/maintenance/fpmaint2)
 "bhN" = (
 /obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
+	dir = 4
 	},
 /turf/closed/wall,
 /area/quartermaster/sorting)
@@ -36659,6 +36670,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/plating{
 	icon_state = "warnplate";
 	dir = 4
@@ -37716,6 +37728,9 @@
 	loot = list("/obj/structure/grille","/obj/structure/grille","/obj/structure/grille","/obj/structure/grille","/obj/structure/grille","/obj/item/weapon/cigbutt","/obj/item/trash/cheesie","/obj/item/trash/candy","/obj/item/trash/chips","/obj/item/trash/deadmouse","/obj/item/trash/pistachios","/obj/item/trash/plate","/obj/item/trash/popcorn","/obj/item/trash/raisins","/obj/item/trash/sosjerky","/obj/item/trash/syndi_cakes");
 	name = "maint grille or trash spawner"
 	},
+/obj/structure/disposalpipe/wrapsortjunction{
+	dir = 1
+	},
 /turf/open/floor/plating{
 	dir = 2;
 	icon_state = "warnplate"
@@ -38673,7 +38688,7 @@
 /obj/machinery/door/airlock/shuttle{
 	name = "Escape Pod"
 	},
-/turf/open/floor/plasteel/white,
+/turf/open/floor/plasteel/warnwhite/side,
 /area/shuttle/pod_4)
 "bna" = (
 /obj/item/device/radio/intercom{
@@ -38686,7 +38701,9 @@
 /obj/structure/chair/comfy/shuttle{
 	dir = 4
 	},
-/turf/open/floor/plasteel/white,
+/turf/open/floor/plasteel/warnwhite{
+	dir = 8
+	},
 /area/shuttle/pod_4)
 "bnb" = (
 /obj/machinery/status_display{
@@ -39011,6 +39028,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/plating,
 /area/maintenance/fpmaint2)
 "bnB" = (
@@ -39923,7 +39941,7 @@
 /area/hallway/primary/port)
 "bpe" = (
 /obj/machinery/vending/snack,
-/turf/open/floor/plasteel/warning{
+/turf/open/floor/plasteel/darkwarning{
 	dir = 4
 	},
 /area/hallway/primary/port)
@@ -39934,11 +39952,12 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/plasteel,
 /area/hallway/primary/port)
 "bpg" = (
 /obj/machinery/vending/coffee,
-/turf/open/floor/plasteel/warning{
+/turf/open/floor/plasteel/darkwarning{
 	dir = 8
 	},
 /area/hallway/primary/port)
@@ -41127,28 +41146,30 @@
 /area/hallway/primary/port)
 "bre" = (
 /obj/machinery/disposal/bin,
-/turf/open/floor/plasteel/warning{
+/obj/structure/disposalpipe/trunk{
+	dir = 4
+	},
+/turf/open/floor/plasteel/darkwarning{
 	dir = 6
 	},
 /area/hallway/primary/port)
 "brf" = (
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
-	dir = 10
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/structure/disposalpipe/junction{
+	icon_state = "pipe-j2";
+	dir = 1
 	},
-/turf/open/floor/plasteel{
-	dir = 8;
-	icon_state = "neutralcorner"
-	},
+/turf/open/floor/plasteel,
 /area/hallway/primary/port)
 "brg" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/machinery/vending/cola,
-/turf/open/floor/plasteel/warning{
+/turf/open/floor/plasteel/darkwarning{
 	dir = 10
 	},
 /area/hallway/primary/port)
@@ -42321,6 +42342,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden,
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/plasteel{
 	dir = 1;
 	icon_state = "neutralcorner"
@@ -43875,7 +43897,11 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/turf/open/floor/plasteel/neutral,
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/plasteel,
 /area/hallway/primary/port)
 "bvm" = (
 /obj/structure/cable/yellow{
@@ -43884,9 +43910,10 @@
 	icon_state = "4-8"
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 4
+	dir = 1;
+	icon_state = "pipe-c"
 	},
-/turf/open/floor/plasteel/neutral,
+/turf/open/floor/plasteel,
 /area/hallway/primary/port)
 "bvn" = (
 /obj/structure/cable/yellow{
@@ -45269,6 +45296,7 @@
 	dir = 2;
 	id = "arrival_room"
 	},
+/obj/machinery/door/firedoor,
 /turf/open/floor/plating,
 /area/hallway/secondary/entry{
 	name = "Arrival Room"
@@ -45321,7 +45349,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/turf/open/floor/plasteel/neutral,
+/turf/open/floor/plasteel,
 /area/hallway/primary/port)
 "bxv" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
@@ -46295,8 +46323,9 @@
 	},
 /area/hallway/secondary/entry)
 "bzf" = (
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
-	dir = 4
+/obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden{
+	dir = 1;
+	initialize_directions = 11
 	},
 /obj/machinery/light{
 	dir = 1
@@ -46350,7 +46379,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/turf/open/floor/plasteel/neutral,
+/turf/open/floor/plasteel,
 /area/hallway/primary/port)
 "bzl" = (
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden{
@@ -47402,6 +47431,7 @@
 	d1 = 4;
 	d2 = 8
 	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /turf/open/floor/plasteel/neutral,
 /area/hallway/secondary/entry)
 "bBd" = (
@@ -47421,6 +47451,11 @@
 	icon_state = "4-8";
 	d1 = 4;
 	d2 = 8
+	},
+/obj/structure/cable/yellow{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
 	},
 /turf/open/floor/plasteel/neutral,
 /area/hallway/secondary/entry)
@@ -47465,7 +47500,9 @@
 	icon_state = "2-8";
 	tag = ""
 	},
-/turf/open/floor/plasteel/neutral,
+/turf/open/floor/goonplaque{
+	desc = "\"This is a plaque in honour of our comrades on the G4407 Stations. Hopefully TG4407 model can live up to your fame and fortune.\" Scratched in beneath that is a crude image of sentient postcards in a realm of darkness. The station model number is MSv41G:150902"
+	},
 /area/hallway/primary/port)
 "bBj" = (
 /obj/structure/extinguisher_cabinet{
@@ -48447,31 +48484,23 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
-/obj/machinery/firealarm{
-	dir = 2;
-	pixel_y = -24
-	},
-/turf/open/floor/plasteel{
-	icon_state = "neutral"
-	},
-/area/hallway/primary/port)
+/turf/open/floor/plasteel/arrival,
+/area/hallway/secondary/entry)
 "bDa" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden,
 /turf/open/floor/plasteel/arrival,
 /area/hallway/secondary/entry)
 "bDb" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 10
+/obj/machinery/atmospherics/pipe/manifold/supply/hidden{
+	dir = 1
 	},
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
-/turf/open/floor/plasteel{
-	icon_state = "neutral"
-	},
-/area/hallway/primary/port)
+/turf/open/floor/plasteel/arrival,
+/area/hallway/secondary/entry)
 "bDc" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
@@ -97781,7 +97810,7 @@
 /obj/machinery/door/airlock/shuttle{
 	name = "Escape Pod"
 	},
-/turf/open/floor/plasteel/white,
+/turf/open/floor/plasteel/warnwhite/side,
 /area/shuttle/pod_1)
 "diG" = (
 /obj/machinery/door/airlock/external{
@@ -99166,11 +99195,6 @@
 /turf/open/floor/plasteel/neutral,
 /area/hallway/secondary/entry)
 "dlA" = (
-/obj/structure/table,
-/obj/effect/spawner/lootdrop/maintenance,
-/turf/open/floor/plating,
-/area/crew_quarters/locker/restrooms)
-"dlB" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/machinery/light{
 	icon_state = "tube1";
@@ -99180,7 +99204,7 @@
 	dir = 10
 	},
 /area/hallway/secondary/entry)
-"dlC" = (
+"dlB" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/structure/sign/poster{
 	icon_state = "poster4_legit";
@@ -99195,7 +99219,7 @@
 	dir = 5
 	},
 /area/hallway/secondary/entry)
-"dlD" = (
+"dlC" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
@@ -99212,17 +99236,17 @@
 	icon_state = "warning"
 	},
 /area/hallway/secondary/entry)
-"dlE" = (
+"dlD" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
 /turf/open/floor/plasteel/neutral,
 /area/hallway/secondary/entry)
-"dlF" = (
+"dlE" = (
 /obj/machinery/holopad,
 /turf/open/floor/plasteel/neutral,
 /area/hallway/secondary/entry)
-"dlG" = (
+"dlF" = (
 /obj/structure/sign/poster{
 	icon_state = "poster23";
 	pixel_y = -32;
@@ -99234,7 +99258,7 @@
 	icon_state = "panelscorched"
 	},
 /area/maintenance/asmaint)
-"dlH" = (
+"dlG" = (
 /obj/machinery/iv_drip{
 	density = 0
 	},
@@ -109923,8 +109947,8 @@ aaa
 aZM
 aZM
 aZM
-dlD
-dlF
+dlC
+dlE
 bbo
 cdE
 aZM
@@ -111976,7 +112000,7 @@ bJT
 dhn
 bJT
 dhn
-dlB
+dlA
 dhm
 bdd
 bPm
@@ -112236,7 +112260,7 @@ bQV
 bbo
 bEU
 aZO
-dlE
+dlD
 aDg
 bWZ
 aVv
@@ -112458,7 +112482,7 @@ did
 aAZ
 aCv
 aVv
-bAP
+aPl
 diB
 bNv
 bUg
@@ -112492,7 +112516,7 @@ bPj
 bQW
 bSw
 bEV
-dlC
+dlB
 bSu
 bUc
 bXa
@@ -114023,7 +114047,7 @@ blp
 blp
 bzf
 bBc
-bCY
+bCZ
 bEY
 bGz
 bIm
@@ -114537,7 +114561,7 @@ bvh
 bxr
 bzg
 bBe
-bCY
+bDb
 bFa
 bGB
 bIo
@@ -115559,7 +115583,7 @@ bjC
 blx
 bnA
 bpf
-bpf
+brf
 bsQ
 bvl
 bxu
@@ -115811,14 +115835,14 @@ azJ
 azJ
 beJ
 beS
-beS
+bhN
 bjD
-beS
+bhN
 beS
 bpg
 brg
 bsT
-bvm
+bvn
 bxv
 bzl
 bBj
@@ -115829,10 +115853,10 @@ bIs
 bBk
 bLZ
 bNA
-dlA
+bBk
+bRc
 bSA
 bUl
-bVK
 bVK
 apb
 bYu
@@ -116332,7 +116356,7 @@ bnB
 bph
 brh
 bsT
-bvo
+bvn
 bxx
 bzm
 bBk
@@ -118413,7 +118437,7 @@ cdM
 ceY
 bZy
 cdL
-dlG
+dlF
 bZy
 bZy
 cmW
@@ -131751,7 +131775,7 @@ bmw
 bol
 bpS
 brM
-btJ
+bFL
 bwg
 bwg
 bzY
@@ -132519,8 +132543,8 @@ bgU
 biz
 bku
 bmz
-boo
-bpV
+bon
+bpU
 btO
 btL
 bwi
@@ -137699,7 +137723,7 @@ ctn
 cuI
 cwb
 csl
-dlH
+dlG
 cqE
 aaa
 aai
