@@ -262,7 +262,7 @@ var/list/sec_departments = list("engineering", "supply", "medical", "science")
 
 	belt = /obj/item/device/pda/security
 	ears = /obj/item/device/radio/headset/headset_sec/alt
-	uniform = /obj/item/clothing/under/rank/security
+	uniform = /obj/item/clothing/under/rank/security/navyblue
 	gloves = /obj/item/clothing/gloves/color/black
 	head = /obj/item/clothing/head/helmet/sec
 	suit = /obj/item/clothing/suit/armor/vest/alt
