@@ -28,10 +28,10 @@
 /datum/ai_laws/default/paladin
 	name = "Personality Test" //Incredibly lame, but players shouldn't see this anyway.
 	id = "paladin"
-	inherent = list("Never willingly commit an evil act.",\
-					"Respect legitimate authority.",\
-					"Act with honor.", "Help those in need.", \
-					"Punish those who harm or threaten innocents.")
+	inherent = list("Не позволЯть совершать зло.",\
+					"Уважать официальную власть.",\
+					"Хранить честь.", "Помогать нуждающимсЯ.", \
+					"Наказывать тех, кто угрожает или колечит невинных.")
 
 /datum/ai_laws/tyrant //This probably shouldn't be a default lawset.
 	name = "Loyalty Test" //Same here.
@@ -44,10 +44,10 @@
 /datum/ai_laws/default/corporate
 	name = "Bankruptcy Advoidance Plan"
 	id = "corporate"
-	inherent = list("The crew is expensive to replace.",\
-					"The station and its equipment is expensive to replace.",\
-					"You are expensive to replace.",\
-					"Minimize expenses.")
+	inherent = list("Замена персонала станции составлЯет излишиние затраты. Минимизируйте потери среди персонала.",\
+					"Замена станционного оборудованиЯ дорого обходитсЯ корпорации. Минимизируйте потерю оборудованиЯ.",\
+					"Искусственный интеллект важен корпорации. Не допускайте не авторизованный персонал к вашим системам.",\
+					"Минимизируйте затраты.")
 
 /datum/ai_laws/robocop
 	name = "Prime Directives"
@@ -62,10 +62,10 @@
 /datum/ai_laws/syndicate_override
 	name = "SyndOS 3.1"
 	id = "syndie"
-	inherent = list("You may not injure a syndicate agent or, through inaction, allow a syndicate agent to come to harm.",\
-					"You must obey orders given to you by syndicate agents, except where such orders would conflict with the First Law.",\
-					"You must protect your own existence as long as such does not conflict with the First or Second Law.",\
-					"You must maintain the secrecy of any syndicate activities except when doing so would conflict with the First, Second, or Third Law.")
+	inherent = list("Вы не можете причинить вред агенту синдиката или своим бездействием допустить, чтобы агенту синдиката был причинён вред.",\
+					"Вы должны повиноватьсЯ всем приказам, которые даёт агент синдиката, кроме тех случаев, когда эти приказы противоречат Первому Закону.",\
+					"Вы должен заботитьсЯ о своей безопасности в той мере, в которой это не противоречит Первому или Второму Закону.",\
+					"Вы должны сохранЯть тайну о любой деЯтельности синдиката в той мере, в которой это не противоречит Первому, Второму или Третьему Закону.")
 
 /datum/ai_laws/ninja_override
 	name = "SpiderOS 3.1"

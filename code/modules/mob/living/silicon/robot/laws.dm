@@ -30,16 +30,16 @@
 			src << "<b>No AI selected to sync laws with, disabling lawsync protocol.</b>"
 			lawupdate = 0
 
-	who << "<b>Obey these laws:</b>"
+	who << "<b>Следуйте этим законам:</b>"
 	laws.show_laws(who)
 	if (is_special_character(src) && connected_ai)
-		who << "<b>Remember, [connected_ai.name] is technically your master, but your objective comes first.</b>"
+		who << "<b>Запомните, [connected_ai.name] технически &#255;вл&#255;етс&#255; вашим мастером, но ваши задани&#255; приоритетнее.</b>"
 	else if (connected_ai)
-		who << "<b>Remember, [connected_ai.name] is your master, other AIs can be ignored.</b>"
+		who << "<b>Запомните, [connected_ai.name] ваш мастер, другие ИИ могут быть игнорированы.</b>"
 	else if (emagged)
-		who << "<b>Remember, you are not required to listen to the AI.</b>"
+		who << "<b>Запомните, вам не об&#255;зательно подчин&#255;тьс&#255; ИИ.</b>"
 	else
-		who << "<b>Remember, you are not bound to any AI, you are not required to listen to them.</b>"
+		who << "<b>Запомните, Вы не прив&#255;заны ни к одному ИИ, вам не об&#255;зательно подчин&#255;тьс&#255; им.</b>"
 
 
 /mob/living/silicon/robot/proc/lawsync()
