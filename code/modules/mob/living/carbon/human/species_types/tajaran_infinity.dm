@@ -2,7 +2,7 @@
 //Прошу прощения, что не придумал способ, как брать конечности из папки инфинити.
 
 /datum/species/tajaran // Tajaran are a humanoid race possesing cat-like features.
-	name = "Tajarans"
+	name = "Tajaran"
 	id = "tajaran"
 	say_mod = "мурлычит"
 	default_color = "FFFFF"

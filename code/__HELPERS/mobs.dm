@@ -69,9 +69,9 @@
 	if(!hair_styles_tajaran.len)
 		init_sprite_accessory_subtypes(/datum/sprite_accessory/thair, hair_styles_tajaran)
 	if(!tails_list_tajaran.len)
-		init_sprite_accessory_subtypes(/datum/sprite_accessory/tajaran/tail, tails_list_tajaran)
+		init_sprite_accessory_subtypes(/datum/sprite_accessory/tails/tajaran, tails_list_tajaran)
 	if(!ears_list_tajaran.len)
-		init_sprite_accessory_subtypes(/datum/sprite_accessory/tajaran/ears, ears_list_tajaran)
+		init_sprite_accessory_subtypes(/datum/sprite_accessory/ears/tajaran, ears_list_tajaran)
 	if(!wings_list.len)
 		init_sprite_accessory_subtypes(/datum/sprite_accessory/wings, wings_list)
 
