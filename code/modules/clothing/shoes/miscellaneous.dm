@@ -2,7 +2,7 @@
 	playsound(src, 'sound/effects/step.ogg', 25, 1)
 
 /obj/item/clothing/shoes/suicide_act(mob/user)
-	user.visible_message("<span class='suicide'>[user] уударяет себя по голове с помощью нижней обуви! Разве это был не удар по голове?</span>")
+	user.visible_message("<span class='suicide'>[user] ударяет себя по голове с помощью нижней обуви! Разве это был не удар по голове?</span>")
 	for(var/i = 0, i < 3, i++)
 		sleep(3)
 		playsound(user, 'sound/weapons/genhit2.ogg', 50, 1)
