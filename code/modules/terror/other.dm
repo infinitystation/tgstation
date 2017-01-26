@@ -19,19 +19,27 @@
 /obj/machinery/porta_turret/heavy
 	name = "heavy turret"
 	desc = "Heavy turret, usually, installed on important sites or attacking ships."
-	req_access = list(101)
+	req_access = list(0)
 	emp_vunerable = 0
 	scan_range = 15
-	obj_integrity = 150
-	max_integrity = 150
+	obj_integrity = 100
+	max_integrity = 100
 	installation = /obj/item/weapon/gun/energy/laser
 	faction = "neutral"
 
 /obj/machinery/porta_turret/heavy/central_command
+	req_access = list(101)
 	obj_integrity = 150
 	max_integrity = 150
 	desc = "Heavy turret, installed on Nanotrasen Central Command station."
 	faction = "neutral"
+	density = 0
+
+/obj/machinery/porta_turret/heavy/jail
+	name = "jail's turret"
+	desc = "Heavy turret, installed on Nanotrasen Central Command station."
+	req_access = list(101)
+	faction = "nanotrasen"
 	density = 0
 
 /obj/machinery/porta_turret/defensepylon_internal_turret/cult
@@ -321,6 +329,18 @@
 	base_icon_state = "syndie"
 	faction = "neutral"
 
+/obj/machinery/porta_turret/syndicate/alien
+	name = "Alien's defenced turret"
+	faction = "abductor"
+	color = "purple"
+	scan_range = 12
+	obj_integrity = 90
+	max_integrity = 90
+	mode = TURRET_LETHAL
+	lethal_projectile = /obj/item/projectile/energy/declone
+	lethal_projectile_sound = 'sound/weapons/marauder.ogg'
+	base_icon_state = "syndie"
+
 /obj/structure/closet/wall
 	name = "wall closet"
 	icon = 'icons/obj/wall_closet.dmi'
@@ -432,6 +452,8 @@
 		if(isobserver(M))
 			var/link = FOLLOW_LINK(M, user)
 			M << "[link] [text]"
+		else
+			return ..()
 		log_say("[user.real_name]/[user.key] : [text]")
 
 /obj/item/clothing/mask/balaclava/white

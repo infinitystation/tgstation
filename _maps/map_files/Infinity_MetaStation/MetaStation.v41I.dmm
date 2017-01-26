@@ -3850,6 +3850,7 @@
 	id = "trash";
 	name = "disposal bay door"
 	},
+/obj/structure/fans/tiny/invisible,
 /turf/open/floor/plating,
 /area/maintenance/disposal)
 "ahb" = (
@@ -10638,6 +10639,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/structure/fans/tiny/invisible,
 /turf/open/floor/plating,
 /area/maintenance/fpmaint2)
 "asq" = (
@@ -11284,7 +11286,7 @@
 /obj/item/weapon/storage/backpack/satchel/leather/withwallet,
 /obj/item/clothing/under/suit_jacket/navy,
 /obj/machinery/button/door{
-	id = "mineshower";
+	id = "Cabin5";
 	name = "Bolt Control";
 	normaldoorcontrol = 1;
 	pixel_x = 25;
@@ -17063,6 +17065,7 @@
 /obj/machinery/door/airlock/glass_external{
 	name = "Mining Dock Airlock"
 	},
+/obj/structure/fans/tiny/invisible,
 /turf/open/floor/plating,
 /area/quartermaster/miningdock)
 "aCA" = (
@@ -41823,6 +41826,9 @@
 	tag = "icon-closed_terminus1 (NORTH)";
 	icon_state = "closed_terminus1";
 	dir = 1
+	},
+/obj/structure/transit_tube_pod{
+	dir = 4
 	},
 /turf/open/floor/plasteel/darkwarning{
 	dir = 10
@@ -84819,9 +84825,6 @@
 	pixel_x = -30;
 	pixel_y = 0
 	},
-/obj/machinery/light/small{
-	dir = 8
-	},
 /obj/structure/table/glass,
 /turf/open/floor/plasteel/whitegreen/side{
 	dir = 8
@@ -86857,9 +86860,7 @@
 /obj/structure/rack,
 /obj/item/weapon/storage/box/lights/mixed,
 /turf/open/floor/plating,
-/area/medical/medbay_aft{
-	name = "Medbay Aft"
-	})
+/area/maintenance/asmaint)
 "cOB" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4;
@@ -95693,6 +95694,7 @@
 	name = "Emergency Shuttle Airlock";
 	req_one_access_txt = "0"
 	},
+/obj/structure/fans/tiny,
 /turf/open/floor/plasteel{
 	icon_state = "delivery";
 	name = "floor"
@@ -95721,6 +95723,7 @@
 	name = "Emergency Shuttle Airlock";
 	req_one_access_txt = "0"
 	},
+/obj/structure/fans/tiny,
 /turf/open/floor/plasteel{
 	icon_state = "delivery";
 	name = "floor"
@@ -96109,6 +96112,7 @@
 	name = "Emergency Shuttle Airlock";
 	req_one_access_txt = "1;4"
 	},
+/obj/structure/fans/tiny,
 /turf/open/floor/plasteel/shuttle/red,
 /area/shuttle/escape)
 "deT" = (
@@ -96316,6 +96320,7 @@
 	name = "Emergency Shuttle Airlock";
 	req_one_access_txt = "0"
 	},
+/obj/structure/fans/tiny,
 /turf/open/floor/wood,
 /area/shuttle/escape)
 "dfq" = (
@@ -97463,7 +97468,7 @@
 	},
 /obj/item/stack/sheet/cardboard,
 /turf/open/floor/plating,
-/area/construction)
+/area/maintenance/fpmaint2)
 "dhT" = (
 /obj/structure/closet/emcloset,
 /turf/open/floor/plasteel,
@@ -99271,6 +99276,40 @@
 	},
 /turf/open/floor/plating,
 /area/maintenance/asmaint2)
+"dlH" = (
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
+	},
+/obj/structure/reagent_dispensers/fueltank,
+/turf/open/floor/plating,
+/area/maintenance/asmaint)
+"dlI" = (
+/obj/machinery/door/airlock/glass_titanium{
+	name = "Emergency Shuttle Airlock";
+	req_access_txt = "19"
+	},
+/obj/structure/fans/tiny,
+/turf/open/floor/plasteel{
+	icon_state = "delivery";
+	name = "floor"
+	},
+/area/shuttle/escape)
+"dlJ" = (
+/obj/machinery/door/airlock/glass_titanium{
+	name = "Emergency Shuttle Airlock";
+	req_access_txt = "19"
+	},
+/obj/structure/fans/tiny,
+/turf/open/floor/plasteel{
+	icon_state = "delivery";
+	name = "floor"
+	},
+/area/shuttle/escape)
 
 (1,1,1) = {"
 aaa
@@ -106058,15 +106097,15 @@ aaa
 aaa
 aaa
 aaa
+aai
+aai
 aaa
 aaa
 aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
+aai
 aaa
 aaa
 aaa
@@ -106323,13 +106362,13 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
+aai
+aai
 aaa
 aai
 aaa
 aaa
-aaa
+aai
 aaa
 aaa
 aaa
@@ -106579,15 +106618,15 @@ aan
 aai
 aai
 aaa
-aai
-aai
-aai
-aai
-aai
-aai
-aai
-aai
-aai
+aan
+aan
+aan
+aan
+aan
+aan
+aan
+aan
+aan
 aaa
 aaa
 aaa
@@ -106840,26 +106879,26 @@ aai
 aaa
 aaa
 aaa
+aai
+aaa
+aaa
+aai
+aai
+aai
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa
 aaa
 aai
+aaa
+aaa
 aai
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
 aaa
 aaa
 aaa
@@ -107096,10 +107135,10 @@ aai
 aaa
 aaa
 djA
-djO
+djA
 aaa
-dks
-dky
+djA
+djA
 aaa
 aaa
 aai
@@ -107109,15 +107148,15 @@ aaa
 aaa
 aaa
 bCH
+aai
 aaa
-aaa
-aai
-aai
-aai
-aai
-aai
-aai
-aai
+aan
+aan
+aan
+aan
+aan
+aan
+aan
 aaa
 aaa
 aaa
@@ -107351,13 +107390,13 @@ aaa
 aai
 aai
 aaa
-djo
+djl
 djB
 djP
-dke
+djl
 dkt
 dkz
-blm
+djl
 aaa
 aai
 aai
@@ -107621,8 +107660,8 @@ aai
 aaa
 aZM
 dla
-dlh
-dlm
+dla
+dla
 aZM
 aaa
 aaa
@@ -107636,7 +107675,7 @@ aaa
 aai
 aaa
 aaa
-aaa
+aai
 aaa
 aaa
 aaa
@@ -107859,7 +107898,7 @@ aai
 aVv
 div
 diF
-diS
+div
 aVv
 aaa
 aai
@@ -107872,7 +107911,7 @@ dkf
 dku
 dkA
 beA
-blm
+djl
 aaa
 aai
 aai
@@ -107894,7 +107933,7 @@ aai
 aai
 aai
 aai
-aaa
+aai
 aaa
 aaa
 aaa
@@ -108124,10 +108163,10 @@ aaa
 beA
 djp
 djD
-bez
-bez
-bez
-bez
+djD
+djD
+djD
+djD
 dkD
 beA
 aaa
@@ -108380,11 +108419,11 @@ aai
 aaa
 beA
 djq
-djE
+djD
 djR
 dkg
-bda
-bez
+djr
+djD
 bnn
 beA
 aaa
@@ -108637,12 +108676,12 @@ aai
 aaa
 bjj
 djr
-djF
-djS
+djD
+djR
 dkh
-bda
-bez
-dkE
+djr
+djD
+djR
 bjj
 aaa
 aai
@@ -108893,13 +108932,13 @@ aai
 aai
 aaa
 bjj
-bda
-djG
-djT
-dki
-bda
-bez
-dkF
+djr
+djD
+djR
+dkg
+djr
+djD
+djR
 bjj
 aaa
 aai
@@ -109150,13 +109189,13 @@ aZM
 aai
 aai
 bjj
-bda
-djH
-djU
+djr
+djD
+djR
 dkj
-bda
-bez
-bno
+djr
+djD
+djR
 bjj
 aaa
 aai
@@ -109408,11 +109447,11 @@ aZM
 aZM
 beA
 djs
-djI
-djV
-dkk
-bda
-bez
+djD
+djR
+dkg
+djr
+djD
 dkG
 beA
 aZM
@@ -109420,7 +109459,7 @@ aZM
 aZM
 dkV
 aZO
-aZQ
+diH
 bCP
 aWX
 aZM
@@ -109665,13 +109704,13 @@ djg
 bdb
 djm
 djt
-bez
+djD
 djW
 dkl
 bjl
-bez
+djD
 dkH
-bjs
+djm
 bdb
 dkO
 bdb
@@ -109912,7 +109951,7 @@ aJr
 aJr
 aJr
 aKw
-dir
+dip
 aZO
 diJ
 bCP
@@ -109922,11 +109961,11 @@ aZM
 aZM
 beA
 dju
-bez
-bez
+djD
+djD
 dkm
-bez
-bez
+djD
+djD
 dkI
 beA
 aZM
@@ -109934,7 +109973,7 @@ aZM
 aZM
 dkW
 aZO
-dli
+diJ
 bCP
 dlt
 aZM
@@ -109948,7 +109987,7 @@ aZM
 aZM
 aZM
 dlC
-dlE
+diJ
 bbo
 cdE
 aZM
@@ -110167,7 +110206,7 @@ aNp
 aJr
 dib
 dif
-dih
+dif
 dij
 dis
 diy
@@ -110177,17 +110216,17 @@ beB
 bdb
 djh
 bdb
-djn
-djv
+djm
+djt
 djJ
 bgm
 dkn
 bjn
 blj
-dkJ
-bjs
+dkH
+djm
 bdb
-dkP
+djh
 bdb
 beB
 aZO
@@ -110426,7 +110465,7 @@ aJq
 aJr
 aJr
 dik
-dit
+dip
 bLP
 diL
 bCP
@@ -110692,13 +110731,13 @@ aZM
 aaa
 aai
 aaa
-djw
+djl
 beA
 djX
-bez
-bjp
+djD
+djX
 beA
-blm
+djl
 aaa
 aai
 aaa
@@ -110942,7 +110981,7 @@ aJr
 dim
 aFr
 bLP
-diN
+diL
 bCP
 aZM
 aai
@@ -110952,8 +110991,8 @@ aaa
 aaa
 bjj
 djY
-bhC
-bhC
+djY
+djY
 bjj
 aaa
 aaa
@@ -111207,11 +111246,11 @@ aaa
 aai
 aaa
 aaa
-djK
+djl
 bjj
 bjj
 bjj
-blm
+djl
 aaa
 aai
 aai
@@ -111220,7 +111259,7 @@ aai
 aVv
 bLQ
 bCJ
-dlp
+diV
 aVv
 aaa
 aaa
@@ -111731,7 +111770,7 @@ aVv
 dkN
 dkQ
 aWX
-dkY
+djc
 bdc
 bTZ
 bCR
@@ -111970,7 +112009,7 @@ aFr
 aFr
 bAO
 aQN
-diR
+diL
 diX
 djd
 aWY
@@ -112233,19 +112272,19 @@ dje
 aWZ
 djj
 aWZ
-bbs
+dje
 bde
 aWZ
-djZ
+djj
 dkq
 dkv
 aWZ
 bnr
-bbs
+dje
 aWZ
-dkR
+djj
 aWZ
-bbs
+dje
 bzb
 bAV
 aDg
@@ -112254,7 +112293,7 @@ bEU
 aZO
 dho
 dhp
-dly
+diJ
 dlz
 bQV
 bbo
@@ -112490,7 +112529,7 @@ djf
 bNv
 djk
 bNv
-bbt
+djf
 bdf
 bLS
 dka
@@ -112498,11 +112537,11 @@ dkr
 dkw
 dkB
 dkK
-bbt
+djf
 bNv
-dkS
+djk
 bNv
-bbt
+djf
 bzc
 bAW
 bCU
@@ -112754,14 +112793,14 @@ dkb
 bUc
 dkx
 dkC
-blp
-blp
+dkC
+dkC
 boV
 boV
 boV
-blp
+dkC
 bzd
-bAX
+diO
 bCV
 apb
 apb
@@ -113010,15 +113049,15 @@ aVv
 aVv
 bhD
 aVv
-blp
+dkC
 bnt
 boW
 bqV
 bsJ
 bve
-blp
+dkC
 aQM
-bAY
+diP
 bCW
 apb
 aAZ
@@ -113267,7 +113306,7 @@ aai
 apb
 bhE
 azC
-blp
+dkC
 bnu
 boX
 bqW
@@ -113524,7 +113563,7 @@ apb
 apb
 bhF
 aCv
-blp
+dkC
 bnv
 boY
 bqX
@@ -113781,16 +113820,16 @@ djL
 bgp
 bhG
 aAZ
-blp
+dkC
 bnw
 boZ
 bqY
-bsL
+dkM
 bvg
 bxq
 bze
-bBb
-bCY
+diM
+dlq
 bEX
 bEX
 bEX
@@ -114038,13 +114077,13 @@ aGS
 apb
 bhH
 bjw
-blp
-blp
+dkC
+dkC
 bpa
-blp
+dkC
 bsM
-blp
-blp
+dkC
+dkC
 bzf
 bBc
 bCZ
@@ -114295,11 +114334,11 @@ aGS
 apb
 bhH
 bjx
-blp
+dkC
 bny
 dkM
 bra
-bsL
+dkM
 bvi
 bxr
 bzg
@@ -114551,11 +114590,11 @@ apb
 apb
 apb
 bhH
-bjy
-blp
+djL
+dkC
 bnx
 bpb
-blp
+dkC
 dkT
 bvh
 bxr
@@ -114809,13 +114848,13 @@ djM
 dkc
 bhH
 bPs
-blp
+dkC
 dkL
 bpc
-blp
+dkC
 bpc
 bvj
-blp
+dkC
 bzi
 bBf
 bDc
@@ -115066,13 +115105,13 @@ beH
 aGS
 bhH
 bjA
-blp
-blp
-blp
-blp
-blp
-blp
-blp
+dkC
+dkC
+dkC
+dkC
+dkC
+dkC
+dkC
 dlg
 dll
 dlr
@@ -121294,7 +121333,7 @@ cEC
 cND
 cEC
 cEC
-cna
+dlH
 cRn
 cRU
 cSU
@@ -122323,7 +122362,7 @@ cNG
 cOw
 cEC
 cOA
-dhh
+cdL
 cBP
 cRX
 cTF
@@ -125952,7 +125991,7 @@ deu
 deA
 der
 del
-deG
+dlI
 dfR
 der
 bsl
@@ -126209,7 +126248,7 @@ deu
 deB
 der
 dem
-deG
+dlJ
 dfS
 der
 bsl
@@ -133839,7 +133878,7 @@ bCc
 bCc
 bCc
 bHn
-bJj
+bCc
 bKU
 bMQ
 bOp
@@ -137121,7 +137160,7 @@ aaa
 aaa
 aai
 aai
-abh
+abf
 abE
 ach
 abE
@@ -146681,7 +146720,7 @@ aaa
 aaa
 aai
 aaa
-dhH
+byT
 aaa
 aai
 aai

@@ -307,3 +307,32 @@
 	icon_state = "drone_maint_hat"
 	death = FALSE
 	roundstart = FALSE
+
+/obj/effect/mob_spawn/human/abductor
+	name = "alien sleeper"
+	desc = "Some strange alien's sleeper... What the fuck is happing here?"
+	mob_name = "abductor"
+	icon = 'icons/obj/lavaland/spawners.dmi'
+	icon_state = "cryostasis_sleeper"
+	roundstart = FALSE
+	death = FALSE
+	uniform = /obj/item/clothing/under/color/grey
+	shoes = /obj/item/clothing/shoes/combat
+	mob_species = /datum/species/abductor
+	flavour_text = "Вы - представитель расы Кайрон. Ваша раса - малоэмоциональна, что делает вас хладнокровными и рациональными в вопросах траты своего времени. \
+	Ваш стиль речи - короткий и прямолинейны, так-же, вы часто используете научные слова. Из-за природных задатков, у Вас слабо получается воодушевлять даже своих близких, уже не говоря о красноречии. \
+	В связи с угрозой вымирания, Вы становитесь ещё и малообщительными. Идеалы ответа собседнику, если вы его видите - кивок или мотание головой, если вопрос требует в ответе 'Да' или 'Нет'. \
+	Это был краткий пересказ  Вашей расы."
+	objectives = "Вы являетесь 'гражданским' относительно других классов своей расы. Делайте то, что вам сказали."
+
+/obj/effect/mob_spawn/human/abductor/scientist
+	name = "scientist's abductor sleeper"
+	mob_name = "abductor scientist"
+	outfit_type = /datum/outfit/abductor_agent
+	objectives = "Выполните задачу, которую вам поставил 'Высший разум' (администратор, как правило). Вы - руководитель на этой операции. Связь с 'Высшим разумом' - команда Pray в IC."
+
+/obj/effect/mob_spawn/human/abductor/agent
+	name = "soldier's abductor sleeper"
+	mob_name = "abductor soldier"
+	outfit_type = /datum/outfit/abductor_agent
+	objectives = "Выполните задачу, которую вам поставил 'Высший разум' (администратор, как правило). Ваш куратор и командующий на операцию - один из учёных."

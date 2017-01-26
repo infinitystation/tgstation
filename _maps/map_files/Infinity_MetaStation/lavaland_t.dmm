@@ -189,7 +189,9 @@
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/lavaland/surface/outdoors)
 "aM" = (
-/turf/closed/wall/mineral/iron,
+/turf/closed/wall/mineral/iron{
+	baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
+	},
 /area/mine/shelter)
 "aN" = (
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
@@ -4865,18 +4867,18 @@
 /obj/structure/spider/stickyweb,
 /obj/effect/decal/cleanable/cobweb/cobweb2,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
-/area/lavaland/surface/outdoors)
+/area/mine/shelter)
 "jS" = (
 /obj/effect/decal/cleanable/ash/large,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface{
 	dug = 1;
 	icon_state = "basalt_dug"
 	},
-/area/lavaland/surface/outdoors)
+/area/mine/shelter)
 "jT" = (
 /obj/structure/spider/stickyweb,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
-/area/lavaland/surface/outdoors)
+/area/mine/shelter)
 "jU" = (
 /obj/structure/spider/stickyweb,
 /obj/effect/decal/cleanable/cobweb/cobweb2,
@@ -4888,19 +4890,19 @@
 	dug = 1;
 	icon_state = "basalt_dug"
 	},
-/area/lavaland/surface/outdoors)
+/area/mine/shelter)
 "jW" = (
 /obj/item/weapon/twohanded/bonespear,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
-/area/lavaland/surface/outdoors)
+/area/mine/shelter)
 "jX" = (
 /obj/effect/decal/cleanable/molten_object/large,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
-/area/lavaland/surface/outdoors)
+/area/mine/shelter)
 "jY" = (
 /obj/effect/decal/remains/xeno/larva,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
-/area/lavaland/surface/outdoors)
+/area/mine/shelter)
 "jZ" = (
 /obj/structure/spider/stickyweb,
 /obj/effect/decal/cleanable/cobweb/cobweb2,
@@ -4918,7 +4920,7 @@
 "kc" = (
 /obj/item/clothing/head/ushanka,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
-/area/lavaland/surface/outdoors)
+/area/mine/shelter)
 "kd" = (
 /obj/structure/spider/stickyweb,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
@@ -4933,7 +4935,7 @@
 "kf" = (
 /obj/effect/decal/cleanable/ash/large,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
-/area/lavaland/surface/outdoors)
+/area/mine/shelter)
 "kg" = (
 /obj/effect/decal/cleanable/molten_object/large,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
@@ -4953,7 +4955,7 @@
 "kk" = (
 /obj/effect/decal/remains/xeno,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
-/area/lavaland/surface/outdoors)
+/area/mine/shelter)
 "kl" = (
 /obj/structure/spider/stickyweb,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
@@ -4994,7 +4996,7 @@
 	name = "ash crown"
 	},
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
-/area/lavaland/surface/outdoors)
+/area/mine/shelter)
 "ku" = (
 /obj/effect/decal/cleanable/ash/large,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
@@ -5026,7 +5028,7 @@
 "kB" = (
 /obj/effect/decal/cleanable/cobweb/cobweb2,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
-/area/lavaland/surface/outdoors)
+/area/mine/shelter)
 "kC" = (
 /obj/structure/spider/stickyweb,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
@@ -5041,7 +5043,7 @@
 	dug = 1;
 	icon_state = "basalt_dug"
 	},
-/area/lavaland/surface/outdoors)
+/area/mine/shelter)
 "kF" = (
 /obj/effect/decal/cleanable/cobweb/cobweb2,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
@@ -5072,17 +5074,17 @@
 "kL" = (
 /obj/item/weapon/ore/gold,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
-/area/lavaland/surface/outdoors)
+/area/mine/shelter)
 "kM" = (
 /obj/effect/decal/remains/human,
 /obj/item/weapon/ore/gold,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
-/area/lavaland/surface/outdoors)
+/area/mine/shelter)
 "kN" = (
 /obj/item/weapon/ore/gold,
 /obj/effect/decal/remains/xeno/larva,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
-/area/lavaland/surface/outdoors)
+/area/mine/shelter)
 "kO" = (
 /obj/item/weapon/ore/gold,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
@@ -5102,7 +5104,7 @@
 "kS" = (
 /obj/item/clothing/head/wizard/marisa/fake,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
-/area/lavaland/surface/outdoors)
+/area/mine/shelter)
 "kT" = (
 /obj/effect/decal/cleanable/ash/large,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
@@ -5116,20 +5118,20 @@
 /obj/item/weapon/ore/gold,
 /obj/item/weapon/ore/gold,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
-/area/lavaland/surface/outdoors)
+/area/mine/shelter)
 "kW" = (
 /obj/item/weapon/ore/gold,
 /obj/item/weapon/ore/gold,
 /obj/effect/decal/remains/xeno/larva,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
-/area/lavaland/surface/outdoors)
+/area/mine/shelter)
 "kX" = (
 /obj/effect/decal/remains/human,
 /obj/item/weapon/ore/gold,
 /obj/item/weapon/ore/gold,
 /obj/item/weapon/ore/gold,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
-/area/lavaland/surface/outdoors)
+/area/mine/shelter)
 "kY" = (
 /obj/item/weapon/ore/gold,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
@@ -5140,7 +5142,7 @@
 	dug = 1;
 	icon_state = "basalt_dug"
 	},
-/area/lavaland/surface/outdoors)
+/area/mine/shelter)
 "la" = (
 /obj/effect/decal/cleanable/cobweb/cobweb2,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
@@ -5166,19 +5168,19 @@
 /obj/item/weapon/ore/gold,
 /obj/item/weapon/ore/gold,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
-/area/lavaland/surface/outdoors)
+/area/mine/shelter)
 "lg" = (
 /obj/item/weapon/ore/gold,
 /obj/item/weapon/ore/gold,
 /mob/living/simple_animal/hostile/megafauna/dragon,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
-/area/lavaland/surface/outdoors)
+/area/mine/shelter)
 "lh" = (
 /obj/item/weapon/ore/gold,
 /obj/item/weapon/ore/gold,
 /obj/item/weapon/ore/gold,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
-/area/lavaland/surface/outdoors)
+/area/mine/shelter)
 "li" = (
 /obj/item/weapon/ore/gold,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
@@ -5204,7 +5206,7 @@
 	dug = 1;
 	icon_state = "basalt_dug"
 	},
-/area/lavaland/surface/outdoors)
+/area/mine/shelter)
 "ln" = (
 /obj/item/weapon/ore/gold,
 /obj/item/weapon/ore/gold,
@@ -5213,7 +5215,7 @@
 	dug = 1;
 	icon_state = "basalt_dug"
 	},
-/area/lavaland/surface/outdoors)
+/area/mine/shelter)
 "lo" = (
 /obj/item/weapon/ore/gold,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
@@ -5254,7 +5256,7 @@
 	dug = 1;
 	icon_state = "basalt_dug"
 	},
-/area/lavaland/surface/outdoors)
+/area/mine/shelter)
 "lw" = (
 /obj/structure/spider/stickyweb,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
@@ -5264,6 +5266,192 @@
 /obj/item/bagpipe,
 /turf/open/indestructible/necropolis,
 /area/lavaland/surface/outdoors)
+"ly" = (
+/obj/docking_port/stationary{
+	dheight = 0;
+	dir = 2;
+	dwidth = 2;
+	height = 8;
+	id = "uac_lavaland";
+	name = "Lavaland";
+	width = 5
+	},
+/turf/open/chasm/straight_down/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"lz" = (
+/obj/effect/decal/remains/human,
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/mine/shelter)
+"lA" = (
+/obj/effect/decal/remains/human,
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/mine/shelter)
+"lB" = (
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface{
+	dug = 1;
+	icon_state = "basalt_dug"
+	},
+/area/mine/shelter)
+"lC" = (
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface{
+	dug = 1;
+	icon_state = "basalt_dug"
+	},
+/area/mine/shelter)
+"lD" = (
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface{
+	dug = 1;
+	icon_state = "basalt_dug"
+	},
+/area/mine/shelter)
+"lE" = (
+/obj/effect/decal/remains/human,
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/mine/shelter)
+"lF" = (
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface{
+	dug = 1;
+	icon_state = "basalt_dug"
+	},
+/area/mine/shelter)
+"lG" = (
+/obj/effect/decal/remains/human,
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/mine/shelter)
+"lH" = (
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface{
+	dug = 1;
+	icon_state = "basalt_dug"
+	},
+/area/mine/shelter)
+"lI" = (
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface{
+	dug = 1;
+	icon_state = "basalt_dug"
+	},
+/area/mine/shelter)
+"lJ" = (
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface{
+	dug = 1;
+	icon_state = "basalt_dug"
+	},
+/area/mine/shelter)
+"lK" = (
+/obj/effect/decal/remains/human,
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/mine/shelter)
+"lL" = (
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface{
+	dug = 1;
+	icon_state = "basalt_dug"
+	},
+/area/mine/shelter)
+"lM" = (
+/obj/effect/decal/remains/human,
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/mine/shelter)
+"lN" = (
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface{
+	dug = 1;
+	icon_state = "basalt_dug"
+	},
+/area/mine/shelter)
+"lO" = (
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface{
+	dug = 1;
+	icon_state = "basalt_dug"
+	},
+/area/mine/shelter)
+"lP" = (
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface{
+	dug = 1;
+	icon_state = "basalt_dug"
+	},
+/area/mine/shelter)
+"lQ" = (
+/obj/effect/decal/remains/human,
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/mine/shelter)
+"lR" = (
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface{
+	dug = 1;
+	icon_state = "basalt_dug"
+	},
+/area/mine/shelter)
+"lS" = (
+/obj/effect/decal/remains/human,
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/mine/shelter)
+"lT" = (
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface{
+	dug = 1;
+	icon_state = "basalt_dug"
+	},
+/area/mine/shelter)
+"lU" = (
+/obj/effect/decal/remains/human,
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/mine/shelter)
+"lV" = (
+/obj/effect/decal/remains/human,
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/mine/shelter)
+"lW" = (
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface{
+	dug = 1;
+	icon_state = "basalt_dug"
+	},
+/area/mine/shelter)
+"lX" = (
+/obj/effect/decal/remains/human,
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/mine/shelter)
+"lY" = (
+/obj/effect/decal/remains/human,
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/mine/shelter)
+"lZ" = (
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface{
+	dug = 1;
+	icon_state = "basalt_dug"
+	},
+/area/mine/shelter)
+"ma" = (
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface{
+	dug = 1;
+	icon_state = "basalt_dug"
+	},
+/area/mine/shelter)
+"mb" = (
+/obj/effect/decal/remains/human,
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/mine/shelter)
+"mc" = (
+/obj/effect/decal/remains/human,
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/mine/shelter)
+"md" = (
+/obj/effect/decal/remains/human,
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/mine/shelter)
+"me" = (
+/obj/effect/decal/remains/human,
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/mine/shelter)
+"mf" = (
+/obj/effect/decal/remains/human,
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/mine/shelter)
+"mg" = (
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface{
+	dug = 1;
+	icon_state = "basalt_dug"
+	},
+/area/mine/shelter)
+"mh" = (
+/obj/effect/decal/remains/human,
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/mine/shelter)
 
 (1,1,1) = {"
 ab
@@ -34068,7 +34256,7 @@ at
 at
 at
 at
-aA
+ly
 aA
 aA
 aA
@@ -59157,11 +59345,11 @@ aJ
 aJ
 aJ
 aJ
-at
-at
-at
-at
-at
+aN
+aN
+aN
+aN
+aN
 aa
 aa
 aa
@@ -59410,17 +59598,17 @@ aJ
 aJ
 aJ
 aJ
-at
-at
-at
-at
-at
-aY
-at
-at
-at
-at
-at
+aN
+aN
+aN
+aN
+aN
+lF
+aN
+aN
+aN
+aN
+aN
 jT
 aa
 aa
@@ -59667,18 +59855,18 @@ aJ
 aJ
 aJ
 aJ
-at
-at
-at
-aY
-at
-at
-at
-at
-at
-at
-at
-at
+aN
+aN
+aN
+lB
+aN
+aN
+aN
+aN
+aN
+aN
+aN
+aN
 jT
 aa
 aa
@@ -59924,19 +60112,19 @@ aJ
 aJ
 aJ
 aJ
-at
-at
-at
-at
-at
-at
+aN
+aN
+aN
+aN
+aN
+aN
 jS
-at
-at
-at
-aY
-at
-at
+aN
+aN
+aN
+lO
+aN
+aN
 jT
 aa
 aa
@@ -60181,20 +60369,20 @@ aJ
 aJ
 aJ
 aJ
-at
-at
-au
-at
-at
-at
-at
-at
-au
-at
-at
-at
-at
-at
+aN
+aN
+lA
+aN
+aN
+aN
+aN
+aN
+lK
+aN
+aN
+aN
+aN
+aN
 jT
 aa
 aa
@@ -60437,22 +60625,22 @@ aJ
 aJ
 aJ
 aJ
-at
-at
-at
+aN
+aN
+aN
 jV
-at
+aN
 jY
-at
-aY
-at
-at
-at
-at
-at
-at
-at
-at
+aN
+lH
+aN
+aN
+aN
+aN
+aN
+aN
+aN
+aN
 aa
 aa
 aa
@@ -60694,22 +60882,22 @@ aJ
 aJ
 aJ
 aJ
-at
-at
-at
-at
-at
-at
-at
-at
-at
+aN
+aN
+aN
+aN
+aN
+aN
+aN
+aN
+aN
 jX
-at
+aN
 jY
 jX
-at
-at
-at
+aN
+aN
+aN
 aa
 aa
 aa
@@ -60951,22 +61139,22 @@ aJ
 aJ
 aJ
 aJ
-at
-at
+aN
+aN
 jS
-at
-at
-at
-at
-at
-at
-at
-at
+aN
+aN
+aN
+aN
+aN
+aN
+aN
+aN
 jW
-at
-at
-at
-at
+aN
+aN
+aN
+aN
 jT
 aa
 aa
@@ -61208,22 +61396,22 @@ aJ
 aJ
 aJ
 aJ
-at
-at
-at
-at
-at
-aY
-au
-at
-at
-aY
-at
-at
+aN
+aN
+aN
+aN
+aN
+lC
+lG
+aN
+aN
+lL
+aN
+aN
 kf
-at
-at
-at
+aN
+aN
+aN
 jT
 aa
 aa
@@ -61465,23 +61653,23 @@ aJ
 aJ
 aJ
 aJ
-at
-at
-at
-at
+aN
+aN
+aN
+aN
 jW
-at
-at
-at
+aN
+aN
+aN
 kk
-at
-at
-at
-at
-at
-aY
-au
-at
+aN
+aN
+aN
+aN
+aN
+lT
+lV
+aN
 aa
 aa
 aa
@@ -61722,23 +61910,23 @@ aJ
 aJ
 aJ
 aJ
-at
-at
-at
-at
+aN
+aN
+aN
+aN
 jX
-at
-at
+aN
+aN
 kf
-at
-at
-aY
+aN
+aN
+lN
 kt
 jY
-at
-at
-at
-at
+aN
+aN
+aN
+aN
 aa
 aa
 aa
@@ -61980,22 +62168,22 @@ aJ
 aJ
 aJ
 aJ
-at
-at
-at
-at
-at
-at
+aN
+aN
+aN
+aN
+aN
+aN
 jX
-at
-at
-at
-at
-at
-at
+aN
+aN
+aN
+aN
+aN
+aN
 jY
-at
-at
+aN
+aN
 aa
 aa
 aa
@@ -62237,22 +62425,22 @@ aJ
 aJ
 aJ
 aJ
-at
-au
-at
-at
-aY
-at
+aN
+lz
+aN
+aN
+lD
+aN
 jY
-aY
-at
-at
-at
-at
+lJ
+aN
+aN
+aN
+aN
 jX
-at
-at
-at
+aN
+aN
+aN
 aa
 aa
 aa
@@ -62494,21 +62682,21 @@ aJ
 aJ
 aJ
 aa
-at
-at
-at
+aN
+aN
+aN
 jY
-at
-at
-at
-at
-au
-at
+aN
+aN
+aN
+aN
+lM
+aN
 kf
-aY
-au
-at
-at
+lP
+lQ
+aN
+aN
 kS
 jT
 aa
@@ -62752,20 +62940,20 @@ aJ
 aJ
 aa
 jR
-at
-at
-at
-au
-at
-at
-at
-at
-at
-at
-at
-at
-at
-at
+aN
+aN
+aN
+lE
+aN
+aN
+aN
+aN
+aN
+aN
+aN
+aN
+aN
+aN
 kf
 jT
 aa
@@ -63009,22 +63197,22 @@ aJ
 aJ
 aa
 aa
-at
-at
-at
-at
-at
-at
-at
-at
-at
+aN
+aN
+aN
+aN
+aN
+aN
+aN
+aN
+aN
 jW
-at
-at
-at
-at
-at
-at
+aN
+aN
+aN
+aN
+aN
+aN
 jT
 aa
 aa
@@ -63267,23 +63455,23 @@ aJ
 aa
 aa
 jT
-at
-at
-at
-at
-aY
-at
-at
-at
-at
-at
+aN
+aN
+aN
+aN
+lI
+aN
+aN
+aN
+aN
+aN
 kE
-at
-aY
-at
+aN
+lW
+aN
 kf
-at
-au
+aN
+md
 aa
 aa
 aa
@@ -63524,23 +63712,23 @@ aJ
 aa
 aa
 jR
-at
-at
-at
-at
-at
-at
+aN
+aN
+aN
+aN
+aN
+aN
 jY
-at
-at
-at
-at
-at
-at
-aY
-au
-at
-au
+aN
+aN
+aN
+aN
+aN
+aN
+lZ
+mb
+aN
+me
 aa
 aa
 aa
@@ -63783,21 +63971,21 @@ aa
 aa
 aa
 jR
-at
+aN
 kc
 kf
-at
-at
-at
-at
+aN
+aN
+aN
+aN
 kk
-aY
-at
-au
-aY
-at
+lR
+aN
+lX
+ma
+aN
 kE
-at
+aN
 aa
 aa
 aa
@@ -64044,18 +64232,18 @@ jR
 jT
 jT
 jT
-at
-at
-at
-at
-at
-at
+aN
+aN
+aN
+aN
+aN
+aN
 kL
 kN
 kL
 lm
-at
-au
+aN
+mf
 aa
 aa
 aa
@@ -64302,10 +64490,10 @@ aa
 aa
 jR
 jT
-at
-at
-at
-at
+aN
+aN
+aN
+aN
 jS
 kM
 kV
@@ -64562,14 +64750,14 @@ aa
 aa
 aa
 kB
-au
-at
+lS
+aN
 kN
 kW
 lg
 kL
 kM
-aY
+mg
 aa
 aa
 aa
@@ -64819,14 +65007,14 @@ aa
 aa
 aa
 aa
-at
-at
+aN
+aN
 kL
 kX
 lh
 kW
 kL
-au
+mh
 aa
 aa
 aa
@@ -65077,13 +65265,13 @@ aa
 aa
 aa
 kB
-au
-au
+lU
+lY
 kL
 kL
 lf
 lv
-at
+aN
 aa
 aa
 aa
@@ -65337,9 +65525,9 @@ aa
 jT
 jT
 kZ
-at
+aN
 kf
-at
+aN
 aa
 aa
 aa
@@ -65595,7 +65783,7 @@ aa
 aa
 kB
 jT
-au
+mc
 aa
 aa
 aa

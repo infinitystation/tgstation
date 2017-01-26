@@ -529,7 +529,7 @@ Congratulations! You are now trained for xenobiology research!"}
 	item_state = "alienhelmet"
 	blockTracking = 1
 	origin_tech = "materials=7;magnets=4;abductor=3"
-	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEHAIR|HIDEFACIALHAIR
 
 // Operating Table / Beds / Lockers
 
@@ -631,3 +631,11 @@ Congratulations! You are now trained for xenobiology research!"}
 		return // no material modding
 	else
 		..()
+
+/obj/item/clothing/suit/armor/abductor/vest/combat //»вентна€ байда
+	name = "soldier vest"
+	desc = "—тандартная экипировка десантных отрядов чужих. «ащищает от большей части внешнего воздействия."
+	icon_state = "vest_combat"
+	actions_types = null
+	mode = VEST_COMBAT
+

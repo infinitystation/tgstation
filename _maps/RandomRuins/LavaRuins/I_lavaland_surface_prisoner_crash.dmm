@@ -1,4 +1,4 @@
-//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE 
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "aa" = (
 /turf/template_noop,
 /area/template_noop)
@@ -32,9 +32,9 @@
 /area/lavaland/surface/outdoors)
 "ah" = (
 /obj/structure/shuttle/engine/propulsion{
-	tag = "icon-burst_s (EAST)";
+	tag = "icon-burst_s (WEST)";
 	icon_state = "burst_s";
-	dir = 4
+	dir = 8
 	},
 /obj/structure/shuttle/engine/platform{
 	dir = 8;
@@ -73,9 +73,9 @@
 /area/ruin/unpowered)
 "an" = (
 /obj/structure/shuttle/engine/propulsion{
-	tag = "icon-propulsion_l (EAST)";
-	icon_state = "propulsion_l";
-	dir = 4
+	tag = "icon-propulsion_r (WEST)";
+	icon_state = "propulsion_r";
+	dir = 8
 	},
 /obj/structure/shuttle/engine/platform{
 	tag = "icon-platform (EAST)";
@@ -151,6 +151,7 @@
 /obj/machinery/recharger/wallcharger{
 	pixel_x = 32
 	},
+/obj/effect/spawner/lootdrop/fall,
 /turf/open/floor/plating/lavaland/outdoor,
 /area/ruin/unpowered)
 "au" = (
@@ -161,8 +162,9 @@
 /area/ruin/unpowered)
 "av" = (
 /obj/structure/shuttle/engine/propulsion{
+	tag = "icon-propulsion (WEST)";
 	icon_state = "propulsion";
-	dir = 4
+	dir = 8
 	},
 /obj/structure/shuttle/engine/platform{
 	tag = "icon-platform (EAST)";
@@ -202,6 +204,7 @@
 /area/ruin/unpowered)
 "aA" = (
 /obj/machinery/door/airlock/shuttle,
+/obj/structure/fans/tiny,
 /turf/open/floor/plasteel/terror/necro/black,
 /area/ruin/unpowered)
 "aB" = (
@@ -220,15 +223,14 @@
 /turf/open/floor/plasteel/terror/necro/black/outdoor,
 /area/ruin/unpowered)
 "aF" = (
-/obj/effect/mob_spawn/human/nanotrasensoldier,
 /obj/effect/spawner/lootdrop/fall,
 /turf/open/floor/plasteel/terror/necro/black/outdoor,
 /area/lavaland/surface/outdoors)
 "aG" = (
 /obj/structure/shuttle/engine/propulsion{
-	tag = "icon-propulsion_r (EAST)";
-	icon_state = "propulsion_r";
-	dir = 4
+	tag = "icon-propulsion_l (WEST)";
+	icon_state = "propulsion_l";
+	dir = 8
 	},
 /obj/structure/shuttle/engine/platform{
 	tag = "icon-platform (EAST)";
@@ -301,10 +303,13 @@
 /area/space)
 "aQ" = (
 /obj/structure/girder,
+/obj/effect/spawner/lootdrop/fall,
 /turf/open/floor/plating/lavaland/outdoor,
 /area/lavaland/surface/outdoors)
 "aR" = (
-/obj/effect/decal/fakelattice,
+/obj/effect/decal/fakelattice{
+	density = 0
+	},
 /obj/item/stack/sheet/mineral/titanium{
 	amount = 2
 	},
@@ -398,7 +403,7 @@ aa
 aa
 aa
 aa
-ac
+aa
 ac
 ac
 ac
@@ -419,7 +424,7 @@ aa
 aa
 aa
 aa
-ac
+aa
 ad
 ad
 ac
@@ -441,7 +446,7 @@ aa
 aa
 aa
 aa
-ac
+aa
 ac
 ac
 ac
@@ -463,7 +468,7 @@ aa
 aa
 aa
 aa
-ac
+aa
 ac
 ad
 ae
@@ -725,7 +730,7 @@ ab
 ab
 ab
 ab
-ab
+ac
 ac
 ae
 af
@@ -770,14 +775,14 @@ ac
 ac
 ac
 ad
-af
+ab
 ah
 ai
 ao
 aw
 aH
 aP
-aS
+aZ
 ae
 ac
 ac
@@ -861,7 +866,7 @@ ad
 ac
 ab
 ai
-ar
+ap
 az
 ap
 ai
@@ -910,7 +915,7 @@ aB
 aC
 aR
 ac
-aY
+ac
 ad
 ac
 ab
@@ -976,7 +981,7 @@ aE
 aK
 aN
 aW
-ac
+ab
 ab
 ab
 ab

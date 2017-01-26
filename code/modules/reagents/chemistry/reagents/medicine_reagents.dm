@@ -1117,3 +1117,21 @@
 	M.adjustToxLoss(2, 0)
 	. = 1
 	..()
+
+/datum/reagent/medicine/alien_bionanites //Используется в слиперах абдакторов.
+	name = "Restorative Bionanites"
+	id = "alien_bionanites"
+	description = "Miniature medical biological robots that swiftly restore bodily damage."
+	reagent_state = SOLID
+	color = "#555555"
+	metabolization_rate = 1 //Быстро выводится из организма, ибо неприлично крутая штука. Расположена лишь в слипере пришельцев, который вводит по 10 - нужно постоянно себя хилять.
+
+/datum/reagent/medicine/alien_bionanites/on_mob_life(mob/living/M)
+	M.adjustBruteLoss(-2*REM, 0)
+	M.adjustFireLoss(-2*REM, 0)
+	M.adjustOxyLoss(-4, 0)
+	M.adjustToxLoss(-2*REM, 0)
+	M.adjustBrainLoss(-5*REM)
+	M.adjustCloneLoss(-3*REM, 0)
+	..()
+	. = 1

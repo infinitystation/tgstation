@@ -47,7 +47,6 @@
 	new /obj/item/weapon/storage/firstaid/brute(src)
 	new /obj/item/weapon/storage/firstaid/regular(src)
 	new /obj/item/weapon/defibrillator/compact/combat/loaded(src)
-	new /mob/living/simple_animal/bot/medbot(src)
 
 /obj/structure/closet/secure_closet/ertEngi
 	name = "engineer closet"

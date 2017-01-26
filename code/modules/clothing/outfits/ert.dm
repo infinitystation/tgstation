@@ -132,7 +132,7 @@
 	suit = /obj/item/clothing/suit/space/hardsuit/ert/engi
 	glasses =  /obj/item/clothing/glasses/meson/engine
 	back = /obj/item/weapon/storage/backpack/industrial
-	belt = /obj/item/weapon/storage/belt/utility/full
+	belt = /obj/item/weapon/storage/belt/utility/chief/full
 	l_pocket = /obj/item/weapon/rcd_ammo/large
 	r_hand = /obj/item/weapon/storage/firstaid/regular
 	backpack_contents = list(/obj/item/weapon/storage/box/engineer=1,\

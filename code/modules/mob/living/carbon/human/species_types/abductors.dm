@@ -9,3 +9,9 @@
 	var/scientist = 0 // vars to not pollute spieces list with castes
 	var/agent = 0
 	var/team = 1
+
+/datum/species/abductor/agent
+	agent = 1
+
+/datum/species/abductor/scientist
+	scientist = 1

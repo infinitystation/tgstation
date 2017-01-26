@@ -178,6 +178,15 @@
 	icon_state = "sleeper_s"
 	controls_inside = TRUE
 
-
 /obj/machinery/sleeper/old
 	icon_state = "oldpod"
+
+/obj/machinery/sleeper/syndie/alien
+	name = "T4 sleeper"
+	min_health = -80
+	efficiency = 0.5
+	max_integrity = 100
+	obj_integrity = 100
+	resistance_flags = FIRE_PROOF | ACID_PROOF
+	possible_chems = list("epinephrine", "alien_bionanites", "oculine", "inacusiate", "mutadone")
+	available_chems = list("epinephrine", "alien_bionanites", "oculine", "inacusiate", "mutadone")

@@ -4912,6 +4912,943 @@
 /obj/item/stack/spacecash/c10,
 /turf/open/floor/plasteel/rockvault/alien,
 /area/prison)
+"mt" = (
+/turf/closed/indestructible/riveted/infinity,
+/area/space)
+"mu" = (
+/turf/closed/indestructible/riveted/infinity,
+/area/space)
+"mv" = (
+/turf/closed/indestructible/riveted/infinity,
+/area/space)
+"mw" = (
+/turf/closed/indestructible/riveted/infinity,
+/area/space)
+"mx" = (
+/turf/closed/indestructible/riveted/infinity,
+/area/space)
+"my" = (
+/turf/closed/indestructible/riveted/infinity,
+/area/space)
+"mz" = (
+/turf/closed/indestructible/riveted/infinity,
+/area/space)
+"mA" = (
+/turf/closed/indestructible/riveted/infinity,
+/area/space)
+"mB" = (
+/obj/structure/lattice,
+/turf/open/space,
+/area/space)
+"mC" = (
+/turf/closed/indestructible/riveted/infinity,
+/area/space)
+"mD" = (
+/turf/closed/indestructible/riveted/infinity,
+/area/space)
+"mE" = (
+/turf/closed/indestructible/riveted/infinity,
+/area/space)
+"mF" = (
+/obj/structure/hyper_sleep/cable/tunnel{
+	tag = "icon-cryo_rear_nocable (EAST)";
+	icon_state = "cryo_rear_nocable";
+	dir = 4
+	},
+/turf/open/floor/plating,
+/area/space)
+"mG" = (
+/obj/structure/hyper_sleep{
+	tag = "icon-body_scanner_0 (EAST)";
+	icon_state = "body_scanner_0";
+	dir = 4
+	},
+/turf/open/floor/plasteel/whiteyellow/side{
+	dir = 10
+	},
+/area/space)
+"mH" = (
+/turf/open/floor/plasteel/warnwhite{
+	dir = 8
+	},
+/area/space)
+"mI" = (
+/turf/open/floor/plasteel/warnwhite{
+	dir = 4
+	},
+/area/space)
+"mJ" = (
+/obj/structure/hyper_sleep{
+	tag = "icon-body_scanner_0 (WEST)";
+	icon_state = "body_scanner_0";
+	dir = 8
+	},
+/turf/open/floor/plasteel/whiteyellow/side{
+	dir = 6
+	},
+/area/space)
+"mK" = (
+/obj/structure/hyper_sleep/cable/tunnel{
+	tag = "icon-cryo_rear_nocable (WEST)";
+	icon_state = "cryo_rear_nocable";
+	dir = 8
+	},
+/turf/open/floor/plating,
+/area/space)
+"mL" = (
+/turf/closed/indestructible/riveted/infinity,
+/area/space)
+"mM" = (
+/obj/structure/lattice,
+/turf/open/space,
+/area/space)
+"mN" = (
+/turf/closed/indestructible/riveted/infinity,
+/area/space)
+"mO" = (
+/turf/closed/indestructible/riveted/infinity,
+/area/space)
+"mP" = (
+/turf/closed/indestructible/riveted/infinity,
+/area/space)
+"mQ" = (
+/obj/structure/hyper_sleep/cable/tunnel{
+	tag = "icon-cryo_rear_nocable (EAST)";
+	icon_state = "cryo_rear_nocable";
+	dir = 4
+	},
+/turf/open/floor/plating,
+/area/space)
+"mR" = (
+/obj/structure/hyper_sleep{
+	tag = "icon-body_scanner_0 (EAST)";
+	icon_state = "body_scanner_0";
+	dir = 4
+	},
+/turf/open/floor/plasteel/whiteyellow/side{
+	dir = 10
+	},
+/area/space)
+"mS" = (
+/turf/open/floor/plasteel/warnwhite{
+	dir = 8
+	},
+/area/space)
+"mT" = (
+/turf/open/floor/plasteel/warnwhite{
+	dir = 4
+	},
+/area/space)
+"mU" = (
+/obj/structure/hyper_sleep{
+	tag = "icon-body_scanner_0 (WEST)";
+	icon_state = "body_scanner_0";
+	dir = 8
+	},
+/turf/open/floor/plasteel/whiteyellow/side{
+	dir = 6
+	},
+/area/space)
+"mV" = (
+/obj/structure/hyper_sleep/cable/tunnel{
+	tag = "icon-cryo_rear_nocable (WEST)";
+	icon_state = "cryo_rear_nocable";
+	dir = 8
+	},
+/turf/open/floor/plating,
+/area/space)
+"mW" = (
+/turf/closed/indestructible/riveted/infinity,
+/area/space)
+"mX" = (
+/obj/structure/lattice,
+/turf/open/space,
+/area/space)
+"mY" = (
+/obj/structure/lattice,
+/turf/open/space,
+/area/space)
+"mZ" = (
+/obj/machinery/porta_turret/heavy/central_command,
+/turf/open/floor/plating/airless,
+/area/space)
+"na" = (
+/obj/structure/lattice,
+/turf/open/space,
+/area/space)
+"nb" = (
+/obj/structure/lattice,
+/turf/open/space,
+/area/space)
+"nc" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/space)
+"nd" = (
+/turf/closed/indestructible/riveted/infinity,
+/area/space)
+"ne" = (
+/turf/closed/indestructible/riveted/infinity,
+/area/space)
+"nf" = (
+/obj/structure/hyper_sleep/cable/tunnel{
+	tag = "icon-cryo_rear_nocable (EAST)";
+	icon_state = "cryo_rear_nocable";
+	dir = 4
+	},
+/turf/open/floor/plating,
+/area/space)
+"ng" = (
+/obj/structure/hyper_sleep{
+	tag = "icon-body_scanner_0 (EAST)";
+	icon_state = "body_scanner_0";
+	dir = 4
+	},
+/turf/open/floor/plasteel/whiteyellow/side{
+	dir = 10
+	},
+/area/space)
+"nh" = (
+/turf/open/floor/plasteel/warnwhite{
+	dir = 8
+	},
+/area/space)
+"ni" = (
+/turf/open/floor/plasteel/warnwhite{
+	dir = 4
+	},
+/area/space)
+"nj" = (
+/obj/structure/hyper_sleep{
+	tag = "icon-body_scanner_0 (WEST)";
+	icon_state = "body_scanner_0";
+	dir = 8
+	},
+/turf/open/floor/plasteel/whiteyellow/side{
+	dir = 6
+	},
+/area/space)
+"nk" = (
+/obj/structure/hyper_sleep/cable/tunnel{
+	tag = "icon-cryo_rear_nocable (WEST)";
+	icon_state = "cryo_rear_nocable";
+	dir = 8
+	},
+/turf/open/floor/plating,
+/area/space)
+"nl" = (
+/turf/closed/indestructible/riveted/infinity,
+/area/space)
+"nm" = (
+/obj/structure/lattice,
+/turf/open/space,
+/area/space)
+"nn" = (
+/turf/closed/indestructible/riveted/infinity,
+/area/space)
+"no" = (
+/turf/closed/indestructible/riveted/infinity,
+/area/space)
+"np" = (
+/turf/closed/indestructible/riveted/infinity,
+/area/space)
+"nq" = (
+/turf/closed/indestructible/riveted/infinity,
+/area/space)
+"nr" = (
+/turf/closed/indestructible/riveted/infinity,
+/area/space)
+"ns" = (
+/turf/closed/indestructible/riveted/infinity,
+/area/space)
+"nt" = (
+/turf/closed/indestructible/riveted/infinity,
+/area/space)
+"nu" = (
+/turf/closed/indestructible/riveted/infinity,
+/area/space)
+"nv" = (
+/turf/open/floor/plasteel/warnwhite/side{
+	tag = "icon-white_warn_side (EAST)";
+	icon_state = "white_warn_side";
+	dir = 4
+	},
+/area/space)
+"nw" = (
+/turf/open/floor/plasteel/warnwhite/side{
+	tag = "icon-white_warn_side (EAST)";
+	icon_state = "white_warn_side";
+	dir = 4
+	},
+/area/space)
+"nx" = (
+/turf/closed/indestructible/riveted/infinity,
+/area/space)
+"ny" = (
+/turf/closed/indestructible/riveted/infinity,
+/area/space)
+"nz" = (
+/turf/closed/indestructible/riveted/infinity,
+/area/space)
+"nA" = (
+/turf/closed/indestructible/riveted/infinity,
+/area/space)
+"nB" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/space)
+"nC" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/space)
+"nD" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/space)
+"nE" = (
+/turf/closed/indestructible/riveted/infinity,
+/area/space)
+"nF" = (
+/turf/closed/indestructible/riveted/infinity,
+/area/space)
+"nG" = (
+/obj/machinery/door/firedoor,
+/turf/open/floor/plasteel/warning/side{
+	tag = "icon-plasteel_warn_side (EAST)";
+	icon_state = "plasteel_warn_side";
+	dir = 4
+	},
+/area/space)
+"nH" = (
+/obj/machinery/door/firedoor,
+/turf/open/floor/plasteel/warning/side{
+	tag = "icon-plasteel_warn_side (EAST)";
+	icon_state = "plasteel_warn_side";
+	dir = 4
+	},
+/area/space)
+"nI" = (
+/obj/machinery/door/firedoor,
+/turf/open/floor/plasteel/warning/side{
+	tag = "icon-plasteel_warn_side (EAST)";
+	icon_state = "plasteel_warn_side";
+	dir = 4
+	},
+/area/space)
+"nJ" = (
+/turf/closed/indestructible/riveted/infinity,
+/area/space)
+"nK" = (
+/turf/closed/indestructible/riveted/infinity,
+/area/space)
+"nL" = (
+/turf/closed/indestructible/riveted/infinity,
+/area/space)
+"nM" = (
+/turf/closed/indestructible/riveted/infinity,
+/area/space)
+"nN" = (
+/turf/closed/indestructible/riveted/infinity,
+/area/space)
+"nO" = (
+/turf/closed/indestructible/riveted/infinity,
+/area/space)
+"nP" = (
+/turf/open/floor/plasteel/stairsnew/grey{
+	tag = "icon-Stairs_alone (EAST)";
+	icon_state = "Stairs_alone";
+	dir = 4
+	},
+/area/space)
+"nQ" = (
+/turf/open/floor/plasteel/blackvault/corner{
+	dir = 4
+	},
+/area/space)
+"nR" = (
+/turf/open/floor/plasteel/blackvault/corner{
+	dir = 4
+	},
+/area/space)
+"nS" = (
+/turf/open/floor/plasteel/blackvault/corner{
+	dir = 8
+	},
+/area/space)
+"nT" = (
+/turf/open/floor/plasteel/blackvault/corner{
+	dir = 8
+	},
+/area/space)
+"nU" = (
+/turf/open/floor/plasteel/stairsnew/grey{
+	tag = "icon-Stairs_alone (WEST)";
+	icon_state = "Stairs_alone";
+	dir = 8
+	},
+/area/space)
+"nV" = (
+/turf/open/floor/plasteel/warning{
+	dir = 9
+	},
+/area/space)
+"nW" = (
+/turf/open/floor/plasteel/warning{
+	dir = 1
+	},
+/area/space)
+"nX" = (
+/turf/open/floor/plasteel/warning{
+	dir = 1
+	},
+/area/space)
+"nY" = (
+/turf/open/floor/plasteel/warning{
+	dir = 1
+	},
+/area/space)
+"nZ" = (
+/turf/open/floor/plasteel/warning{
+	dir = 1
+	},
+/area/space)
+"oa" = (
+/turf/open/floor/plasteel/warning{
+	dir = 5
+	},
+/area/space)
+"ob" = (
+/obj/machinery/door/firedoor,
+/turf/open/floor/plasteel/warning/side,
+/area/space)
+"oc" = (
+/turf/open/floor/plasteel/warning{
+	dir = 9
+	},
+/area/space)
+"od" = (
+/turf/open/floor/plasteel/warning{
+	dir = 1
+	},
+/area/space)
+"oe" = (
+/turf/open/floor/plasteel/warning{
+	dir = 5
+	},
+/area/space)
+"of" = (
+/obj/machinery/door/firedoor,
+/turf/open/floor/plasteel/warning/side{
+	tag = "icon-plasteel_warn_side (NORTH)";
+	icon_state = "plasteel_warn_side";
+	dir = 1
+	},
+/area/space)
+"og" = (
+/turf/closed/indestructible/riveted/infinity,
+/area/space)
+"oh" = (
+/turf/closed/indestructible/riveted/infinity,
+/area/space)
+"oi" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/space)
+"oj" = (
+/turf/open/floor/plasteel/blackvault{
+	dir = 8
+	},
+/area/space)
+"ok" = (
+/turf/open/floor/plasteel/black,
+/area/space)
+"ol" = (
+/turf/open/floor/plasteel/black,
+/area/space)
+"om" = (
+/turf/open/floor/plasteel/blackvault{
+	dir = 4
+	},
+/area/space)
+"on" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/space)
+"oo" = (
+/turf/open/floor/plasteel/warning{
+	dir = 8
+	},
+/area/space)
+"op" = (
+/turf/open/floor/plasteel/neutral,
+/area/space)
+"oq" = (
+/turf/open/floor/plasteel/neutral,
+/area/space)
+"or" = (
+/turf/open/floor/plasteel/neutral,
+/area/space)
+"os" = (
+/turf/open/floor/plasteel/neutral,
+/area/space)
+"ot" = (
+/turf/open/floor/plasteel/warning{
+	dir = 4
+	},
+/area/space)
+"ou" = (
+/obj/machinery/door/firedoor,
+/turf/open/floor/plasteel/warning/side,
+/area/space)
+"ov" = (
+/turf/open/floor/plasteel/warning{
+	dir = 8
+	},
+/area/space)
+"ow" = (
+/turf/open/floor/plasteel/neutral,
+/area/space)
+"ox" = (
+/turf/open/floor/plasteel/warning{
+	dir = 4
+	},
+/area/space)
+"oy" = (
+/obj/machinery/door/firedoor,
+/turf/open/floor/plasteel/warning/side{
+	tag = "icon-plasteel_warn_side (NORTH)";
+	icon_state = "plasteel_warn_side";
+	dir = 1
+	},
+/area/space)
+"oz" = (
+/turf/closed/indestructible/riveted/infinity,
+/area/space)
+"oA" = (
+/turf/closed/indestructible/riveted/infinity,
+/area/space)
+"oB" = (
+/turf/open/floor/plasteel/stairsnew/grey{
+	tag = "icon-Stairs_alone (EAST)";
+	icon_state = "Stairs_alone";
+	dir = 4
+	},
+/area/space)
+"oC" = (
+/turf/open/floor/plasteel/vault{
+	dir = 10
+	},
+/area/space)
+"oD" = (
+/turf/open/floor/plasteel/vault{
+	dir = 10
+	},
+/area/space)
+"oE" = (
+/turf/open/floor/plasteel/vault{
+	dir = 6
+	},
+/area/space)
+"oF" = (
+/turf/open/floor/plasteel/vault{
+	dir = 6
+	},
+/area/space)
+"oG" = (
+/turf/open/floor/plasteel/stairsnew/grey{
+	tag = "icon-Stairs_alone (WEST)";
+	icon_state = "Stairs_alone";
+	dir = 8
+	},
+/area/space)
+"oH" = (
+/turf/open/floor/plasteel/warning{
+	dir = 10
+	},
+/area/space)
+"oI" = (
+/turf/open/floor/plasteel/warning,
+/area/space)
+"oJ" = (
+/turf/open/floor/plasteel/warning,
+/area/space)
+"oK" = (
+/turf/open/floor/plasteel/warning,
+/area/space)
+"oL" = (
+/turf/open/floor/plasteel/warning,
+/area/space)
+"oM" = (
+/turf/open/floor/plasteel/warning{
+	dir = 6
+	},
+/area/space)
+"oN" = (
+/obj/machinery/door/firedoor,
+/turf/open/floor/plasteel/warning/side,
+/area/space)
+"oO" = (
+/turf/open/floor/plasteel/warning{
+	dir = 10
+	},
+/area/space)
+"oP" = (
+/turf/open/floor/plasteel/warning,
+/area/space)
+"oQ" = (
+/turf/open/floor/plasteel/warning{
+	dir = 6
+	},
+/area/space)
+"oR" = (
+/obj/machinery/door/firedoor,
+/turf/open/floor/plasteel/warning/side{
+	tag = "icon-plasteel_warn_side (NORTH)";
+	icon_state = "plasteel_warn_side";
+	dir = 1
+	},
+/area/space)
+"oS" = (
+/turf/closed/indestructible/riveted/infinity,
+/area/space)
+"oT" = (
+/turf/closed/indestructible/riveted/infinity,
+/area/space)
+"oU" = (
+/turf/closed/indestructible/riveted/infinity,
+/area/space)
+"oV" = (
+/turf/closed/indestructible/riveted/infinity,
+/area/space)
+"oW" = (
+/turf/open/floor/plasteel/warnwhite/side{
+	tag = "icon-white_warn_side (EAST)";
+	icon_state = "white_warn_side";
+	dir = 4
+	},
+/area/space)
+"oX" = (
+/turf/open/floor/plasteel/warnwhite/side{
+	tag = "icon-white_warn_side (EAST)";
+	icon_state = "white_warn_side";
+	dir = 4
+	},
+/area/space)
+"oY" = (
+/turf/closed/indestructible/riveted/infinity,
+/area/space)
+"oZ" = (
+/turf/closed/indestructible/riveted/infinity,
+/area/space)
+"pa" = (
+/turf/closed/indestructible/riveted/infinity,
+/area/space)
+"pb" = (
+/turf/closed/indestructible/riveted/infinity,
+/area/space)
+"pc" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/space)
+"pd" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/space)
+"pe" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/space)
+"pf" = (
+/turf/closed/indestructible/riveted/infinity,
+/area/space)
+"pg" = (
+/turf/closed/indestructible/riveted/infinity,
+/area/space)
+"ph" = (
+/obj/machinery/door/firedoor,
+/turf/open/floor/plasteel/warning/side{
+	tag = "icon-plasteel_warn_side (WEST)";
+	icon_state = "plasteel_warn_side";
+	dir = 8
+	},
+/area/space)
+"pi" = (
+/obj/machinery/door/firedoor,
+/turf/open/floor/plasteel/warning/side{
+	tag = "icon-plasteel_warn_side (WEST)";
+	icon_state = "plasteel_warn_side";
+	dir = 8
+	},
+/area/space)
+"pj" = (
+/obj/machinery/door/firedoor,
+/turf/open/floor/plasteel/warning/side{
+	tag = "icon-plasteel_warn_side (WEST)";
+	icon_state = "plasteel_warn_side";
+	dir = 8
+	},
+/area/space)
+"pk" = (
+/turf/closed/indestructible/riveted/infinity,
+/area/space)
+"pl" = (
+/turf/closed/indestructible/riveted/infinity,
+/area/space)
+"pm" = (
+/turf/closed/indestructible/riveted/infinity,
+/area/space)
+"pn" = (
+/turf/closed/indestructible/riveted/infinity,
+/area/space)
+"po" = (
+/turf/closed/indestructible/riveted/infinity,
+/area/space)
+"pp" = (
+/turf/closed/indestructible/riveted/infinity,
+/area/space)
+"pq" = (
+/obj/structure/hyper_sleep/cable/tunnel{
+	tag = "icon-cryo_rear_nocable (EAST)";
+	icon_state = "cryo_rear_nocable";
+	dir = 4
+	},
+/turf/open/floor/plating,
+/area/space)
+"pr" = (
+/obj/structure/hyper_sleep{
+	tag = "icon-body_scanner_0 (EAST)";
+	icon_state = "body_scanner_0";
+	dir = 4
+	},
+/turf/open/floor/plasteel/whiteyellow/side{
+	dir = 10
+	},
+/area/space)
+"ps" = (
+/turf/open/floor/plasteel/warnwhite{
+	dir = 8
+	},
+/area/space)
+"pt" = (
+/turf/open/floor/plasteel/warnwhite{
+	dir = 4
+	},
+/area/space)
+"pu" = (
+/obj/structure/hyper_sleep{
+	tag = "icon-body_scanner_0 (WEST)";
+	icon_state = "body_scanner_0";
+	dir = 8
+	},
+/turf/open/floor/plasteel/whiteyellow/side{
+	dir = 6
+	},
+/area/space)
+"pv" = (
+/obj/structure/hyper_sleep/cable/tunnel{
+	tag = "icon-cryo_rear_nocable (WEST)";
+	icon_state = "cryo_rear_nocable";
+	dir = 8
+	},
+/turf/open/floor/plating,
+/area/space)
+"pw" = (
+/turf/closed/indestructible/riveted/infinity,
+/area/space)
+"px" = (
+/obj/structure/lattice,
+/turf/open/space,
+/area/space)
+"py" = (
+/turf/closed/indestructible/riveted/infinity,
+/area/space)
+"pz" = (
+/turf/closed/indestructible/riveted/infinity,
+/area/space)
+"pA" = (
+/turf/closed/indestructible/riveted/infinity,
+/area/space)
+"pB" = (
+/turf/closed/indestructible/riveted/infinity,
+/area/space)
+"pC" = (
+/turf/closed/indestructible/riveted/infinity,
+/area/space)
+"pD" = (
+/turf/closed/indestructible/riveted/infinity,
+/area/space)
+"pE" = (
+/obj/structure/hyper_sleep/cable/tunnel{
+	tag = "icon-cryo_rear_nocable (EAST)";
+	icon_state = "cryo_rear_nocable";
+	dir = 4
+	},
+/turf/open/floor/plating,
+/area/space)
+"pF" = (
+/obj/structure/hyper_sleep{
+	tag = "icon-body_scanner_0 (EAST)";
+	icon_state = "body_scanner_0";
+	dir = 4
+	},
+/turf/open/floor/plasteel/whiteyellow/side{
+	dir = 10
+	},
+/area/space)
+"pG" = (
+/turf/open/floor/plasteel/warnwhite{
+	dir = 8
+	},
+/area/space)
+"pH" = (
+/turf/open/floor/plasteel/warnwhite{
+	dir = 4
+	},
+/area/space)
+"pI" = (
+/obj/structure/hyper_sleep{
+	tag = "icon-body_scanner_0 (WEST)";
+	icon_state = "body_scanner_0";
+	dir = 8
+	},
+/turf/open/floor/plasteel/whiteyellow/side{
+	dir = 6
+	},
+/area/space)
+"pJ" = (
+/obj/structure/hyper_sleep/cable/tunnel{
+	tag = "icon-cryo_rear_nocable (WEST)";
+	icon_state = "cryo_rear_nocable";
+	dir = 8
+	},
+/turf/open/floor/plating,
+/area/space)
+"pK" = (
+/turf/closed/indestructible/riveted/infinity,
+/area/space)
+"pL" = (
+/obj/structure/lattice,
+/turf/open/space,
+/area/space)
+"pM" = (
+/obj/structure/lattice,
+/turf/open/space,
+/area/space)
+"pN" = (
+/obj/machinery/porta_turret/heavy/central_command,
+/turf/open/floor/plating/airless,
+/area/space)
+"pO" = (
+/obj/structure/lattice,
+/turf/open/space,
+/area/space)
+"pP" = (
+/obj/structure/lattice,
+/turf/open/space,
+/area/space)
+"pQ" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/space)
+"pR" = (
+/turf/closed/indestructible/riveted/infinity,
+/area/space)
+"pS" = (
+/turf/closed/indestructible/riveted/infinity,
+/area/space)
+"pT" = (
+/obj/structure/hyper_sleep/cable/tunnel{
+	tag = "icon-cryo_rear_nocable (EAST)";
+	icon_state = "cryo_rear_nocable";
+	dir = 4
+	},
+/turf/open/floor/plating,
+/area/space)
+"pU" = (
+/obj/structure/hyper_sleep{
+	tag = "icon-body_scanner_0 (EAST)";
+	icon_state = "body_scanner_0";
+	dir = 4
+	},
+/turf/open/floor/plasteel/whiteyellow/side{
+	dir = 10
+	},
+/area/space)
+"pV" = (
+/turf/open/floor/plasteel/warnwhite{
+	dir = 8
+	},
+/area/space)
+"pW" = (
+/turf/open/floor/plasteel/warnwhite{
+	dir = 4
+	},
+/area/space)
+"pX" = (
+/obj/structure/hyper_sleep{
+	tag = "icon-body_scanner_0 (WEST)";
+	icon_state = "body_scanner_0";
+	dir = 8
+	},
+/turf/open/floor/plasteel/whiteyellow/side{
+	dir = 6
+	},
+/area/space)
+"pY" = (
+/obj/structure/hyper_sleep/cable/tunnel{
+	tag = "icon-cryo_rear_nocable (WEST)";
+	icon_state = "cryo_rear_nocable";
+	dir = 8
+	},
+/turf/open/floor/plating,
+/area/space)
+"pZ" = (
+/turf/closed/indestructible/riveted/infinity,
+/area/space)
+"qa" = (
+/obj/structure/lattice,
+/turf/open/space,
+/area/space)
+"qb" = (
+/turf/closed/indestructible/riveted/infinity,
+/area/space)
+"qc" = (
+/turf/closed/indestructible/riveted/infinity,
+/area/space)
+"qd" = (
+/turf/closed/indestructible/riveted/infinity,
+/area/space)
+"qe" = (
+/turf/closed/indestructible/riveted/infinity,
+/area/space)
+"qf" = (
+/turf/closed/indestructible/riveted/infinity,
+/area/space)
+"qg" = (
+/turf/closed/indestructible/riveted/infinity,
+/area/space)
+"qh" = (
+/turf/closed/indestructible/riveted/infinity,
+/area/space)
+"qi" = (
+/turf/closed/indestructible/riveted/infinity,
+/area/space)
+"qj" = (
+/turf/closed/indestructible/riveted/infinity,
+/area/space)
+"qk" = (
+/turf/closed/indestructible/riveted/infinity,
+/area/space)
+"ql" = (
+/obj/structure/lattice,
+/turf/open/space,
+/area/space)
+"qm" = (
+/turf/closed/indestructible/riveted/infinity,
+/area/space)
+"qn" = (
+/turf/closed/indestructible/riveted/infinity,
+/area/space)
 
 (1,1,1) = {"
 aa
@@ -48204,19 +49141,19 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+mt
+mE
+mP
+ne
+ns
+nO
+oh
+oA
+oT
+pp
+pD
+pS
+qd
 aa
 aa
 aa
@@ -48461,19 +49398,19 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+mu
+mF
+mQ
+nf
+nt
+nP
+oi
+oB
+oU
+pq
+pE
+pT
+qe
 aa
 aa
 aa
@@ -48718,19 +49655,19 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+mv
+mG
+mR
+ng
+nu
+nQ
+oj
+oC
+oV
+pr
+pF
+pU
+qf
 aa
 aa
 aa
@@ -48975,19 +49912,19 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+mw
+mH
+mS
+nh
+nv
+nR
+ok
+oD
+oW
+ps
+pG
+pV
+qg
 aa
 aa
 aa
@@ -49232,19 +50169,19 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+mx
+mI
+mT
+ni
+nw
+nS
+ol
+oE
+oX
+pt
+pH
+pW
+qh
 aa
 aa
 aa
@@ -49489,19 +50426,19 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+my
+mJ
+mU
+nj
+nx
+nT
+om
+oF
+oY
+pu
+pI
+pX
+qi
 aa
 aa
 aa
@@ -49746,19 +50683,19 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+mz
+mK
+mV
+nk
+ny
+nU
+on
+oG
+oZ
+pv
+pJ
+pY
+qj
 aa
 aa
 aa
@@ -50003,19 +50940,19 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+mA
+mL
+mW
+nl
+nz
+nV
+oo
+oH
+pa
+pw
+pK
+pZ
+qk
 aa
 aa
 aa
@@ -50262,15 +51199,15 @@ aa
 aa
 aa
 aa
+mX
 aa
+nA
+nW
+op
+oI
+pb
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+pL
 aa
 aa
 aa
@@ -50519,15 +51456,15 @@ aa
 aa
 aa
 aa
+mY
 aa
+nB
+nX
+oq
+oJ
+pc
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+pM
 aa
 aa
 aa
@@ -50774,19 +51711,19 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+mB
+mM
+mZ
+nm
+nC
+nY
+or
+oK
+pd
+px
+pN
+qa
+ql
 aa
 aa
 aa
@@ -51033,15 +51970,15 @@ aa
 aa
 aa
 aa
+na
 aa
+nD
+nZ
+os
+oL
+pe
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+pO
 aa
 aa
 aa
@@ -51290,15 +52227,15 @@ aa
 aa
 aa
 aa
+nb
 aa
+nE
+oa
+ot
+oM
+pf
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+pP
 aa
 aa
 aa
@@ -51545,19 +52482,19 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+mC
+mN
+nc
+nn
+nF
+ob
+ou
+oN
+pg
+py
+pQ
+qb
+qm
 aa
 aa
 aa
@@ -51805,13 +52742,13 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+no
+nG
+oc
+ov
+oO
+ph
+pz
 aa
 aa
 aa
@@ -52062,13 +52999,13 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+np
+nH
+od
+ow
+oP
+pi
+pA
 aa
 aa
 aa
@@ -52319,13 +53256,13 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+nq
+nI
+oe
+ox
+oQ
+pj
+pB
 aa
 aa
 aa
@@ -52573,19 +53510,19 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+mD
+mO
+nd
+nr
+nJ
+of
+oy
+oR
+pk
+pC
+pR
+qc
+qn
 aa
 aa
 aa
@@ -52834,11 +53771,11 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
+nK
+og
+oz
+oS
+pl
 aa
 aa
 aa
@@ -53091,11 +54028,11 @@ aa
 aa
 aa
 aa
+nL
 aa
 aa
 aa
-aa
-aa
+pm
 aa
 aa
 aa
@@ -53348,11 +54285,11 @@ aa
 aa
 aa
 aa
+nM
 aa
 aa
 aa
-aa
-aa
+pn
 aa
 aa
 aa
@@ -53605,11 +54542,11 @@ aa
 aa
 aa
 aa
+nN
 aa
 aa
 aa
-aa
-aa
+po
 aa
 aa
 aa
