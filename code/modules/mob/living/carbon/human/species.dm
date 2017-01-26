@@ -315,6 +315,12 @@
 		if(H.wear_suit && (H.wear_suit.flags_inv & HIDEJUMPSUIT))
 			bodyparts_to_add -= "tail_tajaran"
 
+	if("waggingtail_tajaran" in mutant_bodyparts)
+		if(H.wear_suit && (H.wear_suit.flags_inv & HIDEJUMPSUIT))
+			bodyparts_to_add -= "waggingtail_tajaran"
+		else if ("tail_tajaran" in mutant_bodyparts)
+			bodyparts_to_add -= "waggingtail_tajaran"
+
 	if("waggingtail_lizard" in mutant_bodyparts)
 		if(H.wear_suit && (H.wear_suit.flags_inv & HIDEJUMPSUIT))
 			bodyparts_to_add -= "waggingtail_lizard"
@@ -360,6 +366,7 @@
 	if("ears_tajaran" in mutant_bodyparts)
 		if((H.head && (H.head.flags_inv & HIDEHAIR)) || (H.wear_mask && (H.wear_mask.flags_inv & HIDEHAIR)))
 			bodyparts_to_add -= "ears_tajaran"
+
 	if("wings" in mutant_bodyparts)
 		if(!H.dna.features["wings"] || H.dna.features["wings"] == "None" || (H.wear_suit && (H.wear_suit.flags_inv & HIDEJUMPSUIT) && (!H.wear_suit.species_exception || !is_type_in_list(src, H.wear_suit.species_exception))))
 			bodyparts_to_add -= "wings"
@@ -417,6 +424,8 @@
 					S.= animated_tails_list_human[H.dna.features["tail_human"]]
 				if("tail_tajaran")
 					S = tails_list_tajaran[H.dna.features["tail_tajaran"]]
+				if("waggingtail_tajaran")
+					S. = animated_tails_list_tajaran[H.dna.features["tail_tajaran"]]
 				if("spines")
 					S = spines_list[H.dna.features["spines"]]
 				if("waggingspines")
@@ -448,7 +457,7 @@
 				bodypart = "tail"
 			if(bodypart == "ears_tajaran")
 				bodypart = "ears"
-			else if(bodypart == "waggingtail_lizard" || bodypart == "waggingtail_human")
+			else if(bodypart == "waggingtail_lizard" || bodypart == "waggingtail_human" || bodypart == "waggingtail_tajaran")
 				bodypart = "waggingtail"
 
 
