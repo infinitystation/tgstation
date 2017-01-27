@@ -55417,9 +55417,8 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	req_access_txt = "0"
 	},
-/turf/open/floor/plasteel{
-	dir = 8;
-	icon_state = "warning"
+/turf/open/floor/plasteel/warning/corner{
+	dir = 4
 	},
 /area/hallway/secondary/entry)
 "bPn" = (
@@ -58133,10 +58132,9 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
-/turf/open/floor/plasteel/stairsnew/grey/medium{
-	tag = "icon-stairs_middle (EAST)";
-	icon_state = "stairs_middle";
-	dir = 4
+/turf/open/floor/plasteel{
+	dir = 8;
+	icon_state = "warning"
 	},
 /area/hallway/secondary/entry)
 "bUg" = (
@@ -58897,10 +58895,7 @@
 /area/atmos)
 "bVB" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden,
-/turf/open/floor/plasteel{
-	dir = 8;
-	icon_state = "warning"
-	},
+/turf/open/floor/plasteel/neutral,
 /area/hallway/secondary/entry)
 "bVC" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
@@ -58967,8 +58962,8 @@
 	icon_state = "map-left-MS";
 	pixel_y = -32
 	},
-/turf/open/floor/plasteel/warning{
-	dir = 10
+/turf/open/floor/plasteel{
+	icon_state = "warning"
 	},
 /area/hallway/secondary/entry)
 "bVJ" = (
@@ -95239,8 +95234,9 @@
 	name = "Slime Euthanization Chamber";
 	req_access_txt = "55"
 	},
+/obj/structure/fans/tiny,
 /turf/open/floor/plating,
-/area/maintenance/xmaint)
+/area/toxins/xenobiology)
 "ddh" = (
 /obj/machinery/light/small{
 	dir = 8
@@ -99310,6 +99306,93 @@
 	name = "floor"
 	},
 /area/shuttle/escape)
+"dlK" = (
+/obj/structure/grille,
+/obj/structure/lattice,
+/turf/closed/wall,
+/area/space)
+"dlL" = (
+/obj/structure/grille,
+/obj/structure/lattice,
+/turf/closed/wall,
+/area/space)
+"dlM" = (
+/obj/structure/grille,
+/obj/structure/lattice,
+/turf/closed/wall,
+/area/space)
+"dlN" = (
+/obj/structure/grille,
+/obj/structure/lattice,
+/turf/closed/wall,
+/area/space)
+"dlO" = (
+/obj/structure/grille,
+/obj/structure/lattice,
+/turf/closed/wall,
+/area/space)
+"dlP" = (
+/obj/structure/lattice,
+/obj/structure/grille,
+/turf/closed/wall,
+/area/space)
+"dlQ" = (
+/obj/structure/grille,
+/obj/structure/lattice,
+/turf/closed/wall,
+/area/space)
+"dlR" = (
+/obj/structure/grille,
+/obj/structure/lattice,
+/turf/closed/wall,
+/area/space)
+"dlS" = (
+/obj/structure/grille,
+/obj/structure/lattice,
+/turf/closed/wall,
+/area/space)
+"dlT" = (
+/obj/structure/lattice,
+/obj/structure/grille,
+/turf/closed/wall,
+/area/space)
+"dlU" = (
+/obj/structure/lattice,
+/obj/structure/grille,
+/turf/closed/wall,
+/area/space)
+"dlV" = (
+/obj/structure/lattice,
+/obj/structure/grille,
+/turf/closed/wall,
+/area/space)
+"dlW" = (
+/obj/item/clothing/mask/gas/mercenaries,
+/turf/open/floor/plating/airless,
+/area/space)
+"dlX" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 4
+	},
+/obj/structure/sign/pods{
+	pixel_y = 32
+	},
+/turf/open/floor/plasteel/warning/side,
+/area/hallway/secondary/entry)
+"dlY" = (
+/turf/closed/wall/shuttle/smooth,
+/area/space)
+"dlZ" = (
+/turf/closed/wall/shuttle/smooth,
+/area/space)
+"dma" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
+	},
+/obj/machinery/holopad,
+/turf/open/floor/plasteel/neutral,
+/area/hallway/secondary/entry)
 
 (1,1,1) = {"
 aaa
@@ -110730,7 +110813,7 @@ aZM
 aZM
 aaa
 aai
-aaa
+dlY
 djl
 beA
 djX
@@ -110738,7 +110821,7 @@ djD
 djX
 beA
 djl
-aaa
+dlZ
 aai
 aaa
 aZM
@@ -111494,7 +111577,7 @@ aKw
 aKw
 aNq
 aFr
-aQM
+dlX
 diP
 aTN
 aVv
@@ -111785,9 +111868,9 @@ aZM
 aVv
 aVv
 aVv
-bLT
+bdc
 bUf
-bVH
+bEQ
 aVv
 aaa
 aaa
@@ -112300,7 +112383,7 @@ bbo
 bEU
 aZO
 dlD
-aDg
+dma
 bWZ
 aVv
 aaa
@@ -123020,7 +123103,7 @@ aaa
 aaa
 aaa
 aaa
-aag
+dlK
 aai
 aaa
 aaO
@@ -123277,7 +123360,7 @@ aaa
 aaa
 aaa
 aaa
-aag
+dlL
 aaa
 aaa
 aaO
@@ -123534,7 +123617,7 @@ aaa
 aaa
 aaa
 aai
-aag
+dlM
 aai
 aaF
 aaO
@@ -123791,7 +123874,7 @@ aaa
 aaa
 aaa
 aaa
-aag
+dlN
 aai
 aaa
 aaO
@@ -124048,7 +124131,7 @@ aaa
 aaa
 aaa
 aaa
-aag
+dlO
 aai
 aai
 aaO
@@ -126248,7 +126331,7 @@ deu
 deB
 der
 dem
-dlJ
+dlI
 dfS
 der
 bsl
@@ -126620,7 +126703,7 @@ aaa
 aaa
 aaa
 aaa
-aan
+dlP
 aaa
 aba
 abu
@@ -126877,7 +126960,7 @@ aaa
 aaa
 aaa
 aai
-aag
+dlQ
 aai
 abb
 abv
@@ -127134,7 +127217,7 @@ aaa
 aaa
 aaa
 aai
-aag
+dlR
 aaa
 abc
 abw
@@ -127391,7 +127474,7 @@ aaa
 aaa
 aaa
 aaa
-aag
+dlS
 aaa
 abd
 abx
@@ -127648,7 +127731,7 @@ aaa
 aaa
 aaa
 aaa
-aan
+dlT
 aai
 aba
 aby
@@ -128420,7 +128503,7 @@ aaa
 aaa
 aaa
 aaa
-aan
+dlU
 aai
 aai
 aai
@@ -128677,7 +128760,7 @@ aae
 aaa
 aaa
 aaa
-aan
+dlV
 aaa
 aai
 aaa
@@ -132540,7 +132623,7 @@ aai
 aai
 aai
 aeb
-aeb
+dlW
 afT
 afT
 afT

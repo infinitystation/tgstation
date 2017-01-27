@@ -15,6 +15,7 @@
 	var/active = 0
 	var/det_time = 50
 	var/display_timer = 1
+	var/pin_sound = 'sound/effects/grenade_pin_1.ogg'
 
 /obj/item/weapon/grenade/deconstruct(disassembled = TRUE)
 	if(!disassembled)
@@ -49,7 +50,7 @@
 	if(!active)
 		if(clown_check(user))
 			user << "<span class='warning'>You prime the [name]! [det_time/10] seconds!</span>"
-			playsound(user.loc, 'sound/weapons/armbomb.ogg', 60, 1)
+			playsound(user.loc, pin_sound, 60, 1)
 			active = 1
 			icon_state = initial(icon_state) + "_active"
 			add_fingerprint(user)

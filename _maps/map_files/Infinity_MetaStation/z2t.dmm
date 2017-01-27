@@ -3585,7 +3585,7 @@
 	name = "\improper Syndicate Cruiser"
 	})
 "jz" = (
-/turf/closed/wall/r_wall,
+/turf/closed/wall/mineral/plastitanium,
 /area/shuttle/syndicate{
 	name = "\improper Syndicate Cruiser"
 	})
@@ -3922,7 +3922,7 @@
 /obj/machinery/porta_turret/syndicate{
 	dir = 2
 	},
-/turf/closed/wall,
+/turf/closed/wall/mineral/plastitanium,
 /area/shuttle/syndicate{
 	name = "\improper Syndicate Cruiser"
 	})
@@ -4561,7 +4561,7 @@
 	pixel_x = 0;
 	pixel_y = 0
 	},
-/turf/closed/wall,
+/turf/closed/wall/mineral/plastitanium,
 /area/shuttle/syndicate{
 	name = "\improper Syndicate Cruiser"
 	})
@@ -4916,7 +4916,7 @@
 	pixel_y = 0;
 	tag = "icon-direction_bridge (EAST)"
 	},
-/turf/closed/wall,
+/turf/closed/wall/mineral/plastitanium,
 /area/shuttle/syndicate{
 	name = "\improper Syndicate Cruiser"
 	})
@@ -7602,11 +7602,7 @@
 	},
 /area/shuttle/assault_pod)
 "tC" = (
-/turf/closed/wall/shuttle{
-	tag = "icon-wall3";
-	icon_state = "wall3";
-	dir = 2
-	},
+/turf/closed/wall/mineral/plastitanium,
 /area/shuttle/assault_pod)
 "tD" = (
 /obj/machinery/door/airlock/centcom{
@@ -8056,7 +8052,7 @@
 /area/syndicate_mothership)
 "uJ" = (
 /obj/structure/shuttle/engine/heater,
-/turf/closed/wall,
+/turf/closed/wall/mineral/plastitanium,
 /area/shuttle/syndicate{
 	name = "\improper Syndicate Cruiser"
 	})
@@ -9837,7 +9833,6 @@
 /obj/machinery/door/window/brigdoor/southleft{
 	name = "Shower"
 	},
-/obj/item/weapon/soap/deluxe,
 /obj/machinery/atmospherics/components/unary/vent_pump{
 	dir = 2;
 	on = 1
@@ -10907,8 +10902,9 @@
 /turf/open/floor/plating/abductor,
 /area/abductor_ship)
 "Br" = (
-/obj/machinery/sleeper/syndie{
-	color = "#C862CC";
+/obj/machinery/sleeper/syndie/alien{
+	tag = "icon-sleeper_s (NORTH)";
+	icon_state = "sleeper_s";
 	dir = 1
 	},
 /turf/open/floor/plating/abductor,
@@ -13419,12 +13415,10 @@
 	},
 /obj/structure/mirror{
 	desc = "Mirror mirror on the wall, who is the most robust of them all?";
-	pixel_x = 28
+	pixel_x = -28
 	},
-/turf/open/floor/plasteel/whitered/corner{
-	tag = "icon-whiteredcorner (NORTH)";
-	icon_state = "whiteredcorner";
-	dir = 1
+/turf/open/floor/plasteel/whitered/side{
+	dir = 8
 	},
 /area/tdome/tdomeobserve)
 "GL" = (
@@ -15923,10 +15917,8 @@
 /turf/closed/indestructible/riveted/infinity,
 /area/tdome/arena)
 "MN" = (
-/obj/machinery/camera{
-	pixel_x = 10;
-	network = list("thunder");
-	c_tag = "Arena"
+/obj/machinery/camera/thunder{
+	pixel_x = 11
 	},
 /turf/open/floor/plasteel/circuit/gcircuit,
 /area/tdome/arena)
@@ -16839,7 +16831,7 @@
 	},
 /area/centcom/evac)
 "OW" = (
-/turf/closed/wall/shuttle/smooth/overspace,
+/turf/closed/wall/mineral/plastitanium,
 /area/shuttle/syndicate{
 	name = "\improper UAC shuttle"
 	})
@@ -16916,7 +16908,7 @@
 /obj/structure/shuttle/engine/platform{
 	dir = 1
 	},
-/turf/closed/wall/shuttle/smooth,
+/turf/closed/wall/mineral/plastitanium,
 /area/shuttle/syndicate{
 	name = "\improper UAC shuttle"
 	})
@@ -19452,7 +19444,7 @@
 /obj/machinery/porta_turret/syndicate{
 	dir = 1
 	},
-/turf/closed/wall/r_wall,
+/turf/closed/wall/mineral/plastitanium,
 /area/shuttle/syndicate{
 	name = "\improper Syndicate Cruiser"
 	})
@@ -21047,6 +21039,830 @@
 "YQ" = (
 /turf/closed/wall/mineral/abductor/terror,
 /area/space)
+"YR" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"YS" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"YT" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"YU" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"YV" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"YW" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"YX" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"YY" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"YZ" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"Za" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"Zb" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"Zc" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"Zd" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"Ze" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"Zf" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"Zg" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"Zh" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"Zi" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"Zj" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"Zk" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"Zl" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"Zm" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"Zn" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"Zo" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"Zp" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"Zq" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"Zr" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"Zs" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"Zt" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"Zu" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"Zv" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"Zw" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"Zx" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"Zy" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"Zz" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"ZA" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"ZB" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"ZC" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"ZD" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"ZE" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"ZF" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"ZG" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"ZH" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"ZI" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"ZJ" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"ZK" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"ZL" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"ZM" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"ZN" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"ZO" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"ZP" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"ZQ" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"ZR" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"ZS" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"ZT" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"ZU" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"ZV" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"ZW" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"ZX" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"ZY" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"ZZ" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"OVERFLOW" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"OVERFLOX" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"OVERFLOY" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"OVERFLOZ" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"OVERFLPa" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"OVERFLPb" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"OVERFLPc" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"OVERFLPd" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"OVERFLPe" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"OVERFLPf" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"OVERFLPg" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"OVERFLPh" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"OVERFLPi" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"OVERFLPj" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"OVERFLPk" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"OVERFLPl" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"OVERFLPm" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"OVERFLPn" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"OVERFLPo" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"OVERFLPp" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"OVERFLPq" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"OVERFLPr" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"OVERFLPs" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"OVERFLPt" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"OVERFLPu" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"OVERFLPv" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"OVERFLPw" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"OVERFLPx" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"OVERFLPy" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"OVERFLPz" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"OVERFLPA" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"OVERFLPB" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"OVERFLPC" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"OVERFLPD" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"OVERFLPE" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"OVERFLPF" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"OVERFLPG" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"OVERFLPH" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"OVERFLPI" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"OVERFLPJ" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"OVERFLPK" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
+"OVERFLPL" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/wreck/main{
+	has_gravity = 1;
+	name = "\improper UAC BASE";
+	poweralm = 0;
+	requires_power = 0
+	})
 
 (1,1,1) = {"
 aa
@@ -21806,14 +22622,14 @@ lg
 lo
 lx
 lC
-jZ
+jz
 lV
 mm
 mu
 mu
 jz
 jz
-jZ
+jz
 DH
 aa
 aa
@@ -22055,15 +22871,15 @@ aa
 jz
 jR
 kl
-jZ
+jz
 kF
-jZ
+jz
 kQ
 lh
 lj
 ly
 lE
-jZ
+jz
 lX
 mn
 jG
@@ -22312,15 +23128,15 @@ TT
 jz
 jX
 kn
-jZ
+jz
 kG
-jZ
+jz
 kR
 li
 lj
 lz
 lG
-jZ
+jz
 mb
 mn
 jG
@@ -22571,13 +23387,13 @@ jY
 kp
 ky
 kH
-jZ
+jz
 kS
 lj
 lj
 lj
 lK
-jZ
+jz
 md
 mn
 mn
@@ -22824,22 +23640,22 @@ jC
 jI
 jK
 jz
-jZ
+jz
 kq
 kz
-jZ
-jZ
+jz
+jz
 kU
 lk
 lp
 lA
-jZ
-jZ
-jZ
-jZ
+jz
+jz
+jz
+jz
 mv
 mv
-jZ
+jz
 jz
 jz
 jz
@@ -23085,12 +23901,12 @@ ka
 ke
 kA
 kI
-jZ
-jZ
+jz
+jz
 ll
 ll
 lB
-jZ
+jz
 lS
 lm
 mo
@@ -23856,18 +24672,18 @@ kg
 ks
 kB
 kJ
-jZ
+jz
 lc
 lm
 lr
-jZ
-jZ
-jZ
-jZ
-jZ
+jz
+jz
+jz
+jz
+jz
 kf
 mH
-jZ
+jz
 nf
 nf
 nf
@@ -24121,10 +24937,10 @@ jz
 lM
 lT
 me
-jZ
+jz
 mw
 mw
-jZ
+jz
 jz
 jz
 jz
@@ -24378,7 +25194,7 @@ jz
 lN
 le
 mj
-jZ
+jz
 my
 le
 mS
@@ -24892,7 +25708,7 @@ jz
 lP
 lf
 mk
-jZ
+jz
 mz
 lf
 mV
@@ -25149,7 +25965,7 @@ jz
 lc
 lc
 ml
-jZ
+jz
 mA
 mA
 jz
@@ -33114,15 +33930,15 @@ aa
 aa
 aa
 aa
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
+Zm
+Zy
+ZG
+ZR
+ZW
+OVERFLOX
+OVERFLPj
+OVERFLPl
+OVERFLPn
 aa
 aa
 aa
@@ -33371,15 +34187,15 @@ aa
 aa
 aa
 aa
-PL
+Zn
 Rb
 Ql
 Qy
 QO
-PL
+OVERFLOY
 SL
 SX
-PL
+OVERFLPo
 aa
 aa
 aa
@@ -33628,7 +34444,7 @@ aa
 aa
 aa
 aa
-PL
+Zo
 Rc
 Qi
 RB
@@ -33636,8 +34452,8 @@ RZ
 Su
 Qi
 Qt
-PL
-PL
+OVERFLPp
+OVERFLPI
 aa
 aa
 "}
@@ -33885,7 +34701,7 @@ aa
 aa
 aa
 aa
-PL
+Zp
 Rb
 Qi
 RB
@@ -33894,7 +34710,7 @@ Qa
 SM
 Qv
 Ti
-PL
+OVERFLPJ
 aa
 aa
 "}
@@ -34139,10 +34955,10 @@ aa
 aa
 aa
 aa
-PL
-PL
-PL
-PL
+YS
+Zd
+Zh
+Zq
 Rb
 Qi
 RL
@@ -34151,7 +34967,7 @@ Sv
 SN
 SY
 Tj
-PL
+OVERFLPK
 aa
 aa
 "}
@@ -34396,19 +35212,19 @@ aa
 aa
 aa
 aa
-PL
+YT
 Qh
 Qs
-PL
+Zr
 Rb
 Rw
 Qz
 Qx
-PL
+OVERFLOZ
 Qi
 SZ
-PL
-PL
+OVERFLPq
+OVERFLPL
 aa
 aa
 "}
@@ -34653,18 +35469,18 @@ aa
 aa
 aa
 aa
-PL
+YU
 Qi
 Qt
-PL
-PL
-PL
-PL
-PL
-PL
+Zs
+Zz
+ZH
+ZS
+ZX
+OVERFLPa
 SO
 Rk
-PL
+OVERFLPr
 aa
 aa
 aa
@@ -34910,10 +35726,10 @@ aa
 aa
 aa
 aa
-PL
+YV
 Qj
 Qu
-PL
+Zt
 Rd
 Rx
 Qy
@@ -34921,7 +35737,7 @@ Sb
 Qa
 SM
 Qt
-PL
+OVERFLPs
 aa
 aa
 aa
@@ -35167,7 +35983,7 @@ aa
 aa
 aa
 OQ
-PL
+YW
 Qi
 Qt
 Qa
@@ -35178,7 +35994,7 @@ Sc
 Sw
 SP
 Ta
-PL
+OVERFLPt
 aa
 aa
 aa
@@ -35424,7 +36240,7 @@ aa
 aa
 OQ
 OQ
-PL
+YX
 Qi
 Qt
 Qa
@@ -35435,7 +36251,7 @@ Sd
 Sx
 RB
 Qt
-PL
+OVERFLPu
 aa
 aa
 aa
@@ -35681,7 +36497,7 @@ aa
 OQ
 OQ
 OQ
-PL
+YY
 Qi
 Qv
 QM
@@ -35692,7 +36508,7 @@ Se
 Qa
 Rf
 Tb
-PL
+OVERFLPv
 aa
 aa
 aa
@@ -35938,7 +36754,7 @@ OQ
 OQ
 OQ
 OQ
-PL
+YZ
 Qj
 Qw
 QN
@@ -35949,7 +36765,7 @@ Sf
 Qa
 Qi
 Qt
-PL
+OVERFLPw
 aa
 aa
 aa
@@ -36195,10 +37011,10 @@ OQ
 OQ
 OQ
 OQ
-PL
+Za
 Qk
 Qx
-PL
+Zu
 Rg
 RC
 RC
@@ -36206,7 +37022,7 @@ Sg
 Qa
 Qi
 Qt
-PL
+OVERFLPx
 aa
 aa
 aa
@@ -36452,18 +37268,18 @@ OQ
 OQ
 OQ
 OQ
-PL
-PL
-PL
-PL
+Zb
+Ze
+Zi
+Zv
 Rh
 RD
 RO
 Sh
-PL
+OVERFLPb
 SQ
 Tc
-PL
+OVERFLPy
 aa
 aa
 aa
@@ -36712,15 +37528,15 @@ OQ
 OQ
 OQ
 OQ
-PL
-PL
-PL
-PL
-PL
-PL
+Zw
+ZA
+ZI
+ZT
+ZY
+OVERFLPc
 Qi
 Qt
-PL
+OVERFLPz
 aa
 aa
 aa
@@ -36974,10 +37790,10 @@ OQ
 OQ
 OQ
 OQ
-PL
+OVERFLPd
 Qi
 Qt
-PL
+OVERFLPA
 aa
 aa
 aa
@@ -37222,19 +38038,19 @@ OQ
 AE
 aa
 PG
-PL
-PL
-PL
-PL
-PL
-PL
+YR
+Zc
+Zf
+Zj
+Zx
+ZB
 OQ
 OQ
 OQ
-PL
+OVERFLPe
 SR
 Td
-PL
+OVERFLPB
 aa
 aa
 aa
@@ -37484,14 +38300,14 @@ PX
 Ql
 Qy
 QO
-PL
+ZC
 OQ
 OQ
 OQ
-PL
+OVERFLPf
 Qi
 SZ
-PL
+OVERFLPC
 aa
 aa
 aa
@@ -37741,14 +38557,14 @@ PY
 Qm
 Qz
 Qx
-PL
+ZD
 OQ
 OQ
 OQ
-PL
+OVERFLPg
 SS
 Qt
-PL
+OVERFLPD
 aa
 aa
 aa
@@ -37996,16 +38812,16 @@ AE
 Qa
 PZ
 Qn
-PL
+Zk
 QP
-PL
-PL
-PL
-PL
-PL
+ZE
+ZJ
+ZU
+ZZ
+OVERFLPh
 Qa
 Te
-PL
+OVERFLPE
 aa
 aa
 aa
@@ -38252,8 +39068,8 @@ AE
 AE
 Qa
 Qa
-PL
-PL
+Zg
+Zl
 Ql
 Ri
 RE
@@ -38262,7 +39078,7 @@ RE
 Sy
 Re
 Ta
-PL
+OVERFLPF
 aa
 aa
 aa
@@ -38519,7 +39335,7 @@ Si
 Sz
 ST
 Tf
-PL
+OVERFLPG
 aa
 aa
 aa
@@ -38770,13 +39586,13 @@ AE
 Qa
 Qi
 Qt
-PL
-PL
-PL
-PL
-PL
-PL
-PL
+ZK
+ZV
+OVERFLOW
+OVERFLPi
+OVERFLPk
+OVERFLPm
+OVERFLPH
 aa
 aa
 aa
@@ -39027,7 +39843,7 @@ AE
 Qa
 Qi
 Rk
-PL
+ZL
 OQ
 OQ
 aa
@@ -39272,19 +40088,19 @@ aa
 aa
 aa
 OW
-OY
-OY
-OY
-OY
-OY
-OY
+OW
+OW
+OW
+OW
+OW
+OW
 OW
 aa
 AE
 Qa
 Qi
 Rl
-PL
+ZM
 OQ
 OQ
 aa
@@ -39530,18 +40346,18 @@ aa
 aa
 OX
 Pi
-OY
+OW
 Pq
 Pq
 Pq
 Pq
-OY
+OW
 Qa
 Qa
 Qa
 QQ
 Rm
-PL
+ZN
 OQ
 OQ
 aa
@@ -39785,9 +40601,9 @@ aa
 aa
 aa
 aa
-OY
-OY
-OY
+OW
+OW
+OW
 Pr
 Pr
 Pr
@@ -39798,7 +40614,7 @@ Qp
 Qc
 QR
 Rn
-PL
+ZO
 OQ
 OQ
 aa
@@ -40044,18 +40860,18 @@ aa
 aa
 OX
 Pi
-OY
+OW
 Ps
 Ps
 Ps
 Ps
-OY
+OW
 Qa
 Qa
 Qa
 QS
 Qx
-PL
+ZP
 OQ
 OQ
 aa
@@ -40300,19 +41116,19 @@ aa
 aa
 aa
 OW
-OY
-OY
-OY
-OY
-OY
-OY
+OW
+OW
+OW
+OW
+OW
+OW
 OW
 aa
 AE
 Qa
 Qa
-PL
-PL
+ZF
+ZQ
 OQ
 OQ
 aa
@@ -57212,7 +58028,7 @@ aa
 DG
 YC
 YG
-YL
+YG
 DG
 DG
 DG
@@ -57468,7 +58284,7 @@ AE
 aa
 zy
 Gw
-YH
+YE
 Gt
 Ho
 HM
@@ -59270,7 +60086,7 @@ GW
 Go
 Gv
 DG
-YO
+Yz
 aa
 Tu
 Tu
@@ -59523,9 +60339,9 @@ EN
 Ba
 DG
 oE
-YD
-YI
-YM
+YB
+YB
+YB
 oE
 AE
 aa
@@ -59781,7 +60597,7 @@ Ba
 FK
 Gl
 YE
-YJ
+YE
 YN
 Ba
 aa
@@ -63144,9 +63960,9 @@ LX
 Mq
 Mr
 GK
-Ik
-MY
-JB
+GK
+GK
+GK
 Mq
 Fb
 Lt
@@ -63378,8 +64194,8 @@ zy
 Ba
 Ba
 YB
-YF
-YK
+YB
+YB
 CB
 BF
 Yh
@@ -72395,9 +73211,9 @@ LW
 LZ
 Mq
 Do
-MO
-MX
-Nh
+NE
+NE
+NE
 NE
 Mq
 CO
@@ -72605,7 +73421,7 @@ aa
 aa
 aa
 aa
-YA
+Yz
 nN
 tl
 up

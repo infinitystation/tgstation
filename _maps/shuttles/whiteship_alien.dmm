@@ -1,58 +1,684 @@
-"a" = (/turf/closed/wall/mineral/abductor/terror,/area/shuttle/abandoned)
-"b" = (/obj/machinery/door/airlock/abductor/base,/obj/docking_port/mobile{dheight = 0; dir = 2; dwidth = 10; height = 15; id = "whiteship"; launch_status = 0; name = "Alien Trooper's Ship"; port_angle = 180; preferred_direction = 1; roundstart_move = "whiteship_away"; timid = 1; width = 25},/obj/structure/fans/tiny{color = "purple"},/turf/open/floor/plating/abductor,/area/shuttle/abandoned)
-"c" = (/obj/machinery/door/airlock/abductor/base,/obj/structure/fans/tiny{color = "purple"},/turf/open/floor/plating/abductor,/area/shuttle/abandoned)
-"d" = (/turf/open/space,/area/space)
-"e" = (/obj/structure/shuttle/engine/propulsion{color = "purple"; dir = 8; icon_state = "propulsion"},/obj/structure/shuttle/engine/platform{dir = 4},/obj/structure/shuttle/engine/platform{dir = 8; pixel_x = 32},/turf/open/floor/plating/abductor2,/area/shuttle/abandoned)
-"f" = (/obj/structure/chair,/turf/open/floor/plating/abductor,/area/shuttle/abandoned)
-"g" = (/turf/open/floor/plating/abductor,/area/shuttle/abandoned)
-"h" = (/obj/machinery/vending/eatimat,/turf/open/floor/plating/abductor,/area/shuttle/abandoned)
-"i" = (/obj/structure/alien_structure,/turf/open/floor/plating/abductor,/area/shuttle/abandoned)
-"j" = (/obj/structure/closet/abductor,/obj/effect/spawner/lootdrop/alien,/obj/effect/spawner/lootdrop/alien,/obj/effect/spawner/lootdrop/alien,/obj/effect/spawner/lootdrop/alien,/turf/open/floor/plating/abductor,/area/shuttle/abandoned)
-"k" = (/obj/structure/sign/directions/alien,/turf/closed/wall/mineral/abductor/terror,/area/shuttle/abandoned)
-"l" = (/obj/structure/closet/body_bag/bluespace,/turf/open/floor/plating/abductor,/area/shuttle/abandoned)
-"m" = (/obj/structure/table/abductor,/turf/open/floor/plating/abductor,/area/shuttle/abandoned)
-"n" = (/obj/structure/chair{tag = "icon-chair (WEST)"; icon_state = "chair"; dir = 8},/turf/open/floor/plating/abductor,/area/shuttle/abandoned)
-"o" = (/obj/structure/chair{tag = "icon-chair (NORTH)"; icon_state = "chair"; dir = 1},/turf/open/floor/plating/abductor,/area/shuttle/abandoned)
-"p" = (/obj/effect/mob_spawn/human/abductor/agent,/turf/open/floor/plating/abductor2,/area/shuttle/abandoned)
-"q" = (/obj/structure/chair/comfy/shuttle/black/noNT,/turf/open/floor/plating/abductor,/area/shuttle/abandoned)
-"r" = (/obj/machinery/computer/camera_advanced/abductor{team = 1},/turf/open/floor/plating/abductor2,/area/shuttle/abandoned)
-"s" = (/obj/structure/table/abductor,/obj/machinery/recharger,/turf/open/floor/plating/abductor,/area/shuttle/abandoned)
-"t" = (/obj/machinery/recharger/wallcharger{pixel_x = -26},/turf/open/floor/plating/abductor,/area/shuttle/abandoned)
-"u" = (/obj/structure/chair/comfy/shuttle/black/noNT{tag = "icon-shblackS (NORTH)"; icon_state = "shblackS"; dir = 1},/turf/open/floor/plating/abductor,/area/shuttle/abandoned)
-"v" = (/obj/machinery/power/rtg/abductor,/turf/open/floor/plating/abductor,/area/shuttle/abandoned)
-"w" = (/obj/structure/table/abductor,/obj/effect/spawner/lootdrop/alien,/turf/open/floor/plating/abductor,/area/shuttle/abandoned)
-"x" = (/obj/structure/table/abductor,/obj/item/stack/sheet/cloth/ten,/turf/open/floor/plating/abductor,/area/shuttle/abandoned)
-"y" = (/obj/structure/chair/comfy/shuttle/black/noNT{tag = "icon-shblackS (EAST)"; icon_state = "shblackS"; dir = 4},/turf/open/floor/plating/abductor,/area/shuttle/abandoned)
-"z" = (/obj/machinery/computer/shuttle/white_ship{name = "Alien Ship Console"},/turf/open/floor/plating/abductor,/area/shuttle/abandoned)
-"A" = (/obj/effect/mob_spawn/human/abductor/scientist,/turf/open/floor/plating/abductor,/area/shuttle/abandoned)
-"B" = (/obj/machinery/door/airlock/abductor/base,/obj/structure/fans/tiny{color = "purple"},/turf/closed/wall/mineral/abductor/terror,/area/shuttle/abandoned)
-"C" = (/obj/structure/table/optable/abductor,/turf/open/floor/plating/abductor2,/area/shuttle/abandoned)
-"D" = (/obj/structure/table/abductor,/obj/item/weapon/scalpel/alien,/obj/item/weapon/circular_saw/alien,/turf/open/floor/plating/abductor,/area/shuttle/abandoned)
-"E" = (/obj/structure/table/abductor,/obj/item/bodybag/bluespace,/obj/item/bodybag/bluespace,/obj/item/bodybag/bluespace,/obj/item/bodybag/bluespace,/obj/item/bodybag/bluespace,/obj/item/bodybag/bluespace,/turf/open/floor/plating/abductor,/area/shuttle/abandoned)
-"F" = (/obj/machinery/abductor/pad{team = 1},/turf/open/floor/plating/abductor,/area/shuttle/abandoned)
-"G" = (/obj/structure/table/abductor,/obj/item/stack/sheet/mineral/abductor{amount = 50},/turf/open/floor/plating/abductor,/area/shuttle/abandoned)
-"H" = (/obj/machinery/sleeper/syndie/alien{tag = "icon-sleeper_s (EAST)"; icon_state = "sleeper_s"; dir = 4},/turf/open/floor/plating/abductor2,/area/shuttle/abandoned)
-"I" = (/obj/structure/table/abductor,/obj/item/weapon/surgical_drapes,/turf/open/floor/plating/abductor,/area/shuttle/abandoned)
-"J" = (/obj/structure/table/abductor,/obj/item/weapon/surgicaldrill/alien,/obj/item/weapon/retractor/alien,/turf/open/floor/plating/abductor,/area/shuttle/abandoned)
-"K" = (/obj/structure/table/abductor,/obj/item/stack/sheet/metal/fifty,/obj/item/stack/sheet/metal/fifty,/obj/item/stack/sheet/metal/fifty,/obj/item/stack/sheet/metal/fifty,/turf/open/floor/plating/abductor,/area/shuttle/abandoned)
-"L" = (/obj/structure/table/abductor,/obj/item/weapon/cautery/alien,/obj/item/weapon/hemostat/alien,/turf/open/floor/plating/abductor,/area/shuttle/abandoned)
-"M" = (/obj/structure/closet/abductor,/obj/effect/spawner/lootdrop/alien,/obj/effect/spawner/lootdrop/alien,/obj/effect/spawner/lootdrop/alien,/obj/effect/spawner/lootdrop/alien,/obj/effect/spawner/lootdrop/alien,/obj/effect/spawner/lootdrop/alien,/obj/effect/spawner/lootdrop/alien,/obj/effect/spawner/lootdrop/alien,/turf/open/floor/plating/abductor2,/area/shuttle/abandoned)
-"N" = (/obj/structure/table/abductor,/obj/item/stack/sheet/glass/fifty,/obj/item/stack/sheet/glass/fifty,/obj/item/stack/sheet/glass/fifty,/turf/open/floor/plating/abductor,/area/shuttle/abandoned)
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/closed/wall/mineral/abductor/terror,
+/area/shuttle/abandoned)
+"b" = (
+/obj/machinery/door/airlock/abductor/base,
+/obj/docking_port/mobile{
+	dheight = 0;
+	dir = 2;
+	dwidth = 10;
+	height = 15;
+	id = "whiteship";
+	launch_status = 0;
+	name = "Alien Trooper's Ship";
+	port_angle = 180;
+	preferred_direction = 1;
+	roundstart_move = "whiteship_away";
+	timid = 1;
+	width = 25
+	},
+/obj/structure/fans/tiny{
+	color = "purple"
+	},
+/turf/open/floor/plating/abductor,
+/area/shuttle/abandoned)
+"c" = (
+/obj/machinery/door/airlock/abductor/base,
+/obj/structure/fans/tiny{
+	color = "purple"
+	},
+/turf/open/floor/plating/abductor,
+/area/shuttle/abandoned)
+"d" = (
+/turf/open/space,
+/area/space)
+"e" = (
+/obj/structure/shuttle/engine/propulsion{
+	color = "purple";
+	dir = 8;
+	icon_state = "propulsion"
+	},
+/obj/structure/shuttle/engine/platform{
+	dir = 4
+	},
+/obj/structure/shuttle/engine/platform{
+	dir = 8;
+	pixel_x = 32
+	},
+/turf/open/floor/plating/abductor2,
+/area/shuttle/abandoned)
+"f" = (
+/obj/structure/chair,
+/turf/open/floor/plating/abductor,
+/area/shuttle/abandoned)
+"g" = (
+/turf/open/floor/plating/abductor,
+/area/shuttle/abandoned)
+"h" = (
+/obj/machinery/vending/eatimat,
+/turf/open/floor/plating/abductor,
+/area/shuttle/abandoned)
+"i" = (
+/obj/structure/alien_structure,
+/turf/open/floor/plating/abductor,
+/area/shuttle/abandoned)
+"j" = (
+/obj/structure/closet/abductor,
+/obj/effect/spawner/lootdrop/alien,
+/obj/effect/spawner/lootdrop/alien,
+/obj/effect/spawner/lootdrop/alien,
+/obj/effect/spawner/lootdrop/alien,
+/turf/open/floor/plating/abductor,
+/area/shuttle/abandoned)
+"k" = (
+/obj/structure/sign/directions/alien,
+/turf/closed/wall/mineral/abductor/terror,
+/area/shuttle/abandoned)
+"l" = (
+/obj/structure/closet/body_bag/bluespace,
+/turf/open/floor/plating/abductor,
+/area/shuttle/abandoned)
+"m" = (
+/obj/structure/table/abductor,
+/turf/open/floor/plating/abductor,
+/area/shuttle/abandoned)
+"n" = (
+/obj/structure/chair{
+	tag = "icon-chair (WEST)";
+	icon_state = "chair";
+	dir = 8
+	},
+/turf/open/floor/plating/abductor,
+/area/shuttle/abandoned)
+"o" = (
+/obj/structure/chair{
+	tag = "icon-chair (NORTH)";
+	icon_state = "chair";
+	dir = 1
+	},
+/turf/open/floor/plating/abductor,
+/area/shuttle/abandoned)
+"p" = (
+/obj/effect/mob_spawn/human/abductor/agent,
+/turf/open/floor/plating/abductor2,
+/area/shuttle/abandoned)
+"q" = (
+/obj/structure/chair/comfy/shuttle/black/noNT,
+/turf/open/floor/plating/abductor,
+/area/shuttle/abandoned)
+"r" = (
+/obj/machinery/computer/camera_advanced/abductor{
+	team = 1
+	},
+/turf/open/floor/plating/abductor2,
+/area/shuttle/abandoned)
+"s" = (
+/obj/structure/table/abductor,
+/obj/machinery/recharger,
+/turf/open/floor/plating/abductor,
+/area/shuttle/abandoned)
+"t" = (
+/obj/machinery/recharger/wallcharger{
+	pixel_x = -26
+	},
+/turf/open/floor/plating/abductor,
+/area/shuttle/abandoned)
+"u" = (
+/obj/structure/chair/comfy/shuttle/black/noNT{
+	tag = "icon-shblackS (NORTH)";
+	icon_state = "shblackS";
+	dir = 1
+	},
+/turf/open/floor/plating/abductor,
+/area/shuttle/abandoned)
+"v" = (
+/obj/machinery/power/rtg/abductor,
+/turf/open/floor/plating/abductor,
+/area/shuttle/abandoned)
+"w" = (
+/obj/structure/table/abductor,
+/obj/effect/spawner/lootdrop/alien,
+/turf/open/floor/plating/abductor,
+/area/shuttle/abandoned)
+"x" = (
+/obj/structure/table/abductor,
+/obj/item/stack/sheet/cloth/ten,
+/turf/open/floor/plating/abductor,
+/area/shuttle/abandoned)
+"y" = (
+/obj/structure/chair/comfy/shuttle/black/noNT{
+	tag = "icon-shblackS (EAST)";
+	icon_state = "shblackS";
+	dir = 4
+	},
+/turf/open/floor/plating/abductor,
+/area/shuttle/abandoned)
+"z" = (
+/obj/machinery/computer/shuttle/white_ship{
+	name = "Alien Ship Console"
+	},
+/turf/open/floor/plating/abductor,
+/area/shuttle/abandoned)
+"A" = (
+/obj/effect/mob_spawn/human/abductor/scientist,
+/turf/open/floor/plating/abductor,
+/area/shuttle/abandoned)
+"B" = (
+/obj/machinery/door/airlock/abductor/base,
+/obj/structure/fans/tiny{
+	color = "purple"
+	},
+/turf/closed/wall/mineral/abductor/terror,
+/area/shuttle/abandoned)
+"C" = (
+/obj/structure/table/optable/abductor,
+/turf/open/floor/plating/abductor2,
+/area/shuttle/abandoned)
+"D" = (
+/obj/structure/table/abductor,
+/obj/item/weapon/scalpel/alien,
+/obj/item/weapon/circular_saw/alien,
+/turf/open/floor/plating/abductor,
+/area/shuttle/abandoned)
+"E" = (
+/obj/structure/table/abductor,
+/obj/item/bodybag/bluespace,
+/obj/item/bodybag/bluespace,
+/obj/item/bodybag/bluespace,
+/obj/item/bodybag/bluespace,
+/obj/item/bodybag/bluespace,
+/obj/item/bodybag/bluespace,
+/turf/open/floor/plating/abductor,
+/area/shuttle/abandoned)
+"F" = (
+/obj/machinery/abductor/pad{
+	team = 1
+	},
+/turf/open/floor/plating/abductor,
+/area/shuttle/abandoned)
+"G" = (
+/obj/structure/table/abductor,
+/obj/item/stack/sheet/mineral/abductor{
+	amount = 50
+	},
+/turf/open/floor/plating/abductor,
+/area/shuttle/abandoned)
+"H" = (
+/obj/machinery/sleeper/syndie/alien{
+	tag = "icon-sleeper_s (EAST)";
+	icon_state = "sleeper_s";
+	dir = 4
+	},
+/turf/open/floor/plating/abductor2,
+/area/shuttle/abandoned)
+"I" = (
+/obj/structure/table/abductor,
+/obj/item/weapon/surgical_drapes,
+/turf/open/floor/plating/abductor,
+/area/shuttle/abandoned)
+"J" = (
+/obj/structure/table/abductor,
+/obj/item/weapon/surgicaldrill/alien,
+/obj/item/weapon/retractor/alien,
+/turf/open/floor/plating/abductor,
+/area/shuttle/abandoned)
+"K" = (
+/obj/structure/table/abductor,
+/obj/item/stack/sheet/metal/fifty,
+/obj/item/stack/sheet/metal/fifty,
+/obj/item/stack/sheet/metal/fifty,
+/obj/item/stack/sheet/metal/fifty,
+/turf/open/floor/plating/abductor,
+/area/shuttle/abandoned)
+"L" = (
+/obj/structure/table/abductor,
+/obj/item/weapon/cautery/alien,
+/obj/item/weapon/hemostat/alien,
+/turf/open/floor/plating/abductor,
+/area/shuttle/abandoned)
+"M" = (
+/obj/structure/closet/abductor,
+/obj/effect/spawner/lootdrop/alien,
+/obj/effect/spawner/lootdrop/alien,
+/obj/effect/spawner/lootdrop/alien,
+/obj/effect/spawner/lootdrop/alien,
+/obj/effect/spawner/lootdrop/alien,
+/obj/effect/spawner/lootdrop/alien,
+/obj/effect/spawner/lootdrop/alien,
+/obj/effect/spawner/lootdrop/alien,
+/turf/open/floor/plating/abductor2,
+/area/shuttle/abandoned)
+"N" = (
+/obj/structure/table/abductor,
+/obj/item/stack/sheet/glass/fifty,
+/obj/item/stack/sheet/glass/fifty,
+/obj/item/stack/sheet/glass/fifty,
+/turf/open/floor/plating/abductor,
+/area/shuttle/abandoned)
 
 (1,1,1) = {"
-aaaaaaaaaaaaaabcaaaaaaddd
-eaafggghaijjjkggklllladdd
-eaamngghaggggcggcggggaadd
-eaaoggghaggggkggkllllaadd
-eaaakcaaaaacaaccaaaaaaaaa
-aapgggggggagqqggqqiarmmma
-aapggggsggatgggggggkuggma
-aapggvgsggcggwwwxggcggyza
-aapggggsggatgggggggkAggma
-aapgggggggaguugguugammmma
-eaaakcaaaaaBaaccaacaaaaaa
-eaaCggDaEEFgaGggaHgIJaadd
-eaaIggJaggggaKggaHggCkadd
-eaaCggLaMMMMaNggaHgLDaddd
-aaaaaaaaaaaaaaaaaaaaaaddd
+a
+e
+e
+e
+e
+a
+a
+a
+a
+a
+e
+e
+e
+e
+a
+"}
+(2,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+"}
+(3,1,1) = {"
+a
+a
+a
+a
+a
+p
+p
+p
+p
+p
+a
+a
+a
+a
+a
+"}
+(4,1,1) = {"
+a
+f
+m
+o
+a
+g
+g
+g
+g
+g
+a
+C
+I
+C
+a
+"}
+(5,1,1) = {"
+a
+g
+n
+g
+k
+g
+g
+g
+g
+g
+k
+g
+g
+g
+a
+"}
+(6,1,1) = {"
+a
+g
+g
+g
+c
+g
+g
+v
+g
+g
+c
+g
+g
+g
+a
+"}
+(7,1,1) = {"
+a
+g
+g
+g
+a
+g
+g
+g
+g
+g
+a
+D
+J
+L
+a
+"}
+(8,1,1) = {"
+a
+h
+h
+h
+a
+g
+s
+s
+s
+g
+a
+a
+a
+a
+a
+"}
+(9,1,1) = {"
+a
+a
+a
+a
+a
+g
+g
+g
+g
+g
+a
+E
+g
+M
+a
+"}
+(10,1,1) = {"
+a
+i
+g
+g
+a
+g
+g
+g
+g
+g
+a
+E
+g
+M
+a
+"}
+(11,1,1) = {"
+a
+j
+g
+g
+a
+a
+a
+c
+a
+a
+a
+F
+g
+M
+a
+"}
+(12,1,1) = {"
+a
+j
+g
+g
+c
+g
+t
+g
+t
+g
+B
+g
+g
+M
+a
+"}
+(13,1,1) = {"
+a
+j
+g
+g
+a
+q
+g
+g
+g
+u
+a
+a
+a
+a
+a
+"}
+(14,1,1) = {"
+a
+k
+c
+k
+a
+q
+g
+w
+g
+u
+a
+G
+K
+N
+a
+"}
+(15,1,1) = {"
+b
+g
+g
+g
+c
+g
+g
+w
+g
+g
+c
+g
+g
+g
+a
+"}
+(16,1,1) = {"
+c
+g
+g
+g
+c
+g
+g
+w
+g
+g
+c
+g
+g
+g
+a
+"}
+(17,1,1) = {"
+a
+k
+c
+k
+a
+q
+g
+x
+g
+u
+a
+a
+a
+a
+a
+"}
+(18,1,1) = {"
+a
+l
+g
+l
+a
+q
+g
+g
+g
+u
+a
+H
+H
+H
+a
+"}
+(19,1,1) = {"
+a
+l
+g
+l
+a
+i
+g
+g
+g
+g
+c
+g
+g
+g
+a
+"}
+(20,1,1) = {"
+a
+l
+g
+l
+a
+a
+k
+c
+k
+a
+a
+I
+g
+L
+a
+"}
+(21,1,1) = {"
+a
+l
+g
+l
+a
+r
+u
+g
+A
+m
+a
+J
+C
+D
+a
+"}
+(22,1,1) = {"
+a
+a
+a
+a
+a
+m
+g
+g
+g
+m
+a
+a
+k
+a
+a
+"}
+(23,1,1) = {"
+d
+d
+a
+a
+a
+m
+g
+y
+g
+m
+a
+a
+a
+d
+d
+"}
+(24,1,1) = {"
+d
+d
+d
+d
+a
+m
+m
+z
+m
+m
+a
+d
+d
+d
+d
+"}
+(25,1,1) = {"
+d
+d
+d
+d
+a
+a
+a
+a
+a
+a
+a
+d
+d
+d
+d
 "}

@@ -18,6 +18,7 @@
 	var/ignition_temp = 10 // The amount of heat added to the reagents when this grenade goes off.
 	var/threatscale = 1 // Used by advanced grenades to make them slightly more worthy.
 	var/no_splash = FALSE //If the grenade deletes even if it has no reagents to splash with. Used for slime core reactions.
+	pin_sound = 'sound/weapons/armbomb.ogg'
 
 /obj/item/weapon/grenade/chem_grenade/New()
 	create_reagents(1000)

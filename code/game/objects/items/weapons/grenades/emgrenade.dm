@@ -4,6 +4,7 @@
 	icon_state = "emp"
 	item_state = "emp"
 	origin_tech = "magnets=3;combat=2"
+	pin_sound = 'sound/weapons/armbomb.ogg'
 
 /obj/item/weapon/grenade/empgrenade/prime()
 	update_mob()

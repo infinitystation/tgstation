@@ -210,15 +210,10 @@
 	suffix = "pubby"
 	name = "NT White UFO"
 
-/datum/map_template/shuttle/whiteship/pirate
-	suffix = "pirate"
-	name = "Pirate ship 'Marauder'"
-	admin_notes = "Сделано Террором для ивентов. Как вы будете на него загруждать экипаж на данный момент - ума не приложу."
-
 /datum/map_template/shuttle/whiteship/alien
 	suffix = "alien"
 	name = "Alien Trooper's Ship"
-	admin_notes = "Сделано Террором для ивентов. Имеются изначальные спавнеры для экипажа."
+	admin_notes = "Сделано Террором дл&#255; ивентов. Имеютс&#255; изначальные спавнеры дл&#255; экипажа."
 
 /datum/map_template/shuttle/cargo/box
 	suffix = "box"

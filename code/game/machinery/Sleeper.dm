@@ -188,5 +188,7 @@
 	max_integrity = 100
 	obj_integrity = 100
 	resistance_flags = FIRE_PROOF | ACID_PROOF
-	possible_chems = list("epinephrine", "alien_bionanites", "oculine", "inacusiate", "mutadone")
-	available_chems = list("epinephrine", "alien_bionanites", "oculine", "inacusiate", "mutadone")
+	possible_chems = list(
+					list("alien_bionanites", "oculine", "inacusiate", "mutadone"),
+					list("morphine")
+	)
