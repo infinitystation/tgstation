@@ -14,41 +14,38 @@
 /obj/item/clothing/ears/earmuffs/mp3/attack_self()
 	toggle()
 
-
-/obj/item/clothing/ears/earmuffs/mp3/verb/toggle()
-	set category = "Object"
-	set name = "Adjust headphones"
-	set src in usr
-
+/obj/item/clothing/ears/earmuffs/mp3/proc/toggle(mob/user)
 	if(usr.canmove && !usr.stat && !usr.restrained())
 		if(src.up)
 			src.up = !src.up
 			icon_state = "headphones_off"
+			update_icon()
 			usr << sound(null, channel = 4)
 			usr << browse(null, "window=mp3")
-			usr << "You turn off [src]"
-			update_icon()
+			usr << "You turn off [src]."
 		else
 			src.up = !src.up
 			icon_state = "headphones_on"
-			//if (istype(usr.ears, /obj/item/clothing/ears/earmuffs/mp3))
+			update_icon()
 			OpenInterface(usr)
-			usr << "You turn on [src]"
-		update_icon()	//so our mob-overlays update
+			usr << "You turn on [src]."
+	else
+		return
 
 /obj/item/clothing/ears/earmuffs/mp3/dropped()
+	..()
 	usr << sound(null, channel = 4)
 	usr << browse(null, "window=mp3")
 
 /obj/item/clothing/ears/earmuffs/mp3/proc/OpenInterface(mob/user as mob)
 
 	var/dat = "MP3 player<BR>"
-
+	dat += "<br>"
 	dat += "Astronaut - Rain	<a href='byond://?src=\ref[src];music1=1'>Play</a><br>"
 	dat += "UDO - Cut Me Out	<a href='byond://?src=\ref[src];music2=1'>Play</a><br>"
 	dat += "Beastie Boys - Intergalactic	<a href='byond://?src=\ref[src];music3=1'>Play</a><br>"
 	dat += "Skyline - Look Forward	<a href='byond://?src=\ref[src];music4=1'>Play</a><br>"
-
+	dat += "<br>"
 	dat += "Bee Gees - Stayin' Alive	<a href='byond://?src=\ref[src];music5=1'>Play</a><br>"
 	dat += "Fever The Ghost - Source	<a href='byond://?src=\ref[src];music6=1'>Play</a><br>"
 	dat += "I'm a member of the Midnight Crew	<a href='byond://?src=\ref[src];music7=1'>Play</a><br>"
@@ -65,57 +62,55 @@
 	dat += "Starset - Antigravity	<a href='byond://?src=\ref[src];music18=1'>Play</a><br>"
 	dat += "U-Free - My New Black Benzo	<a href='byond://?src=\ref[src];music19=1'>Play</a><br>"
 	dat += "Wolfgun - Beautiful	<a href='byond://?src=\ref[src];music20=1'>Play</a><br>"
-
+	dat += "<br>"
 	dat += "Stop Music <a href='byond://?src=\ref[src];music21=1'>Stop</a><br>"
 
 	user << browse(dat, "window=mp3")
 	onclose(user, "mp3")
 	return
 
-
 /obj/item/clothing/ears/earmuffs/mp3/Topic(href, href_list)
-	//if (istype(usr.ears, /obj/item/clothing/ears/earmuffs/mp3))
 	usr << sound(null, channel = 1)
 	if(href_list["music1"])
-		usr << sound('sound/lobby/title1.ogg',channel=4, volume=100);
+		usr << sound('sound/lobby/title1.ogg',channel=4, volume=50);
 	else if(href_list["music2"])
-		usr << sound('sound/lobby/title2.ogg',channel=4, volume=100);
+		usr << sound('sound/lobby/title2.ogg',channel=4, volume=50);
 	else if(href_list["music3"])
-		usr << sound('sound/lobby/title3.ogg',channel=4, volume=100);
+		usr << sound('sound/lobby/title3.ogg',channel=4, volume=50);
 	else if(href_list["music4"])
-		usr << sound('sound/lobby/title4.ogg',channel=4, volume=100);
+		usr << sound('sound/lobby/title4.ogg',channel=4, volume=50);
 	else if(href_list["music5"])
-		usr << sound('sound/playlist/bee_jees_stayin_alive.ogg',channel=4, volume=100);
+		usr << sound('sound/playlist/bee_jees_stayin_alive.ogg',channel=4, volume=50);
 	else if(href_list["music6"])
-		usr << sound('sound/playlist/fever_the_ghost_source.ogg',channel=4, volume=100);
+		usr << sound('sound/playlist/fever_the_ghost_source.ogg',channel=4, volume=50);
 	else if(href_list["music7"])
-		usr << sound('sound/playlist/im_a_member_of_the_midnight_crew.ogg',channel=4, volume=100);
+		usr << sound('sound/playlist/im_a_member_of_the_midnight_crew.ogg',channel=4, volume=50);
 	else if(href_list["music8"])
-		usr << sound('sound/playlist/iron_maiden_out_of_the_silent_planet.ogg',channel=4, volume=100);
+		usr << sound('sound/playlist/iron_maiden_out_of_the_silent_planet.ogg',channel=4, volume=50);
 	else if(href_list["music9"])
-		usr << sound('sound/playlist/iron_savior_the_landing.ogg',channel=4, volume=100);
+		usr << sound('sound/playlist/iron_savior_the_landing.ogg',channel=4, volume=50);
 	else if(href_list["music10"])
-		usr << sound('sound/playlist/justice_dance.ogg',channel=4, volume=100);
+		usr << sound('sound/playlist/justice_dance.ogg',channel=4, volume=50);
 	else if(href_list["music11"])
-		usr << sound('sound/playlist/malcolm_brown_do_you_remember_me.ogg',channel=4, volume=100);
+		usr << sound('sound/playlist/malcolm_brown_do_you_remember_me.ogg',channel=4, volume=50);
 	else if(href_list["music12"])
-		usr << sound('sound/playlist/m83_midnight.ogg',channel=4, volume=100);
+		usr << sound('sound/playlist/m83_midnight.ogg',channel=4, volume=50);
 	else if(href_list["music13"])
-		usr << sound('sound/playlist/mystery_skulls_magic.ogg',channel=4, volume=100);
+		usr << sound('sound/playlist/mystery_skulls_magic.ogg',channel=4, volume=50);
 	else if(href_list["music14"])
-		usr << sound('sound/playlist/nirvana_smells_like_teen_spirit.ogg',channel=4, volume=100);
+		usr << sound('sound/playlist/nirvana_smells_like_teen_spirit.ogg',channel=4, volume=50);
 	else if(href_list["music15"])
-		usr << sound('sound/playlist/pixel_piracy_sailing_the_world.ogg',channel=4, volume=100);
+		usr << sound('sound/playlist/pixel_piracy_sailing_the_world.ogg',channel=4, volume=50);
 	else if(href_list["music16"])
-		usr << sound('sound/playlist/rick_astley_nggup.ogg',channel=4, volume=100);
+		usr << sound('sound/playlist/rick_astley_nggup.ogg',channel=4, volume=50);
 	else if(href_list["music17"])
-		usr << sound('sound/playlist/evo_v_kosmos.ogg',channel=4, volume=100);
+		usr << sound('sound/playlist/evo_v_kosmos.ogg',channel=4, volume=50);
 	else if(href_list["music18"])
-		usr << sound('sound/playlist/starset_antigravity.ogg',channel=4, volume=100);
+		usr << sound('sound/playlist/starset_antigravity.ogg',channel=4, volume=50);
 	else if(href_list["music19"])
-		usr << sound('sound/playlist/ufree_my_new_black_benzo.ogg',channel=4, volume=100);
+		usr << sound('sound/playlist/ufree_my_new_black_benzo.ogg',channel=4, volume=50);
 	else if(href_list["music20"])
-		usr << sound('sound/playlist/wolfgun_beautiful.ogg',channel=4, volume=100);
+		usr << sound('sound/playlist/wolfgun_beautiful.ogg',channel=4, volume=50);
 	else if(href_list["music21"])
 		usr << sound(null, channel = 4)
 
