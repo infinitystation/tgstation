@@ -104,11 +104,11 @@
 /turf/open/floor/plating,
 /area/shuttle/transport)
 "p" = (
-/obj/machinery/door/airlock/shuttle,
+/obj/machinery/door/airlock/titanium,
 /turf/open/floor/plasteel/freezer,
 /area/shuttle/transport)
 "q" = (
-/obj/machinery/door/airlock/shuttle,
+/obj/machinery/door/airlock/titanium,
 /obj/docking_port/mobile{
 	dir = 8;
 	dwidth = 2;
@@ -244,9 +244,9 @@ w
 c
 "}
 (12,1,1) = {"
-d
+c
 o
 q
 o
-d
+c
 "}

@@ -16,7 +16,7 @@
 	response_harm   = "stomps"
 	stop_automated_movement = 1
 	friendly = "pinches"
-	ventcrawler = 2
+	ventcrawler = VENTCRAWLER_ALWAYS
 	var/obj/item/inventory_head
 	var/obj/item/inventory_mask
 	gold_core_spawnable = 2
@@ -39,6 +39,19 @@
 	name = "Coffee"
 	real_name = "Coffee"
 	desc = "It's Coffee, the other pet!"
+	gender = FEMALE
+	response_help  = "pets"
+	response_disarm = "gently pushes aside"
+	response_harm   = "stomps"
+	gold_core_spawnable = 0
+
+/mob/living/simple_animal/crab/Groffee
+	name = "Groffee"
+	real_name = "Groffee"
+	desc = "It's Groffee, the lava-crab!"
+	icon_state = "evilcrab"
+	icon_living = "evilcrab"
+	icon_dead = "evilcrab_dead"
 	response_help  = "pets"
 	response_disarm = "gently pushes aside"
 	response_harm   = "stomps"

@@ -16,7 +16,7 @@
 	spawncount = rand(5, 8)
 
 /datum/round_event/spider_infestation/announce()
-	priority_announce("Неидентифицированные признаки жизни замечены прибывшими на станцию [station_name()] извне . Проверьте все внешние доступы на станцию, включаЯ including воздуховоды и вентилЯцию.", "Тревога! ЧужероднаЯ жизнь", 'sound/AI/aliens.ogg')
+	priority_announce("Неидентифицированные признаки жизни замечены прибывшими на станцию [station_name()] извне. Проверьте все внешние доступы на станцию, включая воздуховоды и вентиляцию.", "Тревога! Чужеродная жизнь!", 'sound/AI/aliens.ogg')
 
 
 /datum/round_event/spider_infestation/start()
@@ -29,8 +29,9 @@
 
 	while((spawncount >= 1) && vents.len)
 		var/obj/vent = pick(vents)
-		var/obj/effect/spider/spiderling/S = new(vent.loc)
+		var/spawn_type = /obj/structure/spider/spiderling
 		if(prob(66))
-			S.grow_as = /mob/living/simple_animal/hostile/poison/giant_spider/nurse
+			spawn_type = /obj/structure/spider/spiderling/nurse
+		spawn_atom_to_turf(spawn_type, vent, 1, FALSE)
 		vents -= vent
 		spawncount--

@@ -1,207 +1,86 @@
-//This only assumes that the mob has a body and face with at least one eye, and one mouth.
-//Things like airguitar can be done without arms, and the flap thing makes so little sense it's a keeper.
-//Intended to be called by a higher up emote proc if the requested emote isn't in the custom emotes.
+/datum/emote/living/carbon
+	mob_type_allowed_typecache = list(/mob/living/carbon)
 
-/mob/living/carbon/emote(act,m_type=1,message = null)
-	var/param = null
+/datum/emote/living/carbon/airguitar
+	key = "airguitar"
+	message = "is strumming the air and headbanging like a safari chimp."
+	restraint_check = TRUE
 
-	if (findtext(act, "-", 1, null))
-		var/t1 = findtext(act, "-", 1, null)
-		param = copytext(act, t1 + 1, length(act) + 1)
-		act = copytext(act, 1, t1)
+/datum/emote/living/carbon/blink
+	key = "blink"
+	key_third_person = "blinks"
+	message = "blinks."
 
-	var/muzzled = is_muzzled()
-	//var/m_type = 1
+/datum/emote/living/carbon/blink_r
+	key = "blink_r"
+	message = "blinks rapidly."
 
-	switch(act)//Even carbon organisms want it alphabetically ordered..
-		if ("aflap")
-			if (!src.restrained())
-				message = "<B>[src]</B> ј√–≈——»¬Ќќ хлопает крыль&#255;ми!"
-				m_type = 2
+/datum/emote/living/carbon/clap
+	key = "clap"
+	key_third_person = "claps"
+	message = "claps."
+	muzzle_ignore = TRUE
+	restraint_check = TRUE
+	emote_type = EMOTE_AUDIBLE
 
-		if ("airguitar")
-			if (!src.restrained())
-				message = "<B>[src]</B> делает вид, что играет в воздухе на воображаемой гитаре."
-				m_type = 1
+/datum/emote/living/carbon/gnarl
+	key = "gnarl"
+	key_third_person = "gnarls"
+	message = "gnarls and shows its teeth..."
+	mob_type_allowed_typecache = list(/mob/living/carbon/monkey, /mob/living/carbon/alien)
 
-		if ("blink","blinks")
-			message = "<B>[src]</B> моргает."
-			m_type = 1
+/datum/emote/living/carbon/moan
+	key = "moan"
+	key_third_person = "moans"
+	message = "стонет!"
+	message_mime = "изображает стоны!"
+	emote_type = EMOTE_AUDIBLE
 
-		if ("blink_r")
-			message = "<B>[src]</B> быстро моргает."
-			m_type = 1
+/datum/emote/living/carbon/roll
+	key = "roll"
+	key_third_person = "rolls"
+	message = "катаетс&#255; по полу."
+	mob_type_allowed_typecache = list(/mob/living/carbon/monkey, /mob/living/carbon/alien)
+	restraint_check = TRUE
 
-		if ("blush","blushes")
-			message = "<B>[src]</B> краснеет."
-			m_type = 1
+/datum/emote/living/carbon/scratch
+	key = "scratch"
+	key_third_person = "scratches"
+	message = "чешет свою голову."
+	mob_type_allowed_typecache = list(/mob/living/carbon/monkey, /mob/living/carbon/alien)
+	restraint_check = TRUE
 
-		if ("bow","bows")
-			if (!src.buckled)
-				var/M = null
-				if (param)
-					for (var/mob/A in view(1, src))
-						if (param == A.name)
-							M = A
-							break
-				if (!M)
-					param = null
-				if (param)
-					if(gender == FEMALE)
-						message = "<B>[src]</B> поклонилась [param]."
-					else
-						message = "<B>[src]</B> поклонилс&#255; [param]."
+/datum/emote/living/carbon/screech
+	key = "screech"
+	key_third_person = "screeches"
+	message = "кричит."
+	mob_type_allowed_typecache = list(/mob/living/carbon/monkey, /mob/living/carbon/alien)
 
-				else
-					if(gender == FEMALE)
-						message = "<B>[src]</B> поклонилась."
-					else
-						message = "<B>[src]</B> поклонилс&#255;."
-			m_type = 1
+/datum/emote/living/carbon/sign
+	key = "sign"
+	key_third_person = "signs"
+	message_param = "signs the number %t."
+	mob_type_allowed_typecache = list(/mob/living/carbon/monkey, /mob/living/carbon/alien)
+	restraint_check = TRUE
 
-		if ("burp","burps")
-			if (!muzzled)
-				..(act)
+/datum/emote/living/carbon/sign/select_param(mob/user, params)
+	. = ..()
+	if(!isnum(text2num(params)))
+		return message
 
-		if ("choke","chokes")
-			if (!muzzled)
-				..(act)
-			else
-				message = "<B>[src]</B> издаЄт сильный шум."
-				m_type = 2
+/datum/emote/living/carbon/sign/signal
+	key = "signal"
+	key_third_person = "signals"
+	message_param = "raises %t fingers."
+	mob_type_allowed_typecache = list(/mob/living/carbon/human)
+	restraint_check = TRUE
 
-		if ("chuckle","chuckles")
-			if (!muzzled)
-				..(act)
-			else
-				message = "<B>[src]</B> издаЄт шум."
-				m_type = 2
+/datum/emote/living/carbon/tail
+	key = "tail"
+	message = "вил&#255;ет своим хвостом."
+	mob_type_allowed_typecache = list(/mob/living/carbon/monkey, /mob/living/carbon/alien)
 
-		if ("clap","claps")
-			if (!src.restrained())
-				message = "<B>[src]</B> хлопает."
-				m_type = 2
-
-		if ("cough","coughs")
-			if (!muzzled)
-				..(act)
-			else
-				message = "<B>[src]</B> издаЄт громкий шум."
-				m_type = 2
-
-		if ("deathgasp","deathgasps")
-			message = "<B>[src]</B> замирает, конечности расслабл&#255;ютс&#255;, глаза станов&#255;тс&#255; мЄртвыми и безжизненными..."
-			m_type = 1
-
-		if ("flap","flaps")
-			if (!src.restrained())
-				message = "<B>[src]</B> хлопает крыль&#255;ми."
-				m_type = 2
-
-		if ("gasp","gasps")
-			if (!muzzled)
-				..(act)
-			else
-				message = "<B>[src]</B> издаЄт слабый шум."
-				m_type = 2
-
-		if ("giggle","giggles")
-			if (!muzzled)
-				..(act)
-			else
-				message = "<B>[src]</B> издаЄт шум."
-				m_type = 2
-
-		if ("laugh","laughs")
-			if (!muzzled)
-				..(act)
-			else
-				message = "<B>[src]</B> издаЄт шум."
-
-		if ("me")
-			if(!silent)
-				..()
-			return
-
-		if ("nod","nods")
-			message = "<B>[src]</B> кивает."
-			m_type = 1
-
-		if ("scream","screams")
-			if (!muzzled)
-				..(act)
-			else
-				message = "<B>[src]</B> издаЄт очень громкий шум."
-				m_type = 2
-
-		if ("shake","shakes")
-			message = "<B>[src]</B> тр&#255;сЄт головой."
-			m_type = 1
-
-		if ("sneeze","sneezes")
-			if (!muzzled)
-				..(act)
-			else
-				message = "<B>[src]</B> издаЄт странный звук."
-				m_type = 2
-
-		if ("sigh","sighs")
-			if (!muzzled)
-				..(act)
-			else
-				message = "<B>[src]</B> вздыхает."
-				m_type = 2
-
-		if ("sniff","sniffs")
-			message = "<B>[src]</B> принюхиваетс&#255;."
-			m_type = 2
-
-		if ("snore","snores")
-			if (!muzzled)
-				..(act)
-			else
-				message = "<B>[src]</B> издаЄт шум."
-				m_type = 2
-
-		if ("whimper","whimpers")
-			if (!muzzled)
-				..(act)
-			else
-				message = "<B>[src]</B> издаЄт слабый звук."
-				m_type = 2
-
-		if ("wink","winks")
-			message = "<B>[src]</B> подмигивает."
-			m_type = 1
-
-		if ("yawn","yawns")
-			if (!muzzled)
-				..(act)
-
-		if ("help")
-			src << "Help for emotes. You can use these emotes with say \"*emote\":\n\naflap, airguitar, blink, blink_r, blush, bow-(none)/mob, burp, choke, chuckle, clap, collapse, cough, dance, deathgasp, drool, flap, frown, gasp, giggle, glare-(none)/mob, grin, jump, laugh, look, me, nod, point-atom, scream, shake, sigh, sit, smile, sneeze, sniff, snore, stare-(none)/mob, sulk, sway, tremble, twitch, twitch_s, wave, whimper, wink, yawn"
-
-		else
-			..(act)
-
-
-
-
-
-	if (message)
-		log_emote("[name]/[key] : [message]")
-
- //Hearing gasp and such every five seconds is not good emotes were not global for a reason.
- // Maybe some people are okay with that.
-
-		for(var/mob/M in dead_mob_list)
-			if(!M.client || istype(M, /mob/new_player))
-				continue //skip monkeys, leavers and new players
-			if(M.stat == DEAD && M.client && (M.client.prefs.chat_toggles & CHAT_GHOSTSIGHT) && !(M in viewers(src,null)))
-				M.show_message(message)
-
-
-		if (m_type & 1)
-			visible_message(message)
-		else if (m_type & 2)
-			audible_message(message)
+/datum/emote/living/carbon/wink
+	key = "wink"
+	key_third_person = "winks"
+	message = "подмигивает."

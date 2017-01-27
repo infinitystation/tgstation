@@ -9,6 +9,7 @@
 			<A href='?src=\ref[src];secrets=list_job_debug'>Show Job Debug</A><BR>
 			<A href='?src=\ref[src];secrets=admin_log'>Admin Log</A><BR>
 			<A href='?src=\ref[src];secrets=show_admins'>Show Admin List</A><BR>
+			<A href='?src=\ref[src];secrets=show_current_watchlist'>Show online players in the watchlist</A><BR>
 			<BR>
 			"}
 
@@ -119,6 +120,13 @@
 					dat += "[ckey] - [D.rank.name]<br>"
 				usr << browse(dat, "window=showadmins;size=600x500")
 
+		if("show_current_watchlist")
+			var/dat = "<B>Watchlist: </B><HR>"
+			if(current_watchlist)
+				for(var/ckey in current_watchlist)
+					dat += "[ckey] - [current_watchlist[ckey]]"
+				usr << browse(dat, "window=showcurrentwatchlist;size=600x500")
+
 		if("tdomereset")
 			if(!check_rights(R_ADMIN))
 				return
@@ -151,7 +159,7 @@
 		if("reset_name")
 			if(!check_rights(R_ADMIN))
 				return
-			world.name = new_station_name()
+			world.name = station_name()
 			station_name = world.name
 			log_admin("[key_name(usr)] reset the station name.")
 			message_admins("<span class='adminnotice'>[key_name_admin(usr)] reset the station name.</span>")
@@ -389,7 +397,7 @@
 			feedback_add_details("admin_secrets_fun_used","BO")
 			message_admins("[key_name_admin(usr)] broke all lights")
 			for(var/obj/machinery/light/L in machines)
-				L.broken()
+				L.break_light_tube()
 
 		if("anime")
 			if(!check_rights(R_FUN))

@@ -39,7 +39,7 @@
 					<li>Open the control panel</li>
 					<li>Set the speed to 2</li>
 					<li>Start firing at the singularity generator</li>
-					<li><font color='red'><b>When the singularity reaches a large enough size so it starts moving on it's own set the speed down to 0, but don't shut it off</b></font></li>
+					<li><font color='red'><b>When the singularity reaches a large enough size so it starts moving on its own set the speed down to 0, but don't shut it off</b></font></li>
 					<li>Remember to wear a radiation suit when working with this machine... we did tell you that at the start, right?</li>
 				</ol>
 
@@ -338,7 +338,7 @@
 			<li>RUNTIME ERROR - The machine's onboard C4T-P processor has encountered a critical error, causing it to produce a cat from.. somewhere.
 			Produces the message: The E.X.P.E.R.I-MENTOR encounters a run-time error!</li>
 
-			<li>B100DG0D.EXE - The machine has encountered an unknown subroutine, which has been injected into it's runtime. It upgrades the held item!
+			<li>B100DG0D.EXE - The machine has encountered an unknown subroutine, which has been injected into its runtime. It upgrades the held item!
 			Produces the message: The E.X.P.E.R.I-MENTOR improves the banana, drawing the life essence of those nearby!</li>
 
 			<li>POWERSINK - The machine's PSU has tripped the charging mechanism! It consumes massive amounts of power!
@@ -350,8 +350,8 @@
 
 		<h2>POKE:</h2>
 			<ol>
-			<li>WILD ARMS - The machine's gryoscopic processors malfunction, causing it to lash out at nearby people with it's arms.
-			Produces the message: The E.X.P.E.R.I-MENTOR malfunctions and destroys the banana, lashing it's arms out at nearby people!</li>
+			<li>WILD ARMS - The machine's gryoscopic processors malfunction, causing it to lash out at nearby people with its arms.
+			Produces the message: The E.X.P.E.R.I-MENTOR malfunctions and destroys the banana, lashing its arms out at nearby people!</li>
 
 			<li>MISTYPE - The machine's interface has been garbled, and it switches to OBLITERATE.
 			Produces the message: The E.X.P.E.R.I-MENTOR malfunctions!</li>
@@ -390,7 +390,7 @@
 			Produces the message: The E.X.P.E.R.I-MENTOR malfunctions, melting the banana and leaking hot air!</li>
 
 			<li>EMERGENCY VENT - The machine's temperature gauge has malfunctioned, resulting in it attempting to cool the area around it, but instead, dumping a cloud of steam.
-			Produces the message: The E.X.P.E.R.I-MENTOR malfunctions, activating it's emergency coolant systems!</li>
+			Produces the message: The E.X.P.E.R.I-MENTOR malfunctions, activating its emergency coolant systems!</li>
 			</ol>
 		<h2>COLD:</h2>
 			<ol>
@@ -900,7 +900,7 @@
     			}
 			</script>
 			<p id='loading'>You start skimming through the manual...</p>
-			<iframe width='100%' height='97%' onload="pageloaded(this)" src="[config.wikiurl]/[page_link]?printable=yes&remove_links=1" frameborder="0" id="main_frame"></iframe>
+			<iframe width='100%' height='97%' onload="pageloaded(this)" src="[config.wikiurl]/index.php?title=[page_link]&printable=yes&remove_links=1" frameborder="0" id="main_frame"></iframe>
 			</body>
 
 			</html>
@@ -912,21 +912,24 @@
 	icon_state ="chemistrybook"
 	author = "Nanotrasen"
 	title = "Chemistry Textbook"
-	page_link = "Руководство_по_Химии"
+	//Руководство_по_Химии
+	page_link = "%D0%A0%D1%83%D0%BA%D0%BE%D0%B2%D0%BE%D0%B4%D1%81%D1%82%D0%B2%D0%BE_%D0%BF%D0%BE_%D0%A5%D0%B8%D0%BC%D0%B8%D0%B8"
 
 /obj/item/weapon/book/manual/wiki/engineering_construction
 	name = "Station Repairs and Construction"
 	icon_state ="bookEngineering"
 	author = "Engineering Encyclopedia"
 	title = "Station Repairs and Construction"
-	page_link = "Руководство_по_Конструированию"
+	//Руководство_по_Конструированию
+	page_link = "%D0%A0%D1%83%D0%BA%D0%BE%D0%B2%D0%BE%D0%B4%D1%81%D1%82%D0%B2%D0%BE_%D0%BF%D0%BE_%D0%9A%D0%BE%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8E"
 
 /obj/item/weapon/book/manual/wiki/engineering_guide
 	name = "Power Engineering Guide"
 	icon_state ="bookEngineering2"
 	author = "Engineering Encyclopedia"
 	title = "Power Engineering Guide"
-	page_link = "Руководство_по_Энергетике"
+	//Руководство_по_Энергетике
+	page_link = "%D0%A0%D1%83%D0%BA%D0%BE%D0%B2%D0%BE%D0%B4%D1%81%D1%82%D0%B2%D0%BE_%D0%BF%D0%BE_%D0%AD%D0%BD%D0%B5%D1%80%D0%B3%D0%B5%D1%82%D0%B8%D0%BA%D0%B5"
 
 /obj/item/weapon/book/manual/wiki/security_space_law
 	name = "Space Law"
@@ -934,28 +937,32 @@
 	icon_state = "bookSpaceLaw"
 	author = "Nanotrasen"
 	title = "Space Law"
-	page_link = "Космо-Закон"
+	//Космо-Закон
+	page_link = "%D0%9A%D0%BE%D1%81%D0%BC%D0%BE-%D0%97%D0%B0%D0%BA%D0%BE%D0%BD"
 
 /obj/item/weapon/book/manual/wiki/infections
 	name = "Infections - Making your own pandemic!"
 	icon_state = "bookInfections"
 	author = "Infections Encyclopedia"
 	title = "Infections - Making your own pandemic!"
-	page_link = "Руководство_по_Вирусологии"
+	//Руководство_по_Вирусологии
+	page_link = "%D0%A0%D1%83%D0%BA%D0%BE%D0%B2%D0%BE%D0%B4%D1%81%D1%82%D0%B2%D0%BE_%D0%BF%D0%BE_%D0%92%D0%B8%D1%80%D1%83%D1%81%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%B8"
 
 /obj/item/weapon/book/manual/wiki/telescience
 	name = "Teleportation Science - Bluespace for dummies!"
 	icon_state = "book7"
 	author = "University of Bluespace"
 	title = "Teleportation Science - Bluespace for dummies!"
-	page_link = "Руководство_по_Телесайнсу"
+	//Руководство_по_Телесайнсу
+	page_link = "%D0%A0%D1%83%D0%BA%D0%BE%D0%B2%D0%BE%D0%B4%D1%81%D1%82%D0%B2%D0%BE_%D0%BF%D0%BE_%D0%A2%D0%B5%D0%BB%D0%B5%D1%81%D0%B0%D0%B9%D0%BD%D1%81%D1%83"
 
 /obj/item/weapon/book/manual/wiki/engineering_hacking
 	name = "Hacking"
 	icon_state ="bookHacking"
 	author = "Engineering Encyclopedia"
 	title = "Hacking"
-	page_link = "Руководство_по_Взлому"
+	//Руководство_по_Взлому
+	page_link = "%D0%A0%D1%83%D0%BA%D0%BE%D0%B2%D0%BE%D0%B4%D1%81%D1%82%D0%B2%D0%BE_%D0%BF%D0%BE_%D0%92%D0%B7%D0%BB%D0%BE%D0%BC%D1%83"
 
 //Inriss
 /obj/item/weapon/book/manual/wiki/assitant
@@ -964,7 +971,8 @@
 	icon_state ="book_wiki_civilian"
 	author = "Assitant Encyclopedia"
 	title = "Assistant"
-	page_link = "Ассистент"
+	//"Ассистент"
+	page_link = "%D0%90%D1%81%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BD%D1%82"
 
 /obj/item/weapon/book/manual/wiki/captain
 	name = "Captain Book"
@@ -972,7 +980,8 @@
 	icon_state ="book_wiki_head"
 	author = "Captain Encyclopedia"
 	title = "Captain"
-	page_link = "Капитан"
+	//"Капитан"
+	page_link = "%D0%9A%D0%B0%D0%BF%D0%B8%D1%82%D0%B0%D0%BD"
 
 /obj/item/weapon/book/manual/wiki/hop
 	name = "Head of Personnel"
@@ -980,7 +989,8 @@
 	icon_state ="book_wiki_head"
 	author = "HoP Encyclopedia"
 	title = "Head of Personnel"
-	page_link = "Глава_Персонала"
+	//"Глава_Персонала"
+	page_link = "%D0%93%D0%BB%D0%B0%D0%B2%D0%B0_%D0%9F%D0%B5%D1%80%D1%81%D0%BE%D0%BD%D0%B0%D0%BB%D0%B0"
 
 /obj/item/weapon/book/manual/wiki/quartermaster
 	name = "Quartermaster"
@@ -988,7 +998,8 @@
 	icon_state ="book_wiki_engineer"
 	author = "Quartermaster Encyclopedia"
 	title = "Quartermaster"
-	page_link = "Завхоз"
+	//"Завхоз"
+	page_link = "%D0%97%D0%B0%D0%B2%D1%85%D0%BE%D0%B7"
 
 /obj/item/weapon/book/manual/wiki/cargotechinician
 	name = "Cargo Techinician"
@@ -996,7 +1007,8 @@
 	icon_state ="book_wiki_engineer"
 	author = "Cargo Techinician Encyclopedia"
 	title = "Cargo Techinician"
-	page_link = "Грузчик"
+	//"Грузчик"
+	page_link = "%D0%93%D1%80%D1%83%D0%B7%D1%87%D0%B8%D0%BA"
 
 /obj/item/weapon/book/manual/wiki/shaftminer
 	name = "Shaft Miner"
@@ -1004,7 +1016,8 @@
 	icon_state ="book_wiki_engineer"
 	author = "Shaft Miner Encyclopedia"
 	title = "Shaft Miner"
-	page_link = "Шахтёр"
+	//"Шахтёр"
+	page_link = "%D0%A8%D0%B0%D1%85%D1%82%D1%91%D1%80"
 
 /obj/item/weapon/book/manual/wiki/bartender
 	name = "Bartender"
@@ -1012,7 +1025,8 @@
 	icon_state ="book_wiki_civilian"
 	author = "Bartender Encyclopedia"
 	title = "Bartender"
-	page_link = "Бармен"
+	//"Бармен"
+	page_link = "%D0%91%D0%B0%D1%80%D0%BC%D0%B5%D0%BD"
 
 /obj/item/weapon/book/manual/wiki/chef
 	name = "Chef"
@@ -1020,7 +1034,8 @@
 	icon_state ="book_wiki_civilian"
 	author = "Chef Encyclopedia"
 	title = "Chef"
-	page_link = "Повар"
+	//"Повар"
+	page_link = "%D0%9F%D0%BE%D0%B2%D0%B0%D1%80"
 
 /obj/item/weapon/book/manual/wiki/botanist
 	name = "Botanist"
@@ -1028,7 +1043,8 @@
 	icon_state ="book_wiki_civilian"
 	author = "Botanist Encyclopedia"
 	title = "Botanist"
-	page_link = "Ботаник"
+	//"Ботаник"
+	page_link = "%D0%91%D0%BE%D1%82%D0%B0%D0%BD%D0%B8%D0%BA"
 
 /obj/item/weapon/book/manual/wiki/janitor
 	name = "Janitor"
@@ -1036,7 +1052,8 @@
 	icon_state ="book_wiki_civilian"
 	author = "Janitor Encyclopedia"
 	title = "Janitor"
-	page_link = "Уборщик"
+	//"Уборщик"
+	page_link = "%D0%A3%D0%B1%D0%BE%D1%80%D1%89%D0%B8%D0%BA"
 
 /obj/item/weapon/book/manual/wiki/clown
 	name = "Clown"
@@ -1044,7 +1061,8 @@
 	icon_state ="book_wiki_civilian"
 	author = "Clown Encyclopedia"
 	title = "Clown"
-	page_link = "Клоун"
+	//"Клоун"
+	page_link = "%D0%9A%D0%BB%D0%BE%D1%83%D0%BD"
 
 /obj/item/weapon/book/manual/wiki/mime
 	name = "Mime"
@@ -1052,7 +1070,8 @@
 	icon_state ="book_wiki_civilian"
 	author = "Mime Encyclopedia"
 	title = "Mime"
-	page_link = "Мим"
+	//"Мим"
+	page_link = "%D0%9C%D0%B8%D0%BC"
 
 /obj/item/weapon/book/manual/wiki/librarian
 	name = "Librarian"
@@ -1060,7 +1079,8 @@
 	icon_state ="book_wiki_civilian"
 	author = "Librarian Encyclopedia"
 	title = "Librarian"
-	page_link = "Библиотекарь"
+	//"Библиотекарь"
+	page_link = "%D0%91%D0%B8%D0%B1%D0%BB%D0%B8%D0%BE%D1%82%D0%B5%D0%BA%D0%B0%D1%80%D1%8C"
 
 /obj/item/weapon/book/manual/wiki/chaplain
 	name = "Chaplain"
@@ -1068,7 +1088,8 @@
 	icon_state ="book_wiki_civilian"
 	author = "Chaplain Encyclopedia"
 	title = "Chaplain"
-	page_link = "Каппелан"
+	//"Капеллан"
+	page_link = "%D0%9A%D0%B0%D0%BF%D0%B5%D0%BB%D0%BB%D0%B0%D0%BD"
 
 /obj/item/weapon/book/manual/wiki/chiefengineer
 	name = "Chief Engineer"
@@ -1076,14 +1097,16 @@
 	icon_state ="book_wiki_head"
 	author = "Chief Engineer Encyclopedia"
 	title = "Chief Engineer"
-	page_link = "Главный_Инженер"
+	//"Главный_Инженер"
+	page_link = "%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D1%8B%D0%B9_%D0%98%D0%BD%D0%B6%D0%B5%D0%BD%D0%B5%D1%80"
 
 /obj/item/weapon/book/manual/wiki/stationengineer
 	name = "Station Engineer"
 	icon_state ="book_wiki_engineer"
 	author = "Station Engineer Encyclopedia"
 	title = "Station Engineer"
-	page_link = "Инженер"
+	//"Инженер"
+	page_link = "%D0%98%D0%BD%D0%B6%D0%B5%D0%BD%D0%B5%D1%80"
 
 /obj/item/weapon/book/manual/wiki/atmospherictechnician
 	name = "Atmospheric Technician"
@@ -1091,7 +1114,8 @@
 	icon_state ="book_wiki_engineer"
 	author = "Atmospheric Technician Encyclopedia"
 	title = "Atmospheric Technician"
-	page_link = "Атмосферный_Техник"
+	//"Атмосферный_техник"
+	page_link = "%D0%90%D1%82%D0%BC%D0%BE%D1%81%D1%84%D0%B5%D1%80%D0%BD%D1%8B%D0%B9_%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D0%BA"
 
 /obj/item/weapon/book/manual/wiki/chiefmedicalofficer
 	name = "Chief Medical Officer"
@@ -1099,7 +1123,8 @@
 	icon_state ="book_wiki_head"
 	author = "Chief Medical Officer Encyclopedia"
 	title = "ChiefMedicalOfficer"
-	page_link = "Главный_Врач"
+	//"Главный_Врач"
+	page_link = "%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D1%8B%D0%B9_%D0%92%D1%80%D0%B0%D1%87"
 
 /obj/item/weapon/book/manual/wiki/medicaldoctor
 	name = "Medical Doctor"
@@ -1107,7 +1132,8 @@
 	icon_state ="book_wiki_medbay"
 	author = "Medical Doctor Encyclopedia"
 	title = "Medical Doctor"
-	page_link = "Доктор"
+	//"Доктор"
+	page_link = "%D0%94%D0%BE%D0%BA%D1%82%D0%BE%D1%80"
 
 /obj/item/weapon/book/manual/wiki/chemist
 	name = "Chemist"
@@ -1115,14 +1141,16 @@
 	icon_state ="book_wiki_medbay"
 	author = "Chemist Encyclopedia"
 	title = "Chemist"
-	page_link = "Химик"
+	//"Химик"
+	page_link = "%D0%A5%D0%B8%D0%BC%D0%B8%D0%BA"
 
 /obj/item/weapon/book/manual/wiki/geneticst
 	name = "Geneticst"
 	icon_state ="book_wiki_medbay"
 	author = "Geneticst Encyclopedia"
 	title = "Geneticst"
-	page_link = "Генетик"
+	//"Генетик"
+	page_link = "%D0%93%D0%B5%D0%BD%D0%B5%D1%82%D0%B8%D0%BA"
 
 /obj/item/weapon/book/manual/wiki/rd
 	name = "Research Director"
@@ -1130,7 +1158,8 @@
 	icon_state = "book_wiki_head"
 	author = "Research Director Encyclopedia"
 	title = "Research Director"
-	page_link = "Глава_исследовательского_отдела"
+	//"Глава_исследовательского_отдела"
+	page_link = "%D0%93%D0%BB%D0%B0%D0%B2%D0%B0_%D0%B8%D1%81%D1%81%D0%BB%D0%B5%D0%B4%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D0%BE%D1%82%D0%B4%D0%B5%D0%BB%D0%B0"
 
 /obj/item/weapon/book/manual/wiki/scientist
 	name = "Research Director"
@@ -1138,7 +1167,8 @@
 	icon_state = "book_wiki_scince"
 	author = "Scientist Encyclopedia"
 	title = "Scientist"
-	page_link = "Ученый"
+	//"Ученый"
+	page_link = "%D0%A3%D1%87%D0%B5%D0%BD%D1%8B%D0%B9"
 
 /obj/item/weapon/book/manual/wiki/roboticist
 	name = "Roboticist"
@@ -1146,7 +1176,8 @@
 	icon_state = "book_wiki_scince"
 	author = "Roboticist Encyclopedia"
 	title = "Roboticist"
-	page_link = "Робототехник"
+	//"Робототехник"
+	page_link = "%D0%A0%D0%BE%D0%B1%D0%BE%D1%82%D0%BE%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D0%BA"
 
 /obj/item/weapon/book/manual/wiki/hos
 	name = "Head Of Security"
@@ -1154,7 +1185,8 @@
 	icon_state = "book_wiki_security"
 	author = "Head Of Security Encyclopedia"
 	title = "Head Of Security"
-	page_link = "Глава_Службы_Безопасности"
+	//"Глава_Службы_Безопасности"
+	page_link = "%D0%93%D0%BB%D0%B0%D0%B2%D0%B0_%D0%A1%D0%BB%D1%83%D0%B6%D0%B1%D1%8B_%D0%91%D0%B5%D0%B7%D0%BE%D0%BF%D0%B0%D1%81%D0%BD%D0%BE%D1%81%D1%82%D0%B8"
 
 /obj/item/weapon/book/manual/wiki/warden
 	name = "Warden"
@@ -1162,7 +1194,8 @@
 	icon_state = "book_wiki_security"
 	author = "Warden Encyclopedia"
 	title = "Warden"
-	page_link = "Смотритель"
+	//"Смотритель"
+	page_link = "%D0%A1%D0%BC%D0%BE%D1%82%D1%80%D0%B8%D1%82%D0%B5%D0%BB%D1%8C"
 
 /obj/item/weapon/book/manual/wiki/officer
 	name = "Officer"
@@ -1170,6 +1203,7 @@
 	icon_state = "book_wiki_security"
 	author = "Officer Encyclopedia"
 	title = "Officer"
-	page_link = "Офицер_Службы_Безопасности"
+	//"Офицер_Службы_Безопасности"
+	page_link = "%D0%9E%D1%84%D0%B8%D1%86%D0%B5%D1%80_%D0%A1%D0%BB%D1%83%D0%B6%D0%B1%D1%8B_%D0%91%D0%B5%D0%B7%D0%BE%D0%BF%D0%B0%D1%81%D0%BD%D0%BE%D1%81%D1%82%D0%B8"
 
 

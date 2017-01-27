@@ -75,7 +75,9 @@
 	new /obj/item/clothing/shoes/galoshes(src)
 	new /obj/item/weapon/watertank/janitor(src)
 	new /obj/item/weapon/storage/belt/janitor(src)
-
+	new /obj/item/clothing/head/janitor_cap(src)
+	new /obj/item/clothing/suit/janitor_jacket(src)
+	new /obj/item/clothing/under/janitor_uniform(src)
 
 /obj/structure/closet/lawcloset
 	name = "legal closet"
@@ -95,6 +97,8 @@
 	new /obj/item/clothing/suit/toggle/lawyer/black(src)
 	new /obj/item/clothing/shoes/laceup(src)
 	new /obj/item/clothing/shoes/laceup(src)
+	new /obj/item/clothing/tie/lawyers_badge(src)
+	new /obj/item/clothing/tie/lawyers_badge(src)
 
 /obj/structure/closet/wardrobe/chaplain_black
 	name = "chapel wardrobe"
@@ -108,6 +112,10 @@
 	new /obj/item/clothing/shoes/sneakers/black(src)
 	new /obj/item/clothing/suit/nun(src)
 	new /obj/item/clothing/head/nun_hood(src)
+	new /obj/item/clothing/suit/studentuni(src)
+	new /obj/item/clothing/head/cage(src)
+	new /obj/item/clothing/suit/witchhunter(src)
+	new /obj/item/clothing/head/witchunter_hat(src)
 	new /obj/item/clothing/suit/hooded/chaplain_hoodie(src)
 	new /obj/item/clothing/suit/holidaypriest(src)
 	new /obj/item/weapon/storage/backpack/cultpack (src)
@@ -121,8 +129,11 @@
 	name = "coffin"
 	desc = "It's a burial receptacle for the dearly departed."
 	icon_state = "coffin"
-	burn_state = FLAMMABLE
-	burntime = 20
+	resistance_flags = FLAMMABLE
+	obj_integrity = 70
+	max_integrity = 70
+	horizontal = TRUE
+	delivery_icon = "deliverycrate"
 
 /obj/structure/closet/wardrobe/red
 	name = "security wardrobe"
@@ -139,29 +150,22 @@
 	new /obj/item/weapon/storage/backpack/security(src)
 	new /obj/item/weapon/storage/backpack/satchel/sec(src)
 	new /obj/item/weapon/storage/backpack/dufflebag/sec(src)
-	new /obj/item/weapon/storage/backpack/dufflebag/sec(src)
 	for(var/i in 1 to 3)
 		new /obj/item/clothing/under/rank/security/navyblue(src)
 	for(var/i in 1 to 3)
 		new /obj/item/clothing/under/rank/security/blue(src)
-	for(var/i in 1 to 3)
 		new /obj/item/clothing/under/sec_corporate(src)
-	for(var/i in 1 to 3)
+	for(var/i in 1 to 5)
 		new /obj/item/clothing/head/beret/sec/navyofficer(src)
 	for(var/i in 1 to 3)
-		new /obj/item/clothing/head/beret/sec/corporate
-	for(var/i in 1 to 3)
+		new /obj/item/clothing/head/beret/sec/corporate(src)
+	for(var/i in 1 to 5)
 		new /obj/item/clothing/head/beret/sec(src)
-	for(var/i in 1 to 3)
 		new /obj/item/clothing/shoes/jackboots(src)
-	for(var/i in 1 to 3)
-		new /obj/item/clothing/suit/armor/vest(src)
 	for(var/i in 1 to 3)
 		new /obj/item/clothing/suit/hooded/security_new(src)
 	for(var/i in 1 to 3)
 		new /obj/item/clothing/head/soft/sec(src)
-	for(var/i in 1 to 3)
-		new /obj/item/clothing/mask/bandana/blue(src)
 	return
 
 /obj/structure/closet/wardrobe/cargotech

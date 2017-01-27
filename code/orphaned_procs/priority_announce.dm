@@ -5,6 +5,7 @@
 	var/announcement
 
 	text = sanitize_a0(copytext(text,1,MAX_MESSAGE_LEN))
+	title = sanitize_a0(title)
 
 	if(type == "Priority")
 		announcement += "<h1 class='alert'>Priority Announcement</h1>"
@@ -17,7 +18,7 @@
 	else
 		announcement += "<h1 class='alert'>[command_name()] Update</h1>"
 		if (title && length(title) > 0)
-			announcement += "<br><h2 class='alert'>[html_encode(title)]</h2>"
+			announcement += "<br><h2 class='alert'>[sanitize_a0(title)]</h2>"
 		if(title == "")
 			news_network.SubmitArticle(text, "Central Command Update", "Station Announcements", null)
 		else
@@ -27,7 +28,7 @@
 	announcement += "<br>"
 
 	for(var/mob/M in player_list)
-		if(!istype(M,/mob/new_player) && !M.ear_deaf)
+		if(!isnewplayer(M) && !M.ear_deaf)
 			M << announcement
 			if(M.client.prefs.toggles & SOUND_ANNOUNCEMENTS)
 				M << sound(sound)
@@ -48,7 +49,7 @@
 		return
 	message = sanitize(copytext(message,1,MAX_MESSAGE_LEN))
 	for(var/mob/M in player_list)
-		if(!istype(M,/mob/new_player) && !M.ear_deaf)
+		if(!isnewplayer(M) && !M.ear_deaf)
 			M << "<b><font size = 3><font color = red>[title]</font color><BR>[message]</font size></b><BR>"
 			if(M.client.prefs.toggles & SOUND_ANNOUNCEMENTS)
 				if(alert)

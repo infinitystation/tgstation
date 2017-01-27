@@ -1,11 +1,11 @@
 /obj/item/weapon/folder
 	name = "folder"
 	desc = "A folder."
-	icon = 'icons/obj/bureaucracy.dmi'
+	icon = 'icons/obj/Infinity_bureaucracy.dmi'
 	icon_state = "folder"
-	w_class = 2
+	w_class = WEIGHT_CLASS_SMALL
 	pressure_resistance = 2
-	burn_state = FLAMMABLE
+	resistance_flags = FLAMMABLE
 
 /obj/item/weapon/folder/blue
 	desc = "A blue folder."
@@ -22,6 +22,10 @@
 /obj/item/weapon/folder/white
 	desc = "A white folder."
 	icon_state = "folder_white"
+
+/obj/item/weapon/folder/black
+	desc = "A black folder."
+	icon_state = "folder_black"
 
 
 /obj/item/weapon/folder/update_icon()

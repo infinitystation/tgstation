@@ -66,6 +66,14 @@
 	build_path = /obj/item/weapon/weldingtool
 	category = list("initial","Tools")
 
+/datum/design/mini_weldingtool
+	name = "Emergency welding tool"
+	id = "mini_welding_tool"
+	build_type = AUTOLATHE
+	materials = list(MAT_METAL = 30, MAT_GLASS = 10)
+	build_path = /obj/item/weapon/weldingtool/mini
+	category = list("initial","Tools")
+
 /datum/design/screwdriver
 	name = "Screwdriver"
 	id = "screwdriver"
@@ -178,6 +186,14 @@
 	materials = list(MAT_METAL = 50, MAT_GLASS = 50)
 	build_path = /obj/item/weapon/electronics/firealarm
 	category = list("initial", "Electronics")
+
+/datum/design/earmuffs
+	name = "Earmuffs"
+	id = "earmuffs"
+	build_type = AUTOLATHE
+	materials = list(MAT_METAL = 500, MAT_GLASS = 500)
+	build_path = /obj/item/clothing/ears/earmuffs
+	category = list("initial", "Misc")
 
 /datum/design/pipe_painter
 	name = "Pipe painter"
@@ -515,7 +531,7 @@
 	name = "Light tube"
 	id = "light_tube"
 	build_type = AUTOLATHE
-	materials = list(MAT_METAL = 60, MAT_GLASS = 100)
+	materials = list(MAT_GLASS = 100)
 	build_path = /obj/item/weapon/light/tube
 	category = list("initial", "Construction")
 
@@ -523,7 +539,7 @@
 	name = "Light bulb"
 	id = "light_bulb"
 	build_type = AUTOLATHE
-	materials = list(MAT_METAL = 60, MAT_GLASS = 100)
+	materials = list(MAT_GLASS = 100)
 	build_path = /obj/item/weapon/light/bulb
 	category = list("initial", "Construction")
 
@@ -769,3 +785,34 @@
 	build_path = /obj/item/conveyor_switch_construct
 	category = list("initial", "Construction")
 
+/datum/design/laptop
+	name = "Laptop Frame"
+	id = "laptop"
+	build_type = AUTOLATHE
+	materials = list(MAT_METAL = 10000, MAT_GLASS = 1000)
+	build_path = /obj/item/device/modular_computer/laptop/buildable
+	category = list("initial","Misc")
+
+/datum/design/tablet
+	name = "Tablet Frame"
+	id = "tablet"
+	build_type = AUTOLATHE
+	materials = list(MAT_METAL = 2000, MAT_GLASS = 1000)
+	build_path = /obj/item/device/modular_computer/tablet
+	category = list("initial","Misc")
+
+/datum/design/cardboard
+	name = "Cardboard"
+	id = "cardboard"
+	build_type = AUTOLATHE
+	materials = list(MAT_METAL = 200)
+	build_path = /obj/item/stack/sheet/cardboard
+	category = list("initial","Misc")
+
+/datum/design/welding_goggles
+	name = "Welding Goggles"
+	id = "welding_goggles"
+	build_type = AUTOLATHE
+	materials = list(MAT_METAL = 450, MAT_GLASS = 1800)
+	build_path = /obj/item/clothing/glasses/welding
+	category = list("initial","Tools")

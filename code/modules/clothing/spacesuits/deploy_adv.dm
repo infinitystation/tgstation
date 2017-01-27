@@ -13,9 +13,9 @@
 	item_state = "ce_helm"
 	basestate = "rig"
 	item_color = "rd"
-	armor = list(melee = 10, bullet = 5, laser = 10, energy = 5, bomb = 10, bio = 100, rad = 90)
+	armor = list(melee = 10, bullet = 5, laser = 10, energy = 5, bomb = 10, bio = 100, rad = 80, fire = 40, acid = 60)
 	slowdown = 1
-	unacidable = 1
+	resistance_flags = FIRE_PROOF | UNACIDABLE
 
 /obj/item/clothing/suit/space/hardsuit/space_adv
 	name = "Space working hardsuit"
@@ -25,10 +25,10 @@
 	item_state = "ce_hardsuit"
 	worn_icon = 'icons/mob/space_adv.dmi'
 	slowdown = 1
-	armor = list(melee = 10, bullet = 5, laser = 10, energy = 5, bomb = 10, bio = 100, rad = 90)
+	armor = list(melee = 10, bullet = 5, laser = 10, energy = 5, bomb = 10, bio = 100, rad = 90, fire = 40, acid = 60)
 	allowed = list(/obj/item/device/flashlight,/obj/item/weapon/tank,/obj/item/weapon/storage/bag/ore,/obj/item/device/t_scanner,/obj/item/weapon/pickaxe, /obj/item/weapon/rcd)
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/space_adv
-	unacidable = 1
+	resistance_flags = FIRE_PROOF | UNACIDABLE
 
 /obj/item/clothing/suit/space/hardsuit/space_adv/New()
 	jetpack = new /obj/item/weapon/tank/jetpack/suit(src)
@@ -235,30 +235,30 @@
 
 ///Military // Cargo color suits
 /obj/item/clothing/head/helmet/space/hardsuit/space_adv/military
-	name = "Military space hardsuit helmet (Wrench to unscrew)"
+	name = "Military space hardsuit helmet"
 	desc = "—пециальный шлем разработанный для армии. ¬ы можете открутить его с помощью гаечного ключа"
 	icon_state = "rig0-military"
 	item_state = "rig_helm"
 	item_color = "military"
-	armor = list(melee = 60, bullet = 70, laser = 60, energy = 50, bomb = 75, bio = 100, rad = 80)
+	armor = list(melee = 60, bullet = 70, laser = 60, energy = 50, bomb = 75, bio = 100, rad = 80, fire = 10, acid = 20)
 
 /obj/item/clothing/suit/space/hardsuit/space_adv/military
 	name = "Military space hardsuit"
 	desc = "—пециальный костюм разработанный для армии. »меет укрепленные слои защиты и выдвигаемый шлем. ¬ы можете отключить его от шлема с помошью откручивания специальных креплений на выдвинутом шлеме"
 	icon_state = "militaryrig"
 	item_state = "rig_suit"
-	armor = list(melee = 60, bullet = 80, laser = 60, energy = 50, bomb = 75, bio = 100, rad = 80)
+	armor = list(melee = 60, bullet = 80, laser = 60, energy = 50, bomb = 75, bio = 100, rad = 80, fire = 10, acid = 20)
 	allowed = list(/obj/item/weapon/gun,/obj/item/device/flashlight,/obj/item/weapon/tank,/obj/item/weapon/melee/baton)
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/space_adv/military
 
 //SWAT //Red suits
 /obj/item/clothing/head/helmet/space/hardsuit/space_adv/swat
 	name = "Swat space hardsuit helmet"
-	desc = "—пециальный шлем разработанный для оряда SWAT. ¬ы можете открутить его с помощью гаечного ключа"
+	desc = "—пециальный шлем разработанный для отряда SWAT. ¬ы можете открутить его с помощью гаечного ключа"
 	icon_state = "rig0-swat"
 	item_state = "sec_helm"
 	item_color = "swat"
-	armor = list(melee = 90, bullet = 60, laser = 60, energy = 20, bomb = 45, bio = 100, rad = 80)
+	armor = list(melee = 90, bullet = 60, laser = 60, energy = 20, bomb = 45, bio = 100, rad = 80, fire = 10, acid = 20)
 	var/hud_type = DATA_HUD_SECURITY_ADVANCED // HUD
 
 /obj/item/clothing/suit/space/hardsuit/space_adv/swat
@@ -266,7 +266,7 @@
 	desc = "—пециальный костюм для отряда SWAT. имеет плотный слой боевого  елвара и выдвигаемый шлем. ¬ы можете отключить его от шлема с помошью откручивания специальных креплений на выдвинутом шлеме"
 	icon_state = "swatrig"
 	item_state = "sec_hardsuit"
-	armor = list(melee = 80, bullet = 50, laser = 50, energy = 20, bomb = 45, bio = 100, rad = 80)
+	armor = list(melee = 80, bullet = 50, laser = 50, energy = 20, bomb = 45, bio = 100, rad = 80, fire = 10, acid = 20)
 	allowed = list(/obj/item/weapon/gun,/obj/item/device/flashlight,/obj/item/weapon/tank,/obj/item/weapon/melee/baton)
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/space_adv/swat
 

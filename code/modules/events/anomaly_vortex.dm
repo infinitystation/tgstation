@@ -9,11 +9,9 @@
 /datum/round_event/anomaly/anomaly_vortex
 	startWhen = 10
 	announceWhen = 3
-	endWhen = 70
-
 
 /datum/round_event/anomaly/anomaly_vortex/announce()
-	priority_announce("—канеры дальнего радиуса действия обнаружили вихревую аномалию высокой интенсивности. ќжидаемое место воздействия: [impact_area.name]", "“ревога! јномалия!")
+	priority_announce("—канеры дальнего радиуса действи€ обнаружили вихревую аномалию высокой интенсивности. ќжидаемое место воздействи€: [impact_area.name]", "“ревога! јномали€!")
 
 /datum/round_event/anomaly/anomaly_vortex/start()
 	var/turf/T = safepick(get_area_turfs(impact_area))

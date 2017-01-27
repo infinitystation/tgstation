@@ -1,4 +1,4 @@
-//This file was auto-corrected by findeclaration.exe on 25.5.2012 20:42:31
+
 
 //Few global vars to track the blob
 var/list/blobs = list() //complete list of all blobs made.
@@ -26,13 +26,14 @@ var/list/blobs_legit = list() //used for win-score calculations, contains only b
 	<span class='green'>Blobs</span>: Consume the station and spread as far as you can.\n\
 	<span class='notice'>Crew</span>: Fight back the blobs and minimize station damage."
 
-	var/burst = 0
+	var/message_sent = FALSE
 
 	var/cores_to_spawn = 1
 	var/players_per_core = 15
 	var/blob_point_rate = 3
+	var/blob_base_starting_points = 80
 
-	var/blobwincount = 800
+	var/blobwincount = 600
 
 	var/messagedelay_low = 2400 //in deciseconds
 	var/messagedelay_high = 3600 //blob report will be sent after a random value between these (minimum 4 minutes, maximum 6 minutes)
@@ -42,7 +43,8 @@ var/list/blobs_legit = list() //used for win-score calculations, contains only b
 /datum/game_mode/blob/pre_setup()
 	cores_to_spawn = max(round(num_players()/players_per_core, 1), 1)
 
-	blobwincount = initial(blobwincount) * cores_to_spawn
+	var/win_multiplier = 1 + (0.1 * cores_to_spawn)
+	blobwincount = initial(blobwincount) * cores_to_spawn * win_multiplier
 
 	for(var/j = 0, j < cores_to_spawn, j++)
 		if (!antag_candidates.len)
@@ -74,7 +76,8 @@ var/list/blobs_legit = list() //used for win-score calculations, contains only b
 /datum/game_mode/blob/post_setup()
 
 	for(var/datum/mind/blob in blob_overminds)
-		var/mob/camera/blob/B = blob.current.become_overmind(1)
+		var/mob/camera/blob/B = blob.current.become_overmind(TRUE, round(blob_base_starting_points/blob_overminds.len))
+		B.mind.name = B.name
 		var/turf/T = pick(blobstart)
 		B.loc = T
 		B.base_point_rate = blob_point_rate
@@ -92,9 +95,10 @@ var/list/blobs_legit = list() //used for win-score calculations, contains only b
 		sleep(message_delay)
 
 		send_intercept(1)
+		message_sent = TRUE
 
 		sleep(24000) //40 minutes, plus burst_delay*3(minimum of 6 minutes, maximum of 8)
-
-		send_intercept(2) //if the blob has been alive this long, it's time to bomb it
+		if(!replacementmode)
+			send_intercept(2) //if the blob has been alive this long, it's time to bomb it
 
 	return ..()

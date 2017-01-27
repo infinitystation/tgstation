@@ -27,11 +27,12 @@
 	init_sprite_accessory_subtypes(/datum/sprite_accessory/frills, frills_list)
 	init_sprite_accessory_subtypes(/datum/sprite_accessory/spines, spines_list)
 	init_sprite_accessory_subtypes(/datum/sprite_accessory/spines_animated, animated_spines_list)
-	//Tajaran bodyparts
 	init_sprite_accessory_subtypes(/datum/sprite_accessory/thair, hair_styles_tajaran)
-	init_sprite_accessory_subtypes(/datum/sprite_accessory/tajaran/tail, tails_list_tajaran)
-	init_sprite_accessory_subtypes(/datum/sprite_accessory/tajaran/ears, ears_list_tajaran)
+	init_sprite_accessory_subtypes(/datum/sprite_accessory/tails/tajaran, tails_list_tajaran)
+	init_sprite_accessory_subtypes(/datum/sprite_accessory/tails_animated/tajaran, animated_tails_list_tajaran)
+	init_sprite_accessory_subtypes(/datum/sprite_accessory/ears/tajaran, ears_list_tajaran)
 	init_sprite_accessory_subtypes(/datum/sprite_accessory/wings, r_wings_list,roundstart = TRUE)
+	init_sprite_accessory_subtypes(/datum/sprite_accessory/legs, legs_list)
 
 	//Species
 	for(var/spath in subtypesof(/datum/species))
@@ -53,6 +54,11 @@
 	for(var/path in subtypesof(/datum/tech))
 		var/datum/tech/D = new path()
 		tech_list[D.id] = D
+
+	//Emotes
+	for(var/path in subtypesof(/datum/emote))
+		var/datum/emote/E = new path()
+		emote_list[E.key] = E
 
 	init_subtypes(/datum/crafting_recipe, crafting_recipes)
 

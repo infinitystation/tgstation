@@ -92,7 +92,7 @@
 /turf/open/floor/mineral/titanium,
 /area/shuttle/supply)
 "o" = (
-/obj/machinery/door/airlock/shuttle{
+/obj/machinery/door/airlock/titanium{
 	name = "Supply Shuttle Airlock";
 	req_access_txt = "31"
 	},
@@ -118,7 +118,7 @@
 /turf/open/floor/mineral/titanium,
 /area/shuttle/supply)
 "q" = (
-/obj/machinery/door/airlock/shuttle{
+/obj/machinery/door/airlock/titanium{
 	name = "Supply Shuttle Airlock";
 	req_access_txt = "31"
 	},
@@ -184,7 +184,6 @@
 /area/shuttle/supply)
 
 (1,1,1) = {"
-a
 b
 b
 b
@@ -192,7 +191,8 @@ b
 b
 b
 b
-s
+b
+b
 w
 "}
 (2,1,1) = {"
@@ -256,7 +256,7 @@ b
 z
 "}
 (7,1,1) = {"
-a
+b
 b
 b
 l
@@ -264,6 +264,6 @@ o
 b
 q
 r
-s
+b
 w
 "}

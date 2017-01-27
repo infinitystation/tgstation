@@ -23,7 +23,7 @@
 	return
 
 
-/obj/item/weapon/reagent_containers/pill/attack(mob/M, mob/user, def_zone, self_delay)
+/obj/item/weapon/reagent_containers/pill/attack(mob/M, mob/user, def_zone)
 	if(!canconsume(M, user))
 		return 0
 
@@ -68,8 +68,7 @@
 		for(var/mob/O in viewers(2, user))	//viewers is necessary here because of the small radius
 			O << "<span class='warning'>[user] slips something into [target]!</span>"
 		reagents.trans_to(target, reagents.total_volume)
-		spawn(5)
-			qdel(src)
+		qdel(src)
 
 /obj/item/weapon/reagent_containers/pill/tox
 	name = "toxins pill"
@@ -113,6 +112,9 @@
 	icon_state = "pill17"
 	list_reagents = list("charcoal" = 50)
 	roundstart = 1
+/obj/item/weapon/reagent_containers/pill/charcoal/low
+	name = "small antitoxin pill"
+	list_reagents = list("charcoal" = 10)
 /obj/item/weapon/reagent_containers/pill/epinephrine
 	name = "epinephrine pill"
 	desc = "Used to stabilize patients."
@@ -143,16 +145,15 @@
 	icon_state = "pill11"
 	list_reagents = list("oxandrolone" = 24)
 	roundstart = 1
-
 /obj/item/weapon/reagent_containers/pill/insulin
 	name = "insulin pill"
 	desc = "Handles hyperglycaemic coma."
 	icon_state = "pill18"
 	list_reagents = list("insulin" = 50)
 	roundstart = 1
-/obj/item/weapon/reagent_containers/pill/lowcharcoal
-	name = "antitoxin pill"
-	desc = "Neutralizes many common toxins."
-	icon_state = "pill17"
-	list_reagents = list("charcoal" = 10)
+/obj/item/weapon/reagent_containers/pill/potass
+	name = "potassium iodide pill"
+	desc = "Use to remove radiation."
+	icon_state = "pill5"
+	list_reagents = list("potass_iodide" = 50)
 	roundstart = 1

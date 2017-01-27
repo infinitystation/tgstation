@@ -24,29 +24,22 @@ datum/track/New(var/title_name, var/audio)
 
 	var/datum/track/current_track
 	var/list/datum/track/tracks = list(
-		new/datum/track("Bioshock Infinite OST - After You ve Gone (Ruth Etting)", 'sound/playlist/Bioshock Infinite OST - After You ve Gone (Ruth Etting).ogg'),
-		new/datum/track("Bob Crosby - Dear Hearts And Gentle People", 'sound/playlist/Bob Crosby - Dear Hearts And Gentle People.ogg'),
-		new/datum/track("Bobby Darin - Beyond The Sea", 'sound/playlist/Bobby Darin - Beyond The Sea.ogg'),
-		new/datum/track("Chubby Checker - Let s Twist Again", 'sound/playlist/Chubby Checker - Let s Twist Again.ogg'),
-		new/datum/track("Chuck Berry - Johnny B. Goode", 'sound/playlist/Chuck Berry - Johnny B. Goode.ogg'),
-		new/datum/track("Dan Martinez - Lead Me Home (featuring Eddie Wakes)", 'sound/playlist/Dan Martinez - Lead Me Home (featuring Eddie Wakes).ogg'),
-		new/datum/track("Electro Light feat. Sidekicks - Hold On To Me", 'sound/playlist/Electro Light feat. Sidekicks - Hold On To Me.ogg'),
-		new/datum/track("Elvis Presley - I can t help falling in love with You", 'sound/playlist/Elvis Presley - I can t help falling in love with You.ogg'),
-		new/datum/track("Elvis Presley - Rock n roll", 'sound/playlist/Elvis Presley - Rock n roll.ogg'),
-		new/datum/track("Elvis Presley - Tutti Frutti", 'sound/playlist/Elvis Presley - Tutti Frutti.ogg'),
-		new/datum/track("Frank Sinatra - Blue Moon", 'sound/playlist/Frank Sinatra - Blue Moon.ogg'),
-		new/datum/track("Frank Sinatra - I ve Got You Under My Skin", 'sound/playlist/Frank Sinatra - I ve Got You Under My Skin.ogg'),
-		new/datum/track("Jim Yosef - Arrow", 'sound/playlist/Jim Yosef - Arrow.ogg'),
-		new/datum/track("Johnie Cash - The Man Comes Around", 'sound/playlist/Johnie Cash - The Man Comes Around.ogg'),
-		new/datum/track("Johnny Cash - Hurt", 'sound/playlist/Johnny Cash - Hurt.ogg'),
-		new/datum/track("Johny Cash - God s Gonna Cut You Down", 'sound/playlist/Johny Cash - God s Gonna Cut You Down.ogg'),
-		new/datum/track("Lynda Carter - Good Neighbor", 'sound/playlist/Lynda Carter - Good Neighbor.ogg'),
-		new/datum/track("Mafia 2 OST - After The Lights Go Down Low", 'sound/playlist/Mafia 2 OST - After The Lights Go Down Low.ogg'),
-		new/datum/track("Marty Robbins - Big Iron", 'sound/playlist/Marty Robbins - Big Iron.ogg'),
-		new/datum/track("Tennessee Ernie Ford - 16 tonns", 'sound/playlist/Tennessee Ernie Ford - 16 tonns.ogg'),
-		new/datum/track("The Five Stars - Atom Bomb Baby", 'sound/playlist/The Five Stars - Atom Bomb Baby.ogg'),
-		new/datum/track("The Ink Spots - I Don t Want To Set The World On Fire", 'sound/playlist/The Ink Spots - I Don t Want To Set The World On Fire.ogg'),
-		new/datum/track("Victor Tsoy - Kukushka", 'sound/playlist/Victor Tsoy - Kukushka.ogg')
+		new/datum/track("Bee Gees - Stayin' Alive", 'sound/playlist/bee_jees_stayin_alive.ogg'),
+		new/datum/track("Fever The Ghost - Source", 'sound/playlist/fever_the_ghost_source.ogg'),
+		new/datum/track("I'm a member of the Midnight Crew", 'sound/playlist/im_a_member_of_the_midnight_crew.ogg'),
+		new/datum/track("Iron Maiden - Out of The Silent Planet", 'sound/playlist/iron_maiden_out_of_the_silent_planet.ogg'),
+		new/datum/track("Iron Savior - 01 The Landing", 'sound/playlist/iron_savior_the_landing.ogg'),
+		new/datum/track("Justice - D.A.N.C.E.", 'sound/playlist/justice_dance.ogg'),
+		new/datum/track("Malcolm Brown - Do You Remem8er Me", 'sound/playlist/malcolm_brown_do_you_remember_me.ogg'),
+		new/datum/track("M83 - Midnight City", 'sound/playlist/m83_midnight.ogg'),
+		new/datum/track("Mystery Skulls - Magic", 'sound/playlist/mystery_skulls_magic.ogg'),
+		new/datum/track("Nirvana - Smells like teen spirit", 'sound/playlist/nirvana_smells_like_teen_spirit.ogg'),
+		new/datum/track("Pixel Piracy - Sailing the World", 'sound/playlist/pixel_piracy_sailing_the_world.ogg'),
+		new/datum/track("Rick Astley - Never Gonna Give You Up", 'sound/playlist/rick_astley_nggup.ogg'),
+		new/datum/track("EVO - In Space", 'sound/playlist/evo_v_kosmos.ogg'),
+		new/datum/track("Starset - Antigravity", 'sound/playlist/starset_antigravity.ogg'),
+		new/datum/track("U-Free - My New Black Benzo", 'sound/playlist/ufree_my_new_black_benzo.ogg'),
+		new/datum/track("Wolfgun - Beautiful", 'sound/playlist/wolfgun_beautiful.ogg')
 	)
 
 /obj/machinery/media/jukebox/New()

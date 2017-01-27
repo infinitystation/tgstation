@@ -1,0 +1,2868 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aa" = (
+/turf/open/space,
+/area/space)
+"ab" = (
+/turf/closed/mineral,
+/area/ruin/unpowered/no_grav)
+"ac" = (
+/turf/open/floor/plating/asteroid/airless,
+/area/ruin/unpowered/no_grav)
+"ad" = (
+/turf/closed/mineral,
+/area/space)
+"ae" = (
+/turf/open/floor/plating/asteroid,
+/area/ruin/unpowered/no_grav)
+"af" = (
+/turf/open/floor/plating/asteroid,
+/area/ruin/powered/spacebar)
+"ag" = (
+/turf/open/floor/plating/asteroid,
+/area/space)
+"ah" = (
+/turf/closed/wall,
+/area/ruin/powered/spacebar)
+"ai" = (
+/obj/machinery/door/airlock/external,
+/turf/open/floor/plating,
+/area/ruin/powered/spacebar)
+"aj" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/ruin/powered/spacebar)
+"ak" = (
+/turf/closed/mineral,
+/area/ruin/powered/spacebar)
+"al" = (
+/obj/machinery/atmospherics/components/unary/tank/air,
+/obj/structure/window/reinforced{
+	tag = "icon-rwindow (EAST)";
+	icon_state = "rwindow";
+	dir = 4
+	},
+/obj/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/ruin/powered/spacebar)
+"am" = (
+/turf/open/floor/plating,
+/area/ruin/powered/spacebar)
+"an" = (
+/obj/structure/closet/emcloset,
+/turf/open/floor/plating,
+/area/ruin/powered/spacebar)
+"ao" = (
+/turf/open/floor/plating/asteroid/airless,
+/area/space)
+"ap" = (
+/turf/closed/wall,
+/area/space)
+"aq" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/ruin/unpowered/no_grav)
+"ar" = (
+/turf/closed/wall,
+/area/ruin/powered/spacebar/bar)
+"as" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/space)
+"at" = (
+/turf/open/floor/plasteel/black,
+/area/ruin/unpowered/no_grav)
+"au" = (
+/turf/open/floor/plasteel/black,
+/area/ruin/powered/spacebar)
+"av" = (
+/obj/machinery/vending/cola,
+/turf/open/floor/plating/asteroid,
+/area/ruin/powered/spacebar)
+"aw" = (
+/obj/machinery/vending/cigarette,
+/turf/open/floor/plating/asteroid,
+/area/ruin/powered/spacebar)
+"ax" = (
+/obj/structure/fans/tiny,
+/turf/open/floor/plasteel/black,
+/area/ruin/powered/spacebar)
+"ay" = (
+/obj/structure/table,
+/obj/machinery/chem_dispenser/drinks/beer,
+/turf/open/floor/wood,
+/area/ruin/powered/spacebar/bar)
+"az" = (
+/obj/structure/table,
+/obj/machinery/chem_dispenser/drinks,
+/turf/open/floor/wood,
+/area/ruin/powered/spacebar/bar)
+"aA" = (
+/obj/structure/table,
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/item/weapon/book/manual/barman_recipes,
+/turf/open/floor/wood,
+/area/ruin/powered/spacebar/bar)
+"aB" = (
+/turf/open/floor/wood,
+/area/ruin/powered/spacebar/bar)
+"aC" = (
+/obj/structure/table,
+/obj/item/toy/figure/bartender,
+/turf/open/floor/wood,
+/area/ruin/powered/spacebar/bar)
+"aD" = (
+/obj/structure/table,
+/obj/item/weapon/reagent_containers/food/drinks/shaker,
+/turf/open/floor/wood,
+/area/ruin/powered/spacebar/bar)
+"aE" = (
+/obj/effect/mob_spawn/human/bartender/alive,
+/turf/open/floor/wood,
+/area/ruin/powered/spacebar/bar)
+"aF" = (
+/obj/structure/reagent_dispensers/beerkeg,
+/obj/machinery/atmospherics/components/unary/vent_pump{
+	dir = 8;
+	on = 1
+	},
+/turf/open/floor/wood,
+/area/ruin/powered/spacebar)
+"aG" = (
+/obj/machinery/bluespace_beacon,
+/turf/open/floor/plasteel/black,
+/area/ruin/powered/spacebar)
+"aH" = (
+/obj/machinery/airalarm{
+	dir = 4;
+	icon_state = "alarm0";
+	pixel_x = -22
+	},
+/turf/open/floor/wood,
+/area/ruin/powered/spacebar/bar)
+"aI" = (
+/obj/machinery/door/airlock{
+	name = "Bar Storage";
+	req_access_txt = "25"
+	},
+/turf/open/floor/wood,
+/area/ruin/powered/spacebar/bar)
+"aJ" = (
+/obj/structure/table,
+/obj/machinery/reagentgrinder,
+/turf/open/floor/wood,
+/area/ruin/powered/spacebar)
+"aK" = (
+/obj/machinery/button/door{
+	id = "spacebardock";
+	name = "pod dock door cycle";
+	pixel_x = -32
+	},
+/obj/structure/table,
+/turf/open/floor/wood,
+/area/ruin/powered/spacebar/bar)
+"aL" = (
+/obj/machinery/vending/boozeomat,
+/turf/closed/wall,
+/area/ruin/powered/spacebar/bar)
+"aM" = (
+/obj/structure/closet/secure_closet/freezer/kitchen,
+/turf/open/floor/wood,
+/area/ruin/powered/spacebar/bar)
+"aN" = (
+/obj/machinery/light/small,
+/obj/structure/table,
+/obj/machinery/microwave,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/turf/open/floor/wood,
+/area/ruin/powered/spacebar/bar)
+"aO" = (
+/obj/structure/closet/secure_closet/freezer/fridge,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/turf/open/floor/wood,
+/area/ruin/powered/spacebar/bar)
+"aP" = (
+/obj/structure/table,
+/obj/item/stack/sheet/metal{
+	amount = 10
+	},
+/turf/open/floor/wood,
+/area/ruin/powered/spacebar)
+"aQ" = (
+/obj/structure/table/reinforced,
+/turf/open/floor/wood,
+/area/ruin/powered/spacebar/bar)
+"aR" = (
+/obj/item/weapon/reagent_containers/food/drinks/beer,
+/obj/item/weapon/reagent_containers/glass/rag,
+/obj/structure/table/reinforced,
+/turf/open/floor/wood,
+/area/ruin/powered/spacebar/bar)
+"aS" = (
+/obj/machinery/door/airlock{
+	name = "Bar Storage";
+	req_access_txt = "25"
+	},
+/turf/open/floor/plasteel{
+	icon_state = "wood"
+	},
+/area/ruin/powered/spacebar/bar)
+"aT" = (
+/turf/closed/wall,
+/area/ruin/unpowered/no_grav)
+"aU" = (
+/obj/structure/tile_edge/stripe/extra_big,
+/turf/open/floor/plating/asteroid,
+/area/ruin/powered/spacebar)
+"aV" = (
+/turf/open/floor/plasteel/bar,
+/area/ruin/powered/spacebar/bar)
+"aW" = (
+/obj/structure/chair/stool,
+/turf/open/floor/plasteel/bar,
+/area/ruin/powered/spacebar/bar)
+"aX" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/plasteel/bar,
+/area/ruin/powered/spacebar/bar)
+"aY" = (
+/obj/machinery/airalarm{
+	frequency = 1439;
+	locked = 0;
+	pixel_y = 23
+	},
+/turf/open/floor/plasteel/bar,
+/area/ruin/powered/spacebar)
+"aZ" = (
+/obj/structure/tile_edge/stripe/extra_big{
+	tag = "icon-xtra_bigstripe-edge (EAST)";
+	icon_state = "xtra_bigstripe-edge";
+	dir = 4
+	},
+/turf/open/floor/plating/asteroid,
+/area/ruin/unpowered/no_grav)
+"ba" = (
+/turf/closed/wall/mineral/titanium/interior,
+/area/ruin/unpowered/no_grav)
+"bb" = (
+/obj/structure/window/shuttle,
+/turf/open/floor/plating,
+/area/ruin/unpowered/no_grav)
+"bc" = (
+/turf/closed/wall/mineral/titanium/interior,
+/area/ruin/powered/spacebar)
+"bd" = (
+/obj/structure/shuttle/engine/propulsion/burst{
+	tag = "icon-propulsion (EAST)";
+	icon_state = "propulsion";
+	dir = 4
+	},
+/turf/closed/wall/mineral/titanium/interior,
+/area/ruin/powered/spacebar)
+"be" = (
+/obj/structure/tile_edge/stripe/extra_big{
+	tag = "icon-xtra_bigstripe-edge (SOUTHWEST)";
+	icon_state = "xtra_bigstripe-edge";
+	dir = 10
+	},
+/turf/open/floor/plating/asteroid,
+/area/ruin/powered/spacebar)
+"bf" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/ruin/powered/spacebar/bar)
+"bg" = (
+/obj/machinery/airalarm{
+	dir = 4;
+	icon_state = "alarm0";
+	pixel_x = -22
+	},
+/obj/machinery/light{
+	icon_state = "tube1";
+	dir = 8
+	},
+/turf/open/floor/plasteel/bar,
+/area/ruin/powered/spacebar/bar)
+"bh" = (
+/turf/open/floor/wood,
+/area/ruin/powered/spacebar)
+"bi" = (
+/obj/structure/chair/comfy/shuttle{
+	tag = "icon-shblue (WEST)";
+	icon_state = "shblue";
+	dir = 8
+	},
+/turf/open/floor/plasteel/white,
+/area/ruin/powered/spacebar)
+"bj" = (
+/obj/machinery/door/airlock/titanium{
+	name = "Escape Pod Airlock"
+	},
+/turf/open/floor/plasteel/white,
+/area/ruin/powered/spacebar)
+"bk" = (
+/obj/machinery/door/airlock/external,
+/turf/open/floor/plasteel/black,
+/area/ruin/powered/spacebar/bar)
+"bl" = (
+/turf/open/floor/plasteel/black,
+/area/ruin/powered/spacebar/bar)
+"bm" = (
+/obj/structure/window/shuttle,
+/turf/open/floor/plating,
+/area/ruin/powered/spacebar)
+"bn" = (
+/obj/structure/tile_edge/stripe/extra_big{
+	tag = "icon-xtra_bigstripe-edge (NORTHWEST)";
+	icon_state = "xtra_bigstripe-edge";
+	dir = 9
+	},
+/turf/open/floor/plating/asteroid,
+/area/ruin/powered/spacebar)
+"bo" = (
+/obj/machinery/light{
+	icon_state = "tube1";
+	dir = 8
+	},
+/turf/open/floor/plasteel/bar,
+/area/ruin/powered/spacebar/bar)
+"bp" = (
+/obj/structure/tile_edge/stripe/extra_big,
+/obj/structure/tile_edge/stripe/extra_big{
+	tag = "icon-xtra_bigstripe-edge (NORTH)";
+	icon_state = "xtra_bigstripe-edge";
+	dir = 1
+	},
+/turf/open/floor/plating/asteroid,
+/area/ruin/powered/spacebar)
+"bq" = (
+/obj/structure/chair/wood,
+/turf/open/floor/plasteel/bar,
+/area/ruin/powered/spacebar/bar)
+"br" = (
+/obj/structure/chair/wood{
+	tag = "icon-wooden_chair (EAST)";
+	icon_state = "wooden_chair";
+	dir = 4
+	},
+/turf/open/floor/plasteel/bar,
+/area/ruin/powered/spacebar/bar)
+"bs" = (
+/obj/machinery/atmospherics/components/unary/vent_pump{
+	dir = 8;
+	on = 1
+	},
+/obj/structure/table/wood,
+/turf/open/floor/plasteel/bar,
+/area/ruin/powered/spacebar/bar)
+"bt" = (
+/obj/structure/chair/wood{
+	tag = "icon-wooden_chair (WEST)";
+	icon_state = "wooden_chair";
+	dir = 8
+	},
+/turf/open/floor/plasteel/bar,
+/area/ruin/powered/spacebar/bar)
+"bu" = (
+/turf/open/floor/plating/asteroid,
+/area/ruin/powered/spacebar/bar)
+"bv" = (
+/obj/structure/table/wood,
+/obj/machinery/atmospherics/components/unary/vent_pump{
+	tag = "icon-vent_map (EAST)";
+	icon_state = "vent_map";
+	dir = 4;
+	on = 1
+	},
+/turf/open/floor/plasteel/bar,
+/area/ruin/powered/spacebar/bar)
+"bw" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
+	},
+/turf/open/floor/plasteel/bar,
+/area/ruin/powered/spacebar/bar)
+"bx" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 10
+	},
+/turf/open/floor/plasteel/bar,
+/area/ruin/powered/spacebar/bar)
+"by" = (
+/obj/machinery/light,
+/turf/open/floor/plasteel/bar,
+/area/ruin/powered/spacebar/bar)
+"bz" = (
+/turf/open/floor/plasteel/bar,
+/area/ruin/powered/spacebar)
+"bA" = (
+/obj/structure/chair/wood{
+	tag = "icon-wooden_chair (NORTH)";
+	icon_state = "wooden_chair";
+	dir = 1
+	},
+/turf/open/floor/plasteel/bar,
+/area/ruin/powered/spacebar/bar)
+"bB" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/turf/open/floor/plasteel/bar,
+/area/ruin/powered/spacebar/bar)
+"bC" = (
+/obj/machinery/door/airlock{
+	name = "Unisex Bathroom"
+	},
+/turf/open/floor/plasteel/freezer,
+/area/ruin/powered/spacebar)
+"bD" = (
+/turf/open/floor/plasteel/freezer,
+/area/ruin/powered/spacebar)
+"bE" = (
+/obj/structure/sink{
+	layer = 3.1;
+	pixel_y = 28
+	},
+/turf/open/floor/plasteel/freezer,
+/area/ruin/powered/spacebar)
+"bF" = (
+/obj/structure/sink{
+	pixel_y = 28
+	},
+/turf/open/floor/plasteel/freezer,
+/area/ruin/powered/spacebar)
+"bG" = (
+/obj/structure/mirror{
+	pixel_y = 28
+	},
+/turf/open/floor/plasteel/freezer,
+/area/ruin/powered/spacebar)
+"bH" = (
+/obj/structure/tile_edge/stripe/extra_big{
+	tag = "icon-xtra_bigstripe-edge (NORTH)";
+	icon_state = "xtra_bigstripe-edge";
+	dir = 1
+	},
+/turf/open/floor/plating/asteroid,
+/area/ruin/powered/spacebar)
+"bI" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 5
+	},
+/turf/open/floor/plasteel/bar,
+/area/ruin/powered/spacebar/bar)
+"bJ" = (
+/obj/machinery/computer/teleporter,
+/turf/open/floor/plasteel/bar,
+/area/ruin/powered/spacebar/bar)
+"bK" = (
+/turf/closed/wall/r_wall,
+/area/space)
+"bL" = (
+/turf/closed/wall/r_wall,
+/area/ruin/unpowered/no_grav)
+"bM" = (
+/turf/closed/wall/r_wall,
+/area/ruin/powered/spacebar)
+"bN" = (
+/obj/structure/window/reinforced,
+/turf/open/floor/plating/asteroid,
+/area/ruin/powered/spacebar)
+"bO" = (
+/obj/machinery/teleport/station,
+/turf/open/floor/plasteel/bar,
+/area/ruin/powered/spacebar/bar)
+"bP" = (
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/open/floor/plasteel/freezer,
+/area/ruin/powered/spacebar)
+"bQ" = (
+/obj/structure/tile_edge/stripe/big{
+	tag = "icon-bigstripe-edge (NORTHWEST)";
+	icon_state = "bigstripe-edge";
+	dir = 9
+	},
+/obj/structure/signpost,
+/turf/open/floor/plating,
+/area/space)
+"bR" = (
+/obj/structure/tile_edge/stripe/big{
+	tag = "icon-bigstripe-edge (NORTH)";
+	icon_state = "bigstripe-edge";
+	dir = 1
+	},
+/turf/open/floor/plating,
+/area/space)
+"bS" = (
+/obj/machinery/atmospherics/components/unary/tank/air,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	tag = "icon-rwindow (EAST)";
+	icon_state = "rwindow";
+	dir = 4
+	},
+/turf/open/floor/plating,
+/area/ruin/unpowered/no_grav)
+"bT" = (
+/obj/structure/closet/emcloset,
+/turf/open/floor/plating,
+/area/ruin/unpowered/no_grav)
+"bU" = (
+/obj/machinery/vending/coffee,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/turf/open/floor/plating/asteroid,
+/area/ruin/powered/spacebar)
+"bV" = (
+/obj/machinery/vending/snack,
+/obj/structure/window/reinforced{
+	tag = "icon-rwindow (EAST)";
+	icon_state = "rwindow";
+	dir = 4
+	},
+/turf/open/floor/plating/asteroid,
+/area/ruin/powered/spacebar)
+"bW" = (
+/obj/machinery/light,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 5
+	},
+/turf/open/floor/plasteel/bar,
+/area/ruin/powered/spacebar/bar)
+"bX" = (
+/obj/machinery/teleport/hub,
+/obj/machinery/light{
+	icon_state = "tube1";
+	dir = 4
+	},
+/turf/open/floor/plasteel/bar,
+/area/ruin/powered/spacebar/bar)
+"bY" = (
+/obj/structure/toilet{
+	dir = 4
+	},
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/open/floor/plasteel/freezer,
+/area/ruin/powered/spacebar)
+"bZ" = (
+/obj/machinery/door/airlock{
+	name = "Toilet"
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/turf/open/floor/plasteel/freezer,
+/area/ruin/powered/spacebar)
+"ca" = (
+/obj/structure/tile_edge/stripe/big{
+	tag = "icon-bigstripe-edge (WEST)";
+	icon_state = "bigstripe-edge";
+	dir = 8
+	},
+/turf/open/floor/plating,
+/area/space)
+"cb" = (
+/turf/open/floor/plating,
+/area/space)
+"cc" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 5
+	},
+/turf/open/floor/plating,
+/area/ruin/unpowered/no_grav)
+"cd" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 10
+	},
+/turf/open/floor/plating,
+/area/ruin/powered/spacebar)
+"ce" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 5
+	},
+/turf/closed/wall,
+/area/ruin/powered/spacebar/bar)
+"cf" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 10
+	},
+/turf/closed/wall,
+/area/ruin/powered/spacebar/bar)
+"cg" = (
+/obj/machinery/door/airlock/external,
+/turf/open/floor/plating,
+/area/space)
+"ch" = (
+/obj/machinery/atmospherics/components/unary/vent_pump{
+	tag = "icon-vent_map (NORTH)";
+	icon_state = "vent_map";
+	dir = 1;
+	on = 1
+	},
+/turf/open/floor/plating,
+/area/ruin/powered/spacebar)
+"ci" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/turf/closed/wall,
+/area/ruin/powered/spacebar)
+"cj" = (
+/obj/machinery/atmospherics/components/unary/tank/air,
+/turf/open/floor/plating,
+/area/ruin/powered/spacebar)
+"ck" = (
+/obj/structure/tile_edge/stripe/big{
+	tag = "icon-bigstripe-edge (SOUTHWEST)";
+	icon_state = "bigstripe-edge";
+	dir = 10
+	},
+/turf/open/floor/plating,
+/area/space)
+"cl" = (
+/obj/structure/tile_edge/stripe/big,
+/turf/open/floor/plating,
+/area/space)
+"cm" = (
+/obj/machinery/button/door{
+	id = "spacebardock";
+	name = "Podbay Airlock";
+	pixel_y = -24
+	},
+/turf/open/floor/plating/asteroid,
+/area/ruin/powered/spacebar)
+"cn" = (
+/obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/turf/open/floor/plating,
+/area/ruin/powered/spacebar)
+"co" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 5
+	},
+/turf/open/floor/plating,
+/area/ruin/powered/spacebar)
+"cp" = (
+/obj/machinery/atmospherics/pipe/manifold4w/supply/hidden,
+/obj/machinery/meter,
+/turf/open/floor/plating,
+/area/ruin/powered/spacebar)
+"cq" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 9;
+	pixel_y = 0
+	},
+/turf/open/floor/plating,
+/area/ruin/powered/spacebar)
+"cr" = (
+/obj/structure/table/reinforced,
+/turf/open/floor/plasteel/white,
+/area/ruin/unpowered/no_grav)
+"cs" = (
+/obj/structure/closet/secure_closet,
+/turf/open/floor/plasteel/white,
+/area/ruin/unpowered/no_grav)
+"ct" = (
+/obj/structure/tile_edge/stripe/extra_big{
+	tag = "icon-xtra_bigstripe-edge (NORTH)";
+	icon_state = "xtra_bigstripe-edge";
+	dir = 1
+	},
+/turf/open/floor/plating,
+/area/ruin/powered/spacebar)
+"cu" = (
+/obj/machinery/atmospherics/components/binary/valve/open,
+/turf/open/floor/plating,
+/area/ruin/powered/spacebar)
+"cv" = (
+/obj/machinery/atmospherics/components/unary/vent_scrubber{
+	dir = 4;
+	on = 1
+	},
+/turf/open/floor/plating,
+/area/ruin/powered/spacebar)
+"cw" = (
+/turf/open/floor/plasteel/white,
+/area/ruin/unpowered/no_grav)
+"cx" = (
+/turf/open/floor/plasteel/white,
+/area/ruin/powered/spacebar)
+"cy" = (
+/obj/machinery/door/poddoor/preopen{
+	id = "spacebardock";
+	name = "airlock dock"
+	},
+/turf/open/floor/plating,
+/area/ruin/powered/spacebar)
+"cz" = (
+/obj/machinery/door/airlock/external,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 5
+	},
+/turf/open/floor/plating,
+/area/ruin/powered/spacebar)
+"cA" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
+	},
+/turf/open/floor/plating,
+/area/ruin/powered/spacebar)
+"cB" = (
+/obj/machinery/atmospherics/pipe/manifold/supply/hidden,
+/obj/machinery/meter,
+/turf/open/floor/plating,
+/area/ruin/powered/spacebar)
+"cC" = (
+/obj/machinery/atmospherics/components/unary/vent_pump{
+	dir = 8;
+	on = 1
+	},
+/turf/open/floor/plating,
+/area/ruin/powered/spacebar)
+"cD" = (
+/obj/structure/table/reinforced,
+/turf/open/floor/plasteel/white,
+/area/ruin/powered/spacebar)
+"cE" = (
+/obj/machinery/atmospherics/components/unary/outlet_injector/on{
+	tag = "icon-inje_map (EAST)";
+	icon_state = "inje_map";
+	dir = 4
+	},
+/turf/open/floor/plating/asteroid/airless,
+/area/ruin/unpowered/no_grav)
+"cF" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 4
+	},
+/turf/open/floor/plating/asteroid/airless,
+/area/ruin/unpowered/no_grav)
+"cG" = (
+/turf/open/space,
+/area/ruin/unpowered/no_grav)
+"cH" = (
+/obj/machinery/door/poddoor{
+	id = "spacebardock";
+	name = "airlock dock"
+	},
+/turf/open/floor/plating,
+/area/ruin/powered/spacebar)
+"cI" = (
+/turf/open/space,
+/area/ruin/powered/spacebar)
+
+(1,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(2,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(3,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(4,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(5,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+ao
+ad
+ad
+ad
+ao
+aa
+aa
+ao
+ad
+ad
+ad
+aa
+aa
+bQ
+ca
+ca
+ck
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(6,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+ao
+ag
+ag
+ae
+ag
+ag
+ag
+ag
+ag
+ag
+ao
+ac
+ao
+aa
+bK
+bR
+cb
+cb
+cl
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(7,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+ap
+as
+aq
+aq
+aq
+aT
+aq
+as
+as
+aT
+aq
+aq
+aq
+aT
+bL
+ap
+as
+cg
+ap
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(8,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+ag
+aq
+at
+at
+at
+at
+ae
+aZ
+aZ
+aZ
+ae
+aZ
+aZ
+aZ
+ae
+bL
+bS
+cc
+cb
+ap
+ap
+as
+ap
+ap
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(9,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+ag
+ag
+aq
+at
+aG
+au
+au
+aU
+ba
+bb
+ba
+bp
+bc
+bm
+bc
+bH
+bL
+bT
+cd
+ch
+ah
+cr
+cw
+cr
+aT
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(10,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+ag
+ae
+aq
+at
+au
+au
+au
+aU
+bb
+bi
+bm
+bp
+bm
+bi
+bm
+bH
+bM
+bM
+aj
+ai
+ah
+cs
+cw
+cw
+aq
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(11,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+ag
+ae
+ae
+aq
+au
+au
+au
+au
+aU
+bc
+bi
+bc
+bp
+bc
+bi
+bc
+bH
+bN
+au
+au
+ax
+ah
+ah
+cx
+cx
+aq
+cG
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(12,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+ac
+ae
+ab
+ah
+ak
+au
+au
+af
+aU
+bd
+bj
+bd
+bp
+bd
+bj
+bd
+bH
+bN
+bU
+au
+au
+au
+au
+cx
+cD
+aT
+cG
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(13,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+ac
+ac
+ab
+ak
+ah
+ak
+au
+au
+af
+af
+be
+ax
+bn
+af
+be
+ax
+bn
+af
+bN
+bV
+au
+au
+af
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+aa
+aa
+aa
+aa
+"}
+(14,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+ac
+ac
+ae
+ak
+ak
+ah
+av
+au
+au
+au
+au
+au
+au
+au
+au
+au
+au
+au
+au
+au
+au
+au
+au
+af
+ct
+cy
+am
+am
+am
+am
+cH
+aa
+aa
+aa
+aa
+aa
+"}
+(15,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+ac
+ac
+ah
+ah
+ah
+ah
+aw
+au
+au
+au
+au
+au
+au
+au
+au
+au
+au
+au
+au
+au
+au
+au
+au
+af
+ct
+cy
+am
+am
+am
+am
+cH
+aa
+aa
+aa
+aa
+aa
+"}
+(16,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+ac
+ac
+ac
+ah
+al
+an
+ah
+au
+au
+au
+af
+af
+af
+au
+af
+af
+af
+ax
+af
+af
+af
+ax
+af
+af
+af
+ct
+cy
+am
+am
+am
+am
+cH
+aa
+aa
+aa
+aa
+aa
+"}
+(17,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+ac
+ac
+ac
+ai
+am
+am
+ai
+ax
+au
+au
+af
+af
+af
+au
+af
+af
+af
+af
+af
+af
+af
+af
+af
+af
+af
+ct
+cy
+am
+am
+am
+am
+cH
+aa
+aa
+aa
+aa
+aa
+"}
+(18,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+ac
+ac
+ae
+af
+aj
+am
+am
+aj
+au
+au
+au
+af
+af
+af
+ax
+af
+af
+af
+af
+af
+af
+af
+af
+af
+af
+af
+ct
+cy
+am
+am
+am
+am
+cH
+aa
+aa
+aa
+aa
+aa
+"}
+(19,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+ac
+ac
+ae
+af
+ah
+ah
+ah
+ah
+ak
+af
+af
+af
+af
+ar
+bk
+ar
+af
+af
+af
+af
+af
+af
+af
+af
+af
+af
+ct
+cy
+am
+am
+am
+am
+cH
+aa
+aa
+aa
+aa
+aa
+"}
+(20,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+ac
+ac
+ae
+af
+ak
+ak
+ak
+ah
+ak
+ak
+af
+af
+af
+bf
+bl
+bf
+af
+af
+af
+af
+af
+af
+af
+af
+af
+af
+ct
+cy
+am
+am
+am
+am
+cH
+cI
+aa
+aa
+aa
+aa
+"}
+(21,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+ac
+ac
+ae
+af
+af
+ak
+ak
+ah
+ak
+ak
+ak
+ak
+af
+bf
+bl
+bf
+af
+af
+af
+af
+af
+af
+af
+af
+af
+cm
+ah
+ah
+ah
+aT
+aT
+aT
+aT
+ap
+aa
+aa
+aa
+aa
+"}
+(22,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+ab
+ac
+ac
+ae
+af
+af
+ak
+ak
+ar
+ar
+ar
+ar
+ar
+ar
+ar
+bk
+ar
+ar
+bu
+bu
+bu
+bu
+af
+af
+af
+af
+af
+af
+af
+ah
+cE
+ae
+ae
+ae
+aa
+aa
+aa
+aa
+aa
+"}
+(23,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+ab
+ab
+ac
+ae
+ae
+af
+af
+ak
+ar
+ay
+aH
+aK
+ap
+aV
+bg
+aV
+bo
+ar
+ar
+ar
+ar
+bf
+bf
+af
+af
+af
+af
+af
+af
+ah
+cF
+ac
+ac
+ao
+aa
+aa
+aa
+aa
+aa
+"}
+(24,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+ab
+ab
+ac
+ae
+ae
+af
+af
+ak
+ar
+az
+aB
+aB
+ar
+aV
+aV
+aV
+aV
+bq
+bv
+bA
+bo
+aV
+bf
+bf
+af
+af
+af
+af
+af
+ah
+cF
+ac
+ac
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(25,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+ab
+ab
+ae
+ae
+ae
+af
+ak
+ar
+aA
+aB
+aB
+aQ
+aV
+aV
+aV
+aV
+aV
+bw
+aV
+aV
+aV
+aV
+bf
+bf
+af
+af
+af
+af
+ah
+cF
+ac
+ao
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(26,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+ab
+ab
+ae
+ae
+ae
+af
+ak
+ar
+aB
+aB
+aB
+aR
+aW
+aV
+aV
+aV
+aV
+bx
+bB
+bB
+bI
+aV
+aV
+bf
+af
+af
+af
+af
+ah
+cF
+ac
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(27,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+ad
+ac
+ae
+ae
+af
+af
+ak
+ar
+aB
+aB
+aB
+aQ
+aV
+aV
+aV
+aV
+br
+br
+br
+aV
+bx
+bB
+bW
+ar
+af
+af
+af
+af
+ah
+ae
+ac
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(28,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+ad
+ac
+ae
+ae
+af
+af
+af
+ar
+aB
+aB
+aB
+aQ
+aW
+aV
+aV
+aV
+bs
+bs
+bs
+aV
+aV
+aV
+bw
+ar
+ag
+ag
+ag
+ag
+ah
+ac
+ac
+cG
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(29,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+ad
+ac
+ae
+ae
+af
+af
+af
+ar
+ar
+aI
+aL
+ar
+aX
+aV
+aV
+aV
+bt
+bt
+bt
+aV
+aV
+aV
+bw
+ar
+ag
+ag
+ag
+ag
+ah
+ac
+ac
+ac
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(30,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+ad
+ab
+ae
+ae
+af
+af
+af
+ar
+aC
+aB
+aM
+ar
+aV
+aV
+aV
+aV
+aV
+aV
+aV
+aV
+aV
+aV
+bw
+ar
+ag
+ag
+ag
+ag
+ah
+ac
+ac
+ac
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(31,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+ab
+ae
+ae
+af
+af
+af
+ar
+aD
+aB
+aN
+ar
+aV
+aV
+aV
+aV
+aV
+aV
+aV
+aV
+aV
+aV
+bx
+ce
+ag
+ag
+ag
+ag
+ah
+ac
+ac
+ac
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(32,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+ad
+ab
+ac
+af
+af
+af
+ar
+aE
+aB
+aO
+ar
+aV
+aB
+aB
+aB
+aB
+aV
+aV
+aV
+bJ
+bO
+bX
+cf
+ci
+cn
+cn
+cz
+ah
+ac
+ac
+ab
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(33,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+ab
+ac
+af
+af
+af
+ar
+aB
+aB
+aB
+aS
+aV
+aB
+aB
+aB
+aB
+by
+ar
+ar
+ar
+ar
+ar
+ar
+am
+am
+am
+cA
+ah
+ac
+ac
+ad
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(34,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+ad
+ac
+ae
+af
+af
+ah
+aF
+aJ
+aP
+ah
+aY
+bh
+bh
+bh
+bh
+bz
+bC
+bD
+bD
+ah
+bY
+ah
+cj
+co
+am
+cA
+ah
+ac
+ab
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(35,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+ab
+ae
+af
+af
+ah
+ah
+ah
+ah
+ah
+ah
+aj
+aj
+aj
+aj
+ah
+ah
+bD
+bD
+ah
+bZ
+ah
+cj
+cp
+cu
+cB
+aT
+ac
+ab
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(36,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+ad
+ab
+ae
+af
+af
+af
+af
+af
+af
+af
+af
+af
+af
+af
+af
+ah
+bE
+bD
+bP
+bD
+ah
+cj
+cq
+cv
+cC
+aT
+ac
+ad
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(37,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+ab
+ae
+ae
+ae
+ae
+af
+af
+af
+af
+ae
+ae
+ae
+ae
+ae
+ah
+bF
+bD
+bD
+bD
+ah
+ah
+aT
+aT
+aT
+aT
+ab
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(38,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+ad
+ab
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ac
+ac
+ac
+ac
+ac
+aT
+bG
+bD
+bD
+bD
+aT
+ac
+ac
+ac
+ac
+ac
+ad
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(39,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+ad
+ad
+ad
+ab
+ac
+ac
+ao
+ac
+ac
+ab
+ao
+ao
+ac
+aT
+aT
+aT
+aT
+aT
+aT
+ac
+ac
+ao
+ad
+ad
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(40,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+ad
+ad
+ad
+ad
+ad
+ab
+ab
+ad
+ad
+ao
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ad
+ad
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(41,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+ad
+ad
+ad
+aa
+ad
+ad
+ad
+ad
+ad
+ad
+ao
+ao
+ad
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(42,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(43,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(44,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(45,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}

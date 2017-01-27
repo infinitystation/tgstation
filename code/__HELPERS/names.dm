@@ -4,6 +4,8 @@
 	else
 		return "[pick(lizard_names_female)]-[pick(lizard_names_female)]"
 
+/proc/plasmaman_name()
+	return "[pick(plasmaman_names)] \Roman[rand(1,99)]"
 
 var/church_name = null
 /proc/church_name()
@@ -56,9 +58,6 @@ var/religion_name = null
 
 	if(config && config.station_name)
 		station_name = config.station_name
-	else
-		station_name = new_station_name()
-
 	return station_name
 
 /proc/new_station_name()
@@ -165,7 +164,7 @@ var/syndicate_code_response//Code response for traitors.
 
 	var/safety[] = list(1,2,3)//Tells the proc which options to remove later on.
 	var/nouns[] = list("love","hate","anger","peace","pride","sympathy","bravery","loyalty","honesty","integrity","compassion","charity","success","courage","deceit","skill","beauty","brilliance","pain","misery","beliefs","dreams","justice","truth","faith","liberty","knowledge","thought","information","culture","trust","dedication","progress","education","hospitality","leisure","trouble","friendships", "relaxation")
-	var/drinks[] = list("vodka and tonic","gin fizz","bahama mama","manhattan","black Russian","whiskey soda","long island tea","margarita","Irish coffee"," manly dwarf","Irish cream","doctor's delight","Beepksy Smash","tequila sunrise","brave bull","gargle blaster","bloody mary","whiskey cola","white Russian","vodka martini","martini","Cuba libre","kahlua","vodka","wine","moonshine")
+	var/drinks[] = list("vodka and tonic","gin fizz","bahama mama","manhattan","black Russian","whiskey soda","long island iced tea","margarita","Irish coffee"," manly dwarf","Irish cream","doctor's delight","Beepksy Smash","tequila sunrise","brave bull","gargle blaster","bloody mary","whiskey cola","white Russian","vodka martini","martini","Cuba libre","kahlua","vodka","wine","moonshine")
 	var/locations[] = teleportlocs.len ? teleportlocs : drinks//if null, defaults to drinks instead.
 
 	var/names[] = list()

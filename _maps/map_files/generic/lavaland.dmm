@@ -1,4 +1,4 @@
-//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE 
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "aa" = (
 /turf/closed/indestructible/necropolis,
 /area/lavaland/surface/outdoors)
@@ -535,10 +535,10 @@
 	height = 5;
 	id = "laborcamp_away";
 	name = "labor camp";
-	turf_type = /turf/open/floor/plating/lava/smooth;
+	turf_type = /turf/open/floor/plating/asteroid/basalt/lava_land_surface;
 	width = 9
 	},
-/turf/open/floor/plating/lava/smooth/lava_land_surface,
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/lavaland/surface/outdoors/explored)
 "bm" = (
 /obj/machinery/door/airlock/glass_security{
@@ -2157,7 +2157,7 @@
 /obj/structure/table,
 /obj/item/weapon/paper{
 	anchored = 0;
-	info = "A hastily written note has been scribbled here... <br><br> Please use the ore redemption machine in the science wing for smelting. PLEASE! <br><br>--The Research Staff";
+	info = "A hastily written note has been scribbled here... <br><br> Please use the ore redemption machine in the cargo office for smelting. PLEASE! <br><br>--The Research Staff";
 	name = "URGENT!"
 	},
 /turf/open/floor/plasteel{
@@ -2802,9 +2802,7 @@
 "fP" = (
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /turf/closed/indestructible/riveted,
-/area/ruin/unpowered{
-	name = "Necropolis Bridge"
-	})
+/area/space)
 
 (1,1,1) = {"
 aa
@@ -5844,7 +5842,7 @@ af
 bA
 bA
 bA
-bA
+dq
 bA
 bA
 bA
@@ -5853,7 +5851,7 @@ bA
 dq
 bA
 bA
-bA
+dq
 bA
 bA
 bA
@@ -6102,15 +6100,15 @@ af
 bA
 bA
 bA
-bA
-bA
-bA
-bA
-bA
-bA
-bA
-bA
-bA
+dq
+dq
+dq
+dq
+dq
+dq
+dq
+dq
+dq
 bA
 af
 af
@@ -6359,15 +6357,15 @@ bA
 bA
 bA
 bA
-bA
-bA
-bA
-bA
-bA
-bA
-bA
-bA
-bA
+dq
+dq
+dq
+dq
+dq
+dq
+dq
+dq
+dq
 bA
 bA
 ab
@@ -6616,15 +6614,15 @@ bA
 bA
 bA
 bA
-bA
-bA
-bA
-bA
-bA
-bA
-bA
-bA
-bA
+dq
+dq
+dq
+dq
+dq
+dq
+dq
+dq
+dq
 bA
 bA
 bA
@@ -6873,15 +6871,15 @@ af
 bA
 bA
 bA
-bA
-bA
-bA
-bA
-bA
-bA
-bA
-bA
-bA
+dq
+dq
+dq
+dq
+dq
+dq
+dq
+dq
+dq
 bA
 af
 af
@@ -7129,17 +7127,17 @@ af
 af
 bA
 bA
-bA
-bA
-bA
-bA
-bA
-bA
-bA
+dq
+dq
+dq
+dq
+dq
+dq
+dq
 bl
-bA
-bA
-bA
+dq
+dq
+dq
 af
 af
 af
@@ -7391,7 +7389,7 @@ an
 an
 aO
 an
-fI
+an
 an
 bm
 an
@@ -34693,8 +34691,8 @@ aj
 aj
 ab
 ab
-ah
-ah
+aa
+aa
 af
 af
 af
@@ -34706,8 +34704,8 @@ af
 af
 af
 af
-ah
-ah
+aa
+aa
 ab
 ab
 ab
@@ -34950,21 +34948,21 @@ aj
 aj
 aj
 aj
-ai
-ai
-ai
-ai
-ai
-ai
-ai
-ai
-ai
-ai
-ai
-ai
-ai
-ai
-ah
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aa
 ab
 ab
 ab
@@ -35207,21 +35205,21 @@ aj
 aj
 aj
 aj
-ai
-ai
-ai
-ai
-ai
-ai
-ai
-ai
-ai
-ai
-ai
-ai
-ai
-ai
-ai
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aj
 ab
 ab
 ab
@@ -35464,21 +35462,21 @@ aj
 aj
 aj
 aj
-ai
-ai
-ai
-ai
-ai
-ai
-ai
-ai
-ai
-ai
-ai
-ai
-ai
-ai
-ah
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aa
 ab
 ab
 ab
@@ -35721,8 +35719,8 @@ aj
 aj
 ab
 ab
-ah
-ah
+aa
+aa
 af
 af
 af
@@ -35734,8 +35732,8 @@ af
 af
 af
 af
-ah
-ah
+aa
+aa
 ab
 ab
 ab

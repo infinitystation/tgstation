@@ -4,6 +4,7 @@
 	icon_screen = "cameras"
 	icon_keyboard = "security_key"
 	var/mob/camera/aiEye/remote/eyeobj
+	circuit = /obj/item/weapon/circuitboard/computer/adv_security
 	var/mob/living/carbon/human/current_user = null
 	var/list/networks = list("SS13")
 	var/datum/action/innate/camera_off/off_action = new
@@ -148,6 +149,7 @@
 	C.remote_control = null
 	C.unset_machine()
 	src.Remove(C)
+	playsound(remote_eye.origin, 'sound/machines/terminal_off.ogg', 25, 0)
 
 /datum/action/innate/camera_jump
 	name = "Jump To Camera"
@@ -175,7 +177,14 @@
 			T[text("[][]", netcam.c_tag, (netcam.can_use() ? null : " (Deactivated)"))] = netcam
 
 
+	playsound(origin, 'sound/machines/terminal_prompt.ogg', 25, 0)
 	var/camera = input("Choose which camera you want to view", "Cameras") as null|anything in T
 	var/obj/machinery/camera/final = T[camera]
+	playsound(src, "terminal_type", 25, 0)
 	if(final)
+		playsound(origin, 'sound/machines/terminal_prompt_confirm.ogg', 25, 0)
 		remote_eye.setLoc(get_turf(final))
+		C.overlay_fullscreen("flash", /obj/screen/fullscreen/flash/static)
+		C.clear_fullscreen("flash", 3) //Shorter flash than normal since it's an ~~advanced~~ console!
+	else
+		playsound(origin, 'sound/machines/terminal_prompt_deny.ogg', 25, 0)

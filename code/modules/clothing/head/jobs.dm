@@ -1,21 +1,19 @@
 
-//Bartender //it's chef what the fuck is your problem?
+//Chef
 /obj/item/clothing/head/chefhat
 	name = "chef's hat"
-	desc = "It's a hat used by chefs to keep hair out of your food. Judging by the food in the mess, they don't work."
-	icon_state = "chef"
 	item_state = "chef"
+	icon_state = "chef"
 	desc = "The commander in chef's head wear."
 	strip_delay = 10
 	put_on_delay = 10
-	pockets = /obj/item/weapon/storage/internal/pocket/small
 	dog_fashion = /datum/dog_fashion/head/chef
 
 /obj/item/clothing/head/chefhat/suicide_act(mob/user)
-	user.visible_message("<span class='suicide'>[user] is donning [src]! It looks like they're trying to become a chef.</span>")
+	user.visible_message("<span class='suicide'>[user] надевает шапку повара!  ажетс&#255; [user.p_they()] пытал[user.p_e_5()] стать поваром.</span>")
 	user.say("Bork Bork Bork!")
 	sleep(20)
-	user.visible_message("<span class='suicide'>[user] climbs into an imaginary oven!</span>")
+	user.visible_message("<span class='suicide'>[user] забираетс€ в вымышленную микроволновку!</span>")
 	user.say("BOOORK!")
 	playsound(user, 'sound/machines/ding.ogg', 50, 1)
 	return(FIRELOSS)
@@ -27,9 +25,8 @@
 	icon_state = "captain"
 	item_state = "that"
 	flags_inv = 0
-	armor = list(melee = 25, bullet = 15, laser = 25, energy = 10, bomb = 25, bio = 0, rad = 0)
+	armor = list(melee = 25, bullet = 15, laser = 25, energy = 10, bomb = 25, bio = 0, rad = 0, fire = 50, acid = 50)
 	strip_delay = 60
-
 	dog_fashion = /datum/dog_fashion/head/captain
 
 //Captain: This is no longer space-worthy
@@ -46,8 +43,7 @@
 	name = "head of personnel's cap"
 	icon_state = "hopcap"
 	desc = "The symbol of true bureaucratic micromanagement."
-	armor = list(melee = 25, bullet = 15, laser = 25, energy = 10, bomb = 25, bio = 0, rad = 0)
-
+	armor = list(melee = 25, bullet = 15, laser = 25, energy = 10, bomb = 25, bio = 0, rad = 0, fire = 50, acid = 50)
 	dog_fashion = /datum/dog_fashion/head/hop
 
 //Chaplain
@@ -58,11 +54,29 @@
 	flags_inv = HIDEHAIR
 	flags_cover = HEADCOVERSEYES
 
+/obj/item/clothing/head/cage
+	name = "cage"
+	desc = "A cage that restrains the will of the self, allowing one to see the profane world for what it is."
+	alternate_worn_icon = 'icons/mob/large-worn-icons/64x64/head.dmi'
+	icon_state = "cage"
+	item_state = "cage"
+	worn_x_dimension = 64
+	worn_y_dimension = 64
+
+
+/obj/item/clothing/head/witchunter_hat
+	name = "witchunter hat"
+	desc = "This hat saw much use back in the day."
+	icon_state = "witchhunterhat"
+	item_state = "witchhunterhat"
+	flags_cover = HEADCOVERSEYES
+
+//Detective
 /obj/item/clothing/head/det_hat
 	name = "detective's fedora"
 	desc = "There's only one man who can sniff out the dirty stench of crime, and he's likely wearing this hat."
 	icon_state = "detective"
-	armor = list(melee = 25, bullet = 5, laser = 25, energy = 10, bomb = 0, bio = 0, rad = 0)
+	armor = list(melee = 25, bullet = 5, laser = 25, energy = 10, bomb = 0, bio = 0, rad = 0, fire = 30, acid = 50)
 	var/candy_cooldown = 0
 	pockets = /obj/item/weapon/storage/internal/pocket/small/detective
 	dog_fashion = /datum/dog_fashion/head/detective
@@ -88,6 +102,10 @@
 
 	dog_fashion = /datum/dog_fashion/head/beret
 
+/obj/item/clothing/head/beret/highlander
+	desc = "That was white fabric. <i>Was.</i>"
+	flags = NODROP
+	dog_fashion = null //THIS IS FOR SLAUGHTER, NOT PUPPIES
 
 //Security
 
@@ -95,7 +113,7 @@
 	name = "head of security cap"
 	desc = "The robust standard-issue cap of the Head of Security. For showing the officers who's in charge."
 	icon_state = "hoscap"
-	armor = list(melee = 40, bullet = 30, laser = 25, energy = 10, bomb = 25, bio = 10, rad = 0)
+	armor = list(melee = 40, bullet = 30, laser = 25, energy = 10, bomb = 25, bio = 10, rad = 0, fire = 50, acid = 60)
 	strip_delay = 80
 
 /obj/item/clothing/head/HoS/beret
@@ -107,9 +125,8 @@
 	name = "warden's police hat"
 	desc = "It's a special armored hat issued to the Warden of a security force. Protects the head from impacts."
 	icon_state = "policehelm"
-	armor = list(melee = 40, bullet = 30, laser = 30, energy = 10, bomb = 25, bio = 0, rad = 0)
+	armor = list(melee = 40, bullet = 30, laser = 30, energy = 10, bomb = 25, bio = 0, rad = 0, fire = 30, acid = 60)
 	strip_delay = 60
-
 	dog_fashion = /datum/dog_fashion/head/warden
 
 /obj/item/clothing/head/beret/sec
@@ -118,23 +135,30 @@
 	worn_icon = 'icons/blue_brig/mob/head.dmi'
 	icon = 'icons/blue_brig/obj/clothing/hats.dmi'
 	icon_state = "beret_badge"
-	armor = list(melee = 40, bullet = 30, laser = 30,energy = 10, bomb = 25, bio = 0, rad = 0)
+	armor = list(melee = 40, bullet = 30, laser = 30,energy = 10, bomb = 25, bio = 0, rad = 0, fire = 20, acid = 50)
 	strip_delay = 60
 	dog_fashion = null
 
 /obj/item/clothing/head/beret/sec/navyhos
 	name = "head of security's beret"
 	desc = "A special beret with the Head of Security's insignia emblazoned on it. A symbol of excellence, a badge of courage, a mark of distinction."
-	armor = list(melee = 60, bullet = 5, laser = 25, energy = 10, bomb = 25, bio = 0, rad = 0)
+	armor = list(melee = 60, bullet = 5, laser = 25, energy = 10, bomb = 25, bio = 0, rad = 0, fire = 0, acid = 50)
 	icon_state = "hosberet"
 
 /obj/item/clothing/head/beret/sec/navywarden
 	name = "warden's beret"
 	desc = "A special beret with the Warden's insignia emblazoned on it. For wardens with class."
 	icon_state = "wardenberet"
-	armor = list(melee = 40, bullet = 30, laser = 30, energy = 10, bomb = 25, bio = 0, rad = 0)
+	armor = list(melee = 40, bullet = 30, laser = 30, energy = 10, bomb = 25, bio = 0, rad = 0, fire = 30, acid = 50)
 	strip_delay = 60
 
 /obj/item/clothing/head/beret/sec/navyofficer
 	desc = "A special beret with the security insignia emblazoned on it. For officers with class."
 	icon_state = "officerberet"
+
+//Curator
+/obj/item/clothing/head/curator
+	name = "treasure hunter's fedora"
+	desc = "You got red text today kid, but it doesn't mean you have to like it."
+	icon_state = "curator"
+	armor = list(melee = 25, bullet = 5, laser = 25, energy = 10, bomb = 0, bio = 0, rad = 0, fire = 30, acid = 50)

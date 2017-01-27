@@ -34,12 +34,13 @@
 	id = "whiteship";
 	launch_status = 0;
 	name = "NT Recovery White-Ship";
-	roundstart_move = "whiteship_away";
 	port_angle = 180;
-	width = 27;
-	timid = 1
+	preferred_direction = 1;
+	roundstart_move = "whiteship_away";
+	timid = 1;
+	width = 27
 	},
-/obj/machinery/door/airlock/shuttle{
+/obj/machinery/door/airlock/titanium{
 	name = "recovery shuttle external airlock"
 	},
 /obj/effect/decal/cleanable/dirt{
@@ -49,7 +50,7 @@
 /turf/open/floor/mineral/titanium/blue,
 /area/shuttle/abandoned)
 "ah" = (
-/obj/machinery/door/airlock/shuttle{
+/obj/machinery/door/airlock/titanium{
 	name = "recovery shuttle external airlock"
 	},
 /obj/effect/decal/cleanable/dirt{
@@ -295,7 +296,7 @@
 /obj/effect/spawner/lootdrop/maintenance,
 /obj/item/weapon/extinguisher,
 /obj/item/weapon/extinguisher,
-/obj/effect/decal/cleanable/cobweb2,
+/obj/effect/decal/cleanable/cobweb/cobweb2,
 /obj/effect/decal/cleanable/dirt{
 	desc = "A thin layer of dust coating the floor.";
 	name = "dust"
@@ -332,7 +333,7 @@
 	},
 /area/shuttle/abandoned)
 "aG" = (
-/obj/machinery/door/airlock/shuttle{
+/obj/machinery/door/airlock/titanium{
 	name = "bathroom"
 	},
 /obj/effect/decal/cleanable/dirt{
@@ -398,7 +399,7 @@
 /turf/open/floor/mineral/titanium/blue,
 /area/shuttle/abandoned)
 "aM" = (
-/obj/machinery/door/airlock/shuttle{
+/obj/machinery/door/airlock/titanium{
 	name = "E.V.A. equipment"
 	},
 /obj/effect/decal/cleanable/dirt{
@@ -423,7 +424,7 @@
 /turf/open/floor/mineral/titanium/blue,
 /area/shuttle/abandoned)
 "aO" = (
-/obj/machinery/door/airlock/shuttle{
+/obj/machinery/door/airlock/titanium{
 	name = "cargo bay"
 	},
 /turf/open/floor/plasteel/delivery{
@@ -572,8 +573,6 @@
 	},
 /area/shuttle/abandoned)
 "ba" = (
-/obj/structure/frame/machine,
-/obj/item/weapon/circuitboard/machine/cyborgrecharger,
 /obj/effect/decal/cleanable/oil,
 /obj/effect/decal/cleanable/dirt{
 	desc = "A thin layer of dust coating the floor.";
@@ -598,7 +597,7 @@
 /turf/open/floor/plasteel/bot,
 /area/shuttle/abandoned)
 "bd" = (
-/obj/machinery/door/airlock/shuttle{
+/obj/machinery/door/airlock/titanium{
 	name = "bathroom"
 	},
 /obj/effect/decal/cleanable/blood/old,
@@ -615,7 +614,7 @@
 	},
 /area/shuttle/abandoned)
 "bf" = (
-/obj/machinery/door/airlock/shuttle{
+/obj/machinery/door/airlock/titanium{
 	name = "dormitory"
 	},
 /obj/effect/decal/cleanable/blood/old,
@@ -632,7 +631,10 @@
 	req_access_txt = "0";
 	use_power = 0
 	},
-/turf/closed/wall/mineral/titanium,
+/turf/closed/wall/shuttle{
+	icon_state = "swall12";
+	dir = 2
+	},
 /area/shuttle/abandoned)
 "bh" = (
 /turf/closed/wall/shuttle{
@@ -647,7 +649,7 @@
 	},
 /area/shuttle/abandoned)
 "bj" = (
-/obj/machinery/door/airlock/shuttle{
+/obj/machinery/door/airlock/titanium{
 	name = "recovery shuttle interior airlock"
 	},
 /obj/effect/decal/cleanable/dirt{
@@ -667,7 +669,7 @@
 	},
 /area/shuttle/abandoned)
 "bl" = (
-/obj/machinery/door/airlock/shuttle{
+/obj/machinery/door/airlock/titanium{
 	name = "cargo bay"
 	},
 /obj/effect/decal/cleanable/dirt{
@@ -714,11 +716,10 @@
 	desc = "A thin layer of dust coating the floor.";
 	name = "dust"
 	},
-/obj/effect/decal/cleanable/cobweb2,
+/obj/effect/decal/cleanable/cobweb/cobweb2,
 /turf/open/floor/mineral/titanium/blue,
 /area/shuttle/abandoned)
 "br" = (
-/obj/structure/frame/computer,
 /obj/effect/decal/cleanable/cobweb,
 /obj/effect/decal/cleanable/dirt{
 	desc = "A thin layer of dust coating the floor.";
@@ -851,7 +852,7 @@
 /turf/open/floor/mineral/titanium,
 /area/shuttle/abandoned)
 "bE" = (
-/obj/machinery/door/airlock/shuttle{
+/obj/machinery/door/airlock/titanium{
 	name = "recovery shuttle interior airlock"
 	},
 /obj/effect/decal/cleanable/dirt{
@@ -915,7 +916,7 @@
 /turf/open/floor/mineral/titanium,
 /area/shuttle/abandoned)
 "bK" = (
-/obj/machinery/door/airlock/shuttle{
+/obj/machinery/door/airlock/titanium{
 	name = "living quarters"
 	},
 /obj/effect/decal/cleanable/dirt{
@@ -1013,7 +1014,7 @@
 /turf/open/floor/mineral/titanium,
 /area/shuttle/abandoned)
 "bR" = (
-/obj/machinery/door/airlock/shuttle{
+/obj/machinery/door/airlock/titanium{
 	name = "bridge"
 	},
 /obj/effect/decal/cleanable/dirt{
@@ -1200,7 +1201,7 @@
 /turf/closed/wall/mineral/titanium,
 /area/shuttle/abandoned)
 "ck" = (
-/obj/machinery/door/airlock/shuttle{
+/obj/machinery/door/airlock/titanium{
 	name = "hydroponics"
 	},
 /obj/effect/decal/cleanable/dirt{
@@ -1210,7 +1211,7 @@
 /turf/open/floor/mineral/titanium/blue,
 /area/shuttle/abandoned)
 "cl" = (
-/obj/machinery/door/airlock/shuttle{
+/obj/machinery/door/airlock/titanium{
 	name = "kitchen"
 	},
 /obj/effect/decal/cleanable/dirt{
@@ -1220,7 +1221,7 @@
 /turf/open/floor/mineral/titanium/blue,
 /area/shuttle/abandoned)
 "cm" = (
-/obj/machinery/door/airlock/shuttle{
+/obj/machinery/door/airlock/titanium{
 	name = "laboratory"
 	},
 /obj/effect/decal/cleanable/dirt{
@@ -1234,7 +1235,7 @@
 /turf/closed/wall/mineral/titanium,
 /area/shuttle/abandoned)
 "co" = (
-/obj/machinery/door/airlock/shuttle{
+/obj/machinery/door/airlock/titanium{
 	icon_state = "door_closed";
 	name = "medbay";
 	welded = 0
@@ -1288,7 +1289,7 @@
 	desc = "A thin layer of dust coating the floor.";
 	name = "dust"
 	},
-/turf/open/floor/plasteel/shuttle/white,
+/turf/open/floor/mineral/titanium,
 /area/shuttle/abandoned)
 "ct" = (
 /obj/machinery/processor,
@@ -1318,11 +1319,10 @@
 	desc = "A thin layer of dust coating the floor.";
 	name = "dust"
 	},
-/obj/effect/decal/cleanable/cobweb2,
+/obj/effect/decal/cleanable/cobweb/cobweb2,
 /turf/open/floor/mineral/titanium,
 /area/shuttle/abandoned)
 "cw" = (
-/obj/structure/fluff/empty_sleeper/nanotrasen,
 /obj/effect/decal/cleanable/oil,
 /obj/effect/decal/cleanable/dirt{
 	desc = "A thin layer of dust coating the floor.";
@@ -1697,11 +1697,11 @@ aa
 aa
 aa
 aa
-ab
+ac
 ac
 ah
 ac
-ab
+ac
 aa
 aa
 aa
@@ -1726,7 +1726,7 @@ cO
 aa
 "}
 (3,1,1) = {"
-ab
+ac
 ac
 aD
 aD
@@ -1740,7 +1740,7 @@ ac
 aD
 aD
 ac
-ab
+ac
 "}
 (4,1,1) = {"
 ac
@@ -1919,9 +1919,9 @@ aL
 aY
 ac
 aL
-bA
+bx
 bL
-bX
+bx
 aL
 ac
 ac
@@ -1931,18 +1931,18 @@ ac
 "}
 (15,1,1) = {"
 ac
-ac
+av
 aM
 ac
 ac
 aL
-bB
+bz
 bM
-bY
+bz
 ce
 ac
 cw
-cH
+bx
 cV
 ac
 "}
@@ -1975,8 +1975,8 @@ bO
 ax
 aL
 ac
-cx
-cJ
+bx
+bx
 cX
 ac
 "}
@@ -1987,9 +1987,9 @@ aO
 ac
 ac
 aL
-bA
+bx
 bP
-bX
+bx
 aL
 ac
 ac
@@ -2004,9 +2004,9 @@ aP
 ba
 ac
 aL
-bA
+bx
 bQ
-bY
+bz
 aL
 cn
 cy
@@ -2058,7 +2058,7 @@ br
 bC
 aL
 bZ
-cf
+bx
 ac
 cA
 cN
@@ -2066,7 +2066,7 @@ db
 ac
 "}
 (23,1,1) = {"
-ab
+ac
 ac
 ae
 ac
@@ -2080,7 +2080,7 @@ ac
 ac
 ae
 ac
-ab
+ac
 "}
 (24,1,1) = {"
 aa
@@ -2121,13 +2121,13 @@ aa
 aa
 aa
 aa
-ab
+ac
 ae
 ae
 ae
 ae
 ae
-ab
+ac
 aa
 aa
 aa

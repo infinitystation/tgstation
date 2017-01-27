@@ -10,7 +10,8 @@
 /datum/crafting_recipe/eng_un
 	name = "Convert engineer style hardsuit to unathi"
 	result = /obj/item/clothing/suit/space/hardsuit/engine_un
-	reqs = list(/obj/item/clothing/suit/space/hardsuit/engine = 1)
+	reqs = list(/obj/item/clothing/suit/space/hardsuit/engine = 1,
+				/obj/item/stack/rods = 1)
 	tools = list(/obj/item/weapon/wirecutters)
 	time = 100
 	category = CAT_MISC
@@ -38,3 +39,11 @@
 	tools = list(/obj/item/weapon/wirecutters)
 	time = 100
 	category = CAT_MISC
+
+/datum/crafting_recipe/bonepickaxe
+	name = "Bone Pickaxe"
+	result = /obj/item/weapon/pickaxe/bone
+	time = 40
+	reqs = list(/obj/item/stack/sheet/bone = 5,
+				 /obj/item/stack/sheet/sinew = 2)
+	category = CAT_PRIMAL

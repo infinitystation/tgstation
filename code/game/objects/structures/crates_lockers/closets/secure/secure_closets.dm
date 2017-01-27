@@ -8,7 +8,9 @@
 	var/codelen
 	var/validating = 0
 	wall_mounted = 0 //never solid (You can always pass over it)
-	health = 200
+	obj_integrity = 250
+	max_integrity = 250
+	armor = list(melee = 30, bullet = 50, laser = 50, energy = 100, bomb = 0, bio = 0, rad = 0, fire = 80, acid = 80)
 	secure = 1
 
 /obj/structure/closet/secure_closet/New()
@@ -19,12 +21,12 @@
 		code2[i] = rand(0,9)
 
 /obj/structure/closet/secure_closet/interact(mob/user)
-	var/obj/item/device/multitool/multimeter/W = user.get_active_hand()
+	var/obj/item/device/multitool/multimeter/W = user.get_active_held_item()
 	if(opened)
 		return
 	if(!istype(W))
 		return
-	if(W.mode!=1)
+	if(!W.mode)
 		user << "Переключите мультиметр"
 		return
 	src.add_fingerprint(user)
@@ -44,9 +46,10 @@
 	popup.open(1)
 
 /obj/structure/closet/secure_closet/Topic(href, href_list)
-	if(!ishuman(usr))	return
+	if(!ishuman(usr))
+		return
 	var/mob/living/carbon/human/user = usr
-	var/obj/item/device/multitool/multimeter/W = user.get_active_hand()
+	var/obj/item/device/multitool/multimeter/W = user.get_active_held_item()
 	var/validate = 0
 	user.set_machine(src)
 
@@ -98,9 +101,14 @@
 /obj/structure/closet/secure_closet/attackby(obj/item/weapon/W, mob/user, params)
 	if(user in src)
 		return
-	if(!locked && !opened)
+	if(locked && !opened)
 		if(istype(W, /obj/item/device/multitool/multimeter))
 			interact(user)
-		return 1
+		return ..()
 	else
 		..()
+
+/obj/structure/closet/secure_closet/run_obj_armor(damage_amount, damage_type, damage_flag = 0, attack_dir)
+	if(damage_flag == "melee" && damage_amount < 20)
+		return 0
+	. = ..()

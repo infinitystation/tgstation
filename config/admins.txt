@@ -7,28 +7,20 @@
 # NOTE: if the rank-name cannot be found in admin_ranks.txt, they will not be adminned! ~Carn #
 # NOTE: syntax was changed to allow hyphenation of ranknames, since spaces are stripped.      #
 ###############################################################################################
-violentfire = Host
-median4 = Game Master
-bear1ake = Game Master
-terror4000rus = Game Master
-samorey = Game Master
-hellpony = Game Master
-semendrozd = Game Master
-fireflashie = Game Master
-xxxrockxxx = Game Master
-sladkoeshka = Game Master
-proxor99 = Game Master
-temblrex = Game Master
+destinat1on = System Architect
 thehero13 = Game Master
-firsttea = Game Master
-surman = Game Master
-iuferev2012 = Game Master
+terror4000rus = Game Admin
 alexmorgan = Game Master
-inriss = Game Master
-brostyle = Game Master
-wolforbykot = Game Master
-dvd406metaua = Game Master
-nikovar = Game Master
-xsarethx = Game Master
-farwa87 = Game Master
-vertonx = Game Master
+bear1ake = Projec tLead
+aieroivor = Admin
+mrtrololo = Admin
+kuzyxd = Developer
+temblrex = Admin
+samorey01 = Game Master
+johnthebastard = Junior Developer
+redknighthero = Trial Admin
+sladkoeshka = Trial Admin
+thedeadangel = Trial Admin
+hellpony = Admin Candidate
+neincat = Admin Candidate
+balalayka = Admin Candidate

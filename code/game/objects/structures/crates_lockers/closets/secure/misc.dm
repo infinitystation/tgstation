@@ -13,11 +13,11 @@
 	if(prob(50))
 		new /obj/item/ammo_box/magazine/m50(src)
 		new /obj/item/ammo_box/magazine/m50(src)
-		new /obj/item/weapon/gun/projectile/automatic/pistol/deagle(src)
+		new /obj/item/weapon/gun/ballistic/automatic/pistol/deagle(src)
 	else
 		new /obj/item/ammo_box/a357(src)
 		new /obj/item/ammo_box/a357(src)
-		new /obj/item/weapon/gun/projectile/revolver/mateba(src)
+		new /obj/item/weapon/gun/ballistic/revolver/mateba(src)
 
 /obj/structure/closet/secure_closet/ertSec
 	name = "security closet"
@@ -47,7 +47,6 @@
 	new /obj/item/weapon/storage/firstaid/brute(src)
 	new /obj/item/weapon/storage/firstaid/regular(src)
 	new /obj/item/weapon/defibrillator/compact/combat/loaded(src)
-	new /mob/living/simple_animal/bot/medbot(src)
 
 /obj/structure/closet/secure_closet/ertEngi
 	name = "engineer closet"
@@ -73,7 +72,12 @@
 
 /obj/structure/closet/secure_closet/uac/New()
 	..()
-	new /obj/item/clothing/under/uac(src)
-	new /obj/item/clothing/shoes/combat/uac(src)
+	new /obj/item/clothing/under/syndicate/uac(src)
+	new /obj/item/clothing/shoes/combat/swat/uac(src)
 	new /obj/item/clothing/suit/armor/uac(src)
-	new /obj/item/clothing/head/helmet/trooper(src)
+	new /obj/item/clothing/head/helmet/uac(src)
+
+/obj/structure/closet/secure_closet/syndicate
+	name = "Syndicate Secure Closet"
+	icon = 'icons/obj/infinity_object.dmi'
+	icon_state = "secure_syndicate"

@@ -7,7 +7,7 @@
 	density = 1
 	var/on = 0
 	var/obj/item/weapon/stock_parts/cell/cell
-	var/use = 5
+	var/use = 2
 	var/unlocked = 0
 	var/open = 0
 	var/brightness_on = 14
@@ -37,7 +37,7 @@
 	if(open && cell)
 		if(!on)
 			if(ishuman(user))
-				if(!user.get_active_hand())
+				if(!user.get_active_held_item())
 					user.put_in_hands(cell)
 			else
 				cell.loc = loc

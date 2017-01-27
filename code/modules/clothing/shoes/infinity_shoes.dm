@@ -78,3 +78,11 @@
 	item_state = "giant_sapog"
 	icon = 'icons/obj/clothing/infinity_work.dmi'
 	worn_icon = 'icons/mob/infinity_work.dmi'
+
+/obj/item/clothing/shoes/combat/swat/uac
+	name = "troopers boots"
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon_state = "uac_shoes"
+	item_state = "uac_shoes"
+	armor = list(melee = 40, bullet = 40, laser = 25,energy = 35, bomb = 20, bio = 40, rad = 0, fire = 30, acid = 60)

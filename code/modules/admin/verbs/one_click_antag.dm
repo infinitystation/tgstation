@@ -23,6 +23,7 @@
 		<a href='?src=\ref[src];makeAntag=centcom'>Make Centcom Response Team (Requires Ghosts)</a><br>
 		<a href='?src=\ref[src];makeAntag=abductors'>Make Abductor Team (Requires Ghosts)</a><br>
 		<a href='?src=\ref[src];makeAntag=revenant'>Make Revenant (Requires Ghost)</a><br>
+		<a href='?src=\ref[src];makeAntag=crew'>Make Central Command Crew (Requires Ghost)</a><br>
 		"}
 
 	var/datum/browser/popup = new(usr, "oneclickantag", "Quick-Create Antagonist", 400, 400)
@@ -134,7 +135,7 @@
 
 	var/list/mob/dead/observer/candidates = pollCandidates("Do you wish to be considered for the position of a Wizard Foundation 'diplomat'?", "wizard", null)
 
-	var/mob/dead/observer/selected = popleft(candidates)
+	var/mob/dead/observer/selected = pick_n_take(candidates)
 
 	var/mob/living/carbon/human/new_character = makeBody(selected)
 	new_character.mind.make_Wizard()
@@ -552,5 +553,131 @@
 	return 1
 
 /datum/admins/proc/makeRevenant()
-	new /datum/round_event/ghost_role/revenant
+	new /datum/round_event/ghost_role/revenant(TRUE, TRUE)
 	return 1
+
+/datum/admins/proc/makeWar1()
+	var/alert = input("Какой уровень тревоги должен быть на ЦК?", "Выберите уровень тревоги") as null|anything in list("Green: Arrival Security", "Ember: Armed Security Squad", "Biohazard: Security With Bio-Suits", "Red: Space-like Armed Security Squad", "Delta: Special Force Squad")
+	if(!alert)
+		return
+	switch(alert)
+		if("Delta: Special Force Squad")
+			alert = "Delta"
+		if("Biohazard: Security With Bio-Suits")
+			alert = "Bio"
+		if("Red: Space-like Armed Security Squad")
+			alert = "Red"
+		if("Ember: Armed Security Squad")
+			alert = "Ember"
+		if("Green: Arrival Security")
+			alert = "Green"
+	var/teamsize = min(7,input("Максимальное количество бойцов в отрЯде? (Макс: 7)", "Выберите размер группы",4) as null|num)
+	var/mission = input("Выберите задание длЯ отрЯда", "Назначьте цель", "Защитить ЦК.")
+	var/list/mob/dead/observer/candidates = pollCandidates("Вы желаете стать сотрудником охраны ЦК при следующем уровне угрозы: [alert] с целью: [mission]?", "Приглашение в элиту", null)
+	var/teamSpawned = 0
+
+	if(candidates.len > 0)
+		//Pick the (un)lucky players
+		var/numagents = min(teamsize,candidates.len) //How many officers to spawn
+		var/deltaalert
+		var/redalert
+		var/bioalert
+		var/emberalert
+		var/greenalert
+		if (alert == "Delta")
+			numagents = min(teamsize,candidates.len)
+			deltaalert = 1
+		if (alert == "Red")
+			numagents = min(teamsize,candidates.len)
+			redalert = 1
+		if (alert == "Bio")
+			numagents = min(teamsize,candidates.len)
+			bioalert = 1
+		if (alert == "Ember")
+			numagents = min(teamsize,candidates.len)
+			emberalert = 1
+		if (alert == "Green")
+			numagents = min(teamsize,candidates.len)
+			greenalert = 1
+		var/list/spawnpoints = centcomsecspawn
+		while(numagents && candidates.len)
+			if (numagents > spawnpoints.len)
+				numagents--
+				continue // This guy's unlucky, not enough spawn points, we skip him.
+			var/spawnloc = spawnpoints[numagents]
+			var/mob/dead/observer/chosen_candidate = pick(candidates)
+			candidates -= chosen_candidate
+			if(!chosen_candidate.key)
+				continue
+
+			//Spawn and equip the officer
+			var/mob/living/carbon/human/SAVEOperative = new(spawnloc)
+			var/list/lastname = last_names
+			chosen_candidate.client.prefs.copy_to(SAVEOperative)
+			var/ertname = pick(lastname)
+			switch(numagents)
+				if(1)
+					SAVEOperative.real_name = "Sergeant [ertname]"
+					SAVEOperative.equipOutfit(greenalert ? /datum/outfit/security_sergeant/green : emberalert ? /datum/outfit/security_sergeant : redalert ? /datum/outfit/security_sergeant/red : bioalert ? /datum/outfit/security_sergeant/biohazard : deltaalert ? /datum/outfit/combat : /datum/outfit/security_sergeant)
+				if(2)
+					SAVEOperative.real_name = "Private [ertname]"
+					SAVEOperative.equipOutfit(greenalert ? /datum/outfit/security_private/green : emberalert ? /datum/outfit/security_private : redalert ? /datum/outfit/security_private/red : bioalert ? /datum/outfit/security_private/biohazard : deltaalert ? /datum/outfit/combat : /datum/outfit/security_private)
+				if(3)
+					SAVEOperative.real_name = "Private [ertname]"
+					SAVEOperative.equipOutfit(greenalert ? /datum/outfit/security_private/green : emberalert ? /datum/outfit/security_private : redalert ? /datum/outfit/security_private/red : bioalert ? /datum/outfit/security_private/biohazard : deltaalert ? /datum/outfit/combat : /datum/outfit/security_private)
+				if(4)
+					SAVEOperative.real_name = "Private [ertname]"
+					SAVEOperative.equipOutfit(greenalert ? /datum/outfit/security_private/green : emberalert ? /datum/outfit/security_private : redalert ? /datum/outfit/security_private/red : bioalert ? /datum/outfit/security_private/biohazard : deltaalert ? /datum/outfit/combat : /datum/outfit/security_private)
+				if(5)
+					SAVEOperative.real_name = "Private [ertname]"
+					SAVEOperative.equipOutfit(greenalert ? /datum/outfit/security_private/green : emberalert ? /datum/outfit/security_private : redalert ? /datum/outfit/security_private/red : bioalert ? /datum/outfit/security_private/biohazard : deltaalert ? /datum/outfit/combat : /datum/outfit/security_private)
+				if(6)
+					SAVEOperative.real_name = "Private [ertname]"
+					SAVEOperative.equipOutfit(greenalert ? /datum/outfit/security_private/green : emberalert ? /datum/outfit/security_private : redalert ? /datum/outfit/security_private/red : bioalert ? /datum/outfit/security_private/biohazard : deltaalert ? /datum/outfit/combat : /datum/outfit/security_private)
+				if(7)
+					SAVEOperative.real_name = "Private [ertname]"
+					SAVEOperative.equipOutfit(greenalert ? /datum/outfit/security_private/green : emberalert ? /datum/outfit/security_private : redalert ? /datum/outfit/security_private/red : bioalert ? /datum/outfit/security_private/biohazard : deltaalert ? /datum/outfit/combat : /datum/outfit/security_private)
+			SAVEOperative.dna.update_dna_identity()
+			SAVEOperative.key = chosen_candidate.key
+			SAVEOperative.mind.assigned_role = "Centcome Crew"
+
+			//Assign antag status and the mission
+			ticker.mode.traitors += SAVEOperative.mind
+			SAVEOperative.mind.special_role = "Centcome Crew"
+			var/datum/objective/missionobj = new
+			missionobj.owner = SAVEOperative.mind
+			missionobj.explanation_text = mission
+			missionobj.completed = 1
+			SAVEOperative.mind.objectives += missionobj
+
+			//Greet the commando
+			SAVEOperative << "<B><font size=3 color=red>Вы - [numagents==1?"сержант Службы Безопасности ЦК":"боец Службы Безопасности ЦК"].</font></B>"
+			var/missiondesc = "Вы были экстренно переброшены из другого сектора ЦК с целью выполнени&#255; задачи в данном секторе по следующему коду опасности: [alert]."
+			if(numagents == 1) //If Squad Leader
+				missiondesc += "<BR>Выдвигайтесь на заданную позицию и начинайте выполнЯть задачу, сержант. Избегайте жертв среди граждансих, если их можно избежать."
+			else
+				missiondesc += " Исполн&#255;йте отдаваемые сержантом приказы - избегайте жерт среди гражданских."
+			missiondesc += "<BR><B>Ваша мисси&#255;</B>: [mission]"
+			SAVEOperative << missiondesc
+
+			if(config.enforce_human_authority)
+				SAVEOperative.set_species(/datum/species/human)
+
+			if(alert != "Green")
+				for(var/obj/machinery/door/poddoor/crew/door in airlocks)
+					spawn(0)
+						door.open()
+
+			//Logging and cleanup
+			if(numagents == 1)
+				message_admins("Был создан персонал ЦК согласно следующем коду: [alert] с миссией: [mission]")
+			log_game("[key_name(SAVEOperative)] был избран в качестве члена персонала ЦК.")
+			numagents--
+			teamSpawned++
+
+		if (teamSpawned)
+			return 1
+		else
+			return 0
+
+	return

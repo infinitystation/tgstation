@@ -181,4 +181,12 @@
 	name = "laser gun turret"
 	desc = "Protecting Our People"
 	health = 100
+	projectile_type = /obj/item/projectile/beam/laser
 	faction = "neutral"
+
+/obj/machinery/gun_turret/laser/neutral/poor/pirate
+	name = "rusted laser turret"
+	desc = "…о-хо-хо, и бутылка рому!"
+	health = 80
+	projectile_type = /obj/item/projectile/beam/laser
+	faction = "pirate"

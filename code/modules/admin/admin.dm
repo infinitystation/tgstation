@@ -34,7 +34,7 @@ var/global/BSACooldown = 0
 		body += " played by <b>[M.client]</b> "
 		body += "\[<A href='?_src_=holder;editrights=rank;ckey=[M.ckey]'>[M.client.holder ? M.client.holder.rank : "Player"]</A>\]"
 
-	if(istype(M, /mob/new_player))
+	if(isnewplayer(M))
 		body += " <B>Hasn't Entered Game</B> "
 	else
 		body += " \[<A href='?_src_=holder;revive=\ref[M]'>Heal</A>\] "
@@ -110,7 +110,7 @@ var/global/BSACooldown = 0
 	body += "<A href='?_src_=holder;subtlemessage=\ref[M]'>Subtle message</A>"
 
 	if (M.client)
-		if(!istype(M, /mob/new_player))
+		if(!isnewplayer(M))
 			body += "<br><br>"
 			body += "<b>Transformation:</b>"
 			body += "<br>"
@@ -224,7 +224,7 @@ var/global/BSACooldown = 0
 			dat+="<HR><B>Feed Security functions:</B><BR>"
 			dat+="<BR><A href='?src=\ref[src];ac_menu_wanted=1'>[(wanted_already) ? ("Manage") : ("Publish")] \"Wanted\" Issue</A>"
 			dat+="<BR><A href='?src=\ref[src];ac_menu_censor_story=1'>Censor Feed Stories</A>"
-			dat+="<BR><A href='?src=\ref[src];ac_menu_censor_channel=1'>Mark Feed Channel with Nanotrasen D-Notice (disables and locks the channel.</A>"
+			dat+="<BR><A href='?src=\ref[src];ac_menu_censor_channel=1'>Mark Feed Channel with Nanotrasen D-Notice (disables and locks the channel).</A>"
 			dat+="<BR><HR><A href='?src=\ref[src];ac_set_signature=1'>The newscaster recognises you as:<BR> <FONT COLOR='green'>[src.admin_signature]</FONT></A>"
 		if(1)
 			dat+= "Station Feed Channels<HR>"
@@ -405,7 +405,7 @@ var/global/BSACooldown = 0
 
 
 /datum/admins/proc/Game()
-	if(!check_rights(0))
+	if(!check_rights())
 		return
 
 	var/dat = {"
@@ -473,12 +473,10 @@ var/global/BSACooldown = 0
 	if(!check_rights(0))
 		return
 
-	var/message = input("Global message to send:", "Admin Announce", null, null)  as message
+	var/message = stripped_multiline_input("Global message to send:", "Admin Announce", null, null)  as message
 	if(message)
-		if(!check_rights(R_SERVER,0))
-			message = adminscrub(message,500)
-		world << "<span class='adminnotice'><b>[usr.client.holder.fakekey ? "Administrator" : usr.key] Announces:</b></span>\n \t [sanitize(message)]"
-		log_admin("Announce: [key_name(usr)] : [sanitize(message)]")
+		world << "<span class='adminnotice'><b>[usr.client.holder.fakekey ? "Administrator" : usr.key] Announces:</b></span>\n \t [sanitize_a0(message)]"
+		log_admin("Announce: [key_name(usr)] : [sanitize_a0(message)]")
 	feedback_add_details("admin_verb","A") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /datum/admins/proc/set_admin_notice()
@@ -489,6 +487,7 @@ var/global/BSACooldown = 0
 		return
 
 	var/new_admin_notice = input(src,"Set a public notice for this round. Everyone who joins the server will see it.\n(Leaving it blank will delete the current notice):","Set Notice",admin_notice) as message|null
+	new_admin_notice = sanitize_a0(new_admin_notice)
 	if(new_admin_notice == null)
 		return
 	if(new_admin_notice == admin_notice)
@@ -497,7 +496,6 @@ var/global/BSACooldown = 0
 		message_admins("[key_name(usr)] removed the admin notice.")
 		log_admin("[key_name(usr)] removed the admin notice:\n[admin_notice]")
 	else
-		new_admin_notice = sanitize(new_admin_notice)
 		message_admins("[key_name(usr)] set the admin notice.")
 		log_admin("[key_name(usr)] set the admin notice:\n[new_admin_notice]")
 		world << "<span class ='adminnotice'><b>Admin Notice:</b>\n \t [new_admin_notice]</span>"
@@ -555,15 +553,17 @@ var/global/BSACooldown = 0
 	set category = "Server"
 	set desc="Start the round RIGHT NOW"
 	set name="Start Now"
-	if(ticker.current_state == GAME_STATE_PREGAME)
-		ticker.can_fire = 1
-		ticker.timeLeft = 0
+	if(ticker.current_state == GAME_STATE_PREGAME || ticker.current_state == GAME_STATE_STARTUP)
+		ticker.start_immediately = TRUE
 		log_admin("[usr.key] has started the game.")
-		message_admins("<font color='blue'>[usr.key] has started the game.</font>")
+		var/msg = ""
+		if(ticker.current_state == GAME_STATE_STARTUP)
+			msg = " (The server is still setting up, but the round will be \
+				started as soon as possible.)"
+		message_admins("<font color='blue'>\
+			[usr.key] has started the game.[msg]</font>")
 		feedback_add_details("admin_verb","SN") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 		return 1
-	else if (ticker.current_state == GAME_STATE_STARTUP)
-		usr << "<font color='red'>Error: Start Now: Game is in startup, please wait until it has finished.</font>"
 	else
 		usr << "<font color='red'>Error: Start Now: Game has already started.</font>"
 
@@ -704,7 +704,8 @@ var/global/BSACooldown = 0
 		var/turf/T = get_turf(usr.loc)
 		T.ChangeTurf(chosen)
 	else
-		new chosen(usr.loc)
+		var/atom/A = new chosen(usr.loc)
+		A.admin_spawned = TRUE
 
 	log_admin("[key_name(usr)] spawned [chosen] at ([usr.x],[usr.y],[usr.z])")
 	feedback_add_details("admin_verb","SA") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
@@ -758,7 +759,7 @@ var/global/BSACooldown = 0
 		ai_number++
 		if(isAI(S))
 			usr << "<b>AI [key_name(S, usr)]'s laws:</b>"
-		else if(isrobot(S))
+		else if(iscyborg(S))
 			var/mob/living/silicon/robot/R = S
 			usr << "<b>CYBORG [key_name(S, usr)] [R.connected_ai?"(Slaved to: [R.connected_ai])":"(Independant)"]: laws:</b>"
 		else if (ispAI(S))
@@ -773,13 +774,19 @@ var/global/BSACooldown = 0
 	if(!ai_number)
 		usr << "<b>No AIs located</b>" //Just so you know the thing is actually working and not just ignoring you.
 
-/datum/admins/proc/output_devil_info()
+/datum/admins/proc/output_all_devil_info()
 	var/devil_number = 0
 	for(var/D in ticker.mode.devils)
 		devil_number++
 		usr << "Devil #[devil_number]:<br><br>" + ticker.mode.printdevilinfo(D)
 	if(!devil_number)
 		usr << "<b>No Devils located</b>" //Just so you know the thing is actually working and not just ignoring you.
+
+/datum/admins/proc/output_devil_info(mob/living/M)
+	if(istype(M) && M.mind && M.mind.devilinfo)
+		usr << ticker.mode.printdevilinfo(M.mind)
+	else
+		usr << "<b>[M] is not a devil."
 
 /datum/admins/proc/manage_free_slots()
 	if(!check_rights())
@@ -837,13 +844,13 @@ var/global/BSACooldown = 0
 /proc/kick_clients_in_lobby(message, kick_only_afk = 0)
 	var/list/kicked_client_names = list()
 	for(var/client/C in clients)
-		if(istype(C.mob, /mob/new_player))
-			if(kick_only_afk && !C.is_afk())	//Ignore clients who are not afk
+		if(isnewplayer(C.mob))
+			if(kick_only_afk && !C.is_afk()) //Ignore clients who are not afk
 				continue
 			if(message)
 				C << message
 			kicked_client_names.Add("[C.ckey]")
-			del(C)
+			qdel(C)
 	return kicked_client_names
 
 //returns 1 to let the dragdrop code know we are trapping this event

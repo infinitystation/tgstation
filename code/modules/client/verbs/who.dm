@@ -31,19 +31,21 @@
 				if(C.banprisoned)
 					entry += " - <b>Prisoner</b>"
 				entry += " (<A HREF='?_src_=holder;adminmoreinfo=\ref[C.mob]'>?</A>)"
+				entry += " ([round(C.avgping, 1)]ms)"
 				Lines += entry
 		else//If they don't have +ADMIN, only show hidden admins
 			for(var/client/C in clients)
 				var/entry = "\t[C.key]"
 				if(C.holder && C.holder.fakekey)
 					entry += " <i>(as [C.holder.fakekey])</i>"
+				entry += " ([round(C.avgping, 1)]ms)"
 				Lines += entry
 	else
 		for(var/client/C in clients)
 			if(C.holder && C.holder.fakekey)
-				Lines += C.holder.fakekey
+				Lines += "[C.holder.fakekey] ([round(C.avgping, 1)]ms)"
 			else
-				Lines += C.key
+				Lines += "[C.key] ([round(C.avgping, 1)]ms)"
 
 	for(var/line in sortList(Lines))
 		msg += "[line]\n"
@@ -65,7 +67,7 @@
 
 			if(isobserver(C.mob))
 				msg += " - Observing"
-			else if(istype(C.mob,/mob/new_player))
+			else if(isnewplayer(C.mob))
 				msg += " - Lobby"
 			else
 				msg += " - Playing"
@@ -75,6 +77,8 @@
 			msg += "\n"
 	else
 		for(var/client/C in admins)
+			if(C.is_afk())
+				continue //Don't show afk admins to adminwho
 			if(!C.holder.fakekey)
 				msg += "\t[C] is a [C.holder.rank]\n"
 		msg += "<span class='info'>Админы также имеютс&#255; в нашем Discord-Сервере. Выйдите с ними на контакт там.</span>"

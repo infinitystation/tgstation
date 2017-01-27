@@ -6,7 +6,7 @@
 		usr << "<span class='danger'>Speech is currently admin-disabled.</span>"
 		return
 
-	msg = copytext(sanitize(msg), 1, MAX_MESSAGE_LEN)
+	msg = copytext(sanitize_a0(msg), 1, MAX_MESSAGE_LEN)
 	if(!msg)
 		return
 	log_prayer("[src.key]/([src.name]): [msg]")
@@ -20,17 +20,21 @@
 	var/image/cross = image('icons/obj/storage.dmi',"bible")
 	var/font_color = "purple"
 	var/prayer_type = "PRAYER"
+	var/deity
 	if(usr.job == "Chaplain")
 		cross = image('icons/obj/storage.dmi',"kingyellow")
 		font_color = "blue"
 		prayer_type = "CHAPLAIN PRAYER"
+		if(SSreligion.Bible_deity_name)
+			deity = SSreligion.Bible_deity_name
 	else if(iscultist(usr))
 		cross = image('icons/obj/storage.dmi',"tome")
 		font_color = "red"
 		prayer_type = "CULTIST PRAYER"
+		deity = "Nar-Sie"
 
 	msg = "<span class='adminnotice'>\icon[cross] \
-		<b><font color=[font_color]>[prayer_type]: </font>\
+		<b><font color=[font_color]>[prayer_type][deity ? " (to [deity])" : ""]: </font>\
 		[ADMIN_FULLMONTY(src)] [ADMIN_SC(src)]:</b> \
 		[msg]</span>"
 
@@ -46,7 +50,7 @@
 	//log_admin("HELP: [key_name(src)]: [msg]")
 
 /proc/Centcomm_announce(text , mob/Sender)
-	var/msg = copytext(sanitize(text), 1, MAX_MESSAGE_LEN)
+	var/msg = copytext(sanitize_a0(text), 1, MAX_MESSAGE_LEN)
 	for(var/client/X in admins)
 		if(X.prefs.toggles & SOUND_ADMINHELP)
 			X << 'sound/effects/adminhelp.ogg'
@@ -60,7 +64,7 @@
 		C.overrideCooldown()
 
 /proc/Syndicate_announce(text , mob/Sender)
-	var/msg = copytext(sanitize(text), 1, MAX_MESSAGE_LEN)
+	var/msg = copytext(sanitize_a0(text), 1, MAX_MESSAGE_LEN)
 	for(var/client/X in admins)
 		if(X.prefs.toggles & SOUND_ADMINHELP)
 			X << 'sound/effects/adminhelp.ogg'
@@ -74,7 +78,7 @@
 		C.overrideCooldown()
 
 /proc/Nuke_request(text , mob/Sender)
-	var/msg = copytext(sanitize(text), 1, MAX_MESSAGE_LEN)
+	var/msg = copytext(sanitize_a0(text), 1, MAX_MESSAGE_LEN)
 	for(var/client/X in admins)
 		if(X.prefs.toggles & SOUND_ADMINHELP)
 			X << 'sound/effects/adminhelp.ogg'

@@ -4,25 +4,32 @@
 	opacity = 0
 	density = 0
 	layer = SIGN_LAYER
+	obj_integrity = 100
+	max_integrity = 100
+	armor = list(melee = 50, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 50, acid = 50)
+	var/buildable_sign = 1 //unwrenchable and modifiable
 
 /obj/structure/sign/basic
 	name = "blank sign"
 	desc = "How can signs be real if our eyes aren't real?"
 	icon_state = "backing"
 
-/obj/structure/sign/ex_act(severity, target)
-	qdel(src)
-
-/obj/structure/sign/blob_act(obj/effect/blob/B)
-	qdel(src)
-	return
+/obj/structure/sign/play_attack_sound(damage_amount, damage_type = BRUTE, damage_flag = 0)
+	switch(damage_type)
+		if(BRUTE)
+			if(damage_amount)
+				playsound(src.loc, 'sound/weapons/slash.ogg', 80, 1)
+			else
+				playsound(loc, 'sound/weapons/tap.ogg', 50, 1)
+		if(BURN)
+			playsound(loc, 'sound/items/welder.ogg', 80, 1)
 
 /obj/structure/sign/attackby(obj/item/O, mob/user, params)
-	if(istype(O, /obj/item/weapon/wrench))
+	if(istype(O, /obj/item/weapon/wrench) && buildable_sign)
 		user.visible_message("<span class='notice'>[user] starts removing [src]...</span>", \
 							 "<span class='notice'>You start unfastening [src].</span>")
-		playsound(src, 'sound/items/Ratchet.ogg', 50, 1)
-		if(!do_after(user, 30/O.toolspeed, target = src))
+		playsound(src, O.usesound, 50, 1)
+		if(!do_after(user, 30*O.toolspeed, target = src))
 			return
 		playsound(src, 'sound/items/Deconstruct.ogg', 50, 1)
 		user.visible_message("<span class='notice'>[user] unfastens [src].</span>", \
@@ -31,7 +38,7 @@
 		SB.icon_state = icon_state
 		SB.sign_path = type
 		qdel(src)
-	else if(istype(O, /obj/item/weapon/pen))
+	else if(istype(O, /obj/item/weapon/pen) && buildable_sign)
 		var/list/sign_types = list("Secure Area", "Biohazard", "High Voltage", "Radiation", "Hard Vacuum Ahead", "Disposal: Leads To Space", "Danger: Fire", "No Smoking", "Medbay", "Science", "Chemistry", \
 		"Hydroponics", "Xenobiology")
 		var/obj/structure/sign/sign_type
@@ -87,8 +94,8 @@
 	desc = "A sign with adhesive backing."
 	icon = 'icons/obj/decals.dmi'
 	icon_state = "backing"
-	w_class = 3
-	burn_state = FLAMMABLE
+	w_class = WEIGHT_CLASS_NORMAL
+	resistance_flags = FLAMMABLE
 	var/sign_path = /obj/structure/sign/basic //the type of sign that will be created when placed on a turf
 
 /obj/item/sign_backing/afterattack(atom/target, mob/user, proximity)
@@ -106,18 +113,26 @@
 /obj/structure/sign/map
 	name = "station map"
 	desc = "A framed picture of the station."
+	obj_integrity = 500
+	max_integrity = 500
 
 /obj/structure/sign/map/left
 	icon_state = "map-left"
 
 /obj/structure/sign/map/left/dream
 	icon_state = "map-left-DS"
+	desc = "A framed picture of the station.\nClockwise from the top, you see Engineering(<b>yellow</b>), Arrivals(<b>blue and white</b>), Atmospherics(<b>yellow</b>), Security(<b>red</b>), \
+	Cargo(<b>brown</b>), Science(<b>purple</b>), Escape(<b>red and white</b>), and Medbay(<b>blue</b>).\nIn the center of the station, you see the Bridge(<b>dark blue</b>).\n\
+	Around those, you see Hallways/Entrances(<b>light grey</b>), Public Areas(<b>grey</b>), and Maintenance(<b>dark grey</b>)."
 
 /obj/structure/sign/map/right
 	icon_state = "map-right"
 
 /obj/structure/sign/map/right/dream
 	icon_state = "map-right-DS"
+	desc = "A framed picture of the station.\nClockwise from the top, you see Engineering(<b>yellow</b>), Arrivals(<b>blue and white</b>), Atmospherics(<b>yellow</b>), Security(<b>red</b>), \
+	Cargo(<b>brown</b>), Science(<b>purple</b>), Escape(<b>red and white</b>), and Medbay(<b>blue</b>).\nIn the center of the station, you see the Bridge(<b>dark blue</b>).\n\
+	Around those, you see Hallways/Entrances(<b>light grey</b>), Public Areas(<b>grey</b>), and Maintenance(<b>dark grey</b>)."
 
 /obj/structure/sign/securearea
 	name = "\improper SECURE AREA"
@@ -201,15 +216,10 @@
 	desc = "This plaque commemorates the fall of the Atmos FEA division. For all the charred, dizzy, and brittle men who have died in its hands."
 	icon_state = "atmosplaque"
 
-/obj/structure/sign/maltesefalcon	//The sign is 64x32, so it needs two tiles. ;3
-	name = "The Maltese Falcon"
-	desc = "The Maltese Falcon, Space Bar and Grill."
-
-/obj/structure/sign/maltesefalcon/left
-	icon_state = "maltesefalcon-left"
-
-/obj/structure/sign/maltesefalcon/right
-	icon_state = "maltesefalcon-right"
+/obj/structure/sign/nanotrasen
+	name = "\improper NanoTrasen Logo "
+	desc = "A sign with the Nanotrasen Logo on it.  Glory to Nanotrasen!"
+	icon_state = "nanotrasen"
 
 /obj/structure/sign/science			//These 3 have multiple types, just var-edit the icon_state to whatever one you want on the map
 	name = "\improper SCIENCE"
@@ -228,8 +238,14 @@
 
 /obj/structure/sign/xenobio
 	name = "\improper XENOBIOLOGY"
-	desc = "A sign labelling an area as a place where xenobiological entites are researched."
+	desc = "A sign labelling an area as a place where xenobiological entities are researched."
 	icon_state = "xenobio"
+
+/obj/structure/sign/directions
+	name = "some direction"
+	desc = "This way!"
+	icon_state = "direction_sci"
+	resistance_flags = FIRE_PROOF
 
 /obj/structure/sign/directions/science
 	name = "science department"
@@ -315,3 +331,139 @@
 	desc = "Big black words, what says it's a engineering."
 	icon = 'icons/obj/wall_signs_engi.dmi'
 	icon_state = "engi"
+
+/obj/structure/sign/nanotrasen
+	name = "Nanotrasen Emblem"
+	desc = "Nanotrasen Emblem - a two litters a front of blue background."
+	icon_state = "NT"
+	icon = 'icons/obj/infinity_decals.dmi'
+
+/obj/structure/sign/directions/dock
+	name = "docking port 1"
+	desc = "A direction sign, pointing out which way the Docking port 1 is."
+	icon_state = "dock_1"
+	icon = 'icons/obj/infinity_decals.dmi'
+
+/obj/structure/sign/directions/dock/two
+	name = "docking port 2"
+	desc = "A direction sign, pointing out which way the Docking port 2 is."
+	icon_state = "dock_2"
+
+/obj/structure/sign/directions/dock/three
+	name = "docking port 3"
+	desc = "A direction sign, pointing out which way the Docking port 3 is."
+	icon_state = "dock_3"
+
+/obj/structure/sign/directions/dock/four
+	name = "docking port 4"
+	desc = "A direction sign, pointing out which way the Docking port 4 is."
+	icon_state = "dock_4"
+
+/obj/structure/sign/directions/shuttle
+	name = "shuttle sign"
+	desc = "A direction sign, pointing out which way the shuttle."
+	icon_state = "shuttle"
+	icon = 'icons/obj/infinity_decals.dmi'
+
+/obj/structure/sign/directions/cryo
+	name = "cryo sign"
+	icon = 'icons/obj/infinity_decals.dmi'
+	desc = "Index, which tells that you are in the cryogenic room."
+	icon_state = "cryo"
+
+/obj/structure/sign/directions/ert
+	name = "lead's equipment"
+	icon = 'icons/obj/infinity_decals.dmi'
+	desc = "Index, which tells that you are in the lead's room."
+	icon_state = "commander"
+
+/obj/structure/sign/directions/ert/security
+	name = "security's equipment"
+	desc = "Index, which tells that you are in the security's room."
+	icon_state = "security"
+
+/obj/structure/sign/directions/ert/engineer
+	name = "engineer's equipment"
+	desc = "Index, which tells that you are in the engineer's room."
+	icon_state = "engineer"
+
+/obj/structure/sign/directions/ert/medic
+	name = "medical's equipment"
+	desc = "Index, which tells that you are in the medical's room."
+	icon_state = "medic"
+
+/obj/structure/sign/directions/synd
+	name = "Syndicate's sign"
+	desc = "That's our galaxy."
+	icon = 'icons/obj/infinity_decals.dmi'
+	icon_state = "synd_sim"
+
+/obj/structure/sign/directions/s
+	name = "S"
+	desc = "That's just big a letter S..."
+	icon = 'icons/obj/infinity_decals.dmi'
+	icon_state = "S"
+	layer = 2.1
+
+/obj/structure/sign/directions/only
+	name = "Only 1"
+	desc = "Enter only by one."
+	icon = 'icons/obj/infinity_decals.dmi'
+	icon_state = "only"
+
+/obj/structure/sign/directions/eva
+	name = "EVA sign"
+	desc = "EVA is here!"
+	icon = 'icons/obj/infinity_decals.dmi'
+	icon_state = "EVA"
+
+/obj/structure/sign/directions/civilian
+	name = "civilian pointer"
+	icon = 'icons/obj/infinity_decals.dmi'
+	desc = "Pointer, saying to you that in front will be civilian zone."
+	icon_state = "civilian"
+
+/obj/structure/sign/directions/personal
+	name = "personal pointer"
+	icon = 'icons/obj/infinity_decals.dmi'
+	desc = "Pointer, saying to you that in front will be personal-only zone."
+	icon_state = "personal"
+
+/obj/structure/sign/directions/alien
+	name = "alien sign"
+	icon = 'icons/obj/infinity_alien.dmi'
+	desc = "So cute images!"
+	icon_state = "sign_1"
+
+/obj/structure/sign/directions/administration
+	name = "administration pointer"
+	icon = 'icons/obj/infinity_decals.dmi'
+	desc = "Pointer, saying to you that in front will be administrative-only zone."
+	icon_state = "administration"
+
+/obj/structure/sign/directions/numbers
+	name = "One"
+	icon = 'icons/obj/infinity_decals.dmi'
+	desc = "Number one"
+	icon_state = "one"
+
+/obj/structure/sign/directions/numbers/two
+	name = "Two"
+	desc = "Number two"
+	icon_state = "two"
+
+/obj/structure/sign/directions/numbers/three
+	name = "Three"
+	desc = "Number three"
+	icon_state = "three"
+
+/obj/structure/sign/directions/numbers/four
+	name = "Four"
+	desc = "Number four"
+	icon_state = "four"
+
+/obj/structure/sign/experementor
+	name = "E.X.P.E.R.I-MENTOR"
+	desc = "E.X.P.E.R.I-MENTOR's part will be forward."
+	icon_state = "experementor"
+	icon = 'icons/obj/infinity_decals.dmi'

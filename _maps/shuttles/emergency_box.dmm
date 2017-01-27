@@ -192,11 +192,11 @@
 /turf/open/floor/mineral/titanium/blue,
 /area/shuttle/escape)
 "aI" = (
-/obj/machinery/door/airlock/shuttle{
+/obj/machinery/door/airlock/titanium{
 	name = "Emergency Shuttle Airlock";
 	req_access_txt = "2"
 	},
-/turf/open/floor/mineral/plastitanium/brig,
+/turf/open/floor/plating,
 /area/shuttle/escape)
 "aJ" = (
 /obj/structure/chair{
@@ -231,7 +231,7 @@
 	},
 /area/shuttle/escape)
 "aP" = (
-/obj/machinery/door/airlock/shuttle{
+/obj/machinery/door/airlock/titanium{
 	name = "Emergency Shuttle Airlock"
 	},
 /obj/docking_port/mobile/emergency{
@@ -279,7 +279,7 @@
 /turf/open/floor/mineral/titanium,
 /area/shuttle/escape)
 "aV" = (
-/obj/machinery/door/airlock/shuttle{
+/obj/machinery/door/airlock/titanium{
 	name = "Emergency Shuttle Airlock"
 	},
 /turf/open/floor/plating,
@@ -292,7 +292,7 @@
 /turf/open/floor/mineral/titanium/blue,
 /area/shuttle/escape)
 "aX" = (
-/obj/machinery/door/airlock/shuttle{
+/obj/machinery/door/airlock/titanium{
 	name = "Emergency Shuttle Cargo"
 	},
 /turf/open/floor/mineral/titanium/blue,
@@ -369,10 +369,7 @@
 /turf/open/floor/plating/airless,
 /area/shuttle/escape)
 "bj" = (
-/turf/closed/wall/shuttle{
-	icon_state = "swall_s9";
-	dir = 2
-	},
+/turf/closed/wall/mineral/titanium/nodiagonal,
 /area/shuttle/escape)
 "bk" = (
 /obj/structure/shuttle/engine/propulsion,
@@ -384,7 +381,7 @@ aa
 aa
 aa
 aa
-ab
+ak
 ak
 ak
 aI
@@ -400,12 +397,12 @@ ak
 aV
 ak
 ak
-ab
+ak
 aa
 "}
 (2,1,1) = {"
 aa
-ab
+ak
 ak
 ak
 ak
@@ -425,10 +422,10 @@ bb
 bb
 bf
 ak
-ab
+ak
 "}
 (3,1,1) = {"
-ab
+ak
 ae
 al
 aq
@@ -484,7 +481,7 @@ ak
 ac
 aH
 ac
-ak
+bj
 an
 aT
 aT
@@ -572,7 +569,7 @@ bi
 bk
 "}
 (9,1,1) = {"
-ab
+ak
 ae
 ap
 au
@@ -597,7 +594,7 @@ bk
 "}
 (10,1,1) = {"
 aa
-ab
+ak
 ak
 ak
 ak
@@ -617,29 +614,29 @@ bd
 be
 bd
 ak
-ab
+ak
 "}
 (11,1,1) = {"
 aa
 aa
 aa
 aa
-ab
-ac
 ak
 ac
 ak
-ak
-ak
-ac
-ac
 ac
 ak
 ak
 ak
 ac
+ac
+ac
+ak
+ak
 ak
 ac
-ab
+ak
+ac
+ak
 aa
 "}

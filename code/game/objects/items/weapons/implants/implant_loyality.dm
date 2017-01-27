@@ -1,6 +1,7 @@
 /obj/item/weapon/implant/mindshield
-	name = "mindshield implant"
-	desc = "Protects against brainwashing."
+	name = "loyalty implant"
+	desc = "God bless Nanotrasen!"
+	icon_state = "loyal"
 	origin_tech = "materials=2;biotech=4;programming=4"
 	activated = 0
 
@@ -8,7 +9,7 @@
 	var/dat = {"<b>Implant Specifications:</b><BR>
 				<b>Name:</b> Nanotrasen Employee Management Implant<BR>
 				<b>Life:</b> Ten years.<BR>
-				<b>Important Notes:</b> Personnel injected with this device are much more resistant to brainwashing.<BR>
+				<b>Important Notes:</b> Personnel injected with this device tend to be much more loyal to the company.<BR>
 				<HR>
 				<b>Implant Details:</b><BR>
 				<b>Function:</b> Contains a small pod of nanobots that protects the host's mental functions from manipulation.<BR>
@@ -16,29 +17,45 @@
 				<b>Integrity:</b> Implant will last so long as the nanobots are inside the bloodstream."}
 	return dat
 
+/obj/screen/alert/loyalty_imp
+	name = "loyalty implanted"
+	desc = "Я чувствую ло&#1103;льность к Нанотрайзен! Слава корпорации!"
+	icon = 'icons/mob/alert_infinity.dmi'
+	icon_state = "loyal"
 
-/obj/item/weapon/implant/mindshield/implant(mob/target)
+/*/obj/item/weapon/implant/mindshield/activate(cause)
+	if(!cause || !imp_in)
+		return 0
+	if(cause == "action_button" && alert(imp_in, "Вы действительно хотите узнать, что делает этот имплант?", "Подтверждение", "Да", "Нет") != "Да")
+		return 0
+	imp_in << "<span class='notice'>Я чувствую ло&#255;льность к Нанотрайзен! Слава корпорации!</span>" */
+
+/obj/item/weapon/implant/mindshield/implant(mob/living/target, mob/user, silent = 0)
 	if(..())
-		if((target.mind in (ticker.mode.changelings | ticker.mode.abductors | ticker.mode.cult)) || isntloyal(target) || (target.mind in ticker.mode.blue_deity_prophets|ticker.mode.red_deity_prophets|ticker.mode.red_deity_followers|ticker.mode.blue_deity_followers))
-			target.visible_message("<span class='warning'>[target] seems to resist the implant!</span>", "<span class='warning'>You feel something interfering with your mental conditioning, but you resist it!</span>")
+		if((target.mind in (ticker.mode.changelings | ticker.mode.abductors | ticker.mode.cult)) || target.isntloyal())
+			if(!silent)
+				target.visible_message("<span class='warning'>[target] сморщилс&#255;, сопротивл&#255;&#255;сь импланту!</span>", "<span class='warning'>Вы чувствуете, как Нанотрайзен пытаетс&#255; подчинить вашу волю себе! Сопротивл&#255;йтесь!</span>")
 			removed(target, 1)
 			qdel(src)
 			return -1
-		target.mind.remove_all_antag_light()
-		target << "<span class='notice'>You feel a sense of peace and security. You are now protected from brainwashing.</span>"
+		if(target.mind)
+			target.mind.remove_all_antag_light()
+		if(!silent)
+			target << "<span class='notice'>Вы чувствуете сильную ло&#255;льность к Нанотрайзен...</span>"
+		target.throw_alert("loyalty_implanted", /obj/screen/alert/loyalty_imp)
 		return 1
 	return 0
 
-/obj/item/weapon/implant/mindshield/removed(mob/target, var/silent = 0)
+/obj/item/weapon/implant/mindshield/removed(mob/target, silent = 0, special = 0)
 	if(..())
 		if(target.stat != DEAD && !silent)
-			target << "<span class='boldnotice'>Your mind suddenly feels terribly vulnerable. You are no longer safe from brainwashing.</span>"
+			target << "<span class='boldnotice'>Вы чувствуете, как ло&#255;льность к Нанотрайзен покидает вас вместе с вашей жизнью...</span>"
+		target.clear_alert("loyalty_implanted")
 		return 1
 	return 0
 
-
 /obj/item/weapon/implanter/mindshield
-	name = "implanter (mindshield)"
+	name = "implanter (loyalty)"
 
 /obj/item/weapon/implanter/mindshield/New()
 	imp = new /obj/item/weapon/implant/mindshield(src)
@@ -47,8 +64,8 @@
 
 
 /obj/item/weapon/implantcase/mindshield
-	name = "implant case - 'Mindshield'"
-	desc = "A glass case containing a mindshield implant."
+	name = "implant case - 'Loyalty'"
+	desc = "A glass case containing a loyalty implant."
 
 /obj/item/weapon/implantcase/mindshield/New()
 	imp = new /obj/item/weapon/implant/mindshield(src)

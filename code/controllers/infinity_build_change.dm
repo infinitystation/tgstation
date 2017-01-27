@@ -123,7 +123,7 @@ var/datum/server_build/currentbuild
 	sleep(100)
 
 	log_game("Changing build to [B.name]([B.friendlyname])")
-	. = shell("infinityctl changebuild -b [B.name]")
+	. = shell("sh ../change_build.sh [B.dmb_file] [B.folder] [world.port]")
 
 /* mob/Stat appendix
 		stat(null, "Map: [MAP_NAME]")

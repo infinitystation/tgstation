@@ -12,7 +12,7 @@
 
 
 /datum/round_event/disease_outbreak/announce()
-	priority_announce("На станции [station_name()] подтверждён 7-й уровень биологической угрозы. Всему персоналу необходимо сдержать её распространение.", "Тревога! БиологическаЯ угроза!", 'sound/AI/outbreak7.ogg')
+	priority_announce("На станции [station_name()] подтверждён 7-й уровень биологической угрозы. Всему персоналу необходимо сдержать её распространение.", "Тревога! Биологическая угроза!", 'sound/AI/outbreak7.ogg')
 
 /datum/round_event/disease_outbreak/setup()
 	announceWhen = rand(15, 30)

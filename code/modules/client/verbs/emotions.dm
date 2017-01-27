@@ -1,12 +1,13 @@
-/mob/living/var/emoteCooldown = 200 // each 10 is real second
+//TODO@inf-dev ѕеревести на datum эмоуты. ~bear1ake@inf-dev
+/mob/living/var/emoteCooldown = 100 // each 10 is real second
 /mob/living/var/emoteLastUse = -1000
 
-/mob/living/verb/emoteCooldownCheck()
+/mob/living/proc/emoteCooldownCheck()
 	if(emoteLastUse <= (world.time - emoteCooldown))
 		emoteLastUse = world.time
 		return 1
 	else
-		src << "ћежду эмоциями должно пройти более 20 секунд"
+		src << "ћежду эмоци&#255;ми должно пройти более 10 секунд"
 		return 0
 
 /mob/living/verb/vomit_verb()
@@ -247,7 +248,7 @@
 	set name = "√алюны"
 	set category = "Emotions"
 	if(emoteCooldownCheck() == 1)
-		message_admins("[key_name_admin(src)]<A HREF='?_src_=holder;adminmoreinfo=\ref[src]'>?</A> (<A HREF='?_src_=holder;adminplayerobservefollow=\ref[src]'>FLW</A>) упоролся(-ась)! —ледить за поведением.")
+		message_admins("[key_name_admin(src)]<A HREF='?_src_=holder;adminmoreinfo=\ref[src]'>?</A> (<A HREF='?_src_=holder;adminplayerobservefollow=\ref[src]'>FLW</A>) упоролс&#255;(-ась)! —ледить за поведением.")
 		src.hallucination += 60
 		hallucinate_emote_id = addtimer(src, "give_hallucinate_emote", 6000, FALSE)
 		src.verbs -= /mob/living/verb/hallucinate_emote

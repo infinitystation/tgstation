@@ -91,9 +91,8 @@ var/global/list/frozen_mob_list = list()
 					var/adminomaly = new/obj/effect/overlay/adminoverlay
 					if(!M.frozen)
 						M.frozen = 1
-						M.cell.charge = 0
-						M.cell.maxcharge = 0
 						M.overlays += adminomaly
+						STOP_PROCESSING(SSobj, M)
 						if(M.occupant)
 							M.occupant << "<b><font color= red>You have been frozen by <a href='?priv_msg=\ref[usr.client]'>[key]</a></b></font>"
 							message_admins("\blue [key_name_admin(usr)] froze [key_name(M.occupant)] in a [M.name]")
@@ -103,9 +102,8 @@ var/global/list/frozen_mob_list = list()
 							log_admin("[key_name(usr)] froze an empty [M.name]")
 					else if(M.frozen)
 						M.frozen = 0
-						M.cell.charge = initial(M.cell.charge)
-						M.cell.maxcharge = initial(M.cell.maxcharge)
 						M.overlays -= adminomaly
+						START_PROCESSING(SSobj, M)
 						if(M.occupant)
 							M.occupant << "<b><font color= red>You have been unfrozen by <a href='?priv_msg=\ref[usr.client]'>[key]</a></b></font>"
 							message_admins("\blue [key_name_admin(usr)] unfroze [key_name(M.occupant)] in a [M.name]")
@@ -113,3 +111,7 @@ var/global/list/frozen_mob_list = list()
 						else
 							message_admins("\blue [key_name_admin(usr)] unfroze an empty [M.name]")
 							log_admin("[key_name(usr)] unfroze an empty [M.name]")
+
+/client/freezemecha/Topic(href, href_list)
+	if(href_list["freezemecha"])
+		freezemecha()

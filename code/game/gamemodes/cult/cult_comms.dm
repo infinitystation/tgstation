@@ -3,6 +3,7 @@
 	name = "Communion"
 	button_icon_state = "cult_comms"
 	background_icon_state = "bg_demon"
+	buttontooltipstyle = "cult"
 	check_flags = AB_CHECK_RESTRAINED|AB_CHECK_STUNNED|AB_CHECK_CONSCIOUS
 
 /datum/action/innate/cultcomm/IsAvailable()
@@ -12,6 +13,7 @@
 
 /datum/action/innate/cultcomm/Activate()
 	var/input = stripped_input(usr, "Please choose a message to tell to the other acolytes.", "Voice of Blood", "")
+	input = sanitize_a0(input)
 	if(!input || !IsAvailable())
 		return
 
@@ -29,9 +31,9 @@
 	if(!user)
 		return
 	if(!ishuman(user))
-		user.say(message)
+		user.say(html_decode(message))
 	else
-		user.whisper(message)
+		user.whisper(html_decode(message))
 	var/my_message = "<span class='cultitalic'><b>[(ishuman(user) ? "Acolyte" : "Construct")] [user]:</b> [message]</span>"
 	for(var/mob/M in mob_list)
 		if(iscultist(M))

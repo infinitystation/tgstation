@@ -7,33 +7,11 @@
 /datum/round_event/anomaly/anomaly_pyro
 	startWhen = 10
 	announceWhen = 3
-	endWhen = 120
-
 
 /datum/round_event/anomaly/anomaly_pyro/announce()
-	priority_announce("—канеры дальнего радиуса действия обнаружили пирокластическую аномалию. ќжидаемое место воздействия: [impact_area.name].", "“ревога! јномалия!")
+	priority_announce("—канеры дальнего радиуса действи€ обнаружили пирокластическую аномалию. ѕредположительное место воздействи€: [impact_area.name].", "“ревога! јномали€!")
 
 /datum/round_event/anomaly/anomaly_pyro/start()
 	var/turf/T = safepick(get_area_turfs(impact_area))
 	if(T)
 		newAnomaly = new /obj/effect/anomaly/pyro(T)
-
-/datum/round_event/anomaly/anomaly_pyro/tick()
-	if(!newAnomaly)
-		kill()
-		return
-	if(IsMultiple(activeFor, 5))
-		newAnomaly.anomalyEffect()
-
-
-/datum/round_event/anomaly/anomaly_pyro/end()
-	if(newAnomaly.loc)
-		var/turf/open/T = get_turf(newAnomaly)
-		if(istype(T))
-			T.atmos_spawn_air("o2=500;plasma=500;TEMP=1000") //Make it hot and burny for the new slime
-
-		var/mob/living/simple_animal/slime/S = new/mob/living/simple_animal/slime(T)
-		S.colour = pick("red", "orange")
-		S.rabid = 1
-
-		qdel(newAnomaly)

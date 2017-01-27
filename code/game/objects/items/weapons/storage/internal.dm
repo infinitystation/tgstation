@@ -1,8 +1,9 @@
 /obj/item/weapon/storage/internal
 	storage_slots = 2
-	max_w_class = 2
+	max_w_class = WEIGHT_CLASS_SMALL
 	max_combined_w_class = 50 // Limited by slots, not combined weight class
-	w_class = 4
+	w_class = WEIGHT_CLASS_BULKY
+	rustle_jimmies = FALSE
 
 /obj/item/weapon/storage/internal/ClickAccessible(mob/user, depth=1)
 	if(loc)
@@ -33,7 +34,7 @@
 			user << "<span class='notice'>You discreetly slip [W] into [src]."
 
 /obj/item/weapon/storage/internal/pocket/big
-	max_w_class = 3
+	max_w_class = WEIGHT_CLASS_NORMAL
 
 /obj/item/weapon/storage/internal/pocket/small
 	storage_slots = 1
@@ -41,7 +42,7 @@
 
 /obj/item/weapon/storage/internal/pocket/tiny
 	storage_slots = 1
-	max_w_class = 1
+	max_w_class = WEIGHT_CLASS_TINY
 	priority = FALSE
 
 /obj/item/weapon/storage/internal/pocket/shoes
@@ -57,6 +58,7 @@
 	quickdraw = TRUE
 	silent = TRUE
 
+
 /obj/item/weapon/storage/internal/pocket/shoes/clown
 	can_hold = list(
 		/obj/item/weapon/kitchen/knife, /obj/item/weapon/switchblade, /obj/item/weapon/pen,
@@ -71,12 +73,3 @@
 /obj/item/weapon/storage/internal/pocket/small/detective/New()
 	..()
 	new /obj/item/weapon/reagent_containers/food/drinks/flask/det(src)
-
-/*
-/proc/isstorage(var/atom/A)
-	if(istype(A, /obj/item/weapon/storage))
-		return 1
-
-	if(istype(A, /obj/item/clothing))
-		var/obj/item/clothing/C = A
-		if(C.pockets) return 1*/

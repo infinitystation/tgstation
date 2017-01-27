@@ -18,9 +18,9 @@
 		usr << "<span class='redtext'>[target_sql_ckey] is already on the watchlist.</span>"
 		return
 	var/reason = input(usr,"Please State Reason","Reason") as message
+	reason = sanitizeSQL_a0(reason)
 	if(!reason)
 		return
-	reason = sanitizeSQL(reason)
 	var/timestamp = SQLtime()
 	var/adminckey = usr.ckey
 	if(!adminckey)
@@ -35,6 +35,8 @@
 	message_admins("[key_name_admin(usr)] has added [target_ckey] to the watchlist - Reason: [reason]", 1)
 	if(browse)
 		watchlist_show(target_sql_ckey)
+
+	add_note(target_ckey, "Added to Watchlist - [reason]", null, usr.ckey, 0, null, 1)
 
 /client/proc/watchlist_remove(target_ckey, browse = 0)
 	var/target_sql_ckey = sanitizeSQL(target_ckey)
@@ -58,12 +60,12 @@
 	if(query_watchreason.NextRow())
 		var/watch_reason = query_watchreason.item[1]
 		var/new_reason = input("Input new reason", "New Reason", "[watch_reason]") as message
-		new_reason = sanitizeSQL(new_reason)
+		new_reason = sanitizeSQL_a0(new_reason)
 		if(!new_reason)
 			return
 		var/sql_ckey = sanitizeSQL(usr.ckey)
 		var/edit_text = "Edited by [sql_ckey] on [SQLtime()] from<br>[watch_reason]<br>to<br>[new_reason]<hr>"
-		edit_text = sanitizeSQL(edit_text)
+		edit_text = sanitizeSQL_a0(edit_text)
 		var/DBQuery/query_watchupdate = dbcon.NewQuery("UPDATE [format_table_name("watch")] SET reason = '[new_reason]', last_editor = '[sql_ckey]', edits = CONCAT(IFNULL(edits,''),'[edit_text]') WHERE ckey = '[target_sql_ckey]'")
 		if(!query_watchupdate.Execute())
 			var/err = query_watchupdate.ErrorMsg()

@@ -6,18 +6,16 @@
 	department_flag = ENGSEC
 	faction = "Station"
 	total_positions = 1
-	spawn_positions = 0
-	supervisors = "Nanotrasen officials and Space law"
+	spawn_positions = 1
+	supervisors = "Представителям Нанотрайзен и Космическому Закону"
 	selection_color = "#dddddd"
 	req_admin_notify = 1
 	minimal_player_age = 30
 
 	outfit = /datum/outfit/job/ifa
 
-	access = list(access_security, access_sec_doors, access_brig, access_maint_tunnels, access_construction,
-			            access_heads, access_RC_announce, access_keycard_auth, access_gateway)
-	minimal_access = list(access_security, access_sec_doors, access_brig, access_maint_tunnels, access_construction,
-			            access_heads, access_RC_announce, access_keycard_auth, access_gateway)
+	access = list(access_security, access_sec_doors, access_brig, access_maint_tunnels, access_construction, access_heads, access_RC_announce, access_keycard_auth, access_gateway)
+	minimal_access = list(access_security, access_sec_doors, access_brig, access_maint_tunnels, access_construction, access_heads, access_RC_announce, access_keycard_auth, access_gateway)
 
 /datum/outfit/job/ifa
 	name = "Internal Affairs Agent"
@@ -26,19 +24,13 @@
 	belt = /obj/item/device/pda/heads
 	glasses = /obj/item/clothing/glasses/sunglasses
 	ears = /obj/item/device/radio/headset/headset_ifa
-	uniform = /obj/item/clothing/under/suit_jacket
+	uniform = /obj/item/clothing/under/suit_jacket/charcoal
 	suit = /obj/item/clothing/suit/toggle/lawyer/black
-	shoes = /obj/item/clothing/shoes/sneakers/brown
-	l_hand = /obj/item/weapon/storage/briefcase
-	backpack_contents = list(/obj/item/device/assembly/flash/handheld=1)
+	shoes = /obj/item/clothing/shoes/laceup
+	l_hand = /obj/item/weapon/storage/secure/briefcase
+	l_pocket = /obj/item/weapon/melee/baton/shocker/loaded
 
-/datum/outfit/job/ifa/post_equip(mob/living/carbon/human/H)
-	..()
-
-	var/obj/item/weapon/implant/mindshield/L = new/obj/item/weapon/implant/mindshield(H)
-	L.imp_in = H
-	L.implanted = 1
-	H.sec_hud_set_implants()
+	implants = list(/obj/item/weapon/implant/mindshield)
 
 /obj/item/device/radio/headset/headset_ifa
 	name = "internal affairs agent's radio headset"

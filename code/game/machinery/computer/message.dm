@@ -49,7 +49,7 @@
 			// Will help make emagging the console not so easy to get away with.
 			MK.info += "<br><br><font color='red'>£%@%(*$%&(£&?*(%&£/{}</font>"
 			var/time = 100 * length(src.linkedServer.decryptkey)
-			addtimer(src, "UnmagConsole", time)
+			addtimer(CALLBACK(src, .proc/UnmagConsole), time)
 			message = rebootmsg
 		else
 			user << "<span class='notice'>A no server error appears on the screen.</span>"
@@ -132,7 +132,7 @@
 			dat += "</table>"
 		//Hacking screen.
 		if(2)
-			if(istype(user, /mob/living/silicon/ai) || istype(user, /mob/living/silicon/robot))
+			if(isAI(user) || iscyborg(user))
 				dat += "Brute-forcing for server key.<br> It will take 20 seconds for every character that the password has."
 				dat += "In the meantime, this console can reveal your true intentions if you let someone access it. Make sure no humans enter the room during that time."
 			else
@@ -218,8 +218,6 @@
 			dat += "</table>"
 
 	message = defaultmsg
-	//user << browse(dat, "window=message;size=700x700")
-	//onclose(user, "message")
 	var/datum/browser/popup = new(user, "hologram_console", name, 700, 700)
 	popup.set_content(dat)
 	popup.set_title_image(user.browse_rsc_icon(src.icon, src.icon_state))
@@ -248,7 +246,7 @@
 	if(..())
 		return
 
-	if ((usr.contents.Find(src) || (in_range(src, usr) && istype(src.loc, /turf))) || (istype(usr, /mob/living/silicon)))
+	if(usr.contents.Find(src) || (in_range(src, usr) && isturf(loc)) || issilicon(usr))
 		//Authenticate
 		if (href_list["auth"])
 			if(!linkedServer || linkedServer.stat & (NOPOWER|BROKEN))
@@ -389,6 +387,7 @@
 					//Enter message
 					if("Message")
 						custommessage	= stripped_input(usr, "Please enter your message.")
+						custommessage 	= sanitize_a0(custommessage)
 
 					//Send message
 					if("Send")

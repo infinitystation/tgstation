@@ -17,9 +17,13 @@
 	name = "Security Gear Room"
 	icon_state = "red"
 
-/area/security/dinner
-	name = "Dinner room"
+/area/security/east_brig
+	name = "East Brig"
 	icon_state = "red"
+
+/area/security/break_room
+	name = "Brig Break Room"
+	icon_state = "green"
 
 /area/security/west
 	name = "West brig's corridor"
@@ -45,16 +49,53 @@
 	icon_state = "red"
 
 /area/security/barracks
-	name = "Barracks"
+	name = "Security's dormitories"
 	icon = 'icons/turf/terror.dmi'
 	icon_state = "barracks"
 
-/area/mine/bravo
-	name = "Post Bravo"
+/area/security/barracks/one
+	name = "Security's dormitories room 1"
+	icon_state = "Sleep_one"
+
+/area/security/barracks/two
+	name = "Security's dormitories room 2"
+	icon_state = "Sleep_two"
+
+/area/security/top_level_post
+	name = "Bunker's airlock"
+	icon_state = "red"
 
 /area/engine/rest_room
 	name = "Engineering Rest Room"
 	icon_state = "yellow"
+
+/area/engine/equipment_room
+	name = "Engineer equipment room"
+	icon_state = "yellow"
+
+/area/toxins/xeno_lobby
+	name = "Xenobiology Lab's lobby"
+	icon_state = "toxlab"
+
+/area/engine/top_level_rtg
+	name = "Top Level RTG"
+	icon_state = "engine"
+
+/area/crew_quarters/toilet/top
+	name = "Top Level Toilets"
+	icon_state = "toilet"
+
+/area/hallway/primary/central/top
+	name = "Top Level Lobby"
+	icon_state = "hallC"
+
+/area/quartermaster/hangar
+	name = "Hangar"
+	icon_state = "yellow"
+
+/area/shuttle/science
+	name = "Science Shuttle"
+	blob_allowed = FALSE
 
 /area/CP
 	name = "Control Post"
@@ -90,8 +131,11 @@
 	name = "Cruiser"
 	blob_allowed = 0
 
-/area/shuttle/trooper
-	name = "Trooper Shuttle"
+/area/shuttle/lift_one
+	name = "Service Lift"
+
+/area/shuttle/life_two
+	name = "Lift"
 
 /area/mine/lab
 	name = "Field Laboratory"
@@ -99,9 +143,17 @@
 	blob_allowed = 0
 
 /area/mine/shelter
-	name = "lavaland shelter"
+	name = "Lavaland shelter"
 	icon_state = "green"
 	blob_allowed = 0
+	ambientsounds = list('sound/ambience/ambimine.ogg')
+
+/area/mine/bravo
+	name = "Post Bravo"
+
+/area/mine/shelter/ash
+	name = "Ash Walkers' village"
+	icon_state = "red"
 
 /area/crew_quarters/gym
 	name = "Gym"
@@ -133,6 +185,23 @@
 	requires_power = 0
 	has_gravity = 1
 
+/area/alien_base
+	name = "Alien Base"
+	icon_state = "green"
+	requires_power = 0
+	has_gravity = 1
+	luminosity = 1
+	valid_territory = 0
+
+/area/planet/bunker
+	name = "Near Bunker"
+	icon_state = "purple"
+	requires_power = 0
+	has_gravity = 1
+	luminosity = 1
+	lighting_use_dynamic = DYNAMIC_LIGHTING_ENABLED
+	valid_territory = 0
+
 // CENTCOM
 
 /area/centcom/lobby
@@ -145,6 +214,10 @@
 
 
 ///Flors///
+
+/turf/open/floor/plasteel/darkvault/delivary
+	icon = 'icons/turf/infinity.dmi'
+	icon_state = "darkdelivery"
 
 /turf/open/floor/plasteel/terror
 	icon = 'icons/turf/terror.dmi'
@@ -186,6 +259,10 @@
 	icon_state = "rock"
 	..()
 
+/turf/open/floor/plasteel/terror/chapel
+	icon = 'icons/turf/infinity.dmi'
+	icon_state = "chapel2"
+
 /turf/open/floor/plasteel/terror/necro
 	baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
 	icon = 'icons/turf/floors.dmi'
@@ -198,32 +275,85 @@
 	name = "engraved floor"
 /turf/open/floor/plasteel/terror/necro/cult/outdoor
 	initial_gas_mix = "o2=14;n2=23;TEMP=300"
+	planetary_atmos = TRUE
 
 /turf/open/floor/plasteel/terror/necro/bar
 	icon_state = "bar"
+
+/turf/open/floor/plasteel/terror/necro/darkred
+	icon_state = "darkredfull"
+/turf/open/floor/plasteel/terror/necro/darkred/side
+	icon_state = "darkred"
+/turf/open/floor/plasteel/terror/necro/darkred/corner
+	icon_state = "darkredcorners"
+
+/turf/open/floor/plasteel/terror/necro/whitepurple
+	icon_state = "whitepurplefull"
+/turf/open/floor/plasteel/terror/necro/whitepurple/side
+	icon_state = "whitepurple"
+/turf/open/floor/plasteel/terror/necro/whitepurple/corner
+	icon_state = "whitepurplecorner"
+
+/turf/open/floor/plasteel/terror/necro/red
+	icon_state = "redfull"
+/turf/open/floor/plasteel/terror/necro/red/side
+	icon_state = "red"
+/turf/open/floor/plasteel/terror/necro/red/corner
+	icon_state = "redcorner"
+
+/turf/open/floor/plasteel/terror/necro/blue
+	icon_state = "bluefull"
+/turf/open/floor/plasteel/terror/necro/blue/side
+	icon_state = "blue"
+/turf/open/floor/plasteel/terror/necro/blue/corner
+	icon_state = "bluecorner"
+
+/turf/open/floor/plasteel/terror/necro/neutral
+	icon_state = "neutralfull"
+/turf/open/floor/plasteel/terror/necro/neutral/side
+	icon_state = "neutral"
+/turf/open/floor/plasteel/terror/necro/neutral/corner
+	icon_state = "neutralcorner"
 
 /turf/open/floor/plasteel/terror/necro/darkvault
 	icon_state = "vault"
 /turf/open/floor/plasteel/terror/necro/darkvault/outdoor
 	initial_gas_mix = "o2=14;n2=23;TEMP=300"
+	planetary_atmos = TRUE
+
+/turf/open/floor/plasteel/terror/necro/darkpurple
+	icon_state = "darkpurplefull"
+/turf/open/floor/plasteel/terror/necro/darkpurple/side
+	icon_state = "darkpurple"
+/turf/open/floor/plasteel/terror/necro/darkpurple/corner
+	icon_state = "darkpurplecorners"
 
 /turf/open/floor/plasteel/terror/necro/darkwarning
 	icon_state = "warndark"
 /turf/open/floor/plasteel/terror/necro/darkwarning/corner
 	icon_state = "warndarkcorners"
+/turf/open/floor/plasteel/terror/necro/darkwarning/side
+	icon_state = "black_warn_side"
 
 /turf/open/floor/plasteel/terror/necro/darkwarning/outdoor
 	initial_gas_mix = "o2=14;n2=23;TEMP=300"
+	planetary_atmos = TRUE
+
 /turf/open/floor/plasteel/terror/necro/darkwarning/corner/outdoor
 	initial_gas_mix = "o2=14;n2=23;TEMP=300"
+	planetary_atmos = TRUE
 
 /turf/open/floor/plasteel/terror/necro/warning
 	icon_state = "warning"
 /turf/open/floor/plasteel/terror/necro/warning/corner
 	icon_state = "warningcorner"
+/turf/open/floor/plasteel/terror/necro/warning/side
+	icon_state = "plasteel_warn_side"
 
 /turf/open/floor/plasteel/terror/necro/warnwhite
 	icon_state = "warnwhite"
+/turf/open/floor/plasteel/terror/necro/warnwhite/side
+	icon_state = "white_warn_side"
 /turf/open/floor/plasteel/terror/necro/warnwhite/corner
 	icon_state = "warnwhitecorner"
 
@@ -232,12 +362,20 @@
 	icon = 'icons/turf/infinity.dmi'
 /turf/open/floor/plasteel/terror/necro/black/outdoor
 	initial_gas_mix = "o2=14;n2=23;TEMP=300"
+	planetary_atmos = TRUE
 
 /turf/open/floor/plasteel/terror/necro/darkyellow
 	icon_state = "darkbrownfull"
 /turf/open/floor/plasteel/terror/necro/darkyellow/side
 	icon_state = "darkbrown"
 /turf/open/floor/plasteel/terror/necro/darkyellow/corner
+	icon_state = "darkbrowncorners"
+
+/turf/open/floor/plasteel/terror/necro/darkbrown
+	icon_state = "darkbrownfull"
+/turf/open/floor/plasteel/terror/necro/darkbrown/side
+	icon_state = "darkbrown"
+/turf/open/floor/plasteel/terror/necro/darkbrown/corner
 	icon_state = "darkbrowncorners"
 
 /turf/open/floor/plasteel/terror/necro/brown
@@ -247,19 +385,30 @@
 
 /turf/open/floor/plating/lavaland
 	baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
+
 /turf/open/floor/plating/lavaland/outdoor
 	initial_gas_mix = "o2=14;n2=23;TEMP=300"
+	planetary_atmos = TRUE
+
+/turf/open/floor/plating/lavaland/outdoor/necropolis
+	baseturf = /turf/open/indestructible/necropolis
+
+turf/open/floor/plating/lavaland/outdoor/fall
+	baseturf = /turf/open/chasm/straight_down/lava_land_surface
 
 /turf/open/floor/plasteel/terror/necro/blackvault
-	icon_state = "vault"
+	icon_state = "tvault"
 	icon = 'icons/turf/infinity.dmi'
 /turf/open/floor/plasteel/terror/necro/blackvault/corner
-	icon_state = "vaultcorner"
+	icon_state = "tvaultcorner"
 
 /turf/open/floor/plasteel/terror/necro/blackvault/outdoor
 	initial_gas_mix = "o2=14;n2=23;TEMP=300"
+	planetary_atmos = TRUE
+
 /turf/open/floor/plasteel/terror/necro/blackvault/corner/outdoor
 	initial_gas_mix = "o2=14;n2=23;TEMP=300"
+	planetary_atmos = TRUE
 
 /turf/open/floor/plasteel/terror/necro/whiteblue
 	icon_state = "whitebluefull"
@@ -286,3 +435,15 @@
 
 /turf/open/floor/plasteel/terror/necro/white
 	icon_state = "white"
+
+/turf/open/floor/plasteel/terror/necro/bot
+	icon_state = "bot"
+/turf/open/floor/plasteel/terror/necro/delivery
+	icon_state = "delivery"
+/turf/open/floor/plasteel/terror/necro/loadingarea
+	icon_state = "loadingarea"
+
+/turf/open/floor/plasteel/terror/necro/whitebot
+	icon_state = "whitebot"
+/turf/open/floor/plasteel/terror/necro/whitebot/delivery
+	icon_state = "whitedelivery"

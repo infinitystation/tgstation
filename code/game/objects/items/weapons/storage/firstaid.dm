@@ -99,11 +99,27 @@
 	new /obj/item/device/healthanalyzer(src)
 	return
 
+/obj/item/weapon/storage/firstaid/radiation
+	name = "radiation treatment kit"
+	desc = "Used for elimination from the body to radiation."
+	icon_state = "radfirstaid2"
+	item_state = "firstaid-brute"
+
+/obj/item/weapon/storage/firstaid/radiation/New()
+	..()
+	if(empty) return
+	for(var/i in 1 to 4)
+		new /obj/item/weapon/reagent_containers/pill/potass(src)
+	new /obj/item/weapon/reagent_containers/pill/mutadone(src)
+	new /obj/item/weapon/reagent_containers/hypospray/medipen(src)
+	new /obj/item/device/healthanalyzer(src)
+	return
+
 /obj/item/weapon/storage/firstaid/tactical
 	name = "combat medical kit"
 	desc = "I hope you've got insurance."
 	icon_state = "bezerk"
-	max_w_class = 3
+	max_w_class = WEIGHT_CLASS_NORMAL
 
 /obj/item/weapon/storage/firstaid/tactical/New()
 	..()
@@ -127,7 +143,7 @@
 	icon_state = "pill_canister"
 	icon = 'icons/obj/chemical.dmi'
 	item_state = "contsolid"
-	w_class = 2
+	w_class = WEIGHT_CLASS_SMALL
 	can_hold = list(/obj/item/weapon/reagent_containers/pill,/obj/item/weapon/dice)
 	allow_quick_gather = 1
 	use_to_pickup = 1
@@ -142,11 +158,7 @@
 			var/obj/screen/inventory/hand/H = over_object
 			if(!M.unEquip(src))
 				return
-			switch(H.slot_id)
-				if(slot_r_hand)
-					M.put_in_r_hand(src)
-				if(slot_l_hand)
-					M.put_in_l_hand(src)
+			M.put_in_hand(src,H.held_index)
 			src.add_fingerprint(usr)
 			return
 		if(over_object == usr && in_range(src, usr) || usr.contents.Find(src))

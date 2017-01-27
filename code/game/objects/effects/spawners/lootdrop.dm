@@ -23,16 +23,16 @@
 	lootdoubles = 0
 
 	loot = list(
-				/obj/item/weapon/gun/projectile/automatic/pistol = 8,
-				/obj/item/weapon/gun/projectile/shotgun/automatic/combat = 5,
-				/obj/item/weapon/gun/projectile/revolver/mateba,
-				/obj/item/weapon/gun/projectile/automatic/pistol/deagle
+				/obj/item/weapon/gun/ballistic/automatic/pistol = 8,
+				/obj/item/weapon/gun/ballistic/shotgun/automatic/combat = 5,
+				/obj/item/weapon/gun/ballistic/revolver/mateba,
+				/obj/item/weapon/gun/ballistic/automatic/pistol/deagle
 				)
 
 /obj/effect/spawner/lootdrop/gambling
 	name = "gambling valuables spawner"
 	loot = list(
-				/obj/item/weapon/gun/projectile/revolver/russian = 5,
+				/obj/item/weapon/gun/ballistic/revolver/russian = 5,
 				/obj/item/weapon/storage/box/syndie_kit/throwing_weapons = 1,
 				/obj/item/toy/cards/deck/syndicate = 2
 				)
@@ -121,7 +121,7 @@
 				/obj/item/weapon/crowbar = 1,
 				/obj/item/weapon/crowbar/red = 1,
 				/obj/item/weapon/extinguisher = 11,
-				//obj/item/weapon/gun/projectile/revolver/russian = 1, //disabled until lootdrop is a proper world proc.
+				//obj/item/weapon/gun/ballistic/revolver/russian = 1, //disabled until lootdrop is a proper world proc.
 				/obj/item/weapon/hand_labeler = 1,
 				/obj/item/weapon/paper/crumpled = 1,
 				/obj/item/weapon/pen = 1,
@@ -143,7 +143,7 @@
 				/obj/item/weapon/wirecutters = 1,
 				/obj/item/weapon/wrench = 4,
 				/obj/item/weapon/relic = 3,
-				/obj/item/weaponcrafting/reciever = 1,
+				/obj/item/weaponcrafting/reciever = 2,
 				/obj/item/clothing/head/cone = 2,
 				/obj/item/weapon/grenade/smokebomb = 2,
 				/obj/item/device/geiger_counter = 3,
@@ -157,7 +157,7 @@
 				/obj/item/clothing/gloves/color/random = 8,
 				/obj/item/clothing/shoes/laceup = 1,
 				/obj/item/weapon/storage/secure/briefcase = 3,
-				"" = 4
+				"" = 3
 				)
 
 /obj/effect/spawner/lootdrop/crate_spawner
@@ -197,7 +197,7 @@
 
 /obj/effect/spawner/lootdrop/fall
 	name = "Random Fall ship parts"
-	desc = "This is a random Fall ship parts"
+	desc = "This is a random falled ship parts"
 	icon = 'icons/obj/items.dmi'
 	icon_state = "latexballon_bursted"
 	color = "Gray"
@@ -205,7 +205,7 @@
 				/obj/item/stack/rods = 4,
 				/obj/item/stack/sheet/metal = 5,
 				/obj/item/stack/cable_coil/cut = 3,
-				/obj/item/weapon/shard = 2,
+				/obj/item/weapon/shard = 1,
 				/obj/effect/decal/cleanable/robot_debris = 4,
 				"" = 6
 				)
@@ -268,3 +268,24 @@
 				 "" = 5
 				)
 
+/obj/effect/spawner/lootdrop/alien
+	name = "Random alien's items"
+	desc = "This is a random alien's items. Place it on the alien's base."
+	icon = 'icons/mob/alien.dmi'
+	icon_state = "weed_extract"
+	loot = list(
+				/obj/item/stack/sheet/mineral/abductor = 5,
+				/obj/item/stack/sheet/lessergem = 2,
+				/obj/item/stack/sheet/greatergem = 1,
+				/obj/item/stack/sheet/mineral/adamantine = 2,
+				/obj/item/stack/sheet/xenochitin = 2,
+				/obj/item/weapon/restraints/handcuffs/alien = 1,
+				/obj/item/bodybag/bluespace = 1,
+				/obj/item/device/assembly/control/massdriver = 1,
+				/obj/item/device/assembly/health = 1,
+				/obj/item/device/assembly/prox_sensor = 2,
+				/obj/item/device/assembly/signaler = 2,
+				/obj/item/stack/rods = 3,
+				/obj/item/weapon/crowbar/large = 1,
+				"" = 6
+				)

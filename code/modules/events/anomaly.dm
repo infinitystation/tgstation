@@ -25,19 +25,9 @@
 		setup(safety_loop)
 
 /datum/round_event/anomaly/announce()
-	priority_announce("—канеры большого радиуса действия обнаружили волны гипер-энергетического потока. ћесто ожидаемого воздействия: [impact_area.name].", "“ревога! јномалия!")
+	priority_announce("—канеры дальнего радиуса действи€ обнаружили волны гипер-энергетического потока. ћесто ожидаемого воздействи€: [impact_area.name].", "“ревога! јномали€!")
 
 /datum/round_event/anomaly/start()
 	var/turf/T = safepick(get_area_turfs(impact_area))
 	if(T)
 		newAnomaly = new /obj/effect/anomaly/flux(T)
-
-/datum/round_event/anomaly/tick()
-	if(!newAnomaly)
-		kill()
-		return
-	newAnomaly.anomalyEffect()
-
-/datum/round_event/anomaly/end()
-	if(newAnomaly)//Kill the anomaly if it still exists at the end.
-		qdel(newAnomaly)

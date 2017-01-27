@@ -8,4 +8,4 @@
 	wave_name = "meaty"
 
 /datum/round_event/meteor_wave/meaty/announce()
-	priority_announce("ћясные куски обнаружены прямо по курсу станции.", "ќх чЄрт, ’ватай ¬едро.",'sound/AI/meteors.ogg')
+	priority_announce("ћ€сные куски обнаружены пр€мо по курсу станции.", "ќх чЄрт, хватай ведро.",'sound/AI/meteors.ogg')

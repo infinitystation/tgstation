@@ -6,10 +6,11 @@ Chief Engineer
 	flag = CHIEF
 	department_head = list("Captain")
 	department_flag = ENGSEC
+	head_announce = list("Engineering")
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the captain"
+	supervisors = "Капитану"
 	selection_color = "#ffeeaa"
 	req_admin_notify = 1
 	minimal_player_age = 7
@@ -27,16 +28,17 @@ Chief Engineer
 
 /datum/outfit/job/ce
 	name = "Chief Engineer"
+	jobtype = /datum/job/chief_engineer
 
 	id = /obj/item/weapon/card/id/silver
-	belt = /obj/item/weapon/storage/belt/utility/full
+	belt = /obj/item/weapon/storage/belt/utility/chief/full
 	l_pocket = /obj/item/device/pda/heads/ce
 	ears = /obj/item/device/radio/headset/heads/ce
 	uniform = /obj/item/clothing/under/rank/chief_engineer
 	shoes = /obj/item/clothing/shoes/sneakers/brown
 	head = /obj/item/clothing/head/hardhat/white
 	gloves = /obj/item/clothing/gloves/color/black/ce
-	backpack_contents = list(/obj/item/weapon/melee/classic_baton/telescopic=1)
+	backpack_contents = list(/obj/item/weapon/melee/classic_baton/telescopic=1,/obj/item/device/modular_computer/tablet/preset/advanced=1)
 
 	backpack = /obj/item/weapon/storage/backpack/industrial
 	satchel = /obj/item/weapon/storage/backpack/satchel/eng
@@ -44,13 +46,17 @@ Chief Engineer
 	box = /obj/item/weapon/storage/box/engineer
 	pda_slot = slot_l_store
 
-/datum/outfit/job/ce/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
-	..()
+/datum/outfit/job/ce/rig
+	name = "Chief Engineer (Hardsuit)"
 
-	if(visualsOnly)
-		return
+	mask = /obj/item/clothing/mask/breath
+	suit = /obj/item/clothing/suit/space/hardsuit/engine/elite
+	shoes = /obj/item/clothing/shoes/magboots/advance
+	suit_store = /obj/item/weapon/tank/internals/oxygen
+	gloves = /obj/item/clothing/gloves/color/yellow
+	head = null
+	internals_slot = slot_s_store
 
-	announce_head(H, list("Engineering"))
 
 /*
 Station Engineer
@@ -63,7 +69,7 @@ Station Engineer
 	faction = "Station"
 	total_positions = 5
 	spawn_positions = 5
-	supervisors = "the chief engineer"
+	supervisors = "Старшему Инженеру"
 	selection_color = "#fff5cc"
 
 	outfit = /datum/outfit/job/engineer
@@ -75,6 +81,7 @@ Station Engineer
 
 /datum/outfit/job/engineer
 	name = "Station Engineer"
+	jobtype = /datum/job/engineer
 
 	belt = /obj/item/weapon/storage/belt/utility/full
 	l_pocket = /obj/item/device/pda/engineering
@@ -89,6 +96,18 @@ Station Engineer
 	dufflebag = /obj/item/weapon/storage/backpack/dufflebag/engineering
 	box = /obj/item/weapon/storage/box/engineer
 	pda_slot = slot_l_store
+	backpack_contents = list(/obj/item/device/modular_computer/tablet/preset/advanced=1)
+
+/datum/outfit/job/engineer/rig
+	name = "Station Engineer (Hardsuit)"
+
+	mask = /obj/item/clothing/mask/breath
+	suit = /obj/item/clothing/suit/space/hardsuit/engine
+	suit_store = /obj/item/weapon/tank/internals/oxygen
+	gloves = /obj/item/clothing/gloves/color/yellow
+	head = null
+	internals_slot = slot_s_store
+
 
 /*
 Atmospheric Technician
@@ -101,7 +120,7 @@ Atmospheric Technician
 	faction = "Station"
 	total_positions = 3
 	spawn_positions = 2
-	supervisors = "the chief engineer"
+	supervisors = "Старшему Инженеру"
 	selection_color = "#fff5cc"
 
 	outfit = /datum/outfit/job/atmos
@@ -112,6 +131,7 @@ Atmospheric Technician
 
 /datum/outfit/job/atmos
 	name = "Atmospheric Technician"
+	jobtype = /datum/job/atmos
 
 	belt = /obj/item/weapon/storage/belt/utility/atmostech
 	l_pocket = /obj/item/device/pda/atmos
@@ -124,3 +144,12 @@ Atmospheric Technician
 	dufflebag = /obj/item/weapon/storage/backpack/dufflebag/engineering
 	box = /obj/item/weapon/storage/box/engineer
 	pda_slot = slot_l_store
+	backpack_contents = list(/obj/item/device/modular_computer/tablet/preset/advanced=1)
+
+/datum/outfit/job/atmos/rig
+	name = "Atmospheric Technician (Hardsuit)"
+
+	mask = /obj/item/clothing/mask/gas
+	suit = /obj/item/clothing/suit/space/hardsuit/engine/atmos
+	suit_store = /obj/item/weapon/tank/internals/oxygen
+	internals_slot = slot_s_store

@@ -1,4 +1,4 @@
-//This file was auto-corrected by findeclaration.exe on 25.5.2012 20:42:32
+
 
 /datum/song
 	var/name = "Untitled"
@@ -164,8 +164,8 @@
 					defined by tempo / x: <i>C,G/2,E/4</i><br>
 					Combined, an example is: <i>E-E4/4,F#/2,G#/8,B/8,E3-E4/4</i>
 					<br>
-					Lines may be up to 50 characters.<br>
-					A song may only contain up to 50 lines.<br>
+					Lines may be up to 200 characters.<br>
+					A song may only contain up to 200 lines.<br>
 					"}
 		else
 			dat += "<B><A href='?src=\ref[src];help=2'>Show Help</A></B><BR>"
@@ -210,9 +210,9 @@
 				lines.Cut(1,2)
 			else
 				tempo = sanitize_tempo(5) // default 120 BPM
-			if(lines.len > 50)
+			if(lines.len > 200)
 				usr << "Too many lines!"
-				lines.Cut(51)
+				lines.Cut(201)
 			var/linenum = 1
 			for(var/l in lines)
 				if(lentext(l) > 50)
@@ -308,6 +308,7 @@
 
 
 /obj/structure/piano/New()
+	..()
 	song = new("piano", src)
 
 	if(prob(50))
@@ -347,18 +348,18 @@
 /obj/structure/piano/attackby(obj/item/O, mob/user, params)
 	if (istype(O, /obj/item/weapon/wrench))
 		if (!anchored && !isinspace())
-			playsound(src.loc, 'sound/items/Ratchet.ogg', 50, 1)
+			playsound(src.loc, O.usesound, 50, 1)
 			user << "<span class='notice'> You begin to tighten \the [src] to the floor...</span>"
-			if (do_after(user, 20/O.toolspeed, target = src))
+			if (do_after(user, 20*O.toolspeed, target = src))
 				user.visible_message( \
 					"[user] tightens \the [src]'s casters.", \
 					"<span class='notice'>You tighten \the [src]'s casters. Now it can be played again.</span>", \
 					"<span class='italics'>You hear ratchet.</span>")
 				anchored = 1
 		else if(anchored)
-			playsound(src.loc, 'sound/items/Ratchet.ogg', 50, 1)
+			playsound(src.loc, O.usesound, 50, 1)
 			user << "<span class='notice'> You begin to loosen \the [src]'s casters...</span>"
-			if (do_after(user, 40/O.toolspeed, target = src))
+			if (do_after(user, 40*O.toolspeed, target = src))
 				user.visible_message( \
 					"[user] loosens \the [src]'s casters.", \
 					"<span class='notice'>You loosen \the [src]. Now it can be pulled somewhere else.</span>", \

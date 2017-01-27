@@ -31,7 +31,7 @@
 
 /datum/round_event/ghost_role/alien_infestation/announce()
 	if(successSpawn)
-		priority_announce("Неидентифицированные признаки жизни замечены прибывшими на станцию [station_name()]. Проверьте все внешние доступы на станцию, включаЯ воздуховоды и вентилЯции", "Lifesign Alert", 'sound/AI/aliens.ogg')
+		priority_announce("На станции [station_name()] зарегестрированы признаки неидентифицированной инопланетной жизни. экипажу рекомендуется сохранять бдительность и рекомендуется ввести режим повышенной опасности.", "Тревога! Чужеродная жизнь!", 'sound/AI/aliens.ogg')
 
 
 /datum/round_event/ghost_role/alien_infestation/spawn_role()
@@ -57,15 +57,15 @@
 
 	while(spawncount > 0 && vents.len && candidates.len)
 		var/obj/vent = pick_n_take(vents)
-		var/client/C = popleft(candidates)
+		var/client/C = pick_n_take(candidates)
 
 		var/mob/living/carbon/alien/larva/new_xeno = new(vent.loc)
 		new_xeno.key = C.key
 
 		spawncount--
 		successSpawn = TRUE
-		message_admins("[new_xeno.key] has been made into an alien by an event.")
-		log_game("[new_xeno.key] was spawned as an alien by an event.")
+		message_admins("[key_name_admin(new_xeno)] has been made into an alien by an event.")
+		log_game("[key_name(new_xeno)] was spawned as an alien by an event.")
 		spawned_mobs += new_xeno
 
 	if(successSpawn)

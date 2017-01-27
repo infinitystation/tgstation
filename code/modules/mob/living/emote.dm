@@ -1,444 +1,476 @@
-//This only assumes that the mob has a body and face with at least one mouth.
-//Things like airguitar can be done without arms, and the flap thing makes so little sense it's a keeper.
-//Intended to be called by a higher up emote proc if the requested emote isn't in the custom emotes.
-
-
-
-/mob/living/emote(act, m_type=1, message = null)
-	if(stat)
-		return
-
-	var/param = null
-
-	if (findtext(act, "-", 1, null)) //Removes dashes for npcs "EMOTE-PLAYERNAME" or something like that, I ain't no AI coder. It's not for players. -Sum99
-		var/t1 = findtext(act, "-", 1, null)
-		param = copytext(act, t1 + 1, length(act) + 1)
-		act = copytext(act, 1, t1)
-
+//The code execution of the emote datum is located at code/datums/emotes.dm
+/mob/living/emote(act, m_type = null, message = null)
 	act = lowertext(act)
-	switch(act)//Hello, how would you like to order? Alphabetically!
-		if ("aflap")
-			if (!src.restrained())
-				message = "<B>[src]</B> АГРЕССИВНО хлопает крыль&#255;ми!"
-				m_type = 2
-
-		if ("blush","blushes")
-			message = "<B>[src]</B> краснеет."
-			m_type = 1
-
-		if ("bow","bows")
-			if (!src.buckled)
-				var/M = null
-				if (param)
-					for (var/mob/A in view(1, src))
-						if (param == A.name)
-							M = A
-							break
-				if (!M)
-					param = null
-				if (param)
-					if(gender == FEMALE)
-						message = "<B>[src]</B> поклонилась [param]."
-					else
-						message = "<B>[src]</B> поклонилс&#255; [param]."
-
-				else
-					if(gender == FEMALE)
-						message = "<B>[src]</B> поклонилась."
-					else
-						message = "<B>[src]</B> поклонилс&#255;."
-			m_type = 1
-
-		if ("burp","burps")
-			if(gender == FEMALE)
-				message = "<B>[src]</B> отрыгнула."
-			else
-				message = "<B>[src]</B> отрыгнул."
-			playsound(loc, 'sound/emotions/burp.ogg', 25, 1, 1)
-			m_type = 2
-
-		if ("choke","chokes")
-			if(gender == FEMALE)
-				message = "<B>[src]</B> подавилась!"
-			else
-				message = "<B>[src]</B> подавилс&#255;!"
-			playsound(loc, 'sound/emotions/choke.ogg', 25, 1, 1)
-			m_type = 2
-
-		if ("cross","crosses")
-			message = "<B>[src]</B> crosses their arms."
-			m_type = 2
-
-		if ("chuckle","chuckles")
-			message = "<B>[src]</B> Усмехаетс&#255;."
-			playsound(loc, 'sound/emotions/giggle.ogg', 25, 1, 1)
-			m_type = 2
-
-		if ("collapse","collapses")
-			Paralyse(2)
-			if(gender == FEMALE)
-				message = "<B>[src]</B> рухнула!"
-			else
-				message = "<B>[src]</B> рухнул!"
-			m_type = 2
-
-		if ("cough","coughs")
-			message = "<B>[src]</B> кашл&#255;ет!"
-			playsound(loc, 'sound/emotions/cough.ogg', 25, 1, 1)
-			m_type = 2
-
-		if ("dance","dances")
-			if (!src.restrained())
-				message = "<B>[src]</B> танцует."
-				m_type = 1
-
-		if ("deathgasp","deathgasps")
-			message = "<B>[src]</B> замирает, конечности расслабл&#255;ютс&#255;, глаза станов&#255;тс&#255; мёртвыми и безжизненными..."
-			playsound(loc, 'sound/effects/deathgasp.ogg', 25, 1, 1)
-			m_type = 1
-
-		if ("drool","drools")
-			message = "<B>[src]</B> несёт чепуху."
-			playsound(loc, 'sound/emotions/drool.ogg', 25, 1, 1)
-			m_type = 1
-
-		if ("faint","faints")
-			message = "<B>[src]</B> тер&#255;ет сознание."
-			if(sleeping)
-				return //Can't faint while asleep
-			SetSleeping(10) //Short-short nap
-			m_type = 1
-
-		if ("flap","flaps")
-			if (!src.restrained())
-				message = "<B>[src]</B> хлопает крыль&#255;ми."
-				m_type = 2
-
-		if ("flip","flips")
-			if (!restrained() || !resting || !sleeping)
-				src.SpinAnimation(7,1)
-				m_type = 2
-
-		if ("frown","frowns")
-			message = "<B>[src]</B> хмуритс&#255;."
-			m_type = 1
-
-		if ("gag","gags")
-			message = "<B>[src]</B> gags!"
-			m_type = 2
-
-		if ("gasp","gasps")
-			message = "<B>[src]</B> Задыхаетс&#255;!"
-			playsound(loc, 'sound/effects/gasp.ogg', 50, 1, 1)
-			m_type = 2
-
-		if ("giggle","giggles")
-			message = "<B>[src]</B> хихикает."
-			playsound(loc, 'sound/emotions/giggle.ogg', 25, 1, 1)
-			m_type = 2
-
-		if ("glare","glares")
-			var/M = null
-			if (param)
-				for (var/mob/A in view(1, src))
-					if (param == A.name)
-						M = A
-						break
-			if (!M)
-				param = null
-			if (param)
-				message = "<B>[src]</B> свирепо смотрит на [param]."
-			else
-				message = "<B>[src]</B> свирепо смотрит."
-
-		if ("grin","grins")
-			message = "<B>[src]</B> усмехаетс&#255;, показыва&#255; зубы."
-			playsound(loc, 'sound/emotions/grin.ogg', 25, 1, 1)
-			m_type = 1
-
-		if ("groan","groans")
-			message = "<B>[src]</B> groans!"
-			m_type = 1
-
-
-		if ("grimace","grimaces")
-			message = "<B>[src]</B> grimaces."
-			m_type = 1
-
-		if ("jump","jumps")
-			message = "<B>[src]</B> прыгает!"
-			m_type = 1
-
-		if ("kiss","kisses") //S-so forward uwa~
-			var/M = null
-			if (param)
-				for (var/mob/A in view(1, src))
-					if (param == A.name)
-						M = A
-						break
-			if (!M)
-				param = null
-			if (param)
-				message = "<B>[src]</B> blows a kiss to [param]." //I was gonna make this <B>[src]</B> kisses [param] but then I imagined dealing with an ahelp about someone spamming it and following certain players around and I had a miniature stroke.
-			else
-				message = "<B>[src]</B> blows a kiss."
-
-		if ("laugh","laughs")
-			message = "<B>[src]</B> смеётс&#255;."
-			playsound(loc, 'sound/emotions/laugh.ogg', 25, 1, 1)
-			m_type = 2
-
-		if ("look","looks")
-			var/M = null
-			if (param)
-				for (var/mob/A in view(1, src))
-					if (param == A.name)
-						M = A
-						break
-			if (!M)
-				param = null
-			if (param)
-				message = "<B>[src]</B> смотрит на [param]."
-			else
-				message = "<B>[src]</B> смотрит."
-			m_type = 1
-
-		if ("me")
-			if(jobban_isbanned(src, "emote"))
-				src << "You cannot send custom emotes (banned)"
-				return
-			if (src.client)
-				if(client.prefs.muted & MUTE_IC)
-					src << "You cannot send IC messages (muted)."
-					return
-				if (src.client.handle_spam_prevention(message,MUTE_IC))
-					return
-			if(!(message))
-				return
-			else
-				message = "<B>[src]</B> [message]"
-
-		if ("nod","nods")
-			if(gender == FEMALE)
-				message = "<B>[src]</B> кивнула."
-			else
-				message = "<B>[src]</B> кивнул."
-			m_type = 1
-
-		if ("point","points")
-			if (!src.restrained())
-				var/atom/M = null
-				if (param)
-					for (var/atom/A as mob|obj|turf in view())
-						if (param == A.name)
-							M = A
-							break
-				if (!M)
-					message = "<B>[src]</B> указывает."
-				else
-					pointed(M)
-			m_type = 1
-		if ("pout","pouts")
-			message = "<B>[src]</B> pouts."
-			m_type = 2
-
-		if ("scream","screams")
-			message = "<B>[src]</B> душераздирающе кричит!"
-			playsound(loc, 'sound/emotions/scream.ogg', 20, 1, 1)
-			m_type = 2
-
-		if ("scowl","scowls")
-			message = "<B>[src]</B> scowls."
-		if ("shake","shakes")
-			message = "<B>[src]</B> тр&#255;сёт головой."
-			m_type = 1
-
-		if ("shit", "shits")
-			//we need to shit? no
-			if(need_to_shit < 70)
-				src << "Нечем испражн&#255;тс&#255;"
-				return
-
-			//we need to shit?
-			if((need_to_shit > 100) && (need_to_shit < SHIT_LEVEL_MAX))
-				for(var/obj/structure/toilet/T in view(0, src))	//checking toilets
-					if(T.shit>0 || T.w_items>0)
-						Shit(src)
-						return
-					else
-						need_to_shit = max(0, need_to_shit - rand(0, 150))
-						T.open = 1
-						T.shit++
-						T.update_icon()
-						src << "Вы справили нужду, не забудьте смыть за собой. Object -> Wash Off."
-						return
-				src << "Лучше найти ближайший туалет"
-				return
-			if(gender == FEMALE)
-				message = "<B>[src]</B> [pick("испражн&#255;етс&#255;.", "высрала кучу говна.", "наложила кучу.", "накакала на пол.", "дрестанула говном на пол.")]"
-			else
-				message = "<B>[src]</B> [pick("испражн&#255;етс&#255;.", "высрал кучу говна.", "наложил кучу.", "накакал на пол.", "дрестанул говном на пол.")]"
-			Shit(src)
-			m_type = 1
-
-		if ("sigh","sighs")
-			message = "<B>[src]</B> вздыхает."
-			playsound(loc, 'sound/emotions/sigh.ogg', 20, 1, 1)
-			m_type = 2
-
-		if ("sit","sits")
-			message = "<B>[src]</B> садитс&#255;."
-			m_type = 1
-
-		if ("smile","smiles")
-			message = "<B>[src]</B> улыбаетс&#255;."
-			m_type = 1
-
-		if ("sneeze","sneezes")
-			message = "<B>[src]</B> чихает."
-			playsound(loc, 'sound/emotions/sneeze.ogg', 20, 1, 1)
-			m_type = 2
-
-		if ("smug","smugs")
-			message = "<B>[src]</B> grins smugly."
-			m_type = 2
-
-		if ("sniff","sniffs")
-			message = "<B>[src]</B> сопит."
-			m_type = 2
-
-		if ("snore","snores")
-			message = "<B>[src]</B> храпит."
-			playsound(loc, 'sound/effects/snore.ogg', 25, 1, 1)
-			m_type = 2
-
-		if ("stare","stares")
-			var/M = null
-			if (param)
-				for (var/mob/A in view(1, src))
-					if (param == A.name)
-						M = A
-						break
-			if (!M)
-				param = null
-			if (param)
-				message = "<B>[src]</B> п&#255;литс&#255; на [param]."
-			else
-				message = "<B>[src]</B> п&#255;литс&#255;."
-
-		if ("stretch","stretches")
-			message = "<B>[src]</B> stretches their arms."
-			m_type = 2
-
-		if ("sulk","sulks")
-			message = "<B>[src]</B> обиженно дуетс&#255;."
-			m_type = 1
-
-		if ("surrender","surrenders")
-			message = "<B>[src]</B> puts their hands on their head and falls to the ground, they surrender!"
-			if(sleeping)
-				return //Can't surrender while asleep.
-			Weaken(20) //So you can't resist.
-			m_type = 1
-
-		if ("faint","faints")
-			message = "<B>[src]</B> faints."
-			if(sleeping)
-				return //Can't faint while asleep
-			SetSleeping(10) //Short-short nap
-			m_type = 1
-
-
-		if ("sway","sways")
-			message = "<B>[src]</B> раскачиваетс&#255; до головокружени&#255;."
-			m_type = 1
-
-		if ("tremble","trembles")
-			message = "<B>[src]</B> трепещет в страхе!"
-			m_type = 1
-
-		if ("twitch","twitches")
-			message = "<B>[src]</B> сильно дёргаетс&#255;."
-			m_type = 1
-
-		if ("twitch_s")
-			message = "<B>[src]</B> дёргаетс&#255;."
-			m_type = 1
-
-		if ("vomit")
-			message = "<B>[src]</B> блюёт на пол!"
-			var/mob/living/M = src
-			if (M.nutrition < 70)
-				src << "Нечем блевать"
-			M.nutrition = 0
-			M.adjustToxLoss(-10)
-			var/turf/T = get_turf(M)
-			T.add_vomit_floor(M)
-			playsound(M, 'sound/effects/splat.ogg', 50, 1)
-			m_type = 1
-
-		if ("wave","waves")
-			message = "<B>[src]</B> машет."
-			m_type = 1
-
-		if ("whimper","whimpers")
-			message = "<B>[src]</B> хныкает."
-			m_type = 2
-
-		if ("wsmile","wsmiles")
-			message = "<B>[src]</B> smiles weakly."
-			m_type = 2
-
-		if ("yawn","yawns")
-			message = "<B>[src]</B> зевает."
-			m_type = 2
-
-		if ("help")
-			src << "Help for emotes. You can use these emotes with say \"*emote\":\n\naflap, blush, bow-(none)/mob, burp, choke, chuckle, clap, collapse, cough, cross, dance, deathgasp, drool, flap, frown, gasp, giggle, glare-(none)/mob, grin, grimace, groan, jump, kiss, laugh, look, me, nod, point-atom, scream, shake, sigh, sit, smile, sneeze, sniff, snore, stare-(none)/mob, stretch, sulk, surrender, sway, tremble, twitch, twitch_s, wave, whimper, wsmile, yawn"
-
-		else
-			src << "<span class='notice'>Unusable emote '[act]'. Say *help for a list.</span>"
-
-
-
-
-
-	if (message)
-		log_emote("[name]/[key] : [message]")
-
- //Hearing gasp and such every five seconds is not good emotes were not global for a reason.
- // Maybe some people are okay with that.
-
-		for(var/mob/M in dead_mob_list)
-			if(!M.client || istype(M, /mob/new_player))
-				continue //skip monkeys, leavers and new players
-			var/T = get_turf(src)
-			if(M.stat == DEAD && M.client && (M.client.prefs.chat_toggles & CHAT_GHOSTSIGHT) && !(M in viewers(T,null)))
-				M.show_message(message)
-
-
-		if (m_type & 1)
-			visible_message(message)
-		else if (m_type & 2)
-			audible_message(message)
-
-/mob/living/proc/Shit(var/mob/living/M)
-	if(M.stat != DEAD)
-		M.need_to_shit = max(0, M.need_to_shit - rand(0, 150))
-		M.AdjustStunned(3)
-		var/turf/pos = get_turf(M)
-		pos.add_shit_floor(M)
-		playsound(pos, 'sound/emotions/shit.ogg', 50, 1)
-	else
-		src << "Вы мертвы и не способны больше испражн&#255;тьс&#255;."
-		return 0
-
-/mob/living/carbon/human/verb/set_flavor()
-	set name = "Set Flavor Text"
-	set desc = "Sets an extended description of your character's features."
-	set category = "IC"
-
-	if(appearance_isbanned(usr))
+	var/param = message
+	var/custom_param = findchar(act, " ")
+	if(custom_param)
+		param = copytext(act, custom_param + 1, length(act) + 1)
+		act = copytext(act, 1, custom_param)
+
+	var/datum/emote/E = emote_list[act]
+	if(!E)
+		src << "<span class='notice'>Unusable emote '[act]'. Say *help for a list.</span>"
 		return
+	E.run_emote(src, param, m_type)
 
-	update_flavor_text()
+/* EMOTE DATUMS */
+/datum/emote/living
+	mob_type_allowed_typecache = list(/mob/living)
+	mob_type_blacklist_typecache = list(/mob/living/simple_animal/slime, /mob/living/brain)
+
+/datum/emote/living/blush
+	key = "blush"
+	key_third_person = "blushes"
+	message = "краснеет."
+	emote_type = EMOTE_VISIBLE
+
+/datum/emote/living/bow
+	key = "bow"
+	key_third_person = "bows"
+	message = "bows."
+	message_param = "клан&#255;етс&#255; %t."
+	emote_type = EMOTE_VISIBLE
+
+/datum/emote/living/burp
+	key = "burp"
+	key_third_person = "burps"
+	message = "рыгает."
+	emote_type = EMOTE_AUDIBLE
+
+/datum/emote/living/choke
+	key = "choke"
+	key_third_person = "chokes"
+	message = "давитс&#255;!"
+	emote_type = EMOTE_AUDIBLE
+
+/datum/emote/living/cross
+	key = "cross"
+	key_third_person = "crosses"
+	message = "скрестил'e_1' руки у себ&#255; на груди."
+	emote_type = EMOTE_VISIBLE
+
+/datum/emote/living/chuckle
+	key = "chuckle"
+	key_third_person = "chuckles"
+	message = "хихикает."
+	emote_type = EMOTE_AUDIBLE
+
+/datum/emote/living/collapse
+	key = "collapse"
+	key_third_person = "collapses"
+	message = "упал'e_1'!"
+	emote_type = EMOTE_VISIBLE
+
+/datum/emote/living/collapse/run_emote(mob/user, params)
+	. = ..()
+	if(.)
+		user.Paralyse(2)
+
+/datum/emote/living/cough
+	key = "cough"
+	key_third_person = "coughs"
+	message = "кашл&#255;ет!"
+	emote_type = EMOTE_AUDIBLE
+
+/datum/emote/living/dance
+	key = "dance"
+	key_third_person = "dances"
+	message = "танцует."
+	emote_type = EMOTE_VISIBLE
+	restraint_check = TRUE
+
+/datum/emote/living/deathgasp
+	key = "deathgasp"
+	key_third_person = "deathgasps"
+	message = "замирает, конечности расслабл&#255;ютс&#255;, глаза станов&#255;тс&#255; мёртвыми и безжизненными..."
+	message_robot = "cильно вздрагивает и через мгновение полностью останавливаетс&#255;, его глаза медленно темнеют."
+	message_AI = "мигает, трещина пересекает экран, откуда свисела пара искр&#255;щихс&#255; проводов. Экран заси&#255;л ошибкой."
+	message_alien = "визжит искажённым криком, затем рухнула со своих лап. Зелёна&#255; кип&#255;ща&#255; и булькающа&#255; жидкость потекла из её пасти."
+	message_larva = "Испускает болезненное шипени&#255;, выпуска&#255; из себ&#255; остатки воздуха, после чего перестает двигатьс&#255; и падает на пол."
+	message_monkey = "lets out a faint chimper as it collapses and stops moving..."
+	stat_allowed = UNCONSCIOUS
+
+/datum/emote/living/deathgasp/run_emote(mob/user, params)
+	. = ..()
+	if(. && isalienadult(user))
+		playsound(user.loc, 'sound/voice/hiss6.ogg', 80, 1, 1)
+
+/datum/emote/living/drool
+	key = "drool"
+	key_third_person = "drools"
+	message = "несет чепуху."
+	emote_type = EMOTE_AUDIBLE
+
+/datum/emote/living/faint
+	key = "faint"
+	key_third_person = "faints"
+	message = "падает в обморок."
+	emote_type = EMOTE_VISIBLE
+
+/datum/emote/living/faint/run_emote(mob/user, params)
+	. = ..()
+	if(.)
+		user.SetSleeping(10)
+
+/datum/emote/living/flap
+	key = "flap"
+	key_third_person = "flaps"
+	message = "хлопает своими крыль&#255;ми."
+	emote_type = EMOTE_VISIBLE
+	var/wing_time = 20
+
+/datum/emote/living/flap/run_emote(mob/user, params)
+	. = ..()
+	if(. && ishuman(user))
+		var/mob/living/carbon/human/H = user
+		var/open = FALSE
+		if(H.dna.features["wings"] != "None")
+			if("wingsopen" in H.dna.species.mutant_bodyparts)
+				open = TRUE
+				H.CloseWings()
+			else
+				H.OpenWings()
+			addtimer(CALLBACK(H, open ? /mob/living/carbon/human.proc/OpenWings : /mob/living/carbon/human.proc/CloseWings), wing_time)
+
+/datum/emote/living/flap/aflap
+	key = "aflap"
+	key_third_person = "aflaps"
+	message = "в злости хлопает своими крыль&#255;ми!"
+	wing_time = 10
+
+/datum/emote/living/flip
+	key = "flip"
+	key_third_person = "flips"
+	emote_type = EMOTE_VISIBLE
+	restraint_check = TRUE
+
+/datum/emote/living/flip/run_emote(mob/user, params)
+	. = ..()
+	if(!.)
+		user.SpinAnimation(7,1)
+
+/datum/emote/living/frown
+	key = "frown"
+	key_third_person = "frowns"
+	message = "хмуритс&#255;."
+	emote_type = EMOTE_VISIBLE
+
+/datum/emote/living/gag
+	key = "gag"
+	key_third_person = "gags"
+	message = "замолчал'e_1'."
+	emote_type = EMOTE_AUDIBLE
+
+/datum/emote/living/gasp
+	key = "gasp"
+	key_third_person = "gasps"
+	message = "задыхаетс&#255;!"
+	emote_type = EMOTE_AUDIBLE
+	stat_allowed = UNCONSCIOUS
+
+/datum/emote/living/giggle
+	key = "giggle"
+	key_third_person = "giggles"
+	message = "giggles."
+	message_mime = "тихо хихиает!"
+	emote_type = EMOTE_AUDIBLE
+
+/datum/emote/living/glare
+	key = "glare"
+	key_third_person = "glares"
+	message = "glares."
+	message_param = "пристально смотрит на %t."
+	emote_type = EMOTE_VISIBLE
+
+/datum/emote/living/grin
+	key = "grin"
+	key_third_person = "grins"
+	message = "усмехаетс&#255;."
+	emote_type = EMOTE_AUDIBLE
+
+/datum/emote/living/groan
+	key = "groan"
+	key_third_person = "groans"
+	message = "стонет!"
+	message_mime = "делает вид, что стонет!"
+	emote_type = EMOTE_AUDIBLE
+
+/datum/emote/living/grimace
+	key = "grimace"
+	key_third_person = "grimaces"
+	message = "гримасничает."
+	emote_type = EMOTE_VISIBLE
+
+/datum/emote/living/jump
+	key = "jump"
+	key_third_person = "jumps"
+	message = "прыгает!"
+	emote_type = EMOTE_VISIBLE
+	restraint_check = TRUE
+
+/datum/emote/living/kiss
+	key = "kiss"
+	key_third_person = "kisses"
+	message = "посылает воздушный поцелуй."
+	emote_type = EMOTE_VISIBLE
+	message_param = "посылает воздушный поцелуй %t."
+
+/datum/emote/living/laugh
+	key = "laugh"
+	key_third_person = "laughs"
+	message = "смеетс&#255;."
+	emote_type = EMOTE_AUDIBLE
+
+/datum/emote/living/look
+	key = "look"
+	key_third_person = "looks"
+	message = "смотрит."
+	message_param = "смотрит на %t."
+	emote_type = EMOTE_VISIBLE
+
+/datum/emote/living/nod
+	key = "nod"
+	key_third_person = "nods"
+	message = "кивает."
+	message_param = "кивнул'e_1' %t."
+	emote_type = EMOTE_VISIBLE
+
+/datum/emote/living/point
+	key = "point"
+	key_third_person = "points"
+	message = "указывает."
+	message_param = "указывает на %t."
+	emote_type = EMOTE_VISIBLE
+	restraint_check = TRUE
+
+/datum/emote/living/pout
+	key = "pout"
+	key_third_person = "pouts"
+	message = "надул'e_1' губы."
+	emote_type = EMOTE_VISIBLE
+
+/datum/emote/living/scream
+	key = "scream"
+	key_third_person = "screams"
+	message = "кричит."
+	message_mime = "делает вид, что кричит!"
+	emote_type = EMOTE_AUDIBLE
+
+/datum/emote/living/scowl
+	key = "scowl"
+	key_third_person = "scowls"
+	message = "хмуритс&#255;."
+	emote_type = EMOTE_VISIBLE
+
+/datum/emote/living/shake
+	key = "shake"
+	key_third_person = "shakes"
+	message = "тр&#255;сет головой."
+	emote_type = EMOTE_VISIBLE
+
+/datum/emote/living/shiver
+	key = "shiver"
+	key_third_person = "shiver"
+	message = "shivers."
+	emote_type = EMOTE_AUDIBLE
+
+/datum/emote/living/sigh
+	key = "sigh"
+	key_third_person = "sighs"
+	message = "вздыхает."
+	emote_type = EMOTE_AUDIBLE
+
+/datum/emote/living/sit
+	key = "sit"
+	key_third_person = "sits"
+	message = "садитс&#255;."
+
+/datum/emote/living/smile
+	key = "smile"
+	key_third_person = "smiles"
+	message = "улыбаетс&#255;."
+	emote_type = EMOTE_VISIBLE
+
+/datum/emote/living/sneeze
+	key = "sneeze"
+	key_third_person = "sneezes"
+	message = "чихнул."
+	emote_type = EMOTE_AUDIBLE
+
+/datum/emote/living/smug
+	key = "smug"
+	key_third_person = "smugs"
+	message = "самодовольно ухмыл&#255;етс&#255;."
+	emote_type = EMOTE_AUDIBLE
+
+/datum/emote/living/sniff
+	key = "sniff"
+	key_third_person = "sniffs"
+	message = "сопит."
+	emote_type = EMOTE_AUDIBLE
+
+/datum/emote/living/snore
+	key = "snore"
+	key_third_person = "snores"
+	message = "храпит."
+	message_mime = "крепко спит."
+	emote_type = EMOTE_AUDIBLE
+
+/datum/emote/living/stare
+	key = "stare"
+	key_third_person = "stares"
+	message = "уставилс&#255;."
+	message_param = "уставил'e_5' на %t."
+	emote_type = EMOTE_VISIBLE
+
+/datum/emote/living/strech
+	key = "stretch"
+	key_third_person = "stretches"
+	message = "разминает свои руки."
+	emote_type = EMOTE_VISIBLE
+
+/datum/emote/living/sulk
+	key = "sulk"
+	key_third_person = "sulks"
+	message = "надул'e_5'."
+	emote_type = EMOTE_VISIBLE
+
+/datum/emote/living/surrender
+	key = "surrender"
+	key_third_person = "surrenders"
+	message = "кладет руки за голову и медленно ложитс&#255; на пол!"
+	emote_type = EMOTE_VISIBLE
+
+/datum/emote/living/surrender/run_emote(mob/user, params)
+	. = ..()
+	if(.)
+		user.Weaken(20)
+
+/datum/emote/living/sway
+	key = "sway"
+	key_third_person = "sways"
+	message = "пошатываетс&#255;"
+	emote_type = EMOTE_VISIBLE
+
+/datum/emote/living/tremble
+	key = "tremble"
+	key_third_person = "trembles"
+	message = "трепещет в страхе!"
+	emote_type = EMOTE_VISIBLE
+
+/datum/emote/living/twitch
+	key = "twitch"
+	key_third_person = "twitches"
+	message = "дергаетс&#255;."
+	emote_type = EMOTE_VISIBLE
+
+/datum/emote/living/twitch_s
+	key = "twitch_s"
+	message = "twitches."
+
+/datum/emote/living/wave
+	key = "wave"
+	key_third_person = "waves"
+	message = "машет."
+	emote_type = EMOTE_VISIBLE
+
+/datum/emote/living/whimper
+	key = "whimper"
+	key_third_person = "whimpers"
+	message = "хнычет."
+	message_mime = "'t_his' лицо становитс&#255; грустным, а из слез льютс&#255; воображаемые слезы."
+	emote_type = EMOTE_AUDIBLE
+
+/datum/emote/living/wsmile
+	key = "wsmile"
+	key_third_person = "wsmiles"
+	message = "слабо улыбаетс&#255;."
+	emote_type = EMOTE_VISIBLE
+
+/datum/emote/living/yawn
+	key = "yawn"
+	key_third_person = "yawns"
+	message = "зевает."
+	emote_type = EMOTE_AUDIBLE
+
+/datum/emote/living/custom
+	key = "me"
+	key_third_person = "custom"
+	message = null
+
+/datum/emote/living/custom/proc/check_invalid(mob/user, input)
+	. = TRUE
+	if(copytext(input,1,5) == "says")
+		user << "<span class='danger'>Invalid emote.</span>"
+	else if(copytext(input,1,9) == "exclaims")
+		user << "<span class='danger'>Invalid emote.</span>"
+	else if(copytext(input,1,6) == "yells")
+		user << "<span class='danger'>Invalid emote.</span>"
+	else if(copytext(input,1,5) == "asks")
+		user << "<span class='danger'>Invalid emote.</span>"
+	else
+		. = FALSE
+
+/datum/emote/living/custom/run_emote(mob/user, params, type_override = null)
+	if(jobban_isbanned(user, "emote"))
+		user << "You cannot send custom emotes (banned)."
+		return FALSE
+	else if(user.client && user.client.prefs.muted & MUTE_IC)
+		user << "You cannot send IC messages (muted)."
+		return FALSE
+	else if(!params)
+		var/custom_emote = copytext(sanitize(input("Choose an emote to display.") as text|null), 1, MAX_MESSAGE_LEN)
+		if(custom_emote && !check_invalid(user, custom_emote))
+			var/type = input("Is this a visible or hearable emote?") as null|anything in list("Visible", "Hearable")
+			switch(type)
+				if("Visible")
+					emote_type = EMOTE_VISIBLE
+				if("Hearable")
+					emote_type = EMOTE_AUDIBLE
+				else
+					alert("Unable to use this emote, must be either hearable or visible.")
+					return
+			message = custom_emote
+	else
+		message = params
+		if(type_override)
+			emote_type = type_override
+	. = ..()
+	message = null
+	emote_type = EMOTE_VISIBLE
+
+/datum/emote/living/help
+	key = "help"
+
+/datum/emote/living/help/run_emote(mob/user, params)
+	var/list/keys = list()
+	var/list/message = list("Available emotes, you can use them with say \"*emote\": ")
+
+	for(var/e in emote_list)
+		if(e in keys)
+			continue
+		var/datum/emote/E = emote_list[e]
+		if(E.can_run_emote(user, TRUE))
+			keys += E.key
+
+	keys = sortList(keys)
+
+	for(var/emote in keys)
+		if(LAZYLEN(message) > 1)
+			message += ", [emote]"
+		else
+			message += "[emote]"
+
+	message += "."
+
+	message = jointext(message, "")
+
+	user << message
+
+/datum/emote/sound/beep
+	key = "beep"
+	key_third_person = "beeps"
+	message = "пищит."
+	message_param = "пищит на %t."
+	emote_type = EMOTE_AUDIBLE
+	sound = 'sound/machines/twobeep.ogg'

@@ -6,6 +6,7 @@
 	var/buckle_requires_restraints = 0 //require people to be handcuffed before being able to buckle. eg: pipes
 	var/list/mob/living/buckled_mobs = null //list()
 	var/max_buckled_mobs = 1
+	var/buckle_prevents_pull = FALSE
 
 //Interaction
 /atom/movable/attack_hand(mob/living/user)
@@ -44,24 +45,26 @@
 		return 0
 	if(!M.can_buckle() && !force)
 		if(M == usr)
-			M << "<span class='warning'>You are unable to buckle yourself to the [src]!</span>"
+			M << "<span class='warning'>Вы не смогли пристегнуть себ&#255; к [src]!</span>"
 		else
-			usr << "<span class='warning'>You are unable to buckle [M] to the [src]!</span>"
+			usr << "<span class='warning'>Вы не смогли пристегнуть [M] к [src]!</span>"
 		return 0
 
+	if(M.pulledby && buckle_prevents_pull)
+		M.pulledby.stop_pulling()
 	M.buckled = src
 	M.setDir(dir)
 	buckled_mobs |= M
 	M.update_canmove()
-	post_buckle_mob(M)
 	M.throw_alert("buckled", /obj/screen/alert/restrained/buckled, new_master = src)
+	post_buckle_mob(M)
 
 	return 1
 
 /obj/buckle_mob(mob/living/M, force = 0)
 	. = ..()
 	if(.)
-		if(burn_state == ON_FIRE) //Sets the mob on fire if you buckle them to a burning atom/movableect
+		if(resistance_flags & ON_FIRE) //Sets the mob on fire if you buckle them to a burning atom/movableect
 			M.adjust_fire_stacks(1)
 			M.IgniteMob()
 
@@ -98,14 +101,14 @@
 	if(buckle_mob(M))
 		if(M == user)
 			M.visible_message(\
-				"<span class='notice'>[M] buckles themself to [src].</span>",\
-				"<span class='notice'>You buckle yourself to [src].</span>",\
-				"<span class='italics'>You hear metal clanking.</span>")
+				"<span class='notice'>[M] пристегнул[M.p_e_1()] [user] [src].</span>",\
+				"<span class='notice'>Вы пристегнули себ&#255; к [src].</span>",\
+				"<span class='italics'>Вы слышите металический скрежет.</span>")// lyazg
 		else
 			M.visible_message(\
-				"<span class='warning'>[user] buckles [M] to [src]!</span>",\
-				"<span class='warning'>[user] buckles you to [src]!</span>",\
-				"<span class='italics'>You hear metal clanking.</span>")
+				"<span class='warning'>[user] пристегнул[user.p_e_1()] [M] к [src]!</span>",\
+				"<span class='warning'>[user] пристегнул[user.p_e_1()] Вас к [src]!</span>",\
+				"<span class='italics'>Вы слышите металлический скрежет.</span>")
 		return 1
 
 
@@ -114,14 +117,14 @@
 	if(M)
 		if(M != user)
 			M.visible_message(\
-				"<span class='notice'>[user] unbuckles [M] from [src].</span>",\
-				"<span class='notice'>[user] unbuckles you from [src].</span>",\
-				"<span class='italics'>You hear metal clanking.</span>")
+				"<span class='notice'>[user] отстегнул [M] от [src].</span>",\
+				"<span class='notice'>[user] отстегнул Вас от [src].</span>",\
+				"<span class='italics'>Вы слышите металлический скрежет.</span>")
 		else
 			M.visible_message(\
-				"<span class='notice'>[M] unbuckles themselves from [src].</span>",\
-				"<span class='notice'>You unbuckle yourself from [src].</span>",\
-				"<span class='italics'>You hear metal clanking.</span>")
+				"<span class='notice'>[M] отстегнул[M.p_e_1()] [user] от [src].</span>",\
+				"<span class='notice'>Вы отстегнули себ&#255; от [src].</span>",\
+				"<span class='italics'>Вы слышите металлический скрежет.</span>")
 		add_fingerprint(user)
 	return M
 

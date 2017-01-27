@@ -1,4 +1,7 @@
-//hairs
+/////////
+//HAIRS//
+/////////
+
 /datum/sprite_accessory/thair
 	icon = 'icons/mob/infinity_tajaran_hair.dmi'
 	color_src = HAIR
@@ -49,23 +52,28 @@
 	name = "None"
 	icon_state = "thair_none"
 
-//tails
-/datum/sprite_accessory/tajaran/tail
-	icon = 'icons/mob/infinity_mutant_bodyparts.dmi'
-	color_src = 0
+/////////
+//TAILS//
+/////////
 
-/datum/sprite_accessory/tajaran/tail/default
+/datum/sprite_accessory/tails/tajaran/default
 	name = "Default"
-	icon_state = "default"
+	icon_state = "tajaran"
+	color_src = MUTCOLORS
 
-//ears
-/datum/sprite_accessory/tajaran/ears
-	name = "tail_tajaran"
-	icon = 'icons/mob/infinity_mutant_bodyparts.dmi'
-	color_src = 0
-	hasinner = 1
-
-/datum/sprite_accessory/tajaran/ears/default
+/datum/sprite_accessory/tails_animated/tajaran/default
 	name = "Default"
-	icon_state = "default"
+	icon_state = "tajaran"
+	color_src = MUTCOLORS
+
+////////
+//EARS//
+////////
+
+/datum/sprite_accessory/ears/tajaran/default
+	name = "Default"
+	icon_state = "tajaran"
+	color_src = MUTCOLORS
+
+
 

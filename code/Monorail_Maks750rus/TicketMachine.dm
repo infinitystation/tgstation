@@ -40,7 +40,7 @@
 			user << "<span class='warning'>There is already a Card inside!</span>"
 			return
 		else
-			var/obj/item/weapon/card/id/P = user.get_active_hand()
+			var/obj/item/weapon/card/id/P = user.get_active_held_item()
 			if(istype(P))
 				if(!user.drop_item())
 					return

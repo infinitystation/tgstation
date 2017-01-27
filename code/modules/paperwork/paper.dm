@@ -11,14 +11,15 @@
 	icon = 'icons/obj/bureaucracy.dmi'
 	icon_state = "paper"
 	throwforce = 0
-	w_class = 1
+	w_class = WEIGHT_CLASS_TINY
 	throw_range = 1
 	throw_speed = 1
 	pressure_resistance = 0
 	slot_flags = SLOT_HEAD
 	body_parts_covered = HEAD
-	burn_state = FLAMMABLE
-	burntime = 5
+	resistance_flags = FLAMMABLE
+	obj_integrity = 50
+	max_integrity = 50
 	dog_fashion = /datum/dog_fashion/head
 
 	var/info		//What's actually written on the paper.
@@ -40,7 +41,7 @@
 
 /obj/item/weapon/paper/update_icon()
 
-	if(burn_state == ON_FIRE)
+	if(resistance_flags & ON_FIRE)
 		icon_state = "paper_onfire"
 		return
 	if(info)
@@ -89,7 +90,7 @@
 	add_fingerprint(usr)
 
 /obj/item/weapon/paper/suicide_act(mob/user)
-	user.visible_message("<span class='suicide'>[user] scratches a grid on their wrist with the paper! It looks like \he's trying to commit sudoku..</span>")
+	user.visible_message("<span class='suicide'>[user] выцарапывает сетку на зап&#255;стье с помощью бумаги! Кажетс&#255; [user.p_they()] пытал[user.p_e_5()] покончить жизнь судокой...</span>")
 	return (BRUTELOSS)
 
 /obj/item/weapon/paper/attack_self(mob/user)
@@ -187,6 +188,7 @@
 	else
 		t = replacetext(t, "\[sign\]", "")
 	t = replacetext(t, "\[field\]", "<span class=\"paper_field\"></span>")
+	t = replacetext(t, "\[tab\]", "&nbsp;")
 
 	if(!iscrayon)
 		t = replacetext(t, "\[*\]", "<li>")
@@ -210,8 +212,7 @@
 		t = "<font face=\"[CRAYON_FONT]\" color=[C.paint_color]><b>[t]</b></font>"
 
 //	t = replacetext(t, "#", "") // Junk converted to nothing!
-
-//Count the fields
+//	countags(t) // lets count this shietty tags!
 	var/laststart = 1
 	while(1)
 		var/i = findtext(t, "<span class=\"paper_field\">", laststart)
@@ -221,6 +222,8 @@
 		fields++
 
 	return t
+
+
 
 /obj/item/weapon/paper/proc/openhelp(mob/user)
 	user << browse({"<HTML><HEAD><TITLE>Pen Help</TITLE></HEAD>
@@ -243,6 +246,23 @@
 		\[hr\] : Adds a horizontal rule.
 	</BODY></HTML>"}, "window=paper_help")
 
+/obj/item/weapon/paper/proc/countags(t)
+	var/laststart = 1
+	while(1)
+		var/i = findtext(t, "<span class=\"paper_field\">", laststart)
+		if(i == 0 | fields == 50)
+			break
+		laststart = i+1
+		fields++
+
+	laststart = 1 //make fields grate again - recount another tag - [list\]
+	while(1)
+		var/i = findtext(t, "<ul>", laststart)
+		if(i == 0 | fields == 50)
+			break
+		laststart = i+1
+		fields++
+
 
 /obj/item/weapon/paper/Topic(href, href_list)
 	..()
@@ -254,17 +274,23 @@
 		var/t =  stripped_multiline_input("Enter what you want to write:", "Write")
 		if(!t)
 			return
-		var/obj/item/i = usr.get_active_hand()	//Check to see if he still got that darn pen, also check if he's using a crayon or pen.
+		t = copytext(t, 1, 3 * MAX_MESSAGE_LEN)
+		var/obj/item/i = usr.get_active_held_item()	//Check to see if he still got that darn pen, also check if he's using a crayon or pen.
 		var/iscrayon = 0
 		if(!istype(i, /obj/item/weapon/pen))
 			if(!istype(i, /obj/item/toy/crayon))
 				return
 			iscrayon = 1
 
-		if(!in_range(src, usr) && loc != usr && !istype(loc, /obj/item/weapon/clipboard) && loc.loc != usr && usr.get_active_hand() != i)	//Some check to see if he's allowed to write
+		if(!in_range(src, usr) && loc != usr && !istype(loc, /obj/item/weapon/clipboard) && loc.loc != usr && usr.get_active_held_item() != i)	//Some check to see if he's allowed to write
 			return
 
+		var/last_fields_value = fields
 		t = parsepencode(t, i, usr, iscrayon) // Encode everything from pencode to html
+		if(fields > 50)
+			usr << "<span class='warning'>Too many fields. Sorry, you can't do this.</span>"
+			fields = last_fields_value
+			return
 
 		if(t != null)	//No input from the user means nothing needs to be added
 			if(id!="end")
@@ -280,7 +306,7 @@
 /obj/item/weapon/paper/attackby(obj/item/weapon/P, mob/living/carbon/human/user, params)
 	..()
 
-	if(burn_state == ON_FIRE)
+	if(resistance_flags & ON_FIRE)
 		return
 
 	if(is_blind(user))
@@ -311,7 +337,7 @@
 
 		if(!stamped)
 			stamped = new
-		stamped += P.type
+		stamped += P.icon_state
 		add_overlay(stampoverlay)
 
 		user << "<span class='notice'>You stamp the paper with your rubber stamp.</span>"
@@ -335,10 +361,11 @@
 
 	add_fingerprint(user)
 
-/obj/item/weapon/paper/fire_act()
-	..(0)
-	icon_state = "paper_onfire"
-	info = "[stars(info)]"
+/obj/item/weapon/paper/fire_act(exposed_temperature, exposed_volume)
+	..()
+	if(!(resistance_flags & FIRE_PROOF))
+		icon_state = "paper_onfire"
+		info = "[stars(info)]"
 
 
 /obj/item/weapon/paper/extinguish()
@@ -378,8 +405,8 @@
 	info = "Alert Levels:<BR>\nBlue- Emergency<BR>\n\t1. Caused by fire<BR>\n\t2. Caused by manual interaction<BR>\n\tAction:<BR>\n\t\tClose all fire doors. These can only be opened by reseting the alarm<BR>\nRed- Ejection/Self Destruct<BR>\n\t1. Caused by module operating computer.<BR>\n\tAction:<BR>\n\t\tAfter the specified time the module will eject completely.<BR>\n<BR>\nEngine Maintenance Instructions:<BR>\n\tShut off ignition systems:<BR>\n\tActivate internal power<BR>\n\tActivate orbital balance matrix<BR>\n\tRemove volatile liquids from area<BR>\n\tWear a fire suit<BR>\n<BR>\n\tAfter<BR>\n\t\tDecontaminate<BR>\n\t\tVisit medical examiner<BR>\n<BR>\nToxin Laboratory Procedure:<BR>\n\tWear a gas mask regardless<BR>\n\tGet an oxygen tank.<BR>\n\tActivate internal atmosphere<BR>\n<BR>\n\tAfter<BR>\n\t\tDecontaminate<BR>\n\t\tVisit medical examiner<BR>\n<BR>\nDisaster Procedure:<BR>\n\tFire:<BR>\n\t\tActivate sector fire alarm.<BR>\n\t\tMove to a safe area.<BR>\n\t\tGet a fire suit<BR>\n\t\tAfter:<BR>\n\t\t\tAssess Damage<BR>\n\t\t\tRepair damages<BR>\n\t\t\tIf needed, Evacuate<BR>\n\tMeteor Shower:<BR>\n\t\tActivate fire alarm<BR>\n\t\tMove to the back of ship<BR>\n\t\tAfter<BR>\n\t\t\tRepair damage<BR>\n\t\t\tIf needed, Evacuate<BR>\n\tAccidental Reentry:<BR>\n\t\tActivate fire alrms in front of ship.<BR>\n\t\tMove volatile matter to a fire proof area!<BR>\n\t\tGet a fire suit.<BR>\n\t\tStay secure until an emergency ship arrives.<BR>\n<BR>\n\t\tIf ship does not arrive-<BR>\n\t\t\tEvacuate to a nearby safe area!"
 
 /obj/item/weapon/paper/centcom
-	name = "paper- 'Official Bulletin'"
-	info = "<BR>Centcom Security<BR>Port Division<BR>Official Bulletin<BR><BR>Inspector,<BR>There is an emergency shuttle arriving today.<BR><BR>Approval is restricted to Nanotrasen employees only. Deny all other entrants.<BR><BR>Centcom Port Commissioner"
+	name = "Official Bulletin"
+	info = "<BR>Служба Безопасности ЦК<BR>Портовое отделение<BR>Оффициальный документ<BR><BR>Инспектор,<BR>Эвакуационный шаттл прибудет сегоднЯ.<BR><BR>Разрешайте проход только членам корпорации Нанотрайзен. О каждом челевеке, что не ЯвлЯетсЯ членом корпорации Нанотрайзен, сообщайте охране. КраснаЯ кнопка под столом.<BR><BR>Заведующий портового отделениЯ"
 
 /obj/item/weapon/paper/range
 	name = "paper- Firing Range Instructions"
@@ -392,9 +419,26 @@
 /obj/item/weapon/paper/crumpled
 	name = "paper scrap"
 	icon_state = "scrap"
+	slot_flags = null
 
 /obj/item/weapon/paper/crumpled/update_icon()
 	return
 
 /obj/item/weapon/paper/crumpled/bloody
 	icon_state = "scrap_bloodied"
+
+/obj/item/weapon/paper/parting
+	name = "Parting"
+	info = "<b><center>Руководство по эксплуатации электрического стула</center></b><br><br> 1) Возьмите electrpack(шоковый рюкзак) в руку и проведите настройку частот. Обратит внимание, что стандартные частоты (144.9 с кодом 2) - де активированы с целью избежаниЯ саботажа в работе стула. Измените частоту и код. Никому не сообщайте код помимо ХоСа, вардена или капитана.<br> 2) Присоедените к electropack шлем - вы получите шоковый набор.<br> 3) Закрепите шоковый набор на стуле.<br> 4) Настройте signaler на выставленную в электропаке частоту. Всё, электрический стул готов.<br><br><b><center>Обслуживание электрического стула</centrl></b><br>*ДлЯ отсоединениЯ шокового набора от стула, используйте гаечный ключ. ДлЯ разоеденениЯ частей - так же.<br>*Стул имеет задержку перед использованием - всего несколько секунд.<br>*ДлЯ проведениЯ казни, закрепите осужденного на электрическом стуле и активируйте сигналлер.<br><br><br><small>Уважаемый оператор, пожалуйста, помните, что на этом стуле вы производите казнь живого человека - такого же, как и вы.<br> Не забывайте об этом используйте его в самом крайнем случае.</small>"
+
+/obj/item/weapon/paper/syndicate
+	name = "Message"
+	info = "<i>В вашем автомате YouTool было обновлено оборудование, в коробку из-под пицы положили новую пиццу.<br>Немного изменили конструкцию медицинского отсека вашего кораблЯ - добавили тюрьму.<br>В отдел инженерного оборудованиЯ был добавлен Пластаниум длЯ ремонта кораблЯ в случае поломки."
+
+/obj/item/weapon/paper/miners_oper
+	name = "Standart miner's operation guide"
+	info = "<center><b>Руководство по выживанию на планетоиде</b></center><br><center><b>Infernos</b></center><br><br>Данное руководство по выживанию в условиЯх планетоида 'Infernos' (в дальнейшнем Планета) ставит перед собой задачу повысить выживаемость среди шахерских комманд копрорации 'Нанотрейзен'. Пожалуйста, уделите внимание данному руководству и не забывайте о прочтенном.<br><br>Планета содержит в себе множество опасностей, самаЯ неприЯтнаЯ из которых - погодные ЯвлениЯ. <br>На планете регулЯрно происходЯт сдвиги тектонических плит, выбросы твердых магматических пород, извержениЯ вулканов, излиЯниЯ внутренних запасов планетарной магмы.<br>Ваша база была построена в секторе с минимальным количеством погодных Явлений, оставив лишь извержение местного вулкана 'H-721'.<br> При извержении (вы узнаете о нем по повышению количества пепла в воздухе) начинайте быстро двигатьсЯ к ближайшему укрытию к плотной крышей. Укрытием могут служить возведенные ремонтными дронами бункеры в пещерах, шахтерскаЯ база или У.В.В.У.О.В.С - Убежища ВыживаниЯ В УсловиЯх Опасности Внешней Среды. Шахтеры используют сокращение 'УдВ' или просто 'Убежище'.<br>ДлЯ дисклокации убежища возмите капсулу Стандартной Шаблонной Конструкции убежища, активируйте её кнопкой на одной из сторон, разместите в месте желаемого убежища и в течении 10 секунд бункер будет развернут и готов к эксплуатации.<br><br>ВтораЯ серьезнаЯ опасность длЯ шахтерских групп в условиЯх планеты - местнаЯ фауна.<br>Исследовательский отдел Нанотрейзен так и не получил достаточно образцов длЯ полного изучениЯ феномена, из-за чего вам даетсЯ простаЯ установка - всё, что не выглЯдит как шахтер, должно избегатьсЯ всеми возможными средствами. ДопускаетсЯ ликвидациЯ.<br><br>ПоследнЯЯ и самаЯ главнаЯ опасность - аномальнаЯ зона. Далеко на сервере от вашей базы расположена неизвестнаЯ конструкциЯ, которую из-за постоЯнных пепельных штормов невозможно просканировать. От данной конструкции часто исходЯт сигналы неизвестного происхождениЯ. Избегайте северной части шахт.<br><br><br>Конец руководства, спасибо за внимание."
+
+/obj/item/weapon/paper/central_prison
+	name = "Prisoner's transport center"
+	info = "<center><b>Центр Транспортировки Заключенных</b></center><br><br>Уважаемый член охраны, пожалуйста, подождите прибытиЯ ответственного за даннйы КПП сотрудника. По прибытию, передайте ему заключенных и начинайте проходитть процедуру проверки документов по стандартам экипажа."

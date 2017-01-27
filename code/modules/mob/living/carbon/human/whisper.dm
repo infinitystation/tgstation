@@ -12,7 +12,7 @@
 		return
 
 	message = trim(message)
-	message = copytext(sanitize(message), 1, MAX_MESSAGE_LEN)
+	message = copytext(sanitize_a0(message), 1, MAX_MESSAGE_LEN)
 	if(!can_speak(message))
 		return
 
@@ -26,7 +26,6 @@
 
 	var/alt_name = get_alt_name()
 
-	var/whispers = "шепчет"
 	var/critical = InCritical()
 
 	// We are unconscious but not in critical, so don't allow them to whisper.
@@ -35,12 +34,11 @@
 
 	// If whispering your last words, limit the whisper based on how close you are to death.
 	if(critical)
-		var/health_diff = round(-config.health_threshold_dead + health)
+		var/health_diff = round(-HEALTH_THRESHOLD_DEAD + health)
 		// If we cut our message short, abruptly end it with a-..
 		var/message_len = length(message)
 		message = copytext(message, 1, health_diff) + "[message_len > health_diff ? "-.." : "..."]"
 		message = Ellipsis(message, 10, 1)
-		whispers = "шепчет на последнем дыхании"
 
 	message = treat_message(message)
 
@@ -58,12 +56,14 @@
 	watching  -= eavesdropping
 
 	var/rendered
-
-	rendered = "<span class='game say'><span class='name'>[src.name]</span> [whispers] что-то.</span>"
+	var/whispers
+	whispers = critical ? "шепчет что-то на последнем дыхании." : "шепчет что-то."
+	rendered = "<span class='game say'><span class='name'>[src.name]</span> [whispers]</span>"
 	for(var/mob/M in watching)
 		M.show_message(rendered, 2)
 
 	var/spans = list(SPAN_ITALICS)
+	whispers = critical ? "шепчет на последнем дыхании" : "шепчет"
 	rendered = "<span class='game say'><span class='name'>[GetVoice()]</span>[alt_name] [whispers], <span class='message'>\"[attach_spans(message, spans)]\"</span></span>"
 
 	for(var/atom/movable/AM in listening)

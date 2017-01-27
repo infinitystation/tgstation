@@ -76,7 +76,7 @@
 /client/verb/request_unmute_adminhelp()
 	set name = "ќтправить просьбу на размут в ј’"
 	set category = "Admin"
-	adminmutetimerid = addtimer(src, "giverequestadminhelpverb", 3000, FALSE) //5 minute cooldown of request admin helps
+	adminmutetimerid = addtimer(src, CALLBACK(.proc/giverequestadminhelpverb), 3000, TIMER_UNIQUE) //5 minute cooldown of request admin helps
 	src.verbs -= /client/verb/request_unmute_adminhelp
 	message_admins("[key_name(src, 1)] просит снять мут. „тобы снять мут, нажмите <A href='?_src_=holder;unmuteadminhelprequest=[src.mob.ckey];'>сюда</a>")
 	for(var/client/X in admins)

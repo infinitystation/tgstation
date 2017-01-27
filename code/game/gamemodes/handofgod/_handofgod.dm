@@ -182,7 +182,7 @@ var/global/list/global_handofgod_structuretypes = list()
 /datum/game_mode/proc/add_hog_follower(datum/mind/follower_mind, colour = "No Colour")
 	var/mob/living/carbon/human/H = follower_mind.current
 	if(isloyal(H))
-		H << "<span class='danger'>Your mindshield implant blocked the influence of the [colour] deity. </span>"
+		H << "<span class='danger'>Your loalty implant blocked the influence of the [colour] deity. </span>"
 		return 0
 	if((follower_mind in red_deity_followers) || (follower_mind in red_deity_prophets) || (follower_mind in blue_deity_followers) || (follower_mind in blue_deity_prophets))
 		H << "<span class='danger'>You already belong to a deity. Your strong faith has blocked out the conversion attempt by the followers of the [colour] deity.</span>"
@@ -220,11 +220,12 @@ var/global/list/global_handofgod_structuretypes = list()
 //////////////////
 
 /datum/game_mode/proc/remove_hog_follower(datum/mind/follower_mind, announce = 1)//deconverts both
-	follower_mind.remove_hog_follower_prophet()
-	update_hog_icons_removed(follower_mind,"red")
-	update_hog_icons_removed(follower_mind,"blue")
-
 	if(follower_mind.current)
+		if(is_handofgod_cultist(follower_mind.current) || is_handofgod_prophet(follower_mind.current))
+			follower_mind.remove_hog_follower_prophet()
+			update_hog_icons_removed(follower_mind,"red")
+			update_hog_icons_removed(follower_mind,"blue")
+
 		var/mob/living/carbon/human/H = follower_mind.current
 		H.faction -= "red god"
 		H.faction -= "blue god"

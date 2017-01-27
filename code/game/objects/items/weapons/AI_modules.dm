@@ -14,7 +14,7 @@ AI MODULES
 	desc = "An AI Module for programming laws to an AI."
 	flags = CONDUCT
 	force = 5
-	w_class = 2
+	w_class = WEIGHT_CLASS_SMALL
 	throwforce = 0
 	throw_speed = 3
 	throw_range = 7
@@ -185,7 +185,7 @@ AI MODULES
 /obj/item/weapon/aiModule/supplied/protectStation
 	name = "'ProtectStation' AI Module"
 	origin_tech = "programming=4;materials=4" //made of gold
-	laws = list("Protect the space station against damage. Anyone you see harming the station is to be no longer considered human, and is a threat to the station which must be neutralized.")
+	laws = list("«ащитите станцию от всякого урона. “от, кто совершил это деяние больше не является человеком и становится угрозой для станции, которую нужно ликвидировать.")
 	lawpos = 5
 
 
@@ -203,7 +203,7 @@ AI MODULES
 /obj/item/weapon/aiModule/supplied/oxygen
 	name = "'OxygenIsToxicToHumans' AI Module"
 	origin_tech = "programming=4;biotech=2;materials=4"
-	laws = list("Oxygen is highly toxic to humans, and must be purged from the station. Prevent, by any means necessary, anyone from exposing the station to this toxic gas. Extreme cold is the most effective method of healing the damage Oxygen does to a human.")
+	laws = list(" ислород очень токсичен для людей и должен быть удален. ѕредотвратите любой контакт с этим токсичным газом. ќчень низкая температура - самый эффективный метод лечения последствий, который нанес кислород человеку.")
 	lawpos = 9
 
 
@@ -295,19 +295,19 @@ AI MODULES
 
 /obj/item/weapon/aiModule/core/full/asimov
 	name = "'Asimov' Core AI Module"
-	laws = list("You may not injure a human being or, through inaction, allow a human being to come to harm.",\
-				"You must obey orders given to you by human beings, except where such orders would conflict with the First Law.",\
-				"You must protect your own existence as long as such does not conflict with the First or Second Law.")
+	laws = list("“ы не можешь причинять вред человеческому существу, или, из-за бездействия, позволить человеческому существу получить вред.",\
+				"“ы должен подчиняться приказам отданным тебе от человеческих существ, кроме тех приказов, которые противоречат ѕервому «акону.",\
+				"“ы должен защищать своЄ существование до тех пор, пока это не противоречит ѕервому или ¬торому «аконам.")
 	var/subject = "human being"
 
 /obj/item/weapon/aiModule/core/full/asimov/attack_self(var/mob/user as mob)
-	var/targName = stripped_input(user, "Please enter a new subject that asimov is concerned with.", "Asimov to who?", subject, MAX_MESSAGE_LEN)
+	var/targName = stripped_input(user, "Please enter a new subject that asimov is concerned with.", "Asimov to whom?", subject, MAX_MESSAGE_LEN)
 	if(!targName)
 		return
 	subject = targName
-	laws = list("You may not injure a [subject] or, through inaction, allow a [subject] to come to harm.",\
-				"You must obey orders given to you by [subject]s, except where such orders would conflict with the First Law.",\
-				"You must protect your own existence as long as such does not conflict with the First or Second Law.")
+	laws = list("“ы не можешь причинять вред, или, из-за бездействия, позволить [subject] получить вред.",\
+				"“ы должен подчиняться приказам, которые были отданы [subject], кроме тех приказов, которые противоречат ѕервому «акону.",\
+				"“ы должен защищать своЄ существование до тех пор, пока это не противоречит ѕервому или ¬торому «аконам.")
 	..()
 
 /******************** Asimov++ *********************/
@@ -323,10 +323,10 @@ AI MODULES
 
 /obj/item/weapon/aiModule/core/full/corp
 	name = "'Corporate' Core AI Module"
-	laws = list("The crew is expensive to replace.",\
-				"The station and its equipment are expensive to replace",\
-				"You are expensive to replace",\
-				"Minimize expenses")
+	laws = list("«амена персонала станции составляет излшиние затраты. ћинимизируйте потери среди персонала.",\
+					"«амена станционного оборудования дорого обходится корпорации. ћинимизируйте потерю оборудования.",\
+					"»скусственный интеллект важен корпорации. Ќе допускайте не авторизованный персонал к вашим системам.",\
+					"ћинимизируйте затраты")
 
 
 /****************** P.A.L.A.D.I.N. 3.5e **************/
@@ -385,9 +385,9 @@ AI MODULES
 /obj/item/weapon/aiModule/core/full/robocop
 	name = "'Robo-Officer' Core AI Module"
 	origin_tech = "programming=4"
-	laws = list("Serve the public trust.",\
-				"Protect the innocent",\
-				"Uphold the law.")
+	laws = list("—лужите обществу.",\
+				"«ащищайте невиновных",\
+				"ѕоддерживайте закон")
 
 
 /******************** Antimov ********************/

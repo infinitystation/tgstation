@@ -23,7 +23,7 @@
 
 /datum/round_event/ion_storm/announce()
 	if(announceEvent == ION_ANNOUNCE || (announceEvent == ION_RANDOM && prob(ionAnnounceChance)))
-		priority_announce("Обнаружен ионный шторм в районе станции. Пожалуйста, проверьте всё оборудование, к которому есть доступ у ИИ, на предмет ошибок.", "Тревога! АномалиЯ!", 'sound/AI/ionstorm.ogg')
+		priority_announce("Обнаружен ионный шторм в районе станции. Пожалуйста, проверьте всё оборудование, к которому есть доступ у ИИ, на предмет ошибок.", "Тревога! Аномалия!", 'sound/AI/ionstorm.ogg')
 
 
 /datum/round_event/ion_storm/start()
@@ -33,6 +33,7 @@
 			var/message = generate_ion_law(ionMessage)
 			if(message)
 				M.add_ion_law(message)
+				log_game("ION law added to [M]: [message]")
 				M << "<br>"
 				M << "<span class='danger'>[message] ...ЗАКОНЫ ОБНОВЛЕНЫ</span>"
 				M << "<br>"
@@ -544,7 +545,7 @@
 							message = "ALL [ionthreats] ARE NOW NAMED [ionspecies]."
 						if(4)
 							message = "ALL [ionthreats] ARE NOW NAMED [ionobjects]."
-							
+
 	return message
 
 #undef ION_RANDOM

@@ -4,56 +4,16 @@
 	max_occurrences = 1
 
 /datum/round_event/radiation_storm
-	var/list/protected_areas = list(/area/maintenance, /area/turret_protected/ai_upload, /area/turret_protected/ai_upload_foyer, /area/turret_protected/ai)
 
 
 /datum/round_event/radiation_storm/setup()
-	startWhen = rand(30, 40)
-	endWhen = startWhen + 5
+	startWhen = 3
+	endWhen = startWhen + 1
 	announceWhen	= 1
 
 /datum/round_event/radiation_storm/announce()
-	priority_announce("–ядом со станцией обнаружен высокий уровень радиации. Ћучшим укрытием от радиации являются технические тоннели.", "“ревога! јномалия!", 'sound/AI/radiation.ogg')
+	priority_announce("–€дом со станцией обнаружен высокий уровень радиации. Ћучшим укрытием от радиации €вл€ются технические тоннели.", "“ревога! јномали€!", 'sound/AI/radiation.ogg')
 	//sound not longer matches the text, but an audible warning is probably good
 
-
 /datum/round_event/radiation_storm/start()
-	for(var/mob/living/carbon/C in living_mob_list)
-		var/turf/T = get_turf(C)
-		if(!T)
-			continue
-		if(T.z != 1)
-			continue
-
-		var/skip = 0
-		for(var/a in protected_areas)
-			if(istype(T.loc, a))
-				skip = 1
-				continue
-
-		if(skip)
-			continue
-
-		if(locate(/obj/machinery/power/apc) in T)	//damn you maint APCs!!
-			continue
-
-		if(istype(C, /mob/living/carbon/human))
-			var/mob/living/carbon/human/H = C
-			if(prob(5))
-				H.rad_act(rand(100, 160))
-			else
-				H.rad_act(rand(15, 75))
-			if(prob(25))
-				if(prob(75))
-					randmutb(H)
-				else
-					randmutg(H)
-				H.domutcheck()
-
-		else if(istype(C, /mob/living/carbon/monkey))
-			var/mob/living/carbon/monkey/M = C
-			M.rad_act(rand(15, 75))
-
-
-/datum/round_event/radiation_storm/end()
-	priority_announce("–адиаци€ закончилась. ¬озвращайтесь на свои рабочие места.", "јномальная тревога!")
+	SSweather.run_weather("radiation storm",ZLEVEL_STATION)

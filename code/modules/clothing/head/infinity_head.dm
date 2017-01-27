@@ -14,7 +14,7 @@
 	item_state = "helmet"
 	worn_icon = 'icons/mob/infinity_work.dmi'
 	icon = 'icons/obj/clothing/infinity_work.dmi'
-	armor = list(melee = 25, bullet = 25, laser = 30,energy = 25, bomb = 10, bio = 15, rad = 0)
+	armor = list(melee = 25, bullet = 25, laser = 30,energy = 25, bomb = 10, bio = 15, rad = 0, fire = 60, acid = 50)
 	cold_protection = HEAD
 	min_cold_protection_temperature = SPACE_HELM_MIN_TEMP_PROTECT
 	heat_protection = HEAD
@@ -23,7 +23,7 @@
 	strip_delay = 80
 	flags_inv = HIDEEARS|HIDEEYES|HEADCOVERSMOUTH|HIDEHAIR
 	flags_cover = HEADCOVERSEYES
-	burn_state = -1
+	resistance_flags = FIRE_PROOF
 
 /obj/item/clothing/head/blue_ny_hat
 	name = "blue New Year hat"
@@ -47,7 +47,7 @@
 	cold_protection = HEAD
 	min_cold_protection_temperature = SPACE_HELM_MIN_TEMP_PROTECT
 	heat_protection = HEAD
-	armor = list(melee = 25, bullet = 25, laser = 30,energy = 25, bomb = 10, bio = 15, rad = 15)
+	armor = list(melee = 25, bullet = 25, laser = 30,energy = 25, bomb = 10, bio = 15, rad = 15, fire = 50, acid = 50)
 
 /obj/item/clothing/head/captoe
 	name = "cap toe hat"
@@ -151,7 +151,7 @@
 /obj/item/clothing/head/helmet/biker
 	name = "Biker's Helmet"
 	desc = "This helmet should protect you from russians and masked vigilantes."
-	armor = list(melee = 25, bullet = 15, laser = 20, energy = 10, bomb = 10, bio = 0, rad = 0)
+	armor = list(melee = 25, bullet = 15, laser = 20, energy = 10, bomb = 10, bio = 0, rad = 0, fire = 0, acid = 0)
 	icon_state = "biker_helmet"
 	icon = 'icons/obj/clothing/infinity_work.dmi'
 	worn_icon = 'icons/mob/infinity_work.dmi'
@@ -161,7 +161,7 @@
 /obj/item/clothing/head/helmet/richard
 	name = "Richard"
 	desc = "Do you like hurting other people?"
-	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0)
+	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
 	icon_state = "richard"
 	icon = 'icons/obj/clothing/infinity_work.dmi'
 	worn_icon = 'icons/mob/infinity_work.dmi'
@@ -175,7 +175,7 @@
 	icon_state = "doom"
 	icon = 'icons/obj/clothing/infinity_work.dmi'
 	flags = HEADBANGPROTECT
-	armor = list(melee = 40, bullet = 35, laser = 45,energy = 25, bomb = 40, bio = 5, rad = 0)
+	armor = list(melee = 40, bullet = 35, laser = 45,energy = 25, bomb = 40, bio = 5, rad = 0, , fire = 0, acid = 0)
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR
 	strip_delay = 80
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
@@ -187,7 +187,7 @@
 	icon = 'icons/obj/clothing/infinity_work.dmi'
 	icon_state = "dads_mask"
 	item_state = "dads_mask"
-	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0)
+	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR
 	flags = NODROP
 	dog_fashion = null
@@ -201,3 +201,39 @@
 	item_state = "skulltop"
 	flags_inv = HIDEHAIR
 
+/obj/item/clothing/head/helmet/combat_heavy
+	name = "Heavy Combat Helmet"
+	desc = "A combat helmet made out of goliath hide plates infused with ablative materials in a dark urban camouflage."
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon_state = "swat_pmc"
+	item_state = "swat_pmc"
+	armor = list(melee = 25, bullet = 50, laser = 50, energy = 45, bomb = 25, bio = 0, rad = 0, fire = 50, acid = 60)
+	cold_protection = HEAD
+	min_cold_protection_temperature = HELMET_MIN_TEMP_PROTECT
+	heat_protection = HEAD
+	max_heat_protection_temperature = HELMET_MAX_TEMP_PROTECT
+	flags = HEADBANGPROTECT | HEADCOVERSEYES
+	flags_inv = HIDEHAIR
+	strip_delay = 60
+
+/obj/item/clothing/head/janitor_cap
+	name = "exclusive janitor red cap"
+	desc = "Looks like Nanotrasen got so much money to create this pretty red cap!"
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon_state = "janitor_cap"
+	item_state = "janitor_cap"
+
+/obj/item/clothing/head/helmet/uac
+	name = "trooper helmet"
+	desc = "Стандартный шлем десантного отделени&#255; корпорации UAC. Во вс&#255;ком случае, об этом символизирует маленький значок сбоку шлема."
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon_state = "marine_helmet"
+	item_state = "marine_helmet"
+	flags = HEADBANGPROTECT
+	armor = list(melee = 40, bullet = 35, laser = 45,energy = 25, bomb = 40, bio = 5, rad = 0, fire = 20, acid = 50)
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR
+	strip_delay = 80
+	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH

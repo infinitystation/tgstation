@@ -13,10 +13,10 @@
 	var/destination_y
 
 	var/global/datum/gas_mixture/space/space_gas = new
-
+	plane = PLANE_SPACE
 
 /turf/open/space/New()
-	update_icon()
+	icon_state = SPACE_ICON_STATE
 	air = space_gas
 
 /turf/open/space/Destroy(force)
@@ -38,9 +38,12 @@
 
 /turf/open/space/TakeTemperature(temp)
 
+/turf/open/space/RemoveLattice()
+	return
+
 /turf/open/space/AfterChange()
 	..()
-	atmos_overlay_types.Cut()
+	atmos_overlay_types = null
 
 /turf/open/space/Assimilate_Air()
 	return
@@ -48,10 +51,11 @@
 /turf/open/space/proc/update_starlight()
 	if(config.starlight)
 		for(var/t in RANGE_TURFS(1,src)) //RANGE_TURFS is in code\__HELPERS\game.dm
-			if(istype(t, /turf/open/space))
+			if(isspaceturf(t))
 				//let's NOT update this that much pls
 				continue
-			SetLuminosity(4,1)
+			SetLuminosity(4,5)
+			light.mode = LIGHTING_STARLIGHT
 			return
 		SetLuminosity(0)
 
@@ -69,15 +73,14 @@
 			return
 		if(L)
 			if(R.use(1))
-				user << "<span class='notice'>You begin constructing catwalk...</span>"
+				user << "<span class='notice'>You construct a catwalk.</span>"
 				playsound(src, 'sound/weapons/Genhit.ogg', 50, 1)
-				qdel(L)
-				ReplaceWithCatwalk()
+				new/obj/structure/lattice/catwalk(src)
 			else
 				user << "<span class='warning'>You need two rods to build a catwalk!</span>"
 			return
 		if(R.use(1))
-			user << "<span class='notice'>Constructing support lattice...</span>"
+			user << "<span class='notice'>You construct a lattice.</span>"
 			playsound(src, 'sound/weapons/Genhit.ogg', 50, 1)
 			ReplaceWithLattice()
 		else
@@ -165,5 +168,10 @@
 		return 1
 	return 0
 
-/turf/open/space/update_icon()
-	icon_state = SPACE_ICON_STATE
+/turf/open/space/is_transition_turf()
+	if(destination_x || destination_y || destination_z)
+		return 1
+
+
+/turf/open/space/acid_act(acidpwr, acid_volume)
+	return 0

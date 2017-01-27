@@ -51,6 +51,10 @@
 
 /obj/item/clothing/tie/badge/holo/cord
 	icon_state = "holobadge-cord"
+	slot_flags = SLOT_NECK
+
+/obj/item/clothing/tie/badge/holo/cord/attach(obj/item/clothing/under/U, user)
+	return
 
 /obj/item/clothing/tie/badge/holo/attack_self(mob/user as mob)
 	if(!stored_name)

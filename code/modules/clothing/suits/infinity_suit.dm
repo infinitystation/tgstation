@@ -15,11 +15,10 @@
 	item_color = "black_hoody"
 	icon = 'icons/obj/clothing/infinity_work.dmi'
 	worn_icon = 'icons/mob/infinity_work.dmi'
-	hooded = 1
 	togglename = "Toggle Hood"
-	hoodtype = /obj/item/clothing/head/blackhoody
+	hoodtype = /obj/item/clothing/head/hooded/blackhoody
 
-/obj/item/clothing/head/blackhoody
+/obj/item/clothing/head/hooded/blackhoody
 	name = "black hood"
 	icon_state = "blackhoody"
 	worn_icon = 'icons/mob/infinity_work.dmi'
@@ -102,11 +101,10 @@
 	item_state = "bl_suit"
 	icon = 'icons/obj/clothing/infinity_work.dmi'
 	worn_icon = 'icons/mob/infinity_work.dmi'
-	hooded = 1
 	togglename = "Toggle Hood"
-	hoodtype = /obj/item/clothing/head/whitehoody
+	hoodtype = /obj/item/clothing/head/hooded/whitehoody
 
-/obj/item/clothing/head/whitehoody
+/obj/item/clothing/head/hooded/whitehoody
 	name = "white hood"
 	icon_state = "whitehoody"
 	worn_icon = 'icons/mob/infinity_work.dmi'
@@ -281,7 +279,7 @@
 	icon = 'icons/obj/clothing/infinity_work.dmi'
 	worn_icon = 'icons/mob/infinity_work.dmi'
 	item_state = "rad_suit"
-	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 5, bio = 0, rad = 50)
+	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 5, bio = 0, rad = 50, fire = 0, acid = 0)
 
 /obj/item/clothing/suit/gentlecoat
 	name = "gentle coat"
@@ -326,8 +324,8 @@
 	icon_state = "forensics"
 	icon = 'icons/obj/clothing/infinity_work.dmi'
 	worn_icon = 'icons/mob/infinity_work.dmi'
-	allowed = list(/obj/item/weapon/tank/internals/emergency_oxygen, /obj/item/device/flashlight,/obj/item/weapon/gun/energy,/obj/item/weapon/gun/projectile,/obj/item/ammo_casing,/obj/item/weapon/melee/baton,/obj/item/device/taperecorder)
-	armor = list(melee = 10, bullet = 10, laser = 15, energy = 10, bomb = 0, bio = 0, rad = 0)
+	allowed = list(/obj/item/weapon/tank/internals/emergency_oxygen, /obj/item/device/flashlight,/obj/item/weapon/gun,/obj/item/ammo_casing,/obj/item/weapon/melee/baton,/obj/item/device/taperecorder)
+	armor = list(melee = 10, bullet = 10, laser = 15, energy = 10, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
 
 /obj/item/clothing/suit/forensics/long
 	name = "jacket"
@@ -340,7 +338,7 @@
 	icon_state = "commissar"
 	item_state = "r_suit"
 	item_color = "commissar"
-	armor = list(melee = 10, bullet = 10, laser = 10,energy = 0, bomb = 0, bio = 0, rad = 0)
+	armor = list(melee = 10, bullet = 10, laser = 10,energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 50)
 	strip_delay = 60
 	icon = 'icons/obj/clothing/infinity_work.dmi'
 	worn_icon = 'icons/mob/infinity_work.dmi'
@@ -353,11 +351,10 @@
 	item_color = "merser_jacket"
 	icon = 'icons/obj/clothing/infinity_work.dmi'
 	worn_icon = 'icons/mob/infinity_work.dmi'
-	hooded = 1
 	togglename = "Toggle Hood"
-	hoodtype = /obj/item/clothing/head/merser
+	hoodtype = /obj/item/clothing/head/hooded/merser
 
-/obj/item/clothing/head/merser
+/obj/item/clothing/head/hooded/merser
 	name = "merser jacket hood"
 	icon_state = "merser_hood"
 	worn_icon = 'icons/mob/infinity_work.dmi'
@@ -372,7 +369,7 @@
 	icon_state = "russofurcoat"
 	item_state = "bl_suit"
 	item_color = "russofurcoat"
-	armor = list(melee = 10, bullet = 15, laser = 15, energy = 5, bomb = 10, bio = 0, rad = 0)
+	armor = list(melee = 10, bullet = 15, laser = 15, energy = 5, bomb = 10, bio = 0, rad = 0, fire = 0, acid = 0)
 	strip_delay = 60
 	icon = 'icons/obj/clothing/infinity_work.dmi'
 	worn_icon = 'icons/mob/infinity_work.dmi'
@@ -389,45 +386,31 @@
 	worn_icon = 'icons/mob/infinity_work.dmi'
 	togglename = "zipper"
 
-/obj/item/clothing/suit/hazard
+/obj/item/clothing/suit/bio_suit/hazard
 	name = "hazard suit"
-	desc = "Just an hazard suit..."
-	icon_state = "common"
-	icon = 'icons/obj/clothing/uac/suit.dmi'
-	worn_icon = 'icons/mob/uac/suit.dmi'
-	w_class = 4
-	gas_transfer_coefficient = 0.01
-	permeability_coefficient = 0.01
-	flags = THICKMATERIAL
-	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
-	slowdown = 1
-	allowed = list(/obj/item/weapon/tank/internals/emergency_oxygen,/obj/item/weapon/pen,/obj/item/device/flashlight/pen, /obj/item/weapon/reagent_containers/dropper, /obj/item/weapon/reagent_containers/syringe, /obj/item/weapon/reagent_containers/hypospray)
-	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 100, rad = 100)
-	flags_inv = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT
-	strip_delay = 70
-	put_on_delay = 70
-	burn_state = FIRE_PROOF
+	desc = "Just a hazard suit..."
+	icon_state = "science_suit"
+	item_state = "science_suit"
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	armor = list(melee = 15, bullet = 0, laser = 10, energy = 10, bomb = 0, bio = 100, rad = 100, fire = 30, acid = 100)
 
-/obj/item/clothing/head/hazard
+/obj/item/clothing/head/bio_suit/hazard
 	name = "hazard helmet"
-	icon_state = "common"
 	desc = "A helmet that protects the head and face from biological comtaminants."
-	permeability_coefficient = 0.01
-	flags = THICKMATERIAL
-	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 100, rad = 100)
-	flags_inv = HIDEEARS|HIDEHAIR|HIDEFACIALHAIR
-	burn_state = FIRE_PROOF
-	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
-	icon = 'icons/obj/clothing/uac/hats.dmi'
-	worn_icon = 'icons/mob/uac/hats.dmi'
-
+	icon_state = "science_helmet"
+	item_state = "science_helmet"
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	armor = list(melee = 5, bullet = 5, laser = 0,energy = 10, bomb = 0, bio = 100, rad = 100, fire = 30, acid = 40)
 
 /obj/item/clothing/shoes/boots
 	name = "Boots"
 	desc = "A pair of black boots."
-	icon_state = "common"
-	icon = 'icons/obj/clothing/uac/shoes.dmi'
-	worn_icon = 'icons/mob/uac/shoes.dmi'
+	icon_state = "shoes"
+	item_state = "bl_suit"
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'
 
 /obj/item/clothing/suit/blackjack
 	name = "blackjack suit"
@@ -444,11 +427,11 @@
 	item_state = "coatsecurity"
 	icon = 'icons/obj/clothing/infinity_work.dmi'
 	worn_icon = 'icons/mob/infinity_work.dmi'
-	armor = list(melee = 25, bullet = 15, laser = 30, energy = 10, bomb = 25, bio = 0, rad = 0)
-	allowed = list(/obj/item/weapon/gun/energy,/obj/item/weapon/reagent_containers/spray/pepper,/obj/item/weapon/gun/projectile,/obj/item/ammo_box,/obj/item/ammo_casing,/obj/item/weapon/melee/baton,/obj/item/weapon/restraints/handcuffs,/obj/item/device/flashlight/seclite,/obj/item/weapon/melee/classic_baton/telescopic)
-	hoodtype = /obj/item/clothing/head/security_new
+	armor = list(melee = 25, bullet = 15, laser = 30, energy = 10, bomb = 25, bio = 0, rad = 0, fire = 0, acid = 10)
+	allowed = list(/obj/item/weapon/gun/energy,/obj/item/weapon/reagent_containers/spray/pepper,/obj/item/weapon/gun,/obj/item/ammo_box,/obj/item/ammo_casing,/obj/item/weapon/melee/baton,/obj/item/weapon/restraints/handcuffs,/obj/item/device/flashlight/seclite,/obj/item/weapon/melee/classic_baton/telescopic)
+	hoodtype = /obj/item/clothing/head/hooded/security_new
 
-/obj/item/clothing/head/security_new
+/obj/item/clothing/head/hooded/security_new
 	name = "winter hood"
 	desc = "A hood attached to a heavy winter jacket."
 	icon_state = "winterhood_security"
@@ -464,23 +447,23 @@
 	icon = 'icons/obj/clothing/infinity_work.dmi'
 	worn_icon = 'icons/mob/infinity_work.dmi'
 	icon_state = "dragon_cape"
-	armor = list(melee = 55, bullet = 25, laser = 60, energy = 50, bomb = 50, bio = 60, rad = 50)
-	hoodtype = /obj/item/clothing/head/dragon_helmet
-	unacidable = 1
+	armor = list(melee = 55, bullet = 25, laser = 60, energy = 50, bomb = 50, bio = 60, rad = 50, fire = 90, acid = 80)
+	hoodtype = /obj/item/clothing/head/hooded/dragon_helmet
+	resistance_flags = FIRE_PROOF | UNACIDABLE
 
-/obj/item/clothing/head/dragon_helmet
+/obj/item/clothing/head/hooded/dragon_helmet
 	name = "dragon helmet"
 	desc = "Legends doesn't burn villages."
 	icon = 'icons/obj/clothing/infinity_work.dmi'
 	worn_icon = 'icons/mob/infinity_work.dmi'
 	icon_state = "dragon_helmet"
-	armor = list(melee = 55, bullet = 25, laser = 60, energy = 50, bomb = 50, bio = 60, rad = 50)
+	armor = list(melee = 55, bullet = 25, laser = 60, energy = 50, bomb = 50, bio = 60, rad = 50, fire = 90, acid = 60)
 	body_parts_covered = HEAD
 	heat_protection = HEAD
 	max_heat_protection_temperature = FIRE_IMMUNITY_HELM_MAX_TEMP_PROTECT
 	flags = NODROP
 	flags_inv = HIDEHAIR|HIDEFACE|HIDEEARS
-	unacidable = 1
+	resistance_flags = FIRE_PROOF | UNACIDABLE
 
 /obj/item/clothing/suit/doctor_w
 	name = "red tails"
@@ -508,7 +491,7 @@
 	icon_state = "giant_armor"
 	item_state = "giant_armor"
 	body_parts_covered = CHEST|GROIN|ARMS|LEGS
-	armor = list(melee = 66, bullet = 50, laser = 48, energy = 33, bomb = 32, bio = 0, rad = 0)
+	armor = list(melee = 66, bullet = 50, laser = 48, energy = 33, bomb = 32, bio = 0, rad = 0, fire = 50, acid = 40)
 	flags_inv = HIDEJUMPSUIT
 	cold_protection = CHEST|GROIN|LEGS|ARMS
 	heat_protection = CHEST|GROIN|LEGS|ARMS
@@ -526,5 +509,72 @@
 	cold_protection = CHEST|ARMS
 	flags_inv = HIDEFACIALHAIR
 
+/obj/item/clothing/suit/hide_mantle
+	name = "hide mantle"
+	desc = "A rather grisly selection of cured hides and skin, sewn together to form a ragged mantle."
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon_state = "mantle-unathi"
+	item_state = "mantle-unathi"
 
+/obj/item/clothing/suit/cargo_jacket
+	name = "cargo jacket"
+	desc = "В р&#255;д кладет и тащит!"
+	icon_state = "cargo_jacket"
+	item_state = "bl_suit"
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'
 
+/obj/item/clothing/suit/armor/combat_heavy
+	name = "Heavy Combat Armor"
+	desc = "Full-body combat armor produced by Ion Incorporated for its private military forces. Often worn by riflemen or other front-line combat troops. Covers the entire body excluding the head with ceramic plates infused with goliath plates and coated in ablative materials, allowing for extreme ballistic protection and moderate laser or energy protection. Comes in a dark, urban camouflage."
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon_state = "combat_armor"
+	item_state = "combat_armor"
+	blood_overlay_type = "armor"
+	w_class = 4
+	flags = THICKMATERIAL
+	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
+	cold_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
+	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
+	armor = list(melee = 35, bullet = 60, laser = 45, energy = 40, bomb = 60, bio = 0, rad = 0, fire = 60, acid = 80)
+	strip_delay = 130
+	put_on_delay = 75
+	slowdown = 0.5
+
+/obj/item/clothing/suit/janitor_jacket
+	name = "exclusive janitor jacket"
+	desc = "Looks like Nanotrasen got so much money to create this jacket!"
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon_state = "janitor_jacket"
+	item_state = "ro_suit"
+
+/obj/item/clothing/suit/hooded/skeletor_hoody
+	name = "True villain's garbings"
+	desc = "We will win this game the old-fashioned way, the tried and true way: we will cheat!"
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	icon_state = "skeletor_garbings"
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	togglename = "Toggle Hood"
+	hoodtype = /obj/item/clothing/head/hooded/skeletor_hoody
+
+/obj/item/clothing/head/hooded/skeletor_hoody
+	name = "True villain's hood"
+	desc = "I'm so powerful I even impress myself!"
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	icon_state = "skeletor_hood"
+	body_parts_covered = HEAD
+	flags = NODROP
+	flags_inv = HIDEHAIR|HIDEEARS
+
+/obj/item/clothing/suit/armor/uac
+	name = "trooper armor"
+	desc = "Тяжёлая боевая броня десанта корпорации UAC. Исходя из глухости при стучание, большая часть брони сделана с упором на сдерживание физических объектов..."
+	icon = 'icons/obj/clothing/infinity_work.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	icon_state = "marine_armor"
+	item_state = "marine_armor"
+	slowdown = 0.5
+	armor = list(melee = 50, bullet = 60, laser = 35, energy = 20, bomb = 35, bio = 0, rad = 20, fire = 30, acid = 20)

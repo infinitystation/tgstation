@@ -15,15 +15,15 @@
 					matches += "IP ([client.address])"
 				if( (client.connection != "web") && (M.computer_id == client.computer_id) )
 					if(matches)
-						matches += " and "
+						matches += " и "
 					matches += "ID ([client.computer_id])"
-					spawn() alert("You have logged in already with another key this round, please log out of this one NOW or risk being banned!")
+					spawn() alert("Вы уже заходили под другим аккаунтом в данном раунде, пожалуйста, выдите из текущего аккаунта, иначе есть риск получить бан!")
 				if(matches)
 					if(M.client)
-						message_admins("<font color='red'><B>Notice: </B><font color='blue'>[key_name_admin(src)] has the same [matches] as [key_name_admin(M)].</font>")
+						message_admins("<font color='red'><B>Замечание: </B><font color='blue'>[key_name_admin(src)] с тем же самым [matches] как у [key_name_admin(M)].</font>")
 						log_access("Notice: [key_name(src)] has the same [matches] as [key_name(M)].")
 					else
-						message_admins("<font color='red'><B>Notice: </B><font color='blue'>[key_name_admin(src)] has the same [matches] as [key_name_admin(M)] (no longer logged in). </font>")
+						message_admins("<font color='red'><B>Замечание: </B><font color='blue'>[key_name_admin(src)] с тем же самым [matches] как у [key_name_admin(M)] (больше не в сети). </font>")
 						log_access("Notice: [key_name(src)] has the same [matches] as [key_name(M)] (no longer logged in).")
 
 /mob/Login()
@@ -70,4 +70,5 @@
 				AA.display_to(list(src))
 
 	update_client_colour()
-	client.click_intercept = null
+	if(client)
+		client.click_intercept = null

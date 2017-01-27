@@ -1,11 +1,11 @@
 /datum/round_event_control/wizard/magicarp //these fish is loaded
 	name = "Magicarp"
 	weight = 1
-	typepath = /datum/round_event/wizard/magicarp/
+	typepath = /datum/round_event/wizard/magicarp
 	max_occurrences = 1
 	earliest_start = 0
 
-/datum/round_event/wizard/magicarp/
+/datum/round_event/wizard/magicarp
 	announceWhen	= 3
 	startWhen = 50
 
@@ -37,6 +37,7 @@
 	projectilesound = 'sound/weapons/emitter.ogg'
 	maxHealth = 50
 	health = 50
+	gold_core_spawnable = 0 //Пусть спавнятся простые карпы, а не эта чертовщина.
 
 /mob/living/simple_animal/hostile/carp/ranged/New()
 	projectiletype = pick(typesof(initial(projectiletype)))

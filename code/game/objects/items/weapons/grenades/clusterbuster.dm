@@ -5,6 +5,7 @@
 	desc = "Use of this weapon may constiute a war crime in your area, consult your local captain."
 	name = "clusterbang"
 	icon = 'icons/obj/grenade.dmi'
+	pin_sound = 'sound/weapons/armbomb.ogg'
 	icon_state = "clusterbang"
 	var/payload = /obj/item/weapon/grenade/flashbang/cluster
 
@@ -43,7 +44,7 @@
 	payload = payload_type
 	active = 1
 	walk_away(src,loc,rand(1,4))
-	addtimer(src, "prime", rand(15,60))
+	addtimer(CALLBACK(src, .proc/prime), rand(15,60))
 
 /obj/item/weapon/grenade/clusterbuster/segment/prime()
 
@@ -126,3 +127,10 @@
 /obj/item/weapon/grenade/clusterbuster/clf3
 	name = "WELCOME TO HELL"
 	payload = /obj/item/weapon/grenade/chem_grenade/clf3
+
+
+//random clusterbuster spawner
+/obj/item/weapon/grenade/clusterbuster/random/New()
+	var/real_type = pick(subtypesof(/obj/item/weapon/grenade/clusterbuster))
+	new real_type(loc)
+	qdel(src)

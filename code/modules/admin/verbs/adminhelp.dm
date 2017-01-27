@@ -1,4 +1,5 @@
-/proc/keywords_lookup(msg)
+/proc/keywords_lookup(msg,irc)
+
 	//explode the input msg into a list
 	var/list/msglist = splittext(msg, " ")
 
@@ -6,6 +7,7 @@
 	var/list/surnames = list()
 	var/list/forenames = list()
 	var/list/ckeys = list()
+	var/founds = ""
 	for(var/mob/M in mob_list)
 		var/list/indexing = list(M.real_name, M.name)
 		if(M.mind)
@@ -54,6 +56,12 @@
 						msg += "[original_word]<font size='1' color='[is_antag ? "red" : "black"]'>(<A HREF='?_src_=holder;adminmoreinfo=\ref[found]'>?</A>|<A HREF='?_src_=holder;adminplayerobservefollow=\ref[found]'>F</A>)</font> "
 						continue
 		msg += "[original_word] "
+	if(irc)
+		if(founds == "")
+			return "Search Failed"
+		else
+			return founds
+
 	return msg
 
 
@@ -87,7 +95,7 @@
 
 	//remove our adminhelp verb temporarily to prevent spamming of admins.
 	src.verbs -= /client/verb/adminhelp
-	adminhelptimerid = addtimer(src, "giveadminhelpverb", 1200, FALSE) //2 minute cooldown of admin helps
+	adminhelptimerid = addtimer(CALLBACK(src, .proc/giveadminhelpverb), 1200, TIMER_STOPPABLE) //2 minute cooldown of admin helps
 
 	msg = keywords_lookup(msg)
 
@@ -103,6 +111,7 @@
 	for(var/client/X in admins)
 		if(X.prefs.toggles & SOUND_ADMINHELP)
 			X << 'sound/effects/adminhelp.ogg'
+		window_flash(X)
 		X << msg
 
 
@@ -112,6 +121,8 @@
 	//send it to irc if nobody is on and tell us how many were on
 	var/admin_number_present = send2irc_adminless_only(ckey,original_msg)
 	log_admin("HELP: [key_name(src)]: [original_msg] - heard by [admin_number_present] non-AFK admins who have +BAN.")
+	if(admin_number_present <= 0)
+		src << "<span class='notice'>No active admins are online, your adminhelp was sent to the admin irc.</span>"
 	feedback_add_details("admin_verb","AH") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 	return
 
@@ -137,8 +148,9 @@
 			final = "[msg] - No admins online"
 		else
 			final = "[msg] - All admins AFK ([adm["afk"]]/[adm["total"]]), stealthminned ([adm["stealth"]]/[adm["total"]]), or lack[rights2text(requiredflags, " ")] ([adm["noflags"]]/[adm["total"]])"
-		send2irc(source,final)
-		send2otherserver(source,final)
+		//send2irc(source,final)
+		//send2otherserver(source,final)
+		log_admin("WARNING: [final]")
 
 
 /proc/send2irc(msg,msg2)
@@ -156,3 +168,18 @@
 		message["crossmessage"] = type
 
 		world.Export("[global.cross_address]?[list2params(message)]")
+
+
+/proc/ircadminwho()
+	var/msg = "Admins: "
+	for(var/client/C in admins)
+		msg += "[C] "
+
+		if(C.holder.fakekey)
+			msg += "(Stealth)"
+
+		if(C.is_afk())
+			msg += "(AFK)"
+		msg += ", "
+
+	return msg

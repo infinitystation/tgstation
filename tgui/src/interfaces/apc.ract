@@ -1,4 +1,4 @@
-<script>
+﻿<script>
   component.exports = {
     data: {
       powerState (status) {
@@ -19,7 +19,7 @@
       },
       malfButton () {
         switch (this.get('data.malfStatus')) {
-          case 1: return 'Перепрограировать'
+          case 1: return 'Перепрограммировать'
           case 2:
           case 4: return 'Перенос процесса ядра'
           case 3: return 'Вернуться в главное ядро'
@@ -42,84 +42,92 @@
     }
   }
 </script>
-
-<ui-notice>
-  {{#if data.siliconUser}}
-    <ui-section label='Блокировка интерфейса'>
-      <ui-button icon='{{data.locked ? "lock" : "unlock"}}' action='lock'>{{data.locked ? "Включена" : "Выключена"}}</ui-button>
-    </ui-section>
-  {{else}}
-    <span>Вставьте ID карту, чтобы {{data.locked ? "разблокировать" : "заблокировать"}} этот интерфейс.</span>
-  {{/if}}
-</ui-notice>
-<ui-display title='Статус'>
-  <ui-section label='Главный рубильник'>
-    {{#if data.locked && !data.siliconUser}}
-      <span class='{{data.isOperating ? "good" : "bad"}}'>{{data.isOperating ? "Вкл" : "Выкл"}}</span>
-    {{else}}
-      <ui-button icon='{{data.isOperating ? "power-off" : "close"}}' style='{{data.isOperating ? "selected" : null}}'
-        action='breaker'>{{data.isOperating ? "Вкл" : "Выкл"}}</ui-button>
-    {{/if}}
-  </ui-section>
-  <ui-section label='Внешнее питание'>
-    <span class='{{powerState(data.externalPower)}}'>{{data.externalPower == 2 ? "Есть" : data.externalPower == 1 ? "Плохое" : "Отсутствует"}}</span>
-  </ui-section>
-  <ui-section label='Батарея'>
-    {{#if data.powerCellStatus != null}}
-      <ui-bar min='0' max='100' value='{{data.powerCellStatus}}' state='{{powerCellStatusState}}'>{{Math.fixed(adata.powerCellStatus)}}%</ui-bar>
-    {{else}}
-      <span class='bad'>Отсутствует</span>
-    {{/if}}
-  </ui-section>
-  {{#if data.powerCellStatus != null}}
-    <ui-section label='Режим заряда'>
-      {{#if data.locked && !data.siliconUser}}
-        <span class='{{data.chargeMode ? "good" : "bad"}}'>{{data.chargeMode ? "Авто" : "Выкл"}}</span>
-      {{else}}
-        <ui-button icon='{{data.chargeMode ? "refresh" : "close"}}' style='{{data.chargeMode ? "selected" : null}}'
-          action='charge'>{{data.chargeMode ? "Авто" : "Выкл"}}</ui-button>
-      {{/if}}
-      &nbsp;
-      [<span class='{{powerState(data.chargingStatus)}}'>{{data.chargingStatus == 2 ? "Полностью заряжена" : data.chargingStatus == 1 ? "Заряжается" : "Не заряжается"}}</span>]
-    </ui-section>
-  {{/if}}
-</ui-display>
-<ui-display title='Энергоканалы'>
-  {{#each data.powerChannels}}
-    <ui-section label='{{title}}' nowrap>
-      <div class='content'>{{Math.round(adata.powerChannels[@index].powerLoad)}} W</div>
-      <div class='content'><span class='{{status >= 2 ? "good" : "bad"}}'>{{status >= 2 ? "Вкл" : "Выкл"}}</span></div>
-      <div class='content'>[<span>{{status == 1 || status == 3 ? "Авто" : "Ручное"}}</span>]</div>
-      <div class='content' style='float:right'>
-        {{#if !data.locked || data.siliconUser}}
-          <ui-button icon='refresh' state='{{status == 1 || status == 3 ? "selected" : null}}'
-            action='channel' params='{{topicParams.auto}}'>Авто</ui-button>
-          <ui-button icon='power-off' state='{{status == 2 ? "selected" : null}}' action='channel'
-            params='{{topicParams.on}}'>Вкл</ui-button>
-          <ui-button icon='close' state='{{status == 0 ? "selected" : null}}' action='channel'
-            params='{{topicParams.off}}'>Выкл</ui-button>
-        {{/if}}
-      </div>
-    </ui-section>
-  {{/each}}
-  <ui-section label='Общая нагрузка'>
-    <span class='bold'>{{Math.round(adata.totalLoad)}} Вт</span>
-  </ui-section>
-</ui-display>
-{{#if data.siliconUser}}
-  <ui-display title='Системные коррекции'>
-    <ui-button icon='lightbulb-o' action='overload'>Перегрузить</ui-button>
-    {{#if data.malfStatus}}
-      <ui-button icon='{{malfIcon}}' state='{{data.malfStatus == 4 ? "disabled" : null}}' action='{{malfAction}}'>{{malfButton}}</ui-button>
-    {{/if}}
-  </ui-display>
+{{#if data.failTime}}
+	<ui-notice>
+		<b><h3>СИСТЕМНАЯ ОШИБКА</h3></b>
+		<i>Обнаружена неисправность регуляторов потока ввода/вывода. Ожидание перезагрузки системы...</i><br>
+		Автоматическая перезагрузка в {{data.failTime}} секунд...
+		<ui-button icon='refresh' action='reboot'>Перезагрузить сейчас</ui-button><br><br><br>
+	</ui-notice>
+{{else}}
+	<ui-notice>
+	  {{#if data.siliconUser}}
+		<ui-section label='Блокировка интерфейса'>
+		  <ui-button icon='{{data.locked ? "lock" : "unlock"}}' action='lock'>{{data.locked ? "Включена" : "Отключена"}}</ui-button>
+		</ui-section>
+	  {{else}}
+		<span>Вставьте ID карту, чтобы {{data.locked ? "разблокировать" : "заблокировать"}} этот интерфейс.</span>
+	  {{/if}}
+	</ui-notice>
+	<ui-display title='Состояние питания'>
+	  <ui-section label='Главный рубильник'>
+		{{#if data.locked && !data.siliconUser}}
+		  <span class='{{data.isOperating ? "good" : "bad"}}'>{{data.isOperating ? "Вкл" : "Выкл"}}</span>
+		{{else}}
+		  <ui-button icon='{{data.isOperating ? "power-off" : "close"}}' style='{{data.isOperating ? "selected" : null}}'
+			action='breaker'>{{data.isOperating ? "Вкл" : "Выкл"}}</ui-button>
+		{{/if}}
+	  </ui-section>
+	  <ui-section label='Внешнее питание'>
+		<span class='{{powerState(data.externalPower)}}'>{{data.externalPower == 2 ? "Хорошнн" : data.externalPower == 1 ? "Низкое" : "Отсутствует"}}</span>
+	  </ui-section>
+	  <ui-section label='Элемент питания'>
+		{{#if data.powerCellStatus != null}}
+		  <ui-bar min='0' max='100' value='{{data.powerCellStatus}}' state='{{powerCellStatusState}}'>{{Math.fixed(adata.powerCellStatus)}}%</ui-bar>
+		{{else}}
+		  <span class='bad'>Удален</span>
+		{{/if}}
+	  </ui-section>
+	  {{#if data.powerCellStatus != null}}
+		<ui-section label='Режим зарядки'>
+		  {{#if data.locked && !data.siliconUser}}
+			<span class='{{data.chargeMode ? "good" : "bad"}}'>{{data.chargeMode ? "Авто" : "Выкл"}}</span>
+		  {{else}}
+			<ui-button icon='{{data.chargeMode ? "refresh" : "close"}}' style='{{data.chargeMode ? "selected" : null}}'
+			  action='charge'>{{data.chargeMode ? "Авто" : "Выкл"}}</ui-button>
+		  {{/if}}
+		  &nbsp;
+		  [<span class='{{powerState(data.chargingStatus)}}'>{{data.chargingStatus == 2 ? "Полностью заряжен" : data.chargingStatus == 1 ? "Заряжается" : "Не заряжается"}}</span>]
+		</ui-section>
+	  {{/if}}
+	</ui-display>
+	<ui-display title='Каналы питания'>
+	  {{#each data.powerChannels}}
+		<ui-section label='{{title}}' nowrap>
+		  <div class='content'>{{Math.round(adata.powerChannels[@index].powerLoad)}} Вт</div>
+		  <div class='content'><span class='{{status >= 2 ? "good" : "bad"}}'>{{status >= 2 ? "Вкл" : "Выкл"}}</span></div>
+		  <div class='content'>[<span>{{status == 1 || status == 3 ? "Авто" : "Вручную"}}</span>]</div>
+		  <div class='content' style='float:right'>
+			{{#if !data.locked || data.siliconUser}}
+			  <ui-button icon='refresh' state='{{status == 1 || status == 3 ? "selected" : null}}'
+				action='channel' params='{{topicParams.auto}}'>Авто</ui-button>
+			  <ui-button icon='power-off' state='{{status == 2 ? "selected" : null}}' action='channel'
+				params='{{topicParams.on}}'>Вкл</ui-button>
+			  <ui-button icon='close' state='{{status == 0 ? "selected" : null}}' action='channel'
+				params='{{topicParams.off}}'>Выкл</ui-button>
+			{{/if}}
+		  </div>
+		</ui-section>
+	  {{/each}}
+	  <ui-section label='Общая нагрузка'>
+		<span class='bold'>{{Math.round(adata.totalLoad)}} Вт</span>
+	  </ui-section>
+	</ui-display>
+	{{#if data.siliconUser}}
+	  <ui-display title='Ручное управление системой'>
+		<ui-button icon='lightbulb-o' action='overload'>Перегрузить</ui-button>
+		{{#if data.malfStatus}}
+		  <ui-button icon='{{malfIcon}}' state='{{data.malfStatus == 4 ? "disabled" : null}}' action='{{malfAction}}'>{{malfButton}}</ui-button>
+		{{/if}}
+	  </ui-display>
+	{{/if}}
+	<ui-notice>
+	  <ui-section label='Замок крышки'>
+		{{#if data.locked && !data.siliconUser}}
+		  <span>{{data.coverLocked ? "Закрыт" : "Открыт"}}</span>
+		{{else}}
+		  <ui-button icon='{{data.coverLocked ? "lock" : "unlock"}}' action='cover'>{{data.coverLocked ? "Закрыт" : "Открыт"}}</ui-button>
+		{{/if}}
+	  </ui-section>
+	</ui-notice>
 {{/if}}
-<ui-notice>
-  <ui-section label='Замок крышки'>
-    {{#if data.locked && !data.siliconUser}}
-      <span>{{data.coverLocked ? "Закрыто" : "Открыто"}}</span>
-    {{else}}
-      <ui-button icon='{{data.coverLocked ? "lock" : "unlock"}}' action='cover'>{{data.coverLocked ? "Закрыто" : "Открыто"}}</ui-button>
-    {{/if}}
-  </ui-section>
-</ui-notice>
