@@ -4,7 +4,7 @@
 /obj/machinery/power/solar
 	name = "solar panel"
 	desc = "A solar panel. Generates electricity when in contact with sunlight."
-	icon = 'icons/obj/power.dmi'
+	icon = 'icons/obj/infinity_object.dmi'
 	icon_state = "sp_base"
 	anchored = 1
 	density = 1
@@ -103,9 +103,9 @@
 	..()
 	cut_overlays()
 	if(stat & BROKEN)
-		add_overlay(image('icons/obj/power.dmi', icon_state = "solar_panel-b", layer = FLY_LAYER))
+		add_overlay(image('icons/obj/infinity_object.dmi', icon_state = "solar_panel-b", layer = FLY_LAYER))
 	else
-		add_overlay(image('icons/obj/power.dmi', icon_state = "solar_panel", layer = FLY_LAYER))
+		add_overlay(image('icons/obj/infinity_object.dmi', icon_state = "solar_panel", layer = FLY_LAYER))
 		src.setDir(angle2dir(adir))
 
 //calculates the fraction of the sunlight that the panel recieves
@@ -181,7 +181,7 @@
 /obj/item/solar_assembly
 	name = "solar panel assembly"
 	desc = "A solar panel assembly kit, allows constructions of a solar panel, or with a tracking circuit board, a solar tracker."
-	icon = 'icons/obj/power.dmi'
+	icon = 'icons/obj/infinity_object.dmi'
 	icon_state = "sp_base"
 	item_state = "electropack"
 	w_class = WEIGHT_CLASS_BULKY // Pretty big!
