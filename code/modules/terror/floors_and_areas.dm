@@ -185,6 +185,11 @@
 	requires_power = 0
 	has_gravity = 1
 
+/area/syndicate_mothership/enemy
+	name = "Enemy Base"
+	icon_state = "enemy"
+	icon = 'icons/turf/infinity.dmi'
+
 /area/alien_base
 	name = "Alien Base"
 	icon_state = "green"
@@ -214,6 +219,10 @@
 
 
 ///Flors///
+
+/turf/open/floor/plasteel/recharge_floor/black
+	icon_state = "recharge_floor_black"
+	icon = 'icons/turf/infinity.dmi'
 
 /turf/open/floor/plasteel/darkvault/delivary
 	icon = 'icons/turf/infinity.dmi'

@@ -53,6 +53,12 @@
 	name = "Syndicate Infiltrator"
 	blob_allowed = FALSE
 
+/area/shuttle/syndicate/cruiser
+	name = "Syndicate Cruiser"
+
+/area/shuttle/syndicate/enemy
+	name = "Enemy Shuttle"
+
 /area/shuttle/assault_pod
 	name = "Steel Rain"
 	blob_allowed = FALSE

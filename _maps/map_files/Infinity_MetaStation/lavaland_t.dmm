@@ -1373,6 +1373,7 @@
 	height = 7;
 	id = "mining_base_sci";
 	name = "Mining base";
+	turf_type = /turf/open/floor/plating/asteroid/basalt/lava_land_surface;
 	width = 4
 	},
 /turf/closed/wall/shuttle/smooth{
@@ -5452,6 +5453,20 @@
 /obj/effect/decal/remains/human,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/mine/shelter)
+"mi" = (
+/obj/docking_port/stationary{
+	area_type = /area/lavaland/surface/outdoors;
+	dheight = 10;
+	dir = 8;
+	dwidth = 2;
+	height = 11;
+	id = "enemy_lavaland";
+	name = "Lavaland";
+	turf_type = /turf/open/chasm/straight_down/lava_land_surface;
+	width = 5
+	},
+/turf/open/chasm/straight_down/lava_land_surface,
+/area/lavaland/surface/outdoors)
 
 (1,1,1) = {"
 ab
@@ -33743,7 +33758,7 @@ at
 at
 aA
 aA
-aA
+mi
 aA
 aA
 aA
@@ -34256,7 +34271,7 @@ at
 at
 at
 at
-ly
+aA
 aA
 aA
 aA
@@ -59603,7 +59618,7 @@ aN
 aN
 aN
 aN
-lF
+lB
 aN
 aN
 aN
@@ -60122,7 +60137,7 @@ jS
 aN
 aN
 aN
-lO
+lB
 aN
 aN
 jT
@@ -60371,13 +60386,13 @@ aJ
 aJ
 aN
 aN
-lA
+lz
 aN
 aN
 aN
 aN
 aN
-lK
+lz
 aN
 aN
 aN
@@ -60632,7 +60647,7 @@ jV
 aN
 jY
 aN
-lH
+lB
 aN
 aN
 aN
@@ -61401,11 +61416,11 @@ aN
 aN
 aN
 aN
-lC
-lG
+lB
+lz
 aN
 aN
-lL
+lB
 aN
 aN
 kf
@@ -61667,8 +61682,8 @@ aN
 aN
 aN
 aN
-lT
-lV
+lB
+lz
 aN
 aa
 aa
@@ -61920,7 +61935,7 @@ aN
 kf
 aN
 aN
-lN
+lB
 kt
 jY
 aN
@@ -62429,10 +62444,10 @@ aN
 lz
 aN
 aN
-lD
+lB
 aN
 jY
-lJ
+lB
 aN
 aN
 aN
@@ -62690,11 +62705,11 @@ aN
 aN
 aN
 aN
-lM
+lz
 aN
 kf
-lP
-lQ
+lB
+lz
 aN
 aN
 kS
@@ -62943,7 +62958,7 @@ jR
 aN
 aN
 aN
-lE
+lz
 aN
 aN
 aN
@@ -63459,7 +63474,7 @@ aN
 aN
 aN
 aN
-lI
+lB
 aN
 aN
 aN
@@ -63467,11 +63482,11 @@ aN
 aN
 kE
 aN
-lW
+lB
 aN
 kf
 aN
-md
+lz
 aa
 aa
 aa
@@ -63725,10 +63740,10 @@ aN
 aN
 aN
 aN
-lZ
-mb
+lB
+lz
 aN
-me
+lz
 aa
 aa
 aa
@@ -63979,10 +63994,10 @@ aN
 aN
 aN
 kk
-lR
+lB
 aN
-lX
-ma
+lz
+lB
 aN
 kE
 aN
@@ -64243,7 +64258,7 @@ kN
 kL
 lm
 aN
-mf
+lz
 aa
 aa
 aa
@@ -64750,14 +64765,14 @@ aa
 aa
 aa
 kB
-lS
+lz
 aN
 kN
 kW
 lg
 kL
 kM
-mg
+lB
 aa
 aa
 aa
@@ -65014,7 +65029,7 @@ kX
 lh
 kW
 kL
-mh
+lz
 aa
 aa
 aa
@@ -65265,8 +65280,8 @@ aa
 aa
 aa
 kB
-lU
-lY
+lz
+lz
 kL
 kL
 lf
@@ -65783,7 +65798,7 @@ aa
 aa
 kB
 jT
-mc
+lz
 aa
 aa
 aa

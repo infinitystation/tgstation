@@ -507,3 +507,15 @@
 	throwforce = 10
 	attack_verb = list("slashed", "sliced", "cut", "clawed", "hooked")
 	hitsound = 'sound/weapons/bladeslice.ogg'
+
+/obj/machinery/computer/shuttle/enemy
+	name = "enemy shuttle console"
+	icon_screen = "syndishuttle"
+	icon_keyboard = "syndie_key"
+	circuit = /obj/item/weapon/circuitboard/computer/enemy_shuttle
+	shuttleId = "enemy"
+	possible_destinations = "enemy_home;enemy_station;enemy_lavaland"
+
+/obj/item/weapon/circuitboard/computer/enemy_shuttle
+	name = "Enemy Shuttle Console (Computer Board)"
+	build_path = /obj/machinery/computer/shuttle/enemy

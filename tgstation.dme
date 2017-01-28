@@ -1218,7 +1218,6 @@
 #include "code\modules\detectivework\evidence.dm"
 #include "code\modules\detectivework\footprints_and_rag.dm"
 #include "code\modules\detectivework\scanner.dm"
-#include "code\modules\dexofan\efficiency_zones.dm"
 #include "code\modules\dexofan\inflatable.dm"
 #include "code\modules\dexofan\mp3.dm"
 #include "code\modules\dexofan\wood_door.dm"
