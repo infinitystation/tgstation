@@ -5467,6 +5467,22 @@
 	},
 /turf/open/chasm/straight_down/lava_land_surface,
 /area/lavaland/surface/outdoors)
+"mj" = (
+/obj/item/weapon/cigbutt,
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"mk" = (
+/obj/item/weapon/cigbutt,
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"ml" = (
+/obj/structure/firepit,
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"mm" = (
+/obj/item/weapon/cigbutt,
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/lavaland/surface/outdoors)
 
 (1,1,1) = {"
 ab
@@ -34268,7 +34284,7 @@ an
 an
 at
 at
-at
+mk
 at
 at
 aA
@@ -34525,7 +34541,7 @@ at
 at
 at
 at
-at
+ml
 at
 at
 aA
@@ -34781,7 +34797,7 @@ aq
 aq
 at
 at
-at
+mj
 at
 at
 aA
@@ -35039,7 +35055,7 @@ aq
 at
 at
 at
-at
+mm
 at
 aA
 aA
