@@ -74,8 +74,9 @@
 	icon_state = "yellow"
 
 /area/toxins/xeno_lobby
-	name = "Xenobiology Lab's lobby"
+	name = "Xenobiology Lab's Lobby"
 	icon_state = "toxlab"
+	has_gravity = 1
 
 /area/engine/top_level_rtg
 	name = "Top Level RTG"
@@ -137,10 +138,13 @@
 /area/shuttle/life_two
 	name = "Lift"
 
-/area/mine/lab
-	name = "Field Laboratory"
+/area/mine/xeno_lab
+	name = "Xenobioloy Laboratory"
 	icon_state = "medresearch"
-	blob_allowed = 0
+
+/area/mine/xeno_lab/lobby
+	name = "Xenobioloy Laboratory"
+	icon_state = "medresearch"
 
 /area/mine/shelter
 	name = "Lavaland shelter"
@@ -170,6 +174,7 @@
 /area/maintenance/xmaint
 	name = "Xenolab Maintenance"
 	icon_state = "green"
+	has_gravity = 1
 
 /area/security/punishment
 	name = "Punishment room"
@@ -391,6 +396,16 @@
 	icon_state = "brown"
 /turf/open/floor/plasteel/terror/necro/brown/corner
 	icon_state = "browncorner"
+
+/turf/open/floor/plasteel/terror/necro/purple
+	icon_state = "purplefull"
+/turf/open/floor/plasteel/terror/necro/purple/side
+	icon_state = "purple"
+/turf/open/floor/plasteel/terror/necro/purple/corner
+	icon_state = "purplecorner"
+
+/turf/open/floor/engine/lavaland
+	baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
 
 /turf/open/floor/plating/lavaland
 	baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface

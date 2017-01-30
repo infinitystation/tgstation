@@ -89,7 +89,7 @@
 	end_sound = 'sound/lavaland/ash_storm_end.ogg'
 	end_overlay = "light_ash"
 
-	area_type = /area/lavaland/surface/outdoors
+	area_type = /area/lavaland/surface
 	target_z = ZLEVEL_LAVALAND
 
 	immunity_type = "ash"

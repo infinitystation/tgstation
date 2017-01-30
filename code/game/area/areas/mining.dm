@@ -98,6 +98,7 @@
 	power_light = 0
 	requires_power = 1
 	ambientsounds = list('sound/ambience/ambilava.ogg')
+	outdoors = 1
 
 /area/lavaland/underground
 	name = "Lavaland Caves"
@@ -115,6 +116,12 @@
 /area/lavaland/surface/outdoors
 	name = "Lavaland Wastes"
 	outdoors = 1
+	ambientsounds = 'sound/ambience/ambilava.ogg'
+
+/area/lavaland/surface/no_spawn
+	name = "Lavaland Wastes"
+	outdoors = 1
+	icon_state = "unexplored"
 	ambientsounds = 'sound/ambience/ambilava.ogg'
 
 /area/lavaland/surface/outdoors/near

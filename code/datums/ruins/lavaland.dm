@@ -3,25 +3,25 @@
 /datum/map_template/ruin/lavaland
 	prefix = "_maps/RandomRuins/LavaRuins/"
 
-//datum/map_template/ruin/lavaland/biodome
+/datum/map_template/ruin/lavaland/biodome
 	cost = 5
 	allow_duplicates = FALSE
 
-//datum/map_template/ruin/lavaland/biodome/beach
+/datum/map_template/ruin/lavaland/biodome/beach
 	name = "Biodome Beach"
 	id = "biodome-beach"
 	description = "Seemingly plucked from a tropical destination, this beach is calm and cool, with the salty waves roaring softly in the background. \
 	Comes with a rustic wooden bar and suicidal bartender."
 	suffix = "lavaland_biodome_beach.dmm"
 
-//datum/map_template/ruin/lavaland/biodome/winter
+/datum/map_template/ruin/lavaland/biodome/winter
 	name = "Biodome Winter"
 	id = "biodome-winter"
 	description = "For those getaways where you want to get back to nature, but you don't want to leave the fortified military compound where you spend your days. \
 	Includes a unique(*) laser pistol display case, and the recently introduced I.C.E(tm)."
 	suffix = "lavaland_surface_biodome_winter.dmm"
 
-//datum/map_template/ruin/lavaland/biodome/clown
+/datum/map_template/ruin/lavaland/biodome/clown
 	name = "Biodome Clown Planet"
 	id = "biodome-clown"
 	description = "WELCOME TO CLOWN PLANET! HONK HONK HONK etc.!"
@@ -31,18 +31,24 @@
 	name = "The Wishgranter Cube"
 	id = "wishgranter-cube"
 	description = "Nothing good can come from this. Learn from their mistakes and turn around."
-	suffix = "I_lavaland_surface_cube.dmm"
-	cost = 10
+	suffix = "lavaland_surface_cube.dmm"
+	cost = 15
 	allow_duplicates = FALSE
+
+/datum/map_template/ruin/lavaland/cube/infinity
+	suffix = "ilavaland_surface_cube.dmm"
 
 /datum/map_template/ruin/lavaland/prisoners
 	name = "Prisoner Crash"
 	id = "prisoner-crash"
 	description = "This incredibly high security shuttle clearly didn't have 'avoiding lavafilled hellscapes' as a design priority. \
 	As such, it has crashed, waking the prisoners from their cryostasis, and setting them loose on the wastes. If they live long enough, that is."
-	suffix = "I_lavaland_surface_prisoner_crash.dmm"
+	suffix = "lavaland_surface_prisoner_crash.dmm"
 	cost = 15
 	allow_duplicates = FALSE
+
+/datum/map_template/ruin/lavaland/prisoners/infinity
+	suffix = "ilavaland_surface_prisoner_crash.dmm"
 
 /datum/map_template/ruin/lavaland/seed_vault
 	name = "Seed Vault"
@@ -51,15 +57,22 @@
 	However, all the inhabitants seem to do is grow drugs and guns."
 	suffix = "I_lavaland_surface_seed_vault.dmm"
 	cost = 10
+	allow_duplicates = FALSE
 
-//datum/map_template/ruin/lavaland/ash_walker
+/datum/map_template/ruin/lavaland/seed_vault/infinity
+	suffix = "ilavaland_surface_seed_vault.dmm"
+
+/datum/map_template/ruin/lavaland/ash_walker
 	name = "Ash Walker Nest"
 	id = "ash-walker"
 	description = "A race of unbreathing lizards live here, that run faster than a human can, worship a broken dead city, and are capable of reproducing by something involving tentacles? \
 	Probably best to stay clear."
-	suffix = "I_lavaland_surface_ash_walker.dmm"
+	suffix = "lavaland_surface_ash_walker1.dmm"
 	cost = 20
 	allow_duplicates = FALSE
+
+/datum/map_template/ruin/lavaland/ash_walker/infinity
+	suffix = "ilavaland_surface_ash_walker.dmm"
 
 /datum/map_template/ruin/lavaland/syndicate_base
 	name = "Syndicate Lava Base"
@@ -78,7 +91,10 @@
 	suffix = "I_lavaland_surface_golem_ship.dmm"
 	allow_duplicates = FALSE
 
-//datum/map_template/ruin/lavaland/animal_hospital
+/datum/map_template/ruin/lavaland/free_golem/infinity
+	suffix = "ilavaland_surface_golem_ship.dmm"
+
+/datum/map_template/ruin/lavaland/animal_hospital
 	name = "Animal Hospital"
 	id = "animal-hospital"
 	description = "Rats with cancer do not live very long. And the ones that wake up from cryostasis seem to commit suicide out of boredom."
@@ -115,7 +131,7 @@
 	description = "Wormhole lifebelts are for LOSERS, who you are better than."
 	suffix = "I_lavaland_surface_pride.dmm"
 
-//datum/map_template/ruin/lavaland/sin/sloth
+/datum/map_template/ruin/lavaland/sin/sloth
 	name = "Ruin of Sloth"
 	id = "sloth"
 	description = "..."
@@ -123,7 +139,7 @@
 	// Generates nothing but atmos runtimes and salt
 	cost = 0
 
-//datum/map_template/ruin/lavaland/hierophant
+/datum/map_template/ruin/lavaland/hierophant
 	name = "Hierophant's Arena"
 	id = "hierophant"
 	description = "A strange, square chunk of metal of massive size. Inside awaits only death and many, many squares."
@@ -135,14 +151,14 @@
 	name = "UFO Crash"
 	id = "ufo-crash"
 	description = "Turns out that keeping your abductees unconcious is really important. Who knew?"
-	suffix = "I_lavaland_surface_ufo_crash.dmm"
+	suffix = "lavaland_surface_ufo_crash.dmm"
 	cost = 5
 
 /datum/map_template/ruin/lavaland/ww_vault
 	name = "Wishgranter Vault"
 	id = "ww-vault"
 	description = "Scrawled on the large double doors is both a message and a warning: 'meat grinder requires sacri...'. You're not so sure about this anymore."
-	suffix = "I_lavaland_surface_ww_vault.dmm"
+	suffix = "lavaland_surface_ww_vault.dmm"
 	cost = 20
 
 /datum/map_template/ruin/lavaland/xeno_nest
@@ -191,7 +207,7 @@
 	allow_duplicates = FALSE
 	cost = 10
 
-//datum/map_template/ruin/lavaland/swarmer_boss
+/datum/map_template/ruin/lavaland/swarmer_boss
 	name = "Crashed Shuttle"
 	id = "swarmerboss"
 	description = "A Syndicate shuttle had an unfortunate stowaway..."

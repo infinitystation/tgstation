@@ -432,30 +432,6 @@
 /proc/is_thrall(var/mob/living/M)
 	return istype(M) && M.mind && ticker && ticker.mode
 
-/obj/effect/proc_holder/spell/self/hivemind
-	name = "Hivemind"
-	desc = "Allows you to silently communicate with all other hivemind's members."
-	panel = "Spells"
-	charge_max = 20
-	human_req = 1
-	clothes_req = 0
-	action_icon_state = "commune"
-
-/obj/effect/proc_holder/spell/self/hivemind/cast(mob/living/carbon/human/user)
-	var/text = stripped_input(user, "Что вы желаете сообщить другим существам с подобной способностью?.", "КоммуникациЯ", "")
-	if(!text)
-		return
-	text = "<span class='shadowling'><i>[user.real_name]</i>: [text]</span>"
-	for(var/mob/M in mob_list)
-		if(is_thrall(M))
-			M << text
-		if(isobserver(M))
-			var/link = FOLLOW_LINK(M, user)
-			M << "[link] [text]"
-		else
-			return ..()
-		log_say("[user.real_name]/[user.key] : [text]")
-
 /obj/item/clothing/mask/balaclava/white
 	name = "white balaclava"
 	desc = "Spooky?"
@@ -514,8 +490,18 @@
 	icon_keyboard = "syndie_key"
 	circuit = /obj/item/weapon/circuitboard/computer/enemy_shuttle
 	shuttleId = "enemy"
-	possible_destinations = "enemy_home;enemy_station;enemy_lavaland"
+	possible_destinations = "enemy_home;enemy_station;enemy_lavaland;enemy_station_space"
 
 /obj/item/weapon/circuitboard/computer/enemy_shuttle
 	name = "Enemy Shuttle Console (Computer Board)"
 	build_path = /obj/machinery/computer/shuttle/enemy
+
+/obj/machinery/computer/shuttle/science
+	name = "science shuttle console"
+	circuit = /obj/item/weapon/circuitboard/computer/science_shuttle
+	shuttleId = "science"
+	possible_destinations = "science_home;science_lab;science_space;sciece_arch"
+
+/obj/item/weapon/circuitboard/computer/science_shuttle
+	name = "Science Shuttle Console (Computer Board)"
+	build_path = /obj/machinery/computer/shuttle/science

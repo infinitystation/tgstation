@@ -546,3 +546,6 @@
 
 /obj/machinery/bot_core/medbot
 	req_one_access =list(access_medical, access_robotics)
+
+/obj/machinery/bot_core/medbot/xenobiology
+	req_one_access =list(access_medical, access_robotics, access_xenobiology)
