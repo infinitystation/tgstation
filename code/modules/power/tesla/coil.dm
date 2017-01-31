@@ -5,6 +5,7 @@
 	icon_state = "coil0"
 	anchored = 0
 	density = 1
+	throwforce = 40
 	var/power_loss = 2
 	var/input_power_multiplier = 1
 
@@ -73,6 +74,7 @@
 	icon_state = "grounding_rod0"
 	anchored = 0
 	density = 1
+	throwforce = 40
 
 /obj/machinery/power/grounding_rod/New()
 	..()
