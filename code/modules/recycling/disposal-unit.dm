@@ -490,3 +490,32 @@
 
 /obj/machinery/disposal/deliveryChute/newHolderDestination(obj/structure/disposalholder/H)
 	H.destinationTag = 1
+
+/obj/machinery/disposal/bin/small
+	icon = 'icons/obj/infinity_object.dmi'
+	density = 0
+
+/obj/machinery/disposal/bin/small/update_icon()
+	cut_overlays()
+	if(stat & BROKEN)
+		mode = PRESSURE_OFF
+		flush = 0
+		return
+
+	//flush handle
+	if(flush)
+		add_overlay(image('icons/obj/infinity_object.dmi', "dispover-handle"))
+
+	//only handle is shown if no power
+	if(stat & NOPOWER || mode == SCREWS_OUT)
+		return
+
+	//check for items in disposal - occupied light
+	if(contents.len > 0)
+		add_overlay(image('icons/obj/infinity_object.dmi', "dispover-full"))
+
+	//charging and ready light
+	if(mode == PRESSURE_ON)
+		add_overlay(image('icons/obj/infinity_object.dmi', "dispover-charge"))
+	else if(mode == PRESSURE_MAXED)
+		add_overlay(image('icons/obj/infinity_object.dmi', "dispover-ready"))
