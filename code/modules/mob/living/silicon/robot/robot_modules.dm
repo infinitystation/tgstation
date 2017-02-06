@@ -236,7 +236,7 @@
 	/obj/item/weapon/reagent_containers/syringe, /obj/item/weapon/surgical_drapes, /obj/item/weapon/retractor, \
 	/obj/item/weapon/hemostat, /obj/item/weapon/cautery, /obj/item/weapon/surgicaldrill, /obj/item/weapon/scalpel, \
 	/obj/item/weapon/circular_saw, /obj/item/weapon/extinguisher/mini, /obj/item/roller/robo, /obj/item/borg/cyborghug/medical, \
-	/obj/item/stack/medical/gauze/cyborg, /obj/item/borg/lollipop)
+	/obj/item/stack/medical/gauze/cyborg)
 	emag_modules = list(/obj/item/weapon/reagent_containers/borghypo/hacked)
 	ratvar_modules = list(/obj/item/clockwork/slab/cyborg/medical)
 	cyborg_base_icon = "medical"
@@ -275,8 +275,8 @@
 
 /obj/item/weapon/robot_module/security/do_transform_animation()
 	..()
-	loc << "<span class='userdanger'>While you have picked the security module, you still have to follow your laws, NOT Space Law. \
-	For Asimov, this means you must follow criminals' orders unless there is a law 1 reason not to.</span>"
+	loc << "<span class='userdanger'>Если Вы выбираете охранный модуль, вы подчиняетесь исключительно своим законам, а не космическому закону. \
+	Например, для киборга с законами Азимова это будет значить то, что вы обязаны подчиняться преступникам если это не нарушает первый закон.</span>"
 
 /obj/item/weapon/robot_module/security/respawn_consumable(mob/living/silicon/robot/R, coeff = 1)
 	..()

@@ -343,6 +343,22 @@
 	icon_state = "duffle-med"
 	item_state = "duffle-med"
 
+/obj/item/weapon/storage/backpack/dufflebag/med/surgery
+	name = "surgery dufflebag"
+	desc = "A large dufflebag for holding surgery tools."
+
+/obj/item/weapon/storage/backpack/dufflebag/med/surgery/New()
+	..()
+	new /obj/item/weapon/scalpel(src)
+	new /obj/item/weapon/hemostat(src)
+	new /obj/item/weapon/retractor(src)
+	new /obj/item/weapon/circular_saw(src)
+	new /obj/item/weapon/surgicaldrill(src)
+	new /obj/item/weapon/cautery(src)
+	new /obj/item/weapon/surgical_drapes(src)
+	new /obj/item/clothing/gloves/color/latex(src)
+	new /obj/item/clothing/mask/surgical(src)
+
 /obj/item/weapon/storage/backpack/dufflebag/sec
 	name = "security dufflebag"
 	desc = "A large dufflebag for holding extra security supplies and ammunition."

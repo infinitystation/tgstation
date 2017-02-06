@@ -73,10 +73,8 @@
 	name = "Engineer equipment room"
 	icon_state = "yellow"
 
-/area/toxins/xeno_lobby
+/area/toxins/xenobiology/xeno_lobby
 	name = "Xenobiology Lab's Lobby"
-	icon_state = "toxlab"
-	has_gravity = 1
 
 /area/engine/top_level_rtg
 	name = "Top Level RTG"

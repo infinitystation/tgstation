@@ -1,4 +1,4 @@
-//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE 
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "aa" = (
 /turf/open/space,
 /area/space)
@@ -332,12 +332,12 @@
 /area/shuttle/abandoned)
 "ay" = (
 /obj/structure/bed,
-/obj/effect/decal/remains/human,
 /obj/effect/decal/cleanable/blood/old,
 /obj/effect/decal/cleanable/dirt{
 	desc = "A thin layer of dust coating the floor.";
 	name = "dust"
 	},
+/obj/item/weapon/bedsheet/nanotrasen,
 /turf/open/floor/plasteel/shuttle{
 	icon_state = "shuttlefloor3"
 	},
@@ -495,6 +495,7 @@
 	desc = "A thin layer of dust coating the floor.";
 	name = "dust"
 	},
+/obj/item/weapon/bedsheet/nanotrasen,
 /turf/open/floor/plasteel/shuttle{
 	icon_state = "shuttlefloor3"
 	},
@@ -824,12 +825,12 @@
 	},
 /area/shuttle/abandoned)
 "bn" = (
-/obj/structure/chair/office/light{
-	dir = 4
-	},
 /obj/effect/decal/cleanable/dirt{
 	desc = "A thin layer of dust coating the floor.";
 	name = "dust"
+	},
+/obj/structure/chair/comfy/shuttle{
+	dir = 1
 	},
 /turf/open/floor/plasteel/shuttle{
 	icon_state = "shuttlefloor3"
@@ -1051,9 +1052,7 @@
 	desc = "A thin layer of dust coating the floor.";
 	name = "dust"
 	},
-/obj/structure/chair/comfy/shuttle/black/noNT{
-	tag = "icon-shblackS (EAST)";
-	icon_state = "shblackS";
+/obj/structure/chair/comfy/shuttle{
 	dir = 4
 	},
 /turf/open/floor/plasteel/shuttle{
@@ -1138,11 +1137,11 @@
 	},
 /area/shuttle/abandoned)
 "bK" = (
-/obj/structure/chair/office/light,
 /obj/effect/decal/cleanable/dirt{
 	desc = "A thin layer of dust coating the floor.";
 	name = "dust"
 	},
+/obj/structure/chair/comfy/shuttle,
 /turf/open/floor/plasteel/shuttle{
 	icon_state = "shuttlefloor3"
 	},
@@ -1451,16 +1450,14 @@
 /obj/item/clothing/suit/apron,
 /obj/item/weapon/shovel/spade,
 /obj/item/weapon/cultivator,
+/obj/item/weapon/wirecutters,
+/obj/item/device/plant_analyzer,
+/obj/item/weapon/reagent_containers/glass/bucket,
 /obj/effect/decal/cleanable/dirt{
 	desc = "A thin layer of dust coating the floor.";
 	name = "dust"
 	},
-/obj/item/weapon/wirecutters,
-/obj/item/device/analyzer,
-/obj/item/weapon/reagent_containers/glass/bucket,
-/turf/open/floor/plasteel/shuttle{
-	icon_state = "shuttlefloor3"
-	},
+/turf/open/floor/mineral/titanium,
 /area/shuttle/abandoned)
 "cl" = (
 /obj/structure/sink{
@@ -1790,12 +1787,7 @@
 /area/shuttle/abandoned)
 "cK" = (
 /obj/structure/table,
-/obj/item/weapon/storage/backpack/dufflebag/med{
-	contents = newlist(/obj/item/weapon/scalpel,/obj/item/weapon/hemostat,/obj/item/weapon/retractor,/obj/item/weapon/cautery,/obj/item/weapon/circular_saw,/obj/item/weapon/surgicaldrill,/obj/item/weapon/razor);
-	desc = "A large dufflebag for holding extra medical supplies - this one seems to be designed for holding surgical tools.";
-	name = "surgical dufflebag";
-	pixel_y = 4
-	},
+/obj/item/weapon/storage/backpack/dufflebag/med/surgery,
 /turf/open/floor/plasteel/shuttle{
 	icon_state = "shuttlefloor3"
 	},
