@@ -551,14 +551,14 @@
 	var/regex/lizard_hiss = new("s+", "g")
 	var/regex/lizard_hiSS = new("S+", "g")
 	if(copytext(message, 1, 2) != "*")
-		var/begin = get_custom_quote(message)
-		var/quote = copytext(message, 1, begin)
-		message = copytext(message, begin)
-		message = lizard_hiss.Replace(message, "sss")
-		message = lizard_hiSS.Replace(message, "SSS")
+//		var/begin = get_custom_quote(message)
+//		var/quote = copytext(message, 1, begin)
+//		message = copytext(message, begin)
 		message = lizard_hicc.Replace(message, "ñññ")
 		message = lizard_hiCC.Replace(message, "ÑÑÑ")
-		message = quote + message
+		message = lizard_hiss.Replace(message, "sss")
+		message = lizard_hiSS.Replace(message, "SSS")
+//		message = quote + message
 	return message
 
 /obj/item/organ/tongue/fly
@@ -569,18 +569,18 @@
 
 /obj/item/organ/tongue/fly/TongueSpeech(var/message)
 	var/regex/fly_bu3 = new("ç+", "g")
-	var/regex/fly_bu33 = new("ç+", "g")
+	var/regex/fly_bu33 = new("Ç+", "g")
 	var/regex/fly_buzz = new("z+", "g")
 	var/regex/fly_buZZ = new("Z+", "g")
 	if(copytext(message, 1, 2) != "*")
-		var/begin = get_custom_quote(message)
-		var/quote = copytext(message, 1, begin)
-		message = copytext(message, begin)
+//		var/begin = get_custom_quote(message)
+//		var/quote = copytext(message, 1, begin)
+//		message = copytext(message, begin)
 		message = fly_buzz.Replace(message, "zzz")
 		message = fly_buZZ.Replace(message, "ZZZ")
 		message = fly_bu3.Replace(message, "ççç")
 		message = fly_bu33.Replace(message, "ÇÇÇ")
-		message = quote + message
+//		message = quote + message
 	return message
 
 /obj/item/organ/tongue/abductor

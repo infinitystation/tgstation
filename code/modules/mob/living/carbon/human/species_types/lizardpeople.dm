@@ -2,7 +2,7 @@
 	// Reptilian humanoids with scaled skin and tails.
 	name = "Lizardperson"
 	id = "lizard"
-	say_mod = "hisses"
+	say_mod = "шипит"
 	default_color = "00FF00"
 	species_traits = list(MUTCOLORS,EYECOLOR,LIPS)
 	mutant_bodyparts = list("tail_lizard", "snout", "spines", "horns", "frills", "body_markings", "legs")
@@ -36,7 +36,9 @@
 */
 /datum/species/lizard/ashwalker
 	name = "Ash Walker"
+	default_features = list("mcolor" = "0F0", "tail" = "Smooth", "snout" = "Round", "horns" = "None", "frills" = "None", "spines" = "None", "body_markings" = "None", "legs" = "Digitigrade Legs")
 	id = "ashlizard"
+	mutant_organs = list(/obj/item/organ/tongue/lizard)
 	limbs_id = "lizard"
 	species_traits = list(MUTCOLORS,EYECOLOR,LIPS,NOBREATH,NOGUNS,DIGITIGRADE)
 

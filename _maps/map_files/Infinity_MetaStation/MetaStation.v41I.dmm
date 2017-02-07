@@ -46888,7 +46888,6 @@
 /turf/open/floor/plasteel/warning/side,
 /area/hallway/secondary/entry)
 "bAl" = (
-/obj/structure/fans/tiny,
 /turf/open/floor/plasteel{
 	icon_state = "delivery"
 	},
@@ -58689,7 +58688,6 @@
 /obj/machinery/light/small{
 	dir = 8
 	},
-/obj/structure/fans/tiny,
 /turf/open/floor/plasteel/delivery,
 /area/hallway/secondary/entry)
 "bVi" = (
@@ -76849,6 +76847,7 @@
 "czb" = (
 /obj/structure/bed,
 /obj/effect/decal/cleanable/blood/old,
+/obj/item/weapon/bedsheet/blue,
 /turf/open/floor/plating,
 /area/maintenance/asmaint2)
 "czc" = (
@@ -93139,7 +93138,6 @@
 	},
 /area/toxins/telepad)
 "cZD" = (
-/obj/structure/fans/tiny,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/open/floor/plasteel/whitebot/delivery{
 	baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
@@ -93709,7 +93707,6 @@
 /obj/machinery/light/small{
 	dir = 4
 	},
-/obj/structure/fans/tiny,
 /turf/open/floor/plasteel{
 	icon_state = "delivery"
 	},
@@ -95458,6 +95455,102 @@
 	icon_state = "dark"
 	},
 /area/chapel/main)
+"dia" = (
+/obj/machinery/door/airlock/glass_external{
+	name = "Heavy Shuttle airlock"
+	},
+/obj/structure/fans/tiny,
+/turf/open/floor/plasteel/warning/side,
+/area/hallway/secondary/entry)
+"dib" = (
+/obj/machinery/door/airlock/glass_external{
+	name = "Heavy Shuttle airlock"
+	},
+/obj/structure/fans/tiny,
+/turf/open/floor/plasteel/warning/side,
+/area/hallway/secondary/entry)
+"dic" = (
+/obj/machinery/door/airlock/glass_external{
+	name = "Heavy Shuttle airlock"
+	},
+/obj/structure/fans/tiny,
+/turf/open/floor/plasteel/warning/side,
+/area/hallway/secondary/entry)
+"did" = (
+/obj/machinery/door/airlock/glass_external{
+	name = "External Docking Port"
+	},
+/obj/structure/fans/tiny,
+/turf/open/floor/plasteel/warning/side{
+	tag = "icon-plasteel_warn_side (EAST)";
+	icon_state = "plasteel_warn_side";
+	dir = 4
+	},
+/area/hallway/secondary/entry)
+"die" = (
+/obj/machinery/door/airlock/glass_external{
+	name = "External Docking Port"
+	},
+/obj/structure/fans/tiny,
+/turf/open/floor/plasteel/warning/side{
+	tag = "icon-plasteel_warn_side (EAST)";
+	icon_state = "plasteel_warn_side";
+	dir = 4
+	},
+/area/hallway/secondary/entry)
+"dif" = (
+/obj/machinery/door/airlock/glass_external{
+	name = "External Docking Port"
+	},
+/obj/structure/fans/tiny,
+/turf/open/floor/plasteel/warning/side{
+	tag = "icon-plasteel_warn_side (EAST)";
+	icon_state = "plasteel_warn_side";
+	dir = 4
+	},
+/area/hallway/secondary/entry)
+"dig" = (
+/obj/machinery/door/airlock/glass_external{
+	name = "External Docking Port"
+	},
+/obj/structure/fans/tiny,
+/turf/open/floor/plasteel/warning/side{
+	tag = "icon-plasteel_warn_side (EAST)";
+	icon_state = "plasteel_warn_side";
+	dir = 4
+	},
+/area/hallway/secondary/entry)
+"dih" = (
+/obj/machinery/door/airlock/glass_external{
+	name = "Xenolaboratory Shuttle Airlock";
+	req_access_txt = "55"
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/structure/fans/tiny,
+/turf/open/floor/plasteel/warnwhite/side{
+	tag = "icon-white_warn_side (EAST)";
+	icon_state = "white_warn_side";
+	dir = 4
+	},
+/area/toxins/telepad)
+"dii" = (
+/obj/machinery/door/airlock/glass_external{
+	name = "Departure Lounge Airlock"
+	},
+/obj/structure/fans/tiny,
+/turf/open/floor/plasteel{
+	icon_state = "delivery"
+	},
+/area/hallway/secondary/exit)
+"dij" = (
+/obj/machinery/door/airlock/glass_external{
+	name = "Departure Lounge Airlock"
+	},
+/obj/structure/fans/tiny,
+/turf/open/floor/plasteel{
+	icon_state = "delivery"
+	},
+/area/hallway/secondary/exit)
 
 (1,1,1) = {"
 aaa
@@ -103550,9 +103643,9 @@ aai
 aai
 aai
 aSG
-bAk
-bAk
-bAk
+dia
+dib
+dic
 aSG
 aai
 aai
@@ -104853,8 +104946,8 @@ aRe
 aUD
 cay
 bTy
-cdk
-bTy
+aXU
+dif
 cgf
 aaa
 aaa
@@ -105103,15 +105196,15 @@ aaa
 aaa
 aaa
 aaa
-bTy
+did
 bVh
 bTy
 aSH
 aUE
 aWf
 bTy
-cdk
-bTy
+aXU
+dig
 aaa
 aaa
 aaa
@@ -106388,7 +106481,7 @@ aaa
 aaa
 aaa
 aaa
-bTy
+die
 bVh
 bTy
 aSL
@@ -122120,8 +122213,8 @@ cZd
 cZy
 dad
 dax
-daU
-dax
+dad
+dii
 dbP
 dcp
 dcq
@@ -122378,7 +122471,7 @@ cZy
 dad
 dax
 daV
-dax
+dij
 dbQ
 dcq
 dcp
@@ -123911,7 +124004,7 @@ cKJ
 cUf
 cRi
 cVK
-dhX
+dhW
 cXr
 cYc
 aai
@@ -126232,7 +126325,7 @@ cZg
 cZi
 cZC
 cZD
-cZC
+dih
 daj
 daz
 daB
