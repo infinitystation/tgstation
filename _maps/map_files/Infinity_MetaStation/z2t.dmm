@@ -4071,6 +4071,7 @@
 /obj/effect/landmark{
 	name = "prisonwarp"
 	},
+/obj/structure/chair,
 /turf/open/floor/plasteel/vault{
 	dir = 8
 	},
@@ -4141,11 +4142,14 @@
 /obj/structure/table/reinforced,
 /obj/item/weapon/restraints/handcuffs/cable/zipties,
 /obj/item/device/assembly/flash/handheld,
+/obj/item/weapon/door_remote/head_of_security,
 /turf/open/floor/plasteel/warning,
 /area/centcom/control)
 "lF" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/storage/fancy/donut_box,
+/obj/item/weapon/storage/box/handcuffs,
+/obj/item/weapon/storage/box/handcuffs,
+/obj/item/weapon/storage/box/handcuffs,
 /turf/open/floor/plasteel/warning,
 /area/centcom/control)
 "lG" = (
@@ -4599,6 +4603,7 @@
 /obj/effect/landmark{
 	name = "prisonwarp"
 	},
+/obj/structure/chair,
 /turf/open/floor/plasteel/vault{
 	dir = 8
 	},
@@ -6168,9 +6173,7 @@
 	},
 /area/centcom/control)
 "qx" = (
-/obj/item/weapon/storage/box/handcuffs,
-/obj/item/weapon/crowbar/red,
-/obj/structure/table/wood,
+/obj/machinery/vending/coffee,
 /turf/open/floor/plasteel/vault{
 	dir = 8
 	},
@@ -9632,7 +9635,6 @@
 /area/centcom/evac)
 "yl" = (
 /obj/structure/table,
-/obj/item/toy/katana,
 /obj/item/toy/carpplushie,
 /turf/open/floor/plasteel/warning{
 	dir = 1
@@ -17566,6 +17568,133 @@
 /turf/open/floor/plasteel/loadingarea{
 	dir = 1
 	},
+/area/centcom/control)
+"RA" = (
+/obj/structure/window/reinforced/fulltile,
+/obj/structure/grille,
+/turf/open/floor/plating,
+/area/centcom/prison)
+"RB" = (
+/obj/structure/chair,
+/turf/open/floor/plasteel/vault{
+	dir = 8
+	},
+/area/centcom/prison)
+"RC" = (
+/obj/machinery/door/airlock/security{
+	name = "Centcom Security";
+	req_access = null;
+	req_access_txt = "0";
+	req_one_access_txt = "63; 42"
+	},
+/turf/open/floor/plasteel/darkwarning/side{
+	tag = "icon-black_warn_side (WEST)";
+	icon_state = "black_warn_side";
+	dir = 8
+	},
+/area/centcom/prison)
+"RD" = (
+/obj/structure/window/reinforced/fulltile,
+/obj/structure/grille,
+/turf/open/floor/plating,
+/area/centcom/prison)
+"RE" = (
+/obj/structure/chair,
+/turf/open/floor/plasteel/vault{
+	dir = 8
+	},
+/area/centcom/prison)
+"RF" = (
+/obj/machinery/door/airlock/security{
+	name = "Centcom Security";
+	req_access = null;
+	req_access_txt = "0";
+	req_one_access_txt = "63; 42"
+	},
+/turf/open/floor/plasteel/darkwarning/side{
+	tag = "icon-black_warn_side (WEST)";
+	icon_state = "black_warn_side";
+	dir = 8
+	},
+/area/centcom/prison)
+"RG" = (
+/obj/structure/window/reinforced/fulltile,
+/obj/structure/grille,
+/turf/open/floor/plating,
+/area/centcom/prison)
+"RH" = (
+/obj/structure/chair,
+/turf/open/floor/plasteel/vault{
+	dir = 8
+	},
+/area/centcom/prison)
+"RI" = (
+/obj/machinery/door/airlock/security{
+	name = "Centcom Security";
+	req_access = null;
+	req_access_txt = "0";
+	req_one_access_txt = "63; 42"
+	},
+/turf/open/floor/plasteel/darkwarning/side{
+	tag = "icon-black_warn_side (WEST)";
+	icon_state = "black_warn_side";
+	dir = 8
+	},
+/area/centcom/prison)
+"RJ" = (
+/obj/structure/window/reinforced/fulltile,
+/obj/structure/grille,
+/turf/open/floor/plating,
+/area/centcom/prison)
+"RK" = (
+/obj/structure/chair,
+/turf/open/floor/plasteel/vault{
+	dir = 8
+	},
+/area/centcom/prison)
+"RL" = (
+/obj/machinery/door/airlock/security{
+	name = "Centcom Security";
+	req_access = null;
+	req_access_txt = "0";
+	req_one_access_txt = "63; 42"
+	},
+/turf/open/floor/plasteel/darkwarning/side{
+	tag = "icon-black_warn_side (WEST)";
+	icon_state = "black_warn_side";
+	dir = 8
+	},
+/area/centcom/prison)
+"RM" = (
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_x = 0;
+	pixel_y = -24
+	},
+/turf/open/floor/wood,
+/area/centcom/control)
+"RN" = (
+/obj/machinery/button/door{
+	id = "XCCsec3";
+	name = "XCC Central North Shutters Control";
+	pixel_x = 0;
+	pixel_y = -24;
+	req_access_txt = "101"
+	},
+/obj/machinery/button/door{
+	name = "XCC Central North Shutters Control";
+	pixel_x = 0;
+	pixel_y = -24;
+	req_access_txt = "101";
+	id = "XCCsec3"
+	},
+/turf/closed/indestructible/riveted/infinity,
+/area/centcom/control)
+"RO" = (
+/obj/structure/flora/ausbushes/sparsegrass,
+/obj/structure/flora/ausbushes/lavendergrass,
+/obj/structure/flora/ausbushes/fernybush,
+/turf/open/floor/plating/asteroid,
 /area/centcom/control)
 
 (1,1,1) = {"
@@ -59909,8 +60038,8 @@ yB
 Cs
 EP
 sJ
-aa
-aa
+kX
+kQ
 aa
 aa
 aa
@@ -60166,8 +60295,8 @@ CM
 xe
 wA
 sJ
-aa
-aa
+lW
+kQ
 aa
 aa
 aa
@@ -60423,10 +60552,10 @@ xM
 Cw
 EQ
 sJ
-aa
-aa
-aa
-aa
+mZ
+kQ
+kQ
+kQ
 FW
 FW
 FW
@@ -60680,10 +60809,10 @@ CN
 xM
 ER
 sJ
-aa
-aa
-aa
-aa
+mZ
+kQ
+lW
+lW
 FW
 Gj
 FW
@@ -60937,13 +61066,13 @@ DQ
 xM
 ES
 sJ
-aa
-aa
-aa
-aa
-FX
+lW
+Ds
+mZ
+mZ
+Gi
 Gk
-FX
+Gi
 GV
 Hl
 HD
@@ -61194,10 +61323,10 @@ DR
 xM
 ET
 sJ
-aa
-aa
-aa
-aa
+mZ
+kQ
+lW
+lW
 FW
 Gc
 FW
@@ -61451,10 +61580,10 @@ CN
 xM
 EU
 wA
-aa
-aa
-aa
-aa
+mZ
+kQ
+wi
+wi
 FW
 Gl
 Gc
@@ -61708,10 +61837,10 @@ DS
 Cx
 EV
 sJ
-aa
-aa
-aa
-aa
+lW
+kQ
+RO
+rX
 FW
 Gm
 Gc
@@ -61965,7 +62094,7 @@ sJ
 xe
 wy
 sJ
-kX
+Ds
 kQ
 kQ
 kQ
@@ -64778,7 +64907,7 @@ kQ
 kQ
 yT
 mW
-kQ
+RN
 Ai
 sd
 qS
@@ -66591,7 +66720,7 @@ kQ
 kQ
 kQ
 kQ
-sz
+Ds
 kQ
 kQ
 kQ
@@ -68344,17 +68473,17 @@ aa
 aa
 aa
 lh
-lx
-lV
+RA
+RC
 mn
-lx
-lV
+RD
+RF
 lh
-lx
-lV
+RG
+RI
 lh
-lx
-lV
+RJ
+RL
 lh
 lA
 lA
@@ -68601,16 +68730,16 @@ aa
 aa
 aa
 lh
-lw
+RB
 lU
 mm
-lw
+RE
 lU
 mm
-lw
+RH
 lU
 mm
-lw
+RK
 lU
 lh
 qt
@@ -69128,11 +69257,11 @@ aa
 nc
 kQ
 qu
-qR
-lW
-lW
-lW
-sw
+qS
+qS
+qS
+qS
+RM
 kQ
 qy
 qU
@@ -73239,7 +73368,7 @@ aa
 aa
 aa
 kQ
-qF
+tY
 qV
 rp
 lj
