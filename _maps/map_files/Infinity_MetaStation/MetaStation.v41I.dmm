@@ -36980,6 +36980,7 @@
 	dir = 4;
 	icon_state = "pipe-c"
 	},
+/obj/machinery/photocopier,
 /turf/open/floor/wood,
 /area/crew_quarters/captain_quarters)
 "bkE" = (
@@ -37243,12 +37244,6 @@
 	},
 /area/crew_quarters/chief)
 "bla" = (
-/obj/structure/rack{
-	dir = 8;
-	layer = 2.9
-	},
-/obj/item/weapon/storage/secure/briefcase,
-/obj/item/clothing/mask/cigarette/cigar,
 /obj/machinery/computer/security/telescreen{
 	dir = 1;
 	name = "MiniSat Monitor";
@@ -37256,6 +37251,7 @@
 	pixel_x = 0;
 	pixel_y = -30
 	},
+/obj/machinery/photocopier,
 /turf/open/floor/plasteel{
 	icon_state = "vault";
 	dir = 5
@@ -37274,6 +37270,7 @@
 	pixel_x = 0;
 	pixel_y = -26
 	},
+/obj/item/clothing/mask/cigarette/cigar,
 /turf/open/floor/plasteel{
 	icon_state = "vault";
 	dir = 5
@@ -50496,6 +50493,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
+/obj/machinery/photocopier,
 /turf/open/floor/carpet,
 /area/bridge)
 "bGG" = (
@@ -74398,7 +74396,6 @@
 	pixel_y = 32
 	},
 /obj/structure/table/glass,
-/obj/item/weapon/paper_bin,
 /obj/machinery/light{
 	icon_state = "tube1";
 	dir = 8
@@ -74444,14 +74441,12 @@
 	},
 /area/crew_quarters/cmo)
 "cvu" = (
-/obj/item/weapon/folder/white,
-/obj/item/clothing/glasses/hud/health,
 /obj/structure/cable/yellow{
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/structure/table/glass,
+/obj/machinery/photocopier,
 /turf/open/floor/plasteel{
 	dir = 8;
 	icon_state = "barber"
@@ -77769,9 +77764,8 @@
 	icon_state = "4-8"
 	},
 /obj/structure/table/glass,
-/obj/item/weapon/folder/blue,
-/obj/item/weapon/folder/blue,
-/obj/item/weapon/pen,
+/obj/item/weapon/folder/white,
+/obj/item/clothing/glasses/hud/health,
 /turf/open/floor/plasteel{
 	dir = 8;
 	icon_state = "barber"
@@ -77979,7 +77973,6 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
-/obj/effect/decal/cleanable/robot_debris/old,
 /turf/open/floor/plating,
 /area/maintenance/asmaint2)
 "cAP" = (
@@ -78486,12 +78479,12 @@
 /area/crew_quarters/cmo)
 "cBB" = (
 /obj/structure/table/glass,
-/obj/item/weapon/pen,
-/obj/item/clothing/neck/stethoscope,
 /obj/structure/extinguisher_cabinet{
 	pixel_x = 6;
 	pixel_y = -30
 	},
+/obj/item/weapon/paper_bin,
+/obj/item/weapon/pen,
 /turf/open/floor/plasteel{
 	dir = 8;
 	icon_state = "barber"
@@ -79274,6 +79267,18 @@
 	pixel_y = 4
 	},
 /obj/item/weapon/circuitboard/computer/teleporter,
+/obj/item/weapon/cartridge/signal/toxins{
+	pixel_x = -4;
+	pixel_y = 2
+	},
+/obj/item/weapon/cartridge/signal/toxins{
+	pixel_x = -4;
+	pixel_y = 2
+	},
+/obj/item/weapon/cartridge/signal/toxins{
+	pixel_x = -4;
+	pixel_y = 2
+	},
 /turf/open/floor/plasteel{
 	tag = "icon-cafeteria (NORTHEAST)";
 	icon_state = "cafeteria";
@@ -80606,16 +80611,6 @@
 	},
 /area/crew_quarters/hor)
 "cFf" = (
-/obj/structure/table,
-/obj/item/weapon/cartridge/signal/toxins,
-/obj/item/weapon/cartridge/signal/toxins{
-	pixel_x = -4;
-	pixel_y = 2
-	},
-/obj/item/weapon/cartridge/signal/toxins{
-	pixel_x = 4;
-	pixel_y = 6
-	},
 /obj/machinery/camera{
 	c_tag = "Research Director's Office";
 	dir = 1;
@@ -80626,6 +80621,7 @@
 	dir = 1;
 	pixel_y = -22
 	},
+/obj/machinery/photocopier,
 /turf/open/floor/plasteel{
 	tag = "icon-cafeteria (NORTHEAST)";
 	icon_state = "cafeteria";
@@ -80695,7 +80691,6 @@
 	},
 /area/toxins/storage)
 "cFk" = (
-/obj/item/weapon/cigbutt,
 /obj/machinery/light_switch{
 	pixel_y = -23
 	},
@@ -90318,6 +90313,7 @@
 	pixel_x = -26;
 	pixel_y = 0
 	},
+/obj/machinery/photocopier,
 /turf/open/floor/plasteel{
 	icon_state = "grimy"
 	},
@@ -93861,7 +93857,7 @@
 	tag = ""
 	},
 /obj/effect/landmark/start{
-	name = "Captain"
+	name = "Chaplain"
 	},
 /turf/open/floor/carpet,
 /area/chapel/main)
@@ -95551,6 +95547,16 @@
 	icon_state = "delivery"
 	},
 /area/hallway/secondary/exit)
+"dik" = (
+/obj/machinery/photocopier,
+/turf/open/floor/plasteel{
+	icon_state = "grimy"
+	},
+/area/security/detectives_office)
+"dil" = (
+/obj/machinery/photocopier,
+/turf/open/floor/carpet,
+/area/bridge)
 
 (1,1,1) = {"
 aaa
@@ -103644,8 +103650,8 @@ aai
 aai
 aSG
 dia
-dib
-dic
+dia
+dia
 aSG
 aai
 aai
@@ -104947,7 +104953,7 @@ aUD
 cay
 bTy
 aXU
-dif
+did
 cgf
 aaa
 aaa
@@ -105204,7 +105210,7 @@ aUE
 aWf
 bTy
 aXU
-dig
+did
 aaa
 aaa
 aaa
@@ -106481,7 +106487,7 @@ aaa
 aaa
 aaa
 aaa
-die
+did
 bVh
 bTy
 aSL
@@ -122471,7 +122477,7 @@ cZy
 dad
 dax
 daV
-dij
+dii
 dbQ
 dcq
 dcp
@@ -123656,7 +123662,7 @@ ats
 ava
 awE
 ayl
-azt
+dik
 aBc
 aCB
 aEt
@@ -123692,7 +123698,7 @@ bzh
 bzh
 bDa
 bES
-bxc
+dil
 bmk
 bKc
 bLL
@@ -128908,14 +128914,14 @@ aai
 aai
 aaa
 aaa
-aai
-aai
-aai
-aai
-aai
 aaa
-aai
-aai
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -129165,13 +129171,13 @@ aaa
 aai
 aai
 aaa
-aai
 aaa
 aaa
 aaa
-aai
-aai
-aai
+aaa
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -129422,7 +129428,7 @@ aaa
 aaa
 aai
 aai
-aai
+aaa
 aaa
 aaa
 aaa
@@ -129679,7 +129685,7 @@ aaa
 aaa
 aaa
 aai
-aaa
+aai
 aaa
 aaa
 aaa
@@ -129937,7 +129943,7 @@ aam
 aai
 aah
 aam
-aaa
+aai
 aaa
 aaa
 aaa
@@ -130194,7 +130200,7 @@ aai
 aai
 aaa
 aah
-aaa
+aai
 aaa
 aaa
 aaa
@@ -130451,7 +130457,7 @@ dce
 dbG
 aaa
 aam
-aaa
+aai
 aaa
 aaa
 aaa
@@ -130708,7 +130714,7 @@ dcf
 dbG
 aai
 aam
-aaa
+aai
 aaa
 aaa
 aaa
@@ -131223,8 +131229,8 @@ dbG
 aai
 aaa
 aai
-aaa
-aaa
+aai
+aai
 aaa
 aaa
 aaa

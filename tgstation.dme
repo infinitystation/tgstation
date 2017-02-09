@@ -2115,4 +2115,5 @@
 #include "interface\interface.dm"
 #include "interface\stylesheet.dm"
 #include "interface\skin.dmf"
+#include "C:\Users\Admin\Desktop\Ново\z2t.dmm"
 // END_INCLUDE
