@@ -5,10 +5,14 @@
 /mob/living/simple_animal/hostile/hivebot
 	name = "hivebot"
 	desc = "A small robot."
-	icon = 'icons/mob/hivebot.dmi'
-	icon_state = "basic"
-	icon_living = "basic"
-	icon_dead = "basic"
+//	icon = 'icons/mob/hivebot.dmi'
+	icon = 'icons/time/hivebot.dmi'
+//	icon_state = "basic"
+//	icon_living = "basic"
+//	icon_dead = "basic"
+	icon_state = "smallbot"
+	icon_living = "smallbot"
+	icon_dead = "smallbot"
 	gender = NEUTER
 	health = 15
 	maxHealth = 15
@@ -47,6 +51,9 @@
 
 /mob/living/simple_animal/hostile/hivebot/strong
 	name = "strong hivebot"
+	icon_state = "bigbot"
+	icon_living = "bigbot"
+	icon_dead = "bigbot"
 	desc = "A robot, this one is armed and looks tough!"
 	health = 80
 	maxHealth = 80

@@ -42,19 +42,6 @@
 	faction = "nanotrasen"
 	density = 0
 
-/obj/machinery/porta_turret/defensepylon_internal_turret/cult
-	faction = "cult"
-	//side = "cult"
-
-/obj/machinery/porta_turret/defensepylon_internal_turret/alien
-	name = "Alien's defenced turret"
-	faction = "abductor"
-	color = "purple"
-	obj_integrity = 90
-	max_integrity = 90
-	lethal_projectile = /obj/item/projectile/energy/declone
-	installation = /obj/item/weapon/gun/energy/alien/base
-
 /obj/structure/chair/comfy/sofa
 	name = "comfy sofa"
 	desc = "It looks comfy.\n<span class='notice'>Alt-click to rotate it clockwise.</span>"
@@ -329,18 +316,6 @@
 	base_icon_state = "syndie"
 	faction = "neutral"
 
-/obj/machinery/porta_turret/syndicate/alien
-	name = "Alien's defenced turret"
-	faction = "abductor"
-	color = "purple"
-	scan_range = 12
-	obj_integrity = 90
-	max_integrity = 90
-	mode = TURRET_LETHAL
-	lethal_projectile = /obj/item/projectile/energy/declone
-	lethal_projectile_sound = 'sound/weapons/marauder.ogg'
-	base_icon_state = "syndie"
-
 /obj/structure/closet/wall
 	name = "wall closet"
 	icon = 'icons/obj/wall_closet.dmi'
@@ -505,3 +480,18 @@
 /obj/item/weapon/circuitboard/computer/science_shuttle
 	name = "Science Shuttle Console (Computer Board)"
 	build_path = /obj/machinery/computer/shuttle/science
+
+//Взял с карбонки умные пули
+
+/obj/item/projectile/bullet/smart
+	name = "smart bullet"
+	var/faction = "syndicate"
+	damage = 25
+
+/obj/item/projectile/bullet/smart/Bump(atom/A, yes)
+	if(ismob(A))
+		var/mob/M = A
+		if(faction in M.faction)
+			forceMove(get_turf(A))
+			return 0
+	..()
