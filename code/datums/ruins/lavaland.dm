@@ -55,7 +55,7 @@
 	id = "seed-vault"
 	description = "The creators of these vaults were a highly advanced and benevolent race, and launched many into the stars, hoping to aid fledgling civilizations. \
 	However, all the inhabitants seem to do is grow drugs and guns."
-	suffix = "I_lavaland_surface_seed_vault.dmm"
+	suffix = "lavaland_surface_seed_vault.dmm"
 	cost = 10
 	allow_duplicates = FALSE
 
@@ -88,7 +88,7 @@
 	description = "Lumbering humanoids, made out of precious metals, move inside this ship. They frequently leave to mine more minerals, which they somehow turn into more of them. \
 	Seem very intent on research and individual liberty, and also geology based naming?"
 	cost = 20
-	suffix = "I_lavaland_surface_golem_ship.dmm"
+	suffix = "lavaland_surface_golem_ship.dmm"
 	allow_duplicates = FALSE
 
 /datum/map_template/ruin/lavaland/free_golem/infinity
@@ -110,32 +110,32 @@
 	name = "Ruin of Envy"
 	id = "envy"
 	description = "When you get what they have, then you'll finally be happy."
-	suffix = "I_lavaland_surface_envy.dmm"
+	suffix = "lavaland_surface_envy.dmm"
 
 /datum/map_template/ruin/lavaland/sin/gluttony
 	name = "Ruin of Gluttony"
 	id = "gluttony"
 	description = "If you eat enough, then eating will be all that you do."
-	suffix = "I_lavaland_surface_gluttony.dmm"
+	suffix = "lavaland_surface_gluttony.dmm"
 
 /datum/map_template/ruin/lavaland/sin/greed
 	name = "Ruin of Greed"
 	id = "greed"
 	description = "Sure you don't need magical powers, but you WANT them, and \
 		that's what's important."
-	suffix = "I_lavaland_surface_greed.dmm"
+	suffix = "lavaland_surface_greed.dmm"
 
 /datum/map_template/ruin/lavaland/sin/pride
 	name = "Ruin of Pride"
 	id = "pride"
 	description = "Wormhole lifebelts are for LOSERS, who you are better than."
-	suffix = "I_lavaland_surface_pride.dmm"
+	suffix = "lavaland_surface_pride.dmm"
 
 /datum/map_template/ruin/lavaland/sin/sloth
 	name = "Ruin of Sloth"
 	id = "sloth"
 	description = "..."
-	suffix = "I_lavaland_surface_sloth.dmm"
+	suffix = "lavaland_surface_sloth.dmm"
 	// Generates nothing but atmos runtimes and salt
 	cost = 0
 
@@ -173,7 +173,7 @@
 	name = "Fountain Hall"
 	id = "fountain"
 	description = "The fountain has a warning on the side. DANGER: May have undeclared side effects that only become obvious when implemented."
-	suffix = "I_lavaland_surface_fountain_hall.dmm"
+	suffix = "lavaland_surface_fountain_hall.dmm"
 	cost = 5
 
 /datum/map_template/ruin/lavaland/survivalcapsule
@@ -195,7 +195,7 @@
 	name = "Summoning Ritual"
 	id = "cultaltar"
 	description = "A place of vile worship, the scrawling of blood in the middle glowing eerily. A demonic laugh echoes throughout the caverns"
-	suffix = "I_lavaland_surface_cultaltar.dmm"
+	suffix = "lavaland_surface_cultaltar.dmm"
 	allow_duplicates = FALSE
 	cost = 10
 

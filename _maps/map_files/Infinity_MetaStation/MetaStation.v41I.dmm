@@ -9716,6 +9716,7 @@
 	pixel_x = 0;
 	pixel_y = 32
 	},
+/obj/effect/decal/cleanable/cobweb/cobweb2,
 /turf/open/floor/plating{
 	tag = "icon-platingdmg1";
 	icon_state = "platingdmg1"
@@ -10580,6 +10581,7 @@
 "asr" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/structure/table/wood,
+/obj/effect/landmark/event_spawn,
 /turf/open/floor/carpet,
 /area/engine/rest_room)
 "ass" = (
@@ -10596,7 +10598,6 @@
 	dir = 4;
 	icon_state = "pipe-c"
 	},
-/obj/effect/landmark/event_spawn,
 /turf/open/floor/carpet,
 /area/engine/rest_room)
 "asu" = (
@@ -11348,6 +11349,7 @@
 	pixel_x = 28;
 	pixel_y = 0
 	},
+/obj/effect/landmark/event_spawn,
 /turf/open/floor/plasteel/red/side{
 	dir = 4
 	},
@@ -11899,7 +11901,6 @@
 	dir = 4;
 	pixel_y = 22
 	},
-/obj/machinery/shieldgen,
 /turf/open/floor/plating,
 /area/maintenance/apmaint)
 "auD" = (
@@ -18294,6 +18295,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment,
+/obj/effect/landmark/event_spawn,
 /turf/open/floor/plasteel,
 /area/engine/engineering)
 "aEX" = (
@@ -27196,6 +27198,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/effect/landmark/event_spawn,
 /turf/open/floor/plasteel/neutral,
 /area/hallway/secondary/entry)
 "aUQ" = (
@@ -29783,6 +29786,7 @@
 	icon_state = "1-4"
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/effect/landmark/event_spawn,
 /turf/open/floor/plasteel,
 /area/engine/engineering)
 "aZd" = (
@@ -32032,10 +32036,7 @@
 	pixel_x = -27;
 	pixel_y = 0
 	},
-/turf/open/floor/plasteel{
-	tag = "icon-vault";
-	icon_state = "vault"
-	},
+/turf/open/floor/plasteel/darkwarning,
 /area/crew_quarters/chief)
 "bcR" = (
 /obj/machinery/requests_console{
@@ -32047,20 +32048,14 @@
 	pixel_y = 32
 	},
 /obj/machinery/computer/card/minor/ce,
-/turf/open/floor/plasteel{
-	tag = "icon-vault";
-	icon_state = "vault"
-	},
+/turf/open/floor/plasteel/darkwarning,
 /area/crew_quarters/chief)
 "bcS" = (
 /obj/machinery/ai_status_display{
 	pixel_y = 32
 	},
 /obj/machinery/computer/station_alert,
-/turf/open/floor/plasteel{
-	tag = "icon-vault";
-	icon_state = "vault"
-	},
+/turf/open/floor/plasteel/darkwarning,
 /area/crew_quarters/chief)
 "bcT" = (
 /obj/structure/cable/yellow{
@@ -33212,15 +33207,14 @@
 	name = "Station Intercom (General)";
 	pixel_x = -29
 	},
-/turf/open/floor/plasteel{
-	icon_state = "vault";
-	dir = 5
+/turf/open/floor/plasteel/blackvault/corner{
+	dir = 1
 	},
 /area/crew_quarters/chief)
 "beE" = (
 /turf/open/floor/plasteel{
-	icon_state = "vault";
-	dir = 5
+	tag = "icon-vault";
+	icon_state = "vault"
 	},
 /area/crew_quarters/chief)
 "beF" = (
@@ -33234,8 +33228,8 @@
 	network = list("SS13")
 	},
 /turf/open/floor/plasteel{
-	icon_state = "vault";
-	dir = 5
+	tag = "icon-vault";
+	icon_state = "vault"
 	},
 /area/crew_quarters/chief)
 "beG" = (
@@ -33259,10 +33253,7 @@
 	pixel_x = 26;
 	pixel_y = 26
 	},
-/turf/open/floor/plasteel{
-	icon_state = "vault";
-	dir = 5
-	},
+/turf/open/floor/plasteel/blackvault/corner,
 /area/crew_quarters/chief)
 "beH" = (
 /obj/structure/sign/securearea{
@@ -34182,9 +34173,8 @@
 /obj/machinery/light{
 	dir = 8
 	},
-/turf/open/floor/plasteel{
-	icon_state = "vault";
-	dir = 5
+/turf/open/floor/plasteel/blackvault{
+	dir = 4
 	},
 /area/crew_quarters/chief)
 "bgb" = (
@@ -34235,9 +34225,8 @@
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment,
-/turf/open/floor/plasteel{
-	icon_state = "vault";
-	dir = 5
+/turf/open/floor/plasteel/blackvault{
+	dir = 8
 	},
 /area/crew_quarters/chief)
 "bgg" = (
@@ -35287,7 +35276,6 @@
 /area/storage/tools)
 "bhE" = (
 /obj/effect/decal/cleanable/cobweb,
-/obj/machinery/shieldgen,
 /turf/open/floor/plating,
 /area/maintenance/port)
 "bhF" = (
@@ -35452,9 +35440,8 @@
 	pixel_y = 5;
 	req_access_txt = "11"
 	},
-/turf/open/floor/plasteel{
-	icon_state = "vault";
-	dir = 5
+/turf/open/floor/plasteel/blackvault{
+	dir = 4
 	},
 /area/crew_quarters/chief)
 "bhQ" = (
@@ -35524,9 +35511,8 @@
 	icon_state = "tube1"
 	},
 /obj/structure/disposalpipe/segment,
-/turf/open/floor/plasteel{
-	icon_state = "vault";
-	dir = 5
+/turf/open/floor/plasteel/blackvault{
+	dir = 8
 	},
 /area/crew_quarters/chief)
 "bhV" = (
@@ -36325,9 +36311,8 @@
 	scrub_N2O = 0;
 	scrub_Toxins = 0
 	},
-/turf/open/floor/plasteel{
-	icon_state = "vault";
-	dir = 5
+/turf/open/floor/plasteel/blackvault{
+	dir = 4
 	},
 /area/crew_quarters/chief)
 "bjq" = (
@@ -36380,9 +36365,8 @@
 	pixel_x = 30;
 	pixel_y = 0
 	},
-/turf/open/floor/plasteel{
-	icon_state = "vault";
-	dir = 5
+/turf/open/floor/plasteel/blackvault{
+	dir = 8
 	},
 /area/crew_quarters/chief)
 "bju" = (
@@ -36589,6 +36573,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/effect/landmark/event_spawn,
 /turf/open/floor/plasteel/neutral,
 /area/hallway/secondary/entry)
 "bjQ" = (
@@ -37231,16 +37216,14 @@
 	pixel_x = 0;
 	pixel_y = -28
 	},
-/turf/open/floor/plasteel{
-	icon_state = "vault";
-	dir = 5
+/turf/open/floor/plasteel/blackvault/corner{
+	dir = 8
 	},
 /area/crew_quarters/chief)
 "bkZ" = (
 /obj/machinery/suit_storage_unit/ce,
-/turf/open/floor/plasteel{
-	icon_state = "vault";
-	dir = 5
+/turf/open/floor/plasteel/blackvault{
+	dir = 1
 	},
 /area/crew_quarters/chief)
 "bla" = (
@@ -37252,9 +37235,8 @@
 	pixel_y = -30
 	},
 /obj/machinery/photocopier,
-/turf/open/floor/plasteel{
-	icon_state = "vault";
-	dir = 5
+/turf/open/floor/plasteel/blackvault{
+	dir = 1
 	},
 /area/crew_quarters/chief)
 "blb" = (
@@ -37271,9 +37253,8 @@
 	pixel_y = -26
 	},
 /obj/item/clothing/mask/cigarette/cigar,
-/turf/open/floor/plasteel{
-	icon_state = "vault";
-	dir = 5
+/turf/open/floor/plasteel/blackvault{
+	dir = 1
 	},
 /area/crew_quarters/chief)
 "blc" = (
@@ -37286,9 +37267,8 @@
 /obj/item/weapon/paper/notice/request,
 /obj/item/weapon/paper/notice/request,
 /mob/living/simple_animal/parrot/Poly,
-/turf/open/floor/plasteel{
-	icon_state = "vault";
-	dir = 5
+/turf/open/floor/plasteel/blackvault{
+	dir = 1
 	},
 /area/crew_quarters/chief)
 "bld" = (
@@ -37305,9 +37285,8 @@
 	icon_state = "alarm0";
 	pixel_x = 24
 	},
-/turf/open/floor/plasteel{
-	icon_state = "vault";
-	dir = 5
+/turf/open/floor/plasteel/blackvault/corner{
+	dir = 4
 	},
 /area/crew_quarters/chief)
 "ble" = (
@@ -48424,12 +48403,12 @@
 	},
 /area/bridge)
 "bCW" = (
-/obj/effect/landmark/event_spawn,
 /turf/open/floor/plasteel/blackvault{
 	dir = 1
 	},
 /area/bridge)
 "bCX" = (
+/obj/effect/landmark/event_spawn,
 /turf/open/floor/plasteel/stairsnew/grey,
 /area/bridge)
 "bCY" = (
@@ -57078,6 +57057,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/machinery/shieldgen,
 /turf/open/floor/plasteel,
 /area/ai_monitored/storage/eva)
 "bSu" = (
@@ -60275,7 +60255,6 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
-/obj/effect/landmark/event_spawn,
 /turf/open/floor/plasteel/neutral,
 /area/hallway/secondary/entry)
 "bXY" = (
@@ -61146,6 +61125,7 @@
 	dir = 4
 	},
 /obj/machinery/holopad,
+/obj/effect/landmark/event_spawn,
 /turf/open/floor/plasteel/neutral,
 /area/hallway/secondary/entry)
 "bZv" = (
@@ -61345,6 +61325,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/effect/landmark/event_spawn,
 /turf/open/floor/wood,
 /area/library)
 "bZN" = (
@@ -72403,6 +72384,7 @@
 	dir = 8;
 	initialize_directions = 13
 	},
+/obj/effect/landmark/event_spawn,
 /turf/open/floor/plasteel{
 	icon_state = "white"
 	},
@@ -83667,6 +83649,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/effect/landmark/event_spawn,
 /turf/open/floor/plasteel{
 	icon_state = "floorgrime"
 	},
@@ -84913,6 +84896,9 @@
 /area/medical/virology)
 "cMc" = (
 /obj/structure/chair/office/light,
+/obj/effect/landmark/start{
+	name = "Virologist"
+	},
 /turf/open/floor/plasteel/whitegreen/side{
 	dir = 8
 	},
@@ -84922,6 +84908,9 @@
 /area/medical/virology)
 "cMe" = (
 /obj/structure/chair/office/light,
+/obj/effect/landmark/start{
+	name = "Virologist"
+	},
 /turf/open/floor/plasteel/whitegreen/side{
 	dir = 4
 	},
@@ -85961,6 +85950,7 @@
 	pixel_x = -2;
 	pixel_y = 5
 	},
+/obj/effect/decal/cleanable/cobweb/cobweb2,
 /turf/open/floor/plating,
 /area/maintenance/asmaint2)
 "cNP" = (
@@ -86700,6 +86690,9 @@
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
+	},
+/obj/effect/landmark/start{
+	name = "Virologist"
 	},
 /turf/open/floor/plasteel/white,
 /area/medical/virology)
@@ -88489,6 +88482,9 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/item/weapon/bedsheet/medical,
 /obj/structure/bed,
+/obj/effect/landmark/start{
+	name = "Virologist"
+	},
 /turf/open/floor/plasteel{
 	icon_state = "freezerfloor"
 	},
@@ -88501,6 +88497,9 @@
 /obj/structure/bed,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/item/weapon/bedsheet/medical,
+/obj/effect/landmark/start{
+	name = "Virologist"
+	},
 /turf/open/floor/plasteel{
 	icon_state = "freezerfloor"
 	},
@@ -88604,7 +88603,6 @@
 	dir = 4
 	},
 /obj/item/weapon/ore/slag,
-/obj/machinery/shieldgen,
 /turf/open/floor/plating,
 /area/maintenance/asmaint)
 "cRZ" = (
@@ -89537,6 +89535,9 @@
 "cTE" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
 	dir = 8
+	},
+/obj/effect/landmark/start{
+	name = "Virologist"
 	},
 /turf/open/floor/plasteel/white,
 /area/medical/virology)
@@ -92733,6 +92734,7 @@
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
 	dir = 4
 	},
+/obj/effect/landmark/event_spawn,
 /turf/open/floor/plasteel,
 /area/hallway/secondary/exit)
 "cZf" = (
@@ -95484,6 +95486,22 @@
 	dir = 1
 	},
 /area/medical/virology)
+"dis" = (
+/obj/effect/landmark/event_spawn,
+/turf/open/floor/plasteel/neutral,
+/area/hallway/secondary/entry)
+"dit" = (
+/obj/structure/cable/yellow{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 6
+	},
+/obj/effect/decal/cleanable/cobweb,
+/turf/open/floor/plating,
+/area/maintenance/asmaint2)
 
 (1,1,1) = {"
 aaa
@@ -105099,7 +105117,7 @@ aNA
 aOW
 aAo
 aSH
-aUE
+dis
 aWf
 aSG
 aai
@@ -106641,7 +106659,7 @@ aFb
 aPa
 aRb
 aSL
-dht
+aUK
 aWh
 aXW
 aSG
@@ -107932,7 +107950,7 @@ aXX
 aZm
 baF
 bbY
-aPg
+aXX
 aSG
 aSG
 aSG
@@ -107940,15 +107958,15 @@ aSG
 aSG
 aSG
 aSG
-aPg
+aXX
 bst
 bud
 aZm
 aXX
 bAr
 aUD
-bEd
-aPg
+aWl
+aXX
 aPg
 aPg
 aSG
@@ -107958,7 +107976,7 @@ aSG
 aSG
 aPg
 aPg
-aPg
+aXX
 bAr
 bZs
 cay
@@ -109750,7 +109768,7 @@ bEk
 apl
 bHL
 bJv
-bLd
+ayT
 apl
 bOC
 bQr
@@ -111762,7 +111780,7 @@ aaa
 aai
 aaa
 apm
-aqV
+bJG
 asK
 apl
 aai
@@ -115166,7 +115184,7 @@ caK
 caK
 caK
 caK
-cns
+cfc
 coz
 cpT
 cpR
@@ -116957,7 +116975,7 @@ bED
 bYk
 bZP
 bAL
-bLd
+ayT
 cdD
 bJG
 caK
@@ -124110,7 +124128,7 @@ aEv
 aFL
 auZ
 aIF
-aJS
+aBl
 aLq
 aMM
 aOf
@@ -128721,7 +128739,7 @@ afQ
 afQ
 afQ
 afQ
-anA
+any
 aoF
 any
 any
@@ -130094,7 +130112,7 @@ cJb
 cJW
 cKW
 csh
-cMS
+ctO
 cNN
 ctO
 ctO
@@ -131111,7 +131129,7 @@ cxx
 cyV
 czV
 cog
-cCg
+dit
 cDi
 cEo
 cuK

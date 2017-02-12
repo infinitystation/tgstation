@@ -63,11 +63,6 @@
 	icon_state = "broken"
 	icon = 'icons/mob/more_hairs.dmi'
 
-/datum/sprite_accessory/hair/dads
-	name = "Dads"
-	icon_state = "dads"
-	icon = 'icons/mob/more_hairs.dmi'
-
 /datum/sprite_accessory/socks/blue_thigh
 	name = "Thigh-high Blue"
 	icon_state = "blue_thigh"
@@ -139,11 +134,6 @@
 	icon_state = "poslo"
 	icon = 'icons/mob/infinity_work.dmi'
 	gender = FEMALE
-
-/datum/sprite_accessory/hair/pigtailis
-	name = "Pigtailis"
-	icon_state = "pigtailis"
-	icon = 'icons/mob/more_hairs.dmi'
 
 /datum/sprite_accessory/socks/stockings_sus
 	name = "Stockings with suspenders"
@@ -373,3 +363,23 @@
 	icon_state = "dog"
 	hasinner = 1
 	color_src = HAIR
+
+/datum/sprite_accessory/hair/long_hair_to_braid
+	name = "Long hair to braid "
+	icon = 'icons/mob/more_hairs.dmi'
+	icon_state = "long_hair_to_braid"
+
+/datum/sprite_accessory/hair/hipstery
+	name = "Hipstery"
+	icon = 'icons/mob/more_hairs.dmi'
+	icon_state = "hipstery"
+
+/datum/sprite_accessory/hair/long_hair_3
+	name = "Long hair 3"
+	icon = 'icons/mob/more_hairs.dmi'
+	icon_state = "long_hair_3"
+
+/datum/sprite_accessory/hair/angel_hair
+	name = "Angel hair"
+	icon = 'icons/mob/more_hairs.dmi'
+	icon_state = "angel_hair"

@@ -171,8 +171,8 @@
 
 /turf/closed/mineral/random/high_chance/volcanic
 	environment_type = "basalt"
-	turf_type = /turf/open/indestructible/necropolis
-	baseturf = /turf/open/indestructible/necropolis
+	turf_type = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
+	baseturf = /turf/open/floor/plating/lava/smooth/lava_land_surface
 	initial_gas_mix = "o2=14;n2=23;TEMP=300"
 	defer_change = 1
 	mineralSpawnChanceList = list(

@@ -82,8 +82,8 @@
 /obj/item/clothing/suit/cultrobes
 	name = "ancient cultist robes"
 	desc = "A ragged, dusty set of robes. Strange letters line the inside."
-	icon_state = "killer_suit"
-	item_state = "killer_suit"
+	icon_state = "cultrobes"
+	item_state = "cultrobes"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	allowed = list(/obj/item/weapon/tome,/obj/item/weapon/melee/cultblade)
 	armor = list(melee = 50, bullet = 30, laser = 50,energy = 20, bomb = 25, bio = 10, rad = 0, fire = 10, acid = 10)
