@@ -63,6 +63,7 @@
 	name = "guitar"
 	desc = "It's made of wood and has bronze strings."
 	icon = 'icons/obj/musician.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'
 	icon_state = "guitar"
 	item_state = "guitar"
 	slot_flags = SLOT_BACK
