@@ -5522,6 +5522,7 @@
 	name = "prisonwarp"
 	},
 /obj/structure/chair,
+/obj/machinery/camera/autoname,
 /turf/open/floor/plasteel/vault{
 	dir = 8
 	},
@@ -5600,6 +5601,7 @@
 /obj/item/weapon/storage/box/handcuffs,
 /obj/item/weapon/storage/box/handcuffs,
 /obj/item/weapon/storage/box/handcuffs,
+/obj/machinery/camera/autoname,
 /turf/open/floor/plasteel/warning,
 /area/centcom/control)
 "pi" = (
@@ -5609,6 +5611,7 @@
 /area/centcom/prison)
 "pj" = (
 /obj/structure/chair,
+/obj/machinery/camera/autoname,
 /turf/open/floor/plasteel/vault{
 	dir = 8
 	},
@@ -5660,6 +5663,7 @@
 	pixel_x = 24;
 	pixel_y = 24
 	},
+/obj/machinery/camera/autoname,
 /turf/open/floor/plasteel/darkwarning/corner{
 	tag = "icon-black_warn_corner (NORTH)";
 	icon_state = "black_warn_corner";
@@ -5891,6 +5895,10 @@
 /obj/effect/landmark{
 	name = "Centcomsec"
 	},
+/obj/machinery/camera/autoname{
+	dir = 8;
+	network = list("SS13")
+	},
 /turf/open/floor/plasteel/green/side{
 	dir = 4
 	},
@@ -6067,6 +6075,8 @@
 /obj/item/stack/packageWrap,
 /obj/item/weapon/hand_labeler,
 /obj/structure/table,
+/obj/item/weapon/stamp,
+/obj/item/weapon/stamp/denied,
 /turf/open/floor/plasteel/bot,
 /area/centcom/control)
 "qm" = (
@@ -6074,6 +6084,7 @@
 	name = "prisonwarp"
 	},
 /obj/structure/chair,
+/obj/machinery/camera/autoname,
 /turf/open/floor/plasteel/vault{
 	dir = 8
 	},
@@ -6682,6 +6693,7 @@
 /obj/structure/sign/nanotrasen{
 	pixel_y = 32
 	},
+/obj/machinery/camera/autoname,
 /turf/open/floor/plasteel/warning{
 	dir = 5
 	},
@@ -6705,6 +6717,7 @@
 /obj/structure/sign/nanotrasen{
 	pixel_y = 32
 	},
+/obj/machinery/camera/autoname,
 /turf/open/floor/plasteel/warning{
 	dir = 9
 	},
@@ -7367,6 +7380,10 @@
 	dir = 4;
 	pixel_x = 24
 	},
+/obj/machinery/camera/autoname{
+	dir = 8;
+	network = list("SS13")
+	},
 /turf/open/floor/plasteel/warning{
 	dir = 4
 	},
@@ -7788,6 +7805,10 @@
 /obj/machinery/newscaster/security_unit{
 	pixel_x = 32
 	},
+/obj/machinery/camera/autoname{
+	dir = 8;
+	network = list("SS13")
+	},
 /turf/open/floor/plasteel/vault{
 	dir = 8
 	},
@@ -7946,14 +7967,12 @@
 /turf/open/floor/plasteel/grimy,
 /area/centcom/control)
 "uS" = (
-/obj/item/weapon/twohanded/required/kirbyplants{
-	icon_state = "plant-22"
-	},
 /obj/machinery/airalarm{
 	dir = 8;
 	icon_state = "alarm0";
 	pixel_x = 24
 	},
+/obj/structure/filingcabinet/filingcabinet,
 /turf/open/floor/plasteel/vault{
 	dir = 8
 	},
@@ -8295,6 +8314,10 @@
 /obj/structure/extinguisher_cabinet{
 	pixel_x = -24
 	},
+/obj/machinery/camera/autoname{
+	dir = 4;
+	network = list("SS13")
+	},
 /turf/open/floor/plasteel/vault,
 /area/centcom/control)
 "vG" = (
@@ -8315,6 +8338,10 @@
 	pixel_y = 0;
 	tag = "icon-nboard00 (WEST)"
 	},
+/obj/structure/table/wood,
+/obj/item/weapon/book/manual/wiki/security_space_law,
+/obj/item/weapon/book/manual/wiki/security_space_law,
+/obj/item/weapon/book/manual/wiki/security_space_law,
 /turf/open/floor/plasteel/vault,
 /area/centcom/control)
 "vJ" = (
@@ -8385,6 +8412,7 @@
 /obj/item/weapon/clipboard,
 /obj/item/weapon/folder/yellow,
 /obj/item/weapon/pen/red,
+/obj/machinery/camera/autoname,
 /turf/open/floor/plasteel/vault{
 	dir = 8
 	},
@@ -8611,14 +8639,16 @@
 /obj/item/stack/packageWrap,
 /obj/item/stack/cable_coil/white,
 /obj/item/weapon/hand_labeler,
+/obj/machinery/camera/autoname{
+	dir = 4;
+	network = list("SS13")
+	},
 /turf/open/floor/plasteel/green/side{
 	dir = 9
 	},
 /area/centcom/control)
 "ws" = (
-/obj/item/weapon/twohanded/required/kirbyplants{
-	icon_state = "plant-22"
-	},
+/obj/machinery/camera/autoname,
 /turf/open/floor/plasteel/green/side{
 	dir = 1
 	},
@@ -8691,6 +8721,7 @@
 	pixel_x = 24;
 	pixel_y = 24
 	},
+/obj/machinery/camera/autoname,
 /turf/open/floor/plasteel/warning{
 	dir = 10
 	},
@@ -8855,6 +8886,8 @@
 "wT" = (
 /obj/item/weapon/book/manual/wiki/security_space_law,
 /obj/structure/table/wood,
+/obj/item/weapon/book/manual/wiki/security_space_law,
+/obj/item/weapon/book/manual/wiki/security_space_law,
 /turf/open/floor/plasteel/vault{
 	dir = 8
 	},
@@ -8866,8 +8899,8 @@
 	},
 /area/centcom/control)
 "wV" = (
-/obj/structure/reagent_dispensers/peppertank{
-	pixel_x = -32
+/obj/structure/chair/office/light{
+	dir = 4
 	},
 /turf/open/floor/plasteel/darkred/side{
 	dir = 8
@@ -8902,6 +8935,10 @@
 /obj/machinery/newscaster{
 	pixel_x = 32
 	},
+/obj/machinery/camera/autoname{
+	dir = 8;
+	network = list("SS13")
+	},
 /turf/open/floor/plasteel/grimy,
 /area/centcom/control)
 "xa" = (
@@ -8911,6 +8948,10 @@
 "xb" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 6
+	},
+/obj/machinery/camera/autoname{
+	dir = 4;
+	network = list("SS13")
 	},
 /turf/open/floor/plasteel/white,
 /area/centcom/ferry)
@@ -9033,10 +9074,7 @@
 	},
 /area/centcom/control)
 "xo" = (
-/obj/item/weapon/paper/pamphlet/ccaInfo,
-/obj/item/weapon/paper/pamphlet/ccaInfo,
-/obj/item/weapon/paper/pamphlet/ccaInfo,
-/obj/structure/table/wood,
+/obj/machinery/photocopier,
 /turf/open/floor/plasteel/vault{
 	dir = 8
 	},
@@ -9201,6 +9239,7 @@
 	pixel_x = 0;
 	pixel_y = 32
 	},
+/obj/machinery/camera/autoname,
 /turf/open/floor/plasteel/vault{
 	dir = 10
 	},
@@ -9280,6 +9319,7 @@
 /obj/structure/table/reinforced,
 /obj/item/weapon/paper_bin,
 /obj/item/weapon/pen/red,
+/obj/machinery/camera/autoname,
 /turf/open/floor/plasteel/warning{
 	dir = 10
 	},
@@ -9357,6 +9397,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/machinery/camera/autoname,
 /turf/open/floor/plasteel/vault,
 /area/centcom/control)
 "ya" = (
@@ -9588,6 +9629,10 @@
 /obj/machinery/light_switch{
 	pixel_x = -24
 	},
+/obj/machinery/camera/autoname{
+	dir = 4;
+	network = list("SS13")
+	},
 /turf/open/floor/plasteel/grimy,
 /area/centcom/ferry)
 "yD" = (
@@ -9775,6 +9820,9 @@
 	pixel_x = -24;
 	pixel_y = 0
 	},
+/obj/item/clothing/head/centcom_beret,
+/obj/item/clothing/suit/blue_admiral_coat,
+/obj/item/clothing/suit/black_admiral_coat,
 /turf/open/floor/plasteel/grimy,
 /area/centcom/ferry)
 "yW" = (
@@ -9831,6 +9879,17 @@
 	pixel_x = 32;
 	tag = "icon-direction_sec (EAST)"
 	},
+/obj/machinery/button/door{
+	id = "XCCsecdepartment";
+	layer = 3;
+	name = "CC Security Checkpoint Control";
+	pixel_x = 25;
+	pixel_y = 7
+	},
+/obj/machinery/camera/autoname{
+	dir = 8;
+	network = list("SS13")
+	},
 /turf/open/floor/plasteel/red/side{
 	dir = 4
 	},
@@ -9838,6 +9897,10 @@
 "zb" = (
 /obj/structure/table/wood,
 /obj/item/weapon/storage/fancy/donut_box,
+/obj/machinery/camera/autoname{
+	dir = 1;
+	network = list("SS13")
+	},
 /turf/open/floor/plasteel/vault{
 	dir = 8
 	},
@@ -10112,6 +10175,10 @@
 	dir = 1;
 	pixel_x = 0;
 	pixel_y = -26
+	},
+/obj/machinery/camera/autoname{
+	dir = 1;
+	network = list("SS13")
 	},
 /turf/open/floor/plasteel/vault{
 	dir = 8
@@ -10461,6 +10528,10 @@
 /obj/machinery/newscaster{
 	pixel_x = -32
 	},
+/obj/machinery/camera/autoname{
+	dir = 4;
+	network = list("SS13")
+	},
 /turf/open/floor/plasteel/vault,
 /area/centcom/ferry)
 "AD" = (
@@ -10495,7 +10566,6 @@
 /area/centcom/ferry)
 "AH" = (
 /obj/machinery/computer/card/centcom,
-/obj/item/weapon/card/id/centcom,
 /obj/machinery/computer/security/telescreen{
 	desc = "Used for watching the RD's goons and the AI's satellite from the safety of his office.";
 	name = "Research Monitor";
@@ -10519,7 +10589,9 @@
 	tag = "icon-0-4";
 	icon_state = "0-4"
 	},
-/turf/open/floor/plasteel/warning,
+/turf/open/floor/plasteel/warning{
+	dir = 1
+	},
 /area/centcom/ferry)
 "AK" = (
 /obj/machinery/power/apc{
@@ -10558,7 +10630,12 @@
 	tag = "icon-0-8";
 	icon_state = "0-8"
 	},
-/turf/open/floor/plasteel/warning,
+/obj/machinery/camera/autoname,
+/turf/open/floor/plasteel/warning{
+	tag = "icon-plasteel_warn (NORTHEAST)";
+	icon_state = "plasteel_warn";
+	dir = 5
+	},
 /area/centcom/ferry)
 "AL" = (
 /obj/structure/table/reinforced,
@@ -10606,6 +10683,10 @@
 /area/centcom/supply)
 "AQ" = (
 /obj/structure/fans/tiny,
+/obj/machinery/camera/autoname{
+	dir = 8;
+	network = list("SS13")
+	},
 /turf/open/floor/plasteel/vault{
 	dir = 8
 	},
@@ -10624,6 +10705,10 @@
 	},
 /obj/structure/extinguisher_cabinet{
 	pixel_x = -24
+	},
+/obj/machinery/camera/autoname{
+	dir = 4;
+	network = list("SS13")
 	},
 /turf/open/floor/plasteel/vault{
 	dir = 8
@@ -10809,6 +10894,10 @@
 	pixel_y = 0;
 	tag = "icon-nboard00 (WEST)"
 	},
+/obj/machinery/camera/autoname{
+	dir = 8;
+	network = list("SS13")
+	},
 /turf/open/floor/plasteel/green/side{
 	dir = 5
 	},
@@ -10919,7 +11008,7 @@
 	tag = "icon-2-8";
 	icon_state = "2-8"
 	},
-/turf/open/floor/plasteel/vault{
+/turf/open/floor/plasteel/warning{
 	dir = 8
 	},
 /area/centcom/ferry)
@@ -10946,9 +11035,7 @@
 	icon_state = "0-2";
 	tag = "icon-0-2"
 	},
-/turf/open/floor/plasteel/vault{
-	dir = 8
-	},
+/turf/open/floor/plasteel/neutral,
 /area/centcom/ferry)
 "BA" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/visible{
@@ -10969,18 +11056,13 @@
 	tag = "icon-2-8";
 	icon_state = "2-8"
 	},
-/turf/open/floor/plasteel/vault{
-	dir = 8
+/turf/open/floor/plasteel/warning{
+	dir = 4
 	},
 /area/centcom/ferry)
 "BB" = (
-/obj/machinery/door/airlock/vault{
-	locked = 1;
-	name = "Vault Door";
-	req_access_txt = "53"
-	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 4
+/obj/machinery/door/poddoor/ert{
+	id = "Centcom_weapon"
 	},
 /turf/open/floor/plasteel/darkwarning/side{
 	tag = "icon-black_warn_side (NORTH)";
@@ -11264,7 +11346,7 @@
 	icon_state = "1-4"
 	},
 /turf/open/floor/plasteel/warning{
-	dir = 1
+	dir = 10
 	},
 /area/centcom/ferry)
 "Cn" = (
@@ -11282,14 +11364,9 @@
 	tag = "icon-1-8";
 	icon_state = "1-8"
 	},
-/turf/open/floor/plasteel/warning{
-	dir = 1
-	},
+/turf/open/floor/plasteel/warning,
 /area/centcom/ferry)
 "Co" = (
-/obj/machinery/atmospherics/components/unary/tank/air{
-	dir = 1
-	},
 /obj/machinery/firealarm{
 	dir = 1;
 	pixel_x = 0;
@@ -11300,8 +11377,13 @@
 	tag = "icon-1-8";
 	icon_state = "1-8"
 	},
+/obj/structure/table/reinforced,
+/obj/item/weapon/storage/toolbox/mechanical,
+/obj/item/weapon/storage/toolbox/electrical,
+/obj/item/weapon/storage/toolbox/emergency,
+/obj/item/weapon/crowbar/red,
 /turf/open/floor/plasteel/warning{
-	dir = 1
+	dir = 6
 	},
 /area/centcom/ferry)
 "Cp" = (
@@ -11386,6 +11468,7 @@
 	pixel_y = 24;
 	tag = "icon-direction_sec (NORTH)"
 	},
+/obj/machinery/camera/autoname,
 /turf/open/floor/plasteel/green/corner{
 	dir = 4
 	},
@@ -12111,11 +12194,12 @@
 	},
 /area/centcom/ferry)
 "Ef" = (
-/obj/structure/sign/directions/shuttle{
-	dir = 8;
-	icon_state = "shuttle";
+/obj/machinery/button/door{
+	id = "XCCFerry";
+	name = "Hanger Bay Shutters";
+	pixel_x = 0;
 	pixel_y = 24;
-	tag = "icon-shuttle (WEST)"
+	req_access_txt = "2"
 	},
 /turf/open/floor/plasteel/green/corner{
 	dir = 1
@@ -12688,6 +12772,10 @@
 "FH" = (
 /obj/item/weapon/storage/firstaid/regular,
 /obj/structure/table,
+/obj/machinery/camera/autoname{
+	dir = 8;
+	network = list("SS13")
+	},
 /turf/open/floor/plasteel/green/side{
 	dir = 6
 	},
@@ -13060,15 +13148,20 @@
 /obj/item/clothing/gloves/color/latex,
 /obj/item/clothing/mask/surgical,
 /obj/structure/table/reinforced,
-/turf/open/floor/plasteel/cmo,
+/obj/machinery/camera/autoname,
+/turf/open/floor/plasteel/neutral,
 /area/centcom/control)
 "GB" = (
 /obj/structure/bed/roller,
 /obj/machinery/iv_drip,
-/turf/open/floor/plasteel/cmo,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/plasteel/blue,
 /area/centcom/control)
 "GC" = (
-/turf/open/floor/plasteel/cmo,
+/obj/structure/closet/crate/bin,
+/turf/open/floor/plasteel/neutral,
 /area/centcom/control)
 "GD" = (
 /obj/machinery/computer/med_data,
@@ -13076,7 +13169,7 @@
 	dir = 4;
 	pixel_x = 24
 	},
-/turf/open/floor/plasteel/cmo,
+/turf/open/floor/plasteel/neutral,
 /area/centcom/control)
 "GE" = (
 /obj/machinery/vending/cigarette,
@@ -13175,7 +13268,9 @@
 /turf/open/floor/plasteel/black,
 /area/centcom/ferry)
 "GP" = (
-/obj/machinery/door/poddoor/ert,
+/obj/machinery/door/poddoor/ert{
+	id = "Blast"
+	},
 /turf/open/floor/plasteel/delivery,
 /area/centcom/ferry)
 "GQ" = (
@@ -13218,6 +13313,10 @@
 /area/centcom/control)
 "GV" = (
 /obj/machinery/light,
+/obj/machinery/camera/autoname{
+	dir = 1;
+	network = list("SS13")
+	},
 /turf/open/floor/plasteel/green/corner{
 	dir = 8
 	},
@@ -13238,14 +13337,22 @@
 "GZ" = (
 /obj/structure/table/optable,
 /obj/item/weapon/surgical_drapes,
-/turf/open/floor/plasteel/cmo,
+/obj/machinery/light{
+	icon_state = "tube1";
+	dir = 8
+	},
+/turf/open/floor/plasteel/blue,
 /area/centcom/control)
 "Ha" = (
 /turf/open/floor/plasteel/blue,
 /area/centcom/control)
 "Hb" = (
 /obj/machinery/vending/medical,
-/turf/open/floor/plasteel/cmo,
+/obj/machinery/light{
+	icon_state = "tube1";
+	dir = 4
+	},
+/turf/open/floor/plasteel/blue,
 /area/centcom/control)
 "Hc" = (
 /turf/open/floor/plasteel/yellowsiding,
@@ -13389,6 +13496,10 @@
 	pixel_x = 26;
 	pixel_y = 0
 	},
+/obj/machinery/camera/autoname{
+	dir = 8;
+	network = list("SS13")
+	},
 /turf/open/floor/plasteel/vault{
 	dir = 8
 	},
@@ -13414,7 +13525,7 @@
 /obj/structure/extinguisher_cabinet{
 	pixel_x = -24
 	},
-/turf/open/floor/plasteel/cmo,
+/turf/open/floor/plasteel/neutral,
 /area/centcom/control)
 "Hz" = (
 /obj/machinery/door/airlock/centcom{
@@ -13604,9 +13715,36 @@
 /turf/open/floor/plasteel/delivery,
 /area/centcom/control)
 "HZ" = (
-/obj/item/weapon/defibrillator/loaded,
 /obj/structure/table/reinforced,
-/turf/open/floor/plasteel/cmo,
+/obj/item/weapon/reagent_containers/syringe/epinephrine{
+	pixel_x = 3;
+	pixel_y = -2
+	},
+/obj/item/weapon/reagent_containers/syringe/epinephrine{
+	pixel_x = 3;
+	pixel_y = -2
+	},
+/obj/item/weapon/reagent_containers/syringe/epinephrine{
+	pixel_x = 3;
+	pixel_y = -2
+	},
+/obj/item/weapon/reagent_containers/syringe/epinephrine{
+	pixel_x = 3;
+	pixel_y = -2
+	},
+/obj/item/weapon/reagent_containers/glass/bottle/charcoal{
+	pixel_x = 6;
+	pixel_y = 8
+	},
+/obj/item/weapon/reagent_containers/glass/bottle/epinephrine{
+	pixel_x = -3;
+	pixel_y = 8
+	},
+/obj/item/weapon/reagent_containers/glass/bottle/charcoal{
+	pixel_x = 6;
+	pixel_y = 8
+	},
+/turf/open/floor/plasteel/blue,
 /area/centcom/control)
 "Ia" = (
 /obj/item/weapon/reagent_containers/glass/bottle/epinephrine{
@@ -13645,13 +13783,10 @@
 /area/centcom/control)
 "Ib" = (
 /obj/machinery/sleeper{
-	tag = "icon-sleeper-open (EAST)";
 	icon_state = "sleeper-open";
-	dir = 4
+	dir = 1
 	},
-/turf/open/floor/plasteel/warning{
-	dir = 9
-	},
+/turf/open/floor/plasteel/blue,
 /area/centcom/control)
 "Ic" = (
 /obj/machinery/light,
@@ -13666,13 +13801,12 @@
 	},
 /area/centcom/control)
 "Id" = (
-/obj/machinery/sleeper{
-	icon_state = "sleeper-open";
-	dir = 8
+/obj/structure/closet/secure_closet/medical3{
+	anchored = 1
 	},
-/turf/open/floor/plasteel/warning{
-	dir = 5
-	},
+/obj/item/weapon/defibrillator/loaded,
+/obj/item/weapon/storage/backpack/dufflebag/med,
+/turf/open/floor/plasteel/blue,
 /area/centcom/control)
 "Ie" = (
 /obj/item/weapon/storage/firstaid/fire,
@@ -13695,7 +13829,11 @@
 	icon_state = "alarm0";
 	pixel_x = 24
 	},
-/turf/open/floor/plasteel/cmo,
+/obj/item/weapon/storage/firstaid/regular{
+	pixel_x = 2;
+	pixel_y = 3
+	},
+/turf/open/floor/plasteel/blue,
 /area/centcom/control)
 "Ig" = (
 /obj/structure/grille,
@@ -13849,12 +13987,8 @@
 	},
 /area/centcom/ferry)
 "Iw" = (
-/obj/effect/spawner/structure/window/reinforced,
-/obj/machinery/door/poddoor/preopen{
-	icon = 'icons/obj/doors/blastdoor_hor.dmi';
-	id = "XCCassault"
-	},
-/turf/open/floor/plating,
+/obj/structure/sign/nosmoking_2,
+/turf/closed/indestructible/riveted/infinity,
 /area/centcom/control)
 "Ix" = (
 /obj/structure/flora/ausbushes/lavendergrass,
@@ -14048,6 +14182,10 @@
 	icon_state = "alarm0";
 	pixel_y = -22
 	},
+/obj/machinery/camera/autoname{
+	dir = 1;
+	network = list("SS13")
+	},
 /turf/open/floor/plasteel/vault{
 	dir = 8
 	},
@@ -14080,16 +14218,7 @@
 	},
 /area/centcom/ferry)
 "IY" = (
-/obj/item/device/radio{
-	pixel_x = 5;
-	pixel_y = 5
-	},
-/obj/item/device/radio{
-	pixel_x = -5;
-	pixel_y = 5
-	},
-/obj/item/device/radio,
-/obj/structure/table/wood,
+/obj/structure/tank_dispenser/oxygen,
 /turf/open/floor/plasteel/vault{
 	dir = 8
 	},
@@ -14163,6 +14292,10 @@
 	dir = 4;
 	pixel_x = 24
 	},
+/obj/machinery/camera/autoname{
+	dir = 8;
+	network = list("SS13")
+	},
 /turf/open/floor/plasteel/vault{
 	dir = 8
 	},
@@ -14180,6 +14313,7 @@
 /area/centcom/control)
 "Jh" = (
 /obj/structure/chair,
+/obj/machinery/camera/autoname,
 /turf/open/floor/plasteel/green/corner{
 	dir = 1
 	},
@@ -14800,6 +14934,7 @@
 /obj/structure/table/reinforced,
 /obj/item/weapon/paper_bin,
 /obj/item/weapon/pen/red,
+/obj/machinery/camera/autoname,
 /turf/open/floor/plasteel/vault{
 	dir = 8
 	},
@@ -14855,6 +14990,10 @@
 /area/syndicate_mothership/enemy)
 "KN" = (
 /obj/structure/closet/crate/bin,
+/obj/machinery/camera/autoname{
+	dir = 4;
+	network = list("SS13")
+	},
 /turf/open/floor/plasteel/vault{
 	dir = 8
 	},
@@ -15001,6 +15140,7 @@
 /obj/machinery/shower{
 	dir = 8
 	},
+/obj/machinery/camera/autoname,
 /turf/open/floor/plasteel/whitered/side{
 	dir = 5
 	},
@@ -15074,6 +15214,7 @@
 /obj/machinery/shower{
 	dir = 8
 	},
+/obj/machinery/camera/autoname,
 /turf/open/floor/plasteel/whitegreen/side{
 	tag = "icon-whitegreen (NORTHEAST)";
 	icon_state = "whitegreen";
@@ -16944,6 +17085,10 @@
 	icon_state = "alarm0";
 	pixel_y = -22
 	},
+/obj/machinery/camera/autoname{
+	dir = 1;
+	network = list("SS13")
+	},
 /turf/open/floor/plasteel/vault{
 	dir = 8
 	},
@@ -16991,6 +17136,10 @@
 /obj/item/weapon/lighter,
 /obj/machinery/newscaster{
 	pixel_y = -32
+	},
+/obj/machinery/camera/autoname{
+	dir = 1;
+	network = list("SS13")
 	},
 /turf/open/floor/plasteel/vault{
 	dir = 8
@@ -17587,6 +17736,1418 @@
 	dir = 4
 	},
 /area/centcom/evac)
+"Rz" = (
+/obj/machinery/camera/autoname{
+	dir = 1;
+	network = list("SS13")
+	},
+/turf/open/space,
+/area/space)
+"RA" = (
+/obj/machinery/camera/autoname{
+	dir = 8;
+	network = list("SS13")
+	},
+/turf/open/space,
+/area/space)
+"RB" = (
+/obj/machinery/camera/autoname{
+	dir = 1;
+	network = list("SS13")
+	},
+/turf/open/space,
+/area/space)
+"RC" = (
+/obj/machinery/camera/autoname{
+	dir = 1;
+	network = list("SS13")
+	},
+/turf/open/space,
+/area/space)
+"RD" = (
+/obj/structure/lattice,
+/obj/machinery/camera/autoname{
+	dir = 8;
+	network = list("SS13")
+	},
+/turf/open/space,
+/area/space)
+"RE" = (
+/obj/machinery/camera/autoname,
+/turf/open/floor/plasteel/brown{
+	tag = "icon-brown (NORTH)";
+	icon_state = "brown";
+	dir = 1
+	},
+/area/centcom/supply)
+"RF" = (
+/obj/machinery/camera/autoname{
+	dir = 4;
+	network = list("SS13")
+	},
+/turf/open/space,
+/area/space)
+"RG" = (
+/obj/structure/closet/crate{
+	icon_state = "crateopen";
+	opened = 1
+	},
+/turf/open/floor/plasteel/delivery,
+/area/centcom/supply)
+"RH" = (
+/obj/machinery/camera/autoname{
+	dir = 8;
+	network = list("SS13")
+	},
+/turf/open/floor/plasteel/delivery,
+/area/centcom/control)
+"RI" = (
+/obj/structure/closet/crate{
+	icon_state = "crateopen";
+	opened = 1
+	},
+/turf/open/floor/plasteel/delivery,
+/area/centcom/supply)
+"RJ" = (
+/obj/machinery/camera/autoname{
+	dir = 4;
+	network = list("SS13")
+	},
+/turf/open/floor/plasteel/warning{
+	dir = 8
+	},
+/area/centcom/control)
+"RK" = (
+/obj/structure/closet/crate{
+	icon_state = "crateopen";
+	opened = 1
+	},
+/turf/open/floor/plasteel/delivery,
+/area/centcom/supply)
+"RL" = (
+/obj/structure/closet/cardboard,
+/turf/open/floor/plasteel/delivery,
+/area/centcom/supply)
+"RM" = (
+/obj/machinery/camera/autoname{
+	dir = 8;
+	network = list("SS13")
+	},
+/turf/open/floor/plasteel/brown{
+	dir = 4
+	},
+/area/centcom/control)
+"RN" = (
+/obj/machinery/camera/autoname{
+	dir = 1;
+	network = list("SS13")
+	},
+/turf/open/space,
+/area/space)
+"RO" = (
+/obj/structure/closet/crate/critter,
+/turf/open/floor/plasteel/delivery,
+/area/centcom/supply)
+"RP" = (
+/obj/structure/bookcase/random,
+/obj/machinery/camera/autoname,
+/turf/open/floor/plasteel/vault{
+	dir = 8
+	},
+/area/centcom/control)
+"RQ" = (
+/obj/structure/closet/secure_closet/courtroom,
+/obj/item/weapon/gavelblock,
+/obj/item/weapon/gavelhammer,
+/turf/open/floor/plasteel/vault{
+	dir = 8
+	},
+/area/centcom/control)
+"RR" = (
+/obj/machinery/camera/autoname{
+	dir = 4;
+	network = list("SS13")
+	},
+/turf/open/space,
+/area/space)
+"RS" = (
+/obj/machinery/computer/upload/borg,
+/obj/machinery/door/window/westleft{
+	base_state = "right";
+	dir = 2;
+	icon_state = "right";
+	layer = 3.1;
+	name = "Upload Console Window";
+	req_access_txt = "106"
+	},
+/obj/structure/window/reinforced{
+	dir = 4;
+	pixel_x = 3
+	},
+/turf/open/floor/plasteel{
+	dir = 9;
+	icon_state = "warning"
+	},
+/area/centcom/control)
+"RT" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/structure/table/reinforced,
+/obj/item/weapon/paper_bin,
+/obj/item/weapon/pen,
+/turf/open/floor/plasteel{
+	dir = 1;
+	icon_state = "warning"
+	},
+/area/centcom/control)
+"RU" = (
+/obj/machinery/door/window/westleft{
+	base_state = "right";
+	dir = 2;
+	icon_state = "right";
+	layer = 3.1;
+	name = "AI Core Window";
+	req_access_txt = "106"
+	},
+/obj/structure/AIcore/deactivated,
+/turf/open/floor/greengrid,
+/area/centcom/control)
+"RV" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/structure/table/reinforced,
+/obj/item/weapon/paper_bin,
+/obj/item/weapon/pen,
+/turf/open/floor/plasteel{
+	dir = 1;
+	icon_state = "warning"
+	},
+/area/centcom/control)
+"RW" = (
+/obj/machinery/computer/upload/ai,
+/obj/machinery/door/window/westleft{
+	base_state = "right";
+	dir = 2;
+	icon_state = "right";
+	layer = 3.1;
+	name = "Upload Console Window";
+	req_access_txt = "106"
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/turf/open/floor/plasteel{
+	dir = 5;
+	icon_state = "warning"
+	},
+/area/centcom/control)
+"RX" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/structure/table/reinforced,
+/obj/item/weapon/folder/blue{
+	pixel_x = 2;
+	pixel_y = 2
+	},
+/turf/open/floor/plasteel{
+	dir = 10;
+	icon_state = "warning"
+	},
+/area/centcom/control)
+"RY" = (
+/obj/structure/chair/office/light{
+	dir = 1
+	},
+/turf/open/floor/plasteel{
+	dir = 2;
+	icon_state = "warning"
+	},
+/area/centcom/control)
+"RZ" = (
+/obj/machinery/camera/autoname,
+/turf/open/floor/bluegrid,
+/area/centcom/control)
+"Sa" = (
+/turf/open/floor/bluegrid,
+/area/centcom/control)
+"Sb" = (
+/turf/open/floor/bluegrid,
+/area/centcom/control)
+"Sc" = (
+/obj/structure/chair/office/light{
+	dir = 1
+	},
+/turf/open/floor/plasteel{
+	dir = 2;
+	icon_state = "warning"
+	},
+/area/centcom/control)
+"Sd" = (
+/obj/machinery/light{
+	dir = 4;
+	icon_state = "tube1"
+	},
+/obj/structure/table/reinforced,
+/obj/item/weapon/folder/red{
+	pixel_x = -2;
+	pixel_y = -2
+	},
+/turf/open/floor/plasteel{
+	dir = 6;
+	icon_state = "warning";
+	tag = "icon-warnwhite (NORTHEAST)"
+	},
+/area/centcom/control)
+"Se" = (
+/obj/machinery/camera/autoname{
+	dir = 8;
+	network = list("SS13")
+	},
+/turf/open/floor/plasteel/warning{
+	dir = 4
+	},
+/area/centcom/control)
+"Sf" = (
+/obj/machinery/camera/autoname{
+	dir = 4;
+	network = list("SS13")
+	},
+/turf/open/floor/wood,
+/area/centcom/control)
+"Sg" = (
+/obj/structure/closet/crate{
+	icon_state = "crateopen";
+	opened = 1
+	},
+/turf/open/floor/plasteel/delivery,
+/area/centcom/supply)
+"Sh" = (
+/obj/machinery/camera/autoname{
+	dir = 1;
+	network = list("SS13")
+	},
+/turf/open/floor/plasteel/brown,
+/area/centcom/supply)
+"Si" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced/fulltile,
+/obj/structure/sign/directions/engineering{
+	desc = "A sign that shows there are doors here. There are doors everywhere!";
+	icon_state = "doors";
+	name = "WARNING: BLAST DOORS";
+	pixel_x = 0;
+	pixel_y = 0;
+	tag = "icon-doors"
+	},
+/turf/open/floor/plasteel/vault{
+	dir = 8
+	},
+/area/centcom/control)
+"Sj" = (
+/obj/machinery/door/poddoor/ert{
+	id = "Centcom AI"
+	},
+/turf/open/floor/plasteel/delivery,
+/area/centcom/control)
+"Sk" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced/fulltile,
+/turf/open/floor/plasteel/vault{
+	dir = 8
+	},
+/area/centcom/control)
+"Sl" = (
+/obj/machinery/button/door{
+	id = "Centcom AI";
+	name = "Centcom AI";
+	pixel_x = 0;
+	pixel_y = 0;
+	req_access_txt = "106"
+	},
+/turf/closed/indestructible/riveted/infinity,
+/area/centcom/control)
+"Sm" = (
+/obj/machinery/camera/autoname{
+	dir = 8;
+	network = list("SS13")
+	},
+/turf/open/space,
+/area/space)
+"Sn" = (
+/obj/machinery/door/poddoor/shutters{
+	id = "Centcom AI"
+	},
+/turf/open/floor/plasteel/delivery,
+/area/centcom/control)
+"So" = (
+/obj/machinery/door/poddoor/shutters{
+	id = "Centcom AI"
+	},
+/turf/open/floor/plasteel/delivery,
+/area/centcom/control)
+"Sp" = (
+/obj/machinery/door/poddoor/shutters{
+	id = "Centcom AI"
+	},
+/turf/open/floor/plasteel/delivery,
+/area/centcom/control)
+"Sq" = (
+/obj/machinery/door/poddoor/ert{
+	id = "Centcom AI"
+	},
+/turf/open/floor/plasteel/delivery,
+/area/centcom/control)
+"Sr" = (
+/obj/machinery/button/door{
+	id = "Centcom AI";
+	name = "Centcom AI";
+	pixel_x = 0;
+	pixel_y = 0;
+	req_access_txt = "106"
+	},
+/turf/closed/indestructible/riveted/infinity,
+/area/centcom/control)
+"Ss" = (
+/obj/machinery/camera/autoname{
+	dir = 8;
+	network = list("SS13")
+	},
+/turf/open/floor/plasteel/brown{
+	dir = 4
+	},
+/area/centcom/supply)
+"St" = (
+/obj/machinery/camera/autoname{
+	dir = 8;
+	network = list("SS13")
+	},
+/turf/open/space,
+/area/space)
+"Su" = (
+/obj/machinery/camera/autoname{
+	dir = 4;
+	network = list("SS13")
+	},
+/turf/open/space,
+/area/space)
+"Sv" = (
+/obj/machinery/camera/autoname{
+	dir = 8;
+	network = list("SS13")
+	},
+/turf/open/space,
+/area/space)
+"Sw" = (
+/obj/machinery/camera/autoname{
+	dir = 1;
+	network = list("SS13")
+	},
+/turf/open/floor/plasteel/warning,
+/area/centcom/control)
+"Sx" = (
+/obj/structure/table/wood,
+/obj/machinery/recharger,
+/obj/machinery/camera/autoname{
+	dir = 4;
+	network = list("SS13")
+	},
+/turf/open/floor/plasteel/vault{
+	dir = 8
+	},
+/area/centcom/ferry)
+"Sy" = (
+/obj/machinery/camera/autoname{
+	dir = 1;
+	network = list("SS13")
+	},
+/turf/open/space,
+/area/space)
+"Sz" = (
+/obj/structure/flora/ausbushes/lavendergrass,
+/obj/structure/flora/ausbushes/sparsegrass,
+/obj/structure/flora/ausbushes/fullgrass,
+/obj/structure/flora/ausbushes/brflowers,
+/obj/structure/flora/ausbushes/genericbush,
+/obj/machinery/camera/autoname,
+/turf/open/floor/grass,
+/area/centcom/control)
+"SA" = (
+/obj/structure/flora/ausbushes/lavendergrass,
+/obj/structure/flora/ausbushes/sparsegrass,
+/obj/structure/flora/ausbushes/fullgrass,
+/obj/structure/flora/ausbushes/brflowers,
+/obj/structure/flora/ausbushes/genericbush,
+/obj/machinery/camera/autoname,
+/turf/open/floor/grass,
+/area/centcom/control)
+"SB" = (
+/obj/structure/flora/ausbushes/lavendergrass,
+/obj/structure/flora/ausbushes/sparsegrass,
+/obj/structure/flora/ausbushes/fullgrass,
+/obj/structure/flora/ausbushes/grassybush,
+/obj/structure/flora/ausbushes/ppflowers,
+/obj/structure/flora/ausbushes/pointybush,
+/obj/machinery/camera/autoname,
+/turf/open/floor/grass,
+/area/centcom/control)
+"SC" = (
+/obj/structure/reagent_dispensers/fueltank,
+/obj/item/weapon/weldingtool/experimental,
+/obj/effect/decal/cleanable/oil,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel/warning{
+	tag = "icon-plasteel_warn (NORTHWEST)";
+	icon_state = "plasteel_warn";
+	dir = 9
+	},
+/area/centcom/ferry)
+"SD" = (
+/obj/machinery/camera/autoname{
+	dir = 4;
+	network = list("SS13")
+	},
+/turf/open/floor/plasteel/vault{
+	dir = 8
+	},
+/area/centcom/ferry)
+"SE" = (
+/obj/machinery/camera/autoname{
+	dir = 8;
+	network = list("SS13")
+	},
+/turf/open/floor/plasteel/vault{
+	dir = 8
+	},
+/area/centcom/ferry)
+"SF" = (
+/obj/structure/fans/tiny,
+/obj/machinery/camera/autoname,
+/turf/open/floor/plasteel/vault{
+	dir = 8
+	},
+/area/centcom/control)
+"SG" = (
+/obj/structure/chair,
+/obj/machinery/camera/autoname,
+/turf/open/floor/plasteel/warning{
+	dir = 1
+	},
+/area/centcom/evac)
+"SH" = (
+/obj/machinery/camera/autoname{
+	dir = 8;
+	network = list("SS13")
+	},
+/turf/open/space,
+/area/space)
+"SI" = (
+/obj/machinery/button/door{
+	id = "Centcom_weapon";
+	name = "Centcom Weapon";
+	req_access_txt = "109"
+	},
+/turf/closed/indestructible/riveted/infinity,
+/area/centcom/ferry)
+"SJ" = (
+/obj/structure/flora/ausbushes/lavendergrass,
+/obj/structure/flora/ausbushes/sparsegrass,
+/obj/structure/flora/ausbushes/fullgrass,
+/obj/structure/flora/ausbushes/grassybush,
+/obj/structure/flora/ausbushes/ppflowers,
+/obj/structure/flora/ausbushes/pointybush,
+/obj/machinery/camera/autoname,
+/turf/open/floor/grass,
+/area/centcom/control)
+"SK" = (
+/obj/machinery/camera/autoname{
+	dir = 8;
+	network = list("SS13")
+	},
+/turf/open/floor/wood,
+/area/centcom/ferry)
+"SL" = (
+/obj/structure/fans/tiny,
+/obj/machinery/camera/autoname,
+/turf/open/floor/plasteel/vault{
+	dir = 8
+	},
+/area/centcom/control)
+"SM" = (
+/obj/structure/chair{
+	dir = 4
+	},
+/obj/machinery/camera/autoname{
+	dir = 4;
+	network = list("SS13")
+	},
+/turf/open/floor/plasteel/warning{
+	dir = 8
+	},
+/area/centcom/evac)
+"SN" = (
+/obj/machinery/camera/autoname,
+/turf/open/floor/plasteel/delivery,
+/area/centcom/evac)
+"SO" = (
+/obj/structure/lattice,
+/obj/machinery/camera/autoname{
+	dir = 1;
+	network = list("SS13")
+	},
+/turf/open/space,
+/area/space)
+"SP" = (
+/obj/machinery/camera/autoname{
+	dir = 8;
+	network = list("SS13")
+	},
+/turf/open/floor/plasteel/neutral,
+/area/centcom/control)
+"SQ" = (
+/obj/machinery/camera/autoname{
+	dir = 4;
+	network = list("SS13")
+	},
+/turf/open/floor/plasteel/neutral,
+/area/centcom/control)
+"SR" = (
+/obj/structure/lattice,
+/obj/machinery/camera/autoname{
+	dir = 8;
+	network = list("SS13")
+	},
+/turf/open/space,
+/area/space)
+"SS" = (
+/obj/machinery/camera/autoname,
+/turf/open/floor/plasteel/green/corner{
+	dir = 4
+	},
+/area/centcom/ferry)
+"ST" = (
+/obj/structure/flora/ausbushes/lavendergrass,
+/obj/structure/flora/ausbushes/sparsegrass,
+/obj/structure/flora/ausbushes/ywflowers,
+/obj/structure/flora/ausbushes/grassybush,
+/obj/structure/flora/ausbushes/palebush,
+/obj/machinery/camera/autoname,
+/turf/open/floor/plating/asteroid,
+/area/centcom/ferry)
+"SU" = (
+/obj/machinery/camera/autoname,
+/turf/open/floor/plasteel/warning{
+	dir = 1
+	},
+/area/centcom/ferry)
+"SV" = (
+/obj/machinery/camera/autoname{
+	dir = 1;
+	network = list("SS13")
+	},
+/turf/open/floor/plasteel/green/corner,
+/area/centcom/ferry)
+"SW" = (
+/obj/machinery/camera/autoname,
+/turf/open/floor/plasteel/delivery,
+/area/centcom/evac)
+"SX" = (
+/obj/machinery/computer/cargo,
+/turf/open/floor/plasteel/warning{
+	dir = 1
+	},
+/area/centcom/control)
+"SY" = (
+/obj/machinery/camera/autoname,
+/turf/open/floor/plasteel/vault{
+	dir = 8
+	},
+/area/centcom/ferry)
+"SZ" = (
+/obj/machinery/camera/autoname,
+/turf/open/floor/plasteel/delivery,
+/area/centcom/evac)
+"Ta" = (
+/obj/structure/lattice,
+/obj/machinery/camera/autoname,
+/turf/open/space,
+/area/space)
+"Tb" = (
+/obj/machinery/camera/autoname,
+/turf/open/space,
+/area/space)
+"Tc" = (
+/obj/structure/bed/roller,
+/obj/machinery/iv_drip,
+/turf/open/floor/plasteel/neutral,
+/area/centcom/control)
+"Td" = (
+/obj/structure/fans/tiny,
+/obj/machinery/camera/autoname,
+/turf/open/floor/plasteel/vault{
+	dir = 8
+	},
+/area/centcom/control)
+"Te" = (
+/obj/structure/chair{
+	dir = 1
+	},
+/obj/machinery/camera/autoname{
+	dir = 1;
+	network = list("SS13")
+	},
+/turf/open/floor/plasteel/warning,
+/area/centcom/evac)
+"Tf" = (
+/obj/structure/chair{
+	dir = 1
+	},
+/obj/machinery/camera/autoname{
+	dir = 1;
+	network = list("SS13")
+	},
+/turf/open/floor/plasteel/warning,
+/area/centcom/evac)
+"Tg" = (
+/obj/structure/flora/ausbushes/lavendergrass,
+/obj/structure/flora/ausbushes/sparsegrass,
+/obj/structure/flora/ausbushes/fullgrass,
+/obj/structure/flora/ausbushes/grassybush,
+/obj/structure/flora/ausbushes/ppflowers,
+/obj/structure/flora/ausbushes/pointybush,
+/obj/machinery/camera/autoname{
+	dir = 8;
+	network = list("SS13")
+	},
+/turf/open/floor/grass,
+/area/centcom/control)
+"Th" = (
+/obj/structure/lattice,
+/obj/machinery/camera/autoname{
+	dir = 4;
+	network = list("SS13")
+	},
+/turf/open/space,
+/area/space)
+"Ti" = (
+/obj/machinery/button/door{
+	id = "Blast";
+	name = "Blast";
+	req_access_txt = "109"
+	},
+/turf/closed/indestructible/riveted/infinity,
+/area/centcom/ferry)
+"Tj" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced/fulltile,
+/obj/structure/sign/chemistry,
+/turf/open/floor/plasteel/neutral,
+/area/centcom/control)
+"Tk" = (
+/obj/machinery/door/airlock/glass_medical{
+	name = "Medical Bay";
+	req_access_txt = "101"
+	},
+/turf/open/floor/plasteel/blue,
+/area/centcom/control)
+"Tl" = (
+/obj/machinery/smartfridge,
+/turf/closed/indestructible/riveted/infinity,
+/area/centcom/control)
+"Tm" = (
+/obj/item/weapon/storage/firstaid/fire,
+/obj/structure/sign/chemistry,
+/turf/closed/indestructible/riveted/infinity,
+/area/centcom/control)
+"Tn" = (
+/obj/structure/flora/ausbushes/lavendergrass,
+/obj/structure/flora/ausbushes/sparsegrass,
+/obj/structure/flora/ausbushes/fullgrass,
+/obj/structure/flora/ausbushes/grassybush,
+/obj/structure/flora/ausbushes/ppflowers,
+/obj/structure/flora/ausbushes/pointybush,
+/obj/machinery/camera/autoname{
+	dir = 4;
+	network = list("SS13")
+	},
+/turf/open/floor/grass,
+/area/centcom/evac)
+"To" = (
+/obj/structure/flora/ausbushes/lavendergrass,
+/obj/structure/flora/ausbushes/sparsegrass,
+/obj/structure/flora/ausbushes/ywflowers,
+/obj/structure/flora/ausbushes/grassybush,
+/obj/structure/flora/ausbushes/palebush,
+/obj/machinery/camera/autoname,
+/turf/open/floor/plating/asteroid,
+/area/centcom/control)
+"Tp" = (
+/obj/machinery/chem_dispenser,
+/turf/open/floor/plasteel{
+	dir = 4;
+	icon_state = "yellowfull";
+	tag = "icon-whitehall (WEST)"
+	},
+/area/centcom/control)
+"Tq" = (
+/obj/machinery/chem_master,
+/turf/open/floor/plasteel/neutral,
+/area/centcom/control)
+"Tr" = (
+/obj/machinery/chem_heater,
+/turf/open/floor/plasteel{
+	dir = 4;
+	icon_state = "yellowfull";
+	tag = "icon-whitehall (WEST)"
+	},
+/area/centcom/control)
+"Ts" = (
+/obj/structure/closet/secure_closet/chemical{
+	anchored = 1
+	},
+/obj/item/weapon/storage/box/syndie_kit/chemical,
+/obj/item/weapon/storage/box/syndie_kit/chemical,
+/turf/open/floor/plasteel{
+	dir = 4;
+	icon_state = "yellowfull";
+	tag = "icon-whitehall (WEST)"
+	},
+/area/centcom/control)
+"Tt" = (
+/obj/structure/table/reinforced,
+/obj/item/weapon/book/manual/wiki/chemistry,
+/obj/item/stack/packageWrap,
+/obj/item/stack/packageWrap,
+/obj/item/stack/packageWrap,
+/obj/item/stack/packageWrap,
+/obj/item/stack/packageWrap,
+/obj/item/weapon/hand_labeler,
+/turf/open/floor/plasteel{
+	dir = 4;
+	icon_state = "yellowfull";
+	tag = "icon-whitehall (WEST)"
+	},
+/area/centcom/control)
+"Tu" = (
+/obj/machinery/camera/autoname{
+	dir = 8;
+	network = list("SS13")
+	},
+/turf/open/floor/plasteel/vault{
+	dir = 5
+	},
+/area/centcom/control)
+"Tv" = (
+/obj/structure/table/glass,
+/obj/item/weapon/storage/box/beakers,
+/obj/item/weapon/reagent_containers/dropper,
+/obj/item/weapon/reagent_containers/dropper,
+/obj/item/weapon/reagent_containers/dropper,
+/obj/item/weapon/reagent_containers/glass/beaker,
+/obj/item/weapon/reagent_containers/glass/beaker,
+/obj/item/weapon/reagent_containers/glass/beaker,
+/obj/item/weapon/reagent_containers/glass/beaker,
+/obj/machinery/light{
+	icon_state = "tube1";
+	dir = 8
+	},
+/turf/open/floor/plasteel/neutral,
+/area/centcom/control)
+"Tw" = (
+/obj/structure/chair/office/light{
+	dir = 8
+	},
+/turf/open/floor/plasteel{
+	dir = 4;
+	icon_state = "yellowfull";
+	tag = "icon-whitehall (WEST)"
+	},
+/area/centcom/control)
+"Tx" = (
+/obj/structure/table/glass,
+/obj/machinery/reagentgrinder,
+/obj/item/device/assembly/igniter,
+/obj/item/device/assembly/igniter,
+/obj/item/device/assembly/igniter,
+/obj/item/device/assembly/timer,
+/obj/item/device/assembly/timer,
+/obj/item/device/assembly/timer,
+/turf/open/floor/plasteel/neutral,
+/area/centcom/control)
+"Ty" = (
+/turf/open/floor/plasteel{
+	dir = 4;
+	icon_state = "yellowfull";
+	tag = "icon-whitehall (WEST)"
+	},
+/area/centcom/control)
+"Tz" = (
+/obj/structure/closet/wardrobe/chemistry_white{
+	anchored = 1
+	},
+/obj/item/stack/cable_coil,
+/obj/item/stack/cable_coil,
+/obj/item/stack/cable_coil,
+/obj/item/clothing/glasses/science,
+/obj/item/clothing/glasses/science,
+/obj/item/clothing/glasses/science,
+/obj/item/clothing/glasses/science,
+/obj/item/weapon/grenade/chem_grenade,
+/obj/item/weapon/grenade/chem_grenade,
+/obj/item/weapon/grenade/chem_grenade,
+/obj/item/weapon/grenade/chem_grenade,
+/obj/item/weapon/grenade/chem_grenade,
+/turf/open/floor/plasteel/neutral,
+/area/centcom/control)
+"TA" = (
+/obj/structure/table/reinforced,
+/obj/item/device/mass_spectrometer,
+/obj/item/stack/sheet/mineral/plasma,
+/obj/item/stack/sheet/mineral/plasma,
+/obj/item/stack/sheet/mineral/plasma,
+/obj/item/stack/sheet/mineral/plasma,
+/obj/item/stack/sheet/mineral/plasma,
+/obj/machinery/light{
+	icon_state = "tube1";
+	dir = 4
+	},
+/turf/open/floor/plasteel/neutral,
+/area/centcom/control)
+"TB" = (
+/obj/structure/closet/secure_closet/security,
+/obj/item/weapon/storage/belt/security/full,
+/obj/item/weapon/gun/ballistic/automatic/wt550,
+/obj/item/clothing/head/helmet/swat/nanotrasen,
+/obj/item/weapon/crowbar/red,
+/obj/machinery/camera/autoname,
+/turf/open/floor/plasteel/vault{
+	dir = 8
+	},
+/area/centcom/evac)
+"TC" = (
+/obj/machinery/camera/autoname,
+/turf/open/space,
+/area/space)
+"TD" = (
+/obj/machinery/camera/autoname,
+/turf/open/floor/plasteel/vault{
+	dir = 5
+	},
+/area/centcom/control)
+"TE" = (
+/obj/machinery/camera/autoname,
+/turf/open/floor/plasteel/vault{
+	dir = 8
+	},
+/area/centcom/control)
+"TF" = (
+/turf/open/floor/plasteel{
+	tag = "icon-warndark (NORTH)";
+	icon_state = "warndark";
+	dir = 1
+	},
+/area/centcom/control)
+"TG" = (
+/obj/machinery/light,
+/turf/open/floor/plasteel{
+	tag = "icon-warndark (NORTH)";
+	icon_state = "warndark";
+	dir = 1
+	},
+/area/centcom/control)
+"TH" = (
+/obj/machinery/camera/autoname{
+	dir = 1;
+	network = list("SS13")
+	},
+/turf/open/floor/plasteel{
+	tag = "icon-warndark (NORTH)";
+	icon_state = "warndark";
+	dir = 1
+	},
+/area/centcom/control)
+"TI" = (
+/turf/open/floor/plasteel{
+	tag = "icon-warndark (NORTH)";
+	icon_state = "warndark";
+	dir = 1
+	},
+/area/centcom/control)
+"TJ" = (
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_x = 0;
+	pixel_y = -24
+	},
+/turf/open/floor/plasteel{
+	tag = "icon-warndark (NORTH)";
+	icon_state = "warndark";
+	dir = 1
+	},
+/area/centcom/control)
+"TK" = (
+/obj/machinery/light,
+/turf/open/floor/plasteel{
+	tag = "icon-warndark (NORTH)";
+	icon_state = "warndark";
+	dir = 1
+	},
+/area/centcom/control)
+"TL" = (
+/turf/open/floor/plasteel{
+	tag = "icon-warndark (NORTH)";
+	icon_state = "warndark";
+	dir = 1
+	},
+/area/centcom/control)
+"TM" = (
+/obj/machinery/camera/autoname{
+	dir = 1;
+	network = list("SS13")
+	},
+/turf/open/floor/plasteel/vault{
+	dir = 8
+	},
+/area/centcom/evac)
+"TN" = (
+/obj/machinery/camera/autoname{
+	dir = 8;
+	network = list("SS13")
+	},
+/turf/open/space,
+/area/space)
+"TO" = (
+/obj/machinery/camera/autoname{
+	dir = 4;
+	network = list("SS13")
+	},
+/turf/open/space,
+/area/space)
+"TP" = (
+/obj/machinery/camera/autoname,
+/turf/open/floor/plasteel/vault{
+	dir = 8
+	},
+/area/centcom/control)
+"TQ" = (
+/obj/machinery/camera/autoname,
+/turf/open/floor/plasteel/vault{
+	dir = 8
+	},
+/area/centcom/control)
+"TR" = (
+/obj/machinery/camera/autoname,
+/turf/open/space,
+/area/space)
+"TS" = (
+/obj/machinery/camera/autoname{
+	dir = 1;
+	network = list("SS13")
+	},
+/turf/open/space,
+/area/space)
+"TT" = (
+/obj/structure/closet/crate/bin,
+/obj/machinery/camera/autoname{
+	dir = 8;
+	network = list("SS13")
+	},
+/turf/open/floor/plasteel/vault{
+	dir = 8
+	},
+/area/tdome/tdomeobserve)
+"TU" = (
+/obj/machinery/camera/autoname{
+	dir = 4;
+	network = list("SS13")
+	},
+/turf/open/floor/plasteel/neutral/side{
+	dir = 4
+	},
+/area/tdome/tdomeobserve)
+"TV" = (
+/obj/machinery/camera/autoname{
+	dir = 8;
+	network = list("SS13")
+	},
+/turf/open/floor/plasteel/neutral/side{
+	dir = 8
+	},
+/area/tdome/tdomeobserve)
+"TW" = (
+/obj/machinery/camera/autoname{
+	dir = 1;
+	network = list("SS13")
+	},
+/turf/open/floor/plasteel/red/side,
+/area/tdome/tdomeobserve)
+"TX" = (
+/obj/machinery/camera/autoname{
+	dir = 1;
+	network = list("SS13")
+	},
+/turf/open/floor/plasteel/green/side,
+/area/tdome/tdomeobserve)
+"TY" = (
+/obj/machinery/camera/autoname{
+	dir = 8;
+	network = list("SS13")
+	},
+/turf/open/space,
+/area/space)
+"TZ" = (
+/obj/machinery/camera/autoname{
+	dir = 8;
+	network = list("SS13")
+	},
+/turf/open/floor/plasteel/terror/red,
+/area/tdome/tdomeobserve)
+"Ua" = (
+/obj/machinery/camera/autoname{
+	dir = 4;
+	network = list("SS13")
+	},
+/turf/open/floor/plasteel/bar,
+/area/tdome/tdomeobserve)
+"Ub" = (
+/obj/machinery/camera/autoname{
+	dir = 4;
+	network = list("SS13")
+	},
+/turf/open/floor/plasteel/neutral/side{
+	dir = 4
+	},
+/area/tdome/tdomeobserve)
+"Uc" = (
+/obj/machinery/light,
+/obj/machinery/camera/autoname{
+	dir = 1;
+	network = list("SS13")
+	},
+/turf/open/floor/plasteel/vault{
+	dir = 8
+	},
+/area/tdome/tdomeobserve)
+"Ud" = (
+/obj/machinery/camera/autoname{
+	dir = 8;
+	network = list("SS13")
+	},
+/turf/open/floor/plasteel/neutral/side{
+	dir = 8
+	},
+/area/tdome/tdomeobserve)
+"Ue" = (
+/obj/machinery/camera/autoname{
+	dir = 4;
+	network = list("SS13")
+	},
+/turf/open/space,
+/area/space)
+"Uf" = (
+/obj/structure/sink{
+	dir = 8;
+	icon_state = "sink";
+	pixel_x = -12
+	},
+/obj/structure/mirror{
+	desc = "Mirror mirror on the wall, who is the most robust of them all?";
+	pixel_x = -28
+	},
+/obj/machinery/camera/autoname{
+	dir = 1;
+	network = list("SS13")
+	},
+/turf/open/floor/plasteel/whitered/side{
+	dir = 8
+	},
+/area/tdome/tdomeobserve)
+"Ug" = (
+/obj/structure/chair,
+/obj/effect/landmark{
+	name = "tdomeobserve"
+	},
+/obj/structure/sign/barsign{
+	pixel_y = 32
+	},
+/obj/machinery/camera/autoname,
+/turf/open/floor/plasteel/vault{
+	dir = 8
+	},
+/area/tdome/tdomeobserve)
+"Uh" = (
+/obj/structure/chair,
+/obj/effect/landmark{
+	name = "tdomeobserve"
+	},
+/obj/machinery/camera/autoname,
+/turf/open/floor/plasteel/vault{
+	dir = 8
+	},
+/area/tdome/tdomeobserve)
+"Ui" = (
+/obj/structure/sink{
+	dir = 4;
+	pixel_x = 11
+	},
+/obj/structure/mirror{
+	desc = "Mirror mirror on the wall, who is the most robust of them all?";
+	pixel_x = 28
+	},
+/obj/machinery/camera/autoname{
+	dir = 1;
+	network = list("SS13")
+	},
+/turf/open/floor/plasteel/whitegreen/side{
+	tag = "icon-whitegreen (EAST)";
+	icon_state = "whitegreen";
+	dir = 4
+	},
+/area/tdome/tdomeobserve)
+"Uj" = (
+/obj/machinery/camera/autoname{
+	dir = 8;
+	network = list("SS13")
+	},
+/turf/open/space,
+/area/space)
+"Uk" = (
+/obj/structure/flora/ausbushes/sparsegrass,
+/obj/structure/flora/ausbushes/lavendergrass,
+/obj/structure/flora/ausbushes/fernybush,
+/obj/machinery/camera/autoname{
+	dir = 4;
+	network = list("SS13")
+	},
+/turf/open/floor/plasteel{
+	name = "plating";
+	icon_state = "asteroid5"
+	},
+/area/tdome/tdomeobserve)
+"Ul" = (
+/obj/machinery/camera/autoname{
+	dir = 1;
+	network = list("SS13")
+	},
+/turf/open/floor/plasteel/red/side{
+	dir = 1
+	},
+/area/tdome/tdomeobserve)
+"Um" = (
+/obj/machinery/camera/autoname{
+	dir = 1;
+	network = list("SS13")
+	},
+/turf/open/floor/plasteel/green/side{
+	dir = 1
+	},
+/area/tdome/tdomeobserve)
+"Un" = (
+/obj/structure/rack,
+/obj/item/clothing/under/color/red,
+/obj/item/clothing/shoes/sneakers/brown,
+/obj/item/clothing/suit/armor/tdome/red,
+/obj/item/clothing/head/helmet/thunderdome,
+/obj/item/weapon/melee/baton/loaded,
+/obj/item/weapon/melee/energy/sword/saber/red,
+/obj/machinery/camera/autoname,
+/turf/open/floor/plasteel/warning{
+	dir = 4
+	},
+/area/tdome/arena)
+"Uo" = (
+/obj/structure/rack,
+/obj/item/clothing/under/color/green,
+/obj/item/clothing/shoes/sneakers/brown,
+/obj/item/clothing/suit/armor/tdome/green,
+/obj/item/clothing/head/helmet/thunderdome,
+/obj/item/weapon/melee/baton/loaded,
+/obj/item/weapon/melee/energy/sword/saber/green,
+/obj/machinery/camera/autoname,
+/turf/open/floor/plasteel/warning{
+	dir = 8
+	},
+/area/tdome/arena)
+"Up" = (
+/obj/structure/flora/ausbushes/sparsegrass,
+/obj/structure/flora/ausbushes/grassybush,
+/obj/structure/flora/ausbushes/fernybush,
+/obj/machinery/camera/autoname{
+	dir = 8;
+	network = list("SS13")
+	},
+/turf/open/floor/plasteel{
+	dir = 6;
+	icon_state = "asteroid8";
+	name = "sand"
+	},
+/area/tdome/tdomeadmin)
+"Uq" = (
+/obj/structure/flora/ausbushes/sparsegrass,
+/obj/structure/flora/ausbushes/lavendergrass,
+/obj/structure/flora/ausbushes/fernybush,
+/obj/machinery/camera/autoname{
+	dir = 4;
+	network = list("SS13")
+	},
+/turf/open/floor/plasteel{
+	name = "plating";
+	icon_state = "asteroid5"
+	},
+/area/tdome/tdomeadmin)
+"Ur" = (
+/obj/machinery/camera/autoname{
+	dir = 8;
+	network = list("SS13")
+	},
+/turf/open/floor/plasteel/warning{
+	dir = 6
+	},
+/area/tdome/tdomeadmin)
+"Us" = (
+/obj/machinery/camera/autoname{
+	dir = 4;
+	network = list("SS13")
+	},
+/turf/open/floor/plasteel/warning{
+	dir = 10
+	},
+/area/tdome/tdomeadmin)
+"Ut" = (
+/obj/machinery/camera/autoname{
+	dir = 4;
+	network = list("SS13")
+	},
+/turf/open/space,
+/area/space)
+"Uu" = (
+/obj/machinery/camera/autoname{
+	dir = 8;
+	network = list("SS13")
+	},
+/turf/open/space,
+/area/space)
+"Uv" = (
+/obj/structure/flora/ausbushes/lavendergrass,
+/obj/structure/flora/ausbushes/fullgrass,
+/obj/structure/flora/ausbushes/ywflowers,
+/obj/structure/flora/ausbushes/grassybush,
+/obj/structure/flora/ausbushes/palebush,
+/obj/machinery/camera/autoname{
+	dir = 4;
+	network = list("SS13")
+	},
+/turf/open/floor/plating/asteroid,
+/area/tdome/tdomeadmin)
+"Uw" = (
+/obj/machinery/camera/autoname{
+	dir = 8;
+	network = list("SS13")
+	},
+/turf/open/floor/plasteel/vault{
+	dir = 5
+	},
+/area/tdome/tdomeadmin)
+"Ux" = (
+/obj/structure/rack,
+/obj/item/clothing/under/color/red,
+/obj/item/clothing/shoes/sneakers/brown,
+/obj/item/clothing/suit/armor/vest,
+/obj/item/clothing/head/helmet/swat,
+/obj/item/weapon/gun/energy/laser,
+/obj/machinery/camera/autoname{
+	dir = 8;
+	network = list("SS13")
+	},
+/turf/open/floor/plasteel/warning{
+	dir = 1
+	},
+/area/tdome/arena)
+"Uy" = (
+/obj/structure/rack,
+/obj/item/clothing/under/color/green,
+/obj/item/clothing/shoes/sneakers/brown,
+/obj/item/clothing/suit/armor/vest,
+/obj/item/clothing/head/helmet/swat,
+/obj/item/weapon/gun/energy/laser,
+/obj/machinery/camera/autoname{
+	dir = 4;
+	network = list("SS13")
+	},
+/turf/open/floor/plasteel/warning{
+	dir = 1
+	},
+/area/tdome/arena)
+"Uz" = (
+/obj/machinery/camera/autoname{
+	dir = 4;
+	network = list("SS13")
+	},
+/turf/open/floor/plasteel/vault{
+	dir = 5
+	},
+/area/tdome/tdomeadmin)
+"UA" = (
+/obj/machinery/camera/autoname{
+	dir = 1;
+	network = list("SS13")
+	},
+/turf/open/floor/plasteel/vault{
+	dir = 5
+	},
+/area/tdome/tdomeadmin)
+"UB" = (
+/obj/machinery/camera/autoname,
+/turf/open/floor/plasteel/vault{
+	dir = 5
+	},
+/area/tdome/tdomeadmin)
+"UC" = (
+/obj/machinery/camera/autoname,
+/turf/open/space,
+/area/space)
+"UD" = (
+/obj/machinery/camera/autoname{
+	dir = 1;
+	network = list("SS13")
+	},
+/turf/open/floor/plasteel/vault{
+	dir = 5
+	},
+/area/tdome/tdomeadmin)
+"UE" = (
+/obj/machinery/camera/autoname{
+	dir = 1;
+	network = list("SS13")
+	},
+/turf/open/floor/plasteel/vault{
+	dir = 8
+	},
+/area/tdome/tdomeadmin)
+"UF" = (
+/obj/machinery/camera/autoname,
+/turf/open/floor/plasteel/vault{
+	dir = 5
+	},
+/area/centcom/control)
+"UG" = (
+/obj/machinery/camera/autoname,
+/turf/open/space,
+/area/space)
+"UH" = (
+/obj/machinery/camera/autoname,
+/turf/open/space,
+/area/space)
+"UI" = (
+/obj/machinery/camera/autoname,
+/turf/open/space,
+/area/space)
+"UJ" = (
+/obj/machinery/camera/autoname,
+/turf/open/space,
+/area/space)
 
 (1,1,1) = {"
 aa
@@ -52721,7 +54282,7 @@ aa
 aa
 aa
 aa
-pM
+SR
 pM
 aa
 pM
@@ -53236,11 +54797,11 @@ aa
 aa
 pM
 xB
-EC
+ST
 EZ
 EC
 xB
-pM
+Ta
 pM
 aa
 Hh
@@ -53491,7 +55052,7 @@ aa
 aa
 aa
 pM
-pM
+SO
 wk
 xB
 xB
@@ -54773,7 +56334,7 @@ aa
 aa
 aa
 aa
-aa
+SH
 aa
 pM
 aa
@@ -55292,7 +56853,7 @@ CH
 xB
 pM
 Ac
-DD
+SU
 Ea
 Fu
 FS
@@ -56311,7 +57872,7 @@ aa
 aa
 aa
 aa
-aa
+Sy
 wk
 Ax
 Bo
@@ -56324,7 +57885,7 @@ EF
 EF
 Fv
 wk
-aa
+Tb
 aa
 Hl
 HN
@@ -57080,7 +58641,7 @@ aa
 aa
 aa
 aa
-aa
+Sv
 aa
 aa
 wk
@@ -57342,7 +58903,7 @@ xB
 xB
 wk
 AA
-Bq
+SD
 Ce
 Bq
 Db
@@ -57595,7 +59156,7 @@ wk
 xC
 yb
 yu
-yP
+Sx
 zs
 wk
 AB
@@ -57616,7 +59177,7 @@ yD
 yD
 IP
 wk
-aa
+TC
 aa
 aa
 aa
@@ -58360,7 +59921,7 @@ aa
 aa
 aa
 aa
-aa
+St
 aa
 wk
 xF
@@ -58660,14 +60221,14 @@ aa
 aa
 aa
 aa
+Uj
 aa
 aa
 aa
 aa
 aa
 aa
-aa
-aa
+Uu
 aa
 aa
 aa
@@ -58893,7 +60454,7 @@ Eh
 Ea
 Eh
 wk
-Bq
+SY
 Gt
 GL
 Hp
@@ -59168,26 +60729,26 @@ aa
 aa
 aa
 aa
-aa
+TY
 aa
 aa
 aa
 aa
 Kz
-KP
+Uk
 KQ
 KF
 Og
 OB
-OP
+Uq
 OA
 OB
-Og
+Uv
 OB
 OP
 OA
 Of
-aa
+UC
 aa
 aa
 aa
@@ -59391,7 +60952,7 @@ wk
 wk
 wk
 wk
-xJ
+HP
 yi
 yA
 yT
@@ -59403,7 +60964,7 @@ Ck
 CQ
 Di
 wk
-Bo
+SS
 Ea
 Cb
 AI
@@ -59657,7 +61218,7 @@ wk
 AH
 Bw
 Cl
-yc
+SK
 Dj
 wk
 Bo
@@ -59673,10 +61234,10 @@ Cf
 IX
 wk
 aa
+TN
 aa
 aa
-aa
-aa
+TS
 Kz
 Li
 LD
@@ -59686,7 +61247,7 @@ MH
 Nc
 Nc
 Nc
-Nc
+Uf
 Kz
 La
 NR
@@ -59899,7 +61460,7 @@ aa
 aa
 aa
 aa
-aa
+Sm
 aa
 aa
 aa
@@ -59951,7 +61512,7 @@ MB
 Oh
 OC
 OR
-OZ
+Ur
 Pb
 Pg
 Pn
@@ -60168,7 +61729,7 @@ yC
 yV
 zA
 Ac
-AA
+SC
 By
 Cm
 wk
@@ -60183,7 +61744,7 @@ AI
 GP
 GP
 GP
-AI
+Ti
 Ae
 wk
 pA
@@ -60203,7 +61764,7 @@ MI
 MI
 Kz
 LH
-Me
+Ul
 NV
 NV
 NV
@@ -60399,9 +61960,9 @@ aa
 aa
 aa
 aa
-pM
+RD
 aa
-aa
+qH
 qQ
 ru
 rN
@@ -60409,7 +61970,7 @@ qz
 rN
 tb
 qQ
-aa
+qH
 aa
 pM
 aa
@@ -60462,14 +62023,14 @@ Kz
 LI
 LL
 NV
-Oi
+Un
 Oi
 Oi
 Oi
 Oi
 Oi
 NV
-Pq
+Uw
 Pq
 Pq
 Pq
@@ -60712,7 +62273,7 @@ LN
 MB
 La
 Nd
-Ll
+Ub
 Nd
 Ll
 Nd
@@ -60915,7 +62476,7 @@ aa
 aa
 pN
 qg
-qg
+RG
 qR
 rw
 qh
@@ -60926,7 +62487,7 @@ tv
 tv
 tv
 qg
-qg
+Sg
 qz
 vR
 qi
@@ -60941,13 +62502,13 @@ wk
 wk
 wk
 BB
-AI
+SI
 wk
 xB
 Ad
 Bo
 Ea
-Cb
+SV
 wk
 Gc
 Bq
@@ -60986,11 +62547,11 @@ Po
 Pr
 NV
 Pq
-Pq
+UD
 Of
 Of
 Of
-aa
+UH
 aa
 aa
 aa
@@ -61214,9 +62775,9 @@ HW
 Bq
 Jc
 wk
-qE
+TD
 ot
-pA
+TP
 pA
 Kz
 KF
@@ -61428,7 +62989,7 @@ aa
 aa
 aa
 pN
-qi
+RE
 qA
 qA
 qA
@@ -61440,7 +63001,7 @@ qA
 qA
 qA
 qA
-vc
+Sh
 pN
 vT
 qi
@@ -61688,13 +63249,13 @@ pO
 qi
 qA
 qT
-qg
+RI
 qA
-qg
+RK
 qA
-qg
+RL
 qA
-qg
+RO
 ur
 qA
 vc
@@ -61711,7 +63272,7 @@ vc
 vU
 Ae
 AN
-Bq
+SE
 Cr
 wk
 Dm
@@ -62011,7 +63572,7 @@ OG
 OG
 Pj
 Po
-Pr
+Ux
 NV
 PB
 PB
@@ -62197,7 +63758,7 @@ aa
 aa
 aa
 aa
-aa
+RC
 ot
 qj
 qA
@@ -62226,7 +63787,7 @@ zF
 qf
 pN
 pN
-xl
+SJ
 wv
 ot
 ot
@@ -62248,7 +63809,7 @@ vB
 zM
 KB
 KR
-Ll
+TU
 LJ
 Mf
 KT
@@ -62510,7 +64071,7 @@ Ls
 Mg
 Kz
 MO
-Nf
+TZ
 Nm
 MD
 NA
@@ -62770,7 +64331,7 @@ Kz
 Kz
 Kz
 Kz
-NB
+Ug
 NJ
 NC
 NW
@@ -62977,7 +64538,7 @@ rz
 rz
 rz
 rz
-rz
+RM
 tx
 rz
 us
@@ -62985,7 +64546,7 @@ uE
 us
 ot
 vX
-wq
+Ss
 wq
 xj
 pN
@@ -63000,7 +64561,7 @@ Af
 rS
 qB
 Do
-qB
+SP
 wQ
 qB
 qB
@@ -63222,13 +64783,13 @@ aa
 aa
 aa
 aa
-aa
+RA
 aa
 aa
 aa
 ot
 ot
-ot
+oM
 ot
 ot
 rP
@@ -63494,8 +65055,8 @@ rQ
 ot
 ot
 ot
-ot
-ot
+RS
+RX
 ot
 vA
 pc
@@ -63535,7 +65096,7 @@ KF
 KW
 KF
 LL
-LI
+TW
 Kz
 MQ
 Ng
@@ -63751,12 +65312,12 @@ rP
 ot
 ot
 ot
+RT
+RY
 ot
 ot
 ot
-ot
-ot
-ws
+rT
 qB
 qB
 qB
@@ -63818,7 +65379,7 @@ PF
 OB
 Ql
 Of
-aa
+UJ
 aa
 aa
 aa
@@ -64009,11 +65570,11 @@ pc
 ty
 ot
 ot
-ot
-ot
-oJ
+RZ
+Si
+Sn
 oB
-wt
+rT
 qB
 qB
 qB
@@ -64031,7 +65592,7 @@ Dp
 DK
 En
 ux
-xm
+ux
 FB
 oL
 qB
@@ -64053,7 +65614,7 @@ Mk
 MC
 MR
 MR
-No
+Uc
 ME
 NC
 NJ
@@ -64265,11 +65826,11 @@ sH
 pc
 pA
 ot
-ot
-ot
-ot
-oJ
-oA
+RU
+Sa
+Sj
+So
+Sq
 rT
 qB
 qB
@@ -64288,8 +65849,8 @@ Dp
 DL
 Eo
 ux
-ux
-xx
+xm
+SX
 Dp
 qB
 GW
@@ -64523,11 +66084,11 @@ pc
 ty
 ot
 ot
-ot
-ot
-oJ
+Sb
+Sk
+Sp
 pc
-wt
+rT
 qB
 qB
 qB
@@ -64545,7 +66106,7 @@ Dp
 DM
 Ep
 ux
-xm
+ux
 FC
 oL
 qB
@@ -64569,7 +66130,7 @@ MR
 MR
 No
 Kz
-NC
+Uh
 NJ
 NC
 NW
@@ -64771,7 +66332,7 @@ px
 pQ
 px
 qD
-qV
+RH
 qD
 rU
 qB
@@ -64779,11 +66340,11 @@ sJ
 pc
 pA
 ot
+RV
+Sc
+Sl
 ot
-ot
-ot
-ot
-ot
+Sr
 ws
 qB
 qB
@@ -65036,8 +66597,8 @@ sK
 pc
 ty
 ot
-ot
-ot
+RW
+Sd
 ot
 vB
 pc
@@ -65077,7 +66638,7 @@ KF
 KW
 KF
 LL
-LP
+TX
 Kz
 MT
 Ng
@@ -65533,7 +67094,7 @@ aa
 aa
 aa
 aa
-aa
+Rz
 ot
 ot
 oK
@@ -65570,7 +67131,7 @@ zM
 Cw
 qB
 Do
-qB
+SQ
 wQ
 qB
 qB
@@ -65792,7 +67353,7 @@ aa
 aa
 aa
 aa
-aa
+qH
 oK
 oZ
 pz
@@ -66057,7 +67618,7 @@ pT
 qo
 qo
 qW
-qo
+RJ
 qo
 qo
 qo
@@ -66093,11 +67654,11 @@ ot
 zM
 zM
 ot
-xl
+Tg
 ot
 zM
 oL
-pA
+TE
 oN
 zM
 ot
@@ -66108,7 +67669,7 @@ Ll
 Mo
 Kz
 MV
-Nh
+Ua
 Nr
 MD
 NA
@@ -66322,7 +67883,7 @@ qp
 qp
 qp
 qp
-qp
+Se
 sG
 pA
 vj
@@ -66339,7 +67900,7 @@ ot
 ot
 xl
 zM
-BH
+SL
 ot
 ot
 Eq
@@ -66352,7 +67913,7 @@ wv
 ot
 ot
 ot
-vA
+To
 zM
 pA
 zM
@@ -66360,7 +67921,7 @@ zN
 zM
 KC
 Lb
-Ls
+TV
 LO
 Mf
 KT
@@ -66589,7 +68150,7 @@ pc
 pc
 pc
 rZ
-sM
+Sw
 oL
 pc
 ot
@@ -66637,14 +68198,14 @@ OL
 OL
 Pk
 Pp
-Ps
+Uy
 NV
 PB
-PB
+UE
 Of
 Of
 Of
-aa
+UI
 aa
 aa
 aa
@@ -66866,9 +68427,9 @@ GZ
 Hy
 HZ
 Iw
-vA
-zM
-pA
+Tp
+Tv
+TF
 ot
 zO
 vA
@@ -67121,12 +68682,12 @@ Dr
 GB
 qB
 Ha
-Ia
-Iw
-zO
-zM
-qE
+qB
 ot
+Tq
+Tw
+TG
+Dr
 zM
 zM
 Kz
@@ -67375,14 +68936,14 @@ qB
 qB
 FG
 Gg
-GB
+Tc
 Ha
 qB
 Ib
-Iw
-zN
-zM
-qE
+Tj
+Tr
+Tx
+TH
 ot
 pA
 pA
@@ -67632,14 +69193,14 @@ qB
 qB
 wQ
 Gh
-GC
+Ha
 qB
 Ha
-Ic
-ot
-zM
-ot
-pA
+qB
+Tk
+qB
+Ty
+TI
 Hw
 qE
 qE
@@ -67667,7 +69228,7 @@ Pm
 Pp
 Ps
 NV
-Pq
+UB
 Pq
 Of
 Of
@@ -67893,22 +69454,22 @@ GC
 Ha
 qB
 Id
-Iw
-vB
-zM
-qE
+pc
+Ts
+Tz
+TJ
 ot
-pA
+TQ
 pA
 Kz
-KN
+TT
 Kz
 LQ
 LM
 MB
 KS
 Ni
-Ls
+Ud
 Ni
 Ls
 Ni
@@ -68146,14 +69707,14 @@ qB
 qB
 wQ
 Gh
-GC
+Ha
 qB
 Ha
-Ie
-Iw
-vA
-zM
-qE
+qV
+Tl
+yZ
+qV
+TK
 ot
 ot
 ot
@@ -68172,14 +69733,14 @@ Kz
 LP
 LL
 NV
-Oz
+Uo
 Oz
 Oz
 Oz
 Oz
 Oz
 NV
-Pq
+Uz
 Pq
 Pq
 Pq
@@ -68405,12 +69966,12 @@ FH
 Gg
 GD
 Hb
-GC
+qB
 If
-Iw
-vB
-zM
-pA
+Tm
+Tt
+TA
+TL
 ot
 aa
 aa
@@ -68427,7 +69988,7 @@ MI
 MI
 Kz
 LH
-Mp
+Um
 NV
 NV
 NV
@@ -68689,7 +70250,7 @@ MB
 Oh
 OC
 OQ
-OY
+Us
 Pb
 Pg
 Pb
@@ -68698,7 +70259,7 @@ Pq
 Of
 PI
 Of
-aa
+UG
 aa
 aa
 aa
@@ -68907,7 +70468,7 @@ zc
 zP
 zN
 pc
-BH
+SF
 pc
 vA
 ot
@@ -68919,10 +70480,10 @@ ot
 ot
 zN
 pc
-BH
+Td
 Hw
 pA
-qE
+Tu
 qE
 pA
 oA
@@ -68938,7 +70499,7 @@ Nb
 Nj
 Nj
 Nj
-Nj
+Ui
 Kz
 KS
 Oa
@@ -68951,7 +70512,7 @@ Pb
 Pg
 Pb
 Pq
-Pq
+UA
 Of
 qE
 wk
@@ -69133,7 +70694,7 @@ aa
 aa
 aa
 aa
-aa
+RB
 oO
 pk
 pE
@@ -69149,7 +70710,7 @@ qH
 ot
 tZ
 uv
-uv
+Sf
 uv
 uv
 vZ
@@ -69424,7 +70985,7 @@ AZ
 BJ
 CB
 CW
-Dt
+SM
 Dt
 Ew
 ES
@@ -69435,7 +70996,7 @@ GE
 CB
 HA
 AZ
-Ix
+Tn
 AZ
 Jw
 JN
@@ -69451,13 +71012,13 @@ aa
 aa
 aa
 aa
-aa
+Ue
 aa
 Kz
 Lc
 Ld
 KF
-OA
+Up
 OB
 OX
 Og
@@ -69467,7 +71028,7 @@ OB
 OX
 Og
 Of
-qE
+UF
 wk
 aa
 aa
@@ -69676,7 +71237,7 @@ pA
 pA
 ze
 ot
-wv
+Sz
 Ba
 BK
 CC
@@ -69909,7 +71470,7 @@ aa
 aa
 aa
 aa
-aa
+RF
 aa
 aa
 aa
@@ -69951,7 +71512,7 @@ HC
 Bb
 Iy
 AZ
-Jw
+TB
 JN
 AZ
 aa
@@ -69974,7 +71535,7 @@ aa
 aa
 aa
 aa
-aa
+Ut
 aa
 aa
 aa
@@ -70204,14 +71765,14 @@ CX
 CX
 CX
 Hc
-HC
+Te
 AZ
 Ba
 AZ
 AZ
 Hz
 AZ
-aa
+TR
 aa
 aa
 aa
@@ -70430,9 +71991,9 @@ aa
 aa
 aa
 aa
-aa
+RN
 ot
-ud
+RP
 ux
 ux
 vj
@@ -70723,7 +72284,7 @@ Ih
 IA
 Jn
 Jn
-JN
+TM
 AZ
 aa
 aa
@@ -71218,7 +72779,7 @@ wX
 ux
 zi
 ot
-wv
+SA
 AZ
 BO
 CC
@@ -71734,7 +73295,7 @@ zk
 oM
 pc
 AZ
-BL
+SG
 CC
 CX
 CX
@@ -72003,13 +73564,13 @@ Fj
 Gj
 CX
 Hc
-HC
+Tf
 Bb
 Ix
 AZ
 aa
 aa
-aa
+TO
 aa
 aa
 aa
@@ -72246,7 +73807,7 @@ wX
 ux
 zi
 ot
-xl
+SB
 Ba
 BP
 CC
@@ -73022,17 +74583,17 @@ aa
 pM
 CF
 CZ
-Dz
+SN
 CZ
 CF
 CZ
-Dz
+SW
 CZ
-Dz
+SZ
 CZ
 Hd
 pM
-pM
+Th
 pM
 aa
 aa
@@ -73259,7 +74820,7 @@ aa
 aa
 aa
 ot
-uk
+RQ
 uy
 uS
 oM
@@ -73773,6 +75334,7 @@ aa
 aa
 aa
 aa
+RR
 aa
 aa
 aa
@@ -73781,8 +75343,7 @@ aa
 aa
 aa
 aa
-aa
-aa
+Su
 pM
 aa
 pM
