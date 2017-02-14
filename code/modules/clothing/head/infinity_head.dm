@@ -237,11 +237,3 @@
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR
 	strip_delay = 80
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
-
-/obj/item/clothing/head/cargoberet
-	name = "cargoberet"
-	desc = "Viva la Cargonia!"
-	icon_state = "cargoberet"
-	item_state = ""
-	worn_icon = 'icons/mob/infinity_work.dmi'
-	icon = 'icons/obj/clothing/infinity_work.dmi'
