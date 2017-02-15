@@ -293,7 +293,7 @@
 
 /obj/item/weapon/storage/backpack/satchel/flat/New()
 	..()
-	PoolOrNew(/obj/item/stack/tile/plasteel, src)
+	new /obj/item/stack/tile/plasteel(src)
 	new /obj/item/weapon/crowbar(src)
 	SSpersistence.new_secret_satchels += src
 

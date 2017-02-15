@@ -1,4 +1,4 @@
-##Модифированный /tg/station
+﻿##Модифированный /tg/station
 
 [![Build Status](https://travis-ci.org/infinitystation/-tg-station.svg)](https://travis-ci.org/infinitystation/-tg-station)
 

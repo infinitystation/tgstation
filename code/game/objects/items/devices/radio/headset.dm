@@ -248,15 +248,13 @@
 			return
 
 		if(!keyslot)
-			if(!user.unEquip(W))
+			if(!user.transferItemToLoc(W, src))
 				return
-			W.loc = src
 			keyslot = W
 
 		else
-			if(!user.unEquip(W))
+			if(!user.transferItemToLoc(W, src))
 				return
-			W.loc = src
 			keyslot2 = W
 
 
@@ -276,9 +274,6 @@
 
 		if(keyslot2.translate_binary)
 			src.translate_binary = 1
-
-		if(keyslot2.translate_hive)
-			src.translate_hive = 1
 
 		if(keyslot2.syndie)
 			src.syndie = 1

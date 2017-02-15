@@ -3,11 +3,16 @@
 	visible_icon = 1
 	icon = 'icons/obj/abductor.dmi'
 	icon_state = "camera_target"
+	var/allowed_area = null
 
+/mob/camera/aiEye/remote/xenobio/New(loc)
+	var/area/A = get_area(loc)
+	allowed_area = A.name
+	..()
 
 /mob/camera/aiEye/remote/xenobio/setLoc(var/t)
 	var/area/new_area = get_area(t)
-	if(istype(new_area, /area/toxins/xenobiology ))
+	if(new_area && new_area.name == allowed_area || istype(new_area, /area/toxins/xenobiology ))
 		return ..()
 	else
 		return
@@ -17,6 +22,7 @@
 	desc = "A computer used for remotely handling slimes."
 	circuit = /obj/item/weapon/circuitboard/computer/adv_security/xenobio
 	networks = list("SS13")
+	circuit = /obj/item/weapon/circuitboard/computer/xenobiology
 	off_action = new/datum/action/innate/camera_off/xenobio
 	var/datum/action/innate/slime_place/slime_place_action = new
 	var/datum/action/innate/slime_pick_up/slime_up_action = new
@@ -31,8 +37,7 @@
 	icon_keyboard = "rd_key"
 
 /obj/machinery/computer/camera_advanced/xenobio/CreateEye()
-	eyeobj = new /mob/camera/aiEye/remote/xenobio()
-	eyeobj.loc = get_turf(src)
+	eyeobj = new /mob/camera/aiEye/remote/xenobio(get_turf(src))
 	eyeobj.origin = src
 	eyeobj.visible_icon = 1
 	eyeobj.icon = 'icons/obj/abductor.dmi'

@@ -124,7 +124,7 @@
 /obj/item/toy/crayon/proc/check_empty(mob/user)
 	// When eating a crayon, check_empty() can be called twice producing
 	// two messages unless we check for being deleted first
-	if(qdeleted(src))
+	if(QDELETED(src))
 		return TRUE
 
 	. = FALSE
@@ -346,7 +346,7 @@
 					else
 						user << "<span class='warning'>There isn't enough space to paint!</span>"
 						return
-	
+
 	if(!instant)
 		user << "<span class='notice'>You finish drawing \the [temp].</span>"
 	else

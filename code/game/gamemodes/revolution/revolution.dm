@@ -273,7 +273,7 @@
 	rev_mind.special_role = "Revolutionary"
 	update_rev_icons_added(rev_mind)
 	if(jobban_isbanned(rev_mind.current, ROLE_REV))
-		addtimer(CALLBACK(src, .proc/replace_jobbaned_player), 0, rev_mind.current, ROLE_REV, ROLE_REV)
+		INVOKE_ASYNC(src, .proc/replace_jobbaned_player, rev_mind.current, ROLE_REV, ROLE_REV)
 	return 1
 
 /mob/living/carbon/human/proc/RevConvert()

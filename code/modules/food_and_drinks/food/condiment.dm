@@ -124,6 +124,12 @@
 	list_reagents = list("sodiumchloride" = 20)
 	possible_states = list()
 
+/obj/item/weapon/reagent_containers/food/condiment/saltshaker/on_reagent_change()
+	if(reagents.reagent_list.len == 0)
+		icon_state = "emptyshaker"
+	else
+		icon_state = "saltshakersmall"
+
 /obj/item/weapon/reagent_containers/food/condiment/saltshaker/suicide_act(mob/user)
 	user.visible_message("<span class='suicide'>[user] начинает мен€ть формы между солонкой!  ажетс&#255; [user.p_they()] пытал[user.p_e_5()] покончить жизнь самоубийством!</span>")
 	var/newname = "[name]"
@@ -155,6 +161,12 @@
 	volume = 20
 	list_reagents = list("blackpepper" = 20)
 	possible_states = list()
+
+/obj/item/weapon/reagent_containers/food/condiment/peppermill/on_reagent_change()
+	if(reagents.reagent_list.len == 0)
+		icon_state = "emptyshaker"
+	else
+		icon_state = "peppermillsmall"
 
 /obj/item/weapon/reagent_containers/food/condiment/milk
 	name = "space milk"

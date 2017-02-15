@@ -86,18 +86,24 @@
 		return text		//only accepts the text if it has some non-spaces
 
 // Used to get a properly sanitized input, of max_length
-/proc/stripped_input(mob/user, message = "", title = "", default = "", max_length=MAX_MESSAGE_LEN)
+// no_trim is self explanatory but it prevents the input from being trimed if you intend to parse newlines or whitespace.
+/proc/stripped_input(mob/user, message = "", title = "", default = "", max_length=MAX_MESSAGE_LEN, no_trim=FALSE)
 	var/name = input(user, message, title, default) as text|null
 	name = replacetext(name, "ÿ", "___255_")
-	name = trim(html_encode(name), max_length) //trim is "outside" because html_encode can expand single symbols into multiple symbols (such as turning < into &lt;)
+	if(no_trim)
+		name = copytext(html_encode(name), 1, max_length) 
+	else
+		name = trim(html_encode(name), max_length) //trim is "outside" because html_encode can expand single symbols into multiple symbols (such as turning < into &lt;)
 	name = replacetext(name, "___255_", "ÿ")
 	return name
 
 // Used to get a properly sanitized multiline input, of max_length
-/proc/stripped_multiline_input(mob/user, message = "", title = "", default = "", max_length=MAX_MESSAGE_LEN)
+/proc/stripped_multiline_input(mob/user, message = "", title = "", default = "", max_length=MAX_MESSAGE_LEN, no_trim=FALSE)
 	var/name = input(user, message, title, default) as message|null
-	name = replacetext(name, "ÿ", "___255_")
-	name = html_encode(trim(name, max_length)) //trim is "inside" because html_encode can expand single symbols into multiple symbols (such as turning < into &lt;)
+	name = replacetext(name, "ÿ", "___255_")?	if(no_trim)
+		name = copytext(html_encode(name), 1, max_length)
+	else
+		name = html_encode(trim(name, max_length)) //trim is "inside" because html_encode can expand single symbols into multiple symbols (such as turning < into &lt;)
 	name = replacetext(name, "___255_", "ÿ")
 	return name
 
