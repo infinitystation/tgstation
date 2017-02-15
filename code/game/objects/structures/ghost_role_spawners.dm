@@ -58,7 +58,8 @@
 	..()
 	var/area/A = get_area(src)
 	if(A)
-		notify_ghosts("&#255;йцо пепельного ходока готово вылупитьс&#255; в [A.name].", source = src, action=NOTIFY_ATTACK)
+		notify_ghosts("яйцо пепельного ходока готово вылупитьс&#255; в [A.name].", source = src, action=NOTIFY_ATTACK, flashwindow = FALSE)
+
 //Timeless prisons: Spawns in Wish Granter prisons in lavaland. Ghosts become age-old users of the Wish Granter and are advised to seek repentance for their past.
 /obj/effect/mob_spawn/human/exile
 	name = "timeless prison"
@@ -117,7 +118,7 @@
 		mob_species = species
 	var/area/A = get_area(src)
 	if(A)
-		notify_ghosts("\A [initial(species.id)] golem shell has been completed in \the [A.name].", source = src, action=NOTIFY_ATTACK)
+		notify_ghosts("\A [initial(species.id)] golem shell has been completed in \the [A.name].", source = src, action=NOTIFY_ATTACK, flashwindow = FALSE)
 	if(has_owner && creator)
 		flavour_text = "You are a golem. You move slowly, but are highly resistant to heat and cold as well as blunt trauma. You are unable to wear clothes, but can still use most tools. \
 		Serve [creator], and assist [creator.p_them()] in completing [creator.p_their()] goals at any cost."

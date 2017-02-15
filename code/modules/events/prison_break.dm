@@ -33,7 +33,7 @@
 	if(areasToOpen && areasToOpen.len > 0)
 		priority_announce("Gr3y.T1d3 вирус обнаружен в [station_name()] дверных драйверах. Уровень угрозы [severity]. Рекомендуется участие ИИ.", "Предупреждение системы безопасности")
 	else
-		world.log << "ERROR: Could not initate grey-tide. No areas in the list!"
+		log_world("ERROR: Could not initate grey-tide. No areas in the list!")
 		kill()
 
 
