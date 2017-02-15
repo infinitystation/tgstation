@@ -11,6 +11,7 @@
 	see_in_dark = 8
 	bubble_icon = "machine"
 	weather_immunities = list("ash")
+	possible_a_intents = list(INTENT_HELP, INTENT_HARM)
 
 	var/syndicate = 0
 	var/datum/ai_laws/laws = null//Now... THEY ALL CAN ALL HAVE LAWS
@@ -227,9 +228,8 @@
 		if (length(law) > 0)
 			if (force || src.lawcheck[index+1] == "Yes")
 				src.say("[radiomod] [number]. [law]")
+				number++
 				sleep(10)
-			number++
-
 
 	for (var/index = 1, index <= src.laws.supplied.len, index++)
 		var/law = src.laws.supplied[index]
@@ -238,8 +238,8 @@
 			if(src.lawcheck.len >= number+1)
 				if (force || src.lawcheck[number+1] == "Yes")
 					src.say("[radiomod] [number]. [law]")
+					number++
 					sleep(10)
-				number++
 
 
 /mob/living/silicon/proc/checklaws() //Gives you a link-driven interface for deciding what laws the statelaws() proc will share with the crew. --NeoFite

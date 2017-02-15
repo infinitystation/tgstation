@@ -1,7 +1,6 @@
 /obj/structure/frame/computer
 	name = "computer frame"
 	icon_state = "0"
-	anchored = 0
 	state = 0
 
 /obj/structure/frame/computer/attackby(obj/item/P, mob/user, params)
@@ -186,8 +185,14 @@
 	build_path = /obj/machinery/computer/camera_advanced
 /obj/item/weapon/circuitboard/computer/adv_security/xenobio
 	name = "circuit board (Slime management console)"
+/obj/item/weapon/circuitboard/computer/xenobiology
+	name = "circuit board (Xenobiology Console)"
 	build_path = /obj/machinery/computer/camera_advanced/xenobio
-	origin_tech = "programming=4;bluespace=3;biotech=4"
+	origin_tech = "programming=3;bio=3"
+/obj/item/weapon/circuitboard/computer/base_construction
+	name = "circuit board (Aux Mining Base Construction Console)"
+	build_path = /obj/machinery/computer/camera_advanced/base_construction
+	origin_tech = "programming=3;engineering=3"
 /obj/item/weapon/circuitboard/computer/aiupload
 	name = "AI Upload (Computer Board)"
 	build_path = /obj/machinery/computer/upload/ai
@@ -370,6 +375,10 @@
 /obj/item/weapon/circuitboard/computer/cargo/request
 	name = "Supply Request Console (Computer Board)"
 	build_path = /obj/machinery/computer/cargo/request
+/obj/item/weapon/circuitboard/computer/stockexchange
+	name = "circuit board (Stock Exchange Console)"
+	build_path = /obj/machinery/computer/stockexchange
+	origin_tech = "programming=3"
 
 /obj/item/weapon/circuitboard/computer/operating
 	name = "Operating Computer (Computer Board)"

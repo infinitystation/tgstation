@@ -10,10 +10,10 @@
 	max_integrity = 100
 	obj_integrity = 100
 	construction_value = 20
-	break_message = "<span class='warning'>The daemon shatters into millions of pieces!</span>"
-	debris = list(/obj/item/clockwork/alloy_shards/large = 2, \
-	/obj/item/clockwork/alloy_shards/medium = 4, \
-	/obj/item/clockwork/alloy_shards/small = 6)
+	break_message = "<span class='warning'>The daemon shatters into millions of pieces, leaving only a disc of metal!</span>"
+	debris = list(/obj/item/clockwork/alloy_shards/medium = 1, \
+	/obj/item/clockwork/alloy_shards/small = 6, \
+	/obj/item/clockwork/component/replicant_alloy/replication_plate = 1)
 	var/image/daemon_glow
 	var/image/component_glow
 	var/component_id_to_produce
@@ -92,7 +92,7 @@
 				for(var/mob/living/L in living_mob_list)
 					if(is_servant_of_ratvar(L))
 						servants++
-				if(!is_servant_of_ratvar(user) || !user.canUseTopic(src, !issilicon(user)) || active || !clockwork_caches || servants * 0.2 < clockwork_daemons)
+				if(!is_servant_of_ratvar(user) || !user.canUseTopic(src, !issilicon(user), NO_DEXTERY) || active || !clockwork_caches || servants * 0.2 < clockwork_daemons)
 					return
 				if(!component_id_to_produce)
 					user << "<span class='warning'>You decide not to select a component and activate the daemon.</span>"
@@ -160,6 +160,6 @@
 		if(component_to_generate)
 			generate_cache_component(component_to_generate, src)
 			production_time = world.time + (production_cooldown * get_efficiency_mod(TRUE)) //go on cooldown
-			visible_message("<span class='warning'>[src] hums as it produces a [get_component_name(component_to_generate)].</span>")
+			visible_message("<span class='warning'>[src] hums as it produces a </span><span class='[get_component_span(component_to_generate)]'>component</span><span class='warning'>.</span>")
 		else
 			forced_disable(FALSE) //we shouldn't actually ever get here, as we should cancel out way before this

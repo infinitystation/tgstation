@@ -1,11 +1,12 @@
 
-#define ARTILLERY_RELOAD_TIME 60
-#define EXPLOSION_SIZE 3
 
 /obj/machinery/artillerycontrol
-	var/reload = ARTILLERY_RELOAD_TIME
 	var/stealth = 0
-	var/explosionsize = EXPLOSION_SIZE
+	var/reload = 60
+	var/reload_cooldown = 60
+	var/explosiondev = 3
+	var/explosionmed = 6
+	var/explosionlight = 12
 	name = "bluespace artillery control"
 	icon_state = "control_boxp1"
 	icon = 'icons/obj/machines/particle_accelerator.dmi'
@@ -13,7 +14,7 @@
 	anchored = 1
 
 /obj/machinery/artillerycontrol/process()
-	if(reload < ARTILLERY_RELOAD_TIME)
+	if(reload < reload_cooldown)
 		reload++
 
 /obj/structure/artilleryplaceholder
@@ -29,7 +30,7 @@
 	user.set_machine(src)
 	var/dat = "<B>Bluespace Artillery Control:</B><BR>"
 	dat += "Locked on<BR>"
-	dat += "<B>Charge progress: [reload]/[ARTILLERY_RELOAD_TIME]:</B><BR>"
+	dat += "<B>Charge progress: [reload]/[reload_cooldown]:</B><BR>"
 	dat += "<A href='byond://?src=\ref[src];fire=1'>Open Fire</A><BR>"
 	dat += "Deployment of weapon authorized by <br>Nanotrasen Naval Command<br><br>Remember, friendly fire is grounds for termination of your contract and life.<HR>"
 	user << browse(dat, "window=scroll")
@@ -44,7 +45,7 @@
 	var/area/thearea = teleportlocs[A]
 	if(usr.stat || usr.restrained())
 		return
-	if(src.reload < ARTILLERY_RELOAD_TIME)
+	if(reload < reload_cooldown)
 		return
 	if(usr.contents.Find(src) || (in_range(src, usr) && isturf(loc)) || issilicon(usr))
 		if(!src.stealth)
@@ -54,7 +55,7 @@
 		for(var/turf/T in get_area_turfs(thearea.type))
 			L+=T
 		var/loc = pick(L)
-		explosion(loc,explosionsize,explosionsize*2,explosionsize*4)
+		explosion(loc,explosiondev,explosionmed,explosionlight)
 		reload = 0
 
 /*/mob/proc/openfire()

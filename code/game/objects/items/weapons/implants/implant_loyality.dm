@@ -37,7 +37,7 @@
 				target.visible_message("<span class='warning'>[target] сморщилс&#255;, сопротивл&#255;&#255;сь импланту!</span>", "<span class='warning'>Вы чувствуете, как Нанотрайзен пытаетс&#255; подчинить вашу волю себе! Сопротивл&#255;йтесь!</span>")
 			removed(target, 1)
 			qdel(src)
-			return -1
+			return 0
 		if(target.mind)
 			target.mind.remove_all_antag_light()
 		if(!silent)

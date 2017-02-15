@@ -19,4 +19,4 @@ _maps/shuttles/emergency_airless.dmm
 _maps/shuttles/emergency_scrapheap.dmm
 _maps/shuttles/emergency_pubby.dmm
 _maps/shuttles/emergency_delta.dmm
-_maps/shuttles/emergency_wabbajack.dmm
+_maps/shuttles/emergency_wabbajack.dmm?_maps/shuttles/emergency_arena.dmm

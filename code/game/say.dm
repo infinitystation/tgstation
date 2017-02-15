@@ -191,7 +191,3 @@ var/list/freqtospan = list(
 
 /atom/movable/virtualspeaker/GetRadio()
 	return radio
-
-/atom/movable/virtualspeaker/Destroy()
-	..()
-	return QDEL_HINT_PUTINPOOL

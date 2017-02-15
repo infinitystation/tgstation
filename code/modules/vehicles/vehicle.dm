@@ -25,7 +25,6 @@
 	icon_state = "key"
 	w_class = WEIGHT_CLASS_TINY
 
-
 //BUCKLE HOOKS
 /obj/vehicle/unbuckle_mob(mob/living/buckled_mob,force = 0)
 	if(riding_datum)
@@ -43,10 +42,10 @@
 	M.loc = get_turf(src)
 	..()
 	if(user.client)
-		user.client.view = view_range
+		user.client.change_view(view_range)
 	if(riding_datum)
-		riding_datum.handle_vehicle_offsets()
 		riding_datum.ridden = src
+		riding_datum.handle_vehicle_offsets()
 
 //MOVEMENT
 /obj/vehicle/relaymove(mob/user, direction)
@@ -98,9 +97,7 @@
 			user << "<span class='warning'>It's on fire!</span>"
 		var/healthpercent = (obj_integrity/max_integrity) * 100
 		switch(healthpercent)
-			if(100 to INFINITY)
-				user <<  "It seems pristine and undamaged."
-			if(50 to 100)
+			if(50 to 99)
 				user <<  "It looks slightly damaged."
 			if(25 to 50)
 				user <<  "It appears heavily damaged."

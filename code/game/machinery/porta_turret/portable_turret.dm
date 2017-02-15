@@ -68,6 +68,8 @@
 
 	var/datum/effect_system/spark_spread/spark_system	//the spark system, used for generating... sparks?
 
+	var/obj/machinery/turretid/cp = null
+
 /obj/machinery/porta_turret/New(loc)
 	..()
 	if(!base)
@@ -139,6 +141,15 @@
 	if(cover)
 		qdel(cover)
 		cover = null
+	base = null
+	if(cp)
+		cp.turrets -= src
+		cp = null
+	if(stored_gun)
+		qdel(stored_gun)
+		stored_gun = null
+	qdel(spark_system)
+	spark_system = null
 	return ..()
 
 
@@ -558,6 +569,28 @@
 /obj/machinery/porta_turret/ai/assess_perp(mob/living/carbon/human/perp)
 	return 10 //AI turrets shoot at everything not in their faction
 
+/obj/machinery/porta_turret/aux_base
+	name = "perimeter defense turret"
+	desc = "A plasma cutter turret calibrated to defend outposts against non-humanoid fauna."
+
+	req_access = list() //Can be disabled/enabled by any humanoid!
+	installation = null
+	lethal_projectile = /obj/item/projectile/plasma
+	lethal_projectile_sound = 'sound/weapons/plasma_cutter.ogg'
+	mode = TURRET_LETHAL //It would be useless in stun mode anyway
+	faction = "neutral" //Minebots, medibots, etc that should not be shot.
+
+/obj/machinery/porta_turret/aux_base/assess_perp(mob/living/carbon/human/perp)
+	return 0 //Never shoot humanoids. You are on your own if Ashwalkers or the like attack!
+
+/obj/machinery/porta_turret/aux_base/setup()
+	return
+
+/obj/machinery/porta_turret/aux_base/New()
+	..()
+	cover.name = name
+	cover.desc = desc
+
 ////////////////////////
 //Turret Control Panel//
 ////////////////////////
@@ -587,7 +620,14 @@
 		pixel_y = (dir & 3)? (dir ==1 ? -24 : 24) : 0
 	power_change() //Checks power and initial settings
 
-/obj/machinery/turretid/initialize() //map-placed turrets autolink turrets
+/obj/machinery/turretid/Destroy()
+	turrets.Cut()
+	return ..()
+
+/obj/machinery/turretid/Initialize(mapload) //map-placed turrets autolink turrets
+	..()
+	if(!mapload)
+		return
 	if(control_area && istext(control_area))
 		for(var/V in sortedAreas)
 			var/area/A = V
@@ -604,6 +644,7 @@
 
 	for(var/obj/machinery/porta_turret/T in control_area)
 		turrets |= T
+		T.cp = src
 
 /obj/machinery/turretid/attackby(obj/item/I, mob/user, params)
 	if(stat & BROKEN) return

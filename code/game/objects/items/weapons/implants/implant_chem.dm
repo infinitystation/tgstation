@@ -28,7 +28,7 @@
 	reagents.set_reacting(FALSE)
 
 /obj/item/weapon/implant/chem/Destroy()
-	..()
+	. = ..()
 	tracked_chem_implants -= src
 
 /obj/item/weapon/implant/chem/trigger(emote, mob/source)

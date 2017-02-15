@@ -30,7 +30,4 @@
 		new_player_panel_prisoner()
 	else
 		new_player_panel()
-
-	spawn(40)
-		if(client)
-			client.playtitlemusic()
+	client.playtitlemusic()
