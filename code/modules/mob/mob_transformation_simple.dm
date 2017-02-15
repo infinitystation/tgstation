@@ -56,5 +56,7 @@
 		M.key = key
 
 	if(delete_old_mob)
-		QDEL_IN(src, 1)??	M.regenerate_icons()
+		QDEL_IN(src, 1)
+
+	M.regenerate_icons()
 	return M

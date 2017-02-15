@@ -48,7 +48,8 @@
 	unset_machine()
 	timeofdeath = world.time
 	tod = worldtime2text()
-	var/turf/T = get_turf(src)?	if(client)
+	var/turf/T = get_turf(src)
+	if(client)
 		if(client && client.banprisoned)
 			qdel(src)
 	if(mind && mind.name && mind.active && (!(T.flags & NO_DEATHRATTLE)))

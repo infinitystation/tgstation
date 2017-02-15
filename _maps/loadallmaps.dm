@@ -6,6 +6,11 @@
 	#undef MAP_OVERRIDE_FILES
 #endif
 
+#include "infinity_metastation.dm"
+#ifdef MAP_OVERRIDE_FILES
+	#undef MAP_OVERRIDE_FILES
+#endif
+
 #include "metastation.dm"
 #ifdef MAP_OVERRIDE_FILES
 	#undef MAP_OVERRIDE_FILES

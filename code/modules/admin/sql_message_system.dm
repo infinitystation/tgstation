@@ -29,7 +29,7 @@
 		target_ckey = admin_ckey
 	if(!text)
 		text = input(usr,"Write your [type]","Create [type]") as null|message
-		text = sanitizeSQL_a0((text)
+		text = sanitizeSQL_a0(text)
 		if(!text)
 			return
 	text = sanitizeSQL(text)

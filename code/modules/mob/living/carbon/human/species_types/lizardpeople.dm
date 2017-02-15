@@ -38,7 +38,7 @@
 	name = "Ash Walker"
 	default_features = list("mcolor" = "0F0", "tail" = "Smooth", "snout" = "Round", "horns" = "None", "frills" = "None", "spines" = "None", "body_markings" = "None", "legs" = "Digitigrade Legs")
 	id = "ashlizard"
-	mutant_organs = list(/obj/item/organ/tongue/lizard)
+	mutant_organs = list(/obj/item/organ/tongue/lizard,/obj/item/organ/eyes/night_vision)
 	limbs_id = "lizard"
 	species_traits = list(MUTCOLORS,EYECOLOR,LIPS,NOBREATH,NOGUNS,DIGITIGRADE)
 

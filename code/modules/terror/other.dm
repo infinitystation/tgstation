@@ -381,29 +381,6 @@
 	smooth = SMOOTH_TRUE
 	canSmoothWith = null
 
-/obj/effect/proc_holder/spell/self/REAL_NIGHT_VISION
-	name = "Darksight"
-	desc = "Gives you night vision."
-	panel = "Spells"
-	action_icon = 'icons/obj/infinity_object.dmi'
-	action_icon_state = "darksight"
-	action_background_icon_state = "bg_alien"
-	charge_max = 0
-	clothes_req = 0
-	active = 0
-
-/obj/effect/proc_holder/spell/self/REAL_NIGHT_VISION/cast(mob/living/carbon/human/user)
-	active = !active
-	if(active)
-		user << "<span class='notice'>You shift the nerves in your eyes, allowing you to see in the dark.</span>"
-		user.dna.species.darksight = 8
-		user.dna.species.invis_sight = SEE_INVISIBLE_MINIMUM
-	else
-		user << "<span class='notice'>You return your vision to normal.</span>"
-		user.dna.species.darksight = 0
-		user.dna.species.invis_sight = initial(user.dna.species.invis_sight)
-	user.update_sight()
-
 /proc/is_thrall(var/mob/living/M)
 	return istype(M) && M.mind && ticker && ticker.mode
 

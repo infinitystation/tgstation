@@ -51,7 +51,6 @@
 	new_spawn << "<b>“ащите тела мертвых существ и чудовищ к вашему гнезду. ќни будут поглащены и после нескольких тел, вы получите себе подобного собрата. —лава Ќекрополису!</b>"
 	if(ishuman(new_spawn))
 		var/mob/living/carbon/human/H = new_spawn
-		H.mind.AddSpell(new /obj/effect/proc_holder/spell/self/REAL_NIGHT_VISION(null))
 		H.underwear = "Nude"
 		H.update_body()
 
