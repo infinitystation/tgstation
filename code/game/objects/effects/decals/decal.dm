@@ -32,6 +32,9 @@
 /obj/effect/turf_decal/stripes/line
 	icon_state = "warningline"
 
+/obj/effect/turf_decal/stripes/line_sides
+	icon_state = "warn_side"
+
 /obj/effect/turf_decal/stripes/end
 	icon_state = "warn_end"
 
@@ -54,4 +57,4 @@
 	icon_state = "bot"
 
 /obj/effect/turf_decal/loading_area
-	icon_state = "loading_area"
+	icon_state = "loadingarea"

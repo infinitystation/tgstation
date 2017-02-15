@@ -27502,10 +27502,7 @@
 	d2 = 8;
 	icon_state = "2-8"
 	},
-/obj/machinery/ai_slipper{
-	icon_state = "motion0";
-	uses = 8
-	},
+/obj/machinery/ai_slipper,
 /turf/open/floor/plasteel{
 	icon_state = "dark"
 	},
@@ -32276,10 +32273,7 @@
 /turf/open/floor/bluegrid,
 /area/ai_monitored/turret_protected/ai)
 "bdh" = (
-/obj/machinery/ai_slipper{
-	icon_state = "motion0";
-	uses = 10
-	},
+/obj/machinery/ai_slipper,
 /turf/open/floor/bluegrid,
 /area/ai_monitored/turret_protected/ai)
 "bdi" = (
@@ -34416,10 +34410,7 @@
 	},
 /area/ai_monitored/turret_protected/ai)
 "bgq" = (
-/obj/machinery/ai_slipper{
-	icon_state = "motion0";
-	uses = 10
-	},
+/obj/machinery/ai_slipper,
 /obj/structure/cable{
 	d1 = 1;
 	d2 = 2;
@@ -34462,10 +34453,7 @@
 	pixel_x = 30;
 	pixel_y = 30
 	},
-/obj/machinery/ai_slipper{
-	icon_state = "motion0";
-	uses = 10
-	},
+/obj/machinery/ai_slipper,
 /obj/machinery/flasher{
 	id = "AI";
 	pixel_x = 24;
@@ -34497,10 +34485,7 @@
 	},
 /area/ai_monitored/turret_protected/ai)
 "bgu" = (
-/obj/machinery/ai_slipper{
-	icon_state = "motion0";
-	uses = 10
-	},
+/obj/machinery/ai_slipper,
 /obj/structure/cable{
 	d1 = 1;
 	d2 = 2;
@@ -36051,11 +36036,11 @@
 /area/maintenance/maintcentral)
 "biT" = (
 /turf/closed/wall/r_wall,
-/area/crew_quarters/captain_quarters)
+/area/crew_quarters/captain/captains_quarters)
 "biU" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /turf/closed/wall/r_wall,
-/area/crew_quarters/captain_quarters)
+/area/crew_quarters/captain/captains_quarters)
 "biV" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /turf/open/floor/plasteel{
@@ -36952,7 +36937,7 @@
 	pixel_y = 32
 	},
 /turf/open/floor/carpet,
-/area/crew_quarters/captain_quarters)
+/area/crew_quarters/captain/captains_quarters)
 "bkB" = (
 /obj/machinery/status_display{
 	density = 0;
@@ -36965,14 +36950,14 @@
 /obj/item/weapon/pinpointer,
 /obj/item/weapon/disk/nuclear,
 /turf/open/floor/carpet,
-/area/crew_quarters/captain_quarters)
+/area/crew_quarters/captain/captains_quarters)
 "bkC" = (
 /obj/machinery/light{
 	dir = 1
 	},
 /obj/machinery/computer/security/wooden_tv,
 /turf/open/floor/carpet,
-/area/crew_quarters/captain_quarters)
+/area/crew_quarters/captain/captains_quarters)
 "bkD" = (
 /obj/machinery/ai_status_display{
 	pixel_y = 32
@@ -36983,14 +36968,14 @@
 	},
 /obj/machinery/photocopier,
 /turf/open/floor/wood,
-/area/crew_quarters/captain_quarters)
+/area/crew_quarters/captain/captains_quarters)
 "bkE" = (
 /obj/machinery/disposal/bin,
 /obj/structure/disposalpipe/trunk{
 	dir = 8
 	},
 /turf/open/floor/wood,
-/area/crew_quarters/captain_quarters)
+/area/crew_quarters/captain/captains_quarters)
 "bkF" = (
 /obj/structure/window/reinforced{
 	dir = 8
@@ -36999,7 +36984,7 @@
 	pixel_x = 4
 	},
 /turf/open/floor/carpet,
-/area/crew_quarters/captain_quarters)
+/area/crew_quarters/captain/captains_quarters)
 "bkG" = (
 /obj/machinery/light_switch{
 	pixel_x = 28;
@@ -37011,7 +36996,7 @@
 	pixel_y = 28
 	},
 /turf/open/floor/carpet,
-/area/crew_quarters/captain_quarters)
+/area/crew_quarters/captain/captains_quarters)
 "bkH" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/machinery/door/firedoor,
@@ -38093,7 +38078,7 @@
 /obj/item/weapon/folder/black,
 /obj/item/clothing/ears/earmuffs/mp3,
 /turf/open/floor/carpet,
-/area/crew_quarters/captain_quarters)
+/area/crew_quarters/captain/captains_quarters)
 "bmq" = (
 /obj/effect/landmark/start{
 	name = "Captain"
@@ -38105,21 +38090,21 @@
 	tag = ""
 	},
 /turf/open/floor/carpet,
-/area/crew_quarters/captain_quarters)
+/area/crew_quarters/captain/captains_quarters)
 "bmr" = (
 /turf/open/floor/carpet,
-/area/crew_quarters/captain_quarters)
+/area/crew_quarters/captain/captains_quarters)
 "bms" = (
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/wood,
-/area/crew_quarters/captain_quarters)
+/area/crew_quarters/captain/captains_quarters)
 "bmt" = (
 /turf/open/floor/wood,
-/area/crew_quarters/captain_quarters)
+/area/crew_quarters/captain/captains_quarters)
 "bmu" = (
 /obj/machinery/door/window/westright,
 /turf/open/floor/carpet,
-/area/crew_quarters/captain_quarters)
+/area/crew_quarters/captain/captains_quarters)
 "bmv" = (
 /obj/structure/bed,
 /obj/item/weapon/bedsheet/captain,
@@ -38132,7 +38117,7 @@
 	network = list("SS13")
 	},
 /turf/open/floor/carpet,
-/area/crew_quarters/captain_quarters)
+/area/crew_quarters/captain/captains_quarters)
 "bmw" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/machinery/airalarm{
@@ -38488,10 +38473,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 6
 	},
-/obj/machinery/ai_slipper{
-	icon_state = "motion0";
-	uses = 10
-	},
+/obj/machinery/ai_slipper,
 /obj/structure/cable{
 	d1 = 4;
 	d2 = 8;
@@ -39115,7 +39097,7 @@
 	pixel_x = -28
 	},
 /turf/open/floor/carpet,
-/area/crew_quarters/captain_quarters)
+/area/crew_quarters/captain/captains_quarters)
 "bod" = (
 /obj/machinery/light_switch{
 	pixel_y = -25
@@ -39133,7 +39115,7 @@
 	},
 /obj/item/clothing/mask/cigarette/cigar/havana,
 /turf/open/floor/carpet,
-/area/crew_quarters/captain_quarters)
+/area/crew_quarters/captain/captains_quarters)
 "boe" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber{
 	dir = 8;
@@ -39142,28 +39124,28 @@
 	scrub_Toxins = 1
 	},
 /turf/open/floor/carpet,
-/area/crew_quarters/captain_quarters)
+/area/crew_quarters/captain/captains_quarters)
 "bof" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 6
 	},
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/wood,
-/area/crew_quarters/captain_quarters)
+/area/crew_quarters/captain/captains_quarters)
 "bog" = (
 /obj/machinery/atmospherics/components/unary/vent_pump{
 	dir = 8;
 	on = 1
 	},
 /turf/open/floor/wood,
-/area/crew_quarters/captain_quarters)
+/area/crew_quarters/captain/captains_quarters)
 "boh" = (
 /obj/structure/window/reinforced{
 	dir = 8
 	},
 /obj/machinery/holopad,
 /turf/open/floor/carpet,
-/area/crew_quarters/captain_quarters)
+/area/crew_quarters/captain/captains_quarters)
 "boi" = (
 /obj/structure/table/wood,
 /obj/machinery/recharger{
@@ -39173,7 +39155,7 @@
 	pixel_x = 28
 	},
 /turf/open/floor/carpet,
-/area/crew_quarters/captain_quarters)
+/area/crew_quarters/captain/captains_quarters)
 "boj" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/structure/disposalpipe/segment{
@@ -40314,7 +40296,7 @@
 /area/bridge)
 "bpZ" = (
 /turf/closed/wall,
-/area/crew_quarters/captain_quarters)
+/area/crew_quarters/captain/captains_quarters)
 "bqa" = (
 /obj/structure/table/wood,
 /obj/item/device/flashlight/lamp/green{
@@ -40334,7 +40316,7 @@
 	},
 /obj/item/weapon/card/id/captains_spare,
 /turf/open/floor/wood,
-/area/crew_quarters/captain_quarters)
+/area/crew_quarters/captain/captains_quarters)
 "bqb" = (
 /obj/machinery/door/window{
 	dir = 1;
@@ -40342,7 +40324,7 @@
 	req_access_txt = "20"
 	},
 /turf/open/floor/wood,
-/area/crew_quarters/captain_quarters)
+/area/crew_quarters/captain/captains_quarters)
 "bqc" = (
 /obj/structure/closet/secure_closet/captains,
 /obj/structure/window/reinforced{
@@ -40350,7 +40332,7 @@
 	pixel_y = 2
 	},
 /turf/open/floor/wood,
-/area/crew_quarters/captain_quarters)
+/area/crew_quarters/captain/captains_quarters)
 "bqd" = (
 /obj/structure/window/reinforced{
 	dir = 1;
@@ -40358,7 +40340,7 @@
 	},
 /obj/machinery/suit_storage_unit/captain,
 /turf/open/floor/wood,
-/area/crew_quarters/captain_quarters)
+/area/crew_quarters/captain/captains_quarters)
 "bqe" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/structure/extinguisher_cabinet{
@@ -41270,7 +41252,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "white"
 	},
-/area/crew_quarters/captain_quarters)
+/area/crew_quarters/captain/captains_quarters)
 "bru" = (
 /obj/structure/mirror{
 	pixel_y = 28
@@ -41287,7 +41269,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "white"
 	},
-/area/crew_quarters/captain_quarters)
+/area/crew_quarters/captain/captains_quarters)
 "brv" = (
 /obj/structure/toilet{
 	pixel_y = 13
@@ -41308,7 +41290,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "white"
 	},
-/area/crew_quarters/captain_quarters)
+/area/crew_quarters/captain/captains_quarters)
 "brw" = (
 /obj/machinery/door/airlock/silver{
 	name = "Bathroom"
@@ -41319,14 +41301,14 @@
 /turf/open/floor/plasteel{
 	icon_state = "white"
 	},
-/area/crew_quarters/captain_quarters)
+/area/crew_quarters/captain/captains_quarters)
 "brx" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
 	dir = 4
 	},
 /turf/open/floor/wood,
-/area/crew_quarters/captain_quarters)
+/area/crew_quarters/captain/captains_quarters)
 "bry" = (
 /obj/effect/landmark/start{
 	name = "Captain"
@@ -41336,7 +41318,7 @@
 	pixel_y = -22
 	},
 /turf/open/floor/wood,
-/area/crew_quarters/captain_quarters)
+/area/crew_quarters/captain/captains_quarters)
 "brz" = (
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden{
 	dir = 8;
@@ -42314,7 +42296,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/wood,
-/area/crew_quarters/captain_quarters)
+/area/crew_quarters/captain/captains_quarters)
 "bth" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/machinery/status_display{
@@ -42746,7 +42728,6 @@
 	},
 /area/ai_monitored/turret_protected/aisat)
 "btQ" = (
-/obj/item/device/radio/beacon,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
@@ -42754,6 +42735,7 @@
 	tag = "icon-4-8";
 	icon_state = "4-8"
 	},
+/obj/machinery/ai_slipper,
 /turf/open/floor/plasteel{
 	dir = 1;
 	icon_state = "darkbluecorners";
@@ -42772,10 +42754,6 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden{
 	dir = 1
-	},
-/obj/machinery/ai_slipper{
-	icon_state = "motion0";
-	uses = 10
 	},
 /obj/structure/cable{
 	tag = "icon-4-8";
@@ -42908,10 +42886,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
-/obj/machinery/ai_slipper{
-	icon_state = "motion0";
-	uses = 10
-	},
+/obj/machinery/ai_slipper,
 /obj/structure/cable{
 	tag = "icon-0-8";
 	icon_state = "0-8"
@@ -43490,7 +43465,7 @@
 	},
 /obj/structure/displaycase/captain,
 /turf/open/floor/wood,
-/area/crew_quarters/captain_quarters)
+/area/crew_quarters/captain/captains_quarters)
 "buV" = (
 /obj/structure/sign/map/left{
 	desc = "A framed picture of the station. Clockwise from security at the top (red), you see engineering (yellow), science (purple), escape (red and white), medbay (green), arrivals (blue and white), and finally cargo (brown).";
@@ -43498,7 +43473,7 @@
 	pixel_y = 32
 	},
 /turf/open/floor/wood,
-/area/crew_quarters/captain_quarters)
+/area/crew_quarters/captain/captains_quarters)
 "buW" = (
 /obj/structure/sign/map/right{
 	desc = "A framed picture of the station. Clockwise from security at the top (red), you see engineering (yellow), science (purple), escape (red and white), medbay (green), arrivals (blue and white), and finally cargo (brown).";
@@ -43506,12 +43481,12 @@
 	pixel_y = 32
 	},
 /turf/open/floor/wood,
-/area/crew_quarters/captain_quarters)
+/area/crew_quarters/captain/captains_quarters)
 "buX" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/wood,
-/area/crew_quarters/captain_quarters)
+/area/crew_quarters/captain/captains_quarters)
 "buY" = (
 /obj/machinery/computer/communications,
 /obj/item/device/radio/intercom{
@@ -43528,13 +43503,13 @@
 	pixel_y = 24
 	},
 /turf/open/floor/wood,
-/area/crew_quarters/captain_quarters)
+/area/crew_quarters/captain/captains_quarters)
 "buZ" = (
 /obj/structure/rack,
 /obj/item/weapon/cane,
 /obj/item/weapon/reagent_containers/food/snacks/grown/mushroom/glowshroom,
 /turf/open/floor/plating,
-/area/crew_quarters/captain_quarters)
+/area/crew_quarters/captain/captains_quarters)
 "bva" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/item/device/radio/intercom{
@@ -44160,10 +44135,7 @@
 	d1 = 4;
 	d2 = 8
 	},
-/obj/machinery/ai_slipper{
-	icon_state = "motion0";
-	uses = 10
-	},
+/obj/machinery/ai_slipper,
 /turf/open/floor/plasteel{
 	icon_state = "dark"
 	},
@@ -44203,6 +44175,7 @@
 	d2 = 8
 	},
 /obj/machinery/holopad,
+/obj/item/device/radio/beacon,
 /turf/open/floor/plasteel{
 	icon_state = "dark"
 	},
@@ -44286,10 +44259,7 @@
 	d2 = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/obj/machinery/ai_slipper{
-	icon_state = "motion0";
-	uses = 10
-	},
+/obj/machinery/ai_slipper,
 /obj/structure/cable/yellow{
 	d1 = 1;
 	d2 = 8;
@@ -44420,10 +44390,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
-/obj/machinery/ai_slipper{
-	icon_state = "motion0";
-	uses = 10
-	},
+/obj/machinery/ai_slipper,
 /turf/open/floor/plasteel{
 	icon_state = "dark"
 	},
@@ -45093,7 +45060,7 @@
 	},
 /obj/item/weapon/melee/chainofcommand,
 /turf/open/floor/wood,
-/area/crew_quarters/captain_quarters)
+/area/crew_quarters/captain/captains_quarters)
 "bxm" = (
 /obj/structure/cable/yellow{
 	d1 = 2;
@@ -45101,13 +45068,13 @@
 	icon_state = "2-8"
 	},
 /turf/open/floor/wood,
-/area/crew_quarters/captain_quarters)
+/area/crew_quarters/captain/captains_quarters)
 "bxn" = (
 /obj/structure/table/wood,
 /obj/item/weapon/stamp/captain,
 /obj/machinery/computer/security/wooden_tv,
 /turf/open/floor/wood,
-/area/crew_quarters/captain_quarters)
+/area/crew_quarters/captain/captains_quarters)
 "bxo" = (
 /obj/effect/landmark/start{
 	name = "Captain"
@@ -45116,7 +45083,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/wood,
-/area/crew_quarters/captain_quarters)
+/area/crew_quarters/captain/captains_quarters)
 "bxp" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -45131,7 +45098,7 @@
 	},
 /obj/machinery/computer/card,
 /turf/open/floor/wood,
-/area/crew_quarters/captain_quarters)
+/area/crew_quarters/captain/captains_quarters)
 "bxq" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/structure/disposalpipe/segment,
@@ -46420,7 +46387,7 @@
 	pixel_y = 0
 	},
 /turf/open/floor/wood,
-/area/crew_quarters/captain_quarters)
+/area/crew_quarters/captain/captains_quarters)
 "bzq" = (
 /obj/machinery/door/window{
 	name = "Captain's Desk";
@@ -46432,14 +46399,14 @@
 	icon_state = "1-2"
 	},
 /turf/open/floor/wood,
-/area/crew_quarters/captain_quarters)
+/area/crew_quarters/captain/captains_quarters)
 "bzr" = (
 /obj/structure/table/wood,
 /obj/item/weapon/paper_bin,
 /obj/item/weapon/pen,
 /obj/structure/window/reinforced,
 /turf/open/floor/wood,
-/area/crew_quarters/captain_quarters)
+/area/crew_quarters/captain/captains_quarters)
 "bzs" = (
 /obj/structure/table/wood,
 /obj/item/weapon/folder/blue,
@@ -46455,7 +46422,7 @@
 /obj/structure/disposalpipe/segment,
 /obj/item/weapon/stamp/captain,
 /turf/open/floor/wood,
-/area/crew_quarters/captain_quarters)
+/area/crew_quarters/captain/captains_quarters)
 "bzt" = (
 /obj/structure/table/wood,
 /obj/item/weapon/hand_tele,
@@ -46467,7 +46434,7 @@
 	pixel_y = 0
 	},
 /turf/open/floor/wood,
-/area/crew_quarters/captain_quarters)
+/area/crew_quarters/captain/captains_quarters)
 "bzu" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4;
@@ -47446,14 +47413,14 @@
 	dir = 8
 	},
 /turf/open/floor/wood,
-/area/crew_quarters/captain_quarters)
+/area/crew_quarters/captain/captains_quarters)
 "bBn" = (
 /obj/machinery/holopad{
 	pixel_x = 9;
 	pixel_y = -9
 	},
 /turf/open/floor/carpet,
-/area/crew_quarters/captain_quarters)
+/area/crew_quarters/captain/captains_quarters)
 "bBo" = (
 /obj/structure/cable/yellow{
 	d1 = 1;
@@ -47461,14 +47428,14 @@
 	icon_state = "1-2"
 	},
 /turf/open/floor/carpet,
-/area/crew_quarters/captain_quarters)
+/area/crew_quarters/captain/captains_quarters)
 "bBp" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	req_access_txt = "0"
 	},
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/carpet,
-/area/crew_quarters/captain_quarters)
+/area/crew_quarters/captain/captains_quarters)
 "bBq" = (
 /obj/machinery/camera{
 	c_tag = "Captain's Office";
@@ -47476,7 +47443,7 @@
 	network = list("SS13")
 	},
 /turf/open/floor/carpet,
-/area/crew_quarters/captain_quarters)
+/area/crew_quarters/captain/captains_quarters)
 "bBr" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/structure/disposalpipe/segment,
@@ -48521,13 +48488,13 @@
 	products = list(/obj/item/weapon/storage/fancy/cigarettes/cigpack_syndicate = 7, /obj/item/weapon/storage/fancy/cigarettes/cigpack_uplift = 3, /obj/item/weapon/storage/fancy/cigarettes/cigpack_robust = 2, /obj/item/weapon/storage/fancy/cigarettes/cigpack_carp = 3, /obj/item/weapon/storage/fancy/cigarettes/cigpack_midori = 1, /obj/item/weapon/storage/box/matches = 10, /obj/item/weapon/lighter/greyscale = 4, /obj/item/weapon/storage/fancy/rollingpapers = 5)
 	},
 /turf/open/floor/wood,
-/area/crew_quarters/captain_quarters)
+/area/crew_quarters/captain/captains_quarters)
 "bDf" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 6
 	},
 /turf/open/floor/carpet,
-/area/crew_quarters/captain_quarters)
+/area/crew_quarters/captain/captains_quarters)
 "bDg" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
@@ -48543,7 +48510,7 @@
 	tag = ""
 	},
 /turf/open/floor/carpet,
-/area/crew_quarters/captain_quarters)
+/area/crew_quarters/captain/captains_quarters)
 "bDh" = (
 /obj/structure/table/wood,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
@@ -48556,7 +48523,7 @@
 	},
 /obj/item/weapon/storage/fancy/donut_box,
 /turf/open/floor/carpet,
-/area/crew_quarters/captain_quarters)
+/area/crew_quarters/captain/captains_quarters)
 "bDi" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
 	dir = 2
@@ -48576,7 +48543,7 @@
 	tag = ""
 	},
 /turf/open/floor/carpet,
-/area/crew_quarters/captain_quarters)
+/area/crew_quarters/captain/captains_quarters)
 "bDj" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
@@ -48590,7 +48557,7 @@
 	dir = 4
 	},
 /turf/open/floor/carpet,
-/area/crew_quarters/captain_quarters)
+/area/crew_quarters/captain/captains_quarters)
 "bDk" = (
 /obj/machinery/door/airlock/command{
 	name = "Emergency Escape";
@@ -48613,7 +48580,7 @@
 	icon_state = "warnplate";
 	dir = 8
 	},
-/area/crew_quarters/captain_quarters)
+/area/crew_quarters/captain/captains_quarters)
 "bDl" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
 	dir = 4
@@ -49568,11 +49535,11 @@
 	req_access_txt = "20"
 	},
 /turf/open/floor/wood,
-/area/crew_quarters/captain_quarters)
+/area/crew_quarters/captain/captains_quarters)
 "bEY" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/open/floor/carpet,
-/area/crew_quarters/captain_quarters)
+/area/crew_quarters/captain/captains_quarters)
 "bEZ" = (
 /obj/structure/chair/comfy/brown{
 	dir = 4;
@@ -49580,12 +49547,12 @@
 	tag = ""
 	},
 /turf/open/floor/carpet,
-/area/crew_quarters/captain_quarters)
+/area/crew_quarters/captain/captains_quarters)
 "bFa" = (
 /obj/structure/table/wood,
 /obj/item/weapon/reagent_containers/food/drinks/shaker,
 /turf/open/floor/carpet,
-/area/crew_quarters/captain_quarters)
+/area/crew_quarters/captain/captains_quarters)
 "bFb" = (
 /obj/structure/chair/comfy/brown{
 	dir = 8;
@@ -49593,7 +49560,7 @@
 	tag = ""
 	},
 /turf/open/floor/carpet,
-/area/crew_quarters/captain_quarters)
+/area/crew_quarters/captain/captains_quarters)
 "bFc" = (
 /obj/machinery/airalarm{
 	dir = 8;
@@ -49605,7 +49572,7 @@
 	dir = 4
 	},
 /turf/open/floor/carpet,
-/area/crew_quarters/captain_quarters)
+/area/crew_quarters/captain/captains_quarters)
 "bFd" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/structure/cable/yellow{
@@ -50588,14 +50555,14 @@
 	pixel_x = -24
 	},
 /turf/open/floor/wood,
-/area/crew_quarters/captain_quarters)
+/area/crew_quarters/captain/captains_quarters)
 "bGP" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 9;
 	pixel_y = 0
 	},
 /turf/open/floor/carpet,
-/area/crew_quarters/captain_quarters)
+/area/crew_quarters/captain/captains_quarters)
 "bGQ" = (
 /obj/machinery/light,
 /obj/machinery/computer/security/telescreen{
@@ -50607,7 +50574,7 @@
 	},
 /mob/living/simple_animal/pet/fox/Renault,
 /turf/open/floor/carpet,
-/area/crew_quarters/captain_quarters)
+/area/crew_quarters/captain/captains_quarters)
 "bGR" = (
 /obj/item/device/radio/intercom{
 	dir = 0;
@@ -50616,7 +50583,7 @@
 	pixel_y = -26
 	},
 /turf/open/floor/carpet,
-/area/crew_quarters/captain_quarters)
+/area/crew_quarters/captain/captains_quarters)
 "bGS" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber{
 	dir = 2;
@@ -50629,7 +50596,7 @@
 	pixel_y = 0
 	},
 /turf/open/floor/carpet,
-/area/crew_quarters/captain_quarters)
+/area/crew_quarters/captain/captains_quarters)
 "bGT" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/structure/cable/yellow{
@@ -50892,10 +50859,7 @@
 /turf/open/floor/plasteel,
 /area/atmos)
 "bHr" = (
-/obj/machinery/atmospherics/components/unary/thermomachine/heater{
-	dir = 2;
-	on = 1
-	},
+/obj/machinery/atmospherics/components/unary/thermomachine/freezer,
 /turf/open/floor/plasteel,
 /area/atmos)
 "bHs" = (
@@ -51484,7 +51448,7 @@
 	tag = "icon-direction_bridge (NORTH)"
 	},
 /turf/closed/wall/r_wall,
-/area/crew_quarters/captain_quarters)
+/area/crew_quarters/captain/captains_quarters)
 "bIv" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/structure/cable/yellow{
@@ -64375,7 +64339,7 @@
 /area/maintenance/fpmaint2)
 "cfi" = (
 /turf/closed/wall,
-/area/medical/medbay_storage{
+/area/medical/medbay2/medbay_storage{
 	name = "Medbay Storage"
 	})
 "cfj" = (
@@ -65051,7 +65015,7 @@
 	dir = 9;
 	icon_state = "whiteblue"
 	},
-/area/medical/medbay_storage{
+/area/medical/medbay2/medbay_storage{
 	name = "Medbay Storage"
 	})
 "cgx" = (
@@ -65080,7 +65044,7 @@
 	dir = 1;
 	icon_state = "whiteblue"
 	},
-/area/medical/medbay_storage{
+/area/medical/medbay2/medbay_storage{
 	name = "Medbay Storage"
 	})
 "cgy" = (
@@ -65094,7 +65058,7 @@
 	dir = 1;
 	icon_state = "whiteblue"
 	},
-/area/medical/medbay_storage{
+/area/medical/medbay2/medbay_storage{
 	name = "Medbay Storage"
 	})
 "cgz" = (
@@ -65110,7 +65074,7 @@
 	dir = 1;
 	icon_state = "whiteblue"
 	},
-/area/medical/medbay_storage{
+/area/medical/medbay2/medbay_storage{
 	name = "Medbay Storage"
 	})
 "cgA" = (
@@ -65130,7 +65094,7 @@
 	dir = 1;
 	icon_state = "whiteblue"
 	},
-/area/medical/medbay_storage{
+/area/medical/medbay2/medbay_storage{
 	name = "Medbay Storage"
 	})
 "cgB" = (
@@ -65140,7 +65104,7 @@
 	dir = 5;
 	icon_state = "whiteblue"
 	},
-/area/medical/medbay_storage{
+/area/medical/medbay2/medbay_storage{
 	name = "Medbay Storage"
 	})
 "cgC" = (
@@ -65213,13 +65177,13 @@
 "cgF" = (
 /obj/effect/spawner/structure/window,
 /turf/open/floor/plating,
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "cgG" = (
 /obj/structure/sign/bluecross_2,
 /turf/closed/wall,
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "cgH" = (
@@ -65237,7 +65201,7 @@
 	icon_state = "whitehall";
 	tag = "icon-whitehall (WEST)"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "cgI" = (
@@ -65248,7 +65212,7 @@
 	icon_state = "whitehall";
 	tag = "icon-whitehall (WEST)"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "cgJ" = (
@@ -65276,7 +65240,7 @@
 	tag = "icon-direction_bridge (EAST)"
 	},
 /turf/closed/wall,
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "cgK" = (
@@ -65781,7 +65745,7 @@
 	req_access_txt = "50"
 	},
 /turf/open/floor/plasteel/whitebot/delivery,
-/area/medical/medbay_storage{
+/area/medical/medbay2/medbay_storage{
 	name = "Medbay Storage"
 	})
 "chJ" = (
@@ -65792,7 +65756,7 @@
 	dir = 8;
 	icon_state = "whiteblue"
 	},
-/area/medical/medbay_storage{
+/area/medical/medbay2/medbay_storage{
 	name = "Medbay Storage"
 	})
 "chK" = (
@@ -65802,7 +65766,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "white"
 	},
-/area/medical/medbay_storage{
+/area/medical/medbay2/medbay_storage{
 	name = "Medbay Storage"
 	})
 "chL" = (
@@ -65816,7 +65780,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "white"
 	},
-/area/medical/medbay_storage{
+/area/medical/medbay2/medbay_storage{
 	name = "Medbay Storage"
 	})
 "chM" = (
@@ -65831,7 +65795,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "white"
 	},
-/area/medical/medbay_storage{
+/area/medical/medbay2/medbay_storage{
 	name = "Medbay Storage"
 	})
 "chN" = (
@@ -65851,7 +65815,7 @@
 	dir = 4;
 	icon_state = "whiteblue"
 	},
-/area/medical/medbay_storage{
+/area/medical/medbay2/medbay_storage{
 	name = "Medbay Storage"
 	})
 "chO" = (
@@ -65952,7 +65916,7 @@
 	dir = 1;
 	icon_state = "whiteblue"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "chU" = (
@@ -65981,7 +65945,7 @@
 	dir = 1;
 	icon_state = "whiteblue"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "chV" = (
@@ -65990,7 +65954,7 @@
 	dir = 1;
 	icon_state = "whiteblue"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "chW" = (
@@ -66005,7 +65969,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "white"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "chX" = (
@@ -66013,7 +65977,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "white"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "chY" = (
@@ -66025,7 +65989,7 @@
 	dir = 1;
 	icon_state = "whiteblue"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "chZ" = (
@@ -66034,7 +65998,7 @@
 	dir = 1;
 	icon_state = "whiteblue"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "cia" = (
@@ -66046,7 +66010,7 @@
 	dir = 1;
 	icon_state = "whiteblue"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "cib" = (
@@ -67005,7 +66969,7 @@
 	dir = 4
 	},
 /turf/open/floor/plating,
-/area/medical/medbay_storage{
+/area/medical/medbay2/medbay_storage{
 	name = "Medbay Storage"
 	})
 "cjw" = (
@@ -67016,7 +66980,7 @@
 	dir = 8;
 	icon_state = "whiteblue"
 	},
-/area/medical/medbay_storage{
+/area/medical/medbay2/medbay_storage{
 	name = "Medbay Storage"
 	})
 "cjx" = (
@@ -67026,7 +66990,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "white"
 	},
-/area/medical/medbay_storage{
+/area/medical/medbay2/medbay_storage{
 	name = "Medbay Storage"
 	})
 "cjy" = (
@@ -67039,7 +67003,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "white"
 	},
-/area/medical/medbay_storage{
+/area/medical/medbay2/medbay_storage{
 	name = "Medbay Storage"
 	})
 "cjz" = (
@@ -67049,7 +67013,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "white"
 	},
-/area/medical/medbay_storage{
+/area/medical/medbay2/medbay_storage{
 	name = "Medbay Storage"
 	})
 "cjA" = (
@@ -67065,7 +67029,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "white"
 	},
-/area/medical/medbay_storage{
+/area/medical/medbay2/medbay_storage{
 	name = "Medbay Storage"
 	})
 "cjB" = (
@@ -67079,7 +67043,7 @@
 	dir = 4;
 	icon_state = "whiteblue"
 	},
-/area/medical/medbay_storage{
+/area/medical/medbay2/medbay_storage{
 	name = "Medbay Storage"
 	})
 "cjC" = (
@@ -67155,7 +67119,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "white"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "cjH" = (
@@ -67176,7 +67140,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "white"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "cjI" = (
@@ -67192,7 +67156,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "white"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "cjJ" = (
@@ -67207,7 +67171,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "white"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "cjK" = (
@@ -67218,7 +67182,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "white"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "cjL" = (
@@ -67228,7 +67192,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "white"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "cjM" = (
@@ -67238,14 +67202,14 @@
 /turf/open/floor/plasteel{
 	icon_state = "white"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "cjN" = (
 /turf/open/floor/plasteel{
 	icon_state = "white"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "cjO" = (
@@ -67255,7 +67219,7 @@
 	icon_state = "whitehall";
 	tag = "icon-whitehall (WEST)"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "cjP" = (
@@ -67997,7 +67961,7 @@
 	dir = 10;
 	icon_state = "whiteblue"
 	},
-/area/medical/medbay_storage{
+/area/medical/medbay2/medbay_storage{
 	name = "Medbay Storage"
 	})
 "cle" = (
@@ -68010,7 +67974,7 @@
 	dir = 2;
 	icon_state = "whiteblue"
 	},
-/area/medical/medbay_storage{
+/area/medical/medbay2/medbay_storage{
 	name = "Medbay Storage"
 	})
 "clf" = (
@@ -68035,7 +67999,7 @@
 	dir = 8;
 	icon_state = "whitebluecorner"
 	},
-/area/medical/medbay_storage{
+/area/medical/medbay2/medbay_storage{
 	name = "Medbay Storage"
 	})
 "clg" = (
@@ -68043,7 +68007,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "white"
 	},
-/area/medical/medbay_storage{
+/area/medical/medbay2/medbay_storage{
 	name = "Medbay Storage"
 	})
 "clh" = (
@@ -68056,7 +68020,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "white"
 	},
-/area/medical/medbay_storage{
+/area/medical/medbay2/medbay_storage{
 	name = "Medbay Storage"
 	})
 "cli" = (
@@ -68065,7 +68029,7 @@
 	dir = 4;
 	icon_state = "whitebluecorner"
 	},
-/area/medical/medbay_storage{
+/area/medical/medbay2/medbay_storage{
 	name = "Medbay Storage"
 	})
 "clj" = (
@@ -68089,12 +68053,12 @@
 	dir = 5;
 	icon_state = "whiteblue"
 	},
-/area/medical/medbay_storage{
+/area/medical/medbay2/medbay_storage{
 	name = "Medbay Storage"
 	})
 "clk" = (
 /turf/closed/wall,
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "cll" = (
@@ -68103,7 +68067,7 @@
 	tag = "icon-vault";
 	icon_state = "vault"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "clm" = (
@@ -68129,7 +68093,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "white"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "cln" = (
@@ -68140,7 +68104,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "white"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "clo" = (
@@ -68150,7 +68114,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "white"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "clp" = (
@@ -68161,7 +68125,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "white"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "clq" = (
@@ -68172,7 +68136,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "white"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "clr" = (
@@ -68183,7 +68147,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "white"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "cls" = (
@@ -68196,7 +68160,7 @@
 	icon_state = "whitehall";
 	tag = "icon-whitehall (WEST)"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "clt" = (
@@ -68723,7 +68687,7 @@
 	dir = 8;
 	icon_state = "whiteblue"
 	},
-/area/medical/medbay_storage{
+/area/medical/medbay2/medbay_storage{
 	name = "Medbay Storage"
 	})
 "cml" = (
@@ -68741,7 +68705,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "white"
 	},
-/area/medical/medbay_storage{
+/area/medical/medbay2/medbay_storage{
 	name = "Medbay Storage"
 	})
 "cmm" = (
@@ -68752,7 +68716,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "white"
 	},
-/area/medical/medbay_storage{
+/area/medical/medbay2/medbay_storage{
 	name = "Medbay Storage"
 	})
 "cmn" = (
@@ -68770,7 +68734,7 @@
 	dir = 4;
 	icon_state = "whiteblue"
 	},
-/area/medical/medbay_storage{
+/area/medical/medbay2/medbay_storage{
 	name = "Medbay Storage"
 	})
 "cmo" = (
@@ -68804,7 +68768,7 @@
 	dir = 9;
 	icon_state = "whiteblue"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "cmp" = (
@@ -68826,7 +68790,7 @@
 	dir = 5;
 	icon_state = "whiteblue"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "cmq" = (
@@ -68843,7 +68807,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "whitebluefull"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "cmr" = (
@@ -68865,7 +68829,7 @@
 	dir = 2;
 	icon_state = "whiteblue"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "cms" = (
@@ -68874,7 +68838,7 @@
 	dir = 2;
 	icon_state = "whiteblue"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "cmt" = (
@@ -68897,7 +68861,7 @@
 	dir = 2;
 	icon_state = "whiteblue"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "cmu" = (
@@ -68907,7 +68871,7 @@
 	dir = 2;
 	icon_state = "whiteblue"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "cmv" = (
@@ -68916,7 +68880,7 @@
 	dir = 2;
 	icon_state = "whiteblue"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "cmw" = (
@@ -68928,7 +68892,7 @@
 	dir = 2;
 	icon_state = "whiteyellow"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "cmx" = (
@@ -68936,7 +68900,7 @@
 	dir = 2;
 	icon_state = "whiteyellow"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "cmy" = (
@@ -68953,7 +68917,7 @@
 	dir = 2;
 	icon_state = "whiteyellow"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "cmz" = (
@@ -69623,7 +69587,7 @@
 	dir = 10;
 	icon_state = "whiteblue"
 	},
-/area/medical/medbay_storage{
+/area/medical/medbay2/medbay_storage{
 	name = "Medbay Storage"
 	})
 "cnB" = (
@@ -69639,7 +69603,7 @@
 	dir = 2;
 	icon_state = "whiteblue"
 	},
-/area/medical/medbay_storage{
+/area/medical/medbay2/medbay_storage{
 	name = "Medbay Storage"
 	})
 "cnC" = (
@@ -69664,7 +69628,7 @@
 	dir = 2;
 	icon_state = "whiteblue"
 	},
-/area/medical/medbay_storage{
+/area/medical/medbay2/medbay_storage{
 	name = "Medbay Storage"
 	})
 "cnD" = (
@@ -69673,7 +69637,7 @@
 	dir = 2;
 	icon_state = "whiteblue"
 	},
-/area/medical/medbay_storage{
+/area/medical/medbay2/medbay_storage{
 	name = "Medbay Storage"
 	})
 "cnE" = (
@@ -69691,7 +69655,7 @@
 	dir = 6;
 	icon_state = "whiteblue"
 	},
-/area/medical/medbay_storage{
+/area/medical/medbay2/medbay_storage{
 	name = "Medbay Storage"
 	})
 "cnF" = (
@@ -69705,7 +69669,7 @@
 	dir = 10;
 	icon_state = "whiteblue"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "cnG" = (
@@ -69731,7 +69695,7 @@
 	dir = 6;
 	icon_state = "whiteblue"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "cnH" = (
@@ -69745,7 +69709,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "whitebluefull"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "cnI" = (
@@ -69760,7 +69724,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "whitebluefull"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "cnJ" = (
@@ -69774,7 +69738,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "whitebluefull"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "cnK" = (
@@ -70389,7 +70353,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "whitebluefull"
 	},
-/area/medical/medbay_storage{
+/area/medical/medbay2/medbay_storage{
 	name = "Medbay Storage"
 	})
 "coM" = (
@@ -70401,7 +70365,7 @@
 	},
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
-/area/medical/medbay_storage{
+/area/medical/medbay2/medbay_storage{
 	name = "Medbay Storage"
 	})
 "coN" = (
@@ -70415,7 +70379,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "whitebluefull"
 	},
-/area/medical/medbay_storage{
+/area/medical/medbay2/medbay_storage{
 	name = "Medbay Storage"
 	})
 "coO" = (
@@ -70434,14 +70398,14 @@
 /turf/open/floor/plasteel{
 	icon_state = "whitebluefull"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "coP" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /turf/open/floor/plating,
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "coQ" = (
@@ -70462,7 +70426,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "whitebluefull"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "coR" = (
@@ -70471,7 +70435,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "whitebluefull"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "coS" = (
@@ -71188,7 +71152,7 @@
 	dir = 9;
 	icon_state = "whiteblue"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "cqc" = (
@@ -71204,7 +71168,7 @@
 	dir = 1;
 	icon_state = "whiteblue"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "cqd" = (
@@ -71220,7 +71184,7 @@
 	dir = 1;
 	icon_state = "whiteblue"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "cqe" = (
@@ -71232,7 +71196,7 @@
 	dir = 1;
 	icon_state = "whiteblue"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "cqf" = (
@@ -71247,7 +71211,7 @@
 	dir = 1;
 	icon_state = "whitebluecorner"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "cqg" = (
@@ -71272,7 +71236,7 @@
 	dir = 4;
 	icon_state = "whitebluecorner"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "cqh" = (
@@ -71283,7 +71247,7 @@
 	dir = 1;
 	icon_state = "whiteblue"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "cqi" = (
@@ -71295,7 +71259,7 @@
 	dir = 1;
 	icon_state = "whitebluecorner"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "cqj" = (
@@ -71314,7 +71278,7 @@
 	dir = 4;
 	icon_state = "whitebluecorner"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "cqk" = (
@@ -71335,7 +71299,7 @@
 	dir = 1;
 	icon_state = "whiteblue"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "cql" = (
@@ -71352,7 +71316,7 @@
 	dir = 1;
 	icon_state = "whiteblue"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "cqm" = (
@@ -72089,7 +72053,7 @@
 	dir = 8;
 	icon_state = "whiteblue"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "crA" = (
@@ -72113,7 +72077,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "white"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "crB" = (
@@ -72134,7 +72098,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "white"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "crC" = (
@@ -72150,7 +72114,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "white"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "crD" = (
@@ -72165,7 +72129,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "white"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "crE" = (
@@ -72185,7 +72149,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "white"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "crF" = (
@@ -72204,7 +72168,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "white"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "crG" = (
@@ -72221,7 +72185,7 @@
 	dir = 2;
 	icon_state = "whiteyellowcorner"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "crH" = (
@@ -72937,7 +72901,7 @@
 	dir = 1;
 	icon_state = "whitebluecorner"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "csW" = (
@@ -72958,7 +72922,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "white"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "csX" = (
@@ -72969,7 +72933,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "white"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "csY" = (
@@ -72985,7 +72949,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "white"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "csZ" = (
@@ -72993,7 +72957,7 @@
 	dir = 2;
 	icon_state = "whitebluecorner"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "cta" = (
@@ -73005,7 +72969,7 @@
 	dir = 2;
 	icon_state = "whiteblue"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "ctb" = (
@@ -73014,7 +72978,7 @@
 	dir = 8;
 	icon_state = "whitebluecorner"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "ctc" = (
@@ -73026,7 +72990,7 @@
 	dir = 2;
 	icon_state = "whiteyellowcorner"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "ctd" = (
@@ -73035,7 +72999,7 @@
 	icon_state = "whiteyellow";
 	tag = "icon-whitehall (WEST)"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "cte" = (
@@ -73644,7 +73608,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "white"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "cug" = (
@@ -73660,7 +73624,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "white"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "cuh" = (
@@ -73669,7 +73633,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "white"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "cui" = (
@@ -74374,7 +74338,7 @@
 	dir = 8;
 	icon_state = "whitebluecorner"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "cvq" = (
@@ -74386,7 +74350,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "white"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "cvr" = (
@@ -75136,7 +75100,7 @@
 	dir = 8;
 	icon_state = "whiteblue"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "cwF" = (
@@ -76209,7 +76173,7 @@
 	dir = 8;
 	icon_state = "whiteblue"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "cyh" = (
@@ -76229,7 +76193,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "white"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "cyi" = (
@@ -77061,7 +77025,7 @@
 	dir = 1;
 	icon_state = "whitebluecorner"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "czv" = (
@@ -77074,7 +77038,7 @@
 	dir = 2;
 	icon_state = "whitebluecorner"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "czw" = (
@@ -77645,7 +77609,7 @@
 	dir = 8;
 	icon_state = "whitebluecorner"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "cAu" = (
@@ -77665,7 +77629,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "white"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "cAv" = (
@@ -77686,7 +77650,7 @@
 	dir = 4;
 	icon_state = "whiteblue"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "cAw" = (
@@ -78434,7 +78398,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "white"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "cBy" = (
@@ -78454,7 +78418,7 @@
 	dir = 4;
 	icon_state = "whitebluecorner"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "cBz" = (
@@ -78966,7 +78930,7 @@
 	dir = 1;
 	icon_state = "whitebluecorner"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "cCy" = (
@@ -78981,7 +78945,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "white"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "cCz" = (
@@ -78998,7 +78962,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "white"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "cCA" = (
@@ -79648,7 +79612,7 @@
 "cDC" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /turf/closed/wall,
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "cDD" = (
@@ -79662,7 +79626,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "white"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "cDE" = (
@@ -79675,7 +79639,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "white"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "cDF" = (
@@ -79685,7 +79649,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "white"
 	},
-/area/medical/medbay_central{
+/area/medical/medbay/lobby{
 	name = "Medbay Central"
 	})
 "cDG" = (
@@ -80317,7 +80281,7 @@
 	dir = 8;
 	icon_state = "whitebluecorner"
 	},
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cEH" = (
@@ -80332,7 +80296,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "white"
 	},
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cEI" = (
@@ -80350,7 +80314,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "white"
 	},
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cEJ" = (
@@ -80833,7 +80797,7 @@
 	dir = 8;
 	icon_state = "whiteblue"
 	},
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cFx" = (
@@ -80853,7 +80817,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "white"
 	},
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cFy" = (
@@ -80866,7 +80830,7 @@
 	dir = 2;
 	icon_state = "whitebluecorner"
 	},
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cFz" = (
@@ -81275,7 +81239,7 @@
 /area/maintenance/asmaint)
 "cGk" = (
 /turf/closed/wall,
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cGl" = (
@@ -81290,7 +81254,7 @@
 	dir = 1;
 	icon_state = "whitebluecorner"
 	},
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cGm" = (
@@ -81307,7 +81271,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "white"
 	},
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cGn" = (
@@ -81322,7 +81286,7 @@
 	dir = 4;
 	icon_state = "whiteblue"
 	},
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cGo" = (
@@ -81815,7 +81779,7 @@
 	icon_state = "whitehall";
 	dir = 2
 	},
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cHh" = (
@@ -81831,7 +81795,7 @@
 	icon_state = "whitehall";
 	dir = 2
 	},
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cHi" = (
@@ -81845,7 +81809,7 @@
 	icon_state = "whitehall";
 	dir = 2
 	},
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cHj" = (
@@ -81859,7 +81823,7 @@
 	icon_state = "whitehall";
 	dir = 2
 	},
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cHk" = (
@@ -81871,7 +81835,7 @@
 	icon_state = "whitehall";
 	dir = 2
 	},
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cHl" = (
@@ -81891,7 +81855,7 @@
 	dir = 8;
 	icon_state = "whitebluecorner"
 	},
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cHm" = (
@@ -81907,7 +81871,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "white"
 	},
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cHn" = (
@@ -81920,7 +81884,7 @@
 	dir = 4;
 	icon_state = "whitebluecorner"
 	},
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cHo" = (
@@ -82401,7 +82365,7 @@
 	req_access_txt = "5"
 	},
 /turf/open/floor/plating,
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cIg" = (
@@ -82410,7 +82374,7 @@
 	icon_state = "cafeteria";
 	dir = 5
 	},
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cIh" = (
@@ -82424,7 +82388,7 @@
 	icon_state = "cafeteria";
 	dir = 5
 	},
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cIi" = (
@@ -82442,7 +82406,7 @@
 	icon_state = "cafeteria";
 	dir = 5
 	},
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cIj" = (
@@ -82458,7 +82422,7 @@
 	icon_state = "cafeteria";
 	dir = 5
 	},
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cIk" = (
@@ -82474,7 +82438,7 @@
 	icon_state = "cafeteria";
 	dir = 5
 	},
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cIl" = (
@@ -82494,7 +82458,7 @@
 	icon_state = "cafeteria";
 	dir = 5
 	},
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cIm" = (
@@ -82516,7 +82480,7 @@
 	dir = 8;
 	icon_state = "whiteblue"
 	},
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cIn" = (
@@ -82544,7 +82508,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "white"
 	},
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cIo" = (
@@ -82566,7 +82530,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "white"
 	},
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cIp" = (
@@ -83225,7 +83189,7 @@
 	icon_state = "cafeteria";
 	dir = 5
 	},
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cJm" = (
@@ -83235,14 +83199,14 @@
 	icon_state = "cafeteria";
 	dir = 5
 	},
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cJn" = (
 /obj/item/weapon/cigbutt,
 /obj/structure/chair/comfy/sofa/corner/teal,
 /turf/open/floor/plasteel/cafeteria,
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cJo" = (
@@ -83254,7 +83218,7 @@
 	icon_state = "cafeteria";
 	dir = 5
 	},
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cJp" = (
@@ -83272,7 +83236,7 @@
 	icon_state = "cafeteria";
 	dir = 5
 	},
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cJq" = (
@@ -83282,7 +83246,7 @@
 	dir = 4
 	},
 /turf/open/floor/plating,
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cJr" = (
@@ -83293,7 +83257,7 @@
 	dir = 1;
 	icon_state = "whitebluecorner"
 	},
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cJs" = (
@@ -83308,7 +83272,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "white"
 	},
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cJt" = (
@@ -83326,7 +83290,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "white"
 	},
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cJu" = (
@@ -83822,7 +83786,7 @@
 	icon_state = "cafeteria";
 	dir = 5
 	},
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cKo" = (
@@ -83837,7 +83801,7 @@
 	icon_state = "cafeteria";
 	dir = 5
 	},
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cKp" = (
@@ -83852,7 +83816,7 @@
 	pixel_y = 8
 	},
 /turf/open/floor/plasteel/cafeteria,
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cKq" = (
@@ -83879,7 +83843,7 @@
 	icon_state = "cafeteria";
 	dir = 5
 	},
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cKr" = (
@@ -83893,7 +83857,7 @@
 	icon_state = "cafeteria";
 	dir = 5
 	},
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cKs" = (
@@ -83901,7 +83865,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "white"
 	},
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cKt" = (
@@ -83917,7 +83881,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "white"
 	},
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cKu" = (
@@ -83928,7 +83892,7 @@
 	dir = 9;
 	icon_state = "whitehall"
 	},
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cKv" = (
@@ -83941,7 +83905,7 @@
 	dir = 2;
 	icon_state = "whitecorner"
 	},
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cKw" = (
@@ -83951,7 +83915,7 @@
 	dir = 2;
 	icon_state = "whitehall"
 	},
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cKx" = (
@@ -83960,7 +83924,7 @@
 	dir = 8;
 	icon_state = "whitecorner"
 	},
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cKy" = (
@@ -84363,7 +84327,7 @@
 	dir = 5;
 	icon_state = "whitehall"
 	},
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cLh" = (
@@ -84383,7 +84347,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "white"
 	},
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cLi" = (
@@ -84401,7 +84365,7 @@
 	dir = 8;
 	icon_state = "whitehall"
 	},
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cLj" = (
@@ -84415,7 +84379,7 @@
 	},
 /obj/machinery/door/firedoor,
 /turf/open/floor/plasteel,
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cLk" = (
@@ -84431,7 +84395,7 @@
 	dir = 4;
 	icon_state = "whitehall"
 	},
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cLl" = (
@@ -84446,7 +84410,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "white"
 	},
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cLm" = (
@@ -84466,7 +84430,7 @@
 	dir = 8;
 	icon_state = "whitehall"
 	},
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cLn" = (
@@ -84902,90 +84866,41 @@
 /turf/open/floor/plating,
 /area/medical/virology)
 "cMb" = (
-/obj/item/weapon/storage/box/beakers{
-	pixel_x = 2;
-	pixel_y = 2
-	},
-/obj/item/weapon/storage/box/syringes,
 /obj/structure/table/glass,
-/obj/structure/reagent_dispensers/virusfood{
-	density = 0;
-	pixel_x = 0;
-	pixel_y = 30
+/obj/item/weapon/folder/white,
+/obj/item/weapon/pen/red,
+/obj/item/stack/sheet/mineral/plasma{
+	amount = 5
 	},
-/obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/turf/open/floor/plasteel/whitegreen/side{
-	dir = 9
+/turf/open/floor/plasteel/warnwhite{
+	dir = 4
 	},
 /area/medical/virology)
 "cMc" = (
-/obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
-	},
-/obj/machinery/computer/pandemic{
-	layer = 2.5;
-	pixel_x = -4
+/obj/structure/chair/office/light,
+/obj/effect/landmark/start{
+	name = "Virologist"
 	},
 /turf/open/floor/plasteel/whitegreen/side{
-	dir = 5
+	dir = 8
 	},
 /area/medical/virology)
 "cMd" = (
-/obj/machinery/smartfridge/chemistry/virology,
-/obj/machinery/airalarm{
-	frequency = 1439;
-	pixel_y = 23
-	},
-/turf/open/floor/plasteel/whitegreen,
+/turf/open/floor/plasteel/white,
 /area/medical/virology)
 "cMe" = (
-/obj/machinery/reagentgrinder{
-	pixel_y = 8
+/obj/structure/chair/office/light,
+/obj/effect/landmark/start{
+	name = "Virologist"
 	},
-/obj/structure/table/glass,
 /turf/open/floor/plasteel/whitegreen/side{
-	dir = 9
+	dir = 4
 	},
 /area/medical/virology)
 "cMf" = (
 /obj/structure/table/glass,
-/obj/machinery/button/door{
-	id = "virus_ebola";
-	name = "Virology Lock";
-	pixel_x = 28;
-	pixel_y = 5
-	},
-/obj/machinery/power/apc{
-	cell_type = 5000;
-	dir = 1;
-	name = "Virology APC";
-	pixel_x = 0;
-	pixel_y = 24
-	},
-/obj/structure/cable/yellow{
-	d2 = 2;
-	icon_state = "0-2"
-	},
-/obj/machinery/button/door{
-	id = "virus_ebola_space";
-	name = "Virology Space Lockdown";
-	pixel_x = 28;
-	pixel_y = -5
-	},
-/obj/item/weapon/book/manual/wiki/infections{
-	pixel_y = 7
-	},
-/obj/item/weapon/reagent_containers/syringe/antiviral,
-/obj/item/weapon/reagent_containers/dropper,
-/obj/item/weapon/reagent_containers/spray/cleaner,
-/turf/open/floor/plasteel/whitegreen/side{
-	dir = 5
+/turf/open/floor/plasteel/warnwhite{
+	dir = 8
 	},
 /area/medical/virology)
 "cMg" = (
@@ -85055,7 +84970,7 @@
 	req_access_txt = "5"
 	},
 /turf/open/floor/plating,
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cMl" = (
@@ -85066,7 +84981,7 @@
 	dir = 4;
 	icon_state = "whitehall"
 	},
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cMm" = (
@@ -85081,7 +84996,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "white"
 	},
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cMn" = (
@@ -85094,7 +85009,7 @@
 	dir = 8;
 	icon_state = "whitehall"
 	},
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cMo" = (
@@ -85107,7 +85022,7 @@
 	pixel_y = -30
 	},
 /turf/open/floor/plasteel,
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cMp" = (
@@ -85118,7 +85033,7 @@
 	dir = 4;
 	icon_state = "whitehall"
 	},
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cMq" = (
@@ -85131,7 +85046,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "white"
 	},
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cMr" = (
@@ -85150,7 +85065,7 @@
 	dir = 8;
 	icon_state = "whitehall"
 	},
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cMs" = (
@@ -85619,78 +85534,45 @@
 /turf/open/floor/plating,
 /area/medical/virology)
 "cNb" = (
-/obj/structure/sign/deathsposal{
-	pixel_x = -30;
+/obj/structure/table/glass,
+/obj/item/weapon/paper_bin,
+/obj/machinery/airalarm{
+	dir = 4;
+	locked = 0;
+	pixel_x = -23;
 	pixel_y = 0
 	},
-/obj/structure/table/glass,
-/turf/open/floor/plasteel/whitegreen/side{
-	dir = 8
+/turf/open/floor/plasteel/warnwhite{
+	dir = 4
 	},
 /area/medical/virology)
 "cNc" = (
-/obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/structure/chair/office/light{
+/turf/open/floor/plasteel/whitegreen/side{
 	dir = 8
-	},
-/obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
-/turf/open/floor/plasteel/whitegreen/corner{
-	dir = 4
 	},
 /area/medical/virology)
 "cNd" = (
-/obj/machinery/atmospherics/components/unary/vent_pump{
-	on = 1
-	},
-/obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/turf/open/floor/plasteel/whitegreen/side{
-	dir = 1
-	},
+/obj/machinery/disposal/bin,
+/turf/open/floor/plasteel/whitebot,
 /area/medical/virology)
 "cNe" = (
-/obj/effect/landmark/start{
-	name = "Virologist"
-	},
-/obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/turf/open/floor/plasteel/whitegreen/corner{
-	tag = "icon-whitegreencorner (NORTH)";
-	icon_state = "whitegreencorner";
-	dir = 1
+/turf/open/floor/plasteel/whitegreen/side{
+	dir = 4
 	},
 /area/medical/virology)
 "cNf" = (
-/obj/machinery/requests_console{
-	department = "Virology";
-	name = "Virology Requests Console";
-	pixel_x = 29;
+/obj/machinery/camera{
+	c_tag = "Virology - Lab";
+	dir = 8;
+	network = list("SS13","Medbay")
+	},
+/obj/item/device/radio/intercom{
+	pixel_x = 28;
 	pixel_y = 0
 	},
-/obj/structure/table/glass,
-/obj/item/weapon/paper_bin,
-/obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8";
-	tag = ""
-	},
-/turf/open/floor/plasteel/whitegreen/side{
-	dir = 4
+/obj/machinery/computer/pandemic,
+/turf/open/floor/plasteel/warnwhite{
+	dir = 8
 	},
 /area/medical/virology)
 "cNg" = (
@@ -85714,7 +85596,7 @@
 	dir = 6;
 	icon_state = "whitehall"
 	},
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cNi" = (
@@ -85729,7 +85611,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "white"
 	},
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cNj" = (
@@ -85740,7 +85622,7 @@
 	dir = 10;
 	icon_state = "whitehall"
 	},
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cNk" = (
@@ -86170,97 +86052,52 @@
 /turf/open/floor/plating,
 /area/medical/virology)
 "cNY" = (
+/obj/item/weapon/twohanded/required/kirbyplants{
+	icon_state = "plant-10";
+	layer = 4.1
+	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
-/obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
-	},
-/obj/structure/table/glass,
-/obj/structure/window/reinforced,
-/obj/item/clothing/gloves/color/latex,
-/obj/item/device/healthanalyzer,
-/obj/item/clothing/glasses/hud/health,
-/turf/open/floor/plasteel/whitegreen/side{
-	dir = 8
+/turf/open/floor/plasteel/warnwhite{
+	dir = 6
 	},
 /area/medical/virology)
 "cNZ" = (
-/obj/item/weapon/folder/white,
-/obj/item/weapon/folder/white,
-/obj/item/weapon/pen/red,
-/obj/item/stack/sheet/mineral/plasma{
-	layer = 2.9
-	},
-/obj/item/stack/sheet/mineral/plasma{
-	layer = 2.9
-	},
-/obj/item/stack/sheet/mineral/plasma{
-	layer = 2.9
-	},
-/obj/structure/table/glass,
-/obj/structure/window/reinforced,
-/obj/structure/disposalpipe/segment{
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/manifold/supply/hidden{
+/turf/open/floor/plasteel/whitegreen/corner{
 	dir = 1
-	},
-/obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/turf/open/floor/plasteel/whitegreen/side{
-	dir = 8
 	},
 /area/medical/virology)
 "cOa" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
-	dir = 2
+	dir = 1
 	},
-/obj/machinery/disposal/bin,
-/obj/structure/disposalpipe/trunk{
-	dir = 8
-	},
-/obj/structure/window/reinforced,
 /turf/open/floor/plasteel/white,
 /area/medical/virology)
 "cOb" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+/obj/machinery/atmospherics/pipe/manifold/supply/hidden{
+	dir = 1
+	},
+/turf/open/floor/plasteel/whitegreen/corner{
 	dir = 4
 	},
-/obj/machinery/door/window/northright{
-	base_state = "left";
-	dir = 2;
-	icon_state = "left";
-	name = "Virology Laboratroy";
-	pixel_x = 3;
-	req_access_txt = "39"
-	},
-/turf/open/floor/plasteel/white,
 /area/medical/virology)
 "cOc" = (
-/obj/machinery/light{
-	dir = 4;
-	icon_state = "tube1"
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 27;
+	pixel_y = 0
 	},
+/obj/structure/filingcabinet/chestdrawer,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
-/obj/item/device/radio/intercom{
-	pixel_x = 28;
-	pixel_y = 0
-	},
-/obj/structure/window/reinforced,
-/obj/structure/table/glass,
-/obj/item/weapon/folder/white{
-	pixel_y = 4
-	},
-/obj/item/weapon/pen/red,
-/turf/open/floor/plasteel/whitegreen/side{
-	dir = 4
+/turf/open/floor/plasteel/warnwhite{
+	tag = "icon-white_warn (SOUTHWEST)";
+	icon_state = "white_warn";
+	dir = 10
 	},
 /area/medical/virology)
 "cOd" = (
@@ -86336,7 +86173,7 @@
 	icon_state = "whitegreen";
 	tag = "icon-whitehall (WEST)"
 	},
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cOj" = (
@@ -86362,7 +86199,7 @@
 	dir = 4;
 	icon_state = "whitegreen"
 	},
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cOk" = (
@@ -86374,14 +86211,14 @@
 	dir = 8;
 	icon_state = "whitegreencorner"
 	},
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cOl" = (
 /turf/open/floor/plasteel{
 	icon_state = "white"
 	},
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cOm" = (
@@ -86394,7 +86231,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "white"
 	},
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cOn" = (
@@ -86406,7 +86243,7 @@
 	dir = 9;
 	icon_state = "whitehall"
 	},
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cOo" = (
@@ -86416,7 +86253,7 @@
 	},
 /obj/structure/closet/secure_closet/psychiatric,
 /turf/open/floor/wood,
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cOp" = (
@@ -86430,7 +86267,7 @@
 	network = list("SS13","Medbay")
 	},
 /turf/open/floor/wood,
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cOq" = (
@@ -86441,7 +86278,7 @@
 	},
 /obj/item/weapon/storage/box/cups,
 /turf/open/floor/wood,
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cOr" = (
@@ -86803,57 +86640,59 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/structure/disposalpipe/segment,
+/obj/structure/cable/yellow{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
 /turf/open/floor/plasteel/whitegreen/side{
 	dir = 8
 	},
 /area/medical/virology)
 "cOX" = (
-/obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
-	},
-/obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 5
-	},
-/turf/open/floor/plasteel/white,
-/area/medical/virology)
-"cOY" = (
-/obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 10
-	},
-/obj/effect/landmark{
-	name = "lightsout"
-	},
-/obj/machinery/holopad,
-/turf/open/floor/plasteel/white,
-/area/medical/virology)
-"cOZ" = (
-/obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
 /obj/machinery/atmospherics/components/unary/vent_scrubber{
 	on = 1;
 	scrub_N2O = 0;
 	scrub_Toxins = 0
 	},
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/open/floor/plasteel/white,
+/area/medical/virology)
+"cOY" = (
+/obj/machinery/holopad,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	req_access_txt = 1
+	},
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/effect/landmark/start{
+	name = "Virologist"
+	},
+/turf/open/floor/plasteel/white,
+/area/medical/virology)
+"cOZ" = (
+/obj/machinery/atmospherics/components/unary/vent_pump{
+	dir = 1;
+	on = 1
+	},
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/open/floor/plasteel/white,
 /area/medical/virology)
 "cPa" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	tag = "icon-intact (SOUTHEAST)";
+	icon_state = "intact";
 	dir = 6
 	},
 /obj/structure/cable/yellow{
@@ -87046,7 +86885,7 @@
 	icon_state = "whitegreen";
 	tag = "icon-whitehall (WEST)"
 	},
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cPl" = (
@@ -87073,7 +86912,7 @@
 	dir = 4;
 	icon_state = "whitegreen"
 	},
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cPm" = (
@@ -87090,7 +86929,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "whitegreenfull"
 	},
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cPn" = (
@@ -87104,7 +86943,7 @@
 	icon_state = "whitegreen";
 	tag = "icon-whitehall (WEST)"
 	},
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cPo" = (
@@ -87116,7 +86955,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "white"
 	},
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cPp" = (
@@ -87135,7 +86974,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "white"
 	},
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cPq" = (
@@ -87143,7 +86982,7 @@
 	dir = 8;
 	icon_state = "whitehall"
 	},
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cPr" = (
@@ -87153,12 +86992,12 @@
 	req_access_txt = "5"
 	},
 /turf/open/floor/wood,
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cPs" = (
 /turf/open/floor/wood,
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cPt" = (
@@ -87167,7 +87006,7 @@
 	dir = 4
 	},
 /turf/open/floor/wood,
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cPu" = (
@@ -87179,7 +87018,7 @@
 	density = 0
 	},
 /turf/open/floor/wood,
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cPv" = (
@@ -87486,56 +87325,57 @@
 /turf/open/floor/plating,
 /area/medical/virology)
 "cPU" = (
+/obj/machinery/iv_drip,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
-/obj/structure/disposalpipe/segment,
-/turf/open/floor/plasteel/whitegreen/side{
-	dir = 10
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/open/floor/plasteel/warning{
+	dir = 5
 	},
 /area/medical/virology)
 "cPV" = (
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
-	dir = 4
-	},
-/obj/effect/landmark/event_spawn,
+/obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden,
 /turf/open/floor/plasteel/whitegreen/side,
 /area/medical/virology)
 "cPW" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	req_access_txt = 1
+	},
 /turf/open/floor/plasteel/whitegreen/side,
 /area/medical/virology)
 "cPX" = (
-/obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden{
-	dir = 2;
-	initialize_directions = 13
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 4
 	},
 /turf/open/floor/plasteel/whitegreen/side,
 /area/medical/virology)
 "cPY" = (
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
-	dir = 9
-	},
-/obj/machinery/camera{
-	c_tag = "Virology - Lab";
-	dir = 8;
-	network = list("SS13","Medbay")
-	},
 /obj/structure/sink{
 	dir = 4;
 	icon_state = "sink";
 	pixel_x = 11;
 	pixel_y = 0
 	},
-/obj/machinery/light_switch{
-	pixel_x = 26;
-	pixel_y = 0
+/obj/structure/mirror{
+	pixel_x = 28
 	},
-/turf/open/floor/plasteel/whitegreen/side{
-	dir = 6
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	tag = "icon-intact (NORTHWEST)";
+	icon_state = "intact";
+	dir = 9
+	},
+/turf/open/floor/plasteel/warning{
+	tag = "icon-plasteel_warn (NORTHWEST)";
+	icon_state = "plasteel_warn";
+	dir = 9
 	},
 /area/medical/virology)
 "cPZ" = (
@@ -87583,7 +87423,7 @@
 	icon_state = "whitegreen";
 	tag = "icon-whitehall (WEST)"
 	},
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cQe" = (
@@ -87608,7 +87448,7 @@
 	dir = 4;
 	icon_state = "whitegreen"
 	},
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cQf" = (
@@ -87628,7 +87468,7 @@
 	dir = 1;
 	icon_state = "whitegreencorner"
 	},
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cQg" = (
@@ -87645,7 +87485,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "white"
 	},
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cQh" = (
@@ -87663,7 +87503,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "white"
 	},
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cQi" = (
@@ -87673,7 +87513,7 @@
 	dir = 10;
 	icon_state = "whitehall"
 	},
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cQj" = (
@@ -87683,13 +87523,13 @@
 	id = "psy"
 	},
 /turf/open/floor/plating,
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cQk" = (
 /obj/structure/bookcase/random/fiction,
 /turf/open/floor/wood,
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cQl" = (
@@ -88157,68 +87997,51 @@
 /turf/closed/wall,
 /area/medical/virology)
 "cQX" = (
-/obj/structure/closet/wardrobe/virology_white,
-/obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
-	},
 /obj/machinery/firealarm{
 	dir = 8;
 	pixel_x = -26;
 	pixel_y = 0
 	},
-/turf/open/floor/plasteel/blackvault{
-	dir = 1
+/obj/structure/closet/crate/freezer/blood,
+/obj/machinery/power/apc{
+	dir = 2;
+	name = "Hydroponics APC";
+	pixel_x = 0;
+	pixel_y = -28
+	},
+/obj/structure/cable/yellow,
+/turf/open/floor/plasteel/warning/corner{
+	dir = 8
 	},
 /area/medical/virology)
 "cQY" = (
-/obj/structure/closet/crate/freezer,
-/obj/item/weapon/reagent_containers/blood/empty,
-/obj/item/weapon/reagent_containers/blood/empty{
-	pixel_x = -3;
-	pixel_y = -3
-	},
-/obj/item/weapon/reagent_containers/blood/AMinus,
-/obj/item/weapon/reagent_containers/blood/BMinus{
-	pixel_x = -4;
-	pixel_y = 4
-	},
-/obj/item/weapon/reagent_containers/blood/BPlus{
-	pixel_x = 1;
-	pixel_y = 2
-	},
-/obj/item/weapon/reagent_containers/blood/OMinus,
-/obj/item/weapon/reagent_containers/blood/OPlus{
-	pixel_x = -2;
-	pixel_y = -1
-	},
-/obj/item/weapon/reagent_containers/blood/random,
-/obj/item/weapon/reagent_containers/blood/random,
-/obj/item/weapon/reagent_containers/blood/random,
-/turf/open/floor/plasteel/blackvault{
-	dir = 1
+/obj/structure/closet/wardrobe/virology_white,
+/turf/open/floor/plasteel/warning{
+	tag = "icon-plasteel_warn (NORTHEAST)";
+	icon_state = "plasteel_warn";
+	dir = 5
 	},
 /area/medical/virology)
 "cQZ" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/turf/open/floor/plasteel/blackvault{
-	dir = 1
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	req_access_txt = 1
 	},
+/turf/open/floor/plasteel/whitegreen,
 /area/medical/virology)
 "cRa" = (
 /obj/structure/closet/secure_closet/medical1,
-/turf/open/floor/plasteel/blackvault{
-	dir = 1
+/turf/open/floor/plasteel/warning{
+	dir = 9
 	},
 /area/medical/virology)
 "cRb" = (
 /obj/structure/closet/l3closet/virology,
-/obj/structure/extinguisher_cabinet{
-	pixel_x = 0;
-	pixel_y = -30
+/obj/machinery/light{
+	dir = 4;
+	icon_state = "tube1"
 	},
-/turf/open/floor/plasteel/blackvault{
-	dir = 1
+/turf/open/floor/plasteel/warning/corner{
+	dir = 4
 	},
 /area/medical/virology)
 "cRc" = (
@@ -88252,12 +88075,12 @@
 	req_access_txt = "0"
 	},
 /turf/open/floor/carpet,
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cRf" = (
 /turf/open/floor/carpet,
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cRg" = (
@@ -88273,7 +88096,7 @@
 	pixel_x = 29
 	},
 /turf/open/floor/carpet,
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cRh" = (
@@ -88640,6 +88463,9 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/item/weapon/bedsheet/medical,
 /obj/structure/bed,
+/obj/effect/landmark/start{
+	name = "Virologist"
+	},
 /turf/open/floor/plasteel{
 	icon_state = "freezerfloor"
 	},
@@ -88652,6 +88478,9 @@
 /obj/structure/bed,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/item/weapon/bedsheet/medical,
+/obj/effect/landmark/start{
+	name = "Virologist"
+	},
 /turf/open/floor/plasteel{
 	icon_state = "freezerfloor"
 	},
@@ -88794,20 +88623,20 @@
 	tag = ""
 	},
 /turf/open/floor/carpet,
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cSd" = (
 /obj/machinery/light/small,
 /turf/open/floor/carpet,
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cSe" = (
 /obj/structure/bed/psych,
 /obj/effect/landmark/event_spawn,
 /turf/open/floor/carpet,
-/area/medical/medbay_aft{
+/area/medical/medbay3{
 	name = "Medbay Aft"
 	})
 "cSf" = (
@@ -89250,10 +89079,6 @@
 /obj/item/weapon/folder/white,
 /obj/item/weapon/paper,
 /obj/item/weapon/pen/red,
-/obj/structure/extinguisher_cabinet{
-	pixel_x = 0;
-	pixel_y = 30
-	},
 /turf/open/floor/plasteel/whitegreen/side{
 	dir = 9
 	},
@@ -89309,6 +89134,10 @@
 /obj/machinery/microwave{
 	pixel_x = -2;
 	pixel_y = 6
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 0;
+	pixel_y = 30
 	},
 /turf/open/floor/plasteel/whitegreen/side{
 	dir = 5
@@ -89688,6 +89517,9 @@
 "cTE" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
 	dir = 8
+	},
+/obj/effect/landmark/start{
+	name = "Virologist"
 	},
 /turf/open/floor/plasteel/white,
 /area/medical/virology)
@@ -113554,8 +113386,8 @@ caK
 caK
 aai
 aaa
-aaa
 cKk
+din
 cMb
 cNb
 cNY
@@ -113811,8 +113643,8 @@ cla
 caK
 aai
 aai
-aai
 cKl
+dio
 cMc
 cNc
 cNZ
@@ -114068,8 +113900,8 @@ cGg
 caK
 aaa
 aaa
-aaa
 cKk
+dip
 cMd
 cNd
 cOa
@@ -114323,10 +114155,10 @@ cEx
 cFq
 cGh
 caK
+aai
 aaa
-aaa
-aaa
-cKl
+cKk
+diq
 cMe
 cNe
 cOb
@@ -114580,10 +114412,10 @@ cDv
 caK
 caK
 caK
+aai
 aaa
-aaa
-aaa
-cKk
+cKl
+dir
 cMf
 cNf
 cOc
@@ -114839,9 +114671,9 @@ cGi
 caK
 aai
 aai
-aai
-cKk
-cKk
+dim
+cTH
+cTH
 cKk
 cOd
 cPb
@@ -115095,7 +114927,7 @@ caK
 cGj
 caK
 aaa
-aaa
+aai
 aaa
 aai
 aaa
@@ -115351,8 +115183,8 @@ cEz
 caK
 cGi
 caK
-aaa
-aaa
+aai
+aai
 aaa
 aai
 aai
