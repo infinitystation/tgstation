@@ -55,6 +55,7 @@
 /turf/open/floor/plating/asteroid/airless,
 /area/space)
 "ap" = (
+/obj/structure/sign/barsign,
 /turf/closed/wall,
 /area/space)
 "aq" = (
@@ -128,7 +129,7 @@
 	on = 1
 	},
 /turf/open/floor/wood,
-/area/ruin/powered/spacebar)
+/area/ruin/powered/spacebar/bar)
 "aG" = (
 /obj/machinery/bluespace_beacon,
 /turf/open/floor/plasteel/black,
@@ -152,7 +153,7 @@
 /obj/structure/table,
 /obj/machinery/reagentgrinder,
 /turf/open/floor/wood,
-/area/ruin/powered/spacebar)
+/area/ruin/powered/spacebar/bar)
 "aK" = (
 /obj/machinery/button/door{
 	id = "spacebardock";
@@ -174,12 +175,11 @@
 /obj/machinery/light/small,
 /obj/structure/table,
 /obj/machinery/microwave,
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/open/floor/wood,
 /area/ruin/powered/spacebar/bar)
 "aO" = (
 /obj/structure/closet/secure_closet/freezer/fridge,
-/obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/open/floor/wood,
 /area/ruin/powered/spacebar/bar)
 "aP" = (
@@ -188,7 +188,7 @@
 	amount = 10
 	},
 /turf/open/floor/wood,
-/area/ruin/powered/spacebar)
+/area/ruin/powered/spacebar/bar)
 "aQ" = (
 /obj/structure/table/reinforced,
 /turf/open/floor/wood,
@@ -197,6 +197,7 @@
 /obj/item/weapon/reagent_containers/food/drinks/beer,
 /obj/item/weapon/reagent_containers/glass/rag,
 /obj/structure/table/reinforced,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/open/floor/wood,
 /area/ruin/powered/spacebar/bar)
 "aS" = (
@@ -204,6 +205,7 @@
 	name = "Bar Storage";
 	req_access_txt = "25"
 	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /turf/open/floor/plasteel{
 	icon_state = "wood"
 	},
@@ -235,7 +237,7 @@
 	pixel_y = 23
 	},
 /turf/open/floor/plasteel/bar,
-/area/ruin/powered/spacebar)
+/area/ruin/powered/spacebar/bar)
 "aZ" = (
 /obj/structure/tile_edge/stripe/extra_big{
 	tag = "icon-xtra_bigstripe-edge (EAST)";
@@ -243,7 +245,7 @@
 	dir = 4
 	},
 /turf/open/floor/plating/asteroid,
-/area/ruin/unpowered/no_grav)
+/area/ruin/powered/spacebar)
 "ba" = (
 /turf/closed/wall/mineral/titanium/interior,
 /area/ruin/unpowered/no_grav)
@@ -351,11 +353,13 @@
 /turf/open/floor/plasteel/bar,
 /area/ruin/powered/spacebar/bar)
 "bs" = (
-/obj/machinery/atmospherics/components/unary/vent_pump{
-	dir = 8;
-	on = 1
-	},
 /obj/structure/table/wood,
+/obj/machinery/atmospherics/components/unary/vent_scrubber{
+	dir = 1;
+	on = 1;
+	scrub_N2O = 0;
+	scrub_Toxins = 0
+	},
 /turf/open/floor/plasteel/bar,
 /area/ruin/powered/spacebar/bar)
 "bt" = (
@@ -393,6 +397,7 @@
 /area/ruin/powered/spacebar/bar)
 "by" = (
 /obj/machinery/light,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /turf/open/floor/plasteel/bar,
 /area/ruin/powered/spacebar/bar)
 "bz" = (
@@ -415,29 +420,38 @@
 	name = "Unisex Bathroom"
 	},
 /turf/open/floor/plasteel/freezer,
-/area/ruin/powered/spacebar)
+/area/ruin/powered/spacebar/bar)
 "bD" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
+	},
 /turf/open/floor/plasteel/freezer,
-/area/ruin/powered/spacebar)
+/area/ruin/powered/spacebar/bar)
 "bE" = (
 /obj/structure/sink{
 	layer = 3.1;
 	pixel_y = 28
 	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
+	},
 /turf/open/floor/plasteel/freezer,
-/area/ruin/powered/spacebar)
+/area/ruin/powered/spacebar/bar)
 "bF" = (
 /obj/structure/sink{
 	pixel_y = 28
 	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 10
+	},
 /turf/open/floor/plasteel/freezer,
-/area/ruin/powered/spacebar)
+/area/ruin/powered/spacebar/bar)
 "bG" = (
 /obj/structure/mirror{
 	pixel_y = 28
 	},
 /turf/open/floor/plasteel/freezer,
-/area/ruin/powered/spacebar)
+/area/ruin/powered/spacebar/bar)
 "bH" = (
 /obj/structure/tile_edge/stripe/extra_big{
 	tag = "icon-xtra_bigstripe-edge (NORTH)";
@@ -477,8 +491,12 @@
 /obj/machinery/light/small{
 	dir = 8
 	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	icon_state = "intact";
+	dir = 5
+	},
 /turf/open/floor/plasteel/freezer,
-/area/ruin/powered/spacebar)
+/area/ruin/powered/spacebar/bar)
 "bQ" = (
 /obj/structure/tile_edge/stripe/big{
 	tag = "icon-bigstripe-edge (NORTHWEST)";
@@ -487,7 +505,7 @@
 	},
 /obj/structure/signpost,
 /turf/open/floor/plating,
-/area/space)
+/area/ruin/unpowered/no_grav)
 "bR" = (
 /obj/structure/tile_edge/stripe/big{
 	tag = "icon-bigstripe-edge (NORTH)";
@@ -495,7 +513,7 @@
 	dir = 1
 	},
 /turf/open/floor/plating,
-/area/space)
+/area/ruin/unpowered/no_grav)
 "bS" = (
 /obj/machinery/atmospherics/components/unary/tank/air,
 /obj/structure/window/reinforced,
@@ -505,7 +523,7 @@
 	dir = 4
 	},
 /turf/open/floor/plating,
-/area/ruin/unpowered/no_grav)
+/area/ruin/powered/spacebar)
 "bT" = (
 /obj/structure/closet/emcloset,
 /turf/open/floor/plating,
@@ -547,14 +565,14 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel/freezer,
-/area/ruin/powered/spacebar)
+/area/ruin/powered/spacebar/bar)
 "bZ" = (
 /obj/machinery/door/airlock{
 	name = "Toilet"
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /turf/open/floor/plasteel/freezer,
-/area/ruin/powered/spacebar)
+/area/ruin/powered/spacebar/bar)
 "ca" = (
 /obj/structure/tile_edge/stripe/big{
 	tag = "icon-bigstripe-edge (WEST)";
@@ -562,10 +580,10 @@
 	dir = 8
 	},
 /turf/open/floor/plating,
-/area/space)
+/area/ruin/unpowered/no_grav)
 "cb" = (
 /turf/open/floor/plating,
-/area/space)
+/area/ruin/unpowered/no_grav)
 "cc" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 5
@@ -618,11 +636,11 @@
 	dir = 10
 	},
 /turf/open/floor/plating,
-/area/space)
+/area/ruin/unpowered/no_grav)
 "cl" = (
 /obj/structure/tile_edge/stripe/big,
 /turf/open/floor/plating,
-/area/space)
+/area/ruin/unpowered/no_grav)
 "cm" = (
 /obj/machinery/button/door{
 	id = "spacebardock";
@@ -660,8 +678,11 @@
 /area/ruin/unpowered/no_grav)
 "cs" = (
 /obj/structure/closet/secure_closet,
+/obj/machinery/light{
+	dir = 1
+	},
 /turf/open/floor/plasteel/white,
-/area/ruin/unpowered/no_grav)
+/area/ruin/powered/spacebar)
 "ct" = (
 /obj/structure/tile_edge/stripe/extra_big{
 	tag = "icon-xtra_bigstripe-edge (NORTH)";
@@ -750,6 +771,328 @@
 "cI" = (
 /turf/open/space,
 /area/ruin/powered/spacebar)
+"cJ" = (
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 6
+	},
+/turf/open/floor/wood,
+/area/ruin/powered/spacebar/bar)
+"cK" = (
+/obj/machinery/atmospherics/components/unary/vent_pump{
+	tag = "icon-vent_map (EAST)";
+	icon_state = "vent_map";
+	dir = 4;
+	on = 1
+	},
+/turf/open/floor/wood,
+/area/ruin/powered/spacebar/bar)
+"cL" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
+	},
+/turf/open/floor/wood,
+/area/ruin/powered/spacebar/bar)
+"cM" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 10
+	},
+/turf/open/floor/wood,
+/area/ruin/powered/spacebar/bar)
+"cN" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 6
+	},
+/turf/open/floor/wood,
+/area/ruin/powered/spacebar/bar)
+"cO" = (
+/obj/machinery/atmospherics/components/unary/vent_scrubber{
+	dir = 8;
+	on = 1;
+	scrub_Toxins = 0
+	},
+/turf/open/floor/wood,
+/area/ruin/powered/spacebar/bar)
+"cP" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 6
+	},
+/turf/open/floor/wood,
+/area/ruin/powered/spacebar/bar)
+"cQ" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
+	},
+/turf/open/floor/wood,
+/area/ruin/powered/spacebar/bar)
+"cR" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 9
+	},
+/turf/open/floor/wood,
+/area/ruin/powered/spacebar/bar)
+"cS" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/turf/open/floor/wood,
+/area/ruin/powered/spacebar/bar)
+"cT" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/turf/open/floor/wood,
+/area/ruin/powered/spacebar/bar)
+"cU" = (
+/obj/machinery/atmospherics/components/unary/vent_scrubber,
+/turf/open/floor/wood,
+/area/ruin/powered/spacebar/bar)
+"cV" = (
+/obj/structure/table/reinforced,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/turf/open/floor/wood,
+/area/ruin/powered/spacebar/bar)
+"cW" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/turf/closed/wall,
+/area/ruin/powered/spacebar/bar)
+"cX" = (
+/obj/structure/chair/stool,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/turf/open/floor/plasteel/bar,
+/area/ruin/powered/spacebar/bar)
+"cY" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/turf/open/floor/plasteel/bar,
+/area/ruin/powered/spacebar/bar)
+"cZ" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/turf/open/floor/plasteel/bar,
+/area/ruin/powered/spacebar/bar)
+"da" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	icon_state = "intact";
+	dir = 5
+	},
+/turf/open/floor/plasteel/bar,
+/area/ruin/powered/spacebar/bar)
+"db" = (
+/obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden{
+	dir = 1;
+	initialize_directions = 13
+	},
+/turf/open/floor/plasteel/bar,
+/area/ruin/powered/spacebar/bar)
+"dc" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 4
+	},
+/turf/open/floor/plasteel/bar,
+/area/ruin/powered/spacebar/bar)
+"dd" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 4
+	},
+/turf/open/floor/plasteel/bar,
+/area/ruin/powered/spacebar/bar)
+"de" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/turf/open/floor/plasteel/bar,
+/area/ruin/powered/spacebar/bar)
+"df" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 4
+	},
+/turf/open/floor/wood,
+/area/ruin/powered/spacebar/bar)
+"dg" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden{
+	dir = 4;
+	initialize_directions = 11
+	},
+/turf/open/floor/wood,
+/area/ruin/powered/spacebar/bar)
+"dh" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/turf/open/floor/plasteel/bar,
+/area/ruin/powered/spacebar/bar)
+"di" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/turf/open/floor/wood,
+/area/ruin/powered/spacebar/bar)
+"dj" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/turf/open/floor/plasteel/bar,
+/area/ruin/powered/spacebar/bar)
+"dk" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/turf/open/floor/wood,
+/area/ruin/powered/spacebar/bar)
+"dl" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/turf/open/floor/wood,
+/area/ruin/powered/spacebar/bar)
+"dm" = (
+/obj/machinery/atmospherics/pipe/manifold/supply/hidden{
+	dir = 4
+	},
+/turf/open/floor/plasteel/bar,
+/area/ruin/powered/spacebar/bar)
+"dn" = (
+/obj/structure/table/wood,
+/turf/open/floor/plasteel/bar,
+/area/ruin/powered/spacebar/bar)
+"do" = (
+/obj/structure/table/wood,
+/turf/open/floor/plasteel/bar,
+/area/ruin/powered/spacebar/bar)
+"dp" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/turf/closed/wall,
+/area/ruin/powered/spacebar/bar)
+"dq" = (
+/obj/machinery/atmospherics/pipe/manifold/supply/hidden{
+	dir = 8;
+	initialize_directions = 13
+	},
+/turf/open/floor/plasteel/bar,
+/area/ruin/powered/spacebar/bar)
+"dr" = (
+/obj/machinery/atmospherics/pipe/manifold/supply/hidden,
+/turf/open/floor/plasteel/bar,
+/area/ruin/powered/spacebar/bar)
+"ds" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
+	},
+/turf/closed/wall,
+/area/ruin/powered/spacebar/bar)
+"dt" = (
+/obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden{
+	dir = 8
+	},
+/turf/closed/wall,
+/area/ruin/powered/spacebar/bar)
+"du" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 4
+	},
+/turf/open/floor/plasteel/freezer,
+/area/ruin/powered/spacebar/bar)
+"dv" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 4
+	},
+/turf/open/floor/plasteel/freezer,
+/area/ruin/powered/spacebar/bar)
+"dw" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 10
+	},
+/turf/open/floor/plasteel/freezer,
+/area/ruin/powered/spacebar/bar)
+"dx" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/turf/open/floor/plasteel/freezer,
+/area/ruin/powered/spacebar/bar)
+"dy" = (
+/turf/open/floor/plasteel/freezer,
+/area/ruin/powered/spacebar/bar)
+"dz" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/turf/closed/wall,
+/area/ruin/powered/spacebar/bar)
+"dA" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 4
+	},
+/turf/open/floor/plasteel/freezer,
+/area/ruin/powered/spacebar/bar)
+"dB" = (
+/obj/machinery/atmospherics/components/unary/vent_scrubber{
+	dir = 8;
+	on = 1;
+	scrub_Toxins = 0
+	},
+/turf/open/floor/plasteel/freezer,
+/area/ruin/powered/spacebar/bar)
+"dC" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/turf/closed/wall,
+/area/ruin/powered/spacebar/bar)
+"dD" = (
+/turf/open/floor/plasteel/freezer,
+/area/ruin/powered/spacebar/bar)
+"dE" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 5
+	},
+/turf/open/floor/plasteel/freezer,
+/area/ruin/powered/spacebar/bar)
+"dF" = (
+/obj/machinery/atmospherics/components/unary/vent_pump{
+	dir = 8;
+	external_pressure_bound = 0;
+	frequency = 1441;
+	id_tag = "waste_out";
+	initialize_directions = 1;
+	internal_pressure_bound = 4000;
+	on = 1;
+	pressure_checks = 2;
+	pump_direction = 0
+	},
+/turf/open/floor/plasteel/freezer,
+/area/ruin/powered/spacebar/bar)
+"dG" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/turf/closed/wall,
+/area/ruin/powered/spacebar/bar)
+"dH" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/turf/open/floor/plating,
+/area/ruin/powered/spacebar)
+"dI" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/turf/open/floor/plating,
+/area/ruin/powered/spacebar)
+"dJ" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/turf/open/floor/plating,
+/area/ruin/powered/spacebar)
+"dK" = (
+/obj/machinery/light{
+	icon_state = "tube1";
+	dir = 4
+	},
+/turf/open/floor/plasteel/white,
+/area/ruin/powered/spacebar)
+"dL" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/turf/open/floor/plating,
+/area/ruin/powered/spacebar)
+"dM" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/turf/closed/wall,
+/area/ruin/powered/spacebar)
+"dN" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 4
+	},
+/turf/open/floor/plating/asteroid,
+/area/ruin/unpowered/no_grav)
+"dO" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 9
+	},
+/turf/open/floor/plating/asteroid/airless,
+/area/ruin/unpowered/no_grav)
 
 (1,1,1) = {"
 aa
@@ -956,17 +1299,17 @@ aa
 aa
 aa
 aa
-ao
-ad
-ad
-ad
-ao
+ac
+ab
+ab
+ab
+ac
 aa
 aa
-ao
-ad
-ad
-ad
+ac
+ab
+ab
+ab
 aa
 aa
 bQ
@@ -1001,21 +1344,21 @@ aa
 aa
 aa
 aa
-ao
-ag
-ag
-ae
-ag
-ag
-ag
-ag
-ag
-ag
-ao
 ac
-ao
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ac
+ac
+ac
 aa
-bK
+bM
 bR
 cb
 cb
@@ -1047,30 +1390,30 @@ aa
 aa
 aa
 aa
-aa
-ap
-as
-aq
-aq
-aq
-aT
-aq
-as
-as
-aT
-aq
-aq
-aq
-aT
-bL
-ap
-as
-cg
-ap
-aa
-aa
-aa
-aa
+ae
+ah
+aj
+aj
+aj
+aj
+ah
+aj
+aj
+aj
+ah
+aj
+aj
+aj
+ah
+bM
+ah
+aj
+ai
+ah
+ae
+ae
+ae
+ae
 aa
 aa
 aa
@@ -1094,31 +1437,31 @@ aa
 aa
 aa
 aa
-ag
-aq
-at
-at
-at
-at
 ae
+aj
+au
+au
+au
+au
+af
 aZ
 aZ
 aZ
-ae
+af
 aZ
 aZ
 aZ
-ae
-bL
+af
+bM
 bS
-cc
-cb
-ap
-ap
-as
-ap
-ap
-aa
+co
+am
+ah
+ah
+aj
+ah
+ah
+ae
 aa
 aa
 aa
@@ -1140,10 +1483,10 @@ aa
 aa
 aa
 aa
-ag
-ag
-aq
-at
+ae
+ae
+aj
+au
 aG
 au
 au
@@ -1156,16 +1499,16 @@ bc
 bm
 bc
 bH
-bL
-bT
+bM
+an
 cd
 ch
 ah
-cr
-cw
-cr
-aT
-aa
+cD
+cx
+cD
+ah
+ae
 aa
 aa
 aa
@@ -1187,10 +1530,10 @@ aa
 aa
 aa
 aa
-ag
 ae
-aq
-at
+ae
+aj
+au
 au
 au
 au
@@ -1209,10 +1552,10 @@ aj
 ai
 ah
 cs
-cw
-cw
-aq
-aa
+cx
+cx
+aj
+ae
 aa
 aa
 aa
@@ -1233,10 +1576,10 @@ aa
 aa
 aa
 aa
-ag
 ae
 ae
-aq
+ae
+aj
 au
 au
 au
@@ -1258,8 +1601,8 @@ ah
 ah
 cx
 cx
-aq
-cG
+aj
+ae
 aa
 aa
 aa
@@ -1303,10 +1646,10 @@ au
 au
 au
 au
-cx
+dK
 cD
-aT
-cG
+ah
+ae
 aa
 aa
 aa
@@ -1329,7 +1672,7 @@ aa
 ac
 ac
 ab
-ak
+ab
 ah
 ak
 au
@@ -1375,8 +1718,8 @@ aa
 ac
 ac
 ae
-ak
-ak
+ab
+ab
 ah
 av
 au
@@ -1561,7 +1904,7 @@ aa
 ac
 ac
 ae
-af
+ae
 aj
 am
 am
@@ -1608,7 +1951,7 @@ aa
 ac
 ac
 ae
-af
+ae
 ah
 ah
 ah
@@ -1655,10 +1998,10 @@ aa
 ac
 ac
 ae
-af
-ak
-ak
-ak
+ae
+ab
+ab
+ab
 ah
 ak
 ak
@@ -1685,7 +2028,7 @@ am
 am
 am
 cH
-cI
+aa
 aa
 aa
 aa
@@ -1702,10 +2045,10 @@ aa
 ac
 ac
 ae
-af
-af
-ak
-ak
+ae
+ae
+ab
+ab
 ah
 ak
 ak
@@ -1728,11 +2071,11 @@ cm
 ah
 ah
 ah
-aT
-aT
-aT
-aT
-ap
+ah
+ah
+ah
+ah
+ah
 aa
 aa
 aa
@@ -1749,10 +2092,10 @@ ab
 ac
 ac
 ae
-af
-af
-ak
-ak
+ae
+ae
+ab
+ab
 ar
 ar
 ar
@@ -1763,10 +2106,10 @@ ar
 bk
 ar
 ar
-bu
-bu
-bu
-bu
+af
+af
+af
+af
 af
 af
 af
@@ -1797,9 +2140,9 @@ ab
 ac
 ae
 ae
-af
-af
-ak
+ae
+ae
+ab
 ar
 ay
 aH
@@ -1825,7 +2168,7 @@ ah
 cF
 ac
 ac
-ao
+ac
 aa
 aa
 aa
@@ -1844,12 +2187,12 @@ ab
 ac
 ae
 ae
-af
-af
-ak
+ae
+ae
+ab
 ar
 az
-aB
+cK
 aB
 ar
 aV
@@ -1892,11 +2235,11 @@ ab
 ae
 ae
 ae
-af
-ak
+ae
+ab
 ar
 aA
-aB
+cL
 aB
 aQ
 aV
@@ -1918,7 +2261,7 @@ af
 ah
 cF
 ac
-ao
+ac
 aa
 aa
 aa
@@ -1939,21 +2282,21 @@ ab
 ae
 ae
 ae
-af
-ak
+ae
+ab
 ar
 aB
-aB
-aB
+cM
+cS
 aR
-aW
-aV
-aV
-aV
-aV
-bx
+cX
 bB
 bB
+bB
+bB
+dm
+bB
+dq
 bI
 aV
 aV
@@ -1981,26 +2324,26 @@ aa
 aa
 aa
 aa
-ad
+ab
 ac
 ae
 ae
-af
-af
-ak
+ae
+ae
+ab
 ar
 aB
-aB
-aB
-aQ
-aV
-aV
+cN
+cT
+cV
+cY
+da
 aV
 aV
 br
 br
 br
-aV
+bw
 bx
 bB
 bW
@@ -2010,7 +2353,7 @@ af
 af
 af
 ah
-ae
+dN
 ac
 aa
 aa
@@ -2028,26 +2371,26 @@ aa
 aa
 aa
 aa
-ad
+ab
 ac
 ae
 ae
-af
-af
-af
+ae
+ae
+ae
 ar
 aB
-aB
+cO
 aB
 aQ
 aW
-aV
-aV
-aV
+db
+dh
+dj
 bs
-bs
-bs
-aV
+dn
+do
+bw
 aV
 aV
 bw
@@ -2057,9 +2400,9 @@ ag
 ag
 ag
 ah
+cF
 ac
-ac
-cG
+aa
 aa
 aa
 aa
@@ -2075,26 +2418,26 @@ aa
 aa
 aa
 aa
-ad
+ab
 ac
 ae
 ae
-af
-af
-af
+ae
+ae
+ae
 ar
 ar
 aI
 aL
 ar
 aX
-aV
+dc
 aV
 aV
 bt
 bt
 bt
-aV
+bw
 aV
 aV
 bw
@@ -2104,7 +2447,7 @@ ag
 ag
 ag
 ah
-ac
+cF
 ac
 ac
 aa
@@ -2122,26 +2465,26 @@ aa
 aa
 aa
 aa
-ad
+ab
 ab
 ae
 ae
-af
-af
-af
+ae
+ae
+ae
 ar
 aC
 aB
 aM
 ar
 aV
+dd
 aV
 aV
 aV
 aV
 aV
-aV
-aV
+bw
 aV
 aV
 bw
@@ -2151,7 +2494,7 @@ ag
 ag
 ag
 ah
-ac
+cF
 ac
 ac
 aa
@@ -2173,22 +2516,22 @@ aa
 ab
 ae
 ae
-af
-af
-af
+ae
+ae
+ae
 ar
 aD
-aB
+cP
 aN
-ar
-aV
-aV
-aV
-aV
-aV
-aV
-aV
-aV
+cW
+bB
+de
+bB
+bB
+bB
+bB
+bB
+dr
 aV
 aV
 bx
@@ -2198,7 +2541,7 @@ ag
 ag
 ag
 ah
-ac
+cF
 ac
 ac
 aa
@@ -2217,25 +2560,25 @@ aa
 aa
 aa
 aa
-ad
+ab
 ab
 ac
-af
-af
-af
+ae
+ae
+ae
 ar
 aE
-aB
+cQ
 aO
 ar
 aV
-aB
+df
 aB
 aB
 aB
 aV
 aV
-aV
+bw
 bJ
 bO
 bX
@@ -2245,7 +2588,7 @@ cn
 cn
 cz
 ah
-ac
+cF
 ac
 ab
 aa
@@ -2267,34 +2610,34 @@ aa
 aa
 ab
 ac
-af
-af
-af
+ae
+ae
+ae
 ar
-aB
-aB
-aB
+cJ
+cR
+cU
 aS
-aV
-aB
-aB
-aB
-aB
+cZ
+dg
+di
+dk
+dl
 by
-ar
-ar
-ar
-ar
-ar
-ar
-am
-am
-am
-cA
-ah
+dp
+ds
+dt
+dz
+dC
+dG
+dH
+dI
+dJ
+dL
+dM
+dO
 ac
-ac
-ad
+ab
 aa
 aa
 aa
@@ -2312,28 +2655,28 @@ aa
 aa
 aa
 aa
-ad
+ab
 ac
 ae
-af
-af
-ah
+ae
+ae
+ar
 aF
 aJ
 aP
-ah
+ar
 aY
-bh
-bh
-bh
-bh
-bz
+aB
+aB
+aB
+aB
+aV
 bC
 bD
-bD
-ah
+du
+ar
 bY
-ah
+ar
 cj
 co
 am
@@ -2362,30 +2705,30 @@ aa
 aa
 ab
 ae
-af
-af
-ah
-ah
-ah
-ah
-ah
-ah
-aj
-aj
-aj
-aj
-ah
-ah
+ae
+ae
+ar
+ar
+ar
+ar
+ar
+ar
+bf
+bf
+bf
+bf
+ar
+ar
 bD
-bD
-ah
+dv
+ar
 bZ
-ah
+ar
 cj
 cp
 cu
 cB
-aT
+ah
 ac
 ab
 aa
@@ -2407,34 +2750,34 @@ aa
 aa
 aa
 aa
-ad
+ab
 ab
 ae
-af
-af
-af
-af
-af
-af
-af
-af
-af
-af
-af
-af
-ah
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ar
 bE
-bD
+dw
 bP
-bD
-ah
+dD
+ar
 cj
 cq
 cv
 cC
-aT
+ah
 ac
-ad
+ab
 aa
 aa
 aa
@@ -2460,26 +2803,26 @@ ae
 ae
 ae
 ae
-af
-af
-af
-af
 ae
 ae
 ae
 ae
 ae
-ah
+ae
+ae
+ae
+ae
+ar
 bF
-bD
-bD
-bD
+dx
+dA
+dE
+ar
 ah
 ah
-aT
-aT
-aT
-aT
+ah
+ah
+ah
 ab
 aa
 aa
@@ -2502,7 +2845,7 @@ aa
 aa
 aa
 aa
-ad
+ab
 ab
 ae
 ae
@@ -2516,18 +2859,18 @@ ac
 ac
 ac
 ac
-aT
+ar
 bG
-bD
-bD
-bD
-aT
+dy
+dB
+dF
+ar
 ac
 ac
 ac
 ac
 ac
-ad
+ab
 aa
 aa
 aa
@@ -2550,30 +2893,30 @@ aa
 aa
 aa
 aa
-ad
-ad
-ad
+ab
+ab
+ab
 ab
 ac
 ac
-ao
+ac
 ac
 ac
 ab
-ao
-ao
-ac
-aT
-aT
-aT
-aT
-aT
-aT
 ac
 ac
-ao
-ad
-ad
+ac
+ar
+ar
+ar
+ar
+ar
+ar
+ac
+ac
+ac
+ab
+ab
 aa
 aa
 aa
@@ -2600,16 +2943,15 @@ aa
 aa
 aa
 aa
-ad
-ad
-ad
-ad
-ad
 ab
 ab
-ad
-ad
-ao
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 ac
 ac
 ac
@@ -2617,8 +2959,9 @@ ac
 ac
 ac
 ac
-ad
-ad
+ac
+ab
+ab
 aa
 aa
 aa
@@ -2651,19 +2994,19 @@ aa
 aa
 aa
 aa
-ad
-ad
-ad
+ab
+ab
+ab
 aa
-ad
-ad
-ad
-ad
-ad
-ad
-ao
-ao
-ad
+ab
+ab
+ab
+ab
+ab
+ab
+ac
+ac
+ab
 aa
 aa
 aa
