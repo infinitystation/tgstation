@@ -44,18 +44,20 @@
 	Radio = new/obj/item/device/radio(src)
 	Radio.listening = 0
 
-/obj/machinery/door_timer/initialize()
-	for(var/obj/machinery/door/window/brigdoor/M in urange(20, src))
-		if (M.id == id)
-			targets += M
+/obj/machinery/door_timer/Initialize()
+	..()
+	if(id != null)
+		for(var/obj/machinery/door/window/brigdoor/M in urange(20, src))
+			if (M.id == id)
+				targets += M
 
-	for(var/obj/machinery/flasher/F in urange(20, src))
-		if(F.id == id)
-			targets += F
+		for(var/obj/machinery/flasher/F in urange(20, src))
+			if(F.id == id)
+				targets += F
 
-	for(var/obj/structure/closet/secure_closet/brig/C in urange(20, src))
-		if(C.id == id)
-			targets += C
+		for(var/obj/structure/closet/secure_closet/brig/C in urange(20, src))
+			if(C.id == id)
+				targets += C
 
 	if(!targets.len)
 		stat |= BROKEN
@@ -102,7 +104,7 @@
 			message_admins("Игроки вокруг камеры: [prisoners]")
 			log_game("Преступники посажены!")
 			log_game("Игроки вокруг камеры: [prisoners_alt]")
-		addtimer(CALLBACK(door, /obj/machinery/door/window/brigdoor.proc/close), 0)
+		INVOKE_ASYNC(door, /obj/machinery/door/window/brigdoor.proc/close)
 
 	for(var/obj/structure/closet/secure_closet/brig/C in targets)
 		if(C.broken)
@@ -142,7 +144,7 @@
 	for(var/obj/machinery/door/window/brigdoor/door in targets)
 		if(!door.density)
 			continue
-		addtimer(CALLBACK(door, /obj/machinery/door/window/brigdoor.proc/open), 0)
+		INVOKE_ASYNC(door, /obj/machinery/door/window/brigdoor.proc/open)
 
 	for(var/obj/structure/closet/secure_closet/brig/C in targets)
 		if(C.broken)

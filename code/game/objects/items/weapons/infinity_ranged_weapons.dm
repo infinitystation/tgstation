@@ -60,7 +60,12 @@
 
 /obj/item/weapon/gun/energy/alien/base //By Terror4000rus
 	can_pull_pin = 0
+	selfcharge = 1
+	cell_type = /obj/item/weapon/stock_parts/cell/ammo/high
 
 /obj/item/weapon/gun/energy/e_gun/nuclear/event //By Terror4000rus
 	pin = /obj/item/device/firing_pin
 	ammo_type = list(/obj/item/ammo_casing/energy/laser, /obj/item/ammo_casing/energy/disabler)
+
+/obj/item/weapon/gun/energy/e_gun/ert
+	cell_type = /obj/item/weapon/stock_parts/cell/ammo/high

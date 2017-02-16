@@ -56,25 +56,24 @@
 //TAILS//
 /////////
 
-/datum/sprite_accessory/tajaran/tail
-	icon = 'icons/mob/infinity_mutant_bodyparts.dmi'
+/datum/sprite_accessory/tails/tajaran/default
+	name = "Default"
+	icon_state = "tajaran"
 	color_src = MUTCOLORS
 
-/datum/sprite_accessory/tajaran/tail/default
+/datum/sprite_accessory/tails_animated/tajaran/default
 	name = "Default"
-	icon_state = "default"
+	icon_state = "tajaran"
+	color_src = MUTCOLORS
 
 ////////
 //EARS//
 ////////
 
-/datum/sprite_accessory/tajaran/ears
-	name = "tail_tajaran"
-	icon = 'icons/mob/infinity_mutant_bodyparts.dmi'
-	color_src = MUTCOLORS
-	hasinner = 1
-
-/datum/sprite_accessory/tajaran/ears/default
+/datum/sprite_accessory/ears/tajaran/default
 	name = "Default"
-	icon_state = "default"
+	icon_state = "tajaran"
+	color_src = MUTCOLORS
+
+
 

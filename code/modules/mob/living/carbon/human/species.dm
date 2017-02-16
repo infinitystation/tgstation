@@ -16,7 +16,6 @@
 	var/roundstart = 0	// can this mob be chosen at roundstart? (assuming the config option is checked?)
 	var/default_color = "#FFF"	// if alien colors are disabled, this is the color that will be used by that race
 
-	var/eyes = "eyes"	// which eyes the race uses. at the moment, the only types of eyes are "eyes" (regular eyes) and "jelleyes" (three eyes)
 	var/sexes = 1		// whether or not the race has sexual characteristics. at the moment this is only 0 for skeletons and shadows
 	var/hair_color = null	// this allows races to have specific hair colors... if null, it uses the H's hair/facial hair colors. if "mutcolor", it uses the H's mutant_color
 	var/hair_alpha = 255	// the alpha used by the hair. 255 is completely solid, 0 is transparent.
@@ -47,9 +46,6 @@
 	var/damage_overlay_type = "human" //what kind of damage overlays (if any) appear on our species when wounded?
 	var/fixed_mut_color = "" //to use MUTCOLOR with a fixed color that's independent of dna.feature["mcolor"]
 
-	var/invis_sight = SEE_INVISIBLE_LIVING
-	var/darksight = 2
-
 	// species flags. these can be found in flags.dm
 	var/list/species_traits = list()
 
@@ -68,6 +64,9 @@
 	//Flight and floating
 	var/override_float = 0
 
+
+	//Eyes
+	var/obj/item/organ/eyes/mutanteyes = /obj/item/organ/eyes
 	///////////
 	// PROCS //
 	///////////
@@ -109,7 +108,7 @@
 	for(var/slot_id in no_equip)
 		var/obj/item/thing = C.get_item_by_slot(slot_id)
 		if(thing && (!thing.species_exception || !is_type_in_list(src,thing.species_exception)))
-			C.unEquip(thing)
+			C.dropItemToGround(thing)
 
 	var/obj/item/organ/heart/heart = C.getorganslot("heart")
 	var/obj/item/organ/lungs/lungs = C.getorganslot("lungs")
@@ -183,22 +182,22 @@
 	if(H.facial_hair_style && (FACEHAIR in species_traits) && !facialhair_hidden)
 		S = facial_hair_styles_list[H.facial_hair_style]
 		if(S)
-			var/image/img_facial_s = image("icon" = S.icon, "icon_state" = "[S.icon_state]_s", "layer" = -HAIR_LAYER)
+			var/image/img_facial = image("icon" = S.icon, "icon_state" = "[S.icon_state]", "layer" = -HAIR_LAYER)
 
 			if(!forced_colour)
 				if(hair_color)
 					if(hair_color == "mutcolor")
-						img_facial_s.color = "#" + H.dna.features["mcolor"]
+						img_facial.color = "#" + H.dna.features["mcolor"]
 					else
-						img_facial_s.color = "#" + hair_color
+						img_facial.color = "#" + hair_color
 				else
-					img_facial_s.color = "#" + H.facial_hair_color
+					img_facial.color = "#" + H.facial_hair_color
 			else
-				img_facial_s.color = forced_colour
+				img_facial.color = forced_colour
 
-			img_facial_s.alpha = hair_alpha
+			img_facial.alpha = hair_alpha
 
-			standing += img_facial_s
+			standing += img_facial
 
 	//we check if our hat or helmet hides our hair.
 	if(H.head)
@@ -212,28 +211,26 @@
 	if(!hair_hidden)
 		if(!H.getorgan(/obj/item/organ/brain)) //Applies the debrained overlay if there is no brain
 			if(!(NOBLOOD in species_traits))
-				standing += image("icon"='icons/mob/human_face.dmi', "icon_state" = "debrained_s", "layer" = -HAIR_LAYER)
+				standing += image("icon"='icons/mob/human_face.dmi', "icon_state" = "debrained", "layer" = -HAIR_LAYER)
 
 		else if(H.hair_style && (HAIR in species_traits))
 			S = hair_styles_list[H.hair_style]
 			if(S)
-				var/image/img_hair_s = image("icon" = S.icon, "icon_state" = "[S.icon_state]_s", "layer" = -HAIR_LAYER)
-
-				img_hair_s = image("icon" = S.icon, "icon_state" = "[S.icon_state]_s", "layer" = -HAIR_LAYER)
+				var/image/img_hair = image("icon" = S.icon, "icon_state" = "[S.icon_state]", "layer" = -HAIR_LAYER)
 
 				if(!forced_colour)
 					if(hair_color)
 						if(hair_color == "mutcolor")
-							img_hair_s.color = "#" + H.dna.features["mcolor"]
+							img_hair.color = "#" + H.dna.features["mcolor"]
 						else
-							img_hair_s.color = "#" + hair_color
+							img_hair.color = "#" + hair_color
 					else
-						img_hair_s.color = "#" + H.hair_color
+						img_hair.color = "#" + H.hair_color
 				else
-					img_hair_s.color = forced_colour
-				img_hair_s.alpha = hair_alpha
+					img_hair.color = forced_colour
+				img_hair.alpha = hair_alpha
 
-				standing += img_hair_s
+				standing += img_hair
 
 	else if(H.dna.features["tajaran_hair"] && H.dna.species.id == "tajaran")
 		S = hair_styles_tajaran[H.dna.features["tajaran_hair"]]
@@ -255,37 +252,45 @@
 
 	var/obj/item/bodypart/head/HD = H.get_bodypart("head")
 
+
+	// eyes
+	var/has_eyes = TRUE
+
+	if(!H.getorgan(/obj/item/organ/eyes) && HD)
+		standing += image("icon"='icons/mob/human_face.dmi', "icon_state" = "eyes_missing", "layer" = -BODY_LAYER)
+		has_eyes = FALSE
+
 	if(!(H.disabilities & HUSK))
 		// lipstick
 		if(H.lip_style && (LIPS in species_traits) && HD)
-			var/image/lips = image("icon"='icons/mob/human_face.dmi', "icon_state"="lips_[H.lip_style]_s", "layer" = -BODY_LAYER)
+			var/image/lips = image("icon"='icons/mob/human_face.dmi', "icon_state"="lips_[H.lip_style]", "layer" = -BODY_LAYER)
 			lips.color = H.lip_color
 			standing	+= lips
 
 		// eyes
-		if((EYECOLOR in species_traits) && HD)
-			var/image/img_eyes_s = image("icon" = 'icons/mob/human_face.dmi', "icon_state" = "[eyes]_s", "layer" = -BODY_LAYER)
-			img_eyes_s.color = "#" + H.eye_color
-			standing	+= img_eyes_s
+		if((EYECOLOR in species_traits) && HD && has_eyes)
+			var/image/img_eyes = image("icon" = 'icons/mob/human_face.dmi', "icon_state" = "eyes", "layer" = -BODY_LAYER)
+			img_eyes.color = "#" + H.eye_color
+			standing	+= img_eyes
 
 	//Underwear, Undershirts & Socks
 	if(H.underwear)
-		var/datum/sprite_accessory/underwear/U = underwear_list[H.underwear]
-		if(U)
-			standing	+= image("icon"=U.icon, "icon_state"="[U.icon_state]_s", "layer"=-BODY_LAYER)
+		var/datum/sprite_accessory/underwear/underwear = underwear_list[H.underwear]
+		if(underwear)
+			standing	+= image("icon"=underwear.icon, "icon_state"="[underwear.icon_state]", "layer"=-BODY_LAYER)
 
 	if(H.undershirt)
-		var/datum/sprite_accessory/undershirt/U2 = undershirt_list[H.undershirt]
-		if(U2)
+		var/datum/sprite_accessory/undershirt/undershirt = undershirt_list[H.undershirt]
+		if(undershirt)
 			if(H.dna.species.sexes && H.gender == FEMALE)
-				standing	+=	wear_female_version("[U2.icon_state]_s", U2.icon, BODY_LAYER)
+				standing	+=	wear_female_version("[undershirt.icon_state]", undershirt.icon, BODY_LAYER)
 			else
-				standing	+= image("icon"=U2.icon, "icon_state"="[U2.icon_state]_s", "layer"=-BODY_LAYER)
+				standing	+= image("icon"=undershirt.icon, "icon_state"="[undershirt.icon_state]", "layer"=-BODY_LAYER)
 
 	if(H.socks && H.get_num_legs() >= 2 && !(DIGITIGRADE in species_traits))
-		var/datum/sprite_accessory/socks/U3 = socks_list[H.socks]
-		if(U3)
-			standing	+= image("icon"=U3.icon, "icon_state"="[U3.icon_state]_s", "layer"=-BODY_LAYER)
+		var/datum/sprite_accessory/socks/socks = socks_list[H.socks]
+		if(socks)
+			standing	+= image("icon"=socks.icon, "icon_state"="[socks.icon_state]", "layer"=-BODY_LAYER)
 
 	if(standing.len)
 		H.overlays_standing[BODY_LAYER] = standing
@@ -314,6 +319,12 @@
 	if("tail_tajaran" in mutant_bodyparts)
 		if(H.wear_suit && (H.wear_suit.flags_inv & HIDEJUMPSUIT))
 			bodyparts_to_add -= "tail_tajaran"
+
+	if("waggingtail_tajaran" in mutant_bodyparts)
+		if(H.wear_suit && (H.wear_suit.flags_inv & HIDEJUMPSUIT))
+			bodyparts_to_add -= "waggingtail_tajaran"
+		else if ("tail_tajaran" in mutant_bodyparts)
+			bodyparts_to_add -= "waggingtail_tajaran"
 
 	if("waggingtail_lizard" in mutant_bodyparts)
 		if(H.wear_suit && (H.wear_suit.flags_inv & HIDEJUMPSUIT))
@@ -360,6 +371,7 @@
 	if("ears_tajaran" in mutant_bodyparts)
 		if((H.head && (H.head.flags_inv & HIDEHAIR)) || (H.wear_mask && (H.wear_mask.flags_inv & HIDEHAIR)))
 			bodyparts_to_add -= "ears_tajaran"
+
 	if("wings" in mutant_bodyparts)
 		if(!H.dna.features["wings"] || H.dna.features["wings"] == "None" || (H.wear_suit && (H.wear_suit.flags_inv & HIDEJUMPSUIT) && (!H.wear_suit.species_exception || !is_type_in_list(src, H.wear_suit.species_exception))))
 			bodyparts_to_add -= "wings"
@@ -417,6 +429,8 @@
 					S.= animated_tails_list_human[H.dna.features["tail_human"]]
 				if("tail_tajaran")
 					S = tails_list_tajaran[H.dna.features["tail_tajaran"]]
+				if("waggingtail_tajaran")
+					S. = animated_tails_list_tajaran[H.dna.features["tail_tajaran"]]
 				if("spines")
 					S = spines_list[H.dna.features["spines"]]
 				if("waggingspines")
@@ -448,7 +462,7 @@
 				bodypart = "tail"
 			if(bodypart == "ears_tajaran")
 				bodypart = "ears"
-			else if(bodypart == "waggingtail_lizard" || bodypart == "waggingtail_human")
+			else if(bodypart == "waggingtail_lizard" || bodypart == "waggingtail_human" || bodypart == "waggingtail_tajaran")
 				bodypart = "waggingtail"
 
 
@@ -723,7 +737,7 @@
 /datum/species/proc/handle_chemicals(datum/reagent/chem, mob/living/carbon/human/H)
 	if(chem.id == exotic_blood)
 		H.blood_volume = min(H.blood_volume + round(chem.volume, 0.1), BLOOD_VOLUME_MAXIMUM)
-		H.reagents.remove_reagent(chem.id)
+		H.reagents.del_reagent(chem.id)
 		return 1
 	return 0
 
@@ -824,41 +838,6 @@
 		else
 			H.clear_alert("toilet_shit")
 
-/datum/species/proc/update_sight(mob/living/carbon/human/H)
-	H.sight = initial(H.sight)
-	H.see_in_dark = darksight
-	H.see_invisible = invis_sight
-
-	if(H.client.eye != H)
-		var/atom/A = H.client.eye
-		if(A.update_remote_sight(H)) //returns 1 if we override all other sight updates.
-			return
-
-	for(var/obj/item/organ/cyberimp/eyes/E in H.internal_organs)
-		H.sight |= E.sight_flags
-		if(E.dark_view)
-			H.see_in_dark = E.dark_view
-		if(E.see_invisible)
-			H.see_invisible = min(H.see_invisible, E.see_invisible)
-
-	if(H.glasses)
-		var/obj/item/clothing/glasses/G = H.glasses
-		H.sight |= G.vision_flags
-		H.see_in_dark = max(G.darkness_view, H.see_in_dark)
-		if(G.invis_override)
-			H.see_invisible = G.invis_override
-		else
-			H.see_invisible = min(G.invis_view, H.see_invisible)
-
-	for(var/X in H.dna.mutations)
-		var/datum/mutation/M = X
-		if(M.name == XRAY)
-			H.sight |= (SEE_TURFS|SEE_MOBS|SEE_OBJS)
-			H.see_in_dark = max(H.see_in_dark, 8)
-
-	if(H.see_override)	//Override all
-		H.see_invisible = H.see_override
-
 /datum/species/proc/update_health_hud(mob/living/carbon/human/H)
 	return 0
 
@@ -934,7 +913,7 @@
 		var/obj/item/organ/cyberimp/chest/thrusters/T = H.getorganslot("thrusters")
 		if(!istype(J) && istype(C))
 			J = C.jetpack
-		if(istype(J) && J.allow_thrust(0.01, H))	//Prevents stacking
+		if(istype(J) && J.full_speed && J.allow_thrust(0.01, H))	//Prevents stacking
 			. -= 2
 		else if(istype(T) && T.allow_thrust(0.01, H))
 			. -= 2

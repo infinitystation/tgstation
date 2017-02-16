@@ -88,10 +88,15 @@
 	message_alien = "визжит искажённым криком, затем рухнула со своих лап. Зелёна&#255; кип&#255;ща&#255; и булькающа&#255; жидкость потекла из её пасти."
 	message_larva = "Испускает болезненное шипени&#255;, выпуска&#255; из себ&#255; остатки воздуха, после чего перестает двигатьс&#255; и падает на пол."
 	message_monkey = "lets out a faint chimper as it collapses and stops moving..."
+	message_simple =  "stops moving..."
 	stat_allowed = UNCONSCIOUS
 
 /datum/emote/living/deathgasp/run_emote(mob/user, params)
+	var/mob/living/simple_animal/S = user
+	if(istype(S) && S.deathmessage)
+		message_simple = S.deathmessage
 	. = ..()
+	message_simple = initial(message_simple)
 	if(. && isalienadult(user))
 		playsound(user.loc, 'sound/voice/hiss6.ogg', 80, 1, 1)
 
@@ -474,3 +479,15 @@
 	message_param = "пищит на %t."
 	emote_type = EMOTE_AUDIBLE
 	sound = 'sound/machines/twobeep.ogg'
+
+/datum/emote/living/spin
+	key = "spin"
+	key_third_person = "spins"
+	message = "spins around dizzily!"
+
+/datum/emote/living/spin/run_emote(mob/user)
+	user.spin(20, 1)
+	if(istype(user, /mob/living/silicon/robot))
+		var/mob/living/silicon/robot/R = user
+		R.riding_datum.force_dismount()
+	..()

@@ -43,7 +43,7 @@
 
 /obj/item/weapon/soap/suicide_act(mob/user)
 	user.visible_message("<span class='suicide'>[user] кладет мыло в свой рот и начинает его грызть! Из [user.p_their()] рта полилась кака&#255;-то пена!")
-	PoolOrNew(/obj/effect/particle_effect/foam, loc)
+	new /obj/effect/particle_effect/foam(loc)
 	return (TOXLOSS)
 
 /obj/item/weapon/soap/Crossed(AM as mob|obj)

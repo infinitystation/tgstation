@@ -104,7 +104,7 @@ var/explosionid = 1
 			for(var/obj/structure/blob/B in T)
 				cached_exp_block[T] += B.explosion_block
 			CHECK_TICK
-			
+
 	//flash mobs
 	if(flash_range)
 		for(var/mob/living/L in viewers(flash_range, epicenter))
@@ -145,7 +145,7 @@ var/explosionid = 1
 
 		if(T)
 			if(flame_dist && prob(40) && !isspaceturf(T) && !T.density)
-				PoolOrNew(/obj/effect/hotspot, T) //Mostly for ambience!
+				new /obj/effect/hotspot(T) //Mostly for ambience!
 			if(dist > 0)
 				T.explosion_level = max(T.explosion_level, dist)	//let the bigger one have it
 				T.explosion_id = id
@@ -162,9 +162,7 @@ var/explosionid = 1
 				I.throw_speed = 4 //Temporarily change their throw_speed for embedding purposes (Reset when it finishes throwing, regardless of hitting anything)
 				I.throw_at(throw_at, throw_range, I.throw_speed)
 
-		if(world.tick_usage > CURRENT_TICKLIMIT)
-			stoplag()
-
+		if(TICK_CHECK)
 			var/circumference = (PI * init_dist * 2) + 8 //+8 to prevent shit gaps
 			if(exploded_this_tick.len > circumference)	//only do this every revolution
 				for(var/Unexplode in exploded_this_tick)
@@ -181,7 +179,7 @@ var/explosionid = 1
 	var/took = (world.timeofday-start)/10
 	//You need to press the DebugGame verb to see these now....they were getting annoying and we've collected a fair bit of data. Just -test- changes  to explosion code using this please so we can compare
 	if(Debug2)
-		world.log << "## DEBUG: Explosion([x0],[y0],[z0])(d[devastation_range],h[heavy_impact_range],l[light_impact_range]): Took [took] seconds."
+		log_world("## DEBUG: Explosion([x0],[y0],[z0])(d[devastation_range],h[heavy_impact_range],l[light_impact_range]): Took [took] seconds.")
 
 	//Machines which report explosions.
 	for(var/array in doppler_arrays)

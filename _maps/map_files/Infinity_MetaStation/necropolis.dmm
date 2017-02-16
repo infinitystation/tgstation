@@ -1,61 +1,38 @@
-//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE 
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "aa" = (
 /turf/open/space,
 /area/space)
 "ab" = (
+/turf/closed/indestructible/necropolis,
+/area/ruin/powered)
+"ac" = (
 /turf/open/chasm{
 	initial_gas_mix = "o2=14;n2=23;TEMP=300";
 	planetary_atmos = 1;
 	temperature = 300
 	},
-/area/space)
-"ac" = (
-/turf/open/floor/plasteel/terror/necro/darkwarning/outdoor{
-	tag = "icon-warndark (EAST)";
-	icon_state = "warndark";
-	dir = 4;
-	baseturf = /turf/open/chasm/straight_down/lava_land_surface;
-	planetary_atmos = 1
-	},
 /area/ruin/powered)
 "ad" = (
-/obj/item/ammo_casing/a646/no,
-/obj/item/ammo_casing/a646/no,
-/turf/open/floor/plasteel/terror/necro/black/outdoor{
-	baseturf = /turf/open/chasm/straight_down/lava_land_surface;
-	planetary_atmos = 1
-	},
+/turf/closed/wall/mineral/cult,
 /area/ruin/powered)
 "ae" = (
-/turf/closed/wall/mineral/cult,
-/area/bridge/bridge_dorms)
-"af" = (
 /turf/open/floor/plasteel/terror/necro/cult/outdoor,
-/area/bridge/bridge_dorms)
+/area/ruin/powered)
+"af" = (
+/obj/item/weapon/paper{
+	info = "you're is not ready for hell, <b>COMING SOON</b>"
+	},
+/turf/open/floor/plasteel/terror/necro/cult/outdoor,
+/area/ruin/powered)
 "ag" = (
 /obj/effect/decal/cleanable/blood/old,
 /turf/open/floor/plasteel/terror/necro/cult/outdoor,
-/area/bridge/bridge_dorms)
+/area/ruin/powered)
 "ah" = (
-/obj/item/ammo_casing/a646/no,
-/obj/item/ammo_casing/a646/no,
-/turf/open/floor/plasteel/terror/necro/cult/outdoor,
-/area/bridge/bridge_dorms)
-"ai" = (
-/obj/item/ammo_casing/a646/no,
-/turf/open/floor/plasteel/terror/necro/cult/outdoor,
-/area/bridge/bridge_dorms)
-"aj" = (
-/obj/item/ammo_casing/a646/no,
-/obj/item/ammo_casing/a646/no,
-/obj/item/ammo_casing/a646/no,
-/turf/open/floor/plasteel/terror/necro/cult/outdoor,
-/area/bridge/bridge_dorms)
-"ak" = (
 /obj/structure/barricade/sandbags,
 /turf/open/floor/plasteel/terror/necro/cult/outdoor,
-/area/bridge/bridge_dorms)
-"al" = (
+/area/ruin/powered)
+"ai" = (
 /obj/structure{
 	icon = 'icons/obj/cult.dmi';
 	icon_state = "pylon";
@@ -63,16 +40,8 @@
 	name = "pylon"
 	},
 /turf/open/floor/plasteel/terror/necro/cult/outdoor,
-/area/bridge/bridge_dorms)
-"am" = (
-/obj/effect/decal/fakelattice,
-/turf/open/chasm{
-	initial_gas_mix = "o2=14;n2=23;TEMP=300";
-	planetary_atmos = 1;
-	temperature = 300
-	},
-/area/bridge/bridge_dorms)
-"an" = (
+/area/ruin/powered)
+"aj" = (
 /turf/open/floor/plasteel/terror/necro/darkwarning/outdoor{
 	tag = "icon-warndark (WEST)";
 	icon_state = "warndark";
@@ -80,22 +49,14 @@
 	baseturf = /turf/open/chasm/straight_down/lava_land_surface;
 	planetary_atmos = 1
 	},
-/area/bridge/bridge_dorms)
-"ao" = (
-/obj/item/ammo_casing/a646/no,
+/area/ruin/powered)
+"ak" = (
 /turf/open/floor/plasteel/terror/necro/black/outdoor{
 	baseturf = /turf/open/chasm/straight_down/lava_land_surface;
 	planetary_atmos = 1
 	},
-/area/bridge/bridge_dorms)
-"ap" = (
-/turf/open/floor/plasteel/terror/necro/black/outdoor{
-	baseturf = /turf/open/chasm/straight_down/lava_land_surface;
-	planetary_atmos = 1
-	},
-/area/bridge/bridge_dorms)
-"aq" = (
-/obj/item/ammo_casing/a646/no,
+/area/ruin/powered)
+"al" = (
 /turf/open/floor/plasteel/terror/necro/darkwarning/outdoor{
 	tag = "icon-warndark (EAST)";
 	icon_state = "warndark";
@@ -104,24 +65,15 @@
 	planetary_atmos = 1
 	},
 /area/ruin/powered)
-"ar" = (
-/turf/open/floor/plasteel/terror/necro/darkwarning/outdoor{
-	tag = "icon-warndark (EAST)";
-	icon_state = "warndark";
-	dir = 4;
-	baseturf = /turf/open/chasm/straight_down/lava_land_surface;
-	planetary_atmos = 1
+"am" = (
+/obj/effect/decal/fakelattice,
+/turf/open/chasm{
+	initial_gas_mix = "o2=14;n2=23;TEMP=300";
+	planetary_atmos = 1;
+	temperature = 300
 	},
-/area/bridge/bridge_dorms)
-"as" = (
-/obj/item/ammo_casing/a646/no,
-/obj/item/ammo_casing/a646/no,
-/turf/open/floor/plasteel/terror/necro/black/outdoor{
-	baseturf = /turf/open/chasm/straight_down/lava_land_surface;
-	planetary_atmos = 1
-	},
-/area/bridge/bridge_dorms)
-"at" = (
+/area/ruin/powered)
+"an" = (
 /obj/effect/decal/cleanable/blood/old,
 /turf/open/floor/plasteel/terror/necro/darkwarning/outdoor{
 	tag = "icon-warndark (EAST)";
@@ -130,15 +82,15 @@
 	baseturf = /turf/open/chasm/straight_down/lava_land_surface;
 	planetary_atmos = 1
 	},
-/area/bridge/bridge_dorms)
-"au" = (
+/area/ruin/powered)
+"ao" = (
 /obj/item/device/radio,
 /turf/open/floor/plasteel/terror/necro/black/outdoor{
 	baseturf = /turf/open/chasm/straight_down/lava_land_surface;
 	planetary_atmos = 1
 	},
 /area/ruin/powered)
-"av" = (
+"ap" = (
 /obj/machinery/light{
 	icon_state = "tube1";
 	dir = 4
@@ -148,18 +100,18 @@
 	planetary_atmos = 1
 	},
 /area/ruin/powered)
-"aw" = (
+"aq" = (
 /turf/closed/wall{
 	baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
 	},
 /area/ruin/powered)
-"ax" = (
+"ar" = (
 /turf/open/floor/plating/lavaland/outdoor/necropolis{
 	broken = 1;
 	icon_state = "platingdmg3"
 	},
 /area/ruin/powered)
-"ay" = (
+"as" = (
 /obj/structure/barricade/sandbags,
 /turf/open/floor/plasteel/terror/necro/darkwarning/outdoor{
 	tag = "icon-warndark (WEST)";
@@ -169,13 +121,7 @@
 	planetary_atmos = 1
 	},
 /area/ruin/powered)
-"az" = (
-/obj/effect/step_trigger/sound_effect{
-	happens_once = 1;
-	name = "bridge - chatter 1";
-	sound = 'sound/doom/Chatter1.ogg';
-	triggerer_only = 0
-	},
+"at" = (
 /obj/effect/step_trigger/message{
 	message = "Вы слышите треск из рации на полу... Кто-то что-то говорит. Идет бой.";
 	name = "bridge - chatter 1";
@@ -186,79 +132,78 @@
 	planetary_atmos = 1
 	},
 /area/ruin/powered)
-"aA" = (
+"au" = (
 /obj/structure/barricade/sandbags,
 /turf/open/floor/plasteel/terror/necro/black/outdoor{
 	baseturf = /turf/open/chasm/straight_down/lava_land_surface;
 	planetary_atmos = 1
 	},
 /area/ruin/powered)
-"aB" = (
+"av" = (
 /obj/effect/decal/cleanable/blood/old,
 /turf/open/floor/plasteel/terror/necro/black/outdoor{
 	baseturf = /turf/open/chasm/straight_down/lava_land_surface;
 	planetary_atmos = 1
 	},
 /area/ruin/powered)
-"aC" = (
-/turf/closed/indestructible/necropolis,
-/area/space)
-"aD" = (
-/turf/closed/indestructible/necropolis,
-/area/bridge/bridge_dorms)
-"aE" = (
+"aw" = (
 /turf/open/indestructible/necropolis,
 /area/ruin/powered)
-"aF" = (
+"ax" = (
 /turf/open/floor/plasteel/terror/necro/darkwarning/outdoor{
 	dir = 8
 	},
 /area/ruin/powered)
-"aG" = (
+"ay" = (
 /obj/effect/decal/cleanable/blood/old,
 /turf/open/floor/plasteel/terror/necro/black/outdoor,
 /area/ruin/powered)
-"aH" = (
+"az" = (
 /turf/open/floor/plasteel/terror/necro/black/outdoor,
 /area/ruin/powered)
-"aI" = (
+"aA" = (
 /turf/open/floor/plasteel/terror/necro/darkwarning/outdoor{
 	dir = 4
 	},
 /area/ruin/powered)
-"aJ" = (
+"aB" = (
+/turf/closed/wall/r_wall{
+	baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
+	},
+/area/ruin/powered)
+"aC" = (
 /obj/structure/sign/xeno_warning_mining,
 /turf/closed/wall{
 	baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
 	},
 /area/ruin/powered)
-"aK" = (
+"aD" = (
 /obj/machinery/light{
 	icon_state = "tube1";
 	dir = 8
 	},
 /turf/open/indestructible/necropolis,
 /area/ruin/powered)
-"aL" = (
+"aE" = (
 /obj/machinery/light{
 	icon_state = "tube1";
 	dir = 4
 	},
 /turf/open/indestructible/necropolis,
 /area/ruin/powered)
-"aM" = (
+"aF" = (
 /obj/structure/sign/uac,
 /turf/closed/wall{
 	baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
 	},
 /area/ruin/powered)
-"aN" = (
+"aG" = (
 /obj/machinery/vending/medical{
 	req_access_txt = "201"
 	},
 /turf/open/floor/plasteel/terror/necro/whiteblue,
 /area/ruin/powered)
-"aO" = (
+"aH" = (
 /obj/machinery/shower{
 	pixel_y = 20
 	},
@@ -268,7 +213,7 @@
 	dir = 1
 	},
 /area/ruin/powered)
-"aP" = (
+"aI" = (
 /obj/structure/sink{
 	pixel_y = 26
 	},
@@ -279,11 +224,11 @@
 	dir = 1
 	},
 /area/ruin/powered)
-"aQ" = (
+"aJ" = (
 /obj/structure/table/reinforced,
 /turf/open/floor/plasteel/terror/necro/whiteblue,
 /area/ruin/powered)
-"aR" = (
+"aK" = (
 /obj/structure/chair/stool,
 /obj/machinery/light/small{
 	dir = 8
@@ -294,10 +239,10 @@
 	dir = 8
 	},
 /area/ruin/powered)
-"aS" = (
+"aL" = (
 /turf/open/floor/plasteel/terror/necro/white,
 /area/ruin/powered)
-"aT" = (
+"aM" = (
 /obj/structure/table/reinforced,
 /obj/item/weapon/storage/firstaid/regular{
 	pixel_x = 3;
@@ -313,23 +258,15 @@
 	dir = 4
 	},
 /area/ruin/powered)
-"aU" = (
+"aN" = (
 /obj/effect/decal/cleanable/blood/old,
 /turf/open/indestructible/necropolis,
 /area/ruin/powered)
-"aV" = (
+"aO" = (
 /obj/effect/decal/cleanable/blood/tracks,
 /turf/open/indestructible/necropolis,
 /area/ruin/powered)
-"aW" = (
-/turf/open/floor/plasteel/terror/necro,
-/area/space)
-"aX" = (
-/turf/closed/wall/r_wall{
-	baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
-	},
-/area/space)
-"aY" = (
+"aP" = (
 /obj/machinery/sleeper{
 	tag = "icon-sleeper (EAST)";
 	icon_state = "sleeper";
@@ -341,7 +278,7 @@
 	dir = 8
 	},
 /area/ruin/powered)
-"aZ" = (
+"aQ" = (
 /obj/structure/table/reinforced,
 /obj/item/weapon/storage/firstaid/o2{
 	pixel_x = 3;
@@ -353,42 +290,42 @@
 	dir = 4
 	},
 /area/ruin/powered)
-"ba" = (
+"aR" = (
 /obj/structure/barricade/sandbags,
 /turf/open/floor/plating/lavaland/outdoor/necropolis,
 /area/ruin/powered)
-"bb" = (
+"aS" = (
 /obj/structure/barricade/sandbags,
 /turf/open/floor/plasteel/terror/necro/darkwarning/outdoor{
 	dir = 8
 	},
 /area/ruin/powered)
-"bc" = (
+"aT" = (
 /obj/structure/barricade/sandbags,
 /turf/open/floor/plasteel/terror/necro/black/outdoor,
 /area/ruin/powered)
-"bd" = (
+"aU" = (
 /obj/item/ammo_casing/a646/no,
 /turf/open/floor/plasteel/terror/necro/black/outdoor,
 /area/ruin/powered)
-"be" = (
+"aV" = (
 /obj/structure/barricade/sandbags,
 /turf/open/floor/plasteel/terror/necro/darkwarning/outdoor{
 	dir = 4
 	},
 /area/ruin/powered)
-"bf" = (
+"aW" = (
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating/lavaland,
 /area/ruin/powered)
-"bg" = (
+"aX" = (
 /obj/machinery/door/airlock/glass_medical{
 	name = "Lobby Medical Post";
 	req_access_txt = "201"
 	},
 /turf/open/floor/plasteel/terror/necro/white,
 /area/ruin/powered)
-"bh" = (
+"aY" = (
 /obj/effect/decal/cleanable/blood/tracks{
 	tag = "icon-tracks (SOUTHWEST)";
 	icon_state = "tracks";
@@ -396,7 +333,7 @@
 	},
 /turf/open/indestructible/necropolis,
 /area/ruin/powered)
-"bi" = (
+"aZ" = (
 /obj/effect/decal/cleanable/blood/tracks{
 	tag = "icon-tracks (EAST)";
 	icon_state = "tracks";
@@ -404,7 +341,7 @@
 	},
 /turf/open/indestructible/necropolis,
 /area/ruin/powered)
-"bj" = (
+"ba" = (
 /obj/effect/decal/cleanable/blood/tracks{
 	tag = "icon-tracks (EAST)";
 	icon_state = "tracks";
@@ -413,7 +350,19 @@
 /obj/item/ammo_casing/a646/no,
 /turf/open/indestructible/necropolis,
 /area/ruin/powered)
-"bk" = (
+"bb" = (
+/obj/effect/decal/cleanable/blood/tracks{
+	tag = "icon-tracks (EAST)";
+	icon_state = "tracks";
+	dir = 4
+	},
+/obj/item/ammo_casing/a646/no,
+/obj/item/ammo_casing/a646/no,
+/obj/item/ammo_casing/a646/no,
+/obj/item/ammo_casing/a646/no,
+/turf/open/indestructible/necropolis,
+/area/ruin/powered)
+"bc" = (
 /obj/effect/decal/cleanable/blood/tracks{
 	tag = "icon-tracks (NORTHEAST)";
 	icon_state = "tracks";
@@ -421,42 +370,40 @@
 	},
 /obj/item/ammo_casing/a646/no,
 /obj/item/ammo_casing/a646/no,
+/obj/item/ammo_casing/a646/no,
 /turf/open/floor/plasteel/terror/necro/darkwarning/outdoor{
 	dir = 8
 	},
 /area/ruin/powered)
-"bl" = (
+"bd" = (
+/obj/item/ammo_casing/a646/no,
+/obj/item/ammo_casing/a646/no,
+/turf/open/floor/plasteel/terror/necro/black/outdoor,
+/area/ruin/powered)
+"be" = (
+/obj/item/ammo_casing/a646/no,
+/obj/item/ammo_casing/a646/no,
+/obj/item/ammo_casing/a646/no,
 /obj/item/ammo_casing/a646/no,
 /obj/item/ammo_casing/a646/no,
 /turf/open/floor/plasteel/terror/necro/darkwarning/outdoor{
 	dir = 4
 	},
 /area/ruin/powered)
-"bm" = (
+"bf" = (
+/obj/item/ammo_casing/a646/no,
+/obj/item/ammo_casing/a646/no,
 /obj/item/ammo_casing/a646/no,
 /turf/open/floor/plating/lavaland/outdoor/necropolis,
 /area/ruin/powered)
-"bn" = (
+"bg" = (
 /obj/structure/sign/mining/survival,
 /turf/closed/wall/shuttle/survival/nodiagonal,
 /area/ruin/powered)
-"bo" = (
+"bh" = (
 /turf/closed/wall/shuttle/survival/nodiagonal,
 /area/ruin/powered)
-"bp" = (
-/turf/open/floor/plasteel/terror/necro/neutral/side{
-	tag = "icon-neutral (NORTH)";
-	icon_state = "neutral";
-	dir = 1
-	},
-/area/space)
-"bq" = (
-/obj/machinery/vending/cola{
-	products = list(/obj/item/weapon/reagent_containers/food/drinks/soda_cans/cola = 1, /obj/item/weapon/reagent_containers/food/drinks/soda_cans/space_mountain_wind = 0, /obj/item/weapon/reagent_containers/food/drinks/soda_cans/dr_gibb = 0, /obj/item/weapon/reagent_containers/food/drinks/soda_cans/starkist = 2, /obj/item/weapon/reagent_containers/food/drinks/soda_cans/space_up = 4, /obj/item/weapon/reagent_containers/food/drinks/soda_cans/lemon_lime = 2)
-	},
-/turf/open/floor/plasteel/terror/necro/neutral,
-/area/space)
-"br" = (
+"bi" = (
 /obj/item/stack/sheet/metal{
 	amount = 2
 	},
@@ -466,14 +413,14 @@
 	dir = 4
 	},
 /area/ruin/powered)
-"bs" = (
+"bj" = (
 /turf/open/floor/plasteel/terror/necro/blue/side{
 	tag = "icon-blue (NORTH)";
 	icon_state = "blue";
 	dir = 1
 	},
 /area/ruin/powered)
-"bt" = (
+"bk" = (
 /obj/effect/decal/cleanable/blood/old,
 /turf/open/floor/plasteel/terror/necro/blue/side{
 	tag = "icon-blue (NORTH)";
@@ -481,7 +428,7 @@
 	dir = 1
 	},
 /area/ruin/powered)
-"bu" = (
+"bl" = (
 /obj/machinery/vending/snack{
 	products = list(/obj/item/weapon/reagent_containers/food/snacks/candy = 2, /obj/item/weapon/reagent_containers/food/drinks/dry_ramen = 1, /obj/item/weapon/reagent_containers/food/snacks/chips = 0, /obj/item/weapon/reagent_containers/food/snacks/sosjerky = 1, /obj/item/weapon/reagent_containers/food/snacks/no_raisin = 1, /obj/item/weapon/reagent_containers/food/snacks/spacetwinkie = 2, /obj/item/weapon/reagent_containers/food/snacks/cheesiehonkers = 0)
 	},
@@ -491,24 +438,24 @@
 	dir = 1
 	},
 /area/ruin/powered)
-"bv" = (
+"bm" = (
 /obj/item/ammo_casing/a646/no,
 /turf/open/indestructible/necropolis,
 /area/ruin/powered)
-"bw" = (
+"bn" = (
 /obj/effect/decal/cleanable/blood/tracks,
+/obj/item/ammo_casing/a646/no,
+/obj/item/ammo_casing/a646/no,
 /obj/item/ammo_casing/a646/no,
 /turf/open/floor/plasteel/terror/necro/darkwarning/outdoor{
 	dir = 8
 	},
 /area/ruin/powered)
-"bx" = (
+"bo" = (
 /obj/item/ammo_casing/a646/no,
-/turf/open/floor/plasteel/terror/necro/darkwarning/outdoor{
-	dir = 4
-	},
+/turf/open/floor/plating/lavaland/outdoor/necropolis,
 /area/ruin/powered)
-"by" = (
+"bp" = (
 /obj/machinery/portable_atmospherics/canister/oxygen,
 /obj/structure/window/reinforced{
 	tag = "icon-rwindow (WEST)";
@@ -517,7 +464,7 @@
 	},
 /turf/open/floor/pod/light,
 /area/ruin/powered)
-"bz" = (
+"bq" = (
 /obj/structure/tank_dispenser/oxygen{
 	layer = 2.9;
 	pixel_x = -1;
@@ -530,24 +477,11 @@
 	},
 /turf/open/floor/pod/dark,
 /area/ruin/powered)
-"bA" = (
+"br" = (
 /obj/machinery/suit_storage_unit/terror/hazard,
 /turf/open/floor/pod/dark,
 /area/ruin/powered)
-"bB" = (
-/turf/open/space,
-/area/bridge/bridge_dorms)
-"bC" = (
-/turf/open/floor/plasteel/terror/necro,
-/area/ruin/powered)
-"bD" = (
-/turf/open/floor/plasteel/terror/necro/neutral/side{
-	tag = "icon-neutral (EAST)";
-	icon_state = "neutral";
-	dir = 4
-	},
-/area/bridge/bridge_dorms)
-"bE" = (
+"bs" = (
 /obj/item/stack/sheet/metal{
 	amount = 2
 	},
@@ -558,13 +492,16 @@
 	},
 /turf/open/floor/plasteel/terror/necro,
 /area/ruin/powered)
-"bF" = (
+"bt" = (
+/turf/open/floor/plasteel/terror/necro,
+/area/ruin/powered)
+"bu" = (
 /obj/machinery/vending/coffee{
 	products = list(/obj/item/weapon/reagent_containers/food/drinks/coffee = 3, /obj/item/weapon/reagent_containers/food/drinks/mug/tea = 10, /obj/item/weapon/reagent_containers/food/drinks/mug/coco = 7)
 	},
 /turf/open/floor/plasteel/terror/necro/warning/corner,
 /area/ruin/powered)
-"bG" = (
+"bv" = (
 /obj/machinery/camera{
 	c_tag = "External";
 	dir = 4;
@@ -572,32 +509,30 @@
 	},
 /turf/open/indestructible/necropolis,
 /area/ruin/powered)
-"bH" = (
+"bw" = (
 /obj/item/device/radio,
 /turf/open/indestructible/necropolis,
 /area/ruin/powered)
-"bI" = (
-/obj/item/weapon/card/id/uac{
-	assignment = "Laboratory staff";
-	name = "Alex Parker (Laboratory staff)";
-	registered_name = "Alex Parker"
-	},
+"bx" = (
 /obj/effect/decal/cleanable/blood/old,
 /turf/open/floor/plasteel/terror/necro/darkwarning/outdoor{
 	dir = 8
 	},
 /area/ruin/powered)
-"bJ" = (
+"by" = (
 /obj/structure/firepit,
 /turf/open/floor/plasteel/terror/necro/black/outdoor,
 /area/ruin/powered)
-"bK" = (
+"bz" = (
+/turf/open/floor/plating/lavaland/outdoor/necropolis,
+/area/ruin/powered)
+"bA" = (
 /turf/open/floor/pod/light,
 /area/ruin/powered)
-"bL" = (
+"bB" = (
 /turf/open/floor/pod,
 /area/ruin/powered)
-"bM" = (
+"bC" = (
 /obj/structure/table,
 /obj/structure/window/reinforced{
 	tag = "icon-rwindow (EAST)";
@@ -611,14 +546,7 @@
 	dir = 8
 	},
 /area/ruin/powered)
-"bN" = (
-/turf/open/floor/plasteel/terror/necro/black,
-/area/ruin/powered)
-"bO" = (
-/obj/structure/table/reinforced,
-/turf/open/floor/plasteel/terror/necro/black,
-/area/bridge/bridge_dorms)
-"bP" = (
+"bD" = (
 /obj/effect/step_trigger/message{
 	message = "Ход завален... Нужно ждать, пока бездна откроет нижние этажи...";
 	name = "Level 1";
@@ -630,10 +558,11 @@
 	dir = 8
 	},
 /area/ruin/powered)
-"bQ" = (
+"bE" = (
 /obj/machinery/door/airlock/glass{
 	name = "Level 1 > 2";
-	req_access_txt = "200"
+	req_access_txt = "200";
+	welded = 1
 	},
 /obj/effect/step_trigger/message{
 	message = "После открыти\green шлюза, вы чувствуете порыв свежего воздуха, пропахшего кровью и порохом... Здесь что-то произошло. И кажетс совсем недавно...";
@@ -642,18 +571,14 @@
 	},
 /turf/open/floor/plasteel/terror/necro,
 /area/ruin/powered)
-"bR" = (
-/obj/item/ammo_casing/a646/no,
-/turf/open/floor/plasteel/terror/necro,
-/area/ruin/powered)
-"bS" = (
+"bF" = (
 /turf/open/floor/plasteel/terror/necro/warning{
 	tag = "icon-warning (EAST)";
 	icon_state = "warning";
 	dir = 4
 	},
 /area/ruin/powered)
-"bT" = (
+"bG" = (
 /obj/machinery/door/airlock/vault{
 	locked = 1;
 	name = "Laboratory HK-1";
@@ -662,14 +587,14 @@
 /obj/structure/fans/tiny/invisible,
 /turf/open/floor/plasteel/darkvault/delivary,
 /area/ruin/powered)
-"bU" = (
+"bH" = (
 /turf/open/floor/plasteel/terror/necro/blackvault{
 	tag = "icon-tvault (NORTH)";
 	icon_state = "tvault";
 	dir = 1
 	},
 /area/ruin/powered)
-"bV" = (
+"bI" = (
 /obj/machinery/light/small{
 	dir = 1;
 	pixel_x = 0
@@ -680,37 +605,27 @@
 	dir = 1
 	},
 /area/ruin/powered)
-"bW" = (
-/obj/item/ammo_casing/a646/no,
+"bJ" = (
 /turf/open/floor/plasteel/terror/necro/darkwarning/outdoor{
 	dir = 1
 	},
 /area/ruin/powered)
-"bX" = (
-/turf/open/floor/plasteel/terror/necro/darkwarning/outdoor{
-	dir = 1
-	},
-/area/ruin/powered)
-"bY" = (
-/obj/item/ammo_casing/a646/no,
+"bK" = (
 /turf/open/floor/plasteel/terror/necro/darkwarning/corner/outdoor{
 	tag = "icon-warndarkcorners (EAST)";
 	icon_state = "warndarkcorners";
 	dir = 4
 	},
 /area/ruin/powered)
-"bZ" = (
-/turf/open/floor/plating/lavaland/outdoor/necropolis,
-/area/ruin/powered)
-"ca" = (
+"bL" = (
 /obj/structure/chair/stool,
 /turf/open/floor/pod,
 /area/ruin/powered)
-"cb" = (
+"bM" = (
 /obj/machinery/light,
 /turf/open/floor/pod,
 /area/ruin/powered)
-"cc" = (
+"bN" = (
 /obj/structure/table,
 /obj/structure/window/reinforced{
 	tag = "icon-rwindow (EAST)";
@@ -724,35 +639,18 @@
 	dir = 8
 	},
 /area/ruin/powered)
-"cd" = (
-/turf/open/floor/plasteel/terror/necro/neutral/corner{
-	tag = "icon-neutralcorner (EAST)";
-	icon_state = "neutralcorner";
-	dir = 4
+"bO" = (
+/turf/open/floor/plasteel/terror/necro/stairs/bottom{
+	tag = "icon-rampbottom (WEST)";
+	icon_state = "rampbottom";
+	dir = 8
 	},
-/area/bridge/bridge_dorms)
-"ce" = (
-/obj/structure/chair,
-/turf/open/floor/plasteel/terror/necro/neutral/side{
-	tag = "icon-neutral (NORTH)";
-	icon_state = "neutral";
-	dir = 1
-	},
-/area/bridge/bridge_dorms)
-"cf" = (
-/obj/structure/chair,
-/turf/open/floor/plasteel/terror/necro/neutral/side{
-	tag = "icon-neutral (NORTHEAST)";
-	icon_state = "neutral";
-	dir = 5
-	},
-/area/bridge/bridge_dorms)
-"cg" = (
-/obj/item/ammo_casing/a646/no,
+/area/ruin/powered)
+"bP" = (
 /obj/effect/decal/cleanable/blood/old,
 /turf/open/floor/plasteel/terror/necro,
 /area/ruin/powered)
-"ch" = (
+"bQ" = (
 /obj/structure/door_assembly/door_assembly_vault{
 	density = 0;
 	name = "broken Laboratory HK-1"
@@ -771,10 +669,10 @@
 /obj/structure/fans/tiny/invisible,
 /turf/open/floor/plasteel/darkvault/delivary,
 /area/ruin/powered)
-"ci" = (
+"bR" = (
 /turf/open/floor/plasteel/terror/necro/darkvault,
 /area/ruin/powered)
-"cj" = (
+"bS" = (
 /obj/effect/decal/cleanable/blood/footprints{
 	tag = "icon-bloodclaw2 (WEST)";
 	icon_state = "bloodclaw2";
@@ -785,11 +683,9 @@
 	icon_state = "bloodclaw1";
 	dir = 8
 	},
-/obj/item/ammo_casing/a646/no,
-/obj/item/ammo_casing/a646/no,
 /turf/open/floor/plasteel/terror/necro/darkvault,
 /area/ruin/powered)
-"ck" = (
+"bT" = (
 /obj/item/weapon/shard,
 /obj/effect/decal/cleanable/blood/footprints{
 	tag = "icon-bloodclaw1 (WEST)";
@@ -810,11 +706,11 @@
 	dir = 8
 	},
 /area/ruin/powered)
-"cl" = (
+"bU" = (
 /obj/effect/decal/cleanable/blood/old,
 /turf/open/floor/plasteel/terror/necro/darkvault,
 /area/ruin/powered)
-"cm" = (
+"bV" = (
 /obj/structure/door_assembly/door_assembly_vault{
 	density = 0;
 	name = "broken Laboratory HK-1"
@@ -822,19 +718,14 @@
 /obj/structure/fans/tiny/invisible,
 /turf/open/floor/plasteel/darkvault/delivary,
 /area/ruin/powered)
-"cn" = (
+"bW" = (
 /obj/effect/decal/cleanable/robot_debris,
-/obj/item/ammo_casing/a646/no,
 /turf/open/floor/plasteel/terror/necro/darkwarning/outdoor,
 /area/ruin/powered)
-"co" = (
-/obj/item/ammo_casing/a646/no,
+"bX" = (
 /turf/open/floor/plasteel/terror/necro/darkwarning/outdoor,
 /area/ruin/powered)
-"cp" = (
-/turf/open/floor/plasteel/terror/necro/darkwarning/outdoor,
-/area/ruin/powered)
-"cq" = (
+"bY" = (
 /turf/open/floor/plasteel/terror/necro/darkwarning/outdoor{
 	tag = "icon-warndark (SOUTHEAST)";
 	icon_state = "warndark";
@@ -843,29 +734,7 @@
 	planetary_atmos = 1
 	},
 /area/ruin/powered)
-"cr" = (
-/obj/structure/chair/office/dark{
-	tag = "icon-officechair_dark (EAST)";
-	icon_state = "officechair_dark";
-	dir = 4
-	},
-/turf/open/floor/plasteel/terror/necro/black,
-/area/bridge/bridge_dorms)
-"cs" = (
-/turf/open/floor/plasteel/terror/necro/stairs/bottom{
-	tag = "icon-rampbottom (WEST)";
-	icon_state = "rampbottom";
-	dir = 8
-	},
-/area/bridge/bridge_dorms)
-"ct" = (
-/turf/open/floor/plasteel/terror/necro/stairs/top{
-	tag = "icon-ramptop (WEST)";
-	icon_state = "ramptop";
-	dir = 8
-	},
-/area/space)
-"cu" = (
+"bZ" = (
 /obj/structure/chair{
 	dir = 4
 	},
@@ -875,14 +744,14 @@
 	},
 /turf/open/floor/plasteel/terror/necro,
 /area/ruin/powered)
-"cv" = (
+"ca" = (
 /turf/open/floor/plasteel/terror/necro/warning/corner{
 	tag = "icon-warningcorner (WEST)";
 	icon_state = "warningcorner";
 	dir = 8
 	},
 /area/ruin/powered)
-"cw" = (
+"cb" = (
 /obj/structure/table/reinforced,
 /obj/item/weapon/shard,
 /obj/item/stack/rods,
@@ -897,26 +766,25 @@
 	dir = 8
 	},
 /area/ruin/powered)
-"cx" = (
+"cc" = (
 /obj/structure/sign/uac{
 	pixel_x = -32
 	},
+/obj/structure/mecha_wreckage/durand,
 /turf/open/indestructible/necropolis,
 /area/ruin/powered)
-"cy" = (
+"cd" = (
 /obj/machinery/vending/cigarette,
 /turf/open/floor/plasteel/terror/necro/red/corner,
 /area/ruin/powered)
-"cz" = (
-/obj/item/ammo_casing/a646/no,
-/obj/item/ammo_casing/a646/no,
+"ce" = (
 /turf/open/floor/plasteel/terror/necro/red/side,
 /area/ruin/powered)
-"cA" = (
+"cf" = (
 /obj/structure/closet/firecloset,
 /turf/open/floor/plasteel/terror/necro/red/side,
 /area/ruin/powered)
-"cB" = (
+"cg" = (
 /obj/item/stack/sheet/metal{
 	amount = 4
 	},
@@ -929,11 +797,10 @@
 	dir = 8
 	},
 /area/ruin/powered)
-"cC" = (
-/obj/item/ammo_casing/a646/no,
+"ch" = (
 /turf/open/floor/plasteel/terror/necro/black,
 /area/ruin/powered)
-"cD" = (
+"ci" = (
 /obj/machinery/health_scanner/wall{
 	dir = 8;
 	icon_state = "wallscan1";
@@ -948,20 +815,7 @@
 	},
 /turf/open/floor/plasteel/terror/necro/black,
 /area/ruin/powered)
-"cE" = (
-/turf/open/floor/plasteel/terror/necro/neutral/corner,
-/area/bridge/bridge_dorms)
-"cF" = (
-/turf/closed/indestructible/necropolis,
-/area/ruin/powered)
-"cG" = (
-/turf/open/chasm{
-	initial_gas_mix = "o2=14;n2=23;TEMP=300";
-	planetary_atmos = 1;
-	temperature = 300
-	},
-/area/ruin/powered)
-"cH" = (
+"cj" = (
 /obj/machinery/door/poddoor/big/preopen{
 	id = "lab_sec_lock";
 	layer = 2.6
@@ -972,30 +826,25 @@
 	},
 /turf/open/floor/plasteel/darkvault/delivary,
 /area/ruin/powered)
-"cI" = (
+"ck" = (
 /obj/machinery/door/airlock/glass_security{
 	name = "Laboratory Security";
 	req_access_txt = "200"
 	},
 /turf/open/floor/plasteel/darkvault/delivary,
 /area/ruin/powered)
-"cJ" = (
-/obj/item/ammo_casing/a646/no,
-/obj/item/ammo_casing/a646/no,
-/turf/open/floor/plasteel/terror/necro/black,
-/area/ruin/powered)
-"cK" = (
+"cl" = (
 /obj/structure/table,
 /obj/item/weapon/folder/blue,
 /turf/open/floor/plasteel/terror/necro/black,
 /area/ruin/powered)
-"cL" = (
+"cm" = (
 /obj/structure/filingcabinet/chestdrawer{
 	pixel_y = 2
 	},
 /turf/open/floor/plasteel/terror/necro/black,
 /area/ruin/powered)
-"cM" = (
+"cn" = (
 /obj/machinery/recharger/wallcharger{
 	pixel_x = 32
 	},
@@ -1005,16 +854,7 @@
 	},
 /turf/open/floor/plasteel/terror/necro/black,
 /area/ruin/powered)
-"cN" = (
-/turf/closed/wall/mineral/cult,
-/area/ruin/powered)
-"cO" = (
-/turf/open/floor/plasteel/terror/necro/cult/outdoor,
-/area/ruin/powered)
-"cP" = (
-/turf/open/space,
-/area/ruin/powered)
-"cQ" = (
+"co" = (
 /obj/machinery/computer/security{
 	name = "Laboratory Camera Console";
 	network = list("lab")
@@ -1025,7 +865,7 @@
 	dir = 8
 	},
 /area/ruin/powered)
-"cR" = (
+"cp" = (
 /obj/structure/filingcabinet/chestdrawer,
 /turf/open/floor/plasteel/terror/necro/darkvault{
 	tag = "icon-vault (WEST)";
@@ -1033,7 +873,7 @@
 	dir = 8
 	},
 /area/ruin/powered)
-"cS" = (
+"cq" = (
 /obj/structure/table/reinforced,
 /obj/structure/window/reinforced{
 	dir = 4
@@ -1048,43 +888,43 @@
 	dir = 8
 	},
 /area/ruin/powered)
-"cT" = (
+"cr" = (
 /turf/open/floor/plasteel/terror/necro/darkred/side{
 	tag = "icon-darkred (NORTH)";
 	icon_state = "darkred";
 	dir = 1
 	},
 /area/ruin/powered)
-"cU" = (
+"cs" = (
 /obj/structure/chair{
 	dir = 8
 	},
 /turf/open/floor/plasteel/terror/necro/black,
 /area/ruin/powered)
-"cV" = (
+"ct" = (
 /obj/machinery/door/airlock/centcom{
 	name = "Lobby Security Post";
 	req_access_txt = "202"
 	},
 /turf/open/floor/plasteel/terror/necro/black,
 /area/ruin/powered)
-"cW" = (
+"cu" = (
 /obj/effect/decal/cleanable/blood/old,
-/obj/item/ammo_casing/a646/no,
-/obj/item/ammo_casing/a646/no,
 /obj/machinery/light{
 	dir = 8;
 	icon_state = "tube-broken";
 	status = "_BROKEN"
 	},
+/obj/item/ammo_casing/a646/no,
+/obj/item/ammo_casing/a646/no,
 /turf/open/floor/plasteel/terror/necro/black,
 /area/ruin/powered)
-"cX" = (
+"cv" = (
 /obj/structure/chair/office/dark,
 /obj/item/ammo_casing/a646/no,
 /turf/open/floor/plasteel/terror/necro/black,
 /area/ruin/powered)
-"cY" = (
+"cw" = (
 /obj/structure/table/reinforced,
 /obj/item/weapon/shard,
 /obj/item/weapon/shard,
@@ -1099,7 +939,7 @@
 	dir = 8
 	},
 /area/ruin/powered)
-"cZ" = (
+"cx" = (
 /obj/structure/chair{
 	dir = 8
 	},
@@ -1112,32 +952,13 @@
 	dir = 8
 	},
 /area/ruin/powered)
-"da" = (
+"cy" = (
 /mob/living/simple_animal/mouse{
 	name = "Malrog"
 	},
 /turf/open/floor/plasteel/terror/necro/black,
 /area/ruin/powered)
-"db" = (
-/obj/item/weapon/paper{
-	info = "you're is not ready for hell, <b>COMING SOON</b>"
-	},
-/turf/open/floor/plasteel/terror/necro/cult/outdoor,
-/area/ruin/powered)
-"dc" = (
-/obj/effect/decal/cleanable/blood/old,
-/turf/open/floor/plasteel/terror/necro/cult/outdoor,
-/area/ruin/powered)
-"dd" = (
-/obj/item/ammo_casing/a646/no,
-/obj/item/ammo_casing/a646/no,
-/turf/open/floor/plasteel/terror/necro/cult/outdoor,
-/area/ruin/powered)
-"de" = (
-/obj/item/ammo_casing/a646/no,
-/turf/open/floor/plasteel/terror/necro/cult/outdoor,
-/area/ruin/powered)
-"df" = (
+"cz" = (
 /obj/machinery/recharger/wallcharger{
 	pixel_x = -32;
 	pixel_y = 0
@@ -1149,7 +970,7 @@
 	},
 /turf/open/floor/plasteel/terror/necro/black,
 /area/ruin/powered)
-"dg" = (
+"cA" = (
 /obj/effect/decal/cleanable/blood/tracks{
 	tag = "icon-tracks (NORTHEAST)";
 	icon_state = "tracks";
@@ -1157,7 +978,7 @@
 	},
 /turf/open/floor/plasteel/terror/necro/black,
 /area/ruin/powered)
-"dh" = (
+"cB" = (
 /obj/structure/table/reinforced,
 /obj/structure/window/reinforced{
 	dir = 4
@@ -1169,16 +990,10 @@
 	dir = 8
 	},
 /area/ruin/powered)
-"di" = (
-/obj/item/ammo_casing/a646/no,
-/obj/item/ammo_casing/a646/no,
+"cC" = (
 /turf/open/floor/plasteel/terror/necro/darkred/side,
 /area/ruin/powered)
-"dj" = (
-/obj/item/ammo_casing/a646/no,
-/turf/open/floor/plasteel/terror/necro/darkred/side,
-/area/ruin/powered)
-"dk" = (
+"cD" = (
 /obj/structure/closet/emcloset,
 /turf/open/floor/plasteel/terror/necro/darkvault{
 	tag = "icon-vault (WEST)";
@@ -1186,21 +1001,11 @@
 	dir = 8
 	},
 /area/ruin/powered)
-"dl" = (
+"cE" = (
 /obj/structure/closet/firecloset,
 /turf/open/floor/plasteel/terror/necro/black,
 /area/ruin/powered)
-"dm" = (
-/obj/item/ammo_casing/a646/no,
-/obj/item/ammo_casing/a646/no,
-/obj/item/ammo_casing/a646/no,
-/turf/open/floor/plasteel/terror/necro/cult/outdoor,
-/area/ruin/powered)
-"dn" = (
-/obj/structure/barricade/sandbags,
-/turf/open/floor/plasteel/terror/necro/cult/outdoor,
-/area/ruin/powered)
-"do" = (
+"cF" = (
 /obj/machinery/door/airlock/security{
 	name = "Security Lobby";
 	req_access_txt = "202"
@@ -1208,14 +1013,14 @@
 /obj/effect/decal/cleanable/blood/tracks,
 /turf/open/floor/plasteel/darkvault/delivary,
 /area/ruin/powered)
-"dp" = (
+"cG" = (
 /obj/machinery/door/airlock/security{
 	name = "Security Office";
 	req_access_txt = "202"
 	},
 /turf/open/floor/plasteel/darkvault/delivary,
 /area/ruin/powered)
-"dq" = (
+"cH" = (
 /obj/effect/step_trigger/message{
 	message = "От этого места веет холодом и смертью... Вы понимаете. что живым здесь не место...";
 	name = "lobby";
@@ -1228,16 +1033,7 @@
 	},
 /turf/open/indestructible/necropolis,
 /area/ruin/powered)
-"dr" = (
-/obj/structure{
-	icon = 'icons/obj/cult.dmi';
-	icon_state = "pylon";
-	luminosity = 5;
-	name = "pylon"
-	},
-/turf/open/floor/plasteel/terror/necro/cult/outdoor,
-/area/ruin/powered)
-"ds" = (
+"cI" = (
 /obj/structure/table,
 /obj/machinery/syndicatebomb/training,
 /turf/open/floor/plasteel/terror/necro/darkred/side{
@@ -1246,7 +1042,7 @@
 	dir = 8
 	},
 /area/ruin/powered)
-"dt" = (
+"cJ" = (
 /obj/effect/decal/cleanable/blood/tracks{
 	tag = "icon-tracks (SOUTHWEST)";
 	icon_state = "tracks";
@@ -1254,7 +1050,7 @@
 	},
 /turf/open/floor/plasteel/terror/necro/black,
 /area/ruin/powered)
-"du" = (
+"cK" = (
 /obj/effect/decal/cleanable/blood/tracks{
 	tag = "icon-tracks (NORTHEAST)";
 	icon_state = "tracks";
@@ -1266,7 +1062,7 @@
 	dir = 4
 	},
 /area/ruin/powered)
-"dv" = (
+"cL" = (
 /obj/machinery/vending/snack{
 	products = list(/obj/item/weapon/reagent_containers/food/snacks/candy = 2, /obj/item/weapon/reagent_containers/food/drinks/dry_ramen = 1, /obj/item/weapon/reagent_containers/food/snacks/chips = 0, /obj/item/weapon/reagent_containers/food/snacks/sosjerky = 1, /obj/item/weapon/reagent_containers/food/snacks/no_raisin = 1, /obj/item/weapon/reagent_containers/food/snacks/spacetwinkie = 2, /obj/item/weapon/reagent_containers/food/snacks/cheesiehonkers = 0)
 	},
@@ -1276,7 +1072,7 @@
 	dir = 8
 	},
 /area/ruin/powered)
-"dw" = (
+"cM" = (
 /obj/machinery/vending/coffee{
 	products = list(/obj/item/weapon/reagent_containers/food/drinks/coffee = 3, /obj/item/weapon/reagent_containers/food/drinks/mug/tea = 10, /obj/item/weapon/reagent_containers/food/drinks/mug/coco = 7)
 	},
@@ -1289,7 +1085,10 @@
 	dir = 8
 	},
 /area/ruin/powered)
-"dx" = (
+"cN" = (
+/turf/open/floor/plasteel/terror/necro/darkred/corner,
+/area/ruin/powered)
+"cO" = (
 /obj/machinery/recharge_station,
 /turf/open/floor/plasteel{
 	dir = 8;
@@ -1297,7 +1096,7 @@
 	tag = "icon-vault (WEST)"
 	},
 /area/ruin/powered)
-"dy" = (
+"cP" = (
 /obj/structure/table,
 /obj/item/weapon/folder/blue,
 /turf/open/floor/plasteel{
@@ -1306,7 +1105,7 @@
 	tag = "icon-vault (WEST)"
 	},
 /area/ruin/powered)
-"dz" = (
+"cQ" = (
 /obj/machinery/photocopier{
 	pixel_y = 3
 	},
@@ -1316,7 +1115,7 @@
 	tag = "icon-vault (WEST)"
 	},
 /area/ruin/powered)
-"dA" = (
+"cR" = (
 /obj/item/weapon/screwdriver{
 	pixel_y = 12
 	},
@@ -1329,14 +1128,14 @@
 	dir = 8
 	},
 /area/ruin/powered)
-"dB" = (
+"cS" = (
 /turf/open/floor/plasteel/terror/necro/darkred/corner{
 	tag = "icon-darkredcorners (WEST)";
 	icon_state = "darkredcorners";
 	dir = 8
 	},
 /area/ruin/powered)
-"dC" = (
+"cT" = (
 /obj/effect/decal/cleanable/blood/tracks{
 	tag = "icon-tracks (WEST)";
 	icon_state = "tracks";
@@ -1344,7 +1143,7 @@
 	},
 /turf/open/floor/plasteel/terror/necro/black,
 /area/ruin/powered)
-"dD" = (
+"cU" = (
 /obj/effect/decal/cleanable/blood/tracks{
 	tag = "icon-tracks (WEST)";
 	icon_state = "tracks";
@@ -1356,7 +1155,7 @@
 	dir = 4
 	},
 /area/ruin/powered)
-"dE" = (
+"cV" = (
 /obj/machinery/door/airlock/security{
 	name = "Armory post";
 	req_access_txt = "202"
@@ -1368,7 +1167,7 @@
 	},
 /turf/open/floor/plasteel/darkvault/delivary,
 /area/ruin/powered)
-"dF" = (
+"cW" = (
 /obj/effect/decal/cleanable/blood/tracks{
 	tag = "icon-tracks (WEST)";
 	icon_state = "tracks";
@@ -1380,7 +1179,7 @@
 	dir = 8
 	},
 /area/ruin/powered)
-"dG" = (
+"cX" = (
 /obj/structure/closet/l3closet/security,
 /turf/open/floor/plasteel/terror/necro/darkvault{
 	tag = "icon-vault (WEST)";
@@ -1388,12 +1187,12 @@
 	dir = 8
 	},
 /area/ruin/powered)
-"dH" = (
+"cY" = (
 /turf/open/floor/plasteel/terror/necro/cult/outdoor{
 	icon_state = "cultdamage"
 	},
 /area/ruin/powered)
-"dI" = (
+"cZ" = (
 /obj/machinery/recharger/wallcharger{
 	pixel_x = -32;
 	pixel_y = 0
@@ -1404,14 +1203,14 @@
 	dir = 8
 	},
 /area/ruin/powered)
-"dJ" = (
+"da" = (
 /turf/open/floor/plasteel/terror/necro/darkred/corner{
 	tag = "icon-darkredcorners (EAST)";
 	icon_state = "darkredcorners";
 	dir = 4
 	},
 /area/ruin/powered)
-"dK" = (
+"db" = (
 /obj/structure/filingcabinet/chestdrawer{
 	pixel_y = 2
 	},
@@ -1421,11 +1220,11 @@
 	dir = 1
 	},
 /area/ruin/powered)
-"dL" = (
+"dc" = (
 /obj/effect/decal/cleanable/blood/tracks,
 /turf/open/floor/plasteel/terror/necro/black,
 /area/ruin/powered)
-"dM" = (
+"dd" = (
 /obj/structure/closet/bombcloset,
 /turf/open/floor/plasteel/terror/necro/darkvault{
 	tag = "icon-vault (WEST)";
@@ -1433,7 +1232,7 @@
 	dir = 8
 	},
 /area/ruin/powered)
-"dN" = (
+"de" = (
 /obj/machinery/light{
 	dir = 8
 	},
@@ -1444,18 +1243,18 @@
 	dir = 8
 	},
 /area/ruin/powered)
-"dO" = (
+"df" = (
 /obj/structure/chair{
 	dir = 4
 	},
 /turf/open/floor/plasteel/terror/necro/darkred/corner,
 /area/ruin/powered)
-"dP" = (
+"dg" = (
 /obj/structure/table/reinforced,
 /obj/item/weapon/folder/blue,
 /turf/open/floor/plasteel/terror/necro/darkred/corner,
 /area/ruin/powered)
-"dQ" = (
+"dh" = (
 /obj/structure/table/reinforced,
 /obj/item/weapon/paper_bin{
 	pixel_x = -3;
@@ -1468,7 +1267,7 @@
 	dir = 8
 	},
 /area/ruin/powered)
-"dR" = (
+"di" = (
 /obj/structure/chair{
 	dir = 8
 	},
@@ -1478,7 +1277,7 @@
 	dir = 8
 	},
 /area/ruin/powered)
-"dS" = (
+"dj" = (
 /obj/structure/table/reinforced,
 /obj/machinery/door/window/westleft{
 	req_access_txt = "202"
@@ -1492,7 +1291,7 @@
 	dir = 8
 	},
 /area/ruin/powered)
-"dT" = (
+"dk" = (
 /obj/structure/chair/office/dark{
 	tag = "icon-officechair_dark (WEST)";
 	icon_state = "officechair_dark";
@@ -1500,7 +1299,7 @@
 	},
 /turf/open/floor/plasteel/terror/necro/black,
 /area/ruin/powered)
-"dU" = (
+"dl" = (
 /obj/structure/table,
 /obj/machinery/recharger,
 /obj/machinery/light{
@@ -1509,12 +1308,12 @@
 	},
 /turf/open/floor/plasteel/terror/necro/black,
 /area/ruin/powered)
-"dV" = (
+"dm" = (
 /turf/open/floor/plasteel/terror/necro/cult/outdoor{
 	icon_state = "cultdamage4"
 	},
 /area/ruin/powered)
-"dW" = (
+"dn" = (
 /obj/machinery/vending/security{
 	products = list(/obj/item/weapon/restraints/handcuffs = 1, /obj/item/weapon/restraints/handcuffs/cable/zipties = 0, /obj/item/weapon/grenade/flashbang = 2, /obj/item/device/assembly/flash/handheld = 1, /obj/item/weapon/reagent_containers/food/snacks/donut = 4, /obj/item/weapon/storage/box/evidence = 1, /obj/item/device/flashlight/seclite = 3, /obj/item/weapon/restraints/legcuffs/bola/energy = 0);
 	req_access_txt = "202"
@@ -1525,12 +1324,12 @@
 	dir = 8
 	},
 /area/ruin/powered)
-"dX" = (
+"do" = (
 /obj/structure/table/reinforced,
 /obj/machinery/cell_charger,
 /turf/open/floor/plasteel/terror/necro/darkred/corner,
 /area/ruin/powered)
-"dY" = (
+"dp" = (
 /obj/structure/table/reinforced,
 /turf/open/floor/plasteel/terror/necro/darkred/corner{
 	tag = "icon-darkredcorners (WEST)";
@@ -1538,18 +1337,18 @@
 	dir = 8
 	},
 /area/ruin/powered)
-"dZ" = (
+"dq" = (
 /obj/machinery/recharge_station,
 /turf/open/floor/plasteel/terror/necro/darkred/corner,
 /area/ruin/powered)
-"ea" = (
+"dr" = (
 /obj/machinery/computer/security{
 	name = "Laboratory Camera Console";
 	network = list("lab")
 	},
 /turf/open/floor/plasteel/terror/necro/black,
 /area/ruin/powered)
-"eb" = (
+"ds" = (
 /obj/structure/table,
 /obj/item/weapon/paper_bin{
 	pixel_x = -3;
@@ -1564,7 +1363,7 @@
 	},
 /turf/open/floor/plasteel/terror/necro/black,
 /area/ruin/powered)
-"ec" = (
+"dt" = (
 /obj/structure{
 	color = "red";
 	icon = 'icons/obj/stationobjs.dmi';
@@ -1573,7 +1372,7 @@
 	},
 /turf/open/floor/plasteel/terror/necro/cult/outdoor,
 /area/ruin/powered)
-"ed" = (
+"du" = (
 /obj/structure{
 	color = "red";
 	icon = 'icons/obj/stationobjs.dmi';
@@ -1584,14 +1383,14 @@
 	icon_state = "cultdamage5"
 	},
 /area/ruin/powered)
-"ee" = (
+"dv" = (
 /obj/machinery/door/airlock/security{
 	name = "Barracks";
 	req_access_txt = "202"
 	},
 /turf/open/floor/plasteel/darkvault/delivary,
 /area/ruin/powered)
-"ef" = (
+"dw" = (
 /obj/machinery/door/airlock/security{
 	name = "Armory";
 	req_access_txt = "202"
@@ -1602,23 +1401,7 @@
 /obj/effect/decal/cleanable/blood/tracks,
 /turf/open/floor/plasteel/terror/necro/black,
 /area/ruin/powered)
-"eg" = (
-/turf/open/floor/plasteel/terror/necro/darkwarning/outdoor{
-	tag = "icon-warndark (WEST)";
-	icon_state = "warndark";
-	dir = 8;
-	baseturf = /turf/open/chasm/straight_down/lava_land_surface;
-	planetary_atmos = 1
-	},
-/area/ruin/powered)
-"eh" = (
-/obj/item/ammo_casing/a646/no,
-/turf/open/floor/plasteel/terror/necro/black/outdoor{
-	baseturf = /turf/open/chasm/straight_down/lava_land_surface;
-	planetary_atmos = 1
-	},
-/area/ruin/powered)
-"ei" = (
+"dx" = (
 /obj/structure/closet,
 /turf/open/floor/plasteel/terror/necro/darkvault{
 	tag = "icon-vault (WEST)";
@@ -1626,7 +1409,7 @@
 	dir = 8
 	},
 /area/ruin/powered)
-"ej" = (
+"dy" = (
 /obj/structure/bed,
 /obj/item/weapon/bedsheet/red,
 /turf/open/floor/plasteel/terror/necro/darkred/side{
@@ -1635,7 +1418,7 @@
 	dir = 4
 	},
 /area/ruin/powered)
-"ek" = (
+"dz" = (
 /obj/structure/rack,
 /obj/item/weapon/gun/energy/taser,
 /turf/open/floor/plasteel/terror/necro/darkred/side{
@@ -1644,7 +1427,7 @@
 	dir = 8
 	},
 /area/ruin/powered)
-"el" = (
+"dA" = (
 /obj/structure/rack,
 /obj/item/weapon/gun/ballistic/automatic/mg88{
 	pixel_x = -3;
@@ -1656,7 +1439,7 @@
 	dir = 4
 	},
 /area/ruin/powered)
-"em" = (
+"dB" = (
 /obj/structure/rack,
 /turf/open/floor/plasteel/terror/necro/darkred/side{
 	tag = "icon-darkred (NORTH)";
@@ -1664,24 +1447,7 @@
 	dir = 1
 	},
 /area/ruin/powered)
-"en" = (
-/turf/open/floor/plasteel/terror/necro/black/outdoor{
-	baseturf = /turf/open/chasm/straight_down/lava_land_surface;
-	planetary_atmos = 1
-	},
-/area/ruin/powered)
-"eo" = (
-/obj/item/ammo_casing/a646/no,
-/obj/item/ammo_casing/a646/no,
-/turf/open/floor/plasteel/terror/necro/darkwarning/outdoor{
-	tag = "icon-warndark (EAST)";
-	icon_state = "warndark";
-	dir = 4;
-	baseturf = /turf/open/chasm/straight_down/lava_land_surface;
-	planetary_atmos = 1
-	},
-/area/ruin/powered)
-"ep" = (
+"dC" = (
 /obj/structure/rack,
 /obj/machinery/light{
 	icon_state = "tube1";
@@ -1693,7 +1459,7 @@
 	dir = 8
 	},
 /area/ruin/powered)
-"eq" = (
+"dD" = (
 /obj/effect/decal/cleanable/blood/tracks{
 	tag = "icon-tracks (EAST)";
 	icon_state = "tracks";
@@ -1701,30 +1467,16 @@
 	},
 /turf/open/floor/plasteel/terror/necro/black,
 /area/ruin/powered)
-"er" = (
+"dE" = (
 /obj/effect/decal/remains/human,
-/obj/item/weapon/card/id/uac{
-	access = list(202);
-	assignment = "Laboratory Security";
-	name = "Markus Shepard (Laboratory Security)";
-	registered_name = "Markus Shepard"
-	},
 /obj/effect/decal/cleanable/blood/old,
 /turf/open/floor/plasteel/terror/necro/black,
 /area/ruin/powered)
-"es" = (
-/obj/effect/decal/fakelattice,
-/turf/open/chasm{
-	initial_gas_mix = "o2=14;n2=23;TEMP=300";
-	planetary_atmos = 1;
-	temperature = 300
-	},
-/area/ruin/powered)
-"et" = (
+"dF" = (
 /obj/machinery/light,
 /turf/open/floor/plasteel/terror/necro/black,
 /area/ruin/powered)
-"eu" = (
+"dG" = (
 /obj/structure/table,
 /obj/machinery/recharger,
 /turf/open/floor/plasteel/terror/necro/darkred/side{
@@ -1733,11 +1485,11 @@
 	dir = 8
 	},
 /area/ruin/powered)
-"ev" = (
+"dH" = (
 /obj/structure/rack,
 /turf/open/floor/plasteel/terror/necro/darkred/corner,
 /area/ruin/powered)
-"ew" = (
+"dI" = (
 /obj/structure/rack,
 /obj/item/ammo_box/magazine/m45{
 	pixel_x = -3;
@@ -1745,31 +1497,1333 @@
 	},
 /turf/open/floor/plasteel/terror/necro/darkred/side,
 /area/ruin/powered)
-"ex" = (
-/obj/effect/decal/cleanable/blood/old,
-/turf/open/floor/plasteel/terror/necro/darkwarning/outdoor{
-	tag = "icon-warndark (EAST)";
-	icon_state = "warndark";
+"dJ" = (
+/obj/structure/lattice,
+/turf/open/space,
+/area/space)
+"dK" = (
+/obj/structure/lattice,
+/obj/structure/grille,
+/turf/open/space,
+/area/space)
+"dL" = (
+/turf/closed/wall,
+/area/maintenance/asmaint)
+"dM" = (
+/obj/structure/grille/broken,
+/obj/structure/lattice,
+/turf/open/space,
+/area/space)
+"dN" = (
+/turf/closed/wall/r_wall,
+/area/medical/virology)
+"dO" = (
+/obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/poddoor/shutters/preopen{
+	dir = 1;
+	id = "virus_ebola_space"
+	},
+/turf/open/floor/plating,
+/area/medical/virology)
+"dP" = (
+/obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/poddoor/shutters/corner/opeopen{
 	dir = 4;
-	baseturf = /turf/open/chasm/straight_down/lava_land_surface;
-	planetary_atmos = 1
+	icon_state = "open";
+	id = "virus_ebola_space";
+	tag = "icon-open (EAST)"
 	},
-/area/ruin/powered)
-"ey" = (
-/turf/closed/wall/r_wall{
-	baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
+/turf/open/floor/plating,
+/area/medical/virology)
+"dQ" = (
+/mob/living/carbon/monkey,
+/turf/open/floor/plasteel{
+	icon_state = "freezerfloor"
 	},
-/area/ruin/powered)
-"ez" = (
-/turf/open/floor/plasteel/terror/necro/stairs/bottom{
-	tag = "icon-rampbottom (WEST)";
-	icon_state = "rampbottom";
+/area/medical/virology)
+"dR" = (
+/obj/machinery/atmospherics/components/unary/vent_scrubber{
+	on = 1;
+	scrub_N2O = 0;
+	scrub_Toxins = 0
+	},
+/turf/open/floor/plasteel{
+	icon_state = "freezerfloor"
+	},
+/area/medical/virology)
+"dS" = (
+/obj/machinery/atmospherics/components/unary/vent_pump{
+	on = 1
+	},
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/open/floor/plasteel{
+	icon_state = "freezerfloor"
+	},
+/area/medical/virology)
+"dT" = (
+/obj/machinery/requests_console{
+	department = "Virology Lab";
+	departmentType = 0;
+	name = "Virology RC";
+	pixel_x = 0;
+	pixel_y = 32
+	},
+/obj/structure/table/glass,
+/obj/item/weapon/storage/box/beakers{
+	pixel_x = 2;
+	pixel_y = 2
+	},
+/obj/item/weapon/storage/box/syringes,
+/obj/machinery/light{
 	dir = 8
 	},
-/area/ruin/powered)
+/obj/machinery/button/door{
+	id = "virus_ebola_space";
+	name = "Virology Space Lockdown";
+	pixel_x = -28;
+	pixel_y = 5
+	},
+/obj/machinery/button/door{
+	id = "virus_ebola";
+	name = "Virology Lock";
+	pixel_x = -28;
+	pixel_y = -5
+	},
+/turf/open/floor/plasteel/warnwhite/corner,
+/area/medical/virology)
+"dU" = (
+/obj/structure/table/glass,
+/obj/machinery/reagentgrinder{
+	pixel_y = 8
+	},
+/turf/open/floor/plasteel/warnwhite,
+/area/medical/virology)
+"dV" = (
+/obj/machinery/smartfridge/chemistry/virology,
+/obj/machinery/status_display{
+	pixel_y = 32
+	},
+/turf/open/floor/plasteel/warnwhite,
+/area/medical/virology)
+"dW" = (
+/obj/structure/reagent_dispensers/virusfood{
+	density = 0;
+	pixel_x = 0;
+	pixel_y = 30
+	},
+/obj/structure/table/glass,
+/obj/item/weapon/book/manual/wiki/infections,
+/obj/item/weapon/reagent_containers/syringe/antiviral,
+/obj/item/weapon/reagent_containers/dropper,
+/obj/item/weapon/reagent_containers/spray/cleaner,
+/turf/open/floor/plasteel/warnwhite,
+/area/medical/virology)
+"dX" = (
+/obj/structure/table/glass,
+/obj/item/clothing/gloves/color/latex,
+/obj/item/device/healthanalyzer,
+/obj/item/clothing/glasses/hud/health,
+/turf/open/floor/plasteel/warnwhite/corner{
+	dir = 1
+	},
+/area/medical/virology)
+"dY" = (
+/obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/poddoor/shutters/preopen{
+	dir = 4;
+	id = "virus_ebola_space"
+	},
+/turf/open/floor/plating,
+/area/medical/virology)
+"dZ" = (
+/turf/open/floor/plasteel{
+	icon_state = "freezerfloor"
+	},
+/area/medical/virology)
+"ea" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/mob/living/carbon/monkey,
+/turf/open/floor/plasteel{
+	icon_state = "freezerfloor"
+	},
+/area/medical/virology)
+"eb" = (
+/obj/effect/landmark{
+	name = "blobstart"
+	},
+/turf/open/floor/plasteel{
+	icon_state = "freezerfloor"
+	},
+/area/medical/virology)
+"ec" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/mob/living/carbon/monkey,
+/turf/open/floor/plasteel{
+	icon_state = "freezerfloor"
+	},
+/area/medical/virology)
+"ed" = (
+/obj/structure/cable/yellow{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/obj/machinery/door/firedoor{
+	icon = 'icons/obj/doors/DoorHazard.dmi';
+	name = "hazardlock";
+	opacity = 0
+	},
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/medical/virology)
+"ee" = (
+/obj/structure/table/glass,
+/obj/item/weapon/folder/white,
+/obj/item/weapon/pen/red,
+/obj/item/stack/sheet/mineral/plasma{
+	amount = 5
+	},
+/turf/open/floor/plasteel/warnwhite{
+	dir = 4
+	},
+/area/medical/virology)
+"ef" = (
+/obj/structure/chair/office/light,
+/turf/open/floor/plasteel/whitegreen/side{
+	dir = 8
+	},
+/area/medical/virology)
+"eg" = (
+/turf/open/floor/plasteel/white,
+/area/medical/virology)
+"eh" = (
+/obj/structure/chair/office/light,
+/turf/open/floor/plasteel/whitegreen/side{
+	dir = 4
+	},
+/area/medical/virology)
+"ei" = (
+/obj/structure/table/glass,
+/turf/open/floor/plasteel/warnwhite{
+	dir = 8
+	},
+/area/medical/virology)
+"ej" = (
+/turf/closed/wall,
+/area/medical/virology)
+"ek" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/obj/structure/cable/yellow{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/firedoor{
+	icon = 'icons/obj/doors/DoorHazard.dmi';
+	name = "hazardlock";
+	opacity = 0
+	},
+/turf/open/floor/plating,
+/area/medical/virology)
+"el" = (
+/obj/machinery/door/firedoor{
+	icon = 'icons/obj/doors/DoorHazard.dmi';
+	name = "hazardlock";
+	opacity = 0
+	},
+/obj/machinery/door/airlock/glass_virology{
+	name = "Test Subject Cell";
+	req_access_txt = "39"
+	},
+/turf/open/floor/plasteel{
+	icon_state = "freezerfloor"
+	},
+/area/medical/virology)
+"em" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/structure/cable/yellow{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/firedoor{
+	icon = 'icons/obj/doors/DoorHazard.dmi';
+	name = "hazardlock";
+	opacity = 0
+	},
+/turf/open/floor/plating,
+/area/medical/virology)
+"en" = (
+/obj/structure/table/glass,
+/obj/item/weapon/paper_bin,
+/obj/machinery/airalarm{
+	dir = 4;
+	locked = 0;
+	pixel_x = -23;
+	pixel_y = 0
+	},
+/turf/open/floor/plasteel/warnwhite{
+	dir = 4
+	},
+/area/medical/virology)
+"eo" = (
+/turf/open/floor/plasteel/whitegreen/side{
+	dir = 8
+	},
+/area/medical/virology)
+"ep" = (
+/obj/machinery/disposal/bin,
+/turf/open/floor/plasteel/whitebot,
+/area/medical/virology)
+"eq" = (
+/turf/open/floor/plasteel/whitegreen/side{
+	dir = 4
+	},
+/area/medical/virology)
+"er" = (
+/obj/machinery/camera{
+	c_tag = "Virology - Lab";
+	dir = 8;
+	network = list("SS13","Medbay")
+	},
+/obj/item/device/radio/intercom{
+	pixel_x = 28;
+	pixel_y = 0
+	},
+/obj/machinery/computer/pandemic,
+/turf/open/floor/plasteel/warnwhite{
+	dir = 8
+	},
+/area/medical/virology)
+"es" = (
+/obj/item/device/radio/intercom{
+	pixel_x = -28;
+	pixel_y = 0
+	},
+/obj/structure/table/glass,
+/obj/item/weapon/hand_labeler,
+/obj/item/device/radio/headset/headset_med,
+/obj/machinery/airalarm{
+	frequency = 1439;
+	pixel_y = 23
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 6
+	},
+/obj/machinery/camera{
+	c_tag = "Virology - Cells";
+	dir = 4;
+	network = list("SS13","Medbay")
+	},
+/turf/open/floor/plasteel/whitegreen/side{
+	dir = 9
+	},
+/area/medical/virology)
+"et" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
+	},
+/obj/machinery/iv_drip,
+/turf/open/floor/plasteel/whitegreen/side{
+	dir = 1
+	},
+/area/medical/virology)
+"eu" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
+	},
+/turf/open/floor/plasteel/whitegreen/side{
+	dir = 1
+	},
+/area/medical/virology)
+"ev" = (
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/manifold/supply/hidden{
+	dir = 2
+	},
+/obj/item/weapon/twohanded/required/kirbyplants{
+	icon_state = "plant-21";
+	layer = 4.1
+	},
+/turf/open/floor/plasteel/whitegreen/side{
+	dir = 1
+	},
+/area/medical/virology)
+"ew" = (
+/obj/structure/rack,
+/obj/item/weapon/crowbar/red,
+/obj/machinery/light_switch{
+	pixel_x = 0;
+	pixel_y = 26
+	},
+/obj/item/weapon/wrench,
+/obj/item/weapon/restraints/handcuffs,
+/obj/machinery/atmospherics/pipe/manifold/supply/hidden{
+	dir = 1
+	},
+/turf/open/floor/plasteel/whitegreen/side{
+	dir = 5
+	},
+/area/medical/virology)
+"ex" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
+	},
+/obj/machinery/door/firedoor{
+	icon = 'icons/obj/doors/DoorHazard.dmi';
+	name = "hazardlock";
+	opacity = 0
+	},
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/medical/virology)
+"ey" = (
+/obj/item/weapon/twohanded/required/kirbyplants{
+	icon_state = "plant-10";
+	layer = 4.1
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
+	},
+/turf/open/floor/plasteel/warnwhite{
+	dir = 6
+	},
+/area/medical/virology)
+"ez" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
+	},
+/turf/open/floor/plasteel/whitegreen/corner{
+	dir = 1
+	},
+/area/medical/virology)
 "eA" = (
-/turf/open/floor/plasteel/terror/necro/darkred/corner,
-/area/ruin/powered)
+/obj/machinery/atmospherics/pipe/manifold/supply/hidden{
+	dir = 1
+	},
+/turf/open/floor/plasteel/white,
+/area/medical/virology)
+"eB" = (
+/obj/machinery/atmospherics/pipe/manifold/supply/hidden{
+	dir = 1
+	},
+/turf/open/floor/plasteel/whitegreen/corner{
+	dir = 4
+	},
+/area/medical/virology)
+"eC" = (
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 27;
+	pixel_y = 0
+	},
+/obj/structure/filingcabinet/chestdrawer,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
+	},
+/turf/open/floor/plasteel/warnwhite{
+	tag = "icon-white_warn (SOUTHWEST)";
+	icon_state = "white_warn";
+	dir = 10
+	},
+/area/medical/virology)
+"eD" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
+	},
+/turf/closed/wall/r_wall,
+/area/medical/virology)
+"eE" = (
+/obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
+	},
+/obj/machinery/door/poddoor/shutters/preopen{
+	dir = 1;
+	id = "virus_ebola_space"
+	},
+/turf/open/floor/plating,
+/area/medical/virology)
+"eF" = (
+/obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/poddoor/shutters/preopen{
+	dir = 8;
+	id = "virus_ebola_space"
+	},
+/turf/open/floor/plating,
+/area/medical/virology)
+"eG" = (
+/obj/structure/table/glass,
+/obj/item/weapon/folder/white,
+/obj/item/weapon/folder/white,
+/obj/item/weapon/pen/red,
+/obj/structure/cable/yellow{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/turf/open/floor/plasteel/whitegreen/side{
+	dir = 8
+	},
+/area/medical/virology)
+"eH" = (
+/obj/structure/chair/office/light{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/open/floor/plasteel/white,
+/area/medical/virology)
+"eI" = (
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/effect/landmark/event_spawn,
+/turf/open/floor/plasteel/white,
+/area/medical/virology)
+"eJ" = (
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/open/floor/plasteel/white,
+/area/medical/virology)
+"eK" = (
+/obj/structure/cable/yellow{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/turf/open/floor/plasteel/whitegreen/side{
+	dir = 4
+	},
+/area/medical/virology)
+"eL" = (
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/door/firedoor{
+	icon = 'icons/obj/doors/DoorHazard.dmi';
+	name = "hazardlock";
+	opacity = 0
+	},
+/obj/machinery/door/airlock/glass_virology{
+	name = "Containment Cells";
+	req_access_txt = "39"
+	},
+/turf/open/floor/plasteel/whitegreen,
+/area/medical/virology)
+"eM" = (
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/cable/yellow{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/turf/open/floor/plasteel/whitegreen/side{
+	dir = 8
+	},
+/area/medical/virology)
+"eN" = (
+/obj/machinery/atmospherics/components/unary/vent_scrubber{
+	on = 1;
+	scrub_N2O = 0;
+	scrub_Toxins = 0
+	},
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/open/floor/plasteel/white,
+/area/medical/virology)
+"eO" = (
+/obj/machinery/holopad,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	req_access_txt = 1
+	},
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/open/floor/plasteel/white,
+/area/medical/virology)
+"eP" = (
+/obj/machinery/atmospherics/components/unary/vent_pump{
+	dir = 1;
+	on = 1
+	},
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/open/floor/plasteel/white,
+/area/medical/virology)
+"eQ" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	tag = "icon-intact (SOUTHEAST)";
+	icon_state = "intact";
+	dir = 6
+	},
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/open/floor/plasteel/whitegreen/side{
+	dir = 4
+	},
+/area/medical/virology)
+"eR" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 4
+	},
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/door/airlock/virology{
+	name = "Virology Access";
+	req_access_txt = "39"
+	},
+/turf/open/floor/plasteel/whitegreen,
+/area/medical/virology)
+"eS" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 4
+	},
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/open/floor/plasteel/stairsnew{
+	tag = "icon-medstairs_alone (WEST)";
+	icon_state = "medstairs_alone";
+	dir = 8
+	},
+/area/medical/virology)
+"eT" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 4
+	},
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/open/floor/plasteel/white,
+/area/medical/virology)
+"eU" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 4
+	},
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/doorButtons/airlock_controller{
+	idExterior = "virology_airlock_exterior";
+	idSelf = "virology_airlock_control";
+	idInterior = "virology_airlock_interior";
+	name = "Virology Access Console";
+	pixel_x = 26;
+	pixel_y = 26;
+	req_access_txt = "39"
+	},
+/turf/open/floor/plasteel/whitegreen/side{
+	dir = 4
+	},
+/area/medical/virology)
+"eV" = (
+/obj/structure/table/glass,
+/obj/item/weapon/paper_bin,
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -25;
+	pixel_y = 0
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/turf/open/floor/plasteel/whitegreen/side{
+	dir = 10
+	},
+/area/medical/virology)
+"eW" = (
+/obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden{
+	dir = 8
+	},
+/turf/open/floor/plasteel/whitegreen/side,
+/area/medical/virology)
+"eX" = (
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -24
+	},
+/obj/machinery/light,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 4
+	},
+/turf/open/floor/plasteel/whitegreen/side,
+/area/medical/virology)
+"eY" = (
+/obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden{
+	dir = 1
+	},
+/turf/open/floor/plasteel/whitegreen/side,
+/area/medical/virology)
+"eZ" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 4
+	},
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/structure/sink{
+	dir = 4;
+	icon_state = "sink";
+	pixel_x = 11;
+	pixel_y = 0
+	},
+/turf/open/floor/plasteel/whitegreen/side{
+	dir = 6
+	},
+/area/medical/virology)
+"fa" = (
+/obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden{
+	dir = 1;
+	initialize_directions = 13
+	},
+/obj/machinery/door/firedoor{
+	icon = 'icons/obj/doors/DoorHazard.dmi';
+	name = "hazardlock";
+	opacity = 0
+	},
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/medical/virology)
+"fb" = (
+/obj/machinery/iv_drip,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 4
+	},
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/open/floor/plasteel/warning{
+	dir = 5
+	},
+/area/medical/virology)
+"fc" = (
+/obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden,
+/turf/open/floor/plasteel/whitegreen/side,
+/area/medical/virology)
+"fd" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	req_access_txt = 1
+	},
+/turf/open/floor/plasteel/whitegreen/side,
+/area/medical/virology)
+"fe" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 4
+	},
+/turf/open/floor/plasteel/whitegreen/side,
+/area/medical/virology)
+"ff" = (
+/obj/structure/sink{
+	dir = 4;
+	icon_state = "sink";
+	pixel_x = 11;
+	pixel_y = 0
+	},
+/obj/structure/mirror{
+	pixel_x = 28
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	tag = "icon-intact (NORTHWEST)";
+	icon_state = "intact";
+	dir = 9
+	},
+/turf/open/floor/plasteel/warning{
+	tag = "icon-plasteel_warn (NORTHWEST)";
+	icon_state = "plasteel_warn";
+	dir = 9
+	},
+/area/medical/virology)
+"fg" = (
+/obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/poddoor/shutters/preopen{
+	id = "virus_ebola_space"
+	},
+/turf/open/floor/plating,
+/area/medical/virology)
+"fh" = (
+/obj/structure/cable/yellow,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/firedoor{
+	icon = 'icons/obj/doors/DoorHazard.dmi';
+	name = "hazardlock";
+	opacity = 0
+	},
+/turf/open/floor/plating,
+/area/medical/virology)
+"fi" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/obj/machinery/door/firedoor{
+	icon = 'icons/obj/doors/DoorHazard.dmi';
+	name = "hazardlock";
+	opacity = 0
+	},
+/obj/machinery/door/airlock/glass_virology{
+	name = "Isolation B";
+	req_access_txt = "39"
+	},
+/turf/open/floor/plasteel{
+	icon_state = "freezerfloor"
+	},
+/area/medical/virology)
+"fj" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/obj/machinery/door/firedoor{
+	icon = 'icons/obj/doors/DoorHazard.dmi';
+	name = "hazardlock";
+	opacity = 0
+	},
+/obj/machinery/door/airlock/glass_virology{
+	name = "Isolation A";
+	req_access_txt = "39"
+	},
+/turf/open/floor/plasteel{
+	icon_state = "freezerfloor"
+	},
+/area/medical/virology)
+"fk" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/turf/closed/wall,
+/area/medical/virology)
+"fl" = (
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -26;
+	pixel_y = 0
+	},
+/obj/structure/closet/crate/freezer/blood,
+/obj/machinery/power/apc{
+	dir = 2;
+	name = "Hydroponics APC";
+	pixel_x = 0;
+	pixel_y = -28
+	},
+/obj/structure/cable/yellow,
+/turf/open/floor/plasteel/warning/corner{
+	dir = 8
+	},
+/area/medical/virology)
+"fm" = (
+/obj/structure/closet/wardrobe/virology_white,
+/turf/open/floor/plasteel/warning{
+	tag = "icon-plasteel_warn (NORTHEAST)";
+	icon_state = "plasteel_warn";
+	dir = 5
+	},
+/area/medical/virology)
+"fn" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	req_access_txt = 1
+	},
+/turf/open/floor/plasteel/whitegreen,
+/area/medical/virology)
+"fo" = (
+/obj/structure/closet/secure_closet/medical1,
+/turf/open/floor/plasteel/warning{
+	dir = 9
+	},
+/area/medical/virology)
+"fp" = (
+/obj/structure/closet/l3closet/virology,
+/obj/machinery/light{
+	dir = 4;
+	icon_state = "tube1"
+	},
+/turf/open/floor/plasteel/warning/corner{
+	dir = 4
+	},
+/area/medical/virology)
+"fq" = (
+/obj/structure/sign/biohazard{
+	pixel_x = -32
+	},
+/turf/open/space,
+/area/space)
+"fr" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/item/weapon/bedsheet/medical,
+/obj/structure/bed,
+/turf/open/floor/plasteel{
+	icon_state = "freezerfloor"
+	},
+/area/medical/virology)
+"fs" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/turf/open/floor/plasteel/stairsnew,
+/area/medical/virology)
+"ft" = (
+/obj/structure/bed,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/item/weapon/bedsheet/medical,
+/turf/open/floor/plasteel{
+	icon_state = "freezerfloor"
+	},
+/area/medical/virology)
+"fu" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/obj/structure/disposalpipe/segment,
+/turf/closed/wall,
+/area/medical/virology)
+"fv" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/machinery/door/firedoor{
+	icon = 'icons/obj/doors/DoorHazard.dmi';
+	name = "hazardlock";
+	opacity = 0
+	},
+/obj/machinery/door/airlock/virology{
+	name = "Break Room";
+	req_access_txt = "39"
+	},
+/turf/open/floor/plasteel/whitegreen,
+/area/medical/virology)
+"fw" = (
+/obj/machinery/atmospherics/components/unary/vent_pump{
+	dir = 1;
+	on = 1
+	},
+/turf/open/floor/plasteel{
+	icon_state = "freezerfloor"
+	},
+/area/medical/virology)
+"fx" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/machinery/atmospherics/components/unary/vent_scrubber{
+	dir = 1;
+	on = 1;
+	scrub_N2O = 0;
+	scrub_Toxins = 0
+	},
+/turf/open/floor/plasteel{
+	icon_state = "freezerfloor"
+	},
+/area/medical/virology)
+"fy" = (
+/obj/machinery/light/small{
+	dir = 8
+	},
+/obj/machinery/atmospherics/components/unary/vent_scrubber{
+	dir = 1;
+	on = 1;
+	scrub_N2O = 0;
+	scrub_Toxins = 0
+	},
+/turf/open/floor/plasteel{
+	icon_state = "freezerfloor"
+	},
+/area/medical/virology)
+"fz" = (
+/obj/effect/landmark{
+	name = "xeno_spawn";
+	pixel_x = -1
+	},
+/obj/machinery/atmospherics/components/unary/vent_pump{
+	dir = 1;
+	on = 1
+	},
+/turf/open/floor/plasteel{
+	icon_state = "freezerfloor"
+	},
+/area/medical/virology)
+"fA" = (
+/obj/structure/table/glass,
+/obj/machinery/newscaster{
+	pixel_x = -30
+	},
+/obj/item/weapon/folder/white,
+/obj/item/weapon/folder/white,
+/obj/item/weapon/paper,
+/obj/item/weapon/pen/red,
+/turf/open/floor/plasteel/whitegreen/side{
+	dir = 9
+	},
+/area/medical/virology)
+"fB" = (
+/obj/structure/chair/office/light{
+	dir = 8
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/machinery/computer/security/telescreen/entertainment{
+	pixel_x = 0;
+	pixel_y = 29
+	},
+/turf/open/floor/plasteel/whitegreen/side{
+	dir = 1
+	},
+/area/medical/virology)
+"fC" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/turf/open/floor/plasteel/whitegreen/side{
+	dir = 1
+	},
+/area/medical/virology)
+"fD" = (
+/obj/structure/table/glass,
+/obj/item/weapon/storage/box/donkpockets{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/machinery/light_switch{
+	pixel_x = 0;
+	pixel_y = 26
+	},
+/obj/machinery/camera{
+	c_tag = "Virology - Break Room";
+	dir = 2;
+	network = list("SS13","Medbay")
+	},
+/turf/open/floor/plasteel/whitegreen/side{
+	dir = 1
+	},
+/area/medical/virology)
+"fE" = (
+/obj/item/device/radio/intercom{
+	freerange = 0;
+	frequency = 1459;
+	name = "Station Intercom (General)";
+	pixel_x = 29
+	},
+/obj/structure/table/glass,
+/obj/machinery/microwave{
+	pixel_x = -2;
+	pixel_y = 6
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 0;
+	pixel_y = 30
+	},
+/turf/open/floor/plasteel/whitegreen/side{
+	dir = 5
+	},
+/area/medical/virology)
+"fF" = (
+/obj/structure/table/glass,
+/obj/item/weapon/reagent_containers/dropper,
+/obj/item/weapon/reagent_containers/syringe,
+/obj/item/weapon/reagent_containers/glass/beaker,
+/turf/open/floor/plasteel{
+	icon_state = "freezerfloor"
+	},
+/area/medical/virology)
+"fG" = (
+/obj/structure/table/glass,
+/obj/item/weapon/folder/white{
+	pixel_y = 4
+	},
+/obj/item/weapon/pen/red,
+/turf/open/floor/plasteel{
+	icon_state = "freezerfloor"
+	},
+/area/medical/virology)
+"fH" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden{
+	dir = 8
+	},
+/turf/closed/wall,
+/area/medical/virology)
+"fI" = (
+/obj/structure/table/glass,
+/obj/item/weapon/paper_bin,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 4
+	},
+/turf/open/floor/plasteel/whitegreen/side{
+	dir = 8
+	},
+/area/medical/virology)
+"fJ" = (
+/obj/machinery/atmospherics/components/unary/vent_scrubber{
+	dir = 8;
+	on = 1;
+	scrub_N2O = 0;
+	scrub_Toxins = 0
+	},
+/turf/open/floor/plasteel/white,
+/area/medical/virology)
+"fK" = (
+/obj/machinery/atmospherics/pipe/manifold/supply/hidden{
+	dir = 8
+	},
+/turf/open/floor/plasteel/white,
+/area/medical/virology)
+"fL" = (
+/obj/machinery/atmospherics/components/unary/vent_pump{
+	dir = 8;
+	on = 1
+	},
+/turf/open/floor/plasteel/white,
+/area/medical/virology)
+"fM" = (
+/obj/structure/sink{
+	dir = 4;
+	icon_state = "sink";
+	pixel_x = 11;
+	pixel_y = 0
+	},
+/turf/open/floor/plasteel/whitegreen/side{
+	dir = 4
+	},
+/area/medical/virology)
+"fN" = (
+/turf/closed/wall,
+/area/chapel/office)
+"fO" = (
+/obj/structure/lattice,
+/obj/structure/grille/broken,
+/turf/open/space,
+/area/space)
+"fP" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/obj/structure/disposalpipe/segment,
+/turf/closed/wall/r_wall,
+/area/medical/virology)
+"fQ" = (
+/obj/machinery/airalarm{
+	dir = 4;
+	pixel_x = -23;
+	pixel_y = 0
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 6
+	},
+/obj/item/weapon/twohanded/required/kirbyplants{
+	icon_state = "plant-16";
+	layer = 4.1;
+	tag = "icon-plant-16"
+	},
+/turf/open/floor/plasteel/whitegreen/side{
+	dir = 10
+	},
+/area/medical/virology)
+"fR" = (
+/obj/machinery/atmospherics/pipe/manifold/supply/hidden{
+	dir = 1
+	},
+/turf/open/floor/plasteel/whitegreen/side,
+/area/medical/virology)
+"fS" = (
+/obj/structure/chair/stool,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 9;
+	pixel_y = 0
+	},
+/turf/open/floor/plasteel/whitegreen/side,
+/area/medical/virology)
+"fT" = (
+/obj/structure/chair/stool,
+/turf/open/floor/plasteel/whitegreen/side,
+/area/medical/virology)
+"fU" = (
+/obj/structure/chair/stool,
+/obj/machinery/firealarm{
+	dir = 4;
+	pixel_x = 24
+	},
+/turf/open/floor/plasteel/whitegreen/side{
+	dir = 6
+	},
+/area/medical/virology)
+"fV" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/plating/airless,
+/area/space)
+"fW" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/plating/airless,
+/area/space)
+"fX" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 6
+	},
+/turf/open/floor/plating/airless,
+/area/space)
+"fY" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 9
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/poddoor/shutters/preopen{
+	dir = 8;
+	id = "virus_ebola_space"
+	},
+/turf/open/floor/plating,
+/area/medical/virology)
+"fZ" = (
+/obj/machinery/atmospherics/components/unary/tank/air{
+	dir = 1
+	},
+/turf/open/floor/plasteel/blackvault{
+	dir = 1
+	},
+/area/medical/virology)
+"ga" = (
+/obj/machinery/atmospherics/components/unary/portables_connector/visible{
+	dir = 1;
+	name = "virology air connector port"
+	},
+/obj/machinery/portable_atmospherics/canister/air,
+/turf/open/floor/plasteel/blackvault{
+	dir = 1
+	},
+/area/medical/virology)
+"gb" = (
+/obj/item/trash/popcorn,
+/obj/structure/table/glass,
+/turf/open/floor/plasteel/blackvault{
+	dir = 1
+	},
+/area/medical/virology)
+"gc" = (
+/obj/item/weapon/reagent_containers/food/snacks/sosjerky,
+/obj/structure/table/glass,
+/turf/open/floor/plasteel/blackvault{
+	dir = 1
+	},
+/area/medical/virology)
+"gd" = (
+/obj/structure/table/glass,
+/obj/item/device/tape,
+/obj/item/device/taperecorder,
+/turf/open/floor/plasteel/blackvault{
+	dir = 1
+	},
+/area/medical/virology)
+"ge" = (
+/obj/structure/disposaloutlet,
+/obj/structure/disposalpipe/trunk{
+	dir = 1
+	},
+/turf/open/floor/plating/airless,
+/area/space)
+"gf" = (
+/obj/machinery/atmospherics/components/unary/outlet_injector/on{
+	dir = 1
+	},
+/turf/open/floor/plating/airless,
+/area/space)
+"gg" = (
+/obj/structure/grille,
+/obj/structure/lattice,
+/turf/open/space,
+/area/space)
+"gh" = (
+/turf/closed/wall,
+/area/chapel/main)
+"gi" = (
+/obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/poddoor/shutters/preopen{
+	dir = 8;
+	id = "chapel_shutters_parlour";
+	name = "chapel shutters"
+	},
+/turf/open/floor/plating,
+/area/chapel/main)
+"gj" = (
+/obj/structure/closet/coffin,
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/cobweb,
+/turf/open/floor/plating,
+/area/chapel/main)
 
 (1,1,1) = {"
 aa
@@ -23559,21 +24613,21 @@ aa
 aa
 aa
 aa
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 aa
 aa
 aa
@@ -23812,32 +24866,32 @@ aa
 aa
 aa
 aa
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 aa
 aa
 aa
@@ -24068,33 +25122,33 @@ aa
 aa
 aa
 aa
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 aa
 aa
 aa
@@ -24324,38 +25378,38 @@ aa
 aa
 aa
 aa
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 aa
 aa
 aa
@@ -24577,42 +25631,42 @@ aa
 aa
 aa
 aa
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 aa
 aa
 aa
@@ -24834,42 +25888,42 @@ aa
 aa
 aa
 aa
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-ey
-ey
-ey
-ey
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+aB
+aB
+aB
+aB
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 aa
 aa
 aa
@@ -25064,69 +26118,69 @@ aa
 aa
 aa
 aa
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-ez
-ey
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+bO
+aB
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 aa
 aa
 aa
@@ -25321,73 +26375,73 @@ aa
 aa
 aa
 aa
-cF
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-bP
-bP
-ey
-cF
-ey
-ey
-ey
-ey
-ey
-ey
-ey
-ey
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
+ab
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+bD
+bD
+aB
+ab
+aB
+aB
+aB
+aB
+aB
+aB
+aB
+aB
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 aa
 aa
 aa
@@ -25578,73 +26632,73 @@ aa
 aa
 aa
 aa
-cF
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-ey
-bC
-bC
-cF
-cF
-ey
-cQ
-cW
-df
-ey
-ds
-dA
-ey
-ey
-ey
-ey
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
+ab
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+aB
+bt
+bt
+ab
+ab
+aB
+co
+cu
+cz
+aB
+cI
+cR
+aB
+aB
+aB
+aB
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 aa
 aa
 aa
@@ -25835,73 +26889,73 @@ aa
 aa
 aa
 aa
+ab
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ab
+aB
+aB
+aB
+aB
+aB
+aB
+aB
+bE
+bE
+aB
+aB
+aB
+cp
+cv
+cA
 cF
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cF
-ey
-ey
-ey
-ey
-ey
-ey
-ey
-bQ
-bQ
-ey
-ey
-ey
-cR
-cX
-dg
-do
-dt
-dB
-dI
-dN
-dW
-ey
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
+cJ
+cS
+cZ
+de
+dn
+aB
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 aa
 aa
 aa
@@ -26092,73 +27146,73 @@ aa
 aa
 aa
 aa
-cF
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cF
-ey
-aN
-aR
-aY
-bf
-br
-bE
-bR
-bR
-cu
-cy
-ey
-cS
-cY
-dh
-ey
-du
-dt
-bN
-dO
-dO
-ey
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
+ab
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ab
+aB
+aG
+aK
+aP
+aW
+bi
+bs
+bt
+bt
+bZ
+cd
+aB
+cq
+cw
+cB
+aB
+cK
+cJ
+ch
+df
+df
+aB
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 aa
 aa
 aa
@@ -26349,73 +27403,73 @@ aa
 aa
 aa
 aa
-cF
+ab
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ab
+aB
+aH
+aL
+aL
+aX
+bj
+bt
+bt
+bP
+bt
+ce
+cj
+cr
+ch
+cC
 cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cF
-ey
-aO
-aS
-aS
-bg
-bs
-bC
-bC
-cg
-bC
-cz
-cH
+cr
 cT
-bN
-di
-dp
-cT
-dC
-bN
-dP
-dX
-ey
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
+ch
+dg
+do
+aB
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 aa
 aa
 aa
@@ -26606,73 +27660,73 @@ aa
 aa
 aa
 aa
-cF
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-ey
-aP
-aS
-aS
-bg
+ab
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+aB
+aI
+aL
+aL
+aX
+bk
 bt
-bC
-bC
-bC
-bC
-cA
-cI
+bt
+bt
+bt
+cf
+ck
+cr
+ch
+cC
+cG
+cr
 cT
-bN
-dj
+ch
+dh
 dp
-cT
-dC
-bN
-dQ
-dY
-ey
-ey
-ey
-ey
-ey
-cF
-cF
-cF
-cF
-cF
+aB
+aB
+aB
+aB
+aB
+ab
+ab
+ab
+ab
+ab
 aa
 aa
 aa
@@ -26863,73 +27917,73 @@ aa
 aa
 aa
 aa
-cF
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cF
+ab
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ab
+aJ
+aM
 aQ
-aT
-aZ
-bf
+aW
+bl
 bu
 bF
-bS
-bS
-cv
-cB
-ey
-cU
-cZ
-dk
-ey
-dv
-dC
-bN
-dR
-dR
-ey
-ei
-ei
-ei
-ey
-cF
-cF
-cF
-cF
-cF
+bF
+ca
+cg
+aB
+cs
+cx
+cD
+aB
+cL
+cT
+ch
+di
+di
+aB
+dx
+dx
+dx
+aB
+ab
+ab
+ab
+ab
+ab
 aa
 aa
 aa
@@ -27120,73 +28174,73 @@ aa
 aa
 aa
 aa
-cF
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cF
-cF
-ey
-ey
-ey
-ey
-ey
-bT
+ab
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ab
+ab
+aB
+aB
+aB
+aB
+aB
+bG
+bQ
+aB
+aB
+aB
+aB
+aB
+aB
+aB
+cM
+cT
 ch
-ey
-ey
-ey
-ey
-ey
-ey
-ey
-dw
-dC
-bN
-bN
-bN
-ee
-bN
-bN
-et
-ey
-cF
-cF
-cF
-cF
-cF
+ch
+ch
+dv
+ch
+ch
+dF
+aB
+ab
+ab
+ab
+ab
+ab
 aa
 aa
 aa
@@ -27377,73 +28431,73 @@ aa
 aa
 aa
 aa
-cF
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cF
-cF
-cF
-cF
-cF
-cF
-ey
-bU
-ci
-ey
-bN
-cJ
-cV
+ab
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ab
+ab
+ab
+ab
+ab
+ab
+aB
+bH
+bR
+aB
+ch
+ch
+ct
+cy
+ch
+ct
+cN
+cU
 da
-bN
-cV
-eA
-dD
-dJ
-bN
-dZ
-ey
-ej
-ej
-ej
-ey
-cF
-cF
-cF
-cF
-cF
+ch
+dq
+aB
+dy
+dy
+dy
+aB
+ab
+ab
+ab
+ab
+ab
 aa
 aa
 aa
@@ -27634,73 +28688,73 @@ aa
 aa
 aa
 aa
-cF
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-aE
-cF
-cF
-ey
-bU
-cj
-bf
-bN
-cK
-ey
-cU
-dl
-ey
-ey
-dE
-bf
-dS
-bf
-ey
-ey
-ey
-ey
-ey
-cF
-cF
-cF
-cF
-cF
+ab
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+aw
+ab
+ab
+aB
+bH
+bS
+aW
+ch
+cl
+aB
+cs
+cE
+aB
+aB
+cV
+aW
+dj
+aW
+aB
+aB
+aB
+aB
+aB
+ab
+ab
+ab
+ab
+ab
 aa
 aa
 aa
@@ -27891,73 +28945,73 @@ aa
 aa
 aa
 aa
-cF
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-aU
-aE
-aE
-cF
-ey
-bV
-ck
-cw
-cC
-cL
-ey
-ey
-ey
-ey
-dx
-dF
-dK
-dT
-ea
-ey
-ek
-ep
-eu
-ey
-cF
-cF
-cF
-cF
-cF
+ab
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+aN
+aw
+aw
+ab
+aB
+bI
+bT
+cb
+ch
+cm
+aB
+aB
+aB
+aB
+cO
+cW
+db
+dk
+dr
+aB
+dz
+dC
+dG
+aB
+ab
+ab
+ab
+ab
+ab
 aa
 aa
 aa
@@ -28148,73 +29202,73 @@ aa
 aa
 aa
 aa
-cF
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-aV
-aV
-bh
-cF
-ey
+ab
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+aO
+aO
+aY
+ab
+aB
+bH
 bU
-cl
-bf
-cD
-cM
-ey
-cF
-cF
-ey
-dy
-dg
-dL
-dL
-dL
-ef
-dL
-dt
-bN
-ey
-cF
-cF
-cF
-cF
-cF
+aW
+ci
+cn
+aB
+ab
+ab
+aB
+cP
+cA
+dc
+dc
+dc
+dw
+dc
+cJ
+ch
+aB
+ab
+ab
+ab
+ab
+ab
 aa
 aa
 aa
@@ -28405,73 +29459,73 @@ aa
 aa
 aa
 aa
-cF
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-aE
-aE
-aE
-bi
-aE
-ey
-bT
-cm
-ey
-ey
-ey
-cF
-cF
-cF
-ey
-dz
-dG
-dM
-dU
-eb
-ey
-el
-eq
-ev
-ey
-cF
-cF
-cF
-cF
-cF
+ab
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+aw
+aw
+aw
+aZ
+aw
+aB
+bG
+bV
+aB
+aB
+aB
+ab
+ab
+ab
+aB
+cQ
+cX
+dd
+dl
+ds
+aB
+dA
+dD
+dH
+aB
+ab
+ab
+ab
+ab
+ab
 aa
 aa
 aa
@@ -28662,73 +29716,73 @@ aa
 aa
 aa
 aa
-cF
-cN
-cN
-cN
-cN
-cN
-cN
-cN
-cN
-cN
-cN
-cN
-dr
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-aJ
-aE
-aE
-aE
-bi
-aE
-bG
+ab
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ai
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+aC
+aw
+aw
+aw
+ba
+aw
+bv
+bJ
 bW
-cn
-cx
-aK
-aE
-aE
-cF
-cF
-ey
-ey
-ey
-ey
-ey
-ey
-ey
-em
-er
-ew
-ey
-cF
-cF
-cF
-cF
-cF
+cc
+aD
+aw
+aw
+ab
+ab
+aB
+aB
+aB
+aB
+aB
+aB
+aB
+dB
+dE
+dI
+aB
+ab
+ab
+ab
+ab
+ab
 aa
 aa
 aa
@@ -28919,73 +29973,73 @@ aa
 aa
 aa
 aa
-cF
-cO
-cO
-cO
-cO
-cO
-cO
-cO
-cO
-de
-cO
-cN
-cN
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-es
-cG
-cG
-cG
-cG
-es
-cG
-cG
-es
-cG
-es
-es
-aE
-aK
-aE
-aE
-ba
-bj
-bv
-bH
+ab
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ad
+ad
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+am
+ac
+ac
+ac
+ac
+am
+ac
+ac
+am
+ac
+am
+am
+aw
+aD
+aw
+aw
+aR
+bb
+bm
+bw
+bJ
 bX
-co
-bZ
-aE
-aE
-aE
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-ey
-ey
-ey
-ey
-ey
-cF
-cF
-cF
-cF
-cF
+bz
+aw
+aw
+aw
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+aB
+aB
+aB
+aB
+aB
+ab
+ab
+ab
+ab
+ab
 aa
 aa
 aa
@@ -29176,73 +30230,73 @@ aa
 aa
 aa
 aa
-cF
-cO
-cO
-cO
-cO
-cO
-cO
-cO
-dd
-dm
-de
-dn
-de
-eg
-eg
-es
-cG
-cG
-es
-eg
-eg
-eg
-eg
-eg
-eg
-es
-es
-eg
-eg
-ay
-eg
-eg
-eg
-eg
-eg
-aF
-aF
-aF
-aF
-bb
-bk
-bw
-bI
-bY
-cp
-bZ
-bZ
-aE
-aE
-aE
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
+ab
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ah
+ae
+aj
+aj
+am
+ac
+ac
+am
+aj
+aj
+aj
+aj
+aj
+aj
+am
+am
+aj
+aj
+as
+aj
+aj
+aj
+aj
+aj
+ax
+ax
+ax
+ax
+aS
+bc
+bn
+bx
+bK
+bX
+bz
+bz
+aw
+aw
+aw
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 aa
 aa
 aa
@@ -29433,73 +30487,73 @@ aa
 aa
 aa
 aa
-cF
-cO
-cO
-cO
-cO
-cO
-cO
-cO
-dd
-dm
-cO
-dn
-dm
-eh
-en
-cG
-cG
-cG
-cG
-es
-es
-en
-en
-en
-es
-es
-en
-au
-en
+ab
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ah
+ae
+ak
+ak
+ac
+ac
+ac
+ac
+am
+am
+ak
+ak
+ak
+am
+am
+ak
+ao
+ak
+at
+av
+ak
+ak
+ak
+ak
+ay
 az
-aB
-en
-en
-en
-en
-aG
-aH
-aH
-aH
-bc
+az
+az
+aT
 bd
-bd
-bd
-aH
-co
-bZ
-aE
-aE
-aE
-aE
-aE
-dq
-cO
-cO
-cO
-cO
-ec
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
+aU
+az
+az
+bX
+bz
+aw
+aw
+aw
+aw
+aw
+cH
+ae
+ae
+ae
+ae
+dt
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 aa
 aa
 aa
@@ -29690,73 +30744,73 @@ aa
 aa
 aa
 aa
-cF
-cO
-cO
-cO
-cO
-cO
-db
-cO
-cO
-cO
-cO
-dn
-dn
-en
-eh
-es
-cG
-cG
-cG
-cG
-cG
-es
-en
-eh
-en
-eh
-en
-en
-en
-aA
-ad
-en
-en
-en
-en
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-bJ
-aH
-cp
-aE
-aE
-aE
-aE
+ab
+ae
+ae
+ae
+ae
+ae
+af
+ae
+ae
+ae
+ae
+ah
+ah
+ak
+ak
+am
+ac
+ac
+ac
+ac
+ac
+am
+ak
+ak
+ak
+ak
+ak
+ak
+ak
+au
+ak
+ak
+ak
+ak
+ak
+az
+az
+az
+az
+az
 aU
-aE
-dq
-aE
-aE
-cO
-dV
-ec
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
+az
+by
+az
+bX
+aw
+aw
+aw
+aw
+aN
+aw
+cH
+aw
+aw
+ae
+dm
+dt
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 aa
 aa
 aa
@@ -29947,73 +31001,73 @@ aa
 aa
 aa
 aa
-cF
-cO
-cO
-cO
-cO
-cO
-cO
-cO
-cO
-cO
-cO
-cO
-de
-en
-en
-ad
-es
-cG
-cG
-cG
-cG
-en
-en
-en
-ad
-en
-en
-av
-es
-es
-eh
-eh
-en
-en
-en
-aH
-aH
-aH
-aH
+ab
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ak
+ak
+ak
+am
+ac
+ac
+ac
+ac
+ak
+ak
+ak
+ak
+ak
+ak
+ap
+am
+am
+ak
+ak
+ak
+ak
+ak
+az
+az
+az
+az
+aU
 bd
-aH
-aH
-aH
-aH
-co
-aE
-aE
-aE
-aE
-aE
-aE
-dq
-aE
-dH
-cO
-aE
-ed
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
+aU
+az
+az
+bX
+aw
+aw
+aw
+aw
+aw
+aw
+cH
+aw
+cY
+ae
+aw
+du
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 aa
 aa
 aa
@@ -30204,73 +31258,73 @@ aa
 aa
 aa
 aa
-cF
-cO
-cO
-cO
-cO
-cO
-cO
-dc
-cO
-cO
-cO
-de
-cO
-eo
-ac
-ex
-es
-cG
-cG
-es
+ab
+ae
+ae
+ae
+ae
+ae
+ae
+ag
+ae
+ae
+ae
+ae
+ae
+al
+al
+an
+am
 ac
 ac
+am
+al
+al
+al
+al
+al
+an
+al
 aq
+ar
 ac
-ac
-ex
-ac
-aw
-ax
-cG
-es
-ac
-ac
-ex
-ac
-aI
-aI
-aI
-aI
+am
+al
+al
+an
+al
+aA
+aA
+aA
+aA
+aV
 be
-bl
-bx
-aI
-bx
-cq
-bZ
-aE
-aE
-aE
-aE
-aE
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
+aA
+aA
+aA
+bY
+bz
+aw
+aw
+aw
+aw
+aw
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 aa
 aa
 aa
@@ -30461,68 +31515,68 @@ aa
 aa
 aa
 aa
-cF
-cO
-cO
-cO
-cO
-cO
-cO
-cO
-cO
-cO
-cO
-cN
-cN
-es
-es
-cG
-cG
-cG
-cG
-cG
-cG
-es
-cG
-cG
-cG
-es
-es
-cG
-cG
-cG
-cG
-es
-cG
-es
-es
+ab
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ae
+ad
+ad
+am
+am
+ac
+ac
+ac
+ac
+ac
+ac
+am
+ac
+ac
+ac
+am
+am
+ac
+ac
+ac
+ac
+am
+ac
+am
+am
+aw
 aE
-aL
-aE
-aE
-ba
-bm
-bm
-bm
-bZ
-bZ
-bZ
-aE
-aE
-aE
-aE
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
+aw
+aw
+aR
+bf
+bo
+bz
+bz
+bz
+bz
+aw
+aw
+aw
+aw
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 aa
 aa
 aa
@@ -30718,68 +31772,68 @@ aa
 aa
 aa
 aa
-cF
-cN
-cN
-cN
-cN
-cN
-cN
-cN
-cN
-cN
-cN
-cN
-dr
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-aM
-aE
-aE
-aE
-bn
-by
-bK
-bK
-bn
-aE
-aE
-aE
-aE
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
+ab
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ai
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+aF
+aw
+aw
+aw
+bg
+bp
+bA
+bA
+bg
+aw
+aw
+aw
+aw
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 aa
 aa
 aa
@@ -30975,65 +32029,65 @@ aa
 aa
 aa
 aa
-cF
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-aE
-aE
-aE
-bo
-bz
+ab
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+aw
+aw
+aw
+bh
+bq
+bB
 bL
-ca
-bo
-cF
-aE
-aE
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
+bh
+ab
+aw
+aw
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 aa
 aa
 aa
@@ -31232,63 +32286,63 @@ aa
 aa
 aa
 aa
-cF
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-aE
-aE
-aE
-bo
-bA
-bL
-cb
-bo
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
+ab
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+aw
+aw
+aw
+bh
+br
+bB
+bM
+bh
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 aa
 aa
 aa
@@ -31489,60 +32543,60 @@ aa
 aa
 aa
 aa
-cF
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-aE
-cF
-bo
-bo
-bM
-cc
-bo
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
+ab
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+aw
+ab
+bh
+bh
+bC
+bN
+bh
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 aa
 aa
 aa
@@ -31746,60 +32800,60 @@ aa
 aa
 aa
 aa
-cF
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cF
-cF
-cF
-bo
-bo
-bo
-bo
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
+ab
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ab
+ab
+ab
+bh
+bh
+bh
+bh
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 aa
 aa
 aa
@@ -32003,58 +33057,58 @@ aa
 aa
 aa
 aa
-cF
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
+ab
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 aa
 aa
 aa
@@ -32260,55 +33314,55 @@ aa
 aa
 aa
 aa
-cF
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
+ab
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 aa
 aa
 aa
@@ -32517,53 +33571,53 @@ aa
 aa
 aa
 aa
-cF
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
+ab
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 aa
 aa
 aa
@@ -32774,52 +33828,52 @@ aa
 aa
 aa
 aa
-cF
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cG
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
+ab
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 aa
 aa
 aa
@@ -33031,50 +34085,50 @@ aa
 aa
 aa
 aa
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
-cF
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 aa
 aa
 aa

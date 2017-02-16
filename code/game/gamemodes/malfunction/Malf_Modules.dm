@@ -165,7 +165,7 @@
 	for(var/obj/machinery/door/D in airlocks)
 		if(D.z != ZLEVEL_STATION)
 			continue
-		addtimer(CALLBACK(D, /obj/machinery/door.proc/hostile_lockdown, src), 0)
+		INVOKE_ASYNC(D, /obj/machinery/door.proc/hostile_lockdown, src)
 		addtimer(CALLBACK(D, /obj/machinery/door.proc/disable_lockdown), 900)
 
 	var/obj/machinery/computer/communications/C = locate() in machines
@@ -329,7 +329,7 @@
 				M.audible_message("<span class='userdanger'>You hear a loud electrical buzzing sound!</span>")
 				src << "<span class='warning'>Reprogramming machine behaviour...</span>"
 				spawn(50)
-					if(M && !qdeleted(M))
+					if(M && !QDELETED(M))
 						new /mob/living/simple_animal/hostile/mimic/copy/machine(get_turf(M), M, src, 1)
 			else src << "<span class='notice'>Out of uses.</span>"
 	else src << "<span class='notice'>That's not a machine.</span>"

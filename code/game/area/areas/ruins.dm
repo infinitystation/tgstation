@@ -8,6 +8,7 @@
 
 /area/ruin/unpowered
 	always_unpowered = 0
+	has_gravity = 1
 
 /area/ruin/unpowered/no_grav
 	has_gravity = 0

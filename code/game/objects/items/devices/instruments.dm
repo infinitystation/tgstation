@@ -22,9 +22,10 @@
 	user.visible_message("<span class='suicide'>[user] приступает к игре 'Мрачное воскресенье'! Кажетс&#255; [user.p_they()] пытал[user.p_e_5()] покончить жизнь самоубийством!</span>")
 	return (BRUTELOSS)
 
-/obj/item/device/instrument/initialize()
-	song.tempo = song.sanitize_tempo(song.tempo) // tick_lag isn't set when the map is loaded
+/obj/item/device/instrument/Initialize(mapload)
 	..()
+	if(mapload)
+		song.tempo = song.sanitize_tempo(song.tempo) // tick_lag isn't set when the map is loaded
 
 /obj/item/device/instrument/attack_self(mob/user)
 	if(!user.IsAdvancedToolUser())
@@ -63,6 +64,7 @@
 	name = "guitar"
 	desc = "It's made of wood and has bronze strings."
 	icon = 'icons/obj/musician.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'
 	icon_state = "guitar"
 	item_state = "guitar"
 	slot_flags = SLOT_BACK

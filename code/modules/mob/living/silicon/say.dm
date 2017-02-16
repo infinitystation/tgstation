@@ -67,3 +67,9 @@
 			robot_talk(message)
 		return 1
 	return 0
+
+/mob/living/silicon/say(message, bubble_type)
+	. = ..(message)
+	if(.)
+		playsound(loc, 'sound/voice/silicon_voice.ogg', 25, 1, 1)
+

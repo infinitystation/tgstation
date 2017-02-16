@@ -31,6 +31,6 @@
 		usr << "<span class='warning'>Their hands are full.</span>"
 		return
 
-	if(usr.unEquip(I))
+	if(usr.dropItemToGround(I))
 		target.put_in_hands(I) // If this fails it will just end up on the floor, but that's fitting for things like dionaea.
 		visible_message("<span class='notice'>\The [usr] handed \the [I] to \the [target].</span>")

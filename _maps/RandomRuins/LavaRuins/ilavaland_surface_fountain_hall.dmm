@@ -1,0 +1,20 @@
+"a" = (/turf/template_noop,/area/template_noop)
+"b" = (/turf/closed/wall/mineral/cult{baseturf = /turf/open/floor/plating/lava/smooth},/area/ruin/unpowered)
+"c" = (/obj/structure/bookcase/random,/turf/open/floor/engine/cult{baseturf = /turf/open/floor/plating/lava/smooth},/area/ruin/unpowered)
+"d" = (/turf/open/floor/engine/cult{baseturf = /turf/open/floor/plating/lava/smooth},/area/ruin/unpowered)
+"e" = (/obj/structure/healingfountain,/obj/item/weapon/coin/mythril{pixel_y = -7},/turf/open/floor/engine/cult{baseturf = /turf/open/floor/plating/lava/smooth},/area/ruin/unpowered)
+"f" = (/obj/effect/decal/cleanable/blood/old,/turf/open/floor/engine/cult{baseturf = /turf/open/floor/plating/lava/smooth},/area/ruin/unpowered)
+"g" = (/obj/structure/destructible/cult/tome,/turf/open/floor/engine/cult{baseturf = /turf/open/floor/plating/lava/smooth},/area/ruin/unpowered)
+"h" = (/obj/effect/decal/cleanable/ash/large,/turf/open/floor/engine/cult{baseturf = /turf/open/floor/plating/lava/smooth},/area/ruin/unpowered)
+
+(1,1,1) = {"
+aabbbbbaa
+abbcccbba
+bbcdddcbb
+bcddeddcb
+bcddfddcb
+bcdgdgdcb
+bcdhdfdcb
+bbcdddcbb
+abbbdbbba
+"}

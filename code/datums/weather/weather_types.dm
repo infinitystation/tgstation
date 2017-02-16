@@ -22,6 +22,7 @@
 	adv_wind_down_message = "Шторм прошел. Можно выйти из укрытия."
 
 	area_type = /area
+	protected_areas = list(/area/space)
 	target_z = ZLEVEL_STATION
 
 	overlay_layer = ABOVE_OPEN_TURF_LAYER //Covers floors only
@@ -89,7 +90,7 @@
 	end_sound = 'sound/lavaland/ash_storm_end.ogg'
 	end_overlay = "light_ash"
 
-	area_type = /area/lavaland/surface/outdoors
+	area_type = /area/lavaland/surface
 	target_z = ZLEVEL_LAVALAND
 
 	immunity_type = "ash"
@@ -179,7 +180,7 @@
 		return
 
 	var/datum/signal/status_signal = new
-	var/atom/movable/virtualspeaker/virt = PoolOrNew(/atom/movable/virtualspeaker,null)
+	var/atom/movable/virtualspeaker/virt = new /atom/movable/virtualspeaker(null)
 	status_signal.source = virt
 	status_signal.transmission_method = 1
 	status_signal.data["command"] = "shuttle"

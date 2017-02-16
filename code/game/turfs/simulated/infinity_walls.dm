@@ -46,7 +46,7 @@
 	canSmoothWith = list(/turf/closed/wall/r_wall/destiny)
 
 /turf/closed/wall/mineral/abductor/terror
-	canSmoothWith = list(/turf/closed/wall/mineral/abductor, /obj/structure/falsewall/abductor, /obj/machinery/door/airlock/abductor, /turf/closed/wall/mineral/abductor/terror)
+	canSmoothWith = list(/turf/closed/wall/mineral/abductor, /obj/structure/falsewall/abductor, /obj/machinery/door/airlock/abductor, /obj/machinery/door/airlock/abductor/base, /turf/closed/wall/mineral/abductor/terror)
 
 /**********************Mineral deposits**************************/
 

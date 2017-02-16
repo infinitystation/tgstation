@@ -241,7 +241,7 @@
 		temp_gender = PLURAL
 	return ..()
 
-		// Приставки, ибо без них очень худо. ~Quardbreak
+		//Окончания, ибо без них очень худо. ~Quardbreak
 /datum/proc/p_e_1(temp_gender)
 	. = "о"
 

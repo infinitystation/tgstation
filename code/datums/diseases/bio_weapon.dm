@@ -4,7 +4,7 @@
 	spread_text = "On contact"
 	spread_flags = CONTACT_GENERAL
 	cure_text = "Неизвестное биологическое оружие. Избегайте контакта с зараженными. Антидот невозможно синтезировать в условиях малых лабораторий."
-	cures = list("holywater")
+	cures = list("alien_bionanites")
 	cure_chance = 10
 	agent = "SBR 'Death'"
 	viable_mobtypes = list(/mob/living/carbon/human)

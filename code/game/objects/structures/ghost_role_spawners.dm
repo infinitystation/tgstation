@@ -43,15 +43,14 @@
 	death = FALSE
 	anchored = 0
 	density = 0
-	flavour_text = "<font size=3><b>Вы</b></font><b> — Пепельный Ходок. Ваша землЯ богата пищей, но чужаки хотЯт захватить её. Вы должны создать своё племЯ и изгнать чужеземцев из вашего дома. Ваше племЯ покланЯетсЯ <span class='danger'>Некрополису</span>. Эти пустоши - ваша свытЯнЯ, ваша землЯ с прекрасной флорой, на которую можно охотитьсЯ. \
-	Вы видите свет в дали, на юго-западе... чужеземцы прибыли на своих железных птицах, чтобы найти и разграбить вашу свЯтыню - дары Некрополиса. ВремЯ принести их в жертву вашему объекту поклонениЯ...</b>"
+	flavour_text = "<font size=3><b>Вы</b></font><b> — Член Племени Пепельных Ходоков. Ваша земл&#255; богата пищей, но чужаки хот&#255;т захватить её. Вы должны создать своё плем&#255; и изгнать чужеземцев из вашего дома. Ваше плем&#255; поклан&#255;етс&#255; <span class='danger'>Некрополису</span>. Эти пустоши - ваша свыт&#255;н&#255;, ваша земл&#255; с прекрасной флорой, на которую можно охотитьс&#255;. \
+	Вы видите свет в дали, на юго-западе... чужеземцы прибыли на своих железных птицах, чтобы найти и разграбить вашу св&#255;тыню - дары Некрополиса. Врем&#255; принести их в жертву вашему объекту поклонени&#255;...</b>"
 
 /obj/effect/mob_spawn/human/ash_walker/special(mob/living/new_spawn)
 	new_spawn.real_name = random_unique_lizard_name(gender)
 	new_spawn << "<b>Тащите тела мертвых существ и чудовищ к вашему гнезду. Они будут поглащены и после нескольких тел, вы получите себе подобного собрата. Слава Некрополису!</b>"
 	if(ishuman(new_spawn))
 		var/mob/living/carbon/human/H = new_spawn
-		H.mind.AddSpell(new /obj/effect/proc_holder/spell/self/REAL_NIGHT_VISION(null))
 		H.underwear = "Nude"
 		H.update_body()
 
@@ -59,7 +58,8 @@
 	..()
 	var/area/A = get_area(src)
 	if(A)
-		notify_ghosts("Яйцо пепельного ходока готово вылупитьс&#255; в [A.name].", source = src, action=NOTIFY_ATTACK)
+		notify_ghosts("Яйцо пепельного ходока готово вылупитьс&#255; в [A.name].", source = src, action=NOTIFY_ATTACK, flashwindow = FALSE)
+
 //Timeless prisons: Spawns in Wish Granter prisons in lavaland. Ghosts become age-old users of the Wish Granter and are advised to seek repentance for their past.
 /obj/effect/mob_spawn/human/exile
 	name = "timeless prison"
@@ -118,7 +118,7 @@
 		mob_species = species
 	var/area/A = get_area(src)
 	if(A)
-		notify_ghosts("\A [initial(species.id)] golem shell has been completed in \the [A.name].", source = src, action=NOTIFY_ATTACK)
+		notify_ghosts("\A [initial(species.id)] golem shell has been completed in \the [A.name].", source = src, action=NOTIFY_ATTACK, flashwindow = FALSE)
 	if(has_owner && creator)
 		flavour_text = "You are a golem. You move slowly, but are highly resistant to heat and cold as well as blunt trauma. You are unable to wear clothes, but can still use most tools. \
 		Serve [creator], and assist [creator.p_them()] in completing [creator.p_their()] goals at any cost."
@@ -307,3 +307,43 @@
 	icon_state = "drone_maint_hat"
 	death = FALSE
 	roundstart = FALSE
+
+/obj/effect/mob_spawn/human/abductor
+	name = "alien sleeper"
+	desc = "Some strange alien's sleeper... What the fuck is happing here?"
+	mob_name = "abductor"
+	icon = 'icons/obj/lavaland/spawners.dmi'
+	icon_state = "cryostasis_sleeper"
+	roundstart = FALSE
+	death = FALSE
+	faction = "abductor"
+	uniform = /obj/item/clothing/under/color/grey
+	shoes = /obj/item/clothing/shoes/combat
+	mob_species = /datum/species/abductor
+	flavour_text = "Вы - представитель расы Кайрон. Ваша раса - малоэмоциональна, что делает вас хладнокровными и рациональными. \
+	Ваш стиль речи - короткий и пр&#255;молинейный, так-же, вы часто используете научные слова. Из-за природных задатков, у Вас слабо получаетс&#255; воодушевл&#255;ть даже своих близких, уже не говор&#255; о красноречии. \
+	В св&#255;зи с угрозой вымирани&#255;, Вы становитесь ещё и малообщительными. Идеалы ответа собседнику, если вы его видите - кивок или мотание головой, если вопрос требует в ответе 'Да' или 'Нет'. \
+	Это был краткий пересказ Вашей расы."
+	objectives = "Вы &#255;вл&#255;етесь 'гражданским' относительно других классов своей расы. Делайте то, что вам сказали."
+
+/obj/effect/mob_spawn/human/abductor/scientist
+	name = "command's abductor sleeper"
+	mob_name = "abductor commander"
+	outfit_type = /datum/outfit/abductor_agent
+	objectives = "Выполните задачу, которую вам поставил 'Высший разум' (администратор, как правило). Вы - руководитель на этой операции. Св&#255;зь с 'Высшим разумом' - команда Pray в IC."
+
+/obj/effect/mob_spawn/human/abductor/agent
+	name = "soldier's abductor sleeper"
+	mob_name = "abductor soldier"
+	outfit_type = /datum/outfit/abductor_agent
+	objectives = "Выполните задачу, которую вам поставил 'Высший разум' (администратор, как правило). Ваш куратор и командующий на операцию - один из учёных."
+
+/obj/effect/mob_spawn/human/abductor/agent/special(mob/living/new_spawn)
+	var/rand_name = rand(0,999)
+	if(rand_name == 255)
+		rand_name += 1
+	new_spawn.real_name = "Cloned Cayron's soldier #[rand_name]"
+	if(ishuman(new_spawn))
+		var/mob/living/carbon/human/H = new_spawn
+		H.underwear = "Nude" //Потому-что клон.
+		H.update_body()

@@ -2,7 +2,7 @@
 //Прошу прощения, что не придумал способ, как брать конечности из папки инфинити.
 
 /datum/species/tajaran // Tajaran are a humanoid race possesing cat-like features.
-	name = "Tajarans"
+	name = "Tajaran"
 	id = "tajaran"
 	say_mod = "мурлычит"
 	default_color = "FFFFF"
@@ -30,12 +30,12 @@
 	var/regex/tajaran_rAr = new("r+", "g")
 	var/regex/tajaran_rAR = new("R+", "g")
 	if(copytext(message, 1, 2) != "*")
-		var/begin = get_custom_quote(message)
-		var/quote = copytext(message, 1, begin)
-		message = copytext(message, begin)
+//		var/begin = get_custom_quote(message)
+//		var/quote = copytext(message, 1, begin)
+//		message = copytext(message, begin)
 		message = tajaran_rrr.Replace(message, "ррр")
 		message = tajaran_rRR.Replace(message, "РРР")
 		message = tajaran_rAr.Replace(message, "rrr")
 		message = tajaran_rAR.Replace(message, "RRR")
-		message = quote + message
+//		message = quote + message
 	return message

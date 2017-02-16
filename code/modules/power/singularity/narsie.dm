@@ -43,7 +43,7 @@
 	if(user.client.banprisoned)
 		return
 	makeNewConstruct(/mob/living/simple_animal/hostile/construct/harvester, user, null, 0, loc_override = src.loc)
-	PoolOrNew(/obj/effect/particle_effect/smoke/sleeping, src.loc)
+	new /obj/effect/particle_effect/smoke/sleeping(src.loc)
 
 
 /obj/singularity/narsie/process()
@@ -65,8 +65,10 @@
 
 
 /obj/singularity/narsie/Bump(atom/A)
-	forceMove(get_turf(A))
-	A.narsie_act()
+	var/turf/T = get_turf(A)
+	if(T == loc)
+		T = get_step(A, A.dir) //please don't slam into a window like a bird, nar-sie
+	forceMove(T)
 
 
 /obj/singularity/narsie/mezzer()

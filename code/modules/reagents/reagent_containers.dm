@@ -71,7 +71,7 @@
 	if(reagents)
 		for(var/datum/reagent/R in reagents.reagent_list)
 			R.on_ex_act()
-	if(!qdeleted(src))
+	if(!QDELETED(src))
 		..()
 
 /obj/item/weapon/reagent_containers/fire_act(exposed_temperature, exposed_volume)
@@ -107,9 +107,13 @@
 		return
 
 	else
+		if(isturf(target) && reagents.reagent_list.len && thrownby)
+			add_logs(thrownby, target, "splashed (thrown) [english_list(reagents.reagent_list)]", "at [target][COORD(target)]")
+			log_game("[key_name(thrownby)] splashed (thrown) [english_list(reagents.reagent_list)] at [COORD(target)].")
+			message_admins("[key_name_admin(thrownby)] splashed (thrown) [english_list(reagents.reagent_list)] at [ADMIN_COORDJMP(target)].")
 		visible_message("<span class='notice'>[src] spills its contents all over [target].</span>")
 		reagents.reaction(target, TOUCH)
-		if(qdeleted(src))
+		if(QDELETED(src))
 			return
 
 	reagents.clear_reagents()

@@ -289,6 +289,7 @@
 // DEATH SQUADS
 /datum/admins/proc/makeDeathsquad()
 	var/mission = input("Assign a mission to the deathsquad", "Assign Mission", "Leave no witnesses.")
+	mission = sanitize_a0(mission)
 	var/list/mob/dead/observer/candidates = pollCandidates("Do you wish to be considered for an elite Nanotrasen Strike Team?", "deathsquad", null)
 	var/squadSpawned = 0
 
@@ -397,6 +398,7 @@
 
 /datum/admins/proc/makeOfficial()
 	var/mission = input("Assign a task for the official", "Assign Task", "Conduct a routine preformance review of [station_name()] and its Captain.")
+	mission = sanitize_a0(mission)
 	var/list/mob/dead/observer/candidates = pollCandidates("Do you wish to be considered to be a Centcom Official?", "deathsquad")
 
 	if(candidates.len)
@@ -453,6 +455,7 @@
 			return makeOfficial()
 	var/teamsize = min(7,input("Maximum size of team? (7 max)", "Select Team Size",4) as null|num)
 	var/mission = input("Assign a mission to the Emergency Response Team", "Assign Mission", "Assist the station.")
+	mission = sanitize_a0(mission)
 	var/list/mob/dead/observer/candidates = pollCandidates("Do you wish to be considered for a Code [alert] Nanotrasen Emergency Response Team?", "deathsquad", null)
 	var/teamSpawned = 0
 
@@ -573,6 +576,7 @@
 			alert = "Green"
 	var/teamsize = min(7,input("Максимальное количество бойцов в отрЯде? (Макс: 7)", "Выберите размер группы",4) as null|num)
 	var/mission = input("Выберите задание длЯ отрЯда", "Назначьте цель", "Защитить ЦК.")
+	mission = sanitize_a0(mission)
 	var/list/mob/dead/observer/candidates = pollCandidates("Вы желаете стать сотрудником охраны ЦК при следующем уровне угрозы: [alert] с целью: [mission]?", "Приглашение в элиту", null)
 	var/teamSpawned = 0
 

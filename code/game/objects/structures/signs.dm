@@ -102,7 +102,7 @@
 	if(isturf(target) && proximity)
 		var/turf/T = target
 		user.visible_message("<span class='notice'>[user] fastens [src] to [T].</span>", \
-							 "<span class='notice'>You attach a blank sign to [T].</span>")
+							 "<span class='notice'>You attach the sign to [T].</span>")
 		playsound(T, 'sound/items/Deconstruct.ogg', 50, 1)
 		new sign_path(T)
 		user.drop_item()
@@ -392,8 +392,8 @@
 	desc = "Index, which tells that you are in the medical's room."
 	icon_state = "medic"
 
-/obj/structure/sign/directions/synd
-	name = "Syndicate's sign"
+/obj/structure/sign/synd
+	name = "Syndicate emblem"
 	desc = "That's our galaxy."
 	icon = 'icons/obj/infinity_decals.dmi'
 	icon_state = "synd_sim"
@@ -467,3 +467,9 @@
 	desc = "E.X.P.E.R.I-MENTOR's part will be forward."
 	icon_state = "experementor"
 	icon = 'icons/obj/infinity_decals.dmi'
+
+/obj/structure/sign/anabiosis
+	name = "\improper Anabiosis emblem "
+	desc = "Знак корпорации 'Анабиоз'. Цепочка ДНК'а на лого намекает на биологические исследования..."
+	icon_state = "emblem"
+	icon = 'icons/mob/infinity_anabiosis/anabiosis.dmi'

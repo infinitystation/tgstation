@@ -5,6 +5,7 @@
 	desc = "Use of this weapon may constiute a war crime in your area, consult your local captain."
 	name = "clusterbang"
 	icon = 'icons/obj/grenade.dmi'
+	pin_sound = 'sound/weapons/armbomb.ogg'
 	icon_state = "clusterbang"
 	var/payload = /obj/item/weapon/grenade/flashbang/cluster
 
@@ -64,7 +65,7 @@
 		walk_away(P,loc,rand(1,4))
 
 		spawn(rand(15,60))
-			if(P && !qdeleted(P))
+			if(P && !QDELETED(P))
 				P.prime()
 			qdel(src)
 

@@ -23,6 +23,20 @@
 	back = /obj/item/weapon/storage/backpack/cultpack
 	suit_store = /obj/item/weapon/melee/cultblade
 
+/datum/outfit/abductor_agent
+	name = "Abductor Agent"
+
+	uniform = /obj/item/clothing/under/color/grey
+	shoes = /obj/item/clothing/shoes/combat
+	suit = /obj/item/clothing/suit/armor/abductor/vest/combat
+	suit_store = /obj/item/weapon/gun/energy/alien/base
+	head = /obj/item/clothing/head/helmet/abductor
+	belt = /obj/item/weapon/storage/belt/military/abductor/full
+	l_pocket = /obj/item/device/flashlight/slime
+	back = /obj/item/weapon/storage/backpack
+	backpack_contents = list(/obj/item/weapon/abductor_baton=1,\
+		/obj/item/device/abductor/silencer=1)
+
 /datum/outfit/clock_cult
 	name = "Ratvar's cultist"
 

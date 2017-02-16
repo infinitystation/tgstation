@@ -32,7 +32,7 @@
 	backpack_contents = list(/obj/item/weapon/storage/box/engineer=1,\
 		/obj/item/weapon/melee/baton/loaded=1,\
 		/obj/item/clothing/mask/gas/sechailer=1,\
-		/obj/item/weapon/gun/energy/e_gun=1)
+		/obj/item/weapon/gun/energy/e_gun/ert=1)
 	l_pocket = /obj/item/weapon/switchblade
 
 /datum/outfit/ert/commander/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -65,7 +65,7 @@
 	backpack_contents = list(/obj/item/weapon/storage/box/engineer=1,\
 		/obj/item/weapon/storage/box/handcuffs=1,\
 		/obj/item/clothing/mask/gas/sechailer=1,\
-		/obj/item/weapon/gun/energy/e_gun=1,\
+		/obj/item/weapon/gun/energy/e_gun/ert=1,\
 		/obj/item/weapon/melee/baton/loaded=1,\
 		/obj/item/weapon/gun/energy/e_gun/advtaser=1)
 
@@ -101,7 +101,7 @@
 	backpack_contents = list(/obj/item/weapon/storage/box/engineer=1,\
 		/obj/item/weapon/melee/baton/loaded=1,\
 		/obj/item/clothing/mask/gas/sechailer=1,\
-		/obj/item/weapon/gun/energy/e_gun=1,\
+		/obj/item/weapon/gun/energy/e_gun/ert=1,\
 		/obj/item/weapon/reagent_containers/hypospray/combat=1,\
 		/obj/item/weapon/gun/medbeam=1)
 
@@ -132,13 +132,13 @@
 	suit = /obj/item/clothing/suit/space/hardsuit/ert/engi
 	glasses =  /obj/item/clothing/glasses/meson/engine
 	back = /obj/item/weapon/storage/backpack/industrial
-	belt = /obj/item/weapon/storage/belt/utility/full
+	belt = /obj/item/weapon/storage/belt/utility/chief/full
 	l_pocket = /obj/item/weapon/rcd_ammo/large
 	r_hand = /obj/item/weapon/storage/firstaid/regular
 	backpack_contents = list(/obj/item/weapon/storage/box/engineer=1,\
 		/obj/item/weapon/melee/baton/loaded=1,\
 		/obj/item/clothing/mask/gas/sechailer=1,\
-		/obj/item/weapon/gun/energy/e_gun=1,\
+		/obj/item/weapon/gun/energy/e_gun/ert=1,\
 		/obj/item/weapon/rcd/combat=1)
 
 /datum/outfit/ert/engineer/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)

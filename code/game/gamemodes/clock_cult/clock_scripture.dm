@@ -15,7 +15,6 @@ Judgement: 12 servants, 5 caches, 300 CV, and any existing AIs are converted or 
 	var/desc = "Ancient Ratvarian lore. This piece seems particularly mundane."
 	var/list/invocations = list() //Spoken over time in the ancient language of Ratvar. See clock_unsorted.dm for more details on the language and how to make it.
 	var/channel_time = 10 //In deciseconds, how long a ritual takes to chant
-	var/list/required_components = list(BELLIGERENT_EYE = 0, VANGUARD_COGWHEEL = 0, GEIS_CAPACITOR = 0, REPLICANT_ALLOY = 0, HIEROPHANT_ANSIBLE = 0) //Components required
 	var/list/consumed_components = list(BELLIGERENT_EYE = 0, VANGUARD_COGWHEEL = 0, GEIS_CAPACITOR = 0, REPLICANT_ALLOY = 0, HIEROPHANT_ANSIBLE = 0) //Components consumed
 	var/obj/item/clockwork/slab/slab //The parent clockwork slab
 	var/mob/living/invoker //The slab's holder
@@ -104,11 +103,11 @@ Judgement: 12 servants, 5 caches, 300 CV, and any existing AIs are converted or 
 		checked_penalty = check_offstation_penalty()
 		var/component_printout = "<span class='warning'>You lack the components to recite this piece of scripture!"
 		var/failed = FALSE
-		for(var/i in required_components)
+		for(var/i in consumed_components)
 			var/cache_components = clockwork_caches ? clockwork_component_cache[i] : 0
 			var/total_components = slab.stored_components[i] + cache_components
-			if(required_components[i] && total_components < required_components[i])
-				component_printout += "\nYou have <span class='[get_component_span(i)]_small'><b>[total_components]/[required_components[i]]</b> \
+			if(consumed_components[i] && total_components < consumed_components[i])
+				component_printout += "\nYou have <span class='[get_component_span(i)]_small'><b>[total_components]/[consumed_components[i]]</b> \
 				[get_component_name(i)][i != REPLICANT_ALLOY ? "s":""].</span>"
 				failed = TRUE
 		if(failed)
@@ -158,8 +157,6 @@ Judgement: 12 servants, 5 caches, 300 CV, and any existing AIs are converted or 
 		for(var/i in consumed_components)
 			if(consumed_components[i])
 				consumed_components[i] *= 2
-				if(required_components[i])
-					required_components[i] = max(consumed_components[i], required_components[i])
 		return TRUE
 	return FALSE
 
@@ -180,7 +177,7 @@ Judgement: 12 servants, 5 caches, 300 CV, and any existing AIs are converted or 
 	if(!channel_time)
 		return TRUE
 	for(var/invocation in invocations)
-		if(!check_special_requirements() || !do_after(invoker, channel_time / invocations.len, target = invoker) || !check_special_requirements())
+		if(!do_after(invoker, channel_time / invocations.len, target = invoker, extra_checks = CALLBACK(src, .proc/check_special_requirements)))
 			slab.busy = null
 			return FALSE
 		if(multiple_invokers_used)
@@ -207,12 +204,11 @@ Judgement: 12 servants, 5 caches, 300 CV, and any existing AIs are converted or 
 
 /datum/clockwork_scripture/channeled/scripture_effects()
 	for(var/i in 1 to chant_amount)
-		if(!can_recite())
-			break
-		if(!do_after(invoker, chant_interval, target = invoker))
+		if(!do_after(invoker, chant_interval, target = invoker, extra_checks = CALLBACK(src, .proc/can_recite)))
 			break
 		clockwork_say(invoker, text2ratvar(pick(chant_invocations)), whispered)
-		chant_effects(i)
+		if(!chant_effects(i))
+			break
 	if(invoker && slab)
 		chant_end_effects()
 	return TRUE

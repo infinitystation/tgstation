@@ -1,7 +1,6 @@
 /datum/species/abductor
 	name = "Abductor"
 	id = "abductor"
-	darksight = 3
 	say_mod = "gibbers"
 	sexes = 0
 	species_traits = list(NOBLOOD,NOBREATH,VIRUSIMMUNE,NOGUNS)
@@ -9,3 +8,9 @@
 	var/scientist = 0 // vars to not pollute spieces list with castes
 	var/agent = 0
 	var/team = 1
+
+/datum/species/abductor/agent
+	agent = 1
+
+/datum/species/abductor/scientist
+	scientist = 1

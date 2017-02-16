@@ -52,8 +52,7 @@
 	stealth_active = 1
 	if(ishuman(loc))
 		var/mob/living/carbon/human/M = loc
-		PoolOrNew(/obj/effect/overlay/temp/dir_setting/ninja/cloak,
-			list(get_turf(M), M.dir))
+		new /obj/effect/overlay/temp/dir_setting/ninja/cloak(get_turf(M), M.dir)
 		M.name_override = disguise.name
 		M.icon = disguise.icon
 		M.icon_state = disguise.icon_state
@@ -66,8 +65,7 @@
 	stealth_active = 0
 	if(ishuman(loc))
 		var/mob/living/carbon/human/M = loc
-		PoolOrNew(/obj/effect/overlay/temp/dir_setting/ninja,
-			list(get_turf(M), M.dir))
+		new /obj/effect/overlay/temp/dir_setting/ninja(get_turf(M), M.dir)
 		M.name_override = null
 		M.cut_overlays()
 		M.regenerate_icons()
@@ -384,7 +382,7 @@ Congratulations! You are now trained for xenobiology research!"}
 
 	L.visible_message("<span class='danger'>[user] has stunned [L] with [src]!</span>", \
 							"<span class='userdanger'>[user] has stunned you with [src]!</span>")
-	playsound(loc, 'sound/weapons/Egloves.ogg', 50, 1, -1)
+	playsound(loc, 'sound/weapons/alien_stun.ogg', 50, 1, -1)
 
 	if(ishuman(L))
 		var/mob/living/carbon/human/H = L
@@ -529,7 +527,7 @@ Congratulations! You are now trained for xenobiology research!"}
 	item_state = "alienhelmet"
 	blockTracking = 1
 	origin_tech = "materials=7;magnets=4;abductor=3"
-	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEHAIR|HIDEFACIALHAIR
 
 // Operating Table / Beds / Lockers
 
@@ -631,3 +629,11 @@ Congratulations! You are now trained for xenobiology research!"}
 		return // no material modding
 	else
 		..()
+
+/obj/item/clothing/suit/armor/abductor/vest/combat //»вентна€ байда
+	name = "soldier vest"
+	desc = "—тандартная экипировка десантных отрядов чужих. «ащищает от большей части внешнего воздействия."
+	icon_state = "vest_combat"
+	actions_types = null
+	mode = VEST_COMBAT
+

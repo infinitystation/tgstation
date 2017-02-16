@@ -33,6 +33,7 @@ var/global/list/animated_spines_list = list()
 	//Mutant Human bits
 var/global/list/tails_list_human = list()
 var/global/list/animated_tails_list_human = list()
+var/global/list/animated_tails_list_tajaran = list()
 var/global/list/ears_list = list()
 var/global/list/wings_list = list()
 var/global/list/wings_open_list = list()
@@ -40,6 +41,8 @@ var/global/list/r_wings_list = list()
 
 var/global/list/ghost_forms_with_directions_list = list("ghost") //stores the ghost forms that support directional sprites
 var/global/list/ghost_forms_with_accessories_list = list("ghost") //stores the ghost forms that support hair and other such things
+
+var/global/list/security_depts_prefs = list(SEC_DEPT_RANDOM, SEC_DEPT_NONE, SEC_DEPT_ENGINEERING, SEC_DEPT_MEDICAL, SEC_DEPT_SCIENCE, SEC_DEPT_SUPPLY)
 
 	//Backpacks
 #define GBACKPACK "Grey Backpack"
@@ -50,6 +53,13 @@ var/global/list/ghost_forms_with_accessories_list = list("ghost") //stores the g
 #define DSATCHEL "Department Satchel"
 #define DDUFFLEBAG "Department Dufflebag"
 var/global/list/backbaglist = list(DBACKPACK, DSATCHEL, DDUFFLEBAG, GBACKPACK, GSATCHEL, GDUFFLEBAG, LSATCHEL)
+
+//Uplink spawn loc
+#define UPLINK_PDA		"PDA"
+#define UPLINK_RADIO	"Radio"
+#define UPLINK_PEN		"Pen" //like a real spy!
+var/global/list/uplink_spawn_loc_list = list(UPLINK_PDA, UPLINK_RADIO, UPLINK_PEN)
+
 	//Female Uniforms
 var/global/list/female_clothing_icons = list()
 
