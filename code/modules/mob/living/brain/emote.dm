@@ -33,6 +33,6 @@
 	message = "проигрывает звук свистка."
 	emote_type = EMOTE_AUDIBLE
 
-datum/emote/brain/bobbops
+/datum/emote/brain/bobbops
 	key = "bobbops"
 	message = "проигрывает звука бупа"
