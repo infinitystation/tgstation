@@ -521,6 +521,10 @@
 				icon_state = "champagne_glass"
 				name = "glass of champagne"
 				desc = "The glass contain champagne. Very elitist."
+			if("rassol")
+				icon_state = "glassofrassol"
+				name = "glass of rassol"
+				desc = "The glass contain rassol. Tasty and refreshing."
 			else
 				icon_state ="glass_brown"
 				var/image/I = image(icon, "glassoverlay")
