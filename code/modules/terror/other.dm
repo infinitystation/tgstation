@@ -413,7 +413,7 @@
 
 /obj/item/clothing/suit/killer_suit
 	name = "killer robes"
-	desc = "Чёрная-чёрная роба чёрного-чёрного парня с чёрно-чёрной улицы. Без расизма."
+	desc = "Чёрна&#255;-чёрна&#255; роба чёрного-чёрного парн&#255; с чёрно-чёрной улицы. Без расизма."
 	icon_state = "killer_suit"
 	item_state = "killer_suit"
 	icon = 'icons/obj/clothing/infinity_work.dmi'
@@ -424,7 +424,7 @@
 
 /obj/item/weapon/cultivator/killer
 	name = "hook"
-	desc = "Необычно острый и блесстящий на свете крюк..."
+	desc = "Необычно острый и блесст&#255;щий на свете крюк..."
 	icon = 'icons/obj/infinity_weapons.dmi'
 	icon_state = "hook"
 	item_state = "hook"
@@ -458,7 +458,7 @@
 	name = "Science Shuttle Console (Computer Board)"
 	build_path = /obj/machinery/computer/shuttle/science
 
-//Взял с карбонки умные пули
+//Вз&#255;л с карбонки умные пули
 
 /obj/item/projectile/bullet/smart
 	name = "smart bullet"

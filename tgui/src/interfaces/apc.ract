@@ -69,7 +69,7 @@
 		{{/if}}
 	  </ui-section>
 	  <ui-section label='Внешнее питание'>
-		<span class='{{powerState(data.externalPower)}}'>{{data.externalPower == 2 ? "Хорошнн" : data.externalPower == 1 ? "Низкое" : "Отсутствует"}}</span>
+		<span class='{{powerState(data.externalPower)}}'>{{data.externalPower == 2 ? "Хорошее" : data.externalPower == 1 ? "Низкое" : "Отсутствует"}}</span>
 	  </ui-section>
 	  <ui-section label='Элемент питания'>
 		{{#if data.powerCellStatus != null}}

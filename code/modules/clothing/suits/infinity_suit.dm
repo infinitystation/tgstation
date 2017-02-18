@@ -415,8 +415,8 @@
 /obj/item/clothing/suit/blackjack
 	name = "blackjack suit"
 	desc = "Black blackjack suit. Likely wearing when you play blackjack."
-	icon_state = "blackjack_suit"
-	item_state = "bl_suit"
+	icon_state = "blackjack_jacket"
+	item_state = "blackjack_jacket"
 	icon = 'icons/obj/clothing/infinity_work.dmi'
 	worn_icon = 'icons/mob/infinity_work.dmi'
 
