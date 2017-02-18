@@ -32,3 +32,7 @@
 	key_third_person = "whistles"
 	message = "проигрывает звук свистка."
 	emote_type = EMOTE_AUDIBLE
+
+/datum/emote/brain/bobbops
+	key = "bobbops"
+	message = "проигрывает звука бупа"
