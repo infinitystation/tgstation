@@ -407,3 +407,9 @@
 	desc = "Attention, there is a risk to break through the ceiling."
 	icon_state = "champagne"
 	list_reagents = list("champagne" = 100)
+
+/obj/item/weapon/reagent_containers/food/drinks/bottle/rassol
+	name = "Bank of Rassol"
+	desc = "The elixir of eternal life and Russian freshness."
+	icon_state = "rassol"
+	list_reagents = list("rassol" = 100)
