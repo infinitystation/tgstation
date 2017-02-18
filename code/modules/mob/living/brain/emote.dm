@@ -35,4 +35,4 @@
 
 /datum/emote/brain/bobbops
 	key = "bobbops"
-	message = "проигрывает звука бупа"
+	message = "проигрывает звук бупа."
