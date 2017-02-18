@@ -9,7 +9,7 @@
 	// Apparently these are safe to carry? I'm sure goliaths would disagree.
 	needs_permit = 0
 	var/range_add
-	upgrades = list("diamond" = 0, "screwdriver" = 0, "plasma" = 0)
+//	upgrades = list("diamond" = 0, "screwdriver" = 0, "plasma" = 0)
 	unique_rename = 1
 	can_pull_pin = 0
 	origin_tech = "combat=3;powerstorage=3;engineering=3"
@@ -23,7 +23,7 @@
 	var/overheat = FALSE
 	var/empty_state = "kineticgun_empty"
 
-	var/max_mod_capacity = 100
+	var/max_mod_capacity = 150
 	var/list/modkits = list()
 
 /obj/item/weapon/gun/energy/kinetic_accelerator/recharge_newshot(no_cyborg_drain)
@@ -71,27 +71,27 @@
 		var/obj/item/borg/upgrade/modkit/M = A
 		M.modify_projectile(K)
 
-/obj/item/weapon/gun/energy/kinetic_accelerator/attackby(obj/item/weapon/W as obj, mob/user as mob, params)
-	if(istype(W, /obj/item/weapon/screwdriver) && upgrades["screwdriver"] < 3)
-		upgrades["screwdriver"]++
-		overheat_time = max(0, overheat_time-1)
-		user << "<span class='info'>You tweak [src]'s thermal exchanger.</span>"
-
-	else if(istype(W, /obj/item/stack))
-		var/obj/item/stack/S = W
-
-		if(istype(S, /obj/item/stack/sheet/mineral/diamond) && upgrades["diamond"] < 3)
-			upgrades["diamond"]++
-			overheat_time = max(0, overheat_time-3)
-			user << "<span class='info'>You upgrade [src]'s thermal exchanger with diamonds.</span>"
-			S.use(1)
-		if(istype(S, /obj/item/stack/sheet/mineral/plasma) && upgrades["plasma"] < 3)
-			upgrades["plasma"]++
-			range_add++
-			user << "<span class='info'>You upgrade [src]'s accelerating chamber with plasma.</span>"
-			S.use(1)
-
-	return ..()
+//obj/item/weapon/gun/energy/kinetic_accelerator/attackby(obj/item/weapon/W as obj, mob/user as mob, params)
+//	if(istype(W, /obj/item/weapon/screwdriver) && upgrades["screwdriver"] < 3)
+//		upgrades["screwdriver"]++
+//		overheat_time = max(0, overheat_time-1)
+//		user << "<span class='info'>You tweak [src]'s thermal exchanger.</span>"
+//
+//	else if(istype(W, /obj/item/stack))
+//		var/obj/item/stack/S = W
+//
+//		if(istype(S, /obj/item/stack/sheet/mineral/diamond) && upgrades["diamond"] < 3)
+//			upgrades["diamond"]++
+//			overheat_time = max(0, overheat_time-3)
+//			user << "<span class='info'>You upgrade [src]'s thermal exchanger with diamonds.</span>"
+//			S.use(1)
+//		if(istype(S, /obj/item/stack/sheet/mineral/plasma) && upgrades["plasma"] < 3)
+//			upgrades["plasma"]++
+//			range_add++
+//			user << "<span class='info'>You upgrade [src]'s accelerating chamber with plasma.</span>"
+//			S.use(1)
+//
+//	return ..()
 
 
 /* /obj/item/weapon/gun/energy/kinetic_accelerator/super
@@ -326,7 +326,8 @@
 	name = "range increase"
 	desc = "Increases the range of a kinetic accelerator when installed."
 	modifier = 1
-	cost = 24 //so you can fit four plus a tracer cosmetic
+	maximum_of_type = 4
+	cost = 15
 
 /obj/item/borg/upgrade/modkit/range/modify_projectile(obj/item/projectile/kinetic/K)
 	K.range += modifier
@@ -337,6 +338,8 @@
 	name = "damage increase"
 	desc = "Increases the damage of kinetic accelerator when installed."
 	modifier = 10
+	maximum_of_type = 2
+	cost = 20
 
 /obj/item/borg/upgrade/modkit/damage/modify_projectile(obj/item/projectile/kinetic/K)
 	K.damage += modifier
@@ -347,6 +350,8 @@
 	name = "cooldown decrease"
 	desc = "Decreases the cooldown of a kinetic accelerator."
 	modifier = 2.5
+	maximum_of_type = 6
+	cost = 20
 
 /obj/item/borg/upgrade/modkit/cooldown/install(obj/item/weapon/gun/energy/kinetic_accelerator/KA, mob/user)
 	. = ..()
@@ -394,8 +399,7 @@
 	name = "decrease pressure penalty"
 	desc = "Increases the damage a kinetic accelerator does in a high pressure environment."
 	modifier = 2
-	denied_type = /obj/item/borg/upgrade/modkit/indoors
-	maximum_of_type = 2
+//	denied_type = /obj/item/borg/upgrade/modkit/indoors //Чуть больше свободы малфу и спасателям
 	cost = 40
 
 /obj/item/borg/upgrade/modkit/indoors/modify_projectile(obj/item/projectile/kinetic/K)
