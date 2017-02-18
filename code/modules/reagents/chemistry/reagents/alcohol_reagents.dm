@@ -883,3 +883,10 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	color = "#fcfdc6" // rgb: 252, 253, 198
 	nutriment_factor = 2 * REAGENTS_METABOLISM
 	boozepwr = 1
+
+/datum/reagent/consumable/ethanol/champagne
+	name = "Champagne"
+	id = "champagne"
+	description = "Elite champagne for elite people."
+	color = "#DCD17A" // rgb: 0, 100, 200
+	boozepwr = 50

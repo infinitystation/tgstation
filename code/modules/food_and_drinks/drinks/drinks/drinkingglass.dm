@@ -517,6 +517,10 @@
 				icon_state = "glass_yellow"
 				name = "Eggnog"
 				desc = "For enjoying the most wonderful time of the year."
+			if("champagne")
+				icon_state = "champagne_glass"
+				name = "glass of champagne"
+				desc = "The glass contain champagne. Very elitist."
 			else
 				icon_state ="glass_brown"
 				var/image/I = image(icon, "glassoverlay")
@@ -648,7 +652,7 @@
 /obj/item/weapon/reagent_containers/food/drinks/drinkingglass/filled/cola
 	name = "Space Cola"
 	list_reagents = list("cola" = 50)
-	
+
 /obj/item/weapon/reagent_containers/food/drinks/drinkingglass/filled/nuka_cola
 	name = "Nuka Cola"
 	list_reagents = list("nuka_cola" = 50)

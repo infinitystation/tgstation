@@ -401,3 +401,9 @@
 		user << "<span class='info'>You snuff out the flame on [src].</span>"
 		overlays -= fire_overlay
 		active = 0
+
+/obj/item/weapon/reagent_containers/food/drinks/bottle/champagne
+	name = "Elite Soviet Champagne"
+	desc = "Attention, there is a risk to break through the ceiling."
+	icon_state = "champagne"
+	list_reagents = list("champagne" = 100)
