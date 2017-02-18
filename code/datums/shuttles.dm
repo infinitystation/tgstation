@@ -239,6 +239,11 @@
 	name = "Alien Trooper's Ship"
 	admin_notes = "Сделано Террором дл&#255; ивентов. Имеютс&#255; изначальные спавнеры дл&#255; экипажа."
 
+/datum/map_template/shuttle/whiteship/knight
+	suffix = "knight"
+	name = "Knight's Ship"
+	admin_notes = "Рыцарский шаттл длЯ ивентов от RedKnightHero."
+
 /datum/map_template/shuttle/whiteship/clear
 	suffix = "metaclear"
 	name = "NT Recovery Ship"
