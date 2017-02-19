@@ -95386,6 +95386,17 @@
 	},
 /turf/open/floor/plasteel/terror/chapel,
 /area/chapel/main)
+"deD" = (
+/obj/structure/rack,
+/obj/item/weapon/reagent_containers/food/drinks/bottle/rassol,
+/obj/item/weapon/reagent_containers/food/drinks/bottle/rassol,
+/obj/item/weapon/reagent_containers/food/drinks/bottle/rassol,
+/obj/item/weapon/reagent_containers/food/drinks/bottle/rassol,
+/obj/item/weapon/reagent_containers/food/drinks/bottle/rassol,
+/turf/open/floor/plating{
+	icon_state = "panelscorched"
+	},
+/area/maintenance/asmaint)
 
 (1,1,1) = {"
 aaa
@@ -112760,7 +112771,7 @@ clt
 cbo
 crP
 ctk
-cuA
+deD
 cbo
 cwU
 cbo

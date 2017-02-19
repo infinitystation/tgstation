@@ -410,7 +410,7 @@
 	list_reagents = list("champagne" = 100)
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/rassol //Infinity-station product
-	name = "Bank of Rassol"
+	name = "Jar of Rassol"
 	desc = "The elixir of eternal life and Russian freshness."
 	icon = 'icons/obj/drinks_infinity.dmi'
 	icon_state = "rassol"
