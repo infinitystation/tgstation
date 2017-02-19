@@ -51,7 +51,7 @@
 	data["docked"] = SSshuttle.supply.mode == SHUTTLE_IDLE
 	data["loan"] = !!SSshuttle.shuttle_loan
 	data["loan_dispatched"] = SSshuttle.shuttle_loan && SSshuttle.shuttle_loan.dispatched
-	data["message"] = SSshuttle.centcom_message || "Remember to stamp and send back the supply manifests."
+	data["message"] = SSshuttle.centcom_message || "Не забудьте проставить печати на отчеты и отправить документы обратно на ЦК. Благодарим за внимание."
 
 	data["supplies"] = list()
 	for(var/pack in SSshuttle.supply_packs)
