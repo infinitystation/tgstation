@@ -21,3 +21,5 @@ _maps/shuttles/emergency_pubby.dmm
 _maps/shuttles/emergency_delta.dmm
 _maps/shuttles/emergency_wabbajack.dmm
 _maps/shuttles/emergency_arena.dmm
+_maps/shuttles/emergency_supermatter.dmm
+_maps/shuttles/emergency_russiafightpit.dmm
