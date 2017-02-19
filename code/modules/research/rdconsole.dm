@@ -450,7 +450,7 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 						var/obj/item/new_item = new P(src)
 						if( new_item.type == /obj/item/weapon/storage/backpack/holding )
 							new_item.investigate_log("built by [key]","singulo")
-						if(!istype(new_item, /obj/item/stack/sheet)) // To avoid materials dupe glitches
+						if(!istype(new_item, /obj/item/stack/sheet) && !istype(new_item, /obj/item/weapon/ore/bluespace_crystal)) // To avoid materials dupe glitches
 							new_item.materials = efficient_mats.Copy()
 						if(O)
 							var/obj/item/weapon/storage/lockbox/L = new/obj/item/weapon/storage/lockbox(linked_lathe.loc)

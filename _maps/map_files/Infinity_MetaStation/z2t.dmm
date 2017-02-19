@@ -8714,7 +8714,7 @@
 	},
 /area/centcom/supply)
 "wt" = (
-/obj/machinery/computer/shuttle/auxillary_base{
+/obj/machinery/computer/auxillary_base{
 	pixel_y = 32
 	},
 /obj/structure/table/reinforced,
@@ -10803,7 +10803,7 @@
 	},
 /area/centcom/ferry)
 "Bc" = (
-/obj/machinery/computer/shuttle/auxillary_base{
+/obj/machinery/computer/auxillary_base{
 	pixel_y = 32
 	},
 /obj/structure/table/reinforced,
