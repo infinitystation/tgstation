@@ -2212,7 +2212,9 @@
 /turf/closed/indestructible/riveted/infinity,
 /area/tdome/arena_source)
 "fR" = (
-/turf/closed/indestructible/fakeglass,
+/obj/effect/turf_decal/delivery,
+/obj/machinery/igniter,
+/turf/open/floor/plasteel/black,
 /area/tdome/arena_source)
 "fS" = (
 /obj/machinery/door/airlock/centcom{
@@ -2227,14 +2229,18 @@
 	},
 /area/tdome/arena_source)
 "fT" = (
-/obj/machinery/igniter,
-/turf/open/floor/plasteel/delivery,
+/turf/open/floor/plasteel/terror/darkred/corner{
+	tag = "icon-darkredcorners_t (WEST)";
+	icon_state = "darkredcorners_t";
+	dir = 8
+	},
 /area/tdome/arena_source)
 "fU" = (
-/turf/open/floor/plasteel,
+/turf/open/floor/plasteel/black,
 /area/tdome/arena_source)
 "fV" = (
-/turf/open/floor/plasteel/bot,
+/obj/effect/turf_decal/bot,
+/turf/open/floor/plasteel/black,
 /area/tdome/arena_source)
 "fW" = (
 /obj/structure/rack,
@@ -2253,32 +2259,23 @@
 	id = "thunderdomegen";
 	name = "General Supply"
 	},
-/turf/open/floor/plasteel/loadingarea{
-	dir = 4
-	},
+/turf/open/floor/plasteel/terror/darkred,
 /area/tdome/arena_source)
 "fY" = (
-/obj/effect/landmark{
-	name = "tdome2"
-	},
 /turf/open/floor/plasteel/warning{
-	dir = 9
+	dir = 8
 	},
 /area/tdome/arena_source)
 "fZ" = (
-/obj/effect/landmark{
-	name = "tdome2"
+/obj/machinery/recharger{
+	pixel_y = 4
 	},
-/turf/open/floor/plasteel/warning{
-	dir = 1
-	},
+/obj/effect/turf_decal/bot,
+/turf/open/floor/plasteel/black,
 /area/tdome/arena_source)
 "ga" = (
-/obj/effect/landmark{
-	name = "tdome2"
-	},
 /turf/open/floor/plasteel/warning{
-	dir = 5
+	dir = 4
 	},
 /area/tdome/arena_source)
 "gb" = (
@@ -2286,25 +2283,24 @@
 	id = "thunderdome";
 	name = "Thunderdome Blast Door"
 	},
-/turf/open/floor/plasteel/loadingarea{
-	dir = 4
-	},
+/turf/open/floor/plasteel/terror/darkred,
 /area/tdome/arena_source)
 "gc" = (
-/turf/open/floor/plasteel/red/side{
+/turf/open/floor/plasteel/terror/darkred/side{
+	tag = "icon-darkred_t (WEST)";
+	icon_state = "darkred_t";
 	dir = 8
 	},
 /area/tdome/arena_source)
 "gd" = (
-/turf/open/floor/plasteel/delivery,
+/obj/effect/turf_decal/delivery,
+/turf/open/floor/plasteel/black,
 /area/tdome/arena_source)
 "ge" = (
-/turf/open/floor/plasteel/neutral/side{
-	dir = 4
-	},
+/turf/open/floor/plasteel/terror/darkred/side,
 /area/tdome/arena_source)
 "gf" = (
-/turf/open/floor/plasteel/neutral,
+/turf/open/floor/plasteel/darkgreen/side,
 /area/tdome/arena_source)
 "gg" = (
 /turf/open/floor/plasteel/neutral/side{
@@ -2312,7 +2308,9 @@
 	},
 /area/tdome/arena_source)
 "gh" = (
-/turf/open/floor/plasteel/green/side{
+/turf/open/floor/plasteel/darkgreen/side{
+	tag = "icon-darkgreen (EAST)";
+	icon_state = "darkgreen";
 	dir = 4
 	},
 /area/tdome/arena_source)
@@ -2321,44 +2319,34 @@
 	id = "thunderdome";
 	name = "Thunderdome Blast Door"
 	},
-/turf/open/floor/plasteel/loadingarea{
-	baseturf = /turf/open/floor/plating/lava/smooth/lava_land_surface;
-	dir = 8
-	},
+/turf/open/floor/plasteel/darkgreen,
 /area/tdome/arena_source)
 "gj" = (
-/obj/effect/landmark{
-	name = "tdome1"
-	},
 /turf/open/floor/plasteel/warning{
-	dir = 9
+	dir = 8
 	},
-/area/tdome/arena_source)
+/area/space)
 "gk" = (
+/obj/machinery/recharger{
+	pixel_y = 4
+	},
 /obj/effect/landmark{
 	name = "tdome1"
 	},
-/turf/open/floor/plasteel/warning{
-	dir = 1
-	},
-/area/tdome/arena_source)
+/obj/effect/turf_decal/bot,
+/turf/open/floor/plasteel/black,
+/area/space)
 "gl" = (
-/obj/effect/landmark{
-	name = "tdome1"
-	},
 /turf/open/floor/plasteel/warning{
-	dir = 5
+	dir = 4
 	},
-/area/tdome/arena_source)
+/area/space)
 "gm" = (
 /obj/machinery/door/poddoor{
 	id = "thunderdomegen";
 	name = "General Supply"
 	},
-/turf/open/floor/plasteel/loadingarea{
-	baseturf = /turf/open/floor/plating/lava/smooth/lava_land_surface;
-	dir = 8
-	},
+/turf/open/floor/plasteel/darkgreen,
 /area/tdome/arena_source)
 "gn" = (
 /obj/structure/rack,
@@ -2373,34 +2361,33 @@
 	},
 /area/tdome/arena_source)
 "go" = (
-/obj/effect/landmark{
-	name = "tdome2"
-	},
 /turf/open/floor/plasteel/warning{
-	dir = 8
+	dir = 10
 	},
 /area/tdome/arena_source)
 "gp" = (
-/obj/machinery/recharger{
-	pixel_y = 4
-	},
+/obj/effect/turf_decal/delivery,
 /obj/effect/landmark{
 	name = "tdome2"
 	},
-/turf/open/floor/plasteel/delivery,
+/turf/open/floor/plasteel/black,
 /area/tdome/arena_source)
 "gq" = (
+/obj/machinery/camera{
+	pixel_x = 11;
+	pixel_y = -9;
+	network = list("thunder");
+	c_tag = "Red Team"
+	},
+/obj/effect/turf_decal/delivery,
 /obj/effect/landmark{
 	name = "tdome2"
 	},
-/turf/open/floor/plasteel/neutral,
+/turf/open/floor/plasteel/black,
 /area/tdome/arena_source)
 "gr" = (
-/obj/effect/landmark{
-	name = "tdome2"
-	},
 /turf/open/floor/plasteel/warning{
-	dir = 4
+	dir = 6
 	},
 /area/tdome/arena_source)
 "gs" = (
@@ -2414,36 +2401,35 @@
 	},
 /area/tdome/arena_source)
 "gu" = (
-/obj/effect/landmark{
-	name = "tdome1"
-	},
 /turf/open/floor/plasteel/warning{
-	dir = 8
+	dir = 10
 	},
-/area/tdome/arena_source)
+/area/space)
 "gv" = (
-/obj/machinery/recharger{
-	pixel_y = 4
-	},
+/obj/effect/turf_decal/delivery,
 /obj/effect/landmark{
 	name = "tdome1"
 	},
-/turf/open/floor/plasteel/delivery,
-/area/tdome/arena_source)
+/turf/open/floor/plasteel/black,
+/area/space)
 "gw" = (
+/obj/machinery/camera{
+	pixel_x = 12;
+	pixel_y = -10;
+	network = list("thunder");
+	c_tag = "Green Team"
+	},
+/obj/effect/turf_decal/delivery,
 /obj/effect/landmark{
 	name = "tdome1"
 	},
-/turf/open/floor/plasteel/neutral,
-/area/tdome/arena_source)
+/turf/open/floor/plasteel/black,
+/area/space)
 "gx" = (
-/obj/effect/landmark{
-	name = "tdome1"
-	},
 /turf/open/floor/plasteel/warning{
-	dir = 4
+	dir = 6
 	},
-/area/tdome/arena_source)
+/area/space)
 "gy" = (
 /obj/machinery/camera{
 	pixel_x = 11;
@@ -2498,20 +2484,25 @@
 /turf/open/floor/plasteel/circuit/gcircuit,
 /area/tdome/arena_source)
 "gF" = (
-/turf/open/floor/plasteel/red/corner{
-	dir = 8
+/turf/open/floor/plasteel/terror/darkred/corner{
+	tag = "icon-darkredcorners_t (NORTH)";
+	icon_state = "darkredcorners_t";
+	dir = 1
 	},
 /area/tdome/arena_source)
 "gG" = (
-/turf/open/floor/plasteel/green/corner,
+/turf/open/floor/plasteel/darkgreen/corner{
+	tag = "icon-darkgreencorners (EAST)";
+	icon_state = "darkgreencorners";
+	dir = 4
+	},
 /area/tdome/arena_source)
 "gH" = (
-/obj/effect/landmark{
-	name = "tdome2"
+/obj/machinery/door/poddoor{
+	id = "thunderdomehea";
+	name = "Heavy Supply"
 	},
-/turf/open/floor/plasteel/warning{
-	dir = 10
-	},
+/turf/open/floor/plasteel/terror/darkred,
 /area/tdome/arena_source)
 "gI" = (
 /obj/effect/landmark{
@@ -2528,12 +2519,11 @@
 	},
 /area/tdome/arena_source)
 "gK" = (
-/obj/effect/landmark{
-	name = "tdome1"
+/obj/machinery/door/poddoor{
+	id = "thunderdomehea";
+	name = "Heavy Supply"
 	},
-/turf/open/floor/plasteel/warning{
-	dir = 10
-	},
+/turf/open/floor/plasteel/darkgreen,
 /area/tdome/arena_source)
 "gL" = (
 /obj/effect/landmark{
@@ -2550,20 +2540,36 @@
 	},
 /area/tdome/arena_source)
 "gN" = (
-/obj/machinery/door/poddoor{
-	id = "thunderdomehea";
-	name = "Heavy Supply"
+/obj/structure/rack,
+/obj/item/clothing/under/color/red,
+/obj/item/clothing/shoes/sneakers/brown,
+/obj/item/clothing/suit/armor/vest,
+/obj/item/clothing/head/helmet/swat,
+/obj/item/weapon/gun/energy/laser,
+/obj/machinery/camera/autoname{
+	dir = 4;
+	name = "security camera CC";
+	network = list("CentComm")
 	},
-/turf/open/floor/plasteel/loadingarea{
+/turf/open/floor/plasteel/warning{
 	dir = 1
 	},
 /area/tdome/arena_source)
 "gO" = (
-/obj/machinery/door/poddoor{
-	id = "thunderdomehea";
-	name = "Heavy Supply"
+/obj/structure/rack,
+/obj/item/clothing/under/color/green,
+/obj/item/clothing/shoes/sneakers/brown,
+/obj/item/clothing/suit/armor/vest,
+/obj/item/clothing/head/helmet/swat,
+/obj/item/weapon/gun/energy/laser,
+/obj/machinery/camera/autoname{
+	dir = 8;
+	name = "security camera CC";
+	network = list("CentComm")
 	},
-/turf/open/floor/plasteel/loadingarea,
+/turf/open/floor/plasteel/warning{
+	dir = 1
+	},
 /area/tdome/arena_source)
 "gP" = (
 /obj/structure/rack,
@@ -5250,17 +5256,17 @@
 	icon_state = "propulsion_l"
 	},
 /turf/open/space/transit,
-/area/space)
+/area/wizard_station)
 "oh" = (
 /obj/structure/shuttle/engine/propulsion,
 /turf/open/space/transit,
-/area/space)
+/area/wizard_station)
 "oi" = (
 /obj/structure/shuttle/engine/propulsion{
 	icon_state = "propulsion_r"
 	},
 /turf/open/space/transit,
-/area/space)
+/area/wizard_station)
 "oj" = (
 /turf/closed/indestructible/rock/snow,
 /area/syndicate_mothership)
@@ -17482,7 +17488,7 @@
 /area/tdome/arena)
 "PU" = (
 /turf/closed/indestructible/fakeglass,
-/area/tdome/arena)
+/area/tdome/tdomeobserve)
 "PV" = (
 /obj/item/weapon/storage/box/matches{
 	pixel_x = -3;
@@ -17563,14 +17569,23 @@
 	},
 /area/tdome/arena)
 "Qc" = (
+/obj/effect/turf_decal/delivery,
 /obj/machinery/igniter,
-/turf/open/floor/plasteel/delivery,
+/turf/open/floor/plasteel/black,
 /area/tdome/arena)
 "Qd" = (
-/turf/open/floor/plasteel,
+/turf/open/floor/plasteel/terror/darkred/corner{
+	tag = "icon-darkredcorners_t (EAST)";
+	icon_state = "darkredcorners_t";
+	dir = 4
+	},
 /area/tdome/arena)
 "Qe" = (
-/turf/open/floor/plasteel/bot,
+/turf/open/floor/plasteel/terror/darkred/side{
+	tag = "icon-darkred_t (NORTH)";
+	icon_state = "darkred_t";
+	dir = 1
+	},
 /area/tdome/arena)
 "Qf" = (
 /obj/machinery/door/firedoor,
@@ -17629,28 +17644,19 @@
 	id = "thunderdomegen";
 	name = "General Supply"
 	},
-/turf/open/floor/plasteel/terror/red,
+/turf/open/floor/plasteel/terror/darkred,
 /area/tdome/arena)
 "Ql" = (
-/obj/effect/landmark{
-	name = "tdome2"
-	},
 /turf/open/floor/plasteel/warning{
 	dir = 9
 	},
 /area/tdome/arena)
 "Qm" = (
-/obj/effect/landmark{
-	name = "tdome2"
-	},
 /turf/open/floor/plasteel/warning{
 	dir = 1
 	},
 /area/tdome/arena)
 "Qn" = (
-/obj/effect/landmark{
-	name = "tdome2"
-	},
 /turf/open/floor/plasteel/warning{
 	dir = 5
 	},
@@ -17660,22 +17666,21 @@
 	id = "thunderdome";
 	name = "Thunderdome Blast Door"
 	},
-/turf/open/floor/plasteel/terror/red,
+/turf/open/floor/plasteel/terror/darkred,
 /area/tdome/arena)
 "Qp" = (
-/turf/open/floor/plasteel/terror/red/side{
-	tag = "icon-red_t (WEST)";
-	icon_state = "red_t";
+/turf/open/floor/plasteel/terror/darkred/corner{
+	tag = "icon-darkredcorners_t (WEST)";
+	icon_state = "darkredcorners_t";
 	dir = 8
 	},
 /area/tdome/arena)
 "Qq" = (
-/turf/open/floor/plasteel/delivery,
+/obj/effect/turf_decal/bot,
+/turf/open/floor/plasteel/black,
 /area/tdome/arena)
 "Qr" = (
-/turf/open/floor/plasteel/neutral/side{
-	dir = 4
-	},
+/turf/open/floor/plasteel/black,
 /area/tdome/arena)
 "Qs" = (
 /turf/open/floor/plasteel/neutral,
@@ -17686,16 +17691,14 @@
 	},
 /area/tdome/arena)
 "Qu" = (
-/turf/open/floor/plasteel/green/side{
-	dir = 4
-	},
+/turf/open/floor/plasteel/darkgreen/corner,
 /area/tdome/arena)
 "Qv" = (
 /obj/machinery/door/poddoor{
 	id = "thunderdome";
 	name = "Thunderdome Blast Door"
 	},
-/turf/open/floor/plasteel/green,
+/turf/open/floor/plasteel/darkgreen,
 /area/tdome/arena)
 "Qw" = (
 /obj/effect/landmark{
@@ -17726,10 +17729,7 @@
 	id = "thunderdomegen";
 	name = "General Supply"
 	},
-/turf/open/floor/plasteel/loadingarea{
-	baseturf = /turf/open/floor/plating/lava/smooth/lava_land_surface;
-	dir = 8
-	},
+/turf/open/floor/plasteel/darkgreen,
 /area/tdome/arena)
 "QA" = (
 /obj/structure/rack,
@@ -17782,9 +17782,6 @@
 	},
 /area/tdome/arena)
 "QF" = (
-/obj/effect/landmark{
-	name = "tdome2"
-	},
 /turf/open/floor/plasteel/warning{
 	dir = 8
 	},
@@ -17793,21 +17790,17 @@
 /obj/machinery/recharger{
 	pixel_y = 4
 	},
-/obj/effect/landmark{
-	name = "tdome2"
-	},
-/turf/open/floor/plasteel/delivery,
+/obj/effect/turf_decal/bot,
+/turf/open/floor/plasteel/black,
 /area/tdome/arena)
 "QH" = (
+/obj/effect/turf_decal/delivery,
 /obj/effect/landmark{
 	name = "tdome2"
 	},
-/turf/open/floor/plasteel/neutral,
+/turf/open/floor/plasteel/black,
 /area/tdome/arena)
 "QI" = (
-/obj/effect/landmark{
-	name = "tdome2"
-	},
 /turf/open/floor/plasteel/warning{
 	dir = 4
 	},
@@ -17824,14 +17817,16 @@
 	},
 /area/tdome/arena)
 "QK" = (
-/turf/open/floor/plasteel/terror/red/corner{
-	tag = "icon-redcorner_t (NORTH)";
-	icon_state = "redcorner_t";
-	dir = 1
+/turf/open/floor/plasteel/terror/darkred/side{
+	tag = "icon-darkred_t (WEST)";
+	icon_state = "darkred_t";
+	dir = 8
 	},
 /area/tdome/arena)
 "QL" = (
-/turf/open/floor/plasteel/green/corner{
+/turf/open/floor/plasteel/darkgreen/side{
+	tag = "icon-darkgreen (EAST)";
+	icon_state = "darkgreen";
 	dir = 4
 	},
 /area/tdome/arena)
@@ -17861,13 +17856,15 @@
 /obj/effect/landmark{
 	name = "tdome1"
 	},
-/turf/open/floor/plasteel/delivery,
+/obj/effect/turf_decal/bot,
+/turf/open/floor/plasteel/black,
 /area/tdome/arena)
 "QP" = (
+/obj/effect/turf_decal/delivery,
 /obj/effect/landmark{
 	name = "tdome1"
 	},
-/turf/open/floor/plasteel/neutral,
+/turf/open/floor/plasteel/black,
 /area/tdome/arena)
 "QQ" = (
 /obj/effect/landmark{
@@ -17915,10 +17912,11 @@
 	network = list("thunder");
 	c_tag = "Red Team"
 	},
+/obj/effect/turf_decal/delivery,
 /obj/effect/landmark{
 	name = "tdome2"
 	},
-/turf/open/floor/plasteel/neutral,
+/turf/open/floor/plasteel/black,
 /area/tdome/arena)
 "QW" = (
 /obj/machinery/door/poddoor{
@@ -17944,10 +17942,11 @@
 	network = list("thunder");
 	c_tag = "Green Team"
 	},
+/obj/effect/turf_decal/delivery,
 /obj/effect/landmark{
 	name = "tdome1"
 	},
-/turf/open/floor/plasteel/neutral,
+/turf/open/floor/plasteel/black,
 /area/tdome/arena)
 "Ra" = (
 /obj/structure/flora/ausbushes/lavendergrass,
@@ -18050,23 +18049,14 @@
 	},
 /area/tdome/tdomeadmin)
 "Rn" = (
-/obj/effect/landmark{
-	name = "tdome2"
-	},
 /turf/open/floor/plasteel/warning{
 	dir = 10
 	},
 /area/tdome/arena)
 "Ro" = (
-/obj/effect/landmark{
-	name = "tdome2"
-	},
 /turf/open/floor/plasteel/warning,
 /area/tdome/arena)
 "Rp" = (
-/obj/effect/landmark{
-	name = "tdome2"
-	},
 /turf/open/floor/plasteel/warning{
 	dir = 6
 	},
@@ -18106,14 +18096,14 @@
 	id = "thunderdomehea";
 	name = "Heavy Supply"
 	},
-/turf/open/floor/plasteel/terror/red,
+/turf/open/floor/plasteel/terror/darkred,
 /area/tdome/arena)
 "Rv" = (
 /obj/machinery/door/poddoor{
 	id = "thunderdomehea";
 	name = "Heavy Supply"
 	},
-/turf/open/floor/plasteel/loadingarea,
+/turf/open/floor/plasteel/darkgreen,
 /area/tdome/arena)
 "Rw" = (
 /turf/open/floor/plasteel/vault{
@@ -19154,6 +19144,501 @@
 	icon_state = "warning"
 	},
 /area/centcom/control)
+"TR" = (
+/turf/open/floor/plasteel/terror/darkred/corner{
+	tag = "icon-darkredcorners_t (EAST)";
+	icon_state = "darkredcorners_t";
+	dir = 4
+	},
+/area/tdome/arena_source)
+"TS" = (
+/turf/open/floor/plasteel/terror/darkred/side{
+	tag = "icon-darkred_t (NORTH)";
+	icon_state = "darkred_t";
+	dir = 1
+	},
+/area/tdome/arena_source)
+"TT" = (
+/turf/open/floor/plasteel/terror/darkred/side{
+	tag = "icon-darkred_t (NORTH)";
+	icon_state = "darkred_t";
+	dir = 1
+	},
+/area/tdome/arena_source)
+"TU" = (
+/turf/open/floor/plasteel/terror/darkred/side{
+	tag = "icon-darkred_t (NORTH)";
+	icon_state = "darkred_t";
+	dir = 1
+	},
+/area/tdome/arena_source)
+"TV" = (
+/turf/open/floor/plasteel/terror/darkred/side{
+	tag = "icon-darkred_t (NORTH)";
+	icon_state = "darkred_t";
+	dir = 1
+	},
+/area/tdome/arena_source)
+"TW" = (
+/turf/open/floor/plasteel/terror/darkred/side{
+	tag = "icon-darkred_t (NORTH)";
+	icon_state = "darkred_t";
+	dir = 1
+	},
+/area/tdome/arena_source)
+"TX" = (
+/turf/open/floor/plasteel/black,
+/area/tdome/arena_source)
+"TY" = (
+/turf/open/floor/plasteel/darkgreen/side{
+	tag = "icon-darkgreen (NORTH)";
+	icon_state = "darkgreen";
+	dir = 1
+	},
+/area/tdome/arena_source)
+"TZ" = (
+/turf/open/floor/plasteel/darkgreen/side{
+	tag = "icon-darkgreen (NORTH)";
+	icon_state = "darkgreen";
+	dir = 1
+	},
+/area/tdome/arena_source)
+"Ua" = (
+/turf/open/floor/plasteel/darkgreen/side{
+	tag = "icon-darkgreen (NORTH)";
+	icon_state = "darkgreen";
+	dir = 1
+	},
+/area/tdome/arena_source)
+"Ub" = (
+/turf/open/floor/plasteel/darkgreen/side{
+	tag = "icon-darkgreen (NORTH)";
+	icon_state = "darkgreen";
+	dir = 1
+	},
+/area/tdome/arena_source)
+"Uc" = (
+/turf/open/floor/plasteel/darkgreen/side{
+	tag = "icon-darkgreen (NORTH)";
+	icon_state = "darkgreen";
+	dir = 1
+	},
+/area/tdome/arena_source)
+"Ud" = (
+/turf/open/floor/plasteel/darkgreen/corner{
+	tag = "icon-darkgreencorners (NORTH)";
+	icon_state = "darkgreencorners";
+	dir = 1
+	},
+/area/tdome/arena_source)
+"Ue" = (
+/obj/structure/rack,
+/obj/item/clothing/under/color/red,
+/obj/item/clothing/shoes/sneakers/brown,
+/obj/item/clothing/suit/armor/tdome/red,
+/obj/item/clothing/head/helmet/thunderdome,
+/obj/item/weapon/melee/baton/loaded,
+/obj/item/weapon/melee/energy/sword/saber/red,
+/obj/machinery/camera/autoname{
+	name = "security camera CC";
+	network = list("CentComm")
+	},
+/turf/open/floor/plasteel/warning{
+	dir = 4
+	},
+/area/tdome/arena_source)
+"Uf" = (
+/obj/machinery/door/poddoor{
+	id = "thunderdomegen";
+	name = "General Supply"
+	},
+/turf/open/floor/plasteel/terror/darkred,
+/area/tdome/arena_source)
+"Ug" = (
+/turf/open/floor/plasteel/warning{
+	dir = 9
+	},
+/area/tdome/arena_source)
+"Uh" = (
+/turf/open/floor/plasteel/warning{
+	dir = 1
+	},
+/area/tdome/arena_source)
+"Ui" = (
+/turf/open/floor/plasteel/warning{
+	dir = 1
+	},
+/area/tdome/arena_source)
+"Uj" = (
+/turf/open/floor/plasteel/warning{
+	dir = 1
+	},
+/area/tdome/arena_source)
+"Uk" = (
+/turf/open/floor/plasteel/warning{
+	dir = 5
+	},
+/area/tdome/arena_source)
+"Ul" = (
+/obj/machinery/door/poddoor{
+	id = "thunderdome";
+	name = "Thunderdome Blast Door"
+	},
+/turf/open/floor/plasteel/terror/darkred,
+/area/tdome/arena_source)
+"Um" = (
+/turf/open/floor/plasteel/darkgreen/corner,
+/area/tdome/arena_source)
+"Un" = (
+/obj/machinery/door/poddoor{
+	id = "thunderdome";
+	name = "Thunderdome Blast Door"
+	},
+/turf/open/floor/plasteel/darkgreen,
+/area/tdome/arena_source)
+"Uo" = (
+/turf/open/floor/plasteel/warning{
+	dir = 9
+	},
+/area/space)
+"Up" = (
+/turf/open/floor/plasteel/warning{
+	dir = 1
+	},
+/area/space)
+"Uq" = (
+/turf/open/floor/plasteel/warning{
+	dir = 1
+	},
+/area/space)
+"Ur" = (
+/turf/open/floor/plasteel/warning{
+	dir = 1
+	},
+/area/space)
+"Us" = (
+/turf/open/floor/plasteel/warning{
+	dir = 5
+	},
+/area/space)
+"Ut" = (
+/obj/machinery/door/poddoor{
+	id = "thunderdomegen";
+	name = "General Supply"
+	},
+/turf/open/floor/plasteel/darkgreen,
+/area/tdome/arena_source)
+"Uu" = (
+/obj/structure/rack,
+/obj/item/clothing/under/color/green,
+/obj/item/clothing/shoes/sneakers/brown,
+/obj/item/clothing/suit/armor/tdome/green,
+/obj/item/clothing/head/helmet/thunderdome,
+/obj/item/weapon/melee/baton/loaded,
+/obj/item/weapon/melee/energy/sword/saber/green,
+/obj/machinery/camera/autoname{
+	name = "security camera CC";
+	network = list("CentComm")
+	},
+/turf/open/floor/plasteel/warning{
+	dir = 8
+	},
+/area/tdome/arena_source)
+"Uv" = (
+/obj/effect/turf_decal/delivery,
+/obj/effect/landmark{
+	name = "tdome2"
+	},
+/turf/open/floor/plasteel/black,
+/area/tdome/arena_source)
+"Uw" = (
+/obj/effect/turf_decal/delivery,
+/obj/effect/landmark{
+	name = "tdome1"
+	},
+/turf/open/floor/plasteel/black,
+/area/space)
+"Ux" = (
+/obj/machinery/camera/thunder{
+	pixel_x = 11
+	},
+/turf/open/floor/plasteel/circuit/gcircuit,
+/area/tdome/arena_source)
+"Uy" = (
+/obj/machinery/recharger{
+	pixel_y = 4
+	},
+/obj/effect/turf_decal/bot,
+/obj/effect/landmark{
+	name = "tdome1"
+	},
+/turf/open/floor/plasteel/black,
+/area/space)
+"Uz" = (
+/turf/open/floor/plasteel/warning,
+/area/tdome/arena_source)
+"UA" = (
+/turf/open/floor/plasteel/warning,
+/area/tdome/arena_source)
+"UB" = (
+/turf/open/floor/plasteel/warning,
+/area/tdome/arena_source)
+"UC" = (
+/turf/open/floor/plasteel/warning,
+/area/space)
+"UD" = (
+/turf/open/floor/plasteel/warning,
+/area/space)
+"UE" = (
+/turf/open/floor/plasteel/warning,
+/area/space)
+"UF" = (
+/turf/open/floor/plasteel/terror/darkred/corner,
+/area/tdome/arena_source)
+"UG" = (
+/turf/open/floor/plasteel/terror/darkred/side,
+/area/tdome/arena_source)
+"UH" = (
+/turf/open/floor/plasteel/darkgreen/corner{
+	tag = "icon-darkgreencorners (WEST)";
+	icon_state = "darkgreencorners";
+	dir = 8
+	},
+/area/tdome/arena_source)
+"UI" = (
+/turf/closed/indestructible/riveted,
+/area/space)
+"UJ" = (
+/turf/closed/indestructible/riveted,
+/area/space)
+"UK" = (
+/turf/closed/indestructible/riveted,
+/area/space)
+"UL" = (
+/turf/closed/indestructible/riveted,
+/area/space)
+"UM" = (
+/turf/closed/indestructible/riveted,
+/area/space)
+"UN" = (
+/turf/closed/indestructible/riveted,
+/area/space)
+"UO" = (
+/turf/closed/indestructible/riveted,
+/area/space)
+"UP" = (
+/turf/closed/indestructible/riveted,
+/area/space)
+"UQ" = (
+/turf/closed/indestructible/riveted,
+/area/space)
+"UR" = (
+/turf/closed/indestructible/riveted,
+/area/space)
+"US" = (
+/turf/closed/indestructible/riveted,
+/area/space)
+"UT" = (
+/turf/closed/indestructible/riveted,
+/area/space)
+"UU" = (
+/turf/closed/indestructible/riveted,
+/area/space)
+"UV" = (
+/turf/closed/indestructible/riveted,
+/area/space)
+"UW" = (
+/turf/closed/indestructible/riveted,
+/area/space)
+"UX" = (
+/turf/open/floor/plasteel/black,
+/area/tdome/arena)
+"UY" = (
+/turf/open/floor/plasteel/darkgreen/side{
+	tag = "icon-darkgreen (NORTH)";
+	icon_state = "darkgreen";
+	dir = 1
+	},
+/area/tdome/arena)
+"UZ" = (
+/turf/open/floor/plasteel/darkgreen/side{
+	tag = "icon-darkgreen (NORTH)";
+	icon_state = "darkgreen";
+	dir = 1
+	},
+/area/tdome/arena)
+"Va" = (
+/turf/open/floor/plasteel/darkgreen/side{
+	tag = "icon-darkgreen (NORTH)";
+	icon_state = "darkgreen";
+	dir = 1
+	},
+/area/tdome/arena)
+"Vb" = (
+/turf/open/floor/plasteel/darkgreen/side{
+	tag = "icon-darkgreen (NORTH)";
+	icon_state = "darkgreen";
+	dir = 1
+	},
+/area/tdome/arena)
+"Vc" = (
+/turf/open/floor/plasteel/darkgreen/side{
+	tag = "icon-darkgreen (NORTH)";
+	icon_state = "darkgreen";
+	dir = 1
+	},
+/area/tdome/arena)
+"Vd" = (
+/turf/open/floor/plasteel/darkgreen/corner{
+	tag = "icon-darkgreencorners (NORTH)";
+	icon_state = "darkgreencorners";
+	dir = 1
+	},
+/area/tdome/arena)
+"Ve" = (
+/turf/open/floor/plasteel/black,
+/area/tdome/arena)
+"Vf" = (
+/obj/effect/turf_decal/delivery,
+/turf/open/floor/plasteel/black,
+/area/tdome/arena)
+"Vg" = (
+/obj/effect/turf_decal/delivery,
+/turf/open/floor/plasteel/black,
+/area/tdome/arena)
+"Vh" = (
+/obj/effect/turf_decal/delivery,
+/turf/open/floor/plasteel/black,
+/area/tdome/arena)
+"Vi" = (
+/obj/effect/turf_decal/delivery,
+/turf/open/floor/plasteel/black,
+/area/tdome/arena)
+"Vj" = (
+/obj/effect/turf_decal/delivery,
+/turf/open/floor/plasteel/black,
+/area/tdome/arena)
+"Vk" = (
+/obj/effect/turf_decal/delivery,
+/turf/open/floor/plasteel/black,
+/area/tdome/arena)
+"Vl" = (
+/obj/effect/turf_decal/delivery,
+/turf/open/floor/plasteel/black,
+/area/tdome/arena)
+"Vm" = (
+/obj/effect/turf_decal/delivery,
+/turf/open/floor/plasteel/black,
+/area/tdome/arena)
+"Vn" = (
+/obj/machinery/recharger{
+	pixel_y = 4
+	},
+/obj/effect/turf_decal/bot,
+/obj/effect/landmark{
+	name = "tdome1"
+	},
+/turf/open/floor/plasteel/black,
+/area/tdome/arena)
+"Vo" = (
+/turf/open/floor/plasteel/terror/darkred/corner{
+	tag = "icon-darkredcorners_t (NORTH)";
+	icon_state = "darkredcorners_t";
+	dir = 1
+	},
+/area/tdome/arena)
+"Vp" = (
+/turf/open/floor/plasteel/darkgreen/corner{
+	tag = "icon-darkgreencorners (EAST)";
+	icon_state = "darkgreencorners";
+	dir = 4
+	},
+/area/tdome/arena)
+"Vq" = (
+/turf/open/floor/plasteel/terror/darkred/corner,
+/area/tdome/arena)
+"Vr" = (
+/turf/open/floor/plasteel/terror/darkred/side,
+/area/tdome/arena)
+"Vs" = (
+/turf/open/floor/plasteel/terror/darkred/side,
+/area/tdome/arena)
+"Vt" = (
+/turf/open/floor/plasteel/terror/darkred/side,
+/area/tdome/arena)
+"Vu" = (
+/turf/open/floor/plasteel/terror/darkred/side,
+/area/tdome/arena)
+"Vv" = (
+/turf/open/floor/plasteel/terror/darkred/side,
+/area/tdome/arena)
+"Vw" = (
+/turf/open/floor/plasteel/darkgreen/side,
+/area/tdome/arena)
+"Vx" = (
+/turf/open/floor/plasteel/darkgreen/side,
+/area/tdome/arena)
+"Vy" = (
+/turf/open/floor/plasteel/darkgreen/side,
+/area/tdome/arena)
+"Vz" = (
+/turf/open/floor/plasteel/darkgreen/side,
+/area/tdome/arena)
+"VA" = (
+/turf/open/floor/plasteel/darkgreen/side,
+/area/tdome/arena)
+"VB" = (
+/turf/open/floor/plasteel/darkgreen/corner{
+	tag = "icon-darkgreencorners (WEST)";
+	icon_state = "darkgreencorners";
+	dir = 8
+	},
+/area/tdome/arena)
+"VC" = (
+/turf/closed/indestructible/fakeglass,
+/area/tdome/tdomeadmin)
+"VD" = (
+/turf/closed/indestructible/fakeglass,
+/area/tdome/tdomeadmin)
+"VE" = (
+/turf/closed/indestructible/fakeglass,
+/area/tdome/tdomeadmin)
+"VF" = (
+/turf/closed/indestructible/fakeglass,
+/area/tdome/tdomeadmin)
+"VG" = (
+/turf/closed/indestructible/fakeglass,
+/area/tdome/tdomeadmin)
+"VH" = (
+/turf/closed/indestructible/fakeglass,
+/area/tdome/tdomeadmin)
+"VI" = (
+/turf/closed/indestructible/fakeglass,
+/area/tdome/tdomeadmin)
+"VJ" = (
+/turf/closed/indestructible/fakeglass,
+/area/tdome/tdomeadmin)
+"VK" = (
+/turf/closed/indestructible/fakeglass,
+/area/tdome/tdomeadmin)
+"VL" = (
+/turf/closed/indestructible/fakeglass,
+/area/tdome/tdomeadmin)
+"VM" = (
+/turf/closed/indestructible/fakeglass,
+/area/tdome/tdomeadmin)
+"VN" = (
+/turf/closed/indestructible/fakeglass,
+/area/tdome/tdomeadmin)
+"VO" = (
+/turf/closed/indestructible/fakeglass,
+/area/tdome/tdomeadmin)
+"VP" = (
+/turf/closed/indestructible/fakeglass,
+/area/tdome/tdomeadmin)
+"VQ" = (
+/turf/closed/indestructible/fakeglass,
+/area/tdome/tdomeadmin)
 
 (1,1,1) = {"
 aa
@@ -54448,49 +54933,49 @@ aa
 aa
 aa
 aa
-ab
-hc
-hr
-hr
-hr
-hr
-hr
-hr
-hr
-hr
-hr
-hQ
-hY
-if
-if
-if
-if
-if
-ab
-if
-if
-if
-if
-if
-ab
-if
-if
-if
-if
-if
-hY
-hc
-hr
-hr
-hr
-hr
-hr
-hr
-hr
-hr
-hr
-hQ
-ab
+gU
+hb
+hp
+hp
+hp
+hp
+hp
+hp
+hp
+hp
+hp
+hy
+hX
+hW
+hW
+hW
+hW
+hW
+gU
+hW
+hW
+hW
+hW
+hW
+gU
+hW
+hW
+hW
+hW
+hW
+hX
+hb
+hp
+hp
+hp
+hp
+hp
+hp
+hp
+hp
+hp
+hy
+gU
 aa
 aa
 aa
@@ -54705,49 +55190,49 @@ aa
 aa
 aa
 aa
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
+gU
+gU
+gU
+gU
+gU
+gU
+gU
+gU
+gU
+gU
+gU
+gU
+gU
+gU
+gU
+gU
+gU
+gU
+gU
+gU
+gU
+gU
+gU
+gU
+gU
+gU
+gU
+gU
+gU
+gU
+gU
+gU
+gU
+gU
+gU
+gU
+gU
+gU
+gU
+gU
+gU
+gU
+gU
 aa
 aa
 aa
@@ -61271,7 +61756,7 @@ Qg
 aa
 ot
 ot
-SF
+oo
 aa
 aa
 aa
@@ -61528,7 +62013,7 @@ Qg
 RQ
 Qg
 KO
-SG
+ot
 oo
 aa
 aa
@@ -61785,8 +62270,8 @@ Rw
 Rw
 Qg
 ot
-SG
-SF
+ot
+oo
 aa
 aa
 aa
@@ -62044,7 +62529,7 @@ Qg
 ot
 ot
 ot
-SF
+oo
 aa
 aa
 aa
@@ -62301,7 +62786,7 @@ Qg
 aa
 ot
 ot
-SF
+oo
 aa
 aa
 aa
@@ -62558,7 +63043,7 @@ Qg
 Qg
 SH
 ot
-ST
+op
 aa
 aa
 aa
@@ -62815,7 +63300,7 @@ QC
 Sw
 Qg
 EJ
-SF
+oo
 aa
 aa
 aa
@@ -63072,7 +63557,7 @@ QC
 Sx
 Qg
 ot
-SF
+oo
 aa
 aa
 aa
@@ -63329,7 +63814,7 @@ QC
 Sw
 Qg
 ot
-SF
+oo
 aa
 aa
 aa
@@ -63586,7 +64071,7 @@ Qg
 Qg
 Qg
 KO
-SG
+ot
 oo
 aa
 aa
@@ -63826,13 +64311,13 @@ Oy
 Pu
 PE
 PK
-PT
+Mi
 PT
 Qo
-QJ
-QW
-QW
-Rh
+Qo
+Qo
+Qo
+Qo
 Qo
 PT
 PT
@@ -63843,7 +64328,7 @@ Qg
 Qg
 ot
 ot
-SG
+ot
 oo
 aa
 aa
@@ -64087,12 +64572,12 @@ PU
 Qc
 Qp
 QK
-Qd
-Qd
-Ri
-Qp
+QK
+QK
+QK
+Vo
 Qc
-PU
+VC
 RB
 RK
 RJ
@@ -64101,7 +64586,7 @@ Qg
 aa
 ot
 ot
-SF
+oo
 aa
 aa
 aa
@@ -64342,14 +64827,14 @@ PF
 Px
 PU
 Qd
-Qd
-Qd
-Qd
-Qd
-Qd
-Qd
-Qd
-PU
+Ve
+Qr
+Qr
+Qr
+Qr
+Qr
+Vq
+VD
 RC
 RL
 RT
@@ -64358,7 +64843,7 @@ Sy
 Qg
 Qg
 ot
-SF
+oo
 aa
 aa
 aa
@@ -64600,13 +65085,13 @@ Px
 PU
 Qe
 Qq
+Vf
+Vh
+Vj
+Vl
 Qq
-Qq
-Qq
-Qq
-Qq
-Qe
-PU
+Vr
+VE
 RC
 RL
 RT
@@ -64615,7 +65100,7 @@ QC
 Sx
 Qg
 ot
-SF
+oo
 aa
 aa
 aa
@@ -64855,15 +65340,15 @@ Py
 PF
 PL
 PU
-Qd
+Qe
 Qr
 Qr
 Qr
 Qr
 Qr
 Qr
-Qd
-PU
+Vs
+VF
 RD
 RJ
 RT
@@ -64872,7 +65357,7 @@ QC
 Sw
 Qg
 ot
-ST
+op
 aa
 aa
 aa
@@ -65112,15 +65597,15 @@ Px
 PF
 Px
 PU
-Qd
-Qs
-Qs
-Qs
-Qs
-Qs
-Qs
-Qd
-PU
+Qe
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
+Vt
+VG
 RC
 RL
 RT
@@ -65129,7 +65614,7 @@ Qg
 QC
 Qg
 ot
-SF
+oo
 aa
 aa
 aa
@@ -65369,15 +65854,15 @@ Px
 PF
 Px
 PU
-Qd
-Qs
-Qs
-Qs
-Qs
-Qs
-Qs
-Qd
-PU
+Qe
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
+Vu
+VH
 RC
 RL
 RT
@@ -65386,7 +65871,7 @@ QC
 Sw
 Qg
 ot
-SF
+oo
 aa
 aa
 aa
@@ -65626,15 +66111,15 @@ Px
 PF
 Px
 PU
-Qd
-Qs
-Qs
+Qe
+Qr
+Qr
 QX
 QX
-Qs
-Qs
-Qd
-PU
+Qr
+Qr
+Vv
+VI
 RD
 RJ
 RT
@@ -65643,7 +66128,7 @@ QC
 Sx
 Qg
 ot
-SF
+oo
 aa
 aa
 aa
@@ -65881,17 +66366,17 @@ Pk
 Ox
 Pv
 PF
-Px
+ON
 PU
-Qd
-Qs
-Qs
+UX
+Qr
+Qr
 QY
 Re
-Qs
-Qs
-Qd
-PU
+Qr
+Qr
+Qr
+VJ
 RE
 RM
 RT
@@ -65900,7 +66385,7 @@ Sz
 QC
 Qg
 ot
-SF
+oo
 aa
 aa
 aa
@@ -66140,15 +66625,15 @@ Px
 PF
 Px
 PU
-Qd
-Qs
-Qs
+UY
+Qr
+Qr
 QX
 QX
-Qs
-Qs
-Qd
-PU
+Qr
+Qr
+Vw
+VK
 RF
 RJ
 RT
@@ -66157,7 +66642,7 @@ QC
 Sx
 Qg
 KO
-SF
+oo
 aa
 aa
 aa
@@ -66397,15 +66882,15 @@ Px
 PF
 Px
 PU
-Qd
-Qs
-Qs
-Qs
-Qs
-Qs
-Qs
-Qd
-PU
+UZ
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
+Vx
+VL
 RC
 RL
 RT
@@ -66414,7 +66899,7 @@ QC
 Sw
 Qg
 ot
-SF
+oo
 aa
 aa
 aa
@@ -66654,15 +67139,15 @@ Px
 PF
 Px
 PU
-Qd
-Qs
-Qs
-Qs
-Qs
-Qs
-Qs
-Qd
-PU
+Va
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
+Vy
+VM
 RC
 RL
 RT
@@ -66671,7 +67156,7 @@ Qg
 QC
 Qg
 ot
-SF
+oo
 aa
 aa
 aa
@@ -66911,15 +67396,15 @@ Py
 PF
 PL
 PU
-Qd
-Qt
-Qt
-Qt
-Qt
-Qt
-Qt
-Qd
-PU
+Vb
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
+Vz
+VN
 RD
 RJ
 RT
@@ -66928,7 +67413,7 @@ QC
 Sx
 Qg
 ot
-ST
+op
 aa
 aa
 aa
@@ -67168,15 +67653,15 @@ Pw
 PF
 Px
 PU
-Qe
+Vc
 Qq
+Vg
+Vi
+Vk
+Vm
 Qq
-Qq
-Qq
-Qq
-Qq
-Qe
-PU
+VA
+VO
 RC
 RL
 RT
@@ -67185,7 +67670,7 @@ QC
 Sw
 Qg
 ot
-SF
+oo
 aa
 aa
 aa
@@ -67425,15 +67910,15 @@ Px
 PF
 Px
 PU
-Qd
-Qd
-Qd
-Qd
-Qd
-Qd
-Qd
-Qd
-PU
+Vd
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
+VB
+VP
 RC
 RL
 RT
@@ -67442,7 +67927,7 @@ Sy
 Qg
 Qg
 ot
-SF
+oo
 aa
 aa
 aa
@@ -67685,12 +68170,12 @@ PU
 Qc
 Qu
 QL
-Qd
-Qd
-Rj
-Qu
+QL
+QL
+QL
+Vp
 Qc
-PU
+VQ
 RB
 RN
 RJ
@@ -67699,7 +68184,7 @@ Qg
 ot
 ot
 ot
-SF
+oo
 aa
 aa
 aa
@@ -67938,13 +68423,13 @@ Oy
 Pz
 Pz
 PK
-PT
+Mi
 PT
 Qv
-QM
-QW
-QW
-Rk
+Qv
+Qv
+Qv
+Qv
 Qv
 PT
 PT
@@ -67955,7 +68440,7 @@ Qg
 Qg
 aa
 ot
-SF
+oo
 aa
 aa
 aa
@@ -68197,12 +68682,12 @@ Pc
 Pc
 PV
 PT
-Qw
-QN
-QN
-QN
-QN
-Rq
+Ql
+QF
+QF
+QF
+QF
+Rn
 Rv
 Rz
 PT
@@ -68212,7 +68697,7 @@ Qg
 Qg
 Qg
 ot
-SF
+oo
 aa
 aa
 aa
@@ -68454,12 +68939,12 @@ Pc
 Pc
 PW
 PT
-Qx
+Qm
 QO
 QP
 QP
-QO
-Rr
+Vn
+Ro
 Rv
 Rz
 PT
@@ -68469,7 +68954,7 @@ QC
 Sw
 Qg
 ot
-SF
+oo
 aa
 aa
 aa
@@ -68711,12 +69196,12 @@ PG
 PM
 PX
 PT
-Qx
+Qm
 QP
 QZ
 QP
 QP
-Rr
+Ro
 Rv
 Rz
 PT
@@ -68726,7 +69211,7 @@ QC
 Sx
 Qg
 ot
-SF
+oo
 aa
 aa
 aa
@@ -68968,12 +69453,12 @@ Mi
 MG
 Mi
 PT
-Qx
+Qm
 QO
 QP
 QP
 QO
-Rr
+Ro
 Rv
 Rz
 PT
@@ -68983,7 +69468,7 @@ QC
 Sw
 Qg
 ot
-ST
+op
 aa
 aa
 aa
@@ -69225,12 +69710,12 @@ Na
 Ng
 NF
 Qb
-Qy
-QQ
-QQ
-QQ
-QQ
-Rs
+Qn
+QI
+QI
+QI
+QI
+Rp
 Rv
 RA
 PT
@@ -69240,7 +69725,7 @@ Qg
 Qg
 Qg
 KO
-SF
+oo
 aa
 aa
 aa
@@ -69497,7 +69982,7 @@ Qg
 ot
 ot
 ot
-SF
+oo
 aa
 aa
 aa
@@ -69752,8 +70237,8 @@ Rw
 Rw
 Qg
 ot
-SF
-SF
+oo
+oo
 aa
 aa
 aa
@@ -70009,7 +70494,7 @@ Rw
 Rw
 Qg
 ot
-SF
+oo
 aa
 aa
 aa
@@ -70266,7 +70751,7 @@ Qg
 RU
 Qg
 ot
-SF
+oo
 aa
 aa
 aa
@@ -70523,7 +71008,7 @@ Qg
 qN
 wN
 ot
-SF
+oo
 aa
 aa
 aa
@@ -70780,7 +71265,7 @@ Qg
 RV
 wN
 ot
-SF
+oo
 aa
 aa
 aa
@@ -71037,7 +71522,7 @@ Qg
 qN
 wN
 KO
-SF
+oo
 aa
 aa
 aa
@@ -71294,7 +71779,7 @@ Qg
 qN
 wN
 ot
-SF
+oo
 aa
 aa
 aa
@@ -76244,15 +76729,15 @@ fl
 fA
 fE
 fP
+fQ
+fQ
+fQ
+fQ
+fQ
+fQ
+fQ
+fQ
 aa
-fQ
-fQ
-fQ
-fQ
-fQ
-fQ
-fQ
-fQ
 aa
 aa
 aa
@@ -76501,15 +76986,15 @@ fk
 fx
 fE
 fP
+fQ
+Ue
+fW
+fW
+fW
+fW
+fW
+fQ
 aa
-fQ
-fW
-fW
-fW
-fW
-fW
-fW
-fQ
 aa
 aa
 aa
@@ -76758,17 +77243,17 @@ ag
 ag
 ag
 ab
+fQ
+Uf
+fX
+fX
+fX
+fX
+fX
+fQ
+fQ
+fQ
 aa
-fQ
-fX
-fX
-fX
-fX
-fX
-fX
-fQ
-fQ
-fQ
 aa
 aa
 aa
@@ -77015,17 +77500,17 @@ fm
 dZ
 fF
 fP
-aa
 fS
+Ug
 fY
-go
-go
-go
+fY
+fY
+fY
 go
 gH
 gN
-gP
 fQ
+aa
 aa
 aa
 aa
@@ -77272,17 +77757,17 @@ fm
 dZ
 fF
 fP
-aa
 fQ
+Uh
 fZ
 gp
-gq
-gq
 gp
-gI
-gN
+fZ
+Uz
+gH
 gP
 fQ
+aa
 aa
 aa
 aa
@@ -77529,17 +78014,17 @@ fn
 dZ
 fF
 fP
-aa
 fQ
-fZ
+Ui
+Uv
 gq
-gy
-gq
-gq
-gI
-gN
+gp
+gp
+UA
+gH
 gP
 fQ
+aa
 aa
 aa
 aa
@@ -77786,17 +78271,17 @@ fm
 dZ
 fF
 fP
-aa
 fQ
+Uj
 fZ
 gp
-gq
-gq
 gp
-gI
-gN
+fZ
+UB
+gH
 gP
 fQ
+aa
 aa
 aa
 aa
@@ -78043,17 +78528,17 @@ fm
 dZ
 fF
 fP
-aa
 fQ
+Uk
+ga
+ga
+ga
 ga
 gr
-gr
-gr
-gr
-gJ
-gN
+gH
 gP
 fQ
+aa
 aa
 aa
 aa
@@ -78301,16 +78786,16 @@ ag
 ag
 ab
 fQ
-fQ
+Ul
 gb
 gb
 gb
 gb
 gb
-gb
-fQ
 fQ
 fQ
+fQ
+aa
 aa
 aa
 aa
@@ -78560,13 +79045,13 @@ fP
 fR
 fT
 gc
-gs
-gz
-gz
-gF
 gc
-fT
+gc
+gc
+gF
 fR
+UI
+aa
 aa
 aa
 aa
@@ -78814,16 +79299,16 @@ fp
 fC
 fH
 fP
-fR
+TR
 fU
 fU
 fU
 fU
 fU
 fU
-fU
-fU
-fR
+UF
+UJ
+aa
 aa
 aa
 aa
@@ -79071,16 +79556,16 @@ fq
 fC
 fH
 fP
-fR
+TS
 fV
 gd
 gd
 gd
 gd
-gd
-gd
 fV
-fR
+UG
+UK
+aa
 aa
 aa
 aa
@@ -79328,16 +79813,16 @@ fr
 fC
 fH
 fP
-fR
+TT
+fU
+fU
+fU
+fU
+fU
 fU
 ge
-ge
-ge
-ge
-ge
-ge
-fU
-fR
+UL
+aa
 aa
 aa
 aa
@@ -79585,16 +80070,16 @@ fs
 fB
 fI
 fP
-fR
+TU
 fU
-gf
-gf
-gf
-gf
-gf
-gf
 fU
-fR
+fU
+fU
+fU
+fU
+ge
+UM
+aa
 aa
 aa
 aa
@@ -79842,16 +80327,16 @@ ag
 ag
 ag
 ab
-fR
+TV
 fU
-gf
-gf
-gf
-gf
-gf
-gf
 fU
-fR
+fU
+fU
+fU
+fU
+ge
+UN
+aa
 aa
 aa
 aa
@@ -80099,16 +80584,16 @@ fe
 fa
 eD
 fP
-fR
+TW
 fU
-gf
-gf
+fU
 gA
 gA
-gf
-gf
 fU
-fR
+fU
+ge
+UO
+aa
 aa
 aa
 aa
@@ -80356,16 +80841,16 @@ ff
 fb
 eB
 fP
-fR
+TX
 fU
-gf
-gf
+fU
 gB
-gE
-gf
-gf
+Ux
 fU
-fR
+fU
+fU
+UP
+aa
 aa
 aa
 aa
@@ -80613,16 +81098,16 @@ eR
 eR
 eR
 fP
-fR
+TY
 fU
-gf
-gf
+fU
 gA
 gA
-gf
-gf
 fU
-fR
+fU
+gf
+UQ
+aa
 aa
 aa
 aa
@@ -80870,16 +81355,16 @@ fe
 fa
 eD
 fP
-fR
+TZ
+fU
+fU
+fU
+fU
+fU
 fU
 gf
-gf
-gf
-gf
-gf
-gf
-fU
-fR
+UR
+aa
 aa
 aa
 aa
@@ -81127,16 +81612,16 @@ ff
 fb
 eB
 fP
-fR
+Ua
+fU
+fU
+fU
+fU
+fU
 fU
 gf
-gf
-gf
-gf
-gf
-gf
-fU
-fR
+US
+aa
 aa
 aa
 aa
@@ -81384,16 +81869,16 @@ ag
 ag
 ag
 ab
-fR
+Ub
 fU
-gg
-gg
-gg
-gg
-gg
-gg
 fU
-fR
+fU
+fU
+fU
+fU
+gf
+UT
+aa
 aa
 aa
 aa
@@ -81641,16 +82126,16 @@ fg
 fg
 fJ
 fP
-fR
+Uc
 fV
 gd
 gd
 gd
 gd
-gd
-gd
 fV
-fR
+gf
+UU
+aa
 aa
 aa
 aa
@@ -81898,16 +82383,16 @@ em
 em
 fK
 fP
-fR
+Ud
 fU
 fU
 fU
 fU
 fU
 fU
-fU
-fU
-fR
+UH
+UV
+aa
 aa
 aa
 aa
@@ -82156,15 +82641,15 @@ em
 fK
 fP
 fR
-fT
+Um
 gh
-gt
-gC
-gC
+gh
+gh
+gh
 gG
-gh
-fT
 fR
+UW
+aa
 aa
 aa
 aa
@@ -82413,16 +82898,16 @@ em
 fK
 fP
 fQ
-fQ
+Un
 gi
 gi
 gi
 gi
 gi
-gi
-fQ
 fQ
 fQ
+fQ
+aa
 aa
 aa
 aa
@@ -82669,17 +83154,17 @@ en
 en
 fL
 fP
-aa
 fQ
+Uo
+gj
+gj
+gj
 gj
 gu
-gu
-gu
-gu
 gK
-gO
 gQ
 fQ
+aa
 aa
 aa
 aa
@@ -82926,17 +83411,17 @@ ag
 ag
 ag
 ab
-aa
 fQ
+Up
 gk
 gv
-gw
-gw
 gv
-gL
-gO
+Uy
+UC
+gK
 gQ
 fQ
+aa
 aa
 aa
 aa
@@ -83183,17 +83668,17 @@ dP
 dP
 dP
 fP
-aa
 fQ
-gk
+Uq
+Uw
 gw
-gD
-gw
-gw
-gL
-gO
+gv
+gv
+UD
+gK
 gQ
 fQ
+aa
 aa
 aa
 aa
@@ -83440,20 +83925,20 @@ fu
 fD
 fM
 fP
-aa
 fQ
+Ur
 gk
 gv
-gw
-gw
 gv
-gL
-gO
+gk
+UE
+gK
 gQ
 fQ
 aa
 aa
 gR
+aa
 aa
 aa
 aa
@@ -83697,17 +84182,17 @@ fv
 fD
 fN
 fP
-aa
 fS
+Us
+gl
+gl
+gl
 gl
 gx
-gx
-gx
-gx
-gM
+gK
 gO
-gQ
 fQ
+aa
 aa
 aa
 aa
@@ -83954,17 +84439,17 @@ fw
 fD
 fO
 fP
+fQ
+Ut
+gm
+gm
+gm
+gm
+gm
+fQ
+fQ
+fQ
 aa
-fQ
-gm
-gm
-gm
-gm
-gm
-gm
-fQ
-fQ
-fQ
 aa
 aa
 aa
@@ -84211,9 +84696,8 @@ dT
 dT
 dT
 fP
-aa
 fQ
-gn
+Uu
 gn
 gn
 gn
@@ -84225,6 +84709,7 @@ aa
 aa
 aa
 gS
+aa
 aa
 aa
 aa
@@ -84468,15 +84953,15 @@ ag
 ag
 ag
 ab
+fQ
+fQ
+fQ
+fQ
+fQ
+fQ
+fQ
+fQ
 aa
-fQ
-fQ
-fQ
-fQ
-fQ
-fQ
-fQ
-fQ
 aa
 aa
 aa
