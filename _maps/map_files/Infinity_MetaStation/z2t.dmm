@@ -8714,7 +8714,7 @@
 	},
 /area/centcom/supply)
 "wt" = (
-/obj/machinery/computer/shuttle/auxillary_base{
+/obj/machinery/computer/auxillary_base{
 	pixel_y = 32
 	},
 /obj/structure/table/reinforced,
@@ -8970,6 +8970,13 @@
 /obj/machinery/camera/autoname{
 	name = "security camera CC";
 	network = list("CentComm")
+	},
+/obj/machinery/button/door{
+	id = "Centcom AI";
+	name = "Centcom AI";
+	pixel_x = -5;
+	pixel_y = 25;
+	req_access_txt = "106"
 	},
 /turf/open/floor/plasteel/green/side{
 	dir = 1
@@ -10803,7 +10810,7 @@
 	},
 /area/centcom/ferry)
 "Bc" = (
-/obj/machinery/computer/shuttle/auxillary_base{
+/obj/machinery/computer/auxillary_base{
 	pixel_y = 32
 	},
 /obj/structure/table/reinforced,
@@ -14128,11 +14135,6 @@
 "Iz" = (
 /obj/structure/table/reinforced,
 /obj/item/weapon/crowbar,
-/obj/machinery/camera{
-	c_tag = "Medbay - Cryo";
-	dir = 1;
-	network = list("SS13","Medbay")
-	},
 /obj/item/weapon/screwdriver{
 	pixel_y = 6
 	},
@@ -19136,6 +19138,22 @@
 	dir = 4
 	},
 /area/centcom/evac)
+"TQ" = (
+/obj/structure/chair/office/light{
+	dir = 1
+	},
+/obj/machinery/button/door{
+	id = "Centcom AI";
+	name = "Centcom AI";
+	pixel_x = -5;
+	pixel_y = -25;
+	req_access_txt = "106"
+	},
+/turf/open/floor/plasteel{
+	dir = 2;
+	icon_state = "warning"
+	},
+/area/centcom/control)
 
 (1,1,1) = {"
 aa
@@ -66329,10 +66347,10 @@ pi
 pG
 ox
 uH
-uX
-vG
+TQ
 ox
-vG
+ox
+ox
 wW
 qK
 qK
@@ -69707,8 +69725,8 @@ Lx
 LP
 qK
 Mw
-Mi
-Mi
+ox
+ox
 Mi
 Mi
 Mi
@@ -69964,7 +69982,7 @@ Ly
 LQ
 Md
 Mx
-Mi
+ox
 Nk
 NK
 NU
@@ -70221,7 +70239,7 @@ ox
 LR
 Me
 Me
-Mi
+ox
 Nl
 Nv
 NV

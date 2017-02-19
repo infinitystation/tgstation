@@ -14,7 +14,7 @@
 
 			var/ckeytext = ckey(key)
 
-			if(!establish_db_connection())
+			if(!dbcon.Connect())
 				world.log << "Ban database connection failure. Player [ckeytext] not checked (ban prison)"
 				diary << "Ban database connection failure. Player [ckeytext] not checked (ban prison)"
 				return

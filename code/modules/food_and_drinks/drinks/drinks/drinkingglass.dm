@@ -518,10 +518,12 @@
 				name = "Eggnog"
 				desc = "For enjoying the most wonderful time of the year."
 			if("champagne")
+				icon = 'icons/obj/drinks_infinity.dmi'
 				icon_state = "champagne_glass"
 				name = "glass of champagne"
 				desc = "The glass contain champagne. Very elitist."
 			if("rassol")
+				icon = 'icons/obj/drinks_infinity.dmi'
 				icon_state = "glassofrassol"
 				name = "glass of rassol"
 				desc = "The glass contain rassol. Tasty and refreshing."
@@ -533,6 +535,7 @@
 				name = "glass of ..what?"
 				desc = "You can't really tell what this is."
 	else
+		icon = 'icons/obj/drinks.dmi'
 		icon_state = "glass_empty"
 		name = "drinking glass"
 		desc = "Your standard drinking glass."

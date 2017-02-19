@@ -340,8 +340,7 @@ var/next_external_rsc = 0
 	if (IsGuestKey(src.key))
 		return
 
-	establish_db_connection()
-	if(!dbcon.IsConnected())
+	if(!dbcon.Connect())
 		return
 
 	var/sql_ckey = sanitizeSQL(src.ckey)
@@ -362,8 +361,7 @@ var/next_external_rsc = 0
 	if (IsGuestKey(src.key))
 		return
 
-	establish_db_connection()
-	if (!dbcon.IsConnected())
+	if (!dbcon.Connect())
 		return
 
 	var/sql_ckey = sanitizeSQL(ckey)

@@ -10,5 +10,5 @@
 	..()
 	for(var/i in 1 to 10)
 		new /obj/item/weapon/reagent_containers/food/drinks/beer(src)
-	for(var/i in 3 to 6)
+	for(var/i in 1 to 1)
 		new /obj/item/weapon/reagent_containers/food/drinks/bottle/rassol(src)

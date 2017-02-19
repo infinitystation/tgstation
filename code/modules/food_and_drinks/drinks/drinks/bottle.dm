@@ -402,14 +402,16 @@
 		overlays -= fire_overlay
 		active = 0
 
-/obj/item/weapon/reagent_containers/food/drinks/bottle/champagne
+/obj/item/weapon/reagent_containers/food/drinks/bottle/champagne //Infinity-station product
 	name = "Elite Soviet Champagne"
 	desc = "Attention, there is a risk to break through the ceiling."
+	icon = 'icons/obj/drinks_infinity.dmi'
 	icon_state = "champagne"
 	list_reagents = list("champagne" = 100)
 
-/obj/item/weapon/reagent_containers/food/drinks/bottle/rassol
-	name = "Bank of Rassol"
+/obj/item/weapon/reagent_containers/food/drinks/bottle/rassol //Infinity-station product
+	name = "Jar of Rassol"
 	desc = "The elixir of eternal life and Russian freshness."
+	icon = 'icons/obj/drinks_infinity.dmi'
 	icon_state = "rassol"
 	list_reagents = list("rassol" = 100)
