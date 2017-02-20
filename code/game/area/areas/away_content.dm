@@ -22,7 +22,7 @@
 	name = "Beach"
 	icon_state = "away"
 	lighting_use_dynamic = DYNAMIC_LIGHTING_ENABLED
-	requires_power = 1
+	requires_power = 0
 	has_gravity = 1
 	ambientsounds = list('sound/ambience/shore.ogg', 'sound/ambience/seag1.ogg','sound/ambience/seag2.ogg','sound/ambience/seag2.ogg')
 
