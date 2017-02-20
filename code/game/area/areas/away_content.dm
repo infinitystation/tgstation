@@ -21,11 +21,23 @@
 /area/awaymission/beach
 	name = "Beach"
 	icon_state = "away"
-	luminosity = 1
-	lighting_use_dynamic = DYNAMIC_LIGHTING_DISABLED
-	requires_power = 0
+	lighting_use_dynamic = DYNAMIC_LIGHTING_ENABLED
+	requires_power = 1
 	has_gravity = 1
 	ambientsounds = list('sound/ambience/shore.ogg', 'sound/ambience/seag1.ogg','sound/ambience/seag2.ogg','sound/ambience/seag2.ogg')
+
+/area/awaymission/beach/New() //Let's make day/night on a beach!
+	..()
+	if(prob(50))
+		requires_power = 1
+		lighting_use_dynamic = DYNAMIC_LIGHTING_ENABLED
+
+/area/awaymission/beach/hotel
+	name = "Beach Hotel"
+	icon_state = "bar"
+	luminosity = 1
+	requires_power = 1
+	lighting_use_dynamic = DYNAMIC_LIGHTING_ENABLED
 
 /area/awaymission/errorroom
 	name = "Super Secret Room"
