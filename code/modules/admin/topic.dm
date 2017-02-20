@@ -14,13 +14,15 @@
 		if (deltimer(C.adminhelptimerid))
 			C.giveadminhelpverb()
 
+		var/msg = "<font color='red' size='4'><b>- Ваш запрос отклонён! -</b></font><br>"
+		msg += "<font color='red'><b>Ваш запрос администратору отменён.</b> Возможность отправления запроса была возвращена Вам обратно.</b></font><br>"
+		msg += "<font color='red'>Пожалуйста, будьте спокойнее, сдержанее и попробуйте перефразировать просьбу чтобы администор мог принять следующую Вашу заявку.</font><br>"
+		msg += "<font color='red'>Докладывайте все имена нарушителей при замеченых нарушениях. Не следует писать лишнию ненужную информацию и не пользуйтесь этим способом общения как 'личный чат'.</font>"
+
 		C << 'sound/effects/adminhelp.ogg'
+		C << sanitize_a0(msg)
 
-		C << "<font color='red' size='4'><b>- AdminHelp Rejected! -</b></font>"
-		C << "<font color='red'><b>Your admin help was rejected.</b> The adminhelp verb has been returned to you so that you may try again.</font>"
-		C << "Please try to be calm, clear, and descriptive in admin helps, do not assume the admin has seen any related events, and clearly state the names of anybody you are reporting."
-
-		message_admins("[key_name_admin(usr)] Rejected [C.key]'s admin help. [C.key]'s Adminhelp verb has been returned to them.")
+		message_admins("[key_name_admin(usr)] отклонил(а) запрос [C.key] к админам. Возможность отправлять запросы была возвращена [C.key].")
 		log_admin("[key_name(usr)] Rejected [C.key]'s admin help.")
 
 	else if(href_list["icissue"])
@@ -28,13 +30,24 @@
 		if(!C)
 			return
 
-		var/msg = "<font color='red' size='4'><b>- AdminHelp marked as IC issue! -</b></font><br>"
-		msg += "<font color='red'><b>Losing is part of the game!</b></font><br>"
-		msg += "<font color='red'>Your character will frequently die, sometimes without even a possibility of avoiding it. Events will often be out of your control. No matter how good or prepared you are, sometimes you just lose.</font>"
+		var/msg = "<font color='red' size='4'><b>- Ваш запрос админу помечен как ИС (Игровая Ситуация)! -</b></font><br>"
+		msg += "<font color='red'><b>Ситуация которую Вы описали полностью оправдывает себя!</b></font><br>"
+		var/msg_alert = alert(usr, "Тип ИС ситуации?", "Alert", "Убийство", "Механика игры", "Отмена выбора")
+		switch(msg_alert)
+			if("Убийство")
+				msg += "<font color='red'>Если Вас убили, то возможно Вы стали жертвой предателя, или по другой причине которая полностью оправдывает себя в рамках ролевого отыгрыша.</font><br>"
+				msg += "<font color='red'>Иногда, бывают моменты что Вы проигрываете, и это нормально. Имейте ввиду что такое может случиться и Вы не всегда можете это контроировать.</font>"
+			if("Механика игры")
+				msg += "<font color='red'>Вы столкнулись с механикой игры, которая была специально настроена для игры на этом сервере.</font><br>"
+				msg += "<font color='red'>Если у Вас есть предложения по улучшению чего либо, Вы можете пройти на форум по этой ссылке:</font><br>"
+				msg += "<font color='red'>https://infinity.so/index.php?/forum/42-%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B0/.</font>"
+			if("Отмена выбора")
+				return
 
-		C << msg
+		C << 'sound/effects/adminhelp.ogg'
+		C << sanitize_a0(msg)
 
-		message_admins("[key_name_admin(usr)] marked [C.key]'s admin help as an IC issue.")
+		message_admins("[key_name_admin(usr)] обозначил(а) запрос игрока [C.key] как игровая ситуация.")
 		log_admin("[key_name(usr)] marked [C.key]'s admin help as an IC issue.")
 
 	else if(href_list["stickyban"])
