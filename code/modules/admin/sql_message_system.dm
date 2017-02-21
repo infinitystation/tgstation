@@ -54,7 +54,7 @@
 		return
 	if(logged)
 		text = sanitize_u2a(text)
-		log_admin("[key_name(usr)] has created a [type][(type == "note" || type == "message" || type == "watchlist entry") ? " for [target_ckey]" : ""]: [text]")
+		log_admin_private("[key_name(usr)] has created a [type][(type == "note" || type == "message" || type == "watchlist entry") ? " for [target_ckey]" : ""]: [text]")
 		message_admins("[key_name_admin(usr)] has created a [type][(type == "note" || type == "message" || type == "watchlist entry") ? " for [target_ckey]" : ""]:<br>[text]")
 		if(browse)
 			browse_messages("[type]")
@@ -87,7 +87,7 @@
 		return
 	if(logged)
 		text = sanitize_u2a(text)
-		log_admin("[key_name(usr)] has deleted a [type][(type == "note" || type == "message" || type == "watchlist entry") ? " for" : " made by"] [target_ckey]: [text]")
+		log_admin_private("[key_name(usr)] has deleted a [type][(type == "note" || type == "message" || type == "watchlist entry") ? " for" : " made by"] [target_ckey]: [text]")
 		message_admins("[key_name_admin(usr)] has deleted a [type][(type == "note" || type == "message" || type == "watchlist entry") ? " for" : " made by"] [target_ckey]:<br>[text]")
 		if(browse)
 			browse_messages("[type]")
@@ -123,7 +123,7 @@
 			var/err = query_edit_message.ErrorMsg()
 			log_game("SQL ERROR editing messages table. Error : \[[err]\]\n")
 			return
-		log_admin("[key_name(usr)] has edited a [type] [(type == "note" || type == "message" || type == "watchlist entry") ? " for [target_ckey]" : ""] made by [admin_ckey] from [old_text] to [new_text]")
+		log_admin_private("[key_name(usr)] has edited a [type] [(type == "note" || type == "message" || type == "watchlist entry") ? " for [target_ckey]" : ""] made by [admin_ckey] from [old_text] to [new_text]")
 		message_admins("[key_name_admin(usr)] has edited a [type] [(type == "note" || type == "message" || type == "watchlist entry") ? " for [target_ckey]" : ""] made by [admin_ckey] from<br>[old_text]<br>to<br>[new_text]")
 		if(browse)
 			browse_messages("[type]")
@@ -154,7 +154,7 @@
 			var/err = query_message_secret.ErrorMsg()
 			log_game("SQL ERROR toggling message secrecy. Error : \[[err]\]\n")
 			return
-		log_admin("[key_name(usr)] has toggled [target_ckey]'s [type] made by [admin_ckey] to [secret ? "not secret" : "secret"]")
+		log_admin_private("[key_name(usr)] has toggled [target_ckey]'s [type] made by [admin_ckey] to [secret ? "not secret" : "secret"]")
 		message_admins("[key_name_admin(usr)] has toggled [target_ckey]'s [type] made by [admin_ckey] to [secret ? "not secret" : "secret"]")
 		browse_messages(target_ckey = target_ckey)
 
