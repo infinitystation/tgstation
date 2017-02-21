@@ -70,7 +70,7 @@
 "br" = (/obj/structure/table/abductor,/obj/item/bodypart/head/robot,/obj/item/bodypart/l_leg/robot,/obj/item/bodypart/r_leg/robot,/turf/open/floor/plating/abductor,/area/alien_base)
 "bs" = (/obj/structure/bed/abductor,/obj/item/bodypart/chest,/obj/structure/sign/directions/alien{pixel_y = -32},/turf/open/floor/plating/abductor,/area/alien_base)
 "bt" = (/obj/structure/table/abductor,/obj/item/bodypart/l_arm/alien,/obj/item/bodypart/r_arm/alien,/obj/item/organ/alien/acid,/obj/item/organ/alien/plasmavessel/small,/turf/open/floor/plating/abductor,/area/alien_base)
-"bu" = (/obj/structure/bed/abductor,/obj/item/organ/body_egg/alien_embryo,/obj/item/organ/gland/heals,/obj/structure/sign/directions/alien{pixel_y = -32},/turf/open/floor/plating/abductor,/area/alien_base)
+"bu" = (/obj/structure/bed/abductor,/obj/item/organ/body_egg/alien_embryo,/obj/item/organ/heart/gland/heals,/obj/structure/sign/directions/alien{pixel_y = -32},/turf/open/floor/plating/abductor,/area/alien_base)
 "bv" = (/obj/structure/closet/crate/secure/weapon,/turf/open/floor/plating/abductor,/area/alien_base)
 "bw" = (/obj/structure/mecha_wreckage/ripley/deathripley,/turf/open/floor/plating/abductor2,/area/alien_base)
 "bx" = (/obj/structure/bodycontainer,/turf/open/floor/plating/abductor2,/area/alien_base)
