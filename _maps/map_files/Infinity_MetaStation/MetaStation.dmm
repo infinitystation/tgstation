@@ -27121,7 +27121,7 @@
 	dir = 8;
 	id = "pod1";
 	name = "escape pod 1";
-	port_angle = -90
+	port_angle = -180
 	},
 /obj/machinery/door/airlock/shuttle{
 	name = "Escape Pod"
