@@ -22,7 +22,7 @@
 		C << 'sound/effects/adminhelp.ogg'
 		C << sanitize_a0(msg)
 
-		message_admins("[key_name_admin(usr)] отклонил(а) запрос [C.key] к админам. Возможность отправлять запросы была возвращена [C.key].")
+		message_admins(sanitize_a0("[key_name_admin(usr)] отклонил(а) запрос [C.key] к админам. Возможность отправлять запросы была возвращена [C.key]."))
 		log_admin_private("[key_name(usr)] Rejected [C.key]'s admin help.")
 
 	else if(href_list["icissue"])
@@ -47,7 +47,7 @@
 		C << 'sound/effects/adminhelp.ogg'
 		C << sanitize_a0(msg)
 
-		message_admins("[key_name_admin(usr)] обозначил(а) запрос игрока [C.key] как игровая ситуация.")
+		message_admins(sanitize_a0("[key_name_admin(usr)] обозначил(а) запрос игрока [C.key] как игровая ситуация."))
 		log_admin_private("[key_name(usr)] marked [C.key]'s admin help as an IC issue.")
 
 	else if(href_list["stickyban"])
