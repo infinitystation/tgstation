@@ -602,14 +602,14 @@ var/global/list/RPD_recipes=list(
 				return
 			user << "<span class='notice'>You start building a disposals pipe...</span>"
 			playsound(get_turf(src), 'sound/machines/click.ogg', 50, 1)
-			if(do_after(user, 20))
+			if(do_after(user, 4))
 				activate()
 				new /obj/item/pipe_gsensor(A)
 				return 1
 			return 0
 
 			playsound(get_turf(src), 'sound/machines/click.ogg', 50, 1)
-			if(do_after(user, 20, target = A))
+			if(do_after(user, 4, target = A))
 				var/obj/structure/disposalconstruct/C = new (A, queued_p_type ,queued_p_dir)
 
 				if(!C.can_place())

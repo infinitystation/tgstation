@@ -21,7 +21,6 @@
 
 	dizziness = 0
 	jitteriness = 0
-	heart_attack = 0
 
 	if(client && client.banprisoned)
 		qdel(src)
