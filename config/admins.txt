@@ -24,3 +24,4 @@ thedeadangel = Trial Admin
 hellpony = Admin Candidate
 neincat = Admin Candidate
 balalayka = Admin Candidate
+kareta = Junior Developer
