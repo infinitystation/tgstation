@@ -84,6 +84,7 @@
 		return
 
 	var/message = stripped_input(user, "What would you like to [w_engrave]?", "[name] Message")
+	message = sanitize_a0(message)
 	if(!message)
 		user << "You decide not to [w_engrave] anything."
 		return
