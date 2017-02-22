@@ -9,6 +9,8 @@
 	if(!msg)
 		return
 
+	msg = emoji_parse(msg)
+
 	log_adminsay("[key_name(src)] : [msg]")
 	msg = keywords_lookup(msg)
 	if(check_rights(R_ADMIN,0))
