@@ -11911,7 +11911,6 @@
 	dir = 4;
 	pixel_y = 22
 	},
-/obj/machinery/shieldgen,
 /turf/open/floor/plating,
 /area/maintenance/apmaint)
 "auF" = (
@@ -23327,7 +23326,6 @@
 /turf/open/floor/plating,
 /area/engine/engineering)
 "aNr" = (
-/obj/machinery/shieldgen,
 /obj/machinery/light/small{
 	dir = 1
 	},
@@ -23336,6 +23334,7 @@
 	dir = 2;
 	network = list("SS13")
 	},
+/obj/machinery/shieldgen,
 /turf/open/floor/plating,
 /area/engine/engineering)
 "aNs" = (
@@ -35349,7 +35348,6 @@
 /area/storage/tools)
 "bhP" = (
 /obj/effect/decal/cleanable/cobweb,
-/obj/machinery/shieldgen,
 /turf/open/floor/plating,
 /area/maintenance/port)
 "bhQ" = (
@@ -57209,6 +57207,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/machinery/shieldgen,
 /turf/open/floor/plasteel,
 /area/ai_monitored/storage/eva)
 "bSR" = (
@@ -59025,7 +59024,6 @@
 	},
 /area/teleporter)
 "bWa" = (
-/obj/machinery/shieldgen,
 /turf/open/floor/plasteel{
 	tag = "icon-vault (NORTH)";
 	icon_state = "vault";
@@ -66339,6 +66337,9 @@
 	})
 "ciN" = (
 /obj/structure/chair,
+/obj/effect/landmark/start{
+	name = "Scientist"
+	},
 /turf/open/floor/plasteel{
 	dir = 1;
 	icon_state = "whitepurple"
@@ -70951,6 +70952,9 @@
 	tag = "icon-comfychair3 (WEST)";
 	icon_state = "comfychair3";
 	dir = 8
+	},
+/obj/effect/landmark/start{
+	name = "Scientist"
 	},
 /turf/open/floor/plasteel{
 	tag = "icon-cafeteria (NORTHEAST)";
@@ -79920,25 +79924,43 @@
 /turf/closed/wall,
 /area/medical/genetics_cloning)
 "cEn" = (
-/obj/structure/table,
-/obj/item/weapon/storage/book/bible,
-/turf/open/floor/plasteel{
-	tag = "icon-vault";
-	icon_state = "vault"
+/obj/machinery/shower{
+	icon_state = "shower";
+	dir = 4
 	},
+/obj/machinery/door/window/southleft{
+	dir = 2;
+	name = "Cloning Shower"
+	},
+/obj/structure/mirror{
+	pixel_x = -28
+	},
+/turf/open/floor/plasteel/vault,
 /area/medical/genetics_cloning)
 "cEo" = (
-/turf/open/floor/plasteel{
-	tag = "icon-vault";
-	icon_state = "vault"
+/obj/machinery/door/window/southleft{
+	base_state = "right";
+	dir = 2;
+	icon_state = "right";
+	name = "Cloning Shower"
 	},
+/obj/structure/sink/kitchen{
+	desc = "A sink used for washing one's hands and face. It looks rusty and home-made";
+	name = "sink";
+	pixel_y = 28
+	},
+/turf/open/floor/plasteel/vault,
 /area/medical/genetics_cloning)
 "cEp" = (
-/obj/structure/frame/machine,
-/turf/open/floor/plasteel{
-	tag = "icon-vault";
-	icon_state = "vault"
+/obj/item/device/radio/intercom{
+	freerange = 0;
+	frequency = 1459;
+	name = "Station Intercom (General)";
+	pixel_x = 29
 	},
+/obj/structure/window/reinforced,
+/obj/structure/frame/machine,
+/turf/open/floor/plasteel/vault,
 /area/medical/genetics_cloning)
 "cEq" = (
 /obj/machinery/computer/scan_consolenew,
@@ -80582,32 +80604,42 @@
 	name = "Medbay Aft"
 	})
 "cFp" = (
-/turf/open/floor/plasteel{
-	dir = 9;
-	icon_state = "whiteblue"
+/obj/structure/sink{
+	dir = 8;
+	icon_state = "sink";
+	pixel_x = -12;
+	pixel_y = 2
+	},
+/obj/machinery/light_switch{
+	pixel_x = -23;
+	pixel_y = 0
+	},
+/turf/open/floor/plasteel/whiteblue/side{
+	dir = 9
 	},
 /area/medical/genetics_cloning)
 "cFq" = (
 /obj/effect/landmark/start{
 	name = "Geneticist"
 	},
+/obj/machinery/holopad,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 6
 	},
-/turf/open/floor/plasteel{
-	dir = 1;
-	icon_state = "whiteblue"
+/turf/open/floor/plasteel/whiteblue/side{
+	dir = 1
 	},
 /area/medical/genetics_cloning)
 "cFr" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 10
 	},
+/obj/machinery/light{
+	dir = 4
+	},
 /obj/structure/frame/computer,
-/obj/item/stack/sheet/glass,
-/turf/open/floor/plasteel{
-	dir = 5;
-	icon_state = "whiteblue"
+/turf/open/floor/plasteel/whiteblue/side{
+	dir = 5
 	},
 /area/medical/genetics_cloning)
 "cFs" = (
@@ -81108,10 +81140,8 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
-/obj/item/stack/cable_coil/yellow,
-/turf/open/floor/plasteel{
-	dir = 8;
-	icon_state = "whiteblue"
+/turf/open/floor/plasteel/whiteblue/side{
+	dir = 8
 	},
 /area/medical/genetics_cloning)
 "cGh" = (
@@ -81124,24 +81154,16 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
-/turf/open/floor/plasteel{
-	icon_state = "white"
-	},
+/turf/open/floor/plasteel/white,
 /area/medical/genetics_cloning)
 "cGi" = (
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden{
 	dir = 2;
-	initialize_directions = 13
+	initialize_directions = 11
 	},
 /obj/structure/frame/machine,
-/obj/item/weapon/paper{
-	icon_state = "paper_words";
-	info = "<i>”становка клонирования была неисправна. — целью ремонта, был произведЄн полный демонтаж отсека дл\green поиска причины поломки. ≈сли вы каким-то образом найдЄте, из-за чего люди в капсуле посреди клонирования получали сверх-тЄлые генетические мутации, собщите в ќтдел  онструирования ÷ентрального  омандования.</i>";
-	name = "Message"
-	},
-/turf/open/floor/plasteel{
-	dir = 4;
-	icon_state = "whiteblue"
+/turf/open/floor/plasteel/whiteblue/side{
+	dir = 4
 	},
 /area/medical/genetics_cloning)
 "cGj" = (
@@ -81558,12 +81580,9 @@
 /obj/machinery/door/airlock/glass_medical{
 	id_tag = "CloningDoor";
 	name = "Cloning Lab";
-	req_access_txt = "0";
-	req_one_access_txt = "5"
+	req_access_txt = "5; 68"
 	},
-/turf/open/floor/plasteel{
-	icon_state = "whitebluefull"
-	},
+/turf/open/floor/plasteel/whiteblue,
 /area/medical/genetics_cloning)
 "cGU" = (
 /obj/structure/cable/yellow{
@@ -81571,9 +81590,8 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/open/floor/plasteel{
-	dir = 8;
-	icon_state = "whiteblue"
+/turf/open/floor/plasteel/whiteblue/side{
+	dir = 8
 	},
 /area/medical/genetics_cloning)
 "cGV" = (
@@ -81586,9 +81604,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/open/floor/plasteel{
-	icon_state = "white"
-	},
+/turf/open/floor/plasteel/white,
 /area/medical/genetics_cloning)
 "cGW" = (
 /obj/structure/cable/yellow{
@@ -81604,13 +81620,16 @@
 	d2 = 8;
 	icon_state = "2-8"
 	},
-/turf/open/floor/plasteel{
-	dir = 4;
-	icon_state = "whiteblue"
+/turf/open/floor/plasteel/whiteblue/side{
+	dir = 4
 	},
 /area/medical/genetics_cloning)
 "cGX" = (
 /obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/glass_research{
+	name = "Genetics Lab";
+	req_access_txt = "5; 9; 68"
+	},
 /obj/structure/cable/yellow{
 	d1 = 4;
 	d2 = 8;
@@ -81619,17 +81638,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
-/obj/machinery/door/airlock/research{
-	icon_state = "closed";
-	id_tag = "AuxGenetics";
-	locked = 0;
-	name = "Genetics Lab";
-	req_access_txt = "9";
-	req_one_access_txt = "0"
-	},
-/turf/open/floor/plasteel{
-	icon_state = "whitebluefull"
-	},
+/turf/open/floor/plasteel/whiteblue,
 /area/medical/genetics)
 "cGY" = (
 /obj/structure/cable/yellow{
@@ -82151,9 +82160,16 @@
 	name = "Medbay Aft"
 	})
 "cHU" = (
-/turf/open/floor/plasteel{
-	dir = 10;
-	icon_state = "whiteblue"
+/obj/machinery/button/door{
+	desc = "A remote control switch for the cloning door.";
+	id = "CloningDoor";
+	name = "Cloning Exit Button";
+	normaldoorcontrol = 1;
+	pixel_x = -23;
+	pixel_y = 8
+	},
+/turf/open/floor/plasteel/whiteblue/side{
+	dir = 10
 	},
 /area/medical/genetics_cloning)
 "cHV" = (
@@ -82163,10 +82179,8 @@
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
 	dir = 8
 	},
-/obj/structure/chair/stool,
-/turf/open/floor/plasteel{
-	dir = 2;
-	icon_state = "whiteblue"
+/turf/open/floor/plasteel/whiteblue/side{
+	dir = 2
 	},
 /area/medical/genetics_cloning)
 "cHW" = (
@@ -82176,6 +82190,7 @@
 	},
 /obj/machinery/power/apc{
 	dir = 4;
+	locked = 0;
 	name = "Cloning Lab APC";
 	pixel_x = 24;
 	pixel_y = 0
@@ -82186,9 +82201,8 @@
 	dir = 8;
 	network = list("SS13","Medbay")
 	},
-/turf/open/floor/plasteel{
-	dir = 6;
-	icon_state = "whiteblue"
+/turf/open/floor/plasteel/whiteblue/side{
+	dir = 6
 	},
 /area/medical/genetics_cloning)
 "cHX" = (
@@ -82797,34 +82811,36 @@
 	name = "Medbay Aft"
 	})
 "cIV" = (
+/obj/item/weapon/book/manual/medical_cloning{
+	pixel_y = 6
+	},
+/obj/item/weapon/paper,
 /obj/machinery/firealarm{
 	dir = 8;
 	pixel_x = -24
 	},
-/obj/structure/chair/stool,
-/turf/open/floor/plasteel/blackvault{
-	dir = 1
-	},
+/obj/structure/table/glass,
+/turf/open/floor/plasteel/vault,
 /area/medical/genetics_cloning)
 "cIW" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/obj/structure/table,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/vodka,
-/obj/item/toy/cards/deck,
-/turf/open/floor/plasteel/blackvault{
-	dir = 1
+/obj/item/weapon/storage/box/rxglasses{
+	pixel_x = 3;
+	pixel_y = 3
 	},
+/obj/item/weapon/storage/box/bodybags,
+/obj/item/weapon/pen,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/structure/table/glass,
+/turf/open/floor/plasteel/vault,
 /area/medical/genetics_cloning)
 "cIX" = (
+/obj/structure/closet/secure_closet/personal/patient,
 /obj/machinery/airalarm{
 	dir = 8;
 	icon_state = "alarm0";
 	pixel_x = 24
 	},
-/obj/structure/chair/stool,
-/turf/open/floor/plasteel/blackvault{
-	dir = 1
-	},
+/turf/open/floor/plasteel/vault,
 /area/medical/genetics_cloning)
 "cIY" = (
 /obj/machinery/airalarm{
@@ -83053,6 +83069,9 @@
 /obj/machinery/atmospherics/components/unary/vent_pump{
 	dir = 4;
 	on = 1
+	},
+/obj/effect/landmark/start{
+	name = "Scientist"
 	},
 /turf/open/floor/engine{
 	dir = 1;
@@ -83403,6 +83422,9 @@
 	pixel_x = 30;
 	pixel_y = 0
 	},
+/obj/effect/landmark/start{
+	name = "Scientist"
+	},
 /turf/open/floor/plasteel{
 	dir = 5;
 	icon_state = "warning"
@@ -83557,8 +83579,8 @@
 	name = "Medbay Aft"
 	})
 "cKa" = (
-/obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
 /area/medical/genetics_cloning)
 "cKb" = (
@@ -85943,6 +85965,7 @@
 /area/medical/virology)
 "cNT" = (
 /obj/machinery/disposal/bin,
+/obj/structure/disposalpipe/trunk,
 /turf/open/floor/plasteel/whitebot,
 /area/medical/virology)
 "cNU" = (
@@ -86465,6 +86488,7 @@
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
 	dir = 1
 	},
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/plasteel/white,
 /area/medical/virology)
 "cOR" = (
@@ -87069,6 +87093,7 @@
 /obj/effect/landmark/start{
 	name = "Virologist"
 	},
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/plasteel/white,
 /area/medical/virology)
 "cPQ" = (
@@ -87737,6 +87762,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	req_access_txt = 1
 	},
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/plasteel/whitegreen/side,
 /area/medical/virology)
 "cQO" = (
@@ -88398,12 +88424,18 @@
 	pixel_y = -28
 	},
 /obj/structure/cable/yellow,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/open/floor/plasteel/warning/corner{
 	dir = 8
 	},
 /area/medical/virology)
 "cRP" = (
 /obj/structure/closet/wardrobe/virology_white,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/open/floor/plasteel/warning{
 	tag = "icon-plasteel_warn (NORTHEAST)";
 	icon_state = "plasteel_warn";
@@ -88413,6 +88445,10 @@
 "cRQ" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	req_access_txt = 1
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
 	},
 /turf/open/floor/plasteel/whitegreen,
 /area/medical/virology)
@@ -88972,7 +89008,6 @@
 	dir = 4
 	},
 /obj/item/weapon/ore/slag,
-/obj/machinery/shieldgen,
 /turf/open/floor/plating,
 /area/maintenance/asmaint)
 "cSQ" = (
@@ -91665,9 +91700,8 @@
 /area/maintenance/asmaint2)
 "cXu" = (
 /obj/machinery/hydroponics/constructable,
-/obj/machinery/atmospherics/components/unary/vent_pump{
-	dir = 4;
-	on = 1
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 6
 	},
 /turf/open/floor/plasteel/whitepurple/side{
 	dir = 9
@@ -91737,14 +91771,22 @@
 /obj/structure/table,
 /obj/item/weapon/paper_bin,
 /obj/item/weapon/pen,
-/obj/item/device/radio/intercom{
-	broadcasting = 0;
-	listening = 1;
-	name = "Station Intercom (General)";
-	pixel_y = 20
+/obj/machinery/button/door{
+	id = "tele_blast";
+	name = "telepad blastdoors";
+	pixel_x = 6;
+	pixel_y = 26;
+	req_access_txt = "0"
+	},
+/obj/machinery/button/door{
+	id = "tele_space";
+	name = "space shutters control";
+	pixel_x = -6;
+	pixel_y = 26;
+	req_access_txt = "0"
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 4
+	dir = 10
 	},
 /turf/open/floor/plasteel/whitepurple/side{
 	tag = "icon-whitepurple (NORTH)";
@@ -91758,10 +91800,6 @@
 	name = "Telepad Control's APC";
 	pixel_x = 0;
 	pixel_y = 25
-	},
-/obj/machinery/atmospherics/components/unary/vent_pump{
-	dir = 8;
-	on = 1
 	},
 /obj/machinery/light{
 	dir = 1
@@ -91785,14 +91823,10 @@
 	pixel_x = 0;
 	pixel_y = 30
 	},
-/obj/structure/extinguisher_cabinet{
-	pixel_x = 27;
-	pixel_y = 0
-	},
 /turf/open/floor/plasteel/whitepurple/side{
-	tag = "icon-whitepurple (NORTHEAST)";
+	tag = "icon-whitepurple (NORTH)";
 	icon_state = "whitepurple";
-	dir = 5
+	dir = 1
 	},
 /area/toxins/telepad)
 "cXD" = (
@@ -91819,7 +91853,14 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
-/obj/structure/grille,
+/obj/machinery/door/airlock/maintenance{
+	icon_state = "closed";
+	locked = 0;
+	name = "Storage Room";
+	req_access_txt = "0";
+	req_one_access_txt = "12;47"
+	},
+/obj/structure/barricade/wooden,
 /turf/open/floor/plating,
 /area/maintenance/asmaint2)
 "cXG" = (
@@ -91827,7 +91868,6 @@
 	dir = 9;
 	pixel_y = 0
 	},
-/obj/structure/chair,
 /turf/open/floor/plating,
 /area/maintenance/asmaint2)
 "cXH" = (
@@ -92174,6 +92214,10 @@
 	pixel_y = 0;
 	tag = "icon-sink (WEST)"
 	},
+/obj/machinery/atmospherics/components/unary/vent_pump{
+	dir = 1;
+	on = 1
+	},
 /turf/open/floor/plasteel/whitepurple/side{
 	dir = 8
 	},
@@ -92185,6 +92229,11 @@
 	d2 = 4
 	},
 /obj/effect/landmark/event_spawn,
+/obj/machinery/atmospherics/components/unary/vent_scrubber{
+	dir = 2;
+	on = 1;
+	scrub_Toxins = 0
+	},
 /turf/open/floor/plasteel{
 	icon_state = "white"
 	},
@@ -92263,40 +92312,33 @@
 	d2 = 8
 	},
 /obj/effect/landmark/event_spawn,
+/obj/machinery/atmospherics/components/unary/vent_pump{
+	dir = 1;
+	on = 1
+	},
 /turf/open/floor/plasteel{
 	icon_state = "white"
 	},
 /area/toxins/telepad)
 "cYq" = (
-/obj/structure/chair/office/light{
-	dir = 4
-	},
-/obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
-	},
 /obj/structure/cable/yellow{
 	d1 = 1;
 	d2 = 8;
 	icon_state = "1-8";
 	tag = ""
 	},
+/obj/machinery/atmospherics/components/unary/vent_scrubber{
+	dir = 2;
+	on = 1;
+	scrub_Toxins = 0
+	},
 /turf/open/floor/plasteel{
 	icon_state = "white"
 	},
 /area/toxins/telepad)
 "cYr" = (
-/obj/structure/frame/computer,
-/obj/machinery/airalarm{
-	dir = 8;
-	icon_state = "alarm0";
-	pixel_x = 24
-	},
-/turf/open/floor/plasteel/whitepurple/side{
-	tag = "icon-whitepurple (EAST)";
-	icon_state = "whitepurple";
-	dir = 4
+/turf/open/floor/plasteel{
+	icon_state = "white"
 	},
 /area/toxins/telepad)
 "cYs" = (
@@ -92317,8 +92359,13 @@
 	},
 /area/maintenance/asmaint2)
 "cYu" = (
-/obj/structure/reagent_dispensers/watertank,
 /obj/item/weapon/reagent_containers/glass/bucket,
+/obj/structure/sink{
+	dir = 4;
+	icon_state = "sink";
+	pixel_x = 12;
+	pixel_y = 2
+	},
 /turf/open/floor/plating,
 /area/maintenance/asmaint2)
 "cYv" = (
@@ -92558,11 +92605,6 @@
 /area/hallway/secondary/exit)
 "cYU" = (
 /obj/machinery/plantgenes,
-/obj/machinery/atmospherics/components/unary/vent_scrubber{
-	dir = 4;
-	on = 1;
-	scrub_Toxins = 0
-	},
 /obj/machinery/light/small{
 	dir = 8
 	},
@@ -92580,7 +92622,8 @@
 /obj/item/weapon/reagent_containers/glass/bucket,
 /obj/item/weapon/shovel/spade,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
-	dir = 4
+	icon_state = "intact";
+	dir = 5
 	},
 /turf/open/floor/plasteel/whitepurple/side,
 /area/toxins/telepad)
@@ -92619,13 +92662,13 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
+/obj/machinery/airalarm{
+	dir = 1;
+	pixel_y = -22
+	},
 /turf/open/floor/plasteel/whitepurple/side,
 /area/toxins/telepad)
 "cZa" = (
-/obj/structure/sign/securearea{
-	pixel_x = -32;
-	pixel_y = -32
-	},
 /obj/item/weapon/twohanded/required/kirbyplants{
 	icon_state = "plant-10";
 	layer = 4.1
@@ -92636,31 +92679,24 @@
 /turf/open/floor/plasteel/whitepurple/side,
 /area/toxins/telepad)
 "cZb" = (
-/obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
+/obj/structure/chair/office/light{
+	dir = 4
 	},
-/obj/machinery/atmospherics/components/unary/vent_scrubber{
-	dir = 8;
-	on = 1;
-	scrub_N2O = 0;
-	scrub_Toxins = 0
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 9
 	},
-/turf/open/floor/plasteel{
-	icon_state = "white"
+/obj/effect/landmark/start{
+	name = "Scientist"
 	},
+/turf/open/floor/plasteel/whitepurple/side,
 /area/toxins/telepad)
 "cZc" = (
 /obj/structure/frame/computer,
-/obj/structure/sign/nosmoking_2{
-	pixel_x = 28
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 0;
+	pixel_y = -30
 	},
-/turf/open/floor/plasteel/whitepurple/side{
-	tag = "icon-whitepurple (EAST)";
-	icon_state = "whitepurple";
-	dir = 4
-	},
+/turf/open/floor/plasteel/whitepurple/side,
 /area/toxins/telepad)
 "cZd" = (
 /obj/machinery/hydroponics/soil{
@@ -92810,9 +92846,8 @@
 /area/toxins/telepad)
 "cZt" = (
 /obj/effect/spawner/structure/window/reinforced,
-/obj/structure/cable/yellow{
-	icon_state = "0-4";
-	d2 = 4
+/obj/machinery/door/poddoor/shutters/preopen{
+	id = "tele_space"
 	},
 /turf/open/floor/plating,
 /area/toxins/telepad)
@@ -93088,6 +93123,7 @@
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
 	dir = 4
 	},
+/obj/effect/landmark/event_spawn,
 /turf/open/floor/plasteel,
 /area/hallway/secondary/exit)
 "cZV" = (
@@ -93127,6 +93163,9 @@
 /area/toxins/telepad)
 "cZY" = (
 /obj/structure/closet/emcloset,
+/obj/machinery/light{
+	dir = 1
+	},
 /turf/open/floor/plasteel/warnwhite{
 	dir = 5
 	},
@@ -93327,17 +93366,13 @@
 "dat" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/open/floor/plasteel/warnwhite{
-	dir = 10
+	dir = 8
 	},
 /area/toxins/telepad)
 "dau" = (
-/obj/machinery/light{
-	dir = 4;
-	icon_state = "tube1"
-	},
 /obj/machinery/computer/shuttle/science,
 /turf/open/floor/plasteel/warnwhite{
-	dir = 6
+	dir = 4
 	},
 /area/toxins/telepad)
 "dav" = (
@@ -93807,16 +93842,11 @@
 	},
 /area/hallway/secondary/exit)
 "dbx" = (
-/obj/machinery/door/airlock/glass_external{
-	name = "Xenolaboratory Shuttle Airlock";
-	req_access_txt = "55"
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 9
 	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/obj/structure/fans/tiny,
-/turf/open/floor/plasteel/warnwhite/side{
-	tag = "icon-white_warn_side (EAST)";
-	icon_state = "white_warn_side";
-	dir = 4
+/turf/open/floor/plasteel/warnwhite{
+	dir = 10
 	},
 /area/toxins/telepad)
 "dby" = (
@@ -93960,27 +93990,11 @@
 	},
 /area/hallway/secondary/exit)
 "dbM" = (
-/obj/docking_port/mobile{
-	callTime = 120;
-	dir = 4;
-	dwidth = 0;
-	height = 7;
-	id = "science";
-	name = "Science Shuttle";
-	port_angle = 180;
-	width = 4
-	},
-/obj/docking_port/stationary{
-	area_type = /area/space;
-	dir = 4;
-	height = 7;
-	id = "science_home";
-	name = "Station 'Infinity'";
-	turf_type = /turf/open/space;
-	width = 4
-	},
-/turf/closed/wall/shuttle/smooth{
-	baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
+/obj/structure/chair/comfy/shuttle,
+/turf/open/floor/plasteel/terror/necro/whitepurple/side{
+	tag = "icon-whitepurple (NORTH)";
+	icon_state = "whitepurple";
+	dir = 1
 	},
 /area/shuttle/science)
 "dbN" = (
@@ -94121,19 +94135,8 @@
 	},
 /area/shuttle/escape)
 "dcc" = (
-/obj/structure/shuttle/engine/platform{
-	dir = 8;
-	layer = 4;
-	pixel_x = 32
-	},
-/obj/structure/shuttle/engine/propulsion{
-	dir = 8;
-	icon_state = "burst_s"
-	},
-/obj/structure/shuttle/engine/platform{
-	dir = 4
-	},
-/turf/open/floor/plating/lavaland/outdoor,
+/obj/machinery/computer/shuttle/science,
+/turf/open/floor/plasteel/terror/necro/whitepurple/side,
 /area/shuttle/science)
 "dcd" = (
 /turf/open/floor/plasteel/whitebot{
@@ -94277,20 +94280,28 @@
 /turf/open/floor/plating,
 /area/chapel/main)
 "dcp" = (
-/obj/structure/shuttle/engine/propulsion{
+/obj/structure/shuttle/engine/propulsion/burst/right{
+	tag = "icon-burst_r (NORTH)";
+	icon_state = "burst_r";
+	dir = 1
+	},
+/turf/open/floor/plating/airless/warnplate{
+	tag = "icon-plating_warn (NORTH)";
+	icon_state = "plating_warn";
+	dir = 1
+	},
+/area/shuttle/escape)
+"dcq" = (
+/obj/structure/shuttle/engine/propulsion/burst{
+	tag = "icon-propulsion (NORTH)";
 	icon_state = "propulsion";
 	dir = 1
 	},
-/obj/structure/shuttle/engine/platform,
-/turf/open/floor/plating/airless,
-/area/shuttle/escape)
-"dcq" = (
-/obj/structure/shuttle/engine/propulsion{
-	icon_state = "propulsion_l";
+/turf/open/floor/plating/airless/warnplate{
+	tag = "icon-plating_warn (NORTH)";
+	icon_state = "plating_warn";
 	dir = 1
 	},
-/obj/structure/shuttle/engine/platform,
-/turf/open/floor/plating/airless,
 /area/shuttle/escape)
 "dcr" = (
 /obj/structure/table,
@@ -94334,12 +94345,16 @@
 	},
 /area/shuttle/escape)
 "dcv" = (
-/obj/structure/shuttle/engine/propulsion{
-	icon_state = "propulsion_r";
+/obj/structure/shuttle/engine/propulsion/burst/left{
+	tag = "icon-burst_l (NORTH)";
+	icon_state = "burst_l";
 	dir = 1
 	},
-/obj/structure/shuttle/engine/platform,
-/turf/open/floor/plating/airless,
+/turf/open/floor/plating/airless/warnplate{
+	tag = "icon-plating_warn (NORTH)";
+	icon_state = "plating_warn";
+	dir = 1
+	},
 /area/shuttle/escape)
 "dcw" = (
 /obj/machinery/light,
@@ -94366,10 +94381,17 @@
 /turf/open/floor/plasteel/airless/solarbase,
 /area/solar/starboard)
 "dcz" = (
-/obj/structure/shuttle/engine/platform{
+/obj/structure/shuttle/engine/heater{
+	tag = "icon-heater (NORTH)";
+	icon_state = "heater";
 	dir = 1
 	},
-/turf/closed/wall/shuttle/smooth/nodiagonal,
+/obj/structure/window/reinforced,
+/turf/open/floor/plating/airless/warnplate{
+	tag = "icon-plating_warn (NORTH)";
+	icon_state = "plating_warn";
+	dir = 1
+	},
 /area/shuttle/escape)
 "dcA" = (
 /obj/structure/tank_dispenser/oxygen{
@@ -95397,6 +95419,335 @@
 	icon_state = "panelscorched"
 	},
 /area/maintenance/asmaint)
+"deE" = (
+/obj/structure/shuttle/engine/heater{
+	tag = "icon-heater (WEST)";
+	icon_state = "heater";
+	dir = 8;
+	resistance_flags = 3
+	},
+/obj/structure/window/reinforced{
+	dir = 4;
+	pixel_x = 0
+	},
+/obj/structure/shuttle/engine/propulsion{
+	dir = 8;
+	icon_state = "burst_l";
+	pixel_x = -32;
+	tag = "icon-burst_l (WEST)"
+	},
+/turf/open/floor/plating/warnplate{
+	dir = 8
+	},
+/area/shuttle/arrival)
+"deF" = (
+/obj/structure/shuttle/engine/propulsion{
+	dir = 8;
+	icon_state = "propulsion_r";
+	pixel_x = -32;
+	tag = "icon-propulsion_r (WEST)"
+	},
+/turf/closed/wall/mineral/plastitanium,
+/area/shuttle/arrival)
+"deG" = (
+/obj/machinery/atmospherics/pipe/simple/yellow/visible,
+/obj/machinery/light,
+/turf/open/floor/plasteel{
+	icon_state = "dark"
+	},
+/area/atmos)
+"deH" = (
+/obj/machinery/atmospherics/pipe/simple/yellow/visible,
+/turf/closed/wall/r_wall,
+/area/atmos)
+"deI" = (
+/obj/structure/table,
+/obj/item/weapon/folder,
+/obj/item/weapon/pen,
+/obj/item/device/healthanalyzer,
+/turf/open/floor/plating,
+/area/toxins/telepad)
+"deJ" = (
+/obj/structure/table,
+/obj/item/device/radio/off,
+/obj/item/device/radio/off,
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/open/floor/plating,
+/area/toxins/telepad)
+"deK" = (
+/obj/structure/table,
+/obj/item/device/gps,
+/turf/open/floor/plating,
+/area/toxins/telepad)
+"deL" = (
+/obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/poddoor/preopen{
+	id = "tele_blast"
+	},
+/turf/open/floor/plating,
+/area/toxins/telepad)
+"deM" = (
+/turf/open/floor/plating/warnplate{
+	tag = "icon-plating_warn (NORTHWEST)";
+	icon_state = "plating_warn";
+	dir = 9
+	},
+/area/toxins/telepad)
+"deN" = (
+/turf/open/floor/plating/warnplate{
+	tag = "icon-plating_warn (NORTHEAST)";
+	icon_state = "plating_warn";
+	dir = 5
+	},
+/area/toxins/telepad)
+"deO" = (
+/turf/open/floor/plating/warnplate{
+	tag = "icon-plating_warn (NORTH)";
+	icon_state = "plating_warn";
+	dir = 1
+	},
+/area/toxins/telepad)
+"deP" = (
+/obj/machinery/atmospherics/components/unary/vent_pump{
+	dir = 4;
+	on = 1
+	},
+/obj/effect/landmark{
+	name = "xeno_spawn";
+	pixel_x = -1
+	},
+/turf/open/floor/plating{
+	tag = "icon-platingdmg2";
+	icon_state = "platingdmg2"
+	},
+/area/maintenance/asmaint2)
+"deQ" = (
+/obj/machinery/door/airlock/glass_research{
+	name = "Telepad base";
+	req_access_txt = "47"
+	},
+/obj/machinery/door/poddoor/preopen{
+	id = "tele_blast"
+	},
+/turf/open/floor/plating,
+/area/toxins/telepad)
+"deR" = (
+/turf/open/floor/plating/warnplate{
+	dir = 8
+	},
+/area/toxins/telepad)
+"deS" = (
+/turf/open/floor/plating/warnplate{
+	dir = 4
+	},
+/area/toxins/telepad)
+"deT" = (
+/obj/machinery/telepad,
+/obj/effect/landmark/start{
+	name = "Scientist"
+	},
+/turf/open/floor/plating,
+/area/toxins/telepad)
+"deU" = (
+/obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/poddoor/preopen{
+	id = "tele_blast"
+	},
+/turf/open/floor/plating,
+/area/toxins/telepad)
+"deV" = (
+/turf/open/floor/plating/warnplate{
+	tag = "icon-plating_warn (SOUTHWEST)";
+	icon_state = "plating_warn";
+	dir = 10
+	},
+/area/toxins/telepad)
+"deW" = (
+/turf/open/floor/plating/warnplate{
+	tag = "icon-plating_warn (SOUTHEAST)";
+	icon_state = "plating_warn";
+	dir = 6
+	},
+/area/toxins/telepad)
+"deX" = (
+/turf/open/floor/plating/warnplate,
+/area/toxins/telepad)
+"deY" = (
+/obj/structure/shuttle/engine/propulsion/burst{
+	tag = "icon-propulsion (NORTH)";
+	icon_state = "propulsion";
+	dir = 1
+	},
+/obj/structure/shuttle/engine/platform,
+/obj/structure/shuttle/engine/platform{
+	dir = 1;
+	pixel_y = -32
+	},
+/turf/open/floor/plating/airless/warnplate{
+	tag = "icon-plating_warn (NORTH)";
+	icon_state = "plating_warn";
+	dir = 1
+	},
+/area/shuttle/science)
+"deZ" = (
+/obj/structure/shuttle/engine/propulsion/burst{
+	tag = "icon-propulsion (NORTH)";
+	icon_state = "propulsion";
+	dir = 1
+	},
+/obj/structure/shuttle/engine/platform,
+/obj/structure/shuttle/engine/platform{
+	dir = 1;
+	pixel_y = -32
+	},
+/turf/open/floor/plating/airless/warnplate{
+	tag = "icon-plating_warn (NORTH)";
+	icon_state = "plating_warn";
+	dir = 1
+	},
+/area/shuttle/science)
+"dfa" = (
+/obj/docking_port/stationary{
+	area_type = /area/space;
+	dir = 2;
+	height = 7;
+	id = "science_home";
+	name = "Station 'Infinity'";
+	turf_type = /turf/open/space;
+	width = 4
+	},
+/obj/docking_port/mobile{
+	callTime = 120;
+	dir = 2;
+	dwidth = 0;
+	height = 7;
+	id = "science";
+	name = "Science Shuttle";
+	port_angle = 180;
+	width = 4
+	},
+/turf/closed/wall/shuttle/smooth{
+	baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
+	},
+/area/shuttle/science)
+"dfb" = (
+/obj/structure/chair{
+	dir = 8
+	},
+/obj/effect/landmark/start{
+	name = "Scientist"
+	},
+/turf/open/floor/plasteel/warnwhite{
+	dir = 4
+	},
+/area/toxins/telepad)
+"dfc" = (
+/obj/structure/chair{
+	dir = 8
+	},
+/turf/open/floor/plasteel/warnwhite{
+	dir = 4
+	},
+/area/toxins/telepad)
+"dfd" = (
+/obj/machinery/light{
+	icon_state = "tube1";
+	dir = 8
+	},
+/turf/open/floor/plasteel/terror/necro/warnwhite{
+	tag = "icon-warnwhite (NORTH)";
+	icon_state = "warnwhite";
+	dir = 1
+	},
+/area/shuttle/science)
+"dfe" = (
+/obj/machinery/atmospherics/components/unary/vent_pump{
+	dir = 4;
+	on = 1
+	},
+/turf/open/floor/plasteel/terror/necro/warnwhite{
+	tag = "icon-warnwhite (NORTH)";
+	icon_state = "warnwhite";
+	dir = 1
+	},
+/area/shuttle/science)
+"dff" = (
+/obj/machinery/door/airlock/glass_titanium{
+	name = "Science shuttle"
+	},
+/obj/structure/fans/tiny,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
+	},
+/turf/open/floor/plasteel/whitebot/delivery{
+	baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
+	},
+/area/shuttle/science)
+"dfg" = (
+/obj/machinery/door/airlock/glass_external{
+	name = "Xenolaboratory Shuttle Airlock";
+	req_access_txt = "55"
+	},
+/obj/structure/fans/tiny,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
+	},
+/turf/open/floor/plasteel/warnwhite/side,
+/area/toxins/telepad)
+"dfh" = (
+/obj/structure/chair{
+	dir = 8
+	},
+/turf/open/floor/plasteel/warnwhite{
+	dir = 6
+	},
+/area/toxins/telepad)
+"dfi" = (
+/obj/structure/chair/comfy/shuttle,
+/turf/open/floor/plasteel/terror/necro/whitepurple/side{
+	tag = "icon-whitepurple (NORTH)";
+	icon_state = "whitepurple";
+	dir = 1
+	},
+/area/shuttle/science)
+"dfj" = (
+/obj/structure/frame/computer,
+/turf/open/floor/plasteel/terror/necro/whitepurple/side,
+/area/shuttle/science)
+"dfk" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/shuttle/escape)
+"dfl" = (
+/obj/structure/window/reinforced,
+/obj/structure/shuttle/engine/heater{
+	tag = "icon-heater (NORTH)";
+	icon_state = "heater";
+	dir = 1
+	},
+/turf/open/floor/plating/airless/warnplate{
+	tag = "icon-plating_warn (NORTH)";
+	icon_state = "plating_warn";
+	dir = 1
+	},
+/area/shuttle/escape)
+"dfm" = (
+/obj/structure/window/reinforced,
+/obj/structure/shuttle/engine/heater{
+	tag = "icon-heater (NORTH)";
+	icon_state = "heater";
+	dir = 1
+	},
+/turf/open/floor/plating/airless/warnplate{
+	tag = "icon-plating_warn (NORTH)";
+	icon_state = "plating_warn";
+	dir = 1
+	},
+/area/shuttle/escape)
+"dfn" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/shuttle/escape)
 
 (1,1,1) = {"
 aaa
@@ -103478,11 +103829,11 @@ aai
 aai
 aaa
 bdw
-bgJ
-biv
-bdw
-blH
 bnu
+blH
+bdw
+deE
+deF
 bdw
 aaa
 aai
@@ -109663,7 +110014,7 @@ bEC
 apn
 bIg
 bJQ
-bLy
+ayV
 apn
 bOX
 bQO
@@ -115079,7 +115430,7 @@ cbo
 cbo
 cbo
 cbo
-cnW
+cfG
 cpe
 cqy
 cqw
@@ -116870,7 +117221,7 @@ bEV
 bYM
 cat
 bBc
-bLy
+ayV
 ceg
 bKb
 cbo
@@ -120520,8 +120871,8 @@ cZr
 aaa
 aai
 aaa
-dbY
-dbZ
+aaa
+dfk
 dbZ
 dbZ
 dcP
@@ -121813,7 +122164,7 @@ dcB
 dcR
 dcX
 dcB
-dcs
+ddZ
 ddu
 dcX
 dcB
@@ -122062,7 +122413,7 @@ dbi
 daR
 dbL
 dca
-dcs
+dcB
 dct
 dcE
 dcE
@@ -122319,7 +122670,7 @@ dbi
 dbw
 dbL
 dcb
-dct
+dcB
 dcs
 dcE
 dcE
@@ -122584,7 +122935,7 @@ dcB
 dcS
 dcY
 dcB
-dct
+ddT
 ddv
 ddD
 dcY
@@ -123347,8 +123698,8 @@ cRZ
 aaa
 aai
 aaa
-dcv
-dcz
+dcq
+dfl
 dbZ
 dcB
 dcB
@@ -123605,7 +123956,7 @@ aaa
 aai
 aaa
 dcv
-dcz
+dfm
 dbZ
 dcO
 dcO
@@ -123861,8 +124212,8 @@ aai
 aai
 aai
 aaa
-dbY
-dbZ
+aaa
+dfn
 dbZ
 dbZ
 dbZ
@@ -124023,7 +124374,7 @@ aEz
 aFP
 avb
 aIK
-aJZ
+aBo
 aLx
 aMT
 aOm
@@ -124110,13 +124461,13 @@ cWC
 cXr
 cYh
 cYT
+aai
+aaa
 aaa
 aai
 aaa
 aaa
-aaa
 aai
-aaa
 aaa
 aaa
 aaa
@@ -124367,17 +124718,17 @@ cWD
 cXs
 cYi
 cRZ
-aaa
-aai
-aaa
-aaa
 aai
 aai
 aai
-aaa
-aaa
-aaa
-aaa
+aai
+aai
+aai
+akY
+aam
+aam
+aai
+aai
 aaa
 aaa
 aaa
@@ -124625,17 +124976,17 @@ cRZ
 cRZ
 cRZ
 agL
-aai
-aai
-aai
-aai
 aaa
-aai
-aai
-aai
-aai
-aai
 aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aam
+aai
 aaa
 aaa
 aaa
@@ -124883,16 +125234,16 @@ cWE
 agL
 agL
 aaa
-aai
+dbQ
+dbN
+dbN
+dbN
+dbP
+dbN
+dbQ
 aaa
-aai
 aaa
 aam
-aam
-aam
-aai
-aam
-aai
 aaa
 aaa
 aaa
@@ -125139,18 +125490,18 @@ cWF
 cWF
 cWF
 cWF
-aai
-aai
+aaa
+deY
+dbN
+dcd
+dfd
+dfi
+dfj
+dbP
 aaa
 aai
-aai
+aam
 aaa
-aaa
-aaa
-aaa
-aaa
-aaF
-aai
 aaa
 aaa
 aaa
@@ -125397,17 +125748,17 @@ cYj
 cYU
 cWF
 aaa
-aai
-aai
-aai
-aaa
+deZ
+dbN
+dcd
+dfe
 dbM
 dcc
-dcc
-dbQ
+dbP
 aaa
-aaF
-aai
+aaa
+aam
+aaa
 aaa
 aaa
 aaa
@@ -125654,18 +126005,18 @@ cYk
 cYV
 cWF
 aaa
-aai
+dfa
+dbN
+dbN
+dff
+dbP
+dbN
+dbQ
 aaa
-aai
 aaa
-dbN
-dbN
-dbN
-dbN
+aam
 aaa
-aaF
-aai
-aai
+aaa
 aaa
 aaa
 aaa
@@ -125914,13 +126265,13 @@ cZW
 cZW
 cZW
 cZW
+dfg
 cZW
-dbN
-dcd
-dcd
-dbN
+aaa
+aaa
 aaa
 aam
+aai
 aaa
 aaa
 aaa
@@ -126169,16 +126520,16 @@ cYX
 cZs
 cZX
 dat
-daX
-dbj
+dat
+dat
 dbx
-dbO
-dce
-dcw
-dbN
-aaa
-aaF
+cZW
 aai
+aai
+aai
+aah
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -126426,15 +126777,15 @@ cYY
 cWF
 cZY
 dau
+dfb
+dfc
+dfh
 cZW
-cZW
-cZW
-dbP
-dcf
-dcf
-dbP
+aai
 aaa
-aaF
+aaa
+aag
+aaa
 aaa
 aaa
 aaa
@@ -126681,17 +127032,17 @@ cXz
 cYo
 cYZ
 cWF
-cWF
-cWF
-cWF
+cZW
+cZW
+cZW
+cZW
+cZW
+cZW
+aai
 aai
 aaa
-dbN
-dcg
-dcx
-dbN
+aag
 aaa
-aaF
 aaa
 aaa
 aaa
@@ -126938,18 +127289,18 @@ cXA
 cYp
 cZa
 cZt
-cZZ
-dav
-cWF
-aaa
-aaa
-dbQ
-dbP
-dbP
-dbQ
-aaa
-aam
 aai
+aaa
+aaa
+aai
+aaa
+aaa
+aaa
+aai
+aaa
+aag
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -127194,19 +127545,19 @@ cWF
 cXB
 cYq
 cZb
-cZu
-cZZ
-daw
-cWF
-aai
-aaa
-aaa
+cZt
 aaa
 aaa
 aaa
 aai
-aaF
+aaa
+aaa
+aaa
 aai
+aaa
+aam
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -127451,18 +127802,18 @@ cWF
 cXC
 cYr
 cZc
-cZv
-cZZ
-dav
 cWF
-aai
-aai
-aai
-aai
-aai
-aai
-aai
-aaF
+aaa
+aaa
+aaa
+akY
+aam
+aam
+aam
+akY
+aam
+aam
+aaa
 aaa
 aaa
 aaa
@@ -127703,25 +128054,25 @@ cSu
 cTs
 cRB
 cVe
-csM
 cWF
 cWF
+deL
+deQ
+deU
 cWF
-cWF
-cWF
-cWF
-cWF
-cWF
+aaa
+aaa
+aaa
 aai
 aaa
 aaa
 aai
 aaa
 aaa
+aai
 aaa
-aaF
-aai
-aai
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -127960,14 +128311,14 @@ cSv
 cTt
 cRB
 cRF
-csM
-cWI
-czG
-cut
-cZd
-csM
+cWF
+deI
+deM
+deR
+deV
+cWF
 aai
-aaa
+aai
 aai
 aai
 aai
@@ -128217,12 +128568,12 @@ cSw
 cTu
 cRB
 cCN
-csM
-cWJ
-cut
-cut
-cZe
-csM
+cWF
+deJ
+deN
+deS
+deW
+cWF
 aaa
 aaa
 aaa
@@ -128474,12 +128825,12 @@ cRB
 cRB
 cRB
 cCN
-csM
-cWK
-cut
-cut
-cZf
-csM
+cWF
+deK
+deO
+deT
+deX
+cWF
 aai
 aai
 aaa
@@ -128634,7 +128985,7 @@ afQ
 afQ
 afQ
 afQ
-anC
+anA
 aoH
 anA
 anA
@@ -128731,12 +129082,12 @@ cCt
 cTv
 cut
 cCN
-csM
-csM
-cXD
-cYs
-csM
-csM
+cWF
+cWF
+cWF
+cWF
+cWF
+cWF
 aaa
 aaa
 aaa
@@ -128989,10 +129340,10 @@ cTw
 cun
 cVf
 csM
-cWL
-cXE
+cWI
+deP
 cut
-cZf
+cZd
 csM
 aai
 aaa
@@ -129246,10 +129597,10 @@ csM
 cUj
 csM
 csM
-cWM
+cWJ
 cXE
-cYt
-cZf
+cut
+cZe
 csM
 aai
 aai
@@ -129503,7 +129854,7 @@ cTx
 cUk
 cVg
 csM
-cWN
+cWK
 cXE
 cYu
 cZf
@@ -130007,7 +130358,7 @@ cJH
 cKC
 cLD
 csM
-cNI
+cut
 cOD
 cut
 cut
@@ -130424,7 +130775,7 @@ aam
 aaa
 aaa
 aai
-abk
+adi
 adU
 aeV
 afS
@@ -130681,7 +131032,7 @@ aah
 aaa
 aai
 aai
-abk
+adi
 adV
 aeW
 afT
@@ -130938,7 +131289,7 @@ aam
 aaa
 aaa
 aaa
-abk
+adi
 adW
 aeW
 afU
@@ -131452,7 +131803,7 @@ aam
 aaa
 aai
 aaa
-abk
+adi
 adX
 aeW
 afV
@@ -131709,7 +132060,7 @@ aam
 aaa
 aaa
 aaa
-abk
+adi
 adY
 aeY
 afW
@@ -131966,7 +132317,7 @@ aam
 aai
 aai
 aai
-abk
+adi
 adZ
 aeZ
 afX
@@ -132478,7 +132829,7 @@ aai
 aaa
 abj
 abj
-abk
+adi
 abj
 abj
 aea
@@ -132733,7 +133084,7 @@ aaa
 aaa
 aai
 aai
-abk
+adi
 abE
 acg
 acg
@@ -137435,8 +137786,8 @@ cfm
 cgF
 chT
 cjw
-clk
-bFZ
+clm
+bDX
 aai
 bHS
 bHS
@@ -137949,7 +138300,7 @@ cfo
 cgG
 chV
 cjy
-clm
+clk
 bFZ
 aai
 bFZ
@@ -138463,8 +138814,8 @@ cfo
 cgG
 chX
 cjA
-clj
-cmy
+deG
+deH
 cnP
 bHS
 bHS
@@ -139745,7 +140096,7 @@ bVy
 bQu
 bSi
 bTM
-bVy
+bSi
 bSi
 bSi
 clp

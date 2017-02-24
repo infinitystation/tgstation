@@ -1,7 +1,7 @@
 /obj/machinery/vending/clothing/outerspace
 	name = "\improper Outerspace-Clothes"
 	desc = "Outerspace designer brand machine! For truly style!"
-	icon = 'icons/obj/infinity_object.dmi'
+	icon = 'icons/obj/infinity_vend.dmi'
 	icon_state = "outerspace_clothe"
 	product_slogans = "Stop right here! Outerspace designer here! ;It's time for new clothe-experience! ;What? Never see that before?"
 	vend_reply = "Outerspace designer thanks you!"
@@ -20,7 +20,7 @@
 	name = "\improper Outerspace-Shoes"
 	desc = "Wall-mounted Outerspace designer shoes brand machine! For truly style!"
 	density = 0
-	icon = 'icons/obj/infinity_object.dmi'
+	icon = 'icons/obj/infinity_vend.dmi'
 	icon_state = "vendo_shoes"
 	product_slogans = "Stop right here! Outerspace designer here! ;It's time for new clothe-experience! ;What? Never see that before?"
 	vend_reply = "Outerspace designer thanks you!"
@@ -36,7 +36,7 @@
 /obj/machinery/vending/clothing/new_outerspace
 	name = "\improper DesignerBoard"
 	desc = "New brand machine, from board of famous designers! Anyooh and Outerspace-Designer included!"
-	icon = 'icons/obj/infinity_surman_object.dmi'
+	icon = 'icons/obj/infinity_vend.dmi'
 	icon_state = "new_outerspace"
 	product_slogans = "Stop right here! Outerspace designer here! ;It's time for new clothe-experience! ;What? Never see that before?"
 	vend_reply = "Outerspace designer thanks you!"
@@ -111,7 +111,7 @@
 /obj/machinery/vending/tool/syndicate
 	name = "\improper Syndicate YouTool"
 	desc = "Tools for our operatives."
-	icon = 'icons/obj/infinity_object.dmi'
+	icon = 'icons/obj/infinity_vend.dmi'
 	icon_state = "SynTool"
 	icon_deny = "SynTool-deny"
 	req_access_txt = "150" //Common syndicate access
@@ -129,7 +129,7 @@
 /obj/machinery/vending/security_clothes
 	name = "Security clothes"
 	desc = "All our clothes - it is your clothes!"
-	icon = 'icons/obj/infinity_object.dmi'
+	icon = 'icons/obj/infinity_vend.dmi'
 	icon_state = "sec"
 	icon_deny = "sec-deny"
 	req_access = list(access_security)

@@ -458,7 +458,7 @@
 	name = "Science Shuttle Console (Computer Board)"
 	build_path = /obj/machinery/computer/shuttle/science
 
-//Вз&#255;л с карбонки умные пули
+//Взял с карбонки умные пули
 
 /obj/item/projectile/bullet/smart
 	name = "smart bullet"
@@ -472,3 +472,19 @@
 			forceMove(get_turf(A))
 			return 0
 	..()
+
+/obj/machinery/tiberium //Заря Империи
+	name = "Tiberium crystal"
+	desc = "Strange green-glowing crystal... <span class='danger'>You feel headache at it.</span>"
+	icon = 'icons/obj/infinity_object.dmi'
+	icon_state = "crystal"
+	anchored = 1
+	density = 1
+
+/obj/machinery/tiberium/process()
+	..()
+	radiation_pulse(get_turf(src), 2, 4, 8)
+
+/obj/machinery/tiberium/deconstruct(disassembled = FALSE)
+	new /obj/item/weapon/ore/tiberium (loc, 2)
+	qdel(src)

@@ -12635,13 +12635,6 @@
 	},
 /area/centcom/ferry)
 "ER" = (
-/obj/machinery/button/door{
-	id = "XCCFerry";
-	name = "Hanger Bay Shutters";
-	pixel_x = 0;
-	pixel_y = 24;
-	req_access_txt = "2"
-	},
 /obj/machinery/camera/autoname{
 	name = "security camera CC";
 	network = list("CentComm")
@@ -16553,24 +16546,24 @@
 /area/syndicate_mothership/enemy)
 "NR" = (
 /obj/effect/step_trigger/teleporter{
-	teleport_x = 83;
-	teleport_y = 58;
+	teleport_x = 73;
+	teleport_y = 57;
 	teleport_z = 2
 	},
 /turf/open/floor/pod/light,
 /area/syndicate_mothership/enemy)
 "NS" = (
 /obj/effect/step_trigger/teleporter{
-	teleport_x = 85;
-	teleport_y = 61;
+	teleport_x = 76;
+	teleport_y = 55;
 	teleport_z = 2
 	},
 /turf/open/floor/pod/light,
 /area/syndicate_mothership/enemy)
 "NT" = (
 /obj/effect/step_trigger/teleporter{
-	teleport_x = 87;
-	teleport_y = 58;
+	teleport_x = 73;
+	teleport_y = 53;
 	teleport_z = 2
 	},
 /turf/open/floor/pod/light,
@@ -16709,7 +16702,8 @@
 /obj/machinery/computer/communications{
 	emagged = 1;
 	icon_keyboard = "syndie_key";
-	icon_screen = "comm_s"
+	icon_screen = "comm_s";
+	req_access = list(150)
 	},
 /turf/open/floor/plasteel/darkwarning{
 	dir = 1
@@ -16722,7 +16716,9 @@
 	},
 /area/syndicate_mothership/enemy)
 "Or" = (
-/obj/machinery/computer/shuttle/enemy,
+/obj/machinery/computer/shuttle/enemy{
+	req_access_txt = "150"
+	},
 /turf/open/floor/plasteel/darkwarning{
 	dir = 1
 	},
@@ -19637,6 +19633,83 @@
 "VQ" = (
 /turf/closed/indestructible/fakeglass,
 /area/tdome/tdomeadmin)
+"VR" = (
+/turf/open/space,
+/turf/closed/wall/shuttle/syndie{
+	tag = "icon-wall3 (NORTHWEST)";
+	icon_state = "wall3";
+	dir = 9
+	},
+/area/space)
+"VS" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/space)
+"VT" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/space)
+"VU" = (
+/turf/open/space,
+/turf/closed/wall/shuttle/syndie{
+	tag = "icon-wall3 (NORTHEAST)";
+	icon_state = "wall3";
+	dir = 5
+	},
+/area/space)
+"VV" = (
+/obj/docking_port/stationary{
+	dir = 2;
+	dwidth = 6;
+	height = 23;
+	id = "emergency_syndicate";
+	name = "Syndicate Auxillary Shuttle Dock";
+	width = 14
+	},
+/turf/open/space,
+/area/space)
+"VW" = (
+/obj/machinery/door/airlock/centcom{
+	name = "Trooper Teleport";
+	opacity = 1;
+	req_access_txt = "0"
+	},
+/turf/open/floor/plasteel/darkwarning/side{
+	tag = "icon-black_warn_side (EAST)";
+	icon_state = "black_warn_side";
+	dir = 4
+	},
+/area/syndicate_mothership/enemy)
+"VX" = (
+/obj/machinery/door/airlock/centcom{
+	name = "Trooper Teleport";
+	opacity = 1;
+	req_access_txt = "0"
+	},
+/turf/open/floor/plasteel/darkwarning/side{
+	tag = "icon-black_warn_side (EAST)";
+	icon_state = "black_warn_side";
+	dir = 4
+	},
+/area/syndicate_mothership/enemy)
+"VY" = (
+/obj/structure/mirror{
+	desc = "Mirror mirror on the wall, who is the most robust of them all?";
+	pixel_x = 0;
+	pixel_y = -30
+	},
+/turf/open/floor/plasteel/terror/darkred/corner{
+	tag = "icon-darkredcorners_t (WEST)";
+	icon_state = "darkredcorners_t";
+	dir = 8
+	},
+/area/syndicate_mothership/enemy)
+"VZ" = (
+/obj/structure/mirror{
+	desc = "Mirror mirror on the wall, who is the most robust of them all?";
+	pixel_x = 0;
+	pixel_y = -30
+	},
+/turf/open/floor/plasteel/terror/darkred/corner,
+/area/syndicate_mothership/enemy)
 
 (1,1,1) = {"
 aa
@@ -37309,10 +37382,10 @@ ot
 ot
 ot
 ot
-ot
-ot
-ot
-ot
+Lj
+Lj
+Lj
+Lj
 ab
 aa
 aa
@@ -37566,10 +37639,10 @@ aa
 aa
 aa
 aa
-ot
-aa
-aa
-aa
+Lj
+Ge
+Lk
+LS
 ab
 aa
 aa
@@ -37823,17 +37896,17 @@ Gc
 Gc
 KV
 aa
-ot
-aa
-aa
-aa
+Lj
+Gg
+Lm
+LS
 ab
-aa
-aa
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
+ab
+ab
 aa
 aa
 aa
@@ -38080,17 +38153,17 @@ JP
 Gc
 KW
 aa
-ot
-aa
-aa
-aa
+Lj
+LS
+LS
+Lj
+Lj
+Lj
+Lj
+Lj
+Lj
+Lj
 ab
-aa
-aa
-aa
-aa
-aa
-aa
 aa
 aa
 aa
@@ -38337,17 +38410,17 @@ JQ
 Gc
 Gc
 aa
-ot
-aa
-aa
-aa
+Lj
+Ge
+Lk
+Lj
+LB
+Lj
+LB
+Lj
+LB
+Lj
 ab
-aa
-aa
-aa
-aa
-aa
-aa
 aa
 aa
 aa
@@ -38595,16 +38668,16 @@ Gc
 KW
 aa
 Lj
+Gf
+Ll
+VW
+LV
+LV
+LW
+Mf
+VY
 Lj
-Lj
-Lj
-Mz
-aa
-aa
-aa
-aa
-aa
-aa
+ab
 aa
 aa
 aa
@@ -38852,16 +38925,16 @@ Gc
 KX
 aa
 Lj
-Ge
-Lk
-LS
-Mz
-aa
-aa
-aa
-aa
-aa
-aa
+Gf
+Ll
+VX
+LX
+LX
+LW
+Mg
+VZ
+Lj
+ab
 aa
 aa
 aa
@@ -39111,14 +39184,14 @@ aa
 Lj
 Gg
 Lm
-LS
-Mz
-Mz
-Mz
-Mz
-Mz
-Mz
-aa
+Lj
+LB
+Lj
+LB
+Lj
+LB
+Lj
+ab
 aa
 aa
 aa
@@ -39366,16 +39439,16 @@ ot
 ot
 ot
 Lj
-LS
-LS
+LU
+LU
 Lj
 Lj
 Lj
 Lj
 Lj
 Lj
-Mz
-aa
+Lj
+ab
 aa
 aa
 aa
@@ -39631,8 +39704,8 @@ Nq
 NN
 Op
 Lj
-Mz
-aa
+ab
+ab
 aa
 aa
 aa
@@ -39888,7 +39961,7 @@ LW
 NO
 Oq
 Lj
-Mz
+ab
 aa
 aa
 aa
@@ -40145,7 +40218,7 @@ Nr
 NP
 Or
 Lj
-Mz
+ab
 aa
 aa
 aa
@@ -40375,9 +40448,9 @@ aa
 aa
 aa
 ab
-ot
-ot
-ot
+aa
+aa
+aa
 ot
 aa
 aa
@@ -40402,7 +40475,7 @@ Ns
 NQ
 Os
 Lj
-Mz
+ab
 aa
 aa
 aa
@@ -40639,27 +40712,27 @@ ot
 aa
 aa
 FL
-FL
-FL
 Hi
 FL
 FL
 FL
 Hi
 FL
+Hi
+FL
+FL
+FL
+Lj
+Lj
 FL
 FL
 Lj
 Lj
-LU
-LU
 Lj
 Lj
 Lj
 Lj
-Lj
-Lj
-Mz
+ab
 aa
 aa
 aa
@@ -40885,33 +40958,33 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
 ab
-aa
-aa
-aa
+ab
+ab
+ab
 ot
 ot
 ot
 ot
 ot
-FL
-Hh
-FL
 ot
 FL
 Hh
 FL
 ot
+FL
+Hh
+FL
+Hh
+FL
 ot
-Lj
-LB
-LV
-Mf
-LB
-Lj
+aa
+ot
+ot
+aa
+aa
+ot
+ot
 Mz
 Mz
 Mz
@@ -41142,10 +41215,8 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
 ab
+aa
 aa
 aa
 aa
@@ -41161,14 +41232,16 @@ aa
 FL
 Hi
 FL
+Hi
+FL
 aa
 aa
-Lj
-Lj
-LV
-Mf
-Lj
-Lj
+aa
+aa
+aa
+aa
+aa
+aa
 Mz
 Mz
 Ot
@@ -41399,13 +41472,11 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
 ab
-aa
-aa
-aa
+ot
+ot
+ot
+ot
 ot
 aa
 aa
@@ -41420,17 +41491,19 @@ aa
 aa
 aa
 aa
-Lj
-LB
-LW
-LW
-LB
-Lj
-Nt
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+Mz
 NR
 Ot
 Ot
-Mz
+Nt
 aa
 aa
 aa
@@ -41656,14 +41729,8 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
 ab
 ot
-ot
-ot
-ot
 aa
 aa
 aa
@@ -41677,12 +41744,18 @@ aa
 aa
 aa
 aa
-Lj
-Lj
-LX
-Mg
-Lj
-Lj
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 Mz
 Mz
 Ot
@@ -41887,13 +41960,6 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
 rU
 aa
 aa
@@ -41916,10 +41982,11 @@ aa
 aa
 aa
 aa
+aa
+aa
+aa
+aa
 ab
-aa
-aa
-aa
 ot
 aa
 aa
@@ -41934,12 +42001,18 @@ aa
 aa
 aa
 aa
-Lj
-LB
-LY
-Mh
-LB
-Lj
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 Mz
 Mz
 Mz
@@ -42170,13 +42243,7 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
 ab
-aa
-aa
-aa
 ot
 aa
 aa
@@ -42191,12 +42258,18 @@ aa
 aa
 aa
 aa
-Lj
-Lj
-Lj
-Lj
-Lj
-Lj
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+ot
 Mz
 Mz
 Ot
@@ -42427,13 +42500,7 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
 ab
-aa
-aa
-aa
 ot
 aa
 aa
@@ -42449,16 +42516,22 @@ aa
 aa
 aa
 aa
-ot
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 Mz
-Mz
-Nt
 NS
 Ot
 Ot
-Mz
+Nt
 aa
 aa
 aa
@@ -42684,15 +42757,9 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
 ab
 aa
-aa
-aa
-ot
-aa
+VR
 aa
 aa
 aa
@@ -42706,11 +42773,17 @@ aa
 aa
 aa
 aa
-ot
 aa
 aa
-Mz
-Mz
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 Mz
 Mz
 Ot
@@ -42941,33 +43014,33 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
 ab
 ot
-ot
-ot
-ot
-ot
-ot
-ot
-ot
-ot
-ot
-ot
-ot
-ot
-ot
-ot
-ot
-ot
-ot
-ot
-ot
-ot
-Mz
-Mz
+VS
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 Mz
 Mz
 Mz
@@ -43198,33 +43271,33 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
 ab
-aa
-aa
-aa
 ot
-aa
-aa
-aa
-ot
-aa
-aa
+VT
+VV
 aa
 aa
 aa
 aa
-ot
 aa
 aa
 aa
-ot
 aa
 aa
-Mz
-Mz
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 Mz
 Mz
 Ot
@@ -43455,38 +43528,38 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
 ab
 aa
-aa
-aa
-ot
-aa
-aa
-aa
-ot
+VU
 aa
 aa
 aa
 aa
 aa
 aa
-ot
 aa
 aa
 aa
-ot
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 Mz
-Mz
-Nt
 NT
 Ot
 Ot
-Mz
+Nt
 aa
 aa
 aa
@@ -43712,33 +43785,33 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
 ab
 aa
 aa
 aa
-ot
-aa
-aa
-aa
-ot
 aa
 aa
 aa
 aa
 aa
 aa
-ot
 aa
 aa
 aa
-ot
 aa
 aa
-Mz
-Mz
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 Mz
 Mz
 Ot
@@ -43969,33 +44042,33 @@ aa
 aa
 aa
 aa
+ab
+ot
 aa
 aa
 aa
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-Mz
-Mz
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 Mz
 Mz
 Mz
@@ -44226,6 +44299,8 @@ aa
 aa
 aa
 aa
+ab
+ot
 aa
 aa
 aa
@@ -44250,10 +44325,8 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
+ot
+ab
 aa
 aa
 aa
@@ -44483,6 +44556,8 @@ aa
 aa
 aa
 aa
+ab
+ot
 aa
 aa
 aa
@@ -44508,9 +44583,7 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
+ab
 aa
 aa
 aa
@@ -44740,6 +44813,8 @@ aa
 aa
 aa
 aa
+ab
+ot
 aa
 aa
 aa
@@ -44765,9 +44840,7 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
+ab
 aa
 aa
 aa
@@ -44997,6 +45070,8 @@ aa
 aa
 aa
 aa
+ab
+ot
 aa
 aa
 aa
@@ -45022,9 +45097,7 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
+ab
 aa
 aa
 aa
@@ -45254,34 +45327,34 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+ab
+ot
+ot
+ot
+ot
+ot
+ot
+ot
+ot
+ot
+ot
+ot
+ot
+ot
+ot
+ot
+ot
+ot
+ot
+ot
+ot
+ot
+ot
+ot
+ot
+ot
+ot
+ab
 aa
 aa
 aa
@@ -45511,34 +45584,34 @@ aa
 aa
 aa
 aa
+ab
+aa
+aa
+aa
+aa
+ot
 aa
 aa
 aa
 aa
 aa
 aa
+ot
+aa
+aa
+aa
+aa
+ot
 aa
 aa
 aa
 aa
 aa
+ot
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+ab
 aa
 aa
 aa
@@ -45768,34 +45841,34 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 aa
 aa
 aa
@@ -55547,7 +55620,7 @@ yg
 yg
 yg
 wN
-ot
+oG
 aa
 Id
 Ih

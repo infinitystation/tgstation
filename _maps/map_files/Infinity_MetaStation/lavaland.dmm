@@ -1029,6 +1029,10 @@
 /area/mine/lobby)
 "du" = (
 /obj/machinery/vending/coffee,
+/obj/machinery/light{
+	icon_state = "tube1";
+	dir = 8
+	},
 /turf/open/floor/plasteel/terror/necro/bar,
 /area/mine/cafeteria)
 "dv" = (
@@ -1158,10 +1162,6 @@
 /area/mine/cafeteria)
 "dI" = (
 /obj/machinery/vending/cigarette,
-/obj/machinery/light{
-	icon_state = "tube1";
-	dir = 8
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -9365,8 +9365,8 @@ aa
 aa
 aj
 aj
-as
-as
+aj
+aj
 as
 as
 ao

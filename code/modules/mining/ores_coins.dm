@@ -55,6 +55,14 @@
 	materials = list(MAT_URANIUM=MINERAL_MATERIAL_AMOUNT)
 	refined_type = /obj/item/stack/sheet/mineral/uranium
 
+/obj/item/weapon/ore/tiberium
+	name = "tiberium shard"
+	icon_state = "Green lump"
+	origin_tech = "materials=6"
+	points = 50
+	materials = list(MAT_URANIUM=MINERAL_MATERIAL_AMOUNT)
+	refined_type = /obj/item/stack/sheet/plasteel
+
 /obj/item/weapon/ore/iron
 	name = "iron ore"
 	icon_state = "Iron ore"
