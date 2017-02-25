@@ -308,8 +308,8 @@
 
 /obj/item/weapon/storage/belt/military/assault/special_force/New()
 	..()
-	new /obj/item/ammo_box/magazine/xmg80(src)
-	new /obj/item/ammo_box/magazine/xmg80(src)
+	new /obj/item/ammo_box/magazine/m556(src)
+	new /obj/item/ammo_box/magazine/m556(src)
 	new /obj/item/weapon/grenade/flashbang(src)
 	new /obj/item/device/flashlight/seclite(src)
 	new /obj/item/weapon/reagent_containers/hypospray/medipen/survival(src)

@@ -28,7 +28,7 @@ var/datum/subsystem/timer/SStimer
 /datum/subsystem/timer/New()
 	processing = list()
 	hashes = list()
-	bucket_list = list()
+
 	timer_id_dict = list()
 
 	clienttime_timers = list()
@@ -59,10 +59,9 @@ var/datum/subsystem/timer/SStimer
 	var/static/datum/timedevent/timer
 	var/static/datum/timedevent/head
 
-	if (practical_offset > BUCKET_LEN || (!resumed  && length(src.bucket_list) != BUCKET_LEN || world.tick_lag != bucket_resolution))
+	if ((practical_offset > BUCKET_LEN * 0.75 && (head_offset + (world.tick_lag * BUCKET_LEN) < world.time)) || length(src.bucket_list) != BUCKET_LEN || world.tick_lag != bucket_resolution)
 		shift_buckets()
 		resumed = FALSE
-
 
 	if (!resumed)
 		timer = null
@@ -84,7 +83,7 @@ var/datum/subsystem/timer/SStimer
 			if (!callBack)
 				qdel(timer)
 				bucket_resolution = null //force bucket recreation
-				CRASH("Invalid timer: timer.timeToRun=[timer.timeToRun]||QDELETED(timer)=[QDELETED(timer)]||world.time=[world.time]||head_offset=[head_offset]||practical_offset=[practical_offset]||timer.spent=[timer.spent]")
+				CRASH("Invalid timer: timer.timeToRun=[timer.timeToRun]||qdeleted(timer)=[QDELETED(timer)]||world.time=[world.time]||head_offset=[head_offset]||practical_offset=[practical_offset]||timer.spent=[timer.spent]")
 
 			if (!timer.spent)
 				spent += timer
@@ -122,9 +121,9 @@ var/datum/subsystem/timer/SStimer
 			bucket_node = bucket_node.next
 		while(bucket_node && bucket_node != bucket_head)
 
-	bucket_list.len = 0
-	bucket_list.len = BUCKET_LEN
 
+	bucket_list = new(BUCKET_LEN)
+	src.bucket_list = bucket_list //cache update
 	practical_offset = 1
 	bucket_count = 0
 	head_offset = world.time
@@ -200,15 +199,16 @@ var/datum/subsystem/timer/SStimer
 	src.callBack = callBack
 	src.timeToRun = timeToRun
 	src.flags = flags
-	src.hash = hash
 
-	if (flags & TIMER_UNIQUE)
+	if (hash)
+		src.hash = hash
 		SStimer.hashes[hash] = src
 	if (flags & TIMER_STOPPABLE)
 		SStimer.timer_id_dict["timerid[id]"] = src
 
 	if (callBack.object != GLOBAL_PROC)
-		LAZYADD(callBack.object.active_timers, src)
+		LAZYINITLIST(callBack.object.active_timers)
+		callBack.object.active_timers += src
 
 	if (flags & TIMER_CLIENT_TIME)
 		SStimer.clienttime_timers += src
@@ -240,8 +240,7 @@ var/datum/subsystem/timer/SStimer
 	prev.next = src
 
 /datum/timedevent/Destroy()
-	..()
-	if (flags & TIMER_UNIQUE)
+	if (hash)
 		SStimer.hashes -= hash
 
 
@@ -251,12 +250,13 @@ var/datum/subsystem/timer/SStimer
 
 	callBack = null
 
+	if (flags & TIMER_CLIENT_TIME)
+		SStimer.clienttime_timers -= src
+		return QDEL_HINT_QUEUE
+
 	if (flags & TIMER_STOPPABLE)
 		SStimer.timer_id_dict -= "timerid[id]"
 
-	if (flags & TIMER_CLIENT_TIME)
-		SStimer.clienttime_timers -= src
-		return QDEL_HINT_IWILLGC
 
 	if (!spent)
 		if (prev == next && next)
@@ -282,43 +282,36 @@ var/datum/subsystem/timer/SStimer
 			bucket_list[bucketpos] = next
 	else
 		if (prev && prev.next == src)
-			prev.next = next
+			prev.next = null
 		if (next && next.prev == src)
-			next.prev = prev
+			next.prev = null
 	next = null
 	prev = null
-	return QDEL_HINT_IWILLGC
+	return QDEL_HINT_QUEUE
 
 proc/addtimer(datum/callback/callback, wait, flags)
 	if (!callback)
 		return
 
-	wait = max(wait, 0)
+	if (wait <= 0)
+		callback.InvokeAsync()
+		return
 
 	var/hash
 
 	if (flags & TIMER_UNIQUE)
-		var/list/hashlist
-		if(flags & TIMER_NO_HASH_WAIT)
-			hashlist = list(callback.object, "(\ref[callback.object])", callback.delegate, flags & TIMER_CLIENT_TIME)
-		else
-			hashlist = list(callback.object, "(\ref[callback.object])", callback.delegate, wait, flags & TIMER_CLIENT_TIME)
+		var/list/hashlist = list(callback.object, "(\ref[callback.object])", callback.delegate, wait, flags & TIMER_CLIENT_TIME)
 		hashlist += callback.arguments
 		hash = hashlist.Join("|||||||")
 
 		var/datum/timedevent/hash_timer = SStimer.hashes[hash]
 		if(hash_timer)
-			if (hash_timer.spent) //it's pending deletion, pretend it doesn't exist.
-				hash_timer.hash = null
-				SStimer.hashes -= hash
+			if (flags & TIMER_OVERRIDE)
+				qdel(hash_timer)
 			else
-
-				if (flags & TIMER_OVERRIDE)
-					qdel(hash_timer)
-				else
-					if (hash_timer.flags & TIMER_STOPPABLE)
-						. = hash_timer.id
-					return
+				if (hash_timer.flags & TIMER_STOPPABLE)
+					. = hash_timer.id
+				return
 
 
 	var/timeToRun = world.time + wait

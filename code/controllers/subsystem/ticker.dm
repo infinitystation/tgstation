@@ -14,7 +14,7 @@ var/datum/subsystem/ticker/ticker
 	var/current_state = GAME_STATE_STARTUP	//state of current round (used by process()) Use the defines GAME_STATE_* !
 	var/force_ending = 0					//Round was ended by admin intervention
 	var/not_restarting = 0 					//when not restarting?
-	
+
 	// If true, there is no lobby phase, the game starts immediately.
 	var/start_immediately = FALSE
 
@@ -61,13 +61,11 @@ var/datum/subsystem/ticker/ticker
 
 /datum/subsystem/ticker/New()
 	NEW_SS_GLOBAL(ticker)
-	if(SSevent.holidays && SSevent.holidays[APRIL_FOOLS])
-		login_music = 'sound/ambience/clown.ogg'
-	else
-		var/list/music = file2list(ROUND_START_MUSIC_LIST, "\n")
-		login_music = pick(music)
 
 /datum/subsystem/ticker/Initialize(timeofday)
+	var/list/music = file2list(ROUND_START_MUSIC_LIST, "\n")
+	login_music = pick(music)
+
 	if(!syndicate_code_phrase)
 		syndicate_code_phrase	= generate_code_phrase()
 	if(!syndicate_code_response)
@@ -741,4 +739,3 @@ var/datum/subsystem/ticker/ticker
 		start_at = world.time + newtime
 	else
 		timeLeft = newtime
-		

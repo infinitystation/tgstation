@@ -191,7 +191,7 @@
 	uniform = /obj/item/clothing/under/syndicate/camo/urban
 	shoes = /obj/item/clothing/shoes/combat
 	suit = /obj/item/clothing/suit/armor/combat_heavy
-	suit_store = /obj/item/weapon/gun/ballistic/automatic/xmg80
+	suit_store = /obj/item/weapon/gun/ballistic/automatic/ar
 	mask = /obj/item/clothing/mask/gas/mercenaries
 	head = /obj/item/clothing/head/helmet/combat_heavy
 	belt = /obj/item/weapon/storage/belt/military/assault/special_force
@@ -199,7 +199,7 @@
 	ears = /obj/item/device/radio/headset/headset_cent/alt
 	gloves = /obj/item/clothing/gloves/combat
 	l_pocket = /obj/item/device/flashlight/seclite
-	r_pocket = /obj/item/ammo_box/magazine/xmg80
+	r_pocket = /obj/item/ammo_box/magazine/m556
 	id = /obj/item/weapon/card/id
 	back = /obj/item/weapon/storage/backpack/security
 	backpack_contents = list(/obj/item/weapon/storage/box/security/centcom=1,\
@@ -209,6 +209,9 @@
 /datum/outfit/combat/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	if(visualsOnly)
 		return
+
+	var/obj/item/weapon/implant/mindshield/L = new/obj/item/weapon/implant/mindshield(H)
+	L.implant(H, null, 1)
 
 	var/obj/item/weapon/card/id/W = H.wear_id
 	W.icon_state = "centcom"

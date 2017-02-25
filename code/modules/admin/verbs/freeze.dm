@@ -29,7 +29,7 @@ var/global/list/frozen_mob_list = list()
 /mob/living/proc/admin_Freeze(var/client/admin)
 	if(istype(admin))
 		src << "<b><font color= red>You have been frozen by <a href='?priv_msg=\ref[admin]'>[admin.key]</a></b></font>"
-		message_admins("\blue [key_name_admin(admin)] froze [key_name(src)]")
+		message_admins("[key_name_admin(admin)] froze [key_name(src)]")
 		log_admin("[key_name(admin)] froze [key_name(src)]")
 
 	var/obj/effect/overlay/adminoverlay/AO = new
@@ -45,7 +45,7 @@ var/global/list/frozen_mob_list = list()
 /mob/living/proc/admin_unFreeze(var/client/admin)
 	if(istype(admin))
 		src << "<b><font color= red>You have been unfrozen by <a href='?priv_msg=\ref[usr.client]'>[key]</a></b></font>"
-		message_admins("\blue [key_name_admin(admin)] unfroze [key_name(src)]")
+		message_admins("[key_name_admin(admin)] unfroze [key_name(src)]")
 		log_admin("[key_name(admin)] unfroze [key_name(src)]")
 
 	var/obj/effect/overlay/adminoverlay/AO = new
@@ -95,10 +95,10 @@ var/global/list/frozen_mob_list = list()
 						STOP_PROCESSING(SSobj, M)
 						if(M.occupant)
 							M.occupant << "<b><font color= red>You have been frozen by <a href='?priv_msg=\ref[usr.client]'>[key]</a></b></font>"
-							message_admins("\blue [key_name_admin(usr)] froze [key_name(M.occupant)] in a [M.name]")
+							message_admins("[key_name_admin(usr)] froze [key_name(M.occupant)] in a [M.name]")
 							log_admin("[key_name(usr)] froze [key_name(M.occupant)] in a [M.name]")
 						else
-							message_admins("\blue [key_name_admin(usr)] froze an empty [M.name]")
+							message_admins("[key_name_admin(usr)] froze an empty [M.name]")
 							log_admin("[key_name(usr)] froze an empty [M.name]")
 					else if(M.frozen)
 						M.frozen = 0
@@ -106,10 +106,10 @@ var/global/list/frozen_mob_list = list()
 						START_PROCESSING(SSobj, M)
 						if(M.occupant)
 							M.occupant << "<b><font color= red>You have been unfrozen by <a href='?priv_msg=\ref[usr.client]'>[key]</a></b></font>"
-							message_admins("\blue [key_name_admin(usr)] unfroze [key_name(M.occupant)] in a [M.name]")
+							message_admins("[key_name_admin(usr)] unfroze [key_name(M.occupant)] in a [M.name]")
 							log_admin("[key_name(usr)] unfroze [M.occupant.name]/[M.occupant.ckey] in a [M.name]")
 						else
-							message_admins("\blue [key_name_admin(usr)] unfroze an empty [M.name]")
+							message_admins("[key_name_admin(usr)] unfroze an empty [M.name]")
 							log_admin("[key_name(usr)] unfroze an empty [M.name]")
 
 /client/freezemecha/Topic(href, href_list)

@@ -41,11 +41,11 @@
 
 /obj/structure/flora/ausbushes/shrub
 	name = "shrub"
-	icon = 'icons/obj/infinity_object.dmi'
+	icon = 'icons/obj/infinity_flora.dmi'
 	icon_state = "shrub"
 
 /obj/structure/flora/rock/stone
-	icon = 'icons/obj/infinity_object.dmi'
+	icon = 'icons/obj/infinity_flora.dmi'
 	icon_state = "stone"
 
 /obj/structure/flora/tree/green

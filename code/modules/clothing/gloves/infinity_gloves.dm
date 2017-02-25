@@ -7,7 +7,6 @@
 	icon = 'icons/obj/clothing/infinity_work.dmi'
 	worn_icon = 'icons/mob/infinity_work.dmi'
 	resistance_flags = FIRE_PROOF
-	layer = 9
 
 /obj/item/clothing/gloves/color/whitelong
 	name = "white logn gloves"

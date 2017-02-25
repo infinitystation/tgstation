@@ -6,7 +6,7 @@
 
         #include "map_files\Infinity_MetaStation\MetaStation.dmm"
 #ifndef TRAVIS_MASS_MAP_BUILD
-        #include "map_files\Infinity_MetaStation\z2t.dmm"
+        #include "map_files\Infinity_MetaStation\z2.dmm"
         #include "map_files\Infinity_MetaStation\z3.dmm"
         #include "map_files\Infinity_MetaStation\z4.dmm"
         #include "map_files\Infinity_MetaStation\lavaland.dmm"
