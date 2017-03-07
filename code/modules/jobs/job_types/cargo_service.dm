@@ -44,7 +44,7 @@ Cargo Technician
 
 	outfit = /datum/outfit/job/cargo_tech
 
-	access = list(access_maint_tunnels, access_mailsorting, access_cargo, access_cargo_bot access_mining, access_mining_station, access_mineral_storeroom)
+	access = list(access_maint_tunnels, access_mailsorting, access_cargo, access_cargo_bot, access_mining, access_mining_station, access_mineral_storeroom)
 	minimal_access = list(access_maint_tunnels, access_cargo, access_cargo_bot, access_mailsorting, access_mineral_storeroom)
 
 /datum/outfit/job/cargo_tech
