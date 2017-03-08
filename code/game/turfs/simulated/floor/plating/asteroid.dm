@@ -329,5 +329,5 @@
 /turf/open/floor/plating/asteroid/snow/atmosphere
 	initial_gas_mix = "o2=22;n2=82;TEMP=180"
 
-
-
+/turf/open/floor/plating/asteroid/snow/colder
+	initial_gas_mix = "o2=22;n2=82;TEMP=140"
