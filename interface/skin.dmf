@@ -180,6 +180,10 @@ macro "default"
 		command = "adminhelp"
 		is-disabled = false
 	elem 
+		name = "F""
+		command = "looc"
+		is-disabled = false
+	elem 
 		name = "CTRL+SHIFT+F1+REP"
 		command = ".options"
 		is-disabled = false
