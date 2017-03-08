@@ -69,6 +69,9 @@
 	damage_type = BURN
 	irradiate = 5
 
+/obj/item/ammo_casing/energy/declone/special
+	projectile_type = /obj/item/projectile/energy/declone/special
+
 /obj/item/weapon/gun/energy/e_gun/nuclear/event //By Terror4000rus
 	pin = /obj/item/device/firing_pin
 	ammo_type = list(/obj/item/ammo_casing/energy/laser, /obj/item/ammo_casing/energy/disabler)
