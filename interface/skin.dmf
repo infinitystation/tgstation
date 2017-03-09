@@ -180,7 +180,7 @@ macro "default"
 		command = "adminhelp"
 		is-disabled = false
 	elem 
-		name = "F""
+		name = "F2"
 		command = "looc"
 		is-disabled = false
 	elem 

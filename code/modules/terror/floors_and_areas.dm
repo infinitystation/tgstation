@@ -61,10 +61,6 @@
 	name = "Security's dormitories room 2"
 	icon_state = "Sleep_two"
 
-/area/security/top_level_post
-	name = "Bunker's airlock"
-	icon_state = "red"
-
 /area/engine/rest_room
 	name = "Engineering Rest Room"
 	icon_state = "yellow"
@@ -76,65 +72,13 @@
 /area/toxins/xenobiology/xeno_lobby
 	name = "Xenobiology Lab's Lobby"
 
-/area/engine/top_level_rtg
-	name = "Top Level RTG"
-	icon_state = "engine"
-
-/area/crew_quarters/toilet/top
-	name = "Top Level Toilets"
-	icon_state = "toilet"
-
-/area/hallway/primary/central/top
-	name = "Top Level Lobby"
-	icon_state = "hallC"
-
-/area/quartermaster/hangar
-	name = "Hangar"
-	icon_state = "yellow"
-
 /area/shuttle/science
 	name = "Science Shuttle"
 	blob_allowed = FALSE
 
-/area/CP
-	name = "Control Post"
-	has_gravity = 1
-	valid_territory = 0
-	icon_state = "green"
-
-/area/CP/library
-	name = "Library"
-	icon_state = "library"
-
-/area/CP/arrival
-	name = "Arrival area"
-
-/area/CP/cafeteria
-	name = "Cafeteria"
-	icon_state = "dark"
-
-/area/CP/CP1
-	name = "Control Point One"
-	icon_state = "yellow"
-
-/area/CP/CP2
-	name = "Control Point Two"
-	icon_state = "yellow"
-
-/area/CP/shuttle
-	name = "CP Shuttle"
-	requires_power = 0
-	icon_state = "shuttle"
-
 /area/shuttle/NTcruiser
 	name = "Cruiser"
 	blob_allowed = 0
-
-/area/shuttle/lift_one
-	name = "Service Lift"
-
-/area/shuttle/life_two
-	name = "Lift"
 
 /area/mine/xeno_lab
 	name = "Xenobioloy Laboratory"
@@ -182,32 +126,21 @@
 	name = "AI Satellite Lobby"
 	icon_state = "storage"
 
-/area/zombie
+/area/awaymission.zombie
 	name = "Zombie"
 	icon_state = "red"
 	requires_power = 0
-	has_gravity = 1
 
 /area/syndicate_mothership/enemy
 	name = "Enemy Base"
 	icon_state = "enemy"
 	icon = 'icons/turf/infinity.dmi'
 
-/area/alien_base
+/area/awaymission/alien_base
 	name = "Alien Base"
 	icon_state = "green"
 	requires_power = 0
-	has_gravity = 1
 	luminosity = 1
-	valid_territory = 0
-
-/area/planet/bunker
-	name = "Near Bunker"
-	icon_state = "purple"
-	requires_power = 0
-	has_gravity = 1
-	luminosity = 1
-	lighting_use_dynamic = DYNAMIC_LIGHTING_ENABLED
 	valid_territory = 0
 
 // CENTCOM
