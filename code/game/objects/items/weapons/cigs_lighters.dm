@@ -109,7 +109,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	var/icon_off = "cigoff"
 	var/type_butt = /obj/item/weapon/cigbutt
 	var/lastHolder = null
-	var/smoketime = 300
+	var/smoketime = 120
 	var/chem_volume = 30
 	heat = 1000
 
@@ -254,7 +254,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	type_butt = /obj/item/weapon/cigbutt/roach
 	throw_speed = 0.5
 	item_state = "spliffoff"
-	smoketime = 180
+	smoketime = 120
 	chem_volume = 50
 
 /obj/item/clothing/mask/cigarette/rollie/New()
@@ -291,7 +291,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	type_butt = /obj/item/weapon/cigbutt/cigarbutt
 	throw_speed = 0.5
 	item_state = "cigaroff"
-	smoketime = 1500
+	smoketime = 600
 	chem_volume = 40
 
 /obj/item/clothing/mask/cigarette/cigar/cohiba
