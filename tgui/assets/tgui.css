@@ -331,9 +331,6 @@ body.clockwork input {
 body.clockwork input::-webkit-input-placeholder {
   color: #999;
 }
-body.clockwork input::-moz-placeholder {
-  color: #999;
-}
 body.clockwork input:-ms-input-placeholder {
   color: #999;
 }
@@ -775,9 +772,6 @@ body.nanotrasen input {
 body.nanotrasen input::-webkit-input-placeholder {
   color: #999;
 }
-body.nanotrasen input::-moz-placeholder {
-  color: #999;
-}
 body.nanotrasen input:-ms-input-placeholder {
   color: #999;
 }
@@ -1214,9 +1208,6 @@ body.syndicate input {
   border: 1px solid #272727;
 }
 body.syndicate input::-webkit-input-placeholder {
-  color: #999;
-}
-body.syndicate input::-moz-placeholder {
   color: #999;
 }
 body.syndicate input:-ms-input-placeholder {
