@@ -29,17 +29,23 @@
 
 	for(var/mob/M in player_list)
 		if(!isnewplayer(M) && !M.ear_deaf)
-			M << announcement
+			to_chat(M, announcement)
 			if(M.client.prefs.toggles & SOUND_ANNOUNCEMENTS)
 				M << sound(sound)
 
-/proc/print_command_report(text = "", title = "Central Command Update")
-	for (var/obj/machinery/computer/communications/C in machines)
+/proc/print_command_report(text = "", title = null, announce=TRUE)
+	if(!title)
+		title = "Classified [command_name()] Update"
+
+	if(announce)
+		priority_announce("A report has been downloaded and printed out at all communications consoles.", "Incoming Classified Message", 'sound/AI/commandreport.ogg')
+
+	for(var/obj/machinery/computer/communications/C in machines)
 		if(!(C.stat & (BROKEN|NOPOWER)) && C.z == ZLEVEL_STATION)
-			var/obj/item/weapon/paper/P = new /obj/item/weapon/paper( C.loc )
+			var/obj/item/weapon/paper/P = new /obj/item/weapon/paper(C.loc)
+			P.name = "paper - '[title]'"
 			C.messagetitle.Add("[title]")
 			C.messagetext.Add(text)
-			P.name = "paper- '[title]'"
 			P.info = P.parsepencode(text)
 			P.updateinfolinks()
 			P.update_icon()
@@ -50,7 +56,7 @@
 	message = sanitize(copytext(message,1,MAX_MESSAGE_LEN))
 	for(var/mob/M in player_list)
 		if(!isnewplayer(M) && !M.ear_deaf)
-			M << "<b><font size = 3><font color = red>[title]</font color><BR>[message]</font size></b><BR>"
+			to_chat(M, "<b><font size = 3><font color = red>[title]</font color><BR>[message]</font size></b><BR>")
 			if(M.client.prefs.toggles & SOUND_ANNOUNCEMENTS)
 				if(alert)
 					M << sound('sound/misc/notice1.ogg')

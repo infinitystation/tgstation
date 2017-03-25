@@ -3,7 +3,7 @@
 	set name = "Pray"
 
 	if(say_disabled)	//This is here to try to identify lag problems
-		usr << "<span class='danger'>Speech is currently admin-disabled.</span>"
+		to_chat(usr, "<span class='danger'>Speech is currently admin-disabled.</span>")
 		return
 
 	msg = copytext(sanitize_a0(msg), 1, MAX_MESSAGE_LEN)
@@ -12,7 +12,7 @@
 	log_prayer("[src.key]/([src.name]): [msg]")
 	if(usr.client)
 		if(usr.client.prefs.muted & MUTE_PRAY)
-			usr << "<span class='danger'>You cannot pray (muted).</span>"
+			to_chat(usr, "<span class='danger'>You cannot pray (muted).</span>")
 			return
 		if(src.client.handle_spam_prevention(msg,MUTE_PRAY))
 			return
@@ -37,11 +37,11 @@
 
 	for(var/client/C in admins)
 		if(C.prefs.chat_toggles & CHAT_PRAYER)
-			C << msg
+			to_chat(C, msg)
 			if(C.prefs.toggles & SOUND_PRAYERS)
 				if(usr.job == "Chaplain")
 					C << 'sound/effects/pray.ogg'
-	usr << "Your prayers have been received by the gods."
+	to_chat(usr, "Your prayers have been received by the gods.")
 
 	feedback_add_details("admin_verb","PR") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 	//log_admin("HELP: [key_name(src)]: [msg]")
@@ -51,12 +51,8 @@
 	for(var/client/X in admins)
 		if(X.prefs.toggles & SOUND_ADMINHELP)
 			X << 'sound/effects/adminhelp.ogg'
-	msg = "<span class='adminnotice'>\
-		<b><font color=orange>CENTCOM:</font>\
-		[ADMIN_FULLMONTY(Sender)] [ADMIN_BSA(Sender)] \
-		[ADMIN_CENTCOM_REPLY(Sender)]:</b> \
-		[msg]</span>"
-	admins << msg
+	msg = "<span class='adminnotice'><b><font color=orange>CENTCOM:</font>[ADMIN_FULLMONTY(Sender)] [ADMIN_SMITE(Sender)] [ADMIN_CENTCOM_REPLY(Sender)]:</b> [msg]</span>"
+	to_chat(admins, msg)
 	for(var/obj/machinery/computer/communications/C in machines)
 		C.overrideCooldown()
 
@@ -65,12 +61,8 @@
 	for(var/client/X in admins)
 		if(X.prefs.toggles & SOUND_ADMINHELP)
 			X << 'sound/effects/adminhelp.ogg'
-	msg = "<span class='adminnotice'><b>\
-		<font color=crimson>SYNDICATE:</font>\
-		[ADMIN_FULLMONTY(Sender)] [ADMIN_BSA(Sender)] \
-		[ADMIN_SYNDICATE_REPLY(Sender)]:</b> \
-		[msg]</span>"
-	admins << msg
+	msg = "<span class='adminnotice'><b><font color=crimson>SYNDICATE:</font>[ADMIN_FULLMONTY(Sender)] [ADMIN_SMITE(Sender)] [ADMIN_SYNDICATE_REPLY(Sender)]:</b> [msg]</span>"
+	to_chat(admins, msg)
 	for(var/obj/machinery/computer/communications/C in machines)
 		C.overrideCooldown()
 
@@ -79,12 +71,7 @@
 	for(var/client/X in admins)
 		if(X.prefs.toggles & SOUND_ADMINHELP)
 			X << 'sound/effects/adminhelp.ogg'
-	msg = "<span class='adminnotice'>\
-		<b><font color=orange>NUKE CODE REQUEST:</font>\
-		[ADMIN_FULLMONTY(Sender)] [ADMIN_BSA(Sender)] \
-		[ADMIN_CENTCOM_REPLY(Sender)] \
-		[ADMIN_SET_SD_CODE]:</b> \
-		[msg]</span>"
-	admins << msg
+	msg = "<span class='adminnotice'><b><font color=orange>NUKE CODE REQUEST:</font>[ADMIN_FULLMONTY(Sender)] [ADMIN_SMITE(Sender)] [ADMIN_CENTCOM_REPLY(Sender)] [ADMIN_SET_SD_CODE]:</b> [msg]</span>"
+	to_chat(admins, msg)
 	for(var/obj/machinery/computer/communications/C in machines)
 		C.overrideCooldown()

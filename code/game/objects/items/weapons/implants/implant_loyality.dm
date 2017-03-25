@@ -41,7 +41,7 @@
 		if(target.mind)
 			target.mind.remove_all_antag_light()
 		if(!silent)
-			target << "<span class='notice'>Вы чувствуете сильную ло&#255;льность к Нанотрайзен...</span>"
+			to_chat(target, "<span class='notice'>Вы чувствуете сильную ло&#255;льность к Нанотрайзен...</span>")
 		target.throw_alert("loyalty_implanted", /obj/screen/alert/loyalty_imp)
 		return 1
 	return 0
@@ -49,24 +49,16 @@
 /obj/item/weapon/implant/mindshield/removed(mob/target, silent = 0, special = 0)
 	if(..())
 		if(target.stat != DEAD && !silent)
-			target << "<span class='boldnotice'>Вы чувствуете, как ло&#255;льность к Нанотрайзен покидает вас вместе с вашей жизнью...</span>"
+			to_chat(target, "<span class='boldnotice'>Вы чувствуете, как ло&#255;льность к Нанотрайзен покидает вас вместе с вашей жизнью...</span>")
 		target.clear_alert("loyalty_implanted")
 		return 1
 	return 0
 
 /obj/item/weapon/implanter/mindshield
 	name = "implanter (loyalty)"
-
-/obj/item/weapon/implanter/mindshield/New()
-	imp = new /obj/item/weapon/implant/mindshield(src)
-	..()
-	update_icon()
-
+	imp_type = /obj/item/weapon/implant/mindshield
 
 /obj/item/weapon/implantcase/mindshield
 	name = "implant case - 'Loyalty'"
 	desc = "A glass case containing a loyalty implant."
-
-/obj/item/weapon/implantcase/mindshield/New()
-	imp = new /obj/item/weapon/implant/mindshield(src)
-	..()
+	imp_type = /obj/item/weapon/implant/mindshield

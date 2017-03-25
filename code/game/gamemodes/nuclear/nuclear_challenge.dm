@@ -35,8 +35,8 @@
 	if(!check_allowed(user))
 		return
 
-	if(are_you_sure == "Нет")
-		user << "В самом деле - элемент неожиданности не так уж и плох.."
+	if(are_you_sure == "No")
+		to_chat(user, "В самом деле - элемент неожиданности не так уж и плох...")
 		return
 
 	var/war_declaration = "[user.real_name] has declared his intent to utterly destroy [station_name()] with a nuclear device, and dares the crew to try and stop them."
@@ -58,7 +58,7 @@
 
 	priority_announce(war_declaration, title = "Declaration of War", sound = 'sound/machines/Alarm.ogg')
 
-	user << "You've attracted the attention of powerful forces within the syndicate. A bonus bundle of telecrystals has been granted to your team. Great things await you if you complete the mission."
+	to_chat(user, "You've attracted the attention of powerful forces within the syndicate. A bonus bundle of telecrystals has been granted to your team. Great things await you if you complete the mission.")
 
 	for(var/V in syndicate_shuttle_boards)
 		var/obj/item/weapon/circuitboard/computer/syndicate_shuttle/board = V
@@ -74,21 +74,21 @@
 
 /obj/item/device/nuclear_challenge/proc/check_allowed(mob/living/user)
 	if(declaring_war)
-		user << "You are already in the process of declaring war! Make your mind up."
+		to_chat(user, "You are already in the process of declaring war! Make your mind up.")
 		return 0
 	if(player_list.len < CHALLENGE_MIN_PLAYERS)
-		user << "The enemy crew is too small to be worth declaring war on."
+		to_chat(user, "The enemy crew is too small to be worth declaring war on.")
 		return 0
 	if(user.z != ZLEVEL_CENTCOM)
-		user << "You have to be at your base to use this."
+		to_chat(user, "You have to be at your base to use this.")
 		return 0
 	if(world.time-round_start_time > CHALLENGE_TIME_LIMIT)
-		user << "It's too late to declare hostilities. Your benefactors are already busy with other schemes. You'll have to make do with what you have on hand."
+		to_chat(user, "It's too late to declare hostilities. Your benefactors are already busy with other schemes. You'll have to make do with what you have on hand.")
 		return 0
 	for(var/V in syndicate_shuttle_boards)
 		var/obj/item/weapon/circuitboard/computer/syndicate_shuttle/board = V
 		if(board.moved)
-			user << "The shuttle has already been moved! You have forfeit the right to declare war."
+			to_chat(user, "The shuttle has already been moved! You have forfeit the right to declare war.")
 			return 0
 	return 1
 

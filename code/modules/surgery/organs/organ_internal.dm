@@ -51,7 +51,7 @@
 /obj/item/organ/examine(mob/user)
 	..()
 	if(status == ORGAN_ROBOTIC && crit_fail)
-		user << "<span class='warning'>[src] seems to be broken!</span>"
+		to_chat(user, "<span class='warning'>[src] seems to be broken!</span>")
 
 
 /obj/item/organ/proc/prepare_eat()
@@ -181,7 +181,7 @@
 			var/mob/living/carbon/human/H = owner
 			if(H.dna && !(NOBLOOD in H.dna.species.species_traits))
 				H.blood_volume = max(H.blood_volume - blood_loss, 0)
-				H << "<span class = 'userdanger'>You have to keep pumping your blood!</span>"
+				to_chat(H, "<span class = 'userdanger'>You have to keep pumping your blood!</span>")
 				if(add_colour)
 					H.add_client_colour(/datum/client_colour/cursed_heart_blood) //bloody screen so real
 					add_colour = FALSE
@@ -191,7 +191,7 @@
 /obj/item/organ/heart/cursed/Insert(mob/living/carbon/M, special = 0)
 	..()
 	if(owner)
-		owner << "<span class ='userdanger'>Your heart has been replaced with a cursed one, you have to pump this one manually otherwise you'll die!</span>"
+		to_chat(owner, "<span class ='userdanger'>Your heart has been replaced with a cursed one, you have to pump this one manually otherwise you'll die!</span>")
 
 /datum/action/item_action/organ_action/cursed_heart
 	name = "Pump your blood"
@@ -203,12 +203,12 @@
 		var/obj/item/organ/heart/cursed/cursed_heart = target
 
 		if(world.time < (cursed_heart.last_pump + (cursed_heart.pump_delay-10))) //no spam
-			owner << "<span class='userdanger'>Too soon!</span>"
+			to_chat(owner, "<span class='userdanger'>Too soon!</span>")
 			return
 
 		cursed_heart.last_pump = world.time
 		playsound(owner,'sound/effects/singlebeat.ogg',40,1)
-		owner << "<span class = 'notice'>Your heart beats.</span>"
+		to_chat(owner, "<span class = 'notice'>Your heart beats.</span>")
 
 		var/mob/living/carbon/human/H = owner
 		if(istype(H))
@@ -507,8 +507,9 @@
 	icon_state = "tonguenormal"
 	zone = "mouth"
 	slot = "tongue"
-	var/say_mod = null
 	attack_verb = list("licked", "slobbered", "slapped", "frenched", "tongued")
+	var/say_mod = null
+	var/taste_sensitivity = 15 // lower is more sensitive.
 
 /obj/item/organ/tongue/get_spans()
 	return list()
@@ -531,6 +532,7 @@
 	desc = "A thin and long muscle typically found in reptilian races, apparently moonlights as a nose."
 	icon_state = "tonguelizard"
 	say_mod = "шипит"
+	taste_sensitivity = 10 // combined nose + tongue, extra sensitive
 
 /obj/item/organ/tongue/lizard/TongueSpeech(var/message)
 	var/regex/lizard_hicc = new("с+", "g")
@@ -553,6 +555,7 @@
 	desc = "A freakish looking meat tube that apparently can take in liquids."
 	icon_state = "tonguefly"
 	say_mod = "жужжит"
+	taste_sensitivity = 25 // you eat vomit, this is a mercy
 
 /obj/item/organ/tongue/fly/TongueSpeech(var/message)
 	var/regex/fly_bu3 = new("з+", "g")
@@ -575,6 +578,7 @@
 	desc = "A mysterious structure that allows for instant communication between users. Pretty impressive until you need to eat something."
 	icon_state = "tongueayylmao"
 	say_mod = "гремит"
+	taste_sensitivity = 101 // ayys cannot taste anything.
 
 /obj/item/organ/tongue/abductor/TongueSpeech(var/message)
 	//Hacks
@@ -589,10 +593,10 @@
 			var/datum/species/abductor/Byy = H.dna.species
 			if(Ayy.team != Byy.team)
 				continue
-		H << rendered
+		to_chat(H, rendered)
 	for(var/mob/M in dead_mob_list)
 		var/link = FOLLOW_LINK(M, user)
-		M << "[link] [rendered]"
+		to_chat(M, "[link] [rendered]")
 	return ""
 
 /obj/item/organ/tongue/zombie
@@ -600,6 +604,7 @@
 	desc = "Between the decay and the fact that it's just lying there you doubt a tongue has ever seemed less sexy."
 	icon_state = "tonguezombie"
 	say_mod = "мычит"
+	taste_sensitivity = 32
 
 /obj/item/organ/tongue/zombie/TongueSpeech(var/message)
 	var/list/message_list = splittext(message, " ")
@@ -622,6 +627,7 @@
 	desc = "According to leading xenobiologists the evolutionary benefit of having a second mouth in your mouth is \"that it looks badass\"."
 	icon_state = "tonguexeno"
 	say_mod = "шипит"
+	taste_sensitivity = 10 // LIZARDS ARE ALIENS CONFIRMED
 
 /obj/item/organ/tongue/alien/TongueSpeech(var/message)
 	playsound(owner, "hiss", 25, 1, 1)
@@ -635,6 +641,7 @@
 	icon_state = "tonguebone"
 	say_mod = "rattles"
 	attack_verb = list("bitten", "chattered", "chomped", "enamelled", "boned")
+	taste_sensitivity = 101 // skeletons cannot taste anything
 
 	var/chattering = FALSE
 	var/phomeme_type = "sans"
@@ -660,10 +667,6 @@
 		if("papyrus")
 			. |= SPAN_PAPYRUS
 
-/obj/item/organ/tongue/bone/chatter
-	name = "chattering bone \"tongue\""
-	chattering = TRUE
-
 /obj/item/organ/tongue/robot
 	name = "robotic voicebox"
 	desc = "A voice synthesizer that can interface with organic lifeforms."
@@ -671,6 +674,7 @@
 	icon_state = "tonguerobot"
 	say_mod = "states"
 	attack_verb = list("beeped", "booped")
+	taste_sensitivity = 25 // not as good as an organic tongue
 
 /obj/item/organ/tongue/robot/get_spans()
 	return ..() | SPAN_ROBOT
@@ -712,6 +716,8 @@
 	return 0
 
 /mob/living/carbon/regenerate_organs()
+	CHECK_DNA_AND_SPECIES(src)
+
 	if(!(NOBREATH in dna.species.species_traits) && !getorganslot("lungs"))
 		var/obj/item/organ/lungs/L = new()
 		L.Insert(src)
@@ -755,18 +761,21 @@
 	var/sight_flags = 0
 	var/see_in_dark = 2
 	var/tint = 0
-	var/eye_color = "fff"
+	var/eye_color = "" //set to a hex code to override a mob's eye color
 	var/old_eye_color = "fff"
 	var/flash_protect = 0
 	var/see_invisible = SEE_INVISIBLE_LIVING
 
 /obj/item/organ/eyes/Insert(mob/living/carbon/M, special = 0)
 	..()
-	if(ishuman(owner) && eye_color)
+	if(ishuman(owner))
 		var/mob/living/carbon/human/HMN = owner
 		old_eye_color = HMN.eye_color
-		HMN.eye_color = eye_color
-		HMN.regenerate_icons()
+		if(eye_color)
+			HMN.eye_color = eye_color
+			HMN.regenerate_icons()
+		else
+			eye_color = HMN.eye_color
 	M.update_tint()
 	owner.update_sight()
 
@@ -820,7 +829,7 @@
 	if(severity > 1)
 		if(prob(10 * severity))
 			return
-	owner << "<span class='warning'>Static obfuscates your vision!</span>"
+	to_chat(owner, "<span class='warning'>Static obfuscates your vision!</span>")
 	owner.flash_act(visual = 1)
 
 /obj/item/organ/eyes/robotic/xray
@@ -854,11 +863,11 @@
 
 /obj/item/organ/eyes/robotic/flashlight/Insert(var/mob/living/carbon/M, var/special = 0)
 	..()
-	M.AddLuminosity(15)
+	set_light(15)
 
 
 /obj/item/organ/eyes/robotic/flashlight/Remove(var/mob/living/carbon/M, var/special = 0)
-	M.AddLuminosity(-15)
+	set_light(-15)
 	..()
 
 // Welding shield implant

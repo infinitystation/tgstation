@@ -43,7 +43,9 @@ var/global/list/all_scripture = list() //a list containing scripture instances; 
 
 #define SLAB_SLOWDOWN_MAXIMUM 2700 //maximum slowdown from additional servants; defaults to 4 minutes 30 seconds
 
-#define CACHE_PRODUCTION_TIME 900 //how long(deciseconds) caches require to produce a component; defaults to 1 minute 30 seconds
+#define CACHE_PRODUCTION_TIME 600 //how long(deciseconds) caches require to produce a component; defaults to 1 minute
+
+#define ACTIVE_CACHE_SLOWDOWN 100 //how many additional deciseconds caches take to produce a component for each linked cache; defaults to 10 seconds
 
 #define LOWER_PROB_PER_COMPONENT 10 //how much each component in the cache reduces the weight of getting another of that component type
 
@@ -85,10 +87,8 @@ var/global/list/all_scripture = list() //a list containing scripture instances; 
 
 #define GATEWAY_RATVAR_ARRIVAL 300 //when progress is at or above this, game over ratvar's here everybody go home
 
-//Objective defines
-#define CLOCKCULT_GATEWAY "gateway"
-
-#define CLOCKCULT_ESCAPE "escape"
+//Objective text define
+#define CLOCKCULT_OBJECTIVE "Construct the Ark of the Clockwork Justicar and free Ratvar."
 
 //misc clockcult stuff
 #define MARAUDER_EMERGE_THRESHOLD 65 //marauders cannot emerge unless host is at this% or less health
@@ -98,3 +98,5 @@ var/global/list/all_scripture = list() //a list containing scripture instances; 
 #define PROSELYTIZER_REPAIR_PER_TICK 4 //how much a proselytizer repairs each tick, and also how many deciseconds each tick is
 
 #define OCULAR_WARDEN_EXCLUSION_RANGE 3 //the range at which ocular wardens cannot be placed near other ocular wardens
+
+#define RATVARIAN_SPEAR_DURATION 1800 //how long ratvarian spears last; defaults to 3 minutes

@@ -21,5 +21,5 @@
 		if(CHAT_GHOSTEARS && speaker in view(src))
 			message = "<b>(N)</b> [message]"
 	var/link = FOLLOW_LINK(src, speaker)
-	src << "[link] [message]"
+	to_chat(src, "[link] [message]")
 
