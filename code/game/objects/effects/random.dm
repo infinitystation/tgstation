@@ -41,7 +41,7 @@
 	spawn_nothing_percentage = 25
 	color = "#DB3D3D"
 	item_to_spawn()
-		return pick(prob(1);/obj/item/weaponcrafting/reciever,\
+		return pick(prob(1);/obj/item/weaponcrafting/receiver,\
 					prob(2);/obj/item/weaponcrafting/stock,\
 					prob(2);/obj/item/stack/packageWrap)
 

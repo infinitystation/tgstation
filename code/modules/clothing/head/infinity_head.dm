@@ -174,7 +174,6 @@
 	worn_icon = 'icons/mob/infinity_work.dmi'
 	icon_state = "doom"
 	icon = 'icons/obj/clothing/infinity_work.dmi'
-	flags = HEADBANGPROTECT
 	armor = list(melee = 40, bullet = 35, laser = 45,energy = 25, bomb = 40, bio = 5, rad = 0, , fire = 0, acid = 0)
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR
 	strip_delay = 80
@@ -213,7 +212,7 @@
 	min_cold_protection_temperature = HELMET_MIN_TEMP_PROTECT
 	heat_protection = HEAD
 	max_heat_protection_temperature = HELMET_MAX_TEMP_PROTECT
-	flags = HEADBANGPROTECT | HEADCOVERSEYES
+	flags = HEADCOVERSEYES
 	flags_inv = HIDEHAIR
 	strip_delay = 60
 
@@ -232,7 +231,6 @@
 	worn_icon = 'icons/mob/infinity_work.dmi'
 	icon_state = "marine_helmet"
 	item_state = "marine_helmet"
-	flags = HEADBANGPROTECT
 	armor = list(melee = 40, bullet = 35, laser = 45,energy = 25, bomb = 40, bio = 5, rad = 0, fire = 20, acid = 50)
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR
 	strip_delay = 80

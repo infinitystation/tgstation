@@ -51,8 +51,6 @@ var/datum/controller/subsystem/mapping/SSmapping
 	if (mining_type == "lavaland")
 		seedRuins(list(5), global.config.lavaland_budget, /area/lavaland/surface/outdoors, lava_ruins_templates)
 		spawn_rivers()
-	else
-		make_mining_asteroid_secrets()
 
 	// deep space ruins
 	var/space_zlevels = list()
@@ -121,9 +119,9 @@ var/datum/controller/subsystem/mapping/SSmapping
 /datum/controller/subsystem/mapping/proc/loadWorld()
 	//if any of these fail, something has gone horribly, HORRIBLY, wrong
 	var/list/FailedZs = list()
-    
+
 	var/start_time = REALTIMEOFDAY
-  
+
 	INIT_ANNOUNCE("Loading [config.map_name]...")
 	TryLoadZ(config.GetFullMapPath(), FailedZs, ZLEVEL_STATION)
 	INIT_ANNOUNCE("Loaded station in [(REALTIMEOFDAY - start_time)/10]s!")
