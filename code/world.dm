@@ -312,8 +312,6 @@
 	if(currentbuild)
 		features += "[currentbuild.friendlyname]"
 
-	features += "Map - [MAP_NAME]"
-
 	if(ticker)
 		if(ticker.current_state >= 3)
 			if(event_on_air)
@@ -356,52 +354,3 @@
 		s += ": [jointext(features, ", ")]"
 
 	status = s
-	. = changemap_alt(VM)
-	if (. == 0)
-		world << "<span class='boldannounce'>Map rotation has chosen [VM.friendlyname] for next round!</span>"
-
-var/datum/votablemap/nextmap
-var/mapchanging = 0
-var/rebootingpendingmapchange = 0
-/proc/changemap(var/datum/votablemap/VM)
-	if (!SERVERTOOLS)
-		return
-	if (!istype(VM))
-		return
-	mapchanging = 1
-	log_game("Changing map to [VM.name]([VM.friendlyname])")
-	var/file = file("setnewmap.bat")
-	file << "\nset MAPROTATE=[VM.name]\n"
-	. = shell("..\\bin\\maprotate.bat")
-	mapchanging = 0
-	switch (.)
-		if (null)
-			message_admins("Failed to change map: Could not run map rotator")
-			log_game("Failed to change map: Could not run map rotator")
-		if (0)
-			log_game("Changed to map [VM.friendlyname]")
-			nextmap = VM
-		//1x: file errors
-		if (11)
-			message_admins("Failed to change map: File error: Map rotator script couldn't find file listing new map")
-			log_game("Failed to change map: File error: Map rotator script couldn't find file listing new map")
-		if (12)
-			message_admins("Failed to change map: File error: Map rotator script couldn't find tgstation-server framework")
-			log_game("Failed to change map: File error: Map rotator script couldn't find tgstation-server framework")
-		//2x: conflicting operation errors
-		if (21)
-			message_admins("Failed to change map: Conflicting operation error: Current server update operation detected")
-			log_game("Failed to change map: Conflicting operation error: Current server update operation detected")
-		if (22)
-			message_admins("Failed to change map: Conflicting operation error: Current map rotation operation detected")
-			log_game("Failed to change map: Conflicting operation error: Current map rotation operation detected")
-		//3x: external errors
-		if (31)
-			message_admins("Failed to change map: External error: Could not compile new map:[VM.name]")
-			log_game("Failed to change map: External error: Could not compile new map:[VM.name]")
-
-		else
-			message_admins("Failed to change map: Unknown error: Error code #[.]")
-			log_game("Failed to change map: Unknown error: Error code #[.]")
-	if(rebootingpendingmapchange)
-		world.Reboot("Map change finished", time = 10)

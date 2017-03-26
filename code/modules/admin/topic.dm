@@ -35,6 +35,10 @@
 		if(!C)
 			return
 
+		var/msg = "<font color='red' size='4'><b>- AdminHelp marked as IC issue! -</b></font><br>"
+		msg += "<font color='red'><b>Losing is part of the game!</b></font><br>"
+		msg += "<font color='red'>Your character will frequently die, sometimes without even a possibility of avoiding it. Events will often be out of your control. No matter how good or prepared you are, sometimes you just lose.</font>"
+
 
 		to_chat(C, msg)
 

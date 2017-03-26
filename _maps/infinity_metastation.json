@@ -1,0 +1,7 @@
+{
+    "map_name": "Infinity MetaStation",
+    "map_path": "map_files/Infinity_MetaStation",
+    "map_file": "MetaStation.dmm",
+    "minetype": "lavaland",
+    "transition_config": "default"
+}

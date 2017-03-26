@@ -1171,10 +1171,8 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/structure/sign/poster{
-	icon_state = "poster7";
+/obj/structure/sign/poster/contraband/smoke{
 	pixel_y = -32;
-	tag = "icon-poster7"
 	},
 /turf/open/floor/plasteel/terror/necro/bar,
 /area/mine/cafeteria)
@@ -2499,12 +2497,8 @@
 /obj/item/device/gps/mining,
 /obj/item/device/gps/mining,
 /obj/item/device/gps/mining,
-/obj/structure/sign/poster{
-	icon_state = "poster4_legit";
-	official = 1;
+/obj/structure/sign/poster/official/help_others{
 	pixel_x = 32;
-	serial_number = 4;
-	tag = "icon-poster4_legit"
 	},
 /turf/open/floor/plasteel/terror/necro/darkvault{
 	tag = "icon-vault (WEST)";
@@ -3696,11 +3690,8 @@
 	},
 /obj/machinery/mech_bay_recharge_port,
 /obj/structure/cable,
-/obj/structure/sign/poster{
-	icon_state = "poster18";
+/obj/structure/sign/poster/contraband/communist_state{
 	pixel_y = -32;
-	serial_number = 18;
-	tag = "icon-poster18"
 	},
 /turf/open/floor/plating/lavaland/outdoor,
 /area/mine/eva)
@@ -8263,14 +8254,14 @@
 	on = 1;
 	pressure_checks = 0
 	},
-/turf/open/floor/bluegrid{
+/turf/open/floor/circuit{
 	baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface;
 	initial_gas_mix = "n2=500;TEMP=80";
 	name = "Killroom Floor"
 	},
 /area/toxins/xenobiology)
 "oO" = (
-/turf/open/floor/bluegrid{
+/turf/open/floor/circuit{
 	baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface;
 	initial_gas_mix = "n2=500;TEMP=80";
 	name = "Killroom Floor"
@@ -8284,7 +8275,7 @@
 	pressure_checks = 0;
 	pump_direction = 0
 	},
-/turf/open/floor/bluegrid{
+/turf/open/floor/circuit{
 	baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface;
 	initial_gas_mix = "n2=500;TEMP=80";
 	name = "Killroom Floor"
@@ -8292,7 +8283,7 @@
 /area/toxins/xenobiology)
 "oQ" = (
 /obj/machinery/light,
-/turf/open/floor/bluegrid{
+/turf/open/floor/circuit{
 	baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface;
 	initial_gas_mix = "n2=500;TEMP=80";
 	name = "Killroom Floor"
@@ -8304,7 +8295,7 @@
 	dir = 1;
 	network = list("SS13","RD")
 	},
-/turf/open/floor/bluegrid{
+/turf/open/floor/circuit{
 	baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface;
 	initial_gas_mix = "n2=500;TEMP=80";
 	name = "Killroom Floor"

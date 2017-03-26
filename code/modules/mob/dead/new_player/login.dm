@@ -26,7 +26,10 @@
 	if(watch_locations.len>0)
 		loc = pick(watch_locations)
 */
-	new_player_panel()
+	if(client.banprisoned)
+		new_player_panel_prisoner()
+	else
+		new_player_panel()
 	client.playtitlemusic()
 	if(ticker.current_state < GAME_STATE_SETTING_UP)
 		to_chat(src, "Please set up your character and select \"Ready\". The game will start in about [round(ticker.GetTimeLeft(), 1)/10] seconds.")

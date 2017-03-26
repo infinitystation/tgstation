@@ -15,6 +15,8 @@
 	var/record_interval = 50
 	var/next_record = 0
 
+	light_color = LIGHT_COLOR_YELLOW
+
 /obj/machinery/computer/holo/monitor/New()
 	..()
 	search()

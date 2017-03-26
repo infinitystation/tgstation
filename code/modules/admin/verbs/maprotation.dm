@@ -38,7 +38,7 @@
 		return
 	ticker.maprotatechecked = 1
 	var/datum/map_config/VM = maprotatechoices[chosenmap]
-	message_admins("[key_name_admin(usr)] is changing the map to [VM.map_name]([VM.friendlyname])")
-	log_admin("[key_name(usr)] is changing the map to [VM.map_name]([VM.friendlyname])")
+	message_admins("[key_name_admin(usr)] is changing the map to [VM.map_name]")
+	log_admin("[key_name(usr)] is changing the map to [VM.map_name]")
 	if (changemap_alt(VM) == 0)
-		message_admins("[key_name_admin(usr)] has changed the map to [VM.map_name]([VM.friendlyname])")
+		message_admins("[key_name_admin(usr)] has changed the map to [VM.map_name]")

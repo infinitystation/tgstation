@@ -1,8 +1,10 @@
-/* Commented part for another builds
+//Commented part for another builds
 var/datum/votablemap/nextmap
 
+/*
 /datum/configuration
 	var/list/datum/votablemap/maplist = list()
+*/
 
 /datum/controller/gameticker
 	var/maprotatechecked = 0
@@ -15,6 +17,7 @@ var/datum/votablemap/nextmap
 	src.name = name
 	src.friendlyname = name
 
+/*
 /datum/configuration/proc/loadmaplist(filename)
 	var/list/Lines = file2list(filename)
 
@@ -55,7 +58,8 @@ var/datum/votablemap/nextmap
 				currentmap = null
 			else
 				diary << "Unknown command in map vote config: '[command]'"
-
+*/
+/*
 /client/proc/adminchangemap()
 	set category = "Server"
 	set name = "Change Map"
@@ -73,7 +77,8 @@ var/datum/votablemap/nextmap
 	message_admins("[key_name_admin(usr)] is changing the map to [VM.name]([VM.friendlyname])")
 	log_admin("[key_name(usr)] is changing the map to [VM.name]([VM.friendlyname])")
 	if (changemap_alt(VM) == 0)
-		message_admins("[key_name_admin(usr)] has changed the map to [VM.name]([VM.friendlyname])") */// To another builds
+		message_admins("[key_name_admin(usr)] has changed the map to [VM.name]([VM.friendlyname])")/// To another builds
+*/
 
 /proc/changemap_alt(var/datum/votablemap/VM)
 	if(!VM)

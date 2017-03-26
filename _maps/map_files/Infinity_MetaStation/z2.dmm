@@ -2448,14 +2448,14 @@
 	},
 /area/tdome/arena_source)
 "gA" = (
-/turf/open/floor/plasteel/circuit/gcircuit,
+/turf/open/floor/circuit/green,
 /area/tdome/arena_source)
 "gB" = (
 /obj/machinery/flasher{
 	id = "tdomeflash";
 	name = "Thunderdome Flash"
 	},
-/turf/open/floor/plasteel/circuit/gcircuit,
+/turf/open/floor/circuit/green,
 /area/tdome/arena_source)
 "gC" = (
 /turf/open/floor/plasteel/loadingarea{
@@ -2481,7 +2481,7 @@
 	network = list("thunder");
 	c_tag = "Arena"
 	},
-/turf/open/floor/plasteel/circuit/gcircuit,
+/turf/open/floor/circuit/green,
 /area/tdome/arena_source)
 "gF" = (
 /turf/open/floor/plasteel/terror/darkred/corner{
@@ -2714,7 +2714,7 @@
 /area/ctf)
 "hi" = (
 /obj/structure/barricade/security/ctf,
-/turf/open/floor/plasteel/circuit,
+/turf/open/floor/circuit,
 /area/ctf)
 "hj" = (
 /obj/structure/table/reinforced,
@@ -2744,7 +2744,7 @@
 /obj/structure/barricade/security/ctf{
 	icon = 'icons/obj/objects.dmi'
 	},
-/turf/open/floor/plasteel/circuit/rcircuit,
+/turf/open/floor/circuit/red,
 /area/ctf)
 "hp" = (
 /turf/open/floor/plasteel/terror/darkred/side{
@@ -2918,7 +2918,7 @@
 	},
 /area/ctf)
 "hT" = (
-/turf/open/floor/plasteel/circuit,
+/turf/open/floor/circuit,
 /turf/open/floor/plasteel/warningline{
 	tag = "icon-warningline (NORTHWEST)";
 	icon_state = "warningline";
@@ -2926,7 +2926,7 @@
 	},
 /area/ctf)
 "hU" = (
-/turf/open/floor/plasteel/circuit,
+/turf/open/floor/circuit,
 /turf/open/floor/plasteel/warningline{
 	tag = "icon-warningline (NORTH)";
 	icon_state = "warningline";
@@ -2934,7 +2934,7 @@
 	},
 /area/ctf)
 "hV" = (
-/turf/open/floor/plasteel/circuit,
+/turf/open/floor/circuit,
 /turf/open/floor/plasteel/warningline{
 	tag = "icon-warningline (NORTHEAST)";
 	icon_state = "warningline";
@@ -2981,7 +2981,7 @@
 /turf/open/floor/plating,
 /area/shuttle/syndicate/cruiser)
 "ic" = (
-/turf/open/floor/plasteel/circuit,
+/turf/open/floor/circuit,
 /turf/open/floor/plasteel/warningline{
 	tag = "icon-warningline (WEST)";
 	icon_state = "warningline";
@@ -2989,10 +2989,10 @@
 	},
 /area/ctf)
 "id" = (
-/turf/open/floor/plasteel/circuit,
+/turf/open/floor/circuit,
 /area/ctf)
 "ie" = (
-/turf/open/floor/plasteel/circuit,
+/turf/open/floor/circuit,
 /turf/open/floor/plasteel/warningline{
 	tag = "icon-warningline (EAST)";
 	icon_state = "warningline";
@@ -3035,7 +3035,7 @@
 /turf/open/floor/plating,
 /area/shuttle/syndicate/cruiser)
 "ik" = (
-/turf/open/floor/plasteel/circuit,
+/turf/open/floor/circuit,
 /turf/open/floor/plasteel/warningline,
 /turf/open/floor/plasteel/warningline{
 	tag = "icon-warningline (SOUTHWEST)";
@@ -3044,11 +3044,11 @@
 	},
 /area/ctf)
 "il" = (
-/turf/open/floor/plasteel/circuit,
+/turf/open/floor/circuit,
 /turf/open/floor/plasteel/warningline,
 /area/ctf)
 "im" = (
-/turf/open/floor/plasteel/circuit,
+/turf/open/floor/circuit,
 /turf/open/floor/plasteel/warningline{
 	tag = "icon-warningline (SOUTHEAST)";
 	icon_state = "warningline";
@@ -3057,7 +3057,7 @@
 /area/ctf)
 "in" = (
 /obj/structure/barricade/security/ctf,
-/turf/open/floor/plasteel/circuit/gcircuit/off,
+/turf/open/floor/circuit/green/off,
 /area/ctf)
 "io" = (
 /obj/structure/barricade/security/ctf{
@@ -3066,7 +3066,7 @@
 /obj/structure/barricade/security/ctf{
 	icon = 'icons/obj/objects.dmi'
 	},
-/turf/open/floor/plasteel/circuit/rcircuit,
+/turf/open/floor/circuit/red,
 /area/ctf)
 "ip" = (
 /turf/closed/wall/mineral/plastitanium,
@@ -3152,7 +3152,7 @@
 	},
 /area/ctf)
 "iv" = (
-/turf/open/floor/plasteel/circuit/gcircuit/off,
+/turf/open/floor/circuit/green/off,
 /turf/open/floor/plasteel/warningline{
 	tag = "icon-warningline (NORTH)";
 	icon_state = "warningline";
@@ -3244,7 +3244,7 @@
 	},
 /area/ctf)
 "iH" = (
-/turf/open/floor/plasteel/circuit/gcircuit/off,
+/turf/open/floor/circuit/green/off,
 /area/ctf)
 "iI" = (
 /turf/open/floor/plasteel/terror/darkred/side{
@@ -3257,7 +3257,7 @@
 	},
 /area/ctf)
 "iJ" = (
-/turf/open/floor/plasteel/circuit/rcircuit,
+/turf/open/floor/circuit/red,
 /area/ctf)
 "iK" = (
 /obj/structure/chair/comfy/shuttle/black/noNT{
@@ -3424,7 +3424,7 @@
 /turf/closed/indestructible/fakeglass,
 /area/wizard_station)
 "jh" = (
-/turf/open/floor/plasteel/circuit/gcircuit/animated,
+/turf/open/floor/circuit/green/anim,
 /area/ctf)
 "ji" = (
 /obj/structure/chair{
@@ -3498,23 +3498,23 @@
 /area/wizard_station)
 "jt" = (
 /obj/machinery/capture_the_flag/blue,
-/turf/open/floor/plasteel/circuit/gcircuit/animated,
+/turf/open/floor/circuit/green/anim,
 /area/ctf)
 "ju" = (
 /obj/item/weapon/twohanded/ctf/blue,
-/turf/open/floor/plasteel/circuit/gcircuit/animated,
+/turf/open/floor/circuit/green/anim,
 /area/ctf)
 "jv" = (
 /obj/machinery/control_point,
-/turf/open/floor/plasteel/circuit/gcircuit/off,
+/turf/open/floor/circuit/green/off,
 /area/ctf)
 "jw" = (
 /obj/item/weapon/twohanded/ctf/red,
-/turf/open/floor/plasteel/circuit/gcircuit/animated,
+/turf/open/floor/circuit/green/anim,
 /area/ctf)
 "jx" = (
 /obj/machinery/capture_the_flag/red,
-/turf/open/floor/plasteel/circuit/gcircuit/animated,
+/turf/open/floor/circuit/green/anim,
 /area/ctf)
 "jy" = (
 /obj/structure/sink{
@@ -4038,7 +4038,7 @@
 /turf/open/floor/plasteel/warningline,
 /area/ctf)
 "kR" = (
-/turf/open/floor/plasteel/circuit/gcircuit/off,
+/turf/open/floor/circuit/green/off,
 /turf/open/floor/plasteel/warningline,
 /area/ctf)
 "kS" = (
@@ -4173,10 +4173,10 @@
 /obj/structure/barricade/security/ctf{
 	icon = 'icons/obj/objects.dmi'
 	},
-/turf/open/floor/plasteel/circuit/gcircuit/off,
+/turf/open/floor/circuit/green/off,
 /area/ctf)
 "li" = (
-/turf/open/floor/plasteel/circuit/rcircuit,
+/turf/open/floor/circuit/red,
 /turf/open/floor/plasteel/warningline{
 	tag = "icon-warningline (NORTHWEST)";
 	icon_state = "warningline";
@@ -4184,7 +4184,7 @@
 	},
 /area/ctf)
 "lj" = (
-/turf/open/floor/plasteel/circuit/rcircuit,
+/turf/open/floor/circuit/red,
 /turf/open/floor/plasteel/warningline{
 	tag = "icon-warningline (NORTH)";
 	icon_state = "warningline";
@@ -4192,7 +4192,7 @@
 	},
 /area/ctf)
 "lk" = (
-/turf/open/floor/plasteel/circuit/rcircuit,
+/turf/open/floor/circuit/red,
 /turf/open/floor/plasteel/warningline{
 	tag = "icon-warningline (NORTHEAST)";
 	icon_state = "warningline";
@@ -4294,7 +4294,7 @@
 /turf/open/floor/wood,
 /area/wizard_station)
 "lx" = (
-/turf/open/floor/plasteel/circuit/rcircuit,
+/turf/open/floor/circuit/red,
 /turf/open/floor/plasteel/warningline{
 	tag = "icon-warningline (WEST)";
 	icon_state = "warningline";
@@ -4302,7 +4302,7 @@
 	},
 /area/ctf)
 "ly" = (
-/turf/open/floor/plasteel/circuit/rcircuit,
+/turf/open/floor/circuit/red,
 /turf/open/floor/plasteel/warningline{
 	tag = "icon-warningline (EAST)";
 	icon_state = "warningline";
@@ -4351,7 +4351,7 @@
 /turf/open/floor/engine/cult,
 /area/wizard_station)
 "lE" = (
-/turf/open/floor/plasteel/circuit/rcircuit,
+/turf/open/floor/circuit/red,
 /turf/open/floor/plasteel/warningline{
 	tag = "icon-warningline (SOUTHWEST)";
 	icon_state = "warningline";
@@ -4359,11 +4359,11 @@
 	},
 /area/ctf)
 "lF" = (
-/turf/open/floor/plasteel/circuit/rcircuit,
+/turf/open/floor/circuit/red,
 /turf/open/floor/plasteel/warningline,
 /area/ctf)
 "lG" = (
-/turf/open/floor/plasteel/circuit/rcircuit,
+/turf/open/floor/circuit/red,
 /turf/open/floor/plasteel/warningline{
 	tag = "icon-warningline (SOUTHEAST)";
 	icon_state = "warningline";
@@ -7948,7 +7948,7 @@
 	req_access_txt = "106"
 	},
 /obj/structure/AIcore/deactivated,
-/turf/open/floor/greengrid,
+/turf/open/floor/circuit/green,
 /area/centcom/control)
 "uJ" = (
 /obj/machinery/computer/upload/ai,
@@ -8073,7 +8073,7 @@
 	},
 /area/centcom/control)
 "uY" = (
-/turf/open/floor/bluegrid,
+/turf/open/floor/circuit,
 /area/centcom/control)
 "uZ" = (
 /obj/machinery/light{
@@ -8523,17 +8523,17 @@
 /area/shuttle/syndicate)
 "vV" = (
 /obj/machinery/recharge_station,
-/turf/open/floor/plasteel/circuit/rcircuit,
+/turf/open/floor/circuit/red,
 /area/shuttle/syndicate)
 "vW" = (
 /obj/machinery/nuclearbomb/syndicate,
-/turf/open/floor/plasteel/circuit/rcircuit,
+/turf/open/floor/circuit/red,
 /area/shuttle/syndicate)
 "vX" = (
 /obj/machinery/telecomms/allinone{
 	intercept = 1
 	},
-/turf/open/floor/plasteel/circuit/rcircuit,
+/turf/open/floor/circuit/red,
 /area/shuttle/syndicate)
 "vY" = (
 /obj/structure/sign/fire{
@@ -10391,7 +10391,7 @@
 /turf/open/floor/plating/abductor,
 /area/abductor_ship)
 "zV" = (
-/obj/effect/landmark/abductor/console,
+/obj/machinery/abductor/console,
 /turf/open/floor/plating/abductor,
 /area/abductor_ship)
 "zW" = (
@@ -12789,7 +12789,7 @@
 /turf/open/floor/plating/abductor,
 /area/abductor_ship)
 "Fn" = (
-/obj/effect/landmark/abductor/console{
+/obj/machinery/abductor/console{
 	team = 2
 	},
 /turf/open/floor/plating/abductor,
@@ -14041,10 +14041,10 @@
 /area/centcom/ferry)
 "In" = (
 /obj/machinery/shuttle_manipulator,
-/turf/open/floor/plasteel/circuit/gcircuit,
+/turf/open/floor/circuit/green,
 /area/centcom/ferry)
 "Io" = (
-/turf/open/floor/plasteel/circuit/gcircuit,
+/turf/open/floor/circuit/green,
 /area/centcom/ferry)
 "Ip" = (
 /obj/structure/table/reinforced,
@@ -14743,7 +14743,7 @@
 /turf/open/floor/plating/abductor,
 /area/abductor_ship)
 "JN" = (
-/obj/effect/landmark/abductor/console{
+/obj/machinery/abductor/console{
 	team = 3
 	},
 /turf/open/floor/plating/abductor,
@@ -16350,7 +16350,7 @@
 /turf/open/floor/plating/abductor,
 /area/abductor_ship)
 "No" = (
-/obj/effect/landmark/abductor/console{
+/obj/machinery/abductor/console{
 	team = 4
 	},
 /turf/open/floor/plating/abductor,
@@ -17922,14 +17922,14 @@
 /turf/open/floor/plasteel,
 /area/tdome/arena)
 "QX" = (
-/turf/open/floor/plasteel/circuit/gcircuit,
+/turf/open/floor/circuit/green,
 /area/tdome/arena)
 "QY" = (
 /obj/machinery/flasher{
 	id = "tdomeflash";
 	name = "Thunderdome Flash"
 	},
-/turf/open/floor/plasteel/circuit/gcircuit,
+/turf/open/floor/circuit/green,
 /area/tdome/arena)
 "QZ" = (
 /obj/machinery/camera{
@@ -17972,7 +17972,7 @@
 /obj/machinery/camera/thunder{
 	pixel_x = 11
 	},
-/turf/open/floor/plasteel/circuit/gcircuit,
+/turf/open/floor/circuit/green,
 /area/tdome/arena)
 "Rf" = (
 /obj/machinery/door/firedoor,
@@ -19356,7 +19356,7 @@
 /obj/machinery/camera/thunder{
 	pixel_x = 11
 	},
-/turf/open/floor/plasteel/circuit/gcircuit,
+/turf/open/floor/circuit/green,
 /area/tdome/arena_source)
 "Uy" = (
 /obj/machinery/recharger{
