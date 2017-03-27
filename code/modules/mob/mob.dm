@@ -476,7 +476,7 @@ var/next_mob_id = 0
 	if(!client.allow_respawn)
 		return
 
-	var/mob/new_player/M = new /mob/new_player()
+	var/mob/dead/new_player/M = new /mob/dead/new_player()
 
 	M.key = key
 

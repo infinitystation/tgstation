@@ -374,7 +374,7 @@ RCD
 	materials = list(MAT_METAL=12000, MAT_GLASS=8000)
 	var/ammoamt = 40
 
-/obj/item/weapon/rcd/advanced
+/obj/item/weapon/rcd/advanced		// TODO@inf-dev пока не будет доработано взаимодействие с ним, эта штука смысла не имеет ~bear1ake@inf-dev
 	name = "advanced rapid-construction-device (RCD)"
 	desc = "An advanced device used to rapidly build and deconstruct walls and floors."
 	icon = 'icons/obj/infinity_object.dmi'
@@ -386,27 +386,6 @@ RCD
 	max_matter = 500
 	materials = list(MAT_METAL=20000, MAT_GLASS=2500, MAT_SILVER=2500, MAT_GOLD=2500, MAT_PLASMA=2500)
 	canRturf = 1
-
-	wallcost = 4
-	floorcost = 1
-	grillecost = 1
-	windowcost = 2
-	airlockcost = 4
-	deconwallcost = 3
-	deconfloorcost = 1
-	decongrillecost = 1
-	deconwindowcost = 2
-	deconairlockcost = 4
-
-	walldelay = 5
-	grilledelay = 10
-	windowdelay = 10
-	airlockdelay = 15
-	deconwalldelay = 10
-	deconfloordelay = 15
-	deconwindowdelay = 15
-	deconairlockdelay = 15
-
 
 /obj/item/weapon/rcd_ammo/advanced
 	name = "advanced compressed matter cartridge"

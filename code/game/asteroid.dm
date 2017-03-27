@@ -107,7 +107,7 @@ var/global/max_secret_rooms = 6
 		if("hitech")
 			theme = "hitech"
 			walltypes = list(/turf/closed/wall/r_wall=5,/turf/closed/mineral/random=1)
-			floortypes = list(/turf/open/floor/greengrid,/turf/open/floor/bluegrid)
+			floortypes = list(/turf/open/floor/circuit/green,/turf/open/floor/circuit)
 			treasureitems = list(/obj/item/weapon/stock_parts/cell/hyper=1, /obj/machinery/chem_dispenser/constructable=1,/obj/machinery/computer/telescience=1, /obj/machinery/r_n_d/protolathe=1,
 								/obj/machinery/biogenerator=1)
 			fluffitems = list(/obj/structure/table/reinforced=2,/obj/item/weapon/stock_parts/scanning_module/phasic=3,

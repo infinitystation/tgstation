@@ -277,7 +277,9 @@
 
 /obj/effect/mob_spawn/human/hotel_staff/Destroy()
 	new/obj/structure/fluff/empty_sleeper/syndicate(get_turf(src))
-	..()??/obj/effect/mob_spawn/human/abductor
+	..()
+
+/obj/effect/mob_spawn/human/abductor
 	name = "alien sleeper"
 	desc = "Some strange alien's sleeper... What the fuck is happing here?"
 	mob_name = "abductor"

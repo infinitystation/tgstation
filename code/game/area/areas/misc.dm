@@ -49,7 +49,7 @@
 	name = "Prison Station"
 	icon_state = "brig"
 	luminosity = 1
-	lighting_use_dynamic = 0
+	dynamic_lighting = DYNAMIC_LIGHTING_DISABLED
 	has_gravity = 1
 	requires_power = 0
 

@@ -75,7 +75,7 @@ var/datum/votablemap/nextmap
 	if (changemap_alt(VM) == 0)
 		message_admins("[key_name_admin(usr)] has changed the map to [VM.name]([VM.friendlyname])") */// To another builds
 
-/proc/changemap_alt(var/datum/votablemap/VM)
+/proc/changemap_alt(var/datum/map_config/VM)
 	if(!VM)
 		return
 	if(!istype(VM))
@@ -85,15 +85,15 @@ var/datum/votablemap/nextmap
 	if(!ticker.maprotatechecked)
 		return
 
-	log_game("Changing map to [VM.name]([VM.friendlyname])")
-	. = shell("sh ../map_rotate.sh [currentbuild.dmb_file] [VM.name] _maps")
+	log_game("Changing map to [VM.map_name]")
+	. = shell("sh ../map_rotate.sh [currentbuild.dmb_file] [VM.map_dm] _maps")
 	switch(.)
 		if(null)
 			message_admins("Failed to change map: Could not run map rotator")
 			log_game("Failed to change map: Could not run map rotator")
 		if(0)
-			log_game("Changed to map [VM.friendlyname]")
-			nextmap = VM
+			log_game("Changed to map [VM.map_name]")
+			SSmapping.next_map_config = VM
 
 		//1x: file errors
 		if(1)

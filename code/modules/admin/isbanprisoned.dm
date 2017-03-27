@@ -43,7 +43,7 @@
 	else
 		return 0
 
-/mob/new_player/proc/new_player_panel_prisoner()
+/mob/dead/new_player/proc/new_player_panel_prisoner()
 	var/output = "<center><p><a href='byond://?src=\ref[src];show_preferences=1'>Setup Character</A></p>"
 
 	if(!ticker || ticker.current_state <= GAME_STATE_PREGAME)
@@ -63,7 +63,7 @@
 	popup.open(0)
 	return
 
-/mob/new_player/proc/Spawn_Prisoner()
+/mob/dead/new_player/proc/Spawn_Prisoner()
 	var/mob/living/carbon/human/character = create_character()	//creates the human and transfers vars and mind
 
 	character.loc = pick(ban_prison)
@@ -96,7 +96,7 @@
 	uniform = /obj/item/clothing/under/rank/prisoner
 	shoes = /obj/item/clothing/shoes/sneakers/orange/legcuffs
 
-/mob/new_player/proc/setup_and_greet_prisoner(mob/living/carbon/human/character)
+/mob/dead/new_player/proc/setup_and_greet_prisoner(mob/living/carbon/human/character)
 	character.client.prefs.be_special = list()
 	character.client.prefs.toggles &= ~(MIDROUND_ANTAG)
 	character.client.prefs.chat_toggles = TOGGLES_PRISONER_CHAT

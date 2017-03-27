@@ -531,7 +531,8 @@
 	name = "forked tongue"
 	desc = "A thin and long muscle typically found in reptilian races, apparently moonlights as a nose."
 	icon_state = "tonguelizard"
-	say_mod = "шипит"?	taste_sensitivity = 10 // combined nose + tongue, extra sensitive
+	say_mod = "шипит"
+	taste_sensitivity = 10 // combined nose + tongue, extra sensitive
 
 /obj/item/organ/tongue/lizard/TongueSpeech(var/message)
 	var/regex/lizard_hicc = new("с+", "g")

@@ -33,7 +33,7 @@ var/global/generating_map = 0
 			max_y = 1
 			for(j = 1, j < world.maxy, j += 64)
 				max_y = (j+63>world.maxy) ? world.maxy : j+63
-				generate_map_self(z_level, i, j, max_x, max_y, "[MAP_NAME]_[z_level]_([i],[j];[max_x],[max_y])")
+				generate_map_self(z_level, i, j, max_x, max_y, "[SSmapping.config.map_name]_[z_level]_([i],[j];[max_x],[max_y])")
 
 	generating_map = 0
 

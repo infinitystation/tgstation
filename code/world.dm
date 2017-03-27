@@ -312,7 +312,7 @@
 	if(currentbuild)
 		features += "[currentbuild.friendlyname]"
 
-	features += "Map - [MAP_NAME]"
+	features += "Map - [SSmapping.config.map_name]"
 
 	if(ticker)
 		if(ticker.current_state >= 3)

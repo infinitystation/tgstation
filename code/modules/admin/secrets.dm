@@ -164,7 +164,8 @@
 		if("reset_name")
 			if(!check_rights(R_ADMIN))
 				return
-			var/new_name = new_station_name()?			//var/new_name = new_station_name() //TODO@inf-dev проверьте с хабом, пожалуйста ~bear1ake@inf-dev
+			var/new_name = new_station_name()
+			//var/new_name = new_station_name() //TODO@inf-dev проверьте с хабом, пожалуйста ~bear1ake@inf-dev
 			change_station_name(new_name)
 			log_admin("[key_name(usr)] reset the station name.")
 			message_admins("<span class='adminnotice'>[key_name_admin(usr)] reset the station name.</span>")
@@ -220,7 +221,7 @@
 			if(!SSshuttle.toggleShuttle("ferry","ferry_home","ferry_away"))
 				message_admins("[key_name_admin(usr)] moved the centcom ferry")
 				log_admin("[key_name(usr)] moved the centcom ferry")
-			
+
 		if("togglearrivals")
 			if(!check_rights(R_ADMIN))
 				return

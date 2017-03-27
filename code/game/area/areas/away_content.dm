@@ -30,14 +30,14 @@
 	..()
 	if(prob(50))
 		requires_power = 1
-		lighting_use_dynamic = DYNAMIC_LIGHTING_ENABLED
+		dynamic_lighting = DYNAMIC_LIGHTING_ENABLED
 
 /area/awaymission/beach/hotel
 	name = "Beach Hotel"
 	icon_state = "bar"
 	luminosity = 1
 	requires_power = 1
-	lighting_use_dynamic = DYNAMIC_LIGHTING_ENABLED
+	dynamic_lighting = DYNAMIC_LIGHTING_ENABLED
 
 /area/awaymission/errorroom
 	name = "Super Secret Room"

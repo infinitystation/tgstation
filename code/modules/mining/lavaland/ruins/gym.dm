@@ -96,7 +96,6 @@
 		cut_overlay(W)
 		to_chat(user, "[finishmessage]")
 
-/obj/structure/
 /obj/structure/bar
 	name = "Horizontal Bar"
 	desc = "You want to crow when you look at it."
@@ -105,6 +104,7 @@
 	density = 0
 	anchored = 1
 	layer = WALL_OBJ_LAYER
+
 /obj/structure/bar/attack_hand(mob/user as mob)
 	if(in_use)
 		user << "Its already in use - wait a bit."
@@ -132,4 +132,4 @@
 		in_use = 0
 		animate(user, pixel_y = 0, time = 3)
 		var/finishmessage = pick("You feel stronger!","You feel likou feel indestructible!")
-		user << "[finishmessage]"		cut_overlay(W)		to_chat(user, "[finishmessage]")
+		user << "[finishmessage]"

@@ -337,12 +337,13 @@
 	return 1
 
 
-/mob/dead/new_player/proc/AttemptLateSpawn(rank)?	if(client.banprisoned)
+/mob/dead/new_player/proc/AttemptLateSpawn(rank)
+	if(client.banprisoned)
 		return
 	if(!IsJobAvailable(rank))
 		alert(src, "[rank] is not available. Please try another.")
 		return 0
-	
+
 	if(ticker.late_join_disabled)
 		alert(src, "An administrator has disabled late join spawning.")
 		return FALSE
@@ -424,7 +425,8 @@
 			employmentCabinet.addFile(employee)
 
 
-/mob/dead/new_player/proc/LateChoices()?	if(client.banprisoned)
+/mob/dead/new_player/proc/LateChoices()
+	if(client.banprisoned)
 		return
 	var/mills = world.time - round_start_time // 1/10 of a second, not real milliseconds but whatever
 	//var/secs = ((mills % 36000) % 600) / 10 //Not really needed, but I'll leave it here for refrence.. or something
@@ -517,7 +519,8 @@
 		new_character.stop_sound_channel(CHANNEL_LOBBYMUSIC)
 
 
-/mob/dead/new_player/proc/ViewManifest()?	if(client.banprisoned)
+/mob/dead/new_player/proc/ViewManifest()
+	if(client.banprisoned)
 		return
 	var/dat = "<html><body>"
 	dat += "<h4>Crew Manifest</h4>"

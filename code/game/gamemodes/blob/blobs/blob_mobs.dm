@@ -106,7 +106,9 @@
 	if(istype(linked_node))
 		factory = linked_node
 		factory.spores += src
-	..()??/mob/living/simple_animal/hostile/blob/blobspore/fire_act(datum/gas_mixture/air, exposed_temperature, exposed_volume)
+	..()
+
+/mob/living/simple_animal/hostile/blob/blobspore/fire_act(datum/gas_mixture/air, exposed_temperature, exposed_volume)
 	..()
 	adjustBruteLoss(Clamp(exposed_temperature, 1, 10))
 

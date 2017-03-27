@@ -34,13 +34,14 @@ var/const/CALL_SHUTTLE_REASON_LENGTH = 12
 
 	var/status_display_freq = "1435"
 	var/stat_msg1
-	var/stat_msg2??	var/obj/item/weapon/paper/paper
+	var/stat_msg2
+	var/obj/item/weapon/paper/paper
 
 	light_color = LIGHT_COLOR_BLUE
 
 /obj/machinery/computer/communications/proc/checkCCcooldown()
 	var/obj/item/weapon/circuitboard/computer/communications/CM = circuit
-	if(CM.lastTimeUsed + 600 > world.time)
+	if(CM.lastTimeUsed + 100 > world.time)
 		return FALSE
 	return TRUE
 

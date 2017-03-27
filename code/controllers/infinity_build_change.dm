@@ -4,7 +4,7 @@ var/datum/server_build/currentbuild
 /datum/configuration
 	var/list/datum/server_build/buildlist = list()
 
-/datum/subsystem/ticker
+/datum/controller/subsystem/ticker
 	var/buildchangechecked = 0				//build changing?
 	var/buildchanger_ckey = ""				//who changing build?
 

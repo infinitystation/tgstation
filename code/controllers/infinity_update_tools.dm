@@ -1,4 +1,4 @@
-/datum/subsystem/ticker
+/datum/controller/subsystem/ticker
 	var/update_waiting = 0				//build updating?
 	var/updater_ckey = ""				//who updating build?
 
