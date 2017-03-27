@@ -25,7 +25,7 @@
 		var/mob/living/carbon/human/H = src.loc
 		if(!(H.disabilities & BLIND))
 			if(H.glasses == src)
-				H << "<span class='danger'>The [src] overloads and blinds you!</span>"
+				to_chat(H, "<span class='danger'>The [src] overloads and blinds you!</span>")
 				H.flash_act(visual = 1)
 				H.blind_eyes(3)
 				H.blur_eyes(5)
@@ -137,6 +137,12 @@
 	icon_state = "glasses"
 	item_state = "glasses"
 	vision_correction = 1 //corrects nearsightedness
+
+/obj/item/clothing/glasses/regular/jamjar
+	name = "Jamjar Glasses"
+	desc = "Also known as Virginity Protectors."
+	icon_state = "jamjar_glasses"
+	item_state = "jamjar_glasses"
 
 /obj/item/clothing/glasses/regular/hipster
 	name = "Prescription Glasses"
@@ -330,7 +336,7 @@
 				var/mob/living/carbon/C = user
 				C.update_inv_wear_mask()
 		else
-			user << "<span class='notice'>The eye winks at you and vanishes into the abyss, you feel really unlucky.</span>"
+			to_chat(user, "<span class='notice'>The eye winks at you and vanishes into the abyss, you feel really unlucky.</span>")
 		qdel(src)
 	..()
 
@@ -342,9 +348,9 @@
 				if(src == H.glasses)
 					H.client.prefs.uses_glasses_colour = !H.client.prefs.uses_glasses_colour
 					if(H.client.prefs.uses_glasses_colour)
-						H << "You will now see glasses colors."
+						to_chat(H, "You will now see glasses colors.")
 					else
-						H << "You will no longer see glasses colors."
+						to_chat(H, "You will no longer see glasses colors.")
 					H.update_glasses_color(src, 1)
 	else
 		return ..()

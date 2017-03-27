@@ -354,4 +354,4 @@
 
 	msg += "*---------*</span>"
 
-	user << msg
+	to_chat(user, msg)

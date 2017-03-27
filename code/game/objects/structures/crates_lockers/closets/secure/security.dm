@@ -201,7 +201,7 @@
 	new /obj/item/clothing/suit/armor/vest/det_suit(src)
 	new /obj/item/ammo_box/c38(src)
 	new /obj/item/ammo_box/c38(src)
-	new /obj/item/weapon/storage/belt/holster(src)
+	new /obj/item/weapon/storage/belt/holster/full(src)
 	new /obj/item/clothing/head/blackflatcap(src)
 	new /obj/item/weapon/gun/ballistic/revolver/detective(src)
 

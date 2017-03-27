@@ -21,7 +21,7 @@
 /area/awaymission/beach
 	name = "Beach"
 	icon_state = "away"
-	lighting_use_dynamic = DYNAMIC_LIGHTING_ENABLED
+	dynamic_lighting = DYNAMIC_LIGHTING_DISABLED
 	requires_power = 0
 	has_gravity = 1
 	ambientsounds = list('sound/ambience/shore.ogg', 'sound/ambience/seag1.ogg','sound/ambience/seag2.ogg','sound/ambience/seag2.ogg')
@@ -41,8 +41,7 @@
 
 /area/awaymission/errorroom
 	name = "Super Secret Room"
-	luminosity = 1
-	lighting_use_dynamic = DYNAMIC_LIGHTING_DISABLED
+	dynamic_lighting = DYNAMIC_LIGHTING_DISABLED
 	has_gravity = 1
 
 
@@ -51,8 +50,7 @@
 /area/awaymission/research
 	name = "Research Outpost"
 	icon_state = "away"
-	luminosity = 0
-	lighting_use_dynamic = DYNAMIC_LIGHTING_ENABLED
+	dynamic_lighting = DYNAMIC_LIGHTING_ENABLED
 
 /area/awaymission/research/interior
 	name = "Research Inside"
@@ -171,15 +169,13 @@
 	name = "Snow Forest"
 	icon_state = "away"
 	requires_power = 0
-	luminosity = 1
-	lighting_use_dynamic = DYNAMIC_LIGHTING_ENABLED
+	dynamic_lighting = DYNAMIC_LIGHTING_ENABLED
 
 /area/awaymission/cabin
 	name = "Cabin"
 	icon_state = "away2"
 	requires_power = 1
-	luminosity = 0
-	lighting_use_dynamic = DYNAMIC_LIGHTING_ENABLED
+	dynamic_lighting = DYNAMIC_LIGHTING_ENABLED
 
 /area/awaymission/snowforest/lumbermill
 	name = "Lumbermill"
@@ -190,7 +186,6 @@
 /area/awaymission/BMPship
 	name = "BMP Asteroids"
 	icon_state = "away"
-	luminosity = 0
 
 
 /area/awaymission/BMPship/Aft
@@ -246,31 +241,26 @@
 /area/awaymission/wwmines
 	name = "Wild West Mines"
 	icon_state = "away1"
-	luminosity = 1
 	requires_power = 0
 
 /area/awaymission/wwgov
 	name = "Wild West Mansion"
 	icon_state = "away2"
-	luminosity = 1
 	requires_power = 0
 
 /area/awaymission/wwrefine
 	name = "Wild West Refinery"
 	icon_state = "away3"
-	luminosity = 1
 	requires_power = 0
 
 /area/awaymission/wwvault
 	name = "Wild West Vault"
 	icon_state = "away3"
-	luminosity = 0
 
 /area/awaymission/wwvaultdoors
 	name = "Wild West Vault Doors"  // this is to keep the vault area being entirely lit because of requires_power
 	icon_state = "away2"
 	requires_power = 0
-	luminosity = 0
 
 
 /*
@@ -339,8 +329,7 @@
 	name = "Snowdin Tundra Plains"
 	icon_state = "away"
 	requires_power = 0
-	luminosity = 1
-	lighting_use_dynamic = DYNAMIC_LIGHTING_ENABLED
+	dynamic_lighting = DYNAMIC_LIGHTING_ENABLED
 
 /area/awaymission/snowdin/post
 	name = "Snowdin Outpost"
@@ -353,7 +342,6 @@
 /area/awaymission/snowdin/cave
 	name = "Snowdin Caves"
 	icon_state = "away2"
-	luminosity = 0
 
 /area/awaymission/snowdin/base
 	name = "Snowdin Main Base"
@@ -363,7 +351,6 @@
 /area/awaymission/snowdin/dungeon1
 	name = "Snowdin Depths"
 	icon_state = "away2"
-	luminosity = 0
 
 /area/awaymission/snowdin/sekret
 	name = "Snowdin Operations"

@@ -75,7 +75,7 @@
 		var/mob/M = V
 		if(M.z == target_z)
 			if(telegraph_message)
-				M << telegraph_message
+				to_chat(M, telegraph_message)
 			if(telegraph_sound)
 				M << sound(telegraph_sound)
 	PDAs_trigger(pda_start_up_sound, "<span class='danger'><B>[adv_start_up_message]</B></span>", target_z)
@@ -90,7 +90,7 @@
 		var/mob/M = V
 		if(M.z == target_z)
 			if(weather_message)
-				M << weather_message
+				to_chat(M, weather_message)
 			if(weather_sound)
 				M << sound(weather_sound)
 	START_PROCESSING(SSweather, src)
@@ -106,7 +106,7 @@
 		var/mob/M = V
 		if(M.z == target_z)
 			if(end_message)
-				M << end_message
+				to_chat(M, end_message)
 			if(end_sound)
 				M << sound(end_sound)
 	STOP_PROCESSING(SSweather, src)
@@ -137,7 +137,6 @@
 		var/area/N = V
 		N.layer = overlay_layer
 		N.icon = 'icons/effects/weather_effects.dmi'
-		N.invisibility = 0
 		N.color = weather_color
 		switch(stage)
 			if(STARTUP_STAGE)
@@ -148,8 +147,7 @@
 				N.icon_state = end_overlay
 			if(END_STAGE)
 				N.color = null
-				N.icon_state = initial(N.icon_state)
+				N.icon_state = ""
 				N.icon = 'icons/turf/areas.dmi'
 				N.layer = AREA_LAYER //Just default back to normal area stuff since I assume setting a var is faster than initial
-				N.invisibility = INVISIBILITY_MAXIMUM
-				N.opacity = 0
+				N.set_opacity(FALSE)

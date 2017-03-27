@@ -196,6 +196,13 @@
 	results = list("kelotane" = 2)
 	required_reagents = list("silicon" = 1, "carbon" = 1)
 
+/datum/chemical_reaction/clonexadone
+	name = "Clonexadone"
+	id = "clonexadone"
+	results = list("clonexadone" = 2)
+	required_reagents = list("cryoxadone" = 1, "sodium" = 1)
+	required_catalysts = list("plasma" = 5)
+
 /datum/chemical_reaction/haloperidol
 	name = "Haloperidol"
 	id = "haloperidol"

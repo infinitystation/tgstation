@@ -52,9 +52,9 @@
 		return 0
 	if(!M.can_buckle() && !force)
 		if(M == usr)
-			M << "<span class='warning'>Вы не смогли пристегнуть себ&#255; к [src]!</span>"
+			to_chat(M, "<span class='warning'>Вы не смогли пристегнуть себ&#255; к [src]!</span>")
 		else
-			usr << "<span class='warning'>Вы не смогли пристегнуть [M] к [src]!</span>"
+			to_chat(M, "<span class='warning'>Вы не смогли пристегнуть [M] к [src]!</span>")
 		return 0
 
 	if(M.pulledby && buckle_prevents_pull)

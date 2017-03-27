@@ -5,8 +5,8 @@
 	weight = 15
 
 /datum/round_event/anomaly/anomaly_pyro
-	startWhen = 10
-	announceWhen = 3
+	startWhen = 3
+	announceWhen = 10
 
 /datum/round_event/anomaly/anomaly_pyro/announce()
 	priority_announce("Сканеры дальнего радиуса действия обнаружили пирокластическую аномалию. Предположительное место воздействия: [impact_area.name].", "Тревога! Аномалия!")

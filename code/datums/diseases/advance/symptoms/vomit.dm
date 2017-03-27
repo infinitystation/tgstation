@@ -35,7 +35,7 @@ Bonus
 		var/mob/living/M = A.affected_mob
 		switch(A.stage)
 			if(1, 2, 3, 4)
-				M << "<span class='warning'>[pick("Тебе тошнит.", "Ты чувствуешь, что сейчас теб&#255; вырвет!")]</span>"
+				to_chat(M, "<span class='warning'>[pick("Тебе тошнит.", "Ты чувствуешь, что сейчас теб&#255; вырвет!")]</span>")
 			else
 				Vomit(M)
 

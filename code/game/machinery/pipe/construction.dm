@@ -54,7 +54,7 @@ Buildable meters
 
 /obj/item/pipe/examine(mob/user)
 	..()
-	user << "<span class='notice'>Alt-click to rotate it clockwise.</span>"
+	to_chat(user, "<span class='notice'>Alt-click to rotate it clockwise.</span>")
 
 /obj/item/pipe/New(loc, pipe_type, dir, obj/machinery/atmospherics/make_from)
 	..()
@@ -179,7 +179,7 @@ var/global/list/pipeID2State = list(
 /obj/item/pipe/AltClick(mob/user)
 	..()
 	if(user.incapacitated())
-		user << "<span class='warning'>You can't do that right now!</span>"
+		to_chat(user, "<span class='warning'>You can't do that right now!</span>")
 		return
 	if(!in_range(src, user))
 		return
@@ -245,7 +245,7 @@ var/global/list/pipeID2State = list(
 		if(M == A) //we don't want to check to see if it interferes with itself
 			continue
 		if(M.GetInitDirections() & A.GetInitDirections())	// matches at least one direction on either type of pipe
-			user << "<span class='warning'>There is already a pipe at that location!</span>"
+			to_chat(user, "<span class='warning'>There is already a pipe at that location!</span>")
 			qdel(A)
 			return 1
 	// no conflicts found
@@ -293,9 +293,9 @@ var/global/list/pipeID2State = list(
 	if (!istype(W, /obj/item/weapon/wrench))
 		return ..()
 	if(!locate(/obj/machinery/atmospherics/pipe, src.loc))
-		user << "<span class='warning'>You need to fasten it to a pipe!</span>"
+		to_chat(user, "<span class='warning'>You need to fasten it to a pipe!</span>")
 		return 1
 	new/obj/machinery/meter( src.loc )
 	playsound(src.loc, W.usesound, 50, 1)
-	user << "<span class='notice'>You fasten the meter to the pipe.</span>"
+	to_chat(user, "<span class='notice'>You fasten the meter to the pipe.</span>")
 	qdel(src)

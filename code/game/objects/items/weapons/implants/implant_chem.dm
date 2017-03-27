@@ -45,9 +45,9 @@
 	else
 		injectamount = cause
 	reagents.trans_to(R, injectamount)
-	R << "<span class='italics'>You hear a faint beep.</span>"
+	to_chat(R, "<span class='italics'>You hear a faint beep.</span>")
 	if(!reagents.total_volume)
-		R << "<span class='italics'>You hear a faint click from your chest.</span>"
+		to_chat(R, "<span class='italics'>You hear a faint click from your chest.</span>")
 		qdel(src)
 
 
@@ -57,11 +57,7 @@
 /obj/item/weapon/implantcase/chem
 	name = "implant case - 'Remote Chemical'"
 	desc = "A glass case containing a remote chemical implant."
-	flags = OPENCONTAINER
-
-/obj/item/weapon/implantcase/chem/New()
-	imp = new /obj/item/weapon/implant/chem(src)
-	..()
+	imp_type = /obj/item/weapon/implant/chem
 
 /obj/item/weapon/implantcase/chem/attackby(obj/item/weapon/W, mob/user, params)
 	if(istype(W,/obj/item/weapon/reagent_containers/syringe) && imp)

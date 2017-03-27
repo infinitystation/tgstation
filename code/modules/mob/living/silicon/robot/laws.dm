@@ -17,29 +17,31 @@
 	if(lawupdate)
 		if (connected_ai)
 			if(connected_ai.stat || connected_ai.control_disabled)
-				src << "<b>AI signal lost, unable to sync laws.</b>"
+				to_chat(src, "<b>AI signal lost, unable to sync laws.</b>")
 
 			else
 				lawsync()
-				src << "<b>Laws synced with AI, be sure to note any changes.</b>"
+				to_chat(src, "<b>Laws synced with AI, be sure to note any changes.</b>")
 				if(is_special_character(src))
-					src << "<b>Remember, your AI does NOT share or know about your law 0.</b>"
+					to_chat(src, "<b>Remember, your AI does NOT share or know about your law 0.</b>")
 					if(src.connected_ai.laws.zeroth)
-						src << "<b>While you are free to disregard it, your AI has a law 0 of its own.</b>"
+						to_chat(src, "<b>While you are free to disregard it, your AI has a law 0 of its own.</b>")
 		else
-			src << "<b>No AI selected to sync laws with, disabling lawsync protocol.</b>"
+			to_chat(src, "<b>No AI selected to sync laws with, disabling lawsync protocol.</b>")
 			lawupdate = 0
 
-	who << "<b>Следуйте этим законам:</b>"
+	to_chat(who, "<b>Следуйте этим законам:</b>")
 	laws.show_laws(who)
-	if (is_special_character(src) && connected_ai)
-		who << "<b>Запомните, [connected_ai.name] технически &#255;вл&#255;етс&#255; вашим мастером, но ваши задани&#255; приоритетнее.</b>"
+	if (shell) //AI shell
+		to_chat(who, "<b>Remember, you are an AI remotely controlling your shell, other AIs can be ignored.</b>")
+	else if (is_special_character(src) && connected_ai)
+		to_chat(who, "<b>Remember, [connected_ai.name] is technically your master, but your objective comes first.</b>")
 	else if (connected_ai)
-		who << "<b>Запомните, [connected_ai.name] ваш мастер, другие ИИ могут быть игнорированы.</b>"
+		to_chat(who, "<b>Remember, [connected_ai.name] is your master, other AIs can be ignored.</b>")
 	else if (emagged)
-		who << "<b>Запомните, вам не об&#255;зательно подчин&#255;тьс&#255; ИИ.</b>"
+		to_chat(who, "<b>Remember, you are not required to listen to the AI.</b>")
 	else
-		who << "<b>Запомните, Вы не прив&#255;заны ни к одному ИИ, вам не об&#255;зательно подчин&#255;тьс&#255; им.</b>"
+		to_chat(who, "<b>Remember, you are not bound to any AI, you are not required to listen to them.</b>")
 
 
 /mob/living/silicon/robot/proc/lawsync()

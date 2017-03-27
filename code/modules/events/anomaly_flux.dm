@@ -7,8 +7,8 @@
 	weight = 20
 
 /datum/round_event/anomaly/anomaly_flux
-	startWhen = 3
-	announceWhen = 20
+	startWhen = 10
+	announceWhen = 3
 
 /datum/round_event/anomaly/anomaly_flux/announce()
 	priority_announce("Сканеры дальнего радиуса действия обнаружили волны гипер-энергетического потока. Место ожидаемого воздействия: [impact_area.name].", "Тревога! Аномалия!")
