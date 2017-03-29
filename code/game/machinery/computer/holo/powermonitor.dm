@@ -8,6 +8,8 @@
 	active_power_usage = 200
 	circuit = /obj/item/weapon/circuitboard/computer/holo/power
 
+	light_color = LIGHT_COLOR_YELLOW
+
 	var/obj/structure/cable/attached
 
 	var/list/history = list()

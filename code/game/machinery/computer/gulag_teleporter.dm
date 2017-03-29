@@ -13,7 +13,7 @@
 	var/mob/living/carbon/human/prisoner = null
 	var/datum/data/record/temporary_record = null
 
-	light_color = LIGHT_COLOR_RED
+	light_color = LIGHT_COLOR_BLUE
 
 /obj/machinery/computer/gulag_teleporter_computer/New()
 	..()
