@@ -444,6 +444,8 @@
 	shuttleId = "enemy"
 	possible_destinations = "enemy_home;enemy_station;enemy_lavaland;enemy_station_space"
 
+	light_color = LIGHT_COLOR_RED
+
 /obj/item/weapon/circuitboard/computer/enemy_shuttle
 	name = "Enemy Shuttle Console (Computer Board)"
 	build_path = /obj/machinery/computer/shuttle/enemy

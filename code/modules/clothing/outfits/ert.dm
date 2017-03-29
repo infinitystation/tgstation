@@ -51,6 +51,7 @@
 	backpack_contents = list(/obj/item/weapon/storage/box/engineer=1,\
 		/obj/item/weapon/melee/baton/loaded=1,\
 		/obj/item/clothing/mask/gas/sechailer/swat=1,\
+		/obj/item/device/forcefield =1,\
 		/obj/item/weapon/gun/energy/pulse/pistol/loyalpin=1)
 	l_pocket = /obj/item/weapon/melee/energy/sword/saber
 
