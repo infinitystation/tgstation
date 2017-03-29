@@ -4,11 +4,11 @@
 //  -Cyberboss
 
 /datum/map_config
-    var/config_filename = "_maps/tgstation2.json"
-    var/map_dm = "_maps/tgstation2.dm"
-    var/map_name = "Box Station"
-    var/map_path = "map_files/TgStation"
-    var/map_file = "tgstation.2.1.3.dmm"
+    var/config_filename = "_maps/infinity_metastation.json"
+    var/map_dm = "_maps/infinity_metastation.dm"
+    var/map_name = "Infinity MetaStation"
+    var/map_path = "map_files/Infinity_MetaStation"
+    var/map_file = "MetaStation.dmm"
 
     var/minetype = "lavaland"
 
