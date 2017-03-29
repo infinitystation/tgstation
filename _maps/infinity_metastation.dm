@@ -1,3 +1,6 @@
+#define FORCE_MAP "_maps/infinity_metastation.json"
+
+/*
 #if !defined(MAP_FILE)
 
 		#define TITLESCREEN "title"
@@ -25,3 +28,4 @@
 	#warn a map has already been included, ignoring Infinity MetaStation.
 
 #endif
+*/
