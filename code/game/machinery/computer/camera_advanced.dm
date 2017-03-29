@@ -10,7 +10,7 @@
 	var/datum/action/innate/camera_off/off_action = new
 	var/datum/action/innate/camera_jump/jump_action = new
 
-	light_color = LIGHT_COLOR_RED
+	light_color = LIGHT_COLOR_BLUE
 
 /obj/machinery/computer/camera_advanced/proc/CreateEye()
 	eyeobj = new()

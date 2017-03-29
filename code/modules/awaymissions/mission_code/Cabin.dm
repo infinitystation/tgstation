@@ -6,6 +6,7 @@
 	icon_state = "firepit-active"
 	density = 0
 	var/active = 1
+	light_color = LIGHT_COLOR_FIRE
 
 /obj/structure/firepit/Initialize()
 	..()
