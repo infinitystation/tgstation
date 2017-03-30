@@ -29,7 +29,6 @@
 /area/awaymission/beach/New() //Let's make day/night on a beach!
 	..()
 	if(prob(50))
-		requires_power = 1
 		dynamic_lighting = DYNAMIC_LIGHTING_ENABLED
 
 /area/awaymission/beach/hotel

@@ -2,7 +2,6 @@
 	icon_state = "floor1"
 	base_state = "floor"
 	fitting = "floor"
-	brightness = 5
 	layer = 2
 	desc = "A small floor lighting fixture."
 	light_type = /obj/item/weapon/light/bulb

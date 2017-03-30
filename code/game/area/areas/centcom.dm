@@ -83,7 +83,6 @@
 	requires_power = 0
 	noteleport = 1
 	has_gravity = 1
-	dynamic_lighting = DYNAMIC_LIGHTING_FORCED
 
 //Syndicates
 /area/syndicate_mothership
