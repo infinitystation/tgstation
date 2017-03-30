@@ -57320,7 +57320,6 @@
 /obj/machinery/light/small{
 	dir = 4
 	},
-/obj/machinery/atmospherics/miner/n2o,
 /turf/open/floor/engine/n2o,
 /area/atmos)
 "bTE" = (
@@ -60803,7 +60802,6 @@
 /obj/machinery/light/small{
 	dir = 4
 	},
-/obj/machinery/atmospherics/miner/toxins,
 /turf/open/floor/engine/plasma,
 /area/atmos)
 "bZQ" = (
@@ -63936,7 +63934,6 @@
 /obj/machinery/light/small{
 	dir = 4
 	},
-/obj/machinery/atmospherics/miner/carbon_dioxide,
 /turf/open/floor/engine/co2,
 /area/atmos)
 "cfq" = (
@@ -73464,12 +73461,10 @@
 /area/maintenance/incinerator)
 "cuG" = (
 /obj/machinery/light/small,
-/obj/machinery/atmospherics/miner/nitrogen,
 /turf/open/floor/engine/n2,
 /area/atmos)
 "cuH" = (
 /obj/machinery/light/small,
-/obj/machinery/atmospherics/miner/oxygen,
 /turf/open/floor/engine/o2,
 /area/atmos)
 "cuI" = (
@@ -107328,8 +107323,8 @@ bez
 bez
 bez
 dgz
-blk
-blk
+dgz
+dgz
 bez
 bez
 bez
