@@ -8,8 +8,6 @@
 	var/active = 1
 	light_color = LIGHT_COLOR_FIRE
 
-	light_color = LIGHT_COLOR_ORANGE
-
 /obj/structure/firepit/Initialize()
 	..()
 	toggleFirepit()
