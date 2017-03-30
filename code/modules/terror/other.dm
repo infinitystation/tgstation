@@ -489,3 +489,13 @@
 /obj/machinery/tiberium/deconstruct(disassembled = FALSE)
 	new /obj/item/weapon/ore/tiberium (loc, 2)
 	qdel(src)
+
+/obj/structure/fluff/shuttle_AI
+	name = "Shuttle's control systeam"
+	desc = "»спользуется для непосредственного удаленного контроля из центра связи ÷ентрального  оммандования. Ќи на что не годен и по слухам, внутри ничего нет. —ерьезно."
+	icon = 'icons/obj/infinity_object.dmi'
+	icon_state = "tracker"
+	anchored = 1
+	density = 1
+	obj_integrity = 250
+	max_integrity = 250
