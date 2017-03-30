@@ -440,7 +440,7 @@ var/next_mob_id = 0
 		return
 
 	if(stat != 2)
-		usr << "\blue <B>You must be dead to use this!</B>"
+		to_chat(usr, "\blue <B>You must be dead to use this!</B>")
 		return
 
 	//and observer starters too!
@@ -451,7 +451,7 @@ var/next_mob_id = 0
 
 	//respawn allowed?
 	if(!(abandon_allowed) && !(client.allow_respawn))
-		usr << "Респавн отключен =("
+		to_chat(usr, "Респавн отключен =(")
 		return
 
 	//sandbox?
@@ -593,11 +593,12 @@ var/next_mob_id = 0
 		if (client)
 			stat(null, "Ping: [round(client.lastping, 1)]ms (Average: [round(client.avgping, 1)]ms)")
 		stat(null, "Map: [SSmapping.config.map_name]")
-		if(nextmap && istype(nextmap))
-			stat(null, "Next Map: [nextmap.friendlyname]")
+		var/datum/map_config/cached = SSmapping.next_map_config
+		if(cached)
+			stat(null, "Next Map: [cached.map_name]")
 		if(currentbuild)
 			stat(null, "Build: [currentbuild.friendlyname]")
-		if(nextbuild && istype(nextbuild))
+		if (nextbuild && istype(nextbuild))
 			stat(null, "Next Build: [nextbuild.friendlyname]")
 		stat(null, "Server Time: [time2text(world.timeofday, "YYYY-MM-DD hh:mm:ss")]")
 		stat(null, "Station Time: [worldtime2text()]")
@@ -803,15 +804,6 @@ var/next_mob_id = 0
 	mob_spell_list += S
 	S.action.Grant(src)
 
-/mob/proc/RemoveSpell(obj/effect/proc_holder/spell/spell)
-	if(!spell)
-		return
-	for(var/X in mob_spell_list)
-		var/obj/effect/proc_holder/spell/S = X
-		if(istype(S, spell))
-			mob_spell_list -= S
-			qdel(S)
-
 /mob/verb/update_flavor_text()
 	set src in usr
 	if(usr != src)
@@ -840,6 +832,15 @@ var/next_mob_id = 0
 			return "<span class='notice'>[msg]</span>"
 		else
 			return "<span class='notice'>[copytext(msg, 1, 37)]... <a href=?src=\ref[usr];flavor_more=\ref[src]>More...</a></span>"
+
+/mob/proc/RemoveSpell(obj/effect/proc_holder/spell/spell)
+	if(!spell)
+		return
+	for(var/X in mob_spell_list)
+		var/obj/effect/proc_holder/spell/S = X
+		if(istype(S, spell))
+			mob_spell_list -= S
+			qdel(S)
 
 //override to avoid rotating pixel_xy on mobs
 /mob/shuttleRotate(rotation)

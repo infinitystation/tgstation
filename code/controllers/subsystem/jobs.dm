@@ -53,8 +53,6 @@ var/datum/controller/subsystem/job/SSjob
 
 
 /datum/controller/subsystem/job/proc/Debug(text)
-	if(!Debug2)
-		return 0
 	job_debug.Add(text)
 	job_subsystem_debug << "\[[time_stamp()]]: [text]"
 	return 1
@@ -168,19 +166,19 @@ var/datum/controller/subsystem/job/SSjob
 //it locates a head or runs out of levels to check
 //This is basically to ensure that there's atleast a few heads in the round
 /datum/controller/subsystem/job/proc/FillHeadPosition()
-	for(var/level = 1 to 3)
-		for(var/command_position in command_positions)
-			var/datum/job/job = GetJob(command_position)
-			if(!job)
-				continue
-			if((job.current_positions >= job.total_positions) && job.total_positions != -1)
-				continue
-			var/list/candidates = FindOccupationCandidates(job, level)
-			if(!candidates.len)
-				continue
-			var/mob/dead/new_player/candidate = pick(candidates)
-			if(AssignRole(candidate, command_position))
-				return 1
+	var/level = 1
+	for(var/command_position in command_positions)
+		var/datum/job/job = GetJob(command_position)
+		if(!job)
+			continue
+		if((job.current_positions >= job.total_positions) && job.total_positions != -1)
+			continue
+		var/list/candidates = FindOccupationCandidates(job, level)
+		if(!candidates.len)
+			continue
+		var/mob/dead/new_player/candidate = pick(candidates)
+		if(AssignRole(candidate, command_position))
+			return 1
 	return 0
 
 
@@ -426,13 +424,13 @@ var/datum/controller/subsystem/job/SSjob
 			else
 				M = H
 
-	H << "<b>Ваша професси&#255; - [rank].</b>"
-	H << "<b>Как [rank] вы подчин&#255;етесь [job.supervisors]. Некоторые ситуации могут это изменить</b>"
-	H << "<b>Чтобы использовать рабочий канал радиосв&#255;зи, используйте префикс :h. Чтобы посмотреть другие каналы, посмотрите на вашу гарнитуру.</b>"
+	to_chat(M, "<b>Ваша професси&#255; - [rank].</b>")
+	to_chat(M, "<b>Как [rank] вы подчин&#255;етесь [job.supervisors]. Некоторые ситуации могут это изменить</b>")
+	to_chat(M, "<b>Чтобы использовать рабочий канал радиосв&#255;зи, используйте префикс :h. Чтобы посмотреть другие каналы, посмотрите на вашу гарнитуру.</b>")
 	if(job.req_admin_notify)
-		H << "<b>Вы играете за профессию, котора&#255; очень важна дл&#255; общего хода игры. Если вы обнаружили, что не можете выполн&#255;ть эту работу из-за обсто&#255;тельств, происход&#255;щих в вашей реальной жизни, просто дайте знать об этом администрации (Adminhelp) ДО того, как вы уйдёте, пожалуйста.</b>"
+		to_chat(M, "<b>Вы играете за профессию, котора&#255; очень важна дл&#255; общего хода игры. Если вы обнаружили, что не можете выполн&#255;ть эту работу из-за обсто&#255;тельств, происход&#255;щих в вашей реальной жизни, просто дайте знать об этом администрации (Adminhelp) ДО того, как вы уйдёте, пожалуйста.</b>")
 	if(config.minimal_access_threshold)
-		H << "<FONT color='blue'><B>Изначально, станци&#255; укомплектована [config.jobs_have_minimal_access ? "полным экипажем. У вашего персонажа есть только минимально-необходимый доступ в ID-карте и знани&#255; только данной профессии" : "неполным экипажем. У вашего персонажа, возможно, есть дополнительный доступ на ID-карте и дополнительные (только касающиес&#255; вашего отдела) знани&#255; дл&#255; данной профессии"]</B></font>"
+		to_chat(M, "<FONT color='blue'><B>Изначально, станци&#255; укомплектована [config.jobs_have_minimal_access ? "полным экипажем. У вашего персонажа есть только минимально-необходимый доступ в ID-карте и знани&#255; только данной профессии" : "неполным экипажем. У вашего персонажа, возможно, есть дополнительный доступ на ID-карте и дополнительные (только касающиес&#255; вашего отдела) знани&#255; дл&#255; данной профессии"]</B></font>")
 
 	if(job && H)
 		job.after_spawn(H, M)

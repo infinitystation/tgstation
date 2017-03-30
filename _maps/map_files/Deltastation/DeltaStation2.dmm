@@ -9588,15 +9588,11 @@
 "atl" = (
 /obj/machinery/ai_status_display,
 /turf/closed/wall/r_wall,
-/area/engine/gravity_generator{
-	name = "Atmospherics Engine"
-	})
+/area/engine/supermatter)
 "atm" = (
 /obj/machinery/status_display,
 /turf/closed/wall/r_wall,
-/area/engine/gravity_generator{
-	name = "Atmospherics Engine"
-	})
+/area/engine/supermatter)
 "atn" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/effect/turf_decal/stripes/line{
@@ -10244,9 +10240,7 @@
 	dir = 4
 	},
 /turf/open/floor/plating,
-/area/engine/gravity_generator{
-	name = "Atmospherics Engine"
-	})
+/area/engine/supermatter)
 "auC" = (
 /obj/machinery/power/rad_collector{
 	anchored = 1
@@ -10256,9 +10250,13 @@
 	icon_state = "0-8"
 	},
 /turf/open/floor/circuit/green,
+<<<<<<< HEAD
 /area/engine/gravity_generator{
 	name = "Atmospherics Engine"
 	})
+=======
+/area/engine/supermatter)
+>>>>>>> 27c568e5561aaf178b4c020f899f18c378484538
 "auD" = (
 /obj/structure/grille,
 /obj/machinery/atmospherics/pipe/simple/general/visible{
@@ -10267,9 +10265,7 @@
 	},
 /obj/structure/window/reinforced/highpressure/fulltile,
 /turf/open/floor/plating,
-/area/engine/gravity_generator{
-	name = "Atmospherics Engine"
-	})
+/area/engine/supermatter)
 "auE" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber{
 	dir = 8;
@@ -10277,18 +10273,14 @@
 	scrub_Toxins = 0
 	},
 /turf/open/floor/engine,
-/area/engine/gravity_generator{
-	name = "Atmospherics Engine"
-	})
+/area/engine/supermatter)
 "auF" = (
 /obj/machinery/atmospherics/components/unary/vent_pump{
 	dir = 4;
 	on = 1
 	},
 /turf/open/floor/engine,
-/area/engine/gravity_generator{
-	name = "Atmospherics Engine"
-	})
+/area/engine/supermatter)
 "auG" = (
 /obj/structure/grille,
 /obj/machinery/atmospherics/pipe/simple/general/visible{
@@ -10296,9 +10288,7 @@
 	},
 /obj/structure/window/reinforced/highpressure/fulltile,
 /turf/open/floor/plating,
-/area/engine/gravity_generator{
-	name = "Atmospherics Engine"
-	})
+/area/engine/supermatter)
 "auH" = (
 /obj/machinery/power/rad_collector{
 	anchored = 1
@@ -10308,9 +10298,13 @@
 	d2 = 4
 	},
 /turf/open/floor/circuit/green,
+<<<<<<< HEAD
 /area/engine/gravity_generator{
 	name = "Atmospherics Engine"
 	})
+=======
+/area/engine/supermatter)
+>>>>>>> 27c568e5561aaf178b4c020f899f18c378484538
 "auI" = (
 /obj/structure/cable{
 	d1 = 4;
@@ -10326,9 +10320,7 @@
 	dir = 8
 	},
 /turf/open/floor/plating,
-/area/engine/gravity_generator{
-	name = "Atmospherics Engine"
-	})
+/area/engine/supermatter)
 "auJ" = (
 /obj/structure/cable{
 	d1 = 2;
@@ -10878,15 +10870,11 @@
 	},
 /obj/structure/window/reinforced/highpressure/fulltile,
 /turf/open/floor/plating,
-/area/engine/gravity_generator{
-	name = "Atmospherics Engine"
-	})
+/area/engine/supermatter)
 "avQ" = (
 /obj/machinery/power/supermatter_shard/crystal,
 /turf/open/floor/engine,
-/area/engine/gravity_generator{
-	name = "Atmospherics Engine"
-	})
+/area/engine/supermatter)
 "avR" = (
 /obj/structure/grille,
 /obj/machinery/atmospherics/pipe/manifold/general/visible{
@@ -10895,9 +10883,7 @@
 	},
 /obj/structure/window/reinforced/highpressure/fulltile,
 /turf/open/floor/plating,
-/area/engine/gravity_generator{
-	name = "Atmospherics Engine"
-	})
+/area/engine/supermatter)
 "avS" = (
 /obj/structure/cable{
 	d1 = 4;
@@ -10914,9 +10900,7 @@
 	dir = 8
 	},
 /turf/open/floor/plating,
-/area/engine/gravity_generator{
-	name = "Atmospherics Engine"
-	})
+/area/engine/supermatter)
 "avT" = (
 /obj/structure/cable{
 	d1 = 2;
@@ -11410,9 +11394,7 @@
 	dir = 4
 	},
 /turf/open/floor/plating,
-/area/engine/gravity_generator{
-	name = "Atmospherics Engine"
-	})
+/area/engine/supermatter)
 "awV" = (
 /obj/structure/cable{
 	d1 = 2;
@@ -11885,18 +11867,14 @@
 	dir = 5
 	},
 /turf/closed/wall/r_wall,
-/area/engine/gravity_generator{
-	name = "Atmospherics Engine"
-	})
+/area/engine/supermatter)
 "axQ" = (
 /obj/machinery/atmospherics/pipe/simple/general/visible{
 	dir = 10
 	},
 /obj/machinery/meter,
 /turf/closed/wall/r_wall,
-/area/engine/gravity_generator{
-	name = "Atmospherics Engine"
-	})
+/area/engine/supermatter)
 "axR" = (
 /obj/machinery/door/airlock/glass_atmos{
 	heat_proof = 1;
@@ -11905,9 +11883,7 @@
 	req_one_access_txt = "24;10"
 	},
 /turf/open/floor/engine,
-/area/engine/gravity_generator{
-	name = "Atmospherics Engine"
-	})
+/area/engine/supermatter)
 "axS" = (
 /obj/machinery/atmospherics/pipe/simple/general/visible{
 	icon_state = "intact";
@@ -11915,17 +11891,13 @@
 	},
 /obj/machinery/meter,
 /turf/closed/wall/r_wall,
-/area/engine/gravity_generator{
-	name = "Atmospherics Engine"
-	})
+/area/engine/supermatter)
 "axT" = (
 /obj/machinery/atmospherics/pipe/simple/general/visible{
 	dir = 9
 	},
 /turf/closed/wall/r_wall,
-/area/engine/gravity_generator{
-	name = "Atmospherics Engine"
-	})
+/area/engine/supermatter)
 "axU" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -12556,9 +12528,7 @@
 	name = "Gas to Filter"
 	},
 /turf/open/floor/engine,
-/area/engine/gravity_generator{
-	name = "Atmospherics Engine"
-	})
+/area/engine/supermatter)
 "azf" = (
 /obj/machinery/atmospherics/components/binary/pump{
 	dir = 1;
@@ -12566,9 +12536,7 @@
 	name = "Gas to Chamber"
 	},
 /turf/open/floor/engine,
-/area/engine/gravity_generator{
-	name = "Atmospherics Engine"
-	})
+/area/engine/supermatter)
 "azg" = (
 /obj/machinery/atmospherics/components/unary/portables_connector/visible,
 /obj/structure/extinguisher_cabinet{
@@ -13108,9 +13076,7 @@
 "aAd" = (
 /obj/machinery/atmospherics/pipe/simple/general/visible,
 /turf/closed/wall/r_wall,
-/area/engine/gravity_generator{
-	name = "Atmospherics Engine"
-	})
+/area/engine/supermatter)
 "aAe" = (
 /obj/machinery/atmospherics/components/binary/pump,
 /obj/effect/turf_decal/bot,
@@ -13669,9 +13635,7 @@
 	dir = 1
 	},
 /turf/open/floor/plasteel,
-/area/engine/gravity_generator{
-	name = "Atmospherics Engine"
-	})
+/area/engine/supermatter)
 "aBe" = (
 /obj/machinery/atmospherics/pipe/manifold/general/visible,
 /obj/machinery/meter,
@@ -110595,9 +110559,13 @@
 	})
 "ebG" = (
 /turf/open/floor/engine,
+<<<<<<< HEAD
 /area/engine/gravity_generator{
 	name = "Atmospherics Engine"
 	})
+=======
+/area/engine/supermatter)
+>>>>>>> 27c568e5561aaf178b4c020f899f18c378484538
 "ebJ" = (
 /obj/machinery/door/window/brigdoor/northleft{
 	name = "Captain's Desk";
@@ -112888,9 +112856,13 @@
 	network = list("Engine")
 	},
 /turf/open/floor/circuit/green,
+<<<<<<< HEAD
 /area/engine/gravity_generator{
 	name = "Atmospherics Engine"
 	})
+=======
+/area/engine/supermatter)
+>>>>>>> 27c568e5561aaf178b4c020f899f18c378484538
 "ehz" = (
 /obj/structure/chair/office/dark{
 	dir = 8
@@ -112900,6 +112872,52 @@
 	},
 /turf/open/floor/plasteel/neutral,
 /area/atmos)
+<<<<<<< HEAD
+=======
+"ehA" = (
+/turf/closed/wall/r_wall,
+/area/engine/supermatter)
+"ehB" = (
+/turf/closed/wall/r_wall,
+/area/engine/supermatter)
+"ehC" = (
+/turf/closed/wall/r_wall,
+/area/engine/supermatter)
+"ehD" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced/highpressure/fulltile,
+/turf/open/floor/plating,
+/area/engine/supermatter)
+"ehE" = (
+/turf/closed/wall/r_wall,
+/area/engine/supermatter)
+"ehF" = (
+/turf/closed/wall/r_wall,
+/area/engine/supermatter)
+"ehG" = (
+/turf/closed/wall/r_wall,
+/area/engine/supermatter)
+"ehH" = (
+/turf/closed/wall/r_wall,
+/area/engine/supermatter)
+"ehI" = (
+/turf/closed/wall/r_wall,
+/area/engine/supermatter)
+"ehJ" = (
+/obj/structure/sign/radiation,
+/turf/closed/wall/r_wall,
+/area/engine/supermatter)
+"ehK" = (
+/obj/structure/sign/radiation,
+/turf/closed/wall/r_wall,
+/area/engine/supermatter)
+"ehL" = (
+/turf/closed/wall/r_wall,
+/area/engine/supermatter)
+"ehM" = (
+/turf/closed/wall/r_wall,
+/area/engine/supermatter)
+>>>>>>> 27c568e5561aaf178b4c020f899f18c378484538
 
 (1,1,1) = {"
 aaa
@@ -113159,6 +113177,7 @@ aaa
 aaa
 "}
 (2,1,1) = {"
+<<<<<<< HEAD
 aaa
 aaa
 aaa
@@ -113183,6 +113202,8 @@ aaa
 aaa
 aaa
 aaa
+=======
+>>>>>>> 27c568e5561aaf178b4c020f899f18c378484538
 aaa
 aaa
 aaa
@@ -113440,6 +113461,8 @@ aaa
 aaa
 aaa
 aaa
+"}
+(3,1,1) = {"
 aaa
 aaa
 aaa
@@ -113697,6 +113720,8 @@ aaa
 aaa
 aaa
 aaa
+"}
+(4,1,1) = {"
 aaa
 aaa
 aaa
@@ -113954,6 +113979,8 @@ aaa
 aaa
 aaa
 aaa
+"}
+(5,1,1) = {"
 aaa
 aaa
 aaa
@@ -114067,7 +114094,10 @@ aaa
 aaa
 aaa
 aaa
+<<<<<<< HEAD
+=======
 aaa
+>>>>>>> 27c568e5561aaf178b4c020f899f18c378484538
 aaa
 aaa
 aaa
@@ -114162,6 +114192,32 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+"}
+(6,1,1) = {"
 aaa
 aaa
 aaa
@@ -114419,6 +114475,8 @@ aaa
 aaa
 aaa
 aaa
+"}
+(7,1,1) = {"
 aaa
 aaa
 aaa
@@ -114676,6 +114734,8 @@ aaa
 aaa
 aaa
 aaa
+"}
+(8,1,1) = {"
 aaa
 aaa
 aaa
@@ -114933,6 +114993,8 @@ aaa
 aaa
 aaa
 aaa
+"}
+(9,1,1) = {"
 aaa
 aaa
 aaa
@@ -115190,6 +115252,8 @@ aaa
 aaa
 aaa
 aaa
+"}
+(10,1,1) = {"
 aaa
 aaa
 aaa
@@ -115447,6 +115511,8 @@ aaa
 aaa
 aaa
 aaa
+"}
+(11,1,1) = {"
 aaa
 aaa
 aaa
@@ -115491,6 +115557,16 @@ aaa
 aaa
 aaa
 aaa
+adm
+adn
+adn
+adn
+adn
+adn
+adn
+adn
+adn
+aes
 aaa
 aaa
 aaa
@@ -115704,6 +115780,8 @@ aaa
 aaa
 aaa
 aaa
+"}
+(12,1,1) = {"
 aaa
 aaa
 aaa
@@ -115742,6 +115820,22 @@ aaa
 aaa
 aaa
 aaa
+adm
+adn
+adn
+adn
+adn
+adn
+adn
+aiN
+ajI
+aiN
+alK
+amN
+anW
+aoz
+aoC
+apA
 aaa
 aaa
 aaa
@@ -115818,6 +115912,7 @@ aaa
 aaa
 aaa
 aaa
+aad
 aaa
 aaa
 aaa
@@ -115961,6 +116056,8 @@ aaa
 aaa
 aaa
 aaa
+"}
+(13,1,1) = {"
 aaa
 aaa
 aaa
@@ -115999,6 +116096,22 @@ aaa
 aaa
 aaa
 aaa
+adn
+afv
+afK
+afK
+afK
+aho
+adn
+agG
+aeh
+aeG
+aeG
+amO
+aeG
+aoA
+aoC
+apB
 aaa
 aaa
 aaa
@@ -116218,6 +116331,8 @@ aaa
 aaa
 aaa
 aaa
+"}
+(14,1,1) = {"
 aaa
 aaa
 aaa
@@ -116256,6 +116371,22 @@ aaa
 aaa
 aaa
 aaa
+adn
+aeG
+aeG
+aeG
+aeG
+aeG
+aia
+ehe
+aeh
+akK
+alL
+amP
+anX
+aoB
+aoC
+apC
 aaa
 aaa
 aaa
@@ -116414,29 +116545,10 @@ aaa
 aaa
 aaa
 aaa
+<<<<<<< HEAD
+=======
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+>>>>>>> 27c568e5561aaf178b4c020f899f18c378484538
 aaa
 aaa
 aaa
@@ -116509,6 +116621,51 @@ aaa
 aaa
 aaa
 aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+"}
+(15,1,1) = {"
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+adm
+adn
+adn
+adn
+aes
+aaa
+aaa
+adn
+aeG
+aeG
+aeG
+aeG
+aeG
+adn
+aiO
+aeh
+akL
+age
+amQ
+adn
+adn
+adn
+aeI
 aaa
 aaa
 aaa
@@ -116733,6 +116890,8 @@ aaa
 aaa
 aaa
 aaa
+"}
+(16,1,1) = {"
 aaa
 aaa
 aaa
@@ -116764,7 +116923,26 @@ aaa
 aaa
 aaa
 aaa
+adn
+adA
+adT
+aeh
+adn
+aeE
 aaa
+adn
+afw
+afL
+ehd
+agG
+ahp
+adn
+aiP
+aeh
+akL
+age
+amR
+adn
 aaa
 aaa
 aaa
@@ -116990,6 +117168,8 @@ aaa
 aaa
 aaa
 aaa
+"}
+(17,1,1) = {"
 aaa
 aaa
 aaa
@@ -117021,6 +117201,28 @@ aaa
 aaa
 aaa
 aaa
+ado
+adB
+adU
+aeh
+adn
+adn
+adn
+adn
+adn
+adn
+adn
+agH
+agb
+adn
+adn
+adn
+akM
+agb
+adn
+adn
+adn
+aes
 aaa
 aaa
 aaa
@@ -117278,6 +117480,28 @@ aaa
 aaa
 aaa
 aaa
+ado
+adC
+adV
+aeh
+aet
+aeF
+aeT
+ehb
+aeT
+aeT
+agb
+aeG
+aeG
+aeG
+aeG
+ehf
+akL
+age
+aeh
+agb
+aoC
+apA
 aaa
 aaa
 aaa
@@ -117504,28 +117728,6 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
 "}
 (19,1,1) = {"
 aaa
@@ -117535,6 +117737,7 @@ aaa
 aaa
 aaa
 aaa
+<<<<<<< HEAD
 aaa
 aaa
 aaa
@@ -117557,6 +117760,8 @@ aaa
 aaa
 aaa
 aaa
+=======
+>>>>>>> 27c568e5561aaf178b4c020f899f18c378484538
 ado
 adD
 adW
@@ -119124,6 +119329,19 @@ aoC
 apB
 aaa
 aaa
+<<<<<<< HEAD
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+=======
+>>>>>>> 27c568e5561aaf178b4c020f899f18c378484538
 aaa
 aaa
 aaa
@@ -119145,6 +119363,8 @@ aaa
 aaa
 aaa
 aaa
+<<<<<<< HEAD
+=======
 aaa
 aaa
 aaa
@@ -119155,6 +119375,7 @@ aaa
 aaa
 aaa
 aaa
+>>>>>>> 27c568e5561aaf178b4c020f899f18c378484538
 aaa
 aaa
 aaa
@@ -119384,6 +119605,19 @@ aaa
 aaa
 aaa
 aaa
+<<<<<<< HEAD
+=======
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+>>>>>>> 27c568e5561aaf178b4c020f899f18c378484538
 aaa
 aaa
 aaa
@@ -119402,6 +119636,7 @@ aaa
 aaa
 aaa
 aaa
+<<<<<<< HEAD
 aaa
 aaa
 aaa
@@ -119412,6 +119647,8 @@ aaa
 aaa
 aaa
 aaa
+=======
+>>>>>>> 27c568e5561aaf178b4c020f899f18c378484538
 aaa
 aaa
 aaa
@@ -137907,11 +138144,11 @@ aoI
 apK
 ard
 asi
-aiW
+ehA
 auC
 auC
 auC
-aiW
+ehH
 azc
 aAc
 aAZ
@@ -138164,13 +138401,13 @@ aoJ
 apL
 are
 asj
-aiW
+ehB
 auD
 avP
 avP
 axP
-azd
-aiW
+ehJ
+ehL
 aAY
 ark
 aDH
@@ -138421,7 +138658,7 @@ aoK
 apM
 arf
 ask
-aiW
+ehC
 auE
 auE
 auE
@@ -138678,7 +138915,7 @@ aoK
 apN
 arg
 asl
-aoK
+ehD
 ebG
 avQ
 ebG
@@ -138935,7 +139172,7 @@ aoK
 apO
 arh
 asm
-aiW
+ehE
 auF
 auF
 auF
@@ -139192,13 +139429,13 @@ aoL
 apP
 ari
 asn
-aiW
+ehF
 auG
 avR
 avR
 axT
-azd
-aiW
+ehK
+ehM
 aBd
 ark
 aDL
@@ -139449,11 +139686,16 @@ aoI
 apK
 ebP
 aso
+<<<<<<< HEAD
 aiW
 ehy
+=======
+ehG
+ehy
 auH
+>>>>>>> 27c568e5561aaf178b4c020f899f18c378484538
 auH
-aiW
+ehI
 azg
 aAe
 aBe

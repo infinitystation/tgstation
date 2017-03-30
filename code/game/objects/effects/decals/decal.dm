@@ -57,4 +57,10 @@
 	icon_state = "bot"
 
 /obj/effect/turf_decal/loading_area
-	icon_state = "loadingarea"
+	icon_state = "loading_area"
+
+/obj/effect/turf_decal/sand
+	icon_state = "sandyfloor"
+
+/obj/effect/turf_decal/sand/plating
+	icon_state = "sandyplating"

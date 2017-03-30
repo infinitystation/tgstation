@@ -17,10 +17,10 @@
 	var/default_color = "#FFF"	// if alien colors are disabled, this is the color that will be used by that race
 
 	var/sexes = 1		// whether or not the race has sexual characteristics. at the moment this is only 0 for skeletons and shadows
-	
+
 	var/face_y_offset = 0
 	var/hair_y_offset = 0
-	
+
 	var/hair_color = null	// this allows races to have specific hair colors... if null, it uses the H's hair/facial hair colors. if "mutcolor", it uses the H's mutant_color
 	var/hair_alpha = 255	// the alpha used by the hair. 255 is completely solid, 0 is transparent.
 
@@ -836,7 +836,7 @@
 	//need to shit? yes! yes! yes!
 	if(H.need_to_shit >= SHIT_LEVEL_MAX)
 		H.emote("shit")
-		H << "<span class='notice'>Вы справили нужду</span>"
+		to_chat(H, "<span class='notice'>Вы справили нужду</span>")
 
 	// nutrition decrease & shit increase
 	if (H.nutrition > 0 && H.stat != 2)
@@ -1123,7 +1123,6 @@
 		return 1
 	else
 		user.do_attack_animation(target, ATTACK_EFFECT_DISARM)
-		add_logs(user, target, "disarmed")
 
 		if(target.w_uniform)
 			target.w_uniform.add_fingerprint(user)
@@ -1135,23 +1134,23 @@
 				"<span class='userdanger'>[user] has pushed [target]!</span>", null, COMBAT_MESSAGE_RANGE)
 			target.apply_effect(2, WEAKEN, target.run_armor_check(affecting, "melee", "Your armor prevents your fall!", "Your armor softens your fall!"))
 			target.forcesay(hit_appends)
+			add_logs(user, target, "disarmed", " pushing them to the ground")
 			return
 
-		var/talked = 0	// BubbleWrap
-
 		if(randn <= 60)
-			//BubbleWrap: Disarming breaks a pull
+			var/obj/item/I = null
 			if(target.pulling)
 				to_chat(target, "<span class='warning'>[user] has broken [target]'s grip on [target.pulling]!</span>")
-				talked = 1
 				target.stop_pulling()
-			//End BubbleWrap
-
-			if(!talked)	//BubbleWrap
+			else
+				I = target.get_active_held_item()
 				if(target.drop_item())
 					target.visible_message("<span class='danger'>[user] has disarmed [target]!</span>", \
 						"<span class='userdanger'>[user] has disarmed [target]!</span>", null, COMBAT_MESSAGE_RANGE)
+				else
+					I = null
 			playsound(target, 'sound/weapons/thudswoosh.ogg', 50, 1, -1)
+			add_logs(user, target, "disarmed", "[I ? " removing \the [I]" : ""]")
 			return
 
 

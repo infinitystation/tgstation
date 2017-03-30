@@ -4,13 +4,13 @@
 	icon_screen = "cameras"
 	icon_keyboard = "security_key"
 	var/mob/camera/aiEye/remote/eyeobj
-	var/mob/living/current_user = null
 	circuit = /obj/item/weapon/circuitboard/computer/adv_security
+	var/mob/living/current_user = null
 	var/list/networks = list("SS13")
 	var/datum/action/innate/camera_off/off_action = new
 	var/datum/action/innate/camera_jump/jump_action = new
 
-	light_color = LIGHT_COLOR_BLUE
+	light_color = LIGHT_COLOR_RED
 
 /obj/machinery/computer/camera_advanced/proc/CreateEye()
 	eyeobj = new()

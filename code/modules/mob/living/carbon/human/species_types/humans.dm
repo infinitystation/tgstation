@@ -9,7 +9,7 @@
 	skinned_type = /obj/item/stack/sheet/animalhide/human
 
 
-/datum/species/human/qualifies_for_rank(rank, list/features)
+/datum/species/human/qualifies_for_rank(rank, list/features)	// TODO@inf-dev проверьте работоспособность и измените в случае чего ~bear1ake@inf-dev
 	if((!features["tail_human"] || features["tail_human"] == "None") && (!features["ears"] || features["ears"] == "None"))
 		return TRUE	//Pure humans are always allowed in all roles.
 	if(rank in security_positions) //This list does not include lawyers.

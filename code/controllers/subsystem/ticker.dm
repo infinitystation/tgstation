@@ -171,9 +171,8 @@ var/datum/controller/subsystem/ticker/ticker
 	//Configure mode and assign player to special mode stuff
 	var/can_continue = 0
 	var/can_continue2 = 0
-	can_continue = src.mode.pre_setup()		//Choose antagonists
-	CHECK_TICK
-	SSjob.DivideOccupations(mode.required_players) 				//Distribute jobs
+	can_continue = src.mode.pre_setup()										//Choose antagonists?	CHECK_TICK
+	can_continue2 = SSjob.DivideOccupations(mode.required_players) 			//Distribute jobs
 	CHECK_TICK
 
 	if(!Debug2)
@@ -386,6 +385,7 @@ var/datum/controller/subsystem/ticker/ticker
 			else
 				player.new_player_panel()
 		CHECK_TICK
+
 /datum/controller/subsystem/ticker/proc/collect_minds()
 	for(var/mob/dead/new_player/P in player_list)
 		if(P.new_character && P.new_character.mind)

@@ -5,7 +5,7 @@
 	var/obj/structure/sign/poster/wanted/wanted_poster = new(person_icon, wanted_name, description)
 	..(loc, wanted_poster)
 	name = "wanted poster ([wanted_name])"
-	desc = "Разыскиваетс&#255; [wanted_name]!"
+	desc = "A wanted poster for [wanted_name]."
 
 /obj/structure/sign/poster/wanted
 	var/wanted_name

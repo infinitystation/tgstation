@@ -163,7 +163,7 @@
 				observer.real_name = observer.client.prefs.real_name
 				observer.name = observer.real_name
 			observer.update_icon()
-			observer.stopLobbySound()
+			observer.stop_sound_channel(CHANNEL_LOBBYMUSIC)
 			qdel(mind)
 
 			qdel(src)
@@ -340,11 +340,10 @@
 /mob/dead/new_player/proc/AttemptLateSpawn(rank)
 	if(client.banprisoned)
 		return
-	
 	if(!IsJobAvailable(rank))
 		alert(src, "[rank] is not available. Please try another.")
 		return 0
-	
+
 	if(ticker.late_join_disabled)
 		alert(src, "An administrator has disabled late join spawning.")
 		return FALSE
@@ -511,12 +510,13 @@
 	if(transfer_after)
 		transfer_character()
 
+	new_character.regenerate_icons()
+
 /mob/dead/new_player/proc/transfer_character()
 	. = new_character
 	if(.)
 		new_character.key = key		//Manually transfer the key to log them in
-		new_character.stopLobbySound()
-		new_character.regenerate_icons()
+		new_character.stop_sound_channel(CHANNEL_LOBBYMUSIC)
 
 
 /mob/dead/new_player/proc/ViewManifest()

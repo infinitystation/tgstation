@@ -2,7 +2,6 @@
 	icon_state = "floor1"
 	base_state = "floor"
 	fitting = "floor"
-	brightness = 5
 	layer = 2
 	desc = "A small floor lighting fixture."
 	light_type = /obj/item/weapon/light/bulb
@@ -443,6 +442,8 @@
 	circuit = /obj/item/weapon/circuitboard/computer/enemy_shuttle
 	shuttleId = "enemy"
 	possible_destinations = "enemy_home;enemy_station;enemy_lavaland;enemy_station_space"
+
+	light_color = LIGHT_COLOR_RED
 
 /obj/item/weapon/circuitboard/computer/enemy_shuttle
 	name = "Enemy Shuttle Console (Computer Board)"

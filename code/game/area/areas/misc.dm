@@ -48,7 +48,8 @@
 /area/prison
 	name = "Prison Station"
 	icon_state = "brig"
-	dynamic_lighting = 0
+	luminosity = 1
+	dynamic_lighting = DYNAMIC_LIGHTING_DISABLED
 	has_gravity = 1
 	requires_power = 0
 

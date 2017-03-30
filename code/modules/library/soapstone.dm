@@ -73,6 +73,7 @@
 		return
 
 	var/message = stripped_input(user, "What would you like to [w_engrave]?", "Leave a message")
+	message = sanitize_a0(replacetext(message,"ÿ","ß"))
 	if(!message)
 		to_chat(user, "<span class='notice'>You decide not to [w_engrave] anything.</span>")
 		return

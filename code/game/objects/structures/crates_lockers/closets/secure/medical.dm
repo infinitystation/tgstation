@@ -70,7 +70,7 @@
 	new /obj/item/weapon/storage/belt/medical(src)
 	new /obj/item/device/assembly/flash/handheld(src)
 	new /obj/item/weapon/reagent_containers/hypospray/CMO(src)
-	new /obj/item/device/autoimplanter/cmo(src)
+	new /obj/item/device/autosurgeon/cmo(src)
 	new /obj/item/weapon/door_remote/chief_medical_officer(src)
 	new /obj/item/weapon/melee/baton/shocker/loaded(src)
 

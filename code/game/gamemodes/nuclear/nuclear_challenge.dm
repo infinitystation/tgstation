@@ -36,7 +36,7 @@
 		return
 
 	if(are_you_sure == "No")
-		to_chat(user, "В самом деле - элемент неожиданности не так уж и плох...")
+		to_chat(user, "В самом деле - элемент неожиданности не так уж и плох..")
 		return
 
 	var/war_declaration = "[user.real_name] has declared his intent to utterly destroy [station_name()] with a nuclear device, and dares the crew to try and stop them."

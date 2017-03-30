@@ -171,7 +171,7 @@
 		to_chat(mob, "The Syndicate were unfortunately unable to get you a chameleon security HUD.")
 	else
 		to_chat(mob, "The chameleon security HUD in your [where2] will help you keep track of who is loalty-implanted, and unable to be recruited.")
-		return 1
+
 
 /////////////////////////////////
 //Gives head revs their targets//

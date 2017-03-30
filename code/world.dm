@@ -34,8 +34,8 @@
 	diaryofmeanpeople = file("data/logs/[date_string] Attack.log")
 	diary << "\n\nStarting up. [time_stamp()]\n---------------------"
 	diaryofmeanpeople << "\n\nStarting up. [time_stamp()]\n---------------------"
-	job_subsystem_debug << "\n\nStarting up. [time2text(world.timeofday, "hh:mm.ss")]\n---------------------"
-	reports_log << "<br/><br/>Starting up. [time2text(world.timeofday, "hh:mm.ss")]<br/>---------------------<br/>"
+	job_subsystem_debug << "\n\nStarting up. [time_stamp()]\n---------------------"
+	reports_log << "<br/><br/>Starting up. [time_stamp()]<br/>---------------------<br/>"
 	changelog_hash = md5('html/changelog.html')					//used for telling if the changelog has changed recently
 
 	make_datum_references_lists()	//initialises global lists for referencing frequently used datums (so that we only ever do it once)
@@ -311,6 +311,8 @@
 
 	if(currentbuild)
 		features += "[currentbuild.friendlyname]"
+
+	features += "Map - [SSmapping.config.map_name]"
 
 	if(ticker)
 		if(ticker.current_state >= 3)

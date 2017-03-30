@@ -17,13 +17,15 @@
 		if (deltimer(C.adminhelptimerid))
 			C.giveadminhelpverb()
 
+		var/msg = "<font color='red' size='4'><b>- Ваш запрос отклонён! -</b></font><br>"
+		msg += "<font color='red'><b>Ваш запрос администратору отменён.</b> Возможность отправления запроса была возвращена Вам обратно.</b></font><br>"
+		msg += "<font color='red'>Пожалуйста, будьте спокойнее, сдержанее и попробуйте перефразировать просьбу чтобы администор мог принять следующую Вашу заявку.</font><br>"
+		msg += "<font color='red'>Докладывайте все имена нарушителей при замеченых нарушениях. Не следует писать лишнию ненужную информацию и не пользуйтесь этим способом общения как 'личный чат'.</font>"
+
 		C << 'sound/effects/adminhelp.ogg'
+		to_chat(C, sanitize_a0(msg))
 
-		to_chat(C, "<font color='red' size='4'><b>- AdminHelp Rejected! -</b></font>")
-		to_chat(C, "<font color='red'><b>Your admin help was rejected.</b> The adminhelp verb has been returned to you so that you may try again.</font>")
-		to_chat(C, "Please try to be calm, clear, and descriptive in admin helps, do not assume the admin has seen any related events, and clearly state the names of anybody you are reporting.")
-
-		message_admins("[key_name_admin(usr)] Rejected [C.key]'s admin help. [C.key]'s Adminhelp verb has been returned to them.")
+		message_admins(sanitize_a0("[key_name_admin(usr)] отклонил(а) запрос [C.key] к админам. Возможность отправлять запросы была возвращена [C.key]."))
 		log_admin_private("[key_name(usr)] Rejected [C.key]'s admin help.")
 		spamcooldown = world.time + 150 // 15 seconds
 
@@ -35,12 +37,22 @@
 		if(!C)
 			return
 
-		var/msg = "<font color='red' size='4'><b>- AdminHelp marked as IC issue! -</b></font><br>"
-		msg += "<font color='red'><b>Losing is part of the game!</b></font><br>"
-		msg += "<font color='red'>Your character will frequently die, sometimes without even a possibility of avoiding it. Events will often be out of your control. No matter how good or prepared you are, sometimes you just lose.</font>"
+		var/msg = "<font color='red' size='4'><b>- Ваш запрос админу помечен как ИС (Игровая Ситуация)! -</b></font><br>"
+		msg += "<font color='red'><b>Ситуация которую Вы описали полностью оправдывает себя!</b></font><br>"
+		var/msg_alert = alert(usr, "Тип ИС ситуации?", "Alert", "Убийство", "Механика игры", "Отмена выбора")
+		switch(msg_alert)
+			if("Убийство")
+				msg += "<font color='red'>Если Вас убили, то возможно Вы стали жертвой предателя, или по другой причине которая полностью оправдывает себя в рамках ролевого отыгрыша.</font><br>"
+				msg += "<font color='red'>Иногда, бывают моменты что Вы проигрываете, и это нормально. Имейте ввиду что такое может случиться и Вы не всегда можете это контролировать.</font>"
+			if("Механика игры")
+				msg += "<font color='red'>Вы столкнулись с механикой игры, которая была специально настроена для игры на этом сервере.</font><br>"
+				msg += "<font color='red'>Если у Вас есть предложения по улучшению чего либо, Вы можете пройти на форум по этой ссылке:</font><br>"
+				msg += "<font color='red'>https://infinity.so/index.php?/forum/42-%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B0/.</font>"
+			if("Отмена выбора")
+				return
 
-
-		to_chat(C, msg)
+		C << 'sound/effects/adminhelp.ogg'
+		to_chat(C, sanitize_a0(msg))
 
 		message_admins(sanitize_a0("[key_name_admin(usr)] обозначил(а) запрос игрока [C.key] как игровая ситуация."))
 		log_admin_private("[key_name(usr)] marked [C.key]'s admin help as an IC issue.")
@@ -1165,7 +1177,7 @@
 					return
 				AddBan(M.ckey, M.computer_id, reason, usr.ckey, 1, mins)
 				ban_unban_log_save("[key_name(usr)] has HARD banned [key_name(M)]. - Reason: [reason] - This will be removed in [mins] minutes.")
-				to_chat(world, "<span class='adminnotice'><b>BAN: Администратор [key_name(usr)] ЖЕСТКО забанил(а) [key_name(M)]. Причина: [reason]. Срок - [mins] минут.</b></span>")
+				world << "<span class='adminnotice'><b>BAN: Администратор [key_name(usr)] ЖЕСТКО забанил(а) [key_name(M)]. Причина: [reason]. Срок - [mins] минут.</b></span>"
 				to_chat(M, "<span class='boldannounce'><BIG>Вы были ЖЕСТКО забанены администратором [key_name(usr)].\nПричина: [reason]</BIG></span>")
 				to_chat(M, "<span class='danger'>Это временный бан, он истечет через [mins] минут.</span>")
 				feedback_inc("ban_tmp",1)
@@ -1200,7 +1212,7 @@
 					to_chat(usr, "<span class='danger'>Failed to apply ban.</span>")
 					return
 				ban_unban_log_save("[key_name(usr)] has HARD permabanned [key_name(M)]. - Reason: [reason] - This is a permanent ban.")
-				world << "<span class='adminnotice'><b>BAN: Администратор [usr.client.ckey] ЖЕСТКО и перманентно забанил(а) [M.ckey]. Причина: [reason].</b></span>"
+				to_chat(world, "<span class='adminnotice'><b>BAN: Администратор [usr.client.ckey] ЖЕСТКО и перманентно забанил(а) [M.ckey]. Причина: [reason].</b></span>")
 				log_admin_private("[key_name(usr)] has HARD banned [key_name(M)].\nReason: [reason]\nThis is a permanent ban.")
 				message_admins("<span class='adminnotice'>[key_name(usr)] has HARD banned [key_name(M)].\nReason: [reason]\nThis is a permanent ban.</span>")
 				feedback_inc("ban_perma",1)
@@ -1860,11 +1872,13 @@
 			return
 
 		input = sanitize(copytext(input,1,MAX_MESSAGE_LEN))	//fix
+		to_chat(src.owner, "You sent [input] to [H] via a secure channel.")
+		to_chat(H, "You hear something crackle in your ears for a moment before a voice speaks.  \"Please stand by for a message from Central Command.  Message as follows. [input].  Message ends.\"")
 
-		to_chat(src.owner, "Вы отправили:<b><font color='blue'>[input]</b></font>.")
+		src.owner << "Вы отправили:<b><font color='blue'>[input]</b></font>."
 		log_admin("[src.owner] ответил на сообщение, которое отправил [key_name(H)], он получил: [input].")
 		message_admins("[src.owner] отвечает на сообщение, которое отправил [key_name(H)], он получил: [input].")
-		to_chat(H, "В наушнике раздалс&#255; небольшой треск, но потом прозвучал голос, передав сообщение. <b><font color='blue'>[input].</b></font> Конец сообщени&#255;.")
+		H << "В наушнике раздалс&#255; небольшой треск, но потом прозвучал голос, передав сообщение. <b><font color='blue'>[input].</b></font> Конец сообщени&#255;."
 
 	else if(href_list["show_report"])
 		var/datum/report/R = locate(href_list["show_report"])

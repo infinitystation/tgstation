@@ -4,6 +4,8 @@
 	icon_screen = "screen_generic"
 	icon_screen_contents = "alerts"
 	circuit = /obj/item/weapon/circuitboard/computer/stationalert
+	light_color = LIGHT_COLOR_CYAN
+
 	var/alarms = list("Fire" = list(), "Atmosphere" = list(), "Power" = list())
 
 	light_color = LIGHT_COLOR_CYAN

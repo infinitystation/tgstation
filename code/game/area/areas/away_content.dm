@@ -26,15 +26,15 @@
 	has_gravity = 1
 	ambientsounds = list('sound/ambience/shore.ogg', 'sound/ambience/seag1.ogg','sound/ambience/seag2.ogg','sound/ambience/seag2.ogg')
 
-/area/awaymission/beach/Initialize() //Let's make day/night on a beach!
+/area/awaymission/beach/New() //Let's make day/night on a beach!
 	..()
 	if(prob(50))
-		requires_power = 1
 		dynamic_lighting = DYNAMIC_LIGHTING_ENABLED
 
 /area/awaymission/beach/hotel
 	name = "Beach Hotel"
 	icon_state = "bar"
+	luminosity = 1
 	requires_power = 1
 	dynamic_lighting = DYNAMIC_LIGHTING_ENABLED
 

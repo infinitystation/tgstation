@@ -723,7 +723,7 @@ Turf and target are seperate in case you want to teleport some distance from a t
 	//Irregular objects
 	var/icon/AMicon = icon(AM.icon, AM.icon_state)
 	var/icon/AMiconheight = AMicon.Height()
-	var/icon/AMiconwidth = AMicon.Width()	
+	var/icon/AMiconwidth = AMicon.Width()
 	if(AMiconheight != world.icon_size || AMiconwidth != world.icon_size)
 		pixel_x_offset += ((AMicon.Width()/world.icon_size)-1)*(world.icon_size*0.5)
 		pixel_y_offset += ((AMicon.Height()/world.icon_size)-1)*(world.icon_size*0.5)
@@ -1327,7 +1327,7 @@ proc/pick_closest_path(value, list/matches = get_fancy_list_of_atom_types())
 		else
 			. = ""
 
-/var/mob/dview/dview_mob = new
+var/mob/dview/dview_mob = new
 
 //Version of view() which ignores darkness, because BYOND doesn't have it (I actually suggested it but it was tagged redundant, BUT HEARERS IS A T- /rant).
 /proc/dview(var/range = world.view, var/center, var/invis_flags = 0)
@@ -1342,20 +1342,23 @@ proc/pick_closest_path(value, list/matches = get_fancy_list_of_atom_types())
 	dview_mob.loc = null
 
 /mob/dview
+	name = "INTERNAL DVIEW MOB"
 	invisibility = 101
-	density = 0
+	density = FALSE
 	see_in_dark = 1e6
-	anchored = 1
+	anchored = TRUE
+	var/ready_to_die = FALSE
 
-/mob/dview/Destroy(force=0)
-	stack_trace("ALRIGHT WHICH FUCKER TRIED TO DELETE *MY* DVIEW?")
+/mob/dview/Destroy(force = FALSE)
+	if(!ready_to_die)
+		stack_trace("ALRIGHT WHICH FUCKER TRIED TO DELETE *MY* DVIEW?")
 
-	if (!force)
-		return QDEL_HINT_LETMELIVE
+		if (!force)
+			return QDEL_HINT_LETMELIVE
 
-	world.log << "EVACUATE THE SHITCODE IS TRYING TO STEAL MUH JOBS"
-	global.dview_mob = new
-	return QDEL_HINT_QUEUE
+		log_world("EVACUATE THE SHITCODE IS TRYING TO STEAL MUH JOBS")
+		dview_mob = new
+	return ..()
 
 
 #define FOR_DVIEW(type, range, center, invis_flags) \
@@ -1421,15 +1424,15 @@ var/valid_HTTPSGet = FALSE
 	else
 		CRASH("Invalid world.system_type ([world.system_type])? Yell at Lummox.")
 
-	world.log << "HTTPSGet: [url]"
+	log_world("HTTPSGet: [url]")
 	var/result = shell(command)
 	if(result != 0)
-		world.log << "Download failed: shell exited with code: [result]"
+		log_world("Download failed: shell exited with code: [result]")
 		return
 
 	var/f = file(temp_file)
 	if(!f)
-		world.log << "Download failed: Temp file not found"
+		log_world("Download failed: Temp file not found")
 		return
 
 	. = file2text(f)

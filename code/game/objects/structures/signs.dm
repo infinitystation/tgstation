@@ -134,6 +134,11 @@
 	Cargo(<b>brown</b>), Science(<b>purple</b>), Escape(<b>red and white</b>), and Medbay(<b>blue</b>).\nIn the center of the station, you see the Bridge(<b>dark blue</b>).\n\
 	Around those, you see Hallways/Entrances(<b>light grey</b>), Public Areas(<b>grey</b>), and Maintenance(<b>dark grey</b>)."
 
+/obj/structure/sign/map/left/ceres
+	icon_state = "map-CS"
+	desc = "A framed picture of the station.\nClockwise from the top, you see Security (<b>red</b>), Dorms (<b>light-green</b>), Bridge (<b>dark-blue</b>), AI Core (<b>gray</b>), \
+	Cargo (<b>brown</b>), Medbay (<b>blue</b>), Arrivals/Departures(<b>orange/cyan</b>), Research (<b>purple</b>), Service (<b>dark-green</b>), and Engineering in the center (<b>yellow</b>)."
+
 /obj/structure/sign/securearea
 	name = "\improper SECURE AREA"
 	desc = "A warning sign which reads 'SECURE AREA'."
@@ -247,6 +252,11 @@
 	icon_state = "direction_sci"
 	resistance_flags = FIRE_PROOF
 
+/obj/structure/sign/enginesafety
+	name = "\improper ENGINEERING SAFETY"
+	desc = "A sign detailing the various safety protocols when working on-site to ensure a safe shift."
+	icon_state = "safety"
+
 /obj/structure/sign/directions/science
 	name = "science department"
 	desc = "A direction sign, pointing out which way the Science department is."
@@ -271,6 +281,16 @@
 	name = "escape arm"
 	desc = "A direction sign, pointing out which way the escape shuttle dock is."
 	icon_state = "direction_evac"
+
+/obj/structure/sign/directions/supply
+	name = "cargo bay"
+	desc = "A direction sign, pointing out which way the Cargo Bay is."
+	icon_state = "direction_supply"
+
+/obj/structure/sign/directions/command
+	name = "command department"
+	desc = "A direction sign, pointing out which way the Command department is."
+	icon_state = "direction_bridge"
 
 /obj/structure/sign/uac
 	name = "\improper UAC emblem"

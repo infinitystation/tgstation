@@ -179,6 +179,10 @@
 	strip_delay = 80
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 
+/obj/item/clothing/head/helmet/doomguy/Initialize(mapload)
+	..()
+	SET_SECONDARY_FLAG(src, BANG_PROTECT)
+
 /obj/item/clothing/head/dad
 	name = "mask of the Father"
 	desc = "THE LEGEND NEVER DIES."
@@ -216,6 +220,10 @@
 	flags_inv = HIDEHAIR
 	strip_delay = 60
 
+/obj/item/clothing/head/helmet/combat_heavy/Initialize(mapload)
+	..()
+	SET_SECONDARY_FLAG(src, BANG_PROTECT)
+
 /obj/item/clothing/head/janitor_cap
 	name = "exclusive janitor red cap"
 	desc = "Looks like Nanotrasen got so much money to create this pretty red cap!"
@@ -235,6 +243,10 @@
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR
 	strip_delay = 80
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
+
+/obj/item/clothing/head/helmet/uac/Initialize(mapload)
+	..()
+	SET_SECONDARY_FLAG(src, BANG_PROTECT)
 
 /obj/item/clothing/head/cargoberet
 	name = "cargoberet"

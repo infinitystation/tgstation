@@ -374,7 +374,7 @@ RCD
 	materials = list(MAT_METAL=12000, MAT_GLASS=8000)
 	var/ammoamt = 40
 
-/obj/item/weapon/rcd/advanced
+/obj/item/weapon/rcd/advanced		// TODO@inf-dev пока не будет доработано взаимодействие с ним, эта штука смысла не имеет ~bear1ake@inf-dev
 	name = "advanced rapid-construction-device (RCD)"
 	desc = "An advanced device used to rapidly build and deconstruct walls and floors."
 	icon = 'icons/obj/infinity_object.dmi'

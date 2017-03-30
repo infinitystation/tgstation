@@ -1,4 +1,4 @@
-<ui-notice>
+﻿<ui-notice>
   <span>Регулятор {{data.hasHoldingTank ? "" : "не"}} подсоединен к баллону.</span>
 </ui-notice>
 <ui-display title='Канистра' button>
@@ -63,7 +63,7 @@
 {{/if}}
 
 
-<ui-display title='Баллон' button>
+<ui-display title='Holding Tank' button>
   {{#partial button}}
     {{#if data.hasHoldingTank}}
       <ui-button icon='eject' style='{{data.valveOpen ? "danger" : null}}' action='eject'>Извлечь</ui-button>

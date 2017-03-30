@@ -131,5 +131,5 @@
 		sleep(3)
 		in_use = 0
 		animate(user, pixel_y = 0, time = 3)
-		var/finishmessage = pick("You feel stronger!","You feel like you can take on the world!","You feel robust!","You feel indestructible!")
-		to_chat(user, "[finishmessage]")
+		var/finishmessage = pick("You feel stronger!","You feel likou feel indestructible!")
+		user << "[finishmessage]"

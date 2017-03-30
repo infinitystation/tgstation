@@ -33,15 +33,15 @@
 	to_chat(who, "<b>Следуйте этим законам:</b>")
 	laws.show_laws(who)
 	if (shell) //AI shell
-		to_chat(who, "<b>Запомните, вы контрируема&#255; оболочка ИИ, другие ИИ могут быть игнорированы.</b>")
+		to_chat(who, "<b>Remember, you are an AI remotely controlling your shell, other AIs can be ignored.</b>")
 	else if (is_special_character(src) && connected_ai)
-		to_chat(who, "<b>Запомните, [connected_ai.name] технически &#255;вл&#255;етс&#255; вашим мастером, но ваши задани&#255; приоритетнее.</b>")
+		to_chat(who, "<b>Remember, [connected_ai.name] is technically your master, but your objective comes first.</b>")
 	else if (connected_ai)
-		to_chat(who, "<b>Запомните, [connected_ai.name] ваш мастер, другие ИИ могут быть игнорированы.</b>")
+		to_chat(who, "<b>Remember, [connected_ai.name] is your master, other AIs can be ignored.</b>")
 	else if (emagged)
-		to_chat(who, "<b>Запомните, вам не об&#255;зательно подчин&#255;тьс&#255; ИИ.</b>")
+		to_chat(who, "<b>Remember, you are not required to listen to the AI.</b>")
 	else
-		to_chat(who, "<b>Запомните, Вы не прив&#255;заны ни к одному ИИ, вам не об&#255;зательно подчин&#255;тьс&#255; им.</b>")
+		to_chat(who, "<b>Remember, you are not bound to any AI, you are not required to listen to them.</b>")
 
 
 /mob/living/silicon/robot/proc/lawsync()

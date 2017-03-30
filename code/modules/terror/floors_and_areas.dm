@@ -133,14 +133,12 @@
 
 /area/syndicate_mothership/enemy
 	name = "Enemy Base"
-	icon_state = "enemy"
-	icon = 'icons/turf/infinity.dmi'
 
 /area/awaymission/alien_base
 	name = "Alien Base"
 	icon_state = "green"
 	requires_power = 0
-	luminosity = 1
+	dynamic_lighting = DYNAMIC_LIGHTING_FORCED
 	valid_territory = 0
 
 // CENTCOM

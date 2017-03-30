@@ -155,6 +155,7 @@
 				to_chat(C, "<font color='red'>ЛС от Админа <b>[key_name(src, C, 0)]</b>: [msg]</font>")
 				to_chat(C, "<font color='red'><i>Нажмите на никнейм администратора, чтобы ответить ему.</i></font>")
 				to_chat(src, "<font color='blue'>ЛС Игроку <b>[key_name(C, src, 1)](<A HREF='?_src_=holder;adminplayerobservefollow=\ref[C.mob]'>FLW</A>)</b>: [msg]</font>")
+
 				//always play non-admin recipients the adminhelp sound
 				C << 'sound/effects/adminhelp.ogg'
 
@@ -178,7 +179,7 @@
 	if(irc)
 		log_admin_private("PM: [key_name(src, include_name = 1)]->IRC: [rawmsg]")
 		for(var/client/X in admins)
-			to_chat(X, "<B><font color='blue'>PM: [key_name(src, X, 1)]-&gt;IRC:</B> \blue [keywordparsedmsg]</font>") //inform X
+			to_chat(X, "<B><font color='blue'>PM: [key_name(src, X, 1)]-&gt;IRC:</B> \blue [keywordparsedmsg]</font>" )
 	else
 		window_flash(C, ignorepref = TRUE)
 		log_admin_private("PM: [key_name(src, include_name = 1)]->[key_name(C, include_name = 1)]: [rawmsg]")

@@ -1,4 +1,4 @@
-//Rails, yes, just because nobody coded that thing
+/*/Rails, yes, just because nobody coded that thing
 /obj/structure/rails
 	name = "the rails"
 	desc = "A pair of rail"
@@ -70,3 +70,4 @@
 	name = "Monorail Coridor"
 	icon_state = "red"
 	requires_power = 0
+*/

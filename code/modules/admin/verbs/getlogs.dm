@@ -52,8 +52,8 @@
 		return
 
 	message_admins("[key_name_admin(src)] accessed file: [path]")
-	usr << ftp(file(path))
-	to_chat(usr, "Attempting to send file, this may take a fair few minutes if the file is very large.")
+	src << ftp(file(path))
+	to_chat(src, "Attempting to send file, this may take a fair few minutes if the file is very large.")
 	return
 
 
@@ -76,7 +76,7 @@
 		return
 
 	message_admins("[key_name_admin(src)] accessed file: [path]")
-	usr << ftp(file(path))
+	src << ftp(file(path))
 	to_chat(src, "Attempting to send file, this may take a fair few minutes if the file is very large.")
 	return
 
