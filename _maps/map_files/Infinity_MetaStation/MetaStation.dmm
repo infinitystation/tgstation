@@ -96109,7 +96109,7 @@
 	dir = 4
 	},
 /obj/structure/sign/poster/contraband/hacking_guide{
-	step_y = 32
+	pixel_y = 32
 	},
 /turf/open/floor/plating,
 /area/maintenance/starboard)
