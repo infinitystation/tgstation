@@ -30,3 +30,6 @@ endmap
 
 map deltastation
 endmap
+
+map cerestation
+endmap
