@@ -2406,17 +2406,11 @@
 /obj/machinery/recharger{
 	pixel_y = 4
 	},
-/obj/effect/landmark{
-	name = "tdome1"
-	},
 /obj/effect/turf_decal/bot,
 /turf/open/floor/plasteel/black,
 /area/space)
 "agw" = (
 /obj/effect/turf_decal/delivery,
-/obj/effect/landmark{
-	name = "tdome1"
-	},
 /turf/open/floor/plasteel/black,
 /area/space)
 "agx" = (
@@ -2432,9 +2426,6 @@
 	c_tag = "Red Team"
 	},
 /obj/effect/turf_decal/delivery,
-/obj/effect/landmark{
-	name = "tdome2"
-	},
 /turf/open/floor/plasteel/black,
 /area/tdome/arena_source)
 "agz" = (
@@ -2455,9 +2446,6 @@
 	c_tag = "Green Team"
 	},
 /obj/effect/turf_decal/delivery,
-/obj/effect/landmark{
-	name = "tdome1"
-	},
 /turf/open/floor/plasteel/black,
 /area/space)
 "agC" = (
@@ -3772,6 +3760,7 @@
 /area/prison)
 "akf" = (
 /obj/machinery/door/airlock/centcom{
+	aiControlDisabled = 1;
 	name = "Bridge"
 	},
 /turf/open/floor/plasteel/darkvault/delivary,
@@ -4359,6 +4348,7 @@
 /area/shuttle/syndicate/cruiser)
 "alO" = (
 /obj/machinery/door/airlock/centcom{
+	aiControlDisabled = 1;
 	name = "Equipment Room";
 	opacity = 1;
 	req_access_txt = "150"
@@ -4369,6 +4359,7 @@
 /area/syndicate_mothership/control)
 "alP" = (
 /obj/machinery/door/airlock/centcom{
+	aiControlDisabled = 1;
 	name = "Equipment Room";
 	opacity = 1;
 	req_access_txt = "150"
@@ -5486,6 +5477,7 @@
 /area/syndicate_mothership/control)
 "aoC" = (
 /obj/machinery/door/airlock/centcom{
+	aiControlDisabled = 1;
 	name = "Restroom";
 	opacity = 1;
 	req_access_txt = "150"
@@ -5785,6 +5777,7 @@
 /area/syndicate_mothership/control)
 "apr" = (
 /obj/machinery/door/airlock/centcom{
+	aiControlDisabled = 1;
 	name = "Operative Unit Base"
 	},
 /turf/open/floor/plasteel/darkwarning{
@@ -5793,6 +5786,7 @@
 /area/syndicate_mothership/control)
 "aps" = (
 /obj/machinery/door/airlock/centcom{
+	aiControlDisabled = 1;
 	name = "Operative Unit Base"
 	},
 /turf/open/floor/plasteel/darkwarning{
@@ -7973,6 +7967,7 @@
 /area/centcom/control)
 "avt" = (
 /obj/machinery/door/airlock/centcom{
+	aiControlDisabled = 1;
 	locked = 0;
 	name = "Sector Beta";
 	opacity = 1;
@@ -7997,6 +7992,7 @@
 "avw" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/centcom{
+	aiControlDisabled = 1;
 	name = "Centcom";
 	opacity = 1;
 	req_access_txt = "0"
@@ -8509,6 +8505,7 @@
 /area/centcom/control)
 "awI" = (
 /obj/machinery/door/airlock/centcom{
+	aiControlDisabled = 1;
 	name = "Centcom Supply";
 	req_access_txt = "106"
 	},
@@ -8554,6 +8551,7 @@
 /area/centcom/control)
 "awP" = (
 /obj/machinery/door/airlock/centcom{
+	aiControlDisabled = 1;
 	name = "Centcom Security";
 	opacity = 1;
 	req_access_txt = "101"
@@ -9760,6 +9758,7 @@
 "azA" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/centcom{
+	aiControlDisabled = 1;
 	name = "Centcom";
 	opacity = 1;
 	req_access_txt = "0"
@@ -10171,6 +10170,7 @@
 /area/centcom/control)
 "aAx" = (
 /obj/machinery/door/airlock/centcom{
+	aiControlDisabled = 1;
 	name = "Centcom Security";
 	opacity = 1;
 	req_access_txt = "101"
@@ -10311,6 +10311,7 @@
 /area/shuttle/syndicate)
 "aAM" = (
 /obj/machinery/door/airlock/centcom{
+	aiControlDisabled = 1;
 	name = "Shuttle Control Office";
 	opacity = 1;
 	req_access_txt = "109"
@@ -10323,6 +10324,7 @@
 /area/centcom/supply)
 "aAN" = (
 /obj/machinery/door/airlock/centcom{
+	aiControlDisabled = 1;
 	name = "Centcom Supply";
 	req_access_txt = "106"
 	},
@@ -10549,6 +10551,7 @@
 /area/centcom/supply)
 "aBn" = (
 /obj/machinery/door/airlock/centcom{
+	aiControlDisabled = 1;
 	name = "Centcom Security";
 	opacity = 1;
 	req_access_txt = "101"
@@ -10579,6 +10582,7 @@
 /area/centcom/control)
 "aBr" = (
 /obj/machinery/door/airlock/centcom{
+	aiControlDisabled = 1;
 	name = "Centcom Security";
 	opacity = 1;
 	req_access_txt = "101"
@@ -10919,6 +10923,7 @@
 /area/centcom/supply)
 "aCc" = (
 /obj/machinery/door/airlock/centcom{
+	aiControlDisabled = 1;
 	name = "Shuttle Control Office";
 	opacity = 1;
 	req_access_txt = "109"
@@ -11172,6 +11177,7 @@
 /area/centcom/ferry)
 "aCH" = (
 /obj/machinery/door/airlock/centcom{
+	aiControlDisabled = 1;
 	name = "Shuttle Control Office";
 	opacity = 1;
 	req_access_txt = "109"
@@ -11184,6 +11190,7 @@
 /area/centcom/supply)
 "aCI" = (
 /obj/machinery/door/airlock/centcom{
+	aiControlDisabled = 1;
 	name = "Centcom Supply";
 	req_access_txt = "106"
 	},
@@ -11558,6 +11565,7 @@
 /area/centcom/ferry)
 "aDA" = (
 /obj/machinery/door/airlock/centcom{
+	aiControlDisabled = 1;
 	name = "Administrative Office";
 	opacity = 1;
 	req_access_txt = "109"
@@ -12404,6 +12412,7 @@
 /area/space)
 "aFt" = (
 /obj/machinery/door/airlock/centcom{
+	aiControlDisabled = 1;
 	name = "Administrative Office";
 	opacity = 1;
 	req_access_txt = "109"
@@ -12429,6 +12438,7 @@
 /area/centcom/ferry)
 "aFx" = (
 /obj/machinery/door/airlock/centcom{
+	aiControlDisabled = 1;
 	name = "Centcom Security";
 	opacity = 1;
 	req_access_txt = "101"
@@ -12441,6 +12451,7 @@
 /area/centcom/supply)
 "aFy" = (
 /obj/machinery/door/airlock/centcom{
+	aiControlDisabled = 1;
 	name = "Centcom";
 	opacity = 1;
 	req_access_txt = "0"
@@ -13123,6 +13134,7 @@
 /area/centcom/ferry)
 "aGZ" = (
 /obj/machinery/door/airlock/centcom{
+	aiControlDisabled = 1;
 	name = "Administrative Storage";
 	req_access_txt = "106"
 	},
@@ -13250,6 +13262,7 @@
 /area/centcom/control)
 "aHi" = (
 /obj/machinery/door/airlock/centcom{
+	aiControlDisabled = 1;
 	name = "Centcom Security";
 	opacity = 1;
 	req_access_txt = "101"
@@ -13264,6 +13277,7 @@
 /area/centcom/control)
 "aHk" = (
 /obj/machinery/door/airlock/centcom{
+	aiControlDisabled = 1;
 	name = "Centcom Security";
 	opacity = 1;
 	req_access_txt = "101"
@@ -13390,6 +13404,7 @@
 /area/centcom/ferry)
 "aHE" = (
 /obj/machinery/door/airlock/centcom{
+	aiControlDisabled = 1;
 	name = "Centcom Supply";
 	req_access_txt = "106"
 	},
@@ -13867,6 +13882,7 @@
 /area/centcom/evac)
 "aIC" = (
 /obj/machinery/door/airlock/centcom{
+	aiControlDisabled = 1;
 	name = "Shuttle Control Office";
 	opacity = 1;
 	req_access_txt = "109"
@@ -14128,6 +14144,7 @@
 /area/centcom/ferry)
 "aJh" = (
 /obj/machinery/door/airlock/centcom{
+	aiControlDisabled = 1;
 	name = "Administrative Office";
 	opacity = 1;
 	req_access_txt = "109"
@@ -14334,6 +14351,7 @@
 "aJF" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/centcom{
+	aiControlDisabled = 1;
 	name = "Centcom Security";
 	opacity = 1;
 	req_access_txt = "101"
@@ -14393,6 +14411,7 @@
 /area/centcom/control)
 "aJO" = (
 /obj/machinery/door/airlock/centcom{
+	aiControlDisabled = 1;
 	name = "Centcom Customs";
 	opacity = 1;
 	req_access_txt = "109"
@@ -14463,6 +14482,7 @@
 "aJX" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/centcom{
+	aiControlDisabled = 1;
 	name = "Centcom";
 	opacity = 1;
 	req_access_txt = "0"
@@ -14894,6 +14914,7 @@
 /area/centcom/ferry)
 "aLf" = (
 /obj/machinery/door/airlock/centcom{
+	aiControlDisabled = 1;
 	name = "Briefing Room";
 	opacity = 1;
 	req_access_txt = "101"
@@ -15245,6 +15266,7 @@
 /area/centcom/control)
 "aLQ" = (
 /obj/machinery/door/airlock/glass_medical{
+	aiControlDisabled = 1;
 	name = "Infirmary"
 	},
 /obj/machinery/door/poddoor/preopen{
@@ -15819,6 +15841,7 @@
 /area/centcom/ferry)
 "aNl" = (
 /obj/machinery/door/airlock/centcom{
+	aiControlDisabled = 1;
 	name = "Centcom Security";
 	opacity = 1;
 	req_access_txt = "101"
@@ -15873,6 +15896,7 @@
 /area/centcom/control)
 "aNr" = (
 /obj/machinery/door/airlock/centcom{
+	aiControlDisabled = 1;
 	name = "Centcom Security";
 	opacity = 1;
 	req_access_txt = "101"
@@ -15898,6 +15922,7 @@
 /area/centcom/control)
 "aNt" = (
 /obj/machinery/door/airlock/centcom{
+	aiControlDisabled = 1;
 	name = "Centcom Security";
 	opacity = 1;
 	req_access_txt = "101"
@@ -16202,7 +16227,9 @@
 	name = "Centcom Customs";
 	req_access_txt = "109"
 	},
-/turf/open/floor/plasteel/bot,
+/turf/open/floor/plasteel/vault{
+	dir = 8
+	},
 /area/centcom/evac)
 "aOa" = (
 /obj/structure/table/reinforced,
@@ -16212,7 +16239,9 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
-/turf/open/floor/plasteel/bot,
+/turf/open/floor/plasteel/vault{
+	dir = 8
+	},
 /area/centcom/evac)
 "aOb" = (
 /obj/structure/table/reinforced,
@@ -16224,7 +16253,9 @@
 	name = "Centcom Customs";
 	req_access_txt = "109"
 	},
-/turf/open/floor/plasteel/bot,
+/turf/open/floor/plasteel/vault{
+	dir = 8
+	},
 /area/centcom/evac)
 "aOc" = (
 /turf/open/floor/plasteel/darkwarning/end,
@@ -16938,6 +16969,7 @@
 /area/centcom/control)
 "aPC" = (
 /obj/machinery/door/airlock/glass_medical{
+	aiControlDisabled = 1;
 	name = "Centcom Medbay";
 	req_access_txt = "5"
 	},
@@ -17279,6 +17311,7 @@
 /area/centcom/control)
 "aQp" = (
 /obj/machinery/door/airlock/glass_medical{
+	aiControlDisabled = 1;
 	name = "Chemistry Lab";
 	req_access_txt = "5; 33"
 	},
@@ -17479,6 +17512,7 @@
 /area/syndicate_mothership/enemy)
 "aQN" = (
 /obj/machinery/door/airlock/centcom{
+	aiControlDisabled = 1;
 	name = "Trooper Teleport";
 	opacity = 1;
 	req_access_txt = "0"
@@ -17582,6 +17616,7 @@
 /area/tdome/tdomeobserve)
 "aQX" = (
 /obj/machinery/door/airlock/centcom{
+	aiControlDisabled = 1;
 	name = "Centcom Security";
 	opacity = 1;
 	req_access_txt = "101"
@@ -17717,6 +17752,7 @@
 /area/centcom/control)
 "aRm" = (
 /obj/machinery/door/airlock/centcom{
+	aiControlDisabled = 1;
 	name = "Trooper Teleport";
 	opacity = 1;
 	req_access_txt = "0"
@@ -17729,6 +17765,7 @@
 /area/syndicate_mothership/enemy)
 "aRn" = (
 /obj/machinery/door/airlock/centcom{
+	aiControlDisabled = 1;
 	id_tag = "enemy_control";
 	locked = 1;
 	name = "Operation Control";
@@ -18015,6 +18052,7 @@
 /area/centcom/control)
 "aSa" = (
 /obj/machinery/door/airlock/glass_medical{
+	aiControlDisabled = 1;
 	name = "Chemistry Lab";
 	req_access_txt = "5; 33; 101"
 	},
@@ -31660,7 +31698,7 @@ aaa
 aaa
 aaa
 atc
-awi
+axt
 awC
 axi
 axv
@@ -56537,8 +56575,8 @@ aaa
 aaa
 aaa
 aaa
-ajH
-ajU
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -56794,7 +56832,7 @@ aaa
 aaa
 aaa
 aaa
-ajI
+aaa
 ajV
 aaa
 aaa
@@ -78833,8 +78871,8 @@ afP
 afQ
 agb
 ago
-agp
-agp
+ags
+ags
 ago
 agF
 agM
@@ -79089,10 +79127,10 @@ afF
 afP
 afQ
 agb
-agp
+ags
 agy
-agp
-agp
+ags
+ags
 agF
 agM
 agS
@@ -79347,8 +79385,8 @@ afP
 afQ
 agb
 ago
-agp
-agp
+ags
+ags
 ago
 agF
 agM
@@ -84489,7 +84527,7 @@ agj
 agv
 agw
 agw
-agD
+agv
 agK
 agR
 agU

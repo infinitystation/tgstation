@@ -299,7 +299,7 @@
 			l.hallucination += power * config_hallucination_power * D
 			l.hallucination = Clamp(0, 200, l.hallucination)
 
-	for(var/mob/living/l in range(src, round((power / 100) ** 0.25)))
+	for(var/mob/living/l in range(src, round((power / 100) ** 0.30)))
 		var/rads = (power / 10) * sqrt( 1 / max(get_dist(l, src),1) )
 		l.rad_act(rads)
 

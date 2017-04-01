@@ -584,4 +584,9 @@
 	desc = "This informational poster teaches the viewer what carbon dioxide is."
 	icon_state = "poster35_legit"
 
+/obj/structure/sign/poster/official/espionage
+	name = "Corporate Espionage"
+	desc = "Only you can  prevent Corporate Espionage!"
+	icon_state = "poster36_legit"
+
 #undef PLACE_SPEED

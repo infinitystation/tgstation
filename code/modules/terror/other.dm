@@ -491,7 +491,7 @@
 	qdel(src)
 
 /obj/structure/fluff/shuttle_AI
-	name = "Shuttle's control systeam"
+	name = "Shuttle's control system"
 	desc = "»спользуется для непосредственного удаленного контроля из центра связи ÷ентрального  оммандования. Ќи на что не годен и по слухам, внутри ничего нет. —ерьезно."
 	icon = 'icons/obj/infinity_object.dmi'
 	icon_state = "tracker"

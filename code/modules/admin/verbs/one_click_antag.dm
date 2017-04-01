@@ -644,6 +644,7 @@
 			SAVEOperative.dna.update_dna_identity()
 			SAVEOperative.key = chosen_candidate.key
 			SAVEOperative.mind.assigned_role = "Centcome Crew"
+			SAVEOperative.faction = list("nanotrasen","neutral")
 
 			//Assign antag status and the mission
 			ticker.mode.traitors += SAVEOperative.mind
@@ -674,7 +675,7 @@
 
 			//Logging and cleanup
 			if(numagents == 1)
-				message_admins("Был создан персонал ЦК согласно следующем коду: [alert] с миссией: [mission]")
+				message_admins("Был создан персонал ЦК согласно следующем коду: '[alert]' с миссией: '[mission]'")
 			log_game("[key_name(SAVEOperative)] был избран в качестве члена персонала ЦК.")
 			numagents--
 			teamSpawned++

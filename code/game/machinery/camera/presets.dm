@@ -45,7 +45,7 @@
 	c_tag = "Arena"
 	icon_state = "xraycam"
 
-/obj/machinery/camera/all/New()
+/obj/machinery/camera/thunder/New()
 	..()
 	upgradeEmpProof()
 	upgradeXRay()
