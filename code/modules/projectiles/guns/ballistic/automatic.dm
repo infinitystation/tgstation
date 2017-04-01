@@ -133,7 +133,7 @@
 	pin = /obj/item/device/firing_pin/implant/mindshield
 
 /obj/item/weapon/gun/ballistic/automatic/mini_uzi
-	name = "\improper 'Type U3' Uzi"
+	name = "\improper Type U3 Uzi"
 	desc = "A lightweight, burst-fire submachine gun, for when you really want someone dead. Uses 9mm rounds."
 	icon_state = "mini-uzi"
 	origin_tech = "combat=4;materials=2;syndicate=4"
@@ -244,7 +244,7 @@
 // Bulldog shotgun //
 
 /obj/item/weapon/gun/ballistic/automatic/shotgun/bulldog
-	name = "\improper 'Bulldog' Shotgun"
+	name = "\improper Bulldog Shotgun"
 	desc = "A semi-auto, mag-fed shotgun for combat in narrow corridors, nicknamed 'Bulldog' by boarding parties. Compatible only with specialized 8-round drum magazines."
 	icon_state = "bulldog"
 	item_state = "bulldog"
