@@ -2603,7 +2603,7 @@
 /turf/closed/indestructible/riveted/infinity,
 /area/ctf)
 "agZ" = (
-/obj/effect/landmark/start,
+/obj/effect/landmark/start/new_player,
 /turf/open/space,
 /area/start)
 "aha" = (
@@ -4926,6 +4926,7 @@
 	icon_state = "wooden_chair_wings";
 	dir = 8
 	},
+/obj/effect/landmark/start/wizard,
 /turf/open/floor/wood,
 /area/wizard_station)
 "anf" = (
@@ -5296,6 +5297,7 @@
 	icon_state = "wooden_chair_wings";
 	dir = 4
 	},
+/obj/effect/landmark/start/wizard,
 /turf/open/floor/carpet,
 /area/wizard_station)
 "aoc" = (
@@ -5835,6 +5837,7 @@
 /obj/structure/mirror/magic{
 	pixel_y = 28
 	},
+/obj/effect/landmark/start/wizard,
 /turf/open/floor/engine/cult,
 /area/wizard_station)
 "apC" = (
@@ -5976,6 +5979,7 @@
 /area/syndicate_mothership/control)
 "apW" = (
 /obj/structure/chair/wood/wings,
+/obj/effect/landmark/start/wizard,
 /turf/open/floor/engine/cult,
 /area/wizard_station)
 "apX" = (
@@ -6182,6 +6186,7 @@
 	icon_state = "wooden_chair_wings";
 	dir = 8
 	},
+/obj/effect/landmark/start/wizard,
 /turf/open/floor/engine/cult,
 /area/wizard_station)
 "aqC" = (
@@ -6288,9 +6293,7 @@
 /turf/open/floor/plasteel/darkwarning,
 /area/syndicate_mothership/control)
 "aqV" = (
-/obj/effect/landmark/start{
-	name = "wizard"
-	},
+/obj/effect/landmark/start/wizard,
 /turf/open/floor/engine/cult,
 /area/wizard_station)
 "aqW" = (
@@ -6793,8 +6796,8 @@
 /area/wizard_station)
 "asl" = (
 /obj/structure/table/wood,
-/obj/item/weapon/teleportation_scroll/apprentice,
 /obj/item/weapon/storage/backpack/satchel,
+/obj/effect/landmark/teleport_scroll,
 /turf/open/floor/carpet,
 /area/wizard_station)
 "asm" = (
@@ -7280,9 +7283,7 @@
 /turf/open/space,
 /area/space)
 "atN" = (
-/obj/effect/landmark{
-	name = "prisonwarp"
-	},
+/obj/effect/landmark/prisonwarp,
 /obj/structure/chair,
 /turf/open/floor/plasteel/vault{
 	dir = 8
@@ -7371,6 +7372,7 @@
 /area/centcom/prison)
 "atY" = (
 /obj/structure/chair,
+/obj/effect/landmark/holding_facility,
 /turf/open/floor/plasteel/vault{
 	dir = 8
 	},
@@ -7495,23 +7497,17 @@
 /turf/open/floor/grass,
 /area/centcom/control)
 "auk" = (
-/obj/effect/landmark{
-	name = "Centcomsec"
-	},
+/obj/effect/landmark/Centcomsec,
 /turf/open/floor/plasteel/green/side{
 	dir = 8
 	},
 /area/centcom/control)
 "aul" = (
-/obj/effect/landmark{
-	name = "Centcomsec"
-	},
+/obj/effect/landmark/Centcomsec,
 /turf/open/floor/plasteel/neutral,
 /area/centcom/control)
 "aum" = (
-/obj/effect/landmark{
-	name = "Centcomsec"
-	},
+/obj/effect/landmark/Centcomsec,
 /obj/machinery/status_display{
 	density = 0;
 	name = "cargo display";
@@ -7663,9 +7659,7 @@
 /turf/open/floor/grass,
 /area/centcom/control)
 "auF" = (
-/obj/effect/landmark{
-	name = "Centcomsec"
-	},
+/obj/effect/landmark/Centcomsec,
 /turf/open/floor/plasteel/green/side{
 	dir = 4
 	},
@@ -7847,9 +7841,7 @@
 /turf/open/floor/plasteel/bot,
 /area/centcom/control)
 "avb" = (
-/obj/effect/landmark{
-	name = "prisonwarp"
-	},
+/obj/effect/landmark/prisonwarp,
 /obj/structure/chair,
 /turf/open/floor/plasteel/vault{
 	dir = 8
@@ -8063,9 +8055,7 @@
 /area/syndicate_mothership)
 "avE" = (
 /obj/structure/chair/stool,
-/obj/effect/landmark{
-	name = "Syndicate-Spawn"
-	},
+/obj/effect/landmark/syndicate_spawn,
 /turf/open/floor/plasteel/bar,
 /area/syndicate_mothership)
 "avF" = (
@@ -8905,9 +8895,7 @@
 	},
 /area/shuttle/syndicate)
 "axM" = (
-/obj/effect/landmark{
-	name = "Syndicate-Spawn"
-	},
+/obj/effect/landmark/syndicate_spawn,
 /turf/open/floor/plasteel/bar,
 /area/syndicate_mothership)
 "axN" = (
@@ -15379,16 +15367,12 @@
 /area/centcom/ferry)
 "aMd" = (
 /obj/structure/chair/office/dark,
-/obj/effect/landmark{
-	name = "Emergencyresponseteam"
-	},
+/obj/effect/landmark/ert_spawn,
 /turf/open/floor/plasteel/black,
 /area/centcom/ferry)
 "aMe" = (
 /obj/structure/chair/office/dark,
-/obj/effect/landmark{
-	name = "Emergencyresponseteam"
-	},
+/obj/effect/landmark/ert_spawn,
 /turf/open/floor/plasteel/vault{
 	dir = 5
 	},
@@ -15586,9 +15570,7 @@
 /obj/structure/chair/office/dark{
 	dir = 8
 	},
-/obj/effect/landmark{
-	name = "Emergencyresponseteam"
-	},
+/obj/effect/landmark/ert_spawn,
 /turf/open/floor/plasteel/black,
 /area/centcom/ferry)
 "aME" = (
@@ -15805,9 +15787,7 @@
 /obj/structure/chair/office/dark{
 	dir = 8
 	},
-/obj/effect/landmark{
-	name = "Emergencyresponseteam"
-	},
+/obj/effect/landmark/ert_spawn,
 /turf/open/floor/plasteel/vault{
 	dir = 5
 	},
@@ -16348,18 +16328,14 @@
 /obj/structure/chair/office/dark{
 	dir = 1
 	},
-/obj/effect/landmark{
-	name = "Emergencyresponseteam"
-	},
+/obj/effect/landmark/ert_spawn,
 /turf/open/floor/plasteel/black,
 /area/centcom/ferry)
 "aOn" = (
 /obj/structure/chair/office/dark{
 	dir = 1
 	},
-/obj/effect/landmark{
-	name = "Emergencyresponseteam"
-	},
+/obj/effect/landmark/ert_spawn,
 /turf/open/floor/plasteel/vault{
 	dir = 5
 	},
@@ -19049,9 +19025,7 @@
 /area/tdome/tdomeobserve)
 "aUu" = (
 /obj/structure/chair,
-/obj/effect/landmark{
-	name = "tdomeobserve"
-	},
+/obj/effect/landmark/thunderdome/observe,
 /obj/structure/sign/barsign{
 	pixel_y = 32
 	},
@@ -19061,9 +19035,7 @@
 /area/tdome/tdomeobserve)
 "aUv" = (
 /obj/structure/chair,
-/obj/effect/landmark{
-	name = "tdomeobserve"
-	},
+/obj/effect/landmark/thunderdome/observe,
 /turf/open/floor/plasteel/vault{
 	dir = 8
 	},
@@ -19490,13 +19462,12 @@
 	pixel_y = 4
 	},
 /obj/effect/turf_decal/bot,
+/obj/effect/landmark/thunderdome/two,
 /turf/open/floor/plasteel/black,
 /area/tdome/arena)
 "aVz" = (
 /obj/effect/turf_decal/delivery,
-/obj/effect/landmark{
-	name = "tdome2"
-	},
+/obj/effect/landmark/thunderdome/two,
 /turf/open/floor/plasteel/black,
 /area/tdome/arena)
 "aVA" = (
@@ -19526,17 +19497,13 @@
 /obj/machinery/recharger{
 	pixel_y = 4
 	},
-/obj/effect/landmark{
-	name = "tdome1"
-	},
+/obj/effect/landmark/thunderdome/one,
 /obj/effect/turf_decal/bot,
 /turf/open/floor/plasteel/black,
 /area/tdome/arena)
 "aVF" = (
 /obj/effect/turf_decal/delivery,
-/obj/effect/landmark{
-	name = "tdome1"
-	},
+/obj/effect/landmark/thunderdome/one,
 /turf/open/floor/plasteel/black,
 /area/tdome/arena)
 "aVG" = (
@@ -19569,9 +19536,7 @@
 	c_tag = "Red Team"
 	},
 /obj/effect/turf_decal/delivery,
-/obj/effect/landmark{
-	name = "tdome2"
-	},
+/obj/effect/landmark/thunderdome/two,
 /turf/open/floor/plasteel/black,
 /area/tdome/arena)
 "aVK" = (
@@ -19592,9 +19557,7 @@
 	c_tag = "Green Team"
 	},
 /obj/effect/turf_decal/delivery,
-/obj/effect/landmark{
-	name = "tdome1"
-	},
+/obj/effect/landmark/thunderdome/one,
 /turf/open/floor/plasteel/black,
 /area/tdome/arena)
 "aVN" = (
@@ -19654,9 +19617,7 @@
 	pixel_y = 4
 	},
 /obj/effect/turf_decal/bot,
-/obj/effect/landmark{
-	name = "tdome1"
-	},
+/obj/effect/landmark/thunderdome/one,
 /turf/open/floor/plasteel/black,
 /area/tdome/arena)
 "aVW" = (
@@ -19790,9 +19751,7 @@
 	},
 /area/tdome/tdomeadmin)
 "aWp" = (
-/obj/effect/landmark{
-	name = "tdomeadmin"
-	},
+/obj/effect/landmark/thunderdome/admin,
 /obj/structure/chair/comfy/black{
 	dir = 1
 	},
@@ -20750,6 +20709,22 @@
 	dir = 4
 	},
 /area/centcom/evac)
+"aYB" = (
+/obj/effect/landmark/start/wizard,
+/turf/open/floor/wood,
+/area/wizard_station)
+"aYC" = (
+/obj/effect/landmark/start/wizard,
+/turf/open/floor/carpet,
+/area/wizard_station)
+"aYD" = (
+/obj/effect/landmark/start/wizard,
+/turf/open/floor/engine/cult,
+/area/wizard_station)
+"aYE" = (
+/obj/effect/landmark/start/wizard,
+/turf/open/floor/carpet,
+/area/wizard_station)
 
 (1,1,1) = {"
 aaa
@@ -24208,7 +24183,7 @@ amH
 aoE
 akG
 apz
-alc
+aYD
 alc
 alc
 aru
@@ -24988,7 +24963,7 @@ alA
 alA
 alA
 ase
-alA
+aYE
 asw
 alA
 akH
@@ -26001,7 +25976,7 @@ ahK
 ahK
 akG
 amJ
-anj
+aYB
 alA
 aoc
 aoF
@@ -26516,7 +26491,7 @@ ahK
 ahK
 akH
 akH
-alA
+aYC
 alA
 alA
 akH
@@ -68702,7 +68677,7 @@ atg
 aty
 atN
 aun
-auG
+aty
 avb
 avu
 atg
@@ -71786,13 +71761,13 @@ atd
 aty
 atY
 aun
-auG
+aty
 atY
 aun
-auG
+aty
 atY
 aun
-auG
+aty
 atY
 aun
 aty
@@ -81763,9 +81738,9 @@ aaa
 ajm
 ajm
 akg
-akD
-ala
-ala
+aqu
+amf
+amf
 alO
 amf
 amf

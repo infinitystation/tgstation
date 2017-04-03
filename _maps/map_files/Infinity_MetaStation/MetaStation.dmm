@@ -41,9 +41,7 @@
 /turf/open/space,
 /area/space)
 "aae" = (
-/obj/effect/landmark{
-	name = "carpspawn"
-	},
+/obj/effect/landmark/carpspawn,
 /turf/open/space,
 /area/space)
 "aaf" = (
@@ -253,10 +251,7 @@
 /turf/closed/wall,
 /area/space)
 "aaB" = (
-/obj/effect/landmark{
-	name = "xeno_spawn";
-	pixel_x = -1
-	},
+/obj/effect/landmark/xeno_spawn,
 /obj/structure/lattice/catwalk,
 /turf/open/space,
 /area/solar/auxport)
@@ -804,9 +799,7 @@
 /area/crew_quarters/hos)
 "abz" = (
 /obj/structure/chair/comfy/black,
-/obj/effect/landmark/start{
-	name = "Head of Security"
-	},
+/obj/effect/landmark/start/head_of_security,
 /turf/open/floor/plasteel{
 	icon_state = "dark"
 	},
@@ -942,9 +935,7 @@
 /obj/item/clothing/glasses/sunglasses/blindfold,
 /obj/item/clothing/mask/muzzle,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
-/obj/effect/landmark{
-	name = "revenantspawn"
-	},
+/obj/effect/landmark/revenantspawn,
 /obj/item/device/electropack,
 /obj/structure/tile_edge/stripe{
 	dir = 8
@@ -1862,10 +1853,7 @@
 /turf/open/floor/plating,
 /area/crew_quarters/fitness)
 "adj" = (
-/obj/effect/landmark{
-	name = "xeno_spawn";
-	pixel_x = -1
-	},
+/obj/effect/landmark/xeno_spawn,
 /obj/structure/lattice/catwalk,
 /turf/open/space,
 /area/solar/auxstarboard)
@@ -2542,9 +2530,7 @@
 /area/security/gear)
 "aeu" = (
 /obj/structure/chair/stool,
-/obj/effect/landmark/start{
-	name = "Security Officer"
-	},
+/obj/effect/landmark/start/security_officer,
 /turf/open/floor/plasteel/red/side{
 	dir = 1
 	},
@@ -2714,9 +2700,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/obj/effect/landmark/start{
-	name = "Security Officer"
-	},
+/obj/effect/landmark/start/security_officer,
 /turf/open/floor/wood,
 /area/security/break_room)
 "aeJ" = (
@@ -2785,9 +2769,7 @@
 /area/crew_quarters/fitness)
 "aeS" = (
 /obj/machinery/light/small,
-/obj/effect/landmark/start{
-	name = "Assistant"
-	},
+/obj/effect/landmark/start/assistant,
 /turf/open/floor/plasteel/freezer,
 /area/crew_quarters/fitness)
 "aeT" = (
@@ -3067,9 +3049,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 5
 	},
-/obj/effect/landmark/start{
-	name = "Warden"
-	},
+/obj/effect/landmark/start/warden,
 /turf/open/floor/plasteel/red/side,
 /area/security/security_gear)
 "afr" = (
@@ -3178,9 +3158,7 @@
 /obj/structure/chair{
 	dir = 8
 	},
-/obj/effect/landmark/start{
-	name = "Security Officer"
-	},
+/obj/effect/landmark/start/security_officer,
 /turf/open/floor/plasteel/red/side{
 	dir = 4
 	},
@@ -3333,9 +3311,7 @@
 /area/crew_quarters/fitness)
 "afW" = (
 /obj/structure/chair,
-/obj/effect/landmark/start{
-	name = "Assistant"
-	},
+/obj/effect/landmark/start/assistant,
 /turf/open/floor/plasteel,
 /area/crew_quarters/fitness)
 "afX" = (
@@ -3403,10 +3379,7 @@
 	dir = 2;
 	on = 1
 	},
-/obj/effect/landmark{
-	name = "xeno_spawn";
-	pixel_x = -1
-	},
+/obj/effect/landmark/xeno_spawn,
 /turf/open/floor/plating,
 /area/maintenance/auxsolarport)
 "agf" = (
@@ -3656,9 +3629,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/obj/effect/landmark/start{
-	name = "Security Officer"
-	},
+/obj/effect/landmark/start/security_officer,
 /turf/open/floor/wood,
 /area/security/break_room)
 "agF" = (
@@ -4239,9 +4210,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/holopad,
-/obj/effect/landmark/start{
-	name = "Head of Security"
-	},
+/obj/effect/landmark/start/head_of_security,
 /turf/open/floor/plasteel/bot,
 /area/security/main)
 "ahG" = (
@@ -4308,9 +4277,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 6
 	},
-/obj/effect/landmark/start{
-	name = "Security Officer"
-	},
+/obj/effect/landmark/start/security_officer,
 /turf/open/floor/wood,
 /area/security/break_room)
 "ahP" = (
@@ -4358,9 +4325,7 @@
 	dir = 4;
 	network = list("SS13")
 	},
-/obj/effect/landmark/start{
-	name = "Assistant"
-	},
+/obj/effect/landmark/start/assistant,
 /turf/open/floor/plasteel{
 	icon_state = "dark"
 	},
@@ -4467,6 +4432,9 @@
 	},
 /area/crew_quarters/fitness)
 "aig" = (
+/obj/effect/landmark{
+	name = "lightsout"
+	},
 /turf/open/floor/plasteel/blackvault{
 	dir = 1
 	},
@@ -4879,9 +4847,7 @@
 /turf/open/floor/plating,
 /area/security/gear)
 "aiM" = (
-/obj/effect/landmark/start{
-	name = "Security Officer"
-	},
+/obj/effect/landmark/start/security_officer,
 /turf/open/floor/plasteel/darkred/side{
 	dir = 5
 	},
@@ -5117,9 +5083,7 @@
 /obj/structure/chair{
 	dir = 8
 	},
-/obj/effect/landmark/start{
-	name = "Assistant"
-	},
+/obj/effect/landmark/start/assistant,
 /turf/open/floor/plasteel,
 /area/crew_quarters/fitness)
 "ajo" = (
@@ -5344,10 +5308,7 @@
 	dir = 2;
 	on = 1
 	},
-/obj/effect/landmark{
-	name = "xeno_spawn";
-	pixel_x = -1
-	},
+/obj/effect/landmark/xeno_spawn,
 /turf/open/floor/plating,
 /area/maintenance/apmaint)
 "ajL" = (
@@ -5419,9 +5380,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/effect/landmark/start{
-	name = "Security Officer"
-	},
+/obj/effect/landmark/start/security_officer,
 /obj/machinery/light/small{
 	dir = 8
 	},
@@ -5643,9 +5602,7 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden,
-/obj/effect/landmark/start{
-	name = "Security Officer"
-	},
+/obj/effect/landmark/start/security_officer,
 /turf/open/floor/plasteel/red/side{
 	dir = 4
 	},
@@ -5685,9 +5642,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 5
 	},
-/obj/effect/landmark/start{
-	name = "Security Officer"
-	},
+/obj/effect/landmark/start/security_officer,
 /turf/open/floor/plasteel/red/side{
 	dir = 1
 	},
@@ -5737,9 +5692,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/effect/landmark/start{
-	name = "Security Officer"
-	},
+/obj/effect/landmark/start/security_officer,
 /turf/open/floor/plasteel,
 /area/security/range)
 "akw" = (
@@ -6327,9 +6280,7 @@
 	d1 = 4;
 	d2 = 8
 	},
-/obj/effect/landmark/start{
-	name = "Warden"
-	},
+/obj/effect/landmark/start/warden,
 /turf/open/floor/plasteel/darkred/side{
 	dir = 10
 	},
@@ -6467,9 +6418,7 @@
 	dir = 8;
 	on = 1
 	},
-/obj/effect/landmark/start{
-	name = "Security Officer"
-	},
+/obj/effect/landmark/start/security_officer,
 /turf/open/floor/plasteel/darkred/side,
 /area/security/gear)
 "alH" = (
@@ -6672,6 +6621,9 @@
 	d1 = 1;
 	d2 = 8;
 	icon_state = "1-8"
+	},
+/obj/effect/landmark{
+	name = "lightsout"
 	},
 /turf/open/floor/plasteel,
 /area/security/east_brig)
@@ -7074,10 +7026,7 @@
 /turf/open/floor/plating,
 /area/maintenance/disposal)
 "amD" = (
-/obj/effect/landmark{
-	name = "xeno_spawn";
-	pixel_x = -1
-	},
+/obj/effect/landmark/xeno_spawn,
 /obj/item/weapon/storage/box/lights/mixed,
 /obj/effect/decal/cleanable/cobweb,
 /turf/open/floor/plating,
@@ -7160,9 +7109,7 @@
 /turf/open/floor/plating,
 /area/maintenance/apmaint)
 "amK" = (
-/obj/effect/landmark/start{
-	name = "Security Officer"
-	},
+/obj/effect/landmark/start/security_officer,
 /turf/open/floor/plasteel/vault{
 	dir = 8
 	},
@@ -7278,9 +7225,7 @@
 "amW" = (
 /obj/structure/chair/office/dark,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/obj/effect/landmark/start{
-	name = "Warden"
-	},
+/obj/effect/landmark/start/warden,
 /turf/open/floor/plasteel/darkred/side{
 	dir = 6
 	},
@@ -7865,10 +7810,7 @@
 	},
 /area/engine/rest_room)
 "anR" = (
-/obj/effect/landmark{
-	name = "xeno_spawn";
-	pixel_x = -1
-	},
+/obj/effect/landmark/xeno_spawn,
 /obj/machinery/atmospherics/components/unary/vent_pump{
 	dir = 2;
 	on = 1
@@ -8807,10 +8749,7 @@
 	dir = 8;
 	on = 1
 	},
-/obj/effect/landmark{
-	name = "xeno_spawn";
-	pixel_x = -1
-	},
+/obj/effect/landmark/xeno_spawn,
 /turf/open/floor/plating,
 /area/maintenance/apmaint)
 "apx" = (
@@ -9023,9 +8962,7 @@
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
 	dir = 1
 	},
-/obj/effect/landmark/start{
-	name = "Security Officer"
-	},
+/obj/effect/landmark/start/security_officer,
 /turf/open/floor/plasteel/red/side{
 	dir = 1
 	},
@@ -9189,9 +9126,7 @@
 /area/security/east_brig)
 "aqc" = (
 /obj/structure/chair,
-/obj/effect/landmark/start{
-	name = "Security Officer"
-	},
+/obj/effect/landmark/start/security_officer,
 /turf/open/floor/plasteel/darkred/corner{
 	tag = "icon-darkredcorners (EAST)";
 	icon_state = "darkredcorners";
@@ -9503,9 +9438,7 @@
 /area/engine/rest_room)
 "aqH" = (
 /obj/structure/chair/comfy/sofa/corner/brown,
-/obj/effect/landmark/start{
-	name = "Station Engineer"
-	},
+/obj/effect/landmark/start/station_engineer,
 /turf/open/floor/carpet,
 /area/engine/rest_room)
 "aqI" = (
@@ -9540,9 +9473,7 @@
 	dir = 8;
 	on = 1
 	},
-/obj/effect/landmark/start{
-	name = "Station Engineer"
-	},
+/obj/effect/landmark/start/station_engineer,
 /turf/open/floor/plasteel{
 	dir = 1;
 	icon_state = "warning"
@@ -9630,10 +9561,7 @@
 	dir = 2;
 	on = 1
 	},
-/obj/effect/landmark{
-	name = "xeno_spawn";
-	pixel_x = -1
-	},
+/obj/effect/landmark/xeno_spawn,
 /turf/open/floor/plating,
 /area/maintenance/auxsolarstarboard)
 "aqP" = (
@@ -9922,6 +9850,9 @@
 	dir = 4
 	},
 /obj/machinery/holopad,
+/obj/effect/landmark{
+	name = "lightsout"
+	},
 /turf/open/floor/plasteel,
 /area/security/west)
 "arp" = (
@@ -10057,6 +9988,9 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/machinery/holopad,
 /obj/effect/landmark/event_spawn,
+/obj/effect/landmark{
+	name = "lightsout"
+	},
 /turf/open/floor/plasteel,
 /area/security/center)
 "ary" = (
@@ -10216,9 +10150,7 @@
 	scrub_N2O = 1;
 	scrub_Toxins = 1
 	},
-/obj/effect/landmark/start{
-	name = "Security Officer"
-	},
+/obj/effect/landmark/start/security_officer,
 /turf/open/floor/plasteel,
 /area/security/east)
 "arI" = (
@@ -10244,6 +10176,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/machinery/holopad,
+/obj/effect/landmark{
+	name = "lightsout"
+	},
 /turf/open/floor/plasteel,
 /area/security/east)
 "arK" = (
@@ -10401,9 +10336,7 @@
 	pixel_x = 0;
 	pixel_y = -28
 	},
-/obj/effect/landmark/start{
-	name = "Security Officer"
-	},
+/obj/effect/landmark/start/security_officer,
 /turf/open/floor/carpet,
 /area/security/barracks/one)
 "arY" = (
@@ -10620,9 +10553,7 @@
 	icon_state = "2-8";
 	tag = ""
 	},
-/obj/effect/landmark/start{
-	name = "Chief Engineer"
-	},
+/obj/effect/landmark/start/chief_engineer,
 /turf/open/floor/carpet,
 /area/engine/rest_room)
 "asv" = (
@@ -10663,10 +10594,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
-/obj/effect/landmark{
-	name = "xeno_spawn";
-	pixel_x = -1
-	},
+/obj/effect/landmark/xeno_spawn,
 /obj/structure/cable/yellow{
 	d2 = 4;
 	icon_state = "0-4"
@@ -10791,10 +10719,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 6
 	},
-/obj/effect/landmark{
-	name = "xeno_spawn";
-	pixel_x = -1
-	},
+/obj/effect/landmark/xeno_spawn,
 /obj/structure/cable/yellow{
 	d1 = 2;
 	d2 = 4;
@@ -10891,10 +10816,7 @@
 	on = 1
 	},
 /obj/machinery/light,
-/obj/effect/landmark{
-	name = "xeno_spawn";
-	pixel_x = -1
-	},
+/obj/effect/landmark/xeno_spawn,
 /obj/structure/cable/yellow{
 	d1 = 4;
 	d2 = 8;
@@ -11028,9 +10950,7 @@
 	d2 = 8;
 	icon_state = "2-8"
 	},
-/obj/effect/landmark/start{
-	name = "Security Officer"
-	},
+/obj/effect/landmark/start/security_officer,
 /turf/open/floor/plasteel/white,
 /area/security/infirmary)
 "asZ" = (
@@ -11123,9 +11043,7 @@
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden{
 	dir = 1
 	},
-/obj/effect/landmark/start{
-	name = "Warden"
-	},
+/obj/effect/landmark/start/warden,
 /turf/open/floor/plasteel/red/corner{
 	dir = 8
 	},
@@ -11359,9 +11277,7 @@
 /obj/structure/chair/comfy/beige{
 	dir = 8
 	},
-/obj/effect/landmark/start{
-	name = "Security Officer"
-	},
+/obj/effect/landmark/start/security_officer,
 /turf/open/floor/plasteel{
 	icon_state = "grimy"
 	},
@@ -12020,9 +11936,7 @@
 /obj/structure/chair{
 	dir = 4
 	},
-/obj/effect/landmark/start{
-	name = "Security Officer"
-	},
+/obj/effect/landmark/start/security_officer,
 /turf/open/floor/plasteel/red/side{
 	dir = 8
 	},
@@ -12045,9 +11959,7 @@
 /obj/structure/chair{
 	dir = 8
 	},
-/obj/effect/landmark/start{
-	name = "Security Officer"
-	},
+/obj/effect/landmark/start/security_officer,
 /turf/open/floor/plasteel/red/side{
 	dir = 4
 	},
@@ -12332,9 +12244,7 @@
 	dir = 8;
 	on = 1
 	},
-/obj/effect/landmark/start{
-	name = "Security Officer"
-	},
+/obj/effect/landmark/start/security_officer,
 /turf/open/floor/carpet,
 /area/security/barracks/two)
 "avk" = (
@@ -12419,10 +12329,7 @@
 	dir = 4;
 	on = 1
 	},
-/obj/effect/landmark{
-	name = "xeno_spawn";
-	pixel_x = -1
-	},
+/obj/effect/landmark/xeno_spawn,
 /obj/item/device/radio/intercom{
 	freerange = 0;
 	frequency = 1459;
@@ -12544,10 +12451,7 @@
 /turf/open/floor/carpet,
 /area/crew_quarters/sleep/four)
 "avA" = (
-/obj/effect/landmark{
-	name = "xeno_spawn";
-	pixel_x = -1
-	},
+/obj/effect/landmark/xeno_spawn,
 /obj/machinery/atmospherics/components/unary/vent_pump{
 	dir = 8;
 	on = 1
@@ -12662,9 +12566,7 @@
 /turf/open/floor/wood,
 /area/engine/rest_room)
 "avH" = (
-/obj/effect/landmark/start{
-	name = "Atmospheric Technician"
-	},
+/obj/effect/landmark/start/atmospheric_technician,
 /turf/open/floor/wood,
 /area/engine/rest_room)
 "avI" = (
@@ -14180,9 +14082,7 @@
 /area/maintenance/apmaint)
 "axX" = (
 /obj/structure/bodycontainer/morgue,
-/obj/effect/landmark{
-	name = "revenantspawn"
-	},
+/obj/effect/landmark/revenantspawn,
 /obj/machinery/light_switch{
 	pixel_y = -28
 	},
@@ -14254,9 +14154,7 @@
 /obj/structure/chair{
 	dir = 4
 	},
-/obj/effect/landmark/start{
-	name = "Security Officer"
-	},
+/obj/effect/landmark/start/security_officer,
 /obj/machinery/light,
 /obj/machinery/camera{
 	c_tag = "Brig - West corridor";
@@ -14410,9 +14308,7 @@
 /obj/structure/chair/office/dark{
 	dir = 4
 	},
-/obj/effect/landmark/start{
-	name = "Security Officer"
-	},
+/obj/effect/landmark/start/security_officer,
 /turf/open/floor/plasteel/vault{
 	dir = 6
 	},
@@ -14508,9 +14404,7 @@
 /obj/structure/chair/office/dark{
 	dir = 8
 	},
-/obj/effect/landmark/start{
-	name = "Detective"
-	},
+/obj/effect/landmark/start/detective,
 /turf/open/floor/carpet,
 /area/security/detectives_office)
 "ayu" = (
@@ -14636,6 +14530,9 @@
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
+	},
+/obj/effect/landmark{
+	name = "lightsout"
 	},
 /turf/open/floor/carpet,
 /area/crew_quarters/sleep)
@@ -15317,10 +15214,7 @@
 	dir = 4;
 	on = 1
 	},
-/obj/effect/landmark{
-	name = "xeno_spawn";
-	pixel_x = -1
-	},
+/obj/effect/landmark/xeno_spawn,
 /turf/open/floor/carpet,
 /area/crew_quarters/sleep/six)
 "azS" = (
@@ -15390,10 +15284,7 @@
 	},
 /area/crew_quarters/sleep/three)
 "azW" = (
-/obj/effect/landmark{
-	name = "xeno_spawn";
-	pixel_x = -1
-	},
+/obj/effect/landmark/xeno_spawn,
 /obj/machinery/atmospherics/components/unary/vent_pump{
 	dir = 8;
 	on = 1
@@ -16277,9 +16168,7 @@
 	dir = 8;
 	pixel_x = -5
 	},
-/obj/effect/landmark/start{
-	name = "Assistant"
-	},
+/obj/effect/landmark/start/assistant,
 /obj/structure/curtain/open/shower,
 /obj/machinery/light/small{
 	dir = 4
@@ -16417,9 +16306,7 @@
 /obj/structure/disposalpipe/sortjunction{
 	sortType = 4
 	},
-/obj/effect/landmark/start{
-	name = "Station Engineer"
-	},
+/obj/effect/landmark/start/station_engineer,
 /turf/open/floor/plasteel,
 /area/engine/engineering)
 "aBN" = (
@@ -16736,9 +16623,7 @@
 	dir = 8;
 	initialize_directions = 13
 	},
-/obj/effect/landmark/start{
-	name = "Security Officer"
-	},
+/obj/effect/landmark/start/security_officer,
 /turf/open/floor/plasteel,
 /area/security/west)
 "aCp" = (
@@ -16808,6 +16693,9 @@
 	dir = 8;
 	on = 1
 	},
+/obj/effect/landmark{
+	name = "lightsout"
+	},
 /turf/open/floor/plasteel,
 /area/security/west)
 "aCs" = (
@@ -16850,6 +16738,9 @@
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
+	},
+/obj/effect/landmark{
+	name = "lightsout"
 	},
 /turf/open/floor/plasteel,
 /area/security/mass_cell)
@@ -17138,10 +17029,7 @@
 	},
 /area/crew_quarters/toilet)
 "aCW" = (
-/obj/effect/landmark{
-	name = "xeno_spawn";
-	pixel_x = -1
-	},
+/obj/effect/landmark/xeno_spawn,
 /obj/item/weapon/bikehorn/rubberducky,
 /obj/effect/landmark/event_spawn,
 /turf/open/floor/plasteel{
@@ -17990,6 +17878,9 @@
 	dir = 1
 	},
 /obj/machinery/holopad,
+/obj/effect/landmark{
+	name = "lightsout"
+	},
 /turf/open/floor/plasteel,
 /area/hallway/primary/fore)
 "aEA" = (
@@ -18010,9 +17901,7 @@
 	pixel_y = 0;
 	req_access_txt = "0"
 	},
-/obj/effect/landmark/start{
-	name = "Detective"
-	},
+/obj/effect/landmark/start/detective,
 /turf/open/floor/plasteel/black,
 /area/security/detectives_office)
 "aEC" = (
@@ -18757,9 +18646,7 @@
 /area/security/detectives_office)
 "aFW" = (
 /obj/structure/bodycontainer/morgue,
-/obj/effect/landmark{
-	name = "revenantspawn"
-	},
+/obj/effect/landmark/revenantspawn,
 /turf/open/floor/plasteel/darkvault{
 	dir = 8
 	},
@@ -18863,9 +18750,7 @@
 	dir = 4
 	},
 /obj/structure/chair/comfy/sofa/corner/right/brown,
-/obj/effect/landmark/start{
-	name = "Assistant"
-	},
+/obj/effect/landmark/start/assistant,
 /turf/open/floor/carpet,
 /area/crew_quarters/sleep)
 "aGi" = (
@@ -18881,9 +18766,7 @@
 	icon_state = "pipe-c"
 	},
 /obj/structure/chair/comfy/sofa/corner/brown,
-/obj/effect/landmark/start{
-	name = "Assistant"
-	},
+/obj/effect/landmark/start/assistant,
 /turf/open/floor/carpet,
 /area/crew_quarters/sleep)
 "aGk" = (
@@ -18960,9 +18843,7 @@
 	density = 0;
 	pixel_y = 26
 	},
-/obj/effect/landmark/start{
-	name = "Assistant"
-	},
+/obj/effect/landmark/start/assistant,
 /turf/open/floor/carpet,
 /area/crew_quarters/sleep/two)
 "aGr" = (
@@ -19255,9 +19136,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
-/obj/effect/landmark/start{
-	name = "Cargo Technician"
-	},
+/obj/effect/landmark/start/cargo_technician,
 /turf/open/floor/plasteel{
 	icon_state = "floorgrime"
 	},
@@ -19806,10 +19685,7 @@
 	pixel_x = 0;
 	pixel_y = -28
 	},
-/obj/effect/landmark{
-	name = "xeno_spawn";
-	pixel_x = -1
-	},
+/obj/effect/landmark/xeno_spawn,
 /turf/open/floor/carpet,
 /area/crew_quarters/sleep/two)
 "aHS" = (
@@ -19871,9 +19747,7 @@
 /turf/open/floor/plasteel,
 /area/engine/equipment_room)
 "aHX" = (
-/obj/effect/landmark/start{
-	name = "Station Engineer"
-	},
+/obj/effect/landmark/start/station_engineer,
 /obj/machinery/atmospherics/components/unary/vent_pump{
 	dir = 4;
 	on = 1
@@ -20267,9 +20141,7 @@
 	icon_state = "0-8";
 	d2 = 8
 	},
-/obj/effect/landmark{
-	name = "blobstart"
-	},
+/obj/effect/landmark/blobstart,
 /turf/open/floor/plasteel{
 	icon_state = "floorgrime"
 	},
@@ -20475,9 +20347,7 @@
 	},
 /area/hallway/primary/fore)
 "aIV" = (
-/obj/effect/landmark/start{
-	name = "Detective"
-	},
+/obj/effect/landmark/start/detective,
 /turf/open/floor/plasteel,
 /area/hallway/primary/fore)
 "aIW" = (
@@ -21531,9 +21401,7 @@
 	pixel_x = 0;
 	pixel_y = -32
 	},
-/obj/effect/landmark{
-	name = "blobstart"
-	},
+/obj/effect/landmark/blobstart,
 /obj/machinery/button/door{
 	id = "Toilet2";
 	name = "Lock Control";
@@ -21710,10 +21578,7 @@
 	density = 0;
 	pixel_y = 26
 	},
-/obj/effect/landmark{
-	name = "xeno_spawn";
-	pixel_x = -1
-	},
+/obj/effect/landmark/xeno_spawn,
 /turf/open/floor/plasteel{
 	icon_state = "grimy"
 	},
@@ -21727,9 +21592,7 @@
 	d2 = 4;
 	icon_state = "1-4"
 	},
-/obj/effect/landmark{
-	name = "blobstart"
-	},
+/obj/effect/landmark/blobstart,
 /turf/open/floor/plating,
 /area/maintenance/aft)
 "aLd" = (
@@ -21850,9 +21713,7 @@
 /area/engine/equipment_room)
 "aLj" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
-/obj/effect/landmark/start{
-	name = "Station Engineer"
-	},
+/obj/effect/landmark/start/station_engineer,
 /turf/open/floor/plasteel,
 /area/engine/engineering)
 "aLk" = (
@@ -23486,9 +23347,7 @@
 	pixel_x = 0;
 	pixel_y = -32
 	},
-/obj/effect/landmark{
-	name = "blobstart"
-	},
+/obj/effect/landmark/blobstart,
 /obj/machinery/button/door{
 	id = "Toilet1";
 	name = "Lock Control";
@@ -23526,9 +23385,7 @@
 	req_access_txt = "0";
 	specialfunctions = 4
 	},
-/obj/effect/landmark/start{
-	name = "Assistant"
-	},
+/obj/effect/landmark/start/assistant,
 /turf/open/floor/plasteel{
 	icon_state = "freezerfloor"
 	},
@@ -24047,9 +23904,7 @@
 /area/crew_quarters/courtroom)
 "aPa" = (
 /obj/structure/chair/office/dark,
-/obj/effect/landmark/start{
-	name = "Lawyer"
-	},
+/obj/effect/landmark/start/lawyer,
 /turf/open/floor/carpet,
 /area/lawoffice)
 "aPb" = (
@@ -24223,9 +24078,7 @@
 /turf/open/floor/plating,
 /area/maintenance/aft)
 "aPs" = (
-/obj/effect/landmark{
-	name = "revenantspawn"
-	},
+/obj/effect/landmark/revenantspawn,
 /turf/open/floor/plating,
 /area/engine/engineering)
 "aPt" = (
@@ -24609,9 +24462,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/effect/landmark{
-	name = "blobstart"
-	},
+/obj/effect/landmark/blobstart,
 /turf/open/floor/plating,
 /area/maintenance/apmaint)
 "aQl" = (
@@ -24941,9 +24792,7 @@
 	},
 /area/crew_quarters/courtroom)
 "aQP" = (
-/obj/effect/landmark/start{
-	name = "Lawyer"
-	},
+/obj/effect/landmark/start/lawyer,
 /obj/structure/curtainthing,
 /turf/open/floor/plasteel,
 /area/crew_quarters/courtroom)
@@ -25245,9 +25094,7 @@
 /turf/open/floor/grass,
 /area/hallway/secondary/garden)
 "aRq" = (
-/obj/effect/landmark{
-	name = "blobstart"
-	},
+/obj/effect/landmark/blobstart,
 /turf/open/floor/plating{
 	icon_state = "platingdmg1"
 	},
@@ -25257,9 +25104,7 @@
 /turf/open/floor/plating,
 /area/engine/engineering)
 "aRs" = (
-/obj/effect/landmark{
-	name = "blobstart"
-	},
+/obj/effect/landmark/blobstart,
 /turf/open/floor/plating,
 /area/engine/engineering)
 "aRt" = (
@@ -25512,9 +25357,7 @@
 /area/quartermaster/storage)
 "aSb" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
-/obj/effect/landmark/start{
-	name = "Cargo Technician"
-	},
+/obj/effect/landmark/start/cargo_technician,
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/plasteel,
 /area/quartermaster/storage)
@@ -25791,9 +25634,7 @@
 	icon_state = "1-8";
 	tag = ""
 	},
-/obj/effect/landmark/start{
-	name = "Lawyer"
-	},
+/obj/effect/landmark/start/lawyer,
 /turf/open/floor/carpet,
 /area/lawoffice)
 "aSE" = (
@@ -26418,9 +26259,7 @@
 	},
 /area/quartermaster/storage)
 "aTK" = (
-/obj/effect/landmark/start{
-	name = "Cargo Technician"
-	},
+/obj/effect/landmark/start/cargo_technician,
 /turf/open/floor/plasteel,
 /area/quartermaster/storage)
 "aTL" = (
@@ -26949,9 +26788,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/effect/landmark{
-	name = "lightsout"
-	},
+/obj/effect/landmark/lightsout,
 /turf/open/floor/plasteel{
 	icon_state = "floorgrime"
 	},
@@ -27398,9 +27235,7 @@
 /turf/open/floor/plasteel/neutral,
 /area/hallway/secondary/entry)
 "aVy" = (
-/obj/effect/landmark/start{
-	name = "Assistant"
-	},
+/obj/effect/landmark/start/assistant,
 /turf/open/floor/plasteel/neutral,
 /area/hallway/secondary/entry)
 "aVz" = (
@@ -27639,9 +27474,7 @@
 /turf/open/floor/plasteel,
 /area/quartermaster/storage)
 "aVT" = (
-/obj/effect/landmark/start{
-	name = "Quartermaster"
-	},
+/obj/effect/landmark/start/quartermaster,
 /obj/structure/disposalpipe/segment{
 	dir = 2;
 	icon_state = "pipe-c"
@@ -28444,9 +28277,7 @@
 	},
 /area/quartermaster/storage)
 "aXs" = (
-/obj/effect/landmark/start{
-	name = "Cargo Technician"
-	},
+/obj/effect/landmark/start/cargo_technician,
 /turf/open/floor/plasteel{
 	icon_state = "delivery";
 	name = "floor"
@@ -29201,9 +29032,7 @@
 	},
 /area/engine/engine_smes)
 "aYz" = (
-/obj/effect/landmark/start{
-	name = "Station Engineer"
-	},
+/obj/effect/landmark/start/station_engineer,
 /obj/machinery/light{
 	dir = 8
 	},
@@ -29291,9 +29120,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/effect/landmark/start{
-	name = "Station Engineer"
-	},
+/obj/effect/landmark/start/station_engineer,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
@@ -31385,9 +31212,7 @@
 	pixel_x = -24;
 	pixel_y = 24
 	},
-/obj/effect/landmark/start{
-	name = "Cyborg"
-	},
+/obj/effect/landmark/start/cyborg,
 /obj/structure/cable/yellow{
 	d2 = 4;
 	icon_state = "0-4"
@@ -31418,9 +31243,7 @@
 	dir = 2;
 	on = 1
 	},
-/obj/effect/landmark/start{
-	name = "Cyborg"
-	},
+/obj/effect/landmark/start/cyborg,
 /obj/machinery/light/small{
 	dir = 4
 	},
@@ -32018,9 +31841,7 @@
 	},
 /area/quartermaster/storage)
 "bdk" = (
-/obj/effect/landmark{
-	name = "lightsout"
-	},
+/obj/effect/landmark/lightsout,
 /turf/open/floor/plasteel{
 	icon_state = "bot"
 	},
@@ -32036,9 +31857,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 5
 	},
-/obj/effect/landmark/start{
-	name = "Cargo Technician"
-	},
+/obj/effect/landmark/start/cargo_technician,
 /turf/open/floor/plasteel,
 /area/quartermaster/storage)
 "bdn" = (
@@ -32947,9 +32766,7 @@
 	d2 = 4;
 	icon_state = "1-4"
 	},
-/obj/effect/landmark{
-	name = "blobstart"
-	},
+/obj/effect/landmark/blobstart,
 /turf/open/floor/plating{
 	tag = "icon-panelscorched";
 	icon_state = "panelscorched"
@@ -33252,9 +33069,8 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/effect/landmark{
-	name = "lightsout"
-	},
+/obj/effect/landmark/lightsout,
+/obj/effect/landmark/observer_start,
 /turf/open/floor/plasteel{
 	icon_state = "L7"
 	},
@@ -33389,9 +33205,7 @@
 	d2 = 4;
 	icon_state = "1-4"
 	},
-/obj/effect/landmark{
-	name = "blobstart"
-	},
+/obj/effect/landmark/blobstart,
 /turf/open/floor/plating,
 /area/maintenance/port)
 "bfB" = (
@@ -34531,9 +34345,7 @@
 	d2 = 4;
 	icon_state = "0-4"
 	},
-/obj/effect/landmark{
-	name = "revenantspawn"
-	},
+/obj/effect/landmark/revenantspawn,
 /turf/open/floor/plasteel{
 	dir = 8;
 	icon_state = "vault";
@@ -34719,9 +34531,7 @@
 	},
 /area/engine/engineering)
 "bhA" = (
-/obj/effect/landmark{
-	name = "lightsout"
-	},
+/obj/effect/landmark/lightsout,
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 9;
@@ -34851,9 +34661,6 @@
 	},
 /area/ai_monitored/turret_protected/ai)
 "bhM" = (
-/obj/effect/landmark{
-	name = "tripai"
-	},
 /obj/item/device/radio/intercom{
 	anyai = 1;
 	freerange = 1;
@@ -34889,6 +34696,7 @@
 	pixel_x = 4;
 	req_access_txt = "16"
 	},
+/obj/effect/landmark/tripai,
 /turf/open/floor/circuit/green,
 /area/ai_monitored/turret_protected/ai)
 "bhN" = (
@@ -34991,9 +34799,6 @@
 /turf/open/floor/circuit,
 /area/ai_monitored/turret_protected/ai)
 "bhT" = (
-/obj/effect/landmark{
-	name = "tripai"
-	},
 /obj/item/device/radio/intercom{
 	anyai = 1;
 	freerange = 1;
@@ -35029,6 +34834,7 @@
 	pixel_x = -3;
 	req_access_txt = "16"
 	},
+/obj/effect/landmark/tripai,
 /turf/open/floor/circuit/green,
 /area/ai_monitored/turret_protected/ai)
 "bhU" = (
@@ -35598,9 +35404,6 @@
 	dir = 4
 	},
 /obj/machinery/holopad,
-/obj/effect/landmark{
-	name = "Observer-Start"
-	},
 /turf/open/floor/plasteel,
 /area/hallway/primary/central)
 "biO" = (
@@ -35800,10 +35603,7 @@
 /turf/open/floor/plating,
 /area/maintenance/port)
 "bje" = (
-/obj/effect/landmark{
-	name = "xeno_spawn";
-	pixel_x = -1
-	},
+/obj/effect/landmark/xeno_spawn,
 /obj/item/weapon/cigbutt,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/open/floor/plating/warnplate{
@@ -35993,9 +35793,7 @@
 	},
 /area/crew_quarters/chief)
 "bjr" = (
-/obj/effect/landmark/start{
-	name = "Chief Engineer"
-	},
+/obj/effect/landmark/start/chief_engineer,
 /obj/structure/chair/office/light{
 	dir = 1;
 	pixel_y = 3
@@ -36181,9 +35979,7 @@
 	pixel_x = 27;
 	pixel_y = -7
 	},
-/obj/effect/landmark/start{
-	name = "AI"
-	},
+/obj/effect/landmark/start/ai,
 /obj/machinery/button/door{
 	id = "AI Chamber entrance shutters";
 	name = "AI Chamber entrance shutters control";
@@ -36392,9 +36188,7 @@
 	},
 /area/quartermaster/sorting)
 "bjZ" = (
-/obj/effect/landmark/start{
-	name = "Cargo Technician"
-	},
+/obj/effect/landmark/start/cargo_technician,
 /obj/structure/chair/office/dark{
 	dir = 4
 	},
@@ -36451,9 +36245,7 @@
 "bkg" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/obj/effect/landmark{
-	name = "lightsout"
-	},
+/obj/effect/landmark/lightsout,
 /turf/open/floor/plasteel,
 /area/hallway/primary/port)
 "bkh" = (
@@ -36717,10 +36509,7 @@
 	dir = 4;
 	on = 1
 	},
-/obj/effect/landmark{
-	name = "xeno_spawn";
-	pixel_x = -1
-	},
+/obj/effect/landmark/xeno_spawn,
 /obj/structure/cable/yellow{
 	icon_state = "4-8";
 	d1 = 4;
@@ -38629,9 +38418,7 @@
 /turf/open/floor/carpet,
 /area/crew_quarters/captain/captains_quarters)
 "bnU" = (
-/obj/effect/landmark/start{
-	name = "Captain"
-	},
+/obj/effect/landmark/start/captain,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/structure/chair/comfy/brown{
 	dir = 8;
@@ -38650,9 +38437,7 @@
 "bnX" = (
 /obj/structure/bed,
 /obj/item/weapon/bedsheet/captain,
-/obj/effect/landmark/start{
-	name = "Captain"
-	},
+/obj/effect/landmark/start/captain,
 /obj/machinery/camera{
 	c_tag = "Captain's Quarters";
 	dir = 8;
@@ -39300,9 +39085,7 @@
 	},
 /area/quartermaster/sorting)
 "bpg" = (
-/obj/effect/landmark/start{
-	name = "Cargo Technician"
-	},
+/obj/effect/landmark/start/cargo_technician,
 /obj/structure/cable/yellow{
 	d1 = 4;
 	d2 = 8;
@@ -39427,9 +39210,7 @@
 	d2 = 8;
 	icon_state = "1-8"
 	},
-/obj/effect/landmark/start{
-	name = "Janitor"
-	},
+/obj/effect/landmark/start/janitor,
 /turf/open/floor/plasteel{
 	icon_state = "floorgrime"
 	},
@@ -39467,9 +39248,7 @@
 	},
 /area/janitor)
 "bpr" = (
-/obj/effect/landmark{
-	name = "blobstart"
-	},
+/obj/effect/landmark/blobstart,
 /obj/machinery/power/apc{
 	cell_type = 2500;
 	dir = 4;
@@ -40677,9 +40456,7 @@
 /obj/structure/chair{
 	dir = 8
 	},
-/obj/effect/landmark/start{
-	name = "Assistant"
-	},
+/obj/effect/landmark/start/assistant,
 /turf/open/floor/plasteel{
 	dir = 4;
 	icon_state = "brown"
@@ -41425,9 +41202,7 @@
 "bsy" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/structure/chair/office/dark,
-/obj/effect/landmark/start{
-	name = "Cargo Technician"
-	},
+/obj/effect/landmark/start/cargo_technician,
 /turf/open/floor/plasteel/arrival{
 	dir = 2
 	},
@@ -41740,9 +41515,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/effect/landmark/start{
-	name = "Internal Affairs Agent"
-	},
+/obj/effect/landmark/start/ifa,
 /turf/open/floor/plasteel{
 	icon_state = "dark"
 	},
@@ -41809,18 +41582,13 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
-/obj/effect/landmark{
-	name = "revenantspawn"
-	},
+/obj/effect/landmark/revenantspawn,
 /turf/open/floor/plasteel{
 	icon_state = "white"
 	},
 /area/crew_quarters/captain/captains_quarters)
 "bsZ" = (
-/obj/effect/landmark{
-	name = "xeno_spawn";
-	pixel_x = -1
-	},
+/obj/effect/landmark/xeno_spawn,
 /obj/item/weapon/soap/deluxe,
 /obj/machinery/atmospherics/components/unary/vent_pump{
 	dir = 4;
@@ -41854,9 +41622,7 @@
 	dir = 2;
 	icon_state = "tube1"
 	},
-/obj/effect/landmark/start{
-	name = "Captain"
-	},
+/obj/effect/landmark/start/captain,
 /obj/machinery/light_switch{
 	pixel_y = -25
 	},
@@ -41875,9 +41641,7 @@
 /turf/open/floor/wood,
 /area/crew_quarters/captain/captains_quarters)
 "btd" = (
-/obj/effect/landmark/start{
-	name = "Captain"
-	},
+/obj/effect/landmark/start/captain,
 /obj/machinery/airalarm{
 	dir = 1;
 	pixel_y = -22
@@ -42149,9 +41913,7 @@
 /area/engine/break_room)
 "btD" = (
 /obj/structure/chair/stool,
-/obj/effect/landmark/start{
-	name = "Station Engineer"
-	},
+/obj/effect/landmark/start/station_engineer,
 /turf/open/floor/plasteel,
 /area/engine/break_room)
 "btE" = (
@@ -43398,9 +43160,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
-/obj/effect/landmark/start{
-	name = "Cyborg"
-	},
+/obj/effect/landmark/start/cyborg,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/structure/cable/yellow{
 	d1 = 1;
@@ -43865,9 +43625,7 @@
 /turf/open/floor/wood,
 /area/crew_quarters/heads)
 "bwl" = (
-/obj/effect/landmark/start{
-	name = "Head of Personnel"
-	},
+/obj/effect/landmark/start/head_of_personnel,
 /obj/structure/chair/office/dark{
 	dir = 8
 	},
@@ -44378,9 +44136,7 @@
 /area/engine/break_room)
 "bxh" = (
 /obj/structure/chair/stool,
-/obj/effect/landmark/start{
-	name = "Atmospheric Technician"
-	},
+/obj/effect/landmark/start/atmospheric_technician,
 /turf/open/floor/plasteel,
 /area/engine/break_room)
 "bxi" = (
@@ -45683,9 +45439,7 @@
 /turf/open/floor/wood,
 /area/crew_quarters/captain/captains_quarters)
 "byX" = (
-/obj/effect/landmark/start{
-	name = "Captain"
-	},
+/obj/effect/landmark/start/captain,
 /obj/structure/chair/comfy/brown,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/structure/disposalpipe/segment,
@@ -45728,9 +45482,7 @@
 /turf/open/floor/plasteel/arcade_carpet,
 /area/crew_quarters/theatre)
 "bzc" = (
-/obj/effect/landmark/start{
-	name = "Mime"
-	},
+/obj/effect/landmark/start/mime,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
@@ -45854,9 +45606,7 @@
 /turf/open/floor/wood,
 /area/crew_quarters/theatre)
 "bzo" = (
-/obj/effect/landmark/start{
-	name = "Bartender"
-	},
+/obj/effect/landmark/start/bartender,
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -47039,9 +46789,7 @@
 	d2 = 4;
 	icon_state = "2-4"
 	},
-/obj/effect/landmark{
-	name = "blobstart"
-	},
+/obj/effect/landmark/blobstart,
 /turf/open/floor/plating{
 	icon_state = "warnplate";
 	dir = 4
@@ -47118,9 +46866,7 @@
 /turf/open/floor/plasteel/arcade_carpet,
 /area/crew_quarters/theatre)
 "bBi" = (
-/obj/effect/landmark/start{
-	name = "Clown"
-	},
+/obj/effect/landmark/start/clown,
 /obj/machinery/atmospherics/components/unary/vent_pump{
 	dir = 4;
 	on = 1
@@ -47175,9 +46921,7 @@
 /obj/structure/chair/wood/wings{
 	dir = 4
 	},
-/obj/effect/landmark/start{
-	name = "Clown"
-	},
+/obj/effect/landmark/start/clown,
 /turf/open/floor/carpet,
 /area/crew_quarters/theatre)
 "bBq" = (
@@ -47187,9 +46931,7 @@
 /obj/structure/chair/wood/wings{
 	dir = 8
 	},
-/obj/effect/landmark/start{
-	name = "Mime"
-	},
+/obj/effect/landmark/start/mime,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /turf/open/floor/carpet,
 /area/crew_quarters/theatre)
@@ -47202,10 +46944,7 @@
 /turf/open/floor/wood,
 /area/crew_quarters/theatre)
 "bBt" = (
-/obj/effect/landmark{
-	name = "xeno_spawn";
-	pixel_x = -1
-	},
+/obj/effect/landmark/xeno_spawn,
 /obj/machinery/atmospherics/components/unary/vent_pump{
 	dir = 4;
 	on = 1
@@ -48290,9 +48029,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
-/obj/effect/landmark{
-	name = "blobstart"
-	},
+/obj/effect/landmark/blobstart,
 /turf/open/floor/plating,
 /area/maintenance/atmos_control)
 "bDy" = (
@@ -48897,9 +48634,7 @@
 /area/crew_quarters/heads)
 "bEA" = (
 /obj/structure/chair/office/dark,
-/obj/effect/landmark/start{
-	name = "Head of Personnel"
-	},
+/obj/effect/landmark/start/head_of_personnel,
 /obj/structure/cable/yellow{
 	d1 = 1;
 	d2 = 2;
@@ -49861,10 +49596,7 @@
 	name = "old sink";
 	pixel_y = 28
 	},
-/obj/effect/landmark{
-	name = "xeno_spawn";
-	pixel_x = -1
-	},
+/obj/effect/landmark/xeno_spawn,
 /turf/open/floor/plating,
 /area/crew_quarters/locker/restrooms)
 "bGj" = (
@@ -49916,9 +49648,7 @@
 /obj/structure/chair/office/dark{
 	dir = 1
 	},
-/obj/effect/landmark/start{
-	name = "Librarian"
-	},
+/obj/effect/landmark/start/librarian,
 /turf/open/floor/wood,
 /area/library)
 "bGo" = (
@@ -50324,9 +50054,7 @@
 /turf/open/floor/wood,
 /area/crew_quarters/bar)
 "bHc" = (
-/obj/effect/landmark/start{
-	name = "Bartender"
-	},
+/obj/effect/landmark/start/bartender,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 6
 	},
@@ -51421,9 +51149,7 @@
 /obj/structure/chair/office/dark{
 	dir = 4
 	},
-/obj/effect/landmark/start{
-	name = "Atmospheric Technician"
-	},
+/obj/effect/landmark/start/atmospheric_technician,
 /turf/open/floor/plasteel,
 /area/atmos)
 "bIZ" = (
@@ -51849,9 +51575,7 @@
 /area/library)
 "bJT" = (
 /obj/structure/chair/comfy/black,
-/obj/effect/landmark/start{
-	name = "Assistant"
-	},
+/obj/effect/landmark/start/assistant,
 /turf/open/floor/wood,
 /area/library)
 "bJU" = (
@@ -52240,9 +51964,7 @@
 /area/crew_quarters/bar)
 "bKv" = (
 /obj/structure/chair/comfy/sofa/corner/right/brown,
-/obj/effect/landmark/start{
-	name = "Assistant"
-	},
+/obj/effect/landmark/start/assistant,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
@@ -52250,9 +51972,7 @@
 /area/crew_quarters/bar)
 "bKw" = (
 /obj/structure/chair/comfy/sofa/corner/brown,
-/obj/effect/landmark/start{
-	name = "Assistant"
-	},
+/obj/effect/landmark/start/assistant,
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden{
 	dir = 1;
 	initialize_directions = 13
@@ -52379,9 +52099,7 @@
 /obj/structure/chair{
 	dir = 8
 	},
-/obj/effect/landmark/start{
-	name = "Atmospheric Technician"
-	},
+/obj/effect/landmark/start/atmospheric_technician,
 /obj/structure/cable/yellow{
 	d1 = 1;
 	d2 = 2;
@@ -52836,9 +52554,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/effect/landmark{
-	name = "lightsout"
-	},
+/obj/effect/landmark/lightsout,
 /turf/open/floor/plasteel{
 	dir = 1;
 	icon_state = "neutralcorner"
@@ -53061,9 +52777,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
-/obj/effect/landmark{
-	name = "lightsout"
-	},
+/obj/effect/landmark/lightsout,
 /turf/open/floor/plasteel{
 	dir = 4;
 	icon_state = "neutralcorner"
@@ -53475,9 +53189,7 @@
 /obj/machinery/atmospherics/pipe/simple/green/visible{
 	dir = 6
 	},
-/obj/effect/landmark/start{
-	name = "Atmospheric Technician"
-	},
+/obj/effect/landmark/start/atmospheric_technician,
 /turf/open/floor/plasteel,
 /area/atmos)
 "bMH" = (
@@ -53604,9 +53316,7 @@
 /turf/open/floor/wood,
 /area/security/vacantoffice)
 "bMW" = (
-/obj/effect/landmark{
-	name = "lightsout"
-	},
+/obj/effect/landmark/lightsout,
 /turf/open/floor/wood,
 /area/security/vacantoffice)
 "bMX" = (
@@ -55939,9 +55649,7 @@
 /obj/structure/chair{
 	dir = 1
 	},
-/obj/effect/landmark/start{
-	name = "Assistant"
-	},
+/obj/effect/landmark/start/assistant,
 /obj/machinery/atmospherics/components/unary/vent_pump{
 	dir = 1;
 	on = 1
@@ -56636,9 +56344,7 @@
 /turf/open/floor/wood,
 /area/library)
 "bSp" = (
-/obj/effect/landmark/start{
-	name = "Librarian"
-	},
+/obj/effect/landmark/start/librarian,
 /obj/structure/chair/office/dark{
 	dir = 1
 	},
@@ -57287,9 +56993,7 @@
 /turf/open/floor/plasteel,
 /area/atmos)
 "bTz" = (
-/obj/effect/landmark/start{
-	name = "Atmospheric Technician"
-	},
+/obj/effect/landmark/start/atmospheric_technician,
 /turf/open/floor/plasteel,
 /area/atmos)
 "bTA" = (
@@ -57542,9 +57246,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	req_access_txt = "0"
 	},
-/obj/effect/landmark{
-	name = "lightsout"
-	},
+/obj/effect/landmark/lightsout,
 /turf/open/floor/carpet,
 /area/library)
 "bUd" = (
@@ -57833,9 +57535,7 @@
 	icon_state = "1-2"
 	},
 /obj/item/weapon/cigbutt,
-/obj/effect/landmark{
-	name = "blobstart"
-	},
+/obj/effect/landmark/blobstart,
 /turf/open/floor/plating,
 /area/maintenance/maintcentral)
 "bUC" = (
@@ -58383,10 +58083,7 @@
 	dir = 4;
 	on = 1
 	},
-/obj/effect/landmark{
-	name = "xeno_spawn";
-	pixel_x = -1
-	},
+/obj/effect/landmark/xeno_spawn,
 /turf/open/floor/plating,
 /area/maintenance/fpmaint2)
 "bVy" = (
@@ -59146,9 +58843,7 @@
 /turf/open/floor/plasteel,
 /area/atmos)
 "bWO" = (
-/obj/effect/landmark{
-	name = "lightsout"
-	},
+/obj/effect/landmark/lightsout,
 /turf/open/floor/plasteel,
 /area/atmos)
 "bWP" = (
@@ -59662,9 +59357,7 @@
 	},
 /area/crew_quarters/kitchen)
 "bXR" = (
-/obj/effect/landmark/start{
-	name = "Cook"
-	},
+/obj/effect/landmark/start/cook,
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden{
 	dir = 1;
 	initialize_directions = 13
@@ -59756,9 +59449,7 @@
 	},
 /area/crew_quarters/kitchen)
 "bXY" = (
-/obj/effect/landmark/start{
-	name = "Cook"
-	},
+/obj/effect/landmark/start/cook,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
@@ -59884,10 +59575,7 @@
 	dir = 8;
 	on = 1
 	},
-/obj/effect/landmark{
-	name = "xeno_spawn";
-	pixel_x = -1
-	},
+/obj/effect/landmark/xeno_spawn,
 /turf/open/floor/plating,
 /area/maintenance/atmos_control)
 "bYk" = (
@@ -60021,10 +59709,7 @@
 /turf/open/floor/engine/plasma,
 /area/atmos)
 "bYy" = (
-/obj/effect/landmark{
-	name = "xeno_spawn";
-	pixel_x = -1
-	},
+/obj/effect/landmark/xeno_spawn,
 /turf/open/floor/engine/plasma,
 /area/atmos)
 "bYz" = (
@@ -60827,9 +60512,7 @@
 /turf/open/floor/plasteel/delivery,
 /area/hallway/secondary/entry)
 "bZT" = (
-/obj/effect/landmark/start{
-	name = "Assistant"
-	},
+/obj/effect/landmark/start/assistant,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 6
 	},
@@ -61668,9 +61351,7 @@
 /area/maintenance/atmos_control)
 "cbj" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/obj/effect/landmark{
-	name = "blobstart"
-	},
+/obj/effect/landmark/blobstart,
 /turf/open/floor/plating,
 /area/maintenance/atmos_control)
 "cbk" = (
@@ -64007,10 +63688,7 @@
 	dir = 1;
 	on = 1
 	},
-/obj/effect/landmark{
-	name = "xeno_spawn";
-	pixel_x = -1
-	},
+/obj/effect/landmark/xeno_spawn,
 /obj/structure/sign/poster/contraband/random{
 	pixel_x = -31
 	},
@@ -64056,9 +63734,7 @@
 	},
 /area/maintenance/asmaint)
 "cfC" = (
-/obj/effect/landmark{
-	name = "blobstart"
-	},
+/obj/effect/landmark/blobstart,
 /turf/open/floor/plating,
 /area/maintenance/asmaint)
 "cfD" = (
@@ -64326,9 +64002,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
-/obj/effect/landmark{
-	name = "lightsout"
-	},
+/obj/effect/landmark/lightsout,
 /turf/open/floor/plasteel{
 	icon_state = "L8"
 	},
@@ -64542,9 +64216,7 @@
 /obj/structure/chair/office/dark{
 	dir = 8
 	},
-/obj/effect/landmark/start{
-	name = "Botanist"
-	},
+/obj/effect/landmark/start/botanist,
 /turf/open/floor/plasteel{
 	dir = 10;
 	icon_state = "green"
@@ -64866,9 +64538,7 @@
 /turf/open/floor/plasteel,
 /area/atmos)
 "cgR" = (
-/obj/effect/landmark/start{
-	name = "Atmospheric Technician"
-	},
+/obj/effect/landmark/start/atmospheric_technician,
 /obj/machinery/atmospherics/pipe/simple/general/visible{
 	color = "#330000";
 	dir = 4
@@ -64949,10 +64619,7 @@
 	pixel_y = 0;
 	tag = ""
 	},
-/obj/effect/landmark{
-	name = "xeno_spawn";
-	pixel_x = -1
-	},
+/obj/effect/landmark/xeno_spawn,
 /obj/machinery/atmospherics/components/unary/vent_pump{
 	dir = 1;
 	on = 1
@@ -65356,9 +65023,7 @@
 	},
 /area/hydroponics)
 "chP" = (
-/obj/effect/landmark/start{
-	name = "Botanist"
-	},
+/obj/effect/landmark/start/botanist,
 /obj/machinery/holopad,
 /turf/open/floor/plasteel,
 /area/hydroponics)
@@ -65388,9 +65053,7 @@
 /turf/open/floor/plasteel,
 /area/hydroponics)
 "chT" = (
-/obj/effect/landmark/start{
-	name = "Botanist"
-	},
+/obj/effect/landmark/start/botanist,
 /turf/open/floor/plasteel{
 	icon_state = "green";
 	dir = 4
@@ -65433,9 +65096,7 @@
 	icon_state = "alarm0";
 	pixel_x = 24
 	},
-/obj/effect/landmark/start{
-	name = "Botanist"
-	},
+/obj/effect/landmark/start/botanist,
 /turf/open/floor/plasteel{
 	icon_state = "hydrofloor"
 	},
@@ -66186,9 +65847,7 @@
 	},
 /area/hydroponics)
 "cji" = (
-/obj/effect/landmark/start{
-	name = "Botanist"
-	},
+/obj/effect/landmark/start/botanist,
 /turf/open/floor/plasteel{
 	icon_state = "green";
 	dir = 8
@@ -66762,9 +66421,7 @@
 	})
 "cki" = (
 /obj/structure/chair/comfy/sofa/corner/right/teal,
-/obj/effect/landmark/start{
-	name = "Assistant"
-	},
+/obj/effect/landmark/start/assistant,
 /turf/open/floor/plasteel{
 	dir = 1;
 	icon_state = "whiteblue"
@@ -66839,9 +66496,7 @@
 	})
 "ckq" = (
 /obj/structure/chair,
-/obj/effect/landmark/start{
-	name = "Assistant"
-	},
+/obj/effect/landmark/start/assistant,
 /turf/open/floor/plasteel{
 	dir = 1;
 	icon_state = "whitepurple"
@@ -66851,9 +66506,7 @@
 	})
 "ckr" = (
 /obj/structure/chair,
-/obj/effect/landmark/start{
-	name = "Scientist"
-	},
+/obj/effect/landmark/start/scientist,
 /turf/open/floor/plasteel{
 	dir = 1;
 	icon_state = "whitepurple"
@@ -67790,9 +67443,7 @@
 	name = "Medbay Storage"
 	})
 "clJ" = (
-/obj/effect/landmark{
-	name = "lightsout"
-	},
+/obj/effect/landmark/lightsout,
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
 	dir = 2
 	},
@@ -67818,9 +67469,7 @@
 	})
 "clL" = (
 /obj/machinery/holopad,
-/obj/effect/landmark/start{
-	name = "Medical Doctor"
-	},
+/obj/effect/landmark/start/medical_doctor,
 /obj/structure/cable/yellow{
 	d1 = 1;
 	d2 = 2;
@@ -68725,10 +68374,7 @@
 /turf/open/floor/plating,
 /area/maintenance/asmaint)
 "cnn" = (
-/obj/effect/landmark{
-	name = "xeno_spawn";
-	pixel_x = -1
-	},
+/obj/effect/landmark/xeno_spawn,
 /obj/structure/closet/firecloset,
 /turf/open/floor/plating,
 /area/maintenance/asmaint)
@@ -69532,9 +69178,7 @@
 /obj/structure/chair/office/light{
 	dir = 4
 	},
-/obj/effect/landmark/start{
-	name = "Medical Doctor"
-	},
+/obj/effect/landmark/start/medical_doctor,
 /obj/machinery/button/door{
 	desc = "A remote control switch for the medbay foyer.";
 	id = "MedbayFoyer";
@@ -70156,10 +69800,7 @@
 	},
 /area/maintenance/incinerator)
 "cpq" = (
-/obj/effect/landmark{
-	name = "xeno_spawn";
-	pixel_x = -1
-	},
+/obj/effect/landmark/xeno_spawn,
 /obj/machinery/atmospherics/pipe/simple/general/visible{
 	dir = 4
 	},
@@ -71097,9 +70738,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/effect/landmark/start{
-	name = "Medical Doctor"
-	},
+/obj/effect/landmark/start/medical_doctor,
 /turf/open/floor/plasteel{
 	dir = 1;
 	icon_state = "whiteblue"
@@ -71258,9 +70897,7 @@
 /obj/structure/chair/office/light{
 	dir = 1
 	},
-/obj/effect/landmark/start{
-	name = "Chemist"
-	},
+/obj/effect/landmark/start/chemist,
 /turf/open/floor/plasteel{
 	dir = 4;
 	icon_state = "whiteyellowfull";
@@ -71488,9 +71125,7 @@
 	icon_state = "comfychair3";
 	dir = 8
 	},
-/obj/effect/landmark/start{
-	name = "Scientist"
-	},
+/obj/effect/landmark/start/scientist,
 /turf/open/floor/plasteel{
 	tag = "icon-cafeteria (NORTHEAST)";
 	icon_state = "cafeteria";
@@ -71529,9 +71164,7 @@
 /turf/open/floor/engine,
 /area/toxins/explab)
 "crC" = (
-/obj/effect/landmark{
-	name = "blobstart"
-	},
+/obj/effect/landmark/blobstart,
 /turf/open/floor/engine,
 /area/toxins/explab)
 "crD" = (
@@ -71567,9 +71200,7 @@
 /area/maintenance/asmaint2)
 "crG" = (
 /obj/machinery/space_heater,
-/obj/effect/landmark{
-	name = "blobstart"
-	},
+/obj/effect/landmark/blobstart,
 /turf/open/floor/plating{
 	icon_state = "warnplate";
 	dir = 1
@@ -72590,10 +72221,7 @@
 /turf/open/floor/engine/o2,
 /area/atmos)
 "ctn" = (
-/obj/effect/landmark{
-	name = "xeno_spawn";
-	pixel_x = -1
-	},
+/obj/effect/landmark/xeno_spawn,
 /turf/open/floor/engine/air,
 /area/atmos)
 "cto" = (
@@ -72702,9 +72330,7 @@
 	dir = 4;
 	on = 1
 	},
-/obj/effect/landmark{
-	name = "revenantspawn"
-	},
+/obj/effect/landmark/revenantspawn,
 /turf/open/floor/plasteel{
 	icon_state = "dark"
 	},
@@ -73113,9 +72739,7 @@
 	},
 /area/toxins/lab)
 "cud" = (
-/obj/effect/landmark/start{
-	name = "Scientist"
-	},
+/obj/effect/landmark/start/scientist,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 5
 	},
@@ -73614,9 +73238,7 @@
 /obj/structure/sign/nosmoking_2{
 	pixel_x = 28
 	},
-/obj/effect/landmark{
-	name = "blobstart"
-	},
+/obj/effect/landmark/blobstart,
 /turf/open/floor/plasteel{
 	icon_state = "dark"
 	},
@@ -73825,9 +73447,7 @@
 /obj/structure/chair/office/light{
 	dir = 8
 	},
-/obj/effect/landmark/start{
-	name = "Chemist"
-	},
+/obj/effect/landmark/start/chemist,
 /turf/open/floor/plasteel{
 	dir = 8;
 	icon_state = "whiteyellow"
@@ -73849,9 +73469,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/effect/landmark/start{
-	name = "Chemist"
-	},
+/obj/effect/landmark/start/chemist,
 /turf/open/floor/plasteel{
 	icon_state = "white"
 	},
@@ -74243,10 +73861,7 @@
 /area/maintenance/asmaint2)
 "cvX" = (
 /obj/effect/decal/cleanable/blood/old,
-/obj/effect/landmark{
-	name = "xeno_spawn";
-	pixel_x = -1
-	},
+/obj/effect/landmark/xeno_spawn,
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
 	dir = 4
 	},
@@ -74850,9 +74465,7 @@
 /turf/open/floor/plating,
 /area/maintenance/asmaint2)
 "cxa" = (
-/obj/effect/landmark{
-	name = "blobstart"
-	},
+/obj/effect/landmark/blobstart,
 /turf/open/floor/plating,
 /area/maintenance/asmaint2)
 "cxb" = (
@@ -75657,9 +75270,7 @@
 	},
 /area/toxins/explab)
 "cyr" = (
-/obj/effect/landmark/start{
-	name = "Scientist"
-	},
+/obj/effect/landmark/start/scientist,
 /obj/structure/chair/office/light{
 	dir = 1;
 	pixel_y = 3
@@ -75785,9 +75396,7 @@
 	},
 /area/medical/surgery)
 "cyG" = (
-/obj/effect/landmark/start{
-	name = "Medical Doctor"
-	},
+/obj/effect/landmark/start/medical_doctor,
 /turf/open/floor/plasteel{
 	icon_state = "white"
 	},
@@ -75878,9 +75487,7 @@
 /obj/machinery/atmospherics/pipe/manifold/general/visible{
 	dir = 2
 	},
-/obj/effect/landmark/start{
-	name = "Medical Doctor"
-	},
+/obj/effect/landmark/start/medical_doctor,
 /turf/open/floor/plasteel,
 /area/medical/cryo)
 "cyO" = (
@@ -75981,9 +75588,7 @@
 /obj/structure/chair/office/light{
 	dir = 1
 	},
-/obj/effect/landmark/start{
-	name = "Chief Medical Officer"
-	},
+/obj/effect/landmark/start/chief_medical_officer,
 /turf/open/floor/plasteel{
 	dir = 8;
 	icon_state = "barber"
@@ -76059,9 +75664,7 @@
 /obj/structure/chair/office/light{
 	dir = 4
 	},
-/obj/effect/landmark/start{
-	name = "Chemist"
-	},
+/obj/effect/landmark/start/chemist,
 /turf/open/floor/plasteel{
 	dir = 4;
 	icon_state = "whiteyellow";
@@ -76138,9 +75741,7 @@
 	},
 /area/hallway/primary/aft)
 "czj" = (
-/obj/effect/landmark/start{
-	name = "Scientist"
-	},
+/obj/effect/landmark/start/scientist,
 /obj/structure/cable/yellow{
 	d1 = 2;
 	d2 = 4;
@@ -76428,9 +76029,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
-/obj/effect/landmark{
-	name = "lightsout"
-	},
+/obj/effect/landmark/lightsout,
 /turf/open/floor/plasteel{
 	icon_state = "white"
 	},
@@ -76701,10 +76300,7 @@
 /turf/open/floor/plating,
 /area/maintenance/asmaint2)
 "czT" = (
-/obj/effect/landmark{
-	name = "xeno_spawn";
-	pixel_x = -1
-	},
+/obj/effect/landmark/xeno_spawn,
 /turf/open/floor/plating,
 /area/maintenance/asmaint2)
 "czU" = (
@@ -76854,9 +76450,7 @@
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
 	dir = 8
 	},
-/obj/effect/landmark/start{
-	name = "Medical Doctor"
-	},
+/obj/effect/landmark/start/medical_doctor,
 /obj/machinery/holopad,
 /turf/open/floor/plasteel{
 	icon_state = "white"
@@ -77620,10 +77214,7 @@
 	dir = 8;
 	on = 1
 	},
-/obj/effect/landmark{
-	name = "xeno_spawn";
-	pixel_x = -1
-	},
+/obj/effect/landmark/xeno_spawn,
 /turf/open/floor/plating,
 /area/maintenance/asmaint2)
 "cBo" = (
@@ -78555,9 +78146,7 @@
 	pixel_x = 0;
 	pixel_y = -32
 	},
-/obj/effect/landmark/start{
-	name = "Chief Medical Officer"
-	},
+/obj/effect/landmark/start/chief_medical_officer,
 /obj/structure/cable/yellow{
 	d1 = 1;
 	d2 = 8;
@@ -78621,9 +78210,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 5
 	},
-/obj/effect/landmark{
-	name = "blobstart"
-	},
+/obj/effect/landmark/blobstart,
 /turf/open/floor/plating,
 /area/maintenance/asmaint)
 "cCT" = (
@@ -79463,9 +79050,7 @@
 /obj/structure/chair/office/light{
 	dir = 8
 	},
-/obj/effect/landmark/start{
-	name = "Research Director"
-	},
+/obj/effect/landmark/start/research_director,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/open/floor/plasteel{
 	tag = "icon-cafeteria (NORTHEAST)";
@@ -80119,9 +79704,7 @@
 /area/toxins/storage)
 "cFs" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
-/obj/effect/landmark/start{
-	name = "Scientist"
-	},
+/obj/effect/landmark/start/scientist,
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/plasteel{
 	dir = 4;
@@ -80147,19 +79730,14 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
-/obj/effect/landmark{
-	name = "blobstart"
-	},
+/obj/effect/landmark/blobstart,
 /turf/open/floor/plating{
 	icon_state = "warnplate";
 	dir = 4
 	},
 /area/maintenance/asmaint2)
 "cFv" = (
-/obj/effect/landmark{
-	name = "xeno_spawn";
-	pixel_x = -1
-	},
+/obj/effect/landmark/xeno_spawn,
 /obj/machinery/atmospherics/components/unary/vent_pump{
 	dir = 4;
 	on = 1
@@ -80517,9 +80095,7 @@
 /obj/structure/chair/office/light{
 	dir = 8
 	},
-/obj/effect/landmark/start{
-	name = "Geneticist"
-	},
+/obj/effect/landmark/start/geneticist,
 /turf/open/floor/plasteel{
 	dir = 9;
 	icon_state = "whiteblue"
@@ -80545,9 +80121,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/effect/landmark/start{
-	name = "Geneticist"
-	},
+/obj/effect/landmark/start/geneticist,
 /turf/open/floor/plasteel{
 	dir = 5;
 	icon_state = "whiteblue"
@@ -80570,9 +80144,7 @@
 	dir = 4
 	},
 /obj/structure/disposalpipe/segment,
-/obj/effect/landmark/start{
-	name = "Geneticist"
-	},
+/obj/effect/landmark/start/geneticist,
 /turf/open/floor/plasteel{
 	icon_state = "blue";
 	dir = 4
@@ -80649,9 +80221,7 @@
 /area/toxins/misc_lab)
 "cGm" = (
 /obj/machinery/magnetic_module,
-/obj/effect/landmark{
-	name = "blobstart"
-	},
+/obj/effect/landmark/blobstart,
 /obj/structure/target_stake,
 /obj/effect/landmark/event_spawn,
 /turf/open/floor/engine{
@@ -80841,9 +80411,7 @@
 "cGz" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/structure/disposalpipe/segment,
-/obj/effect/landmark{
-	name = "blobstart"
-	},
+/obj/effect/landmark/blobstart,
 /turf/open/floor/plasteel{
 	dir = 4;
 	icon_state = "warning"
@@ -81031,9 +80599,7 @@
 	d2 = 8;
 	icon_state = "2-8"
 	},
-/obj/effect/landmark/start{
-	name = "Medical Doctor"
-	},
+/obj/effect/landmark/start/medical_doctor,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
@@ -81150,9 +80716,7 @@
 	name = "Medbay Aft"
 	})
 "cGY" = (
-/obj/effect/landmark/start{
-	name = "Geneticist"
-	},
+/obj/effect/landmark/start/geneticist,
 /obj/machinery/holopad,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 6
@@ -81548,9 +81112,7 @@
 /area/maintenance/asmaint)
 "cHG" = (
 /obj/structure/reagent_dispensers/watertank,
-/obj/effect/landmark{
-	name = "blobstart"
-	},
+/obj/effect/landmark/blobstart,
 /turf/open/floor/plating,
 /area/maintenance/asmaint)
 "cHH" = (
@@ -81631,9 +81193,7 @@
 	d2 = 8;
 	icon_state = "1-8"
 	},
-/obj/effect/landmark{
-	name = "lightsout"
-	},
+/obj/effect/landmark/lightsout,
 /turf/open/floor/plasteel{
 	icon_state = "white"
 	},
@@ -82240,9 +81800,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 9
 	},
-/obj/effect/landmark/start{
-	name = "Geneticist"
-	},
+/obj/effect/landmark/start/geneticist,
 /obj/effect/landmark/event_spawn,
 /turf/open/floor/plasteel{
 	icon_state = "white"
@@ -82357,9 +81915,7 @@
 	icon_state = "alarm0";
 	pixel_x = 24
 	},
-/obj/effect/landmark/start{
-	name = "Roboticist"
-	},
+/obj/effect/landmark/start/roboticist,
 /obj/machinery/light{
 	icon_state = "tube1";
 	dir = 4
@@ -82712,9 +82268,7 @@
 	name = "Medbay Aft"
 	})
 "cJE" = (
-/obj/effect/landmark/start{
-	name = "Geneticist"
-	},
+/obj/effect/landmark/start/geneticist,
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
 	dir = 8
 	},
@@ -83644,9 +83198,7 @@
 	dir = 4;
 	on = 1
 	},
-/obj/effect/landmark/start{
-	name = "Scientist"
-	},
+/obj/effect/landmark/start/scientist,
 /turf/open/floor/engine{
 	dir = 1;
 	icon_state = "warning"
@@ -83846,9 +83398,7 @@
 	dir = 4
 	},
 /obj/machinery/holopad,
-/obj/effect/landmark/start{
-	name = "Scientist"
-	},
+/obj/effect/landmark/start/scientist,
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -83895,9 +83445,7 @@
 	},
 /area/toxins/mixing)
 "cLr" = (
-/obj/effect/landmark{
-	name = "blobstart"
-	},
+/obj/effect/landmark/blobstart,
 /turf/open/floor/plasteel{
 	tag = "icon-warningcorner (NORTH)";
 	icon_state = "warningcorner";
@@ -83982,9 +83530,7 @@
 	pixel_x = 30;
 	pixel_y = 0
 	},
-/obj/effect/landmark/start{
-	name = "Scientist"
-	},
+/obj/effect/landmark/start/scientist,
 /turf/open/floor/plasteel{
 	dir = 5;
 	icon_state = "warning"
@@ -84376,9 +83922,7 @@
 /area/toxins/mixing)
 "cMf" = (
 /obj/structure/chair/stool,
-/obj/effect/landmark/start{
-	name = "Scientist"
-	},
+/obj/effect/landmark/start/scientist,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 5
 	},
@@ -84593,10 +84137,7 @@
 	},
 /area/toxins/test_area)
 "cMA" = (
-/obj/effect/landmark{
-	name = "xeno_spawn";
-	pixel_x = -1
-	},
+/obj/effect/landmark/xeno_spawn,
 /obj/structure/cable,
 /obj/structure/lattice/catwalk,
 /turf/open/space,
@@ -84790,18 +84331,14 @@
 	name = "Medbay Aft"
 	})
 "cMR" = (
-/obj/effect/landmark{
-	name = "blobstart"
-	},
+/obj/effect/landmark/blobstart,
 /turf/open/floor/plasteel/blackvault{
 	dir = 8
 	},
 /area/medical/morgue)
 "cMS" = (
 /obj/structure/bodycontainer/morgue,
-/obj/effect/landmark{
-	name = "revenantspawn"
-	},
+/obj/effect/landmark/revenantspawn,
 /turf/open/floor/plasteel/darkvault{
 	dir = 4
 	},
@@ -85375,10 +84912,7 @@
 	dir = 2;
 	on = 1
 	},
-/obj/effect/landmark{
-	name = "xeno_spawn";
-	pixel_x = -1
-	},
+/obj/effect/landmark/xeno_spawn,
 /turf/open/floor/plasteel/blackvault/corner{
 	dir = 4
 	},
@@ -85388,9 +84922,7 @@
 	dir = 8
 	},
 /obj/structure/bodycontainer/morgue,
-/obj/effect/landmark{
-	name = "revenantspawn"
-	},
+/obj/effect/landmark/revenantspawn,
 /turf/open/floor/plasteel/darkvault{
 	dir = 8
 	},
@@ -85402,9 +84934,7 @@
 /area/medical/morgue)
 "cNO" = (
 /obj/structure/bodycontainer/morgue,
-/obj/effect/landmark{
-	name = "revenantspawn"
-	},
+/obj/effect/landmark/revenantspawn,
 /turf/open/floor/plasteel/darkvault{
 	dir = 8
 	},
@@ -85435,9 +84965,7 @@
 	},
 /area/medical/morgue)
 "cNR" = (
-/obj/effect/landmark/start{
-	name = "Medical Doctor"
-	},
+/obj/effect/landmark/start/medical_doctor,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 10
 	},
@@ -85793,9 +85321,7 @@
 	},
 /area/medical/virology)
 "cOy" = (
-/obj/effect/landmark{
-	name = "blobstart"
-	},
+/obj/effect/landmark/blobstart,
 /turf/open/floor/plasteel{
 	icon_state = "freezerfloor"
 	},
@@ -85815,9 +85341,7 @@
 /area/medical/virology)
 "cOA" = (
 /obj/structure/chair/office/light,
-/obj/effect/landmark/start{
-	name = "Virologist"
-	},
+/obj/effect/landmark/start/virologist,
 /turf/open/floor/plasteel/whitegreen/side{
 	dir = 8
 	},
@@ -85835,9 +85359,7 @@
 /area/medical/virology)
 "cOC" = (
 /obj/structure/chair/office/light,
-/obj/effect/landmark/start{
-	name = "Virologist"
-	},
+/obj/effect/landmark/start/virologist,
 /turf/open/floor/plasteel/whitegreen/side{
 	dir = 4
 	},
@@ -85977,9 +85499,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/effect/landmark/start{
-	name = "Medical Doctor"
-	},
+/obj/effect/landmark/start/medical_doctor,
 /turf/open/floor/plasteel{
 	icon_state = "white"
 	},
@@ -86204,9 +85724,7 @@
 	},
 /area/hallway/primary/aft)
 "cPe" = (
-/obj/effect/landmark/start{
-	name = "Roboticist"
-	},
+/obj/effect/landmark/start/roboticist,
 /obj/structure/chair/office/light{
 	dir = 8
 	},
@@ -86624,9 +86142,7 @@
 	pixel_y = 0
 	},
 /obj/structure/bodycontainer/morgue,
-/obj/effect/landmark{
-	name = "revenantspawn"
-	},
+/obj/effect/landmark/revenantspawn,
 /turf/open/floor/plasteel/darkvault{
 	dir = 8
 	},
@@ -86717,9 +86233,7 @@
 	},
 /area/toxins/robotics)
 "cPW" = (
-/obj/effect/landmark/start{
-	name = "Roboticist"
-	},
+/obj/effect/landmark/start/roboticist,
 /turf/open/floor/plasteel{
 	icon_state = "bot"
 	},
@@ -86856,9 +86370,7 @@
 	frequency = 1449;
 	id = "tox_airlock_pump"
 	},
-/obj/effect/landmark{
-	name = "blobstart"
-	},
+/obj/effect/landmark/blobstart,
 /turf/open/floor/engine,
 /area/toxins/mixing)
 "cQk" = (
@@ -87282,9 +86794,7 @@
 /area/medical/morgue)
 "cQT" = (
 /obj/structure/bodycontainer/morgue,
-/obj/effect/landmark{
-	name = "revenantspawn"
-	},
+/obj/effect/landmark/revenantspawn,
 /turf/open/floor/plasteel/darkvault{
 	dir = 1
 	},
@@ -87436,9 +86946,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/effect/landmark{
-	name = "lightsout"
-	},
+/obj/effect/landmark/lightsout,
 /turf/open/floor/plasteel{
 	icon_state = "white"
 	},
@@ -87686,9 +87194,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/effect/landmark/start{
-	name = "Virologist"
-	},
+/obj/effect/landmark/start/virologist,
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/plasteel/white,
 /area/medical/virology)
@@ -88052,9 +87558,7 @@
 	},
 /area/toxins/robotics)
 "cSa" = (
-/obj/effect/landmark/start{
-	name = "Roboticist"
-	},
+/obj/effect/landmark/start/roboticist,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /turf/open/floor/plasteel{
 	icon_state = "bot"
@@ -89161,9 +88665,7 @@
 	},
 /area/hallway/primary/aft)
 "cTQ" = (
-/obj/effect/landmark/start{
-	name = "Roboticist"
-	},
+/obj/effect/landmark/start/roboticist,
 /obj/structure/sink{
 	dir = 8;
 	icon_state = "sink";
@@ -89352,9 +88854,7 @@
 /turf/open/floor/plasteel/darkwarning/side,
 /area/server)
 "cUh" = (
-/obj/effect/landmark{
-	name = "blobstart"
-	},
+/obj/effect/landmark/blobstart,
 /obj/machinery/atmospherics/pipe/manifold{
 	dir = 4
 	},
@@ -89467,9 +88967,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/item/weapon/bedsheet/medical,
 /obj/structure/bed,
-/obj/effect/landmark/start{
-	name = "Virologist"
-	},
+/obj/effect/landmark/start/virologist,
 /turf/open/floor/plasteel{
 	icon_state = "freezerfloor"
 	},
@@ -89483,9 +88981,7 @@
 /obj/structure/bed,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/item/weapon/bedsheet/medical,
-/obj/effect/landmark/start{
-	name = "Virologist"
-	},
+/obj/effect/landmark/start/virologist,
 /turf/open/floor/plasteel{
 	icon_state = "freezerfloor"
 	},
@@ -90069,10 +89565,7 @@
 	},
 /area/medical/virology)
 "cVs" = (
-/obj/effect/landmark{
-	name = "xeno_spawn";
-	pixel_x = -1
-	},
+/obj/effect/landmark/xeno_spawn,
 /obj/machinery/atmospherics/components/unary/vent_pump{
 	dir = 1;
 	on = 1
@@ -90536,9 +90029,7 @@
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
 	dir = 8
 	},
-/obj/effect/landmark/start{
-	name = "Virologist"
-	},
+/obj/effect/landmark/start/virologist,
 /turf/open/floor/plasteel/white,
 /area/medical/virology)
 "cWj" = (
@@ -91028,9 +90519,7 @@
 "cWU" = (
 /obj/structure/closet/crate,
 /obj/effect/spawner/lootdrop/maintenance,
-/obj/effect/landmark{
-	name = "blobstart"
-	},
+/obj/effect/landmark/blobstart,
 /turf/open/floor/plating{
 	icon_state = "warnplate";
 	dir = 1
@@ -91321,9 +90810,7 @@
 /area/hallway/secondary/exit)
 "cXv" = (
 /obj/machinery/space_heater,
-/obj/effect/landmark{
-	name = "blobstart"
-	},
+/obj/effect/landmark/blobstart,
 /obj/structure/sign/poster/contraband/random{
 	pixel_x = 31
 	},
@@ -91420,10 +90907,7 @@
 	pixel_y = 0;
 	tag = ""
 	},
-/obj/effect/landmark{
-	name = "xeno_spawn";
-	pixel_x = -1
-	},
+/obj/effect/landmark/xeno_spawn,
 /obj/machinery/atmospherics/components/unary/vent_pump{
 	dir = 1;
 	on = 1
@@ -91532,9 +91016,7 @@
 /obj/machinery/light/small{
 	dir = 4
 	},
-/obj/effect/landmark/start{
-	name = "Chaplain"
-	},
+/obj/effect/landmark/start/chaplain,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 9
 	},
@@ -91544,9 +91026,7 @@
 /area/chapel/office)
 "cXR" = (
 /obj/structure/chair,
-/obj/effect/landmark/start{
-	name = "Chaplain"
-	},
+/obj/effect/landmark/start/chaplain,
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/plasteel{
 	icon_state = "grimy"
@@ -91719,9 +91199,7 @@
 /obj/structure/chair{
 	dir = 4
 	},
-/obj/effect/landmark/start{
-	name = "Assistant"
-	},
+/obj/effect/landmark/start/assistant,
 /turf/open/floor/plasteel{
 	dir = 8;
 	icon_state = "warning"
@@ -92453,10 +91931,7 @@
 	dir = 4;
 	on = 1
 	},
-/obj/effect/landmark{
-	name = "xeno_spawn";
-	pixel_x = -1
-	},
+/obj/effect/landmark/xeno_spawn,
 /turf/open/floor/plating{
 	tag = "icon-platingdmg2";
 	icon_state = "platingdmg2"
@@ -92543,10 +92018,7 @@
 	on = 1;
 	pressure_checks = 1
 	},
-/obj/effect/landmark{
-	name = "xeno_spawn";
-	pixel_x = -1
-	},
+/obj/effect/landmark/xeno_spawn,
 /turf/open/floor/plasteel{
 	icon_state = "dark"
 	},
@@ -92978,9 +92450,7 @@
 /area/toxins/telepad)
 "dak" = (
 /obj/machinery/telepad,
-/obj/effect/landmark/start{
-	name = "Scientist"
-	},
+/obj/effect/landmark/start/scientist,
 /obj/effect/turf_decal/bot,
 /turf/open/floor/plating/warnplate{
 	dir = 4
@@ -93091,9 +92561,7 @@
 /obj/structure/chair{
 	dir = 1
 	},
-/obj/effect/landmark/start{
-	name = "Chaplain"
-	},
+/obj/effect/landmark/start/chaplain,
 /turf/open/floor/plasteel{
 	icon_state = "dark"
 	},
@@ -93128,9 +92596,7 @@
 "daA" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/structure/chair/comfy/sofa/corner/right/brown,
-/obj/effect/landmark/start{
-	name = "Assistant"
-	},
+/obj/effect/landmark/start/assistant,
 /turf/open/floor/plasteel/terror/chapel,
 /area/chapel/main)
 "daB" = (
@@ -93336,9 +92802,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 9
 	},
-/obj/effect/landmark/start{
-	name = "Scientist"
-	},
+/obj/effect/landmark/start/scientist,
 /turf/open/floor/plasteel/whitepurple/side,
 /area/toxins/telepad)
 "daX" = (
@@ -93419,9 +92883,7 @@
 /area/chapel/main)
 "dbg" = (
 /obj/structure/chair/comfy/sofa/corner/right/brown,
-/obj/effect/landmark/start{
-	name = "Assistant"
-	},
+/obj/effect/landmark/start/assistant,
 /turf/open/floor/plasteel{
 	icon_state = "chapel"
 	},
@@ -93486,9 +92948,7 @@
 /obj/structure/chair{
 	dir = 8
 	},
-/obj/effect/landmark/start{
-	name = "Assistant"
-	},
+/obj/effect/landmark/start/assistant,
 /turf/open/floor/plasteel{
 	dir = 4;
 	icon_state = "warning"
@@ -93661,9 +93121,7 @@
 /area/chapel/main)
 "dbF" = (
 /obj/structure/chair/comfy/sofa/corner/brown,
-/obj/effect/landmark/start{
-	name = "Assistant"
-	},
+/obj/effect/landmark/start/assistant,
 /turf/open/floor/plasteel{
 	dir = 1;
 	icon_state = "chapel"
@@ -94091,9 +93549,7 @@
 	},
 /area/chapel/main)
 "dcx" = (
-/obj/effect/landmark/start{
-	name = "Chaplain"
-	},
+/obj/effect/landmark/start/chaplain,
 /obj/structure/chair,
 /turf/open/floor/plasteel{
 	tag = "icon-vault";
@@ -94259,9 +93715,7 @@
 /obj/structure/chair{
 	dir = 8
 	},
-/obj/effect/landmark/start{
-	name = "Scientist"
-	},
+/obj/effect/landmark/start/scientist,
 /turf/open/floor/plasteel/warnwhite{
 	dir = 4
 	},
@@ -94319,9 +93773,7 @@
 	},
 /area/chapel/main)
 "dcZ" = (
-/obj/effect/landmark/start{
-	name = "Chaplain"
-	},
+/obj/effect/landmark/start/chaplain,
 /turf/open/floor/plasteel{
 	icon_state = "dark"
 	},
@@ -94754,9 +94206,7 @@
 	icon_state = "comfychair";
 	tag = ""
 	},
-/obj/effect/landmark/start{
-	name = "Chaplain"
-	},
+/obj/effect/landmark/start/chaplain,
 /turf/open/floor/carpet,
 /area/chapel/main)
 "ddT" = (
@@ -95378,10 +94828,7 @@
 /turf/open/floor/plasteel/whiteblue,
 /area/shuttle/escape)
 "deY" = (
-/obj/effect/landmark{
-	name = "xeno_spawn";
-	pixel_x = -1
-	},
+/obj/effect/landmark/xeno_spawn,
 /obj/structure/lattice/catwalk,
 /turf/open/space,
 /area/solar/starboard)
@@ -96163,6 +95610,30 @@
 	icon_state = "warnplate"
 	},
 /area/toxins/telepad)
+"dgF" = (
+/obj/effect/landmark{
+	name = "lightsout"
+	},
+/turf/open/floor/plasteel,
+/area/security/main)
+"dgG" = (
+/obj/structure/disposalpipe/segment,
+/obj/effect/landmark{
+	name = "lightsout"
+	},
+/turf/open/floor/carpet,
+/area/crew_quarters/sleep)
+"dgH" = (
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/effect/landmark{
+	name = "lightsout"
+	},
+/turf/open/floor/plasteel,
+/area/hallway/primary/fore)
 
 (1,1,1) = {"
 aaa
@@ -107583,15 +107054,15 @@ aTu
 aTu
 aaa
 aai
-aaa
 beA
+bez
 bez
 bjL
 dgA
 bjL
 bez
+bez
 beA
-aaa
 aai
 aaa
 aTu
@@ -107843,9 +107314,9 @@ aai
 aaa
 aaa
 beA
-beA
-beA
-beA
+bez
+bez
+bez
 beA
 aaa
 aaa
@@ -123509,7 +122980,7 @@ aMc
 aNz
 aON
 aQJ
-aKv
+dgH
 aUn
 aWl
 aXQ
@@ -124513,7 +123984,7 @@ adG
 aey
 afC
 afC
-afy
+dgF
 afC
 akj
 alM
@@ -131470,7 +130941,7 @@ aCZ
 aEO
 aGi
 aHJ
-aHJ
+dgG
 aKU
 aMp
 aHJ
@@ -143030,11 +142501,11 @@ aai
 agK
 aai
 apl
-apl
+aAu
 apl
 aai
-apl
-apl
+aAu
+aAu
 aJZ
 aJZ
 aJZ
@@ -143289,9 +142760,9 @@ aaa
 apl
 apl
 apl
-aai
-aai
-aai
+aaa
+aaa
+aaa
 aam
 aam
 aam
@@ -143550,17 +143021,17 @@ apl
 apl
 apl
 apl
+aAu
+apl
+apl
+aAu
+aAu
+apl
+aAu
 apl
 apl
 apl
-apl
-apl
-apl
-apl
-apl
-apl
-apl
-apl
+aAu
 apl
 aai
 apl
@@ -143810,15 +143281,15 @@ apl
 apl
 apl
 apl
+aAu
 apl
 apl
 apl
 apl
 apl
-apl
-apl
-apl
-apl
+aAu
+aAu
+aAu
 aai
 aah
 aaa

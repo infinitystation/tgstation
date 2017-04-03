@@ -913,9 +913,7 @@
 	tag = "icon-1-2";
 	icon_state = "1-2"
 	},
-/obj/effect/landmark/start{
-	name = "Shaft Miner"
-	},
+/obj/effect/landmark/start/shaft_miner,
 /turf/open/floor/plasteel/terror/necro/bar,
 /area/mine/cafeteria)
 "dg" = (
@@ -1077,9 +1075,7 @@
 	icon_state = "tube1";
 	dir = 4
 	},
-/obj/effect/landmark/start{
-	name = "Shaft Miner"
-	},
+/obj/effect/landmark/start/shaft_miner,
 /turf/open/floor/plasteel/terror/necro/bar,
 /area/mine/cafeteria)
 "dx" = (
@@ -1338,9 +1334,7 @@
 /area/mine/cafeteria)
 "dV" = (
 /obj/structure/chair/stool/oneleg,
-/obj/effect/landmark/start{
-	name = "Shaft Miner"
-	},
+/obj/effect/landmark/start/shaft_miner,
 /turf/open/floor/plasteel/terror/necro/bar,
 /area/mine/cafeteria)
 "dW" = (
@@ -1446,9 +1440,7 @@
 	},
 /area/mine/cafeteria)
 "eh" = (
-/obj/effect/landmark/start{
-	name = "Shaft Miner"
-	},
+/obj/effect/landmark/start/shaft_miner,
 /turf/open/floor/plasteel/terror/necro/black,
 /area/mine/cafeteria)
 "ei" = (
@@ -1532,9 +1524,7 @@
 	dir = 4
 	},
 /obj/structure/chair/stool/oneleg,
-/obj/effect/landmark/start{
-	name = "Shaft Miner"
-	},
+/obj/effect/landmark/start/shaft_miner,
 /turf/open/floor/plasteel/terror/necro/bar,
 /area/mine/cafeteria)
 "er" = (

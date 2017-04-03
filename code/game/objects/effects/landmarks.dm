@@ -129,6 +129,9 @@
 /obj/effect/landmark/start/chaplain
 	name = "Chaplain"
 
+/obj/effect/landmark/start/ifa //Infinity
+	name = "Internal Affairs Agent"
+
 //Department Security spawns
 
 /obj/effect/landmark/start/depsec
@@ -156,6 +159,7 @@
 
 /obj/effect/landmark/start/wizard
 	name = "wizard"
+
 
 /obj/effect/landmark/start/wizard/Initialize(mapload)
 	..()
