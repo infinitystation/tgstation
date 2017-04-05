@@ -1,6 +1,4 @@
-var/datum/controller/subsystem/job/SSjob
-
-/datum/controller/subsystem/job
+SUBSYSTEM_DEF(job)
 	name = "Jobs"
 	init_order = 14
 	flags = SS_NO_FIRE
@@ -14,10 +12,6 @@ var/datum/controller/subsystem/job/SSjob
 	var/initial_players_to_assign = 0 	//used for checking against population caps
 
 	var/list/prioritized_jobs = list()
-
-/datum/controller/subsystem/job/New()
-	NEW_SS_GLOBAL(SSjob)
-
 
 /datum/controller/subsystem/job/Initialize(timeofday)
 	if(!occupations.len)
@@ -117,6 +111,7 @@ var/datum/controller/subsystem/job/SSjob
 
 /datum/controller/subsystem/job/proc/GiveRandomJob(mob/dead/new_player/player)
 	Debug("GRJ Giving random job, Player: [player]")
+	. = FALSE
 	for(var/datum/job/job in shuffle(occupations))
 		if(!job)
 			continue
@@ -146,10 +141,9 @@ var/datum/controller/subsystem/job/SSjob
 
 		if((job.current_positions < job.spawn_positions) || job.spawn_positions == -1)
 			Debug("GRJ Random job given, Player: [player], Job: [job]")
-			AssignRole(player, job.title)
-			unassigned -= player
-			assigned_len++
-			break
+			if(AssignRole(player, job.title))
+				assigned_len++
+				return TRUE
 
 /datum/controller/subsystem/job/proc/ResetOccupations()
 	for(var/mob/dead/new_player/player in player_list)
@@ -196,8 +190,6 @@ var/datum/controller/subsystem/job/SSjob
 			continue
 		var/mob/dead/new_player/candidate = pick(candidates)
 		AssignRole(candidate, command_position)
-	return
-
 
 /datum/controller/subsystem/job/proc/FillAIPosition()
 	var/ai_selected = 0
@@ -228,10 +220,10 @@ var/datum/controller/subsystem/job/SSjob
 	//Setup new player list and get the jobs list
 	Debug("Running DO")
 
-	//Holder for Triumvirate is stored in the ticker, this just processes it
-	if(ticker)
+	//Holder for Triumvirate is stored in the SSticker, this just processes it
+	if(SSticker)
 		for(var/datum/job/ai/A in occupations)
-			if(ticker.triai)
+			if(SSticker.triai)
 				A.spawn_positions = 3
 
 	//Get the players who are ready
@@ -362,7 +354,8 @@ var/datum/controller/subsystem/job/SSjob
 			RejectPlayer(player)
 
 	for(var/mob/dead/new_player/player in unassigned) //Players that wanted to back out but couldn't because they're antags (can you feel the edge case?)
-		GiveRandomJob(player)
+		if(!GiveRandomJob(player))
+			AssignRole(player, "Assistant") //If everything is already filled, make them an assistant
 
 	if(assigned_len>=required_players)
 		return 1

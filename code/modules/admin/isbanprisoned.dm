@@ -46,7 +46,7 @@
 /mob/dead/new_player/proc/new_player_panel_prisoner()
 	var/output = "<center><p><a href='byond://?src=\ref[src];show_preferences=1'>Setup Character</A></p>"
 
-	if(!ticker || ticker.current_state <= GAME_STATE_PREGAME)
+	if(!SSticker || SSticker.current_state <= GAME_STATE_PREGAME)
 		output += "<p>ÄÎÁĞÎ ÏÎÆÀËÎÂÀÒÜ</p>"
 		output += "<p>ÇİÊ Â ÇÀÊÎÍÅ</p>"
 	else

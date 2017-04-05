@@ -101,7 +101,8 @@ var/global/BSACooldown = 0
 	body += "<A href='?_src_=holder;traitor=\ref[M]'>Traitor panel</A> | "
 	body += "<A href='?_src_=holder;narrateto=\ref[M]'>Narrate to</A> | "
 	body += "<A href='?_src_=holder;subtlemessage=\ref[M]'>Subtle message</A> | "
-	body += "<A href='?_src_=holder;individuallog=\ref[M]'>Individual Round Logs</A>"
+	body += "<A href='?_src_=holder;individuallog=\ref[M]'>Individual Round Logs</A> | "
+	body += "<A href='?_src_=holder;languagemenu=\ref[M]'>Language Menu</A>"
 
 	if (M.client)
 		if(!isnewplayer(M))
@@ -433,13 +434,13 @@ var/global/BSACooldown = 0
 	set desc="Restarts the world immediately"
 	if (!usr.client.holder)
 		return
-	if (ticker.not_restarting)
+	if (SSticker.not_restarting)
 		usr << "Сервер зан&#255;т, чтобы перезагрузитс&#255;"
 	var/confirm = alert("Restart the game world?", "Restart", "Yes", "Cancel")
 	if(confirm == "Cancel")
 		return
 	if(confirm == "Yes")
-		ticker.delay_end = 0
+		SSticker.delay_end = 0
 		feedback_add_details("admin_verb","R") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 		world.Reboot("Initiated by [usr.client.holder.fakekey ? "Admin" : usr.key].", "end_error", "admin reboot - by [usr.key] [usr.client.holder.fakekey ? "(stealth)" : ""]", 10)
 
@@ -450,13 +451,13 @@ var/global/BSACooldown = 0
 
 	if (!usr.client.holder)
 		return
-	if(ticker.not_restarting)
+	if(SSticker.not_restarting)
 		usr << "Сервер зан&#255;т, чтобы перезагрузитс&#255;"
 	var/confirm = alert("End the round and  restart the game world?", "End Round", "Yes", "Cancel")
 	if(confirm == "Cancel")
 		return
 	if(confirm == "Yes")
-		ticker.force_ending = 1
+		SSticker.force_ending = 1
 		feedback_add_details("admin_verb","ER") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 
@@ -547,11 +548,11 @@ var/global/BSACooldown = 0
 	set category = "Server"
 	set desc="Start the round RIGHT NOW"
 	set name="Start Now"
-	if(ticker.current_state == GAME_STATE_PREGAME || ticker.current_state == GAME_STATE_STARTUP)
-		ticker.start_immediately = TRUE
+	if(SSticker.current_state == GAME_STATE_PREGAME || SSticker.current_state == GAME_STATE_STARTUP)
+		SSticker.start_immediately = TRUE
 		log_admin("[usr.key] has started the game.")
 		var/msg = ""
-		if(ticker.current_state == GAME_STATE_STARTUP)
+		if(SSticker.current_state == GAME_STATE_STARTUP)
 			msg = " (The server is still setting up, but the round will be \
 				started as soon as possible.)"
 		message_admins("<font color='blue'>\
@@ -609,11 +610,11 @@ var/global/BSACooldown = 0
 	set desc="Delay the game start"
 	set name="Delay pre-game"
 
-	var/newtime = input("Set a new time in seconds. Set -1 for indefinite delay.","Set Delay",round(ticker.GetTimeLeft()/10)) as num|null
-	if(ticker.current_state > GAME_STATE_PREGAME)
+	var/newtime = input("Set a new time in seconds. Set -1 for indefinite delay.","Set Delay",round(SSticker.GetTimeLeft()/10)) as num|null
+	if(SSticker.current_state > GAME_STATE_PREGAME)
 		return alert("Too late... The game has already started!")
 	if(newtime)
-		ticker.SetTimeLeft(newtime * 10)
+		SSticker.SetTimeLeft(newtime * 10)
 		if(newtime < 0)
 			to_chat(world, "<b>The game start has been delayed.</b>")
 			log_admin("[key_name(usr)] delayed the round start.")
@@ -643,7 +644,7 @@ var/global/BSACooldown = 0
 		if(event_url)
 			event_on_air = !event_on_air
 		else
-			usr << usr << "<span class='info'>Ссылка об&#255;зательна дл&#255; изменени&#255; статуса сервера (ивент) на \"Ивент\"</span>"
+			to_chat(usr, "<span class='info'>Ссылка об&#255;зательна дл&#255; изменени&#255; статуса сервера (ивент) на \"Ивент\"</span>")
 			return
 	else
 		event_url = ""
@@ -658,9 +659,9 @@ var/global/BSACooldown = 0
 	set name = "View Event Status"
 	set desc = "View event status"
 	if(event_on_air)
-		usr << "<span class='info'>На сервере [ticker ? "идет" : "готовитс&#255;"] ивент. Подробности читайте здесь: [event_url] или в Admin -> Admin-Notice. Также спросите коллег через asay</span>"
+		to_chat(usr, "<span class='info'>На сервере [SSticker ? "идет" : "готовитс&#255;"] ивент. Подробности читайте здесь: [event_url] или в Admin -> Admin-Notice. Также спросите коллег через asay</span>")
 	else
-		usr << "Ивента нет, но, возможно, он будет. Спросите коллег"
+		to_chat(usr, "Ивента нет, но, возможно, он будет. Спросите коллег")
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////ADMIN HELPER PROCS
@@ -770,15 +771,15 @@ var/global/BSACooldown = 0
 
 /datum/admins/proc/output_all_devil_info()
 	var/devil_number = 0
-	for(var/D in ticker.mode.devils)
+	for(var/D in SSticker.mode.devils)
 		devil_number++
-		to_chat(usr, "Devil #[devil_number]:<br><br>" + ticker.mode.printdevilinfo(D))
+		to_chat(usr, "Devil #[devil_number]:<br><br>" + SSticker.mode.printdevilinfo(D))
 	if(!devil_number)
 		to_chat(usr, "<b>No Devils located</b>" )
 
 /datum/admins/proc/output_devil_info(mob/living/M)
 	if(istype(M) && M.mind && M.mind.devilinfo)
-		to_chat(usr, ticker.mode.printdevilinfo(M.mind))
+		to_chat(usr, SSticker.mode.printdevilinfo(M.mind))
 	else
 		to_chat(usr, "<b>[M] is not a devil.")
 
@@ -788,7 +789,7 @@ var/global/BSACooldown = 0
 	var/dat = "<html><head><title>Manage Free Slots</title></head><body>"
 	var/count = 0
 
-	if(ticker && !ticker.mode)
+	if(SSticker && !SSticker.mode)
 		alert(usr, "You cannot manage jobs before the round starts!")
 		return
 
@@ -882,7 +883,7 @@ var/global/BSACooldown = 0
 	return 1
 
 /client/proc/adminGreet(logout)
-	if(ticker && ticker.current_state == GAME_STATE_PLAYING)
+	if(SSticker && SSticker.current_state == GAME_STATE_PLAYING)
 		var/string
 		if(logout && config && config.announce_admin_logout)
 			string = pick(

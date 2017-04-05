@@ -28,6 +28,9 @@
 	if(modifiers["shift"] && modifiers["middle"])
 		ShiftMiddleClickOn(A)
 		return
+	if(modifiers["shift"] && modifiers["ctrl"])
+		CtrlShiftClickOn(A)
+		return
 	if(modifiers["middle"])
 		MiddleClickOn(A)
 		return

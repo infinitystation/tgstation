@@ -171,7 +171,7 @@
 					defined by tempo / x: <i>C,G/2,E/4</i><br>
 					Combined, an example is: <i>E-E4/4,F#/2,G#/8,B/8,E3-E4/4</i>
 					<br>
-					Lines may be up to 200 characters.<br>
+					Lines may be up to 50 characters.<br>
 					A song may only contain up to 200 lines.<br>
 					"}
 		else
@@ -182,6 +182,27 @@
 	popup.set_title_image(user.browse_rsc_icon(instrumentObj.icon, instrumentObj.icon_state))
 	popup.open()
 
+/datum/song/proc/ParseSong(text)
+	set waitfor = FALSE
+	//split into lines
+	lines = splittext(text, "\n")
+	if(lines.len)
+		if(copytext(lines[1],1,6) == "BPM: ")
+			tempo = sanitize_tempo(600 / text2num(copytext(lines[1],6)))
+			lines.Cut(1,2)
+		else
+			tempo = sanitize_tempo(5) // default 120 BPM
+		if(lines.len > 200)
+			to_chat(usr, "Too many lines!")
+			lines.Cut(201)
+		var/linenum = 1
+		for(var/l in lines)
+			if(lentext(l) > 50)
+				to_chat(usr, "Line [linenum] too long!")
+				lines.Remove(l)
+			else
+				linenum++
+		updateDialog(usr)		// make sure updates when complete
 
 /datum/song/Topic(href, href_list)
 	if(!usr.canUseTopic(instrumentObj))
@@ -208,26 +229,7 @@
 				if(cont == "no")
 					break
 		while(lentext(t) > 3072)
-
-		//split into lines
-		spawn()
-			lines = splittext(t, "\n")
-			if(copytext(lines[1],1,6) == "BPM: ")
-				tempo = sanitize_tempo(600 / text2num(copytext(lines[1],6)))
-				lines.Cut(1,2)
-			else
-				tempo = sanitize_tempo(5) // default 120 BPM
-			if(lines.len > 200)
-				to_chat(usr, "Too many lines!")
-				lines.Cut(201)
-			var/linenum = 1
-			for(var/l in lines)
-				if(lentext(l) > 50)
-					to_chat(usr, "Line [linenum] too long!")
-					lines.Remove(l)
-				else
-					linenum++
-			updateDialog(usr)		// make sure updates when complete
+		ParseSong(t)
 
 	else if(href_list["help"])
 		help = text2num(href_list["help"]) - 1

@@ -25,7 +25,7 @@ var/global/posibrain_notif_cooldown = 0
 	Remember, the purpose of your existence is to serve the crew and the station. Above all else, do no harm.</b>"
 	var/new_mob_message = "<span class='notice'>The positronic brain chimes quietly.</span>"
 	var/dead_message = "<span class='deadsay'>It appears to be completely inactive. The reset light is blinking.</span>"
-	var/list/fluff_names = list("ARNC","JNLG","CHRI","DUNC","JRD","KOR","RZH","MSO","RR","HG","TKRG","WJ","VLF","BR1","T4R","SRM","IRS","BST","TBX","VRT","NC","FFL","PXR","SRT","DST")
+	var/list/fluff_names
 	var/picked_fluff_name //which fluff name we picked
 
 
@@ -141,7 +141,10 @@ var/global/posibrain_notif_cooldown = 0
 	rand_name = rand(0,999)
 	if(rand_name == 255)
 		rand_name += 1
-	picked_fluff_name = pick(fluff_names)
+	if(!fluff_names || !fluff_names.len)
+		picked_fluff_name = pick(posibrain_names)
+	else
+		picked_fluff_name = pick(fluff_names)
 	brainmob.name = "[picked_fluff_name]-[rand_name]"
 	brainmob.real_name = brainmob.name
 	brainmob.loc = src

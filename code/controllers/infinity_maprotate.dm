@@ -72,7 +72,7 @@ var/datum/votablemap/nextmap
 	var/chosenmap = input("Choose a map to change to", "Change Map")  as null|anything in maprotatechoices
 	if (!chosenmap)
 		return
-	ticker.maprotatechecked = 1
+	SSticker.maprotatechecked = 1
 	var/datum/votablemap/VM = maprotatechoices[chosenmap]
 	message_admins("[key_name_admin(usr)] is changing the map to [VM.name]([VM.friendlyname])")
 	log_admin("[key_name(usr)] is changing the map to [VM.name]([VM.friendlyname])")
@@ -85,9 +85,9 @@ var/datum/votablemap/nextmap
 		return
 	if(!istype(VM))
 		return
-	if(ticker.update_waiting)
+	if(SSticker.update_waiting)
 		return
-	if(!ticker.maprotatechecked)
+	if(!SSticker.maprotatechecked)
 		return
 
 	log_game("Changing map to [VM.map_name]")

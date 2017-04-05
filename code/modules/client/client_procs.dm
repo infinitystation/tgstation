@@ -331,7 +331,7 @@ var/next_external_rsc = 0
 		clientmessages.Remove(ckey)
 
 	if(event_on_air)
-		src << "На сервере [ticker ? "идет" : "готовится"] ивент. Подробности читайте здесь: [event_url] или в Admin -> Admin-Notice. Также можете спросить администрацию через Adminhelp (F1)"
+		to_chat(src, "На сервере [SSticker ? "идет" : "готовится"] ивент. Подробности читайте здесь: [event_url] или в Admin -> Admin-Notice. Также можете спросить администрацию через Adminhelp (F1)")
 	if(config && config.autoconvert_notes)
 		convert_notes_sql(ckey)
 	to_chat(src, get_message_output("message", ckey))
@@ -573,7 +573,7 @@ var/next_external_rsc = 0
 		)
 	spawn (10) //removing this spawn causes all clients to not get verbs.
 		//Precache the client with all other assets slowly, so as to not block other browse() calls
-		getFilesSlow(src, SSasset.cache, register_asset = FALSE)
+		getFilesSlow(src, SSassets.cache, register_asset = FALSE)
 
 
 //Hook, override it to run code when dir changes

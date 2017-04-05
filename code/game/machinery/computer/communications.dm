@@ -739,7 +739,7 @@ var/const/CALL_SHUTTLE_REASON_LENGTH = 12
 	R.info = report_info
 	R.title = paper.name
 	R.time = world.time
-	ticker.reports += R
+	SSticker.reports += R
 	reports_log << "\[[time_stamp()]]: Reported to Centcom by [key_name(usr)]<BR>[R.info]<BR>"
 	send_report(R, usr)
 	usr << "Report transmitted."

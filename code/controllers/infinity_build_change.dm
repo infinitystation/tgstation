@@ -101,8 +101,8 @@ var/datum/server_build/currentbuild
 	if (!chosenbuild)
 		return
 
-	ticker.buildchangechecked = 1
-	ticker.buildchanger_ckey = ckey
+	SSticker.buildchangechecked = 1
+	SSticker.buildchanger_ckey = ckey
 	var/datum/server_build/B = buildchoices[chosenbuild]
 	nextbuild = B
 
@@ -115,10 +115,10 @@ var/datum/server_build/currentbuild
 		return
 	if(!B)
 		return
-	if(ticker.update_waiting)
+	if(SSticker.update_waiting)
 		return
 
-	world << "<span class='adminooc'><FONT size=5>ВНИМАНИЕ! БИЛД МЕНЯЕТСЯ НА [B.friendlyname]! СЕРВЕР НЕ БУДЕТ РАБОТАТЬ НЕСКОЛЬКО МИНУТ!</FONT><br>Смена билда в конце раунда инициировано администратором [ticker.buildchanger_ckey]</span>."
+	world << "<span class='adminooc'><FONT size=5>ВНИМАНИЕ! БИЛД МЕНЯЕТСЯ НА [B.friendlyname]! СЕРВЕР НЕ БУДЕТ РАБОТАТЬ НЕСКОЛЬКО МИНУТ!</FONT><br>Смена билда в конце раунда инициировано администратором [SSticker.buildchanger_ckey]</span>."
 	playsound_global('sound/effects/alarm.ogg', repeat=0, channel=1, volume=100)
 	sleep(100)
 

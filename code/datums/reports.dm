@@ -28,7 +28,7 @@
 
 	var/dat = "<b>Отчеты от станции за текущий раунд</b><BR>"
 
-	for(var/i in ticker.reports)
+	for(var/i in SSticker.reports)
 		var/datum/report/R = i
 		var/temp_time = time2text(R.time - timezoneOffset + 432000, "hh:mm:ss")
 		dat += "[temp_time] - <A HREF='?_src_=holder;show_report=\ref[R]'>[R.title]</A><BR>"

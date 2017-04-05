@@ -23,44 +23,44 @@
 		return 0
 
 /datum/mind/proc/remove_rev_light()
-	if(src in ticker.mode.revolutionaries)
-		ticker.mode.revolutionaries -= src
-		ticker.mode.update_rev_icons_removed(src)
-	else if(src in ticker.mode.head_revolutionaries)
-		ticker.mode.head_revolutionaries -= src
-		ticker.mode.update_rev_icons_removed(src)
+	if(src in SSticker.mode.revolutionaries)
+		SSticker.mode.revolutionaries -= src
+		SSticker.mode.update_rev_icons_removed(src)
+	else if(src in SSticker.mode.head_revolutionaries)
+		SSticker.mode.head_revolutionaries -= src
+		SSticker.mode.update_rev_icons_removed(src)
 		current.verbs -= /mob/living/carbon/human/proc/RevConvert
 		return 1
 	else
 		return 0
 
 /datum/mind/proc/remove_wizard_light()
-	if(src in ticker.mode.wizards)
-		ticker.mode.wizards -= src
+	if(src in SSticker.mode.wizards)
+		SSticker.mode.wizards -= src
 		current.spellremove(current)
 		return 1
 	else
 		return 0
 
 /datum/mind/proc/remove_nukeop_light()
-	if(src in ticker.mode.syndicates)
-		ticker.mode.syndicates -= src
-		ticker.mode.update_synd_icons_removed(src)
+	if(src in SSticker.mode.syndicates)
+		SSticker.mode.syndicates -= src
+		SSticker.mode.update_synd_icons_removed(src)
 		return 1
 	else
 		return 0
 
 /datum/mind/proc/remove_traitor_light()
-	if(src in ticker.mode.traitors)
-		ticker.mode.traitors -= src
+	if(src in SSticker.mode.traitors)
+		SSticker.mode.traitors -= src
 		return 1
 	else
 		return 0
 
 /datum/mind/proc/add_headrev_light()
 	if(special_role == "Head Revolutionary")
-		ticker.mode.head_revolutionaries += src
-		ticker.mode.update_rev_icons_added(src)
+		SSticker.mode.head_revolutionaries += src
+		SSticker.mode.update_rev_icons_added(src)
 		current.verbs += /mob/living/carbon/human/proc/RevConvert
 		return 1
 	else
@@ -69,7 +69,7 @@
 
 /datum/mind/proc/add_wizard_light()
 	if(special_role == "Wizard")
-		ticker.mode.wizards += src
+		SSticker.mode.wizards += src
 		return 1
 	else
 		return 0
@@ -77,8 +77,8 @@
 
 /datum/mind/proc/add_nukeop_light()
 	if(special_role == "Syndicate")
-		ticker.mode.syndicates += src
-		ticker.mode.update_synd_icons_added(src)
+		SSticker.mode.syndicates += src
+		SSticker.mode.update_synd_icons_added(src)
 		return 1
 	else
 		return 0
@@ -86,7 +86,7 @@
 
 /datum/mind/proc/add_traitor_light()
 	if(special_role == "Traitor")
-		ticker.mode.traitors += src
+		SSticker.mode.traitors += src
 		return 1
 	else
 		return 0

@@ -438,9 +438,8 @@ var/next_mob_id = 0
 	if(!client)
 		log_game("[usr.key] AM failed due to disconnect.")
 		return
-
-	if(stat != 2)
-		to_chat(usr, "\blue <B>You must be dead to use this!</B>")
+	if ((stat != 2 || !( SSticker )))
+		to_chat(usr, "<span class='boldnotice'>You must be dead to use this!</span>")
 		return
 
 	//and observer starters too!
@@ -455,9 +454,9 @@ var/next_mob_id = 0
 		return
 
 	//sandbox?
-	if(ticker)
-		if(ticker.mode)
-			if(ticker.mode.name == "sandbox")
+	if(SSticker)
+		if(SSticker.mode)
+			if(SSticker.mode.name == "sandbox")
 				client.allow_respawn = 1
 
 	//waiting
@@ -952,7 +951,7 @@ var/next_mob_id = 0
 		//update our pda and id if we have them on our person
 		replace_identification_name(oldname,newname)
 
-		for(var/datum/mind/T in ticker.minds)
+		for(var/datum/mind/T in SSticker.minds)
 			for(var/datum/objective/obj in T.objectives)
 				// Only update if this player is a target
 				if(obj.target && obj.target.current && obj.target.current.real_name == name)

@@ -381,7 +381,7 @@
 	canSmoothWith = null
 
 /proc/is_thrall(var/mob/living/M)
-	return istype(M) && M.mind && ticker && ticker.mode
+	return istype(M) && M.mind && SSticker && SSticker.mode
 
 /obj/item/clothing/mask/balaclava/white
 	name = "white balaclava"
