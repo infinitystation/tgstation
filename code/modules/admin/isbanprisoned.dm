@@ -2,46 +2,44 @@
 	if (!key)
 		return 0
 
-	if(ckey(key))
-		if(!config.ban_legacy_system)
-			var/ipquery
-			var/cidquery
-			if(address)
-				ipquery = " OR ip = '[address]' "
+	var/ckeytext = ckey(key)
 
-			if(computer_id)
-				cidquery = " OR computerid = '[computer_id]' "
+	if(!dbcon.Connect())
+		log_world("Ban database connection failure. Key [ckeytext] not checked")
+		diary << "Ban database connection failure. Key [ckeytext] not checked"
+		return
 
-			var/ckeytext = ckey(key)
 
-			if(!dbcon.Connect())
-				world.log << "Ban database connection failure. Player [ckeytext] not checked (ban prison)"
-				diary << "Ban database connection failure. Player [ckeytext] not checked (ban prison)"
-				return
+	var/ipquery = ""
+	var/cidquery = ""
+	if(address)
+		ipquery = " OR ip = INET_ATON('[address]') "
 
-			var/DBQuery/query = dbcon.NewQuery("SELECT ckey, ip, computerid, a_ckey, reason, expiration_time, duration, bantime FROM [format_table_name("ban")] WHERE (ckey = '[ckeytext]' [ipquery] [cidquery]) AND (bantype = 'SOFT_PERMABAN'  OR (bantype = 'SOFT_TEMPBAN' AND expiration_time > Now())) AND isnull(unbanned)")
+	if(computer_id)
+		cidquery = " OR computerid = '[computer_id]' "
 
-			query.Execute()
+	var/DBQuery/query_ban_check = dbcon.NewQuery("SELECT ckey, a_ckey, reason, expiration_time, duration, bantime FROM [format_table_name("ban")] WHERE (ckey = '[ckeytext]' [ipquery] [cidquery]) AND (bantype = 'SOFT_PERMABAN'  OR (bantype = 'SOFT_TEMPBAN' AND expiration_time > Now())) AND isnull(unbanned)")
 
-			while(query.NextRow())
-				var/pckey = query.item[1]
-				//var/pip = query.item[2]
-				//var/pcid = query.item[3]
-				var/ackey = query.item[4]
-				var/reason = query.item[5]
-				var/expiration = query.item[6]
-				var/duration = query.item[7]
-				var/bantime = query.item[8]
-				var/expires
+	if(!query_ban_check.Execute())
+		return
 
-				if(text2num(duration) > 0)
-					expires = "Это бан на [duration] минут, и он сниметс&#255; в [expiration] по серверному времени (МСК-2)."
+	while(query_ban_check.NextRow())
+		var/pckey = query_ban_check.item[1]
+		var/ackey = query_ban_check.item[2]
+		var/reason = query_ban_check.item[3]
+		var/expiration = query_ban_check.item[4]
+		var/duration = query_ban_check.item[5]
+		var/bantime = query_ban_check.item[6]
+		var/expires
 
-				src.banprisoned_reason = "Вы, или кто-то другой, кто использовал(а) ваш компьютер или соединение ([pckey]) были забанены бан-тюрьмой по причине: [reason]. Этот бан выдал(а) администратор [ackey], в [bantime]. [expires]\n"
-				return 1
-			return 0
-	else
-		return 0
+		if(text2num(duration) > 0)
+			expires = "Это бан на [duration] минут, и он сниметс&#255; в [expiration] по серверному времени (МСК-2)."
+		else
+			expires = " The is a permanent ban."
+
+		src.banprisoned_reason = "Вы, или кто-то другой, кто использовал(а) ваш компьютер или соединение ([pckey]) были забанены бан-тюрьмой по причине: [reason]. Этот бан выдал(а) администратор [ackey], в [bantime]. [expires]\n"
+		return 1
+	return 0
 
 /mob/dead/new_player/proc/new_player_panel_prisoner()
 	var/output = "<center><p><a href='byond://?src=\ref[src];show_preferences=1'>Setup Character</A></p>"
@@ -64,10 +62,9 @@
 	return
 
 /mob/dead/new_player/proc/Spawn_Prisoner()
-	var/mob/living/carbon/human/character = create_character()	//creates the human and transfers vars and mind
+	var/mob/living/carbon/human/character = create_character(TRUE)	//creates the human and transfers vars and mind
 
 	character.loc = pick(ban_prison)
-	joined_player_list += character.ckey
 
 	setup_and_greet_prisoner(character)
 	character.equipOutfit(/datum/outfit/prisoner)
