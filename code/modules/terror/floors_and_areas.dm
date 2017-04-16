@@ -134,6 +134,9 @@
 /area/syndicate_mothership/enemy
 	name = "Enemy Base"
 
+/area/syndicate_mothership/nuclear_base
+	name = "Enemy Base"
+
 /area/awaymission/alien_base
 	name = "Alien Base"
 	icon_state = "green"
