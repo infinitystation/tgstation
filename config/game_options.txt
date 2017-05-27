@@ -76,7 +76,7 @@ ALERT_DELTA Внимание! Механизм самоуничтожения станции запущен! Весь экипаж долж
 ## Default probablity is 1, increase to make that mode more likely to be picked.
 ## Set to 0 to disable that mode.
 
-PROBABILITY EXTENDED 2
+PROBABILITY EXTENDED 0
 PROBABILITY TRAITOR 3
 PROBABILITY DOUBLE_AGENTS 2
 PROBABILITY CHANGELING 3

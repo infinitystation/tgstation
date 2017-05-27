@@ -499,3 +499,13 @@
 	density = 1
 	obj_integrity = 250
 	max_integrity = 250
+
+/obj/structure/closet/freezero //холодильник без замка
+	name = "freezer"
+	icon_state = "freezero"
+	icon = 'icons/obj/infinity_object.dmi'
+
+/obj/structure/closet/freezero/food/New()
+	..()
+	for(var/i in 1 to 3)
+		new /obj/effect/spawner/lootdrop/food

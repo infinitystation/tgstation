@@ -7,7 +7,7 @@
 	/* hub = "Exadv1.spacestation13"
 	hub_password = "kMZy3U5jJHSiBQjr"
 	name = "Infinity - RU" */
-	fps = 20
+	fps = 30
 	visibility = 1
 #ifdef GC_FAILURE_HARD_LOOKUP
 	loop_checks = FALSE
