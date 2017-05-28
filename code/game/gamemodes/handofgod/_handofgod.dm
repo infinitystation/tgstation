@@ -366,10 +366,10 @@ var/global/list/global_handofgod_structuretypes = list()
 				for(var/datum/objective/O in red_god.objectives)
 					if(O.check_completion())
 						objectives += "<BR><B>Objective #[count]</B>: [O.explanation_text] <font color='green'><B>Success!</B></font>"
-						feedback_add_details("god_objective","[O.type]|SUCCESS")
+						SSblackbox.add_details("god_objective","[O.type]|SUCCESS")
 					else
 						objectives += "<BR><B>Objective #[count]</B>: [O.explanation_text] <font color='red'><B>Fail.</B></font>"
-						feedback_add_details("god_objective","[O.type]|FAIL")
+						SSblackbox.add_details("god_objective","[O.type]|FAIL")
 						godwin = 0
 					count++
 
@@ -377,10 +377,10 @@ var/global/list/global_handofgod_structuretypes = list()
 
 			if(godwin)
 				text += "<BR><font color='green'><B>The red cult and deity were successful!</B></font>"
-				feedback_add_details("god_success","SUCCESS")
+				SSblackbox.add_details("god_success","SUCCESS")
 			else
 				text += "<br><font color='red'><B>The red cult and deity have failed!</B></font>"
-				feedback_add_details("god_success","FAIL")
+				SSblackbox.add_details("god_success","FAIL")
 
 			text += "<BR>"
 
@@ -417,10 +417,10 @@ var/global/list/global_handofgod_structuretypes = list()
 				for(var/datum/objective/O in blue_god.objectives)
 					if(O.check_completion())
 						objectives += "<BR><B>Objective #[count]</B>: [O.explanation_text] <font color='green'><B>Success!</B></font>"
-						feedback_add_details("god_objective","[O.type]|SUCCESS")
+						SSblackbox.add_details("god_objective","[O.type]|SUCCESS")
 					else
 						objectives += "<BR><B>Objective #[count]</B>: [O.explanation_text] <font color='red'><B>Fail.</B></font>"
-						feedback_add_details("god_objective","[O.type]|FAIL")
+						SSblackbox.add_details("god_objective","[O.type]|FAIL")
 						godwin = 0
 					count++
 
@@ -428,10 +428,10 @@ var/global/list/global_handofgod_structuretypes = list()
 
 			if(godwin)
 				text += "<BR><font color='green'><B>The blue cult and deity were successful!</B></font>"
-				feedback_add_details("god_success","SUCCESS")
+				SSblackbox.add_details("god_success","SUCCESS")
 			else
 				text += "<BR><font color='red'><B>The blue cult and deity have failed!</B></font>"
-				feedback_add_details("god_success","FAIL")
+				SSblackbox.add_details("god_success","FAIL")
 
 			text += "<BR>"
 

@@ -94,7 +94,7 @@
 			else if ((src.code == src.l_code) && (src.l_set == 1))
 				src.locked = 0
 				cut_overlays()
-				add_overlay(image('icons/obj/storage.dmi', icon_opened))
+				add_overlay(icon_opened)
 				src.code = null
 			else
 				src.code = "ERROR"
@@ -154,10 +154,9 @@
 	righthand_file = 'icons/mob/inhands/infinity_obj_right.dmi'
 	desc = "A large briefcase with a digital locking system. Use this case for storage bio-hazard items "
 
-/obj/item/weapon/storage/secure/briefcase/New()
+/obj/item/weapon/storage/secure/briefcase/PopulateContents()
 	new /obj/item/weapon/paper(src)
 	new /obj/item/weapon/pen(src)
-	return ..()
 
 /obj/item/weapon/storage/secure/briefcase/attack_hand(mob/user)
 	if ((src.loc == user) && (src.locked == 1))
@@ -170,10 +169,10 @@
 /obj/item/weapon/storage/secure/briefcase/syndie
 	force = 15
 
-/obj/item/weapon/storage/secure/briefcase/syndie/New()
+/obj/item/weapon/storage/secure/briefcase/syndie/PopulateContents()
+	..()
 	for(var/i = 0, i < storage_slots - 2, i++)
 		new /obj/item/stack/spacecash/c1000(src)
-	return ..()
 
 
 // -----------------------------
@@ -194,14 +193,12 @@
 	density = 0
 	cant_hold = list(/obj/item/weapon/storage/secure/briefcase)
 
-/obj/item/weapon/storage/secure/safe/New()
-	..()
+/obj/item/weapon/storage/secure/safe/PopulateContents()
 	new /obj/item/weapon/paper(src)
 	new /obj/item/weapon/pen(src)
 
 /obj/item/weapon/storage/secure/safe/attack_hand(mob/user)
 	return attack_self(user)
 
-/obj/item/weapon/storage/secure/safe/HoS/New()
-	..()
-	//new /obj/item/weapon/storage/lockbox/clusterbang(src) This item is currently broken... and probably shouldnt exist to begin with (even though it's cool)
+/obj/item/weapon/storage/secure/safe/HoS
+	name = "head of security's safe"

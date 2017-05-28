@@ -20,10 +20,10 @@ Cook=2,1
 Botanist=3,2
 Janitor=2,1
 
-Clown=1,0
-Mime=1,0
-Librarian=1,0
-Lawyer=2,0
+Clown=1,1
+Mime=1,1
+Curator=1,1
+Lawyer=2,2
 
 Chaplain=1,1
 

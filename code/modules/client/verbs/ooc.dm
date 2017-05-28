@@ -2,7 +2,7 @@
 	set name = "OOC" //Gave this shit a shorter name so you only have to time out "ooc" rather than "ooc message" to use it --NeoFite
 	set category = "OOC"
 
-	if(say_disabled)	//This is here to try to identify lag problems
+	if(GLOB.say_disabled)	//This is here to try to identify lag problems
 		to_chat(usr, "<span class='danger'>Speech is currently admin-disabled.</span>")
 		return
 
@@ -30,10 +30,10 @@
 		return
 
 	if(!holder)
-		if(!ooc_allowed)
+		if(!GLOB.ooc_allowed)
 			to_chat(src, "<span class='danger'>OOC is globally muted.</span>")
 			return
-		if(!dooc_allowed && (mob.stat == DEAD))
+		if(!GLOB.dooc_allowed && (mob.stat == DEAD))
 			to_chat(usr, "<span class='danger'>OOC for dead mobs has been turned off.</span>")
 			return
 		if(prefs.muted & MUTE_OOC)
@@ -57,9 +57,9 @@
 	var/keyname = key
 	if(prefs.unlock_content)
 		if(prefs.toggles & MEMBER_PUBLIC)
-			keyname = "<font color='[prefs.ooccolor ? prefs.ooccolor : normal_ooc_colour]'><img style='width:9px;height:9px;' class=icon src=\ref['icons/member_content.dmi'] iconstate=blag>[keyname]</font>"
+			keyname = "<font color='[prefs.ooccolor ? prefs.ooccolor : GLOB.normal_ooc_colour]'><img style='width:9px;height:9px;' class=icon src=\ref['icons/member_content.dmi'] iconstate=blag>[keyname]</font>"
 
-	for(var/client/C in clients)
+	for(var/client/C in GLOB.clients)
 		if(C.prefs.chat_toggles & CHAT_OOC)
 			if(holder)
 				if(!holder.fakekey || C.holder)
@@ -68,47 +68,47 @@
 					else
 						to_chat(C, "<span class='adminobserverooc'><span class='prefix'>OOC:</span> <EM>[keyname][holder.fakekey ? "/([holder.fakekey])" : ""]:</EM> <span class='message'>[msg]</span></span>")
 				else
-					to_chat(C, "<font color='[normal_ooc_colour]'><span class='ooc'><span class='prefix'>OOC:</span> <EM>[holder.fakekey ? holder.fakekey : key]:</EM> <span class='message'>[msg]</span></span></font>")
+					to_chat(C, "<font color='[GLOB.normal_ooc_colour]'><span class='ooc'><span class='prefix'>OOC:</span> <EM>[holder.fakekey ? holder.fakekey : key]:</EM> <span class='message'>[msg]</span></span></font>")
 			else if(!(key in C.prefs.ignoring))
-				to_chat(C, "<font color='[normal_ooc_colour]'><span class='ooc'><span class='prefix'>OOC:</span> <EM>[keyname]:</EM> <span class='message'>[msg]</span></span></font>")
+				to_chat(C, "<font color='[GLOB.normal_ooc_colour]'><span class='ooc'><span class='prefix'>OOC:</span> <EM>[keyname]:</EM> <span class='message'>[msg]</span></span></font>")
 
 /proc/toggle_ooc(toggle = null)
 	if(toggle != null) //if we're specifically en/disabling ooc
-		if(toggle != ooc_allowed)
-			ooc_allowed = toggle
+		if(toggle != GLOB.ooc_allowed)
+			GLOB.ooc_allowed = toggle
 		else
 			return
 	else //otherwise just toggle it
-		ooc_allowed = !ooc_allowed
-	to_chat(world, "<B>The OOC channel has been globally [ooc_allowed ? "enabled" : "disabled"].</B>")
+		GLOB.ooc_allowed = !GLOB.ooc_allowed
+	to_chat(world, "<B>The OOC channel has been globally [GLOB.ooc_allowed ? "enabled" : "disabled"].</B>")
 
 /proc/toggle_looc(toggle = null)
 	if(toggle != null)
-		if(toggle != looc_allowed)
-			looc_allowed = toggle
+		if(toggle != GLOB.looc_allowed)
+			GLOB.looc_allowed = toggle
 		else
 			return
 	else //otherwise just toggle it
-		looc_allowed = !looc_allowed
-	world << "<B>The LOOC channel has been globally [looc_allowed ? "enabled" : "disabled"].</B>"
+		GLOB.looc_allowed = !GLOB.looc_allowed
+	world << "<B>The LOOC channel has been globally [GLOB.looc_allowed ? "enabled" : "disabled"].</B>"
 
 /proc/toggle_dchat(toggle = null)
 	if(toggle != null) //if we're specifically en/disabling ooc
-		if(toggle != dchat_allowed)
-			dchat_allowed = toggle
+		if(toggle != GLOB.dchat_allowed)
+			GLOB.dchat_allowed = toggle
 		else
 			return
 	else //otherwise just toggle it
-		dchat_allowed = !dchat_allowed
-	world << "<B>The Dead Chat channel has been globally [dchat_allowed ? "enabled" : "disabled"].</B>"
+		GLOB.dchat_allowed = !GLOB.dchat_allowed
+	world << "<B>The Dead Chat channel has been globally [GLOB.dchat_allowed ? "enabled" : "disabled"].</B>"
 
-var/global/normal_ooc_colour = OOC_COLOR
+GLOBAL_VAR_INIT(normal_ooc_colour, OOC_COLOR)
 
 /client/proc/set_ooc(newColor as color)
 	set name = "Set Player OOC Color"
 	set desc = "Modifies player OOC Color"
 	set category = "Fun"
-	normal_ooc_colour = sanitize_ooccolor(newColor)
+	GLOB.normal_ooc_colour = sanitize_ooccolor(newColor)
 
 /client/verb/looc(msg as text)
 	set name = "LOOC" //Gave this shit a shorter name so you only have to time out "ooc" rather than "ooc message" to use it --NeoFite
@@ -128,10 +128,10 @@ var/global/normal_ooc_colour = OOC_COLOR
 		return
 
 	if(!(holder && R_ADMIN))
-		if(!looc_allowed)
+		if(!GLOB.looc_allowed)
 			src << "<span class='notice'>LOOC is globally muted.</span>"
 			return
-		if(!dooc_allowed && (mob.stat == DEAD))
+		if(!GLOB.dooc_allowed && (mob.stat == DEAD))
 			usr << "<span class='notice'>LOOC for dead mobs has been turned off.</span>"
 			return
 		if(prefs.muted & MUTE_OOC)
@@ -158,7 +158,7 @@ var/global/normal_ooc_colour = OOC_COLOR
 		if(!M.client)
 			continue
 		var/client/C = M.client
-		if(C in admins)
+		if(C in GLOB.admins)
 			if(R_ADMIN)
 				continue //they are handled after that
 
@@ -176,7 +176,7 @@ var/global/normal_ooc_colour = OOC_COLOR
 	if(S.stat != DEAD)
 		display_name = "[S.name]/([S.key])"
 
-	for(var/client/C in admins)
+	for(var/client/C in GLOB.admins)
 		if(R_ADMIN)
 			if(C.prefs.chat_toggles & CHAT_LOOC)
 				var/prefix = "(R)LOOC"
@@ -190,7 +190,7 @@ var/global/normal_ooc_colour = OOC_COLOR
 	set name = "Reset Player OOC Color"
 	set desc = "Returns player OOC Color to default"
 	set category = "Fun"
-	normal_ooc_colour = OOC_COLOR
+	GLOB.normal_ooc_colour = OOC_COLOR
 
 /client/verb/colorooc()
 	set name = "Set Your OOC Color"
@@ -204,7 +204,7 @@ var/global/normal_ooc_colour = OOC_COLOR
 	if(new_ooccolor)
 		prefs.ooccolor = sanitize_ooccolor(new_ooccolor)
 		prefs.save_preferences()
-	feedback_add_details("admin_verb","OC") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
+	SSblackbox.add_details("admin_verb","Set OOC Color") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 	return
 
 /client/verb/resetcolorooc()
@@ -225,8 +225,8 @@ var/global/normal_ooc_colour = OOC_COLOR
 	set category = "Admin"
 	set desc ="Check the admin notice if it has been set"
 
-	if(admin_notice)
-		to_chat(src, "<span class='boldnotice'>Admin Notice:</span>\n \t [admin_notice]")
+	if(GLOB.admin_notice)
+		to_chat(src, "<span class='boldnotice'>Admin Notice:</span>\n \t [GLOB.admin_notice]")
 	else
 		to_chat(src, "<span class='notice'>There are no admin notices at the moment.</span>")
 
@@ -235,8 +235,8 @@ var/global/normal_ooc_colour = OOC_COLOR
 	set category = "OOC"
 	set desc ="Check the Message of the Day"
 
-	if(join_motd)
-		to_chat(src, "<div class=\"motd\">[join_motd]</div>")
+	if(GLOB.join_motd)
+		to_chat(src, "<div class=\"motd\">[GLOB.join_motd]</div>")
 	else
 		to_chat(src, "<span class='notice'>The Message of the Day has not been set.</span>")
 
@@ -265,7 +265,7 @@ var/global/normal_ooc_colour = OOC_COLOR
 	set category = "OOC"
 	set desc ="Ignore a player's messages on the OOC channel"
 
-	var/selection = input("Please, select a player!", "Ignore", null, null) as null|anything in sortKey(clients)
+	var/selection = input("Please, select a player!", "Ignore", null, null) as null|anything in sortKey(GLOB.clients)
 	if(!selection)
 		return
 	if(selection == src)

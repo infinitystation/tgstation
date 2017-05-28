@@ -70,12 +70,12 @@
 	origin.vest_mode_action.Remove(C)
 	origin.vest_disguise_action.Remove(C)
 	origin.set_droppoint_action.Remove(C)
-	remote_eye.eye_user = null
 	C.reset_perspective(null)
 	if(C.client)
 		C.client.images -= remote_eye.user_image
 		for(var/datum/camerachunk/chunk in remote_eye.visibleCameraChunks)
-			C.client.images -= chunk.obscured
+			chunk.remove(remote_eye)
+	remote_eye.eye_user = null
 	C.remote_control = null
 	C.unset_machine()
 	Remove(C)
@@ -91,7 +91,7 @@
 	var/mob/camera/aiEye/remote/remote_eye = C.remote_control
 	var/obj/machinery/abductor/pad/P = target
 
-	if(cameranet.checkTurfVis(remote_eye.loc))
+	if(GLOB.cameranet.checkTurfVis(remote_eye.loc))
 		P.PadToLoc(remote_eye.loc)
 
 /datum/action/innate/teleport_out
@@ -116,7 +116,7 @@
 	var/mob/camera/aiEye/remote/remote_eye = C.remote_control
 	var/obj/machinery/abductor/pad/P = target
 
-	if(cameranet.checkTurfVis(remote_eye.loc))
+	if(GLOB.cameranet.checkTurfVis(remote_eye.loc))
 		P.MobToLoc(remote_eye.loc,C)
 
 /datum/action/innate/vest_mode_swap

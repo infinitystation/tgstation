@@ -47,7 +47,7 @@
 
 /datum/map_template/shuttle/emergency/airless/prerequisites_met()
 	// first 10 minutes only
-	return world.time - round_start_time < 6000
+	return world.time - SSticker.round_start_time < 6000
 
 /datum/map_template/shuttle/emergency/asteroid
 	suffix = "asteroid"
@@ -72,7 +72,7 @@
 
 /datum/map_template/shuttle/emergency/meteor
 	suffix = "meteor"
-	name = "An Asteroid With Engines Strapped To It"
+	name = "Asteroid With Engines Strapped To It"
 	description = "A hollowed out asteroid with engines strapped to it. Due to its size and difficulty in steering it, this shuttle may damage the docking area."
 	admin_notes = "This shuttle will likely crush escape, killing anyone there."
 	credit_cost = -5000
@@ -165,6 +165,12 @@
 	suffix = "infinity"
 	name = "Infinity Emergency Shuttle"
 
+/datum/map_template/shuttle/emergency/cere
+	suffix = "cere"
+	name = "Cere Station Emergency Shuttle"
+	description = "The large, beefed-up version of the box-standard shuttle. Includes an expanded brig, fully stocked medbay, enhanced cargo storage with mech chargers, \
+		an engine room stocked with various supplies, and a crew capacity of 80+ to top it all off. Live large, live Cere."
+
 /datum/map_template/shuttle/emergency/supermatter
 	suffix = "supermatter"
 	name = "Hyperfractal Gigashuttle"
@@ -248,6 +254,10 @@
 	suffix = "metaclear"
 	name = "NT Recovery Ship"
 	admin_notes = "Чиста&#255; и отремонтированна&#255; верси&#255; Вайт-Шипа."
+
+/datum/map_template/shuttle/whiteship/cere
+	suffix = "cere"
+	name = "NT Construction Vessel"
 
 /datum/map_template/shuttle/cargo/box
 	suffix = "box"

@@ -21,7 +21,7 @@
 	name = "russian surplus closet"
 	desc = "It's a storage unit for Russian standard-issue surplus."
 
-/obj/structure/closet/gimmick/russian/New()
+/obj/structure/closet/gimmick/russian/PopulateContents()
 	..()
 	for(var/i in 1 to 5)
 		new /obj/item/clothing/head/ushanka(src)
@@ -33,6 +33,24 @@
 	desc = "Everything you need!"
 	anchored = 1
 
+/obj/structure/closet/gimmick/tacticool/PopulateContents()
+	..()
+	new /obj/item/clothing/glasses/eyepatch(src)
+	new /obj/item/clothing/glasses/sunglasses(src)
+	new /obj/item/clothing/gloves/combat(src)
+	new /obj/item/clothing/gloves/combat(src)
+	new /obj/item/clothing/head/helmet/swat(src)
+	new /obj/item/clothing/head/helmet/swat(src)
+	new /obj/item/clothing/mask/gas/sechailer/swat(src)
+	new /obj/item/clothing/mask/gas/sechailer/swat(src)
+	new /obj/item/clothing/shoes/combat/swat(src)
+	new /obj/item/clothing/shoes/combat/swat(src)
+	new /obj/item/clothing/suit/space/hardsuit/deathsquad(src)
+	new /obj/item/clothing/suit/space/hardsuit/deathsquad(src)
+	new /obj/item/clothing/under/syndicate/tacticool(src)
+	new /obj/item/clothing/under/syndicate/tacticool(src)
+
+
 /obj/structure/closet/thunderdome
 	name = "\improper Thunderdome closet"
 	desc = "Everything you need!"
@@ -42,7 +60,7 @@
 	name = "red-team Thunderdome closet"
 	icon_door = "red"
 
-/obj/structure/closet/thunderdome/tdred/New()
+/obj/structure/closet/thunderdome/tdred/PopulateContents()
 	..()
 	for(var/i in 1 to 3)
 		new /obj/item/clothing/suit/armor/tdome/red(src)
@@ -61,7 +79,7 @@
 	name = "green-team Thunderdome closet"
 	icon_door = "green"
 
-/obj/structure/closet/thunderdome/tdgreen/New()
+/obj/structure/closet/thunderdome/tdgreen/PopulateContents()
 	..()
 	for(var/i in 1 to 3)
 		new /obj/item/clothing/suit/armor/tdome/green(src)
@@ -80,7 +98,7 @@
 	desc = "It's a storage unit for operational gear."
 	icon_state = "syndicate"
 
-/obj/structure/closet/malf/suits/New()
+/obj/structure/closet/malf/suits/PopulateContents()
 	..()
 	new /obj/item/weapon/tank/jetpack/void(src)
 	new /obj/item/clothing/mask/breath(src)

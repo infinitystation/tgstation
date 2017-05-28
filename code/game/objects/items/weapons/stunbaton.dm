@@ -22,10 +22,9 @@
 	user.visible_message("<span class='suicide'>[user] вставляет работающую дубинку себе в рот! Кажетс&#255; [user.p_they()] пытал[user.p_e_5()] покончить жизнь самоубийством!</span>")
 	return (FIRELOSS)
 
-/obj/item/weapon/melee/baton/New()
-	..()
+/obj/item/weapon/melee/baton/Initialize()
+	. = ..()
 	update_icon()
-	return
 
 /obj/item/weapon/melee/baton/throw_impact(atom/hit_atom)
 	..()
@@ -33,10 +32,9 @@
 	if(status && prob(throw_hit_chance) && iscarbon(hit_atom))
 		baton_stun(hit_atom)
 
-/obj/item/weapon/melee/baton/loaded/New() //this one starts with a cell pre-installed.
-	..()
+/obj/item/weapon/melee/baton/loaded/Initialize() //this one starts with a cell pre-installed.
 	bcell = new(src)
-	update_icon()
+	. = ..()
 
 /obj/item/weapon/melee/baton/proc/deductcharge(chrgdeductamt)
 	if(bcell)
@@ -60,9 +58,9 @@
 /obj/item/weapon/melee/baton/examine(mob/user)
 	..()
 	if(bcell)
-		user <<"<span class='notice'>The baton is [round(bcell.percent())]% charged.</span>"
+		to_chat(user, "<span class='notice'>The baton is [round(bcell.percent())]% charged.</span>")
 	else
-		user <<"<span class='warning'>The baton does not have a power source installed.</span>"
+		to_chat(user, "<span class='warning'>The baton does not have a power source installed.</span>")
 
 /obj/item/weapon/melee/baton/attackby(obj/item/weapon/W, mob/user, params)
 	if(istype(W, /obj/item/weapon/stock_parts/cell))
@@ -164,7 +162,7 @@
 
 	if(ishuman(L))
 		var/mob/living/carbon/human/H = L
-		H.forcesay(hit_appends)
+		H.forcesay(GLOB.hit_appends)
 
 
 	return 1
@@ -196,8 +194,8 @@
 	slot_flags = SLOT_BACK
 	var/obj/item/device/assembly/igniter/sparkler = 0
 
-/obj/item/weapon/melee/baton/cattleprod/New()
-	..()
+/obj/item/weapon/melee/baton/cattleprod/Initialize()
+	. = ..()
 	sparkler = new (src)
 
 /obj/item/weapon/melee/baton/cattleprod/baton_stun()

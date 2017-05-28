@@ -42,7 +42,7 @@
 	var/list/mob/living/carbon/human/candidates = list()
 	var/mob/living/carbon/human/H = null
 
-	for(var/mob/living/carbon/human/applicant in player_list)
+	for(var/mob/living/carbon/human/applicant in GLOB.player_list)
 		if(ROLE_TRAITOR in applicant.client.prefs.be_special)
 			if(!applicant.stat)
 				if(applicant.mind)
@@ -78,7 +78,7 @@
 	var/list/mob/living/carbon/human/candidates = list()
 	var/mob/living/carbon/human/H = null
 
-	for(var/mob/living/carbon/human/applicant in player_list)
+	for(var/mob/living/carbon/human/applicant in GLOB.player_list)
 		if(ROLE_CHANGELING in applicant.client.prefs.be_special)
 			var/turf/T = get_turf(applicant)
 			if(applicant.stat == CONSCIOUS && applicant.mind && !applicant.mind.special_role && T.z == ZLEVEL_STATION)
@@ -111,7 +111,7 @@
 	var/list/mob/living/carbon/human/candidates = list()
 	var/mob/living/carbon/human/H = null
 
-	for(var/mob/living/carbon/human/applicant in player_list)
+	for(var/mob/living/carbon/human/applicant in GLOB.player_list)
 		if(ROLE_REV in applicant.client.prefs.be_special)
 			var/turf/T = get_turf(applicant)
 			if(applicant.stat == CONSCIOUS && applicant.mind && !applicant.mind.special_role && T.z == ZLEVEL_STATION)
@@ -133,7 +133,7 @@
 
 /datum/admins/proc/makeWizard()
 
-	var/list/mob/dead/observer/candidates = pollCandidates("Do you wish to be considered for the position of a Wizard Foundation 'diplomat'?", "wizard", null)
+	var/list/mob/dead/observer/candidates = pollGhostCandidates("Do you wish to be considered for the position of a Wizard Foundation 'diplomat'?", "wizard", null)
 
 	var/mob/dead/observer/selected = pick_n_take(candidates)
 
@@ -153,7 +153,7 @@
 	var/list/mob/living/carbon/human/candidates = list()
 	var/mob/living/carbon/human/H = null
 
-	for(var/mob/living/carbon/human/applicant in player_list)
+	for(var/mob/living/carbon/human/applicant in GLOB.player_list)
 		if(ROLE_CULTIST in applicant.client.prefs.be_special)
 			var/turf/T = get_turf(applicant)
 			if(applicant.stat == CONSCIOUS && applicant.mind && !applicant.mind.special_role && T.z == ZLEVEL_STATION)
@@ -186,7 +186,7 @@
 	var/list/mob/living/carbon/human/candidates = list()
 	var/mob/living/carbon/human/H = null
 
-	for(var/mob/living/carbon/human/applicant in player_list)
+	for(var/mob/living/carbon/human/applicant in GLOB.player_list)
 		if(ROLE_SERVANT_OF_RATVAR in applicant.client.prefs.be_special)
 			var/turf/T = get_turf(applicant)
 			if(applicant.stat == CONSCIOUS && applicant.mind && !applicant.mind.special_role && T.z == ZLEVEL_STATION)
@@ -216,7 +216,7 @@
 /datum/admins/proc/makeNukeTeam()
 
 	var/datum/game_mode/nuclear/temp = new
-	var/list/mob/dead/observer/candidates = pollCandidates("Do you wish to be considered for a nuke team being sent in?", "operative", temp)
+	var/list/mob/dead/observer/candidates = pollGhostCandidates("Do you wish to be considered for a nuke team being sent in?", "operative", temp)
 	var/list/mob/dead/observer/chosen = list()
 	var/mob/dead/observer/theghost = null
 
@@ -225,7 +225,7 @@
 		var/agentcount = 0
 
 		for(var/i = 0, i<numagents,i++)
-			shuffle(candidates) //More shuffles means more randoms
+			shuffle_inplace(candidates) //More shuffles means more randoms
 			for(var/mob/j in candidates)
 				if(!j || !j.client)
 					candidates.Remove(j)
@@ -242,13 +242,13 @@
 
 		var/nuke_code = random_nukecode()
 
-		var/obj/machinery/nuclearbomb/nuke = locate("syndienuke") in nuke_list
+		var/obj/machinery/nuclearbomb/nuke = locate("syndienuke") in GLOB.nuke_list
 		if(nuke)
 			nuke.r_code = nuke_code
 
 		//Let's find the spawn locations
 		var/list/turf/synd_spawn = list()
-		for(var/obj/effect/landmark/A in landmarks_list)
+		for(var/obj/effect/landmark/A in GLOB.landmarks_list)
 			if(A.name == "Syndicate-Spawn")
 				synd_spawn += get_turf(A)
 				continue
@@ -290,13 +290,13 @@
 /datum/admins/proc/makeDeathsquad()
 	var/mission = input("Assign a mission to the deathsquad", "Assign Mission", "Leave no witnesses.")
 	mission = sanitize_a0(mission)
-	var/list/mob/dead/observer/candidates = pollCandidates("Do you wish to be considered for an elite Nanotrasen Strike Team?", "deathsquad", null)
+	var/list/mob/dead/observer/candidates = pollGhostCandidates("Do you wish to be considered for an elite Nanotrasen Strike Team?", "deathsquad", null)
 	var/squadSpawned = 0
 
 	if(candidates.len >= 2) //Minimum 2 to be considered a squad
 		//Pick the lucky players
 		var/numagents = min(5,candidates.len) //How many commandos to spawn
-		var/list/spawnpoints = emergencyresponseteamspawn
+		var/list/spawnpoints = GLOB.emergencyresponseteamspawn
 		while(numagents && candidates.len)
 			if (numagents > spawnpoints.len)
 				numagents--
@@ -311,15 +311,15 @@
 			var/mob/living/carbon/human/Commando = new(spawnloc)
 			chosen_candidate.client.prefs.copy_to(Commando)
 			if(numagents == 1) //If Squad Leader
-				Commando.real_name = "Officer [pick(commando_names)]"
+				Commando.real_name = "Officer [pick(GLOB.commando_names)]"
 				Commando.equipOutfit(/datum/outfit/death_commando/officer)
 			else
-				Commando.real_name = "Trooper [pick(commando_names)]"
+				Commando.real_name = "Trooper [pick(GLOB.commando_names)]"
 				Commando.equipOutfit(/datum/outfit/death_commando)
 			Commando.dna.update_dna_identity()
 			Commando.key = chosen_candidate.key
 			Commando.mind.assigned_role = "Death Commando"
-			for(var/obj/machinery/door/poddoor/ert/door in airlocks)
+			for(var/obj/machinery/door/poddoor/ert/door in GLOB.airlocks)
 				spawn(0)
 					door.open()
 
@@ -372,7 +372,7 @@
 	var/list/mob/living/carbon/human/candidates = list()
 	var/mob/living/carbon/human/H = null
 
-	for(var/mob/living/carbon/human/applicant in player_list)
+	for(var/mob/living/carbon/human/applicant in GLOB.player_list)
 		if(ROLE_GANG in applicant.client.prefs.be_special)
 			var/turf/T = get_turf(applicant)
 			if(applicant.stat == CONSCIOUS && applicant.mind && !applicant.mind.special_role && T.z == ZLEVEL_STATION)
@@ -384,7 +384,7 @@
 	if(candidates.len >= 2)
 		for(var/needs_assigned=2,needs_assigned>0,needs_assigned--)
 			H = pick(candidates)
-			if(gang_colors_pool.len)
+			if(GLOB.gang_colors_pool.len)
 				var/datum/gang/newgang = new()
 				SSticker.mode.gangs += newgang
 				H.mind.make_Gang(newgang)
@@ -399,13 +399,13 @@
 /datum/admins/proc/makeOfficial()
 	var/mission = input("Assign a task for the official", "Assign Task", "Conduct a routine preformance review of [station_name()] and its Captain.")
 	mission = sanitize_a0(mission)
-	var/list/mob/dead/observer/candidates = pollCandidates("Do you wish to be considered to be a Centcom Official?", "deathsquad")
+	var/list/mob/dead/observer/candidates = pollGhostCandidates("Do you wish to be considered to be a Centcom Official?", "deathsquad")
 
 	if(candidates.len)
 		var/mob/dead/observer/chosen_candidate = pick(candidates)
 
 		//Create the official
-		var/mob/living/carbon/human/newmob = new (pick(emergencyresponseteamspawn))
+		var/mob/living/carbon/human/newmob = new (pick(GLOB.emergencyresponseteamspawn))
 		chosen_candidate.client.prefs.copy_to(newmob)
 		newmob.real_name = newmob.dna.species.random_name(newmob.gender,1)
 		newmob.dna.update_dna_identity()
@@ -453,10 +453,15 @@
 			alert = "Blue"
 		if("Green: Centcom Official")
 			return makeOfficial()
-	var/teamsize = min(7,input("Maximum size of team? (7 max)", "Select Team Size",4) as null|num)
-	var/mission = input("Assign a mission to the Emergency Response Team", "Assign Mission", "Assist the station.")
+	var/teamcheck = input("Maximum size of team? (7 max)", "Select Team Size",4) as null|num
+	if(isnull(teamcheck))
+		return
+	var/teamsize = min(7,teamcheck)
+	var/mission = input("Assign a mission to the Emergency Response Team", "Assign Mission", "Assist the station.") as null|text
 	mission = sanitize_a0(mission)
-	var/list/mob/dead/observer/candidates = pollCandidates("Do you wish to be considered for a Code [alert] Nanotrasen Emergency Response Team?", "deathsquad", null)
+	if(!mission)
+		return
+	var/list/mob/dead/observer/candidates = pollGhostCandidates("Do you wish to be considered for a Code [alert] Nanotrasen Emergency Response Team?", "deathsquad", null)
 	var/teamSpawned = 0
 
 	if(candidates.len > 0)
@@ -466,7 +471,7 @@
 		if (alert == "Red")
 			numagents = min(teamsize,candidates.len)
 			redalert = 1
-		var/list/spawnpoints = emergencyresponseteamspawn
+		var/list/spawnpoints = GLOB.emergencyresponseteamspawn
 		while(numagents && candidates.len)
 			if (numagents > spawnpoints.len)
 				numagents--
@@ -479,7 +484,7 @@
 
 			//Spawn and equip the officer
 			var/mob/living/carbon/human/ERTOperative = new(spawnloc)
-			var/list/lastname = last_names
+			var/list/lastname = GLOB.last_names
 			chosen_candidate.client.prefs.copy_to(ERTOperative)
 			var/ertname = pick(lastname)
 			switch(numagents)
@@ -510,7 +515,7 @@
 
 			//Open the Armory doors
 			if(alert != "Blue")
-				for(var/obj/machinery/door/poddoor/ert/door in airlocks)
+				for(var/obj/machinery/door/poddoor/ert/door in GLOB.airlocks)
 					spawn(0)
 						door.open()
 
@@ -603,7 +608,7 @@
 		if (alert == "Green")
 			numagents = min(teamsize,candidates.len)
 			greenalert = 1
-		var/list/spawnpoints = centcomsecspawn
+		var/list/spawnpoints = GLOB.centcomsecspawn
 		while(numagents && candidates.len)
 			if (numagents > spawnpoints.len)
 				numagents--
@@ -616,7 +621,7 @@
 
 			//Spawn and equip the officer
 			var/mob/living/carbon/human/SAVEOperative = new(spawnloc)
-			var/list/lastname = last_names
+			var/list/lastname = GLOB.last_names
 			chosen_candidate.client.prefs.copy_to(SAVEOperative)
 			var/ertname = pick(lastname)
 			switch(numagents)
@@ -669,7 +674,7 @@
 				SAVEOperative.set_species(/datum/species/human)
 
 			if(alert != "Green")
-				for(var/obj/machinery/door/poddoor/crew/door in airlocks)
+				for(var/obj/machinery/door/poddoor/crew/door in GLOB.airlocks)
 					spawn(0)
 						door.open()
 

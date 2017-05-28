@@ -1,6 +1,6 @@
 SUBSYSTEM_DEF(job)
 	name = "Jobs"
-	init_order = 14
+	init_order = INIT_ORDER_JOBS
 	flags = SS_NO_FIRE
 
 	var/list/occupations = list()		//List of all jobs
@@ -48,7 +48,7 @@ SUBSYSTEM_DEF(job)
 
 /datum/controller/subsystem/job/proc/Debug(text)
 	job_debug.Add(text)
-	job_subsystem_debug << "\[[time_stamp()]]: [text]"
+	GLOB.job_subsystem_debug << "\[[time_stamp()]]: [text]"
 	return 1
 
 
@@ -119,7 +119,7 @@ SUBSYSTEM_DEF(job)
 		if(istype(job, GetJob("Assistant"))) // We don't want to give him assistant, that's boring!
 			continue
 
-		if(job.title in command_positions) //If you want a command position, select it!
+		if(job.title in GLOB.command_positions) //If you want a command position, select it!
 			continue
 
 		if(jobban_isbanned(player, job.title))
@@ -146,7 +146,7 @@ SUBSYSTEM_DEF(job)
 				return TRUE
 
 /datum/controller/subsystem/job/proc/ResetOccupations()
-	for(var/mob/dead/new_player/player in player_list)
+	for(var/mob/dead/new_player/player in GLOB.player_list)
 		if((player) && (player.mind))
 			player.mind.assigned_role = null
 			player.mind.special_role = null
@@ -160,26 +160,26 @@ SUBSYSTEM_DEF(job)
 //it locates a head or runs out of levels to check
 //This is basically to ensure that there's atleast a few heads in the round
 /datum/controller/subsystem/job/proc/FillHeadPosition()
-	var/level = 1
-	for(var/command_position in command_positions)
-		var/datum/job/job = GetJob(command_position)
-		if(!job)
-			continue
-		if((job.current_positions >= job.total_positions) && job.total_positions != -1)
-			continue
-		var/list/candidates = FindOccupationCandidates(job, level)
-		if(!candidates.len)
-			continue
-		var/mob/dead/new_player/candidate = pick(candidates)
-		if(AssignRole(candidate, command_position))
-			return 1
+	for(var/level = 1 to 3)
+		for(var/command_position in GLOB.command_positions)
+			var/datum/job/job = GetJob(command_position)
+			if(!job)
+				continue
+			if((job.current_positions >= job.total_positions) && job.total_positions != -1)
+				continue
+			var/list/candidates = FindOccupationCandidates(job, level)
+			if(!candidates.len)
+				continue
+			var/mob/dead/new_player/candidate = pick(candidates)
+			if(AssignRole(candidate, command_position))
+				return 1
 	return 0
 
 
 //This proc is called at the start of the level loop of DivideOccupations() and will cause head jobs to be checked before any other jobs of the same level
 //This is also to ensure we get as many heads as possible
 /datum/controller/subsystem/job/proc/CheckHeadPositions(level)
-	for(var/command_position in command_positions)
+	for(var/command_position in GLOB.command_positions)
 		var/datum/job/job = GetJob(command_position)
 		if(!job)
 			continue
@@ -227,7 +227,7 @@ SUBSYSTEM_DEF(job)
 				A.spawn_positions = 3
 
 	//Get the players who are ready
-	for(var/mob/dead/new_player/player in player_list)
+	for(var/mob/dead/new_player/player in GLOB.player_list)
 		if(player.ready && player.mind && !player.mind.assigned_role)
 			unassigned += player
 
@@ -313,7 +313,6 @@ SUBSYSTEM_DEF(job)
 					Debug("DO non-human failed, Player: [player], Job:[job.title]")
 					continue
 
-
 				// If the player wants that job on this level, then try give it to him.
 				if(player.client.prefs.GetJobDepartment(job, level) & job.flag)
 
@@ -324,6 +323,7 @@ SUBSYSTEM_DEF(job)
 						unassigned -= player
 						assigned_len++
 						break
+
 
 	// Hand out random jobs to the people who didn't get any in the last check
 	// Also makes sure that they got their preference correct
@@ -379,7 +379,7 @@ SUBSYSTEM_DEF(job)
 	//If we joined at roundstart we should be positioned at our workstation
 	if(!joined_late)
 		var/obj/S = null
-		for(var/obj/effect/landmark/start/sloc in start_landmarks_list)
+		for(var/obj/effect/landmark/start/sloc in GLOB.start_landmarks_list)
 			if(sloc.name != rank)
 				S = sloc //so we can revert to spawning them on top of eachother if something goes wrong
 				continue
@@ -389,7 +389,7 @@ SUBSYSTEM_DEF(job)
 			break
 		if(!S) //if there isn't a spawnpoint send them to latejoin, if there's no latejoin go yell at your mapper
 			log_world("Couldn't find a round start spawn point for [rank]")
-			S = get_turf(pick(latejoin))
+			S = get_turf(pick(GLOB.latejoin))
 		if(!S) //final attempt, lets find some area in the arrivals shuttle to spawn them in to.
 			log_world("Couldn't find a round start latejoin spawn point.")
 			for(var/turf/T in get_area_turfs(/area/shuttle/arrival))
@@ -448,16 +448,16 @@ SUBSYSTEM_DEF(job)
 	if(equip_needed < 0) // -1: infinite available slots
 		equip_needed = 12
 	for(var/i=equip_needed-5, i>0, i--)
-		if(secequipment.len)
-			var/spawnloc = secequipment[1]
+		if(GLOB.secequipment.len)
+			var/spawnloc = GLOB.secequipment[1]
 			new /obj/structure/closet/secure_closet/security/sec(spawnloc)
-			secequipment -= spawnloc
+			GLOB.secequipment -= spawnloc
 		else //We ran out of spare locker spawns!
 			break
 
 
 /datum/controller/subsystem/job/proc/LoadJobs()
-	var/jobstext = return_file_text("config/jobs.txt")
+	var/jobstext = file2text("config/jobs.txt")
 	for(var/datum/job/J in occupations)
 		var/regex/jobs = new("[J.title]=(-1|\\d+),(-1|\\d+)")
 		jobs.Find(jobstext)
@@ -474,7 +474,7 @@ SUBSYSTEM_DEF(job)
 		var/level4 = 0 //never
 		var/level5 = 0 //banned
 		var/level6 = 0 //account too young
-		for(var/mob/dead/new_player/player in player_list)
+		for(var/mob/dead/new_player/player in GLOB.player_list)
 			if(!(player.ready && player.mind && !player.mind.assigned_role))
 				continue //This player is not ready
 			if(jobban_isbanned(player, job.title))
@@ -492,7 +492,7 @@ SUBSYSTEM_DEF(job)
 			else level4++ //not selected
 
 		tmp_str += "HIGH=[level1]|MEDIUM=[level2]|LOW=[level3]|NEVER=[level4]|BANNED=[level5]|YOUNG=[level6]|-"
-		feedback_add_details("job_preferences",tmp_str)
+		SSblackbox.add_details("job_preferences",tmp_str)
 
 /datum/controller/subsystem/job/proc/PopcapReached()
 	if(config.hard_popcap || config.extreme_popcap)

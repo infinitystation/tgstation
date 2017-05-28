@@ -10,7 +10,7 @@
 
 	message_admins("<span class='adminnotice'>[key_name_admin(usr)] сбросил(а) голосование.</span>")
 	log_admin("[key_name_admin(usr)] сбросил(а) голосование.")
-	feedback_add_details("admin_verb","RSVT")
+	SSblackbox.add_details("admin_verb","RSVT")
 
 //Port From /Bay/station.
 /client/proc/roll_dices()

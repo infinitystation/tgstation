@@ -7,7 +7,7 @@
 	icon_state = "generic"
 	icon_door_override = 0
 
-/obj/structure/closet/gmcloset/New()
+/obj/structure/closet/gmcloset/PopulateContents()
 	..()
 	new /obj/item/clothing/head/that(src)
 	new /obj/item/device/radio/headset/headset_srv(src)
@@ -35,7 +35,7 @@
 	desc = "It's a storage unit for foodservice garments and mouse traps."
 	icon_door = "black"
 
-/obj/structure/closet/chefcloset/New()
+/obj/structure/closet/chefcloset/PopulateContents()
 	..()
 	new /obj/item/clothing/under/waiter(src)
 	new /obj/item/clothing/under/waiter(src)
@@ -59,7 +59,7 @@
 	desc = "It's a storage unit for janitorial clothes and gear."
 	icon_door = "mixed"
 
-/obj/structure/closet/jcloset/New()
+/obj/structure/closet/jcloset/PopulateContents()
 	..()
 	new /obj/item/clothing/under/rank/janitor(src)
 	new /obj/item/weapon/cartridge/janitor(src)
@@ -85,7 +85,7 @@
 	desc = "It's a storage unit for courtroom apparel and items."
 	icon_door = "blue"
 
-/obj/structure/closet/lawcloset/New()
+/obj/structure/closet/lawcloset/PopulateContents()
 	..()
 	new /obj/item/clothing/under/lawyer/female(src)
 	new /obj/item/clothing/under/lawyer/black(src)
@@ -106,9 +106,7 @@
 	desc = "It's a storage unit for Nanotrasen-approved religious attire."
 	icon_door = "black"
 
-/obj/structure/closet/wardrobe/chaplain_black/New()
-	..()
-	contents = list()
+/obj/structure/closet/wardrobe/chaplain_black/PopulateContents()
 	new /obj/item/clothing/under/rank/chaplain(src)
 	new /obj/item/clothing/shoes/sneakers/black(src)
 	new /obj/item/clothing/suit/nun(src)
@@ -142,14 +140,8 @@
 	name = "security wardrobe"
 	icon_door = "red"
 
-/obj/structure/closet/wardrobe/red
-	name = "security wardrobe"
-	icon = 'icons/blue_brig/obj/closetsec.dmi'
-	icon_door = "red"
-
-/obj/structure/closet/wardrobe/red/New()
-	..()
-	contents = list()
+/obj/structure/closet/wardrobe/red/PopulateContents()
+	new /obj/item/clothing/suit/hooded/wintercoat/security(src)
 	new /obj/item/weapon/storage/backpack/security(src)
 	new /obj/item/weapon/storage/backpack/satchel/sec(src)
 	new /obj/item/weapon/storage/backpack/dufflebag/sec(src)
@@ -175,9 +167,7 @@
 	name = "cargo wardrobe"
 	icon_door = "orange"
 
-/obj/structure/closet/wardrobe/cargotech/New()
-	..()
-	contents = list()
+/obj/structure/closet/wardrobe/cargotech/PopulateContents()
 	new /obj/item/clothing/suit/hooded/wintercoat/cargo(src)
 	for(var/i in 1 to 3)
 		new /obj/item/clothing/under/rank/cargotech(src)
@@ -193,9 +183,7 @@
 	name = "atmospherics wardrobe"
 	icon_door = "atmos_wardrobe"
 
-/obj/structure/closet/wardrobe/atmospherics_yellow/New()
-	..()
-	contents = list()
+/obj/structure/closet/wardrobe/atmospherics_yellow/PopulateContents()
 	new /obj/item/weapon/storage/backpack/dufflebag/engineering(src)
 	new /obj/item/weapon/storage/backpack/satchel/eng(src)
 	new /obj/item/weapon/storage/backpack/industrial(src)
@@ -211,11 +199,7 @@
 	name = "engineering wardrobe"
 	icon_door = "yellow"
 
-/obj/structure/closet/wardrobe/engineering_yellow/New()
-	..()
-	contents = list()
-	new /obj/item/clothing/suit/engineerjacket(src)
-	new /obj/item/clothing/suit/engineerjacket(src)
+/obj/structure/closet/wardrobe/engineering_yellow/PopulateContents()
 	new /obj/item/weapon/storage/backpack/dufflebag/engineering(src)
 	new /obj/item/weapon/storage/backpack/industrial(src)
 	new /obj/item/weapon/storage/backpack/satchel/eng(src)
@@ -233,9 +217,7 @@
 /obj/structure/closet/wardrobe/white/medical
 	name = "medical doctor's wardrobe"
 
-/obj/structure/closet/wardrobe/white/medical/New()
-	..()
-	contents = list()
+/obj/structure/closet/wardrobe/white/medical/PopulateContents()
 	new /obj/item/weapon/storage/backpack/dufflebag/med(src)
 	new /obj/item/weapon/storage/backpack/medic(src)
 	new /obj/item/weapon/storage/backpack/satchel/med(src)
@@ -266,9 +248,7 @@
 	name = "robotics wardrobe"
 	icon_door = "black"
 
-/obj/structure/closet/wardrobe/robotics_black/New()
-	..()
-	contents = list()
+/obj/structure/closet/wardrobe/robotics_black/PopulateContents()
 	new /obj/item/clothing/glasses/hud/diagnostic(src)
 	new /obj/item/clothing/glasses/hud/diagnostic(src)
 	new /obj/item/clothing/under/rank/roboticist(src)
@@ -298,11 +278,7 @@
 	name = "chemistry wardrobe"
 	icon_door = "white"
 
-/obj/structure/closet/wardrobe/chemistry_white/New()
-	..()
-	contents = list()
-	new /obj/item/clothing/under/rank/chemist/newchem(src)
-	new /obj/item/clothing/under/rank/chemist/newchem(src)
+/obj/structure/closet/wardrobe/chemistry_white/PopulateContents()
 	new /obj/item/clothing/under/rank/chemist(src)
 	new /obj/item/clothing/under/rank/chemist(src)
 	new /obj/item/clothing/shoes/sneakers/white(src)
@@ -322,11 +298,7 @@
 	name = "genetics wardrobe"
 	icon_door = "white"
 
-/obj/structure/closet/wardrobe/genetics_white/New()
-	..()
-	contents = list()
-	new /obj/item/clothing/under/rank/geneticist/newgen(src)
-	new /obj/item/clothing/under/rank/geneticist/newgen(src)
+/obj/structure/closet/wardrobe/genetics_white/PopulateContents()
 	new /obj/item/clothing/under/rank/geneticist(src)
 	new /obj/item/clothing/under/rank/geneticist(src)
 	new /obj/item/clothing/shoes/sneakers/white(src)
@@ -344,11 +316,7 @@
 	name = "virology wardrobe"
 	icon_door = "white"
 
-/obj/structure/closet/wardrobe/virology_white/New()
-	..()
-	contents = list()
-	new /obj/item/clothing/under/rank/virologist/newvir(src)
-	new /obj/item/clothing/under/rank/virologist/newvir(src)
+/obj/structure/closet/wardrobe/virology_white/PopulateContents()
 	new /obj/item/clothing/under/rank/virologist(src)
 	new /obj/item/clothing/under/rank/virologist(src)
 	new /obj/item/clothing/shoes/sneakers/white(src)
@@ -367,9 +335,7 @@
 	name = "science wardrobe"
 	icon_door = "white"
 
-/obj/structure/closet/wardrobe/science_white/New()
-	..()
-	contents = list()
+/obj/structure/closet/wardrobe/science_white/PopulateContents()
 	new /obj/item/weapon/storage/backpack/science(src)
 	new /obj/item/weapon/storage/backpack/science(src)
 	new /obj/item/weapon/storage/backpack/satchel/tox(src)
@@ -393,9 +359,7 @@
 	name = "botanist wardrobe"
 	icon_door = "green"
 
-/obj/structure/closet/wardrobe/botanist/New()
-	..()
-	contents = list()
+/obj/structure/closet/wardrobe/botanist/PopulateContents()
 	new /obj/item/weapon/storage/backpack/botany(src)
 	new /obj/item/weapon/storage/backpack/botany(src)
 	new /obj/item/weapon/storage/backpack/satchel/hyd(src)

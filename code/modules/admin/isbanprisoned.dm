@@ -4,9 +4,9 @@
 
 	var/ckeytext = ckey(key)
 
-	if(!dbcon.Connect())
+	if(!SSdbcore.Connect())
 		log_world("Ban database connection failure. Key [ckeytext] not checked")
-		diary << "Ban database connection failure. Key [ckeytext] not checked"
+		GLOB.world_game_log << "Ban database connection failure. Key [ckeytext] not checked"
 		return
 
 
@@ -18,7 +18,7 @@
 	if(computer_id)
 		cidquery = " OR computerid = '[computer_id]' "
 
-	var/DBQuery/query_ban_check = dbcon.NewQuery("SELECT ckey, a_ckey, reason, expiration_time, duration, bantime FROM [format_table_name("ban")] WHERE (ckey = '[ckeytext]' [ipquery] [cidquery]) AND (bantype = 'SOFT_PERMABAN'  OR (bantype = 'SOFT_TEMPBAN' AND expiration_time > Now())) AND isnull(unbanned)")
+	var/datum/DBQuery/query_ban_check = SSdbcore.NewQuery("SELECT ckey, a_ckey, reason, expiration_time, duration, bantime FROM [format_table_name("ban")] WHERE (ckey = '[ckeytext]' [ipquery] [cidquery]) AND (bantype = 'SOFT_PERMABAN'  OR (bantype = 'SOFT_TEMPBAN' AND expiration_time > Now())) AND isnull(unbanned)")
 
 	if(!query_ban_check.Execute())
 		return
@@ -64,7 +64,7 @@
 /mob/dead/new_player/proc/Spawn_Prisoner()
 	var/mob/living/carbon/human/character = create_character(TRUE)	//creates the human and transfers vars and mind
 
-	character.loc = pick(ban_prison)
+	character.loc = pick(GLOB.ban_prison)
 
 	setup_and_greet_prisoner(character)
 	character.equipOutfit(/datum/outfit/prisoner)
@@ -76,7 +76,7 @@
 	adminmutetimerid = addtimer(src, CALLBACK(.proc/giverequestadminhelpverb), 3000, TIMER_UNIQUE) //5 minute cooldown of request admin helps
 	src.verbs -= /client/verb/request_unmute_adminhelp
 	message_admins("[key_name(src, 1)] просит снять мут. „тобы снять мут, нажмите <A href='?_src_=holder;unmuteadminhelprequest=[src.mob.ckey];'>сюда</a>")
-	for(var/client/X in admins)
+	for(var/client/X in GLOB.admins)
 		if(X.prefs.toggles & SOUND_ADMINHELP)
 			X << 'sound/effects/adminhelp.ogg'
 	src << "¬ы отправили просьбу о размуте админам"

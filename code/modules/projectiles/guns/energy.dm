@@ -11,6 +11,7 @@
 	var/select = 1 //The state of the select fire switch. Determines from the ammo_type list what kind of shot is fired next.
 	var/cell_removing = 1
 	var/can_charge = 1 //Can it be charged in a recharger?
+	var/automatic_charge_overlays = TRUE	//Do we handle overlays with base update_icon()?
 	var/charge_sections = 4
 	ammo_x_offset = 2
 	var/shaded_charge = 0 //if this gun uses a stateful charge bar for more detail
@@ -26,8 +27,8 @@
 	update_icon()
 
 
-/obj/item/weapon/gun/energy/New()
-	..()
+/obj/item/weapon/gun/energy/Initialize()
+	. = ..()
 	if(cell_type)
 		power_supply = new cell_type(src)
 	else
@@ -122,8 +123,9 @@
 /obj/item/weapon/gun/energy/update_icon()
 	if(!power_supply)
 		overlays += "[icon_state]_empty"
+	..()
+	if(!automatic_charge_overlays)
 		return
-	cut_overlays()
 	var/ratio = Ceiling((power_supply.charge / power_supply.maxcharge) * charge_sections)
 	var/obj/item/ammo_casing/energy/shot = ammo_type[select]
 	var/iconState = "[icon_state]_charge"
@@ -139,15 +141,12 @@
 		add_overlay("[icon_state]_empty")
 	else
 		if(!shaded_charge)
+			var/mutable_appearance/charge_overlay = mutable_appearance(icon, iconState)
 			for(var/i = ratio, i >= 1, i--)
-				add_overlay(image(icon = icon, icon_state = iconState, pixel_x = ammo_x_offset * (i -1)))
+				charge_overlay.pixel_x = ammo_x_offset * (i - 1)
+				add_overlay(charge_overlay)
 		else
-			add_overlay(image(icon = icon, icon_state = "[icon_state]_charge[ratio]"))
-	if(gun_light && can_flashlight)
-		var/iconF = "flight"
-		if(gun_light.on)
-			iconF = "flight_on"
-		add_overlay(image(icon = icon, icon_state = iconF, pixel_x = flight_x_offset, pixel_y = flight_y_offset))
+			add_overlay("[icon_state]_charge[ratio]")
 	if(itemState)
 		itemState += "[ratio]"
 		item_state = itemState

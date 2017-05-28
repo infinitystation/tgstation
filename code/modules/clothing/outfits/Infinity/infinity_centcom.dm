@@ -59,7 +59,7 @@
 	var/obj/item/weapon/card/id/W = H.wear_id
 	W.icon_state = "centcom"
 	W.access = get_centcom_access("Centcom Security Private")
-	W.access += access_weapons
+	W.access += GLOB.access_weapons
 	W.assignment = "Centcom Security Private"
 	W.registered_name = H.real_name
 	W.update_label()
@@ -138,7 +138,7 @@
 	var/obj/item/weapon/card/id/W = H.wear_id
 	W.icon_state = "centcom"
 	W.access = get_centcom_access("Centcom Security Sergeant")
-	W.access += access_weapons
+	W.access += GLOB.access_weapons
 	W.assignment = "Centcom Security Sergeant"
 	W.registered_name = H.real_name
 	W.update_label()

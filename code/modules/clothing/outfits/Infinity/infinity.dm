@@ -72,7 +72,7 @@
 
 	var/obj/item/weapon/card/id/W = H.wear_id
 	W.icon_state = "centcom"
-	W.access += list(access_maint_tunnels, access_syndicate)
+	W.access += list(GLOB.access_maint_tunnels, GLOB.access_syndicate)
 	W.assignment = "Trooper"
 	W.registered_name = H.real_name
 	W.update_label()

@@ -19,7 +19,7 @@ var/datum/server_build/currentbuild
 	src.name = name
 
 /datum/configuration/proc/loadbuildlist(filename)
-	var/list/Lines = file2list(filename)
+	var/list/Lines = world.file2list(filename)
 
 	var/datum/server_build/current_build = null
 	for(var/t in Lines)
@@ -63,12 +63,12 @@ var/datum/server_build/currentbuild
 				config.buildlist[current_build.name] = current_build
 				currentbuild = null
 			else
-				diary << "Unknown command in builds config: '[command]'"
+				GLOB.world_game_log << "Unknown command in builds config: '[command]'"
 
 /proc/loadbuildname()
 	shell("sh ../dir.sh > ext.txt")
 	var/ext
-	var/list/Lines = file2list("ext.txt")
+	var/list/Lines = world.file2list("ext.txt")
 	if(Lines.len)
 		if(Lines[1])
 			ext = Lines[1]

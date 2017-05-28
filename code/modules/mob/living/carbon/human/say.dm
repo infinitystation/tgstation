@@ -1,21 +1,9 @@
-/mob/living/carbon/human/say_quote(input, spans)
-	if(!input)
-		return "говорит, \"...\""	//not the best solution, but it will stop a large number of runtimes. The cause is somewhere in the Tcomms code
+/mob/living/carbon/human/say_mod(input, message_mode)
 	verb_say = dna.species.say_mod
-	if(get_custom_quote(input))
-		return ..(input, spans)
-	if(src.slurring)
-		input = attach_spans(input, spans)
-		return "невн&#255;тно говорит, \"[input]\""
-	return ..()
-
-/mob/living/carbon/human/say(message, bubble_type)
-	. = ..(message)
-	if(.)
-		if(gender == FEMALE)
-			playsound(loc, 'sound/voice/clearing-throat-f.ogg', 15, 1, 1)
-		else
-			playsound(loc, 'sound/voice/clearing-throat-1.ogg', 25, 1, 1)
+	if(slurring)
+		return "невн&#255;тно говорит"
+	else
+		. = ..()
 
 /mob/living/carbon/human/treat_message(message)
 	message = dna.species.handle_speech(message,src)
@@ -100,7 +88,7 @@
 				ears.talk_into(src, message, message_mode, spans, language)
 			return ITALICS | REDUCE_RANGE
 
-	if(message_mode in radiochannels)
+	if(message_mode in GLOB.radiochannels)
 		if(ears)
 			ears.talk_into(src, message, message_mode, spans, language)
 			return ITALICS | REDUCE_RANGE

@@ -13,8 +13,6 @@
 
 	flags = CAN_BE_DIRTY
 
-	var/list/proximity_checkers
-
 	var/image/obscured	//camerachunks
 
 	var/list/image/blueprint_data //for the station blueprints, images of objects eg: pipes
@@ -58,6 +56,7 @@
 
 	if (opacity)
 		has_opaque_atom = TRUE
+	return INITIALIZE_HINT_NORMAL
 
 /turf/proc/Initalize_Atmos(times_fired)
 	CalculateAdjacentTurfs()
@@ -93,39 +92,39 @@
 				LC.attackby(C,user)
 				return
 		coil.place_turf(src, user)
-		return 1
+		return TRUE
 
-	return 0
+	return FALSE
 
 /turf/CanPass(atom/movable/mover, turf/target, height=1.5)
-	if(!target) return 0
+	if(!target) return FALSE
 
 	if(istype(mover)) // turf/Enter(...) will perform more advanced checks
 		return !density
 
 	else // Now, doing more detailed checks for air movement and air group formation
 		if(target.blocks_air||blocks_air)
-			return 0
+			return FALSE
 
 		for(var/obj/obstacle in src)
 			if(!obstacle.CanPass(mover, target, height))
-				return 0
+				return FALSE
 		for(var/obj/obstacle in target)
 			if(!obstacle.CanPass(mover, src, height))
-				return 0
+				return FALSE
 
-		return 1
+		return TRUE
 
 /turf/Enter(atom/movable/mover as mob|obj, atom/forget as mob|obj|turf|area)
 	if (!mover)
-		return 1
+		return TRUE
 	// First, make sure it can leave its square
 	if(isturf(mover.loc))
 		// Nothing but border objects stop you from leaving a tile, only one loop is needed
 		for(var/obj/obstacle in mover.loc)
 			if(!obstacle.CheckExit(mover, src) && obstacle != mover && obstacle != forget)
 				mover.Bump(obstacle, 1)
-				return 0
+				return FALSE
 
 	var/list/large_dense = list()
 	//Next, check objects to block entry that are on the border
@@ -133,14 +132,14 @@
 		if(border_obstacle.flags & ON_BORDER)
 			if(!border_obstacle.CanPass(mover, mover.loc, 1) && (forget != border_obstacle))
 				mover.Bump(border_obstacle, 1)
-				return 0
+				return FALSE
 		else
 			large_dense += border_obstacle
 
 	//Then, check the turf itself
 	if (!src.CanPass(mover, src))
 		mover.Bump(src, 1)
-		return 0
+		return FALSE
 
 	//Finally, check objects/mobs to block entry that are not on the border
 	var/atom/movable/tompost_bump
@@ -152,14 +151,11 @@
 				top_layer = obstacle.layer
 	if(tompost_bump)
 		mover.Bump(tompost_bump,1)
-		return 0
-	return 1 //Nothing found to block so return success!
+		return FALSE
+
+	return TRUE //Nothing found to block so return success!
 
 /turf/Entered(atom/movable/AM)
-	for(var/A in proximity_checkers)
-		var/atom/B = A
-		B.HasProximity(AM)
-
 	if(explosion_level && AM.ex_check(explosion_id))
 		AM.ex_act(explosion_level)
 
@@ -190,7 +186,7 @@
 			O.make_unfrozen()
 
 /turf/proc/is_plasteel_floor()
-	return 0
+	return FALSE
 
 /turf/proc/levelupdate()
 	for(var/obj/O in src)
@@ -217,7 +213,7 @@
 /turf/proc/ChangeTurf(path, defer_change = FALSE, ignore_air = FALSE)
 	if(!path)
 		return
-	if(!use_preloader && path == type) // Don't no-op if the map loader requires it to be reconstructed
+	if(!GLOB.use_preloader && path == type) // Don't no-op if the map loader requires it to be reconstructed
 		return src
 
 	var/old_baseturf = baseturf
@@ -308,7 +304,7 @@
 	if(src_object.contents.len)
 		to_chat(usr, "<span class='notice'>You start dumping out the contents...</span>")
 		if(!do_after(usr,20,target=src_object))
-			return 0
+			return FALSE
 
 	var/list/things = src_object.contents.Copy()
 	var/datum/progressbar/progress = new(user, things.len, src)
@@ -316,7 +312,7 @@
 		sleep(1)
 	qdel(progress)
 
-	return 1
+	return TRUE
 
 //////////////////////////////
 //Distance procs
@@ -330,7 +326,7 @@
 //  possible. It results in more efficient (CPU-wise) pathing
 //  for bots and anything else that only moves in cardinal dirs.
 /turf/proc/Distance_cardinal(turf/T)
-	if(!src || !T) return 0
+	if(!src || !T) return FALSE
 	return abs(x - T.x) + abs(y - T.y)
 
 ////////////////////////////////////////////////////
@@ -346,7 +342,7 @@
 	return(2)
 
 /turf/proc/can_have_cabling()
-	return 1
+	return TRUE
 
 /turf/proc/update_icon()
 	return
@@ -356,7 +352,7 @@
 
 /turf/proc/visibilityChanged()
 	if(SSticker)
-		cameranet.updateVisibility(src)
+		GLOB.cameranet.updateVisibility(src)
 
 /turf/proc/burn_tile()
 
@@ -383,6 +379,15 @@
 			A.ex_act(severity, target)
 			CHECK_TICK
 
+/turf/narsie_act(force, ignore_mobs, probability = 20)
+	. = (prob(probability) || force)
+	for(var/I in src)
+		var/atom/A = I
+		if(ignore_mobs && ismob(A))
+			continue
+		if(ismob(A) || .)
+			A.narsie_act()
+
 /turf/ratvar_act(force, ignore_mobs, probability = 40)
 	. = (prob(probability) || force)
 	for(var/I in src)
@@ -391,6 +396,12 @@
 			continue
 		if(ismob(A) || .)
 			A.ratvar_act()
+
+/turf/proc/get_smooth_underlay_icon(mutable_appearance/underlay_appearance, turf/asking_turf, adjacency_dir)
+	underlay_appearance.icon = icon
+	underlay_appearance.icon_state = icon_state
+	underlay_appearance.dir = adjacency_dir
+	return TRUE
 
 /turf/proc/add_blueprints(atom/movable/AM)
 	var/image/I = new
@@ -406,7 +417,7 @@
 
 
 /turf/proc/add_blueprints_preround(atom/movable/AM)
-	if(!SSticker || SSticker.current_state != GAME_STATE_PLAYING)
+	if(!SSticker.HasRoundStarted())
 		add_blueprints(AM)
 
 /turf/proc/empty(turf_type=/turf/open/space)
@@ -463,6 +474,8 @@
 			O = new()
 			O.underlays.Add(T)
 		T.ChangeTurf(type)
+		for(var/group in decals)
+			T.add_decal(decals[group],group)
 		if(underlays.len)
 			T.underlays = O.underlays
 	if(T.icon_state != icon_state)

@@ -17,7 +17,7 @@
 	skinned_type = /obj/item/stack/sheet/animalhide/generic
 
 /datum/species/tajaran/qualifies_for_rank(rank, list/features)
-	if(rank in command_positions)
+	if(rank in GLOB.command_positions)
 		return 0
 	return 1
 

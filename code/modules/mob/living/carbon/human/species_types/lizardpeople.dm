@@ -6,7 +6,7 @@
 	default_color = "00FF00"
 	species_traits = list(MUTCOLORS,EYECOLOR,LIPS)
 	mutant_bodyparts = list("tail_lizard", "snout", "spines", "horns", "frills", "body_markings", "legs")
-	mutant_organs = list(/obj/item/organ/tongue/lizard)
+	mutanttongue = /obj/item/organ/tongue/lizard
 	coldmod = 1.5
 	heatmod = 0.67
 	default_features = list("mcolor" = "0F0", "tail" = "Smooth", "snout" = "Round", "horns" = "None", "frills" = "None", "spines" = "None", "body_markings" = "None", "legs" = "Normal Legs")
@@ -16,6 +16,9 @@
 	meat = /obj/item/weapon/reagent_containers/food/snacks/meat/slab/human/mutant/lizard
 	skinned_type = /obj/item/stack/sheet/animalhide/lizard
 	exotic_bloodtype = "L"
+
+/datum/species/lizard/after_equip_job(datum/job/J, mob/living/carbon/human/H)
+	H.grant_language(/datum/language/draconic)
 
 /datum/species/lizard/random_name(gender,unique,lastname)
 	if(unique)
@@ -46,12 +49,12 @@
 	species_traits = list(MUTCOLORS,EYECOLOR,LIPS,NOBREATH,NOGUNS,DIGITIGRADE)
 
 /datum/species/lizard/ashwalker/on_species_gain(mob/living/carbon/human/C, datum/species/old_species)
-	C.initial_languages = list(/datum/language/ashwalker)
-	C.only_speaks_language = /datum/language/ashwalker
+	//C.selected_default_language = list(/datum/language/ashwalker)
+	C.selected_default_language = /datum/language/ashwalker
 	C.handcrafting.categories = list(CAT_PRIMAL)
 
 /datum/species/lizard/ashwalker/on_species_loss(mob/living/carbon/human/C)
-	C.initial_languages = list(/datum/language/common)
+	C.selected_default_language = list(/datum/language/common)
 	C.handcrafting.categories = list(CAT_WEAPON,
 				CAT_AMMO,
 				CAT_ROBOT,

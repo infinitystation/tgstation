@@ -1,12 +1,10 @@
-var/const/CALL_SHUTTLE_REASON_LENGTH = 12
-
 // The communications computer
 /obj/machinery/computer/communications
 	name = "communications console"
 	desc = "This can be used for various important functions. Still under developement."
 	icon_screen = "comm"
 	icon_keyboard = "tech_key"
-	req_access = list(access_heads)
+	req_access = list(GLOB.access_heads)
 	circuit = /obj/item/weapon/circuitboard/computer/communications
 	var/authenticated = 0
 	var/auth_id = "Unknown" //Who is currently logged in?
@@ -46,7 +44,7 @@ var/const/CALL_SHUTTLE_REASON_LENGTH = 12
 	return TRUE
 
 /obj/machinery/computer/communications/New()
-	shuttle_caller_list += src
+	GLOB.shuttle_caller_list += src
 	..()
 
 /obj/machinery/computer/communications/process()
@@ -105,24 +103,24 @@ var/const/CALL_SHUTTLE_REASON_LENGTH = 12
 				var/obj/item/device/pda/pda = I
 				I = pda.id
 			if (I && istype(I))
-				var/old_level = security_level
+				var/old_level = GLOB.security_level
 				if(!tmp_alertlevel) tmp_alertlevel = SEC_LEVEL_GREEN
 				if(tmp_alertlevel < SEC_LEVEL_GREEN) tmp_alertlevel = SEC_LEVEL_GREEN
 				if(tmp_alertlevel > SEC_LEVEL_RED) tmp_alertlevel = SEC_LEVEL_RED //Cannot engage delta with this
 				set_security_level(tmp_alertlevel)
-				if(security_level != old_level)
+				if(GLOB.security_level != old_level)
 					to_chat(usr, "<span class='notice'>Authorization confirmed. Modifying security level.</span>")
 					playsound(src, 'sound/machines/terminal_prompt_confirm.ogg', 50, 0)
 					//Only notify the admins if an actual change happened
 					log_game("[key_name(usr)] has changed the security level to [get_security_level()].")
 					message_admins("[key_name_admin(usr)] has changed the security level to [get_security_level()].")
-					switch(security_level)
+					switch(GLOB.security_level)
 						if(SEC_LEVEL_GREEN)
-							feedback_inc("alert_comms_green",1)
+							SSblackbox.inc("alert_comms_green",1)
 						if(SEC_LEVEL_BLUE)
-							feedback_inc("alert_comms_blue",1)
+							SSblackbox.inc("alert_comms_blue",1)
 						if(SEC_LEVEL_RED)
-							feedback_inc("alert_comms_red",1)
+							SSblackbox.inc("alert_comms_red",1)
 				tmp_alertlevel = 0
 				state = STATE_DEFAULT
 			else
@@ -167,7 +165,7 @@ var/const/CALL_SHUTTLE_REASON_LENGTH = 12
 						to_chat(usr, "You have not met the requirements for purchasing this shuttle.")
 					else
 						if(SSshuttle.points >= S.credit_cost)
-							var/obj/machinery/shuttle_manipulator/M  = locate() in machines
+							var/obj/machinery/shuttle_manipulator/M = locate() in GLOB.machines
 							if(M)
 								SSshuttle.shuttle_purchased = TRUE
 								M.unload_preview()
@@ -177,7 +175,7 @@ var/const/CALL_SHUTTLE_REASON_LENGTH = 12
 								SSshuttle.points -= S.credit_cost
 								minor_announce("[usr.name] has purchased [S.name] for [S.credit_cost] credits." , "Shuttle Purchase")
 								message_admins("[key_name_admin(usr)] purchased [S.name].")
-								feedback_add_details("shuttle_purchase", S.name)
+								SSblackbox.add_details("shuttle_purchase", S.name)
 							else
 								to_chat(usr, "Something went wrong! The shuttle exchange system seems to be down.")
 						else
@@ -377,22 +375,22 @@ var/const/CALL_SHUTTLE_REASON_LENGTH = 12
 		if("ai-securitylevel")
 			src.tmp_alertlevel = text2num( href_list["newalertlevel"] )
 			if(!tmp_alertlevel) tmp_alertlevel = 0
-			var/old_level = security_level
+			var/old_level = GLOB.security_level
 			if(!tmp_alertlevel) tmp_alertlevel = SEC_LEVEL_GREEN
 			if(tmp_alertlevel < SEC_LEVEL_GREEN) tmp_alertlevel = SEC_LEVEL_GREEN
 			if(tmp_alertlevel > SEC_LEVEL_RED) tmp_alertlevel = SEC_LEVEL_RED //Cannot engage delta with this
 			set_security_level(tmp_alertlevel)
-			if(security_level != old_level)
+			if(GLOB.security_level != old_level)
 				//Only notify the admins if an actual change happened
 				log_game("[key_name(usr)] has changed the security level to [get_security_level()].")
 				message_admins("[key_name_admin(usr)] has changed the security level to [get_security_level()].")
-				switch(security_level)
+				switch(GLOB.security_level)
 					if(SEC_LEVEL_GREEN)
-						feedback_inc("alert_comms_green",1)
+						SSblackbox.inc("alert_comms_green",1)
 					if(SEC_LEVEL_BLUE)
-						feedback_inc("alert_comms_blue",1)
+						SSblackbox.inc("alert_comms_blue",1)
 					if(SEC_LEVEL_RED)
-						feedback_inc("alert_comms_red",1)
+						SSblackbox.inc("alert_comms_red",1)
 			tmp_alertlevel = 0
 			src.aistate = STATE_DEFAULT
 		if("ai-changeseclevel")
@@ -558,7 +556,7 @@ var/const/CALL_SHUTTLE_REASON_LENGTH = 12
 			playsound(src, 'sound/machines/terminal_prompt_confirm.ogg', 50, 0)
 		if(STATE_ALERT_LEVEL)
 			dat += "Current alert level: [get_security_level()]<BR>"
-			if(security_level == SEC_LEVEL_DELTA)
+			if(GLOB.security_level == SEC_LEVEL_DELTA)
 				dat += "<font color='red'><b>The self-destruct mechanism is active. Find a way to deactivate the mechanism to lower the alert level or evacuate.</b></font>"
 			else
 				dat += "<A HREF='?src=\ref[src];operation=securitylevel;newalertlevel=[SEC_LEVEL_RED]'>Red</A><BR>"
@@ -570,7 +568,7 @@ var/const/CALL_SHUTTLE_REASON_LENGTH = 12
 			dat += "<A HREF='?src=\ref[src];operation=swipeidseclevel'>Swipe ID</A> to confirm change.<BR>"
 		if(STATE_TOGGLE_EMERGENCY)
 			playsound(src, 'sound/machines/terminal_prompt.ogg', 50, 0)
-			if(emergency_access == 1)
+			if(GLOB.emergency_access == 1)
 				dat += "<b>Emergency Maintenance Access is currently <font color='red'>ENABLED</font></b>"
 				dat += "<BR>Restore maintenance access restrictions? <BR>\[ <A HREF='?src=\ref[src];operation=disableemergency'>OK</A> | <A HREF='?src=\ref[src];operation=viewmessage'>Cancel</A> \]"
 			else
@@ -698,7 +696,7 @@ var/const/CALL_SHUTTLE_REASON_LENGTH = 12
 
 		if(STATE_ALERT_LEVEL)
 			dat += "Current alert level: [get_security_level()]<BR>"
-			if(security_level == SEC_LEVEL_DELTA)
+			if(GLOB.security_level == SEC_LEVEL_DELTA)
 				dat += "<font color='red'><b>The self-destruct mechanism is active. Find a way to deactivate the mechanism to lower the alert level or evacuate.</b></font>"
 			else
 				dat += "<A HREF='?src=\ref[src];operation=ai-securitylevel;newalertlevel=[SEC_LEVEL_RED]'>Red</A><BR>"
@@ -706,7 +704,7 @@ var/const/CALL_SHUTTLE_REASON_LENGTH = 12
 				dat += "<A HREF='?src=\ref[src];operation=ai-securitylevel;newalertlevel=[SEC_LEVEL_GREEN]'>Green</A>"
 
 		if(STATE_TOGGLE_EMERGENCY)
-			if(emergency_access == 1)
+			if(GLOB.emergency_access == 1)
 				dat += "<b>Emergency Maintenance Access is currently <font color='red'>ENABLED</font></b>"
 				dat += "<BR>Restore maintenance access restrictions? <BR>\[ <A HREF='?src=\ref[src];operation=ai-disableemergency'>OK</A> | <A HREF='?src=\ref[src];operation=ai-viewmessage'>Cancel</A> \]"
 			else
@@ -740,7 +738,7 @@ var/const/CALL_SHUTTLE_REASON_LENGTH = 12
 	R.title = paper.name
 	R.time = world.time
 	SSticker.reports += R
-	reports_log << "\[[time_stamp()]]: Reported to Centcom by [key_name(usr)]<BR>[R.info]<BR>"
+	GLOB.reports_log << "\[[time_stamp()]]: Reported to Centcom by [key_name(usr)]<BR>[R.info]<BR>"
 	send_report(R, usr)
 	usr << "Report transmitted."
 	CM.lastTimeUsed = world.time
@@ -767,7 +765,7 @@ var/const/CALL_SHUTTLE_REASON_LENGTH = 12
 	frequency.post_signal(src, status_signal)
 
 /obj/machinery/computer/communications/Destroy()
-	shuttle_caller_list -= src
+	GLOB.shuttle_caller_list -= src
 	SSshuttle.autoEvac()
 	return ..()
 

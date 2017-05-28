@@ -4,10 +4,9 @@
 	icon_state = "stylengi-meson"
 	icon = 'icons/obj/clothing/infinity_work.dmi'
 	worn_icon = 'icons/mob/infinity_work.dmi'
-	mode = 1
 
 /obj/item/clothing/glasses/meson/engine/style/update_icon()
-	icon_state = mode ? "stylengi-meson" : "stylengi-tray"
+	icon_state = mesons_on ? "stylengi-meson" : "stylengi-tray"
 	if(istype(loc,/mob/living/carbon/human/))
 		var/mob/living/carbon/human/user = loc
 		if(user.glasses == src)
@@ -17,7 +16,7 @@
 	name = "Optical T-Ray Scanner"
 	desc = "Used by engineering staff to see underfloor objects such as cables and pipes."
 	icon_state = "stylengi-tray"
-	mode = 0
+	mesons_on = FALSE
 
 /obj/item/clothing/glasses/godtier //now you live right here
 	name = "God Tier Eye's"

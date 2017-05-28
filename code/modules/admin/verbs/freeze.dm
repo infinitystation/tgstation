@@ -6,7 +6,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 var/global/list/frozen_mob_list = list()
-/client/proc/freeze(var/mob/living/M as mob in mob_list)
+/client/proc/freeze(var/mob/living/M as mob in GLOB.mob_list)
 	set category = "Special Verbs"
 	set name = "Freeze"
 	if(!holder)

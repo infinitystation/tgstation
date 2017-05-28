@@ -1,4 +1,4 @@
-<ui-display>
+﻿<ui-display>
   <ui-section label='Питание'>
     <ui-button icon='{{data.on ? "power-off" : "close"}}' style='{{data.on ? "selected" : null}}'
       action='power'>{{data.on ? "Вкл" : "Выкл"}}</ui-button>
@@ -6,7 +6,7 @@
   {{#if data.max_rate}}
     <ui-section label='Поток'>
       <ui-button icon='pencil' action='rate' params='{"rate": "input"}'>Установить</ui-button>
-      <ui-button icon='plus' state='{{data.rate == data.max_rate ? "disabled" : null}}' action='transfer' params='{"rate": "max"}'>Макс</ui-button>
+      <ui-button icon='plus' state='{{data.rate == data.max_rate ? "disabled" : null}}' action='rate' params='{"rate": "max"}'>Макс</ui-button>
       <span>{{Math.round(adata.rate)}} Л/с</span>
     </ui-section>
   {{else}}

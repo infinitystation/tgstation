@@ -14,7 +14,7 @@
 						"Обнаруж:%Ј MCayj^j<.3-BZZZZZZT", \
 						"#4nd%;f4y6,>Ј%-BZZZZZZZT")
 
-	for(var/mob/living/silicon/ai/A in ai_list)	//AIs are always aware of communication blackouts.
+	for(var/mob/living/silicon/ai/A in GLOB.ai_list)	//AIs are always aware of communication blackouts.
 		to_chat(A, "<br><span class='warning'><b>[alert]</b></span><br>")
 
 	if(prob(30))	//most of the time, we don't want an announcement, so as to allow AIs to fake blackouts.
@@ -22,5 +22,5 @@
 
 
 /datum/round_event/communications_blackout/start()
-	for(var/obj/machinery/telecomms/T in telecomms_list)
+	for(var/obj/machinery/telecomms/T in GLOB.telecomms_list)
 		T.emp_act(1)

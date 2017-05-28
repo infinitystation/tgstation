@@ -1,7 +1,7 @@
 /proc/PDAs_trigger(sound, message, zlevel=1, no_zlevel=0)
 	if(message)
 		message = sanitize_a0(message)
-	for(var/i in PDAs)
+	for(var/i in GLOB.PDAs)
 		var/obj/item/device/pda/P = i
 		if(!no_zlevel)
 			var/turf/T = get_turf(P)

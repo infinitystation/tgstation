@@ -162,7 +162,7 @@
 /obj/item/borgi_suit/proc/check_completion()
 	if(src.borgi_legs_w && src.borgi_legs_s)
 		if(src.borgi_head && src.borgi_chest)
-			feedback_inc("borgi_frames_built",1)
+			SSblackbox.inc("borgi_frames_built",1)
 			return 1
 	return 0
 

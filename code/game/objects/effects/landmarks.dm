@@ -8,10 +8,10 @@
 /obj/effect/landmark/New()
 	..()
 	tag = text("landmark*[]", name)
-	landmarks_list += src
+	GLOB.landmarks_list += src
 
 /obj/effect/landmark/Destroy()
-	landmarks_list -= src
+	GLOB.landmarks_list -= src
 	return ..()
 
 /obj/effect/landmark/start
@@ -21,13 +21,13 @@
 	anchored = 1
 
 /obj/effect/landmark/start/New()
-	start_landmarks_list += src
+	GLOB.start_landmarks_list += src
 	..()
 	if(name != "start")
 		tag = "start*[name]"
 
 /obj/effect/landmark/start/Destroy()
-	start_landmarks_list -= src
+	GLOB.start_landmarks_list -= src
 	return ..()
 
 // START LANDMARKS FOLLOW. Don't change the names unless
@@ -94,7 +94,7 @@
 	name = "Head of Personnel"
 
 /obj/effect/landmark/start/librarian
-	name = "Librarian"
+	name = "Curator"
 
 /obj/effect/landmark/start/lawyer
 	name = "Lawyer"
@@ -139,10 +139,10 @@
 
 /obj/effect/landmark/start/depsec/New()
 	..()
-	department_security_spawns += src
+	GLOB.department_security_spawns += src
 
 /obj/effect/landmark/start/depsec/Destroy()
-	department_security_spawns -= src
+	GLOB.department_security_spawns -= src
 	return ..()
 
 /obj/effect/landmark/start/depsec/supply
@@ -163,7 +163,7 @@
 
 /obj/effect/landmark/start/wizard/Initialize(mapload)
 	..()
-	wizardstart += loc
+	GLOB.wizardstart += loc
 	qdel(src)
 
 /obj/effect/landmark/start/new_player
@@ -173,7 +173,7 @@
 // join before SSatom initializes everything.
 /obj/effect/landmark/start/new_player/New(loc)
 	..()
-	newplayer_start += loc
+	GLOB.newplayer_start += loc
 
 /obj/effect/landmark/start/new_player/Initialize(mapload)
 	..()
@@ -186,7 +186,7 @@
 
 /obj/effect/landmark/ban_prison/Initialize(mapload)
 	..()
-	ban_prison += loc
+	GLOB.ban_prison += loc
 	qdel(src)
 
 /obj/effect/landmark/Centcomsec
@@ -194,7 +194,7 @@
 
 /obj/effect/landmark/Centcomsec/Initialize(mapload)
 	..()
-	centcomsecspawn += loc
+	GLOB.centcomsecspawn += loc
 	qdel(src)
 
 /obj/effect/landmark/latejoin
@@ -202,7 +202,7 @@
 
 /obj/effect/landmark/latejoin/Initialize(mapload)
 	..()
-	latejoin += loc
+	GLOB.latejoin += loc
 	qdel(src)
 
 // carp.
@@ -248,7 +248,7 @@
 
 /obj/effect/landmark/xeno_spawn/Initialize(mapload)
 	..()
-	xeno_spawn += loc
+	GLOB.xeno_spawn += loc
 	qdel(src)
 
 // blobs.
@@ -257,7 +257,7 @@
 
 /obj/effect/landmark/blobstart/Initialize(mapload)
 	..()
-	blobstart += loc
+	GLOB.blobstart += loc
 	qdel(src)
 
 /obj/effect/landmark/secequipment
@@ -265,7 +265,7 @@
 
 /obj/effect/landmark/secequipment/Initialize(mapload)
 	..()
-	secequipment += loc
+	GLOB.secequipment += loc
 	qdel(src)
 
 /obj/effect/landmark/prisonwarp
@@ -273,7 +273,7 @@
 
 /obj/effect/landmark/prisonwarp/Initialize(mapload)
 	..()
-	prisonwarp += loc
+	GLOB.prisonwarp += loc
 	qdel(src)
 
 /obj/effect/landmark/ert_spawn
@@ -281,7 +281,7 @@
 
 /obj/effect/landmark/ert_spawn/Initialize(mapload)
 	..()
-	emergencyresponseteamspawn += loc
+	GLOB.emergencyresponseteamspawn += loc
 	qdel(src)
 
 /obj/effect/landmark/holding_facility
@@ -289,7 +289,7 @@
 
 /obj/effect/landmark/holding_facility/Initialize(mapload)
 	..()
-	holdingfacility += loc
+	GLOB.holdingfacility += loc
 	qdel(src)
 
 /obj/effect/landmark/thunderdome/observe
@@ -297,7 +297,7 @@
 
 /obj/effect/landmark/thunderdome/observe/Initialize(mapload)
 	..()
-	tdomeobserve += loc
+	GLOB.tdomeobserve += loc
 	qdel(src)
 
 /obj/effect/landmark/thunderdome/one
@@ -305,7 +305,7 @@
 
 /obj/effect/landmark/thunderdome/one/Initialize(mapload)
 	..()
-	tdome1	+= loc
+	GLOB.tdome1	+= loc
 	qdel(src)
 
 /obj/effect/landmark/thunderdome/two
@@ -313,7 +313,7 @@
 
 /obj/effect/landmark/thunderdome/two/Initialize(mapload)
 	..()
-	tdome2 += loc
+	GLOB.tdome2 += loc
 	qdel(src)
 
 /obj/effect/landmark/thunderdome/admin
@@ -321,7 +321,7 @@
 
 /obj/effect/landmark/thunderdome/admin/Initialize(mapload)
 	..()
-	tdomeadmin += loc
+	GLOB.tdomeadmin += loc
 	qdel(src)
 
 //generic event spawns
@@ -332,22 +332,22 @@
 
 /obj/effect/landmark/event_spawn/New()
 	..()
-	generic_event_spawns += src
+	GLOB.generic_event_spawns += src
 
 /obj/effect/landmark/event_spawn/Destroy()
-	generic_event_spawns -= src
+	GLOB.generic_event_spawns -= src
 	return ..()
 
 /obj/effect/landmark/ruin
 	var/datum/map_template/ruin/ruin_template
 
 /obj/effect/landmark/ruin/New(loc, my_ruin_template)
-	name = "ruin_[ruin_landmarks.len + 1]"
+	name = "ruin_[GLOB.ruin_landmarks.len + 1]"
 	..(loc)
 	ruin_template = my_ruin_template
-	ruin_landmarks |= src
+	GLOB.ruin_landmarks |= src
 
 /obj/effect/landmark/ruin/Destroy()
-	ruin_landmarks -= src
+	GLOB.ruin_landmarks -= src
 	ruin_template = null
 	. = ..()

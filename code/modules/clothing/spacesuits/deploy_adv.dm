@@ -26,7 +26,7 @@
 	worn_icon = 'icons/mob/space_adv.dmi'
 	slowdown = 1
 	armor = list(melee = 10, bullet = 5, laser = 10, energy = 5, bomb = 10, bio = 100, rad = 90, fire = 40, acid = 60)
-	allowed = list(/obj/item/device/flashlight,/obj/item/weapon/tank,/obj/item/weapon/storage/bag/ore,/obj/item/device/t_scanner,/obj/item/weapon/pickaxe, /obj/item/weapon/rcd)
+	allowed = list(/obj/item/device/flashlight,/obj/item/weapon/tank,/obj/item/weapon/storage/bag/ore,/obj/item/device/t_scanner,/obj/item/weapon/pickaxe, /obj/item/weapon/construction/rcd)
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/space_adv
 	resistance_flags = FIRE_PROOF | UNACIDABLE
 
@@ -273,11 +273,11 @@
 // HUD
 /obj/item/clothing/head/helmet/space/hardsuit/space_adv/swat/equipped(mob/living/carbon/human/user, slot)
 	if(slot == slot_head)
-		var/datum/atom_hud/H = huds[hud_type]
+		var/datum/atom_hud/H = GLOB.huds[hud_type]
 		H.add_hud_to(user)
 
 /obj/item/clothing/head/helmet/space/hardsuit/space_adv/swat/dropped(mob/living/carbon/human/user)
-	var/datum/atom_hud/H = huds[hud_type]
+	var/datum/atom_hud/H = GLOB.huds[hud_type]
 	H.remove_hud_from(user)
 //END HUD
 

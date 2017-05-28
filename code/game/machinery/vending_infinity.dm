@@ -132,7 +132,7 @@
 	icon = 'icons/obj/infinity_vend.dmi'
 	icon_state = "sec"
 	icon_deny = "sec-deny"
-	req_access = list(access_security)
+	req_access = list(GLOB.access_security)
 	products = list(/obj/item/clothing/head/soft/sec = 5,
 					/obj/item/clothing/head/beret/sec = 5,
 					/obj/item/clothing/under/rank/security/blue = 5,

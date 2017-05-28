@@ -26,7 +26,7 @@
 	return ..()
 
 /obj/structure/chair/proc/RemoveFromLatejoin()
-	latejoin -= src	//These may be here due to the arrivals shuttle
+	GLOB.latejoin -= src	//These may be here due to the arrivals shuttle
 
 /obj/structure/chair/deconstruct()
 	// If we have materials, and don't have the NOCONSTRUCT flag
@@ -38,10 +38,9 @@
 	return attack_hand(user)
 
 /obj/structure/chair/narsie_act()
-	if(prob(20))
-		var/obj/structure/chair/wood/W = new/obj/structure/chair/wood(get_turf(src))
-		W.setDir(dir)
-		qdel(src)
+	var/obj/structure/chair/wood/W = new/obj/structure/chair/wood(get_turf(src))
+	W.setDir(dir)
+	qdel(src)
 
 /obj/structure/chair/attackby(obj/item/weapon/W, mob/user, params)
 	if(istype(W, /obj/item/weapon/wrench) && !(flags&NODECONSTRUCT))
@@ -146,12 +145,12 @@
 	obj_integrity = 70
 	max_integrity = 70
 	buildstackamount = 2
-	var/image/armrest = null
+	var/mutable_appearance/armrest
 	item_chair = null
 	ghost_rotateble = 1
 
 /obj/structure/chair/comfy/Initialize()
-	armrest = image("[icon]", "[icon_state]_armrest")
+	armrest = mutable_appearance("[icon]", "[icon_state]_armrest")
 	armrest.layer = ABOVE_MOB_LAYER
 	return ..()
 
@@ -261,10 +260,9 @@
 	var/obj/structure/chair/origin_type = /obj/structure/chair
 
 /obj/item/chair/narsie_act()
-	if(prob(20))
-		var/obj/item/chair/wood/W = new/obj/item/chair/wood(get_turf(src))
-		W.setDir(dir)
-		qdel(src)
+	var/obj/item/chair/wood/W = new/obj/item/chair/wood(get_turf(src))
+	W.setDir(dir)
+	qdel(src)
 
 /obj/item/chair/attack_self(mob/user)
 	plant(user)

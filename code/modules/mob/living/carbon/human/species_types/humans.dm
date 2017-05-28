@@ -12,7 +12,7 @@
 /datum/species/human/qualifies_for_rank(rank, list/features)	// TODO@inf-dev проверьте работоспособность и измените в случае чего ~bear1ake@inf-dev
 	if((!features["tail_human"] || features["tail_human"] == "None") && (!features["ears"] || features["ears"] == "None"))
 		return TRUE	//Pure humans are always allowed in all roles.
-	if(rank in security_positions) //This list does not include lawyers.
+	if(rank in GLOB.security_positions) //This list does not include lawyers.
 		return 0
 	if(rank == "Quartermaster") //QM is not contained in command_positions but we still want to bar mutants from it.
 		return 0

@@ -1,38 +1,37 @@
-var/global/datum/getrev/revdata = new()
-
 /datum/getrev
-	var/parentcommit
+	var/originmastercommit
 	var/commit
 	var/list/testmerge = list()
 	var/has_pr_details = FALSE	//example data in a testmerge entry when this is true: https://api.github.com/repositories/3234987/pulls/22586
 	var/date
 
 /datum/getrev/New()
-	var/head_file = return_file_text(".git/logs/HEAD")
 	if(SERVERTOOLS && fexists("..\\prtestjob.lk"))
-		var/list/tmp = file2list("..\\prtestjob.lk")
+		var/list/tmp = world.file2list("..\\prtestjob.lk")
 		for(var/I in tmp)
 			if(I)
 				testmerge |= I
-	var/testlen = max(testmerge.len - 1, 0)
-	var/regex/head_log = new("(\\w{40}) (\\w{40}) .+> (\\d{10}).+(?=(\n.*(\\w{40}).*){[testlen]}\n*\\Z)")
-	head_log.Find(head_file)
-	parentcommit = head_log.group[1]
-	commit = head_log.group[2]
-	world.log << "commit - [commit]"
-	date = unix2date(text2num(head_log.group[3]))
-	//commit = head_log.group[4]
+
 	log_world("Running /tg/ revision:")
-	log_world("[date]")
+	var/list/logs = world.file2list(".git/logs/HEAD")
+	if(logs)
+		logs = splittext(logs[logs.len - 1], " ")
+		date = unix2date(text2num(logs[5]))
+		commit = logs[2]
+		log_world("[date]")
+	logs = world.file2list(".git/logs/refs/remotes/origin/master")
+	if(logs)
+		originmastercommit = splittext(logs[logs.len - 1], " ")[2]
+
 	if(testmerge.len)
 		log_world(commit)
 		for(var/line in testmerge)
 			if(line)
 				log_world("Test merge active of PR #[line]")
-				feedback_add_details("testmerged_prs","[line]")
-		log_world("Based off master commit [parentcommit]")
+				SSblackbox.add_details("testmerged_prs","[line]")
+		log_world("Based off origin/master commit [originmastercommit]")
 	else
-		log_world(parentcommit)
+		log_world(originmastercommit)
 
 /datum/getrev/proc/DownloadPRDetails()
 	if(!config.githubrepoid)
@@ -48,7 +47,7 @@ var/global/datum/getrev/revdata = new()
 			return
 
 		var/url = "https://api.github.com/repositories/[config.githubrepoid]/pulls/[line].json"
-		valid_HTTPSGet = TRUE
+		GLOB.valid_HTTPSGet = TRUE
 		var/json = HTTPSGet(url)
 		if(!json)
 			return
@@ -77,12 +76,14 @@ var/global/datum/getrev/revdata = new()
 	set name = "Show Server Revision"
 	set desc = "Check the current server code revision"
 
-	if(revdata.commit)
-		to_chat(src, "<b>Server revision compiled on:</b> [revdata.date]")
-		if(revdata.testmerge.len)
-			to_chat(src, revdata.GetTestMergeInfo())
-			to_chat(src, "Based off master commit:")
-		to_chat(src, "<a href='[config.githuburl]/commit/[revdata.commit]'>[revdata.commit]</a>")
+	if(GLOB.revdata.originmastercommit)
+		to_chat(src, "<b>Server revision compiled on:</b> [GLOB.revdata.date]")
+		var/prefix = ""
+		if(GLOB.revdata.testmerge.len)
+			to_chat(src, GLOB.revdata.GetTestMergeInfo())
+			prefix = "Based off origin/master commit: "
+		var/pc = GLOB.revdata.originmastercommit
+		to_chat(src, "[prefix]<a href='[config.githuburl]/commit/[pc]'>[copytext(pc, 1, min(length(pc), 7))]</a>")
 	else
 		to_chat(src, "Revision unknown")
 	to_chat(src, "<b>Current Infomational Settings:</b>")
@@ -93,7 +94,7 @@ var/global/datum/getrev/revdata = new()
 	to_chat(src, "Enforce Continuous Rounds: [config.continuous.len] of [config.modes.len] roundtypes")
 	to_chat(src, "Allow Midround Antagonists: [config.midround_antag.len] of [config.modes.len] roundtypes")
 	if(config.show_game_type_odds)
-		if(SSticker.current_state == GAME_STATE_PLAYING)
+		if(SSticker.IsRoundInProgress())
 			var/prob_sum = 0
 			var/current_odds_differ = FALSE
 			var/list/probs = list()
@@ -109,13 +110,13 @@ var/global/datum/getrev/revdata = new()
 				probs[ctag] = 1
 				prob_sum += config.probabilities[ctag]
 			if(current_odds_differ)
-				src <<"<b>Game Mode Odds for current round:</b>"
+				to_chat(src, "<b>Game Mode Odds for current round:</b>")
 				for(var/ctag in probs)
 					if(config.probabilities[ctag] > 0)
 						var/percentage = round(config.probabilities[ctag] / prob_sum * 100, 0.1)
 						to_chat(src, "[ctag] [percentage]%")
 
-		src <<"<b>All Game Mode Odds:</b>"
+		to_chat(src, "<b>All Game Mode Odds:</b>")
 		var/sum = 0
 		for(var/ctag in config.probabilities)
 			sum += config.probabilities[ctag]
