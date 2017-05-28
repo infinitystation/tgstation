@@ -303,7 +303,7 @@
 /area/prison/control)
 "aZ" = (
 /turf/closed/wall/r_wall,
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "ba" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -352,7 +352,7 @@
 /area/prison/control)
 "bf" = (
 /turf/closed/wall/r_wall,
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "bg" = (
 /turf/closed/wall,
 /area/prison)
@@ -427,7 +427,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "freezerfloor"
 	},
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "bs" = (
 /obj/machinery/atmospherics/components/unary/vent_pump{
 	dir = 4;
@@ -508,7 +508,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "freezerfloor"
 	},
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "bC" = (
 /obj/machinery/shower{
 	dir = 4
@@ -516,18 +516,18 @@
 /turf/open/floor/plasteel{
 	icon_state = "freezerfloor"
 	},
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "bD" = (
 /obj/item/weapon/soap,
 /turf/open/floor/plasteel{
 	icon_state = "freezerfloor"
 	},
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "bE" = (
 /turf/open/floor/plasteel{
 	icon_state = "freezerfloor"
 	},
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "bF" = (
 /obj/machinery/shower{
 	dir = 8
@@ -535,7 +535,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "freezerfloor"
 	},
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "bG" = (
 /obj/machinery/portable_atmospherics/scrubber/huge,
 /turf/open/floor/plating,
@@ -588,18 +588,18 @@
 /turf/open/floor/plasteel{
 	icon_state = "freezerfloor"
 	},
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "bO" = (
 /obj/item/weapon/soap,
 /turf/open/floor/plasteel{
 	icon_state = "freezerfloor"
 	},
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "bP" = (
 /turf/open/floor/plasteel{
 	icon_state = "freezerfloor"
 	},
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "bQ" = (
 /obj/machinery/shower{
 	dir = 8
@@ -607,7 +607,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "freezerfloor"
 	},
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "bR" = (
 /obj/machinery/atmospherics/components/unary/vent_pump{
 	dir = 4;
@@ -616,7 +616,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "freezerfloor"
 	},
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "bS" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 10
@@ -624,7 +624,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "freezerfloor"
 	},
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "bT" = (
 /obj/structure/window/reinforced{
 	dir = 4
@@ -656,7 +656,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "freezerfloor"
 	},
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "bY" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 10
@@ -664,13 +664,13 @@
 /turf/open/floor/plasteel{
 	icon_state = "freezerfloor"
 	},
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "bZ" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/open/floor/plasteel{
 	icon_state = "freezerfloor"
 	},
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "ca" = (
 /obj/machinery/shower{
 	dir = 8
@@ -679,7 +679,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "freezerfloor"
 	},
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "cb" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/glass_security{
@@ -731,7 +731,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "freezerfloor"
 	},
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "cg" = (
 /obj/machinery/shower{
 	dir = 8
@@ -740,18 +740,18 @@
 /turf/open/floor/plasteel{
 	icon_state = "freezerfloor"
 	},
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "ch" = (
 /obj/structure/bed,
 /turf/open/floor/plasteel/whiteyellow/side{
 	dir = 1
 	},
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "ci" = (
 /turf/open/floor/plasteel/whiteyellow/side{
 	dir = 1
 	},
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "cj" = (
 /obj/structure/closet/secure_closet/medical1,
 /obj/item/weapon/storage/firstaid/o2,
@@ -760,7 +760,7 @@
 /turf/open/floor/plasteel/whiteyellow/side{
 	dir = 5
 	},
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "ck" = (
 /turf/open/floor/plating,
 /area/prison)
@@ -770,7 +770,7 @@
 	pixel_y = 0
 	},
 /turf/open/floor/plating,
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "cm" = (
 /obj/machinery/porta_turret{
 	installation = /obj/item/weapon/gun/energy/e_gun
@@ -794,20 +794,20 @@
 "cp" = (
 /obj/machinery/atmospherics/components/unary/portables_connector,
 /turf/open/floor/plating,
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "cq" = (
 /turf/open/floor/plating,
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "cr" = (
 /obj/item/weapon/soap,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/open/floor/plasteel{
 	icon_state = "freezerfloor"
 	},
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "cs" = (
 /turf/open/floor/plasteel/white,
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "ct" = (
 /obj/structure/table/glass,
 /obj/item/weapon/storage/firstaid/regular,
@@ -815,7 +815,7 @@
 /turf/open/floor/plasteel/whiteyellow/side{
 	dir = 4
 	},
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "cu" = (
 /obj/structure/bed,
 /obj/machinery/computer/security/telescreen/entertainment{
@@ -855,7 +855,7 @@
 	tag = ""
 	},
 /turf/open/floor/plating,
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "cy" = (
 /obj/structure/cable{
 	d2 = 8;
@@ -867,7 +867,7 @@
 	pixel_x = 32
 	},
 /turf/open/floor/plating,
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "cz" = (
 /turf/open/floor/plating,
 /area/prison/control)
@@ -896,7 +896,7 @@
 	icon_state = "2-8"
 	},
 /turf/open/floor/plating,
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "cD" = (
 /obj/effect/landmark/ban_prison,
 /turf/open/floor/plasteel/vault{
@@ -930,7 +930,7 @@
 /turf/open/floor/plasteel/darkgreen/side{
 	dir = 4
 	},
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "cG" = (
 /obj/item/weapon/soap,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
@@ -939,7 +939,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "freezerfloor"
 	},
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "cH" = (
 /obj/machinery/shower{
 	dir = 4
@@ -948,7 +948,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "freezerfloor"
 	},
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "cI" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
 	dir = 4
@@ -956,7 +956,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "freezerfloor"
 	},
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "cJ" = (
 /obj/structure/bed,
 /obj/machinery/vending/wallmed{
@@ -967,17 +967,17 @@
 	use_power = 0
 	},
 /turf/open/floor/plasteel/whiteyellow/side,
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "cK" = (
 /obj/structure/bed,
 /turf/open/floor/plasteel/whiteyellow/side,
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "cL" = (
 /obj/structure/bed,
 /turf/open/floor/plasteel/whiteyellow/corner{
 	dir = 8
 	},
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "cM" = (
 /obj/structure/table/glass,
 /obj/item/weapon/storage/firstaid/fire,
@@ -985,7 +985,7 @@
 /turf/open/floor/plasteel/whiteyellow/side{
 	dir = 4
 	},
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "cN" = (
 /obj/structure/table,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
@@ -1095,14 +1095,14 @@
 	icon_state = "1-2"
 	},
 /turf/open/floor/plating,
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "cU" = (
 /obj/machinery/firealarm{
 	dir = 4;
 	pixel_x = 28
 	},
 /turf/open/floor/plating,
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "cV" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -1120,7 +1120,7 @@
 	pixel_y = 0
 	},
 /turf/open/floor/plating,
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "cX" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -1128,7 +1128,7 @@
 	icon_state = "1-2"
 	},
 /turf/open/floor/plating,
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "cY" = (
 /obj/structure/mirror{
 	pixel_x = -32
@@ -1143,7 +1143,7 @@
 /turf/open/floor/plasteel/darkgreen/side{
 	dir = 8
 	},
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "cZ" = (
 /obj/structure/table,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
@@ -1189,7 +1189,7 @@
 /turf/open/floor/plasteel/darkgreen/side{
 	dir = 4
 	},
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "db" = (
 /obj/machinery/shower{
 	dir = 4
@@ -1198,7 +1198,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "freezerfloor"
 	},
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "dc" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
 	dir = 4
@@ -1206,30 +1206,30 @@
 /turf/open/floor/plasteel{
 	icon_state = "freezerfloor"
 	},
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "dd" = (
 /obj/structure/closet{
 	anchored = 1;
 	name = "Prison closet"
 	},
 /turf/open/floor/plasteel/darkyellow/side,
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "de" = (
 /obj/structure/dresser,
 /turf/open/floor/plasteel/darkyellow/side,
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "df" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/glass_medical{
 	req_access_txt = "101"
 	},
 /turf/open/floor/plasteel/whitebot/delivery,
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "dg" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/fulltile,
 /turf/open/floor/plating,
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "dh" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/fulltile,
@@ -1286,7 +1286,7 @@
 	icon_state = "1-2"
 	},
 /turf/open/floor/plating,
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "do" = (
 /obj/structure/sign/securearea{
 	pixel_x = -32;
@@ -1315,7 +1315,7 @@
 	icon_state = "1-2"
 	},
 /turf/open/floor/plating,
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "dr" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/glass{
@@ -1341,14 +1341,14 @@
 	},
 /obj/machinery/door/firedoor,
 /turf/open/floor/plating,
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "du" = (
 /obj/structure/closet{
 	anchored = 1;
 	name = "Prison closet"
 	},
 /turf/open/floor/plasteel/darkgreen/side,
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "dv" = (
 /obj/structure/closet{
 	anchored = 1;
@@ -1357,20 +1357,20 @@
 /turf/open/floor/plasteel/darkyellow/side{
 	dir = 4
 	},
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "dw" = (
 /obj/machinery/atmospherics/components/unary/vent_pump{
 	dir = 4;
 	on = 1
 	},
 /turf/open/floor/plasteel/black,
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "dx" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
 /turf/open/floor/plasteel/black,
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "dy" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 10
@@ -1378,7 +1378,7 @@
 /turf/open/floor/plasteel/darkyellow/corner{
 	dir = 4
 	},
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "dz" = (
 /obj/machinery/door/airlock{
 	id_tag = "AuxShower";
@@ -1387,7 +1387,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "freezerfloor"
 	},
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "dA" = (
 /obj/machinery/door/airlock{
 	id_tag = "AuxShower";
@@ -1397,7 +1397,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "freezerfloor"
 	},
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "dB" = (
 /obj/machinery/portable_atmospherics/scrubber/huge,
 /turf/open/floor/plating,
@@ -1409,7 +1409,7 @@
 /turf/open/floor/plasteel/darkyellow/side{
 	dir = 9
 	},
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "dD" = (
 /turf/open/floor/plasteel/darkyellow/side{
 	dir = 1
@@ -1435,7 +1435,7 @@
 /turf/open/floor/plasteel/darkyellow/side{
 	dir = 1
 	},
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "dH" = (
 /obj/machinery/atmospherics/components/unary/vent_pump{
 	dir = 2;
@@ -1524,7 +1524,7 @@
 /turf/open/floor/plasteel/darkgreen/side{
 	dir = 1
 	},
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "dT" = (
 /turf/open/floor/plasteel/darkgreen/corner{
 	dir = 1
@@ -1543,12 +1543,12 @@
 /turf/open/floor/plasteel/darkgreen/corner{
 	dir = 4
 	},
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "dW" = (
 /turf/open/floor/plasteel/darkgreen/side{
 	dir = 5
 	},
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "dX" = (
 /obj/machinery/door/airlock{
 	id_tag = "AuxShower";
@@ -1557,7 +1557,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "freezerfloor"
 	},
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "dY" = (
 /obj/machinery/door/airlock{
 	id_tag = "AuxShower";
@@ -1569,7 +1569,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "freezerfloor"
 	},
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "dZ" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 6
@@ -1577,20 +1577,20 @@
 /turf/open/floor/plasteel/darkgreen/corner{
 	dir = 1
 	},
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "ea" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
 /turf/open/floor/plasteel/black,
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "eb" = (
 /obj/machinery/atmospherics/components/unary/vent_pump{
 	dir = 8;
 	on = 1
 	},
 /turf/open/floor/plasteel/black,
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "ec" = (
 /obj/structure/closet{
 	anchored = 1;
@@ -1599,7 +1599,7 @@
 /turf/open/floor/plasteel/darkgreen/side{
 	dir = 8
 	},
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "ed" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 5
@@ -1607,7 +1607,7 @@
 /turf/open/floor/plasteel/darkyellow/corner{
 	dir = 4
 	},
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "ee" = (
 /obj/machinery/door/airlock{
 	id_tag = "AuxShower";
@@ -1619,7 +1619,7 @@
 /turf/open/floor/plasteel/darkyellow/corner{
 	dir = 4
 	},
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "ef" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
@@ -1627,7 +1627,7 @@
 /turf/open/floor/plasteel/darkyellow/corner{
 	dir = 4
 	},
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "eg" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
 	dir = 1
@@ -1635,13 +1635,13 @@
 /turf/open/floor/plasteel/darkyellow/corner{
 	dir = 4
 	},
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "eh" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden,
 /turf/open/floor/plasteel/darkyellow/corner{
 	dir = 4
 	},
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "ei" = (
 /obj/machinery/door/airlock{
 	id_tag = "AuxShower";
@@ -1653,7 +1653,7 @@
 /turf/open/floor/plasteel/darkyellow/corner{
 	dir = 4
 	},
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "ej" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
@@ -1666,7 +1666,7 @@
 /turf/open/floor/plasteel/darkyellow/corner{
 	dir = 4
 	},
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "ek" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
@@ -1680,13 +1680,13 @@
 	dir = 1
 	},
 /turf/open/floor/plasteel/black,
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "em" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
 /turf/open/floor/plasteel/darkyellow/corner,
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "en" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
@@ -1763,7 +1763,7 @@
 "eB" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden,
 /turf/open/floor/plasteel/darkgreen/side,
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "eC" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
@@ -1771,13 +1771,13 @@
 /turf/open/floor/plasteel/darkgreen/corner{
 	dir = 8
 	},
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "eD" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
 	dir = 1
 	},
 /turf/open/floor/plasteel/black,
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "eE" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
@@ -1797,7 +1797,7 @@
 /turf/open/floor/plasteel/darkgreen/corner{
 	dir = 1
 	},
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "eG" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
@@ -1805,7 +1805,7 @@
 /turf/open/floor/plasteel/darkgreen/corner{
 	dir = 1
 	},
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "eH" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
 	dir = 1
@@ -1813,13 +1813,13 @@
 /turf/open/floor/plasteel/darkgreen/corner{
 	dir = 1
 	},
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "eI" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden,
 /turf/open/floor/plasteel/darkgreen/corner{
 	dir = 1
 	},
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "eJ" = (
 /obj/machinery/door/airlock{
 	id_tag = "AuxShower";
@@ -1831,7 +1831,7 @@
 /turf/open/floor/plasteel/darkgreen/corner{
 	dir = 1
 	},
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "eK" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 9;
@@ -1840,12 +1840,12 @@
 /turf/open/floor/plasteel/darkgreen/corner{
 	dir = 1
 	},
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "eL" = (
 /turf/open/floor/plasteel/darkyellow/corner{
 	dir = 8
 	},
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "eM" = (
 /obj/machinery/door/airlock{
 	id_tag = "AuxShower";
@@ -1854,7 +1854,7 @@
 /turf/open/floor/plasteel/darkyellow/corner{
 	dir = 8
 	},
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "eN" = (
 /obj/machinery/atmospherics/components/unary/vent_pump{
 	dir = 1;
@@ -1863,7 +1863,7 @@
 /turf/open/floor/plasteel/darkyellow/corner{
 	dir = 8
 	},
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "eO" = (
 /obj/machinery/door/airlock{
 	id_tag = "AuxShower";
@@ -1872,7 +1872,7 @@
 /turf/open/floor/plasteel/darkyellow/corner{
 	dir = 8
 	},
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "eP" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock{
@@ -1882,18 +1882,18 @@
 /turf/open/floor/plasteel/darkyellow/corner{
 	dir = 8
 	},
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "eQ" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/open/floor/plasteel/darkyellow/side{
 	dir = 6
 	},
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "eR" = (
 /turf/open/floor/plasteel/darkyellow/side{
 	dir = 6
 	},
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "eS" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/fulltile,
@@ -1953,7 +1953,7 @@
 /turf/open/floor/plasteel/darkgreen/side{
 	dir = 1
 	},
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "fb" = (
 /turf/open/floor/plasteel/darkgreen/side{
 	dir = 6
@@ -1968,18 +1968,18 @@
 /turf/open/floor/plasteel/darkgreen/side{
 	dir = 6
 	},
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "fd" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/fulltile,
 /obj/machinery/door/poddoor,
 /turf/open/floor/plating,
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "fe" = (
 /turf/open/floor/plasteel/darkgreen/side{
 	dir = 10
 	},
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "ff" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	req_access_txt = 1
@@ -1987,37 +1987,37 @@
 /turf/open/floor/plasteel/darkgreen/side{
 	dir = 10
 	},
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "fg" = (
 /turf/open/floor/plasteel/darkgreen/corner,
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "fh" = (
 /obj/machinery/door/airlock{
 	id_tag = "AuxShower";
 	name = "Woman shower"
 	},
 /turf/open/floor/plasteel/darkgreen/corner,
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "fi" = (
 /obj/machinery/atmospherics/components/unary/vent_pump{
 	dir = 1;
 	on = 1
 	},
 /turf/open/floor/plasteel/darkgreen/corner,
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "fj" = (
 /obj/machinery/door/airlock{
 	id_tag = "AuxShower";
 	name = "Woman dressing room"
 	},
 /turf/open/floor/plasteel/darkgreen/corner,
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "fk" = (
 /obj/structure/dresser,
 /turf/open/floor/plasteel/darkgreen/side{
 	dir = 8
 	},
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "fl" = (
 /obj/structure/sign/securearea{
 	desc = "A warning sign which reads 'SHOWER'.";
@@ -2027,13 +2027,13 @@
 /turf/open/floor/plasteel/darkyellow/side{
 	dir = 4
 	},
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "fm" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/open/floor/plasteel/darkyellow/side{
 	dir = 8
 	},
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "fn" = (
 /obj/machinery/porta_turret{
 	installation = /obj/item/weapon/gun/energy/e_gun
@@ -2055,7 +2055,7 @@
 /turf/open/floor/plasteel/darkyellow/side{
 	dir = 8
 	},
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "fr" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/glass{
@@ -2077,7 +2077,7 @@
 	name = "Block B"
 	},
 /turf/open/floor/plasteel/black,
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "fv" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/open/floor/plasteel/darkgreen/side{
@@ -2089,7 +2089,7 @@
 /turf/open/floor/plasteel/darkgreen/side{
 	dir = 8
 	},
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "fx" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -2099,13 +2099,13 @@
 /turf/open/floor/plasteel/darkgreen/side{
 	dir = 4
 	},
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "fy" = (
 /obj/machinery/porta_turret{
 	installation = /obj/item/weapon/gun/energy/e_gun
 	},
 /turf/open/floor/plating,
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "fz" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	req_access_txt = 1
@@ -2113,12 +2113,12 @@
 /turf/open/floor/plasteel/darkgreen/side{
 	dir = 4
 	},
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "fA" = (
 /turf/open/floor/plasteel/darkyellow/corner{
 	dir = 1
 	},
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "fB" = (
 /obj/machinery/door/airlock{
 	id_tag = "AuxShower";
@@ -2127,7 +2127,7 @@
 /turf/open/floor/plasteel/darkyellow/corner{
 	dir = 1
 	},
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "fC" = (
 /obj/machinery/atmospherics/components/unary/vent_pump{
 	dir = 2;
@@ -2136,7 +2136,7 @@
 /turf/open/floor/plasteel/darkyellow/corner{
 	dir = 1
 	},
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "fD" = (
 /obj/machinery/door/airlock{
 	id_tag = 0;
@@ -2145,7 +2145,7 @@
 /turf/open/floor/plasteel/darkyellow/corner{
 	dir = 1
 	},
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "fE" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock{
@@ -2155,13 +2155,13 @@
 /turf/open/floor/plasteel/darkyellow/corner{
 	dir = 1
 	},
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "fF" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/open/floor/plasteel/darkyellow/side{
 	dir = 5
 	},
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "fG" = (
 /turf/open/floor/plasteel/darkyellow/side{
 	dir = 9
@@ -2185,7 +2185,7 @@
 	tag = ""
 	},
 /turf/open/floor/plasteel/darkyellow/side,
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "fK" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/glass{
@@ -2250,7 +2250,7 @@
 	tag = ""
 	},
 /turf/open/floor/plasteel/darkgreen/side,
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "fS" = (
 /turf/open/floor/plasteel/darkgreen/corner{
 	dir = 8
@@ -2276,7 +2276,7 @@
 /turf/open/floor/plasteel/darkgreen/side{
 	dir = 5
 	},
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "fW" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	req_access_txt = 1
@@ -2284,12 +2284,12 @@
 /turf/open/floor/plasteel/darkgreen/side{
 	dir = 9
 	},
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "fX" = (
 /turf/open/floor/plasteel/darkgreen/corner{
 	dir = 4
 	},
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "fY" = (
 /obj/machinery/door/airlock{
 	id_tag = 0;
@@ -2298,7 +2298,7 @@
 /turf/open/floor/plasteel/darkgreen/corner{
 	dir = 4
 	},
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "fZ" = (
 /obj/machinery/atmospherics/components/unary/vent_pump{
 	dir = 2;
@@ -2307,7 +2307,7 @@
 /turf/open/floor/plasteel/darkgreen/corner{
 	dir = 4
 	},
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "ga" = (
 /obj/machinery/door/airlock{
 	id_tag = "AuxShower";
@@ -2316,13 +2316,13 @@
 /turf/open/floor/plasteel/darkgreen/corner{
 	dir = 4
 	},
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "gb" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 6
 	},
 /turf/open/floor/plasteel/darkyellow/corner,
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "gc" = (
 /obj/machinery/door/airlock{
 	id_tag = "AuxShower";
@@ -2332,17 +2332,17 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel/darkyellow/corner,
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "gd" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden,
 /turf/open/floor/plasteel/darkyellow/corner,
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "ge" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
 	dir = 1
 	},
 /turf/open/floor/plasteel/darkyellow/corner,
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "gf" = (
 /obj/machinery/door/airlock{
 	id_tag = 0;
@@ -2352,7 +2352,7 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel/darkyellow/corner,
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "gg" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
@@ -2363,7 +2363,7 @@
 	name = "Male shower"
 	},
 /turf/open/floor/plasteel/darkyellow/corner,
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "gh" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
@@ -2371,11 +2371,11 @@
 /turf/open/floor/plasteel/darkyellow/corner{
 	dir = 8
 	},
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "gi" = (
 /obj/machinery/atmospherics/pipe/manifold4w/supply/hidden,
 /turf/open/floor/plasteel/black,
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "gj" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
@@ -2430,17 +2430,17 @@
 /turf/open/floor/plasteel/darkgreen/side{
 	dir = 1
 	},
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "gr" = (
 /obj/machinery/atmospherics/pipe/manifold4w/supply/hidden,
 /turf/open/floor/plasteel/black,
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "gs" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
 /turf/open/floor/plasteel/darkgreen/corner,
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "gt" = (
 /obj/machinery/door/airlock{
 	id_tag = 0;
@@ -2452,13 +2452,13 @@
 /turf/open/floor/plasteel/darkgreen/corner{
 	dir = 8
 	},
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "gu" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden,
 /turf/open/floor/plasteel/darkgreen/corner{
 	dir = 8
 	},
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "gv" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
 	dir = 1
@@ -2466,7 +2466,7 @@
 /turf/open/floor/plasteel/darkgreen/corner{
 	dir = 8
 	},
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "gw" = (
 /obj/machinery/door/airlock{
 	id_tag = "AuxShower";
@@ -2478,7 +2478,7 @@
 /turf/open/floor/plasteel/darkgreen/corner{
 	dir = 8
 	},
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "gx" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 10
@@ -2486,14 +2486,14 @@
 /turf/open/floor/plasteel/darkgreen/corner{
 	dir = 8
 	},
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "gy" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 9;
 	pixel_y = 0
 	},
 /turf/open/floor/plasteel/darkyellow/corner,
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "gz" = (
 /obj/machinery/door/airlock{
 	id_tag = 0;
@@ -2502,7 +2502,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "freezerfloor"
 	},
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "gA" = (
 /obj/machinery/door/airlock{
 	id_tag = 0;
@@ -2512,19 +2512,19 @@
 /turf/open/floor/plasteel{
 	icon_state = "freezerfloor"
 	},
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "gB" = (
 /turf/open/floor/plasteel/darkyellow/side{
 	dir = 10
 	},
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "gC" = (
 /obj/machinery/atmospherics/components/unary/vent_pump{
 	dir = 1;
 	on = 1
 	},
 /turf/open/floor/plasteel/darkyellow/side,
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "gD" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/open/floor/plasteel/darkyellow/corner{
@@ -2533,7 +2533,7 @@
 /area/prison)
 "gE" = (
 /turf/open/floor/plasteel/darkyellow/corner,
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "gF" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 5
@@ -2619,13 +2619,13 @@
 	pixel_y = -24
 	},
 /turf/open/floor/plating,
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "gQ" = (
 /obj/machinery/atmospherics/components/binary/valve/open{
 	dir = 4
 	},
 /turf/open/floor/plating,
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "gR" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
@@ -2647,30 +2647,30 @@
 	pixel_y = 0
 	},
 /turf/open/floor/plasteel/black,
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "gU" = (
 /turf/open/floor/plasteel/darkgreen/corner{
 	dir = 8
 	},
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "gV" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	req_access_txt = 1
 	},
 /turf/open/floor/plasteel/darkgreen/corner,
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "gW" = (
 /obj/machinery/atmospherics/components/unary/vent_pump{
 	dir = 1;
 	on = 1
 	},
 /turf/open/floor/plasteel/darkgreen/side,
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "gX" = (
 /turf/open/floor/plasteel/darkgreen/side{
 	dir = 6
 	},
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "gY" = (
 /obj/machinery/door/airlock{
 	id_tag = 0;
@@ -2679,7 +2679,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "freezerfloor"
 	},
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "gZ" = (
 /obj/machinery/door/airlock{
 	id_tag = 0;
@@ -2689,7 +2689,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "freezerfloor"
 	},
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "ha" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 5
@@ -2697,7 +2697,7 @@
 /turf/open/floor/plasteel/darkgreen/corner{
 	dir = 8
 	},
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "hb" = (
 /obj/structure/closet{
 	anchored = 1;
@@ -2706,13 +2706,13 @@
 /turf/open/floor/plasteel/darkyellow/side{
 	dir = 1
 	},
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "hc" = (
 /obj/structure/dresser,
 /turf/open/floor/plasteel/darkyellow/side{
 	dir = 1
 	},
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "hd" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/glass{
@@ -2756,14 +2756,14 @@
 	icon = 'icons/turf/infinity.dmi';
 	icon_state = "darkdelivery"
 	},
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "hi" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/fulltile,
 /obj/machinery/door/firedoor,
 /obj/machinery/door/firedoor,
 /turf/open/floor/plating,
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "hj" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/glass_security{
@@ -2775,18 +2775,18 @@
 	icon = 'icons/turf/infinity.dmi';
 	icon_state = "darkdelivery"
 	},
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "hk" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/glass,
 /turf/open/floor/plasteel/black,
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "hl" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/open/floor/plasteel{
 	icon_state = "freezerfloor"
 	},
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "hm" = (
 /obj/machinery/shower{
 	tag = "icon-shower (WEST)";
@@ -2796,7 +2796,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "freezerfloor"
 	},
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "hn" = (
 /obj/structure/closet{
 	anchored = 1;
@@ -2805,7 +2805,7 @@
 /turf/open/floor/plasteel/darkgreen/side{
 	dir = 1
 	},
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "ho" = (
 /obj/item/weapon/soap,
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
@@ -2814,7 +2814,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "freezerfloor"
 	},
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "hp" = (
 /obj/structure/table,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
@@ -2918,26 +2918,26 @@
 /turf/open/floor/plasteel/darkred/side{
 	dir = 9
 	},
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "hv" = (
 /turf/open/floor/plasteel/darkred/side{
 	dir = 1
 	},
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "hw" = (
 /obj/structure/table/reinforced,
 /obj/machinery/recharger,
 /turf/open/floor/plasteel/darkred/side{
 	dir = 1
 	},
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "hx" = (
 /obj/structure/table/reinforced,
 /obj/item/weapon/storage/box/donkpockets,
 /turf/open/floor/plasteel/darkred/side{
 	dir = 5
 	},
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "hy" = (
 /obj/machinery/vending/coffee,
 /turf/open/floor/plasteel/darkred/side{
@@ -2985,7 +2985,7 @@
 /turf/open/floor/plasteel/darkred/side{
 	dir = 5
 	},
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "hD" = (
 /obj/structure/sink/kitchen{
 	desc = "A sink used for washing one's hands and face. It looks rusty and home-made";
@@ -3000,7 +3000,7 @@
 /turf/open/floor/plasteel/darkgreen/side{
 	dir = 8
 	},
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "hE" = (
 /obj/item/weapon/soap,
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
@@ -3009,7 +3009,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "freezerfloor"
 	},
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "hF" = (
 /obj/structure/bed,
 /obj/machinery/computer/security/telescreen/entertainment{
@@ -3041,7 +3041,7 @@
 /turf/open/floor/plasteel/darkred/side{
 	dir = 8
 	},
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "hI" = (
 /obj/structure/extinguisher_cabinet{
 	pixel_x = 27;
@@ -3050,14 +3050,14 @@
 /turf/open/floor/plasteel/darkred/side{
 	dir = 4
 	},
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "hJ" = (
 /obj/structure/table/reinforced,
 /obj/machinery/recharger,
 /turf/open/floor/plasteel/darkred/side{
 	dir = 8
 	},
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "hK" = (
 /obj/machinery/door/window/eastleft{
 	name = "Small kitchen";
@@ -3066,7 +3066,7 @@
 /turf/open/floor/plasteel/darkred/side{
 	dir = 4
 	},
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "hL" = (
 /obj/machinery/vending/wallmed{
 	pixel_x = 32
@@ -3082,7 +3082,7 @@
 /turf/open/floor/plasteel/darkred/side{
 	dir = 4
 	},
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "hN" = (
 /obj/structure/bed,
 /obj/item/weapon/bedsheet,
@@ -3113,10 +3113,10 @@
 /turf/open/floor/plasteel/darkgreen/side{
 	dir = 4
 	},
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "hP" = (
 /turf/open/space,
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "hQ" = (
 /obj/structure/table/wood,
 /obj/machinery/computer/security/telescreen/entertainment{
@@ -3131,13 +3131,13 @@
 /turf/open/floor/plasteel/darkred/side{
 	dir = 10
 	},
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "hR" = (
 /obj/structure/chair/comfy/black{
 	dir = 8
 	},
 /turf/open/floor/plasteel/darkred/side,
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "hS" = (
 /obj/machinery/newscaster{
 	pixel_x = 0;
@@ -3146,18 +3146,18 @@
 /obj/item/weapon/storage/box/cups,
 /obj/structure/table/reinforced,
 /turf/open/floor/plasteel/darkred/side,
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "hT" = (
 /obj/structure/reagent_dispensers/water_cooler,
 /turf/open/floor/plasteel/darkred/side,
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "hU" = (
 /obj/structure/table/reinforced,
 /obj/machinery/microwave,
 /turf/open/floor/plasteel/darkred/side{
 	dir = 6
 	},
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "hV" = (
 /obj/structure/table/reinforced,
 /obj/item/weapon/storage/box/cups,
@@ -3212,7 +3212,7 @@
 /turf/open/floor/plasteel/darkred/side{
 	dir = 6
 	},
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "ib" = (
 /obj/machinery/shower{
 	tag = "icon-shower (WEST)";
@@ -3222,7 +3222,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "freezerfloor"
 	},
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "ic" = (
 /turf/closed/wall/r_wall,
 /area/prison/hallway/aft)
@@ -3292,7 +3292,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "freezerfloor"
 	},
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "io" = (
 /obj/machinery/shower{
 	tag = "icon-shower (WEST)";
@@ -3303,7 +3303,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "freezerfloor"
 	},
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "ip" = (
 /obj/structure/chair/comfy/sofa/corner/right/brown,
 /turf/open/floor/carpet,
@@ -3452,7 +3452,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "freezerfloor"
 	},
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "iN" = (
 /obj/machinery/shower{
 	tag = "icon-shower (WEST)";
@@ -3463,7 +3463,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "freezerfloor"
 	},
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "iO" = (
 /obj/machinery/shower{
 	dir = 4
@@ -3472,7 +3472,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "freezerfloor"
 	},
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "iP" = (
 /obj/item/weapon/twohanded/required/kirbyplants{
 	icon_state = "plant-21";
@@ -3510,7 +3510,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "freezerfloor"
 	},
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "iV" = (
 /obj/machinery/shower{
 	dir = 1
@@ -3518,7 +3518,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "freezerfloor"
 	},
-/area/prison/cell_block/A)
+/area/prison/cell_block/a)
 "iW" = (
 /obj/structure/chair/comfy/black,
 /turf/open/floor/carpet,
@@ -3544,7 +3544,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "freezerfloor"
 	},
-/area/prison/cell_block/B)
+/area/prison/cell_block/b)
 "ja" = (
 /obj/structure/table/wood,
 /obj/item/toy/cards/deck,

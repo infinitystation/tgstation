@@ -11903,7 +11903,7 @@
 /area/centcom/ferry)
 "aEm" = (
 /obj/structure/closet/secure_closet/personal/cabinet,
-/obj/item/clothing/under/rank/librarian/curator,
+/obj/item/clothing/under/rank/curator,
 /obj/item/clothing/under/skirt/black,
 /obj/item/clothing/under/shorts/black,
 /obj/item/clothing/under/pants/track,
@@ -15230,10 +15230,10 @@
 /area/centcom/ferry)
 "aLM" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/c4{
+/obj/item/weapon/grenade/plastic/c4{
 	pixel_x = 6
 	},
-/obj/item/weapon/c4{
+/obj/item/weapon/grenade/plastic/c4{
 	pixel_x = -4
 	},
 /obj/machinery/firealarm{
