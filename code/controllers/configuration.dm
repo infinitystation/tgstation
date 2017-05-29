@@ -290,8 +290,10 @@
 	if (maprotation)
 		loadmaplist("config/maps.txt")
 
+	loadbuildlist("config/builds.txt")
 	// apply some settings from config..
 	GLOB.abandon_allowed = respawn
+
 
 /datum/configuration/proc/load(filename, type = "config") //the type can also be game_options, in which case it uses a different switch. not making it separate to not copypaste code - Urist
 	var/list/Lines = world.file2list(filename)

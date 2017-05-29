@@ -50,11 +50,11 @@
 		if(holder)
 			to_chat(src, "<font color='red'>Error: Admin-PM: Client not found.</font>")
 		return
-	
+
 	var/datum/admin_help/AH = C.current_ticket
 
 	if(AH)
-		message_admins("[key_name_admin(src)] has started replying to [key_name(C, 0, )]'s admin help.")
+		message_admins("[key_name_admin(src)] has started replying to [key_name(C, 0, 1)]'s admin help.")
 	var/msg = input(src,"Message:", "Private message to [key_name(C, 0, 0)]") as text|null
 	msg = sanitize(copytext(msg,1,MAX_MESSAGE_LEN))
 	if (!msg)
@@ -85,7 +85,7 @@
 			recipient = GLOB.directory[whom]
 	else if(istype(whom,/client))
 		recipient = whom
-	
+
 
 	if(irc)
 		if(!ircreplyamount)	//to prevent people from spamming irc
@@ -150,17 +150,17 @@
 	else
 		if(recipient.holder)
 			if(holder)	//both are admins
-				to_chat(recipient, "<font color='red'>Admin PM from-<b>[key_name(src, recipient, 1)]</b>: [keywordparsedmsg]</font>")
-				to_chat(src, "<font color='blue'>Admin PM to-<b>[key_name(recipient, src, 1)]</b>: [keywordparsedmsg]</font>")
+				to_chat(recipient, "<font color='red'>Admin PM from-<b>[key_name(src, recipient, 1)]</b>(<a href='?_src_=holder;adminplayerobservefollow=\ref[src.mob]'>FLW</A>): [keywordparsedmsg]</font>")
+				to_chat(src, "<font color='blue'>Admin PM to-<b>[key_name(recipient, src, 1)]</b>(<a href='?_src_=holder;adminplayerobservefollow=\ref[recipient.mob]'>FLW</A>): [keywordparsedmsg]</font>")
 
 				//omg this is dumb, just fill in both their tickets
-				var/interaction_message = "<font color='purple'>PM from-<b>[key_name(src, recipient, 1)]</b> to-<b>[key_name(recipient, src, 1)]</b>: [keywordparsedmsg]</font>"
+				var/interaction_message = "<font color='purple'>PM from-<b>[key_name(src, recipient, 1)]</b>(<a href='?_src_=holder;adminplayerobservefollow=\ref[src.mob]'>FLW</A>) to-<b>[key_name(recipient, src, 1)]</b>(<a href='?_src_=holder;adminplayerobservefollow=\ref[recipient.mob]'>FLW</A>): [keywordparsedmsg]</font>"
 				admin_ticket_log(src, interaction_message)
 				if(recipient != src)	//reeee
 					admin_ticket_log(recipient, interaction_message)
 
 			else		//recipient is an admin but sender is not
-				var/replymsg = "<font color='red'>Reply PM from-<b>[key_name(src, recipient, 1)]</b>: [keywordparsedmsg]</font>"
+				var/replymsg = "<font color='red'>Reply PM from-<b>[key_name(src, recipient, 1)]</b>(<a href='?_src_=holder;adminplayerobservefollow=\ref[src.mob]'>FLW</A>): [keywordparsedmsg]</font>"
 				admin_ticket_log(src, replymsg)
 				to_chat(recipient, replymsg)
 				to_chat(src, "<font color='blue'>PM to-<b>Admins</b>: [msg]</font>")
@@ -177,7 +177,7 @@
 				to_chat(recipient, "<font color='red' size='4'><b>-- Administrator private message --</b></font>")
 				to_chat(recipient, "<font color='red'>Admin PM from-<b>[key_name(src, recipient, 0)]</b>: [msg]</font>")
 				to_chat(recipient, "<font color='red'><i>Click on the administrator's name to reply.</i></font>")
-				to_chat(src, "<font color='blue'>Admin PM to-<b>[key_name(recipient, src, 1)]</b>: [msg]</font>")
+				to_chat(src, "<font color='blue'>Admin PM to-<b>[key_name(recipient, src, 1)](<a href='?_src_=holder;adminplayerobservefollow=\ref[recipient.mob]'>FLW</A>)</b>: [msg]</font>")
 
 				admin_ticket_log(recipient, "<font color='blue'>PM From [key_name_admin(src)]: [keywordparsedmsg]</font>")
 
@@ -210,7 +210,7 @@
 		//we don't use message_admins here because the sender/receiver might get it too
 		for(var/client/X in GLOB.admins)
 			if(X.key!=key && X.key!=recipient.key)	//check client/X is an admin and isn't the sender or recipient
-				to_chat(X, "<B><font color='blue'>PM: [key_name(src, X, 0)]-&gt;[key_name(recipient, X, 0)]:</B> \blue [keywordparsedmsg]</font>" )
+				to_chat(X, "<B><font color='blue'>PM: [key_name(src, X, 0)](<a href='?_src_=holder;adminplayerobservefollow=\ref[src.mob]'>FLW</A>)-&gt;[key_name(recipient, X, 0)](<a href='?_src_=holder;adminplayerobservefollow=\ref[recipient.mob]'>FLW</A>):</B> \blue [keywordparsedmsg]</font>" )
 
 
 

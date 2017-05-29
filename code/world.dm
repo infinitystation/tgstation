@@ -36,10 +36,13 @@
 	if(config.usewhitelist)
 		load_whitelist()
 	LoadBans()
+	loadbuildname()
 
 	GLOB.timezoneOffset = text2num(time2text(0,"hh")) * 36000
 
 	Master.Initialize(10, FALSE)
+
+	set_station_name(config.station_name)
 
 /world/proc/SetupExternalRSC()
 #if (PRELOAD_RSC == 0)

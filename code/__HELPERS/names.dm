@@ -55,14 +55,16 @@ GLOBAL_VAR(command_name)
 	return capitalize(name)
 
 /proc/station_name()
-	if(!GLOB.station_name)
-		var/newname
-		if(config && config.station_name)
-			newname = config.station_name
-		else
-			newname = new_station_name()
+	if(GLOB.station_name)
+		return GLOB.station_name
 
-		set_station_name(newname)
+	var/newname
+	if(config && config.station_name)
+		newname = config.station_name
+	else
+		newname = new_station_name()
+
+	set_station_name(newname)
 
 	return GLOB.station_name
 

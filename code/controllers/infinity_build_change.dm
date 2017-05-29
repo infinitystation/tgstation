@@ -60,7 +60,7 @@ var/datum/server_build/currentbuild
 			if("update")
 				current_build.update = data
 			if("endbuild")
-				config.buildlist[current_build.name] = current_build
+				buildlist[current_build.name] = current_build
 				currentbuild = null
 			else
 				GLOB.world_game_log << "Unknown command in builds config: '[command]'"

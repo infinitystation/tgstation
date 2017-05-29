@@ -98,13 +98,13 @@
 
 /obj/machinery/door/airlock/Initialize()
 	. = ..()
-	
+
 	if (cyclelinkeddir)
 		cyclelinkairlock()
 	if(frequency)
 		set_frequency(frequency)
 	update_icon()
-	
+
 	wires = new /datum/wires/airlock(src)
 	if(src.closeOtherId != null)
 		spawn (5)
@@ -126,6 +126,7 @@
 	var/datum/atom_hud/data/diagnostic/diag_hud = GLOB.huds[DATA_HUD_DIAGNOSTIC]
 	diag_hud.add_to_hud(src)
 	diag_hud_set_electrified()
+	update_icon()
 
 /obj/machinery/door/airlock/proc/cyclelinkairlock()
 	if (cyclelinkedairlock)
