@@ -184,19 +184,18 @@ GLOBAL_LIST(external_rsc_urls)
 		spawn for()
 			var/sum = 0
 			var/temp
-			var/DBQuery/query_onilne = dbcon.NewQuery("SELECT sum FROM online_score WHERE ckey='[sql_ckey]' AND year=YEAR(NOW()) AND month=MONTH(NOW()) AND day=DAYOFMONTH(NOW());")
+			var/datum/DBQuery/query_onilne = SSdbcore.NewQuery("SELECT sum FROM online_score WHERE ckey='[sql_ckey]' AND year=YEAR(NOW()) AND month=MONTH(NOW()) AND day=DAYOFMONTH(NOW());")
 			query_onilne.Execute()
 			if(query_onilne.NextRow())
-				temp = query_o_s_in1.item[1]
+				temp = query_onilne.item[1]
 			sum = text2num(temp)
 			if(sum && sum > 0)
-				var/DBQuery/query_sum_upd = dbcon.NewQuery("UPDATE online_score SET sum= sum+1 WHERE ckey='[sql_ckey]' AND year=YEAR(NOW()) AND month=MONTH(NOW()) AND day=DAYOFMONTH(NOW());")
+				var/datum/DBQuery/query_sum_upd = SSdbcore.NewQuery("UPDATE online_score SET sum= sum+1 WHERE ckey='[sql_ckey]' AND year=YEAR(NOW()) AND month=MONTH(NOW()) AND day=DAYOFMONTH(NOW());")
 				query_sum_upd.Execute()
 			else
-				var/DBQuery/query_o_s_ins = dbcon.NewQuery("INSERT INTO online_score(ckey,year,month,day,sum) VALUES ('[sql_ckey]', YEAR(NOW()), MONTH(NOW()), DAYOFMONTH(NOW()), 1);")
+				var/datum/DBQuery/query_o_s_ins = SSdbcore.NewQuery("INSERT INTO online_score(ckey,year,month,day,sum) VALUES ('[sql_ckey]', YEAR(NOW()), MONTH(NOW()), DAYOFMONTH(NOW()), 1);")
 				query_o_s_ins.Execute()
 			sleep(600)
-
 
 	//preferences datum - also holds some persistent data for the client (because we may as well keep these datums to a minimum)
 	prefs = GLOB.preferences_datums[ckey]
