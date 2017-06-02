@@ -27,8 +27,6 @@
 #define APC_UPOVERLAY_OPERATING 8192
 
 
-#define APC_UPDATE_ICON_COOLDOWN 200 // 20 seconds
-
 // the Area Power Controller (APC), formerly Power Distribution Unit (PDU)
 // one per area, needs wire conection to power network through a terminal
 
@@ -93,7 +91,10 @@
 	var/force_update = 0
 	var/update_state = -1
 	var/update_overlay = -1
+	var/icon_update_needed = FALSE
 
+/obj/machinery/power/apc/get_cell()
+	return cell
 
 /obj/machinery/power/apc/connect_to_network()
 	//Override because the APC does not directly connect to the network; it goes through a terminal.
@@ -214,11 +215,11 @@
 // update the APC icon to show the three base states
 // also add overlays for indicator lights
 /obj/machinery/power/apc/update_icon()
-
 	var/update = check_updates() 		//returns 0 if no need to update icons.
 						// 1 if we need to update the icon_state
 						// 2 if we need to update the overlays
 	if(!update)
+		icon_update_needed = FALSE
 		return
 
 	if(update & 1) // Updating the icon state
@@ -274,8 +275,9 @@
 	else
 		set_light(0)
 
-/obj/machinery/power/apc/proc/check_updates()
+	icon_update_needed = FALSE
 
+/obj/machinery/power/apc/proc/check_updates()
 	var/last_update_state = update_state
 	var/last_update_overlay = update_overlay
 	update_state = 0
@@ -346,7 +348,7 @@
 
 // Used in process so it doesn't update the icon too much
 /obj/machinery/power/apc/proc/queue_icon_update()
-	addtimer(CALLBACK(src, .proc/update_icon), APC_UPDATE_ICON_COOLDOWN, TIMER_UNIQUE)
+	icon_update_needed = TRUE
 
 //attack with an item - open/close cover, insert cell, or (un)lock interface
 
@@ -623,14 +625,10 @@
 		return
 	if(usr == user && opened && (!issilicon(user)))
 		if(cell)
+			user.visible_message("[user] removes \the [cell] from [src]!","<span class='notice'>You remove \the [cell].</span>")
 			user.put_in_hands(cell)
-			cell.add_fingerprint(user)
-			cell.updateicon()
-
+			cell.update_icon()
 			src.cell = null
-			user.visible_message("[user.name] removes the power cell from [src.name]!",\
-								 "<span class='notice'>You remove the power cell.</span>")
-			//to_chat(user, "You remove the power cell.")
 			charging = 0
 			src.update_icon()
 		return
@@ -939,7 +937,8 @@
 		return 0
 
 /obj/machinery/power/apc/process()
-
+	if(icon_update_needed)
+		update_icon()
 	if(stat & (BROKEN|MAINT))
 		return
 	if(!area.requires_power)

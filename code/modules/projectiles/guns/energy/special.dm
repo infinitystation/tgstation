@@ -23,7 +23,7 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	slot_flags = SLOT_BELT
 	pin = null
-	cell_type = null
+	cell = null
 	ammo_x_offset = 2
 	flight_x_offset = 18
 	flight_y_offset = 11
@@ -40,7 +40,7 @@
 /obj/item/weapon/gun/energy/decloner/update_icon()
 	..()
 	var/obj/item/ammo_casing/energy/shot = ammo_type[select]
-	if(power_supply.charge > shot.e_cost)
+	if(cell.charge > shot.e_cost)
 		add_overlay("decloner_spin")
 
 /obj/item/weapon/gun/energy/floragun
@@ -51,7 +51,6 @@
 	ammo_type = list(/obj/item/ammo_casing/energy/flora/yield, /obj/item/ammo_casing/energy/flora/mut)
 	origin_tech = "materials=2;biotech=4"
 	modifystate = 1
-	cell_removing = 0
 	can_pull_pin = 0
 	ammo_x_offset = 1
 	selfcharge = 1
@@ -63,7 +62,7 @@
 	item_state = "c20r"
 	w_class = WEIGHT_CLASS_BULKY
 	ammo_type = list(/obj/item/ammo_casing/energy/meteor)
-	cell_type = /obj/item/weapon/stock_parts/cell/ammo
+	cell = /obj/item/weapon/stock_parts/cell/high
 	clumsy_check = 0 //Admin spawn only, might as well let clowns use it.
 	selfcharge = 1
 
@@ -154,19 +153,19 @@
 
 /obj/item/weapon/gun/energy/plasmacutter/examine(mob/user)
 	..()
-	if(power_supply)
-		to_chat(user, "<span class='notice'>[src] is [round(power_supply.percent())]% charged.</span>")
+	if(cell)
+		to_chat(user, "<span class='notice'>[src] is [round(cell.percent())]% charged.</span>")
 
 /obj/item/weapon/gun/energy/plasmacutter/attackby(obj/item/A, mob/user)
 	if(istype(A, /obj/item/stack/sheet/mineral/plasma))
 		var/obj/item/stack/sheet/S = A
 		S.use(1)
-		power_supply.give(1000)
+		cell.give(1000)
 		recharge_newshot(1)
 		to_chat(user, "<span class='notice'>You insert [A] in [src], recharging it.</span>")
 	else if(istype(A, /obj/item/weapon/ore/plasma))
 		qdel(A)
-		power_supply.give(500)
+		cell.give(500)
 		recharge_newshot(1)
 		to_chat(user, "<span class='notice'>You insert [A] in [src], recharging it.</span>")
 	else
@@ -191,7 +190,6 @@
 	origin_tech = "combat=4;bluespace=6;plasmatech=4;engineering=4"
 	var/obj/effect/portal/blue
 	var/obj/effect/portal/orange
-	cell_removing = 0
 
 /obj/item/weapon/gun/energy/wormhole_projector/update_icon()
 	icon_state = "[initial(icon_state)][select]"
@@ -234,10 +232,9 @@
 	desc = "A machinegun that fires 3d-printed flachettes slowly regenerated using a cyborg's internal power source."
 	icon_state = "l6closed0"
 	icon = 'icons/obj/guns/projectile.dmi'
-	cell_type = "/obj/item/weapon/stock_parts/cell/secborg"
+	cell = "/obj/item/weapon/stock_parts/cell/secborg"
 	ammo_type = list(/obj/item/ammo_casing/energy/c3dbullet)
 	can_charge = 0
-	cell_removing = 0
 	can_pull_pin = 0
 	use_cyborg_cell = 1
 
@@ -253,7 +250,7 @@
 	desc = "A gun that changes temperatures."
 	origin_tech = "combat=4;materials=4;powerstorage=3;magnets=2"
 	ammo_type = list(/obj/item/ammo_casing/energy/temp, /obj/item/ammo_casing/energy/temp/hot)
-	cell_type = "/obj/item/weapon/stock_parts/cell/high"
+	cell = "/obj/item/weapon/stock_parts/cell/high"
 	pin = null
 
 /obj/item/weapon/gun/energy/temperature/security

@@ -130,7 +130,7 @@
 
 /obj/item/weapon/melee/baton/shocker/loaded/New()
 	..()
-	bcell = new(src)
+	cell = new(src)
 	update_icon()
 	return
 

@@ -4,8 +4,8 @@
 	icon_state = "kineticgun"
 	item_state = "kineticgun"
 	ammo_type = list(/obj/item/ammo_casing/energy/kinetic)
-	cell_type = /obj/item/weapon/stock_parts/cell/emproof
-	cell_removing = 0
+	cell = /obj/item/weapon/stock_parts/cell/emproof
+	cell = 0
 	// Apparently these are safe to carry? I'm sure goliaths would disagree.
 	needs_permit = 0
 	var/range_add
@@ -21,7 +21,6 @@
 	var/holds_charge = FALSE
 	var/unique_frequency = FALSE // modified by KA modkits
 	var/overheat = FALSE
-	var/empty_state = "kineticgun_empty"
 	can_bayonet = TRUE
 	knife_x_offset = 15
 	knife_y_offset = 13
@@ -29,11 +28,15 @@
 	var/max_mod_capacity = 150
 	var/list/modkits = list()
 
+	var/empty_state = "kineticgun_empty"
+	var/recharge_timerid
+
 /obj/item/weapon/gun/energy/kinetic_accelerator/recharge_newshot(no_cyborg_drain)
 	..()
 	if(chambered && chambered.BB)
 		var/obj/item/projectile/kinetic/charge = chambered.BB
 		charge.range += range_add
+
 
 /obj/item/weapon/gun/energy/kinetic_accelerator/examine(mob/user)
 	..()
@@ -69,11 +72,12 @@
 	. = list()
 	for(var/A in modkits)
 		. += A
+
 /obj/item/weapon/gun/energy/kinetic_accelerator/proc/modify_projectile(obj/item/projectile/kinetic/K)
+	K.kinetic_gun = src //do something special on-hit, easy!
 	for(var/A in get_modkits())
 		var/obj/item/borg/upgrade/modkit/M = A
 		M.modify_projectile(K)
-		K.kinetic_modules += M //do something special on-hit, easy!
 
 //obj/item/weapon/gun/energy/kinetic_accelerator/attackby(obj/item/weapon/W as obj, mob/user as mob, params)
 //	if(istype(W, /obj/item/weapon/screwdriver) && upgrades["screwdriver"] < 3)
@@ -145,18 +149,19 @@
 		empty()
 
 /obj/item/weapon/gun/energy/kinetic_accelerator/proc/empty()
-	power_supply.use(500)
+	cell.use(500)
 	update_icon()
 
-/obj/item/weapon/gun/energy/kinetic_accelerator/proc/attempt_reload()
+/obj/item/weapon/gun/energy/kinetic_accelerator/proc/attempt_reload(recharge_time)
 	if(overheat)
 		return
+	if(!recharge_time)
+		recharge_time = overheat_time
 	overheat = TRUE
 
 	var/carried = 0
 	if(!unique_frequency)
-		for(var/obj/item/weapon/gun/energy/kinetic_accelerator/K in \
-			loc.GetAllContents())
+		for(var/obj/item/weapon/gun/energy/kinetic_accelerator/K in loc.GetAllContents())
 
 			carried++
 
@@ -164,13 +169,14 @@
 	else
 		carried = 1
 
-	addtimer(CALLBACK(src, .proc/reload), overheat_time * carried)
+	deltimer(recharge_timerid)
+	recharge_timerid = addtimer(CALLBACK(src, .proc/reload), recharge_time * carried, TIMER_STOPPABLE)
 
 /obj/item/weapon/gun/energy/kinetic_accelerator/emp_act(severity)
 	return
 
 /obj/item/weapon/gun/energy/kinetic_accelerator/proc/reload()
-	power_supply.give(500)
+	cell.give(500)
 	recharge_newshot(1)
 	if(!suppressed)
 		playsound(src.loc, 'sound/weapons/kenetic_reload.ogg', 60, 1)
@@ -209,10 +215,10 @@
 	log_override = TRUE
 
 	var/pressure_decrease = 0.25
-	var/list/kinetic_modules = list()
+	var/obj/item/weapon/gun/energy/kinetic_accelerator/kinetic_gun
 
 /obj/item/projectile/kinetic/Destroy()
-	QDEL_NULL(kinetic_modules)
+	kinetic_gun = null
 	return ..()
 
 /obj/item/projectile/kinetic/prehit(atom/target)
@@ -238,15 +244,14 @@
 	var/turf/target_turf = get_turf(target)
 	if(!target_turf)
 		target_turf = get_turf(src)
+	if(kinetic_gun) //hopefully whoever shot this was not very, very unfortunate.
+		for(var/obj/item/borg/upgrade/modkit/M in kinetic_gun.get_modkits())
+			M.projectile_strike(src, target_turf, target, kinetic_gun)
 	if(ismineralturf(target_turf))
 		var/turf/closed/mineral/M = target_turf
 		M.gets_drilled(firer)
 	var/obj/effect/temp_visual/kinetic_blast/K = new /obj/effect/temp_visual/kinetic_blast(target_turf)
 	K.color = color
-	for(var/obj/item/borg/upgrade/modkit/M in kinetic_modules)
-		if(QDELETED(M)) //whoever shot this was very, very unfortunate.
-			continue
-		M.projectile_strike(src, target_turf, target)
 
 
 //Modkits
@@ -256,6 +261,7 @@
 	icon = 'icons/obj/objects.dmi'
 	icon_state = "modkit"
 	origin_tech = "programming=2;materials=2;magnets=4"
+	w_class = WEIGHT_CLASS_SMALL
 	require_module = 1
 	module_type = /obj/item/weapon/robot_module/miner
 	var/denied_type = null
@@ -310,7 +316,7 @@
 
 /obj/item/borg/upgrade/modkit/proc/modify_projectile(obj/item/projectile/kinetic/K)
 
-/obj/item/borg/upgrade/modkit/proc/projectile_strike(obj/item/projectile/kinetic/K, turf/target_turf, atom/target)
+/obj/item/borg/upgrade/modkit/proc/projectile_strike(obj/item/projectile/kinetic/K, turf/target_turf, atom/target, obj/item/weapon/gun/energy/kinetic_accelerator/KA)
 
 //Range
 /obj/item/borg/upgrade/modkit/range
@@ -403,7 +409,7 @@
 /obj/item/borg/upgrade/modkit/aoe/modify_projectile(obj/item/projectile/kinetic/K)
 	K.name = "kinetic explosion"
 
-/obj/item/borg/upgrade/modkit/aoe/projectile_strike(obj/item/projectile/kinetic/K, turf/target_turf, atom/target)
+/obj/item/borg/upgrade/modkit/aoe/projectile_strike(obj/item/projectile/kinetic/K, turf/target_turf, atom/target, obj/item/weapon/gun/energy/kinetic_accelerator/KA)
 	if(stats_stolen)
 		return
 	new /obj/effect/temp_visual/explosion/fast(target_turf)
@@ -436,6 +442,58 @@
 	desc = "Causes the kinetic accelerator to damage mobs in an AoE."
 	modifier = 0.2
 
+//Tendril-unique modules
+/obj/item/borg/upgrade/modkit/cooldown/repeater
+	name = "rapid repeater"
+	desc = "Quarters the kinetic accelerator's cooldown on striking a living target, but greatly increases the base cooldown."
+	denied_type = /obj/item/borg/upgrade/modkit/cooldown/repeater
+	modifier = -14 //Makes the cooldown 3 seconds(with no cooldown mods) if you miss. Don't miss.
+	cost = 50
+
+/obj/item/borg/upgrade/modkit/cooldown/repeater/projectile_strike(obj/item/projectile/kinetic/K, turf/target_turf, atom/target, obj/item/weapon/gun/energy/kinetic_accelerator/KA)
+	var/valid_repeat = FALSE
+	if(isliving(target))
+		var/mob/living/L = target
+		if(L.stat != DEAD)
+			valid_repeat = TRUE
+	if(ismineralturf(target_turf))
+		valid_repeat = TRUE
+	if(valid_repeat)
+		KA.overheat = FALSE
+	KA.attempt_reload(KA.overheat_time * 0.25) //If you hit, the cooldown drops to 0.75 seconds.
+
+/obj/item/borg/upgrade/modkit/lifesteal
+	name = "lifesteal crystal"
+	desc = "Causes kinetic accelerator shots to slightly heal the firer on striking a living target."
+	icon_state = "modkit_crystal"
+	denied_type = /obj/item/borg/upgrade/modkit/lifesteal
+	modifier = 2.5 //Not a very effective method of healing.
+	cost = 20
+	var/static/list/damage_heal_order = list(BRUTE, BURN, OXY)
+
+/obj/item/borg/upgrade/modkit/lifesteal/projectile_strike(obj/item/projectile/kinetic/K, turf/target_turf, atom/target, obj/item/weapon/gun/energy/kinetic_accelerator/KA)
+	if(isliving(target) && isliving(K.firer))
+		var/mob/living/L = target
+		if(L.stat == DEAD)
+			return
+		L = K.firer
+		L.heal_ordered_damage(modifier, damage_heal_order)
+
+/obj/item/borg/upgrade/modkit/resonator_blasts
+	name = "resonator blast"
+	desc = "Causes kinetic accelerator shots to leave and detonate resonator blasts."
+	denied_type = /obj/item/borg/upgrade/modkit/resonator_blasts
+	cost = 30
+	modifier = 0.25 //A bonus 15 damage if you burst the field on a target, 60 if you lure them into it.
+
+/obj/item/borg/upgrade/modkit/resonator_blasts/projectile_strike(obj/item/projectile/kinetic/K, turf/target_turf, atom/target, obj/item/weapon/gun/energy/kinetic_accelerator/KA)
+	if(target_turf && !ismineralturf(target_turf)) //Don't make fields on mineral turfs.
+		var/obj/effect/temp_visual/resonance/R = locate(/obj/effect/temp_visual/resonance) in target_turf
+		if(R)
+			R.damage_multiplier = modifier
+			R.burst()
+			return
+		new /obj/effect/temp_visual/resonance(target_turf, K.firer, null, 30)
 
 //Indoors
 /obj/item/borg/upgrade/modkit/indoors

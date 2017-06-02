@@ -43,7 +43,7 @@
 				cell.loc = loc
 
 			cell.add_fingerprint(user)
-			cell.updateicon()
+			cell.update_icon()
 
 			src.cell = null
 			usr << "You remove the power cell"
