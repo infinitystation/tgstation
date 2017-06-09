@@ -156,7 +156,10 @@
 
 /obj/effect/landmark/start/depsec/science
 	name = "science_sec"
-
+/*
+/obj/effect/landmark/start/depsec/command //TO_TERROR
+	name = "command_sec"
+*/
 /obj/effect/landmark/start/wizard
 	name = "wizard"
 

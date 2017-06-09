@@ -499,3 +499,128 @@
 	desc = "Знак корпорации 'Анабиоз'. Цепочка ДНК'а на лого намекает на биологические исследования..."
 	icon_state = "emblem"
 	icon = 'icons/mob/infinity_anabiosis/anabiosis.dmi'
+
+/obj/structure/sign/warning/airlock
+	name = "\improper EXTERNAL AIRLOCK"
+	icon = 'icons/obj/infinity_decals.dmi'
+	icon_state = "doors"
+
+/obj/structure/sign/warning/bomb_range
+	name = "\improper BOMB RANGE"
+	icon = 'icons/obj/infinity_decals.dmi'
+	icon_state = "blast"
+
+/obj/structure/sign/warning/compressed_gas
+	name = "\improper COMPRESSED GAS"
+	icon = 'icons/obj/infinity_decals.dmi'
+	icon_state = "hikpa"
+
+/obj/structure/sign/warning/fall
+	name = "\improper FALL HAZARD"
+	icon = 'icons/obj/infinity_decals.dmi'
+	icon_state = "falling"
+
+/obj/structure/sign/warning/lethal_turrets
+	name = "\improper LETHAL TURRETS"
+	icon = 'icons/obj/infinity_decals.dmi'
+	icon_state = "turrets"
+
+/obj/structure/sign/warning/lethal_turrets/New()
+	..()
+	desc += " Enter at own risk!."
+
+/obj/structure/sign/warning/mail_delivery
+	name = "\improper MAIL DELIVERY"
+	icon = 'icons/obj/infinity_decals.dmi'
+	icon_state = "mail"
+
+/obj/structure/sign/warning/moving_parts
+	name = "\improper MOVING PARTS"
+	icon = 'icons/obj/infinity_decals.dmi'
+	icon_state = "movingparts"
+
+/obj/structure/sign/warning/armory
+	name = "\improper ARMORY"
+	icon = 'icons/obj/infinity_decals.dmi'
+	icon_state = "armory"
+
+/obj/structure/sign/warning/server_room
+	name = "\improper SERVER ROOM"
+	icon = 'icons/obj/infinity_decals.dmi'
+	icon_state = "server"
+
+/obj/structure/sign/goldenplaque/medical
+	name = "medical certificate"
+	desc = "A picture next to a long winded description of medical certifications and degrees."
+	icon = 'icons/obj/infinity_decals.dmi'
+	icon_state = "lightplaquealt"
+
+/obj/structure/sign/science_2
+	name = "\improper RESEARCH"
+	desc = "A sign labelling an area where research is performed."
+	icon = 'icons/obj/infinity_decals.dmi'
+	icon_state = "science2"
+
+/obj/structure/sign/xenobio_1
+	name = "\improper XENOBIOLOGY"
+	desc = "A sign labelling an area as a place where xenobiological entites are researched."
+	icon = 'icons/obj/infinity_decals.dmi'
+	icon_state = "xenobio"
+
+/obj/structure/sign/xenobio_2
+	name = "\improper XENOBIOLOGY"
+	desc = "A sign labelling an area as a place where xenobiological entites are researched."
+	icon = 'icons/obj/infinity_decals.dmi'
+	icon_state = "xenobio2"
+
+/obj/structure/sign/xenobio_3
+	name = "\improper XENOBIOLOGY"
+	desc = "A sign labelling an area as a place where xenobiological entites are researched."
+	icon = 'icons/obj/infinity_decals.dmi'
+	icon_state = "xenobio3"
+
+/obj/structure/sign/xenobio_4
+	name = "\improper XENOBIOLOGY"
+	desc = "A sign labelling an area as a place where xenobiological entites are researched."
+	icon = 'icons/obj/infinity_decals.dmi'
+	icon_state = "xenobio4"
+
+/obj/structure/sign/hydro
+	name = "\improper HYDROPONICS"
+	desc = "A sign labelling an area as a place where plants are grown."
+	icon = 'icons/obj/infinity_decals.dmi'
+	icon_state = "hydro1"
+
+/obj/structure/sign/hydrostorage
+	name = "\improper HYDROPONICS STORAGE"
+	desc = "A sign labelling an area as a place where plant growing supplies are kept."
+	icon = 'icons/obj/infinity_decals.dmi'
+	icon_state = "hydro3"
+
+/obj/structure/sign/deck/bridge
+	name = "\improper Bridge Deck"
+	icon = 'icons/obj/infinity_decals.dmi'
+	icon_state = "deck-b"
+
+/obj/structure/sign/deck/first
+	name = "\improper First Deck"
+	icon = 'icons/obj/infinity_decals.dmi'
+	icon_state = "deck-1"
+
+/obj/structure/sign/deck/second
+	name = "\improper Second Deck"
+	icon = 'icons/obj/infinity_decals.dmi'
+	icon_state = "deck-2"
+
+/obj/structure/sign/deck/third
+	name = "\improper Third Deck"
+	icon = 'icons/obj/infinity_decals.dmi'
+	icon_state = "deck-3"
+
+/obj/structure/sign/deck/fourth
+	name = "\improper Fourth Deck"
+	icon = 'icons/obj/infinity_decals.dmi'
+	icon_state = "deck-4"
+
+
+

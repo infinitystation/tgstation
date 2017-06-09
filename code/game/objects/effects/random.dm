@@ -115,3 +115,22 @@
 					prob(2);/obj/item/device/flashlight,\
 					prob(1);/obj/item/device/paicard,\
 					prob(5);/obj/random/tool)
+
+/obj/random/obstruction //Large objects to block things off in maintenance
+	name = "random obstruction"
+	desc = "This is a random obstruction."
+	icon = 'icons/obj/cult.dmi'
+	icon_state = "cultgirder"
+	item_to_spawn()
+		return pick(/obj/structure/barricade/wooden,\
+					/obj/structure/girder,\
+					/obj/structure/girder/displaced,\
+					/obj/structure/girder/reinforced,\
+					/obj/structure/grille,\
+					/obj/structure/grille/broken,\
+					/obj/structure/foamedmetal,\
+					/obj/item/weapon/caution,\
+					/obj/item/clothing/head/cone,\
+					/obj/structure/inflatable/wall,\
+					/obj/structure/inflatable/door)
+
