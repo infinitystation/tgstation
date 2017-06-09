@@ -20,60 +20,60 @@
 
 	//uniform
 	if(w_uniform && !(slot_w_uniform in obscured))
-		//Ties
-		var/tie_msg
+		//accessory
+		var/accessory_msg
 		if(istype(w_uniform,/obj/item/clothing/under))
 			var/obj/item/clothing/under/U = w_uniform
-			if(U.hastie)
-				tie_msg += " с \icon[U.hastie] [U.hastie]"
+			if(U.attached_accessory)
+				accessory_msg += " c [bicon(U.attached_accessory)] \a [U.attached_accessory]"
 
 		if(w_uniform.blood_DNA)
-			msg += "<span class='warning'>[t_He] носит \icon[w_uniform] [w_uniform.gender==PLURAL?"some":"a"] окровавленую [w_uniform.name][tie_msg]!</span>\n"
+			msg += "<span class='warning'>[t_He] носит \icon[w_uniform] [w_uniform.gender==PLURAL?"some":"a"] окровавленую [w_uniform.name][accessory_msg]!</span>\n"
 		else
-			msg += "[t_He] носит \icon[w_uniform] \ [w_uniform][tie_msg].\n"
+			msg += "[t_He] носит [bicon(w_uniform)] \ [w_uniform][accessory_msg].\n"
 
 	//head
 	if(head)
 		if(head.blood_DNA)
-			msg += "<span class='warning'>[t_He] носит \icon[head] [head.gender==PLURAL?"some":"a"] окровавленую [head.name] на голове!</span>\n"
+			msg += "<span class='warning'>[t_He] носит [bicon(head)] [head.gender==PLURAL?"some":"a"] окровавленую [head.name] на голове!</span>\n"
 		else
-			msg += "[t_He] носит \icon[head] [head]\n"
+			msg += "[t_He] носит [bicon(head)] [head]\n"
 
 	//suit/armor
 	if(wear_suit)
 		if(wear_suit.blood_DNA)
-			msg += "<span class='warning'>[t_He] носит \icon[wear_suit] [wear_suit.gender==PLURAL?"some":"a"] окрававленное [wear_suit.name]!</span>\n"
+			msg += "<span class='warning'>[t_He] носит [bicon(wear_suit)] [wear_suit.gender==PLURAL?"some":"a"] окрававленное [wear_suit.name]!</span>\n"
 		else
-			msg += "[t_He] носит \icon[wear_suit] [wear_suit].\n"
+			msg += "[t_He] носит [bicon(wear_suit)] [wear_suit].\n"
 
 		//suit/armor storage
 		if(s_store)
 			if(s_store.blood_DNA)
-				msg += "<span class='warning'>[t_He] носит \icon[s_store] [s_store.gender==PLURAL?"some":"a"] окровавленый [s_store.name] на [wear_suit.name]!</span>\n"
+				msg += "<span class='warning'>[t_He] носит [bicon(s_store)] [s_store.gender==PLURAL?"some":"a"] окровавленый [s_store.name] на [wear_suit.name]!</span>\n"
 			else
-				msg += "[t_He] носит \icon[s_store] [s_store] на [wear_suit.name].\n"
+				msg += "[t_He] носит [bicon(s_store)] [s_store] на [wear_suit.name].\n"
 
 	//back
 	if(back)
 		if(back.blood_DNA)
-			msg += "<span class='warning'>[t_He] носит \icon[back] окровавленны[back.gender==PLURAL?"е":"й"] [back] на спине.</span>\n"
+			msg += "<span class='warning'>[t_He] носит [bicon(back)] окровавленны[back.gender==PLURAL?"е":"й"] [back] на спине.</span>\n"
 		else
-			msg += "[t_He] носит \icon[back] [back] на спине.\n"
+			msg += "[t_He] носит [bicon(back)] [back] на спине.\n"
 
 	//Hands
 	for(var/obj/item/I in held_items)
 		if(!(I.flags & ABSTRACT))
 			if(I.blood_DNA)
-				msg += "<span class='warning'>[t_He] держит \icon[I] окровавленны[I.gender==PLURAL?"е":"й"] [I.name] на [t_his] [get_held_index_name(get_held_index_of_item(I))]!</span>\n"
+				msg += "<span class='warning'>[t_He] держит [bicon(I)] окровавленны[I.gender==PLURAL?"е":"й"] [I.name] на [t_his] [get_held_index_name(get_held_index_of_item(I))]!</span>\n"
 			else
-				msg += "[t_He] держит \icon[I] [I] на [t_his] [get_held_index_name(get_held_index_of_item(I))].\n"
+				msg += "[t_He] держит [bicon(I)] [I] на [t_his] [get_held_index_name(get_held_index_of_item(I))].\n"
 
 	//gloves
 	if(gloves && !(slot_gloves in obscured))
 		if(gloves.blood_DNA)
-			msg += "<span class='warning'>[t_He] носит\icon[gloves] [gloves.gender==PLURAL?"some":"a"] окровавленые [gloves.name]</span>\n"
+			msg += "<span class='warning'>[t_He] носит [bicon(gloves)] [gloves.gender==PLURAL?"some":"a"] окровавленые [gloves.name]</span>\n"
 		else
-			msg += "[t_He] носит \icon[gloves] [gloves] \n"
+			msg += "[t_He] носит [bicon(gloves)] [gloves] \n"
 	else if(blood_DNA)
 		var/hand_number = get_num_arms()
 		if(hand_number)
@@ -84,50 +84,49 @@
 	//handcuffed?
 	if(handcuffed)
 		if(istype(handcuffed, /obj/item/weapon/restraints/handcuffs/cable))
-			msg += "<span class='warning'>[t_He] \icon[handcuffed] св&#255;зан с помощью кабел&#255;</span>\n"
+			msg += "<span class='warning'>[t_He] [bicon(handcuffed)] св&#255;зан с помощью кабел&#255;</span>\n"
 		else
-			msg += "<span class='warning'>[t_He] \icon[handcuffed] в наручниках!</span>\n"
+			msg += "<span class='warning'>[t_He] [bicon(handcuffed)] в наручниках!</span>\n"
 
 	//belt
 	if(belt)
 		if(belt.blood_DNA)
-			msg += "<span class='warning'>[t_He] носит \icon[belt] [belt.gender==PLURAL?"some":"a"] окровавленый [belt.name]</span>\n"
+			msg += "<span class='warning'>[t_He] носит[bicon(belt)] [belt.gender==PLURAL?"some":"a"] окровавленый [belt.name]</span>\n"
 		else
-			msg += "[t_He] носит \icon[belt] \ [belt]\n"
+			msg += "[t_He] носит [bicon(belt)] \ [belt]\n"
 
 	//shoes
 	if(shoes && !(slot_shoes in obscured))
 		if(shoes.blood_DNA)
-			msg += "<span class='warning'>[t_He] носит \icon[shoes] [shoes.gender==PLURAL?"some":"a"] окровавленые [shoes.name]</span>\n"
+			msg += "<span class='warning'>[t_He] носит [bicon(shoes)] [shoes.gender==PLURAL?"some":"a"] окровавленые [shoes.name]</span>\n"
 		else
-			msg += "[t_He] носит \icon[shoes] \ [shoes]\n"
+			msg += "[t_He] носит [bicon(shoes)] \ [shoes]\n"
 
 	//mask
 	if(wear_mask && !(slot_wear_mask in obscured))
 		if(wear_mask.blood_DNA)
-			msg += "<span class='warning'>[t_He] носит\icon[wear_mask] [wear_mask.gender==PLURAL?"some":"a"] окровавленую [wear_mask.name] </span>\n"
+			msg += "<span class='warning'>[t_He] носит [bicon(wear_mask)] [wear_mask.gender==PLURAL?"some":"a"] окровавленую [wear_mask.name] </span>\n"
 		else
-			msg += "[t_He] носит\icon[wear_mask] [wear_mask]\n"
+			msg += "[t_He] носит [bicon(wear_mask)] [wear_mask]\n"
 
 	if (wear_neck && !(slot_neck in obscured))
-		msg += "[t_He] [t_is] wearing \icon[src.wear_neck] \a [src.wear_neck] around [t_his] neck.\n"
+		msg += "[t_He] носит [bicon(wear_neck)] \ [src.wear_neck] на [t_his] шее.\n"
 
 	//eyes
 	if(glasses && !(slot_glasses in obscured))
 		if(glasses.blood_DNA)
-			msg += "<span class='warning'>[t_He] носит\icon[glasses] [glasses.gender==PLURAL?"some":"a"] окровавленые [glasses]</span>\n"
+			msg += "<span class='warning'>[t_He] носит [bicon(glasses)] [glasses.gender==PLURAL?"some":"a"] окровавленые [glasses]</span>\n"
 		else
-			msg += "[t_He] носит \icon[glasses] [glasses]\n"
+			msg += "[t_He] носит [bicon(glasses)] [glasses]\n"
 
 	//ears
 	if(ears && !(slot_ears in obscured))
-		msg += "[t_He] носит на ухе  \icon[ears] [ears] \n"
+		msg += "[t_He] носит на ухе  [bicon(ears)] [ears] \n"
 
 	//ID
 	if(wear_id)
-		msg += "[t_He] носит  \icon[wear_id] \ [wear_id].\n"
+		msg += "[t_He] носит  [bicon(wear_id)] \ [wear_id].\n"
 	//Jitters
-
 
 	switch(jitteriness)
 		if(300 to INFINITY)
@@ -172,7 +171,7 @@
 		var/obj/item/bodypart/BP = X
 		missing -= BP.body_zone
 		for(var/obj/item/I in BP.embedded_objects)
-			msg += "<B>[t_He] [t_has] \icon[I] [I], застр&#255;вшую в [t_his] [BP.name]!</B>\n"
+			msg += "<B>[t_He] [t_has] [bicon(I)] [I], застр&#255;вшую в [t_his] [BP.name]!</B>\n"
 
 	//stores missing limbs
 	var/l_limbs_missing = 0

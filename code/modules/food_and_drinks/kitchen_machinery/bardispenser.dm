@@ -5,12 +5,12 @@
 */
 /obj/machinery/chem_dispenser/bartender
 	name = "portable bar dispenser"
-	desc = "Ўтука, которая раздает бухло."
+	desc = "Ўтука, которая разливает алкоголь в тару."
 	icon = 'icons/obj/BarDispenser.dmi'
 	icon_state = "bardispenser"
 
-	energy = 5
-	max_energy = 5
+	//energy = 5
+	//max_energy = 5
 	amount = 5
 	recharge_delay = 20
 	req_access_txt = "25"
@@ -78,7 +78,7 @@
 	//energy
 	for(var/obj/item/weapon/stock_parts/matter_bin/M in component_parts)
 		temp_energy += M.rating
-	max_energy = temp_energy * 7  //max energy = (bin1.rating + bin2.rating - 1) * 5, 5 on lowest 25 on highest
+	//max_energy = temp_energy * 7  //max energy = (bin1.rating + bin2.rating - 1) * 5, 5 on lowest 25 on highest
 
 	//recharge delay
 	for(var/obj/item/weapon/stock_parts/capacitor/C in component_parts)

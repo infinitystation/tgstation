@@ -49,12 +49,12 @@
 	icon_state = "holobadge"
 	var/emagged //Emagging removes Sec check.
 
-/obj/item/clothing/tie/badge/holo/cord
+/*/obj/item/clothing/tie/badge/holo/cord
 	icon_state = "holobadge-cord"
 	slot_flags = SLOT_NECK
 
 /obj/item/clothing/tie/badge/holo/cord/attach(obj/item/clothing/under/U, user)
-	return
+	return*/
 
 /obj/item/clothing/tie/badge/holo/attack_self(mob/user as mob)
 	if(!stored_name)
@@ -98,8 +98,8 @@
 		new /obj/item/clothing/tie/badge/holo(src)
 		new /obj/item/clothing/tie/badge/holo(src)
 		new /obj/item/clothing/tie/badge/holo(src)
-		new /obj/item/clothing/tie/badge/holo/cord(src)
-		new /obj/item/clothing/tie/badge/holo/cord(src)
+		/*new /obj/item/clothing/tie/badge/holo/cord(src)
+		new /obj/item/clothing/tie/badge/holo/cord(src)*/
 		..()
 		return
 
