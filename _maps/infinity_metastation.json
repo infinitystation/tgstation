@@ -3,5 +3,9 @@
     "map_path": "map_files/Infinity_MetaStation",
     "map_file": "MetaStation.dmm",
     "minetype": "lavaland",
-    "transition_config": "default"
+    "transition_config": "default",
+    "extra_maps": "yes",
+    "extra_centcomm": "z2.dmm",
+    "extra_minemap": "lavaland.dmm",
+    "extra_derelict": "z3.dmm"
 }

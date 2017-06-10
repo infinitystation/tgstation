@@ -12,6 +12,13 @@
 
     var/minetype = "lavaland"
 
+    var/extra_maps = "no"
+
+    var/extra_cenctomm = "map_files/generic/Centcomm.dmm"
+    var/extra_minemap = "map_files/generic/Lavaland.dmm"
+    var/extra_derelict = "map_files/generic/Space.dmm"
+    // Если надо, добавляйте еще ~bear1ake@inf-dev
+
     var/list/transition_config = list(MAIN_STATION = CROSSLINKED,
                                     CENTCOMM = SELFLOOPING,
                                     EMPTY_AREA_1 = CROSSLINKED,
@@ -75,6 +82,13 @@
 
         for(var/I in jtcl)
             transition_config[TransitionStringToEnum(I)] = TransitionStringToEnum(jtcl[I])
+
+    extra_maps = json["extra_maps"]
+
+    if(extra_maps == "yes")
+        extra_cenctomm = json["extra_centcomm"]
+        extra_minemap = json["extra_minemap"]
+        extra_derelict = json["extra_derelict"]
 
     defaulted = FALSE
 
