@@ -159,7 +159,7 @@ CHECK_RANDOMIZER
 
 ## set a server location for world reboot. Don't include the byond://, just give the address and port.
 ## Don't set this to the same server, BYOND will automatically restart players to the server when it has restarted.
-# SERVER 88.198.175.74:4738
+# SERVER 193.70.42.67:7777
 
 ## forum address
 FORUMURL http://infinity.so/
