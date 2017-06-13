@@ -1,5 +1,3 @@
-GLOBAL_REAL(GLOB, /datum/controller/global_vars)
-
 /datum/controller/global_vars
 	name = "Global Variables"
 
@@ -24,11 +22,11 @@ GLOBAL_REAL(GLOB, /datum/controller/global_vars)
 	stack_trace("Some fucker qdel'd the global holder!")
 	if(!force)
 		return QDEL_HINT_LETMELIVE
-	
+
 	QDEL_NULL(statclick)
 	gvars_datum_protected_varlist.Cut()
 	gvars_datum_in_built_vars.Cut()
-	
+
 	GLOB = null
 
 	return ..()
@@ -36,7 +34,7 @@ GLOBAL_REAL(GLOB, /datum/controller/global_vars)
 /datum/controller/global_vars/stat_entry()
 	if(!statclick)
 		statclick = new/obj/effect/statclick/debug(null, "Initializing...", src)
-	
+
 	stat("Globals:", statclick.update("Edit"))
 
 /datum/controller/global_vars/can_vv_get(var_name)
@@ -52,12 +50,12 @@ GLOBAL_REAL(GLOB, /datum/controller/global_vars)
 /datum/controller/global_vars/Initialize()
 	gvars_datum_init_order = list()
 	gvars_datum_protected_varlist = list("gvars_datum_protected_varlist")
-	
+
 	//See https://github.com/tgstation/tgstation/issues/26954
 	for(var/I in typesof(/datum/controller/global_vars/proc))
 		var/CLEANBOT_RETURNS = "[I]"
 		pass(CLEANBOT_RETURNS)
-	
+
 	for(var/I in vars - gvars_datum_in_built_vars)
 		var/start_tick = world.time
 		call(src, "InitGlobal[I]")()
