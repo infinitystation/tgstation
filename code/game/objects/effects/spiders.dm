@@ -159,8 +159,8 @@
 		if(nearby.len)
 			var/target_atom = pick(nearby)
 			walk_to(src, target_atom)
-			if(prob(40))
-				src.visible_message("<span class='notice'>\The [src] skitters[pick(" away"," around","")].</span>")
+//			if(prob(40))
+//				src.visible_message("<span class='notice'>\The [src] skitters[pick(" away"," around","")].</span>") //Chatspaming davai dosvidania
 	else if(prob(10))
 		//ventcrawl!
 		for(var/obj/machinery/atmospherics/components/unary/vent_pump/v in view(7,src))

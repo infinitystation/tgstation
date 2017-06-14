@@ -27,6 +27,7 @@
 	speak_emote = list("chitters")
 	emote_hear = list("chitters")
 	speak_chance = 5
+	initial_language_holder = /datum/language/xenocommon
 	turns_per_move = 5
 	see_in_dark = 10
 	butcher_results = list(/obj/item/weapon/reagent_containers/food/snacks/meat/slab/spider = 2, /obj/item/weapon/reagent_containers/food/snacks/spiderleg = 8)
@@ -36,6 +37,7 @@
 	maxHealth = 200
 	health = 200
 	obj_damage = 60
+	speed = 1.2
 	melee_damage_lower = 15
 	melee_damage_upper = 20
 	faction = list("spiders")
@@ -83,6 +85,7 @@
 	butcher_results = list(/obj/item/weapon/reagent_containers/food/snacks/meat/slab/spider = 2, /obj/item/weapon/reagent_containers/food/snacks/spiderleg = 8, /obj/item/weapon/reagent_containers/food/snacks/spidereggs = 4)
 	maxHealth = 40
 	health = 40
+	speed = 0
 	melee_damage_lower = 5
 	melee_damage_upper = 10
 	poison_per_bite = 3
@@ -98,6 +101,7 @@
 	icon_dead = "hunter_dead"
 	maxHealth = 120
 	health = 120
+	speed = 0.5
 	melee_damage_lower = 10
 	melee_damage_upper = 20
 	poison_per_bite = 5
@@ -177,6 +181,9 @@
 	var/T = src.loc
 
 	if(stat == DEAD)
+		return
+	if(locate(/obj/structure/spider/stickyweb) in loc)
+		to_chat(src, "<span class='warning'>There is already a web here. </span>")
 		return
 	if(busy != SPINNING_WEB)
 		busy = SPINNING_WEB

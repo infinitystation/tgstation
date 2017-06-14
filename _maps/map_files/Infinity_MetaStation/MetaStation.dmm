@@ -11051,7 +11051,8 @@
 	id = "Cell 3";
 	name = "Cell 3";
 	pixel_y = -32;
-	req_access = list(1)
+	req_access = null;
+	req_access_txt = "1"
 	},
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden{
 	dir = 2;
@@ -11076,7 +11077,8 @@
 	id = "Cell 2";
 	name = "Cell 2";
 	pixel_y = -32;
-	req_access = list(1)
+	req_access = null;
+	req_access_txt = "1"
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
@@ -11111,7 +11113,8 @@
 	id = "Cell 1";
 	name = "Cell 1";
 	pixel_y = -32;
-	req_access = list(1);
+	req_access = null;
+	req_access_txt = "1";
 	req_one_access_txt = "0"
 	},
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden,
@@ -14791,7 +14794,8 @@
 	name = "Cell 5";
 	pixel_x = -32;
 	pixel_y = 0;
-	req_access = list(1)
+	req_access = null;
+	req_access_txt = "1"
 	},
 /turf/open/floor/plasteel/red/side{
 	dir = 8
@@ -14810,7 +14814,8 @@
 	name = "Cell 4";
 	pixel_x = 32;
 	pixel_y = 0;
-	req_access = list(1)
+	req_access = null;
+	req_access_txt = "1"
 	},
 /turf/open/floor/plasteel/red/side{
 	dir = 4
@@ -18502,7 +18507,8 @@
 	name = "Iso. 2";
 	pixel_x = -32;
 	pixel_y = 0;
-	req_access = list(1)
+	req_access = null;
+	req_access_txt = "1"
 	},
 /obj/machinery/camera{
 	c_tag = "Brig - West corridor - South";
@@ -18527,7 +18533,8 @@
 	name = "Iso. 1";
 	pixel_x = 32;
 	pixel_y = 0;
-	req_access = list(1)
+	req_access = null;
+	req_access_txt = "1"
 	},
 /obj/machinery/holopad,
 /turf/open/floor/plasteel/red/corner{
@@ -37733,7 +37740,7 @@
 /obj/machinery/atmospherics/pipe/simple/orange/visible{
 	dir = 5
 	},
-/turf/open/space,
+/turf/closed/wall,
 /area/space)
 "bmN" = (
 /obj/machinery/atmospherics/pipe/simple/orange/visible{
@@ -104012,11 +104019,11 @@ aaa
 aaa
 aai
 aaa
-aRO
+aPU
 aTv
 aVu
 aTv
-aYT
+aPU
 aaa
 aai
 aai
@@ -104269,11 +104276,11 @@ aai
 aaa
 aai
 aaa
-aRN
+aPU
 aTv
 aVt
 aTv
-aRN
+aPU
 aai
 aai
 aaa
@@ -109434,19 +109441,19 @@ bCk
 aVH
 bFY
 dgZ
-dhe
-dhh
-dhj
-dhn
+dgZ
+dgZ
+dgZ
+dgZ
 bQx
 bSk
 bTU
-dhy
-dhC
-dhI
-dhN
+dgZ
+dgZ
+dgZ
+dgZ
 bSn
-dia
+dgZ
 cem
 cem
 cem
@@ -109690,18 +109697,18 @@ boU
 bCn
 aVK
 bGb
-dha
+dgZ
 dhf
 dhi
 bLB
-dho
-dhq
+dgZ
+dgZ
 bSn
-dhw
-dhz
+dgZ
+dgZ
 dhD
-dhJ
-dhO
+dhf
+dhd
 cbB
 ccN
 cem
@@ -109934,7 +109941,7 @@ aaa
 aaa
 aai
 aai
-dgP
+dgA
 blu
 bnl
 boU
@@ -110189,9 +110196,9 @@ aaa
 aaa
 aai
 dgA
-dgF
-dgL
-dgQ
+dgA
+dgA
+dgA
 blx
 dgV
 boU
@@ -110204,11 +110211,11 @@ bAs
 bCp
 bEf
 bGc
-dhb
+dgZ
 bJG
 bLq
 dhl
-dhp
+dgZ
 bQy
 bSo
 bTX
@@ -110217,7 +110224,7 @@ bXf
 bXf
 bXf
 cbD
-dib
+dhl
 ceo
 cfu
 chc
@@ -110445,7 +110452,7 @@ aLH
 aLH
 aLI
 aaa
-dgB
+dgA
 bgA
 bif
 bjU
@@ -110472,9 +110479,9 @@ bIa
 bIa
 bIa
 bIa
-dhP
+dhd
 cbC
-dic
+dgZ
 cem
 cem
 cem
@@ -110702,10 +110709,10 @@ aZd
 aLH
 bbT
 aaa
-dgC
+dgA
 bgC
 dgM
-dgR
+dgA
 blz
 bnn
 boU
@@ -110735,7 +110742,7 @@ ccO
 ceq
 cfw
 che
-dix
+dgZ
 aaa
 aai
 aaa
@@ -110959,10 +110966,10 @@ aZc
 aLH
 bbS
 aaa
-dgD
+dgA
 bgB
 big
-dgS
+dgA
 bly
 bnm
 boU
@@ -110986,13 +110993,13 @@ bLr
 bVy
 bXg
 bIa
-dhQ
+dhf
 cbE
-did
+dgZ
 cep
 cfv
 chd
-diy
+dgZ
 aai
 aai
 aai
@@ -111216,10 +111223,10 @@ aZc
 aLH
 bbS
 aaa
-dgE
-dgG
-dgN
-dgT
+dgA
+dgA
+dgA
+dgA
 blz
 bif
 boU
@@ -111245,11 +111252,11 @@ bXi
 bIa
 cad
 cbE
-die
+dgZ
 cer
 cfx
 chf
-diz
+dgZ
 aaa
 aai
 aaa
@@ -111474,7 +111481,7 @@ aLH
 bbS
 aaa
 aaa
-dgH
+dgA
 bih
 bjV
 blz
@@ -111502,9 +111509,9 @@ bLr
 bYD
 cac
 cbE
-dif
-dih
-dio
+dgZ
+dgZ
+dgZ
 ccP
 ccP
 ccP
@@ -111733,7 +111740,7 @@ aaa
 aai
 dgI
 bii
-dgU
+dgM
 blz
 bnp
 boU
@@ -111988,11 +111995,11 @@ aLH
 aLI
 aaa
 aai
-dgJ
-dgO
+dgI
+dgM
 bjW
 blA
-dgX
+dgM
 boW
 biF
 bsz
@@ -112245,7 +112252,7 @@ aaa
 aaa
 aai
 aai
-dgK
+dgA
 bik
 bjX
 blC
@@ -112271,7 +112278,7 @@ bIa
 bIa
 bIa
 bIa
-dhR
+dgZ
 cbE
 ccP
 ceu
@@ -112528,7 +112535,7 @@ bUb
 bVB
 bXl
 bYE
-dhS
+dgZ
 cbC
 ccP
 cet
@@ -112784,8 +112791,8 @@ bEo
 bUd
 bVD
 bXm
-dhK
-dhT
+dhD
+dgZ
 cbE
 ccP
 cew
@@ -113040,9 +113047,9 @@ bEo
 bEo
 bUc
 bVC
-dhE
-dhL
-dhU
+dhl
+dhd
+dgZ
 cbI
 ccP
 cev
@@ -113556,7 +113563,7 @@ bUe
 bVE
 bUe
 bYF
-dhV
+dgZ
 cbE
 ccP
 ccP
@@ -113807,18 +113814,18 @@ bJR
 bEo
 bNh
 bEo
-dhr
-dht
-dhx
-dhA
-dhF
-dhM
-dhW
+dhf
+dgZ
+dgZ
+dgZ
+dgZ
+dgZ
+dgZ
 cbE
-dig
-dii
+dhl
+dhl
 cfE
-diq
+dgZ
 ciA
 cjL
 clt
@@ -114068,14 +114075,14 @@ bQF
 dhu
 bUg
 bVG
-dhG
+dhd
 bYH
-dhX
+dhl
 dhZ
 ccR
-dij
-dip
-dir
+dhd
+dhl
+dgZ
 ciz
 cjK
 cls
@@ -114317,22 +114324,22 @@ bCA
 bEr
 bGr
 dhc
-dhg
+dhc
 bLC
-dhm
+dhc
 bPe
-dhs
-dhv
+dhc
+dhc
 bUh
-dhB
-dhH
+dhc
+dhc
 bYJ
-dhY
+dhc
 cbL
 ccT
 ccT
 cfF
-dis
+dgZ
 ciB
 cjL
 clv
@@ -114587,9 +114594,9 @@ bYI
 cag
 cbK
 ccS
-dik
+dhd
 cbE
-dit
+dgZ
 ccP
 ccP
 clu
@@ -114846,7 +114853,7 @@ bCB
 bCB
 bCB
 cbC
-diu
+dgZ
 ciD
 ccP
 clx
@@ -116645,7 +116652,7 @@ cbR
 ccZ
 bCB
 cfG
-div
+dhd
 ccP
 cjO
 clB
@@ -116902,7 +116909,7 @@ bCB
 bCB
 bCB
 cfG
-diw
+dhD
 ccP
 cjQ
 clE
@@ -117157,7 +117164,7 @@ bYQ
 cal
 cbT
 bCB
-dil
+dhf
 cfJ
 chq
 ccP
@@ -117414,7 +117421,7 @@ bGv
 can
 cbU
 bCB
-dim
+dhl
 cfL
 bLB
 ccP
@@ -117671,7 +117678,7 @@ bYR
 cam
 bCB
 bCB
-din
+dgZ
 cfK
 chr
 chr
@@ -122229,7 +122236,7 @@ aai
 aai
 aai
 aaa
-acE
+agv
 ada
 ada
 ada
@@ -134048,7 +134055,7 @@ aaa
 aaa
 aaa
 aai
-abl
+abj
 abG
 aci
 abG
