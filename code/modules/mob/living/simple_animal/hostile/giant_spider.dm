@@ -85,10 +85,10 @@
 	butcher_results = list(/obj/item/weapon/reagent_containers/food/snacks/meat/slab/spider = 2, /obj/item/weapon/reagent_containers/food/snacks/spiderleg = 8, /obj/item/weapon/reagent_containers/food/snacks/spidereggs = 4)
 	maxHealth = 40
 	health = 40
-	speed = 0
+	speed = 1.2
 	melee_damage_lower = 5
 	melee_damage_upper = 10
-	poison_per_bite = 3
+	poison_per_bite = 1
 	var/atom/movable/cocoon_target
 	var/fed = 0
 	var/static/list/consumed_mobs = list() //the tags of mobs that have been consumed by nurse spiders to lay eggs
@@ -99,12 +99,12 @@
 	icon_state = "hunter"
 	icon_living = "hunter"
 	icon_dead = "hunter_dead"
-	maxHealth = 120
-	health = 120
-	speed = 0.5
+	maxHealth = 100
+	health = 100
+	speed = 1
 	melee_damage_lower = 10
-	melee_damage_upper = 20
-	poison_per_bite = 5
+	melee_damage_upper = 15
+	poison_per_bite = 3
 	move_to_delay = 5
 
 /mob/living/simple_animal/hostile/poison/giant_spider/handle_automated_action()
