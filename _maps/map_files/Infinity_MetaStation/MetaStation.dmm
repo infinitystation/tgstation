@@ -18300,7 +18300,7 @@
 "aFo" = (
 /obj/machinery/atmospherics/components/unary/outlet_injector/on,
 /turf/open/floor/plating/airless,
-/area/space)
+/area/engine/engineering)
 "aFp" = (
 /turf/open/floor/plating,
 /area/construction)

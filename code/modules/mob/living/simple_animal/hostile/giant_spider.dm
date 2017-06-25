@@ -26,8 +26,7 @@
 	icon_dead = "guard_dead"
 	speak_emote = list("chitters")
 	emote_hear = list("chitters")
-	speak_chance = 5
-	initial_language_holder = /datum/language/xenocommon
+	speak_chance = 0
 	turns_per_move = 5
 	see_in_dark = 10
 	butcher_results = list(/obj/item/weapon/reagent_containers/food/snacks/meat/slab/spider = 2, /obj/item/weapon/reagent_containers/food/snacks/spiderleg = 8)

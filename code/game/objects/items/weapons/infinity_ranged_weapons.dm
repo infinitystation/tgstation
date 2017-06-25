@@ -36,8 +36,12 @@
 	fire_sound = 'sound/weapons/gunshot_g36.ogg'
 	can_suppress = 0
 	burst_size = 3
-	fire_delay = 1
+	fire_delay = 0.5
 	weapon_weight = WEAPON_HEAVY
+	casing_ejector = 0
+
+/obj/item/weapon/gun/ballistic/automatic/gause/CanItemAutoclick()
+	return 1
 
 /obj/item/weapon/gun/ballistic/automatic/proto/mindshield //By Terror4000rus
 	pin = /obj/item/device/firing_pin/implant/mindshield
@@ -57,6 +61,10 @@
 	can_suppress = 0
 	burst_size = 2
 	fire_delay = 1
+
+/obj/item/weapon/gun/ballistic/automatic/mg88/CanItemAutoclick()
+	return 1
+
 
 /obj/item/weapon/gun/energy/alien/base //By Terror4000rus
 	ammo_type = list(/obj/item/ammo_casing/energy/declone/special)
