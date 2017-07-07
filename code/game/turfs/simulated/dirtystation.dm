@@ -64,10 +64,10 @@
 
 	if(istype(A, /area/ai_monitored/turret_protected) || istype(A, /area/security))	//chance of incident
 		if(prob(20))
-			if(prob(5))
-				new /obj/effect/decal/cleanable/blood/gibs/old(src)
-			else
-				new /obj/effect/decal/cleanable/blood/old(src)
+//			if(prob(5))
+//				new /obj/effect/decal/cleanable/blood/gibs/old(src)
+//			else
+			new /obj/effect/decal/cleanable/blood/old(src)
 		return
 
 
@@ -81,10 +81,10 @@
 
 	if(istype(A, /area/medical) || !istype(A, /area/science/robotics))	//Kept clean, but chance of blood
 		if(prob(66))
-			if(prob(5))
-				new /obj/effect/decal/cleanable/blood/gibs/old(src)
-			else
-				new /obj/effect/decal/cleanable/blood/old(src)
+//			if(prob(5))
+//				new /obj/effect/decal/cleanable/blood/gibs/old(src)
+//			else
+			new /obj/effect/decal/cleanable/blood/old(src)
 		else if(prob(30))
 			if(istype(A, /area/medical/morgue))
 				new /obj/item/weapon/ectoplasm(src)

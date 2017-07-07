@@ -93,10 +93,10 @@
 	icon_state = "green"
 	blob_allowed = 0
 	ambientsounds = list('sound/ambience/ambimine.ogg')
-
+/*
 /area/mine/bravo
 	name = "Post Bravo"
-
+*/
 /area/mine/shelter/ash
 	name = "Ash Walkers' village"
 	icon_state = "red"
@@ -125,12 +125,12 @@
 /area/ai_monitored/storage/AIlobby
 	name = "AI Satellite Lobby"
 	icon_state = "storage"
-
-/area/awaymission.zombie
+/*
+/area/awaymission/zombie
 	name = "Zombie"
 	icon_state = "red"
 	requires_power = 0
-
+*/
 /area/syndicate_mothership/enemy
 	name = "Enemy Base"
 
@@ -145,7 +145,7 @@
 	valid_territory = 0
 
 // CENTCOM
-
+/*
 /area/centcom/lobby
 	name = "Centcom Lobby"
 	icon_state = "centcom"
@@ -153,7 +153,7 @@
 /area/centcom/security
 	name = "Centcom Security"
 	icon_state = "security"
-
+*/
 
 ///Flors///
 

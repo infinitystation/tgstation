@@ -7855,11 +7855,7 @@
 	req_access_txt = "0";
 	req_one_access_txt = "63; 42"
 	},
-/turf/open/floor/plasteel/darkwarning/side{
-	tag = "icon-black_warn_side (WEST)";
-	icon_state = "black_warn_side";
-	dir = 8
-	},
+/turf/open/floor/plasteel/darkwarning/side,
 /area/centcom/prison)
 "avd" = (
 /obj/structure/chair/comfy/lime{
@@ -16021,9 +16017,7 @@
 "aNG" = (
 /obj/structure/window/shuttle,
 /obj/structure/grille,
-/turf/open/floor{
-	icon_state = "dark"
-	},
+/turf/open/floor/plating,
 /area/shuttle/transport)
 "aNH" = (
 /obj/structure/sign/nanotrasen,
@@ -16581,9 +16575,7 @@
 	},
 /obj/structure/grille,
 /obj/structure/window/shuttle,
-/turf/open/floor{
-	icon_state = "dark"
-	},
+/turf/open/floor/plating,
 /area/shuttle/transport)
 "aOQ" = (
 /obj/machinery/computer/shuttle/ferry/request,
@@ -20622,6 +20614,42 @@
 "aYr" = (
 /turf/open/space/basic,
 /area/centcom/evac)
+"aYs" = (
+/obj/structure/lattice,
+/turf/open/space/basic,
+/area/space)
+"aYt" = (
+/obj/structure/lattice,
+/turf/open/space/basic,
+/area/space)
+"aYu" = (
+/obj/structure/lattice,
+/turf/open/space/basic,
+/area/space)
+"aYv" = (
+/obj/structure/lattice,
+/turf/open/space/basic,
+/area/space)
+"aYw" = (
+/obj/structure/lattice,
+/turf/open/space/basic,
+/area/space)
+"aYx" = (
+/obj/structure/lattice,
+/turf/open/space/basic,
+/area/space)
+"aYy" = (
+/obj/structure/lattice,
+/turf/open/space/basic,
+/area/space)
+"aYz" = (
+/obj/structure/lattice,
+/turf/open/space/basic,
+/area/space)
+"aYA" = (
+/obj/structure/lattice,
+/turf/open/space/basic,
+/area/space)
 
 (1,1,1) = {"
 aaa
@@ -21302,7 +21330,7 @@ aAR
 ayc
 aBT
 aCn
-aCK
+atL
 aCL
 atx
 ate
@@ -21559,7 +21587,7 @@ aAS
 aBr
 aBU
 aCo
-aCK
+atL
 aCM
 atx
 ate
@@ -21816,7 +21844,7 @@ aAS
 ayc
 aBV
 aCp
-aCK
+atL
 aCN
 atx
 ate
@@ -76053,9 +76081,9 @@ aAN
 aFT
 atJ
 arH
+aYt
 arH
-arH
-aYr
+aJs
 aJM
 aKm
 aJM
@@ -76065,9 +76093,9 @@ aKm
 aJM
 aKm
 aJM
-aND
+aJs
 arH
-arH
+aYz
 arH
 arH
 arH
@@ -76309,10 +76337,10 @@ aEY
 aFr
 aAt
 atJ
-arH
-arH
-arH
-arH
+aYs
+aYu
+aYv
+aYw
 aJM
 aKm
 aJM
@@ -76322,9 +76350,9 @@ aKm
 aJM
 aKm
 aJM
-arH
-arH
-arH
+aYx
+aYy
+aYA
 arH
 arH
 arH

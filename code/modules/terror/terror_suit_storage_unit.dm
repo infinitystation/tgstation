@@ -18,24 +18,3 @@
 	mask_type = /obj/item/clothing/mask/breath
 	helmet_type = /obj/item/clothing/head/bio_suit/hazard
 	storage_type = /obj/item/weapon/tank/internals/emergency_oxygen/double
-
-
-/obj/machinery/computer/security/telescreen/civilian
-	name = "Civilian Complex"
-	desc = "Used for watching an empty arena."
-	network = list("civil")
-
-/obj/machinery/computer/security/telescreen/command
-	name = "Command Complex"
-	desc = "Used for watching an empty arena."
-	network = list("comm")
-
-/obj/machinery/computer/security/telescreen/engineering
-	name = "Engineering Complex"
-	desc = "Used for watching an empty arena."
-	network = list("engi")
-
-/obj/machinery/computer/security/telescreen/science
-	name = "Research Complex"
-	desc = "Used for watching an empty arena."
-	network = list("sci")

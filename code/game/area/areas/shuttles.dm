@@ -65,3 +65,7 @@
 /area/shuttle/abandoned
 	name = "Abandoned Ship"
 	blob_allowed = FALSE
+
+/area/shuttle/abandoned/infinity
+	dynamic_lighting = 2
+	requires_power = 1
