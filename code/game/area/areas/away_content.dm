@@ -3,7 +3,7 @@
 /area/awaymission
 	name = "Strange Location"
 	icon_state = "away"
-	has_gravity = 1
+	has_gravity = TRUE
 
 /area/awaymission/example
 	name = "Strange Station"
@@ -16,14 +16,14 @@
 /area/awaymission/listeningpost
 	name = "Listening Post"
 	icon_state = "away"
-	requires_power = 0
+	requires_power = FALSE
 
 /area/awaymission/beach
 	name = "Beach"
 	icon_state = "away"
 	dynamic_lighting = DYNAMIC_LIGHTING_ENABLED
-	requires_power = 0
-	has_gravity = 1
+	requires_power = FALSE
+	has_gravity = TRUE
 	ambientsounds = list('sound/ambience/shore.ogg', 'sound/ambience/seag1.ogg','sound/ambience/seag2.ogg','sound/ambience/seag2.ogg')
 
 /area/awaymission/beach/Initialize() //Let's make day/night on a beach!
@@ -40,7 +40,7 @@
 /area/awaymission/errorroom
 	name = "Super Secret Room"
 	dynamic_lighting = DYNAMIC_LIGHTING_DISABLED
-	has_gravity = 1
+	has_gravity = TRUE
 
 
 //Research Base Areas//--
@@ -52,7 +52,7 @@
 
 /area/awaymission/research/interior
 	name = "Research Inside"
-	requires_power = 1
+	requires_power = TRUE
 	icon_state = "away2"
 
 /area/awaymission/research/interior/cryo
@@ -117,12 +117,12 @@
 /area/awaymission/challenge/main
 	name = "Danger Room"
 	icon_state = "away1"
-	requires_power = 0
+	requires_power = FALSE
 
 /area/awaymission/challenge/end
 	name = "Administration"
 	icon_state = "away2"
-	requires_power = 0
+	requires_power = FALSE
 
 
 //centcomAway areas
@@ -130,7 +130,7 @@
 /area/awaymission/centcomAway
 	name = "XCC-P5831"
 	icon_state = "away"
-	requires_power = 0
+	requires_power = FALSE
 
 /area/awaymission/centcomAway/general
 	name = "XCC-P5831"
@@ -166,13 +166,13 @@
 /area/awaymission/snowforest
 	name = "Snow Forest"
 	icon_state = "away"
-	requires_power = 0
+	requires_power = FALSE
 	dynamic_lighting = DYNAMIC_LIGHTING_ENABLED
 
 /area/awaymission/cabin
 	name = "Cabin"
 	icon_state = "away2"
-	requires_power = 1
+	requires_power = TRUE
 	dynamic_lighting = DYNAMIC_LIGHTING_ENABLED
 
 /area/awaymission/snowforest/lumbermill
@@ -189,17 +189,17 @@
 /area/awaymission/BMPship/Aft
 	name = "Aft Block"
 	icon_state = "away1"
-	requires_power = 1
+	requires_power = TRUE
 
 /area/awaymission/BMPship/Midship
 	name = "Midship Block"
 	icon_state = "away2"
-	requires_power = 1
+	requires_power = TRUE
 
 /area/awaymission/BMPship/Fore
 	name = "Fore Block"
 	icon_state = "away3"
-	requires_power = 1
+	requires_power = TRUE
 
 
 //Academy Areas
@@ -239,17 +239,17 @@
 /area/awaymission/wwmines
 	name = "Wild West Mines"
 	icon_state = "away1"
-	requires_power = 0
+	requires_power = FALSE
 
 /area/awaymission/wwgov
 	name = "Wild West Mansion"
 	icon_state = "away2"
-	requires_power = 0
+	requires_power = FALSE
 
 /area/awaymission/wwrefine
 	name = "Wild West Refinery"
 	icon_state = "away3"
-	requires_power = 0
+	requires_power = FALSE
 
 /area/awaymission/wwvault
 	name = "Wild West Vault"
@@ -258,7 +258,7 @@
 /area/awaymission/wwvaultdoors
 	name = "Wild West Vault Doors"  // this is to keep the vault area being entirely lit because of requires_power
 	icon_state = "away2"
-	requires_power = 0
+	requires_power = FALSE
 
 
 /*
@@ -291,7 +291,7 @@
 /area/awaymission/spacebattle
 	name = "Space Battle"
 	icon_state = "away"
-	requires_power = 0
+	requires_power = FALSE
 
 /area/awaymission/spacebattle/cruiser
 	name = "Nanotrasen Cruiser"
@@ -326,12 +326,12 @@
 /area/awaymission/snowdin
 	name = "Snowdin Tundra Plains"
 	icon_state = "away"
-	requires_power = 0
+	requires_power = FALSE
 	dynamic_lighting = DYNAMIC_LIGHTING_ENABLED
 
 /area/awaymission/snowdin/post
 	name = "Snowdin Outpost"
-	requires_power = 1
+	requires_power = TRUE
 
 /area/awaymission/snowdin/igloo
 	name = "Snowdin Igloos"
@@ -344,7 +344,7 @@
 /area/awaymission/snowdin/base
 	name = "Snowdin Main Base"
 	icon_state = "away3"
-	requires_power = 1
+	requires_power = TRUE
 
 /area/awaymission/snowdin/dungeon1
 	name = "Snowdin Depths"
@@ -353,7 +353,7 @@
 /area/awaymission/snowdin/sekret
 	name = "Snowdin Operations"
 	icon_state = "away3"
-	requires_power = 1
+	requires_power = TRUE
 
 
 

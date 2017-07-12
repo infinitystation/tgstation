@@ -20,7 +20,7 @@
 		new_rate = set_point_rate
 
 /datum/round_event/ghost_role/blob/announce()
-	priority_announce("На станции [station_name()] подтверждена биологическаЯ угроза 5-го уровня. Всему персоналу необходимо сдержать угрозу.", "Тревога! Биологическая угроза!", 'sound/AI/outbreak5.ogg')
+	priority_announce("На станции [station_name()] подтверждена биологическаЯ угроза 5-го уровня. Всему персоналу необходимо сдержать угрозу.", "Тревога! Биологическая угроза!", 'sound/ai/outbreak5.ogg')
 
 
 /datum/round_event/ghost_role/blob/spawn_role()

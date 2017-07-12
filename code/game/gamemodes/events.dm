@@ -1,5 +1,5 @@
 /proc/power_failure()
-	priority_announce("Обнаружена аномальна&#255; активность в энергосети станции [station_name()]. В качестве превентивной меры энергопитание станции будет отключено на неопределённый период.", "Критическое падение энергии", 'sound/AI/poweroff.ogg')
+	priority_announce("Обнаружена аномальна&#255; активность в энергосети станции [station_name()]. В качестве превентивной меры энергопитание станции будет отключено на неопределённый период.", "Критическое падение энергии", 'sound/ai/poweroff.ogg')
 	for(var/obj/machinery/power/smes/S in GLOB.machines)
 		if(istype(get_area(S), /area/ai_monitored/turret_protected) || S.z != ZLEVEL_STATION)
 			continue
@@ -26,9 +26,9 @@
 					skip = 1
 				break
 		if(skip) continue
-		A.power_light = 0
-		A.power_equip = 0
-		A.power_environ = 0
+		A.power_light = FALSE
+		A.power_equip = FALSE
+		A.power_environ = FALSE
 		A.power_change()
 
 	for(var/obj/machinery/power/apc/C in GLOB.apcs_list)
@@ -46,7 +46,7 @@
 
 /proc/power_restore()
 
-	priority_announce("Энергопитание было восстановлено на станции [station_name()]. Приносим наши извинени&#255; за неудобства.", "Энергосеть в норме", 'sound/AI/poweron.ogg')
+	priority_announce("Энергопитание было восстановлено на станции [station_name()]. Приносим наши извинени&#255; за неудобства.", "Энергосеть в норме", 'sound/ai/poweron.ogg')
 	for(var/obj/machinery/power/apc/C in GLOB.machines)
 		if(C.cell && C.z == ZLEVEL_STATION)
 			C.cell.charge = C.cell.maxcharge
@@ -61,14 +61,14 @@
 		S.power_change()
 	for(var/area/A in world)
 		if(!istype(A, /area/space) && !istype(A, /area/shuttle) && !istype(A,/area/arrival))
-			A.power_light = 1
-			A.power_equip = 1
-			A.power_environ = 1
+			A.power_light = TRUE
+			A.power_equip = TRUE
+			A.power_environ = TRUE
 			A.power_change()
 
 /proc/power_restore_quick()
 
-	priority_announce("Все СМЕСы на станции [station_name()] были перезар&#255;жены. Приносим наши извинени&#255; за неудобства.", "Энергосеть в норме", 'sound/AI/poweron.ogg')
+	priority_announce("Все СМЕСы на станции [station_name()] были перезар&#255;жены. Приносим наши извинени&#255; за неудобства.", "Энергосеть в норме", 'sound/ai/poweron.ogg')
 	for(var/obj/machinery/power/smes/S in GLOB.machines)
 		if(S.z != ZLEVEL_STATION)
 			continue

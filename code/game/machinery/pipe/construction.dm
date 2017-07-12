@@ -272,10 +272,10 @@ GLOBAL_LIST_INIT(pipeID2State, list(
 /obj/item/pipe/suicide_act(mob/user)
 	if(pipe_type in list(PIPE_PUMP, PIPE_PASSIVE_GATE, PIPE_VOLUME_PUMP))
 		user.visible_message("<span class='suicide'>[user] засовывает помпу в свой рот и включает её! Кажетс&#255;, кому-то надоело жить.</span>")
-		if(istype(user, /mob/living/carbon))
+		if(iscarbon(user))
 			var/mob/living/carbon/C = user
 			for(var/i=1 to 20)
-				C.vomit(0,1,0,4,0)
+				C.vomit(0, TRUE, FALSE, 4, FALSE)
 				if(prob(20))
 					C.spew_organ()
 				sleep(5)

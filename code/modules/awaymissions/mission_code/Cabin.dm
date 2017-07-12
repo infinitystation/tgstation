@@ -4,7 +4,7 @@
 	desc = "warm and toasty"
 	icon = 'icons/obj/fireplace.dmi'
 	icon_state = "firepit-active"
-	density = 0
+	density = FALSE
 	var/active = 1
 	light_color = LIGHT_COLOR_FIRE
 

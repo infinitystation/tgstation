@@ -21,7 +21,7 @@ In my current plan for it, 'solid' will be defined as anything with density == 1
 	priority_announce("Какого чёрта?! Что это было?!", "ГлавнаЯ Тревога")
 
 /datum/round_event/immovable_rod/start()
-	var/startside = pick(GLOB.cardinal)
+	var/startside = pick(GLOB.cardinals)
 	var/turf/startT = spaceDebrisStartLoc(startside, ZLEVEL_STATION)
 	var/turf/endT = spaceDebrisFinishLoc(startside, ZLEVEL_STATION)
 	new /obj/effect/immovablerod(startT, endT)
@@ -32,8 +32,8 @@ In my current plan for it, 'solid' will be defined as anything with density == 1
 	icon = 'icons/obj/objects.dmi'
 	icon_state = "immrod"
 	throwforce = 100
-	density = 1
-	anchored = 1
+	density = TRUE
+	anchored = TRUE
 	var/z_original = 0
 	var/destination
 	var/notify = TRUE

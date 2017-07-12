@@ -12,8 +12,8 @@
 	name = "MULEbot"
 	desc = "A Multiple Utility Load Effector bot."
 	icon_state = "mulebot0"
-	density = 1
-	anchored = 1
+	density = TRUE
+	anchored = TRUE
 	animate_movement=1
 	health = 50
 	maxHealth = 50
@@ -114,7 +114,7 @@
 
 /mob/living/simple_animal/bot/mulebot/emag_act(mob/user)
 	if(emagged < 1)
-		emagged = 1
+		emagged = TRUE
 	if(!open)
 		locked = !locked
 		to_chat(user, "<span class='notice'>You [locked ? "lock" : "unlock"] the [src]'s controls!</span>")
@@ -162,7 +162,7 @@
 			return
 		ui_interact(user)
 
-/mob/living/simple_animal/bot/mulebot/ui_interact(mob/user, ui_key = "main", datum/tgui/ui = null, force_open = 0, \
+/mob/living/simple_animal/bot/mulebot/ui_interact(mob/user, ui_key = "main", datum/tgui/ui = null, force_open = FALSE, \
 										datum/tgui/master_ui = null, datum/ui_state/state = GLOB.default_state)
 	ui = SStgui.try_update_ui(user, src, ui_key, ui, force_open)
 	if(!ui)
@@ -428,7 +428,7 @@
 
 /mob/living/simple_animal/bot/mulebot/handle_automated_action()
 	if(!has_power())
-		on = 0
+		on = FALSE
 		return
 	if(on)
 		var/speed = (wires.is_cut(WIRE_MOTOR1) ? 0 : 1) + (wires.is_cut(WIRE_MOTOR2) ? 0 : 2)
@@ -634,17 +634,15 @@
 // called when bot bumps into anything
 /mob/living/simple_animal/bot/mulebot/Bump(atom/obs)
 	if(wires.is_cut(WIRE_AVOIDANCE))	// usually just bumps, but if avoidance disabled knock over mobs
-		var/mob/M = obs
-		if(ismob(M))
-			if(iscyborg(M))
-				visible_message("<span class='danger'>[src] bumps into [M]!</span>")
+		if(isliving(obs))
+			var/mob/living/L = obs
+			if(iscyborg(L))
+				visible_message("<span class='danger'>[src] bumps into [L]!</span>")
 			else
 				if(!paicard)
-					add_logs(src, M, "knocked down")
-					visible_message("<span class='danger'>[src] knocks over [M]!</span>")
-					M.stop_pulling()
-					M.Stun(8)
-					M.Weaken(5)
+					add_logs(src, L, "knocked down")
+					visible_message("<span class='danger'>[src] knocks over [L]!</span>")
+					L.Knockdown(160)
 	return ..()
 
 // called from mob/living/carbon/human/Crossed()

@@ -53,6 +53,8 @@
 		if(client && client.banprisoned)
 			qdel(src)
 	var/area/A = get_area(T)
+	for(var/obj/item/I in contents)
+		I.on_mob_death(src, gibbed)
 	if(mind && mind.name && mind.active && (!(T.flags & NO_DEATHRATTLE)))
 		var/rendered = "<span class='deadsay'><b>[mind.name]</b> has died at <b>[A.name]</b>.</span>"
 		deadchat_broadcast(rendered, follow_target = src, turf_target = T, message_type=DEADCHAT_DEATHRATTLE)
@@ -61,9 +63,6 @@
 	GLOB.living_mob_list -= src
 	if(!gibbed)
 		GLOB.dead_mob_list += src
-	paralysis = 0
-	stunned = 0
-	weakened = 0
 	set_drugginess(0)
 	SetSleeping(0, 0)
 	blind_eyes(1)

@@ -84,7 +84,7 @@ Bonus
 	severity = 5
 
 /datum/symptom/vomit/blood/Vomit(mob/living/carbon/M)
-	M.vomit(0, 1)
+	M.vomit(0,TRUE)
 
 
 /*
@@ -112,4 +112,4 @@ Bonus
 	level = 4
 
 /datum/symptom/vomit/projectile/Vomit(mob/living/carbon/M)
-	M.vomit(6,0,1,5,1)
+	M.vomit(6, distance = 5)

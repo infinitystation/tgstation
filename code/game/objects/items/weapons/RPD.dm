@@ -183,7 +183,7 @@ GLOBAL_LIST_INIT(RPD_recipes, list(
 /obj/item/weapon/pipe_dispenser/suicide_act(mob/user)
 	user.visible_message("<span class='suicide'>[user] указывает на конец РПД на свой рот и нажимает на кнопку! Кажетс&#255; [user.p_they()] пытал[user.p_e_5()] покончить жизнь самоубийством...</span>")
 	playsound(get_turf(user), 'sound/machines/click.ogg', 50, 1)
-	playsound(get_turf(user), 'sound/items/Deconstruct.ogg', 50, 1)
+	playsound(get_turf(user), 'sound/items/deconstruct.ogg', 50, 1)
 	return(BRUTELOSS)
 
 /obj/item/weapon/pipe_dispenser/proc/render_dir_img(_dir,pic,title,flipped=0)
@@ -627,7 +627,7 @@ GLOBAL_LIST_INIT(RPD_recipes, list(
 
 
 /obj/item/weapon/pipe_dispenser/proc/activate()
-	playsound(get_turf(src), 'sound/items/Deconstruct.ogg', 50, 1)
+	playsound(get_turf(src), 'sound/items/deconstruct.ogg', 50, 1)
 
 #undef PIPE_BINARY
 #undef PIPE_BENT

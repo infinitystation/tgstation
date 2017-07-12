@@ -89,7 +89,7 @@
 	if(user && targeted)
 		if(M.flash_act(1, 1))
 			M.confused += power
-			M.Weaken(rand(4,6))
+			M.Knockdown(rand(80,120))
 			visible_message("<span class='disarm'>[user] blinds [M] with the flash!</span>")
 			to_chat(user, "<span class='danger'>You blind [M] with the flash!</span>")
 			to_chat(M, "<span class='userdanger'>[user] blinds you with the flash!</span>")
@@ -113,7 +113,7 @@
 		var/mob/living/silicon/robot/R = M
 		add_logs(user, R, "flashed", src)
 		update_icon(1)
-		M.Weaken(rand(4,6))
+		M.Knockdown(rand(80,120))
 		R.confused += 5
 		R.flash_act(affect_silicon = 1)
 		user.visible_message("<span class='disarm'>[user] overloads [R]'s sensors with the flash!</span>", "<span class='danger'>You overload [R]'s sensors with the flash!</span>")
@@ -230,7 +230,7 @@
 					return
 				crit_fail = FALSE
 				times_used = 0
-				playsound(src.loc, 'sound/items/Deconstruct.ogg', 50, 1)
+				playsound(src.loc, 'sound/items/deconstruct.ogg', 50, 1)
 				update_icon()
 				flash.crit_fail = TRUE
 				flash.update_icon()
@@ -252,6 +252,6 @@
 	if(holder)
 		holder.update_icon()
 
-/obj/item/device/assembly/flash/shield/hit_reaction(obj/item/weapon/W, mob/user, params)
+/obj/item/device/assembly/flash/shield/hit_reaction(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "the attack", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK)
 	activate()
 	return ..()

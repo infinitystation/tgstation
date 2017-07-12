@@ -540,7 +540,7 @@
 	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
 	armor = list(melee = 35, bullet = 60, laser = 45, energy = 40, bomb = 60, bio = 0, rad = 0, fire = 60, acid = 80)
 	strip_delay = 130
-	put_on_delay = 75
+	equip_delay_other = 75
 	slowdown = 0.5
 
 /obj/item/clothing/suit/janitor_jacket

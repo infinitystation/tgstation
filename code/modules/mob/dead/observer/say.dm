@@ -4,7 +4,7 @@
 	if (!message)
 		return
 
-	log_say("Ghost - [src.name]/[src.key] : [message]")
+	log_talk(src,"Ghost - [src.name]/[src.key] : [message]", LOGSAY)
 
 	. = src.say_dead(message)
 

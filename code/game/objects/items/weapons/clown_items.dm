@@ -21,6 +21,7 @@
 	throw_speed = 3
 	throw_range = 7
 	var/cleanspeed = 50 //slower than mop
+	force_string = "robust... against germs"
 
 /obj/item/weapon/soap/nanotrasen
 	desc = "A Nanotrasen brand bar of soap. Smells of plasma."
@@ -50,7 +51,7 @@
 	if (istype(AM, /mob/living/carbon))
 		var/mob/living/carbon/M = AM
 		if(prob(Clamp(50/cleanspeed, 1, 10)))
-			M.slip(4, 2, src)
+			M.slip(80, src)
 
 /obj/item/weapon/soap/afterattack(atom/target, mob/user, proximity)
 	if(!proximity || !check_allowed_items(target))
@@ -135,7 +136,7 @@
 	name = "air horn"
 	desc = "Damn son, where'd you find this?"
 	icon_state = "air_horn"
-	honksound = 'sound/items/AirHorn2.ogg'
+	honksound = 'sound/items/airhorn2.ogg'
 	cooldowntime = 50
 	origin_tech = "materials=4;engineering=4"
 

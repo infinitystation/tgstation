@@ -151,7 +151,7 @@
 	toggle_gunlight()
 
 /obj/item/weapon/gun/energy/suicide_act(mob/user)
-	if (src.can_shoot())
+	if (src.can_shoot() && can_trigger_gun(user))
 		user.visible_message("<span class='suicide'>[user] вставил[user.p_e_1()] ствол в рот.  Кажетс&#255; [user.p_they()] пытал[user.p_e_5()] покончить жизнь самоубийством!</span>")
 		sleep(25)
 		if(user.is_holding(src))

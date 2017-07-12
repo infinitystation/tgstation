@@ -1,7 +1,7 @@
 /mob/living/proc/Shit()
 	if(stat != DEAD || stat != UNCONSCIOUS)
 		need_to_shit = max(0, need_to_shit - rand(0, 150))
-		AdjustStunned(3)
+		AdjustStun(3)
 		var/turf/pos = get_turf(src)
 		pos.add_shit_floor(src)
 		playsound(pos, 'sound/emotions/shit.ogg', 50, 1)

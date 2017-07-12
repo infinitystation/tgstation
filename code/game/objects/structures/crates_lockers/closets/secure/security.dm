@@ -83,6 +83,8 @@
 	new /obj/item/clothing/head/HoS(src)
 	new /obj/item/clothing/glasses/hud/security/sunglasses/eyepatch(src)
 	new /obj/item/clothing/glasses/hud/security/sunglasses/gars/supergars(src)
+	new /obj/item/clothing/under/rank/head_of_security/grey(src)
+	new /obj/item/weapon/storage/lockbox/medal/sec(src)
 	new /obj/item/device/megaphone/sec(src)
 	new /obj/item/weapon/holosign_creator/security(src)
 	new /obj/item/weapon/storage/lockbox/loyalty(src)
@@ -95,8 +97,6 @@
 	new /obj/item/clothing/head/HoS/beret/corporate(src)
 	new /obj/item/weapon/pinpointer(src)
 	new /obj/item/weapon/melee/baton/shocker/loaded(src)
-	new /obj/item/clothing/under/rank/head_of_security/grey(src)
-	new /obj/item/weapon/storage/lockbox/secmedal(src)
 
 
 /obj/structure/closet/secure_closet/warden
@@ -179,7 +179,6 @@
 	req_access = list(GLOB.access_forensics_lockers)
 	icon_state = "cabinet"
 	resistance_flags = FLAMMABLE
-	obj_integrity = 70
 	max_integrity = 70
 
 /obj/structure/closet/secure_closet/detective/PopulateContents()
@@ -219,8 +218,14 @@
 /obj/structure/closet/secure_closet/brig
 	name = "brig locker"
 	req_access = list(GLOB.access_brig)
-	anchored = 1
+	anchored = TRUE
 	var/id = null
+
+/obj/structure/closet/secure_closet/evidence
+	anchored = TRUE
+	name = "Secure Evidence Closet"
+	req_access_txt = "0"
+	req_one_access_txt = list(GLOB.access_armory, GLOB.access_forensics_lockers)
 
 /obj/structure/closet/secure_closet/brig/PopulateContents()
 	..()
@@ -240,6 +245,16 @@
 	new /obj/item/clothing/suit/judgerobe (src)
 	new /obj/item/clothing/head/powdered_wig (src)
 	new /obj/item/weapon/storage/briefcase(src)
+
+/obj/structure/closet/secure_closet/contraband/armory
+	anchored = TRUE
+	name = "Contraband Locker"
+	req_access = list(GLOB.access_armory)
+
+/obj/structure/closet/secure_closet/contraband/heads
+	anchored = TRUE
+	name = "Contraband Locker"
+	req_access = list(GLOB.access_heads)
 
 /obj/structure/closet/secure_closet/armory1
 	name = "armory armor locker"

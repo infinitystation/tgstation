@@ -55,9 +55,9 @@
 /datum/reagent/consumable/edrink/on_mob_life(mob/living/M)
 	if(prob(3))
 		M << "<span style=\"color:#005E00; font-weight: bold;\">You totally don\'t want to die anymore</span>"
-	M.AdjustParalysis(-1, 0)
-	M.AdjustStunned(-1, 0)
-	M.AdjustWeakened(-1, 0)
+	M.AdjustUnconscious(-20, 0)
+	M.AdjustStun(-20, 0)
+	M.AdjustKnockdown(-20, 0)
 	M.AdjustSleeping(-2, 0)
 	M.adjustStaminaLoss(-5)
 	if (M.bodytemperature > 310)//310 is the normal bodytemp. 310.055

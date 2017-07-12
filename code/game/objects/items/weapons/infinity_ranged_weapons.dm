@@ -163,7 +163,7 @@
 	add_fingerprint(user)
 	if((CLUMSY in user.disabilities) && prob(50))
 		user << "<span class ='danger'>You club yourself over the head as you simply are too clumsy to be using this advanced weapon.</span>"
-		user.Weaken(3 * force)
+		user.Knockdown(20 * force)
 		if(ishuman(user))
 			var/mob/living/carbon/human/H = user
 			H.apply_damage(2*force, BRUTE, "head")
@@ -193,7 +193,7 @@
 		user.stop_pulling()
 	var/attackverb = "stuns"
 	if(current_combo >= hit_combo)
-		target.Weaken(final_stunamt)
+		target.Knockdown(final_stunamt)
 		if(intent == INTENT_HARM)
 			attackverb = "beats"
 			var/obj/item/bodypart/affecting = target.get_bodypart(ran_zone(user.zone_selected))
@@ -207,7 +207,7 @@
 		user.changeNext_move(normal_clickdelay)
 		playsound(user.loc, 'sound/weapons/shockhit.ogg', 50, 1)
 	else
-		target.Weaken(initial_stunamt)
+		target.Knockdown(initial_stunamt)
 		if(intent == INTENT_HARM)
 			attackverb = "beats"
 			var/obj/item/bodypart/affecting = target.get_bodypart(ran_zone(user.zone_selected))

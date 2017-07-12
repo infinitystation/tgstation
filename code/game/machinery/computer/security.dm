@@ -24,6 +24,9 @@
 
 	light_color = LIGHT_COLOR_BLUE
 
+/obj/machinery/computer/secure_data/syndie
+	icon_keyboard = "syndie_key"
+
 /obj/machinery/computer/secure_data/laptop
 	name = "security laptop"
 	desc = "A cheap Nanotrasen security laptop, it functions as a security records console. It's bolted to the table."
