@@ -36,24 +36,25 @@
 		new /datum/data/mining_equipment("Silver Pickaxe",		/obj/item/weapon/pickaxe/silver,										1000),
 		new /datum/data/mining_equipment("Jetpack Upgrade",		/obj/item/weapon/tank/jetpack/suit,										2000),
 		new /datum/data/mining_equipment("Space Cash",			/obj/item/stack/spacecash/c1000,										2000),
-		new /datum/data/mining_equipment("Mining Hardsuit",		/obj/item/clothing/suit/space/hardsuit/mining,							4000),
-		new /datum/data/mining_equipment("Diamond Pickaxe",		/obj/item/weapon/pickaxe/diamond,										4000),
-		new /datum/data/mining_equipment("Super Resonator",		/obj/item/weapon/resonator/upgraded,									5000),
-		new /datum/data/mining_equipment("KA White Tracer Rounds",	/obj/item/borg/upgrade/modkit/tracer,								200),
-		new /datum/data/mining_equipment("KA Adjustable Tracer Rounds",	/obj/item/borg/upgrade/modkit/tracer/adjustable,				300),
-		new /datum/data/mining_equipment("KA Super Chassis",	/obj/item/borg/upgrade/modkit/chassis_mod,								500),
-		new /datum/data/mining_equipment("KA Hyper Chassis",	/obj/item/borg/upgrade/modkit/chassis_mod/orange,						600),
-		new /datum/data/mining_equipment("KA Range Increase",	/obj/item/borg/upgrade/modkit/range,									1200),
-		new /datum/data/mining_equipment("KA Damage Increase",	/obj/item/borg/upgrade/modkit/damage,									2000),
-		new /datum/data/mining_equipment("KA Cooldown Decrease",/obj/item/borg/upgrade/modkit/cooldown,									1500),
-		new /datum/data/mining_equipment("KA AoE Damage",		/obj/item/borg/upgrade/modkit/aoe/mobs,									4000),
-		new /datum/data/mining_equipment("Point Transfer Card",	/obj/item/weapon/card/mining_point_card,								1000),
-		new /datum/data/mining_equipment("Mining Drone",		/mob/living/simple_animal/hostile/mining_drone,							1600),
-		new /datum/data/mining_equipment("Drone Melee Upgrade",	/obj/item/device/mine_bot_ugprade,										800),
-		new /datum/data/mining_equipment("Drone Health Upgrade",/obj/item/device/mine_bot_ugprade/health,								800),
-		new /datum/data/mining_equipment("Drone Ranged Upgrade",/obj/item/device/mine_bot_ugprade/cooldown,								1200),
-		new /datum/data/mining_equipment("Drone AI Upgrade",	/obj/item/slimepotion/sentience/mining,									2000),
-		new /datum/data/mining_equipment("Jump Boots",			/obj/item/clothing/shoes/bhop,											5000),
+		new /datum/data/mining_equipment("Mining Hardsuit",		/obj/item/clothing/suit/space/hardsuit/mining,							2000),
+		new /datum/data/mining_equipment("Diamond Pickaxe",		/obj/item/weapon/pickaxe/diamond,										2000),
+		new /datum/data/mining_equipment("Super Resonator",		/obj/item/weapon/resonator/upgraded,									2500),
+		new /datum/data/mining_equipment("Luxury Shelter Capsule",	/obj/item/weapon/survivalcapsule/luxury,							3000),
+		new /datum/data/mining_equipment("KA White Tracer Rounds",	/obj/item/borg/upgrade/modkit/tracer,								100),
+		new /datum/data/mining_equipment("KA Adjustable Tracer Rounds",	/obj/item/borg/upgrade/modkit/tracer/adjustable,				150),
+		new /datum/data/mining_equipment("KA Super Chassis",	/obj/item/borg/upgrade/modkit/chassis_mod,								250),
+		new /datum/data/mining_equipment("KA Hyper Chassis",	/obj/item/borg/upgrade/modkit/chassis_mod/orange,						300),
+		new /datum/data/mining_equipment("KA Range Increase",	/obj/item/borg/upgrade/modkit/range,									1000),
+		new /datum/data/mining_equipment("KA Damage Increase",	/obj/item/borg/upgrade/modkit/damage,									1000),
+		new /datum/data/mining_equipment("KA Cooldown Decrease",/obj/item/borg/upgrade/modkit/cooldown,									1000),
+		new /datum/data/mining_equipment("KA AoE Damage",		/obj/item/borg/upgrade/modkit/aoe/mobs,									2000),
+		new /datum/data/mining_equipment("Point Transfer Card",	/obj/item/weapon/card/mining_point_card,								500),
+		new /datum/data/mining_equipment("Mining Drone",		/mob/living/simple_animal/hostile/mining_drone,							800),
+		new /datum/data/mining_equipment("Drone Melee Upgrade",	/obj/item/device/mine_bot_ugprade,										400),
+		new /datum/data/mining_equipment("Drone Health Upgrade",/obj/item/device/mine_bot_ugprade/health,								400),
+		new /datum/data/mining_equipment("Drone Ranged Upgrade",/obj/item/device/mine_bot_ugprade/cooldown,								600),
+		new /datum/data/mining_equipment("Drone AI Upgrade",	/obj/item/slimepotion/sentience/mining,									1000),
+		new /datum/data/mining_equipment("Jump Boots",			/obj/item/clothing/shoes/bhop,											2500),
 		)
 
 /datum/data/mining_equipment
@@ -191,7 +192,7 @@
 			new /obj/item/weapon/storage/belt/mining/alt(loc)
 			new /obj/item/weapon/extinguisher/mini(loc)
 		if("Mining Conscription Kit")
-			new /obj/item/weapon/storage/backpack/dufflebag/mining_conscript(loc)
+			new /obj/item/weapon/storage/backpack/duffelbag/mining_conscript(loc)
 
 	SSblackbox.add_details("mining_voucher_redeemed", selection)
 	qdel(voucher)
@@ -273,7 +274,7 @@
 /obj/item/weapon/card/mining_access_card/afterattack(atom/movable/AM, mob/user, proximity)
 	if(istype(AM, /obj/item/weapon/card/id) && proximity)
 		var/obj/item/weapon/card/id/I = AM
-		I.access |=	GLOB.access_mining
+		I.access |= GLOB.access_mining
 		I.access |= GLOB.access_mining_station
 		I.access |= GLOB.access_mineral_storeroom
 		I.access |= GLOB.access_cargo
@@ -281,11 +282,11 @@
 		qdel(src)
 	..()
 
-/obj/item/weapon/storage/backpack/dufflebag/mining_conscript
+/obj/item/weapon/storage/backpack/duffelbag/mining_conscript
 	name = "mining conscription kit"
 	desc = "A kit containing everything a crewmember needs to support a shaft miner in the field."
 
-/obj/item/weapon/storage/backpack/dufflebag/mining_conscript/New()
+/obj/item/weapon/storage/backpack/duffelbag/mining_conscript/New()
 	..()
 	new /obj/item/weapon/pickaxe/mini(src)
 	new /obj/item/clothing/glasses/meson(src)

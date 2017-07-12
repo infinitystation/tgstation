@@ -68,6 +68,16 @@
 	build_path = /obj/item/device/lightreplacer
 	category = list("Power Designs")
 
+/datum/design/inducer
+	name = "Inducer"
+	desc = "The NT-75 Electromagnetic Power Inducer can wirelessly induce electric charge in an object, allowing you to recharge power cells without having to remove them."
+	id = "inducer"
+	req_tech = list("powerstorage" = 4, "engineering" = 4, "magnets" = 4)
+	build_type = PROTOLATHE
+	materials = list(MAT_METAL = 3000, MAT_GLASS = 1000)
+	build_path = /obj/item/weapon/inducer/sci
+	category = list("Power Designs")
+
 /datum/design/board/pacman
 	name = "Machine Design (PACMAN-type Generator Board)"
 	desc = "The circuit board that for a PACMAN-type portable generator."
@@ -89,23 +99,3 @@
 	id = "mrspacman"
 	req_tech = list("programming" = 3, "powerstorage" = 5, "engineering" = 5, "plasmatech" = 4)
 	build_path = /obj/item/weapon/circuitboard/machine/pacman/mrs
-
-/datum/design/ammo_cell
-	name = "High-Capacity Ammo Power Cell"
-	desc = "A high-capacity rechargable electrochemical power cell for energy weaponry."
-	id = "ammo_cell"
-	req_tech = list("powerstorage" = 4, "combat" = 3, "materials" = 3)
-	build_type = PROTOLATHE
-	materials = list("$metal" = 400, "$glass" = 300)
-	build_path = /obj/item/weapon/stock_parts/cell/ammo/high
-	category = list("Ammo")
-
-/datum/design/ammo_scell
-	name = "Super Ammo Power Cell"
-	desc = "A super rechargable electrochemical power cell for energy weaponry."
-	id = "ammo_scell"
-	req_tech = list("powerstorage" = 6, "combat" = 4, "materials" = 4)
-	build_type = PROTOLATHE
-	materials = list("$metal" = 400, "$glass" = 150, "$gold" = 150, "$silver" = 150)
-	build_path = /obj/item/weapon/stock_parts/cell/ammo/super
-	category = list("Ammo")

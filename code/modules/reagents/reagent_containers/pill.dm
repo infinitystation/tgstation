@@ -150,3 +150,9 @@
 	icon_state = "pill5"
 	list_reagents = list("potass_iodide" = 50)
 	roundstart = 1
+/obj/item/weapon/reagent_containers/pill/shadowtoxin
+	name = "black pill"
+	desc = "I wouldn't eat this if I were you."
+	icon_state = "pill9"
+	color = "#454545"
+	list_reagents = list("shadowmutationtoxin" = 1)

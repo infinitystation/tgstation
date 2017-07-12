@@ -11,7 +11,6 @@
     var/map_file = "MetaStation.dmm"
 
     var/minetype = "lavaland"
-
     var/extra_maps = "no"
 
     var/extra_cenctomm = "map_files/generic/Centcomm.dmm"
@@ -19,8 +18,8 @@
     var/extra_derelict = "map_files/generic/Space.dmm"
     // Если надо, добавляйте еще ~bear1ake@inf-dev
 
-    var/list/transition_config = list(MAIN_STATION = CROSSLINKED,
-                                    CENTCOMM = SELFLOOPING,
+    var/list/transition_config = list(CENTCOMM = SELFLOOPING,
+									MAIN_STATION = CROSSLINKED,
                                     EMPTY_AREA_1 = CROSSLINKED,
                                     EMPTY_AREA_2 = CROSSLINKED,
                                     MINING = SELFLOOPING,

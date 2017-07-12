@@ -32,7 +32,6 @@
 	desc = "This is an antique laser gun. All craftsmanship is of the highest quality. It is decorated with assistant leather and chrome. The object menaces with spikes of energy. On the item is an image of Space Station 13. The station is exploding."
 	force = 10
 	origin_tech = null
-	cell_removing = 0
 	ammo_x_offset = 3
 	selfcharge = 1
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | ACID_PROOF
@@ -48,7 +47,6 @@
 /obj/item/weapon/gun/energy/laser/cyborg
 	can_charge = 0
 	desc = "An energy-based laser gun that draws power from the cyborg's internal energy cell directly. So this is what freedom looks like?"
-	cell_removing = 0
 	can_pull_pin = 0
 	origin_tech = null
 	use_cyborg_cell = 1
@@ -86,7 +84,7 @@
 	origin_tech = "combat=4;magnets=4;powerstorage=3"
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/accelerator)
 	pin = null
-	cell_type = null
+	cell = null
 	ammo_x_offset = 3
 
 /obj/item/ammo_casing/energy/laser/accelerator
@@ -113,7 +111,7 @@
 	origin_tech = "combat=6;materials=4;magnets=4;syndicate=1"
 	ammo_type = list(/obj/item/ammo_casing/energy/xray)
 	pin = null
-	cell_type = null
+	cell = null
 	ammo_x_offset = 3
 
 ////////Laser Tag////////////////////
@@ -126,7 +124,6 @@
 	origin_tech = "combat=2;magnets=2"
 	clumsy_check = 0
 	needs_permit = 0
-	cell_removing = 0
 	pin = /obj/item/device/firing_pin/tag/blue
 	ammo_x_offset = 2
 	selfcharge = 1
@@ -139,7 +136,6 @@
 	origin_tech = "combat=2;magnets=2"
 	clumsy_check = 0
 	needs_permit = 0
-	cell_removing = 0
 	pin = /obj/item/device/firing_pin/tag/red
 	ammo_x_offset = 2
 	selfcharge = 1

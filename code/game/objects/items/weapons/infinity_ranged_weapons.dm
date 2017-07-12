@@ -70,7 +70,7 @@
 	ammo_type = list(/obj/item/ammo_casing/energy/declone/special)
 	can_pull_pin = 0
 	selfcharge = 1
-	cell_type = /obj/item/weapon/stock_parts/cell/ammo/high
+	cell = /obj/item/weapon/stock_parts/cell/high
 
 /obj/item/projectile/energy/declone/special
 	damage = 25
@@ -85,7 +85,7 @@
 	ammo_type = list(/obj/item/ammo_casing/energy/laser, /obj/item/ammo_casing/energy/disabler)
 
 /obj/item/weapon/gun/energy/e_gun/ert
-	cell_type = /obj/item/weapon/stock_parts/cell/ammo/high
+	cell = /obj/item/weapon/stock_parts/cell/high
 
 /obj/item/weapon/melee/classic_baton/telescopic/energy
 	name = "telescopic energy baton"

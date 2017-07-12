@@ -135,7 +135,7 @@
 	icon_state = "plasmaman_tank_belt"
 	item_state = "plasmaman_tank_belt"
 	slot_flags = SLOT_BELT
-	volume = 3
+	volume = 6
 	w_class = WEIGHT_CLASS_SMALL //thanks i forgot this
 
 /obj/item/weapon/tank/internals/plasmaman/belt/full/New()

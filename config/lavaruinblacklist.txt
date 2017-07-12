@@ -22,6 +22,7 @@ _maps/RandomRuins/LavaRuins/ilavaland_surface_ash_walker.dmm
 #_maps/RandomRuins/LavaRuins/ilavaland_surface_golem_ship.dmm
 #_maps/RandomRuins/LavaRuins/ilavaland_surface_prisoner_crash.dmm
 #_maps/RandomRuins/LavaRuins/ilavaland_surface_seed_vault.dmm
+#_maps/RandomRuins/LavaRuins/lavaland_surface_golem_ship.dmm
 
 ##SIN
 #_maps/RandomRuins/LavaRuins/lavaland_surface_envy.dmm

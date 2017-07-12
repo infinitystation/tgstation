@@ -17,7 +17,7 @@
 	icon_state = "mini"
 	item_state = "gun"
 	w_class = WEIGHT_CLASS_SMALL
-	cell_type = /obj/item/weapon/stock_parts/cell{charge = 600; maxcharge = 600}
+	cell = /obj/item/weapon/stock_parts/cell{charge = 600; maxcharge = 600}
 	ammo_x_offset = 2
 	charge_sections = 3
 	can_flashlight = 0 // Can't attach or detach the flashlight, and override it's icon update
@@ -87,8 +87,7 @@
 	icon_state = "nucgun"
 	item_state = "nucgun"
 	origin_tech = "combat=4;materials=5;powerstorage=3"
-	cell_removing = 0
-	cell_type = /obj/item/weapon/stock_parts/cell/ammo/high
+	cell = /obj/item/weapon/stock_parts/cell/high
 	charge_delay = 1
 	pin = null
 	can_charge = 0
