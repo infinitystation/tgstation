@@ -2866,7 +2866,7 @@
 /area/mine/unexplored)
 "hh" = (
 /turf/closed/wall/r_wall,
-/area/mine/bravo)
+/area/space)
 "hi" = (
 /obj/machinery/door/airlock/external{
 	name = "Post Bravo";
@@ -2876,11 +2876,11 @@
 	icon_state = "delivery";
 	name = "floor"
 	},
-/area/mine/bravo)
+/area/space)
 "hj" = (
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
-/area/mine/bravo)
+/area/space)
 "hk" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/sign/securearea{
@@ -2895,7 +2895,7 @@
 	dir = 1;
 	icon_state = "warning"
 	},
-/area/mine/bravo)
+/area/space)
 "hl" = (
 /turf/open/floor/plasteel{
 	icon_state = "bot";
@@ -2908,24 +2908,24 @@
 /turf/open/floor/plasteel/warningline/corner{
 	dir = 4
 	},
-/area/mine/bravo)
+/area/space)
 "hm" = (
 /turf/closed/wall,
-/area/mine/bravo)
+/area/space)
 "hn" = (
 /obj/machinery/mineral/equipment_vendor,
 /turf/open/floor/plasteel{
 	icon_state = "bot";
 	dir = 1
 	},
-/area/mine/bravo)
+/area/space)
 "ho" = (
 /obj/machinery/recharge_station,
 /turf/open/floor/plasteel{
 	icon_state = "bot";
 	dir = 1
 	},
-/area/mine/bravo)
+/area/space)
 "hp" = (
 /turf/closed/mineral/random,
 /area/space)
@@ -2935,7 +2935,7 @@
 	icon_state = "warnplate";
 	dir = 9
 	},
-/area/mine/bravo)
+/area/space)
 "hr" = (
 /obj/machinery/power/port_gen/pacman{
 	anchored = 1
@@ -2949,13 +2949,13 @@
 	icon_state = "warnplate";
 	dir = 5
 	},
-/area/mine/bravo)
+/area/space)
 "hs" = (
 /turf/closed/wall/r_wall/rust,
-/area/mine/bravo)
+/area/space)
 "ht" = (
 /turf/closed/wall/rust,
-/area/mine/bravo)
+/area/space)
 "hu" = (
 /obj/structure/cable{
 	icon_state = "0-2";
@@ -2976,18 +2976,18 @@
 	},
 /obj/item/weapon/storage/firstaid/regular,
 /turf/open/floor/plasteel,
-/area/mine/bravo)
+/area/space)
 "hv" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/item/weapon/reagent_containers/glass/bucket,
 /turf/open/floor/plasteel,
-/area/mine/bravo)
+/area/space)
 "hw" = (
 /obj/effect/spawner/lootdrop/trash,
 /turf/open/floor/plasteel/neutral/side{
 	dir = 4
 	},
-/area/mine/bravo)
+/area/space)
 "hx" = (
 /obj/structure/closet/secure_closet/freezer{
 	name = "freezer"
@@ -3010,7 +3010,7 @@
 	icon_state = "bot";
 	dir = 1
 	},
-/area/mine/bravo)
+/area/space)
 "hy" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4;
@@ -3042,7 +3042,7 @@
 /turf/open/floor/plasteel/warningline{
 	dir = 1
 	},
-/area/mine/bravo)
+/area/space)
 "hB" = (
 /obj/structure/cable{
 	icon_state = "1-8"
@@ -3062,7 +3062,7 @@
 	luminosity = 2;
 	temperature = 2.7
 	},
-/area/mine/bravo)
+/area/space)
 "hC" = (
 /obj/machinery/door/airlock/maintenance{
 	name = "Mining Station Maintenance";
@@ -3079,7 +3079,7 @@
 	dir = 4
 	},
 /turf/open/floor/plating,
-/area/mine/bravo)
+/area/space)
 "hD" = (
 /obj/structure/cable{
 	d1 = 4;
@@ -3098,7 +3098,7 @@
 /turf/open/floor/plasteel/neutral/side{
 	dir = 8
 	},
-/area/mine/bravo)
+/area/space)
 "hE" = (
 /obj/structure/cable{
 	d1 = 4;
@@ -3111,7 +3111,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/manifold,
 /turf/open/floor/plasteel/neutral/corner,
-/area/mine/bravo)
+/area/space)
 "hF" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/structure/cable{
@@ -3125,7 +3125,7 @@
 	dir = 4
 	},
 /turf/open/floor/plating,
-/area/mine/bravo)
+/area/space)
 "hG" = (
 /obj/structure/cable{
 	icon_state = "1-8"
@@ -3138,7 +3138,7 @@
 /turf/open/floor/plasteel/neutral/corner{
 	dir = 8
 	},
-/area/mine/bravo)
+/area/space)
 "hH" = (
 /obj/effect/spawner/lootdrop/trash,
 /obj/machinery/atmospherics/pipe/simple{
@@ -3146,7 +3146,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel,
-/area/mine/bravo)
+/area/space)
 "hI" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/components/unary/vent_pump{
@@ -3156,7 +3156,7 @@
 /turf/open/floor/plasteel/neutral/side{
 	dir = 4
 	},
-/area/mine/bravo)
+/area/space)
 "hJ" = (
 /obj/structure/table,
 /obj/structure/table,
@@ -3172,7 +3172,7 @@
 	icon_state = "bot";
 	dir = 1
 	},
-/area/mine/bravo)
+/area/space)
 "hK" = (
 /turf/open/floor/plasteel,
 /obj/effect/decal/cleanable/dirt,
@@ -3184,7 +3184,7 @@
 /turf/open/floor/plasteel/warningline/corner{
 	dir = 4
 	},
-/area/mine/bravo)
+/area/space)
 "hL" = (
 /obj/machinery/portable_atmospherics/canister/oxygen,
 /obj/machinery/light/small{
@@ -3203,7 +3203,7 @@
 	icon_state = "warnplate";
 	dir = 8
 	},
-/area/mine/bravo)
+/area/space)
 "hM" = (
 /turf/open/floor/plasteel/neutral/corner{
 	dir = 1
@@ -3212,7 +3212,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/item/weapon/mop,
 /turf/open/floor/plasteel/warningline,
-/area/mine/bravo)
+/area/space)
 "hN" = (
 /turf/open/floor/plasteel/neutral/side{
 	dir = 4
@@ -3222,7 +3222,7 @@
 /turf/open/floor/plasteel/warningline/corner{
 	dir = 1
 	},
-/area/mine/bravo)
+/area/space)
 "hO" = (
 /obj/machinery/door/airlock/glass_mining{
 	name = "Post Bravo break room";
@@ -3233,7 +3233,7 @@
 	icon_state = "delivery";
 	name = "floor"
 	},
-/area/mine/bravo)
+/area/space)
 "hP" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/item/device/gps/mining{
@@ -3242,18 +3242,18 @@
 /turf/open/floor/plasteel/neutral/side{
 	dir = 8
 	},
-/area/mine/bravo)
+/area/space)
 "hQ" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel,
-/area/mine/bravo)
+/area/space)
 "hR" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/neutral/side{
 	dir = 4
 	},
-/area/mine/bravo)
+/area/space)
 "hS" = (
 /obj/structure/sink{
 	dir = 4;
@@ -3269,7 +3269,7 @@
 	icon_state = "bot";
 	dir = 1
 	},
-/area/mine/bravo)
+/area/space)
 "hT" = (
 /obj/machinery/door/airlock/external{
 	name = "Post Bravo";
@@ -3280,7 +3280,7 @@
 	icon_state = "delivery";
 	name = "floor"
 	},
-/area/mine/bravo)
+/area/space)
 "hU" = (
 /obj/structure/table,
 /obj/item/weapon/kitchen/rollingpin,
@@ -3292,18 +3292,18 @@
 /turf/open/floor/plasteel/neutral/corner{
 	dir = 1
 	},
-/area/mine/bravo)
+/area/space)
 "hV" = (
 /obj/structure/table,
 /obj/item/stack/sheet/mineral/adamantine,
 /turf/open/floor/plasteel,
-/area/mine/bravo)
+/area/space)
 "hW" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/neutral/side{
 	dir = 4
 	},
-/area/mine/bravo)
+/area/space)
 "hX" = (
 /obj/structure/table,
 /obj/machinery/reagentgrinder,
@@ -3315,7 +3315,7 @@
 	icon_state = "bot";
 	dir = 1
 	},
-/area/mine/bravo)
+/area/space)
 "hY" = (
 /obj/item/weapon/card/id/prisoner/seven,
 /turf/open/floor/plating/airless{
@@ -3333,16 +3333,16 @@
 	icon_state = "warnplate";
 	dir = 6
 	},
-/area/mine/bravo)
+/area/space)
 "ia" = (
 /turf/open/floor/mech_bay_recharge_floor/airless,
-/area/mine/bravo)
+/area/space)
 "ib" = (
 /obj/machinery/computer/mech_bay_power_console,
 /turf/open/floor/plasteel/airless{
 	icon_state = "asteroidfloor"
 	},
-/area/mine/bravo)
+/area/space)
 "ic" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/sign/securearea{
@@ -3356,7 +3356,7 @@
 /turf/open/floor/plasteel{
 	icon_state = "warning"
 	},
-/area/mine/bravo)
+/area/space)
 "id" = (
 /turf/open/floor/plasteel{
 	icon_state = "bot";
@@ -3370,7 +3370,7 @@
 /turf/open/floor/plasteel/warningline/corner{
 	dir = 1
 	},
-/area/mine/bravo)
+/area/space)
 "ie" = (
 /obj/structure/chair{
 	dir = 1
@@ -3384,13 +3384,13 @@
 	req_access = null
 	},
 /turf/open/floor/plasteel,
-/area/mine/bravo)
+/area/space)
 "if" = (
 /obj/structure/chair{
 	dir = 1
 	},
 /turf/open/floor/plasteel,
-/area/mine/bravo)
+/area/space)
 "ig" = (
 /obj/item/device/radio/intercom{
 	freerange = 0;
@@ -3404,7 +3404,7 @@
 /turf/open/floor/plasteel/neutral/corner{
 	dir = 4
 	},
-/area/mine/bravo)
+/area/space)
 "ih" = (
 /obj/structure/disposalpipe/trunk{
 	dir = 4
@@ -3414,13 +3414,13 @@
 	icon_state = "bot";
 	dir = 1
 	},
-/area/mine/bravo)
+/area/space)
 "ii" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
 /turf/closed/wall/r_wall,
-/area/mine/bravo)
+/area/space)
 "ij" = (
 /obj/structure/disposaloutlet{
 	dir = 4
@@ -3431,7 +3431,7 @@
 /turf/open/floor/plating/airless{
 	icon_state = "asteroidplating"
 	},
-/area/mine/bravo)
+/area/space)
 "ik" = (
 /obj/effect/decal/remains/human,
 /obj/item/weapon/pickaxe{
@@ -3516,7 +3516,7 @@
 	dir = 2;
 	icon_state = "warnplate"
 	},
-/area/mine/bravo)
+/area/space)
 "iy" = (
 /obj/structure/ore_box,
 /turf/open/floor/plating/asteroid/airless,
@@ -3625,7 +3625,7 @@
 	icon_state = "asteroidwarning";
 	dir = 8
 	},
-/area/mine/bravo)
+/area/space)
 "iL" = (
 /turf/open/floor/plasteel/airless{
 	icon_state = "asteroidwarning";

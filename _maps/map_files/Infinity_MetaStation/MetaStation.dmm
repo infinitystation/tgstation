@@ -2511,6 +2511,9 @@
 /area/security/security_gear)
 "aer" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/obj/structure/sign/warning/armory{
+	pixel_x = 32
+	},
 /turf/open/floor/mech_bay_recharge_floor,
 /area/security/security_gear)
 "aes" = (
@@ -7211,9 +7214,9 @@
 	},
 /obj/item/weapon/folder/blue,
 /obj/item/weapon/folder/blue,
-/obj/item/clothing/tie/armband/deputy,
-/obj/item/clothing/tie/armband/deputy,
-/obj/item/clothing/tie/armband/deputy,
+/obj/item/clothing/accessory/armband/deputy,
+/obj/item/clothing/accessory/armband/deputy,
+/obj/item/clothing/accessory/armband/deputy,
 /turf/open/floor/plasteel{
 	dir = 8;
 	icon_state = "vault";
@@ -7356,21 +7359,6 @@
 /obj/item/clothing/tie/badge/holo,
 /obj/item/clothing/tie/badge/holo,
 /obj/item/clothing/tie/badge/holo,
-/obj/item/clothing/tie/badge/holo/cord{
-	pixel_x = 15
-	},
-/obj/item/clothing/tie/badge/holo/cord{
-	pixel_x = 15
-	},
-/obj/item/clothing/tie/badge/holo/cord{
-	pixel_x = 15
-	},
-/obj/item/clothing/tie/badge/holo/cord{
-	pixel_x = 15
-	},
-/obj/item/clothing/tie/badge/holo/cord{
-	pixel_x = 15
-	},
 /turf/open/floor/plasteel/red/side{
 	dir = 10
 	},
@@ -8684,10 +8672,7 @@
 /turf/open/floor/plating,
 /area/maintenance/disposal)
 "apr" = (
-/obj/structure/sign/securearea{
-	name = "\improper STAY CLEAR HEAVY MACHINERY";
-	pixel_y = 0
-	},
+/obj/structure/sign/warning/moving_parts,
 /turf/closed/wall,
 /area/maintenance/disposal)
 "aps" = (
@@ -17086,7 +17071,7 @@
 	pixel_x = 0;
 	pixel_y = 22
 	},
-/obj/item/clothing/tie/waistcoat,
+/obj/item/clothing/accessory/waistcoat,
 /obj/item/clothing/suit/toggle/lawyer/black,
 /obj/item/clothing/under/suit_jacket/red,
 /obj/item/clothing/under/lawyer/blacksuit,
@@ -18285,7 +18270,7 @@
 "aFl" = (
 /obj/structure/grille,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
-/obj/structure/window/reinforced/highpressure/fulltile,
+/obj/structure/window/plasma/reinforced/fulltile,
 /turf/open/floor/plating,
 /area/engine/engineering)
 "aFm" = (
@@ -18991,7 +18976,7 @@
 	dir = 9;
 	pixel_y = 0
 	},
-/obj/structure/window/reinforced/highpressure/fulltile,
+/obj/structure/window/plasma/reinforced/fulltile,
 /turf/open/floor/plating,
 /area/engine/engineering)
 "aGH" = (
@@ -19003,7 +18988,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
-/obj/structure/window/reinforced/highpressure/fulltile,
+/obj/structure/window/plasma/reinforced/fulltile,
 /turf/open/floor/plating,
 /area/engine/engineering)
 "aGI" = (
@@ -19029,7 +19014,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
-/obj/structure/window/reinforced/highpressure/fulltile,
+/obj/structure/window/plasma/reinforced/fulltile,
 /turf/open/floor/plating,
 /area/engine/engineering)
 "aGL" = (
@@ -19038,7 +19023,7 @@
 	dir = 1;
 	initialize_directions = 11
 	},
-/obj/structure/window/reinforced/highpressure/fulltile,
+/obj/structure/window/plasma/reinforced/fulltile,
 /turf/open/floor/plating,
 /area/engine/engineering)
 "aGM" = (
@@ -19047,7 +19032,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
-/obj/structure/window/reinforced/highpressure/fulltile,
+/obj/structure/window/plasma/reinforced/fulltile,
 /turf/open/floor/plating,
 /area/engine/engineering)
 "aGN" = (
@@ -19892,10 +19877,10 @@
 /area/engine/engineering)
 "aIh" = (
 /obj/structure/grille,
-/obj/structure/window/reinforced/highpressure/fulltile,
 /obj/structure/cable/white{
 	icon_state = "4-8"
 	},
+/obj/structure/window/plasma/reinforced/fulltile,
 /turf/open/floor/plating,
 /area/engine/engineering)
 "aIi" = (
@@ -19975,7 +19960,7 @@
 /area/engine/engineering)
 "aIp" = (
 /obj/structure/grille,
-/obj/structure/window/reinforced/highpressure/fulltile,
+/obj/structure/window/plasma/reinforced/fulltile,
 /turf/open/floor/plating,
 /area/engine/engineering)
 "aIq" = (
@@ -23528,7 +23513,7 @@
 /obj/machinery/atmospherics/pipe/manifold/general/visible{
 	dir = 1
 	},
-/obj/structure/window/reinforced/highpressure/fulltile,
+/obj/structure/window/plasma/reinforced/fulltile,
 /turf/open/floor/plating,
 /area/engine/supermatter)
 "aOo" = (
@@ -23538,7 +23523,7 @@
 	pixel_x = 0;
 	initialize_directions = 10
 	},
-/obj/structure/window/reinforced/highpressure/fulltile,
+/obj/structure/window/plasma/reinforced/fulltile,
 /turf/open/floor/plating,
 /area/engine/supermatter)
 "aOp" = (
@@ -25235,7 +25220,7 @@
 /area/engine/supermatter)
 "aRI" = (
 /obj/structure/grille,
-/obj/structure/window/reinforced/highpressure/fulltile,
+/obj/structure/window/plasma/reinforced/fulltile,
 /turf/open/floor/plating,
 /area/engine/supermatter)
 "aRJ" = (
@@ -26745,7 +26730,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 5
 	},
-/obj/item/clothing/tie/lawyers_badge,
+/obj/item/clothing/accessory/lawyers_badge,
 /obj/structure/sign/poster/contraband/fun_police{
 	pixel_x = -31
 	},
@@ -27115,7 +27100,7 @@
 "aVj" = (
 /obj/structure/grille,
 /obj/machinery/atmospherics/pipe/manifold/general/visible,
-/obj/structure/window/reinforced/highpressure/fulltile,
+/obj/structure/window/plasma/reinforced/fulltile,
 /turf/open/floor/plating,
 /area/engine/supermatter)
 "aVk" = (
@@ -27123,7 +27108,7 @@
 /obj/machinery/atmospherics/pipe/simple/general/visible{
 	dir = 9
 	},
-/obj/structure/window/reinforced/highpressure/fulltile,
+/obj/structure/window/plasma/reinforced/fulltile,
 /turf/open/floor/plating,
 /area/engine/supermatter)
 "aVl" = (
@@ -31708,7 +31693,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
-/obj/structure/window/reinforced/highpressure/fulltile,
+/obj/structure/window/plasma/reinforced/fulltile,
 /turf/open/floor/plating,
 /area/engine/engineering)
 "bdb" = (
@@ -40379,6 +40364,9 @@
 /turf/open/floor/plating,
 /area/maintenance/port/fore)
 "bre" = (
+/obj/structure/sign/warning/mail_delivery{
+	pixel_x = -32
+	},
 /turf/open/floor/plasteel/delivery,
 /area/quartermaster/sorting)
 "brf" = (
@@ -46099,6 +46087,9 @@
 	dir = 8;
 	network = list("MiniSat")
 	},
+/obj/structure/sign/warning/lethal_turrets{
+	pixel_x = 32
+	},
 /turf/open/floor/plasteel{
 	tag = "icon-darkbluecorners (WEST)";
 	icon_state = "darkbluecorners";
@@ -46122,11 +46113,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
-	},
-/obj/machinery/airalarm{
-	dir = 4;
-	icon_state = "alarm0";
-	pixel_x = -22
 	},
 /mob/living/simple_animal/bot/floorbot,
 /turf/open/floor/plasteel{
@@ -46159,6 +46145,14 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
+	},
+/obj/machinery/airalarm{
+	dir = 8;
+	frequency = 1439;
+	locked = 0;
+	pixel_x = 23;
+	pixel_y = 0;
+	req_access = null
 	},
 /mob/living/simple_animal/bot/cleanbot,
 /turf/open/floor/plasteel{
@@ -47508,23 +47502,28 @@
 "bCC" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/glass{
-	name = "Library"
+	name = "Library Access"
 	},
-/turf/open/floor/wood,
+/turf/open/floor/plasteel/vault{
+	dir = 8
+	},
 /area/library)
 "bCD" = (
-/obj/effect/spawner/structure/window,
+/obj/structure/grille,
+/obj/structure/window/reinforced/fulltile,
 /turf/open/floor/plating,
 /area/library)
 "bCE" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/glass{
+	name = "Library Access"
+	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	req_access_txt = "0"
 	},
-/obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/glass{
-	name = "Library"
+/turf/open/floor/plasteel/vault{
+	dir = 8
 	},
-/turf/open/floor/wood,
 /area/library)
 "bCF" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
@@ -48563,64 +48562,55 @@
 /area/maintenance/port/aft)
 "bEs" = (
 /obj/structure/table/wood,
-/obj/item/device/flashlight/lamp/green{
-	pixel_x = 1;
-	pixel_y = 5
-	},
-/obj/machinery/computer/security/telescreen/entertainment{
-	pixel_x = -32;
-	pixel_y = 0
-	},
-/turf/open/floor/wood,
+/obj/machinery/computer/libraryconsole,
+/turf/open/floor/plasteel/black,
 /area/library)
 "bEt" = (
 /turf/open/floor/carpet,
 /area/library)
 "bEu" = (
 /obj/structure/table/wood,
-/obj/machinery/computer/libraryconsole,
-/turf/open/floor/wood,
+/obj/item/device/flashlight/lamp,
+/turf/open/floor/plasteel/vault{
+	dir = 5
+	},
 /area/library)
 "bEv" = (
-/obj/structure/chair/comfy/black{
-	dir = 8
+/obj/structure/table/wood,
+/obj/item/weapon/paper_bin,
+/obj/item/weapon/pen,
+/obj/machinery/firealarm{
+	dir = 4;
+	pixel_x = 24
 	},
-/turf/open/floor/wood,
+/turf/open/floor/plasteel/vault{
+	dir = 5
+	},
 /area/library)
 "bEw" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	req_access_txt = "0"
 	},
-/turf/open/floor/carpet,
+/turf/open/floor/plasteel/grimy,
 /area/library)
 "bEx" = (
+/obj/machinery/light/small{
+	dir = 1
+	},
 /obj/structure/table/wood,
-/obj/item/device/flashlight/lamp/green{
-	pixel_x = 1;
-	pixel_y = 5
+/obj/item/weapon/folder,
+/obj/item/weapon/pen,
+/obj/machinery/newscaster{
+	pixel_y = 32
 	},
-/obj/machinery/computer/security/telescreen/entertainment{
-	pixel_y = 30
-	},
-/turf/open/floor/plasteel{
-	tag = "icon-cult";
-	icon_state = "cult";
-	dir = 2
+/turf/open/floor/plasteel/vault{
+	dir = 5
 	},
 /area/library)
 "bEy" = (
+/obj/machinery/computer/libraryconsole,
 /obj/structure/table/wood,
-/obj/machinery/newscaster{
-	pixel_x = 0;
-	pixel_y = 32
-	},
-/obj/item/weapon/folder,
-/obj/item/weapon/folder,
-/turf/open/floor/plasteel{
-	tag = "icon-cult";
-	icon_state = "cult";
-	dir = 2
-	},
+/turf/open/floor/plasteel/black,
 /area/library)
 "bEz" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
@@ -49670,6 +49660,7 @@
 	},
 /area/maintenance/port/aft)
 "bGq" = (
+/obj/structure/reagent_dispensers/watertank,
 /turf/open/floor/plating{
 	tag = "icon-panelscorched";
 	icon_state = "panelscorched"
@@ -49691,45 +49682,52 @@
 /area/maintenance/port/aft)
 "bGs" = (
 /obj/structure/table/wood,
-/obj/machinery/newscaster{
-	pixel_x = -32;
-	pixel_y = 0
+/obj/item/weapon/folder,
+/obj/item/weapon/pen,
+/obj/machinery/computer/security/telescreen/entertainment{
+	pixel_x = -32
 	},
-/turf/open/floor/wood,
+/turf/open/floor/plasteel/vault{
+	dir = 5
+	},
 /area/library)
 "bGt" = (
 /obj/structure/chair/office/dark{
-	dir = 1
+	dir = 8
 	},
 /obj/effect/landmark/start/librarian,
-/turf/open/floor/wood,
+/turf/open/floor/plasteel/black,
 /area/library)
 "bGu" = (
 /obj/structure/chair/comfy/black{
 	dir = 8
 	},
-/obj/machinery/firealarm{
-	dir = 4;
-	pixel_x = 28;
-	pixel_y = 5
+/obj/machinery/newscaster{
+	pixel_x = 32
 	},
-/turf/open/floor/wood,
+/obj/machinery/camera{
+	c_tag = "Library - Fore";
+	dir = 8;
+	name = "library camera"
+	},
+/turf/open/floor/plasteel/black,
 /area/library)
 "bGv" = (
-/turf/open/floor/plasteel{
-	tag = "icon-cult";
-	icon_state = "cult";
-	dir = 2
-	},
-/area/library)
-"bGw" = (
-/obj/structure/chair/comfy/brown{
+/obj/structure/chair/office/dark{
 	dir = 1
 	},
-/turf/open/floor/plasteel{
-	tag = "icon-cult";
-	icon_state = "cult";
-	dir = 2
+/obj/machinery/atmospherics/components/unary/vent_pump/on,
+/turf/open/floor/plasteel/black,
+/area/library)
+"bGw" = (
+/obj/structure/table/wood,
+/obj/item/weapon/paper_bin,
+/obj/item/weapon/pen,
+/obj/machinery/status_display{
+	pixel_x = 32
+	},
+/turf/open/floor/plasteel/vault{
+	dir = 5
 	},
 /area/library)
 "bGx" = (
@@ -50686,12 +50684,18 @@
 /turf/open/floor/plating,
 /area/crew_quarters/locker/restrooms)
 "bIg" = (
-/obj/item/device/flashlight/lamp/green{
-	pixel_x = 1;
-	pixel_y = 5
-	},
 /obj/structure/table/wood,
-/turf/open/floor/wood,
+/obj/item/weapon/paper_bin,
+/obj/item/weapon/pen,
+/obj/structure/sign/kiddieplaque{
+	desc = "A long list of rules to be followed when in the library, extolling the virtues of being quiet at all times and threatening those who would dare eat hot food inside.";
+	name = "Library Rules Sign";
+	pixel_x = -32
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/open/floor/plasteel/black,
 /area/library)
 "bIh" = (
 /turf/open/floor/wood,
@@ -50716,13 +50720,10 @@
 /area/library)
 "bIj" = (
 /obj/machinery/door/morgue{
-	name = "Study #1";
-	req_access_txt = "0"
+	name = "Private Study"
 	},
-/turf/open/floor/plasteel{
-	tag = "icon-cult";
-	icon_state = "cult";
-	dir = 2
+/turf/open/floor/plasteel/vault{
+	dir = 5
 	},
 /area/library)
 "bIk" = (
@@ -51585,62 +51586,57 @@
 /area/maintenance/port/aft)
 "bJT" = (
 /obj/structure/table/wood,
-/obj/machinery/airalarm{
-	dir = 4;
-	pixel_x = -23;
-	pixel_y = 0
+/obj/item/device/flashlight/lamp,
+/obj/machinery/newscaster{
+	pixel_x = -32
 	},
-/obj/item/weapon/paper_bin,
-/obj/item/weapon/pen,
-/turf/open/floor/wood,
+/turf/open/floor/plasteel/vault{
+	dir = 5
+	},
 /area/library)
 "bJU" = (
-/obj/structure/chair/office/dark{
-	dir = 8
-	},
-/turf/open/floor/wood,
+/obj/structure/table/wood,
+/obj/item/weapon/folder,
+/obj/item/weapon/pen,
+/turf/open/floor/plasteel/black,
 /area/library)
 "bJV" = (
-/obj/structure/chair/comfy/black,
+/obj/structure/displaycase/trophy,
 /turf/open/floor/wood,
 /area/library)
 "bJW" = (
 /turf/open/floor/plasteel/stairsnew/wood1,
 /area/library)
 "bJX" = (
-/obj/item/device/flashlight/lamp/green{
-	pixel_x = 1;
-	pixel_y = 5
-	},
-/obj/machinery/newscaster{
-	pixel_x = 0;
+/obj/structure/chair/comfy/brown,
+/obj/machinery/status_display{
 	pixel_y = 32
 	},
-/obj/structure/table/wood,
+/obj/machinery/atmospherics/components/unary/vent_pump{
+	dir = 2;
+	on = 1
+	},
 /turf/open/floor/wood,
 /area/library)
 "bJY" = (
-/obj/machinery/vending/coffee,
-/obj/machinery/light{
-	dir = 1
+/obj/machinery/photocopier,
+/obj/machinery/newscaster{
+	pixel_y = 32
 	},
 /turf/open/floor/wood,
 /area/library)
 "bJZ" = (
-/obj/structure/chair/comfy/black,
-/obj/effect/landmark/start/assistant,
+/obj/machinery/bookbinder,
+/obj/structure/extinguisher_cabinet{
+	pixel_y = 32
+	},
 /turf/open/floor/wood,
 /area/library)
 "bKa" = (
-/obj/item/weapon/twohanded/required/kirbyplants{
-	tag = "icon-plant-22";
-	icon_state = "plant-22"
-	},
-/obj/machinery/atmospherics/components/unary/vent_scrubber{
-	dir = 2;
-	on = 1;
-	scrub_N2O = 0;
-	scrub_Toxins = 0
+/obj/machinery/vending/coffee,
+/obj/item/device/radio/intercom{
+	name = "Station Intercom";
+	pixel_y = 26
 	},
 /turf/open/floor/wood,
 /area/library)
@@ -52504,6 +52500,11 @@
 /obj/structure/sign/poster/contraband/random{
 	pixel_x = -31
 	},
+/obj/structure/cable/yellow{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
 /turf/open/floor/plating,
 /area/maintenance/port/aft)
 "bLD" = (
@@ -52511,16 +52512,11 @@
 /turf/open/floor/wood,
 /area/library)
 "bLE" = (
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
-	dir = 9
-	},
-/turf/open/floor/carpet,
+/obj/structure/chair/office/dark,
+/turf/open/floor/plasteel/grimy,
 /area/library)
 "bLF" = (
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
-	dir = 6
-	},
-/turf/open/floor/carpet,
+/turf/open/floor/plasteel/grimy,
 /area/library)
 "bLG" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
@@ -53434,23 +53430,23 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
-/turf/open/floor/carpet,
+/turf/open/floor/plasteel/grimy,
 /area/library)
 "bNl" = (
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
-	dir = 4
-	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	req_access_txt = "0"
 	},
-/turf/open/floor/carpet,
-/area/library)
-"bNm" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
-/obj/effect/landmark/event_spawn,
-/turf/open/floor/carpet,
+/turf/open/floor/plasteel/grimy,
+/area/library)
+"bNm" = (
+/obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden{
+	dir = 1;
+	initialize_directions = 11
+	},
+/turf/open/floor/plasteel/grimy,
 /area/library)
 "bNn" = (
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden{
@@ -53460,14 +53456,16 @@
 /turf/open/floor/carpet,
 /area/library)
 "bNo" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/glass{
+	name = "Library Access"
+	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
-/obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/glass{
-	name = "Library"
+/turf/open/floor/plasteel/vault{
+	dir = 8
 	},
-/turf/open/floor/wood,
 /area/library)
 "bNp" = (
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden{
@@ -54734,14 +54732,27 @@
 /turf/open/floor/plating,
 /area/maintenance/port/aft)
 "bPf" = (
-/obj/machinery/light/small{
-	dir = 8
+/obj/machinery/power/apc{
+	dir = 8;
+	name = "Library APC";
+	pixel_x = -26;
+	pixel_y = 3
+	},
+/obj/structure/cable/yellow{
+	icon_state = "0-4";
+	d2 = 4
 	},
 /turf/open/floor/wood,
 /area/library)
 "bPg" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
-/turf/open/floor/carpet,
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8";
+	tag = ""
+	},
+/turf/open/floor/plasteel/grimy,
 /area/library)
 "bPh" = (
 /obj/machinery/atmospherics/components/unary/vent_pump{
@@ -54757,11 +54768,21 @@
 /turf/open/floor/carpet,
 /area/library)
 "bPj" = (
-/obj/machinery/photocopier,
+/obj/item/weapon/twohanded/required/kirbyplants/random,
+/obj/machinery/atmospherics/components/unary/vent_scrubber{
+	dir = 1;
+	on = 1;
+	scrub_N2O = 1;
+	scrub_Toxins = 1
+	},
 /turf/open/floor/wood,
 /area/library)
 "bPk" = (
-/obj/machinery/bookbinder,
+/obj/item/weapon/twohanded/required/kirbyplants/random,
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -28
+	},
 /turf/open/floor/wood,
 /area/library)
 "bPl" = (
@@ -55442,37 +55463,26 @@
 /area/library)
 "bQI" = (
 /obj/structure/table/wood,
-/obj/item/device/flashlight/lamp/green{
-	pixel_x = 1;
-	pixel_y = 5
+/obj/structure/window/reinforced{
+	dir = 8
 	},
-/turf/open/floor/wood,
+/obj/item/device/flashlight/lamp,
+/turf/open/floor/plasteel/grimy,
 /area/library)
 "bQJ" = (
 /obj/structure/table/wood,
-/turf/open/floor/wood,
+/turf/open/floor/plasteel/grimy,
 /area/library)
 "bQK" = (
-/obj/item/device/camera_film{
-	pixel_y = 9
-	},
-/obj/item/device/camera_film{
-	pixel_x = -3;
-	pixel_y = 5
-	},
 /obj/structure/table/wood,
-/turf/open/floor/wood,
+/obj/item/weapon/storage/fancy/donut_box,
+/turf/open/floor/plasteel/grimy,
 /area/library)
 "bQL" = (
-/obj/item/weapon/paper_bin,
-/obj/item/device/radio/intercom{
-	dir = 4;
-	name = "Station Intercom (General)";
-	pixel_x = 27
-	},
 /obj/structure/table/wood,
+/obj/item/weapon/folder,
 /obj/item/weapon/pen,
-/turf/open/floor/wood,
+/turf/open/floor/plasteel/grimy,
 /area/library)
 "bQM" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
@@ -56362,15 +56372,12 @@
 /turf/open/floor/wood,
 /area/library)
 "bSu" = (
-/obj/machinery/door/window/northright{
-	base_state = "left";
+/obj/machinery/door/window{
 	dir = 8;
-	icon_state = "left";
-	name = "Library Desk Door";
-	pixel_x = 3;
-	req_access_txt = "37"
+	name = "Library Desk";
+	req_access_txt = "0"
 	},
-/turf/open/floor/wood,
+/turf/open/floor/plasteel/grimy,
 /area/library)
 "bSv" = (
 /obj/effect/landmark/start/librarian,
@@ -56382,10 +56389,10 @@
 "bSw" = (
 /obj/structure/table/wood,
 /obj/machinery/computer/libraryconsole/bookmanagement,
-/obj/structure/sign/poster/official/report_crimes{
+/obj/machinery/newscaster{
 	pixel_x = 32
 	},
-/turf/open/floor/wood,
+/turf/open/floor/plasteel/grimy,
 /area/library)
 "bSx" = (
 /obj/structure/closet/firecloset,
@@ -57270,25 +57277,22 @@
 /turf/open/floor/carpet,
 /area/library)
 "bUj" = (
-/obj/structure/table/wood,
-/obj/item/weapon/pen/red,
-/obj/item/weapon/pen/blue{
-	pixel_x = 5;
-	pixel_y = 5
+/obj/structure/window/reinforced{
+	dir = 8
 	},
-/turf/open/floor/wood,
+/obj/structure/table/wood,
+/obj/item/weapon/storage/briefcase,
+/turf/open/floor/plasteel/grimy,
 /area/library)
 "bUk" = (
 /obj/structure/bookcase/random/religion,
 /turf/open/floor/wood,
 /area/library)
 "bUl" = (
-/obj/machinery/light_switch{
-	pixel_x = 28;
-	pixel_y = 0
-	},
-/obj/machinery/libraryscanner,
-/turf/open/floor/wood,
+/obj/structure/table/wood,
+/obj/item/weapon/storage/bag/books,
+/obj/item/device/taperecorder,
+/turf/open/floor/plasteel/grimy,
 /area/library)
 "bUm" = (
 /obj/structure/closet/emcloset,
@@ -58141,13 +58145,12 @@
 /turf/open/floor/wood,
 /area/library)
 "bVJ" = (
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
-/obj/structure/cable/yellow{
-	icon_state = "4-8";
-	d1 = 4;
-	d2 = 8
+/obj/machinery/door/airlock/glass{
+	name = "Library Game Room"
 	},
-/turf/open/floor/carpet,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/turf/open/floor/plasteel/grimy,
 /area/library)
 "bVK" = (
 /obj/structure/cable/yellow{
@@ -58158,29 +58161,27 @@
 /turf/open/floor/wood,
 /area/library)
 "bVL" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	req_access_txt = "0"
+/obj/machinery/door/airlock/glass{
+	name = "Library Game Room"
 	},
-/obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
-	},
-/turf/open/floor/carpet,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/turf/open/floor/plasteel/grimy,
 /area/library)
 "bVM" = (
-/obj/item/weapon/folder,
-/obj/item/weapon/folder,
-/obj/machinery/camera/autoname{
-	dir = 1;
-	network = list("SS13")
+/obj/structure/window/reinforced{
+	dir = 8
 	},
 /obj/structure/table/wood,
-/obj/machinery/airalarm{
-	dir = 1;
-	pixel_y = -22
+/obj/item/weapon/folder,
+/obj/item/weapon/pen/red,
+/obj/item/weapon/pen/blue{
+	pixel_x = 3;
+	pixel_y = 3
 	},
-/turf/open/floor/wood,
+/obj/machinery/computer/security/telescreen/entertainment{
+	pixel_y = -32
+	},
+/turf/open/floor/plasteel/grimy,
 /area/library)
 "bVN" = (
 /obj/structure/noticeboard{
@@ -58190,24 +58191,26 @@
 	pixel_x = 0;
 	pixel_y = -27
 	},
-/turf/open/floor/wood,
+/turf/open/floor/plasteel/grimy,
 /area/library)
 "bVO" = (
-/obj/machinery/holopad,
-/obj/item/weapon/papercutter,
-/obj/machinery/light,
+/obj/item/weapon/twohanded/required/kirbyplants/random,
 /obj/machinery/light_switch{
 	pixel_y = -28
 	},
-/obj/structure/table/wood,
-/turf/open/floor/wood,
+/obj/machinery/camera{
+	c_tag = "Library - Aft";
+	dir = 1;
+	name = "library camera"
+	},
+/turf/open/floor/plasteel/grimy,
 /area/library)
 "bVP" = (
-/obj/machinery/firealarm{
-	dir = 4;
+/obj/machinery/airalarm{
+	dir = 8;
 	pixel_x = 24
 	},
-/turf/open/floor/wood,
+/turf/open/floor/plasteel/grimy,
 /area/library)
 "bVQ" = (
 /obj/structure/closet/emcloset,
@@ -58987,38 +58990,30 @@
 /turf/open/floor/plating,
 /area/maintenance/port/aft)
 "bXo" = (
-/obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/centcom{
-	name = "Quiet Room";
-	opacity = 1
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	tag = "icon-intact (NORTHWEST)";
+	icon_state = "intact";
+	dir = 9
 	},
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
-/turf/open/floor/wood,
+/turf/open/floor/plasteel/grimy,
 /area/library)
 "bXp" = (
-/obj/effect/spawner/structure/window,
-/obj/machinery/door/poddoor/shutters/preopen{
-	dir = 1;
-	id = "LibShut";
-	name = "Privacy shutters"
+/obj/item/weapon/twohanded/required/kirbyplants/random,
+/obj/machinery/atmospherics/components/unary/vent_scrubber{
+	dir = 4;
+	on = 1;
+	scrub_N2O = 0;
+	scrub_Toxins = 0
 	},
-/turf/open/floor/plating,
+/turf/open/floor/plasteel/vault{
+	dir = 5
+	},
 /area/library)
 "bXq" = (
-/obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/centcom{
-	name = "Quiet Room";
-	opacity = 1
-	},
-/obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	req_access_txt = "0"
+	dir = 5
 	},
-/turf/open/floor/wood,
+/turf/open/floor/plasteel/grimy,
 /area/library)
 "bXr" = (
 /obj/machinery/door/airlock/centcom{
@@ -59026,10 +59021,8 @@
 	opacity = 1;
 	req_one_access_txt = "37"
 	},
-/turf/open/floor/plasteel{
-	tag = "icon-cult";
-	icon_state = "cult";
-	dir = 2
+/turf/open/floor/plasteel/vault{
+	dir = 5
 	},
 /area/library)
 "bXs" = (
@@ -59771,7 +59764,12 @@
 /obj/structure/table/wood,
 /obj/item/weapon/paper_bin,
 /obj/item/weapon/pen,
-/turf/open/floor/wood,
+/obj/machinery/ai_status_display{
+	pixel_x = -32
+	},
+/turf/open/floor/plasteel/vault{
+	dir = 5
+	},
 /area/library)
 "bYL" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
@@ -59800,30 +59798,32 @@
 /turf/open/floor/carpet,
 /area/library)
 "bYN" = (
-/obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
+/obj/structure/chair/office/dark{
+	dir = 8
 	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 5
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
-/turf/open/floor/carpet,
+/turf/open/floor/plasteel/grimy,
 /area/library)
 "bYO" = (
 /obj/structure/table/wood,
-/obj/item/weapon/dice/d20,
-/obj/item/weapon/dice,
-/turf/open/floor/wood,
+/obj/item/weapon/storage/fancy/candle_box{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/item/weapon/storage/fancy/candle_box,
+/turf/open/floor/plasteel/vault{
+	dir = 5
+	},
 /area/library)
 "bYP" = (
 /obj/structure/table/wood,
-/obj/item/device/paicard,
-/obj/machinery/camera/autoname{
-	dir = 2;
-	network = list("SS13")
+/obj/item/weapon/storage/crayons,
+/obj/machinery/light_switch{
+	pixel_y = 26
 	},
-/turf/open/floor/wood,
+/turf/open/floor/plasteel/black,
 /area/library)
 "bYQ" = (
 /obj/structure/closet/cabinet,
@@ -59834,10 +59834,8 @@
 /obj/item/weapon/canvas/twentythreeXtwentythree,
 /obj/item/weapon/canvas/twentythreeXtwentythree,
 /obj/item/weapon/storage/crayons,
-/turf/open/floor/plasteel{
-	tag = "icon-cult";
-	icon_state = "cult";
-	dir = 2
+/turf/open/floor/plasteel/vault{
+	dir = 5
 	},
 /area/library)
 "bYR" = (
@@ -59851,10 +59849,8 @@
 	pixel_y = 0
 	},
 /obj/item/weapon/book/codex_gigas,
-/turf/open/floor/plasteel{
-	tag = "icon-cult";
-	icon_state = "cult";
-	dir = 2
+/turf/open/floor/plasteel/vault{
+	dir = 5
 	},
 /area/library)
 "bYS" = (
@@ -60605,46 +60601,62 @@
 /turf/open/floor/plating,
 /area/maintenance/port/aft)
 "cah" = (
-/obj/machinery/holopad,
-/obj/structure/extinguisher_cabinet{
-	pixel_x = -27;
-	pixel_y = 0
+/obj/machinery/disposal/bin,
+/obj/structure/sign/kiddieplaque{
+	desc = "A long list of rules to be followed when in the library, extolling the virtues of being quiet at all times and threatening those who would dare eat hot food inside.";
+	name = "Library Rules Sign";
+	pixel_x = -32
 	},
-/turf/open/floor/wood,
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 4
+	},
+/obj/machinery/camera{
+	c_tag = "Library Backroom";
+	dir = 4;
+	name = "library camera"
+	},
+/turf/open/floor/plasteel/black,
 /area/library)
 "cai" = (
-/obj/structure/chair/office/dark,
-/turf/open/floor/carpet,
+/obj/structure/table/wood,
+/obj/item/device/paicard,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/plasteel/grimy,
 /area/library)
 "caj" = (
-/obj/machinery/computer/security/telescreen/entertainment{
-	pixel_x = 30;
-	pixel_y = 0
+/obj/machinery/light{
+	dir = 4
 	},
-/obj/machinery/photocopier,
-/turf/open/floor/wood,
+/obj/structure/table/wood,
+/obj/item/weapon/storage/briefcase{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/item/weapon/storage/secure/briefcase,
+/obj/machinery/airalarm{
+	dir = 8;
+	icon_state = "alarm0";
+	pixel_x = 24
+	},
+/turf/open/floor/plasteel/black,
 /area/library)
 "cak" = (
-/obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
 	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 10
-	},
-/turf/open/floor/wood{
-	tag = "icon-wood-broken";
-	icon_state = "wood-broken"
+/turf/open/floor/plasteel/vault{
+	dir = 5
 	},
 /area/library)
 "cal" = (
 /obj/structure/easel,
-/turf/open/floor/plasteel{
-	tag = "icon-cult";
-	icon_state = "cult";
-	dir = 2
-	},
+/turf/open/floor/plasteel/black,
 /area/library)
 "cam" = (
 /obj/structure/bookcase{
@@ -60653,18 +60665,12 @@
 /obj/item/weapon/book/manual/wiki/clown,
 /obj/item/weapon/book/manual/hydroponics_pod_people,
 /obj/item/weapon/book/manual/wiki/security_space_law,
-/turf/open/floor/plasteel{
-	tag = "icon-cult";
-	icon_state = "cult";
-	dir = 2
-	},
+/turf/open/floor/plasteel/black,
 /area/library)
 "can" = (
 /obj/structure/chair/comfy/brown,
-/turf/open/floor/plasteel{
-	tag = "icon-cult";
-	icon_state = "cult";
-	dir = 2
+/turf/open/floor/plasteel/vault{
+	dir = 5
 	},
 /area/library)
 "cao" = (
@@ -61609,57 +61615,60 @@
 /turf/open/floor/plating,
 /area/maintenance/port/aft)
 "cbM" = (
-/obj/machinery/newscaster{
-	pixel_x = -32;
-	pixel_y = 0
+/obj/structure/table/wood,
+/obj/machinery/status_display{
+	pixel_x = -32
 	},
-/obj/machinery/light{
-	dir = 8
+/obj/item/weapon/dice/d20{
+	pixel_x = 3;
+	pixel_y = 3
 	},
-/turf/open/floor/wood,
+/obj/item/weapon/dice/d10{
+	pixel_x = -3
+	},
+/turf/open/floor/plasteel/vault{
+	dir = 5
+	},
 /area/library)
 "cbN" = (
 /obj/structure/table/wood,
-/obj/item/weapon/folder,
-/obj/item/weapon/folder,
-/obj/item/weapon/pen,
-/turf/open/floor/carpet,
+/obj/item/weapon/storage/pill_bottle/dice,
+/turf/open/floor/plasteel/grimy,
 /area/library)
 "cbO" = (
 /obj/structure/chair/office/dark{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
-/turf/open/floor/carpet,
+/turf/open/floor/plasteel/grimy,
 /area/library)
 "cbP" = (
 /obj/structure/chair/office/dark{
 	dir = 8
 	},
-/turf/open/floor/carpet,
+/turf/open/floor/plasteel/grimy,
 /area/library)
 "cbQ" = (
-/obj/item/toy/cards/deck,
 /obj/structure/table/wood,
-/turf/open/floor/carpet,
+/obj/item/toy/cards/deck/cas/black{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/toy/cards/deck/cas{
+	pixel_x = -5;
+	pixel_y = 5
+	},
+/obj/item/toy/cards/deck,
+/turf/open/floor/plasteel/grimy,
 /area/library)
 "cbR" = (
-/obj/machinery/disposal/bin,
-/obj/structure/disposalpipe/trunk,
-/obj/machinery/light{
-	icon_state = "tube1";
-	dir = 4
+/obj/machinery/photocopier,
+/turf/open/floor/plasteel/vault{
+	dir = 5
 	},
-/turf/open/floor/wood,
 /area/library)
 "cbS" = (
-/obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/turf/open/floor/wood,
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/plasteel/black,
 /area/library)
 "cbT" = (
 /obj/structure/table/wood,
@@ -61670,10 +61679,8 @@
 	pixel_y = 0
 	},
 /obj/item/clothing/glasses/regular,
-/turf/open/floor/plasteel{
-	tag = "icon-cult";
-	icon_state = "cult";
-	dir = 2
+/turf/open/floor/plasteel/vault{
+	dir = 5
 	},
 /area/library)
 "cbU" = (
@@ -61694,11 +61701,7 @@
 	pixel_y = 7
 	},
 /obj/item/device/camera/spooky,
-/turf/open/floor/plasteel{
-	tag = "icon-cult";
-	icon_state = "cult";
-	dir = 2
-	},
+/turf/open/floor/plasteel/black,
 /area/library)
 "cbV" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
@@ -62219,31 +62222,25 @@
 /turf/open/floor/plating,
 /area/maintenance/port/aft)
 "ccU" = (
-/obj/machinery/atmospherics/components/unary/vent_scrubber{
-	dir = 4;
-	on = 1;
-	scrub_N2O = 0;
-	scrub_Toxins = 0
-	},
-/turf/open/floor/wood,
+/obj/structure/table/wood,
+/obj/item/device/flashlight/lamp,
+/turf/open/floor/plasteel/black,
 /area/library)
 "ccV" = (
-/obj/item/weapon/storage/pill_bottle/dice,
-/obj/structure/table/wood,
-/turf/open/floor/carpet,
+/obj/structure/chair/office/dark{
+	dir = 1
+	},
+/obj/machinery/computer/security/telescreen/entertainment{
+	pixel_y = -32
+	},
+/turf/open/floor/plasteel/grimy,
 /area/library)
 "ccW" = (
-/obj/structure/chair/office/dark{
-	dir = 4
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 0;
+	pixel_y = -30
 	},
-/obj/machinery/airalarm{
-	dir = 1;
-	pixel_y = -22
-	},
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
-	dir = 9
-	},
-/turf/open/floor/carpet,
+/turf/open/floor/plasteel/grimy,
 /area/library)
 "ccX" = (
 /obj/structure/chair/office/dark{
@@ -62256,34 +62253,24 @@
 /turf/open/floor/carpet,
 /area/library)
 "ccY" = (
-/obj/structure/table/wood,
-/obj/item/weapon/paper,
-/turf/open/floor/carpet,
-/area/library)
-"ccZ" = (
-/obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
+/obj/structure/chair/office/dark{
+	dir = 1
 	},
 /obj/item/device/radio/intercom{
-	dir = 4;
-	name = "Station Intercom (General)";
-	pixel_x = 27
+	name = "Station Intercom";
+	pixel_y = -26
 	},
-/turf/open/floor/wood,
+/turf/open/floor/plasteel/grimy,
+/area/library)
+"ccZ" = (
+/obj/item/weapon/twohanded/required/kirbyplants/random,
+/turf/open/floor/plasteel/black,
 /area/library)
 "cda" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/plasteel/vault{
+	dir = 5
 	},
-/obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/turf/open/floor/wood,
 /area/library)
 "cdb" = (
 /obj/machinery/vending/snack,
@@ -63087,13 +63074,13 @@
 	req_access_txt = "0";
 	req_one_access_txt = "12;37"
 	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/structure/disposalpipe/segment,
-/obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
+/obj/effect/turf_decal/stripes/line_sides{
+	tag = "icon-warn_side (EAST)";
+	icon_state = "warn_side";
+	dir = 4
 	},
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/plating,
 /area/library)
 "cez" = (
@@ -63758,16 +63745,13 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/machinery/atmospherics/pipe/manifold/supply/hidden,
 /obj/structure/disposalpipe/sortjunction{
 	dir = 4;
 	icon_state = "pipe-j2s";
 	sortType = 16
 	},
-/obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
 	},
 /turf/open/floor/plating{
 	icon_state = "warnplate";
@@ -67901,7 +67885,7 @@
 "cmz" = (
 /obj/item/weapon/wrench,
 /obj/item/clothing/suit/apron,
-/obj/item/clothing/tie/armband/hydro,
+/obj/item/clothing/accessory/armband/hydro,
 /obj/structure/table/glass,
 /turf/open/floor/plasteel{
 	dir = 9;
@@ -74749,8 +74733,8 @@
 	pixel_y = 2
 	},
 /obj/structure/table/glass,
-/obj/item/clothing/tie/armband/med,
-/obj/item/clothing/tie/armband/med,
+/obj/item/clothing/accessory/armband/med,
+/obj/item/clothing/accessory/armband/med,
 /turf/open/floor/plasteel{
 	dir = 8;
 	icon_state = "barber"
@@ -82679,10 +82663,7 @@
 	},
 /area/science/mixing)
 "cKs" = (
-/obj/structure/sign/securearea{
-	desc = "A warning sign which reads 'BOMB RANGE";
-	name = "BOMB RANGE"
-	},
+/obj/structure/sign/warning/bomb_range,
 /turf/closed/wall,
 /area/science/mixing)
 "cKt" = (
@@ -84083,10 +84064,7 @@
 	},
 /area/science/mixing)
 "cMy" = (
-/obj/structure/sign/securearea{
-	desc = "A warning sign which reads 'BOMB RANGE";
-	name = "BOMB RANGE"
-	},
+/obj/structure/sign/warning/bomb_range,
 /turf/closed/wall,
 /area/science/test_area)
 "cMz" = (
@@ -84613,6 +84591,9 @@
 	},
 /area/science/mixing)
 "cNr" = (
+/obj/structure/sign/warning/bomb_range{
+	pixel_x = 32
+	},
 /turf/open/floor/plasteel{
 	tag = "icon-warningcorner (WEST)";
 	icon_state = "warningcorner";
@@ -95928,6 +95909,211 @@
 "diz" = (
 /turf/closed/wall,
 /area/maintenance/port/aft)
+"diA" = (
+/turf/open/floor/plasteel/grimy,
+/area/library)
+"diB" = (
+/turf/open/floor/plasteel/grimy,
+/area/library)
+"diC" = (
+/obj/structure/chair/office/dark,
+/turf/open/floor/plasteel/vault{
+	dir = 5
+	},
+/area/library)
+"diD" = (
+/turf/open/floor/plasteel/grimy,
+/area/library)
+"diE" = (
+/obj/structure/sign/nosmoking_2,
+/turf/closed/wall,
+/area/library)
+"diF" = (
+/turf/open/floor/plasteel/grimy,
+/area/library)
+"diG" = (
+/obj/structure/sign/warning/server_room,
+/turf/closed/wall/r_wall,
+/area/tcommsat/server)
+"diH" = (
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/open/floor/plating{
+	icon_state = "warnplate";
+	dir = 4
+	},
+/area/maintenance/port/aft)
+"diI" = (
+/obj/effect/turf_decal/stripes/line_sides,
+/obj/machinery/door/airlock/maintenance{
+	name = "Library Maintenance";
+	req_access_txt = "0";
+	req_one_access_txt = "12;37"
+	},
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/open/floor/plating,
+/area/library)
+"diJ" = (
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/open/floor/wood,
+/area/library)
+"diK" = (
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/open/floor/wood,
+/area/library)
+"diL" = (
+/obj/structure/cable/yellow{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8";
+	tag = ""
+	},
+/turf/open/floor/plasteel/grimy,
+/area/library)
+"diM" = (
+/obj/machinery/atmospherics/pipe/manifold/supply/hidden{
+	dir = 8
+	},
+/turf/open/floor/plasteel/grimy,
+/area/library)
+"diN" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
+	},
+/turf/open/floor/plasteel/grimy,
+/area/library)
+"diO" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 9
+	},
+/turf/open/floor/plasteel/grimy,
+/area/library)
+"diP" = (
+/turf/open/floor/plasteel/grimy,
+/area/library)
+"diQ" = (
+/turf/open/floor/plasteel/grimy,
+/area/library)
+"diR" = (
+/turf/open/floor/plasteel/grimy,
+/area/library)
+"diS" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 6
+	},
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/open/floor/plasteel/grimy,
+/area/library)
+"diT" = (
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/open/floor/wood,
+/area/library)
+"diU" = (
+/obj/structure/closet,
+/obj/effect/spawner/lootdrop/maintenance{
+	lootcount = 4;
+	name = "4maintenance loot spawner"
+	},
+/turf/open/floor/plating,
+/area/library)
+"diV" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/turf/open/floor/plasteel/grimy,
+/area/library)
+"diW" = (
+/turf/open/floor/plating,
+/area/library)
+"diX" = (
+/obj/machinery/newscaster{
+	pixel_x = -32
+	},
+/turf/open/floor/wood,
+/area/library)
+"diY" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/turf/open/floor/plasteel/grimy,
+/area/library)
+"diZ" = (
+/obj/structure/rack,
+/obj/effect/spawner/lootdrop/maintenance,
+/turf/open/floor/plating,
+/area/library)
+"dja" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/turf/open/floor/plasteel/grimy,
+/area/library)
+"djb" = (
+/obj/structure/rack,
+/obj/effect/spawner/lootdrop/maintenance{
+	lootcount = 2;
+	name = "2maintenance loot spawner"
+	},
+/turf/open/floor/plating,
+/area/library)
+"djc" = (
+/obj/structure/table/wood,
+/obj/item/weapon/clipboard,
+/obj/item/weapon/folder,
+/obj/machinery/firealarm{
+	pixel_y = 24
+	},
+/turf/open/floor/plasteel/black,
+/area/library)
+"djd" = (
+/obj/structure/easel,
+/obj/item/weapon/canvas/twentythreeXtwentythree,
+/obj/machinery/atmospherics/components/unary/vent_pump{
+	dir = 8;
+	on = 1
+	},
+/turf/open/floor/plasteel/vault{
+	dir = 5
+	},
+/area/library)
+"dje" = (
+/turf/open/floor/plasteel/black,
+/area/library)
+"djf" = (
+/obj/structure/chair/office/dark{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/plasteel/grimy,
+/area/library)
+"djg" = (
+/obj/structure/table/wood,
+/obj/item/weapon/folder,
+/obj/item/weapon/pen,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/plasteel/grimy,
+/area/library)
 
 (1,1,1) = {"
 aaa
@@ -96160,31 +96346,31 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
 "}
 (2,1,1) = {"
 aaa
@@ -96417,31 +96603,31 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
 "}
 (3,1,1) = {"
 aaa
@@ -96674,31 +96860,31 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
 "}
 (4,1,1) = {"
 aaa
@@ -96931,31 +97117,31 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
 "}
 (5,1,1) = {"
 aaa
@@ -97188,31 +97374,31 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
 "}
 (6,1,1) = {"
 aaa
@@ -97445,31 +97631,31 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
 "}
 (7,1,1) = {"
 aaa
@@ -97702,31 +97888,31 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
 "}
 (8,1,1) = {"
 aaa
@@ -97959,31 +98145,31 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
 "}
 (9,1,1) = {"
 aaa
@@ -98216,31 +98402,31 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
 "}
 (10,1,1) = {"
 aaa
@@ -98473,31 +98659,31 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
 "}
 (11,1,1) = {"
 aaa
@@ -98730,31 +98916,31 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
 "}
 (12,1,1) = {"
 aaa
@@ -98987,31 +99173,31 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
 "}
 (13,1,1) = {"
 aaa
@@ -99244,31 +99430,31 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
 "}
 (14,1,1) = {"
 aaa
@@ -99501,31 +99687,31 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
 "}
 (15,1,1) = {"
 aaa
@@ -99758,31 +99944,31 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
 "}
 (16,1,1) = {"
 aaa
@@ -100015,31 +100201,31 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
 "}
 (17,1,1) = {"
 aaa
@@ -100272,31 +100458,31 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
 "}
 (18,1,1) = {"
 aaa
@@ -100529,31 +100715,31 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
 "}
 (19,1,1) = {"
 aaa
@@ -100786,31 +100972,31 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
 "}
 (20,1,1) = {"
 aaa
@@ -101043,31 +101229,31 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
 "}
 (21,1,1) = {"
 aaa
@@ -101300,31 +101486,31 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
 "}
 (22,1,1) = {"
 aaa
@@ -101557,31 +101743,31 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
 "}
 (23,1,1) = {"
 aaa
@@ -101814,31 +102000,31 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
 "}
 (24,1,1) = {"
 aaa
@@ -102071,31 +102257,31 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
 "}
 (25,1,1) = {"
 aaa
@@ -102328,31 +102514,31 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
 "}
 (26,1,1) = {"
 aaa
@@ -102585,31 +102771,31 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
 "}
 (27,1,1) = {"
 aaa
@@ -102842,31 +103028,31 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
 "}
 (28,1,1) = {"
 aaa
@@ -103099,31 +103285,31 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
 "}
 (29,1,1) = {"
 aaa
@@ -103356,31 +103542,31 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
 "}
 (30,1,1) = {"
 aaa
@@ -103613,31 +103799,31 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
 "}
 (31,1,1) = {"
 aaa
@@ -103870,31 +104056,31 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
 "}
 (32,1,1) = {"
 aaa
@@ -104127,31 +104313,31 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
 "}
 (33,1,1) = {"
 aaa
@@ -104384,31 +104570,31 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
 "}
 (34,1,1) = {"
 aaa
@@ -104641,31 +104827,31 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
 "}
 (35,1,1) = {"
 aaa
@@ -104898,31 +105084,31 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
 "}
 (36,1,1) = {"
 aaa
@@ -105155,31 +105341,31 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
 "}
 (37,1,1) = {"
 aaa
@@ -105412,31 +105598,31 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
 "}
 (38,1,1) = {"
 aaa
@@ -105669,31 +105855,31 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
 "}
 (39,1,1) = {"
 aaa
@@ -105926,31 +106112,31 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
 "}
 (40,1,1) = {"
 aaa
@@ -106183,31 +106369,31 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
 "}
 (41,1,1) = {"
 aaa
@@ -106440,31 +106626,31 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
 "}
 (42,1,1) = {"
 aaa
@@ -106697,31 +106883,31 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
 "}
 (43,1,1) = {"
 aaa
@@ -106954,31 +107140,31 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
 "}
 (44,1,1) = {"
 aaa
@@ -107211,31 +107397,31 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
 "}
 (45,1,1) = {"
 aaa
@@ -107468,31 +107654,31 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
 "}
 (46,1,1) = {"
 aaa
@@ -107725,31 +107911,31 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
 "}
 (47,1,1) = {"
 aaa
@@ -107982,31 +108168,31 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
 "}
 (48,1,1) = {"
 aaa
@@ -108239,31 +108425,31 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
+apm
 "}
 (49,1,1) = {"
 aaa
@@ -114310,7 +114496,7 @@ dhc
 bPe
 dhc
 dhc
-bUh
+dhc
 dhc
 dhc
 bYJ
@@ -114562,13 +114748,13 @@ bEq
 bGq
 dhd
 bJS
+diH
 bLB
-bNi
 bCB
-bCB
-bCB
-bCB
-bCB
+diU
+diW
+diZ
+djb
 bCB
 bYI
 cag
@@ -114819,13 +115005,13 @@ bCB
 bCB
 bCB
 bCB
+diI
 bCB
-bNj
 bCB
-bQG
-bQG
-bQG
-bVI
+bCB
+bCB
+bCB
+bCB
 bCB
 bCB
 bCB
@@ -115076,14 +115262,14 @@ bEs
 bGs
 bIg
 bJT
-bLD
-bIh
+diJ
+bSt
 bPf
-bIh
-bIh
-bIh
-bVH
+bQG
+diX
+bVI
 bCB
+djc
 bYK
 cah
 cbM
@@ -115331,18 +115517,18 @@ bAx
 bCD
 bEu
 bGt
-bIh
+diC
 bJU
-bLD
-bIh
-bIh
-bQH
+diK
 bSt
-bSt
-bVK
+diT
+bQG
+bIh
+bVI
+bCD
 bXp
-bYL
-bPg
+bLF
+djf
 cbO
 ccW
 bCB
@@ -115586,16 +115772,16 @@ bwd
 byu
 bAx
 bCC
-bEt
-bEt
-bEt
-bEt
-bEt
-bLF
+diA
+diB
+diD
+diF
+diL
+diS
 bPg
-bPg
-bPg
-bPg
+diV
+diY
+dja
 bVJ
 bXo
 bLE
@@ -115845,18 +116031,18 @@ bAG
 bCE
 bEw
 bEw
-bIi
 bEw
 bEw
+diM
 bNl
-bPi
 bEw
 bEw
-bUi
+bEw
+bEw
 bVL
 bXq
-bYN
-cai
+bLE
+djg
 cbQ
 ccY
 bCB
@@ -116102,20 +116288,20 @@ bAx
 bCD
 bEv
 bGu
-bCB
+diE
 bJV
-bEt
+diN
 bNk
-bPh
+bJV
 bLD
 bIh
-bIh
-bIh
-bXp
-bYM
+bUk
+bCD
+djd
+bLF
 bYN
 cbP
-ccX
+bLF
 bCB
 cfG
 chn
@@ -116361,13 +116547,13 @@ bCB
 bCB
 bCB
 bJX
-bEt
+diO
 bNm
 bPj
 bLD
 bIh
 bUk
-bUk
+bCB
 bCB
 bYP
 cak
@@ -116617,8 +116803,8 @@ bCB
 bEx
 bGv
 bIj
-bJW
-bEt
+bIh
+diP
 bNk
 bIh
 bQI
@@ -116875,12 +117061,12 @@ bEy
 bGw
 bCB
 bJZ
-bEt
+diQ
 bNk
 bIh
 bQK
-bIh
-bIh
+bEt
+bEt
 bVO
 bCB
 bCB
@@ -117132,12 +117318,12 @@ bCB
 bCB
 bCB
 bJY
-bEt
+diR
 bNk
 bIh
 bQJ
-bSv
-bIh
+bEt
+bEt
 bVN
 bCB
 bYQ
@@ -117387,17 +117573,17 @@ bAx
 bCB
 bEx
 bGv
-bIk
-bJW
+bIj
+bIh
 bLF
-bNn
-bPl
+bNk
+bIh
 bQL
 bSw
 bUl
 bVP
 bXr
-bGv
+dje
 can
 cbU
 bCB
@@ -117646,7 +117832,7 @@ bEy
 bGw
 bCB
 bKa
-bLE
+bLF
 bNk
 bPk
 bCB
@@ -117898,7 +118084,7 @@ buv
 bwl
 byA
 bAL
-bCG
+bCB
 bCB
 bCB
 bCB
@@ -131307,7 +131493,7 @@ cJv
 cJu
 cLy
 cMt
-cJh
+cJu
 cJu
 cJu
 cQr
@@ -150284,7 +150470,7 @@ bDS
 bFJ
 bHO
 bJw
-bLk
+diG
 bMU
 bOT
 bOR

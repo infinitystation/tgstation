@@ -9828,7 +9828,6 @@
 "azR" = (
 /obj/structure/table,
 /obj/item/weapon/tank/internals/anesthetic,
-/obj/item/weapon/storage/backpack/dufflebag/syndie/surgery,
 /turf/open/floor/plasteel/darkvault{
 	dir = 8
 	},
@@ -12435,8 +12434,8 @@
 /obj/item/clothing/under/skirt/black,
 /obj/item/clothing/under/shorts/black,
 /obj/item/clothing/under/pants/track,
-/obj/item/clothing/tie/armband/deputy,
-/obj/item/clothing/tie/waistcoat,
+/obj/item/clothing/accessory/armband/deputy,
+/obj/item/clothing/accessory/waistcoat,
 /obj/item/clothing/shoes/jackboots,
 /obj/item/clothing/shoes/laceup,
 /obj/item/clothing/neck/stripedredscarf,
@@ -18637,7 +18636,7 @@
 /obj/structure/sign/goldenplaque{
 	pixel_y = 32
 	},
-/obj/item/clothing/tie/lawyers_badge{
+/obj/item/clothing/accessory/lawyers_badge{
 	desc = "A badge of upmost glory.";
 	name = "thunderdome badge"
 	},
@@ -18654,12 +18653,12 @@
 	},
 /area/tdome/tdomeobserve)
 "aTv" = (
+/turf/closed/mineral/silver{
+	pixel_y = 5
+	},
 /obj/structure/table/wood,
 /obj/structure/sign/goldenplaque{
 	pixel_y = 32
-	},
-/obj/item/clothing/tie/medal/silver{
-	pixel_y = 5
 	},
 /turf/open/floor/plasteel/grimy,
 /area/tdome/tdomeobserve)
@@ -18837,11 +18836,11 @@
 	name = "Thunderdome Plaque";
 	pixel_y = -32
 	},
-/obj/item/clothing/tie/medal/gold{
+/obj/item/seeds/apple/gold{
 	pixel_x = 3;
 	pixel_y = 5
 	},
-/obj/item/clothing/tie/medal/gold,
+/obj/item/seeds/apple/gold,
 /turf/open/floor/plasteel/grimy,
 /area/tdome/tdomeobserve)
 "aTR" = (
@@ -18864,7 +18863,7 @@
 	name = "Thunderdome Plaque";
 	pixel_y = -32
 	},
-/obj/item/clothing/tie/medal{
+/obj/item/clothing/accessory/medal{
 	pixel_y = 5
 	},
 /turf/open/floor/plasteel/grimy,
@@ -20910,7 +20909,7 @@ aaa
 "}
 (2,1,1) = {"
 aaa
-aad
+aaa
 aaa
 aaa
 aaa
@@ -74695,7 +74694,7 @@ aaa
 aaa
 aaa
 aaa
-aad
+aaa
 aaa
 aaa
 aaa
@@ -76081,7 +76080,7 @@ aAN
 aFT
 atJ
 arH
-aYt
+aYs
 arH
 aJs
 aJM
@@ -76095,7 +76094,7 @@ aKm
 aJM
 aJs
 arH
-aYz
+aYs
 arH
 arH
 arH
@@ -76338,9 +76337,9 @@ aFr
 aAt
 atJ
 aYs
-aYu
-aYv
-aYw
+aYs
+aYs
+aYs
 aJM
 aKm
 aJM
@@ -76350,9 +76349,9 @@ aKm
 aJM
 aKm
 aJM
-aYx
-aYy
-aYA
+aYs
+aYs
+aYs
 arH
 arH
 arH
