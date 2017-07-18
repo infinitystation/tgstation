@@ -596,8 +596,8 @@ GLOBAL_LIST_INIT(RPD_recipes, list(
 			user << "<span class='notice'>Building Sensor...</span>"
 
 		if(DISPOSALS_MODE) //Making disposals pipes
-			if(is_anchored_dense_turf(A))
-				to_chat(user, "<span class='warning'>The [src]'s error light flickers; there's something in the way!</span>")
+			if(isclosedturf(A))
+				to_chat(user, "<span class='warning'>[src]'s error light flickers; there's something in the way!</span>")
 				return
 			to_chat(user, "<span class='notice'>You start building a disposals pipe...</span>")
 			playsound(get_turf(src), 'sound/machines/click.ogg', 50, 1)

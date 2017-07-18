@@ -4,7 +4,7 @@
 	icon = 'icons/blue_brig/obj/seccomp.dmi'
 	icon_screen = "security"
 	icon_keyboard = "security_key"
-	req_one_access = list(GLOB.access_security, GLOB.access_forensics_lockers)
+	req_one_access = list(ACCESS_SECURITY, ACCESS_FORENSICS_LOCKERS)
 	circuit = /obj/item/weapon/circuitboard/computer/secure_data
 	var/obj/item/weapon/card/id/scan = null
 	var/authenticated = null

@@ -646,7 +646,7 @@ other types of metals and chemistry for reagents).
 	build_path = /obj/item/clothing/suit/space/hardsuit/space_adv
 	category = list("Equipment")
 	locked = 1
-	access = list(GLOB.access_eva)
+	access = list(ACCESS_EVA)
 
 /datum/design/adv_hardsuit/combat
 	name = "Military space hardsuit"
@@ -658,7 +658,7 @@ other types of metals and chemistry for reagents).
 	build_path = /obj/item/clothing/suit/space/hardsuit/space_adv/military
 	category = list("Equipment")
 	locked = 1
-	access = list(GLOB.access_armory)
+	access = list(ACCESS_ARMORY)
 
 /datum/design/adv_rcd
 	name = "Advanced RCD"
@@ -670,7 +670,7 @@ other types of metals and chemistry for reagents).
 	build_path = /obj/item/weapon/construction/rcd/advanced
 	category = list("Equipment")
 	locked = 1
-	access = list(GLOB.access_ce)
+	access = list(ACCESS_CE)
 
 /datum/design/multimeter
 	name = "Multimeter"
@@ -696,7 +696,7 @@ other types of metals and chemistry for reagents).
 	build_path = /obj/item/clothing/under/chameleon
 	category = list("Equipment")
 	locked = 1
-	access = list(GLOB.access_eva)
+	access = list(ACCESS_EVA)
 
 /////////////////////////////////////////
 ////////////Tools//////////////

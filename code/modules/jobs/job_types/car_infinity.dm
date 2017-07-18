@@ -14,8 +14,8 @@
 
 	outfit = /datum/outfit/job/ifa
 
-	access = list(GLOB.access_security, GLOB.access_sec_doors, GLOB.access_brig, GLOB.access_maint_tunnels, GLOB.access_construction, GLOB.access_heads, GLOB.access_RC_announce, GLOB.access_keycard_auth, GLOB.access_gateway)
-	minimal_access = list(GLOB.access_security, GLOB.access_sec_doors, GLOB.access_brig, GLOB.access_maint_tunnels, GLOB.access_construction, GLOB.access_heads, GLOB.access_RC_announce, GLOB.access_keycard_auth, GLOB.access_gateway)
+	access = list(ACCESS_SECURITY, ACCESS_SEC_DOORS, ACCESS_BRIG, ACCESS_MAINT_TUNNELS, ACCESS_CONSTRUCTION, ACCESS_HEADS, ACCESS_RC_ANNOUNCE, ACCESS_KEYCARD_AUTH, ACCESS_GATEWAY)
+	minimal_access = list(ACCESS_SECURITY, ACCESS_SEC_DOORS, ACCESS_BRIG, ACCESS_MAINT_TUNNELS, ACCESS_CONSTRUCTION, ACCESS_HEADS, ACCESS_RC_ANNOUNCE, ACCESS_KEYCARD_AUTH, ACCESS_GATEWAY)
 
 /datum/outfit/job/ifa
 	name = "Internal Affairs Agent"

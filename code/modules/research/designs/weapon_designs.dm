@@ -32,7 +32,7 @@
 	build_path = /obj/item/weapon/gun/energy/tesla_revolver
 	category = list("Weapons")
 	locked = 1
-	access = list(GLOB.access_armory)
+	access = list(ACCESS_ARMORY)
 
 /datum/design/nuclear_gun
 	name = "Advanced Energy Gun"
@@ -44,7 +44,7 @@
 	build_path = /obj/item/weapon/gun/energy/e_gun/nuclear
 	category = list("Weapons")
 	locked = 1
-	access = list(GLOB.access_armory)
+	access = list(ACCESS_ARMORY)
 
 /datum/design/tele_shield
 	name = "Telescopic Riot Shield"
@@ -56,7 +56,7 @@
 	build_path = /obj/item/weapon/shield/riot/tele
 	category = list("Weapons")
 	locked = 1
-	access = list(GLOB.access_armory)
+	access = list(ACCESS_ARMORY)
 
 /datum/design/beamrifle
 	name = "Beam Marksman Rifle"
@@ -68,7 +68,7 @@
 	build_path = /obj/item/weapon/gun/energy/beam_rifle
 	category = list("Weapons")
 	locked = 1
-	access = list(GLOB.access_armory)
+	access = list(ACCESS_ARMORY)
 
 /datum/design/decloner
 	name = "Decloner"
@@ -81,7 +81,7 @@
 	build_path = /obj/item/weapon/gun/energy/decloner
 	category = list("Weapons")
 	locked = 1
-	access = list(GLOB.access_armory)
+	access = list(ACCESS_ARMORY)
 
 /datum/design/rapidsyringe
 	name = "Rapid Syringe Gun"
@@ -93,7 +93,7 @@
 	build_path = /obj/item/weapon/gun/syringe/rapidsyringe
 	category = list("Weapons")
 	locked = 1
-	access = list(GLOB.access_medical)
+	access = list(ACCESS_MEDICAL)
 
 /datum/design/largecrossbow
 	name = "Energy Crossbow"
@@ -105,7 +105,7 @@
 	build_path = /obj/item/weapon/gun/energy/kinetic_accelerator/crossbow/large
 	category = list("Weapons")
 	locked = 1
-	access = list(GLOB.access_armory)
+	access = list(ACCESS_ARMORY)
 
 /datum/design/temp_gun
 	name = "Temperature Gun"
@@ -117,7 +117,7 @@
 	build_path = /obj/item/weapon/gun/energy/temperature
 	category = list("Weapons")
 	locked = 1
-	access = list(GLOB.access_armory)
+	access = list(ACCESS_ARMORY)
 
 /datum/design/flora_gun
 	name = "Floral Somatoray"
@@ -130,7 +130,7 @@
 	build_path = /obj/item/weapon/gun/energy/floragun
 	category = list("Weapons")
 	locked = 1
-	access = list(GLOB.access_hydroponics)
+	access = list(ACCESS_HYDROPONICS)
 
 /datum/design/large_grenade
 	name = "Large Grenade"
@@ -185,7 +185,7 @@
 	build_path = /obj/item/weapon/gun/energy/xray
 	category = list("Weapons")
 	locked = 1
-	access = list(GLOB.access_armory)
+	access = list(ACCESS_ARMORY)
 
 /datum/design/ioncarbine
 	name = "Ion Carbine"
@@ -197,7 +197,7 @@
 	build_path = /obj/item/weapon/gun/energy/ionrifle/carbine
 	category = list("Weapons")
 	locked = 1
-	access = list(GLOB.access_armory)
+	access = list(ACCESS_ARMORY)
 
 /datum/design/wormhole_projector
 	name = "Bluespace Wormhole Projector"
@@ -209,7 +209,7 @@
 	build_path = /obj/item/weapon/gun/energy/wormhole_projector
 	category = list("Weapons")
 	locked = 1
-	access = list(GLOB.access_armory)
+	access = list(ACCESS_ARMORY)
 
 //WT550 Mags
 
@@ -282,7 +282,7 @@
 	materials = list(MAT_METAL = 6000, MAT_SILVER = 500, MAT_GLASS = 1000, MAT_PLASMA = 4000, MAT_GOLD = 500, MAT_DIAMOND = 3000, MAT_URANIUM = 1000)
 	build_path = /obj/item/weapon/storage/lockbox/energysword
 	category = list("Weapons")
-	access = list(GLOB.access_armory)
+	access = list(ACCESS_ARMORY)
 
 /datum/design/gravitygun
 	name = "One-point Bluespace-gravitational Manipulator"

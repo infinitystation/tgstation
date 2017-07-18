@@ -3,7 +3,7 @@
 
 /obj/structure/closet/secure_closet/freezer/kitchen
 	name = "kitchen Cabinet"
-	req_access = list(GLOB.access_kitchen)
+	req_access = list(ACCESS_KITCHEN)
 
 /obj/structure/closet/secure_closet/freezer/kitchen/PopulateContents()
 	..()
@@ -54,7 +54,7 @@
 /obj/structure/closet/secure_closet/freezer/money
 	name = "freezer"
 	desc = "This contains cold hard cash."
-	req_access = list(GLOB.access_heads_vault)
+	req_access = list(ACCESS_HEADS_VAULT)
 
 /obj/structure/closet/secure_closet/freezer/money/PopulateContents()
 	..()
@@ -68,7 +68,7 @@
 /obj/structure/closet/secure_closet/freezer/cream_pie
 	name = "cream pie closet"
 	desc = "Contains pies filled with cream and/or custard, you sickos."
-	req_access = list(GLOB.access_theatre)
+	req_access = list(ACCESS_THEATRE)
 
 /obj/structure/closet/secure_closet/freezer/pie/PopulateContents()
 	..()

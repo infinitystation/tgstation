@@ -4,7 +4,7 @@
 	desc = "A console used for high-priority announcements and emergencies."
 	icon_screen = "comm"
 	icon_keyboard = "tech_key"
-	req_access = list(GLOB.access_heads)
+	req_access = list(ACCESS_HEADS)
 	circuit = /obj/item/weapon/circuitboard/computer/communications
 	var/authenticated = 0
 	var/auth_id = "Unknown" //Who is currently logged in?
@@ -446,12 +446,13 @@
 		return ..()
 
 /obj/machinery/computer/communications/emag_act(mob/user)
-	if(!emagged)
-		src.emagged = TRUE
-		if(authenticated == 1)
-			authenticated = 2
-		to_chat(user, "<span class='danger'>You scramble the communication routing circuits!</span>")
-		playsound(src, 'sound/machines/terminal_alert.ogg', 50, 0)
+	if(emagged)
+		return
+	emagged = TRUE
+	if(authenticated == 1)
+		authenticated = 2
+	to_chat(user, "<span class='danger'>You scramble the communication routing circuits!</span>")
+	playsound(src, 'sound/machines/terminal_alert.ogg', 50, 0)
 
 /obj/machinery/computer/communications/attack_hand(mob/user)
 	if(..())
@@ -500,7 +501,7 @@
 				dat += "<BR>\[ <A HREF='?src=\ref[src];operation=status'>Set Status Display</A> \]"
 				dat += "<BR>\[ <A HREF='?src=\ref[src];operation=changeseclevel'>Change Alert Level</A> \]"
 				dat += "<BR>\[ <A HREF='?src=\ref[src];operation=set_report'>Send Report to Centcom</A> \]"
-				if(src.emagged == 0)
+				if(!emagged)
 					dat += "<BR>\[ <A HREF='?src=\ref[src];operation=MessageCentcomm'>Send Message to Centcom</A> \]"
 				else
 					dat += "<BR>\[ <A HREF='?src=\ref[src];operation=MessageSyndicate'>Send Message to \[UNKNOWN\]</A> \]"
