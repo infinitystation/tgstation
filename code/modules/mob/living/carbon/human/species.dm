@@ -1391,6 +1391,8 @@
 			H.adjustCloneLoss(damage * hit_percent)
 		if(STAMINA)
 			H.adjustStaminaLoss(damage * hit_percent)
+		if(BRAIN)
+			H.adjustBrainLoss(damage * hit_percent)
 	return 1
 
 /datum/species/proc/on_hit(obj/item/projectile/P, mob/living/carbon/human/H)

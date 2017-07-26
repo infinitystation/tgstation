@@ -4,9 +4,8 @@
 	area = /area/space
 	view = "15x15"
 	cache_lifespan = 7
-	/* hub = "Exadv1.spacestation13"
-	hub_password = "kMZy3U5jJHSiBQjr"
-	name = "Infinity - RU" */
+	hub = "Exadv1.spacestation13"
+	name = "Infinity - RU"
 	fps = 30
 	visibility = 1
 #ifdef GC_FAILURE_HARD_LOOKUP
@@ -113,10 +112,10 @@
 
 /world/Topic(T, addr, master, key)
 	var/list/input = params2list(T)
-	
+
 	var/pinging = ("ping" in input)
 	var/playing = ("players" in input)
-	
+
 	if(!pinging && !playing && config && config.log_world_topic)
 		GLOB.world_game_log << "TOPIC: \"[T]\", from:[addr], master:[master], key:[key]"
 
@@ -327,3 +326,12 @@
 		s += ": [jointext(features, ", ")]"
 
 	status = s
+
+/world/proc/update_hub_visibility(new_visibility)
+	if(new_visibility == GLOB.hub_visibility)
+		return
+	GLOB.hub_visibility = new_visibility
+	if(GLOB.hub_visibility)
+		hub_password = "kMZy3U5jJHSiBQjr"
+	else
+		hub_password = "SORRYNOPASSWORD"

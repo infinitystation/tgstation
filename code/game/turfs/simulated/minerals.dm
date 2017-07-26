@@ -82,7 +82,7 @@
 			SSblackbox.add_details("ore_mined",mineralType)
 	for(var/obj/effect/temp_visual/mining_overlay/M in src)
 		qdel(M)
-	ChangeTurf(turf_type, defer_change)
+	ChangeTurf(turf_type, FALSE, defer_change)
 	addtimer(CALLBACK(src, .proc/AfterChange), 1, TIMER_UNIQUE)
 	playsound(src, 'sound/effects/break_stone.ogg', 50, 1) //beautiful destruction
 
@@ -108,12 +108,12 @@
 		return
 	else if(iscyborg(AM))
 		var/mob/living/silicon/robot/R = AM
-		if(istype(R.module_active,/obj/item/weapon/pickaxe))
+		if(istype(R.module_active, /obj/item/weapon/pickaxe))
 			src.attackby(R.module_active,R)
 			return
-/*	else if(istype(AM,/obj/mecha))
+/*	else if(istype(AM, /obj/mecha))
 		var/obj/mecha/M = AM
-		if(istype(M.selected,/obj/item/mecha_parts/mecha_equipment/drill))
+		if(istype(M.selected, /obj/item/mecha_parts/mecha_equipment/drill))
 			src.attackby(M.selected,M)
 			return*/
 //Aparantly mechs are just TOO COOL to call Collide())
@@ -156,7 +156,7 @@
 	..()
 	if (prob(mineralChance))
 		var/path = pickweight(mineralSpawnChanceList)
-		var/turf/T = ChangeTurf(path,FALSE,TRUE)
+		var/turf/T = ChangeTurf(path,FALSE,FALSE,TRUE)
 
 		if(T && ismineralturf(T))
 			var/turf/closed/mineral/M = T
@@ -178,7 +178,7 @@
 /turf/closed/mineral/random/high_chance/volcanic
 	environment_type = "basalt"
 	turf_type = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
-	baseturf = /turf/open/floor/plating/lava/smooth/lava_land_surface
+	baseturf = /turf/open/lava/smooth/lava_land_surface
 	initial_gas_mix = LAVALAND_DEFAULT_ATMOS
 	defer_change = 1
 	mineralSpawnChanceList = list(
@@ -199,7 +199,7 @@
 /turf/closed/mineral/random/volcanic
 	environment_type = "basalt"
 	turf_type = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
-	baseturf = /turf/open/floor/plating/lava/smooth/lava_land_surface
+	baseturf = /turf/open/lava/smooth/lava_land_surface
 	initial_gas_mix = LAVALAND_DEFAULT_ATMOS
 	defer_change = 1
 
@@ -212,7 +212,7 @@
 /turf/closed/mineral/random/volcanic/no_cave
 	environment_type = "basalt"
 	turf_type = /turf/open/floor/plating/asteroid/basalt/lava_land_surface/normal_air
-	baseturf = /turf/open/floor/plating/lava/smooth/lava_land_surface/normal_air
+	baseturf = /turf/open/lava/smooth/lava_land_surface/normal_air
 	initial_gas_mix = "o2=22;n2=82;TEMP=293.15"
 	mineralChance = 10
 	mineralSpawnChanceList = list(
@@ -232,7 +232,7 @@
 /turf/closed/mineral/random/labormineral/volcanic
 	environment_type = "basalt"
 	turf_type = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
-	baseturf = /turf/open/floor/plating/lava/smooth/lava_land_surface
+	baseturf = /turf/open/lava/smooth/lava_land_surface
 	initial_gas_mix = LAVALAND_DEFAULT_ATMOS
 	defer_change = 1
 	mineralSpawnChanceList = list(
@@ -258,7 +258,7 @@
 /turf/closed/mineral/iron/volcanic/normal_air
 	environment_type = "basalt"
 	turf_type = /turf/open/floor/plating/asteroid/basalt/lava_land_surface/normal_air
-	baseturf = /turf/open/floor/plating/lava/smooth/lava_land_surface/normal_air
+	baseturf = /turf/open/lava/smooth/lava_land_surface/normal_air
 	initial_gas_mix = "o2=22;n2=82;TEMP=293.15"
 	defer_change = 1
 
@@ -293,7 +293,7 @@
 /turf/closed/mineral/diamond/volcanic/normal_air
 	environment_type = "basalt"
 	turf_type = /turf/open/floor/plating/asteroid/basalt/lava_land_surface/normal_air
-	baseturf = /turf/open/floor/plating/lava/smooth/lava_land_surface/normal_air
+	baseturf = /turf/open/lava/smooth/lava_land_surface/normal_air
 	initial_gas_mix = "o2=22;n2=82;TEMP=293.15"
 	defer_change = 1
 
@@ -314,7 +314,7 @@
 /turf/closed/mineral/gold/volcanic/normal_air
 	environment_type = "basalt"
 	turf_type = /turf/open/floor/plating/asteroid/basalt/lava_land_surface/normal_air
-	baseturf = /turf/open/floor/plating/lava/smooth/lava_land_surface/normal_air
+	baseturf = /turf/open/lava/smooth/lava_land_surface/normal_air
 	initial_gas_mix = "o2=22;n2=82;TEMP=293.15"
 	defer_change = 1
 
@@ -335,7 +335,7 @@
 /turf/closed/mineral/silver/volcanic/normal_air
 	environment_type = "basalt"
 	turf_type = /turf/open/floor/plating/asteroid/basalt/lava_land_surface/normal_air
-	baseturf = /turf/open/floor/plating/lava/smooth/lava_land_surface/normal_air
+	baseturf = /turf/open/lava/smooth/lava_land_surface/normal_air
 	initial_gas_mix = "o2=22;n2=82;TEMP=293.15"
 	defer_change = 1
 
@@ -393,7 +393,7 @@
 /turf/closed/mineral/bscrystal/volcanic/normal_air
 	environment_type = "basalt"
 	turf_type = /turf/open/floor/plating/asteroid/basalt/lava_land_surface/normal_air
-	baseturf = /turf/open/floor/plating/lava/smooth/lava_land_surface/normal_air
+	baseturf = /turf/open/lava/smooth/lava_land_surface/normal_air
 	initial_gas_mix = "o2=22;n2=82;TEMP=293.15"
 	defer_change = 1
 
@@ -407,7 +407,7 @@
 /turf/closed/mineral/volcanic/lava_land_surface
 	environment_type = "basalt"
 	turf_type = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
-	baseturf = /turf/open/floor/plating/lava/smooth/lava_land_surface
+	baseturf = /turf/open/lava/smooth/lava_land_surface
 	defer_change = 1
 	icon_state = "rock_labor"
 
@@ -523,7 +523,7 @@
 			G.quality = 2
 			G.icon_state = "Gibtonite ore 2"
 
-	ChangeTurf(turf_type, defer_change)
+	ChangeTurf(turf_type, FALSE, defer_change)
 	addtimer(CALLBACK(src, .proc/AfterChange), 1, TIMER_UNIQUE)
 
 
@@ -537,6 +537,6 @@
 /turf/closed/mineral/gibtonite/volcanic/normal_air
 	environment_type = "basalt"
 	turf_type = /turf/open/floor/plating/asteroid/basalt/lava_land_surface/normal_air
-	baseturf = /turf/open/floor/plating/lava/smooth/lava_land_surface/normal_air
+	baseturf = /turf/open/lava/smooth/lava_land_surface/normal_air
 	initial_gas_mix = "o2=22;n2=82;TEMP=293.15"
 	defer_change = 1

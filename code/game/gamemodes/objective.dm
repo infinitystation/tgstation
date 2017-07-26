@@ -89,7 +89,10 @@
 
 /datum/objective/assassinate/check_completion()
 	if(target && target.current)
-		if(target.current.stat == DEAD || issilicon(target.current) || isbrain(target.current) || target.current.z > 6 || !target.current.ckey) //Borgs/brains/AIs count as dead for traitor objectives. --NeoFite
+		var/mob/living/carbon/human/H
+		if(ishuman(target.current))
+			H = target.current
+		if(target.current.stat == DEAD || issilicon(target.current) || isbrain(target.current) || target.current.z > 6 || !target.current.ckey || (H && H.dna.species.id == "memezombies")) //Borgs/brains/AIs count as dead for traitor objectives. --NeoFite
 			return 1
 		return 0
 	return 1
@@ -152,7 +155,10 @@
 
 /datum/objective/maroon/check_completion()
 	if(target && target.current)
-		if(target.current.stat == DEAD || issilicon(target.current) || isbrain(target.current) || target.current.z > 6 || !target.current.ckey) //Borgs/brains/AIs count as dead for traitor objectives. --NeoFite
+		var/mob/living/carbon/human/H
+		if(ishuman(target.current))
+			H = target.current
+		if(target.current.stat == DEAD || issilicon(target.current) || isbrain(target.current) || target.current.z > 6 || !target.current.ckey || (H && H.dna.species.id == "memezombies")) //Borgs/brains/AIs count as dead for traitor objectives. --NeoFite
 			return 1
 		if(target.current.onCentcom() || target.current.onSyndieBase())
 			return 0
@@ -240,9 +246,8 @@
 		return 0
 	if(issilicon(owner.current))
 		return 0
-	if(SSshuttle.emergency.shuttle_areas[get_area(owner.current)])
+	if(!SSshuttle.emergency.shuttle_areas[get_area(owner.current)])
 		return 0
-
 	return SSshuttle.emergency.is_hijacked()
 
 
@@ -603,7 +608,7 @@ GLOBAL_LIST_EMPTY(possible_items_special)
 
 /datum/objective/capture/check_completion()//Basically runs through all the mobs in the area to determine how much they are worth.
 	var/captured_amount = 0
-	var/area/centcom/holding/A = locate()
+	var/area/centcom/holding/A = locate() in GLOB.sortedAreas
 	for(var/mob/living/carbon/human/M in A)//Humans.
 		if(M.stat==2)//Dead folks are worth less.
 			captured_amount+=0.5

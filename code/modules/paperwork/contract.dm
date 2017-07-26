@@ -103,7 +103,7 @@
 	update_text()
 
 /obj/item/weapon/paper/contract/infernal/suicide_act(mob/user)
-	if(signed && (user == target.current) && istype(user,/mob/living/carbon/human/))
+	if(signed && (user == target.current) && istype(user, /mob/living/carbon/human/))
 		var/mob/living/carbon/human/H = user
 		H.forcesay("О ВЕЛИКИЙ ИНФЕРНО!  Я ТРЕБУЮ, ЧТОБЫ ТЫ НЕМЕДЛЕННО ЗАБРАЛ СВОЙ ТРОФЕЙ СЕБЕ!")
 		H.visible_message("<span class='suicide'>[H] держит контракт, утвержда&#255; души, затем сразу же воспламен&#255;етс&#255;.  Кажетс&#255; [user.p_they()] пытал[user.p_e_5()] покончить жизнь самоубийством!</span>")
@@ -304,11 +304,11 @@
 		id.assignment = "Captain"
 		id.update_label()
 		if(worn)
-			if(istype(worn,/obj/item/device/pda))
+			if(istype(worn, /obj/item/device/pda))
 				var/obj/item/device/pda/PDA = worn
 				PDA.id = id
 				id.loc = worn
-			else if(istype(worn,/obj/item/weapon/storage/wallet))
+			else if(istype(worn, /obj/item/weapon/storage/wallet))
 				var/obj/item/weapon/storage/wallet/W = worn
 				W.front_id = id
 				id.loc = worn

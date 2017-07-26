@@ -76,7 +76,7 @@
 	return 1
 
 /obj/item/weapon/tank/jetpack/suicide_act(mob/user)
-	if (istype(user,/mob/living/carbon/human/))
+	if (istype(user, /mob/living/carbon/human/))
 		var/mob/living/carbon/human/H = user
 		H.forcesay("WHAT THE FUCK IS CARBON DIOXIDE?")
 		H.visible_message("<span class='suicide'>[user] пытаеться задушить себ&@#255; с помощь джетпака! Кажетс&#255; [user.p_they()] не прочитал[user.p_e_5()] глас&#255;щее на нём предупреждение!</span>")
