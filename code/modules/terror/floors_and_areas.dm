@@ -144,6 +144,10 @@
 	dynamic_lighting = DYNAMIC_LIGHTING_FORCED
 	valid_territory = 0
 
+/area/science/dock
+	name = "Science Dock"
+	icon_state = "toxtest"
+
 // CENTCOM
 /*
 /area/centcom/lobby

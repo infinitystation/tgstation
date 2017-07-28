@@ -509,3 +509,15 @@
 	..()
 	for(var/i in 1 to 3)
 		new /obj/effect/spawner/lootdrop/food
+
+/obj/docking_port/mobile/abandoned
+	name = "NT Recovery White-Ship"
+	id = "whiteship"
+	dwidth = 11
+	width = 27
+	height = 15
+	dir = 2
+	callTime = 240
+	ignitionTime = 130
+	roundstart_move = "whiteship_away"
+	movement_force = list("KNOCKDOWN" = 0, "THROW" = 0)
