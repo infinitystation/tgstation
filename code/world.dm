@@ -6,7 +6,7 @@
 	cache_lifespan = 7
 	hub = "Exadv1.spacestation13"
 	name = "Infinity - RU"
-	fps = 30
+	fps = 20
 	visibility = 1
 #ifdef GC_FAILURE_HARD_LOOKUP
 	loop_checks = FALSE
