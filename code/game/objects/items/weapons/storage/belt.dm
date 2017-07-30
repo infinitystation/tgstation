@@ -436,6 +436,7 @@
 		/obj/item/weapon/gun/ballistic/automatic/pistol,
 		/obj/item/weapon/gun/ballistic/revolver,
 		/obj/item/ammo_box,
+		/obj/item/weapon/gun/energy/e_gun/advtaser
 		)
 	alternate_worn_layer = UNDER_SUIT_LAYER
 
