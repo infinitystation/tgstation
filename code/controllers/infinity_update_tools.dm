@@ -32,7 +32,7 @@
 	if(confirm == "Yes")
 		message_admins("[key_name_admin(usr)] инициировал(а) обновление сервера в конце текущего раунда.")
 		log_game("[key_name_admin(usr)] инициировал(а) обновление сервера в конце текущего раунда.")
-		world << "<span class='adminooc'>Администратор [usr.key] инициировал(а) обновление сервера в конце текущего раунда.</span>"
+		to_chat(world, "<span class='adminooc'>Администратор [usr.key] инициировал(а) обновление сервера в конце текущего раунда.</span>")
 		SSticker.updater_ckey = usr.key
 		SSticker.update_waiting = 1
 

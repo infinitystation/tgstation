@@ -90,7 +90,7 @@
 			return
 	else //otherwise just toggle it
 		GLOB.looc_allowed = !GLOB.looc_allowed
-	world << "<B>The LOOC channel has been globally [GLOB.looc_allowed ? "enabled" : "disabled"].</B>"
+	to_chat(world, "<B>The LOOC channel has been globally [GLOB.looc_allowed ? "enabled" : "disabled"].</B>")
 
 /proc/toggle_dchat(toggle = null)
 	if(toggle != null) //if we're specifically en/disabling ooc
@@ -100,7 +100,7 @@
 			return
 	else //otherwise just toggle it
 		GLOB.dchat_allowed = !GLOB.dchat_allowed
-	world << "<B>The Dead Chat channel has been globally [GLOB.dchat_allowed ? "enabled" : "disabled"].</B>"
+	to_chat(world, "<B>The Dead Chat channel has been globally [GLOB.dchat_allowed ? "enabled" : "disabled"].</B>")
 
 GLOBAL_VAR_INIT(normal_ooc_colour, OOC_COLOR)
 

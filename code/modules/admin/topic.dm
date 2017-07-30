@@ -1149,7 +1149,7 @@
 					return
 				AddBan(M.ckey, M.computer_id, reason, usr.ckey, 1, mins)
 				ban_unban_log_save("[key_name(usr)] has HARD banned [key_name(M)]. - Reason: [reason] - This will be removed in [mins] minutes.")
-				world << "<span class='adminnotice'><b>BAN: Администратор [key_name(usr)] ЖЕСТКО забанил(а) [key_name(M)]. Причина: [reason]. Срок - [mins] минут.</b></span>"
+				to_chat(world, "<span class='adminnotice'><b>BAN: Администратор [key_name(usr)] ЖЕСТКО забанил(а) [key_name(M)]. Причина: [reason]. Срок - [mins] минут.</b></span>")
 				to_chat(M, "<span class='boldannounce'><BIG>Вы были ЖЕСТКО забанены администратором [key_name(usr)].\nПричина: [reason]</BIG></span>")
 				to_chat(M, "<span class='danger'>Это временный бан, он истечет через [mins] минут.</span>")
 				SSblackbox.inc("ban_tmp",1)
@@ -1217,7 +1217,7 @@
 				if(ip=="Cancel")
 					return
 				ban_unban_log_save("[usr.client.ckey] has banned [M.ckey]. - Reason: [reason] - This will be removed in [mins] minutes.")
-				world << "<span class='adminnotice'><b>BAN: Администратор [usr.client.ckey] временно отправил(а) [M.ckey] в бан-тюрьму. Причина: [reason]. Срок - [mins] минут.</b></span>"
+				to_chat(world, "<span class='adminnotice'><b>BAN: Администратор [usr.client.ckey] временно отправил(а) [M.ckey] в бан-тюрьму. Причина: [reason]. Срок - [mins] минут.</b></span>")
 				M << "<span class='boldannounce'><BIG>Администратор [usr.client.ckey] заблокировал вашу игру на сервере.\nПричина: [reason]</BIG></span>"
 				M << "<span class='danger'>Это временна&#255; блокировка, она истечет через [mins] минут.</span>"
 				M << "<span class='notice'>У вас есть доступ к игре на сервере в качестве заключенного.</span>"
@@ -1254,7 +1254,7 @@
 				else
 					M << "<span class='danger'>No ban appeals URL has been set.</span>"
 				ban_unban_log_save("[usr.client.ckey] has soft permabanned [M.ckey]. - Reason: [reason] - This is a permanent ban.")
-				world << "<span class='adminnotice'><b>BAN: Администратор [usr.client.ckey] перманентно отправил(а) [M.ckey] в бан-тюрьму. Причина: [reason].</b></span>"
+				to_chat(world, "<span class='adminnotice'><b>BAN: Администратор [usr.client.ckey] перманентно отправил(а) [M.ckey] в бан-тюрьму. Причина: [reason].</b></span>")
 				log_admin("[usr.client.ckey] has soft banned [M.ckey].\nReason: [reason]\nThis is a permanent ban.")
 				message_admins("<span class='adminnotice'>[usr.client.ckey] has soft banned [M.ckey].\nReason: [reason]\nThis is a permanent ban.</span>")
 				SSblackbox.inc("ban_soft_perma",1)
