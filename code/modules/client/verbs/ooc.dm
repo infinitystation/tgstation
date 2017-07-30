@@ -117,30 +117,30 @@ GLOBAL_VAR_INIT(normal_ooc_colour, OOC_COLOR)
 
 	if(!mob)	return
 	if(IsGuestKey(key))
-		src << "Guests may not use OOC."
+		to_chat(src, "Guests may not use OOC.")
 		return
 
 	msg = trim(sanitize(copytext(msg, 1, MAX_MESSAGE_LEN)))
 	if(!msg)	return
 
 	if(!(prefs.chat_toggles & CHAT_LOOC))
-		src << "<span class='notice'>You have LOOC muted. Toggle it on Preferenes -> Show/Hide LOOC</span>"
+		to_chat(src, "<span class='notice'>You have LOOC muted. Toggle it on Preferenes -> Show/Hide LOOC</span>")
 		return
 
 	if(!(holder && R_ADMIN))
 		if(!GLOB.looc_allowed)
-			src << "<span class='notice'>LOOC is globally muted.</span>"
+			to_chat(src, "<span class='notice'>LOOC is globally muted.</span>")
 			return
 		if(!GLOB.dooc_allowed && (mob.stat == DEAD))
-			usr << "<span class='notice'>LOOC for dead mobs has been turned off.</span>"
+			to_chat(usr, "<span class='notice'>LOOC for dead mobs has been turned off.</span>")
 			return
 		if(prefs.muted & MUTE_OOC)
-			src << "<span class='notice'>You cannot use LOOC (muted).</span>"
+			to_chat(src, "<span class='notice'>You cannot use LOOC (muted).</span>")
 			return
 		if(handle_spam_prevention(msg,MUTE_OOC))
 			return
 		if(findtext(msg, "byond://"))
-			src << "<B>Advertising other servers is not allowed.</B>"
+			to_chat(src, "<B>Advertising other servers is not allowed.</B>")
 			log_admin("[key_name(src)] has attempted to advertise in LOOC: [msg]")
 			message_admins("[key_name_admin(src)] has attempted to advertise in LOOC: [msg]")
 			return
@@ -169,7 +169,7 @@ GLOBAL_VAR_INIT(normal_ooc_colour, OOC_COLOR)
 						display_name = "[holder.fakekey]/([src.key])"
 					else
 						display_name = holder.fakekey
-			C << "<font color='#6699CC'><span class='ooc'><span class='prefix'>LOOC:</span> <EM>[display_name]:</EM> <span class='message'>[msg]</span></span></font>"
+			to_chat(C, "<font color='#6699CC'><span class='ooc'><span class='prefix'>LOOC:</span> <EM>[display_name]:</EM> <span class='message'>[msg]</span></span></font>")
 
 	// Now handle admins
 	display_name = S.key
@@ -183,7 +183,7 @@ GLOBAL_VAR_INIT(normal_ooc_colour, OOC_COLOR)
 				var/link = "<a href='?_src_=holder;adminplayerobservefollow=\ref[S]'>(F)</A> "
 				if (C.mob in heard)
 					prefix = "LOOC"
-				C << "[link]<font color='#6699CC'><span class='ooc'><span class='prefix'>[prefix]:</span> <EM>[display_name]:</EM> <span class='message'>[msg]</span></span></font>"
+				to_chat(C, "[link]<font color='#6699CC'><span class='ooc'><span class='prefix'>[prefix]:</span> <EM>[display_name]:</EM> <span class='message'>[msg]</span></span></font>")
 
 
 /client/proc/reset_ooc()
