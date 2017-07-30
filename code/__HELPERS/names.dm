@@ -72,7 +72,7 @@ GLOBAL_VAR(command_name)
 	GLOB.station_name = newname
 
 	if(config && config.server_name)
-		world.name = "[config.server_name][config.server_name==GLOB.station_name ? "" : ": [GLOB.station_name]"]"
+		world.name = "[config.server_name]: [config.station_name]"
 	else
 		world.name = GLOB.station_name
 

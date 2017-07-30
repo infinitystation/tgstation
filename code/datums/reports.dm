@@ -14,7 +14,7 @@
 		if(X.prefs.toggles & SOUND_ADMINHELP)
 			X << 'sound/effects/adminhelp.ogg'
 	msg = "<span class='adminnotice'><b><font color=orange>STATION REPORT:</font>[key_name_admin(Sender)] (<A HREF='?_src_=holder;adminmoreinfo=\ref[Sender]'>?</A>) (<A HREF='?_src_=holder;adminplayeropts=\ref[Sender]'>PP</A>) (<A HREF='?_src_=vars;Vars=\ref[Sender]'>VV</A>) (<A HREF='?_src_=holder;subtlemessage=\ref[Sender]'>SM</A>) (<A HREF='?_src_=holder;adminplayerobservefollow=\ref[Sender]'>FLW</A>) (<A HREF='?_src_=holder;traitor=\ref[Sender]'>TP</A>) (<A HREF='?_src_=holder;BlueSpaceArtillery=\ref[Sender]'>BSA</A>) (<A HREF='?_src_=holder;CentcommReply=\ref[Sender]'>RPLY</A>):</b> Отчет: <A HREF='?_src_=holder;show_report=\ref[R]'>[R.title]</A></span>"
-	GLOB.admins << msg
+	to_chat(GLOB.admins, msg)
 	for(var/obj/machinery/computer/communications/C in GLOB.machines)
 		C.overrideCooldown()
 
@@ -23,7 +23,7 @@
 	set name = "Show reports"
 
 	if(!holder)
-		src << "<font color='red'>Error: Freeze: Only administrators may use this command.</font>"
+		to_chat(src, "<font color='red'>Error: Freeze: Only administrators may use this command.</font>")
 		return
 
 	var/dat = "<b>Отчеты от станции за текущий раунд</b><BR>"

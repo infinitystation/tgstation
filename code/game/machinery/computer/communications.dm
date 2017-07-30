@@ -731,7 +731,7 @@
 		return
 	var/obj/item/weapon/circuitboard/computer/communications/CM = circuit
 	if(CM.lastTimeUsed + 100 > world.time)
-		usr << "Arrays recycling.  Please stand by."
+		to_chat(usr, "Arrays recycling.  Please stand by.")
 		return
 	var/report_info = "<HTML><HEAD><TITLE>[paper.name]</TITLE></HEAD><BODY>Report Time: [worldtime2text()]<HR>[paper.info]<HR>[paper.stamps]</BODY></HTML>"
 	var/datum/report/R = new
@@ -741,7 +741,7 @@
 	SSticker.reports += R
 	GLOB.reports_log << "\[[time_stamp()]]: Reported to Centcom by [key_name(usr)]<BR>[R.info]<BR>"
 	send_report(R, usr)
-	usr << "Report transmitted."
+	to_chat(usr, "Report transmitted.")
 	CM.lastTimeUsed = world.time
 
 

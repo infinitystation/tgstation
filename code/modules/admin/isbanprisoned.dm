@@ -1,7 +1,7 @@
 /client/proc/IsBanPrisoned(key, address, computer_id)
 	if (!key)
 		return 0
-
+// НЕ РАБОТАЕТ ТЮРЯГА НА ТГ
 	var/ckeytext = ckey(key)
 
 	if(!SSdbcore.Connect())
@@ -79,7 +79,7 @@
 	for(var/client/X in GLOB.admins)
 		if(X.prefs.toggles & SOUND_ADMINHELP)
 			X << 'sound/effects/adminhelp.ogg'
-	src << "Вы отправили просьбу о размуте админам"
+	to_chat(src, "Вы отправили просьбу о размуте админам")
 
 /client/var/adminmutetimerid = 0
 
