@@ -7,6 +7,8 @@ If you create T5+ please take a pass at gene_modder.dm [L40]. Max_values MUST fi
 	icon_state = "RPED"
 	origin_tech = "materials=2;engeneering=2"
 	item_state = "RPED"
+	lefthand_file = 'icons/mob/inhands/misc/devices_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/misc/devices_righthand.dmi'
 	w_class = WEIGHT_CLASS_HUGE
 	can_hold = list(/obj/item/weapon/stock_parts)
 	storage_slots = 50

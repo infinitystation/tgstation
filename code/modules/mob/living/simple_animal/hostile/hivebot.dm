@@ -82,18 +82,6 @@
 	retreat_distance = 3
 	minimum_distance = 3
 
-/mob/living/simple_animal/hostile/hivebot/engineer/handle_automated_action()
-	..()
-	for(var/obj/machinery/hivebot_swarm_core/C in view(5, src))
-		if(C.obj_integrity < C.max_integrity)
-			if(!Adjacent(C))
-				Goto(C, 5)
-			else
-				visible_message("<span class='warning'>[src] welds some of the dents on [C]!</span>")
-				playsound(C, 'sound/items/Welder.ogg', 50, 1)
-				C.obj_integrity = min(C.obj_integrity + 20, C.max_integrity)
-			break
-
 /mob/living/simple_animal/hostile/hivebot/death(gibbed)
 	do_sparks(3, TRUE, src)
 	..(1)
