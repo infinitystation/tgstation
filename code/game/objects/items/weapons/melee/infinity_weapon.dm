@@ -181,3 +181,21 @@
 	righthand_file = 'icons/mob/inhands/infinity_obj_right.dmi'
 	materials = list()
 	origin_tech = ""
+
+/obj/item/weapon/melee/training_weapon
+	name = "wood katana"
+	desc = "Wooden katana. Made for training."
+	icon = 'icons/obj/infinity_object.dmi'
+	icon_state = "wood_katana"
+	item_state = "wood_katana"
+	lefthand_file = 'icons/mob/inhands/infinity_obj_left.dmi'
+	righthand_file = 'icons/mob/inhands/infinity_obj_right.dmi'
+	worn_icon = 'icons/mob/infinity_work.dmi'
+	slot_flags = SLOT_BELT
+	block_chance = 35
+	damtype = STAMINA
+	force = 15
+	throwforce = 10
+	hitsound = 'sound/effects/woodhit.ogg'
+	w_class = WEIGHT_CLASS_HUGE
+	attack_verb = list("smashed", "slammed", "whacked", "thwacked")
