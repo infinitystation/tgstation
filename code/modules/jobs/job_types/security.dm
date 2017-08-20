@@ -20,6 +20,9 @@ Head of Security
 	selection_color = "#ffdddd"
 	req_admin_notify = 1
 	minimal_player_age = 14
+	exp_requirements = 300
+	exp_type = EXP_TYPE_CREW
+	exp_type_department = EXP_TYPE_SECURITY
 
 	outfit = /datum/outfit/job/hos
 
@@ -71,6 +74,8 @@ Warden
 	supervisors = "Главе Службы Безопасности"
 	selection_color = "#ffeeee"
 	minimal_player_age = 7
+	exp_requirements = 300
+	exp_type = EXP_TYPE_CREW
 
 	outfit = /datum/outfit/job/warden
 
@@ -121,6 +126,8 @@ Detective
 	supervisors = "Главе Службы Безопасности"
 	selection_color = "#ffeeee"
 	minimal_player_age = 7
+	exp_requirements = 300
+	exp_type = EXP_TYPE_CREW
 
 	outfit = /datum/outfit/job/detective
 
@@ -169,6 +176,8 @@ Security Officer
 	supervisors = "Главе Службы Безопасности (приоритет), и Главам Отделов (если имеются)"
 	selection_color = "#ffeeee"
 	minimal_player_age = 7
+	exp_requirements = 300
+	exp_type = EXP_TYPE_CREW
 
 	outfit = /datum/outfit/job/security
 

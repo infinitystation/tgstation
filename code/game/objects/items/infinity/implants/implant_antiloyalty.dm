@@ -64,7 +64,7 @@
 /obj/item/implantcase/antiloyalty
 	name = "glass case- 'Anti-NTLoyalty'"
 	desc = "A case containing a \"FUCK THE NT\" implant."
-	icon = 'icons/obj/items.dmi'
+	icon = 'icons/obj/items_and_weapons.dmi'
 	icon_state = "implantcase-r"
 
 /obj/item/implantcase/antiloyalty/New()

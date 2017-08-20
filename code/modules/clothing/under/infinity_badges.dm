@@ -47,7 +47,6 @@
 	name = "holobadge"
 	desc = "This glowing blue badge marks the holder as a member of corporate security."
 	icon_state = "holobadge"
-	var/emagged //Emagging removes Sec check.
 
 /*/obj/item/clothing/tie/badge/holo/cord
 	icon_state = "holobadge-cord"
