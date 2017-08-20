@@ -26,12 +26,12 @@
 	worn_icon = 'icons/mob/space_adv.dmi'
 	slowdown = 1
 	armor = list(melee = 10, bullet = 5, laser = 10, energy = 5, bomb = 10, bio = 100, rad = 90, fire = 40, acid = 60)
-	allowed = list(/obj/item/device/flashlight,/obj/item/weapon/tank,/obj/item/weapon/storage/bag/ore,/obj/item/device/t_scanner,/obj/item/weapon/pickaxe, /obj/item/weapon/construction/rcd)
+	allowed = list(/obj/item/device/flashlight,/obj/item/tank,/obj/item/storage/bag/ore,/obj/item/device/t_scanner,/obj/item/pickaxe, /obj/item/construction/rcd)
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/space_adv
 	resistance_flags = FIRE_PROOF | UNACIDABLE
 
 /obj/item/clothing/suit/space/hardsuit/space_adv/New()
-	jetpack = new /obj/item/weapon/tank/jetpack/suit(src)
+	jetpack = new /obj/item/tank/jetpack/suit(src)
 	..()
 
 	//var/depl = 0
@@ -162,7 +162,7 @@
 
 	                  //___Unwrench___//To remove suit
 
-/obj/item/weapon/wrench/attack(mob/living/carbon/M as mob, mob/living/carbon/user as mob)
+/obj/item/wrench/attack(mob/living/carbon/M as mob, mob/living/carbon/user as mob)
 	if(user.zone_sel.selecting == "head")
 		src.add_fingerprint(user)
 		if(istype(M:wear_suit, /obj/item/clothing/suit/space/space_adv))
@@ -229,7 +229,7 @@
 	item_state = "eng_hardsuit"
 	slowdown = 2
 	armor = list(melee = 10, bullet = 5, laser = 10, energy = 5, bomb = 10, bio = 100, rad = 75)
-	allowed = list(/obj/item/device/flashlight,/obj/item/weapon/tank,/obj/item/device/t_scanner, /obj/item/weapon/rcd)	*/
+	allowed = list(/obj/item/device/flashlight,/obj/item/tank,/obj/item/device/t_scanner, /obj/item/rcd)	*/
 
 	                 //____OTHER SUITS_____//	*/
 
@@ -248,7 +248,7 @@
 	icon_state = "militaryrig"
 	item_state = "rig_suit"
 	armor = list(melee = 60, bullet = 80, laser = 60, energy = 50, bomb = 75, bio = 100, rad = 80, fire = 10, acid = 20)
-	allowed = list(/obj/item/weapon/gun,/obj/item/device/flashlight,/obj/item/weapon/tank,/obj/item/weapon/melee/baton)
+	allowed = list(/obj/item/gun,/obj/item/device/flashlight,/obj/item/tank,/obj/item/melee/baton)
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/space_adv/military
 
 //SWAT //Red suits
@@ -267,7 +267,7 @@
 	icon_state = "swatrig"
 	item_state = "sec_hardsuit"
 	armor = list(melee = 80, bullet = 50, laser = 50, energy = 20, bomb = 45, bio = 100, rad = 80, fire = 10, acid = 20)
-	allowed = list(/obj/item/weapon/gun,/obj/item/device/flashlight,/obj/item/weapon/tank,/obj/item/weapon/melee/baton)
+	allowed = list(/obj/item/gun,/obj/item/device/flashlight,/obj/item/tank,/obj/item/melee/baton)
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/space_adv/swat
 
 // HUD

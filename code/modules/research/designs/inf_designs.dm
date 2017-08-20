@@ -5,5 +5,5 @@
 	req_tech = list("bluespace" = 4, "materials" = 3, "engineering" = 4)
 	build_type = PROTOLATHE
 	materials = list(MAT_GOLD = 250, MAT_URANIUM = 500) //quite cheap, for more convenience
-	build_path = /obj/item/weapon/storage/bag/plants/holding
+	build_path = /obj/item/storage/bag/plants/holding
 	category = list("Bluespace Designs")

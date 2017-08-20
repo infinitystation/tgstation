@@ -1,4 +1,4 @@
-/obj/item/weapon/stock_parts/cell/bio
+/obj/item/stock_parts/cell/bio
 	name = "bio power cell"
 	desc = "A rechargable electrochemical power cell. This one is able to charge itself due to some bacteriums inside."
 	icon = 'icons/obj/infinity_biocell.dmi'
@@ -9,10 +9,10 @@
 	chargerate = 50
 	var/s_rechargerate = 1
 
-/obj/item/weapon/stock_parts/cell/bio/process()
+/obj/item/stock_parts/cell/bio/process()
 	give(s_rechargerate)
 
-/obj/item/weapon/stock_parts/cell/bio/high
+/obj/item/stock_parts/cell/bio/high
 	name = "high-capacity bio power cell"
 	icon_state = "hcell"
 	origin_tech = "powerstorage=2;biotech=6"
@@ -21,7 +21,7 @@
 	chargerate = 500
 	s_rechargerate = 2
 
-/obj/item/weapon/stock_parts/cell/bio/super
+/obj/item/stock_parts/cell/bio/super
 	name = "super-capacity bio power cell"
 	icon_state = "scell"
 	origin_tech = "powerstorage=3;materials=3;biotech=7"
@@ -30,7 +30,7 @@
 	chargerate = 1000
 	s_rechargerate = 4
 
-/obj/item/weapon/stock_parts/cell/bio/hyper
+/obj/item/stock_parts/cell/bio/hyper
 	name = "hyper-capacity bio power cell"
 	icon_state = "hpcell"
 	origin_tech = "powerstorage=4;engineering=4;materials=4;biotech=7"
@@ -39,7 +39,7 @@
 	chargerate = 1500
 	s_rechargerate = 8
 
-/obj/item/weapon/stock_parts/cell/bio/bluespace
+/obj/item/stock_parts/cell/bio/bluespace
 	name = "bluespace bio power cell"
 	icon_state = "bscell"
 	origin_tech = "powerstorage=7;bluespace=5;materials=6;engineering=6;biotech=8"
@@ -48,7 +48,7 @@
 	chargerate = 2000
 	s_rechargerate = 16
 	
-/obj/item/weapon/stock_parts/cell/bio/plasma
+/obj/item/stock_parts/cell/bio/plasma
 	name = "plasmalife power cell"
 	desc = "An extremely powerful selfrecharching plasmalife power cell."
 	icon_state = "plcell"
@@ -67,7 +67,7 @@
 	materials = list(MAT_METAL = 700, MAT_GLASS = 50)
 	reagents = list("virusfood" = 10, "radium" = 10)
 	construction_time=100
-	build_path = /obj/item/weapon/stock_parts/cell/bio
+	build_path = /obj/item/stock_parts/cell/bio
 	category = list("Power Designs")
 
 /datum/design/high_biocell
@@ -79,7 +79,7 @@
 	materials = list(MAT_METAL = 700, MAT_GLASS = 60)
 	reagents = list("mutagenvirusfood" = 15, "radium" = 15)
 	construction_time=100
-	build_path = /obj/item/weapon/stock_parts/cell/bio/high
+	build_path = /obj/item/stock_parts/cell/bio/high
 	category = list("Power Designs")
 
 /datum/design/super_biocell
@@ -91,7 +91,7 @@
 	materials = list(MAT_METAL = 700, MAT_GLASS = 70)
 	reagents = list("plasmavirusfood" = 20, "radium" = 15)
 	construction_time=100
-	build_path = /obj/item/weapon/stock_parts/cell/bio/super
+	build_path = /obj/item/stock_parts/cell/bio/super
 	category = list("Power Designs")
 
 /datum/design/hyper_biocell
@@ -103,7 +103,7 @@
 	materials = list(MAT_METAL = 700, MAT_GOLD = 150, MAT_SILVER = 150, MAT_GLASS = 80)
 	reagents = list("plasmavirusfood" = 20,"tricordrazine" = 5, "uranium" = 5)
 	construction_time=100
-	build_path = /obj/item/weapon/stock_parts/cell/bio/hyper
+	build_path = /obj/item/stock_parts/cell/bio/hyper
 	category = list("Power Designs")
 
 /datum/design/bluespace_biocell
@@ -115,7 +115,7 @@
 	materials = list(MAT_METAL = 800, MAT_GOLD = 300, MAT_SILVER = 300, MAT_GLASS = 160, MAT_DIAMOND = 160)
 	reagents = list("plasmavirusfood" = 20,"omnizine" = 10, "tricordrazine" = 10, "uranium" = 10)
 	construction_time=100
-	build_path = /obj/item/weapon/stock_parts/cell/bio/bluespace
+	build_path = /obj/item/stock_parts/cell/bio/bluespace
 	category = list("Power Designs")
 	
 /datum/design/plasma_biocell
@@ -127,5 +127,5 @@
 	materials = list(MAT_GOLD = 800, MAT_URANIUM= 200, MAT_DIAMOND = 400, MAT_PLASMA = 1000)
 	reagents = list("plasmavirusfood" = 75, "omnizine" = 50, "tricordrazine" = 50, "plasma" = 50) //More than 200 u, so it needs bluespace beaker to be made
 	construction_time=200																						
-	build_path = /obj/item/weapon/stock_parts/cell/bio/plasma
+	build_path = /obj/item/stock_parts/cell/bio/plasma
 	category = list("Power Designs")

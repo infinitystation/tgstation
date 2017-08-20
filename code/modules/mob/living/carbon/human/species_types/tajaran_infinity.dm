@@ -13,7 +13,7 @@
 	attack_verb = "slash"
 	attack_sound = 'sound/weapons/slash.ogg'
 	miss_sound = 'sound/weapons/slashmiss.ogg'
-	meat = /obj/item/weapon/reagent_containers/food/snacks/meat/slab/human
+	meat = /obj/item/reagent_containers/food/snacks/meat/slab/human
 	skinned_type = /obj/item/stack/sheet/animalhide/generic
 
 /datum/species/tajaran/qualifies_for_rank(rank, list/features)

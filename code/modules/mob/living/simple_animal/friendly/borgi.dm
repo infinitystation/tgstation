@@ -95,10 +95,10 @@
 	icon_state = "borgi_chest+o"
 	item_state = "buildpipe"
 	var/wired = 0
-	var/obj/item/weapon/stock_parts/cell/cell = null
+	var/obj/item/stock_parts/cell/cell = null
 
 /obj/item/borgi_chest/attackby(obj/item/W, mob/user, params)
-	if(istype(W, /obj/item/weapon/stock_parts/cell))
+	if(istype(W, /obj/item/stock_parts/cell))
 		if(src.cell)
 			user << "<span class='warning'>Внутри уже есть батарейка!</span>"
 			return

@@ -7,31 +7,31 @@
 /area/prison/control)
 "ac" = (
 /obj/structure/rack,
-/obj/item/weapon/gun/energy/e_gun,
-/obj/item/weapon/gun/energy/e_gun,
+/obj/item/gun/energy/e_gun,
+/obj/item/gun/energy/e_gun,
 /turf/open/floor/plasteel/darkvault{
 	dir = 8
 	},
 /area/prison/control)
 "ad" = (
 /obj/structure/rack,
-/obj/item/weapon/gun/energy/laser/scatter,
+/obj/item/gun/energy/laser/scatter,
 /turf/open/floor/plasteel/darkvault{
 	dir = 8
 	},
 /area/prison/control)
 "ae" = (
 /obj/structure/rack,
-/obj/item/weapon/gun/energy/ionrifle,
+/obj/item/gun/energy/ionrifle,
 /turf/open/floor/plasteel/darkvault{
 	dir = 8
 	},
 /area/prison/control)
 "af" = (
 /obj/structure/rack,
-/obj/item/weapon/gun/energy/e_gun,
-/obj/item/weapon/gun/energy/e_gun,
-/obj/item/weapon/gun/energy/e_gun,
+/obj/item/gun/energy/e_gun,
+/obj/item/gun/energy/e_gun,
+/obj/item/gun/energy/e_gun,
 /turf/open/floor/plasteel/darkvault{
 	dir = 4
 	},
@@ -53,14 +53,14 @@
 /area/prison/control)
 "aj" = (
 /obj/structure/rack,
-/obj/item/weapon/gun/energy/ionrifle,
+/obj/item/gun/energy/ionrifle,
 /turf/open/floor/plasteel/darkvault{
 	dir = 1
 	},
 /area/prison/control)
 "ak" = (
 /obj/structure/rack,
-/obj/item/weapon/gun/energy/lasercannon,
+/obj/item/gun/energy/lasercannon,
 /turf/open/floor/plasteel/darkvault{
 	dir = 4
 	},
@@ -381,7 +381,7 @@
 /turf/open/floor/plasteel/red/side,
 /area/prison/control)
 "bk" = (
-/obj/item/weapon/paper{
+/obj/item/paper{
 	info = "–¿«–¿¡Œ“ ¿  ¿–“€ Õ≈ «¿¬≈–ÿ≈Õ¿! Œ ¡¿√¿’ —ŒŒ¡Ÿ¿“‹ ¬ “≈Ã” Õ¿ ‘Œ–”Ã≈!   ¿–“¿ Õ¿ —“¿ƒ»» ¿À‹‘¿!"
 	},
 /turf/open/floor/plasteel/red/side,
@@ -518,7 +518,7 @@
 	},
 /area/prison/cell_block/A)
 "bD" = (
-/obj/item/weapon/soap,
+/obj/item/soap,
 /turf/open/floor/plasteel{
 	icon_state = "freezerfloor"
 	},
@@ -590,7 +590,7 @@
 	},
 /area/prison/cell_block/B)
 "bO" = (
-/obj/item/weapon/soap,
+/obj/item/soap,
 /turf/open/floor/plasteel{
 	icon_state = "freezerfloor"
 	},
@@ -675,7 +675,7 @@
 /obj/machinery/shower{
 	dir = 8
 	},
-/obj/item/weapon/soap,
+/obj/item/soap,
 /turf/open/floor/plasteel{
 	icon_state = "freezerfloor"
 	},
@@ -736,7 +736,7 @@
 /obj/machinery/shower{
 	dir = 8
 	},
-/obj/item/weapon/soap,
+/obj/item/soap,
 /turf/open/floor/plasteel{
 	icon_state = "freezerfloor"
 	},
@@ -754,9 +754,9 @@
 /area/prison/cell_block/A)
 "cj" = (
 /obj/structure/closet/secure_closet/medical1,
-/obj/item/weapon/storage/firstaid/o2,
-/obj/item/weapon/storage/firstaid/brute,
-/obj/item/weapon/storage/pill_bottle/stimulant,
+/obj/item/storage/firstaid/o2,
+/obj/item/storage/firstaid/brute,
+/obj/item/storage/pill_bottle/stimulant,
 /turf/open/floor/plasteel/whiteyellow/side{
 	dir = 5
 	},
@@ -773,7 +773,7 @@
 /area/prison/cell_block/A)
 "cm" = (
 /obj/machinery/porta_turret{
-	installation = /obj/item/weapon/gun/energy/e_gun
+	installation = /obj/item/gun/energy/e_gun
 	},
 /turf/open/floor/plating,
 /area/prison/control)
@@ -799,7 +799,7 @@
 /turf/open/floor/plating,
 /area/prison/cell_block/B)
 "cr" = (
-/obj/item/weapon/soap,
+/obj/item/soap,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/open/floor/plasteel{
 	icon_state = "freezerfloor"
@@ -810,8 +810,8 @@
 /area/prison/cell_block/A)
 "ct" = (
 /obj/structure/table/glass,
-/obj/item/weapon/storage/firstaid/regular,
-/obj/item/weapon/storage/firstaid/regular,
+/obj/item/storage/firstaid/regular,
+/obj/item/storage/firstaid/regular,
 /turf/open/floor/plasteel/whiteyellow/side{
 	dir = 4
 	},
@@ -821,7 +821,7 @@
 /obj/machinery/computer/security/telescreen/entertainment{
 	pixel_x = -32
 	},
-/obj/item/weapon/bedsheet,
+/obj/item/bedsheet,
 /obj/machinery/atmospherics/components/unary/vent_pump{
 	dir = 2;
 	on = 1
@@ -873,7 +873,7 @@
 /area/prison/control)
 "cA" = (
 /obj/structure/closet/wardrobe/botanist,
-/obj/item/weapon/watertank,
+/obj/item/watertank,
 /turf/open/floor/plasteel/darkvault{
 	dir = 8
 	},
@@ -905,7 +905,7 @@
 /area/prison)
 "cE" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet,
+/obj/item/bedsheet,
 /obj/machinery/atmospherics/components/unary/vent_pump{
 	dir = 2;
 	on = 1
@@ -919,7 +919,7 @@
 /area/prison)
 "cF" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet,
+/obj/item/bedsheet,
 /obj/machinery/atmospherics/components/unary/vent_pump{
 	dir = 2;
 	on = 1
@@ -932,7 +932,7 @@
 	},
 /area/prison/cell_block/B)
 "cG" = (
-/obj/item/weapon/soap,
+/obj/item/soap,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	req_access_txt = 1
 	},
@@ -944,7 +944,7 @@
 /obj/machinery/shower{
 	dir = 4
 	},
-/obj/item/weapon/soap,
+/obj/item/soap,
 /turf/open/floor/plasteel{
 	icon_state = "freezerfloor"
 	},
@@ -980,8 +980,8 @@
 /area/prison/cell_block/A)
 "cM" = (
 /obj/structure/table/glass,
-/obj/item/weapon/storage/firstaid/fire,
-/obj/item/weapon/storage/firstaid/toxin,
+/obj/item/storage/firstaid/fire,
+/obj/item/storage/firstaid/toxin,
 /turf/open/floor/plasteel/whiteyellow/side{
 	dir = 4
 	},
@@ -1194,7 +1194,7 @@
 /obj/machinery/shower{
 	dir = 4
 	},
-/obj/item/weapon/soap,
+/obj/item/soap,
 /turf/open/floor/plasteel{
 	icon_state = "freezerfloor"
 	},
@@ -1470,14 +1470,14 @@
 /turf/open/floor/plasteel/red/side,
 /area/prison/control)
 "dL" = (
-/obj/item/weapon/twohanded/required/kirbyplants{
+/obj/item/twohanded/required/kirbyplants{
 	tag = "icon-plant-21";
 	icon_state = "plant-21"
 	},
 /turf/open/floor/plasteel/red/side,
 /area/prison/control)
 "dM" = (
-/obj/item/weapon/twohanded/required/kirbyplants{
+/obj/item/twohanded/required/kirbyplants{
 	tag = "icon-plant-22";
 	icon_state = "plant-22"
 	},
@@ -1491,7 +1491,7 @@
 /area/prison/control)
 "dO" = (
 /obj/structure/table,
-/obj/item/weapon/book/manual/wiki/security_space_law,
+/obj/item/book/manual/wiki/security_space_law,
 /turf/open/floor/plasteel/red/side{
 	dir = 6
 	},
@@ -2036,7 +2036,7 @@
 /area/prison/cell_block/A)
 "fn" = (
 /obj/machinery/porta_turret{
-	installation = /obj/item/weapon/gun/energy/e_gun
+	installation = /obj/item/gun/energy/e_gun
 	},
 /turf/open/floor/plating,
 /area/prison)
@@ -2102,7 +2102,7 @@
 /area/prison/cell_block/B)
 "fy" = (
 /obj/machinery/porta_turret{
-	installation = /obj/item/weapon/gun/energy/e_gun
+	installation = /obj/item/gun/energy/e_gun
 	},
 /turf/open/floor/plating,
 /area/prison/cell_block/B)
@@ -2807,7 +2807,7 @@
 	},
 /area/prison/cell_block/B)
 "ho" = (
-/obj/item/weapon/soap,
+/obj/item/soap,
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
 	dir = 4
 	},
@@ -2933,7 +2933,7 @@
 /area/prison/cell_block/A)
 "hx" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/storage/box/donkpockets,
+/obj/item/storage/box/donkpockets,
 /turf/open/floor/plasteel/darkred/side{
 	dir = 5
 	},
@@ -3002,7 +3002,7 @@
 	},
 /area/prison/cell_block/B)
 "hE" = (
-/obj/item/weapon/soap,
+/obj/item/soap,
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
 	dir = 4
 	},
@@ -3015,7 +3015,7 @@
 /obj/machinery/computer/security/telescreen/entertainment{
 	pixel_x = -32
 	},
-/obj/item/weapon/bedsheet,
+/obj/item/bedsheet,
 /obj/machinery/atmospherics/components/unary/vent_pump{
 	dir = 1;
 	on = 1
@@ -3085,7 +3085,7 @@
 /area/prison/cell_block/B)
 "hN" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet,
+/obj/item/bedsheet,
 /obj/machinery/atmospherics/components/unary/vent_pump{
 	dir = 1;
 	on = 1
@@ -3102,7 +3102,7 @@
 /area/prison)
 "hO" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet,
+/obj/item/bedsheet,
 /obj/machinery/atmospherics/components/unary/vent_pump{
 	dir = 1;
 	on = 1
@@ -3122,8 +3122,8 @@
 /obj/machinery/computer/security/telescreen/entertainment{
 	pixel_x = -32
 	},
-/obj/item/weapon/reagent_containers/food/snacks/sandwich,
-/obj/item/weapon/storage/fancy/cigarettes,
+/obj/item/reagent_containers/food/snacks/sandwich,
+/obj/item/storage/fancy/cigarettes,
 /obj/machinery/firealarm{
 	dir = 1;
 	pixel_y = -24
@@ -3143,7 +3143,7 @@
 	pixel_x = 0;
 	pixel_y = -32
 	},
-/obj/item/weapon/storage/box/cups,
+/obj/item/storage/box/cups,
 /obj/structure/table/reinforced,
 /turf/open/floor/plasteel/darkred/side,
 /area/prison/cell_block/A)
@@ -3160,7 +3160,7 @@
 /area/prison/cell_block/A)
 "hV" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/storage/box/cups,
+/obj/item/storage/box/cups,
 /turf/open/floor/plasteel/darkred/side,
 /area/prison)
 "hW" = (
@@ -3189,12 +3189,12 @@
 	pixel_x = 0;
 	pixel_y = -32
 	},
-/obj/item/weapon/reagent_containers/food/snacks/sandwich,
-/obj/item/weapon/storage/fancy/cigarettes,
+/obj/item/reagent_containers/food/snacks/sandwich,
+/obj/item/storage/fancy/cigarettes,
 /turf/open/floor/plasteel/darkred/side,
 /area/prison)
 "hZ" = (
-/obj/item/weapon/twohanded/required/kirbyplants,
+/obj/item/twohanded/required/kirbyplants,
 /obj/structure/extinguisher_cabinet{
 	pixel_x = 27;
 	pixel_y = 0
@@ -3204,7 +3204,7 @@
 	},
 /area/prison)
 "ia" = (
-/obj/item/weapon/twohanded/required/kirbyplants,
+/obj/item/twohanded/required/kirbyplants,
 /obj/structure/extinguisher_cabinet{
 	pixel_x = 27;
 	pixel_y = 0
@@ -3238,7 +3238,7 @@
 /area/prison/hallway/aft)
 "if" = (
 /obj/structure/table/wood,
-/obj/item/weapon/paper_bin,
+/obj/item/paper_bin,
 /turf/open/floor/carpet,
 /area/prison/hallway/aft)
 "ig" = (
@@ -3256,7 +3256,7 @@
 /area/prison/hallway/aft)
 "ij" = (
 /obj/structure/table/wood,
-/obj/item/weapon/paper_bin,
+/obj/item/paper_bin,
 /turf/open/floor/wood,
 /area/prison/hallway/aft)
 "ik" = (
@@ -3299,7 +3299,7 @@
 	icon_state = "shower";
 	dir = 8
 	},
-/obj/item/weapon/soap,
+/obj/item/soap,
 /turf/open/floor/plasteel{
 	icon_state = "freezerfloor"
 	},
@@ -3310,13 +3310,13 @@
 /area/prison)
 "iq" = (
 /obj/structure/table/wood,
-/obj/item/weapon/pen,
+/obj/item/pen,
 /turf/open/floor/carpet,
 /area/prison/hallway/aft)
 "ir" = (
 /obj/structure/table/wood,
-/obj/item/weapon/paper_bin,
-/obj/item/weapon/pen,
+/obj/item/paper_bin,
+/obj/item/pen,
 /turf/open/floor/wood,
 /area/prison/hallway/aft)
 "is" = (
@@ -3327,8 +3327,8 @@
 /area/prison/hallway/aft)
 "it" = (
 /obj/structure/table/wood,
-/obj/item/weapon/pen,
-/obj/item/weapon/pen,
+/obj/item/pen,
+/obj/item/pen,
 /turf/open/floor/wood,
 /area/prison/hallway/aft)
 "iu" = (
@@ -3354,17 +3354,17 @@
 /turf/open/floor/wood,
 /area/prison/hallway/aft)
 "iy" = (
-/obj/item/weapon/storage/bag/tray,
-/obj/item/weapon/storage/bag/tray{
+/obj/item/storage/bag/tray,
+/obj/item/storage/bag/tray{
 	pixel_y = 2
 	},
-/obj/item/weapon/storage/bag/tray{
+/obj/item/storage/bag/tray{
 	pixel_y = 4
 	},
-/obj/item/weapon/storage/bag/tray{
+/obj/item/storage/bag/tray{
 	pixel_y = 6
 	},
-/obj/item/weapon/storage/bag/tray{
+/obj/item/storage/bag/tray{
 	pixel_y = 8
 	},
 /obj/structure/table,
@@ -3459,7 +3459,7 @@
 	icon_state = "shower";
 	dir = 8
 	},
-/obj/item/weapon/soap,
+/obj/item/soap,
 /turf/open/floor/plasteel{
 	icon_state = "freezerfloor"
 	},
@@ -3468,13 +3468,13 @@
 /obj/machinery/shower{
 	dir = 4
 	},
-/obj/item/weapon/soap/deluxe,
+/obj/item/soap/deluxe,
 /turf/open/floor/plasteel{
 	icon_state = "freezerfloor"
 	},
 /area/prison/cell_block/A)
 "iP" = (
-/obj/item/weapon/twohanded/required/kirbyplants{
+/obj/item/twohanded/required/kirbyplants{
 	icon_state = "plant-21";
 	layer = 4.1;
 	tag = "icon-plant-21"
@@ -3493,7 +3493,7 @@
 /area/prison)
 "iS" = (
 /obj/structure/table,
-/obj/item/weapon/reagent_containers/food/snacks/friedegg,
+/obj/item/reagent_containers/food/snacks/friedegg,
 /turf/open/floor/plasteel/whiteyellow,
 /area/prison/control{
 	name = "\improper Prison Kitchen"
@@ -3506,7 +3506,7 @@
 /obj/machinery/shower{
 	dir = 4
 	},
-/obj/item/weapon/soap/deluxe,
+/obj/item/soap/deluxe,
 /turf/open/floor/plasteel{
 	icon_state = "freezerfloor"
 	},
@@ -3532,7 +3532,7 @@
 /area/prison)
 "iY" = (
 /obj/structure/table,
-/obj/item/weapon/reagent_containers/food/snacks/spacefreezy,
+/obj/item/reagent_containers/food/snacks/spacefreezy,
 /turf/open/floor/plasteel/whiteyellow,
 /area/prison/control{
 	name = "\improper Prison Kitchen"
@@ -3556,7 +3556,7 @@
 /area/prison)
 "jc" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/kitchen/rollingpin,
+/obj/item/kitchen/rollingpin,
 /turf/open/floor/plasteel/whiteyellow,
 /area/prison)
 "jd" = (
@@ -3574,7 +3574,7 @@
 /area/prison/hallway/aft)
 "jf" = (
 /obj/structure/table/wood,
-/obj/item/weapon/pen/blue,
+/obj/item/pen/blue,
 /turf/open/floor/wood,
 /area/prison/hallway/aft)
 "jg" = (
@@ -3712,7 +3712,7 @@
 	})
 "jy" = (
 /obj/structure/table/wood,
-/obj/item/weapon/pen/red,
+/obj/item/pen/red,
 /turf/open/floor/wood,
 /area/prison/hallway/aft)
 "jz" = (
@@ -3797,11 +3797,11 @@
 	})
 "jN" = (
 /obj/structure/closet/crate/hydroponics,
-/obj/item/weapon/shovel/spade,
-/obj/item/weapon/wrench,
-/obj/item/weapon/reagent_containers/glass/bucket,
-/obj/item/weapon/cultivator,
-/obj/item/weapon/wirecutters,
+/obj/item/shovel/spade,
+/obj/item/wrench,
+/obj/item/reagent_containers/glass/bucket,
+/obj/item/cultivator,
+/obj/item/wirecutters,
 /turf/open/floor/plasteel/darkvault{
 	dir = 8
 	},
@@ -3816,7 +3816,7 @@
 /area/prison/hallway/aft)
 "jP" = (
 /obj/structure/table/wood,
-/obj/item/weapon/pen/blue,
+/obj/item/pen/blue,
 /turf/open/floor/carpet,
 /area/prison/hallway/aft)
 "jQ" = (
@@ -3909,7 +3909,7 @@
 "jY" = (
 /obj/structure/rack,
 /obj/item/stack/packageWrap,
-/obj/item/weapon/book/manual/chef_recipes{
+/obj/item/book/manual/chef_recipes{
 	pixel_x = 2;
 	pixel_y = 6
 	},
@@ -3972,7 +3972,7 @@
 	})
 "ke" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/reagent_containers/food/snacks/spaghetti,
+/obj/item/reagent_containers/food/snacks/spaghetti,
 /turf/open/floor/plasteel{
 	tag = "icon-cafeteria (NORTHEAST)";
 	icon_state = "cafeteria";
@@ -3983,10 +3983,10 @@
 	})
 "kf" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/reagent_containers/food/condiment/peppermill{
+/obj/item/reagent_containers/food/condiment/peppermill{
 	pixel_x = 3
 	},
-/obj/item/weapon/reagent_containers/food/condiment/saltshaker{
+/obj/item/reagent_containers/food/condiment/saltshaker{
 	pixel_x = -3;
 	pixel_y = 0
 	},
@@ -4091,7 +4091,7 @@
 	})
 "kp" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/kitchen/rollingpin,
+/obj/item/kitchen/rollingpin,
 /turf/open/floor/plasteel{
 	tag = "icon-cafeteria (NORTHEAST)";
 	icon_state = "cafeteria";
@@ -4119,10 +4119,10 @@
 	desc = "It's a storage unit for kitchen clothes and equipment.";
 	name = "Kitchen Crate"
 	},
-/obj/item/weapon/storage/box/donkpockets,
-/obj/item/weapon/storage/box/donkpockets,
-/obj/item/weapon/storage/box/mousetraps,
-/obj/item/weapon/storage/box/mousetraps,
+/obj/item/storage/box/donkpockets,
+/obj/item/storage/box/donkpockets,
+/obj/item/storage/box/mousetraps,
+/obj/item/storage/box/mousetraps,
 /obj/item/clothing/under/rank/chef,
 /obj/item/clothing/head/chefhat,
 /turf/open/floor/plasteel{
@@ -4148,11 +4148,11 @@
 	})
 "kt" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/storage/box/donkpockets{
+/obj/item/storage/box/donkpockets{
 	pixel_x = 3;
 	pixel_y = 3
 	},
-/obj/item/weapon/storage/box/donkpockets,
+/obj/item/storage/box/donkpockets,
 /turf/open/floor/plasteel{
 	tag = "icon-cafeteria (NORTHEAST)";
 	icon_state = "cafeteria";
@@ -4219,10 +4219,10 @@
 /area/prison/hallway/aft)
 "kz" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/reagent_containers/food/condiment/enzyme{
+/obj/item/reagent_containers/food/condiment/enzyme{
 	layer = 5
 	},
-/obj/item/weapon/reagent_containers/glass/beaker{
+/obj/item/reagent_containers/glass/beaker{
 	pixel_x = 5
 	},
 /turf/open/floor/plasteel{
@@ -4285,8 +4285,8 @@
 	name = "\improper Prison Kitchen"
 	})
 "kE" = (
-/obj/item/weapon/storage/box/syringes,
-/obj/item/weapon/storage/box/beakers{
+/obj/item/storage/box/syringes,
+/obj/item/storage/box/beakers{
 	pixel_x = 2;
 	pixel_y = 2
 	},
@@ -4297,16 +4297,16 @@
 /area/prison)
 "kF" = (
 /obj/structure/closet/crate/freezer,
-/obj/item/weapon/reagent_containers/food/snacks/beans,
-/obj/item/weapon/reagent_containers/food/snacks/beans,
-/obj/item/weapon/reagent_containers/food/snacks/beans,
-/obj/item/weapon/reagent_containers/food/snacks/beans,
-/obj/item/weapon/reagent_containers/food/snacks/beans,
-/obj/item/weapon/reagent_containers/food/snacks/beans,
-/obj/item/weapon/reagent_containers/food/snacks/beans,
-/obj/item/weapon/reagent_containers/food/snacks/beans,
-/obj/item/weapon/reagent_containers/food/snacks/beans,
-/obj/item/weapon/reagent_containers/food/snacks/beans,
+/obj/item/reagent_containers/food/snacks/beans,
+/obj/item/reagent_containers/food/snacks/beans,
+/obj/item/reagent_containers/food/snacks/beans,
+/obj/item/reagent_containers/food/snacks/beans,
+/obj/item/reagent_containers/food/snacks/beans,
+/obj/item/reagent_containers/food/snacks/beans,
+/obj/item/reagent_containers/food/snacks/beans,
+/obj/item/reagent_containers/food/snacks/beans,
+/obj/item/reagent_containers/food/snacks/beans,
+/obj/item/reagent_containers/food/snacks/beans,
 /turf/open/floor/plasteel{
 	icon_state = "showroomfloor"
 	},
@@ -4447,7 +4447,7 @@
 /area/prison)
 "lc" = (
 /obj/structure/table/wood,
-/obj/item/weapon/statuebust{
+/obj/item/statuebust{
 	pixel_x = 0;
 	pixel_y = 12
 	},
@@ -4455,12 +4455,12 @@
 /area/prison)
 "ld" = (
 /obj/structure/table/wood,
-/obj/item/weapon/coin/twoheaded,
+/obj/item/coin/twoheaded,
 /turf/open/floor/carpet,
 /area/prison)
 "le" = (
 /obj/structure/table/wood,
-/obj/item/weapon/storage/pill_bottle/dice,
+/obj/item/storage/pill_bottle/dice,
 /turf/open/floor/carpet,
 /area/prison)
 "lf" = (
@@ -4472,11 +4472,11 @@
 /area/prison)
 "lg" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/soap/nanotrasen,
+/obj/item/soap/nanotrasen,
 /turf/open/floor/plasteel/whiteyellow,
 /area/prison)
 "lh" = (
-/obj/item/weapon/storage/box/monkeycubes,
+/obj/item/storage/box/monkeycubes,
 /turf/open/floor/plasteel{
 	icon_state = "showroomfloor"
 	},
@@ -4589,7 +4589,7 @@
 /area/prison)
 "lx" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet,
+/obj/item/bedsheet,
 /obj/machinery/atmospherics/components/unary/vent_pump{
 	dir = 1;
 	on = 1
@@ -4682,7 +4682,7 @@
 	},
 /area/prison)
 "lM" = (
-/obj/item/weapon/twohanded/required/kirbyplants{
+/obj/item/twohanded/required/kirbyplants{
 	tag = "icon-plant-21";
 	icon_state = "plant-21"
 	},
@@ -4694,10 +4694,10 @@
 /area/prison)
 "lN" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/reagent_containers/food/condiment/peppermill{
+/obj/item/reagent_containers/food/condiment/peppermill{
 	pixel_x = 3
 	},
-/obj/item/weapon/reagent_containers/food/condiment/saltshaker{
+/obj/item/reagent_containers/food/condiment/saltshaker{
 	pixel_x = -3;
 	pixel_y = 0
 	},
@@ -4707,22 +4707,22 @@
 /area/prison)
 "lO" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/reagent_containers/food/condiment/saltshaker{
+/obj/item/reagent_containers/food/condiment/saltshaker{
 	pixel_x = -3;
 	pixel_y = 0
 	},
-/obj/item/weapon/reagent_containers/food/condiment/peppermill{
+/obj/item/reagent_containers/food/condiment/peppermill{
 	pixel_x = 3
 	},
 /turf/open/floor/plasteel/whiteyellow,
 /area/prison)
 "lP" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/storage/box/donkpockets{
+/obj/item/storage/box/donkpockets{
 	pixel_x = 3;
 	pixel_y = 3
 	},
-/obj/item/weapon/storage/box/donkpockets,
+/obj/item/storage/box/donkpockets,
 /turf/open/floor/plasteel/warnwhite{
 	dir = 9
 	},
@@ -4758,7 +4758,7 @@
 /area/prison)
 "lV" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/kitchen/knife{
+/obj/item/kitchen/knife{
 	force = 5;
 	name = "safe knife";
 	throwforce = 2
@@ -4767,10 +4767,10 @@
 /area/prison)
 "lW" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/reagent_containers/food/condiment/enzyme{
+/obj/item/reagent_containers/food/condiment/enzyme{
 	layer = 5
 	},
-/obj/item/weapon/reagent_containers/glass/beaker{
+/obj/item/reagent_containers/glass/beaker{
 	pixel_x = 5
 	},
 /turf/open/floor/plasteel/warnwhite{
@@ -4819,16 +4819,16 @@
 /area/prison)
 "md" = (
 /obj/structure/closet/crate/freezer,
-/obj/item/weapon/reagent_containers/food/snacks/beans,
-/obj/item/weapon/reagent_containers/food/snacks/beans,
-/obj/item/weapon/reagent_containers/food/snacks/beans,
-/obj/item/weapon/reagent_containers/food/snacks/beans,
-/obj/item/weapon/reagent_containers/food/snacks/beans,
-/obj/item/weapon/reagent_containers/food/snacks/beans,
-/obj/item/weapon/reagent_containers/food/snacks/beans,
-/obj/item/weapon/reagent_containers/food/snacks/beans,
-/obj/item/weapon/reagent_containers/food/snacks/beans,
-/obj/item/weapon/reagent_containers/food/snacks/beans,
+/obj/item/reagent_containers/food/snacks/beans,
+/obj/item/reagent_containers/food/snacks/beans,
+/obj/item/reagent_containers/food/snacks/beans,
+/obj/item/reagent_containers/food/snacks/beans,
+/obj/item/reagent_containers/food/snacks/beans,
+/obj/item/reagent_containers/food/snacks/beans,
+/obj/item/reagent_containers/food/snacks/beans,
+/obj/item/reagent_containers/food/snacks/beans,
+/obj/item/reagent_containers/food/snacks/beans,
+/obj/item/reagent_containers/food/snacks/beans,
 /turf/open/floor/plasteel{
 	icon_state = "showroomfloor"
 	},

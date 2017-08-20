@@ -5,7 +5,7 @@
 	icon_screen = "comm"
 	icon_keyboard = "tech_key"
 	req_access = list(ACCESS_HEADS)
-	circuit = /obj/item/weapon/circuitboard/computer/communications
+	circuit = /obj/item/circuitboard/computer/communications
 	var/authenticated = 0
 	var/auth_id = "Unknown" //Who is currently logged in?
 	var/list/messagetitle = list()
@@ -33,19 +33,19 @@
 	var/status_display_freq = "1435"
 	var/stat_msg1
 	var/stat_msg2
-	var/obj/item/weapon/paper/paper
+	var/obj/item/paper/paper
 
 	light_color = LIGHT_COLOR_BLUE
 
 /obj/machinery/computer/communications/proc/checkCCcooldown()
-	var/obj/item/weapon/circuitboard/computer/communications/CM = circuit
+	var/obj/item/circuitboard/computer/communications/CM = circuit
 	if(CM.lastTimeUsed + 100 > world.time)
 		return FALSE
 	return TRUE
 
-/obj/machinery/computer/communications/New()
+/obj/machinery/computer/communications/Initialize()
+	. = ..()
 	GLOB.shuttle_caller_list += src
-	..()
 
 /obj/machinery/computer/communications/process()
 	if(..())
@@ -63,7 +63,7 @@
 
 	if(!href_list["operation"])
 		return
-	var/obj/item/weapon/circuitboard/computer/communications/CM = circuit
+	var/obj/item/circuitboard/computer/communications/CM = circuit
 	switch(href_list["operation"])
 		// main interface
 		if("main")
@@ -72,7 +72,7 @@
 		if("login")
 			var/mob/M = usr
 
-			var/obj/item/weapon/card/id/I = M.get_active_held_item()
+			var/obj/item/card/id/I = M.get_active_held_item()
 			if(!istype(I))
 				I = M.get_idcard()
 
@@ -91,14 +91,14 @@
 					playsound(src, 'sound/machines/terminal_alert.ogg', 25, 0)
 					if(prob(25))
 						for(var/mob/living/silicon/ai/AI in active_ais())
-							AI << sound('sound/machines/terminal_alert.ogg', volume = 10) //Very quiet for balance reasons
+							SEND_SOUND(AI, sound('sound/machines/terminal_alert.ogg', volume = 10)) //Very quiet for balance reasons
 		if("logout")
 			authenticated = 0
 			playsound(src, 'sound/machines/terminal_off.ogg', 50, 0)
 
 		if("swipeidseclevel")
 			var/mob/M = usr
-			var/obj/item/weapon/card/id/I = M.get_active_held_item()
+			var/obj/item/card/id/I = M.get_active_held_item()
 			if (istype(I, /obj/item/device/pda))
 				var/obj/item/device/pda/pda = I
 				I = pda.id
@@ -267,7 +267,7 @@
 			src.updateDialog()
 
 		// OMG CENTCOM LETTERHEAD
-		if("MessageCentcomm")
+		if("MessageCentCom")
 			//if(src.authenticated==2)
 			if(!checkCCcooldown())
 				to_chat(usr, "<span class='warning'>Arrays recycling.  Please stand by.</span>")
@@ -276,7 +276,7 @@
 			if(!input || !(usr in view(1,src)) || !checkCCcooldown())
 				return
 			playsound(src, 'sound/machines/terminal_prompt_confirm.ogg', 50, 0)
-			Centcomm_announce(input, usr)
+			CentCom_announce(input, usr)
 			to_chat(usr, "<span class='notice'>Message transmitted to Central Command.</span>")
 			log_talk(usr,"[key_name(usr)] has made a Centcom announcement: [input]",LOGSAY)
 			CM.lastTimeUsed = world.time
@@ -314,7 +314,7 @@
 					return
 				Nuke_request(input, usr)
 				to_chat(usr, "<span class='notice'>Request sent.</span>")
-				log_talk(usr,"[key_name(usr)] has requested the nuclear codes from Centcomm",LOGSAY)
+				log_talk(usr,"[key_name(usr)] has requested the nuclear codes from CentCom",LOGSAY)
 				priority_announce("The codes for the on-station nuclear self-destruct have been requested by [usr]. Confirmation or denial of this request will be sent shortly.", "Nuclear Self Destruct Codes Requested",'sound/ai/commandreport.ogg')
 				CM.lastTimeUsed = world.time
 
@@ -325,7 +325,7 @@
 
 		if("send_paper")
 			var/mob/M = usr
-			var/obj/item/weapon/card/id/I = M.get_active_held_item()
+			var/obj/item/card/id/I = M.get_active_held_item()
 			if(istype(I, /obj/item/device/pda))
 				var/obj/item/device/pda/pda = I
 				I = pda.id
@@ -414,7 +414,7 @@
 				usr << "Arrays recycling.  Please stand by."
 				return
 			var/input = input(usr, "Please choose a message to transmit to Centcom via quantum entanglement.  Please be aware that this process is very expensive, and abuse will lead to... termination.  Transmission does not guarantee a response.", "Send a message to Centcomm.", "")
-			Centcomm_announce(input, usr)
+			CentCom_announce(input, usr)
 			usr << "Message transmitted."
 			log_say("[key_name(usr)] has made a Centcom announcement: [input]")
 			CM.lastTimeUsed = world.time
@@ -433,12 +433,12 @@
 	src.updateUsrDialog()
 
 /obj/machinery/computer/communications/attackby(obj/I, mob/user, params)
-	if(istype(I, /obj/item/weapon/card/id))
+	if(istype(I, /obj/item/card/id))
 		attack_hand(user)
-	else if(istype(I, /obj/item/weapon/paper))
+	else if(istype(I, /obj/item/paper))
 		if(!user.drop_item())
 			return
-		var/obj/item/weapon/paper/P = I
+		var/obj/item/paper/P = I
 		P.loc = src
 		paper = P
 		user << "<span class='notice'>You inserted the [P.name].</span>"
@@ -729,7 +729,7 @@
 		return
 	if(!istype(paper))
 		return
-	var/obj/item/weapon/circuitboard/computer/communications/CM = circuit
+	var/obj/item/circuitboard/computer/communications/CM = circuit
 	if(CM.lastTimeUsed + 100 > world.time)
 		to_chat(usr, "Arrays recycling.  Please stand by.")
 		return
@@ -771,5 +771,5 @@
 	return ..()
 
 /obj/machinery/computer/communications/proc/overrideCooldown()
-	var/obj/item/weapon/circuitboard/computer/communications/CM = circuit
+	var/obj/item/circuitboard/computer/communications/CM = circuit
 	CM.lastTimeUsed = 0

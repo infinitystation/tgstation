@@ -396,7 +396,7 @@
 //					/obj/item/clothing/under/halloween/camo = 6,
 //					/obj/item/clothing/under/halloween/jester = 3,
 //					/obj/item/clothing/under/halloween/soviet = 12)
-//	refill_canister = /obj/item/weapon/vending_refill/cigarette
+//	refill_canister = /obj/item/vending_refill/cigarette
 //
 ///obj/machinery/vending/halloween/shoes
 //	name = "Spooky Shoes-Vender!"

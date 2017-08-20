@@ -97,7 +97,7 @@
 				code2[inc] = 9
 			interact(user)
 
-/obj/structure/closet/secure_closet/attackby(obj/item/weapon/W, mob/user, params)
+/obj/structure/closet/secure_closet/attackby(obj/item/W, mob/user, params)
 	if(user in src)
 		return
 	if(locked && !opened)

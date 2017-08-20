@@ -2,26 +2,26 @@
 	name = "Centcom Agent"
 
 	uniform = /obj/item/clothing/under/lawyer/blacksuit
-	id = /obj/item/weapon/card/id
+	id = /obj/item/card/id
 	suit = /obj/item/clothing/suit/toggle/lawyer/black
 	shoes = /obj/item/clothing/shoes/laceup
 	glasses = /obj/item/clothing/glasses/sunglasses
 	gloves = /obj/item/clothing/gloves/color/black
-	belt = /obj/item/weapon/storage/belt/holster
+	belt = /obj/item/storage/belt/holster
 	ears = /obj/item/device/radio/headset/headset_cent/alt
-	r_pocket = /obj/item/weapon/melee/classic_baton/telescopic
-	l_pocket = /obj/item/weapon/restraints/handcuffs
+	r_pocket = /obj/item/melee/classic_baton/telescopic
+	l_pocket = /obj/item/restraints/handcuffs
 
 /datum/outfit/agent/post_equip(mob/living/carbon/human/H)
-	var/obj/item/weapon/storage/belt/holster/ready_holster = H.belt
+	var/obj/item/storage/belt/holster/ready_holster = H.belt
 	for(var/obj/item/holster_item in ready_holster)
 		qdel(holster_item)
 	for(var/i=1, i>0, i--)
-		ready_holster.handle_item_insertion(new /obj/item/weapon/gun/ballistic/automatic/pistol,1)
+		ready_holster.handle_item_insertion(new /obj/item/gun/ballistic/automatic/pistol,1)
 	ready_holster.handle_item_insertion(new /obj/item/ammo_box/magazine/m10mm,1)
 	ready_holster.handle_item_insertion(new /obj/item/ammo_box/magazine/m10mm,1)
 
-	var/obj/item/weapon/card/id/W = H.wear_id
+	var/obj/item/card/id/W = H.wear_id
 	W.icon_state = "centcom"
 	W.access = get_all_accesses()
 	W.access += get_centcom_access("Agent")
@@ -45,18 +45,18 @@
 	suit = /obj/item/clothing/suit/armor/vest
 	head = /obj/item/clothing/head/helmet/sec
 	glasses = /obj/item/clothing/glasses/hud/security/sunglasses
-	belt = /obj/item/weapon/storage/belt/security/centcome_alert
-	suit_store = /obj/item/weapon/gun/ballistic/automatic/wt550/mindshield
-	back = /obj/item/weapon/storage/backpack/security
-	backpack_contents = list(/obj/item/weapon/storage/box/security/centcom=1,\
+	belt = /obj/item/storage/belt/security/centcome_alert
+	suit_store = /obj/item/gun/ballistic/automatic/wt550/mindshield
+	back = /obj/item/storage/backpack/security
+	backpack_contents = list(/obj/item/storage/box/security/centcom=1,\
 		/obj/item/device/flashlight/seclite=1)
-	id = /obj/item/weapon/card/id
+	id = /obj/item/card/id
 
 /datum/outfit/security_private/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	if(visualsOnly)
 		return
 
-	var/obj/item/weapon/card/id/W = H.wear_id
+	var/obj/item/card/id/W = H.wear_id
 	W.icon_state = "centcom"
 	W.access = get_centcom_access("Centcom Security Private")
 	W.access += ACCESS_WEAPONS
@@ -64,7 +64,7 @@
 	W.registered_name = H.real_name
 	W.update_label()
 
-	var/obj/item/weapon/implant/mindshield/L = new/obj/item/weapon/implant/mindshield(H)
+	var/obj/item/implant/mindshield/L = new/obj/item/implant/mindshield(H)
 	L.implant(H, null, 1)
 
 /datum/outfit/security_private/red
@@ -74,11 +74,11 @@
 	suit = /obj/item/clothing/suit/space/hardsuit/space_adv/military
 	head = null
 	ears = /obj/item/device/radio/headset/headset_cent/alt
-	back = /obj/item/weapon/storage/backpack/security
-	suit_store = /obj/item/weapon/tank/internals/oxygen
-	backpack_contents = list(/obj/item/weapon/storage/box/security/centcom=1,\
+	back = /obj/item/storage/backpack/security
+	suit_store = /obj/item/tank/internals/oxygen
+	backpack_contents = list(/obj/item/storage/box/security/centcom=1,\
 		/obj/item/device/flashlight/seclite=1,\
-		/obj/item/weapon/gun/ballistic/automatic/wt550/mindshield=1)
+		/obj/item/gun/ballistic/automatic/wt550/mindshield=1)
 
 
 /datum/outfit/security_private/green
@@ -88,11 +88,11 @@
 	head = null
 	uniform = /obj/item/clothing/under/rank/security/navyblue
 	suit = null
-	belt = /obj/item/weapon/storage/belt/security/centcome
+	belt = /obj/item/storage/belt/security/centcome
 	suit_store = null
-	backpack_contents = list(/obj/item/weapon/storage/box/security/centcom=1,\
+	backpack_contents = list(/obj/item/storage/box/security/centcom=1,\
 		/obj/item/device/flashlight/seclite=1,\
-		/obj/item/weapon/gun/energy/e_gun/advtaser=1)
+		/obj/item/gun/energy/e_gun/advtaser=1)
 
 /datum/outfit/security_private/biohazard
 	name = "Centcom Security Private - Biohazard"
@@ -101,7 +101,7 @@
 	suit = /obj/item/clothing/suit/bio_suit/security
 	head = /obj/item/clothing/head/bio_hood/security
 	mask = /obj/item/clothing/mask/gas
-	suit_store = /obj/item/weapon/gun/ballistic/automatic/wt550/mindshield
+	suit_store = /obj/item/gun/ballistic/automatic/wt550/mindshield
 
 
 /////////////////////////////////
@@ -119,23 +119,23 @@
 	suit = /obj/item/clothing/suit/armor/vest
 	head = /obj/item/clothing/head/warden/corporate
 	glasses = /obj/item/clothing/glasses/hud/security/sunglasses
-	belt = /obj/item/weapon/storage/belt/security/centcome_alert
-	suit_store = /obj/item/weapon/gun/ballistic/automatic/wt550/mindshield
-	back = /obj/item/weapon/storage/backpack/security
-	backpack_contents = list(/obj/item/weapon/storage/box/security/centcom=1,\
-		/obj/item/weapon/shield/riot/tele=1,\
-		/obj/item/weapon/grenade/barrier=2,\
+	belt = /obj/item/storage/belt/security/centcome_alert
+	suit_store = /obj/item/gun/ballistic/automatic/wt550/mindshield
+	back = /obj/item/storage/backpack/security
+	backpack_contents = list(/obj/item/storage/box/security/centcom=1,\
+		/obj/item/shield/riot/tele=1,\
+		/obj/item/grenade/barrier=2,\
 		/obj/item/device/flashlight/seclite=1)
-	id = /obj/item/weapon/card/id
+	id = /obj/item/card/id
 
 /datum/outfit/security_sergeant/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	if(visualsOnly)
 		return
 
-	var/obj/item/weapon/implant/mindshield/L = new/obj/item/weapon/implant/mindshield(H)
+	var/obj/item/implant/mindshield/L = new/obj/item/implant/mindshield(H)
 	L.implant(H, null, 1)
 
-	var/obj/item/weapon/card/id/W = H.wear_id
+	var/obj/item/card/id/W = H.wear_id
 	W.icon_state = "centcom"
 	W.access = get_centcom_access("Centcom Security Sergeant")
 	W.access += ACCESS_WEAPONS
@@ -151,12 +151,12 @@
 	ears = /obj/item/device/radio/headset/headset_cent/alt
 	mask = /obj/item/clothing/mask/gas
 	glasses = /obj/item/clothing/glasses/thermal
-	suit_store = /obj/item/weapon/tank/internals/oxygen
-	backpack_contents = list(/obj/item/weapon/storage/box/security/centcom=1,\
-		/obj/item/weapon/shield/riot/tele=1,\
-		/obj/item/weapon/grenade/barrier=2,\
+	suit_store = /obj/item/tank/internals/oxygen
+	backpack_contents = list(/obj/item/storage/box/security/centcom=1,\
+		/obj/item/shield/riot/tele=1,\
+		/obj/item/grenade/barrier=2,\
 		/obj/item/device/flashlight/seclite=1,\
-		/obj/item/weapon/gun/ballistic/automatic/wt550/mindshield=1)
+		/obj/item/gun/ballistic/automatic/wt550/mindshield=1)
 
 /datum/outfit/security_sergeant/green
 	name = "Centcom Security Sergeant - Green Alert"
@@ -165,12 +165,12 @@
 	suit = null
 	head = /obj/item/clothing/head/beret/sec/navywarden
 	suit_store = null
-	belt = /obj/item/weapon/storage/belt/security/centcome
-	backpack_contents = list(/obj/item/weapon/storage/box/security/centcom=1,\
-		/obj/item/weapon/shield/riot/tele=1,\
-		/obj/item/weapon/grenade/barrier=2,\
+	belt = /obj/item/storage/belt/security/centcome
+	backpack_contents = list(/obj/item/storage/box/security/centcom=1,\
+		/obj/item/shield/riot/tele=1,\
+		/obj/item/grenade/barrier=2,\
 		/obj/item/device/flashlight/seclite=1,\
-		/obj/item/weapon/gun/energy/e_gun/advtaser=1)
+		/obj/item/gun/energy/e_gun/advtaser=1)
 
 /datum/outfit/security_sergeant/biohazard
 	name = "Centcom Security Sergeant - Biohazard"
@@ -191,29 +191,29 @@
 	uniform = /obj/item/clothing/under/syndicate/camo/urban
 	shoes = /obj/item/clothing/shoes/combat
 	suit = /obj/item/clothing/suit/armor/combat_heavy
-	suit_store = /obj/item/weapon/gun/ballistic/automatic/ar
+	suit_store = /obj/item/gun/ballistic/automatic/ar
 	mask = /obj/item/clothing/mask/gas/mercenaries
 	head = /obj/item/clothing/head/helmet/combat_heavy
-	belt = /obj/item/weapon/storage/belt/military/assault/special_force
+	belt = /obj/item/storage/belt/military/assault/special_force
 	glasses = /obj/item/clothing/glasses/hud/security/sunglasses
 	ears = /obj/item/device/radio/headset/headset_cent/alt
 	gloves = /obj/item/clothing/gloves/combat
 	l_pocket = /obj/item/device/flashlight/seclite
 	r_pocket = /obj/item/ammo_box/magazine/m556
-	id = /obj/item/weapon/card/id
-	back = /obj/item/weapon/storage/backpack/security
-	backpack_contents = list(/obj/item/weapon/storage/box/security/centcom=1,\
-		/obj/item/weapon/grenade/plastic/c4=3,\
-		/obj/item/weapon/kitchen/knife/combat=1)
+	id = /obj/item/card/id
+	back = /obj/item/storage/backpack/security
+	backpack_contents = list(/obj/item/storage/box/security/centcom=1,\
+		/obj/item/grenade/plastic/c4=3,\
+		/obj/item/kitchen/knife/combat=1)
 
 /datum/outfit/combat/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	if(visualsOnly)
 		return
 
-	var/obj/item/weapon/implant/mindshield/L = new/obj/item/weapon/implant/mindshield(H)
+	var/obj/item/implant/mindshield/L = new/obj/item/implant/mindshield(H)
 	L.implant(H, null, 1)
 
-	var/obj/item/weapon/card/id/W = H.wear_id
+	var/obj/item/card/id/W = H.wear_id
 	W.icon_state = "centcom"
 	W.access = get_all_accesses()
 	W.access += get_centcom_access("Admiral")

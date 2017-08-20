@@ -111,7 +111,7 @@
 			return list(ACCESS_CENT_GENERAL, ACCESS_CENT_LIVING, ACCESS_CENT_STORAGE)
 		if("Thunderdome Overseer")
 			return list(ACCESS_CENT_GENERAL, ACCESS_CENT_THUNDER)
-		if("Centcom Official")
+		if("CentCom Official")
 			return list(ACCESS_CENT_GENERAL, ACCESS_CENT_LIVING)
 		if("Medical Officer")
 			return list(ACCESS_CENT_GENERAL, ACCESS_CENT_LIVING, ACCESS_CENT_MEDICAL)
@@ -123,7 +123,7 @@
 			return list(ACCESS_CENT_GENERAL, ACCESS_CENT_THUNDER, ACCESS_CENT_SPECOPS, ACCESS_CENT_LIVING, ACCESS_CENT_STORAGE)
 		if("Admiral")
 			return get_all_centcom_access()
-		if("Centcom Commander")
+		if("CentCom Commander")
 			return get_all_centcom_access()
 		if("Emergency Response Team Commander")
 			return get_ert_access("commander")
@@ -133,7 +133,7 @@
 			return get_ert_access("eng")
 		if("Medical Response Officer")
 			return get_ert_access("med")
-		if("Centcom Bartender")
+		if("CentCom Bartender")
 			return list(ACCESS_CENT_GENERAL, ACCESS_CENT_LIVING, ACCESS_CENT_BAR)
 
 /proc/get_all_accesses()
@@ -385,7 +385,7 @@
 
 
 /obj/item/proc/GetJobName() //Used in secHUD icon generation
-	var/obj/item/weapon/card/id/I = GetID()
+	var/obj/item/card/id/I = GetID()
 	if(!I)
 		return
 	var/jobName = I.assignment

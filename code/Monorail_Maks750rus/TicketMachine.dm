@@ -5,7 +5,7 @@
 	icon_state = "pdapainter"
 	density = 1
 	anchored = 1
-	var/obj/item/weapon/card/id/storedpda = null
+	var/obj/item/card/id/storedpda = null
 	var/list/colorlist = list()
 
 
@@ -25,8 +25,8 @@
 /obj/machinery/ticketmachine/New()
 	..()
 
-	for(var/P in typesof(/obj/item/weapon/card/id/monorail))
-		var/obj/item/weapon/card/id/monorail/D = new P
+	for(var/P in typesof(/obj/item/card/id/monorail))
+		var/obj/item/card/id/monorail/D = new P
 
 
 		D.name = D.icon_state
@@ -35,12 +35,12 @@
 
 
 /obj/machinery/ticketmachine/attackby(obj/item/O, mob/user, params)
-	if(istype(O, /obj/item/weapon/card/id))
+	if(istype(O, /obj/item/card/id))
 		if(storedpda)
 			user << "<span class='warning'>There is already a Card inside!</span>"
 			return
 		else
-			var/obj/item/weapon/card/id/P = user.get_active_held_item()
+			var/obj/item/card/id/P = user.get_active_held_item()
 			if(istype(P))
 				if(!user.drop_item())
 					return
@@ -56,7 +56,7 @@
 	src.add_fingerprint(user)
 
 	if(storedpda)
-		var/obj/item/weapon/card/id/P
+		var/obj/item/card/id/P
 		P = input(user, "Select your color!", "Ticket Machine") as null|anything in colorlist
 		if(!P)
 			return

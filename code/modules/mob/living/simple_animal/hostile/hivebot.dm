@@ -31,7 +31,7 @@
 	loot = list(/obj/effect/decal/cleanable/robot_debris)
 
 /mob/living/simple_animal/hostile/hivebot/Initialize()
-	..()
+	. = ..()
 	deathmessage = "[src] blows apart!"
 
 /mob/living/simple_animal/hostile/hivebot/range

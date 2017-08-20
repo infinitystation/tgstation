@@ -43,7 +43,7 @@
 	icon = 'icons/obj/clothing/infinity_work.dmi'
 	worn_icon = 'icons/mob/infinity_work.dmi'
 	icon_state = "gas_alt"
-	flags = BLOCK_GAS_SMOKE_EFFECT | MASKINTERNALS
+	flags_1 = BLOCK_GAS_SMOKE_EFFECT_1 | MASKINTERNALS_1
 	flags_inv = HIDEEARS|HIDEFACIALHAIR
 	armor = list(melee = 15, bullet = 10, laser = 0, energy = 0, bomb = 20, bio = 100, rad = 0, fire = 40, acid = 60)
 	item_state = "gas_alt"
@@ -70,8 +70,8 @@
 	else
 		return
 
-/obj/item/clothing/mask/gas/sechailer/swat/syndicate/attackby(obj/item/weapon/W, mob/user, params)
-	if(istype(W, /obj/item/weapon/screwdriver))
+/obj/item/clothing/mask/gas/sechailer/swat/syndicate/attackby(obj/item/W, mob/user, params)
+	if(istype(W, /obj/item/screwdriver))
 		switch(aggressiveness)
 			if(1)
 				user << "<span class='notice'>Вы выбрали режим насмешек.</span>"

@@ -828,7 +828,7 @@ GLOBAL_LIST_EMPTY(custom_outfits) //Admin created outfits
 	var/list/headwear = typesof(/obj/item/clothing/head)
 	var/list/glasses = typesof(/obj/item/clothing/glasses)
 	var/list/masks = typesof(/obj/item/clothing/mask)
-	var/list/ids = typesof(/obj/item/weapon/card/id)
+	var/list/ids = typesof(/obj/item/card/id)
 
 	var/uniform_select = "<select name=\"outfit_uniform\"><option value=\"\">None</option>"
 	for(var/path in uniforms)
@@ -1236,6 +1236,6 @@ GLOBAL_LIST_EMPTY(custom_outfits) //Admin created outfits
 	if(!message)
 		return
 
-	message_admins("[key_name_admin(usr)] triggered a Centcom recall, with the admiral message of: [message]")
-	log_game("[key_name(usr)] triggered a Centcom recall, with the message of: [message]")
+	message_admins("[key_name_admin(usr)] triggered a CentCom recall, with the admiral message of: [message]")
+	log_game("[key_name(usr)] triggered a CentCom recall, with the message of: [message]")
 	SSshuttle.centcom_recall(SSshuttle.emergency.timer, message)

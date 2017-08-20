@@ -27,11 +27,12 @@
 	announcement += "<br><span class='alert'>[text]</span><br>"
 	announcement += "<br>"
 
+	var/s = sound(sound)
 	for(var/mob/M in GLOB.player_list)
 		if(!isnewplayer(M) && M.can_hear())
 			to_chat(M, announcement)
 			if(M.client.prefs.toggles & SOUND_ANNOUNCEMENTS)
-				M << sound(sound)
+				SEND_SOUND(M, s)
 
 /proc/print_command_report(text = "", title = null, announce=TRUE)
 	if(!title)
@@ -42,7 +43,7 @@
 
 	for(var/obj/machinery/computer/communications/C in GLOB.machines)
 		if(!(C.stat & (BROKEN|NOPOWER)) && C.z == ZLEVEL_STATION)
-			var/obj/item/weapon/paper/P = new /obj/item/weapon/paper(C.loc)
+			var/obj/item/paper/P = new /obj/item/paper(C.loc)
 			C.messagetitle.Add("[title]")
 			C.messagetext.Add(text)
 			P.name = "paper- '[title]'"
@@ -59,6 +60,6 @@
 			to_chat(M, "<b><font size = 3><font color = red>[title]</font color><BR>[message]</font size></b><BR>")
 			if(M.client.prefs.toggles & SOUND_ANNOUNCEMENTS)
 				if(alert)
-					M << sound('sound/misc/notice1.ogg')
+					SEND_SOUND(M, sound('sound/misc/notice1.ogg'))
 				else
-					M << sound('sound/misc/notice2.ogg')
+					SEND_SOUND(M, sound('sound/misc/notice2.ogg'))

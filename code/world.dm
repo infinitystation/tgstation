@@ -1,3 +1,6 @@
+//This file is just for the necessary /world definition
+//Try looking in game/world.dm
+
 /world
 	mob = /mob/dead/new_player
 	turf = /turf/open/space/basic
@@ -11,13 +14,7 @@
 #ifdef GC_FAILURE_HARD_LOOKUP
 	loop_checks = FALSE
 #endif
-
-/world/New()
-	log_world("World loaded at [time_stamp()]")
-
-	SetupExternalRSC()
-
-	GLOB.config_error_log = GLOB.world_href_log = GLOB.world_runtime_log = GLOB.reports_log = GLOB.job_subsystem_debug = GLOB.world_attack_log = GLOB.world_game_log = file("data/logs/config_error.log") //temporary file used to record errors with loading config, moved to log directory once logging is set bl
+/*	GLOB.config_error_log = GLOB.world_href_log = GLOB.world_runtime_log = GLOB.reports_log = GLOB.job_subsystem_debug = GLOB.world_attack_log = GLOB.world_game_log = file("data/logs/config_error.log") //temporary file used to record errors with loading config, moved to log directory once logging is set bl
 
 	make_datum_references_lists()	//initialises global lists for referencing frequently used datums (so that we only ever do it once)
 
@@ -334,4 +331,4 @@
 	if(GLOB.hub_visibility)
 		hub_password = "kMZy3U5jJHSiBQjr"
 	else
-		hub_password = "SORRYNOPASSWORD"
+		hub_password = "SORRYNOPASSWORD"*/

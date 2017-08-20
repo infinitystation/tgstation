@@ -163,7 +163,7 @@
 
 	mob.equip_in_one_of_slots(R,slots)
 	//THEY ARE ANTYLOYAL
-	var/obj/item/weapon/implant/antiloyalty/AL = new/obj/item/weapon/implant/antiloyalty(mob)
+	var/obj/item/implant/antiloyalty/AL = new/obj/item/implant/antiloyalty(mob)
 	AL.implant(mob)
 	mob.verbs += /mob/living/carbon/human/proc/RevConvert
 

@@ -48,7 +48,7 @@ other types of metals and chemistry for reagents).
 //Disks for transporting design datums//
 ////////////////////////////////////////
 
-/obj/item/weapon/disk/design_disk
+/obj/item/disk/design_disk
 	name = "Component Design Disk"
 	desc = "A disk for storing device design data for construction in lathes."
 	icon_state = "datadisk1"
@@ -56,14 +56,14 @@ other types of metals and chemistry for reagents).
 	var/list/blueprints = list()
 	var/max_blueprints = 1
 
-/obj/item/weapon/disk/design_disk/Initialize()
+/obj/item/disk/design_disk/Initialize()
 	. = ..()
 	pixel_x = rand(-5, 5)
 	pixel_y = rand(-5, 5)
 	for(var/i in 1 to max_blueprints)
 		blueprints += null
 
-/obj/item/weapon/disk/design_disk/adv
+/obj/item/disk/design_disk/adv
 	name = "Advanced Component Design Disk"
 	desc = "A disk for storing device design data for construction in lathes. This one has extra storage space."
 	materials = list(MAT_METAL=300, MAT_GLASS=100, MAT_SILVER = 50)
@@ -104,7 +104,7 @@ other types of metals and chemistry for reagents).
 	req_tech = list("programming" = 1)
 	build_type = PROTOLATHE | AUTOLATHE
 	materials = list(MAT_METAL = 300, MAT_GLASS = 100)
-	build_path = /obj/item/weapon/disk/design_disk
+	build_path = /obj/item/disk/design_disk
 	category = list("Electronics")
 
 /datum/design/design_disk_adv
@@ -114,7 +114,7 @@ other types of metals and chemistry for reagents).
 	req_tech = list("programming" = 3)
 	build_type = PROTOLATHE
 	materials = list(MAT_METAL = 300, MAT_GLASS = 100, MAT_SILVER=50)
-	build_path = /obj/item/weapon/disk/design_disk/adv
+	build_path = /obj/item/disk/design_disk/adv
 	category = list("Electronics")
 
 /datum/design/tech_disk
@@ -124,7 +124,7 @@ other types of metals and chemistry for reagents).
 	req_tech = list("programming" = 1)
 	build_type = PROTOLATHE | AUTOLATHE
 	materials = list(MAT_METAL = 300, MAT_GLASS = 100)
-	build_path = /obj/item/weapon/disk/tech_disk
+	build_path = /obj/item/disk/tech_disk
 	category = list("Electronics")
 
 /datum/design/tech_disk_adv
@@ -134,7 +134,7 @@ other types of metals and chemistry for reagents).
 	req_tech = list("programming" = 3)
 	build_type = PROTOLATHE
 	materials = list(MAT_METAL = 300, MAT_GLASS = 100, MAT_SILVER=50)
-	build_path = /obj/item/weapon/disk/tech_disk/adv
+	build_path = /obj/item/disk/tech_disk/adv
 	category = list("Electronics")
 
 /datum/design/tech_disk_super_adv
@@ -144,7 +144,7 @@ other types of metals and chemistry for reagents).
 	req_tech = list("programming" = 6)
 	build_type = PROTOLATHE
 	materials = list(MAT_METAL = 300, MAT_GLASS = 100, MAT_SILVER=100, MAT_GOLD=100, MAT_BLUESPACE = 100)
-	build_path = /obj/item/weapon/disk/tech_disk/super_adv
+	build_path = /obj/item/disk/tech_disk/super_adv
 	category = list("Electronics")
 
 /////////////////////////////////////////
@@ -158,7 +158,7 @@ other types of metals and chemistry for reagents).
 	req_tech = list("materials" = 2, "powerstorage" = 2, "engineering" = 3)
 	build_type = PROTOLATHE
 	materials = list(MAT_METAL = 6000, MAT_GLASS = 1000) //expensive, but no need for miners.
-	build_path = /obj/item/weapon/pickaxe/drill
+	build_path = /obj/item/pickaxe/drill
 	category = list("Mining Designs")
 
 /datum/design/drill_diamond
@@ -168,7 +168,7 @@ other types of metals and chemistry for reagents).
 	req_tech = list("materials" = 6, "powerstorage" = 5, "engineering" = 5)
 	build_type = PROTOLATHE
 	materials = list(MAT_METAL = 6000, MAT_GLASS = 1000, MAT_DIAMOND = 2000) //Yes, a whole diamond is needed.
-	build_path = /obj/item/weapon/pickaxe/drill/diamonddrill
+	build_path = /obj/item/pickaxe/drill/diamonddrill
 	category = list("Mining Designs")
 
 /datum/design/plasmacutter
@@ -178,7 +178,7 @@ other types of metals and chemistry for reagents).
 	req_tech = list("materials" = 3, "plasmatech" = 3, "magnets" = 2)
 	build_type = PROTOLATHE
 	materials = list(MAT_METAL = 1500, MAT_GLASS = 500, MAT_PLASMA = 400)
-	build_path = /obj/item/weapon/gun/energy/plasmacutter
+	build_path = /obj/item/gun/energy/plasmacutter
 	category = list("Mining Designs")
 
 /datum/design/plasmacutter_adv
@@ -188,7 +188,7 @@ other types of metals and chemistry for reagents).
 	req_tech = list("materials" = 4, "plasmatech" = 4, "engineering" = 2, "combat" = 3, "magnets" = 3)
 	build_type = PROTOLATHE
 	materials = list(MAT_METAL = 3000, MAT_GLASS = 1000, MAT_PLASMA = 2000, MAT_GOLD = 500)
-	build_path = /obj/item/weapon/gun/energy/plasmacutter/adv
+	build_path = /obj/item/gun/energy/plasmacutter/adv
 	category = list("Mining Designs")
 
 /datum/design/jackhammer
@@ -198,7 +198,7 @@ other types of metals and chemistry for reagents).
 	req_tech = list("materials" = 7, "powerstorage" = 5, "engineering" = 6, "magnets" = 5)
 	build_type = PROTOLATHE
 	materials = list(MAT_METAL = 6000, MAT_GLASS = 2000, MAT_SILVER = 2000, MAT_DIAMOND = 6000)
-	build_path = /obj/item/weapon/pickaxe/drill/jackhammer
+	build_path = /obj/item/pickaxe/drill/jackhammer
 	category = list("Mining Designs")
 
 /datum/design/superresonator
@@ -208,7 +208,7 @@ other types of metals and chemistry for reagents).
 	req_tech = list("materials" = 4, "powerstorage" = 3, "engineering" = 3, "magnets" = 3)
 	build_type = PROTOLATHE
 	materials = list(MAT_METAL = 4000, MAT_GLASS = 1500, MAT_SILVER = 1000, MAT_URANIUM = 1000)
-	build_path = /obj/item/weapon/resonator/upgraded
+	build_path = /obj/item/resonator/upgraded
 	category = list("Mining Designs")
 
 /datum/design/trigger_guard_mod
@@ -283,7 +283,7 @@ other types of metals and chemistry for reagents).
 	req_tech = list("bluespace" = 7, "materials" = 5, "engineering" = 5, "plasmatech" = 6)
 	build_type = PROTOLATHE
 	materials = list(MAT_GOLD = 3000, MAT_DIAMOND = 1500, MAT_URANIUM = 250, MAT_BLUESPACE = 2000)
-	build_path = /obj/item/weapon/storage/backpack/holding
+	build_path = /obj/item/storage/backpack/holding
 	category = list("Bluespace Designs")
 
 /datum/design/bluespace_crystal
@@ -293,7 +293,7 @@ other types of metals and chemistry for reagents).
 	req_tech = list("bluespace" = 3, "materials" = 6, "plasmatech" = 4)
 	build_type = PROTOLATHE
 	materials = list(MAT_DIAMOND = 1500, MAT_PLASMA = 1500)
-	build_path = /obj/item/weapon/ore/bluespace_crystal/artificial
+	build_path = /obj/item/ore/bluespace_crystal/artificial
 	category = list("Bluespace Designs")
 
 /datum/design/telesci_gps
@@ -313,7 +313,7 @@ other types of metals and chemistry for reagents).
 	req_tech = list("bluespace" = 4, "materials" = 3, "engineering" = 4)
 	build_type = PROTOLATHE
 	materials = list(MAT_GOLD = 250, MAT_URANIUM = 500) //quite cheap, for more convenience
-	build_path = /obj/item/weapon/storage/bag/ore/holding
+	build_path = /obj/item/storage/bag/ore/holding
 	category = list("Bluespace Designs")
 
 /////////////////////////////////////////
@@ -391,7 +391,7 @@ other types of metals and chemistry for reagents).
 			build_type = PROTOLATHE
 			req_tech = list("materials" = 1)
 			materials = list(MAT_GOLD = 3000, "iron" = 15, "copper" = 10, MAT_SILVER = 2500)
-			build_path = /obj/item/weapon/banhammer"
+			build_path = /obj/item/banhammer"
 			category = list("Weapons") */
 
 /////////////////////////////////////////
@@ -414,7 +414,7 @@ other types of metals and chemistry for reagents).
 	build_type = PROTOLATHE
 	req_tech = list("biotech" = 3, "engineering" = 2)
 	materials = list(MAT_METAL = 1000, MAT_GLASS = 400)
-	build_path = /obj/item/weapon/storage/bag/plants/portaseeder
+	build_path = /obj/item/storage/bag/plants/portaseeder
 	category = list("Equipment")
 
 /datum/design/air_horn
@@ -424,7 +424,7 @@ other types of metals and chemistry for reagents).
 	req_tech = list("materials" = 4, "engineering" = 4)
 	build_type = PROTOLATHE
 	materials = list(MAT_METAL = 4000, MAT_BANANIUM = 1000)
-	build_path = /obj/item/weapon/bikehorn/airhorn
+	build_path = /obj/item/bikehorn/airhorn
 	category = list("Equipment")
 
 /datum/design/mesons
@@ -499,20 +499,20 @@ other types of metals and chemistry for reagents).
 
 /datum/design/handdrill
 	name = "Hand Drill"
-	desc = "A small electric hand drill with an interchangable screwdriver and bolt bit"
+	desc = "A small electric hand drill with an interchangeable screwdriver and bolt bit"
 	id = "handdrill"
 	req_tech = list("materials" = 4, "engineering" = 6)
 	build_type = PROTOLATHE
 	materials = list(MAT_METAL = 3500, MAT_SILVER = 1500, MAT_TITANIUM = 2500)
-	build_path = /obj/item/weapon/screwdriver/power
+	build_path = /obj/item/screwdriver/power
 	category = list("Equipment")
 
 /datum/design/jawsoflife
 	name = "Jaws of Life"
-	desc = "A small, compact Jaws of Life with an interchangable pry jaws and cutting jaws"
+	desc = "A small, compact Jaws of Life with an interchangeable pry jaws and cutting jaws"
 	id = "jawsoflife"
 	req_tech = list("materials" = 4, "engineering" = 6, "magnets" = 6) // added one more requirment since the Jaws of Life are a bit OP
-	build_path = /obj/item/weapon/crowbar/power
+	build_path = /obj/item/crowbar/power
 	build_type = PROTOLATHE
 	materials = list(MAT_METAL = 4500, MAT_SILVER = 2500, MAT_TITANIUM = 3500)
 	category = list("Equipment")
@@ -522,7 +522,7 @@ other types of metals and chemistry for reagents).
 	desc = "An advanced wrench obtained through Abductor technology."
 	id = "alien_wrench"
 	req_tech = list("engineering" = 5, "materials" = 5, "abductor" = 4)
-	build_path = /obj/item/weapon/wrench/abductor
+	build_path = /obj/item/wrench/abductor
 	build_type = PROTOLATHE
 	materials = list(MAT_METAL = 5000, MAT_SILVER = 2500, MAT_PLASMA = 1000, MAT_TITANIUM = 2000, MAT_DIAMOND = 2000)
 	category = list("Equipment")
@@ -532,7 +532,7 @@ other types of metals and chemistry for reagents).
 	desc = "Advanced wirecutters obtained through Abductor technology."
 	id = "alien_wirecutters"
 	req_tech = list("engineering" = 5, "materials" = 5, "abductor" = 4)
-	build_path = /obj/item/weapon/wirecutters/abductor
+	build_path = /obj/item/wirecutters/abductor
 	build_type = PROTOLATHE
 	materials = list(MAT_METAL = 5000, MAT_SILVER = 2500, MAT_PLASMA = 1000, MAT_TITANIUM = 2000, MAT_DIAMOND = 2000)
 	category = list("Equipment")
@@ -542,7 +542,7 @@ other types of metals and chemistry for reagents).
 	desc = "An advanced screwdriver obtained through Abductor technology."
 	id = "alien_screwdriver"
 	req_tech = list("engineering" = 5, "materials" = 5, "abductor" = 4)
-	build_path = /obj/item/weapon/screwdriver/abductor
+	build_path = /obj/item/screwdriver/abductor
 	build_type = PROTOLATHE
 	materials = list(MAT_METAL = 5000, MAT_SILVER = 2500, MAT_PLASMA = 1000, MAT_TITANIUM = 2000, MAT_DIAMOND = 2000)
 	category = list("Equipment")
@@ -552,7 +552,7 @@ other types of metals and chemistry for reagents).
 	desc = "An advanced crowbar obtained through Abductor technology."
 	id = "alien_crowbar"
 	req_tech = list("engineering" = 5, "materials" = 5, "abductor" = 4)
-	build_path = /obj/item/weapon/crowbar/abductor
+	build_path = /obj/item/crowbar/abductor
 	build_type = PROTOLATHE
 	materials = list(MAT_METAL = 5000, MAT_SILVER = 2500, MAT_PLASMA = 1000, MAT_TITANIUM = 2000, MAT_DIAMOND = 2000)
 	category = list("Equipment")
@@ -562,7 +562,7 @@ other types of metals and chemistry for reagents).
 	desc = "An advanced welding tool obtained through Abductor technology."
 	id = "alien_welder"
 	req_tech = list("engineering" = 5, "plasmatech" = 5, "abductor" = 4)
-	build_path = /obj/item/weapon/weldingtool/abductor
+	build_path = /obj/item/weldingtool/abductor
 	build_type = PROTOLATHE
 	materials = list(MAT_METAL = 5000, MAT_SILVER = 2500, MAT_PLASMA = 5000, MAT_TITANIUM = 2000, MAT_DIAMOND = 2000)
 	category = list("Equipment")
@@ -584,7 +584,7 @@ other types of metals and chemistry for reagents).
 	req_tech = list("programming" = 4, "biotech" = 3)
 	build_type = PROTOLATHE
 	materials = list(MAT_METAL=200, MAT_GLASS=100)
-	build_path = /obj/item/weapon/disk/plantgene
+	build_path = /obj/item/disk/plantgene
 	category = list("Electronics")
 
 /////////////////////////////////////////
@@ -598,7 +598,7 @@ other types of metals and chemistry for reagents).
 	req_tech = list("materials" = 4, "engineering" = 3)
 	build_type = PROTOLATHE
 	materials = list(MAT_METAL = 2500, MAT_GLASS = 200)
-	build_path = /obj/item/weapon/mop/advanced
+	build_path = /obj/item/mop/advanced
 	category = list("Equipment")
 
 /datum/design/blutrash
@@ -608,7 +608,7 @@ other types of metals and chemistry for reagents).
 	req_tech = list("materials" = 5, "bluespace" = 4, "engineering" = 4, "plasmatech" = 3)
 	build_type = PROTOLATHE
 	materials = list(MAT_GOLD = 1500, MAT_URANIUM = 250, MAT_PLASMA = 1500)
-	build_path = /obj/item/weapon/storage/bag/trash/bluespace
+	build_path = /obj/item/storage/bag/trash/bluespace
 	category = list("Equipment")
 
 /datum/design/buffer
@@ -628,7 +628,7 @@ other types of metals and chemistry for reagents).
 	req_tech = list("programming" = 3)
 	build_type = PROTOLATHE
 	materials = list(MAT_METAL = 2000, MAT_GLASS = 1000)
-	build_path = /obj/item/weapon/holosign_creator
+	build_path = /obj/item/holosign_creator
 	category = list("Equipment")
 
 /////////////////////////////////////////
@@ -667,7 +667,7 @@ other types of metals and chemistry for reagents).
 	req_tech = list("materials" = 7, "engineering" = 6, "bluespace" = 4, "plasmatech" = 4)
 	build_type = PROTOLATHE
 	materials = list("$metal" = 20000, "$silver" = 2500, "$gold" = 2500, "$plasma" = 2500, "$glass" = 2500)
-	build_path = /obj/item/weapon/construction/rcd/advanced
+	build_path = /obj/item/construction/rcd/advanced
 	category = list("Equipment")
 	locked = 1
 	access = list(ACCESS_CE)
@@ -708,5 +708,5 @@ other types of metals and chemistry for reagents).
 	req_tech = list("materials" = 4, "engineering" = 5, "bluespace" = 3, "plasmatech" = 4)
 	build_type = PROTOLATHE
 	materials = list(MAT_METAL = 1000, MAT_GLASS = 500, MAT_PLASMA = 1500, MAT_URANIUM = 200)
-	build_path = /obj/item/weapon/weldingtool/experimental
+	build_path = /obj/item/weldingtool/experimental
 	category = list("Equipment")

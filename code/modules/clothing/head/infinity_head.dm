@@ -19,7 +19,7 @@
 	min_cold_protection_temperature = SPACE_HELM_MIN_TEMP_PROTECT
 	heat_protection = HEAD
 	max_heat_protection_temperature = SPACE_HELM_MAX_TEMP_PROTECT
-	flags = STOPSPRESSUREDMAGE
+	flags_1 = STOPSPRESSUREDMAGE_1
 	strip_delay = 80
 	flags_inv = HIDEEARS|HIDEEYES|HEADCOVERSMOUTH|HIDEHAIR
 	flags_cover = HEADCOVERSEYES
@@ -42,7 +42,7 @@
 	worn_icon = 'icons/mob/infinity_work.dmi'
 	icon = 'icons/obj/clothing/infinity_work.dmi'
 	flags_inv = HIDEHAIR
-	flags = STOPSPRESSUREDMAGE|THICKMATERIAL
+	flags_1 = STOPSPRESSUREDMAGE_1|THICKMATERIAL_1
 	max_heat_protection_temperature = SPACE_HELM_MAX_TEMP_PROTECT
 	cold_protection = HEAD
 	min_cold_protection_temperature = SPACE_HELM_MIN_TEMP_PROTECT
@@ -181,7 +181,7 @@
 
 /obj/item/clothing/head/helmet/doomguy/Initialize(mapload)
 	..()
-	SET_SECONDARY_FLAG(src, BANG_PROTECT)
+	flags_2 = BANG_PROTECT_2
 
 /obj/item/clothing/head/dad
 	name = "mask of the Father"
@@ -192,7 +192,7 @@
 	item_state = "dads_mask"
 	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0)
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR
-	flags = NODROP
+	flags_1 = NODROP_1
 	dog_fashion = null
 
 /obj/item/clothing/head/skulltop //but they only for drone >:D
@@ -216,13 +216,13 @@
 	min_cold_protection_temperature = HELMET_MIN_TEMP_PROTECT
 	heat_protection = HEAD
 	max_heat_protection_temperature = HELMET_MAX_TEMP_PROTECT
-	flags = HEADCOVERSEYES
+	flags_cover = HEADCOVERSEYES
 	flags_inv = HIDEHAIR
 	strip_delay = 60
 
 /obj/item/clothing/head/helmet/combat_heavy/Initialize(mapload)
 	..()
-	SET_SECONDARY_FLAG(src, BANG_PROTECT)
+	flags_2 = BANG_PROTECT_2
 
 /obj/item/clothing/head/janitor_cap
 	name = "exclusive janitor red cap"
@@ -246,7 +246,7 @@
 
 /obj/item/clothing/head/helmet/uac/Initialize(mapload)
 	..()
-	SET_SECONDARY_FLAG(src, BANG_PROTECT)
+	flags_2 = BANG_PROTECT_2
 
 /obj/item/clothing/head/cargoberet
 	name = "cargoberet"

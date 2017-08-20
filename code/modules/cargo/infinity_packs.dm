@@ -22,6 +22,6 @@
 	name = "Syndicate ID Card"
 	hidden = TRUE
 	cost = 20000
-	contains = list(/obj/item/weapon/card/id/syndicate)
+	contains = list(/obj/item/card/id/syndicate)
 	crate_name = "syndicate id card"
 */

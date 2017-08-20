@@ -41,7 +41,7 @@
 /turf/open/indestructible/necropolis,
 /area/lavaland/surface/no_spawn)
 "ah" = (
-/obj/item/weapon/cigbutt,
+/obj/item/cigbutt,
 /turf/open/indestructible/necropolis,
 /area/lavaland/surface/no_spawn)
 "ai" = (
@@ -57,7 +57,7 @@
 	dir = 1;
 	icon_state = "blood2"
 	},
-/obj/item/weapon/cigbutt,
+/obj/item/cigbutt,
 /turf/open/indestructible/necropolis,
 /area/lavaland/surface/no_spawn)
 "al" = (
@@ -79,7 +79,7 @@
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/lavaland/surface/no_spawn)
 "aq" = (
-/obj/item/weapon/cigbutt,
+/obj/item/cigbutt,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/lavaland/surface/no_spawn)
 "ar" = (
@@ -162,11 +162,11 @@
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/mine/shelter)
 "aJ" = (
-/obj/item/weapon/storage/box/matches,
+/obj/item/storage/box/matches,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/mine/shelter)
 "aK" = (
-/obj/item/weapon/paper/crumpled{
+/obj/item/paper/crumpled{
 	icon_state = "scrap";
 	info = "shelter..."
 	},
@@ -455,9 +455,9 @@
 /area/mine/shelter/ash)
 "bF" = (
 /obj/structure/table/wood,
-/obj/item/weapon/pickaxe/bone,
-/obj/item/weapon/pickaxe/bone,
-/obj/item/weapon/pickaxe/bone,
+/obj/item/pickaxe/bone,
+/obj/item/pickaxe/bone,
+/obj/item/pickaxe/bone,
 /turf/open/floor/plasteel/terror/necro/cult/outdoor,
 /area/mine/shelter/ash)
 "bG" = (
@@ -469,11 +469,11 @@
 /area/mine/shelter/ash)
 "bI" = (
 /obj/structure/table/wood,
-/obj/item/weapon/soap/syndie,
+/obj/item/soap/syndie,
 /turf/open/floor/plasteel/terror/necro/cult/outdoor,
 /area/mine/shelter/ash)
 "bJ" = (
-/obj/item/weapon/reagent_containers/glass/bucket,
+/obj/item/reagent_containers/glass/bucket,
 /turf/open/floor/plasteel/terror/necro/cult/outdoor,
 /area/mine/shelter/ash)
 "bK" = (
@@ -491,21 +491,21 @@
 /area/mine/shelter)
 "bN" = (
 /obj/structure/table/wood,
-/obj/item/weapon/restraints/legcuffs/bola,
+/obj/item/restraints/legcuffs/bola,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/mine/shelter/ash)
 "bO" = (
 /obj/structure/table/wood,
-/obj/item/weapon/twohanded/bonespear,
-/obj/item/weapon/twohanded/bonespear,
+/obj/item/twohanded/bonespear,
+/obj/item/twohanded/bonespear,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/mine/shelter/ash)
 "bP" = (
-/obj/item/weapon/hatchet,
+/obj/item/hatchet,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/mine/shelter/ash)
 "bQ" = (
-/obj/item/weapon/cultivator,
+/obj/item/cultivator,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/mine/shelter/ash)
 "bR" = (
@@ -574,7 +574,7 @@
 	},
 /area/mine/shelter)
 "cc" = (
-/obj/item/weapon/bedsheet/rd,
+/obj/item/bedsheet/rd,
 /obj/structure/bed/dogbed,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/mine/shelter/ash)
@@ -602,7 +602,7 @@
 	},
 /area/mine/shelter)
 "ch" = (
-/obj/item/weapon/twohanded/bonespear,
+/obj/item/twohanded/bonespear,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/mine/shelter)
 "ci" = (
@@ -614,15 +614,15 @@
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/mine/shelter)
 "ck" = (
-/obj/item/weapon/kitchen/knife/combat/bone,
+/obj/item/kitchen/knife/combat/bone,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/mine/shelter/ash)
 "cl" = (
-/obj/item/weapon/pickaxe/speardrill,
+/obj/item/pickaxe/speardrill,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/mine/shelter/ash)
 "cm" = (
-/obj/item/weapon/reagent_containers/food/snacks/grown/mushroom/glowshroom,
+/obj/item/reagent_containers/food/snacks/grown/mushroom/glowshroom,
 /turf/open/floor/plasteel/terror/necro/cult/outdoor,
 /area/mine/shelter/ash)
 "cn" = (
@@ -635,7 +635,7 @@
 /area/mine/shelter/ash)
 "cp" = (
 /obj/structure/table/wood,
-/obj/item/weapon/storage/bag/plants/portaseeder,
+/obj/item/storage/bag/plants/portaseeder,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/mine/shelter/ash)
 "cq" = (
@@ -643,7 +643,7 @@
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/mine/shelter/ash)
 "cr" = (
-/obj/item/weapon/hatchet,
+/obj/item/hatchet,
 /turf/open/floor/plasteel/terror/necro/cult/outdoor,
 /area/mine/shelter/ash)
 "cs" = (
@@ -685,16 +685,16 @@
 	},
 /area/mine/shelter)
 "cA" = (
-/obj/item/weapon/ore/gold,
+/obj/item/ore/gold,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/mine/shelter)
 "cB" = (
 /obj/effect/decal/remains/human,
-/obj/item/weapon/ore/gold,
+/obj/item/ore/gold,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/mine/shelter)
 "cC" = (
-/obj/item/weapon/ore/gold,
+/obj/item/ore/gold,
 /obj/effect/decal/remains/xeno/larva,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/mine/shelter)
@@ -703,21 +703,21 @@
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/mine/shelter)
 "cE" = (
-/obj/item/weapon/ore/gold,
-/obj/item/weapon/ore/gold,
+/obj/item/ore/gold,
+/obj/item/ore/gold,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/mine/shelter)
 "cF" = (
-/obj/item/weapon/ore/gold,
-/obj/item/weapon/ore/gold,
+/obj/item/ore/gold,
+/obj/item/ore/gold,
 /obj/effect/decal/remains/xeno/larva,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/mine/shelter)
 "cG" = (
 /obj/effect/decal/remains/human,
-/obj/item/weapon/ore/gold,
-/obj/item/weapon/ore/gold,
-/obj/item/weapon/ore/gold,
+/obj/item/ore/gold,
+/obj/item/ore/gold,
+/obj/item/ore/gold,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/mine/shelter)
 "cH" = (
@@ -729,32 +729,32 @@
 /area/mine/shelter)
 "cI" = (
 /obj/effect/decal/remains/human,
-/obj/item/weapon/ore/gold,
-/obj/item/weapon/ore/gold,
+/obj/item/ore/gold,
+/obj/item/ore/gold,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/mine/shelter)
 "cJ" = (
-/obj/item/weapon/ore/gold,
-/obj/item/weapon/ore/gold,
+/obj/item/ore/gold,
+/obj/item/ore/gold,
 /mob/living/simple_animal/hostile/megafauna/dragon,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/mine/shelter)
 "cK" = (
-/obj/item/weapon/ore/gold,
-/obj/item/weapon/ore/gold,
-/obj/item/weapon/ore/gold,
+/obj/item/ore/gold,
+/obj/item/ore/gold,
+/obj/item/ore/gold,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/mine/shelter)
 "cL" = (
-/obj/item/weapon/ore/gold,
+/obj/item/ore/gold,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface{
 	dug = 1;
 	icon_state = "basalt_dug"
 	},
 /area/mine/shelter)
 "cM" = (
-/obj/item/weapon/ore/gold,
-/obj/item/weapon/ore/gold,
+/obj/item/ore/gold,
+/obj/item/ore/gold,
 /obj/effect/decal/remains/xeno/larva,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface{
 	dug = 1;
@@ -763,7 +763,7 @@
 /area/mine/shelter)
 "cN" = (
 /obj/effect/decal/remains/human,
-/obj/item/weapon/ore/gold,
+/obj/item/ore/gold,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface{
 	dug = 1;
 	icon_state = "basalt_dug"
@@ -918,11 +918,11 @@
 /area/mine/cafeteria)
 "dg" = (
 /obj/structure/table,
-/obj/item/weapon/reagent_containers/food/drinks/flask{
+/obj/item/reagent_containers/food/drinks/flask{
 	desc = "A silver flask.";
 	name = "flask"
 	},
-/obj/item/weapon/reagent_containers/food/drinks/flask{
+/obj/item/reagent_containers/food/drinks/flask{
 	desc = "A silver flask.";
 	name = "flask"
 	},
@@ -976,9 +976,9 @@
 	pixel_y = 0
 	},
 /obj/structure/rack,
-/obj/item/weapon/storage/box/lights/mixed,
-/obj/item/weapon/stock_parts/cell/high,
-/obj/item/weapon/stock_parts/cell/high,
+/obj/item/storage/box/lights/mixed,
+/obj/item/stock_parts/cell/high,
+/obj/item/stock_parts/cell/high,
 /obj/machinery/camera{
 	c_tag = "Maint";
 	dir = 2;
@@ -1053,7 +1053,7 @@
 /area/mine/cafeteria)
 "du" = (
 /obj/structure/table,
-/obj/item/weapon/twohanded/required/kirbyplants{
+/obj/item/twohanded/required/kirbyplants{
 	tag = "icon-plant-02";
 	icon_state = "plant-02";
 	layer = 4.1;
@@ -1307,7 +1307,7 @@
 	},
 /area/mine/lobby)
 "dR" = (
-/obj/item/weapon/pickaxe,
+/obj/item/pickaxe,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/lavaland/surface/no_spawn)
 "dS" = (
@@ -1339,7 +1339,7 @@
 /area/mine/cafeteria)
 "dW" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/reagent_containers/glass/rag,
+/obj/item/reagent_containers/glass/rag,
 /turf/open/floor/plasteel/terror/necro/blackvault{
 	tag = "icon-vault (WEST)";
 	icon_state = "vault";
@@ -1392,7 +1392,7 @@
 "ea" = (
 /obj/machinery/light/small,
 /obj/structure/rack,
-/obj/item/weapon/storage/toolbox/mechanical{
+/obj/item/storage/toolbox/mechanical{
 	pixel_x = -2;
 	pixel_y = -1
 	},
@@ -1432,7 +1432,7 @@
 /area/mine/cafeteria)
 "eg" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/cigbutt/cigarbutt,
+/obj/item/cigbutt/cigarbutt,
 /turf/open/floor/plasteel/terror/necro/blackvault{
 	tag = "icon-vault (WEST)";
 	icon_state = "vault";
@@ -1532,7 +1532,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
-/obj/item/weapon/reagent_containers/food/snacks/hotdog,
+/obj/item/reagent_containers/food/snacks/hotdog,
 /turf/open/floor/plasteel/terror/necro/blackvault{
 	tag = "icon-vault (WEST)";
 	icon_state = "vault";
@@ -1565,8 +1565,8 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/structure/table/reinforced,
-/obj/item/weapon/paper_bin,
-/obj/item/weapon/pen,
+/obj/item/paper_bin,
+/obj/item/pen,
 /turf/open/floor/plasteel/terror/necro/brown/corner{
 	tag = "icon-browncorner (NORTH)";
 	icon_state = "browncorner";
@@ -1602,7 +1602,7 @@
 	pixel_y = 20
 	},
 /obj/structure/bed,
-/obj/item/weapon/bedsheet/medical,
+/obj/item/bedsheet/medical,
 /turf/open/floor/plasteel/terror/necro/whiteblue/side{
 	tag = "icon-whiteblue (NORTH)";
 	icon_state = "whiteblue";
@@ -1610,7 +1610,7 @@
 	},
 /area/mine/sleeper)
 "ey" = (
-/obj/item/weapon/storage/firstaid/toxin,
+/obj/item/storage/firstaid/toxin,
 /obj/structure/table/glass,
 /obj/structure/sign/nosmoking_2{
 	pixel_y = 32
@@ -1622,8 +1622,8 @@
 	},
 /area/mine/sleeper)
 "ez" = (
-/obj/item/weapon/storage/firstaid/brute,
-/obj/item/weapon/storage/firstaid/brute{
+/obj/item/storage/firstaid/brute,
+/obj/item/storage/firstaid/brute{
 	pixel_x = -3;
 	pixel_y = -3
 	},
@@ -1671,7 +1671,7 @@
 /area/mine/cafeteria)
 "eD" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/reagent_containers/food/drinks/soda_cans/cola,
+/obj/item/reagent_containers/food/drinks/soda_cans/cola,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
@@ -1691,8 +1691,8 @@
 /area/mine/cafeteria)
 "eF" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/kitchen/rollingpin,
-/obj/item/weapon/kitchen/knife{
+/obj/item/kitchen/rollingpin,
+/obj/item/kitchen/knife{
 	force = 5;
 	name = "safe knife";
 	throwforce = 2
@@ -1770,8 +1770,8 @@
 /turf/open/floor/plasteel/terror/necro/white,
 /area/mine/sleeper)
 "eM" = (
-/obj/item/weapon/storage/firstaid/fire,
-/obj/item/weapon/storage/firstaid/fire{
+/obj/item/storage/firstaid/fire,
+/obj/item/storage/firstaid/fire{
 	pixel_x = -3;
 	pixel_y = -3
 	},
@@ -1923,28 +1923,28 @@
 /area/mine/sleeper)
 "eY" = (
 /obj/structure/closet/crate/freezer,
-/obj/item/weapon/reagent_containers/blood/empty,
-/obj/item/weapon/reagent_containers/blood/empty{
+/obj/item/reagent_containers/blood/empty,
+/obj/item/reagent_containers/blood/empty{
 	pixel_x = -3;
 	pixel_y = -3
 	},
-/obj/item/weapon/reagent_containers/blood/AMinus,
-/obj/item/weapon/reagent_containers/blood/BMinus{
+/obj/item/reagent_containers/blood/AMinus,
+/obj/item/reagent_containers/blood/BMinus{
 	pixel_x = -4;
 	pixel_y = 4
 	},
-/obj/item/weapon/reagent_containers/blood/BPlus{
+/obj/item/reagent_containers/blood/BPlus{
 	pixel_x = 1;
 	pixel_y = 2
 	},
-/obj/item/weapon/reagent_containers/blood/OMinus,
-/obj/item/weapon/reagent_containers/blood/OPlus{
+/obj/item/reagent_containers/blood/OMinus,
+/obj/item/reagent_containers/blood/OPlus{
 	pixel_x = -2;
 	pixel_y = -1
 	},
-/obj/item/weapon/reagent_containers/blood/random,
-/obj/item/weapon/reagent_containers/blood/random,
-/obj/item/weapon/reagent_containers/blood/random,
+/obj/item/reagent_containers/blood/random,
+/obj/item/reagent_containers/blood/random,
+/obj/item/reagent_containers/blood/random,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
@@ -1981,11 +1981,11 @@
 /turf/open/floor/plasteel/terror/necro/whiteblue/side,
 /area/mine/sleeper)
 "fa" = (
-/obj/item/weapon/storage/firstaid/regular{
+/obj/item/storage/firstaid/regular{
 	pixel_x = 3;
 	pixel_y = -3
 	},
-/obj/item/weapon/storage/firstaid/o2,
+/obj/item/storage/firstaid/o2,
 /obj/structure/table/glass,
 /obj/structure/extinguisher_cabinet{
 	pixel_x = 27;
@@ -2294,7 +2294,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/item/weapon/twohanded/required/kirbyplants{
+/obj/item/twohanded/required/kirbyplants{
 	tag = "icon-plant-21";
 	icon_state = "plant-21"
 	},
@@ -2388,8 +2388,8 @@
 	pixel_y = 0
 	},
 /obj/structure/table/reinforced,
-/obj/item/weapon/storage/firstaid/regular,
-/obj/item/weapon/storage/firstaid/regular,
+/obj/item/storage/firstaid/regular,
+/obj/item/storage/firstaid/regular,
 /obj/machinery/newscaster{
 	pixel_y = 32
 	},
@@ -2496,7 +2496,7 @@
 	tag = ""
 	},
 /obj/structure/table,
-/obj/item/weapon/paper/miners_oper,
+/obj/item/paper/miners_oper,
 /obj/machinery/newscaster{
 	pixel_y = 32
 	},
@@ -3511,7 +3511,7 @@
 	pixel_y = 0
 	},
 /obj/structure/table/reinforced,
-/obj/item/weapon/folder,
+/obj/item/folder,
 /turf/open/floor/plasteel/delivery,
 /area/mine/lobby)
 "hz" = (
@@ -3529,7 +3529,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
-/obj/item/weapon/twohanded/required/kirbyplants{
+/obj/item/twohanded/required/kirbyplants{
 	icon_state = "plant-20";
 	layer = 4.1;
 	tag = "icon-plant-20"
@@ -3567,7 +3567,7 @@
 "hD" = (
 /obj/structure/table,
 /obj/machinery/cell_charger,
-/obj/item/weapon/stock_parts/cell/high,
+/obj/item/stock_parts/cell/high,
 /turf/open/floor/plasteel/terror/necro/brown/corner,
 /area/mine/lobby)
 "hE" = (
@@ -3578,23 +3578,23 @@
 /area/mine/eva)
 "hF" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/extinguisher/mini{
+/obj/item/extinguisher/mini{
 	pixel_x = -10;
 	pixel_y = 3
 	},
-/obj/item/weapon/extinguisher/mini{
+/obj/item/extinguisher/mini{
 	pixel_x = -6;
 	pixel_y = 3
 	},
-/obj/item/weapon/extinguisher/mini{
+/obj/item/extinguisher/mini{
 	pixel_x = -2;
 	pixel_y = 3
 	},
-/obj/item/weapon/extinguisher/mini{
+/obj/item/extinguisher/mini{
 	pixel_x = 2;
 	pixel_y = 3
 	},
-/obj/item/weapon/extinguisher/mini{
+/obj/item/extinguisher/mini{
 	pixel_x = 2;
 	pixel_y = 3
 	},
@@ -3679,15 +3679,15 @@
 	tag = "90Curve"
 	},
 /obj/structure/table,
-/obj/item/weapon/storage/book/bible{
+/obj/item/storage/book/bible{
 	pixel_x = -6;
 	pixel_y = 3
 	},
-/obj/item/weapon/storage/book/bible{
+/obj/item/storage/book/bible{
 	pixel_x = 0;
 	pixel_y = 3
 	},
-/obj/item/weapon/storage/book/bible{
+/obj/item/storage/book/bible{
 	pixel_x = 6;
 	pixel_y = 3
 	},
@@ -3954,7 +3954,7 @@
 /turf/open/floor/plating/lavaland/outdoor,
 /area/mine/eva)
 "ih" = (
-/obj/item/weapon/storage/firstaid/toxin,
+/obj/item/storage/firstaid/toxin,
 /obj/structure/table/glass,
 /obj/structure/sign/nosmoking_2{
 	pixel_y = 32
@@ -3966,8 +3966,8 @@
 	},
 /area/toxins/xenobiology/xeno_lobby)
 "ii" = (
-/obj/item/weapon/storage/firstaid/brute,
-/obj/item/weapon/storage/firstaid/brute{
+/obj/item/storage/firstaid/brute,
+/obj/item/storage/firstaid/brute{
 	pixel_x = -3;
 	pixel_y = -3
 	},
@@ -3985,8 +3985,8 @@
 	},
 /area/toxins/xenobiology/xeno_lobby)
 "ij" = (
-/obj/item/weapon/storage/firstaid/fire,
-/obj/item/weapon/storage/firstaid/fire{
+/obj/item/storage/firstaid/fire,
+/obj/item/storage/firstaid/fire{
 	pixel_x = -3;
 	pixel_y = -3
 	},
@@ -4004,11 +4004,11 @@
 	},
 /area/toxins/xenobiology/xeno_lobby)
 "ik" = (
-/obj/item/weapon/storage/firstaid/regular{
+/obj/item/storage/firstaid/regular{
 	pixel_x = 3;
 	pixel_y = -3
 	},
-/obj/item/weapon/storage/firstaid/o2,
+/obj/item/storage/firstaid/o2,
 /obj/structure/table/glass,
 /obj/structure/extinguisher_cabinet{
 	pixel_x = -5;
@@ -4252,7 +4252,7 @@
 /area/mine/living_quarters)
 "iF" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet/brown,
+/obj/item/bedsheet/brown,
 /obj/structure/dresser{
 	density = 0;
 	pixel_y = 26
@@ -4662,7 +4662,7 @@
 /obj/structure/chair{
 	dir = 1
 	},
-/obj/item/weapon/storage/secure/safe{
+/obj/item/storage/secure/safe{
 	pixel_x = 32
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
@@ -4733,28 +4733,28 @@
 /area/mine/storage)
 "jw" = (
 /obj/structure/closet/crate/freezer,
-/obj/item/weapon/reagent_containers/blood/empty,
-/obj/item/weapon/reagent_containers/blood/empty{
+/obj/item/reagent_containers/blood/empty,
+/obj/item/reagent_containers/blood/empty{
 	pixel_x = -3;
 	pixel_y = -3
 	},
-/obj/item/weapon/reagent_containers/blood/AMinus,
-/obj/item/weapon/reagent_containers/blood/BMinus{
+/obj/item/reagent_containers/blood/AMinus,
+/obj/item/reagent_containers/blood/BMinus{
 	pixel_x = -4;
 	pixel_y = 4
 	},
-/obj/item/weapon/reagent_containers/blood/BPlus{
+/obj/item/reagent_containers/blood/BPlus{
 	pixel_x = 1;
 	pixel_y = 2
 	},
-/obj/item/weapon/reagent_containers/blood/OMinus,
-/obj/item/weapon/reagent_containers/blood/OPlus{
+/obj/item/reagent_containers/blood/OMinus,
+/obj/item/reagent_containers/blood/OPlus{
 	pixel_x = -2;
 	pixel_y = -1
 	},
-/obj/item/weapon/reagent_containers/blood/random,
-/obj/item/weapon/reagent_containers/blood/random,
-/obj/item/weapon/reagent_containers/blood/random,
+/obj/item/reagent_containers/blood/random,
+/obj/item/reagent_containers/blood/random,
+/obj/item/reagent_containers/blood/random,
 /obj/structure/cable{
 	d1 = 4;
 	d2 = 8;
@@ -4793,7 +4793,7 @@
 /area/toxins/xenobiology/xeno_lobby)
 "jz" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet/medical,
+/obj/item/bedsheet/medical,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
@@ -5273,32 +5273,32 @@
 /area/toxins/xenobiology)
 "ki" = (
 /obj/structure/table/glass,
-/obj/item/weapon/paper_bin{
+/obj/item/paper_bin{
 	pixel_y = 4
 	},
-/obj/item/weapon/folder/white{
+/obj/item/folder/white{
 	pixel_x = 4;
 	pixel_y = 4
 	},
-/obj/item/weapon/pen{
+/obj/item/pen{
 	pixel_x = -4
 	},
 /turf/open/floor/plasteel/terror/necro/purple,
 /area/toxins/xenobiology)
 "kj" = (
 /obj/structure/table/glass,
-/obj/item/weapon/storage/box/beakers{
+/obj/item/storage/box/beakers{
 	pixel_x = 2;
 	pixel_y = 7
 	},
-/obj/item/weapon/storage/box/syringes{
+/obj/item/storage/box/syringes{
 	pixel_y = 5
 	},
-/obj/item/weapon/storage/box/monkeycubes{
+/obj/item/storage/box/monkeycubes{
 	pixel_x = 2;
 	pixel_y = -2
 	},
-/obj/item/weapon/storage/box/monkeycubes,
+/obj/item/storage/box/monkeycubes,
 /turf/open/floor/plasteel/terror/necro/purple,
 /area/toxins/xenobiology)
 "kk" = (
@@ -5473,7 +5473,7 @@
 	pixel_y = 26
 	},
 /obj/structure/bed,
-/obj/item/weapon/bedsheet/brown,
+/obj/item/bedsheet/brown,
 /turf/open/floor/carpet{
 	baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
 	},
@@ -6164,11 +6164,11 @@
 /area/toxins/xenobiology)
 "lD" = (
 /obj/structure/reagent_dispensers/watertank,
-/obj/item/weapon/extinguisher{
+/obj/item/extinguisher{
 	pixel_x = 4;
 	pixel_y = 3
 	},
-/obj/item/weapon/extinguisher,
+/obj/item/extinguisher,
 /turf/open/floor/plasteel/terror/necro/purple,
 /area/toxins/xenobiology)
 "lE" = (
@@ -6362,7 +6362,7 @@
 	d2 = 4;
 	icon_state = "0-4"
 	},
-/obj/item/weapon/twohanded/required/kirbyplants{
+/obj/item/twohanded/required/kirbyplants{
 	tag = "icon-plant-21";
 	icon_state = "plant-21"
 	},
@@ -6832,15 +6832,15 @@
 	layer = 2.9;
 	pixel_y = 4
 	},
-/obj/item/weapon/reagent_containers/glass/beaker{
+/obj/item/reagent_containers/glass/beaker{
 	pixel_x = 8;
 	pixel_y = 2
 	},
-/obj/item/weapon/reagent_containers/glass/beaker/large{
+/obj/item/reagent_containers/glass/beaker/large{
 	pixel_x = -3;
 	pixel_y = 3
 	},
-/obj/item/weapon/reagent_containers/dropper,
+/obj/item/reagent_containers/dropper,
 /obj/structure/cable/yellow{
 	d2 = 2;
 	icon_state = "0-2"
@@ -6988,7 +6988,7 @@
 /area/mine/living_quarters)
 "mQ" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/twohanded/required/kirbyplants{
+/obj/item/twohanded/required/kirbyplants{
 	icon_state = "plant-18";
 	layer = 4.1;
 	pixel_y = 12;
@@ -6998,14 +6998,14 @@
 /area/mine/storage)
 "mR" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/reagent_containers/food/snacks/grown/harebell,
-/obj/item/weapon/reagent_containers/food/snacks/grown/harebell,
+/obj/item/reagent_containers/food/snacks/grown/harebell,
+/obj/item/reagent_containers/food/snacks/grown/harebell,
 /turf/open/floor/plasteel/terror/necro/black,
 /area/mine/storage)
 "mS" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/storage/box/bodybags,
-/obj/item/weapon/pen,
+/obj/item/storage/box/bodybags,
+/obj/item/pen,
 /turf/open/floor/plasteel/terror/necro/black,
 /area/mine/storage)
 "mT" = (
@@ -7208,8 +7208,8 @@
 	},
 /area/toxins/xenobiology)
 "ni" = (
-/obj/item/weapon/crowbar/red,
-/obj/item/weapon/wrench,
+/obj/item/crowbar/red,
+/obj/item/wrench,
 /turf/open/floor/plasteel/terror/necro/warning{
 	tag = "icon-warning (EAST)";
 	icon_state = "warning";
@@ -7225,7 +7225,7 @@
 /area/toxins/xenobiology)
 "nk" = (
 /obj/structure/curtain/open/shower,
-/obj/item/weapon/soap/deluxe,
+/obj/item/soap/deluxe,
 /obj/machinery/light/small,
 /obj/machinery/shower{
 	dir = 4;
@@ -7245,7 +7245,7 @@
 	dir = 1;
 	pixel_y = -30
 	},
-/obj/item/weapon/reagent_containers/glass/rag{
+/obj/item/reagent_containers/glass/rag{
 	desc = "I like this.";
 	icon = 'icons/obj/items.dmi';
 	icon_state = "towel";
@@ -7446,7 +7446,7 @@
 	icon_state = "4-8";
 	pixel_y = 0
 	},
-/obj/item/weapon/storage/toolbox/mechanical,
+/obj/item/storage/toolbox/mechanical,
 /turf/open/floor/plating/lavaland,
 /area/toxins/xenobiology/xeno_lobby)
 "nz" = (
@@ -7650,7 +7650,7 @@
 /turf/open/floor/plating/lavaland,
 /area/toxins/xenobiology)
 "nO" = (
-/obj/item/weapon/reagent_containers/food/drinks/bottle/whiskey,
+/obj/item/reagent_containers/food/drinks/bottle/whiskey,
 /turf/open/floor/plating/lavaland,
 /area/toxins/xenobiology)
 "nP" = (
@@ -7872,8 +7872,8 @@
 /area/toxins/xenobiology)
 "oh" = (
 /obj/structure/mopbucket,
-/obj/item/weapon/reagent_containers/glass/bucket,
-/obj/item/weapon/mop,
+/obj/item/reagent_containers/glass/bucket,
+/obj/item/mop,
 /turf/open/floor/plating/lavaland,
 /area/toxins/xenobiology)
 "oi" = (

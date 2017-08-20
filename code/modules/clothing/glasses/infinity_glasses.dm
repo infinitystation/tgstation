@@ -24,4 +24,4 @@
 	icon = 'icons/obj/clothing/infinity_work.dmi'
 	icon_state = "godtier"
 	worn_icon = 'icons/mob/infinity_work.dmi'
-	flags = NODROP
+	flags_1 = NODROP_1

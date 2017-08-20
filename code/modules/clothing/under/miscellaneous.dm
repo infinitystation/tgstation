@@ -104,8 +104,8 @@
 	can_adjust = 0
 
 /obj/item/clothing/under/rank/centcom_officer
-	desc = "It's a jumpsuit worn by Centcom Officers."
-	name = "\improper Centcom officer's jumpsuit"
+	desc = "It's a jumpsuit worn by CentCom Officers."
+	name = "\improper CentCom officer's jumpsuit"
 	icon = 'icons/obj/clothing/infinity_work.dmi'
 	worn_icon = 'icons/mob/infinity_work.dmi'
 	icon_state = "officer"
@@ -114,8 +114,8 @@
 	alt_covers_chest = 1
 
 /obj/item/clothing/under/rank/centcom_commander
-	desc = "It's a jumpsuit worn by Centcom's highest-tier Commanders."
-	name = "\improper Centcom officer's jumpsuit"
+	desc = "It's a jumpsuit worn by CentCom's highest-tier Commanders."
+	name = "\improper CentCom officer's jumpsuit"
 	icon = 'icons/obj/clothing/infinity_work.dmi'
 	worn_icon = 'icons/mob/infinity_work.dmi'
 	icon_state = "centcom"
@@ -391,7 +391,7 @@
 
 /obj/item/clothing/under/kilt/highlander
 	desc = "You're the only one worthy of this kilt."
-	flags = NODROP
+	flags_1 = NODROP_1
 
 /obj/item/clothing/under/sexymime
 	name = "sexy mime outfit"

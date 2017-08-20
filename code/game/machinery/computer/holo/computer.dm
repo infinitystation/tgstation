@@ -31,7 +31,7 @@
 		overlays += icon_screen_contents
 
 /obj/machinery/computer/holo/attackby(obj/item/I, mob/user, params)
-	if(istype(I, /obj/item/weapon/screwdriver) && circuit && !(flags&NODECONSTRUCT))
+	if(istype(I, /obj/item/screwdriver) && circuit && !(flags_1&NODECONSTRUCT_1))
 		playsound(src.loc, 'sound/items/Screwdriver.ogg', 50, 1)
 		user << "<span class='notice'> You start to disconnect the hololens...</span>"
 		if(do_after(user, 20/I.toolspeed, target = src))
@@ -43,7 +43,7 @@
 				C.loc = src.loc
 			if (src.stat & BROKEN)
 				user << "<span class='notice'>The broken glass falls out.</span>"
-				new /obj/item/weapon/shard( src.loc )
+				new /obj/item/shard( src.loc )
 				A.state = 3
 				A.icon_state = "holo_3"
 			else

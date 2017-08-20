@@ -70,9 +70,9 @@
 	..()
 	desc += "\nIt seems a few selections have been added."
 	prize_list += list(
-		new /datum/data/mining_equipment("Survival Pack",  		/obj/item/weapon/storage/box/mining/survival,		   	      			2000),
-		new /datum/data/mining_equipment("Premium absent",		/obj/item/weapon/reagent_containers/food/drinks/bottle/absinthe/premium,10000),
-		new /datum/data/mining_equipment("Empty Sandbag",		/obj/item/weapon/emptysandbag,											1000),
+		new /datum/data/mining_equipment("Survival Pack",  		/obj/item/storage/box/mining/survival,		   	      			2000),
+		new /datum/data/mining_equipment("Premium absent",		/obj/item/reagent_containers/food/drinks/bottle/absinthe/premium,10000),
+		new /datum/data/mining_equipment("Empty Sandbag",		/obj/item/emptysandbag,											1000),
 		new /datum/data/mining_equipment("Candle",				/obj/item/candle,														200),
 		new /datum/data/mining_equipment("Lantern",				/obj/item/device/flashlight/lantern,									700),
 		new /datum/data/mining_equipment("Universal Recorde", 	/obj/item/device/taperecorder,											1000),
@@ -80,7 +80,7 @@
 		new /datum/data/mining_equipment("Meson goggles", 		/obj/item/clothing/glasses/meson,										800),
 		)
 
-/obj/item/weapon/circuitboard/machine/mining_equipment_vendor/terror
+/obj/item/circuitboard/machine/mining_equipment_vendor/terror
 	build_path = /obj/machinery/mineral/equipment_vendor/terror
 
 /obj/machinery/vending/eatimat
@@ -88,12 +88,12 @@
 	desc = "Eat this."
 	icon_state = "boozeomat"
 	icon_deny = "boozeomat-deny"
-	products = list(/obj/item/weapon/reagent_containers/food/snacks/beans = 10,/obj/item/weapon/reagent_containers/food/snacks/burger = 20, /obj/item/weapon/reagent_containers/food/snacks/burrito = 20, /obj/item/weapon/reagent_containers/food/snacks/meatballspaghetti = 10,/obj/item/weapon/reagent_containers/food/snacks/meat/steak = 20,/obj/item/weapon/reagent_containers/food/snacks/boiledspaghetti = 15,/obj/item/weapon/reagent_containers/food/snacks/cracker = 20)
+	products = list(/obj/item/reagent_containers/food/snacks/beans = 10,/obj/item/reagent_containers/food/snacks/burger = 20, /obj/item/reagent_containers/food/snacks/burrito = 20, /obj/item/reagent_containers/food/snacks/meatballspaghetti = 10,/obj/item/reagent_containers/food/snacks/meat/steak = 20,/obj/item/reagent_containers/food/snacks/boiledspaghetti = 15,/obj/item/reagent_containers/food/snacks/cracker = 20)
 	product_slogans = "I'm your new cook!"
 	product_ads = "Time for dinner!"
 	req_access_txt = "0"
 
-/obj/item/weapon/circuitboard/computer/eatimat
+/obj/item/circuitboard/computer/eatimat
 	name = "circuit board (Eatiman)"
 	build_path = /obj/machinery/vending/eatimat
 	origin_tech = "programming=1;biotech=1"
@@ -115,16 +115,16 @@
 	icon_state = "SynTool"
 	icon_deny = "SynTool-deny"
 	req_access_txt = "150" //Common syndicate access
-	products = list(/obj/item/weapon/crowbar/red = 5,
+	products = list(/obj/item/crowbar/red = 5,
 					/obj/item/device/multitool = 5,
-					/obj/item/weapon/screwdriver/nuke = 5,
-					/obj/item/weapon/wirecutters = 5,
-					/obj/item/weapon/wrench = 5,
-					/obj/item/weapon/weldingtool/largetank = 5,
+					/obj/item/screwdriver/nuke = 5,
+					/obj/item/wirecutters = 5,
+					/obj/item/wrench = 5,
+					/obj/item/weldingtool/largetank = 5,
 					/obj/item/device/analyzer = 5,
 					/obj/item/device/t_scanner = 5,
 					/obj/item/stack/cable_coil = 10)
-	premium = list(/obj/item/clothing/gloves/chameleon = 1,/obj/item/weapon/grenade/empgrenade = 2)
+	premium = list(/obj/item/clothing/gloves/chameleon = 1,/obj/item/grenade/empgrenade = 2)
 
 /obj/machinery/vending/security_clothes
 	name = "Security clothes"
@@ -141,9 +141,9 @@
 					/obj/item/clothing/head/beret/sec/corporate = 5,
 					/obj/item/clothing/under/sec_corporate = 5,
 					/obj/item/clothing/suit/hooded/security_new = 4,
-					/obj/item/weapon/storage/backpack/dufflebag/sec = 2,
-					/obj/item/weapon/storage/backpack/satchel/sec = 3,
-					/obj/item/weapon/storage/backpack/security = 3,
+					/obj/item/storage/backpack/dufflebag/sec = 2,
+					/obj/item/storage/backpack/satchel/sec = 3,
+					/obj/item/storage/backpack/security = 3,
 					/obj/item/clothing/shoes/jackboots = 8)
 	premium = list(/obj/item/clothing/under/syndicate/camo = 1,
 					/obj/item/clothing/under/rank/security = 1,

@@ -19,7 +19,7 @@
   <ui-section label='Кредиты'>
     <span>{{Math.floor(adata.points)}}</span>
   </ui-section>
-  <ui-section label='Сообщения Центкома'>
+  <ui-section label='Сообщения ЦК'>
       <span>{{data.message}}</span>
   </ui-section>
   {{#if data.loan && !data.requestonly}}
@@ -29,7 +29,7 @@
          state='{{data.away && data.docked ? null : "disabled"}}'
          action='loan'>Занять шаттл</ui-button>
       {{else}}
-        <span class='bad'>Шаттл занят Центкому</span>
+        <span class='bad'>Шаттл занят ЦК</span>
       {{/if}}
     </ui-section>
   {{/if}}

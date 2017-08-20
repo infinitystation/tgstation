@@ -42,32 +42,32 @@
 /obj/machinery/chem_dispenser/bartender/New()
 	..()
 
-	var/obj/item/weapon/circuitboard/machine/chem_dispenser/H = new /obj/item/weapon/circuitboard/machine/chem_dispenser(null)
+	var/obj/item/circuitboard/machine/chem_dispenser/H = new /obj/item/circuitboard/machine/chem_dispenser(null)
 	H.build_path = /obj/machinery/chem_dispenser/bartender
 	H.name = "circuit board (Portable Bar Dispenser)"
 	H.req_components = list(
-							/obj/item/weapon/stock_parts/matter_bin = 6,
-							/obj/item/weapon/stock_parts/capacitor = 2,
-							/obj/item/weapon/stock_parts/manipulator = 2,
-							/obj/item/weapon/stock_parts/console_screen = 1,
-							/obj/item/weapon/stock_parts/cell = 2,
-							/obj/item/weapon/stock_parts/micro_laser = 1,
-							/obj/item/weapon/reagent_containers/food/drinks/bottle/whiskey = 1,)
+							/obj/item/stock_parts/matter_bin = 6,
+							/obj/item/stock_parts/capacitor = 2,
+							/obj/item/stock_parts/manipulator = 2,
+							/obj/item/stock_parts/console_screen = 1,
+							/obj/item/stock_parts/cell = 2,
+							/obj/item/stock_parts/micro_laser = 1,
+							/obj/item/reagent_containers/food/drinks/bottle/whiskey = 1,)
 	component_parts = list()
 	component_parts += H
-	component_parts += new /obj/item/weapon/stock_parts/matter_bin(null)
-	component_parts += new /obj/item/weapon/stock_parts/matter_bin(null)
-	component_parts += new /obj/item/weapon/stock_parts/matter_bin(null)
-	component_parts += new /obj/item/weapon/stock_parts/matter_bin(null)
-	component_parts += new /obj/item/weapon/stock_parts/manipulator(null)
-	component_parts += new /obj/item/weapon/stock_parts/manipulator(null)
-	component_parts += new /obj/item/weapon/stock_parts/capacitor(null)
-	component_parts += new /obj/item/weapon/stock_parts/capacitor(null)
-	component_parts += new /obj/item/weapon/stock_parts/console_screen(null)
-	component_parts += new /obj/item/weapon/stock_parts/cell/high(null)
-	component_parts += new /obj/item/weapon/stock_parts/cell/high(null)
-	component_parts += new /obj/item/weapon/stock_parts/micro_laser(null)
-	component_parts += new /obj/item/weapon/reagent_containers/food/drinks/bottle/whiskey(null)
+	component_parts += new /obj/item/stock_parts/matter_bin(null)
+	component_parts += new /obj/item/stock_parts/matter_bin(null)
+	component_parts += new /obj/item/stock_parts/matter_bin(null)
+	component_parts += new /obj/item/stock_parts/matter_bin(null)
+	component_parts += new /obj/item/stock_parts/manipulator(null)
+	component_parts += new /obj/item/stock_parts/manipulator(null)
+	component_parts += new /obj/item/stock_parts/capacitor(null)
+	component_parts += new /obj/item/stock_parts/capacitor(null)
+	component_parts += new /obj/item/stock_parts/console_screen(null)
+	component_parts += new /obj/item/stock_parts/cell/high(null)
+	component_parts += new /obj/item/stock_parts/cell/high(null)
+	component_parts += new /obj/item/stock_parts/micro_laser(null)
+	component_parts += new /obj/item/reagent_containers/food/drinks/bottle/whiskey(null)
 	RefreshParts()
 
 /obj/machinery/chem_dispenser/bartender/RefreshParts()
@@ -76,22 +76,22 @@
 	var/i
 
 	//energy
-	for(var/obj/item/weapon/stock_parts/matter_bin/M in component_parts)
+	for(var/obj/item/stock_parts/matter_bin/M in component_parts)
 		temp_energy += M.rating
 	//max_energy = temp_energy * 7  //max energy = (bin1.rating + bin2.rating - 1) * 5, 5 on lowest 25 on highest
 
 	//recharge delay
-	for(var/obj/item/weapon/stock_parts/capacitor/C in component_parts)
+	for(var/obj/item/stock_parts/capacitor/C in component_parts)
 		time += C.rating
-	for(var/obj/item/weapon/stock_parts/cell/P in component_parts)
+	for(var/obj/item/stock_parts/cell/P in component_parts)
 		time += round(P.maxcharge, 10000) / 10000
 	recharge_delay /= time/2
 
 	//reagents
-	for(var/obj/item/weapon/stock_parts/manipulator/M in component_parts)
+	for(var/obj/item/stock_parts/manipulator/M in component_parts)
 		for(i=1, i<=M.rating, i++)
 			dispensable_reagents = sortList(dispensable_reagents | special_reagents[i])
-	for(var/obj/item/weapon/stock_parts/micro_laser/M in component_parts)
+	for(var/obj/item/stock_parts/micro_laser/M in component_parts)
 		for(i=1, i<=M.rating, i++)
 			dispensable_reagents = sortList(dispensable_reagents | temperature_reagents[i])
 
@@ -120,9 +120,9 @@
 		return
 
 	if(panel_open)
-		if(istype(I, /obj/item/weapon/crowbar))
+		if(istype(I, /obj/item/crowbar))
 			if(beaker)
-				var/obj/item/weapon/reagent_containers/glass/B = beaker
+				var/obj/item/reagent_containers/glass/B = beaker
 				B.loc = loc
 				beaker = null
 			default_deconstruction_crowbar(I)
@@ -132,36 +132,36 @@
 		user << "A [src.beaker] is already loaded into the machine."
 		return
 
-	if(istype(I,/obj/item/weapon/reagent_containers/food/drinks/))
+	if(istype(I,/obj/item/reagent_containers/food/drinks/))
 		src.beaker =  I
 		user.drop_item()
 		I.loc = src
 		user << "You add the [I] to the machine!"
 
 // it was here for avoiding conflicts
-/obj/item/weapon/circuitboard/machine/chem_dispenser/attackby(obj/item/I, mob/user)
+/obj/item/circuitboard/machine/chem_dispenser/attackby(obj/item/I, mob/user)
 	if(istype(I, /obj/item/device/multitool))
 		if(build_path == /obj/machinery/chem_dispenser/constructable)
 			build_path = /obj/machinery/chem_dispenser/bartender
 			name = "circuit board (Portable Bar Dispenser)"
 			user << "<span class='notice'>You set the board to bartendering.</span>"
 			req_components = list(
-							/obj/item/weapon/stock_parts/matter_bin = 6,
-							/obj/item/weapon/stock_parts/capacitor = 2,
-							/obj/item/weapon/stock_parts/manipulator = 2,
-							/obj/item/weapon/stock_parts/console_screen = 1,
-							/obj/item/weapon/stock_parts/cell = 2,
-							/obj/item/weapon/stock_parts/micro_laser = 1,
-							/obj/item/weapon/reagent_containers/food/drinks/bottle/whiskey = 1)
+							/obj/item/stock_parts/matter_bin = 6,
+							/obj/item/stock_parts/capacitor = 2,
+							/obj/item/stock_parts/manipulator = 2,
+							/obj/item/stock_parts/console_screen = 1,
+							/obj/item/stock_parts/cell = 2,
+							/obj/item/stock_parts/micro_laser = 1,
+							/obj/item/reagent_containers/food/drinks/bottle/whiskey = 1)
 		else
 			build_path =/obj/machinery/chem_dispenser/constructable
 			name = "circuit board (Portable Chem Dispenser)"
 			user << "<span class='notice'>You set the board to chemistry.</span>"
 			req_components = list(
-							/obj/item/weapon/stock_parts/matter_bin = 2,
-							/obj/item/weapon/stock_parts/capacitor = 1,
-							/obj/item/weapon/stock_parts/manipulator = 1,
-							/obj/item/weapon/stock_parts/console_screen = 1,
-							/obj/item/weapon/stock_parts/cell = 1)
+							/obj/item/stock_parts/matter_bin = 2,
+							/obj/item/stock_parts/capacitor = 1,
+							/obj/item/stock_parts/manipulator = 1,
+							/obj/item/stock_parts/console_screen = 1,
+							/obj/item/stock_parts/cell = 1)
 	else
 		return ..()

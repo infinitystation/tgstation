@@ -4,7 +4,7 @@
 	icon = 'icons/blue_brig/obj/seccomp.dmi'
 	icon_screen = "cameras"
 	icon_keyboard = "security_key"
-	circuit = /obj/item/weapon/circuitboard/computer/security
+	circuit = /obj/item/circuitboard/computer/security
 	var/last_pic = 1
 	var/list/network = list("SS13")
 	var/mapping = 0//For the overview file, interesting bit of code.
@@ -189,4 +189,4 @@
 	icon_screen = "mining"
 	icon_keyboard = "mining_key"
 	network = list("MINE")
-	circuit = /obj/item/weapon/circuitboard/computer/mining
+	circuit = /obj/item/circuitboard/computer/mining

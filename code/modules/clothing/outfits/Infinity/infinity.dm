@@ -3,13 +3,13 @@
 
 	suit = /obj/item/clothing/suit/toggle/brown_jacket
 	mask = /obj/item/clothing/mask/gas/mime
-	r_hand = /obj/item/weapon/kitchen/knife/combat
+	r_hand = /obj/item/kitchen/knife/combat
 
 /datum/outfit/michael_myers
 	name = "Michael Myers"
 
 	mask = /obj/item/clothing/mask/gas/mime
-	r_hand = /obj/item/weapon/kitchen/knife
+	r_hand = /obj/item/kitchen/knife
 
 /datum/outfit/nar_cult
 	name = "Nar-sie's cultist"
@@ -18,10 +18,10 @@
 	shoes = /obj/item/clothing/shoes/cult/alt
 	suit = /obj/item/clothing/suit/cultrobes/alt
 	head = /obj/item/clothing/head/culthood/alt
-	l_pocket = /obj/item/weapon/tome
-	r_pocket = /obj/item/weapon/paper/talisman
-	back = /obj/item/weapon/storage/backpack/cultpack
-	suit_store = /obj/item/weapon/melee/cultblade
+	l_pocket = /obj/item/tome
+	r_pocket = /obj/item/paper/talisman
+	back = /obj/item/storage/backpack/cultpack
+	suit_store = /obj/item/melee/cultblade
 
 /datum/outfit/abductor_agent
 	name = "Abductor Agent"
@@ -29,12 +29,12 @@
 	uniform = /obj/item/clothing/under/color/grey
 	shoes = /obj/item/clothing/shoes/combat
 	suit = /obj/item/clothing/suit/armor/abductor/vest/combat
-	suit_store = /obj/item/weapon/gun/energy/alien/base
+	suit_store = /obj/item/gun/energy/alien/base
 	head = /obj/item/clothing/head/helmet/abductor
-	belt = /obj/item/weapon/storage/belt/military/abductor/full
+	belt = /obj/item/storage/belt/military/abductor/full
 	l_pocket = /obj/item/device/flashlight/slime
-	back = /obj/item/weapon/storage/backpack
-	backpack_contents = list(/obj/item/weapon/abductor_baton=1,\
+	back = /obj/item/storage/backpack
+	backpack_contents = list(/obj/item/abductor_baton=1,\
 		/obj/item/device/abductor/silencer=1)
 
 /datum/outfit/clock_cult
@@ -46,8 +46,8 @@
 	head = /obj/item/clothing/head/helmet/clockwork
 	gloves = /obj/item/clothing/gloves/clockwork
 	l_pocket = /obj/item/clockwork/slab/starter
-	r_pocket = /obj/item/weapon/nullrod/tribal_knife
-	back = /obj/item/weapon/storage/backpack/satchel
+	r_pocket = /obj/item/nullrod/tribal_knife
+	back = /obj/item/storage/backpack/satchel
 
 /datum/outfit/trooper
 	name = "UAC Trooper"
@@ -58,19 +58,19 @@
 	shoes = /obj/item/clothing/shoes/combat/swat/uac
 	gloves = /obj/item/clothing/gloves/combat
 	head = /obj/item/clothing/head/helmet/uac
-	id = /obj/item/weapon/card/id
+	id = /obj/item/card/id
 	glasses = /obj/item/clothing/glasses/night
 	mask = /obj/item/clothing/mask/breath
 	belt = /obj/item/ammo_box/magazine/a646
-	l_pocket = /obj/item/weapon/tank/internals/emergency_oxygen
+	l_pocket = /obj/item/tank/internals/emergency_oxygen
 	r_pocket = /obj/item/ammo_box/magazine/a646
-	r_hand = /obj/item/weapon/gun/ballistic/automatic/mg88
+	r_hand = /obj/item/gun/ballistic/automatic/mg88
 
 /datum/outfit/trooper/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	if(visualsOnly)
 		return
 
-	var/obj/item/weapon/card/id/W = H.wear_id
+	var/obj/item/card/id/W = H.wear_id
 	W.icon_state = "centcom"
 	W.access += list(ACCESS_MAINT_TUNNELS, ACCESS_SYNDICATE)
 	W.assignment = "Trooper"
@@ -83,27 +83,27 @@
 	uniform = /obj/item/clothing/under/color/brown
 	shoes = /obj/item/clothing/shoes/workboots/mining
 	suit = /obj/item/clothing/suit/hooded/explorer
-	suit_store = /obj/item/weapon/tank/internals/oxygen
+	suit_store = /obj/item/tank/internals/oxygen
 	mask = /obj/item/clothing/mask/gas/explorer
-	belt = /obj/item/weapon/storage/belt/utility/full
+	belt = /obj/item/storage/belt/utility/full
 	glasses = /obj/item/clothing/glasses/welding
 	ears = /obj/item/device/radio/headset
 	gloves = /obj/item/clothing/gloves/combat
 	l_pocket = /obj/item/device/flashlight/seclite
-	r_pocket = /obj/item/weapon/extinguisher/mini
-	back = /obj/item/weapon/storage/backpack/explorer
-	backpack_contents = list(/obj/item/weapon/gun/energy/kinetic_accelerator=1,\
-		/obj/item/weapon/storage/bag/ore=2,\
+	r_pocket = /obj/item/extinguisher/mini
+	back = /obj/item/storage/backpack/explorer
+	backpack_contents = list(/obj/item/gun/energy/kinetic_accelerator=1,\
+		/obj/item/storage/bag/ore=2,\
 		/obj/item/device/t_scanner/adv_mining_scanner/lesser=1,\
 		/obj/item/clothing/glasses/meson =1,\
-		/obj/item/weapon/kitchen/knife/combat/survival=1)
-	id = /obj/item/weapon/card/id
+		/obj/item/kitchen/knife/combat/survival=1)
+	id = /obj/item/card/id
 
 /datum/outfit/survivor/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	if(visualsOnly)
 		return
 
-	var/obj/item/weapon/card/id/W = H.wear_id
+	var/obj/item/card/id/W = H.wear_id
 	W.icon_state = "data"
 	W.access = get_all_accesses()
 	W.access += get_centcom_access("Admiral")
@@ -116,4 +116,4 @@
 
 	uniform = /obj/item/clothing/under/color/random
 	shoes = /obj/item/clothing/shoes/sandal
-	back = /obj/item/weapon/storage/backpack/explorer
+	back = /obj/item/storage/backpack/explorer

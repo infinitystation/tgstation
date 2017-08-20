@@ -26,7 +26,7 @@
 	item_state = "hardsuit-nymary"
 	worn_icon = 'icons/mob/infinity_work.dmi'
 	icon = 'icons/obj/clothing/infinity_work.dmi'
-	allowed = list(/obj/item/device/flashlight,/obj/item/weapon/tank/internals,/obj/item/weapon/storage/firstaid,/obj/item/device/healthanalyzer,/obj/item/stack/medical)
+	allowed = list(/obj/item/device/flashlight,/obj/item/tank/internals,/obj/item/storage/firstaid,/obj/item/device/healthanalyzer,/obj/item/stack/medical)
 	armor = list(melee = 30, bullet = 5, laser = 10, energy = 5, bomb = 10, bio = 100, rad = 50, fire = 0, acid = 50)
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/nymary
 
@@ -98,7 +98,7 @@
 	worn_icon = 'icons/mob/infinity_work.dmi'
 	icon = 'icons/obj/clothing/infinity_work.dmi'
 	armor = list(melee = 80, bullet = 80, laser = 50, energy = 50, bomb = 80, bio = 100, rad = 100, fire = 100, acid = 80)
-	allowed = list(/obj/item/weapon/gun,/obj/item/ammo_box,/obj/item/ammo_casing,/obj/item/weapon/melee/baton,/obj/item/weapon/restraints/handcuffs,/obj/item/weapon/tank/internals,/obj/item/weapon/kitchen/knife/combat)
+	allowed = list(/obj/item/gun,/obj/item/ammo_box,/obj/item/ammo_casing,/obj/item/melee/baton,/obj/item/restraints/handcuffs,/obj/item/tank/internals,/obj/item/kitchen/knife/combat)
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/starcraft
 	slowdown = 2
 	w_class = 4

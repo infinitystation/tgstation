@@ -5,7 +5,7 @@
 	icon_keyboard = "security_key"
 	var/z_lock = null // Lock use to this zlevel
 	var/mob/camera/aiEye/remote/eyeobj
-	circuit = /obj/item/weapon/circuitboard/computer/adv_security
+	circuit = /obj/item/circuitboard/computer/adv_security
 	var/mob/living/current_user = null
 	var/list/networks = list("SS13")
 	var/datum/action/innate/camera_off/off_action = new
@@ -176,6 +176,7 @@
 
 /datum/action/innate/camera_off
 	name = "End Camera View"
+	icon_icon = 'icons/mob/actions/actions_silicon.dmi'
 	button_icon_state = "camera_off"
 
 /datum/action/innate/camera_off/Activate()
@@ -188,6 +189,7 @@
 
 /datum/action/innate/camera_jump
 	name = "Jump To Camera"
+	icon_icon = 'icons/mob/actions/actions_silicon.dmi'
 	button_icon_state = "camera_jump"
 
 /datum/action/innate/camera_jump/Activate()

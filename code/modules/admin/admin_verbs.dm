@@ -12,6 +12,7 @@ GLOBAL_LIST_INIT(admin_verbs_default, world.AVerbsDefault())
 	/client/proc/dsay,					/*talk in deadchat using our ckey/fakekey*/
 	/client/proc/investigate_show,		/*various admintools for investigation. Such as a singulo grief-log*/
 	/client/proc/secrets,
+	/client/proc/toggle_hear_radio,		/*allows admins to hide all radio output*/
 	/client/proc/reload_admins,
 	/client/proc/reestablish_db_connection, /*reattempt a connection to the database*/
 	/client/proc/cmd_admin_pm_context,	/*right-click adminPM interface*/
@@ -311,7 +312,8 @@ GLOBAL_LIST_INIT(admin_verbs_hideable, list(
 		/client/proc/startSinglo,
 		/client/proc/set_server_fps,
 		/client/proc/cmd_admin_grantfullaccess,
-		/client/proc/cmd_admin_areatest,
+		/client/proc/cmd_admin_areatest_all,
+		/client/proc/cmd_admin_areatest_station,
 		/client/proc/readmin
 		)
 	if(holder)
@@ -470,7 +472,7 @@ GLOBAL_LIST_INIT(admin_verbs_hideable, list(
 				mob.invisibility = INVISIBILITY_MAXIMUM //JUST IN CASE
 				mob.alpha = 0 //JUUUUST IN CASE
 				mob.name = " "
-				mob.mouse_opacity = 0
+				mob.mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 		log_admin("[key_name(usr)] has turned stealth mode [holder.fakekey ? "ON" : "OFF"]")
 	SSblackbox.add_details("admin_verb","Stealth Mode") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 

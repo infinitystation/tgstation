@@ -81,8 +81,8 @@
 	add_fingerprint(user)
 	return
 
-/obj/structure/inflatable/attackby(obj/item/weapon/W as obj, mob/user as mob)
-	//if(!istype(W) || istype(W, /obj/item/weapon/inflatable_dispenser)) return
+/obj/structure/inflatable/attackby(obj/item/W as obj, mob/user as mob)
+	//if(!istype(W) || istype(W, /obj/item/inflatable_dispenser)) return
 
 	if (can_puncture(W))
 		visible_message("<span class='danger'>[user] pierces [src] with [W]!</span>")
@@ -248,7 +248,7 @@
 		user << "<span class='notice'>The inflatable door is too torn to be inflated!</span>"
 		add_fingerprint(user)
 
-/obj/item/weapon/storage/box/inflatable
+/obj/item/storage/box/inflatable
 	name = "inflatable barrier box"
 	desc = "Contains inflatable walls and doors."
 	icon = 'icons/obj/infinity_dexofan.dmi'

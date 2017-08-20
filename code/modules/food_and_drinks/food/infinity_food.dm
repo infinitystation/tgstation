@@ -1,4 +1,4 @@
-/obj/item/weapon/reagent_containers/food/snacks/pancake
+/obj/item/reagent_containers/food/snacks/pancake
 	name = "Pancake"
 	desc = "This is pancake"
 	icon = 'icons/obj/food/infinity_food.dmi'

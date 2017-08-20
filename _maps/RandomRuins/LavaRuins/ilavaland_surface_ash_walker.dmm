@@ -33,11 +33,11 @@
 /area/lavaland/surface/outdoors)
 "j" = (
 /obj/structure/table/wood,
-/obj/item/weapon/pickaxe/silver/poor,
-/obj/item/weapon/pickaxe/silver/poor,
-/obj/item/weapon/pickaxe/silver/poor,
-/obj/item/weapon/pickaxe/silver/poor,
-/obj/item/weapon/pickaxe/silver/poor,
+/obj/item/pickaxe/silver/poor,
+/obj/item/pickaxe/silver/poor,
+/obj/item/pickaxe/silver/poor,
+/obj/item/pickaxe/silver/poor,
+/obj/item/pickaxe/silver/poor,
 /turf/open/floor/plasteel/terror/necro/cult/outdoor,
 /area/mine/shelter/ash)
 "k" = (
@@ -49,7 +49,7 @@
 /area/mine/shelter/ash)
 "m" = (
 /obj/structure/table/wood,
-/obj/item/weapon/soap/syndie,
+/obj/item/soap/syndie,
 /turf/open/floor/plasteel/terror/necro/cult/outdoor,
 /area/mine/shelter/ash)
 "n" = (
@@ -61,17 +61,17 @@
 /area/lavaland/surface/outdoors)
 "p" = (
 /obj/structure/table/wood,
-/obj/item/weapon/restraints/legcuffs/bola,
+/obj/item/restraints/legcuffs/bola,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/mine/shelter/ash)
 "q" = (
 /obj/structure/table/wood,
-/obj/item/weapon/twohanded/bonespear,
-/obj/item/weapon/twohanded/bonespear,
+/obj/item/twohanded/bonespear,
+/obj/item/twohanded/bonespear,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/mine/shelter/ash)
 "r" = (
-/obj/item/weapon/cultivator,
+/obj/item/cultivator,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/mine/shelter/ash)
 "s" = (
@@ -110,7 +110,7 @@
 /turf/open/floor/plasteel/terror/necro/cult/outdoor,
 /area/mine/shelter/ash)
 "x" = (
-/obj/item/weapon/bedsheet/rd,
+/obj/item/bedsheet/rd,
 /obj/structure/bed/dogbed,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/mine/shelter/ash)
@@ -124,7 +124,7 @@
 	},
 /area/lavaland/surface/outdoors)
 "z" = (
-/obj/item/weapon/reagent_containers/glass/bucket,
+/obj/item/reagent_containers/glass/bucket,
 /turf/open/floor/plasteel/terror/necro/cult/outdoor,
 /area/mine/shelter/ash)
 "A" = (
@@ -132,15 +132,15 @@
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/mine/shelter/ash)
 "B" = (
-/obj/item/weapon/kitchen/knife/combat/bone,
+/obj/item/kitchen/knife/combat/bone,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/mine/shelter/ash)
 "C" = (
-/obj/item/weapon/pickaxe/speardrill,
+/obj/item/pickaxe/speardrill,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/mine/shelter/ash)
 "D" = (
-/obj/item/weapon/reagent_containers/food/snacks/grown/mushroom/glowshroom,
+/obj/item/reagent_containers/food/snacks/grown/mushroom/glowshroom,
 /turf/open/floor/plasteel/terror/necro/cult/outdoor,
 /area/mine/shelter/ash)
 "E" = (
@@ -149,7 +149,7 @@
 /area/mine/shelter/ash)
 "F" = (
 /obj/structure/table/wood,
-/obj/item/weapon/storage/bag/plants/portaseeder,
+/obj/item/storage/bag/plants/portaseeder,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/mine/shelter/ash)
 "G" = (

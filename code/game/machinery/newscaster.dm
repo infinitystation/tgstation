@@ -121,7 +121,7 @@ GLOBAL_LIST_EMPTY(allCasters)
 	newChannel.is_admin_channel = adminChannel
 	network_channels += newChannel
 
-/datum/newscaster/feed_network/proc/SubmitArticle(msg, author, channel_name, obj/item/weapon/photo/photo, adminMessage = 0, allow_comments = 1)
+/datum/newscaster/feed_network/proc/SubmitArticle(msg, author, channel_name, obj/item/photo/photo, adminMessage = 0, allow_comments = 1)
 	var/datum/newscaster/feed_message/newMsg = new /datum/newscaster/feed_message
 	var/channel_name_o = ""
 	newMsg.author = author
@@ -144,7 +144,7 @@ GLOBAL_LIST_EMPTY(allCasters)
 	lastAction ++
 	newMsg.creationTime = lastAction
 
-/datum/newscaster/feed_network/proc/submitWanted(criminal, body, scanned_user, obj/item/weapon/photo/photo, adminMsg = 0, newMessage = 0)
+/datum/newscaster/feed_network/proc/submitWanted(criminal, body, scanned_user, obj/item/photo/photo, adminMsg = 0, newMessage = 0)
 	wanted_issue.active = 1
 	wanted_issue.criminal = criminal
 	wanted_issue.body = body
@@ -194,7 +194,7 @@ GLOBAL_LIST_EMPTY(allCasters)
 	var/alert = FALSE
 	var/scanned_user = "Unknown"
 	var/msg = ""
-	var/obj/item/weapon/photo/photo = null
+	var/obj/item/photo/photo = null
 	var/channel_name = ""
 	var/channel_name_o = "";
 	var/c_locked=0
@@ -206,16 +206,15 @@ GLOBAL_LIST_EMPTY(allCasters)
 	name = "security newscaster"
 	securityCaster = 1
 
-/obj/machinery/newscaster/New(loc, ndir, building)
-	..()
+/obj/machinery/newscaster/Initialize(mapload, ndir, building)
+	. = ..()
 	if(building)
 		setDir(ndir)
 		pixel_x = (dir & 3)? 0 : (dir == 4 ? -32 : 32)
 		pixel_y = (dir & 3)? (dir ==1 ? -32 : 32) : 0
 
 	GLOB.allCasters += src
-	for(var/obj/machinery/newscaster/NEWSCASTER in GLOB.allCasters)
-		unit_no++
+	unit_no = GLOB.allCasters.len
 	update_icon()
 
 /obj/machinery/newscaster/Destroy()
@@ -722,7 +721,7 @@ GLOBAL_LIST_EMPTY(allCasters)
 			updateUsrDialog()
 
 /obj/machinery/newscaster/attackby(obj/item/I, mob/living/user, params)
-	if(istype(I, /obj/item/weapon/wrench))
+	if(istype(I, /obj/item/wrench))
 		to_chat(user, "<span class='notice'>You start [anchored ? "un" : ""]securing [name]...</span>")
 		playsound(loc, I.usesound, 50, 1)
 		if(do_after(user, 60*I.toolspeed, target = src))
@@ -730,14 +729,14 @@ GLOBAL_LIST_EMPTY(allCasters)
 			if(stat & BROKEN)
 				to_chat(user, "<span class='warning'>The broken remains of [src] fall on the ground.</span>")
 				new /obj/item/stack/sheet/metal(loc, 5)
-				new /obj/item/weapon/shard(loc)
-				new /obj/item/weapon/shard(loc)
+				new /obj/item/shard(loc)
+				new /obj/item/shard(loc)
 			else
 				to_chat(user, "<span class='notice'>You [anchored ? "un" : ""]secure [name].</span>")
 				new /obj/item/wallframe/newscaster(loc)
 			qdel(src)
-	else if(istype(I, /obj/item/weapon/weldingtool) && user.a_intent != INTENT_HARM)
-		var/obj/item/weapon/weldingtool/WT = I
+	else if(istype(I, /obj/item/weldingtool) && user.a_intent != INTENT_HARM)
+		var/obj/item/weldingtool/WT = I
 		if(stat & BROKEN)
 			if(WT.remove_fuel(0,user))
 				user.visible_message("[user] is repairing [src].", \
@@ -769,14 +768,14 @@ GLOBAL_LIST_EMPTY(allCasters)
 
 
 /obj/machinery/newscaster/deconstruct(disassembled = TRUE)
-	if(!(flags & NODECONSTRUCT))
+	if(!(flags_1 & NODECONSTRUCT_1))
 		new /obj/item/stack/sheet/metal(loc, 2)
-		new /obj/item/weapon/shard(loc)
-		new /obj/item/weapon/shard(loc)
+		new /obj/item/shard(loc)
+		new /obj/item/shard(loc)
 	qdel(src)
 
 /obj/machinery/newscaster/obj_break()
-	if(!(stat & BROKEN) && !(flags & NODECONSTRUCT))
+	if(!(stat & BROKEN) && !(flags_1 & NODECONSTRUCT_1))
 		stat |= BROKEN
 		playsound(loc, 'sound/effects/glassbr3.ogg', 100, 1)
 		update_icon()
@@ -797,7 +796,7 @@ GLOBAL_LIST_EMPTY(allCasters)
 		else
 			qdel(photo)
 		photo = null
-	if(istype(user.get_active_held_item(), /obj/item/weapon/photo))
+	if(istype(user.get_active_held_item(), /obj/item/photo))
 		photo = user.get_active_held_item()
 		if(!user.drop_item())
 			return
@@ -824,7 +823,7 @@ GLOBAL_LIST_EMPTY(allCasters)
 		for(var/datum/picture/t in targetcam.aipictures)
 			nametemp += t.fields["name"]
 		find = input("Select image (numbered in order taken)") in nametemp
-		var/obj/item/weapon/photo/P = new/obj/item/weapon/photo()
+		var/obj/item/photo/P = new/obj/item/photo()
 		for(var/datum/picture/q in targetcam.aipictures)
 			if(q.fields["name"] == find)
 				selection = q
@@ -844,8 +843,8 @@ GLOBAL_LIST_EMPTY(allCasters)
 					scanned_user = "[P.id.registered_name] ([P.id.assignment])"
 				else
 					scanned_user = "Unknown"
-			else if(istype(human_user.wear_id, /obj/item/weapon/card/id) )
-				var/obj/item/weapon/card/id/ID = human_user.wear_id
+			else if(istype(human_user.wear_id, /obj/item/card/id) )
+				var/obj/item/card/id/ID = human_user.wear_id
 				scanned_user ="[ID.registered_name] ([ID.assignment])"
 			else
 				scanned_user ="Unknown"
@@ -860,7 +859,7 @@ GLOBAL_LIST_EMPTY(allCasters)
 
 /obj/machinery/newscaster/proc/print_paper()
 	SSblackbox.inc("newscaster_newspapers_printed",1)
-	var/obj/item/weapon/newspaper/NEWSPAPER = new /obj/item/weapon/newspaper
+	var/obj/item/newspaper/NEWSPAPER = new /obj/item/newspaper
 	for(var/datum/newscaster/feed_channel/FC in GLOB.news_network.network_channels)
 		NEWSPAPER.news_content += FC
 	if(GLOB.news_network.wanted_issue.active)
@@ -887,7 +886,7 @@ GLOBAL_LIST_EMPTY(allCasters)
 		playsound(loc, 'sound/machines/warning-buzzer.ogg', 75, 1)
 
 
-/obj/item/weapon/newspaper
+/obj/item/newspaper
 	name = "newspaper"
 	desc = "An issue of The Griffon, the newspaper circulating aboard Nanotrasen Space Stations."
 	icon = 'icons/obj/bureaucracy.dmi'
@@ -908,18 +907,18 @@ GLOBAL_LIST_EMPTY(allCasters)
 	var/wantedPhoto
 	var/creationTime
 
-/obj/item/weapon/newspaper/suicide_act(mob/user)
+/obj/item/newspaper/suicide_act(mob/user)
 	user.visible_message("<span class='suicide'>[user] пристально фокусирусируетс&#255; на [src]! Кажетс&#255; [user.p_they()] пытал[user.p_e_5()] сделать судоку... пока [user.p_their()] глаза не загорелись реализацией!</span>")
 	user.say(";ЖУРНАЛИЗМ ЭТО МОЁ ПРИЗВАНИЕ! ВСЕ ВЫСОКО ОЦЕНИВАЮТ НОВО-*ГЛОТЬ*")
 	var/mob/living/carbon/human/H = user
-	var/obj/W = new /obj/item/weapon/reagent_containers/food/drinks/bottle/whiskey(H.loc)
+	var/obj/W = new /obj/item/reagent_containers/food/drinks/bottle/whiskey(H.loc)
 	playsound(H.loc, 'sound/items/drink.ogg', rand(10,50), 1)
 	W.reagents.trans_to(H, W.reagents.total_volume)
 	user.visible_message("<span class='suicide'>[user] залпом выпивает виски! Кажетс&#255; это было лишним.</span>")
 
 	return(TOXLOSS)
 
-/obj/item/weapon/newspaper/attack_self(mob/user)
+/obj/item/newspaper/attack_self(mob/user)
 	if(ishuman(user))
 		var/mob/living/carbon/human/human_user = user
 		var/dat
@@ -1000,7 +999,7 @@ GLOBAL_LIST_EMPTY(allCasters)
 	else
 		to_chat(user, "The paper is full of unintelligible symbols!")
 
-/obj/item/weapon/newspaper/proc/notContent(list/L)
+/obj/item/newspaper/proc/notContent(list/L)
 	if(!L.len)
 		return 0
 	for(var/i=L.len;i>0;i--)
@@ -1014,7 +1013,7 @@ GLOBAL_LIST_EMPTY(allCasters)
 				return 0
 	return 0
 
-/obj/item/weapon/newspaper/Topic(href, href_list)
+/obj/item/newspaper/Topic(href, href_list)
 	var/mob/living/U = usr
 	..()
 	if((src in U.contents) || (isturf(loc) && in_range(src, U)))
@@ -1042,8 +1041,8 @@ GLOBAL_LIST_EMPTY(allCasters)
 		if(ismob(loc))
 			attack_self(loc)
 
-/obj/item/weapon/newspaper/attackby(obj/item/weapon/W, mob/user, params)
-	if(istype(W, /obj/item/weapon/pen))
+/obj/item/newspaper/attackby(obj/item/W, mob/user, params)
+	if(istype(W, /obj/item/pen))
 		if(scribble_page == curr_page)
 			to_chat(user, "<span class='notice'>There's already a scribble in this page... You wouldn't want to make things too cluttered, would you?</span>")
 		else

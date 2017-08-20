@@ -45,8 +45,8 @@
 /area/space)
 "ak" = (
 /obj/structure/table/wood,
-/obj/item/weapon/paper_bin,
-/obj/item/weapon/pen,
+/obj/item/paper_bin,
+/obj/item/pen,
 /turf/open/floor/grass,
 /area/space)
 "al" = (
@@ -62,7 +62,7 @@
 "an" = (
 /obj/structure/table/wood,
 /obj/item/candle,
-/obj/item/weapon/storage/box/matches,
+/obj/item/storage/box/matches,
 /turf/open/floor/grass,
 /area/space)
 "ao" = (
@@ -167,7 +167,7 @@
 /turf/open/floor/plating,
 /area/space)
 "aH" = (
-/obj/item/weapon/twohanded/required/kirbyplants{
+/obj/item/twohanded/required/kirbyplants{
 	icon_state = "plant-22"
 	},
 /turf/open/floor/plasteel/black,
@@ -211,9 +211,9 @@
 	dir = 4
 	},
 /obj/structure/table,
-/obj/item/weapon/storage/firstaid,
+/obj/item/storage/firstaid,
 /obj/item/device/flashlight,
-/obj/item/weapon/crowbar,
+/obj/item/crowbar,
 /obj/machinery/light,
 /obj/structure/cable{
 	d1 = 4;
@@ -320,7 +320,7 @@
 /area/space)
 "aW" = (
 /obj/structure/table/wood,
-/obj/item/weapon/book/manual/wiki/security_space_law,
+/obj/item/book/manual/wiki/security_space_law,
 /turf/open/floor/carpet,
 /area/space)
 "aX" = (
@@ -356,8 +356,8 @@
 /area/space)
 "ba" = (
 /obj/structure/table/wood,
-/obj/item/weapon/paper_bin,
-/obj/item/weapon/pen,
+/obj/item/paper_bin,
+/obj/item/pen,
 /obj/structure/cable{
 	d1 = 1;
 	d2 = 2;
@@ -369,7 +369,7 @@
 /area/space)
 "bb" = (
 /obj/structure/table/wood,
-/obj/item/weapon/twohanded/required/kirbyplants{
+/obj/item/twohanded/required/kirbyplants{
 	icon_state = "plant-21";
 	layer = 4.1;
 	pixel_y = 10
@@ -501,10 +501,10 @@
 	pixel_x = -30;
 	tag = "icon-nboard00 (WEST)"
 	},
-/obj/item/weapon/paper/notice/confession,
-/obj/item/weapon/paper/notice/dismissal,
-/obj/item/weapon/paper/notice/job_application,
-/obj/item/weapon/paper/notice/request,
+/obj/item/paper/notice/confession,
+/obj/item/paper/notice/dismissal,
+/obj/item/paper/notice/job_application,
+/obj/item/paper/notice/request,
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -603,21 +603,21 @@
 /area/space)
 "bx" = (
 /obj/structure/table/wood,
-/obj/item/weapon/storage/photo_album,
+/obj/item/storage/photo_album,
 /obj/item/device/camera,
-/obj/item/weapon/pinpointer,
-/obj/item/weapon/hand_tele,
+/obj/item/pinpointer,
+/obj/item/hand_tele,
 /turf/open/floor/plasteel/arcade_carpet,
 /area/space)
 "by" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet/captain,
+/obj/item/bedsheet/captain,
 /obj/machinery/camera{
 	c_tag = "Captain's Quarters";
 	dir = 8;
 	network = list("SS13")
 	},
-/obj/item/weapon/storage/secure/safe{
+/obj/item/storage/secure/safe{
 	pixel_x = 31;
 	pixel_y = 0
 	},
@@ -647,7 +647,7 @@
 	pixel_x = -6;
 	pixel_y = 5
 	},
-/obj/item/weapon/card/id/captains_spare,
+/obj/item/card/id/captains_spare,
 /turf/open/floor/plasteel/arcade_carpet,
 /area/space)
 "bC" = (
@@ -671,7 +671,7 @@
 	},
 /obj/machinery/door/window/northleft,
 /obj/machinery/atmospherics/components/unary/vent_pump/on,
-/obj/item/weapon/bikehorn/rubberducky,
+/obj/item/bikehorn/rubberducky,
 /turf/open/floor/plasteel/showroomfloor,
 /area/space)
 "bE" = (
@@ -707,7 +707,7 @@
 /area/space)
 "bH" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet/hop,
+/obj/item/bedsheet/hop,
 /obj/effect/landmark/start{
 	name = "Head of Personnel"
 	},
@@ -774,7 +774,7 @@
 /area/space)
 "bN" = (
 /obj/structure/closet/secure_closet/hop,
-/obj/item/weapon/bedsheet/ian,
+/obj/item/bedsheet/ian,
 /obj/machinery/light{
 	dir = 1
 	},

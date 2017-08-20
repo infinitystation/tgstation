@@ -25,28 +25,28 @@
 	lootdoubles = FALSE
 
 	loot = list(
-				/obj/item/weapon/gun/ballistic/automatic/pistol = 8,
-				/obj/item/weapon/gun/ballistic/shotgun/automatic/combat = 5,
-				/obj/item/weapon/gun/ballistic/revolver/mateba,
-				/obj/item/weapon/gun/ballistic/automatic/pistol/deagle
+				/obj/item/gun/ballistic/automatic/pistol = 8,
+				/obj/item/gun/ballistic/shotgun/automatic/combat = 5,
+				/obj/item/gun/ballistic/revolver/mateba,
+				/obj/item/gun/ballistic/automatic/pistol/deagle
 				)
 
 /obj/effect/spawner/lootdrop/gambling
 	name = "gambling valuables spawner"
 	loot = list(
-				/obj/item/weapon/gun/ballistic/revolver/russian = 5,
-				/obj/item/weapon/storage/box/syndie_kit/throwing_weapons = 1,
+				/obj/item/gun/ballistic/revolver/russian = 5,
+				/obj/item/storage/box/syndie_kit/throwing_weapons = 1,
 				/obj/item/toy/cards/deck/syndicate = 2
 				)
 
 /obj/effect/spawner/lootdrop/grille_or_trash
 	name = "maint grille or trash spawner"
 	loot = list(/obj/structure/grille = 5,
-			/obj/item/weapon/cigbutt = 1,
+			/obj/item/cigbutt = 1,
 			/obj/item/trash/cheesie = 1,
 			/obj/item/trash/candy = 1,
 			/obj/item/trash/chips = 1,
-			/obj/item/trash/deadmouse = 1,
+			/obj/item/reagent_containers/food/snacks/deadmouse = 1,
 			/obj/item/trash/pistachios = 1,
 			/obj/item/trash/plate = 1,
 			/obj/item/trash/popcorn = 1,
@@ -59,25 +59,25 @@
 	lootcount = 3
 	lootdoubles = FALSE
 	var/soups = list(
-			/obj/item/weapon/reagent_containers/food/snacks/soup/beet,
-			/obj/item/weapon/reagent_containers/food/snacks/soup/sweetpotato,
-			/obj/item/weapon/reagent_containers/food/snacks/soup/stew,
-			/obj/item/weapon/reagent_containers/food/snacks/soup/hotchili,
-			/obj/item/weapon/reagent_containers/food/snacks/soup/nettle,
-			/obj/item/weapon/reagent_containers/food/snacks/soup/meatball)
+			/obj/item/reagent_containers/food/snacks/soup/beet,
+			/obj/item/reagent_containers/food/snacks/soup/sweetpotato,
+			/obj/item/reagent_containers/food/snacks/soup/stew,
+			/obj/item/reagent_containers/food/snacks/soup/hotchili,
+			/obj/item/reagent_containers/food/snacks/soup/nettle,
+			/obj/item/reagent_containers/food/snacks/soup/meatball)
 	var/salads = list(
-			/obj/item/weapon/reagent_containers/food/snacks/salad/herbsalad,
-			/obj/item/weapon/reagent_containers/food/snacks/salad/validsalad,
-			/obj/item/weapon/reagent_containers/food/snacks/salad/fruit,
-			/obj/item/weapon/reagent_containers/food/snacks/salad/jungle,
-			/obj/item/weapon/reagent_containers/food/snacks/salad/aesirsalad)
+			/obj/item/reagent_containers/food/snacks/salad/herbsalad,
+			/obj/item/reagent_containers/food/snacks/salad/validsalad,
+			/obj/item/reagent_containers/food/snacks/salad/fruit,
+			/obj/item/reagent_containers/food/snacks/salad/jungle,
+			/obj/item/reagent_containers/food/snacks/salad/aesirsalad)
 	var/mains = list(
-			/obj/item/weapon/reagent_containers/food/snacks/bearsteak,
-			/obj/item/weapon/reagent_containers/food/snacks/enchiladas,
-			/obj/item/weapon/reagent_containers/food/snacks/stewedsoymeat,
-			/obj/item/weapon/reagent_containers/food/snacks/burger/bigbite,
-			/obj/item/weapon/reagent_containers/food/snacks/burger/superbite,
-			/obj/item/weapon/reagent_containers/food/snacks/burger/fivealarm)
+			/obj/item/reagent_containers/food/snacks/bearsteak,
+			/obj/item/reagent_containers/food/snacks/enchiladas,
+			/obj/item/reagent_containers/food/snacks/stewedsoymeat,
+			/obj/item/reagent_containers/food/snacks/burger/bigbite,
+			/obj/item/reagent_containers/food/snacks/burger/superbite,
+			/obj/item/reagent_containers/food/snacks/burger/fivealarm)
 
 /obj/effect/spawner/lootdrop/three_course_meal/Initialize(mapload)
 	loot = list(pick(soups) = 1,pick(salads) = 1,pick(mains) = 1)
@@ -103,40 +103,40 @@
 /obj/effect/spawner/lootdrop/trash
 	name = "Random Trash"
 	desc = "This is a random Trash"
-	icon = 'icons/obj/items.dmi'
+	icon = 'icons/obj/items_and_weapons.dmi'
 	icon_state = "latexballon_bursted"
 	loot = list(
 				/obj/item/bodybag = 1,
 				/obj/item/clothing/glasses/sunglasses = 1,
-				/obj/item/weapon/shard = 5,
+				/obj/item/shard = 5,
 				/obj/item/trash/can = 10,
-				/obj/item/trash/deadmouse = 3,
+				/obj/item/reagent_containers/food/snacks/deadmouse = 3,
 				/obj/item/trash/pistachios = 4,
 				/obj/item/trash/raisins = 8,
 				/obj/item/trash/semki = 2,
 				/obj/item/trash/sosjerky = 14,
 				/obj/item/trash/candy = 25,
-				/obj/item/weapon/storage/fancy/cigarettes = 2,
+				/obj/item/storage/fancy/cigarettes = 2,
 				/obj/item/stack/rods = 4,
 				/obj/item/stack/sheet/cardboard =7,
 				/obj/item/stack/packageWrap = 4,
-				/obj/item/weapon/c_tube = 3,
-				/obj/item/weapon/coin = 12,
-				/obj/item/weapon/paper = 29,
+				/obj/item/c_tube = 3,
+				/obj/item/coin = 12,
+				/obj/item/paper = 29,
 				"" = 8
 				)
 
 /obj/effect/spawner/lootdrop/fall
 	name = "Random Fall ship parts"
 	desc = "This is a random falled ship parts"
-	icon = 'icons/obj/items.dmi'
+	icon = 'icons/obj/items_and_weapons.dmi'
 	icon_state = "latexballon_bursted"
 	color = "Gray"
 	loot = list(
 				/obj/item/stack/rods = 4,
 				/obj/item/stack/sheet/metal = 5,
 				/obj/item/stack/cable_coil/cut = 3,
-				/obj/item/weapon/shard = 1,
+				/obj/item/shard = 1,
 				/obj/effect/decal/cleanable/robot_debris = 4,
 				"" = 6
 				)
@@ -147,30 +147,30 @@
 	icon = 'icons/obj/hydroponics/harvest.dmi'
 	icon_state = "tea_aspera_leaves"
 	loot = list(
-				/obj/item/weapon/reagent_containers/food/condiment/flour = 1,
-				/obj/item/weapon/reagent_containers/food/condiment/milk = 1,
-				/obj/item/weapon/reagent_containers/food/snacks/breadslice/plain = 2,
-				/obj/item/weapon/reagent_containers/food/snacks/breadslice/meat = 1,
-				/obj/item/weapon/reagent_containers/food/snacks/sandwich = 2,
-				/obj/item/weapon/reagent_containers/food/snacks/cheesewedge = 1,
-				/obj/item/weapon/reagent_containers/food/snacks/egg = 2,
-				/obj/item/weapon/reagent_containers/food/snacks/sausage = 1,
-				/obj/item/weapon/reagent_containers/food/drinks/beer = 2,
-				/obj/item/weapon/reagent_containers/food/snacks/meat/slab = 1,
-				/obj/item/weapon/reagent_containers/food/snacks/meat/rawcutlet = 2,
-				/obj/item/weapon/reagent_containers/food/snacks/grown/carrot = 1,
-				/obj/item/weapon/reagent_containers/food/snacks/grown/potato =2,
-				/obj/item/weapon/reagent_containers/food/snacks/grown/cabbage = 1,
-				/obj/item/weapon/reagent_containers/food/snacks/grown/tomato = 1,
-				/obj/item/weapon/reagent_containers/food/snacks/grown/citrus/orange = 2,
-				/obj/item/weapon/reagent_containers/food/snacks/grown/apple = 2,
-				/obj/item/weapon/reagent_containers/food/drinks/drinkingglass = 2,
-				/obj/item/weapon/reagent_containers/food/snacks/cookie = 2,
-				/obj/item/weapon/reagent_containers/food/snacks/soup/beet = 1,
-				/obj/item/weapon/reagent_containers/food/snacks/pizzaslice/vegetable = 1,
-				/obj/item/weapon/reagent_containers/food/snacks/pizzaslice/meat = 2,
-				/obj/item/weapon/reagent_containers/food/snacks/omelette = 1,
-				/obj/item/weapon/reagent_containers/food/snacks/cracker = 1,
+				/obj/item/reagent_containers/food/condiment/flour = 1,
+				/obj/item/reagent_containers/food/condiment/milk = 1,
+				/obj/item/reagent_containers/food/snacks/breadslice/plain = 2,
+				/obj/item/reagent_containers/food/snacks/breadslice/meat = 1,
+				/obj/item/reagent_containers/food/snacks/sandwich = 2,
+				/obj/item/reagent_containers/food/snacks/cheesewedge = 1,
+				/obj/item/reagent_containers/food/snacks/egg = 2,
+				/obj/item/reagent_containers/food/snacks/sausage = 1,
+				/obj/item/reagent_containers/food/drinks/beer = 2,
+				/obj/item/reagent_containers/food/snacks/meat/slab = 1,
+				/obj/item/reagent_containers/food/snacks/meat/rawcutlet = 2,
+				/obj/item/reagent_containers/food/snacks/grown/carrot = 1,
+				/obj/item/reagent_containers/food/snacks/grown/potato =2,
+				/obj/item/reagent_containers/food/snacks/grown/cabbage = 1,
+				/obj/item/reagent_containers/food/snacks/grown/tomato = 1,
+				/obj/item/reagent_containers/food/snacks/grown/citrus/orange = 2,
+				/obj/item/reagent_containers/food/snacks/grown/apple = 2,
+				/obj/item/reagent_containers/food/drinks/drinkingglass = 2,
+				/obj/item/reagent_containers/food/snacks/cookie = 2,
+				/obj/item/reagent_containers/food/snacks/soup/beet = 1,
+				/obj/item/reagent_containers/food/snacks/pizzaslice/vegetable = 1,
+				/obj/item/reagent_containers/food/snacks/pizzaslice/meat = 2,
+				/obj/item/reagent_containers/food/snacks/omelette = 1,
+				/obj/item/reagent_containers/food/snacks/cracker = 1,
 				"" = 5
 				)
 
@@ -210,14 +210,14 @@
 				/obj/item/stack/sheet/greatergem = 1,
 				/obj/item/stack/sheet/mineral/adamantine = 2,
 				/obj/item/stack/sheet/xenochitin = 2,
-				/obj/item/weapon/restraints/handcuffs/alien = 1,
+				/obj/item/restraints/handcuffs/alien = 1,
 				/obj/item/bodybag/bluespace = 1,
 				/obj/item/device/assembly/control/massdriver = 1,
 				/obj/item/device/assembly/health = 1,
 				/obj/item/device/assembly/prox_sensor = 2,
 				/obj/item/device/assembly/signaler = 2,
 				/obj/item/stack/rods = 3,
-				/obj/item/weapon/crowbar/large = 1,
+				/obj/item/crowbar/large = 1,
 				"" = 6
 				)
 

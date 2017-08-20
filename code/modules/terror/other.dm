@@ -4,9 +4,9 @@
 	fitting = "floor"
 	layer = 2
 	desc = "A small floor lighting fixture."
-	light_type = /obj/item/weapon/light/bulb
+	light_type = /obj/item/light/bulb
 
-/obj/item/weapon/melee/chainofcommand/whip
+/obj/item/melee/chainofcommand/whip
 	name = "whip"
 	desc = "Mrrr..."
 	icon_state = "chain"
@@ -23,7 +23,7 @@
 	scan_range = 15
 	obj_integrity = 100
 	max_integrity = 100
-	installation = /obj/item/weapon/gun/energy/laser
+	installation = /obj/item/gun/energy/laser
 	faction = "neutral"
 
 /obj/machinery/porta_turret/heavy/central_command
@@ -340,7 +340,7 @@
 	req_tech = list("bluespace" = 3, "materials" = 5)
 	build_type = PROTOLATHE
 	materials = list(MAT_GOLD = 2000, MAT_DIAMOND = 1000, MAT_URANIUM = 150)
-	build_path = /obj/item/weapon/storage/belt/holding
+	build_path = /obj/item/storage/belt/holding
 	category = list("Bluespace Designs")
 
 /obj/structure/closet/secure_closet/rnd_st
@@ -395,7 +395,7 @@
 	visor_flags_inv = HIDEFACE|HIDEFACIALHAIR
 	flags_cover = MASKCOVERSEYES | MASKCOVERSMOUTH
 	resistance_flags = FIRE_PROOF
-	flags = BLOCK_GAS_SMOKE_EFFECT
+	flags_1 = BLOCK_GAS_SMOKE_EFFECT_1
 
 /obj/item/clothing/mask/killer
 	name = "killer's mask"
@@ -408,7 +408,7 @@
 	visor_flags_inv = HIDEFACE|HIDEFACIALHAIR
 	flags_cover = MASKCOVERSEYES | MASKCOVERSMOUTH
 	resistance_flags = FIRE_PROOF
-	flags = BLOCK_GAS_SMOKE_EFFECT
+	flags_1 = BLOCK_GAS_SMOKE_EFFECT_1
 
 /obj/item/clothing/suit/killer_suit
 	name = "killer robes"
@@ -418,10 +418,10 @@
 	icon = 'icons/obj/clothing/infinity_work.dmi'
 	worn_icon = 'icons/mob/infinity_work.dmi'
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS|NECK
-	allowed = list(/obj/item/weapon/kitchen/knife,/obj/item/bodypart/head,)
+	allowed = list(/obj/item/kitchen/knife,/obj/item/bodypart/head,)
 	armor = list(melee = 20, bullet = 10, laser = 25,energy = 30, bomb = 10, bio = 65, rad = 0, fire = 10, acid = 10)
 
-/obj/item/weapon/cultivator/killer
+/obj/item/cultivator/killer
 	name = "hook"
 	desc = "Необычно острый и блесст&#255;щий на свете крюк..."
 	icon = 'icons/obj/infinity_weapons.dmi'
@@ -439,23 +439,23 @@
 	name = "enemy shuttle console"
 	icon_screen = "syndishuttle"
 	icon_keyboard = "syndie_key"
-	circuit = /obj/item/weapon/circuitboard/computer/enemy_shuttle
+	circuit = /obj/item/circuitboard/computer/enemy_shuttle
 	shuttleId = "enemy"
 	possible_destinations = "enemy_home;enemy_station;enemy_lavaland;enemy_station_space"
 
 	light_color = LIGHT_COLOR_RED
 
-/obj/item/weapon/circuitboard/computer/enemy_shuttle
+/obj/item/circuitboard/computer/enemy_shuttle
 	name = "Enemy Shuttle Console (Computer Board)"
 	build_path = /obj/machinery/computer/shuttle/enemy
 
 /obj/machinery/computer/shuttle/science
 	name = "science shuttle console"
-	circuit = /obj/item/weapon/circuitboard/computer/science_shuttle
+	circuit = /obj/item/circuitboard/computer/science_shuttle
 	shuttleId = "science"
 	possible_destinations = "science_home;science_lab;science_space;sciece_arch"
 
-/obj/item/weapon/circuitboard/computer/science_shuttle
+/obj/item/circuitboard/computer/science_shuttle
 	name = "Science Shuttle Console (Computer Board)"
 	build_path = /obj/machinery/computer/shuttle/science
 
@@ -487,7 +487,7 @@
 	radiation_pulse(get_turf(src), 2, 4, 8)
 
 /obj/machinery/tiberium/deconstruct(disassembled = FALSE)
-	new /obj/item/weapon/ore/tiberium (loc, 2)
+	new /obj/item/ore/tiberium (loc, 2)
 	qdel(src)
 
 /obj/structure/fluff/shuttle_AI

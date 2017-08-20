@@ -19,7 +19,7 @@
 /turf/open/floor/plasteel/terror/necro/cult/outdoor,
 /area/ruin/powered)
 "af" = (
-/obj/item/weapon/paper{
+/obj/item/paper{
 	info = "you're is not ready for hell, <b>COMING SOON</b>"
 	},
 /turf/open/floor/plasteel/terror/necro/cult/outdoor,
@@ -244,11 +244,11 @@
 /area/ruin/powered)
 "aM" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/storage/firstaid/regular{
+/obj/item/storage/firstaid/regular{
 	pixel_x = 3;
 	pixel_y = 3
 	},
-/obj/item/weapon/storage/firstaid/regular{
+/obj/item/storage/firstaid/regular{
 	pixel_x = 3;
 	pixel_y = 3
 	},
@@ -280,7 +280,7 @@
 /area/ruin/powered)
 "aQ" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/storage/firstaid/o2{
+/obj/item/storage/firstaid/o2{
 	pixel_x = 3;
 	pixel_y = 3
 	},
@@ -430,7 +430,7 @@
 /area/ruin/powered)
 "bl" = (
 /obj/machinery/vending/snack{
-	products = list(/obj/item/weapon/reagent_containers/food/snacks/candy = 2, /obj/item/weapon/reagent_containers/food/drinks/dry_ramen = 1, /obj/item/weapon/reagent_containers/food/snacks/chips = 0, /obj/item/weapon/reagent_containers/food/snacks/sosjerky = 1, /obj/item/weapon/reagent_containers/food/snacks/no_raisin = 1, /obj/item/weapon/reagent_containers/food/snacks/spacetwinkie = 2, /obj/item/weapon/reagent_containers/food/snacks/cheesiehonkers = 0)
+	products = list(/obj/item/reagent_containers/food/snacks/candy = 2, /obj/item/reagent_containers/food/drinks/dry_ramen = 1, /obj/item/reagent_containers/food/snacks/chips = 0, /obj/item/reagent_containers/food/snacks/sosjerky = 1, /obj/item/reagent_containers/food/snacks/no_raisin = 1, /obj/item/reagent_containers/food/snacks/spacetwinkie = 2, /obj/item/reagent_containers/food/snacks/cheesiehonkers = 0)
 	},
 /turf/open/floor/plasteel/terror/necro/blue/corner{
 	tag = "icon-bluecorner (NORTH)";
@@ -497,7 +497,7 @@
 /area/ruin/powered)
 "bu" = (
 /obj/machinery/vending/coffee{
-	products = list(/obj/item/weapon/reagent_containers/food/drinks/coffee = 3, /obj/item/weapon/reagent_containers/food/drinks/mug/tea = 10, /obj/item/weapon/reagent_containers/food/drinks/mug/coco = 7)
+	products = list(/obj/item/reagent_containers/food/drinks/coffee = 3, /obj/item/reagent_containers/food/drinks/mug/tea = 10, /obj/item/reagent_containers/food/drinks/mug/coco = 7)
 	},
 /turf/open/floor/plasteel/terror/necro/warning/corner,
 /area/ruin/powered)
@@ -539,7 +539,7 @@
 	icon_state = "rwindow";
 	dir = 4
 	},
-/obj/item/weapon/storage/box/donkpockets,
+/obj/item/storage/box/donkpockets,
 /turf/open/floor/plasteel/terror/necro/darkvault{
 	tag = "icon-vault (WEST)";
 	icon_state = "vault";
@@ -686,7 +686,7 @@
 /turf/open/floor/plasteel/terror/necro/darkvault,
 /area/ruin/powered)
 "bT" = (
-/obj/item/weapon/shard,
+/obj/item/shard,
 /obj/effect/decal/cleanable/blood/footprints{
 	tag = "icon-bloodclaw1 (WEST)";
 	icon_state = "bloodclaw1";
@@ -753,12 +753,12 @@
 /area/ruin/powered)
 "cb" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/shard,
+/obj/item/shard,
 /obj/item/stack/rods,
 /obj/item/stack/cable_coil{
 	amount = 1
 	},
-/obj/item/weapon/electronics/airlock,
+/obj/item/electronics/airlock,
 /obj/structure/fans/tiny/invisible,
 /turf/open/floor/plasteel/terror/necro/darkvault{
 	tag = "icon-vault (WEST)";
@@ -788,9 +788,9 @@
 /obj/item/stack/sheet/metal{
 	amount = 4
 	},
-/obj/item/weapon/storage/firstaid/o2,
-/obj/item/weapon/tank/internals/emergency_oxygen,
-/obj/item/weapon/tank/internals/emergency_oxygen,
+/obj/item/storage/firstaid/o2,
+/obj/item/tank/internals/emergency_oxygen,
+/obj/item/tank/internals/emergency_oxygen,
 /turf/open/floor/plasteel/terror/necro/red/corner{
 	tag = "icon-redcorner (WEST)";
 	icon_state = "redcorner";
@@ -835,7 +835,7 @@
 /area/ruin/powered)
 "cl" = (
 /obj/structure/table,
-/obj/item/weapon/folder/blue,
+/obj/item/folder/blue,
 /turf/open/floor/plasteel/terror/necro/black,
 /area/ruin/powered)
 "cm" = (
@@ -878,10 +878,10 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
-/obj/item/weapon/paper_bin{
+/obj/item/paper_bin{
 	pixel_y = 7
 	},
-/obj/item/weapon/pen,
+/obj/item/pen,
 /turf/open/floor/plasteel/terror/necro/darkvault{
 	tag = "icon-vault (WEST)";
 	icon_state = "vault";
@@ -926,10 +926,10 @@
 /area/ruin/powered)
 "cw" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/shard,
-/obj/item/weapon/shard,
+/obj/item/shard,
+/obj/item/shard,
 /obj/item/stack/rods,
-/obj/item/weapon/electronics/airlock,
+/obj/item/electronics/airlock,
 /obj/item/stack/cable_coil{
 	amount = 1
 	},
@@ -983,7 +983,7 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
-/obj/item/weapon/folder/black,
+/obj/item/folder/black,
 /turf/open/floor/plasteel/terror/necro/darkvault{
 	tag = "icon-vault (WEST)";
 	icon_state = "vault";
@@ -1064,7 +1064,7 @@
 /area/ruin/powered)
 "cL" = (
 /obj/machinery/vending/snack{
-	products = list(/obj/item/weapon/reagent_containers/food/snacks/candy = 2, /obj/item/weapon/reagent_containers/food/drinks/dry_ramen = 1, /obj/item/weapon/reagent_containers/food/snacks/chips = 0, /obj/item/weapon/reagent_containers/food/snacks/sosjerky = 1, /obj/item/weapon/reagent_containers/food/snacks/no_raisin = 1, /obj/item/weapon/reagent_containers/food/snacks/spacetwinkie = 2, /obj/item/weapon/reagent_containers/food/snacks/cheesiehonkers = 0)
+	products = list(/obj/item/reagent_containers/food/snacks/candy = 2, /obj/item/reagent_containers/food/drinks/dry_ramen = 1, /obj/item/reagent_containers/food/snacks/chips = 0, /obj/item/reagent_containers/food/snacks/sosjerky = 1, /obj/item/reagent_containers/food/snacks/no_raisin = 1, /obj/item/reagent_containers/food/snacks/spacetwinkie = 2, /obj/item/reagent_containers/food/snacks/cheesiehonkers = 0)
 	},
 /turf/open/floor/plasteel/terror/necro/darkvault{
 	tag = "icon-vault (WEST)";
@@ -1074,7 +1074,7 @@
 /area/ruin/powered)
 "cM" = (
 /obj/machinery/vending/coffee{
-	products = list(/obj/item/weapon/reagent_containers/food/drinks/coffee = 3, /obj/item/weapon/reagent_containers/food/drinks/mug/tea = 10, /obj/item/weapon/reagent_containers/food/drinks/mug/coco = 7)
+	products = list(/obj/item/reagent_containers/food/drinks/coffee = 3, /obj/item/reagent_containers/food/drinks/mug/tea = 10, /obj/item/reagent_containers/food/drinks/mug/coco = 7)
 	},
 /obj/machinery/light{
 	dir = 1
@@ -1098,7 +1098,7 @@
 /area/ruin/powered)
 "cP" = (
 /obj/structure/table,
-/obj/item/weapon/folder/blue,
+/obj/item/folder/blue,
 /turf/open/floor/plasteel{
 	dir = 8;
 	icon_state = "vault";
@@ -1116,11 +1116,11 @@
 	},
 /area/ruin/powered)
 "cR" = (
-/obj/item/weapon/screwdriver{
+/obj/item/screwdriver{
 	pixel_y = 12
 	},
 /obj/item/device/multitool,
-/obj/item/weapon/wirecutters,
+/obj/item/wirecutters,
 /obj/structure/table,
 /turf/open/floor/plasteel/terror/necro/darkred/side{
 	tag = "icon-darkred (WEST)";
@@ -1251,16 +1251,16 @@
 /area/ruin/powered)
 "dg" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/folder/blue,
+/obj/item/folder/blue,
 /turf/open/floor/plasteel/terror/necro/darkred/corner,
 /area/ruin/powered)
 "dh" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/paper_bin{
+/obj/item/paper_bin{
 	pixel_x = -3;
 	pixel_y = 7
 	},
-/obj/item/weapon/pen,
+/obj/item/pen,
 /turf/open/floor/plasteel/terror/necro/darkred/corner{
 	tag = "icon-darkredcorners (WEST)";
 	icon_state = "darkredcorners";
@@ -1315,7 +1315,7 @@
 /area/ruin/powered)
 "dn" = (
 /obj/machinery/vending/security{
-	products = list(/obj/item/weapon/restraints/handcuffs = 1, /obj/item/weapon/restraints/handcuffs/cable/zipties = 0, /obj/item/weapon/grenade/flashbang = 2, /obj/item/device/assembly/flash/handheld = 1, /obj/item/weapon/reagent_containers/food/snacks/donut = 4, /obj/item/weapon/storage/box/evidence = 1, /obj/item/device/flashlight/seclite = 3, /obj/item/weapon/restraints/legcuffs/bola/energy = 0);
+	products = list(/obj/item/restraints/handcuffs = 1, /obj/item/restraints/handcuffs/cable/zipties = 0, /obj/item/grenade/flashbang = 2, /obj/item/device/assembly/flash/handheld = 1, /obj/item/reagent_containers/food/snacks/donut = 4, /obj/item/storage/box/evidence = 1, /obj/item/device/flashlight/seclite = 3, /obj/item/restraints/legcuffs/bola/energy = 0);
 	req_access_txt = "202"
 	},
 /turf/open/floor/plasteel/terror/necro/darkred/corner{
@@ -1350,11 +1350,11 @@
 /area/ruin/powered)
 "ds" = (
 /obj/structure/table,
-/obj/item/weapon/paper_bin{
+/obj/item/paper_bin{
 	pixel_x = -3;
 	pixel_y = 7
 	},
-/obj/item/weapon/pen,
+/obj/item/pen,
 /obj/machinery/button/door{
 	id = "lab_arms_lock";
 	name = "Armory lockdown";
@@ -1411,7 +1411,7 @@
 /area/ruin/powered)
 "dy" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet/red,
+/obj/item/bedsheet/red,
 /turf/open/floor/plasteel/terror/necro/darkred/side{
 	tag = "icon-darkred (EAST)";
 	icon_state = "darkred";
@@ -1420,7 +1420,7 @@
 /area/ruin/powered)
 "dz" = (
 /obj/structure/rack,
-/obj/item/weapon/gun/energy/taser,
+/obj/item/gun/energy/taser,
 /turf/open/floor/plasteel/terror/necro/darkred/side{
 	tag = "icon-darkred (WEST)";
 	icon_state = "darkred";
@@ -1429,7 +1429,7 @@
 /area/ruin/powered)
 "dA" = (
 /obj/structure/rack,
-/obj/item/weapon/gun/ballistic/automatic/mg88{
+/obj/item/gun/ballistic/automatic/mg88{
 	pixel_x = -3;
 	pixel_y = 3
 	},
@@ -1571,11 +1571,11 @@
 	pixel_y = 32
 	},
 /obj/structure/table/glass,
-/obj/item/weapon/storage/box/beakers{
+/obj/item/storage/box/beakers{
 	pixel_x = 2;
 	pixel_y = 2
 	},
-/obj/item/weapon/storage/box/syringes,
+/obj/item/storage/box/syringes,
 /obj/machinery/light{
 	dir = 8
 	},
@@ -1614,10 +1614,10 @@
 	pixel_y = 30
 	},
 /obj/structure/table/glass,
-/obj/item/weapon/book/manual/wiki/infections,
-/obj/item/weapon/reagent_containers/syringe/antiviral,
-/obj/item/weapon/reagent_containers/dropper,
-/obj/item/weapon/reagent_containers/spray/cleaner,
+/obj/item/book/manual/wiki/infections,
+/obj/item/reagent_containers/syringe/antiviral,
+/obj/item/reagent_containers/dropper,
+/obj/item/reagent_containers/spray/cleaner,
 /turf/open/floor/plasteel/warnwhite,
 /area/medical/virology)
 "dX" = (
@@ -1679,8 +1679,8 @@
 /area/medical/virology)
 "ee" = (
 /obj/structure/table/glass,
-/obj/item/weapon/folder/white,
-/obj/item/weapon/pen/red,
+/obj/item/folder/white,
+/obj/item/pen/red,
 /obj/item/stack/sheet/mineral/plasma{
 	amount = 5
 	},
@@ -1756,7 +1756,7 @@
 /area/medical/virology)
 "en" = (
 /obj/structure/table/glass,
-/obj/item/weapon/paper_bin,
+/obj/item/paper_bin,
 /obj/machinery/airalarm{
 	dir = 4;
 	locked = 0;
@@ -1802,7 +1802,7 @@
 	pixel_y = 0
 	},
 /obj/structure/table/glass,
-/obj/item/weapon/hand_labeler,
+/obj/item/hand_labeler,
 /obj/item/device/radio/headset/headset_med,
 /obj/machinery/airalarm{
 	frequency = 1439;
@@ -1852,7 +1852,7 @@
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
 	dir = 2
 	},
-/obj/item/weapon/twohanded/required/kirbyplants{
+/obj/item/twohanded/required/kirbyplants{
 	icon_state = "plant-21";
 	layer = 4.1
 	},
@@ -1862,13 +1862,13 @@
 /area/medical/virology)
 "ew" = (
 /obj/structure/rack,
-/obj/item/weapon/crowbar/red,
+/obj/item/crowbar/red,
 /obj/machinery/light_switch{
 	pixel_x = 0;
 	pixel_y = 26
 	},
-/obj/item/weapon/wrench,
-/obj/item/weapon/restraints/handcuffs,
+/obj/item/wrench,
+/obj/item/restraints/handcuffs,
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
 	dir = 1
 	},
@@ -1889,7 +1889,7 @@
 /turf/open/floor/plating,
 /area/medical/virology)
 "ey" = (
-/obj/item/weapon/twohanded/required/kirbyplants{
+/obj/item/twohanded/required/kirbyplants{
 	icon_state = "plant-10";
 	layer = 4.1
 	},
@@ -1964,9 +1964,9 @@
 /area/medical/virology)
 "eG" = (
 /obj/structure/table/glass,
-/obj/item/weapon/folder/white,
-/obj/item/weapon/folder/white,
-/obj/item/weapon/pen/red,
+/obj/item/folder/white,
+/obj/item/folder/white,
+/obj/item/pen/red,
 /obj/structure/cable/yellow{
 	d1 = 2;
 	d2 = 4;
@@ -2185,7 +2185,7 @@
 /area/medical/virology)
 "eV" = (
 /obj/structure/table/glass,
-/obj/item/weapon/paper_bin,
+/obj/item/paper_bin,
 /obj/structure/cable/yellow{
 	d1 = 1;
 	d2 = 2;
@@ -2422,7 +2422,7 @@
 /area/space)
 "fr" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/obj/item/weapon/bedsheet/medical,
+/obj/item/bedsheet/medical,
 /obj/structure/bed,
 /turf/open/floor/plasteel{
 	icon_state = "freezerfloor"
@@ -2435,7 +2435,7 @@
 "ft" = (
 /obj/structure/bed,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/obj/item/weapon/bedsheet/medical,
+/obj/item/bedsheet/medical,
 /turf/open/floor/plasteel{
 	icon_state = "freezerfloor"
 	},
@@ -2513,10 +2513,10 @@
 /obj/machinery/newscaster{
 	pixel_x = -30
 	},
-/obj/item/weapon/folder/white,
-/obj/item/weapon/folder/white,
-/obj/item/weapon/paper,
-/obj/item/weapon/pen/red,
+/obj/item/folder/white,
+/obj/item/folder/white,
+/obj/item/paper,
+/obj/item/pen/red,
 /turf/open/floor/plasteel/whitegreen/side{
 	dir = 9
 	},
@@ -2544,7 +2544,7 @@
 /area/medical/virology)
 "fD" = (
 /obj/structure/table/glass,
-/obj/item/weapon/storage/box/donkpockets{
+/obj/item/storage/box/donkpockets{
 	pixel_x = 3;
 	pixel_y = 3
 	},
@@ -2583,19 +2583,19 @@
 /area/medical/virology)
 "fF" = (
 /obj/structure/table/glass,
-/obj/item/weapon/reagent_containers/dropper,
-/obj/item/weapon/reagent_containers/syringe,
-/obj/item/weapon/reagent_containers/glass/beaker,
+/obj/item/reagent_containers/dropper,
+/obj/item/reagent_containers/syringe,
+/obj/item/reagent_containers/glass/beaker,
 /turf/open/floor/plasteel{
 	icon_state = "freezerfloor"
 	},
 /area/medical/virology)
 "fG" = (
 /obj/structure/table/glass,
-/obj/item/weapon/folder/white{
+/obj/item/folder/white{
 	pixel_y = 4
 	},
-/obj/item/weapon/pen/red,
+/obj/item/pen/red,
 /turf/open/floor/plasteel{
 	icon_state = "freezerfloor"
 	},
@@ -2609,7 +2609,7 @@
 /area/medical/virology)
 "fI" = (
 /obj/structure/table/glass,
-/obj/item/weapon/paper_bin,
+/obj/item/paper_bin,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
@@ -2672,7 +2672,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 6
 	},
-/obj/item/weapon/twohanded/required/kirbyplants{
+/obj/item/twohanded/required/kirbyplants{
 	icon_state = "plant-16";
 	layer = 4.1;
 	tag = "icon-plant-16"
@@ -2772,7 +2772,7 @@
 	},
 /area/medical/virology)
 "gc" = (
-/obj/item/weapon/reagent_containers/food/snacks/sosjerky,
+/obj/item/reagent_containers/food/snacks/sosjerky,
 /obj/structure/table/glass,
 /turf/open/floor/plasteel/blackvault{
 	dir = 1

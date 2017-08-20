@@ -77,7 +77,7 @@
 /turf/open/floor/plating,
 /area/space)
 "ap" = (
-/obj/item/weapon/soap,
+/obj/item/soap,
 /obj/structure/window{
 	tag = "icon-window (EAST)";
 	icon_state = "window";
@@ -132,11 +132,11 @@
 	icon_state = "bulb1";
 	dir = 1
 	},
-/obj/item/weapon/bedsheet/red,
+/obj/item/bedsheet/red,
 /turf/open/floor/carpet,
 /area/space)
 "aw" = (
-/obj/item/weapon/soap,
+/obj/item/soap,
 /obj/structure/window{
 	tag = "icon-window (EAST)";
 	icon_state = "window";
@@ -207,11 +207,11 @@
 	icon_state = "bulb1";
 	dir = 1
 	},
-/obj/item/weapon/bedsheet/blue,
+/obj/item/bedsheet/blue,
 /turf/open/floor/carpet,
 /area/space)
 "aD" = (
-/obj/item/weapon/soap,
+/obj/item/soap,
 /obj/structure/window{
 	tag = "icon-window (EAST)";
 	icon_state = "window";
@@ -282,11 +282,11 @@
 	icon_state = "bulb1";
 	dir = 1
 	},
-/obj/item/weapon/bedsheet/black,
+/obj/item/bedsheet/black,
 /turf/open/floor/carpet,
 /area/space)
 "aK" = (
-/obj/item/weapon/soap,
+/obj/item/soap,
 /obj/structure/window{
 	tag = "icon-window (EAST)";
 	icon_state = "window";
@@ -352,7 +352,7 @@
 	})
 "aQ" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet/purple,
+/obj/item/bedsheet/purple,
 /obj/machinery/light/small{
 	tag = "icon-bulb1 (NORTH)";
 	icon_state = "bulb1";
@@ -390,7 +390,7 @@
 /area/space)
 "aX" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet/red,
+/obj/item/bedsheet/red,
 /turf/open/floor/carpet,
 /area/space)
 "aY" = (
@@ -433,7 +433,7 @@
 	})
 "be" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet/blue,
+/obj/item/bedsheet/blue,
 /turf/open/floor/carpet,
 /area/space)
 "bf" = (
@@ -476,7 +476,7 @@
 	})
 "bl" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet/black,
+/obj/item/bedsheet/black,
 /turf/open/floor/carpet,
 /area/space)
 "bm" = (
@@ -519,11 +519,11 @@
 	})
 "bs" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet/purple,
+/obj/item/bedsheet/purple,
 /turf/open/floor/carpet,
 /area/space)
 "bt" = (
-/obj/item/weapon/twohanded/required/kirbyplants{
+/obj/item/twohanded/required/kirbyplants{
 	tag = "icon-plant-02";
 	icon_state = "plant-02"
 	},
@@ -537,7 +537,7 @@
 /turf/open/floor/wood,
 /area/space)
 "bv" = (
-/obj/item/weapon/twohanded/required/kirbyplants{
+/obj/item/twohanded/required/kirbyplants{
 	tag = "icon-plant-16";
 	icon_state = "plant-16"
 	},
@@ -553,7 +553,7 @@
 	name = "Hotel Guest Room 4"
 	})
 "bx" = (
-/obj/item/weapon/twohanded/required/kirbyplants{
+/obj/item/twohanded/required/kirbyplants{
 	tag = "icon-plant-16";
 	icon_state = "plant-16"
 	},
@@ -571,7 +571,7 @@
 	name = "Hotel Guest Room 5"
 	})
 "bz" = (
-/obj/item/weapon/twohanded/required/kirbyplants{
+/obj/item/twohanded/required/kirbyplants{
 	tag = "icon-plant-18";
 	icon_state = "plant-18"
 	},
@@ -603,7 +603,7 @@
 /area/space)
 "bE" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/kitchen/knife{
+/obj/item/kitchen/knife{
 	force = 5;
 	name = "safe knife";
 	throwforce = 2
@@ -632,7 +632,7 @@
 "bI" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber,
 /obj/structure/table/reinforced,
-/obj/item/weapon/kitchen/knife{
+/obj/item/kitchen/knife{
 	force = 5;
 	name = "safe knife";
 	throwforce = 2
@@ -665,7 +665,7 @@
 "bM" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber,
 /obj/structure/table/reinforced,
-/obj/item/weapon/kitchen/knife{
+/obj/item/kitchen/knife{
 	force = 5;
 	name = "safe knife";
 	throwforce = 2
@@ -698,7 +698,7 @@
 "bQ" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber,
 /obj/structure/table/reinforced,
-/obj/item/weapon/kitchen/knife{
+/obj/item/kitchen/knife{
 	force = 5;
 	name = "safe knife";
 	throwforce = 2
@@ -764,8 +764,8 @@
 /area/space)
 "bZ" = (
 /obj/structure/table/wood,
-/obj/item/weapon/paper_bin,
-/obj/item/weapon/pen,
+/obj/item/paper_bin,
+/obj/item/pen,
 /turf/open/floor/wood,
 /area/space)
 "ca" = (
@@ -827,8 +827,8 @@
 	})
 "ch" = (
 /obj/structure/table/wood,
-/obj/item/weapon/paper_bin,
-/obj/item/weapon/pen,
+/obj/item/paper_bin,
+/obj/item/pen,
 /turf/open/floor/wood,
 /area/ruin/hotel/guestroom{
 	name = "Hotel Guest Room 4"
@@ -892,8 +892,8 @@
 	})
 "cp" = (
 /obj/structure/table/wood,
-/obj/item/weapon/paper_bin,
-/obj/item/weapon/pen,
+/obj/item/paper_bin,
+/obj/item/pen,
 /turf/open/floor/wood,
 /area/ruin/hotel/guestroom{
 	name = "Hotel Guest Room 5"
@@ -957,8 +957,8 @@
 	})
 "cx" = (
 /obj/structure/table/wood,
-/obj/item/weapon/paper_bin,
-/obj/item/weapon/pen,
+/obj/item/paper_bin,
+/obj/item/pen,
 /turf/open/floor/wood,
 /area/ruin/hotel/guestroom{
 	name = "Hotel Guest Room 6"
@@ -1465,8 +1465,8 @@
 	})
 "dK" = (
 /obj/structure/table/wood,
-/obj/item/weapon/paper_bin,
-/obj/item/weapon/pen,
+/obj/item/paper_bin,
+/obj/item/pen,
 /turf/open/floor/wood,
 /area/ruin/hotel/guestroom{
 	name = "Hotel Guest Room 2"
@@ -1531,8 +1531,8 @@
 	})
 "dS" = (
 /obj/structure/table/wood,
-/obj/item/weapon/paper_bin,
-/obj/item/weapon/pen,
+/obj/item/paper_bin,
+/obj/item/pen,
 /turf/open/floor/wood,
 /area/ruin/hotel/guestroom{
 	name = "Hotel Guest Room 1"
@@ -1567,7 +1567,7 @@
 /area/space)
 "dZ" = (
 /obj/structure/table,
-/obj/item/weapon/soap,
+/obj/item/soap,
 /turf/open/floor/plasteel/white,
 /area/space)
 "ea" = (
@@ -1601,7 +1601,7 @@
 	scrub_Toxins = 0
 	},
 /obj/structure/table/reinforced,
-/obj/item/weapon/kitchen/knife{
+/obj/item/kitchen/knife{
 	force = 5;
 	name = "safe knife";
 	throwforce = 2
@@ -1651,7 +1651,7 @@
 	scrub_Toxins = 0
 	},
 /obj/structure/table/reinforced,
-/obj/item/weapon/kitchen/knife{
+/obj/item/kitchen/knife{
 	force = 5;
 	name = "safe knife";
 	throwforce = 2
@@ -1689,7 +1689,7 @@
 /turf/open/floor/plasteel/white,
 /area/ruin/hotel/workroom)
 "eq" = (
-/obj/item/weapon/twohanded/required/kirbyplants{
+/obj/item/twohanded/required/kirbyplants{
 	tag = "icon-plant-21";
 	icon_state = "plant-21"
 	},
@@ -1705,7 +1705,7 @@
 	name = "Hotel Guest Room 2"
 	})
 "es" = (
-/obj/item/weapon/twohanded/required/kirbyplants{
+/obj/item/twohanded/required/kirbyplants{
 	tag = "icon-plant-14";
 	icon_state = "plant-14"
 	},
@@ -1830,7 +1830,7 @@
 	})
 "eI" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet/yellow,
+/obj/item/bedsheet/yellow,
 /turf/open/floor/carpet,
 /area/space)
 "eJ" = (
@@ -1867,7 +1867,7 @@
 	})
 "eO" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet/ian,
+/obj/item/bedsheet/ian,
 /turf/open/floor/carpet,
 /area/space)
 "eP" = (
@@ -1908,7 +1908,7 @@
 /turf/open/floor/plasteel/white,
 /area/ruin/hotel/workroom)
 "eU" = (
-/obj/item/weapon/soap,
+/obj/item/soap,
 /obj/structure/window{
 	tag = "icon-window (EAST)";
 	icon_state = "window";
@@ -1972,12 +1972,12 @@
 	})
 "eZ" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet/yellow,
+/obj/item/bedsheet/yellow,
 /obj/machinery/light/small,
 /turf/open/floor/carpet,
 /area/space)
 "fa" = (
-/obj/item/weapon/soap,
+/obj/item/soap,
 /obj/structure/window{
 	tag = "icon-window (EAST)";
 	icon_state = "window";
@@ -2045,7 +2045,7 @@
 	})
 "ff" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet/ian,
+/obj/item/bedsheet/ian,
 /obj/machinery/light/small,
 /turf/open/floor/carpet,
 /area/space)
@@ -2082,12 +2082,12 @@
 /area/space)
 "fm" = (
 /obj/structure/closet/crate,
-/obj/item/weapon/bedsheet/patriot,
+/obj/item/bedsheet/patriot,
 /turf/open/floor/plasteel/whitebot,
 /area/space)
 "fn" = (
 /obj/structure/closet/crate,
-/obj/item/weapon/card/id/away/hotel,
+/obj/item/card/id/away/hotel,
 /turf/open/floor/plasteel/whitebot,
 /area/space)
 "fo" = (
@@ -2394,8 +2394,8 @@
 /area/space)
 "gm" = (
 /obj/structure/table,
-/obj/item/weapon/book/manual/barman_recipes,
-/obj/item/weapon/reagent_containers/food/drinks/shaker,
+/obj/item/book/manual/barman_recipes,
+/obj/item/reagent_containers/food/drinks/shaker,
 /turf/open/floor/plasteel/bar,
 /area/space)
 "gn" = (
@@ -2406,7 +2406,7 @@
 /turf/open/floor/plasteel/bar,
 /area/space)
 "gp" = (
-/obj/item/weapon/twohanded/required/kirbyplants{
+/obj/item/twohanded/required/kirbyplants{
 	tag = "icon-plant-02";
 	icon_state = "plant-02"
 	},
@@ -2476,29 +2476,29 @@
 /area/space)
 "gz" = (
 /obj/structure/closet/crate/freezer,
-/obj/item/weapon/reagent_containers/food/snacks/grown/wheat,
-/obj/item/weapon/reagent_containers/food/snacks/grown/wheat,
-/obj/item/weapon/reagent_containers/food/snacks/grown/wheat,
-/obj/item/weapon/reagent_containers/food/snacks/grown/wheat,
-/obj/item/weapon/reagent_containers/food/snacks/grown/wheat,
-/obj/item/weapon/reagent_containers/food/snacks/grown/wheat,
-/obj/item/weapon/reagent_containers/food/snacks/grown/wheat,
-/obj/item/weapon/reagent_containers/food/snacks/grown/potato,
-/obj/item/weapon/reagent_containers/food/snacks/grown/potato,
-/obj/item/weapon/reagent_containers/food/snacks/grown/potato,
-/obj/item/weapon/reagent_containers/food/snacks/grown/potato,
-/obj/item/weapon/reagent_containers/food/snacks/grown/potato,
-/obj/item/weapon/reagent_containers/food/snacks/grown/carrot,
-/obj/item/weapon/reagent_containers/food/snacks/grown/carrot,
-/obj/item/weapon/reagent_containers/food/snacks/grown/carrot,
-/obj/item/weapon/reagent_containers/food/snacks/grown/carrot,
-/obj/item/weapon/reagent_containers/food/snacks/grown/carrot,
-/obj/item/weapon/reagent_containers/food/snacks/grown/carrot,
-/obj/item/weapon/reagent_containers/food/snacks/grown/tomato,
-/obj/item/weapon/reagent_containers/food/snacks/grown/tomato,
-/obj/item/weapon/reagent_containers/food/snacks/grown/tomato,
-/obj/item/weapon/reagent_containers/food/snacks/grown/tomato,
-/obj/item/weapon/reagent_containers/food/snacks/grown/tomato,
+/obj/item/reagent_containers/food/snacks/grown/wheat,
+/obj/item/reagent_containers/food/snacks/grown/wheat,
+/obj/item/reagent_containers/food/snacks/grown/wheat,
+/obj/item/reagent_containers/food/snacks/grown/wheat,
+/obj/item/reagent_containers/food/snacks/grown/wheat,
+/obj/item/reagent_containers/food/snacks/grown/wheat,
+/obj/item/reagent_containers/food/snacks/grown/wheat,
+/obj/item/reagent_containers/food/snacks/grown/potato,
+/obj/item/reagent_containers/food/snacks/grown/potato,
+/obj/item/reagent_containers/food/snacks/grown/potato,
+/obj/item/reagent_containers/food/snacks/grown/potato,
+/obj/item/reagent_containers/food/snacks/grown/potato,
+/obj/item/reagent_containers/food/snacks/grown/carrot,
+/obj/item/reagent_containers/food/snacks/grown/carrot,
+/obj/item/reagent_containers/food/snacks/grown/carrot,
+/obj/item/reagent_containers/food/snacks/grown/carrot,
+/obj/item/reagent_containers/food/snacks/grown/carrot,
+/obj/item/reagent_containers/food/snacks/grown/carrot,
+/obj/item/reagent_containers/food/snacks/grown/tomato,
+/obj/item/reagent_containers/food/snacks/grown/tomato,
+/obj/item/reagent_containers/food/snacks/grown/tomato,
+/obj/item/reagent_containers/food/snacks/grown/tomato,
+/obj/item/reagent_containers/food/snacks/grown/tomato,
 /turf/open/floor/plasteel/freezer,
 /area/space)
 "gA" = (
@@ -2516,7 +2516,7 @@
 /area/space)
 "gC" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/reagent_containers/food/drinks/beer,
+/obj/item/reagent_containers/food/drinks/beer,
 /turf/open/floor/plasteel/bar,
 /area/space)
 "gD" = (
@@ -2542,7 +2542,7 @@
 /area/ruin/hotel/dock)
 "gG" = (
 /obj/structure/table,
-/obj/item/weapon/kitchen/knife,
+/obj/item/kitchen/knife,
 /obj/machinery/light{
 	dir = 8
 	},
@@ -2559,19 +2559,19 @@
 /area/space)
 "gJ" = (
 /obj/structure/table,
-/obj/item/weapon/reagent_containers/food/condiment/enzyme,
-/obj/item/weapon/reagent_containers/food/condiment/enzyme,
+/obj/item/reagent_containers/food/condiment/enzyme,
+/obj/item/reagent_containers/food/condiment/enzyme,
 /turf/open/floor/plasteel/cafeteria,
 /area/space)
 "gK" = (
 /obj/structure/table,
-/obj/item/weapon/reagent_containers/food/condiment/sugar,
-/obj/item/weapon/reagent_containers/food/condiment/sugar,
+/obj/item/reagent_containers/food/condiment/sugar,
+/obj/item/reagent_containers/food/condiment/sugar,
 /turf/open/floor/plasteel/cafeteria,
 /area/space)
 "gL" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/reagent_containers/glass/rag,
+/obj/item/reagent_containers/glass/rag,
 /turf/open/floor/plasteel/bar,
 /area/space)
 "gM" = (
@@ -2596,7 +2596,7 @@
 	},
 /area/space)
 "gQ" = (
-/obj/item/weapon/twohanded/required/kirbyplants{
+/obj/item/twohanded/required/kirbyplants{
 	tag = "icon-plant-22";
 	icon_state = "plant-22"
 	},
@@ -2653,7 +2653,7 @@
 /area/space)
 "gZ" = (
 /obj/structure/table,
-/obj/item/weapon/kitchen/rollingpin,
+/obj/item/kitchen/rollingpin,
 /turf/open/floor/plasteel/cafeteria,
 /area/space)
 "ha" = (
@@ -2721,8 +2721,8 @@
 /area/space)
 "hi" = (
 /obj/structure/table,
-/obj/item/weapon/storage/box/monkeycubes,
-/obj/item/weapon/storage/box/monkeycubes,
+/obj/item/storage/box/monkeycubes,
+/obj/item/storage/box/monkeycubes,
 /turf/open/floor/plasteel/freezer,
 /area/space)
 "hj" = (
@@ -2741,16 +2741,16 @@
 /area/space)
 "hm" = (
 /obj/structure/table,
-/obj/item/weapon/kitchen/knife,
+/obj/item/kitchen/knife,
 /turf/open/floor/plasteel/cafeteria,
 /area/space)
 "hn" = (
 /obj/structure/table,
-/obj/item/weapon/reagent_containers/food/condiment/pack/hotsauce,
-/obj/item/weapon/reagent_containers/food/condiment/pack/hotsauce,
-/obj/item/weapon/reagent_containers/food/condiment/pack/ketchup,
-/obj/item/weapon/reagent_containers/food/condiment/pack/ketchup,
-/obj/item/weapon/reagent_containers/glass/beaker,
+/obj/item/reagent_containers/food/condiment/pack/hotsauce,
+/obj/item/reagent_containers/food/condiment/pack/hotsauce,
+/obj/item/reagent_containers/food/condiment/pack/ketchup,
+/obj/item/reagent_containers/food/condiment/pack/ketchup,
+/obj/item/reagent_containers/glass/beaker,
 /turf/open/floor/plasteel/cafeteria,
 /area/space)
 "ho" = (
@@ -2765,14 +2765,14 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/obj/item/weapon/crowbar,
+/obj/item/crowbar,
 /turf/open/floor/plasteel/black,
 /area/space)
 "hr" = (
 /obj/structure/noticeboard{
 	pixel_y = 32
 	},
-/obj/item/weapon/paper{
+/obj/item/paper{
 	info = "<bold>!NOTICE!</bold><br><br><center>We are expecting arriving guests soon from a nearby station! Stay sharp and make sure guests enjoy their time spent here. Don't think you can sneak off while they're here, either.</center>";
 	name = "!NOTICE!"
 	},
@@ -2789,7 +2789,7 @@
 /area/space)
 "hu" = (
 /obj/structure/table,
-/obj/item/weapon/storage/box/donkpockets,
+/obj/item/storage/box/donkpockets,
 /obj/structure/sign/nosmoking_1{
 	pixel_y = 32
 	},
@@ -2829,9 +2829,9 @@
 /obj/machinery/light{
 	dir = 8
 	},
-/obj/item/weapon/reagent_containers/food/condiment/milk,
-/obj/item/weapon/reagent_containers/food/condiment/milk,
-/obj/item/weapon/reagent_containers/food/condiment/milk,
+/obj/item/reagent_containers/food/condiment/milk,
+/obj/item/reagent_containers/food/condiment/milk,
+/obj/item/reagent_containers/food/condiment/milk,
 /obj/structure/closet/secure_closet/freezer/fridge{
 	req_access_txt = "200"
 	},
@@ -2865,10 +2865,10 @@
 /area/space)
 "hH" = (
 /obj/structure/table/wood,
-/obj/item/weapon/reagent_containers/food/condiment/saltshaker{
+/obj/item/reagent_containers/food/condiment/saltshaker{
 	pixel_x = 4
 	},
-/obj/item/weapon/reagent_containers/food/condiment/peppermill{
+/obj/item/reagent_containers/food/condiment/peppermill{
 	pixel_x = -4
 	},
 /turf/open/floor/plasteel/bar,
@@ -2893,23 +2893,23 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
-/obj/item/weapon/paper/pamphlet{
+/obj/item/paper/pamphlet{
 	info = "<center><b>The Twin Nexus Hotel</center></b><br><center><i>A place of Sanctuary</i></center><br><br><center>Welcome to The Twin-Nexus Hotel, \[insert name here]! The loyal staff stride to their best effort to cater for the best possible experience for all space(wo)men! If you have any questions or comments, please ask one of our on-board staff for more infomation.</center>";
 	name = "hotel pamphlet"
 	},
-/obj/item/weapon/paper/pamphlet{
+/obj/item/paper/pamphlet{
 	info = "<center><b>The Twin Nexus Hotel</center></b><br><center><i>A place of Sanctuary</i></center><br><br><center>Welcome to The Twin-Nexus Hotel, \[insert name here]! The loyal staff stride to their best effort to cater for the best possible experience for all space(wo)men! If you have any questions or comments, please ask one of our on-board staff for more infomation.</center>";
 	name = "hotel pamphlet"
 	},
-/obj/item/weapon/paper/pamphlet{
+/obj/item/paper/pamphlet{
 	info = "<center><b>The Twin Nexus Hotel</center></b><br><center><i>A place of Sanctuary</i></center><br><br><center>Welcome to The Twin-Nexus Hotel, \[insert name here]! The loyal staff stride to their best effort to cater for the best possible experience for all space(wo)men! If you have any questions or comments, please ask one of our on-board staff for more infomation.</center>";
 	name = "hotel pamphlet"
 	},
-/obj/item/weapon/paper/pamphlet{
+/obj/item/paper/pamphlet{
 	info = "<center><b>The Twin Nexus Hotel</center></b><br><center><i>A place of Sanctuary</i></center><br><br><center>Welcome to The Twin-Nexus Hotel, \[insert name here]! The loyal staff stride to their best effort to cater for the best possible experience for all space(wo)men! If you have any questions or comments, please ask one of our on-board staff for more infomation.</center>";
 	name = "hotel pamphlet"
 	},
-/obj/item/weapon/paper/pamphlet{
+/obj/item/paper/pamphlet{
 	info = "<center><b>The Twin Nexus Hotel</center></b><br><center><i>A place of Sanctuary</i></center><br><br><center>Welcome to The Twin-Nexus Hotel, \[insert name here]! The loyal staff stride to their best effort to cater for the best possible experience for all space(wo)men! If you have any questions or comments, please ask one of our on-board staff for more infomation.</center>";
 	name = "hotel pamphlet"
 	},
@@ -2917,7 +2917,7 @@
 /area/space)
 "hM" = (
 /obj/structure/table/wood,
-/obj/item/weapon/reagent_containers/food/drinks/mug/tea,
+/obj/item/reagent_containers/food/drinks/mug/tea,
 /turf/open/floor/carpet,
 /area/space)
 "hN" = (
@@ -2983,10 +2983,10 @@
 /turf/open/floor/plasteel/freezer,
 /area/space)
 "hV" = (
-/obj/item/weapon/reagent_containers/food/condiment/rice,
-/obj/item/weapon/reagent_containers/food/condiment/rice,
-/obj/item/weapon/reagent_containers/food/condiment/flour,
-/obj/item/weapon/reagent_containers/food/condiment/flour,
+/obj/item/reagent_containers/food/condiment/rice,
+/obj/item/reagent_containers/food/condiment/rice,
+/obj/item/reagent_containers/food/condiment/flour,
+/obj/item/reagent_containers/food/condiment/flour,
 /obj/structure/closet/secure_closet/freezer/kitchen{
 	req_access = null;
 	req_access_txt = "200"
@@ -3015,7 +3015,7 @@
 /turf/open/floor/carpet,
 /area/space)
 "hZ" = (
-/obj/item/weapon/twohanded/required/kirbyplants{
+/obj/item/twohanded/required/kirbyplants{
 	tag = "icon-plant-18";
 	icon_state = "plant-18"
 	},
@@ -3031,57 +3031,57 @@
 /area/space)
 "ic" = (
 /obj/structure/table,
-/obj/item/weapon/storage/box/monkeycubes,
-/obj/item/weapon/storage/box/monkeycubes,
+/obj/item/storage/box/monkeycubes,
+/obj/item/storage/box/monkeycubes,
 /turf/open/floor/plasteel/freezer,
 /area/ruin/hotel/bar)
 "id" = (
 /obj/structure/closet/crate/freezer,
-/obj/item/weapon/reagent_containers/food/snacks/meat/slab/bear,
-/obj/item/weapon/reagent_containers/food/snacks/meat/slab/bear,
-/obj/item/weapon/reagent_containers/food/snacks/meat/slab/corgi,
-/obj/item/weapon/reagent_containers/food/snacks/meat/slab/corgi,
-/obj/item/weapon/reagent_containers/food/snacks/meat/slab/monkey,
-/obj/item/weapon/reagent_containers/food/snacks/meat/slab/monkey,
-/obj/item/weapon/reagent_containers/food/snacks/meat/slab/pug,
-/obj/item/weapon/reagent_containers/food/snacks/meat/slab/pug,
-/obj/item/weapon/reagent_containers/food/snacks/meat/slab/xeno,
-/obj/item/weapon/reagent_containers/food/snacks/meat/slab/xeno,
-/obj/item/weapon/reagent_containers/food/snacks/meat/slab/human/mutant/lizard,
-/obj/item/weapon/reagent_containers/food/snacks/meat/slab/human/mutant/lizard,
-/obj/item/weapon/reagent_containers/food/snacks/meat/slab/human/mutant/plant,
-/obj/item/weapon/reagent_containers/food/snacks/meat/slab/human/mutant/plant,
+/obj/item/reagent_containers/food/snacks/meat/slab/bear,
+/obj/item/reagent_containers/food/snacks/meat/slab/bear,
+/obj/item/reagent_containers/food/snacks/meat/slab/corgi,
+/obj/item/reagent_containers/food/snacks/meat/slab/corgi,
+/obj/item/reagent_containers/food/snacks/meat/slab/monkey,
+/obj/item/reagent_containers/food/snacks/meat/slab/monkey,
+/obj/item/reagent_containers/food/snacks/meat/slab/pug,
+/obj/item/reagent_containers/food/snacks/meat/slab/pug,
+/obj/item/reagent_containers/food/snacks/meat/slab/xeno,
+/obj/item/reagent_containers/food/snacks/meat/slab/xeno,
+/obj/item/reagent_containers/food/snacks/meat/slab/human/mutant/lizard,
+/obj/item/reagent_containers/food/snacks/meat/slab/human/mutant/lizard,
+/obj/item/reagent_containers/food/snacks/meat/slab/human/mutant/plant,
+/obj/item/reagent_containers/food/snacks/meat/slab/human/mutant/plant,
 /turf/open/floor/plasteel/freezer,
 /area/space)
 "ie" = (
 /obj/structure/closet/crate/freezer,
-/obj/item/weapon/reagent_containers/food/snacks/meat/slab/bear,
-/obj/item/weapon/reagent_containers/food/snacks/meat/slab/bear,
-/obj/item/weapon/reagent_containers/food/snacks/meat/slab/bear,
-/obj/item/weapon/reagent_containers/food/snacks/meat/slab/corgi,
-/obj/item/weapon/reagent_containers/food/snacks/meat/slab/corgi,
-/obj/item/weapon/reagent_containers/food/snacks/meat/slab/monkey,
-/obj/item/weapon/reagent_containers/food/snacks/meat/slab/monkey,
-/obj/item/weapon/reagent_containers/food/snacks/meat/slab/pug,
-/obj/item/weapon/reagent_containers/food/snacks/meat/slab/pug,
-/obj/item/weapon/reagent_containers/food/snacks/meat/slab/xeno,
-/obj/item/weapon/reagent_containers/food/snacks/meat/slab/xeno,
-/obj/item/weapon/reagent_containers/food/snacks/meat/slab/human/mutant/lizard,
-/obj/item/weapon/reagent_containers/food/snacks/meat/slab/human/mutant/lizard,
-/obj/item/weapon/reagent_containers/food/snacks/meat/slab/human/mutant/plant,
-/obj/item/weapon/reagent_containers/food/snacks/meat/slab/human/mutant/plant,
+/obj/item/reagent_containers/food/snacks/meat/slab/bear,
+/obj/item/reagent_containers/food/snacks/meat/slab/bear,
+/obj/item/reagent_containers/food/snacks/meat/slab/bear,
+/obj/item/reagent_containers/food/snacks/meat/slab/corgi,
+/obj/item/reagent_containers/food/snacks/meat/slab/corgi,
+/obj/item/reagent_containers/food/snacks/meat/slab/monkey,
+/obj/item/reagent_containers/food/snacks/meat/slab/monkey,
+/obj/item/reagent_containers/food/snacks/meat/slab/pug,
+/obj/item/reagent_containers/food/snacks/meat/slab/pug,
+/obj/item/reagent_containers/food/snacks/meat/slab/xeno,
+/obj/item/reagent_containers/food/snacks/meat/slab/xeno,
+/obj/item/reagent_containers/food/snacks/meat/slab/human/mutant/lizard,
+/obj/item/reagent_containers/food/snacks/meat/slab/human/mutant/lizard,
+/obj/item/reagent_containers/food/snacks/meat/slab/human/mutant/plant,
+/obj/item/reagent_containers/food/snacks/meat/slab/human/mutant/plant,
 /turf/open/floor/plasteel/freezer,
 /area/space)
 "if" = (
 /obj/structure/table,
-/obj/item/weapon/kitchen/knife,
+/obj/item/kitchen/knife,
 /turf/open/floor/plasteel/freezer,
 /area/space)
 "ig" = (
-/obj/item/weapon/reagent_containers/food/condiment/saltshaker{
+/obj/item/reagent_containers/food/condiment/saltshaker{
 	pixel_x = 4
 	},
-/obj/item/weapon/reagent_containers/food/condiment/peppermill{
+/obj/item/reagent_containers/food/condiment/peppermill{
 	pixel_x = -4
 	},
 /obj/structure/table,
@@ -3089,7 +3089,7 @@
 /area/space)
 "ih" = (
 /obj/structure/table,
-/obj/item/weapon/book/manual/chef_recipes,
+/obj/item/book/manual/chef_recipes,
 /turf/open/floor/plasteel/cafeteria,
 /area/space)
 "ii" = (
@@ -3122,17 +3122,17 @@
 /area/space)
 "in" = (
 /obj/structure/table,
-/obj/item/weapon/card/id/away/hotel,
-/obj/item/weapon/card/id/away/hotel,
-/obj/item/weapon/card/id/away/hotel,
-/obj/item/weapon/card/id/away/hotel,
-/obj/item/weapon/card/id/away/hotel,
-/obj/item/weapon/card/id/away/hotel,
+/obj/item/card/id/away/hotel,
+/obj/item/card/id/away/hotel,
+/obj/item/card/id/away/hotel,
+/obj/item/card/id/away/hotel,
+/obj/item/card/id/away/hotel,
+/obj/item/card/id/away/hotel,
 /turf/open/floor/plasteel/black,
 /area/space)
 "io" = (
 /obj/structure/table,
-/obj/item/weapon/storage/firstaid/regular,
+/obj/item/storage/firstaid/regular,
 /turf/open/floor/plasteel/black,
 /area/space)
 "ip" = (
@@ -3162,7 +3162,7 @@
 /area/ruin/hotel/bar)
 "is" = (
 /obj/structure/table,
-/obj/item/weapon/reagent_containers/food/condiment/soysauce,
+/obj/item/reagent_containers/food/condiment/soysauce,
 /turf/open/floor/plasteel/cafeteria,
 /area/space)
 "it" = (
@@ -3537,7 +3537,7 @@
 /area/ruin/hotel/dock)
 "jn" = (
 /obj/structure/table,
-/obj/item/weapon/storage/toolbox/electrical,
+/obj/item/storage/toolbox/electrical,
 /obj/item/clothing/gloves/color/yellow,
 /obj/machinery/light{
 	dir = 8
@@ -3571,7 +3571,7 @@
 	},
 /area/space)
 "js" = (
-/obj/item/weapon/twohanded/required/kirbyplants,
+/obj/item/twohanded/required/kirbyplants,
 /turf/open/floor/wood,
 /area/space)
 "jt" = (
@@ -3605,7 +3605,7 @@
 /area/ruin/hotel/dock)
 "jx" = (
 /obj/structure/table,
-/obj/item/weapon/storage/toolbox/mechanical,
+/obj/item/storage/toolbox/mechanical,
 /obj/item/clothing/head/welding,
 /turf/open/floor/plasteel/yellow/side{
 	tag = "icon-yellow (WEST)";
@@ -3812,8 +3812,8 @@
 "jO" = (
 /obj/structure/table,
 /obj/machinery/cell_charger,
-/obj/item/weapon/stock_parts/cell/high,
-/obj/item/weapon/stock_parts/cell/high,
+/obj/item/stock_parts/cell/high,
+/obj/item/stock_parts/cell/high,
 /turf/open/floor/plasteel/yellow/side{
 	tag = "icon-yellow (WEST)";
 	icon_state = "yellow";
@@ -3941,8 +3941,8 @@
 "kg" = (
 /obj/structure/table,
 /obj/machinery/cell_charger,
-/obj/item/weapon/stock_parts/cell/high,
-/obj/item/weapon/stock_parts/cell/high,
+/obj/item/stock_parts/cell/high,
+/obj/item/stock_parts/cell/high,
 /obj/structure/cable{
 	d1 = 2;
 	d2 = 4;
@@ -4053,7 +4053,7 @@
 /area/ruin/hotel/security)
 "ku" = (
 /obj/structure/closet,
-/obj/item/weapon/dice/d20,
+/obj/item/dice/d20,
 /turf/open/floor/plasteel/darkyellow,
 /area/ruin/hotel/security)
 "kv" = (
@@ -4188,7 +4188,7 @@
 /area/ruin/hotel/security)
 "kQ" = (
 /obj/structure/table,
-/obj/item/weapon/storage/firstaid/regular,
+/obj/item/storage/firstaid/regular,
 /turf/open/floor/plasteel,
 /area/space)
 "kR" = (
@@ -4295,7 +4295,7 @@
 /area/space)
 "lg" = (
 /obj/structure/table,
-/obj/item/weapon/storage/fancy/donut_box,
+/obj/item/storage/fancy/donut_box,
 /turf/open/floor/plasteel,
 /area/ruin/hotel/security)
 "lh" = (
@@ -4367,13 +4367,13 @@
 /area/space)
 "lr" = (
 /obj/structure/table,
-/obj/item/weapon/folder/red,
-/obj/item/weapon/folder/blue,
+/obj/item/folder/red,
+/obj/item/folder/blue,
 /turf/open/floor/plasteel,
 /area/space)
 "ls" = (
 /obj/structure/table,
-/obj/item/weapon/storage/fancy/donut_box,
+/obj/item/storage/fancy/donut_box,
 /turf/open/floor/plasteel,
 /area/space)
 "lt" = (
@@ -4471,7 +4471,7 @@
 /area/space)
 "lH" = (
 /obj/structure/table,
-/obj/item/weapon/book/manual/wiki/security_space_law,
+/obj/item/book/manual/wiki/security_space_law,
 /turf/open/floor/plasteel/red/side{
 	tag = "icon-red (WEST)";
 	icon_state = "red";
@@ -4480,13 +4480,13 @@
 /area/space)
 "lI" = (
 /obj/structure/table,
-/obj/item/weapon/reagent_containers/food/drinks/coffee,
+/obj/item/reagent_containers/food/drinks/coffee,
 /turf/open/floor/plasteel,
 /area/space)
 "lJ" = (
 /obj/structure/table,
-/obj/item/weapon/paper_bin,
-/obj/item/weapon/pen,
+/obj/item/paper_bin,
+/obj/item/pen,
 /turf/open/floor/plasteel,
 /area/space)
 "lK" = (
@@ -4580,7 +4580,7 @@
 /area/space)
 "lY" = (
 /obj/structure/table,
-/obj/item/weapon/papercutter,
+/obj/item/papercutter,
 /obj/machinery/atmospherics/components/unary/vent_pump{
 	dir = 1;
 	external_pressure_bound = 101.325;
@@ -4614,8 +4614,8 @@
 /area/ruin/unpowered/no_grav)
 "md" = (
 /obj/structure/table,
-/obj/item/weapon/restraints/handcuffs,
-/obj/item/weapon/restraints/handcuffs,
+/obj/item/restraints/handcuffs,
+/obj/item/restraints/handcuffs,
 /turf/open/floor/plasteel/red/side{
 	tag = "icon-red (WEST)";
 	icon_state = "red";
@@ -4651,7 +4651,7 @@
 /area/ruin/hotel/security)
 "mh" = (
 /obj/structure/closet,
-/obj/item/weapon/dice/d1,
+/obj/item/dice/d1,
 /obj/effect/decal/cleanable/cobweb{
 	icon_state = "cobweb2"
 	},
@@ -4764,7 +4764,7 @@
 /turf/open/floor/plasteel/darkred,
 /area/space)
 "mx" = (
-/obj/item/weapon/bikehorn/rubberducky,
+/obj/item/bikehorn/rubberducky,
 /turf/open/floor/plating/beach/water{
 	baseturf = /turf/open/space
 	},
@@ -4782,7 +4782,7 @@
 /area/space)
 "mB" = (
 /obj/structure/table,
-/obj/item/weapon/kitchen/knife,
+/obj/item/kitchen/knife,
 /obj/machinery/light{
 	dir = 8
 	},
@@ -4831,7 +4831,7 @@
 /area/space)
 "mI" = (
 /obj/structure/closet,
-/obj/item/weapon/dice/d20,
+/obj/item/dice/d20,
 /turf/open/floor/plasteel/darkyellow,
 /area/space)
 "mJ" = (
@@ -4916,15 +4916,15 @@
 /area/space)
 "mX" = (
 /obj/structure/table,
-/obj/item/weapon/reagent_containers/glass/bucket,
-/obj/item/weapon/reagent_containers/spray/cleaner,
+/obj/item/reagent_containers/glass/bucket,
+/obj/item/reagent_containers/spray/cleaner,
 /turf/open/floor/plasteel/neutral,
 /area/space)
 "mY" = (
 /obj/structure/table,
-/obj/item/weapon/grenade/chem_grenade/cleaner,
-/obj/item/weapon/grenade/chem_grenade/cleaner,
-/obj/item/weapon/grenade/chem_grenade/cleaner,
+/obj/item/grenade/chem_grenade/cleaner,
+/obj/item/grenade/chem_grenade/cleaner,
+/obj/item/grenade/chem_grenade/cleaner,
 /turf/open/floor/plasteel/neutral,
 /area/space)
 "mZ" = (
@@ -4948,7 +4948,7 @@
 /area/space)
 "nb" = (
 /obj/structure/closet,
-/obj/item/weapon/dice/d1,
+/obj/item/dice/d1,
 /obj/effect/decal/cleanable/cobweb{
 	icon_state = "cobweb2"
 	},
@@ -4977,7 +4977,7 @@
 /area/space)
 "nf" = (
 /obj/structure/table,
-/obj/item/weapon/card/id/away/hotel/securty,
+/obj/item/card/id/away/hotel/securty,
 /turf/open/floor/plasteel/darkred,
 /area/space)
 "ng" = (
@@ -4985,7 +4985,7 @@
 	req_access = null;
 	req_access_txt = "203"
 	},
-/obj/item/weapon/gun/energy/laser/scatter/shotty,
+/obj/item/gun/energy/laser/scatter/shotty,
 /obj/item/clothing/head/helmet/justice,
 /turf/open/floor/plasteel/darkred,
 /area/space)
@@ -5030,7 +5030,7 @@
 /area/space)
 "nm" = (
 /obj/structure/janitorialcart,
-/obj/item/weapon/mop,
+/obj/item/mop,
 /turf/open/floor/plasteel/neutral,
 /area/space)
 "nn" = (
@@ -5064,7 +5064,7 @@
 	},
 /area/space)
 "ns" = (
-/obj/item/weapon/twohanded/required/kirbyplants{
+/obj/item/twohanded/required/kirbyplants{
 	tag = "icon-plant-25";
 	icon_state = "plant-25"
 	},
@@ -5088,7 +5088,7 @@
 /area/space)
 "nx" = (
 /obj/structure/table,
-/obj/item/weapon/storage/bag/trash,
+/obj/item/storage/bag/trash,
 /turf/open/floor/plasteel/neutral,
 /area/space)
 

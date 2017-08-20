@@ -1,4 +1,4 @@
-/obj/item/weapon/gun/projectile/bow
+/obj/item/gun/projectile/bow
 	name = "bow"
 	icon = 'icons/obj/torf.dmi'
 	icon_state = "bow"
@@ -16,11 +16,11 @@
 	lefthand_file = 'icons/mob/inhands/infinity_obj_left.dmi'
 	righthand_file = 'icons/mob/inhands/infinity_obj_right.dmi'
 
-/obj/item/weapon/gun/projectile/bow/New()
+/obj/item/gun/projectile/bow/New()
 	..()
 	chambered = new /obj/item/ammo_casing/caseless/arrow(src)
 
-/obj/item/weapon/gun/projectile/bow/update_icon()
+/obj/item/gun/projectile/bow/update_icon()
 	if(armed)
 		icon_state = "bow_arrow"
 		item_state = "bow_arrow"
@@ -28,7 +28,7 @@
 		icon_state = "bow"
 		item_state = "bow"
 
-/obj/item/weapon/gun/projectile/bow/newshot()
+/obj/item/gun/projectile/bow/newshot()
 	if(!arrows.len) return
 
 	var/obj/item/ammo_casing/caseless/arrow/S = arrows[1]
@@ -43,19 +43,19 @@
 	update_icon()
 	return
 
-/obj/item/weapon/gun/projectile/bow/process_chamber()
+/obj/item/gun/projectile/bow/process_chamber()
 	return
 
-/obj/item/weapon/gun/projectile/bow/afterattack(atom/target, mob/living/user, flag, params)
+/obj/item/gun/projectile/bow/afterattack(atom/target, mob/living/user, flag, params)
 	newshot()
 	..()
 
 
-/obj/item/weapon/gun/projectile/bow/examine(mob/user)
+/obj/item/gun/projectile/bow/examine(mob/user)
 	..()
 	user << "Can hold [max_arrows] arrow\s. Has [arrows.len] arrows\s remaining."
 
-/obj/item/weapon/gun/projectile/bow/attack_self(mob/living/user)
+/obj/item/gun/projectile/bow/attack_self(mob/living/user)
 	if(!arrows.len)
 		user << "<span class='warning'>[src] without arrows!</span>"
 		return 0
@@ -70,7 +70,7 @@
 
 	return 1
 
-/obj/item/weapon/gun/projectile/bow/attackby(obj/item/A, mob/user, params, show_msg = 1)
+/obj/item/gun/projectile/bow/attackby(obj/item/A, mob/user, params, show_msg = 1)
 	if(istype(A, /obj/item/ammo_casing/caseless/arrow))
 		if(arrows.len < max_arrows)
 			if(!user.unEquip(A))

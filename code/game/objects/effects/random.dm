@@ -26,12 +26,12 @@
 	icon_state = "x"
 	color = "#DE9E28"
 	item_to_spawn()
-		return pick(/obj/item/weapon/screwdriver,\
-					/obj/item/weapon/wirecutters,\
-					/obj/item/weapon/weldingtool,\
-					/obj/item/weapon/crowbar,\
+		return pick(/obj/item/screwdriver,\
+					/obj/item/wirecutters,\
+					/obj/item/weldingtool,\
+					/obj/item/crowbar,\
 					/obj/item/stack/cable_coil,\
-					/obj/item/weapon/wrench)
+					/obj/item/wrench)
 
 /obj/random/weaponcrafting
 	name = "Random weapon part"
@@ -66,12 +66,12 @@
 	color = "#3F6499"
 	spawn_nothing_percentage = 20
 	item_to_spawn()
-		return pick(/obj/item/weapon/stock_parts/capacitor,\
-					/obj/item/weapon/stock_parts/console_screen,\
-					/obj/item/weapon/stock_parts/manipulator,\
-					/obj/item/weapon/stock_parts/matter_bin,\
-					/obj/item/weapon/stock_parts/micro_laser,\
-					/obj/item/weapon/stock_parts/scanning_module)
+		return pick(/obj/item/stock_parts/capacitor,\
+					/obj/item/stock_parts/console_screen,\
+					/obj/item/stock_parts/manipulator,\
+					/obj/item/stock_parts/matter_bin,\
+					/obj/item/stock_parts/micro_laser,\
+					/obj/item/stock_parts/scanning_module)
 
 /obj/random/bomb_supply
 	name = "Bomb Supply"
@@ -96,9 +96,9 @@
 	icon_state = "x"
 	color = "#3DDB5D"
 	item_to_spawn()
-		return pick(prob(3);/obj/item/weapon/storage/toolbox/mechanical,\
-					prob(2);/obj/item/weapon/storage/toolbox/electrical,\
-					prob(1);/obj/item/weapon/storage/toolbox/emergency)
+		return pick(prob(3);/obj/item/storage/toolbox/mechanical,\
+					prob(2);/obj/item/storage/toolbox/electrical,\
+					prob(1);/obj/item/storage/toolbox/emergency)
 
 
 /obj/random/tech_supply
@@ -110,7 +110,7 @@
 	item_to_spawn()
 		return pick(prob(3);/obj/random/technology_scanner,\
 					prob(4);/obj/random/bomb_supply,\
-					prob(1);/obj/item/weapon/extinguisher/mini,\
+					prob(1);/obj/item/extinguisher/mini,\
 					prob(1);/obj/item/clothing/ears/earmuffs,\
 					prob(2);/obj/item/device/flashlight,\
 					prob(1);/obj/item/device/paicard,\
@@ -129,7 +129,7 @@
 					/obj/structure/grille,\
 					/obj/structure/grille/broken,\
 					/obj/structure/foamedmetal,\
-					/obj/item/weapon/caution,\
+					/obj/item/caution,\
 					/obj/item/clothing/head/cone,\
 					/obj/structure/inflatable/wall,\
 					/obj/structure/inflatable/door)

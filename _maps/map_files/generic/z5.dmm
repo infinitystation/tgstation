@@ -55,7 +55,7 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
-/obj/item/weapon/shard{
+/obj/item/shard{
 	icon_state = "small"
 	},
 /turf/open/floor/plating/airless,
@@ -95,7 +95,7 @@
 	},
 /area/mine/abandoned)
 "ar" = (
-/obj/item/weapon/shard{
+/obj/item/shard{
 	icon_state = "medium"
 	},
 /turf/open/floor/plasteel/airless,
@@ -117,7 +117,7 @@
 /turf/open/floor/plating/airless,
 /area/mine/abandoned)
 "au" = (
-/obj/item/weapon/shard,
+/obj/item/shard,
 /turf/open/floor/plasteel/airless{
 	icon_state = "damaged2"
 	},
@@ -130,7 +130,7 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
-/obj/item/weapon/shard,
+/obj/item/shard,
 /turf/open/floor/plating/airless,
 /area/mine/abandoned)
 "ax" = (
@@ -139,7 +139,7 @@
 /area/mine/abandoned)
 "ay" = (
 /obj/structure/lattice,
-/obj/item/weapon/shard{
+/obj/item/shard{
 	icon_state = "medium"
 	},
 /turf/open/space,
@@ -208,7 +208,7 @@
 /turf/open/space,
 /area/space)
 "aI" = (
-/obj/item/weapon/shard,
+/obj/item/shard,
 /obj/item/stack/rods,
 /turf/open/floor/plating/airless,
 /area/mine/abandoned)
@@ -246,7 +246,7 @@
 /turf/open/floor/plating/airless,
 /area/mine/abandoned)
 "aP" = (
-/obj/item/weapon/shard{
+/obj/item/shard{
 	icon_state = "small"
 	},
 /turf/open/floor/plating/airless,
@@ -282,7 +282,7 @@
 /turf/open/floor/plating/airless,
 /area/mine/abandoned)
 "aV" = (
-/obj/item/weapon/shard,
+/obj/item/shard,
 /obj/structure/lattice,
 /turf/open/space,
 /area/space)
@@ -310,12 +310,12 @@
 /turf/open/floor/plating/airless,
 /area/mine/abandoned)
 "ba" = (
-/obj/item/weapon/shard,
+/obj/item/shard,
 /turf/open/floor/plating/airless,
 /area/mine/abandoned)
 "bb" = (
 /obj/structure/lattice,
-/obj/item/weapon/shard{
+/obj/item/shard{
 	icon_state = "small"
 	},
 /obj/item/clothing/mask/facehugger/dead,
@@ -405,13 +405,13 @@
 /turf/open/floor/plasteel/airless,
 /area/mine/abandoned)
 "bq" = (
-/obj/item/weapon/shard,
+/obj/item/shard,
 /turf/open/floor/plasteel/airless{
 	icon_state = "floorscorched2"
 	},
 /area/mine/abandoned)
 "br" = (
-/obj/item/weapon/shard{
+/obj/item/shard{
 	icon_state = "small"
 	},
 /obj/structure/alien/weeds,
@@ -428,21 +428,21 @@
 /area/mine/abandoned)
 "bu" = (
 /obj/structure/table,
-/obj/item/weapon/reagent_containers/glass/bucket,
+/obj/item/reagent_containers/glass/bucket,
 /turf/open/floor/plasteel/floorgrime,
 /area/mine/abandoned)
 "bv" = (
 /obj/structure/table,
-/obj/item/weapon/paper/crumpled,
+/obj/item/paper/crumpled,
 /obj/item/seeds/cherry,
-/obj/item/weapon/reagent_containers/glass/bottle/nutrient/ez,
-/obj/item/weapon/reagent_containers/glass/bottle/nutrient/ez,
+/obj/item/reagent_containers/glass/bottle/nutrient/ez,
+/obj/item/reagent_containers/glass/bottle/nutrient/ez,
 /turf/open/floor/plasteel/floorgrime,
 /area/mine/abandoned)
 "bw" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced,
-/obj/item/weapon/shard{
+/obj/item/shard{
 	icon_state = "medium"
 	},
 /turf/open/floor/plating/airless,
@@ -551,7 +551,7 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
-/obj/item/weapon/shard,
+/obj/item/shard,
 /turf/open/floor/plating/airless,
 /area/mine/abandoned)
 "bQ" = (
@@ -601,7 +601,7 @@
 	},
 /area/mine/unexplored)
 "bY" = (
-/obj/item/weapon/rack_parts,
+/obj/item/rack_parts,
 /turf/open/floor/plasteel/airless/asteroid,
 /area/mine/abandoned)
 "bZ" = (
@@ -637,7 +637,7 @@
 /turf/open/floor/plating/airless/astplate,
 /area/mine/abandoned)
 "cf" = (
-/obj/item/weapon/storage/toolbox/syndicate,
+/obj/item/storage/toolbox/syndicate,
 /obj/structure/alien/weeds/node,
 /turf/open/floor/plasteel/airless{
 	icon_state = "floorscorched1"
@@ -665,7 +665,7 @@
 	dir = 8
 	},
 /obj/structure/grille/broken,
-/obj/item/weapon/shard{
+/obj/item/shard{
 	icon_state = "small"
 	},
 /obj/item/stack/rods,
@@ -685,7 +685,7 @@
 	},
 /area/mine/abandoned)
 "cm" = (
-/obj/item/weapon/shard{
+/obj/item/shard{
 	icon_state = "medium"
 	},
 /turf/open/floor/plasteel/airless/asteroid,
@@ -702,7 +702,7 @@
 	},
 /obj/structure/grille/broken,
 /obj/item/stack/rods,
-/obj/item/weapon/shard,
+/obj/item/shard,
 /turf/open/floor/plating/airless/astplate,
 /area/mine/abandoned)
 "co" = (
@@ -762,11 +762,11 @@
 	},
 /obj/item/clothing/glasses/meson,
 /obj/item/device/flashlight,
-/obj/item/weapon/storage/bag/ore,
+/obj/item/storage/bag/ore,
 /obj/machinery/atmospherics/pipe/simple{
 	dir = 9
 	},
-/obj/item/weapon/shovel{
+/obj/item/shovel{
 	attack_verb = list("ineffectively hit");
 	desc = "A large tool for digging and moving dirt. Was modified with extra safety, making it ineffective as a weapon.";
 	force = 1;
@@ -774,7 +774,7 @@
 	pixel_x = -5;
 	throwforce = 1
 	},
-/obj/item/weapon/pickaxe{
+/obj/item/pickaxe{
 	attack_verb = list("ineffectively hit");
 	desc = "A pickaxe designed to be only effective at digging rock and ore, very ineffective as a weapon.";
 	force = 1;
@@ -790,11 +790,11 @@
 	},
 /obj/item/clothing/glasses/meson,
 /obj/item/device/flashlight,
-/obj/item/weapon/storage/bag/ore,
+/obj/item/storage/bag/ore,
 /obj/machinery/atmospherics/pipe/simple{
 	dir = 9
 	},
-/obj/item/weapon/shovel{
+/obj/item/shovel{
 	attack_verb = list("ineffectively hit");
 	desc = "A large tool for digging and moving dirt. Was modified with extra safety, making it ineffective as a weapon.";
 	force = 1;
@@ -802,7 +802,7 @@
 	pixel_x = -5;
 	throwforce = 1
 	},
-/obj/item/weapon/pickaxe{
+/obj/item/pickaxe{
 	attack_verb = list("ineffectively hit");
 	desc = "A pickaxe designed to be only effective at digging rock and ore, very ineffective as a weapon.";
 	force = 1;
@@ -826,7 +826,7 @@
 /area/mine/north_outpost)
 "cA" = (
 /obj/structure/table,
-/obj/item/weapon/storage/firstaid/o2{
+/obj/item/storage/firstaid/o2{
 	pixel_x = 2;
 	pixel_y = 2
 	},
@@ -852,7 +852,7 @@
 	network = list("Labor")
 	},
 /obj/structure/bed,
-/obj/item/weapon/bedsheet/medical,
+/obj/item/bedsheet/medical,
 /turf/open/floor/plasteel/white,
 /area/mine/laborcamp)
 "cE" = (
@@ -949,10 +949,10 @@
 "cT" = (
 /obj/machinery/atmospherics/pipe/simple,
 /obj/structure/closet/crate/internals,
-/obj/item/weapon/tank/internals/emergency_oxygen,
-/obj/item/weapon/tank/internals/emergency_oxygen,
-/obj/item/weapon/tank/internals/emergency_oxygen,
-/obj/item/weapon/tank/internals/emergency_oxygen,
+/obj/item/tank/internals/emergency_oxygen,
+/obj/item/tank/internals/emergency_oxygen,
+/obj/item/tank/internals/emergency_oxygen,
+/obj/item/tank/internals/emergency_oxygen,
 /obj/item/clothing/mask/breath,
 /obj/item/clothing/mask/breath,
 /obj/item/clothing/mask/breath,
@@ -1077,7 +1077,7 @@
 "do" = (
 /obj/structure/table,
 /obj/item/trash/plate,
-/obj/item/weapon/kitchen/fork,
+/obj/item/kitchen/fork,
 /turf/open/floor/plasteel/floorgrime,
 /area/mine/laborcamp)
 "dp" = (
@@ -1333,7 +1333,7 @@
 	d2 = 8;
 	icon_state = "1-8"
 	},
-/obj/item/weapon/storage/box/lights/bulbs,
+/obj/item/storage/box/lights/bulbs,
 /obj/machinery/atmospherics/pipe/simple{
 	dir = 6
 	},
@@ -1511,7 +1511,7 @@
 /area/mine/north_outpost)
 "eu" = (
 /obj/structure/table,
-/obj/item/weapon/pickaxe,
+/obj/item/pickaxe,
 /turf/open/floor/plasteel,
 /area/mine/north_outpost)
 "ev" = (
@@ -1607,12 +1607,12 @@
 /area/mine/north_outpost)
 "eJ" = (
 /obj/structure/table,
-/obj/item/weapon/shovel,
+/obj/item/shovel,
 /turf/open/floor/plasteel,
 /area/mine/north_outpost)
 "eK" = (
 /obj/structure/table,
-/obj/item/weapon/storage/box/donkpockets,
+/obj/item/storage/box/donkpockets,
 /turf/open/floor/plasteel,
 /area/mine/north_outpost)
 "eL" = (
@@ -1740,7 +1740,7 @@
 /area/mine/explored)
 "eZ" = (
 /obj/structure/table,
-/obj/item/weapon/storage/backpack/satchel,
+/obj/item/storage/backpack/satchel,
 /obj/item/clothing/glasses/meson,
 /obj/machinery/light/small{
 	dir = 8
@@ -1882,7 +1882,7 @@
 /area/mine/laborcamp/security)
 "fs" = (
 /obj/structure/table,
-/obj/item/weapon/storage/toolbox/mechanical,
+/obj/item/storage/toolbox/mechanical,
 /turf/open/floor/plasteel,
 /area/mine/north_outpost)
 "ft" = (
@@ -2148,7 +2148,7 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
-/obj/item/weapon/storage/box/lights/mixed,
+/obj/item/storage/box/lights/mixed,
 /obj/structure/cable{
 	d1 = 4;
 	d2 = 8;
@@ -2376,11 +2376,11 @@
 /area/mine/laborcamp/security)
 "gC" = (
 /obj/structure/table,
-/obj/item/weapon/paper_bin{
+/obj/item/paper_bin{
 	pixel_x = 1;
 	pixel_y = 9
 	},
-/obj/item/weapon/pen,
+/obj/item/pen,
 /turf/open/floor/plasteel,
 /area/mine/laborcamp/security)
 "gD" = (
@@ -2637,12 +2637,12 @@
 /turf/open/floor/plating/airless/astplate,
 /area/mine/explored)
 "hm" = (
-/obj/item/weapon/reagent_containers/food/snacks/grown/ambrosia/vulgaris,
-/obj/item/weapon/reagent_containers/food/snacks/grown/ambrosia/vulgaris,
+/obj/item/reagent_containers/food/snacks/grown/ambrosia/vulgaris,
+/obj/item/reagent_containers/food/snacks/grown/ambrosia/vulgaris,
 /turf/open/floor/plating/airless/astplate,
 /area/mine/explored)
 "hn" = (
-/obj/item/weapon/reagent_containers/food/snacks/grown/mushroom/libertycap,
+/obj/item/reagent_containers/food/snacks/grown/mushroom/libertycap,
 /turf/open/floor/plating/airless/astplate,
 /area/mine/explored)
 "ho" = (
@@ -2684,12 +2684,12 @@
 /turf/open/floor/plating/airless/astplate,
 /area/mine/explored)
 "hu" = (
-/obj/item/weapon/reagent_containers/food/snacks/grown/ambrosia/vulgaris,
+/obj/item/reagent_containers/food/snacks/grown/ambrosia/vulgaris,
 /turf/open/floor/plasteel/airless/asteroid,
 /area/mine/explored)
 "hv" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet/brown,
+/obj/item/bedsheet/brown,
 /turf/open/floor/carpet,
 /area/mine/living_quarters)
 "hw" = (
@@ -2746,7 +2746,7 @@
 /area/mine/living_quarters)
 "hE" = (
 /obj/structure/table,
-/obj/item/weapon/pickaxe,
+/obj/item/pickaxe,
 /turf/open/floor/plasteel,
 /area/mine/west_outpost)
 "hF" = (
@@ -2850,12 +2850,12 @@
 /area/mine/living_quarters)
 "hS" = (
 /obj/structure/table,
-/obj/item/weapon/shovel,
+/obj/item/shovel,
 /turf/open/floor/plasteel,
 /area/mine/west_outpost)
 "hT" = (
 /obj/structure/table,
-/obj/item/weapon/storage/box/donkpockets,
+/obj/item/storage/box/donkpockets,
 /turf/open/floor/plasteel,
 /area/mine/west_outpost)
 "hU" = (
@@ -2917,7 +2917,7 @@
 /area/mine/living_quarters)
 "ic" = (
 /obj/structure/table,
-/obj/item/weapon/storage/backpack/satchel,
+/obj/item/storage/backpack/satchel,
 /obj/item/clothing/glasses/meson,
 /obj/machinery/light/small{
 	dir = 8
@@ -2966,7 +2966,7 @@
 /area/mine/living_quarters)
 "ij" = (
 /obj/structure/table,
-/obj/item/weapon/storage/toolbox/mechanical,
+/obj/item/storage/toolbox/mechanical,
 /turf/open/floor/plasteel,
 /area/mine/west_outpost)
 "ik" = (
@@ -3328,7 +3328,7 @@
 	pixel_x = -5;
 	pixel_y = 30
 	},
-/obj/item/weapon/storage/box/lights/bulbs,
+/obj/item/storage/box/lights/bulbs,
 /turf/open/floor/plating,
 /area/mine/west_outpost)
 "jh" = (
@@ -3351,8 +3351,8 @@
 /area/mine/explored)
 "jj" = (
 /obj/structure/table,
-/obj/item/weapon/reagent_containers/food/drinks/beer,
-/obj/item/weapon/reagent_containers/food/drinks/beer,
+/obj/item/reagent_containers/food/drinks/beer,
+/obj/item/reagent_containers/food/drinks/beer,
 /turf/open/floor/plasteel/bar,
 /area/mine/living_quarters)
 "jk" = (
@@ -3363,7 +3363,7 @@
 /area/mine/living_quarters)
 "jl" = (
 /obj/structure/table,
-/obj/item/weapon/reagent_containers/food/drinks/beer,
+/obj/item/reagent_containers/food/drinks/beer,
 /turf/open/floor/plasteel/bar,
 /area/mine/living_quarters)
 "jm" = (
@@ -3393,7 +3393,7 @@
 	icon_state = "pipe-c"
 	},
 /obj/structure/table,
-/obj/item/weapon/pickaxe,
+/obj/item/pickaxe,
 /turf/open/floor/plasteel,
 /area/mine/eva)
 "jr" = (
@@ -3450,7 +3450,7 @@
 /area/mine/west_outpost)
 "jy" = (
 /obj/structure/table,
-/obj/item/weapon/storage/box/donkpockets,
+/obj/item/storage/box/donkpockets,
 /turf/open/floor/plasteel/bar,
 /area/mine/living_quarters)
 "jz" = (
@@ -3462,7 +3462,7 @@
 /turf/open/floor/plasteel/bar,
 /area/mine/living_quarters)
 "jA" = (
-/obj/item/weapon/cigbutt,
+/obj/item/cigbutt,
 /turf/open/floor/plasteel/bar,
 /area/mine/living_quarters)
 "jB" = (
@@ -3660,7 +3660,7 @@
 /turf/open/floor/plating,
 /area/mine/eva)
 "jX" = (
-/obj/item/weapon/storage/toolbox/mechanical{
+/obj/item/storage/toolbox/mechanical{
 	pixel_x = -2;
 	pixel_y = -1
 	},
@@ -4075,7 +4075,7 @@
 /obj/item/stack/packageWrap,
 /obj/item/stack/packageWrap,
 /obj/item/stack/packageWrap,
-/obj/item/weapon/hand_labeler,
+/obj/item/hand_labeler,
 /turf/open/floor/plasteel,
 /area/mine/eva)
 "kQ" = (
@@ -4494,13 +4494,13 @@
 /area/mine/living_quarters)
 "lO" = (
 /obj/machinery/atmospherics/pipe/simple,
-/obj/item/weapon/storage/box/lights,
+/obj/item/storage/box/lights,
 /turf/open/floor/plating,
 /area/mine/living_quarters)
 "lP" = (
 /obj/structure/rack,
-/obj/item/weapon/storage/firstaid/regular,
-/obj/item/weapon/storage/firstaid/regular{
+/obj/item/storage/firstaid/regular,
+/obj/item/storage/firstaid/regular{
 	pixel_x = -3;
 	pixel_y = -3
 	},
@@ -4565,28 +4565,28 @@
 /area/mine/production)
 "lY" = (
 /obj/structure/closet/crate/freezer,
-/obj/item/weapon/reagent_containers/blood/empty,
-/obj/item/weapon/reagent_containers/blood/empty{
+/obj/item/reagent_containers/blood/empty,
+/obj/item/reagent_containers/blood/empty{
 	pixel_x = -3;
 	pixel_y = -3
 	},
-/obj/item/weapon/reagent_containers/blood/AMinus,
-/obj/item/weapon/reagent_containers/blood/BMinus{
+/obj/item/reagent_containers/blood/AMinus,
+/obj/item/reagent_containers/blood/BMinus{
 	pixel_x = -4;
 	pixel_y = 4
 	},
-/obj/item/weapon/reagent_containers/blood/BPlus{
+/obj/item/reagent_containers/blood/BPlus{
 	pixel_x = 1;
 	pixel_y = 2
 	},
-/obj/item/weapon/reagent_containers/blood/OMinus,
-/obj/item/weapon/reagent_containers/blood/OPlus{
+/obj/item/reagent_containers/blood/OMinus,
+/obj/item/reagent_containers/blood/OPlus{
 	pixel_x = -2;
 	pixel_y = -1
 	},
-/obj/item/weapon/reagent_containers/blood/random,
-/obj/item/weapon/reagent_containers/blood/random,
-/obj/item/weapon/reagent_containers/blood/random,
+/obj/item/reagent_containers/blood/random,
+/obj/item/reagent_containers/blood/random,
+/obj/item/reagent_containers/blood/random,
 /turf/open/floor/plasteel/white,
 /area/mine/living_quarters)
 "lZ" = (
@@ -4607,11 +4607,11 @@
 /area/mine/living_quarters)
 "mb" = (
 /obj/structure/table,
-/obj/item/weapon/storage/firstaid/brute{
+/obj/item/storage/firstaid/brute{
 	pixel_x = 3;
 	pixel_y = 3
 	},
-/obj/item/weapon/storage/firstaid/regular,
+/obj/item/storage/firstaid/regular,
 /turf/open/floor/plasteel/whiteblue/side{
 	dir = 4
 	},
@@ -4735,7 +4735,7 @@
 	pixel_y = 30
 	},
 /obj/structure/table,
-/obj/item/weapon/paper{
+/obj/item/paper{
 	anchored = 0;
 	info = "A hastily written note has been scribbled here... <br><br> Please use the ore redemption machine in the cargo office for smelting. PLEASE! <br><br>--The Research Staff";
 	name = "URGENT!"

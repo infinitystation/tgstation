@@ -1,4 +1,4 @@
-/obj/item/weapon/circuitboard/computer/holo/power
+/obj/item/circuitboard/computer/holo/power
 	name = "Power Monitoring Holoconsole"
 	build_path = /obj/machinery/computer/holo/monitor
 	origin_tech = "programming=3"
@@ -7,15 +7,15 @@
 	add_fingerprint(user)
 	switch(state)
 		if(0)
-			if(istype(P, /obj/item/weapon/wrench))
+			if(istype(P, /obj/item/wrench))
 				playsound(src.loc, 'sound/items/Ratchet.ogg', 50, 1)
 				user << "<span class='notice'>You start wrenching the frame into place...</span>"
 				if(do_after(user, 20/P.toolspeed, target = src))
 					user << "<span class='notice'>You wrench the frame into place.</span>"
 					anchored = 1
 					state = 1
-			if(istype(P, /obj/item/weapon/weldingtool))
-				var/obj/item/weapon/weldingtool/WT = P
+			if(istype(P, /obj/item/weldingtool))
+				var/obj/item/weldingtool/WT = P
 				if(!WT.remove_fuel(0, user))
 					if(!WT.isOn())
 						user << "<span class='warning'>The welding tool must be on to complete this task!</span>"
@@ -29,14 +29,14 @@
 					M.add_fingerprint(user)
 					qdel(src)
 		if(1)
-			if(istype(P, /obj/item/weapon/wrench))
+			if(istype(P, /obj/item/wrench))
 				playsound(src.loc, 'sound/items/Ratchet.ogg', 50, 1)
 				user << "<span class='notice'>You start to unfasten the frame...</span>"
 				if(do_after(user, 20/P.toolspeed, target = src))
 					user << "<span class='notice'>You unfasten the frame.</span>"
 					anchored = 0
 					state = 0
-			if(istype(P, /obj/item/weapon/circuitboard/computer) && !circuit)
+			if(istype(P, /obj/item/circuitboard/computer) && !circuit)
 				if(!user.drop_item())
 					return
 				playsound(src.loc, 'sound/items/Deconstruct.ogg', 50, 1)
@@ -45,12 +45,12 @@
 				circuit = P
 				circuit.add_fingerprint(user)
 				P.loc = null
-			if(istype(P, /obj/item/weapon/screwdriver) && circuit)
+			if(istype(P, /obj/item/screwdriver) && circuit)
 				playsound(src.loc, 'sound/items/Screwdriver.ogg', 50, 1)
 				user << "<span class='notice'>You screw the circuit board into place.</span>"
 				state = 2
 				icon_state = "holo_2"
-			if(istype(P, /obj/item/weapon/crowbar) && circuit)
+			if(istype(P, /obj/item/crowbar) && circuit)
 				playsound(src.loc, 'sound/items/Crowbar.ogg', 50, 1)
 				user << "<span class='notice'>You remove the circuit board.</span>"
 				state = 1
@@ -59,7 +59,7 @@
 				circuit.add_fingerprint(user)
 				circuit = null
 		if(2)
-			if(istype(P, /obj/item/weapon/screwdriver) && circuit)
+			if(istype(P, /obj/item/screwdriver) && circuit)
 				playsound(src.loc, 'sound/items/Screwdriver.ogg', 50, 1)
 				user << "<span class='notice'>You unfasten the circuit board.</span>"
 				state = 1
@@ -78,7 +78,7 @@
 				else
 					user << "<span class='warning'>You need five lengths of cable to wire the frame!</span>"
 		if(3)
-			if(istype(P, /obj/item/weapon/wirecutters))
+			if(istype(P, /obj/item/wirecutters))
 				playsound(src.loc, 'sound/items/Wirecutter.ogg', 50, 1)
 				user << "<span class='notice'>You remove the cables.</span>"
 				state = 2
@@ -102,14 +102,14 @@
 							state = 4
 							src.icon_state = "holo_4"
 		if(4)
-			if(istype(P, /obj/item/weapon/crowbar))
+			if(istype(P, /obj/item/crowbar))
 				playsound(src.loc, 'sound/items/Crowbar.ogg', 50, 1)
 				user << "<span class='notice'>You remove the objective.</span>"
 				state = 3
 				icon_state = "holo_3"
 				var/obj/item/stack/sheet/glass/G = new (loc, 2)
 				G.add_fingerprint(user)
-			if(istype(P, /obj/item/weapon/screwdriver))
+			if(istype(P, /obj/item/screwdriver))
 				playsound(src.loc, 'sound/items/Screwdriver.ogg', 50, 1)
 				user << "<span class='notice'>You connect the hololens.</span>"
 				var/obj/B = new src.circuit.build_path (src.loc, circuit)
