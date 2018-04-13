@@ -4,8 +4,8 @@
 // it's """VR"""
 /obj/machinery/vr_sleeper
 	name = "virtual reality sleeper"
-	desc = "a sleeper modified to alter the subconscious state of the user, allowing them to visit virtual worlds"
-	icon = 'icons/obj/Cryogenic2.dmi'
+	desc = "A sleeper modified to alter the subconscious state of the user, allowing them to visit virtual worlds."
+	icon = 'icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper"
 	state_open = TRUE
 	anchored = TRUE
@@ -46,6 +46,10 @@
 
 
 /obj/machinery/vr_sleeper/relaymove(mob/user)
+	open_machine()
+
+
+/obj/machinery/vr_sleeper/container_resist(mob/living/user)
 	open_machine()
 
 
@@ -118,7 +122,7 @@
 				if(vr_human)
 					qdel(vr_human)
 			else
-				to_chat(usr, "<span class='warning'>The VR Sleeper's safeties prevent you from doing that.")
+				to_chat(usr, "<span class='warning'>The VR Sleeper's safeties prevent you from doing that.</span>")
 			. = TRUE
 		if("toggle_open")
 			if(state_open)

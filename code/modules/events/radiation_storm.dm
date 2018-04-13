@@ -11,9 +11,9 @@
 	endWhen = startWhen + 1
 	announceWhen	= 1
 
-/datum/round_event/radiation_storm/announce()
+/datum/round_event/radiation_storm/announce(fake)
 	priority_announce("–€дом со станцией обнаружен высокий уровень радиации. Ћучшим укрытием от радиации €вл€ются технические тоннели.", "“ревога! јномали€!", 'sound/ai/radiation.ogg')
 	//sound not longer matches the text, but an audible warning is probably good
 
 /datum/round_event/radiation_storm/start()
-	SSweather.run_weather("radiation storm",ZLEVEL_STATION)
+	SSweather.run_weather(/datum/weather/rad_storm)

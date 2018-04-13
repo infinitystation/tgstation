@@ -1,3 +1,4 @@
+#define MAX_RANGE_FIND 32
 
 /mob/living/carbon/monkey
 	var/aggressive=0 // set to 1 using VV for an angry monkey
@@ -120,16 +121,19 @@
 /mob/living/carbon/monkey/proc/should_target(var/mob/living/L)
 
 	if(L == src)
-		return 0
+		return FALSE
+
+	if(has_trait(TRAIT_PACIFISM))
+		return FALSE
 
 	if(enemies[L])
-		return 1
+		return TRUE
 
 	// target non-monkey mobs when aggressive, with a small probability of monkey v monkey
 	if(aggressive && (!istype(L, /mob/living/carbon/monkey/) || prob(MONKEY_AGGRESSIVE_MVM_PROB)))
-		return 1
+		return TRUE
 
-	return 0
+	return FALSE
 
 /mob/living/carbon/monkey/proc/handle_combat()
 	// Don't do any AI if inside another mob (devoured)
@@ -472,3 +476,5 @@
 	if(A)
 		dropItemToGround(A, TRUE)
 		update_icons()
+
+#undef MAX_RANGE_FIND

@@ -142,69 +142,62 @@
 	user.set_machine(src)
 	interact(user)
 
-/*******************
-*   SmartFridge Menu
-********************/
 
-/obj/machinery/smartfridge/interact(mob/user)
-	if(stat)
-		return FALSE
 
-	var/dat = "<TT><b>Select an item:</b><br>"
+/obj/machinery/smartfridge/ui_interact(mob/user, ui_key = "main", datum/tgui/ui = null, force_open = FALSE, datum/tgui/master_ui = null, datum/ui_state/state = GLOB.default_state)
+	ui = SStgui.try_update_ui(user, src, ui_key, ui, force_open)
+	if(!ui)
+		ui = new(user, src, ui_key, "smartvend", name, 440, 550, master_ui, state)
+		ui.set_autoupdate(FALSE)
+		ui.open()
 
-	if (contents.len == 0)
-		dat += "<font color = 'red'>No product loaded!</font>"
-	else
-		var/listofitems = list()
-		for (var/atom/movable/O in contents)
-			if (listofitems[O.name])
-				listofitems[O.name]++
+/obj/machinery/smartfridge/ui_data(mob/user)
+	. = list()
+
+	var/listofitems = list()
+	for (var/I in src)
+		var/atom/movable/O = I
+		if (!QDELETED(O))
+			var/md5name = md5(O.name)				// This needs to happen because of a bug in a TGUI component, https://github.com/ractivejs/ractive/issues/744
+			if (listofitems[md5name])				// which is fixed in a version we cannot use due to ie8 incompatibility
+				listofitems[md5name]["amount"]++	// The good news is, #30519 made smartfridge UIs non-auto-updating
 			else
-				listofitems[O.name] = 1
-		sortList(listofitems)
+				listofitems[md5name] = list("name" = O.name, "type" = O.type, "amount" = 1)
+	sortList(listofitems)
 
-		for (var/O in listofitems)
-			if(listofitems[O] <= 0)
-				continue
-			var/N = listofitems[O]
-			var/itemName = url_encode(O)
-			dat += "<FONT color = 'blue'><B>[capitalize(O)]</B>:"
-			dat += " [N] </font>"
-			dat += "<a href='byond://?src=\ref[src];vend=[itemName];amount=1'>Vend</A> "
-			if(N > 5)
-				dat += "(<a href='byond://?src=\ref[src];vend=[itemName];amount=5'>x5</A>)"
-				if(N > 10)
-					dat += "(<a href='byond://?src=\ref[src];vend=[itemName];amount=10'>x10</A>)"
-					if(N > 25)
-						dat += "(<a href='byond://?src=\ref[src];vend=[itemName];amount=25'>x25</A>)"
-			if(N > 1)
-				dat += "(<a href='?src=\ref[src];vend=[itemName];amount=[N]'>All</A>)"
+	.["contents"] = listofitems
+	.["name"] = name
+	.["isdryer"] = FALSE
 
-			dat += "<br>"
 
-		dat += "</TT>"
-	user << browse("<HEAD><TITLE>[src] supplies</TITLE></HEAD><TT>[dat]</TT>", "window=smartfridge")
-	onclose(user, "smartfridge")
-	return dat
+/obj/machinery/smartfridge/handle_atom_del(atom/A) // Update the UIs in case something inside gets deleted
+	SStgui.update_uis(src)
 
-/obj/machinery/smartfridge/Topic(var/href, var/list/href_list)
-	if(..())
+/obj/machinery/smartfridge/ui_act(action, params)
+	. = ..()
+	if(.)
 		return
-	usr.set_machine(src)
+	switch(action)
+		if("Release")
+			var/desired = 0
 
-	var/N = href_list["vend"]
-	var/amount = text2num(href_list["amount"])
+			if (params["amount"])
+				desired = text2num(params["amount"])
+			else
+				desired = input("How many items?", "How many items would you like to take out?", 1) as null|num
 
-	var/i = amount
-	for(var/obj/O in contents)
-		if(i <= 0)
-			break
-		if(O.name == N)
-			O.loc = src.loc
-			i--
+			if(QDELETED(src) || QDELETED(usr) || !usr.Adjacent(src)) // Sanity checkin' in case stupid stuff happens while we wait for input()
+				return FALSE
 
-
-	updateUsrDialog()
+			for(var/obj/item/O in src)
+				if(desired <= 0)
+					break
+				if(O.name == params["name"])
+					O.forceMove(drop_location())
+					adjust_item_drop_location(O)
+					desired--
+			return TRUE
+	return FALSE
 
 
 // ----------------------------
@@ -229,7 +222,7 @@
 	component_parts = null
 
 /obj/machinery/smartfridge/drying_rack/on_deconstruction()
-	new /obj/item/stack/sheet/mineral/wood(loc, 10)
+	new /obj/item/stack/sheet/mineral/wood(drop_location(), 10)
 	..()
 
 /obj/machinery/smartfridge/drying_rack/RefreshParts()
@@ -240,20 +233,23 @@
 /obj/machinery/smartfridge/drying_rack/default_deconstruction_crowbar(obj/item/crowbar/C, ignore_panel = 1)
 	..()
 
-/obj/machinery/smartfridge/drying_rack/interact(mob/user)
-	var/dat = ..()
-	if(dat)
-		dat += "<br>"
-		dat += "<a href='byond://?src=\ref[src];dry=1'>Toggle Drying</A> "
-		user << browse("<HEAD><TITLE>[src] supplies</TITLE></HEAD><TT>[dat]</TT>", "window=smartfridge")
-	onclose(user, "smartfridge")
+/obj/machinery/smartfridge/drying_rack/ui_data(mob/user)
+	. = ..()
+	.["isdryer"] = TRUE
+	.["verb"] = "Take"
+	.["drying"] = drying
 
-/obj/machinery/smartfridge/drying_rack/Topic(href, list/href_list)
-	..()
-	if(href_list["dry"])
-		toggle_drying(FALSE)
-	updateUsrDialog()
-	update_icon()
+
+/obj/machinery/smartfridge/drying_rack/ui_act(action, params)
+	. = ..()
+	if(.)
+		update_icon() // This is to handle a case where the last item is taken out manually instead of through drying pop-out
+		return
+	switch(action)
+		if("Dry")
+			toggle_drying(FALSE)
+			return TRUE
+	return FALSE
 
 /obj/machinery/smartfridge/drying_rack/power_change()
 	if(powered() && anchored)
@@ -279,6 +275,7 @@
 	..()
 	if(drying)
 		if(rack_dry())//no need to update unless something got dried
+			SStgui.update_uis(src)
 			update_icon()
 
 /obj/machinery/smartfridge/drying_rack/accept_check(obj/item/O)
@@ -300,18 +297,18 @@
 	update_icon()
 
 /obj/machinery/smartfridge/drying_rack/proc/rack_dry()
-	for(var/obj/item/reagent_containers/food/snacks/S in contents)
+	for(var/obj/item/reagent_containers/food/snacks/S in src)
 		if(S.dried_type == S.type)//if the dried type is the same as the object's type, don't bother creating a whole new item...
 			S.add_atom_colour("#ad7257", FIXED_COLOUR_PRIORITY)
 			S.dry = TRUE
-			S.loc = get_turf(src)
+			S.forceMove(drop_location())
 		else
 			var/dried = S.dried_type
-			new dried(src.loc)
+			new dried(drop_location())
 			qdel(S)
 		return TRUE
-	for(var/obj/item/stack/sheet/wetleather/WL in contents)
-		var/obj/item/stack/sheet/leather/L = new(loc)
+	for(var/obj/item/stack/sheet/wetleather/WL in src)
+		var/obj/item/stack/sheet/leather/L = new(drop_location())
 		L.amount = WL.amount
 		qdel(WL)
 		return TRUE
@@ -330,7 +327,7 @@
 	desc = "A refrigerated storage unit for tasty tasty alcohol."
 
 /obj/machinery/smartfridge/drinks/accept_check(obj/item/O)
-	if(!istype(O, /obj/item/reagent_containers) || !O.reagents || !O.reagents.reagent_list.len)
+	if(!istype(O, /obj/item/reagent_containers) || (O.flags_1 & ABSTRACT_1) || !O.reagents || !O.reagents.reagent_list.len)
 		return FALSE
 	if(istype(O, /obj/item/reagent_containers/glass) || istype(O, /obj/item/reagent_containers/food/drinks) || istype(O, /obj/item/reagent_containers/food/condiment))
 		return TRUE
@@ -378,13 +375,13 @@
 					return FALSE
 			return TRUE
 		return FALSE
-	if(!istype(O, /obj/item/reagent_containers))
+	if(!istype(O, /obj/item/reagent_containers) || (O.flags_1 & ABSTRACT_1))
 		return FALSE
 	if(istype(O, /obj/item/reagent_containers/pill)) // empty pill prank ok
 		return TRUE
 	if(!O.reagents || !O.reagents.reagent_list.len) // other empty containers not accepted
 		return FALSE
-	if(istype(O, /obj/item/reagent_containers/syringe) || istype(O, /obj/item/reagent_containers/glass/bottle) || istype(O, /obj/item/reagent_containers/glass/beaker) || istype(O, /obj/item/reagent_containers/spray))
+	if(istype(O, /obj/item/reagent_containers/syringe) || istype(O, /obj/item/reagent_containers/glass/bottle) || istype(O, /obj/item/reagent_containers/glass/beaker) || istype(O, /obj/item/reagent_containers/spray) || istype(O, /obj/item/reagent_containers/medspray))
 		return TRUE
 	return FALSE
 

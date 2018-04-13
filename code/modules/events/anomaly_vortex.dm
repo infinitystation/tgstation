@@ -10,7 +10,7 @@
 	startWhen = 10
 	announceWhen = 3
 
-/datum/round_event/anomaly/anomaly_vortex/announce()
+/datum/round_event/anomaly/anomaly_vortex/announce(fake)
 	priority_announce("Сканеры дальнего радиуса действия обнаружили вихревую аномалию высокой интенсивности. Ожидаемое место воздействия: [impact_area.name]", "Тревога! Аномалия!")
 
 /datum/round_event/anomaly/anomaly_vortex/start()

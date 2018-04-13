@@ -5,7 +5,7 @@
 	program_icon_state = "smmon_0"
 	extended_desc = "This program connects to specially calibrated supermatter sensors to provide information on the status of supermatter-based engines."
 	requires_ntnet = TRUE
-	transfer_access = ACCESS_ENGINE
+	transfer_access = ACCESS_CONSTRUCTION
 	network_destination = "supermatter monitoring system"
 	size = 5
 	tgui_id = "ntos_supermatter_monitor"
@@ -41,10 +41,9 @@
 	var/turf/T = get_turf(ui_host())
 	if(!T)
 		return
-	//var/valid_z_levels = (GetConnectedZlevels(T.z) & using_map.station_levels)
 	for(var/obj/machinery/power/supermatter_shard/S in GLOB.machines)
 		// Delaminating, not within coverage, not on a tile.
-		if(!(S.z == ZLEVEL_STATION || S.z == ZLEVEL_MINING || S.z == T.z) || !istype(S.loc, /turf/))
+		if (!isturf(S.loc) || !(is_station_level(S.z) || is_mining_level(S.z) || S.z == T.z))
 			continue
 		supermatters.Add(S)
 
@@ -120,7 +119,7 @@
 			refresh()
 			return TRUE
 		if("PRG_set")
-			var/newuid = text2num(params["set"])
+			var/newuid = text2num(params["target"])
 			for(var/obj/machinery/power/supermatter_shard/S in supermatters)
 				if(S.uid == newuid)
 					active = S

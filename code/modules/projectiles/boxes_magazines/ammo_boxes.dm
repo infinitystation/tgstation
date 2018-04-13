@@ -17,14 +17,12 @@
 /obj/item/ammo_box/c9mm
 	name = "ammo box (9mm)"
 	icon_state = "9mmbox"
-	origin_tech = "combat=2"
 	ammo_type = /obj/item/ammo_casing/c9mm
 	max_ammo = 30
 
 /obj/item/ammo_box/c10mm
 	name = "ammo box (10mm)"
 	icon_state = "10mmbox"
-	origin_tech = "combat=2"
 	ammo_type = /obj/item/ammo_casing/c10mm
 	max_ammo = 20
 
@@ -38,7 +36,6 @@
 /obj/item/ammo_box/c45nostamina
 	name = "ammo box (.45)"
 	icon_state = "45box"
-	origin_tech = "combat=2"
 	ammo_type = /obj/item/ammo_casing/c45nostamina
 	max_ammo = 48
 
@@ -60,7 +57,6 @@
 /obj/item/ammo_box/n762
 	name = "ammo box (7.62x38mmR)"
 	icon_state = "10mmbox"
-	origin_tech = "combat=2"
 	ammo_type = /obj/item/ammo_casing/n762
 	max_ammo = 14
 

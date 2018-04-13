@@ -2,6 +2,7 @@
 /obj/item/device/instrument
 	name = "generic instrument"
 	resistance_flags = FLAMMABLE
+	force = 10
 	max_integrity = 100
 	icon = 'icons/obj/musician.dmi'
 	lefthand_file = 'icons/mob/inhands/equipment/instruments_lefthand.dmi'
@@ -24,7 +25,7 @@
 	return (BRUTELOSS)
 
 /obj/item/device/instrument/Initialize(mapload)
-	..()
+	. = ..()
 	if(mapload)
 		song.tempo = song.sanitize_tempo(song.tempo) // tick_lag isn't set when the map is loaded
 
@@ -49,7 +50,6 @@
 	desc = "A wooden musical instrument with four strings and a bow. \"The devil went down to space, he was looking for an assistant to grief.\""
 	icon_state = "violin"
 	item_state = "violin"
-	force = 10
 	hitsound = "swing_hit"
 	instrumentId = "violin"
 
@@ -82,7 +82,6 @@
 	item_state = "guitar"
 	slot_flags = SLOT_BACK
 	instrumentExt = "ogg"
-	force = 10
 	attack_verb = list("played metal on", "serenaded", "crashed", "smashed")
 	hitsound = 'sound/weapons/stringsmash.ogg'
 	instrumentId = "guitar"
@@ -112,12 +111,53 @@
 	item_state = "accordion"
 	instrumentId = "accordion"
 
+/obj/item/device/instrument/trumpet
+	name = "trumpet"
+	desc = "To announce the arrival of the king!"
+	icon_state = "trumpet"
+	item_state = "trombone"
+	instrumentId = "trombone"
+
+/obj/item/device/instrument/trumpet/spectral
+	name = "spectral trumpet"
+	desc = "Things are about to get spooky!"
+	icon_state = "trumpet"
+	item_state = "trombone"
+	force = 0
+	instrumentId = "trombone"
+	attack_verb = list("played","jazzed","trumpeted","mourned","dooted","spooked")
+
+/obj/item/device/instrument/trumpet/spectral/Initialize()
+	. = ..()
+	AddComponent(/datum/component/spooky)
+
+/obj/item/device/instrument/trumpet/spectral/attack(mob/living/carbon/C, mob/user)
+	playsound (loc, 'sound/instruments/trombone/En4.mid', 100,1,-1)
+	..()
+
 /obj/item/device/instrument/saxophone
 	name = "saxophone"
 	desc = "This soothing sound will be sure to leave your audience in tears."
 	icon_state = "saxophone"
 	item_state = "saxophone"
 	instrumentId = "saxophone"
+
+/obj/item/device/instrument/saxophone/spectral
+	name = "spectral saxophone"
+	desc = "This spooky sound will be sure to leave mortals in bones."
+	icon_state = "saxophone"
+	item_state = "saxophone"
+	instrumentId = "saxophone"
+	force = 0
+	attack_verb = list("played","jazzed","saxxed","mourned","dooted","spooked")
+
+/obj/item/device/instrument/saxophone/spectral/Initialize()
+	. = ..()
+	AddComponent(/datum/component/spooky)
+
+/obj/item/device/instrument/saxophone/spectral/attack(mob/living/carbon/C, mob/user)
+	playsound (loc, 'sound/instruments/saxophone/En4.mid', 100,1,-1)
+	..()
 
 /obj/item/device/instrument/trombone
 	name = "trombone"
@@ -126,9 +166,27 @@
 	item_state = "trombone"
 	instrumentId = "trombone"
 
+/obj/item/device/instrument/trombone/spectral
+	name = "spectral trombone"
+	desc = "A skeleton's favorite instrument. Apply directly on the mortals."
+	instrumentId = "trombone"
+	icon_state = "trombone"
+	item_state = "trombone"
+	force = 0
+	attack_verb = list("played","jazzed","tromboned","mourned","dooted","spooked")
+
+/obj/item/device/instrument/trombone/spectral/Initialize()
+	. = ..()
+	AddComponent(/datum/component/spooky)
+
+/obj/item/device/instrument/trombone/spectral/attack(mob/living/carbon/C, mob/user)
+	playsound (loc, 'sound/instruments/trombone/Cn4.mid', 100,1,-1)
+	..()
+
 /obj/item/device/instrument/recorder
 	name = "recorder"
 	desc = "Just like in school, playing ability and all."
+	force = 5
 	icon_state = "recorder"
 	item_state = "recorder"
 	instrumentId = "recorder"
@@ -165,4 +223,3 @@
 	throw_speed = 3
 	throw_range = 15
 	hitsound = 'sound/items/bikehorn.ogg'
-

@@ -34,7 +34,7 @@
 		if(!over_object)
 			return
 
-		if (istype(usr.loc, /obj/mecha)) // stops inventory actions in a mech
+		if (ismecha(M.loc)) // stops inventory actions in a mech
 			return
 
 		// this must come before the screen objects only block, dunno why it wasn't before
@@ -88,7 +88,7 @@
 	var/list/things = src_object.contents.Copy()
 	var/datum/progressbar/progress = new(user, things.len, src)
 	while (do_after(user, 10, TRUE, src, FALSE, CALLBACK(src, .proc/handle_mass_item_insertion, things, src_object, user, progress)))
-		sleep(1)
+		stoplag(1)
 	qdel(progress)
 	orient2hud(user)
 	src_object.orient2hud(user)
@@ -182,6 +182,8 @@
 	var/cy = ty
 	boxes.screen_loc = "[tx]:,[ty] to [mx],[my]"
 	for(var/obj/O in contents)
+		if(QDELETED(O))
+			continue
 		O.screen_loc = "[cx],[cy]"
 		O.layer = ABOVE_HUD_LAYER
 		O.plane = ABOVE_HUD_PLANE
@@ -211,6 +213,8 @@
 				cy--
 	else
 		for(var/obj/O in contents)
+			if(QDELETED(O))
+				continue
 			O.mouse_opacity = MOUSE_OPACITY_OPAQUE //This is here so storage items that spawn with contents correctly have the "click around item to equip"
 			O.screen_loc = "[cx]:16,[cy]:16"
 			O.maptext = ""
@@ -244,6 +248,8 @@
 		numbered_contents = list()
 		adjusted_contents = 0
 		for(var/obj/item/I in contents)
+			if(QDELETED(I))
+				continue
 			var/found = 0
 			for(var/datum/numbered_display/ND in numbered_contents)
 				if(ND.sample_object.type == I.type)
@@ -254,7 +260,6 @@
 				adjusted_contents++
 				numbered_contents.Add( new/datum/numbered_display(I) )
 
-	//var/mob/living/carbon/human/H = user
 	var/row_num = 0
 	var/col_count = min(7,storage_slots) -1
 	if(adjusted_contents > 7)
@@ -359,35 +364,43 @@
 	return 1
 
 
-//Call this proc to handle the removal of an item from the storage item. The item will be moved to the atom sent as new_target
+//Call this proc to handle the removal of an item from the storage item. The item will be moved to the new_location target, if that is null it's being deleted
 /obj/item/storage/proc/remove_from_storage(obj/item/W, atom/new_location)
 	if(!istype(W))
 		return 0
 
-	if(istype(src, /obj/item/storage/fancy))
-		var/obj/item/storage/fancy/F = src
-		F.update_icon(1)
-
-	for(var/mob/M in can_see_contents())
-		if(M.client)
-			M.client.screen -= W
+	//Cache this as it should be reusable down the bottom, will not apply if anyone adds a sleep to dropped
+	//or moving objects, things that should never happen
+	var/list/seeing_mobs = can_see_contents()
+	for(var/mob/M in seeing_mobs)
+		M.client.screen -= W
 
 	if(ismob(loc))
 		var/mob/M = loc
 		W.dropped(M)
-	W.layer = initial(W.layer)
-	W.plane = initial(W.plane)
-	W.forceMove(new_location)
+	
 
-	for(var/mob/M in can_see_contents())
+	if(new_location)
+		W.forceMove(new_location)
+		//Reset the items values
+		W.layer = initial(W.layer)
+		W.plane = initial(W.plane)
+		W.mouse_opacity = initial(W.mouse_opacity)
+		if(W.maptext)
+			W.maptext = ""
+		//We don't want to call this if the item is being destroyed
+		W.on_exit_storage(src)
+
+	else
+		//Being destroyed, just move to nullspace now (so it's not in contents for the icon update)
+		W.moveToNullspace()
+
+
+	for(var/mob/M in seeing_mobs)
 		orient2hud(M)
 		show_to(M)
 
-	if(W.maptext)
-		W.maptext = ""
-	W.on_exit_storage(src)
 	update_icon()
-	W.mouse_opacity = initial(W.mouse_opacity)
 	return 1
 
 /obj/item/storage/deconstruct(disassembled = TRUE)
@@ -481,7 +494,7 @@
 	var/list/things = contents.Copy()
 	var/datum/progressbar/progress = new(usr, things.len, T)
 	while (do_after(usr, 10, TRUE, T, FALSE, CALLBACK(src, .proc/mass_remove_from_storage, T, things, progress)))
-		sleep(1)
+		stoplag(1)
 	qdel(progress)
 
 /obj/item/storage/proc/mass_remove_from_storage(atom/target, list/things, datum/progressbar/progress)

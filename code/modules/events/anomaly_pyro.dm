@@ -8,7 +8,7 @@
 	startWhen = 3
 	announceWhen = 10
 
-/datum/round_event/anomaly/anomaly_pyro/announce()
+/datum/round_event/anomaly/anomaly_pyro/announce(fake)
 	priority_announce("Сканеры дальнего радиуса действия обнаружили пирокластическую аномалию. Предположительное место воздействия: [impact_area.name].", "Тревога! Аномалия!")
 
 /datum/round_event/anomaly/anomaly_pyro/start()

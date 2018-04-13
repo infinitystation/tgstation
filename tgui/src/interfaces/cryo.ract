@@ -1,42 +1,21 @@
-<script>
-  component.exports = {
-    data: {
-      temperatureStatus (temp) {
-          if (temp < 225) return 'good'
-          else if (temp < 273.15) return 'average'
-          else return 'bad'
-      }
-    },
-    computed: {
-      occupantStatState () {
-        switch (this.get('data.occupant.stat')) {
-          case 0: return 'good'
-          case 1: return 'average'
-          default: return 'bad'
-        }
-      }
-    }
-  }
-</script>
-
-<ui-display title='Пациент'>
+﻿<ui-display title='Пациент'>
   <ui-section label='Пациент'>
 	 <span>{{data.occupant.name ? data.occupant.name : "Нет пациента"}}</span>
   </ui-section>
   {{#if data.hasOccupant}}
     <ui-section label='Состояние'>
-      <span class='{{occupantStatState}}'>{{data.occupant.stat == 0 ? "В сознании" : data.occupant.stat == 1 ? "Без сознания" : "Смерть"}}</span>
+      <span class='{{data.occupant.statstate}}'>{{data.occupant.stat}}</span>
   	</ui-section>
   	<ui-section label='Температура'>
-  	  <span class='{{temperatureStatus(adata.occupant.bodyTemperature)}}'>{{Math.round(adata.occupant.bodyTemperature)}} K</span>
+  	  <span class='{{data.occupant.temperaturestatus}}'>{{data.occupant.bodyTemperature}} K</span>
   	</ui-section>
     <ui-section label='Здоровье'>
       <ui-bar min='{{data.occupant.minHealth}}' max='{{data.occupant.maxHealth}}' value='{{data.occupant.health}}'
-        state='{{data.occupant.health >= 0 ? "good" : "average"}}'>{{Math.round(adata.occupant.health)}}</ui-bar>
+        state='{{data.occupant.health >= 0 ? "good" : "average"}}'>{{data.occupant.health}}</ui-bar>
     </ui-section>
     {{#each [{label: "Травмы", type: "bruteLoss"}, {label: "Удушье", type: "oxyLoss"}, {label: "Отравление", type: "toxLoss"}, {label: "Ожоги", type: "fireLoss"}]}}
       <ui-section label='{{label}}'>
-        <ui-bar min='0' max='{{data.occupant.maxHealth}}' value='{{data.occupant[type]}}' state='bad'>{{Math.round(adata.occupant[type])}}</ui-bar>
+        <ui-bar min='0' max='{{data.occupant.maxHealth}}' value='{{data.occupant[type]}}' state='bad'>{{data.occupant[type]}}</ui-bar>
       </ui-section>
     {{/each}}
   {{/if}}
@@ -49,7 +28,7 @@
       action='power'>{{data.isOperating ? "Вкл" : "Выкл"}}</ui-button>
   </ui-section>
   <ui-section label='Температура'>
-		<span class='{{temperatureStatus(adata.cellTemperature)}}'>{{Math.round(adata.cellTemperature)}} K</span>
+		<span class='{{data.temperaturestatus}}'>{{data.cellTemperature}} K</span>
 	</ui-section>
 	<ui-section label='Дверь'>
     <ui-button icon='{{data.isOpen ? "unlock" : "lock"}}' action='door'>{{data.isOpen ? "Открыто" : "Закрыто"}}</ui-button>
@@ -63,7 +42,7 @@
   <ui-section label='Содержимое'>
     {{#if data.isBeakerLoaded}}
       {{#each adata.beakerContents}}
-        <span class='highlight' intro-outro='fade'>{{Math.fixed(volume, 2)}} единиц {{name}}</span><br/>
+        <span class='highlight' intro-outro='fade'>{{volume}} единиц {{name}}</span><br/>
       {{else}}
         <span class='bad'>Колба пуста</span>
       {{/each}}

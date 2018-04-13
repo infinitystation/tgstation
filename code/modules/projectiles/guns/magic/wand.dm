@@ -8,13 +8,14 @@
 	can_charge = 0
 	max_charges = 100 //100, 50, 50, 34 (max charge distribution by 25%ths)
 	var/variable_charges = 1
+	harmful = FALSE
 
 /obj/item/gun/magic/wand/Initialize()
 	if(prob(75) && variable_charges) //25% chance of listed max charges, 50% chance of 1/2 max charges, 25% chance of 1/3 max charges
 		if(prob(33))
-			max_charges = Ceiling(max_charges / 3)
+			max_charges = CEILING(max_charges / 3, 1)
 		else
-			max_charges = Ceiling(max_charges / 2)
+			max_charges = CEILING(max_charges / 2, 1)
 	return ..()
 
 /obj/item/gun/magic/wand/examine(mob/user)
@@ -37,7 +38,7 @@
 		if(no_den_usage)
 			var/area/A = get_area(user)
 			if(istype(A, /area/wizard_station))
-				to_chat(user, "<span class='warning'>You know better than to violate the security of The Den, best wait until you leave to use [src].<span>")
+				to_chat(user, "<span class='warning'>You know better than to violate the security of The Den, best wait until you leave to use [src].</span>")
 				return
 			else
 				no_den_usage = 0
@@ -85,6 +86,7 @@
 	fire_sound = 'sound/magic/staff_healing.ogg'
 	icon_state = "revivewand"
 	max_charges = 10 //10, 5, 5, 4
+	harmful = FALSE
 
 /obj/item/gun/magic/wand/resurrection/zap_self(mob/living/user)
 	user.revive(full_heal = 1)
@@ -125,6 +127,7 @@
 	icon_state = "telewand"
 	max_charges = 10 //10, 5, 5, 4
 	no_den_usage = 1
+	harmful = FALSE
 
 /obj/item/gun/magic/wand/teleport/zap_self(mob/living/user)
 	if(do_teleport(user, user, 10))
@@ -146,6 +149,7 @@
 	fire_sound = 'sound/magic/staff_door.ogg'
 	max_charges = 20 //20, 10, 10, 7
 	no_den_usage = 1
+	harmful = FALSE
 
 /obj/item/gun/magic/wand/door/zap_self(mob/living/user)
 	to_chat(user, "<span class='notice'>You feel vaguely more open with your feelings.</span>")

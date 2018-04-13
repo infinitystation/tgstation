@@ -1,12 +1,5 @@
 /obj/item/clothing/shoes/proc/step_action() //this was made to rewrite clown shoes squeaking
-	playsound(src, 'sound/effects/step.ogg', 25, 1)
-
-/obj/item/clothing/shoes/suicide_act(mob/user)
-	user.visible_message("<span class='suicide'>[user] удар€ет себ€ по голове с помощью нижней обуви! –азве это был не удар по голове?</span>")
-	for(var/i = 0, i < 3, i++)
-		sleep(3)
-		playsound(user, 'sound/weapons/genhit2.ogg', 50, 1)
-	return(BRUTELOSS)
+	SendSignal(COMSIG_SHOES_STEP_ACTION)
 
 /obj/item/clothing/shoes/sneakers/mime
 	name = "mime shoes"
@@ -20,9 +13,10 @@
 	item_state = "jackboots"
 	lefthand_file = 'icons/mob/inhands/equipment/security_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/security_righthand.dmi'
-	armor = list(melee = 25, bullet = 25, laser = 25, energy = 25, bomb = 50, bio = 10, rad = 0, fire = 70, acid = 50)
+	armor = list("melee" = 25, "bullet" = 25, "laser" = 25, "energy" = 25, "bomb" = 50, "bio" = 10, "rad" = 0, "fire" = 70, "acid" = 50)
 	strip_delay = 70
-	resistance_flags = 0
+	resistance_flags = NONE
+	permeability_coefficient = 0.05 //Thick soles, and covers the ankle
 	pockets = /obj/item/storage/internal/pocket/shoes
 
 /obj/item/clothing/shoes/combat/swat //overpowered boots for death squads
@@ -30,7 +24,7 @@
 	desc = "High speed, no drag combat boots."
 	permeability_coefficient = 0.01
 	flags_1 = NOSLIP_1
-	armor = list(melee = 40, bullet = 30, laser = 25, energy = 25, bomb = 50, bio = 30, rad = 30, fire = 90, acid = 50)
+	armor = list("melee" = 40, "bullet" = 30, "laser" = 25, "energy" = 25, "bomb" = 50, "bio" = 30, "rad" = 30, "fire" = 90, "acid" = 50)
 
 /obj/item/clothing/shoes/sandal
 	desc = "A pair of rather plain, wooden sandals."
@@ -38,6 +32,7 @@
 	icon_state = "wizard"
 	strip_delay = 50
 	equip_delay_other = 50
+	permeability_coefficient = 0.9
 
 /obj/item/clothing/shoes/sandal/marisa
 	desc = "A pair of magic black shoes."
@@ -47,20 +42,20 @@
 
 /obj/item/clothing/shoes/sandal/magic
 	name = "magical sandals"
-	desc = "A pair of sandals imbued with magic"
+	desc = "A pair of sandals imbued with magic."
 	resistance_flags = FIRE_PROOF |  ACID_PROOF
 
 /obj/item/clothing/shoes/galoshes
 	desc = "A pair of yellow rubber boots, designed to prevent slipping on wet surfaces."
 	name = "galoshes"
 	icon_state = "galoshes"
-	permeability_coefficient = 0.05
+	permeability_coefficient = 0.01
 	flags_1 = NOSLIP_1
 	slowdown = SHOES_SLOWDOWN+1
 	strip_delay = 50
 	equip_delay_other = 50
-	resistance_flags = 0
-	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 40, acid = 75)
+	resistance_flags = NONE
+	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 40, "acid" = 75)
 
 /obj/item/clothing/shoes/galoshes/dry
 	name = "absorbent galoshes"
@@ -82,12 +77,23 @@
 	item_color = "clown"
 	pockets = /obj/item/storage/internal/pocket/shoes/clown
 
-/obj/item/clothing/shoes/clown_shoes/step_action()
-	if(footstep > 1)
-		playsound(src, "clownstep", 50, 1)
-		footstep = 0
-	else
-		footstep++
+/obj/item/clothing/shoes/clown_shoes/Initialize()
+	. = ..()
+	AddComponent(/datum/component/squeak, list('sound/effects/clownstep1.ogg'=1,'sound/effects/clownstep2.ogg'=1), 50)
+
+/obj/item/clothing/shoes/clown_shoes/equipped(mob/user, slot)
+	. = ..()
+	if(user.mind && user.mind.assigned_role == "Clown")
+		GET_COMPONENT_FROM(mood, /datum/component/mood, user)
+		if(mood)
+			mood.clear_event("noshoes")
+
+/obj/item/clothing/shoes/clown_shoes/dropped(mob/user)
+	. = ..()
+	if(user.mind && user.mind.assigned_role == "Clown")
+		GET_COMPONENT_FROM(mood, /datum/component/mood, user)
+		if(mood)
+			mood.add_event("noshoes", /datum/mood_event/noshoes)
 
 /obj/item/clothing/shoes/clown_shoes/jester
 	name = "jester shoes"
@@ -104,7 +110,8 @@
 	item_color = "hosred"
 	strip_delay = 50
 	equip_delay_other = 50
-	resistance_flags = 0
+	resistance_flags = NONE
+	permeability_coefficient = 0.05 //Thick soles, and covers the ankle
 	pockets = /obj/item/storage/internal/pocket/shoes
 
 /obj/item/clothing/shoes/jackboots/fast
@@ -115,6 +122,7 @@
 	desc = "Boots lined with 'synthetic' animal fur."
 	icon_state = "winterboots"
 	item_state = "winterboots"
+	permeability_coefficient = 0.15
 	cold_protection = FEET|LEGS
 	min_cold_protection_temperature = SHOES_MIN_TEMP_PROTECT
 	heat_protection = FEET|LEGS
@@ -128,6 +136,7 @@
 	item_state = "jackboots"
 	lefthand_file = 'icons/mob/inhands/equipment/security_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/security_righthand.dmi'
+	permeability_coefficient = 0.15
 	strip_delay = 40
 	equip_delay_other = 40
 	pockets = /obj/item/storage/internal/pocket/shoes
@@ -174,6 +183,7 @@
 	item_state = "roman"
 	strip_delay = 100
 	equip_delay_other = 100
+	permeability_coefficient = 0.9
 
 /obj/item/clothing/shoes/griffin
 	name = "griffon boots"
@@ -191,6 +201,7 @@
 	resistance_flags = FIRE_PROOF
 	pockets = /obj/item/storage/internal/pocket/shoes
 	actions_types = list(/datum/action/item_action/bhop)
+	permeability_coefficient = 0.05
 	var/jumpdistance = 5 //-1 from to see the actual distance, e.g 4 goes over 3 tiles
 	var/jumpspeed = 3
 	var/recharging_rate = 60 //default 6 seconds between each dash
@@ -198,22 +209,24 @@
 	var/jumping = FALSE //are we mid-jump?
 
 /obj/item/clothing/shoes/bhop/ui_action_click(mob/user, action)
-	if(!isliving(usr))
+	if(!isliving(user))
 		return
 
 	if(jumping)
 		return
 
 	if(recharging_time > world.time)
-		to_chat(usr, "<span class='warning'>The boot's internal propulsion needs to recharge still!</span>")
+		to_chat(user, "<span class='warning'>The boot's internal propulsion needs to recharge still!</span>")
 		return
 
-	var/atom/target = get_edge_target_turf(usr, usr.dir) //gets the user's direction
+	var/atom/target = get_edge_target_turf(user, user.dir) //gets the user's direction
 
-	jumping = TRUE
-	playsound(src.loc, 'sound/effects/stealthoff.ogg', 50, 1, 1)
-	usr.visible_message("<span class='warning'>[usr] dashes forward into the air!</span>")
-	usr.throw_at(target, jumpdistance, jumpspeed, spin=0, diagonals_first = 1, callback = CALLBACK(src, .proc/hop_end))
+	if (user.throw_at(target, jumpdistance, jumpspeed, spin = FALSE, diagonals_first = TRUE, callback = CALLBACK(src, .proc/hop_end)))
+		jumping = TRUE
+		playsound(src, 'sound/effects/stealthoff.ogg', 50, 1, 1)
+		user.visible_message("<span class='warning'>[usr] dashes forward into the air!</span>")
+	else
+		to_chat(user, "<span class='warning'>Something prevents you from dashing forward!</span>")
 
 /obj/item/clothing/shoes/bhop/proc/hop_end()
 	jumping = FALSE
@@ -230,3 +243,13 @@
 	desc = "These boots were made for dancing."
 	icon_state = "bsing"
 	equip_delay_other = 50
+
+/obj/item/clothing/shoes/bronze
+	name = "bronze boots"
+	desc = "A giant, clunky pair of shoes crudely made out of bronze. Why would anyone wear these?"
+	icon = 'icons/obj/clothing/clockwork_garb.dmi'
+	icon_state = "clockwork_treads"
+
+/obj/item/clothing/shoes/bronze/Initialize()
+	. = ..()
+	AddComponent(/datum/component/squeak, list('sound/machines/clockcult/integration_cog_install.ogg' = 1, 'sound/magic/clockwork/fellowship_armory.ogg' = 1), 50)

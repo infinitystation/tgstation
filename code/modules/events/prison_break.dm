@@ -28,7 +28,7 @@
 				areasToOpen += A
 
 
-/datum/round_event/grey_tide/announce()
+/datum/round_event/grey_tide/announce(fake)
 	if(areasToOpen && areasToOpen.len > 0)
 		priority_announce("Gr3y.T1d3 вирус обнаружен в [station_name()] дверных драйверах. Уровень угрозы [severity]. Рекомендуется участие ИИ.", "Предупреждение системы безопасности")
 	else

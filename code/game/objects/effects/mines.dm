@@ -136,13 +136,14 @@
 	chainsaw.attack_self(victim)
 	chainsaw.wield(victim)
 	victim.reagents.add_reagent("adminordrazine",25)
+	to_chat(victim, "<span class='warning'>KILL, KILL, KILL! YOU HAVE NO ALLIES ANYMORE, KILL THEM ALL!</span>")
 
 	victim.client.color = pure_red
 	animate(victim.client,color = red_splash, time = 10, easing = SINE_EASING|EASE_OUT)
 	sleep(10)
 	animate(victim.client,color = old_color, time = duration)//, easing = SINE_EASING|EASE_OUT)
 	sleep(duration)
-	to_chat(victim, "<span class='notice'>Your bloodlust seeps back into the bog of your subconscious and you regain self control.<span>")
+	to_chat(victim, "<span class='notice'>Your bloodlust seeps back into the bog of your subconscious and you regain self control.</span>")
 	qdel(chainsaw)
 	qdel(src)
 
@@ -167,7 +168,7 @@
 	if(!victim.client || !istype(victim))
 		return
 	to_chat(victim, "<span class='notice'>You feel fast!</span>")
-	victim.status_flags |= GOTTAGOREALLYFAST
+	victim.add_trait(TRAIT_GOTTAGOREALLYFAST, "yellow_orb")
 	sleep(duration)
-	victim.status_flags &= ~GOTTAGOREALLYFAST
+	victim.remove_trait(TRAIT_GOTTAGOREALLYFAST, "yellow_orb")
 	to_chat(victim, "<span class='notice'>You slow down.</span>")

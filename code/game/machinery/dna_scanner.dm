@@ -1,7 +1,7 @@
 /obj/machinery/dna_scannernew
 	name = "\improper DNA scanner"
 	desc = "It scans DNA structures."
-	icon = 'icons/obj/Cryogenic2.dmi'
+	icon = 'icons/obj/machines/cloning.dmi'
 	icon_state = "scanner"
 	density = TRUE
 	anchored = TRUE
@@ -14,6 +14,8 @@
 	var/damage_coeff
 	var/scan_level
 	var/precision_coeff
+	var/message_cooldown
+	var/breakout_time = 1200
 
 /obj/machinery/dna_scannernew/RefreshParts()
 	scan_level = 0
@@ -65,43 +67,40 @@
 	open_machine()
 
 /obj/machinery/dna_scannernew/container_resist(mob/living/user)
-	var/breakout_time = 2
-	if(state_open || !locked)	//Open and unlocked, no need to escape
-		state_open = TRUE
+	if(!locked)
+		open_machine()
 		return
 	user.changeNext_move(CLICK_CD_BREAKOUT)
 	user.last_special = world.time + CLICK_CD_BREAKOUT
-	to_chat(user, "<span class='notice'>You lean on the back of [src] and start pushing the door open... (this will take about [breakout_time] minutes.)</span>")
-	user.visible_message("<span class='italics'>You hear a metallic creaking from [src]!</span>")
-
-	if(do_after(user,(breakout_time*60*10), target = src)) //minutes * 60seconds * 10deciseconds
+	user.visible_message("<span class='notice'>You see [user] kicking against the door of [src]!</span>", \
+		"<span class='notice'>You lean on the back of [src] and start pushing the door open... (this will take about [DisplayTimeText(breakout_time)].)</span>", \
+		"<span class='italics'>You hear a metallic creaking from [src].</span>")
+	if(do_after(user,(breakout_time), target = src))
 		if(!user || user.stat != CONSCIOUS || user.loc != src || state_open || !locked)
 			return
-
 		locked = FALSE
-		visible_message("<span class='warning'>[user] successfully broke out of [src]!</span>")
-		to_chat(user, "<span class='notice'>You successfully break out of [src]!</span>")
-
+		user.visible_message("<span class='warning'>[user] successfully broke out of [src]!</span>", \
+			"<span class='notice'>You successfully break out of [src]!</span>")
 		open_machine()
 
 /obj/machinery/dna_scannernew/proc/locate_computer(type_)
-	for(dir in list(NORTH,EAST,SOUTH,WEST))
-		var/C = locate(type_, get_step(src, dir))
+	for(var/direction in GLOB.cardinals)
+		var/C = locate(type_, get_step(src, direction))
 		if(C)
 			return C
 	return null
 
-/obj/machinery/dna_scannernew/close_machine()
+/obj/machinery/dna_scannernew/close_machine(mob/living/carbon/user)
 	if(!state_open)
-		return 0
+		return FALSE
 
-	..()
+	..(user)
 
 	// search for ghosts, if the corpse is empty and the scanner is connected to a cloner
 	var/mob/living/mob_occupant = get_mob_or_brainmob(occupant)
 	if(istype(mob_occupant))
 		if(locate_computer(/obj/machinery/computer/cloning))
-			if(!mob_occupant.suiciding && !(mob_occupant.disabilities & NOCLONE) && !mob_occupant.hellbound)
+			if(!mob_occupant.suiciding && !(mob_occupant.has_trait(TRAIT_NOCLONE)) && !mob_occupant.hellbound)
 				mob_occupant.notify_ghost_cloning("Your corpse has been placed into a cloning scanner. Re-enter your corpse if you want to be cloned!", source = src)
 
 	// DNA manipulators cannot operate on severed heads or brains
@@ -114,18 +113,19 @@
 
 /obj/machinery/dna_scannernew/open_machine()
 	if(state_open)
-		return 0
+		return FALSE
 
 	..()
 
-	return 1
+	return TRUE
 
 /obj/machinery/dna_scannernew/relaymove(mob/user as mob)
 	if(user.stat || locked)
+		if(message_cooldown <= world.time)
+			message_cooldown = world.time + 50
+			to_chat(user, "<span class='warning'>[src]'s door won't budge!</span>")
 		return
-
 	open_machine()
-	return
 
 /obj/machinery/dna_scannernew/attackby(obj/item/I, mob/user, params)
 
@@ -149,3 +149,8 @@
 		return
 
 	toggle_open(user)
+
+/obj/machinery/dna_scannernew/MouseDrop_T(mob/target, mob/user)
+	if(user.stat || user.lying || !Adjacent(user) || !user.Adjacent(target) || !iscarbon(target) || !user.IsAdvancedToolUser())
+		return
+	close_machine(target)

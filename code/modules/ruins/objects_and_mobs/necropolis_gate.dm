@@ -256,11 +256,14 @@ GLOBAL_DATUM(necropolis_gate, /obj/structure/necropolis_gate/legion_gate)
 	else
 		return QDEL_HINT_LETMELIVE
 
+/obj/structure/stone_tile/singularity_pull()
+	return
+
 /obj/structure/stone_tile/Crossed(atom/movable/AM)
 	if(falling || fallen)
 		return
 	var/turf/T = get_turf(src)
-	if(!istype(T, /turf/open/lava) && !istype(T, /turf/open/chasm)) //nothing to sink or fall into
+	if(!islava(T) && !ischasm(T)) //nothing to sink or fall into
 		return
 	var/obj/item/I
 	if(istype(AM, /obj/item))

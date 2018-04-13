@@ -84,7 +84,7 @@
 	del_on_death = 1
 
 /mob/living/simple_animal/hostile/asteroid/hivelordbrood/Initialize()
-	..()
+	. = ..()
 	addtimer(CALLBACK(src, .proc/death), 100)
 
 //Legion
@@ -110,7 +110,27 @@
 	del_on_death = 1
 	stat_attack = UNCONSCIOUS
 	robust_searching = 1
+	var/dwarf_mob = FALSE
 	var/mob/living/carbon/human/stored_mob
+
+/mob/living/simple_animal/hostile/asteroid/hivelord/legion/random/Initialize()
+	. = ..()
+	if(prob(5))
+		new /mob/living/simple_animal/hostile/asteroid/hivelord/legion/dwarf(loc)
+		return INITIALIZE_HINT_QDEL
+
+/mob/living/simple_animal/hostile/asteroid/hivelord/legion/dwarf
+	name = "dwarf legion"
+	desc = "You can still see what was once a rather small human under the shifting mass of corruption."
+	icon_state = "dwarf_legion"
+	icon_living = "dwarf_legion"
+	icon_aggro = "dwarf_legion"
+	icon_dead = "dwarf_legion"
+	maxHealth = 60
+	health = 60
+	speed = 2 //faster!
+	crusher_drop_mod = 20
+	dwarf_mob = TRUE
 
 /mob/living/simple_animal/hostile/asteroid/hivelord/legion/death(gibbed)
 	visible_message("<span class='warning'>The skulls on [src] wail in anger as they flee from their dying host!</span>")
@@ -121,6 +141,8 @@
 			stored_mob = null
 		else if(fromtendril)
 			new /obj/effect/mob_spawn/human/corpse/charredskeleton(T)
+		else if(dwarf_mob)
+			new /obj/effect/mob_spawn/human/corpse/damaged/legioninfested/dwarf(T)
 		else
 			new /obj/effect/mob_spawn/human/corpse/damaged/legioninfested(T)
 	..(gibbed)
@@ -164,7 +186,11 @@
 
 /mob/living/simple_animal/hostile/asteroid/hivelordbrood/legion/proc/infest(mob/living/carbon/human/H)
 	visible_message("<span class='warning'>[name] burrows into the flesh of [H]!</span>")
-	var/mob/living/simple_animal/hostile/asteroid/hivelord/legion/L = new(H.loc)
+	var/mob/living/simple_animal/hostile/asteroid/hivelord/legion/L
+	if(H.dna.check_mutation(DWARFISM)) //dwarf legions aren't just fluff!
+		L = new /mob/living/simple_animal/hostile/asteroid/hivelord/legion/dwarf(H.loc)
+	else
+		L = new(H.loc)
 	visible_message("<span class='warning'>[L] staggers to their feet!</span>")
 	H.death()
 	H.adjustBruteLoss(1000)
@@ -174,7 +200,7 @@
 
 //Advanced Legion is slightly tougher to kill and can raise corpses (revive other legions)
 /mob/living/simple_animal/hostile/asteroid/hivelord/legion/advanced
-	stat_attack = 2
+	stat_attack = DEAD
 	maxHealth = 120
 	health = 120
 	brood_type = /mob/living/simple_animal/hostile/asteroid/hivelordbrood/legion/advanced
@@ -184,7 +210,7 @@
 	icon_dead = "dwarf_legion"
 
 /mob/living/simple_animal/hostile/asteroid/hivelordbrood/legion/advanced
-	stat_attack = 2
+	stat_attack = DEAD
 	can_infest_dead = TRUE
 
 //Legion that spawns Legions
@@ -200,7 +226,7 @@
 	max_mobs = 3
 	spawn_time = 200
 	spawn_text = "peels itself off from"
-	mob_type = /mob/living/simple_animal/hostile/asteroid/hivelord/legion
+	mob_types = list(/mob/living/simple_animal/hostile/asteroid/hivelord/legion)
 	melee_damage_lower = 20
 	melee_damage_upper = 20
 	anchored = FALSE
@@ -235,6 +261,10 @@
 	mob_color = "#454545"
 
 //Legion infested mobs
+
+/obj/effect/mob_spawn/human/corpse/damaged/legioninfested/dwarf/equip(mob/living/carbon/human/H)
+	. = ..()
+	H.dna.add_mutation(DWARFISM)
 
 /obj/effect/mob_spawn/human/corpse/damaged/legioninfested/Initialize()
 	var/type = pickweight(list("Miner" = 66, "Ashwalker" = 10, "Golem" = 10,"Clown" = 10, pick(list("Shadow", "YeOlde","Operative", "Cultist")) = 4))
@@ -316,7 +346,6 @@
 			mask = /obj/item/clothing/mask/breath
 		if("Operative")
 			id_job = "Operative"
-			id_access_list = list(ACCESS_SYNDICATE)
 			outfit = /datum/outfit/syndicatecommandocorpse
 		if("Shadow")
 			mob_species = /datum/species/shadow
@@ -336,7 +365,7 @@
 			r_pocket = /obj/item/restraints/legcuffs/bola/cult
 			l_pocket = /obj/item/melee/cultblade/dagger
 			glasses =  /obj/item/clothing/glasses/night/cultblind
-			backpack_contents = list(/obj/item/reagent_containers/food/drinks/bottle/unholywater = 1, /obj/item/device/cult_shift = 1, /obj/item/device/flashlight/flare/culttorch = 1, /obj/item/stack/sheet/runed_metal = 15)
+			backpack_contents = list(/obj/item/reagent_containers/glass/beaker/unholywater = 1, /obj/item/device/cult_shift = 1, /obj/item/device/flashlight/flare/culttorch = 1, /obj/item/stack/sheet/runed_metal = 15)
 	. = ..()
 
 

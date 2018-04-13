@@ -1,6 +1,6 @@
 //Warden and regular officers add this result to their get_access()
 /datum/job/proc/check_config_for_sec_maint()
-	if(config.jobs_have_maint_access & SECURITY_HAS_MAINT_ACCESS)
+	if(CONFIG_GET(flag/security_has_maint_access))
 		return list(ACCESS_MAINT_TUNNELS)
 	return list()
 
@@ -23,6 +23,7 @@ Head of Security
 	exp_requirements = 300
 	exp_type = EXP_TYPE_CREW
 	exp_type_department = EXP_TYPE_SECURITY
+	antag_rep = 20
 
 	outfit = /datum/outfit/job/hos
 
@@ -76,6 +77,7 @@ Warden
 	minimal_player_age = 7
 	exp_requirements = 300
 	exp_type = EXP_TYPE_CREW
+	antag_rep = 16
 
 	outfit = /datum/outfit/job/warden
 
@@ -128,6 +130,7 @@ Detective
 	minimal_player_age = 7
 	exp_requirements = 300
 	exp_type = EXP_TYPE_CREW
+	antag_rep = 12
 
 	outfit = /datum/outfit/job/detective
 
@@ -178,6 +181,7 @@ Security Officer
 	minimal_player_age = 7
 	exp_requirements = 300
 	exp_type = EXP_TYPE_CREW
+	antag_rep = 12
 
 	outfit = /datum/outfit/job/security
 
@@ -246,7 +250,7 @@ GLOBAL_LIST_INIT(available_depts, list(SEC_DEPT_ENGINEERING, SEC_DEPT_MEDICAL, S
 	W.access |= dep_access
 
 	var/teleport = 0
-	if(!config.sec_start_brig)
+	if(!CONFIG_GET(flag/sec_start_brig))
 		if(destination || spawn_point)
 			teleport = 1
 	if(teleport)
@@ -294,10 +298,10 @@ GLOBAL_LIST_INIT(available_depts, list(SEC_DEPT_ENGINEERING, SEC_DEPT_MEDICAL, S
 
 
 /obj/item/device/radio/headset/headset_sec/alt/department/Initialize()
+	. = ..()
 	wires = new/datum/wires/radio(src)
 	secure_radio_connections = new
 	recalculateChannels()
-	..()
 
 /obj/item/device/radio/headset/headset_sec/alt/department/engi
 	keyslot = new /obj/item/device/encryptionkey/headset_sec

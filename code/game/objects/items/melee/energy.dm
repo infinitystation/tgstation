@@ -2,7 +2,7 @@
 	hitsound_on = 'sound/weapons/blade1.ogg'
 	heat = 3500
 	max_integrity = 200
-	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 100, acid = 30)
+	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 100, "acid" = 30)
 	resistance_flags = FIRE_PROOF
 	var/brightness_on = 3
 
@@ -20,8 +20,8 @@
 	user.visible_message("<span class='suicide'>[user] вспорнул[user.p_e_1()] себе живот с помощью энергетического оружия! Кажетс&#255; [user.p_they()] пытал[user.p_e_5()] покончить жизнь сэппукой!</span>")
 	return (BRUTELOSS|FIRELOSS)
 
-/obj/item/melee/transforming/energy/add_blood(list/blood_dna)
-	return 0
+/obj/item/melee/transforming/energy/add_blood_DNA(list/blood_dna)
+	return FALSE
 
 /obj/item/melee/transforming/energy/is_sharp()
 	return active * sharpness
@@ -74,7 +74,6 @@
 	w_class_on = WEIGHT_CLASS_HUGE
 	flags_1 = CONDUCT_1
 	armour_penetration = 100
-	origin_tech = "combat=4;magnets=3"
 	attack_verb_off = list("attacked", "chopped", "cleaved", "torn", "cut")
 	attack_verb_on = list()
 	light_color = "#40ceff"
@@ -96,10 +95,8 @@
 	throw_speed = 3
 	throw_range = 5
 	sharpness = IS_SHARP
-	embed_chance = 75
-	embedded_impact_pain_multiplier = 10
+	embedding = list("embed_chance" = 75, "embedded_impact_pain_multiplier" = 10)
 	armour_penetration = 35
-	origin_tech = "combat=3;magnets=4;syndicate=4"
 	block_chance = 50
 
 /obj/item/melee/transforming/energy/sword/transform_weapon(mob/living/user, supress_message_text)
@@ -128,13 +125,13 @@
 /obj/item/melee/transforming/energy/sword/cyborg/saw //Used by medical Syndicate cyborgs
 	name = "energy saw"
 	desc = "For heavy duty cutting. It has a carbon-fiber blade in addition to a toggleable hard-light edge to dramatically increase sharpness."
-	icon_state = "esaw"
 	force_on = 30
 	force = 18 //About as much as a spear
 	hitsound = 'sound/weapons/circsawhit.ogg'
 	icon = 'icons/obj/surgery.dmi'
 	icon_state = "esaw_0"
 	icon_state_on = "esaw_1"
+	item_color = null //stops icon from breaking when turned on.
 	hitcost = 75 //Costs more than a standard cyborg esword
 	w_class = WEIGHT_CLASS_NORMAL
 	sharpness = IS_SHARP

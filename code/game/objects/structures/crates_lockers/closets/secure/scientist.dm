@@ -27,3 +27,4 @@
 	new /obj/item/door_remote/research_director(src)
 	new /obj/item/melee/baton/shocker/loaded(src)
 	new /obj/item/storage/box/firingpins(src)
+	new /obj/item/circuitboard/machine/techfab/department/science(src)

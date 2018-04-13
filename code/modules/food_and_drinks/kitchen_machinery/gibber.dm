@@ -1,4 +1,3 @@
-
 /obj/machinery/gibber
 	name = "gibber"
 	desc = "The name isn't descriptive enough?"
@@ -12,10 +11,10 @@
 	circuit = /obj/item/circuitboard/machine/gibber
 
 	var/operating = FALSE //Is it on?
-	var/dirty = 0 // Does it need cleaning?
+	var/dirty = FALSE // Does it need cleaning?
 	var/gibtime = 40 // Time from starting until meat appears
 	var/meat_produced = 0
-	var/ignore_clothing = 0
+	var/ignore_clothing = FALSE
 
 
 /obj/machinery/gibber/Initialize()
@@ -30,7 +29,7 @@
 		gib_time -= 5 * M.rating
 		gibtime = gib_time
 		if(M.rating >= 2)
-			ignore_clothing = 1
+			ignore_clothing = TRUE
 
 /obj/machinery/gibber/update_icon()
 	cut_overlays()
@@ -51,11 +50,18 @@
 /obj/machinery/gibber/container_resist(mob/living/user)
 	go_out()
 
+/obj/machinery/gibber/relaymove(mob/living/user)
+	go_out()
+
 /obj/machinery/gibber/attack_hand(mob/user)
 	if(stat & (NOPOWER|BROKEN))
 		return
 	if(operating)
 		to_chat(user, "<span class='danger'>It's locked and running.</span>")
+		return
+
+	if(!anchored)
+		to_chat(user, "<span class='notice'>[src] cannot be used unless bolted to the ground.</span>")
 		return
 
 	if(user.pulling && user.a_intent == INTENT_GRAB && isliving(user.pulling))
@@ -67,12 +73,17 @@
 		if(C.buckled ||C.has_buckled_mobs())
 			to_chat(user, "<span class='warning'>[C] is attached to something!</span>")
 			return
-		if(C.abiotic(1) && !ignore_clothing)
-			to_chat(user, "<span class='danger'>Subject may not have abiotic items on.</span>")
-			return
+
+		if(!ignore_clothing)
+			for(var/obj/item/I in C.held_items + C.get_equipped_items())
+				if(!(I.flags_1 & NODROP_1))
+					to_chat(user, "<span class='danger'>Subject may not have abiotic items on.</span>")
+					return
 
 		user.visible_message("<span class='danger'>[user] starts to put [C] into the gibber!</span>")
-		src.add_fingerprint(user)
+
+		add_fingerprint(user)
+
 		if(do_after(user, gibtime, target = src))
 			if(C && user.pulling == C && !C.buckled && !C.has_buckled_mobs() && !occupant)
 				user.visible_message("<span class='danger'>[user] stuffs [C] into the gibber!</span>")
@@ -140,17 +151,17 @@
 	var/sourcenutriment = mob_occupant.nutrition / 15
 	var/gibtype = /obj/effect/decal/cleanable/blood/gibs
 	var/typeofmeat = /obj/item/reagent_containers/food/snacks/meat/slab/human
-	var/typeofskin = /obj/item/stack/sheet/animalhide/human
+	var/typeofskin
 
 	var/obj/item/reagent_containers/food/snacks/meat/slab/allmeat[meat_produced]
-	var/obj/item/stack/sheet/animalhide/allskin
+	var/obj/item/stack/sheet/animalhide/skin
+	var/list/datum/disease/diseases = mob_occupant.get_static_viruses()
 
 	if(ishuman(occupant))
 		var/mob/living/carbon/human/gibee = occupant
 		if(gibee.dna && gibee.dna.species)
 			typeofmeat = gibee.dna.species.meat
-			if(gibee.dna.species.skinned_type)
-				typeofskin = gibee.dna.species.skinned_type
+			typeofskin = gibee.dna.species.skinned_type
 
 	else if(iscarbon(occupant))
 		var/mob/living/carbon/C = occupant
@@ -163,7 +174,6 @@
 
 	for (var/i=1 to meat_produced)
 		var/obj/item/reagent_containers/food/snacks/meat/slab/newmeat = new typeofmeat
-		var/obj/item/stack/sheet/animalhide/newskin = new typeofskin
 		newmeat.name = "[sourcename] [newmeat.name]"
 		if(istype(newmeat))
 			newmeat.subjectname = sourcename
@@ -171,58 +181,46 @@
 			if(sourcejob)
 				newmeat.subjectjob = sourcejob
 		allmeat[i] = newmeat
-		allskin = newskin
+
+	if(typeofskin)
+		skin = new typeofskin
 
 	add_logs(user, occupant, "gibbed")
 	mob_occupant.death(1)
 	mob_occupant.ghostize()
 	qdel(src.occupant)
-	spawn(src.gibtime)
-		playsound(src.loc, 'sound/effects/splat.ogg', 50, 1)
-		operating = FALSE
-		var/turf/T = get_turf(src)
-		var/list/turf/nearby_turfs = RANGE_TURFS(3,T) - T
-		var/obj/item/skin = allskin
-		skin.loc = src.loc
-		skin.throw_at(pick(nearby_turfs),meat_produced,3)
-		for (var/i=1 to meat_produced)
-			var/obj/item/meatslab = allmeat[i]
-			meatslab.loc = src.loc
-			meatslab.throw_at(pick(nearby_turfs),i,3)
-			for (var/turfs=1 to meat_produced)
-				var/turf/gibturf = pick(nearby_turfs)
-				if (!gibturf.density && src in view(gibturf))
-					new gibtype(gibturf,i)
+	addtimer(CALLBACK(src, .proc/make_meat, skin, allmeat, meat_produced, gibtype, diseases), gibtime)
 
-		pixel_x = initial(pixel_x) //return to its spot after shaking
-		operating = FALSE
-		update_icon()
+/obj/machinery/gibber/proc/make_meat(obj/item/stack/sheet/animalhide/skin, list/obj/item/reagent_containers/food/snacks/meat/slab/allmeat, meat_produced, gibtype, list/datum/disease/diseases)
+	playsound(src.loc, 'sound/effects/splat.ogg', 50, 1)
+	operating = FALSE
+	var/turf/T = get_turf(src)
+	var/list/turf/nearby_turfs = RANGE_TURFS(3,T) - T
+	if(skin)
+		skin.forceMove(loc)
+		skin.throw_at(pick(nearby_turfs),meat_produced,3)
+	for (var/i=1 to meat_produced)
+		var/obj/item/meatslab = allmeat[i]
+		meatslab.forceMove(loc)
+		meatslab.throw_at(pick(nearby_turfs),i,3)
+		for (var/turfs=1 to meat_produced)
+			var/turf/gibturf = pick(nearby_turfs)
+			if (!gibturf.density && src in view(gibturf))
+				new gibtype(gibturf,i,diseases)
+
+	pixel_x = initial(pixel_x) //return to its spot after shaking
+	operating = FALSE
+	update_icon()
 
 //auto-gibs anything that bumps into it
 /obj/machinery/gibber/autogibber
-	var/turf/input_plate
-
-/obj/machinery/gibber/autogibber/Initialize()
-	. = ..()
-	for(var/i in GLOB.cardinals)
-		var/obj/machinery/mineral/input/input_obj = locate() in get_step(loc, i)
-		if(input_obj)
-			if(isturf(input_obj.loc))
-				input_plate = input_obj.loc
-				qdel(input_obj)
-				break
-
-	if(!input_plate)
-		CRASH("Didn't find an input plate.")
-		return
+	var/input_dir = NORTH
 
 /obj/machinery/gibber/autogibber/CollidedWith(atom/movable/AM)
-	if(!input_plate)
-		return
-
+	var/atom/input = get_step(src, input_dir)
 	if(ismob(AM))
 		var/mob/M = AM
 
-		if(M.loc == input_plate)
+		if(M.loc == input)
 			M.forceMove(src)
 			M.gib()

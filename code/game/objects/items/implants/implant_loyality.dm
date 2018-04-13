@@ -29,8 +29,8 @@
 	if(cause == "action_button" && alert(imp_in, "Вы действительно хотите узнать, что делает этот имплант?", "Подтверждение", "Да", "Нет") != "Да")
 		return 0
 	imp_in << "<span class='notice'>Я чувствую ло&#255;льность к Нанотрайзен! Слава корпорации!</span>" */
+/obj/item/implant/mindshield/implant(mob/living/target, mob/user, silent = FALSE)
 
-/obj/item/implant/mindshield/implant(mob/living/target, mob/user, silent = 0)
 	if(..())
 		if((target.mind in (SSticker.mode.changelings | SSticker.mode.abductors | SSticker.mode.cult)) || target.isntloyal())
 			if(!silent)
@@ -43,10 +43,10 @@
 		if(!silent)
 			to_chat(target, "<span class='notice'>Вы чувствуете сильную ло&#255;льность к Нанотрайзен...</span>")
 		target.throw_alert("loyalty_implanted", /obj/screen/alert/loyalty_imp)
-		return 1
-	return 0
+		return TRUE
+	return FALSE
 
-/obj/item/implant/mindshield/removed(mob/target, silent = 0, special = 0)
+/obj/item/implant/mindshield/removed(mob/target, silent = FALSE, special = 0)
 	if(..())
 		if(target.stat != DEAD && !silent)
 			to_chat(target, "<span class='boldnotice'>Вы чувствуете, как ло&#255;льность к Нанотрайзен покидает вас вместе с вашей жизнью...</span>")

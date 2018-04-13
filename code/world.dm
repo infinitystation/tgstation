@@ -6,12 +6,10 @@
 	turf = /turf/open/space/basic
 	area = /area/space
 	view = "15x15"
-	cache_lifespan = 7
 	hub = "Exadv1.spacestation13"
 	name = "Infinity - RU"
 	fps = 20
-	visibility = 1
-#ifdef GC_FAILURE_HARD_LOOKUP
+#ifdef FIND_REF_NO_CHECK_TICK
 	loop_checks = FALSE
 #endif
 /*	GLOB.config_error_log = GLOB.world_href_log = GLOB.world_runtime_log = GLOB.reports_log = GLOB.job_subsystem_debug = GLOB.world_attack_log = GLOB.world_game_log = file("data/logs/config_error.log") //temporary file used to record errors with loading config, moved to log directory once logging is set bl

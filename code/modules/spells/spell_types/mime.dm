@@ -56,10 +56,15 @@
 /obj/effect/proc_holder/spell/targeted/mime/speak/cast(list/targets,mob/user = usr)
 	for(var/mob/living/carbon/human/H in targets)
 		H.mind.miming=!H.mind.miming
+		GET_COMPONENT_FROM(mood, /datum/component/mood, H)
 		if(H.mind.miming)
 			to_chat(H, "<span class='notice'>You make a vow of silence.</span>")
+			if(mood)
+				mood.clear_event("vow")
 		else
 			to_chat(H, "<span class='notice'>You break your vow of silence.</span>")
+			if(mood)
+				mood.add_event("vow", /datum/mood_event/broken_vow)
 
 // These spells can only be gotten from the "Guide for Advanced Mimery series" for Mime Traitors.
 
@@ -98,7 +103,7 @@
 	invocation_type = "emote"
 	invocation_emote_self = "<span class='dangers'>You fire your finger gun!</span>"
 	range = 20
-	projectile_type = /obj/item/projectile/bullet/weakbullet2
+	projectile_type = /obj/item/projectile/bullet/mime
 	projectile_amount = 3
 	sound = null
 	active_msg = "You draw your fingers!"

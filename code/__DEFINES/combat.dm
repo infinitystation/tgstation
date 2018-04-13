@@ -17,6 +17,7 @@
 #define TOXLOSS 4
 #define OXYLOSS 8
 #define SHAME 16
+#define MANUAL_SUICIDE 32	//suicide_act will do the actual killing.
 
 #define STUN		"stun"
 #define KNOCKDOWN		"knockdown"
@@ -33,16 +34,11 @@
 #define CANKNOCKDOWN	2
 #define CANUNCONSCIOUS	4
 #define CANPUSH		8
-#define IGNORESLOWDOWN	16
-#define GOTTAGOFAST	32
-#define GOTTAGOREALLYFAST	64
-#define GODMODE		4096
-#define FAKEDEATH	8192	//Replaces stuff like changeling.changeling_fakedeath
-#define DISFIGURED	16384	//I'll probably move this elsewhere if I ever get wround to writing a bitflag mob-damage system
-#define XENO_HOST	32768	//Tracks whether we're gonna be a baby alien's mummy.
+#define GODMODE		16
 
 //Health Defines
 #define HEALTH_THRESHOLD_CRIT 0
+#define HEALTH_THRESHOLD_FULLCRIT -30
 #define HEALTH_THRESHOLD_DEAD -100
 
 //Actual combat defines
@@ -66,6 +62,9 @@
 #define GRAB_AGGRESSIVE				1
 #define GRAB_NECK					2
 #define GRAB_KILL					3
+
+//slowdown when in softcrit
+#define SOFTCRIT_ADD_SLOWDOWN 6
 
 //Attack types for checking shields/hit reactions
 #define MELEE_ATTACK 1
@@ -111,11 +110,7 @@
 #define EMBEDDED_UNSAFE_REMOVAL_PAIN_MULTIPLIER 8	//Coefficient of multiplication for the damage the item does when removed without a surgery (this*item.w_class)
 #define EMBEDDED_UNSAFE_REMOVAL_TIME			30	//A Time in ticks, total removal time = (this*item.w_class)
 
-//Gun Stuff
-#define SAWN_INTACT  0
-#define SAWN_OFF     1
 //Gun weapon weight
-#define WEAPON_DUAL_WIELD 0
 #define WEAPON_LIGHT 1
 #define WEAPON_MEDIUM 2
 #define WEAPON_HEAVY 3

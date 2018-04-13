@@ -1,5 +1,3 @@
-
-#define MEDAL_PREFIX "Colossus"
 /*
 
 COLOSSUS
@@ -44,11 +42,11 @@ Difficulty: Very Hard
 	ranged = 1
 	pixel_x = -32
 	del_on_death = 1
-	medal_type = MEDAL_PREFIX
+	medal_type = BOSS_MEDAL_COLOSSUS
 	score_type = COLOSSUS_SCORE
 	crusher_loot = list(/obj/structure/closet/crate/necropolis/colossus/crusher)
 	loot = list(/obj/structure/closet/crate/necropolis/colossus)
-	butcher_results = list(/obj/item/ore/diamond = 5, /obj/item/stack/sheet/sinew = 5, /obj/item/stack/sheet/animalhide/ashdrake = 10, /obj/item/stack/sheet/bone = 30)
+	butcher_results = list(/obj/item/stack/ore/diamond = 5, /obj/item/stack/sheet/sinew = 5, /obj/item/stack/sheet/animalhide/ashdrake = 10, /obj/item/stack/sheet/bone = 30)
 	deathmessage = "disintegrates, leaving a glowing core in its wake."
 	death_sound = 'sound/magic/demon_dies.ogg'
 
@@ -57,7 +55,7 @@ Difficulty: Very Hard
 	L.dust()
 
 /mob/living/simple_animal/hostile/megafauna/colossus/OpenFire()
-	anger_modifier = Clamp(((maxHealth - health)/50),0,20)
+	anger_modifier = CLAMP(((maxHealth - health)/50),0,20)
 	ranged_cooldown = world.time + 120
 
 	if(enrage(target))
@@ -93,7 +91,7 @@ Difficulty: Very Hard
 
 
 /mob/living/simple_animal/hostile/megafauna/colossus/Initialize()
-	..()
+	. = ..()
 	internal = new/obj/item/device/gps/internal/colossus(src)
 
 /obj/effect/temp_visual/at_shield
@@ -113,7 +111,7 @@ Difficulty: Very Hard
 
 /mob/living/simple_animal/hostile/megafauna/colossus/bullet_act(obj/item/projectile/P)
 	if(!stat)
-		var/obj/effect/temp_visual/at_shield/AT = new /obj/effect/temp_visual/at_shield(src.loc, src)
+		var/obj/effect/temp_visual/at_shield/AT = new /obj/effect/temp_visual/at_shield(loc, src)
 		var/random_x = rand(-32, 32)
 		AT.pixel_x += random_x
 
@@ -164,13 +162,8 @@ Difficulty: Very Hard
 		return
 	var/turf/startloc = get_turf(src)
 	var/obj/item/projectile/P = new /obj/item/projectile/colossus(startloc)
-	P.current = startloc
-	P.starting = startloc
+	P.preparePixelProjectile(marker, startloc)
 	P.firer = src
-	if(marker)
-		P.yo = marker.y - startloc.y
-		P.xo = marker.x - startloc.x
-		P.original = marker
 	if(target)
 		P.original = target
 	P.fire(set_angle)
@@ -250,7 +243,7 @@ Difficulty: Very Hard
 	use_power = NO_POWER_USE
 	var/memory_saved = FALSE
 	var/list/stored_items = list()
-	var/static/list/blacklist = typecacheof(list(/obj/item/spellbook))
+	var/list/blacklist = list()
 
 /obj/machinery/smartfridge/black_box/update_icon()
 	return
@@ -258,7 +251,8 @@ Difficulty: Very Hard
 /obj/machinery/smartfridge/black_box/accept_check(obj/item/O)
 	if(!istype(O))
 		return FALSE
-	if(is_type_in_typecache(O, blacklist))
+	if(blacklist[O])
+		visible_message("<span class='boldwarning'>[src] ripples as it rejects [O]. The device will not accept items that have been removed from it.</span>")
 		return FALSE
 	return TRUE
 
@@ -275,21 +269,30 @@ Difficulty: Very Hard
 	..()
 	if(!memory_saved && SSticker.current_state == GAME_STATE_FINISHED)
 		WriteMemory()
+		memory_saved = TRUE
 
 /obj/machinery/smartfridge/black_box/proc/WriteMemory()
-	var/savefile/S = new /savefile("data/npc_saves/Blackbox.sav")
+	var/json_file = file("data/npc_saves/Blackbox.json")
 	stored_items = list()
 
 	for(var/obj/O in (contents-component_parts))
 		stored_items += O.type
-
-	WRITE_FILE(S["stored_items"], stored_items)
-	memory_saved = TRUE
+	var/list/file_data = list()
+	file_data["data"] = stored_items
+	fdel(json_file)
+	WRITE_FILE(json_file, json_encode(file_data))
 
 /obj/machinery/smartfridge/black_box/proc/ReadMemory()
-	var/savefile/S = new /savefile("data/npc_saves/Blackbox.sav")
-	S["stored_items"] 		>> stored_items
-
+	if(fexists("data/npc_saves/Blackbox.sav")) //legacy compatability to convert old format to new
+		var/savefile/S = new /savefile("data/npc_saves/Blackbox.sav")
+		S["stored_items"] >> stored_items
+		fdel("data/npc_saves/Blackbox.sav")
+	else
+		var/json_file = file("data/npc_saves/Blackbox.json")
+		if(!fexists(json_file))
+			return
+		var/list/json = json_decode(file2text(json_file))
+		stored_items = json["data"]
 	if(isnull(stored_items))
 		stored_items = list()
 
@@ -299,7 +302,8 @@ Difficulty: Very Hard
 //in it's own proc to avoid issues with items that nolonger exist in the code base.
 //try catch doesn't always prevent byond runtimes from halting a proc,
 /obj/machinery/smartfridge/black_box/proc/create_item(item_type)
-	new item_type(src)
+	var/obj/O = new item_type(src)
+	blacklist[O] = TRUE
 
 /obj/machinery/smartfridge/black_box/Destroy(force = FALSE)
 	if(force)
@@ -552,7 +556,7 @@ Difficulty: Very Hard
 					H.regenerate_limbs()
 					H.regenerate_organs()
 					H.revive(1,0)
-					H.disabilities |= NOCLONE //Free revives, but significantly limits your options for reviving except via the crystal
+					H.add_trait(TRAIT_NOCLONE, MAGIC_TRAIT) //Free revives, but significantly limits your options for reviving except via the crystal
 					H.grab_ghost(force = TRUE)
 
 /obj/machinery/anomalous_crystal/helpers //Lets ghost spawn as helpful creatures that can only heal people slightly. Incredibly fragile and they can't converse with humans
@@ -569,7 +573,7 @@ Difficulty: Very Hard
 	if(..() && !ready_to_deploy)
 		GLOB.poi_list |= src
 		ready_to_deploy = TRUE
-		notify_ghosts("An anomalous crystal has been activated in [get_area(src)]! This crystal can always be used by ghosts hereafter.", enter_link = "<a href=?src=\ref[src];ghostjoin=1>(Click to enter)</a>", ghost_sound = 'sound/effects/ghost2.ogg', source = src, action = NOTIFY_ATTACK)
+		notify_ghosts("An anomalous crystal has been activated in [get_area(src)]! This crystal can always be used by ghosts hereafter.", enter_link = "<a href=?src=[REF(src)];ghostjoin=1>(Click to enter)</a>", ghost_sound = 'sound/effects/ghost2.ogg', source = src, action = NOTIFY_ATTACK)
 
 /obj/machinery/anomalous_crystal/helpers/attack_ghost(mob/dead/observer/user)
 	..()
@@ -606,7 +610,7 @@ Difficulty: Very Hard
 	pass_flags = PASSTABLE | PASSGRILLE | PASSMOB
 	ventcrawler = VENTCRAWLER_ALWAYS
 	mob_size = MOB_SIZE_TINY
-	gold_core_spawnable = 0
+	gold_core_spawnable = HOSTILE_SPAWN
 	verb_say = "warps"
 	verb_ask = "floats inquisitively"
 	verb_exclaim = "zaps"
@@ -652,12 +656,7 @@ Difficulty: Very Hard
 	activation_method = ACTIVATE_TOUCH
 	cooldown_add = 50
 	activation_sound = 'sound/magic/timeparadox2.ogg'
-	var/list/banned_items_typecache = list(/obj/item/storage, /obj/item/implant, /obj/item/implanter, /obj/item/disk/nuclear, /obj/item/projectile, /obj/item/spellbook)
-
-/obj/machinery/anomalous_crystal/refresher/Initialize()
-	. = ..()
-	banned_items_typecache = typecacheof(banned_items_typecache)
-
+	var/static/list/banned_items_typecache = typecacheof(list(/obj/item/storage, /obj/item/implant, /obj/item/implanter, /obj/item/disk/nuclear, /obj/item/projectile, /obj/item/spellbook))
 
 /obj/machinery/anomalous_crystal/refresher/ActivationReaction(mob/user, method)
 	if(..())
@@ -718,7 +717,7 @@ Difficulty: Very Hard
 	if(isliving(A) && holder_animal)
 		var/mob/living/L = A
 		L.notransform = 1
-		L.disabilities |= MUTE
+		L.add_trait(TRAIT_MUTE, STASIS_MUTE)
 		L.status_flags |= GODMODE
 		L.mind.transfer_to(holder_animal)
 		var/obj/effect/proc_holder/spell/targeted/exit_possession/P = new /obj/effect/proc_holder/spell/targeted/exit_possession
@@ -728,7 +727,7 @@ Difficulty: Very Hard
 /obj/structure/closet/stasis/dump_contents(var/kill = 1)
 	STOP_PROCESSING(SSobj, src)
 	for(var/mob/living/L in src)
-		L.disabilities &= ~MUTE
+		L.remove_trait(TRAIT_MUTE, STASIS_MUTE)
 		L.status_flags &= ~GODMODE
 		L.notransform = 0
 		if(holder_animal)
@@ -746,7 +745,7 @@ Difficulty: Very Hard
 
 /obj/effect/proc_holder/spell/targeted/exit_possession
 	name = "Exit Possession"
-	desc = "Exits the body you are possessing"
+	desc = "Exits the body you are possessing."
 	charge_max = 60
 	clothes_req = 0
 	invocation_type = "none"

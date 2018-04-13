@@ -4,9 +4,10 @@
 	id = "lizard"
 	say_mod = "шипит"
 	default_color = "00FF00"
-	species_traits = list(MUTCOLORS,EYECOLOR,LIPS)
+	species_traits = list(SPECIES_ORGANIC,MUTCOLORS,EYECOLOR,LIPS)
 	mutant_bodyparts = list("tail_lizard", "snout", "spines", "horns", "frills", "body_markings", "legs")
 	mutanttongue = /obj/item/organ/tongue/lizard
+	mutanttail = /obj/item/organ/tail/lizard
 	coldmod = 1.5
 	heatmod = 0.67
 	default_features = list("mcolor" = "0F0", "tail" = "Smooth", "snout" = "Round", "horns" = "None", "frills" = "None", "spines" = "None", "body_markings" = "None", "legs" = "Normal Legs")
@@ -38,6 +39,11 @@
 	if(H)
 		H.endTailWag()
 
+/datum/species/lizard/spec_stun(mob/living/carbon/human/H,amount)
+	if(H)
+		H.endTailWag()
+	. = ..()
+
 /*
  Lizard subspecies: ASHWALKERS
 */
@@ -48,7 +54,8 @@
 	mutant_organs = list(/obj/item/organ/tongue/lizard)
 	mutanteyes = /obj/item/organ/eyes/night_vision
 	limbs_id = "lizard"
-	species_traits = list(MUTCOLORS,EYECOLOR,LIPS,NOBREATH,NOGUNS,DIGITIGRADE)
+	species_traits = list(MUTCOLORS,EYECOLOR,LIPS,DIGITIGRADE)
+	inherent_traits = list(TRAIT_NOGUNS,TRAIT_NOBREATH)
 
 /datum/species/lizard/ashwalker/on_species_gain(mob/living/carbon/human/C, datum/species/old_species)
 	//C.selected_default_language = list(/datum/language/ashwalker)

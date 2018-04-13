@@ -20,6 +20,7 @@
 	var/blood_type = null
 	var/list/features = null
 	var/factions = null
+	var/list/traits = null
 	var/contains_sample = 0
 
 /obj/item/seeds/replicapod/attackby(obj/item/W, mob/user, params)
@@ -34,6 +35,7 @@
 					blood_type = bloodSample.data["blood_type"]
 					features = bloodSample.data["features"]
 					factions = bloodSample.data["factions"]
+					traits = bloodSample.data["traits"]
 					W.reagents.clear_reagents()
 					to_chat(user, "<span class='notice'>You inject the contents of the syringe into the seeds.</span>")
 					contains_sample = 1
@@ -55,7 +57,7 @@
 	var/obj/machinery/hydroponics/parent = loc
 	var/make_podman = 0
 	var/ckey_holder = null
-	if(config.revival_pod_plants)
+	if(CONFIG_GET(flag/revival_pod_plants))
 		if(ckey)
 			for(var/mob/M in GLOB.player_list)
 				if(isobserver(M))
@@ -72,7 +74,7 @@
 						break
 		else //If the player has ghosted from his corpse before blood was drawn, his ckey is no longer attached to the mob, so we need to match up the cloned player through the mind key
 			for(var/mob/M in GLOB.player_list)
-				if(mind && M.mind && ckey(M.mind.key) == ckey(mind.key) && M.ckey && M.client && M.stat == 2 && !M.suiciding)
+				if(mind && M.mind && ckey(M.mind.key) == ckey(mind.key) && M.ckey && M.client && M.stat == DEAD && !M.suiciding)
 					if(isobserver(M))
 						var/mob/dead/observer/O = M
 						if(!O.can_reenter_corpse)
@@ -103,7 +105,9 @@
 		podman.faction |= factions
 		if(!features["mcolor"])
 			features["mcolor"] = "#59CE00"
-		podman.hardset_dna(null,null,podman.real_name,blood_type, /datum/species/pod,features)//Discard SE's and UI's, podman cloning is inaccurate, and always make them a podman
+		for(var/V in traits)
+			new V(podman)
+		podman.hardset_dna(null,null,podman.real_name,blood_type, new /datum/species/pod,features)//Discard SE's and UI's, podman cloning is inaccurate, and always make them a podman
 		podman.set_cloned_appearance()
 
 	else //else, one packet of seeds. maybe two

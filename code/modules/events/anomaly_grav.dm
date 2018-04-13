@@ -8,7 +8,7 @@
 	startWhen = 3
 	announceWhen = 20
 
-/datum/round_event/anomaly/anomaly_grav/announce()
+/datum/round_event/anomaly/anomaly_grav/announce(fake)
 	priority_announce("Сканеры дальнего радиуса действия обнаружили гравитационную аномалию. Предположительное место воздействия: [impact_area.name].", "Тревога! Аномалия!")
 
 /datum/round_event/anomaly/anomaly_grav/start()

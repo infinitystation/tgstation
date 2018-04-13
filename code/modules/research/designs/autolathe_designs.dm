@@ -139,14 +139,6 @@
 	build_path = /obj/item/storage/toolbox
 	category = list("initial","Tools")
 
-/datum/design/console_screen
-	name = "Console Screen"
-	id = "console_screen"
-	build_type = AUTOLATHE
-	materials = list(MAT_GLASS = 200)
-	build_path = /obj/item/stock_parts/console_screen
-	category = list("initial", "Electronics")
-
 /datum/design/apc_board
 	name = "APC Module"
 	id = "power control"
@@ -186,6 +178,22 @@
 	materials = list(MAT_METAL = 50, MAT_GLASS = 50)
 	build_path = /obj/item/electronics/firealarm
 	category = list("initial", "Electronics")
+
+/datum/design/camera
+	name = "Camera"
+	id = "camera"
+	build_type = AUTOLATHE
+	materials = list(MAT_METAL = 50, MAT_GLASS = 100)
+	build_path = /obj/item/device/camera
+	category = list("initial", "Misc")
+
+/datum/design/camera_film
+	name = "Camera Film Cartridge"
+	id = "camera_film"
+	build_type = AUTOLATHE
+	materials = list(MAT_METAL = 10, MAT_GLASS = 10)
+	build_path = /obj/item/device/camera_film
+	category = list("initial", "Misc")
 
 /datum/design/earmuffs
 	name = "Earmuffs"
@@ -351,6 +359,14 @@
 	build_path = /obj/item/hatchet
 	category = list("initial","Misc")
 
+/datum/design/foilhat
+	name = "Tinfoil Hat"
+	id = "tinfoil_hat"
+	build_type = AUTOLATHE
+	materials = list(MAT_METAL = 5500)
+	build_path = /obj/item/clothing/head/foilhat
+	category = list("hacked", "Misc")
+
 /datum/design/scalpel
 	name = "Scalpel"
 	id = "scalpel"
@@ -423,6 +439,14 @@
 	build_path = /obj/item/device/healthanalyzer
 	category = list("initial", "Medical")
 
+/datum/design/pillbottle
+	name = "Pill Bottle"
+	id = "pillbottle"
+	build_type = AUTOLATHE
+	materials = list(MAT_METAL = 20, MAT_GLASS = 100)
+	build_path = /obj/item/storage/pill_bottle
+	category = list("initial", "Medical")
+
 /datum/design/beanbag_slug
 	name = "Beanbag Slug"
 	id = "beanbag_slug"
@@ -460,7 +484,7 @@
 	id = "tape"
 	build_type = AUTOLATHE
 	materials = list(MAT_METAL = 20, MAT_GLASS = 5)
-	build_path = /obj/item/device/tape
+	build_path = /obj/item/device/tape/random
 	category = list("initial", "Misc")
 
 /datum/design/igniter
@@ -614,7 +638,7 @@
 	build_type = AUTOLATHE
 	materials = list(MAT_METAL = 500)
 	build_path = /obj/item/flamethrower/full
-	category = list("hacked", "Weapons and ammo")
+	category = list("hacked", "Security")
 
 /datum/design/rcd
 	name = "Rapid Construction Device (RCD)"
@@ -721,7 +745,7 @@
 	category = list("hacked", "Security")
 
 /datum/design/a357
-	name = "Ammo Box (.357)"
+	name = "Speed Loader (.357)"
 	id = "a357"
 	build_type = AUTOLATHE
 	materials = list(MAT_METAL = 30000)
@@ -855,4 +879,37 @@
 	build_type = AUTOLATHE
 	materials = list(MAT_METAL = 300, MAT_GLASS = 200)
 	build_path = /obj/item/device/slime_scanner
+	category = list("initial", "Misc")
+
+/datum/design/pet_carrier
+	name = "Pet Carrier"
+	id = "pet_carrier"
+	build_type = AUTOLATHE
+	materials = list(MAT_METAL = 7500, MAT_GLASS = 100)
+	build_path = /obj/item/pet_carrier
+	category = list("initial", "Misc")
+
+/datum/design/miniature_power_cell
+	name = "Light Fixture Battery"
+	id = "miniature_power_cell"
+	build_type = AUTOLATHE
+	materials = list(MAT_GLASS = 20)
+	build_path = /obj/item/stock_parts/cell/emergency_light
+	category = list("initial", "Electronics")
+
+/datum/design/packageWrap
+	name = "Package Wrapping"
+	id = "packagewrap"
+	build_type = AUTOLATHE
+	materials = list(MAT_METAL = 200, MAT_GLASS = 200)
+	build_path = /obj/item/stack/packageWrap
+	category = list("initial", "Misc")
+	maxstack = 30
+
+/datum/design/holodisk
+	name = "Holodisk"
+	id = "holodisk"
+	build_type = AUTOLATHE
+	materials = list(MAT_METAL = 100, MAT_GLASS = 100)
+	build_path = /obj/item/disk/holodisk
 	category = list("initial", "Misc")

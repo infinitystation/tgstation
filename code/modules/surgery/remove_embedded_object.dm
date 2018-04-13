@@ -26,10 +26,13 @@
 			var/objects = 0
 			for(var/obj/item/I in L.embedded_objects)
 				objects++
-				I.loc = get_turf(H)
+				I.forceMove(get_turf(H))
 				L.embedded_objects -= I
 			if(!H.has_embedded_objects())
 				H.clear_alert("embeddedobject")
+				GET_COMPONENT_FROM(mood, /datum/component/mood, H)
+				if(mood)
+					mood.clear_event("embedded")
 
 			if(objects > 0)
 				user.visible_message("[user] successfully removes [objects] objects from [H]'s [L]!", "<span class='notice'>You successfully remove [objects] objects from [H]'s [L.name].</span>")

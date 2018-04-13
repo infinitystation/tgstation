@@ -68,11 +68,16 @@
 	new /obj/item/defibrillator/compact/loaded(src)
 	new /obj/item/clothing/gloves/color/latex/nitrile(src)
 	new /obj/item/storage/belt/medical(src)
+	new /obj/item/device/healthanalyzer/advanced(src)
 	new /obj/item/device/assembly/flash/handheld(src)
 	new /obj/item/reagent_containers/hypospray/CMO(src)
 	new /obj/item/device/autosurgeon/cmo(src)
 	new /obj/item/door_remote/chief_medical_officer(src)
 	new /obj/item/melee/baton/shocker/loaded(src)
+	new /obj/item/clothing/neck/petcollar(src)
+	new /obj/item/pet_carrier(src)
+	new /obj/item/wallframe/defib_mount(src)
+	new /obj/item/circuitboard/machine/techfab/department/medical(src)
 
 /obj/structure/closet/secure_closet/animal
 	name = "animal control"
@@ -93,6 +98,8 @@
 	..()
 	new /obj/item/storage/box/pillbottles(src)
 	new /obj/item/storage/box/pillbottles(src)
+	new /obj/item/storage/box/medsprays(src)
+	new /obj/item/storage/box/medsprays(src)
 
 /obj/structure/closet/secure_closet/psychiatric
 	name = "Psychiatric cabinet"

@@ -1,4 +1,4 @@
-<script>
+﻿<script>
   component.exports = {
     computed: {
       capacityPercentState () {
@@ -34,7 +34,7 @@
     [<span class='{{inputState}}'>{{data.capacityPercent >= 100 ? "Полностью заряжено" : data.inputting ? "Заряжается" : "Не заряжается"}}</span>]
 	</ui-section>
   <ui-section label='Вводная мощность'>
-    <ui-bar min='0' max='{{data.inputLevelMax}}' value='{{data.inputLevel}}'>{{Math.round(adata.inputLevel)}}Вт</ui-bar>
+    <ui-bar min='0' max='{{data.inputLevelMax}}' value='{{data.inputLevel}}'>{{adata.inputLevel_text}}</ui-bar>
 	</ui-section>
   <ui-section label='Скорректировать ввод'>
     <ui-button icon='fast-backward' state='{{data.inputLevel == 0 ? "disabled" : null}}' action='input' params='{"target": "min"}'/>
@@ -44,7 +44,7 @@
     <ui-button icon='fast-forward' state='{{data.inputLevel == data.inputLevelMax ? "disabled" : null}}' action='input' params='{"target": "max"}'/>
   </ui-section>
   <ui-section label='Доступно'>
-		<span>{{Math.round(adata.inputAvailable)}}Вт</span>
+		<span>{{adata.inputAvailable}}</span>
 	</ui-section>
 </ui-display>
 <ui-display title='Вывод'>
@@ -55,7 +55,7 @@
     [<span class='{{outputState}}'>{{data.outputting ? "Вывод" : data.charge > 0 ? "Нет вывода" : "Нет заряда"}}</span>]
 	</ui-section>
   <ui-section label='Уровень вывода'>
-    <ui-bar min='0' max='{{data.outputLevelMax}}' value='{{data.outputLevel}}'>{{Math.round(adata.outputLevel)}}Вт</ui-bar>
+    <ui-bar min='0' max='{{data.outputLevelMax}}' value='{{data.outputLevel}}'>{{adata.outputLevel_text}}</ui-bar>
 	</ui-section>
   <ui-section label='Скорректировать вывод'>
     <ui-button icon='fast-backward' state='{{data.outputLevel == 0 ? "disabled" : null}}' action='output' params='{"target": "min"}'/>
@@ -65,6 +65,6 @@
     <ui-button icon='fast-forward' state='{{data.outputLevel == data.outputLevelMax ? "disabled" : null}}' action='output' params='{"target": "max"}'/>
   </ui-section>
   <ui-section label='Выходная мощность'>
-		<span>{{Math.round(adata.outputUsed)}}Вт</span>
+		<span>{{adata.outputUsed}}</span>
 	</ui-section>
 </ui-display>

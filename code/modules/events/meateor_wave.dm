@@ -7,5 +7,5 @@
 /datum/round_event/meteor_wave/meaty
 	wave_name = "meaty"
 
-/datum/round_event/meteor_wave/meaty/announce()
+/datum/round_event/meteor_wave/meaty/announce(fake)
 	priority_announce("ћ€сные куски обнаружены пр€мо по курсу станции.", "ќх чЄрт, хватай ведро.",'sound/ai/meteors.ogg')

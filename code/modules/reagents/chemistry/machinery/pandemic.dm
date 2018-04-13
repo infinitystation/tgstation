@@ -25,6 +25,12 @@
 	QDEL_NULL(beaker)
 	return ..()
 
+/obj/machinery/computer/pandemic/handle_atom_del(atom/A)
+	. = ..()
+	if(A == beaker)
+		beaker = null
+		update_icon()
+
 /obj/machinery/computer/pandemic/proc/get_by_index(thing, index)
 	if(!beaker || !beaker.reagents)
 		return
@@ -51,7 +57,7 @@
 		if(istype(D, /datum/disease/advance))
 			var/datum/disease/advance/A = D
 			var/disease_name = SSdisease.get_disease_name(A.GetDiseaseID())
-			if(disease_name == "Unknown")
+			if((disease_name == "Unknown") && A.mutable)
 				this["can_rename"] = TRUE
 			this["name"] = disease_name
 			this["is_adv"] = TRUE
@@ -121,9 +127,10 @@
 		add_overlay("waitlight")
 
 /obj/machinery/computer/pandemic/proc/eject_beaker()
-	beaker.forceMove(get_turf(src))
-	beaker = null
-	update_icon()
+	if(beaker)
+		beaker.forceMove(drop_location())
+		beaker = null
+		update_icon()
 
 /obj/machinery/computer/pandemic/ui_interact(mob/user, ui_key = "main", datum/tgui/ui, force_open = FALSE, datum/tgui/master_ui, datum/ui_state/state = GLOB.default_state)
 	ui = SStgui.try_update_ui(user, src, ui_key, ui, force_open)
@@ -162,28 +169,34 @@
 			eject_beaker()
 			. = TRUE
 		if("empty_beaker")
-			beaker.reagents.clear_reagents()
+			if(beaker)
+				beaker.reagents.clear_reagents()
 			. = TRUE
 		if("empty_eject_beaker")
-			beaker.reagents.clear_reagents()
-			eject_beaker()
+			if(beaker)
+				beaker.reagents.clear_reagents()
+				eject_beaker()
 			. = TRUE
 		if("rename_disease")
 			var/id = get_virus_id_by_index(text2num(params["index"]))
 			var/datum/disease/advance/A = SSdisease.archive_diseases[id]
+			if(!A.mutable)
+				return
 			if(A)
 				var/new_name = stripped_input(usr, "Name the disease", "New name", "", MAX_NAME_LEN)
 				if(!new_name || ..())
 					return
 				A.AssignName(new_name)
-				for(var/datum/disease/advance/AD in SSdisease.active_diseases)
-					AD.Refresh()
 				. = TRUE
 		if("create_culture_bottle")
 			var/id = get_virus_id_by_index(text2num(params["index"]))
-			var/datum/disease/advance/A = new(FALSE, SSdisease.archive_diseases[id])
+			var/datum/disease/advance/A = SSdisease.archive_diseases[id]
+			if(!A.mutable)
+				to_chat(usr, "<span class='warning'>ERROR: Cannot replicate virus strain.</span>")
+				return
+			A = A.Copy()
 			var/list/data = list("viruses" = list(A))
-			var/obj/item/reagent_containers/glass/bottle/B = new(get_turf(src))
+			var/obj/item/reagent_containers/glass/bottle/B = new(drop_location())
 			B.name = "[A.name] culture bottle"
 			B.desc = "A small bottle. Contains [A.agent] culture in synthblood medium."
 			B.reagents.add_reagent("blood", 20, data)
@@ -192,11 +205,11 @@
 			addtimer(CALLBACK(src, .proc/reset_replicator_cooldown), 50)
 			. = TRUE
 		if("create_vaccine_bottle")
-			var/index = text2num(params["index"])
-			var/datum/disease/D = SSdisease.archive_diseases[get_virus_id_by_index(index)]
-			var/obj/item/reagent_containers/glass/bottle/B = new(get_turf(src))
+			var/id = params["index"]
+			var/datum/disease/D = SSdisease.archive_diseases[id]
+			var/obj/item/reagent_containers/glass/bottle/B = new(drop_location())
 			B.name = "[D.name] vaccine bottle"
-			B.reagents.add_reagent("vaccine", 15, list(index))
+			B.reagents.add_reagent("vaccine", 15, list(id))
 			wait = TRUE
 			update_icon()
 			addtimer(CALLBACK(src, .proc/reset_replicator_cooldown), 200)
@@ -216,25 +229,22 @@
 
 
 /obj/machinery/computer/pandemic/attackby(obj/item/I, mob/user, params)
-	if(istype(I, /obj/item/reagent_containers) && (I.container_type & OPENCONTAINER_1))
+	if(istype(I, /obj/item/reagent_containers) && !(I.flags_1 & ABSTRACT_1) && I.is_open_container())
 		. = TRUE //no afterattack
 		if(stat & (NOPOWER|BROKEN))
 			return
 		if(beaker)
-			to_chat(user, "<span class='warning'>A beaker is already loaded into the machine!</span>")
+			to_chat(user, "<span class='warning'>A container is already loaded into [src]!</span>")
 			return
-		if(!user.drop_item())
+		if(!user.transferItemToLoc(I, src))
 			return
 
 		beaker = I
-		beaker.forceMove(src)
-		to_chat(user, "<span class='notice'>You add the beaker to the machine.</span>")
+		to_chat(user, "<span class='notice'>You insert [I] into [src].</span>")
 		update_icon()
 	else
 		return ..()
 
 /obj/machinery/computer/pandemic/on_deconstruction()
-	if(beaker)
-		beaker.forceMove(get_turf(src))
-		beaker = null
+	eject_beaker()
 	. = ..()

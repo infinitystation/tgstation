@@ -7,7 +7,7 @@
 	var/area/starting_area
 
 /mob/camera/aiEye/remote/base_construction/Initialize()
-	..()
+	. = ..()
 	starting_area = get_area(loc)
 
 /mob/camera/aiEye/remote/base_construction/setLoc(var/t)
@@ -29,7 +29,7 @@
 /obj/machinery/computer/camera_advanced/base_construction
 	name = "base construction console"
 	desc = "An industrial computer integrated with a camera-assisted rapid construction drone."
-	networks = list("SS13")
+	networks = list("ss13")
 	var/obj/item/construction/rcd/internal/RCD //Internal RCD. The computer passes user commands to this in order to avoid massive copypaste.
 	circuit = /obj/item/circuitboard/computer/base_construction
 	off_action = new/datum/action/innate/camera_off/base_construction
@@ -54,7 +54,7 @@
 	RCD = new(src)
 
 /obj/machinery/computer/camera_advanced/base_construction/Initialize(mapload)
-	..()
+	. = ..()
 	if(mapload) //Map spawned consoles have a filled RCD and stocked special structures
 		RCD.matter = RCD.max_matter
 		fans_remaining = 4
@@ -151,8 +151,7 @@
 		to_chat(owner, "<span class='warning'>You can only build within the mining base!</span>")
 		return FALSE
 
-
-	if(build_target.z != ZLEVEL_STATION)
+	if(!is_station_level(build_target.z))
 		to_chat(owner, "<span class='warning'>The mining base has launched and can no longer be modified.</span>")
 		return FALSE
 
@@ -174,18 +173,13 @@
 	if(!check_spot())
 		return
 
-
-	var/atom/movable/rcd_target
 	var/turf/target_turf = get_turf(remote_eye)
+	var/atom/rcd_target = target_turf
 
-	//Find airlocks
-	rcd_target = locate(/obj/machinery/door/airlock) in target_turf
-
-	if(!rcd_target)
-		rcd_target = locate (/obj/structure) in target_turf
-
-	if(!rcd_target || !rcd_target.anchored)
-		rcd_target = target_turf
+	//Find airlocks and other shite
+	for(var/obj/S in target_turf)
+		if(LAZYLEN(S.rcd_vals(owner,B.RCD)))
+			rcd_target = S //If we don't break out of this loop we'll get the last placed thing
 
 	owner.changeNext_move(CLICK_CD_RANGE)
 	B.RCD.afterattack(rcd_target, owner, TRUE) //Activate the RCD and force it to work remotely!

@@ -24,7 +24,7 @@
 	if(!turf_test.len)
 		setup(safety_loop)
 
-/datum/round_event/anomaly/announce()
+/datum/round_event/anomaly/announce(fake)
 	priority_announce("Сканеры дальнего радиуса действия обнаружили волны гипер-энергетического потока. Место ожидаемого воздействия: [impact_area.name].", "Тревога! Аномалия!")
 
 /datum/round_event/anomaly/start()

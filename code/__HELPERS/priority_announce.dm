@@ -1,4 +1,4 @@
-/proc/priority_announce(text, title = "", sound = 'sound/ai/attention.ogg', type)
+/proc/priority_announce(text, title = "", sound = 'sound/ai/attention.ogg', type , sender_override)
 	if(!text)
 		return
 
@@ -16,13 +16,18 @@
 		GLOB.news_network.SubmitArticle(text, "Captain's Announcement", "Station Announcements", null)
 
 	else
-		announcement += "<h1 class='alert'>[command_name()] Update</h1>"
+		if(!sender_override)
+			announcement += "<h1 class='alert'>[command_name()] Update</h1>"
+		else
+			announcement += "<h1 class='alert'>[sender_override]</h1>"
 		if (title && length(title) > 0)
 			announcement += "<br><h2 class='alert'>[sanitize_a0(title)]</h2>"
-		if(title == "")
-			GLOB.news_network.SubmitArticle(text, "Central Command Update", "Station Announcements", null)
-		else
-			GLOB.news_network.SubmitArticle(title + "<br><br>" + text, "Central Command", "Station Announcements", null)
+		
+		if(!sender_override)
+			if(title == "")
+				GLOB.news_network.SubmitArticle(text, "Central Command Update", "Station Announcements", null)
+			else
+				GLOB.news_network.SubmitArticle(title + "<br><br>" + text, "Central Command", "Station Announcements", null)
 
 	announcement += "<br><span class='alert'>[text]</span><br>"
 	announcement += "<br>"
@@ -41,15 +46,11 @@
 	if(announce)
 		priority_announce("A report has been downloaded and printed out at all communications consoles.", "Incoming Classified Message", 'sound/ai/commandreport.ogg')
 
-	for(var/obj/machinery/computer/communications/C in GLOB.machines)
-		if(!(C.stat & (BROKEN|NOPOWER)) && C.z == ZLEVEL_STATION)
-			var/obj/item/paper/P = new /obj/item/paper(C.loc)
-			C.messagetitle.Add("[title]")
-			C.messagetext.Add(text)
-			P.name = "paper- '[title]'"
-			P.info = P.parsepencode(text)
-			P.updateinfolinks()
-			P.update_icon()
+	var/datum/comm_message/M  = new
+	M.title = title
+	M.content =  text
+	
+	SScommunications.send_message(M)
 
 /proc/minor_announce(message, title = "Attention:", alert)
 	if(!message)
@@ -57,7 +58,7 @@
 	message = sanitize(copytext(message,1,MAX_MESSAGE_LEN))
 	for(var/mob/M in GLOB.player_list)
 		if(!isnewplayer(M) && M.can_hear())
-			to_chat(M, "<b><font size = 3><font color = red>[title]</font color><BR>[message]</font size></b><BR>")
+			to_chat(M, "<span class='big bold'><font color = red>[title]</font color><BR>[message]</span><BR>")
 			if(M.client.prefs.toggles & SOUND_ANNOUNCEMENTS)
 				if(alert)
 					SEND_SOUND(M, sound('sound/misc/notice1.ogg'))

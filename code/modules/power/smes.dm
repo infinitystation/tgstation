@@ -45,7 +45,7 @@
 		to_chat(user, "<span class='warning'>This SMES has no power terminal!</span>")
 
 /obj/machinery/power/smes/Initialize()
-	..()
+	. = ..()
 	dir_loop:
 		for(var/d in GLOB.cardinals)
 			var/turf/T = get_step(src, d)
@@ -227,7 +227,7 @@
 
 
 /obj/machinery/power/smes/proc/chargedisplay()
-	return Clamp(round(5.5*charge/capacity),0,5)
+	return CLAMP(round(5.5*charge/capacity),0,5)
 
 /obj/machinery/power/smes/process()
 	if(stat & BROKEN)
@@ -335,14 +335,16 @@
 		"inputAttempt" = input_attempt,
 		"inputting" = inputting,
 		"inputLevel" = input_level,
+		"inputLevel_text" = DisplayPower(input_level),
 		"inputLevelMax" = input_level_max,
-		"inputAvailable" = input_available,
+		"inputAvailable" = DisplayPower(input_available),
 
 		"outputAttempt" = output_attempt,
 		"outputting" = outputting,
 		"outputLevel" = output_level,
+		"outputLevel_text" = DisplayPower(output_level),
 		"outputLevelMax" = output_level_max,
-		"outputUsed" = output_used
+		"outputUsed" = DisplayPower(output_used)
 	)
 	return data
 
@@ -380,7 +382,7 @@
 				target = text2num(target)
 				. = TRUE
 			if(.)
-				input_level = Clamp(target, 0, input_level_max)
+				input_level = CLAMP(target, 0, input_level_max)
 				log_smes(usr.ckey)
 		if("output")
 			var/target = params["target"]
@@ -402,7 +404,7 @@
 				target = text2num(target)
 				. = TRUE
 			if(.)
-				output_level = Clamp(target, 0, output_level_max)
+				output_level = CLAMP(target, 0, output_level_max)
 				log_smes(usr.ckey)
 
 /obj/machinery/power/smes/proc/log_smes(user = "")

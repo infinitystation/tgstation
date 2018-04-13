@@ -9,7 +9,7 @@
 	announceWhen = 10
 
 
-/datum/round_event/anomaly/anomaly_bluespace/announce()
+/datum/round_event/anomaly/anomaly_bluespace/announce(fake)
 	priority_announce("Сканеры дальнего радиуса действиЯ обнаружили нестабильную BlueSpace аномалию. Предположительное место: [impact_area.name].", "Тревога! Аномалия!")
 
 /datum/round_event/anomaly/anomaly_bluespace/start()

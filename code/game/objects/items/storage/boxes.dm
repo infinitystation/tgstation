@@ -36,6 +36,17 @@
 	. = ..()
 	update_icon()
 
+/obj/item/storage/box/suicide_act(mob/living/carbon/user)
+	var/obj/item/bodypart/head/myhead = user.get_bodypart("head")
+	if(myhead)
+		user.visible_message("<span class='suicide'>[user] puts [user.p_their()] head into \the [src], and begins closing it! It looks like [user.p_theyre()] trying to commit suicide!</span>")
+		myhead.dismember()
+		myhead.forceMove(src)//force your enemies to kill themselves with your head collection box!
+		playsound(user,pick('sound/misc/desceration-01.ogg','sound/misc/desceration-02.ogg','sound/misc/desceration-01.ogg') ,50, 1, -1)
+		return BRUTELOSS
+	user.visible_message("<span class='suicide'>[user] beating [user.p_them()]self with \the [src]! It looks like [user.p_theyre()] trying to commit suicide!</span>")
+	return BRUTELOSS
+
 /obj/item/storage/box/update_icon()
 	. = ..()
 	if(illustration)
@@ -57,11 +68,9 @@
 	close_all()
 
 	to_chat(user, "<span class='notice'>You fold [src] flat.</span>")
-	var/obj/item/I = new foldable(get_turf(src))
-	user.drop_item()
-	user.put_in_hands(I)
-	user.update_inv_hands()
+	var/obj/item/I = new foldable
 	qdel(src)
+	user.put_in_hands(I)
 
 /obj/item/storage/box/attackby(obj/item/W, mob/user, params)
 	if(istype(W, /obj/item/stack/packageWrap))
@@ -182,6 +191,14 @@
 /obj/item/storage/box/beakers/PopulateContents()
 	for(var/i in 1 to 7)
 		new /obj/item/reagent_containers/glass/beaker( src )
+
+/obj/item/storage/box/medsprays
+	name = "box of medical sprayers"
+	desc = "A box full of medical sprayers, with unscrewable caps and precision spray heads."
+
+/obj/item/storage/box/medsprays/PopulateContents()
+	for(var/i in 1 to 7)
+		new /obj/item/reagent_containers/medspray( src )
 
 /obj/item/storage/box/injectors
 	name = "box of DNA injectors"
@@ -341,7 +358,9 @@
 /obj/item/storage/box/donkpockets
 	name = "box of donk-pockets"
 	desc = "<B>Instructions:</B> <I>Heat in microwave. Product will cool if not eaten within seven minutes.</I>"
-	illustration = "donk_kit"
+	icon_state = "donkpocketbox"
+	illustration=null
+	can_hold = list(/obj/item/reagent_containers/food/snacks/donkpocket)
 
 /obj/item/storage/box/donkpockets/PopulateContents()
 	for(var/i in 1 to 6)
@@ -609,6 +628,28 @@
 	playsound(loc, "rustle", 50, 1, -5)
 	user.visible_message("<span class='notice'>[user] hugs \the [src].</span>","<span class='notice'>You hug \the [src].</span>")
 
+/////clown box & honkbot assembly
+obj/item/storage/box/clown
+	name = "clown box"
+	desc = "A colorful cardboard box for the clown"
+	illustration = "clown"
+
+/obj/item/storage/box/clown/attackby(obj/item/I, mob/user, params)
+	if((istype(I, /obj/item/bodypart/l_arm/robot)) || (istype(I, /obj/item/bodypart/r_arm/robot)))
+		if(contents.len) //prevent accidently deleting contents
+			to_chat(user, "<span class='warning'>You need to empty [src] out first!</span>")
+			return
+		if(!user.temporarilyRemoveItemFromInventory(I))
+			return
+		qdel(I)
+		to_chat(user, "<span class='notice'>You add some wheels to the [src]! You've got an honkbot assembly now! Honk!</span>")
+		var/obj/item/bot_assembly/honkbot/A = new
+		qdel(src)
+		user.put_in_hands(A)
+	else
+		return ..()
+
+//////
 /obj/item/storage/box/hug/medical/PopulateContents()
 	new /obj/item/stack/medical/bruise_pack(src)
 	new /obj/item/stack/medical/ointment(src)
@@ -683,7 +724,7 @@
 	if(istype(W, /obj/item/pen))
 		//if a pen is used on the sack, dialogue to change its design appears
 		if(contents.len)
-			to_chat(user, "<span class='warning'>You can't modify this [src] with items still inside!</span>")
+			to_chat(user, "<span class='warning'>You can't modify [src] with items still inside!</span>")
 			return
 		var/list/designs = list(NODESIGN, NANOTRASEN, SYNDI, HEART, SMILE, "Cancel")
 		var/switchDesign = input("Select a Design:", "Paper Sack Design", designs[1]) in designs
@@ -693,7 +734,7 @@
 		var/choice = designs.Find(switchDesign)
 		if(design == designs[choice] || designs[choice] == "Cancel")
 			return 0
-		to_chat(usr, "<span class='notice'>You make some modifications to the [src] using your pen.</span>")
+		to_chat(usr, "<span class='notice'>You make some modifications to [src] using your pen.</span>")
 		design = designs[choice]
 		icon_state = "paperbag_[design]"
 		item_state = "paperbag_[design]"
@@ -712,12 +753,12 @@
 	else if(W.is_sharp())
 		if(!contents.len)
 			if(item_state == "paperbag_None")
-				user.show_message("<span class='notice'>You cut eyeholes into the [src].</span>", 1)
+				user.show_message("<span class='notice'>You cut eyeholes into [src].</span>", 1)
 				new /obj/item/clothing/head/papersack(user.loc)
 				qdel(src)
 				return 0
 			else if(item_state == "paperbag_SmileyFace")
-				user.show_message("<span class='notice'>You cut eyeholes into the [src] and modify the design.</span>", 1)
+				user.show_message("<span class='notice'>You cut eyeholes into [src] and modify the design.</span>", 1)
 				new /obj/item/clothing/head/papersack/smiley(user.loc)
 				qdel(src)
 				return 0
@@ -731,17 +772,18 @@
 
 /obj/item/storage/box/ingredients //This box is for the randomely chosen version the chef spawns with, it shouldn't actually exist.
 	name = "ingredients box"
-	illustration = "donk_kit"
-	item_state = null
+	illustration = "fruit"
+	var/theme_name
 
 /obj/item/storage/box/ingredients/Initialize()
-	..()
-	if(item_state)
-		name = "[name] ([item_state])"
-		desc = "A box containing supplementary ingredients for the aspiring chef. This box's theme is '[item_state]'."
+	. = ..()
+	if(theme_name)
+		name = "[name] ([theme_name])"
+		desc = "A box containing supplementary ingredients for the aspiring chef. The box's theme is '[theme_name]'."
+		item_state = "syringe_kit"
 
 /obj/item/storage/box/ingredients/wildcard
-	item_state = "wildcard"
+	theme_name = "wildcard"
 
 /obj/item/storage/box/ingredients/wildcard/PopulateContents()
 	for(var/i in 1 to 7)
@@ -762,7 +804,7 @@
 		new randomFood(src)
 
 /obj/item/storage/box/ingredients/fiesta
-	item_state = "fiesta"
+	theme_name = "fiesta"
 
 /obj/item/storage/box/ingredients/fiesta/PopulateContents()
 	new /obj/item/reagent_containers/food/snacks/tortilla(src)
@@ -772,7 +814,7 @@
 		new /obj/item/reagent_containers/food/snacks/grown/chili(src)
 
 /obj/item/storage/box/ingredients/italian
-	item_state = "italian"
+	theme_name = "italian"
 
 /obj/item/storage/box/ingredients/italian/PopulateContents()
 	for(var/i in 1 to 3)
@@ -781,7 +823,7 @@
 	new /obj/item/reagent_containers/food/drinks/bottle/wine(src)
 
 /obj/item/storage/box/ingredients/vegetarian
-	item_state = "vegetarian"
+	theme_name = "vegetarian"
 
 /obj/item/storage/box/ingredients/vegetarian/PopulateContents()
 	for(var/i in 1 to 2)
@@ -793,7 +835,7 @@
 	new /obj/item/reagent_containers/food/snacks/grown/tomato(src)
 
 /obj/item/storage/box/ingredients/american
-	item_state = "american"
+	theme_name = "american"
 
 /obj/item/storage/box/ingredients/american/PopulateContents()
 	for(var/i in 1 to 2)
@@ -803,7 +845,7 @@
 	new /obj/item/reagent_containers/food/snacks/faggot(src)
 
 /obj/item/storage/box/ingredients/fruity
-	item_state = "fruity"
+	theme_name = "fruity"
 
 /obj/item/storage/box/ingredients/fruity/PopulateContents()
 	for(var/i in 1 to 2)
@@ -814,7 +856,7 @@
 	new /obj/item/reagent_containers/food/snacks/grown/watermelon(src)
 
 /obj/item/storage/box/ingredients/sweets
-	item_state = "sweets"
+	theme_name = "sweets"
 
 /obj/item/storage/box/ingredients/sweets/PopulateContents()
 	for(var/i in 1 to 2)
@@ -825,7 +867,7 @@
 	new /obj/item/reagent_containers/food/snacks/grown/apple(src)
 
 /obj/item/storage/box/ingredients/delights
-	item_state = "delights"
+	theme_name = "delights"
 
 /obj/item/storage/box/ingredients/delights/PopulateContents()
 	for(var/i in 1 to 2)
@@ -836,7 +878,7 @@
 	new /obj/item/reagent_containers/food/snacks/grown/berries(src)
 
 /obj/item/storage/box/ingredients/grains
-	item_state = "grains"
+	theme_name = "grains"
 
 /obj/item/storage/box/ingredients/grains/PopulateContents()
 	for(var/i in 1 to 3)
@@ -847,7 +889,7 @@
 	new /obj/item/seeds/poppy(src)
 
 /obj/item/storage/box/ingredients/carnivore
-	item_state = "carnivore"
+	theme_name = "carnivore"
 
 /obj/item/storage/box/ingredients/carnivore/PopulateContents()
 	new /obj/item/reagent_containers/food/snacks/meat/slab/bear(src)
@@ -859,7 +901,7 @@
 	new /obj/item/reagent_containers/food/snacks/faggot(src)
 
 /obj/item/storage/box/ingredients/exotic
-	item_state = "exotic"
+	theme_name = "exotic"
 
 /obj/item/storage/box/ingredients/exotic/PopulateContents()
 	for(var/i in 1 to 2)
@@ -900,3 +942,12 @@
 /obj/item/storage/box/fountainpens/PopulateContents()
 	for(var/i in 1 to 7)
 		new /obj/item/pen/fountain(src)
+
+/obj/item/storage/box/holy_grenades
+	name = "box of holy hand grenades"
+	desc = "Contains several grenades used to rapidly purge heresy."
+	illustration = "flashbang"
+
+/obj/item/storage/box/holy_grenades/PopulateContents()
+	for(var/i in 1 to 7)
+		new/obj/item/grenade/chem_grenade/holy(src)

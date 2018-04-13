@@ -21,13 +21,18 @@
 									 "Вы ничего не хотите покупать? Да, ну что ж, &#255; так же не хотел покупать вашу маму.")
 
 
-/datum/round_event/brand_intelligence/announce()
-	priority_announce("Угроза агрессивного маркетинга была обнаружена на станции [station_name()]. Источником является: [originMachine.name].", "Тревога обучаемых торговых Автоматов")
-
+/datum/round_event/brand_intelligence/announce(fake)
+	var/source = "unknown machine"
+	if(fake)
+		var/obj/machinery/vending/cola/example = /obj/machinery/vending/cola
+		source = initial(example.name)
+	else if(originMachine)
+		source = originMachine.name
+	priority_announce("Rampant brand intelligence has been detected aboard [station_name()]. Please stand by. The origin is believed to be \a [source].", "Machine Learning Alert")
 
 /datum/round_event/brand_intelligence/start()
 	for(var/obj/machinery/vending/V in GLOB.machines)
-		if(V.z != ZLEVEL_STATION)
+		if(!is_station_level(V.z))
 			continue
 		vendingMachines.Add(V)
 	if(!vendingMachines.len)
@@ -62,12 +67,12 @@
 
 		kill()
 		return
-	if(IsMultiple(activeFor, 4))
+	if(ISMULTIPLE(activeFor, 4))
 		var/obj/machinery/vending/rebel = pick(vendingMachines)
 		vendingMachines.Remove(rebel)
 		infectedMachines.Add(rebel)
 		rebel.shut_up = 0
 		rebel.shoot_inventory = 1
 
-		if(IsMultiple(activeFor, 8))
+		if(ISMULTIPLE(activeFor, 8))
 			originMachine.speak(pick(rampant_speeches))

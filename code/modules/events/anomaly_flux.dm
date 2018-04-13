@@ -10,7 +10,7 @@
 	startWhen = 10
 	announceWhen = 3
 
-/datum/round_event/anomaly/anomaly_flux/announce()
+/datum/round_event/anomaly/anomaly_flux/announce(fake)
 	priority_announce("Сканеры дальнего радиуса действия обнаружили волны гипер-энергетического потока. Место ожидаемого воздействия: [impact_area.name].", "Тревога! Аномалия!")
 
 /datum/round_event/anomaly/anomaly_flux/start()

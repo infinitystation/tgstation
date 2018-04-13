@@ -4,6 +4,9 @@
 	var/wet = 0
 	var/wet_time = 0 // Time in seconds that this floor will be wet for.
 	var/mutable_appearance/wet_overlay
+	var/postdig_icon_change = FALSE
+	var/postdig_icon
+	var/list/archdrops
 
 /turf/open/indestructible
 	name = "floor"
@@ -27,7 +30,7 @@
 	desc = "It's regarding you suspiciously."
 	icon = 'icons/turf/floors.dmi'
 	icon_state = "necro1"
-	baseturf = /turf/open/indestructible/necropolis
+	baseturfs = /turf/open/indestructible/necropolis
 	initial_gas_mix = LAVALAND_DEFAULT_ATMOS
 	planetary_atmos = TRUE
 
@@ -43,7 +46,7 @@
 	name = "necropolis floor"
 	icon = 'icons/turf/boss_floors.dmi'
 	icon_state = "boss"
-	baseturf = /turf/open/indestructible/boss
+	baseturfs = /turf/open/indestructible/boss
 	initial_gas_mix = LAVALAND_DEFAULT_ATMOS
 
 /turf/open/indestructible/boss/air
@@ -52,7 +55,7 @@
 /turf/open/indestructible/hierophant
 	icon = 'icons/turf/floors/hierophant_floor.dmi'
 	initial_gas_mix = LAVALAND_DEFAULT_ATMOS
-	baseturf = /turf/open/indestructible/hierophant
+	baseturfs = /turf/open/indestructible/hierophant
 	smooth = SMOOTH_TRUE
 
 /turf/open/indestructible/hierophant/two
@@ -64,6 +67,37 @@
 	name = "notebook floor"
 	desc = "A floor made of invulnerable notebook paper."
 	icon_state = "paperfloor"
+
+/turf/open/indestructible/clock_spawn_room
+	name = "cogmetal"
+	desc = "Brass plating that gently radiates heat. For some reason, it reminds you of blood."
+	icon_state = "reebe"
+	baseturfs = /turf/open/indestructible/clock_spawn_room
+
+/turf/open/indestructible/clock_spawn_room/Entered()
+	..()
+	START_PROCESSING(SSfastprocess, src)
+
+/turf/open/indestructible/clock_spawn_room/Destroy()
+	STOP_PROCESSING(SSfastprocess, src)
+	. = ..()
+
+/turf/open/indestructible/clock_spawn_room/process()
+	if(!port_servants())
+		STOP_PROCESSING(SSfastprocess, src)
+
+/turf/open/indestructible/clock_spawn_room/proc/port_servants()
+	. = FALSE
+	for(var/mob/living/L in src)
+		if(is_servant_of_ratvar(L) && L.stat != DEAD)
+			. = TRUE
+			L.forceMove(get_turf(pick(GLOB.servant_spawns)))
+			visible_message("<span class='warning'>[L] vanishes in a flash of red!</span>")
+			L.visible_message("<span class='warning'>[L] appears in a flash of red!</span>", \
+			"<span class='bold cult'>sas'so c'arta forbici</span><br><span class='danger'>You're yanked away from [src]!</span>")
+			playsound(src, 'sound/magic/enter_blood.ogg', 50, TRUE)
+			playsound(L, 'sound/magic/exit_blood.ogg', 50, TRUE)
+			flash_color(L, flash_color = "#C80000", flash_time = 10)
 
 /turf/open/Initalize_Atmos(times_fired)
 	excited = 0
@@ -135,20 +169,15 @@
 	return 1
 
 /turf/open/proc/water_vapor_gas_act()
-	MakeSlippery(min_wet_time = 10, wet_time_to_add = 5)
+	MakeSlippery(TURF_WET_WATER, min_wet_time = 10, wet_time_to_add = 5)
 
 	for(var/mob/living/simple_animal/slime/M in src)
 		M.apply_water()
 
-	clean_blood()
+	SendSignal(COMSIG_COMPONENT_CLEAN_ACT, CLEAN_WEAK)
 	for(var/obj/effect/O in src)
 		if(is_cleanable(O))
 			qdel(O)
-
-	var/obj/effect/hotspot/hotspot = (locate(/obj/effect/hotspot) in src)
-	if(hotspot && !isspaceturf(src))
-		air.temperature = max(min(air.temperature-2000,air.temperature/2),0)
-		qdel(hotspot)
 	return 1
 
 /turf/open/handle_slip(mob/living/carbon/C, knockdown_amount, obj/O, lube)
@@ -171,6 +200,9 @@
 		if(!(lube&SLIDE_ICE))
 			playsound(C.loc, 'sound/misc/slip.ogg', 50, 1, -3)
 
+		GET_COMPONENT_FROM(mood, /datum/component/mood, C)
+		if(mood)
+			mood.add_event("slipped", /datum/mood_event/slipped)
 		for(var/obj/item/I in C.held_items)
 			C.accident(I)
 
@@ -190,6 +222,12 @@
 		else if(lube&SLIDE_ICE)
 			new /datum/forced_movement(C, get_ranged_target_turf(C, olddir, 1), 1, FALSE)	//spinning would be bad for ice, fucks up the next dir
 		return 1
+
+/turf/open/copyTurf(turf/T)
+	. = ..()
+	if(. && isopenturf(T) && wet_time)
+		var/turf/open/O = T
+		O.MakeSlippery(wet_setting = wet, wet_time_to_add = wet_time) //we're copied, copy how wet we are also
 
 /turf/open/proc/MakeSlippery(wet_setting = TURF_WET_WATER, min_wet_time = 0, wet_time_to_add = 0) // 1 = Water, 2 = Lube, 3 = Ice, 4 = Permafrost, 5 = Slide
 	wet_time = max(wet_time+wet_time_to_add, min_wet_time)
@@ -220,27 +258,30 @@
 	HandleWet()
 
 /turf/open/proc/UpdateSlip()
+	var/intensity
+	var/lube_flags
 	switch(wet)
 		if(TURF_WET_WATER)
-			AddComponent(/datum/component/slippery, 60, NO_SLIP_WHEN_WALKING)
+			intensity = 60
+			lube_flags = NO_SLIP_WHEN_WALKING
 		if(TURF_WET_LUBE)
-			AddComponent(/datum/component/slippery, 80, SLIDE | GALOSHES_DONT_HELP)
+			intensity = 80
+			lube_flags = SLIDE | GALOSHES_DONT_HELP
 		if(TURF_WET_ICE)
-			AddComponent(/datum/component/slippery, 120, SLIDE | GALOSHES_DONT_HELP)
+			intensity = 120
+			lube_flags = SLIDE | GALOSHES_DONT_HELP
 		if(TURF_WET_PERMAFROST)
-			AddComponent(/datum/component/slippery, 120, SLIDE_ICE | GALOSHES_DONT_HELP)
-		if(TURF_WET_SLIDE)
-			AddComponent(/datum/component/slippery, 80, SLIDE | GALOSHES_DONT_HELP)
+			intensity = 120
+			lube_flags = SLIDE_ICE | GALOSHES_DONT_HELP
 		else
 			qdel(GetComponent(/datum/component/slippery))
+			return
+	var/datum/component/slippery/S = LoadComponent(/datum/component/slippery, NONE, CALLBACK(src, .proc/AfterSlip))
+	S.intensity = intensity
+	S.lube_flags = lube_flags
 
-/turf/open/ComponentActivated(datum/component/C)
-	..()
-	var/datum/component/slippery/S = C
-	if(!istype(S))
-		return
+/turf/open/proc/AfterSlip(mob/living/L)
 	if(wet == TURF_WET_LUBE)
-		var/mob/living/L = S.slip_victim
 		L.confused = max(L.confused, 8)
 
 /turf/open/proc/MakeDry(wet_setting = TURF_WET_WATER)
@@ -300,3 +341,23 @@
 		wet_time = 0
 	if(wet)
 		addtimer(CALLBACK(src, .proc/HandleWet), 15, TIMER_UNIQUE)
+
+/turf/open/get_dumping_location()
+	return src
+
+/turf/open/proc/ClearWet()//Nuclear option of immediately removing slipperyness from the tile instead of the natural drying over time
+	wet = TURF_DRY
+	UpdateSlip()
+	if(wet_overlay)
+		cut_overlay(wet_overlay)
+
+
+/turf/open/rad_act(pulse_strength)
+	. = ..()
+	if (air.gases[/datum/gas/carbon_dioxide] && air.gases[/datum/gas/oxygen])
+		pulse_strength = min(pulse_strength,air.gases[/datum/gas/carbon_dioxide][MOLES]*1000,air.gases[/datum/gas/oxygen][MOLES]*2000) //Ensures matter is conserved properly
+		air.gases[/datum/gas/carbon_dioxide][MOLES]=max(air.gases[/datum/gas/carbon_dioxide][MOLES]-(pulse_strength/1000),0)
+		air.gases[/datum/gas/oxygen][MOLES]=max(air.gases[/datum/gas/oxygen][MOLES]-(pulse_strength/2000),0)
+		air.assert_gas(/datum/gas/pluoxium)
+		air.gases[/datum/gas/pluoxium][MOLES]+=(pulse_strength/4000)
+		air.garbage_collect()
