@@ -6,12 +6,9 @@
 	ammo_type = list(/obj/item/ammo_casing/energy/kinetic)
 	cell = /obj/item/stock_parts/cell/emproof
 	cell = 0
-	// Apparently these are safe to carry? I'm sure goliaths would disagree.
-	needs_permit = 0
 	var/range_add
 //	upgrades = list("diamond" = 0, "screwdriver" = 0, "plasma" = 0)
 	can_pull_pin = 0
-	origin_tech = "combat=3;powerstorage=3;engineering=3"
 	item_flags = NONE
 	obj_flags = UNIQUE_RENAME
 	weapon_weight = WEAPON_LIGHT

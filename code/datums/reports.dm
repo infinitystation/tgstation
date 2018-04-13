@@ -35,8 +35,6 @@
 
 	usr << browse(dat, "window=show_reports")
 
-	SSblackbox.add_details("admin_verb","SRPS") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
-
 /client/proc/show_report(datum/report/R)
 	if(!holder)
 		return
@@ -51,5 +49,3 @@
 	var/dat = R.info
 	usr << browse(dat, "window=show_report")
 	onclose(usr, "[R.title]")
-
-	SSblackbox.add_details("admin_verb","SRP") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!

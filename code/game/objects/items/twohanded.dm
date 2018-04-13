@@ -817,6 +817,5 @@
 	throwforce = 15
 	throw_range = 1
 	w_class = 5
-	origin_tech = "combat=3"
 	armor = list(melee = 10, bullet = 0, laser = 0, energy = 0, bomb = 5, bio = 0, rad = 0, fire = 0, acid = 30)
 	resistance_flags = FIRE_PROOF | ACID_PROOF

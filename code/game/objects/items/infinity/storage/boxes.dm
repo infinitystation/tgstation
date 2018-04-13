@@ -305,9 +305,13 @@
 	name = "monkey cube box"
 	desc = "Drymate brand monkey cubes. Just add water!"
 	icon_state = "monkeycubebox"
-	storage_slots = 7
-	can_hold = list(/obj/item/reagent_containers/food/snacks/monkeycube)
 	illustration = null
+
+/obj/item/storage/box/monkeycubes/ComponentInitialize()
+	. = ..()
+	GET_COMPONENT(STR, /datum/component/storage)
+	STR.max_items = 7
+	STR.can_hold = list(/obj/item/reagent_containers/food/snacks/monkeycube)
 
 /obj/item/storage/box/monkeycubes/PopulateContents()
 	for(var/i in 1 to 5)
@@ -457,11 +461,15 @@
 	desc = "Eight wrappers of fun! Ages 8 and up. Not suitable for children."
 	icon = 'icons/obj/toy.dmi'
 	icon_state = "spbox"
-	storage_slots = 8
-	can_hold = list(/obj/item/toy/snappop)
+
+/obj/item/storage/box/snappops/ComponentInitialize()
+	. = ..()
+	GET_COMPONENT(STR, /datum/component/storage)
+	STR.max_items = 8
+	STR.can_hold = list(/obj/item/toy/snappop)
 
 /obj/item/storage/box/snappops/PopulateContents()
-	for(var/i in 1 to storage_slots)
+	for(var/i in 1 to 8)
 		new /obj/item/toy/snappop(src)
 
 /obj/item/storage/box/matches
@@ -470,13 +478,17 @@
 	icon = 'icons/obj/cigarettes.dmi'
 	icon_state = "matchbox"
 	item_state = "zippo"
-	storage_slots = 10
-	w_class = WEIGHT_CLASS_TINY
 	slot_flags = SLOT_BELT
-	can_hold = list(/obj/item/match)
+	w_class = WEIGHT_CLASS_TINY
+
+/obj/item/storage/box/matches/ComponentInitialize()
+	. = ..()
+	GET_COMPONENT(STR, /datum/component/storage)
+	STR.max_items = 10
+	STR.can_hold = list(/obj/item/match)
 
 /obj/item/storage/box/matches/PopulateContents()
-	for(var/i in 1 to storage_slots)
+	for(var/i in 1 to 10)
 		new /obj/item/match(src)
 
 /obj/item/storage/box/matches/attackby(obj/item/match/W as obj, mob/user as mob, params)
@@ -492,10 +504,16 @@
 	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
 	foldable = /obj/item/stack/sheet/cardboard //BubbleWrap
-	storage_slots=21
-	can_hold = list(/obj/item/light/tube, /obj/item/light/bulb)
-	max_combined_w_class = 21
-	use_to_pickup = 1 // for picking up broken bulbs, not that most people will try
+
+/obj/item/storage/box/lights/ComponentInitialize()
+	. = ..()
+	GET_COMPONENT(STR, /datum/component/storage)
+	STR.max_items = 21
+	STR.can_hold = list(/obj/item/light/tube, /obj/item/light/bulb)
+	STR.max_combined_w_class = 21
+	//STR.use_to_pickup = 1 // for picking up broken bulbs, not that most people will try
+	STR.allow_quick_empty = TRUE
+	STR.allow_quick_gather = TRUE
 
 /obj/item/storage/box/lights/bulbs/PopulateContents()
 	for(var/i in 1 to 21)

@@ -18,6 +18,7 @@ var/datum/server_build/currentbuild
 /datum/server_build/New(name)
 	src.name = name
 
+//TODO@inf-dev: переписать под новые конфиги ~bear1ake
 /datum/configuration/proc/loadbuildlist(filename)
 	var/list/Lines = world.file2list(filename)
 

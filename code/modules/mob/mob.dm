@@ -419,7 +419,8 @@
 				client.allow_respawn = 1
 
 	//waiting
-	if(((world.time - src.timeofdeath) < 6000) && !client.allow_respawn)
+	var/mob/living/L = src
+	if(((world.time - L.timeofdeath) < 6000) && !client.allow_respawn)
 		to_chat(usr, "Потерпите немного дл&#255; респавна!")
 		return
 	else
@@ -554,10 +555,11 @@
 		var/datum/map_config/cached = SSmapping.next_map_config
 		if(cached)
 			stat(null, "Next Map: [cached.map_name]")
-		if(currentbuild)
+		// TODO@inf-dev переработать под новые конфиги ~bear1ake
+/*		if(currentbuild)
 			stat(null, "Build: [currentbuild.friendlyname]")
 		if (nextbuild && istype(nextbuild))
-			stat(null, "Next Build: [nextbuild.friendlyname]")
+			stat(null, "Next Build: [nextbuild.friendlyname]")*/
 		stat(null, "Round ID: [GLOB.round_id ? GLOB.round_id : "NULL"]")
 		stat(null, "Server Time: [time2text(world.timeofday, "YYYY-MM-DD hh:mm:ss")]")
 		stat(null, "Round Time: [worldtime2text()]")

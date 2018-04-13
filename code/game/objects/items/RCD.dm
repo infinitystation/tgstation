@@ -463,7 +463,6 @@ RLD
 	item_state = "rcdw"
 	lefthand_file = 'icons/mob/inhands/infinity_obj_left.dmi'
 	righthand_file = 'icons/mob/inhands/infinity_obj_right.dmi'
-	origin_tech = "engineering=6;materials=7;bluespace=4;plasmatech=4"
 	max_matter = 500
 	materials = list(MAT_METAL=20000, MAT_GLASS=2500, MAT_SILVER=2500, MAT_GOLD=2500, MAT_PLASMA=2500)
 	canRturf = 1
@@ -471,12 +470,10 @@ RLD
 /obj/item/rcd_ammo/advanced
 	name = "advanced compressed matter cartridge"
 	desc = "Ultra-Highly compressed matter for the RCD."
-	origin_tech = "materials=4"
 	materials = list(MAT_METAL=18750, MAT_GLASS=12500)
 	ammoamt = 250
 
 /obj/item/rcd_ammo/large
-	origin_tech = "materials=4"
 	materials = list(MAT_METAL=48000, MAT_GLASS=32000)
 	ammoamt = 160
 

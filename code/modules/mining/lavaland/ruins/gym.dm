@@ -119,11 +119,11 @@
 	layer = WALL_OBJ_LAYER
 
 /obj/structure/bar/attack_hand(mob/living/user as mob)
-	if(in_use)
+	if(obj_flags & IN_USE)
 		user << "Its already in use - wait a bit."
 		return
 	else
-		in_use = 1
+		obj_flags |= IN_USE
 		user.setDir(SOUTH)
 		user.Stun(4)
 		user.loc = src.loc
@@ -142,7 +142,7 @@
 		sleep(3)
 		animate(user, pixel_y = 2, time = 3)
 		sleep(3)
-		in_use = 0
+		obj_flags &= ~IN_USE
 		animate(user, pixel_y = 0, time = 3)
 		var/finishmessage = pick("You feel stronger!","You feel likou feel indestructible!")
 		user << "[finishmessage]"

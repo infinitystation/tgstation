@@ -1,11 +1,14 @@
 /obj/item/storage/bag/plants/holding //Не спрашивайте, что оно здесь делает.
     name = "plant bag of holding"
     desc = "A plant bag that can hold an infinite amount of plant matter."
-    storage_slots = INFINITY
-    max_combined_w_class = INFINITY
-    origin_tech = "bluespace=4;materials=3;engineering=3"
     icon = 'icons/obj/hydroponics/infi_equipment.dmi'
     icon_state = "plantbag_bspace"
+
+/obj/item/storage/bag/plants/holding/ComponentInitialize()
+	. = ..()
+	GET_COMPONENT(STR, /datum/component/storage)
+	STR.max_items = INFINITY
+	STR.max_combined_w_class = INFINITY
 
 /obj/item/storage/belt/holding
 	name = "belt of holding"
@@ -14,9 +17,10 @@
 	worn_icon = 'icons/mob/infinity_work.dmi'
 	icon_state = "belt_of_holding"
 	item_state = "belt_of_holding"
-	w_class = 3
-	max_w_class = 2
-	max_combined_w_class = 37
-	storage_slots = 14
-	max_combined_w_class = INFINITY
-	origin_tech = "bluespace=3"
+	w_class = WEIGHT_CLASS_NORMAL
+
+/obj/item/storage/belt/holding/ComponentInitialize()
+	. = ..()
+	GET_COMPONENT(STR, /datum/component/storage)
+	STR.max_items = 14
+	STR.max_combined_w_class = INFINITY

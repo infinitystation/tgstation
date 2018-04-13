@@ -203,7 +203,7 @@
 		/turf/closed/mineral/silver = 50, /turf/closed/mineral/plasma = 50, /turf/closed/mineral/bscrystal = 20)
 	initial_gas_mix = "o2=14;n2=23;TEMP=300"
 	turf_type = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
-	baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
+	baseturfs = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
 
 /turf/closed/mineral/random/high_chance/New()
 	icon_state = "rock"
@@ -214,7 +214,7 @@
 	icon_state = "chapel2"
 
 /turf/open/floor/plasteel/terror/necro
-	baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
+	baseturfs = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
 	icon = 'icons/turf/floors.dmi'
 
 /turf/open/floor/plasteel/terror/necro/freezer
@@ -341,20 +341,20 @@
 	icon_state = "purplecorner"
 
 /turf/open/floor/engine/lavaland
-	baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
+	baseturfs = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
 
 /turf/open/floor/plating/lavaland
-	baseturf = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
+	baseturfs = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
 
 /turf/open/floor/plating/lavaland/outdoor
 	initial_gas_mix = "o2=14;n2=23;TEMP=300"
 	planetary_atmos = TRUE
 
 /turf/open/floor/plating/lavaland/outdoor/necropolis
-	baseturf = /turf/open/indestructible/necropolis
+	baseturfs = /turf/open/indestructible/necropolis
 
 turf/open/floor/plating/lavaland/outdoor/fall
-	baseturf = /turf/open/chasm/straight_down/lava_land_surface
+	baseturfs = /turf/open/chasm/lavaland
 
 /turf/open/floor/plasteel/terror/necro/blackvault
 	icon_state = "tvault"

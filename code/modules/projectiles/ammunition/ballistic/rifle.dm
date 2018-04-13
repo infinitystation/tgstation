@@ -26,3 +26,20 @@
 	caliber = "40mm"
 	icon_state = "40mmHE"
 	projectile_type = /obj/item/projectile/bullet/a40mm
+
+/obj/item/ammo_casing/a646
+	desc = "A 6.46mm bullet casing."
+	icon_state = "s-casing"
+	caliber = "a646"
+	projectile_type = /obj/item/projectile/bullet/midbullet2
+
+/obj/item/ammo_casing/a646/no
+	desc = "A 6.46mm bullet casing."
+	icon_state = "s-casing"
+	caliber = "a646"
+	projectile_type = null
+
+/obj/item/ammo_casing/c45nostamina
+	desc = "A .45 bullet casing."
+	caliber = ".45"
+	projectile_type = /obj/item/projectile/bullet/midbullet3

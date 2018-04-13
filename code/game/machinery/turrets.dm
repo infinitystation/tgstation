@@ -150,7 +150,7 @@
 		return
 	playsound(src, fire_sound, 50, 1)
 	var/obj/item/projectile/A = new projectile_type(curloc)
-	A.current = curloc
+	A.loc = curloc
 	A.yo = targloc.y - curloc.y
 	A.xo = targloc.x - curloc.x
 	A.fire()

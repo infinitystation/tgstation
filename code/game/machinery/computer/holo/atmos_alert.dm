@@ -60,7 +60,8 @@
 	radio_connection = SSradio.add_object(src, receive_frequency, RADIO_ATMOSIA)
 
 /obj/machinery/computer/holo/atmos_alert/receive_signal(datum/signal/signal)
-	if(!signal || signal.encryption) return
+	if(!signal)
+		return
 
 	var/zone = signal.data["zone"]
 	var/severity = signal.data["alert"]

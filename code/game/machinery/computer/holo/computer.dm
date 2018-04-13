@@ -8,7 +8,6 @@
 	use_power = 1
 	idle_power_usage = 400
 	active_power_usage = 400
-	processing = 0
 	brightness_on = 5
 	var/icon_screen_contents = "generic"
 	icon_screen = "screen_generic"

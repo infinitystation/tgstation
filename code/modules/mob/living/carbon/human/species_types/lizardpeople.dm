@@ -60,7 +60,7 @@
 
 /datum/species/lizard/ashwalker/on_species_gain(mob/living/carbon/human/C, datum/species/old_species)
 	//C.selected_default_language = list(/datum/language/ashwalker)
-	C.selected_default_language = /datum/language/ashwalker
+	//C.selected_default_language = /datum/language/ashwalker
 	C.handcrafting.categories = list(CAT_PRIMAL)
 
 /datum/species/lizard/ashwalker/on_species_loss(mob/living/carbon/human/C)

@@ -1669,11 +1669,11 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	character.backbag = backbag
 
 	if(be_blinded == 1)
-		character.disabilities |= BLIND
+		character.add_trait(TRAIT_BLIND, TRAIT_GENERIC)
 	if(be_nearsight == 1)
 		character.become_nearsighted()
 	if(be_deaf == 1)
-		character.disabilities |= DEAF
+		character.add_trait(TRAIT_DEAF, TRAIT_GENERIC)
 
 	character.flavor_text = sanitize_a0(flavor_text)
 	character.sec_imp_notes = sec_imp_notes

@@ -88,7 +88,6 @@ other types of metals and chemistry for reagents).
 	name = "Space working hardsuit"
 	desc = "Специальный костюм дл&#255; работы вне атмосферы, имеет защитный слой от радиации и выдвигаемый шлем. Вы можете отключить его от шлема с помошью откручивани&#255; специальных креплений на выдвинутом шлеме"
 	id = "adv_hardsuit"
-	req_tech = list("materials" = 7, "magnets" = 6, "engineering" = 6)
 	build_type = PROTOLATHE
 	materials = list("$metal" = 10000, "$silver" = 4000, "$gold" = 4000)
 	build_path = /obj/item/clothing/suit/space/hardsuit/space_adv
@@ -100,7 +99,6 @@ other types of metals and chemistry for reagents).
 	name = "Military space hardsuit"
 	desc = "Специальный костюм разработанный дл&#255; армии. Имеет укрепленные слои защиты и выдвигаемый шлем. Вы можете отключить его от шлема с помошью откручивани&#255; специальных креплений на выдвинутом шлеме"
 	id = "adv_hardsuit_combat"
-	req_tech = list("materials" = 7, "magnets" = 6, "engineering" = 6, "combat" = 6)
 	build_type = PROTOLATHE
 	materials = list("$metal" = 10000, "$silver" = 4000, "$gold" = 4000, "$plasma" = 4000)
 	build_path = /obj/item/clothing/suit/space/hardsuit/space_adv/military
@@ -112,7 +110,6 @@ other types of metals and chemistry for reagents).
 	name = "Advanced RCD"
 	desc = "Advacned RCD. Can build reinforced walls"
 	id = "adv_rcd"
-	req_tech = list("materials" = 7, "engineering" = 6, "bluespace" = 4, "plasmatech" = 4)
 	build_type = PROTOLATHE
 	materials = list("$metal" = 20000, "$silver" = 2500, "$gold" = 2500, "$plasma" = 2500, "$glass" = 2500)
 	build_path = /obj/item/construction/rcd/advanced
@@ -124,7 +121,6 @@ other types of metals and chemistry for reagents).
 	name = "Multimeter"
 	desc = "Используетс&#255; дл&#255; измерени&#255; потреблени&#255; электроэнергии оборудовани&#255; и прозвонки проводов. Рекомендуетс&#255; докторами"
 	id = "multimeter"
-	req_tech = list("materials" = 4, "engineering" = 4)
 	build_type = PROTOLATHE
 	materials = list("$metal" = 1000, "$glass" = 1000, "$silver" = 500)
 	build_path = /obj/item/device/multitool/multimeter
@@ -138,7 +134,6 @@ other types of metals and chemistry for reagents).
 	name = "Strange black jumpsuit"
 	desc = "It's a plain jumpsuit. It has a small dial on the wrist."
 	id = "chameleon"
-	req_tech = list("materials" = 6, "syndicate" = 3, "engineering" = 4)
 	build_type = PROTOLATHE
 	materials = list(MAT_METAL = 4000, MAT_SILVER = 1000)
 	build_path = /obj/item/clothing/under/chameleon

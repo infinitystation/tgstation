@@ -110,12 +110,13 @@
 		log_world("map_config traits is not a list!")
 		return
 
-	extra_maps = json["extra_maps"]
+//TODO@inf-dev: Приспособить под новую систему ~bear1ake
+/*	extra_maps = json["extra_maps"]
 
 	if(extra_maps == "yes")
 		extra_cenctomm = json["extra_centcomm"]
 		extra_minemap = json["extra_minemap"]
-		extra_derelict = json["extra_derelict"]
+		extra_derelict = json["extra_derelict"]*/
 
 
 	var/temp = json["space_ruin_levels"]

@@ -75,7 +75,8 @@
 				to_chat(M, telegraph_message)
 			if(telegraph_sound)
 				SEND_SOUND(M, sound(telegraph_sound))
-	PDAs_trigger(pda_start_up_sound, "<span class='danger'><B>[adv_start_up_message]</B></span>", target_z)
+	for(var/target_z in impacted_z_levels)
+		PDAs_trigger(pda_start_up_sound, "<span class='danger'><B>[adv_start_up_message]</B></span>", target_z)
 	addtimer(CALLBACK(src, .proc/start), telegraph_duration)
 
 /datum/weather/proc/start()
@@ -90,7 +91,8 @@
 				to_chat(M, weather_message)
 			if(weather_sound)
 				SEND_SOUND(M, sound(weather_sound))
-	PDAs_trigger(pda_duration_sound, "<span class='danger'><B>[adv_duration_message]</B></span>", target_z)
+	for(var/target_z in impacted_z_levels)
+		PDAs_trigger(pda_duration_sound, "<span class='danger'><B>[adv_duration_message]</B></span>", target_z)
 	addtimer(CALLBACK(src, .proc/wind_down), weather_duration)
 
 /datum/weather/proc/wind_down()
@@ -105,7 +107,8 @@
 				to_chat(M, end_message)
 			if(end_sound)
 				SEND_SOUND(M, sound(end_sound))
-	PDAs_trigger(pda_wind_down_sound, "<span class='danger'><B>[adv_wind_down_message]</B></span>", target_z)
+	for(var/target_z in impacted_z_levels)
+		PDAs_trigger(pda_wind_down_sound, "<span class='danger'><B>[adv_wind_down_message]</B></span>", target_z)
 	addtimer(CALLBACK(src, .proc/end), end_duration)
 
 /datum/weather/proc/end()

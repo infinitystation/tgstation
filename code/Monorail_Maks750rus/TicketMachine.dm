@@ -40,14 +40,11 @@
 			user << "<span class='warning'>There is already a Card inside!</span>"
 			return
 		else
-			var/obj/item/card/id/P = user.get_active_held_item()
-			if(istype(P))
-				if(!user.drop_item())
-					return
-				storedpda = P
-				P.loc = src
-				P.add_fingerprint(user)
-				update_icon()
+			if(!user.transferItemToLoc(O, src))
+				return
+			storedpda = O
+			O.add_fingerprint(user)
+			update_icon()
 
 
 /obj/machinery/ticketmachine/attack_hand(mob/user)

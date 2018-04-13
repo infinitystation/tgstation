@@ -13,7 +13,7 @@ if ((istype(W, /obj/item/device/multitool)) && (pipe_type == PIPE_UVENT))
 		return ..()
 	else
 		interact(user)
-		return ..() */
+		return ..()
 
 // only for vent interaction
 /obj/item/pipe/interact(mob/user)

@@ -14,7 +14,6 @@
 	desc = "A modified version of the basic laser gun, this one fires less concentrated energy bolts designed for target practice."
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/practice)
 	clumsy_check = 0
-	needs_permit = 0
 	can_pull_pin = 0
 	item_flags = NONE
 

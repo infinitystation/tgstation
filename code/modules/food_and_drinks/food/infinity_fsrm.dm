@@ -93,7 +93,7 @@
 	desc = "Includes canned pork, crackers, energy drink, sugar, chocolate, jerky, multivitamin tablet, also, probably, braveness and brutality."
 	var open_state = "0"
 
-/obj/item/storage/box/fsrm/New()
+/obj/item/storage/box/fsrm/PopulateContents()
 	..()
 	new /obj/item/reagent_containers/pill/vitamin(src)
 	new /obj/item/reagent_containers/food/drinks/soda_cans/fsrm_tonic(src)
@@ -106,8 +106,8 @@
 	..()
 	icon_state = "milit_meal_" + open_state
 
-obj/item/storage/box/fsrm/remove_from_storage()
-	..()
+/obj/item/storage/box/fsrm/Exited()
+	. = ..()
 	open_state = "1"
 	update_icon()
 

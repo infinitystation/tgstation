@@ -24,7 +24,7 @@ GLOBAL_LIST_EMPTY(jam_on_wardec)
 	if(GLOB.player_list.len < CHALLENGE_MIN_PLAYERS)
 		user << "¬ражеский экипаж слишком мал, чтобы объявлять им войну.."
 		return
-	if(user.z != ZLEVEL_CENTCOM)
+	if(!user.onSyndieBase())
 		user << "¬ы должны быть на вашей базе, чтобы использовать это."
 		return
 

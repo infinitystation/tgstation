@@ -279,7 +279,7 @@
 			msg += "[t_He] двигает своим телом грубым и неестественным образом.\n"
 
 	temp = getFireLoss() + getBruteLoss()
-	if(!skipface && temp<80 && !(disabilities & HUSK))
+	if(!skipface && temp<80 && !has_trait(TRAIT_HUSK))
 		if(visual_age < AGE_MAX-10)
 			msg += "[t_He] выгл&#255;дит на [visual_age-2]-[visual_age+2] лет.\n"
 		else

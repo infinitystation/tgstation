@@ -815,7 +815,6 @@ Traitors and the like can also be revived with the previous role mostly intact.
 		usr << "Выдать респавн можно только активным клиентам"
 		return
 
-	SSblackbox.add_details("admin_verb","A_RESP") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/admin_change_sec_level()
 	set category = "Special Verbs"

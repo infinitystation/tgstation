@@ -63,7 +63,7 @@ Also, you never added distance checking after target is selected. I've went ahea
 
 	//HACKY CODE
 	if(victim.isloyal())
-		if(!(caster.mind in (SSticker.mode.changelings | SSticker.mode.abductors | SSticker.mode.cult)))
+		if(!(caster.mind.has_antag_datum(/datum/antagonist/abductor) || caster.mind.has_antag_datum(/datum/antagonist/changeling) || caster.mind.has_antag_datum(/datum/antagonist/cult)))
 			caster.mind.remove_all_antag_light()
 
 	//MIND TRANSFER BEGIN

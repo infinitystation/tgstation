@@ -2,7 +2,6 @@
 	name = "loyalty implant"
 	desc = "God bless Nanotrasen!"
 	icon_state = "loyal"
-	origin_tech = "materials=2;biotech=4;programming=4"
 	activated = 0
 
 /obj/item/implant/mindshield/get_data()
@@ -32,7 +31,7 @@
 /obj/item/implant/mindshield/implant(mob/living/target, mob/user, silent = FALSE)
 
 	if(..())
-		if((target.mind in (SSticker.mode.changelings | SSticker.mode.abductors | SSticker.mode.cult)) || target.isntloyal())
+		if(target.mind.has_antag_datum(/datum/antagonist/abductor) || target.mind.has_antag_datum(/datum/antagonist/changeling) || target.mind.has_antag_datum(/datum/antagonist/cult))
 			if(!silent)
 				target.visible_message("<span class='warning'>[target] сморщилс&#255;, сопротивл&#255;&#255;сь импланту!</span>", "<span class='warning'>Вы чувствуете, как Нанотрайзен пытаетс&#255; подчинить вашу волю себе! Сопротивл&#255;йтесь!</span>")
 			removed(target, 1)

@@ -167,8 +167,6 @@
 	desc = "»спользуется для измерения потребления электроэнергии оборудования и прозвонки проводов. –екомендуется докторами"
 	icon = 'icons/obj/infinity_object.dmi'
 	icon_state = "multimeter"
-	origin_tech = "magnets=3;engineering=3"
-	var/mode = 1 // Mode
 	siemens_coefficient = 0
 
 //mode

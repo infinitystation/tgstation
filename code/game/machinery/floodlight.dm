@@ -110,8 +110,7 @@
 			if(cell)
 				usr << "There is a power cell already installed."
 			else
-				user.drop_item()
-				W.loc = src
+				user.transferItemToLoc(W, src)
 				cell = W
 				usr << "You insert the power cell."
 	updateicon()

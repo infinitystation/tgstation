@@ -255,15 +255,19 @@
 	icon_state = "inf_box"
 	item_state = "syringe_kit"
 	w_class = 3
-	storage_slots = 7
-	can_hold = list(/obj/item/inflatable)
 
-	New()
-		..()
-		new /obj/item/inflatable/door(src)
-		new /obj/item/inflatable/door(src)
-		new /obj/item/inflatable/door(src)
-		new /obj/item/inflatable/wall(src)
-		new /obj/item/inflatable/wall(src)
-		new /obj/item/inflatable/wall(src)
-		new /obj/item/inflatable/wall(src)
+/obj/item/storage/box/inflatable/chemical/ComponentInitialize()
+	. = ..()
+	GET_COMPONENT(STR, /datum/component/storage)
+	STR.max_items = 7
+	STR.can_hold = list(/obj/item/inflatable)
+
+/obj/item/storage/box/inflatable/chemical/New()
+	..()
+	new /obj/item/inflatable/door(src)
+	new /obj/item/inflatable/door(src)
+	new /obj/item/inflatable/door(src)
+	new /obj/item/inflatable/wall(src)
+	new /obj/item/inflatable/wall(src)
+	new /obj/item/inflatable/wall(src)
+	new /obj/item/inflatable/wall(src)

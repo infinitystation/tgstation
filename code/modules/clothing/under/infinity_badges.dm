@@ -62,11 +62,11 @@
 	return ..()
 
 /obj/item/clothing/tie/badge/holo/emag_act(var/remaining_charges, var/mob/user)
-	if (emagged)
+	if (obj_flags & EMAGGED)
 		user << "<span class='danger'>\The [src] is already cracked.</span>"
 		return
 	else
-		emagged = 1
+		obj_flags |= EMAGGED
 		user << "<span class='danger'>You crack the holobadge security checks.</span>"
 		return 1
 
@@ -81,7 +81,7 @@
 			var/obj/item/device/pda/pda = O
 			id_card = pda.id
 
-		if(ACCESS_SECURITY in id_card.access || emagged)
+		if(ACCESS_SECURITY in id_card.access || obj_flags & EMAGGED)
 			user << "You imprint your ID details onto the badge."
 			set_name(user.real_name)
 		else

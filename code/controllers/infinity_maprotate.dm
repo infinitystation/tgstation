@@ -78,7 +78,7 @@ var/datum/votablemap/nextmap
 	log_admin("[key_name(usr)] is changing the map to [VM.name]([VM.friendlyname])")
 	if (changemap_alt(VM) == 0)
 		message_admins("[key_name_admin(usr)] has changed the map to [VM.name]([VM.friendlyname])")/// To another builds
-*/
+
 
 /proc/changemap_alt(var/datum/map_config/VM)
 	if(!VM)
@@ -103,4 +103,4 @@ var/datum/votablemap/nextmap
 		//1x: file errors
 		if(1)
 			message_admins("Compile failed")
-			log_game("Compile failed")
+			log_game("Compile failed")*/

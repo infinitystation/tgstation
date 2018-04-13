@@ -67,7 +67,7 @@
 	spawn_nothing_percentage = 20
 	item_to_spawn()
 		return pick(/obj/item/stock_parts/capacitor,\
-					/obj/item/stock_parts/console_screen,\
+					/obj/item/stack/sheet/glass,\
 					/obj/item/stock_parts/manipulator,\
 					/obj/item/stock_parts/matter_bin,\
 					/obj/item/stock_parts/micro_laser,\

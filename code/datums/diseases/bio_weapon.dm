@@ -2,7 +2,7 @@
 	name = "D-Virus"
 	max_stages = 4
 	spread_text = "On contact"
-	spread_flags = CONTACT_GENERAL
+	spread_flags = DISEASE_SPREAD_CONTACT_FLUIDS
 	cure_text = "Ќеизвестное биологическое оружие. »збегайте контакта с зараженными. јнтидот невозможно синтезировать в услови€х малых лабораторий."
 	cures = list("alien_bionanites")
 	cure_chance = 10
@@ -11,7 +11,7 @@
 	desc = "Ќеопознанное инкубатором биологическое оружие - бесконтрольное развитие, гарантированная мутация, бесповоротная смерть. ƒля замедления процесса разрушения организма, вводите спейсалин."
 	disease_flags = CAN_CARRY|CAN_RESIST
 	permeability_mod = 3
-	severity = BIOHAZARD
+	severity = DISEASE_SEVERITY_BIOHAZARD
 
 /datum/disease/bio_weapon/stage_act()
 	..()

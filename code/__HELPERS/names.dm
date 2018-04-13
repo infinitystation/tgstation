@@ -61,14 +61,10 @@ GLOBAL_VAR(command_name)
 		var/config_station_name = CONFIG_GET(string/stationname)
 		if(config_station_name)
 			newname = config_station_name
+		else
+			newname = new_station_name()
 
-	var/newname
-	if(config && config.station_name)
-		newname = config.station_name
-	else
-		newname = new_station_name()
-
-	set_station_name(newname)
+		set_station_name(newname)
 
 	return GLOB.station_name
 

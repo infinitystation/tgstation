@@ -14,3 +14,13 @@
 	name = "enchanted 7.62 bullet"
 	damage = 5
 	stamina = 80
+
+/obj/item/projectile/bullet/midbullet2
+	damage = 25
+
+/obj/item/projectile/bullet/midbullet3
+	damage = 30
+
+/obj/item/projectile/bullet/heavybullet2
+	damage = 40
+	armour_penetration = 15

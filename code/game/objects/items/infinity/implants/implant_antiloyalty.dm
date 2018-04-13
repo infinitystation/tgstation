@@ -2,7 +2,6 @@
 	name = "anti-loyalty implant"
 	desc = "Makes you mind more free from NT."
 	icon_state = "antiloyal"
-	origin_tech = "materials=2;biotech=4;programming=4;syndicate=2"
 	activated = 0
 
 /obj/item/implant/antiloyalty/get_data()

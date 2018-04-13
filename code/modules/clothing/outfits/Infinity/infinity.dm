@@ -19,7 +19,6 @@
 	suit = /obj/item/clothing/suit/cultrobes/alt
 	head = /obj/item/clothing/head/culthood/alt
 	l_pocket = /obj/item/tome
-	r_pocket = /obj/item/paper/talisman
 	back = /obj/item/storage/backpack/cultpack
 	suit_store = /obj/item/melee/cultblade
 
@@ -28,8 +27,6 @@
 
 	uniform = /obj/item/clothing/under/color/grey
 	shoes = /obj/item/clothing/shoes/combat
-	suit = /obj/item/clothing/suit/armor/abductor/vest/combat
-	suit_store = /obj/item/gun/energy/alien/base
 	head = /obj/item/clothing/head/helmet/abductor
 	belt = /obj/item/storage/belt/military/abductor/full
 	l_pocket = /obj/item/device/flashlight/slime
@@ -45,9 +42,6 @@
 	suit = /obj/item/clothing/suit/armor/clockwork
 	head = /obj/item/clothing/head/helmet/clockwork
 	gloves = /obj/item/clothing/gloves/clockwork
-	l_pocket = /obj/item/clockwork/slab/starter
-	r_pocket = /obj/item/nullrod/tribal_knife
-	back = /obj/item/storage/backpack/satchel
 
 /datum/outfit/trooper
 	name = "UAC Trooper"

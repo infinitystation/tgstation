@@ -38,7 +38,7 @@
 	mouse_opacity = 2
 	harm_intent_damage = 0
 	aggro_vision_range = 9
-	idle_vision_range = 6
+	vision_range = 6
 	force_threshold = 15
 	melee_damage_lower = 20
 	melee_damage_upper = 30

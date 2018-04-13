@@ -87,7 +87,6 @@
 	seed = /obj/item/seeds/tower
 	name = "wood log"
 	desc = "TIMMMMM-BERRRRRRRRRRR!"
-	accepted = list()
 
 /obj/item/grown/log/steel
 	seed = /obj/item/seeds/tower/steel

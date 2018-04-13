@@ -190,8 +190,6 @@
 
 	t = parsemarkdown(t, user, iscrayon)
 	t = replacetext(t, "ÿ", "&#1103;")
-	else
-		t = replacetext(t, "\[sign\]", "")
 
 	if(!iscrayon)
 		if(P)

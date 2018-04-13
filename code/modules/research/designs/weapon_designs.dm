@@ -135,7 +135,6 @@
 	name = "Energy Crossbow"
 	desc = "A reverse-engineered energy crossbow favored by syndicate infiltration teams and carp hunters."
 	id = "largecrossbow"
-	req_tech = list("combat" = 5, "engineering" = 3, "magnets" = 5, "syndicate" = 3)
 	build_type = PROTOLATHE
 	materials = list(MAT_METAL = 5000, MAT_GLASS = 1500, MAT_URANIUM = 1500, MAT_SILVER = 1500)
 	build_path = /obj/item/gun/energy/kinetic_accelerator/crossbow/large
@@ -306,7 +305,6 @@
 /datum/design/energysword
 	name = "Enqual Sword"
 	desc = "This magnificent device emits light"
-	req_tech = list("combat" = 5, "materials" = 5, "powerstorage" = 5, "plasmatech" = 3, "bluespace" = 5, "magnets" = 6)
 	build_type = PROTOLATHE
 	materials = list(MAT_METAL = 6000, MAT_SILVER = 500, MAT_GLASS = 1000, MAT_PLASMA = 4000, MAT_GOLD = 500, MAT_DIAMOND = 3000, MAT_URANIUM = 1000)
 	build_path = /obj/item/storage/lockbox/energysword

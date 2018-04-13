@@ -550,7 +550,6 @@
 	toggle_looc()
 	log_admin("[key_name(usr)] toggled LOOC.")
 	message_admins("[key_name_admin(usr)] toggled LOOC.")
-	SSblackbox.add_details("admin_verb","TLOC") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /datum/admins/proc/toggledchat()
 	set category = "Server"
@@ -559,7 +558,6 @@
 	toggle_dchat()
 	log_admin("[key_name(usr)] toggled DCHAT.")
 	message_admins("[key_name_admin(usr)] toggled DCHAT.")
-	SSblackbox.add_details("admin_verb","TODC") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /datum/admins/proc/toggleoocdead()
 	set category = "Server"
@@ -682,7 +680,6 @@
 	world.update_status()
 	message_admins("[key_name_admin(usr)] изменил(а) статус сервера (ивент) на [GLOB.event_on_air ? "\"Ивент\"" : "\"Режим\""]. [GLOB.event_url ? "Ссылка на ивент: [GLOB.event_url]" : ""]")
 	log_admin("[key_name(usr)] изменил(а) статус сервера (Ивент) на [GLOB.event_on_air ? "\"Ивент\"" : "\"Режим\""]. [GLOB.event_url ? "Ссылка на ивент: [GLOB.event_url]" : ""]")
-	SSblackbox.add_details("admin_verb","SEVS") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /datum/admins/proc/view_event_status()
 	set category = "Server"

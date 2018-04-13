@@ -1,9 +1,9 @@
-п»ї<ui-display title='РЎС‚Р°С‚СѓСЃ'>
-  <ui-section label='Р­РЅРµСЂРіРёСЏ'>
-    <ui-bar min='0' max='{{data.maxEnergy}}' value='{{data.energy}}'>{{Math.fixed(adata.energy)}} Р•РґРёРЅРёС†</ui-bar>
+<ui-display title='Статус'>
+  <ui-section label='Энергия'>
+    <ui-bar min='0' max='{{data.maxEnergy}}' value='{{data.energy}}'>{{Math.fixed(adata.energy)}} Единиц</ui-bar>
   </ui-section>
 </ui-display>
-ui-display title='Р’С‹РґР°С‚СЊ' button>
+<ui-display title='Выдать' button>
   <ui-section>
     <ui-button icon='plus' action='add_recipe'>Add Recipe</ui-button>
 	<ui-button icon='minus' action='clear_recipes'>Clear Recipes</ui-button>
@@ -24,24 +24,24 @@ ui-display title='Р’С‹РґР°С‚СЊ' button>
     {{/each}}
   </ui-section>
 </ui-display>
-<ui-display title='РљРѕР»Р±Р°' button>
+<ui-display title='Колба' button>
   {{#partial button}}
     {{#each data.beakerTransferAmounts}}
       <ui-button icon='minus' action='remove' params='{"amount": {{.}}}'>{{.}}</ui-button>
     {{/each}}
-    <ui-button icon='eject' state='{{data.isBeakerLoaded ? null : "disabled"}}' action='eject'>РР·РІР»РµС‡СЊ</ui-button>
+    <ui-button icon='eject' state='{{data.isBeakerLoaded ? null : "disabled"}}' action='eject'>Извлечь</ui-button>
   {{/partial}}
-  <ui-section label='РЎРѕРґРµСЂР¶РёРјРѕРµ'>
+  <ui-section label='Содержимое'>
     {{#if data.isBeakerLoaded}}
-      <span>{{Math.round(adata.beakerCurrentVolume)}}/{{data.beakerMaxVolume}} Р•РґРёРЅРёС†</span>
+      <span>{{Math.round(adata.beakerCurrentVolume)}}/{{data.beakerMaxVolume}} Единиц</span>
       <br/>
       {{#each adata.beakerContents}}
-        <span class='highlight' intro-outro='fade'>{{Math.fixed(volume, 2)}} РµРґРёРЅРёС† {{name}}</span><br/>
+        <span class='highlight' intro-outro='fade'>{{Math.fixed(volume, 2)}} единиц {{name}}</span><br/>
       {{else}}
-        <span class='bad'>РљРѕР»Р±Р° РїСѓСЃС‚Р°</span>
+        <span class='bad'>Колба пуста</span>
       {{/each}}
     {{else}}
-      <span class='average'>РќРµС‚ РєРѕР»Р±С‹</span>
+      <span class='average'>Нет колбы</span>
     {{/if}}
   </ui-section>
 </ui-display>

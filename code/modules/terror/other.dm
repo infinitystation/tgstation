@@ -10,8 +10,6 @@
 	name = "whip"
 	desc = "Mrrr..."
 	icon_state = "chain"
-	origin_tech = "combat=1"
-	needs_permit = 0
 	force = 0
 	hitsound = "sound/weapons/punch2.ogg"
 
@@ -255,7 +253,7 @@
 	icon = 'icons/obj/toy.dmi'
 	icon_state = "carpplushie"
 	attack_verb = list("bitten", "eaten", "fin slapped")
-	bitesound = 'sound/weapons/bite.ogg'
+	var/bitesound = 'sound/weapons/bite.ogg'
 
 /obj/item/toy/carpplushie/attack(mob/M as mob, mob/user as mob)
 	playsound(loc, bitesound, 20, 1)
@@ -337,7 +335,6 @@
 	name = "Belt of Holding"
 	desc = "A belt that opens into a localized pocket of Blue Space."
 	id = "belt_holding"
-	req_tech = list("bluespace" = 3, "materials" = 5)
 	build_type = PROTOLATHE
 	materials = list(MAT_GOLD = 2000, MAT_DIAMOND = 1000, MAT_URANIUM = 150)
 	build_path = /obj/item/storage/belt/holding
@@ -429,7 +426,6 @@
 	item_state = "hook"
 	lefthand_file = 'icons/mob/inhands/infinity_obj_left.dmi'
 	righthand_file = 'icons/mob/inhands/infinity_obj_right.dmi'
-	origin_tech = "engineering=2;biotech=3"
 	force = 60
 	throwforce = 10
 	attack_verb = list("slashed", "sliced", "cut", "clawed", "hooked")
@@ -487,7 +483,7 @@
 	radiation_pulse(get_turf(src), 2, 4, 8)
 
 /obj/machinery/tiberium/deconstruct(disassembled = FALSE)
-	new /obj/item/ore/tiberium (loc, 2)
+	new /obj/item/stack/ore/tiberium (loc, 2)
 	qdel(src)
 
 /obj/structure/fluff/shuttle_AI
@@ -519,5 +515,5 @@
 	dir = 2
 	callTime = 240
 	ignitionTime = 130
-	roundstart_move = "whiteship_away"
+//	roundstart_move = "whiteship_away"
 	movement_force = list("KNOCKDOWN" = 0, "THROW" = 0)

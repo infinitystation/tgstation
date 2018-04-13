@@ -75,7 +75,6 @@
 /obj/item/stack/ore/tiberium
 	name = "tiberium shard"
 	icon_state = "Green lump"
-	origin_tech = "materials=6"
 	points = 50
 	materials = list(MAT_URANIUM=MINERAL_MATERIAL_AMOUNT)
 	refined_type = /obj/item/stack/sheet/plasteel

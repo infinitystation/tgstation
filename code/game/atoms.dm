@@ -436,6 +436,10 @@
 		if(M.reagents)
 			clear_reagents_to_vomit_pool(M,V)
 
+/atom/proc/add_shit_floor(mob/living/carbon/M as mob)
+	if(isturf(src))
+		new /obj/effect/decal/cleanable/shit(src)
+
 /atom/proc/clear_reagents_to_vomit_pool(mob/living/carbon/M, obj/effect/decal/cleanable/vomit/V)
 	M.reagents.trans_to(V, M.reagents.total_volume / 10)
 	for(var/datum/reagent/R in M.reagents.reagent_list)                //clears the stomach of anything that might be digested as food

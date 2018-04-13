@@ -126,7 +126,6 @@
 	name = "Defibrillator"
 	desc = "A device that delivers powerful shocks to detachable paddles that resuscitate incapacitated patients."
 	id = "defibrillator"
-	req_tech = list("biotech" = 6, "combat" = 2, "materials" = 8) //„итерный - дорогой. ћатериалы на 8 поднимаются улучшенным –÷ƒ
 	build_type = PROTOLATHE                                      //—делано для балланса, о котором говорил Ѕиар
 	materials = list(MAT_METAL = 4000, MAT_PLASMA = 4000, MAT_DIAMOND = 2000)
 	build_path = /obj/item/defibrillator

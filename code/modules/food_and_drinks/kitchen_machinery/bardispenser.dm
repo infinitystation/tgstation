@@ -1,7 +1,7 @@
 /*
 	1. bartender's dispenser
 	2. bartender's dispenser construction
-
+	TODO@inf-dev: Восстановить ~bear1ake
 */
 /obj/machinery/chem_dispenser/bartender
 	name = "portable bar dispenser"

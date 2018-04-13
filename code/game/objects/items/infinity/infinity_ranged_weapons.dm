@@ -12,7 +12,6 @@
 	burst_size = 2
 	fire_delay = 1.5
 	force = 10
-	origin_tech = "combat=4;materials=4;syndicate=1"
 	fire_sound = 'sound/weapons/gunshot_g36.ogg'
 
 /obj/item/gun/ballistic/automatic/xmg80/update_icon()
@@ -30,7 +29,6 @@
 	icon = 'icons/obj/infinity_weapons.dmi'
 	lefthand_file = 'icons/mob/inhands/infinity_obj_left.dmi'
 	righthand_file = 'icons/mob/inhands/infinity_obj_right.dmi'
-	origin_tech = "combat=5;materials=3"
 	pin = /obj/item/device/firing_pin
 	mag_type = /obj/item/ammo_box/magazine/spine
 	fire_sound = 'sound/weapons/gunshot_g36.ogg'
@@ -54,7 +52,6 @@
 	icon = 'icons/obj/infinity_weapons.dmi'
 	lefthand_file = 'icons/mob/inhands/infinity_obj_left.dmi'
 	righthand_file = 'icons/mob/inhands/infinity_obj_right.dmi'
-	origin_tech = "combat=5;materials=3"
 	mag_type = /obj/item/ammo_box/magazine/a646
 	pin = /obj/item/device/firing_pin
 	fire_sound = 'sound/weapons/Gunshot_smg.ogg'
@@ -118,7 +115,7 @@
 	START_PROCESSING(SSobj, src)
 
 /obj/item/melee/classic_baton/telescopic/energy/process()
-	energy = Clamp(energy + rechargeamt, 0, maxenergy)
+	energy = CLAMP(energy + rechargeamt, 0, maxenergy)
 	if(locked)
 		unlock_tick++
 		if(unlock_tick == unlock_ticks)
@@ -161,7 +158,7 @@
 	if(!on)
 		return ..()
 	add_fingerprint(user)
-	if((CLUMSY in user.disabilities) && prob(50))
+	if(user.has_trait(TRAIT_CLUMSY) && prob(50))
 		user << "<span class ='danger'>You club yourself over the head as you simply are too clumsy to be using this advanced weapon.</span>"
 		user.Knockdown(20 * force)
 		if(ishuman(user))

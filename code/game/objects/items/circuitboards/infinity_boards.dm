@@ -8,4 +8,3 @@
 /obj/item/circuitboard/computer/xenobiology
 	name = "circuit board (Xenobiology Console)"
 	build_path = /obj/machinery/computer/camera_advanced/xenobio
-	origin_tech = "programming=3;biotech=3"

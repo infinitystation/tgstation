@@ -30,15 +30,14 @@
 		else
 			message_admins("[key_name_admin(src)] has warned [warned_ckey] resulting in a [AUTOBANTIME] minute ban.")
 		AddBan(warned_ckey, D.last_id, "Автобан в результате множественных предупреждении", ckey, 1, AUTOBANTIME)
-		SSblackbox.inc("ban_warn",1)
 	else
+		var/count = MAX_WARNS - D.warns
 		if(C)
 			C << "<font color='red'><BIG>Вам выдано предупреждение</BIG><br>Дальшейние предупреждени&#255; могут привести к автобану</font>"
-			message_admins("[key_name_admin(src)] has warned [key_name_admin(C)]. They have [MAX_WARNS-D.warns] strikes remaining.")
+			message_admins("[key_name_admin(src)] has warned [key_name_admin(C)]. They have [count] strikes remaining.")
 		else
-			message_admins("[key_name_admin(src)] has warned [warned_ckey] (DC). They have [MAX_WARNS-D.warns] strikes remaining.")
+			message_admins("[key_name_admin(src)] has warned [warned_ckey] (DC). They have [count] strikes remaining.")
 
-	SSblackbox.add_details("admin_verb","WARN") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 #undef MAX_WARNS
 #undef AUTOBANTIME

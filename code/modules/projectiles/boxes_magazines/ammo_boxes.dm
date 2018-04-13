@@ -29,7 +29,6 @@
 /obj/item/ammo_box/c45
 	name = "ammo box (.45)"
 	icon_state = "45box"
-	origin_tech = "combat=3"
 	ammo_type = /obj/item/ammo_casing/c45
 	max_ammo = 48
 

@@ -16,10 +16,9 @@
 	var/obj/item/storage/belt/holster/ready_holster = H.belt
 	for(var/obj/item/holster_item in ready_holster)
 		qdel(holster_item)
-	for(var/i=1, i>0, i--)
-		ready_holster.handle_item_insertion(new /obj/item/gun/ballistic/automatic/pistol,1)
-	ready_holster.handle_item_insertion(new /obj/item/ammo_box/magazine/m10mm,1)
-	ready_holster.handle_item_insertion(new /obj/item/ammo_box/magazine/m10mm,1)
+	ready_holster.SendSignal(COMSIG_TRY_STORAGE_INSERT, new /obj/item/gun/ballistic/automatic/pistol, null, TRUE, TRUE)
+	ready_holster.SendSignal(COMSIG_TRY_STORAGE_INSERT, new /obj/item/ammo_box/magazine/m10mm, null, TRUE, TRUE)
+	ready_holster.SendSignal(COMSIG_TRY_STORAGE_INSERT, new /obj/item/ammo_box/magazine/m10mm, null, TRUE, TRUE)
 
 	var/obj/item/card/id/W = H.wear_id
 	W.icon_state = "centcom"

@@ -8,11 +8,11 @@
 	throwforce = 15
 	throw_speed = 3
 	throw_range = 4
-	embedded_impact_pain_multiplier = 4
+	embedding = list("embed_chance" = 55, "embedded_impact_pain_multiplier" = 4)
 	w_class = 2
 	lefthand_file = 'icons/mob/inhands/infinity_obj_left.dmi'
 	righthand_file = 'icons/mob/inhands/infinity_obj_right.dmi'
-	digspeed = 20
+	toolspeed = 0.25
 
 /obj/item/knuckles //By Surman
 	name = "knuckles"
@@ -22,7 +22,7 @@
 	item_state = "knuckles"
 	force = 10
 	throwforce = 0 //Кидать кастет, серьезно?
-	embedded_impact_pain_multiplier = 0
+	embedding = list("embed_chance" = 0, "embedded_impact_pain_multiplier" = 0)
 	w_class = 1
 	lefthand_file = 'icons/mob/inhands/infinity_obj_left.dmi'
 	righthand_file = 'icons/mob/inhands/infinity_obj_right.dmi'
@@ -36,7 +36,7 @@
 	item_state = "blue_devil"
 	force = 60
 	throwforce = 55
-	embedded_impact_pain_multiplier = 4
+	embedding = list("embed_chance" = 45, "embedded_impact_pain_multiplier" = 4)
 	w_class = 2
 	lefthand_file = 'icons/mob/inhands/infinity_obj_left.dmi'
 	righthand_file = 'icons/mob/inhands/infinity_obj_right.dmi'
@@ -49,8 +49,12 @@
 	slot_flags = SLOT_BELT | SLOT_BACK
 	attack_verb = "lashed"
 	worn_icon = 'icons/mob/infinity_work.dmi'
-	can_hold = list(/obj/item/blue_devil)
-	storage_slots = 1
+
+/obj/item/storage/sheath/blue_devil/ComponentInitialize()
+	. = ..()
+	GET_COMPONENT(STR, /datum/component/storage)
+	STR.can_hold = list(/obj/item/blue_devil)
+	STR.max_items = 1
 
 /obj/item/melee/classic_baton/katana //By Terror4000rus
 	name = "wood katana"
@@ -147,7 +151,7 @@
 	hitsound = "swing_hit" //it starts deactivated
 	throw_speed = 3
 	throw_range = 5
-	embed_chance = 75
+	embedding = list("embed_chance" = 75, "embedded_impact_pain_multiplier" = 10)
 	armour_penetration = 50
 	block_chance = 50
 	var/on = 0
@@ -180,7 +184,6 @@
 	lefthand_file = 'icons/mob/inhands/infinity_obj_left.dmi'
 	righthand_file = 'icons/mob/inhands/infinity_obj_right.dmi'
 	materials = list()
-	origin_tech = ""
 
 /obj/item/melee/training_weapon
 	name = "wood katana"

@@ -96,7 +96,7 @@
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface/normal_air
 	initial_gas_mix = "o2=22;n2=82;TEMP=293.15"
 	planetary_atmos = TRUE
-	baseturf = /turf/open/lava/smooth/lava_land_surface/normal_air
+	baseturfs = /turf/open/lava/smooth/lava_land_surface/normal_air
 
 
 

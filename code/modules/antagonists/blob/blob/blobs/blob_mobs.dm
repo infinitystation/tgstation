@@ -103,7 +103,7 @@
 
 /mob/living/simple_animal/hostile/blob/blobspore/fire_act(datum/gas_mixture/air, exposed_temperature, exposed_volume)
 	..()
-	adjustBruteLoss(Clamp(exposed_temperature, 1, 10))
+	adjustBruteLoss(CLAMP(exposed_temperature, 1, 10))
 
 /mob/living/simple_animal/hostile/blob/blobspore/New(loc, var/obj/structure/blob/factory/linked_node)
 

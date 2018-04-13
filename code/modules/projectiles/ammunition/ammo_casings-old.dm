@@ -320,16 +320,3 @@
 	reagents.add_reagent("mutetoxin", 6) //;HELP OPS IN MAINT
 	reagents.add_reagent("coniine", 6)
 	reagents.add_reagent("sodium_thiopental", 6)
-
-/obj/item/ammo_casing/a646
-	desc = "A 6.46mm bullet casing."
-	icon_state = "s-casing"
-	caliber = "a646"
-	projectile_type = /obj/item/projectile/bullet/midbullet2
-
-
-/obj/item/ammo_casing/a646/no
-	desc = "A 6.46mm bullet casing."
-	icon_state = "s-casing"
-	caliber = "a646"
-	projectile_type = null

@@ -22,10 +22,12 @@
 
 /datum/antagonist/rev/apply_innate_effects(mob/living/mob_override)
 	var/mob/living/M = mob_override || owner.current
+	M.verbs |= /mob/living/carbon/human/proc/RevConvert
 	update_rev_icons_added(M)
 
 /datum/antagonist/rev/remove_innate_effects(mob/living/mob_override)
 	var/mob/living/M = mob_override || owner.current
+	M.verbs -= /mob/living/carbon/human/proc/RevConvert
 	update_rev_icons_removed(M)
 
 /datum/antagonist/rev/proc/equip_rev()
@@ -244,6 +246,10 @@
 		else
 			to_chat(H, "The flash in your [where] will help you to persuade the crew to join your cause.")
 
+	var/obj/item/implant/antiloyalty/AL = new/obj/item/implant/antiloyalty(H)
+	AL.implant(H)
+	H.verbs += /mob/living/carbon/human/proc/RevConvert
+
 	if(give_hud)
 		var/obj/item/organ/cyberimp/eyes/hud/security/syndicate/S = new(H)
 		S.Insert(H, special = FALSE, drop_if_replaced = FALSE)
@@ -357,7 +363,7 @@
 
 	for(var/datum/antagonist/A in heads | get_team_antags())
 		parts += A.antag_listing_entry()
-	
+
 	parts += "</table>"
 	parts += antag_listing_footer()
 	common_part = parts.Join()

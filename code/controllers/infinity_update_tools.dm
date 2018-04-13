@@ -1,3 +1,4 @@
+// TODO@inf-dev переработать под новые конфиги ~bear1ake
 /datum/controller/subsystem/ticker
 	var/update_waiting = 0				//build updating?
 	var/updater_ckey = ""				//who updating build?

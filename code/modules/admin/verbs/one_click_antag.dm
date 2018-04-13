@@ -564,8 +564,9 @@
 			missiondesc += "<BR><B>Ваша мисси&#255;</B>: [mission]"
 			SAVEOperative << missiondesc
 
-			if(config.enforce_human_authority)
-				SAVEOperative.set_species(/datum/species/human)
+			//TODO@inf-dev: переработать под новые конфиги ~bear1ake
+//			if(config.enforce_human_authority)
+//				SAVEOperative.set_species(/datum/species/human)
 
 			if(alert != "Green")
 				for(var/obj/machinery/door/poddoor/crew/door in GLOB.airlocks)

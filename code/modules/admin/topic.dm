@@ -1303,15 +1303,14 @@
 				M << "<span class='boldannounce'><BIG>Администратор [usr.client.ckey] заблокировал вашу игру на сервере.\nПричина: [reason]</BIG></span>"
 				M << "<span class='danger'>Это временна&#255; блокировка, она истечет через [mins] минут.</span>"
 				M << "<span class='notice'>У вас есть доступ к игре на сервере в качестве заключенного.</span>"
-				SSblackbox.inc("ban_stf_tmp",1)
 				switch(ip)
 					if("Yes")
 						DB_ban_record(BANTYPE_SOFT_TEMP, M, mins, reason, banip = M.lastKnownIP, bancid = M.computer_id)
 					if("No")
 						DB_ban_record(BANTYPE_SOFT_TEMP, M, mins, reason, bancid = M.computer_id)
-				SSblackbox.inc("ban_sft_tmp_mins",mins)
-				if(config.banappeals)
-					M << "<span class='danger'>Чтобы оспорить решение администратора, перейдите сюда: [config.banappeals]</span>"
+				var/bran = CONFIG_GET(string/banappeals)
+				if(bran)
+					M << "<span class='danger'>Чтобы оспорить решение администратора, перейдите сюда: [bran]</span>"
 				else
 					M << "<span class='danger'>No ban appeals URL has been set.</span>"
 				log_admin("[usr.client.ckey] has soft banned [M.ckey].\nReason: [reason]\nThis will be removed in [mins] minutes.")
@@ -1331,15 +1330,15 @@
 				M << "<span class='boldannounce'><BIG>Администратор [usr.client.ckey] заблокировал вашу игру на сервере.\nПричина: [reason]</BIG></span>"
 				M << "<span class='danger'>Это перманентна&#255; блокировка.</span>"
 				M << "<span class='notice'>У вас есть доступ к игре на сервере в качестве заключенного.</span>"
-				if(config.banappeals)
-					M << "<span class='danger'>Чтобы оспорить решение администратора, перейдите сюда: [config.banappeals]</span>"
+				var/bran = CONFIG_GET(string/banappeals)
+				if(bran)
+					M << "<span class='danger'>Чтобы оспорить решение администратора, перейдите сюда: [bran]</span>"
 				else
 					M << "<span class='danger'>No ban appeals URL has been set.</span>"
 				ban_unban_log_save("[usr.client.ckey] has soft permabanned [M.ckey]. - Reason: [reason] - This is a permanent ban.")
 				to_chat(world, "<span class='adminnotice'><b>BAN: Администратор [usr.client.ckey] перманентно отправил(а) [M.ckey] в бан-тюрьму. Причина: [reason].</b></span>")
 				log_admin("[usr.client.ckey] has soft banned [M.ckey].\nReason: [reason]\nThis is a permanent ban.")
 				message_admins("<span class='adminnotice'>[usr.client.ckey] has soft banned [M.ckey].\nReason: [reason]\nThis is a permanent ban.</span>")
-				SSblackbox.inc("ban_soft_perma",1)
 				switch(ip)
 					if("Yes")
 						DB_ban_record(BANTYPE_SOFT_PERMA, M, -1, reason, banip = M.lastKnownIP, bancid = M.computer_id)

@@ -67,14 +67,14 @@ var/global/max_secret_rooms = 6
 			treasureitems = list(/mob/living/simple_animal/bot/medbot/mysterious=1, /obj/item/circular_saw=1, /obj/structure/closet/crate/critter=2, /mob/living/simple_animal/pet/cat/space=1)
 			fluffitems = list(/obj/effect/decal/cleanable/blood=5,/obj/item/organ/appendix=2,/obj/structure/closet/crate/freezer=2,
 							  /obj/structure/table/optable=1,/obj/item/scalpel=1,/obj/item/storage/firstaid/regular=3,
-							  /obj/item/tank/internals/anesthetic=1, /obj/item/surgical_drapes=2, /obj/item/device/mass_spectrometer/adv=1,/obj/item/clothing/glasses/hud/health=1)
+							  /obj/item/tank/internals/anesthetic=1, /obj/item/surgical_drapes=2, /obj/item/clothing/glasses/hud/health=1)
 
 		if("cult")
 			theme = "cult"
 			walltypes = list(/turf/closed/wall/mineral/cult=3,/turf/closed/mineral/random/high_chance=1)
 			floortypes = list(/turf/open/floor/plasteel/cult)
 			treasureitems = list(/obj/item/device/soulstone/anybody=1, /obj/item/clothing/suit/space/hardsuit/cult=1, /obj/item/bedsheet/cult=2,
-								 /obj/item/clothing/suit/cultrobes=2, /mob/living/simple_animal/hostile/creature=3)
+								 /obj/item/clothing/suit/cultrobes=2, /*/mob/living/simple_animal/hostile/creature=3*/)
 			fluffitems = list(/obj/effect/gateway=1,/obj/effect/gibspawner=1,/obj/structure/destructible/cult/talisman=1,/obj/item/toy/crayon/red=2,
 							  /obj/item/organ/heart=2, /obj/effect/decal/cleanable/blood=4,/obj/structure/table/wood=2,/obj/item/ectoplasm=3,
 							/obj/item/clothing/shoes/cult=1)
@@ -83,8 +83,8 @@ var/global/max_secret_rooms = 6
 			theme = "wizden"
 			walltypes = list(/turf/closed/wall/mineral/plasma=3,/turf/closed/mineral/random/high_chance=1)
 			floortypes = list(/turf/open/floor/wood)
-			treasureitems = list(/obj/item/veilrender/vealrender=2, /obj/item/spellbook/oneuse/blind=1,/obj/item/clothing/head/wizard/red=2,
-							/obj/item/spellbook/oneuse/forcewall=1, /obj/item/spellbook/oneuse/smoke=1, /obj/structure/constructshell = 1, /obj/item/toy/katana=3,/obj/item/voodoo=3)
+			treasureitems = list(/obj/item/veilrender/vealrender=2, /*/obj/item/spellbook/oneuse/blind=1,*/ /obj/item/clothing/head/wizard/red=2,
+							/*/obj/item/spellbook/oneuse/forcewall=1, /obj/item/spellbook/oneuse/smoke=1,*/ /obj/structure/constructshell = 1, /obj/item/toy/katana=3,/obj/item/voodoo=3)
 			fluffitems = list(/obj/structure/safe/floor=1,/obj/structure/dresser=1,/obj/item/storage/belt/soulstone=1,/obj/item/trash/candle=3,
 							  /obj/item/dice=3,/obj/item/staff=2,/obj/effect/decal/cleanable/dirt=3,/obj/item/coin/mythril=3)
 
@@ -108,7 +108,7 @@ var/global/max_secret_rooms = 6
 			theme = "hitech"
 			walltypes = list(/turf/closed/wall/r_wall=5,/turf/closed/mineral/random=1)
 			floortypes = list(/turf/open/floor/circuit/green,/turf/open/floor/circuit)
-			treasureitems = list(/obj/item/stock_parts/cell/hyper=1, /obj/machinery/chem_dispenser/constructable=1,/*/obj/machinery/computer/telescience=1,*/ /obj/machinery/r_n_d/protolathe=1,
+			treasureitems = list(/obj/item/stock_parts/cell/hyper=1, /*/obj/machinery/chem_dispenser/constructable=1,/obj/machinery/computer/telescience=1, /obj/machinery/r_n_d/protolathe=1,*/
 								/obj/machinery/biogenerator=1)
 			fluffitems = list(/obj/structure/table/reinforced=2,/obj/item/stock_parts/scanning_module/phasic=3,
 							  /obj/item/stock_parts/matter_bin/super=3,/obj/item/stock_parts/manipulator/pico=3,

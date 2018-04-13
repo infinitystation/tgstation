@@ -1,7 +1,6 @@
 /obj/item/circuitboard/computer/holo/power
 	name = "Power Monitoring Holoconsole"
 	build_path = /obj/machinery/computer/holo/monitor
-	origin_tech = "programming=3"
 
 /obj/structure/frame/computer/holoframe/attackby(obj/item/P, mob/user, params)
 	add_fingerprint(user)
@@ -15,15 +14,13 @@
 					anchored = 1
 					state = 1
 			if(istype(P, /obj/item/weldingtool))
-				var/obj/item/weldingtool/WT = P
-				if(!WT.remove_fuel(0, user))
-					if(!WT.isOn())
-						user << "<span class='warning'>The welding tool must be on to complete this task!</span>"
+				var/obj/item/weldingtool/W = P
+				if(!W.tool_start_check(user, amount=0))
+					user << "<span class='warning'>The welding tool must be on to complete this task!</span>"
 					return
 				playsound(src.loc, 'sound/items/Welder.ogg', 50, 1)
 				user << "<span class='notice'>You start deconstructing the frame...</span>"
-				if(do_after(user, 20/P.toolspeed, target = src))
-					if(!src || !WT.isOn()) return
+				if(W.use_tool(src, user, 40, volume=50))
 					user << "<span class='notice'>You deconstruct the frame.</span>"
 					var/obj/item/stack/sheet/metal/M = new (loc, 5)
 					M.add_fingerprint(user)
@@ -37,14 +34,13 @@
 					anchored = 0
 					state = 0
 			if(istype(P, /obj/item/circuitboard/computer) && !circuit)
-				if(!user.drop_item())
+				if(!user.transferItemToLoc(P, src))
 					return
 				playsound(src.loc, 'sound/items/Deconstruct.ogg', 50, 1)
 				user << "<span class='notice'>You place the circuit board inside the frame.</span>"
 				icon_state = "holo_1"
 				circuit = P
 				circuit.add_fingerprint(user)
-				P.loc = null
 			if(istype(P, /obj/item/screwdriver) && circuit)
 				playsound(src.loc, 'sound/items/Screwdriver.ogg', 50, 1)
 				user << "<span class='notice'>You screw the circuit board into place.</span>"
