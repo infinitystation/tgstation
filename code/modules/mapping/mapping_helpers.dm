@@ -6,85 +6,80 @@
 	name = "baseturf editor"
 	icon = 'icons/effects/mapping_helpers.dmi'
 	icon_state = ""
-	var/baseturfs = null
+
+	var/list/baseturf_to_replace
+	var/baseturf
+
 	layer = POINT_LAYER
 
 /obj/effect/baseturf_helper/Initialize()
 	. = ..()
-	var/area/thearea = get_area(src)
-	for(var/turf/T in get_area_turfs(thearea, z))
-		replace_baseturf(T)
-	return INITIALIZE_HINT_QDEL
+	return INITIALIZE_HINT_LATELOAD
+
+/obj/effect/baseturf_helper/LateInitialize()
+	if(!baseturf_to_replace)
+		baseturf_to_replace = typecacheof(/turf/open/space)
+	else if(!length(baseturf_to_replace))
+		baseturf_to_replace = list(baseturf_to_replace = TRUE)
+	else if(baseturf_to_replace[baseturf_to_replace[1]] != TRUE) // It's not associative
+		var/list/formatted = list()
+		for(var/i in baseturf_to_replace)
+			formatted[i] = TRUE
+		baseturf_to_replace = formatted
+
+	var/area/our_area = get_area(src)
+	for(var/i in get_area_turfs(our_area, z))
+		replace_baseturf(i)
+
+	qdel(src)
 
 /obj/effect/baseturf_helper/proc/replace_baseturf(turf/thing)
-	if(thing.baseturfs != thing.type)
-		thing.baseturfs = baseturfs
+	var/list/baseturf_cache = thing.baseturfs
+	if(length(baseturf_cache))
+		for(var/i in baseturf_cache)
+			if(baseturf_to_replace[i])
+				baseturf_cache -= i
+	else if(baseturf_to_replace[thing.baseturfs])
+		thing.assemble_baseturfs(baseturf)
+		return
+
+	thing.PlaceOnBottom(null, baseturf)
 
 /obj/effect/baseturf_helper/space
 	name = "space baseturf editor"
-	baseturfs = /turf/open/space
+	baseturf = /turf/open/space
 
 /obj/effect/baseturf_helper/asteroid
 	name = "asteroid baseturf editor"
-	baseturfs = /turf/open/floor/plating/asteroid
+	baseturf = /turf/open/floor/plating/asteroid
 
 /obj/effect/baseturf_helper/asteroid/airless
 	name = "asteroid airless baseturf editor"
-	baseturfs = /turf/open/floor/plating/asteroid/airless
+	baseturf = /turf/open/floor/plating/asteroid/airless
 
 /obj/effect/baseturf_helper/asteroid/basalt
 	name = "asteroid basalt baseturf editor"
-	baseturfs = /turf/open/floor/plating/asteroid/basalt
+	baseturf = /turf/open/floor/plating/asteroid/basalt
 
 /obj/effect/baseturf_helper/asteroid/snow
 	name = "asteroid snow baseturf editor"
-	baseturfs = /turf/open/floor/plating/asteroid/snow
+	baseturf = /turf/open/floor/plating/asteroid/snow
 
 /obj/effect/baseturf_helper/beach/sand
 	name = "beach sand baseturf editor"
-	baseturfs = /turf/open/floor/plating/beach/sand
+	baseturf = /turf/open/floor/plating/beach/sand
 
 /obj/effect/baseturf_helper/beach/water
 	name = "water baseturf editor"
-	baseturfs = /turf/open/floor/plating/beach/water
+	baseturf = /turf/open/floor/plating/beach/water
 
 /obj/effect/baseturf_helper/lava
 	name = "lava baseturf editor"
-	baseturfs = /turf/open/lava/smooth
+	baseturf = /turf/open/lava/smooth
 
 /obj/effect/baseturf_helper/lava_land/surface
 	name = "lavaland baseturf editor"
-	baseturfs = /turf/open/lava/smooth/lava_land_surface
-
-// Does the same thing as baseturf_helper but only the specified kinds of turf (the kind it's placed on or varedited)
-/obj/effect/baseturf_helper/picky
-	var/list/whitelist
-	// Can be mapedited as: a single type, a list of types, or a typecache-like list
-	// The first 2 make a typecache of the given values
-	// The last uses it as is
-
-/obj/effect/baseturf_helper/picky/Initialize()
-	if(!whitelist)
-		whitelist = list(loc.type)
-	else if(!islist(whitelist))
-		whitelist = list(whitelist)
-	else if(whitelist[whitelist[1]]) // Checking if it's a typecache-like list
-		return ..()
-	whitelist = typecacheof(whitelist)
-	return ..()
-
-/obj/effect/baseturf_helper/picky/replace_baseturf(turf/thing)
-	if(!whitelist[thing.type])
-		return
-	return ..()
-
-/obj/effect/baseturf_helper/picky/lava_land/plating
-	name = "picky lavaland plating baseturf helper"
-	baseturfs = /turf/open/floor/plating/lavaland_baseturf
-
-/obj/effect/baseturf_helper/picky/lava_land/basalt
-	name = "picky lavaland basalt baseturf helper"
-	baseturfs = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
+	baseturf = /turf/open/lava/smooth/lava_land_surface
 
 
 /obj/effect/mapping_helpers
