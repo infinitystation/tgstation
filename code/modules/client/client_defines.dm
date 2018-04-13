@@ -66,6 +66,7 @@
 
 	var/inprefs = FALSE
 	var/list/topiclimiter
+	var/list/clicklimiter
 
 	var/datum/chatOutput/chatOutput
 

@@ -16,10 +16,10 @@ GLOBAL_VAR_INIT(shuttle_frozen, FALSE)
 GLOBAL_VAR_INIT(shuttle_left, FALSE)
 GLOBAL_VAR_INIT(tinted_weldhelh, TRUE)
 
-GLOBAL_VAR_INIT(abandon_aloowed, TRUE)
+GLOBAL_VAR_INIT(abandon_allowed, TRUE)
 GLOBAL_VAR_INIT(looc_allowed, TRUE)
 GLOBAL_VAR_INIT(dchat_allowed, TRUE)
-GLOBAL_VAR_INIT(guests_aloowed, TRUE)
+GLOBAL_VAR_INIT(guests_allowed, TRUE)
 GLOBAL_VAR_INIT(event_on_air, FALSE)
 GLOBAL_VAR_INIT(event_url, "")
 

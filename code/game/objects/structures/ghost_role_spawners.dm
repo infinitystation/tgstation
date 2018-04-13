@@ -92,8 +92,8 @@
 	return ..()
 
 /obj/effect/mob_spawn/human/exile/special(mob/living/new_spawn)
-	var/rand_name = 0
-	rand_name = rand(0,999)
+	var/rand_name = 1
+	rand_name = rand(1,999)
 	if(rand_name == 255)
 		rand_name += 1
 	new_spawn.real_name = "Wish Granter's Victim ([rand_name])"
@@ -166,6 +166,9 @@
 		new_spawn.mind.assigned_role = "Free Golem"
 
 /obj/effect/mob_spawn/human/golem/attack_hand(mob/user)
+	. = ..()
+	if(.)
+		return
 	if(isgolem(user) && can_transfer)
 		var/transfer_choice = alert("Transfer your soul to [src]? (Warning, your old body will die!)",,"Yes","No")
 		if(transfer_choice != "Yes")
@@ -178,7 +181,6 @@
 		create(ckey = user.ckey,name = user.real_name)
 		user.death()
 		return
-	..()
 
 /obj/effect/mob_spawn/human/golem/servant
 	has_owner = TRUE
@@ -541,9 +543,6 @@
 /obj/effect/mob_spawn/human/oldsci/Destroy()
 	new/obj/structure/showcase/machinery/oldpod/used(drop_location())
 	return ..()
-
-
-#define PIRATE_NAMES_FILE "pirates.json"
 
 /obj/effect/mob_spawn/human/pirate
 	name = "space pirate sleeper"

@@ -31,8 +31,9 @@
 
 	var/outdoors = FALSE //For space, the asteroid, lavaland, etc. Used with blueprints to determine if we are adding a new area (vs editing a station room)
 
-	var/beauty = 0 //To see how clean/dirty this area is, only works with indoors areas.
-	var/areasize = 0 //Size of the area in tiles, only calculated for indoors areas.
+	var/totalbeauty = 0 //All beauty in this area combined, only includes indoor area.
+	var/beauty = 0 // Beauty average per open turf in the area
+	var/areasize = 0 //Size of the area in open turfs, only calculated for indoors areas.
 
 	var/power_equip = TRUE
 	var/power_light = TRUE
@@ -137,6 +138,7 @@ GLOBAL_LIST_EMPTY(teleportlocs)
 	if(contents.len)
 		var/list/areas_in_z = SSmapping.areas_in_z
 		var/z
+		update_areasize()
 		for(var/i in 1 to contents.len)
 			var/atom/thing = contents[i]
 			if(!thing)
@@ -149,12 +151,12 @@ GLOBAL_LIST_EMPTY(teleportlocs)
 		if(!areas_in_z["[z]"])
 			areas_in_z["[z]"] = list()
 		areas_in_z["[z]"] += src
-	update_area_size()
 
 	return INITIALIZE_HINT_LATELOAD
 
 /area/LateInitialize()
 	power_change()		// all machines set to current power level, also updates icon
+	update_beauty()
 
 /area/Destroy()
 	STOP_PROCESSING(SSobj, src)
@@ -478,12 +480,14 @@ GLOBAL_LIST_EMPTY(teleportlocs)
 
 var/list/mob/living/forced_ambiance_list = new
 
-/area/Entered(A)
+/area/Entered(atom/movable/M)
 	set waitfor = FALSE
-	if(!isliving(A))
+	SendSignal(COMSIG_AREA_ENTERED, M)
+	M.SendSignal(COMSIG_ENTER_AREA, src) //The atom that enters the area
+	if(!isliving(M))
 		return
 
-	var/mob/living/L = A
+	var/mob/living/L = M
 	if(!L.ckey)
 		return
 
@@ -519,9 +523,9 @@ var/list/mob/living/forced_ambiance_list = new
 			L.client.played = TRUE
 			addtimer(CALLBACK(L.client, /client/proc/ResetAmbiencePlayed), 600)
 
-	GET_COMPONENT_FROM(mood, /datum/component/mood, L)
-	if(mood)
-		mood.update_beauty(src)
+/area/Exited(atom/movable/M)
+	SendSignal(COMSIG_AREA_EXITED, M)
+	M.SendSignal(COMSIG_EXIT_AREA, src) //The atom that exits the area
 
 /client/proc/ResetAmbiencePlayed()
 	played = FALSE
@@ -550,11 +554,16 @@ var/list/mob/living/forced_ambiance_list = new
 	blob_allowed = FALSE
 	addSorted()
 
-/area/proc/update_area_size()
+/area/proc/update_beauty()
+	if(!areasize)
+		return FALSE
+	beauty = totalbeauty / areasize
+
+/area/proc/update_areasize()
 	if(outdoors)
 		return FALSE
 	areasize = 0
-	for(var/turf/T in src.contents)
+	for(var/turf/open/T in contents)
 		areasize++
 
 /area/AllowDrop()
@@ -562,3 +571,7 @@ var/list/mob/living/forced_ambiance_list = new
 
 /area/drop_location()
 	CRASH("Bad op: area/drop_location() called")
+
+// A hook so areas can modify the incoming args
+/area/proc/PlaceOnTopReact(list/new_baseturfs, turf/fake_turf_type, flags)
+	return flags

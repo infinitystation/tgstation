@@ -10,6 +10,7 @@
 	icon_living = "smallbot"
 	icon_dead = "smallbot"
 	gender = NEUTER
+	mob_biotypes = list(MOB_ROBOTIC)
 	health = 20
 	maxHealth = 20
 	healable = 0

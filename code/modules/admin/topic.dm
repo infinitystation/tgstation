@@ -1117,14 +1117,18 @@
 	else if(href_list["deletemessage"])
 		if(!check_rights(R_ADMIN))
 			return
-		var/message_id = href_list["deletemessage"]
-		delete_message(message_id)
+		var/safety = alert("Delete message/note?",,"Yes","No");
+		if (safety == "Yes")
+			var/message_id = href_list["deletemessage"]
+			delete_message(message_id)
 
 	else if(href_list["deletemessageempty"])
 		if(!check_rights(R_ADMIN))
 			return
-		var/message_id = href_list["deletemessageempty"]
-		delete_message(message_id, browse = 1)
+		var/safety = alert("Delete message/note?",,"Yes","No");
+		if (safety == "Yes")
+			var/message_id = href_list["deletemessageempty"]
+			delete_message(message_id, browse = TRUE)
 
 	else if(href_list["editmessage"])
 		if(!check_rights(R_ADMIN))
@@ -1230,7 +1234,7 @@
 				ban_unban_log_save("[key_name(usr)] has HARD banned [key_name(M)]. - Reason: [reason] - This will be removed in [mins] minutes.")
 				to_chat(world, "<span class='adminnotice'><b>BAN: Администратор [key_name(usr)] ЖЕСТКО забанил(а) [key_name(M)]. Причина: [reason]. Срок - [mins] минут.</b></span>")
 				to_chat(M, "<span class='boldannounce'><BIG>Вы были ЖЕСТКО забанены администратором [key_name(usr)].\nПричина: [reason]</BIG></span>")
-				to_chat(M, "<span class='danger'>Это временный бан, он истечет через [mins] минут.</span>")
+				to_chat(M, "<span class='danger'>Это временный бан, он истечет через [mins] минут. Round ID is [GLOB.round_id].</span>")
 				var/bran = CONFIG_GET(string/banappeals)
 				if(bran)
 					to_chat(M, "<span class='danger'>To try to resolve this matter head to [bran]</span>")
@@ -1256,7 +1260,7 @@
 					if("No")
 						AddBan(M.ckey, M.computer_id, reason, usr.ckey, 0, 0)
 				to_chat(M, "<span class='boldannounce'><BIG>Вы были ЖЕСТКО забанены администратором [usr.client.ckey].\nПричина: [reason]</BIG></span>")
-				to_chat(M, "<span class='danger'>Это перманентный бан.</span>")
+				to_chat(M, "<span class='danger'>Это перманентный бан. Round ID is [GLOB.round_id].</span>")
 				var/bran = CONFIG_GET(string/banappeals)
 				if(bran)
 					to_chat(M, "<span class='danger'>To try to resolve this matter head to [bran]</span>")
@@ -1465,7 +1469,7 @@
 		to_chat(M, "<span class='adminnotice'>You have been sent to Prison!</span>")
 
 		log_admin("[key_name(usr)] has sent [key_name(M)] to Prison!")
-		message_admins("[key_name_admin(usr)] has sent [key_name_admin(M)] Prison!")
+		message_admins("[key_name_admin(usr)] has sent [key_name_admin(M)] to Prison!")
 
 	else if(href_list["sendbacktolobby"])
 		if(!check_rights(R_ADMIN))
@@ -1932,7 +1936,8 @@
 			return
 
 		input = sanitize(copytext(input,1,MAX_MESSAGE_LEN))	//fix
-		to_chat(src.owner, "You sent [input] to [H] via a secure channel.")
+		log_admin("[src.owner] replied to [key_name(H)]'s CentCom message with the message [input].")
+		message_admins("[src.owner] replied to [key_name(H)]'s CentCom message with: \"[input]\"")
 		to_chat(H, "You hear something crackle in your ears for a moment before a voice speaks.  \"Please stand by for a message from Central Command.  Message as follows. [input].  Message ends.\"")
 
 		src.owner << "Вы отправили:<b><font color='blue'>[input]</b></font>."
@@ -2048,6 +2053,16 @@
 				D.traitor_panel()
 		else
 			show_traitor_panel(M)
+
+	else if(href_list["borgpanel"])
+		if(!check_rights(R_ADMIN))
+			return
+
+		var/mob/M = locate(href_list["borgpanel"])
+		if(!iscyborg(M))
+			to_chat(usr, "This can only be used on cyborgs")
+		else
+			open_borgopanel(M)
 
 	else if(href_list["initmind"])
 		if(!check_rights(R_ADMIN))

@@ -131,6 +131,7 @@
 	name = "blob zombie ([rand_name])"
 	real_name = name
 	desc = "A shambling corpse animated by the blob."
+	mob_biotypes += MOB_HUMANOID
 	melee_damage_lower += 8
 	melee_damage_upper += 11
 	movement_type = GROUND

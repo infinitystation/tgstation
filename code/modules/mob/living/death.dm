@@ -74,6 +74,7 @@
 	update_canmove()
 	med_hud_set_health()
 	med_hud_set_status()
+	stop_pulling()
 
 	if (client)
 		client.move_delay = initial(client.move_delay)

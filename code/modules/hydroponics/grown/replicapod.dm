@@ -92,10 +92,10 @@
 		if(realName)
 			podman.real_name = realName
 		else
-			rand_name = rand(0,999)
+			rand_name = rand(1,999)
 			if(rand_name == 255)
 				rand_name += 1
-			podman.real_name = "Pod Person [rand_name]"
+			podman.real_name = "Pod Person ([rand_name])"
 		mind.transfer_to(podman)
 		if(ckey)
 			podman.ckey = ckey

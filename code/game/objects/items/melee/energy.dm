@@ -17,6 +17,8 @@
 	return ..()
 
 /obj/item/melee/transforming/energy/suicide_act(mob/user)
+	if(!active)
+		transform_weapon(user, TRUE)
 	user.visible_message("<span class='suicide'>[user] вспорнул[user.p_e_1()] себе живот с помощью энергетического оружия! Кажетс&#255; [user.p_they()] пытал[user.p_e_5()] покончить жизнь сэппукой!</span>")
 	return (BRUTELOSS|FIRELOSS)
 

@@ -15,16 +15,18 @@
 	..()
 
 /obj/structure/spirit_board/attack_hand(mob/user)
-	if(..())
+	. = ..()
+	if(.)
 		return
 	spirit_board_pick_letter(user)
 
 
+//ATTACK GHOST IGNORING PARENT RETURN VALUE
 /obj/structure/spirit_board/attack_ghost(mob/dead/observer/user)
 	if(user.client.banprisoned)
 		return
 	spirit_board_pick_letter(user)
-
+	return ..()
 
 /obj/structure/spirit_board/proc/spirit_board_pick_letter(mob/M)
 	if(!spirit_board_checks(M))
