@@ -5,9 +5,9 @@
 **Сайт оригинального разработчика:** http://www.tgstation13.org  
 **Оригинальный код:** https://github.com/tgstation/tgstation  
 **Код**: https://github.com/infinitystation/-tg-station  
-**Сайт разработчика:** https://infinity.so/  
-**IRC (На английском)**: irc://irc.rizon.net/coderbus  
-**Используемые карты:** Infinity MetaStation (Адаптированая версия Metastation с большими изменениями)
+**Сайт разработчика:** https://infinity-ss13.ru/  
+**IRC**: https://discordapp.com/invite/N4atUkH  
+**Используемые карты:** /tg/ MetaStation
 
 ## ЗАГРУЗКА
 
@@ -41,8 +41,8 @@ tgstation.dmb - 0 errors, 0 warnings
 4. Как только появится строка "Initializations Complete" нажмите кнопку входа, которая обозначена стрелкой.
 
 ## СОДЕЙСТВИЕ РАЗРАБОТКЕ БИЛДА.
-Читать здесь:  
-http://infinity.smforum.ru/index.php?topic=2630
+Обратиться разработчикам здесь:  
+https://discordapp.com/invite/N4atUkH 
 
 ## ЛИЦЕНЗИЯ
 Весь исходный код после коммита 333c566b88108de218d882840e61928a9b759d8f, на 1-го января 2015-го года в 03:38 по Московскому времени (https://github.com/infinitystation/-tg-station/commit/333c566b88108de218d882840e61928a9b759d8f) лицензируется на условиях лицензионного соглашения GNU AGPL v3 (http://www.gnu.org/licenses/agpl-3.0.html).  
@@ -50,7 +50,7 @@ http://infinity.smforum.ru/index.php?topic=2630
 в том числе и инструменты, если в их файле readme не указано другое. Подробнее в файлах LICENSE-AGPLv3.txt или LICENSE-GPLv3.txt.  
 
 Исходный код клиентской стороны tgui лицензируется как подпроект на условиях лицензионного соглашения MIT.  
-Ресурсы tgui лицензируется на условиях лицензионного соглашения a Creative Commons BY-SA 4.0  
+Ресурсы tgui лицензируется на условиях лицензионного соглашения Creative Commons BY-SA 4.0  
 (http://creativecommons.org/licenses/by-sa/4.0/).  
 Подробнее в файлах tgui/LICENSE.md.  
 
