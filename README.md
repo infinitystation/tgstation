@@ -4,9 +4,9 @@
 
 **Сайт оригинального разработчика:** http://www.tgstation13.org  
 **Оригинальный код:** https://github.com/tgstation/tgstation  
-**Код**: https://github.com/infinitystation/-tg-station  
+**Код**: https://github.com/infinitystation/tgstation  
 **Сайт разработчика:** https://infinity-ss13.ru/  
-**IRC**: https://discordapp.com/invite/N4atUkH  
+**Discord**: https://discordapp.com/invite/N4atUkH  
 **Используемые карты:** /tg/ MetaStation
 
 ## ЗАГРУЗКА
