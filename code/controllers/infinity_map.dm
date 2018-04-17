@@ -1,4 +1,4 @@
-var/global/generating_map = 0
+GLOBAL_VAR_INIT(generating_map, FALSE)
 
 /client/proc/generate_map_icon()
 	set category = "Server"

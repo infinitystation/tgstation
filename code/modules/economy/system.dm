@@ -1,4 +1,4 @@
-var/datum/economy_system/economy_system = new()
+GLOBAL_DATUM_INIT(economy_system, /datum/economy_system)
 
 /datum/economy_system
 	var/list/personal_accounts = list()

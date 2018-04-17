@@ -440,7 +440,7 @@ GLOBAL_LIST_EMPTY(teleportlocs)
 		if(ENVIRON)
 			used_environ += amount
 
-var/list/mob/living/forced_ambiance_list = new
+GLOBAL_LIST_EMPTY(forced_ambiance_list)
 
 /area/Entered(atom/movable/M)
 	set waitfor = FALSE
@@ -465,16 +465,16 @@ var/list/mob/living/forced_ambiance_list = new
 		return //General ambience check is below the ship ambience so one can play without the other
 
 	// If we previously were in an area with force-played ambiance, stop it.
-	if(L in forced_ambiance_list)
+	if(L in GLOB.forced_ambiance_list)
 		L << sound(null, channel = 1)
-		forced_ambiance_list -= L
+		GLOB.forced_ambiance_list -= L
 
 	if(!L.client.ambience_playing)
 		L.client.ambience_playing = 1
 		L << sound('sound/ambience/shipambience.ogg', repeat = 1, wait = 0, volume = 35, channel = 2)
 
 	if(forced_ambience)
-		forced_ambiance_list += L
+		GLOB.forced_ambiance_list += L
 		L << forced_ambience
 
 	if(prob(35))

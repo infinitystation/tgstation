@@ -1,9 +1,10 @@
 /*
 // only for vents vars
-var/setted = 0
-var/work_direction = 1
-var/id_tag = null
-var/freq = 1439
+/obj/item
+	var/setted = 0
+	var/work_direction = 1
+	var/id_tag = null
+	var/freq = 1439
 
 // only for vents attackby appendix
 if ((istype(W, /obj/item/device/multitool)) && (pipe_type == PIPE_UVENT))

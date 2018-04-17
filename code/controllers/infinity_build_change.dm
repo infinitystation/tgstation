@@ -1,5 +1,5 @@
-var/datum/server_build/nextbuild
-var/datum/server_build/currentbuild
+GLOBAL_DATUM_INIT(nextbuild, /datum/server_build/nextbuild)
+GLOBAL_DATUM_INIT(currentbuild, /datum/server_build/nextbuild)
 
 /datum/configuration
 	var/list/datum/server_build/buildlist = list()
@@ -62,7 +62,7 @@ var/datum/server_build/currentbuild
 				current_build.update = data
 			if("endbuild")
 				buildlist[current_build.name] = current_build
-				currentbuild = null
+				GLOB.currentbuild = null
 			else
 				GLOB.world_game_log << "Unknown command in builds config: '[command]'"
 
@@ -92,7 +92,7 @@ var/datum/server_build/currentbuild
 		var/datum/server_build/B = config.buildlist[build]
 		var/buildname = B.friendlyname
 
-		if(B == currentbuild)
+		if(B == GLOB.currentbuild)
 			continue
 
 		buildchoices[buildname] = B
@@ -105,7 +105,7 @@ var/datum/server_build/currentbuild
 	SSticker.buildchangechecked = 1
 	SSticker.buildchanger_ckey = ckey
 	var/datum/server_build/B = buildchoices[chosenbuild]
-	nextbuild = B
+	GLOB.nextbuild = B
 
 	message_admins("[key_name_admin(usr)] помен&#255;л билд на [nextbuild.name]([nextbuild.friendlyname])")
 	log_admin("[key_name(usr)] помен&#255;л билд на [nextbuild.name]([nextbuild.friendlyname])")

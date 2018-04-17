@@ -1,6 +1,6 @@
 
-var/global/list/global_handofgod_traptypes = list()
-var/global/list/global_handofgod_structuretypes = list()
+GLOBAL_LIST_EMPTY(global_handofgod_traptypes)
+GLOBAL_LIST_EMPTY(global_handofgod_structuretypes)
 
 #define CONDUIT_RANGE	15
 

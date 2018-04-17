@@ -5,7 +5,7 @@
 //////Allows admin's to right click on any mob/mech and freeze them in place.///
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
-var/global/list/frozen_mob_list = list()
+GLOBAL_LIST_EMPTY(frozen_mob_list)
 /client/proc/freeze(var/mob/living/M as mob in GLOB.mob_list)
 	set category = "Special Verbs"
 	set name = "Freeze"
@@ -16,7 +16,7 @@ var/global/list/frozen_mob_list = list()
 		return
 	if(!check_rights(R_ADMIN))
 		return
-	if(M in frozen_mob_list)
+	if(M in GLOB.frozen_mob_list)
 		M.admin_unFreeze(src)
 	else
 		M.admin_Freeze(src)
@@ -39,8 +39,8 @@ var/global/list/frozen_mob_list = list()
 	frozen = 1
 	admin_prev_sleeping = AmountSleeping()
 	SetSleeping(AmountSleeping()+20000)
-	if(!(src in frozen_mob_list))
-		frozen_mob_list += src
+	if(!(src in GLOB.frozen_mob_list))
+		GLOB.frozen_mob_list |= src
 
 /mob/living/proc/admin_unFreeze(var/client/admin)
 	if(istype(admin))
@@ -56,8 +56,8 @@ var/global/list/frozen_mob_list = list()
 	frozen = 0
 	SetSleeping(admin_prev_sleeping)
 	admin_prev_sleeping = null
-	if(src in frozen_mob_list)
-		frozen_mob_list -= src
+	if(src in GLOB.frozen_mob_list)
+		GLOB.frozen_mob_list -= src
 
 
 /mob/living/simple_animal/var/admin_prev_health = null

@@ -1,6 +1,5 @@
 //Commented part for another builds
-var/datum/votablemap/nextmap
-
+GLOBAL_DATUM_INIT(nextmap, /datum/votablemap)
 /*
 /datum/configuration
 	var/list/datum/votablemap/maplist = list()

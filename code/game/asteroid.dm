@@ -1,6 +1,6 @@
-var/global/list/possiblethemes = list("organharvest","cult","wizden","cavein","xenoden","hitech","speakeasy","plantlab")
+GLOBAL_LIST_INIT(possiblethemes, list("organharvest","cult","wizden","cavein","xenoden","hitech","speakeasy","plantlab"))
 
-var/global/max_secret_rooms = 6
+GLOBAL_VAR_INIT(max_secret_rooms, 6)
 
 /proc/spawn_room(atom/start_loc, x_size, y_size, list/walltypes, floor, name, oldarea)
 	var/list/room_turfs = list("walls"=list(),"floors"=list())
@@ -37,7 +37,7 @@ var/global/max_secret_rooms = 6
 //////////////
 
 /proc/make_mining_asteroid_secrets()
-	for(var/i in 1 to max_secret_rooms)
+	for(var/i in 1 to GLOB.max_secret_rooms)
 		make_mining_asteroid_secret()
 
 /proc/make_mining_asteroid_secret()
@@ -60,7 +60,7 @@ var/global/max_secret_rooms = 6
 	y_size = rand(3,7)
 	areapoints = x_size * y_size
 
-	switch(pick(possiblethemes))//what kind of room is this gonna be?
+	switch(pick(GLOB.possiblethemes))//what kind of room is this gonna be?
 		if("organharvest")
 			walltypes = list(/turf/closed/wall/r_wall=2,/turf/closed/wall=2,/turf/closed/mineral/random/high_chance=1)
 			floortypes = list(/turf/open/floor/plasteel,/turf/open/floor/engine)
@@ -140,7 +140,7 @@ var/global/max_secret_rooms = 6
 			treasureitems = list(/obj/item/spellbook=1,/obj/mecha/combat/marauder=1,/obj/machinery/wish_granter=1)
 			fluffitems = list(/obj/item/melee/energy/axe)*/
 
-	possiblethemes -= theme //once a theme is selected, it's out of the running!
+	GLOB.possiblethemes -= theme //once a theme is selected, it's out of the running!
 	var/floor = pick(floortypes)
 
 	turfs = get_area_turfs(/area/lavaland/surface/outdoors)
