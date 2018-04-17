@@ -13,7 +13,7 @@
 	for(var/client/X in GLOB.admins)
 		if(X.prefs.toggles & SOUND_ADMINHELP)
 			X << 'sound/effects/adminhelp.ogg'
-	msg = "<span class='adminnotice'><b><font color=orange>STATION REPORT:</font>[key_name_admin(Sender)] (<A HREF='?_src_=holder;adminmoreinfo=\ref[Sender]'>?</A>) (<A HREF='?_src_=holder;adminplayeropts=\ref[Sender]'>PP</A>) (<A HREF='?_src_=vars;Vars=\ref[Sender]'>VV</A>) (<A HREF='?_src_=holder;subtlemessage=\ref[Sender]'>SM</A>) (<A HREF='?_src_=holder;adminplayerobservefollow=\ref[Sender]'>FLW</A>) (<A HREF='?_src_=holder;traitor=\ref[Sender]'>TP</A>) (<A HREF='?_src_=holder;BlueSpaceArtillery=\ref[Sender]'>BSA</A>) (<A HREF='?_src_=holder;CentcommReply=\ref[Sender]'>RPLY</A>):</b> Отчет: <A HREF='?_src_=holder;show_report=\ref[R]'>[R.title]</A></span>"
+	msg = "<span class='adminnotice'><b><font color=orange>STATION REPORT:</font>[key_name_admin(Sender)] (<A HREF='?_src_=holder;adminmoreinfo=\ref[Sender]'>?</A>) (<A HREF='?_src_=holder;adminplayeropts=\ref[Sender]'>PP</A>) (<A HREF='?_src_=vars;Vars=\ref[Sender]'>VV</A>) (<A HREF='?_src_=holder;subtlemessage=\ref[Sender]'>SM</A>) (<A HREF='?_src_=holder;adminplayerobservefollow=\ref[Sender]'>FLW</A>) (<A HREF='?_src_=holder;traitor=\ref[Sender]'>TP</A>) (<A HREF='?_src_=holder;BlueSpaceArtillery=\ref[Sender]'>BSA</A>) (<A HREF='?_src_=holder;CentcomReply=\ref[Sender]'>RPLY</A>):</b> Отчет: <A HREF='?_src_=holder;show_report=\ref[R]'>[R.title]</A></span>"
 	to_chat(GLOB.admins, msg)
 	for(var/obj/machinery/computer/communications/C in GLOB.machines)
 		C.overrideCooldown()
