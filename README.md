@@ -6,7 +6,7 @@
 **Оригинальный код:** https://github.com/tgstation/tgstation  
 **Код**: https://github.com/infinitystation/tgstation  
 **Сайт разработчика:** https://infinity-ss13.ru/  
-**Discord**: https://discordapp.com/invite/N4atUkH  
+**Discord**: https://discord.gg/3wurS  
 **Используемые карты:** /tg/ MetaStation
 
 ## ЗАГРУЗКА
@@ -42,7 +42,7 @@ tgstation.dmb - 0 errors, 0 warnings
 
 ## СОДЕЙСТВИЕ РАЗРАБОТКЕ БИЛДА.
 Обратиться разработчикам здесь:  
-https://discordapp.com/invite/N4atUkH 
+https://discord.gg/3wurS 
 
 ## ЛИЦЕНЗИЯ
 Весь исходный код после коммита 333c566b88108de218d882840e61928a9b759d8f, на 1-го января 2015-го года в 03:38 по Московскому времени (https://github.com/infinitystation/-tg-station/commit/333c566b88108de218d882840e61928a9b759d8f) лицензируется на условиях лицензионного соглашения GNU AGPL v3 (http://www.gnu.org/licenses/agpl-3.0.html).  
