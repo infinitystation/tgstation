@@ -114,7 +114,7 @@
 /*	extra_maps = json["extra_maps"]
 
 	if(extra_maps == "yes")
-		extra_cenctomm = json["extra_centcomm"]
+		extra_cenctom = json["extra_centcom"]
 		extra_minemap = json["extra_minemap"]
 		extra_derelict = json["extra_derelict"]*/
 
