@@ -7,8 +7,17 @@
 	if(!src.holder)
 		src << "<font color='red'>Only Admins may use this command.</font>"
 		return
+	browseserverlogs()
 
-	var/path = browse_files("data/logs/")
+/client/proc/getcurrentlogs()
+	set name = "Get Current Logs"
+	set desc = "View/retrieve logfiles for the current round."
+	set category = "Admin"
+
+	browseserverlogs("[GLOB.log_directory]/")
+
+/client/proc/browseserverlogs(path = "data/logs/")
+	path = browse_files(path)
 	if(!path)
 		return
 
