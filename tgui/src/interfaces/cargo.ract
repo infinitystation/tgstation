@@ -8,64 +8,64 @@
   }
 </script>
 
-<ui-display title='Грузовой трюм'>
-  <ui-section label='Шаттл'>
+<ui-display title='Р“СЂСѓР·РѕРІРѕР№ С‚СЂСЋРј'>
+  <ui-section label='РЁР°С‚С‚Р»'>
     {{#if data.docked && !data.requestonly}}
       <ui-button action='send'>{{data.location}}</ui-button>
     {{else}}
       <span>{{data.location}}</span>
     {{/if}}
   </ui-section>
-  <ui-section label='Кредиты'>
+  <ui-section label='РљСЂРµРґРёС‚С‹'>
     <span>{{Math.floor(adata.points)}}</span>
   </ui-section>
-  <ui-section label='Сообщения ЦК'>
+  <ui-section label='РЎРѕРѕР±С‰РµРЅРёСЏ Р¦Рљ'>
       <span>{{data.message}}</span>
   </ui-section>
   {{#if data.loan && !data.requestonly}}
-    <ui-section label='Заем'>
+    <ui-section label='Р—Р°РµРј'>
       {{#if !data.loan_dispatched}}
         <ui-button
          state='{{data.away && data.docked ? null : "disabled"}}'
-         action='loan'>Занять шаттл</ui-button>
+         action='loan'>Р—Р°РЅСЏС‚СЊ С€Р°С‚С‚Р»</ui-button>
       {{else}}
-        <span class='bad'>Шаттл занят ЦК</span>
+        <span class='bad'>РЁР°С‚С‚Р» Р·Р°РЅСЏС‚ Р¦Рљ</span>
       {{/if}}
     </ui-section>
   {{/if}}
 </ui-display>
 {{#if !data.requestonly}}
-  <ui-display title='Корзина' button>
+  <ui-display title='РљРѕСЂР·РёРЅР°' button>
     {{#partial button}}
-      <ui-button icon='close' state='{{data.cart.length ? null : "disabled"}}' action='clear'>Очистить</ui-button>
+      <ui-button icon='close' state='{{data.cart.length ? null : "disabled"}}' action='clear'>РћС‡РёСЃС‚РёС‚СЊ</ui-button>
     {{/partial}}
     {{#each data.cart}}
       <ui-section candystripe nowrap>
         <div class='content'>#{{id}}</div>
         <div class='content'>{{object}}</div>
-        <div class='content'>{{cost}} Кредитов</div>
+        <div class='content'>{{cost}} РљСЂРµРґРёС‚РѕРІ</div>
         <div class='content'>
           <ui-button icon='minus' action='remove' params='{"id": "{{id}}"}'/>
         </div>
       </ui-section>
     {{else}}
-      <span>Корзина пуста</span>
+      <span>РљРѕСЂР·РёРЅР° РїСѓСЃС‚Р°</span>
     {{/each}}
   </ui-display>
 {{/if}}
-<ui-display title='Запросы' button>
+<ui-display title='Р—Р°РїСЂРѕСЃС‹' button>
   {{#partial button}}
     {{#if !data.requestonly}}
-      <ui-button icon='close' state='{{data.requests.length ? null : "disabled"}}' action='denyall'>Очистить</ui-button>
+      <ui-button icon='close' state='{{data.requests.length ? null : "disabled"}}' action='denyall'>РћС‡РёСЃС‚РёС‚СЊ</ui-button>
     {{/if}}
   {{/partial}}
   {{#each data.requests}}
     <ui-section candystripe nowrap>
       <div class='content'>#{{id}}</div>
       <div class='content'>{{object}}</div>
-      <div class='content'>{{cost}} Кредитов</div>
-      <div class='content'>От {{orderer}}</div>
-      <div class='content'>Комментарий: {{reason}}</div>
+      <div class='content'>{{cost}} РљСЂРµРґРёС‚РѕРІ</div>
+      <div class='content'>РћС‚ {{orderer}}</div>
+      <div class='content'>РљРѕРјРјРµРЅС‚Р°СЂРёР№: {{reason}}</div>
       {{#if !data.requestonly}}
         <div class='content'>
           <ui-button icon='check' action='approve' params='{"id": "{{id}}"}'/>
@@ -74,7 +74,7 @@
       {{/if}}
     </ui-section>
     {{else}}
-      <span>Нет запросов</span>
+      <span>РќРµС‚ Р·Р°РїСЂРѕСЃРѕРІ</span>
     {{/each}}
 </ui-display>
 <ui-tabs tabs='{{tabs}}'>
@@ -82,7 +82,7 @@
     <tab name='{{name}}'>
       {{#each packs}}
         <ui-section label='{{name}}' candystripe right>
-          <ui-button tooltip='{{desc}}' tooltip-side='left' action='add' params='{"id": "{{id}}"}'>{{cost}} Кредитов</ui-button>
+          <ui-button tooltip='{{desc}}' tooltip-side='left' action='add' params='{"id": "{{id}}"}'>{{cost}} РљСЂРµРґРёС‚РѕРІ</ui-button>
         </ui-section>
       {{/each}}
     </tab>

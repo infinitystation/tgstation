@@ -1,4 +1,4 @@
-﻿<ui-notice>
+<ui-notice>
   <span>Регулятор {{data.hasHoldingTank ? "" : "не"}} подсоединен к баллону.</span>
 </ui-notice>
 <ui-display title='Канистра' button>

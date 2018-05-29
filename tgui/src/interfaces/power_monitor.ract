@@ -39,30 +39,30 @@
   }
 </script>
 
-<ui-display title='Сеть'>
+<ui-display title='РЎРµС‚СЊ'>
   {{#if config.fancy}}
     <ui-linegraph points='{{graphData}}' height='500'
-        legend='["Доступно", "Нагрузка"]' colors='["rgb(0, 102, 0)", "rgb(153, 0, 0)"]'
-        xunit='seconds ago' xfactor='{{data.interval}}' yunit='Вт' yfactor='1'
+        legend='["Р”РѕСЃС‚СѓРїРЅРѕ", "РќР°РіСЂСѓР·РєР°"]' colors='["rgb(0, 102, 0)", "rgb(153, 0, 0)"]'
+        xunit='seconds ago' xfactor='{{data.interval}}' yunit='Р’С‚' yfactor='1'
         xinc='{{data.stored / 10}}' yinc='9'/>
   {{else}}
-    <ui-section label='Доступно'>
+    <ui-section label='Р”РѕСЃС‚СѓРїРЅРѕ'>
       <span>{{data.supply}}</span>
     </ui-section>
-    <ui-section label='Нагрузка'>
+    <ui-section label='РќР°РіСЂСѓР·РєР°'>
         <span>{{data.demand}}</span>
     </ui-section>
   {{/if}}
 </ui-display>
-<ui-display title='Зоны'>
+<ui-display title='Р—РѕРЅС‹'>
   <ui-section nowrap>
-    <div class='content'>Зона</div>
-    <div class='content'>Заряд</div>
-    <div class='content'>Нагрузка</div>
-    <div class='content'>Статус</div>
-    <div class='content'>Оборудование</div>
-    <div class='content'>Освещение</div>
-    <div class='content'>Жизнеобеспечение</div>
+    <div class='content'>Р—РѕРЅР°</div>
+    <div class='content'>Р—Р°СЂСЏРґ</div>
+    <div class='content'>РќР°РіСЂСѓР·РєР°</div>
+    <div class='content'>РЎС‚Р°С‚СѓСЃ</div>
+    <div class='content'>РћР±РѕСЂСѓРґРѕРІР°РЅРёРµ</div>
+    <div class='content'>РћСЃРІРµС‰РµРЅРёРµ</div>
+    <div class='content'>Р–РёР·РЅРµРѕР±РµСЃРїРµС‡РµРЅРёРµ</div>
   </ui-section>
   {{#each data.areas}}
     <ui-section label='{{name}}' nowrap>

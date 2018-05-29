@@ -1,14 +1,14 @@
 <ui-display>
-  <ui-section label='Питание'>
+  <ui-section label='РџРёС‚Р°РЅРёРµ'>
     <ui-button icon='{{data.on ? "power-off" : "close"}}' style='{{data.on ? "selected" : null}}'
-      action='power'>{{data.on ? "Вкл" : "Выкл"}}</ui-button>
+      action='power'>{{data.on ? "Р’РєР»" : "Р’С‹РєР»"}}</ui-button>
   </ui-section>
-  <ui-section label='Выходное давление'>
-    <ui-button icon='pencil' action='pressure' params='{"pressure": "input"}'>Установить</ui-button>
-    <ui-button icon='plus' state='{{data.pressure == data.max_pressure ? "disabled" : null}}' action='pressure' params='{"pressure": "max"}'>Макс</ui-button>
-    <span>{{Math.round(adata.pressure)}} кПа</span>
+  <ui-section label='Р’С‹С…РѕРґРЅРѕРµ РґР°РІР»РµРЅРёРµ'>
+    <ui-button icon='pencil' action='pressure' params='{"pressure": "input"}'>РЈСЃС‚Р°РЅРѕРІРёС‚СЊ</ui-button>
+    <ui-button icon='plus' state='{{data.pressure == data.max_pressure ? "disabled" : null}}' action='pressure' params='{"pressure": "max"}'>РњР°РєСЃ</ui-button>
+    <span>{{Math.round(adata.pressure)}} РєРџР°</span>
   </ui-section>
-  <ui-section label='Фильтрация'>
+  <ui-section label='Р¤РёР»СЊС‚СЂР°С†РёСЏ'>
     {{#each data.filter_types}}
       <ui-button state='{{selected ? "selected" : null}}'
         action='filter' params='{"mode": {{id}}}'>{{name}}</ui-button>

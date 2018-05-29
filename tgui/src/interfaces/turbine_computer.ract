@@ -13,7 +13,7 @@ component.exports = {
 <ui-notice>
 	<ui-section label='Reconnect'>
 		<div style='float:right'>
-			<ui-button icon='refresh' action='reconnect'>Reconnect</ui-button>
+			<ui-button icon='refresh' action='reconnect'>Подключить</ui-button>
 		</div>
 	</ui-section>
 </ui-notice>

@@ -1,6 +1,6 @@
 <link rel='ractive' href='./back.ract'>
 
-<ui-display title='Ðåæèìû ðàáîòû' button>
+<ui-display title='Ð ÐµÐ¶Ð¸Ð¼Ñ‹ Ñ€Ð°Ð±Ð¾Ñ‚Ñ‹' button>
   {{#partial button}}
     <back/>
   {{/partial}}

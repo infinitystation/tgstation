@@ -1,9 +1,9 @@
-<ui-display title='Статус'>
-  <ui-section label='Энергия'>
-    <ui-bar min='0' max='{{data.maxEnergy}}' value='{{data.energy}}'>{{Math.fixed(adata.energy)}} Единиц</ui-bar>
+<ui-display title='РЎС‚Р°С‚СѓСЃ'>
+  <ui-section label='Р­РЅРµСЂРіРёСЏ'>
+    <ui-bar min='0' max='{{data.maxEnergy}}' value='{{data.energy}}'>{{Math.fixed(adata.energy)}} Р•РґРёРЅРёС†</ui-bar>
   </ui-section>
 </ui-display>
-<ui-display title='Выдать' button>
+<ui-display title='Р’С‹РґР°С‚СЊ' button>
   <ui-section>
     <ui-button icon='plus' action='add_recipe'>Add Recipe</ui-button>
 	<ui-button icon='minus' action='clear_recipes'>Clear Recipes</ui-button>
@@ -24,24 +24,24 @@
     {{/each}}
   </ui-section>
 </ui-display>
-<ui-display title='Колба' button>
+<ui-display title='РљРѕР»Р±Р°' button>
   {{#partial button}}
     {{#each data.beakerTransferAmounts}}
       <ui-button icon='minus' action='remove' params='{"amount": {{.}}}'>{{.}}</ui-button>
     {{/each}}
-    <ui-button icon='eject' state='{{data.isBeakerLoaded ? null : "disabled"}}' action='eject'>Извлечь</ui-button>
+    <ui-button icon='eject' state='{{data.isBeakerLoaded ? null : "disabled"}}' action='eject'>РР·РІР»РµС‡СЊ</ui-button>
   {{/partial}}
-  <ui-section label='Содержимое'>
+  <ui-section label='РЎРѕРґРµСЂР¶РёРјРѕРµ'>
     {{#if data.isBeakerLoaded}}
-      <span>{{Math.round(adata.beakerCurrentVolume)}}/{{data.beakerMaxVolume}} Единиц</span>
+      <span>{{Math.round(adata.beakerCurrentVolume)}}/{{data.beakerMaxVolume}} Р•РґРёРЅРёС†</span>
       <br/>
       {{#each adata.beakerContents}}
-        <span class='highlight' intro-outro='fade'>{{Math.fixed(volume, 2)}} единиц {{name}}</span><br/>
+        <span class='highlight' intro-outro='fade'>{{Math.fixed(volume, 2)}} РµРґРёРЅРёС† {{name}}</span><br/>
       {{else}}
-        <span class='bad'>Колба пуста</span>
+        <span class='bad'>РљРѕР»Р±Р° РїСѓСЃС‚Р°</span>
       {{/each}}
     {{else}}
-      <span class='average'>Нет колбы</span>
+      <span class='average'>РќРµС‚ РєРѕР»Р±С‹</span>
     {{/if}}
   </ui-section>
 </ui-display>

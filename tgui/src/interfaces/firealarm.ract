@@ -23,7 +23,7 @@
     </ui-section>
     {{#if data.emagged}}
       <ui-section label='Warning'>
-        <span class='bad bold'>Защита отключена. Устройство мможет работать непредсказуемо</span>
+        <span class='bad bold'>Защита отключена. Устройство может работать непредсказуемо</span>
       </ui-section>
     {{/if}}
 </ui-display>

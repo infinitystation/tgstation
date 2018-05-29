@@ -1,4 +1,4 @@
-﻿<ui-display>
+<ui-display>
   <ui-section label='Питание'>
     <ui-button icon='{{data.on ? "power-off" : "close"}}' style='{{data.on ? "selected" : null}}'
       action='power'>{{data.on ? "Вкл" : "Выкл"}}</ui-button>

@@ -1,40 +1,40 @@
-<ui-display title='Пациент'>
-  <ui-section label='Пациент'>
-	 <span>{{data.occupant.name ? data.occupant.name : "Нет "}}</span>
+<ui-display title='РџР°С†РёРµРЅС‚'>
+  <ui-section label='РџР°С†РёРµРЅС‚'>
+	 <span>{{data.occupant.name ? data.occupant.name : "РќРµС‚ "}}</span>
   </ui-section>
   {{#if data.occupied}}
-    <ui-section label='Состояние'>
+    <ui-section label='РЎРѕСЃС‚РѕСЏРЅРёРµ'>
       <span class='{{data.occupant.statstate}}'>{{data.occupant.stat}}</span>
   	</ui-section>
-    <ui-section label='Здоровье'>
+    <ui-section label='Р—РґРѕСЂРѕРІСЊРµ'>
       <ui-bar min='{{data.occupant.minHealth}}' max='{{data.occupant.maxHealth}}' value='{{data.occupant.health}}'
         state='{{data.occupant.health >= 0 ? "good" : "average"}}'>{{Math.round(adata.occupant.health)}}</ui-bar>
     </ui-section>
-    {{#each [{label: "Травмы", type: "bruteLoss"}, {label: "Удушье", type: "oxyLoss"}, {label: "Отравление", type: "toxLoss"}, {label: "Ожоги", type: "fireLoss"}]}}
+    {{#each [{label: "РўСЂР°РІРјС‹", type: "bruteLoss"}, {label: "РЈРґСѓС€СЊРµ", type: "oxyLoss"}, {label: "РћС‚СЂР°РІР»РµРЅРёРµ", type: "toxLoss"}, {label: "РћР¶РѕРіРё", type: "fireLoss"}]}}
       <ui-section label='{{label}}'>
         <ui-bar min='0' max='{{data.occupant.maxHealth}}' value='{{data.occupant[type]}}' state='bad'>{{Math.round(adata.occupant[type])}}</ui-bar>
       </ui-section>
     {{/each}}
-    <ui-section label='Клеточная структура'>
-        <span class='{{data.occupant.cloneLoss ? "bad" : "good"}}'>{{data.occupant.cloneLoss ? "Повреждена" : "Здорова"}}</span>
+    <ui-section label='РљР»РµС‚РѕС‡РЅР°СЏ СЃС‚СЂСѓРєС‚СѓСЂР°'>
+        <span class='{{data.occupant.cloneLoss ? "bad" : "good"}}'>{{data.occupant.cloneLoss ? "РџРѕРІСЂРµР¶РґРµРЅР°" : "Р—РґРѕСЂРѕРІР°"}}</span>
     </ui-section>
-    <ui-section label='Мозг'>
-        <span class='{{data.occupant.brainLoss ? "bad" : "good"}}'>{{data.occupant.brainLoss ? "Нездоров" : "Здоров"}}</span>
+    <ui-section label='РњРѕР·Рі'>
+        <span class='{{data.occupant.brainLoss ? "bad" : "good"}}'>{{data.occupant.brainLoss ? "РќРµР·РґРѕСЂРѕРІ" : "Р—РґРѕСЂРѕРІ"}}</span>
     </ui-section>
-    <ui-section label='Кровообращение'>
+    <ui-section label='РљСЂРѕРІРѕРѕР±СЂР°С‰РµРЅРёРµ'>
         {{#each adata.occupant.reagents}}
-          <span class='highlight' intro-outro='fade'>{{Math.fixed(volume, 1)}} единиц {{name}}</span><br/>
+          <span class='highlight' intro-outro='fade'>{{Math.fixed(volume, 1)}} РµРґРёРЅРёС† {{name}}</span><br/>
         {{else}}
-          <span class='good'>Чисто</span>
+          <span class='good'>Р§РёСЃС‚Рѕ</span>
         {{/each}}
     </ui-section>
   {{/if}}
 </ui-display>
-<ui-display title='Управление'>
-	<ui-section label='Дверь'>
-    <ui-button icon='{{data.open ? "unlock" : "lock"}}' action='door'>{{data.open ? "Открыто" : "Закрыто"}}</ui-button>
+<ui-display title='РЈРїСЂР°РІР»РµРЅРёРµ'>
+	<ui-section label='Р”РІРµСЂСЊ'>
+    <ui-button icon='{{data.open ? "unlock" : "lock"}}' action='door'>{{data.open ? "РћС‚РєСЂС‹С‚Рѕ" : "Р—Р°РєСЂС‹С‚Рѕ"}}</ui-button>
 	</ui-section>
-  <ui-section label='Ввести'>
+  <ui-section label='Р’РІРµСЃС‚Рё'>
     {{#each data.chems}}
       <ui-button icon='flask' state='{{data.occupied && allowed ? null : "disabled"}}' action='inject' params='{"chem": "{{id}}"}'>{{name}}</ui-button><br/>
     {{/each}}

@@ -21,50 +21,50 @@
   }
 </script>
 
-<ui-display title='Хранение'>
-  <ui-section label='Запасенная энергия'>
+<ui-display title='РҐСЂР°РЅРµРЅРёРµ'>
+  <ui-section label='Р—Р°РїР°СЃРµРЅРЅР°СЏ СЌРЅРµСЂРіРёСЏ'>
     <ui-bar min='0' max='100' value='{{data.capacityPercent}}' state='{{capacityPercentState}}'>{{Math.fixed(adata.capacityPercent)}}%</ui-bar>
   </ui-section>
 </ui-display>
-<ui-display title='Ввод'>
-  <ui-section label='Сменить режим'>
+<ui-display title='Р’РІРѕРґ'>
+  <ui-section label='РЎРјРµРЅРёС‚СЊ СЂРµР¶РёРј'>
     <ui-button icon='{{data.inputAttempt ? "refresh" : "close"}}' style='{{data.inputAttempt ? "selected" : null}}'
-      action='tryinput'>{{data.inputAttempt ? "Авто" : "Выкл"}}</ui-button>
+      action='tryinput'>{{data.inputAttempt ? "РђРІС‚Рѕ" : "Р’С‹РєР»"}}</ui-button>
     &nbsp;
-    [<span class='{{inputState}}'>{{data.capacityPercent >= 100 ? "Полностью заряжено" : data.inputting ? "Заряжается" : "Не заряжается"}}</span>]
+    [<span class='{{inputState}}'>{{data.capacityPercent >= 100 ? "РџРѕР»РЅРѕСЃС‚СЊСЋ Р·Р°СЂСЏР¶РµРЅРѕ" : data.inputting ? "Р—Р°СЂСЏР¶Р°РµС‚СЃСЏ" : "РќРµ Р·Р°СЂСЏР¶Р°РµС‚СЃСЏ"}}</span>]
 	</ui-section>
-  <ui-section label='Вводная мощность'>
+  <ui-section label='Р’РІРѕРґРЅР°СЏ РјРѕС‰РЅРѕСЃС‚СЊ'>
     <ui-bar min='0' max='{{data.inputLevelMax}}' value='{{data.inputLevel}}'>{{adata.inputLevel_text}}</ui-bar>
 	</ui-section>
-  <ui-section label='Скорректировать ввод'>
+  <ui-section label='РЎРєРѕСЂСЂРµРєС‚РёСЂРѕРІР°С‚СЊ РІРІРѕРґ'>
     <ui-button icon='fast-backward' state='{{data.inputLevel == 0 ? "disabled" : null}}' action='input' params='{"target": "min"}'/>
     <ui-button icon='backward' state='{{data.inputLevel == 0 ? "disabled" : null}}' action='input' params='{"adjust": -10000}'/>
-    <ui-button icon='pencil' action='input' params='{"target": "input"}'>Установить</ui-button>
+    <ui-button icon='pencil' action='input' params='{"target": "input"}'>РЈСЃС‚Р°РЅРѕРІРёС‚СЊ</ui-button>
     <ui-button icon='forward' state='{{data.inputLevel == data.inputLevelMax ? "disabled" : null}}' action='input' params='{"adjust": 10000}'/>
     <ui-button icon='fast-forward' state='{{data.inputLevel == data.inputLevelMax ? "disabled" : null}}' action='input' params='{"target": "max"}'/>
   </ui-section>
-  <ui-section label='Доступно'>
+  <ui-section label='Р”РѕСЃС‚СѓРїРЅРѕ'>
 		<span>{{adata.inputAvailable}}</span>
 	</ui-section>
 </ui-display>
-<ui-display title='Вывод'>
-  <ui-section label='Режим вывода'>
+<ui-display title='Р’С‹РІРѕРґ'>
+  <ui-section label='Р РµР¶РёРј РІС‹РІРѕРґР°'>
     <ui-button icon='{{data.outputAttempt ? "power-off" : "close"}}' style='{{data.outputAttempt ? "selected" : null}}'
-      action='tryoutput'>{{data.outputAttempt ? "Вкл" : "Выкл"}}</ui-button>
+      action='tryoutput'>{{data.outputAttempt ? "Р’РєР»" : "Р’С‹РєР»"}}</ui-button>
     &nbsp;
-    [<span class='{{outputState}}'>{{data.outputting ? "Вывод" : data.charge > 0 ? "Нет вывода" : "Нет заряда"}}</span>]
+    [<span class='{{outputState}}'>{{data.outputting ? "Р’С‹РІРѕРґ" : data.charge > 0 ? "РќРµС‚ РІС‹РІРѕРґР°" : "РќРµС‚ Р·Р°СЂСЏРґР°"}}</span>]
 	</ui-section>
-  <ui-section label='Уровень вывода'>
+  <ui-section label='РЈСЂРѕРІРµРЅСЊ РІС‹РІРѕРґР°'>
     <ui-bar min='0' max='{{data.outputLevelMax}}' value='{{data.outputLevel}}'>{{adata.outputLevel_text}}</ui-bar>
 	</ui-section>
-  <ui-section label='Скорректировать вывод'>
+  <ui-section label='РЎРєРѕСЂСЂРµРєС‚РёСЂРѕРІР°С‚СЊ РІС‹РІРѕРґ'>
     <ui-button icon='fast-backward' state='{{data.outputLevel == 0 ? "disabled" : null}}' action='output' params='{"target": "min"}'/>
     <ui-button icon='backward' state='{{data.outputLevel == 0 ? "disabled" : null}}' action='output' params='{"adjust": -10000}'/>
-    <ui-button icon='pencil' action='output' params='{"target": "input"}'>Установить</ui-button>
+    <ui-button icon='pencil' action='output' params='{"target": "input"}'>РЈСЃС‚Р°РЅРѕРІРёС‚СЊ</ui-button>
     <ui-button icon='forward' state='{{data.outputLevel == data.outputLevelMax ? "disabled" : null}}' action='output' params='{"adjust": 10000}'/>
     <ui-button icon='fast-forward' state='{{data.outputLevel == data.outputLevelMax ? "disabled" : null}}' action='output' params='{"target": "max"}'/>
   </ui-section>
-  <ui-section label='Выходная мощность'>
+  <ui-section label='Р’С‹С…РѕРґРЅР°СЏ РјРѕС‰РЅРѕСЃС‚СЊ'>
 		<span>{{adata.outputUsed}}</span>
 	</ui-section>
 </ui-display>

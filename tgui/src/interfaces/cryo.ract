@@ -1,53 +1,53 @@
-<ui-display title='Пациент'>
-  <ui-section label='Пациент'>
-	 <span>{{data.occupant.name ? data.occupant.name : "Нет пациента"}}</span>
+<ui-display title='РџР°С†РёРµРЅС‚'>
+  <ui-section label='РџР°С†РёРµРЅС‚'>
+	 <span>{{data.occupant.name ? data.occupant.name : "РќРµС‚ РїР°С†РёРµРЅС‚Р°"}}</span>
   </ui-section>
   {{#if data.hasOccupant}}
-    <ui-section label='Состояние'>
+    <ui-section label='РЎРѕСЃС‚РѕСЏРЅРёРµ'>
       <span class='{{data.occupant.statstate}}'>{{data.occupant.stat}}</span>
   	</ui-section>
-  	<ui-section label='Температура'>
+  	<ui-section label='РўРµРјРїРµСЂР°С‚СѓСЂР°'>
   	  <span class='{{data.occupant.temperaturestatus}}'>{{data.occupant.bodyTemperature}} K</span>
   	</ui-section>
-    <ui-section label='Здоровье'>
+    <ui-section label='Р—РґРѕСЂРѕРІСЊРµ'>
       <ui-bar min='{{data.occupant.minHealth}}' max='{{data.occupant.maxHealth}}' value='{{data.occupant.health}}'
         state='{{data.occupant.health >= 0 ? "good" : "average"}}'>{{data.occupant.health}}</ui-bar>
     </ui-section>
-    {{#each [{label: "Травмы", type: "bruteLoss"}, {label: "Удушье", type: "oxyLoss"}, {label: "Отравление", type: "toxLoss"}, {label: "Ожоги", type: "fireLoss"}]}}
+    {{#each [{label: "РўСЂР°РІРјС‹", type: "bruteLoss"}, {label: "РЈРґСѓС€СЊРµ", type: "oxyLoss"}, {label: "РћС‚СЂР°РІР»РµРЅРёРµ", type: "toxLoss"}, {label: "РћР¶РѕРіРё", type: "fireLoss"}]}}
       <ui-section label='{{label}}'>
         <ui-bar min='0' max='{{data.occupant.maxHealth}}' value='{{data.occupant[type]}}' state='bad'>{{data.occupant[type]}}</ui-bar>
       </ui-section>
     {{/each}}
   {{/if}}
 </ui-display>
-<ui-display title='Батарея'>
-  <ui-section label='Питание'>
+<ui-display title='Р‘Р°С‚Р°СЂРµСЏ'>
+  <ui-section label='РџРёС‚Р°РЅРёРµ'>
     <ui-button icon='{{data.isOperating ? "power-off" : "close"}}'
       style='{{data.isOperating ? "selected" : null}}'
       state='{{data.isOpen ? "disabled" : null}}'
-      action='power'>{{data.isOperating ? "Вкл" : "Выкл"}}</ui-button>
+      action='power'>{{data.isOperating ? "Р’РєР»" : "Р’С‹РєР»"}}</ui-button>
   </ui-section>
-  <ui-section label='Температура'>
+  <ui-section label='РўРµРјРїРµСЂР°С‚СѓСЂР°'>
 		<span class='{{data.temperaturestatus}}'>{{data.cellTemperature}} K</span>
 	</ui-section>
-	<ui-section label='Дверь'>
-    <ui-button icon='{{data.isOpen ? "unlock" : "lock"}}' action='door'>{{data.isOpen ? "Открыто" : "Закрыто"}}</ui-button>
-    <ui-button icon='{{data.autoEject ? "sign-out" : "sign-in"}}' action='autoeject'>{{data.autoEject ? "Авто" : "Ручное"}}</ui-button>
+	<ui-section label='Р”РІРµСЂСЊ'>
+    <ui-button icon='{{data.isOpen ? "unlock" : "lock"}}' action='door'>{{data.isOpen ? "РћС‚РєСЂС‹С‚Рѕ" : "Р—Р°РєСЂС‹С‚Рѕ"}}</ui-button>
+    <ui-button icon='{{data.autoEject ? "sign-out" : "sign-in"}}' action='autoeject'>{{data.autoEject ? "РђРІС‚Рѕ" : "Р СѓС‡РЅРѕРµ"}}</ui-button>
 	</ui-section>
 </ui-display>
-<ui-display title='Колба' button>
+<ui-display title='РљРѕР»Р±Р°' button>
   {{#partial button}}
-    <ui-button icon='eject' state='{{data.isBeakerLoaded ? null : "disabled"}}' action='ejectbeaker'>Извлечь</ui-button>
+    <ui-button icon='eject' state='{{data.isBeakerLoaded ? null : "disabled"}}' action='ejectbeaker'>РР·РІР»РµС‡СЊ</ui-button>
   {{/partial}}
-  <ui-section label='Содержимое'>
+  <ui-section label='РЎРѕРґРµСЂР¶РёРјРѕРµ'>
     {{#if data.isBeakerLoaded}}
       {{#each adata.beakerContents}}
-        <span class='highlight' intro-outro='fade'>{{volume}} единиц {{name}}</span><br/>
+        <span class='highlight' intro-outro='fade'>{{volume}} РµРґРёРЅРёС† {{name}}</span><br/>
       {{else}}
-        <span class='bad'>Колба пуста</span>
+        <span class='bad'>РљРѕР»Р±Р° РїСѓСЃС‚Р°</span>
       {{/each}}
     {{else}}
-      <span class='average'>Нет колбы</span>
+      <span class='average'>РќРµС‚ РєРѕР»Р±С‹</span>
     {{/if}}
   </ui-section>
 </ui-display>

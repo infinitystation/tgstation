@@ -1,220 +1,113 @@
+GLOBAL_LIST_INIT(c1251_to_utf_table, list(
+	"¿" = "0410", "‡" = "0430",
+	"¡" = "0411", "·" = "0431",
+	"¬" = "0412", "‚" = "0432",
+	"√" = "0413", "„" = "0433",
+	"ƒ" = "0414", "‰" = "0434",
+	"≈" = "0415", "Â" = "0435",
+	"∆" = "0416", "Ê" = "0436",
+	"«" = "0417", "Á" = "0437",
+	"»" = "0418", "Ë" = "0438",
+	"…" = "0419", "È" = "0439",
+	" " = "041a", "Í" = "043a",
+	"À" = "041b", "Î" = "043b",
+	"Ã" = "041c", "Ï" = "043c",
+	"Õ" = "041d", "Ì" = "043d",
+	"Œ" = "041e", "Ó" = "043e",
+	"œ" = "041f", "Ô" = "043f",
+	"–" = "0420", "" = "0440",
+	"—" = "0421", "Ò" = "0441",
+	"“" = "0422", "Ú" = "0442",
+	"”" = "0423", "Û" = "0443",
+	"‘" = "0424", "Ù" = "0444",
+	"’" = "0425", "ı" = "0445",
+	"÷" = "0426", "ˆ" = "0446",
+	"◊" = "0427", "˜" = "0447",
+	"ÿ" = "0428", "¯" = "0448",
+	"Ÿ" = "0429", "˘" = "0449",
+	"⁄" = "042a", "˙" = "044a",
+	"€" = "042b", "˚" = "044b",
+	"‹" = "042c", "¸" = "044c",
+	"›" = "042d", "˝" = "044d",
+	"ﬁ" = "042e", "˛" = "044e",
+	"ﬂ" = "042f", "ˇ" = "044f",
+
+	"®" = "0401", "∏" = "0451",
+
+	"Å" = "0403", "™" = "0404",
+	"Ø" = "0407", "É" = "0453",
+	"∫" = "0454", "ø" = "0457",
+	"•" = "0490", "¥" = "0491",
+	"ï" = "2022", "ñ" = "2013",
+	"ó" = "2014", "π" = "2116"
+))
+
+GLOBAL_LIST_INIT(j1251_to_utf_table, list(
+	"c0" = "0410", "e0" = "0430",
+	"c1" = "0411", "e1" = "0431",
+	"c2" = "0412", "e2" = "0432",
+	"c3" = "0413", "e3" = "0433",
+	"c4" = "0414", "e4" = "0434",
+	"c5" = "0415", "e5" = "0435",
+	"c6" = "0416", "e6" = "0436",
+	"c7" = "0417", "e7" = "0437",
+	"c8" = "0418", "e8" = "0438",
+	"c9" = "0419", "e9" = "0439",
+	"ca" = "041a", "ea" = "043a",
+	"cb" = "041b", "eb" = "043b",
+	"cc" = "041c", "ec" = "043c",
+	"cd" = "041d", "ed" = "043d",
+	"ce" = "041e", "ee" = "043e",
+	"cf" = "041f", "ef" = "043f",
+	"d0" = "0420", "f0" = "0440",
+	"d1" = "0421", "f1" = "0441",
+	"d2" = "0422", "f2" = "0442",
+	"d3" = "0423", "f3" = "0443",
+	"d4" = "0424", "f4" = "0444",
+	"d5" = "0425", "f5" = "0445",
+	"d6" = "0426", "f6" = "0446",
+	"d7" = "0427", "f7" = "0447",
+	"d8" = "0428", "f8" = "0448",
+	"d9" = "0429", "f9" = "0449",
+	"da" = "042a", "fa" = "044a",
+	"db" = "042b", "fb" = "044b",
+	"dc" = "042c", "fc" = "044c",
+	"dd" = "042d", "fd" = "044d",
+	"de" = "042e", "fe" = "044e",
+	"df" = "042f", "ff" = "044f",
+
+	"a8" = "0401", "b8" = "0451",
+
+	"81" = "0403", "aa" = "0404",
+	"af" = "0407", "83" = "0453",
+	"ba" = "0454", "bf" = "0457",
+	"a5" = "0490", "b4" = "0491",
+	"95" = "2022", "96" = "2013",
+	"97" = "2014", "b9" = "2116"
+))
+
 /proc/extA2U(t)
+	if(!t)
+		return
+
+	t = replacetext(t, "&#255;", "\\u044f")
+	t = replacetext(t, "&#1103;", "\\u044f")
+
 	if(DM_VERSION < 511)
-		//®, ∏
-		t = replacetextEx(t, "\\xa8", "\\u0401")
-		t = replacetextEx(t, "\\xb8", "\\u0451")
-		//¿-œ
-		t = replacetextEx(t, "\\xc0", "\\u0410")
-		t = replacetextEx(t, "\\xc1", "\\u0411")
-		t = replacetextEx(t, "\\xc2", "\\u0412")
-		t = replacetextEx(t, "\\xc3", "\\u0413")
-		t = replacetextEx(t, "\\xc4", "\\u0414")
-		t = replacetextEx(t, "\\xc5", "\\u0415")
-		t = replacetextEx(t, "\\xc6", "\\u0416")
-		t = replacetextEx(t, "\\xc7", "\\u0417")
-		t = replacetextEx(t, "\\xc8", "\\u0418")
-		t = replacetextEx(t, "\\xc9", "\\u0419")
-		t = replacetextEx(t, "\\xca", "\\u041a")
-		t = replacetextEx(t, "\\xcb", "\\u041b")
-		t = replacetextEx(t, "\\xcc", "\\u041c")
-		t = replacetextEx(t, "\\xcd", "\\u041d")
-		t = replacetextEx(t, "\\xce", "\\u041e")
-		t = replacetextEx(t, "\\xcf", "\\u041f")
-		//–-ﬂ
-		t = replacetextEx(t, "\\xd0", "\\u0420")
-		t = replacetextEx(t, "\\xd1", "\\u0421")
-		t = replacetextEx(t, "\\xd2", "\\u0422")
-		t = replacetextEx(t, "\\xd3", "\\u0423")
-		t = replacetextEx(t, "\\xd4", "\\u0424")
-		t = replacetextEx(t, "\\xd5", "\\u0425")
-		t = replacetextEx(t, "\\xd6", "\\u0426")
-		t = replacetextEx(t, "\\xd7", "\\u0427")
-		t = replacetextEx(t, "\\xd8", "\\u0428")
-		t = replacetextEx(t, "\\xd9", "\\u0429")
-		t = replacetextEx(t, "\\xda", "\\u042a")
-		t = replacetextEx(t, "\\xdb", "\\u042b")
-		t = replacetextEx(t, "\\xdc", "\\u042c")
-		t = replacetextEx(t, "\\xdd", "\\u042d")
-		t = replacetextEx(t, "\\xde", "\\u042e")
-		t = replacetextEx(t, "\\xdf", "\\u042f")
-		//‡-Ô
-		t = replacetextEx(t, "\\xe0", "\\u0430")
-		t = replacetextEx(t, "\\xe1", "\\u0431")
-		t = replacetextEx(t, "\\xe2", "\\u0432")
-		t = replacetextEx(t, "\\xe3", "\\u0433")
-		t = replacetextEx(t, "\\xe4", "\\u0434")
-		t = replacetextEx(t, "\\xe5", "\\u0435")
-		t = replacetextEx(t, "\\xe6", "\\u0436")
-		t = replacetextEx(t, "\\xe7", "\\u0437")
-		t = replacetextEx(t, "\\xe8", "\\u0438")
-		t = replacetextEx(t, "\\xe9", "\\u0439")
-		t = replacetextEx(t, "\\xea", "\\u043a")
-		t = replacetextEx(t, "\\xeb", "\\u043b")
-		t = replacetextEx(t, "\\xec", "\\u043c")
-		t = replacetextEx(t, "\\xed", "\\u043d")
-		t = replacetextEx(t, "\\xee", "\\u043e")
-		t = replacetextEx(t, "\\xef", "\\u043f")
-		//-ˇ
-		t = replacetextEx(t, "\\xf0", "\\u0440")
-		t = replacetextEx(t, "\\xf1", "\\u0441")
-		t = replacetextEx(t, "\\xf2", "\\u0442")
-		t = replacetextEx(t, "\\xf3", "\\u0443")
-		t = replacetextEx(t, "\\xf4", "\\u0444")
-		t = replacetextEx(t, "\\xf5", "\\u0445")
-		t = replacetextEx(t, "\\xf6", "\\u0446")
-		t = replacetextEx(t, "\\xf7", "\\u0447")
-		t = replacetextEx(t, "\\xf8", "\\u0448")
-		t = replacetextEx(t, "\\xf9", "\\u0449")
-		t = replacetextEx(t, "\\xfa", "\\u044a")
-		t = replacetextEx(t, "\\xfb", "\\u044b")
-		t = replacetextEx(t, "\\xfc", "\\u044c")
-		t = replacetextEx(t, "\\xfd", "\\u044d")
-		t = replacetextEx(t, "\\xfe", "\\u044e")
+		for(var/s in GLOB.j1251_to_utf_table)
+			t = replacetext(t, "\\x[s]", "\\u[GLOB.j1251_to_utf_table[s]]")
 	else
-		//®, ∏
-		t = replacetextEx(t, "\\u00a8", "\\u0401")
-		t = replacetextEx(t, "\\u00b8", "\\u0451")
-		//¿-œ
-		t = replacetextEx(t, "\\u00c0", "\\u0410")
-		t = replacetextEx(t, "\\u00c1", "\\u0411")
-		t = replacetextEx(t, "\\u00c2", "\\u0412")
-		t = replacetextEx(t, "\\u00c3", "\\u0413")
-		t = replacetextEx(t, "\\u00c4", "\\u0414")
-		t = replacetextEx(t, "\\u00c5", "\\u0415")
-		t = replacetextEx(t, "\\u00c6", "\\u0416")
-		t = replacetextEx(t, "\\u00c7", "\\u0417")
-		t = replacetextEx(t, "\\u00c8", "\\u0418")
-		t = replacetextEx(t, "\\u00c9", "\\u0419")
-		t = replacetextEx(t, "\\u00ca", "\\u041a")
-		t = replacetextEx(t, "\\u00cb", "\\u041b")
-		t = replacetextEx(t, "\\u00cc", "\\u041c")
-		t = replacetextEx(t, "\\u00cd", "\\u041d")
-		t = replacetextEx(t, "\\u00ce", "\\u041e")
-		t = replacetextEx(t, "\\u00cf", "\\u041f")
-		//–-ﬂ
-		t = replacetextEx(t, "\\u00d0", "\\u0420")
-		t = replacetextEx(t, "\\u00d1", "\\u0421")
-		t = replacetextEx(t, "\\u00d2", "\\u0422")
-		t = replacetextEx(t, "\\u00d3", "\\u0423")
-		t = replacetextEx(t, "\\u00d4", "\\u0424")
-		t = replacetextEx(t, "\\u00d5", "\\u0425")
-		t = replacetextEx(t, "\\u00d6", "\\u0426")
-		t = replacetextEx(t, "\\u00d7", "\\u0427")
-		t = replacetextEx(t, "\\u00d8", "\\u0428")
-		t = replacetextEx(t, "\\u00d9", "\\u0429")
-		t = replacetextEx(t, "\\u00da", "\\u042a")
-		t = replacetextEx(t, "\\u00db", "\\u042b")
-		t = replacetextEx(t, "\\u00dc", "\\u042c")
-		t = replacetextEx(t, "\\u00dd", "\\u042d")
-		t = replacetextEx(t, "\\u00de", "\\u042e")
-		t = replacetextEx(t, "\\u00df", "\\u042f")
-		//‡-Ô
-		t = replacetextEx(t, "\\u00e0", "\\u0430")
-		t = replacetextEx(t, "\\u00e1", "\\u0431")
-		t = replacetextEx(t, "\\u00e2", "\\u0432")
-		t = replacetextEx(t, "\\u00e3", "\\u0433")
-		t = replacetextEx(t, "\\u00e4", "\\u0434")
-		t = replacetextEx(t, "\\u00e5", "\\u0435")
-		t = replacetextEx(t, "\\u00e6", "\\u0436")
-		t = replacetextEx(t, "\\u00e7", "\\u0437")
-		t = replacetextEx(t, "\\u00e8", "\\u0438")
-		t = replacetextEx(t, "\\u00e9", "\\u0439")
-		t = replacetextEx(t, "\\u00ea", "\\u043a")
-		t = replacetextEx(t, "\\u00eb", "\\u043b")
-		t = replacetextEx(t, "\\u00ec", "\\u043c")
-		t = replacetextEx(t, "\\u00ed", "\\u043d")
-		t = replacetextEx(t, "\\u00ee", "\\u043e")
-		t = replacetextEx(t, "\\u00ef", "\\u043f")
-		//-ˇ
-		t = replacetextEx(t, "\\u00f0", "\\u0440")
-		t = replacetextEx(t, "\\u00f1", "\\u0441")
-		t = replacetextEx(t, "\\u00f2", "\\u0442")
-		t = replacetextEx(t, "\\u00f3", "\\u0443")
-		t = replacetextEx(t, "\\u00f4", "\\u0444")
-		t = replacetextEx(t, "\\u00f5", "\\u0445")
-		t = replacetextEx(t, "\\u00f6", "\\u0446")
-		t = replacetextEx(t, "\\u00f7", "\\u0447")
-		t = replacetextEx(t, "\\u00f8", "\\u0448")
-		t = replacetextEx(t, "\\u00f9", "\\u0449")
-		t = replacetextEx(t, "\\u00fa", "\\u044a")
-		t = replacetextEx(t, "\\u00fb", "\\u044b")
-		t = replacetextEx(t, "\\u00fc", "\\u044c")
-		t = replacetextEx(t, "\\u00fd", "\\u044d")
-		t = replacetextEx(t, "\\u00fe", "\\u044e")
-	t = replacetextEx(t, "&#255;", "\\u044f")
-	t = replacetextEx(t, "&#1103;", "\\u044f")
+		for(var/s in GLOB.j1251_to_utf_table)
+			t = replacetext(t, "\\u00[s]", "\\u[GLOB.j1251_to_utf_table[s]]")
 	return t
 
 /proc/convert1251_to_utf(t)
-	//®, ∏
-	t = replacetextEx(t, "®", "&#1025;")
-	t = replacetextEx(t, "∏", "&#1105;")
-	//¿-œ
-	t = replacetextEx(t, "¿", "&#1040;")
-	t = replacetextEx(t, "¡", "&#1041;")
-	t = replacetextEx(t, "¬", "&#1042;")
-	t = replacetextEx(t, "√", "&#1043;")
-	t = replacetextEx(t, "ƒ", "&#1044;")
-	t = replacetextEx(t, "≈", "&#1045;")
-	t = replacetextEx(t, "∆", "&#1046;")
-	t = replacetextEx(t, "«", "&#1047;")
-	t = replacetextEx(t, "»", "&#1048;")
-	t = replacetextEx(t, "…", "&#1049;")
-	t = replacetextEx(t, " ", "&#1050;")
-	t = replacetextEx(t, "À", "&#1051;")
-	t = replacetextEx(t, "Ã", "&#1052;")
-	t = replacetextEx(t, "Õ", "&#1053;")
-	t = replacetextEx(t, "Œ", "&#1054;")
-	t = replacetextEx(t, "œ", "&#1055;")
-	//–-ﬂ
-	t = replacetextEx(t, "–", "&#1056;")
-	t = replacetextEx(t, "—", "&#1057;")
-	t = replacetextEx(t, "“", "&#1058;")
-	t = replacetextEx(t, "”", "&#1059;")
-	t = replacetextEx(t, "‘", "&#1060;")
-	t = replacetextEx(t, "’", "&#1061;")
-	t = replacetextEx(t, "÷", "&#1062;")
-	t = replacetextEx(t, "◊", "&#1063;")
-	t = replacetextEx(t, "ÿ", "&#1064;")
-	t = replacetextEx(t, "Ÿ", "&#1065;")
-	t = replacetextEx(t, "⁄", "&#1066;")
-	t = replacetextEx(t, "€", "&#1067;")
-	t = replacetextEx(t, "‹", "&#1068;")
-	t = replacetextEx(t, "›", "&#1069;")
-	t = replacetextEx(t, "ﬁ", "&#1070;")
-	t = replacetextEx(t, "ﬂ", "&#1071;")
-	//‡-Ô
-	t = replacetextEx(t, "‡", "&#1072;")
-	t = replacetextEx(t, "·", "&#1073;")
-	t = replacetextEx(t, "‚", "&#1074;")
-	t = replacetextEx(t, "„", "&#1075;")
-	t = replacetextEx(t, "‰", "&#1076;")
-	t = replacetextEx(t, "Â", "&#1077;")
-	t = replacetextEx(t, "Ê", "&#1078;")
-	t = replacetextEx(t, "Á", "&#1079;")
-	t = replacetextEx(t, "Ë", "&#1080;")
-	t = replacetextEx(t, "È", "&#1081;")
-	t = replacetextEx(t, "Í", "&#1082;")
-	t = replacetextEx(t, "Î", "&#1083;")
-	t = replacetextEx(t, "Ï", "&#1084;")
-	t = replacetextEx(t, "Ì", "&#1085;")
-	t = replacetextEx(t, "Ó", "&#1086;")
-	t = replacetextEx(t, "Ô", "&#1087;")
-	//-ˇ
-	t = replacetextEx(t, "", "&#1088;")
-	t = replacetextEx(t, "Ò", "&#1089;")
-	t = replacetextEx(t, "Ú", "&#1090;")
-	t = replacetextEx(t, "Û", "&#1091;")
-	t = replacetextEx(t, "Ù", "&#1092;")
-	t = replacetextEx(t, "ı", "&#1093;")
-	t = replacetextEx(t, "ˆ", "&#1094;")
-	t = replacetextEx(t, "˜", "&#1095;")
-	t = replacetextEx(t, "¯", "&#1096;")
-	t = replacetextEx(t, "˘", "&#1097;")
-	t = replacetextEx(t, "˙", "&#1098;")
-	t = replacetextEx(t, "˚", "&#1099;")
-	t = replacetextEx(t, "¸", "&#1100;")
-	t = replacetextEx(t, "˝", "&#1101;")
-	t = replacetextEx(t, "˛", "&#1102;")
-	t = replacetextEx(t, "&#255;", "&#1103;")
+	if(!t)
+		return
+
+	t = replacetext(t, "&#255;", "&#x044f")
+	t = replacetext(t, "&#1103;", "&#x044f")
+
+	for(var/s in GLOB.c1251_to_utf_table)
+		t = replacetext(t, s, "&#x[GLOB.c1251_to_utf_table[s]];")
 	return t
