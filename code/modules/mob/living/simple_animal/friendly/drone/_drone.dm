@@ -89,10 +89,10 @@
 
 	if(default_storage)
 		var/obj/item/I = new default_storage(src)
-		equip_to_slot_or_del(I, slot_generic_dextrous_storage)
+		equip_to_slot_or_del(I, SLOT_GENERC_DEXTROUS_STORAGE)
 	if(default_hatmask)
 		var/obj/item/I = new default_hatmask(src)
-		equip_to_slot_or_del(I, slot_head)
+		equip_to_slot_or_del(I, SLOT_HEAD)
 
 	access_card.flags_1 |= NODROP_1
 
@@ -219,6 +219,9 @@
 
 
 /mob/living/simple_animal/drone/emp_act(severity)
+	. = ..()
+	if(. & EMP_PROTECT_SELF)
+		return
 	Stun(100)
 	to_chat(src, "<span class='danger'><b>ER@%R: MME^RY CO#RU9T!</b> R&$b@0tin)...</span>")
 	if(severity == 1)

@@ -104,6 +104,7 @@ GLOBAL_LIST_INIT(admin_verbs_fun, list(
 	/client/proc/forceEvent,
 	/client/proc/admin_change_sec_level,
 	/client/proc/toggle_nuke,
+	/client/proc/run_weather,
 	/client/proc/mass_zombie_infection,
 	/client/proc/mass_zombie_cure,
 	/client/proc/polymorph_all,
@@ -613,6 +614,8 @@ GLOBAL_LIST_INIT(admin_verbs_hideable, list(
 /client/proc/togglebuildmodeself()
 	set name = "Toggle Build Mode Self"
 	set category = "Special Verbs"
+	if (!(holder.rank.rights & R_BUILDMODE))
+		return
 	if(src.mob)
 		togglebuildmode(src.mob)
 	SSblackbox.record_feedback("tally", "admin_verb", 1, "Toggle Build Mode") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!

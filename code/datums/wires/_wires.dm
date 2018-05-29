@@ -6,8 +6,8 @@
 
 	if(I.tool_behaviour == TOOL_WIRECUTTER || I.tool_behaviour == TOOL_MULTITOOL)
 		return TRUE
-	if(istype(I, /obj/item/device/assembly))
-		var/obj/item/device/assembly/A = I
+	if(istype(I, /obj/item/assembly))
+		var/obj/item/assembly/A = I
 		if(A.attachable)
 			return TRUE
 
@@ -163,13 +163,13 @@
 /datum/wires/proc/check_wire(color)
 	return ports[get_wire(color)]
 
-/datum/wires/proc/pulse_assembly(obj/item/device/assembly/S)
+/datum/wires/proc/pulse_assembly(obj/item/assembly/S)
 	for(var/color in assemblies)
 		if(S == assemblies[color])
 			pulse_color(color)
 			return TRUE
 
-/datum/wires/proc/attach_assembly(color, obj/item/device/assembly/S)
+/datum/wires/proc/attach_assembly(color, obj/item/assembly/S)
 	if(S && istype(S) && S.attachable && !is_attached(color))
 		assemblies[color] = S
 		S.forceMove(holder)
@@ -177,7 +177,7 @@
 		return S
 
 /datum/wires/proc/detach_assembly(color)
-	var/obj/item/device/assembly/S = get_attached(color)
+	var/obj/item/assembly/S = get_attached(color)
 	if(S && istype(S))
 		assemblies -= color
 		S.connected = null
@@ -243,7 +243,7 @@
 		reveal_wires = TRUE
 
 	// Same for anyone with an abductor multitool.
-	else if(user.is_holding_item_of_type(/obj/item/device/multitool/abductor))
+	else if(user.is_holding_item_of_type(/obj/item/multitool/abductor))
 		reveal_wires = TRUE
 
 	// Station blueprints do that too, but only if the wires are not randomized.
@@ -278,7 +278,7 @@
 			else
 				to_chat(L, "<span class='warning'>You need wirecutters!</span>")
 		if("pulse")
-			if(istype(I, /obj/item/device/multitool/multimeter))
+			if(istype(I, /obj/item/multitool/multimeter))
 				if(do_after(L, 10, target = holder))
 					var/obj/item/device/multitool/multimeter/M = I
 					if(M.mode)
@@ -296,7 +296,7 @@
 						return
 				else
 					return
-			else if(istype(I, /obj/item/device/multitool) || IsAdminGhost(usr))
+			else if(istype(I, /obj/item/multitool) || IsAdminGhost(usr))
 				playsound(holder, 'sound/weapons/empty.ogg', 20, 1)
 			/*I = L.is_holding_tool_quality(TOOL_MULTITOOL)
 			if(I || IsAdminGhost(usr))
@@ -314,8 +314,8 @@
 					. = TRUE
 			else
 				I = L.get_active_held_item()
-				if(istype(I, /obj/item/device/assembly))
-					var/obj/item/device/assembly/A = I
+				if(istype(I, /obj/item/assembly))
+					var/obj/item/assembly/A = I
 					if(A.attachable)
 						if(!L.temporarilyRemoveItemFromInventory(A))
 							return

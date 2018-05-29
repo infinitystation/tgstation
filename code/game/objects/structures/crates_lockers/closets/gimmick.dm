@@ -105,7 +105,7 @@
 	new /obj/item/clothing/suit/space/nasavoid(src)
 	new /obj/item/crowbar(src)
 	new /obj/item/stock_parts/cell(src)
-	new /obj/item/device/multitool(src)
+	new /obj/item/multitool(src)
 
 /obj/structure/closet/gimmick/uac
 	name = "UAC Paratrooper clothing"
@@ -129,12 +129,12 @@
 	new /obj/item/clothing/mask/breath(src)
 	new /obj/item/clothing/suit/armor/uac(src)
 	new /obj/item/clothing/glasses/sunglasses(src)
-	new	/obj/item/device/radio/headset/syndicate/alt(src)
+	new	/obj/item/radio/headset/syndicate/alt(src)
 	new /obj/item/clothing/head/helmet/uac(src)
 	new /obj/item/gun/ballistic/automatic/mg88(src)
 	new /obj/item/ammo_box/magazine/a646(src)
 	new /obj/item/ammo_box/magazine/a646(src)
-	new /obj/item/device/flashlight/seclite(src)
+	new /obj/item/flashlight/seclite(src)
 	new /obj/item/storage/backpack/satchel(src)
 
 /obj/structure/closet/gimmick/uac/trooper/lab
@@ -148,7 +148,7 @@
 	new /obj/item/clothing/shoes/combat/swat/uac(src)
 	new /obj/item/clothing/mask/breath(src)
 	new /obj/item/clothing/suit/armor/uac(src)
-	new	/obj/item/device/radio/headset(src)
+	new	/obj/item/radio/headset(src)
 	new /obj/item/clothing/head/helmet/uac(src)
 
 /obj/structure/closet/gimmick/zombie

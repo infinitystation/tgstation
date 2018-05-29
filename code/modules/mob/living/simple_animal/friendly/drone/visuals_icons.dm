@@ -152,8 +152,12 @@
 	if(seeStatic)
 		for(var/i in GLOB.mob_living_list)
 			var/mob/living/L = i
-			if(isdrone(L))
+			if(isdrone(L) || !L.staticOverlays.len)
 				continue
+			if(isrevenant(L))
+				var/mob/living/simple_animal/revenant/R = L
+				if (!R.revealed)
+					continue
 			var/image/chosen
 			if(staticChoice in L.staticOverlays)
 				chosen = L.staticOverlays[staticChoice]

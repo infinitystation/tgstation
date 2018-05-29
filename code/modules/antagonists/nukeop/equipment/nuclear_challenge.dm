@@ -5,8 +5,9 @@
 
 GLOBAL_LIST_EMPTY(jam_on_wardec)
 
-/obj/item/device/nuclear_challenge
+/obj/item/nuclear_challenge
 	name = "Declaration of War (Challenge Mode)"
+	icon = 'icons/obj/device.dmi'
 	icon_state = "gangtool-red"
 	item_state = "radio"
 	lefthand_file = 'icons/mob/inhands/misc/devices_lefthand.dmi'
@@ -16,9 +17,9 @@ GLOBAL_LIST_EMPTY(jam_on_wardec)
 			ƒанная возможность должна быть использована до истечения пяти минут после вашего появления на базе - в противном случае, ваши спонсоры в лице сторонних корпораций потеряют интерес.  \
 			ќбъявлять войну экипажу рекомендуется “ќЋ№ ќ в том случае, если вы имеете сплоченный и профессиональный в плане боевого опыта отряд."
 	var/declaring_war = FALSE
-	var/uplink_type = /obj/item/device/radio/uplink/nuclear
+	var/uplink_type = /obj/item/radio/uplink/nuclear
 
-/obj/item/device/nuclear_challenge/attack_self(mob/living/user)
+/obj/item/nuclear_challenge/attack_self(mob/living/user)
 	if(declaring_war)
 		return
 	if(GLOB.player_list.len < CHALLENGE_MIN_PLAYERS)
@@ -44,7 +45,7 @@ GLOBAL_LIST_EMPTY(jam_on_wardec)
 		to_chat(user, "¬ самом деле - элемент неожиданности не так уж и плох..")
 		return
 
-	var/war_declaration = "[user.real_name] has declared his intent to utterly destroy [station_name()] with a nuclear device, and dares the crew to try and stop them."
+	var/war_declaration = "[user.real_name] has declared [user.p_their()] intent to utterly destroy [station_name()] with a nuclear device, and dares the crew to try and stop [user.p_them()]."
 
 	declaring_war = TRUE
 	var/custom_threat = alert(user, "Do you want to customize your declaration?", "Customize?", "Yes", "No")
@@ -78,7 +79,7 @@ GLOBAL_LIST_EMPTY(jam_on_wardec)
 
 	qdel(src)
 
-/obj/item/device/nuclear_challenge/proc/check_allowed(mob/living/user)
+/obj/item/nuclear_challenge/proc/check_allowed(mob/living/user)
 	if(declaring_war)
 		to_chat(user, "You are already in the process of declaring war! Make your mind up.")
 		return FALSE
@@ -98,8 +99,8 @@ GLOBAL_LIST_EMPTY(jam_on_wardec)
 			return FALSE
 	return TRUE
 
-/obj/item/device/nuclear_challenge/clownops
-	uplink_type = /obj/item/device/radio/uplink/clownop
+/obj/item/nuclear_challenge/clownops
+	uplink_type = /obj/item/radio/uplink/clownop
 
 #undef CHALLENGE_TELECRYSTALS
 #undef CHALLENGE_TIME_LIMIT

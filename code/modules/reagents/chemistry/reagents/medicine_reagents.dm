@@ -1097,7 +1097,7 @@
 	. = 1
 
 /datum/reagent/medicine/earthsblood/overdose_process(mob/living/M)
-	M.hallucination = min(max(0, M.hallucination + 10), 50)
+	M.hallucination = min(max(0, M.hallucination + 5), 60)
 	M.adjustToxLoss(5 * REM, 0)
 	..()
 	. = 1

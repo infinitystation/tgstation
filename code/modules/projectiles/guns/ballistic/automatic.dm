@@ -15,7 +15,7 @@
 	pin = null
 
 /obj/item/gun/ballistic/automatic/proto/unrestricted
-	pin = /obj/item/device/firing_pin
+	pin = /obj/item/firing_pin
 
 /obj/item/gun/ballistic/automatic/proto/mindshield
 	pin = /obj/item/device/firing_pin/implant/mindshield
@@ -94,14 +94,14 @@
 	fire_sound = 'sound/weapons/gunshot_smg.ogg'
 	fire_delay = 2
 	burst_size = 2
-	pin = /obj/item/device/firing_pin/implant/pindicate
+	pin = /obj/item/firing_pin/implant/pindicate
 	can_pull_pin = 0
 	can_bayonet = TRUE
 	knife_x_offset = 26
 	knife_y_offset = 12
 
 /obj/item/gun/ballistic/automatic/c20r/unrestricted
-	pin = /obj/item/device/firing_pin
+	pin = /obj/item/firing_pin
 
 /obj/item/gun/ballistic/automatic/c20r/Initialize()
 	. = ..()
@@ -154,7 +154,7 @@
 	var/obj/item/gun/ballistic/revolver/grenadelauncher/underbarrel
 	burst_size = 3
 	fire_delay = 2
-	pin = /obj/item/device/firing_pin/implant/pindicate
+	pin = /obj/item/firing_pin/implant/pindicate
 
 /obj/item/gun/ballistic/automatic/m90/Initialize()
 	. = ..()
@@ -162,7 +162,7 @@
 	update_icon()
 
 /obj/item/gun/ballistic/automatic/m90/unrestricted
-	pin = /obj/item/device/firing_pin
+	pin = /obj/item/firing_pin
 
 /obj/item/gun/ballistic/automatic/m90/unrestricted/Initialize()
 	. = ..()
@@ -253,11 +253,11 @@
 	can_suppress = FALSE
 	burst_size = 1
 	fire_delay = 0
-	pin = /obj/item/device/firing_pin/implant/pindicate
+	pin = /obj/item/firing_pin/implant/pindicate
 	actions_types = list()
 
 /obj/item/gun/ballistic/automatic/shotgun/bulldog/unrestricted
-	pin = /obj/item/device/firing_pin
+	pin = /obj/item/firing_pin
 
 /obj/item/gun/ballistic/automatic/shotgun/bulldog/Initialize()
 	. = ..()
@@ -292,10 +292,10 @@
 	can_suppress = FALSE
 	burst_size = 3
 	fire_delay = 1
-	pin = /obj/item/device/firing_pin/implant/pindicate
+	pin = /obj/item/firing_pin/implant/pindicate
 
 /obj/item/gun/ballistic/automatic/l6_saw/unrestricted
-	pin = /obj/item/device/firing_pin
+	pin = /obj/item/firing_pin
 
 
 /obj/item/gun/ballistic/automatic/l6_saw/examine(mob/user)
@@ -369,7 +369,7 @@
 	zoomable = TRUE
 	zoom_amt = 10 //Long range, enough to see in front of you, but no tiles behind you.
 	zoom_out_amt = 13
-	slot_flags = SLOT_BACK
+	slot_flags = ITEM_SLOT_BACK
 	actions_types = list()
 
 
@@ -383,7 +383,7 @@
 /obj/item/gun/ballistic/automatic/sniper_rifle/syndicate
 	name = "syndicate sniper rifle"
 	desc = "An illegally modified .50 cal sniper rifle with suppression compatibility. Quickscoping still doesn't work."
-	pin = /obj/item/device/firing_pin/implant/pindicate
+	pin = /obj/item/firing_pin/implant/pindicate
 
 // Old Semi-Auto Rifle //
 
@@ -399,7 +399,7 @@
 	can_unsuppress = TRUE
 	can_suppress = TRUE
 	w_class = WEIGHT_CLASS_HUGE
-	slot_flags = SLOT_BACK
+	slot_flags = ITEM_SLOT_BACK
 	actions_types = list()
 
 /obj/item/gun/ballistic/automatic/surplus/update_icon()

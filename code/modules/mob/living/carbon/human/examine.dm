@@ -25,7 +25,7 @@
 	var/skipface = (wear_mask && (wear_mask.flags_inv & HIDEFACE)) || (head && (head.flags_inv & HIDEFACE))
 
 	//uniform
-	if(w_uniform && !(slot_w_uniform in obscured))
+	if(w_uniform && !(SLOT_W_UNIFORM in obscured))
 		//accessory
 		var/accessory_msg
 		if(istype(w_uniform, /obj/item/clothing/under))
@@ -54,7 +54,7 @@
 
 	GET_COMPONENT(FR, /datum/component/forensics)
 	//gloves
-	if(gloves && !(slot_gloves in obscured))
+	if(gloves && !(SLOT_GLOVES in obscured))
 		msg += "[t_He] носит [gloves.get_examine_string(user)] on [t_his] hands.\n"
 	else if(FR && length(FR.blood_DNA))
 		var/hand_number = get_num_arms()
@@ -75,22 +75,22 @@
 		msg += "[t_He] носит [belt.get_examine_string(user)] about [t_his] waist.\n"
 
 	//shoes
-	if(shoes && !(slot_shoes in obscured))
+	if(shoes && !(SLOT_SHOES in obscured))
 		msg += "[t_He] носит wearing [shoes.get_examine_string(user)] on [t_his] feet.\n"
 
 	//mask
-	if(wear_mask && !(slot_wear_mask in obscured))
+	if(wear_mask && !(SLOT_WEAR_MASK in obscured))
 		msg += "[t_He] носит [wear_mask.get_examine_string(user)] on [t_his] face.\n"
 
-	if (wear_neck && !(slot_neck in obscured))
+	if (wear_neck && !(SLOT_NECK in obscured))
 		msg += "[t_He] носит [wear_neck.get_examine_string(user)] around [t_his] neck.\n"
 
 	//eyes
-	if(glasses && !(slot_glasses in obscured))
+	if(glasses && !(SLOT_GLASSES in obscured))
 		msg += "[t_He] носит [glasses.get_examine_string(user)] covering [t_his] eyes.\n"
 
 	//ears
-	if(ears && !(slot_ears in obscured))
+	if(ears && !(SLOT_EARS in obscured))
 		msg += "[t_He] носит [ears.get_examine_string(user)] on [t_his] ears.\n"
 
 	//ID
@@ -342,6 +342,7 @@
 	msg += "*---------*</span>"
 
 	to_chat(user, msg)
+	return msg
 
 /mob/living/proc/status_effect_examines(pronoun_replacement) //You can include this in any mob's examine() to show the examine texts of status effects!
 	var/list/dat = list()
