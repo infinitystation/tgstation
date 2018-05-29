@@ -1,13 +1,13 @@
-GLOBAL_DATUM_INIT(nextbuild, /datum/server_build/nextbuild)
-GLOBAL_DATUM_INIT(currentbuild, /datum/server_build/nextbuild)
+GLOBAL_DATUM_INIT(nextbuild, /datum/server_build, new)
+GLOBAL_DATUM_INIT(currentbuild, /datum/server_build, new)
 
-/datum/configuration
-	var/list/datum/server_build/buildlist = list()
-
-/datum/controller/subsystem/ticker
+/datum/controller/configuration
+	var/list/buildlist
+/*
+/datum/controller/subsystem/ticker путь сюда ~bear1ake
 	var/buildchangechecked = 0				//build changing?
 	var/buildchanger_ckey = ""				//who changing build?
-
+*/
 /datum/server_build
 	var/name				// name of build
 	var/friendlyname		// friendly name of build
@@ -19,7 +19,9 @@ GLOBAL_DATUM_INIT(currentbuild, /datum/server_build/nextbuild)
 	src.name = name
 
 //TODO@inf-dev: переписать под новые конфиги ~bear1ake
-/datum/configuration/proc/loadbuildlist(filename)
+/datum/controller/configuration/proc/loadbuildlist(filename)
+	log_config("Loading config file [filename]...")
+	filename = "[directory]/[filename]"
 	var/list/Lines = world.file2list(filename)
 
 	var/datum/server_build/current_build = null
@@ -61,6 +63,7 @@ GLOBAL_DATUM_INIT(currentbuild, /datum/server_build/nextbuild)
 			if("update")
 				current_build.update = data
 			if("endbuild")
+				LAZYINITLIST(buildlist)
 				buildlist[current_build.name] = current_build
 				GLOB.currentbuild = null
 			else
@@ -77,7 +80,7 @@ GLOBAL_DATUM_INIT(currentbuild, /datum/server_build/nextbuild)
 		var/datum/server_build/B = config.buildlist[build]
 
 		if(ext == B.folder)
-			currentbuild = B
+			GLOB.currentbuild = B
 			break
 
 /client/proc/adminchangebuild()
@@ -89,7 +92,7 @@ GLOBAL_DATUM_INIT(currentbuild, /datum/server_build/nextbuild)
 
 	var/list/buildchoices = list()
 	for(var/build in config.buildlist)
-		var/datum/server_build/B = config.buildlist[build]
+		var/datum/server_build/B = global.config.buildlist[build]
 		var/buildname = B.friendlyname
 
 		if(B == GLOB.currentbuild)
@@ -107,9 +110,9 @@ GLOBAL_DATUM_INIT(currentbuild, /datum/server_build/nextbuild)
 	var/datum/server_build/B = buildchoices[chosenbuild]
 	GLOB.nextbuild = B
 
-	message_admins("[key_name_admin(usr)] помен&#255;л билд на [nextbuild.name]([nextbuild.friendlyname])")
-	log_admin("[key_name(usr)] помен&#255;л билд на [nextbuild.name]([nextbuild.friendlyname])")
-	to_chat(world, "<span class='boldannounce'>Билд изменен на [nextbuild.friendlyname] дл&#255; следующего раунда!</span>")
+	message_admins("[key_name_admin(usr)] помен&#255;л(а) билд на [GLOB.nextbuild.name]([GLOB.nextbuild.friendlyname])")
+	log_admin("[key_name(usr)] помен&#255;л(а) билд на [GLOB.nextbuild.name]([GLOB.nextbuild.friendlyname])")
+	to_chat(world, "<span class='boldannounce'>Билд изменен на [GLOB.nextbuild.friendlyname] дл&#255; следующего раунда!</span>")
 
 /proc/forcechangebuild(datum/server_build/B)
 	if(!istype(B))

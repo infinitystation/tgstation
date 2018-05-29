@@ -1,14 +1,15 @@
 // TODO@inf-dev переработать под новые конфиги ~bear1ake
+/*
 /datum/controller/subsystem/ticker
 	var/update_waiting = 0				//build updating?
 	var/updater_ckey = ""				//who updating build?
-
+*/
 /client/proc/update_server()
 	set category = "Server"
 	set name = "Update Server"
 	if (!usr.client.holder)
 		return
-	if(currentbuild.folder == currentbuild.update)
+	if(GLOB.currentbuild.folder == GLOB.currentbuild.update)
 		to_chat(usr, "Ошибка. Переключите билд на основной")
 		return
 	var/confirm = alert("End the round and update server?", "End Round", "Yes", "Cancel")
@@ -24,7 +25,7 @@
 	set name = "Update Server at Round End"
 	if (!usr.client.holder)
 		return
-	if(currentbuild.folder == currentbuild.update)
+	if(GLOB.currentbuild.folder == GLOB.currentbuild.update)
 		to_chat(usr, "Ошибка. Переключите билд на основной")
 		return
 	var/confirm = alert("Инициировать обновление в конце раунда?", "End Round", "Yes", "Cancel")
@@ -38,10 +39,10 @@
 		SSticker.update_waiting = 1
 
 /proc/force_update_server()
-	if(currentbuild.folder == currentbuild.update)
+	if(GLOB.currentbuild.folder == GLOB.currentbuild.update)
 		to_chat(world, "Ошибка обновлени&#255;. Переключитесь из тестового билда на основной.")
 		return
 	to_chat(world, "<span class='adminooc'><FONT size=5>ВНИМАНИЕ! СЕРВЕР ОБНОВЛЯЕТСЯ ЧЕРЕЗ 10 СЕКУНД! СЕРВЕР НЕ БУДЕТ РАБОТАТЬ НЕСКОЛЬКО МИНУТ!</FONT><br>Обновление в конце раунда инициировано администратором [SSticker.updater_ckey]</span>.")
 	playsound_global('sound/effects/alarm.ogg', repeat=0, channel=1, volume=100)
 	sleep(100)
-	shell("sh ../update.sh [currentbuild.dmb_file] [currentbuild.folder] [world.port] [currentbuild.update]")
+	shell("sh ../update.sh [GLOB.currentbuild.dmb_file] [GLOB.currentbuild.folder] [GLOB.world.port] [GLOB.currentbuild.update]")

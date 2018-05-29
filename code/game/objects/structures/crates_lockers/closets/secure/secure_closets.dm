@@ -12,7 +12,7 @@
 	armor = list("melee" = 30, "bullet" = 50, "laser" = 50, "energy" = 100, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 80, "acid" = 80)
 	secure = TRUE
 
-/obj/structure/closet/secure_closet/New()
+/obj/structure/closet/secure_closet/Initialize()
 	..()
 	codelen = rand(7,10)
 	for(var/i=1; i<=codelen; i++)

@@ -51,6 +51,11 @@ SUBSYSTEM_DEF(ticker)
 	var/totalPlayers = 0					//used for pregame stats on statpanel
 	var/totalPlayersReady = 0				//used for pregame stats on statpanel
 
+	var/buildchangechecked = 0				//build changing?
+	var/buildchanger_ckey = ""				//who changing build?
+	var/update_waiting = 0					//build updating?
+	var/updater_ckey = ""					//who updating build?
+
 	var/queue_delay = 0
 	var/list/queued_players = list()		//used for join queues when the server exceeds the hard population cap
 

@@ -14,7 +14,7 @@
 
 // BEGIN_INCLUDE
 #include "_maps\_basemap.dm"
-#include "_maps\boxstation.dm"
+#include "_maps\metastation.dm"
 #include "code\_compile_options.dm"
 #include "code\hub.dm"
 #include "code\world.dm"
@@ -187,6 +187,8 @@
 #include "code\controllers\controller.dm"
 #include "code\controllers\failsafe.dm"
 #include "code\controllers\globals.dm"
+#include "code\controllers\infinity_build_change.dm"
+#include "code\controllers\infinity_update_tools.dm"
 #include "code\controllers\master.dm"
 #include "code\controllers\subsystem.dm"
 #include "code\controllers\configuration\config_entry.dm"

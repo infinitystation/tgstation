@@ -16,11 +16,8 @@ endmap
 map boxstation
 endmap
 
-map infinity_metastation
-	default
-endmap
-
 map metastation
+	default
 endmap
 
 map pubbystation

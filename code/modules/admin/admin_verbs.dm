@@ -25,7 +25,7 @@ GLOBAL_LIST_INIT(admin_verbs_default, world.AVerbsDefault())
 	/client/proc/cmd_admin_allow_respawn,
 	/datum/admins/verb/reset_vote,
 	/client/proc/show_reports,
-	///client/proc/adminchangebuild,
+	/client/proc/adminchangebuild,
 	///client/proc/generate_map_icon,
 	/client/proc/game_panel			/*game panel, allows to change game-mode etc*/
 	)
@@ -128,7 +128,7 @@ GLOBAL_LIST_INIT(admin_verbs_server, world.AVerbsServer())
 	/client/proc/cmd_admin_delete,		/*delete an instance/object/mob/etc*/
 	/client/proc/cmd_debug_del_all,
 	/client/proc/toggle_random_events,
-//	/client/proc/update_server_round_end,
+	/client/proc/update_server_round_end,
 	/client/proc/forcerandomrotate,
 	/client/proc/adminchangemap,
 	/client/proc/panicbunker,
