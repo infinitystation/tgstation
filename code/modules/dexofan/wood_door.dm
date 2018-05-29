@@ -1,4 +1,4 @@
-/*/obj/item/device/key
+/*/obj/item/key
 	name = "skeleton key"
 	desc = "It unlocks or locks doors."
 	icon = 'icons/obj/infinity_dexofan.dmi'

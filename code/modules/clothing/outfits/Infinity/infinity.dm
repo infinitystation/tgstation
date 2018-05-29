@@ -29,10 +29,10 @@
 	shoes = /obj/item/clothing/shoes/combat
 	head = /obj/item/clothing/head/helmet/abductor
 	belt = /obj/item/storage/belt/military/abductor/full
-	l_pocket = /obj/item/device/flashlight/slime
+	l_pocket = /obj/item/flashlight/slime
 	back = /obj/item/storage/backpack
 	backpack_contents = list(/obj/item/abductor_baton=1,\
-		/obj/item/device/abductor/silencer=1)
+		/obj/item/abductor/silencer=1)
 
 /datum/outfit/clock_cult
 	name = "Ratvar's cultist"
@@ -46,7 +46,7 @@
 /datum/outfit/trooper
 	name = "UAC Trooper"
 
-	ears = /obj/item/device/radio/headset/syndicate/alt
+	ears = /obj/item/radio/headset/syndicate/alt
 	uniform = /obj/item/clothing/under/syndicate/uac
 	suit = /obj/item/clothing/suit/armor/uac
 	shoes = /obj/item/clothing/shoes/combat/swat/uac
@@ -81,14 +81,14 @@
 	mask = /obj/item/clothing/mask/gas/explorer
 	belt = /obj/item/storage/belt/utility/full
 	glasses = /obj/item/clothing/glasses/welding
-	ears = /obj/item/device/radio/headset
+	ears = /obj/item/radio/headset
 	gloves = /obj/item/clothing/gloves/combat
-	l_pocket = /obj/item/device/flashlight/seclite
+	l_pocket = /obj/item/flashlight/seclite
 	r_pocket = /obj/item/extinguisher/mini
 	back = /obj/item/storage/backpack/explorer
 	backpack_contents = list(/obj/item/gun/energy/kinetic_accelerator=1,\
 		/obj/item/storage/bag/ore=2,\
-		/obj/item/device/t_scanner/adv_mining_scanner/lesser=1,\
+		/obj/item/t_scanner/adv_mining_scanner/lesser=1,\
 		/obj/item/clothing/glasses/meson =1,\
 		/obj/item/kitchen/knife/combat/survival=1)
 	id = /obj/item/card/id

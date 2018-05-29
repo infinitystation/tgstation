@@ -650,9 +650,9 @@ IF YOU MODIFY THE PRODUCTS LIST OF A MACHINE, MAKE SURE TO UPDATE ITS RESUPPLY C
 	refill_canister = /obj/item/vending_refill/boozeomat
 
 /obj/machinery/vending/assist
-	products = list(	/obj/item/device/assembly/prox_sensor = 5, /obj/item/device/assembly/igniter = 3, /obj/item/device/assembly/signaler = 4,
+	products = list(	/obj/item/assembly/prox_sensor = 5, /obj/item/assembly/igniter = 3, /obj/item/assembly/signaler = 4,
 						/obj/item/wirecutters = 1, /obj/item/cartridge/signal = 4)
-	contraband = list(/obj/item/device/assembly/timer = 2, /obj/item/device/assembly/voice = 2, /obj/item/device/assembly/health = 2)
+	contraband = list(/obj/item/assembly/timer = 2, /obj/item/assembly/voice = 2, /obj/item/assembly/health = 2)
 	product_ads = "Only the finest!;Have some tools.;The most robust equipment.;The finest gear in space!"
 	armor = list("melee" = 100, "bullet" = 100, "laser" = 100, "energy" = 100, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 100, "acid" = 50)
 	resistance_flags = FIRE_PROOF
@@ -797,7 +797,7 @@ IF YOU MODIFY THE PRODUCTS LIST OF A MACHINE, MAKE SURE TO UPDATE ITS RESUPPLY C
 	icon_state = "cart"
 	icon_deny = "cart-deny"
 	products = list(/obj/item/cartridge/medical = 10, /obj/item/cartridge/engineering = 10, /obj/item/cartridge/security = 10,
-					/obj/item/cartridge/janitor = 10, /obj/item/cartridge/signal/toxins = 10, /obj/item/device/pda/heads = 10,
+					/obj/item/cartridge/janitor = 10, /obj/item/cartridge/signal/toxins = 10, /obj/item/pda/heads = 10,
 					/obj/item/cartridge/captain = 3, /obj/item/cartridge/quartermaster = 10)
 	armor = list("melee" = 100, "bullet" = 100, "laser" = 100, "energy" = 100, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 100, "acid" = 50)
 	resistance_flags = FIRE_PROOF
@@ -850,24 +850,24 @@ IF YOU MODIFY THE PRODUCTS LIST OF A MACHINE, MAKE SURE TO UPDATE ITS RESUPPLY C
 	icon_deny = "med-deny"
 	product_ads = "Go save some lives!;The best stuff for your medbay.;Only the finest tools.;Natural chemicals!;This stuff saves lives.;Don't you want some?;Ping!"
 	req_access_txt = "5"
-	products = list(/obj/item/reagent_containers/syringe = 12, 
-					/obj/item/reagent_containers/dropper = 3, 
-					/obj/item/device/healthanalyzer = 4, 
-					/obj/item/device/sensor_device = 2, 
+	products = list(/obj/item/reagent_containers/syringe = 12,
+					/obj/item/reagent_containers/dropper = 3,
+					/obj/item/healthanalyzer = 4,
+					/obj/item/sensor_device = 2,
 					/obj/item/pinpointer/crew = 2,
 					/obj/item/reagent_containers/medspray/sterilizine = 1,
-					/obj/item/stack/medical/gauze = 8, 
-					/obj/item/reagent_containers/pill/patch/styptic = 5, 
-					/obj/item/reagent_containers/medspray/styptic = 2, 
-					/obj/item/reagent_containers/pill/patch/silver_sulf = 5, 
+					/obj/item/stack/medical/gauze = 8,
+					/obj/item/reagent_containers/pill/patch/styptic = 5,
+					/obj/item/reagent_containers/medspray/styptic = 2,
+					/obj/item/reagent_containers/pill/patch/silver_sulf = 5,
 					/obj/item/reagent_containers/medspray/silver_sulf = 2,
 					/obj/item/reagent_containers/pill/insulin = 10,
-					/obj/item/reagent_containers/pill/salbutamol = 2, 
-					/obj/item/reagent_containers/glass/bottle/charcoal = 4, 
-					/obj/item/reagent_containers/glass/bottle/epinephrine = 4, 
+					/obj/item/reagent_containers/pill/salbutamol = 2,
+					/obj/item/reagent_containers/glass/bottle/charcoal = 4,
+					/obj/item/reagent_containers/glass/bottle/epinephrine = 4,
 					/obj/item/reagent_containers/glass/bottle/salglu_solution = 3,
-					/obj/item/reagent_containers/glass/bottle/morphine = 4, 
-					/obj/item/reagent_containers/glass/bottle/toxin = 3, 
+					/obj/item/reagent_containers/glass/bottle/morphine = 4,
+					/obj/item/reagent_containers/glass/bottle/toxin = 3,
 					/obj/item/reagent_containers/syringe/antiviral = 6)
 	contraband = list(/obj/item/reagent_containers/pill/tox = 3, /obj/item/reagent_containers/pill/morphine = 4, /obj/item/reagent_containers/pill/charcoal = 6)
 	premium = list(/obj/item/storage/box/hug/medical = 1, /obj/item/reagent_containers/hypospray/medipen = 3, /obj/item/storage/belt/medical = 3, /obj/item/wrench/medical = 1)
@@ -880,9 +880,9 @@ IF YOU MODIFY THE PRODUCTS LIST OF A MACHINE, MAKE SURE TO UPDATE ITS RESUPPLY C
 	name = "\improper Toximate 3000"
 	desc = "All the fine parts you need in one vending machine!"
 	products = list(/obj/item/clothing/under/rank/scientist = 6, /obj/item/clothing/suit/bio_suit = 6, /obj/item/clothing/head/bio_hood = 6,
-					/obj/item/device/transfer_valve = 6, /obj/item/device/assembly/timer = 6, /obj/item/device/assembly/signaler = 6,
-					/obj/item/device/assembly/prox_sensor = 6, /obj/item/device/assembly/igniter = 6)
-	contraband = list(/obj/item/device/assembly/health = 3)
+					/obj/item/transfer_valve = 6, /obj/item/assembly/timer = 6, /obj/item/assembly/signaler = 6,
+					/obj/item/assembly/prox_sensor = 6, /obj/item/assembly/igniter = 6)
+	contraband = list(/obj/item/assembly/health = 3)
 
 /obj/machinery/vending/wallmed
 	name = "\improper NanoMed"
@@ -915,8 +915,8 @@ IF YOU MODIFY THE PRODUCTS LIST OF A MACHINE, MAKE SURE TO UPDATE ITS RESUPPLY C
 	icon_state = "sec"
 	icon_deny = "sec-deny"
 	req_access_txt = "1"
-	products = list(/obj/item/restraints/handcuffs = 8, /obj/item/restraints/handcuffs/cable/zipties = 10, /obj/item/grenade/flashbang = 4, /obj/item/device/assembly/flash/handheld = 5,
-					/obj/item/reagent_containers/food/snacks/donut = 12, /obj/item/storage/box/evidence = 6, /obj/item/device/flashlight/seclite = 4, /obj/item/restraints/legcuffs/bola/energy = 7)
+	products = list(/obj/item/restraints/handcuffs = 8, /obj/item/restraints/handcuffs/cable/zipties = 10, /obj/item/grenade/flashbang = 4, /obj/item/assembly/flash/handheld = 5,
+					/obj/item/reagent_containers/food/snacks/donut = 12, /obj/item/storage/box/evidence = 6, /obj/item/flashlight/seclite = 4, /obj/item/restraints/legcuffs/bola/energy = 7)
 	contraband = list(/obj/item/clothing/glasses/sunglasses = 2, /obj/item/storage/fancy/donut_box = 2)
 	premium = list(/obj/item/coin/antagtoken = 1)
 	armor = list("melee" = 100, "bullet" = 100, "laser" = 100, "energy" = 100, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 100, "acid" = 50)
@@ -926,8 +926,8 @@ IF YOU MODIFY THE PRODUCTS LIST OF A MACHINE, MAKE SURE TO UPDATE ITS RESUPPLY C
 	if(istype(I, /obj/item/grenade))
 		var/obj/item/grenade/G = I
 		G.preprime()
-	else if(istype(I, /obj/item/device/flashlight))
-		var/obj/item/device/flashlight/F = I
+	else if(istype(I, /obj/item/flashlight))
+		var/obj/item/flashlight/F = I
 		F.on = TRUE
 		F.update_brightness()
 
@@ -939,7 +939,7 @@ IF YOU MODIFY THE PRODUCTS LIST OF A MACHINE, MAKE SURE TO UPDATE ITS RESUPPLY C
 	icon_state = "nutri"
 	icon_deny = "nutri-deny"
 	products = list(/obj/item/reagent_containers/glass/bottle/nutrient/ez = 30, /obj/item/reagent_containers/glass/bottle/nutrient/l4z = 20, /obj/item/reagent_containers/glass/bottle/nutrient/rh = 10, /obj/item/reagent_containers/spray/pestspray = 20,
-					/obj/item/reagent_containers/syringe = 5, /obj/item/storage/bag/plants = 5, /obj/item/cultivator = 3, /obj/item/shovel/spade = 3, /obj/item/device/plant_analyzer = 4)
+					/obj/item/reagent_containers/syringe = 5, /obj/item/storage/bag/plants = 5, /obj/item/cultivator = 3, /obj/item/shovel/spade = 3, /obj/item/plant_analyzer = 4)
 	contraband = list(/obj/item/reagent_containers/glass/bottle/ammonia = 10, /obj/item/reagent_containers/glass/bottle/diethylamine = 5)
 	armor = list("melee" = 100, "bullet" = 100, "laser" = 100, "energy" = 100, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 100, "acid" = 50)
 	resistance_flags = FIRE_PROOF
@@ -1056,12 +1056,12 @@ IF YOU MODIFY THE PRODUCTS LIST OF A MACHINE, MAKE SURE TO UPDATE ITS RESUPPLY C
 		/obj/item/weldingtool = 3,
 		/obj/item/wirecutters = 5,
 		/obj/item/wrench = 5,
-		/obj/item/device/analyzer = 5,
-		/obj/item/device/t_scanner = 5,
+		/obj/item/analyzer = 5,
+		/obj/item/t_scanner = 5,
 		/obj/item/screwdriver = 5,
-		/obj/item/device/flashlight/glowstick = 3,
-		/obj/item/device/flashlight/glowstick/red = 3,
-		/obj/item/device/flashlight = 5)
+		/obj/item/flashlight/glowstick = 3,
+		/obj/item/flashlight/glowstick/red = 3,
+		/obj/item/flashlight = 5)
 	contraband = list(
 		/obj/item/weldingtool/hugetank = 2,
 		/obj/item/clothing/gloves/color/fyellow = 2)
@@ -1076,15 +1076,15 @@ IF YOU MODIFY THE PRODUCTS LIST OF A MACHINE, MAKE SURE TO UPDATE ITS RESUPPLY C
 	icon_state = "engivend"
 	icon_deny = "engivend-deny"
 	req_access_txt = "11" //Engineering Equipment access
-	products = list(/obj/item/clothing/glasses/meson/engine = 2, 
+	products = list(/obj/item/clothing/glasses/meson/engine = 2,
 					/obj/item/clothing/glasses/welding = 3,
-					/obj/item/device/multitool = 4, 
-					/obj/item/construction/rcd/loaded = 3, 
+					/obj/item/multitool = 4,
+					/obj/item/construction/rcd/loaded = 3,
 					/obj/item/grenade/chem_grenade/smart_metal_foam = 10,
-					/obj/item/device/geiger_counter = 5, 
+					/obj/item/geiger_counter = 5,
 					/obj/item/stock_parts/cell/high = 10,
-					/obj/item/electronics/airlock = 10, 
-					/obj/item/electronics/apc = 10, 
+					/obj/item/electronics/airlock = 10,
+					/obj/item/electronics/apc = 10,
 					/obj/item/electronics/airalarm = 10)
 	contraband = list(/obj/item/stock_parts/cell/potato = 3)
 	premium = list(/obj/item/storage/belt/utility = 3, /obj/item/storage/box/smart_metal_foam = 1)
@@ -1100,7 +1100,7 @@ IF YOU MODIFY THE PRODUCTS LIST OF A MACHINE, MAKE SURE TO UPDATE ITS RESUPPLY C
 	req_access_txt = "11"
 	products = list(/obj/item/clothing/under/rank/chief_engineer = 4, /obj/item/clothing/under/rank/engineer = 4, /obj/item/clothing/shoes/sneakers/orange = 4, /obj/item/clothing/head/hardhat = 4,
 					/obj/item/storage/belt/utility = 4, /obj/item/clothing/glasses/meson/engine = 4, /obj/item/clothing/gloves/color/yellow = 4, /obj/item/screwdriver = 12,
-					/obj/item/crowbar = 12, /obj/item/wirecutters = 12, /obj/item/device/multitool = 12, /obj/item/wrench = 12, /obj/item/device/t_scanner = 12,
+					/obj/item/crowbar = 12, /obj/item/wirecutters = 12, /obj/item/multitool = 12, /obj/item/wrench = 12, /obj/item/t_scanner = 12,
 					/obj/item/stock_parts/cell = 8, /obj/item/weldingtool = 8, /obj/item/clothing/head/welding = 8,
 					/obj/item/light/tube = 10, /obj/item/clothing/suit/fire = 4, /obj/item/stock_parts/scanning_module = 5, /obj/item/stock_parts/micro_laser = 5,
 					/obj/item/stock_parts/matter_bin = 5, /obj/item/stock_parts/manipulator = 5)
@@ -1114,8 +1114,8 @@ IF YOU MODIFY THE PRODUCTS LIST OF A MACHINE, MAKE SURE TO UPDATE ITS RESUPPLY C
 	icon_state = "robotics"
 	icon_deny = "robotics-deny"
 	req_access_txt = "29"
-	products = list(/obj/item/clothing/suit/toggle/labcoat = 4, /obj/item/clothing/under/rank/roboticist = 4, /obj/item/stack/cable_coil = 4, /obj/item/device/assembly/flash/handheld = 4,
-					/obj/item/stock_parts/cell/high = 12, /obj/item/device/assembly/prox_sensor = 3, /obj/item/device/assembly/signaler = 3, /obj/item/device/healthanalyzer = 3,
+	products = list(/obj/item/clothing/suit/toggle/labcoat = 4, /obj/item/clothing/under/rank/roboticist = 4, /obj/item/stack/cable_coil = 4, /obj/item/assembly/flash/handheld = 4,
+					/obj/item/stock_parts/cell/high = 12, /obj/item/assembly/prox_sensor = 3, /obj/item/assembly/signaler = 3, /obj/item/healthanalyzer = 3,
 					/obj/item/scalpel = 2, /obj/item/circular_saw = 2, /obj/item/tank/internals/anesthetic = 2, /obj/item/clothing/mask/breath/medical = 5,
 					/obj/item/screwdriver = 5, /obj/item/crowbar = 5)
 	armor = list("melee" = 100, "bullet" = 100, "laser" = 100, "energy" = 100, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 100, "acid" = 50)

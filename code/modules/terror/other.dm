@@ -17,7 +17,7 @@
 	name = "heavy turret"
 	desc = "Heavy turret, usually, installed on important sites or attacking ships."
 	req_access = list(0)
-	emp_vunerable = 0
+	//emp_vunerable = 0
 	scan_range = 15
 	obj_integrity = 100
 	max_integrity = 100
@@ -380,6 +380,7 @@
 /proc/is_thrall(var/mob/living/M)
 	return istype(M) && M.mind && SSticker && SSticker.mode
 
+// TODO@inf-dev: Маски нуждаются в переработке ~bear1ake@inf-dev
 /obj/item/clothing/mask/balaclava/white
 	name = "white balaclava"
 	desc = "Spooky?"
@@ -392,7 +393,7 @@
 	visor_flags_inv = HIDEFACE|HIDEFACIALHAIR
 	flags_cover = MASKCOVERSEYES | MASKCOVERSMOUTH
 	resistance_flags = FIRE_PROOF
-	flags_1 = BLOCK_GAS_SMOKE_EFFECT_1
+	clothing_flags = BLOCK_GAS_SMOKE_EFFECT
 
 /obj/item/clothing/mask/killer
 	name = "killer's mask"
@@ -404,8 +405,7 @@
 	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE|HIDEFACIALHAIR
 	visor_flags_inv = HIDEFACE|HIDEFACIALHAIR
 	flags_cover = MASKCOVERSEYES | MASKCOVERSMOUTH
-	resistance_flags = FIRE_PROOF
-	flags_1 = BLOCK_GAS_SMOKE_EFFECT_1
+	clothing_flags = BLOCK_GAS_SMOKE_EFFECT
 
 /obj/item/clothing/suit/killer_suit
 	name = "killer robes"

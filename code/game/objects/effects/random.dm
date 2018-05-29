@@ -54,9 +54,9 @@
 	color = "#3DD3DB"
 	spawn_nothing_percentage = 25
 	item_to_spawn()
-		return pick(/obj/item/device/t_scanner,\
-					/obj/item/device/healthanalyzer,\
-					/obj/item/device/analyzer)
+		return pick(/obj/item/t_scanner,\
+					/obj/item/healthanalyzer,\
+					/obj/item/analyzer)
 
 /obj/random/machine_parts
 	name = "Random Parts"
@@ -81,12 +81,12 @@
 	icon_state = "x"
 	spawn_nothing_percentage = 25
 	item_to_spawn()
-		return pick(/obj/item/device/assembly/igniter,\
-					/obj/item/device/assembly/prox_sensor,\
-					/obj/item/device/assembly/signaler
-					/obj/item/device/assembly/infra,\
-					/obj/item/device/assembly/timer,\
-					/obj/item/device/assembly/voice)
+		return pick(/obj/item/assembly/igniter,\
+					/obj/item/assembly/prox_sensor,\
+					/obj/item/assembly/signaler
+					/obj/item/assembly/infra,\
+					/obj/item/assembly/timer,\
+					/obj/item/assembly/voice)
 
 
 /obj/random/toolbox
@@ -112,8 +112,8 @@
 					prob(4);/obj/random/bomb_supply,\
 					prob(1);/obj/item/extinguisher/mini,\
 					prob(1);/obj/item/clothing/ears/earmuffs,\
-					prob(2);/obj/item/device/flashlight,\
-					prob(1);/obj/item/device/paicard,\
+					prob(2);/obj/item/flashlight,\
+					prob(1);/obj/item/paicard,\
 					prob(5);/obj/random/tool)
 
 /obj/random/obstruction //Large objects to block things off in maintenance

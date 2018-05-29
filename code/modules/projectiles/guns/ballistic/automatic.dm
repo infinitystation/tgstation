@@ -18,7 +18,7 @@
 	pin = /obj/item/firing_pin
 
 /obj/item/gun/ballistic/automatic/proto/mindshield
-	pin = /obj/item/device/firing_pin/implant/mindshield
+	pin = /obj/item/firing_pin/implant/mindshield
 
 /obj/item/gun/ballistic/automatic/update_icon()
 	..()
@@ -134,7 +134,7 @@
 	icon_state = "wt550[magazine ? "-[CEILING(get_ammo(0)/4, 1)*4]" : ""]"
 
 /obj/item/gun/ballistic/automatic/wt550/mindshield
-	pin = /obj/item/device/firing_pin/implant/mindshield
+	pin = /obj/item/firing_pin/implant/mindshield
 
 /obj/item/gun/ballistic/automatic/mini_uzi
 	name = "\improper Type U3 Uzi"

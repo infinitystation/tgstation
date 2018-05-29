@@ -222,10 +222,10 @@
 				/obj/item/stack/sheet/xenochitin = 2,
 				/obj/item/restraints/handcuffs/alien = 1,
 				/obj/item/bodybag/bluespace = 1,
-				/obj/item/device/assembly/control/massdriver = 1,
-				/obj/item/device/assembly/health = 1,
-				/obj/item/device/assembly/prox_sensor = 2,
-				/obj/item/device/assembly/signaler = 2,
+				/obj/item/assembly/control/massdriver = 1,
+				/obj/item/assembly/health = 1,
+				/obj/item/assembly/prox_sensor = 2,
+				/obj/item/assembly/signaler = 2,
 				/obj/item/stack/rods = 3,
 				/obj/item/crowbar/large = 1,
 				"" = 6
@@ -349,7 +349,7 @@
 				/obj/item/circuitboard/machine/microwave,
 				/obj/item/circuitboard/machine/chem_dispenser/drinks,
 				/obj/item/circuitboard/machine/chem_dispenser/drinks/beer,
-				/obj/item/circuitboard/computer/slot_machine 
+				/obj/item/circuitboard/computer/slot_machine
 				)
 
 /obj/effect/spawner/lootdrop/techstorage/rnd
@@ -358,14 +358,14 @@
 	loot = list(
 				/obj/item/circuitboard/computer/aifixer,
 				/obj/item/circuitboard/machine/rdserver,
-				/obj/item/circuitboard/computer/pandemic, 
+				/obj/item/circuitboard/computer/pandemic,
 				/obj/item/circuitboard/machine/mechfab,
 				/obj/item/circuitboard/machine/circuit_imprinter/department,
 				/obj/item/circuitboard/computer/teleporter,
-				/obj/item/circuitboard/machine/destructive_analyzer, 
+				/obj/item/circuitboard/machine/destructive_analyzer,
 				/obj/item/circuitboard/computer/rdconsole
 				)
-				
+
 /obj/effect/spawner/lootdrop/techstorage/security
 	name = "security circuit board spawner"
 	lootcount = 3
@@ -374,13 +374,13 @@
 				/obj/item/circuitboard/computer/security,
 				/obj/item/circuitboard/computer/prisoner
 				)
-				
+
 /obj/effect/spawner/lootdrop/techstorage/engineering
 	name = "engineering circuit board spawner"
 	lootcount = 3
 	loot = list(
 				/obj/item/circuitboard/computer/atmos_alert,
-				/obj/item/circuitboard/computer/stationalert, 
+				/obj/item/circuitboard/computer/stationalert,
 				/obj/item/circuitboard/computer/powermonitor
 				)
 
@@ -421,7 +421,7 @@
 				/obj/item/circuitboard/computer/borgupload,
 				/obj/item/circuitboard/aicore
 				)
-	
+
 /obj/effect/spawner/lootdrop/techstorage/command
 	name = "secure command circuit board spawner"
 	lootcount = 3
@@ -430,7 +430,7 @@
 				/obj/item/circuitboard/computer/communications,
 				/obj/item/circuitboard/computer/card
 				)
-				
+
 /obj/effect/spawner/lootdrop/techstorage/RnD_secure
 	name = "secure RnD circuit board spawner"
 	lootcount = 3

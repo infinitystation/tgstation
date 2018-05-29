@@ -26,7 +26,7 @@
 	item_state = "hardsuit-nymary"
 	worn_icon = 'icons/mob/infinity_work.dmi'
 	icon = 'icons/obj/clothing/infinity_work.dmi'
-	allowed = list(/obj/item/device/flashlight,/obj/item/tank/internals,/obj/item/storage/firstaid,/obj/item/device/healthanalyzer,/obj/item/stack/medical)
+	allowed = list(/obj/item/flashlight,/obj/item/tank/internals,/obj/item/storage/firstaid,/obj/item/healthanalyzer,/obj/item/stack/medical)
 	armor = list(melee = 30, bullet = 5, laser = 10, energy = 5, bomb = 10, bio = 100, rad = 50, fire = 0, acid = 50)
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/nymary
 

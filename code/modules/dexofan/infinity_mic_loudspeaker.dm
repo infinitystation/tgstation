@@ -1,4 +1,4 @@
-/obj/item/device/microphone
+/obj/item/microphone
 	name = "microphone"
 	icon = 'icons/obj/infinity_dexofan.dmi'
 	icon_state = "mic"
@@ -7,11 +7,11 @@
 	var/on = 1
 	var/obj/structure/loudspeaker/S
 
-/obj/item/device/microphone/examine(mob/user)
+/obj/item/microphone/examine(mob/user)
 	..()
 	user << "It's currently [src.on ? "on" : "off"]."
 
-/obj/item/device/microphone/attack_self(mob/user as mob)
+/obj/item/microphone/attack_self(mob/user as mob)
 	src.on = !(src.on)
 	user << "You switch [src] [src.on ? "on" : "off"]."
 	if(src.on && prob(5))
@@ -20,14 +20,14 @@
 			visible_message("<span style=\"color:red\">[S] lets out a horrible [pick("shriek", "squeal", "noise", "squawk", "screech", "whine", "squeak")]!</span>")
 			playsound(loc, 'sound/items/mic_feedback.ogg', 30, 1)
 
-/obj/item/device/microphone/Hear(message, atom/movable/speaker, message_langs, raw_message, radio_freq, spans)
+/obj/item/microphone/Hear(message, atom/movable/speaker, message_langs, raw_message, radio_freq, spans)
 	if(!src.on)
 		return
 	var/turf/T = get_turf(src)
 	if(speaker in range(1, T))
 		src.talk_into(message, speaker)
 
-/obj/item/device/microphone/talk_into(messages, atom/movable/speaker)
+/obj/item/microphone/talk_into(messages, atom/movable/speaker)
 	if(!src.on)
 		return
 	var/speakers = 0
@@ -50,7 +50,7 @@
 	icon = 'icons/obj/infinity_dexofan.dmi'
 	icon_state = "micstand"
 	layer = OBJ_LAYER
-	var/obj/item/device/microphone/myMic = null
+	var/obj/item/microphone/myMic = null
 
 /obj/structure/mic_stand/New()
 	spawn(1)
@@ -67,7 +67,7 @@
 	return ..()
 
 /obj/structure/mic_stand/attackby(obj/item/W as obj, mob/user as mob)
-	if(istype(W, /obj/item/device/microphone))
+	if(istype(W, /obj/item/microphone))
 		if(myMic)
 			user << "<span class='warning'>There's already a microphone on [src]!</span>"
 			return

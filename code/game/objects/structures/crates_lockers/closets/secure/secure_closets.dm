@@ -20,7 +20,7 @@
 		code2[i] = rand(0,9)
 
 /obj/structure/closet/secure_closet/interact(mob/user)
-	var/obj/item/device/multitool/multimeter/W = user.get_active_held_item()
+	var/obj/item/multitool/multimeter/W = user.get_active_held_item()
 	if(opened)
 		return
 	if(!istype(W))
@@ -48,7 +48,7 @@
 	if(!ishuman(usr))
 		return
 	var/mob/living/carbon/human/user = usr
-	var/obj/item/device/multitool/multimeter/W = user.get_active_held_item()
+	var/obj/item/multitool/multimeter/W = user.get_active_held_item()
 	var/validate = 0
 	user.set_machine(src)
 
@@ -101,7 +101,7 @@
 	if(user in src)
 		return
 	if(locked && !opened)
-		if(istype(W, /obj/item/device/multitool/multimeter))
+		if(istype(W, /obj/item/multitool/multimeter))
 			interact(user)
 		return ..()
 	else

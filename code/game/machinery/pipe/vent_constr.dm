@@ -7,7 +7,7 @@
 	var/freq = 1439
 
 // only for vents attackby appendix
-if ((istype(W, /obj/item/device/multitool)) && (pipe_type == PIPE_UVENT))
+if ((istype(W, /obj/item/multitool)) && (pipe_type == PIPE_UVENT))
 	if(setted)
 		setted = 0
 		user << "<span class='danger'>You cancelled settings</span>"

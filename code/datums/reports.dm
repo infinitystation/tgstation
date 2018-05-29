@@ -43,7 +43,7 @@
 	if(!istype(R))
 		return
 
-	var/datum/asset/assets = get_asset_datum(/datum/asset/simple/paper)
+	var/datum/asset/assets = get_asset_datum(/datum/asset/spritesheet/simple/paper)
 	assets.send(usr)
 
 	var/dat = R.info

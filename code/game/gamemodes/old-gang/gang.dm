@@ -116,7 +116,7 @@ GLOBAL_LIST_INIT(gang_outfit_pool, list(/obj/item/clothing/suit/jacket/leather, 
 			to_chat(mob, "Your training has allowed you to overcome your clownish nature, allowing you to wield weapons without harming yourself.")
 			mob.dna.remove_mutation(CLOWNMUT)
 
-	var/obj/item/device/gangtool/gangtool = new(mob)
+	var/obj/item/gangtool/gangtool = new(mob)
 	var/obj/item/pen/gang/T = new(mob)
 	var/obj/item/toy/crayon/spraycan/gang/SC = new(mob,gang)
 	var/obj/item/clothing/glasses/hud/security/chameleon/C = new(mob,gang)
@@ -198,7 +198,7 @@ GLOBAL_LIST_INIT(gang_outfit_pool, list(/obj/item/clothing/suit/jacket/leather, 
 /datum/game_mode/proc/remove_gangster(datum/mind/gangster_mind, beingborged, silent, remove_bosses=0)
 	var/datum/gang/gang = gangster_mind.gang_datum
 	for(var/obj/O in gangster_mind.current.contents)
-		if(istype(O, /obj/item/device/gangtool/soldier))
+		if(istype(O, /obj/item/gangtool/soldier))
 			qdel(O)
 
 	if(!gang)

@@ -8,7 +8,7 @@
 	glasses = /obj/item/clothing/glasses/sunglasses
 	gloves = /obj/item/clothing/gloves/color/black
 	belt = /obj/item/storage/belt/holster
-	ears = /obj/item/device/radio/headset/headset_cent/alt
+	ears = /obj/item/radio/headset/headset_cent/alt
 	r_pocket = /obj/item/melee/classic_baton/telescopic
 	l_pocket = /obj/item/restraints/handcuffs
 
@@ -40,7 +40,7 @@
 	uniform = /obj/item/clothing/under/sec_corporate
 	shoes = /obj/item/clothing/shoes/jackboots
 	gloves = /obj/item/clothing/gloves/color/black
-	ears = /obj/item/device/radio/headset/headset_cent
+	ears = /obj/item/radio/headset/headset_cent
 	suit = /obj/item/clothing/suit/armor/vest
 	head = /obj/item/clothing/head/helmet/sec
 	glasses = /obj/item/clothing/glasses/hud/security/sunglasses
@@ -48,7 +48,7 @@
 	suit_store = /obj/item/gun/ballistic/automatic/wt550/mindshield
 	back = /obj/item/storage/backpack/security
 	backpack_contents = list(/obj/item/storage/box/security/centcom=1,\
-		/obj/item/device/flashlight/seclite=1)
+		/obj/item/flashlight/seclite=1)
 	id = /obj/item/card/id
 
 /datum/outfit/security_private/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -72,31 +72,31 @@
 	mask = /obj/item/clothing/mask/gas
 	suit = /obj/item/clothing/suit/space/hardsuit/space_adv/military
 	head = null
-	ears = /obj/item/device/radio/headset/headset_cent/alt
+	ears = /obj/item/radio/headset/headset_cent/alt
 	back = /obj/item/storage/backpack/security
 	suit_store = /obj/item/tank/internals/oxygen
 	backpack_contents = list(/obj/item/storage/box/security/centcom=1,\
-		/obj/item/device/flashlight/seclite=1,\
+		/obj/item/flashlight/seclite=1,\
 		/obj/item/gun/ballistic/automatic/wt550/mindshield=1)
 
 
 /datum/outfit/security_private/green
 	name = "Centcom Security Private - Green Alert"
 
-	ears = /obj/item/device/radio/headset/headset_cent/alt
+	ears = /obj/item/radio/headset/headset_cent/alt
 	head = null
 	uniform = /obj/item/clothing/under/rank/security/navyblue
 	suit = null
 	belt = /obj/item/storage/belt/security/centcome
 	suit_store = null
 	backpack_contents = list(/obj/item/storage/box/security/centcom=1,\
-		/obj/item/device/flashlight/seclite=1,\
+		/obj/item/flashlight/seclite=1,\
 		/obj/item/gun/energy/e_gun/advtaser=1)
 
 /datum/outfit/security_private/biohazard
 	name = "Centcom Security Private - Biohazard"
 
-	ears = /obj/item/device/radio/headset/headset_cent/alt
+	ears = /obj/item/radio/headset/headset_cent/alt
 	suit = /obj/item/clothing/suit/bio_suit/security
 	head = /obj/item/clothing/head/bio_hood/security
 	mask = /obj/item/clothing/mask/gas
@@ -114,7 +114,7 @@
 	uniform = /obj/item/clothing/under/warden_corporate
 	shoes = /obj/item/clothing/shoes/jackboots
 	gloves = /obj/item/clothing/gloves/color/black
-	ears = /obj/item/device/radio/headset/headset_cent/alt
+	ears = /obj/item/radio/headset/headset_cent/alt
 	suit = /obj/item/clothing/suit/armor/vest
 	head = /obj/item/clothing/head/warden/corporate
 	glasses = /obj/item/clothing/glasses/hud/security/sunglasses
@@ -124,7 +124,7 @@
 	backpack_contents = list(/obj/item/storage/box/security/centcom=1,\
 		/obj/item/shield/riot/tele=1,\
 		/obj/item/grenade/barrier=2,\
-		/obj/item/device/flashlight/seclite=1)
+		/obj/item/flashlight/seclite=1)
 	id = /obj/item/card/id
 
 /datum/outfit/security_sergeant/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -147,14 +147,14 @@
 
 	suit = /obj/item/clothing/suit/space/hardsuit/space_adv/swat
 	head = null
-	ears = /obj/item/device/radio/headset/headset_cent/alt
+	ears = /obj/item/radio/headset/headset_cent/alt
 	mask = /obj/item/clothing/mask/gas
 	glasses = /obj/item/clothing/glasses/thermal
 	suit_store = /obj/item/tank/internals/oxygen
 	backpack_contents = list(/obj/item/storage/box/security/centcom=1,\
 		/obj/item/shield/riot/tele=1,\
 		/obj/item/grenade/barrier=2,\
-		/obj/item/device/flashlight/seclite=1,\
+		/obj/item/flashlight/seclite=1,\
 		/obj/item/gun/ballistic/automatic/wt550/mindshield=1)
 
 /datum/outfit/security_sergeant/green
@@ -168,7 +168,7 @@
 	backpack_contents = list(/obj/item/storage/box/security/centcom=1,\
 		/obj/item/shield/riot/tele=1,\
 		/obj/item/grenade/barrier=2,\
-		/obj/item/device/flashlight/seclite=1,\
+		/obj/item/flashlight/seclite=1,\
 		/obj/item/gun/energy/e_gun/advtaser=1)
 
 /datum/outfit/security_sergeant/biohazard
@@ -195,9 +195,9 @@
 	head = /obj/item/clothing/head/helmet/combat_heavy
 	belt = /obj/item/storage/belt/military/assault/special_force
 	glasses = /obj/item/clothing/glasses/hud/security/sunglasses
-	ears = /obj/item/device/radio/headset/headset_cent/alt
+	ears = /obj/item/radio/headset/headset_cent/alt
 	gloves = /obj/item/clothing/gloves/combat
-	l_pocket = /obj/item/device/flashlight/seclite
+	l_pocket = /obj/item/flashlight/seclite
 	r_pocket = /obj/item/ammo_box/magazine/m556
 	id = /obj/item/card/id
 	back = /obj/item/storage/backpack/security

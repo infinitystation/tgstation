@@ -19,7 +19,7 @@
 	min_cold_protection_temperature = SPACE_HELM_MIN_TEMP_PROTECT
 	heat_protection = HEAD
 	max_heat_protection_temperature = SPACE_HELM_MAX_TEMP_PROTECT
-	flags_1 = STOPSPRESSUREDMAGE_1
+	flags_1 = STOPSPRESSUREDAMAGE
 	strip_delay = 80
 	flags_inv = HIDEEARS|HIDEEYES|HEADCOVERSMOUTH|HIDEHAIR
 	flags_cover = HEADCOVERSEYES
@@ -42,7 +42,7 @@
 	worn_icon = 'icons/mob/infinity_work.dmi'
 	icon = 'icons/obj/clothing/infinity_work.dmi'
 	flags_inv = HIDEHAIR
-	flags_1 = STOPSPRESSUREDMAGE_1|THICKMATERIAL_1
+	clothing_flags = STOPSPRESSUREDAMAGE|THICKMATERIAL
 	max_heat_protection_temperature = SPACE_HELM_MAX_TEMP_PROTECT
 	cold_protection = HEAD
 	min_cold_protection_temperature = SPACE_HELM_MIN_TEMP_PROTECT
@@ -134,7 +134,7 @@
 	icon = 'icons/obj/clothing/infinity_work.dmi'
 
 /obj/item/clothing/head/kitty/doggy/equipped(mob/user, slot)
-	if(user && slot == slot_head)
+	if(user && slot == SLOT_HEAD)
 		update_icon(user)
 	..()
 
@@ -180,8 +180,8 @@
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 
 /obj/item/clothing/head/helmet/doomguy/Initialize(mapload)
-	..()
-	flags_2 = BANG_PROTECT_2
+	. = ..()
+	AddComponent(/datum/component/wearertargeting/earprotection, list(SLOT_HEAD))
 
 /obj/item/clothing/head/dad
 	name = "mask of the Father"
@@ -221,8 +221,8 @@
 	strip_delay = 60
 
 /obj/item/clothing/head/helmet/combat_heavy/Initialize(mapload)
-	..()
-	flags_2 = BANG_PROTECT_2
+	. = ..()
+	AddComponent(/datum/component/wearertargeting/earprotection, list(SLOT_HEAD))
 
 /obj/item/clothing/head/janitor_cap
 	name = "exclusive janitor red cap"
@@ -245,8 +245,8 @@
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 
 /obj/item/clothing/head/helmet/uac/Initialize(mapload)
-	..()
-	flags_2 = BANG_PROTECT_2
+	. = ..()
+	AddComponent(/datum/component/wearertargeting/earprotection, list(SLOT_HEAD))
 
 /obj/item/clothing/head/cargoberet
 	name = "cargoberet"

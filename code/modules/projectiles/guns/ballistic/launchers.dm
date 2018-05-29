@@ -25,7 +25,8 @@
 	icon = 'icons/mecha/mecha_equipment.dmi'
 	icon_state = "mecha_grenadelnchr"
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/grenademulti
-	pin = /obj/item/firing_pin?	can_pull_pin = 0
+	pin = /obj/item/firing_pin
+	can_pull_pin = 0
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/cyborg/attack_self()
 	return

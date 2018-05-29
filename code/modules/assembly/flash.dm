@@ -159,10 +159,12 @@
 		return
 	AOE_flash()
 	burn_out()
-?/obj/item/assembly/flash/activate()//AOE flash on signal recieved
+
+/obj/item/assembly/flash/activate()//AOE flash on signal recieved
 	if(!..())
 		return
 	AOE_flash()
+
 /obj/item/assembly/flash/cyborg
 
 /obj/item/assembly/flash/cyborg/attack(mob/living/M, mob/user)

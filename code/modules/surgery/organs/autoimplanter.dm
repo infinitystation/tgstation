@@ -1,6 +1,6 @@
 #define INFINITE -1
 
-/obj/item/device/autoimplanter
+/obj/item/autoimplanter
 	name = "autoimplanter"
 	desc = "A device that automatically injects a cyber-implant into the user without the hassle of extensive surgery. It has a slot to insert implants and a screwdriver slot for removing accidentally added implants."
 	icon_state = "autoimplanter"
@@ -10,12 +10,12 @@
 	var/organ_type = /obj/item/organ/cyberimp
 	var/uses = INFINITE
 
-/obj/item/device/autoimplanter/New()
+/obj/item/autoimplanter/New()
 	..()
 	if(storedorgan)
 		storedorgan.loc = src
 
-/obj/item/device/autoimplanter/attack_self(mob/user)//when the object it used...
+/obj/item/autoimplanter/attack_self(mob/user)//when the object it used...
 	if(!uses)
 		to_chat(user, "<span class='warning'>[src] has already been used. The tools are dull and won't reactivate.</span>")
 		return
@@ -31,7 +31,7 @@
 	if(!uses)
 		desc = "[initial(desc)] Looks like it's been used up."
 
-/obj/item/device/autoimplanter/attackby(obj/item/I, mob/user, params)
+/obj/item/autoimplanter/attackby(obj/item/I, mob/user, params)
 	if(istype(I, organ_type))
 		if(storedorgan)
 			to_chat(user, "<span class='notice'>[src] already has an implant stored.</span>")
@@ -58,7 +58,7 @@
 			if(!uses)
 				desc = "[initial(desc)] Looks like it's been used up."
 
-/obj/item/device/autoimplanter/cmo
+/obj/item/autoimplanter/cmo
 	name = "medical HUD autoimplanter"
 	desc = "A single use autoimplanter that contains a medical heads-up display augment. A screwdriver can be used to remove it, but implants can't be placed back in."
 	storedorgan = new/obj/item/organ/cyberimp/eyes/hud/medical()

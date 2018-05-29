@@ -233,7 +233,7 @@
 			if(M.client)
 				hear += M
 			//world.log << "Start = [M] - [get_turf(M)] - ([M.x], [M.y], [M.z])"
-		else if(istype(A, /obj/item/device/radio))
+		else if(istype(A, /obj/item/radio))
 			hear += A
 
 		if(isobj(A) || ismob(A))

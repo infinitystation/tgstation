@@ -124,7 +124,7 @@ other types of metals and chemistry for reagents).
 	id = "multimeter"
 	build_type = PROTOLATHE
 	materials = list("$metal" = 1000, "$glass" = 1000, "$silver" = 500)
-	build_path = /obj/item/device/multitool/multimeter
+	build_path = /obj/item/multitool/multimeter
 	category = list("Equipment")
 
 /////////////////////////////////////////

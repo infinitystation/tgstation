@@ -56,7 +56,8 @@ GLOBAL_LIST_INIT(nonreactive_gases, typecacheof(list(/datum/gas/oxygen, /datum/g
 /datum/gas/carbon_dioxide //what the fuck is this?
 	id = "co2"
 	specific_heat = 30
-	name = "”глекислый газ"?	fusion_power = 2
+	name = "”глекислый газ"
+	fusion_power = 2
 
 /datum/gas/plasma
 	id = "plasma"

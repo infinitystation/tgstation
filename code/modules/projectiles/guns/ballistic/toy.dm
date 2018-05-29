@@ -109,5 +109,5 @@
 	mag_type = /obj/item/ammo_box/magazine/toy/m762
 
 /obj/item/gun/ballistic/automatic/l6_saw/toy/unrestricted/riot
-	pin = /obj/item/device/firing_pin
+	pin = /obj/item/firing_pin
 	mag_type = /obj/item/ammo_box/magazine/toy/m762/riot

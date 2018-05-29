@@ -150,7 +150,7 @@
 		new /obj/item/reagent_containers/pill/potass(src)
 	new /obj/item/reagent_containers/pill/mutadone(src)
 	new /obj/item/reagent_containers/hypospray/medipen(src)
-	new /obj/item/device/healthanalyzer(src)
+	new /obj/item/healthanalyzer(src)
 	return
 
 /obj/item/storage/firstaid/tactical

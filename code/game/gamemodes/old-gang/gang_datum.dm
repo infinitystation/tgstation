@@ -7,7 +7,7 @@
 	var/color_hex = "#FFFFFF"
 	var/list/datum/mind/gangsters = list() //gang B Members
 	var/list/datum/mind/bosses = list() //gang A Bosses
-	var/list/obj/item/device/gangtool/gangtools = list()
+	var/list/obj/item/gangtool/gangtools = list()
 	var/list/tags_by_mind = list()				//Assoc list in format of tags_by_mind[mind_of_gangster] = list(tag1, tag2, tag3) where tags are the actual object decals.
 	var/style
 	var/fighting_style = "normal"
@@ -186,7 +186,7 @@
 /datum/gang/proc/message_gangtools(message,beep=1,warning)
 	if(!gangtools.len || !message)
 		return
-	for(var/obj/item/device/gangtool/tool in gangtools)
+	for(var/obj/item/gangtool/tool in gangtools)
 		var/mob/living/mob = get(tool.loc, /mob/living)
 		if(mob && mob.mind && mob.stat == CONSCIOUS)
 			if(mob.mind.gang_datum == src)

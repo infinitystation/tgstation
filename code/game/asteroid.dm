@@ -73,7 +73,7 @@ GLOBAL_VAR_INIT(max_secret_rooms, 6)
 			theme = "cult"
 			walltypes = list(/turf/closed/wall/mineral/cult=3,/turf/closed/mineral/random/high_chance=1)
 			floortypes = list(/turf/open/floor/plasteel/cult)
-			treasureitems = list(/obj/item/device/soulstone/anybody=1, /obj/item/clothing/suit/space/hardsuit/cult=1, /obj/item/bedsheet/cult=2,
+			treasureitems = list(/obj/item/soulstone/anybody=1, /obj/item/clothing/suit/space/hardsuit/cult=1, /obj/item/bedsheet/cult=2,
 								 /obj/item/clothing/suit/cultrobes=2, /*/mob/living/simple_animal/hostile/creature=3*/)
 			fluffitems = list(/obj/effect/gateway=1,/obj/effect/gibspawner=1,/obj/structure/destructible/cult/talisman=1,/obj/item/toy/crayon/red=2,
 							  /obj/item/organ/heart=2, /obj/effect/decal/cleanable/blood=4,/obj/structure/table/wood=2,/obj/item/ectoplasm=3,
@@ -112,7 +112,7 @@ GLOBAL_VAR_INIT(max_secret_rooms, 6)
 								/obj/machinery/biogenerator=1)
 			fluffitems = list(/obj/structure/table/reinforced=2,/obj/item/stock_parts/scanning_module/phasic=3,
 							  /obj/item/stock_parts/matter_bin/super=3,/obj/item/stock_parts/manipulator/pico=3,
-							  /obj/item/stock_parts/capacitor/super=3,/obj/item/device/pda/clear=1, /obj/structure/mecha_wreckage/phazon=1)
+							  /obj/item/stock_parts/capacitor/super=3,/obj/item/pda/clear=1, /obj/structure/mecha_wreckage/phazon=1)
 
 		if("speakeasy")
 			theme = "speakeasy"

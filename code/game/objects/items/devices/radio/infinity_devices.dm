@@ -1,4 +1,4 @@
-/obj/item/device/radio/headset/headphone
+/obj/item/radio/headset/headphone
 	name = "headphones"
 	desc = "Brand headwear, with a high sound quality."
 	icon_state = "headphones"

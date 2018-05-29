@@ -140,7 +140,7 @@
 
 // it was here for avoiding conflicts
 /obj/item/circuitboard/machine/chem_dispenser/attackby(obj/item/I, mob/user)
-	if(istype(I, /obj/item/device/multitool))
+	if(istype(I, /obj/item/multitool))
 		if(build_path == /obj/machinery/chem_dispenser/constructable)
 			build_path = /obj/machinery/chem_dispenser/bartender
 			name = "circuit board (Portable Bar Dispenser)"

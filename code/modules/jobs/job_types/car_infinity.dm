@@ -21,9 +21,9 @@
 	name = "Internal Affairs Agent"
 
 	id = /obj/item/card/id/silver
-	belt = /obj/item/device/pda/heads
+	belt = /obj/item/pda/heads
 	glasses = /obj/item/clothing/glasses/sunglasses
-	ears = /obj/item/device/radio/headset/headset_ifa
+	ears = /obj/item/radio/headset/headset_ifa
 	uniform = /obj/item/clothing/under/suit_jacket/charcoal
 	suit = /obj/item/clothing/suit/toggle/lawyer/black
 	shoes = /obj/item/clothing/shoes/laceup
@@ -32,14 +32,14 @@
 
 	implants = list(/obj/item/implant/mindshield)
 
-/obj/item/device/radio/headset/headset_ifa
+/obj/item/radio/headset/headset_ifa
 	name = "internal affairs agent's radio headset"
 	desc = "A headset with a commanding and security channel. \nTo access the security channel, use :s. For command, use :c."
 	icon_state = "com_headset"
 	item_state = "headset"
-	keyslot = new /obj/item/device/encryptionkey/ifa
+	keyslot = new /obj/item/encryptionkey/ifa
 
-/obj/item/device/encryptionkey/ifa
+/obj/item/encryptionkey/ifa
 	name = "\proper the internal affairs agent's encryption key"
 	desc = "An encryption key for a radio headset.  Channels are as follows: :c - command, :s - security."
 	icon_state = "cap_cypherkey"

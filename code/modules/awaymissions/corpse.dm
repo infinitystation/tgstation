@@ -276,7 +276,7 @@
 	suit = /obj/item/clothing/suit/armor/uac
 	shoes = /obj/item/clothing/shoes/combat/swat/uac
 	gloves = /obj/item/clothing/gloves/combat
-	ears = /obj/item/device/radio/headset
+	ears = /obj/item/radio/headset
 	mask = /obj/item/clothing/mask/gas
 	head = /obj/item/clothing/head/helmet/uac
 	r_pocket = /obj/item/ammo_box/magazine/a646
@@ -290,7 +290,7 @@
 	suit = /obj/item/clothing/suit/armor/uac
 	shoes = /obj/item/clothing/shoes/combat/swat/uac
 	gloves = /obj/item/clothing/gloves/combat
-	ears = /obj/item/device/radio/headset
+	ears = /obj/item/radio/headset
 	mask = /obj/item/clothing/mask/gas
 	head = /obj/item/clothing/head/helmet/uac
 	r_pocket = /obj/item/ammo_box/magazine/a646

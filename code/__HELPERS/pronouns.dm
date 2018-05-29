@@ -375,35 +375,35 @@
 /mob/living/carbon/human/p_e_1(temp_gender)
 	var/list/obscured = check_obscured_slots()
 	var/skipface = (wear_mask && (wear_mask.flags_inv & HIDEFACE)) || (head && (head.flags_inv & HIDEFACE))
-	if((slot_w_uniform in obscured) && skipface)
+	if((SLOT_W_UNIFORM in obscured) && skipface)
 		temp_gender = PLURAL
 	return ..()
 
 /mob/living/carbon/human/p_e_2(temp_gender)
 	var/list/obscured = check_obscured_slots()
 	var/skipface = (wear_mask && (wear_mask.flags_inv & HIDEFACE)) || (head && (head.flags_inv & HIDEFACE))
-	if((slot_w_uniform in obscured) && skipface)
+	if((SLOT_W_UNIFORM in obscured) && skipface)
 		temp_gender = PLURAL
 	return ..()
 
 /mob/living/carbon/human/p_e_3(temp_gender)
 	var/list/obscured = check_obscured_slots()
 	var/skipface = (wear_mask && (wear_mask.flags_inv & HIDEFACE)) || (head && (head.flags_inv & HIDEFACE))
-	if((slot_w_uniform in obscured) && skipface)
+	if((SLOT_W_UNIFORM in obscured) && skipface)
 		temp_gender = PLURAL
 	return ..()
 
 /mob/living/carbon/human/p_e_4(temp_gender)
 	var/list/obscured = check_obscured_slots()
 	var/skipface = (wear_mask && (wear_mask.flags_inv & HIDEFACE)) || (head && (head.flags_inv & HIDEFACE))
-	if((slot_w_uniform in obscured) && skipface)
+	if((SLOT_W_UNIFORM in obscured) && skipface)
 		temp_gender = PLURAL
 	return ..()
 
 /mob/living/carbon/human/p_e_5(temp_gender)
 	var/list/obscured = check_obscured_slots()
 	var/skipface = (wear_mask && (wear_mask.flags_inv & HIDEFACE)) || (head && (head.flags_inv & HIDEFACE))
-	if((slot_w_uniform in obscured) && skipface)
+	if((SLOT_W_UNIFORM in obscured) && skipface)
 		temp_gender = PLURAL
 	return ..()
 

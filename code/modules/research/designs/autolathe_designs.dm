@@ -617,7 +617,7 @@
 	id = "polariod_camera"
 	build_type = AUTOLATHE
 	materials = list("$metal" = 2000)
-	build_path = /obj/item/device/camera
+	build_path = /obj/item/camera
 	category = list("initial", "Misc")
 
 /datum/design/camera_film
@@ -625,7 +625,7 @@
 	id = "camera_film"
 	build_type = AUTOLATHE
 	materials = list("$metal" = 200, "$glass" = 200)
-	build_path = /obj/item/device/camera_film
+	build_path = /obj/item/camera_film
 	category = list("initial", "Misc")
 
 /datum/design/foam_dart

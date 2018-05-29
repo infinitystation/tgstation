@@ -25,7 +25,7 @@
 
 /obj/item/storage/box/survival/radio/PopulateContents()
 	..() // we want the survival stuff too.
-	new /obj/item/device/radio/off(src)
+	new /obj/item/radio/off(src)
 
 /obj/item/storage/box/survival_mining/PopulateContents()
 	new /obj/item/clothing/mask/gas/explorer(src)
@@ -42,7 +42,7 @@
 
 /obj/item/storage/box/engineer/radio/PopulateContents()
 	..() // we want the regular items too.
-	new /obj/item/device/radio/off(src)
+	new /obj/item/radio/off(src)
 
 // Syndie survival box
 /obj/item/storage/box/syndie/PopulateContents()
@@ -57,7 +57,7 @@
 
 /obj/item/storage/box/security/radio/PopulateContents()
 	..() // we want the regular stuff too
-	new /obj/item/device/radio/off(src)
+	new /obj/item/radio/off(src)
 
 /obj/item/storage/box/security/centcom
 	desc = "—тандартный набор снаряжения дл€ офицера охраны ÷ ."
@@ -165,7 +165,7 @@
 
 /obj/item/storage/box/flashes/PopulateContents()
 	for(var/i in 1 to 6)
-		new /obj/item/device/assembly/flash/handheld(src)
+		new /obj/item/assembly/flash/handheld(src)
 
 /obj/item/storage/box/wall_flash
 	name = "wall-mounted flash kit"
@@ -178,11 +178,11 @@
 
 	new /obj/item/wallframe/button(src)
 	new /obj/item/electronics/airlock(src)
-	var/obj/item/device/assembly/control/flasher/remote = new(src)
+	var/obj/item/assembly/control/flasher/remote = new(src)
 	remote.id = id
 	var/obj/item/wallframe/flasher/frame = new(src)
 	frame.id = id
-	new /obj/item/device/assembly/flash/handheld(src)
+	new /obj/item/assembly/flash/handheld(src)
 	new /obj/item/screwdriver(src)
 
 
@@ -333,10 +333,10 @@
 	illustration = "pda"
 
 /obj/item/storage/box/PDAs/PopulateContents()
-	new /obj/item/device/pda(src)
-	new /obj/item/device/pda(src)
-	new /obj/item/device/pda(src)
-	new /obj/item/device/pda(src)
+	new /obj/item/pda(src)
+	new /obj/item/pda(src)
+	new /obj/item/pda(src)
+	new /obj/item/pda(src)
 	new /obj/item/cartridge/head(src)
 
 	var/newcart = pick(	/obj/item/cartridge/engineering,
@@ -387,7 +387,7 @@
 
 /obj/item/storage/box/firingpins/PopulateContents()
 	for(var/i in 1 to 5)
-		new /obj/item/device/firing_pin(src)
+		new /obj/item/firing_pin(src)
 
 /obj/item/storage/box/lasertagpins
 	name = "box of laser tag firing pins"
@@ -396,8 +396,8 @@
 
 /obj/item/storage/box/lasertagpins/PopulateContents()
 	for(var/i in 1 to 3)
-		new /obj/item/device/firing_pin/tag/red(src)
-		new /obj/item/device/firing_pin/tag/blue(src)
+		new /obj/item/firing_pin/tag/red(src)
+		new /obj/item/firing_pin/tag/blue(src)
 
 /obj/item/storage/box/handcuffs
 	name = "box of spare handcuffs"
@@ -445,7 +445,7 @@
 
 /obj/item/storage/box/mousetraps/PopulateContents()
 	for(var/i in 1 to 6)
-		new /obj/item/device/assembly/mousetrap(src)
+		new /obj/item/assembly/mousetrap(src)
 
 /obj/item/storage/box/pillbottles
 	name = "box of pill bottles"

@@ -280,7 +280,7 @@
 		if("pulse")
 			if(istype(I, /obj/item/multitool/multimeter))
 				if(do_after(L, 10, target = holder))
-					var/obj/item/device/multitool/multimeter/M = I
+					var/obj/item/multitool/multimeter/M = I
 					if(M.mode)
 						if(check_wire(target_wire)!="Incorrect" && !is_color_cut(target_wire))
 							playsound(L.loc, 'sound/machines/mbeep.ogg', 20, 1)

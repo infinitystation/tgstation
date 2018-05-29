@@ -74,8 +74,8 @@
 		new /datum/data/mining_equipment("Premium absent",		/obj/item/reagent_containers/food/drinks/bottle/absinthe/premium,10000),
 		new /datum/data/mining_equipment("Empty Sandbag",		/obj/item/emptysandbag,											1000),
 		new /datum/data/mining_equipment("Candle",				/obj/item/candle,														200),
-		new /datum/data/mining_equipment("Lantern",				/obj/item/device/flashlight/lantern,									700),
-		new /datum/data/mining_equipment("Universal Recorde", 	/obj/item/device/taperecorder,											1000),
+		new /datum/data/mining_equipment("Lantern",				/obj/item/flashlight/lantern,									700),
+		new /datum/data/mining_equipment("Universal Recorde", 	/obj/item/taperecorder,											1000),
 		new /datum/data/mining_equipment("Heat goggles", 		/obj/item/clothing/glasses/heat,										500),
 		new /datum/data/mining_equipment("Meson goggles", 		/obj/item/clothing/glasses/meson,										800),
 		)
@@ -116,13 +116,13 @@
 	icon_deny = "SynTool-deny"
 	req_access_txt = "150" //Common syndicate access
 	products = list(/obj/item/crowbar/red = 5,
-					/obj/item/device/multitool = 5,
+					/obj/item/multitool = 5,
 					/obj/item/screwdriver/nuke = 5,
 					/obj/item/wirecutters = 5,
 					/obj/item/wrench = 5,
 					/obj/item/weldingtool/largetank = 5,
-					/obj/item/device/analyzer = 5,
-					/obj/item/device/t_scanner = 5,
+					/obj/item/analyzer = 5,
+					/obj/item/t_scanner = 5,
 					/obj/item/stack/cable_coil = 10)
 	premium = list(/obj/item/clothing/gloves/chameleon = 1,/obj/item/grenade/empgrenade = 2)
 

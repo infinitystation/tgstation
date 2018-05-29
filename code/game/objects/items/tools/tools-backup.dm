@@ -1,7 +1,7 @@
 #define WELDER_FUEL_BURN_INTERVAL 13
 
 /* Tools!
- * Note: Multitools are /obj/item/device
+ * Note: Multitools are /obj/item
  *
  * Contains:
  * 		Wrench

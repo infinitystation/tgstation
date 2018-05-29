@@ -11,7 +11,7 @@
 
 /obj/item/pipe_gsensor/attackby(var/obj/item/W as obj, var/mob/user as mob)
 	..()
-	if (istype(W, /obj/item/device/multitool))
+	if (istype(W, /obj/item/multitool))
 		interact(user)
 		return ..()
 

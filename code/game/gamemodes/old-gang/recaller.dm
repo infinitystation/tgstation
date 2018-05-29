@@ -1,5 +1,5 @@
 //gangtool device
-/obj/item/device/gangtool
+/obj/item/gangtool
 	name = "suspicious device"
 	desc = "A strange device of sorts. Hard to really make out what it actually does if you don't know how to operate it."
 	icon_state = "gangtool-white"
@@ -17,12 +17,12 @@
 	var/promotable = 0
 	var/list/tags = list()
 
-/obj/item/device/gangtool/Initialize() //Initialize supply point income if it hasn't already been started
+/obj/item/gangtool/Initialize() //Initialize supply point income if it hasn't already been started
 	..()
 	if(!SSticker.mode.gang_points)
 		SSticker.mode.gang_points = new /datum/gang_points(SSticker.mode)
 
-/obj/item/device/gangtool/attack_self(mob/user)
+/obj/item/gangtool/attack_self(mob/user)
 	if (!can_use(user))
 		return
 
@@ -83,7 +83,7 @@
 
 
 
-/obj/item/device/gangtool/Topic(href, href_list)
+/obj/item/gangtool/Topic(href, href_list)
 	if(!can_use(usr))
 		return
 
@@ -103,7 +103,7 @@
 	attack_self(usr)
 
 
-/obj/item/device/gangtool/proc/ping_gang(mob/user)
+/obj/item/gangtool/proc/ping_gang(mob/user)
 	if(!user)
 		return
 	var/message = stripped_input(user,"Discreetly send a gang-wide message.","Send Message") as null|text
@@ -139,7 +139,7 @@
 		log_talk(user,"GANG: [key_name(user)] Messaged [gang.name] Gang: [message].",LOGSAY)
 
 
-/obj/item/device/gangtool/proc/register_device(mob/user)
+/obj/item/gangtool/proc/register_device(mob/user)
 	if(gang)	//It's already been registered!
 		return
 	if((promotable && (user.mind in SSticker.mode.get_gangsters())) || (user.mind in SSticker.mode.get_gang_bosses()))
@@ -164,7 +164,7 @@
 	else
 		to_chat(usr, "<span class='warning'>ACCESS DENIED: Unauthorized user.</span>")
 
-/obj/item/device/gangtool/proc/recall(mob/user)
+/obj/item/gangtool/proc/recall(mob/user)
 	if(!can_use(user))
 		return 0
 
@@ -224,7 +224,7 @@
 	to_chat(loc, "<span class='info'>[icon2html(src, loc)]No response recieved. Emergency shuttle cannot be recalled at this time.</span>")
 	return 0
 
-/obj/item/device/gangtool/proc/can_use(mob/living/carbon/human/user)
+/obj/item/gangtool/proc/can_use(mob/living/carbon/human/user)
 	if(!istype(user))
 		return 0
 	if(user.incapacitated())
@@ -239,22 +239,22 @@
 		return 1
 	return 0
 
-/obj/item/device/gangtool/spare
+/obj/item/gangtool/spare
 	outfits = 1
 
-/obj/item/device/gangtool/spare/lt
+/obj/item/gangtool/spare/lt
 	promotable = 1
 
 ///////////// Internal tool used by gang regulars ///////////
 
-/obj/item/device/gangtool/soldier/New(mob/user)
+/obj/item/gangtool/soldier/New(mob/user)
 	. = ..()
 	gang = user.mind.gang_datum
 	gang.gangtools += src
 	var/datum/action/innate/gang/tool/GT = new
 	GT.Grant(user, src, gang)
 
-/obj/item/device/gangtool/soldier/attack_self(mob/user)
+/obj/item/gangtool/soldier/attack_self(mob/user)
 	if (!can_use(user))
 		return
 	var/dat
@@ -298,7 +298,7 @@
 	popup.set_content(dat)
 	popup.open()
 
-/obj/item/device/gangtool/soldier/Topic(href, href_list)
+/obj/item/gangtool/soldier/Topic(href, href_list)
 	if(!can_use(usr))
 		return
 	if(href_list["purchase"])
@@ -321,7 +321,7 @@
 	desc = "An implanted gang tool that lets you purchase gear"
 	background_icon_state = "bg_mime"
 	button_icon_state = "bolt_action"
-	var/obj/item/device/gangtool/soldier/GT
+	var/obj/item/gangtool/soldier/GT
 
 /datum/action/innate/gang/tool/Grant(mob/user, obj/reg, datum/gang/G)
 	. = ..()

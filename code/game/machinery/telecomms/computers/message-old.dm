@@ -26,7 +26,7 @@
 	var/optioncount = 7
 	// Custom Message Properties
 	var/customsender = "System Administrator"
-	var/obj/item/device/pda/customrecepient = null
+	var/obj/item/pda/customrecepient = null
 	var/customjob		= "Admin"
 	var/custommessage 	= "This is a test, please ignore."
 
@@ -377,7 +377,7 @@
 					//Select Receiver
 					if("Recepient")
 						//Get out list of viable PDAs
-						var/list/obj/item/device/pda/sendPDAs = get_viewable_pdas()
+						var/list/obj/item/pda/sendPDAs = get_viewable_pdas()
 						if(GLOB.PDAs && GLOB.PDAs.len > 0)
 							customrecepient = input(usr, "Select a PDA from the list.") as null|anything in sortNames(sendPDAs)
 						else
@@ -406,8 +406,8 @@
 							message = "<span class='notice'>NOTICE: No message entered!</span>"
 							return src.attack_hand(usr)
 
-						var/obj/item/device/pda/PDARec = null
-						for (var/obj/item/device/pda/P in get_viewable_pdas())
+						var/obj/item/pda/PDARec = null
+						for (var/obj/item/pda/P in get_viewable_pdas())
 							if(P.owner == customsender)
 								PDARec = P
 						//Sender isn't faking as someone who exists

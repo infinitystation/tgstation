@@ -29,7 +29,7 @@
 	icon = 'icons/obj/infinity_weapons.dmi'
 	lefthand_file = 'icons/mob/inhands/infinity_obj_left.dmi'
 	righthand_file = 'icons/mob/inhands/infinity_obj_right.dmi'
-	pin = /obj/item/device/firing_pin
+	pin = /obj/item/firing_pin
 	mag_type = /obj/item/ammo_box/magazine/spine
 	fire_sound = 'sound/weapons/gunshot_g36.ogg'
 	can_suppress = 0
@@ -42,7 +42,7 @@
 	return 1
 
 /obj/item/gun/ballistic/automatic/proto/mindshield //By Terror4000rus
-	pin = /obj/item/device/firing_pin/implant/mindshield
+	pin = /obj/item/firing_pin/implant/mindshield
 
 /obj/item/gun/ballistic/automatic/mg88 //By Terror4000rus
 	name = "MG88 'Enforcer'"
@@ -53,7 +53,7 @@
 	lefthand_file = 'icons/mob/inhands/infinity_obj_left.dmi'
 	righthand_file = 'icons/mob/inhands/infinity_obj_right.dmi'
 	mag_type = /obj/item/ammo_box/magazine/a646
-	pin = /obj/item/device/firing_pin
+	pin = /obj/item/firing_pin
 	fire_sound = 'sound/weapons/Gunshot_smg.ogg'
 	can_suppress = 0
 	burst_size = 2
@@ -78,7 +78,7 @@
 	projectile_type = /obj/item/projectile/energy/declone/special
 
 /obj/item/gun/energy/e_gun/nuclear/event //By Terror4000rus
-	pin = /obj/item/device/firing_pin
+	pin = /obj/item/firing_pin
 	ammo_type = list(/obj/item/ammo_casing/energy/laser, /obj/item/ammo_casing/energy/disabler)
 
 /obj/item/gun/energy/e_gun/ert

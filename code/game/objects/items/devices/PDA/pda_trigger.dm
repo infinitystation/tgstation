@@ -2,7 +2,7 @@
 	if(message)
 		message = sanitize_a0(message)
 	for(var/i in GLOB.PDAs)
-		var/obj/item/device/pda/P = i
+		var/obj/item/pda/P = i
 		if(!no_zlevel)
 			var/turf/T = get_turf(P)
 			if(!T)
@@ -12,7 +12,7 @@
 		else
 			P.trigger_alert(sound, message)
 
-/obj/item/device/pda/proc/trigger_alert(sound, message)
+/obj/item/pda/proc/trigger_alert(sound, message)
 	if(!silent)
 		if(sound)
 			playsound(loc, sound, 75, 1)
