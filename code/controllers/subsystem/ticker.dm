@@ -206,10 +206,10 @@ SUBSYSTEM_DEF(ticker)
 				toggle_looc(TRUE) // Turn it on
 				//economy_system.save_system_to_DB()
 				declare_completion(force_ending)
-//				if(update_waiting)
-//					force_update_server()
-//				if(buildchangechecked && nextbuild)
-//					forcechangebuild(nextbuild)
+				if(update_waiting)
+					force_update_server()
+				if(buildchangechecked && GLOB.nextbuild)
+					forcechangebuild(GLOB.nextbuild)
 				Master.SetRunLevel(RUNLEVEL_POSTGAME)
 
 
