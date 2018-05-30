@@ -542,11 +542,10 @@
 		var/datum/map_config/cached = SSmapping.next_map_config
 		if(cached)
 			stat(null, "Next Map: [cached.map_name]")
-		// TODO@inf-dev переработать под новые конфиги ~bear1ake
-/*		if(currentbuild)
-			stat(null, "Build: [currentbuild.friendlyname]")
-		if (nextbuild && istype(nextbuild))
-			stat(null, "Next Build: [nextbuild.friendlyname]")*/
+		if(GLOB.currentbuild)
+			stat(null, "Build: [GLOB.currentbuild.friendlyname]")
+		if (GLOB.nextbuild && istype(GLOB.nextbuild))
+			stat(null, "Next Build: [GLOB.nextbuild.friendlyname]")
 		stat(null, "Round ID: [GLOB.round_id ? GLOB.round_id : "NULL"]")
 		stat(null, "Server Time: [time2text(world.timeofday, "YYYY-MM-DD hh:mm:ss")]")
 		stat(null, "Round Time: [worldtime2text()]")
