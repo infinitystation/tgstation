@@ -278,30 +278,25 @@
 			else
 				to_chat(L, "<span class='warning'>You need wirecutters!</span>")
 		if("pulse")
-			if(istype(I, /obj/item/multitool/multimeter))
+			I = L.is_holding_tool_quality(TOOL_MULTITOOL)
+			if(I && istype(I, /obj/item/multitool/multimeter))
+				var/obj/item/multitool/multimeter/M = I
 				if(do_after(L, 10, target = holder))
-					var/obj/item/multitool/multimeter/M = I
 					if(M.mode)
 						if(check_wire(target_wire)!="Incorrect" && !is_color_cut(target_wire))
 							playsound(L.loc, 'sound/machines/mbeep.ogg', 20, 1)
 							L << "<span class='notice'>Провод соединен к [check_wire(target_wire)].</span>"
 							. = TRUE
-							return
 						else
 							L << "<span class='notice'>Провод не соединен к чему либо.</span>"
-							return
 					else
 						pulse_color(target_wire)
 						. = TRUE
-						return
 				else
 					return
-			else if(istype(I, /obj/item/multitool) || IsAdminGhost(usr))
-				playsound(holder, 'sound/weapons/empty.ogg', 20, 1)
-			/*I = L.is_holding_tool_quality(TOOL_MULTITOOL)
-			if(I || IsAdminGhost(usr))
+			else if(I || IsAdminGhost(usr))
 				if(I)
-					I.play_tool_sound(src, 20) new */
+					I.play_tool_sound(src, 20)
 				pulse_color(target_wire, L)
 				. = TRUE
 			else

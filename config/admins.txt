@@ -11,9 +11,9 @@
 ###############################################################################################
 destinat1on = System Architect
 thehero13 = Game Master
-terror4000rus = Game Admin
+terror4000rus = Game Master
 alexmorgan = Game Master
-bear1ake = Projec tLead
+bear1ake = Project Lead
 aieroivor = Admin
 mrtrololo = Admin
 kuzyxd = Developer

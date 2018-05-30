@@ -9,13 +9,13 @@
 	log_world("Running /tg/ revision:")
 	var/list/logs = world.file2list(".git/logs/HEAD")
 	if(logs)
-		logs = splittext(logs[logs.len - 1], " ")
+		logs = splittext(logs[logs.len], " ")
 		date = unix2date(text2num(logs[5]))
 		commit = logs[2]
 		log_world("[commit]: [date]")
 	logs = world.file2list(".git/logs/refs/remotes/origin/master")
 	if(logs.len)
-		originmastercommit = splittext(logs[logs.len - 1], " ")[2]
+		originmastercommit = splittext(logs[logs.len], " ")[2]
 
 	if(testmerge.len)
 		log_world(commit)
