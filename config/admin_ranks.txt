@@ -4,8 +4,8 @@
 # Rank is CASE-SENSITIVE, all punctuation save for '-', '_' and '@' will be stripped so spaces don't matter. #
 # You can then define permissions for each rank by adding a '=' followed by keywords                         #
 # These keywords represent groups of verbs and abilities.                                                    #
-# keywords are preceded by a '+', '-' or '*' + adds permissions, - takes them away.							 #
-# * is used only with SQL-based admin loading to denote what permissions the rank is allowed to edit		 #
+# keywords are preceded by a '+', '-' or '*' + adds permissions, - takes them away.			     #
+# * is used only with SQL-based admin loading to denote what permissions the rank is allowed to edit         #
 # +@ (or +prev) is a special shorthand which adds all the rights of the rank above it.                       #
 # Ranks with no keywords will just be given the most basic verbs and abilities                ~Carn          #
 ##############################################################################################################
@@ -33,15 +33,21 @@
 # +EVERYTHING (or +HOST or +ALL) = Simply gives you everything without having to type every flag
 # END_KEYWORDS
 
-Admin Observer	= -AUTOLOGIN
-Moderator		= +ADMIN
-Admin Candidate	= +@
+Admin Candidate		= +ADMIN +AUTOLOGIN
 Trial Admin		= +@ +SPAWN +VAREDIT +BAN
 Badmin			= +@ +POSSESS +POLL +BUILDMODE +SERVER +FUN
 Game Admin		= +@ +STEALTH +SOUNDS +DEBUG
 Game Master		= +EVERYTHING *EVERYTHING
-Lazy Master 	= +EVERYTHING -AUTOLOGIN *EVERYTHING
 
+Mentor			= +ADMIN +AUTOLOGIN
+Junior Developer	= +SPAWN +VAREDIT +DEBUG +FUN +SERVER +AUTOLOGIN
+Developer		= +@ POSSESS +POLL +BUILDMODE +STEALTH
+
+Project Lead		= +EVERYTHING *EVERYTHING
+Lieutenant		= +EVERYTHING *EVERYTHING
+Head Admin		= +EVERYTHING *EVERYTHING
+Head Developer		= +EVERYTHING -BAN *EVERYTHING
+Head Redactor		= +EVERYTHING -BAN *EVERYTHING
 Host			= +EVERYTHING *EVERYTHING
 
-Coder			= +DEBUG +VAREDIT +SERVER +SPAWN +POLL -AUTOLOGIN
+
