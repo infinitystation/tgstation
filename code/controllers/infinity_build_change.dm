@@ -127,7 +127,7 @@ GLOBAL_DATUM_INIT(currentbuild, /datum/server_build, new)
 	sleep(100)
 
 	log_game("Changing build to [B.name]([B.friendlyname])")
-	. = shell("sh ../change_build.sh [B.dmb_file] [B.folder] [world.port]")
+	. = shell("sudo sh ../change_build.sh [B.dmb_file] [B.folder] [world.port]")
 
 /* mob/Stat appendix
 		stat(null, "Map: [MAP_NAME]")

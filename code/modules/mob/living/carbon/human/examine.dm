@@ -19,7 +19,7 @@
 		if(L.has_trait(TRAIT_PROSOPAGNOSIA))
 			obscure_name = TRUE
 
-	var/msg = "<span class='info'>*---------*\nЭто is <EM>[!obscure_name ? name : "Unknown"]</EM>!\n"
+	var/msg = "<span class='info'>*---------*\nЭто <EM>[!obscure_name ? name : "Unknown"]</EM>!\n"
 
 	var/list/obscured = check_obscured_slots()
 	var/skipface = (wear_mask && (wear_mask.flags_inv & HIDEFACE)) || (head && (head.flags_inv & HIDEFACE))
