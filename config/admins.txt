@@ -9,13 +9,24 @@
 # If SQL-based admin loading is enabled, admins listed here will always be loaded first	      #
 # and will override any duplicate entries in the database.                                    #
 ###############################################################################################
-thehero13 = Game Master
+bear1ake = Project Lead
 terror4000rus = Game Master
-bear1ake = Game Master
-aieroivor = Game Master
-archibald125 = Game Master
+Liners = Lieutenant
+kareta = Game Admin
+kuzyxd = Junior Developer
+solark = Junior Developer
+skonoplich = Junior Developer
+archibald125 = Head Admin
+sosiskoed = Game Master
+thehero13 = Game Master
 kirill1243 = Game Master
-romeo517 = Game Master
-netreson = Game Master
-kareta = Game Master
-liners = Game Master
+mrnicolas = Badmin
+rex127 = Badmin
+nicroz = Badmin
+wolforbykot = Trial Admin
+xxxrockxxx = Trial Admin
+twinindifferent = Admin Candidate
+s1334 = Admin Candidate
+auesti = Head Redactor
+courierr = Mentor
+logfol = Mentor
