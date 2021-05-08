@@ -35,6 +35,7 @@ map icebox
 endmap
 
 map tramstation
+	default
 	minplayers 35
 	votable
 endmap
